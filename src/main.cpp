@@ -2,6 +2,7 @@
 
 #include <filesystem>
 #include <fstream>
+#include <format>
 
 void generate_header_for_type_scope(const sdk::CSchemaSystemTypeScope* type_scope) {
     if (type_scope == nullptr)

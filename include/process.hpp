@@ -2,6 +2,7 @@
 
 #include <optional>
 #include <string_view>
+#include <cstdint>
 
 namespace process {
     bool attach(std::string_view process_name);
