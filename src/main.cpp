@@ -1,8 +1,8 @@
 #include "sdk/sdk.hpp"
 
 #include <filesystem>
-#include <fstream>
 #include <format>
+#include <fstream>
 
 void generate_header_for_type_scope(const sdk::CSchemaSystemTypeScope* type_scope) {
     if (type_scope == nullptr)
