@@ -73,6 +73,52 @@ void generate_json_for_type_scope(const sdk::CSchemaSystemTypeScope* type_scope)
     output << json.dump(4);
 }
 
+std::uint64_t get_entity_list() noexcept {
+    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB");
+
+    if (!address.has_value())
+        return 0;
+
+    return process::resolve_rip_relative_address(address.value()).value_or(0);
+}
+
+std::uint64_t get_local_player() noexcept {
+    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? F2 0F 11 44 24 ? F2 41 0F 10 00");
+
+    if (!address.has_value())
+        return 0;
+
+    address = process::resolve_rip_relative_address(address.value());
+
+    if (!address.has_value())
+        return 0;
+
+    return process::read_memory<std::uint64_t>(address.value()) + 0x50;
+}
+
+std::uint64_t get_view_matrix() noexcept {
+    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8D 0D ? ? ? ? 48 C1 E0 06");
+
+    if (!address.has_value())
+        return 0;
+
+    return process::resolve_rip_relative_address(address.value()).value_or(0);
+}
+
+void fetch_offsets() noexcept {
+    const std::optional<std::uint64_t> client_base = process::get_module_base("client.dll");
+
+    if (!client_base.has_value()) {
+        spdlog::error("failed to get client.dll base.");
+
+        return;
+    }
+
+    spdlog::info("entity list: {:#x}", get_entity_list() - client_base.value());
+    spdlog::info("local player controller: {:#x}", get_local_player() - client_base.value());
+    spdlog::info("view matrix: {:#x}", get_view_matrix() - client_base.value());
+}
+
 int main() {
     if (!std::filesystem::exists("generated"))
         std::filesystem::create_directory("generated");
@@ -101,6 +147,8 @@ int main() {
         generate_header_for_type_scope(type_scope);
         generate_json_for_type_scope(type_scope);
     }
+
+    fetch_offsets();
 
     spdlog::info("done!");
 
