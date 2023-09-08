@@ -20,12 +20,6 @@ static const std::array<std::pair<std::string_view, std::unique_ptr<builder::IFi
     }
 };
 
-std::string sanitize_namespace(const std::string& namespace_name) {
-    static std::regex namespace_regex("\\::");
-
-    return std::regex_replace(namespace_name, namespace_regex, "_");
-}
-
 template <class IFileBuilder>
 void generate_file(const std::string_view file_name, const Entries& entries, IFileBuilder& builder) {
     const std::string output_file_path = std::format("generated/{}.{}", file_name, builder.get_extension());
@@ -39,6 +33,12 @@ void generate_file(const std::string_view file_name, const Entries& entries, IFi
     }
 
     builder.write_top_level(output);
+
+    const auto sanitize_namespace = [](const std::string& namespace_name) -> std::string {
+        static std::regex namespace_regex("\\::");
+
+        return std::regex_replace(namespace_name, namespace_regex, "_");
+    };
 
     for (auto it = entries.begin(); it != entries.end(); ++it) {
         const auto& [namespace_name, variables] = *it;
@@ -138,7 +138,7 @@ void fetch_offsets() noexcept {
     spdlog::info("view matrix: {:#x}", view_matrix_rva);
 
     const Entries entries = {
-        { "client.dll", {
+        { "client_dll", {
             { "entity_list", entity_list_rva },
             { "local_player_controller", local_player_controller_rva },
             { "view_matrix", view_matrix_rva }
