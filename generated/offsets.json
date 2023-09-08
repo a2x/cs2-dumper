@@ -1,7 +1,8 @@
 {
-    "client.dll": {
+    "client_dll": {
         "entity_list": 23215032,
         "local_player_controller": 24199824,
+        "view_angles": 24591024,
         "view_matrix": 24202496
     }
 }

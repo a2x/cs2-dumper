@@ -136,6 +136,12 @@ namespace process {
         return std::nullopt;
     }
 
+    std::optional<std::uintptr_t> resolve_jmp(const std::uintptr_t address) noexcept {
+        const auto displacement = read_memory<std::int32_t>(address + 0x1);
+
+        return address + displacement + 0x5;
+    }
+
     std::optional<std::uintptr_t> resolve_rip_relative_address(const std::uintptr_t address) noexcept {
         const auto displacement = read_memory<std::int32_t>(address + 0x3);
 

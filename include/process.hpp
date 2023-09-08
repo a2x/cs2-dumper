@@ -11,6 +11,8 @@ namespace process {
 
     [[nodiscard]] std::optional<std::uintptr_t> get_module_base(std::string_view module_name) noexcept;
 
+    [[nodiscard]] std::optional<std::uintptr_t> resolve_jmp(std::uintptr_t address) noexcept;
+
     [[nodiscard]] std::optional<std::uintptr_t> resolve_rip_relative_address(std::uintptr_t address) noexcept;
 
     bool read_memory(std::uintptr_t address, void* buffer, std::size_t size) noexcept;

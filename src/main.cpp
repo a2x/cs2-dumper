@@ -88,34 +88,48 @@ void generate_files_for_type_scope(const sdk::CSchemaSystemTypeScope* type_scope
     }
 }
 
-std::uint64_t get_entity_list() noexcept {
+std::optional<std::uint64_t> get_entity_list() noexcept {
 	const std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB");
 
     if (!address.has_value())
-        return 0;
+        return std::nullopt;
 
     return process::resolve_rip_relative_address(address.value()).value_or(0);
 }
 
-std::uint64_t get_local_player() noexcept {
+std::optional<std::uint64_t> get_local_player() noexcept {
     std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? F2 0F 11 44 24 ? F2 41 0F 10 00");
 
     if (!address.has_value())
-        return 0;
+        return std::nullopt;
 
     address = process::resolve_rip_relative_address(address.value());
 
     if (!address.has_value())
-        return 0;
+        return std::nullopt;
 
     return process::read_memory<std::uint64_t>(address.value()) + 0x50;
 }
 
-std::uint64_t get_view_matrix() noexcept {
+std::optional<std::uint64_t> get_view_angles() noexcept {
+    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30");
+
+    if (!address.has_value())
+        return std::nullopt;
+
+    address = process::resolve_rip_relative_address(address.value());
+
+    if (!address.has_value())
+        return std::nullopt;
+
+    return process::read_memory<std::uint64_t>(address.value()) + 0x4510;
+}
+
+std::optional<std::uint64_t> get_view_matrix() noexcept {
 	const std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8D 0D ? ? ? ? 48 C1 E0 06");
 
     if (!address.has_value())
-        return 0;
+        return std::nullopt;
 
     return process::resolve_rip_relative_address(address.value()).value_or(0);
 }
@@ -129,18 +143,25 @@ void fetch_offsets() noexcept {
         return;
     }
 
-    const std::uint64_t entity_list_rva = get_entity_list() - client_base.value();
-    const std::uint64_t local_player_controller_rva = get_local_player() - client_base.value();
-    const std::uint64_t view_matrix_rva = get_view_matrix() - client_base.value();
+    const auto get_client_rva = [&client_base](const std::uint64_t address) -> std::uint64_t {
+        return address - client_base.value();
+    };
+
+    const std::uint64_t entity_list_rva = get_client_rva(get_entity_list().value_or(0));
+    const std::uint64_t local_player_controller_rva = get_client_rva(get_local_player().value_or(0));
+    const std::uint64_t view_angles_rva = get_client_rva(get_view_angles().value_or(0));
+    const std::uint64_t view_matrix_rva = get_client_rva(get_view_matrix().value_or(0));
 
     spdlog::info("entity list: {:#x}", entity_list_rva);
     spdlog::info("local player controller: {:#x}", local_player_controller_rva);
+    spdlog::info("view angles: {:#x}", view_angles_rva);
     spdlog::info("view matrix: {:#x}", view_matrix_rva);
 
     const Entries entries = {
         { "client_dll", {
             { "entity_list", entity_list_rva },
             { "local_player_controller", local_player_controller_rva },
+            { "view_angles", view_angles_rva },
             { "view_matrix", view_matrix_rva }
         } }
     };
