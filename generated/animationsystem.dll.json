@@ -1,0 +1,2178 @@
+{
+    "AimMatrixOpFixedSettings_t": {
+        "m_attachment": 0,
+        "m_bTargetIsPosition": 200,
+        "m_damping": 128,
+        "m_eBlendMode": 184,
+        "m_fAngleIncrement": 188,
+        "m_nBoneMaskIndex": 196,
+        "m_nSequenceMaxFrame": 192,
+        "m_poseCacheHandles": 144
+    },
+    "AnimComponentID": {
+        "m_id": 0
+    },
+    "AnimNodeID": {
+        "m_id": 0
+    },
+    "AnimNodeOutputID": {
+        "m_id": 0
+    },
+    "AnimParamID": {
+        "m_id": 0
+    },
+    "AnimScriptHandle": {
+        "m_id": 0
+    },
+    "AnimStateID": {
+        "m_id": 0
+    },
+    "AnimTagID": {
+        "m_id": 0
+    },
+    "AnimationDecodeDebugDumpElement_t": {
+        "m_decodeOps": 40,
+        "m_decodedAnims": 88,
+        "m_internalOps": 64,
+        "m_modelName": 8,
+        "m_nEntityIndex": 0,
+        "m_poseParams": 16
+    },
+    "AnimationDecodeDebugDump_t": {
+        "m_elems": 8,
+        "m_processingType": 0
+    },
+    "AnimationSnapshotBase_t": {
+        "m_DecodeDump": 152,
+        "m_SnapshotType": 144,
+        "m_bBonesInWorldSpace": 64,
+        "m_bHasDecodeDump": 148,
+        "m_boneSetupMask": 72,
+        "m_boneTransforms": 96,
+        "m_flRealTime": 0,
+        "m_flexControllers": 120,
+        "m_rootToWorld": 16
+    },
+    "AnimationSnapshot_t": {
+        "m_modelName": 280,
+        "m_nEntIndex": 272
+    },
+    "AttachmentHandle_t": {
+        "m_Value": 0
+    },
+    "BlendItem_t": {
+        "m_bUseCustomDuration": 56,
+        "m_flDuration": 52,
+        "m_hSequence": 40,
+        "m_pChild": 24,
+        "m_tags": 0,
+        "m_vPos": 44
+    },
+    "BoneDemoCaptureSettings_t": {
+        "m_boneName": 0
+    },
+    "CActionComponentUpdater": {
+        "m_actions": 48
+    },
+    "CAddUpdateNode": {
+        "m_bApplyChannelsSeparately": 145,
+        "m_bApplyToFootMotion": 144,
+        "m_bUseModelSpace": 146,
+        "m_footMotionTiming": 140
+    },
+    "CAimConstraint": {
+        "m_nUpType": 128,
+        "m_qAimOffset": 112
+    },
+    "CAimMatrixUpdateNode": {
+        "m_bLockWhenWaning": 341,
+        "m_bResetChild": 340,
+        "m_hSequence": 336,
+        "m_opFixedSettings": 112,
+        "m_paramIndex": 332,
+        "m_target": 328
+    },
+    "CAnimActivity": {
+        "m_nActivity": 16,
+        "m_nFlags": 20,
+        "m_nWeight": 24,
+        "m_name": 0
+    },
+    "CAnimAttachment": {
+        "m_influenceIndices": 96,
+        "m_influenceOffsets": 48,
+        "m_influenceRotations": 0,
+        "m_influenceWeights": 108,
+        "m_numInfluences": 120
+    },
+    "CAnimBone": {
+        "m_flags": 68,
+        "m_name": 0,
+        "m_parent": 16,
+        "m_pos": 20,
+        "m_qAlignment": 52,
+        "m_quat": 32,
+        "m_scale": 48
+    },
+    "CAnimBoneDifference": {
+        "m_bHasMovement": 45,
+        "m_bHasRotation": 44,
+        "m_name": 0,
+        "m_parent": 16,
+        "m_posError": 32
+    },
+    "CAnimComponentUpdater": {
+        "m_bStartEnabled": 40,
+        "m_id": 32,
+        "m_name": 24,
+        "m_networkMode": 36
+    },
+    "CAnimData": {
+        "m_animArray": 32,
+        "m_decoderArray": 56,
+        "m_nMaxUniqueFrameIndex": 80,
+        "m_name": 16,
+        "m_segmentArray": 88
+    },
+    "CAnimDataChannelDesc": {
+        "m_nElementIndexArray": 96,
+        "m_nElementMaskArray": 120,
+        "m_nFlags": 32,
+        "m_nType": 36,
+        "m_szChannelClass": 0,
+        "m_szDescription": 56,
+        "m_szElementNameArray": 72,
+        "m_szGrouping": 40,
+        "m_szVariableName": 16
+    },
+    "CAnimDecoder": {
+        "m_nType": 20,
+        "m_nVersion": 16,
+        "m_szName": 0
+    },
+    "CAnimDemoCaptureSettings": {
+        "m_baseSequence": 40,
+        "m_boneSelectionMode": 52,
+        "m_bones": 56,
+        "m_flIkRotation_MaxQuantizationError": 32,
+        "m_flIkRotation_MaxSplineError": 12,
+        "m_flIkTranslation_MaxQuantizationError": 36,
+        "m_flIkTranslation_MaxSplineError": 16,
+        "m_flMaxQuantizationErrorRotation": 20,
+        "m_flMaxQuantizationErrorScale": 28,
+        "m_flMaxQuantizationErrorTranslation": 24,
+        "m_flMaxSplineErrorRotation": 0,
+        "m_flMaxSplineErrorScale": 8,
+        "m_flMaxSplineErrorTranslation": 4,
+        "m_ikChains": 80,
+        "m_nBaseSequenceFrame": 48
+    },
+    "CAnimDesc": {
+        "fps": 24,
+        "framestalltime": 344,
+        "m_Data": 32,
+        "m_activityArray": 296,
+        "m_eventArray": 272,
+        "m_flags": 16,
+        "m_hierarchyArray": 320,
+        "m_movementArray": 248,
+        "m_name": 0,
+        "m_sequenceParams": 424,
+        "m_vecBoneWorldMax": 400,
+        "m_vecBoneWorldMin": 376,
+        "m_vecRootMax": 360,
+        "m_vecRootMin": 348
+    },
+    "CAnimDesc_Flag": {
+        "m_bAllZeros": 1,
+        "m_bAnimGraphAdditive": 7,
+        "m_bDelta": 3,
+        "m_bHidden": 2,
+        "m_bImplicitSeqIgnoreDelta": 6,
+        "m_bLegacyWorldspace": 4,
+        "m_bLooping": 0,
+        "m_bModelDoc": 5
+    },
+    "CAnimEncodeDifference": {
+        "m_bHasMorphBitArray": 120,
+        "m_bHasMovementBitArray": 96,
+        "m_bHasRotationBitArray": 72,
+        "m_bHasUserBitArray": 144,
+        "m_boneArray": 0,
+        "m_morphArray": 24,
+        "m_userArray": 48
+    },
+    "CAnimEncodedFrames": {
+        "m_fileName": 0,
+        "m_frameblockArray": 24,
+        "m_nFrames": 16,
+        "m_nFramesPerBlock": 20,
+        "m_usageDifferences": 48
+    },
+    "CAnimEnum": {
+        "m_value": 0
+    },
+    "CAnimEventDefinition": {
+        "m_EventData": 16,
+        "m_flCycle": 12,
+        "m_nFrame": 8,
+        "m_sEventName": 48,
+        "m_sLegacyOptions": 32
+    },
+    "CAnimFoot": {
+        "m_ankleBoneIndex": 32,
+        "m_name": 0,
+        "m_toeBoneIndex": 36,
+        "m_vBallOffset": 8,
+        "m_vHeelOffset": 20
+    },
+    "CAnimFrameBlockAnim": {
+        "m_nEndFrame": 4,
+        "m_nStartFrame": 0,
+        "m_segmentIndexArray": 8
+    },
+    "CAnimFrameSegment": {
+        "m_container": 16,
+        "m_nLocalChannel": 8,
+        "m_nLocalElementMasks": 4,
+        "m_nUniqueFrameIndex": 0
+    },
+    "CAnimGraphDebugReplay": {
+        "m_animGraphFileName": 64,
+        "m_frameCount": 104,
+        "m_frameList": 72,
+        "m_startIndex": 96,
+        "m_writeIndex": 100
+    },
+    "CAnimGraphModelBinding": {
+        "m_modelName": 8,
+        "m_pSharedData": 16
+    },
+    "CAnimGraphNetworkSettings": {
+        "m_bNetworkingEnabled": 32
+    },
+    "CAnimGraphSettingsManager": {
+        "m_settingsGroups": 24
+    },
+    "CAnimInputDamping": {
+        "m_fSpeedScale": 12,
+        "m_speedFunction": 8
+    },
+    "CAnimKeyData": {
+        "m_boneArray": 16,
+        "m_dataChannelArray": 96,
+        "m_morphArray": 64,
+        "m_nChannelElements": 88,
+        "m_name": 0,
+        "m_userArray": 40
+    },
+    "CAnimLocalHierarchy": {
+        "m_nEndFrame": 44,
+        "m_nPeakFrame": 36,
+        "m_nStartFrame": 32,
+        "m_nTailFrame": 40,
+        "m_sBone": 0,
+        "m_sNewParent": 16
+    },
+    "CAnimMorphDifference": {
+        "m_name": 0
+    },
+    "CAnimMotorUpdaterBase": {
+        "m_bDefault": 24,
+        "m_name": 16
+    },
+    "CAnimMovement": {
+        "angle": 16,
+        "endframe": 0,
+        "motionflags": 4,
+        "position": 32,
+        "v0": 8,
+        "v1": 12,
+        "vector": 20
+    },
+    "CAnimNodePath": {
+        "m_nCount": 44,
+        "m_path": 0
+    },
+    "CAnimParamHandle": {
+        "m_index": 1,
+        "m_type": 0
+    },
+    "CAnimParamHandleMap": {
+        "m_list": 0
+    },
+    "CAnimParameterBase": {
+        "m_bIsReferenced": 77,
+        "m_bNetworkingRequested": 76,
+        "m_componentName": 64,
+        "m_group": 32,
+        "m_id": 40,
+        "m_name": 24
+    },
+    "CAnimParameterManagerUpdater": {
+        "m_autoResetMap": 160,
+        "m_autoResetParams": 136,
+        "m_idToIndexMap": 48,
+        "m_indexToHandle": 112,
+        "m_nameToIndexMap": 80,
+        "m_parameters": 24
+    },
+    "CAnimReplayFrame": {
+        "m_inputDataBlocks": 16,
+        "m_instanceData": 40,
+        "m_localToWorldTransform": 96,
+        "m_startingLocalToWorldTransform": 64,
+        "m_timeStamp": 128
+    },
+    "CAnimScriptComponentUpdater": {
+        "m_hScript": 48
+    },
+    "CAnimScriptManager": {
+        "m_scriptInfo": 16
+    },
+    "CAnimSequenceParams": {
+        "m_flFadeInTime": 0,
+        "m_flFadeOutTime": 4
+    },
+    "CAnimSkeleton": {
+        "m_boneNames": 64,
+        "m_children": 88,
+        "m_feet": 136,
+        "m_localSpaceTransforms": 16,
+        "m_lodBoneCounts": 184,
+        "m_modelSpaceTransforms": 40,
+        "m_morphNames": 160,
+        "m_parents": 112
+    },
+    "CAnimStateMachineUpdater": {
+        "m_startStateIndex": 80,
+        "m_states": 8,
+        "m_transitions": 32
+    },
+    "CAnimTagBase": {
+        "m_bIsReferenced": 44,
+        "m_group": 32,
+        "m_name": 24,
+        "m_tagID": 40
+    },
+    "CAnimTagManagerUpdater": {
+        "m_tags": 24
+    },
+    "CAnimUpdateNodeBase": {
+        "m_name": 72,
+        "m_networkMode": 80,
+        "m_nodePath": 24
+    },
+    "CAnimUpdateNodeRef": {
+        "m_nodeIndex": 8
+    },
+    "CAnimUpdateSharedData": {
+        "m_components": 72,
+        "m_nodeIndexMap": 40,
+        "m_nodes": 16,
+        "m_pParamListUpdater": 96,
+        "m_pSkeleton": 176,
+        "m_pStaticPoseCache": 168,
+        "m_pTagManagerUpdater": 104,
+        "m_rootNodePath": 184,
+        "m_scriptManager": 112,
+        "m_settings": 120
+    },
+    "CAnimUser": {
+        "m_nType": 16,
+        "m_name": 0
+    },
+    "CAnimUserDifference": {
+        "m_nType": 16,
+        "m_name": 0
+    },
+    "CAnimationGraphVisualizerAxis": {
+        "m_flAxisSize": 96,
+        "m_xWsTransform": 64
+    },
+    "CAnimationGraphVisualizerLine": {
+        "m_Color": 96,
+        "m_vWsPositionEnd": 80,
+        "m_vWsPositionStart": 64
+    },
+    "CAnimationGraphVisualizerPie": {
+        "m_Color": 112,
+        "m_vWsCenter": 64,
+        "m_vWsEnd": 96,
+        "m_vWsStart": 80
+    },
+    "CAnimationGraphVisualizerPrimitiveBase": {
+        "m_OwningAnimNodePaths": 12,
+        "m_Type": 8,
+        "m_nOwningAnimNodePathCount": 56
+    },
+    "CAnimationGraphVisualizerSphere": {
+        "m_Color": 84,
+        "m_flRadius": 80,
+        "m_vWsPosition": 64
+    },
+    "CAnimationGraphVisualizerText": {
+        "m_Color": 80,
+        "m_Text": 88,
+        "m_vWsPosition": 64
+    },
+    "CAnimationGroup": {
+        "m_decodeKey": 152,
+        "m_directHSeqGroup_Handle": 144,
+        "m_includedGroupArray_Handle": 120,
+        "m_localHAnimArray_Handle": 96,
+        "m_nFlags": 16,
+        "m_name": 24,
+        "m_szScripts": 272
+    },
+    "CAttachment": {
+        "m_bIgnoreRotation": 132,
+        "m_bInfluenceRootTransform": 128,
+        "m_influenceNames": 8,
+        "m_influenceWeights": 116,
+        "m_nInfluences": 131,
+        "m_name": 0,
+        "m_vInfluenceOffsets": 80,
+        "m_vInfluenceRotations": 32
+    },
+    "CAudioAnimTag": {
+        "m_attachmentName": 64,
+        "m_bPlayOnClient": 79,
+        "m_bPlayOnServer": 78,
+        "m_bStopWhenGraphEnds": 77,
+        "m_bStopWhenTagEnds": 76,
+        "m_clipName": 56,
+        "m_flVolume": 72
+    },
+    "CBaseConstraint": {
+        "m_name": 40,
+        "m_slaves": 64,
+        "m_targets": 88,
+        "m_vUpVector": 48
+    },
+    "CBinaryUpdateNode": {
+        "m_bResetChild1": 128,
+        "m_bResetChild2": 129,
+        "m_flTimingBlend": 124,
+        "m_pChild1": 88,
+        "m_pChild2": 104,
+        "m_timingBehavior": 120
+    },
+    "CBlend2DUpdateNode": {
+        "m_bAnimEventsAndTagsOnMostWeightedOnly": 235,
+        "m_bLockBlendOnReset": 233,
+        "m_bLockWhenWaning": 234,
+        "m_bLoop": 232,
+        "m_blendSourceX": 208,
+        "m_blendSourceY": 216,
+        "m_damping": 192,
+        "m_eBlendMode": 224,
+        "m_items": 96,
+        "m_nodeItemIndices": 168,
+        "m_paramSpans": 144,
+        "m_paramX": 212,
+        "m_paramY": 220,
+        "m_playbackSpeed": 228,
+        "m_tags": 120
+    },
+    "CBlendCurve": {
+        "m_flControlPoint1": 0,
+        "m_flControlPoint2": 4
+    },
+    "CBlendUpdateNode": {
+        "m_bLockBlendOnReset": 204,
+        "m_bLockWhenWaning": 207,
+        "m_bLoop": 206,
+        "m_bSyncCycles": 205,
+        "m_blendKeyType": 200,
+        "m_blendValueSource": 172,
+        "m_children": 96,
+        "m_damping": 184,
+        "m_paramIndex": 176,
+        "m_sortedOrder": 120,
+        "m_targetValues": 144
+    },
+    "CBodyGroupAnimTag": {
+        "m_bodyGroupSettings": 64,
+        "m_nPriority": 56
+    },
+    "CBodyGroupSetting": {
+        "m_BodyGroupName": 0,
+        "m_nBodyGroupOption": 8
+    },
+    "CBoneConstraintDotToMorph": {
+        "m_flRemap": 64,
+        "m_sBoneName": 40,
+        "m_sMorphChannelName": 56,
+        "m_sTargetBoneName": 48
+    },
+    "CBoneConstraintPoseSpaceBone": {
+        "m_inputList": 112
+    },
+    "CBoneConstraintPoseSpaceBone::Input_t": {
+        "m_inputValue": 0,
+        "m_outputTransformList": 16
+    },
+    "CBoneConstraintPoseSpaceMorph::Input_t": {
+        "m_inputValue": 0,
+        "m_outputWeightList": 16
+    },
+    "CBoneMaskUpdateNode": {
+        "m_bUseBlendScale": 156,
+        "m_blendSpace": 148,
+        "m_blendValueSource": 160,
+        "m_flRootMotionBlend": 144,
+        "m_footMotionTiming": 152,
+        "m_hBlendParameter": 164,
+        "m_nWeightListIndex": 140
+    },
+    "CBonePositionMetricEvaluator": {
+        "m_nBoneIndex": 80
+    },
+    "CBoneVelocityMetricEvaluator": {
+        "m_nBoneIndex": 80
+    },
+    "CBoolAnimParameter": {
+        "m_bDefaultValue": 96
+    },
+    "CCPPScriptComponentUpdater": {
+        "m_scriptsToRun": 48
+    },
+    "CCachedPose": {
+        "m_flCycle": 60,
+        "m_hSequence": 56,
+        "m_morphWeights": 32,
+        "m_transforms": 8
+    },
+    "CChoiceUpdateNode": {
+        "m_bCrossFade": 176,
+        "m_bDontResetSameSelection": 178,
+        "m_bResetChosen": 177,
+        "m_blendMethod": 168,
+        "m_blendTime": 172,
+        "m_blendTimes": 136,
+        "m_children": 88,
+        "m_choiceChangeMethod": 164,
+        "m_choiceMethod": 160,
+        "m_weights": 112
+    },
+    "CClothSettingsAnimTag": {
+        "m_flEaseIn": 60,
+        "m_flEaseOut": 64,
+        "m_flStiffness": 56,
+        "m_nVertexSet": 72
+    },
+    "CCompressorGroup": {
+        "m_boolCompressor": 320,
+        "m_colorCompressor": 344,
+        "m_intCompressor": 296,
+        "m_nCompressorIndex": 128,
+        "m_nElementMask": 200,
+        "m_nElementUniqueID": 176,
+        "m_nFlags": 80,
+        "m_nTotalElementCount": 0,
+        "m_nType": 56,
+        "m_quaternionCompressor": 272,
+        "m_szChannelClass": 8,
+        "m_szElementNames": 152,
+        "m_szGrouping": 104,
+        "m_szVariableName": 32,
+        "m_vector2DCompressor": 368,
+        "m_vector4DCompressor": 392,
+        "m_vectorCompressor": 248
+    },
+    "CConcreteAnimParameter": {
+        "m_bAutoReset": 89,
+        "m_bGameWritable": 90,
+        "m_bGraphWritable": 91,
+        "m_bUseMostRecentValue": 88,
+        "m_eNetworkSetting": 84,
+        "m_previewButton": 80
+    },
+    "CConstraintSlave": {
+        "m_flWeight": 32,
+        "m_nBoneHash": 28,
+        "m_qBaseOrientation": 0,
+        "m_sName": 40,
+        "m_vBasePosition": 16
+    },
+    "CConstraintTarget": {
+        "m_bIsAttachment": 89,
+        "m_flWeight": 72,
+        "m_nBoneHash": 60,
+        "m_qOffset": 32,
+        "m_sName": 64,
+        "m_vOffset": 48
+    },
+    "CCycleBase": {
+        "m_flCycle": 0
+    },
+    "CCycleControlClipUpdateNode": {
+        "m_duration": 128,
+        "m_hSequence": 124,
+        "m_paramIndex": 136,
+        "m_tags": 96,
+        "m_valueSource": 132
+    },
+    "CCycleControlUpdateNode": {
+        "m_paramIndex": 108,
+        "m_valueSource": 104
+    },
+    "CDampedPathAnimMotorUpdater": {
+        "m_flAnticipationTime": 44,
+        "m_flMaxSpringTension": 64,
+        "m_flMinSpeedScale": 48,
+        "m_flMinSpringTension": 60,
+        "m_flSpringConstant": 56,
+        "m_hAnticipationHeadingParam": 54,
+        "m_hAnticipationPosParam": 52
+    },
+    "CDampedValueComponentUpdater": {
+        "m_items": 48
+    },
+    "CDampedValueUpdateItem": {
+        "m_damping": 0,
+        "m_hParamIn": 24,
+        "m_hParamOut": 26
+    },
+    "CDemoSettingsComponentUpdater": {
+        "m_settings": 48
+    },
+    "CDirectPlaybackTagData": {
+        "m_sequenceName": 0,
+        "m_tags": 8
+    },
+    "CDirectPlaybackUpdateNode": {
+        "m_allTags": 112,
+        "m_bFinishEarly": 108,
+        "m_bResetOnFinish": 109
+    },
+    "CDirectionalBlendUpdateNode": {
+        "m_bLockBlendOnReset": 161,
+        "m_bLoop": 160,
+        "m_blendValueSource": 144,
+        "m_damping": 128,
+        "m_duration": 156,
+        "m_hSequences": 92,
+        "m_paramIndex": 148,
+        "m_playbackSpeed": 152
+    },
+    "CDistanceRemainingMetricEvaluator": {
+        "m_bFilterFixedMinDistance": 96,
+        "m_bFilterGoalDistance": 97,
+        "m_bFilterGoalOvershoot": 98,
+        "m_flMaxDistance": 80,
+        "m_flMaxGoalOvershootScale": 92,
+        "m_flMinDistance": 84,
+        "m_flStartGoalFilterDistance": 88
+    },
+    "CDrawCullingData": {
+        "m_ConeAxis": 12,
+        "m_ConeCutoff": 15,
+        "m_vConeApex": 0
+    },
+    "CEmitTagActionUpdater": {
+        "m_bIsZeroDuration": 28,
+        "m_nTagIndex": 24
+    },
+    "CEnumAnimParameter": {
+        "m_defaultValue": 104,
+        "m_enumOptions": 112
+    },
+    "CExpressionActionUpdater": {
+        "m_eParamType": 26,
+        "m_hParam": 24,
+        "m_hScript": 28
+    },
+    "CFingerBone": {
+        "m_boneName": 0,
+        "m_flMaxAngle": 48,
+        "m_flMinAngle": 44,
+        "m_flRadius": 52,
+        "m_hingeAxis": 8,
+        "m_vCapsulePos1": 20,
+        "m_vCapsulePos2": 32
+    },
+    "CFingerChain": {
+        "m_bones": 24,
+        "m_flFingerScaleRatio": 108,
+        "m_flSplayMaxAngle": 104,
+        "m_flSplayMinAngle": 100,
+        "m_metacarpalBoneName": 80,
+        "m_name": 48,
+        "m_targets": 0,
+        "m_tipParentBoneName": 56,
+        "m_vSplayHingeAxis": 88,
+        "m_vTipOffset": 64
+    },
+    "CFingerSource": {
+        "m_flFingerWeight": 4,
+        "m_nFingerIndex": 0
+    },
+    "CFlexController": {
+        "m_szName": 0,
+        "m_szType": 8,
+        "max": 20,
+        "min": 16
+    },
+    "CFlexDesc": {
+        "m_szFacs": 0
+    },
+    "CFlexOp": {
+        "m_Data": 4,
+        "m_OpCode": 0
+    },
+    "CFlexRule": {
+        "m_FlexOps": 8,
+        "m_nFlex": 0
+    },
+    "CFloatAnimParameter": {
+        "m_bInterpolate": 108,
+        "m_fDefaultValue": 96,
+        "m_fMaxValue": 104,
+        "m_fMinValue": 100
+    },
+    "CFollowAttachmentUpdateNode": {
+        "m_opFixedData": 112
+    },
+    "CFollowPathUpdateNode": {
+        "m_bBlockNonPathMovement": 112,
+        "m_bScaleSpeed": 114,
+        "m_bStopFeetAtGoal": 113,
+        "m_bTurnToFace": 164,
+        "m_facingTarget": 152,
+        "m_flBlendOutTime": 108,
+        "m_flMaxAngle": 124,
+        "m_flMinAngle": 120,
+        "m_flScale": 116,
+        "m_flSpeedScaleBlending": 128,
+        "m_flTurnToFaceOffset": 160,
+        "m_hParam": 156,
+        "m_turnDamping": 136
+    },
+    "CFootAdjustmentUpdateNode": {
+        "m_bAnimationDriven": 161,
+        "m_bResetChild": 160,
+        "m_clips": 112,
+        "m_facingTarget": 140,
+        "m_flStepHeightMax": 152,
+        "m_flStepHeightMaxAngle": 156,
+        "m_flTurnTimeMax": 148,
+        "m_flTurnTimeMin": 144,
+        "m_hBasePoseCacheHandle": 136
+    },
+    "CFootCycleDefinition": {
+        "m_flStanceDirectionMS": 24,
+        "m_footLandCycle": 56,
+        "m_footLiftCycle": 44,
+        "m_footOffCycle": 48,
+        "m_footStrikeCycle": 52,
+        "m_stanceCycle": 40,
+        "m_vMidpointPositionMS": 12,
+        "m_vStancePositionMS": 0,
+        "m_vToStrideStartPos": 28
+    },
+    "CFootCycleMetricEvaluator": {
+        "m_footIndices": 80
+    },
+    "CFootDefinition": {
+        "m_ankleBoneName": 8,
+        "m_flBindPoseDirectionMS": 52,
+        "m_flFootLength": 48,
+        "m_flTraceHeight": 56,
+        "m_flTraceRadius": 60,
+        "m_name": 0,
+        "m_toeBoneName": 16,
+        "m_vBallOffset": 24,
+        "m_vHeelOffset": 36
+    },
+    "CFootFallAnimTag": {
+        "m_foot": 56
+    },
+    "CFootLockUpdateNode": {
+        "m_bApplyFootRotationLimits": 304,
+        "m_bApplyHipShift": 305,
+        "m_bEnableRootHeightDamping": 309,
+        "m_bEnableVerticalCurvedPaths": 308,
+        "m_bModulateStepHeight": 306,
+        "m_bResetChild": 307,
+        "m_flBlendTime": 284,
+        "m_flHipShiftScale": 280,
+        "m_flMaxRootHeightOffset": 288,
+        "m_flMinRootHeightOffset": 292,
+        "m_flStepHeightDecreaseScale": 276,
+        "m_flStepHeightIncreaseScale": 272,
+        "m_flStrideCurveLimitScale": 268,
+        "m_flStrideCurveScale": 264,
+        "m_flTiltPlanePitchSpringStrength": 296,
+        "m_flTiltPlaneRollSpringStrength": 300,
+        "m_footSettings": 208,
+        "m_hipShiftDamping": 232,
+        "m_opFixedSettings": 104,
+        "m_rootHeightDamping": 248
+    },
+    "CFootMotion": {
+        "m_bAdditive": 32,
+        "m_name": 24,
+        "m_strides": 0
+    },
+    "CFootPinningUpdateNode": {
+        "m_bResetChild": 192,
+        "m_eTimingSource": 160,
+        "m_params": 168,
+        "m_poseOpFixedData": 112
+    },
+    "CFootPositionMetricEvaluator": {
+        "m_bIgnoreSlope": 104,
+        "m_footIndices": 80
+    },
+    "CFootStepTriggerUpdateNode": {
+        "m_flTolerance": 132,
+        "m_triggers": 104
+    },
+    "CFootStride": {
+        "m_definition": 0,
+        "m_trajectories": 64
+    },
+    "CFootTrajectories": {
+        "m_trajectories": 0
+    },
+    "CFootTrajectory": {
+        "m_flProgression": 16,
+        "m_flRotationOffset": 12,
+        "m_vOffset": 0
+    },
+    "CFootstepLandedAnimTag": {
+        "m_BoneName": 80,
+        "m_DebugAnimSourceString": 72,
+        "m_FootstepType": 56,
+        "m_OverrideSoundName": 64
+    },
+    "CFutureFacingMetricEvaluator": {
+        "m_flDistance": 80,
+        "m_flTime": 84
+    },
+    "CFutureVelocityMetricEvaluator": {
+        "m_eMode": 92,
+        "m_flDistance": 80,
+        "m_flStoppingDistance": 84,
+        "m_flTargetSpeed": 88
+    },
+    "CHitBox": {
+        "m_CRC": 64,
+        "m_bTranslationOnly": 61,
+        "m_cRenderColor": 68,
+        "m_flShapeRadius": 48,
+        "m_nBoneNameHash": 52,
+        "m_nGroupId": 56,
+        "m_nHitBoxIndex": 72,
+        "m_nShapeType": 60,
+        "m_name": 0,
+        "m_sBoneName": 16,
+        "m_sSurfaceProperty": 8,
+        "m_vMaxBounds": 36,
+        "m_vMinBounds": 24
+    },
+    "CHitBoxSet": {
+        "m_HitBoxes": 16,
+        "m_SourceFilename": 40,
+        "m_nNameHash": 8,
+        "m_name": 0
+    },
+    "CHitBoxSetList": {
+        "m_HitBoxSets": 0
+    },
+    "CHitReactUpdateNode": {
+        "m_bResetChild": 196,
+        "m_flMinDelayBetweenHits": 192,
+        "m_hitBoneParam": 182,
+        "m_hitDirectionParam": 186,
+        "m_hitOffsetParam": 184,
+        "m_hitStrengthParam": 188,
+        "m_opFixedSettings": 104,
+        "m_triggerParam": 180
+    },
+    "CIntAnimParameter": {
+        "m_defaultValue": 96,
+        "m_maxValue": 104,
+        "m_minValue": 100
+    },
+    "CJiggleBoneUpdateNode": {
+        "m_opFixedData": 104
+    },
+    "CJumpHelperUpdateNode": {
+        "m_bScaleSpeed": 203,
+        "m_bTranslationAxis": 200,
+        "m_eCorrectionMethod": 196,
+        "m_flJumpEndCycle": 192,
+        "m_flJumpStartCycle": 188,
+        "m_flOriginalJumpDuration": 184,
+        "m_flOriginalJumpMovement": 172,
+        "m_hTargetParam": 168
+    },
+    "CLODComponentUpdater": {
+        "m_nServerLOD": 48
+    },
+    "CLeanMatrixUpdateNode": {
+        "m_blendSource": 184,
+        "m_damping": 168,
+        "m_flMaxValue": 220,
+        "m_frameCorners": 92,
+        "m_hSequence": 216,
+        "m_horizontalAxis": 204,
+        "m_nSequenceMaxFrame": 224,
+        "m_paramIndex": 188,
+        "m_poses": 128,
+        "m_verticalAxis": 192
+    },
+    "CLookAtUpdateNode": {
+        "m_bLockWhenWaning": 321,
+        "m_bResetChild": 320,
+        "m_opFixedSettings": 112,
+        "m_paramIndex": 316,
+        "m_target": 312,
+        "m_weightParamIndex": 318
+    },
+    "CLookComponentUpdater": {
+        "m_bNetworkLookTarget": 66,
+        "m_hLookDirection": 60,
+        "m_hLookDistance": 58,
+        "m_hLookHeading": 52,
+        "m_hLookHeadingVelocity": 54,
+        "m_hLookPitch": 56,
+        "m_hLookTarget": 62,
+        "m_hLookTargetWorldSpace": 64
+    },
+    "CMaterialAttributeAnimTag": {
+        "m_AttributeName": 56,
+        "m_AttributeType": 64,
+        "m_Color": 72,
+        "m_flValue": 68
+    },
+    "CMaterialDrawDescriptor": {
+        "m_flAlpha": 36,
+        "m_flUvDensity": 20,
+        "m_indexBuffer": 184,
+        "m_material": 224,
+        "m_nBaseVertex": 4,
+        "m_nFirstMeshlet": 44,
+        "m_nIndexCount": 16,
+        "m_nNumMeshlets": 48,
+        "m_nPrimitiveType": 0,
+        "m_nStartIndex": 12,
+        "m_nVertexCount": 8,
+        "m_vTintColor": 24
+    },
+    "CMeshletDescriptor": {
+        "m_CullingData": 8,
+        "m_PackedAABB": 0
+    },
+    "CModelConfig": {
+        "m_ConfigName": 0,
+        "m_Elements": 8,
+        "m_bTopLevel": 32
+    },
+    "CModelConfigElement": {
+        "m_ElementName": 8,
+        "m_NestedElements": 16
+    },
+    "CModelConfigElement_AttachedModel": {
+        "m_AttachmentName": 120,
+        "m_AttachmentType": 136,
+        "m_BodygroupOnOtherModels": 144,
+        "m_EntityClass": 80,
+        "m_InstanceName": 72,
+        "m_LocalAttachmentOffsetName": 128,
+        "m_MaterialGroupOnOtherModels": 152,
+        "m_aAngOffset": 108,
+        "m_bAcceptParentMaterialDrivenDecals": 143,
+        "m_bBoneMergeFlex": 140,
+        "m_bUserSpecifiedColor": 141,
+        "m_bUserSpecifiedMaterialGroup": 142,
+        "m_hModel": 88,
+        "m_vOffset": 96
+    },
+    "CModelConfigElement_Command": {
+        "m_Args": 80,
+        "m_Command": 72
+    },
+    "CModelConfigElement_RandomColor": {
+        "m_Gradient": 72
+    },
+    "CModelConfigElement_RandomPick": {
+        "m_ChoiceWeights": 96,
+        "m_Choices": 72
+    },
+    "CModelConfigElement_SetBodygroup": {
+        "m_GroupName": 72,
+        "m_nChoice": 80
+    },
+    "CModelConfigElement_SetBodygroupOnAttachedModels": {
+        "m_GroupName": 72,
+        "m_nChoice": 80
+    },
+    "CModelConfigElement_SetMaterialGroup": {
+        "m_MaterialGroupName": 72
+    },
+    "CModelConfigElement_SetMaterialGroupOnAttachedModels": {
+        "m_MaterialGroupName": 72
+    },
+    "CModelConfigElement_SetRenderColor": {
+        "m_Color": 72
+    },
+    "CModelConfigElement_UserPick": {
+        "m_Choices": 72
+    },
+    "CModelConfigList": {
+        "m_Configs": 8,
+        "m_bHideMaterialGroupInTools": 0,
+        "m_bHideRenderColorInTools": 1
+    },
+    "CMoodVData": {
+        "m_animationLayers": 232,
+        "m_nMoodType": 224,
+        "m_sModelName": 0
+    },
+    "CMorphBundleData": {
+        "m_flULeftSrc": 0,
+        "m_flVTopSrc": 4,
+        "m_offsets": 8,
+        "m_ranges": 32
+    },
+    "CMorphConstraint": {
+        "m_flMax": 128,
+        "m_flMin": 124,
+        "m_nSlaveChannel": 120,
+        "m_sTargetMorph": 112
+    },
+    "CMorphData": {
+        "m_morphRectDatas": 8,
+        "m_name": 0
+    },
+    "CMorphRectData": {
+        "m_bundleDatas": 16,
+        "m_flUWidthSrc": 4,
+        "m_flVHeightSrc": 8,
+        "m_nXLeftDst": 0,
+        "m_nYTopDst": 2
+    },
+    "CMorphSetData": {
+        "m_FlexControllers": 104,
+        "m_FlexDesc": 80,
+        "m_FlexRules": 128,
+        "m_bundleTypes": 24,
+        "m_morphDatas": 48,
+        "m_nHeight": 20,
+        "m_nWidth": 16,
+        "m_pTextureAtlas": 72
+    },
+    "CMotionDataSet": {
+        "m_groups": 0,
+        "m_nDimensionCount": 24
+    },
+    "CMotionGraph": {
+        "m_bLoop": 84,
+        "m_nConfigCount": 80,
+        "m_nConfigStartIndex": 76,
+        "m_nParameterCount": 72,
+        "m_pRootNode": 64,
+        "m_paramSpans": 16,
+        "m_tags": 40
+    },
+    "CMotionGraphConfig": {
+        "m_flDuration": 16,
+        "m_nMotionIndex": 20,
+        "m_nSampleCount": 28,
+        "m_nSampleStart": 24,
+        "m_paramValues": 0
+    },
+    "CMotionGraphGroup": {
+        "m_hIsActiveScript": 256,
+        "m_motionGraphConfigs": 208,
+        "m_motionGraphs": 184,
+        "m_sampleToConfig": 232,
+        "m_searchDB": 0
+    },
+    "CMotionGraphUpdateNode": {
+        "m_pMotionGraph": 88
+    },
+    "CMotionMatchingUpdateNode": {
+        "m_bEnableDistanceScaling": 312,
+        "m_bEnableRotationCorrection": 264,
+        "m_bGoalAssist": 265,
+        "m_bLockClipWhenWaning": 252,
+        "m_bSearchEveryTick": 224,
+        "m_bSearchWhenClipEnds": 232,
+        "m_bSearchWhenGoalChanges": 233,
+        "m_blendCurve": 236,
+        "m_dataSet": 88,
+        "m_distanceScale_Damping": 280,
+        "m_flBlendTime": 248,
+        "m_flDistanceScale_InnerRadius": 300,
+        "m_flDistanceScale_MaxScale": 304,
+        "m_flDistanceScale_MinScale": 308,
+        "m_flDistanceScale_OuterRadius": 296,
+        "m_flGoalAssistDistance": 268,
+        "m_flGoalAssistTolerance": 272,
+        "m_flReselectionTimeWindow": 260,
+        "m_flSampleRate": 244,
+        "m_flSearchInterval": 228,
+        "m_flSelectionThreshold": 256,
+        "m_metrics": 120,
+        "m_weights": 144
+    },
+    "CMotionMetricEvaluator": {
+        "m_flWeight": 72,
+        "m_means": 24,
+        "m_nDimensionStartIndex": 76,
+        "m_standardDeviations": 48
+    },
+    "CMotionNode": {
+        "m_id": 32,
+        "m_name": 24
+    },
+    "CMotionNodeBlend1D": {
+        "m_blendItems": 40,
+        "m_nParamIndex": 64
+    },
+    "CMotionNodeSequence": {
+        "m_flPlaybackSpeed": 68,
+        "m_hSequence": 64,
+        "m_tags": 40
+    },
+    "CMotionSearchDB": {
+        "m_codeIndices": 160,
+        "m_residualQuantizer": 128,
+        "m_rootNode": 0
+    },
+    "CMotionSearchNode": {
+        "m_children": 0,
+        "m_quantizer": 24,
+        "m_sampleCodes": 56,
+        "m_sampleIndices": 80,
+        "m_selectableSamples": 104
+    },
+    "CMovementComponentUpdater": {
+        "m_bMoveVarsDisabled": 128,
+        "m_bNetworkFacing": 130,
+        "m_bNetworkPath": 129,
+        "m_eDefaultFacingMode": 112,
+        "m_facingDamping": 96,
+        "m_motors": 72,
+        "m_movementModes": 48,
+        "m_nDefaultMotorIndex": 124,
+        "m_paramHandles": 131
+    },
+    "CMovementMode": {
+        "m_flSpeed": 8,
+        "m_name": 0
+    },
+    "CMoverUpdateNode": {
+        "m_bAdditive": 148,
+        "m_bApplyMovement": 149,
+        "m_bApplyRotation": 151,
+        "m_bLimitOnly": 152,
+        "m_bOrientMovement": 150,
+        "m_damping": 112,
+        "m_facingTarget": 128,
+        "m_flTurnToFaceLimit": 144,
+        "m_flTurnToFaceOffset": 140,
+        "m_hMoveHeadingParam": 134,
+        "m_hMoveVecParam": 132,
+        "m_hTurnToFaceParam": 136
+    },
+    "CParamSpanUpdater": {
+        "m_spans": 0
+    },
+    "CParticleAnimTag": {
+        "m_attachmentCP1Name": 104,
+        "m_attachmentCP1Type": 112,
+        "m_attachmentName": 88,
+        "m_attachmentType": 96,
+        "m_bDetachFromOwner": 80,
+        "m_bStopWhenTagEnds": 81,
+        "m_bTagEndStopIsInstant": 82,
+        "m_configName": 72,
+        "m_hParticleSystem": 56,
+        "m_particleSystemName": 64
+    },
+    "CPathAnimMotorUpdaterBase": {
+        "m_bLockToPath": 32
+    },
+    "CPathHelperUpdateNode": {
+        "m_flStoppingRadius": 104,
+        "m_flStoppingSpeedScale": 108
+    },
+    "CPathMetricEvaluator": {
+        "m_bExtrapolateMovement": 108,
+        "m_flDistance": 104,
+        "m_flMinExtrapolationSpeed": 112,
+        "m_pathTimeSamples": 80
+    },
+    "CPhysSurfaceProperties": {
+        "m_audioParams": 136,
+        "m_audioSounds": 72,
+        "m_bHidden": 24,
+        "m_baseNameHash": 12,
+        "m_description": 32,
+        "m_name": 0,
+        "m_nameHash": 8,
+        "m_physics": 40
+    },
+    "CPhysSurfacePropertiesAudio": {
+        "m_flOcclusionFactor": 28,
+        "m_flStaticImpactVolume": 24,
+        "m_hardThreshold": 16,
+        "m_hardVelocityThreshold": 20,
+        "m_hardnessFactor": 4,
+        "m_reflectivity": 0,
+        "m_roughThreshold": 12,
+        "m_roughnessFactor": 8
+    },
+    "CPhysSurfacePropertiesPhysics": {
+        "m_density": 8,
+        "m_elasticity": 4,
+        "m_friction": 0,
+        "m_softContactDampingRatio": 20,
+        "m_softContactFrequency": 16,
+        "m_thickness": 12,
+        "m_wheelDrag": 24
+    },
+    "CPhysSurfacePropertiesSoundNames": {
+        "m_break": 48,
+        "m_bulletImpact": 32,
+        "m_impactHard": 8,
+        "m_impactSoft": 0,
+        "m_rolling": 40,
+        "m_scrapeRough": 24,
+        "m_scrapeSmooth": 16,
+        "m_strain": 56
+    },
+    "CPlayerInputAnimMotorUpdater": {
+        "m_bUseAcceleration": 72,
+        "m_flAnticipationDistance": 64,
+        "m_flSpringConstant": 60,
+        "m_hAnticipationHeadingParam": 70,
+        "m_hAnticipationPosParam": 68,
+        "m_sampleTimes": 32
+    },
+    "CPoseHandle": {
+        "m_eType": 2,
+        "m_nIndex": 0
+    },
+    "CProductQuantizer": {
+        "m_nDimensions": 24,
+        "m_subQuantizers": 0
+    },
+    "CQuaternionAnimParameter": {
+        "m_bInterpolate": 112,
+        "m_defaultValue": 96
+    },
+    "CRagdollAnimTag": {
+        "m_bDestroy": 76,
+        "m_flDampingRatio": 64,
+        "m_flDecayBias": 72,
+        "m_flDecayDuration": 68,
+        "m_flFrequency": 60,
+        "m_nPoseControl": 56
+    },
+    "CRagdollComponentUpdater": {
+        "m_boneIndices": 72,
+        "m_boneNames": 96,
+        "m_flMaxStretch": 152,
+        "m_flSpringFrequencyMax": 148,
+        "m_flSpringFrequencyMin": 144,
+        "m_ragdollNodePaths": 48,
+        "m_weightLists": 120
+    },
+    "CRagdollUpdateNode": {
+        "m_nWeightListIndex": 104,
+        "m_poseControlMethod": 108
+    },
+    "CRenderBufferBinding": {
+        "m_hBuffer": 0,
+        "m_nBindOffsetBytes": 16
+    },
+    "CRenderMesh": {
+        "m_constraints": 160,
+        "m_sceneObjects": 16,
+        "m_skeleton": 184
+    },
+    "CRenderSkeleton": {
+        "m_boneParents": 48,
+        "m_bones": 0,
+        "m_nBoneWeightCount": 72
+    },
+    "CSceneObjectData": {
+        "m_drawBounds": 48,
+        "m_drawCalls": 24,
+        "m_meshlets": 72,
+        "m_vMaxBounds": 12,
+        "m_vMinBounds": 0,
+        "m_vTintColor": 96
+    },
+    "CSelectorUpdateNode": {
+        "m_bResetOnChange": 164,
+        "m_bSyncCyclesOnChange": 165,
+        "m_blendCurve": 140,
+        "m_children": 88,
+        "m_eTagBehavior": 160,
+        "m_flBlendTime": 148,
+        "m_hParameter": 156,
+        "m_tags": 112
+    },
+    "CSeqAutoLayer": {
+        "m_end": 24,
+        "m_flags": 4,
+        "m_nLocalPose": 2,
+        "m_nLocalReference": 0,
+        "m_peak": 16,
+        "m_start": 12,
+        "m_tail": 20
+    },
+    "CSeqAutoLayerFlag": {
+        "m_bFetchFrame": 6,
+        "m_bLocal": 4,
+        "m_bNoBlend": 3,
+        "m_bPose": 5,
+        "m_bPost": 0,
+        "m_bSpline": 1,
+        "m_bSubtract": 7,
+        "m_bXFade": 2
+    },
+    "CSeqBoneMaskList": {
+        "m_flBoneWeightArray": 40,
+        "m_flDefaultMorphCtrlWeight": 64,
+        "m_morphCtrlWeightArray": 72,
+        "m_nLocalBoneArray": 16,
+        "m_sName": 0
+    },
+    "CSeqCmdLayer": {
+        "m_bSpline": 10,
+        "m_cmd": 0,
+        "m_flVar1": 12,
+        "m_flVar2": 16,
+        "m_nDstResult": 6,
+        "m_nLineNumber": 20,
+        "m_nLocalBonemask": 4,
+        "m_nLocalReference": 2,
+        "m_nSrcResult": 8
+    },
+    "CSeqCmdSeqDesc": {
+        "m_activityArray": 96,
+        "m_cmdLayerArray": 48,
+        "m_eventArray": 72,
+        "m_flFPS": 40,
+        "m_flags": 16,
+        "m_nFrameCount": 38,
+        "m_nFrameRangeSequence": 36,
+        "m_nSubCycles": 44,
+        "m_numLocalResults": 46,
+        "m_poseSettingArray": 120,
+        "m_sName": 0,
+        "m_transition": 28
+    },
+    "CSeqIKLock": {
+        "m_bBonesOrientedAlongPositiveX": 10,
+        "m_flAngleWeight": 4,
+        "m_flPosWeight": 0,
+        "m_nLocalBone": 8
+    },
+    "CSeqMultiFetch": {
+        "m_bCalculatePoseParameters": 100,
+        "m_flags": 0,
+        "m_localReferenceArray": 8,
+        "m_nGroupSize": 32,
+        "m_nLocalCyclePoseParameter": 96,
+        "m_nLocalPose": 40,
+        "m_poseKeyArray0": 48,
+        "m_poseKeyArray1": 72
+    },
+    "CSeqMultiFetchFlag": {
+        "m_b0D": 2,
+        "m_b1D": 3,
+        "m_b2D": 4,
+        "m_b2D_TRI": 5,
+        "m_bCylepose": 1,
+        "m_bRealtime": 0
+    },
+    "CSeqPoseParamDesc": {
+        "m_bLooping": 28,
+        "m_flEnd": 20,
+        "m_flLoop": 24,
+        "m_flStart": 16,
+        "m_sName": 0
+    },
+    "CSeqPoseSetting": {
+        "m_bX": 52,
+        "m_bY": 53,
+        "m_bZ": 54,
+        "m_eType": 56,
+        "m_flValue": 48,
+        "m_sAttachment": 16,
+        "m_sPoseParameter": 0,
+        "m_sReferenceSequence": 32
+    },
+    "CSeqS1SeqDesc": {
+        "m_IKLockArray": 168,
+        "m_LegacyKeyValueText": 216,
+        "m_SequenceKeys": 200,
+        "m_activityArray": 232,
+        "m_autoLayerArray": 144,
+        "m_fetch": 32,
+        "m_flags": 16,
+        "m_footMotion": 256,
+        "m_nLocalWeightlist": 136,
+        "m_sName": 0,
+        "m_transition": 192
+    },
+    "CSeqScaleSet": {
+        "m_bRootOffset": 16,
+        "m_flBoneScaleArray": 56,
+        "m_nLocalBoneArray": 32,
+        "m_sName": 0,
+        "m_vRootOffset": 20
+    },
+    "CSeqSeqDescFlag": {
+        "m_bAutoplay": 2,
+        "m_bHidden": 4,
+        "m_bLegacyCyclepose": 8,
+        "m_bLegacyDelta": 6,
+        "m_bLegacyRealtime": 9,
+        "m_bLegacyWorldspace": 7,
+        "m_bLooping": 0,
+        "m_bModelDoc": 10,
+        "m_bMulti": 5,
+        "m_bPost": 3,
+        "m_bSnap": 1
+    },
+    "CSeqSynthAnimDesc": {
+        "m_activityArray": 40,
+        "m_flags": 16,
+        "m_nLocalBaseReference": 36,
+        "m_nLocalBoneMask": 38,
+        "m_sName": 0,
+        "m_transition": 28
+    },
+    "CSeqTransition": {
+        "m_flFadeInTime": 0,
+        "m_flFadeOutTime": 4
+    },
+    "CSequenceFinishedAnimTag": {
+        "m_sequenceName": 56
+    },
+    "CSequenceGroupData": {
+        "m_keyValues": 272,
+        "m_localBoneMaskArray": 160,
+        "m_localBoneNameArray": 208,
+        "m_localCmdSeqDescArray": 136,
+        "m_localIKAutoplayLockArray": 288,
+        "m_localMultiSeqDescArray": 88,
+        "m_localNodeName": 232,
+        "m_localPoseParamArray": 248,
+        "m_localS1SeqDescArray": 64,
+        "m_localScaleSetArray": 184,
+        "m_localSequenceNameArray": 40,
+        "m_localSynthAnimDescArray": 112,
+        "m_nFlags": 32,
+        "m_sName": 16
+    },
+    "CSequenceUpdateNode": {
+        "m_bLoop": 160,
+        "m_duration": 156,
+        "m_hSequence": 148,
+        "m_paramSpans": 96,
+        "m_playbackSpeed": 152,
+        "m_tags": 120
+    },
+    "CSetFacingUpdateNode": {
+        "m_bResetChild": 108,
+        "m_facingMode": 104
+    },
+    "CSetParameterActionUpdater": {
+        "m_hParam": 24,
+        "m_value": 26
+    },
+    "CSingleFrameUpdateNode": {
+        "m_actions": 88,
+        "m_flCycle": 120,
+        "m_hPoseCacheHandle": 112,
+        "m_hSequence": 116
+    },
+    "CSkeletalInputUpdateNode": {
+        "m_fixedOpData": 88
+    },
+    "CSlopeComponentUpdater": {
+        "m_flTraceDistance": 52,
+        "m_hSlopeAngle": 56,
+        "m_hSlopeAngleFront": 58,
+        "m_hSlopeAngleSide": 60,
+        "m_hSlopeHeading": 62,
+        "m_hSlopeNormal": 64,
+        "m_hSlopeNormal_WorldSpace": 66
+    },
+    "CSlowDownOnSlopesUpdateNode": {
+        "m_flSlowDownStrength": 104
+    },
+    "CSolveIKChainUpdateNode": {
+        "m_opFixedData": 128,
+        "m_targetHandles": 104
+    },
+    "CSolveIKTargetHandle_t": {
+        "m_orientationHandle": 2,
+        "m_positionHandle": 0
+    },
+    "CSpeedScaleUpdateNode": {
+        "m_paramIndex": 104
+    },
+    "CStanceOverrideUpdateNode": {
+        "m_eMode": 148,
+        "m_footStanceInfo": 104,
+        "m_hParameter": 144,
+        "m_pStanceSourceNode": 128
+    },
+    "CStanceScaleUpdateNode": {
+        "m_hParam": 104
+    },
+    "CStateActionUpdater": {
+        "m_eBehavior": 8,
+        "m_pAction": 0
+    },
+    "CStateMachineComponentUpdater": {
+        "m_stateMachine": 48
+    },
+    "CStateMachineUpdateNode": {
+        "m_bBlockWaningTags": 244,
+        "m_bLockStateWhenWaning": 245,
+        "m_stateData": 192,
+        "m_stateMachine": 104,
+        "m_transitionData": 216
+    },
+    "CStateNodeStateData": {
+        "m_bExclusiveRootMotion": 0,
+        "m_pChild": 0
+    },
+    "CStateNodeTransitionData": {
+        "m_bReset": 0,
+        "m_blendDuration": 8,
+        "m_curve": 0,
+        "m_resetCycleOption": 0,
+        "m_resetCycleValue": 16
+    },
+    "CStateUpdateData": {
+        "m_actions": 40,
+        "m_bIsEndState": 0,
+        "m_bIsPassthrough": 0,
+        "m_bIsStartState": 0,
+        "m_hScript": 8,
+        "m_name": 0,
+        "m_stateID": 64,
+        "m_transitionIndices": 16
+    },
+    "CStaticPoseCache": {
+        "m_nBoneCount": 40,
+        "m_nMorphCount": 44,
+        "m_poses": 16
+    },
+    "CStepsRemainingMetricEvaluator": {
+        "m_flMinStepsRemaining": 104,
+        "m_footIndices": 80
+    },
+    "CStopAtGoalUpdateNode": {
+        "m_damping": 128,
+        "m_flInnerRadius": 112,
+        "m_flMaxScale": 116,
+        "m_flMinScale": 120,
+        "m_flOuterRadius": 108
+    },
+    "CSubtractUpdateNode": {
+        "m_bApplyChannelsSeparately": 145,
+        "m_bApplyToFootMotion": 144,
+        "m_bUseModelSpace": 146,
+        "m_footMotionTiming": 140
+    },
+    "CTiltTwistConstraint": {
+        "m_nSlaveAxis": 116,
+        "m_nTargetAxis": 112
+    },
+    "CTimeRemainingMetricEvaluator": {
+        "m_bFilterByTimeRemaining": 88,
+        "m_bMatchByTimeRemaining": 80,
+        "m_flMaxTimeRemaining": 84,
+        "m_flMinTimeRemaining": 92
+    },
+    "CToggleComponentActionUpdater": {
+        "m_bSetEnabled": 28,
+        "m_componentID": 24
+    },
+    "CTransitionUpdateData": {
+        "m_bDisabled": 0,
+        "m_destStateIndex": 1,
+        "m_srcStateIndex": 0
+    },
+    "CTurnHelperUpdateNode": {
+        "m_bMatchChildDuration": 120,
+        "m_bUseManualTurnOffset": 128,
+        "m_facingTarget": 108,
+        "m_manualTurnOffset": 124,
+        "m_turnDuration": 116,
+        "m_turnStartTimeOffset": 112
+    },
+    "CTwistConstraint": {
+        "m_bInverse": 112,
+        "m_qChildBindRotation": 144,
+        "m_qParentBindRotation": 128
+    },
+    "CTwoBoneIKUpdateNode": {
+        "m_opFixedData": 112
+    },
+    "CUnaryUpdateNode": {
+        "m_pChildNode": 88
+    },
+    "CVPhysXSurfacePropertiesList": {
+        "m_surfacePropertiesList": 0
+    },
+    "CVRInputComponentUpdater": {
+        "m_FingerCurl_Index": 54,
+        "m_FingerCurl_Middle": 56,
+        "m_FingerCurl_Pinky": 60,
+        "m_FingerCurl_Ring": 58,
+        "m_FingerCurl_Thumb": 52,
+        "m_FingerSplay_Index_Middle": 64,
+        "m_FingerSplay_Middle_Ring": 66,
+        "m_FingerSplay_Ring_Pinky": 68,
+        "m_FingerSplay_Thumb_Index": 62
+    },
+    "CVectorAnimParameter": {
+        "m_bInterpolate": 108,
+        "m_defaultValue": 96
+    },
+    "CVectorQuantizer": {
+        "m_centroidVectors": 0,
+        "m_nCentroids": 24,
+        "m_nDimensions": 28
+    },
+    "CVirtualAnimParameter": {
+        "m_eParamType": 88,
+        "m_expressionString": 80
+    },
+    "CVrSkeletalInputSettings": {
+        "m_eHand": 72,
+        "m_fingers": 24,
+        "m_name": 48,
+        "m_outerKnuckle1": 56,
+        "m_outerKnuckle2": 64,
+        "m_wristBones": 0
+    },
+    "CWayPointHelperUpdateNode": {
+        "m_bOnlyGoals": 116,
+        "m_bPreventOvershoot": 117,
+        "m_bPreventUndershoot": 118,
+        "m_flEndCycle": 112,
+        "m_flStartCycle": 108
+    },
+    "CWristBone": {
+        "m_name": 0,
+        "m_vForwardLS": 8,
+        "m_vOffset": 32,
+        "m_vUpLS": 20
+    },
+    "ChainToSolveData_t": {
+        "m_DebugSetting": 56,
+        "m_SolverSettings": 4,
+        "m_TargetSettings": 16,
+        "m_flDebugNormalizedValue": 60,
+        "m_nChainIndex": 0,
+        "m_vDebugOffset": 64
+    },
+    "ConfigIndex": {
+        "m_nConfig": 2,
+        "m_nGroup": 0
+    },
+    "FingerBone_t": {
+        "m_boneIndex": 0,
+        "m_flMaxAngle": 44,
+        "m_flMinAngle": 40,
+        "m_flRadius": 48,
+        "m_hingeAxis": 4,
+        "m_vCapsulePos1": 16,
+        "m_vCapsulePos2": 28
+    },
+    "FingerChain_t": {
+        "m_bones": 24,
+        "m_flFingerScaleRatio": 88,
+        "m_flSplayMaxAngle": 84,
+        "m_flSplayMinAngle": 80,
+        "m_metacarpalBoneIndex": 76,
+        "m_targets": 0,
+        "m_tipParentBoneIndex": 72,
+        "m_vSplayHingeAxis": 60,
+        "m_vTipOffset": 48
+    },
+    "FingerSource_t": {
+        "m_flFingerWeight": 4,
+        "m_nFingerIndex": 0
+    },
+    "FollowAttachmentSettings_t": {
+        "m_attachment": 0,
+        "m_bMatchRotation": 133,
+        "m_bMatchTranslation": 132,
+        "m_boneIndex": 128
+    },
+    "FootFixedData_t": {
+        "m_flMaxIKLength": 48,
+        "m_flMaxRotationLeft": 60,
+        "m_flMaxRotationRight": 64,
+        "m_ikChainIndex": 44,
+        "m_nAnkleBoneIndex": 36,
+        "m_nFootIndex": 52,
+        "m_nIKAnchorBoneIndex": 40,
+        "m_nTagIndex": 56,
+        "m_nTargetBoneIndex": 32,
+        "m_vHeelOffset": 16,
+        "m_vToeOffset": 0
+    },
+    "FootFixedSettings": {
+        "m_bEnableTracing": 48,
+        "m_flFootBaseLength": 32,
+        "m_flMaxRotationLeft": 36,
+        "m_flMaxRotationRight": 40,
+        "m_flTraceAngleBlend": 52,
+        "m_footstepLandedTagIndex": 44,
+        "m_nDisableTagIndex": 56,
+        "m_nFootIndex": 60,
+        "m_traceSettings": 0,
+        "m_vFootBaseBindPosePositionMS": 16
+    },
+    "FootLockPoseOpFixedSettings": {
+        "m_bAlwaysUseFallbackHinge": 50,
+        "m_bApplyFootRotationLimits": 51,
+        "m_bApplyHipDrop": 49,
+        "m_bApplyLegTwistLimits": 52,
+        "m_bApplyTilt": 48,
+        "m_bEnableLockBreaking": 68,
+        "m_bEnableStretching": 80,
+        "m_flExtensionScale": 60,
+        "m_flLockBlendTime": 76,
+        "m_flLockBreakTolerance": 72,
+        "m_flMaxFootHeight": 56,
+        "m_flMaxLegTwist": 64,
+        "m_flMaxStretchAmount": 84,
+        "m_flStretchExtensionScale": 88,
+        "m_footInfo": 0,
+        "m_hipDampingSettings": 24,
+        "m_ikSolverType": 44,
+        "m_nHipBoneIndex": 40
+    },
+    "FootPinningPoseOpFixedData_t": {
+        "m_bApplyFootRotationLimits": 41,
+        "m_bApplyLegTwistLimits": 40,
+        "m_flBlendTime": 24,
+        "m_flLockBreakDistance": 28,
+        "m_flMaxLegTwist": 32,
+        "m_footInfo": 0,
+        "m_nHipBoneIndex": 36
+    },
+    "FootStepTrigger": {
+        "m_nFootIndex": 24,
+        "m_tags": 0,
+        "m_triggerPhase": 28
+    },
+    "HSequence": {
+        "m_Value": 0
+    },
+    "HitReactFixedSettings_t": {
+        "m_flCounterRotationScale": 20,
+        "m_flDistanceFadeScale": 24,
+        "m_flHipBoneTranslationScale": 52,
+        "m_flHipDipDelay": 64,
+        "m_flHipDipImpactScale": 60,
+        "m_flHipDipSpringStrength": 56,
+        "m_flMaxAngleRadians": 44,
+        "m_flMaxImpactForce": 8,
+        "m_flMinImpactForce": 12,
+        "m_flPropagationScale": 28,
+        "m_flSpringStrength": 36,
+        "m_flWhipDelay": 32,
+        "m_flWhipImpactScale": 16,
+        "m_flWhipSpringStrength": 40,
+        "m_nEffectedBoneCount": 4,
+        "m_nHipBoneIndex": 48,
+        "m_nWeightListIndex": 0
+    },
+    "IKBoneNameAndIndex_t": {
+        "m_Name": 0
+    },
+    "IKDemoCaptureSettings_t": {
+        "m_eMode": 8,
+        "m_ikChainName": 16,
+        "m_oneBoneEnd": 32,
+        "m_oneBoneStart": 24,
+        "m_parentBoneName": 0
+    },
+    "IKSolverSettings_t": {
+        "m_SolverType": 0,
+        "m_nNumIterations": 4
+    },
+    "IKTargetSettings_t": {
+        "m_AnimgraphParameterNameOrientation": 28,
+        "m_AnimgraphParameterNamePosition": 24,
+        "m_Bone": 8,
+        "m_TargetCoordSystem": 32,
+        "m_TargetSource": 0
+    },
+    "JiggleBoneSettingsList_t": {
+        "m_boneSettings": 0
+    },
+    "JiggleBoneSettings_t": {
+        "m_eSimSpace": 40,
+        "m_flDamping": 12,
+        "m_flMaxTimeStep": 8,
+        "m_flSpringStrength": 4,
+        "m_nBoneIndex": 0,
+        "m_vBoundsMaxLS": 16,
+        "m_vBoundsMinLS": 28
+    },
+    "LookAtBone_t": {
+        "m_index": 0,
+        "m_weight": 4
+    },
+    "LookAtOpFixedSettings_t": {
+        "m_attachment": 0,
+        "m_bMaintainUpDirection": 185,
+        "m_bRotateYawForward": 184,
+        "m_bTargetIsPosition": 186,
+        "m_bUseHysteresis": 187,
+        "m_bones": 144,
+        "m_damping": 128,
+        "m_flHysteresisInnerAngle": 176,
+        "m_flHysteresisOuterAngle": 180,
+        "m_flPitchLimit": 172,
+        "m_flYawLimit": 168
+    },
+    "MaterialGroup_t": {
+        "m_materials": 8,
+        "m_name": 0
+    },
+    "ModelBoneFlexDriverControl_t": {
+        "m_flMax": 24,
+        "m_flMin": 20,
+        "m_flexController": 8,
+        "m_flexControllerToken": 16,
+        "m_nBoneComponent": 0
+    },
+    "ModelBoneFlexDriver_t": {
+        "m_boneName": 0,
+        "m_boneNameToken": 8,
+        "m_controls": 16
+    },
+    "ModelSkeletonData_t": {
+        "m_boneName": 0,
+        "m_bonePosParent": 96,
+        "m_boneRotParent": 120,
+        "m_boneScaleParent": 144,
+        "m_boneSphere": 48,
+        "m_nFlag": 72,
+        "m_nParent": 24
+    },
+    "MoodAnimationLayer_t": {
+        "m_bActiveListening": 8,
+        "m_bActiveTalking": 9,
+        "m_bScaleWithInts": 56,
+        "m_flDurationScale": 48,
+        "m_flEndOffset": 76,
+        "m_flFadeIn": 84,
+        "m_flFadeOut": 88,
+        "m_flIntensity": 40,
+        "m_flNextStart": 60,
+        "m_flStartOffset": 68,
+        "m_layerAnimations": 16,
+        "m_sName": 0
+    },
+    "MoodAnimation_t": {
+        "m_flWeight": 8,
+        "m_sName": 0
+    },
+    "MotionBlendItem": {
+        "m_flKeyValue": 8,
+        "m_pChild": 0
+    },
+    "MotionDBIndex": {
+        "m_nIndex": 0
+    },
+    "MotionIndex": {
+        "m_nGroup": 0,
+        "m_nMotion": 2
+    },
+    "ParamSpanSample_t": {
+        "m_flCycle": 20,
+        "m_value": 0
+    },
+    "ParamSpan_t": {
+        "m_eParamType": 26,
+        "m_flEndCycle": 32,
+        "m_flStartCycle": 28,
+        "m_hParam": 24,
+        "m_samples": 0
+    },
+    "PermModelDataAnimatedMaterialAttribute_t": {
+        "m_AttributeName": 0,
+        "m_nNumChannels": 8
+    },
+    "PermModelData_t": {
+        "m_AnimatedMaterialAttributes": 688,
+        "m_BodyGroupsHiddenInTools": 640,
+        "m_ExtParts": 96,
+        "m_boneFlexDrivers": 608,
+        "m_lodGroupSwitchDistances": 216,
+        "m_materialGroups": 360,
+        "m_meshGroups": 336,
+        "m_modelInfo": 8,
+        "m_modelSkeleton": 392,
+        "m_nDefaultMeshGroupMask": 384,
+        "m_name": 0,
+        "m_pModelConfigList": 632,
+        "m_refAnimGroups": 288,
+        "m_refAnimIncludeModels": 664,
+        "m_refLODGroupMasks": 192,
+        "m_refMeshGroupMasks": 144,
+        "m_refMeshes": 120,
+        "m_refPhysGroupMasks": 168,
+        "m_refPhysicsData": 240,
+        "m_refPhysicsHitboxData": 264,
+        "m_refSequenceGroups": 312,
+        "m_remappingTable": 560,
+        "m_remappingTableStarts": 584
+    },
+    "PermModelExtPart_t": {
+        "m_Name": 32,
+        "m_Transform": 0,
+        "m_nParent": 40,
+        "m_refModel": 48
+    },
+    "PermModelInfo_t": {
+        "m_flMass": 52,
+        "m_flMaxEyeDeflection": 68,
+        "m_keyValueText": 80,
+        "m_nFlags": 0,
+        "m_sSurfaceProperty": 72,
+        "m_vEyePosition": 56,
+        "m_vHullMax": 16,
+        "m_vHullMin": 4,
+        "m_vViewMax": 40,
+        "m_vViewMin": 28
+    },
+    "PhysSoftbodyDesc_t": {
+        "m_Capsules": 72,
+        "m_InitPose": 96,
+        "m_ParticleBoneHash": 0,
+        "m_ParticleBoneName": 120,
+        "m_Particles": 24,
+        "m_Springs": 48
+    },
+    "RenderSkeletonBone_t": {
+        "m_bbox": 64,
+        "m_boneName": 0,
+        "m_flSphereRadius": 88,
+        "m_invBindPose": 16,
+        "m_parentName": 8
+    },
+    "SampleCode": {
+        "m_subCode": 0
+    },
+    "ScriptInfo_t": {
+        "m_code": 0,
+        "m_eScriptType": 80,
+        "m_paramsModified": 8,
+        "m_proxyReadParams": 32,
+        "m_proxyWriteParams": 56
+    },
+    "SkeletalInputOpFixedSettings_t": {
+        "m_bEnableCollision": 69,
+        "m_bEnableIK": 68,
+        "m_eHand": 56,
+        "m_eMotionRange": 60,
+        "m_eTransformSource": 64,
+        "m_fingers": 24,
+        "m_outerKnuckle1": 48,
+        "m_outerKnuckle2": 52,
+        "m_wristBones": 0
+    },
+    "SkeletonBoneBounds_t": {
+        "m_vecCenter": 0,
+        "m_vecSize": 12
+    },
+    "SolveIKChainPoseOpFixedSettings_t": {
+        "m_ChainsToSolveData": 0,
+        "m_bMatchTargetOrientation": 24
+    },
+    "StanceInfo_t": {
+        "m_flDirection": 12,
+        "m_vPosition": 0
+    },
+    "TagSpan_t": {
+        "m_endCycle": 8,
+        "m_startCycle": 4,
+        "m_tagIndex": 0
+    },
+    "TraceSettings_t": {
+        "m_flTraceHeight": 0,
+        "m_flTraceRadius": 4
+    },
+    "TwoBoneIKSettings_t": {
+        "m_bAlwaysUseFallbackHinge": 296,
+        "m_bConstrainTwist": 333,
+        "m_bMatchTargetOrientation": 332,
+        "m_endEffectorAttachment": 16,
+        "m_endEffectorType": 0,
+        "m_flMaxTwist": 336,
+        "m_hPositionParam": 292,
+        "m_hRotationParam": 294,
+        "m_nEndBoneIndex": 328,
+        "m_nFixedBoneIndex": 320,
+        "m_nMiddleBoneIndex": 324,
+        "m_targetAttachment": 160,
+        "m_targetBoneIndex": 288,
+        "m_targetType": 144,
+        "m_vLsFallbackHingeAxis": 304
+    },
+    "VPhysXAggregateData_t": {
+        "m_bindPose": 104,
+        "m_boneNames": 32,
+        "m_boneParents": 208,
+        "m_bonesHash": 8,
+        "m_collisionAttributes": 256,
+        "m_constraints2": 152,
+        "m_debugPartNames": 280,
+        "m_embeddedKeyvalues": 304,
+        "m_indexHash": 80,
+        "m_indexNames": 56,
+        "m_joints": 176,
+        "m_nFlags": 0,
+        "m_nRefCounter": 2,
+        "m_pFeModel": 200,
+        "m_parts": 128,
+        "m_surfacePropertyHashes": 232
+    },
+    "VPhysXBodyPart_t": {
+        "m_bOverrideMassCenter": 144,
+        "m_flAngularDamping": 140,
+        "m_flInertiaScale": 132,
+        "m_flLinearDamping": 136,
+        "m_flMass": 4,
+        "m_nCollisionAttributeIndex": 128,
+        "m_nFlags": 0,
+        "m_nReserved": 130,
+        "m_rnShape": 8,
+        "m_vMassCenterOverride": 148
+    },
+    "VPhysXCollisionAttributes_t": {
+        "m_CollisionGroup": 0,
+        "m_CollisionGroupString": 80,
+        "m_InteractAs": 8,
+        "m_InteractAsStrings": 88,
+        "m_InteractExclude": 56,
+        "m_InteractExcludeStrings": 136,
+        "m_InteractWith": 32,
+        "m_InteractWithStrings": 112
+    },
+    "VPhysXConstraint2_t": {
+        "m_nChild": 6,
+        "m_nFlags": 0,
+        "m_nParent": 4,
+        "m_params": 8
+    },
+    "VPhysXConstraintParams_t": {
+        "m_anchor": 4,
+        "m_axes": 28,
+        "m_driveDampingSlerp": 232,
+        "m_driveDampingSwing": 228,
+        "m_driveDampingTwist": 224,
+        "m_driveDampingX": 200,
+        "m_driveDampingY": 204,
+        "m_driveDampingZ": 208,
+        "m_driveSpringSlerp": 220,
+        "m_driveSpringSwing": 216,
+        "m_driveSpringTwist": 212,
+        "m_driveSpringX": 188,
+        "m_driveSpringY": 192,
+        "m_driveSpringZ": 196,
+        "m_goalAngularVelocity": 176,
+        "m_goalOrientation": 160,
+        "m_goalPosition": 148,
+        "m_linearLimitDamping": 80,
+        "m_linearLimitRestitution": 72,
+        "m_linearLimitSpring": 76,
+        "m_linearLimitValue": 68,
+        "m_maxForce": 60,
+        "m_maxTorque": 64,
+        "m_nFlags": 3,
+        "m_nRotateMotion": 2,
+        "m_nTranslateMotion": 1,
+        "m_nType": 0,
+        "m_projectionAngularTolerance": 244,
+        "m_projectionLinearTolerance": 240,
+        "m_solverIterationCount": 236,
+        "m_swing1LimitDamping": 128,
+        "m_swing1LimitRestitution": 120,
+        "m_swing1LimitSpring": 124,
+        "m_swing1LimitValue": 116,
+        "m_swing2LimitDamping": 144,
+        "m_swing2LimitRestitution": 136,
+        "m_swing2LimitSpring": 140,
+        "m_swing2LimitValue": 132,
+        "m_twistHighLimitDamping": 112,
+        "m_twistHighLimitRestitution": 104,
+        "m_twistHighLimitSpring": 108,
+        "m_twistHighLimitValue": 100,
+        "m_twistLowLimitDamping": 96,
+        "m_twistLowLimitRestitution": 88,
+        "m_twistLowLimitSpring": 92,
+        "m_twistLowLimitValue": 84
+    },
+    "VPhysXJoint_t": {
+        "m_Frame1": 16,
+        "m_Frame2": 48,
+        "m_LinearLimit": 84,
+        "m_SwingLimit": 116,
+        "m_TwistLimit": 128,
+        "m_bEnableAngularMotor": 136,
+        "m_bEnableCollision": 80,
+        "m_bEnableLinearLimit": 81,
+        "m_bEnableLinearMotor": 92,
+        "m_bEnableSwingLimit": 112,
+        "m_bEnableTwistLimit": 124,
+        "m_flAngularDampingRatio": 168,
+        "m_flAngularFrequency": 164,
+        "m_flFriction": 172,
+        "m_flLinearDampingRatio": 160,
+        "m_flLinearFrequency": 156,
+        "m_flMaxForce": 108,
+        "m_flMaxTorque": 152,
+        "m_nBody1": 2,
+        "m_nBody2": 4,
+        "m_nFlags": 6,
+        "m_nType": 0,
+        "m_vAngularTargetVelocity": 140,
+        "m_vLinearTargetVelocity": 96
+    },
+    "VPhysXRange_t": {
+        "m_flMax": 4,
+        "m_flMin": 0
+    },
+    "VPhysics2ShapeDef_t": {
+        "m_CollisionAttributeIndices": 96,
+        "m_capsules": 24,
+        "m_hulls": 48,
+        "m_meshes": 72,
+        "m_spheres": 0
+    },
+    "WeightList": {
+        "m_name": 0,
+        "m_weights": 8
+    },
+    "WristBone_t": {
+        "m_boneIndex": 32,
+        "m_xOffsetTransformMS": 0
+    }
+}

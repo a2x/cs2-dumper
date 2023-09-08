@@ -1,0 +1,42 @@
+{
+    "CExampleSchemaVData_Monomorphic": {
+        "m_nExample1": 0,
+        "m_nExample2": 4
+    },
+    "CExampleSchemaVData_PolymorphicBase": {
+        "m_nBase": 8
+    },
+    "CExampleSchemaVData_PolymorphicDerivedA": {
+        "m_nDerivedA": 16
+    },
+    "CExampleSchemaVData_PolymorphicDerivedB": {
+        "m_nDerivedB": 16
+    },
+    "CSchemaSystemInternalRegistration": {
+        "m_CTransform": 256,
+        "m_CUtlBinaryBlock": 296,
+        "m_CUtlString": 320,
+        "m_CUtlSymbol": 328,
+        "m_Color": 224,
+        "m_DegreeEuler": 100,
+        "m_KV3": 368,
+        "m_QAngle": 64,
+        "m_Quaternion": 48,
+        "m_QuaternionStorage": 112,
+        "m_RadianEuler": 88,
+        "m_ResourceTypes": 360,
+        "m_RotationVector": 76,
+        "m_Vector": 8,
+        "m_Vector2D": 0,
+        "m_Vector4D": 228,
+        "m_VectorAligned": 32,
+        "m_matrix3x4_t": 128,
+        "m_matrix3x4a_t": 176,
+        "m_pKeyValues": 288,
+        "m_stringToken": 332,
+        "m_stringTokenWithStorage": 336
+    },
+    "ResourceId_t": {
+        "m_Value": 0
+    }
+}

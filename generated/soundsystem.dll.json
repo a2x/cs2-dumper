@@ -1,0 +1,270 @@
+{
+    "CDSPMixgroupModifier": {
+        "m_flListenerReverbModifierWhenSourceReverbIsActive": 24,
+        "m_flModifier": 8,
+        "m_flModifierMin": 12,
+        "m_flSourceModifier": 16,
+        "m_flSourceModifierMin": 20,
+        "m_mixgroup": 0
+    },
+    "CDSPPresetMixgroupModifierTable": {
+        "m_table": 0
+    },
+    "CDspPresetModifierList": {
+        "m_dspName": 0,
+        "m_modifiers": 8
+    },
+    "CSosGroupActionLimitSchema": {
+        "m_nMaxCount": 24,
+        "m_nSortType": 32,
+        "m_nStopType": 28
+    },
+    "CSosGroupActionSchema": {
+        "m_actionInstanceType": 20,
+        "m_actionType": 16,
+        "m_name": 8
+    },
+    "CSosGroupActionSetSoundeventParameterSchema": {
+        "m_flMaxValue": 32,
+        "m_flMinValue": 28,
+        "m_nMaxCount": 24,
+        "m_nSortType": 48,
+        "m_opvarName": 40
+    },
+    "CSosGroupActionTimeLimitSchema": {
+        "m_flMaxDuration": 24
+    },
+    "CSosGroupBranchPattern": {
+        "m_bMatchEntIndex": 10,
+        "m_bMatchEventName": 8,
+        "m_bMatchEventSubString": 9,
+        "m_bMatchOpvar": 11
+    },
+    "CSosGroupMatchPattern": {
+        "m_flEntIndex": 32,
+        "m_flOpvar": 36,
+        "m_matchSoundEventName": 16,
+        "m_matchSoundEventSubString": 24
+    },
+    "CSosSoundEventGroupListSchema": {
+        "m_groupList": 0
+    },
+    "CSosSoundEventGroupSchema": {
+        "m_bInvertMatch": 20,
+        "m_bIsBlocking": 12,
+        "m_branchPattern": 64,
+        "m_matchPattern": 24,
+        "m_nBlockMaxCount": 16,
+        "m_nType": 8,
+        "m_name": 0,
+        "m_vActions": 176
+    },
+    "CSoundEventMetaData": {
+        "m_soundEventVMix": 0
+    },
+    "SelectedEditItemInfo_t": {
+        "m_EditItems": 0
+    },
+    "SosEditItemInfo_t": {
+        "itemKVString": 32,
+        "itemName": 8,
+        "itemPos": 40,
+        "itemType": 0,
+        "itemTypeName": 16
+    },
+    "VMixAutoFilterDesc_t": {
+        "m_filter": 12,
+        "m_flAttackTimeMS": 4,
+        "m_flEnvelopeAmount": 0,
+        "m_flLFOAmount": 28,
+        "m_flLFORate": 32,
+        "m_flPhase": 36,
+        "m_flReleaseTimeMS": 8,
+        "m_nLFOShape": 40
+    },
+    "VMixBoxverbDesc_t": {
+        "m_bParallel": 24,
+        "m_filterType": 28,
+        "m_flComplexity": 8,
+        "m_flDepth": 52,
+        "m_flDiffusion": 12,
+        "m_flFeedbackDepth": 68,
+        "m_flFeedbackHeight": 64,
+        "m_flFeedbackScale": 56,
+        "m_flFeedbackWidth": 60,
+        "m_flHeight": 48,
+        "m_flModDepth": 16,
+        "m_flModRate": 20,
+        "m_flOutputGain": 72,
+        "m_flSizeMax": 0,
+        "m_flSizeMin": 4,
+        "m_flTaps": 76,
+        "m_flWidth": 44
+    },
+    "VMixConvolutionDesc_t": {
+        "m_flHighCutoffFreq": 28,
+        "m_flLowCutoffFreq": 24,
+        "m_flPreDelayMS": 4,
+        "m_flWetMix": 8,
+        "m_fldbGain": 0,
+        "m_fldbHigh": 20,
+        "m_fldbLow": 12,
+        "m_fldbMid": 16
+    },
+    "VMixDelayDesc_t": {
+        "m_bEnableFilter": 16,
+        "m_feedbackFilter": 0,
+        "m_flDelay": 20,
+        "m_flDelayGain": 28,
+        "m_flDirectGain": 24,
+        "m_flFeedbackGain": 32,
+        "m_flWidth": 36
+    },
+    "VMixDiffusorDesc_t": {
+        "m_flComplexity": 4,
+        "m_flFeedback": 8,
+        "m_flOutputGain": 12,
+        "m_flSize": 0
+    },
+    "VMixDynamics3BandDesc_t": {
+        "m_bPeakMode": 32,
+        "m_bandDesc": 36,
+        "m_flDepth": 12,
+        "m_flHighCutoffFreq": 28,
+        "m_flLowCutoffFreq": 24,
+        "m_flRMSTimeMS": 4,
+        "m_flTimeScale": 20,
+        "m_flWetMix": 16,
+        "m_fldbGainOutput": 0,
+        "m_fldbKneeWidth": 8
+    },
+    "VMixDynamicsBand_t": {
+        "m_bEnable": 32,
+        "m_bSolo": 33,
+        "m_flAttackTimeMS": 24,
+        "m_flRatioAbove": 20,
+        "m_flRatioBelow": 16,
+        "m_flReleaseTimeMS": 28,
+        "m_fldbGainInput": 0,
+        "m_fldbGainOutput": 4,
+        "m_fldbThresholdAbove": 12,
+        "m_fldbThresholdBelow": 8
+    },
+    "VMixDynamicsCompressorDesc_t": {
+        "m_bPeakMode": 32,
+        "m_flAttackTimeMS": 16,
+        "m_flCompressionRatio": 12,
+        "m_flRMSTimeMS": 24,
+        "m_flReleaseTimeMS": 20,
+        "m_flWetMix": 28,
+        "m_fldbCompressionThreshold": 4,
+        "m_fldbKneeWidth": 8,
+        "m_fldbOutputGain": 0
+    },
+    "VMixDynamicsDesc_t": {
+        "m_bPeakMode": 44,
+        "m_flAttackTimeMS": 28,
+        "m_flLimiterRatio": 24,
+        "m_flRMSTimeMS": 36,
+        "m_flRatio": 20,
+        "m_flReleaseTimeMS": 32,
+        "m_flWetMix": 40,
+        "m_fldbCompressionThreshold": 8,
+        "m_fldbGain": 0,
+        "m_fldbKneeWidth": 16,
+        "m_fldbLimiterThreshold": 12,
+        "m_fldbNoiseGateThreshold": 4
+    },
+    "VMixEQ8Desc_t": {
+        "m_stages": 0
+    },
+    "VMixEffectChainDesc_t": {
+        "m_flCrossfadeTime": 0
+    },
+    "VMixEnvelopeDesc_t": {
+        "m_flAttackTimeMS": 0,
+        "m_flHoldTimeMS": 4,
+        "m_flReleaseTimeMS": 8
+    },
+    "VMixFilterDesc_t": {
+        "m_bEnabled": 3,
+        "m_flCutoffFreq": 8,
+        "m_flQ": 12,
+        "m_fldbGain": 4,
+        "m_nFilterSlope": 2,
+        "m_nFilterType": 0
+    },
+    "VMixFreeverbDesc_t": {
+        "m_flDamp": 4,
+        "m_flLateReflections": 12,
+        "m_flRoomSize": 0,
+        "m_flWidth": 8
+    },
+    "VMixModDelayDesc_t": {
+        "m_bApplyAntialiasing": 44,
+        "m_bPhaseInvert": 16,
+        "m_feedbackFilter": 0,
+        "m_flDelay": 24,
+        "m_flFeedbackGain": 32,
+        "m_flGlideTime": 20,
+        "m_flModDepth": 40,
+        "m_flModRate": 36,
+        "m_flOutputGain": 28
+    },
+    "VMixOscDesc_t": {
+        "m_flPhase": 8,
+        "m_freq": 4,
+        "oscType": 0
+    },
+    "VMixPannerDesc_t": {
+        "m_flStrength": 4,
+        "m_type": 0
+    },
+    "VMixPitchShiftDesc_t": {
+        "m_flPitchShift": 4,
+        "m_nGrainSampleCount": 0,
+        "m_nProcType": 12,
+        "m_nQuality": 8
+    },
+    "VMixPlateverbDesc_t": {
+        "m_flDamp": 16,
+        "m_flDecay": 12,
+        "m_flFeedbackDiffusion1": 20,
+        "m_flFeedbackDiffusion2": 24,
+        "m_flInputDiffusion1": 4,
+        "m_flInputDiffusion2": 8,
+        "m_flPrefilter": 0
+    },
+    "VMixShaperDesc_t": {
+        "m_flWetMix": 12,
+        "m_fldbDrive": 4,
+        "m_fldbOutputGain": 8,
+        "m_nOversampleFactor": 16,
+        "m_nShape": 0
+    },
+    "VMixSubgraphSwitchDesc_t": {
+        "m_bOnlyTailsOnFadeOut": 4,
+        "m_flInterpolationTime": 8,
+        "m_interpolationMode": 0
+    },
+    "VMixUtilityDesc_t": {
+        "m_bBassMono": 16,
+        "m_flBassFreq": 20,
+        "m_flInputPan": 4,
+        "m_flOutputBalance": 8,
+        "m_fldbOutputGain": 12,
+        "m_nOp": 0
+    },
+    "VMixVocoderDesc_t": {
+        "m_bPeakMode": 36,
+        "m_flAttackTimeMS": 24,
+        "m_flBandwidth": 4,
+        "m_flFreqRangeEnd": 16,
+        "m_flFreqRangeStart": 12,
+        "m_flReleaseTimeMS": 28,
+        "m_fldBModGain": 8,
+        "m_fldBUnvoicedGain": 20,
+        "m_nBandCount": 0,
+        "m_nDebugBand": 32
+    }
+}

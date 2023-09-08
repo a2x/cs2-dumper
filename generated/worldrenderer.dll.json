@@ -1,0 +1,196 @@
+{
+    "AggregateLODSetup_t": {
+        "m_fMaxObjectScale": 12,
+        "m_fSwitchDistances": 24,
+        "m_nLODMask": 16,
+        "m_vLODOrigin": 0
+    },
+    "AggregateMeshInfo_t": {
+        "m_bHasTransform": 5,
+        "m_nDrawCallIndex": 6,
+        "m_nLODGroupMask": 10,
+        "m_nLODSetupIndex": 8,
+        "m_nLightProbeVolumePrecomputedHandshake": 20,
+        "m_nVisClusterMemberCount": 4,
+        "m_nVisClusterMemberOffset": 0,
+        "m_objectFlags": 16,
+        "m_vTintColor": 11
+    },
+    "AggregateSceneObject_t": {
+        "m_aggregateMeshes": 16,
+        "m_allFlags": 0,
+        "m_anyFlags": 4,
+        "m_fragmentTransforms": 88,
+        "m_lodSetups": 40,
+        "m_nLayer": 8,
+        "m_renderableModel": 112,
+        "m_visClusterMembership": 64
+    },
+    "BakedLightingInfo_t": {
+        "m_bHasLightmaps": 16,
+        "m_lightMaps": 24,
+        "m_nLightmapGameVersionNumber": 4,
+        "m_nLightmapVersionNumber": 0,
+        "m_vLightmapUvScale": 8
+    },
+    "BaseSceneObjectOverride_t": {
+        "m_nSceneObjectIndex": 0
+    },
+    "CEntityIdentity": {
+        "m_PathIndex": 64,
+        "m_designerName": 32,
+        "m_fDataObjectTypes": 60,
+        "m_flags": 48,
+        "m_name": 24,
+        "m_nameStringableIndex": 20,
+        "m_pNext": 96,
+        "m_pNextByClass": 112,
+        "m_pPrev": 88,
+        "m_pPrevByClass": 104,
+        "m_worldGroupId": 56
+    },
+    "CEntityInstance": {
+        "m_CScriptComponent": 40,
+        "m_iszPrivateVScripts": 8,
+        "m_pEntity": 16
+    },
+    "CScriptComponent": {
+        "m_scriptClassName": 48
+    },
+    "CVoxelVisibility": {
+        "m_EnclosedClusterListBlock": 124,
+        "m_EnclosedClustersBlock": 132,
+        "m_MasksBlock": 140,
+        "m_NodeBlock": 108,
+        "m_RegionBlock": 116,
+        "m_flGridSize": 96,
+        "m_nBaseClusterCount": 64,
+        "m_nPVSBytesPerCluster": 68,
+        "m_nSkyVisibilityCluster": 100,
+        "m_nSunVisibilityCluster": 104,
+        "m_nVisBlocks": 148,
+        "m_vMaxBounds": 84,
+        "m_vMinBounds": 72
+    },
+    "ClutterSceneObject_t": {
+        "m_Bounds": 0,
+        "m_flags": 24,
+        "m_instancePositions": 32,
+        "m_instanceScales": 80,
+        "m_instanceTintSrgb": 104,
+        "m_nLayer": 28,
+        "m_renderableModel": 152,
+        "m_tiles": 128
+    },
+    "ClutterTile_t": {
+        "m_BoundsWs": 8,
+        "m_nFirstInstance": 0,
+        "m_nLastInstance": 4
+    },
+    "EntityIOConnectionData_t": {
+        "m_flDelay": 40,
+        "m_inputName": 24,
+        "m_nTimesToFire": 44,
+        "m_outputName": 0,
+        "m_overrideParam": 32,
+        "m_targetName": 16,
+        "m_targetType": 8
+    },
+    "EntityKeyValueData_t": {
+        "m_connections": 8,
+        "m_keyValuesData": 32
+    },
+    "ExtraVertexStreamOverride_t": {
+        "m_extraBufferBinding": 16,
+        "m_nAdditionalMeshDrawPrimitiveFlags": 12,
+        "m_nDrawCallIndex": 8,
+        "m_nSubSceneObject": 4
+    },
+    "InfoOverlayData_t": {
+        "m_flDepth": 56,
+        "m_flHeight": 52,
+        "m_flWidth": 48,
+        "m_nRenderOrder": 88,
+        "m_nSequenceOverride": 108,
+        "m_pMaterial": 80,
+        "m_transform": 0,
+        "m_vTintColor": 92,
+        "m_vUVEnd": 68,
+        "m_vUVStart": 60
+    },
+    "MaterialOverride_t": {
+        "m_nDrawCallIndex": 8,
+        "m_nSubSceneObject": 4,
+        "m_pMaterial": 16
+    },
+    "NodeData_t": {
+        "m_ChildNodeIndices": 48,
+        "m_flMinimumDistance": 40,
+        "m_nParent": 0,
+        "m_vMaxBounds": 28,
+        "m_vMinBounds": 16,
+        "m_vOrigin": 4,
+        "m_worldNodePrefix": 72
+    },
+    "PermEntityLumpData_t": {
+        "m_childLumps": 24,
+        "m_entityKeyValues": 48,
+        "m_hammerUniqueId": 16,
+        "m_name": 8
+    },
+    "SceneObject_t": {
+        "m_flFadeEndDistance": 56,
+        "m_flFadeStartDistance": 52,
+        "m_nCubeMapPrecomputedHandshake": 112,
+        "m_nLODOverride": 110,
+        "m_nLightGroup": 104,
+        "m_nLightProbeVolumePrecomputedHandshake": 116,
+        "m_nObjectID": 0,
+        "m_nObjectTypeFlags": 88,
+        "m_nOverlayRenderOrder": 108,
+        "m_renderable": 136,
+        "m_renderableModel": 128,
+        "m_skin": 80,
+        "m_vLightingOrigin": 92,
+        "m_vTintColor": 60,
+        "m_vTransform": 4
+    },
+    "VoxelVisBlockOffset_t": {
+        "m_nElementCount": 4,
+        "m_nOffset": 0
+    },
+    "WorldBuilderParams_t": {
+        "m_bBuildBakedLighting": 4,
+        "m_flMinDrawVolumeSize": 0,
+        "m_nCompileFingerprint": 24,
+        "m_nCompileTimestamp": 16,
+        "m_vLightmapUvScale": 8
+    },
+    "WorldNodeOnDiskBufferData_t": {
+        "m_inputLayoutFields": 8,
+        "m_nElementCount": 0,
+        "m_nElementSizeInBytes": 4,
+        "m_pData": 32
+    },
+    "WorldNode_t": {
+        "m_aggregateSceneObjects": 72,
+        "m_clutterSceneObjects": 96,
+        "m_extraVertexStreamOverrides": 120,
+        "m_extraVertexStreams": 168,
+        "m_grassFileName": 264,
+        "m_infoOverlays": 24,
+        "m_layerNames": 192,
+        "m_materialOverrides": 144,
+        "m_nodeLightingInfo": 272,
+        "m_overlayLayerIndices": 240,
+        "m_sceneObjectLayerIndices": 216,
+        "m_sceneObjects": 0,
+        "m_visClusterMembership": 48
+    },
+    "World_t": {
+        "m_builderParams": 0,
+        "m_entityLumps": 104,
+        "m_worldLightingInfo": 56,
+        "m_worldNodes": 32
+    }
+}
