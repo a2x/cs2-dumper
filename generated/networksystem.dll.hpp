@@ -5,4 +5,3 @@
 namespace ChangeAccessorFieldPathIndex_t {
     constexpr std::ptrdiff_t m_Value = 0x0;
 }
-

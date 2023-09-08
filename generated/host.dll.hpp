@@ -9,4 +9,3 @@ namespace CAnimScriptBase {
 namespace EmptyTestScript {
     constexpr std::ptrdiff_t m_hTest = 0x10;
 }
-

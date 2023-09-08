@@ -41,7 +41,7 @@
         "m_hOuter": 36,
         "m_iReapplyProvisionParity": 32
     },
-    "CAttributeManager::cached_attribute_float_t": {
+    "CAttributeManager_cached_attribute_float_t": {
         "flIn": 0,
         "flOut": 16,
         "iAttribHook": 8
@@ -1266,7 +1266,7 @@
         "m_vEyeOcclusionRendererHalfExtent": 4148,
         "m_vLookTargetPosition": 3904
     },
-    "C_BaseFlex::Emphasized_Phoneme": {
+    "C_BaseFlex_Emphasized_Phoneme": {
         "m_bBasechecked": 29,
         "m_bRequired": 28,
         "m_bValid": 30,
@@ -2076,7 +2076,7 @@
         "m_vecAttachedModels": 5600,
         "m_vecAttachedParticles": 5536
     },
-    "C_EconEntity::AttachedModelData_t": {
+    "C_EconEntity_AttachedModelData_t": {
         "m_iModelDisplayFlags": 0
     },
     "C_EconItemView": {
@@ -2369,11 +2369,11 @@
         "m_location": 44,
         "m_windRadius": 20
     },
-    "C_EnvWindShared::WindAveEvent_t": {
+    "C_EnvWindShared_WindAveEvent_t": {
         "m_flAveWindSpeed": 4,
         "m_flStartWindSpeed": 0
     },
-    "C_EnvWindShared::WindVariationEvent_t": {
+    "C_EnvWindShared_WindVariationEvent_t": {
         "m_flWindAngleVariation": 0,
         "m_flWindSpeedVariation": 4
     },
@@ -3062,7 +3062,7 @@
         "m_vecImpulse": 4148,
         "m_vecPreviousImpulse": 4160
     },
-    "C_RopeKeyframe::CPhysicsDelegate": {
+    "C_RopeKeyframe_CPhysicsDelegate": {
         "m_pKeyframe": 8
     },
     "C_SceneEntity": {
@@ -3079,7 +3079,7 @@
         "m_hOwner": 1364,
         "m_nSceneStringIndex": 1360
     },
-    "C_SceneEntity::QueuedEvents_t": {
+    "C_SceneEntity_QueuedEvents_t": {
         "starttime": 0
     },
     "C_ShatterGlassShardPhysics": {

@@ -22,4 +22,3 @@ namespace VsInputSignatureElement_t {
 namespace VsInputSignature_t {
     constexpr std::ptrdiff_t m_elems = 0x0;
 }
-

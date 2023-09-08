@@ -1,6 +1,6 @@
-# CS2 Schema Dumper
+# CS2 Dumper
 
-Automated schema class file generator for Counter-Strike: 2. Generates JSON and C++ header files.
+Automated offsets and schema class file generator for Counter-Strike: 2. By default, it will generate JSON, Rust, C# and C++ header files. It also allows customization by overriding the `IFileBuilder` interface for exporting in your preferred file formats.
 
 # Generated Files
 

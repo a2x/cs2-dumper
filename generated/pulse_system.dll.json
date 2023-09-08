@@ -34,7 +34,7 @@
     "CPulseCell_Outflow_CycleOrdered": {
         "m_Outputs": 72
     },
-    "CPulseCell_Outflow_CycleOrdered::InstanceState_t": {
+    "CPulseCell_Outflow_CycleOrdered_InstanceState_t": {
         "m_nNextIndex": 0
     },
     "CPulseCell_Outflow_CycleRandom": {
@@ -43,7 +43,7 @@
     "CPulseCell_Outflow_CycleShuffled": {
         "m_Outputs": 72
     },
-    "CPulseCell_Outflow_CycleShuffled::InstanceState_t": {
+    "CPulseCell_Outflow_CycleShuffled_InstanceState_t": {
         "m_Shuffle": 0,
         "m_nNextShuffle": 32
     },

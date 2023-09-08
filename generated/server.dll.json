@@ -104,7 +104,7 @@
         "m_hOuter": 36,
         "m_iReapplyProvisionParity": 32
     },
-    "CAttributeManager::cached_attribute_float_t": {
+    "CAttributeManager_cached_attribute_float_t": {
         "flIn": 0,
         "flOut": 16,
         "iAttribHook": 8
@@ -2661,11 +2661,11 @@
         "m_location": 44,
         "m_windRadius": 20
     },
-    "CEnvWindShared::WindAveEvent_t": {
+    "CEnvWindShared_WindAveEvent_t": {
         "m_flAveWindSpeed": 4,
         "m_flStartWindSpeed": 0
     },
-    "CEnvWindShared::WindVariationEvent_t": {
+    "CEnvWindShared_WindVariationEvent_t": {
         "m_flWindAngleVariation": 0,
         "m_flWindSpeedVariation": 4
     },
@@ -4913,7 +4913,7 @@
     "CResponseQueue": {
         "m_ExpresserTargets": 80
     },
-    "CResponseQueue::CDeferredResponse": {
+    "CResponseQueue_CDeferredResponse": {
         "m_bResponseValid": 568,
         "m_contexts": 16,
         "m_fDispatchTime": 64,

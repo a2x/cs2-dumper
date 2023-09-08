@@ -509,11 +509,11 @@
     "CBoneConstraintPoseSpaceBone": {
         "m_inputList": 112
     },
-    "CBoneConstraintPoseSpaceBone::Input_t": {
+    "CBoneConstraintPoseSpaceBone_Input_t": {
         "m_inputValue": 0,
         "m_outputTransformList": 16
     },
-    "CBoneConstraintPoseSpaceMorph::Input_t": {
+    "CBoneConstraintPoseSpaceMorph_Input_t": {
         "m_inputValue": 0,
         "m_outputWeightList": 16
     },

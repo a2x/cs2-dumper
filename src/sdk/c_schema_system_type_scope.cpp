@@ -3,7 +3,7 @@
 
 namespace sdk {
     CSchemaClassInfo* CSchemaSystemTypeScope::find_declared_class(const std::string_view class_name) const noexcept {
-        const std::uint32_t hash = utility::murmur_hash2(class_name.data(), class_name.length(), 0xBAADFEED);
+        const std::uint32_t hash = utility::murmur_hash2(class_name.data(), static_cast<std::uint32_t>(class_name.length()), 0xBAADFEED);
 
         const std::int32_t hash_transform1 = static_cast<std::uint8_t>(hash >> 0x10) - 0x2D6 + 0x21 * (0x21 * static_cast<std::uint8_t>(hash) + static_cast<std::uint8_t>(hash >> 0x8));
         const std::int32_t hash_transform2 = 0x21 * hash_transform1 + static_cast<std::uint8_t>(hash >> 0x18);
@@ -75,10 +75,10 @@ namespace sdk {
         const auto count = process::read_memory<std::uint32_t>(base + 0x10);
         const auto unallocated_data = process::read_memory<std::uint64_t>(base + 0x18 + 0x18);
 
-        std::int32_t index = 0;
+        std::uint32_t index = 0;
 
         for (std::uint64_t element = unallocated_data; element; element = process::read_memory<std::uint64_t>(element)) {
-            for (std::int32_t i = 0; i < block_size && i != count; ++i) {
+            for (std::size_t i = 0; i < block_size && i != count; ++i) {
                 classes.push_back(reinterpret_cast<CSchemaType_DeclaredClass*>(process::read_memory<std::uint64_t>(element + 0x20 + (i * 0x18))));
 
                 ++index;

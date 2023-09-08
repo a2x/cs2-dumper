@@ -2,10 +2,22 @@
 
 #include <cstddef>
 
-namespace CSosGroupActionSchema {
-    constexpr std::ptrdiff_t m_name = 0x8;
-    constexpr std::ptrdiff_t m_actionType = 0x10;
-    constexpr std::ptrdiff_t m_actionInstanceType = 0x14;
+namespace CDSPMixgroupModifier {
+    constexpr std::ptrdiff_t m_mixgroup = 0x0;
+    constexpr std::ptrdiff_t m_flModifier = 0x8;
+    constexpr std::ptrdiff_t m_flModifierMin = 0xc;
+    constexpr std::ptrdiff_t m_flSourceModifier = 0x10;
+    constexpr std::ptrdiff_t m_flSourceModifierMin = 0x14;
+    constexpr std::ptrdiff_t m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18;
+}
+
+namespace CDSPPresetMixgroupModifierTable {
+    constexpr std::ptrdiff_t m_table = 0x0;
+}
+
+namespace CDspPresetModifierList {
+    constexpr std::ptrdiff_t m_dspName = 0x0;
+    constexpr std::ptrdiff_t m_modifiers = 0x8;
 }
 
 namespace CSosGroupActionLimitSchema {
@@ -14,8 +26,10 @@ namespace CSosGroupActionLimitSchema {
     constexpr std::ptrdiff_t m_nSortType = 0x20;
 }
 
-namespace CSosGroupActionTimeLimitSchema {
-    constexpr std::ptrdiff_t m_flMaxDuration = 0x18;
+namespace CSosGroupActionSchema {
+    constexpr std::ptrdiff_t m_name = 0x8;
+    constexpr std::ptrdiff_t m_actionType = 0x10;
+    constexpr std::ptrdiff_t m_actionInstanceType = 0x14;
 }
 
 namespace CSosGroupActionSetSoundeventParameterSchema {
@@ -24,6 +38,10 @@ namespace CSosGroupActionSetSoundeventParameterSchema {
     constexpr std::ptrdiff_t m_flMaxValue = 0x20;
     constexpr std::ptrdiff_t m_opvarName = 0x28;
     constexpr std::ptrdiff_t m_nSortType = 0x30;
+}
+
+namespace CSosGroupActionTimeLimitSchema {
+    constexpr std::ptrdiff_t m_flMaxDuration = 0x18;
 }
 
 namespace CSosGroupBranchPattern {
@@ -40,6 +58,10 @@ namespace CSosGroupMatchPattern {
     constexpr std::ptrdiff_t m_flOpvar = 0x24;
 }
 
+namespace CSosSoundEventGroupListSchema {
+    constexpr std::ptrdiff_t m_groupList = 0x0;
+}
+
 namespace CSosSoundEventGroupSchema {
     constexpr std::ptrdiff_t m_name = 0x0;
     constexpr std::ptrdiff_t m_nType = 0x8;
@@ -51,8 +73,12 @@ namespace CSosSoundEventGroupSchema {
     constexpr std::ptrdiff_t m_vActions = 0xb0;
 }
 
-namespace CSosSoundEventGroupListSchema {
-    constexpr std::ptrdiff_t m_groupList = 0x0;
+namespace CSoundEventMetaData {
+    constexpr std::ptrdiff_t m_soundEventVMix = 0x0;
+}
+
+namespace SelectedEditItemInfo_t {
+    constexpr std::ptrdiff_t m_EditItems = 0x0;
 }
 
 namespace SosEditItemInfo_t {
@@ -63,77 +89,15 @@ namespace SosEditItemInfo_t {
     constexpr std::ptrdiff_t itemPos = 0x28;
 }
 
-namespace SelectedEditItemInfo_t {
-    constexpr std::ptrdiff_t m_EditItems = 0x0;
-}
-
-namespace CSoundEventMetaData {
-    constexpr std::ptrdiff_t m_soundEventVMix = 0x0;
-}
-
-namespace CDSPMixgroupModifier {
-    constexpr std::ptrdiff_t m_mixgroup = 0x0;
-    constexpr std::ptrdiff_t m_flModifier = 0x8;
-    constexpr std::ptrdiff_t m_flModifierMin = 0xc;
-    constexpr std::ptrdiff_t m_flSourceModifier = 0x10;
-    constexpr std::ptrdiff_t m_flSourceModifierMin = 0x14;
-    constexpr std::ptrdiff_t m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18;
-}
-
-namespace CDspPresetModifierList {
-    constexpr std::ptrdiff_t m_dspName = 0x0;
-    constexpr std::ptrdiff_t m_modifiers = 0x8;
-}
-
-namespace CDSPPresetMixgroupModifierTable {
-    constexpr std::ptrdiff_t m_table = 0x0;
-}
-
-namespace VMixFilterDesc_t {
-    constexpr std::ptrdiff_t m_nFilterType = 0x0;
-    constexpr std::ptrdiff_t m_nFilterSlope = 0x2;
-    constexpr std::ptrdiff_t m_bEnabled = 0x3;
-    constexpr std::ptrdiff_t m_fldbGain = 0x4;
-    constexpr std::ptrdiff_t m_flCutoffFreq = 0x8;
-    constexpr std::ptrdiff_t m_flQ = 0xc;
-}
-
-namespace VMixEQ8Desc_t {
-    constexpr std::ptrdiff_t m_stages = 0x0;
-}
-
-namespace VMixDelayDesc_t {
-    constexpr std::ptrdiff_t m_feedbackFilter = 0x0;
-    constexpr std::ptrdiff_t m_bEnableFilter = 0x10;
-    constexpr std::ptrdiff_t m_flDelay = 0x14;
-    constexpr std::ptrdiff_t m_flDirectGain = 0x18;
-    constexpr std::ptrdiff_t m_flDelayGain = 0x1c;
-    constexpr std::ptrdiff_t m_flFeedbackGain = 0x20;
-    constexpr std::ptrdiff_t m_flWidth = 0x24;
-}
-
-namespace VMixPannerDesc_t {
-    constexpr std::ptrdiff_t m_type = 0x0;
-    constexpr std::ptrdiff_t m_flStrength = 0x4;
-}
-
-namespace VMixModDelayDesc_t {
-    constexpr std::ptrdiff_t m_feedbackFilter = 0x0;
-    constexpr std::ptrdiff_t m_bPhaseInvert = 0x10;
-    constexpr std::ptrdiff_t m_flGlideTime = 0x14;
-    constexpr std::ptrdiff_t m_flDelay = 0x18;
-    constexpr std::ptrdiff_t m_flOutputGain = 0x1c;
-    constexpr std::ptrdiff_t m_flFeedbackGain = 0x20;
-    constexpr std::ptrdiff_t m_flModRate = 0x24;
-    constexpr std::ptrdiff_t m_flModDepth = 0x28;
-    constexpr std::ptrdiff_t m_bApplyAntialiasing = 0x2c;
-}
-
-namespace VMixDiffusorDesc_t {
-    constexpr std::ptrdiff_t m_flSize = 0x0;
-    constexpr std::ptrdiff_t m_flComplexity = 0x4;
-    constexpr std::ptrdiff_t m_flFeedback = 0x8;
-    constexpr std::ptrdiff_t m_flOutputGain = 0xc;
+namespace VMixAutoFilterDesc_t {
+    constexpr std::ptrdiff_t m_flEnvelopeAmount = 0x0;
+    constexpr std::ptrdiff_t m_flAttackTimeMS = 0x4;
+    constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x8;
+    constexpr std::ptrdiff_t m_filter = 0xc;
+    constexpr std::ptrdiff_t m_flLFOAmount = 0x1c;
+    constexpr std::ptrdiff_t m_flLFORate = 0x20;
+    constexpr std::ptrdiff_t m_flPhase = 0x24;
+    constexpr std::ptrdiff_t m_nLFOShape = 0x28;
 }
 
 namespace VMixBoxverbDesc_t {
@@ -156,21 +120,70 @@ namespace VMixBoxverbDesc_t {
     constexpr std::ptrdiff_t m_flTaps = 0x4c;
 }
 
-namespace VMixFreeverbDesc_t {
-    constexpr std::ptrdiff_t m_flRoomSize = 0x0;
-    constexpr std::ptrdiff_t m_flDamp = 0x4;
-    constexpr std::ptrdiff_t m_flWidth = 0x8;
-    constexpr std::ptrdiff_t m_flLateReflections = 0xc;
+namespace VMixConvolutionDesc_t {
+    constexpr std::ptrdiff_t m_fldbGain = 0x0;
+    constexpr std::ptrdiff_t m_flPreDelayMS = 0x4;
+    constexpr std::ptrdiff_t m_flWetMix = 0x8;
+    constexpr std::ptrdiff_t m_fldbLow = 0xc;
+    constexpr std::ptrdiff_t m_fldbMid = 0x10;
+    constexpr std::ptrdiff_t m_fldbHigh = 0x14;
+    constexpr std::ptrdiff_t m_flLowCutoffFreq = 0x18;
+    constexpr std::ptrdiff_t m_flHighCutoffFreq = 0x1c;
 }
 
-namespace VMixPlateverbDesc_t {
-    constexpr std::ptrdiff_t m_flPrefilter = 0x0;
-    constexpr std::ptrdiff_t m_flInputDiffusion1 = 0x4;
-    constexpr std::ptrdiff_t m_flInputDiffusion2 = 0x8;
-    constexpr std::ptrdiff_t m_flDecay = 0xc;
-    constexpr std::ptrdiff_t m_flDamp = 0x10;
-    constexpr std::ptrdiff_t m_flFeedbackDiffusion1 = 0x14;
-    constexpr std::ptrdiff_t m_flFeedbackDiffusion2 = 0x18;
+namespace VMixDelayDesc_t {
+    constexpr std::ptrdiff_t m_feedbackFilter = 0x0;
+    constexpr std::ptrdiff_t m_bEnableFilter = 0x10;
+    constexpr std::ptrdiff_t m_flDelay = 0x14;
+    constexpr std::ptrdiff_t m_flDirectGain = 0x18;
+    constexpr std::ptrdiff_t m_flDelayGain = 0x1c;
+    constexpr std::ptrdiff_t m_flFeedbackGain = 0x20;
+    constexpr std::ptrdiff_t m_flWidth = 0x24;
+}
+
+namespace VMixDiffusorDesc_t {
+    constexpr std::ptrdiff_t m_flSize = 0x0;
+    constexpr std::ptrdiff_t m_flComplexity = 0x4;
+    constexpr std::ptrdiff_t m_flFeedback = 0x8;
+    constexpr std::ptrdiff_t m_flOutputGain = 0xc;
+}
+
+namespace VMixDynamics3BandDesc_t {
+    constexpr std::ptrdiff_t m_fldbGainOutput = 0x0;
+    constexpr std::ptrdiff_t m_flRMSTimeMS = 0x4;
+    constexpr std::ptrdiff_t m_fldbKneeWidth = 0x8;
+    constexpr std::ptrdiff_t m_flDepth = 0xc;
+    constexpr std::ptrdiff_t m_flWetMix = 0x10;
+    constexpr std::ptrdiff_t m_flTimeScale = 0x14;
+    constexpr std::ptrdiff_t m_flLowCutoffFreq = 0x18;
+    constexpr std::ptrdiff_t m_flHighCutoffFreq = 0x1c;
+    constexpr std::ptrdiff_t m_bPeakMode = 0x20;
+    constexpr std::ptrdiff_t m_bandDesc = 0x24;
+}
+
+namespace VMixDynamicsBand_t {
+    constexpr std::ptrdiff_t m_fldbGainInput = 0x0;
+    constexpr std::ptrdiff_t m_fldbGainOutput = 0x4;
+    constexpr std::ptrdiff_t m_fldbThresholdBelow = 0x8;
+    constexpr std::ptrdiff_t m_fldbThresholdAbove = 0xc;
+    constexpr std::ptrdiff_t m_flRatioBelow = 0x10;
+    constexpr std::ptrdiff_t m_flRatioAbove = 0x14;
+    constexpr std::ptrdiff_t m_flAttackTimeMS = 0x18;
+    constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x1c;
+    constexpr std::ptrdiff_t m_bEnable = 0x20;
+    constexpr std::ptrdiff_t m_bSolo = 0x21;
+}
+
+namespace VMixDynamicsCompressorDesc_t {
+    constexpr std::ptrdiff_t m_fldbOutputGain = 0x0;
+    constexpr std::ptrdiff_t m_fldbCompressionThreshold = 0x4;
+    constexpr std::ptrdiff_t m_fldbKneeWidth = 0x8;
+    constexpr std::ptrdiff_t m_flCompressionRatio = 0xc;
+    constexpr std::ptrdiff_t m_flAttackTimeMS = 0x10;
+    constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x14;
+    constexpr std::ptrdiff_t m_flRMSTimeMS = 0x18;
+    constexpr std::ptrdiff_t m_flWetMix = 0x1c;
+    constexpr std::ptrdiff_t m_bPeakMode = 0x20;
 }
 
 namespace VMixDynamicsDesc_t {
@@ -188,48 +201,57 @@ namespace VMixDynamicsDesc_t {
     constexpr std::ptrdiff_t m_bPeakMode = 0x2c;
 }
 
-namespace VMixDynamicsCompressorDesc_t {
-    constexpr std::ptrdiff_t m_fldbOutputGain = 0x0;
-    constexpr std::ptrdiff_t m_fldbCompressionThreshold = 0x4;
-    constexpr std::ptrdiff_t m_fldbKneeWidth = 0x8;
-    constexpr std::ptrdiff_t m_flCompressionRatio = 0xc;
-    constexpr std::ptrdiff_t m_flAttackTimeMS = 0x10;
-    constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x14;
-    constexpr std::ptrdiff_t m_flRMSTimeMS = 0x18;
-    constexpr std::ptrdiff_t m_flWetMix = 0x1c;
-    constexpr std::ptrdiff_t m_bPeakMode = 0x20;
+namespace VMixEQ8Desc_t {
+    constexpr std::ptrdiff_t m_stages = 0x0;
 }
 
-namespace VMixDynamicsBand_t {
-    constexpr std::ptrdiff_t m_fldbGainInput = 0x0;
-    constexpr std::ptrdiff_t m_fldbGainOutput = 0x4;
-    constexpr std::ptrdiff_t m_fldbThresholdBelow = 0x8;
-    constexpr std::ptrdiff_t m_fldbThresholdAbove = 0xc;
-    constexpr std::ptrdiff_t m_flRatioBelow = 0x10;
-    constexpr std::ptrdiff_t m_flRatioAbove = 0x14;
-    constexpr std::ptrdiff_t m_flAttackTimeMS = 0x18;
-    constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x1c;
-    constexpr std::ptrdiff_t m_bEnable = 0x20;
-    constexpr std::ptrdiff_t m_bSolo = 0x21;
-}
-
-namespace VMixDynamics3BandDesc_t {
-    constexpr std::ptrdiff_t m_fldbGainOutput = 0x0;
-    constexpr std::ptrdiff_t m_flRMSTimeMS = 0x4;
-    constexpr std::ptrdiff_t m_fldbKneeWidth = 0x8;
-    constexpr std::ptrdiff_t m_flDepth = 0xc;
-    constexpr std::ptrdiff_t m_flWetMix = 0x10;
-    constexpr std::ptrdiff_t m_flTimeScale = 0x14;
-    constexpr std::ptrdiff_t m_flLowCutoffFreq = 0x18;
-    constexpr std::ptrdiff_t m_flHighCutoffFreq = 0x1c;
-    constexpr std::ptrdiff_t m_bPeakMode = 0x20;
-    constexpr std::ptrdiff_t m_bandDesc = 0x24;
+namespace VMixEffectChainDesc_t {
+    constexpr std::ptrdiff_t m_flCrossfadeTime = 0x0;
 }
 
 namespace VMixEnvelopeDesc_t {
     constexpr std::ptrdiff_t m_flAttackTimeMS = 0x0;
     constexpr std::ptrdiff_t m_flHoldTimeMS = 0x4;
     constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x8;
+}
+
+namespace VMixFilterDesc_t {
+    constexpr std::ptrdiff_t m_nFilterType = 0x0;
+    constexpr std::ptrdiff_t m_nFilterSlope = 0x2;
+    constexpr std::ptrdiff_t m_bEnabled = 0x3;
+    constexpr std::ptrdiff_t m_fldbGain = 0x4;
+    constexpr std::ptrdiff_t m_flCutoffFreq = 0x8;
+    constexpr std::ptrdiff_t m_flQ = 0xc;
+}
+
+namespace VMixFreeverbDesc_t {
+    constexpr std::ptrdiff_t m_flRoomSize = 0x0;
+    constexpr std::ptrdiff_t m_flDamp = 0x4;
+    constexpr std::ptrdiff_t m_flWidth = 0x8;
+    constexpr std::ptrdiff_t m_flLateReflections = 0xc;
+}
+
+namespace VMixModDelayDesc_t {
+    constexpr std::ptrdiff_t m_feedbackFilter = 0x0;
+    constexpr std::ptrdiff_t m_bPhaseInvert = 0x10;
+    constexpr std::ptrdiff_t m_flGlideTime = 0x14;
+    constexpr std::ptrdiff_t m_flDelay = 0x18;
+    constexpr std::ptrdiff_t m_flOutputGain = 0x1c;
+    constexpr std::ptrdiff_t m_flFeedbackGain = 0x20;
+    constexpr std::ptrdiff_t m_flModRate = 0x24;
+    constexpr std::ptrdiff_t m_flModDepth = 0x28;
+    constexpr std::ptrdiff_t m_bApplyAntialiasing = 0x2c;
+}
+
+namespace VMixOscDesc_t {
+    constexpr std::ptrdiff_t oscType = 0x0;
+    constexpr std::ptrdiff_t m_freq = 0x4;
+    constexpr std::ptrdiff_t m_flPhase = 0x8;
+}
+
+namespace VMixPannerDesc_t {
+    constexpr std::ptrdiff_t m_type = 0x0;
+    constexpr std::ptrdiff_t m_flStrength = 0x4;
 }
 
 namespace VMixPitchShiftDesc_t {
@@ -239,15 +261,37 @@ namespace VMixPitchShiftDesc_t {
     constexpr std::ptrdiff_t m_nProcType = 0xc;
 }
 
-namespace VMixConvolutionDesc_t {
-    constexpr std::ptrdiff_t m_fldbGain = 0x0;
-    constexpr std::ptrdiff_t m_flPreDelayMS = 0x4;
-    constexpr std::ptrdiff_t m_flWetMix = 0x8;
-    constexpr std::ptrdiff_t m_fldbLow = 0xc;
-    constexpr std::ptrdiff_t m_fldbMid = 0x10;
-    constexpr std::ptrdiff_t m_fldbHigh = 0x14;
-    constexpr std::ptrdiff_t m_flLowCutoffFreq = 0x18;
-    constexpr std::ptrdiff_t m_flHighCutoffFreq = 0x1c;
+namespace VMixPlateverbDesc_t {
+    constexpr std::ptrdiff_t m_flPrefilter = 0x0;
+    constexpr std::ptrdiff_t m_flInputDiffusion1 = 0x4;
+    constexpr std::ptrdiff_t m_flInputDiffusion2 = 0x8;
+    constexpr std::ptrdiff_t m_flDecay = 0xc;
+    constexpr std::ptrdiff_t m_flDamp = 0x10;
+    constexpr std::ptrdiff_t m_flFeedbackDiffusion1 = 0x14;
+    constexpr std::ptrdiff_t m_flFeedbackDiffusion2 = 0x18;
+}
+
+namespace VMixShaperDesc_t {
+    constexpr std::ptrdiff_t m_nShape = 0x0;
+    constexpr std::ptrdiff_t m_fldbDrive = 0x4;
+    constexpr std::ptrdiff_t m_fldbOutputGain = 0x8;
+    constexpr std::ptrdiff_t m_flWetMix = 0xc;
+    constexpr std::ptrdiff_t m_nOversampleFactor = 0x10;
+}
+
+namespace VMixSubgraphSwitchDesc_t {
+    constexpr std::ptrdiff_t m_interpolationMode = 0x0;
+    constexpr std::ptrdiff_t m_bOnlyTailsOnFadeOut = 0x4;
+    constexpr std::ptrdiff_t m_flInterpolationTime = 0x8;
+}
+
+namespace VMixUtilityDesc_t {
+    constexpr std::ptrdiff_t m_nOp = 0x0;
+    constexpr std::ptrdiff_t m_flInputPan = 0x4;
+    constexpr std::ptrdiff_t m_flOutputBalance = 0x8;
+    constexpr std::ptrdiff_t m_fldbOutputGain = 0xc;
+    constexpr std::ptrdiff_t m_bBassMono = 0x10;
+    constexpr std::ptrdiff_t m_flBassFreq = 0x14;
 }
 
 namespace VMixVocoderDesc_t {
@@ -262,48 +306,3 @@ namespace VMixVocoderDesc_t {
     constexpr std::ptrdiff_t m_nDebugBand = 0x20;
     constexpr std::ptrdiff_t m_bPeakMode = 0x24;
 }
-
-namespace VMixShaperDesc_t {
-    constexpr std::ptrdiff_t m_nShape = 0x0;
-    constexpr std::ptrdiff_t m_fldbDrive = 0x4;
-    constexpr std::ptrdiff_t m_fldbOutputGain = 0x8;
-    constexpr std::ptrdiff_t m_flWetMix = 0xc;
-    constexpr std::ptrdiff_t m_nOversampleFactor = 0x10;
-}
-
-namespace VMixUtilityDesc_t {
-    constexpr std::ptrdiff_t m_nOp = 0x0;
-    constexpr std::ptrdiff_t m_flInputPan = 0x4;
-    constexpr std::ptrdiff_t m_flOutputBalance = 0x8;
-    constexpr std::ptrdiff_t m_fldbOutputGain = 0xc;
-    constexpr std::ptrdiff_t m_bBassMono = 0x10;
-    constexpr std::ptrdiff_t m_flBassFreq = 0x14;
-}
-
-namespace VMixAutoFilterDesc_t {
-    constexpr std::ptrdiff_t m_flEnvelopeAmount = 0x0;
-    constexpr std::ptrdiff_t m_flAttackTimeMS = 0x4;
-    constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x8;
-    constexpr std::ptrdiff_t m_filter = 0xc;
-    constexpr std::ptrdiff_t m_flLFOAmount = 0x1c;
-    constexpr std::ptrdiff_t m_flLFORate = 0x20;
-    constexpr std::ptrdiff_t m_flPhase = 0x24;
-    constexpr std::ptrdiff_t m_nLFOShape = 0x28;
-}
-
-namespace VMixOscDesc_t {
-    constexpr std::ptrdiff_t oscType = 0x0;
-    constexpr std::ptrdiff_t m_freq = 0x4;
-    constexpr std::ptrdiff_t m_flPhase = 0x8;
-}
-
-namespace VMixEffectChainDesc_t {
-    constexpr std::ptrdiff_t m_flCrossfadeTime = 0x0;
-}
-
-namespace VMixSubgraphSwitchDesc_t {
-    constexpr std::ptrdiff_t m_interpolationMode = 0x0;
-    constexpr std::ptrdiff_t m_bOnlyTailsOnFadeOut = 0x4;
-    constexpr std::ptrdiff_t m_flInterpolationTime = 0x8;
-}
-

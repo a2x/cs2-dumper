@@ -11,16 +11,6 @@ namespace CSSDSMsg_EndFrame {
     constexpr std::ptrdiff_t m_Views = 0x0;
 }
 
-namespace SceneViewId_t {
-    constexpr std::ptrdiff_t m_nViewId = 0x0;
-    constexpr std::ptrdiff_t m_nFrameCount = 0x8;
-}
-
-namespace CSSDSMsg_ViewRender {
-    constexpr std::ptrdiff_t m_viewId = 0x0;
-    constexpr std::ptrdiff_t m_ViewName = 0x10;
-}
-
 namespace CSSDSMsg_LayerBase {
     constexpr std::ptrdiff_t m_viewId = 0x0;
     constexpr std::ptrdiff_t m_ViewName = 0x10;
@@ -28,6 +18,11 @@ namespace CSSDSMsg_LayerBase {
     constexpr std::ptrdiff_t m_nLayerId = 0x20;
     constexpr std::ptrdiff_t m_LayerName = 0x28;
     constexpr std::ptrdiff_t m_displayText = 0x30;
+}
+
+namespace CSSDSMsg_ViewRender {
+    constexpr std::ptrdiff_t m_viewId = 0x0;
+    constexpr std::ptrdiff_t m_ViewName = 0x10;
 }
 
 namespace CSSDSMsg_ViewTarget {
@@ -49,9 +44,7 @@ namespace CSSDSMsg_ViewTargetList {
     constexpr std::ptrdiff_t m_Targets = 0x18;
 }
 
-namespace CSSDSMsg_PreLayer {
+namespace SceneViewId_t {
+    constexpr std::ptrdiff_t m_nViewId = 0x0;
+    constexpr std::ptrdiff_t m_nFrameCount = 0x8;
 }
-
-namespace CSSDSMsg_PostLayer {
-}
-
