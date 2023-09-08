@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
 
-project(cs2-schema-dumper)
+project(cs2-dumper)
 
 set(CMAKE_CXX_STANDARD 20)
 
