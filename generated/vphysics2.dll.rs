@@ -1,11 +1,11 @@
-#[allow(non_snake_case, non_upper_case_globals)]
+#![allow(non_snake_case, non_upper_case_globals)]
+
 pub mod CFeIndexedJiggleBone {
     pub const m_nNode: usize = 0x0;
     pub const m_nJiggleParent: usize = 0x4;
     pub const m_jiggleBone: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFeJiggleBone {
     pub const m_nFlags: usize = 0x0;
     pub const m_flLength: usize = 0x4;
@@ -44,7 +44,6 @@ pub mod CFeJiggleBone {
     pub const m_nCollisionMask: usize = 0x98;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFeMorphLayer {
     pub const m_Name: usize = 0x0;
     pub const m_nNameHash: usize = 0x8;
@@ -55,7 +54,6 @@ pub mod CFeMorphLayer {
     pub const m_GoalDamping: usize = 0x70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFeNamedJiggleBone {
     pub const m_strParentBone: usize = 0x0;
     pub const m_transform: usize = 0x10;
@@ -63,18 +61,15 @@ pub mod CFeNamedJiggleBone {
     pub const m_jiggleBone: usize = 0x34;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFeVertexMapBuildArray {
     pub const m_Array: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CRegionSVM {
     pub const m_Planes: usize = 0x0;
     pub const m_Nodes: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CastSphereSATParams_t {
     pub const m_vRayStart: usize = 0x0;
     pub const m_vRayDelta: usize = 0xc;
@@ -84,7 +79,6 @@ pub mod CastSphereSATParams_t {
     pub const m_pHull: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CovMatrix3 {
     pub const m_vDiag: usize = 0x0;
     pub const m_flXY: usize = 0xc;
@@ -92,19 +86,16 @@ pub mod CovMatrix3 {
     pub const m_flYZ: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod Dop26_t {
     pub const m_flSupport: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeAnimStrayRadius_t {
     pub const nNode: usize = 0x0;
     pub const flMaxDist: usize = 0x4;
     pub const flRelaxationFactor: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeAxialEdgeBend_t {
     pub const te: usize = 0x0;
     pub const tv: usize = 0x4;
@@ -113,14 +104,12 @@ pub mod FeAxialEdgeBend_t {
     pub const nNode: usize = 0x1c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeBandBendLimit_t {
     pub const flDistMin: usize = 0x0;
     pub const flDistMax: usize = 0x4;
     pub const nNode: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeBoxRigid_t {
     pub const tmFrame2: usize = 0x0;
     pub const nNode: usize = 0x20;
@@ -132,25 +121,21 @@ pub mod FeBoxRigid_t {
     pub const flReserved: usize = 0x38;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeBuildBoxRigid_t {
     pub const m_nPriority: usize = 0x40;
     pub const m_nVertexMapHash: usize = 0x44;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeBuildSphereRigid_t {
     pub const m_nPriority: usize = 0x20;
     pub const m_nVertexMapHash: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeBuildTaperedCapsuleRigid_t {
     pub const m_nPriority: usize = 0x30;
     pub const m_nVertexMapHash: usize = 0x34;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeCollisionPlane_t {
     pub const nCtrlParent: usize = 0x0;
     pub const nChildNode: usize = 0x2;
@@ -159,20 +144,17 @@ pub mod FeCollisionPlane_t {
     pub const flStrength: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeCtrlOffset_t {
     pub const vOffset: usize = 0x0;
     pub const nCtrlParent: usize = 0xc;
     pub const nCtrlChild: usize = 0xe;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeCtrlOsOffset_t {
     pub const nCtrlParent: usize = 0x0;
     pub const nCtrlChild: usize = 0x2;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeCtrlSoftOffset_t {
     pub const nCtrlParent: usize = 0x0;
     pub const nCtrlChild: usize = 0x2;
@@ -180,14 +162,12 @@ pub mod FeCtrlSoftOffset_t {
     pub const flAlpha: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeEdgeDesc_t {
     pub const nEdge: usize = 0x0;
     pub const nSide: usize = 0x4;
     pub const nVirtElem: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeEffectDesc_t {
     pub const sName: usize = 0x0;
     pub const nNameHash: usize = 0x8;
@@ -195,14 +175,12 @@ pub mod FeEffectDesc_t {
     pub const m_Params: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeFitInfluence_t {
     pub const nVertexNode: usize = 0x0;
     pub const flWeight: usize = 0x4;
     pub const nMatrixNode: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeFitMatrix_t {
     pub const bone: usize = 0x0;
     pub const vCenter: usize = 0x20;
@@ -211,21 +189,18 @@ pub mod FeFitMatrix_t {
     pub const nBeginDynamic: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeFitWeight_t {
     pub const flWeight: usize = 0x0;
     pub const nNode: usize = 0x4;
     pub const nDummy: usize = 0x6;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeFollowNode_t {
     pub const nParentNode: usize = 0x0;
     pub const nChildNode: usize = 0x2;
     pub const flWeight: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeKelagerBend2_t {
     pub const flWeight: usize = 0x0;
     pub const flHeight0: usize = 0xc;
@@ -233,7 +208,6 @@ pub mod FeKelagerBend2_t {
     pub const nReserved: usize = 0x16;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeMorphLayerDepr_t {
     pub const m_Name: usize = 0x0;
     pub const m_nNameHash: usize = 0x8;
@@ -245,7 +219,6 @@ pub mod FeMorphLayerDepr_t {
     pub const m_nFlags: usize = 0x88;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeNodeBase_t {
     pub const nNode: usize = 0x0;
     pub const nDummy: usize = 0x2;
@@ -256,7 +229,6 @@ pub mod FeNodeBase_t {
     pub const qAdjust: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeNodeIntegrator_t {
     pub const flPointDamping: usize = 0x0;
     pub const flAnimationForceAttraction: usize = 0x4;
@@ -264,14 +236,12 @@ pub mod FeNodeIntegrator_t {
     pub const flGravity: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeNodeReverseOffset_t {
     pub const vOffset: usize = 0x0;
     pub const nBoneCtrl: usize = 0xc;
     pub const nTargetNode: usize = 0xe;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeNodeWindBase_t {
     pub const nNodeX0: usize = 0x0;
     pub const nNodeX1: usize = 0x2;
@@ -279,20 +249,17 @@ pub mod FeNodeWindBase_t {
     pub const nNodeY1: usize = 0x6;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeProxyVertexMap_t {
     pub const m_Name: usize = 0x0;
     pub const m_flWeight: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeQuad_t {
     pub const nNode: usize = 0x0;
     pub const flSlack: usize = 0x8;
     pub const vShape: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeRigidColliderIndices_t {
     pub const m_nTaperedCapsuleRigidIndex: usize = 0x0;
     pub const m_nSphereRigidIndex: usize = 0x2;
@@ -300,7 +267,6 @@ pub mod FeRigidColliderIndices_t {
     pub const m_nCollisionPlaneIndex: usize = 0x6;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeRodConstraint_t {
     pub const nNode: usize = 0x0;
     pub const flMaxDist: usize = 0x4;
@@ -309,14 +275,12 @@ pub mod FeRodConstraint_t {
     pub const flRelaxationFactor: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSimdAnimStrayRadius_t {
     pub const nNode: usize = 0x0;
     pub const flMaxDist: usize = 0x10;
     pub const flRelaxationFactor: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSimdNodeBase_t {
     pub const nNode: usize = 0x0;
     pub const nNodeX0: usize = 0x8;
@@ -327,7 +291,6 @@ pub mod FeSimdNodeBase_t {
     pub const qAdjust: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSimdQuad_t {
     pub const nNode: usize = 0x0;
     pub const f4Slack: usize = 0x20;
@@ -335,7 +298,6 @@ pub mod FeSimdQuad_t {
     pub const f4Weights: usize = 0xf0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSimdRodConstraint_t {
     pub const nNode: usize = 0x0;
     pub const f4MaxDist: usize = 0x10;
@@ -344,7 +306,6 @@ pub mod FeSimdRodConstraint_t {
     pub const f4RelaxationFactor: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSimdSpringIntegrator_t {
     pub const nNode: usize = 0x0;
     pub const flSpringRestLength: usize = 0x10;
@@ -353,7 +314,6 @@ pub mod FeSimdSpringIntegrator_t {
     pub const flNodeWeight0: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSimdTri_t {
     pub const nNode: usize = 0x0;
     pub const w1: usize = 0x30;
@@ -362,18 +322,15 @@ pub mod FeSimdTri_t {
     pub const v2: usize = 0x60;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSoftParent_t {
     pub const nParent: usize = 0x0;
     pub const flAlpha: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSourceEdge_t {
     pub const nNode: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSphereRigid_t {
     pub const vSphere: usize = 0x0;
     pub const flStickiness: usize = 0x10;
@@ -383,7 +340,6 @@ pub mod FeSphereRigid_t {
     pub const nFlags: usize = 0x1a;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeSpringIntegrator_t {
     pub const nNode: usize = 0x0;
     pub const flSpringRestLength: usize = 0x4;
@@ -392,7 +348,6 @@ pub mod FeSpringIntegrator_t {
     pub const flNodeWeight0: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeStiffHingeBuild_t {
     pub const flMaxAngle: usize = 0x0;
     pub const flStrength: usize = 0x4;
@@ -400,7 +355,6 @@ pub mod FeStiffHingeBuild_t {
     pub const nNode: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeTaperedCapsuleRigid_t {
     pub const vSphere: usize = 0x0;
     pub const flStickiness: usize = 0x20;
@@ -410,12 +364,10 @@ pub mod FeTaperedCapsuleRigid_t {
     pub const nFlags: usize = 0x2a;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeTreeChildren_t {
     pub const nChild: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeTri_t {
     pub const nNode: usize = 0x0;
     pub const w1: usize = 0x8;
@@ -424,7 +376,6 @@ pub mod FeTri_t {
     pub const v2: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeTwistConstraint_t {
     pub const nNodeOrient: usize = 0x0;
     pub const nNodeEnd: usize = 0x2;
@@ -432,7 +383,6 @@ pub mod FeTwistConstraint_t {
     pub const flSwingRelax: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeVertexMapBuild_t {
     pub const m_VertexMapName: usize = 0x0;
     pub const m_nNameHash: usize = 0x8;
@@ -442,7 +392,6 @@ pub mod FeVertexMapBuild_t {
     pub const m_Weights: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeVertexMapDesc_t {
     pub const sName: usize = 0x0;
     pub const nNameHash: usize = 0x8;
@@ -458,13 +407,11 @@ pub mod FeVertexMapDesc_t {
     pub const nNodeListCount: usize = 0x32;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeWeightedNode_t {
     pub const nNode: usize = 0x0;
     pub const nWeight: usize = 0x2;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FeWorldCollisionParams_t {
     pub const flWorldFriction: usize = 0x0;
     pub const flGroundFriction: usize = 0x4;
@@ -472,7 +419,6 @@ pub mod FeWorldCollisionParams_t {
     pub const nListEnd: usize = 0xa;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FourCovMatrices3 {
     pub const m_vDiag: usize = 0x0;
     pub const m_flXY: usize = 0x30;
@@ -480,13 +426,11 @@ pub mod FourCovMatrices3 {
     pub const m_flYZ: usize = 0x50;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FourVectors2D {
     pub const x: usize = 0x0;
     pub const y: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod OldFeEdge_t {
     pub const m_flK: usize = 0x0;
     pub const invA: usize = 0xc;
@@ -502,7 +446,6 @@ pub mod OldFeEdge_t {
     pub const m_nNode: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PhysFeModelDesc_t {
     pub const m_CtrlHash: usize = 0x0;
     pub const m_CtrlName: usize = 0x18;
@@ -604,7 +547,6 @@ pub mod PhysFeModelDesc_t {
     pub const m_nQuadVelocitySmoothIterations: usize = 0x5e6;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnBlendVertex_t {
     pub const m_nWeight0: usize = 0x0;
     pub const m_nIndex0: usize = 0x2;
@@ -616,7 +558,6 @@ pub mod RnBlendVertex_t {
     pub const m_nTargetIndex: usize = 0xe;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnBodyDesc_t {
     pub const m_sDebugName: usize = 0x0;
     pub const m_vPosition: usize = 0x8;
@@ -655,23 +596,19 @@ pub mod RnBodyDesc_t {
     pub const m_bHasShadowController: usize = 0xca;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnCapsuleDesc_t {
     pub const m_Capsule: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnCapsule_t {
     pub const m_vCenter: usize = 0x0;
     pub const m_flRadius: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnFace_t {
     pub const m_nEdge: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnHalfEdge_t {
     pub const m_nNext: usize = 0x0;
     pub const m_nTwin: usize = 0x1;
@@ -679,12 +616,10 @@ pub mod RnHalfEdge_t {
     pub const m_nFace: usize = 0x3;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnHullDesc_t {
     pub const m_Hull: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnHull_t {
     pub const m_vCentroid: usize = 0x0;
     pub const m_flMaxAngularRadius: usize = 0xc;
@@ -700,12 +635,10 @@ pub mod RnHull_t {
     pub const m_pRegionSVM: usize = 0xd0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnMeshDesc_t {
     pub const m_Mesh: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnMesh_t {
     pub const m_vMin: usize = 0x0;
     pub const m_vMax: usize = 0xc;
@@ -718,7 +651,6 @@ pub mod RnMesh_t {
     pub const m_bHasOpenEdges: usize = 0x9c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnNode_t {
     pub const m_vMin: usize = 0x0;
     pub const m_nChildren: usize = 0xc;
@@ -726,70 +658,58 @@ pub mod RnNode_t {
     pub const m_nTriangleOffset: usize = 0x1c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnPlane_t {
     pub const m_vNormal: usize = 0x0;
     pub const m_flOffset: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnShapeDesc_t {
     pub const m_nCollisionAttributeIndex: usize = 0x0;
     pub const m_nSurfacePropertyIndex: usize = 0x4;
     pub const m_UserFriendlyName: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnSoftbodyCapsule_t {
     pub const m_vCenter: usize = 0x0;
     pub const m_flRadius: usize = 0x18;
     pub const m_nParticle: usize = 0x1c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnSoftbodyParticle_t {
     pub const m_flMassInv: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnSoftbodySpring_t {
     pub const m_nParticle: usize = 0x0;
     pub const m_flLength: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnSphereDesc_t {
     pub const m_Sphere: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnSphere_t {
     pub const m_vCenter: usize = 0x0;
     pub const m_flRadius: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnTriangle_t {
     pub const m_nIndex: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod RnWing_t {
     pub const m_nIndex: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VertexPositionColor_t {
     pub const m_vPosition: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VertexPositionNormal_t {
     pub const m_vPosition: usize = 0x0;
     pub const m_vNormal: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod constraint_axislimit_t {
     pub const flMinRotation: usize = 0x0;
     pub const flMaxRotation: usize = 0x4;
@@ -797,7 +717,6 @@ pub mod constraint_axislimit_t {
     pub const flMotorMaxTorque: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod constraint_breakableparams_t {
     pub const strength: usize = 0x0;
     pub const forceLimit: usize = 0x4;
@@ -806,7 +725,6 @@ pub mod constraint_breakableparams_t {
     pub const isActive: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod constraint_hingeparams_t {
     pub const worldPosition: usize = 0x0;
     pub const worldAxisDirection: usize = 0xc;
@@ -814,7 +732,6 @@ pub mod constraint_hingeparams_t {
     pub const constraint: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod vphysics_save_cphysicsbody_t {
     pub const m_nOldPointer: usize = 0xd0;
 }

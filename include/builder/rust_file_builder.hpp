@@ -8,11 +8,10 @@ namespace builder {
         }
 
         void write_top_level(std::ofstream& output) noexcept override {
-            // Nothing needed here.
+            output << "#![allow(non_snake_case, non_upper_case_globals)]\n\n";
         }
 
         void write_namespace(std::ofstream& output, const std::string& namespace_name) noexcept override {
-            output << "#[allow(non_snake_case, non_upper_case_globals)]\n";
             output << "pub mod " << namespace_name << " {\n";
         }
 

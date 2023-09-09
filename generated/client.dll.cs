@@ -3029,7 +3029,8 @@ public static class C_PointCamera {
     public const ulong m_fBrightness = 0x568;
     public const ulong m_flZFar = 0x56c;
     public const ulong m_flZNear = 0x570;
-    public const ulong m_bDofEnabled = 0x574;
+    public const ulong m_bCanHLTVUse = 0x574;
+    public const ulong m_bDofEnabled = 0x575;
     public const ulong m_flDofNearBlurry = 0x578;
     public const ulong m_flDofNearCrisp = 0x57c;
     public const ulong m_flDofFarCrisp = 0x580;

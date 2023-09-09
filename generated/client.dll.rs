@@ -1,4 +1,5 @@
-#[allow(non_snake_case, non_upper_case_globals)]
+#![allow(non_snake_case, non_upper_case_globals)]
+
 pub mod ActiveModelConfig_t {
     pub const m_Handle: usize = 0x28;
     pub const m_Name: usize = 0x30;
@@ -6,7 +7,6 @@ pub mod ActiveModelConfig_t {
     pub const m_AssociatedEntityNames: usize = 0x50;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CAnimGraphNetworkedVariables {
     pub const m_PredNetBoolVariables: usize = 0x8;
     pub const m_PredNetByteVariables: usize = 0x20;
@@ -32,13 +32,11 @@ pub mod CAnimGraphNetworkedVariables {
     pub const m_flLastTeleportTime: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CAttributeList {
     pub const m_Attributes: usize = 0x8;
     pub const m_pManager: usize = 0x58;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CAttributeManager {
     pub const m_Providers: usize = 0x8;
     pub const m_iReapplyProvisionParity: usize = 0x20;
@@ -48,14 +46,12 @@ pub mod CAttributeManager {
     pub const m_CachedResults: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CAttributeManager_cached_attribute_float_t {
     pub const flIn: usize = 0x0;
     pub const iAttribHook: usize = 0x8;
     pub const flOut: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBaseAnimGraph {
     pub const m_bInitiallyPopulateInterpHistory: usize = 0xcc8;
     pub const m_bShouldAnimateDuringGameplayPause: usize = 0xcc9;
@@ -74,7 +70,6 @@ pub mod CBaseAnimGraph {
     pub const m_bHasAnimatedMaterialAttributes: usize = 0xdc9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBaseAnimGraphController {
     pub const m_baseLayer: usize = 0x10;
     pub const m_animGraphNetworkedVars: usize = 0x38;
@@ -92,7 +87,6 @@ pub mod CBaseAnimGraphController {
     pub const m_hLastAnimEventSequence: usize = 0x1348;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBasePlayerController {
     pub const m_nFinalPredictedTick: usize = 0x548;
     pub const m_CommandContext: usize = 0x550;
@@ -111,7 +105,6 @@ pub mod CBasePlayerController {
     pub const m_iDesiredFOV: usize = 0x6a4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBasePlayerVData {
     pub const m_sModelName: usize = 0x28;
     pub const m_flHeadDamageMultiplier: usize = 0x108;
@@ -129,7 +122,6 @@ pub mod CBasePlayerVData {
     pub const m_flCrouchTime: usize = 0x174;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBasePlayerWeaponVData {
     pub const m_szWorldModel: usize = 0x28;
     pub const m_bBuiltRightHanded: usize = 0x108;
@@ -154,7 +146,6 @@ pub mod CBasePlayerWeaponVData {
     pub const m_iPosition: usize = 0x23c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBaseProp {
     pub const m_bModelOverrodeBlockLOS: usize = 0xf18;
     pub const m_iShapeType: usize = 0xf1c;
@@ -162,52 +153,43 @@ pub mod CBaseProp {
     pub const m_mPreferredCatchTransform: usize = 0xf24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBodyComponent {
     pub const m_pSceneNode: usize = 0x8;
     pub const __m_pChainEntity: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBodyComponentBaseAnimGraph {
     pub const m_animationController: usize = 0x470;
     pub const __m_pChainEntity: usize = 0x1810;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBodyComponentBaseModelEntity {
     pub const __m_pChainEntity: usize = 0x470;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBodyComponentPoint {
     pub const m_sceneNode: usize = 0x50;
     pub const __m_pChainEntity: usize = 0x1a0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBodyComponentSkeletonInstance {
     pub const m_skeletonInstance: usize = 0x50;
     pub const __m_pChainEntity: usize = 0x440;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBombTarget {
     pub const m_bBombPlantedHere: usize = 0xcc8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBuoyancyHelper {
     pub const m_flFluidDensity: usize = 0x18;
     pub const m_flDisplacementFromObjects: usize = 0x1c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSGameModeRules {
     pub const __m_pChainEntity: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSGameModeRules_Deathmatch {
     pub const m_bFirstThink: usize = 0x30;
     pub const m_bFirstThinkAfterConnected: usize = 0x31;
@@ -216,7 +198,6 @@ pub mod CCSGameModeRules_Deathmatch {
     pub const m_nDMBonusWeaponLoadoutSlot: usize = 0x3c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayerController {
     pub const m_pInGameMoneyServices: usize = 0x6d0;
     pub const m_pInventoryServices: usize = 0x6d8;
@@ -278,7 +259,6 @@ pub mod CCSPlayerController {
     pub const m_bIsPlayerNameDirty: usize = 0x84c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayerController_ActionTrackingServices {
     pub const m_perRoundStats: usize = 0x40;
     pub const m_matchStats: usize = 0x90;
@@ -286,13 +266,11 @@ pub mod CCSPlayerController_ActionTrackingServices {
     pub const m_iNumRoundKillsHeadshots: usize = 0x10c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayerController_DamageServices {
     pub const m_nSendUpdate: usize = 0x40;
     pub const m_DamageList: usize = 0x48;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayerController_InGameMoneyServices {
     pub const m_iAccount: usize = 0x40;
     pub const m_iStartAccount: usize = 0x44;
@@ -301,7 +279,6 @@ pub mod CCSPlayerController_InGameMoneyServices {
     pub const m_nPreviousAccount: usize = 0x50;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayerController_InventoryServices {
     pub const m_unMusicID: usize = 0x40;
     pub const m_rank: usize = 0x44;
@@ -313,7 +290,6 @@ pub mod CCSPlayerController_InventoryServices {
     pub const m_vecCounterTerroristLoadoutCache: usize = 0xc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_ActionTrackingServices {
     pub const m_hLastWeaponBeforeC4AutoSwitch: usize = 0x40;
     pub const m_bIsRescuing: usize = 0x44;
@@ -321,17 +297,14 @@ pub mod CCSPlayer_ActionTrackingServices {
     pub const m_weaponPurchasesThisRound: usize = 0xa0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_BulletServices {
     pub const m_totalHitsOnServer: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_BuyServices {
     pub const m_vecSellbackPurchaseEntries: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_CameraServices {
     pub const m_iFOV: usize = 0x210;
     pub const m_iFOVStart: usize = 0x214;
@@ -342,20 +315,17 @@ pub mod CCSPlayer_CameraServices {
     pub const m_flDeathCamTilt: usize = 0x228;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_HostageServices {
     pub const m_hCarriedHostage: usize = 0x40;
     pub const m_hCarriedHostageProp: usize = 0x44;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_ItemServices {
     pub const m_bHasDefuser: usize = 0x40;
     pub const m_bHasHelmet: usize = 0x41;
     pub const m_bHasHeavyArmor: usize = 0x42;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_MovementServices {
     pub const m_flMaxFallVelocity: usize = 0x210;
     pub const m_vecLadderNormal: usize = 0x214;
@@ -394,7 +364,6 @@ pub mod CCSPlayer_MovementServices {
     pub const m_bUpdatePredictedOriginAfterDataUpdate: usize = 0x4d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_ObserverServices {
     pub const m_hLastObserverTarget: usize = 0x58;
     pub const m_vecObserverInterpolateOffset: usize = 0x5c;
@@ -414,31 +383,26 @@ pub mod CCSPlayer_ObserverServices {
     pub const m_bWasShowingDeathPanel: usize = 0xc1;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_PingServices {
     pub const m_hPlayerPing: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_ViewModelServices {
     pub const m_hViewModel: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_WaterServices {
     pub const m_flWaterJumpTime: usize = 0x40;
     pub const m_vecWaterJumpVel: usize = 0x44;
     pub const m_flSwimSoundTime: usize = 0x50;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCSPlayer_WeaponServices {
     pub const m_flNextAttack: usize = 0xa8;
     pub const m_bIsLookingAtWeapon: usize = 0xac;
     pub const m_bIsHoldingLookAtWeapon: usize = 0xad;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CClientAlphaProperty {
     pub const m_nRenderFX: usize = 0x10;
     pub const m_nRenderMode: usize = 0x11;
@@ -455,7 +419,6 @@ pub mod CClientAlphaProperty {
     pub const m_flRenderFxDuration: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCollisionProperty {
     pub const m_collisionAttribute: usize = 0x10;
     pub const m_vecMins: usize = 0x40;
@@ -476,20 +439,17 @@ pub mod CCollisionProperty {
     pub const m_flCapsuleRadius: usize = 0xac;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CComicBook {
     pub const m_CoverImage: usize = 0x8;
     pub const m_XmlFile: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CCompositeMaterialEditorDoc {
     pub const m_nVersion: usize = 0x8;
     pub const m_Points: usize = 0x10;
     pub const m_KVthumbnail: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CDamageRecord {
     pub const m_PlayerDamager: usize = 0x28;
     pub const m_PlayerRecipient: usize = 0x2c;
@@ -507,7 +467,6 @@ pub mod CDamageRecord {
     pub const m_killType: usize = 0x69;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CDecalInfo {
     pub const m_flAnimationScale: usize = 0x0;
     pub const m_flAnimationLifeSpan: usize = 0x4;
@@ -521,7 +480,6 @@ pub mod CDecalInfo {
     pub const m_nDecalMaterialIndex: usize = 0x90;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CEconItemAttribute {
     pub const m_iAttributeDefinitionIndex: usize = 0x30;
     pub const m_flValue: usize = 0x34;
@@ -530,7 +488,6 @@ pub mod CEconItemAttribute {
     pub const m_bSetBonus: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CEffectData {
     pub const m_vOrigin: usize = 0x8;
     pub const m_vStart: usize = 0x14;
@@ -555,7 +512,6 @@ pub mod CEffectData {
     pub const m_nExplosionType: usize = 0x6e;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CEntityIdentity {
     pub const m_nameStringableIndex: usize = 0x14;
     pub const m_name: usize = 0x18;
@@ -570,14 +526,12 @@ pub mod CEntityIdentity {
     pub const m_pNextByClass: usize = 0x70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CEntityInstance {
     pub const m_iszPrivateVScripts: usize = 0x8;
     pub const m_pEntity: usize = 0x10;
     pub const m_CScriptComponent: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFireOverlay {
     pub const m_pOwner: usize = 0xd0;
     pub const m_vBaseColors: usize = 0xd8;
@@ -585,7 +539,6 @@ pub mod CFireOverlay {
     pub const m_nGUID: usize = 0x10c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFlashlightEffect {
     pub const m_bIsOn: usize = 0x10;
     pub const m_bMuzzleFlashEnabled: usize = 0x20;
@@ -602,12 +555,10 @@ pub mod CFlashlightEffect {
     pub const m_textureName: usize = 0x70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CFuncWater {
     pub const m_BuoyancyHelper: usize = 0xcc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGameSceneNode {
     pub const m_nodeToWorld: usize = 0x10;
     pub const m_pOwner: usize = 0x30;
@@ -644,13 +595,11 @@ pub mod CGameSceneNode {
     pub const m_vRenderOrigin: usize = 0x138;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGameSceneNodeHandle {
     pub const m_hOwner: usize = 0x8;
     pub const m_name: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGlobalLightBase {
     pub const m_bSpotLight: usize = 0x10;
     pub const m_SpotLightOrigin: usize = 0x14;
@@ -697,7 +646,6 @@ pub mod CGlobalLightBase {
     pub const m_hEnvSky: usize = 0x4bc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGlowOverlay {
     pub const m_vPos: usize = 0x8;
     pub const m_bDirectional: usize = 0x14;
@@ -716,7 +664,6 @@ pub mod CGlowOverlay {
     pub const m_queryHandle: usize = 0xc8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGlowProperty {
     pub const m_fGlowColor: usize = 0x8;
     pub const m_iGlowType: usize = 0x30;
@@ -731,7 +678,6 @@ pub mod CGlowProperty {
     pub const m_bGlowing: usize = 0x51;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGlowSprite {
     pub const m_vColor: usize = 0x0;
     pub const m_flHorzSize: usize = 0xc;
@@ -739,18 +685,15 @@ pub mod CGlowSprite {
     pub const m_hMaterial: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGrenadeTracer {
     pub const m_flTracerDuration: usize = 0xce0;
     pub const m_nType: usize = 0xce4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CHitboxComponent {
     pub const m_bvDisabledHitGroups: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CInfoDynamicShadowHint {
     pub const m_bDisabled: usize = 0x540;
     pub const m_flRange: usize = 0x544;
@@ -759,13 +702,11 @@ pub mod CInfoDynamicShadowHint {
     pub const m_hLight: usize = 0x550;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CInfoDynamicShadowHintBox {
     pub const m_vBoxMins: usize = 0x558;
     pub const m_vBoxMaxs: usize = 0x564;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CInfoOffscreenPanoramaTexture {
     pub const m_bDisabled: usize = 0x540;
     pub const m_nResolutionX: usize = 0x544;
@@ -778,7 +719,6 @@ pub mod CInfoOffscreenPanoramaTexture {
     pub const m_bCheckCSSClasses: usize = 0x6f8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CInfoWorldLayer {
     pub const m_pOutputOnEntitiesSpawned: usize = 0x540;
     pub const m_worldName: usize = 0x568;
@@ -790,7 +730,6 @@ pub mod CInfoWorldLayer {
     pub const m_bWorldLayerActuallyVisible: usize = 0x580;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CInterpolatedValue {
     pub const m_flStartTime: usize = 0x0;
     pub const m_flEndTime: usize = 0x4;
@@ -799,7 +738,6 @@ pub mod CInterpolatedValue {
     pub const m_nInterpType: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CLightComponent {
     pub const __m_pChainEntity: usize = 0x48;
     pub const m_Color: usize = 0x85;
@@ -870,7 +808,6 @@ pub mod CLightComponent {
     pub const m_flMinRoughness: usize = 0x1b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CLogicRelay {
     pub const m_OnTrigger: usize = 0x540;
     pub const m_OnSpawn: usize = 0x568;
@@ -881,7 +818,6 @@ pub mod CLogicRelay {
     pub const m_bPassthoughCaller: usize = 0x594;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CModelState {
     pub const m_hModel: usize = 0xa0;
     pub const m_ModelName: usize = 0xa8;
@@ -892,7 +828,6 @@ pub mod CModelState {
     pub const m_nClothUpdateFlags: usize = 0x224;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CNetworkedSequenceOperation {
     pub const m_hSequence: usize = 0x8;
     pub const m_flPrevCycle: usize = 0xc;
@@ -904,7 +839,6 @@ pub mod CNetworkedSequenceOperation {
     pub const m_flPrevCycleForAnimEventDetection: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPlayer_CameraServices {
     pub const m_vecCsViewPunchAngle: usize = 0x40;
     pub const m_nCsViewPunchAngleTick: usize = 0x4c;
@@ -928,7 +862,6 @@ pub mod CPlayer_CameraServices {
     pub const m_angDemoViewAngles: usize = 0x1f8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPlayer_MovementServices {
     pub const m_nImpulse: usize = 0x40;
     pub const m_nButtons: usize = 0x48;
@@ -947,7 +880,6 @@ pub mod CPlayer_MovementServices {
     pub const m_vecOldViewAngles: usize = 0x1bc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPlayer_MovementServices_Humanoid {
     pub const m_flStepSoundTime: usize = 0x1d0;
     pub const m_flFallVelocity: usize = 0x1d4;
@@ -963,7 +895,6 @@ pub mod CPlayer_MovementServices_Humanoid {
     pub const m_nStepside: usize = 0x208;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPlayer_ObserverServices {
     pub const m_iObserverMode: usize = 0x40;
     pub const m_hObserverTarget: usize = 0x44;
@@ -973,7 +904,6 @@ pub mod CPlayer_ObserverServices {
     pub const m_flObserverChaseDistanceCalcTime: usize = 0x54;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPlayer_WeaponServices {
     pub const m_bAllowSwitchToNoWeapon: usize = 0x40;
     pub const m_hMyWeapons: usize = 0x48;
@@ -982,7 +912,6 @@ pub mod CPlayer_WeaponServices {
     pub const m_iAmmo: usize = 0x68;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPointOffScreenIndicatorUi {
     pub const m_bBeenEnabled: usize = 0xf20;
     pub const m_bHide: usize = 0xf21;
@@ -990,7 +919,6 @@ pub mod CPointOffScreenIndicatorUi {
     pub const m_pTargetPanel: usize = 0xf28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPointTemplate {
     pub const m_iszWorldName: usize = 0x540;
     pub const m_iszSource2EntityLumpName: usize = 0x548;
@@ -1006,7 +934,6 @@ pub mod CPointTemplate {
     pub const m_ScriptCallbackScope: usize = 0x5c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPrecipitationVData {
     pub const m_szParticlePrecipitationEffect: usize = 0x28;
     pub const m_flInnerDistance: usize = 0x108;
@@ -1017,7 +944,6 @@ pub mod CPrecipitationVData {
     pub const m_szModifier: usize = 0x120;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CProjectedTextureBase {
     pub const m_hTargetEntity: usize = 0xc;
     pub const m_bState: usize = 0x10;
@@ -1051,7 +977,6 @@ pub mod CProjectedTextureBase {
     pub const m_bFlipHorizontal: usize = 0x26c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CRenderComponent {
     pub const __m_pChainEntity: usize = 0x10;
     pub const m_bIsRenderingWithViewModels: usize = 0x50;
@@ -1060,14 +985,12 @@ pub mod CRenderComponent {
     pub const m_bInterpolationReadyToDraw: usize = 0xb0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSMatchStats_t {
     pub const m_iEnemy5Ks: usize = 0x68;
     pub const m_iEnemy4Ks: usize = 0x6c;
     pub const m_iEnemy3Ks: usize = 0x70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSPerRoundStats_t {
     pub const m_iKills: usize = 0x30;
     pub const m_iDeaths: usize = 0x34;
@@ -1084,12 +1007,10 @@ pub mod CSPerRoundStats_t {
     pub const m_iEnemiesFlashed: usize = 0x60;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CScriptComponent {
     pub const m_scriptClassName: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSkeletonInstance {
     pub const m_modelState: usize = 0x160;
     pub const m_bIsAnimationEnabled: usize = 0x390;
@@ -1101,13 +1022,11 @@ pub mod CSkeletonInstance {
     pub const m_nHitboxSet: usize = 0x398;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSkyboxReference {
     pub const m_worldGroupId: usize = 0x540;
     pub const m_hSkyCamera: usize = 0x544;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CTimeline {
     pub const m_flValues: usize = 0x10;
     pub const m_nValueCounts: usize = 0x110;
@@ -1118,7 +1037,6 @@ pub mod CTimeline {
     pub const m_bStopped: usize = 0x220;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CWeaponCSBaseVData {
     pub const m_WeaponType: usize = 0x240;
     pub const m_WeaponCategory: usize = 0x244;
@@ -1212,20 +1130,17 @@ pub mod CWeaponCSBaseVData {
     pub const m_szAnimClass: usize = 0xd78;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_AttributeContainer {
     pub const m_Item: usize = 0x50;
     pub const m_iExternalItemProviderRegisteredToken: usize = 0x498;
     pub const m_ullRegisteredAsItemID: usize = 0x4a0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BRC4Target {
     pub const m_bBrokenOpen: usize = 0xf20;
     pub const m_flRadius: usize = 0xf24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BarnLight {
     pub const m_bEnabled: usize = 0xcc0;
     pub const m_nColorMode: usize = 0xcc4;
@@ -1280,14 +1195,12 @@ pub mod C_BarnLight {
     pub const m_vPrecomputedOBBExtent: usize = 0xeb0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseButton {
     pub const m_glowEntity: usize = 0xcc0;
     pub const m_usable: usize = 0xcc4;
     pub const m_szDisplayText: usize = 0xcc8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseCSGrenade {
     pub const m_bRedraw: usize = 0x1990;
     pub const m_bIsHeldByPlayer: usize = 0x1991;
@@ -1300,7 +1213,6 @@ pub mod C_BaseCSGrenade {
     pub const m_fDropTime: usize = 0x19a4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseCSGrenadeProjectile {
     pub const m_vInitialVelocity: usize = 0x1100;
     pub const m_nBounces: usize = 0x110c;
@@ -1319,7 +1231,6 @@ pub mod C_BaseCSGrenadeProjectile {
     pub const m_flTrajectoryTrailEffectCreationTime: usize = 0x1180;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseClientUIEntity {
     pub const m_bEnabled: usize = 0xcc8;
     pub const m_DialogXMLName: usize = 0xcd0;
@@ -1327,7 +1238,6 @@ pub mod C_BaseClientUIEntity {
     pub const m_PanelID: usize = 0xce0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseCombatCharacter {
     pub const m_hMyWearables: usize = 0x10b0;
     pub const m_bloodColor: usize = 0x10c8;
@@ -1339,12 +1249,10 @@ pub mod C_BaseCombatCharacter {
     pub const m_flFieldOfView: usize = 0x10dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseDoor {
     pub const m_bIsUsable: usize = 0xcc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseEntity {
     pub const m_CBodyComponent: usize = 0x30;
     pub const m_NetworkTransmitComponent: usize = 0x38;
@@ -1426,7 +1334,6 @@ pub mod C_BaseEntity {
     pub const m_sUniqueHammerID: usize = 0x538;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseFire {
     pub const m_flScale: usize = 0x540;
     pub const m_flStartScale: usize = 0x544;
@@ -1434,7 +1341,6 @@ pub mod C_BaseFire {
     pub const m_nFlags: usize = 0x54c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseFlex {
     pub const m_flexWeight: usize = 0xf28;
     pub const m_vLookTargetPosition: usize = 0xf40;
@@ -1457,7 +1363,6 @@ pub mod C_BaseFlex {
     pub const m_PhonemeClasses: usize = 0x1050;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseFlex_Emphasized_Phoneme {
     pub const m_sClassName: usize = 0x0;
     pub const m_flAmount: usize = 0x18;
@@ -1466,7 +1371,6 @@ pub mod C_BaseFlex_Emphasized_Phoneme {
     pub const m_bValid: usize = 0x1e;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseGrenade {
     pub const m_bHasWarnedAI: usize = 0x10b0;
     pub const m_bIsSmokeGrenade: usize = 0x10b1;
@@ -1482,7 +1386,6 @@ pub mod C_BaseGrenade {
     pub const m_hOriginalThrower: usize = 0x10fc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseModelEntity {
     pub const m_CRenderComponent: usize = 0xa10;
     pub const m_CHitboxComponent: usize = 0xa18;
@@ -1518,7 +1421,6 @@ pub mod C_BaseModelEntity {
     pub const m_bUseClientOverrideTint: usize = 0xc84;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BasePlayerPawn {
     pub const m_pWeaponServices: usize = 0x1140;
     pub const m_pItemServices: usize = 0x1148;
@@ -1548,7 +1450,6 @@ pub mod C_BasePlayerPawn {
     pub const m_bIsSwappingToPredictableController: usize = 0x12c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BasePlayerWeapon {
     pub const m_iState: usize = 0x15f8;
     pub const m_iOldState: usize = 0x15fc;
@@ -1562,7 +1463,6 @@ pub mod C_BasePlayerWeapon {
     pub const m_pReserveAmmo: usize = 0x161c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BasePropDoor {
     pub const m_eDoorState: usize = 0x1190;
     pub const m_modelChanged: usize = 0x1194;
@@ -1573,13 +1473,11 @@ pub mod C_BasePropDoor {
     pub const m_vWhereToSetLightingOrigin: usize = 0x11b4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseTrigger {
     pub const m_bDisabled: usize = 0xcc0;
     pub const m_bClientSidePredicted: usize = 0xcc1;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BaseViewModel {
     pub const m_vecLastFacing: usize = 0xf20;
     pub const m_nViewModelIndex: usize = 0xf2c;
@@ -1600,7 +1498,6 @@ pub mod C_BaseViewModel {
     pub const m_hControlPanel: usize = 0xf7c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Beam {
     pub const m_flFrameRate: usize = 0xcc0;
     pub const m_flHDRColorScale: usize = 0xcc4;
@@ -1628,7 +1525,6 @@ pub mod C_Beam {
     pub const m_hEndEntity: usize = 0xd78;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BreachChargeProjectile {
     pub const m_bShouldExplode: usize = 0x1100;
     pub const m_weaponThatThrewMe: usize = 0x1104;
@@ -1636,7 +1532,6 @@ pub mod C_BreachChargeProjectile {
     pub const m_vecParentBonePos: usize = 0x110c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BreakableProp {
     pub const m_OnBreak: usize = 0xf60;
     pub const m_OnHealthChanged: usize = 0xf88;
@@ -1670,7 +1565,6 @@ pub mod C_BreakableProp {
     pub const m_noGhostCollision: usize = 0x1064;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BulletHitModel {
     pub const m_matLocal: usize = 0xf18;
     pub const m_iBoneIndex: usize = 0xf48;
@@ -1680,7 +1574,6 @@ pub mod C_BulletHitModel {
     pub const m_vecStartPos: usize = 0xf58;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_BumpMineProjectile {
     pub const m_bShouldExplode: usize = 0x1100;
     pub const m_nParentBoneIndex: usize = 0x1104;
@@ -1688,7 +1581,6 @@ pub mod C_BumpMineProjectile {
     pub const m_bArmed: usize = 0x1114;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_C4 {
     pub const m_szScreenText: usize = 0x1970;
     pub const m_bombdroppedlightParticleIndex: usize = 0x1990;
@@ -1704,7 +1596,6 @@ pub mod C_C4 {
     pub const m_bDroppedFromDeath: usize = 0x19c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGOViewModel {
     pub const m_bShouldIgnoreOffsetAndAccuracy: usize = 0xfa8;
     pub const m_nWeaponParity: usize = 0xfac;
@@ -1714,7 +1605,6 @@ pub mod C_CSGOViewModel {
     pub const m_vLoweredWeaponOffset: usize = 0xffc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGO_MapPreviewCameraPath {
     pub const m_flZFar: usize = 0x540;
     pub const m_flZNear: usize = 0x544;
@@ -1726,7 +1616,6 @@ pub mod C_CSGO_MapPreviewCameraPath {
     pub const m_flPathDuration: usize = 0x594;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGO_MapPreviewCameraPathNode {
     pub const m_szParentPathUniqueID: usize = 0x540;
     pub const m_nPathIndex: usize = 0x548;
@@ -1740,7 +1629,6 @@ pub mod C_CSGO_MapPreviewCameraPathNode {
     pub const m_vOutTangentWorld: usize = 0x580;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGO_PreviewModel {
     pub const m_animgraph: usize = 0x10b0;
     pub const m_animgraphCharacterModeString: usize = 0x10b8;
@@ -1749,14 +1637,12 @@ pub mod C_CSGO_PreviewModel {
     pub const m_flInitialModelScale: usize = 0x10cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGO_PreviewPlayer {
     pub const m_animgraph: usize = 0x23a0;
     pub const m_animgraphCharacterModeString: usize = 0x23a8;
     pub const m_flInitialModelScale: usize = 0x23b0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGO_TeamPreviewCamera {
     pub const m_nVariant: usize = 0x5a0;
     pub const m_bDofEnabled: usize = 0x5a4;
@@ -1767,7 +1653,6 @@ pub mod C_CSGO_TeamPreviewCamera {
     pub const m_flDofTiltToGround: usize = 0x5b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGO_TeamPreviewCharacterPosition {
     pub const m_nVariant: usize = 0x540;
     pub const m_nRandom: usize = 0x544;
@@ -1777,7 +1662,6 @@ pub mod C_CSGO_TeamPreviewCharacterPosition {
     pub const m_weaponItem: usize = 0x560;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGameRules {
     pub const __m_pChainEntity: usize = 0x8;
     pub const m_bFreezePeriod: usize = 0x30;
@@ -1888,17 +1772,14 @@ pub mod C_CSGameRules {
     pub const m_bTeamIntroPeriod: usize = 0x193c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSGameRulesProxy {
     pub const m_pGameRules: usize = 0x540;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSObserverPawn {
     pub const m_hDetectParentChange: usize = 0x1870;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSPlayerPawn {
     pub const m_pBulletServices: usize = 0x1870;
     pub const m_pHostageServices: usize = 0x1878;
@@ -1924,7 +1805,6 @@ pub mod C_CSPlayerPawn {
     pub const m_bSkipOneHeadConstraintUpdate: usize = 0x2398;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSPlayerPawnBase {
     pub const m_pActionTrackingServices: usize = 0x12e8;
     pub const m_pPingServices: usize = 0x12f0;
@@ -2113,7 +1993,6 @@ pub mod C_CSPlayerPawnBase {
     pub const m_flLandseconds: usize = 0x1840;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSPlayerResource {
     pub const m_bHostageAlive: usize = 0x540;
     pub const m_isHostageFollowingSomeone: usize = 0x54c;
@@ -2127,12 +2006,10 @@ pub mod C_CSPlayerResource {
     pub const m_foundGoalPositions: usize = 0x5d1;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSPropExplodingBarrelTop {
     pub const m_flOverrideAlpha: usize = 0x1070;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CSTeam {
     pub const m_szTeamMatchStat: usize = 0x5f8;
     pub const m_numMapVictories: usize = 0x7f8;
@@ -2148,7 +2025,6 @@ pub mod C_CSTeam {
     pub const m_szTeamLogoImage: usize = 0x8a4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Chicken {
     pub const m_hHolidayHatAddon: usize = 0x1188;
     pub const m_jumpedThisFrame: usize = 0x118c;
@@ -2160,7 +2036,6 @@ pub mod C_Chicken {
     pub const m_hWaterWakeParticles: usize = 0x164c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ClientRagdoll {
     pub const m_bFadeOut: usize = 0xf18;
     pub const m_bImportant: usize = 0xf19;
@@ -2178,7 +2053,6 @@ pub mod C_ClientRagdoll {
     pub const m_flScaleTimeEnd: usize = 0xf88;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ColorCorrection {
     pub const m_vecOrigin: usize = 0x540;
     pub const m_MinFalloff: usize = 0x54c;
@@ -2200,7 +2074,6 @@ pub mod C_ColorCorrection {
     pub const m_flFadeDuration: usize = 0x77c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ColorCorrectionVolume {
     pub const m_LastEnterWeight: usize = 0xcc8;
     pub const m_LastEnterTime: usize = 0xccc;
@@ -2213,19 +2086,16 @@ pub mod C_ColorCorrectionVolume {
     pub const m_lookupFilename: usize = 0xce8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CommandContext {
     pub const needsprocessing: usize = 0x0;
     pub const command_number: usize = 0x78;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_CsmFovOverride {
     pub const m_cameraName: usize = 0x540;
     pub const m_flCsmFovOverrideValue: usize = 0x548;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_DangerZone {
     pub const m_vecDangerZoneOriginStartedAt: usize = 0x540;
     pub const m_flBombLaunchTime: usize = 0x54c;
@@ -2236,7 +2106,6 @@ pub mod C_DangerZone {
     pub const m_iWave: usize = 0x560;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_DangerZoneController {
     pub const m_bDangerZoneControllerEnabled: usize = 0x540;
     pub const m_bMissionControlledExplosions: usize = 0x541;
@@ -2249,12 +2118,10 @@ pub mod C_DangerZoneController {
     pub const m_hTheFinalZone: usize = 0x620;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_DecoyProjectile {
     pub const m_flTimeParticleEffectSpawn: usize = 0x11a8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Drone {
     pub const m_vecClientSideTrailPositions: usize = 0x1080;
     pub const m_hMoveToThisEntity: usize = 0x1098;
@@ -2273,7 +2140,6 @@ pub mod C_Drone {
     pub const m_flJammedEffectAmount: usize = 0x1288;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Dronegun {
     pub const m_vecAttentionTarget: usize = 0xf20;
     pub const m_vecTargetOffset: usize = 0xf2c;
@@ -2289,7 +2155,6 @@ pub mod C_Dronegun {
     pub const m_vecLaserTracePos: usize = 0xf60;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_DynamicLight {
     pub const m_Flags: usize = 0xcc0;
     pub const m_LightStyle: usize = 0xcc1;
@@ -2300,7 +2165,6 @@ pub mod C_DynamicLight {
     pub const m_SpotRadius: usize = 0xcd4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_DynamicProp {
     pub const m_bUseHitboxesForRenderBox: usize = 0x1068;
     pub const m_bUseAnimGraph: usize = 0x1069;
@@ -2329,7 +2193,6 @@ pub mod C_DynamicProp {
     pub const m_vecCachedRenderMaxs: usize = 0x1170;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EconEntity {
     pub const m_flFlexDelayTime: usize = 0x10c0;
     pub const m_flFlexDelayedWeight: usize = 0x10c8;
@@ -2353,12 +2216,10 @@ pub mod C_EconEntity {
     pub const m_vecAttachedModels: usize = 0x15e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EconEntity_AttachedModelData_t {
     pub const m_iModelDisplayFlags: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EconItemView {
     pub const m_bInventoryImageRgbaRequested: usize = 0x60;
     pub const m_bInventoryImageTriedCache: usize = 0x61;
@@ -2389,13 +2250,11 @@ pub mod C_EconItemView {
     pub const m_bInitializedTags: usize = 0x440;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EconWearable {
     pub const m_nForceSkin: usize = 0x15f8;
     pub const m_bAlwaysAllow: usize = 0x15fc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EntityDissolve {
     pub const m_flStartTime: usize = 0xcc8;
     pub const m_flFadeInStart: usize = 0xccc;
@@ -2412,14 +2271,12 @@ pub mod C_EntityDissolve {
     pub const m_bLinkedToServerEnt: usize = 0xcfd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EntityFlame {
     pub const m_hEntAttached: usize = 0x540;
     pub const m_hOldAttached: usize = 0x568;
     pub const m_bCheapEffect: usize = 0x56c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvCombinedLightProbeVolume {
     pub const m_Color: usize = 0x1610;
     pub const m_flBrightness: usize = 0x1614;
@@ -2448,7 +2305,6 @@ pub mod C_EnvCombinedLightProbeVolume {
     pub const m_bEnabled: usize = 0x16b9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvCubemap {
     pub const m_hCubemapTexture: usize = 0x630;
     pub const m_bCustomCubemapTexture: usize = 0x638;
@@ -2471,7 +2327,6 @@ pub mod C_EnvCubemap {
     pub const m_bEnabled: usize = 0x698;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvCubemapFog {
     pub const m_flEndDistance: usize = 0x540;
     pub const m_flStartDistance: usize = 0x544;
@@ -2493,7 +2348,6 @@ pub mod C_EnvCubemapFog {
     pub const m_bFirstTime: usize = 0x589;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvDecal {
     pub const m_hDecalMaterial: usize = 0xcc0;
     pub const m_flWidth: usize = 0xcc8;
@@ -2506,13 +2360,11 @@ pub mod C_EnvDecal {
     pub const m_flDepthSortBias: usize = 0xcdc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvDetailController {
     pub const m_flFadeStartDist: usize = 0x540;
     pub const m_flFadeEndDist: usize = 0x544;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvGasCanister {
     pub const m_bLanded: usize = 0xf18;
     pub const m_bSpawnedSkyboxParticles: usize = 0xf80;
@@ -2540,7 +2392,6 @@ pub mod C_EnvGasCanister {
     pub const m_flLaunchHeight: usize = 0x100c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvLightProbeVolume {
     pub const m_hLightProbeTexture: usize = 0x1520;
     pub const m_hLightProbeDirectLightIndicesTexture: usize = 0x1528;
@@ -2562,7 +2413,6 @@ pub mod C_EnvLightProbeVolume {
     pub const m_bEnabled: usize = 0x1591;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvParticleGlow {
     pub const m_flAlphaScale: usize = 0x1270;
     pub const m_flRadiusScale: usize = 0x1274;
@@ -2571,7 +2421,6 @@ pub mod C_EnvParticleGlow {
     pub const m_hTextureOverride: usize = 0x1280;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvScreenOverlay {
     pub const m_iszOverlayNames: usize = 0x540;
     pub const m_flOverlayTimes: usize = 0x590;
@@ -2584,7 +2433,6 @@ pub mod C_EnvScreenOverlay {
     pub const m_flCurrentOverlayTime: usize = 0x5cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvSky {
     pub const m_hSkyMaterial: usize = 0xcc0;
     pub const m_hSkyMaterialLightingOnly: usize = 0xcc8;
@@ -2600,7 +2448,6 @@ pub mod C_EnvSky {
     pub const m_bEnabled: usize = 0xcf4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvVolumetricFogController {
     pub const m_flScattering: usize = 0x540;
     pub const m_flAnisotropy: usize = 0x544;
@@ -2632,7 +2479,6 @@ pub mod C_EnvVolumetricFogController {
     pub const m_bFirstTime: usize = 0x5bc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvVolumetricFogVolume {
     pub const m_bActive: usize = 0x540;
     pub const m_vBoxMins: usize = 0x544;
@@ -2643,17 +2489,14 @@ pub mod C_EnvVolumetricFogVolume {
     pub const m_flFalloffExponent: usize = 0x568;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvWind {
     pub const m_EnvWindShared: usize = 0x540;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvWindClientside {
     pub const m_EnvWindShared: usize = 0x540;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvWindShared {
     pub const m_flStartTime: usize = 0x8;
     pub const m_iWindSeed: usize = 0xc;
@@ -2686,19 +2529,16 @@ pub mod C_EnvWindShared {
     pub const m_iEntIndex: usize = 0x90;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvWindShared_WindAveEvent_t {
     pub const m_flStartWindSpeed: usize = 0x0;
     pub const m_flAveWindSpeed: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_EnvWindShared_WindVariationEvent_t {
     pub const m_flWindAngleVariation: usize = 0x0;
     pub const m_flWindSpeedVariation: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FireSmoke {
     pub const m_nFlameModelIndex: usize = 0x550;
     pub const m_nFlameFromAboveModelIndex: usize = 0x554;
@@ -2715,13 +2555,11 @@ pub mod C_FireSmoke {
     pub const m_pFireOverlay: usize = 0x590;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FireSprite {
     pub const m_vecMoveDir: usize = 0xdf0;
     pub const m_bFadeFromAbove: usize = 0xdfc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Fish {
     pub const m_pos: usize = 0xf18;
     pub const m_vel: usize = 0xf24;
@@ -2748,26 +2586,22 @@ pub mod C_Fish {
     pub const m_averageError: usize = 0x1004;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Fists {
     pub const m_bPlayingUninterruptableAct: usize = 0x1970;
     pub const m_nUninterruptableActivity: usize = 0x1974;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FogController {
     pub const m_fog: usize = 0x540;
     pub const m_bUseAngles: usize = 0x5a8;
     pub const m_iChangedVariables: usize = 0x5ac;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FootstepControl {
     pub const m_source: usize = 0xcc8;
     pub const m_destination: usize = 0xcd0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FuncConveyor {
     pub const m_vecMoveDirEntitySpace: usize = 0xcc8;
     pub const m_flTargetSpeed: usize = 0xcd4;
@@ -2779,14 +2613,12 @@ pub mod C_FuncConveyor {
     pub const m_flCurrentConveyorSpeed: usize = 0xd04;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FuncElectrifiedVolume {
     pub const m_nAmbientEffect: usize = 0xcc0;
     pub const m_EffectName: usize = 0xcc8;
     pub const m_bState: usize = 0xcd0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FuncMonitor {
     pub const m_targetCamera: usize = 0xcc0;
     pub const m_nResolutionEnum: usize = 0xcc8;
@@ -2798,19 +2630,16 @@ pub mod C_FuncMonitor {
     pub const m_bDraw3DSkybox: usize = 0xcdd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_FuncTrackTrain {
     pub const m_nLongAxis: usize = 0xcc0;
     pub const m_flRadius: usize = 0xcc4;
     pub const m_flLineLength: usize = 0xcc8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_GlobalLight {
     pub const m_WindClothForceHandle: usize = 0xa00;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_GradientFog {
     pub const m_hGradientFogTexture: usize = 0x540;
     pub const m_flFogStartDistance: usize = 0x548;
@@ -2830,7 +2659,6 @@ pub mod C_GradientFog {
     pub const m_bGradientFogNeedsTextures: usize = 0x57a;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_GrassBurn {
     pub const m_flGrassBurnClearTime: usize = 0x540;
     pub const m_bClientPendingClear: usize = 0x544;
@@ -2838,13 +2666,11 @@ pub mod C_GrassBurn {
     pub const m_vecGrassBurnPositions: usize = 0x550;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_HandleTest {
     pub const m_Handle: usize = 0x540;
     pub const m_bSendHandle: usize = 0x544;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Hostage {
     pub const m_entitySpottedState: usize = 0x1140;
     pub const m_leader: usize = 0x1158;
@@ -2871,7 +2697,6 @@ pub mod C_Hostage {
     pub const m_fNewestAlphaThinkTime: usize = 0x1208;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Inferno {
     pub const m_nfxFireDamageEffect: usize = 0xd00;
     pub const m_fireXDelta: usize = 0xd04;
@@ -2898,21 +2723,18 @@ pub mod C_Inferno {
     pub const m_flLastGrassBurnThink: usize = 0x828c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_InfoMapRegion {
     pub const m_flRadius: usize = 0x540;
     pub const m_szLocToken: usize = 0x544;
     pub const m_pNext: usize = 0x5c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_InfoVisibilityBox {
     pub const m_nMode: usize = 0x544;
     pub const m_vBoxSize: usize = 0x548;
     pub const m_bEnabled: usize = 0x554;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_IronSightController {
     pub const m_bIronSightAvailable: usize = 0x10;
     pub const m_flIronSightAmount: usize = 0x14;
@@ -2929,24 +2751,20 @@ pub mod C_IronSightController {
     pub const m_flSpeedRatio: usize = 0xa8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Item {
     pub const m_bShouldGlow: usize = 0x15f8;
     pub const m_pReticleHintTextName: usize = 0x15f9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ItemDogtags {
     pub const m_OwningPlayer: usize = 0x1700;
     pub const m_KillingPlayer: usize = 0x1704;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_LightEntity {
     pub const m_CLightComponent: usize = 0xcc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_LightGlow {
     pub const m_nHorizontalSize: usize = 0xcc0;
     pub const m_nVerticalSize: usize = 0xcc4;
@@ -2958,7 +2776,6 @@ pub mod C_LightGlow {
     pub const m_Glow: usize = 0xce0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_LightGlowOverlay {
     pub const m_vecOrigin: usize = 0xd0;
     pub const m_vecDirection: usize = 0xdc;
@@ -2969,7 +2786,6 @@ pub mod C_LightGlowOverlay {
     pub const m_bModulateByDot: usize = 0xf5;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_LocalTempEntity {
     pub const flags: usize = 0xf30;
     pub const die: usize = 0xf34;
@@ -2998,7 +2814,6 @@ pub mod C_LocalTempEntity {
     pub const m_vecTempEntAcceleration: usize = 0xfcc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_MapVetoPickController {
     pub const m_nDraftType: usize = 0x550;
     pub const m_nTeamWinningCoinToss: usize = 0x554;
@@ -3019,29 +2834,24 @@ pub mod C_MapVetoPickController {
     pub const m_bDisabledHud: usize = 0xe84;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Melee {
     pub const m_flThrowAt: usize = 0x1970;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_MolotovProjectile {
     pub const m_bIsIncGrenade: usize = 0x1188;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Multimeter {
     pub const m_hTargetC4: usize = 0xf20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OmniLight {
     pub const m_flInnerAngle: usize = 0xf08;
     pub const m_flOuterAngle: usize = 0xf0c;
     pub const m_bShowLight: usize = 0xf10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ParadropChopper {
     pub const m_vecLastRopeTargetPos: usize = 0xf20;
     pub const m_flLastRopeTime: usize = 0xf2c;
@@ -3051,7 +2861,6 @@ pub mod C_ParadropChopper {
     pub const m_bCalledByPlayer: usize = 0xf3c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ParticleSystem {
     pub const m_szSnapshotFileName: usize = 0xcc0;
     pub const m_bActive: usize = 0xec0;
@@ -3079,7 +2888,6 @@ pub mod C_ParticleSystem {
     pub const m_bOldFrozen: usize = 0x1259;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PathParticleRope {
     pub const m_bStartActive: usize = 0x540;
     pub const m_flMaxSimulationTime: usize = 0x544;
@@ -3099,13 +2907,11 @@ pub mod C_PathParticleRope {
     pub const m_PathNodes_RadiusScale: usize = 0x600;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PhysMagnet {
     pub const m_aAttachedObjectsFromServer: usize = 0xf18;
     pub const m_aAttachedObjects: usize = 0xf30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PhysPropClientside {
     pub const m_flTouchDelta: usize = 0x1068;
     pub const m_fDeathTime: usize = 0x106c;
@@ -3124,7 +2930,6 @@ pub mod C_PhysPropClientside {
     pub const m_nDamageType: usize = 0x10b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PhysPropLootCrate {
     pub const m_bRenderInPSPM: usize = 0x1078;
     pub const m_bRenderInTablet: usize = 0x1079;
@@ -3132,12 +2937,10 @@ pub mod C_PhysPropLootCrate {
     pub const m_iHealth: usize = 0x1080;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PhysicsProp {
     pub const m_bAwake: usize = 0x1068;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PickUpModelSlerper {
     pub const m_hPlayerParent: usize = 0xf18;
     pub const m_hItem: usize = 0xf1c;
@@ -3147,7 +2950,6 @@ pub mod C_PickUpModelSlerper {
     pub const m_angRandom: usize = 0xf40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PlantedC4 {
     pub const m_bBombTicking: usize = 0xf18;
     pub const m_nBombSite: usize = 0xf1c;
@@ -3178,7 +2980,6 @@ pub mod C_PlantedC4 {
     pub const m_pPredictionOwner: usize = 0xf90;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PlayerPing {
     pub const m_hPlayer: usize = 0x570;
     pub const m_hPingedEntity: usize = 0x574;
@@ -3187,7 +2988,6 @@ pub mod C_PlayerPing {
     pub const m_szPlaceName: usize = 0x57d;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PlayerSprayDecal {
     pub const m_nUniqueID: usize = 0xcc0;
     pub const m_unAccountID: usize = 0xcc4;
@@ -3207,7 +3007,6 @@ pub mod C_PlayerSprayDecal {
     pub const m_SprayRenderHelper: usize = 0xda0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PlayerVisibility {
     pub const m_flVisibilityStrength: usize = 0x540;
     pub const m_flFogDistanceMultiplier: usize = 0x544;
@@ -3217,7 +3016,6 @@ pub mod C_PlayerVisibility {
     pub const m_bIsEnabled: usize = 0x551;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointCamera {
     pub const m_FOV: usize = 0x540;
     pub const m_Resolution: usize = 0x544;
@@ -3233,7 +3031,8 @@ pub mod C_PointCamera {
     pub const m_fBrightness: usize = 0x568;
     pub const m_flZFar: usize = 0x56c;
     pub const m_flZNear: usize = 0x570;
-    pub const m_bDofEnabled: usize = 0x574;
+    pub const m_bCanHLTVUse: usize = 0x574;
+    pub const m_bDofEnabled: usize = 0x575;
     pub const m_flDofNearBlurry: usize = 0x578;
     pub const m_flDofNearCrisp: usize = 0x57c;
     pub const m_flDofFarCrisp: usize = 0x580;
@@ -3245,18 +3044,15 @@ pub mod C_PointCamera {
     pub const m_pNext: usize = 0x598;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointCameraVFOV {
     pub const m_flVerticalFOV: usize = 0x5a0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointClientUIDialog {
     pub const m_hActivator: usize = 0xcf0;
     pub const m_bStartEnabled: usize = 0xcf4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointClientUIHUD {
     pub const m_bCheckCSSClasses: usize = 0xcf8;
     pub const m_bIgnoreInput: usize = 0xe80;
@@ -3273,7 +3069,6 @@ pub mod C_PointClientUIHUD {
     pub const m_vecCSSClasses: usize = 0xeb0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointClientUIWorldPanel {
     pub const m_bForceRecreateNextUpdate: usize = 0xcf8;
     pub const m_bMoveViewToPlayerNextThink: usize = 0xcf9;
@@ -3305,12 +3100,10 @@ pub mod C_PointClientUIWorldPanel {
     pub const m_nExplicitImageLayout: usize = 0xf18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointClientUIWorldTextPanel {
     pub const m_messageText: usize = 0xf20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointCommentaryNode {
     pub const m_bActive: usize = 0xf20;
     pub const m_bWasActive: usize = 0xf21;
@@ -3327,7 +3120,6 @@ pub mod C_PointCommentaryNode {
     pub const m_bRestartAfterRestore: usize = 0xf64;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointValueRemapper {
     pub const m_bDisabled: usize = 0x540;
     pub const m_bDisabledOld: usize = 0x541;
@@ -3356,7 +3148,6 @@ pub mod C_PointValueRemapper {
     pub const m_vecPreviousTestPoint: usize = 0x5ac;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PointWorldText {
     pub const m_bForceRecreateNextUpdate: usize = 0xcc8;
     pub const m_messageText: usize = 0xcd8;
@@ -3372,7 +3163,6 @@ pub mod C_PointWorldText {
     pub const m_nReorientMode: usize = 0xf34;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PostProcessingVolume {
     pub const m_hPostSettings: usize = 0xcd8;
     pub const m_flFadeDuration: usize = 0xce0;
@@ -3392,7 +3182,6 @@ pub mod C_PostProcessingVolume {
     pub const m_flTonemapMinAvgLum: usize = 0xd14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Precipitation {
     pub const m_flDensity: usize = 0xcc8;
     pub const m_flParticleInnerDist: usize = 0xcd8;
@@ -3404,13 +3193,11 @@ pub mod C_Precipitation {
     pub const m_nAvailableSheetSequencesMaxIndex: usize = 0xd14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PredictedViewModel {
     pub const m_LagAnglesHistory: usize = 0xf80;
     pub const m_vPredictedOffset: usize = 0xf98;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_PropCounter {
     pub const m_flDisplayValue: usize = 0xf18;
     pub const m_flDisplayValueLocal: usize = 0xf1c;
@@ -3418,12 +3205,10 @@ pub mod C_PropCounter {
     pub const m_flPreviousValue: usize = 0xf24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RagdollManager {
     pub const m_iCurrentMaxRagdollCount: usize = 0x540;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RagdollProp {
     pub const m_ragPos: usize = 0xf20;
     pub const m_ragAngles: usize = 0xf38;
@@ -3435,7 +3220,6 @@ pub mod C_RagdollProp {
     pub const m_worldSpaceBoneComputationOrder: usize = 0xf78;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RagdollPropAttached {
     pub const m_boneIndexAttached: usize = 0xf90;
     pub const m_ragdollAttachedObjectIndex: usize = 0xf94;
@@ -3446,12 +3230,10 @@ pub mod C_RagdollPropAttached {
     pub const m_bHasParent: usize = 0xfc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RectLight {
     pub const m_bShowLight: usize = 0xf08;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RetakeGameRules {
     pub const m_nMatchSeed: usize = 0xf8;
     pub const m_bBlockersPresent: usize = 0xfc;
@@ -3460,7 +3242,6 @@ pub mod C_RetakeGameRules {
     pub const m_iBombSite: usize = 0x104;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RopeKeyframe {
     pub const m_LinksTouchingSomething: usize = 0xcc8;
     pub const m_nLinksTouchingSomething: usize = 0xccc;
@@ -3505,12 +3286,10 @@ pub mod C_RopeKeyframe {
     pub const m_bPhysicsInitted: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_RopeKeyframe_CPhysicsDelegate {
     pub const m_pKeyframe: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SceneEntity {
     pub const m_bIsPlayingBack: usize = 0x548;
     pub const m_bPaused: usize = 0x549;
@@ -3526,17 +3305,14 @@ pub mod C_SceneEntity {
     pub const m_flCurrentTime: usize = 0x598;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SceneEntity_QueuedEvents_t {
     pub const starttime: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ShatterGlassShardPhysics {
     pub const m_ShardDesc: usize = 0x1078;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SkyCamera {
     pub const m_skyboxData: usize = 0x540;
     pub const m_skyboxSlotToken: usize = 0x5d0;
@@ -3544,7 +3320,6 @@ pub mod C_SkyCamera {
     pub const m_pNext: usize = 0x5d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SmokeGrenadeProjectile {
     pub const m_nSmokeEffectTickBegin: usize = 0x1190;
     pub const m_bDidSmokeEffect: usize = 0x1194;
@@ -3556,7 +3331,6 @@ pub mod C_SmokeGrenadeProjectile {
     pub const m_bSmokeEffectSpawned: usize = 0x11d1;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SoundAreaEntityBase {
     pub const m_bDisabled: usize = 0x540;
     pub const m_bWasEnabled: usize = 0x548;
@@ -3564,18 +3338,15 @@ pub mod C_SoundAreaEntityBase {
     pub const m_vPos: usize = 0x558;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SoundAreaEntityOrientedBox {
     pub const m_vMin: usize = 0x568;
     pub const m_vMax: usize = 0x574;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SoundAreaEntitySphere {
     pub const m_flRadius: usize = 0x568;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SoundOpvarSetPointBase {
     pub const m_iszStackName: usize = 0x540;
     pub const m_iszOperatorName: usize = 0x548;
@@ -3584,13 +3355,11 @@ pub mod C_SoundOpvarSetPointBase {
     pub const m_bUseAutoCompare: usize = 0x55c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SpotlightEnd {
     pub const m_flLightScale: usize = 0xcc0;
     pub const m_Radius: usize = 0xcc4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Sprite {
     pub const m_hSpriteMaterial: usize = 0xcd8;
     pub const m_hAttachedToEntity: usize = 0xce0;
@@ -3618,7 +3387,6 @@ pub mod C_Sprite {
     pub const m_nSpriteHeight: usize = 0xdec;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Sun {
     pub const m_fxSSSunFlareEffectIndex: usize = 0xcc0;
     pub const m_fxSunFlareEffectIndex: usize = 0xcc4;
@@ -3640,12 +3408,10 @@ pub mod C_Sun {
     pub const m_flFarZScale: usize = 0xd1c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SunGlowOverlay {
     pub const m_bModulateByDot: usize = 0xd0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_SurvivalGameRules {
     pub const m_vecPlayAreaMins: usize = 0x8;
     pub const m_vecPlayAreaMaxs: usize = 0x14;
@@ -3667,7 +3433,6 @@ pub mod C_SurvivalGameRules {
     pub const m_flLastThinkTime: usize = 0x6a4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Tablet {
     pub const m_flUpgradeExpirationTime: usize = 0x1978;
     pub const m_vecLocalHexFlags: usize = 0x1988;
@@ -3698,7 +3463,6 @@ pub mod C_Tablet {
     pub const m_flLastClosePoseParamVal: usize = 0x20cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_Team {
     pub const m_aPlayerControllers: usize = 0x540;
     pub const m_aPlayers: usize = 0x558;
@@ -3706,7 +3470,6 @@ pub mod C_Team {
     pub const m_szTeamname: usize = 0x574;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_TeamRoundTimer {
     pub const m_bTimerPaused: usize = 0x540;
     pub const m_flTimeRemaining: usize = 0x544;
@@ -3740,7 +3503,6 @@ pub mod C_TeamRoundTimer {
     pub const m_nOldTimerState: usize = 0x584;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_TextureBasedAnimatable {
     pub const m_bLoop: usize = 0xcc0;
     pub const m_flFPS: usize = 0xcc4;
@@ -3752,7 +3514,6 @@ pub mod C_TextureBasedAnimatable {
     pub const m_flStartFrame: usize = 0xcf4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_TonemapController2 {
     pub const m_flAutoExposureMin: usize = 0x540;
     pub const m_flAutoExposureMax: usize = 0x544;
@@ -3764,13 +3525,11 @@ pub mod C_TonemapController2 {
     pub const m_flTonemapEVSmoothingRange: usize = 0x55c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_TriggerBuoyancy {
     pub const m_BuoyancyHelper: usize = 0xcc8;
     pub const m_flFluidDensity: usize = 0xcf0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_TripWireFireProjectile {
     pub const m_flAttachTime: usize = 0x1100;
     pub const m_vecTripWireEndPositions: usize = 0x1104;
@@ -3780,12 +3539,10 @@ pub mod C_TripWireFireProjectile {
     pub const m_nTripWireCenterIndex0: usize = 0x1190;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_ViewmodelWeapon {
     pub const m_worldModel: usize = 0xf18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_VoteController {
     pub const m_iActiveIssueIndex: usize = 0x550;
     pub const m_iOnlyTeamToVote: usize = 0x554;
@@ -3796,13 +3553,11 @@ pub mod C_VoteController {
     pub const m_bIsYesNoVote: usize = 0x572;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_WeaponBaseItem {
     pub const m_SequenceCompleteTimer: usize = 0x1970;
     pub const m_bRedraw: usize = 0x1988;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_WeaponCSBase {
     pub const m_flFireSequenceStartTime: usize = 0x1678;
     pub const m_nFireSequenceStartTimeChange: usize = 0x167c;
@@ -3865,7 +3620,6 @@ pub mod C_WeaponCSBase {
     pub const m_iNumEmptyAttacks: usize = 0x1944;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_WeaponCSBaseGun {
     pub const m_zoomLevel: usize = 0x1970;
     pub const m_iBurstShotsRemaining: usize = 0x1974;
@@ -3875,23 +3629,19 @@ pub mod C_WeaponCSBaseGun {
     pub const m_bNeedsBoltAction: usize = 0x198d;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_WeaponShield {
     pub const m_flDisplayHealth: usize = 0x1990;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_WeaponTaser {
     pub const m_fFireTime: usize = 0x1990;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_WeaponZoneRepulsor {
     pub const m_flPitchLocal: usize = 0x1990;
     pub const m_flLastTimeNotIdle: usize = 0x1994;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_fogplayerparams_t {
     pub const m_hCtrl: usize = 0x8;
     pub const m_flTransitionTime: usize = 0xc;
@@ -3909,7 +3659,6 @@ pub mod C_fogplayerparams_t {
     pub const m_flNewFarZ: usize = 0x3c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompMatMutatorCondition_t {
     pub const m_nMutatorCondition: usize = 0x0;
     pub const m_strMutatorConditionContainerName: usize = 0x8;
@@ -3918,7 +3667,6 @@ pub mod CompMatMutatorCondition_t {
     pub const m_bPassWhenTrue: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompMatPropertyMutator_t {
     pub const m_bEnabled: usize = 0x0;
     pub const m_nMutatorCommandType: usize = 0x4;
@@ -3950,7 +3698,6 @@ pub mod CompMatPropertyMutator_t {
     pub const m_vecConditions: usize = 0x350;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompositeMaterialAssemblyProcedure_t {
     pub const m_vecCompMatIncludes: usize = 0x0;
     pub const m_vecMatchFilters: usize = 0x18;
@@ -3958,7 +3705,6 @@ pub mod CompositeMaterialAssemblyProcedure_t {
     pub const m_vecPropertyMutators: usize = 0x48;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompositeMaterialEditorPoint_t {
     pub const m_ModelName: usize = 0x0;
     pub const m_nSequenceIndex: usize = 0xe0;
@@ -3970,7 +3716,6 @@ pub mod CompositeMaterialEditorPoint_t {
     pub const m_vecCompositeMaterials: usize = 0x1f8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompositeMaterialInputContainer_t {
     pub const m_bEnabled: usize = 0x0;
     pub const m_nCompositeMaterialInputContainerSourceType: usize = 0x4;
@@ -3982,7 +3727,6 @@ pub mod CompositeMaterialInputContainer_t {
     pub const m_bExposeExternally: usize = 0x118;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompositeMaterialInputLooseVariable_t {
     pub const m_strName: usize = 0x0;
     pub const m_bExposeExternally: usize = 0x8;
@@ -4020,7 +3764,6 @@ pub mod CompositeMaterialInputLooseVariable_t {
     pub const m_strString: usize = 0x268;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompositeMaterialMatchFilter_t {
     pub const m_nCompositeMaterialMatchFilterType: usize = 0x0;
     pub const m_strMatchFilter: usize = 0x8;
@@ -4028,7 +3771,6 @@ pub mod CompositeMaterialMatchFilter_t {
     pub const m_bPassWhenTrue: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CompositeMaterial_t {
     pub const m_TargetKVs: usize = 0x8;
     pub const m_PreGenerationKVs: usize = 0x18;
@@ -4036,7 +3778,6 @@ pub mod CompositeMaterial_t {
     pub const m_vecGeneratedTextures: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CountdownTimer {
     pub const m_duration: usize = 0x8;
     pub const m_timestamp: usize = 0xc;
@@ -4044,37 +3785,31 @@ pub mod CountdownTimer {
     pub const m_nWorldGroupId: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod EngineCountdownTimer {
     pub const m_duration: usize = 0x8;
     pub const m_timestamp: usize = 0xc;
     pub const m_timescale: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod EntityRenderAttribute_t {
     pub const m_ID: usize = 0x30;
     pub const m_Values: usize = 0x34;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod EntitySpottedState_t {
     pub const m_bSpotted: usize = 0x8;
     pub const m_bSpottedByMask: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod GeneratedTextureHandle_t {
     pub const m_strBitmapName: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod IntervalTimer {
     pub const m_timestamp: usize = 0x8;
     pub const m_nWorldGroupId: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PhysicsRagdollPose_t {
     pub const __m_pChainEntity: usize = 0x8;
     pub const m_Transforms: usize = 0x30;
@@ -4082,7 +3817,6 @@ pub mod PhysicsRagdollPose_t {
     pub const m_bDirty: usize = 0x68;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod SellbackPurchaseEntry_t {
     pub const m_unDefIdx: usize = 0x30;
     pub const m_nCost: usize = 0x34;
@@ -4091,13 +3825,11 @@ pub mod SellbackPurchaseEntry_t {
     pub const m_hItem: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod TimedEvent {
     pub const m_TimeBetweenEvents: usize = 0x0;
     pub const m_fNextEvent: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VPhysicsCollisionAttribute_t {
     pub const m_nInteractsAs: usize = 0x8;
     pub const m_nInteractsWith: usize = 0x10;
@@ -4109,25 +3841,21 @@ pub mod VPhysicsCollisionAttribute_t {
     pub const m_nCollisionFunctionMask: usize = 0x2b;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ViewAngleServerChange_t {
     pub const nType: usize = 0x30;
     pub const qAngle: usize = 0x34;
     pub const nIndex: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod WeaponPurchaseCount_t {
     pub const m_nItemDefIndex: usize = 0x30;
     pub const m_nCount: usize = 0x32;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod WeaponPurchaseTracker_t {
     pub const m_weaponPurchases: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod audioparams_t {
     pub const localSound: usize = 0x8;
     pub const soundscapeIndex: usize = 0x68;
@@ -4136,7 +3864,6 @@ pub mod audioparams_t {
     pub const soundEventHash: usize = 0x74;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod fogparams_t {
     pub const dirPrimary: usize = 0x8;
     pub const colorPrimary: usize = 0x14;
@@ -4165,7 +3892,6 @@ pub mod fogparams_t {
     pub const m_bPadding: usize = 0x67;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod shard_model_desc_t {
     pub const m_nModelID: usize = 0x8;
     pub const m_hMaterial: usize = 0x10;
@@ -4182,7 +3908,6 @@ pub mod shard_model_desc_t {
     pub const m_LightGroup: usize = 0x5c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod sky3dparams_t {
     pub const scale: usize = 0x8;
     pub const origin: usize = 0xc;

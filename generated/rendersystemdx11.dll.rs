@@ -1,4 +1,5 @@
-#[allow(non_snake_case, non_upper_case_globals)]
+#![allow(non_snake_case, non_upper_case_globals)]
+
 pub mod RenderInputLayoutField_t {
     pub const m_pSemanticName: usize = 0x0;
     pub const m_nSemanticIndex: usize = 0x20;
@@ -9,7 +10,6 @@ pub mod RenderInputLayoutField_t {
     pub const m_nInstanceStepRate: usize = 0x34;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VsInputSignatureElement_t {
     pub const m_pName: usize = 0x0;
     pub const m_pSemantic: usize = 0x40;
@@ -17,7 +17,6 @@ pub mod VsInputSignatureElement_t {
     pub const m_nD3DSemanticIndex: usize = 0xc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VsInputSignature_t {
     pub const m_elems: usize = 0x0;
 }

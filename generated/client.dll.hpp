@@ -3033,7 +3033,8 @@ namespace C_PointCamera {
     constexpr std::ptrdiff_t m_fBrightness = 0x568;
     constexpr std::ptrdiff_t m_flZFar = 0x56c;
     constexpr std::ptrdiff_t m_flZNear = 0x570;
-    constexpr std::ptrdiff_t m_bDofEnabled = 0x574;
+    constexpr std::ptrdiff_t m_bCanHLTVUse = 0x574;
+    constexpr std::ptrdiff_t m_bDofEnabled = 0x575;
     constexpr std::ptrdiff_t m_flDofNearBlurry = 0x578;
     constexpr std::ptrdiff_t m_flDofNearCrisp = 0x57c;
     constexpr std::ptrdiff_t m_flDofFarCrisp = 0x580;

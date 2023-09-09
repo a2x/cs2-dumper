@@ -1,4 +1,5 @@
-#[allow(non_snake_case, non_upper_case_globals)]
+#![allow(non_snake_case, non_upper_case_globals)]
+
 pub mod CBaseRendererSource2 {
     pub const m_flRadiusScale: usize = 0x200;
     pub const m_flAlphaScale: usize = 0x358;
@@ -63,7 +64,6 @@ pub mod CBaseRendererSource2 {
     pub const m_bMaxLuminanceBlendingSequence0: usize = 0x2221;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CBaseTrailRenderer {
     pub const m_nOrientationType: usize = 0x2470;
     pub const m_nOrientationControlPoint: usize = 0x2474;
@@ -74,7 +74,6 @@ pub mod CBaseTrailRenderer {
     pub const m_bClampV: usize = 0x2730;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGeneralRandomRotation {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flDegrees: usize = 0x1c4;
@@ -84,14 +83,12 @@ pub mod CGeneralRandomRotation {
     pub const m_bRandomlyFlipDirection: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CGeneralSpin {
     pub const m_nSpinRateDegrees: usize = 0x1c0;
     pub const m_nSpinRateMinDegrees: usize = 0x1c4;
     pub const m_fSpinRateStopTime: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CNewParticleEffect {
     pub const m_pNext: usize = 0x10;
     pub const m_pPrev: usize = 0x18;
@@ -127,7 +124,6 @@ pub mod CNewParticleEffect {
     pub const m_RefCount: usize = 0xc0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleFloatInput {
     pub const m_nType: usize = 0x10;
     pub const m_nMapType: usize = 0x14;
@@ -176,7 +172,6 @@ pub mod CParticleFloatInput {
     pub const m_Curve: usize = 0x118;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleFunction {
     pub const m_flOpStrength: usize = 0x8;
     pub const m_nOpEndCapState: usize = 0x160;
@@ -196,36 +191,30 @@ pub mod CParticleFunction {
     pub const m_Notes: usize = 0x198;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleFunctionEmitter {
     pub const m_nEmitterIndex: usize = 0x1b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleFunctionInitializer {
     pub const m_nAssociatedEmitterIndex: usize = 0x1b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleFunctionPreEmission {
     pub const m_bRunOnce: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleFunctionRenderer {
     pub const VisibilityInputs: usize = 0x1b8;
     pub const m_bCannotBeRefracted: usize = 0x1fc;
     pub const m_bSkipRenderingOnMobile: usize = 0x1fd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleModelInput {
     pub const m_nType: usize = 0x10;
     pub const m_NamedValue: usize = 0x18;
     pub const m_nControlPoint: usize = 0x58;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleSystemDefinition {
     pub const m_nBehaviorVersion: usize = 0x8;
     pub const m_PreEmissionOperators: usize = 0x10;
@@ -293,7 +282,6 @@ pub mod CParticleSystemDefinition {
     pub const m_controlPointConfigurations: usize = 0x370;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleTransformInput {
     pub const m_nType: usize = 0x10;
     pub const m_NamedValue: usize = 0x18;
@@ -305,13 +293,11 @@ pub mod CParticleTransformInput {
     pub const m_flEndCPGrowthTime: usize = 0x64;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleVariableRef {
     pub const m_variableName: usize = 0x0;
     pub const m_variableType: usize = 0x38;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleVecInput {
     pub const m_nType: usize = 0x10;
     pub const m_vLiteralValue: usize = 0x14;
@@ -338,7 +324,6 @@ pub mod CParticleVecInput {
     pub const m_vRandomMax: usize = 0x64c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CParticleVisibilityInputs {
     pub const m_flCameraBias: usize = 0x0;
     pub const m_nCPin: usize = 0x4;
@@ -360,7 +345,6 @@ pub mod CParticleVisibilityInputs {
     pub const m_bRightEye: usize = 0x40;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CPathParameters {
     pub const m_nStartControlPointNumber: usize = 0x0;
     pub const m_nEndControlPointNumber: usize = 0x4;
@@ -372,13 +356,11 @@ pub mod CPathParameters {
     pub const m_vEndOffset: usize = 0x2c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CRandomNumberGeneratorParameters {
     pub const m_bDistributeEvenly: usize = 0x0;
     pub const m_nSeed: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_AddVectorToVector {
     pub const m_vecScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1cc;
@@ -388,7 +370,6 @@ pub mod C_INIT_AddVectorToVector {
     pub const m_randomnessParameters: usize = 0x1ec;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_AgeNoise {
     pub const m_bAbsVal: usize = 0x1c0;
     pub const m_bAbsValInv: usize = 0x1c1;
@@ -400,7 +381,6 @@ pub mod C_INIT_AgeNoise {
     pub const m_vecOffsetLoc: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_ChaoticAttractor {
     pub const m_flAParm: usize = 0x1c0;
     pub const m_flBParm: usize = 0x1c4;
@@ -413,7 +393,6 @@ pub mod C_INIT_ChaoticAttractor {
     pub const m_bUniformSpeed: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_ColorLitPerParticle {
     pub const m_ColorMin: usize = 0x1d8;
     pub const m_ColorMax: usize = 0x1dc;
@@ -424,7 +403,6 @@ pub mod C_INIT_ColorLitPerParticle {
     pub const m_flLightAmplification: usize = 0x1f0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateAlongPath {
     pub const m_fMaxDistance: usize = 0x1c0;
     pub const m_PathParams: usize = 0x1d0;
@@ -433,7 +411,6 @@ pub mod C_INIT_CreateAlongPath {
     pub const m_bSaveOffset: usize = 0x220;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateFromCPs {
     pub const m_nIncrement: usize = 0x1c0;
     pub const m_nMinCP: usize = 0x1c4;
@@ -441,7 +418,6 @@ pub mod C_INIT_CreateFromCPs {
     pub const m_nDynamicCPCount: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateFromParentParticles {
     pub const m_flVelocityScale: usize = 0x1c0;
     pub const m_flIncrement: usize = 0x1c4;
@@ -450,14 +426,12 @@ pub mod C_INIT_CreateFromParentParticles {
     pub const m_bSubFrame: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateFromPlaneCache {
     pub const m_vecOffsetMin: usize = 0x1c0;
     pub const m_vecOffsetMax: usize = 0x1cc;
     pub const m_bUseNormal: usize = 0x1d9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateInEpitrochoid {
     pub const m_nComponent1: usize = 0x1c0;
     pub const m_nComponent2: usize = 0x1c4;
@@ -471,7 +445,6 @@ pub mod C_INIT_CreateInEpitrochoid {
     pub const m_bOffsetExistingPos: usize = 0x792;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateOnGrid {
     pub const m_nXCount: usize = 0x1c0;
     pub const m_nYCount: usize = 0x318;
@@ -485,7 +458,6 @@ pub mod C_INIT_CreateOnGrid {
     pub const m_bHollow: usize = 0x9d6;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateOnModel {
     pub const m_modelInput: usize = 0x1c0;
     pub const m_transformInput: usize = 0x220;
@@ -502,7 +474,6 @@ pub mod C_INIT_CreateOnModel {
     pub const m_flShellSize: usize = 0xfd8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateOnModelAtHeight {
     pub const m_bUseBones: usize = 0x1c0;
     pub const m_bForceZ: usize = 0x1c1;
@@ -520,7 +491,6 @@ pub mod C_INIT_CreateOnModelAtHeight {
     pub const m_flMaxBoneVelocity: usize = 0x11b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateParticleImpulse {
     pub const m_InputRadius: usize = 0x1c0;
     pub const m_InputMagnitude: usize = 0x318;
@@ -529,7 +499,6 @@ pub mod C_INIT_CreateParticleImpulse {
     pub const m_nImpulseType: usize = 0x5d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreatePhyllotaxis {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nScaleCP: usize = 0x1c4;
@@ -547,7 +516,6 @@ pub mod C_INIT_CreatePhyllotaxis {
     pub const m_bUseOrigRadius: usize = 0x1ee;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateSequentialPath {
     pub const m_fMaxDistance: usize = 0x1c0;
     pub const m_flNumToAssign: usize = 0x1c4;
@@ -557,7 +525,6 @@ pub mod C_INIT_CreateSequentialPath {
     pub const m_PathParams: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateSequentialPathV2 {
     pub const m_fMaxDistance: usize = 0x1c0;
     pub const m_flNumToAssign: usize = 0x318;
@@ -567,7 +534,6 @@ pub mod C_INIT_CreateSequentialPathV2 {
     pub const m_PathParams: usize = 0x480;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateSpiralSphere {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nOverrideCP: usize = 0x1c4;
@@ -578,7 +544,6 @@ pub mod C_INIT_CreateSpiralSphere {
     pub const m_bUseParticleCount: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateWithinBox {
     pub const m_vecMin: usize = 0x1c0;
     pub const m_vecMax: usize = 0x818;
@@ -587,7 +552,6 @@ pub mod C_INIT_CreateWithinBox {
     pub const m_randomnessParameters: usize = 0xe78;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreateWithinSphereTransform {
     pub const m_fRadiusMin: usize = 0x1c0;
     pub const m_fRadiusMax: usize = 0x318;
@@ -605,7 +569,6 @@ pub mod C_INIT_CreateWithinSphereTransform {
     pub const m_nFieldVelocity: usize = 0x1ab4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_CreationNoise {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_bAbsVal: usize = 0x1c4;
@@ -619,14 +582,12 @@ pub mod C_INIT_CreationNoise {
     pub const m_flWorldTimeScale: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_DistanceCull {
     pub const m_nControlPoint: usize = 0x1c0;
     pub const m_flDistance: usize = 0x1c8;
     pub const m_bCullInside: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_DistanceToCPInit {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c8;
@@ -645,12 +606,10 @@ pub mod C_INIT_DistanceToCPInit {
     pub const m_flRemapBias: usize = 0x928;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_DistanceToNeighborCull {
     pub const m_flDistance: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_GlobalScale {
     pub const m_flScale: usize = 0x1c0;
     pub const m_nScaleControlPointNumber: usize = 0x1c4;
@@ -660,7 +619,6 @@ pub mod C_INIT_GlobalScale {
     pub const m_bScaleVelocity: usize = 0x1ce;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InheritFromParentParticles {
     pub const m_flScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -669,13 +627,11 @@ pub mod C_INIT_InheritFromParentParticles {
     pub const m_nRandomSeed: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InheritVelocity {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_flVelocityScale: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitFloat {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x318;
@@ -683,13 +639,11 @@ pub mod C_INIT_InitFloat {
     pub const m_InputStrength: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitFloatCollection {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x318;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitFromCPSnapshot {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nAttributeToRead: usize = 0x1c4;
@@ -703,12 +657,10 @@ pub mod C_INIT_InitFromCPSnapshot {
     pub const m_bLocalSpaceAngles: usize = 0x48c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitFromParentKilled {
     pub const m_nAttributeToCopy: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitFromVectorFieldSnapshot {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nLocalSpaceCP: usize = 0x1c4;
@@ -717,7 +669,6 @@ pub mod C_INIT_InitFromVectorFieldSnapshot {
     pub const m_vecScale: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitSkinnedPositionFromCPSnapshot {
     pub const m_nSnapshotControlPointNumber: usize = 0x1c0;
     pub const m_nControlPointNumber: usize = 0x1c4;
@@ -738,7 +689,6 @@ pub mod C_INIT_InitSkinnedPositionFromCPSnapshot {
     pub const m_bSetRadius: usize = 0x1f2;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitVec {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x818;
@@ -747,13 +697,11 @@ pub mod C_INIT_InitVec {
     pub const m_bWritePreviousPosition: usize = 0x821;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitVecCollection {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x818;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitialRepulsionVelocity {
     pub const m_CollisionGroupName: usize = 0x1c0;
     pub const m_nTraceSet: usize = 0x240;
@@ -770,7 +718,6 @@ pub mod C_INIT_InitialRepulsionVelocity {
     pub const m_nChildGroupID: usize = 0x270;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitialSequenceFromModel {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -782,7 +729,6 @@ pub mod C_INIT_InitialSequenceFromModel {
     pub const m_nSetMethod: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitialVelocityFromHitbox {
     pub const m_flVelocityMin: usize = 0x1c0;
     pub const m_flVelocityMax: usize = 0x1c4;
@@ -791,7 +737,6 @@ pub mod C_INIT_InitialVelocityFromHitbox {
     pub const m_bUseBones: usize = 0x24c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_InitialVelocityNoise {
     pub const m_vecAbsVal: usize = 0x1c0;
     pub const m_vecAbsValInv: usize = 0x1cc;
@@ -805,7 +750,6 @@ pub mod C_INIT_InitialVelocityNoise {
     pub const m_bIgnoreDt: usize = 0x1950;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_LifespanFromVelocity {
     pub const m_vecComponentScale: usize = 0x1c0;
     pub const m_flTraceOffset: usize = 0x1cc;
@@ -817,7 +761,6 @@ pub mod C_INIT_LifespanFromVelocity {
     pub const m_bIncludeWater: usize = 0x270;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_ModelCull {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_bBoundBox: usize = 0x1c4;
@@ -826,7 +769,6 @@ pub mod C_INIT_ModelCull {
     pub const m_HitboxSetName: usize = 0x1c7;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_MoveBetweenPoints {
     pub const m_flSpeedMin: usize = 0x1c0;
     pub const m_flSpeedMax: usize = 0x318;
@@ -837,13 +779,11 @@ pub mod C_INIT_MoveBetweenPoints {
     pub const m_bTrailBias: usize = 0x87c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_NormalAlignToCP {
     pub const m_transformInput: usize = 0x1c0;
     pub const m_nControlPointAxis: usize = 0x228;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_NormalOffset {
     pub const m_OffsetMin: usize = 0x1c0;
     pub const m_OffsetMax: usize = 0x1cc;
@@ -852,7 +792,6 @@ pub mod C_INIT_NormalOffset {
     pub const m_bNormalize: usize = 0x1dd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_OffsetVectorToVector {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -861,21 +800,18 @@ pub mod C_INIT_OffsetVectorToVector {
     pub const m_randomnessParameters: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_Orient2DRelToCP {
     pub const m_nCP: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
     pub const m_flRotOffset: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PlaneCull {
     pub const m_nControlPoint: usize = 0x1c0;
     pub const m_flDistance: usize = 0x1c8;
     pub const m_bCullInside: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PointList {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_pointList: usize = 0x1c8;
@@ -884,7 +820,6 @@ pub mod C_INIT_PointList {
     pub const m_nNumPointsAlongPath: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PositionOffset {
     pub const m_OffsetMin: usize = 0x1c0;
     pub const m_OffsetMax: usize = 0x818;
@@ -894,14 +829,12 @@ pub mod C_INIT_PositionOffset {
     pub const m_randomnessParameters: usize = 0xedc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PositionOffsetToCP {
     pub const m_nControlPointNumberStart: usize = 0x1c0;
     pub const m_nControlPointNumberEnd: usize = 0x1c4;
     pub const m_bLocalCoords: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PositionPlaceOnGround {
     pub const m_flOffset: usize = 0x1c0;
     pub const m_flMaxTraceLength: usize = 0x318;
@@ -918,7 +851,6 @@ pub mod C_INIT_PositionPlaceOnGround {
     pub const m_nIgnoreCP: usize = 0x514;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PositionWarp {
     pub const m_vecWarpMin: usize = 0x1c0;
     pub const m_vecWarpMax: usize = 0x818;
@@ -932,7 +864,6 @@ pub mod C_INIT_PositionWarp {
     pub const m_bUseCount: usize = 0xe89;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_PositionWarpScalar {
     pub const m_vecWarpMin: usize = 0x1c0;
     pub const m_vecWarpMax: usize = 0x1cc;
@@ -942,18 +873,15 @@ pub mod C_INIT_PositionWarpScalar {
     pub const m_nControlPointNumber: usize = 0x338;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_QuantizeFloat {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x318;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RadiusFromCPObject {
     pub const m_nControlPoint: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomAlpha {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nAlphaMin: usize = 0x1c4;
@@ -961,14 +889,12 @@ pub mod C_INIT_RandomAlpha {
     pub const m_flAlphaRandExponent: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomAlphaWindowThreshold {
     pub const m_flMin: usize = 0x1c0;
     pub const m_flMax: usize = 0x1c4;
     pub const m_flExponent: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomColor {
     pub const m_ColorMin: usize = 0x1dc;
     pub const m_ColorMax: usize = 0x1e0;
@@ -982,21 +908,18 @@ pub mod C_INIT_RandomColor {
     pub const m_flLightAmplification: usize = 0x200;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomLifeTime {
     pub const m_fLifetimeMin: usize = 0x1c0;
     pub const m_fLifetimeMax: usize = 0x1c4;
     pub const m_fLifetimeRandExponent: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomModelSequence {
     pub const m_ActivityName: usize = 0x1c0;
     pub const m_SequenceName: usize = 0x2c0;
     pub const m_hModel: usize = 0x3c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomNamedModelElement {
     pub const m_hModel: usize = 0x1c0;
     pub const m_names: usize = 0x1c8;
@@ -1006,14 +929,12 @@ pub mod C_INIT_RandomNamedModelElement {
     pub const m_nFieldOutput: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomRadius {
     pub const m_flRadiusMin: usize = 0x1c0;
     pub const m_flRadiusMax: usize = 0x1c4;
     pub const m_flRadiusRandExponent: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomScalar {
     pub const m_flMin: usize = 0x1c0;
     pub const m_flMax: usize = 0x1c4;
@@ -1021,13 +942,11 @@ pub mod C_INIT_RandomScalar {
     pub const m_nFieldOutput: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomSecondSequence {
     pub const m_nSequenceMin: usize = 0x1c0;
     pub const m_nSequenceMax: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomSequence {
     pub const m_nSequenceMin: usize = 0x1c0;
     pub const m_nSequenceMax: usize = 0x1c4;
@@ -1036,14 +955,12 @@ pub mod C_INIT_RandomSequence {
     pub const m_WeightedList: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomTrailLength {
     pub const m_flMinLength: usize = 0x1c0;
     pub const m_flMaxLength: usize = 0x1c4;
     pub const m_flLengthRandExponent: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomVector {
     pub const m_vecMin: usize = 0x1c0;
     pub const m_vecMax: usize = 0x1cc;
@@ -1051,7 +968,6 @@ pub mod C_INIT_RandomVector {
     pub const m_randomnessParameters: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomVectorComponent {
     pub const m_flMin: usize = 0x1c0;
     pub const m_flMax: usize = 0x1c4;
@@ -1059,12 +975,10 @@ pub mod C_INIT_RandomVectorComponent {
     pub const m_nComponent: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RandomYawFlip {
     pub const m_flPercent: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapCPtoScalar {
     pub const m_nCPInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -1079,7 +993,6 @@ pub mod C_INIT_RemapCPtoScalar {
     pub const m_flRemapBias: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapInitialDirectionToTransformToVector {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x228;
@@ -1089,7 +1002,6 @@ pub mod C_INIT_RemapInitialDirectionToTransformToVector {
     pub const m_bNormalize: usize = 0x240;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapInitialTransformDirectionToRotation {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x228;
@@ -1097,7 +1009,6 @@ pub mod C_INIT_RemapInitialTransformDirectionToRotation {
     pub const m_nComponent: usize = 0x230;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapInitialVisibilityScalar {
     pub const m_nFieldOutput: usize = 0x1c4;
     pub const m_flInputMin: usize = 0x1c8;
@@ -1106,7 +1017,6 @@ pub mod C_INIT_RemapInitialVisibilityScalar {
     pub const m_flOutputMax: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapNamedModelElementToScalar {
     pub const m_hModel: usize = 0x1c0;
     pub const m_names: usize = 0x1c8;
@@ -1117,7 +1027,6 @@ pub mod C_INIT_RemapNamedModelElementToScalar {
     pub const m_bModelFromRenderer: usize = 0x204;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapParticleCountToNamedModelElementScalar {
     pub const m_hModel: usize = 0x1f0;
     pub const m_outputMinName: usize = 0x1f8;
@@ -1125,7 +1034,6 @@ pub mod C_INIT_RemapParticleCountToNamedModelElementScalar {
     pub const m_bModelFromRenderer: usize = 0x208;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapParticleCountToScalar {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nInputMin: usize = 0x1c4;
@@ -1141,12 +1049,10 @@ pub mod C_INIT_RemapParticleCountToScalar {
     pub const m_flRemapBias: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapQAnglesToRotation {
     pub const m_TransformInput: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapScalar {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -1161,7 +1067,6 @@ pub mod C_INIT_RemapScalar {
     pub const m_flRemapBias: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapScalarToVector {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -1177,7 +1082,6 @@ pub mod C_INIT_RemapScalarToVector {
     pub const m_flRemapBias: usize = 0x1fc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapSpeedToScalar {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nControlPointNumber: usize = 0x1c4;
@@ -1191,7 +1095,6 @@ pub mod C_INIT_RemapSpeedToScalar {
     pub const m_bPerParticle: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapTransformOrientationToRotations {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_vecRotation: usize = 0x228;
@@ -1199,7 +1102,6 @@ pub mod C_INIT_RemapTransformOrientationToRotations {
     pub const m_bWriteNormal: usize = 0x235;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RemapTransformToVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vInputMin: usize = 0x1c4;
@@ -1216,7 +1118,6 @@ pub mod C_INIT_RemapTransformToVector {
     pub const m_flRemapBias: usize = 0x2d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RingWave {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_flParticlesPerOrbit: usize = 0x228;
@@ -1231,7 +1132,6 @@ pub mod C_INIT_RingWave {
     pub const m_bXYVelocityOnly: usize = 0xce9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_RtEnvCull {
     pub const m_vecTestDir: usize = 0x1c0;
     pub const m_vecTestNormal: usize = 0x1cc;
@@ -1243,12 +1143,10 @@ pub mod C_INIT_RtEnvCull {
     pub const m_nComponent: usize = 0x260;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_ScaleVelocity {
     pub const m_vecScale: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_SequenceFromCP {
     pub const m_bKillUnused: usize = 0x1c0;
     pub const m_bRadiusScale: usize = 0x1c1;
@@ -1256,12 +1154,10 @@ pub mod C_INIT_SequenceFromCP {
     pub const m_vecOffset: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_SequenceLifeTime {
     pub const m_flFramerate: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_SetHitboxToClosest {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nDesiredHitbox: usize = 0x1c4;
@@ -1274,7 +1170,6 @@ pub mod C_INIT_SetHitboxToClosest {
     pub const m_bUpdatePosition: usize = 0xa00;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_SetHitboxToModel {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nForceInModel: usize = 0x1c4;
@@ -1287,7 +1182,6 @@ pub mod C_INIT_SetHitboxToModel {
     pub const m_flShellSize: usize = 0x8b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_SetRigidAttachment {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nFieldInput: usize = 0x1c4;
@@ -1295,7 +1189,6 @@ pub mod C_INIT_SetRigidAttachment {
     pub const m_bLocalSpace: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_SetVectorAttributeToVectorExpression {
     pub const m_nExpression: usize = 0x1c0;
     pub const m_vInput1: usize = 0x1c8;
@@ -1305,7 +1198,6 @@ pub mod C_INIT_SetVectorAttributeToVectorExpression {
     pub const m_bNormalizedOutput: usize = 0xe80;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_StatusEffect {
     pub const m_nDetail2Combo: usize = 0x1c0;
     pub const m_flDetail2Rotation: usize = 0x1c4;
@@ -1327,7 +1219,6 @@ pub mod C_INIT_StatusEffect {
     pub const m_flSelfIllumBlendToFull: usize = 0x204;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_StatusEffectCitadel {
     pub const m_flSFXColorWarpAmount: usize = 0x1c0;
     pub const m_flSFXNormalAmount: usize = 0x1c4;
@@ -1350,7 +1241,6 @@ pub mod C_INIT_StatusEffectCitadel {
     pub const m_flSFXSUseModelUVs: usize = 0x208;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_VelocityFromCP {
     pub const m_velocityInput: usize = 0x1c0;
     pub const m_transformInput: usize = 0x818;
@@ -1358,14 +1248,12 @@ pub mod C_INIT_VelocityFromCP {
     pub const m_bDirectionOnly: usize = 0x884;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_VelocityFromNormal {
     pub const m_fSpeedMin: usize = 0x1c0;
     pub const m_fSpeedMax: usize = 0x1c4;
     pub const m_bIgnoreDt: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_VelocityRadialRandom {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_fSpeedMin: usize = 0x1c4;
@@ -1374,7 +1262,6 @@ pub mod C_INIT_VelocityRadialRandom {
     pub const m_bIgnoreDelta: usize = 0x1d9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_INIT_VelocityRandom {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_fSpeedMin: usize = 0x1c8;
@@ -1385,12 +1272,10 @@ pub mod C_INIT_VelocityRandom {
     pub const m_randomnessParameters: usize = 0x112c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_AlphaDecay {
     pub const m_flMinAlpha: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_AttractToControlPoint {
     pub const m_vecComponentScale: usize = 0x1d0;
     pub const m_fForceAmount: usize = 0x1e0;
@@ -1400,14 +1285,12 @@ pub mod C_OP_AttractToControlPoint {
     pub const m_bApplyMinForce: usize = 0x500;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_BasicMovement {
     pub const m_Gravity: usize = 0x1c0;
     pub const m_fDrag: usize = 0x818;
     pub const m_nMaxConstraintPasses: usize = 0x970;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_BoxConstraint {
     pub const m_vecMin: usize = 0x1c0;
     pub const m_vecMax: usize = 0x818;
@@ -1416,7 +1299,6 @@ pub mod C_OP_BoxConstraint {
     pub const m_bAccountForRadius: usize = 0xe75;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CPOffsetToPercentageBetweenCPs {
     pub const m_flInputMin: usize = 0x1c0;
     pub const m_flInputMax: usize = 0x1c4;
@@ -1431,13 +1313,11 @@ pub mod C_OP_CPOffsetToPercentageBetweenCPs {
     pub const m_vecOffset: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CPVelocityForce {
     pub const m_nControlPointNumber: usize = 0x1d0;
     pub const m_flScale: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CalculateVectorAttribute {
     pub const m_vStartValue: usize = 0x1c0;
     pub const m_nFieldInput1: usize = 0x1cc;
@@ -1452,7 +1332,6 @@ pub mod C_OP_CalculateVectorAttribute {
     pub const m_vFinalOutputScale: usize = 0x210;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ChladniWave {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c8;
@@ -1466,46 +1345,39 @@ pub mod C_OP_ChladniWave {
     pub const m_b3D: usize = 0x13e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ChooseRandomChildrenInGroup {
     pub const m_nChildGroupID: usize = 0x1d0;
     pub const m_flNumberOfChildren: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ClampScalar {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flOutputMin: usize = 0x1c8;
     pub const m_flOutputMax: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ClampVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecOutputMin: usize = 0x1c8;
     pub const m_vecOutputMax: usize = 0x820;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CollideWithParentParticles {
     pub const m_flParentRadiusScale: usize = 0x1c0;
     pub const m_flRadiusScale: usize = 0x318;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CollideWithSelf {
     pub const m_flRadiusScale: usize = 0x1c0;
     pub const m_flMinimumSpeed: usize = 0x318;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ColorAdjustHSL {
     pub const m_flHueAdjust: usize = 0x1c0;
     pub const m_flSaturationAdjust: usize = 0x318;
     pub const m_flLightnessAdjust: usize = 0x470;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ColorInterpolate {
     pub const m_ColorFade: usize = 0x1c0;
     pub const m_flFadeStartTime: usize = 0x1d0;
@@ -1514,7 +1386,6 @@ pub mod C_OP_ColorInterpolate {
     pub const m_bEaseInOut: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ColorInterpolateRandom {
     pub const m_ColorFadeMin: usize = 0x1c0;
     pub const m_ColorFadeMax: usize = 0x1dc;
@@ -1524,13 +1395,11 @@ pub mod C_OP_ColorInterpolateRandom {
     pub const m_bEaseInOut: usize = 0x1f8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ConnectParentParticleToNearest {
     pub const m_nFirstControlPoint: usize = 0x1c0;
     pub const m_nSecondControlPoint: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ConstrainDistance {
     pub const m_fMinDistance: usize = 0x1c0;
     pub const m_fMaxDistance: usize = 0x318;
@@ -1539,7 +1408,6 @@ pub mod C_OP_ConstrainDistance {
     pub const m_bGlobalCenter: usize = 0x480;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ConstrainDistanceToPath {
     pub const m_fMinDistance: usize = 0x1c0;
     pub const m_flMaxDistance0: usize = 0x1c4;
@@ -1551,7 +1419,6 @@ pub mod C_OP_ConstrainDistanceToPath {
     pub const m_nManualTField: usize = 0x218;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ConstrainDistanceToUserSpecifiedPath {
     pub const m_fMinDistance: usize = 0x1c0;
     pub const m_flMaxDistance: usize = 0x1c4;
@@ -1560,13 +1427,11 @@ pub mod C_OP_ConstrainDistanceToUserSpecifiedPath {
     pub const m_pointList: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ConstrainLineLength {
     pub const m_flMinDistance: usize = 0x1c0;
     pub const m_flMaxDistance: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ContinuousEmitter {
     pub const m_flEmissionDuration: usize = 0x1c0;
     pub const m_flStartTime: usize = 0x318;
@@ -1580,7 +1445,6 @@ pub mod C_OP_ContinuousEmitter {
     pub const m_bForceEmitOnLastUpdate: usize = 0x5dd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ControlPointToRadialScreenSpace {
     pub const m_nCPIn: usize = 0x1d0;
     pub const m_vecCP1Pos: usize = 0x1d4;
@@ -1589,7 +1453,6 @@ pub mod C_OP_ControlPointToRadialScreenSpace {
     pub const m_nCPSSPosOut: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ControlpointLight {
     pub const m_flScale: usize = 0x1c0;
     pub const m_nControlPoint1: usize = 0x690;
@@ -1626,7 +1489,6 @@ pub mod C_OP_ControlpointLight {
     pub const m_bClampUpperRange: usize = 0x70f;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_Cull {
     pub const m_flCullPerc: usize = 0x1c0;
     pub const m_flCullStart: usize = 0x1c4;
@@ -1634,7 +1496,6 @@ pub mod C_OP_Cull {
     pub const m_flCullExp: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CurlNoiseForce {
     pub const m_nNoiseType: usize = 0x1d0;
     pub const m_vecNoiseFreq: usize = 0x1d8;
@@ -1645,7 +1506,6 @@ pub mod C_OP_CurlNoiseForce {
     pub const m_flWorleyJitter: usize = 0x1c90;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CycleScalar {
     pub const m_nDestField: usize = 0x1c0;
     pub const m_flStartValue: usize = 0x1c4;
@@ -1659,7 +1519,6 @@ pub mod C_OP_CycleScalar {
     pub const m_nSetMethod: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_CylindricalDistanceToTransform {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c8;
@@ -1674,25 +1533,21 @@ pub mod C_OP_CylindricalDistanceToTransform {
     pub const m_bCapsule: usize = 0x7fe;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DampenToCP {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_flRange: usize = 0x1c4;
     pub const m_flScale: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_Decay {
     pub const m_bRopeDecay: usize = 0x1c0;
     pub const m_bForcePreserveParticleOrder: usize = 0x1c1;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DecayClampCount {
     pub const m_nCount: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DecayMaintainCount {
     pub const m_nParticlesToMaintain: usize = 0x1c0;
     pub const m_flDecayDelay: usize = 0x1c4;
@@ -1702,19 +1557,16 @@ pub mod C_OP_DecayMaintainCount {
     pub const m_bKillNewest: usize = 0x328;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DecayOffscreen {
     pub const m_flOffscreenTime: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DensityForce {
     pub const m_flRadiusScale: usize = 0x1d0;
     pub const m_flForceScale: usize = 0x1d4;
     pub const m_flTargetDensity: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DifferencePreviousParticle {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -1727,21 +1579,18 @@ pub mod C_OP_DifferencePreviousParticle {
     pub const m_bSetPreviousParticle: usize = 0x1dd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_Diffusion {
     pub const m_flRadiusScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
     pub const m_nVoxelGridResolution: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DirectionBetweenVecsToVec {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecPoint1: usize = 0x1c8;
     pub const m_vecPoint2: usize = 0x820;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DistanceBetweenCPsToCP {
     pub const m_nStartCP: usize = 0x1d0;
     pub const m_nEndCP: usize = 0x1d4;
@@ -1760,7 +1609,6 @@ pub mod C_OP_DistanceBetweenCPsToCP {
     pub const m_nSetParent: usize = 0x284;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DistanceBetweenTransforms {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_TransformStart: usize = 0x1c8;
@@ -1777,7 +1625,6 @@ pub mod C_OP_DistanceBetweenTransforms {
     pub const m_nSetMethod: usize = 0x888;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DistanceBetweenVecs {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecPoint1: usize = 0x1c8;
@@ -1790,7 +1637,6 @@ pub mod C_OP_DistanceBetweenVecs {
     pub const m_bDeltaTime: usize = 0x13dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DistanceCull {
     pub const m_nControlPoint: usize = 0x1c0;
     pub const m_vecPointOffset: usize = 0x1c4;
@@ -1798,7 +1644,6 @@ pub mod C_OP_DistanceCull {
     pub const m_bCullInside: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DistanceToTransform {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c8;
@@ -1817,7 +1662,6 @@ pub mod C_OP_DistanceToTransform {
     pub const m_vecComponentScale: usize = 0x828;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DragRelativeToPlane {
     pub const m_flDragAtPlane: usize = 0x1c0;
     pub const m_flFalloff: usize = 0x318;
@@ -1826,7 +1670,6 @@ pub mod C_OP_DragRelativeToPlane {
     pub const m_nControlPointNumber: usize = 0xad0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_DriveCPFromGlobalSoundFloat {
     pub const m_nOutputControlPoint: usize = 0x1d0;
     pub const m_nOutputField: usize = 0x1d4;
@@ -1839,7 +1682,6 @@ pub mod C_OP_DriveCPFromGlobalSoundFloat {
     pub const m_FieldName: usize = 0x1f8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_EnableChildrenFromParentParticleCount {
     pub const m_nChildGroupID: usize = 0x1d0;
     pub const m_nFirstChild: usize = 0x1d4;
@@ -1849,17 +1691,14 @@ pub mod C_OP_EnableChildrenFromParentParticleCount {
     pub const m_bDestroyImmediately: usize = 0x332;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_EndCapTimedDecay {
     pub const m_flDecayTime: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_EndCapTimedFreeze {
     pub const m_flFreezeTime: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ExternalGameImpulseForce {
     pub const m_flForceScale: usize = 0x1d0;
     pub const m_bRopes: usize = 0x328;
@@ -1868,7 +1707,6 @@ pub mod C_OP_ExternalGameImpulseForce {
     pub const m_bParticles: usize = 0x32b;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ExternalWindForce {
     pub const m_vecSamplePosition: usize = 0x1d0;
     pub const m_vecScale: usize = 0x828;
@@ -1883,7 +1721,6 @@ pub mod C_OP_ExternalWindForce {
     pub const m_vecBuoyancyForce: usize = 0x1798;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_FadeAndKill {
     pub const m_flStartFadeInTime: usize = 0x1c0;
     pub const m_flEndFadeInTime: usize = 0x1c4;
@@ -1894,7 +1731,6 @@ pub mod C_OP_FadeAndKill {
     pub const m_bForcePreserveParticleOrder: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_FadeAndKillForTracers {
     pub const m_flStartFadeInTime: usize = 0x1c0;
     pub const m_flEndFadeInTime: usize = 0x1c4;
@@ -1904,7 +1740,6 @@ pub mod C_OP_FadeAndKillForTracers {
     pub const m_flEndAlpha: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_FadeIn {
     pub const m_flFadeInTimeMin: usize = 0x1c0;
     pub const m_flFadeInTimeMax: usize = 0x1c4;
@@ -1912,13 +1747,11 @@ pub mod C_OP_FadeIn {
     pub const m_bProportional: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_FadeInSimple {
     pub const m_flFadeInTime: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_FadeOut {
     pub const m_flFadeOutTimeMin: usize = 0x1c0;
     pub const m_flFadeOutTimeMax: usize = 0x1c4;
@@ -1928,13 +1761,11 @@ pub mod C_OP_FadeOut {
     pub const m_bEaseInAndOut: usize = 0x201;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_FadeOutSimple {
     pub const m_flFadeOutTime: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ForceBasedOnDistanceToPlane {
     pub const m_flMinDist: usize = 0x1d0;
     pub const m_vecForceAtMinDist: usize = 0x1d4;
@@ -1945,19 +1776,16 @@ pub mod C_OP_ForceBasedOnDistanceToPlane {
     pub const m_flExponent: usize = 0x200;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ForceControlPointStub {
     pub const m_ControlPoint: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_GlobalLight {
     pub const m_flScale: usize = 0x1c0;
     pub const m_bClampLowerRange: usize = 0x1c4;
     pub const m_bClampUpperRange: usize = 0x1c5;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_HSVShiftToCP {
     pub const m_nColorCP: usize = 0x1d0;
     pub const m_nColorGemEnableCP: usize = 0x1d4;
@@ -1965,7 +1793,6 @@ pub mod C_OP_HSVShiftToCP {
     pub const m_DefaultHSVColor: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_InheritFromParentParticles {
     pub const m_flScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -1973,7 +1800,6 @@ pub mod C_OP_InheritFromParentParticles {
     pub const m_bRandomDistribution: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_InheritFromParentParticlesV2 {
     pub const m_flScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -1982,7 +1808,6 @@ pub mod C_OP_InheritFromParentParticlesV2 {
     pub const m_nMissingParentBehavior: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_InheritFromPeerSystem {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nFieldInput: usize = 0x1c4;
@@ -1990,7 +1815,6 @@ pub mod C_OP_InheritFromPeerSystem {
     pub const m_nGroupID: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_InstantaneousEmitter {
     pub const m_nParticlesToEmit: usize = 0x1c0;
     pub const m_flStartTime: usize = 0x318;
@@ -1999,7 +1823,6 @@ pub mod C_OP_InstantaneousEmitter {
     pub const m_nSnapshotControlPoint: usize = 0x478;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_InterpolateRadius {
     pub const m_flStartTime: usize = 0x1c0;
     pub const m_flEndTime: usize = 0x1c4;
@@ -2009,7 +1832,6 @@ pub mod C_OP_InterpolateRadius {
     pub const m_flBias: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LagCompensation {
     pub const m_nDesiredVelocityCP: usize = 0x1c0;
     pub const m_nLatencyCP: usize = 0x1c4;
@@ -2017,21 +1839,18 @@ pub mod C_OP_LagCompensation {
     pub const m_nDesiredVelocityCPField: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LerpEndCapScalar {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flOutput: usize = 0x1c4;
     pub const m_flLerpTime: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LerpEndCapVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecOutput: usize = 0x1c4;
     pub const m_flLerpTime: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LerpScalar {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flOutput: usize = 0x1c8;
@@ -2039,7 +1858,6 @@ pub mod C_OP_LerpScalar {
     pub const m_flEndTime: usize = 0x324;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LerpToInitialPosition {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_flInterpolation: usize = 0x1c8;
@@ -2048,7 +1866,6 @@ pub mod C_OP_LerpToInitialPosition {
     pub const m_vecScale: usize = 0x480;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LerpToOtherAttribute {
     pub const m_flInterpolation: usize = 0x1c0;
     pub const m_nFieldInputFrom: usize = 0x318;
@@ -2056,7 +1873,6 @@ pub mod C_OP_LerpToOtherAttribute {
     pub const m_nFieldOutput: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LerpVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecOutput: usize = 0x1c4;
@@ -2065,7 +1881,6 @@ pub mod C_OP_LerpVector {
     pub const m_nSetMethod: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LightningSnapshotGenerator {
     pub const m_nCPSnapshot: usize = 0x1d0;
     pub const m_nCPStartPnt: usize = 0x1d4;
@@ -2084,14 +1899,12 @@ pub mod C_OP_LightningSnapshotGenerator {
     pub const m_flDedicatedPool: usize = 0xf58;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LocalAccelerationForce {
     pub const m_nCP: usize = 0x1d0;
     pub const m_nScaleCP: usize = 0x1d4;
     pub const m_vecAccel: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LockPoints {
     pub const m_nMinCol: usize = 0x1c0;
     pub const m_nMaxCol: usize = 0x1c4;
@@ -2101,7 +1914,6 @@ pub mod C_OP_LockPoints {
     pub const m_flBlendValue: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LockToBone {
     pub const m_modelInput: usize = 0x1c0;
     pub const m_transformInput: usize = 0x220;
@@ -2120,7 +1932,6 @@ pub mod C_OP_LockToBone {
     pub const m_flRotLerp: usize = 0x988;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LockToPointList {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_pointList: usize = 0x1c8;
@@ -2129,7 +1940,6 @@ pub mod C_OP_LockToPointList {
     pub const m_nNumPointsAlongPath: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LockToSavedSequentialPath {
     pub const m_flFadeStart: usize = 0x1c4;
     pub const m_flFadeEnd: usize = 0x1c8;
@@ -2137,7 +1947,6 @@ pub mod C_OP_LockToSavedSequentialPath {
     pub const m_PathParams: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_LockToSavedSequentialPathV2 {
     pub const m_flFadeStart: usize = 0x1c0;
     pub const m_flFadeEnd: usize = 0x1c4;
@@ -2145,7 +1954,6 @@ pub mod C_OP_LockToSavedSequentialPathV2 {
     pub const m_PathParams: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MaintainEmitter {
     pub const m_nParticlesToMaintain: usize = 0x1c0;
     pub const m_flStartTime: usize = 0x318;
@@ -2157,7 +1965,6 @@ pub mod C_OP_MaintainEmitter {
     pub const m_flScale: usize = 0x488;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MaintainSequentialPath {
     pub const m_fMaxDistance: usize = 0x1c0;
     pub const m_flNumToAssign: usize = 0x1c4;
@@ -2168,7 +1975,6 @@ pub mod C_OP_MaintainSequentialPath {
     pub const m_PathParams: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MaxVelocity {
     pub const m_flMaxVelocity: usize = 0x1c0;
     pub const m_flMinVelocity: usize = 0x1c4;
@@ -2176,7 +1982,6 @@ pub mod C_OP_MaxVelocity {
     pub const m_nOverrideCPField: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ModelCull {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_bBoundBox: usize = 0x1c4;
@@ -2185,7 +1990,6 @@ pub mod C_OP_ModelCull {
     pub const m_HitboxSetName: usize = 0x1c7;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ModelDampenMovement {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_bBoundBox: usize = 0x1c4;
@@ -2196,7 +2000,6 @@ pub mod C_OP_ModelDampenMovement {
     pub const m_fDrag: usize = 0x8a0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MoveToHitbox {
     pub const m_modelInput: usize = 0x1c0;
     pub const m_transformInput: usize = 0x220;
@@ -2209,7 +2012,6 @@ pub mod C_OP_MoveToHitbox {
     pub const m_flInterpolation: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementLoopInsideSphere {
     pub const m_nCP: usize = 0x1c0;
     pub const m_flDistance: usize = 0x1c8;
@@ -2217,14 +2019,12 @@ pub mod C_OP_MovementLoopInsideSphere {
     pub const m_nDistSqrAttr: usize = 0x978;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementMaintainOffset {
     pub const m_vecOffset: usize = 0x1c0;
     pub const m_nCP: usize = 0x1cc;
     pub const m_bRadiusScale: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementMoveAlongSkinnedCPSnapshot {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nSnapshotControlPointNumber: usize = 0x1c4;
@@ -2234,7 +2034,6 @@ pub mod C_OP_MovementMoveAlongSkinnedCPSnapshot {
     pub const m_flTValue: usize = 0x328;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementPlaceOnGround {
     pub const m_flOffset: usize = 0x1c0;
     pub const m_flMaxTraceLength: usize = 0x318;
@@ -2255,7 +2054,6 @@ pub mod C_OP_MovementPlaceOnGround {
     pub const m_nIgnoreCP: usize = 0x3d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementRigidAttachToCP {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nScaleControlPoint: usize = 0x1c4;
@@ -2265,7 +2063,6 @@ pub mod C_OP_MovementRigidAttachToCP {
     pub const m_bOffsetLocal: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementRotateParticleAroundAxis {
     pub const m_vecRotAxis: usize = 0x1c0;
     pub const m_flRotRate: usize = 0x818;
@@ -2273,7 +2070,6 @@ pub mod C_OP_MovementRotateParticleAroundAxis {
     pub const m_bLocalSpace: usize = 0x9d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_MovementSkinnedPositionFromCPSnapshot {
     pub const m_nSnapshotControlPointNumber: usize = 0x1c0;
     pub const m_nControlPointNumber: usize = 0x1c4;
@@ -2287,7 +2083,6 @@ pub mod C_OP_MovementSkinnedPositionFromCPSnapshot {
     pub const m_flInterpolation: usize = 0x5e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_Noise {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flOutputMin: usize = 0x1c4;
@@ -2297,7 +2092,6 @@ pub mod C_OP_Noise {
     pub const m_flNoiseAnimationTimeScale: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_NoiseEmitter {
     pub const m_flEmissionDuration: usize = 0x1c0;
     pub const m_flStartTime: usize = 0x1c4;
@@ -2316,18 +2110,15 @@ pub mod C_OP_NoiseEmitter {
     pub const m_flWorldTimeScale: usize = 0x1fc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_NormalLock {
     pub const m_nControlPointNumber: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_NormalizeVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flScale: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_Orient2DRelToCP {
     pub const m_flRotOffset: usize = 0x1c0;
     pub const m_flSpinStrength: usize = 0x1c4;
@@ -2335,14 +2126,12 @@ pub mod C_OP_Orient2DRelToCP {
     pub const m_nFieldOutput: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_OrientTo2dDirection {
     pub const m_flRotOffset: usize = 0x1c0;
     pub const m_flSpinStrength: usize = 0x1c4;
     pub const m_nFieldOutput: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_OscillateScalar {
     pub const m_RateMin: usize = 0x1c0;
     pub const m_RateMax: usize = 0x1c4;
@@ -2359,7 +2148,6 @@ pub mod C_OP_OscillateScalar {
     pub const m_flOscAdd: usize = 0x1ec;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_OscillateScalarSimple {
     pub const m_Rate: usize = 0x1c0;
     pub const m_Frequency: usize = 0x1c4;
@@ -2368,7 +2156,6 @@ pub mod C_OP_OscillateScalarSimple {
     pub const m_flOscAdd: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_OscillateVector {
     pub const m_RateMin: usize = 0x1c0;
     pub const m_RateMax: usize = 0x1cc;
@@ -2387,7 +2174,6 @@ pub mod C_OP_OscillateVector {
     pub const m_flRateScale: usize = 0x4b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_OscillateVectorSimple {
     pub const m_Rate: usize = 0x1c0;
     pub const m_Frequency: usize = 0x1cc;
@@ -2397,28 +2183,24 @@ pub mod C_OP_OscillateVectorSimple {
     pub const m_bOffset: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ParentVortices {
     pub const m_flForceScale: usize = 0x1d0;
     pub const m_vecTwistAxis: usize = 0x1d4;
     pub const m_bFlipBasedOnYaw: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ParticlePhysics {
     pub const m_Gravity: usize = 0x1c0;
     pub const m_fDrag: usize = 0x818;
     pub const m_nMaxConstraintPasses: usize = 0x970;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PerParticleForce {
     pub const m_flForceScale: usize = 0x1d0;
     pub const m_vForce: usize = 0x328;
     pub const m_nCP: usize = 0x980;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PercentageBetweenTransformLerpCPs {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c4;
@@ -2434,7 +2216,6 @@ pub mod C_OP_PercentageBetweenTransformLerpCPs {
     pub const m_bRadialCheck: usize = 0x2b5;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PercentageBetweenTransforms {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c4;
@@ -2448,7 +2229,6 @@ pub mod C_OP_PercentageBetweenTransforms {
     pub const m_bRadialCheck: usize = 0x2ad;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PercentageBetweenTransformsVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c4;
@@ -2462,7 +2242,6 @@ pub mod C_OP_PercentageBetweenTransformsVector {
     pub const m_bRadialCheck: usize = 0x2bd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PinParticleToCP {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_vecOffset: usize = 0x1c8;
@@ -2479,7 +2258,6 @@ pub mod C_OP_PinParticleToCP {
     pub const m_flInterpolation: usize = 0xef0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PlanarConstraint {
     pub const m_PointOnPlane: usize = 0x1c0;
     pub const m_PlaneNormal: usize = 0x1cc;
@@ -2490,7 +2268,6 @@ pub mod C_OP_PlanarConstraint {
     pub const m_flMaximumDistanceToCP: usize = 0x338;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PlaneCull {
     pub const m_nPlaneControlPoint: usize = 0x1c0;
     pub const m_vecPlaneDirection: usize = 0x1c4;
@@ -2498,19 +2275,16 @@ pub mod C_OP_PlaneCull {
     pub const m_flPlaneOffset: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PlayEndCapWhenFinished {
     pub const m_bFireOnEmissionEnd: usize = 0x1d0;
     pub const m_bIncludeChildren: usize = 0x1d1;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PointVectorAtNextParticle {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInterpolation: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_PositionLock {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_flStartTime_min: usize = 0x228;
@@ -2529,7 +2303,6 @@ pub mod C_OP_PositionLock {
     pub const m_nFieldOutputPrev: usize = 0xa0c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_QuantizeCPComponent {
     pub const m_flInputValue: usize = 0x1d0;
     pub const m_nCPOutput: usize = 0x328;
@@ -2537,25 +2310,21 @@ pub mod C_OP_QuantizeCPComponent {
     pub const m_flQuantizeValue: usize = 0x330;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_QuantizeFloat {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x318;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RadiusDecay {
     pub const m_flMinRadius: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RampCPLinearRandom {
     pub const m_nOutControlPointNumber: usize = 0x1d0;
     pub const m_vecRateMin: usize = 0x1d4;
     pub const m_vecRateMax: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RampScalarLinear {
     pub const m_RateMin: usize = 0x1c0;
     pub const m_RateMax: usize = 0x1c4;
@@ -2567,7 +2336,6 @@ pub mod C_OP_RampScalarLinear {
     pub const m_bProportionalOp: usize = 0x204;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RampScalarLinearSimple {
     pub const m_Rate: usize = 0x1c0;
     pub const m_flStartTime: usize = 0x1c4;
@@ -2575,7 +2343,6 @@ pub mod C_OP_RampScalarLinearSimple {
     pub const m_nField: usize = 0x1f0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RampScalarSpline {
     pub const m_RateMin: usize = 0x1c0;
     pub const m_RateMax: usize = 0x1c4;
@@ -2589,7 +2356,6 @@ pub mod C_OP_RampScalarSpline {
     pub const m_bEaseOut: usize = 0x205;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RampScalarSplineSimple {
     pub const m_Rate: usize = 0x1c0;
     pub const m_flStartTime: usize = 0x1c4;
@@ -2598,13 +2364,11 @@ pub mod C_OP_RampScalarSplineSimple {
     pub const m_bEaseOut: usize = 0x1f4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RandomForce {
     pub const m_MinForce: usize = 0x1d0;
     pub const m_MaxForce: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ReadFromNeighboringParticle {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2613,14 +2377,12 @@ pub mod C_OP_ReadFromNeighboringParticle {
     pub const m_flInterpolation: usize = 0x328;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_ReinitializeScalarEndCap {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flOutputMin: usize = 0x1c4;
     pub const m_flOutputMax: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapAverageHitboxSpeedtoCP {
     pub const m_nInControlPointNumber: usize = 0x1d0;
     pub const m_nOutControlPointNumber: usize = 0x1d4;
@@ -2634,7 +2396,6 @@ pub mod C_OP_RemapAverageHitboxSpeedtoCP {
     pub const m_HitboxSetName: usize = 0xda0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapAverageScalarValuetoCP {
     pub const m_nOutControlPointNumber: usize = 0x1d0;
     pub const m_nOutVectorField: usize = 0x1d4;
@@ -2645,7 +2406,6 @@ pub mod C_OP_RemapAverageScalarValuetoCP {
     pub const m_flOutputMax: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapBoundingVolumetoCP {
     pub const m_nOutControlPointNumber: usize = 0x1d0;
     pub const m_flInputMin: usize = 0x1d4;
@@ -2654,7 +2414,6 @@ pub mod C_OP_RemapBoundingVolumetoCP {
     pub const m_flOutputMax: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapCPVelocityToVector {
     pub const m_nControlPoint: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2662,7 +2421,6 @@ pub mod C_OP_RemapCPVelocityToVector {
     pub const m_bNormalize: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapCPtoCP {
     pub const m_nInputControlPoint: usize = 0x1d0;
     pub const m_nOutputControlPoint: usize = 0x1d4;
@@ -2676,7 +2434,6 @@ pub mod C_OP_RemapCPtoCP {
     pub const m_flInterpRate: usize = 0x1f4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapCPtoScalar {
     pub const m_nCPInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2691,7 +2448,6 @@ pub mod C_OP_RemapCPtoScalar {
     pub const m_nSetMethod: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapCPtoVector {
     pub const m_nCPInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2708,14 +2464,12 @@ pub mod C_OP_RemapCPtoVector {
     pub const m_bAccelerate: usize = 0x20d;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapControlPointDirectionToVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flScale: usize = 0x1c4;
     pub const m_nControlPointNumber: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapControlPointOrientationToRotation {
     pub const m_nCP: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2723,7 +2477,6 @@ pub mod C_OP_RemapControlPointOrientationToRotation {
     pub const m_nComponent: usize = 0x1cc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapCrossProductOfTwoVectorsToVector {
     pub const m_InputVec1: usize = 0x1c0;
     pub const m_InputVec2: usize = 0x818;
@@ -2731,13 +2484,11 @@ pub mod C_OP_RemapCrossProductOfTwoVectorsToVector {
     pub const m_bNormalize: usize = 0xe74;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDensityGradientToVectorAttribute {
     pub const m_flRadiusScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDensityToVector {
     pub const m_flRadiusScale: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2749,7 +2500,6 @@ pub mod C_OP_RemapDensityToVector {
     pub const m_nVoxelGridResolution: usize = 0x1ec;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDirectionToCPToVector {
     pub const m_nCP: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2760,7 +2510,6 @@ pub mod C_OP_RemapDirectionToCPToVector {
     pub const m_nFieldStrength: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDistanceToLineSegmentBase {
     pub const m_nCP0: usize = 0x1c0;
     pub const m_nCP1: usize = 0x1c4;
@@ -2769,21 +2518,18 @@ pub mod C_OP_RemapDistanceToLineSegmentBase {
     pub const m_bInfiniteLine: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDistanceToLineSegmentToScalar {
     pub const m_nFieldOutput: usize = 0x1e0;
     pub const m_flMinOutputValue: usize = 0x1e4;
     pub const m_flMaxOutputValue: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDistanceToLineSegmentToVector {
     pub const m_nFieldOutput: usize = 0x1e0;
     pub const m_vMinOutputValue: usize = 0x1e4;
     pub const m_vMaxOutputValue: usize = 0x1f0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDotProductToCP {
     pub const m_nInputCP1: usize = 0x1d0;
     pub const m_nInputCP2: usize = 0x1d4;
@@ -2795,7 +2541,6 @@ pub mod C_OP_RemapDotProductToCP {
     pub const m_flOutputMax: usize = 0x5e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapDotProductToScalar {
     pub const m_nInputCP1: usize = 0x1c0;
     pub const m_nInputCP2: usize = 0x1c4;
@@ -2810,7 +2555,6 @@ pub mod C_OP_RemapDotProductToScalar {
     pub const m_bUseParticleNormal: usize = 0x1e5;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapExternalWindToCP {
     pub const m_nCP: usize = 0x1d0;
     pub const m_nCPOutput: usize = 0x1d4;
@@ -2819,7 +2563,6 @@ pub mod C_OP_RemapExternalWindToCP {
     pub const m_nOutVectorField: usize = 0x834;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapModelVolumetoCP {
     pub const m_nBBoxType: usize = 0x1d0;
     pub const m_nInControlPointNumber: usize = 0x1d4;
@@ -2832,7 +2575,6 @@ pub mod C_OP_RemapModelVolumetoCP {
     pub const m_flOutputMax: usize = 0x1f0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapNamedModelElementEndCap {
     pub const m_hModel: usize = 0x1c0;
     pub const m_inNames: usize = 0x1c8;
@@ -2843,7 +2585,6 @@ pub mod C_OP_RemapNamedModelElementEndCap {
     pub const m_nFieldOutput: usize = 0x218;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapNamedModelElementOnceTimed {
     pub const m_hModel: usize = 0x1c0;
     pub const m_inNames: usize = 0x1c8;
@@ -2856,7 +2597,6 @@ pub mod C_OP_RemapNamedModelElementOnceTimed {
     pub const m_flRemapTime: usize = 0x21c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapParticleCountOnScalarEndCap {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nInputMin: usize = 0x1c4;
@@ -2867,7 +2607,6 @@ pub mod C_OP_RemapParticleCountOnScalarEndCap {
     pub const m_nSetMethod: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapParticleCountToScalar {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nInputMin: usize = 0x1c8;
@@ -2878,7 +2617,6 @@ pub mod C_OP_RemapParticleCountToScalar {
     pub const m_nSetMethod: usize = 0x72c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapSDFDistanceToScalarAttribute {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_nVectorFieldInput: usize = 0x1c4;
@@ -2890,7 +2628,6 @@ pub mod C_OP_RemapSDFDistanceToScalarAttribute {
     pub const m_flValueAboveMax: usize = 0x880;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapSDFDistanceToVectorAttribute {
     pub const m_nVectorFieldOutput: usize = 0x1c0;
     pub const m_nVectorFieldInput: usize = 0x1c4;
@@ -2902,12 +2639,10 @@ pub mod C_OP_RemapSDFDistanceToVectorAttribute {
     pub const m_vValueAboveMax: usize = 0x49c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapSDFGradientToVectorAttribute {
     pub const m_nFieldOutput: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapScalar {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2918,7 +2653,6 @@ pub mod C_OP_RemapScalar {
     pub const m_bOldCode: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapScalarEndCap {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -2928,7 +2662,6 @@ pub mod C_OP_RemapScalarEndCap {
     pub const m_flOutputMax: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapScalarOnceTimed {
     pub const m_bProportional: usize = 0x1c0;
     pub const m_nFieldInput: usize = 0x1c4;
@@ -2940,7 +2673,6 @@ pub mod C_OP_RemapScalarOnceTimed {
     pub const m_flRemapTime: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapSpeed {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flInputMin: usize = 0x1c4;
@@ -2951,7 +2683,6 @@ pub mod C_OP_RemapSpeed {
     pub const m_bIgnoreDelta: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapSpeedtoCP {
     pub const m_nInControlPointNumber: usize = 0x1d0;
     pub const m_nOutControlPointNumber: usize = 0x1d4;
@@ -2963,7 +2694,6 @@ pub mod C_OP_RemapSpeedtoCP {
     pub const m_bUseDeltaV: usize = 0x1ec;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapTransformOrientationToRotations {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_vecRotation: usize = 0x228;
@@ -2971,7 +2701,6 @@ pub mod C_OP_RemapTransformOrientationToRotations {
     pub const m_bWriteNormal: usize = 0x235;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapTransformOrientationToYaw {
     pub const m_TransformInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x228;
@@ -2979,12 +2708,10 @@ pub mod C_OP_RemapTransformOrientationToYaw {
     pub const m_flSpinStrength: usize = 0x230;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapTransformToVelocity {
     pub const m_TransformInput: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapTransformVisibilityToScalar {
     pub const m_nSetMethod: usize = 0x1c0;
     pub const m_TransformInput: usize = 0x1c8;
@@ -2996,7 +2723,6 @@ pub mod C_OP_RemapTransformVisibilityToScalar {
     pub const m_flRadius: usize = 0x244;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapTransformVisibilityToVector {
     pub const m_nSetMethod: usize = 0x1c0;
     pub const m_TransformInput: usize = 0x1c8;
@@ -3008,28 +2734,24 @@ pub mod C_OP_RemapTransformVisibilityToVector {
     pub const m_flRadius: usize = 0x254;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapVectorComponentToScalar {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
     pub const m_nComponent: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapVectortoCP {
     pub const m_nOutControlPointNumber: usize = 0x1c0;
     pub const m_nFieldInput: usize = 0x1c4;
     pub const m_nParticleNumber: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapVelocityToVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_flScale: usize = 0x1c4;
     pub const m_bNormalize: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RemapVisibilityScalar {
     pub const m_nFieldInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -3040,7 +2762,6 @@ pub mod C_OP_RemapVisibilityScalar {
     pub const m_flRadiusScale: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderAsModels {
     pub const m_ModelList: usize = 0x200;
     pub const m_flModelScale: usize = 0x21c;
@@ -3052,7 +2773,6 @@ pub mod C_OP_RenderAsModels {
     pub const m_nSizeCullBloat: usize = 0x230;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderBlobs {
     pub const m_cubeWidth: usize = 0x200;
     pub const m_cutoffRadius: usize = 0x358;
@@ -3062,7 +2782,6 @@ pub mod C_OP_RenderBlobs {
     pub const m_hMaterial: usize = 0x640;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderCables {
     pub const m_flRadiusScale: usize = 0x200;
     pub const m_flAlphaScale: usize = 0x358;
@@ -3088,7 +2807,6 @@ pub mod C_OP_RenderCables {
     pub const m_MaterialVecVars: usize = 0x13e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderDeferredLight {
     pub const m_bUseAlphaTestWindow: usize = 0x200;
     pub const m_bUseTexture: usize = 0x201;
@@ -3108,14 +2826,12 @@ pub mod C_OP_RenderDeferredLight {
     pub const m_nHSVShiftControlPoint: usize = 0x890;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderFlattenGrass {
     pub const m_flFlattenStrength: usize = 0x200;
     pub const m_nStrengthFieldOverride: usize = 0x204;
     pub const m_flRadiusScale: usize = 0x208;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderGpuImplicit {
     pub const m_bUsePerParticleRadius: usize = 0x200;
     pub const m_fGridSize: usize = 0x208;
@@ -3125,7 +2841,6 @@ pub mod C_OP_RenderGpuImplicit {
     pub const m_hMaterial: usize = 0x618;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderLightBeam {
     pub const m_vColorBlend: usize = 0x200;
     pub const m_nColorBlendType: usize = 0x858;
@@ -3136,7 +2851,6 @@ pub mod C_OP_RenderLightBeam {
     pub const m_flThickness: usize = 0xc70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderLights {
     pub const m_flAnimationRate: usize = 0x210;
     pub const m_nAnimationType: usize = 0x214;
@@ -3147,7 +2861,6 @@ pub mod C_OP_RenderLights {
     pub const m_flEndFadeSize: usize = 0x228;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderMaterialProxy {
     pub const m_nMaterialControlPoint: usize = 0x200;
     pub const m_nProxyType: usize = 0x204;
@@ -3159,7 +2872,6 @@ pub mod C_OP_RenderMaterialProxy {
     pub const m_nColorBlendType: usize = 0xb30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderModels {
     pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x200;
     pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x201;
@@ -3212,7 +2924,6 @@ pub mod C_OP_RenderModels {
     pub const m_nColorBlendType: usize = 0x25b8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderOmni2Light {
     pub const m_nLightType: usize = 0x200;
     pub const m_vColorBlend: usize = 0x208;
@@ -3230,19 +2941,16 @@ pub mod C_OP_RenderOmni2Light {
     pub const m_bSphericalCookie: usize = 0x11e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderPoints {
     pub const m_hMaterial: usize = 0x200;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderPostProcessing {
     pub const m_flPostProcessStrength: usize = 0x200;
     pub const m_hPostTexture: usize = 0x358;
     pub const m_nPriority: usize = 0x360;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderProjected {
     pub const m_bProjectCharacter: usize = 0x200;
     pub const m_bProjectWorld: usize = 0x201;
@@ -3257,7 +2965,6 @@ pub mod C_OP_RenderProjected {
     pub const m_MaterialVars: usize = 0x220;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderRopes {
     pub const m_bEnableFadingAndClamping: usize = 0x2470;
     pub const m_flMinSize: usize = 0x2474;
@@ -3291,7 +2998,6 @@ pub mod C_OP_RenderRopes {
     pub const m_bGenerateNormals: usize = 0x28dd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderScreenShake {
     pub const m_flDurationScale: usize = 0x200;
     pub const m_flRadiusScale: usize = 0x204;
@@ -3304,13 +3010,11 @@ pub mod C_OP_RenderScreenShake {
     pub const m_nFilterCP: usize = 0x220;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderScreenVelocityRotate {
     pub const m_flRotateRateDegrees: usize = 0x200;
     pub const m_flForwardDegrees: usize = 0x204;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderSound {
     pub const m_flDurationScale: usize = 0x200;
     pub const m_flSndLvlScale: usize = 0x204;
@@ -3326,7 +3030,6 @@ pub mod C_OP_RenderSound {
     pub const m_bSuppressStopSoundEvent: usize = 0x328;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderSprites {
     pub const m_nSequenceOverride: usize = 0x2470;
     pub const m_nOrientationType: usize = 0x25c8;
@@ -3357,7 +3060,6 @@ pub mod C_OP_RenderSprites {
     pub const m_flShadowDensity: usize = 0x2b7c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderStandardLight {
     pub const m_nLightType: usize = 0x200;
     pub const m_vecColorScale: usize = 0x208;
@@ -3390,7 +3092,6 @@ pub mod C_OP_RenderStandardLight {
     pub const m_flLengthFadeInTime: usize = 0x1374;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderStatusEffect {
     pub const m_pTextureColorWarp: usize = 0x200;
     pub const m_pTextureDetail2: usize = 0x208;
@@ -3401,7 +3102,6 @@ pub mod C_OP_RenderStatusEffect {
     pub const m_pTextureEnvMap: usize = 0x230;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderStatusEffectCitadel {
     pub const m_pTextureColorWarp: usize = 0x200;
     pub const m_pTextureNormal: usize = 0x208;
@@ -3411,13 +3111,11 @@ pub mod C_OP_RenderStatusEffectCitadel {
     pub const m_pTextureDetail: usize = 0x228;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderText {
     pub const m_OutlineColor: usize = 0x200;
     pub const m_DefaultText: usize = 0x208;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderTonemapController {
     pub const m_flTonemapLevel: usize = 0x200;
     pub const m_flTonemapWeight: usize = 0x204;
@@ -3425,7 +3123,6 @@ pub mod C_OP_RenderTonemapController {
     pub const m_nTonemapWeightField: usize = 0x20c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderTrails {
     pub const m_bEnableFadingAndClamping: usize = 0x2740;
     pub const m_flStartFadeDot: usize = 0x2744;
@@ -3449,7 +3146,6 @@ pub mod C_OP_RenderTrails {
     pub const m_bFlipUVBasedOnPitchYaw: usize = 0x3984;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderTreeShake {
     pub const m_flPeakStrength: usize = 0x200;
     pub const m_nPeakStrengthFieldOverride: usize = 0x204;
@@ -3463,7 +3159,6 @@ pub mod C_OP_RenderTreeShake {
     pub const m_nControlPointForLinearDirection: usize = 0x224;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RenderVRHapticEvent {
     pub const m_nHand: usize = 0x200;
     pub const m_nOutputHandCP: usize = 0x204;
@@ -3471,7 +3166,6 @@ pub mod C_OP_RenderVRHapticEvent {
     pub const m_flAmplitude: usize = 0x210;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RepeatedTriggerChildGroup {
     pub const m_nChildGroupID: usize = 0x1d0;
     pub const m_flClusterRefireTime: usize = 0x1d8;
@@ -3480,7 +3174,6 @@ pub mod C_OP_RepeatedTriggerChildGroup {
     pub const m_bLimitChildCount: usize = 0x5e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RestartAfterDuration {
     pub const m_flDurationMin: usize = 0x1c0;
     pub const m_flDurationMax: usize = 0x1c4;
@@ -3490,7 +3183,6 @@ pub mod C_OP_RestartAfterDuration {
     pub const m_bOnlyChildren: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RopeSpringConstraint {
     pub const m_flRestLength: usize = 0x1c0;
     pub const m_flMinDistance: usize = 0x318;
@@ -3499,7 +3191,6 @@ pub mod C_OP_RopeSpringConstraint {
     pub const m_flInitialRestingLength: usize = 0x5d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RotateVector {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecRotAxisMin: usize = 0x1c4;
@@ -3510,7 +3201,6 @@ pub mod C_OP_RotateVector {
     pub const m_flScale: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_RtEnvCull {
     pub const m_vecTestDir: usize = 0x1c0;
     pub const m_vecTestNormal: usize = 0x1cc;
@@ -3521,26 +3211,22 @@ pub mod C_OP_RtEnvCull {
     pub const m_nComponent: usize = 0x260;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SDFConstraint {
     pub const m_flMinDist: usize = 0x1c0;
     pub const m_flMaxDist: usize = 0x318;
     pub const m_nMaxIterations: usize = 0x470;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SDFForce {
     pub const m_flForceScale: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SDFLighting {
     pub const m_vLightingDir: usize = 0x1c0;
     pub const m_vTint_0: usize = 0x1cc;
     pub const m_vTint_1: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SelectivelyEnableChildren {
     pub const m_nChildGroupID: usize = 0x1d0;
     pub const m_nFirstChild: usize = 0x328;
@@ -3549,7 +3235,6 @@ pub mod C_OP_SelectivelyEnableChildren {
     pub const m_bDestroyImmediately: usize = 0x5d9;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SequenceFromModel {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
@@ -3561,7 +3246,6 @@ pub mod C_OP_SequenceFromModel {
     pub const m_nSetMethod: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetAttributeToScalarExpression {
     pub const m_nExpression: usize = 0x1c0;
     pub const m_flInput1: usize = 0x1c8;
@@ -3570,13 +3254,11 @@ pub mod C_OP_SetAttributeToScalarExpression {
     pub const m_nSetMethod: usize = 0x47c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetCPOrientationToDirection {
     pub const m_nInputControlPoint: usize = 0x1c0;
     pub const m_nOutputControlPoint: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetCPOrientationToGroundNormal {
     pub const m_flInterpRate: usize = 0x1c0;
     pub const m_flMaxTraceLength: usize = 0x1c4;
@@ -3589,7 +3271,6 @@ pub mod C_OP_SetCPOrientationToGroundNormal {
     pub const m_bIncludeWater: usize = 0x268;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetCPOrientationToPointAtCP {
     pub const m_nInputCP: usize = 0x1d0;
     pub const m_nOutputCP: usize = 0x1d4;
@@ -3599,13 +3280,11 @@ pub mod C_OP_SetCPOrientationToPointAtCP {
     pub const m_bPointAway: usize = 0x332;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetCPtoVector {
     pub const m_nCPInput: usize = 0x1c0;
     pub const m_nFieldOutput: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetChildControlPoints {
     pub const m_nChildGroupID: usize = 0x1c0;
     pub const m_nFirstControlPoint: usize = 0x1c4;
@@ -3615,7 +3294,6 @@ pub mod C_OP_SetChildControlPoints {
     pub const m_bSetOrientation: usize = 0x329;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointFieldFromVectorExpression {
     pub const m_nExpression: usize = 0x1d0;
     pub const m_vecInput1: usize = 0x1d8;
@@ -3625,7 +3303,6 @@ pub mod C_OP_SetControlPointFieldFromVectorExpression {
     pub const m_nOutVectorField: usize = 0xfe4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointFieldToScalarExpression {
     pub const m_nExpression: usize = 0x1d0;
     pub const m_flInput1: usize = 0x1d8;
@@ -3635,20 +3312,17 @@ pub mod C_OP_SetControlPointFieldToScalarExpression {
     pub const m_nOutVectorField: usize = 0x5e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointFieldToWater {
     pub const m_nSourceCP: usize = 0x1d0;
     pub const m_nDestCP: usize = 0x1d4;
     pub const m_nCPField: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointFromObjectScale {
     pub const m_nCPInput: usize = 0x1d0;
     pub const m_nCPOutput: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointOrientation {
     pub const m_bUseWorldLocation: usize = 0x1d0;
     pub const m_bRandomize: usize = 0x1d2;
@@ -3660,13 +3334,11 @@ pub mod C_OP_SetControlPointOrientation {
     pub const m_flInterpolation: usize = 0x1f8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointOrientationToCPVelocity {
     pub const m_nCPInput: usize = 0x1d0;
     pub const m_nCPOutput: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointPositionToRandomActiveCP {
     pub const m_nCP1: usize = 0x1d0;
     pub const m_nHeadLocationMin: usize = 0x1d4;
@@ -3674,14 +3346,12 @@ pub mod C_OP_SetControlPointPositionToRandomActiveCP {
     pub const m_flResetRate: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointPositionToTimeOfDayValue {
     pub const m_nControlPointNumber: usize = 0x1d0;
     pub const m_pszTimeOfDayParameter: usize = 0x1d4;
     pub const m_vecDefaultValue: usize = 0x254;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointPositions {
     pub const m_bUseWorldLocation: usize = 0x1d0;
     pub const m_bOrient: usize = 0x1d1;
@@ -3697,7 +3367,6 @@ pub mod C_OP_SetControlPointPositions {
     pub const m_nHeadLocation: usize = 0x214;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointRotation {
     pub const m_vecRotAxis: usize = 0x1d0;
     pub const m_flRotRate: usize = 0x828;
@@ -3705,7 +3374,6 @@ pub mod C_OP_SetControlPointRotation {
     pub const m_nLocalCP: usize = 0x984;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToCPVelocity {
     pub const m_nCPInput: usize = 0x1d0;
     pub const m_nCPOutputVel: usize = 0x1d4;
@@ -3715,21 +3383,18 @@ pub mod C_OP_SetControlPointToCPVelocity {
     pub const m_vecComparisonVelocity: usize = 0x1e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToCenter {
     pub const m_nCP1: usize = 0x1d0;
     pub const m_vecCP1Pos: usize = 0x1d4;
     pub const m_nSetParent: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToHMD {
     pub const m_nCP1: usize = 0x1d0;
     pub const m_vecCP1Pos: usize = 0x1d4;
     pub const m_bOrientToHMD: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToHand {
     pub const m_nCP1: usize = 0x1d0;
     pub const m_nHand: usize = 0x1d4;
@@ -3737,7 +3402,6 @@ pub mod C_OP_SetControlPointToHand {
     pub const m_bOrientToHand: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToImpactPoint {
     pub const m_nCPOut: usize = 0x1d0;
     pub const m_nCPIn: usize = 0x1d4;
@@ -3753,14 +3417,12 @@ pub mod C_OP_SetControlPointToImpactPoint {
     pub const m_bIncludeWater: usize = 0x3d2;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToPlayer {
     pub const m_nCP1: usize = 0x1d0;
     pub const m_vecCP1Pos: usize = 0x1d4;
     pub const m_bOrientToEyes: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToVectorExpression {
     pub const m_nExpression: usize = 0x1d0;
     pub const m_nOutputCP: usize = 0x1d4;
@@ -3769,7 +3431,6 @@ pub mod C_OP_SetControlPointToVectorExpression {
     pub const m_bNormalizedOutput: usize = 0xe88;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointToWaterSurface {
     pub const m_nSourceCP: usize = 0x1d0;
     pub const m_nDestCP: usize = 0x1d4;
@@ -3780,7 +3441,6 @@ pub mod C_OP_SetControlPointToWaterSurface {
     pub const m_bAdaptiveThreshold: usize = 0x340;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointsToModelParticles {
     pub const m_HitboxSetName: usize = 0x1c0;
     pub const m_AttachmentName: usize = 0x240;
@@ -3791,7 +3451,6 @@ pub mod C_OP_SetControlPointsToModelParticles {
     pub const m_bAttachment: usize = 0x2cd;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetControlPointsToParticle {
     pub const m_nChildGroupID: usize = 0x1c0;
     pub const m_nFirstControlPoint: usize = 0x1c4;
@@ -3802,7 +3461,6 @@ pub mod C_OP_SetControlPointsToParticle {
     pub const m_nSetParent: usize = 0x1d8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetFloat {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x318;
@@ -3810,7 +3468,6 @@ pub mod C_OP_SetFloat {
     pub const m_Lerp: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetFloatAttributeToVectorExpression {
     pub const m_nExpression: usize = 0x1c0;
     pub const m_vInput1: usize = 0x1c8;
@@ -3820,7 +3477,6 @@ pub mod C_OP_SetFloatAttributeToVectorExpression {
     pub const m_nSetMethod: usize = 0xfd4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetFloatCollection {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x318;
@@ -3828,7 +3484,6 @@ pub mod C_OP_SetFloatCollection {
     pub const m_Lerp: usize = 0x320;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetFromCPSnapshot {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nAttributeToRead: usize = 0x1c4;
@@ -3843,7 +3498,6 @@ pub mod C_OP_SetFromCPSnapshot {
     pub const m_bSubSample: usize = 0x5e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetGravityToCP {
     pub const m_nCPInput: usize = 0x1d0;
     pub const m_nCPOutput: usize = 0x1d4;
@@ -3852,7 +3506,6 @@ pub mod C_OP_SetGravityToCP {
     pub const m_bSetZDown: usize = 0x331;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetParentControlPointsToChildCP {
     pub const m_nChildGroupID: usize = 0x1d0;
     pub const m_nChildControlPoint: usize = 0x1d4;
@@ -3861,7 +3514,6 @@ pub mod C_OP_SetParentControlPointsToChildCP {
     pub const m_bSetOrientation: usize = 0x1e0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetPerChildControlPoint {
     pub const m_nChildGroupID: usize = 0x1c0;
     pub const m_nFirstControlPoint: usize = 0x1c4;
@@ -3873,7 +3525,6 @@ pub mod C_OP_SetPerChildControlPoint {
     pub const m_bNumBasedOnParticleCount: usize = 0x488;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetPerChildControlPointFromAttribute {
     pub const m_nChildGroupID: usize = 0x1c0;
     pub const m_nFirstControlPoint: usize = 0x1c4;
@@ -3885,7 +3536,6 @@ pub mod C_OP_SetPerChildControlPointFromAttribute {
     pub const m_nCPField: usize = 0x1dc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetRandomControlPointPosition {
     pub const m_bUseWorldLocation: usize = 0x1d0;
     pub const m_bOrient: usize = 0x1d1;
@@ -3897,12 +3547,10 @@ pub mod C_OP_SetRandomControlPointPosition {
     pub const m_flInterpolation: usize = 0x350;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetSimulationRate {
     pub const m_flSimulationScale: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetSingleControlPointPosition {
     pub const m_bSetOnce: usize = 0x1d0;
     pub const m_nCP1: usize = 0x1d4;
@@ -3910,14 +3558,12 @@ pub mod C_OP_SetSingleControlPointPosition {
     pub const m_transformInput: usize = 0x830;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetToCP {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_vecOffset: usize = 0x1c4;
     pub const m_bOffsetLocal: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetVariable {
     pub const m_variableReference: usize = 0x1d0;
     pub const m_transformInput: usize = 0x210;
@@ -3927,7 +3573,6 @@ pub mod C_OP_SetVariable {
     pub const m_floatInput: usize = 0x8e8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetVec {
     pub const m_InputValue: usize = 0x1c0;
     pub const m_nOutputField: usize = 0x818;
@@ -3936,7 +3581,6 @@ pub mod C_OP_SetVec {
     pub const m_bNormalizedOutput: usize = 0x978;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SetVectorAttributeToVectorExpression {
     pub const m_nExpression: usize = 0x1c0;
     pub const m_vInput1: usize = 0x1c8;
@@ -3946,14 +3590,12 @@ pub mod C_OP_SetVectorAttributeToVectorExpression {
     pub const m_bNormalizedOutput: usize = 0xe80;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SnapshotRigidSkinToBones {
     pub const m_bTransformNormals: usize = 0x1c0;
     pub const m_bTransformRadii: usize = 0x1c1;
     pub const m_nControlPointNumber: usize = 0x1c4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SnapshotSkinToBones {
     pub const m_bTransformNormals: usize = 0x1c0;
     pub const m_bTransformRadii: usize = 0x1c1;
@@ -3964,7 +3606,6 @@ pub mod C_OP_SnapshotSkinToBones {
     pub const m_flPrevPosScale: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_SpringToVectorConstraint {
     pub const m_flRestLength: usize = 0x1c0;
     pub const m_flMinDistance: usize = 0x318;
@@ -3973,14 +3614,12 @@ pub mod C_OP_SpringToVectorConstraint {
     pub const m_vecAnchorVector: usize = 0x720;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_StopAfterCPDuration {
     pub const m_flDuration: usize = 0x1d0;
     pub const m_bDestroyImmediately: usize = 0x328;
     pub const m_bPlayEndCap: usize = 0x329;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_TeleportBeam {
     pub const m_nCPPosition: usize = 0x1c0;
     pub const m_nCPVelocity: usize = 0x1c4;
@@ -3995,7 +3634,6 @@ pub mod C_OP_TeleportBeam {
     pub const m_flAlpha: usize = 0x1f0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_TimeVaryingForce {
     pub const m_flStartLerpTime: usize = 0x1d0;
     pub const m_StartingForce: usize = 0x1d4;
@@ -4003,7 +3641,6 @@ pub mod C_OP_TimeVaryingForce {
     pub const m_EndingForce: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_TurbulenceForce {
     pub const m_flNoiseCoordScale0: usize = 0x1d0;
     pub const m_flNoiseCoordScale1: usize = 0x1d4;
@@ -4015,7 +3652,6 @@ pub mod C_OP_TurbulenceForce {
     pub const m_vecNoiseAmount3: usize = 0x204;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_TwistAroundAxis {
     pub const m_fForceAmount: usize = 0x1d0;
     pub const m_TwistAxis: usize = 0x1d4;
@@ -4023,7 +3659,6 @@ pub mod C_OP_TwistAroundAxis {
     pub const m_nControlPointNumber: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_UpdateLightSource {
     pub const m_vColorTint: usize = 0x1c0;
     pub const m_flBrightnessScale: usize = 0x1c4;
@@ -4033,7 +3668,6 @@ pub mod C_OP_UpdateLightSource {
     pub const m_flPositionDampingConstant: usize = 0x1d4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_VectorFieldSnapshot {
     pub const m_nControlPointNumber: usize = 0x1c0;
     pub const m_nAttributeToWrite: usize = 0x1c4;
@@ -4046,7 +3680,6 @@ pub mod C_OP_VectorFieldSnapshot {
     pub const m_flGridSpacing: usize = 0x988;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_VectorNoise {
     pub const m_nFieldOutput: usize = 0x1c0;
     pub const m_vecOutputMin: usize = 0x1c4;
@@ -4057,24 +3690,20 @@ pub mod C_OP_VectorNoise {
     pub const m_flNoiseAnimationTimeScale: usize = 0x1e4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_VelocityDecay {
     pub const m_flMinVelocity: usize = 0x1c0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_VelocityMatchingForce {
     pub const m_flDirScale: usize = 0x1c0;
     pub const m_flSpdScale: usize = 0x1c4;
     pub const m_nCPBroadcast: usize = 0x1c8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_WindForce {
     pub const m_vForce: usize = 0x1d0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod C_OP_WorldTraceConstraint {
     pub const m_nCP: usize = 0x1c0;
     pub const m_vecCpOffset: usize = 0x1c4;
@@ -4105,53 +3734,44 @@ pub mod C_OP_WorldTraceConstraint {
     pub const m_nEntityStickNormalField: usize = 0x944;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CollisionGroupContext_t {
     pub const m_nCollisionGroupNumber: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ControlPointReference_t {
     pub const m_controlPointNameString: usize = 0x0;
     pub const m_vOffsetFromControlPoint: usize = 0x4;
     pub const m_bOffsetInLocalSpace: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod FloatInputMaterialVariable_t {
     pub const m_strVariable: usize = 0x0;
     pub const m_flInput: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod MaterialVariable_t {
     pub const m_strVariable: usize = 0x0;
     pub const m_nVariableField: usize = 0x8;
     pub const m_flScale: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ModelReference_t {
     pub const m_model: usize = 0x0;
     pub const m_flRelativeProbabilityOfSpawn: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PARTICLE_EHANDLE__ {
     pub const unused: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PARTICLE_WORLD_HANDLE__ {
     pub const unused: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticleAttributeIndex_t {
     pub const m_Value: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticleChildrenInfo_t {
     pub const m_ChildRef: usize = 0x0;
     pub const m_flDelay: usize = 0x8;
@@ -4160,14 +3780,12 @@ pub mod ParticleChildrenInfo_t {
     pub const m_nDetailLevel: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticleControlPointConfiguration_t {
     pub const m_name: usize = 0x0;
     pub const m_drivers: usize = 0x8;
     pub const m_previewState: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticleControlPointDriver_t {
     pub const m_iControlPoint: usize = 0x0;
     pub const m_iAttachType: usize = 0x4;
@@ -4177,7 +3795,6 @@ pub mod ParticleControlPointDriver_t {
     pub const m_entityName: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticleNamedValueConfiguration_t {
     pub const m_ConfigName: usize = 0x0;
     pub const m_ConfigValue: usize = 0x8;
@@ -4187,7 +3804,6 @@ pub mod ParticleNamedValueConfiguration_t {
     pub const m_strAttachmentName: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticleNamedValueSource_t {
     pub const m_Name: usize = 0x0;
     pub const m_IsPublic: usize = 0x8;
@@ -4196,13 +3812,11 @@ pub mod ParticleNamedValueSource_t {
     pub const m_NamedConfigs: usize = 0x48;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticlePreviewBodyGroup_t {
     pub const m_bodyGroupName: usize = 0x0;
     pub const m_nValue: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ParticlePreviewState_t {
     pub const m_previewModel: usize = 0x0;
     pub const m_nModSpecificData: usize = 0x8;
@@ -4222,25 +3836,21 @@ pub mod ParticlePreviewState_t {
     pub const m_vecPreviewGravity: usize = 0x58;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PointDefinitionWithTimeValues_t {
     pub const m_flTimeDuration: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PointDefinition_t {
     pub const m_nControlPoint: usize = 0x0;
     pub const m_bLocalCoords: usize = 0x4;
     pub const m_vOffset: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod SequenceWeightedList_t {
     pub const m_nSequence: usize = 0x0;
     pub const m_flRelativeWeight: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod TextureControls_t {
     pub const m_flFinalTextureScaleU: usize = 0x0;
     pub const m_flFinalTextureScaleV: usize = 0x158;
@@ -4260,7 +3870,6 @@ pub mod TextureControls_t {
     pub const m_nPerParticleDistortion: usize = 0x984;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod TextureGroup_t {
     pub const m_bEnabled: usize = 0x0;
     pub const m_bReplaceTextureWithGradient: usize = 0x1;
@@ -4273,7 +3882,6 @@ pub mod TextureGroup_t {
     pub const m_TextureControls: usize = 0x190;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VecInputMaterialVariable_t {
     pub const m_strVariable: usize = 0x0;
     pub const m_vecInput: usize = 0x8;

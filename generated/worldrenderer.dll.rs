@@ -1,4 +1,5 @@
-#[allow(non_snake_case, non_upper_case_globals)]
+#![allow(non_snake_case, non_upper_case_globals)]
+
 pub mod AggregateLODSetup_t {
     pub const m_vLODOrigin: usize = 0x0;
     pub const m_fMaxObjectScale: usize = 0xc;
@@ -6,7 +7,6 @@ pub mod AggregateLODSetup_t {
     pub const m_fSwitchDistances: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod AggregateMeshInfo_t {
     pub const m_nVisClusterMemberOffset: usize = 0x0;
     pub const m_nVisClusterMemberCount: usize = 0x4;
@@ -19,7 +19,6 @@ pub mod AggregateMeshInfo_t {
     pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod AggregateSceneObject_t {
     pub const m_allFlags: usize = 0x0;
     pub const m_anyFlags: usize = 0x4;
@@ -31,7 +30,6 @@ pub mod AggregateSceneObject_t {
     pub const m_renderableModel: usize = 0x70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod BakedLightingInfo_t {
     pub const m_nLightmapVersionNumber: usize = 0x0;
     pub const m_nLightmapGameVersionNumber: usize = 0x4;
@@ -40,12 +38,10 @@ pub mod BakedLightingInfo_t {
     pub const m_lightMaps: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod BaseSceneObjectOverride_t {
     pub const m_nSceneObjectIndex: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CEntityIdentity {
     pub const m_nameStringableIndex: usize = 0x14;
     pub const m_name: usize = 0x18;
@@ -60,19 +56,16 @@ pub mod CEntityIdentity {
     pub const m_pNextByClass: usize = 0x70;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CEntityInstance {
     pub const m_iszPrivateVScripts: usize = 0x8;
     pub const m_pEntity: usize = 0x10;
     pub const m_CScriptComponent: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CScriptComponent {
     pub const m_scriptClassName: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CVoxelVisibility {
     pub const m_nBaseClusterCount: usize = 0x40;
     pub const m_nPVSBytesPerCluster: usize = 0x44;
@@ -89,7 +82,6 @@ pub mod CVoxelVisibility {
     pub const m_nVisBlocks: usize = 0x94;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ClutterSceneObject_t {
     pub const m_Bounds: usize = 0x0;
     pub const m_flags: usize = 0x18;
@@ -101,14 +93,12 @@ pub mod ClutterSceneObject_t {
     pub const m_renderableModel: usize = 0x98;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ClutterTile_t {
     pub const m_nFirstInstance: usize = 0x0;
     pub const m_nLastInstance: usize = 0x4;
     pub const m_BoundsWs: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod EntityIOConnectionData_t {
     pub const m_outputName: usize = 0x0;
     pub const m_targetType: usize = 0x8;
@@ -119,13 +109,11 @@ pub mod EntityIOConnectionData_t {
     pub const m_nTimesToFire: usize = 0x2c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod EntityKeyValueData_t {
     pub const m_connections: usize = 0x8;
     pub const m_keyValuesData: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod ExtraVertexStreamOverride_t {
     pub const m_nSubSceneObject: usize = 0x4;
     pub const m_nDrawCallIndex: usize = 0x8;
@@ -133,7 +121,6 @@ pub mod ExtraVertexStreamOverride_t {
     pub const m_extraBufferBinding: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod InfoOverlayData_t {
     pub const m_transform: usize = 0x0;
     pub const m_flWidth: usize = 0x30;
@@ -147,14 +134,12 @@ pub mod InfoOverlayData_t {
     pub const m_nSequenceOverride: usize = 0x6c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod MaterialOverride_t {
     pub const m_nSubSceneObject: usize = 0x4;
     pub const m_nDrawCallIndex: usize = 0x8;
     pub const m_pMaterial: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod NodeData_t {
     pub const m_nParent: usize = 0x0;
     pub const m_vOrigin: usize = 0x4;
@@ -165,7 +150,6 @@ pub mod NodeData_t {
     pub const m_worldNodePrefix: usize = 0x48;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod PermEntityLumpData_t {
     pub const m_name: usize = 0x8;
     pub const m_hammerUniqueId: usize = 0x10;
@@ -173,7 +157,6 @@ pub mod PermEntityLumpData_t {
     pub const m_entityKeyValues: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod SceneObject_t {
     pub const m_nObjectID: usize = 0x0;
     pub const m_vTransform: usize = 0x4;
@@ -192,13 +175,11 @@ pub mod SceneObject_t {
     pub const m_renderable: usize = 0x88;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VoxelVisBlockOffset_t {
     pub const m_nOffset: usize = 0x0;
     pub const m_nElementCount: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod WorldBuilderParams_t {
     pub const m_flMinDrawVolumeSize: usize = 0x0;
     pub const m_bBuildBakedLighting: usize = 0x4;
@@ -207,7 +188,6 @@ pub mod WorldBuilderParams_t {
     pub const m_nCompileFingerprint: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod WorldNodeOnDiskBufferData_t {
     pub const m_nElementCount: usize = 0x0;
     pub const m_nElementSizeInBytes: usize = 0x4;
@@ -215,7 +195,6 @@ pub mod WorldNodeOnDiskBufferData_t {
     pub const m_pData: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod WorldNode_t {
     pub const m_sceneObjects: usize = 0x0;
     pub const m_infoOverlays: usize = 0x18;
@@ -232,7 +211,6 @@ pub mod WorldNode_t {
     pub const m_nodeLightingInfo: usize = 0x110;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod World_t {
     pub const m_builderParams: usize = 0x0;
     pub const m_worldNodes: usize = 0x20;

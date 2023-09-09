@@ -97,6 +97,20 @@ std::optional<std::uint64_t> get_entity_list() noexcept {
     return process::resolve_rip_relative_address(address.value()).value_or(0);
 }
 
+std::optional<std::uint64_t> get_global_vars() noexcept {
+    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 89 0D ? ? ? ? 48 89 41");
+
+    if (!address.has_value())
+        return std::nullopt;
+
+    address = process::resolve_rip_relative_address(address.value());
+
+    if (!address.has_value())
+        return std::nullopt;
+
+    return address.value();
+}
+
 std::optional<std::uint64_t> get_local_player() noexcept {
     std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? F2 0F 11 44 24 ? F2 41 0F 10 00");
 
@@ -148,11 +162,13 @@ void fetch_offsets() noexcept {
     };
 
     const std::uint64_t entity_list_rva = get_client_rva(get_entity_list().value_or(0));
+    const std::uint64_t global_vars_rva = get_client_rva(get_global_vars().value_or(0));
     const std::uint64_t local_player_controller_rva = get_client_rva(get_local_player().value_or(0));
     const std::uint64_t view_angles_rva = get_client_rva(get_view_angles().value_or(0));
     const std::uint64_t view_matrix_rva = get_client_rva(get_view_matrix().value_or(0));
 
     spdlog::info("entity list: {:#x}", entity_list_rva);
+    spdlog::info("global vars: {:#x}", global_vars_rva);
     spdlog::info("local player controller: {:#x}", local_player_controller_rva);
     spdlog::info("view angles: {:#x}", view_angles_rva);
     spdlog::info("view matrix: {:#x}", view_matrix_rva);
@@ -160,6 +176,7 @@ void fetch_offsets() noexcept {
     const Entries entries = {
         { "client_dll", {
             { "entity_list", entity_list_rva },
+            { "global_vars", global_vars_rva },
             { "local_player_controller", local_player_controller_rva },
             { "view_angles", view_angles_rva },
             { "view_matrix", view_matrix_rva }

@@ -1,4 +1,5 @@
-#[allow(non_snake_case, non_upper_case_globals)]
+#![allow(non_snake_case, non_upper_case_globals)]
+
 pub mod CDSPMixgroupModifier {
     pub const m_mixgroup: usize = 0x0;
     pub const m_flModifier: usize = 0x8;
@@ -8,32 +9,27 @@ pub mod CDSPMixgroupModifier {
     pub const m_flListenerReverbModifierWhenSourceReverbIsActive: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CDSPPresetMixgroupModifierTable {
     pub const m_table: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CDspPresetModifierList {
     pub const m_dspName: usize = 0x0;
     pub const m_modifiers: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosGroupActionLimitSchema {
     pub const m_nMaxCount: usize = 0x18;
     pub const m_nStopType: usize = 0x1c;
     pub const m_nSortType: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosGroupActionSchema {
     pub const m_name: usize = 0x8;
     pub const m_actionType: usize = 0x10;
     pub const m_actionInstanceType: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosGroupActionSetSoundeventParameterSchema {
     pub const m_nMaxCount: usize = 0x18;
     pub const m_flMinValue: usize = 0x1c;
@@ -42,12 +38,10 @@ pub mod CSosGroupActionSetSoundeventParameterSchema {
     pub const m_nSortType: usize = 0x30;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosGroupActionTimeLimitSchema {
     pub const m_flMaxDuration: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosGroupBranchPattern {
     pub const m_bMatchEventName: usize = 0x8;
     pub const m_bMatchEventSubString: usize = 0x9;
@@ -55,7 +49,6 @@ pub mod CSosGroupBranchPattern {
     pub const m_bMatchOpvar: usize = 0xb;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosGroupMatchPattern {
     pub const m_matchSoundEventName: usize = 0x10;
     pub const m_matchSoundEventSubString: usize = 0x18;
@@ -63,12 +56,10 @@ pub mod CSosGroupMatchPattern {
     pub const m_flOpvar: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosSoundEventGroupListSchema {
     pub const m_groupList: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSosSoundEventGroupSchema {
     pub const m_name: usize = 0x0;
     pub const m_nType: usize = 0x8;
@@ -80,17 +71,14 @@ pub mod CSosSoundEventGroupSchema {
     pub const m_vActions: usize = 0xb0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod CSoundEventMetaData {
     pub const m_soundEventVMix: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod SelectedEditItemInfo_t {
     pub const m_EditItems: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod SosEditItemInfo_t {
     pub const itemType: usize = 0x0;
     pub const itemName: usize = 0x8;
@@ -99,7 +87,6 @@ pub mod SosEditItemInfo_t {
     pub const itemPos: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixAutoFilterDesc_t {
     pub const m_flEnvelopeAmount: usize = 0x0;
     pub const m_flAttackTimeMS: usize = 0x4;
@@ -111,7 +98,6 @@ pub mod VMixAutoFilterDesc_t {
     pub const m_nLFOShape: usize = 0x28;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixBoxverbDesc_t {
     pub const m_flSizeMax: usize = 0x0;
     pub const m_flSizeMin: usize = 0x4;
@@ -132,7 +118,6 @@ pub mod VMixBoxverbDesc_t {
     pub const m_flTaps: usize = 0x4c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixConvolutionDesc_t {
     pub const m_fldbGain: usize = 0x0;
     pub const m_flPreDelayMS: usize = 0x4;
@@ -144,7 +129,6 @@ pub mod VMixConvolutionDesc_t {
     pub const m_flHighCutoffFreq: usize = 0x1c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixDelayDesc_t {
     pub const m_feedbackFilter: usize = 0x0;
     pub const m_bEnableFilter: usize = 0x10;
@@ -155,7 +139,6 @@ pub mod VMixDelayDesc_t {
     pub const m_flWidth: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixDiffusorDesc_t {
     pub const m_flSize: usize = 0x0;
     pub const m_flComplexity: usize = 0x4;
@@ -163,7 +146,6 @@ pub mod VMixDiffusorDesc_t {
     pub const m_flOutputGain: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixDynamics3BandDesc_t {
     pub const m_fldbGainOutput: usize = 0x0;
     pub const m_flRMSTimeMS: usize = 0x4;
@@ -177,7 +159,6 @@ pub mod VMixDynamics3BandDesc_t {
     pub const m_bandDesc: usize = 0x24;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixDynamicsBand_t {
     pub const m_fldbGainInput: usize = 0x0;
     pub const m_fldbGainOutput: usize = 0x4;
@@ -191,7 +172,6 @@ pub mod VMixDynamicsBand_t {
     pub const m_bSolo: usize = 0x21;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixDynamicsCompressorDesc_t {
     pub const m_fldbOutputGain: usize = 0x0;
     pub const m_fldbCompressionThreshold: usize = 0x4;
@@ -204,7 +184,6 @@ pub mod VMixDynamicsCompressorDesc_t {
     pub const m_bPeakMode: usize = 0x20;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixDynamicsDesc_t {
     pub const m_fldbGain: usize = 0x0;
     pub const m_fldbNoiseGateThreshold: usize = 0x4;
@@ -220,24 +199,20 @@ pub mod VMixDynamicsDesc_t {
     pub const m_bPeakMode: usize = 0x2c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixEQ8Desc_t {
     pub const m_stages: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixEffectChainDesc_t {
     pub const m_flCrossfadeTime: usize = 0x0;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixEnvelopeDesc_t {
     pub const m_flAttackTimeMS: usize = 0x0;
     pub const m_flHoldTimeMS: usize = 0x4;
     pub const m_flReleaseTimeMS: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixFilterDesc_t {
     pub const m_nFilterType: usize = 0x0;
     pub const m_nFilterSlope: usize = 0x2;
@@ -247,7 +222,6 @@ pub mod VMixFilterDesc_t {
     pub const m_flQ: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixFreeverbDesc_t {
     pub const m_flRoomSize: usize = 0x0;
     pub const m_flDamp: usize = 0x4;
@@ -255,7 +229,6 @@ pub mod VMixFreeverbDesc_t {
     pub const m_flLateReflections: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixModDelayDesc_t {
     pub const m_feedbackFilter: usize = 0x0;
     pub const m_bPhaseInvert: usize = 0x10;
@@ -268,20 +241,17 @@ pub mod VMixModDelayDesc_t {
     pub const m_bApplyAntialiasing: usize = 0x2c;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixOscDesc_t {
     pub const oscType: usize = 0x0;
     pub const m_freq: usize = 0x4;
     pub const m_flPhase: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixPannerDesc_t {
     pub const m_type: usize = 0x0;
     pub const m_flStrength: usize = 0x4;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixPitchShiftDesc_t {
     pub const m_nGrainSampleCount: usize = 0x0;
     pub const m_flPitchShift: usize = 0x4;
@@ -289,7 +259,6 @@ pub mod VMixPitchShiftDesc_t {
     pub const m_nProcType: usize = 0xc;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixPlateverbDesc_t {
     pub const m_flPrefilter: usize = 0x0;
     pub const m_flInputDiffusion1: usize = 0x4;
@@ -300,7 +269,6 @@ pub mod VMixPlateverbDesc_t {
     pub const m_flFeedbackDiffusion2: usize = 0x18;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixShaperDesc_t {
     pub const m_nShape: usize = 0x0;
     pub const m_fldbDrive: usize = 0x4;
@@ -309,14 +277,12 @@ pub mod VMixShaperDesc_t {
     pub const m_nOversampleFactor: usize = 0x10;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixSubgraphSwitchDesc_t {
     pub const m_interpolationMode: usize = 0x0;
     pub const m_bOnlyTailsOnFadeOut: usize = 0x4;
     pub const m_flInterpolationTime: usize = 0x8;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixUtilityDesc_t {
     pub const m_nOp: usize = 0x0;
     pub const m_flInputPan: usize = 0x4;
@@ -326,7 +292,6 @@ pub mod VMixUtilityDesc_t {
     pub const m_flBassFreq: usize = 0x14;
 }
 
-#[allow(non_snake_case, non_upper_case_globals)]
 pub mod VMixVocoderDesc_t {
     pub const m_nBandCount: usize = 0x0;
     pub const m_flBandwidth: usize = 0x4;
