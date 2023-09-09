@@ -118,6 +118,90 @@ namespace process {
         return std::nullopt;
     }
 
+    std::optional<std::uintptr_t> get_export(const std::uintptr_t module_base, const std::string_view function_name) noexcept {
+        const auto buffer = std::make_unique<std::uint8_t[]>(0x1000);
+
+        if (!read_memory(module_base, buffer.get(), 0x1000))
+            return std::nullopt;
+
+        const auto dos_header = reinterpret_cast<PIMAGE_DOS_HEADER>(buffer.get());
+
+        if (dos_header->e_magic != IMAGE_DOS_SIGNATURE)
+            return std::nullopt;
+
+        const auto nt_headers = reinterpret_cast<PIMAGE_NT_HEADERS>(buffer.get() + dos_header->e_lfanew);
+
+        if (nt_headers->Signature != IMAGE_NT_SIGNATURE)
+            return std::nullopt;
+
+        const IMAGE_DATA_DIRECTORY export_data_directory = nt_headers->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT];
+
+        if (export_data_directory.VirtualAddress == 0 || export_data_directory.Size == 0)
+            return std::nullopt;
+
+        const auto export_directory_buffer = std::make_unique<std::uint8_t[]>(export_data_directory.Size);
+
+        if (!read_memory(module_base + export_data_directory.VirtualAddress, export_directory_buffer.get(), export_data_directory.Size))
+            return std::nullopt;
+
+        const auto export_directory = reinterpret_cast<PIMAGE_EXPORT_DIRECTORY>(export_directory_buffer.get());
+
+        const std::uintptr_t delta = reinterpret_cast<std::uintptr_t>(export_directory) - export_data_directory.VirtualAddress;
+
+        const auto name_table = reinterpret_cast<std::uint32_t*>(export_directory->AddressOfNames + delta);
+        const auto name_ordinal_table = reinterpret_cast<std::uint16_t*>(export_directory->AddressOfNameOrdinals + delta);
+        const auto function_table = reinterpret_cast<std::uint32_t*>(export_directory->AddressOfFunctions + delta);
+
+        for (std::size_t i = 0; i < export_directory->NumberOfNames; ++i) {
+            const std::string_view current_function_name = reinterpret_cast<const char*>(name_table[i] + delta);
+
+            if (current_function_name != function_name)
+                continue;
+
+            const std::uint16_t function_ordinal = name_ordinal_table[i];
+            const std::uintptr_t function_address = module_base + function_table[function_ordinal];
+
+            if (function_address >= module_base + export_data_directory.VirtualAddress &&
+                function_address <= module_base + export_data_directory.VirtualAddress + export_data_directory.Size
+            ) {
+                // TODO: Handle forwarded exports.
+
+                return std::nullopt;
+            }
+
+            return function_address;
+        }
+
+        return std::nullopt;
+    }
+
+    std::optional<std::uintptr_t> get_export(const std::string_view module_name, const std::string_view function_name) noexcept {
+        const std::optional<std::uintptr_t> module_base = get_module_base(module_name);
+
+        if (!module_base.has_value())
+            return std::nullopt;
+
+        return get_export(module_base.value(), function_name);
+    }
+
+    std::optional<std::vector<std::string>> get_loaded_modules() noexcept {
+        const base::SafeHandle snapshot(CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, process_id));
+
+        if (snapshot.get() == INVALID_HANDLE_VALUE)
+            return std::nullopt;
+
+        MODULEENTRY32 module_entry = {};
+
+        module_entry.dwSize = sizeof(MODULEENTRY32);
+
+        std::vector<std::string> loaded_modules;
+
+        for (Module32First(snapshot.get(), &module_entry); Module32Next(snapshot.get(), &module_entry);)
+            loaded_modules.emplace_back(module_entry.szModule);
+
+        return loaded_modules;
+    }
+
     std::optional<std::uintptr_t> get_module_base(const std::string_view module_name) noexcept {
         const base::SafeHandle snapshot(CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, process_id));
 

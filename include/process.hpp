@@ -3,11 +3,18 @@
 #include <cstdint>
 #include <optional>
 #include <string_view>
+#include <vector>
 
 namespace process {
     bool attach(std::string_view process_name);
 
     [[nodiscard]] std::optional<std::uintptr_t> find_pattern(std::string_view module_name, std::string_view pattern) noexcept;
+
+    [[nodiscard]] std::optional<std::uintptr_t> get_export(std::uintptr_t module_base, std::string_view function_name) noexcept;
+
+    [[nodiscard]] std::optional<std::uintptr_t> get_export(std::string_view module_name, std::string_view function_name) noexcept;
+
+    [[nodiscard]] std::optional<std::vector<std::string>> get_loaded_modules() noexcept;
 
     [[nodiscard]] std::optional<std::uintptr_t> get_module_base(std::string_view module_name) noexcept;
 

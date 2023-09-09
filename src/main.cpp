@@ -20,6 +20,12 @@ static const std::array<std::pair<std::string_view, std::unique_ptr<builder::IFi
     }
 };
 
+std::string sanitize_module_name(const std::string& name) {
+    static std::regex double_colon_pattern("\\.");
+
+    return std::regex_replace(name, double_colon_pattern, "_");
+}
+
 template <class IFileBuilder>
 void generate_file(const std::string_view file_name, const Entries& entries, IFileBuilder& builder) {
     const std::string output_file_path = std::format("generated/{}.{}", file_name, builder.get_extension());
@@ -32,18 +38,18 @@ void generate_file(const std::string_view file_name, const Entries& entries, IFi
         return;
     }
 
-    builder.write_top_level(output);
+    const auto sanitize_namespace_name = [](const std::string& namespace_name) -> std::string {
+        static std::regex double_colon_pattern("\\::");
 
-    const auto sanitize_namespace = [](const std::string& namespace_name) -> std::string {
-        static std::regex namespace_regex("\\::");
-
-        return std::regex_replace(namespace_name, namespace_regex, "_");
+        return std::regex_replace(namespace_name, double_colon_pattern, "_");
     };
+
+    builder.write_top_level(output);
 
     for (auto it = entries.begin(); it != entries.end(); ++it) {
         const auto& [namespace_name, variables] = *it;
 
-        const std::string sanitized_namespace = sanitize_namespace(namespace_name);
+        const std::string sanitized_namespace = sanitize_namespace_name(namespace_name);
 
         builder.write_namespace(output, sanitized_namespace);
 
@@ -148,7 +154,59 @@ std::optional<std::uint64_t> get_view_matrix() noexcept {
     return process::resolve_rip_relative_address(address.value()).value_or(0);
 }
 
-void fetch_offsets() noexcept {
+void dump_interfaces() noexcept {
+    const std::optional<std::vector<std::string>> loaded_modules = process::get_loaded_modules();
+
+    if (!loaded_modules.has_value()) {
+        spdlog::error("failed to get loaded modules.");
+
+        return;
+    }
+
+    spdlog::info("generating interface files...");
+
+    Entries entries;
+
+    for (const auto& module_name : loaded_modules.value()) {
+        const std::optional<std::uint64_t> module_base = process::get_module_base(module_name);
+
+        if (!module_base.has_value())
+            continue;
+
+        const std::optional<std::uint64_t> create_interface_address = process::get_export(module_base.value(), "CreateInterface");
+
+        if (!create_interface_address.has_value())
+            continue;
+
+        std::optional<std::uint64_t> interface_registry = process::resolve_rip_relative_address(create_interface_address.value());
+
+        if (!interface_registry.has_value())
+            continue;
+
+        interface_registry = process::read_memory<std::uint64_t>(interface_registry.value());
+
+        if (!interface_registry.has_value())
+            continue;
+
+        while (interface_registry.value() != 0) {
+            const auto interface_ptr = process::read_memory<std::uint64_t>(interface_registry.value());
+
+            const std::string interface_version_name = process::read_string(process::read_memory<std::uint64_t>(interface_registry.value() + 0x8), 64);
+
+            entries[sanitize_module_name(module_name)].emplace_back(interface_version_name, interface_ptr - module_base.value());
+
+            interface_registry = process::read_memory<std::uint64_t>(interface_registry.value() + 0x10);
+        }
+    }
+
+    for (const auto& [extension, builder] : builders) {
+        generate_file("interfaces", entries, *builder);
+
+        spdlog::info("  > generated {}.{}!", "interfaces", extension);
+    }
+}
+
+void dump_offsets() noexcept {
     const std::optional<std::uint64_t> client_base = process::get_module_base("client.dll");
 
     if (!client_base.has_value()) {
@@ -167,11 +225,12 @@ void fetch_offsets() noexcept {
     const std::uint64_t view_angles_rva = get_client_rva(get_view_angles().value_or(0));
     const std::uint64_t view_matrix_rva = get_client_rva(get_view_matrix().value_or(0));
 
-    spdlog::info("entity list: {:#x}", entity_list_rva);
-    spdlog::info("global vars: {:#x}", global_vars_rva);
-    spdlog::info("local player controller: {:#x}", local_player_controller_rva);
-    spdlog::info("view angles: {:#x}", view_angles_rva);
-    spdlog::info("view matrix: {:#x}", view_matrix_rva);
+    spdlog::info("found offsets!");
+    spdlog::info("  > entity list: {:#x}", entity_list_rva);
+    spdlog::info("  > global vars: {:#x}", global_vars_rva);
+    spdlog::info("  > local player controller: {:#x}", local_player_controller_rva);
+    spdlog::info("  > view angles: {:#x}", view_angles_rva);
+    spdlog::info("  > view matrix: {:#x}", view_matrix_rva);
 
     const Entries entries = {
         { "client_dll", {
@@ -217,7 +276,9 @@ int main() {
     for (const sdk::CSchemaSystemTypeScope* type_scope : schema_system->get_type_scopes())
         generate_files_for_type_scope(type_scope);
 
-    fetch_offsets();
+    dump_interfaces();
+
+    dump_offsets();
 
     spdlog::info("finished!");
 
