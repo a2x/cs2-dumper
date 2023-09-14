@@ -84,7 +84,7 @@ std::optional<std::uint64_t> get_global_vars() noexcept {
 }
 
 std::optional<std::uint64_t> get_local_player() noexcept {
-    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? F2 0F 11 44 24 ? F2 41 0F 10 00");
+    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 05 ? ? ? ? 48 85 C0 74 4F");
 
     if (!address.has_value())
         return std::nullopt;
@@ -94,7 +94,7 @@ std::optional<std::uint64_t> get_local_player() noexcept {
     if (!address.has_value())
         return std::nullopt;
 
-    return process::read_memory<std::uint64_t>(address.value()) + 0x50;
+    return address.value();
 }
 
 std::optional<std::uint64_t> get_view_angles() noexcept {
@@ -145,6 +145,8 @@ void dump_schema_classes() {
             if (declared_class == nullptr)
                 continue;
 
+            spdlog::info("[{}] @ {:#x}", declared_class->get_class_name(), reinterpret_cast<std::uint64_t>(declared_class));
+
             const sdk::CSchemaClassInfo* class_info = type_scope->find_declared_class(declared_class->get_class_name());
 
             if (class_info == nullptr)
@@ -153,6 +155,8 @@ void dump_schema_classes() {
             for (const sdk::SchemaClassFieldData_t* field : class_info->get_fields()) {
                 if (field == nullptr)
                     continue;
+
+                spdlog::info("  [{}] = {:#x}", field->get_name(), field->get_offset());
 
                 entries[declared_class->get_class_name()].emplace_back(field->get_name(), field->get_offset());
             }

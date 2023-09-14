@@ -2,7 +2,7 @@
     "client_dll": {
         "entity_list": 23287920,
         "global_vars": 22521528,
-        "local_player_controller": 24272480,
+        "local_player_controller": 23623088,
         "view_angles": 24664176,
         "view_matrix": 24275488
     }
