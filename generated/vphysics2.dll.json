@@ -98,12 +98,10 @@
         "nNode": 8
     },
     "FeBoxRigid_t": {
-        "flReserved": 56,
-        "flStickiness": 48,
         "nCollisionMask": 34,
-        "nFlags": 54,
+        "nFlags": 50,
         "nNode": 32,
-        "nVertexMapIndex": 52,
+        "nVertexMapIndex": 48,
         "tmFrame2": 0,
         "vSize": 36
     },
@@ -120,8 +118,7 @@
         "m_nVertexMapHash": 52
     },
     "FeCollisionPlane_t": {
-        "flStickiness": 20,
-        "flStrength": 24,
+        "flStrength": 20,
         "m_Plane": 4,
         "nChildNode": 2,
         "nCtrlParent": 0
@@ -287,11 +284,10 @@
         "nNode": 0
     },
     "FeSphereRigid_t": {
-        "flStickiness": 16,
-        "nCollisionMask": 22,
-        "nFlags": 26,
-        "nNode": 20,
-        "nVertexMapIndex": 24,
+        "nCollisionMask": 18,
+        "nFlags": 22,
+        "nNode": 16,
+        "nVertexMapIndex": 20,
         "vSphere": 0
     },
     "FeSpringIntegrator_t": {
@@ -308,11 +304,10 @@
         "nNode": 20
     },
     "FeTaperedCapsuleRigid_t": {
-        "flStickiness": 32,
-        "nCollisionMask": 38,
-        "nFlags": 42,
-        "nNode": 36,
-        "nVertexMapIndex": 40,
+        "nCollisionMask": 34,
+        "nFlags": 38,
+        "nNode": 32,
+        "nVertexMapIndex": 36,
         "vSphere": 0
     },
     "FeTreeChildren_t": {
@@ -576,7 +571,7 @@
         "m_Triangles": 72,
         "m_Vertices": 48,
         "m_Wings": 96,
-        "m_bHasOpenEdges": 156,
+        "m_nFlags": 156,
         "m_vMax": 12,
         "m_vMin": 0,
         "m_vOrthographicAreas": 144

@@ -423,8 +423,8 @@ namespace CAnimTagManagerUpdater {
 
 namespace CAnimUpdateNodeBase {
     constexpr std::ptrdiff_t m_nodePath = 0x18;
-    constexpr std::ptrdiff_t m_name = 0x48;
-    constexpr std::ptrdiff_t m_networkMode = 0x50;
+    constexpr std::ptrdiff_t m_networkMode = 0x48;
+    constexpr std::ptrdiff_t m_name = 0x50;
 }
 
 namespace CAnimUpdateNodeRef {

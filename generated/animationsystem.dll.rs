@@ -421,8 +421,8 @@ pub mod CAnimTagManagerUpdater {
 
 pub mod CAnimUpdateNodeBase {
     pub const m_nodePath: usize = 0x18;
-    pub const m_name: usize = 0x48;
-    pub const m_networkMode: usize = 0x50;
+    pub const m_networkMode: usize = 0x48;
+    pub const m_name: usize = 0x50;
 }
 
 pub mod CAnimUpdateNodeRef {

@@ -115,10 +115,8 @@ pub mod FeBoxRigid_t {
     pub const nNode: usize = 0x20;
     pub const nCollisionMask: usize = 0x22;
     pub const vSize: usize = 0x24;
-    pub const flStickiness: usize = 0x30;
-    pub const nVertexMapIndex: usize = 0x34;
-    pub const nFlags: usize = 0x36;
-    pub const flReserved: usize = 0x38;
+    pub const nVertexMapIndex: usize = 0x30;
+    pub const nFlags: usize = 0x32;
 }
 
 pub mod FeBuildBoxRigid_t {
@@ -140,8 +138,7 @@ pub mod FeCollisionPlane_t {
     pub const nCtrlParent: usize = 0x0;
     pub const nChildNode: usize = 0x2;
     pub const m_Plane: usize = 0x4;
-    pub const flStickiness: usize = 0x14;
-    pub const flStrength: usize = 0x18;
+    pub const flStrength: usize = 0x14;
 }
 
 pub mod FeCtrlOffset_t {
@@ -333,11 +330,10 @@ pub mod FeSourceEdge_t {
 
 pub mod FeSphereRigid_t {
     pub const vSphere: usize = 0x0;
-    pub const flStickiness: usize = 0x10;
-    pub const nNode: usize = 0x14;
-    pub const nCollisionMask: usize = 0x16;
-    pub const nVertexMapIndex: usize = 0x18;
-    pub const nFlags: usize = 0x1a;
+    pub const nNode: usize = 0x10;
+    pub const nCollisionMask: usize = 0x12;
+    pub const nVertexMapIndex: usize = 0x14;
+    pub const nFlags: usize = 0x16;
 }
 
 pub mod FeSpringIntegrator_t {
@@ -357,11 +353,10 @@ pub mod FeStiffHingeBuild_t {
 
 pub mod FeTaperedCapsuleRigid_t {
     pub const vSphere: usize = 0x0;
-    pub const flStickiness: usize = 0x20;
-    pub const nNode: usize = 0x24;
-    pub const nCollisionMask: usize = 0x26;
-    pub const nVertexMapIndex: usize = 0x28;
-    pub const nFlags: usize = 0x2a;
+    pub const nNode: usize = 0x20;
+    pub const nCollisionMask: usize = 0x22;
+    pub const nVertexMapIndex: usize = 0x24;
+    pub const nFlags: usize = 0x26;
 }
 
 pub mod FeTreeChildren_t {
@@ -648,7 +643,7 @@ pub mod RnMesh_t {
     pub const m_Wings: usize = 0x60;
     pub const m_Materials: usize = 0x78;
     pub const m_vOrthographicAreas: usize = 0x90;
-    pub const m_bHasOpenEdges: usize = 0x9c;
+    pub const m_nFlags: usize = 0x9c;
 }
 
 pub mod RnNode_t {

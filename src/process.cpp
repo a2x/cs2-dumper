@@ -119,17 +119,17 @@ namespace process {
     }
 
     std::optional<std::uintptr_t> get_export(const std::uintptr_t module_base, const std::string_view function_name) noexcept {
-        const auto buffer = std::make_unique<std::uint8_t[]>(0x1000);
+        const auto headers = std::make_unique<std::uint8_t[]>(0x1000);
 
-        if (!read_memory(module_base, buffer.get(), 0x1000))
+        if (!read_memory(module_base, headers.get(), 0x1000))
             return std::nullopt;
 
-        const auto dos_header = reinterpret_cast<PIMAGE_DOS_HEADER>(buffer.get());
+        const auto dos_header = reinterpret_cast<PIMAGE_DOS_HEADER>(headers.get());
 
         if (dos_header->e_magic != IMAGE_DOS_SIGNATURE)
             return std::nullopt;
 
-        const auto nt_headers = reinterpret_cast<PIMAGE_NT_HEADERS>(buffer.get() + dos_header->e_lfanew);
+        const auto nt_headers = reinterpret_cast<PIMAGE_NT_HEADERS>(headers.get() + dos_header->e_lfanew);
 
         if (nt_headers->Signature != IMAGE_NT_SIGNATURE)
             return std::nullopt;

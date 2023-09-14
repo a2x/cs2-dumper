@@ -117,10 +117,8 @@ namespace FeBoxRigid_t {
     constexpr std::ptrdiff_t nNode = 0x20;
     constexpr std::ptrdiff_t nCollisionMask = 0x22;
     constexpr std::ptrdiff_t vSize = 0x24;
-    constexpr std::ptrdiff_t flStickiness = 0x30;
-    constexpr std::ptrdiff_t nVertexMapIndex = 0x34;
-    constexpr std::ptrdiff_t nFlags = 0x36;
-    constexpr std::ptrdiff_t flReserved = 0x38;
+    constexpr std::ptrdiff_t nVertexMapIndex = 0x30;
+    constexpr std::ptrdiff_t nFlags = 0x32;
 }
 
 namespace FeBuildBoxRigid_t {
@@ -142,8 +140,7 @@ namespace FeCollisionPlane_t {
     constexpr std::ptrdiff_t nCtrlParent = 0x0;
     constexpr std::ptrdiff_t nChildNode = 0x2;
     constexpr std::ptrdiff_t m_Plane = 0x4;
-    constexpr std::ptrdiff_t flStickiness = 0x14;
-    constexpr std::ptrdiff_t flStrength = 0x18;
+    constexpr std::ptrdiff_t flStrength = 0x14;
 }
 
 namespace FeCtrlOffset_t {
@@ -335,11 +332,10 @@ namespace FeSourceEdge_t {
 
 namespace FeSphereRigid_t {
     constexpr std::ptrdiff_t vSphere = 0x0;
-    constexpr std::ptrdiff_t flStickiness = 0x10;
-    constexpr std::ptrdiff_t nNode = 0x14;
-    constexpr std::ptrdiff_t nCollisionMask = 0x16;
-    constexpr std::ptrdiff_t nVertexMapIndex = 0x18;
-    constexpr std::ptrdiff_t nFlags = 0x1a;
+    constexpr std::ptrdiff_t nNode = 0x10;
+    constexpr std::ptrdiff_t nCollisionMask = 0x12;
+    constexpr std::ptrdiff_t nVertexMapIndex = 0x14;
+    constexpr std::ptrdiff_t nFlags = 0x16;
 }
 
 namespace FeSpringIntegrator_t {
@@ -359,11 +355,10 @@ namespace FeStiffHingeBuild_t {
 
 namespace FeTaperedCapsuleRigid_t {
     constexpr std::ptrdiff_t vSphere = 0x0;
-    constexpr std::ptrdiff_t flStickiness = 0x20;
-    constexpr std::ptrdiff_t nNode = 0x24;
-    constexpr std::ptrdiff_t nCollisionMask = 0x26;
-    constexpr std::ptrdiff_t nVertexMapIndex = 0x28;
-    constexpr std::ptrdiff_t nFlags = 0x2a;
+    constexpr std::ptrdiff_t nNode = 0x20;
+    constexpr std::ptrdiff_t nCollisionMask = 0x22;
+    constexpr std::ptrdiff_t nVertexMapIndex = 0x24;
+    constexpr std::ptrdiff_t nFlags = 0x26;
 }
 
 namespace FeTreeChildren_t {
@@ -650,7 +645,7 @@ namespace RnMesh_t {
     constexpr std::ptrdiff_t m_Wings = 0x60;
     constexpr std::ptrdiff_t m_Materials = 0x78;
     constexpr std::ptrdiff_t m_vOrthographicAreas = 0x90;
-    constexpr std::ptrdiff_t m_bHasOpenEdges = 0x9c;
+    constexpr std::ptrdiff_t m_nFlags = 0x9c;
 }
 
 namespace RnNode_t {

@@ -113,10 +113,8 @@ public static class FeBoxRigid_t {
     public const ulong nNode = 0x20;
     public const ulong nCollisionMask = 0x22;
     public const ulong vSize = 0x24;
-    public const ulong flStickiness = 0x30;
-    public const ulong nVertexMapIndex = 0x34;
-    public const ulong nFlags = 0x36;
-    public const ulong flReserved = 0x38;
+    public const ulong nVertexMapIndex = 0x30;
+    public const ulong nFlags = 0x32;
 }
 
 public static class FeBuildBoxRigid_t {
@@ -138,8 +136,7 @@ public static class FeCollisionPlane_t {
     public const ulong nCtrlParent = 0x0;
     public const ulong nChildNode = 0x2;
     public const ulong m_Plane = 0x4;
-    public const ulong flStickiness = 0x14;
-    public const ulong flStrength = 0x18;
+    public const ulong flStrength = 0x14;
 }
 
 public static class FeCtrlOffset_t {
@@ -331,11 +328,10 @@ public static class FeSourceEdge_t {
 
 public static class FeSphereRigid_t {
     public const ulong vSphere = 0x0;
-    public const ulong flStickiness = 0x10;
-    public const ulong nNode = 0x14;
-    public const ulong nCollisionMask = 0x16;
-    public const ulong nVertexMapIndex = 0x18;
-    public const ulong nFlags = 0x1a;
+    public const ulong nNode = 0x10;
+    public const ulong nCollisionMask = 0x12;
+    public const ulong nVertexMapIndex = 0x14;
+    public const ulong nFlags = 0x16;
 }
 
 public static class FeSpringIntegrator_t {
@@ -355,11 +351,10 @@ public static class FeStiffHingeBuild_t {
 
 public static class FeTaperedCapsuleRigid_t {
     public const ulong vSphere = 0x0;
-    public const ulong flStickiness = 0x20;
-    public const ulong nNode = 0x24;
-    public const ulong nCollisionMask = 0x26;
-    public const ulong nVertexMapIndex = 0x28;
-    public const ulong nFlags = 0x2a;
+    public const ulong nNode = 0x20;
+    public const ulong nCollisionMask = 0x22;
+    public const ulong nVertexMapIndex = 0x24;
+    public const ulong nFlags = 0x26;
 }
 
 public static class FeTreeChildren_t {
@@ -646,7 +641,7 @@ public static class RnMesh_t {
     public const ulong m_Wings = 0x60;
     public const ulong m_Materials = 0x78;
     public const ulong m_vOrthographicAreas = 0x90;
-    public const ulong m_bHasOpenEdges = 0x9c;
+    public const ulong m_nFlags = 0x9c;
 }
 
 public static class RnNode_t {

@@ -359,8 +359,8 @@
         "m_tags": 24
     },
     "CAnimUpdateNodeBase": {
-        "m_name": 72,
-        "m_networkMode": 80,
+        "m_name": 80,
+        "m_networkMode": 72,
         "m_nodePath": 24
     },
     "CAnimUpdateNodeRef": {

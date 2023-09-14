@@ -60,40 +60,6 @@ void generate_file(const std::string_view file_name, const Entries& entries, IFi
     }
 }
 
-void generate_files_for_type_scope(const sdk::CSchemaSystemTypeScope* type_scope) {
-    if (type_scope == nullptr)
-        return;
-
-    const std::string module_name = type_scope->get_module_name();
-
-    spdlog::info("generating files for {}...", module_name);
-
-    Entries entries;
-
-    for (const sdk::CSchemaType_DeclaredClass* declared_class : type_scope->get_declared_classes()) {
-        if (declared_class == nullptr)
-            continue;
-
-        const sdk::CSchemaClassInfo* class_info = type_scope->find_declared_class(declared_class->get_class_name());
-
-        if (class_info == nullptr)
-            continue;
-
-        for (const sdk::SchemaClassFieldData_t* field : class_info->get_fields()) {
-            if (field == nullptr)
-                continue;
-
-            entries[declared_class->get_class_name()].emplace_back(field->get_name(), field->get_offset());
-        }
-    }
-
-    for (const auto& [extension, builder] : builders) {
-        generate_file(module_name, entries, *builder);
-
-        spdlog::info("  > generated {}.{}!", module_name, extension);
-    }
-}
-
 std::optional<std::uint64_t> get_entity_list() noexcept {
 	const std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB");
 
@@ -152,6 +118,52 @@ std::optional<std::uint64_t> get_view_matrix() noexcept {
         return std::nullopt;
 
     return process::resolve_rip_relative_address(address.value()).value_or(0);
+}
+
+void dump_schema_classes() {
+    const auto schema_system = sdk::CSchemaSystem::get();
+
+    if (schema_system == nullptr) {
+        spdlog::error("failed to get schema system.");
+
+        return;
+    }
+
+    spdlog::info("schema system: {:#x}", reinterpret_cast<std::uint64_t>(schema_system));
+
+    for (const sdk::CSchemaSystemTypeScope* type_scope : schema_system->get_type_scopes()) {
+        if (type_scope == nullptr)
+            continue;
+
+        const std::string module_name = type_scope->get_module_name();
+
+        spdlog::info("generating files for {}...", module_name);
+
+        Entries entries;
+
+        for (const sdk::CSchemaType_DeclaredClass* declared_class : type_scope->get_declared_classes()) {
+            if (declared_class == nullptr)
+                continue;
+
+            const sdk::CSchemaClassInfo* class_info = type_scope->find_declared_class(declared_class->get_class_name());
+
+            if (class_info == nullptr)
+                continue;
+
+            for (const sdk::SchemaClassFieldData_t* field : class_info->get_fields()) {
+                if (field == nullptr)
+                    continue;
+
+                entries[declared_class->get_class_name()].emplace_back(field->get_name(), field->get_offset());
+            }
+        }
+
+        for (const auto& [extension, builder] : builders) {
+            generate_file(module_name, entries, *builder);
+
+            spdlog::info("  > generated {}.{}!", module_name, extension);
+        }
+    }
 }
 
 void dump_interfaces() noexcept {
@@ -263,18 +275,7 @@ int main() {
 
     spdlog::info("attached to process!");
 
-    const auto schema_system = sdk::CSchemaSystem::get();
-
-    if (schema_system == nullptr) {
-        spdlog::error("failed to get schema system.");
-
-        return 1;
-    }
-
-    spdlog::info("schema system: {:#x}", reinterpret_cast<std::uint64_t>(schema_system));
-
-    for (const sdk::CSchemaSystemTypeScope* type_scope : schema_system->get_type_scopes())
-        generate_files_for_type_scope(type_scope);
+    dump_schema_classes();
 
     dump_interfaces();
 

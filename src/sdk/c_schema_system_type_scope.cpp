@@ -13,7 +13,7 @@ namespace sdk {
         const std::int32_t hash_transform4 = (hash_transform2 ^ (hash_transform2 >> 0x10)) ^ (static_cast<std::uint16_t>(hash_transform2 ^ (hash_part >> 0x10)) >> 0x8);
 
         const auto get_class_info = [&](const std::uint64_t address) -> CSchemaClassInfo* {
-            const std::uint64_t class_info_address = address + 0x558 + static_cast<std::uint64_t>(0x28) * static_cast<std::uint8_t>(hash_transform4);
+            const std::uint64_t class_info_address = address + 0x588 + static_cast<std::uint64_t>(0x28) * static_cast<std::uint8_t>(hash_transform4);
 
             const auto initial_address = process::read_memory<std::uint64_t>(class_info_address + 0x58);
 
@@ -69,7 +69,7 @@ namespace sdk {
     std::vector<CSchemaType_DeclaredClass*> CSchemaSystemTypeScope::get_declared_classes() const noexcept {
         std::vector<CSchemaType_DeclaredClass*> classes;
 
-        const std::uint64_t base = reinterpret_cast<std::uint64_t>(this) + 0x558;
+        const std::uint64_t base = reinterpret_cast<std::uint64_t>(this) + 0x588;
 
         const auto block_size = process::read_memory<std::uint32_t>(base + 0x4);
         const auto count = process::read_memory<std::uint32_t>(base + 0x10);

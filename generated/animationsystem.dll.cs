@@ -419,8 +419,8 @@ public static class CAnimTagManagerUpdater {
 
 public static class CAnimUpdateNodeBase {
     public const ulong m_nodePath = 0x18;
-    public const ulong m_name = 0x48;
-    public const ulong m_networkMode = 0x50;
+    public const ulong m_networkMode = 0x48;
+    public const ulong m_name = 0x50;
 }
 
 public static class CAnimUpdateNodeRef {
