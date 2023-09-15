@@ -1193,15 +1193,16 @@ pub mod C_BaseButton {
 }
 
 pub mod C_BaseCSGrenade {
-    pub const m_bRedraw: usize = 0x18f0;
-    pub const m_bIsHeldByPlayer: usize = 0x18f1;
-    pub const m_bPinPulled: usize = 0x18f2;
-    pub const m_bJumpThrow: usize = 0x18f3;
-    pub const m_eThrowStatus: usize = 0x18f4;
-    pub const m_fThrowTime: usize = 0x18f8;
-    pub const m_flThrowStrength: usize = 0x18fc;
-    pub const m_flThrowStrengthApproach: usize = 0x1900;
-    pub const m_fDropTime: usize = 0x1904;
+    pub const m_bClientPredictDelete: usize = 0x18d0;
+    pub const m_bRedraw: usize = 0x18f8;
+    pub const m_bIsHeldByPlayer: usize = 0x18f9;
+    pub const m_bPinPulled: usize = 0x18fa;
+    pub const m_bJumpThrow: usize = 0x18fb;
+    pub const m_eThrowStatus: usize = 0x18fc;
+    pub const m_fThrowTime: usize = 0x1900;
+    pub const m_flThrowStrength: usize = 0x1904;
+    pub const m_flThrowStrengthApproach: usize = 0x1908;
+    pub const m_fDropTime: usize = 0x190c;
 }
 
 pub mod C_BaseCSGrenadeProjectile {

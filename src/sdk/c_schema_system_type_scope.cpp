@@ -77,7 +77,7 @@ namespace sdk {
 
         std::uint32_t index = 0;
 
-        for (std::uint64_t element = unallocated_data; element; element = process::read_memory<std::uint64_t>(element)) {
+        for (std::uint64_t element = unallocated_data; element != 0; element = process::read_memory<std::uint64_t>(element)) {
             for (std::size_t i = 0; i < block_size && i != count; ++i) {
                 classes.push_back(reinterpret_cast<CSchemaType_DeclaredClass*>(process::read_memory<std::uint64_t>(element + 0x20 + (i * 0x18))));
 

@@ -1104,15 +1104,16 @@
         "m_usable": 3268
     },
     "C_BaseCSGrenade": {
-        "m_bIsHeldByPlayer": 6385,
-        "m_bJumpThrow": 6387,
-        "m_bPinPulled": 6386,
-        "m_bRedraw": 6384,
-        "m_eThrowStatus": 6388,
-        "m_fDropTime": 6404,
-        "m_fThrowTime": 6392,
-        "m_flThrowStrength": 6396,
-        "m_flThrowStrengthApproach": 6400
+        "m_bClientPredictDelete": 6352,
+        "m_bIsHeldByPlayer": 6393,
+        "m_bJumpThrow": 6395,
+        "m_bPinPulled": 6394,
+        "m_bRedraw": 6392,
+        "m_eThrowStatus": 6396,
+        "m_fDropTime": 6412,
+        "m_fThrowTime": 6400,
+        "m_flThrowStrength": 6404,
+        "m_flThrowStrengthApproach": 6408
     },
     "C_BaseCSGrenadeProjectile": {
         "flNextTrailLineTime": 4240,

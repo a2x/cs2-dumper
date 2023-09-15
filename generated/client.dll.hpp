@@ -1195,15 +1195,16 @@ namespace C_BaseButton {
 }
 
 namespace C_BaseCSGrenade {
-    constexpr std::ptrdiff_t m_bRedraw = 0x18f0;
-    constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x18f1;
-    constexpr std::ptrdiff_t m_bPinPulled = 0x18f2;
-    constexpr std::ptrdiff_t m_bJumpThrow = 0x18f3;
-    constexpr std::ptrdiff_t m_eThrowStatus = 0x18f4;
-    constexpr std::ptrdiff_t m_fThrowTime = 0x18f8;
-    constexpr std::ptrdiff_t m_flThrowStrength = 0x18fc;
-    constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0x1900;
-    constexpr std::ptrdiff_t m_fDropTime = 0x1904;
+    constexpr std::ptrdiff_t m_bClientPredictDelete = 0x18d0;
+    constexpr std::ptrdiff_t m_bRedraw = 0x18f8;
+    constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x18f9;
+    constexpr std::ptrdiff_t m_bPinPulled = 0x18fa;
+    constexpr std::ptrdiff_t m_bJumpThrow = 0x18fb;
+    constexpr std::ptrdiff_t m_eThrowStatus = 0x18fc;
+    constexpr std::ptrdiff_t m_fThrowTime = 0x1900;
+    constexpr std::ptrdiff_t m_flThrowStrength = 0x1904;
+    constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0x1908;
+    constexpr std::ptrdiff_t m_fDropTime = 0x190c;
 }
 
 namespace C_BaseCSGrenadeProjectile {

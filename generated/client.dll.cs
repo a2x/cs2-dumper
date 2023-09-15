@@ -1191,15 +1191,16 @@ public static class C_BaseButton {
 }
 
 public static class C_BaseCSGrenade {
-    public const ulong m_bRedraw = 0x18f0;
-    public const ulong m_bIsHeldByPlayer = 0x18f1;
-    public const ulong m_bPinPulled = 0x18f2;
-    public const ulong m_bJumpThrow = 0x18f3;
-    public const ulong m_eThrowStatus = 0x18f4;
-    public const ulong m_fThrowTime = 0x18f8;
-    public const ulong m_flThrowStrength = 0x18fc;
-    public const ulong m_flThrowStrengthApproach = 0x1900;
-    public const ulong m_fDropTime = 0x1904;
+    public const ulong m_bClientPredictDelete = 0x18d0;
+    public const ulong m_bRedraw = 0x18f8;
+    public const ulong m_bIsHeldByPlayer = 0x18f9;
+    public const ulong m_bPinPulled = 0x18fa;
+    public const ulong m_bJumpThrow = 0x18fb;
+    public const ulong m_eThrowStatus = 0x18fc;
+    public const ulong m_fThrowTime = 0x1900;
+    public const ulong m_flThrowStrength = 0x1904;
+    public const ulong m_flThrowStrengthApproach = 0x1908;
+    public const ulong m_fDropTime = 0x190c;
 }
 
 public static class C_BaseCSGrenadeProjectile {
