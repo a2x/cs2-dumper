@@ -1,15 +1,22 @@
 #include "builder/builder.hpp"
+#include "process.hpp"
 #include "sdk/sdk.hpp"
-
-#include <nlohmann/json.hpp>
+#include "utility/string.hpp"
 
 #include <spdlog/spdlog.h>
 
-#include <filesystem>
-#include <fstream>
 #include <regex>
 
-using Entries = std::map<std::string, std::vector<std::pair<std::string, std::uint64_t>>>;
+using Entries = std::map<std::string, std::vector<std::pair<std::string, std::uint64_t>>, std::less<>>;
+
+struct Signature {
+    std::string name;
+    std::string module;
+    std::string pattern;
+    bool relative;
+    std::uint32_t levels;
+    std::ptrdiff_t offset;
+};
 
 static const std::array<std::pair<std::string_view, std::unique_ptr<builder::IFileBuilder>>, 4> builders = {
     {
@@ -28,264 +35,199 @@ std::string sanitize_module_name(const std::string& name) {
 
 template <class IFileBuilder>
 void generate_file(const std::string_view file_name, const Entries& entries, IFileBuilder& builder) {
-    const std::string output_file_path = std::format("generated/{}.{}", file_name, builder.get_extension());
+    const std::string output_file_path = std::format("generated/{}.{}", file_name, builder.extension());
 
-    std::ofstream output(output_file_path);
+    std::ofstream file(output_file_path);
 
-    if (!output.good()) {
-        spdlog::error("failed to open {}.", file_name);
+    if (!file.good()) {
+        spdlog::error("Failed to open {}.", file_name);
 
         return;
     }
 
-    const auto sanitize_namespace_name = [](const std::string& namespace_name) -> std::string {
+    const auto sanitize_namespace_name = [](const std::string& namespace_name) {
         static std::regex double_colon_pattern("\\::");
 
         return std::regex_replace(namespace_name, double_colon_pattern, "_");
     };
 
-    builder.write_top_level(output);
+    builder.write_top_level(file);
 
     for (auto it = entries.begin(); it != entries.end(); ++it) {
         const auto& [namespace_name, variables] = *it;
 
         const std::string sanitized_namespace = sanitize_namespace_name(namespace_name);
 
-        builder.write_namespace(output, sanitized_namespace);
+        builder.write_namespace(file, sanitized_namespace);
 
         for (const auto& [variable_name, variable_value] : variables)
-            builder.write_variable(output, variable_name, variable_value);
+            builder.write_variable(file, variable_name, variable_value);
 
-        builder.write_closure(output, it == std::prev(entries.end()));
+        builder.write_closure(file, it == std::prev(entries.end()));
     }
 }
 
-std::optional<std::uint64_t> get_entity_list() noexcept {
-	const std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB");
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    return process::resolve_rip_relative_address(address.value()).value_or(0);
-}
-
-std::optional<std::uint64_t> get_global_vars() noexcept {
-    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 89 0D ? ? ? ? 48 89 41");
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    address = process::resolve_rip_relative_address(address.value());
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    return address.value();
-}
-
-std::optional<std::uint64_t> get_local_player() noexcept {
-    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 05 ? ? ? ? 48 85 C0 74 4F");
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    address = process::resolve_rip_relative_address(address.value());
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    return address.value();
-}
-
-std::optional<std::uint64_t> get_view_angles() noexcept {
-    std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30");
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    address = process::resolve_rip_relative_address(address.value());
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    return process::read_memory<std::uint64_t>(address.value()) + 0x4510;
-}
-
-std::optional<std::uint64_t> get_view_matrix() noexcept {
-	const std::optional<std::uint64_t> address = process::find_pattern("client.dll", "48 8D 0D ? ? ? ? 48 C1 E0 06");
-
-    if (!address.has_value())
-        return std::nullopt;
-
-    return process::resolve_rip_relative_address(address.value()).value_or(0);
-}
-
-void dump_schema_classes() {
-    const auto schema_system = sdk::CSchemaSystem::get();
-
-    if (schema_system == nullptr) {
-        spdlog::error("failed to get schema system.");
-
-        return;
-    }
-
-    spdlog::info("schema system: {:#x}", reinterpret_cast<std::uint64_t>(schema_system));
-
-    for (const sdk::CSchemaSystemTypeScope* type_scope : schema_system->get_type_scopes()) {
-        if (type_scope == nullptr)
-            continue;
-
-        const std::string module_name = type_scope->get_module_name();
-
-        spdlog::info("generating files for {}...", module_name);
-
-        Entries entries;
-
-        for (const sdk::CSchemaType_DeclaredClass* declared_class : type_scope->get_declared_classes()) {
-            if (declared_class == nullptr)
-                continue;
-
-            spdlog::info("[{}] @ {:#x}", declared_class->get_class_name(), reinterpret_cast<std::uint64_t>(declared_class));
-
-            const sdk::CSchemaClassInfo* class_info = type_scope->find_declared_class(declared_class->get_class_name());
-
-            if (class_info == nullptr)
-                continue;
-
-            for (const sdk::SchemaClassFieldData_t* field : class_info->get_fields()) {
-                if (field == nullptr)
-                    continue;
-
-                spdlog::info("  [{}] = {:#x}", field->get_name(), field->get_offset());
-
-                entries[declared_class->get_class_name()].emplace_back(field->get_name(), field->get_offset());
-            }
-        }
-
-        for (const auto& [extension, builder] : builders) {
-            generate_file(module_name, entries, *builder);
-
-            spdlog::info("  > generated {}.{}!", module_name, extension);
-        }
-    }
-}
-
-void dump_interfaces() noexcept {
-    const std::optional<std::vector<std::string>> loaded_modules = process::get_loaded_modules();
+void dump_interfaces() {
+    const auto loaded_modules = process::loaded_modules();
 
     if (!loaded_modules.has_value()) {
-        spdlog::error("failed to get loaded modules.");
+        spdlog::critical("Failed to get loaded modules.");
 
         return;
     }
 
-    spdlog::info("generating interface files...");
+    spdlog::info("Generating interface files...");
 
     Entries entries;
 
     for (const auto& module_name : loaded_modules.value()) {
-        const std::optional<std::uint64_t> module_base = process::get_module_base(module_name);
+        const auto module_base = process::get_module_base_by_name(module_name);
 
         if (!module_base.has_value())
             continue;
 
-        const std::optional<std::uint64_t> create_interface_address = process::get_export(module_base.value(), "CreateInterface");
+        const auto create_interface_address = process::get_module_export_by_name(module_base.value(), "CreateInterface");
 
         if (!create_interface_address.has_value())
             continue;
 
-        std::optional<std::uint64_t> interface_registry = process::resolve_rip_relative_address(create_interface_address.value());
+        auto interface_registry = utility::Address(create_interface_address.value()).rip().get();
 
-        if (!interface_registry.has_value())
+        if (!interface_registry.is_valid())
             continue;
 
-        interface_registry = process::read_memory<std::uint64_t>(interface_registry.value());
+        while (interface_registry.is_valid()) {
+            const std::uint64_t interface_ptr = interface_registry.get().address();
 
-        if (!interface_registry.has_value())
-            continue;
-
-        while (interface_registry.value() != 0) {
-            const auto interface_ptr = process::read_memory<std::uint64_t>(interface_registry.value());
-
-            const std::string interface_version_name = process::read_string(process::read_memory<std::uint64_t>(interface_registry.value() + 0x8), 64);
+            const std::string interface_version_name = process::read_string(interface_registry.add(0x8).get().address(), 64);
 
             entries[sanitize_module_name(module_name)].emplace_back(interface_version_name, interface_ptr - module_base.value());
 
-            interface_registry = process::read_memory<std::uint64_t>(interface_registry.value() + 0x10);
+            interface_registry = interface_registry.add(0x10).get();
         }
     }
 
     for (const auto& [extension, builder] : builders) {
         generate_file("interfaces", entries, *builder);
 
-        spdlog::info("  > generated {}.{}!", "interfaces", extension);
+        spdlog::info("  > Generated {}.{}", "interfaces", extension);
     }
 }
 
-void dump_offsets() noexcept {
-    const std::optional<std::uint64_t> client_base = process::get_module_base("client.dll");
+void dump_offsets() {
+    std::ifstream file("config.json");
 
-    if (!client_base.has_value()) {
-        spdlog::error("failed to get client.dll base.");
+    if (!file.good()) {
+        spdlog::critical("Failed to open config.json.");
 
         return;
     }
 
-    const auto get_client_rva = [&client_base](const std::uint64_t address) -> std::uint64_t {
-        return address - client_base.value();
-    };
+    try {
+        const auto json = nlohmann::json::parse(file);
 
-    const std::uint64_t entity_list_rva = get_client_rva(get_entity_list().value_or(0));
-    const std::uint64_t global_vars_rva = get_client_rva(get_global_vars().value_or(0));
-    const std::uint64_t local_player_controller_rva = get_client_rva(get_local_player().value_or(0));
-    const std::uint64_t view_angles_rva = get_client_rva(get_view_angles().value_or(0));
-    const std::uint64_t view_matrix_rva = get_client_rva(get_view_matrix().value_or(0));
+        Entries entries;
 
-    spdlog::info("found offsets!");
-    spdlog::info("  > entity list: {:#x}", entity_list_rva);
-    spdlog::info("  > global vars: {:#x}", global_vars_rva);
-    spdlog::info("  > local player controller: {:#x}", local_player_controller_rva);
-    spdlog::info("  > view angles: {:#x}", view_angles_rva);
-    spdlog::info("  > view matrix: {:#x}", view_matrix_rva);
+        for (const auto& element : json["signatures"]) {
+            const Signature signature = {
+                .name = element["name"],
+                .module = element["module"],
+                .pattern = element["pattern"],
+                .relative = element["relative"],
+                .levels = element["levels"],
+                .offset = element["offset"]
+            };
 
-    const Entries entries = {
-        { "client_dll", {
-            { "entity_list", entity_list_rva },
-            { "global_vars", global_vars_rva },
-            { "local_player_controller", local_player_controller_rva },
-            { "view_angles", view_angles_rva },
-            { "view_matrix", view_matrix_rva }
-        } }
-    };
+            const auto module_base = process::get_module_base_by_name(signature.module);
 
-    spdlog::info("generating offset files...");
+            if (!module_base.has_value())
+                continue;
 
-    for (const auto& [extension, builder] : builders) {
-        generate_file("offsets", entries, *builder);
+            auto address = process::find_pattern(signature.module, signature.pattern);
 
-        spdlog::info("  > generated {}.{}!", "offsets", extension);
+            if (!address.has_value())
+                continue;
+
+            if (signature.relative)
+                address = address->rip();
+
+            if (signature.levels > 0)
+                address = address->get(signature.levels);
+
+            address = address->add(signature.offset);
+
+            spdlog::info("Found '{}' @ {:#x} (RVA: {:#x})", signature.name, address->address(), address->address() - module_base.value());
+
+            entries[sanitize_module_name(signature.module)].emplace_back(signature.name, address->address() - module_base.value());
+        }
+
+        spdlog::info("Generating offset files...");
+
+        for (const auto& [extension, builder] : builders) {
+            generate_file("offsets", entries, *builder);
+
+            spdlog::info("  > Generated file: {}.{}", "offsets", extension);
+        }
+    } catch (const nlohmann::json::parse_error& ex) {
+        spdlog::critical("Failed to parse config.json: {}", ex.what());
+    }
+}
+
+void dump_schemas() {
+    const auto schema_system = sdk::SchemaSystem::get();
+
+    if (schema_system == nullptr) {
+        spdlog::critical("Failed to get schema system.");
+
+        return;
+    }
+
+    spdlog::info("Schema system: {:#x}", reinterpret_cast<std::uint64_t>(schema_system));
+
+    for (const auto& type_scope : schema_system->type_scopes()) {
+        const std::string module_name = type_scope->module_name();
+
+        spdlog::info("Generating files for {}...", module_name);
+
+        Entries entries;
+
+        type_scope->for_each_class([&entries](const std::pair<std::string, sdk::SchemaClassInfo*>& pair) {
+            spdlog::info("  [{}] @ {:#x}", pair.first, reinterpret_cast<std::uint64_t>(pair.second));
+
+            pair.second->for_each_field([&entries, &pair](const sdk::SchemaClassFieldData* field) {
+                spdlog::info("    [{}] = {:#x}", field->name(), field->offset());
+
+                entries[pair.first].emplace_back(field->name(), field->offset());
+            });
+        });
+
+        for (const auto& [extension, builder] : builders) {
+            generate_file(module_name, entries, *builder);
+
+            spdlog::info("  > Generated file: {}.{}", module_name, extension);
+        }
     }
 }
 
 int main() {
+    const auto start = std::chrono::high_resolution_clock::now();
+
     if (!std::filesystem::exists("generated"))
         std::filesystem::create_directory("generated");
 
     if (!process::attach("cs2.exe")) {
-        spdlog::error("failed to attach to process.");
+        spdlog::critical("Failed to attach to cs2.exe.");
 
         return 1;
     }
-
-    spdlog::info("attached to process!");
-
-    dump_schema_classes();
 
     dump_interfaces();
 
     dump_offsets();
 
-    spdlog::info("finished!");
+    dump_schemas();
+
+    spdlog::info("Done! Took {}ms.", std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count());
 
     return 0;
 }

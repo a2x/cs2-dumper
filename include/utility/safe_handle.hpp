@@ -6,7 +6,7 @@
 
 #include <handleapi.h>
 
-namespace base {
+namespace utility {
     namespace detail {
         struct HandleDisposer {
             using pointer = HANDLE;

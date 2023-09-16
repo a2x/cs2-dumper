@@ -310,6 +310,12 @@
         "nVertexMapIndex": 36,
         "vSphere": 0
     },
+    "FeTaperedCapsuleStretch_t": {
+        "flRadius": 8,
+        "nCollisionMask": 4,
+        "nDummy": 6,
+        "nNode": 0
+    },
     "FeTreeChildren_t": {
         "nChild": 0
     },

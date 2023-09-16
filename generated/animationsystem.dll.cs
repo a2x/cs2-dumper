@@ -596,6 +596,14 @@ public static class CBoneConstraintPoseSpaceBone_Input_t {
     public const ulong m_outputTransformList = 0x10;
 }
 
+public static class CBoneConstraintPoseSpaceMorph {
+    public const ulong m_sBoneName = 0x28;
+    public const ulong m_sAttachmentName = 0x30;
+    public const ulong m_outputMorph = 0x38;
+    public const ulong m_inputList = 0x50;
+    public const ulong m_bClamp = 0x68;
+}
+
 public static class CBoneConstraintPoseSpaceMorph_Input_t {
     public const ulong m_inputValue = 0x0;
     public const ulong m_outputWeightList = 0x10;

@@ -2438,6 +2438,17 @@
         "m_bState": 3280,
         "m_nAmbientEffect": 3264
     },
+    "C_FuncLadder": {
+        "m_Dismounts": 3280,
+        "m_bDisabled": 3344,
+        "m_bFakeLadder": 3345,
+        "m_bHasSlack": 3346,
+        "m_flAutoRideSpeed": 3340,
+        "m_vecLadderDir": 3264,
+        "m_vecLocalTop": 3304,
+        "m_vecPlayerMountPositionBottom": 3328,
+        "m_vecPlayerMountPositionTop": 3316
+    },
     "C_FuncMonitor": {
         "m_bDraw3DSkybox": 3293,
         "m_bEnabled": 3292,

@@ -1,7 +1,10 @@
 .idea/
 .vs/
+CMakeLists.txt
+CMakeSettings.json
 build/
 cmake-build-debug/
 cmake-build-release/
-CMakeSettings.json
+cmake-build/
+cmkr.cmake
 out/

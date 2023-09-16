@@ -598,6 +598,14 @@ pub mod CBoneConstraintPoseSpaceBone_Input_t {
     pub const m_outputTransformList: usize = 0x10;
 }
 
+pub mod CBoneConstraintPoseSpaceMorph {
+    pub const m_sBoneName: usize = 0x28;
+    pub const m_sAttachmentName: usize = 0x30;
+    pub const m_outputMorph: usize = 0x38;
+    pub const m_inputList: usize = 0x50;
+    pub const m_bClamp: usize = 0x68;
+}
+
 pub mod CBoneConstraintPoseSpaceMorph_Input_t {
     pub const m_inputValue: usize = 0x0;
     pub const m_outputWeightList: usize = 0x10;

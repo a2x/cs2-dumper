@@ -2610,6 +2610,18 @@ namespace C_FuncElectrifiedVolume {
     constexpr std::ptrdiff_t m_bState = 0xcd0;
 }
 
+namespace C_FuncLadder {
+    constexpr std::ptrdiff_t m_vecLadderDir = 0xcc0;
+    constexpr std::ptrdiff_t m_Dismounts = 0xcd0;
+    constexpr std::ptrdiff_t m_vecLocalTop = 0xce8;
+    constexpr std::ptrdiff_t m_vecPlayerMountPositionTop = 0xcf4;
+    constexpr std::ptrdiff_t m_vecPlayerMountPositionBottom = 0xd00;
+    constexpr std::ptrdiff_t m_flAutoRideSpeed = 0xd0c;
+    constexpr std::ptrdiff_t m_bDisabled = 0xd10;
+    constexpr std::ptrdiff_t m_bFakeLadder = 0xd11;
+    constexpr std::ptrdiff_t m_bHasSlack = 0xd12;
+}
+
 namespace C_FuncMonitor {
     constexpr std::ptrdiff_t m_targetCamera = 0xcc0;
     constexpr std::ptrdiff_t m_nResolutionEnum = 0xcc8;

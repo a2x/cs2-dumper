@@ -1,0 +1,44 @@
+{
+  "signatures": [
+    {
+      "name": "entity_list",
+      "module": "client.dll",
+      "pattern": "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB",
+      "relative": true,
+      "levels": 0,
+      "offset": 0
+    },
+    {
+      "name": "global_vars",
+      "module": "client.dll",
+      "pattern": "48 89 0D ? ? ? ? 48 89 41",
+      "relative": true,
+      "levels": 0,
+      "offset": 0
+    },
+    {
+      "name": "local_player_controller",
+      "module": "client.dll",
+      "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
+      "relative": true,
+      "levels": 0,
+      "offset": 0
+    },
+    {
+      "name": "view_angles",
+      "module": "client.dll",
+      "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",
+      "relative": true,
+      "levels": 1,
+      "offset": 17680
+    },
+    {
+      "name": "view_matrix",
+      "module": "client.dll",
+      "pattern": "48 8D 0D ? ? ? ? 48 C1 E0 06",
+      "relative": true,
+      "levels": 0,
+      "offset": 0
+    }
+  ]
+}

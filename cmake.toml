@@ -1,0 +1,13 @@
+[project]
+name = "cs2-dumper"
+
+[fetch-content]
+nlohmann-json = { git = "https://github.com/nlohmann/json", tag = "v3.11.2" }
+spdlog = { git = "https://github.com/gabime/spdlog", tag = "v1.12.0" }
+
+[target.cs2-dumper]
+type = "executable"
+sources = ["src/**.cpp"]
+include-directories = ["include"]
+compile-features = ["cxx_std_20"]
+link-libraries = ["nlohmann_json::nlohmann_json", "spdlog::spdlog"]

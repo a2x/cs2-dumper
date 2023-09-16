@@ -2606,6 +2606,18 @@ public static class C_FuncElectrifiedVolume {
     public const ulong m_bState = 0xcd0;
 }
 
+public static class C_FuncLadder {
+    public const ulong m_vecLadderDir = 0xcc0;
+    public const ulong m_Dismounts = 0xcd0;
+    public const ulong m_vecLocalTop = 0xce8;
+    public const ulong m_vecPlayerMountPositionTop = 0xcf4;
+    public const ulong m_vecPlayerMountPositionBottom = 0xd00;
+    public const ulong m_flAutoRideSpeed = 0xd0c;
+    public const ulong m_bDisabled = 0xd10;
+    public const ulong m_bFakeLadder = 0xd11;
+    public const ulong m_bHasSlack = 0xd12;
+}
+
 public static class C_FuncMonitor {
     public const ulong m_targetCamera = 0xcc0;
     public const ulong m_nResolutionEnum = 0xcc8;

@@ -359,6 +359,13 @@ pub mod FeTaperedCapsuleRigid_t {
     pub const nFlags: usize = 0x26;
 }
 
+pub mod FeTaperedCapsuleStretch_t {
+    pub const nNode: usize = 0x0;
+    pub const nCollisionMask: usize = 0x4;
+    pub const nDummy: usize = 0x6;
+    pub const flRadius: usize = 0x8;
+}
+
 pub mod FeTreeChildren_t {
     pub const nChild: usize = 0x0;
 }

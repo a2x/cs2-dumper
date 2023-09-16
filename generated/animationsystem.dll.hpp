@@ -600,6 +600,14 @@ namespace CBoneConstraintPoseSpaceBone_Input_t {
     constexpr std::ptrdiff_t m_outputTransformList = 0x10;
 }
 
+namespace CBoneConstraintPoseSpaceMorph {
+    constexpr std::ptrdiff_t m_sBoneName = 0x28;
+    constexpr std::ptrdiff_t m_sAttachmentName = 0x30;
+    constexpr std::ptrdiff_t m_outputMorph = 0x38;
+    constexpr std::ptrdiff_t m_inputList = 0x50;
+    constexpr std::ptrdiff_t m_bClamp = 0x68;
+}
+
 namespace CBoneConstraintPoseSpaceMorph_Input_t {
     constexpr std::ptrdiff_t m_inputValue = 0x0;
     constexpr std::ptrdiff_t m_outputWeightList = 0x10;

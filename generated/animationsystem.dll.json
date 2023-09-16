@@ -513,6 +513,13 @@
         "m_inputValue": 0,
         "m_outputTransformList": 16
     },
+    "CBoneConstraintPoseSpaceMorph": {
+        "m_bClamp": 104,
+        "m_inputList": 80,
+        "m_outputMorph": 56,
+        "m_sAttachmentName": 48,
+        "m_sBoneName": 40
+    },
     "CBoneConstraintPoseSpaceMorph_Input_t": {
         "m_inputValue": 0,
         "m_outputWeightList": 16

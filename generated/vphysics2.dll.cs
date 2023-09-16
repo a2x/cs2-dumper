@@ -357,6 +357,13 @@ public static class FeTaperedCapsuleRigid_t {
     public const ulong nFlags = 0x26;
 }
 
+public static class FeTaperedCapsuleStretch_t {
+    public const ulong nNode = 0x0;
+    public const ulong nCollisionMask = 0x4;
+    public const ulong nDummy = 0x6;
+    public const ulong flRadius = 0x8;
+}
+
 public static class FeTreeChildren_t {
     public const ulong nChild = 0x0;
 }

@@ -361,6 +361,13 @@ namespace FeTaperedCapsuleRigid_t {
     constexpr std::ptrdiff_t nFlags = 0x26;
 }
 
+namespace FeTaperedCapsuleStretch_t {
+    constexpr std::ptrdiff_t nNode = 0x0;
+    constexpr std::ptrdiff_t nCollisionMask = 0x4;
+    constexpr std::ptrdiff_t nDummy = 0x6;
+    constexpr std::ptrdiff_t flRadius = 0x8;
+}
+
 namespace FeTreeChildren_t {
     constexpr std::ptrdiff_t nChild = 0x0;
 }

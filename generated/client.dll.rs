@@ -2608,6 +2608,18 @@ pub mod C_FuncElectrifiedVolume {
     pub const m_bState: usize = 0xcd0;
 }
 
+pub mod C_FuncLadder {
+    pub const m_vecLadderDir: usize = 0xcc0;
+    pub const m_Dismounts: usize = 0xcd0;
+    pub const m_vecLocalTop: usize = 0xce8;
+    pub const m_vecPlayerMountPositionTop: usize = 0xcf4;
+    pub const m_vecPlayerMountPositionBottom: usize = 0xd00;
+    pub const m_flAutoRideSpeed: usize = 0xd0c;
+    pub const m_bDisabled: usize = 0xd10;
+    pub const m_bFakeLadder: usize = 0xd11;
+    pub const m_bHasSlack: usize = 0xd12;
+}
+
 pub mod C_FuncMonitor {
     pub const m_targetCamera: usize = 0xcc0;
     pub const m_nResolutionEnum: usize = 0xcc8;

@@ -5,20 +5,18 @@
 namespace builder {
     class JsonFileBuilder : public IFileBuilder {
     public:
-        std::string get_extension() noexcept override {
+        std::string extension() noexcept override {
             return "json";
         }
 
-        void write_top_level(std::ofstream& output) noexcept override {
-            // Nothing needed here.
+        void write_top_level(std::ofstream& output) noexcept override {}
+
+        void write_namespace(std::ofstream& output, const std::string& name) noexcept override {
+            namespace_name_ = name;
         }
 
-        void write_namespace(std::ofstream& output, const std::string& namespace_name) noexcept override {
-            current_namespace_name_ = namespace_name;
-        }
-
-        void write_variable(std::ofstream& output, const std::string& variable_name, const std::uint64_t variable_value) noexcept override {
-            json[current_namespace_name_][variable_name] = variable_value;
+        void write_variable(std::ofstream& output, const std::string& name, const std::uintptr_t value) noexcept override {
+            json[namespace_name_][name] = value;
         }
 
         void write_closure(std::ofstream& output, const bool eof) noexcept override {
@@ -33,6 +31,6 @@ namespace builder {
         nlohmann::json json;
 
     private:
-        std::string current_namespace_name_;
+        std::string namespace_name_;
     };
 }
