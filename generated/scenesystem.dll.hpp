@@ -31,11 +31,11 @@ namespace CSSDSMsg_ViewTarget {
     constexpr std::ptrdiff_t m_nWidth = 0x10;
     constexpr std::ptrdiff_t m_nHeight = 0x14;
     constexpr std::ptrdiff_t m_nRequestedWidth = 0x18;
-    constexpr std::ptrdiff_t m_nRequestedHeight = 0x1c;
+    constexpr std::ptrdiff_t m_nRequestedHeight = 0x1C;
     constexpr std::ptrdiff_t m_nNumMipLevels = 0x20;
     constexpr std::ptrdiff_t m_nDepth = 0x24;
     constexpr std::ptrdiff_t m_nMultisampleNumSamples = 0x28;
-    constexpr std::ptrdiff_t m_nFormat = 0x2c;
+    constexpr std::ptrdiff_t m_nFormat = 0x2C;
 }
 
 namespace CSSDSMsg_ViewTargetList {

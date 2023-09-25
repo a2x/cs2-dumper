@@ -4,7 +4,7 @@
 
 namespace AggregateLODSetup_t {
     constexpr std::ptrdiff_t m_vLODOrigin = 0x0;
-    constexpr std::ptrdiff_t m_fMaxObjectScale = 0xc;
+    constexpr std::ptrdiff_t m_fMaxObjectScale = 0xC;
     constexpr std::ptrdiff_t m_nLODMask = 0x10;
     constexpr std::ptrdiff_t m_fSwitchDistances = 0x18;
 }
@@ -15,8 +15,8 @@ namespace AggregateMeshInfo_t {
     constexpr std::ptrdiff_t m_bHasTransform = 0x5;
     constexpr std::ptrdiff_t m_nDrawCallIndex = 0x6;
     constexpr std::ptrdiff_t m_nLODSetupIndex = 0x8;
-    constexpr std::ptrdiff_t m_nLODGroupMask = 0xa;
-    constexpr std::ptrdiff_t m_vTintColor = 0xb;
+    constexpr std::ptrdiff_t m_nLODGroupMask = 0xA;
+    constexpr std::ptrdiff_t m_vTintColor = 0xB;
     constexpr std::ptrdiff_t m_objectFlags = 0x10;
     constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x14;
 }
@@ -50,7 +50,7 @@ namespace CEntityIdentity {
     constexpr std::ptrdiff_t m_designerName = 0x20;
     constexpr std::ptrdiff_t m_flags = 0x30;
     constexpr std::ptrdiff_t m_worldGroupId = 0x38;
-    constexpr std::ptrdiff_t m_fDataObjectTypes = 0x3c;
+    constexpr std::ptrdiff_t m_fDataObjectTypes = 0x3C;
     constexpr std::ptrdiff_t m_PathIndex = 0x40;
     constexpr std::ptrdiff_t m_pPrev = 0x58;
     constexpr std::ptrdiff_t m_pNext = 0x60;
@@ -76,18 +76,18 @@ namespace CVoxelVisibility {
     constexpr std::ptrdiff_t m_flGridSize = 0x60;
     constexpr std::ptrdiff_t m_nSkyVisibilityCluster = 0x64;
     constexpr std::ptrdiff_t m_nSunVisibilityCluster = 0x68;
-    constexpr std::ptrdiff_t m_NodeBlock = 0x6c;
+    constexpr std::ptrdiff_t m_NodeBlock = 0x6C;
     constexpr std::ptrdiff_t m_RegionBlock = 0x74;
-    constexpr std::ptrdiff_t m_EnclosedClusterListBlock = 0x7c;
+    constexpr std::ptrdiff_t m_EnclosedClusterListBlock = 0x7C;
     constexpr std::ptrdiff_t m_EnclosedClustersBlock = 0x84;
-    constexpr std::ptrdiff_t m_MasksBlock = 0x8c;
+    constexpr std::ptrdiff_t m_MasksBlock = 0x8C;
     constexpr std::ptrdiff_t m_nVisBlocks = 0x94;
 }
 
 namespace ClutterSceneObject_t {
     constexpr std::ptrdiff_t m_Bounds = 0x0;
     constexpr std::ptrdiff_t m_flags = 0x18;
-    constexpr std::ptrdiff_t m_nLayer = 0x1c;
+    constexpr std::ptrdiff_t m_nLayer = 0x1C;
     constexpr std::ptrdiff_t m_instancePositions = 0x20;
     constexpr std::ptrdiff_t m_instanceScales = 0x50;
     constexpr std::ptrdiff_t m_instanceTintSrgb = 0x68;
@@ -108,7 +108,7 @@ namespace EntityIOConnectionData_t {
     constexpr std::ptrdiff_t m_inputName = 0x18;
     constexpr std::ptrdiff_t m_overrideParam = 0x20;
     constexpr std::ptrdiff_t m_flDelay = 0x28;
-    constexpr std::ptrdiff_t m_nTimesToFire = 0x2c;
+    constexpr std::ptrdiff_t m_nTimesToFire = 0x2C;
 }
 
 namespace EntityKeyValueData_t {
@@ -119,7 +119,7 @@ namespace EntityKeyValueData_t {
 namespace ExtraVertexStreamOverride_t {
     constexpr std::ptrdiff_t m_nSubSceneObject = 0x4;
     constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8;
-    constexpr std::ptrdiff_t m_nAdditionalMeshDrawPrimitiveFlags = 0xc;
+    constexpr std::ptrdiff_t m_nAdditionalMeshDrawPrimitiveFlags = 0xC;
     constexpr std::ptrdiff_t m_extraBufferBinding = 0x10;
 }
 
@@ -128,12 +128,12 @@ namespace InfoOverlayData_t {
     constexpr std::ptrdiff_t m_flWidth = 0x30;
     constexpr std::ptrdiff_t m_flHeight = 0x34;
     constexpr std::ptrdiff_t m_flDepth = 0x38;
-    constexpr std::ptrdiff_t m_vUVStart = 0x3c;
+    constexpr std::ptrdiff_t m_vUVStart = 0x3C;
     constexpr std::ptrdiff_t m_vUVEnd = 0x44;
     constexpr std::ptrdiff_t m_pMaterial = 0x50;
     constexpr std::ptrdiff_t m_nRenderOrder = 0x58;
-    constexpr std::ptrdiff_t m_vTintColor = 0x5c;
-    constexpr std::ptrdiff_t m_nSequenceOverride = 0x6c;
+    constexpr std::ptrdiff_t m_vTintColor = 0x5C;
+    constexpr std::ptrdiff_t m_nSequenceOverride = 0x6C;
 }
 
 namespace MaterialOverride_t {
@@ -146,7 +146,7 @@ namespace NodeData_t {
     constexpr std::ptrdiff_t m_nParent = 0x0;
     constexpr std::ptrdiff_t m_vOrigin = 0x4;
     constexpr std::ptrdiff_t m_vMinBounds = 0x10;
-    constexpr std::ptrdiff_t m_vMaxBounds = 0x1c;
+    constexpr std::ptrdiff_t m_vMaxBounds = 0x1C;
     constexpr std::ptrdiff_t m_flMinimumDistance = 0x28;
     constexpr std::ptrdiff_t m_ChildNodeIndices = 0x30;
     constexpr std::ptrdiff_t m_worldNodePrefix = 0x48;
@@ -164,13 +164,13 @@ namespace SceneObject_t {
     constexpr std::ptrdiff_t m_vTransform = 0x4;
     constexpr std::ptrdiff_t m_flFadeStartDistance = 0x34;
     constexpr std::ptrdiff_t m_flFadeEndDistance = 0x38;
-    constexpr std::ptrdiff_t m_vTintColor = 0x3c;
+    constexpr std::ptrdiff_t m_vTintColor = 0x3C;
     constexpr std::ptrdiff_t m_skin = 0x50;
     constexpr std::ptrdiff_t m_nObjectTypeFlags = 0x58;
-    constexpr std::ptrdiff_t m_vLightingOrigin = 0x5c;
+    constexpr std::ptrdiff_t m_vLightingOrigin = 0x5C;
     constexpr std::ptrdiff_t m_nLightGroup = 0x68;
-    constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x6c;
-    constexpr std::ptrdiff_t m_nLODOverride = 0x6e;
+    constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x6C;
+    constexpr std::ptrdiff_t m_nLODOverride = 0x6E;
     constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x70;
     constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x74;
     constexpr std::ptrdiff_t m_renderableModel = 0x80;
@@ -205,10 +205,10 @@ namespace WorldNode_t {
     constexpr std::ptrdiff_t m_clutterSceneObjects = 0x60;
     constexpr std::ptrdiff_t m_extraVertexStreamOverrides = 0x78;
     constexpr std::ptrdiff_t m_materialOverrides = 0x90;
-    constexpr std::ptrdiff_t m_extraVertexStreams = 0xa8;
-    constexpr std::ptrdiff_t m_layerNames = 0xc0;
-    constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0xd8;
-    constexpr std::ptrdiff_t m_overlayLayerIndices = 0xf0;
+    constexpr std::ptrdiff_t m_extraVertexStreams = 0xA8;
+    constexpr std::ptrdiff_t m_layerNames = 0xC0;
+    constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0xD8;
+    constexpr std::ptrdiff_t m_overlayLayerIndices = 0xF0;
     constexpr std::ptrdiff_t m_grassFileName = 0x108;
     constexpr std::ptrdiff_t m_nodeLightingInfo = 0x110;
 }

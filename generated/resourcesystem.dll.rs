@@ -2,7 +2,7 @@
 
 pub mod AABB_t {
     pub const m_vMinBounds: usize = 0x0;
-    pub const m_vMaxBounds: usize = 0xc;
+    pub const m_vMaxBounds: usize = 0xC;
 }
 
 pub mod CFuseProgram {
@@ -24,7 +24,7 @@ pub mod CFuseSymbolTable {
 pub mod ConstantInfo_t {
     pub const m_name: usize = 0x0;
     pub const m_nameToken: usize = 0x8;
-    pub const m_flValue: usize = 0xc;
+    pub const m_flValue: usize = 0xC;
 }
 
 pub mod FourQuaternions {
@@ -39,7 +39,7 @@ pub mod FunctionInfo_t {
     pub const m_nameToken: usize = 0x10;
     pub const m_nParamCount: usize = 0x14;
     pub const m_nIndex: usize = 0x18;
-    pub const m_bIsPure: usize = 0x1a;
+    pub const m_bIsPure: usize = 0x1A;
 }
 
 pub mod FuseFunctionIndex_t {
@@ -67,8 +67,8 @@ pub mod TestResource_t {
 pub mod VariableInfo_t {
     pub const m_name: usize = 0x0;
     pub const m_nameToken: usize = 0x8;
-    pub const m_nIndex: usize = 0xc;
-    pub const m_nNumComponents: usize = 0xe;
-    pub const m_eVarType: usize = 0xf;
+    pub const m_nIndex: usize = 0xC;
+    pub const m_nNumComponents: usize = 0xE;
+    pub const m_eVarType: usize = 0xF;
     pub const m_eAccess: usize = 0x10;
 }

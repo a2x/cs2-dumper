@@ -1,63 +1,63 @@
 {
-    "AABB_t": {
-        "m_vMaxBounds": 12,
-        "m_vMinBounds": 0
-    },
-    "CFuseProgram": {
-        "m_nMaxTempVarsUsed": 72,
-        "m_programBuffer": 0,
-        "m_variablesRead": 24,
-        "m_variablesWritten": 48
-    },
-    "CFuseSymbolTable": {
-        "m_constantMap": 72,
-        "m_constants": 0,
-        "m_functionMap": 136,
-        "m_functions": 48,
-        "m_variableMap": 104,
-        "m_variables": 24
-    },
-    "ConstantInfo_t": {
-        "m_flValue": 12,
-        "m_name": 0,
-        "m_nameToken": 8
-    },
-    "FourQuaternions": {
-        "w": 48,
-        "x": 0,
-        "y": 16,
-        "z": 32
-    },
-    "FunctionInfo_t": {
-        "m_bIsPure": 26,
-        "m_nIndex": 24,
-        "m_nParamCount": 20,
-        "m_name": 8,
-        "m_nameToken": 16
-    },
-    "FuseFunctionIndex_t": {
-        "m_Value": 0
-    },
-    "FuseVariableIndex_t": {
-        "m_Value": 0
-    },
-    "ManifestTestResource_t": {
-        "m_child": 8,
-        "m_name": 0
-    },
-    "PackedAABB_t": {
-        "m_nPackedMax": 4,
-        "m_nPackedMin": 0
-    },
-    "TestResource_t": {
-        "m_name": 0
-    },
-    "VariableInfo_t": {
-        "m_eAccess": 16,
-        "m_eVarType": 15,
-        "m_nIndex": 12,
-        "m_nNumComponents": 14,
-        "m_name": 0,
-        "m_nameToken": 8
-    }
+  "AABB_t": {
+    "m_vMaxBounds": 12,
+    "m_vMinBounds": 0
+  },
+  "CFuseProgram": {
+    "m_nMaxTempVarsUsed": 72,
+    "m_programBuffer": 0,
+    "m_variablesRead": 24,
+    "m_variablesWritten": 48
+  },
+  "CFuseSymbolTable": {
+    "m_constantMap": 72,
+    "m_constants": 0,
+    "m_functionMap": 136,
+    "m_functions": 48,
+    "m_variableMap": 104,
+    "m_variables": 24
+  },
+  "ConstantInfo_t": {
+    "m_flValue": 12,
+    "m_name": 0,
+    "m_nameToken": 8
+  },
+  "FourQuaternions": {
+    "w": 48,
+    "x": 0,
+    "y": 16,
+    "z": 32
+  },
+  "FunctionInfo_t": {
+    "m_bIsPure": 26,
+    "m_nIndex": 24,
+    "m_nParamCount": 20,
+    "m_name": 8,
+    "m_nameToken": 16
+  },
+  "FuseFunctionIndex_t": {
+    "m_Value": 0
+  },
+  "FuseVariableIndex_t": {
+    "m_Value": 0
+  },
+  "ManifestTestResource_t": {
+    "m_child": 8,
+    "m_name": 0
+  },
+  "PackedAABB_t": {
+    "m_nPackedMax": 4,
+    "m_nPackedMin": 0
+  },
+  "TestResource_t": {
+    "m_name": 0
+  },
+  "VariableInfo_t": {
+    "m_eAccess": 16,
+    "m_eVarType": 15,
+    "m_nIndex": 12,
+    "m_nNumComponents": 14,
+    "m_name": 0,
+    "m_nameToken": 8
+  }
 }

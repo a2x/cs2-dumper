@@ -3,9 +3,9 @@
 #include <cstddef>
 
 namespace client_dll {
-    constexpr std::ptrdiff_t entity_list = 0x162c020;
-    constexpr std::ptrdiff_t global_vars = 0x15716b8;
-    constexpr std::ptrdiff_t local_player_controller = 0x167dd60;
-    constexpr std::ptrdiff_t view_angles = 0x177bf70;
-    constexpr std::ptrdiff_t view_matrix = 0x171d1e0;
+    constexpr std::ptrdiff_t entityList = 0x162C020;
+    constexpr std::ptrdiff_t globalVars = 0x15716B8;
+    constexpr std::ptrdiff_t localPlayerController = 0x167DD60;
+    constexpr std::ptrdiff_t viewAngles = 0x177BF70;
+    constexpr std::ptrdiff_t viewMatrix = 0x171D1E0;
 }

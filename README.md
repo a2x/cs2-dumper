@@ -1,6 +1,6 @@
 # CS2 Dumper
 
-Automated offsets and schema class file generator for Counter-Strike: 2. By default, it will generate JSON, Rust, C# and C++ header files. It also allows customization by overriding the `IFileBuilder` interface for exporting in your preferred file formats.
+Tool to automatically dump offsets and interfaces for Counter-Strike: 2.
 
 # Generated Files
 

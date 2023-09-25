@@ -1,9 +1,9 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod client_dll {
-    pub const entity_list: usize = 0x162c020;
-    pub const global_vars: usize = 0x15716b8;
-    pub const local_player_controller: usize = 0x167dd60;
-    pub const view_angles: usize = 0x177bf70;
-    pub const view_matrix: usize = 0x171d1e0;
+    pub const entityList: usize = 0x162C020;
+    pub const globalVars: usize = 0x15716B8;
+    pub const localPlayerController: usize = 0x167DD60;
+    pub const viewAngles: usize = 0x177BF70;
+    pub const viewMatrix: usize = 0x171D1E0;
 }

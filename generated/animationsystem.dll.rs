@@ -4,11 +4,11 @@ pub mod AimMatrixOpFixedSettings_t {
     pub const m_attachment: usize = 0x0;
     pub const m_damping: usize = 0x80;
     pub const m_poseCacheHandles: usize = 0x90;
-    pub const m_eBlendMode: usize = 0xb8;
-    pub const m_fAngleIncrement: usize = 0xbc;
-    pub const m_nSequenceMaxFrame: usize = 0xc0;
-    pub const m_nBoneMaskIndex: usize = 0xc4;
-    pub const m_bTargetIsPosition: usize = 0xc8;
+    pub const m_eBlendMode: usize = 0xB8;
+    pub const m_fAngleIncrement: usize = 0xBC;
+    pub const m_nSequenceMaxFrame: usize = 0xC0;
+    pub const m_nBoneMaskIndex: usize = 0xC4;
+    pub const m_bTargetIsPosition: usize = 0xC8;
 }
 
 pub mod AnimComponentID {
@@ -78,7 +78,7 @@ pub mod BlendItem_t {
     pub const m_tags: usize = 0x0;
     pub const m_pChild: usize = 0x18;
     pub const m_hSequence: usize = 0x28;
-    pub const m_vPos: usize = 0x2c;
+    pub const m_vPos: usize = 0x2C;
     pub const m_flDuration: usize = 0x34;
     pub const m_bUseCustomDuration: usize = 0x38;
 }
@@ -92,7 +92,7 @@ pub mod CActionComponentUpdater {
 }
 
 pub mod CAddUpdateNode {
-    pub const m_footMotionTiming: usize = 0x8c;
+    pub const m_footMotionTiming: usize = 0x8C;
     pub const m_bApplyToFootMotion: usize = 0x90;
     pub const m_bApplyChannelsSeparately: usize = 0x91;
     pub const m_bUseModelSpace: usize = 0x92;
@@ -106,7 +106,7 @@ pub mod CAimConstraint {
 pub mod CAimMatrixUpdateNode {
     pub const m_opFixedSettings: usize = 0x70;
     pub const m_target: usize = 0x148;
-    pub const m_paramIndex: usize = 0x14c;
+    pub const m_paramIndex: usize = 0x14C;
     pub const m_hSequence: usize = 0x150;
     pub const m_bResetChild: usize = 0x154;
     pub const m_bLockWhenWaning: usize = 0x155;
@@ -123,7 +123,7 @@ pub mod CAnimAttachment {
     pub const m_influenceRotations: usize = 0x0;
     pub const m_influenceOffsets: usize = 0x30;
     pub const m_influenceIndices: usize = 0x60;
-    pub const m_influenceWeights: usize = 0x6c;
+    pub const m_influenceWeights: usize = 0x6C;
     pub const m_numInfluences: usize = 0x78;
 }
 
@@ -141,8 +141,8 @@ pub mod CAnimBoneDifference {
     pub const m_name: usize = 0x0;
     pub const m_parent: usize = 0x10;
     pub const m_posError: usize = 0x20;
-    pub const m_bHasRotation: usize = 0x2c;
-    pub const m_bHasMovement: usize = 0x2d;
+    pub const m_bHasRotation: usize = 0x2C;
+    pub const m_bHasMovement: usize = 0x2D;
 }
 
 pub mod CAnimComponentUpdater {
@@ -182,11 +182,11 @@ pub mod CAnimDemoCaptureSettings {
     pub const m_flMaxSplineErrorRotation: usize = 0x0;
     pub const m_flMaxSplineErrorTranslation: usize = 0x4;
     pub const m_flMaxSplineErrorScale: usize = 0x8;
-    pub const m_flIkRotation_MaxSplineError: usize = 0xc;
+    pub const m_flIkRotation_MaxSplineError: usize = 0xC;
     pub const m_flIkTranslation_MaxSplineError: usize = 0x10;
     pub const m_flMaxQuantizationErrorRotation: usize = 0x14;
     pub const m_flMaxQuantizationErrorTranslation: usize = 0x18;
-    pub const m_flMaxQuantizationErrorScale: usize = 0x1c;
+    pub const m_flMaxQuantizationErrorScale: usize = 0x1C;
     pub const m_flIkRotation_MaxQuantizationError: usize = 0x20;
     pub const m_flIkTranslation_MaxQuantizationError: usize = 0x24;
     pub const m_baseSequence: usize = 0x28;
@@ -201,16 +201,16 @@ pub mod CAnimDesc {
     pub const m_flags: usize = 0x10;
     pub const fps: usize = 0x18;
     pub const m_Data: usize = 0x20;
-    pub const m_movementArray: usize = 0xf8;
+    pub const m_movementArray: usize = 0xF8;
     pub const m_eventArray: usize = 0x110;
     pub const m_activityArray: usize = 0x128;
     pub const m_hierarchyArray: usize = 0x140;
     pub const framestalltime: usize = 0x158;
-    pub const m_vecRootMin: usize = 0x15c;
+    pub const m_vecRootMin: usize = 0x15C;
     pub const m_vecRootMax: usize = 0x168;
     pub const m_vecBoneWorldMin: usize = 0x178;
     pub const m_vecBoneWorldMax: usize = 0x190;
-    pub const m_sequenceParams: usize = 0x1a8;
+    pub const m_sequenceParams: usize = 0x1A8;
 }
 
 pub mod CAnimDesc_Flag {
@@ -248,7 +248,7 @@ pub mod CAnimEnum {
 
 pub mod CAnimEventDefinition {
     pub const m_nFrame: usize = 0x8;
-    pub const m_flCycle: usize = 0xc;
+    pub const m_flCycle: usize = 0xC;
     pub const m_EventData: usize = 0x10;
     pub const m_sLegacyOptions: usize = 0x20;
     pub const m_sEventName: usize = 0x30;
@@ -298,7 +298,7 @@ pub mod CAnimGraphSettingsManager {
 
 pub mod CAnimInputDamping {
     pub const m_speedFunction: usize = 0x8;
-    pub const m_fSpeedScale: usize = 0xc;
+    pub const m_fSpeedScale: usize = 0xC;
 }
 
 pub mod CAnimKeyData {
@@ -316,7 +316,7 @@ pub mod CAnimLocalHierarchy {
     pub const m_nStartFrame: usize = 0x20;
     pub const m_nPeakFrame: usize = 0x24;
     pub const m_nTailFrame: usize = 0x28;
-    pub const m_nEndFrame: usize = 0x2c;
+    pub const m_nEndFrame: usize = 0x2C;
 }
 
 pub mod CAnimMorphDifference {
@@ -332,7 +332,7 @@ pub mod CAnimMovement {
     pub const endframe: usize = 0x0;
     pub const motionflags: usize = 0x4;
     pub const v0: usize = 0x8;
-    pub const v1: usize = 0xc;
+    pub const v1: usize = 0xC;
     pub const angle: usize = 0x10;
     pub const vector: usize = 0x14;
     pub const position: usize = 0x20;
@@ -340,7 +340,7 @@ pub mod CAnimMovement {
 
 pub mod CAnimNodePath {
     pub const m_path: usize = 0x0;
-    pub const m_nCount: usize = 0x2c;
+    pub const m_nCount: usize = 0x2C;
 }
 
 pub mod CAnimParamHandle {
@@ -357,8 +357,8 @@ pub mod CAnimParameterBase {
     pub const m_group: usize = 0x20;
     pub const m_id: usize = 0x28;
     pub const m_componentName: usize = 0x40;
-    pub const m_bNetworkingRequested: usize = 0x4c;
-    pub const m_bIsReferenced: usize = 0x4d;
+    pub const m_bNetworkingRequested: usize = 0x4C;
+    pub const m_bIsReferenced: usize = 0x4D;
 }
 
 pub mod CAnimParameterManagerUpdater {
@@ -367,7 +367,7 @@ pub mod CAnimParameterManagerUpdater {
     pub const m_nameToIndexMap: usize = 0x50;
     pub const m_indexToHandle: usize = 0x70;
     pub const m_autoResetParams: usize = 0x88;
-    pub const m_autoResetMap: usize = 0xa0;
+    pub const m_autoResetMap: usize = 0xA0;
 }
 
 pub mod CAnimReplayFrame {
@@ -398,8 +398,8 @@ pub mod CAnimSkeleton {
     pub const m_children: usize = 0x58;
     pub const m_parents: usize = 0x70;
     pub const m_feet: usize = 0x88;
-    pub const m_morphNames: usize = 0xa0;
-    pub const m_lodBoneCounts: usize = 0xb8;
+    pub const m_morphNames: usize = 0xA0;
+    pub const m_lodBoneCounts: usize = 0xB8;
 }
 
 pub mod CAnimStateMachineUpdater {
@@ -412,7 +412,7 @@ pub mod CAnimTagBase {
     pub const m_name: usize = 0x18;
     pub const m_group: usize = 0x20;
     pub const m_tagID: usize = 0x28;
-    pub const m_bIsReferenced: usize = 0x2c;
+    pub const m_bIsReferenced: usize = 0x2C;
 }
 
 pub mod CAnimTagManagerUpdater {
@@ -437,9 +437,9 @@ pub mod CAnimUpdateSharedData {
     pub const m_pTagManagerUpdater: usize = 0x68;
     pub const m_scriptManager: usize = 0x70;
     pub const m_settings: usize = 0x78;
-    pub const m_pStaticPoseCache: usize = 0xa8;
-    pub const m_pSkeleton: usize = 0xb0;
-    pub const m_rootNodePath: usize = 0xb8;
+    pub const m_pStaticPoseCache: usize = 0xA8;
+    pub const m_pSkeleton: usize = 0xB0;
+    pub const m_rootNodePath: usize = 0xB8;
 }
 
 pub mod CAnimUser {
@@ -472,7 +472,7 @@ pub mod CAnimationGraphVisualizerPie {
 
 pub mod CAnimationGraphVisualizerPrimitiveBase {
     pub const m_Type: usize = 0x8;
-    pub const m_OwningAnimNodePaths: usize = 0xc;
+    pub const m_OwningAnimNodePaths: usize = 0xC;
     pub const m_nOwningAnimNodePathCount: usize = 0x38;
 }
 
@@ -513,10 +513,10 @@ pub mod CAudioAnimTag {
     pub const m_clipName: usize = 0x38;
     pub const m_attachmentName: usize = 0x40;
     pub const m_flVolume: usize = 0x48;
-    pub const m_bStopWhenTagEnds: usize = 0x4c;
-    pub const m_bStopWhenGraphEnds: usize = 0x4d;
-    pub const m_bPlayOnServer: usize = 0x4e;
-    pub const m_bPlayOnClient: usize = 0x4f;
+    pub const m_bStopWhenTagEnds: usize = 0x4C;
+    pub const m_bStopWhenGraphEnds: usize = 0x4D;
+    pub const m_bPlayOnServer: usize = 0x4E;
+    pub const m_bPlayOnClient: usize = 0x4F;
 }
 
 pub mod CBaseConstraint {
@@ -530,7 +530,7 @@ pub mod CBinaryUpdateNode {
     pub const m_pChild1: usize = 0x58;
     pub const m_pChild2: usize = 0x68;
     pub const m_timingBehavior: usize = 0x78;
-    pub const m_flTimingBlend: usize = 0x7c;
+    pub const m_flTimingBlend: usize = 0x7C;
     pub const m_bResetChild1: usize = 0x80;
     pub const m_bResetChild2: usize = 0x81;
 }
@@ -539,18 +539,18 @@ pub mod CBlend2DUpdateNode {
     pub const m_items: usize = 0x60;
     pub const m_tags: usize = 0x78;
     pub const m_paramSpans: usize = 0x90;
-    pub const m_nodeItemIndices: usize = 0xa8;
-    pub const m_damping: usize = 0xc0;
-    pub const m_blendSourceX: usize = 0xd0;
-    pub const m_paramX: usize = 0xd4;
-    pub const m_blendSourceY: usize = 0xd8;
-    pub const m_paramY: usize = 0xdc;
-    pub const m_eBlendMode: usize = 0xe0;
-    pub const m_playbackSpeed: usize = 0xe4;
-    pub const m_bLoop: usize = 0xe8;
-    pub const m_bLockBlendOnReset: usize = 0xe9;
-    pub const m_bLockWhenWaning: usize = 0xea;
-    pub const m_bAnimEventsAndTagsOnMostWeightedOnly: usize = 0xeb;
+    pub const m_nodeItemIndices: usize = 0xA8;
+    pub const m_damping: usize = 0xC0;
+    pub const m_blendSourceX: usize = 0xD0;
+    pub const m_paramX: usize = 0xD4;
+    pub const m_blendSourceY: usize = 0xD8;
+    pub const m_paramY: usize = 0xDC;
+    pub const m_eBlendMode: usize = 0xE0;
+    pub const m_playbackSpeed: usize = 0xE4;
+    pub const m_bLoop: usize = 0xE8;
+    pub const m_bLockBlendOnReset: usize = 0xE9;
+    pub const m_bLockWhenWaning: usize = 0xEA;
+    pub const m_bAnimEventsAndTagsOnMostWeightedOnly: usize = 0xEB;
 }
 
 pub mod CBlendCurve {
@@ -562,14 +562,14 @@ pub mod CBlendUpdateNode {
     pub const m_children: usize = 0x60;
     pub const m_sortedOrder: usize = 0x78;
     pub const m_targetValues: usize = 0x90;
-    pub const m_blendValueSource: usize = 0xac;
-    pub const m_paramIndex: usize = 0xb0;
-    pub const m_damping: usize = 0xb8;
-    pub const m_blendKeyType: usize = 0xc8;
-    pub const m_bLockBlendOnReset: usize = 0xcc;
-    pub const m_bSyncCycles: usize = 0xcd;
-    pub const m_bLoop: usize = 0xce;
-    pub const m_bLockWhenWaning: usize = 0xcf;
+    pub const m_blendValueSource: usize = 0xAC;
+    pub const m_paramIndex: usize = 0xB0;
+    pub const m_damping: usize = 0xB8;
+    pub const m_blendKeyType: usize = 0xC8;
+    pub const m_bLockBlendOnReset: usize = 0xCC;
+    pub const m_bSyncCycles: usize = 0xCD;
+    pub const m_bLoop: usize = 0xCE;
+    pub const m_bLockWhenWaning: usize = 0xCF;
 }
 
 pub mod CBodyGroupAnimTag {
@@ -612,13 +612,13 @@ pub mod CBoneConstraintPoseSpaceMorph_Input_t {
 }
 
 pub mod CBoneMaskUpdateNode {
-    pub const m_nWeightListIndex: usize = 0x8c;
+    pub const m_nWeightListIndex: usize = 0x8C;
     pub const m_flRootMotionBlend: usize = 0x90;
     pub const m_blendSpace: usize = 0x94;
     pub const m_footMotionTiming: usize = 0x98;
-    pub const m_bUseBlendScale: usize = 0x9c;
-    pub const m_blendValueSource: usize = 0xa0;
-    pub const m_hBlendParameter: usize = 0xa4;
+    pub const m_bUseBlendScale: usize = 0x9C;
+    pub const m_blendValueSource: usize = 0xA0;
+    pub const m_hBlendParameter: usize = 0xA4;
 }
 
 pub mod CBonePositionMetricEvaluator {
@@ -641,25 +641,25 @@ pub mod CCachedPose {
     pub const m_transforms: usize = 0x8;
     pub const m_morphWeights: usize = 0x20;
     pub const m_hSequence: usize = 0x38;
-    pub const m_flCycle: usize = 0x3c;
+    pub const m_flCycle: usize = 0x3C;
 }
 
 pub mod CChoiceUpdateNode {
     pub const m_children: usize = 0x58;
     pub const m_weights: usize = 0x70;
     pub const m_blendTimes: usize = 0x88;
-    pub const m_choiceMethod: usize = 0xa0;
-    pub const m_choiceChangeMethod: usize = 0xa4;
-    pub const m_blendMethod: usize = 0xa8;
-    pub const m_blendTime: usize = 0xac;
-    pub const m_bCrossFade: usize = 0xb0;
-    pub const m_bResetChosen: usize = 0xb1;
-    pub const m_bDontResetSameSelection: usize = 0xb2;
+    pub const m_choiceMethod: usize = 0xA0;
+    pub const m_choiceChangeMethod: usize = 0xA4;
+    pub const m_blendMethod: usize = 0xA8;
+    pub const m_blendTime: usize = 0xAC;
+    pub const m_bCrossFade: usize = 0xB0;
+    pub const m_bResetChosen: usize = 0xB1;
+    pub const m_bDontResetSameSelection: usize = 0xB2;
 }
 
 pub mod CClothSettingsAnimTag {
     pub const m_flStiffness: usize = 0x38;
-    pub const m_flEaseIn: usize = 0x3c;
+    pub const m_flEaseIn: usize = 0x3C;
     pub const m_flEaseOut: usize = 0x40;
     pub const m_nVertexSet: usize = 0x48;
 }
@@ -673,9 +673,9 @@ pub mod CCompressorGroup {
     pub const m_szGrouping: usize = 0x68;
     pub const m_nCompressorIndex: usize = 0x80;
     pub const m_szElementNames: usize = 0x98;
-    pub const m_nElementUniqueID: usize = 0xb0;
-    pub const m_nElementMask: usize = 0xc8;
-    pub const m_vectorCompressor: usize = 0xf8;
+    pub const m_nElementUniqueID: usize = 0xB0;
+    pub const m_nElementMask: usize = 0xC8;
+    pub const m_vectorCompressor: usize = 0xF8;
     pub const m_quaternionCompressor: usize = 0x110;
     pub const m_intCompressor: usize = 0x128;
     pub const m_boolCompressor: usize = 0x140;
@@ -689,14 +689,14 @@ pub mod CConcreteAnimParameter {
     pub const m_eNetworkSetting: usize = 0x54;
     pub const m_bUseMostRecentValue: usize = 0x58;
     pub const m_bAutoReset: usize = 0x59;
-    pub const m_bGameWritable: usize = 0x5a;
-    pub const m_bGraphWritable: usize = 0x5b;
+    pub const m_bGameWritable: usize = 0x5A;
+    pub const m_bGraphWritable: usize = 0x5B;
 }
 
 pub mod CConstraintSlave {
     pub const m_qBaseOrientation: usize = 0x0;
     pub const m_vBasePosition: usize = 0x10;
-    pub const m_nBoneHash: usize = 0x1c;
+    pub const m_nBoneHash: usize = 0x1C;
     pub const m_flWeight: usize = 0x20;
     pub const m_sName: usize = 0x28;
 }
@@ -704,7 +704,7 @@ pub mod CConstraintSlave {
 pub mod CConstraintTarget {
     pub const m_qOffset: usize = 0x20;
     pub const m_vOffset: usize = 0x30;
-    pub const m_nBoneHash: usize = 0x3c;
+    pub const m_nBoneHash: usize = 0x3C;
     pub const m_sName: usize = 0x40;
     pub const m_flWeight: usize = 0x48;
     pub const m_bIsAttachment: usize = 0x59;
@@ -716,7 +716,7 @@ pub mod CCycleBase {
 
 pub mod CCycleControlClipUpdateNode {
     pub const m_tags: usize = 0x60;
-    pub const m_hSequence: usize = 0x7c;
+    pub const m_hSequence: usize = 0x7C;
     pub const m_duration: usize = 0x80;
     pub const m_valueSource: usize = 0x84;
     pub const m_paramIndex: usize = 0x88;
@@ -724,16 +724,16 @@ pub mod CCycleControlClipUpdateNode {
 
 pub mod CCycleControlUpdateNode {
     pub const m_valueSource: usize = 0x68;
-    pub const m_paramIndex: usize = 0x6c;
+    pub const m_paramIndex: usize = 0x6C;
 }
 
 pub mod CDampedPathAnimMotorUpdater {
-    pub const m_flAnticipationTime: usize = 0x2c;
+    pub const m_flAnticipationTime: usize = 0x2C;
     pub const m_flMinSpeedScale: usize = 0x30;
     pub const m_hAnticipationPosParam: usize = 0x34;
     pub const m_hAnticipationHeadingParam: usize = 0x36;
     pub const m_flSpringConstant: usize = 0x38;
-    pub const m_flMinSpringTension: usize = 0x3c;
+    pub const m_flMinSpringTension: usize = 0x3C;
     pub const m_flMaxSpringTension: usize = 0x40;
 }
 
@@ -744,7 +744,7 @@ pub mod CDampedValueComponentUpdater {
 pub mod CDampedValueUpdateItem {
     pub const m_damping: usize = 0x0;
     pub const m_hParamIn: usize = 0x18;
-    pub const m_hParamOut: usize = 0x1a;
+    pub const m_hParamOut: usize = 0x1A;
 }
 
 pub mod CDemoSettingsComponentUpdater {
@@ -757,27 +757,27 @@ pub mod CDirectPlaybackTagData {
 }
 
 pub mod CDirectPlaybackUpdateNode {
-    pub const m_bFinishEarly: usize = 0x6c;
-    pub const m_bResetOnFinish: usize = 0x6d;
+    pub const m_bFinishEarly: usize = 0x6C;
+    pub const m_bResetOnFinish: usize = 0x6D;
     pub const m_allTags: usize = 0x70;
 }
 
 pub mod CDirectionalBlendUpdateNode {
-    pub const m_hSequences: usize = 0x5c;
+    pub const m_hSequences: usize = 0x5C;
     pub const m_damping: usize = 0x80;
     pub const m_blendValueSource: usize = 0x90;
     pub const m_paramIndex: usize = 0x94;
     pub const m_playbackSpeed: usize = 0x98;
-    pub const m_duration: usize = 0x9c;
-    pub const m_bLoop: usize = 0xa0;
-    pub const m_bLockBlendOnReset: usize = 0xa1;
+    pub const m_duration: usize = 0x9C;
+    pub const m_bLoop: usize = 0xA0;
+    pub const m_bLockBlendOnReset: usize = 0xA1;
 }
 
 pub mod CDistanceRemainingMetricEvaluator {
     pub const m_flMaxDistance: usize = 0x50;
     pub const m_flMinDistance: usize = 0x54;
     pub const m_flStartGoalFilterDistance: usize = 0x58;
-    pub const m_flMaxGoalOvershootScale: usize = 0x5c;
+    pub const m_flMaxGoalOvershootScale: usize = 0x5C;
     pub const m_bFilterFixedMinDistance: usize = 0x60;
     pub const m_bFilterGoalDistance: usize = 0x61;
     pub const m_bFilterGoalOvershoot: usize = 0x62;
@@ -785,13 +785,13 @@ pub mod CDistanceRemainingMetricEvaluator {
 
 pub mod CDrawCullingData {
     pub const m_vConeApex: usize = 0x0;
-    pub const m_ConeAxis: usize = 0xc;
-    pub const m_ConeCutoff: usize = 0xf;
+    pub const m_ConeAxis: usize = 0xC;
+    pub const m_ConeCutoff: usize = 0xF;
 }
 
 pub mod CEmitTagActionUpdater {
     pub const m_nTagIndex: usize = 0x18;
-    pub const m_bIsZeroDuration: usize = 0x1c;
+    pub const m_bIsZeroDuration: usize = 0x1C;
 }
 
 pub mod CEnumAnimParameter {
@@ -801,8 +801,8 @@ pub mod CEnumAnimParameter {
 
 pub mod CExpressionActionUpdater {
     pub const m_hParam: usize = 0x18;
-    pub const m_eParamType: usize = 0x1a;
-    pub const m_hScript: usize = 0x1c;
+    pub const m_eParamType: usize = 0x1A;
+    pub const m_hScript: usize = 0x1C;
 }
 
 pub mod CFingerBone {
@@ -810,7 +810,7 @@ pub mod CFingerBone {
     pub const m_hingeAxis: usize = 0x8;
     pub const m_vCapsulePos1: usize = 0x14;
     pub const m_vCapsulePos2: usize = 0x20;
-    pub const m_flMinAngle: usize = 0x2c;
+    pub const m_flMinAngle: usize = 0x2C;
     pub const m_flMaxAngle: usize = 0x30;
     pub const m_flRadius: usize = 0x34;
 }
@@ -825,7 +825,7 @@ pub mod CFingerChain {
     pub const m_vSplayHingeAxis: usize = 0x58;
     pub const m_flSplayMinAngle: usize = 0x64;
     pub const m_flSplayMaxAngle: usize = 0x68;
-    pub const m_flFingerScaleRatio: usize = 0x6c;
+    pub const m_flFingerScaleRatio: usize = 0x6C;
 }
 
 pub mod CFingerSource {
@@ -858,7 +858,7 @@ pub mod CFloatAnimParameter {
     pub const m_fDefaultValue: usize = 0x60;
     pub const m_fMinValue: usize = 0x64;
     pub const m_fMaxValue: usize = 0x68;
-    pub const m_bInterpolate: usize = 0x6c;
+    pub const m_bInterpolate: usize = 0x6C;
 }
 
 pub mod CFollowAttachmentUpdateNode {
@@ -866,40 +866,40 @@ pub mod CFollowAttachmentUpdateNode {
 }
 
 pub mod CFollowPathUpdateNode {
-    pub const m_flBlendOutTime: usize = 0x6c;
+    pub const m_flBlendOutTime: usize = 0x6C;
     pub const m_bBlockNonPathMovement: usize = 0x70;
     pub const m_bStopFeetAtGoal: usize = 0x71;
     pub const m_bScaleSpeed: usize = 0x72;
     pub const m_flScale: usize = 0x74;
     pub const m_flMinAngle: usize = 0x78;
-    pub const m_flMaxAngle: usize = 0x7c;
+    pub const m_flMaxAngle: usize = 0x7C;
     pub const m_flSpeedScaleBlending: usize = 0x80;
     pub const m_turnDamping: usize = 0x88;
     pub const m_facingTarget: usize = 0x98;
-    pub const m_hParam: usize = 0x9c;
-    pub const m_flTurnToFaceOffset: usize = 0xa0;
-    pub const m_bTurnToFace: usize = 0xa4;
+    pub const m_hParam: usize = 0x9C;
+    pub const m_flTurnToFaceOffset: usize = 0xA0;
+    pub const m_bTurnToFace: usize = 0xA4;
 }
 
 pub mod CFootAdjustmentUpdateNode {
     pub const m_clips: usize = 0x70;
     pub const m_hBasePoseCacheHandle: usize = 0x88;
-    pub const m_facingTarget: usize = 0x8c;
+    pub const m_facingTarget: usize = 0x8C;
     pub const m_flTurnTimeMin: usize = 0x90;
     pub const m_flTurnTimeMax: usize = 0x94;
     pub const m_flStepHeightMax: usize = 0x98;
-    pub const m_flStepHeightMaxAngle: usize = 0x9c;
-    pub const m_bResetChild: usize = 0xa0;
-    pub const m_bAnimationDriven: usize = 0xa1;
+    pub const m_flStepHeightMaxAngle: usize = 0x9C;
+    pub const m_bResetChild: usize = 0xA0;
+    pub const m_bAnimationDriven: usize = 0xA1;
 }
 
 pub mod CFootCycleDefinition {
     pub const m_vStancePositionMS: usize = 0x0;
-    pub const m_vMidpointPositionMS: usize = 0xc;
+    pub const m_vMidpointPositionMS: usize = 0xC;
     pub const m_flStanceDirectionMS: usize = 0x18;
-    pub const m_vToStrideStartPos: usize = 0x1c;
+    pub const m_vToStrideStartPos: usize = 0x1C;
     pub const m_stanceCycle: usize = 0x28;
-    pub const m_footLiftCycle: usize = 0x2c;
+    pub const m_footLiftCycle: usize = 0x2C;
     pub const m_footOffCycle: usize = 0x30;
     pub const m_footStrikeCycle: usize = 0x34;
     pub const m_footLandCycle: usize = 0x38;
@@ -918,7 +918,7 @@ pub mod CFootDefinition {
     pub const m_flFootLength: usize = 0x30;
     pub const m_flBindPoseDirectionMS: usize = 0x34;
     pub const m_flTraceHeight: usize = 0x38;
-    pub const m_flTraceRadius: usize = 0x3c;
+    pub const m_flTraceRadius: usize = 0x3C;
 }
 
 pub mod CFootFallAnimTag {
@@ -927,19 +927,19 @@ pub mod CFootFallAnimTag {
 
 pub mod CFootLockUpdateNode {
     pub const m_opFixedSettings: usize = 0x68;
-    pub const m_footSettings: usize = 0xd0;
-    pub const m_hipShiftDamping: usize = 0xe8;
-    pub const m_rootHeightDamping: usize = 0xf8;
+    pub const m_footSettings: usize = 0xD0;
+    pub const m_hipShiftDamping: usize = 0xE8;
+    pub const m_rootHeightDamping: usize = 0xF8;
     pub const m_flStrideCurveScale: usize = 0x108;
-    pub const m_flStrideCurveLimitScale: usize = 0x10c;
+    pub const m_flStrideCurveLimitScale: usize = 0x10C;
     pub const m_flStepHeightIncreaseScale: usize = 0x110;
     pub const m_flStepHeightDecreaseScale: usize = 0x114;
     pub const m_flHipShiftScale: usize = 0x118;
-    pub const m_flBlendTime: usize = 0x11c;
+    pub const m_flBlendTime: usize = 0x11C;
     pub const m_flMaxRootHeightOffset: usize = 0x120;
     pub const m_flMinRootHeightOffset: usize = 0x124;
     pub const m_flTiltPlanePitchSpringStrength: usize = 0x128;
-    pub const m_flTiltPlaneRollSpringStrength: usize = 0x12c;
+    pub const m_flTiltPlaneRollSpringStrength: usize = 0x12C;
     pub const m_bApplyFootRotationLimits: usize = 0x130;
     pub const m_bApplyHipShift: usize = 0x131;
     pub const m_bModulateStepHeight: usize = 0x132;
@@ -956,9 +956,9 @@ pub mod CFootMotion {
 
 pub mod CFootPinningUpdateNode {
     pub const m_poseOpFixedData: usize = 0x70;
-    pub const m_eTimingSource: usize = 0xa0;
-    pub const m_params: usize = 0xa8;
-    pub const m_bResetChild: usize = 0xc0;
+    pub const m_eTimingSource: usize = 0xA0;
+    pub const m_params: usize = 0xA8;
+    pub const m_bResetChild: usize = 0xC0;
 }
 
 pub mod CFootPositionMetricEvaluator {
@@ -982,7 +982,7 @@ pub mod CFootTrajectories {
 
 pub mod CFootTrajectory {
     pub const m_vOffset: usize = 0x0;
-    pub const m_flRotationOffset: usize = 0xc;
+    pub const m_flRotationOffset: usize = 0xC;
     pub const m_flProgression: usize = 0x10;
 }
 
@@ -1002,7 +1002,7 @@ pub mod CFutureVelocityMetricEvaluator {
     pub const m_flDistance: usize = 0x50;
     pub const m_flStoppingDistance: usize = 0x54;
     pub const m_flTargetSpeed: usize = 0x58;
-    pub const m_eMode: usize = 0x5c;
+    pub const m_eMode: usize = 0x5C;
 }
 
 pub mod CHitBox {
@@ -1014,8 +1014,8 @@ pub mod CHitBox {
     pub const m_flShapeRadius: usize = 0x30;
     pub const m_nBoneNameHash: usize = 0x34;
     pub const m_nGroupId: usize = 0x38;
-    pub const m_nShapeType: usize = 0x3c;
-    pub const m_bTranslationOnly: usize = 0x3d;
+    pub const m_nShapeType: usize = 0x3C;
+    pub const m_bTranslationOnly: usize = 0x3D;
     pub const m_CRC: usize = 0x40;
     pub const m_cRenderColor: usize = 0x44;
     pub const m_nHitBoxIndex: usize = 0x48;
@@ -1034,13 +1034,13 @@ pub mod CHitBoxSetList {
 
 pub mod CHitReactUpdateNode {
     pub const m_opFixedSettings: usize = 0x68;
-    pub const m_triggerParam: usize = 0xb4;
-    pub const m_hitBoneParam: usize = 0xb6;
-    pub const m_hitOffsetParam: usize = 0xb8;
-    pub const m_hitDirectionParam: usize = 0xba;
-    pub const m_hitStrengthParam: usize = 0xbc;
-    pub const m_flMinDelayBetweenHits: usize = 0xc0;
-    pub const m_bResetChild: usize = 0xc4;
+    pub const m_triggerParam: usize = 0xB4;
+    pub const m_hitBoneParam: usize = 0xB6;
+    pub const m_hitOffsetParam: usize = 0xB8;
+    pub const m_hitDirectionParam: usize = 0xBA;
+    pub const m_hitStrengthParam: usize = 0xBC;
+    pub const m_flMinDelayBetweenHits: usize = 0xC0;
+    pub const m_bResetChild: usize = 0xC4;
 }
 
 pub mod CIntAnimParameter {
@@ -1054,14 +1054,14 @@ pub mod CJiggleBoneUpdateNode {
 }
 
 pub mod CJumpHelperUpdateNode {
-    pub const m_hTargetParam: usize = 0xa8;
-    pub const m_flOriginalJumpMovement: usize = 0xac;
-    pub const m_flOriginalJumpDuration: usize = 0xb8;
-    pub const m_flJumpStartCycle: usize = 0xbc;
-    pub const m_flJumpEndCycle: usize = 0xc0;
-    pub const m_eCorrectionMethod: usize = 0xc4;
-    pub const m_bTranslationAxis: usize = 0xc8;
-    pub const m_bScaleSpeed: usize = 0xcb;
+    pub const m_hTargetParam: usize = 0xA8;
+    pub const m_flOriginalJumpMovement: usize = 0xAC;
+    pub const m_flOriginalJumpDuration: usize = 0xB8;
+    pub const m_flJumpStartCycle: usize = 0xBC;
+    pub const m_flJumpEndCycle: usize = 0xC0;
+    pub const m_eCorrectionMethod: usize = 0xC4;
+    pub const m_bTranslationAxis: usize = 0xC8;
+    pub const m_bScaleSpeed: usize = 0xCB;
 }
 
 pub mod CLODComponentUpdater {
@@ -1069,23 +1069,23 @@ pub mod CLODComponentUpdater {
 }
 
 pub mod CLeanMatrixUpdateNode {
-    pub const m_frameCorners: usize = 0x5c;
+    pub const m_frameCorners: usize = 0x5C;
     pub const m_poses: usize = 0x80;
-    pub const m_damping: usize = 0xa8;
-    pub const m_blendSource: usize = 0xb8;
-    pub const m_paramIndex: usize = 0xbc;
-    pub const m_verticalAxis: usize = 0xc0;
-    pub const m_horizontalAxis: usize = 0xcc;
-    pub const m_hSequence: usize = 0xd8;
-    pub const m_flMaxValue: usize = 0xdc;
-    pub const m_nSequenceMaxFrame: usize = 0xe0;
+    pub const m_damping: usize = 0xA8;
+    pub const m_blendSource: usize = 0xB8;
+    pub const m_paramIndex: usize = 0xBC;
+    pub const m_verticalAxis: usize = 0xC0;
+    pub const m_horizontalAxis: usize = 0xCC;
+    pub const m_hSequence: usize = 0xD8;
+    pub const m_flMaxValue: usize = 0xDC;
+    pub const m_nSequenceMaxFrame: usize = 0xE0;
 }
 
 pub mod CLookAtUpdateNode {
     pub const m_opFixedSettings: usize = 0x70;
     pub const m_target: usize = 0x138;
-    pub const m_paramIndex: usize = 0x13c;
-    pub const m_weightParamIndex: usize = 0x13e;
+    pub const m_paramIndex: usize = 0x13C;
+    pub const m_weightParamIndex: usize = 0x13E;
     pub const m_bResetChild: usize = 0x140;
     pub const m_bLockWhenWaning: usize = 0x141;
 }
@@ -1094,9 +1094,9 @@ pub mod CLookComponentUpdater {
     pub const m_hLookHeading: usize = 0x34;
     pub const m_hLookHeadingVelocity: usize = 0x36;
     pub const m_hLookPitch: usize = 0x38;
-    pub const m_hLookDistance: usize = 0x3a;
-    pub const m_hLookDirection: usize = 0x3c;
-    pub const m_hLookTarget: usize = 0x3e;
+    pub const m_hLookDistance: usize = 0x3A;
+    pub const m_hLookDirection: usize = 0x3C;
+    pub const m_hLookTarget: usize = 0x3E;
     pub const m_hLookTargetWorldSpace: usize = 0x40;
     pub const m_bNetworkLookTarget: usize = 0x42;
 }
@@ -1112,15 +1112,15 @@ pub mod CMaterialDrawDescriptor {
     pub const m_nPrimitiveType: usize = 0x0;
     pub const m_nBaseVertex: usize = 0x4;
     pub const m_nVertexCount: usize = 0x8;
-    pub const m_nStartIndex: usize = 0xc;
+    pub const m_nStartIndex: usize = 0xC;
     pub const m_nIndexCount: usize = 0x10;
     pub const m_flUvDensity: usize = 0x14;
     pub const m_vTintColor: usize = 0x18;
     pub const m_flAlpha: usize = 0x24;
-    pub const m_nFirstMeshlet: usize = 0x2c;
+    pub const m_nFirstMeshlet: usize = 0x2C;
     pub const m_nNumMeshlets: usize = 0x30;
-    pub const m_indexBuffer: usize = 0xb8;
-    pub const m_material: usize = 0xe0;
+    pub const m_indexBuffer: usize = 0xB8;
+    pub const m_material: usize = 0xE0;
 }
 
 pub mod CMeshletDescriptor {
@@ -1144,14 +1144,14 @@ pub mod CModelConfigElement_AttachedModel {
     pub const m_EntityClass: usize = 0x50;
     pub const m_hModel: usize = 0x58;
     pub const m_vOffset: usize = 0x60;
-    pub const m_aAngOffset: usize = 0x6c;
+    pub const m_aAngOffset: usize = 0x6C;
     pub const m_AttachmentName: usize = 0x78;
     pub const m_LocalAttachmentOffsetName: usize = 0x80;
     pub const m_AttachmentType: usize = 0x88;
-    pub const m_bBoneMergeFlex: usize = 0x8c;
-    pub const m_bUserSpecifiedColor: usize = 0x8d;
-    pub const m_bUserSpecifiedMaterialGroup: usize = 0x8e;
-    pub const m_bAcceptParentMaterialDrivenDecals: usize = 0x8f;
+    pub const m_bBoneMergeFlex: usize = 0x8C;
+    pub const m_bUserSpecifiedColor: usize = 0x8D;
+    pub const m_bUserSpecifiedMaterialGroup: usize = 0x8E;
+    pub const m_bAcceptParentMaterialDrivenDecals: usize = 0x8F;
     pub const m_BodygroupOnOtherModels: usize = 0x90;
     pub const m_MaterialGroupOnOtherModels: usize = 0x98;
 }
@@ -1204,8 +1204,8 @@ pub mod CModelConfigList {
 
 pub mod CMoodVData {
     pub const m_sModelName: usize = 0x0;
-    pub const m_nMoodType: usize = 0xe0;
-    pub const m_animationLayers: usize = 0xe8;
+    pub const m_nMoodType: usize = 0xE0;
+    pub const m_animationLayers: usize = 0xE8;
 }
 
 pub mod CMorphBundleData {
@@ -1218,7 +1218,7 @@ pub mod CMorphBundleData {
 pub mod CMorphConstraint {
     pub const m_sTargetMorph: usize = 0x70;
     pub const m_nSlaveChannel: usize = 0x78;
-    pub const m_flMin: usize = 0x7c;
+    pub const m_flMin: usize = 0x7C;
     pub const m_flMax: usize = 0x80;
 }
 
@@ -1256,7 +1256,7 @@ pub mod CMotionGraph {
     pub const m_tags: usize = 0x28;
     pub const m_pRootNode: usize = 0x40;
     pub const m_nParameterCount: usize = 0x48;
-    pub const m_nConfigStartIndex: usize = 0x4c;
+    pub const m_nConfigStartIndex: usize = 0x4C;
     pub const m_nConfigCount: usize = 0x50;
     pub const m_bLoop: usize = 0x54;
 }
@@ -1266,14 +1266,14 @@ pub mod CMotionGraphConfig {
     pub const m_flDuration: usize = 0x10;
     pub const m_nMotionIndex: usize = 0x14;
     pub const m_nSampleStart: usize = 0x18;
-    pub const m_nSampleCount: usize = 0x1c;
+    pub const m_nSampleCount: usize = 0x1C;
 }
 
 pub mod CMotionGraphGroup {
     pub const m_searchDB: usize = 0x0;
-    pub const m_motionGraphs: usize = 0xb8;
-    pub const m_motionGraphConfigs: usize = 0xd0;
-    pub const m_sampleToConfig: usize = 0xe8;
+    pub const m_motionGraphs: usize = 0xB8;
+    pub const m_motionGraphConfigs: usize = 0xD0;
+    pub const m_sampleToConfig: usize = 0xE8;
     pub const m_hIsActiveScript: usize = 0x100;
 }
 
@@ -1285,23 +1285,23 @@ pub mod CMotionMatchingUpdateNode {
     pub const m_dataSet: usize = 0x58;
     pub const m_metrics: usize = 0x78;
     pub const m_weights: usize = 0x90;
-    pub const m_bSearchEveryTick: usize = 0xe0;
-    pub const m_flSearchInterval: usize = 0xe4;
-    pub const m_bSearchWhenClipEnds: usize = 0xe8;
-    pub const m_bSearchWhenGoalChanges: usize = 0xe9;
-    pub const m_blendCurve: usize = 0xec;
-    pub const m_flSampleRate: usize = 0xf4;
-    pub const m_flBlendTime: usize = 0xf8;
-    pub const m_bLockClipWhenWaning: usize = 0xfc;
+    pub const m_bSearchEveryTick: usize = 0xE0;
+    pub const m_flSearchInterval: usize = 0xE4;
+    pub const m_bSearchWhenClipEnds: usize = 0xE8;
+    pub const m_bSearchWhenGoalChanges: usize = 0xE9;
+    pub const m_blendCurve: usize = 0xEC;
+    pub const m_flSampleRate: usize = 0xF4;
+    pub const m_flBlendTime: usize = 0xF8;
+    pub const m_bLockClipWhenWaning: usize = 0xFC;
     pub const m_flSelectionThreshold: usize = 0x100;
     pub const m_flReselectionTimeWindow: usize = 0x104;
     pub const m_bEnableRotationCorrection: usize = 0x108;
     pub const m_bGoalAssist: usize = 0x109;
-    pub const m_flGoalAssistDistance: usize = 0x10c;
+    pub const m_flGoalAssistDistance: usize = 0x10C;
     pub const m_flGoalAssistTolerance: usize = 0x110;
     pub const m_distanceScale_Damping: usize = 0x118;
     pub const m_flDistanceScale_OuterRadius: usize = 0x128;
-    pub const m_flDistanceScale_InnerRadius: usize = 0x12c;
+    pub const m_flDistanceScale_InnerRadius: usize = 0x12C;
     pub const m_flDistanceScale_MaxScale: usize = 0x130;
     pub const m_flDistanceScale_MinScale: usize = 0x134;
     pub const m_bEnableDistanceScaling: usize = 0x138;
@@ -1311,7 +1311,7 @@ pub mod CMotionMetricEvaluator {
     pub const m_means: usize = 0x18;
     pub const m_standardDeviations: usize = 0x30;
     pub const m_flWeight: usize = 0x48;
-    pub const m_nDimensionStartIndex: usize = 0x4c;
+    pub const m_nDimensionStartIndex: usize = 0x4C;
 }
 
 pub mod CMotionNode {
@@ -1333,7 +1333,7 @@ pub mod CMotionNodeSequence {
 pub mod CMotionSearchDB {
     pub const m_rootNode: usize = 0x0;
     pub const m_residualQuantizer: usize = 0x80;
-    pub const m_codeIndices: usize = 0xa0;
+    pub const m_codeIndices: usize = 0xA0;
 }
 
 pub mod CMotionSearchNode {
@@ -1349,7 +1349,7 @@ pub mod CMovementComponentUpdater {
     pub const m_motors: usize = 0x48;
     pub const m_facingDamping: usize = 0x60;
     pub const m_eDefaultFacingMode: usize = 0x70;
-    pub const m_nDefaultMotorIndex: usize = 0x7c;
+    pub const m_nDefaultMotorIndex: usize = 0x7C;
     pub const m_bMoveVarsDisabled: usize = 0x80;
     pub const m_bNetworkPath: usize = 0x81;
     pub const m_bNetworkFacing: usize = 0x82;
@@ -1367,7 +1367,7 @@ pub mod CMoverUpdateNode {
     pub const m_hMoveVecParam: usize = 0x84;
     pub const m_hMoveHeadingParam: usize = 0x86;
     pub const m_hTurnToFaceParam: usize = 0x88;
-    pub const m_flTurnToFaceOffset: usize = 0x8c;
+    pub const m_flTurnToFaceOffset: usize = 0x8C;
     pub const m_flTurnToFaceLimit: usize = 0x90;
     pub const m_bAdditive: usize = 0x94;
     pub const m_bApplyMovement: usize = 0x95;
@@ -1399,20 +1399,20 @@ pub mod CPathAnimMotorUpdaterBase {
 
 pub mod CPathHelperUpdateNode {
     pub const m_flStoppingRadius: usize = 0x68;
-    pub const m_flStoppingSpeedScale: usize = 0x6c;
+    pub const m_flStoppingSpeedScale: usize = 0x6C;
 }
 
 pub mod CPathMetricEvaluator {
     pub const m_pathTimeSamples: usize = 0x50;
     pub const m_flDistance: usize = 0x68;
-    pub const m_bExtrapolateMovement: usize = 0x6c;
+    pub const m_bExtrapolateMovement: usize = 0x6C;
     pub const m_flMinExtrapolationSpeed: usize = 0x70;
 }
 
 pub mod CPhysSurfaceProperties {
     pub const m_name: usize = 0x0;
     pub const m_nameHash: usize = 0x8;
-    pub const m_baseNameHash: usize = 0xc;
+    pub const m_baseNameHash: usize = 0xC;
     pub const m_bHidden: usize = 0x18;
     pub const m_description: usize = 0x20;
     pub const m_physics: usize = 0x28;
@@ -1424,18 +1424,18 @@ pub mod CPhysSurfacePropertiesAudio {
     pub const m_reflectivity: usize = 0x0;
     pub const m_hardnessFactor: usize = 0x4;
     pub const m_roughnessFactor: usize = 0x8;
-    pub const m_roughThreshold: usize = 0xc;
+    pub const m_roughThreshold: usize = 0xC;
     pub const m_hardThreshold: usize = 0x10;
     pub const m_hardVelocityThreshold: usize = 0x14;
     pub const m_flStaticImpactVolume: usize = 0x18;
-    pub const m_flOcclusionFactor: usize = 0x1c;
+    pub const m_flOcclusionFactor: usize = 0x1C;
 }
 
 pub mod CPhysSurfacePropertiesPhysics {
     pub const m_friction: usize = 0x0;
     pub const m_elasticity: usize = 0x4;
     pub const m_density: usize = 0x8;
-    pub const m_thickness: usize = 0xc;
+    pub const m_thickness: usize = 0xC;
     pub const m_softContactFrequency: usize = 0x10;
     pub const m_softContactDampingRatio: usize = 0x14;
     pub const m_wheelDrag: usize = 0x18;
@@ -1454,7 +1454,7 @@ pub mod CPhysSurfacePropertiesSoundNames {
 
 pub mod CPlayerInputAnimMotorUpdater {
     pub const m_sampleTimes: usize = 0x20;
-    pub const m_flSpringConstant: usize = 0x3c;
+    pub const m_flSpringConstant: usize = 0x3C;
     pub const m_flAnticipationDistance: usize = 0x40;
     pub const m_hAnticipationPosParam: usize = 0x44;
     pub const m_hAnticipationHeadingParam: usize = 0x46;
@@ -1478,11 +1478,11 @@ pub mod CQuaternionAnimParameter {
 
 pub mod CRagdollAnimTag {
     pub const m_nPoseControl: usize = 0x38;
-    pub const m_flFrequency: usize = 0x3c;
+    pub const m_flFrequency: usize = 0x3C;
     pub const m_flDampingRatio: usize = 0x40;
     pub const m_flDecayDuration: usize = 0x44;
     pub const m_flDecayBias: usize = 0x48;
-    pub const m_bDestroy: usize = 0x4c;
+    pub const m_bDestroy: usize = 0x4C;
 }
 
 pub mod CRagdollComponentUpdater {
@@ -1497,7 +1497,7 @@ pub mod CRagdollComponentUpdater {
 
 pub mod CRagdollUpdateNode {
     pub const m_nWeightListIndex: usize = 0x68;
-    pub const m_poseControlMethod: usize = 0x6c;
+    pub const m_poseControlMethod: usize = 0x6C;
 }
 
 pub mod CRenderBufferBinding {
@@ -1507,8 +1507,8 @@ pub mod CRenderBufferBinding {
 
 pub mod CRenderMesh {
     pub const m_sceneObjects: usize = 0x10;
-    pub const m_constraints: usize = 0xa0;
-    pub const m_skeleton: usize = 0xb8;
+    pub const m_constraints: usize = 0xA0;
+    pub const m_skeleton: usize = 0xB8;
 }
 
 pub mod CRenderSkeleton {
@@ -1519,7 +1519,7 @@ pub mod CRenderSkeleton {
 
 pub mod CSceneObjectData {
     pub const m_vMinBounds: usize = 0x0;
-    pub const m_vMaxBounds: usize = 0xc;
+    pub const m_vMaxBounds: usize = 0xC;
     pub const m_drawCalls: usize = 0x18;
     pub const m_drawBounds: usize = 0x30;
     pub const m_meshlets: usize = 0x48;
@@ -1529,19 +1529,19 @@ pub mod CSceneObjectData {
 pub mod CSelectorUpdateNode {
     pub const m_children: usize = 0x58;
     pub const m_tags: usize = 0x70;
-    pub const m_blendCurve: usize = 0x8c;
+    pub const m_blendCurve: usize = 0x8C;
     pub const m_flBlendTime: usize = 0x94;
-    pub const m_hParameter: usize = 0x9c;
-    pub const m_eTagBehavior: usize = 0xa0;
-    pub const m_bResetOnChange: usize = 0xa4;
-    pub const m_bSyncCyclesOnChange: usize = 0xa5;
+    pub const m_hParameter: usize = 0x9C;
+    pub const m_eTagBehavior: usize = 0xA0;
+    pub const m_bResetOnChange: usize = 0xA4;
+    pub const m_bSyncCyclesOnChange: usize = 0xA5;
 }
 
 pub mod CSeqAutoLayer {
     pub const m_nLocalReference: usize = 0x0;
     pub const m_nLocalPose: usize = 0x2;
     pub const m_flags: usize = 0x4;
-    pub const m_start: usize = 0xc;
+    pub const m_start: usize = 0xC;
     pub const m_peak: usize = 0x10;
     pub const m_tail: usize = 0x14;
     pub const m_end: usize = 0x18;
@@ -1572,8 +1572,8 @@ pub mod CSeqCmdLayer {
     pub const m_nLocalBonemask: usize = 0x4;
     pub const m_nDstResult: usize = 0x6;
     pub const m_nSrcResult: usize = 0x8;
-    pub const m_bSpline: usize = 0xa;
-    pub const m_flVar1: usize = 0xc;
+    pub const m_bSpline: usize = 0xA;
+    pub const m_flVar1: usize = 0xC;
     pub const m_flVar2: usize = 0x10;
     pub const m_nLineNumber: usize = 0x14;
 }
@@ -1581,12 +1581,12 @@ pub mod CSeqCmdLayer {
 pub mod CSeqCmdSeqDesc {
     pub const m_sName: usize = 0x0;
     pub const m_flags: usize = 0x10;
-    pub const m_transition: usize = 0x1c;
+    pub const m_transition: usize = 0x1C;
     pub const m_nFrameRangeSequence: usize = 0x24;
     pub const m_nFrameCount: usize = 0x26;
     pub const m_flFPS: usize = 0x28;
-    pub const m_nSubCycles: usize = 0x2c;
-    pub const m_numLocalResults: usize = 0x2e;
+    pub const m_nSubCycles: usize = 0x2C;
+    pub const m_numLocalResults: usize = 0x2E;
     pub const m_cmdLayerArray: usize = 0x30;
     pub const m_eventArray: usize = 0x48;
     pub const m_activityArray: usize = 0x60;
@@ -1597,7 +1597,7 @@ pub mod CSeqIKLock {
     pub const m_flPosWeight: usize = 0x0;
     pub const m_flAngleWeight: usize = 0x4;
     pub const m_nLocalBone: usize = 0x8;
-    pub const m_bBonesOrientedAlongPositiveX: usize = 0xa;
+    pub const m_bBonesOrientedAlongPositiveX: usize = 0xA;
 }
 
 pub mod CSeqMultiFetch {
@@ -1625,7 +1625,7 @@ pub mod CSeqPoseParamDesc {
     pub const m_flStart: usize = 0x10;
     pub const m_flEnd: usize = 0x14;
     pub const m_flLoop: usize = 0x18;
-    pub const m_bLooping: usize = 0x1c;
+    pub const m_bLooping: usize = 0x1C;
 }
 
 pub mod CSeqPoseSetting {
@@ -1645,11 +1645,11 @@ pub mod CSeqS1SeqDesc {
     pub const m_fetch: usize = 0x20;
     pub const m_nLocalWeightlist: usize = 0x88;
     pub const m_autoLayerArray: usize = 0x90;
-    pub const m_IKLockArray: usize = 0xa8;
-    pub const m_transition: usize = 0xc0;
-    pub const m_SequenceKeys: usize = 0xc8;
-    pub const m_LegacyKeyValueText: usize = 0xd8;
-    pub const m_activityArray: usize = 0xe8;
+    pub const m_IKLockArray: usize = 0xA8;
+    pub const m_transition: usize = 0xC0;
+    pub const m_SequenceKeys: usize = 0xC8;
+    pub const m_LegacyKeyValueText: usize = 0xD8;
+    pub const m_activityArray: usize = 0xE8;
     pub const m_footMotion: usize = 0x100;
 }
 
@@ -1672,13 +1672,13 @@ pub mod CSeqSeqDescFlag {
     pub const m_bLegacyWorldspace: usize = 0x7;
     pub const m_bLegacyCyclepose: usize = 0x8;
     pub const m_bLegacyRealtime: usize = 0x9;
-    pub const m_bModelDoc: usize = 0xa;
+    pub const m_bModelDoc: usize = 0xA;
 }
 
 pub mod CSeqSynthAnimDesc {
     pub const m_sName: usize = 0x0;
     pub const m_flags: usize = 0x10;
-    pub const m_transition: usize = 0x1c;
+    pub const m_transition: usize = 0x1C;
     pub const m_nLocalBaseReference: usize = 0x24;
     pub const m_nLocalBoneMask: usize = 0x26;
     pub const m_activityArray: usize = 0x28;
@@ -1701,11 +1701,11 @@ pub mod CSequenceGroupData {
     pub const m_localMultiSeqDescArray: usize = 0x58;
     pub const m_localSynthAnimDescArray: usize = 0x70;
     pub const m_localCmdSeqDescArray: usize = 0x88;
-    pub const m_localBoneMaskArray: usize = 0xa0;
-    pub const m_localScaleSetArray: usize = 0xb8;
-    pub const m_localBoneNameArray: usize = 0xd0;
-    pub const m_localNodeName: usize = 0xe8;
-    pub const m_localPoseParamArray: usize = 0xf8;
+    pub const m_localBoneMaskArray: usize = 0xA0;
+    pub const m_localScaleSetArray: usize = 0xB8;
+    pub const m_localBoneNameArray: usize = 0xD0;
+    pub const m_localNodeName: usize = 0xE8;
+    pub const m_localPoseParamArray: usize = 0xF8;
     pub const m_keyValues: usize = 0x110;
     pub const m_localIKAutoplayLockArray: usize = 0x120;
 }
@@ -1715,18 +1715,18 @@ pub mod CSequenceUpdateNode {
     pub const m_tags: usize = 0x78;
     pub const m_hSequence: usize = 0x94;
     pub const m_playbackSpeed: usize = 0x98;
-    pub const m_duration: usize = 0x9c;
-    pub const m_bLoop: usize = 0xa0;
+    pub const m_duration: usize = 0x9C;
+    pub const m_bLoop: usize = 0xA0;
 }
 
 pub mod CSetFacingUpdateNode {
     pub const m_facingMode: usize = 0x68;
-    pub const m_bResetChild: usize = 0x6c;
+    pub const m_bResetChild: usize = 0x6C;
 }
 
 pub mod CSetParameterActionUpdater {
     pub const m_hParam: usize = 0x18;
-    pub const m_value: usize = 0x1a;
+    pub const m_value: usize = 0x1A;
 }
 
 pub mod CSingleFrameUpdateNode {
@@ -1743,9 +1743,9 @@ pub mod CSkeletalInputUpdateNode {
 pub mod CSlopeComponentUpdater {
     pub const m_flTraceDistance: usize = 0x34;
     pub const m_hSlopeAngle: usize = 0x38;
-    pub const m_hSlopeAngleFront: usize = 0x3a;
-    pub const m_hSlopeAngleSide: usize = 0x3c;
-    pub const m_hSlopeHeading: usize = 0x3e;
+    pub const m_hSlopeAngleFront: usize = 0x3A;
+    pub const m_hSlopeAngleSide: usize = 0x3C;
+    pub const m_hSlopeHeading: usize = 0x3E;
     pub const m_hSlopeNormal: usize = 0x40;
     pub const m_hSlopeNormal_WorldSpace: usize = 0x42;
 }
@@ -1790,10 +1790,10 @@ pub mod CStateMachineComponentUpdater {
 
 pub mod CStateMachineUpdateNode {
     pub const m_stateMachine: usize = 0x68;
-    pub const m_stateData: usize = 0xc0;
-    pub const m_transitionData: usize = 0xd8;
-    pub const m_bBlockWaningTags: usize = 0xf4;
-    pub const m_bLockStateWhenWaning: usize = 0xf5;
+    pub const m_stateData: usize = 0xC0;
+    pub const m_transitionData: usize = 0xD8;
+    pub const m_bBlockWaningTags: usize = 0xF4;
+    pub const m_bLockStateWhenWaning: usize = 0xF5;
 }
 
 pub mod CStateNodeStateData {
@@ -1823,7 +1823,7 @@ pub mod CStateUpdateData {
 pub mod CStaticPoseCache {
     pub const m_poses: usize = 0x10;
     pub const m_nBoneCount: usize = 0x28;
-    pub const m_nMorphCount: usize = 0x2c;
+    pub const m_nMorphCount: usize = 0x2C;
 }
 
 pub mod CStepsRemainingMetricEvaluator {
@@ -1832,7 +1832,7 @@ pub mod CStepsRemainingMetricEvaluator {
 }
 
 pub mod CStopAtGoalUpdateNode {
-    pub const m_flOuterRadius: usize = 0x6c;
+    pub const m_flOuterRadius: usize = 0x6C;
     pub const m_flInnerRadius: usize = 0x70;
     pub const m_flMaxScale: usize = 0x74;
     pub const m_flMinScale: usize = 0x78;
@@ -1840,7 +1840,7 @@ pub mod CStopAtGoalUpdateNode {
 }
 
 pub mod CSubtractUpdateNode {
-    pub const m_footMotionTiming: usize = 0x8c;
+    pub const m_footMotionTiming: usize = 0x8C;
     pub const m_bApplyToFootMotion: usize = 0x90;
     pub const m_bApplyChannelsSeparately: usize = 0x91;
     pub const m_bUseModelSpace: usize = 0x92;
@@ -1855,12 +1855,12 @@ pub mod CTimeRemainingMetricEvaluator {
     pub const m_bMatchByTimeRemaining: usize = 0x50;
     pub const m_flMaxTimeRemaining: usize = 0x54;
     pub const m_bFilterByTimeRemaining: usize = 0x58;
-    pub const m_flMinTimeRemaining: usize = 0x5c;
+    pub const m_flMinTimeRemaining: usize = 0x5C;
 }
 
 pub mod CToggleComponentActionUpdater {
     pub const m_componentID: usize = 0x18;
-    pub const m_bSetEnabled: usize = 0x1c;
+    pub const m_bSetEnabled: usize = 0x1C;
 }
 
 pub mod CTransitionUpdateData {
@@ -1870,11 +1870,11 @@ pub mod CTransitionUpdateData {
 }
 
 pub mod CTurnHelperUpdateNode {
-    pub const m_facingTarget: usize = 0x6c;
+    pub const m_facingTarget: usize = 0x6C;
     pub const m_turnStartTimeOffset: usize = 0x70;
     pub const m_turnDuration: usize = 0x74;
     pub const m_bMatchChildDuration: usize = 0x78;
-    pub const m_manualTurnOffset: usize = 0x7c;
+    pub const m_manualTurnOffset: usize = 0x7C;
     pub const m_bUseManualTurnOffset: usize = 0x80;
 }
 
@@ -1900,9 +1900,9 @@ pub mod CVRInputComponentUpdater {
     pub const m_FingerCurl_Thumb: usize = 0x34;
     pub const m_FingerCurl_Index: usize = 0x36;
     pub const m_FingerCurl_Middle: usize = 0x38;
-    pub const m_FingerCurl_Ring: usize = 0x3a;
-    pub const m_FingerCurl_Pinky: usize = 0x3c;
-    pub const m_FingerSplay_Thumb_Index: usize = 0x3e;
+    pub const m_FingerCurl_Ring: usize = 0x3A;
+    pub const m_FingerCurl_Pinky: usize = 0x3C;
+    pub const m_FingerSplay_Thumb_Index: usize = 0x3E;
     pub const m_FingerSplay_Index_Middle: usize = 0x40;
     pub const m_FingerSplay_Middle_Ring: usize = 0x42;
     pub const m_FingerSplay_Ring_Pinky: usize = 0x44;
@@ -1910,13 +1910,13 @@ pub mod CVRInputComponentUpdater {
 
 pub mod CVectorAnimParameter {
     pub const m_defaultValue: usize = 0x60;
-    pub const m_bInterpolate: usize = 0x6c;
+    pub const m_bInterpolate: usize = 0x6C;
 }
 
 pub mod CVectorQuantizer {
     pub const m_centroidVectors: usize = 0x0;
     pub const m_nCentroids: usize = 0x18;
-    pub const m_nDimensions: usize = 0x1c;
+    pub const m_nDimensions: usize = 0x1C;
 }
 
 pub mod CVirtualAnimParameter {
@@ -1934,7 +1934,7 @@ pub mod CVrSkeletalInputSettings {
 }
 
 pub mod CWayPointHelperUpdateNode {
-    pub const m_flStartCycle: usize = 0x6c;
+    pub const m_flStartCycle: usize = 0x6C;
     pub const m_flEndCycle: usize = 0x70;
     pub const m_bOnlyGoals: usize = 0x74;
     pub const m_bPreventOvershoot: usize = 0x75;
@@ -1953,7 +1953,7 @@ pub mod ChainToSolveData_t {
     pub const m_SolverSettings: usize = 0x4;
     pub const m_TargetSettings: usize = 0x10;
     pub const m_DebugSetting: usize = 0x38;
-    pub const m_flDebugNormalizedValue: usize = 0x3c;
+    pub const m_flDebugNormalizedValue: usize = 0x3C;
     pub const m_vDebugOffset: usize = 0x40;
 }
 
@@ -1966,9 +1966,9 @@ pub mod FingerBone_t {
     pub const m_boneIndex: usize = 0x0;
     pub const m_hingeAxis: usize = 0x4;
     pub const m_vCapsulePos1: usize = 0x10;
-    pub const m_vCapsulePos2: usize = 0x1c;
+    pub const m_vCapsulePos2: usize = 0x1C;
     pub const m_flMinAngle: usize = 0x28;
-    pub const m_flMaxAngle: usize = 0x2c;
+    pub const m_flMaxAngle: usize = 0x2C;
     pub const m_flRadius: usize = 0x30;
 }
 
@@ -1976,9 +1976,9 @@ pub mod FingerChain_t {
     pub const m_targets: usize = 0x0;
     pub const m_bones: usize = 0x18;
     pub const m_vTipOffset: usize = 0x30;
-    pub const m_vSplayHingeAxis: usize = 0x3c;
+    pub const m_vSplayHingeAxis: usize = 0x3C;
     pub const m_tipParentBoneIndex: usize = 0x48;
-    pub const m_metacarpalBoneIndex: usize = 0x4c;
+    pub const m_metacarpalBoneIndex: usize = 0x4C;
     pub const m_flSplayMinAngle: usize = 0x50;
     pub const m_flSplayMaxAngle: usize = 0x54;
     pub const m_flFingerScaleRatio: usize = 0x58;
@@ -2002,11 +2002,11 @@ pub mod FootFixedData_t {
     pub const m_nTargetBoneIndex: usize = 0x20;
     pub const m_nAnkleBoneIndex: usize = 0x24;
     pub const m_nIKAnchorBoneIndex: usize = 0x28;
-    pub const m_ikChainIndex: usize = 0x2c;
+    pub const m_ikChainIndex: usize = 0x2C;
     pub const m_flMaxIKLength: usize = 0x30;
     pub const m_nFootIndex: usize = 0x34;
     pub const m_nTagIndex: usize = 0x38;
-    pub const m_flMaxRotationLeft: usize = 0x3c;
+    pub const m_flMaxRotationLeft: usize = 0x3C;
     pub const m_flMaxRotationRight: usize = 0x40;
 }
 
@@ -2016,29 +2016,29 @@ pub mod FootFixedSettings {
     pub const m_flFootBaseLength: usize = 0x20;
     pub const m_flMaxRotationLeft: usize = 0x24;
     pub const m_flMaxRotationRight: usize = 0x28;
-    pub const m_footstepLandedTagIndex: usize = 0x2c;
+    pub const m_footstepLandedTagIndex: usize = 0x2C;
     pub const m_bEnableTracing: usize = 0x30;
     pub const m_flTraceAngleBlend: usize = 0x34;
     pub const m_nDisableTagIndex: usize = 0x38;
-    pub const m_nFootIndex: usize = 0x3c;
+    pub const m_nFootIndex: usize = 0x3C;
 }
 
 pub mod FootLockPoseOpFixedSettings {
     pub const m_footInfo: usize = 0x0;
     pub const m_hipDampingSettings: usize = 0x18;
     pub const m_nHipBoneIndex: usize = 0x28;
-    pub const m_ikSolverType: usize = 0x2c;
+    pub const m_ikSolverType: usize = 0x2C;
     pub const m_bApplyTilt: usize = 0x30;
     pub const m_bApplyHipDrop: usize = 0x31;
     pub const m_bAlwaysUseFallbackHinge: usize = 0x32;
     pub const m_bApplyFootRotationLimits: usize = 0x33;
     pub const m_bApplyLegTwistLimits: usize = 0x34;
     pub const m_flMaxFootHeight: usize = 0x38;
-    pub const m_flExtensionScale: usize = 0x3c;
+    pub const m_flExtensionScale: usize = 0x3C;
     pub const m_flMaxLegTwist: usize = 0x40;
     pub const m_bEnableLockBreaking: usize = 0x44;
     pub const m_flLockBreakTolerance: usize = 0x48;
-    pub const m_flLockBlendTime: usize = 0x4c;
+    pub const m_flLockBlendTime: usize = 0x4C;
     pub const m_bEnableStretching: usize = 0x50;
     pub const m_flMaxStretchAmount: usize = 0x54;
     pub const m_flStretchExtensionScale: usize = 0x58;
@@ -2047,7 +2047,7 @@ pub mod FootLockPoseOpFixedSettings {
 pub mod FootPinningPoseOpFixedData_t {
     pub const m_footInfo: usize = 0x0;
     pub const m_flBlendTime: usize = 0x18;
-    pub const m_flLockBreakDistance: usize = 0x1c;
+    pub const m_flLockBreakDistance: usize = 0x1C;
     pub const m_flMaxLegTwist: usize = 0x20;
     pub const m_nHipBoneIndex: usize = 0x24;
     pub const m_bApplyLegTwistLimits: usize = 0x28;
@@ -2057,7 +2057,7 @@ pub mod FootPinningPoseOpFixedData_t {
 pub mod FootStepTrigger {
     pub const m_tags: usize = 0x0;
     pub const m_nFootIndex: usize = 0x18;
-    pub const m_triggerPhase: usize = 0x1c;
+    pub const m_triggerPhase: usize = 0x1C;
 }
 
 pub mod HSequence {
@@ -2068,19 +2068,19 @@ pub mod HitReactFixedSettings_t {
     pub const m_nWeightListIndex: usize = 0x0;
     pub const m_nEffectedBoneCount: usize = 0x4;
     pub const m_flMaxImpactForce: usize = 0x8;
-    pub const m_flMinImpactForce: usize = 0xc;
+    pub const m_flMinImpactForce: usize = 0xC;
     pub const m_flWhipImpactScale: usize = 0x10;
     pub const m_flCounterRotationScale: usize = 0x14;
     pub const m_flDistanceFadeScale: usize = 0x18;
-    pub const m_flPropagationScale: usize = 0x1c;
+    pub const m_flPropagationScale: usize = 0x1C;
     pub const m_flWhipDelay: usize = 0x20;
     pub const m_flSpringStrength: usize = 0x24;
     pub const m_flWhipSpringStrength: usize = 0x28;
-    pub const m_flMaxAngleRadians: usize = 0x2c;
+    pub const m_flMaxAngleRadians: usize = 0x2C;
     pub const m_nHipBoneIndex: usize = 0x30;
     pub const m_flHipBoneTranslationScale: usize = 0x34;
     pub const m_flHipDipSpringStrength: usize = 0x38;
-    pub const m_flHipDipImpactScale: usize = 0x3c;
+    pub const m_flHipDipImpactScale: usize = 0x3C;
     pub const m_flHipDipDelay: usize = 0x40;
 }
 
@@ -2105,7 +2105,7 @@ pub mod IKTargetSettings_t {
     pub const m_TargetSource: usize = 0x0;
     pub const m_Bone: usize = 0x8;
     pub const m_AnimgraphParameterNamePosition: usize = 0x18;
-    pub const m_AnimgraphParameterNameOrientation: usize = 0x1c;
+    pub const m_AnimgraphParameterNameOrientation: usize = 0x1C;
     pub const m_TargetCoordSystem: usize = 0x20;
 }
 
@@ -2117,9 +2117,9 @@ pub mod JiggleBoneSettings_t {
     pub const m_nBoneIndex: usize = 0x0;
     pub const m_flSpringStrength: usize = 0x4;
     pub const m_flMaxTimeStep: usize = 0x8;
-    pub const m_flDamping: usize = 0xc;
+    pub const m_flDamping: usize = 0xC;
     pub const m_vBoundsMaxLS: usize = 0x10;
-    pub const m_vBoundsMinLS: usize = 0x1c;
+    pub const m_vBoundsMinLS: usize = 0x1C;
     pub const m_eSimSpace: usize = 0x28;
 }
 
@@ -2132,14 +2132,14 @@ pub mod LookAtOpFixedSettings_t {
     pub const m_attachment: usize = 0x0;
     pub const m_damping: usize = 0x80;
     pub const m_bones: usize = 0x90;
-    pub const m_flYawLimit: usize = 0xa8;
-    pub const m_flPitchLimit: usize = 0xac;
-    pub const m_flHysteresisInnerAngle: usize = 0xb0;
-    pub const m_flHysteresisOuterAngle: usize = 0xb4;
-    pub const m_bRotateYawForward: usize = 0xb8;
-    pub const m_bMaintainUpDirection: usize = 0xb9;
-    pub const m_bTargetIsPosition: usize = 0xba;
-    pub const m_bUseHysteresis: usize = 0xbb;
+    pub const m_flYawLimit: usize = 0xA8;
+    pub const m_flPitchLimit: usize = 0xAC;
+    pub const m_flHysteresisInnerAngle: usize = 0xB0;
+    pub const m_flHysteresisOuterAngle: usize = 0xB4;
+    pub const m_bRotateYawForward: usize = 0xB8;
+    pub const m_bMaintainUpDirection: usize = 0xB9;
+    pub const m_bTargetIsPosition: usize = 0xBA;
+    pub const m_bUseHysteresis: usize = 0xBB;
 }
 
 pub mod MaterialGroup_t {
@@ -2179,9 +2179,9 @@ pub mod MoodAnimationLayer_t {
     pub const m_flIntensity: usize = 0x28;
     pub const m_flDurationScale: usize = 0x30;
     pub const m_bScaleWithInts: usize = 0x38;
-    pub const m_flNextStart: usize = 0x3c;
+    pub const m_flNextStart: usize = 0x3C;
     pub const m_flStartOffset: usize = 0x44;
-    pub const m_flEndOffset: usize = 0x4c;
+    pub const m_flEndOffset: usize = 0x4C;
     pub const m_flFadeIn: usize = 0x54;
     pub const m_flFadeOut: usize = 0x58;
 }
@@ -2213,8 +2213,8 @@ pub mod ParamSpanSample_t {
 pub mod ParamSpan_t {
     pub const m_samples: usize = 0x0;
     pub const m_hParam: usize = 0x18;
-    pub const m_eParamType: usize = 0x1a;
-    pub const m_flStartCycle: usize = 0x1c;
+    pub const m_eParamType: usize = 0x1A;
+    pub const m_flStartCycle: usize = 0x1C;
     pub const m_flEndCycle: usize = 0x20;
 }
 
@@ -2229,10 +2229,10 @@ pub mod PermModelData_t {
     pub const m_ExtParts: usize = 0x60;
     pub const m_refMeshes: usize = 0x78;
     pub const m_refMeshGroupMasks: usize = 0x90;
-    pub const m_refPhysGroupMasks: usize = 0xa8;
-    pub const m_refLODGroupMasks: usize = 0xc0;
-    pub const m_lodGroupSwitchDistances: usize = 0xd8;
-    pub const m_refPhysicsData: usize = 0xf0;
+    pub const m_refPhysGroupMasks: usize = 0xA8;
+    pub const m_refLODGroupMasks: usize = 0xC0;
+    pub const m_lodGroupSwitchDistances: usize = 0xD8;
+    pub const m_refPhysicsData: usize = 0xF0;
     pub const m_refPhysicsHitboxData: usize = 0x108;
     pub const m_refAnimGroups: usize = 0x120;
     pub const m_refSequenceGroups: usize = 0x138;
@@ -2246,7 +2246,7 @@ pub mod PermModelData_t {
     pub const m_pModelConfigList: usize = 0x278;
     pub const m_BodyGroupsHiddenInTools: usize = 0x280;
     pub const m_refAnimIncludeModels: usize = 0x298;
-    pub const m_AnimatedMaterialAttributes: usize = 0x2b0;
+    pub const m_AnimatedMaterialAttributes: usize = 0x2B0;
 }
 
 pub mod PermModelExtPart_t {
@@ -2260,7 +2260,7 @@ pub mod PermModelInfo_t {
     pub const m_nFlags: usize = 0x0;
     pub const m_vHullMin: usize = 0x4;
     pub const m_vHullMax: usize = 0x10;
-    pub const m_vViewMin: usize = 0x1c;
+    pub const m_vViewMin: usize = 0x1C;
     pub const m_vViewMax: usize = 0x28;
     pub const m_flMass: usize = 0x34;
     pub const m_vEyePosition: usize = 0x38;
@@ -2304,7 +2304,7 @@ pub mod SkeletalInputOpFixedSettings_t {
     pub const m_outerKnuckle1: usize = 0x30;
     pub const m_outerKnuckle2: usize = 0x34;
     pub const m_eHand: usize = 0x38;
-    pub const m_eMotionRange: usize = 0x3c;
+    pub const m_eMotionRange: usize = 0x3C;
     pub const m_eTransformSource: usize = 0x40;
     pub const m_bEnableIK: usize = 0x44;
     pub const m_bEnableCollision: usize = 0x45;
@@ -2312,7 +2312,7 @@ pub mod SkeletalInputOpFixedSettings_t {
 
 pub mod SkeletonBoneBounds_t {
     pub const m_vecCenter: usize = 0x0;
-    pub const m_vecSize: usize = 0xc;
+    pub const m_vecSize: usize = 0xC;
 }
 
 pub mod SolveIKChainPoseOpFixedSettings_t {
@@ -2322,7 +2322,7 @@ pub mod SolveIKChainPoseOpFixedSettings_t {
 
 pub mod StanceInfo_t {
     pub const m_vPosition: usize = 0x0;
-    pub const m_flDirection: usize = 0xc;
+    pub const m_flDirection: usize = 0xC;
 }
 
 pub mod TagSpan_t {
@@ -2340,7 +2340,7 @@ pub mod TwoBoneIKSettings_t {
     pub const m_endEffectorType: usize = 0x0;
     pub const m_endEffectorAttachment: usize = 0x10;
     pub const m_targetType: usize = 0x90;
-    pub const m_targetAttachment: usize = 0xa0;
+    pub const m_targetAttachment: usize = 0xA0;
     pub const m_targetBoneIndex: usize = 0x120;
     pub const m_hPositionParam: usize = 0x124;
     pub const m_hRotationParam: usize = 0x126;
@@ -2349,8 +2349,8 @@ pub mod TwoBoneIKSettings_t {
     pub const m_nFixedBoneIndex: usize = 0x140;
     pub const m_nMiddleBoneIndex: usize = 0x144;
     pub const m_nEndBoneIndex: usize = 0x148;
-    pub const m_bMatchTargetOrientation: usize = 0x14c;
-    pub const m_bConstrainTwist: usize = 0x14d;
+    pub const m_bMatchTargetOrientation: usize = 0x14C;
+    pub const m_bConstrainTwist: usize = 0x14D;
     pub const m_flMaxTwist: usize = 0x150;
 }
 
@@ -2364,10 +2364,10 @@ pub mod VPhysXAggregateData_t {
     pub const m_bindPose: usize = 0x68;
     pub const m_parts: usize = 0x80;
     pub const m_constraints2: usize = 0x98;
-    pub const m_joints: usize = 0xb0;
-    pub const m_pFeModel: usize = 0xc8;
-    pub const m_boneParents: usize = 0xd0;
-    pub const m_surfacePropertyHashes: usize = 0xe8;
+    pub const m_joints: usize = 0xB0;
+    pub const m_pFeModel: usize = 0xC8;
+    pub const m_boneParents: usize = 0xD0;
+    pub const m_surfacePropertyHashes: usize = 0xE8;
     pub const m_collisionAttributes: usize = 0x100;
     pub const m_debugPartNames: usize = 0x118;
     pub const m_embeddedKeyvalues: usize = 0x130;
@@ -2381,7 +2381,7 @@ pub mod VPhysXBodyPart_t {
     pub const m_nReserved: usize = 0x82;
     pub const m_flInertiaScale: usize = 0x84;
     pub const m_flLinearDamping: usize = 0x88;
-    pub const m_flAngularDamping: usize = 0x8c;
+    pub const m_flAngularDamping: usize = 0x8C;
     pub const m_bOverrideMassCenter: usize = 0x90;
     pub const m_vMassCenterOverride: usize = 0x94;
 }
@@ -2410,47 +2410,47 @@ pub mod VPhysXConstraintParams_t {
     pub const m_nRotateMotion: usize = 0x2;
     pub const m_nFlags: usize = 0x3;
     pub const m_anchor: usize = 0x4;
-    pub const m_axes: usize = 0x1c;
-    pub const m_maxForce: usize = 0x3c;
+    pub const m_axes: usize = 0x1C;
+    pub const m_maxForce: usize = 0x3C;
     pub const m_maxTorque: usize = 0x40;
     pub const m_linearLimitValue: usize = 0x44;
     pub const m_linearLimitRestitution: usize = 0x48;
-    pub const m_linearLimitSpring: usize = 0x4c;
+    pub const m_linearLimitSpring: usize = 0x4C;
     pub const m_linearLimitDamping: usize = 0x50;
     pub const m_twistLowLimitValue: usize = 0x54;
     pub const m_twistLowLimitRestitution: usize = 0x58;
-    pub const m_twistLowLimitSpring: usize = 0x5c;
+    pub const m_twistLowLimitSpring: usize = 0x5C;
     pub const m_twistLowLimitDamping: usize = 0x60;
     pub const m_twistHighLimitValue: usize = 0x64;
     pub const m_twistHighLimitRestitution: usize = 0x68;
-    pub const m_twistHighLimitSpring: usize = 0x6c;
+    pub const m_twistHighLimitSpring: usize = 0x6C;
     pub const m_twistHighLimitDamping: usize = 0x70;
     pub const m_swing1LimitValue: usize = 0x74;
     pub const m_swing1LimitRestitution: usize = 0x78;
-    pub const m_swing1LimitSpring: usize = 0x7c;
+    pub const m_swing1LimitSpring: usize = 0x7C;
     pub const m_swing1LimitDamping: usize = 0x80;
     pub const m_swing2LimitValue: usize = 0x84;
     pub const m_swing2LimitRestitution: usize = 0x88;
-    pub const m_swing2LimitSpring: usize = 0x8c;
+    pub const m_swing2LimitSpring: usize = 0x8C;
     pub const m_swing2LimitDamping: usize = 0x90;
     pub const m_goalPosition: usize = 0x94;
-    pub const m_goalOrientation: usize = 0xa0;
-    pub const m_goalAngularVelocity: usize = 0xb0;
-    pub const m_driveSpringX: usize = 0xbc;
-    pub const m_driveSpringY: usize = 0xc0;
-    pub const m_driveSpringZ: usize = 0xc4;
-    pub const m_driveDampingX: usize = 0xc8;
-    pub const m_driveDampingY: usize = 0xcc;
-    pub const m_driveDampingZ: usize = 0xd0;
-    pub const m_driveSpringTwist: usize = 0xd4;
-    pub const m_driveSpringSwing: usize = 0xd8;
-    pub const m_driveSpringSlerp: usize = 0xdc;
-    pub const m_driveDampingTwist: usize = 0xe0;
-    pub const m_driveDampingSwing: usize = 0xe4;
-    pub const m_driveDampingSlerp: usize = 0xe8;
-    pub const m_solverIterationCount: usize = 0xec;
-    pub const m_projectionLinearTolerance: usize = 0xf0;
-    pub const m_projectionAngularTolerance: usize = 0xf4;
+    pub const m_goalOrientation: usize = 0xA0;
+    pub const m_goalAngularVelocity: usize = 0xB0;
+    pub const m_driveSpringX: usize = 0xBC;
+    pub const m_driveSpringY: usize = 0xC0;
+    pub const m_driveSpringZ: usize = 0xC4;
+    pub const m_driveDampingX: usize = 0xC8;
+    pub const m_driveDampingY: usize = 0xCC;
+    pub const m_driveDampingZ: usize = 0xD0;
+    pub const m_driveSpringTwist: usize = 0xD4;
+    pub const m_driveSpringSwing: usize = 0xD8;
+    pub const m_driveSpringSlerp: usize = 0xDC;
+    pub const m_driveDampingTwist: usize = 0xE0;
+    pub const m_driveDampingSwing: usize = 0xE4;
+    pub const m_driveDampingSlerp: usize = 0xE8;
+    pub const m_solverIterationCount: usize = 0xEC;
+    pub const m_projectionLinearTolerance: usize = 0xF0;
+    pub const m_projectionAngularTolerance: usize = 0xF4;
 }
 
 pub mod VPhysXJoint_t {
@@ -2463,21 +2463,21 @@ pub mod VPhysXJoint_t {
     pub const m_bEnableCollision: usize = 0x50;
     pub const m_bEnableLinearLimit: usize = 0x51;
     pub const m_LinearLimit: usize = 0x54;
-    pub const m_bEnableLinearMotor: usize = 0x5c;
+    pub const m_bEnableLinearMotor: usize = 0x5C;
     pub const m_vLinearTargetVelocity: usize = 0x60;
-    pub const m_flMaxForce: usize = 0x6c;
+    pub const m_flMaxForce: usize = 0x6C;
     pub const m_bEnableSwingLimit: usize = 0x70;
     pub const m_SwingLimit: usize = 0x74;
-    pub const m_bEnableTwistLimit: usize = 0x7c;
+    pub const m_bEnableTwistLimit: usize = 0x7C;
     pub const m_TwistLimit: usize = 0x80;
     pub const m_bEnableAngularMotor: usize = 0x88;
-    pub const m_vAngularTargetVelocity: usize = 0x8c;
+    pub const m_vAngularTargetVelocity: usize = 0x8C;
     pub const m_flMaxTorque: usize = 0x98;
-    pub const m_flLinearFrequency: usize = 0x9c;
-    pub const m_flLinearDampingRatio: usize = 0xa0;
-    pub const m_flAngularFrequency: usize = 0xa4;
-    pub const m_flAngularDampingRatio: usize = 0xa8;
-    pub const m_flFriction: usize = 0xac;
+    pub const m_flLinearFrequency: usize = 0x9C;
+    pub const m_flLinearDampingRatio: usize = 0xA0;
+    pub const m_flAngularFrequency: usize = 0xA4;
+    pub const m_flAngularDampingRatio: usize = 0xA8;
+    pub const m_flFriction: usize = 0xAC;
 }
 
 pub mod VPhysXRange_t {

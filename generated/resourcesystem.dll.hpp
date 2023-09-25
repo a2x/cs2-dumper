@@ -4,7 +4,7 @@
 
 namespace AABB_t {
     constexpr std::ptrdiff_t m_vMinBounds = 0x0;
-    constexpr std::ptrdiff_t m_vMaxBounds = 0xc;
+    constexpr std::ptrdiff_t m_vMaxBounds = 0xC;
 }
 
 namespace CFuseProgram {
@@ -26,7 +26,7 @@ namespace CFuseSymbolTable {
 namespace ConstantInfo_t {
     constexpr std::ptrdiff_t m_name = 0x0;
     constexpr std::ptrdiff_t m_nameToken = 0x8;
-    constexpr std::ptrdiff_t m_flValue = 0xc;
+    constexpr std::ptrdiff_t m_flValue = 0xC;
 }
 
 namespace FourQuaternions {
@@ -41,7 +41,7 @@ namespace FunctionInfo_t {
     constexpr std::ptrdiff_t m_nameToken = 0x10;
     constexpr std::ptrdiff_t m_nParamCount = 0x14;
     constexpr std::ptrdiff_t m_nIndex = 0x18;
-    constexpr std::ptrdiff_t m_bIsPure = 0x1a;
+    constexpr std::ptrdiff_t m_bIsPure = 0x1A;
 }
 
 namespace FuseFunctionIndex_t {
@@ -69,8 +69,8 @@ namespace TestResource_t {
 namespace VariableInfo_t {
     constexpr std::ptrdiff_t m_name = 0x0;
     constexpr std::ptrdiff_t m_nameToken = 0x8;
-    constexpr std::ptrdiff_t m_nIndex = 0xc;
-    constexpr std::ptrdiff_t m_nNumComponents = 0xe;
-    constexpr std::ptrdiff_t m_eVarType = 0xf;
+    constexpr std::ptrdiff_t m_nIndex = 0xC;
+    constexpr std::ptrdiff_t m_nNumComponents = 0xE;
+    constexpr std::ptrdiff_t m_eVarType = 0xF;
     constexpr std::ptrdiff_t m_eAccess = 0x10;
 }

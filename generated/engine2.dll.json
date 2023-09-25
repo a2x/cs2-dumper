@@ -1,147 +1,147 @@
 {
-    "CEntityComponentHelper": {
-        "m_flags": 8,
-        "m_nPriority": 24,
-        "m_pInfo": 16,
-        "m_pNext": 32
-    },
-    "CEntityIOOutput": {
-        "m_Value": 24
-    },
-    "CEntityIdentity": {
-        "m_PathIndex": 64,
-        "m_designerName": 32,
-        "m_fDataObjectTypes": 60,
-        "m_flags": 48,
-        "m_name": 24,
-        "m_nameStringableIndex": 20,
-        "m_pNext": 96,
-        "m_pNextByClass": 112,
-        "m_pPrev": 88,
-        "m_pPrevByClass": 104,
-        "m_worldGroupId": 56
-    },
-    "CEntityInstance": {
-        "m_CScriptComponent": 40,
-        "m_iszPrivateVScripts": 8,
-        "m_pEntity": 16
-    },
-    "CNetworkVarChainer": {
-        "m_PathIndex": 32
-    },
-    "CScriptComponent": {
-        "m_scriptClassName": 48
-    },
-    "EngineLoopState_t": {
-        "m_nPlatWindowHeight": 28,
-        "m_nPlatWindowWidth": 24,
-        "m_nRenderHeight": 36,
-        "m_nRenderWidth": 32
-    },
-    "EntComponentInfo_t": {
-        "m_nFlags": 36,
-        "m_nRuntimeIndex": 32,
-        "m_pBaseClassComponentHelper": 96,
-        "m_pCPPClassname": 8,
-        "m_pName": 0,
-        "m_pNetworkDataReferencedDescription": 16,
-        "m_pNetworkDataReferencedPtrPropDescription": 24
-    },
-    "EventAdvanceTick_t": {
-        "m_nCurrentTick": 48,
-        "m_nCurrentTickThisFrame": 52,
-        "m_nTotalTicks": 60,
-        "m_nTotalTicksThisFrame": 56
-    },
-    "EventAppShutdown_t": {
-        "m_nDummy0": 0
-    },
-    "EventClientFrameSimulate_t": {
-        "m_LoopState": 0,
-        "m_flFrameTime": 44,
-        "m_flRealTime": 40
-    },
-    "EventClientOutput_t": {
-        "m_LoopState": 0,
-        "m_bRenderOnly": 52,
-        "m_flRealTime": 44,
-        "m_flRenderFrameTimeUnbounded": 48,
-        "m_flRenderTime": 40
-    },
-    "EventClientPollInput_t": {
-        "m_LoopState": 0,
-        "m_flRealTime": 40
-    },
-    "EventClientPollNetworking_t": {
-        "m_nTickCount": 0
-    },
-    "EventClientPostOutput_t": {
-        "m_LoopState": 0,
-        "m_bRenderOnly": 56,
-        "m_flRenderFrameTime": 48,
-        "m_flRenderFrameTimeUnbounded": 52,
-        "m_flRenderTime": 40
-    },
-    "EventClientPreOutput_t": {
-        "m_LoopState": 0,
-        "m_bRenderOnly": 68,
-        "m_flRealTime": 64,
-        "m_flRenderFrameTime": 48,
-        "m_flRenderFrameTimeUnbounded": 56,
-        "m_flRenderTime": 40
-    },
-    "EventClientProcessGameInput_t": {
-        "m_LoopState": 0,
-        "m_flFrameTime": 44,
-        "m_flRealTime": 40
-    },
-    "EventClientProcessInput_t": {
-        "m_LoopState": 0,
-        "m_flRealTime": 40
-    },
-    "EventClientSceneSystemThreadStateChange_t": {
-        "m_bThreadsActive": 0
-    },
-    "EventClientSendInput_t": {
-        "m_bFinalClientCommandTick": 0,
-        "m_nAdditionalClientCommandsToCreate": 4
-    },
-    "EventFrameBoundary_t": {
-        "m_flFrameTime": 0
-    },
-    "EventPostAdvanceTick_t": {
-        "m_nCurrentTick": 48,
-        "m_nCurrentTickThisFrame": 52,
-        "m_nTotalTicks": 60,
-        "m_nTotalTicksThisFrame": 56
-    },
-    "EventPostDataUpdate_t": {
-        "m_nCount": 0
-    },
-    "EventPreDataUpdate_t": {
-        "m_nCount": 0
-    },
-    "EventProfileStorageAvailable_t": {
-        "m_nSplitScreenSlot": 0
-    },
-    "EventSetTime_t": {
-        "m_LoopState": 0,
-        "m_flRealTime": 48,
-        "m_flRenderFrameTime": 64,
-        "m_flRenderFrameTimeUnbounded": 72,
-        "m_flRenderFrameTimeUnscaled": 80,
-        "m_flRenderTime": 56,
-        "m_flTickRemainder": 88,
-        "m_nClientOutputFrames": 40
-    },
-    "EventSimpleLoopFrameUpdate_t": {
-        "m_LoopState": 0,
-        "m_flFrameTime": 44,
-        "m_flRealTime": 40
-    },
-    "EventSimulate_t": {
-        "m_LoopState": 0,
-        "m_bFirstTick": 40,
-        "m_bLastTick": 41
-    }
+  "CEntityComponentHelper": {
+    "m_flags": 8,
+    "m_nPriority": 24,
+    "m_pInfo": 16,
+    "m_pNext": 32
+  },
+  "CEntityIOOutput": {
+    "m_Value": 24
+  },
+  "CEntityIdentity": {
+    "m_PathIndex": 64,
+    "m_designerName": 32,
+    "m_fDataObjectTypes": 60,
+    "m_flags": 48,
+    "m_name": 24,
+    "m_nameStringableIndex": 20,
+    "m_pNext": 96,
+    "m_pNextByClass": 112,
+    "m_pPrev": 88,
+    "m_pPrevByClass": 104,
+    "m_worldGroupId": 56
+  },
+  "CEntityInstance": {
+    "m_CScriptComponent": 40,
+    "m_iszPrivateVScripts": 8,
+    "m_pEntity": 16
+  },
+  "CNetworkVarChainer": {
+    "m_PathIndex": 32
+  },
+  "CScriptComponent": {
+    "m_scriptClassName": 48
+  },
+  "EngineLoopState_t": {
+    "m_nPlatWindowHeight": 28,
+    "m_nPlatWindowWidth": 24,
+    "m_nRenderHeight": 36,
+    "m_nRenderWidth": 32
+  },
+  "EntComponentInfo_t": {
+    "m_nFlags": 36,
+    "m_nRuntimeIndex": 32,
+    "m_pBaseClassComponentHelper": 96,
+    "m_pCPPClassname": 8,
+    "m_pName": 0,
+    "m_pNetworkDataReferencedDescription": 16,
+    "m_pNetworkDataReferencedPtrPropDescription": 24
+  },
+  "EventAdvanceTick_t": {
+    "m_nCurrentTick": 48,
+    "m_nCurrentTickThisFrame": 52,
+    "m_nTotalTicks": 60,
+    "m_nTotalTicksThisFrame": 56
+  },
+  "EventAppShutdown_t": {
+    "m_nDummy0": 0
+  },
+  "EventClientFrameSimulate_t": {
+    "m_LoopState": 0,
+    "m_flFrameTime": 44,
+    "m_flRealTime": 40
+  },
+  "EventClientOutput_t": {
+    "m_LoopState": 0,
+    "m_bRenderOnly": 52,
+    "m_flRealTime": 44,
+    "m_flRenderFrameTimeUnbounded": 48,
+    "m_flRenderTime": 40
+  },
+  "EventClientPollInput_t": {
+    "m_LoopState": 0,
+    "m_flRealTime": 40
+  },
+  "EventClientPollNetworking_t": {
+    "m_nTickCount": 0
+  },
+  "EventClientPostOutput_t": {
+    "m_LoopState": 0,
+    "m_bRenderOnly": 56,
+    "m_flRenderFrameTime": 48,
+    "m_flRenderFrameTimeUnbounded": 52,
+    "m_flRenderTime": 40
+  },
+  "EventClientPreOutput_t": {
+    "m_LoopState": 0,
+    "m_bRenderOnly": 68,
+    "m_flRealTime": 64,
+    "m_flRenderFrameTime": 48,
+    "m_flRenderFrameTimeUnbounded": 56,
+    "m_flRenderTime": 40
+  },
+  "EventClientProcessGameInput_t": {
+    "m_LoopState": 0,
+    "m_flFrameTime": 44,
+    "m_flRealTime": 40
+  },
+  "EventClientProcessInput_t": {
+    "m_LoopState": 0,
+    "m_flRealTime": 40
+  },
+  "EventClientSceneSystemThreadStateChange_t": {
+    "m_bThreadsActive": 0
+  },
+  "EventClientSendInput_t": {
+    "m_bFinalClientCommandTick": 0,
+    "m_nAdditionalClientCommandsToCreate": 4
+  },
+  "EventFrameBoundary_t": {
+    "m_flFrameTime": 0
+  },
+  "EventPostAdvanceTick_t": {
+    "m_nCurrentTick": 48,
+    "m_nCurrentTickThisFrame": 52,
+    "m_nTotalTicks": 60,
+    "m_nTotalTicksThisFrame": 56
+  },
+  "EventPostDataUpdate_t": {
+    "m_nCount": 0
+  },
+  "EventPreDataUpdate_t": {
+    "m_nCount": 0
+  },
+  "EventProfileStorageAvailable_t": {
+    "m_nSplitScreenSlot": 0
+  },
+  "EventSetTime_t": {
+    "m_LoopState": 0,
+    "m_flRealTime": 48,
+    "m_flRenderFrameTime": 64,
+    "m_flRenderFrameTimeUnbounded": 72,
+    "m_flRenderFrameTimeUnscaled": 80,
+    "m_flRenderTime": 56,
+    "m_flTickRemainder": 88,
+    "m_nClientOutputFrames": 40
+  },
+  "EventSimpleLoopFrameUpdate_t": {
+    "m_LoopState": 0,
+    "m_flFrameTime": 44,
+    "m_flRealTime": 40
+  },
+  "EventSimulate_t": {
+    "m_LoopState": 0,
+    "m_bFirstTick": 40,
+    "m_bLastTick": 41
+  }
 }

@@ -1,3 +1,3 @@
 public static class ChangeAccessorFieldPathIndex_t {
-    public const ulong m_Value = 0x0;
+    public const nint m_Value = 0x0;
 }

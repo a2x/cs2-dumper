@@ -29,11 +29,11 @@ pub mod CSSDSMsg_ViewTarget {
     pub const m_nWidth: usize = 0x10;
     pub const m_nHeight: usize = 0x14;
     pub const m_nRequestedWidth: usize = 0x18;
-    pub const m_nRequestedHeight: usize = 0x1c;
+    pub const m_nRequestedHeight: usize = 0x1C;
     pub const m_nNumMipLevels: usize = 0x20;
     pub const m_nDepth: usize = 0x24;
     pub const m_nMultisampleNumSamples: usize = 0x28;
-    pub const m_nFormat: usize = 0x2c;
+    pub const m_nFormat: usize = 0x2C;
 }
 
 pub mod CSSDSMsg_ViewTargetList {

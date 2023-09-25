@@ -109,20 +109,20 @@ namespace CPulseGraphDef {
     constexpr std::ptrdiff_t m_PublicOutputs = 0x60;
     constexpr std::ptrdiff_t m_InvokeBindings = 0x78;
     constexpr std::ptrdiff_t m_CallInfos = 0x90;
-    constexpr std::ptrdiff_t m_OutputConnections = 0xa8;
+    constexpr std::ptrdiff_t m_OutputConnections = 0xA8;
 }
 
 namespace CPulseGraphInstance_TestDomain {
-    constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0xd0;
-    constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0xd1;
-    constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0xd2;
-    constexpr std::ptrdiff_t m_nNextValidateIndex = 0xd4;
-    constexpr std::ptrdiff_t m_Tracepoints = 0xd8;
-    constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0xf0;
+    constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0xD0;
+    constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0xD1;
+    constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0xD2;
+    constexpr std::ptrdiff_t m_nNextValidateIndex = 0xD4;
+    constexpr std::ptrdiff_t m_Tracepoints = 0xD8;
+    constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0xF0;
 }
 
 namespace CPulseGraphInstance_TestDomain_Derived {
-    constexpr std::ptrdiff_t m_nInstanceValueX = 0xf8;
+    constexpr std::ptrdiff_t m_nInstanceValueX = 0xF8;
 }
 
 namespace CPulseRuntimeMethodArg {
@@ -133,7 +133,7 @@ namespace CPulseRuntimeMethodArg {
 
 namespace CPulseTurtleGraphicsCursor {
     constexpr std::ptrdiff_t m_Color = 0x188;
-    constexpr std::ptrdiff_t m_vPos = 0x18c;
+    constexpr std::ptrdiff_t m_vPos = 0x18C;
     constexpr std::ptrdiff_t m_flHeadingDeg = 0x194;
     constexpr std::ptrdiff_t m_bPenUp = 0x198;
 }
@@ -165,7 +165,7 @@ namespace CPulse_InvokeBinding {
 namespace CPulse_OutflowConnection {
     constexpr std::ptrdiff_t m_SourceOutflowName = 0x0;
     constexpr std::ptrdiff_t m_nDestChunk = 0x8;
-    constexpr std::ptrdiff_t m_nInstruction = 0xc;
+    constexpr std::ptrdiff_t m_nInstruction = 0xC;
 }
 
 namespace CPulse_OutputConnection {
@@ -199,7 +199,7 @@ namespace CPulse_Variable {
 
 namespace CTestDomainDerived_Cursor {
     constexpr std::ptrdiff_t m_nCursorValueA = 0x188;
-    constexpr std::ptrdiff_t m_nCursorValueB = 0x18c;
+    constexpr std::ptrdiff_t m_nCursorValueB = 0x18C;
 }
 
 namespace FakeEntity_t {
@@ -209,19 +209,19 @@ namespace FakeEntity_t {
     constexpr std::ptrdiff_t m_bDestroyed = 0x18;
     constexpr std::ptrdiff_t m_pAssociatedGraphInstance = 0x20;
     constexpr std::ptrdiff_t m_bFuncWasCalled = 0x28;
-    constexpr std::ptrdiff_t m_fValue = 0x2c;
+    constexpr std::ptrdiff_t m_fValue = 0x2C;
 }
 
 namespace PGDInstruction_t {
     constexpr std::ptrdiff_t m_nCode = 0x0;
     constexpr std::ptrdiff_t m_nVar = 0x4;
     constexpr std::ptrdiff_t m_nReg0 = 0x8;
-    constexpr std::ptrdiff_t m_nReg1 = 0xa;
-    constexpr std::ptrdiff_t m_nReg2 = 0xc;
+    constexpr std::ptrdiff_t m_nReg1 = 0xA;
+    constexpr std::ptrdiff_t m_nReg2 = 0xC;
     constexpr std::ptrdiff_t m_nInvokeBindingIndex = 0x10;
     constexpr std::ptrdiff_t m_nChunk = 0x14;
     constexpr std::ptrdiff_t m_nDestInstruction = 0x18;
-    constexpr std::ptrdiff_t m_nCallInfoIndex = 0x1c;
+    constexpr std::ptrdiff_t m_nCallInfoIndex = 0x1C;
     constexpr std::ptrdiff_t m_Arg0Name = 0x20;
     constexpr std::ptrdiff_t m_Arg1Name = 0x28;
     constexpr std::ptrdiff_t m_bLiteralBool = 0x30;

@@ -1,231 +1,231 @@
 {
-    "CPulseCell_Base": {
-        "m_nEditorNodeID": 8
-    },
-    "CPulseCell_Inflow_BaseEntrypoint": {
-        "m_EntryChunk": 72,
-        "m_RegisterMap": 80
-    },
-    "CPulseCell_Inflow_EntOutputHandler": {
-        "m_ExpectedParamType": 136,
-        "m_SourceEntity": 112,
-        "m_SourceOutput": 120,
-        "m_TargetInput": 128
-    },
-    "CPulseCell_Inflow_EventHandler": {
-        "m_EventName": 112
-    },
-    "CPulseCell_Inflow_GraphHook": {
-        "m_HookName": 112
-    },
-    "CPulseCell_Inflow_Method": {
-        "m_Args": 152,
-        "m_Description": 120,
-        "m_MethodName": 112,
-        "m_ReturnType": 136,
-        "m_bIsPublic": 128
-    },
-    "CPulseCell_Inflow_Wait": {
-        "m_WakeResume": 72
-    },
-    "CPulseCell_Inflow_Yield": {
-        "m_UnyieldResume": 72
-    },
-    "CPulseCell_Outflow_CycleOrdered": {
-        "m_Outputs": 72
-    },
-    "CPulseCell_Outflow_CycleOrdered_InstanceState_t": {
-        "m_nNextIndex": 0
-    },
-    "CPulseCell_Outflow_CycleRandom": {
-        "m_Outputs": 72
-    },
-    "CPulseCell_Outflow_CycleShuffled": {
-        "m_Outputs": 72
-    },
-    "CPulseCell_Outflow_CycleShuffled_InstanceState_t": {
-        "m_Shuffle": 0,
-        "m_nNextShuffle": 32
-    },
-    "CPulseCell_Outflow_IntSwitch": {
-        "m_CaseOutflows": 88,
-        "m_DefaultCaseOutflow": 72
-    },
-    "CPulseCell_Outflow_SimultaneousParallel": {
-        "m_Outputs": 72
-    },
-    "CPulseCell_Outflow_StringSwitch": {
-        "m_CaseOutflows": 88,
-        "m_DefaultCaseOutflow": 72
-    },
-    "CPulseCell_Outflow_TestExplicitYesNo": {
-        "m_No": 88,
-        "m_Yes": 72
-    },
-    "CPulseCell_Outflow_TestRandomYesNo": {
-        "m_No": 88,
-        "m_Yes": 72
-    },
-    "CPulseCell_Step_CallExternalMethod": {
-        "m_ExpectedArgs": 80,
-        "m_MethodName": 72
-    },
-    "CPulseCell_Step_PublicOutput": {
-        "m_OutputIndex": 72
-    },
-    "CPulseCell_Step_TestDomainEntFire": {
-        "m_Input": 72
-    },
-    "CPulseGraphDef": {
-        "m_CallInfos": 144,
-        "m_Cells": 48,
-        "m_Chunks": 24,
-        "m_DomainIdentifier": 8,
-        "m_InvokeBindings": 120,
-        "m_OutputConnections": 168,
-        "m_ParentMapName": 16,
-        "m_PublicOutputs": 96,
-        "m_Vars": 72
-    },
-    "CPulseGraphInstance_TestDomain": {
-        "m_Tracepoints": 216,
-        "m_bExpectingToDestroyWithYieldedCursors": 210,
-        "m_bExplicitTimeStepping": 209,
-        "m_bIsRunningUnitTests": 208,
-        "m_bTestYesOrNoPath": 240,
-        "m_nNextValidateIndex": 212
-    },
-    "CPulseGraphInstance_TestDomain_Derived": {
-        "m_nInstanceValueX": 248
-    },
-    "CPulseRuntimeMethodArg": {
-        "m_Description": 56,
-        "m_Name": 0,
-        "m_Type": 64
-    },
-    "CPulseTurtleGraphicsCursor": {
-        "m_Color": 392,
-        "m_bPenUp": 408,
-        "m_flHeadingDeg": 404,
-        "m_vPos": 396
-    },
-    "CPulse_CallInfo": {
-        "m_CallMethodID": 48,
-        "m_PortName": 0,
-        "m_RegisterMap": 16,
-        "m_nEditorNodeID": 8,
-        "m_nSrcChunk": 52,
-        "m_nSrcInstruction": 56
-    },
-    "CPulse_Chunk": {
-        "m_InstructionEditorIDs": 32,
-        "m_Instructions": 0,
-        "m_Registers": 16
-    },
-    "CPulse_InvokeBinding": {
-        "m_FuncName": 32,
-        "m_InstanceType": 48,
-        "m_RegisterMap": 0,
-        "m_nCellIndex": 40,
-        "m_nSrcChunk": 64,
-        "m_nSrcInstruction": 68
-    },
-    "CPulse_OutflowConnection": {
-        "m_SourceOutflowName": 0,
-        "m_nDestChunk": 8,
-        "m_nInstruction": 12
-    },
-    "CPulse_OutputConnection": {
-        "m_Param": 24,
-        "m_SourceOutput": 0,
-        "m_TargetEntity": 8,
-        "m_TargetInput": 16
-    },
-    "CPulse_PublicOutput": {
-        "m_Description": 8,
-        "m_Name": 0,
-        "m_ParamType": 16
-    },
-    "CPulse_RegisterInfo": {
-        "m_OriginName": 24,
-        "m_Type": 8,
-        "m_nLastReadByInstruction": 84,
-        "m_nReg": 0,
-        "m_nWrittenByInstruction": 80
-    },
-    "CPulse_Variable": {
-        "m_DefaultValue": 32,
-        "m_Description": 8,
-        "m_Name": 0,
-        "m_Type": 16,
-        "m_bIsPublic": 50
-    },
-    "CTestDomainDerived_Cursor": {
-        "m_nCursorValueA": 392,
-        "m_nCursorValueB": 396
-    },
-    "FakeEntity_t": {
-        "m_Class": 16,
-        "m_Name": 8,
-        "m_bDestroyed": 24,
-        "m_bFuncWasCalled": 40,
-        "m_fValue": 44,
-        "m_nHandle": 0,
-        "m_pAssociatedGraphInstance": 32
-    },
-    "PGDInstruction_t": {
-        "m_Arg0Name": 32,
-        "m_Arg1Name": 40,
-        "m_LiteralString": 64,
-        "m_bLiteralBool": 48,
-        "m_flLiteralFloat": 56,
-        "m_nCallInfoIndex": 28,
-        "m_nChunk": 20,
-        "m_nCode": 0,
-        "m_nDestInstruction": 24,
-        "m_nInvokeBindingIndex": 16,
-        "m_nLiteralInt": 52,
-        "m_nReg0": 8,
-        "m_nReg1": 10,
-        "m_nReg2": 12,
-        "m_nVar": 4,
-        "m_vLiteralVec3": 80
-    },
-    "PulseDocNodeID_t": {
-        "m_Value": 0
-    },
-    "PulseRegisterMap_t": {
-        "m_Inparams": 0,
-        "m_Outparams": 16
-    },
-    "PulseRuntimeCallInfoIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeCellIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeChunkIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeEntrypointIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeInvokeIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeOutputIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeRegisterIndex_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeStateOffset_t": {
-        "m_Value": 0
-    },
-    "PulseRuntimeVarIndex_t": {
-        "m_Value": 0
-    },
-    "PulseTestEHandle_t": {
-        "m_Value": 0
-    }
+  "CPulseCell_Base": {
+    "m_nEditorNodeID": 8
+  },
+  "CPulseCell_Inflow_BaseEntrypoint": {
+    "m_EntryChunk": 72,
+    "m_RegisterMap": 80
+  },
+  "CPulseCell_Inflow_EntOutputHandler": {
+    "m_ExpectedParamType": 136,
+    "m_SourceEntity": 112,
+    "m_SourceOutput": 120,
+    "m_TargetInput": 128
+  },
+  "CPulseCell_Inflow_EventHandler": {
+    "m_EventName": 112
+  },
+  "CPulseCell_Inflow_GraphHook": {
+    "m_HookName": 112
+  },
+  "CPulseCell_Inflow_Method": {
+    "m_Args": 152,
+    "m_Description": 120,
+    "m_MethodName": 112,
+    "m_ReturnType": 136,
+    "m_bIsPublic": 128
+  },
+  "CPulseCell_Inflow_Wait": {
+    "m_WakeResume": 72
+  },
+  "CPulseCell_Inflow_Yield": {
+    "m_UnyieldResume": 72
+  },
+  "CPulseCell_Outflow_CycleOrdered": {
+    "m_Outputs": 72
+  },
+  "CPulseCell_Outflow_CycleOrdered_InstanceState_t": {
+    "m_nNextIndex": 0
+  },
+  "CPulseCell_Outflow_CycleRandom": {
+    "m_Outputs": 72
+  },
+  "CPulseCell_Outflow_CycleShuffled": {
+    "m_Outputs": 72
+  },
+  "CPulseCell_Outflow_CycleShuffled_InstanceState_t": {
+    "m_Shuffle": 0,
+    "m_nNextShuffle": 32
+  },
+  "CPulseCell_Outflow_IntSwitch": {
+    "m_CaseOutflows": 88,
+    "m_DefaultCaseOutflow": 72
+  },
+  "CPulseCell_Outflow_SimultaneousParallel": {
+    "m_Outputs": 72
+  },
+  "CPulseCell_Outflow_StringSwitch": {
+    "m_CaseOutflows": 88,
+    "m_DefaultCaseOutflow": 72
+  },
+  "CPulseCell_Outflow_TestExplicitYesNo": {
+    "m_No": 88,
+    "m_Yes": 72
+  },
+  "CPulseCell_Outflow_TestRandomYesNo": {
+    "m_No": 88,
+    "m_Yes": 72
+  },
+  "CPulseCell_Step_CallExternalMethod": {
+    "m_ExpectedArgs": 80,
+    "m_MethodName": 72
+  },
+  "CPulseCell_Step_PublicOutput": {
+    "m_OutputIndex": 72
+  },
+  "CPulseCell_Step_TestDomainEntFire": {
+    "m_Input": 72
+  },
+  "CPulseGraphDef": {
+    "m_CallInfos": 144,
+    "m_Cells": 48,
+    "m_Chunks": 24,
+    "m_DomainIdentifier": 8,
+    "m_InvokeBindings": 120,
+    "m_OutputConnections": 168,
+    "m_ParentMapName": 16,
+    "m_PublicOutputs": 96,
+    "m_Vars": 72
+  },
+  "CPulseGraphInstance_TestDomain": {
+    "m_Tracepoints": 216,
+    "m_bExpectingToDestroyWithYieldedCursors": 210,
+    "m_bExplicitTimeStepping": 209,
+    "m_bIsRunningUnitTests": 208,
+    "m_bTestYesOrNoPath": 240,
+    "m_nNextValidateIndex": 212
+  },
+  "CPulseGraphInstance_TestDomain_Derived": {
+    "m_nInstanceValueX": 248
+  },
+  "CPulseRuntimeMethodArg": {
+    "m_Description": 56,
+    "m_Name": 0,
+    "m_Type": 64
+  },
+  "CPulseTurtleGraphicsCursor": {
+    "m_Color": 392,
+    "m_bPenUp": 408,
+    "m_flHeadingDeg": 404,
+    "m_vPos": 396
+  },
+  "CPulse_CallInfo": {
+    "m_CallMethodID": 48,
+    "m_PortName": 0,
+    "m_RegisterMap": 16,
+    "m_nEditorNodeID": 8,
+    "m_nSrcChunk": 52,
+    "m_nSrcInstruction": 56
+  },
+  "CPulse_Chunk": {
+    "m_InstructionEditorIDs": 32,
+    "m_Instructions": 0,
+    "m_Registers": 16
+  },
+  "CPulse_InvokeBinding": {
+    "m_FuncName": 32,
+    "m_InstanceType": 48,
+    "m_RegisterMap": 0,
+    "m_nCellIndex": 40,
+    "m_nSrcChunk": 64,
+    "m_nSrcInstruction": 68
+  },
+  "CPulse_OutflowConnection": {
+    "m_SourceOutflowName": 0,
+    "m_nDestChunk": 8,
+    "m_nInstruction": 12
+  },
+  "CPulse_OutputConnection": {
+    "m_Param": 24,
+    "m_SourceOutput": 0,
+    "m_TargetEntity": 8,
+    "m_TargetInput": 16
+  },
+  "CPulse_PublicOutput": {
+    "m_Description": 8,
+    "m_Name": 0,
+    "m_ParamType": 16
+  },
+  "CPulse_RegisterInfo": {
+    "m_OriginName": 24,
+    "m_Type": 8,
+    "m_nLastReadByInstruction": 84,
+    "m_nReg": 0,
+    "m_nWrittenByInstruction": 80
+  },
+  "CPulse_Variable": {
+    "m_DefaultValue": 32,
+    "m_Description": 8,
+    "m_Name": 0,
+    "m_Type": 16,
+    "m_bIsPublic": 50
+  },
+  "CTestDomainDerived_Cursor": {
+    "m_nCursorValueA": 392,
+    "m_nCursorValueB": 396
+  },
+  "FakeEntity_t": {
+    "m_Class": 16,
+    "m_Name": 8,
+    "m_bDestroyed": 24,
+    "m_bFuncWasCalled": 40,
+    "m_fValue": 44,
+    "m_nHandle": 0,
+    "m_pAssociatedGraphInstance": 32
+  },
+  "PGDInstruction_t": {
+    "m_Arg0Name": 32,
+    "m_Arg1Name": 40,
+    "m_LiteralString": 64,
+    "m_bLiteralBool": 48,
+    "m_flLiteralFloat": 56,
+    "m_nCallInfoIndex": 28,
+    "m_nChunk": 20,
+    "m_nCode": 0,
+    "m_nDestInstruction": 24,
+    "m_nInvokeBindingIndex": 16,
+    "m_nLiteralInt": 52,
+    "m_nReg0": 8,
+    "m_nReg1": 10,
+    "m_nReg2": 12,
+    "m_nVar": 4,
+    "m_vLiteralVec3": 80
+  },
+  "PulseDocNodeID_t": {
+    "m_Value": 0
+  },
+  "PulseRegisterMap_t": {
+    "m_Inparams": 0,
+    "m_Outparams": 16
+  },
+  "PulseRuntimeCallInfoIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeCellIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeChunkIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeEntrypointIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeInvokeIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeOutputIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeRegisterIndex_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeStateOffset_t": {
+    "m_Value": 0
+  },
+  "PulseRuntimeVarIndex_t": {
+    "m_Value": 0
+  },
+  "PulseTestEHandle_t": {
+    "m_Value": 0
+  }
 }

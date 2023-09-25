@@ -1,8 +1,8 @@
 {
-    "CAnimScriptBase": {
-        "m_bIsValid": 8
-    },
-    "EmptyTestScript": {
-        "m_hTest": 16
-    }
+  "CAnimScriptBase": {
+    "m_bIsValid": 8
+  },
+  "EmptyTestScript": {
+    "m_hTest": 16
+  }
 }

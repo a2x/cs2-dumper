@@ -107,20 +107,20 @@ pub mod CPulseGraphDef {
     pub const m_PublicOutputs: usize = 0x60;
     pub const m_InvokeBindings: usize = 0x78;
     pub const m_CallInfos: usize = 0x90;
-    pub const m_OutputConnections: usize = 0xa8;
+    pub const m_OutputConnections: usize = 0xA8;
 }
 
 pub mod CPulseGraphInstance_TestDomain {
-    pub const m_bIsRunningUnitTests: usize = 0xd0;
-    pub const m_bExplicitTimeStepping: usize = 0xd1;
-    pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0xd2;
-    pub const m_nNextValidateIndex: usize = 0xd4;
-    pub const m_Tracepoints: usize = 0xd8;
-    pub const m_bTestYesOrNoPath: usize = 0xf0;
+    pub const m_bIsRunningUnitTests: usize = 0xD0;
+    pub const m_bExplicitTimeStepping: usize = 0xD1;
+    pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0xD2;
+    pub const m_nNextValidateIndex: usize = 0xD4;
+    pub const m_Tracepoints: usize = 0xD8;
+    pub const m_bTestYesOrNoPath: usize = 0xF0;
 }
 
 pub mod CPulseGraphInstance_TestDomain_Derived {
-    pub const m_nInstanceValueX: usize = 0xf8;
+    pub const m_nInstanceValueX: usize = 0xF8;
 }
 
 pub mod CPulseRuntimeMethodArg {
@@ -131,7 +131,7 @@ pub mod CPulseRuntimeMethodArg {
 
 pub mod CPulseTurtleGraphicsCursor {
     pub const m_Color: usize = 0x188;
-    pub const m_vPos: usize = 0x18c;
+    pub const m_vPos: usize = 0x18C;
     pub const m_flHeadingDeg: usize = 0x194;
     pub const m_bPenUp: usize = 0x198;
 }
@@ -163,7 +163,7 @@ pub mod CPulse_InvokeBinding {
 pub mod CPulse_OutflowConnection {
     pub const m_SourceOutflowName: usize = 0x0;
     pub const m_nDestChunk: usize = 0x8;
-    pub const m_nInstruction: usize = 0xc;
+    pub const m_nInstruction: usize = 0xC;
 }
 
 pub mod CPulse_OutputConnection {
@@ -197,7 +197,7 @@ pub mod CPulse_Variable {
 
 pub mod CTestDomainDerived_Cursor {
     pub const m_nCursorValueA: usize = 0x188;
-    pub const m_nCursorValueB: usize = 0x18c;
+    pub const m_nCursorValueB: usize = 0x18C;
 }
 
 pub mod FakeEntity_t {
@@ -207,19 +207,19 @@ pub mod FakeEntity_t {
     pub const m_bDestroyed: usize = 0x18;
     pub const m_pAssociatedGraphInstance: usize = 0x20;
     pub const m_bFuncWasCalled: usize = 0x28;
-    pub const m_fValue: usize = 0x2c;
+    pub const m_fValue: usize = 0x2C;
 }
 
 pub mod PGDInstruction_t {
     pub const m_nCode: usize = 0x0;
     pub const m_nVar: usize = 0x4;
     pub const m_nReg0: usize = 0x8;
-    pub const m_nReg1: usize = 0xa;
-    pub const m_nReg2: usize = 0xc;
+    pub const m_nReg1: usize = 0xA;
+    pub const m_nReg2: usize = 0xC;
     pub const m_nInvokeBindingIndex: usize = 0x10;
     pub const m_nChunk: usize = 0x14;
     pub const m_nDestInstruction: usize = 0x18;
-    pub const m_nCallInfoIndex: usize = 0x1c;
+    pub const m_nCallInfoIndex: usize = 0x1C;
     pub const m_Arg0Name: usize = 0x20;
     pub const m_Arg1Name: usize = 0x28;
     pub const m_bLiteralBool: usize = 0x30;

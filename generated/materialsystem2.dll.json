@@ -1,96 +1,96 @@
 {
-    "MaterialParamBuffer_t": {
-        "m_value": 8
-    },
-    "MaterialParamFloat_t": {
-        "m_flValue": 8
-    },
-    "MaterialParamInt_t": {
-        "m_nValue": 8
-    },
-    "MaterialParamString_t": {
-        "m_value": 8
-    },
-    "MaterialParamTexture_t": {
-        "m_pValue": 8
-    },
-    "MaterialParamVector_t": {
-        "m_value": 8
-    },
-    "MaterialParam_t": {
-        "m_name": 0
-    },
-    "MaterialResourceData_t": {
-        "m_dynamicParams": 112,
-        "m_dynamicTextureParams": 136,
-        "m_floatAttributes": 184,
-        "m_floatParams": 40,
-        "m_intAttributes": 160,
-        "m_intParams": 16,
-        "m_materialName": 0,
-        "m_renderAttributesUsed": 280,
-        "m_shaderName": 8,
-        "m_stringAttributes": 256,
-        "m_textureAttributes": 232,
-        "m_textureParams": 88,
-        "m_vectorAttributes": 208,
-        "m_vectorParams": 64
-    },
-    "PostProcessingBloomParameters_t": {
-        "m_blendMode": 0,
-        "m_flBloomStartValue": 28,
-        "m_flBloomStrength": 4,
-        "m_flBloomThreshold": 16,
-        "m_flBloomThresholdWidth": 20,
-        "m_flBlurBloomStrength": 12,
-        "m_flBlurWeight": 32,
-        "m_flScreenBloomStrength": 8,
-        "m_flSkyboxBloomStrength": 24,
-        "m_vBlurTint": 52
-    },
-    "PostProcessingLocalContrastParameters_t": {
-        "m_flLocalContrastEdgeStrength": 4,
-        "m_flLocalContrastStrength": 0,
-        "m_flLocalContrastVignetteBlur": 16,
-        "m_flLocalContrastVignetteEnd": 12,
-        "m_flLocalContrastVignetteStart": 8
-    },
-    "PostProcessingResource_t": {
-        "m_bHasBloomParams": 64,
-        "m_bHasColorCorrection": 272,
-        "m_bHasLocalContrastParams": 220,
-        "m_bHasTonemapParams": 0,
-        "m_bHasVignetteParams": 180,
-        "m_bloomParams": 68,
-        "m_colorCorrectionVolumeData": 248,
-        "m_localConstrastParams": 224,
-        "m_nColorCorrectionVolumeDim": 244,
-        "m_toneMapParams": 4,
-        "m_vignetteParams": 184
-    },
-    "PostProcessingTonemapParameters_t": {
-        "m_flExposureBias": 0,
-        "m_flExposureBiasHighlights": 40,
-        "m_flExposureBiasShadows": 36,
-        "m_flLinearAngle": 12,
-        "m_flLinearStrength": 8,
-        "m_flLuminanceSource": 32,
-        "m_flMaxHighlightLum": 56,
-        "m_flMaxShadowLum": 48,
-        "m_flMinHighlightLum": 52,
-        "m_flMinShadowLum": 44,
-        "m_flShoulderStrength": 4,
-        "m_flToeDenom": 24,
-        "m_flToeNum": 20,
-        "m_flToeStrength": 16,
-        "m_flWhitePoint": 28
-    },
-    "PostProcessingVignetteParameters_t": {
-        "m_flFeather": 20,
-        "m_flRadius": 12,
-        "m_flRoundness": 16,
-        "m_flVignetteStrength": 0,
-        "m_vCenter": 4,
-        "m_vColorTint": 24
-    }
+  "MaterialParamBuffer_t": {
+    "m_value": 8
+  },
+  "MaterialParamFloat_t": {
+    "m_flValue": 8
+  },
+  "MaterialParamInt_t": {
+    "m_nValue": 8
+  },
+  "MaterialParamString_t": {
+    "m_value": 8
+  },
+  "MaterialParamTexture_t": {
+    "m_pValue": 8
+  },
+  "MaterialParamVector_t": {
+    "m_value": 8
+  },
+  "MaterialParam_t": {
+    "m_name": 0
+  },
+  "MaterialResourceData_t": {
+    "m_dynamicParams": 112,
+    "m_dynamicTextureParams": 136,
+    "m_floatAttributes": 184,
+    "m_floatParams": 40,
+    "m_intAttributes": 160,
+    "m_intParams": 16,
+    "m_materialName": 0,
+    "m_renderAttributesUsed": 280,
+    "m_shaderName": 8,
+    "m_stringAttributes": 256,
+    "m_textureAttributes": 232,
+    "m_textureParams": 88,
+    "m_vectorAttributes": 208,
+    "m_vectorParams": 64
+  },
+  "PostProcessingBloomParameters_t": {
+    "m_blendMode": 0,
+    "m_flBloomStartValue": 28,
+    "m_flBloomStrength": 4,
+    "m_flBloomThreshold": 16,
+    "m_flBloomThresholdWidth": 20,
+    "m_flBlurBloomStrength": 12,
+    "m_flBlurWeight": 32,
+    "m_flScreenBloomStrength": 8,
+    "m_flSkyboxBloomStrength": 24,
+    "m_vBlurTint": 52
+  },
+  "PostProcessingLocalContrastParameters_t": {
+    "m_flLocalContrastEdgeStrength": 4,
+    "m_flLocalContrastStrength": 0,
+    "m_flLocalContrastVignetteBlur": 16,
+    "m_flLocalContrastVignetteEnd": 12,
+    "m_flLocalContrastVignetteStart": 8
+  },
+  "PostProcessingResource_t": {
+    "m_bHasBloomParams": 64,
+    "m_bHasColorCorrection": 272,
+    "m_bHasLocalContrastParams": 220,
+    "m_bHasTonemapParams": 0,
+    "m_bHasVignetteParams": 180,
+    "m_bloomParams": 68,
+    "m_colorCorrectionVolumeData": 248,
+    "m_localConstrastParams": 224,
+    "m_nColorCorrectionVolumeDim": 244,
+    "m_toneMapParams": 4,
+    "m_vignetteParams": 184
+  },
+  "PostProcessingTonemapParameters_t": {
+    "m_flExposureBias": 0,
+    "m_flExposureBiasHighlights": 40,
+    "m_flExposureBiasShadows": 36,
+    "m_flLinearAngle": 12,
+    "m_flLinearStrength": 8,
+    "m_flLuminanceSource": 32,
+    "m_flMaxHighlightLum": 56,
+    "m_flMaxShadowLum": 48,
+    "m_flMinHighlightLum": 52,
+    "m_flMinShadowLum": 44,
+    "m_flShoulderStrength": 4,
+    "m_flToeDenom": 24,
+    "m_flToeNum": 20,
+    "m_flToeStrength": 16,
+    "m_flWhitePoint": 28
+  },
+  "PostProcessingVignetteParameters_t": {
+    "m_flFeather": 20,
+    "m_flRadius": 12,
+    "m_flRoundness": 16,
+    "m_flVignetteStrength": 0,
+    "m_vCenter": 4,
+    "m_vColorTint": 24
+  }
 }

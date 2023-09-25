@@ -6,11 +6,11 @@ namespace AimMatrixOpFixedSettings_t {
     constexpr std::ptrdiff_t m_attachment = 0x0;
     constexpr std::ptrdiff_t m_damping = 0x80;
     constexpr std::ptrdiff_t m_poseCacheHandles = 0x90;
-    constexpr std::ptrdiff_t m_eBlendMode = 0xb8;
-    constexpr std::ptrdiff_t m_fAngleIncrement = 0xbc;
-    constexpr std::ptrdiff_t m_nSequenceMaxFrame = 0xc0;
-    constexpr std::ptrdiff_t m_nBoneMaskIndex = 0xc4;
-    constexpr std::ptrdiff_t m_bTargetIsPosition = 0xc8;
+    constexpr std::ptrdiff_t m_eBlendMode = 0xB8;
+    constexpr std::ptrdiff_t m_fAngleIncrement = 0xBC;
+    constexpr std::ptrdiff_t m_nSequenceMaxFrame = 0xC0;
+    constexpr std::ptrdiff_t m_nBoneMaskIndex = 0xC4;
+    constexpr std::ptrdiff_t m_bTargetIsPosition = 0xC8;
 }
 
 namespace AnimComponentID {
@@ -80,7 +80,7 @@ namespace BlendItem_t {
     constexpr std::ptrdiff_t m_tags = 0x0;
     constexpr std::ptrdiff_t m_pChild = 0x18;
     constexpr std::ptrdiff_t m_hSequence = 0x28;
-    constexpr std::ptrdiff_t m_vPos = 0x2c;
+    constexpr std::ptrdiff_t m_vPos = 0x2C;
     constexpr std::ptrdiff_t m_flDuration = 0x34;
     constexpr std::ptrdiff_t m_bUseCustomDuration = 0x38;
 }
@@ -94,7 +94,7 @@ namespace CActionComponentUpdater {
 }
 
 namespace CAddUpdateNode {
-    constexpr std::ptrdiff_t m_footMotionTiming = 0x8c;
+    constexpr std::ptrdiff_t m_footMotionTiming = 0x8C;
     constexpr std::ptrdiff_t m_bApplyToFootMotion = 0x90;
     constexpr std::ptrdiff_t m_bApplyChannelsSeparately = 0x91;
     constexpr std::ptrdiff_t m_bUseModelSpace = 0x92;
@@ -108,7 +108,7 @@ namespace CAimConstraint {
 namespace CAimMatrixUpdateNode {
     constexpr std::ptrdiff_t m_opFixedSettings = 0x70;
     constexpr std::ptrdiff_t m_target = 0x148;
-    constexpr std::ptrdiff_t m_paramIndex = 0x14c;
+    constexpr std::ptrdiff_t m_paramIndex = 0x14C;
     constexpr std::ptrdiff_t m_hSequence = 0x150;
     constexpr std::ptrdiff_t m_bResetChild = 0x154;
     constexpr std::ptrdiff_t m_bLockWhenWaning = 0x155;
@@ -125,7 +125,7 @@ namespace CAnimAttachment {
     constexpr std::ptrdiff_t m_influenceRotations = 0x0;
     constexpr std::ptrdiff_t m_influenceOffsets = 0x30;
     constexpr std::ptrdiff_t m_influenceIndices = 0x60;
-    constexpr std::ptrdiff_t m_influenceWeights = 0x6c;
+    constexpr std::ptrdiff_t m_influenceWeights = 0x6C;
     constexpr std::ptrdiff_t m_numInfluences = 0x78;
 }
 
@@ -143,8 +143,8 @@ namespace CAnimBoneDifference {
     constexpr std::ptrdiff_t m_name = 0x0;
     constexpr std::ptrdiff_t m_parent = 0x10;
     constexpr std::ptrdiff_t m_posError = 0x20;
-    constexpr std::ptrdiff_t m_bHasRotation = 0x2c;
-    constexpr std::ptrdiff_t m_bHasMovement = 0x2d;
+    constexpr std::ptrdiff_t m_bHasRotation = 0x2C;
+    constexpr std::ptrdiff_t m_bHasMovement = 0x2D;
 }
 
 namespace CAnimComponentUpdater {
@@ -184,11 +184,11 @@ namespace CAnimDemoCaptureSettings {
     constexpr std::ptrdiff_t m_flMaxSplineErrorRotation = 0x0;
     constexpr std::ptrdiff_t m_flMaxSplineErrorTranslation = 0x4;
     constexpr std::ptrdiff_t m_flMaxSplineErrorScale = 0x8;
-    constexpr std::ptrdiff_t m_flIkRotation_MaxSplineError = 0xc;
+    constexpr std::ptrdiff_t m_flIkRotation_MaxSplineError = 0xC;
     constexpr std::ptrdiff_t m_flIkTranslation_MaxSplineError = 0x10;
     constexpr std::ptrdiff_t m_flMaxQuantizationErrorRotation = 0x14;
     constexpr std::ptrdiff_t m_flMaxQuantizationErrorTranslation = 0x18;
-    constexpr std::ptrdiff_t m_flMaxQuantizationErrorScale = 0x1c;
+    constexpr std::ptrdiff_t m_flMaxQuantizationErrorScale = 0x1C;
     constexpr std::ptrdiff_t m_flIkRotation_MaxQuantizationError = 0x20;
     constexpr std::ptrdiff_t m_flIkTranslation_MaxQuantizationError = 0x24;
     constexpr std::ptrdiff_t m_baseSequence = 0x28;
@@ -203,16 +203,16 @@ namespace CAnimDesc {
     constexpr std::ptrdiff_t m_flags = 0x10;
     constexpr std::ptrdiff_t fps = 0x18;
     constexpr std::ptrdiff_t m_Data = 0x20;
-    constexpr std::ptrdiff_t m_movementArray = 0xf8;
+    constexpr std::ptrdiff_t m_movementArray = 0xF8;
     constexpr std::ptrdiff_t m_eventArray = 0x110;
     constexpr std::ptrdiff_t m_activityArray = 0x128;
     constexpr std::ptrdiff_t m_hierarchyArray = 0x140;
     constexpr std::ptrdiff_t framestalltime = 0x158;
-    constexpr std::ptrdiff_t m_vecRootMin = 0x15c;
+    constexpr std::ptrdiff_t m_vecRootMin = 0x15C;
     constexpr std::ptrdiff_t m_vecRootMax = 0x168;
     constexpr std::ptrdiff_t m_vecBoneWorldMin = 0x178;
     constexpr std::ptrdiff_t m_vecBoneWorldMax = 0x190;
-    constexpr std::ptrdiff_t m_sequenceParams = 0x1a8;
+    constexpr std::ptrdiff_t m_sequenceParams = 0x1A8;
 }
 
 namespace CAnimDesc_Flag {
@@ -250,7 +250,7 @@ namespace CAnimEnum {
 
 namespace CAnimEventDefinition {
     constexpr std::ptrdiff_t m_nFrame = 0x8;
-    constexpr std::ptrdiff_t m_flCycle = 0xc;
+    constexpr std::ptrdiff_t m_flCycle = 0xC;
     constexpr std::ptrdiff_t m_EventData = 0x10;
     constexpr std::ptrdiff_t m_sLegacyOptions = 0x20;
     constexpr std::ptrdiff_t m_sEventName = 0x30;
@@ -300,7 +300,7 @@ namespace CAnimGraphSettingsManager {
 
 namespace CAnimInputDamping {
     constexpr std::ptrdiff_t m_speedFunction = 0x8;
-    constexpr std::ptrdiff_t m_fSpeedScale = 0xc;
+    constexpr std::ptrdiff_t m_fSpeedScale = 0xC;
 }
 
 namespace CAnimKeyData {
@@ -318,7 +318,7 @@ namespace CAnimLocalHierarchy {
     constexpr std::ptrdiff_t m_nStartFrame = 0x20;
     constexpr std::ptrdiff_t m_nPeakFrame = 0x24;
     constexpr std::ptrdiff_t m_nTailFrame = 0x28;
-    constexpr std::ptrdiff_t m_nEndFrame = 0x2c;
+    constexpr std::ptrdiff_t m_nEndFrame = 0x2C;
 }
 
 namespace CAnimMorphDifference {
@@ -334,7 +334,7 @@ namespace CAnimMovement {
     constexpr std::ptrdiff_t endframe = 0x0;
     constexpr std::ptrdiff_t motionflags = 0x4;
     constexpr std::ptrdiff_t v0 = 0x8;
-    constexpr std::ptrdiff_t v1 = 0xc;
+    constexpr std::ptrdiff_t v1 = 0xC;
     constexpr std::ptrdiff_t angle = 0x10;
     constexpr std::ptrdiff_t vector = 0x14;
     constexpr std::ptrdiff_t position = 0x20;
@@ -342,7 +342,7 @@ namespace CAnimMovement {
 
 namespace CAnimNodePath {
     constexpr std::ptrdiff_t m_path = 0x0;
-    constexpr std::ptrdiff_t m_nCount = 0x2c;
+    constexpr std::ptrdiff_t m_nCount = 0x2C;
 }
 
 namespace CAnimParamHandle {
@@ -359,8 +359,8 @@ namespace CAnimParameterBase {
     constexpr std::ptrdiff_t m_group = 0x20;
     constexpr std::ptrdiff_t m_id = 0x28;
     constexpr std::ptrdiff_t m_componentName = 0x40;
-    constexpr std::ptrdiff_t m_bNetworkingRequested = 0x4c;
-    constexpr std::ptrdiff_t m_bIsReferenced = 0x4d;
+    constexpr std::ptrdiff_t m_bNetworkingRequested = 0x4C;
+    constexpr std::ptrdiff_t m_bIsReferenced = 0x4D;
 }
 
 namespace CAnimParameterManagerUpdater {
@@ -369,7 +369,7 @@ namespace CAnimParameterManagerUpdater {
     constexpr std::ptrdiff_t m_nameToIndexMap = 0x50;
     constexpr std::ptrdiff_t m_indexToHandle = 0x70;
     constexpr std::ptrdiff_t m_autoResetParams = 0x88;
-    constexpr std::ptrdiff_t m_autoResetMap = 0xa0;
+    constexpr std::ptrdiff_t m_autoResetMap = 0xA0;
 }
 
 namespace CAnimReplayFrame {
@@ -400,8 +400,8 @@ namespace CAnimSkeleton {
     constexpr std::ptrdiff_t m_children = 0x58;
     constexpr std::ptrdiff_t m_parents = 0x70;
     constexpr std::ptrdiff_t m_feet = 0x88;
-    constexpr std::ptrdiff_t m_morphNames = 0xa0;
-    constexpr std::ptrdiff_t m_lodBoneCounts = 0xb8;
+    constexpr std::ptrdiff_t m_morphNames = 0xA0;
+    constexpr std::ptrdiff_t m_lodBoneCounts = 0xB8;
 }
 
 namespace CAnimStateMachineUpdater {
@@ -414,7 +414,7 @@ namespace CAnimTagBase {
     constexpr std::ptrdiff_t m_name = 0x18;
     constexpr std::ptrdiff_t m_group = 0x20;
     constexpr std::ptrdiff_t m_tagID = 0x28;
-    constexpr std::ptrdiff_t m_bIsReferenced = 0x2c;
+    constexpr std::ptrdiff_t m_bIsReferenced = 0x2C;
 }
 
 namespace CAnimTagManagerUpdater {
@@ -439,9 +439,9 @@ namespace CAnimUpdateSharedData {
     constexpr std::ptrdiff_t m_pTagManagerUpdater = 0x68;
     constexpr std::ptrdiff_t m_scriptManager = 0x70;
     constexpr std::ptrdiff_t m_settings = 0x78;
-    constexpr std::ptrdiff_t m_pStaticPoseCache = 0xa8;
-    constexpr std::ptrdiff_t m_pSkeleton = 0xb0;
-    constexpr std::ptrdiff_t m_rootNodePath = 0xb8;
+    constexpr std::ptrdiff_t m_pStaticPoseCache = 0xA8;
+    constexpr std::ptrdiff_t m_pSkeleton = 0xB0;
+    constexpr std::ptrdiff_t m_rootNodePath = 0xB8;
 }
 
 namespace CAnimUser {
@@ -474,7 +474,7 @@ namespace CAnimationGraphVisualizerPie {
 
 namespace CAnimationGraphVisualizerPrimitiveBase {
     constexpr std::ptrdiff_t m_Type = 0x8;
-    constexpr std::ptrdiff_t m_OwningAnimNodePaths = 0xc;
+    constexpr std::ptrdiff_t m_OwningAnimNodePaths = 0xC;
     constexpr std::ptrdiff_t m_nOwningAnimNodePathCount = 0x38;
 }
 
@@ -515,10 +515,10 @@ namespace CAudioAnimTag {
     constexpr std::ptrdiff_t m_clipName = 0x38;
     constexpr std::ptrdiff_t m_attachmentName = 0x40;
     constexpr std::ptrdiff_t m_flVolume = 0x48;
-    constexpr std::ptrdiff_t m_bStopWhenTagEnds = 0x4c;
-    constexpr std::ptrdiff_t m_bStopWhenGraphEnds = 0x4d;
-    constexpr std::ptrdiff_t m_bPlayOnServer = 0x4e;
-    constexpr std::ptrdiff_t m_bPlayOnClient = 0x4f;
+    constexpr std::ptrdiff_t m_bStopWhenTagEnds = 0x4C;
+    constexpr std::ptrdiff_t m_bStopWhenGraphEnds = 0x4D;
+    constexpr std::ptrdiff_t m_bPlayOnServer = 0x4E;
+    constexpr std::ptrdiff_t m_bPlayOnClient = 0x4F;
 }
 
 namespace CBaseConstraint {
@@ -532,7 +532,7 @@ namespace CBinaryUpdateNode {
     constexpr std::ptrdiff_t m_pChild1 = 0x58;
     constexpr std::ptrdiff_t m_pChild2 = 0x68;
     constexpr std::ptrdiff_t m_timingBehavior = 0x78;
-    constexpr std::ptrdiff_t m_flTimingBlend = 0x7c;
+    constexpr std::ptrdiff_t m_flTimingBlend = 0x7C;
     constexpr std::ptrdiff_t m_bResetChild1 = 0x80;
     constexpr std::ptrdiff_t m_bResetChild2 = 0x81;
 }
@@ -541,18 +541,18 @@ namespace CBlend2DUpdateNode {
     constexpr std::ptrdiff_t m_items = 0x60;
     constexpr std::ptrdiff_t m_tags = 0x78;
     constexpr std::ptrdiff_t m_paramSpans = 0x90;
-    constexpr std::ptrdiff_t m_nodeItemIndices = 0xa8;
-    constexpr std::ptrdiff_t m_damping = 0xc0;
-    constexpr std::ptrdiff_t m_blendSourceX = 0xd0;
-    constexpr std::ptrdiff_t m_paramX = 0xd4;
-    constexpr std::ptrdiff_t m_blendSourceY = 0xd8;
-    constexpr std::ptrdiff_t m_paramY = 0xdc;
-    constexpr std::ptrdiff_t m_eBlendMode = 0xe0;
-    constexpr std::ptrdiff_t m_playbackSpeed = 0xe4;
-    constexpr std::ptrdiff_t m_bLoop = 0xe8;
-    constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xe9;
-    constexpr std::ptrdiff_t m_bLockWhenWaning = 0xea;
-    constexpr std::ptrdiff_t m_bAnimEventsAndTagsOnMostWeightedOnly = 0xeb;
+    constexpr std::ptrdiff_t m_nodeItemIndices = 0xA8;
+    constexpr std::ptrdiff_t m_damping = 0xC0;
+    constexpr std::ptrdiff_t m_blendSourceX = 0xD0;
+    constexpr std::ptrdiff_t m_paramX = 0xD4;
+    constexpr std::ptrdiff_t m_blendSourceY = 0xD8;
+    constexpr std::ptrdiff_t m_paramY = 0xDC;
+    constexpr std::ptrdiff_t m_eBlendMode = 0xE0;
+    constexpr std::ptrdiff_t m_playbackSpeed = 0xE4;
+    constexpr std::ptrdiff_t m_bLoop = 0xE8;
+    constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xE9;
+    constexpr std::ptrdiff_t m_bLockWhenWaning = 0xEA;
+    constexpr std::ptrdiff_t m_bAnimEventsAndTagsOnMostWeightedOnly = 0xEB;
 }
 
 namespace CBlendCurve {
@@ -564,14 +564,14 @@ namespace CBlendUpdateNode {
     constexpr std::ptrdiff_t m_children = 0x60;
     constexpr std::ptrdiff_t m_sortedOrder = 0x78;
     constexpr std::ptrdiff_t m_targetValues = 0x90;
-    constexpr std::ptrdiff_t m_blendValueSource = 0xac;
-    constexpr std::ptrdiff_t m_paramIndex = 0xb0;
-    constexpr std::ptrdiff_t m_damping = 0xb8;
-    constexpr std::ptrdiff_t m_blendKeyType = 0xc8;
-    constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xcc;
-    constexpr std::ptrdiff_t m_bSyncCycles = 0xcd;
-    constexpr std::ptrdiff_t m_bLoop = 0xce;
-    constexpr std::ptrdiff_t m_bLockWhenWaning = 0xcf;
+    constexpr std::ptrdiff_t m_blendValueSource = 0xAC;
+    constexpr std::ptrdiff_t m_paramIndex = 0xB0;
+    constexpr std::ptrdiff_t m_damping = 0xB8;
+    constexpr std::ptrdiff_t m_blendKeyType = 0xC8;
+    constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xCC;
+    constexpr std::ptrdiff_t m_bSyncCycles = 0xCD;
+    constexpr std::ptrdiff_t m_bLoop = 0xCE;
+    constexpr std::ptrdiff_t m_bLockWhenWaning = 0xCF;
 }
 
 namespace CBodyGroupAnimTag {
@@ -614,13 +614,13 @@ namespace CBoneConstraintPoseSpaceMorph_Input_t {
 }
 
 namespace CBoneMaskUpdateNode {
-    constexpr std::ptrdiff_t m_nWeightListIndex = 0x8c;
+    constexpr std::ptrdiff_t m_nWeightListIndex = 0x8C;
     constexpr std::ptrdiff_t m_flRootMotionBlend = 0x90;
     constexpr std::ptrdiff_t m_blendSpace = 0x94;
     constexpr std::ptrdiff_t m_footMotionTiming = 0x98;
-    constexpr std::ptrdiff_t m_bUseBlendScale = 0x9c;
-    constexpr std::ptrdiff_t m_blendValueSource = 0xa0;
-    constexpr std::ptrdiff_t m_hBlendParameter = 0xa4;
+    constexpr std::ptrdiff_t m_bUseBlendScale = 0x9C;
+    constexpr std::ptrdiff_t m_blendValueSource = 0xA0;
+    constexpr std::ptrdiff_t m_hBlendParameter = 0xA4;
 }
 
 namespace CBonePositionMetricEvaluator {
@@ -643,25 +643,25 @@ namespace CCachedPose {
     constexpr std::ptrdiff_t m_transforms = 0x8;
     constexpr std::ptrdiff_t m_morphWeights = 0x20;
     constexpr std::ptrdiff_t m_hSequence = 0x38;
-    constexpr std::ptrdiff_t m_flCycle = 0x3c;
+    constexpr std::ptrdiff_t m_flCycle = 0x3C;
 }
 
 namespace CChoiceUpdateNode {
     constexpr std::ptrdiff_t m_children = 0x58;
     constexpr std::ptrdiff_t m_weights = 0x70;
     constexpr std::ptrdiff_t m_blendTimes = 0x88;
-    constexpr std::ptrdiff_t m_choiceMethod = 0xa0;
-    constexpr std::ptrdiff_t m_choiceChangeMethod = 0xa4;
-    constexpr std::ptrdiff_t m_blendMethod = 0xa8;
-    constexpr std::ptrdiff_t m_blendTime = 0xac;
-    constexpr std::ptrdiff_t m_bCrossFade = 0xb0;
-    constexpr std::ptrdiff_t m_bResetChosen = 0xb1;
-    constexpr std::ptrdiff_t m_bDontResetSameSelection = 0xb2;
+    constexpr std::ptrdiff_t m_choiceMethod = 0xA0;
+    constexpr std::ptrdiff_t m_choiceChangeMethod = 0xA4;
+    constexpr std::ptrdiff_t m_blendMethod = 0xA8;
+    constexpr std::ptrdiff_t m_blendTime = 0xAC;
+    constexpr std::ptrdiff_t m_bCrossFade = 0xB0;
+    constexpr std::ptrdiff_t m_bResetChosen = 0xB1;
+    constexpr std::ptrdiff_t m_bDontResetSameSelection = 0xB2;
 }
 
 namespace CClothSettingsAnimTag {
     constexpr std::ptrdiff_t m_flStiffness = 0x38;
-    constexpr std::ptrdiff_t m_flEaseIn = 0x3c;
+    constexpr std::ptrdiff_t m_flEaseIn = 0x3C;
     constexpr std::ptrdiff_t m_flEaseOut = 0x40;
     constexpr std::ptrdiff_t m_nVertexSet = 0x48;
 }
@@ -675,9 +675,9 @@ namespace CCompressorGroup {
     constexpr std::ptrdiff_t m_szGrouping = 0x68;
     constexpr std::ptrdiff_t m_nCompressorIndex = 0x80;
     constexpr std::ptrdiff_t m_szElementNames = 0x98;
-    constexpr std::ptrdiff_t m_nElementUniqueID = 0xb0;
-    constexpr std::ptrdiff_t m_nElementMask = 0xc8;
-    constexpr std::ptrdiff_t m_vectorCompressor = 0xf8;
+    constexpr std::ptrdiff_t m_nElementUniqueID = 0xB0;
+    constexpr std::ptrdiff_t m_nElementMask = 0xC8;
+    constexpr std::ptrdiff_t m_vectorCompressor = 0xF8;
     constexpr std::ptrdiff_t m_quaternionCompressor = 0x110;
     constexpr std::ptrdiff_t m_intCompressor = 0x128;
     constexpr std::ptrdiff_t m_boolCompressor = 0x140;
@@ -691,14 +691,14 @@ namespace CConcreteAnimParameter {
     constexpr std::ptrdiff_t m_eNetworkSetting = 0x54;
     constexpr std::ptrdiff_t m_bUseMostRecentValue = 0x58;
     constexpr std::ptrdiff_t m_bAutoReset = 0x59;
-    constexpr std::ptrdiff_t m_bGameWritable = 0x5a;
-    constexpr std::ptrdiff_t m_bGraphWritable = 0x5b;
+    constexpr std::ptrdiff_t m_bGameWritable = 0x5A;
+    constexpr std::ptrdiff_t m_bGraphWritable = 0x5B;
 }
 
 namespace CConstraintSlave {
     constexpr std::ptrdiff_t m_qBaseOrientation = 0x0;
     constexpr std::ptrdiff_t m_vBasePosition = 0x10;
-    constexpr std::ptrdiff_t m_nBoneHash = 0x1c;
+    constexpr std::ptrdiff_t m_nBoneHash = 0x1C;
     constexpr std::ptrdiff_t m_flWeight = 0x20;
     constexpr std::ptrdiff_t m_sName = 0x28;
 }
@@ -706,7 +706,7 @@ namespace CConstraintSlave {
 namespace CConstraintTarget {
     constexpr std::ptrdiff_t m_qOffset = 0x20;
     constexpr std::ptrdiff_t m_vOffset = 0x30;
-    constexpr std::ptrdiff_t m_nBoneHash = 0x3c;
+    constexpr std::ptrdiff_t m_nBoneHash = 0x3C;
     constexpr std::ptrdiff_t m_sName = 0x40;
     constexpr std::ptrdiff_t m_flWeight = 0x48;
     constexpr std::ptrdiff_t m_bIsAttachment = 0x59;
@@ -718,7 +718,7 @@ namespace CCycleBase {
 
 namespace CCycleControlClipUpdateNode {
     constexpr std::ptrdiff_t m_tags = 0x60;
-    constexpr std::ptrdiff_t m_hSequence = 0x7c;
+    constexpr std::ptrdiff_t m_hSequence = 0x7C;
     constexpr std::ptrdiff_t m_duration = 0x80;
     constexpr std::ptrdiff_t m_valueSource = 0x84;
     constexpr std::ptrdiff_t m_paramIndex = 0x88;
@@ -726,16 +726,16 @@ namespace CCycleControlClipUpdateNode {
 
 namespace CCycleControlUpdateNode {
     constexpr std::ptrdiff_t m_valueSource = 0x68;
-    constexpr std::ptrdiff_t m_paramIndex = 0x6c;
+    constexpr std::ptrdiff_t m_paramIndex = 0x6C;
 }
 
 namespace CDampedPathAnimMotorUpdater {
-    constexpr std::ptrdiff_t m_flAnticipationTime = 0x2c;
+    constexpr std::ptrdiff_t m_flAnticipationTime = 0x2C;
     constexpr std::ptrdiff_t m_flMinSpeedScale = 0x30;
     constexpr std::ptrdiff_t m_hAnticipationPosParam = 0x34;
     constexpr std::ptrdiff_t m_hAnticipationHeadingParam = 0x36;
     constexpr std::ptrdiff_t m_flSpringConstant = 0x38;
-    constexpr std::ptrdiff_t m_flMinSpringTension = 0x3c;
+    constexpr std::ptrdiff_t m_flMinSpringTension = 0x3C;
     constexpr std::ptrdiff_t m_flMaxSpringTension = 0x40;
 }
 
@@ -746,7 +746,7 @@ namespace CDampedValueComponentUpdater {
 namespace CDampedValueUpdateItem {
     constexpr std::ptrdiff_t m_damping = 0x0;
     constexpr std::ptrdiff_t m_hParamIn = 0x18;
-    constexpr std::ptrdiff_t m_hParamOut = 0x1a;
+    constexpr std::ptrdiff_t m_hParamOut = 0x1A;
 }
 
 namespace CDemoSettingsComponentUpdater {
@@ -759,27 +759,27 @@ namespace CDirectPlaybackTagData {
 }
 
 namespace CDirectPlaybackUpdateNode {
-    constexpr std::ptrdiff_t m_bFinishEarly = 0x6c;
-    constexpr std::ptrdiff_t m_bResetOnFinish = 0x6d;
+    constexpr std::ptrdiff_t m_bFinishEarly = 0x6C;
+    constexpr std::ptrdiff_t m_bResetOnFinish = 0x6D;
     constexpr std::ptrdiff_t m_allTags = 0x70;
 }
 
 namespace CDirectionalBlendUpdateNode {
-    constexpr std::ptrdiff_t m_hSequences = 0x5c;
+    constexpr std::ptrdiff_t m_hSequences = 0x5C;
     constexpr std::ptrdiff_t m_damping = 0x80;
     constexpr std::ptrdiff_t m_blendValueSource = 0x90;
     constexpr std::ptrdiff_t m_paramIndex = 0x94;
     constexpr std::ptrdiff_t m_playbackSpeed = 0x98;
-    constexpr std::ptrdiff_t m_duration = 0x9c;
-    constexpr std::ptrdiff_t m_bLoop = 0xa0;
-    constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xa1;
+    constexpr std::ptrdiff_t m_duration = 0x9C;
+    constexpr std::ptrdiff_t m_bLoop = 0xA0;
+    constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xA1;
 }
 
 namespace CDistanceRemainingMetricEvaluator {
     constexpr std::ptrdiff_t m_flMaxDistance = 0x50;
     constexpr std::ptrdiff_t m_flMinDistance = 0x54;
     constexpr std::ptrdiff_t m_flStartGoalFilterDistance = 0x58;
-    constexpr std::ptrdiff_t m_flMaxGoalOvershootScale = 0x5c;
+    constexpr std::ptrdiff_t m_flMaxGoalOvershootScale = 0x5C;
     constexpr std::ptrdiff_t m_bFilterFixedMinDistance = 0x60;
     constexpr std::ptrdiff_t m_bFilterGoalDistance = 0x61;
     constexpr std::ptrdiff_t m_bFilterGoalOvershoot = 0x62;
@@ -787,13 +787,13 @@ namespace CDistanceRemainingMetricEvaluator {
 
 namespace CDrawCullingData {
     constexpr std::ptrdiff_t m_vConeApex = 0x0;
-    constexpr std::ptrdiff_t m_ConeAxis = 0xc;
-    constexpr std::ptrdiff_t m_ConeCutoff = 0xf;
+    constexpr std::ptrdiff_t m_ConeAxis = 0xC;
+    constexpr std::ptrdiff_t m_ConeCutoff = 0xF;
 }
 
 namespace CEmitTagActionUpdater {
     constexpr std::ptrdiff_t m_nTagIndex = 0x18;
-    constexpr std::ptrdiff_t m_bIsZeroDuration = 0x1c;
+    constexpr std::ptrdiff_t m_bIsZeroDuration = 0x1C;
 }
 
 namespace CEnumAnimParameter {
@@ -803,8 +803,8 @@ namespace CEnumAnimParameter {
 
 namespace CExpressionActionUpdater {
     constexpr std::ptrdiff_t m_hParam = 0x18;
-    constexpr std::ptrdiff_t m_eParamType = 0x1a;
-    constexpr std::ptrdiff_t m_hScript = 0x1c;
+    constexpr std::ptrdiff_t m_eParamType = 0x1A;
+    constexpr std::ptrdiff_t m_hScript = 0x1C;
 }
 
 namespace CFingerBone {
@@ -812,7 +812,7 @@ namespace CFingerBone {
     constexpr std::ptrdiff_t m_hingeAxis = 0x8;
     constexpr std::ptrdiff_t m_vCapsulePos1 = 0x14;
     constexpr std::ptrdiff_t m_vCapsulePos2 = 0x20;
-    constexpr std::ptrdiff_t m_flMinAngle = 0x2c;
+    constexpr std::ptrdiff_t m_flMinAngle = 0x2C;
     constexpr std::ptrdiff_t m_flMaxAngle = 0x30;
     constexpr std::ptrdiff_t m_flRadius = 0x34;
 }
@@ -827,7 +827,7 @@ namespace CFingerChain {
     constexpr std::ptrdiff_t m_vSplayHingeAxis = 0x58;
     constexpr std::ptrdiff_t m_flSplayMinAngle = 0x64;
     constexpr std::ptrdiff_t m_flSplayMaxAngle = 0x68;
-    constexpr std::ptrdiff_t m_flFingerScaleRatio = 0x6c;
+    constexpr std::ptrdiff_t m_flFingerScaleRatio = 0x6C;
 }
 
 namespace CFingerSource {
@@ -860,7 +860,7 @@ namespace CFloatAnimParameter {
     constexpr std::ptrdiff_t m_fDefaultValue = 0x60;
     constexpr std::ptrdiff_t m_fMinValue = 0x64;
     constexpr std::ptrdiff_t m_fMaxValue = 0x68;
-    constexpr std::ptrdiff_t m_bInterpolate = 0x6c;
+    constexpr std::ptrdiff_t m_bInterpolate = 0x6C;
 }
 
 namespace CFollowAttachmentUpdateNode {
@@ -868,40 +868,40 @@ namespace CFollowAttachmentUpdateNode {
 }
 
 namespace CFollowPathUpdateNode {
-    constexpr std::ptrdiff_t m_flBlendOutTime = 0x6c;
+    constexpr std::ptrdiff_t m_flBlendOutTime = 0x6C;
     constexpr std::ptrdiff_t m_bBlockNonPathMovement = 0x70;
     constexpr std::ptrdiff_t m_bStopFeetAtGoal = 0x71;
     constexpr std::ptrdiff_t m_bScaleSpeed = 0x72;
     constexpr std::ptrdiff_t m_flScale = 0x74;
     constexpr std::ptrdiff_t m_flMinAngle = 0x78;
-    constexpr std::ptrdiff_t m_flMaxAngle = 0x7c;
+    constexpr std::ptrdiff_t m_flMaxAngle = 0x7C;
     constexpr std::ptrdiff_t m_flSpeedScaleBlending = 0x80;
     constexpr std::ptrdiff_t m_turnDamping = 0x88;
     constexpr std::ptrdiff_t m_facingTarget = 0x98;
-    constexpr std::ptrdiff_t m_hParam = 0x9c;
-    constexpr std::ptrdiff_t m_flTurnToFaceOffset = 0xa0;
-    constexpr std::ptrdiff_t m_bTurnToFace = 0xa4;
+    constexpr std::ptrdiff_t m_hParam = 0x9C;
+    constexpr std::ptrdiff_t m_flTurnToFaceOffset = 0xA0;
+    constexpr std::ptrdiff_t m_bTurnToFace = 0xA4;
 }
 
 namespace CFootAdjustmentUpdateNode {
     constexpr std::ptrdiff_t m_clips = 0x70;
     constexpr std::ptrdiff_t m_hBasePoseCacheHandle = 0x88;
-    constexpr std::ptrdiff_t m_facingTarget = 0x8c;
+    constexpr std::ptrdiff_t m_facingTarget = 0x8C;
     constexpr std::ptrdiff_t m_flTurnTimeMin = 0x90;
     constexpr std::ptrdiff_t m_flTurnTimeMax = 0x94;
     constexpr std::ptrdiff_t m_flStepHeightMax = 0x98;
-    constexpr std::ptrdiff_t m_flStepHeightMaxAngle = 0x9c;
-    constexpr std::ptrdiff_t m_bResetChild = 0xa0;
-    constexpr std::ptrdiff_t m_bAnimationDriven = 0xa1;
+    constexpr std::ptrdiff_t m_flStepHeightMaxAngle = 0x9C;
+    constexpr std::ptrdiff_t m_bResetChild = 0xA0;
+    constexpr std::ptrdiff_t m_bAnimationDriven = 0xA1;
 }
 
 namespace CFootCycleDefinition {
     constexpr std::ptrdiff_t m_vStancePositionMS = 0x0;
-    constexpr std::ptrdiff_t m_vMidpointPositionMS = 0xc;
+    constexpr std::ptrdiff_t m_vMidpointPositionMS = 0xC;
     constexpr std::ptrdiff_t m_flStanceDirectionMS = 0x18;
-    constexpr std::ptrdiff_t m_vToStrideStartPos = 0x1c;
+    constexpr std::ptrdiff_t m_vToStrideStartPos = 0x1C;
     constexpr std::ptrdiff_t m_stanceCycle = 0x28;
-    constexpr std::ptrdiff_t m_footLiftCycle = 0x2c;
+    constexpr std::ptrdiff_t m_footLiftCycle = 0x2C;
     constexpr std::ptrdiff_t m_footOffCycle = 0x30;
     constexpr std::ptrdiff_t m_footStrikeCycle = 0x34;
     constexpr std::ptrdiff_t m_footLandCycle = 0x38;
@@ -920,7 +920,7 @@ namespace CFootDefinition {
     constexpr std::ptrdiff_t m_flFootLength = 0x30;
     constexpr std::ptrdiff_t m_flBindPoseDirectionMS = 0x34;
     constexpr std::ptrdiff_t m_flTraceHeight = 0x38;
-    constexpr std::ptrdiff_t m_flTraceRadius = 0x3c;
+    constexpr std::ptrdiff_t m_flTraceRadius = 0x3C;
 }
 
 namespace CFootFallAnimTag {
@@ -929,19 +929,19 @@ namespace CFootFallAnimTag {
 
 namespace CFootLockUpdateNode {
     constexpr std::ptrdiff_t m_opFixedSettings = 0x68;
-    constexpr std::ptrdiff_t m_footSettings = 0xd0;
-    constexpr std::ptrdiff_t m_hipShiftDamping = 0xe8;
-    constexpr std::ptrdiff_t m_rootHeightDamping = 0xf8;
+    constexpr std::ptrdiff_t m_footSettings = 0xD0;
+    constexpr std::ptrdiff_t m_hipShiftDamping = 0xE8;
+    constexpr std::ptrdiff_t m_rootHeightDamping = 0xF8;
     constexpr std::ptrdiff_t m_flStrideCurveScale = 0x108;
-    constexpr std::ptrdiff_t m_flStrideCurveLimitScale = 0x10c;
+    constexpr std::ptrdiff_t m_flStrideCurveLimitScale = 0x10C;
     constexpr std::ptrdiff_t m_flStepHeightIncreaseScale = 0x110;
     constexpr std::ptrdiff_t m_flStepHeightDecreaseScale = 0x114;
     constexpr std::ptrdiff_t m_flHipShiftScale = 0x118;
-    constexpr std::ptrdiff_t m_flBlendTime = 0x11c;
+    constexpr std::ptrdiff_t m_flBlendTime = 0x11C;
     constexpr std::ptrdiff_t m_flMaxRootHeightOffset = 0x120;
     constexpr std::ptrdiff_t m_flMinRootHeightOffset = 0x124;
     constexpr std::ptrdiff_t m_flTiltPlanePitchSpringStrength = 0x128;
-    constexpr std::ptrdiff_t m_flTiltPlaneRollSpringStrength = 0x12c;
+    constexpr std::ptrdiff_t m_flTiltPlaneRollSpringStrength = 0x12C;
     constexpr std::ptrdiff_t m_bApplyFootRotationLimits = 0x130;
     constexpr std::ptrdiff_t m_bApplyHipShift = 0x131;
     constexpr std::ptrdiff_t m_bModulateStepHeight = 0x132;
@@ -958,9 +958,9 @@ namespace CFootMotion {
 
 namespace CFootPinningUpdateNode {
     constexpr std::ptrdiff_t m_poseOpFixedData = 0x70;
-    constexpr std::ptrdiff_t m_eTimingSource = 0xa0;
-    constexpr std::ptrdiff_t m_params = 0xa8;
-    constexpr std::ptrdiff_t m_bResetChild = 0xc0;
+    constexpr std::ptrdiff_t m_eTimingSource = 0xA0;
+    constexpr std::ptrdiff_t m_params = 0xA8;
+    constexpr std::ptrdiff_t m_bResetChild = 0xC0;
 }
 
 namespace CFootPositionMetricEvaluator {
@@ -984,7 +984,7 @@ namespace CFootTrajectories {
 
 namespace CFootTrajectory {
     constexpr std::ptrdiff_t m_vOffset = 0x0;
-    constexpr std::ptrdiff_t m_flRotationOffset = 0xc;
+    constexpr std::ptrdiff_t m_flRotationOffset = 0xC;
     constexpr std::ptrdiff_t m_flProgression = 0x10;
 }
 
@@ -1004,7 +1004,7 @@ namespace CFutureVelocityMetricEvaluator {
     constexpr std::ptrdiff_t m_flDistance = 0x50;
     constexpr std::ptrdiff_t m_flStoppingDistance = 0x54;
     constexpr std::ptrdiff_t m_flTargetSpeed = 0x58;
-    constexpr std::ptrdiff_t m_eMode = 0x5c;
+    constexpr std::ptrdiff_t m_eMode = 0x5C;
 }
 
 namespace CHitBox {
@@ -1016,8 +1016,8 @@ namespace CHitBox {
     constexpr std::ptrdiff_t m_flShapeRadius = 0x30;
     constexpr std::ptrdiff_t m_nBoneNameHash = 0x34;
     constexpr std::ptrdiff_t m_nGroupId = 0x38;
-    constexpr std::ptrdiff_t m_nShapeType = 0x3c;
-    constexpr std::ptrdiff_t m_bTranslationOnly = 0x3d;
+    constexpr std::ptrdiff_t m_nShapeType = 0x3C;
+    constexpr std::ptrdiff_t m_bTranslationOnly = 0x3D;
     constexpr std::ptrdiff_t m_CRC = 0x40;
     constexpr std::ptrdiff_t m_cRenderColor = 0x44;
     constexpr std::ptrdiff_t m_nHitBoxIndex = 0x48;
@@ -1036,13 +1036,13 @@ namespace CHitBoxSetList {
 
 namespace CHitReactUpdateNode {
     constexpr std::ptrdiff_t m_opFixedSettings = 0x68;
-    constexpr std::ptrdiff_t m_triggerParam = 0xb4;
-    constexpr std::ptrdiff_t m_hitBoneParam = 0xb6;
-    constexpr std::ptrdiff_t m_hitOffsetParam = 0xb8;
-    constexpr std::ptrdiff_t m_hitDirectionParam = 0xba;
-    constexpr std::ptrdiff_t m_hitStrengthParam = 0xbc;
-    constexpr std::ptrdiff_t m_flMinDelayBetweenHits = 0xc0;
-    constexpr std::ptrdiff_t m_bResetChild = 0xc4;
+    constexpr std::ptrdiff_t m_triggerParam = 0xB4;
+    constexpr std::ptrdiff_t m_hitBoneParam = 0xB6;
+    constexpr std::ptrdiff_t m_hitOffsetParam = 0xB8;
+    constexpr std::ptrdiff_t m_hitDirectionParam = 0xBA;
+    constexpr std::ptrdiff_t m_hitStrengthParam = 0xBC;
+    constexpr std::ptrdiff_t m_flMinDelayBetweenHits = 0xC0;
+    constexpr std::ptrdiff_t m_bResetChild = 0xC4;
 }
 
 namespace CIntAnimParameter {
@@ -1056,14 +1056,14 @@ namespace CJiggleBoneUpdateNode {
 }
 
 namespace CJumpHelperUpdateNode {
-    constexpr std::ptrdiff_t m_hTargetParam = 0xa8;
-    constexpr std::ptrdiff_t m_flOriginalJumpMovement = 0xac;
-    constexpr std::ptrdiff_t m_flOriginalJumpDuration = 0xb8;
-    constexpr std::ptrdiff_t m_flJumpStartCycle = 0xbc;
-    constexpr std::ptrdiff_t m_flJumpEndCycle = 0xc0;
-    constexpr std::ptrdiff_t m_eCorrectionMethod = 0xc4;
-    constexpr std::ptrdiff_t m_bTranslationAxis = 0xc8;
-    constexpr std::ptrdiff_t m_bScaleSpeed = 0xcb;
+    constexpr std::ptrdiff_t m_hTargetParam = 0xA8;
+    constexpr std::ptrdiff_t m_flOriginalJumpMovement = 0xAC;
+    constexpr std::ptrdiff_t m_flOriginalJumpDuration = 0xB8;
+    constexpr std::ptrdiff_t m_flJumpStartCycle = 0xBC;
+    constexpr std::ptrdiff_t m_flJumpEndCycle = 0xC0;
+    constexpr std::ptrdiff_t m_eCorrectionMethod = 0xC4;
+    constexpr std::ptrdiff_t m_bTranslationAxis = 0xC8;
+    constexpr std::ptrdiff_t m_bScaleSpeed = 0xCB;
 }
 
 namespace CLODComponentUpdater {
@@ -1071,23 +1071,23 @@ namespace CLODComponentUpdater {
 }
 
 namespace CLeanMatrixUpdateNode {
-    constexpr std::ptrdiff_t m_frameCorners = 0x5c;
+    constexpr std::ptrdiff_t m_frameCorners = 0x5C;
     constexpr std::ptrdiff_t m_poses = 0x80;
-    constexpr std::ptrdiff_t m_damping = 0xa8;
-    constexpr std::ptrdiff_t m_blendSource = 0xb8;
-    constexpr std::ptrdiff_t m_paramIndex = 0xbc;
-    constexpr std::ptrdiff_t m_verticalAxis = 0xc0;
-    constexpr std::ptrdiff_t m_horizontalAxis = 0xcc;
-    constexpr std::ptrdiff_t m_hSequence = 0xd8;
-    constexpr std::ptrdiff_t m_flMaxValue = 0xdc;
-    constexpr std::ptrdiff_t m_nSequenceMaxFrame = 0xe0;
+    constexpr std::ptrdiff_t m_damping = 0xA8;
+    constexpr std::ptrdiff_t m_blendSource = 0xB8;
+    constexpr std::ptrdiff_t m_paramIndex = 0xBC;
+    constexpr std::ptrdiff_t m_verticalAxis = 0xC0;
+    constexpr std::ptrdiff_t m_horizontalAxis = 0xCC;
+    constexpr std::ptrdiff_t m_hSequence = 0xD8;
+    constexpr std::ptrdiff_t m_flMaxValue = 0xDC;
+    constexpr std::ptrdiff_t m_nSequenceMaxFrame = 0xE0;
 }
 
 namespace CLookAtUpdateNode {
     constexpr std::ptrdiff_t m_opFixedSettings = 0x70;
     constexpr std::ptrdiff_t m_target = 0x138;
-    constexpr std::ptrdiff_t m_paramIndex = 0x13c;
-    constexpr std::ptrdiff_t m_weightParamIndex = 0x13e;
+    constexpr std::ptrdiff_t m_paramIndex = 0x13C;
+    constexpr std::ptrdiff_t m_weightParamIndex = 0x13E;
     constexpr std::ptrdiff_t m_bResetChild = 0x140;
     constexpr std::ptrdiff_t m_bLockWhenWaning = 0x141;
 }
@@ -1096,9 +1096,9 @@ namespace CLookComponentUpdater {
     constexpr std::ptrdiff_t m_hLookHeading = 0x34;
     constexpr std::ptrdiff_t m_hLookHeadingVelocity = 0x36;
     constexpr std::ptrdiff_t m_hLookPitch = 0x38;
-    constexpr std::ptrdiff_t m_hLookDistance = 0x3a;
-    constexpr std::ptrdiff_t m_hLookDirection = 0x3c;
-    constexpr std::ptrdiff_t m_hLookTarget = 0x3e;
+    constexpr std::ptrdiff_t m_hLookDistance = 0x3A;
+    constexpr std::ptrdiff_t m_hLookDirection = 0x3C;
+    constexpr std::ptrdiff_t m_hLookTarget = 0x3E;
     constexpr std::ptrdiff_t m_hLookTargetWorldSpace = 0x40;
     constexpr std::ptrdiff_t m_bNetworkLookTarget = 0x42;
 }
@@ -1114,15 +1114,15 @@ namespace CMaterialDrawDescriptor {
     constexpr std::ptrdiff_t m_nPrimitiveType = 0x0;
     constexpr std::ptrdiff_t m_nBaseVertex = 0x4;
     constexpr std::ptrdiff_t m_nVertexCount = 0x8;
-    constexpr std::ptrdiff_t m_nStartIndex = 0xc;
+    constexpr std::ptrdiff_t m_nStartIndex = 0xC;
     constexpr std::ptrdiff_t m_nIndexCount = 0x10;
     constexpr std::ptrdiff_t m_flUvDensity = 0x14;
     constexpr std::ptrdiff_t m_vTintColor = 0x18;
     constexpr std::ptrdiff_t m_flAlpha = 0x24;
-    constexpr std::ptrdiff_t m_nFirstMeshlet = 0x2c;
+    constexpr std::ptrdiff_t m_nFirstMeshlet = 0x2C;
     constexpr std::ptrdiff_t m_nNumMeshlets = 0x30;
-    constexpr std::ptrdiff_t m_indexBuffer = 0xb8;
-    constexpr std::ptrdiff_t m_material = 0xe0;
+    constexpr std::ptrdiff_t m_indexBuffer = 0xB8;
+    constexpr std::ptrdiff_t m_material = 0xE0;
 }
 
 namespace CMeshletDescriptor {
@@ -1146,14 +1146,14 @@ namespace CModelConfigElement_AttachedModel {
     constexpr std::ptrdiff_t m_EntityClass = 0x50;
     constexpr std::ptrdiff_t m_hModel = 0x58;
     constexpr std::ptrdiff_t m_vOffset = 0x60;
-    constexpr std::ptrdiff_t m_aAngOffset = 0x6c;
+    constexpr std::ptrdiff_t m_aAngOffset = 0x6C;
     constexpr std::ptrdiff_t m_AttachmentName = 0x78;
     constexpr std::ptrdiff_t m_LocalAttachmentOffsetName = 0x80;
     constexpr std::ptrdiff_t m_AttachmentType = 0x88;
-    constexpr std::ptrdiff_t m_bBoneMergeFlex = 0x8c;
-    constexpr std::ptrdiff_t m_bUserSpecifiedColor = 0x8d;
-    constexpr std::ptrdiff_t m_bUserSpecifiedMaterialGroup = 0x8e;
-    constexpr std::ptrdiff_t m_bAcceptParentMaterialDrivenDecals = 0x8f;
+    constexpr std::ptrdiff_t m_bBoneMergeFlex = 0x8C;
+    constexpr std::ptrdiff_t m_bUserSpecifiedColor = 0x8D;
+    constexpr std::ptrdiff_t m_bUserSpecifiedMaterialGroup = 0x8E;
+    constexpr std::ptrdiff_t m_bAcceptParentMaterialDrivenDecals = 0x8F;
     constexpr std::ptrdiff_t m_BodygroupOnOtherModels = 0x90;
     constexpr std::ptrdiff_t m_MaterialGroupOnOtherModels = 0x98;
 }
@@ -1206,8 +1206,8 @@ namespace CModelConfigList {
 
 namespace CMoodVData {
     constexpr std::ptrdiff_t m_sModelName = 0x0;
-    constexpr std::ptrdiff_t m_nMoodType = 0xe0;
-    constexpr std::ptrdiff_t m_animationLayers = 0xe8;
+    constexpr std::ptrdiff_t m_nMoodType = 0xE0;
+    constexpr std::ptrdiff_t m_animationLayers = 0xE8;
 }
 
 namespace CMorphBundleData {
@@ -1220,7 +1220,7 @@ namespace CMorphBundleData {
 namespace CMorphConstraint {
     constexpr std::ptrdiff_t m_sTargetMorph = 0x70;
     constexpr std::ptrdiff_t m_nSlaveChannel = 0x78;
-    constexpr std::ptrdiff_t m_flMin = 0x7c;
+    constexpr std::ptrdiff_t m_flMin = 0x7C;
     constexpr std::ptrdiff_t m_flMax = 0x80;
 }
 
@@ -1258,7 +1258,7 @@ namespace CMotionGraph {
     constexpr std::ptrdiff_t m_tags = 0x28;
     constexpr std::ptrdiff_t m_pRootNode = 0x40;
     constexpr std::ptrdiff_t m_nParameterCount = 0x48;
-    constexpr std::ptrdiff_t m_nConfigStartIndex = 0x4c;
+    constexpr std::ptrdiff_t m_nConfigStartIndex = 0x4C;
     constexpr std::ptrdiff_t m_nConfigCount = 0x50;
     constexpr std::ptrdiff_t m_bLoop = 0x54;
 }
@@ -1268,14 +1268,14 @@ namespace CMotionGraphConfig {
     constexpr std::ptrdiff_t m_flDuration = 0x10;
     constexpr std::ptrdiff_t m_nMotionIndex = 0x14;
     constexpr std::ptrdiff_t m_nSampleStart = 0x18;
-    constexpr std::ptrdiff_t m_nSampleCount = 0x1c;
+    constexpr std::ptrdiff_t m_nSampleCount = 0x1C;
 }
 
 namespace CMotionGraphGroup {
     constexpr std::ptrdiff_t m_searchDB = 0x0;
-    constexpr std::ptrdiff_t m_motionGraphs = 0xb8;
-    constexpr std::ptrdiff_t m_motionGraphConfigs = 0xd0;
-    constexpr std::ptrdiff_t m_sampleToConfig = 0xe8;
+    constexpr std::ptrdiff_t m_motionGraphs = 0xB8;
+    constexpr std::ptrdiff_t m_motionGraphConfigs = 0xD0;
+    constexpr std::ptrdiff_t m_sampleToConfig = 0xE8;
     constexpr std::ptrdiff_t m_hIsActiveScript = 0x100;
 }
 
@@ -1287,23 +1287,23 @@ namespace CMotionMatchingUpdateNode {
     constexpr std::ptrdiff_t m_dataSet = 0x58;
     constexpr std::ptrdiff_t m_metrics = 0x78;
     constexpr std::ptrdiff_t m_weights = 0x90;
-    constexpr std::ptrdiff_t m_bSearchEveryTick = 0xe0;
-    constexpr std::ptrdiff_t m_flSearchInterval = 0xe4;
-    constexpr std::ptrdiff_t m_bSearchWhenClipEnds = 0xe8;
-    constexpr std::ptrdiff_t m_bSearchWhenGoalChanges = 0xe9;
-    constexpr std::ptrdiff_t m_blendCurve = 0xec;
-    constexpr std::ptrdiff_t m_flSampleRate = 0xf4;
-    constexpr std::ptrdiff_t m_flBlendTime = 0xf8;
-    constexpr std::ptrdiff_t m_bLockClipWhenWaning = 0xfc;
+    constexpr std::ptrdiff_t m_bSearchEveryTick = 0xE0;
+    constexpr std::ptrdiff_t m_flSearchInterval = 0xE4;
+    constexpr std::ptrdiff_t m_bSearchWhenClipEnds = 0xE8;
+    constexpr std::ptrdiff_t m_bSearchWhenGoalChanges = 0xE9;
+    constexpr std::ptrdiff_t m_blendCurve = 0xEC;
+    constexpr std::ptrdiff_t m_flSampleRate = 0xF4;
+    constexpr std::ptrdiff_t m_flBlendTime = 0xF8;
+    constexpr std::ptrdiff_t m_bLockClipWhenWaning = 0xFC;
     constexpr std::ptrdiff_t m_flSelectionThreshold = 0x100;
     constexpr std::ptrdiff_t m_flReselectionTimeWindow = 0x104;
     constexpr std::ptrdiff_t m_bEnableRotationCorrection = 0x108;
     constexpr std::ptrdiff_t m_bGoalAssist = 0x109;
-    constexpr std::ptrdiff_t m_flGoalAssistDistance = 0x10c;
+    constexpr std::ptrdiff_t m_flGoalAssistDistance = 0x10C;
     constexpr std::ptrdiff_t m_flGoalAssistTolerance = 0x110;
     constexpr std::ptrdiff_t m_distanceScale_Damping = 0x118;
     constexpr std::ptrdiff_t m_flDistanceScale_OuterRadius = 0x128;
-    constexpr std::ptrdiff_t m_flDistanceScale_InnerRadius = 0x12c;
+    constexpr std::ptrdiff_t m_flDistanceScale_InnerRadius = 0x12C;
     constexpr std::ptrdiff_t m_flDistanceScale_MaxScale = 0x130;
     constexpr std::ptrdiff_t m_flDistanceScale_MinScale = 0x134;
     constexpr std::ptrdiff_t m_bEnableDistanceScaling = 0x138;
@@ -1313,7 +1313,7 @@ namespace CMotionMetricEvaluator {
     constexpr std::ptrdiff_t m_means = 0x18;
     constexpr std::ptrdiff_t m_standardDeviations = 0x30;
     constexpr std::ptrdiff_t m_flWeight = 0x48;
-    constexpr std::ptrdiff_t m_nDimensionStartIndex = 0x4c;
+    constexpr std::ptrdiff_t m_nDimensionStartIndex = 0x4C;
 }
 
 namespace CMotionNode {
@@ -1335,7 +1335,7 @@ namespace CMotionNodeSequence {
 namespace CMotionSearchDB {
     constexpr std::ptrdiff_t m_rootNode = 0x0;
     constexpr std::ptrdiff_t m_residualQuantizer = 0x80;
-    constexpr std::ptrdiff_t m_codeIndices = 0xa0;
+    constexpr std::ptrdiff_t m_codeIndices = 0xA0;
 }
 
 namespace CMotionSearchNode {
@@ -1351,7 +1351,7 @@ namespace CMovementComponentUpdater {
     constexpr std::ptrdiff_t m_motors = 0x48;
     constexpr std::ptrdiff_t m_facingDamping = 0x60;
     constexpr std::ptrdiff_t m_eDefaultFacingMode = 0x70;
-    constexpr std::ptrdiff_t m_nDefaultMotorIndex = 0x7c;
+    constexpr std::ptrdiff_t m_nDefaultMotorIndex = 0x7C;
     constexpr std::ptrdiff_t m_bMoveVarsDisabled = 0x80;
     constexpr std::ptrdiff_t m_bNetworkPath = 0x81;
     constexpr std::ptrdiff_t m_bNetworkFacing = 0x82;
@@ -1369,7 +1369,7 @@ namespace CMoverUpdateNode {
     constexpr std::ptrdiff_t m_hMoveVecParam = 0x84;
     constexpr std::ptrdiff_t m_hMoveHeadingParam = 0x86;
     constexpr std::ptrdiff_t m_hTurnToFaceParam = 0x88;
-    constexpr std::ptrdiff_t m_flTurnToFaceOffset = 0x8c;
+    constexpr std::ptrdiff_t m_flTurnToFaceOffset = 0x8C;
     constexpr std::ptrdiff_t m_flTurnToFaceLimit = 0x90;
     constexpr std::ptrdiff_t m_bAdditive = 0x94;
     constexpr std::ptrdiff_t m_bApplyMovement = 0x95;
@@ -1401,20 +1401,20 @@ namespace CPathAnimMotorUpdaterBase {
 
 namespace CPathHelperUpdateNode {
     constexpr std::ptrdiff_t m_flStoppingRadius = 0x68;
-    constexpr std::ptrdiff_t m_flStoppingSpeedScale = 0x6c;
+    constexpr std::ptrdiff_t m_flStoppingSpeedScale = 0x6C;
 }
 
 namespace CPathMetricEvaluator {
     constexpr std::ptrdiff_t m_pathTimeSamples = 0x50;
     constexpr std::ptrdiff_t m_flDistance = 0x68;
-    constexpr std::ptrdiff_t m_bExtrapolateMovement = 0x6c;
+    constexpr std::ptrdiff_t m_bExtrapolateMovement = 0x6C;
     constexpr std::ptrdiff_t m_flMinExtrapolationSpeed = 0x70;
 }
 
 namespace CPhysSurfaceProperties {
     constexpr std::ptrdiff_t m_name = 0x0;
     constexpr std::ptrdiff_t m_nameHash = 0x8;
-    constexpr std::ptrdiff_t m_baseNameHash = 0xc;
+    constexpr std::ptrdiff_t m_baseNameHash = 0xC;
     constexpr std::ptrdiff_t m_bHidden = 0x18;
     constexpr std::ptrdiff_t m_description = 0x20;
     constexpr std::ptrdiff_t m_physics = 0x28;
@@ -1426,18 +1426,18 @@ namespace CPhysSurfacePropertiesAudio {
     constexpr std::ptrdiff_t m_reflectivity = 0x0;
     constexpr std::ptrdiff_t m_hardnessFactor = 0x4;
     constexpr std::ptrdiff_t m_roughnessFactor = 0x8;
-    constexpr std::ptrdiff_t m_roughThreshold = 0xc;
+    constexpr std::ptrdiff_t m_roughThreshold = 0xC;
     constexpr std::ptrdiff_t m_hardThreshold = 0x10;
     constexpr std::ptrdiff_t m_hardVelocityThreshold = 0x14;
     constexpr std::ptrdiff_t m_flStaticImpactVolume = 0x18;
-    constexpr std::ptrdiff_t m_flOcclusionFactor = 0x1c;
+    constexpr std::ptrdiff_t m_flOcclusionFactor = 0x1C;
 }
 
 namespace CPhysSurfacePropertiesPhysics {
     constexpr std::ptrdiff_t m_friction = 0x0;
     constexpr std::ptrdiff_t m_elasticity = 0x4;
     constexpr std::ptrdiff_t m_density = 0x8;
-    constexpr std::ptrdiff_t m_thickness = 0xc;
+    constexpr std::ptrdiff_t m_thickness = 0xC;
     constexpr std::ptrdiff_t m_softContactFrequency = 0x10;
     constexpr std::ptrdiff_t m_softContactDampingRatio = 0x14;
     constexpr std::ptrdiff_t m_wheelDrag = 0x18;
@@ -1456,7 +1456,7 @@ namespace CPhysSurfacePropertiesSoundNames {
 
 namespace CPlayerInputAnimMotorUpdater {
     constexpr std::ptrdiff_t m_sampleTimes = 0x20;
-    constexpr std::ptrdiff_t m_flSpringConstant = 0x3c;
+    constexpr std::ptrdiff_t m_flSpringConstant = 0x3C;
     constexpr std::ptrdiff_t m_flAnticipationDistance = 0x40;
     constexpr std::ptrdiff_t m_hAnticipationPosParam = 0x44;
     constexpr std::ptrdiff_t m_hAnticipationHeadingParam = 0x46;
@@ -1480,11 +1480,11 @@ namespace CQuaternionAnimParameter {
 
 namespace CRagdollAnimTag {
     constexpr std::ptrdiff_t m_nPoseControl = 0x38;
-    constexpr std::ptrdiff_t m_flFrequency = 0x3c;
+    constexpr std::ptrdiff_t m_flFrequency = 0x3C;
     constexpr std::ptrdiff_t m_flDampingRatio = 0x40;
     constexpr std::ptrdiff_t m_flDecayDuration = 0x44;
     constexpr std::ptrdiff_t m_flDecayBias = 0x48;
-    constexpr std::ptrdiff_t m_bDestroy = 0x4c;
+    constexpr std::ptrdiff_t m_bDestroy = 0x4C;
 }
 
 namespace CRagdollComponentUpdater {
@@ -1499,7 +1499,7 @@ namespace CRagdollComponentUpdater {
 
 namespace CRagdollUpdateNode {
     constexpr std::ptrdiff_t m_nWeightListIndex = 0x68;
-    constexpr std::ptrdiff_t m_poseControlMethod = 0x6c;
+    constexpr std::ptrdiff_t m_poseControlMethod = 0x6C;
 }
 
 namespace CRenderBufferBinding {
@@ -1509,8 +1509,8 @@ namespace CRenderBufferBinding {
 
 namespace CRenderMesh {
     constexpr std::ptrdiff_t m_sceneObjects = 0x10;
-    constexpr std::ptrdiff_t m_constraints = 0xa0;
-    constexpr std::ptrdiff_t m_skeleton = 0xb8;
+    constexpr std::ptrdiff_t m_constraints = 0xA0;
+    constexpr std::ptrdiff_t m_skeleton = 0xB8;
 }
 
 namespace CRenderSkeleton {
@@ -1521,7 +1521,7 @@ namespace CRenderSkeleton {
 
 namespace CSceneObjectData {
     constexpr std::ptrdiff_t m_vMinBounds = 0x0;
-    constexpr std::ptrdiff_t m_vMaxBounds = 0xc;
+    constexpr std::ptrdiff_t m_vMaxBounds = 0xC;
     constexpr std::ptrdiff_t m_drawCalls = 0x18;
     constexpr std::ptrdiff_t m_drawBounds = 0x30;
     constexpr std::ptrdiff_t m_meshlets = 0x48;
@@ -1531,19 +1531,19 @@ namespace CSceneObjectData {
 namespace CSelectorUpdateNode {
     constexpr std::ptrdiff_t m_children = 0x58;
     constexpr std::ptrdiff_t m_tags = 0x70;
-    constexpr std::ptrdiff_t m_blendCurve = 0x8c;
+    constexpr std::ptrdiff_t m_blendCurve = 0x8C;
     constexpr std::ptrdiff_t m_flBlendTime = 0x94;
-    constexpr std::ptrdiff_t m_hParameter = 0x9c;
-    constexpr std::ptrdiff_t m_eTagBehavior = 0xa0;
-    constexpr std::ptrdiff_t m_bResetOnChange = 0xa4;
-    constexpr std::ptrdiff_t m_bSyncCyclesOnChange = 0xa5;
+    constexpr std::ptrdiff_t m_hParameter = 0x9C;
+    constexpr std::ptrdiff_t m_eTagBehavior = 0xA0;
+    constexpr std::ptrdiff_t m_bResetOnChange = 0xA4;
+    constexpr std::ptrdiff_t m_bSyncCyclesOnChange = 0xA5;
 }
 
 namespace CSeqAutoLayer {
     constexpr std::ptrdiff_t m_nLocalReference = 0x0;
     constexpr std::ptrdiff_t m_nLocalPose = 0x2;
     constexpr std::ptrdiff_t m_flags = 0x4;
-    constexpr std::ptrdiff_t m_start = 0xc;
+    constexpr std::ptrdiff_t m_start = 0xC;
     constexpr std::ptrdiff_t m_peak = 0x10;
     constexpr std::ptrdiff_t m_tail = 0x14;
     constexpr std::ptrdiff_t m_end = 0x18;
@@ -1574,8 +1574,8 @@ namespace CSeqCmdLayer {
     constexpr std::ptrdiff_t m_nLocalBonemask = 0x4;
     constexpr std::ptrdiff_t m_nDstResult = 0x6;
     constexpr std::ptrdiff_t m_nSrcResult = 0x8;
-    constexpr std::ptrdiff_t m_bSpline = 0xa;
-    constexpr std::ptrdiff_t m_flVar1 = 0xc;
+    constexpr std::ptrdiff_t m_bSpline = 0xA;
+    constexpr std::ptrdiff_t m_flVar1 = 0xC;
     constexpr std::ptrdiff_t m_flVar2 = 0x10;
     constexpr std::ptrdiff_t m_nLineNumber = 0x14;
 }
@@ -1583,12 +1583,12 @@ namespace CSeqCmdLayer {
 namespace CSeqCmdSeqDesc {
     constexpr std::ptrdiff_t m_sName = 0x0;
     constexpr std::ptrdiff_t m_flags = 0x10;
-    constexpr std::ptrdiff_t m_transition = 0x1c;
+    constexpr std::ptrdiff_t m_transition = 0x1C;
     constexpr std::ptrdiff_t m_nFrameRangeSequence = 0x24;
     constexpr std::ptrdiff_t m_nFrameCount = 0x26;
     constexpr std::ptrdiff_t m_flFPS = 0x28;
-    constexpr std::ptrdiff_t m_nSubCycles = 0x2c;
-    constexpr std::ptrdiff_t m_numLocalResults = 0x2e;
+    constexpr std::ptrdiff_t m_nSubCycles = 0x2C;
+    constexpr std::ptrdiff_t m_numLocalResults = 0x2E;
     constexpr std::ptrdiff_t m_cmdLayerArray = 0x30;
     constexpr std::ptrdiff_t m_eventArray = 0x48;
     constexpr std::ptrdiff_t m_activityArray = 0x60;
@@ -1599,7 +1599,7 @@ namespace CSeqIKLock {
     constexpr std::ptrdiff_t m_flPosWeight = 0x0;
     constexpr std::ptrdiff_t m_flAngleWeight = 0x4;
     constexpr std::ptrdiff_t m_nLocalBone = 0x8;
-    constexpr std::ptrdiff_t m_bBonesOrientedAlongPositiveX = 0xa;
+    constexpr std::ptrdiff_t m_bBonesOrientedAlongPositiveX = 0xA;
 }
 
 namespace CSeqMultiFetch {
@@ -1627,7 +1627,7 @@ namespace CSeqPoseParamDesc {
     constexpr std::ptrdiff_t m_flStart = 0x10;
     constexpr std::ptrdiff_t m_flEnd = 0x14;
     constexpr std::ptrdiff_t m_flLoop = 0x18;
-    constexpr std::ptrdiff_t m_bLooping = 0x1c;
+    constexpr std::ptrdiff_t m_bLooping = 0x1C;
 }
 
 namespace CSeqPoseSetting {
@@ -1647,11 +1647,11 @@ namespace CSeqS1SeqDesc {
     constexpr std::ptrdiff_t m_fetch = 0x20;
     constexpr std::ptrdiff_t m_nLocalWeightlist = 0x88;
     constexpr std::ptrdiff_t m_autoLayerArray = 0x90;
-    constexpr std::ptrdiff_t m_IKLockArray = 0xa8;
-    constexpr std::ptrdiff_t m_transition = 0xc0;
-    constexpr std::ptrdiff_t m_SequenceKeys = 0xc8;
-    constexpr std::ptrdiff_t m_LegacyKeyValueText = 0xd8;
-    constexpr std::ptrdiff_t m_activityArray = 0xe8;
+    constexpr std::ptrdiff_t m_IKLockArray = 0xA8;
+    constexpr std::ptrdiff_t m_transition = 0xC0;
+    constexpr std::ptrdiff_t m_SequenceKeys = 0xC8;
+    constexpr std::ptrdiff_t m_LegacyKeyValueText = 0xD8;
+    constexpr std::ptrdiff_t m_activityArray = 0xE8;
     constexpr std::ptrdiff_t m_footMotion = 0x100;
 }
 
@@ -1674,13 +1674,13 @@ namespace CSeqSeqDescFlag {
     constexpr std::ptrdiff_t m_bLegacyWorldspace = 0x7;
     constexpr std::ptrdiff_t m_bLegacyCyclepose = 0x8;
     constexpr std::ptrdiff_t m_bLegacyRealtime = 0x9;
-    constexpr std::ptrdiff_t m_bModelDoc = 0xa;
+    constexpr std::ptrdiff_t m_bModelDoc = 0xA;
 }
 
 namespace CSeqSynthAnimDesc {
     constexpr std::ptrdiff_t m_sName = 0x0;
     constexpr std::ptrdiff_t m_flags = 0x10;
-    constexpr std::ptrdiff_t m_transition = 0x1c;
+    constexpr std::ptrdiff_t m_transition = 0x1C;
     constexpr std::ptrdiff_t m_nLocalBaseReference = 0x24;
     constexpr std::ptrdiff_t m_nLocalBoneMask = 0x26;
     constexpr std::ptrdiff_t m_activityArray = 0x28;
@@ -1703,11 +1703,11 @@ namespace CSequenceGroupData {
     constexpr std::ptrdiff_t m_localMultiSeqDescArray = 0x58;
     constexpr std::ptrdiff_t m_localSynthAnimDescArray = 0x70;
     constexpr std::ptrdiff_t m_localCmdSeqDescArray = 0x88;
-    constexpr std::ptrdiff_t m_localBoneMaskArray = 0xa0;
-    constexpr std::ptrdiff_t m_localScaleSetArray = 0xb8;
-    constexpr std::ptrdiff_t m_localBoneNameArray = 0xd0;
-    constexpr std::ptrdiff_t m_localNodeName = 0xe8;
-    constexpr std::ptrdiff_t m_localPoseParamArray = 0xf8;
+    constexpr std::ptrdiff_t m_localBoneMaskArray = 0xA0;
+    constexpr std::ptrdiff_t m_localScaleSetArray = 0xB8;
+    constexpr std::ptrdiff_t m_localBoneNameArray = 0xD0;
+    constexpr std::ptrdiff_t m_localNodeName = 0xE8;
+    constexpr std::ptrdiff_t m_localPoseParamArray = 0xF8;
     constexpr std::ptrdiff_t m_keyValues = 0x110;
     constexpr std::ptrdiff_t m_localIKAutoplayLockArray = 0x120;
 }
@@ -1717,18 +1717,18 @@ namespace CSequenceUpdateNode {
     constexpr std::ptrdiff_t m_tags = 0x78;
     constexpr std::ptrdiff_t m_hSequence = 0x94;
     constexpr std::ptrdiff_t m_playbackSpeed = 0x98;
-    constexpr std::ptrdiff_t m_duration = 0x9c;
-    constexpr std::ptrdiff_t m_bLoop = 0xa0;
+    constexpr std::ptrdiff_t m_duration = 0x9C;
+    constexpr std::ptrdiff_t m_bLoop = 0xA0;
 }
 
 namespace CSetFacingUpdateNode {
     constexpr std::ptrdiff_t m_facingMode = 0x68;
-    constexpr std::ptrdiff_t m_bResetChild = 0x6c;
+    constexpr std::ptrdiff_t m_bResetChild = 0x6C;
 }
 
 namespace CSetParameterActionUpdater {
     constexpr std::ptrdiff_t m_hParam = 0x18;
-    constexpr std::ptrdiff_t m_value = 0x1a;
+    constexpr std::ptrdiff_t m_value = 0x1A;
 }
 
 namespace CSingleFrameUpdateNode {
@@ -1745,9 +1745,9 @@ namespace CSkeletalInputUpdateNode {
 namespace CSlopeComponentUpdater {
     constexpr std::ptrdiff_t m_flTraceDistance = 0x34;
     constexpr std::ptrdiff_t m_hSlopeAngle = 0x38;
-    constexpr std::ptrdiff_t m_hSlopeAngleFront = 0x3a;
-    constexpr std::ptrdiff_t m_hSlopeAngleSide = 0x3c;
-    constexpr std::ptrdiff_t m_hSlopeHeading = 0x3e;
+    constexpr std::ptrdiff_t m_hSlopeAngleFront = 0x3A;
+    constexpr std::ptrdiff_t m_hSlopeAngleSide = 0x3C;
+    constexpr std::ptrdiff_t m_hSlopeHeading = 0x3E;
     constexpr std::ptrdiff_t m_hSlopeNormal = 0x40;
     constexpr std::ptrdiff_t m_hSlopeNormal_WorldSpace = 0x42;
 }
@@ -1792,10 +1792,10 @@ namespace CStateMachineComponentUpdater {
 
 namespace CStateMachineUpdateNode {
     constexpr std::ptrdiff_t m_stateMachine = 0x68;
-    constexpr std::ptrdiff_t m_stateData = 0xc0;
-    constexpr std::ptrdiff_t m_transitionData = 0xd8;
-    constexpr std::ptrdiff_t m_bBlockWaningTags = 0xf4;
-    constexpr std::ptrdiff_t m_bLockStateWhenWaning = 0xf5;
+    constexpr std::ptrdiff_t m_stateData = 0xC0;
+    constexpr std::ptrdiff_t m_transitionData = 0xD8;
+    constexpr std::ptrdiff_t m_bBlockWaningTags = 0xF4;
+    constexpr std::ptrdiff_t m_bLockStateWhenWaning = 0xF5;
 }
 
 namespace CStateNodeStateData {
@@ -1825,7 +1825,7 @@ namespace CStateUpdateData {
 namespace CStaticPoseCache {
     constexpr std::ptrdiff_t m_poses = 0x10;
     constexpr std::ptrdiff_t m_nBoneCount = 0x28;
-    constexpr std::ptrdiff_t m_nMorphCount = 0x2c;
+    constexpr std::ptrdiff_t m_nMorphCount = 0x2C;
 }
 
 namespace CStepsRemainingMetricEvaluator {
@@ -1834,7 +1834,7 @@ namespace CStepsRemainingMetricEvaluator {
 }
 
 namespace CStopAtGoalUpdateNode {
-    constexpr std::ptrdiff_t m_flOuterRadius = 0x6c;
+    constexpr std::ptrdiff_t m_flOuterRadius = 0x6C;
     constexpr std::ptrdiff_t m_flInnerRadius = 0x70;
     constexpr std::ptrdiff_t m_flMaxScale = 0x74;
     constexpr std::ptrdiff_t m_flMinScale = 0x78;
@@ -1842,7 +1842,7 @@ namespace CStopAtGoalUpdateNode {
 }
 
 namespace CSubtractUpdateNode {
-    constexpr std::ptrdiff_t m_footMotionTiming = 0x8c;
+    constexpr std::ptrdiff_t m_footMotionTiming = 0x8C;
     constexpr std::ptrdiff_t m_bApplyToFootMotion = 0x90;
     constexpr std::ptrdiff_t m_bApplyChannelsSeparately = 0x91;
     constexpr std::ptrdiff_t m_bUseModelSpace = 0x92;
@@ -1857,12 +1857,12 @@ namespace CTimeRemainingMetricEvaluator {
     constexpr std::ptrdiff_t m_bMatchByTimeRemaining = 0x50;
     constexpr std::ptrdiff_t m_flMaxTimeRemaining = 0x54;
     constexpr std::ptrdiff_t m_bFilterByTimeRemaining = 0x58;
-    constexpr std::ptrdiff_t m_flMinTimeRemaining = 0x5c;
+    constexpr std::ptrdiff_t m_flMinTimeRemaining = 0x5C;
 }
 
 namespace CToggleComponentActionUpdater {
     constexpr std::ptrdiff_t m_componentID = 0x18;
-    constexpr std::ptrdiff_t m_bSetEnabled = 0x1c;
+    constexpr std::ptrdiff_t m_bSetEnabled = 0x1C;
 }
 
 namespace CTransitionUpdateData {
@@ -1872,11 +1872,11 @@ namespace CTransitionUpdateData {
 }
 
 namespace CTurnHelperUpdateNode {
-    constexpr std::ptrdiff_t m_facingTarget = 0x6c;
+    constexpr std::ptrdiff_t m_facingTarget = 0x6C;
     constexpr std::ptrdiff_t m_turnStartTimeOffset = 0x70;
     constexpr std::ptrdiff_t m_turnDuration = 0x74;
     constexpr std::ptrdiff_t m_bMatchChildDuration = 0x78;
-    constexpr std::ptrdiff_t m_manualTurnOffset = 0x7c;
+    constexpr std::ptrdiff_t m_manualTurnOffset = 0x7C;
     constexpr std::ptrdiff_t m_bUseManualTurnOffset = 0x80;
 }
 
@@ -1902,9 +1902,9 @@ namespace CVRInputComponentUpdater {
     constexpr std::ptrdiff_t m_FingerCurl_Thumb = 0x34;
     constexpr std::ptrdiff_t m_FingerCurl_Index = 0x36;
     constexpr std::ptrdiff_t m_FingerCurl_Middle = 0x38;
-    constexpr std::ptrdiff_t m_FingerCurl_Ring = 0x3a;
-    constexpr std::ptrdiff_t m_FingerCurl_Pinky = 0x3c;
-    constexpr std::ptrdiff_t m_FingerSplay_Thumb_Index = 0x3e;
+    constexpr std::ptrdiff_t m_FingerCurl_Ring = 0x3A;
+    constexpr std::ptrdiff_t m_FingerCurl_Pinky = 0x3C;
+    constexpr std::ptrdiff_t m_FingerSplay_Thumb_Index = 0x3E;
     constexpr std::ptrdiff_t m_FingerSplay_Index_Middle = 0x40;
     constexpr std::ptrdiff_t m_FingerSplay_Middle_Ring = 0x42;
     constexpr std::ptrdiff_t m_FingerSplay_Ring_Pinky = 0x44;
@@ -1912,13 +1912,13 @@ namespace CVRInputComponentUpdater {
 
 namespace CVectorAnimParameter {
     constexpr std::ptrdiff_t m_defaultValue = 0x60;
-    constexpr std::ptrdiff_t m_bInterpolate = 0x6c;
+    constexpr std::ptrdiff_t m_bInterpolate = 0x6C;
 }
 
 namespace CVectorQuantizer {
     constexpr std::ptrdiff_t m_centroidVectors = 0x0;
     constexpr std::ptrdiff_t m_nCentroids = 0x18;
-    constexpr std::ptrdiff_t m_nDimensions = 0x1c;
+    constexpr std::ptrdiff_t m_nDimensions = 0x1C;
 }
 
 namespace CVirtualAnimParameter {
@@ -1936,7 +1936,7 @@ namespace CVrSkeletalInputSettings {
 }
 
 namespace CWayPointHelperUpdateNode {
-    constexpr std::ptrdiff_t m_flStartCycle = 0x6c;
+    constexpr std::ptrdiff_t m_flStartCycle = 0x6C;
     constexpr std::ptrdiff_t m_flEndCycle = 0x70;
     constexpr std::ptrdiff_t m_bOnlyGoals = 0x74;
     constexpr std::ptrdiff_t m_bPreventOvershoot = 0x75;
@@ -1955,7 +1955,7 @@ namespace ChainToSolveData_t {
     constexpr std::ptrdiff_t m_SolverSettings = 0x4;
     constexpr std::ptrdiff_t m_TargetSettings = 0x10;
     constexpr std::ptrdiff_t m_DebugSetting = 0x38;
-    constexpr std::ptrdiff_t m_flDebugNormalizedValue = 0x3c;
+    constexpr std::ptrdiff_t m_flDebugNormalizedValue = 0x3C;
     constexpr std::ptrdiff_t m_vDebugOffset = 0x40;
 }
 
@@ -1968,9 +1968,9 @@ namespace FingerBone_t {
     constexpr std::ptrdiff_t m_boneIndex = 0x0;
     constexpr std::ptrdiff_t m_hingeAxis = 0x4;
     constexpr std::ptrdiff_t m_vCapsulePos1 = 0x10;
-    constexpr std::ptrdiff_t m_vCapsulePos2 = 0x1c;
+    constexpr std::ptrdiff_t m_vCapsulePos2 = 0x1C;
     constexpr std::ptrdiff_t m_flMinAngle = 0x28;
-    constexpr std::ptrdiff_t m_flMaxAngle = 0x2c;
+    constexpr std::ptrdiff_t m_flMaxAngle = 0x2C;
     constexpr std::ptrdiff_t m_flRadius = 0x30;
 }
 
@@ -1978,9 +1978,9 @@ namespace FingerChain_t {
     constexpr std::ptrdiff_t m_targets = 0x0;
     constexpr std::ptrdiff_t m_bones = 0x18;
     constexpr std::ptrdiff_t m_vTipOffset = 0x30;
-    constexpr std::ptrdiff_t m_vSplayHingeAxis = 0x3c;
+    constexpr std::ptrdiff_t m_vSplayHingeAxis = 0x3C;
     constexpr std::ptrdiff_t m_tipParentBoneIndex = 0x48;
-    constexpr std::ptrdiff_t m_metacarpalBoneIndex = 0x4c;
+    constexpr std::ptrdiff_t m_metacarpalBoneIndex = 0x4C;
     constexpr std::ptrdiff_t m_flSplayMinAngle = 0x50;
     constexpr std::ptrdiff_t m_flSplayMaxAngle = 0x54;
     constexpr std::ptrdiff_t m_flFingerScaleRatio = 0x58;
@@ -2004,11 +2004,11 @@ namespace FootFixedData_t {
     constexpr std::ptrdiff_t m_nTargetBoneIndex = 0x20;
     constexpr std::ptrdiff_t m_nAnkleBoneIndex = 0x24;
     constexpr std::ptrdiff_t m_nIKAnchorBoneIndex = 0x28;
-    constexpr std::ptrdiff_t m_ikChainIndex = 0x2c;
+    constexpr std::ptrdiff_t m_ikChainIndex = 0x2C;
     constexpr std::ptrdiff_t m_flMaxIKLength = 0x30;
     constexpr std::ptrdiff_t m_nFootIndex = 0x34;
     constexpr std::ptrdiff_t m_nTagIndex = 0x38;
-    constexpr std::ptrdiff_t m_flMaxRotationLeft = 0x3c;
+    constexpr std::ptrdiff_t m_flMaxRotationLeft = 0x3C;
     constexpr std::ptrdiff_t m_flMaxRotationRight = 0x40;
 }
 
@@ -2018,29 +2018,29 @@ namespace FootFixedSettings {
     constexpr std::ptrdiff_t m_flFootBaseLength = 0x20;
     constexpr std::ptrdiff_t m_flMaxRotationLeft = 0x24;
     constexpr std::ptrdiff_t m_flMaxRotationRight = 0x28;
-    constexpr std::ptrdiff_t m_footstepLandedTagIndex = 0x2c;
+    constexpr std::ptrdiff_t m_footstepLandedTagIndex = 0x2C;
     constexpr std::ptrdiff_t m_bEnableTracing = 0x30;
     constexpr std::ptrdiff_t m_flTraceAngleBlend = 0x34;
     constexpr std::ptrdiff_t m_nDisableTagIndex = 0x38;
-    constexpr std::ptrdiff_t m_nFootIndex = 0x3c;
+    constexpr std::ptrdiff_t m_nFootIndex = 0x3C;
 }
 
 namespace FootLockPoseOpFixedSettings {
     constexpr std::ptrdiff_t m_footInfo = 0x0;
     constexpr std::ptrdiff_t m_hipDampingSettings = 0x18;
     constexpr std::ptrdiff_t m_nHipBoneIndex = 0x28;
-    constexpr std::ptrdiff_t m_ikSolverType = 0x2c;
+    constexpr std::ptrdiff_t m_ikSolverType = 0x2C;
     constexpr std::ptrdiff_t m_bApplyTilt = 0x30;
     constexpr std::ptrdiff_t m_bApplyHipDrop = 0x31;
     constexpr std::ptrdiff_t m_bAlwaysUseFallbackHinge = 0x32;
     constexpr std::ptrdiff_t m_bApplyFootRotationLimits = 0x33;
     constexpr std::ptrdiff_t m_bApplyLegTwistLimits = 0x34;
     constexpr std::ptrdiff_t m_flMaxFootHeight = 0x38;
-    constexpr std::ptrdiff_t m_flExtensionScale = 0x3c;
+    constexpr std::ptrdiff_t m_flExtensionScale = 0x3C;
     constexpr std::ptrdiff_t m_flMaxLegTwist = 0x40;
     constexpr std::ptrdiff_t m_bEnableLockBreaking = 0x44;
     constexpr std::ptrdiff_t m_flLockBreakTolerance = 0x48;
-    constexpr std::ptrdiff_t m_flLockBlendTime = 0x4c;
+    constexpr std::ptrdiff_t m_flLockBlendTime = 0x4C;
     constexpr std::ptrdiff_t m_bEnableStretching = 0x50;
     constexpr std::ptrdiff_t m_flMaxStretchAmount = 0x54;
     constexpr std::ptrdiff_t m_flStretchExtensionScale = 0x58;
@@ -2049,7 +2049,7 @@ namespace FootLockPoseOpFixedSettings {
 namespace FootPinningPoseOpFixedData_t {
     constexpr std::ptrdiff_t m_footInfo = 0x0;
     constexpr std::ptrdiff_t m_flBlendTime = 0x18;
-    constexpr std::ptrdiff_t m_flLockBreakDistance = 0x1c;
+    constexpr std::ptrdiff_t m_flLockBreakDistance = 0x1C;
     constexpr std::ptrdiff_t m_flMaxLegTwist = 0x20;
     constexpr std::ptrdiff_t m_nHipBoneIndex = 0x24;
     constexpr std::ptrdiff_t m_bApplyLegTwistLimits = 0x28;
@@ -2059,7 +2059,7 @@ namespace FootPinningPoseOpFixedData_t {
 namespace FootStepTrigger {
     constexpr std::ptrdiff_t m_tags = 0x0;
     constexpr std::ptrdiff_t m_nFootIndex = 0x18;
-    constexpr std::ptrdiff_t m_triggerPhase = 0x1c;
+    constexpr std::ptrdiff_t m_triggerPhase = 0x1C;
 }
 
 namespace HSequence {
@@ -2070,19 +2070,19 @@ namespace HitReactFixedSettings_t {
     constexpr std::ptrdiff_t m_nWeightListIndex = 0x0;
     constexpr std::ptrdiff_t m_nEffectedBoneCount = 0x4;
     constexpr std::ptrdiff_t m_flMaxImpactForce = 0x8;
-    constexpr std::ptrdiff_t m_flMinImpactForce = 0xc;
+    constexpr std::ptrdiff_t m_flMinImpactForce = 0xC;
     constexpr std::ptrdiff_t m_flWhipImpactScale = 0x10;
     constexpr std::ptrdiff_t m_flCounterRotationScale = 0x14;
     constexpr std::ptrdiff_t m_flDistanceFadeScale = 0x18;
-    constexpr std::ptrdiff_t m_flPropagationScale = 0x1c;
+    constexpr std::ptrdiff_t m_flPropagationScale = 0x1C;
     constexpr std::ptrdiff_t m_flWhipDelay = 0x20;
     constexpr std::ptrdiff_t m_flSpringStrength = 0x24;
     constexpr std::ptrdiff_t m_flWhipSpringStrength = 0x28;
-    constexpr std::ptrdiff_t m_flMaxAngleRadians = 0x2c;
+    constexpr std::ptrdiff_t m_flMaxAngleRadians = 0x2C;
     constexpr std::ptrdiff_t m_nHipBoneIndex = 0x30;
     constexpr std::ptrdiff_t m_flHipBoneTranslationScale = 0x34;
     constexpr std::ptrdiff_t m_flHipDipSpringStrength = 0x38;
-    constexpr std::ptrdiff_t m_flHipDipImpactScale = 0x3c;
+    constexpr std::ptrdiff_t m_flHipDipImpactScale = 0x3C;
     constexpr std::ptrdiff_t m_flHipDipDelay = 0x40;
 }
 
@@ -2107,7 +2107,7 @@ namespace IKTargetSettings_t {
     constexpr std::ptrdiff_t m_TargetSource = 0x0;
     constexpr std::ptrdiff_t m_Bone = 0x8;
     constexpr std::ptrdiff_t m_AnimgraphParameterNamePosition = 0x18;
-    constexpr std::ptrdiff_t m_AnimgraphParameterNameOrientation = 0x1c;
+    constexpr std::ptrdiff_t m_AnimgraphParameterNameOrientation = 0x1C;
     constexpr std::ptrdiff_t m_TargetCoordSystem = 0x20;
 }
 
@@ -2119,9 +2119,9 @@ namespace JiggleBoneSettings_t {
     constexpr std::ptrdiff_t m_nBoneIndex = 0x0;
     constexpr std::ptrdiff_t m_flSpringStrength = 0x4;
     constexpr std::ptrdiff_t m_flMaxTimeStep = 0x8;
-    constexpr std::ptrdiff_t m_flDamping = 0xc;
+    constexpr std::ptrdiff_t m_flDamping = 0xC;
     constexpr std::ptrdiff_t m_vBoundsMaxLS = 0x10;
-    constexpr std::ptrdiff_t m_vBoundsMinLS = 0x1c;
+    constexpr std::ptrdiff_t m_vBoundsMinLS = 0x1C;
     constexpr std::ptrdiff_t m_eSimSpace = 0x28;
 }
 
@@ -2134,14 +2134,14 @@ namespace LookAtOpFixedSettings_t {
     constexpr std::ptrdiff_t m_attachment = 0x0;
     constexpr std::ptrdiff_t m_damping = 0x80;
     constexpr std::ptrdiff_t m_bones = 0x90;
-    constexpr std::ptrdiff_t m_flYawLimit = 0xa8;
-    constexpr std::ptrdiff_t m_flPitchLimit = 0xac;
-    constexpr std::ptrdiff_t m_flHysteresisInnerAngle = 0xb0;
-    constexpr std::ptrdiff_t m_flHysteresisOuterAngle = 0xb4;
-    constexpr std::ptrdiff_t m_bRotateYawForward = 0xb8;
-    constexpr std::ptrdiff_t m_bMaintainUpDirection = 0xb9;
-    constexpr std::ptrdiff_t m_bTargetIsPosition = 0xba;
-    constexpr std::ptrdiff_t m_bUseHysteresis = 0xbb;
+    constexpr std::ptrdiff_t m_flYawLimit = 0xA8;
+    constexpr std::ptrdiff_t m_flPitchLimit = 0xAC;
+    constexpr std::ptrdiff_t m_flHysteresisInnerAngle = 0xB0;
+    constexpr std::ptrdiff_t m_flHysteresisOuterAngle = 0xB4;
+    constexpr std::ptrdiff_t m_bRotateYawForward = 0xB8;
+    constexpr std::ptrdiff_t m_bMaintainUpDirection = 0xB9;
+    constexpr std::ptrdiff_t m_bTargetIsPosition = 0xBA;
+    constexpr std::ptrdiff_t m_bUseHysteresis = 0xBB;
 }
 
 namespace MaterialGroup_t {
@@ -2181,9 +2181,9 @@ namespace MoodAnimationLayer_t {
     constexpr std::ptrdiff_t m_flIntensity = 0x28;
     constexpr std::ptrdiff_t m_flDurationScale = 0x30;
     constexpr std::ptrdiff_t m_bScaleWithInts = 0x38;
-    constexpr std::ptrdiff_t m_flNextStart = 0x3c;
+    constexpr std::ptrdiff_t m_flNextStart = 0x3C;
     constexpr std::ptrdiff_t m_flStartOffset = 0x44;
-    constexpr std::ptrdiff_t m_flEndOffset = 0x4c;
+    constexpr std::ptrdiff_t m_flEndOffset = 0x4C;
     constexpr std::ptrdiff_t m_flFadeIn = 0x54;
     constexpr std::ptrdiff_t m_flFadeOut = 0x58;
 }
@@ -2215,8 +2215,8 @@ namespace ParamSpanSample_t {
 namespace ParamSpan_t {
     constexpr std::ptrdiff_t m_samples = 0x0;
     constexpr std::ptrdiff_t m_hParam = 0x18;
-    constexpr std::ptrdiff_t m_eParamType = 0x1a;
-    constexpr std::ptrdiff_t m_flStartCycle = 0x1c;
+    constexpr std::ptrdiff_t m_eParamType = 0x1A;
+    constexpr std::ptrdiff_t m_flStartCycle = 0x1C;
     constexpr std::ptrdiff_t m_flEndCycle = 0x20;
 }
 
@@ -2231,10 +2231,10 @@ namespace PermModelData_t {
     constexpr std::ptrdiff_t m_ExtParts = 0x60;
     constexpr std::ptrdiff_t m_refMeshes = 0x78;
     constexpr std::ptrdiff_t m_refMeshGroupMasks = 0x90;
-    constexpr std::ptrdiff_t m_refPhysGroupMasks = 0xa8;
-    constexpr std::ptrdiff_t m_refLODGroupMasks = 0xc0;
-    constexpr std::ptrdiff_t m_lodGroupSwitchDistances = 0xd8;
-    constexpr std::ptrdiff_t m_refPhysicsData = 0xf0;
+    constexpr std::ptrdiff_t m_refPhysGroupMasks = 0xA8;
+    constexpr std::ptrdiff_t m_refLODGroupMasks = 0xC0;
+    constexpr std::ptrdiff_t m_lodGroupSwitchDistances = 0xD8;
+    constexpr std::ptrdiff_t m_refPhysicsData = 0xF0;
     constexpr std::ptrdiff_t m_refPhysicsHitboxData = 0x108;
     constexpr std::ptrdiff_t m_refAnimGroups = 0x120;
     constexpr std::ptrdiff_t m_refSequenceGroups = 0x138;
@@ -2248,7 +2248,7 @@ namespace PermModelData_t {
     constexpr std::ptrdiff_t m_pModelConfigList = 0x278;
     constexpr std::ptrdiff_t m_BodyGroupsHiddenInTools = 0x280;
     constexpr std::ptrdiff_t m_refAnimIncludeModels = 0x298;
-    constexpr std::ptrdiff_t m_AnimatedMaterialAttributes = 0x2b0;
+    constexpr std::ptrdiff_t m_AnimatedMaterialAttributes = 0x2B0;
 }
 
 namespace PermModelExtPart_t {
@@ -2262,7 +2262,7 @@ namespace PermModelInfo_t {
     constexpr std::ptrdiff_t m_nFlags = 0x0;
     constexpr std::ptrdiff_t m_vHullMin = 0x4;
     constexpr std::ptrdiff_t m_vHullMax = 0x10;
-    constexpr std::ptrdiff_t m_vViewMin = 0x1c;
+    constexpr std::ptrdiff_t m_vViewMin = 0x1C;
     constexpr std::ptrdiff_t m_vViewMax = 0x28;
     constexpr std::ptrdiff_t m_flMass = 0x34;
     constexpr std::ptrdiff_t m_vEyePosition = 0x38;
@@ -2306,7 +2306,7 @@ namespace SkeletalInputOpFixedSettings_t {
     constexpr std::ptrdiff_t m_outerKnuckle1 = 0x30;
     constexpr std::ptrdiff_t m_outerKnuckle2 = 0x34;
     constexpr std::ptrdiff_t m_eHand = 0x38;
-    constexpr std::ptrdiff_t m_eMotionRange = 0x3c;
+    constexpr std::ptrdiff_t m_eMotionRange = 0x3C;
     constexpr std::ptrdiff_t m_eTransformSource = 0x40;
     constexpr std::ptrdiff_t m_bEnableIK = 0x44;
     constexpr std::ptrdiff_t m_bEnableCollision = 0x45;
@@ -2314,7 +2314,7 @@ namespace SkeletalInputOpFixedSettings_t {
 
 namespace SkeletonBoneBounds_t {
     constexpr std::ptrdiff_t m_vecCenter = 0x0;
-    constexpr std::ptrdiff_t m_vecSize = 0xc;
+    constexpr std::ptrdiff_t m_vecSize = 0xC;
 }
 
 namespace SolveIKChainPoseOpFixedSettings_t {
@@ -2324,7 +2324,7 @@ namespace SolveIKChainPoseOpFixedSettings_t {
 
 namespace StanceInfo_t {
     constexpr std::ptrdiff_t m_vPosition = 0x0;
-    constexpr std::ptrdiff_t m_flDirection = 0xc;
+    constexpr std::ptrdiff_t m_flDirection = 0xC;
 }
 
 namespace TagSpan_t {
@@ -2342,7 +2342,7 @@ namespace TwoBoneIKSettings_t {
     constexpr std::ptrdiff_t m_endEffectorType = 0x0;
     constexpr std::ptrdiff_t m_endEffectorAttachment = 0x10;
     constexpr std::ptrdiff_t m_targetType = 0x90;
-    constexpr std::ptrdiff_t m_targetAttachment = 0xa0;
+    constexpr std::ptrdiff_t m_targetAttachment = 0xA0;
     constexpr std::ptrdiff_t m_targetBoneIndex = 0x120;
     constexpr std::ptrdiff_t m_hPositionParam = 0x124;
     constexpr std::ptrdiff_t m_hRotationParam = 0x126;
@@ -2351,8 +2351,8 @@ namespace TwoBoneIKSettings_t {
     constexpr std::ptrdiff_t m_nFixedBoneIndex = 0x140;
     constexpr std::ptrdiff_t m_nMiddleBoneIndex = 0x144;
     constexpr std::ptrdiff_t m_nEndBoneIndex = 0x148;
-    constexpr std::ptrdiff_t m_bMatchTargetOrientation = 0x14c;
-    constexpr std::ptrdiff_t m_bConstrainTwist = 0x14d;
+    constexpr std::ptrdiff_t m_bMatchTargetOrientation = 0x14C;
+    constexpr std::ptrdiff_t m_bConstrainTwist = 0x14D;
     constexpr std::ptrdiff_t m_flMaxTwist = 0x150;
 }
 
@@ -2366,10 +2366,10 @@ namespace VPhysXAggregateData_t {
     constexpr std::ptrdiff_t m_bindPose = 0x68;
     constexpr std::ptrdiff_t m_parts = 0x80;
     constexpr std::ptrdiff_t m_constraints2 = 0x98;
-    constexpr std::ptrdiff_t m_joints = 0xb0;
-    constexpr std::ptrdiff_t m_pFeModel = 0xc8;
-    constexpr std::ptrdiff_t m_boneParents = 0xd0;
-    constexpr std::ptrdiff_t m_surfacePropertyHashes = 0xe8;
+    constexpr std::ptrdiff_t m_joints = 0xB0;
+    constexpr std::ptrdiff_t m_pFeModel = 0xC8;
+    constexpr std::ptrdiff_t m_boneParents = 0xD0;
+    constexpr std::ptrdiff_t m_surfacePropertyHashes = 0xE8;
     constexpr std::ptrdiff_t m_collisionAttributes = 0x100;
     constexpr std::ptrdiff_t m_debugPartNames = 0x118;
     constexpr std::ptrdiff_t m_embeddedKeyvalues = 0x130;
@@ -2383,7 +2383,7 @@ namespace VPhysXBodyPart_t {
     constexpr std::ptrdiff_t m_nReserved = 0x82;
     constexpr std::ptrdiff_t m_flInertiaScale = 0x84;
     constexpr std::ptrdiff_t m_flLinearDamping = 0x88;
-    constexpr std::ptrdiff_t m_flAngularDamping = 0x8c;
+    constexpr std::ptrdiff_t m_flAngularDamping = 0x8C;
     constexpr std::ptrdiff_t m_bOverrideMassCenter = 0x90;
     constexpr std::ptrdiff_t m_vMassCenterOverride = 0x94;
 }
@@ -2412,47 +2412,47 @@ namespace VPhysXConstraintParams_t {
     constexpr std::ptrdiff_t m_nRotateMotion = 0x2;
     constexpr std::ptrdiff_t m_nFlags = 0x3;
     constexpr std::ptrdiff_t m_anchor = 0x4;
-    constexpr std::ptrdiff_t m_axes = 0x1c;
-    constexpr std::ptrdiff_t m_maxForce = 0x3c;
+    constexpr std::ptrdiff_t m_axes = 0x1C;
+    constexpr std::ptrdiff_t m_maxForce = 0x3C;
     constexpr std::ptrdiff_t m_maxTorque = 0x40;
     constexpr std::ptrdiff_t m_linearLimitValue = 0x44;
     constexpr std::ptrdiff_t m_linearLimitRestitution = 0x48;
-    constexpr std::ptrdiff_t m_linearLimitSpring = 0x4c;
+    constexpr std::ptrdiff_t m_linearLimitSpring = 0x4C;
     constexpr std::ptrdiff_t m_linearLimitDamping = 0x50;
     constexpr std::ptrdiff_t m_twistLowLimitValue = 0x54;
     constexpr std::ptrdiff_t m_twistLowLimitRestitution = 0x58;
-    constexpr std::ptrdiff_t m_twistLowLimitSpring = 0x5c;
+    constexpr std::ptrdiff_t m_twistLowLimitSpring = 0x5C;
     constexpr std::ptrdiff_t m_twistLowLimitDamping = 0x60;
     constexpr std::ptrdiff_t m_twistHighLimitValue = 0x64;
     constexpr std::ptrdiff_t m_twistHighLimitRestitution = 0x68;
-    constexpr std::ptrdiff_t m_twistHighLimitSpring = 0x6c;
+    constexpr std::ptrdiff_t m_twistHighLimitSpring = 0x6C;
     constexpr std::ptrdiff_t m_twistHighLimitDamping = 0x70;
     constexpr std::ptrdiff_t m_swing1LimitValue = 0x74;
     constexpr std::ptrdiff_t m_swing1LimitRestitution = 0x78;
-    constexpr std::ptrdiff_t m_swing1LimitSpring = 0x7c;
+    constexpr std::ptrdiff_t m_swing1LimitSpring = 0x7C;
     constexpr std::ptrdiff_t m_swing1LimitDamping = 0x80;
     constexpr std::ptrdiff_t m_swing2LimitValue = 0x84;
     constexpr std::ptrdiff_t m_swing2LimitRestitution = 0x88;
-    constexpr std::ptrdiff_t m_swing2LimitSpring = 0x8c;
+    constexpr std::ptrdiff_t m_swing2LimitSpring = 0x8C;
     constexpr std::ptrdiff_t m_swing2LimitDamping = 0x90;
     constexpr std::ptrdiff_t m_goalPosition = 0x94;
-    constexpr std::ptrdiff_t m_goalOrientation = 0xa0;
-    constexpr std::ptrdiff_t m_goalAngularVelocity = 0xb0;
-    constexpr std::ptrdiff_t m_driveSpringX = 0xbc;
-    constexpr std::ptrdiff_t m_driveSpringY = 0xc0;
-    constexpr std::ptrdiff_t m_driveSpringZ = 0xc4;
-    constexpr std::ptrdiff_t m_driveDampingX = 0xc8;
-    constexpr std::ptrdiff_t m_driveDampingY = 0xcc;
-    constexpr std::ptrdiff_t m_driveDampingZ = 0xd0;
-    constexpr std::ptrdiff_t m_driveSpringTwist = 0xd4;
-    constexpr std::ptrdiff_t m_driveSpringSwing = 0xd8;
-    constexpr std::ptrdiff_t m_driveSpringSlerp = 0xdc;
-    constexpr std::ptrdiff_t m_driveDampingTwist = 0xe0;
-    constexpr std::ptrdiff_t m_driveDampingSwing = 0xe4;
-    constexpr std::ptrdiff_t m_driveDampingSlerp = 0xe8;
-    constexpr std::ptrdiff_t m_solverIterationCount = 0xec;
-    constexpr std::ptrdiff_t m_projectionLinearTolerance = 0xf0;
-    constexpr std::ptrdiff_t m_projectionAngularTolerance = 0xf4;
+    constexpr std::ptrdiff_t m_goalOrientation = 0xA0;
+    constexpr std::ptrdiff_t m_goalAngularVelocity = 0xB0;
+    constexpr std::ptrdiff_t m_driveSpringX = 0xBC;
+    constexpr std::ptrdiff_t m_driveSpringY = 0xC0;
+    constexpr std::ptrdiff_t m_driveSpringZ = 0xC4;
+    constexpr std::ptrdiff_t m_driveDampingX = 0xC8;
+    constexpr std::ptrdiff_t m_driveDampingY = 0xCC;
+    constexpr std::ptrdiff_t m_driveDampingZ = 0xD0;
+    constexpr std::ptrdiff_t m_driveSpringTwist = 0xD4;
+    constexpr std::ptrdiff_t m_driveSpringSwing = 0xD8;
+    constexpr std::ptrdiff_t m_driveSpringSlerp = 0xDC;
+    constexpr std::ptrdiff_t m_driveDampingTwist = 0xE0;
+    constexpr std::ptrdiff_t m_driveDampingSwing = 0xE4;
+    constexpr std::ptrdiff_t m_driveDampingSlerp = 0xE8;
+    constexpr std::ptrdiff_t m_solverIterationCount = 0xEC;
+    constexpr std::ptrdiff_t m_projectionLinearTolerance = 0xF0;
+    constexpr std::ptrdiff_t m_projectionAngularTolerance = 0xF4;
 }
 
 namespace VPhysXJoint_t {
@@ -2465,21 +2465,21 @@ namespace VPhysXJoint_t {
     constexpr std::ptrdiff_t m_bEnableCollision = 0x50;
     constexpr std::ptrdiff_t m_bEnableLinearLimit = 0x51;
     constexpr std::ptrdiff_t m_LinearLimit = 0x54;
-    constexpr std::ptrdiff_t m_bEnableLinearMotor = 0x5c;
+    constexpr std::ptrdiff_t m_bEnableLinearMotor = 0x5C;
     constexpr std::ptrdiff_t m_vLinearTargetVelocity = 0x60;
-    constexpr std::ptrdiff_t m_flMaxForce = 0x6c;
+    constexpr std::ptrdiff_t m_flMaxForce = 0x6C;
     constexpr std::ptrdiff_t m_bEnableSwingLimit = 0x70;
     constexpr std::ptrdiff_t m_SwingLimit = 0x74;
-    constexpr std::ptrdiff_t m_bEnableTwistLimit = 0x7c;
+    constexpr std::ptrdiff_t m_bEnableTwistLimit = 0x7C;
     constexpr std::ptrdiff_t m_TwistLimit = 0x80;
     constexpr std::ptrdiff_t m_bEnableAngularMotor = 0x88;
-    constexpr std::ptrdiff_t m_vAngularTargetVelocity = 0x8c;
+    constexpr std::ptrdiff_t m_vAngularTargetVelocity = 0x8C;
     constexpr std::ptrdiff_t m_flMaxTorque = 0x98;
-    constexpr std::ptrdiff_t m_flLinearFrequency = 0x9c;
-    constexpr std::ptrdiff_t m_flLinearDampingRatio = 0xa0;
-    constexpr std::ptrdiff_t m_flAngularFrequency = 0xa4;
-    constexpr std::ptrdiff_t m_flAngularDampingRatio = 0xa8;
-    constexpr std::ptrdiff_t m_flFriction = 0xac;
+    constexpr std::ptrdiff_t m_flLinearFrequency = 0x9C;
+    constexpr std::ptrdiff_t m_flLinearDampingRatio = 0xA0;
+    constexpr std::ptrdiff_t m_flAngularFrequency = 0xA4;
+    constexpr std::ptrdiff_t m_flAngularDampingRatio = 0xA8;
+    constexpr std::ptrdiff_t m_flFriction = 0xAC;
 }
 
 namespace VPhysXRange_t {

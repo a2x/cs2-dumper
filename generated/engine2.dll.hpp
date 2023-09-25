@@ -19,7 +19,7 @@ namespace CEntityIdentity {
     constexpr std::ptrdiff_t m_designerName = 0x20;
     constexpr std::ptrdiff_t m_flags = 0x30;
     constexpr std::ptrdiff_t m_worldGroupId = 0x38;
-    constexpr std::ptrdiff_t m_fDataObjectTypes = 0x3c;
+    constexpr std::ptrdiff_t m_fDataObjectTypes = 0x3C;
     constexpr std::ptrdiff_t m_PathIndex = 0x40;
     constexpr std::ptrdiff_t m_pPrev = 0x58;
     constexpr std::ptrdiff_t m_pNext = 0x60;
@@ -43,7 +43,7 @@ namespace CScriptComponent {
 
 namespace EngineLoopState_t {
     constexpr std::ptrdiff_t m_nPlatWindowWidth = 0x18;
-    constexpr std::ptrdiff_t m_nPlatWindowHeight = 0x1c;
+    constexpr std::ptrdiff_t m_nPlatWindowHeight = 0x1C;
     constexpr std::ptrdiff_t m_nRenderWidth = 0x20;
     constexpr std::ptrdiff_t m_nRenderHeight = 0x24;
 }
@@ -62,7 +62,7 @@ namespace EventAdvanceTick_t {
     constexpr std::ptrdiff_t m_nCurrentTick = 0x30;
     constexpr std::ptrdiff_t m_nCurrentTickThisFrame = 0x34;
     constexpr std::ptrdiff_t m_nTotalTicksThisFrame = 0x38;
-    constexpr std::ptrdiff_t m_nTotalTicks = 0x3c;
+    constexpr std::ptrdiff_t m_nTotalTicks = 0x3C;
 }
 
 namespace EventAppShutdown_t {
@@ -72,13 +72,13 @@ namespace EventAppShutdown_t {
 namespace EventClientFrameSimulate_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0;
     constexpr std::ptrdiff_t m_flRealTime = 0x28;
-    constexpr std::ptrdiff_t m_flFrameTime = 0x2c;
+    constexpr std::ptrdiff_t m_flFrameTime = 0x2C;
 }
 
 namespace EventClientOutput_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0;
     constexpr std::ptrdiff_t m_flRenderTime = 0x28;
-    constexpr std::ptrdiff_t m_flRealTime = 0x2c;
+    constexpr std::ptrdiff_t m_flRealTime = 0x2C;
     constexpr std::ptrdiff_t m_flRenderFrameTimeUnbounded = 0x30;
     constexpr std::ptrdiff_t m_bRenderOnly = 0x34;
 }
@@ -112,7 +112,7 @@ namespace EventClientPreOutput_t {
 namespace EventClientProcessGameInput_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0;
     constexpr std::ptrdiff_t m_flRealTime = 0x28;
-    constexpr std::ptrdiff_t m_flFrameTime = 0x2c;
+    constexpr std::ptrdiff_t m_flFrameTime = 0x2C;
 }
 
 namespace EventClientProcessInput_t {
@@ -137,7 +137,7 @@ namespace EventPostAdvanceTick_t {
     constexpr std::ptrdiff_t m_nCurrentTick = 0x30;
     constexpr std::ptrdiff_t m_nCurrentTickThisFrame = 0x34;
     constexpr std::ptrdiff_t m_nTotalTicksThisFrame = 0x38;
-    constexpr std::ptrdiff_t m_nTotalTicks = 0x3c;
+    constexpr std::ptrdiff_t m_nTotalTicks = 0x3C;
 }
 
 namespace EventPostDataUpdate_t {
@@ -166,7 +166,7 @@ namespace EventSetTime_t {
 namespace EventSimpleLoopFrameUpdate_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0;
     constexpr std::ptrdiff_t m_flRealTime = 0x28;
-    constexpr std::ptrdiff_t m_flFrameTime = 0x2c;
+    constexpr std::ptrdiff_t m_flFrameTime = 0x2C;
 }
 
 namespace EventSimulate_t {
