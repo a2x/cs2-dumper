@@ -651,6 +651,7 @@ pub mod RnMesh_t {
     pub const m_Materials: usize = 0x78;
     pub const m_vOrthographicAreas: usize = 0x90;
     pub const m_nFlags: usize = 0x9C;
+    pub const m_nDebugFlags: usize = 0xA0;
 }
 
 pub mod RnNode_t {

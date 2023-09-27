@@ -69,7 +69,8 @@
     "m_vPos": 44
   },
   "BoneDemoCaptureSettings_t": {
-    "m_boneName": 0
+    "m_boneName": 0,
+    "m_flChainLength": 8
   },
   "CActionComponentUpdater": {
     "m_actions": 48
@@ -151,21 +152,22 @@
     "m_szName": 0
   },
   "CAnimDemoCaptureSettings": {
-    "m_baseSequence": 40,
-    "m_boneSelectionMode": 52,
-    "m_bones": 56,
-    "m_flIkRotation_MaxQuantizationError": 32,
-    "m_flIkRotation_MaxSplineError": 12,
-    "m_flIkTranslation_MaxQuantizationError": 36,
-    "m_flIkTranslation_MaxSplineError": 16,
-    "m_flMaxQuantizationErrorRotation": 20,
-    "m_flMaxQuantizationErrorScale": 28,
-    "m_flMaxQuantizationErrorTranslation": 24,
-    "m_flMaxSplineErrorRotation": 0,
-    "m_flMaxSplineErrorScale": 8,
-    "m_flMaxSplineErrorTranslation": 4,
-    "m_ikChains": 80,
-    "m_nBaseSequenceFrame": 48
+    "m_baseSequence": 56,
+    "m_boneSelectionMode": 68,
+    "m_bones": 72,
+    "m_flIkRotation_MaxQuantizationError": 44,
+    "m_flIkRotation_MaxSplineError": 24,
+    "m_flIkTranslation_MaxQuantizationError": 48,
+    "m_flIkTranslation_MaxSplineError": 28,
+    "m_flMaxQuantizationErrorRotation": 32,
+    "m_flMaxQuantizationErrorScale": 40,
+    "m_flMaxQuantizationErrorTranslation": 36,
+    "m_flMaxSplineErrorScale": 20,
+    "m_flMaxSplineErrorTranslation": 16,
+    "m_ikChains": 96,
+    "m_nBaseSequenceFrame": 64,
+    "m_rangeBoneChainLength": 0,
+    "m_rangeMaxSplineErrorRotation": 8
   },
   "CAnimDesc": {
     "fps": 24,

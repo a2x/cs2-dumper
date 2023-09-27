@@ -1641,10 +1641,11 @@
   },
   "C_OP_InstantaneousEmitter": {
     "m_flInitFromKilledParentParticles": 1136,
+    "m_flParentParticleScale": 1144,
     "m_flStartTime": 792,
-    "m_nMaxEmittedPerFrame": 1140,
+    "m_nMaxEmittedPerFrame": 1488,
     "m_nParticlesToEmit": 448,
-    "m_nSnapshotControlPoint": 1144
+    "m_nSnapshotControlPoint": 1492
   },
   "C_OP_InterpolateRadius": {
     "m_bEaseInAndOut": 464,
@@ -2153,6 +2154,7 @@
     "m_flOutputMin": 1168,
     "m_nField": 472,
     "m_nHeightControlPointNumber": 1856,
+    "m_nHitboxDataType": 476,
     "m_nInControlPointNumber": 464,
     "m_nOutControlPointNumber": 468,
     "m_vecComparisonVelocity": 1864
@@ -3234,6 +3236,9 @@
     "m_nSetMethod": 3708,
     "m_vInput1": 456,
     "m_vInput2": 2080
+  },
+  "C_OP_ShapeMatchingConstraint": {
+    "m_flShapeRestorationTime": 448
   },
   "C_OP_SnapshotRigidSkinToBones": {
     "m_bTransformNormals": 448,

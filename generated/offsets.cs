@@ -1,7 +1,7 @@
 public static class client_dll {
-    public const nint entityList = 0x162C020;
-    public const nint globalVars = 0x15716B8;
-    public const nint localPlayerController = 0x167DD60;
-    public const nint viewAngles = 0x177BF70;
-    public const nint viewMatrix = 0x171D1E0;
+    public const nint entityList = 0x178CB38;
+    public const nint globalVars = 0x168FCD8;
+    public const nint localPlayerController = 0x17DB0B8;
+    public const nint viewAngles = 0x18D9530;
+    public const nint viewMatrix = 0x187A6D0;
 }

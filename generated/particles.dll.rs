@@ -1821,8 +1821,9 @@ pub mod C_OP_InstantaneousEmitter {
     pub const m_nParticlesToEmit: usize = 0x1C0;
     pub const m_flStartTime: usize = 0x318;
     pub const m_flInitFromKilledParentParticles: usize = 0x470;
-    pub const m_nMaxEmittedPerFrame: usize = 0x474;
-    pub const m_nSnapshotControlPoint: usize = 0x478;
+    pub const m_flParentParticleScale: usize = 0x478;
+    pub const m_nMaxEmittedPerFrame: usize = 0x5D0;
+    pub const m_nSnapshotControlPoint: usize = 0x5D4;
 }
 
 pub mod C_OP_InterpolateRadius {
@@ -2389,6 +2390,7 @@ pub mod C_OP_RemapAverageHitboxSpeedtoCP {
     pub const m_nInControlPointNumber: usize = 0x1D0;
     pub const m_nOutControlPointNumber: usize = 0x1D4;
     pub const m_nField: usize = 0x1D8;
+    pub const m_nHitboxDataType: usize = 0x1DC;
     pub const m_flInputMin: usize = 0x1E0;
     pub const m_flInputMax: usize = 0x338;
     pub const m_flOutputMin: usize = 0x490;
@@ -3592,6 +3594,10 @@ pub mod C_OP_SetVectorAttributeToVectorExpression {
     pub const m_nOutputField: usize = 0xE78;
     pub const m_nSetMethod: usize = 0xE7C;
     pub const m_bNormalizedOutput: usize = 0xE80;
+}
+
+pub mod C_OP_ShapeMatchingConstraint {
+    pub const m_flShapeRestorationTime: usize = 0x1C0;
 }
 
 pub mod C_OP_SnapshotRigidSkinToBones {

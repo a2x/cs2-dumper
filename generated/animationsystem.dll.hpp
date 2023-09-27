@@ -87,6 +87,7 @@ namespace BlendItem_t {
 
 namespace BoneDemoCaptureSettings_t {
     constexpr std::ptrdiff_t m_boneName = 0x0;
+    constexpr std::ptrdiff_t m_flChainLength = 0x8;
 }
 
 namespace CActionComponentUpdater {
@@ -181,21 +182,22 @@ namespace CAnimDecoder {
 }
 
 namespace CAnimDemoCaptureSettings {
-    constexpr std::ptrdiff_t m_flMaxSplineErrorRotation = 0x0;
-    constexpr std::ptrdiff_t m_flMaxSplineErrorTranslation = 0x4;
-    constexpr std::ptrdiff_t m_flMaxSplineErrorScale = 0x8;
-    constexpr std::ptrdiff_t m_flIkRotation_MaxSplineError = 0xC;
-    constexpr std::ptrdiff_t m_flIkTranslation_MaxSplineError = 0x10;
-    constexpr std::ptrdiff_t m_flMaxQuantizationErrorRotation = 0x14;
-    constexpr std::ptrdiff_t m_flMaxQuantizationErrorTranslation = 0x18;
-    constexpr std::ptrdiff_t m_flMaxQuantizationErrorScale = 0x1C;
-    constexpr std::ptrdiff_t m_flIkRotation_MaxQuantizationError = 0x20;
-    constexpr std::ptrdiff_t m_flIkTranslation_MaxQuantizationError = 0x24;
-    constexpr std::ptrdiff_t m_baseSequence = 0x28;
-    constexpr std::ptrdiff_t m_nBaseSequenceFrame = 0x30;
-    constexpr std::ptrdiff_t m_boneSelectionMode = 0x34;
-    constexpr std::ptrdiff_t m_bones = 0x38;
-    constexpr std::ptrdiff_t m_ikChains = 0x50;
+    constexpr std::ptrdiff_t m_rangeBoneChainLength = 0x0;
+    constexpr std::ptrdiff_t m_rangeMaxSplineErrorRotation = 0x8;
+    constexpr std::ptrdiff_t m_flMaxSplineErrorTranslation = 0x10;
+    constexpr std::ptrdiff_t m_flMaxSplineErrorScale = 0x14;
+    constexpr std::ptrdiff_t m_flIkRotation_MaxSplineError = 0x18;
+    constexpr std::ptrdiff_t m_flIkTranslation_MaxSplineError = 0x1C;
+    constexpr std::ptrdiff_t m_flMaxQuantizationErrorRotation = 0x20;
+    constexpr std::ptrdiff_t m_flMaxQuantizationErrorTranslation = 0x24;
+    constexpr std::ptrdiff_t m_flMaxQuantizationErrorScale = 0x28;
+    constexpr std::ptrdiff_t m_flIkRotation_MaxQuantizationError = 0x2C;
+    constexpr std::ptrdiff_t m_flIkTranslation_MaxQuantizationError = 0x30;
+    constexpr std::ptrdiff_t m_baseSequence = 0x38;
+    constexpr std::ptrdiff_t m_nBaseSequenceFrame = 0x40;
+    constexpr std::ptrdiff_t m_boneSelectionMode = 0x44;
+    constexpr std::ptrdiff_t m_bones = 0x48;
+    constexpr std::ptrdiff_t m_ikChains = 0x60;
 }
 
 namespace CAnimDesc {

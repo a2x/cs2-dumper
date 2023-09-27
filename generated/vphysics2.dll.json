@@ -577,6 +577,7 @@
     "m_Triangles": 72,
     "m_Vertices": 48,
     "m_Wings": 96,
+    "m_nDebugFlags": 160,
     "m_nFlags": 156,
     "m_vMax": 12,
     "m_vMin": 0,

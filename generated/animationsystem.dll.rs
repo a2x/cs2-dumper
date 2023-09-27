@@ -85,6 +85,7 @@ pub mod BlendItem_t {
 
 pub mod BoneDemoCaptureSettings_t {
     pub const m_boneName: usize = 0x0;
+    pub const m_flChainLength: usize = 0x8;
 }
 
 pub mod CActionComponentUpdater {
@@ -179,21 +180,22 @@ pub mod CAnimDecoder {
 }
 
 pub mod CAnimDemoCaptureSettings {
-    pub const m_flMaxSplineErrorRotation: usize = 0x0;
-    pub const m_flMaxSplineErrorTranslation: usize = 0x4;
-    pub const m_flMaxSplineErrorScale: usize = 0x8;
-    pub const m_flIkRotation_MaxSplineError: usize = 0xC;
-    pub const m_flIkTranslation_MaxSplineError: usize = 0x10;
-    pub const m_flMaxQuantizationErrorRotation: usize = 0x14;
-    pub const m_flMaxQuantizationErrorTranslation: usize = 0x18;
-    pub const m_flMaxQuantizationErrorScale: usize = 0x1C;
-    pub const m_flIkRotation_MaxQuantizationError: usize = 0x20;
-    pub const m_flIkTranslation_MaxQuantizationError: usize = 0x24;
-    pub const m_baseSequence: usize = 0x28;
-    pub const m_nBaseSequenceFrame: usize = 0x30;
-    pub const m_boneSelectionMode: usize = 0x34;
-    pub const m_bones: usize = 0x38;
-    pub const m_ikChains: usize = 0x50;
+    pub const m_rangeBoneChainLength: usize = 0x0;
+    pub const m_rangeMaxSplineErrorRotation: usize = 0x8;
+    pub const m_flMaxSplineErrorTranslation: usize = 0x10;
+    pub const m_flMaxSplineErrorScale: usize = 0x14;
+    pub const m_flIkRotation_MaxSplineError: usize = 0x18;
+    pub const m_flIkTranslation_MaxSplineError: usize = 0x1C;
+    pub const m_flMaxQuantizationErrorRotation: usize = 0x20;
+    pub const m_flMaxQuantizationErrorTranslation: usize = 0x24;
+    pub const m_flMaxQuantizationErrorScale: usize = 0x28;
+    pub const m_flIkRotation_MaxQuantizationError: usize = 0x2C;
+    pub const m_flIkTranslation_MaxQuantizationError: usize = 0x30;
+    pub const m_baseSequence: usize = 0x38;
+    pub const m_nBaseSequenceFrame: usize = 0x40;
+    pub const m_boneSelectionMode: usize = 0x44;
+    pub const m_bones: usize = 0x48;
+    pub const m_ikChains: usize = 0x60;
 }
 
 pub mod CAnimDesc {

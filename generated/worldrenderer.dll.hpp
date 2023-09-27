@@ -5,8 +5,7 @@
 namespace AggregateLODSetup_t {
     constexpr std::ptrdiff_t m_vLODOrigin = 0x0;
     constexpr std::ptrdiff_t m_fMaxObjectScale = 0xC;
-    constexpr std::ptrdiff_t m_nLODMask = 0x10;
-    constexpr std::ptrdiff_t m_fSwitchDistances = 0x18;
+    constexpr std::ptrdiff_t m_fSwitchDistances = 0x10;
 }
 
 namespace AggregateMeshInfo_t {

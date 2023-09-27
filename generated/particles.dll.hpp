@@ -1823,8 +1823,9 @@ namespace C_OP_InstantaneousEmitter {
     constexpr std::ptrdiff_t m_nParticlesToEmit = 0x1C0;
     constexpr std::ptrdiff_t m_flStartTime = 0x318;
     constexpr std::ptrdiff_t m_flInitFromKilledParentParticles = 0x470;
-    constexpr std::ptrdiff_t m_nMaxEmittedPerFrame = 0x474;
-    constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x478;
+    constexpr std::ptrdiff_t m_flParentParticleScale = 0x478;
+    constexpr std::ptrdiff_t m_nMaxEmittedPerFrame = 0x5D0;
+    constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x5D4;
 }
 
 namespace C_OP_InterpolateRadius {
@@ -2391,6 +2392,7 @@ namespace C_OP_RemapAverageHitboxSpeedtoCP {
     constexpr std::ptrdiff_t m_nInControlPointNumber = 0x1D0;
     constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1D4;
     constexpr std::ptrdiff_t m_nField = 0x1D8;
+    constexpr std::ptrdiff_t m_nHitboxDataType = 0x1DC;
     constexpr std::ptrdiff_t m_flInputMin = 0x1E0;
     constexpr std::ptrdiff_t m_flInputMax = 0x338;
     constexpr std::ptrdiff_t m_flOutputMin = 0x490;
@@ -3594,6 +3596,10 @@ namespace C_OP_SetVectorAttributeToVectorExpression {
     constexpr std::ptrdiff_t m_nOutputField = 0xE78;
     constexpr std::ptrdiff_t m_nSetMethod = 0xE7C;
     constexpr std::ptrdiff_t m_bNormalizedOutput = 0xE80;
+}
+
+namespace C_OP_ShapeMatchingConstraint {
+    constexpr std::ptrdiff_t m_flShapeRestorationTime = 0x1C0;
 }
 
 namespace C_OP_SnapshotRigidSkinToBones {

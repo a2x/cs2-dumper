@@ -1,8 +1,7 @@
 public static class AggregateLODSetup_t {
     public const nint m_vLODOrigin = 0x0;
     public const nint m_fMaxObjectScale = 0xC;
-    public const nint m_nLODMask = 0x10;
-    public const nint m_fSwitchDistances = 0x18;
+    public const nint m_fSwitchDistances = 0x10;
 }
 
 public static class AggregateMeshInfo_t {

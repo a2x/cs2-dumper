@@ -649,6 +649,7 @@ public static class RnMesh_t {
     public const nint m_Materials = 0x78;
     public const nint m_vOrthographicAreas = 0x90;
     public const nint m_nFlags = 0x9C;
+    public const nint m_nDebugFlags = 0xA0;
 }
 
 public static class RnNode_t {

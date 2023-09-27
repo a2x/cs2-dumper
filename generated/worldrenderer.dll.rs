@@ -3,8 +3,7 @@
 pub mod AggregateLODSetup_t {
     pub const m_vLODOrigin: usize = 0x0;
     pub const m_fMaxObjectScale: usize = 0xC;
-    pub const m_nLODMask: usize = 0x10;
-    pub const m_fSwitchDistances: usize = 0x18;
+    pub const m_fSwitchDistances: usize = 0x10;
 }
 
 pub mod AggregateMeshInfo_t {

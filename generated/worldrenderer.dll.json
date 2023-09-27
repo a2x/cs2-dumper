@@ -1,8 +1,7 @@
 {
   "AggregateLODSetup_t": {
     "m_fMaxObjectScale": 12,
-    "m_fSwitchDistances": 24,
-    "m_nLODMask": 16,
+    "m_fSwitchDistances": 16,
     "m_vLODOrigin": 0
   },
   "AggregateMeshInfo_t": {

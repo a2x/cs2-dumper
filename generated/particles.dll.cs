@@ -1819,8 +1819,9 @@ public static class C_OP_InstantaneousEmitter {
     public const nint m_nParticlesToEmit = 0x1C0;
     public const nint m_flStartTime = 0x318;
     public const nint m_flInitFromKilledParentParticles = 0x470;
-    public const nint m_nMaxEmittedPerFrame = 0x474;
-    public const nint m_nSnapshotControlPoint = 0x478;
+    public const nint m_flParentParticleScale = 0x478;
+    public const nint m_nMaxEmittedPerFrame = 0x5D0;
+    public const nint m_nSnapshotControlPoint = 0x5D4;
 }
 
 public static class C_OP_InterpolateRadius {
@@ -2387,6 +2388,7 @@ public static class C_OP_RemapAverageHitboxSpeedtoCP {
     public const nint m_nInControlPointNumber = 0x1D0;
     public const nint m_nOutControlPointNumber = 0x1D4;
     public const nint m_nField = 0x1D8;
+    public const nint m_nHitboxDataType = 0x1DC;
     public const nint m_flInputMin = 0x1E0;
     public const nint m_flInputMax = 0x338;
     public const nint m_flOutputMin = 0x490;
@@ -3590,6 +3592,10 @@ public static class C_OP_SetVectorAttributeToVectorExpression {
     public const nint m_nOutputField = 0xE78;
     public const nint m_nSetMethod = 0xE7C;
     public const nint m_bNormalizedOutput = 0xE80;
+}
+
+public static class C_OP_ShapeMatchingConstraint {
+    public const nint m_flShapeRestorationTime = 0x1C0;
 }
 
 public static class C_OP_SnapshotRigidSkinToBones {
