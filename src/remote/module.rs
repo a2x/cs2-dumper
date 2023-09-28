@@ -1,4 +1,5 @@
 use std::ffi::CStr;
+use std::mem;
 use std::slice;
 
 use windows::Win32::System::Diagnostics::Debug::*;
@@ -25,6 +26,7 @@ pub struct Section {
 pub struct Module<'a> {
     address: usize,
     nt_headers: &'a IMAGE_NT_HEADERS64,
+    size: u32,
     exports: Vec<Export>,
     sections: Vec<Section>,
 }
@@ -34,6 +36,13 @@ impl<'a> Module<'a> {
         let mut headers: [u8; 0x1000] = [0; 0x1000];
 
         process.read_memory_raw(address, headers.as_mut_ptr() as *mut _, headers.len())?;
+
+        if headers.len() < mem::size_of::<IMAGE_DOS_HEADER>() {
+            return Err(Error::BufferSizeMismatch(
+                mem::size_of::<IMAGE_DOS_HEADER>(),
+                headers.len(),
+            ));
+        }
 
         let dos_header = unsafe { &*(headers.as_ptr() as *const IMAGE_DOS_HEADER) };
 
@@ -49,12 +58,15 @@ impl<'a> Module<'a> {
             return Err(Error::InvalidMagic(nt_headers.Signature));
         }
 
-        let exports = unsafe { Self::parse_exports(process, address, nt_headers)? };
+        let size = nt_headers.OptionalHeader.SizeOfImage;
+
+        let exports = unsafe { Self::parse_exports(process, address, size, nt_headers)? };
         let sections = unsafe { Self::parse_sections(nt_headers) };
 
         Ok(Self {
             address,
             nt_headers,
+            size,
             exports,
             sections,
         })
@@ -87,12 +99,13 @@ impl<'a> Module<'a> {
 
     #[inline]
     pub fn size(&self) -> u32 {
-        self.nt_headers.OptionalHeader.SizeOfImage
+        self.size
     }
 
     unsafe fn parse_exports(
         process: &Process,
         address: usize,
+        size: u32,
         nt_headers: &IMAGE_NT_HEADERS64,
     ) -> Result<Vec<Export>> {
         let export_data_directory =
@@ -109,6 +122,13 @@ impl<'a> Module<'a> {
             buffer.len(),
         )?;
 
+        if buffer.len() < mem::size_of::<IMAGE_EXPORT_DIRECTORY>() {
+            return Err(Error::BufferSizeMismatch(
+                mem::size_of::<IMAGE_EXPORT_DIRECTORY>(),
+                buffer.len(),
+            ));
+        }
+
         let export_directory = &*(buffer.as_ptr() as *const IMAGE_EXPORT_DIRECTORY);
 
         let delta =
@@ -121,7 +141,18 @@ impl<'a> Module<'a> {
         let mut exports: Vec<Export> = Vec::with_capacity(export_directory.NumberOfNames as usize);
 
         for i in 0..export_directory.NumberOfNames {
+            let target = ordinal_table as usize + i as usize * mem::size_of::<u16>();
+
+            if target > address + size as usize || target < ordinal_table as usize {
+                continue;
+            }
+
             let function_ordinal = *ordinal_table.offset(i as isize);
+
+            if function_ordinal as usize > export_directory.NumberOfFunctions as usize {
+                continue;
+            }
+
             let function_va = address + *function_table.offset(function_ordinal as isize) as usize;
 
             // Skip forwarded exports.
@@ -129,11 +160,13 @@ impl<'a> Module<'a> {
                 continue;
             }
 
-            let name = CStr::from_ptr(
-                delta.wrapping_add(*name_table.offset(i as isize) as usize) as *const i8
-            )
-            .to_string_lossy()
-            .into_owned();
+            let name_ptr = delta.wrapping_add(*name_table.offset(i as isize) as usize) as *const i8;
+
+            if name_ptr.is_null() {
+                continue;
+            }
+
+            let name = CStr::from_ptr(name_ptr).to_string_lossy().into_owned();
 
             exports.push(Export {
                 name,

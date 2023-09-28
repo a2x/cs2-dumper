@@ -2,6 +2,7 @@ use std::io;
 
 #[derive(Debug)]
 pub enum Error {
+    BufferSizeMismatch(usize, usize),
     InvalidMagic(u32),
     IOError(io::Error),
     ModuleNotFound,
@@ -33,6 +34,11 @@ impl From<windows::core::Error> for Error {
 impl std::fmt::Display for Error {
     fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
+            Self::BufferSizeMismatch(expected, actual) => write!(
+                fmt,
+                "Buffer size mismatch: expected {}, got {}",
+                expected, actual
+            ),
             Self::InvalidMagic(magic) => write!(fmt, "Invalid magic: {:#X}", magic),
             Self::IOError(err) => write!(fmt, "IO error: {}", err),
             Self::ModuleNotFound => write!(fmt, "Module not found"),
