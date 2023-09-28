@@ -4,14 +4,14 @@ public static class animationsystem_dll {
 }
 
 public static class client_dll {
-    public const nint LegacyGameUI001 = 0x88D3E0;
-    public const nint Source2ClientUI001 = 0x87BDF0;
-    public const nint Source2ClientPrediction001 = 0x79B480;
-    public const nint ClientToolsInfo_001 = 0x727290;
-    public const nint Source2Client002 = 0x7272B0;
-    public const nint GameClientExports001 = 0x7272A0;
-    public const nint EmptyWorldService001_Client = 0x48AB10;
-    public const nint Source2ClientConfig001 = 0x471EA0;
+    public const nint LegacyGameUI001 = 0x88D280;
+    public const nint Source2ClientUI001 = 0x87BC70;
+    public const nint Source2ClientPrediction001 = 0x79B3B0;
+    public const nint ClientToolsInfo_001 = 0x7271C0;
+    public const nint Source2Client002 = 0x7271E0;
+    public const nint GameClientExports001 = 0x7271D0;
+    public const nint EmptyWorldService001_Client = 0x48A9E0;
+    public const nint Source2ClientConfig001 = 0x471D70;
 }
 
 public static class engine2_dll {
@@ -152,11 +152,11 @@ public static class schemasystem_dll {
 }
 
 public static class server_dll {
-    public const nint NavGameTest001 = 0xA2B4C0;
-    public const nint ServerToolsInfo_001 = 0x82FA70;
-    public const nint Source2GameClients001 = 0x82FA80;
-    public const nint Source2GameEntities001 = 0x82FA90;
-    public const nint Source2Server001 = 0x82FAA0;
+    public const nint NavGameTest001 = 0xA2B3D0;
+    public const nint ServerToolsInfo_001 = 0x82F980;
+    public const nint Source2GameClients001 = 0x82F990;
+    public const nint Source2GameEntities001 = 0x82F9A0;
+    public const nint Source2Server001 = 0x82F9B0;
     public const nint EmptyWorldService001_Server = 0x584660;
     public const nint Source2ServerConfig001 = 0x564670;
     public const nint EntitySubclassUtilsV001 = 0x2C69C0;
@@ -172,7 +172,7 @@ public static class soundsystem_dll {
 }
 
 public static class steamaudio_dll {
-    public const nint SteamAudio001 = 0x12D80;
+    public const nint SteamAudio001 = 0x12D90;
 }
 
 public static class steamclient64_dll {

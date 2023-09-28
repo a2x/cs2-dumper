@@ -4,14 +4,14 @@
     "AnimationSystem_001": 389232
   },
   "client_dll": {
-    "ClientToolsInfo_001": 7500432,
-    "EmptyWorldService001_Client": 4762384,
-    "GameClientExports001": 7500448,
-    "LegacyGameUI001": 8967136,
-    "Source2Client002": 7500464,
-    "Source2ClientConfig001": 4660896,
-    "Source2ClientPrediction001": 7976064,
-    "Source2ClientUI001": 8895984
+    "ClientToolsInfo_001": 7500224,
+    "EmptyWorldService001_Client": 4762080,
+    "GameClientExports001": 7500240,
+    "LegacyGameUI001": 8966784,
+    "Source2Client002": 7500256,
+    "Source2ClientConfig001": 4660592,
+    "Source2ClientPrediction001": 7975856,
+    "Source2ClientUI001": 8895600
   },
   "engine2_dll": {
     "BenchmarkService001": 1485792,
@@ -132,12 +132,12 @@
   "server_dll": {
     "EmptyWorldService001_Server": 5785184,
     "EntitySubclassUtilsV001": 2910656,
-    "NavGameTest001": 10663104,
-    "ServerToolsInfo_001": 8583792,
-    "Source2GameClients001": 8583808,
+    "NavGameTest001": 10662864,
+    "ServerToolsInfo_001": 8583552,
+    "Source2GameClients001": 8583568,
     "Source2GameDirector001": 1305056,
-    "Source2GameEntities001": 8583824,
-    "Source2Server001": 8583840,
+    "Source2GameEntities001": 8583584,
+    "Source2Server001": 8583600,
     "Source2ServerConfig001": 5654128,
     "customnavsystem001": 2372672
   },
@@ -148,7 +148,7 @@
     "VMixEditTool001": 464656
   },
   "steamaudio_dll": {
-    "SteamAudio001": 77184
+    "SteamAudio001": 77200
   },
   "steamclient64_dll": {
     "CLIENTENGINE_INTERFACE_VERSION005": 8582336,

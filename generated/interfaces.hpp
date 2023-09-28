@@ -8,14 +8,14 @@ namespace animationsystem_dll {
 }
 
 namespace client_dll {
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x88D3E0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x87BDF0;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x79B480;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x727290;
-    constexpr std::ptrdiff_t Source2Client002 = 0x7272B0;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x7272A0;
-    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x48AB10;
-    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x471EA0;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x88D280;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x87BC70;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x79B3B0;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x7271C0;
+    constexpr std::ptrdiff_t Source2Client002 = 0x7271E0;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x7271D0;
+    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x48A9E0;
+    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x471D70;
 }
 
 namespace engine2_dll {
@@ -156,11 +156,11 @@ namespace schemasystem_dll {
 }
 
 namespace server_dll {
-    constexpr std::ptrdiff_t NavGameTest001 = 0xA2B4C0;
-    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x82FA70;
-    constexpr std::ptrdiff_t Source2GameClients001 = 0x82FA80;
-    constexpr std::ptrdiff_t Source2GameEntities001 = 0x82FA90;
-    constexpr std::ptrdiff_t Source2Server001 = 0x82FAA0;
+    constexpr std::ptrdiff_t NavGameTest001 = 0xA2B3D0;
+    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x82F980;
+    constexpr std::ptrdiff_t Source2GameClients001 = 0x82F990;
+    constexpr std::ptrdiff_t Source2GameEntities001 = 0x82F9A0;
+    constexpr std::ptrdiff_t Source2Server001 = 0x82F9B0;
     constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x584660;
     constexpr std::ptrdiff_t Source2ServerConfig001 = 0x564670;
     constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x2C69C0;
@@ -176,7 +176,7 @@ namespace soundsystem_dll {
 }
 
 namespace steamaudio_dll {
-    constexpr std::ptrdiff_t SteamAudio001 = 0x12D80;
+    constexpr std::ptrdiff_t SteamAudio001 = 0x12D90;
 }
 
 namespace steamclient64_dll {

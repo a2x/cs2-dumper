@@ -1,9 +1,9 @@
 {
   "client_dll": {
-    "entityList": 24693560,
+    "entityList": 24692872,
     "globalVars": 23657688,
-    "localPlayerController": 25014456,
-    "viewAngles": 26055984,
-    "viewMatrix": 25667280
+    "localPlayerController": 25014552,
+    "viewAngles": 26056112,
+    "viewMatrix": 25667312
   }
 }

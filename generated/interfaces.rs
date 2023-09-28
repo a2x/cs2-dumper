@@ -6,14 +6,14 @@ pub mod animationsystem_dll {
 }
 
 pub mod client_dll {
-    pub const LegacyGameUI001: usize = 0x88D3E0;
-    pub const Source2ClientUI001: usize = 0x87BDF0;
-    pub const Source2ClientPrediction001: usize = 0x79B480;
-    pub const ClientToolsInfo_001: usize = 0x727290;
-    pub const Source2Client002: usize = 0x7272B0;
-    pub const GameClientExports001: usize = 0x7272A0;
-    pub const EmptyWorldService001_Client: usize = 0x48AB10;
-    pub const Source2ClientConfig001: usize = 0x471EA0;
+    pub const LegacyGameUI001: usize = 0x88D280;
+    pub const Source2ClientUI001: usize = 0x87BC70;
+    pub const Source2ClientPrediction001: usize = 0x79B3B0;
+    pub const ClientToolsInfo_001: usize = 0x7271C0;
+    pub const Source2Client002: usize = 0x7271E0;
+    pub const GameClientExports001: usize = 0x7271D0;
+    pub const EmptyWorldService001_Client: usize = 0x48A9E0;
+    pub const Source2ClientConfig001: usize = 0x471D70;
 }
 
 pub mod engine2_dll {
@@ -154,11 +154,11 @@ pub mod schemasystem_dll {
 }
 
 pub mod server_dll {
-    pub const NavGameTest001: usize = 0xA2B4C0;
-    pub const ServerToolsInfo_001: usize = 0x82FA70;
-    pub const Source2GameClients001: usize = 0x82FA80;
-    pub const Source2GameEntities001: usize = 0x82FA90;
-    pub const Source2Server001: usize = 0x82FAA0;
+    pub const NavGameTest001: usize = 0xA2B3D0;
+    pub const ServerToolsInfo_001: usize = 0x82F980;
+    pub const Source2GameClients001: usize = 0x82F990;
+    pub const Source2GameEntities001: usize = 0x82F9A0;
+    pub const Source2Server001: usize = 0x82F9B0;
     pub const EmptyWorldService001_Server: usize = 0x584660;
     pub const Source2ServerConfig001: usize = 0x564670;
     pub const EntitySubclassUtilsV001: usize = 0x2C69C0;
@@ -174,7 +174,7 @@ pub mod soundsystem_dll {
 }
 
 pub mod steamaudio_dll {
-    pub const SteamAudio001: usize = 0x12D80;
+    pub const SteamAudio001: usize = 0x12D90;
 }
 
 pub mod steamclient64_dll {
