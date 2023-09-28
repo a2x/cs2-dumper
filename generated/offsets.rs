@@ -3,7 +3,7 @@
 pub mod client_dll {
     pub const entityList: usize = 0x178C888;
     pub const globalVars: usize = 0x168FCD8;
-    pub const localPlayerController: usize = 0x17DB118;
-    pub const viewAngles: usize = 0x18D95B0;
-    pub const viewMatrix: usize = 0x187A6F0;
+    pub const localPlayerController: usize = 0x17DB108;
+    pub const viewAngles: usize = 0x18D95A0;
+    pub const viewMatrix: usize = 0x187A6E0;
 }
