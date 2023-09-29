@@ -1,44 +1,75 @@
 {
-  "signatures": [
-    {
-      "name": "entityList",
-      "module": "client.dll",
-      "pattern": "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB",
-      "relative": true,
-      "levels": 0,
-      "offset": 0
-    },
-    {
-      "name": "globalVars",
-      "module": "client.dll",
-      "pattern": "48 89 0D ? ? ? ? 48 89 41",
-      "relative": true,
-      "levels": 0,
-      "offset": 0
-    },
-    {
-      "name": "localPlayerController",
-      "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
-      "relative": true,
-      "levels": 0,
-      "offset": 0
-    },
-    {
-      "name": "viewAngles",
-      "module": "client.dll",
-      "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",
-      "relative": true,
-      "levels": 1,
-      "offset": 17680
-    },
-    {
-      "name": "viewMatrix",
-      "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? 48 C1 E0 06",
-      "relative": true,
-      "levels": 0,
-      "offset": 0
-    }
-  ]
+    "signatures": [
+        {
+            "name": "entityList",
+            "module": "client.dll",
+            "pattern": "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        },
+        {
+            "name": "globalVars",
+            "module": "client.dll",
+            "pattern": "48 89 0D ? ? ? ? 48 89 41",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        },
+        {
+            "name": "localPlayerController",
+            "module": "client.dll",
+            "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        },
+        {
+            "name": "localPlayerPawn",
+            "module": "client.dll",
+            "pattern": "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC ? 8B 0D",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                },
+                {
+                    "type": "add",
+                    "value": 280
+                }
+            ]
+        },
+        {
+            "name": "viewAngles",
+            "module": "client.dll",
+            "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                },
+                {
+                    "type": "dereference"
+                },
+                {
+                    "type": "add",
+                    "value": 17680
+                }
+            ]
+        },
+        {
+            "name": "viewMatrix",
+            "module": "client.dll",
+            "pattern": "48 8D 0D ? ? ? ? 48 C1 E0 06",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        }
+    ]
 }

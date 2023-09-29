@@ -15,7 +15,7 @@ impl<'a> SchemaSystem<'a> {
             "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28"
         )?;
 
-        address = process.resolve_relative(address)?;
+        address = process.resolve_rip(address)?;
 
         Ok(Self { process, address })
     }

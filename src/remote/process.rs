@@ -175,7 +175,7 @@ impl Process {
         Ok((address + 0x5) + displacement as usize)
     }
 
-    pub fn resolve_relative(&self, address: usize) -> Result<usize> {
+    pub fn resolve_rip(&self, address: usize) -> Result<usize> {
         let displacement = self.read_memory::<i32>(address + 0x3)?;
 
         Ok((address + 0x7) + displacement as usize)

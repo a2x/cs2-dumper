@@ -1,7 +1,7 @@
 use std::fs::File;
 
 use crate::builder::FileBuilderEnum;
-use crate::config::Config;
+use crate::config::{Config, Operation};
 use crate::error::{Error, Result};
 use crate::remote::Process;
 
@@ -21,17 +21,27 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
 
         let mut address = process.find_pattern(&signature.module, &signature.pattern)?;
 
-        if signature.relative {
-            address = process.resolve_relative(address)?;
-        }
-
-        if signature.levels > 0 {
-            for _ in 0..signature.levels {
-                address = process.read_memory::<usize>(address)?;
+        for operation in signature.operations {
+            match operation {
+                Operation::Add { value } => {
+                    address += value;
+                }
+                Operation::Dereference { times } => {
+                    for _ in 0..times.unwrap_or(1) {
+                        address = process.read_memory::<usize>(address)?;
+                    }
+                }
+                Operation::Jmp => {
+                    address = process.resolve_jmp(address)?;
+                }
+                Operation::RipRelative => {
+                    address = process.resolve_rip(address)?;
+                }
+                Operation::Subtract { value } => {
+                    address -= value;
+                }
             }
         }
-
-        address += signature.offset as usize;
 
         log::info!(
             "  -> Found '{}' @ {:#X} (RVA: {:#X})",
