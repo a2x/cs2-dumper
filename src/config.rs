@@ -6,6 +6,7 @@ pub enum Operation {
     Add { value: usize },
     Dereference { times: Option<u16> },
     Jmp,
+    Offset { position: usize },
     RipRelative,
     Subtract { value: usize },
 }

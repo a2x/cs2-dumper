@@ -21,6 +21,16 @@
             ]
         },
         {
+            "name": "interfaceLinkList",
+            "module": "client.dll",
+            "pattern": "4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        },
+        {
             "name": "localPlayerController",
             "module": "client.dll",
             "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
@@ -41,6 +51,27 @@
                 {
                     "type": "add",
                     "value": 280
+                }
+            ]
+        },
+        {
+            "name": "networkGameClient",
+            "module": "engine2.dll",
+            "pattern": "48 89 3D ? ? ? ? 48 8D 15",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        },
+        {
+            "name": "networkGameClient_signOnState",
+            "module": "engine2.dll",
+            "pattern": "41 8B 94 24 ? ? ? ? 4C 8D 35",
+            "operations": [
+                {
+                    "type": "offset",
+                    "position": 4
                 }
             ]
         },

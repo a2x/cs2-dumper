@@ -21,6 +21,8 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
 
         let mut address = process.find_pattern(&signature.module, &signature.pattern)?;
 
+        let mut offset: Option<u32> = None;
+
         for operation in signature.operations {
             match operation {
                 Operation::Add { value } => {
@@ -34,6 +36,9 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                 Operation::Jmp => {
                     address = process.resolve_jmp(address)?;
                 }
+                Operation::Offset { position } => {
+                    offset = Some(process.read_memory::<u32>(address + position)?);
+                }
                 Operation::RipRelative => {
                     address = process.resolve_rip(address)?;
                 }
@@ -43,17 +48,27 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             }
         }
 
-        log::info!(
-            "  -> Found '{}' @ {:#X} (RVA: {:#X})",
-            signature.name,
-            address,
-            address - module.address()
-        );
+        let sanitized_module_name = signature.module.replace(".", "_");
+
+        let (name, value) = if let Some(offset) = offset {
+            log::info!("  -> Found '{}' @ {:#X}", signature.name, offset);
+
+            (signature.name, offset as usize)
+        } else {
+            log::info!(
+                "  -> Found '{}' @ {:#X} (RVA: {:#X})",
+                signature.name,
+                address,
+                address - module.address()
+            );
+
+            (signature.name, address - module.address())
+        };
 
         entries
-            .entry(signature.module.replace(".", "_"))
+            .entry(sanitized_module_name)
             .or_default()
-            .push((signature.name, address - module.address()));
+            .push((name, value));
     }
 
     for builder in builders.iter_mut() {
