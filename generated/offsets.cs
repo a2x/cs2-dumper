@@ -10,5 +10,6 @@ public static class client_dll {
 
 public static class engine2_dll {
     public const nint networkGameClient = 0x48AAB0;
+    public const nint networkGameClient_maxClients = 0x250;
     public const nint networkGameClient_signOnState = 0x240;
 }

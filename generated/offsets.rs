@@ -12,5 +12,6 @@ pub mod client_dll {
 
 pub mod engine2_dll {
     pub const networkGameClient: usize = 0x48AAB0;
+    pub const networkGameClient_maxClients: usize = 0x250;
     pub const networkGameClient_signOnState: usize = 0x240;
 }

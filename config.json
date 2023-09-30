@@ -65,13 +65,24 @@
             ]
         },
         {
-            "name": "networkGameClient_signOnState",
+            "name": "networkGameClient_maxClients",
             "module": "engine2.dll",
-            "pattern": "41 8B 94 24 ? ? ? ? 4C 8D 35",
+            "pattern": "8B 81 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8D 81",
             "operations": [
                 {
                     "type": "offset",
-                    "position": 4
+                    "position": 2
+                }
+            ]
+        },
+        {
+            "name": "networkGameClient_signOnState",
+            "module": "engine2.dll",
+            "pattern": "44 8B 81 ? ? ? ? 48 8D 0D",
+            "operations": [
+                {
+                    "type": "offset",
+                    "position": 3
                 }
             ]
         },

@@ -10,6 +10,7 @@
   },
   "engine2_dll": {
     "networkGameClient": 4762288,
+    "networkGameClient_maxClients": 592,
     "networkGameClient_signOnState": 576
   }
 }

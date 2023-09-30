@@ -30,9 +30,10 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                 let interface_version_name = process.read_string(interface_version_name_ptr, 64)?;
 
                 log::info!(
-                    "  -> Found '{}' @ {:#X} (RVA: {:#X})",
+                    "  -> Found '{}' @ {:#X} ({} + {:#X})",
                     interface_version_name,
                     interface_ptr,
+                    module_name,
                     interface_ptr - module.address()
                 );
 

@@ -14,5 +14,6 @@ namespace client_dll {
 
 namespace engine2_dll {
     constexpr std::ptrdiff_t networkGameClient = 0x48AAB0;
+    constexpr std::ptrdiff_t networkGameClient_maxClients = 0x250;
     constexpr std::ptrdiff_t networkGameClient_signOnState = 0x240;
 }

@@ -21,7 +21,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
 
         let mut address = process.find_pattern(&signature.module, &signature.pattern)?;
 
-        let mut offset: Option<u32> = None;
+        let mut offset: Option<u16> = None;
 
         for operation in signature.operations {
             match operation {
@@ -37,7 +37,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                     address = process.resolve_jmp(address)?;
                 }
                 Operation::Offset { position } => {
-                    offset = Some(process.read_memory::<u32>(address + position)?);
+                    offset = Some(process.read_memory::<u16>(address + position)?);
                 }
                 Operation::RipRelative => {
                     address = process.resolve_rip(address)?;
@@ -56,9 +56,10 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             (signature.name, offset as usize)
         } else {
             log::info!(
-                "  -> Found '{}' @ {:#X} (RVA: {:#X})",
+                "  -> Found '{}' @ {:#X} ({} + {:#X})",
                 signature.name,
                 address,
+                signature.module,
                 address - module.address()
             );
 
