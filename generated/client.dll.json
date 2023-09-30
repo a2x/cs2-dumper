@@ -1553,6 +1553,7 @@
     "m_bMatchWaitingForResume": 89,
     "m_bPlayAllStepSoundsOnServer": 154,
     "m_bServerPaused": 68,
+    "m_bSkipNextPerfSample": 7800,
     "m_bSpawnedTerrorHuntHeavy": 3221,
     "m_bSwitchingTeamsAtRoundReset": 3435,
     "m_bTCantBuy": 2536,

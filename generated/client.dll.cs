@@ -1733,6 +1733,7 @@ public static class C_CSGameRules {
     public const nint m_nCTTeamIntroVariant = 0xEB0;
     public const nint m_bTeamIntroPeriod = 0xEB4;
     public const nint m_flLastPerfSampleTime = 0x1E70;
+    public const nint m_bSkipNextPerfSample = 0x1E78;
 }
 
 public static class C_CSGameRulesProxy {

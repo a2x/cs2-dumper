@@ -18,8 +18,8 @@ pub struct Export {
 #[derive(Debug)]
 pub struct Section {
     pub name: String,
-    pub start_rva: usize,
-    pub end_rva: usize,
+    pub start_va: usize,
+    pub end_va: usize,
     pub size: usize,
 }
 
@@ -61,7 +61,7 @@ impl<'a> Module<'a> {
         let size = nt_headers.OptionalHeader.SizeOfImage;
 
         let exports = unsafe { Self::parse_exports(process, address, size, nt_headers)? };
-        let sections = unsafe { Self::parse_sections(nt_headers) };
+        let sections = unsafe { Self::parse_sections(address, nt_headers) };
 
         Ok(Self {
             address,
@@ -177,7 +177,7 @@ impl<'a> Module<'a> {
         Ok(exports)
     }
 
-    unsafe fn parse_sections(nt_headers: &IMAGE_NT_HEADERS64) -> Vec<Section> {
+    unsafe fn parse_sections(address: usize, nt_headers: &IMAGE_NT_HEADERS64) -> Vec<Section> {
         let optional_header_ptr = &nt_headers.OptionalHeader as *const _ as *const u8;
 
         let section_header_ptr = optional_header_ptr
@@ -198,12 +198,16 @@ impl<'a> Module<'a> {
 
                 let start_rva = section.VirtualAddress as usize;
                 let end_rva = start_rva + section.Misc.VirtualSize as usize;
+
+                let start_va = address + start_rva;
+                let end_va = address + end_rva;
+
                 let size = section.SizeOfRawData as usize;
 
                 Section {
                     name,
-                    start_rva,
-                    end_rva,
+                    start_va,
+                    end_va,
                     size,
                 }
             })

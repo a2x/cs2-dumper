@@ -1737,6 +1737,7 @@ namespace C_CSGameRules {
     constexpr std::ptrdiff_t m_nCTTeamIntroVariant = 0xEB0;
     constexpr std::ptrdiff_t m_bTeamIntroPeriod = 0xEB4;
     constexpr std::ptrdiff_t m_flLastPerfSampleTime = 0x1E70;
+    constexpr std::ptrdiff_t m_bSkipNextPerfSample = 0x1E78;
 }
 
 namespace C_CSGameRulesProxy {

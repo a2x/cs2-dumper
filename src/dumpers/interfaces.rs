@@ -17,15 +17,15 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
         if let Some(create_interface_export) = module.export("CreateInterface") {
             let create_interface_address = process.resolve_rip(create_interface_export.va)?;
 
-            let mut interface_registry = process
+            let mut interface_registry_ptr = process
                 .read_memory::<usize>(create_interface_address)
                 .unwrap_or(0);
 
-            while interface_registry != 0 {
-                let interface_ptr = process.read_memory::<usize>(interface_registry)?;
+            while interface_registry_ptr != 0 {
+                let interface_ptr = process.read_memory::<usize>(interface_registry_ptr)?;
 
                 let interface_version_name_ptr =
-                    process.read_memory::<usize>(interface_registry + 0x8)?;
+                    process.read_memory::<usize>(interface_registry_ptr + 0x8)?;
 
                 let interface_version_name = process.read_string(interface_version_name_ptr, 64)?;
 
@@ -41,7 +41,8 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                     .or_default()
                     .push((interface_version_name, interface_ptr - module.address()));
 
-                interface_registry = process.read_memory::<usize>(interface_registry + 0x10)?;
+                interface_registry_ptr =
+                    process.read_memory::<usize>(interface_registry_ptr + 0x10)?;
             }
         }
     }
