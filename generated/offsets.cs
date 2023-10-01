@@ -4,6 +4,7 @@ public static class client_dll {
     public const nint interfaceLinkList = 0x1972A68;
     public const nint localPlayerController = 0x17DB128;
     public const nint localPlayerPawn = 0x1879C18;
+    public const nint plantedC4 = 0x187F9B0;
     public const nint viewAngles = 0x18D95C0;
     public const nint viewMatrix = 0x187A700;
 }

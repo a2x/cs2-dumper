@@ -47,15 +47,25 @@ impl FileBuilder for FileBuilderEnum {
         }
     }
 
-    fn write_variable(&mut self, output: &mut dyn Write, name: &str, value: usize) -> Result<()> {
+    fn write_variable(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        value: usize,
+        comment: Option<&str>,
+    ) -> Result<()> {
         match self {
-            FileBuilderEnum::CppBuilder(builder) => builder.write_variable(output, name, value),
-            FileBuilderEnum::CSharpBuilder(builder) => builder.write_variable(output, name, value),
+            FileBuilderEnum::CppBuilder(builder) => {
+                builder.write_variable(output, name, value, comment)
+            }
+            FileBuilderEnum::CSharpBuilder(builder) => {
+                builder.write_variable(output, name, value, comment)
+            }
             FileBuilderEnum::JsonFileBuilder(builder) => {
-                builder.write_variable(output, name, value)
+                builder.write_variable(output, name, value, comment)
             }
             FileBuilderEnum::RustFileBuilder(builder) => {
-                builder.write_variable(output, name, value)
+                builder.write_variable(output, name, value, comment)
             }
         }
     }

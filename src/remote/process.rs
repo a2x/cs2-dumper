@@ -11,6 +11,7 @@ use crate::error::{Error, Result};
 
 use super::Module;
 
+#[derive(Debug)]
 pub struct Process {
     process_id: u32,
     process_handle: HANDLE,
@@ -157,13 +158,14 @@ impl Process {
         self.write_memory_raw(address, &value as *const _ as *const _, mem::size_of::<T>())
     }
 
-    pub fn read_string(&self, address: usize, length: usize) -> Result<String> {
-        let mut buffer: Vec<u8> = vec![0; length];
+    pub fn read_string(&self, address: usize) -> Result<String> {
+        let mut buffer = Vec::new();
 
-        self.read_memory_raw(address, buffer.as_mut_ptr() as *mut _, length)?;
-
-        if let Some(end) = buffer.iter().position(|&x| x == 0) {
-            buffer.truncate(end);
+        for i in 0.. {
+            match self.read_memory::<u8>(address + i) {
+                Ok(byte) if byte != 0 => buffer.push(byte),
+                _ => break,
+            }
         }
 
         Ok(String::from_utf8(buffer)?)

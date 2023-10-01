@@ -24,10 +24,21 @@ impl FileBuilder for RustFileBuilder {
         Ok(())
     }
 
-    fn write_variable(&mut self, output: &mut dyn Write, name: &str, value: usize) -> Result<()> {
-        write!(output, "    pub const {}: usize = {:#X};\n", name, value)?;
-
-        Ok(())
+    fn write_variable(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        value: usize,
+        comment: Option<&str>,
+    ) -> Result<()> {
+        match comment {
+            Some(comment) => write!(
+                output,
+                "    pub const {}: usize = {:#X}; // {}\n",
+                name, value, comment
+            ),
+            None => write!(output, "    pub const {}: usize = {:#X};\n", name, value),
+        }
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {

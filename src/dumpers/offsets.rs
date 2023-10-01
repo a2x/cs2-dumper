@@ -2,6 +2,7 @@ use std::fs::File;
 
 use crate::builder::FileBuilderEnum;
 use crate::config::{Config, Operation};
+use crate::dumpers::Entry;
 use crate::error::{Error, Result};
 use crate::remote::Process;
 
@@ -48,15 +49,13 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             }
         }
 
-        let sanitized_module_name = signature.module.replace(".", "_");
-
         let (name, value) = if let Some(offset) = offset {
-            log::info!("  -> Found '{}' @ {:#X}", signature.name, offset);
+            log::debug!("  └─ '{}' @ {:#X}", signature.name, offset);
 
             (signature.name, offset as usize)
         } else {
-            log::info!(
-                "  -> Found '{}' @ {:#X} ({} + {:#X})",
+            log::debug!(
+                "  └─ '{}' @ {:#X} ({} + {:#X})",
                 signature.name,
                 address,
                 signature.module,
@@ -67,12 +66,16 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
         };
 
         entries
-            .entry(sanitized_module_name)
+            .entry(signature.module.replace(".", "_"))
             .or_default()
-            .push((name, value));
+            .push(Entry {
+                name,
+                value,
+                comment: None,
+            });
     }
 
-    for builder in builders.iter_mut() {
+    for builder in builders {
         generate_file(builder, "offsets", &entries)?;
     }
 

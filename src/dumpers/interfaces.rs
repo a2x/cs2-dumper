@@ -1,4 +1,5 @@
 use crate::builder::FileBuilderEnum;
+use crate::dumpers::Entry;
 use crate::error::Result;
 use crate::remote::Process;
 
@@ -24,14 +25,14 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
             while interface_registry_ptr != 0 {
                 let interface_ptr = process.read_memory::<usize>(interface_registry_ptr)?;
 
-                let interface_version_name_ptr =
+                let interface_version_ptr =
                     process.read_memory::<usize>(interface_registry_ptr + 0x8)?;
 
-                let interface_version_name = process.read_string(interface_version_name_ptr, 64)?;
+                let interface_version = process.read_string(interface_version_ptr)?;
 
-                log::info!(
-                    "  -> Found '{}' @ {:#X} ({} + {:#X})",
-                    interface_version_name,
+                log::debug!(
+                    "  └─ '{}' @ {:#X} ({} + {:#X})",
+                    interface_version,
                     interface_ptr,
                     module_name,
                     interface_ptr - module.address()
@@ -40,7 +41,11 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                 entries
                     .entry(module_name.replace(".", "_"))
                     .or_default()
-                    .push((interface_version_name, interface_ptr - module.address()));
+                    .push(Entry {
+                        name: interface_version.clone(),
+                        value: interface_ptr - module.address(),
+                        comment: None,
+                    });
 
                 interface_registry_ptr =
                     process.read_memory::<usize>(interface_registry_ptr + 0x10)?;
@@ -48,7 +53,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
         }
     }
 
-    for builder in builders.iter_mut() {
+    for builder in builders {
         generate_file(builder, "interfaces", &entries)?;
     }
 

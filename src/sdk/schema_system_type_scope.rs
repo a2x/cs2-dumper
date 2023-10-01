@@ -35,6 +35,6 @@ impl<'a> SchemaSystemTypeScope<'a> {
     }
 
     pub fn module_name(&self) -> Result<String> {
-        self.process.read_string(self.address + 0x8, 256)
+        self.process.read_string(self.address + 0x8)
     }
 }

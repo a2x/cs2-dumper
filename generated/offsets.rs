@@ -6,6 +6,7 @@ pub mod client_dll {
     pub const interfaceLinkList: usize = 0x1972A68;
     pub const localPlayerController: usize = 0x17DB128;
     pub const localPlayerPawn: usize = 0x1879C18;
+    pub const plantedC4: usize = 0x187F9B0;
     pub const viewAngles: usize = 0x18D95C0;
     pub const viewMatrix: usize = 0x187A700;
 }

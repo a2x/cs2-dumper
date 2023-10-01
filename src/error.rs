@@ -1,56 +1,40 @@
 use std::io;
+use std::string::FromUtf8Error;
 
-#[derive(Debug)]
+use serde_json::Error as SerdeError;
+
+use thiserror::Error;
+
+use windows::core::Error as WindowsError;
+
+#[derive(Debug, Error)]
 pub enum Error {
+    #[error("Buffer size mismatch: expected {0}, got {1}")]
     BufferSizeMismatch(usize, usize),
+
+    #[error("Invalid magic: {0:#X}")]
     InvalidMagic(u32),
-    IOError(io::Error),
+
+    #[error("IO error: {0}")]
+    IOError(#[from] io::Error),
+
+    #[error("Module not found")]
     ModuleNotFound,
+
+    #[error("Pattern not found")]
     PatternNotFound,
+
+    #[error("Process not found")]
     ProcessNotFound,
-    SectionNotFound,
-    SerdeError(serde_json::Error),
-    Utf8Error(std::string::FromUtf8Error),
-    WindowsError(windows::core::Error),
-}
 
-impl From<io::Error> for Error {
-    fn from(err: io::Error) -> Self {
-        Self::IOError(err)
-    }
-}
+    #[error("Serde error: {0}")]
+    SerdeError(#[from] SerdeError),
 
-impl From<std::string::FromUtf8Error> for Error {
-    fn from(err: std::string::FromUtf8Error) -> Self {
-        Self::Utf8Error(err)
-    }
-}
+    #[error("UTF-8 error: {0}")]
+    Utf8Error(#[from] FromUtf8Error),
 
-impl From<windows::core::Error> for Error {
-    fn from(err: windows::core::Error) -> Self {
-        Self::WindowsError(err)
-    }
-}
-
-impl std::fmt::Display for Error {
-    fn fmt(&self, fmt: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            Self::BufferSizeMismatch(expected, actual) => write!(
-                fmt,
-                "Buffer size mismatch: expected {}, got {}",
-                expected, actual
-            ),
-            Self::InvalidMagic(magic) => write!(fmt, "Invalid magic: {:#X}", magic),
-            Self::IOError(err) => write!(fmt, "IO error: {}", err),
-            Self::ModuleNotFound => write!(fmt, "Module not found"),
-            Self::PatternNotFound => write!(fmt, "Pattern not found"),
-            Self::ProcessNotFound => write!(fmt, "Process not found"),
-            Self::SectionNotFound => write!(fmt, "Section not found"),
-            Self::SerdeError(err) => write!(fmt, "Serde error: {}", err),
-            Self::Utf8Error(err) => write!(fmt, "UTF-8 error: {}", err),
-            Self::WindowsError(err) => write!(fmt, "Windows error: {}", err),
-        }
-    }
+    #[error("Windows error: {0}")]
+    WindowsError(#[from] WindowsError),
 }
 
 pub type Result<T> = std::result::Result<T, Error>;

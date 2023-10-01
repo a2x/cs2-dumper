@@ -33,23 +33,37 @@ struct Args {
 
     #[arg(short, long)]
     schemas: bool,
+
+    #[arg(short, long)]
+    verbose: bool,
 }
 
 fn main() -> Result<()> {
-    SimpleLogger::new().init().unwrap();
-
     let Args {
         all,
         interfaces,
         offsets,
         schemas,
+        verbose,
     } = Args::parse();
+
+    let log_level = if verbose {
+        log::LevelFilter::Debug
+    } else {
+        log::LevelFilter::Info
+    };
+
+    SimpleLogger::new()
+        .with_level(log_level)
+        .without_timestamps()
+        .init()
+        .unwrap();
 
     let start_time = Instant::now();
 
-    fs::create_dir_all("generated")?;
-
     let process = Process::new("cs2.exe")?;
+
+    fs::create_dir_all("generated")?;
 
     let mut builders: Vec<FileBuilderEnum> = vec![
         FileBuilderEnum::CppBuilder(CppBuilder),

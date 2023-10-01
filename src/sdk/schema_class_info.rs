@@ -28,13 +28,13 @@ impl<'a> SchemaClassInfo<'a> {
 
         let fields: Vec<SchemaClassFieldData> = (0..count as usize)
             .filter_map(|i| {
-                let field = self
+                let address = self
                     .process
                     .read_memory::<usize>(self.address + 0x28)
                     .ok()?
                     + (i * 0x20);
 
-                (field != 0).then(|| SchemaClassFieldData::new(self.process, field))
+                (address != 0).then(|| SchemaClassFieldData::new(self.process, address))
             })
             .collect();
 

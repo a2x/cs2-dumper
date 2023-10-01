@@ -12,7 +12,13 @@ pub mod interfaces;
 pub mod offsets;
 pub mod schemas;
 
-pub type Entries = BTreeMap<String, Vec<(String, usize)>>;
+pub struct Entry {
+    pub name: String,
+    pub value: usize,
+    pub comment: Option<String>,
+}
+
+pub type Entries = BTreeMap<String, Vec<Entry>>;
 
 pub fn generate_file(
     builder: &mut FileBuilderEnum,
@@ -27,11 +33,16 @@ pub fn generate_file(
 
     let len = entries.len();
 
-    for (i, entry) in entries.iter().enumerate() {
-        builder.write_namespace(&mut file, entry.0)?;
+    for (i, pair) in entries.iter().enumerate() {
+        builder.write_namespace(&mut file, pair.0)?;
 
-        for (name, value) in entry.1 {
-            builder.write_variable(&mut file, name, *value)?;
+        for entry in pair.1 {
+            builder.write_variable(
+                &mut file,
+                &entry.name,
+                entry.value,
+                entry.comment.as_deref(),
+            )?;
         }
 
         builder.write_closure(&mut file, i == len - 1)?;

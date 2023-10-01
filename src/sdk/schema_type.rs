@@ -1,12 +1,12 @@
 use crate::error::Result;
 use crate::remote::Process;
 
-pub struct SchemaTypeDeclaredClass<'a> {
+pub struct SchemaType<'a> {
     process: &'a Process,
     address: usize,
 }
 
-impl<'a> SchemaTypeDeclaredClass<'a> {
+impl<'a> SchemaType<'a> {
     pub fn new(process: &'a Process, address: usize) -> Self {
         Self { process, address }
     }

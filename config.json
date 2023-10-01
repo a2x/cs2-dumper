@@ -87,6 +87,16 @@
             ]
         },
         {
+            "name": "plantedC4",
+            "module": "client.dll",
+            "pattern": "48 89 05 ? ? ? ? 8B 05 ? ? ? ? A9 ? ? ? ? 74 ? 25 ? ? ? ? 89 05 ? ? ? ? 8B 0D",
+            "operations": [
+                {
+                    "type": "ripRelative"
+                }
+            ]
+        },
+        {
             "name": "viewAngles",
             "module": "client.dll",
             "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",

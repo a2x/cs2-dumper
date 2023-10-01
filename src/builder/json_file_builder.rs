@@ -25,7 +25,13 @@ impl FileBuilder for JsonFileBuilder {
         Ok(())
     }
 
-    fn write_variable(&mut self, _output: &mut dyn Write, name: &str, value: usize) -> Result<()> {
+    fn write_variable(
+        &mut self,
+        _output: &mut dyn Write,
+        name: &str,
+        value: usize,
+        _comment: Option<&str>,
+    ) -> Result<()> {
         if let Some(json_as_map) = self.json.as_object_mut() {
             let namespace_entry = json_as_map
                 .entry(self.namespace.clone())

@@ -8,6 +8,7 @@ namespace client_dll {
     constexpr std::ptrdiff_t interfaceLinkList = 0x1972A68;
     constexpr std::ptrdiff_t localPlayerController = 0x17DB128;
     constexpr std::ptrdiff_t localPlayerPawn = 0x1879C18;
+    constexpr std::ptrdiff_t plantedC4 = 0x187F9B0;
     constexpr std::ptrdiff_t viewAngles = 0x18D95C0;
     constexpr std::ptrdiff_t viewMatrix = 0x187A700;
 }

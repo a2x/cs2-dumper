@@ -1,6 +1,8 @@
 use crate::error::Result;
 use crate::remote::Process;
 
+use super::SchemaType;
+
 pub struct SchemaClassFieldData<'a> {
     process: &'a Process,
     address: usize,
@@ -12,9 +14,15 @@ impl<'a> SchemaClassFieldData<'a> {
     }
 
     pub fn name(&self) -> Result<String> {
-        let name_ptr = self.process.read_memory::<usize>(self.address)?;
+        self.process
+            .read_string(self.process.read_memory::<usize>(self.address)?)
+    }
 
-        self.process.read_string(name_ptr, 64)
+    pub fn r#type(&self) -> Result<SchemaType> {
+        Ok(SchemaType::new(
+            self.process,
+            self.process.read_memory::<usize>(self.address + 0x8)?,
+        ))
     }
 
     pub fn offset(&self) -> Result<u16> {
