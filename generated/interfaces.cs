@@ -15,13 +15,13 @@ public static class client_dll {
 }
 
 public static class engine2_dll {
-    public const nint SimpleEngineLoopService_001 = 0x1E4F40;
-    public const nint ClientServerEngineLoopService_001 = 0x1DAC10;
-    public const nint KeyValueCache001 = 0x1D6FB0;
-    public const nint HostStateMgr001 = 0x1D49C0;
-    public const nint GameEventSystemServerV001 = 0x1CFDE0;
-    public const nint GameEventSystemClientV001 = 0x1CFDD0;
-    public const nint EngineServiceMgr001 = 0x1CB6F0;
+    public const nint SimpleEngineLoopService_001 = 0x1E4F50;
+    public const nint ClientServerEngineLoopService_001 = 0x1DAC20;
+    public const nint KeyValueCache001 = 0x1D6FC0;
+    public const nint HostStateMgr001 = 0x1D49D0;
+    public const nint GameEventSystemServerV001 = 0x1CFDF0;
+    public const nint GameEventSystemClientV001 = 0x1CFDE0;
+    public const nint EngineServiceMgr001 = 0x1CB700;
     public const nint VProfService_001 = 0x1B8D20;
     public const nint ToolService_001 = 0x1B7A80;
     public const nint StatsService_001 = 0x1B2D00;

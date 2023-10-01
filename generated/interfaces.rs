@@ -17,13 +17,13 @@ pub mod client_dll {
 }
 
 pub mod engine2_dll {
-    pub const SimpleEngineLoopService_001: usize = 0x1E4F40;
-    pub const ClientServerEngineLoopService_001: usize = 0x1DAC10;
-    pub const KeyValueCache001: usize = 0x1D6FB0;
-    pub const HostStateMgr001: usize = 0x1D49C0;
-    pub const GameEventSystemServerV001: usize = 0x1CFDE0;
-    pub const GameEventSystemClientV001: usize = 0x1CFDD0;
-    pub const EngineServiceMgr001: usize = 0x1CB6F0;
+    pub const SimpleEngineLoopService_001: usize = 0x1E4F50;
+    pub const ClientServerEngineLoopService_001: usize = 0x1DAC20;
+    pub const KeyValueCache001: usize = 0x1D6FC0;
+    pub const HostStateMgr001: usize = 0x1D49D0;
+    pub const GameEventSystemServerV001: usize = 0x1CFDF0;
+    pub const GameEventSystemClientV001: usize = 0x1CFDE0;
+    pub const EngineServiceMgr001: usize = 0x1CB700;
     pub const VProfService_001: usize = 0x1B8D20;
     pub const ToolService_001: usize = 0x1B7A80;
     pub const StatsService_001: usize = 0x1B2D00;

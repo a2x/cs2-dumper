@@ -19,13 +19,13 @@ namespace client_dll {
 }
 
 namespace engine2_dll {
-    constexpr std::ptrdiff_t SimpleEngineLoopService_001 = 0x1E4F40;
-    constexpr std::ptrdiff_t ClientServerEngineLoopService_001 = 0x1DAC10;
-    constexpr std::ptrdiff_t KeyValueCache001 = 0x1D6FB0;
-    constexpr std::ptrdiff_t HostStateMgr001 = 0x1D49C0;
-    constexpr std::ptrdiff_t GameEventSystemServerV001 = 0x1CFDE0;
-    constexpr std::ptrdiff_t GameEventSystemClientV001 = 0x1CFDD0;
-    constexpr std::ptrdiff_t EngineServiceMgr001 = 0x1CB6F0;
+    constexpr std::ptrdiff_t SimpleEngineLoopService_001 = 0x1E4F50;
+    constexpr std::ptrdiff_t ClientServerEngineLoopService_001 = 0x1DAC20;
+    constexpr std::ptrdiff_t KeyValueCache001 = 0x1D6FC0;
+    constexpr std::ptrdiff_t HostStateMgr001 = 0x1D49D0;
+    constexpr std::ptrdiff_t GameEventSystemServerV001 = 0x1CFDF0;
+    constexpr std::ptrdiff_t GameEventSystemClientV001 = 0x1CFDE0;
+    constexpr std::ptrdiff_t EngineServiceMgr001 = 0x1CB700;
     constexpr std::ptrdiff_t VProfService_001 = 0x1B8D20;
     constexpr std::ptrdiff_t ToolService_001 = 0x1B7A80;
     constexpr std::ptrdiff_t StatsService_001 = 0x1B2D00;
