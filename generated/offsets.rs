@@ -1,18 +1,24 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod client_dll {
-    pub const entityList: usize = 0x178B898;
-    pub const globalVars: usize = 0x168ECE8;
-    pub const interfaceLinkList: usize = 0x1971A58;
-    pub const localPlayerController: usize = 0x17DA118;
-    pub const localPlayerPawn: usize = 0x1878C08;
-    pub const plantedC4: usize = 0x187E9A0;
-    pub const viewAngles: usize = 0x18D85B0;
-    pub const viewMatrix: usize = 0x18796F0;
+    pub const dwEntityList: usize = 0x178B898;
+    pub const dwForceBackward: usize = 0x1692EC0;
+    pub const dwForceCrouch: usize = 0x1693190;
+    pub const dwForceForward: usize = 0x1692E30;
+    pub const dwForceJump: usize = 0x1693100;
+    pub const dwForceLeft: usize = 0x1692F50;
+    pub const dwForceRight: usize = 0x1692FE0;
+    pub const dwGlobalVars: usize = 0x168ECE8;
+    pub const dwInterfaceLinkList: usize = 0x1971A58;
+    pub const dwLocalPlayerController: usize = 0x17DA118;
+    pub const dwLocalPlayerPawn: usize = 0x1878C08;
+    pub const dwPlantedC4: usize = 0x187E9A0;
+    pub const dwViewAngles: usize = 0x18D85B0;
+    pub const dwViewMatrix: usize = 0x18796F0;
 }
 
 pub mod engine2_dll {
-    pub const networkGameClient: usize = 0x48AAB0;
-    pub const networkGameClient_maxClients: usize = 0x250;
-    pub const networkGameClient_signOnState: usize = 0x240;
+    pub const dwNetworkGameClient: usize = 0x48AAB0;
+    pub const dwNetworkGameClient_maxClients: usize = 0x250;
+    pub const dwNetworkGameClient_signOnState: usize = 0x240;
 }

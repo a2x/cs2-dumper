@@ -19,7 +19,7 @@ mod error;
 mod remote;
 mod sdk;
 
-#[derive(Parser, Debug)]
+#[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
 struct Args {
     #[arg(long)]
