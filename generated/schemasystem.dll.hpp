@@ -2,21 +2,24 @@
 
 #include <cstddef>
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:54.166473400 UTC
+
 namespace CExampleSchemaVData_Monomorphic {
-    constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32
-    constexpr std::ptrdiff_t m_nExample2 = 0x4; // int32
+    constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32_t
+    constexpr std::ptrdiff_t m_nExample2 = 0x4; // int32_t
 }
 
 namespace CExampleSchemaVData_PolymorphicBase {
-    constexpr std::ptrdiff_t m_nBase = 0x8; // int32
+    constexpr std::ptrdiff_t m_nBase = 0x8; // int32_t
 }
 
 namespace CExampleSchemaVData_PolymorphicDerivedA {
-    constexpr std::ptrdiff_t m_nDerivedA = 0x10; // int32
+    constexpr std::ptrdiff_t m_nDerivedA = 0x10; // int32_t
 }
 
 namespace CExampleSchemaVData_PolymorphicDerivedB {
-    constexpr std::ptrdiff_t m_nDerivedB = 0x10; // int32
+    constexpr std::ptrdiff_t m_nDerivedB = 0x10; // int32_t
 }
 
 namespace CSchemaSystemInternalRegistration {
@@ -45,5 +48,5 @@ namespace CSchemaSystemInternalRegistration {
 }
 
 namespace ResourceId_t {
-    constexpr std::ptrdiff_t m_Value = 0x0; // uint64
+    constexpr std::ptrdiff_t m_Value = 0x0; // uint64_t
 }

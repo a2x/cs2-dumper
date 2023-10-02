@@ -50,12 +50,12 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
         }
 
         let (name, value) = if let Some(offset) = offset {
-            log::debug!("  └─ '{}' @ {:#X}", signature.name, offset);
+            log::debug!("  └─ {} @ {:#X}", signature.name, offset);
 
             (signature.name, offset as usize)
         } else {
             log::debug!(
-                "  └─ '{}' @ {:#X} ({} + {:#X})",
+                "  └─ {} @ {:#X} ({} + {:#X})",
                 signature.name,
                 address,
                 signature.module,

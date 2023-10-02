@@ -1,3 +1,6 @@
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:55.312905 UTC
+
 public static class animationsystem_dll {
     public const nint AnimationSystemUtils_001 = 0x64510;
     public const nint AnimationSystem_001 = 0x5F070;

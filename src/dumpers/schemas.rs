@@ -22,7 +22,22 @@ pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             for field in class.fields()? {
                 let field_name = field.name()?;
                 let field_offset = field.offset()?;
-                let type_name = field.r#type()?.name()?;
+
+                let mut type_name = field.r#type()?.name()?;
+
+                match type_name.as_str() {
+                    "uint8" => type_name = "uint8_t".to_string(),
+                    "uint16" => type_name = "uint16_t".to_string(),
+                    "uint32" => type_name = "uint32_t".to_string(),
+                    "uint64" => type_name = "uint64_t".to_string(),
+                    "int8" => type_name = "int8_t".to_string(),
+                    "int16" => type_name = "int16_t".to_string(),
+                    "int32" => type_name = "int32_t".to_string(),
+                    "int64" => type_name = "int64_t".to_string(),
+                    "float32" => type_name = "float".to_string(),
+                    "float64" => type_name = "double".to_string(),
+                    _ => {}
+                }
 
                 log::debug!(
                     "    └─ {} = {:#X} // {}",

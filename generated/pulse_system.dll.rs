@@ -1,5 +1,8 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:54.385323200 UTC
+
 pub mod CPulseCell_Base {
     pub const m_nEditorNodeID: usize = 0x8; // PulseDocNodeID_t
 }
@@ -45,7 +48,7 @@ pub mod CPulseCell_Outflow_CycleOrdered {
 }
 
 pub mod CPulseCell_Outflow_CycleOrdered_InstanceState_t {
-    pub const m_nNextIndex: usize = 0x0; // int32
+    pub const m_nNextIndex: usize = 0x0; // int32_t
 }
 
 pub mod CPulseCell_Outflow_CycleRandom {
@@ -58,7 +61,7 @@ pub mod CPulseCell_Outflow_CycleShuffled {
 
 pub mod CPulseCell_Outflow_CycleShuffled_InstanceState_t {
     pub const m_Shuffle: usize = 0x0; // CUtlVectorFixedGrowable< uint8 >
-    pub const m_nNextShuffle: usize = 0x20; // int32
+    pub const m_nNextShuffle: usize = 0x20; // int32_t
 }
 
 pub mod CPulseCell_Outflow_IntSwitch {
@@ -114,13 +117,13 @@ pub mod CPulseGraphInstance_TestDomain {
     pub const m_bIsRunningUnitTests: usize = 0xD0; // bool
     pub const m_bExplicitTimeStepping: usize = 0xD1; // bool
     pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0xD2; // bool
-    pub const m_nNextValidateIndex: usize = 0xD4; // int32
+    pub const m_nNextValidateIndex: usize = 0xD4; // int32_t
     pub const m_Tracepoints: usize = 0xD8; // CUtlVector< CUtlString >
     pub const m_bTestYesOrNoPath: usize = 0xF0; // bool
 }
 
 pub mod CPulseGraphInstance_TestDomain_Derived {
-    pub const m_nInstanceValueX: usize = 0xF8; // int32
+    pub const m_nInstanceValueX: usize = 0xF8; // int32_t
 }
 
 pub mod CPulseRuntimeMethodArg {
@@ -132,7 +135,7 @@ pub mod CPulseRuntimeMethodArg {
 pub mod CPulseTurtleGraphicsCursor {
     pub const m_Color: usize = 0x188; // Color
     pub const m_vPos: usize = 0x18C; // Vector2D
-    pub const m_flHeadingDeg: usize = 0x194; // float32
+    pub const m_flHeadingDeg: usize = 0x194; // float
     pub const m_bPenUp: usize = 0x198; // bool
 }
 
@@ -142,7 +145,7 @@ pub mod CPulse_CallInfo {
     pub const m_RegisterMap: usize = 0x10; // PulseRegisterMap_t
     pub const m_CallMethodID: usize = 0x30; // PulseDocNodeID_t
     pub const m_nSrcChunk: usize = 0x34; // PulseRuntimeChunkIndex_t
-    pub const m_nSrcInstruction: usize = 0x38; // int32
+    pub const m_nSrcInstruction: usize = 0x38; // int32_t
 }
 
 pub mod CPulse_Chunk {
@@ -157,13 +160,13 @@ pub mod CPulse_InvokeBinding {
     pub const m_nCellIndex: usize = 0x28; // PulseRuntimeCellIndex_t
     pub const m_InstanceType: usize = 0x30; // CPulseValueFullType
     pub const m_nSrcChunk: usize = 0x40; // PulseRuntimeChunkIndex_t
-    pub const m_nSrcInstruction: usize = 0x44; // int32
+    pub const m_nSrcInstruction: usize = 0x44; // int32_t
 }
 
 pub mod CPulse_OutflowConnection {
     pub const m_SourceOutflowName: usize = 0x0; // CUtlSymbolLarge
     pub const m_nDestChunk: usize = 0x8; // PulseRuntimeChunkIndex_t
-    pub const m_nInstruction: usize = 0xC; // int32
+    pub const m_nInstruction: usize = 0xC; // int32_t
 }
 
 pub mod CPulse_OutputConnection {
@@ -183,8 +186,8 @@ pub mod CPulse_RegisterInfo {
     pub const m_nReg: usize = 0x0; // PulseRuntimeRegisterIndex_t
     pub const m_Type: usize = 0x8; // CPulseValueFullType
     pub const m_OriginName: usize = 0x18; // CKV3MemberNameWithStorage
-    pub const m_nWrittenByInstruction: usize = 0x50; // int32
-    pub const m_nLastReadByInstruction: usize = 0x54; // int32
+    pub const m_nWrittenByInstruction: usize = 0x50; // int32_t
+    pub const m_nLastReadByInstruction: usize = 0x54; // int32_t
 }
 
 pub mod CPulse_Variable {
@@ -196,8 +199,8 @@ pub mod CPulse_Variable {
 }
 
 pub mod CTestDomainDerived_Cursor {
-    pub const m_nCursorValueA: usize = 0x188; // int32
-    pub const m_nCursorValueB: usize = 0x18C; // int32
+    pub const m_nCursorValueA: usize = 0x188; // int32_t
+    pub const m_nCursorValueB: usize = 0x18C; // int32_t
 }
 
 pub mod FakeEntity_t {
@@ -207,7 +210,7 @@ pub mod FakeEntity_t {
     pub const m_bDestroyed: usize = 0x18; // bool
     pub const m_pAssociatedGraphInstance: usize = 0x20; // CPulseGraphInstance_TestDomain*
     pub const m_bFuncWasCalled: usize = 0x28; // bool
-    pub const m_fValue: usize = 0x2C; // float32
+    pub const m_fValue: usize = 0x2C; // float
 }
 
 pub mod PGDInstruction_t {
@@ -218,19 +221,19 @@ pub mod PGDInstruction_t {
     pub const m_nReg2: usize = 0xC; // PulseRuntimeRegisterIndex_t
     pub const m_nInvokeBindingIndex: usize = 0x10; // PulseRuntimeInvokeIndex_t
     pub const m_nChunk: usize = 0x14; // PulseRuntimeChunkIndex_t
-    pub const m_nDestInstruction: usize = 0x18; // int32
+    pub const m_nDestInstruction: usize = 0x18; // int32_t
     pub const m_nCallInfoIndex: usize = 0x1C; // PulseRuntimeCallInfoIndex_t
     pub const m_Arg0Name: usize = 0x20; // CUtlSymbolLarge
     pub const m_Arg1Name: usize = 0x28; // CUtlSymbolLarge
     pub const m_bLiteralBool: usize = 0x30; // bool
-    pub const m_nLiteralInt: usize = 0x34; // int32
-    pub const m_flLiteralFloat: usize = 0x38; // float32
+    pub const m_nLiteralInt: usize = 0x34; // int32_t
+    pub const m_flLiteralFloat: usize = 0x38; // float
     pub const m_LiteralString: usize = 0x40; // CBufferString
     pub const m_vLiteralVec3: usize = 0x50; // Vector
 }
 
 pub mod PulseDocNodeID_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRegisterMap_t {
@@ -239,41 +242,41 @@ pub mod PulseRegisterMap_t {
 }
 
 pub mod PulseRuntimeCallInfoIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRuntimeCellIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRuntimeChunkIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRuntimeEntrypointIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRuntimeInvokeIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRuntimeOutputIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseRuntimeRegisterIndex_t {
-    pub const m_Value: usize = 0x0; // int16
+    pub const m_Value: usize = 0x0; // int16_t
 }
 
 pub mod PulseRuntimeStateOffset_t {
-    pub const m_Value: usize = 0x0; // uint16
+    pub const m_Value: usize = 0x0; // uint16_t
 }
 
 pub mod PulseRuntimeVarIndex_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }
 
 pub mod PulseTestEHandle_t {
-    pub const m_Value: usize = 0x0; // int32
+    pub const m_Value: usize = 0x0; // int32_t
 }

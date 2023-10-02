@@ -1,5 +1,8 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:55.315607300 UTC
+
 pub mod animationsystem_dll {
     pub const AnimationSystemUtils_001: usize = 0x64510;
     pub const AnimationSystem_001: usize = 0x5F070;

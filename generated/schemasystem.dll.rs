@@ -1,20 +1,23 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:54.169023800 UTC
+
 pub mod CExampleSchemaVData_Monomorphic {
-    pub const m_nExample1: usize = 0x0; // int32
-    pub const m_nExample2: usize = 0x4; // int32
+    pub const m_nExample1: usize = 0x0; // int32_t
+    pub const m_nExample2: usize = 0x4; // int32_t
 }
 
 pub mod CExampleSchemaVData_PolymorphicBase {
-    pub const m_nBase: usize = 0x8; // int32
+    pub const m_nBase: usize = 0x8; // int32_t
 }
 
 pub mod CExampleSchemaVData_PolymorphicDerivedA {
-    pub const m_nDerivedA: usize = 0x10; // int32
+    pub const m_nDerivedA: usize = 0x10; // int32_t
 }
 
 pub mod CExampleSchemaVData_PolymorphicDerivedB {
-    pub const m_nDerivedB: usize = 0x10; // int32
+    pub const m_nDerivedB: usize = 0x10; // int32_t
 }
 
 pub mod CSchemaSystemInternalRegistration {
@@ -43,5 +46,5 @@ pub mod CSchemaSystemInternalRegistration {
 }
 
 pub mod ResourceId_t {
-    pub const m_Value: usize = 0x0; // uint64
+    pub const m_Value: usize = 0x0; // uint64_t
 }

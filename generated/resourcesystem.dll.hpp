@@ -2,6 +2,9 @@
 
 #include <cstddef>
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:54.172026 UTC
+
 namespace AABB_t {
     constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
     constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // Vector
@@ -11,7 +14,7 @@ namespace CFuseProgram {
     constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector< uint8 >
     constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector< FuseVariableIndex_t >
     constexpr std::ptrdiff_t m_variablesWritten = 0x30; // CUtlVector< FuseVariableIndex_t >
-    constexpr std::ptrdiff_t m_nMaxTempVarsUsed = 0x48; // int32
+    constexpr std::ptrdiff_t m_nMaxTempVarsUsed = 0x48; // int32_t
 }
 
 namespace CFuseSymbolTable {
@@ -26,7 +29,7 @@ namespace CFuseSymbolTable {
 namespace ConstantInfo_t {
     constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
     constexpr std::ptrdiff_t m_nameToken = 0x8; // CUtlStringToken
-    constexpr std::ptrdiff_t m_flValue = 0xC; // float32
+    constexpr std::ptrdiff_t m_flValue = 0xC; // float
 }
 
 namespace FourQuaternions {
@@ -39,17 +42,17 @@ namespace FourQuaternions {
 namespace FunctionInfo_t {
     constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
     constexpr std::ptrdiff_t m_nameToken = 0x10; // CUtlStringToken
-    constexpr std::ptrdiff_t m_nParamCount = 0x14; // int32
+    constexpr std::ptrdiff_t m_nParamCount = 0x14; // int32_t
     constexpr std::ptrdiff_t m_nIndex = 0x18; // FuseFunctionIndex_t
     constexpr std::ptrdiff_t m_bIsPure = 0x1A; // bool
 }
 
 namespace FuseFunctionIndex_t {
-    constexpr std::ptrdiff_t m_Value = 0x0; // uint16
+    constexpr std::ptrdiff_t m_Value = 0x0; // uint16_t
 }
 
 namespace FuseVariableIndex_t {
-    constexpr std::ptrdiff_t m_Value = 0x0; // uint16
+    constexpr std::ptrdiff_t m_Value = 0x0; // uint16_t
 }
 
 namespace ManifestTestResource_t {
@@ -58,8 +61,8 @@ namespace ManifestTestResource_t {
 }
 
 namespace PackedAABB_t {
-    constexpr std::ptrdiff_t m_nPackedMin = 0x0; // uint32
-    constexpr std::ptrdiff_t m_nPackedMax = 0x4; // uint32
+    constexpr std::ptrdiff_t m_nPackedMin = 0x0; // uint32_t
+    constexpr std::ptrdiff_t m_nPackedMax = 0x4; // uint32_t
 }
 
 namespace TestResource_t {
@@ -70,7 +73,7 @@ namespace VariableInfo_t {
     constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
     constexpr std::ptrdiff_t m_nameToken = 0x8; // CUtlStringToken
     constexpr std::ptrdiff_t m_nIndex = 0xC; // FuseVariableIndex_t
-    constexpr std::ptrdiff_t m_nNumComponents = 0xE; // uint8
+    constexpr std::ptrdiff_t m_nNumComponents = 0xE; // uint8_t
     constexpr std::ptrdiff_t m_eVarType = 0xF; // FuseVariableType_t
     constexpr std::ptrdiff_t m_eAccess = 0x10; // FuseVariableAccess_t
 }

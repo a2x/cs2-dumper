@@ -31,7 +31,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                 let interface_version = process.read_string(interface_version_ptr)?;
 
                 log::debug!(
-                    "  └─ '{}' @ {:#X} ({} + {:#X})",
+                    "  └─ {} @ {:#X} ({} + {:#X})",
                     interface_version,
                     interface_ptr,
                     module_name,

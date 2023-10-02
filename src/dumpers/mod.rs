@@ -1,5 +1,6 @@
 use std::collections::BTreeMap;
 use std::fs::File;
+use std::io::Write;
 
 use crate::builder::{FileBuilder, FileBuilderEnum};
 use crate::error::Result;
@@ -30,6 +31,14 @@ pub fn generate_file(
     let mut file = File::create(file_path)?;
 
     builder.write_top_level(&mut file)?;
+
+    if builder.extension() != "json" {
+        write!(
+            file,
+            "// Created using https://github.com/a2x/cs2-dumper\n// {}\n\n",
+            chrono::Utc::now()
+        )?;
+    }
 
     let len = entries.len();
 

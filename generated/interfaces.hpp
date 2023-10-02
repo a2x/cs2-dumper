@@ -2,6 +2,9 @@
 
 #include <cstddef>
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:55.310639100 UTC
+
 namespace animationsystem_dll {
     constexpr std::ptrdiff_t AnimationSystemUtils_001 = 0x64510;
     constexpr std::ptrdiff_t AnimationSystem_001 = 0x5F070;

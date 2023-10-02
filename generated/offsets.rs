@@ -1,5 +1,8 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:55.606604100 UTC
+
 pub mod client_dll {
     pub const dwEntityList: usize = 0x178B898;
     pub const dwForceBackward: usize = 0x1692EC0;

@@ -1,3 +1,6 @@
+// Created using https://github.com/a2x/cs2-dumper
+// 2023-10-02 15:54:55.605321 UTC
+
 public static class client_dll {
     public const nint dwEntityList = 0x178B898;
     public const nint dwForceBackward = 0x1692EC0;
