@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.490931 UTC
+// 2023-10-03 00:41:24.057534900 UTC
 
 public static class CBaseRendererSource2 {
     public const nint m_flRadiusScale = 0x200; // CParticleCollectionRendererFloatInput
@@ -14,7 +14,7 @@ public static class CBaseRendererSource2 {
     public const nint m_flCenterYOffset = 0xDD0; // CParticleCollectionRendererFloatInput
     public const nint m_flBumpStrength = 0xF28; // float
     public const nint m_nCropTextureOverride = 0xF2C; // ParticleSequenceCropOverride_t
-    public const nint m_vecTexturesInput = 0xF30; // CUtlVector< TextureGroup_t >
+    public const nint m_vecTexturesInput = 0xF30; // CUtlVector<TextureGroup_t>
     public const nint m_flAnimationRate = 0xF48; // float
     public const nint m_nAnimationType = 0xF4C; // AnimationType_t
     public const nint m_bAnimateInFPS = 0xF50; // bool
@@ -219,14 +219,14 @@ public static class CParticleModelInput {
 
 public static class CParticleSystemDefinition {
     public const nint m_nBehaviorVersion = 0x8; // int32_t
-    public const nint m_PreEmissionOperators = 0x10; // CUtlVector< CParticleFunctionPreEmission* >
-    public const nint m_Emitters = 0x28; // CUtlVector< CParticleFunctionEmitter* >
-    public const nint m_Initializers = 0x40; // CUtlVector< CParticleFunctionInitializer* >
-    public const nint m_Operators = 0x58; // CUtlVector< CParticleFunctionOperator* >
-    public const nint m_ForceGenerators = 0x70; // CUtlVector< CParticleFunctionForce* >
-    public const nint m_Constraints = 0x88; // CUtlVector< CParticleFunctionConstraint* >
-    public const nint m_Renderers = 0xA0; // CUtlVector< CParticleFunctionRenderer* >
-    public const nint m_Children = 0xB8; // CUtlVector< ParticleChildrenInfo_t >
+    public const nint m_PreEmissionOperators = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
+    public const nint m_Emitters = 0x28; // CUtlVector<CParticleFunctionEmitter*>
+    public const nint m_Initializers = 0x40; // CUtlVector<CParticleFunctionInitializer*>
+    public const nint m_Operators = 0x58; // CUtlVector<CParticleFunctionOperator*>
+    public const nint m_ForceGenerators = 0x70; // CUtlVector<CParticleFunctionForce*>
+    public const nint m_Constraints = 0x88; // CUtlVector<CParticleFunctionConstraint*>
+    public const nint m_Renderers = 0xA0; // CUtlVector<CParticleFunctionRenderer*>
+    public const nint m_Children = 0xB8; // CUtlVector<ParticleChildrenInfo_t>
     public const nint m_nFirstMultipleOverride_BackwardCompat = 0x178; // int32_t
     public const nint m_nInitialParticles = 0x210; // int32_t
     public const nint m_nMaxParticles = 0x214; // int32_t
@@ -238,7 +238,7 @@ public static class CParticleSystemDefinition {
     public const nint m_bInfiniteBounds = 0x23C; // bool
     public const nint m_bEnableNamedValues = 0x23D; // bool
     public const nint m_NamedValueDomain = 0x240; // CUtlString
-    public const nint m_NamedValueLocals = 0x248; // CUtlVector< ParticleNamedValueSource_t* >
+    public const nint m_NamedValueLocals = 0x248; // CUtlVector<ParticleNamedValueSource_t*>
     public const nint m_ConstantColor = 0x260; // Color
     public const nint m_ConstantNormal = 0x264; // Vector
     public const nint m_flConstantRadius = 0x270; // float
@@ -248,15 +248,15 @@ public static class CParticleSystemDefinition {
     public const nint m_nConstantSequenceNumber = 0x280; // int32_t
     public const nint m_nConstantSequenceNumber1 = 0x284; // int32_t
     public const nint m_nSnapshotControlPoint = 0x288; // int32_t
-    public const nint m_hSnapshot = 0x290; // CStrongHandle< InfoForResourceTypeIParticleSnapshot >
-    public const nint m_pszCullReplacementName = 0x298; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    public const nint m_hSnapshot = 0x290; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
+    public const nint m_pszCullReplacementName = 0x298; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     public const nint m_flCullRadius = 0x2A0; // float
     public const nint m_flCullFillCost = 0x2A4; // float
     public const nint m_nCullControlPoint = 0x2A8; // int32_t
-    public const nint m_hFallback = 0x2B0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    public const nint m_hFallback = 0x2B0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     public const nint m_nFallbackMaxCount = 0x2B8; // int32_t
-    public const nint m_hLowViolenceDef = 0x2C0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
-    public const nint m_hReferenceReplacement = 0x2C8; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    public const nint m_hLowViolenceDef = 0x2C0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+    public const nint m_hReferenceReplacement = 0x2C8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     public const nint m_flPreSimulationTime = 0x2D0; // float
     public const nint m_flStopSimulationAfterTime = 0x2D4; // float
     public const nint m_flMaximumTimeStep = 0x2D8; // float
@@ -281,7 +281,7 @@ public static class CParticleSystemDefinition {
     public const nint m_nSkipRenderControlPoint = 0x320; // int32_t
     public const nint m_nAllowRenderControlPoint = 0x324; // int32_t
     public const nint m_bShouldSort = 0x328; // bool
-    public const nint m_controlPointConfigurations = 0x370; // CUtlVector< ParticleControlPointConfiguration_t >
+    public const nint m_controlPointConfigurations = 0x370; // CUtlVector<ParticleControlPointConfiguration_t>
 }
 
 public static class CParticleTransformInput {
@@ -816,7 +816,7 @@ public static class C_INIT_PlaneCull {
 
 public static class C_INIT_PointList {
     public const nint m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-    public const nint m_pointList = 0x1C8; // CUtlVector< PointDefinition_t >
+    public const nint m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
     public const nint m_bPlaceAlongPath = 0x1E0; // bool
     public const nint m_bClosedLoop = 0x1E1; // bool
     public const nint m_nNumPointsAlongPath = 0x1E4; // int32_t
@@ -919,12 +919,12 @@ public static class C_INIT_RandomLifeTime {
 public static class C_INIT_RandomModelSequence {
     public const nint m_ActivityName = 0x1C0; // char[256]
     public const nint m_SequenceName = 0x2C0; // char[256]
-    public const nint m_hModel = 0x3C0; // CStrongHandle< InfoForResourceTypeCModel >
+    public const nint m_hModel = 0x3C0; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
 public static class C_INIT_RandomNamedModelElement {
-    public const nint m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    public const nint m_names = 0x1C8; // CUtlVector< CUtlString >
+    public const nint m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    public const nint m_names = 0x1C8; // CUtlVector<CUtlString>
     public const nint m_bShuffle = 0x1E0; // bool
     public const nint m_bLinear = 0x1E1; // bool
     public const nint m_bModelFromRenderer = 0x1E2; // bool
@@ -954,7 +954,7 @@ public static class C_INIT_RandomSequence {
     public const nint m_nSequenceMax = 0x1C4; // int32_t
     public const nint m_bShuffle = 0x1C8; // bool
     public const nint m_bLinear = 0x1C9; // bool
-    public const nint m_WeightedList = 0x1D0; // CUtlVector< SequenceWeightedList_t >
+    public const nint m_WeightedList = 0x1D0; // CUtlVector<SequenceWeightedList_t>
 }
 
 public static class C_INIT_RandomTrailLength {
@@ -1020,9 +1020,9 @@ public static class C_INIT_RemapInitialVisibilityScalar {
 }
 
 public static class C_INIT_RemapNamedModelElementToScalar {
-    public const nint m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    public const nint m_names = 0x1C8; // CUtlVector< CUtlString >
-    public const nint m_values = 0x1E0; // CUtlVector< float32 >
+    public const nint m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    public const nint m_names = 0x1C8; // CUtlVector<CUtlString>
+    public const nint m_values = 0x1E0; // CUtlVector<float>
     public const nint m_nFieldInput = 0x1F8; // ParticleAttributeIndex_t
     public const nint m_nFieldOutput = 0x1FC; // ParticleAttributeIndex_t
     public const nint m_nSetMethod = 0x200; // ParticleSetMethod_t
@@ -1030,7 +1030,7 @@ public static class C_INIT_RemapNamedModelElementToScalar {
 }
 
 public static class C_INIT_RemapParticleCountToNamedModelElementScalar {
-    public const nint m_hModel = 0x1F0; // CStrongHandle< InfoForResourceTypeCModel >
+    public const nint m_hModel = 0x1F0; // CStrongHandle<InfoForResourceTypeCModel>
     public const nint m_outputMinName = 0x1F8; // CUtlString
     public const nint m_outputMaxName = 0x200; // CUtlString
     public const nint m_bModelFromRenderer = 0x208; // bool
@@ -1427,7 +1427,7 @@ public static class C_OP_ConstrainDistanceToUserSpecifiedPath {
     public const nint m_flMaxDistance = 0x1C4; // float
     public const nint m_flTimeScale = 0x1C8; // float
     public const nint m_bLoopedPath = 0x1CC; // bool
-    public const nint m_pointList = 0x1D0; // CUtlVector< PointDefinitionWithTimeValues_t >
+    public const nint m_pointList = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
 }
 
 public static class C_OP_ConstrainLineLength {
@@ -1938,7 +1938,7 @@ public static class C_OP_LockToBone {
 
 public static class C_OP_LockToPointList {
     public const nint m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-    public const nint m_pointList = 0x1C8; // CUtlVector< PointDefinition_t >
+    public const nint m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
     public const nint m_bPlaceAlongPath = 0x1E0; // bool
     public const nint m_bClosedLoop = 0x1E1; // bool
     public const nint m_nNumPointsAlongPath = 0x1E4; // int32_t
@@ -2581,20 +2581,20 @@ public static class C_OP_RemapModelVolumetoCP {
 }
 
 public static class C_OP_RemapNamedModelElementEndCap {
-    public const nint m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    public const nint m_inNames = 0x1C8; // CUtlVector< CUtlString >
-    public const nint m_outNames = 0x1E0; // CUtlVector< CUtlString >
-    public const nint m_fallbackNames = 0x1F8; // CUtlVector< CUtlString >
+    public const nint m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    public const nint m_inNames = 0x1C8; // CUtlVector<CUtlString>
+    public const nint m_outNames = 0x1E0; // CUtlVector<CUtlString>
+    public const nint m_fallbackNames = 0x1F8; // CUtlVector<CUtlString>
     public const nint m_bModelFromRenderer = 0x210; // bool
     public const nint m_nFieldInput = 0x214; // ParticleAttributeIndex_t
     public const nint m_nFieldOutput = 0x218; // ParticleAttributeIndex_t
 }
 
 public static class C_OP_RemapNamedModelElementOnceTimed {
-    public const nint m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    public const nint m_inNames = 0x1C8; // CUtlVector< CUtlString >
-    public const nint m_outNames = 0x1E0; // CUtlVector< CUtlString >
-    public const nint m_fallbackNames = 0x1F8; // CUtlVector< CUtlString >
+    public const nint m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    public const nint m_inNames = 0x1C8; // CUtlVector<CUtlString>
+    public const nint m_outNames = 0x1E0; // CUtlVector<CUtlString>
+    public const nint m_fallbackNames = 0x1F8; // CUtlVector<CUtlString>
     public const nint m_bModelFromRenderer = 0x210; // bool
     public const nint m_bProportional = 0x211; // bool
     public const nint m_nFieldInput = 0x214; // ParticleAttributeIndex_t
@@ -2768,7 +2768,7 @@ public static class C_OP_RemapVisibilityScalar {
 }
 
 public static class C_OP_RenderAsModels {
-    public const nint m_ModelList = 0x200; // CUtlVector< ModelReference_t >
+    public const nint m_ModelList = 0x200; // CUtlVector<ModelReference_t>
     public const nint m_flModelScale = 0x21C; // float
     public const nint m_bFitToModelSize = 0x220; // bool
     public const nint m_bNonUniformScaling = 0x221; // bool
@@ -2783,8 +2783,8 @@ public static class C_OP_RenderBlobs {
     public const nint m_cutoffRadius = 0x358; // CParticleCollectionRendererFloatInput
     public const nint m_renderRadius = 0x4B0; // CParticleCollectionRendererFloatInput
     public const nint m_nScaleCP = 0x608; // int32_t
-    public const nint m_MaterialVars = 0x610; // CUtlVector< MaterialVariable_t >
-    public const nint m_hMaterial = 0x640; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_MaterialVars = 0x610; // CUtlVector<MaterialVariable_t>
+    public const nint m_hMaterial = 0x640; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 public static class C_OP_RenderCables {
@@ -2792,7 +2792,7 @@ public static class C_OP_RenderCables {
     public const nint m_flAlphaScale = 0x358; // CParticleCollectionFloatInput
     public const nint m_vecColorScale = 0x4B0; // CParticleCollectionVecInput
     public const nint m_nColorBlendType = 0xB08; // ParticleColorBlendType_t
-    public const nint m_hMaterial = 0xB10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_hMaterial = 0xB10; // CStrongHandle<InfoForResourceTypeIMaterial2>
     public const nint m_nTextureRepetitionMode = 0xB18; // TextureRepetitionMode_t
     public const nint m_flTextureRepeatsPerSegment = 0xB20; // CParticleCollectionFloatInput
     public const nint m_flTextureRepeatsCircumference = 0xC78; // CParticleCollectionFloatInput
@@ -2808,8 +2808,8 @@ public static class C_OP_RenderCables {
     public const nint m_nMaxTesselation = 0x1344; // int32_t
     public const nint m_nRoundness = 0x1348; // int32_t
     public const nint m_LightingTransform = 0x1350; // CParticleTransformInput
-    public const nint m_MaterialFloatVars = 0x13B8; // CUtlVector< FloatInputMaterialVariable_t >
-    public const nint m_MaterialVecVars = 0x13E8; // CUtlVector< VecInputMaterialVariable_t >
+    public const nint m_MaterialFloatVars = 0x13B8; // CUtlVector<FloatInputMaterialVariable_t>
+    public const nint m_MaterialVecVars = 0x13E8; // CUtlVector<VecInputMaterialVariable_t>
 }
 
 public static class C_OP_RenderDeferredLight {
@@ -2827,7 +2827,7 @@ public static class C_OP_RenderDeferredLight {
     public const nint m_nAlphaTestPointField = 0x87C; // ParticleAttributeIndex_t
     public const nint m_nAlphaTestRangeField = 0x880; // ParticleAttributeIndex_t
     public const nint m_nAlphaTestSharpnessField = 0x884; // ParticleAttributeIndex_t
-    public const nint m_hTexture = 0x888; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    public const nint m_hTexture = 0x888; // CStrongHandle<InfoForResourceTypeCTextureBase>
     public const nint m_nHSVShiftControlPoint = 0x890; // int32_t
 }
 
@@ -2843,7 +2843,7 @@ public static class C_OP_RenderGpuImplicit {
     public const nint m_fRadiusScale = 0x360; // CParticleCollectionRendererFloatInput
     public const nint m_fIsosurfaceThreshold = 0x4B8; // CParticleCollectionRendererFloatInput
     public const nint m_nScaleCP = 0x610; // int32_t
-    public const nint m_hMaterial = 0x618; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_hMaterial = 0x618; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 public static class C_OP_RenderLightBeam {
@@ -2869,8 +2869,8 @@ public static class C_OP_RenderLights {
 public static class C_OP_RenderMaterialProxy {
     public const nint m_nMaterialControlPoint = 0x200; // int32_t
     public const nint m_nProxyType = 0x204; // MaterialProxyType_t
-    public const nint m_MaterialVars = 0x208; // CUtlVector< MaterialVariable_t >
-    public const nint m_hOverrideMaterial = 0x220; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_MaterialVars = 0x208; // CUtlVector<MaterialVariable_t>
+    public const nint m_hOverrideMaterial = 0x220; // CStrongHandle<InfoForResourceTypeIMaterial2>
     public const nint m_flMaterialOverrideEnabled = 0x228; // CParticleCollectionFloatInput
     public const nint m_vecColorScale = 0x380; // CParticleCollectionVecInput
     public const nint m_flAlpha = 0x9D8; // CPerParticleFloatInput
@@ -2882,7 +2882,7 @@ public static class C_OP_RenderModels {
     public const nint m_bOnlyRenderInEffectsWaterPass = 0x201; // bool
     public const nint m_bUseMixedResolutionRendering = 0x202; // bool
     public const nint m_bOnlyRenderInEffecsGameOverlay = 0x203; // bool
-    public const nint m_ModelList = 0x208; // CUtlVector< ModelReference_t >
+    public const nint m_ModelList = 0x208; // CUtlVector<ModelReference_t>
     public const nint m_nBodyGroupField = 0x224; // ParticleAttributeIndex_t
     public const nint m_nSubModelField = 0x228; // ParticleAttributeIndex_t
     public const nint m_bIgnoreNormal = 0x22C; // bool
@@ -2907,10 +2907,10 @@ public static class C_OP_RenderModels {
     public const nint m_ActivityName = 0x1560; // char[256]
     public const nint m_SequenceName = 0x1660; // char[256]
     public const nint m_bEnableClothSimulation = 0x1760; // bool
-    public const nint m_hOverrideMaterial = 0x1768; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_hOverrideMaterial = 0x1768; // CStrongHandle<InfoForResourceTypeIMaterial2>
     public const nint m_bOverrideTranslucentMaterials = 0x1770; // bool
     public const nint m_nSkin = 0x1778; // CPerParticleFloatInput
-    public const nint m_MaterialVars = 0x18D0; // CUtlVector< MaterialVariable_t >
+    public const nint m_MaterialVars = 0x18D0; // CUtlVector<MaterialVariable_t>
     public const nint m_modelInput = 0x18E8; // CParticleModelInput
     public const nint m_nLOD = 0x1948; // int32_t
     public const nint m_EconSlotName = 0x194C; // char[256]
@@ -2943,17 +2943,17 @@ public static class C_OP_RenderOmni2Light {
     public const nint m_flRange = 0xDD0; // CPerParticleFloatInput
     public const nint m_flInnerConeAngle = 0xF28; // CPerParticleFloatInput
     public const nint m_flOuterConeAngle = 0x1080; // CPerParticleFloatInput
-    public const nint m_hLightCookie = 0x11D8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    public const nint m_hLightCookie = 0x11D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
     public const nint m_bSphericalCookie = 0x11E0; // bool
 }
 
 public static class C_OP_RenderPoints {
-    public const nint m_hMaterial = 0x200; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_hMaterial = 0x200; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 public static class C_OP_RenderPostProcessing {
     public const nint m_flPostProcessStrength = 0x200; // CPerParticleFloatInput
-    public const nint m_hPostTexture = 0x358; // CStrongHandle< InfoForResourceTypeCPostProcessingResource >
+    public const nint m_hPostTexture = 0x358; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
     public const nint m_nPriority = 0x360; // ParticlePostProcessPriorityGroup_t
 }
 
@@ -2965,10 +2965,10 @@ public static class C_OP_RenderProjected {
     public const nint m_bEnableProjectedDepthControls = 0x204; // bool
     public const nint m_flMinProjectionDepth = 0x208; // float
     public const nint m_flMaxProjectionDepth = 0x20C; // float
-    public const nint m_hProjectedMaterial = 0x210; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_hProjectedMaterial = 0x210; // CStrongHandle<InfoForResourceTypeIMaterial2>
     public const nint m_flAnimationTimeScale = 0x218; // float
     public const nint m_bOrientToNormal = 0x21C; // bool
-    public const nint m_MaterialVars = 0x220; // CUtlVector< MaterialVariable_t >
+    public const nint m_MaterialVars = 0x220; // CUtlVector<MaterialVariable_t>
 }
 
 public static class C_OP_RenderRopes {
@@ -3099,22 +3099,22 @@ public static class C_OP_RenderStandardLight {
 }
 
 public static class C_OP_RenderStatusEffect {
-    public const nint m_pTextureColorWarp = 0x200; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureDetail2 = 0x208; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureDiffuseWarp = 0x210; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureFresnelColorWarp = 0x218; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureFresnelWarp = 0x220; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureSpecularWarp = 0x228; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureEnvMap = 0x230; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    public const nint m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureDetail2 = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureDiffuseWarp = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureFresnelColorWarp = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureFresnelWarp = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureSpecularWarp = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureEnvMap = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 public static class C_OP_RenderStatusEffectCitadel {
-    public const nint m_pTextureColorWarp = 0x200; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureNormal = 0x208; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureMetalness = 0x210; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureRoughness = 0x218; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureSelfIllum = 0x220; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_pTextureDetail = 0x228; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    public const nint m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureNormal = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureMetalness = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureRoughness = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureSelfIllum = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_pTextureDetail = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 public static class C_OP_RenderText {
@@ -3767,7 +3767,7 @@ public static class MaterialVariable_t {
 }
 
 public static class ModelReference_t {
-    public const nint m_model = 0x0; // CStrongHandle< InfoForResourceTypeCModel >
+    public const nint m_model = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
     public const nint m_flRelativeProbabilityOfSpawn = 0x8; // float
 }
 
@@ -3784,7 +3784,7 @@ public static class ParticleAttributeIndex_t {
 }
 
 public static class ParticleChildrenInfo_t {
-    public const nint m_ChildRef = 0x0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    public const nint m_ChildRef = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     public const nint m_flDelay = 0x8; // float
     public const nint m_bEndCap = 0xC; // bool
     public const nint m_bDisableChild = 0xD; // bool
@@ -3793,7 +3793,7 @@ public static class ParticleChildrenInfo_t {
 
 public static class ParticleControlPointConfiguration_t {
     public const nint m_name = 0x0; // CUtlString
-    public const nint m_drivers = 0x8; // CUtlVector< ParticleControlPointDriver_t >
+    public const nint m_drivers = 0x8; // CUtlVector<ParticleControlPointDriver_t>
     public const nint m_previewState = 0x20; // ParticlePreviewState_t
 }
 
@@ -3820,7 +3820,7 @@ public static class ParticleNamedValueSource_t {
     public const nint m_IsPublic = 0x8; // bool
     public const nint m_ValueType = 0xC; // PulseValueType_t
     public const nint m_DefaultConfig = 0x10; // ParticleNamedValueConfiguration_t
-    public const nint m_NamedConfigs = 0x48; // CUtlVector< ParticleNamedValueConfiguration_t >
+    public const nint m_NamedConfigs = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
 }
 
 public static class ParticlePreviewBodyGroup_t {
@@ -3836,7 +3836,7 @@ public static class ParticlePreviewState_t {
     public const nint m_nFireParticleOnSequenceFrame = 0x18; // int32_t
     public const nint m_hitboxSetName = 0x20; // CUtlString
     public const nint m_materialGroupName = 0x28; // CUtlString
-    public const nint m_vecBodyGroups = 0x30; // CUtlVector< ParticlePreviewBodyGroup_t >
+    public const nint m_vecBodyGroups = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
     public const nint m_flPlaybackSpeed = 0x48; // float
     public const nint m_flParticleSimulationRate = 0x4C; // float
     public const nint m_bShouldDrawHitboxes = 0x50; // bool
@@ -3884,7 +3884,7 @@ public static class TextureControls_t {
 public static class TextureGroup_t {
     public const nint m_bEnabled = 0x0; // bool
     public const nint m_bReplaceTextureWithGradient = 0x1; // bool
-    public const nint m_hTexture = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    public const nint m_hTexture = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
     public const nint m_Gradient = 0x10; // CColorGradient
     public const nint m_nTextureType = 0x28; // SpriteCardTextureType_t
     public const nint m_nTextureChannels = 0x2C; // SpriteCardTextureChannel_t

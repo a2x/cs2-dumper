@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.257651100 UTC
+// 2023-10-03 00:41:23.622180200 UTC
 
 public static class AimMatrixOpFixedSettings_t {
     public const nint m_attachment = 0x0; // CAnimAttachment
@@ -43,24 +43,24 @@ public static class AnimTagID {
 public static class AnimationDecodeDebugDumpElement_t {
     public const nint m_nEntityIndex = 0x0; // int32_t
     public const nint m_modelName = 0x8; // CUtlString
-    public const nint m_poseParams = 0x10; // CUtlVector< CUtlString >
-    public const nint m_decodeOps = 0x28; // CUtlVector< CUtlString >
-    public const nint m_internalOps = 0x40; // CUtlVector< CUtlString >
-    public const nint m_decodedAnims = 0x58; // CUtlVector< CUtlString >
+    public const nint m_poseParams = 0x10; // CUtlVector<CUtlString>
+    public const nint m_decodeOps = 0x28; // CUtlVector<CUtlString>
+    public const nint m_internalOps = 0x40; // CUtlVector<CUtlString>
+    public const nint m_decodedAnims = 0x58; // CUtlVector<CUtlString>
 }
 
 public static class AnimationDecodeDebugDump_t {
     public const nint m_processingType = 0x0; // AnimationProcessingType_t
-    public const nint m_elems = 0x8; // CUtlVector< AnimationDecodeDebugDumpElement_t >
+    public const nint m_elems = 0x8; // CUtlVector<AnimationDecodeDebugDumpElement_t>
 }
 
 public static class AnimationSnapshotBase_t {
     public const nint m_flRealTime = 0x0; // float
     public const nint m_rootToWorld = 0x10; // matrix3x4a_t
     public const nint m_bBonesInWorldSpace = 0x40; // bool
-    public const nint m_boneSetupMask = 0x48; // CUtlVector< uint32 >
-    public const nint m_boneTransforms = 0x60; // CUtlVector< matrix3x4a_t >
-    public const nint m_flexControllers = 0x78; // CUtlVector< float32 >
+    public const nint m_boneSetupMask = 0x48; // CUtlVector<uint32_t>
+    public const nint m_boneTransforms = 0x60; // CUtlVector<matrix3x4a_t>
+    public const nint m_flexControllers = 0x78; // CUtlVector<float>
     public const nint m_SnapshotType = 0x90; // AnimationSnapshotType_t
     public const nint m_bHasDecodeDump = 0x94; // bool
     public const nint m_DecodeDump = 0x98; // AnimationDecodeDebugDumpElement_t
@@ -76,7 +76,7 @@ public static class AttachmentHandle_t {
 }
 
 public static class BlendItem_t {
-    public const nint m_tags = 0x0; // CUtlVector< TagSpan_t >
+    public const nint m_tags = 0x0; // CUtlVector<TagSpan_t>
     public const nint m_pChild = 0x18; // CAnimUpdateNodeRef
     public const nint m_hSequence = 0x28; // HSequence
     public const nint m_vPos = 0x2C; // Vector2D
@@ -90,7 +90,7 @@ public static class BoneDemoCaptureSettings_t {
 }
 
 public static class CActionComponentUpdater {
-    public const nint m_actions = 0x30; // CUtlVector< CSmartPtr< CAnimActionUpdater > >
+    public const nint m_actions = 0x30; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
 }
 
 public static class CAddUpdateNode {
@@ -124,8 +124,8 @@ public static class CAnimActivity {
 public static class CAnimAttachment {
     public const nint m_influenceRotations = 0x0; // Quaternion[3]
     public const nint m_influenceOffsets = 0x30; // VectorAligned[3]
-    public const nint m_influenceIndices = 0x60; // int32[3]
-    public const nint m_influenceWeights = 0x6C; // float32[3]
+    public const nint m_influenceIndices = 0x60; // int32_t[3]
+    public const nint m_influenceWeights = 0x6C; // float[3]
     public const nint m_numInfluences = 0x78; // uint8_t
 }
 
@@ -156,10 +156,10 @@ public static class CAnimComponentUpdater {
 
 public static class CAnimData {
     public const nint m_name = 0x10; // CBufferString
-    public const nint m_animArray = 0x20; // CUtlVector< CAnimDesc >
-    public const nint m_decoderArray = 0x38; // CUtlVector< CAnimDecoder >
+    public const nint m_animArray = 0x20; // CUtlVector<CAnimDesc>
+    public const nint m_decoderArray = 0x38; // CUtlVector<CAnimDecoder>
     public const nint m_nMaxUniqueFrameIndex = 0x50; // int32_t
-    public const nint m_segmentArray = 0x58; // CUtlVector< CAnimFrameSegment >
+    public const nint m_segmentArray = 0x58; // CUtlVector<CAnimFrameSegment>
 }
 
 public static class CAnimDataChannelDesc {
@@ -169,9 +169,9 @@ public static class CAnimDataChannelDesc {
     public const nint m_nType = 0x24; // int32_t
     public const nint m_szGrouping = 0x28; // CBufferString
     public const nint m_szDescription = 0x38; // CBufferString
-    public const nint m_szElementNameArray = 0x48; // CUtlVector< CBufferString >
-    public const nint m_nElementIndexArray = 0x60; // CUtlVector< int32 >
-    public const nint m_nElementMaskArray = 0x78; // CUtlVector< uint32 >
+    public const nint m_szElementNameArray = 0x48; // CUtlVector<CBufferString>
+    public const nint m_nElementIndexArray = 0x60; // CUtlVector<int32_t>
+    public const nint m_nElementMaskArray = 0x78; // CUtlVector<uint32_t>
 }
 
 public static class CAnimDecoder {
@@ -195,8 +195,8 @@ public static class CAnimDemoCaptureSettings {
     public const nint m_baseSequence = 0x38; // CUtlString
     public const nint m_nBaseSequenceFrame = 0x40; // int32_t
     public const nint m_boneSelectionMode = 0x44; // EDemoBoneSelectionMode
-    public const nint m_bones = 0x48; // CUtlVector< BoneDemoCaptureSettings_t >
-    public const nint m_ikChains = 0x60; // CUtlVector< IKDemoCaptureSettings_t >
+    public const nint m_bones = 0x48; // CUtlVector<BoneDemoCaptureSettings_t>
+    public const nint m_ikChains = 0x60; // CUtlVector<IKDemoCaptureSettings_t>
 }
 
 public static class CAnimDesc {
@@ -204,15 +204,15 @@ public static class CAnimDesc {
     public const nint m_flags = 0x10; // CAnimDesc_Flag
     public const nint fps = 0x18; // float
     public const nint m_Data = 0x20; // CAnimEncodedFrames
-    public const nint m_movementArray = 0xF8; // CUtlVector< CAnimMovement >
-    public const nint m_eventArray = 0x110; // CUtlVector< CAnimEventDefinition >
-    public const nint m_activityArray = 0x128; // CUtlVector< CAnimActivity >
-    public const nint m_hierarchyArray = 0x140; // CUtlVector< CAnimLocalHierarchy >
+    public const nint m_movementArray = 0xF8; // CUtlVector<CAnimMovement>
+    public const nint m_eventArray = 0x110; // CUtlVector<CAnimEventDefinition>
+    public const nint m_activityArray = 0x128; // CUtlVector<CAnimActivity>
+    public const nint m_hierarchyArray = 0x140; // CUtlVector<CAnimLocalHierarchy>
     public const nint framestalltime = 0x158; // float
     public const nint m_vecRootMin = 0x15C; // Vector
     public const nint m_vecRootMax = 0x168; // Vector
-    public const nint m_vecBoneWorldMin = 0x178; // CUtlVector< Vector >
-    public const nint m_vecBoneWorldMax = 0x190; // CUtlVector< Vector >
+    public const nint m_vecBoneWorldMin = 0x178; // CUtlVector<Vector>
+    public const nint m_vecBoneWorldMax = 0x190; // CUtlVector<Vector>
     public const nint m_sequenceParams = 0x1A8; // CAnimSequenceParams
 }
 
@@ -228,20 +228,20 @@ public static class CAnimDesc_Flag {
 }
 
 public static class CAnimEncodeDifference {
-    public const nint m_boneArray = 0x0; // CUtlVector< CAnimBoneDifference >
-    public const nint m_morphArray = 0x18; // CUtlVector< CAnimMorphDifference >
-    public const nint m_userArray = 0x30; // CUtlVector< CAnimUserDifference >
-    public const nint m_bHasRotationBitArray = 0x48; // CUtlVector< uint8 >
-    public const nint m_bHasMovementBitArray = 0x60; // CUtlVector< uint8 >
-    public const nint m_bHasMorphBitArray = 0x78; // CUtlVector< uint8 >
-    public const nint m_bHasUserBitArray = 0x90; // CUtlVector< uint8 >
+    public const nint m_boneArray = 0x0; // CUtlVector<CAnimBoneDifference>
+    public const nint m_morphArray = 0x18; // CUtlVector<CAnimMorphDifference>
+    public const nint m_userArray = 0x30; // CUtlVector<CAnimUserDifference>
+    public const nint m_bHasRotationBitArray = 0x48; // CUtlVector<uint8_t>
+    public const nint m_bHasMovementBitArray = 0x60; // CUtlVector<uint8_t>
+    public const nint m_bHasMorphBitArray = 0x78; // CUtlVector<uint8_t>
+    public const nint m_bHasUserBitArray = 0x90; // CUtlVector<uint8_t>
 }
 
 public static class CAnimEncodedFrames {
     public const nint m_fileName = 0x0; // CBufferString
     public const nint m_nFrames = 0x10; // int32_t
     public const nint m_nFramesPerBlock = 0x14; // int32_t
-    public const nint m_frameblockArray = 0x18; // CUtlVector< CAnimFrameBlockAnim >
+    public const nint m_frameblockArray = 0x18; // CUtlVector<CAnimFrameBlockAnim>
     public const nint m_usageDifferences = 0x30; // CAnimEncodeDifference
 }
 
@@ -268,7 +268,7 @@ public static class CAnimFoot {
 public static class CAnimFrameBlockAnim {
     public const nint m_nStartFrame = 0x0; // int32_t
     public const nint m_nEndFrame = 0x4; // int32_t
-    public const nint m_segmentIndexArray = 0x8; // CUtlVector< int32 >
+    public const nint m_segmentIndexArray = 0x8; // CUtlVector<int32_t>
 }
 
 public static class CAnimFrameSegment {
@@ -280,7 +280,7 @@ public static class CAnimFrameSegment {
 
 public static class CAnimGraphDebugReplay {
     public const nint m_animGraphFileName = 0x40; // CUtlString
-    public const nint m_frameList = 0x48; // CUtlVector< CSmartPtr< CAnimReplayFrame > >
+    public const nint m_frameList = 0x48; // CUtlVector<CSmartPtr<CAnimReplayFrame>>
     public const nint m_startIndex = 0x60; // int32_t
     public const nint m_writeIndex = 0x64; // int32_t
     public const nint m_frameCount = 0x68; // int32_t
@@ -288,7 +288,7 @@ public static class CAnimGraphDebugReplay {
 
 public static class CAnimGraphModelBinding {
     public const nint m_modelName = 0x8; // CUtlString
-    public const nint m_pSharedData = 0x10; // CSmartPtr< CAnimUpdateSharedData >
+    public const nint m_pSharedData = 0x10; // CSmartPtr<CAnimUpdateSharedData>
 }
 
 public static class CAnimGraphNetworkSettings {
@@ -296,7 +296,7 @@ public static class CAnimGraphNetworkSettings {
 }
 
 public static class CAnimGraphSettingsManager {
-    public const nint m_settingsGroups = 0x18; // CUtlVector< CSmartPtr< CAnimGraphSettingsGroup > >
+    public const nint m_settingsGroups = 0x18; // CUtlVector<CSmartPtr<CAnimGraphSettingsGroup>>
 }
 
 public static class CAnimInputDamping {
@@ -306,11 +306,11 @@ public static class CAnimInputDamping {
 
 public static class CAnimKeyData {
     public const nint m_name = 0x0; // CBufferString
-    public const nint m_boneArray = 0x10; // CUtlVector< CAnimBone >
-    public const nint m_userArray = 0x28; // CUtlVector< CAnimUser >
-    public const nint m_morphArray = 0x40; // CUtlVector< CBufferString >
+    public const nint m_boneArray = 0x10; // CUtlVector<CAnimBone>
+    public const nint m_userArray = 0x28; // CUtlVector<CAnimUser>
+    public const nint m_morphArray = 0x40; // CUtlVector<CBufferString>
     public const nint m_nChannelElements = 0x58; // int32_t
-    public const nint m_dataChannelArray = 0x60; // CUtlVector< CAnimDataChannelDesc >
+    public const nint m_dataChannelArray = 0x60; // CUtlVector<CAnimDataChannelDesc>
 }
 
 public static class CAnimLocalHierarchy {
@@ -352,7 +352,7 @@ public static class CAnimParamHandle {
 }
 
 public static class CAnimParamHandleMap {
-    public const nint m_list = 0x0; // CUtlHashtable< uint16, int16 >
+    public const nint m_list = 0x0; // CUtlHashtable<uint16_t,int16_t>
 }
 
 public static class CAnimParameterBase {
@@ -365,16 +365,16 @@ public static class CAnimParameterBase {
 }
 
 public static class CAnimParameterManagerUpdater {
-    public const nint m_parameters = 0x18; // CUtlVector< CSmartPtr< CAnimParameterBase > >
-    public const nint m_idToIndexMap = 0x30; // CUtlHashtable< AnimParamID, int32 >
-    public const nint m_nameToIndexMap = 0x50; // CUtlHashtable< CUtlString, int32 >
-    public const nint m_indexToHandle = 0x70; // CUtlVector< CAnimParamHandle >
-    public const nint m_autoResetParams = 0x88; // CUtlVector< CUtlPair< CAnimParamHandle, CAnimVariant > >
-    public const nint m_autoResetMap = 0xA0; // CUtlHashtable< CAnimParamHandle, int16 >
+    public const nint m_parameters = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
+    public const nint m_idToIndexMap = 0x30; // CUtlHashtable<AnimParamID,int32_t>
+    public const nint m_nameToIndexMap = 0x50; // CUtlHashtable<CUtlString,int32_t>
+    public const nint m_indexToHandle = 0x70; // CUtlVector<CAnimParamHandle>
+    public const nint m_autoResetParams = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
+    public const nint m_autoResetMap = 0xA0; // CUtlHashtable<CAnimParamHandle,int16_t>
 }
 
 public static class CAnimReplayFrame {
-    public const nint m_inputDataBlocks = 0x10; // CUtlVector< CUtlBinaryBlock >
+    public const nint m_inputDataBlocks = 0x10; // CUtlVector<CUtlBinaryBlock>
     public const nint m_instanceData = 0x28; // CUtlBinaryBlock
     public const nint m_startingLocalToWorldTransform = 0x40; // CTransform
     public const nint m_localToWorldTransform = 0x60; // CTransform
@@ -386,7 +386,7 @@ public static class CAnimScriptComponentUpdater {
 }
 
 public static class CAnimScriptManager {
-    public const nint m_scriptInfo = 0x10; // CUtlVector< ScriptInfo_t >
+    public const nint m_scriptInfo = 0x10; // CUtlVector<ScriptInfo_t>
 }
 
 public static class CAnimSequenceParams {
@@ -395,19 +395,19 @@ public static class CAnimSequenceParams {
 }
 
 public static class CAnimSkeleton {
-    public const nint m_localSpaceTransforms = 0x10; // CUtlVector< CTransform >
-    public const nint m_modelSpaceTransforms = 0x28; // CUtlVector< CTransform >
-    public const nint m_boneNames = 0x40; // CUtlVector< CUtlString >
-    public const nint m_children = 0x58; // CUtlVector< CUtlVector< int32 > >
-    public const nint m_parents = 0x70; // CUtlVector< int32 >
-    public const nint m_feet = 0x88; // CUtlVector< CAnimFoot >
-    public const nint m_morphNames = 0xA0; // CUtlVector< CUtlString >
-    public const nint m_lodBoneCounts = 0xB8; // CUtlVector< int32 >
+    public const nint m_localSpaceTransforms = 0x10; // CUtlVector<CTransform>
+    public const nint m_modelSpaceTransforms = 0x28; // CUtlVector<CTransform>
+    public const nint m_boneNames = 0x40; // CUtlVector<CUtlString>
+    public const nint m_children = 0x58; // CUtlVector<CUtlVector<int32_t>>
+    public const nint m_parents = 0x70; // CUtlVector<int32_t>
+    public const nint m_feet = 0x88; // CUtlVector<CAnimFoot>
+    public const nint m_morphNames = 0xA0; // CUtlVector<CUtlString>
+    public const nint m_lodBoneCounts = 0xB8; // CUtlVector<int32_t>
 }
 
 public static class CAnimStateMachineUpdater {
-    public const nint m_states = 0x8; // CUtlVector< CStateUpdateData >
-    public const nint m_transitions = 0x20; // CUtlVector< CTransitionUpdateData >
+    public const nint m_states = 0x8; // CUtlVector<CStateUpdateData>
+    public const nint m_transitions = 0x20; // CUtlVector<CTransitionUpdateData>
     public const nint m_startStateIndex = 0x50; // int32_t
 }
 
@@ -419,7 +419,7 @@ public static class CAnimTagBase {
 }
 
 public static class CAnimTagManagerUpdater {
-    public const nint m_tags = 0x18; // CUtlVector< CSmartPtr< CAnimTagBase > >
+    public const nint m_tags = 0x18; // CUtlVector<CSmartPtr<CAnimTagBase>>
 }
 
 public static class CAnimUpdateNodeBase {
@@ -433,15 +433,15 @@ public static class CAnimUpdateNodeRef {
 }
 
 public static class CAnimUpdateSharedData {
-    public const nint m_nodes = 0x10; // CUtlVector< CSmartPtr< CAnimUpdateNodeBase > >
-    public const nint m_nodeIndexMap = 0x28; // CUtlHashtable< CAnimNodePath, int32 >
-    public const nint m_components = 0x48; // CUtlVector< CSmartPtr< CAnimComponentUpdater > >
-    public const nint m_pParamListUpdater = 0x60; // CSmartPtr< CAnimParameterManagerUpdater >
-    public const nint m_pTagManagerUpdater = 0x68; // CSmartPtr< CAnimTagManagerUpdater >
-    public const nint m_scriptManager = 0x70; // CSmartPtr< CAnimScriptManager >
+    public const nint m_nodes = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
+    public const nint m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32_t>
+    public const nint m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
+    public const nint m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
+    public const nint m_pTagManagerUpdater = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
+    public const nint m_scriptManager = 0x70; // CSmartPtr<CAnimScriptManager>
     public const nint m_settings = 0x78; // CAnimGraphSettingsManager
-    public const nint m_pStaticPoseCache = 0xA8; // CSmartPtr< CStaticPoseCacheBuilder >
-    public const nint m_pSkeleton = 0xB0; // CSmartPtr< CAnimSkeleton >
+    public const nint m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
+    public const nint m_pSkeleton = 0xB0; // CSmartPtr<CAnimSkeleton>
     public const nint m_rootNodePath = 0xB8; // CAnimNodePath
 }
 
@@ -494,11 +494,11 @@ public static class CAnimationGraphVisualizerText {
 public static class CAnimationGroup {
     public const nint m_nFlags = 0x10; // uint32_t
     public const nint m_name = 0x18; // CBufferString
-    public const nint m_localHAnimArray_Handle = 0x60; // CUtlVector< CStrongHandle< InfoForResourceTypeCAnimData > >
-    public const nint m_includedGroupArray_Handle = 0x78; // CUtlVector< CStrongHandle< InfoForResourceTypeCAnimationGroup > >
-    public const nint m_directHSeqGroup_Handle = 0x90; // CStrongHandle< InfoForResourceTypeCSequenceGroupData >
+    public const nint m_localHAnimArray_Handle = 0x60; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimData>>
+    public const nint m_includedGroupArray_Handle = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+    public const nint m_directHSeqGroup_Handle = 0x90; // CStrongHandle<InfoForResourceTypeCSequenceGroupData>
     public const nint m_decodeKey = 0x98; // CAnimKeyData
-    public const nint m_szScripts = 0x110; // CUtlVector< CBufferString >
+    public const nint m_szScripts = 0x110; // CUtlVector<CBufferString>
 }
 
 public static class CAttachment {
@@ -506,7 +506,7 @@ public static class CAttachment {
     public const nint m_influenceNames = 0x8; // CUtlString[3]
     public const nint m_vInfluenceRotations = 0x20; // Quaternion[3]
     public const nint m_vInfluenceOffsets = 0x50; // Vector[3]
-    public const nint m_influenceWeights = 0x74; // float32[3]
+    public const nint m_influenceWeights = 0x74; // float[3]
     public const nint m_bInfluenceRootTransform = 0x80; // bool[3]
     public const nint m_nInfluences = 0x83; // uint8_t
     public const nint m_bIgnoreRotation = 0x84; // bool
@@ -525,8 +525,8 @@ public static class CAudioAnimTag {
 public static class CBaseConstraint {
     public const nint m_name = 0x28; // CUtlString
     public const nint m_vUpVector = 0x30; // Vector
-    public const nint m_slaves = 0x40; // CUtlVector< CConstraintSlave >
-    public const nint m_targets = 0x58; // CUtlVector< CConstraintTarget >
+    public const nint m_slaves = 0x40; // CUtlVector<CConstraintSlave>
+    public const nint m_targets = 0x58; // CUtlVector<CConstraintTarget>
 }
 
 public static class CBinaryUpdateNode {
@@ -539,10 +539,10 @@ public static class CBinaryUpdateNode {
 }
 
 public static class CBlend2DUpdateNode {
-    public const nint m_items = 0x60; // CUtlVector< BlendItem_t >
-    public const nint m_tags = 0x78; // CUtlVector< TagSpan_t >
+    public const nint m_items = 0x60; // CUtlVector<BlendItem_t>
+    public const nint m_tags = 0x78; // CUtlVector<TagSpan_t>
     public const nint m_paramSpans = 0x90; // CParamSpanUpdater
-    public const nint m_nodeItemIndices = 0xA8; // CUtlVector< int32 >
+    public const nint m_nodeItemIndices = 0xA8; // CUtlVector<int32_t>
     public const nint m_damping = 0xC0; // CAnimInputDamping
     public const nint m_blendSourceX = 0xD0; // AnimValueSource
     public const nint m_paramX = 0xD4; // CAnimParamHandle
@@ -562,9 +562,9 @@ public static class CBlendCurve {
 }
 
 public static class CBlendUpdateNode {
-    public const nint m_children = 0x60; // CUtlVector< CAnimUpdateNodeRef >
-    public const nint m_sortedOrder = 0x78; // CUtlVector< uint8 >
-    public const nint m_targetValues = 0x90; // CUtlVector< float32 >
+    public const nint m_children = 0x60; // CUtlVector<CAnimUpdateNodeRef>
+    public const nint m_sortedOrder = 0x78; // CUtlVector<uint8_t>
+    public const nint m_targetValues = 0x90; // CUtlVector<float>
     public const nint m_blendValueSource = 0xAC; // AnimValueSource
     public const nint m_paramIndex = 0xB0; // CAnimParamHandle
     public const nint m_damping = 0xB8; // CAnimInputDamping
@@ -577,7 +577,7 @@ public static class CBlendUpdateNode {
 
 public static class CBodyGroupAnimTag {
     public const nint m_nPriority = 0x38; // int32_t
-    public const nint m_bodyGroupSettings = 0x40; // CUtlVector< CBodyGroupSetting >
+    public const nint m_bodyGroupSettings = 0x40; // CUtlVector<CBodyGroupSetting>
 }
 
 public static class CBodyGroupSetting {
@@ -589,29 +589,29 @@ public static class CBoneConstraintDotToMorph {
     public const nint m_sBoneName = 0x28; // CUtlString
     public const nint m_sTargetBoneName = 0x30; // CUtlString
     public const nint m_sMorphChannelName = 0x38; // CUtlString
-    public const nint m_flRemap = 0x40; // float32[4]
+    public const nint m_flRemap = 0x40; // float[4]
 }
 
 public static class CBoneConstraintPoseSpaceBone {
-    public const nint m_inputList = 0x70; // CUtlVector< CBoneConstraintPoseSpaceBone::Input_t >
+    public const nint m_inputList = 0x70; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
 }
 
 public static class CBoneConstraintPoseSpaceBone_Input_t {
     public const nint m_inputValue = 0x0; // Vector
-    public const nint m_outputTransformList = 0x10; // CUtlVector< CTransform >
+    public const nint m_outputTransformList = 0x10; // CUtlVector<CTransform>
 }
 
 public static class CBoneConstraintPoseSpaceMorph {
     public const nint m_sBoneName = 0x28; // CUtlString
     public const nint m_sAttachmentName = 0x30; // CUtlString
-    public const nint m_outputMorph = 0x38; // CUtlVector< CUtlString >
-    public const nint m_inputList = 0x50; // CUtlVector< CBoneConstraintPoseSpaceMorph::Input_t >
+    public const nint m_outputMorph = 0x38; // CUtlVector<CUtlString>
+    public const nint m_inputList = 0x50; // CUtlVector<CBoneConstraintPoseSpaceMorph::Input_t>
     public const nint m_bClamp = 0x68; // bool
 }
 
 public static class CBoneConstraintPoseSpaceMorph_Input_t {
     public const nint m_inputValue = 0x0; // Vector
-    public const nint m_outputWeightList = 0x10; // CUtlVector< float32 >
+    public const nint m_outputWeightList = 0x10; // CUtlVector<float>
 }
 
 public static class CBoneMaskUpdateNode {
@@ -637,20 +637,20 @@ public static class CBoolAnimParameter {
 }
 
 public static class CCPPScriptComponentUpdater {
-    public const nint m_scriptsToRun = 0x30; // CUtlVector< CGlobalSymbol >
+    public const nint m_scriptsToRun = 0x30; // CUtlVector<CGlobalSymbol>
 }
 
 public static class CCachedPose {
-    public const nint m_transforms = 0x8; // CUtlVector< CTransform >
-    public const nint m_morphWeights = 0x20; // CUtlVector< float32 >
+    public const nint m_transforms = 0x8; // CUtlVector<CTransform>
+    public const nint m_morphWeights = 0x20; // CUtlVector<float>
     public const nint m_hSequence = 0x38; // HSequence
     public const nint m_flCycle = 0x3C; // float
 }
 
 public static class CChoiceUpdateNode {
-    public const nint m_children = 0x58; // CUtlVector< CAnimUpdateNodeRef >
-    public const nint m_weights = 0x70; // CUtlVector< float32 >
-    public const nint m_blendTimes = 0x88; // CUtlVector< float32 >
+    public const nint m_children = 0x58; // CUtlVector<CAnimUpdateNodeRef>
+    public const nint m_weights = 0x70; // CUtlVector<float>
+    public const nint m_blendTimes = 0x88; // CUtlVector<float>
     public const nint m_choiceMethod = 0xA0; // ChoiceMethod
     public const nint m_choiceChangeMethod = 0xA4; // ChoiceChangeMethod
     public const nint m_blendMethod = 0xA8; // ChoiceBlendMethod
@@ -669,22 +669,22 @@ public static class CClothSettingsAnimTag {
 
 public static class CCompressorGroup {
     public const nint m_nTotalElementCount = 0x0; // int32_t
-    public const nint m_szChannelClass = 0x8; // CUtlVector< char* >
-    public const nint m_szVariableName = 0x20; // CUtlVector< char* >
-    public const nint m_nType = 0x38; // CUtlVector< fieldtype_t >
-    public const nint m_nFlags = 0x50; // CUtlVector< int32 >
-    public const nint m_szGrouping = 0x68; // CUtlVector< CUtlString >
-    public const nint m_nCompressorIndex = 0x80; // CUtlVector< int32 >
-    public const nint m_szElementNames = 0x98; // CUtlVector< CUtlVector< char* > >
-    public const nint m_nElementUniqueID = 0xB0; // CUtlVector< CUtlVector< int32 > >
-    public const nint m_nElementMask = 0xC8; // CUtlVector< uint32 >
-    public const nint m_vectorCompressor = 0xF8; // CUtlVector< CCompressor< Vector >* >
-    public const nint m_quaternionCompressor = 0x110; // CUtlVector< CCompressor< QuaternionStorage >* >
-    public const nint m_intCompressor = 0x128; // CUtlVector< CCompressor< int32 >* >
-    public const nint m_boolCompressor = 0x140; // CUtlVector< CCompressor< bool >* >
-    public const nint m_colorCompressor = 0x158; // CUtlVector< CCompressor< Color >* >
-    public const nint m_vector2DCompressor = 0x170; // CUtlVector< CCompressor< Vector2D >* >
-    public const nint m_vector4DCompressor = 0x188; // CUtlVector< CCompressor< Vector4D >* >
+    public const nint m_szChannelClass = 0x8; // CUtlVector<char*>
+    public const nint m_szVariableName = 0x20; // CUtlVector<char*>
+    public const nint m_nType = 0x38; // CUtlVector<fieldtype_t>
+    public const nint m_nFlags = 0x50; // CUtlVector<int32_t>
+    public const nint m_szGrouping = 0x68; // CUtlVector<CUtlString>
+    public const nint m_nCompressorIndex = 0x80; // CUtlVector<int32_t>
+    public const nint m_szElementNames = 0x98; // CUtlVector<CUtlVector<char*>>
+    public const nint m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32_t>>
+    public const nint m_nElementMask = 0xC8; // CUtlVector<uint32_t>
+    public const nint m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
+    public const nint m_quaternionCompressor = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
+    public const nint m_intCompressor = 0x128; // CUtlVector<CCompressor<int32_t>*>
+    public const nint m_boolCompressor = 0x140; // CUtlVector<CCompressor<bool>*>
+    public const nint m_colorCompressor = 0x158; // CUtlVector<CCompressor<Color>*>
+    public const nint m_vector2DCompressor = 0x170; // CUtlVector<CCompressor<Vector2D>*>
+    public const nint m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
 }
 
 public static class CConcreteAnimParameter {
@@ -718,7 +718,7 @@ public static class CCycleBase {
 }
 
 public static class CCycleControlClipUpdateNode {
-    public const nint m_tags = 0x60; // CUtlVector< TagSpan_t >
+    public const nint m_tags = 0x60; // CUtlVector<TagSpan_t>
     public const nint m_hSequence = 0x7C; // HSequence
     public const nint m_duration = 0x80; // float
     public const nint m_valueSource = 0x84; // AnimValueSource
@@ -741,7 +741,7 @@ public static class CDampedPathAnimMotorUpdater {
 }
 
 public static class CDampedValueComponentUpdater {
-    public const nint m_items = 0x30; // CUtlVector< CDampedValueUpdateItem >
+    public const nint m_items = 0x30; // CUtlVector<CDampedValueUpdateItem>
 }
 
 public static class CDampedValueUpdateItem {
@@ -756,13 +756,13 @@ public static class CDemoSettingsComponentUpdater {
 
 public static class CDirectPlaybackTagData {
     public const nint m_sequenceName = 0x0; // CUtlString
-    public const nint m_tags = 0x8; // CUtlVector< TagSpan_t >
+    public const nint m_tags = 0x8; // CUtlVector<TagSpan_t>
 }
 
 public static class CDirectPlaybackUpdateNode {
     public const nint m_bFinishEarly = 0x6C; // bool
     public const nint m_bResetOnFinish = 0x6D; // bool
-    public const nint m_allTags = 0x70; // CUtlVector< CDirectPlaybackTagData >
+    public const nint m_allTags = 0x70; // CUtlVector<CDirectPlaybackTagData>
 }
 
 public static class CDirectionalBlendUpdateNode {
@@ -788,7 +788,7 @@ public static class CDistanceRemainingMetricEvaluator {
 
 public static class CDrawCullingData {
     public const nint m_vConeApex = 0x0; // Vector
-    public const nint m_ConeAxis = 0xC; // int8[3]
+    public const nint m_ConeAxis = 0xC; // int8_t[3]
     public const nint m_ConeCutoff = 0xF; // int8_t
 }
 
@@ -799,7 +799,7 @@ public static class CEmitTagActionUpdater {
 
 public static class CEnumAnimParameter {
     public const nint m_defaultValue = 0x68; // uint8_t
-    public const nint m_enumOptions = 0x70; // CUtlVector< CUtlString >
+    public const nint m_enumOptions = 0x70; // CUtlVector<CUtlString>
 }
 
 public static class CExpressionActionUpdater {
@@ -819,8 +819,8 @@ public static class CFingerBone {
 }
 
 public static class CFingerChain {
-    public const nint m_targets = 0x0; // CUtlVector< CFingerSource >
-    public const nint m_bones = 0x18; // CUtlVector< CFingerBone >
+    public const nint m_targets = 0x0; // CUtlVector<CFingerSource>
+    public const nint m_bones = 0x18; // CUtlVector<CFingerBone>
     public const nint m_name = 0x30; // CUtlString
     public const nint m_tipParentBoneName = 0x38; // CUtlString
     public const nint m_vTipOffset = 0x40; // Vector
@@ -854,7 +854,7 @@ public static class CFlexOp {
 
 public static class CFlexRule {
     public const nint m_nFlex = 0x0; // int32_t
-    public const nint m_FlexOps = 0x8; // CUtlVector< CFlexOp >
+    public const nint m_FlexOps = 0x8; // CUtlVector<CFlexOp>
 }
 
 public static class CFloatAnimParameter {
@@ -885,7 +885,7 @@ public static class CFollowPathUpdateNode {
 }
 
 public static class CFootAdjustmentUpdateNode {
-    public const nint m_clips = 0x70; // CUtlVector< HSequence >
+    public const nint m_clips = 0x70; // CUtlVector<HSequence>
     public const nint m_hBasePoseCacheHandle = 0x88; // CPoseHandle
     public const nint m_facingTarget = 0x8C; // CAnimParamHandle
     public const nint m_flTurnTimeMin = 0x90; // float
@@ -909,7 +909,7 @@ public static class CFootCycleDefinition {
 }
 
 public static class CFootCycleMetricEvaluator {
-    public const nint m_footIndices = 0x50; // CUtlVector< int32 >
+    public const nint m_footIndices = 0x50; // CUtlVector<int32_t>
 }
 
 public static class CFootDefinition {
@@ -930,7 +930,7 @@ public static class CFootFallAnimTag {
 
 public static class CFootLockUpdateNode {
     public const nint m_opFixedSettings = 0x68; // FootLockPoseOpFixedSettings
-    public const nint m_footSettings = 0xD0; // CUtlVector< FootFixedSettings >
+    public const nint m_footSettings = 0xD0; // CUtlVector<FootFixedSettings>
     public const nint m_hipShiftDamping = 0xE8; // CAnimInputDamping
     public const nint m_rootHeightDamping = 0xF8; // CAnimInputDamping
     public const nint m_flStrideCurveScale = 0x108; // float
@@ -952,7 +952,7 @@ public static class CFootLockUpdateNode {
 }
 
 public static class CFootMotion {
-    public const nint m_strides = 0x0; // CUtlVector< CFootStride >
+    public const nint m_strides = 0x0; // CUtlVector<CFootStride>
     public const nint m_name = 0x18; // CUtlString
     public const nint m_bAdditive = 0x20; // bool
 }
@@ -960,17 +960,17 @@ public static class CFootMotion {
 public static class CFootPinningUpdateNode {
     public const nint m_poseOpFixedData = 0x70; // FootPinningPoseOpFixedData_t
     public const nint m_eTimingSource = 0xA0; // FootPinningTimingSource
-    public const nint m_params = 0xA8; // CUtlVector< CAnimParamHandle >
+    public const nint m_params = 0xA8; // CUtlVector<CAnimParamHandle>
     public const nint m_bResetChild = 0xC0; // bool
 }
 
 public static class CFootPositionMetricEvaluator {
-    public const nint m_footIndices = 0x50; // CUtlVector< int32 >
+    public const nint m_footIndices = 0x50; // CUtlVector<int32_t>
     public const nint m_bIgnoreSlope = 0x68; // bool
 }
 
 public static class CFootStepTriggerUpdateNode {
-    public const nint m_triggers = 0x68; // CUtlVector< FootStepTrigger >
+    public const nint m_triggers = 0x68; // CUtlVector<FootStepTrigger>
     public const nint m_flTolerance = 0x84; // float
 }
 
@@ -980,7 +980,7 @@ public static class CFootStride {
 }
 
 public static class CFootTrajectories {
-    public const nint m_trajectories = 0x0; // CUtlVector< CFootTrajectory >
+    public const nint m_trajectories = 0x0; // CUtlVector<CFootTrajectory>
 }
 
 public static class CFootTrajectory {
@@ -1027,12 +1027,12 @@ public static class CHitBox {
 public static class CHitBoxSet {
     public const nint m_name = 0x0; // CUtlString
     public const nint m_nNameHash = 0x8; // uint32_t
-    public const nint m_HitBoxes = 0x10; // CUtlVector< CHitBox >
+    public const nint m_HitBoxes = 0x10; // CUtlVector<CHitBox>
     public const nint m_SourceFilename = 0x28; // CUtlString
 }
 
 public static class CHitBoxSetList {
-    public const nint m_HitBoxSets = 0x0; // CUtlVector< CHitBoxSet >
+    public const nint m_HitBoxSets = 0x0; // CUtlVector<CHitBoxSet>
 }
 
 public static class CHitReactUpdateNode {
@@ -1072,7 +1072,7 @@ public static class CLODComponentUpdater {
 }
 
 public static class CLeanMatrixUpdateNode {
-    public const nint m_frameCorners = 0x5C; // int32[3][3]
+    public const nint m_frameCorners = 0x5C; // int32_t[3][3]
     public const nint m_poses = 0x80; // CPoseHandle[9]
     public const nint m_damping = 0xA8; // CAnimInputDamping
     public const nint m_blendSource = 0xB8; // AnimVectorSource
@@ -1123,7 +1123,7 @@ public static class CMaterialDrawDescriptor {
     public const nint m_nFirstMeshlet = 0x2C; // uint32_t
     public const nint m_nNumMeshlets = 0x30; // uint16_t
     public const nint m_indexBuffer = 0xB8; // CRenderBufferBinding
-    public const nint m_material = 0xE0; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    public const nint m_material = 0xE0; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 public static class CMeshletDescriptor {
@@ -1133,19 +1133,19 @@ public static class CMeshletDescriptor {
 
 public static class CModelConfig {
     public const nint m_ConfigName = 0x0; // CUtlString
-    public const nint m_Elements = 0x8; // CUtlVector< CModelConfigElement* >
+    public const nint m_Elements = 0x8; // CUtlVector<CModelConfigElement*>
     public const nint m_bTopLevel = 0x20; // bool
 }
 
 public static class CModelConfigElement {
     public const nint m_ElementName = 0x8; // CUtlString
-    public const nint m_NestedElements = 0x10; // CUtlVector< CModelConfigElement* >
+    public const nint m_NestedElements = 0x10; // CUtlVector<CModelConfigElement*>
 }
 
 public static class CModelConfigElement_AttachedModel {
     public const nint m_InstanceName = 0x48; // CUtlString
     public const nint m_EntityClass = 0x50; // CUtlString
-    public const nint m_hModel = 0x58; // CStrongHandle< InfoForResourceTypeCModel >
+    public const nint m_hModel = 0x58; // CStrongHandle<InfoForResourceTypeCModel>
     public const nint m_vOffset = 0x60; // Vector
     public const nint m_aAngOffset = 0x6C; // QAngle
     public const nint m_AttachmentName = 0x78; // CUtlString
@@ -1169,8 +1169,8 @@ public static class CModelConfigElement_RandomColor {
 }
 
 public static class CModelConfigElement_RandomPick {
-    public const nint m_Choices = 0x48; // CUtlVector< CUtlString >
-    public const nint m_ChoiceWeights = 0x60; // CUtlVector< float32 >
+    public const nint m_Choices = 0x48; // CUtlVector<CUtlString>
+    public const nint m_ChoiceWeights = 0x60; // CUtlVector<float>
 }
 
 public static class CModelConfigElement_SetBodygroup {
@@ -1196,26 +1196,26 @@ public static class CModelConfigElement_SetRenderColor {
 }
 
 public static class CModelConfigElement_UserPick {
-    public const nint m_Choices = 0x48; // CUtlVector< CUtlString >
+    public const nint m_Choices = 0x48; // CUtlVector<CUtlString>
 }
 
 public static class CModelConfigList {
     public const nint m_bHideMaterialGroupInTools = 0x0; // bool
     public const nint m_bHideRenderColorInTools = 0x1; // bool
-    public const nint m_Configs = 0x8; // CUtlVector< CModelConfig* >
+    public const nint m_Configs = 0x8; // CUtlVector<CModelConfig*>
 }
 
 public static class CMoodVData {
-    public const nint m_sModelName = 0x0; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
+    public const nint m_sModelName = 0x0; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
     public const nint m_nMoodType = 0xE0; // MoodType_t
-    public const nint m_animationLayers = 0xE8; // CUtlVector< MoodAnimationLayer_t >
+    public const nint m_animationLayers = 0xE8; // CUtlVector<MoodAnimationLayer_t>
 }
 
 public static class CMorphBundleData {
     public const nint m_flULeftSrc = 0x0; // float
     public const nint m_flVTopSrc = 0x4; // float
-    public const nint m_offsets = 0x8; // CUtlVector< float32 >
-    public const nint m_ranges = 0x20; // CUtlVector< float32 >
+    public const nint m_offsets = 0x8; // CUtlVector<float>
+    public const nint m_ranges = 0x20; // CUtlVector<float>
 }
 
 public static class CMorphConstraint {
@@ -1227,7 +1227,7 @@ public static class CMorphConstraint {
 
 public static class CMorphData {
     public const nint m_name = 0x0; // CUtlString
-    public const nint m_morphRectDatas = 0x8; // CUtlVector< CMorphRectData >
+    public const nint m_morphRectDatas = 0x8; // CUtlVector<CMorphRectData>
 }
 
 public static class CMorphRectData {
@@ -1235,29 +1235,29 @@ public static class CMorphRectData {
     public const nint m_nYTopDst = 0x2; // int16_t
     public const nint m_flUWidthSrc = 0x4; // float
     public const nint m_flVHeightSrc = 0x8; // float
-    public const nint m_bundleDatas = 0x10; // CUtlVector< CMorphBundleData >
+    public const nint m_bundleDatas = 0x10; // CUtlVector<CMorphBundleData>
 }
 
 public static class CMorphSetData {
     public const nint m_nWidth = 0x10; // int32_t
     public const nint m_nHeight = 0x14; // int32_t
-    public const nint m_bundleTypes = 0x18; // CUtlVector< MorphBundleType_t >
-    public const nint m_morphDatas = 0x30; // CUtlVector< CMorphData >
-    public const nint m_pTextureAtlas = 0x48; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    public const nint m_FlexDesc = 0x50; // CUtlVector< CFlexDesc >
-    public const nint m_FlexControllers = 0x68; // CUtlVector< CFlexController >
-    public const nint m_FlexRules = 0x80; // CUtlVector< CFlexRule >
+    public const nint m_bundleTypes = 0x18; // CUtlVector<MorphBundleType_t>
+    public const nint m_morphDatas = 0x30; // CUtlVector<CMorphData>
+    public const nint m_pTextureAtlas = 0x48; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    public const nint m_FlexDesc = 0x50; // CUtlVector<CFlexDesc>
+    public const nint m_FlexControllers = 0x68; // CUtlVector<CFlexController>
+    public const nint m_FlexRules = 0x80; // CUtlVector<CFlexRule>
 }
 
 public static class CMotionDataSet {
-    public const nint m_groups = 0x0; // CUtlVector< CMotionGraphGroup >
+    public const nint m_groups = 0x0; // CUtlVector<CMotionGraphGroup>
     public const nint m_nDimensionCount = 0x18; // int32_t
 }
 
 public static class CMotionGraph {
     public const nint m_paramSpans = 0x10; // CParamSpanUpdater
-    public const nint m_tags = 0x28; // CUtlVector< TagSpan_t >
-    public const nint m_pRootNode = 0x40; // CSmartPtr< CMotionNode >
+    public const nint m_tags = 0x28; // CUtlVector<TagSpan_t>
+    public const nint m_pRootNode = 0x40; // CSmartPtr<CMotionNode>
     public const nint m_nParameterCount = 0x48; // int32_t
     public const nint m_nConfigStartIndex = 0x4C; // int32_t
     public const nint m_nConfigCount = 0x50; // int32_t
@@ -1265,7 +1265,7 @@ public static class CMotionGraph {
 }
 
 public static class CMotionGraphConfig {
-    public const nint m_paramValues = 0x0; // float32[4]
+    public const nint m_paramValues = 0x0; // float[4]
     public const nint m_flDuration = 0x10; // float
     public const nint m_nMotionIndex = 0x14; // MotionIndex
     public const nint m_nSampleStart = 0x18; // int32_t
@@ -1274,20 +1274,20 @@ public static class CMotionGraphConfig {
 
 public static class CMotionGraphGroup {
     public const nint m_searchDB = 0x0; // CMotionSearchDB
-    public const nint m_motionGraphs = 0xB8; // CUtlVector< CSmartPtr< CMotionGraph > >
-    public const nint m_motionGraphConfigs = 0xD0; // CUtlVector< CMotionGraphConfig >
-    public const nint m_sampleToConfig = 0xE8; // CUtlVector< int32 >
+    public const nint m_motionGraphs = 0xB8; // CUtlVector<CSmartPtr<CMotionGraph>>
+    public const nint m_motionGraphConfigs = 0xD0; // CUtlVector<CMotionGraphConfig>
+    public const nint m_sampleToConfig = 0xE8; // CUtlVector<int32_t>
     public const nint m_hIsActiveScript = 0x100; // AnimScriptHandle
 }
 
 public static class CMotionGraphUpdateNode {
-    public const nint m_pMotionGraph = 0x58; // CSmartPtr< CMotionGraph >
+    public const nint m_pMotionGraph = 0x58; // CSmartPtr<CMotionGraph>
 }
 
 public static class CMotionMatchingUpdateNode {
     public const nint m_dataSet = 0x58; // CMotionDataSet
-    public const nint m_metrics = 0x78; // CUtlVector< CSmartPtr< CMotionMetricEvaluator > >
-    public const nint m_weights = 0x90; // CUtlVector< float32 >
+    public const nint m_metrics = 0x78; // CUtlVector<CSmartPtr<CMotionMetricEvaluator>>
+    public const nint m_weights = 0x90; // CUtlVector<float>
     public const nint m_bSearchEveryTick = 0xE0; // bool
     public const nint m_flSearchInterval = 0xE4; // float
     public const nint m_bSearchWhenClipEnds = 0xE8; // bool
@@ -1311,8 +1311,8 @@ public static class CMotionMatchingUpdateNode {
 }
 
 public static class CMotionMetricEvaluator {
-    public const nint m_means = 0x18; // CUtlVector< float32 >
-    public const nint m_standardDeviations = 0x30; // CUtlVector< float32 >
+    public const nint m_means = 0x18; // CUtlVector<float>
+    public const nint m_standardDeviations = 0x30; // CUtlVector<float>
     public const nint m_flWeight = 0x48; // float
     public const nint m_nDimensionStartIndex = 0x4C; // int32_t
 }
@@ -1323,12 +1323,12 @@ public static class CMotionNode {
 }
 
 public static class CMotionNodeBlend1D {
-    public const nint m_blendItems = 0x28; // CUtlVector< MotionBlendItem >
+    public const nint m_blendItems = 0x28; // CUtlVector<MotionBlendItem>
     public const nint m_nParamIndex = 0x40; // int32_t
 }
 
 public static class CMotionNodeSequence {
-    public const nint m_tags = 0x28; // CUtlVector< TagSpan_t >
+    public const nint m_tags = 0x28; // CUtlVector<TagSpan_t>
     public const nint m_hSequence = 0x40; // HSequence
     public const nint m_flPlaybackSpeed = 0x44; // float
 }
@@ -1336,20 +1336,20 @@ public static class CMotionNodeSequence {
 public static class CMotionSearchDB {
     public const nint m_rootNode = 0x0; // CMotionSearchNode
     public const nint m_residualQuantizer = 0x80; // CProductQuantizer
-    public const nint m_codeIndices = 0xA0; // CUtlVector< MotionDBIndex >
+    public const nint m_codeIndices = 0xA0; // CUtlVector<MotionDBIndex>
 }
 
 public static class CMotionSearchNode {
-    public const nint m_children = 0x0; // CUtlVector< CMotionSearchNode* >
+    public const nint m_children = 0x0; // CUtlVector<CMotionSearchNode*>
     public const nint m_quantizer = 0x18; // CVectorQuantizer
-    public const nint m_sampleCodes = 0x38; // CUtlVector< CUtlVector< SampleCode > >
-    public const nint m_sampleIndices = 0x50; // CUtlVector< CUtlVector< int32 > >
-    public const nint m_selectableSamples = 0x68; // CUtlVector< int32 >
+    public const nint m_sampleCodes = 0x38; // CUtlVector<CUtlVector<SampleCode>>
+    public const nint m_sampleIndices = 0x50; // CUtlVector<CUtlVector<int32_t>>
+    public const nint m_selectableSamples = 0x68; // CUtlVector<int32_t>
 }
 
 public static class CMovementComponentUpdater {
-    public const nint m_movementModes = 0x30; // CUtlVector< CMovementMode >
-    public const nint m_motors = 0x48; // CUtlVector< CSmartPtr< CAnimMotorUpdaterBase > >
+    public const nint m_movementModes = 0x30; // CUtlVector<CMovementMode>
+    public const nint m_motors = 0x48; // CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
     public const nint m_facingDamping = 0x60; // CAnimInputDamping
     public const nint m_eDefaultFacingMode = 0x70; // FacingMode
     public const nint m_nDefaultMotorIndex = 0x7C; // int32_t
@@ -1380,11 +1380,11 @@ public static class CMoverUpdateNode {
 }
 
 public static class CParamSpanUpdater {
-    public const nint m_spans = 0x0; // CUtlVector< ParamSpan_t >
+    public const nint m_spans = 0x0; // CUtlVector<ParamSpan_t>
 }
 
 public static class CParticleAnimTag {
-    public const nint m_hParticleSystem = 0x38; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    public const nint m_hParticleSystem = 0x38; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     public const nint m_particleSystemName = 0x40; // CUtlString
     public const nint m_configName = 0x48; // CUtlString
     public const nint m_bDetachFromOwner = 0x50; // bool
@@ -1406,7 +1406,7 @@ public static class CPathHelperUpdateNode {
 }
 
 public static class CPathMetricEvaluator {
-    public const nint m_pathTimeSamples = 0x50; // CUtlVector< float32 >
+    public const nint m_pathTimeSamples = 0x50; // CUtlVector<float>
     public const nint m_flDistance = 0x68; // float
     public const nint m_bExtrapolateMovement = 0x6C; // bool
     public const nint m_flMinExtrapolationSpeed = 0x70; // float
@@ -1456,7 +1456,7 @@ public static class CPhysSurfacePropertiesSoundNames {
 }
 
 public static class CPlayerInputAnimMotorUpdater {
-    public const nint m_sampleTimes = 0x20; // CUtlVector< float32 >
+    public const nint m_sampleTimes = 0x20; // CUtlVector<float>
     public const nint m_flSpringConstant = 0x3C; // float
     public const nint m_flAnticipationDistance = 0x40; // float
     public const nint m_hAnticipationPosParam = 0x44; // CAnimParamHandle
@@ -1470,7 +1470,7 @@ public static class CPoseHandle {
 }
 
 public static class CProductQuantizer {
-    public const nint m_subQuantizers = 0x0; // CUtlVector< CVectorQuantizer >
+    public const nint m_subQuantizers = 0x0; // CUtlVector<CVectorQuantizer>
     public const nint m_nDimensions = 0x18; // int32_t
 }
 
@@ -1489,10 +1489,10 @@ public static class CRagdollAnimTag {
 }
 
 public static class CRagdollComponentUpdater {
-    public const nint m_ragdollNodePaths = 0x30; // CUtlVector< CAnimNodePath >
-    public const nint m_boneIndices = 0x48; // CUtlVector< int32 >
-    public const nint m_boneNames = 0x60; // CUtlVector< CUtlString >
-    public const nint m_weightLists = 0x78; // CUtlVector< WeightList >
+    public const nint m_ragdollNodePaths = 0x30; // CUtlVector<CAnimNodePath>
+    public const nint m_boneIndices = 0x48; // CUtlVector<int32_t>
+    public const nint m_boneNames = 0x60; // CUtlVector<CUtlString>
+    public const nint m_weightLists = 0x78; // CUtlVector<WeightList>
     public const nint m_flSpringFrequencyMin = 0x90; // float
     public const nint m_flSpringFrequencyMax = 0x94; // float
     public const nint m_flMaxStretch = 0x98; // float
@@ -1509,31 +1509,31 @@ public static class CRenderBufferBinding {
 }
 
 public static class CRenderMesh {
-    public const nint m_sceneObjects = 0x10; // CUtlVectorFixedGrowable< CSceneObjectData >
-    public const nint m_constraints = 0xA0; // CUtlVector< CBaseConstraint* >
+    public const nint m_sceneObjects = 0x10; // CUtlVectorFixedGrowable<CSceneObjectData>
+    public const nint m_constraints = 0xA0; // CUtlVector<CBaseConstraint*>
     public const nint m_skeleton = 0xB8; // CRenderSkeleton
 }
 
 public static class CRenderSkeleton {
-    public const nint m_bones = 0x0; // CUtlVector< RenderSkeletonBone_t >
-    public const nint m_boneParents = 0x30; // CUtlVector< int32 >
+    public const nint m_bones = 0x0; // CUtlVector<RenderSkeletonBone_t>
+    public const nint m_boneParents = 0x30; // CUtlVector<int32_t>
     public const nint m_nBoneWeightCount = 0x48; // int32_t
 }
 
 public static class CSceneObjectData {
     public const nint m_vMinBounds = 0x0; // Vector
     public const nint m_vMaxBounds = 0xC; // Vector
-    public const nint m_drawCalls = 0x18; // CUtlVector< CMaterialDrawDescriptor >
-    public const nint m_drawBounds = 0x30; // CUtlVector< AABB_t >
-    public const nint m_meshlets = 0x48; // CUtlVector< CMeshletDescriptor >
+    public const nint m_drawCalls = 0x18; // CUtlVector<CMaterialDrawDescriptor>
+    public const nint m_drawBounds = 0x30; // CUtlVector<AABB_t>
+    public const nint m_meshlets = 0x48; // CUtlVector<CMeshletDescriptor>
     public const nint m_vTintColor = 0x60; // Vector4D
 }
 
 public static class CSelectorUpdateNode {
-    public const nint m_children = 0x58; // CUtlVector< CAnimUpdateNodeRef >
-    public const nint m_tags = 0x70; // CUtlVector< int8 >
+    public const nint m_children = 0x58; // CUtlVector<CAnimUpdateNodeRef>
+    public const nint m_tags = 0x70; // CUtlVector<int8_t>
     public const nint m_blendCurve = 0x8C; // CBlendCurve
-    public const nint m_flBlendTime = 0x94; // CAnimValue< float32 >
+    public const nint m_flBlendTime = 0x94; // CAnimValue<float>
     public const nint m_hParameter = 0x9C; // CAnimParamHandle
     public const nint m_eTagBehavior = 0xA0; // SelectorTagBehavior_t
     public const nint m_bResetOnChange = 0xA4; // bool
@@ -1563,10 +1563,10 @@ public static class CSeqAutoLayerFlag {
 
 public static class CSeqBoneMaskList {
     public const nint m_sName = 0x0; // CBufferString
-    public const nint m_nLocalBoneArray = 0x10; // CUtlVector< int16 >
-    public const nint m_flBoneWeightArray = 0x28; // CUtlVector< float32 >
+    public const nint m_nLocalBoneArray = 0x10; // CUtlVector<int16_t>
+    public const nint m_flBoneWeightArray = 0x28; // CUtlVector<float>
     public const nint m_flDefaultMorphCtrlWeight = 0x40; // float
-    public const nint m_morphCtrlWeightArray = 0x48; // CUtlVector< CUtlPair< CBufferString, float32 > >
+    public const nint m_morphCtrlWeightArray = 0x48; // CUtlVector<CUtlPair<CBufferString,float>>
 }
 
 public static class CSeqCmdLayer {
@@ -1590,10 +1590,10 @@ public static class CSeqCmdSeqDesc {
     public const nint m_flFPS = 0x28; // float
     public const nint m_nSubCycles = 0x2C; // int16_t
     public const nint m_numLocalResults = 0x2E; // int16_t
-    public const nint m_cmdLayerArray = 0x30; // CUtlVector< CSeqCmdLayer >
-    public const nint m_eventArray = 0x48; // CUtlVector< CAnimEventDefinition >
-    public const nint m_activityArray = 0x60; // CUtlVector< CAnimActivity >
-    public const nint m_poseSettingArray = 0x78; // CUtlVector< CSeqPoseSetting >
+    public const nint m_cmdLayerArray = 0x30; // CUtlVector<CSeqCmdLayer>
+    public const nint m_eventArray = 0x48; // CUtlVector<CAnimEventDefinition>
+    public const nint m_activityArray = 0x60; // CUtlVector<CAnimActivity>
+    public const nint m_poseSettingArray = 0x78; // CUtlVector<CSeqPoseSetting>
 }
 
 public static class CSeqIKLock {
@@ -1605,11 +1605,11 @@ public static class CSeqIKLock {
 
 public static class CSeqMultiFetch {
     public const nint m_flags = 0x0; // CSeqMultiFetchFlag
-    public const nint m_localReferenceArray = 0x8; // CUtlVector< int16 >
-    public const nint m_nGroupSize = 0x20; // int32[2]
-    public const nint m_nLocalPose = 0x28; // int32[2]
-    public const nint m_poseKeyArray0 = 0x30; // CUtlVector< float32 >
-    public const nint m_poseKeyArray1 = 0x48; // CUtlVector< float32 >
+    public const nint m_localReferenceArray = 0x8; // CUtlVector<int16_t>
+    public const nint m_nGroupSize = 0x20; // int32_t[2]
+    public const nint m_nLocalPose = 0x28; // int32_t[2]
+    public const nint m_poseKeyArray0 = 0x30; // CUtlVector<float>
+    public const nint m_poseKeyArray1 = 0x48; // CUtlVector<float>
     public const nint m_nLocalCyclePoseParameter = 0x60; // int32_t
     public const nint m_bCalculatePoseParameters = 0x64; // bool
 }
@@ -1647,21 +1647,21 @@ public static class CSeqS1SeqDesc {
     public const nint m_flags = 0x10; // CSeqSeqDescFlag
     public const nint m_fetch = 0x20; // CSeqMultiFetch
     public const nint m_nLocalWeightlist = 0x88; // int32_t
-    public const nint m_autoLayerArray = 0x90; // CUtlVector< CSeqAutoLayer >
-    public const nint m_IKLockArray = 0xA8; // CUtlVector< CSeqIKLock >
+    public const nint m_autoLayerArray = 0x90; // CUtlVector<CSeqAutoLayer>
+    public const nint m_IKLockArray = 0xA8; // CUtlVector<CSeqIKLock>
     public const nint m_transition = 0xC0; // CSeqTransition
     public const nint m_SequenceKeys = 0xC8; // KeyValues3
     public const nint m_LegacyKeyValueText = 0xD8; // CBufferString
-    public const nint m_activityArray = 0xE8; // CUtlVector< CAnimActivity >
-    public const nint m_footMotion = 0x100; // CUtlVector< CFootMotion >
+    public const nint m_activityArray = 0xE8; // CUtlVector<CAnimActivity>
+    public const nint m_footMotion = 0x100; // CUtlVector<CFootMotion>
 }
 
 public static class CSeqScaleSet {
     public const nint m_sName = 0x0; // CBufferString
     public const nint m_bRootOffset = 0x10; // bool
     public const nint m_vRootOffset = 0x14; // Vector
-    public const nint m_nLocalBoneArray = 0x20; // CUtlVector< int16 >
-    public const nint m_flBoneScaleArray = 0x38; // CUtlVector< float32 >
+    public const nint m_nLocalBoneArray = 0x20; // CUtlVector<int16_t>
+    public const nint m_flBoneScaleArray = 0x38; // CUtlVector<float>
 }
 
 public static class CSeqSeqDescFlag {
@@ -1684,7 +1684,7 @@ public static class CSeqSynthAnimDesc {
     public const nint m_transition = 0x1C; // CSeqTransition
     public const nint m_nLocalBaseReference = 0x24; // int16_t
     public const nint m_nLocalBoneMask = 0x26; // int16_t
-    public const nint m_activityArray = 0x28; // CUtlVector< CAnimActivity >
+    public const nint m_activityArray = 0x28; // CUtlVector<CAnimActivity>
 }
 
 public static class CSeqTransition {
@@ -1699,23 +1699,23 @@ public static class CSequenceFinishedAnimTag {
 public static class CSequenceGroupData {
     public const nint m_sName = 0x10; // CBufferString
     public const nint m_nFlags = 0x20; // uint32_t
-    public const nint m_localSequenceNameArray = 0x28; // CUtlVector< CBufferString >
-    public const nint m_localS1SeqDescArray = 0x40; // CUtlVector< CSeqS1SeqDesc >
-    public const nint m_localMultiSeqDescArray = 0x58; // CUtlVector< CSeqS1SeqDesc >
-    public const nint m_localSynthAnimDescArray = 0x70; // CUtlVector< CSeqSynthAnimDesc >
-    public const nint m_localCmdSeqDescArray = 0x88; // CUtlVector< CSeqCmdSeqDesc >
-    public const nint m_localBoneMaskArray = 0xA0; // CUtlVector< CSeqBoneMaskList >
-    public const nint m_localScaleSetArray = 0xB8; // CUtlVector< CSeqScaleSet >
-    public const nint m_localBoneNameArray = 0xD0; // CUtlVector< CBufferString >
+    public const nint m_localSequenceNameArray = 0x28; // CUtlVector<CBufferString>
+    public const nint m_localS1SeqDescArray = 0x40; // CUtlVector<CSeqS1SeqDesc>
+    public const nint m_localMultiSeqDescArray = 0x58; // CUtlVector<CSeqS1SeqDesc>
+    public const nint m_localSynthAnimDescArray = 0x70; // CUtlVector<CSeqSynthAnimDesc>
+    public const nint m_localCmdSeqDescArray = 0x88; // CUtlVector<CSeqCmdSeqDesc>
+    public const nint m_localBoneMaskArray = 0xA0; // CUtlVector<CSeqBoneMaskList>
+    public const nint m_localScaleSetArray = 0xB8; // CUtlVector<CSeqScaleSet>
+    public const nint m_localBoneNameArray = 0xD0; // CUtlVector<CBufferString>
     public const nint m_localNodeName = 0xE8; // CBufferString
-    public const nint m_localPoseParamArray = 0xF8; // CUtlVector< CSeqPoseParamDesc >
+    public const nint m_localPoseParamArray = 0xF8; // CUtlVector<CSeqPoseParamDesc>
     public const nint m_keyValues = 0x110; // KeyValues3
-    public const nint m_localIKAutoplayLockArray = 0x120; // CUtlVector< CSeqIKLock >
+    public const nint m_localIKAutoplayLockArray = 0x120; // CUtlVector<CSeqIKLock>
 }
 
 public static class CSequenceUpdateNode {
     public const nint m_paramSpans = 0x60; // CParamSpanUpdater
-    public const nint m_tags = 0x78; // CUtlVector< TagSpan_t >
+    public const nint m_tags = 0x78; // CUtlVector<TagSpan_t>
     public const nint m_hSequence = 0x94; // HSequence
     public const nint m_playbackSpeed = 0x98; // float
     public const nint m_duration = 0x9C; // float
@@ -1733,7 +1733,7 @@ public static class CSetParameterActionUpdater {
 }
 
 public static class CSingleFrameUpdateNode {
-    public const nint m_actions = 0x58; // CUtlVector< CSmartPtr< CAnimActionUpdater > >
+    public const nint m_actions = 0x58; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
     public const nint m_hPoseCacheHandle = 0x70; // CPoseHandle
     public const nint m_hSequence = 0x74; // HSequence
     public const nint m_flCycle = 0x78; // float
@@ -1758,7 +1758,7 @@ public static class CSlowDownOnSlopesUpdateNode {
 }
 
 public static class CSolveIKChainUpdateNode {
-    public const nint m_targetHandles = 0x68; // CUtlVector< CSolveIKTargetHandle_t >
+    public const nint m_targetHandles = 0x68; // CUtlVector<CSolveIKTargetHandle_t>
     public const nint m_opFixedData = 0x80; // SolveIKChainPoseOpFixedSettings_t
 }
 
@@ -1772,7 +1772,7 @@ public static class CSpeedScaleUpdateNode {
 }
 
 public static class CStanceOverrideUpdateNode {
-    public const nint m_footStanceInfo = 0x68; // CUtlVector< StanceInfo_t >
+    public const nint m_footStanceInfo = 0x68; // CUtlVector<StanceInfo_t>
     public const nint m_pStanceSourceNode = 0x80; // CAnimUpdateNodeRef
     public const nint m_hParameter = 0x90; // CAnimParamHandle
     public const nint m_eMode = 0x94; // StanceOverrideMode
@@ -1783,7 +1783,7 @@ public static class CStanceScaleUpdateNode {
 }
 
 public static class CStateActionUpdater {
-    public const nint m_pAction = 0x0; // CSmartPtr< CAnimActionUpdater >
+    public const nint m_pAction = 0x0; // CSmartPtr<CAnimActionUpdater>
     public const nint m_eBehavior = 0x8; // StateActionBehavior
 }
 
@@ -1793,8 +1793,8 @@ public static class CStateMachineComponentUpdater {
 
 public static class CStateMachineUpdateNode {
     public const nint m_stateMachine = 0x68; // CAnimStateMachineUpdater
-    public const nint m_stateData = 0xC0; // CUtlVector< CStateNodeStateData >
-    public const nint m_transitionData = 0xD8; // CUtlVector< CStateNodeTransitionData >
+    public const nint m_stateData = 0xC0; // CUtlVector<CStateNodeStateData>
+    public const nint m_transitionData = 0xD8; // CUtlVector<CStateNodeTransitionData>
     public const nint m_bBlockWaningTags = 0xF4; // bool
     public const nint m_bLockStateWhenWaning = 0xF5; // bool
 }
@@ -1806,8 +1806,8 @@ public static class CStateNodeStateData {
 
 public static class CStateNodeTransitionData {
     public const nint m_curve = 0x0; // CBlendCurve
-    public const nint m_blendDuration = 0x8; // CAnimValue< float32 >
-    public const nint m_resetCycleValue = 0x10; // CAnimValue< float32 >
+    public const nint m_blendDuration = 0x8; // CAnimValue<float>
+    public const nint m_resetCycleValue = 0x10; // CAnimValue<float>
     public const nint m_bReset = 0x0; // bitfield:1
     public const nint m_resetCycleOption = 0x0; // bitfield:3
 }
@@ -1815,8 +1815,8 @@ public static class CStateNodeTransitionData {
 public static class CStateUpdateData {
     public const nint m_name = 0x0; // CUtlString
     public const nint m_hScript = 0x8; // AnimScriptHandle
-    public const nint m_transitionIndices = 0x10; // CUtlVector< int32 >
-    public const nint m_actions = 0x28; // CUtlVector< CStateActionUpdater >
+    public const nint m_transitionIndices = 0x10; // CUtlVector<int32_t>
+    public const nint m_actions = 0x28; // CUtlVector<CStateActionUpdater>
     public const nint m_stateID = 0x40; // AnimStateID
     public const nint m_bIsStartState = 0x0; // bitfield:1
     public const nint m_bIsEndState = 0x0; // bitfield:1
@@ -1824,13 +1824,13 @@ public static class CStateUpdateData {
 }
 
 public static class CStaticPoseCache {
-    public const nint m_poses = 0x10; // CUtlVector< CCachedPose >
+    public const nint m_poses = 0x10; // CUtlVector<CCachedPose>
     public const nint m_nBoneCount = 0x28; // int32_t
     public const nint m_nMorphCount = 0x2C; // int32_t
 }
 
 public static class CStepsRemainingMetricEvaluator {
-    public const nint m_footIndices = 0x50; // CUtlVector< int32 >
+    public const nint m_footIndices = 0x50; // CUtlVector<int32_t>
     public const nint m_flMinStepsRemaining = 0x68; // float
 }
 
@@ -1896,7 +1896,7 @@ public static class CUnaryUpdateNode {
 }
 
 public static class CVPhysXSurfacePropertiesList {
-    public const nint m_surfacePropertiesList = 0x0; // CUtlVector< CPhysSurfaceProperties* >
+    public const nint m_surfacePropertiesList = 0x0; // CUtlVector<CPhysSurfaceProperties*>
 }
 
 public static class CVRInputComponentUpdater {
@@ -1917,7 +1917,7 @@ public static class CVectorAnimParameter {
 }
 
 public static class CVectorQuantizer {
-    public const nint m_centroidVectors = 0x0; // CUtlVector< float32 >
+    public const nint m_centroidVectors = 0x0; // CUtlVector<float>
     public const nint m_nCentroids = 0x18; // int32_t
     public const nint m_nDimensions = 0x1C; // int32_t
 }
@@ -1928,8 +1928,8 @@ public static class CVirtualAnimParameter {
 }
 
 public static class CVrSkeletalInputSettings {
-    public const nint m_wristBones = 0x0; // CUtlVector< CWristBone >
-    public const nint m_fingers = 0x18; // CUtlVector< CFingerChain >
+    public const nint m_wristBones = 0x0; // CUtlVector<CWristBone>
+    public const nint m_fingers = 0x18; // CUtlVector<CFingerChain>
     public const nint m_name = 0x30; // CUtlString
     public const nint m_outerKnuckle1 = 0x38; // CUtlString
     public const nint m_outerKnuckle2 = 0x40; // CUtlString
@@ -1976,8 +1976,8 @@ public static class FingerBone_t {
 }
 
 public static class FingerChain_t {
-    public const nint m_targets = 0x0; // CUtlVector< FingerSource_t >
-    public const nint m_bones = 0x18; // CUtlVector< FingerBone_t >
+    public const nint m_targets = 0x0; // CUtlVector<FingerSource_t>
+    public const nint m_bones = 0x18; // CUtlVector<FingerBone_t>
     public const nint m_vTipOffset = 0x30; // Vector
     public const nint m_vSplayHingeAxis = 0x3C; // Vector
     public const nint m_tipParentBoneIndex = 0x48; // int32_t
@@ -2027,7 +2027,7 @@ public static class FootFixedSettings {
 }
 
 public static class FootLockPoseOpFixedSettings {
-    public const nint m_footInfo = 0x0; // CUtlVector< FootFixedData_t >
+    public const nint m_footInfo = 0x0; // CUtlVector<FootFixedData_t>
     public const nint m_hipDampingSettings = 0x18; // CAnimInputDamping
     public const nint m_nHipBoneIndex = 0x28; // int32_t
     public const nint m_ikSolverType = 0x2C; // IKSolverType
@@ -2048,7 +2048,7 @@ public static class FootLockPoseOpFixedSettings {
 }
 
 public static class FootPinningPoseOpFixedData_t {
-    public const nint m_footInfo = 0x0; // CUtlVector< FootFixedData_t >
+    public const nint m_footInfo = 0x0; // CUtlVector<FootFixedData_t>
     public const nint m_flBlendTime = 0x18; // float
     public const nint m_flLockBreakDistance = 0x1C; // float
     public const nint m_flMaxLegTwist = 0x20; // float
@@ -2058,7 +2058,7 @@ public static class FootPinningPoseOpFixedData_t {
 }
 
 public static class FootStepTrigger {
-    public const nint m_tags = 0x0; // CUtlVector< int32 >
+    public const nint m_tags = 0x0; // CUtlVector<int32_t>
     public const nint m_nFootIndex = 0x18; // int32_t
     public const nint m_triggerPhase = 0x1C; // StepPhase
 }
@@ -2113,7 +2113,7 @@ public static class IKTargetSettings_t {
 }
 
 public static class JiggleBoneSettingsList_t {
-    public const nint m_boneSettings = 0x0; // CUtlVector< JiggleBoneSettings_t >
+    public const nint m_boneSettings = 0x0; // CUtlVector<JiggleBoneSettings_t>
 }
 
 public static class JiggleBoneSettings_t {
@@ -2134,7 +2134,7 @@ public static class LookAtBone_t {
 public static class LookAtOpFixedSettings_t {
     public const nint m_attachment = 0x0; // CAnimAttachment
     public const nint m_damping = 0x80; // CAnimInputDamping
-    public const nint m_bones = 0x90; // CUtlVector< LookAtBone_t >
+    public const nint m_bones = 0x90; // CUtlVector<LookAtBone_t>
     public const nint m_flYawLimit = 0xA8; // float
     public const nint m_flPitchLimit = 0xAC; // float
     public const nint m_flHysteresisInnerAngle = 0xB0; // float
@@ -2147,7 +2147,7 @@ public static class LookAtOpFixedSettings_t {
 
 public static class MaterialGroup_t {
     public const nint m_name = 0x0; // CUtlString
-    public const nint m_materials = 0x8; // CUtlVector< CStrongHandle< InfoForResourceTypeIMaterial2 > >
+    public const nint m_materials = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeIMaterial2>>
 }
 
 public static class ModelBoneFlexDriverControl_t {
@@ -2161,24 +2161,24 @@ public static class ModelBoneFlexDriverControl_t {
 public static class ModelBoneFlexDriver_t {
     public const nint m_boneName = 0x0; // CUtlString
     public const nint m_boneNameToken = 0x8; // uint32_t
-    public const nint m_controls = 0x10; // CUtlVector< ModelBoneFlexDriverControl_t >
+    public const nint m_controls = 0x10; // CUtlVector<ModelBoneFlexDriverControl_t>
 }
 
 public static class ModelSkeletonData_t {
-    public const nint m_boneName = 0x0; // CUtlVector< CUtlString >
-    public const nint m_nParent = 0x18; // CUtlVector< int16 >
-    public const nint m_boneSphere = 0x30; // CUtlVector< float32 >
-    public const nint m_nFlag = 0x48; // CUtlVector< uint32 >
-    public const nint m_bonePosParent = 0x60; // CUtlVector< Vector >
-    public const nint m_boneRotParent = 0x78; // CUtlVector< QuaternionStorage >
-    public const nint m_boneScaleParent = 0x90; // CUtlVector< float32 >
+    public const nint m_boneName = 0x0; // CUtlVector<CUtlString>
+    public const nint m_nParent = 0x18; // CUtlVector<int16_t>
+    public const nint m_boneSphere = 0x30; // CUtlVector<float>
+    public const nint m_nFlag = 0x48; // CUtlVector<uint32_t>
+    public const nint m_bonePosParent = 0x60; // CUtlVector<Vector>
+    public const nint m_boneRotParent = 0x78; // CUtlVector<QuaternionStorage>
+    public const nint m_boneScaleParent = 0x90; // CUtlVector<float>
 }
 
 public static class MoodAnimationLayer_t {
     public const nint m_sName = 0x0; // CUtlString
     public const nint m_bActiveListening = 0x8; // bool
     public const nint m_bActiveTalking = 0x9; // bool
-    public const nint m_layerAnimations = 0x10; // CUtlVector< MoodAnimation_t >
+    public const nint m_layerAnimations = 0x10; // CUtlVector<MoodAnimation_t>
     public const nint m_flIntensity = 0x28; // CRangeFloat
     public const nint m_flDurationScale = 0x30; // CRangeFloat
     public const nint m_bScaleWithInts = 0x38; // bool
@@ -2195,7 +2195,7 @@ public static class MoodAnimation_t {
 }
 
 public static class MotionBlendItem {
-    public const nint m_pChild = 0x0; // CSmartPtr< CMotionNode >
+    public const nint m_pChild = 0x0; // CSmartPtr<CMotionNode>
     public const nint m_flKeyValue = 0x8; // float
 }
 
@@ -2214,7 +2214,7 @@ public static class ParamSpanSample_t {
 }
 
 public static class ParamSpan_t {
-    public const nint m_samples = 0x0; // CUtlVector< ParamSpanSample_t >
+    public const nint m_samples = 0x0; // CUtlVector<ParamSpanSample_t>
     public const nint m_hParam = 0x18; // CAnimParamHandle
     public const nint m_eParamType = 0x1A; // AnimParamType_t
     public const nint m_flStartCycle = 0x1C; // float
@@ -2229,34 +2229,34 @@ public static class PermModelDataAnimatedMaterialAttribute_t {
 public static class PermModelData_t {
     public const nint m_name = 0x0; // CUtlString
     public const nint m_modelInfo = 0x8; // PermModelInfo_t
-    public const nint m_ExtParts = 0x60; // CUtlVector< PermModelExtPart_t >
-    public const nint m_refMeshes = 0x78; // CUtlVector< CStrongHandle< InfoForResourceTypeCRenderMesh > >
-    public const nint m_refMeshGroupMasks = 0x90; // CUtlVector< uint64 >
-    public const nint m_refPhysGroupMasks = 0xA8; // CUtlVector< uint64 >
-    public const nint m_refLODGroupMasks = 0xC0; // CUtlVector< uint8 >
-    public const nint m_lodGroupSwitchDistances = 0xD8; // CUtlVector< float32 >
-    public const nint m_refPhysicsData = 0xF0; // CUtlVector< CStrongHandle< InfoForResourceTypeCPhysAggregateData > >
-    public const nint m_refPhysicsHitboxData = 0x108; // CUtlVector< CStrongHandle< InfoForResourceTypeCPhysAggregateData > >
-    public const nint m_refAnimGroups = 0x120; // CUtlVector< CStrongHandle< InfoForResourceTypeCAnimationGroup > >
-    public const nint m_refSequenceGroups = 0x138; // CUtlVector< CStrongHandle< InfoForResourceTypeCSequenceGroupData > >
-    public const nint m_meshGroups = 0x150; // CUtlVector< CUtlString >
-    public const nint m_materialGroups = 0x168; // CUtlVector< MaterialGroup_t >
+    public const nint m_ExtParts = 0x60; // CUtlVector<PermModelExtPart_t>
+    public const nint m_refMeshes = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCRenderMesh>>
+    public const nint m_refMeshGroupMasks = 0x90; // CUtlVector<uint64_t>
+    public const nint m_refPhysGroupMasks = 0xA8; // CUtlVector<uint64_t>
+    public const nint m_refLODGroupMasks = 0xC0; // CUtlVector<uint8_t>
+    public const nint m_lodGroupSwitchDistances = 0xD8; // CUtlVector<float>
+    public const nint m_refPhysicsData = 0xF0; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
+    public const nint m_refPhysicsHitboxData = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
+    public const nint m_refAnimGroups = 0x120; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+    public const nint m_refSequenceGroups = 0x138; // CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
+    public const nint m_meshGroups = 0x150; // CUtlVector<CUtlString>
+    public const nint m_materialGroups = 0x168; // CUtlVector<MaterialGroup_t>
     public const nint m_nDefaultMeshGroupMask = 0x180; // uint64_t
     public const nint m_modelSkeleton = 0x188; // ModelSkeletonData_t
-    public const nint m_remappingTable = 0x230; // CUtlVector< int16 >
-    public const nint m_remappingTableStarts = 0x248; // CUtlVector< uint16 >
-    public const nint m_boneFlexDrivers = 0x260; // CUtlVector< ModelBoneFlexDriver_t >
+    public const nint m_remappingTable = 0x230; // CUtlVector<int16_t>
+    public const nint m_remappingTableStarts = 0x248; // CUtlVector<uint16_t>
+    public const nint m_boneFlexDrivers = 0x260; // CUtlVector<ModelBoneFlexDriver_t>
     public const nint m_pModelConfigList = 0x278; // CModelConfigList*
-    public const nint m_BodyGroupsHiddenInTools = 0x280; // CUtlVector< CUtlString >
-    public const nint m_refAnimIncludeModels = 0x298; // CUtlVector< CStrongHandle< InfoForResourceTypeCModel > >
-    public const nint m_AnimatedMaterialAttributes = 0x2B0; // CUtlVector< PermModelDataAnimatedMaterialAttribute_t >
+    public const nint m_BodyGroupsHiddenInTools = 0x280; // CUtlVector<CUtlString>
+    public const nint m_refAnimIncludeModels = 0x298; // CUtlVector<CStrongHandle<InfoForResourceTypeCModel>>
+    public const nint m_AnimatedMaterialAttributes = 0x2B0; // CUtlVector<PermModelDataAnimatedMaterialAttribute_t>
 }
 
 public static class PermModelExtPart_t {
     public const nint m_Transform = 0x0; // CTransform
     public const nint m_Name = 0x20; // CUtlString
     public const nint m_nParent = 0x28; // int32_t
-    public const nint m_refModel = 0x30; // CStrongHandle< InfoForResourceTypeCModel >
+    public const nint m_refModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
 public static class PermModelInfo_t {
@@ -2273,12 +2273,12 @@ public static class PermModelInfo_t {
 }
 
 public static class PhysSoftbodyDesc_t {
-    public const nint m_ParticleBoneHash = 0x0; // CUtlVector< uint32 >
-    public const nint m_Particles = 0x18; // CUtlVector< RnSoftbodyParticle_t >
-    public const nint m_Springs = 0x30; // CUtlVector< RnSoftbodySpring_t >
-    public const nint m_Capsules = 0x48; // CUtlVector< RnSoftbodyCapsule_t >
-    public const nint m_InitPose = 0x60; // CUtlVector< CTransform >
-    public const nint m_ParticleBoneName = 0x78; // CUtlVector< CUtlString >
+    public const nint m_ParticleBoneHash = 0x0; // CUtlVector<uint32_t>
+    public const nint m_Particles = 0x18; // CUtlVector<RnSoftbodyParticle_t>
+    public const nint m_Springs = 0x30; // CUtlVector<RnSoftbodySpring_t>
+    public const nint m_Capsules = 0x48; // CUtlVector<RnSoftbodyCapsule_t>
+    public const nint m_InitPose = 0x60; // CUtlVector<CTransform>
+    public const nint m_ParticleBoneName = 0x78; // CUtlVector<CUtlString>
 }
 
 public static class RenderSkeletonBone_t {
@@ -2290,20 +2290,20 @@ public static class RenderSkeletonBone_t {
 }
 
 public static class SampleCode {
-    public const nint m_subCode = 0x0; // uint8[8]
+    public const nint m_subCode = 0x0; // uint8_t[8]
 }
 
 public static class ScriptInfo_t {
     public const nint m_code = 0x0; // CUtlString
-    public const nint m_paramsModified = 0x8; // CUtlVector< CAnimParamHandle >
-    public const nint m_proxyReadParams = 0x20; // CUtlVector< int32 >
-    public const nint m_proxyWriteParams = 0x38; // CUtlVector< int32 >
+    public const nint m_paramsModified = 0x8; // CUtlVector<CAnimParamHandle>
+    public const nint m_proxyReadParams = 0x20; // CUtlVector<int32_t>
+    public const nint m_proxyWriteParams = 0x38; // CUtlVector<int32_t>
     public const nint m_eScriptType = 0x50; // AnimScriptType
 }
 
 public static class SkeletalInputOpFixedSettings_t {
-    public const nint m_wristBones = 0x0; // CUtlVector< WristBone_t >
-    public const nint m_fingers = 0x18; // CUtlVector< FingerChain_t >
+    public const nint m_wristBones = 0x0; // CUtlVector<WristBone_t>
+    public const nint m_fingers = 0x18; // CUtlVector<FingerChain_t>
     public const nint m_outerKnuckle1 = 0x30; // int32_t
     public const nint m_outerKnuckle2 = 0x34; // int32_t
     public const nint m_eHand = 0x38; // AnimVRHand_t
@@ -2319,7 +2319,7 @@ public static class SkeletonBoneBounds_t {
 }
 
 public static class SolveIKChainPoseOpFixedSettings_t {
-    public const nint m_ChainsToSolveData = 0x0; // CUtlVector< ChainToSolveData_t >
+    public const nint m_ChainsToSolveData = 0x0; // CUtlVector<ChainToSolveData_t>
     public const nint m_bMatchTargetOrientation = 0x18; // bool
 }
 
@@ -2360,19 +2360,19 @@ public static class TwoBoneIKSettings_t {
 public static class VPhysXAggregateData_t {
     public const nint m_nFlags = 0x0; // uint16_t
     public const nint m_nRefCounter = 0x2; // uint16_t
-    public const nint m_bonesHash = 0x8; // CUtlVector< uint32 >
-    public const nint m_boneNames = 0x20; // CUtlVector< CUtlString >
-    public const nint m_indexNames = 0x38; // CUtlVector< uint16 >
-    public const nint m_indexHash = 0x50; // CUtlVector< uint16 >
-    public const nint m_bindPose = 0x68; // CUtlVector< matrix3x4a_t >
-    public const nint m_parts = 0x80; // CUtlVector< VPhysXBodyPart_t >
-    public const nint m_constraints2 = 0x98; // CUtlVector< VPhysXConstraint2_t >
-    public const nint m_joints = 0xB0; // CUtlVector< VPhysXJoint_t >
+    public const nint m_bonesHash = 0x8; // CUtlVector<uint32_t>
+    public const nint m_boneNames = 0x20; // CUtlVector<CUtlString>
+    public const nint m_indexNames = 0x38; // CUtlVector<uint16_t>
+    public const nint m_indexHash = 0x50; // CUtlVector<uint16_t>
+    public const nint m_bindPose = 0x68; // CUtlVector<matrix3x4a_t>
+    public const nint m_parts = 0x80; // CUtlVector<VPhysXBodyPart_t>
+    public const nint m_constraints2 = 0x98; // CUtlVector<VPhysXConstraint2_t>
+    public const nint m_joints = 0xB0; // CUtlVector<VPhysXJoint_t>
     public const nint m_pFeModel = 0xC8; // PhysFeModelDesc_t*
-    public const nint m_boneParents = 0xD0; // CUtlVector< uint16 >
-    public const nint m_surfacePropertyHashes = 0xE8; // CUtlVector< uint32 >
-    public const nint m_collisionAttributes = 0x100; // CUtlVector< VPhysXCollisionAttributes_t >
-    public const nint m_debugPartNames = 0x118; // CUtlVector< CUtlString >
+    public const nint m_boneParents = 0xD0; // CUtlVector<uint16_t>
+    public const nint m_surfacePropertyHashes = 0xE8; // CUtlVector<uint32_t>
+    public const nint m_collisionAttributes = 0x100; // CUtlVector<VPhysXCollisionAttributes_t>
+    public const nint m_debugPartNames = 0x118; // CUtlVector<CUtlString>
     public const nint m_embeddedKeyvalues = 0x130; // CUtlString
 }
 
@@ -2391,13 +2391,13 @@ public static class VPhysXBodyPart_t {
 
 public static class VPhysXCollisionAttributes_t {
     public const nint m_CollisionGroup = 0x0; // uint32_t
-    public const nint m_InteractAs = 0x8; // CUtlVector< uint32 >
-    public const nint m_InteractWith = 0x20; // CUtlVector< uint32 >
-    public const nint m_InteractExclude = 0x38; // CUtlVector< uint32 >
+    public const nint m_InteractAs = 0x8; // CUtlVector<uint32_t>
+    public const nint m_InteractWith = 0x20; // CUtlVector<uint32_t>
+    public const nint m_InteractExclude = 0x38; // CUtlVector<uint32_t>
     public const nint m_CollisionGroupString = 0x50; // CUtlString
-    public const nint m_InteractAsStrings = 0x58; // CUtlVector< CUtlString >
-    public const nint m_InteractWithStrings = 0x70; // CUtlVector< CUtlString >
-    public const nint m_InteractExcludeStrings = 0x88; // CUtlVector< CUtlString >
+    public const nint m_InteractAsStrings = 0x58; // CUtlVector<CUtlString>
+    public const nint m_InteractWithStrings = 0x70; // CUtlVector<CUtlString>
+    public const nint m_InteractExcludeStrings = 0x88; // CUtlVector<CUtlString>
 }
 
 public static class VPhysXConstraint2_t {
@@ -2489,16 +2489,16 @@ public static class VPhysXRange_t {
 }
 
 public static class VPhysics2ShapeDef_t {
-    public const nint m_spheres = 0x0; // CUtlVector< RnSphereDesc_t >
-    public const nint m_capsules = 0x18; // CUtlVector< RnCapsuleDesc_t >
-    public const nint m_hulls = 0x30; // CUtlVector< RnHullDesc_t >
-    public const nint m_meshes = 0x48; // CUtlVector< RnMeshDesc_t >
-    public const nint m_CollisionAttributeIndices = 0x60; // CUtlVector< uint16 >
+    public const nint m_spheres = 0x0; // CUtlVector<RnSphereDesc_t>
+    public const nint m_capsules = 0x18; // CUtlVector<RnCapsuleDesc_t>
+    public const nint m_hulls = 0x30; // CUtlVector<RnHullDesc_t>
+    public const nint m_meshes = 0x48; // CUtlVector<RnMeshDesc_t>
+    public const nint m_CollisionAttributeIndices = 0x60; // CUtlVector<uint16_t>
 }
 
 public static class WeightList {
     public const nint m_name = 0x0; // CUtlString
-    public const nint m_weights = 0x8; // CUtlVector< float32 >
+    public const nint m_weights = 0x8; // CUtlVector<float>
 }
 
 public static class WristBone_t {

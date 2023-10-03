@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.350377300 UTC
+// 2023-10-03 00:41:23.751655200 UTC
 
 public static class CDSPMixgroupModifier {
     public const nint m_mixgroup = 0x0; // CUtlString
@@ -11,12 +11,12 @@ public static class CDSPMixgroupModifier {
 }
 
 public static class CDSPPresetMixgroupModifierTable {
-    public const nint m_table = 0x0; // CUtlVector< CDspPresetModifierList >
+    public const nint m_table = 0x0; // CUtlVector<CDspPresetModifierList>
 }
 
 public static class CDspPresetModifierList {
     public const nint m_dspName = 0x0; // CUtlString
-    public const nint m_modifiers = 0x8; // CUtlVector< CDSPMixgroupModifier >
+    public const nint m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
 }
 
 public static class CSosGroupActionLimitSchema {
@@ -58,7 +58,7 @@ public static class CSosGroupMatchPattern {
 }
 
 public static class CSosSoundEventGroupListSchema {
-    public const nint m_groupList = 0x0; // CUtlVector< CSosSoundEventGroupSchema >
+    public const nint m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
 }
 
 public static class CSosSoundEventGroupSchema {
@@ -73,11 +73,11 @@ public static class CSosSoundEventGroupSchema {
 }
 
 public static class CSoundEventMetaData {
-    public const nint m_soundEventVMix = 0x0; // CStrongHandle< InfoForResourceTypeCVMixListResource >
+    public const nint m_soundEventVMix = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
 }
 
 public static class SelectedEditItemInfo_t {
-    public const nint m_EditItems = 0x0; // CUtlVector< SosEditItemInfo_t >
+    public const nint m_EditItems = 0x0; // CUtlVector<SosEditItemInfo_t>
 }
 
 public static class SosEditItemInfo_t {

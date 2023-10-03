@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.172026 UTC
+// 2023-10-03 00:41:23.437801700 UTC
 
 namespace AABB_t {
     constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
@@ -11,19 +11,19 @@ namespace AABB_t {
 }
 
 namespace CFuseProgram {
-    constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector< uint8 >
-    constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector< FuseVariableIndex_t >
-    constexpr std::ptrdiff_t m_variablesWritten = 0x30; // CUtlVector< FuseVariableIndex_t >
+    constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector<uint8_t>
+    constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector<FuseVariableIndex_t>
+    constexpr std::ptrdiff_t m_variablesWritten = 0x30; // CUtlVector<FuseVariableIndex_t>
     constexpr std::ptrdiff_t m_nMaxTempVarsUsed = 0x48; // int32_t
 }
 
 namespace CFuseSymbolTable {
-    constexpr std::ptrdiff_t m_constants = 0x0; // CUtlVector< ConstantInfo_t >
-    constexpr std::ptrdiff_t m_variables = 0x18; // CUtlVector< VariableInfo_t >
-    constexpr std::ptrdiff_t m_functions = 0x30; // CUtlVector< FunctionInfo_t >
-    constexpr std::ptrdiff_t m_constantMap = 0x48; // CUtlHashtable< CUtlStringToken, int32 >
-    constexpr std::ptrdiff_t m_variableMap = 0x68; // CUtlHashtable< CUtlStringToken, int32 >
-    constexpr std::ptrdiff_t m_functionMap = 0x88; // CUtlHashtable< CUtlStringToken, int32 >
+    constexpr std::ptrdiff_t m_constants = 0x0; // CUtlVector<ConstantInfo_t>
+    constexpr std::ptrdiff_t m_variables = 0x18; // CUtlVector<VariableInfo_t>
+    constexpr std::ptrdiff_t m_functions = 0x30; // CUtlVector<FunctionInfo_t>
+    constexpr std::ptrdiff_t m_constantMap = 0x48; // CUtlHashtable<CUtlStringToken,int32_t>
+    constexpr std::ptrdiff_t m_variableMap = 0x68; // CUtlHashtable<CUtlStringToken,int32_t>
+    constexpr std::ptrdiff_t m_functionMap = 0x88; // CUtlHashtable<CUtlStringToken,int32_t>
 }
 
 namespace ConstantInfo_t {
@@ -57,7 +57,7 @@ namespace FuseVariableIndex_t {
 
 namespace ManifestTestResource_t {
     constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-    constexpr std::ptrdiff_t m_child = 0x8; // CStrongHandle< InfoForResourceTypeManifestTestResource_t >
+    constexpr std::ptrdiff_t m_child = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
 }
 
 namespace PackedAABB_t {

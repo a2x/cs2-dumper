@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.534401700 UTC
+// 2023-10-03 00:41:24.099711900 UTC
 
 pub mod CBaseRendererSource2 {
     pub const m_flRadiusScale: usize = 0x200; // CParticleCollectionRendererFloatInput
@@ -16,7 +16,7 @@ pub mod CBaseRendererSource2 {
     pub const m_flCenterYOffset: usize = 0xDD0; // CParticleCollectionRendererFloatInput
     pub const m_flBumpStrength: usize = 0xF28; // float
     pub const m_nCropTextureOverride: usize = 0xF2C; // ParticleSequenceCropOverride_t
-    pub const m_vecTexturesInput: usize = 0xF30; // CUtlVector< TextureGroup_t >
+    pub const m_vecTexturesInput: usize = 0xF30; // CUtlVector<TextureGroup_t>
     pub const m_flAnimationRate: usize = 0xF48; // float
     pub const m_nAnimationType: usize = 0xF4C; // AnimationType_t
     pub const m_bAnimateInFPS: usize = 0xF50; // bool
@@ -221,14 +221,14 @@ pub mod CParticleModelInput {
 
 pub mod CParticleSystemDefinition {
     pub const m_nBehaviorVersion: usize = 0x8; // int32_t
-    pub const m_PreEmissionOperators: usize = 0x10; // CUtlVector< CParticleFunctionPreEmission* >
-    pub const m_Emitters: usize = 0x28; // CUtlVector< CParticleFunctionEmitter* >
-    pub const m_Initializers: usize = 0x40; // CUtlVector< CParticleFunctionInitializer* >
-    pub const m_Operators: usize = 0x58; // CUtlVector< CParticleFunctionOperator* >
-    pub const m_ForceGenerators: usize = 0x70; // CUtlVector< CParticleFunctionForce* >
-    pub const m_Constraints: usize = 0x88; // CUtlVector< CParticleFunctionConstraint* >
-    pub const m_Renderers: usize = 0xA0; // CUtlVector< CParticleFunctionRenderer* >
-    pub const m_Children: usize = 0xB8; // CUtlVector< ParticleChildrenInfo_t >
+    pub const m_PreEmissionOperators: usize = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
+    pub const m_Emitters: usize = 0x28; // CUtlVector<CParticleFunctionEmitter*>
+    pub const m_Initializers: usize = 0x40; // CUtlVector<CParticleFunctionInitializer*>
+    pub const m_Operators: usize = 0x58; // CUtlVector<CParticleFunctionOperator*>
+    pub const m_ForceGenerators: usize = 0x70; // CUtlVector<CParticleFunctionForce*>
+    pub const m_Constraints: usize = 0x88; // CUtlVector<CParticleFunctionConstraint*>
+    pub const m_Renderers: usize = 0xA0; // CUtlVector<CParticleFunctionRenderer*>
+    pub const m_Children: usize = 0xB8; // CUtlVector<ParticleChildrenInfo_t>
     pub const m_nFirstMultipleOverride_BackwardCompat: usize = 0x178; // int32_t
     pub const m_nInitialParticles: usize = 0x210; // int32_t
     pub const m_nMaxParticles: usize = 0x214; // int32_t
@@ -240,7 +240,7 @@ pub mod CParticleSystemDefinition {
     pub const m_bInfiniteBounds: usize = 0x23C; // bool
     pub const m_bEnableNamedValues: usize = 0x23D; // bool
     pub const m_NamedValueDomain: usize = 0x240; // CUtlString
-    pub const m_NamedValueLocals: usize = 0x248; // CUtlVector< ParticleNamedValueSource_t* >
+    pub const m_NamedValueLocals: usize = 0x248; // CUtlVector<ParticleNamedValueSource_t*>
     pub const m_ConstantColor: usize = 0x260; // Color
     pub const m_ConstantNormal: usize = 0x264; // Vector
     pub const m_flConstantRadius: usize = 0x270; // float
@@ -250,15 +250,15 @@ pub mod CParticleSystemDefinition {
     pub const m_nConstantSequenceNumber: usize = 0x280; // int32_t
     pub const m_nConstantSequenceNumber1: usize = 0x284; // int32_t
     pub const m_nSnapshotControlPoint: usize = 0x288; // int32_t
-    pub const m_hSnapshot: usize = 0x290; // CStrongHandle< InfoForResourceTypeIParticleSnapshot >
-    pub const m_pszCullReplacementName: usize = 0x298; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    pub const m_hSnapshot: usize = 0x290; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
+    pub const m_pszCullReplacementName: usize = 0x298; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     pub const m_flCullRadius: usize = 0x2A0; // float
     pub const m_flCullFillCost: usize = 0x2A4; // float
     pub const m_nCullControlPoint: usize = 0x2A8; // int32_t
-    pub const m_hFallback: usize = 0x2B0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    pub const m_hFallback: usize = 0x2B0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     pub const m_nFallbackMaxCount: usize = 0x2B8; // int32_t
-    pub const m_hLowViolenceDef: usize = 0x2C0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
-    pub const m_hReferenceReplacement: usize = 0x2C8; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    pub const m_hLowViolenceDef: usize = 0x2C0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+    pub const m_hReferenceReplacement: usize = 0x2C8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     pub const m_flPreSimulationTime: usize = 0x2D0; // float
     pub const m_flStopSimulationAfterTime: usize = 0x2D4; // float
     pub const m_flMaximumTimeStep: usize = 0x2D8; // float
@@ -283,7 +283,7 @@ pub mod CParticleSystemDefinition {
     pub const m_nSkipRenderControlPoint: usize = 0x320; // int32_t
     pub const m_nAllowRenderControlPoint: usize = 0x324; // int32_t
     pub const m_bShouldSort: usize = 0x328; // bool
-    pub const m_controlPointConfigurations: usize = 0x370; // CUtlVector< ParticleControlPointConfiguration_t >
+    pub const m_controlPointConfigurations: usize = 0x370; // CUtlVector<ParticleControlPointConfiguration_t>
 }
 
 pub mod CParticleTransformInput {
@@ -818,7 +818,7 @@ pub mod C_INIT_PlaneCull {
 
 pub mod C_INIT_PointList {
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-    pub const m_pointList: usize = 0x1C8; // CUtlVector< PointDefinition_t >
+    pub const m_pointList: usize = 0x1C8; // CUtlVector<PointDefinition_t>
     pub const m_bPlaceAlongPath: usize = 0x1E0; // bool
     pub const m_bClosedLoop: usize = 0x1E1; // bool
     pub const m_nNumPointsAlongPath: usize = 0x1E4; // int32_t
@@ -921,12 +921,12 @@ pub mod C_INIT_RandomLifeTime {
 pub mod C_INIT_RandomModelSequence {
     pub const m_ActivityName: usize = 0x1C0; // char[256]
     pub const m_SequenceName: usize = 0x2C0; // char[256]
-    pub const m_hModel: usize = 0x3C0; // CStrongHandle< InfoForResourceTypeCModel >
+    pub const m_hModel: usize = 0x3C0; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
 pub mod C_INIT_RandomNamedModelElement {
-    pub const m_hModel: usize = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    pub const m_names: usize = 0x1C8; // CUtlVector< CUtlString >
+    pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_names: usize = 0x1C8; // CUtlVector<CUtlString>
     pub const m_bShuffle: usize = 0x1E0; // bool
     pub const m_bLinear: usize = 0x1E1; // bool
     pub const m_bModelFromRenderer: usize = 0x1E2; // bool
@@ -956,7 +956,7 @@ pub mod C_INIT_RandomSequence {
     pub const m_nSequenceMax: usize = 0x1C4; // int32_t
     pub const m_bShuffle: usize = 0x1C8; // bool
     pub const m_bLinear: usize = 0x1C9; // bool
-    pub const m_WeightedList: usize = 0x1D0; // CUtlVector< SequenceWeightedList_t >
+    pub const m_WeightedList: usize = 0x1D0; // CUtlVector<SequenceWeightedList_t>
 }
 
 pub mod C_INIT_RandomTrailLength {
@@ -1022,9 +1022,9 @@ pub mod C_INIT_RemapInitialVisibilityScalar {
 }
 
 pub mod C_INIT_RemapNamedModelElementToScalar {
-    pub const m_hModel: usize = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    pub const m_names: usize = 0x1C8; // CUtlVector< CUtlString >
-    pub const m_values: usize = 0x1E0; // CUtlVector< float32 >
+    pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_names: usize = 0x1C8; // CUtlVector<CUtlString>
+    pub const m_values: usize = 0x1E0; // CUtlVector<float>
     pub const m_nFieldInput: usize = 0x1F8; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1FC; // ParticleAttributeIndex_t
     pub const m_nSetMethod: usize = 0x200; // ParticleSetMethod_t
@@ -1032,7 +1032,7 @@ pub mod C_INIT_RemapNamedModelElementToScalar {
 }
 
 pub mod C_INIT_RemapParticleCountToNamedModelElementScalar {
-    pub const m_hModel: usize = 0x1F0; // CStrongHandle< InfoForResourceTypeCModel >
+    pub const m_hModel: usize = 0x1F0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_outputMinName: usize = 0x1F8; // CUtlString
     pub const m_outputMaxName: usize = 0x200; // CUtlString
     pub const m_bModelFromRenderer: usize = 0x208; // bool
@@ -1429,7 +1429,7 @@ pub mod C_OP_ConstrainDistanceToUserSpecifiedPath {
     pub const m_flMaxDistance: usize = 0x1C4; // float
     pub const m_flTimeScale: usize = 0x1C8; // float
     pub const m_bLoopedPath: usize = 0x1CC; // bool
-    pub const m_pointList: usize = 0x1D0; // CUtlVector< PointDefinitionWithTimeValues_t >
+    pub const m_pointList: usize = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
 }
 
 pub mod C_OP_ConstrainLineLength {
@@ -1940,7 +1940,7 @@ pub mod C_OP_LockToBone {
 
 pub mod C_OP_LockToPointList {
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-    pub const m_pointList: usize = 0x1C8; // CUtlVector< PointDefinition_t >
+    pub const m_pointList: usize = 0x1C8; // CUtlVector<PointDefinition_t>
     pub const m_bPlaceAlongPath: usize = 0x1E0; // bool
     pub const m_bClosedLoop: usize = 0x1E1; // bool
     pub const m_nNumPointsAlongPath: usize = 0x1E4; // int32_t
@@ -2583,20 +2583,20 @@ pub mod C_OP_RemapModelVolumetoCP {
 }
 
 pub mod C_OP_RemapNamedModelElementEndCap {
-    pub const m_hModel: usize = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    pub const m_inNames: usize = 0x1C8; // CUtlVector< CUtlString >
-    pub const m_outNames: usize = 0x1E0; // CUtlVector< CUtlString >
-    pub const m_fallbackNames: usize = 0x1F8; // CUtlVector< CUtlString >
+    pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_inNames: usize = 0x1C8; // CUtlVector<CUtlString>
+    pub const m_outNames: usize = 0x1E0; // CUtlVector<CUtlString>
+    pub const m_fallbackNames: usize = 0x1F8; // CUtlVector<CUtlString>
     pub const m_bModelFromRenderer: usize = 0x210; // bool
     pub const m_nFieldInput: usize = 0x214; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x218; // ParticleAttributeIndex_t
 }
 
 pub mod C_OP_RemapNamedModelElementOnceTimed {
-    pub const m_hModel: usize = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    pub const m_inNames: usize = 0x1C8; // CUtlVector< CUtlString >
-    pub const m_outNames: usize = 0x1E0; // CUtlVector< CUtlString >
-    pub const m_fallbackNames: usize = 0x1F8; // CUtlVector< CUtlString >
+    pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_inNames: usize = 0x1C8; // CUtlVector<CUtlString>
+    pub const m_outNames: usize = 0x1E0; // CUtlVector<CUtlString>
+    pub const m_fallbackNames: usize = 0x1F8; // CUtlVector<CUtlString>
     pub const m_bModelFromRenderer: usize = 0x210; // bool
     pub const m_bProportional: usize = 0x211; // bool
     pub const m_nFieldInput: usize = 0x214; // ParticleAttributeIndex_t
@@ -2770,7 +2770,7 @@ pub mod C_OP_RemapVisibilityScalar {
 }
 
 pub mod C_OP_RenderAsModels {
-    pub const m_ModelList: usize = 0x200; // CUtlVector< ModelReference_t >
+    pub const m_ModelList: usize = 0x200; // CUtlVector<ModelReference_t>
     pub const m_flModelScale: usize = 0x21C; // float
     pub const m_bFitToModelSize: usize = 0x220; // bool
     pub const m_bNonUniformScaling: usize = 0x221; // bool
@@ -2785,8 +2785,8 @@ pub mod C_OP_RenderBlobs {
     pub const m_cutoffRadius: usize = 0x358; // CParticleCollectionRendererFloatInput
     pub const m_renderRadius: usize = 0x4B0; // CParticleCollectionRendererFloatInput
     pub const m_nScaleCP: usize = 0x608; // int32_t
-    pub const m_MaterialVars: usize = 0x610; // CUtlVector< MaterialVariable_t >
-    pub const m_hMaterial: usize = 0x640; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_MaterialVars: usize = 0x610; // CUtlVector<MaterialVariable_t>
+    pub const m_hMaterial: usize = 0x640; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 pub mod C_OP_RenderCables {
@@ -2794,7 +2794,7 @@ pub mod C_OP_RenderCables {
     pub const m_flAlphaScale: usize = 0x358; // CParticleCollectionFloatInput
     pub const m_vecColorScale: usize = 0x4B0; // CParticleCollectionVecInput
     pub const m_nColorBlendType: usize = 0xB08; // ParticleColorBlendType_t
-    pub const m_hMaterial: usize = 0xB10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_hMaterial: usize = 0xB10; // CStrongHandle<InfoForResourceTypeIMaterial2>
     pub const m_nTextureRepetitionMode: usize = 0xB18; // TextureRepetitionMode_t
     pub const m_flTextureRepeatsPerSegment: usize = 0xB20; // CParticleCollectionFloatInput
     pub const m_flTextureRepeatsCircumference: usize = 0xC78; // CParticleCollectionFloatInput
@@ -2810,8 +2810,8 @@ pub mod C_OP_RenderCables {
     pub const m_nMaxTesselation: usize = 0x1344; // int32_t
     pub const m_nRoundness: usize = 0x1348; // int32_t
     pub const m_LightingTransform: usize = 0x1350; // CParticleTransformInput
-    pub const m_MaterialFloatVars: usize = 0x13B8; // CUtlVector< FloatInputMaterialVariable_t >
-    pub const m_MaterialVecVars: usize = 0x13E8; // CUtlVector< VecInputMaterialVariable_t >
+    pub const m_MaterialFloatVars: usize = 0x13B8; // CUtlVector<FloatInputMaterialVariable_t>
+    pub const m_MaterialVecVars: usize = 0x13E8; // CUtlVector<VecInputMaterialVariable_t>
 }
 
 pub mod C_OP_RenderDeferredLight {
@@ -2829,7 +2829,7 @@ pub mod C_OP_RenderDeferredLight {
     pub const m_nAlphaTestPointField: usize = 0x87C; // ParticleAttributeIndex_t
     pub const m_nAlphaTestRangeField: usize = 0x880; // ParticleAttributeIndex_t
     pub const m_nAlphaTestSharpnessField: usize = 0x884; // ParticleAttributeIndex_t
-    pub const m_hTexture: usize = 0x888; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    pub const m_hTexture: usize = 0x888; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_nHSVShiftControlPoint: usize = 0x890; // int32_t
 }
 
@@ -2845,7 +2845,7 @@ pub mod C_OP_RenderGpuImplicit {
     pub const m_fRadiusScale: usize = 0x360; // CParticleCollectionRendererFloatInput
     pub const m_fIsosurfaceThreshold: usize = 0x4B8; // CParticleCollectionRendererFloatInput
     pub const m_nScaleCP: usize = 0x610; // int32_t
-    pub const m_hMaterial: usize = 0x618; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_hMaterial: usize = 0x618; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 pub mod C_OP_RenderLightBeam {
@@ -2871,8 +2871,8 @@ pub mod C_OP_RenderLights {
 pub mod C_OP_RenderMaterialProxy {
     pub const m_nMaterialControlPoint: usize = 0x200; // int32_t
     pub const m_nProxyType: usize = 0x204; // MaterialProxyType_t
-    pub const m_MaterialVars: usize = 0x208; // CUtlVector< MaterialVariable_t >
-    pub const m_hOverrideMaterial: usize = 0x220; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_MaterialVars: usize = 0x208; // CUtlVector<MaterialVariable_t>
+    pub const m_hOverrideMaterial: usize = 0x220; // CStrongHandle<InfoForResourceTypeIMaterial2>
     pub const m_flMaterialOverrideEnabled: usize = 0x228; // CParticleCollectionFloatInput
     pub const m_vecColorScale: usize = 0x380; // CParticleCollectionVecInput
     pub const m_flAlpha: usize = 0x9D8; // CPerParticleFloatInput
@@ -2884,7 +2884,7 @@ pub mod C_OP_RenderModels {
     pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x201; // bool
     pub const m_bUseMixedResolutionRendering: usize = 0x202; // bool
     pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x203; // bool
-    pub const m_ModelList: usize = 0x208; // CUtlVector< ModelReference_t >
+    pub const m_ModelList: usize = 0x208; // CUtlVector<ModelReference_t>
     pub const m_nBodyGroupField: usize = 0x224; // ParticleAttributeIndex_t
     pub const m_nSubModelField: usize = 0x228; // ParticleAttributeIndex_t
     pub const m_bIgnoreNormal: usize = 0x22C; // bool
@@ -2909,10 +2909,10 @@ pub mod C_OP_RenderModels {
     pub const m_ActivityName: usize = 0x1560; // char[256]
     pub const m_SequenceName: usize = 0x1660; // char[256]
     pub const m_bEnableClothSimulation: usize = 0x1760; // bool
-    pub const m_hOverrideMaterial: usize = 0x1768; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_hOverrideMaterial: usize = 0x1768; // CStrongHandle<InfoForResourceTypeIMaterial2>
     pub const m_bOverrideTranslucentMaterials: usize = 0x1770; // bool
     pub const m_nSkin: usize = 0x1778; // CPerParticleFloatInput
-    pub const m_MaterialVars: usize = 0x18D0; // CUtlVector< MaterialVariable_t >
+    pub const m_MaterialVars: usize = 0x18D0; // CUtlVector<MaterialVariable_t>
     pub const m_modelInput: usize = 0x18E8; // CParticleModelInput
     pub const m_nLOD: usize = 0x1948; // int32_t
     pub const m_EconSlotName: usize = 0x194C; // char[256]
@@ -2945,17 +2945,17 @@ pub mod C_OP_RenderOmni2Light {
     pub const m_flRange: usize = 0xDD0; // CPerParticleFloatInput
     pub const m_flInnerConeAngle: usize = 0xF28; // CPerParticleFloatInput
     pub const m_flOuterConeAngle: usize = 0x1080; // CPerParticleFloatInput
-    pub const m_hLightCookie: usize = 0x11D8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    pub const m_hLightCookie: usize = 0x11D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_bSphericalCookie: usize = 0x11E0; // bool
 }
 
 pub mod C_OP_RenderPoints {
-    pub const m_hMaterial: usize = 0x200; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_hMaterial: usize = 0x200; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 pub mod C_OP_RenderPostProcessing {
     pub const m_flPostProcessStrength: usize = 0x200; // CPerParticleFloatInput
-    pub const m_hPostTexture: usize = 0x358; // CStrongHandle< InfoForResourceTypeCPostProcessingResource >
+    pub const m_hPostTexture: usize = 0x358; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
     pub const m_nPriority: usize = 0x360; // ParticlePostProcessPriorityGroup_t
 }
 
@@ -2967,10 +2967,10 @@ pub mod C_OP_RenderProjected {
     pub const m_bEnableProjectedDepthControls: usize = 0x204; // bool
     pub const m_flMinProjectionDepth: usize = 0x208; // float
     pub const m_flMaxProjectionDepth: usize = 0x20C; // float
-    pub const m_hProjectedMaterial: usize = 0x210; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_hProjectedMaterial: usize = 0x210; // CStrongHandle<InfoForResourceTypeIMaterial2>
     pub const m_flAnimationTimeScale: usize = 0x218; // float
     pub const m_bOrientToNormal: usize = 0x21C; // bool
-    pub const m_MaterialVars: usize = 0x220; // CUtlVector< MaterialVariable_t >
+    pub const m_MaterialVars: usize = 0x220; // CUtlVector<MaterialVariable_t>
 }
 
 pub mod C_OP_RenderRopes {
@@ -3101,22 +3101,22 @@ pub mod C_OP_RenderStandardLight {
 }
 
 pub mod C_OP_RenderStatusEffect {
-    pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureDetail2: usize = 0x208; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureDiffuseWarp: usize = 0x210; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureFresnelColorWarp: usize = 0x218; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureFresnelWarp: usize = 0x220; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureSpecularWarp: usize = 0x228; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureEnvMap: usize = 0x230; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureDetail2: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureDiffuseWarp: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureFresnelColorWarp: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureFresnelWarp: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureSpecularWarp: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureEnvMap: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 pub mod C_OP_RenderStatusEffectCitadel {
-    pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureNormal: usize = 0x208; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureMetalness: usize = 0x210; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureRoughness: usize = 0x218; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureSelfIllum: usize = 0x220; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    pub const m_pTextureDetail: usize = 0x228; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureNormal: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureMetalness: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureRoughness: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureSelfIllum: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    pub const m_pTextureDetail: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 pub mod C_OP_RenderText {
@@ -3769,7 +3769,7 @@ pub mod MaterialVariable_t {
 }
 
 pub mod ModelReference_t {
-    pub const m_model: usize = 0x0; // CStrongHandle< InfoForResourceTypeCModel >
+    pub const m_model: usize = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_flRelativeProbabilityOfSpawn: usize = 0x8; // float
 }
 
@@ -3786,7 +3786,7 @@ pub mod ParticleAttributeIndex_t {
 }
 
 pub mod ParticleChildrenInfo_t {
-    pub const m_ChildRef: usize = 0x0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    pub const m_ChildRef: usize = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     pub const m_flDelay: usize = 0x8; // float
     pub const m_bEndCap: usize = 0xC; // bool
     pub const m_bDisableChild: usize = 0xD; // bool
@@ -3795,7 +3795,7 @@ pub mod ParticleChildrenInfo_t {
 
 pub mod ParticleControlPointConfiguration_t {
     pub const m_name: usize = 0x0; // CUtlString
-    pub const m_drivers: usize = 0x8; // CUtlVector< ParticleControlPointDriver_t >
+    pub const m_drivers: usize = 0x8; // CUtlVector<ParticleControlPointDriver_t>
     pub const m_previewState: usize = 0x20; // ParticlePreviewState_t
 }
 
@@ -3822,7 +3822,7 @@ pub mod ParticleNamedValueSource_t {
     pub const m_IsPublic: usize = 0x8; // bool
     pub const m_ValueType: usize = 0xC; // PulseValueType_t
     pub const m_DefaultConfig: usize = 0x10; // ParticleNamedValueConfiguration_t
-    pub const m_NamedConfigs: usize = 0x48; // CUtlVector< ParticleNamedValueConfiguration_t >
+    pub const m_NamedConfigs: usize = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
 }
 
 pub mod ParticlePreviewBodyGroup_t {
@@ -3838,7 +3838,7 @@ pub mod ParticlePreviewState_t {
     pub const m_nFireParticleOnSequenceFrame: usize = 0x18; // int32_t
     pub const m_hitboxSetName: usize = 0x20; // CUtlString
     pub const m_materialGroupName: usize = 0x28; // CUtlString
-    pub const m_vecBodyGroups: usize = 0x30; // CUtlVector< ParticlePreviewBodyGroup_t >
+    pub const m_vecBodyGroups: usize = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
     pub const m_flPlaybackSpeed: usize = 0x48; // float
     pub const m_flParticleSimulationRate: usize = 0x4C; // float
     pub const m_bShouldDrawHitboxes: usize = 0x50; // bool
@@ -3886,7 +3886,7 @@ pub mod TextureControls_t {
 pub mod TextureGroup_t {
     pub const m_bEnabled: usize = 0x0; // bool
     pub const m_bReplaceTextureWithGradient: usize = 0x1; // bool
-    pub const m_hTexture: usize = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    pub const m_hTexture: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_Gradient: usize = 0x10; // CColorGradient
     pub const m_nTextureType: usize = 0x28; // SpriteCardTextureType_t
     pub const m_nTextureChannels: usize = 0x2C; // SpriteCardTextureChannel_t

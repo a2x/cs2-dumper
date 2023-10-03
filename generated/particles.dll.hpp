@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.448863300 UTC
+// 2023-10-03 00:41:24.016746200 UTC
 
 namespace CBaseRendererSource2 {
     constexpr std::ptrdiff_t m_flRadiusScale = 0x200; // CParticleCollectionRendererFloatInput
@@ -18,7 +18,7 @@ namespace CBaseRendererSource2 {
     constexpr std::ptrdiff_t m_flCenterYOffset = 0xDD0; // CParticleCollectionRendererFloatInput
     constexpr std::ptrdiff_t m_flBumpStrength = 0xF28; // float
     constexpr std::ptrdiff_t m_nCropTextureOverride = 0xF2C; // ParticleSequenceCropOverride_t
-    constexpr std::ptrdiff_t m_vecTexturesInput = 0xF30; // CUtlVector< TextureGroup_t >
+    constexpr std::ptrdiff_t m_vecTexturesInput = 0xF30; // CUtlVector<TextureGroup_t>
     constexpr std::ptrdiff_t m_flAnimationRate = 0xF48; // float
     constexpr std::ptrdiff_t m_nAnimationType = 0xF4C; // AnimationType_t
     constexpr std::ptrdiff_t m_bAnimateInFPS = 0xF50; // bool
@@ -223,14 +223,14 @@ namespace CParticleModelInput {
 
 namespace CParticleSystemDefinition {
     constexpr std::ptrdiff_t m_nBehaviorVersion = 0x8; // int32_t
-    constexpr std::ptrdiff_t m_PreEmissionOperators = 0x10; // CUtlVector< CParticleFunctionPreEmission* >
-    constexpr std::ptrdiff_t m_Emitters = 0x28; // CUtlVector< CParticleFunctionEmitter* >
-    constexpr std::ptrdiff_t m_Initializers = 0x40; // CUtlVector< CParticleFunctionInitializer* >
-    constexpr std::ptrdiff_t m_Operators = 0x58; // CUtlVector< CParticleFunctionOperator* >
-    constexpr std::ptrdiff_t m_ForceGenerators = 0x70; // CUtlVector< CParticleFunctionForce* >
-    constexpr std::ptrdiff_t m_Constraints = 0x88; // CUtlVector< CParticleFunctionConstraint* >
-    constexpr std::ptrdiff_t m_Renderers = 0xA0; // CUtlVector< CParticleFunctionRenderer* >
-    constexpr std::ptrdiff_t m_Children = 0xB8; // CUtlVector< ParticleChildrenInfo_t >
+    constexpr std::ptrdiff_t m_PreEmissionOperators = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
+    constexpr std::ptrdiff_t m_Emitters = 0x28; // CUtlVector<CParticleFunctionEmitter*>
+    constexpr std::ptrdiff_t m_Initializers = 0x40; // CUtlVector<CParticleFunctionInitializer*>
+    constexpr std::ptrdiff_t m_Operators = 0x58; // CUtlVector<CParticleFunctionOperator*>
+    constexpr std::ptrdiff_t m_ForceGenerators = 0x70; // CUtlVector<CParticleFunctionForce*>
+    constexpr std::ptrdiff_t m_Constraints = 0x88; // CUtlVector<CParticleFunctionConstraint*>
+    constexpr std::ptrdiff_t m_Renderers = 0xA0; // CUtlVector<CParticleFunctionRenderer*>
+    constexpr std::ptrdiff_t m_Children = 0xB8; // CUtlVector<ParticleChildrenInfo_t>
     constexpr std::ptrdiff_t m_nFirstMultipleOverride_BackwardCompat = 0x178; // int32_t
     constexpr std::ptrdiff_t m_nInitialParticles = 0x210; // int32_t
     constexpr std::ptrdiff_t m_nMaxParticles = 0x214; // int32_t
@@ -242,7 +242,7 @@ namespace CParticleSystemDefinition {
     constexpr std::ptrdiff_t m_bInfiniteBounds = 0x23C; // bool
     constexpr std::ptrdiff_t m_bEnableNamedValues = 0x23D; // bool
     constexpr std::ptrdiff_t m_NamedValueDomain = 0x240; // CUtlString
-    constexpr std::ptrdiff_t m_NamedValueLocals = 0x248; // CUtlVector< ParticleNamedValueSource_t* >
+    constexpr std::ptrdiff_t m_NamedValueLocals = 0x248; // CUtlVector<ParticleNamedValueSource_t*>
     constexpr std::ptrdiff_t m_ConstantColor = 0x260; // Color
     constexpr std::ptrdiff_t m_ConstantNormal = 0x264; // Vector
     constexpr std::ptrdiff_t m_flConstantRadius = 0x270; // float
@@ -252,15 +252,15 @@ namespace CParticleSystemDefinition {
     constexpr std::ptrdiff_t m_nConstantSequenceNumber = 0x280; // int32_t
     constexpr std::ptrdiff_t m_nConstantSequenceNumber1 = 0x284; // int32_t
     constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x288; // int32_t
-    constexpr std::ptrdiff_t m_hSnapshot = 0x290; // CStrongHandle< InfoForResourceTypeIParticleSnapshot >
-    constexpr std::ptrdiff_t m_pszCullReplacementName = 0x298; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    constexpr std::ptrdiff_t m_hSnapshot = 0x290; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
+    constexpr std::ptrdiff_t m_pszCullReplacementName = 0x298; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     constexpr std::ptrdiff_t m_flCullRadius = 0x2A0; // float
     constexpr std::ptrdiff_t m_flCullFillCost = 0x2A4; // float
     constexpr std::ptrdiff_t m_nCullControlPoint = 0x2A8; // int32_t
-    constexpr std::ptrdiff_t m_hFallback = 0x2B0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    constexpr std::ptrdiff_t m_hFallback = 0x2B0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     constexpr std::ptrdiff_t m_nFallbackMaxCount = 0x2B8; // int32_t
-    constexpr std::ptrdiff_t m_hLowViolenceDef = 0x2C0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
-    constexpr std::ptrdiff_t m_hReferenceReplacement = 0x2C8; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    constexpr std::ptrdiff_t m_hLowViolenceDef = 0x2C0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+    constexpr std::ptrdiff_t m_hReferenceReplacement = 0x2C8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     constexpr std::ptrdiff_t m_flPreSimulationTime = 0x2D0; // float
     constexpr std::ptrdiff_t m_flStopSimulationAfterTime = 0x2D4; // float
     constexpr std::ptrdiff_t m_flMaximumTimeStep = 0x2D8; // float
@@ -285,7 +285,7 @@ namespace CParticleSystemDefinition {
     constexpr std::ptrdiff_t m_nSkipRenderControlPoint = 0x320; // int32_t
     constexpr std::ptrdiff_t m_nAllowRenderControlPoint = 0x324; // int32_t
     constexpr std::ptrdiff_t m_bShouldSort = 0x328; // bool
-    constexpr std::ptrdiff_t m_controlPointConfigurations = 0x370; // CUtlVector< ParticleControlPointConfiguration_t >
+    constexpr std::ptrdiff_t m_controlPointConfigurations = 0x370; // CUtlVector<ParticleControlPointConfiguration_t>
 }
 
 namespace CParticleTransformInput {
@@ -820,7 +820,7 @@ namespace C_INIT_PlaneCull {
 
 namespace C_INIT_PointList {
     constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-    constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector< PointDefinition_t >
+    constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
     constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E0; // bool
     constexpr std::ptrdiff_t m_bClosedLoop = 0x1E1; // bool
     constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1E4; // int32_t
@@ -923,12 +923,12 @@ namespace C_INIT_RandomLifeTime {
 namespace C_INIT_RandomModelSequence {
     constexpr std::ptrdiff_t m_ActivityName = 0x1C0; // char[256]
     constexpr std::ptrdiff_t m_SequenceName = 0x2C0; // char[256]
-    constexpr std::ptrdiff_t m_hModel = 0x3C0; // CStrongHandle< InfoForResourceTypeCModel >
+    constexpr std::ptrdiff_t m_hModel = 0x3C0; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
 namespace C_INIT_RandomNamedModelElement {
-    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector< CUtlString >
+    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector<CUtlString>
     constexpr std::ptrdiff_t m_bShuffle = 0x1E0; // bool
     constexpr std::ptrdiff_t m_bLinear = 0x1E1; // bool
     constexpr std::ptrdiff_t m_bModelFromRenderer = 0x1E2; // bool
@@ -958,7 +958,7 @@ namespace C_INIT_RandomSequence {
     constexpr std::ptrdiff_t m_nSequenceMax = 0x1C4; // int32_t
     constexpr std::ptrdiff_t m_bShuffle = 0x1C8; // bool
     constexpr std::ptrdiff_t m_bLinear = 0x1C9; // bool
-    constexpr std::ptrdiff_t m_WeightedList = 0x1D0; // CUtlVector< SequenceWeightedList_t >
+    constexpr std::ptrdiff_t m_WeightedList = 0x1D0; // CUtlVector<SequenceWeightedList_t>
 }
 
 namespace C_INIT_RandomTrailLength {
@@ -1024,9 +1024,9 @@ namespace C_INIT_RemapInitialVisibilityScalar {
 }
 
 namespace C_INIT_RemapNamedModelElementToScalar {
-    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector< CUtlString >
-    constexpr std::ptrdiff_t m_values = 0x1E0; // CUtlVector< float32 >
+    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector<CUtlString>
+    constexpr std::ptrdiff_t m_values = 0x1E0; // CUtlVector<float>
     constexpr std::ptrdiff_t m_nFieldInput = 0x1F8; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_nFieldOutput = 0x1FC; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_nSetMethod = 0x200; // ParticleSetMethod_t
@@ -1034,7 +1034,7 @@ namespace C_INIT_RemapNamedModelElementToScalar {
 }
 
 namespace C_INIT_RemapParticleCountToNamedModelElementScalar {
-    constexpr std::ptrdiff_t m_hModel = 0x1F0; // CStrongHandle< InfoForResourceTypeCModel >
+    constexpr std::ptrdiff_t m_hModel = 0x1F0; // CStrongHandle<InfoForResourceTypeCModel>
     constexpr std::ptrdiff_t m_outputMinName = 0x1F8; // CUtlString
     constexpr std::ptrdiff_t m_outputMaxName = 0x200; // CUtlString
     constexpr std::ptrdiff_t m_bModelFromRenderer = 0x208; // bool
@@ -1431,7 +1431,7 @@ namespace C_OP_ConstrainDistanceToUserSpecifiedPath {
     constexpr std::ptrdiff_t m_flMaxDistance = 0x1C4; // float
     constexpr std::ptrdiff_t m_flTimeScale = 0x1C8; // float
     constexpr std::ptrdiff_t m_bLoopedPath = 0x1CC; // bool
-    constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector< PointDefinitionWithTimeValues_t >
+    constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
 }
 
 namespace C_OP_ConstrainLineLength {
@@ -1942,7 +1942,7 @@ namespace C_OP_LockToBone {
 
 namespace C_OP_LockToPointList {
     constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-    constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector< PointDefinition_t >
+    constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
     constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E0; // bool
     constexpr std::ptrdiff_t m_bClosedLoop = 0x1E1; // bool
     constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1E4; // int32_t
@@ -2585,20 +2585,20 @@ namespace C_OP_RemapModelVolumetoCP {
 }
 
 namespace C_OP_RemapNamedModelElementEndCap {
-    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    constexpr std::ptrdiff_t m_inNames = 0x1C8; // CUtlVector< CUtlString >
-    constexpr std::ptrdiff_t m_outNames = 0x1E0; // CUtlVector< CUtlString >
-    constexpr std::ptrdiff_t m_fallbackNames = 0x1F8; // CUtlVector< CUtlString >
+    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    constexpr std::ptrdiff_t m_inNames = 0x1C8; // CUtlVector<CUtlString>
+    constexpr std::ptrdiff_t m_outNames = 0x1E0; // CUtlVector<CUtlString>
+    constexpr std::ptrdiff_t m_fallbackNames = 0x1F8; // CUtlVector<CUtlString>
     constexpr std::ptrdiff_t m_bModelFromRenderer = 0x210; // bool
     constexpr std::ptrdiff_t m_nFieldInput = 0x214; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_nFieldOutput = 0x218; // ParticleAttributeIndex_t
 }
 
 namespace C_OP_RemapNamedModelElementOnceTimed {
-    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-    constexpr std::ptrdiff_t m_inNames = 0x1C8; // CUtlVector< CUtlString >
-    constexpr std::ptrdiff_t m_outNames = 0x1E0; // CUtlVector< CUtlString >
-    constexpr std::ptrdiff_t m_fallbackNames = 0x1F8; // CUtlVector< CUtlString >
+    constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+    constexpr std::ptrdiff_t m_inNames = 0x1C8; // CUtlVector<CUtlString>
+    constexpr std::ptrdiff_t m_outNames = 0x1E0; // CUtlVector<CUtlString>
+    constexpr std::ptrdiff_t m_fallbackNames = 0x1F8; // CUtlVector<CUtlString>
     constexpr std::ptrdiff_t m_bModelFromRenderer = 0x210; // bool
     constexpr std::ptrdiff_t m_bProportional = 0x211; // bool
     constexpr std::ptrdiff_t m_nFieldInput = 0x214; // ParticleAttributeIndex_t
@@ -2772,7 +2772,7 @@ namespace C_OP_RemapVisibilityScalar {
 }
 
 namespace C_OP_RenderAsModels {
-    constexpr std::ptrdiff_t m_ModelList = 0x200; // CUtlVector< ModelReference_t >
+    constexpr std::ptrdiff_t m_ModelList = 0x200; // CUtlVector<ModelReference_t>
     constexpr std::ptrdiff_t m_flModelScale = 0x21C; // float
     constexpr std::ptrdiff_t m_bFitToModelSize = 0x220; // bool
     constexpr std::ptrdiff_t m_bNonUniformScaling = 0x221; // bool
@@ -2787,8 +2787,8 @@ namespace C_OP_RenderBlobs {
     constexpr std::ptrdiff_t m_cutoffRadius = 0x358; // CParticleCollectionRendererFloatInput
     constexpr std::ptrdiff_t m_renderRadius = 0x4B0; // CParticleCollectionRendererFloatInput
     constexpr std::ptrdiff_t m_nScaleCP = 0x608; // int32_t
-    constexpr std::ptrdiff_t m_MaterialVars = 0x610; // CUtlVector< MaterialVariable_t >
-    constexpr std::ptrdiff_t m_hMaterial = 0x640; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_MaterialVars = 0x610; // CUtlVector<MaterialVariable_t>
+    constexpr std::ptrdiff_t m_hMaterial = 0x640; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 namespace C_OP_RenderCables {
@@ -2796,7 +2796,7 @@ namespace C_OP_RenderCables {
     constexpr std::ptrdiff_t m_flAlphaScale = 0x358; // CParticleCollectionFloatInput
     constexpr std::ptrdiff_t m_vecColorScale = 0x4B0; // CParticleCollectionVecInput
     constexpr std::ptrdiff_t m_nColorBlendType = 0xB08; // ParticleColorBlendType_t
-    constexpr std::ptrdiff_t m_hMaterial = 0xB10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_hMaterial = 0xB10; // CStrongHandle<InfoForResourceTypeIMaterial2>
     constexpr std::ptrdiff_t m_nTextureRepetitionMode = 0xB18; // TextureRepetitionMode_t
     constexpr std::ptrdiff_t m_flTextureRepeatsPerSegment = 0xB20; // CParticleCollectionFloatInput
     constexpr std::ptrdiff_t m_flTextureRepeatsCircumference = 0xC78; // CParticleCollectionFloatInput
@@ -2812,8 +2812,8 @@ namespace C_OP_RenderCables {
     constexpr std::ptrdiff_t m_nMaxTesselation = 0x1344; // int32_t
     constexpr std::ptrdiff_t m_nRoundness = 0x1348; // int32_t
     constexpr std::ptrdiff_t m_LightingTransform = 0x1350; // CParticleTransformInput
-    constexpr std::ptrdiff_t m_MaterialFloatVars = 0x13B8; // CUtlVector< FloatInputMaterialVariable_t >
-    constexpr std::ptrdiff_t m_MaterialVecVars = 0x13E8; // CUtlVector< VecInputMaterialVariable_t >
+    constexpr std::ptrdiff_t m_MaterialFloatVars = 0x13B8; // CUtlVector<FloatInputMaterialVariable_t>
+    constexpr std::ptrdiff_t m_MaterialVecVars = 0x13E8; // CUtlVector<VecInputMaterialVariable_t>
 }
 
 namespace C_OP_RenderDeferredLight {
@@ -2831,7 +2831,7 @@ namespace C_OP_RenderDeferredLight {
     constexpr std::ptrdiff_t m_nAlphaTestPointField = 0x87C; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_nAlphaTestRangeField = 0x880; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_nAlphaTestSharpnessField = 0x884; // ParticleAttributeIndex_t
-    constexpr std::ptrdiff_t m_hTexture = 0x888; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    constexpr std::ptrdiff_t m_hTexture = 0x888; // CStrongHandle<InfoForResourceTypeCTextureBase>
     constexpr std::ptrdiff_t m_nHSVShiftControlPoint = 0x890; // int32_t
 }
 
@@ -2847,7 +2847,7 @@ namespace C_OP_RenderGpuImplicit {
     constexpr std::ptrdiff_t m_fRadiusScale = 0x360; // CParticleCollectionRendererFloatInput
     constexpr std::ptrdiff_t m_fIsosurfaceThreshold = 0x4B8; // CParticleCollectionRendererFloatInput
     constexpr std::ptrdiff_t m_nScaleCP = 0x610; // int32_t
-    constexpr std::ptrdiff_t m_hMaterial = 0x618; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_hMaterial = 0x618; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 namespace C_OP_RenderLightBeam {
@@ -2873,8 +2873,8 @@ namespace C_OP_RenderLights {
 namespace C_OP_RenderMaterialProxy {
     constexpr std::ptrdiff_t m_nMaterialControlPoint = 0x200; // int32_t
     constexpr std::ptrdiff_t m_nProxyType = 0x204; // MaterialProxyType_t
-    constexpr std::ptrdiff_t m_MaterialVars = 0x208; // CUtlVector< MaterialVariable_t >
-    constexpr std::ptrdiff_t m_hOverrideMaterial = 0x220; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_MaterialVars = 0x208; // CUtlVector<MaterialVariable_t>
+    constexpr std::ptrdiff_t m_hOverrideMaterial = 0x220; // CStrongHandle<InfoForResourceTypeIMaterial2>
     constexpr std::ptrdiff_t m_flMaterialOverrideEnabled = 0x228; // CParticleCollectionFloatInput
     constexpr std::ptrdiff_t m_vecColorScale = 0x380; // CParticleCollectionVecInput
     constexpr std::ptrdiff_t m_flAlpha = 0x9D8; // CPerParticleFloatInput
@@ -2886,7 +2886,7 @@ namespace C_OP_RenderModels {
     constexpr std::ptrdiff_t m_bOnlyRenderInEffectsWaterPass = 0x201; // bool
     constexpr std::ptrdiff_t m_bUseMixedResolutionRendering = 0x202; // bool
     constexpr std::ptrdiff_t m_bOnlyRenderInEffecsGameOverlay = 0x203; // bool
-    constexpr std::ptrdiff_t m_ModelList = 0x208; // CUtlVector< ModelReference_t >
+    constexpr std::ptrdiff_t m_ModelList = 0x208; // CUtlVector<ModelReference_t>
     constexpr std::ptrdiff_t m_nBodyGroupField = 0x224; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_nSubModelField = 0x228; // ParticleAttributeIndex_t
     constexpr std::ptrdiff_t m_bIgnoreNormal = 0x22C; // bool
@@ -2911,10 +2911,10 @@ namespace C_OP_RenderModels {
     constexpr std::ptrdiff_t m_ActivityName = 0x1560; // char[256]
     constexpr std::ptrdiff_t m_SequenceName = 0x1660; // char[256]
     constexpr std::ptrdiff_t m_bEnableClothSimulation = 0x1760; // bool
-    constexpr std::ptrdiff_t m_hOverrideMaterial = 0x1768; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_hOverrideMaterial = 0x1768; // CStrongHandle<InfoForResourceTypeIMaterial2>
     constexpr std::ptrdiff_t m_bOverrideTranslucentMaterials = 0x1770; // bool
     constexpr std::ptrdiff_t m_nSkin = 0x1778; // CPerParticleFloatInput
-    constexpr std::ptrdiff_t m_MaterialVars = 0x18D0; // CUtlVector< MaterialVariable_t >
+    constexpr std::ptrdiff_t m_MaterialVars = 0x18D0; // CUtlVector<MaterialVariable_t>
     constexpr std::ptrdiff_t m_modelInput = 0x18E8; // CParticleModelInput
     constexpr std::ptrdiff_t m_nLOD = 0x1948; // int32_t
     constexpr std::ptrdiff_t m_EconSlotName = 0x194C; // char[256]
@@ -2947,17 +2947,17 @@ namespace C_OP_RenderOmni2Light {
     constexpr std::ptrdiff_t m_flRange = 0xDD0; // CPerParticleFloatInput
     constexpr std::ptrdiff_t m_flInnerConeAngle = 0xF28; // CPerParticleFloatInput
     constexpr std::ptrdiff_t m_flOuterConeAngle = 0x1080; // CPerParticleFloatInput
-    constexpr std::ptrdiff_t m_hLightCookie = 0x11D8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    constexpr std::ptrdiff_t m_hLightCookie = 0x11D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
     constexpr std::ptrdiff_t m_bSphericalCookie = 0x11E0; // bool
 }
 
 namespace C_OP_RenderPoints {
-    constexpr std::ptrdiff_t m_hMaterial = 0x200; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_hMaterial = 0x200; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 namespace C_OP_RenderPostProcessing {
     constexpr std::ptrdiff_t m_flPostProcessStrength = 0x200; // CPerParticleFloatInput
-    constexpr std::ptrdiff_t m_hPostTexture = 0x358; // CStrongHandle< InfoForResourceTypeCPostProcessingResource >
+    constexpr std::ptrdiff_t m_hPostTexture = 0x358; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
     constexpr std::ptrdiff_t m_nPriority = 0x360; // ParticlePostProcessPriorityGroup_t
 }
 
@@ -2969,10 +2969,10 @@ namespace C_OP_RenderProjected {
     constexpr std::ptrdiff_t m_bEnableProjectedDepthControls = 0x204; // bool
     constexpr std::ptrdiff_t m_flMinProjectionDepth = 0x208; // float
     constexpr std::ptrdiff_t m_flMaxProjectionDepth = 0x20C; // float
-    constexpr std::ptrdiff_t m_hProjectedMaterial = 0x210; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    constexpr std::ptrdiff_t m_hProjectedMaterial = 0x210; // CStrongHandle<InfoForResourceTypeIMaterial2>
     constexpr std::ptrdiff_t m_flAnimationTimeScale = 0x218; // float
     constexpr std::ptrdiff_t m_bOrientToNormal = 0x21C; // bool
-    constexpr std::ptrdiff_t m_MaterialVars = 0x220; // CUtlVector< MaterialVariable_t >
+    constexpr std::ptrdiff_t m_MaterialVars = 0x220; // CUtlVector<MaterialVariable_t>
 }
 
 namespace C_OP_RenderRopes {
@@ -3103,22 +3103,22 @@ namespace C_OP_RenderStandardLight {
 }
 
 namespace C_OP_RenderStatusEffect {
-    constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureDetail2 = 0x208; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureDiffuseWarp = 0x210; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureFresnelColorWarp = 0x218; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureFresnelWarp = 0x220; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureSpecularWarp = 0x228; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureEnvMap = 0x230; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureDetail2 = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureDiffuseWarp = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureFresnelColorWarp = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureFresnelWarp = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureSpecularWarp = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureEnvMap = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 namespace C_OP_RenderStatusEffectCitadel {
-    constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureNormal = 0x208; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureMetalness = 0x210; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureRoughness = 0x218; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureSelfIllum = 0x220; // CStrongHandle< InfoForResourceTypeCTextureBase >
-    constexpr std::ptrdiff_t m_pTextureDetail = 0x228; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureNormal = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureMetalness = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureRoughness = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureSelfIllum = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+    constexpr std::ptrdiff_t m_pTextureDetail = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 namespace C_OP_RenderText {
@@ -3771,7 +3771,7 @@ namespace MaterialVariable_t {
 }
 
 namespace ModelReference_t {
-    constexpr std::ptrdiff_t m_model = 0x0; // CStrongHandle< InfoForResourceTypeCModel >
+    constexpr std::ptrdiff_t m_model = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
     constexpr std::ptrdiff_t m_flRelativeProbabilityOfSpawn = 0x8; // float
 }
 
@@ -3788,7 +3788,7 @@ namespace ParticleAttributeIndex_t {
 }
 
 namespace ParticleChildrenInfo_t {
-    constexpr std::ptrdiff_t m_ChildRef = 0x0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+    constexpr std::ptrdiff_t m_ChildRef = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     constexpr std::ptrdiff_t m_flDelay = 0x8; // float
     constexpr std::ptrdiff_t m_bEndCap = 0xC; // bool
     constexpr std::ptrdiff_t m_bDisableChild = 0xD; // bool
@@ -3797,7 +3797,7 @@ namespace ParticleChildrenInfo_t {
 
 namespace ParticleControlPointConfiguration_t {
     constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-    constexpr std::ptrdiff_t m_drivers = 0x8; // CUtlVector< ParticleControlPointDriver_t >
+    constexpr std::ptrdiff_t m_drivers = 0x8; // CUtlVector<ParticleControlPointDriver_t>
     constexpr std::ptrdiff_t m_previewState = 0x20; // ParticlePreviewState_t
 }
 
@@ -3824,7 +3824,7 @@ namespace ParticleNamedValueSource_t {
     constexpr std::ptrdiff_t m_IsPublic = 0x8; // bool
     constexpr std::ptrdiff_t m_ValueType = 0xC; // PulseValueType_t
     constexpr std::ptrdiff_t m_DefaultConfig = 0x10; // ParticleNamedValueConfiguration_t
-    constexpr std::ptrdiff_t m_NamedConfigs = 0x48; // CUtlVector< ParticleNamedValueConfiguration_t >
+    constexpr std::ptrdiff_t m_NamedConfigs = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
 }
 
 namespace ParticlePreviewBodyGroup_t {
@@ -3840,7 +3840,7 @@ namespace ParticlePreviewState_t {
     constexpr std::ptrdiff_t m_nFireParticleOnSequenceFrame = 0x18; // int32_t
     constexpr std::ptrdiff_t m_hitboxSetName = 0x20; // CUtlString
     constexpr std::ptrdiff_t m_materialGroupName = 0x28; // CUtlString
-    constexpr std::ptrdiff_t m_vecBodyGroups = 0x30; // CUtlVector< ParticlePreviewBodyGroup_t >
+    constexpr std::ptrdiff_t m_vecBodyGroups = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
     constexpr std::ptrdiff_t m_flPlaybackSpeed = 0x48; // float
     constexpr std::ptrdiff_t m_flParticleSimulationRate = 0x4C; // float
     constexpr std::ptrdiff_t m_bShouldDrawHitboxes = 0x50; // bool
@@ -3888,7 +3888,7 @@ namespace TextureControls_t {
 namespace TextureGroup_t {
     constexpr std::ptrdiff_t m_bEnabled = 0x0; // bool
     constexpr std::ptrdiff_t m_bReplaceTextureWithGradient = 0x1; // bool
-    constexpr std::ptrdiff_t m_hTexture = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    constexpr std::ptrdiff_t m_hTexture = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
     constexpr std::ptrdiff_t m_Gradient = 0x10; // CColorGradient
     constexpr std::ptrdiff_t m_nTextureType = 0x28; // SpriteCardTextureType_t
     constexpr std::ptrdiff_t m_nTextureChannels = 0x2C; // SpriteCardTextureChannel_t

@@ -3,10 +3,10 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.176450900 UTC
+// 2023-10-03 00:41:23.442804100 UTC
 
 namespace RenderInputLayoutField_t {
-    constexpr std::ptrdiff_t m_pSemanticName = 0x0; // uint8[32]
+    constexpr std::ptrdiff_t m_pSemanticName = 0x0; // uint8_t[32]
     constexpr std::ptrdiff_t m_nSemanticIndex = 0x20; // int32_t
     constexpr std::ptrdiff_t m_Format = 0x24; // uint32_t
     constexpr std::ptrdiff_t m_nOffset = 0x28; // int32_t
@@ -23,5 +23,5 @@ namespace VsInputSignatureElement_t {
 }
 
 namespace VsInputSignature_t {
-    constexpr std::ptrdiff_t m_elems = 0x0; // CUtlVector< VsInputSignatureElement_t >
+    constexpr std::ptrdiff_t m_elems = 0x0; // CUtlVector<VsInputSignatureElement_t>
 }

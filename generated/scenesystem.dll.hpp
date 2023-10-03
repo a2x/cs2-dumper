@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.359101700 UTC
+// 2023-10-03 00:41:23.761629900 UTC
 
 namespace CSSDSEndFrameViewInfo {
     constexpr std::ptrdiff_t m_nViewId = 0x0; // uint64_t
@@ -11,7 +11,7 @@ namespace CSSDSEndFrameViewInfo {
 }
 
 namespace CSSDSMsg_EndFrame {
-    constexpr std::ptrdiff_t m_Views = 0x0; // CUtlVector< CSSDSEndFrameViewInfo >
+    constexpr std::ptrdiff_t m_Views = 0x0; // CUtlVector<CSSDSEndFrameViewInfo>
 }
 
 namespace CSSDSMsg_LayerBase {
@@ -44,7 +44,7 @@ namespace CSSDSMsg_ViewTarget {
 namespace CSSDSMsg_ViewTargetList {
     constexpr std::ptrdiff_t m_viewId = 0x0; // SceneViewId_t
     constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
-    constexpr std::ptrdiff_t m_Targets = 0x18; // CUtlVector< CSSDSMsg_ViewTarget >
+    constexpr std::ptrdiff_t m_Targets = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
 }
 
 namespace SceneViewId_t {

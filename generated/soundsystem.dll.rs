@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.354521700 UTC
+// 2023-10-03 00:41:23.755731400 UTC
 
 pub mod CDSPMixgroupModifier {
     pub const m_mixgroup: usize = 0x0; // CUtlString
@@ -13,12 +13,12 @@ pub mod CDSPMixgroupModifier {
 }
 
 pub mod CDSPPresetMixgroupModifierTable {
-    pub const m_table: usize = 0x0; // CUtlVector< CDspPresetModifierList >
+    pub const m_table: usize = 0x0; // CUtlVector<CDspPresetModifierList>
 }
 
 pub mod CDspPresetModifierList {
     pub const m_dspName: usize = 0x0; // CUtlString
-    pub const m_modifiers: usize = 0x8; // CUtlVector< CDSPMixgroupModifier >
+    pub const m_modifiers: usize = 0x8; // CUtlVector<CDSPMixgroupModifier>
 }
 
 pub mod CSosGroupActionLimitSchema {
@@ -60,7 +60,7 @@ pub mod CSosGroupMatchPattern {
 }
 
 pub mod CSosSoundEventGroupListSchema {
-    pub const m_groupList: usize = 0x0; // CUtlVector< CSosSoundEventGroupSchema >
+    pub const m_groupList: usize = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
 }
 
 pub mod CSosSoundEventGroupSchema {
@@ -75,11 +75,11 @@ pub mod CSosSoundEventGroupSchema {
 }
 
 pub mod CSoundEventMetaData {
-    pub const m_soundEventVMix: usize = 0x0; // CStrongHandle< InfoForResourceTypeCVMixListResource >
+    pub const m_soundEventVMix: usize = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
 }
 
 pub mod SelectedEditItemInfo_t {
-    pub const m_EditItems: usize = 0x0; // CUtlVector< SosEditItemInfo_t >
+    pub const m_EditItems: usize = 0x0; // CUtlVector<SosEditItemInfo_t>
 }
 
 pub mod SosEditItemInfo_t {

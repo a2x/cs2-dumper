@@ -1102,16 +1102,16 @@
     "m_usable": 3268
   },
   "C_BaseCSGrenade": {
-    "m_bClientPredictDelete": 6368,
-    "m_bIsHeldByPlayer": 6409,
-    "m_bJumpThrow": 6411,
-    "m_bPinPulled": 6410,
-    "m_bRedraw": 6408,
-    "m_eThrowStatus": 6412,
-    "m_fDropTime": 6428,
-    "m_fThrowTime": 6416,
-    "m_flThrowStrength": 6420,
-    "m_flThrowStrengthApproach": 6424
+    "m_bClientPredictDelete": 6464,
+    "m_bIsHeldByPlayer": 6505,
+    "m_bJumpThrow": 6507,
+    "m_bPinPulled": 6506,
+    "m_bRedraw": 6504,
+    "m_eThrowStatus": 6508,
+    "m_fDropTime": 6524,
+    "m_fThrowTime": 6512,
+    "m_flThrowStrength": 6516,
+    "m_flThrowStrengthApproach": 6520
   },
   "C_BaseCSGrenadeProjectile": {
     "flNextTrailLineTime": 4256,
@@ -1447,17 +1447,17 @@
     "m_vecStartPos": 3776
   },
   "C_C4": {
-    "m_bBombPlacedAnimation": 6412,
-    "m_bBombPlanted": 6451,
-    "m_bDroppedFromDeath": 6452,
-    "m_bIsPlantingViaUse": 6413,
-    "m_bPlayedArmingBeeps": 6444,
-    "m_bStartedArming": 6404,
-    "m_bombdroppedlightParticleIndex": 6400,
-    "m_entitySpottedState": 6416,
-    "m_fArmedTime": 6408,
-    "m_nSpotRules": 6440,
-    "m_szScreenText": 6368
+    "m_bBombPlacedAnimation": 6508,
+    "m_bBombPlanted": 6547,
+    "m_bDroppedFromDeath": 6548,
+    "m_bIsPlantingViaUse": 6509,
+    "m_bPlayedArmingBeeps": 6540,
+    "m_bStartedArming": 6500,
+    "m_bombdroppedlightParticleIndex": 6496,
+    "m_entitySpottedState": 6512,
+    "m_fArmedTime": 6504,
+    "m_nSpotRules": 6536,
+    "m_szScreenText": 6464
   },
   "C_CSGOViewModel": {
     "m_bNeedToQueueHighResComposite": 3872,
@@ -1553,7 +1553,6 @@
     "m_bMatchWaitingForResume": 89,
     "m_bPlayAllStepSoundsOnServer": 154,
     "m_bServerPaused": 68,
-    "m_bSkipNextPerfSample": 7800,
     "m_bSpawnedTerrorHuntHeavy": 3221,
     "m_bSwitchingTeamsAtRoundReset": 3435,
     "m_bTCantBuy": 2536,
@@ -1846,17 +1845,18 @@
     "m_szTeamMatchStat": 1528
   },
   "C_CSWeaponBase": {
-    "m_IronSightController": 6112,
+    "m_ClientPreviousWeaponState": 5632,
+    "m_IronSightController": 6208,
     "m_OnPlayerPickup": 5680,
     "m_bBurstMode": 5768,
-    "m_bFireOnEmpty": 5672,
+    "m_bFireOnEmpty": 5676,
     "m_bGlowForPing": 5944,
     "m_bInReload": 5776,
     "m_bIsHauledBack": 5784,
     "m_bOldFirstPersonSpectatedState": 5921,
     "m_bPlayerFireEventIsPrimary": 5596,
     "m_bReloadVisuallyComplete": 5777,
-    "m_bReloadsWithClips": 5664,
+    "m_bReloadsWithClips": 5668,
     "m_bSilencerOn": 5785,
     "m_bUIWeapon": 5945,
     "m_bVisualsDataSet": 5920,
@@ -1867,38 +1867,38 @@
     "m_fAccuracySmoothedForZoom": 5752,
     "m_fLastShotTime": 6000,
     "m_fScopeZoomEndTime": 5756,
-    "m_flCrosshairDistance": 5636,
+    "m_flCrosshairDistance": 5640,
     "m_flDroppedAtTime": 5780,
     "m_flFireSequenceStartTime": 5584,
-    "m_flGunAccuracyPosition": 5656,
+    "m_flGunAccuracyPosition": 5660,
     "m_flLastAccuracyUpdateTime": 5748,
     "m_flLastClientFireBulletTime": 6020,
-    "m_flLastLOSTraceFailureTime": 6304,
+    "m_flLastLOSTraceFailureTime": 6400,
     "m_flNextAttackRenderTimeOffset": 5796,
     "m_flPostponeFireReadyTime": 5772,
     "m_flRecoilIndex": 5764,
     "m_flTimeSilencerSwitchComplete": 5788,
-    "m_flTimeWeaponIdle": 5668,
+    "m_flTimeWeaponIdle": 5672,
     "m_flTurningInaccuracy": 5740,
     "m_flTurningInaccuracyDelta": 5724,
     "m_gunHeat": 6008,
     "m_hOurPing": 5924,
     "m_hPrevOwner": 5960,
-    "m_iAlpha": 5644,
-    "m_iAmmoLastCheck": 5640,
-    "m_iCrosshairTextureID": 5652,
-    "m_iIronSightMode": 6288,
-    "m_iNumEmptyAttacks": 6308,
+    "m_iAlpha": 5648,
+    "m_iAmmoLastCheck": 5644,
+    "m_iCrosshairTextureID": 5656,
+    "m_iIronSightMode": 6384,
+    "m_iNumEmptyAttacks": 6404,
     "m_iOriginalTeamNumber": 5792,
     "m_iRecoilIndex": 5760,
-    "m_iScopeTextureID": 5648,
-    "m_iState": 5632,
+    "m_iScopeTextureID": 5652,
+    "m_iState": 5636,
     "m_lastSmokeTime": 6016,
     "m_nDropTick": 5964,
     "m_nFireSequenceStartTimeAck": 5592,
     "m_nFireSequenceStartTimeChange": 5588,
     "m_nOurPingIndex": 5928,
-    "m_nViewModelIndex": 5660,
+    "m_nViewModelIndex": 5664,
     "m_seqFirePrimary": 5604,
     "m_seqFireSecondary": 5608,
     "m_seqIdle": 5600,
@@ -1908,12 +1908,12 @@
     "m_weaponMode": 5720
   },
   "C_CSWeaponBaseGun": {
-    "m_bNeedsBoltAction": 6397,
-    "m_iBurstShotsRemaining": 6372,
-    "m_iSilencerBodygroup": 6376,
-    "m_inPrecache": 6396,
-    "m_silencedModelIndex": 6392,
-    "m_zoomLevel": 6368
+    "m_bNeedsBoltAction": 6493,
+    "m_iBurstShotsRemaining": 6468,
+    "m_iSilencerBodygroup": 6472,
+    "m_inPrecache": 6492,
+    "m_silencedModelIndex": 6488,
+    "m_zoomLevel": 6464
   },
   "C_Chicken": {
     "m_AttributeManager": 4352,
@@ -2361,8 +2361,8 @@
     "m_z": 3852
   },
   "C_Fists": {
-    "m_bPlayingUninterruptableAct": 6368,
-    "m_nUninterruptableActivity": 6372
+    "m_bPlayingUninterruptableAct": 6464,
+    "m_nUninterruptableActivity": 6468
   },
   "C_FogController": {
     "m_bUseAngles": 1448,
@@ -2586,7 +2586,7 @@
     "m_nVoteMapIdsList": 1624
   },
   "C_Melee": {
-    "m_flThrowAt": 6368
+    "m_flThrowAt": 6464
   },
   "C_MolotovProjectile": {
     "m_bIsIncGrenade": 4336
@@ -3168,14 +3168,14 @@
     "m_nVoteOptionCount": 1368
   },
   "C_WeaponBaseItem": {
-    "m_SequenceCompleteTimer": 6368,
-    "m_bRedraw": 6392
+    "m_SequenceCompleteTimer": 6464,
+    "m_bRedraw": 6488
   },
   "C_WeaponShield": {
-    "m_flDisplayHealth": 6400
+    "m_flDisplayHealth": 6496
   },
   "C_WeaponTaser": {
-    "m_fFireTime": 6400
+    "m_fFireTime": 6496
   },
   "C_fogplayerparams_t": {
     "m_NewColor": 40,

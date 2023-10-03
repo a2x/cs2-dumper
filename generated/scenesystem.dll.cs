@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.360119400 UTC
+// 2023-10-03 00:41:23.762910 UTC
 
 public static class CSSDSEndFrameViewInfo {
     public const nint m_nViewId = 0x0; // uint64_t
@@ -7,7 +7,7 @@ public static class CSSDSEndFrameViewInfo {
 }
 
 public static class CSSDSMsg_EndFrame {
-    public const nint m_Views = 0x0; // CUtlVector< CSSDSEndFrameViewInfo >
+    public const nint m_Views = 0x0; // CUtlVector<CSSDSEndFrameViewInfo>
 }
 
 public static class CSSDSMsg_LayerBase {
@@ -40,7 +40,7 @@ public static class CSSDSMsg_ViewTarget {
 public static class CSSDSMsg_ViewTargetList {
     public const nint m_viewId = 0x0; // SceneViewId_t
     public const nint m_ViewName = 0x10; // CUtlString
-    public const nint m_Targets = 0x18; // CUtlVector< CSSDSMsg_ViewTarget >
+    public const nint m_Targets = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
 }
 
 public static class SceneViewId_t {

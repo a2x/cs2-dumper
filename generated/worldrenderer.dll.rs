@@ -1,12 +1,12 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.372292300 UTC
+// 2023-10-03 00:41:23.782860700 UTC
 
 pub mod AggregateLODSetup_t {
     pub const m_vLODOrigin: usize = 0x0; // Vector
     pub const m_fMaxObjectScale: usize = 0xC; // float
-    pub const m_fSwitchDistances: usize = 0x10; // CUtlVectorFixedGrowable< float32 >
+    pub const m_fSwitchDistances: usize = 0x10; // CUtlVectorFixedGrowable<float>
 }
 
 pub mod AggregateMeshInfo_t {
@@ -25,11 +25,11 @@ pub mod AggregateSceneObject_t {
     pub const m_allFlags: usize = 0x0; // ObjectTypeFlags_t
     pub const m_anyFlags: usize = 0x4; // ObjectTypeFlags_t
     pub const m_nLayer: usize = 0x8; // int16_t
-    pub const m_aggregateMeshes: usize = 0x10; // CUtlVector< AggregateMeshInfo_t >
-    pub const m_lodSetups: usize = 0x28; // CUtlVector< AggregateLODSetup_t >
-    pub const m_visClusterMembership: usize = 0x40; // CUtlVector< uint16 >
-    pub const m_fragmentTransforms: usize = 0x58; // CUtlVector< matrix3x4_t >
-    pub const m_renderableModel: usize = 0x70; // CStrongHandle< InfoForResourceTypeCModel >
+    pub const m_aggregateMeshes: usize = 0x10; // CUtlVector<AggregateMeshInfo_t>
+    pub const m_lodSetups: usize = 0x28; // CUtlVector<AggregateLODSetup_t>
+    pub const m_visClusterMembership: usize = 0x40; // CUtlVector<uint16_t>
+    pub const m_fragmentTransforms: usize = 0x58; // CUtlVector<matrix3x4_t>
+    pub const m_renderableModel: usize = 0x70; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
 pub mod BakedLightingInfo_t {
@@ -37,7 +37,7 @@ pub mod BakedLightingInfo_t {
     pub const m_nLightmapGameVersionNumber: usize = 0x4; // uint32_t
     pub const m_vLightmapUvScale: usize = 0x8; // Vector2D
     pub const m_bHasLightmaps: usize = 0x10; // bool
-    pub const m_lightMaps: usize = 0x18; // CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > >
+    pub const m_lightMaps: usize = 0x18; // CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
 }
 
 pub mod BaseSceneObjectOverride_t {
@@ -88,11 +88,11 @@ pub mod ClutterSceneObject_t {
     pub const m_Bounds: usize = 0x0; // AABB_t
     pub const m_flags: usize = 0x18; // ObjectTypeFlags_t
     pub const m_nLayer: usize = 0x1C; // int16_t
-    pub const m_instancePositions: usize = 0x20; // CUtlVector< Vector >
-    pub const m_instanceScales: usize = 0x50; // CUtlVector< float32 >
-    pub const m_instanceTintSrgb: usize = 0x68; // CUtlVector< Color >
-    pub const m_tiles: usize = 0x80; // CUtlVector< ClutterTile_t >
-    pub const m_renderableModel: usize = 0x98; // CStrongHandle< InfoForResourceTypeCModel >
+    pub const m_instancePositions: usize = 0x20; // CUtlVector<Vector>
+    pub const m_instanceScales: usize = 0x50; // CUtlVector<float>
+    pub const m_instanceTintSrgb: usize = 0x68; // CUtlVector<Color>
+    pub const m_tiles: usize = 0x80; // CUtlVector<ClutterTile_t>
+    pub const m_renderableModel: usize = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
 pub mod ClutterTile_t {
@@ -112,7 +112,7 @@ pub mod EntityIOConnectionData_t {
 }
 
 pub mod EntityKeyValueData_t {
-    pub const m_connections: usize = 0x8; // CUtlVector< EntityIOConnectionData_t >
+    pub const m_connections: usize = 0x8; // CUtlVector<EntityIOConnectionData_t>
     pub const m_keyValuesData: usize = 0x20; // CUtlBinaryBlock
 }
 
@@ -130,7 +130,7 @@ pub mod InfoOverlayData_t {
     pub const m_flDepth: usize = 0x38; // float
     pub const m_vUVStart: usize = 0x3C; // Vector2D
     pub const m_vUVEnd: usize = 0x44; // Vector2D
-    pub const m_pMaterial: usize = 0x50; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_pMaterial: usize = 0x50; // CStrongHandle<InfoForResourceTypeIMaterial2>
     pub const m_nRenderOrder: usize = 0x58; // int32_t
     pub const m_vTintColor: usize = 0x5C; // Vector4D
     pub const m_nSequenceOverride: usize = 0x6C; // int32_t
@@ -139,7 +139,7 @@ pub mod InfoOverlayData_t {
 pub mod MaterialOverride_t {
     pub const m_nSubSceneObject: usize = 0x4; // uint32_t
     pub const m_nDrawCallIndex: usize = 0x8; // uint32_t
-    pub const m_pMaterial: usize = 0x10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+    pub const m_pMaterial: usize = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 pub mod NodeData_t {
@@ -148,15 +148,15 @@ pub mod NodeData_t {
     pub const m_vMinBounds: usize = 0x10; // Vector
     pub const m_vMaxBounds: usize = 0x1C; // Vector
     pub const m_flMinimumDistance: usize = 0x28; // float
-    pub const m_ChildNodeIndices: usize = 0x30; // CUtlVector< int32 >
+    pub const m_ChildNodeIndices: usize = 0x30; // CUtlVector<int32_t>
     pub const m_worldNodePrefix: usize = 0x48; // CUtlString
 }
 
 pub mod PermEntityLumpData_t {
     pub const m_name: usize = 0x8; // CUtlString
     pub const m_hammerUniqueId: usize = 0x10; // CUtlString
-    pub const m_childLumps: usize = 0x18; // CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > >
-    pub const m_entityKeyValues: usize = 0x30; // CUtlLeanVector< EntityKeyValueData_t >
+    pub const m_childLumps: usize = 0x18; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+    pub const m_entityKeyValues: usize = 0x30; // CUtlLeanVector<EntityKeyValueData_t>
 }
 
 pub mod SceneObject_t {
@@ -173,8 +173,8 @@ pub mod SceneObject_t {
     pub const m_nLODOverride: usize = 0x6E; // int16_t
     pub const m_nCubeMapPrecomputedHandshake: usize = 0x70; // int32_t
     pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x74; // int32_t
-    pub const m_renderableModel: usize = 0x80; // CStrongHandle< InfoForResourceTypeCModel >
-    pub const m_renderable: usize = 0x88; // CStrongHandle< InfoForResourceTypeCRenderMesh >
+    pub const m_renderableModel: usize = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_renderable: usize = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
 }
 
 pub mod VoxelVisBlockOffset_t {
@@ -193,29 +193,29 @@ pub mod WorldBuilderParams_t {
 pub mod WorldNodeOnDiskBufferData_t {
     pub const m_nElementCount: usize = 0x0; // int32_t
     pub const m_nElementSizeInBytes: usize = 0x4; // int32_t
-    pub const m_inputLayoutFields: usize = 0x8; // CUtlVector< RenderInputLayoutField_t >
-    pub const m_pData: usize = 0x20; // CUtlVector< uint8 >
+    pub const m_inputLayoutFields: usize = 0x8; // CUtlVector<RenderInputLayoutField_t>
+    pub const m_pData: usize = 0x20; // CUtlVector<uint8_t>
 }
 
 pub mod WorldNode_t {
-    pub const m_sceneObjects: usize = 0x0; // CUtlVector< SceneObject_t >
-    pub const m_infoOverlays: usize = 0x18; // CUtlVector< InfoOverlayData_t >
-    pub const m_visClusterMembership: usize = 0x30; // CUtlVector< uint16 >
-    pub const m_aggregateSceneObjects: usize = 0x48; // CUtlVector< AggregateSceneObject_t >
-    pub const m_clutterSceneObjects: usize = 0x60; // CUtlVector< ClutterSceneObject_t >
-    pub const m_extraVertexStreamOverrides: usize = 0x78; // CUtlVector< ExtraVertexStreamOverride_t >
-    pub const m_materialOverrides: usize = 0x90; // CUtlVector< MaterialOverride_t >
-    pub const m_extraVertexStreams: usize = 0xA8; // CUtlVector< WorldNodeOnDiskBufferData_t >
-    pub const m_layerNames: usize = 0xC0; // CUtlVector< CUtlString >
-    pub const m_sceneObjectLayerIndices: usize = 0xD8; // CUtlVector< uint8 >
-    pub const m_overlayLayerIndices: usize = 0xF0; // CUtlVector< uint8 >
+    pub const m_sceneObjects: usize = 0x0; // CUtlVector<SceneObject_t>
+    pub const m_infoOverlays: usize = 0x18; // CUtlVector<InfoOverlayData_t>
+    pub const m_visClusterMembership: usize = 0x30; // CUtlVector<uint16_t>
+    pub const m_aggregateSceneObjects: usize = 0x48; // CUtlVector<AggregateSceneObject_t>
+    pub const m_clutterSceneObjects: usize = 0x60; // CUtlVector<ClutterSceneObject_t>
+    pub const m_extraVertexStreamOverrides: usize = 0x78; // CUtlVector<ExtraVertexStreamOverride_t>
+    pub const m_materialOverrides: usize = 0x90; // CUtlVector<MaterialOverride_t>
+    pub const m_extraVertexStreams: usize = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
+    pub const m_layerNames: usize = 0xC0; // CUtlVector<CUtlString>
+    pub const m_sceneObjectLayerIndices: usize = 0xD8; // CUtlVector<uint8_t>
+    pub const m_overlayLayerIndices: usize = 0xF0; // CUtlVector<uint8_t>
     pub const m_grassFileName: usize = 0x108; // CUtlString
     pub const m_nodeLightingInfo: usize = 0x110; // BakedLightingInfo_t
 }
 
 pub mod World_t {
     pub const m_builderParams: usize = 0x0; // WorldBuilderParams_t
-    pub const m_worldNodes: usize = 0x20; // CUtlVector< NodeData_t >
+    pub const m_worldNodes: usize = 0x20; // CUtlVector<NodeData_t>
     pub const m_worldLightingInfo: usize = 0x38; // BakedLightingInfo_t
-    pub const m_entityLumps: usize = 0x68; // CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > >
+    pub const m_entityLumps: usize = 0x68; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
 }

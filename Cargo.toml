@@ -1,6 +1,6 @@
 [package]
 name = "cs2-dumper"
-version = "0.1.0"
+version = "0.1.9"
 authors = ["a2x"]
 edition = "2021"
 repository = "https://github.com/a2x/cs2-dumper"
@@ -10,6 +10,7 @@ license = "MIT"
 chrono = "0.4"
 clap = { version = "4.4", features = ["derive"] }
 log = "0.4"
+regex = "1.9"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 simple_logger = "4.2"

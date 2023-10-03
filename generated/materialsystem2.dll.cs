@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.192055500 UTC
+// 2023-10-03 00:41:23.469184100 UTC
 
 public static class MaterialParamBuffer_t {
     public const nint m_value = 0x8; // CUtlBinaryBlock
@@ -18,7 +18,7 @@ public static class MaterialParamString_t {
 }
 
 public static class MaterialParamTexture_t {
-    public const nint m_pValue = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    public const nint m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 public static class MaterialParamVector_t {
@@ -32,18 +32,18 @@ public static class MaterialParam_t {
 public static class MaterialResourceData_t {
     public const nint m_materialName = 0x0; // CUtlString
     public const nint m_shaderName = 0x8; // CUtlString
-    public const nint m_intParams = 0x10; // CUtlVector< MaterialParamInt_t >
-    public const nint m_floatParams = 0x28; // CUtlVector< MaterialParamFloat_t >
-    public const nint m_vectorParams = 0x40; // CUtlVector< MaterialParamVector_t >
-    public const nint m_textureParams = 0x58; // CUtlVector< MaterialParamTexture_t >
-    public const nint m_dynamicParams = 0x70; // CUtlVector< MaterialParamBuffer_t >
-    public const nint m_dynamicTextureParams = 0x88; // CUtlVector< MaterialParamBuffer_t >
-    public const nint m_intAttributes = 0xA0; // CUtlVector< MaterialParamInt_t >
-    public const nint m_floatAttributes = 0xB8; // CUtlVector< MaterialParamFloat_t >
-    public const nint m_vectorAttributes = 0xD0; // CUtlVector< MaterialParamVector_t >
-    public const nint m_textureAttributes = 0xE8; // CUtlVector< MaterialParamTexture_t >
-    public const nint m_stringAttributes = 0x100; // CUtlVector< MaterialParamString_t >
-    public const nint m_renderAttributesUsed = 0x118; // CUtlVector< CUtlString >
+    public const nint m_intParams = 0x10; // CUtlVector<MaterialParamInt_t>
+    public const nint m_floatParams = 0x28; // CUtlVector<MaterialParamFloat_t>
+    public const nint m_vectorParams = 0x40; // CUtlVector<MaterialParamVector_t>
+    public const nint m_textureParams = 0x58; // CUtlVector<MaterialParamTexture_t>
+    public const nint m_dynamicParams = 0x70; // CUtlVector<MaterialParamBuffer_t>
+    public const nint m_dynamicTextureParams = 0x88; // CUtlVector<MaterialParamBuffer_t>
+    public const nint m_intAttributes = 0xA0; // CUtlVector<MaterialParamInt_t>
+    public const nint m_floatAttributes = 0xB8; // CUtlVector<MaterialParamFloat_t>
+    public const nint m_vectorAttributes = 0xD0; // CUtlVector<MaterialParamVector_t>
+    public const nint m_textureAttributes = 0xE8; // CUtlVector<MaterialParamTexture_t>
+    public const nint m_stringAttributes = 0x100; // CUtlVector<MaterialParamString_t>
+    public const nint m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
 }
 
 public static class PostProcessingBloomParameters_t {
@@ -55,7 +55,7 @@ public static class PostProcessingBloomParameters_t {
     public const nint m_flBloomThresholdWidth = 0x14; // float
     public const nint m_flSkyboxBloomStrength = 0x18; // float
     public const nint m_flBloomStartValue = 0x1C; // float
-    public const nint m_flBlurWeight = 0x20; // float32[5]
+    public const nint m_flBlurWeight = 0x20; // float[5]
     public const nint m_vBlurTint = 0x34; // Vector[5]
 }
 

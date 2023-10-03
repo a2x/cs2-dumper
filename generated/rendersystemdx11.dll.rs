@@ -1,10 +1,10 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.178344500 UTC
+// 2023-10-03 00:41:23.444744700 UTC
 
 pub mod RenderInputLayoutField_t {
-    pub const m_pSemanticName: usize = 0x0; // uint8[32]
+    pub const m_pSemanticName: usize = 0x0; // uint8_t[32]
     pub const m_nSemanticIndex: usize = 0x20; // int32_t
     pub const m_Format: usize = 0x24; // uint32_t
     pub const m_nOffset: usize = 0x28; // int32_t
@@ -21,5 +21,5 @@ pub mod VsInputSignatureElement_t {
 }
 
 pub mod VsInputSignature_t {
-    pub const m_elems: usize = 0x0; // CUtlVector< VsInputSignatureElement_t >
+    pub const m_elems: usize = 0x0; // CUtlVector<VsInputSignatureElement_t>
 }

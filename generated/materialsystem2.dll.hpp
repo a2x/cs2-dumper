@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.190237800 UTC
+// 2023-10-03 00:41:23.467519800 UTC
 
 namespace MaterialParamBuffer_t {
     constexpr std::ptrdiff_t m_value = 0x8; // CUtlBinaryBlock
@@ -22,7 +22,7 @@ namespace MaterialParamString_t {
 }
 
 namespace MaterialParamTexture_t {
-    constexpr std::ptrdiff_t m_pValue = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    constexpr std::ptrdiff_t m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 namespace MaterialParamVector_t {
@@ -36,18 +36,18 @@ namespace MaterialParam_t {
 namespace MaterialResourceData_t {
     constexpr std::ptrdiff_t m_materialName = 0x0; // CUtlString
     constexpr std::ptrdiff_t m_shaderName = 0x8; // CUtlString
-    constexpr std::ptrdiff_t m_intParams = 0x10; // CUtlVector< MaterialParamInt_t >
-    constexpr std::ptrdiff_t m_floatParams = 0x28; // CUtlVector< MaterialParamFloat_t >
-    constexpr std::ptrdiff_t m_vectorParams = 0x40; // CUtlVector< MaterialParamVector_t >
-    constexpr std::ptrdiff_t m_textureParams = 0x58; // CUtlVector< MaterialParamTexture_t >
-    constexpr std::ptrdiff_t m_dynamicParams = 0x70; // CUtlVector< MaterialParamBuffer_t >
-    constexpr std::ptrdiff_t m_dynamicTextureParams = 0x88; // CUtlVector< MaterialParamBuffer_t >
-    constexpr std::ptrdiff_t m_intAttributes = 0xA0; // CUtlVector< MaterialParamInt_t >
-    constexpr std::ptrdiff_t m_floatAttributes = 0xB8; // CUtlVector< MaterialParamFloat_t >
-    constexpr std::ptrdiff_t m_vectorAttributes = 0xD0; // CUtlVector< MaterialParamVector_t >
-    constexpr std::ptrdiff_t m_textureAttributes = 0xE8; // CUtlVector< MaterialParamTexture_t >
-    constexpr std::ptrdiff_t m_stringAttributes = 0x100; // CUtlVector< MaterialParamString_t >
-    constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // CUtlVector< CUtlString >
+    constexpr std::ptrdiff_t m_intParams = 0x10; // CUtlVector<MaterialParamInt_t>
+    constexpr std::ptrdiff_t m_floatParams = 0x28; // CUtlVector<MaterialParamFloat_t>
+    constexpr std::ptrdiff_t m_vectorParams = 0x40; // CUtlVector<MaterialParamVector_t>
+    constexpr std::ptrdiff_t m_textureParams = 0x58; // CUtlVector<MaterialParamTexture_t>
+    constexpr std::ptrdiff_t m_dynamicParams = 0x70; // CUtlVector<MaterialParamBuffer_t>
+    constexpr std::ptrdiff_t m_dynamicTextureParams = 0x88; // CUtlVector<MaterialParamBuffer_t>
+    constexpr std::ptrdiff_t m_intAttributes = 0xA0; // CUtlVector<MaterialParamInt_t>
+    constexpr std::ptrdiff_t m_floatAttributes = 0xB8; // CUtlVector<MaterialParamFloat_t>
+    constexpr std::ptrdiff_t m_vectorAttributes = 0xD0; // CUtlVector<MaterialParamVector_t>
+    constexpr std::ptrdiff_t m_textureAttributes = 0xE8; // CUtlVector<MaterialParamTexture_t>
+    constexpr std::ptrdiff_t m_stringAttributes = 0x100; // CUtlVector<MaterialParamString_t>
+    constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
 }
 
 namespace PostProcessingBloomParameters_t {
@@ -59,7 +59,7 @@ namespace PostProcessingBloomParameters_t {
     constexpr std::ptrdiff_t m_flBloomThresholdWidth = 0x14; // float
     constexpr std::ptrdiff_t m_flSkyboxBloomStrength = 0x18; // float
     constexpr std::ptrdiff_t m_flBloomStartValue = 0x1C; // float
-    constexpr std::ptrdiff_t m_flBlurWeight = 0x20; // float32[5]
+    constexpr std::ptrdiff_t m_flBlurWeight = 0x20; // float[5]
     constexpr std::ptrdiff_t m_vBlurTint = 0x34; // Vector[5]
 }
 

@@ -1,8 +1,8 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.177229400 UTC
+// 2023-10-03 00:41:23.443505500 UTC
 
 public static class RenderInputLayoutField_t {
-    public const nint m_pSemanticName = 0x0; // uint8[32]
+    public const nint m_pSemanticName = 0x0; // uint8_t[32]
     public const nint m_nSemanticIndex = 0x20; // int32_t
     public const nint m_Format = 0x24; // uint32_t
     public const nint m_nOffset = 0x28; // int32_t
@@ -19,5 +19,5 @@ public static class VsInputSignatureElement_t {
 }
 
 public static class VsInputSignature_t {
-    public const nint m_elems = 0x0; // CUtlVector< VsInputSignatureElement_t >
+    public const nint m_elems = 0x0; // CUtlVector<VsInputSignatureElement_t>
 }

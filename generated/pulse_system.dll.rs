@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.385323200 UTC
+// 2023-10-03 00:41:23.805307100 UTC
 
 pub mod CPulseCell_Base {
     pub const m_nEditorNodeID: usize = 0x8; // PulseDocNodeID_t
@@ -32,7 +32,7 @@ pub mod CPulseCell_Inflow_Method {
     pub const m_Description: usize = 0x78; // CUtlString
     pub const m_bIsPublic: usize = 0x80; // bool
     pub const m_ReturnType: usize = 0x88; // CPulseValueFullType
-    pub const m_Args: usize = 0x98; // CUtlVector< CPulseRuntimeMethodArg >
+    pub const m_Args: usize = 0x98; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
 pub mod CPulseCell_Inflow_Wait {
@@ -44,7 +44,7 @@ pub mod CPulseCell_Inflow_Yield {
 }
 
 pub mod CPulseCell_Outflow_CycleOrdered {
-    pub const m_Outputs: usize = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 pub mod CPulseCell_Outflow_CycleOrdered_InstanceState_t {
@@ -52,30 +52,30 @@ pub mod CPulseCell_Outflow_CycleOrdered_InstanceState_t {
 }
 
 pub mod CPulseCell_Outflow_CycleRandom {
-    pub const m_Outputs: usize = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 pub mod CPulseCell_Outflow_CycleShuffled {
-    pub const m_Outputs: usize = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 pub mod CPulseCell_Outflow_CycleShuffled_InstanceState_t {
-    pub const m_Shuffle: usize = 0x0; // CUtlVectorFixedGrowable< uint8 >
+    pub const m_Shuffle: usize = 0x0; // CUtlVectorFixedGrowable<uint8_t>
     pub const m_nNextShuffle: usize = 0x20; // int32_t
 }
 
 pub mod CPulseCell_Outflow_IntSwitch {
     pub const m_DefaultCaseOutflow: usize = 0x48; // CPulse_OutflowConnection
-    pub const m_CaseOutflows: usize = 0x58; // CUtlVector< CPulse_OutflowConnection >
+    pub const m_CaseOutflows: usize = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
 pub mod CPulseCell_Outflow_SimultaneousParallel {
-    pub const m_Outputs: usize = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 pub mod CPulseCell_Outflow_StringSwitch {
     pub const m_DefaultCaseOutflow: usize = 0x48; // CPulse_OutflowConnection
-    pub const m_CaseOutflows: usize = 0x58; // CUtlVector< CPulse_OutflowConnection >
+    pub const m_CaseOutflows: usize = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
 pub mod CPulseCell_Outflow_TestExplicitYesNo {
@@ -90,7 +90,7 @@ pub mod CPulseCell_Outflow_TestRandomYesNo {
 
 pub mod CPulseCell_Step_CallExternalMethod {
     pub const m_MethodName: usize = 0x48; // CUtlSymbolLarge
-    pub const m_ExpectedArgs: usize = 0x50; // CUtlVector< CPulseRuntimeMethodArg >
+    pub const m_ExpectedArgs: usize = 0x50; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
 pub mod CPulseCell_Step_PublicOutput {
@@ -104,13 +104,13 @@ pub mod CPulseCell_Step_TestDomainEntFire {
 pub mod CPulseGraphDef {
     pub const m_DomainIdentifier: usize = 0x8; // CUtlSymbolLarge
     pub const m_ParentMapName: usize = 0x10; // CUtlSymbolLarge
-    pub const m_Chunks: usize = 0x18; // CUtlVector< CPulse_Chunk* >
-    pub const m_Cells: usize = 0x30; // CUtlVector< CPulseCell_Base* >
-    pub const m_Vars: usize = 0x48; // CUtlVector< CPulse_Variable >
-    pub const m_PublicOutputs: usize = 0x60; // CUtlVector< CPulse_PublicOutput >
-    pub const m_InvokeBindings: usize = 0x78; // CUtlVector< CPulse_InvokeBinding* >
-    pub const m_CallInfos: usize = 0x90; // CUtlVector< CPulse_CallInfo* >
-    pub const m_OutputConnections: usize = 0xA8; // CUtlVector< CPulse_OutputConnection* >
+    pub const m_Chunks: usize = 0x18; // CUtlVector<CPulse_Chunk*>
+    pub const m_Cells: usize = 0x30; // CUtlVector<CPulseCell_Base*>
+    pub const m_Vars: usize = 0x48; // CUtlVector<CPulse_Variable>
+    pub const m_PublicOutputs: usize = 0x60; // CUtlVector<CPulse_PublicOutput>
+    pub const m_InvokeBindings: usize = 0x78; // CUtlVector<CPulse_InvokeBinding*>
+    pub const m_CallInfos: usize = 0x90; // CUtlVector<CPulse_CallInfo*>
+    pub const m_OutputConnections: usize = 0xA8; // CUtlVector<CPulse_OutputConnection*>
 }
 
 pub mod CPulseGraphInstance_TestDomain {
@@ -118,7 +118,7 @@ pub mod CPulseGraphInstance_TestDomain {
     pub const m_bExplicitTimeStepping: usize = 0xD1; // bool
     pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0xD2; // bool
     pub const m_nNextValidateIndex: usize = 0xD4; // int32_t
-    pub const m_Tracepoints: usize = 0xD8; // CUtlVector< CUtlString >
+    pub const m_Tracepoints: usize = 0xD8; // CUtlVector<CUtlString>
     pub const m_bTestYesOrNoPath: usize = 0xF0; // bool
 }
 
@@ -149,9 +149,9 @@ pub mod CPulse_CallInfo {
 }
 
 pub mod CPulse_Chunk {
-    pub const m_Instructions: usize = 0x0; // CUtlLeanVector< PGDInstruction_t >
-    pub const m_Registers: usize = 0x10; // CUtlLeanVector< CPulse_RegisterInfo >
-    pub const m_InstructionEditorIDs: usize = 0x20; // CUtlLeanVector< PulseDocNodeID_t >
+    pub const m_Instructions: usize = 0x0; // CUtlLeanVector<PGDInstruction_t>
+    pub const m_Registers: usize = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
+    pub const m_InstructionEditorIDs: usize = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
 }
 
 pub mod CPulse_InvokeBinding {

@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.174860 UTC
+// 2023-10-03 00:41:23.440582400 UTC
 
 pub mod AABB_t {
     pub const m_vMinBounds: usize = 0x0; // Vector
@@ -9,19 +9,19 @@ pub mod AABB_t {
 }
 
 pub mod CFuseProgram {
-    pub const m_programBuffer: usize = 0x0; // CUtlVector< uint8 >
-    pub const m_variablesRead: usize = 0x18; // CUtlVector< FuseVariableIndex_t >
-    pub const m_variablesWritten: usize = 0x30; // CUtlVector< FuseVariableIndex_t >
+    pub const m_programBuffer: usize = 0x0; // CUtlVector<uint8_t>
+    pub const m_variablesRead: usize = 0x18; // CUtlVector<FuseVariableIndex_t>
+    pub const m_variablesWritten: usize = 0x30; // CUtlVector<FuseVariableIndex_t>
     pub const m_nMaxTempVarsUsed: usize = 0x48; // int32_t
 }
 
 pub mod CFuseSymbolTable {
-    pub const m_constants: usize = 0x0; // CUtlVector< ConstantInfo_t >
-    pub const m_variables: usize = 0x18; // CUtlVector< VariableInfo_t >
-    pub const m_functions: usize = 0x30; // CUtlVector< FunctionInfo_t >
-    pub const m_constantMap: usize = 0x48; // CUtlHashtable< CUtlStringToken, int32 >
-    pub const m_variableMap: usize = 0x68; // CUtlHashtable< CUtlStringToken, int32 >
-    pub const m_functionMap: usize = 0x88; // CUtlHashtable< CUtlStringToken, int32 >
+    pub const m_constants: usize = 0x0; // CUtlVector<ConstantInfo_t>
+    pub const m_variables: usize = 0x18; // CUtlVector<VariableInfo_t>
+    pub const m_functions: usize = 0x30; // CUtlVector<FunctionInfo_t>
+    pub const m_constantMap: usize = 0x48; // CUtlHashtable<CUtlStringToken,int32_t>
+    pub const m_variableMap: usize = 0x68; // CUtlHashtable<CUtlStringToken,int32_t>
+    pub const m_functionMap: usize = 0x88; // CUtlHashtable<CUtlStringToken,int32_t>
 }
 
 pub mod ConstantInfo_t {
@@ -55,7 +55,7 @@ pub mod FuseVariableIndex_t {
 
 pub mod ManifestTestResource_t {
     pub const m_name: usize = 0x0; // CUtlString
-    pub const m_child: usize = 0x8; // CStrongHandle< InfoForResourceTypeManifestTestResource_t >
+    pub const m_child: usize = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
 }
 
 pub mod PackedAABB_t {

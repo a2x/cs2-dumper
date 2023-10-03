@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.183676600 UTC
+// 2023-10-03 00:41:23.456613900 UTC
 
 public static class CEntityComponentHelper {
     public const nint m_flags = 0x8; // uint32_t
@@ -9,7 +9,7 @@ public static class CEntityComponentHelper {
 }
 
 public static class CEntityIOOutput {
-    public const nint m_Value = 0x18; // CVariantBase< CVariantDefaultAllocator >
+    public const nint m_Value = 0x18; // CVariantBase<CVariantDefaultAllocator>
 }
 
 public static class CEntityIdentity {

@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.346779300 UTC
+// 2023-10-03 00:41:23.748134100 UTC
 
 namespace CDSPMixgroupModifier {
     constexpr std::ptrdiff_t m_mixgroup = 0x0; // CUtlString
@@ -15,12 +15,12 @@ namespace CDSPMixgroupModifier {
 }
 
 namespace CDSPPresetMixgroupModifierTable {
-    constexpr std::ptrdiff_t m_table = 0x0; // CUtlVector< CDspPresetModifierList >
+    constexpr std::ptrdiff_t m_table = 0x0; // CUtlVector<CDspPresetModifierList>
 }
 
 namespace CDspPresetModifierList {
     constexpr std::ptrdiff_t m_dspName = 0x0; // CUtlString
-    constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector< CDSPMixgroupModifier >
+    constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
 }
 
 namespace CSosGroupActionLimitSchema {
@@ -62,7 +62,7 @@ namespace CSosGroupMatchPattern {
 }
 
 namespace CSosSoundEventGroupListSchema {
-    constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector< CSosSoundEventGroupSchema >
+    constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
 }
 
 namespace CSosSoundEventGroupSchema {
@@ -77,11 +77,11 @@ namespace CSosSoundEventGroupSchema {
 }
 
 namespace CSoundEventMetaData {
-    constexpr std::ptrdiff_t m_soundEventVMix = 0x0; // CStrongHandle< InfoForResourceTypeCVMixListResource >
+    constexpr std::ptrdiff_t m_soundEventVMix = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
 }
 
 namespace SelectedEditItemInfo_t {
-    constexpr std::ptrdiff_t m_EditItems = 0x0; // CUtlVector< SosEditItemInfo_t >
+    constexpr std::ptrdiff_t m_EditItems = 0x0; // CUtlVector<SosEditItemInfo_t>
 }
 
 namespace SosEditItemInfo_t {

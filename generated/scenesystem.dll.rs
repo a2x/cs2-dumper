@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.361428300 UTC
+// 2023-10-03 00:41:23.764317600 UTC
 
 pub mod CSSDSEndFrameViewInfo {
     pub const m_nViewId: usize = 0x0; // uint64_t
@@ -9,7 +9,7 @@ pub mod CSSDSEndFrameViewInfo {
 }
 
 pub mod CSSDSMsg_EndFrame {
-    pub const m_Views: usize = 0x0; // CUtlVector< CSSDSEndFrameViewInfo >
+    pub const m_Views: usize = 0x0; // CUtlVector<CSSDSEndFrameViewInfo>
 }
 
 pub mod CSSDSMsg_LayerBase {
@@ -42,7 +42,7 @@ pub mod CSSDSMsg_ViewTarget {
 pub mod CSSDSMsg_ViewTargetList {
     pub const m_viewId: usize = 0x0; // SceneViewId_t
     pub const m_ViewName: usize = 0x10; // CUtlString
-    pub const m_Targets: usize = 0x18; // CUtlVector< CSSDSMsg_ViewTarget >
+    pub const m_Targets: usize = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
 }
 
 pub mod SceneViewId_t {

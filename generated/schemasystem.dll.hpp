@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.166473400 UTC
+// 2023-10-03 00:41:23.428217800 UTC
 
 namespace CExampleSchemaVData_Monomorphic {
     constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32_t
@@ -43,7 +43,7 @@ namespace CSchemaSystemInternalRegistration {
     constexpr std::ptrdiff_t m_CUtlSymbol = 0x148; // CUtlSymbol
     constexpr std::ptrdiff_t m_stringToken = 0x14C; // CUtlStringToken
     constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
-    constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray< CResourcePointer< CResourceString > >
+    constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
     constexpr std::ptrdiff_t m_KV3 = 0x170; // KeyValues3
 }
 

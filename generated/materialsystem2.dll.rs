@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.194155 UTC
+// 2023-10-03 00:41:23.471160400 UTC
 
 pub mod MaterialParamBuffer_t {
     pub const m_value: usize = 0x8; // CUtlBinaryBlock
@@ -20,7 +20,7 @@ pub mod MaterialParamString_t {
 }
 
 pub mod MaterialParamTexture_t {
-    pub const m_pValue: usize = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+    pub const m_pValue: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
 pub mod MaterialParamVector_t {
@@ -34,18 +34,18 @@ pub mod MaterialParam_t {
 pub mod MaterialResourceData_t {
     pub const m_materialName: usize = 0x0; // CUtlString
     pub const m_shaderName: usize = 0x8; // CUtlString
-    pub const m_intParams: usize = 0x10; // CUtlVector< MaterialParamInt_t >
-    pub const m_floatParams: usize = 0x28; // CUtlVector< MaterialParamFloat_t >
-    pub const m_vectorParams: usize = 0x40; // CUtlVector< MaterialParamVector_t >
-    pub const m_textureParams: usize = 0x58; // CUtlVector< MaterialParamTexture_t >
-    pub const m_dynamicParams: usize = 0x70; // CUtlVector< MaterialParamBuffer_t >
-    pub const m_dynamicTextureParams: usize = 0x88; // CUtlVector< MaterialParamBuffer_t >
-    pub const m_intAttributes: usize = 0xA0; // CUtlVector< MaterialParamInt_t >
-    pub const m_floatAttributes: usize = 0xB8; // CUtlVector< MaterialParamFloat_t >
-    pub const m_vectorAttributes: usize = 0xD0; // CUtlVector< MaterialParamVector_t >
-    pub const m_textureAttributes: usize = 0xE8; // CUtlVector< MaterialParamTexture_t >
-    pub const m_stringAttributes: usize = 0x100; // CUtlVector< MaterialParamString_t >
-    pub const m_renderAttributesUsed: usize = 0x118; // CUtlVector< CUtlString >
+    pub const m_intParams: usize = 0x10; // CUtlVector<MaterialParamInt_t>
+    pub const m_floatParams: usize = 0x28; // CUtlVector<MaterialParamFloat_t>
+    pub const m_vectorParams: usize = 0x40; // CUtlVector<MaterialParamVector_t>
+    pub const m_textureParams: usize = 0x58; // CUtlVector<MaterialParamTexture_t>
+    pub const m_dynamicParams: usize = 0x70; // CUtlVector<MaterialParamBuffer_t>
+    pub const m_dynamicTextureParams: usize = 0x88; // CUtlVector<MaterialParamBuffer_t>
+    pub const m_intAttributes: usize = 0xA0; // CUtlVector<MaterialParamInt_t>
+    pub const m_floatAttributes: usize = 0xB8; // CUtlVector<MaterialParamFloat_t>
+    pub const m_vectorAttributes: usize = 0xD0; // CUtlVector<MaterialParamVector_t>
+    pub const m_textureAttributes: usize = 0xE8; // CUtlVector<MaterialParamTexture_t>
+    pub const m_stringAttributes: usize = 0x100; // CUtlVector<MaterialParamString_t>
+    pub const m_renderAttributesUsed: usize = 0x118; // CUtlVector<CUtlString>
 }
 
 pub mod PostProcessingBloomParameters_t {
@@ -57,7 +57,7 @@ pub mod PostProcessingBloomParameters_t {
     pub const m_flBloomThresholdWidth: usize = 0x14; // float
     pub const m_flSkyboxBloomStrength: usize = 0x18; // float
     pub const m_flBloomStartValue: usize = 0x1C; // float
-    pub const m_flBlurWeight: usize = 0x20; // float32[5]
+    pub const m_flBlurWeight: usize = 0x20; // float[5]
     pub const m_vBlurTint: usize = 0x34; // Vector[5]
 }
 

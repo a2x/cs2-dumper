@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.382122300 UTC
+// 2023-10-03 00:41:23.802009200 UTC
 
 public static class CPulseCell_Base {
     public const nint m_nEditorNodeID = 0x8; // PulseDocNodeID_t
@@ -30,7 +30,7 @@ public static class CPulseCell_Inflow_Method {
     public const nint m_Description = 0x78; // CUtlString
     public const nint m_bIsPublic = 0x80; // bool
     public const nint m_ReturnType = 0x88; // CPulseValueFullType
-    public const nint m_Args = 0x98; // CUtlVector< CPulseRuntimeMethodArg >
+    public const nint m_Args = 0x98; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
 public static class CPulseCell_Inflow_Wait {
@@ -42,7 +42,7 @@ public static class CPulseCell_Inflow_Yield {
 }
 
 public static class CPulseCell_Outflow_CycleOrdered {
-    public const nint m_Outputs = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 public static class CPulseCell_Outflow_CycleOrdered_InstanceState_t {
@@ -50,30 +50,30 @@ public static class CPulseCell_Outflow_CycleOrdered_InstanceState_t {
 }
 
 public static class CPulseCell_Outflow_CycleRandom {
-    public const nint m_Outputs = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 public static class CPulseCell_Outflow_CycleShuffled {
-    public const nint m_Outputs = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 public static class CPulseCell_Outflow_CycleShuffled_InstanceState_t {
-    public const nint m_Shuffle = 0x0; // CUtlVectorFixedGrowable< uint8 >
+    public const nint m_Shuffle = 0x0; // CUtlVectorFixedGrowable<uint8_t>
     public const nint m_nNextShuffle = 0x20; // int32_t
 }
 
 public static class CPulseCell_Outflow_IntSwitch {
     public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
-    public const nint m_CaseOutflows = 0x58; // CUtlVector< CPulse_OutflowConnection >
+    public const nint m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
 public static class CPulseCell_Outflow_SimultaneousParallel {
-    public const nint m_Outputs = 0x48; // CUtlVector< CPulse_OutflowConnection >
+    public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
 public static class CPulseCell_Outflow_StringSwitch {
     public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
-    public const nint m_CaseOutflows = 0x58; // CUtlVector< CPulse_OutflowConnection >
+    public const nint m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
 public static class CPulseCell_Outflow_TestExplicitYesNo {
@@ -88,7 +88,7 @@ public static class CPulseCell_Outflow_TestRandomYesNo {
 
 public static class CPulseCell_Step_CallExternalMethod {
     public const nint m_MethodName = 0x48; // CUtlSymbolLarge
-    public const nint m_ExpectedArgs = 0x50; // CUtlVector< CPulseRuntimeMethodArg >
+    public const nint m_ExpectedArgs = 0x50; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
 public static class CPulseCell_Step_PublicOutput {
@@ -102,13 +102,13 @@ public static class CPulseCell_Step_TestDomainEntFire {
 public static class CPulseGraphDef {
     public const nint m_DomainIdentifier = 0x8; // CUtlSymbolLarge
     public const nint m_ParentMapName = 0x10; // CUtlSymbolLarge
-    public const nint m_Chunks = 0x18; // CUtlVector< CPulse_Chunk* >
-    public const nint m_Cells = 0x30; // CUtlVector< CPulseCell_Base* >
-    public const nint m_Vars = 0x48; // CUtlVector< CPulse_Variable >
-    public const nint m_PublicOutputs = 0x60; // CUtlVector< CPulse_PublicOutput >
-    public const nint m_InvokeBindings = 0x78; // CUtlVector< CPulse_InvokeBinding* >
-    public const nint m_CallInfos = 0x90; // CUtlVector< CPulse_CallInfo* >
-    public const nint m_OutputConnections = 0xA8; // CUtlVector< CPulse_OutputConnection* >
+    public const nint m_Chunks = 0x18; // CUtlVector<CPulse_Chunk*>
+    public const nint m_Cells = 0x30; // CUtlVector<CPulseCell_Base*>
+    public const nint m_Vars = 0x48; // CUtlVector<CPulse_Variable>
+    public const nint m_PublicOutputs = 0x60; // CUtlVector<CPulse_PublicOutput>
+    public const nint m_InvokeBindings = 0x78; // CUtlVector<CPulse_InvokeBinding*>
+    public const nint m_CallInfos = 0x90; // CUtlVector<CPulse_CallInfo*>
+    public const nint m_OutputConnections = 0xA8; // CUtlVector<CPulse_OutputConnection*>
 }
 
 public static class CPulseGraphInstance_TestDomain {
@@ -116,7 +116,7 @@ public static class CPulseGraphInstance_TestDomain {
     public const nint m_bExplicitTimeStepping = 0xD1; // bool
     public const nint m_bExpectingToDestroyWithYieldedCursors = 0xD2; // bool
     public const nint m_nNextValidateIndex = 0xD4; // int32_t
-    public const nint m_Tracepoints = 0xD8; // CUtlVector< CUtlString >
+    public const nint m_Tracepoints = 0xD8; // CUtlVector<CUtlString>
     public const nint m_bTestYesOrNoPath = 0xF0; // bool
 }
 
@@ -147,9 +147,9 @@ public static class CPulse_CallInfo {
 }
 
 public static class CPulse_Chunk {
-    public const nint m_Instructions = 0x0; // CUtlLeanVector< PGDInstruction_t >
-    public const nint m_Registers = 0x10; // CUtlLeanVector< CPulse_RegisterInfo >
-    public const nint m_InstructionEditorIDs = 0x20; // CUtlLeanVector< PulseDocNodeID_t >
+    public const nint m_Instructions = 0x0; // CUtlLeanVector<PGDInstruction_t>
+    public const nint m_Registers = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
+    public const nint m_InstructionEditorIDs = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
 }
 
 public static class CPulse_InvokeBinding {

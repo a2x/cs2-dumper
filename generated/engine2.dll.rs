@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.186102500 UTC
+// 2023-10-03 00:41:23.459194400 UTC
 
 pub mod CEntityComponentHelper {
     pub const m_flags: usize = 0x8; // uint32_t
@@ -11,7 +11,7 @@ pub mod CEntityComponentHelper {
 }
 
 pub mod CEntityIOOutput {
-    pub const m_Value: usize = 0x18; // CVariantBase< CVariantDefaultAllocator >
+    pub const m_Value: usize = 0x18; // CVariantBase<CVariantDefaultAllocator>
 }
 
 pub mod CEntityIdentity {

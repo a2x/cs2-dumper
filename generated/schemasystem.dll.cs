@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-02 15:54:54.167523200 UTC
+// 2023-10-03 00:41:23.429274500 UTC
 
 public static class CExampleSchemaVData_Monomorphic {
     public const nint m_nExample1 = 0x0; // int32_t
@@ -39,7 +39,7 @@ public static class CSchemaSystemInternalRegistration {
     public const nint m_CUtlSymbol = 0x148; // CUtlSymbol
     public const nint m_stringToken = 0x14C; // CUtlStringToken
     public const nint m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
-    public const nint m_ResourceTypes = 0x168; // CResourceArray< CResourcePointer< CResourceString > >
+    public const nint m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
     public const nint m_KV3 = 0x170; // KeyValues3
 }
 

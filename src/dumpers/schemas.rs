@@ -1,3 +1,7 @@
+use std::collections::HashMap;
+
+use regex::Regex;
+
 use crate::builder::FileBuilderEnum;
 use crate::dumpers::Entry;
 use crate::error::Result;
@@ -8,6 +12,24 @@ use super::{generate_file, Entries};
 
 pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
     let schema_system = SchemaSystem::new(&process)?;
+
+    let type_map = HashMap::from([
+        ("uint8", "uint8_t"),
+        ("uint16", "uint16_t"),
+        ("uint32", "uint32_t"),
+        ("uint64", "uint64_t"),
+        ("int8", "int8_t"),
+        ("int16", "int16_t"),
+        ("int32", "int32_t"),
+        ("int64", "int64_t"),
+        ("float32", "float"),
+        ("float64", "double"),
+    ]);
+
+    let regex_map: HashMap<String, Regex> = type_map
+        .iter()
+        .map(|(k, _v)| ((k.to_string()), Regex::new(&format!(r"\b{}\b", k)).unwrap()))
+        .collect();
 
     for type_scope in schema_system.type_scopes()? {
         let module_name = type_scope.module_name()?;
@@ -23,20 +45,12 @@ pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                 let field_name = field.name()?;
                 let field_offset = field.offset()?;
 
-                let mut type_name = field.r#type()?.name()?;
+                let mut type_name = field.r#type()?.name()?.replace(" ", "");
 
-                match type_name.as_str() {
-                    "uint8" => type_name = "uint8_t".to_string(),
-                    "uint16" => type_name = "uint16_t".to_string(),
-                    "uint32" => type_name = "uint32_t".to_string(),
-                    "uint64" => type_name = "uint64_t".to_string(),
-                    "int8" => type_name = "int8_t".to_string(),
-                    "int16" => type_name = "int16_t".to_string(),
-                    "int32" => type_name = "int32_t".to_string(),
-                    "int64" => type_name = "int64_t".to_string(),
-                    "float32" => type_name = "float".to_string(),
-                    "float64" => type_name = "double".to_string(),
-                    _ => {}
+                for k in type_map.keys() {
+                    let re = &regex_map[*k];
+
+                    type_name = re.replace_all(&type_name, type_map[*k]).to_string();
                 }
 
                 log::debug!(

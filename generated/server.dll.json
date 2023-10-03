@@ -1110,7 +1110,7 @@
     "m_bScrambleTeamsOnRestart": 3563,
     "m_bServerPaused": 216,
     "m_bServerVoteOnReset": 3881,
-    "m_bSkipNextPerfSample": 10168,
+    "m_bSkipNextServerPerfSample": 10168,
     "m_bSpawnedTerrorHuntHeavy": 3369,
     "m_bSwapTeamsOnRestart": 3564,
     "m_bSwitchingTeamsAtRoundReset": 5331,
