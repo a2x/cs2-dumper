@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-03 00:41:24.057534900 UTC
+// 2023-10-04 03:08:54.725198 UTC
 
 public static class CBaseRendererSource2 {
     public const nint m_flRadiusScale = 0x200; // CParticleCollectionRendererFloatInput

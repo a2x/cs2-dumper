@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-03 00:41:23.716366800 UTC
+// 2023-10-04 03:08:54.387194800 UTC
 
 public static class CFeIndexedJiggleBone {
     public const nint m_nNode = 0x0; // uint32_t

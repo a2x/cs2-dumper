@@ -1,6 +1,6 @@
 [package]
 name = "cs2-dumper"
-version = "0.1.9"
+version = "1.0.9"
 authors = ["a2x"]
 edition = "2021"
 repository = "https://github.com/a2x/cs2-dumper"

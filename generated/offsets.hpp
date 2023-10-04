@@ -3,23 +3,23 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-03 00:41:25.579783600 UTC
+// 2023-10-04 03:08:56.260802500 UTC
 
 namespace client_dll {
-    constexpr std::ptrdiff_t dwEntityList = 0x178D8C8;
-    constexpr std::ptrdiff_t dwForceBackward = 0x1694ED0;
-    constexpr std::ptrdiff_t dwForceCrouch = 0x16951A0;
-    constexpr std::ptrdiff_t dwForceForward = 0x1694E40;
-    constexpr std::ptrdiff_t dwForceJump = 0x1695110;
-    constexpr std::ptrdiff_t dwForceLeft = 0x1694F60;
-    constexpr std::ptrdiff_t dwForceRight = 0x1694FF0;
-    constexpr std::ptrdiff_t dwGlobalVars = 0x1690CF8;
-    constexpr std::ptrdiff_t dwInterfaceLinkList = 0x1973A68;
+    constexpr std::ptrdiff_t dwEntityList = 0x178D8D8;
+    constexpr std::ptrdiff_t dwForceBackward = 0x1694F00;
+    constexpr std::ptrdiff_t dwForceCrouch = 0x16951D0;
+    constexpr std::ptrdiff_t dwForceForward = 0x1694E70;
+    constexpr std::ptrdiff_t dwForceJump = 0x1695140;
+    constexpr std::ptrdiff_t dwForceLeft = 0x1694F90;
+    constexpr std::ptrdiff_t dwForceRight = 0x1695020;
+    constexpr std::ptrdiff_t dwGlobalVars = 0x1690D28;
+    constexpr std::ptrdiff_t dwInterfaceLinkList = 0x1973B98;
     constexpr std::ptrdiff_t dwLocalPlayerController = 0x17DC148;
-    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x187AC28;
-    constexpr std::ptrdiff_t dwPlantedC4 = 0x1880AE0;
-    constexpr std::ptrdiff_t dwViewAngles = 0x18DA5C0;
-    constexpr std::ptrdiff_t dwViewMatrix = 0x187B710;
+    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x187AC38;
+    constexpr std::ptrdiff_t dwPlantedC4 = 0x1880D80;
+    constexpr std::ptrdiff_t dwViewAngles = 0x18DA6F0;
+    constexpr std::ptrdiff_t dwViewMatrix = 0x187B720;
 }
 
 namespace engine2_dll {

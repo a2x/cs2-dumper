@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-03 00:41:25.084382500 UTC
+// 2023-10-04 03:08:55.739512800 UTC
 
 public static class CAnimScriptBase {
     public const nint m_bIsValid = 0x8; // bool

@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-03 00:41:24.663052500 UTC
+// 2023-10-04 03:08:55.321471200 UTC
 
 pub mod ActiveModelConfig_t {
     pub const m_Handle: usize = 0x28; // ModelConfigHandle_t

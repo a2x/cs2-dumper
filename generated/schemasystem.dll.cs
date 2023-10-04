@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-03 00:41:23.429274500 UTC
+// 2023-10-04 03:08:54.100269600 UTC
 
 public static class CExampleSchemaVData_Monomorphic {
     public const nint m_nExample1 = 0x0; // int32_t

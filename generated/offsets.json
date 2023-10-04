@@ -1,19 +1,19 @@
 {
   "client_dll": {
-    "dwEntityList": 24697032,
-    "dwForceBackward": 23678672,
-    "dwForceCrouch": 23679392,
-    "dwForceForward": 23678528,
-    "dwForceJump": 23679248,
-    "dwForceLeft": 23678816,
-    "dwForceRight": 23678960,
-    "dwGlobalVars": 23661816,
-    "dwInterfaceLinkList": 26688104,
+    "dwEntityList": 24697048,
+    "dwForceBackward": 23678720,
+    "dwForceCrouch": 23679440,
+    "dwForceForward": 23678576,
+    "dwForceJump": 23679296,
+    "dwForceLeft": 23678864,
+    "dwForceRight": 23679008,
+    "dwGlobalVars": 23661864,
+    "dwInterfaceLinkList": 26688408,
     "dwLocalPlayerController": 25018696,
-    "dwLocalPlayerPawn": 25668648,
-    "dwPlantedC4": 25692896,
-    "dwViewAngles": 26060224,
-    "dwViewMatrix": 25671440
+    "dwLocalPlayerPawn": 25668664,
+    "dwPlantedC4": 25693568,
+    "dwViewAngles": 26060528,
+    "dwViewMatrix": 25671456
   },
   "engine2_dll": {
     "dwNetworkGameClient": 4762288,
