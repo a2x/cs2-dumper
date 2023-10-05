@@ -1,12 +1,13 @@
 use std::fs::File;
 
 use crate::builder::FileBuilderEnum;
-use crate::config::{Config, Operation};
+use crate::config::{Config, Operation::*};
 use crate::dumpers::Entry;
 use crate::error::{Error, Result};
+use crate::mem::Address;
 use crate::remote::Process;
 
-use super::{generate_file, Entries};
+use super::{generate_files, Entries};
 
 pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
     let file = File::open("config.json")?;
@@ -20,30 +21,33 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
     for signature in config.signatures {
         let module = process.get_module_by_name(&signature.module)?;
 
-        let mut address = process.find_pattern(&signature.module, &signature.pattern)?;
+        let mut address =
+            Address::from(process.find_pattern(&signature.module, &signature.pattern)?);
 
-        let mut offset: Option<u16> = None;
+        let mut offset: Option<u32> = None;
 
         for operation in signature.operations {
             match operation {
-                Operation::Add { value } => {
+                Add { value } => {
                     address += value;
                 }
-                Operation::Dereference { times } => {
+                Dereference { times } => {
                     for _ in 0..times.unwrap_or(1) {
-                        address = process.read_memory::<usize>(address)?;
+                        address = process.read_memory::<usize>(address.0)?.into();
                     }
                 }
-                Operation::Jmp => {
-                    address = process.resolve_jmp(address)?;
+                Jmp { offset, length } => {
+                    address = process.resolve_jmp(address.0, offset, length)?.into();
                 }
-                Operation::Offset { position } => {
-                    offset = Some(process.read_memory::<u16>(address + position)?);
+                Offset {
+                    offset: start_offset,
+                } => {
+                    offset = Some(process.read_memory::<u32>(address.0 + start_offset)?);
                 }
-                Operation::RipRelative => {
-                    address = process.resolve_rip(address)?;
+                RipRelative { offset, length } => {
+                    address = process.resolve_rip(address.0, offset, length)?.into();
                 }
-                Operation::Subtract { value } => {
+                Subtract { value } => {
                     address -= value;
                 }
             }
@@ -62,7 +66,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                 address - module.address()
             );
 
-            (signature.name, address - module.address())
+            (signature.name, address.0 - module.address())
         };
 
         entries
@@ -75,9 +79,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             });
     }
 
-    for builder in builders {
-        generate_file(builder, "offsets", &entries)?;
-    }
+    generate_files(builders, &entries, "offsets")?;
 
     Ok(())
 }

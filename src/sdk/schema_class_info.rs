@@ -14,7 +14,7 @@ impl<'a> SchemaClassInfo<'a> {
         Self {
             process,
             address,
-            class_name: class_name.into(),
+            class_name: class_name.to_string(),
         }
     }
 
@@ -26,15 +26,16 @@ impl<'a> SchemaClassInfo<'a> {
     pub fn fields(&self) -> Result<Vec<SchemaClassFieldData>> {
         let count = self.fields_count()?;
 
-        let fields: Vec<SchemaClassFieldData> = (0..count as usize)
-            .filter_map(|i| {
-                let address = self
-                    .process
-                    .read_memory::<usize>(self.address + 0x28)
-                    .ok()?
-                    + (i * 0x20);
+        let base_address = self.process.read_memory::<usize>(self.address + 0x28)?;
 
-                (address != 0).then(|| SchemaClassFieldData::new(self.process, address))
+        let fields: Vec<SchemaClassFieldData> = (0..count as usize)
+            .map(|i| base_address + (i * 0x20))
+            .filter_map(|address| {
+                if address != 0 {
+                    Some(SchemaClassFieldData::new(self.process, address))
+                } else {
+                    None
+                }
             })
             .collect();
 

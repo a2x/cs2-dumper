@@ -12,7 +12,8 @@ impl<'a> SchemaTypeDeclaredClass<'a> {
     }
 
     pub fn name(&self) -> Result<String> {
-        self.process
-            .read_string(self.process.read_memory::<usize>(self.address + 0x8)?)
+        let name_ptr = self.process.read_memory::<usize>(self.address + 0x8)?;
+
+        self.process.read_string(name_ptr)
     }
 }

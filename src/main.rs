@@ -16,15 +16,13 @@ mod builder;
 mod config;
 mod dumpers;
 mod error;
+mod mem;
 mod remote;
 mod sdk;
 
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
 struct Args {
-    #[arg(long)]
-    all: bool,
-
     #[arg(short, long)]
     interfaces: bool,
 
@@ -40,7 +38,6 @@ struct Args {
 
 fn main() -> Result<()> {
     let Args {
-        all,
         interfaces,
         offsets,
         schemas,
@@ -66,13 +63,13 @@ fn main() -> Result<()> {
     fs::create_dir_all("generated")?;
 
     let mut builders: Vec<FileBuilderEnum> = vec![
-        FileBuilderEnum::CppBuilder(CppBuilder),
-        FileBuilderEnum::CSharpBuilder(CSharpBuilder),
+        FileBuilderEnum::CppFileBuilder(CppFileBuilder),
+        FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder),
         FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default()),
         FileBuilderEnum::RustFileBuilder(RustFileBuilder),
     ];
 
-    let all = all || !(interfaces || offsets || schemas);
+    let all = !(interfaces || offsets || schemas);
 
     if schemas || all {
         dump_schemas(&mut builders, &process)?;

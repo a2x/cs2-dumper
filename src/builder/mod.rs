@@ -1,7 +1,7 @@
 pub use std::io::{Result, Write};
 
-pub use cpp_file_builder::CppBuilder;
-pub use csharp_file_builder::CSharpBuilder;
+pub use cpp_file_builder::CppFileBuilder;
+pub use csharp_file_builder::CSharpFileBuilder;
 pub use file_builder::FileBuilder;
 pub use json_file_builder::JsonFileBuilder;
 pub use rust_file_builder::RustFileBuilder;
@@ -12,39 +12,25 @@ pub mod file_builder;
 pub mod json_file_builder;
 pub mod rust_file_builder;
 
+#[derive(Debug, PartialEq)]
 pub enum FileBuilderEnum {
-    CppBuilder(CppBuilder),
-    CSharpBuilder(CSharpBuilder),
+    CppFileBuilder(CppFileBuilder),
+    CSharpFileBuilder(CSharpFileBuilder),
     JsonFileBuilder(JsonFileBuilder),
     RustFileBuilder(RustFileBuilder),
 }
 
 impl FileBuilder for FileBuilderEnum {
     fn extension(&mut self) -> &str {
-        match self {
-            FileBuilderEnum::CppBuilder(builder) => builder.extension(),
-            FileBuilderEnum::CSharpBuilder(builder) => builder.extension(),
-            FileBuilderEnum::JsonFileBuilder(builder) => builder.extension(),
-            FileBuilderEnum::RustFileBuilder(builder) => builder.extension(),
-        }
+        self.as_mut().extension()
     }
 
     fn write_top_level(&mut self, output: &mut dyn Write) -> Result<()> {
-        match self {
-            FileBuilderEnum::CppBuilder(builder) => builder.write_top_level(output),
-            FileBuilderEnum::CSharpBuilder(builder) => builder.write_top_level(output),
-            FileBuilderEnum::JsonFileBuilder(builder) => builder.write_top_level(output),
-            FileBuilderEnum::RustFileBuilder(builder) => builder.write_top_level(output),
-        }
+        self.as_mut().write_top_level(output)
     }
 
     fn write_namespace(&mut self, output: &mut dyn Write, name: &str) -> Result<()> {
-        match self {
-            FileBuilderEnum::CppBuilder(builder) => builder.write_namespace(output, name),
-            FileBuilderEnum::CSharpBuilder(builder) => builder.write_namespace(output, name),
-            FileBuilderEnum::JsonFileBuilder(builder) => builder.write_namespace(output, name),
-            FileBuilderEnum::RustFileBuilder(builder) => builder.write_namespace(output, name),
-        }
+        self.as_mut().write_namespace(output, name)
     }
 
     fn write_variable(
@@ -54,28 +40,21 @@ impl FileBuilder for FileBuilderEnum {
         value: usize,
         comment: Option<&str>,
     ) -> Result<()> {
-        match self {
-            FileBuilderEnum::CppBuilder(builder) => {
-                builder.write_variable(output, name, value, comment)
-            }
-            FileBuilderEnum::CSharpBuilder(builder) => {
-                builder.write_variable(output, name, value, comment)
-            }
-            FileBuilderEnum::JsonFileBuilder(builder) => {
-                builder.write_variable(output, name, value, comment)
-            }
-            FileBuilderEnum::RustFileBuilder(builder) => {
-                builder.write_variable(output, name, value, comment)
-            }
-        }
+        self.as_mut().write_variable(output, name, value, comment)
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {
+        self.as_mut().write_closure(output, eof)
+    }
+}
+
+impl FileBuilderEnum {
+    fn as_mut(&mut self) -> &mut dyn FileBuilder {
         match self {
-            FileBuilderEnum::CppBuilder(builder) => builder.write_closure(output, eof),
-            FileBuilderEnum::CSharpBuilder(builder) => builder.write_closure(output, eof),
-            FileBuilderEnum::JsonFileBuilder(builder) => builder.write_closure(output, eof),
-            FileBuilderEnum::RustFileBuilder(builder) => builder.write_closure(output, eof),
+            FileBuilderEnum::CppFileBuilder(builder) => builder,
+            FileBuilderEnum::CSharpFileBuilder(builder) => builder,
+            FileBuilderEnum::JsonFileBuilder(builder) => builder,
+            FileBuilderEnum::RustFileBuilder(builder) => builder,
         }
     }
 }

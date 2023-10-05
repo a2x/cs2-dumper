@@ -3,7 +3,7 @@ use crate::dumpers::Entry;
 use crate::error::Result;
 use crate::remote::Process;
 
-use super::{generate_file, Entries};
+use super::{generate_files, Entries};
 
 pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
     let module_names = process.get_loaded_modules()?;
@@ -16,7 +16,8 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
         log::info!("Dumping interfaces in {}...", module_name);
 
         if let Some(create_interface_export) = module.export("CreateInterface") {
-            let create_interface_address = process.resolve_rip(create_interface_export.va)?;
+            let create_interface_address =
+                process.resolve_rip(create_interface_export.va, None, None)?;
 
             let mut interface_registry_ptr = process
                 .read_memory::<usize>(create_interface_address)
@@ -53,9 +54,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
         }
     }
 
-    for builder in builders {
-        generate_file(builder, "interfaces", &entries)?;
-    }
+    generate_files(builders, &entries, "interfaces")?;
 
     Ok(())
 }

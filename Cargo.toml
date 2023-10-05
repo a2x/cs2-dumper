@@ -1,6 +1,6 @@
 [package]
 name = "cs2-dumper"
-version = "1.0.9"
+version = "1.1.0"
 authors = ["a2x"]
 edition = "2021"
 repository = "https://github.com/a2x/cs2-dumper"
@@ -9,6 +9,7 @@ license = "MIT"
 [dependencies]
 chrono = "0.4"
 clap = { version = "4.4", features = ["derive"] }
+lazy_static = "1.4"
 log = "0.4"
 regex = "1.9"
 serde = { version = "1.0", features = ["derive"] }

@@ -2,6 +2,7 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
+#[derive(Debug, Default, PartialEq)]
 pub struct RustFileBuilder;
 
 impl FileBuilder for RustFileBuilder {

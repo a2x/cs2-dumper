@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-04 03:08:55.958671700 UTC
+// 2023-10-05 09:19:36.014308700 UTC
 
 public static class animationsystem_dll {
     public const nint AnimationSystemUtils_001 = 0x64510;

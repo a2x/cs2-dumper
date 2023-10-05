@@ -171,16 +171,26 @@ impl Process {
         Ok(String::from_utf8(buffer)?)
     }
 
-    pub fn resolve_jmp(&self, address: usize) -> Result<usize> {
-        let displacement = self.read_memory::<i32>(address + 0x1)?;
+    pub fn resolve_jmp(
+        &self,
+        address: usize,
+        offset: Option<usize>,
+        length: Option<usize>,
+    ) -> Result<usize> {
+        let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x1))?;
 
-        Ok((address + 0x5) + displacement as usize)
+        Ok((address + length.unwrap_or(0x5)) + displacement as usize)
     }
 
-    pub fn resolve_rip(&self, address: usize) -> Result<usize> {
-        let displacement = self.read_memory::<i32>(address + 0x3)?;
+    pub fn resolve_rip(
+        &self,
+        address: usize,
+        offset: Option<usize>,
+        length: Option<usize>,
+    ) -> Result<usize> {
+        let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x3))?;
 
-        Ok((address + 0x7) + displacement as usize)
+        Ok((address + length.unwrap_or(0x7)) + displacement as usize)
     }
 
     fn get_process_id_by_name(process_name: &str) -> Result<u32> {

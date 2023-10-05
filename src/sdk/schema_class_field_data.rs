@@ -14,15 +14,15 @@ impl<'a> SchemaClassFieldData<'a> {
     }
 
     pub fn name(&self) -> Result<String> {
-        self.process
-            .read_string(self.process.read_memory::<usize>(self.address)?)
+        let name_ptr = self.process.read_memory::<usize>(self.address)?;
+
+        self.process.read_string(name_ptr)
     }
 
     pub fn r#type(&self) -> Result<SchemaType> {
-        Ok(SchemaType::new(
-            self.process,
-            self.process.read_memory::<usize>(self.address + 0x8)?,
-        ))
+        let type_ptr = self.process.read_memory::<usize>(self.address + 0x8)?;
+
+        Ok(SchemaType::new(self.process, type_ptr))
     }
 
     pub fn offset(&self) -> Result<u16> {

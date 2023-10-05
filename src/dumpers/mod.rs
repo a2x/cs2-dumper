@@ -23,9 +23,13 @@ pub type Entries = BTreeMap<String, Vec<Entry>>;
 
 pub fn generate_file(
     builder: &mut FileBuilderEnum,
-    file_name: &str,
     entries: &Entries,
+    file_name: &str,
 ) -> Result<()> {
+    if entries.is_empty() {
+        return Ok(());
+    }
+
     let file_path = format!("generated/{}.{}", file_name, builder.extension());
 
     let mut file = File::create(file_path)?;
@@ -55,6 +59,18 @@ pub fn generate_file(
         }
 
         builder.write_closure(&mut file, i == len - 1)?;
+    }
+
+    Ok(())
+}
+
+pub fn generate_files(
+    builders: &mut Vec<FileBuilderEnum>,
+    entries: &Entries,
+    file_name: &str,
+) -> Result<()> {
+    for builder in builders {
+        generate_file(builder, &entries, file_name)?;
     }
 
     Ok(())

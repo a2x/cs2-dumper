@@ -3,12 +3,26 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum Operation {
-    Add { value: usize },
-    Dereference { times: Option<u16> },
-    Jmp,
-    Offset { position: usize },
-    RipRelative,
-    Subtract { value: usize },
+    Add {
+        value: usize,
+    },
+    Dereference {
+        times: Option<u16>,
+    },
+    Jmp {
+        offset: Option<usize>,
+        length: Option<usize>,
+    },
+    Offset {
+        offset: usize,
+    },
+    RipRelative {
+        offset: Option<usize>,
+        length: Option<usize>,
+    },
+    Subtract {
+        value: usize,
+    },
 }
 
 #[derive(Debug, Deserialize, Serialize)]

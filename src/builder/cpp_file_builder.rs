@@ -2,9 +2,10 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
-pub struct CppBuilder;
+#[derive(Debug, PartialEq)]
+pub struct CppFileBuilder;
 
-impl FileBuilder for CppBuilder {
+impl FileBuilder for CppFileBuilder {
     fn extension(&mut self) -> &str {
         "hpp"
     }

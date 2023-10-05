@@ -22,12 +22,14 @@ impl<'a> SchemaSystemTypeScope<'a> {
             .elements(self.process)?
             .iter()
             .filter_map(|&address| {
-                let declared_class = SchemaTypeDeclaredClass::new(self.process, address as usize);
+                let address = address as usize;
+
+                let declared_class = SchemaTypeDeclaredClass::new(self.process, address);
 
                 declared_class
                     .name()
                     .ok()
-                    .map(|name| SchemaClassInfo::new(self.process, address as usize, &name))
+                    .map(|name| SchemaClassInfo::new(self.process, address, &name))
             })
             .collect();
 

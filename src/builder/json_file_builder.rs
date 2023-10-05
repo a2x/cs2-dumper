@@ -1,13 +1,22 @@
 use std::io::{Result, Write};
 
-use serde_json::{json, Value};
+use serde_json::{json, Map, Value};
 
 use super::FileBuilder;
 
-#[derive(Default)]
+#[derive(Debug, PartialEq)]
 pub struct JsonFileBuilder {
     json: Value,
     namespace: String,
+}
+
+impl Default for JsonFileBuilder {
+    fn default() -> Self {
+        Self {
+            json: Value::Object(Map::new()),
+            namespace: String::new(),
+        }
+    }
 }
 
 impl FileBuilder for JsonFileBuilder {
@@ -32,13 +41,11 @@ impl FileBuilder for JsonFileBuilder {
         value: usize,
         _comment: Option<&str>,
     ) -> Result<()> {
-        if let Some(json_as_map) = self.json.as_object_mut() {
-            let namespace_entry = json_as_map
-                .entry(self.namespace.clone())
-                .or_insert_with(|| json!({}));
+        if let Some(map) = self.json.as_object_mut() {
+            let entry = map.entry(&self.namespace).or_insert_with(|| json!({}));
 
-            if let Some(namespace_object) = namespace_entry.as_object_mut() {
-                namespace_object.insert(name.to_string(), json!(value));
+            if let Some(object) = entry.as_object_mut() {
+                object.insert(name.to_string(), json!(value));
             }
         }
 
@@ -47,12 +54,7 @@ impl FileBuilder for JsonFileBuilder {
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {
         if eof {
-            write!(
-                output,
-                "{}",
-                serde_json::to_string_pretty(&self.json).unwrap()
-            )
-            .unwrap();
+            write!(output, "{}", serde_json::to_string_pretty(&self.json)?)?;
 
             self.json = json!({});
         }

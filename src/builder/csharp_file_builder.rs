@@ -2,9 +2,10 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
-pub struct CSharpBuilder;
+#[derive(Debug, PartialEq)]
+pub struct CSharpFileBuilder;
 
-impl FileBuilder for CSharpBuilder {
+impl FileBuilder for CSharpFileBuilder {
     fn extension(&mut self) -> &str {
         "cs"
     }
