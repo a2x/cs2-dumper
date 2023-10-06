@@ -13,9 +13,9 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
     for module_name in module_names {
         let module = process.get_module_by_name(&module_name)?;
 
-        log::info!("Dumping interfaces in {}...", module_name);
-
         if let Some(create_interface_export) = module.export("CreateInterface") {
+            log::info!("Dumping interfaces in {}...", module_name);
+
             let create_interface_address =
                 process.resolve_rip(create_interface_export.va, None, None)?;
 

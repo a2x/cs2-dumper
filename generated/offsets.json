@@ -20,6 +20,8 @@
     "dwBuildNumber": 4769028,
     "dwNetworkGameClient": 4766384,
     "dwNetworkGameClient_maxClients": 592,
-    "dwNetworkGameClient_signOnState": 576
+    "dwNetworkGameClient_signOnState": 576,
+    "dwWindowHeight": 5494124,
+    "dwWindowWidth": 5494120
   }
 }

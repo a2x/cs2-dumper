@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-05 13:02:39.761284500 UTC
+// 2023-10-06 10:09:36.065210800 UTC
 
 pub mod client_dll {
     pub const dwEntityList: usize = 0x178D8E8;
@@ -26,4 +26,6 @@ pub mod engine2_dll {
     pub const dwNetworkGameClient: usize = 0x48BAB0;
     pub const dwNetworkGameClient_maxClients: usize = 0x250;
     pub const dwNetworkGameClient_signOnState: usize = 0x240;
+    pub const dwWindowHeight: usize = 0x53D56C;
+    pub const dwWindowWidth: usize = 0x53D568;
 }

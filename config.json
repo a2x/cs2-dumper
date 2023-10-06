@@ -228,6 +228,30 @@
           "type": "ripRelative"
         }
       ]
+    },
+    {
+      "name": "dwWindowHeight",
+      "module": "engine2.dll",
+      "pattern": "8B 05 ? ? ? ? 89 03",
+      "operations": [
+        {
+          "type": "ripRelative",
+          "offset": 2,
+          "length": 6
+        }
+      ]
+    },
+    {
+      "name": "dwWindowWidth",
+      "module": "engine2.dll",
+      "pattern": "8B 05 ? ? ? ? 89 07",
+      "operations": [
+        {
+          "type": "ripRelative",
+          "offset": 2,
+          "length": 6
+        }
+      ]
     }
   ]
 }
