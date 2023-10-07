@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-05 13:02:38.811773400 UTC
+// 2023-10-07 01:42:58.682391300 UTC
 
 namespace ActiveModelConfig_t {
     constexpr std::ptrdiff_t m_Handle = 0x28; // ModelConfigHandle_t

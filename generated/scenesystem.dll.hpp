@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-05 13:02:38.479100100 UTC
+// 2023-10-07 01:42:57.924261100 UTC
 
 namespace CSSDSEndFrameViewInfo {
     constexpr std::ptrdiff_t m_nViewId = 0x0; // uint64_t

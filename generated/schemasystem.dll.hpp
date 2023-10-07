@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-05 13:02:38.277995400 UTC
+// 2023-10-07 01:42:57.583545600 UTC
 
 namespace CExampleSchemaVData_Monomorphic {
     constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32_t

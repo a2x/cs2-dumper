@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-05 13:02:38.309301500 UTC
+// 2023-10-07 01:42:57.629638900 UTC
 
 pub mod MaterialParamBuffer_t {
     pub const m_value: usize = 0x8; // CUtlBinaryBlock

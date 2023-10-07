@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-05 13:02:38.487055200 UTC
+// 2023-10-07 01:42:57.940535 UTC
 
 namespace AggregateLODSetup_t {
     constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // Vector
