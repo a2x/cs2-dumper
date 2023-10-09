@@ -117,6 +117,26 @@
       ]
     },
     {
+      "name": "dwGlowManager",
+      "module": "client.dll",
+      "pattern": "48 8D 0D ? ? ? ? E9 2D EE FC 00",
+      "operations": [
+        {
+          "type": "ripRelative"
+        },
+        {
+          "type": "dereference"
+        },
+        {
+          "type": "add",
+          "value": 112
+        },
+        {
+          "type": "dereference"
+        }
+      ]
+    },
+    {
       "name": "dwInterfaceLinkList",
       "module": "client.dll",
       "pattern": "4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9",
@@ -161,13 +181,30 @@
       ]
     },
     {
+      "name": "dwNetworkGameClient_getLocalPlayer",
+      "module": "engine2.dll",
+      "pattern": "48 83 C0 ? 48 8D 04 40 8B 0C C1",
+      "operations": [
+        {
+          "type": "slice",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "type": "add",
+          "value": 230
+        }
+      ]
+    },
+    {
       "name": "dwNetworkGameClient_maxClients",
       "module": "engine2.dll",
       "pattern": "8B 81 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8D 81",
       "operations": [
         {
-          "type": "offset",
-          "offset": 2
+          "type": "slice",
+          "start": 2,
+          "end": 4
         }
       ]
     },
@@ -177,8 +214,9 @@
       "pattern": "44 8B 81 ? ? ? ? 48 8D 0D",
       "operations": [
         {
-          "type": "offset",
-          "offset": 3
+          "type": "slice",
+          "start": 3,
+          "end": 5
         }
       ]
     },

@@ -8,6 +8,7 @@
     "dwForceLeft": 23658320,
     "dwForceRight": 23658464,
     "dwGlobalVars": 23641320,
+    "dwGlowManager": 25050112,
     "dwInterfaceLinkList": 26668184,
     "dwLocalPlayerController": 24998232,
     "dwLocalPlayerPawn": 25648200,
@@ -19,6 +20,7 @@
   "engine2_dll": {
     "dwBuildNumber": 4744468,
     "dwNetworkGameClient": 4741808,
+    "dwNetworkGameClient_getLocalPlayer": 240,
     "dwNetworkGameClient_maxClients": 592,
     "dwNetworkGameClient_signOnState": 576,
     "dwWindowHeight": 5469868,

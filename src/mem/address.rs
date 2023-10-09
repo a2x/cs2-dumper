@@ -6,12 +6,12 @@ use std::ops::{Add, AddAssign, Sub, SubAssign};
 pub struct Address(pub usize);
 
 impl Address {
-    pub fn add(&self, offset: usize) -> Self {
-        Self(self.0 + offset)
+    pub fn add(&self, value: usize) -> Self {
+        Self(self.0 + value)
     }
 
-    pub fn sub(&self, offset: usize) -> Self {
-        Self(self.0 - offset)
+    pub fn sub(&self, value: usize) -> Self {
+        Self(self.0 - value)
     }
 
     pub fn as_ptr<T>(&self) -> *const T {

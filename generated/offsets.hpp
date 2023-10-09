@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:59.789624800 UTC
+// 2023-10-09 05:41:44.460417200 UTC
 
 namespace client_dll {
     constexpr std::ptrdiff_t dwEntityList = 0x17888D8;
@@ -14,6 +14,7 @@ namespace client_dll {
     constexpr std::ptrdiff_t dwForceLeft = 0x168FF50;
     constexpr std::ptrdiff_t dwForceRight = 0x168FFE0;
     constexpr std::ptrdiff_t dwGlobalVars = 0x168BCE8;
+    constexpr std::ptrdiff_t dwGlowManager = 0x17E3C00;
     constexpr std::ptrdiff_t dwInterfaceLinkList = 0x196EC98;
     constexpr std::ptrdiff_t dwLocalPlayerController = 0x17D7158;
     constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x1875C48;
@@ -26,6 +27,7 @@ namespace client_dll {
 namespace engine2_dll {
     constexpr std::ptrdiff_t dwBuildNumber = 0x486514;
     constexpr std::ptrdiff_t dwNetworkGameClient = 0x485AB0;
+    constexpr std::ptrdiff_t dwNetworkGameClient_getLocalPlayer = 0xF0;
     constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x250;
     constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x240;
     constexpr std::ptrdiff_t dwWindowHeight = 0x5376AC;

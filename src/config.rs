@@ -7,18 +7,20 @@ pub enum Operation {
         value: usize,
     },
     Dereference {
-        times: Option<u16>,
+        times: Option<usize>,
+        size: Option<usize>,
     },
     Jmp {
         offset: Option<usize>,
         length: Option<usize>,
     },
-    Offset {
-        offset: usize,
-    },
     RipRelative {
         offset: Option<usize>,
         length: Option<usize>,
+    },
+    Slice {
+        start: usize,
+        end: usize,
     },
     Subtract {
         value: usize,

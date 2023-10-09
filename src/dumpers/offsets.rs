@@ -24,49 +24,56 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
         let mut address =
             Address::from(process.find_pattern(&signature.module, &signature.pattern)?);
 
-        let mut offset: Option<u32> = None;
-
         for operation in signature.operations {
             match operation {
-                Add { value } => {
-                    address += value;
-                }
-                Dereference { times } => {
-                    for _ in 0..times.unwrap_or(1) {
-                        address = process.read_memory::<usize>(address.0)?.into();
+                Add { value } => address += value,
+                Dereference { times, size } => {
+                    let times = times.unwrap_or(1);
+                    let size = size.unwrap_or(8);
+
+                    for _ in 0..times {
+                        process.read_memory_raw(
+                            address.0,
+                            &mut address.0 as *mut _ as *mut _,
+                            size,
+                        )?;
                     }
                 }
                 Jmp { offset, length } => {
-                    address = process.resolve_jmp(address.0, offset, length)?.into();
-                }
-                Offset {
-                    offset: start_offset,
-                } => {
-                    offset = Some(process.read_memory::<u32>(address.0 + start_offset)?);
+                    address = process.resolve_jmp(address.0, offset, length)?.into()
                 }
                 RipRelative { offset, length } => {
-                    address = process.resolve_rip(address.0, offset, length)?.into();
+                    address = process.resolve_rip(address.0, offset, length)?.into()
                 }
-                Subtract { value } => {
-                    address -= value;
+                Slice { start, end } => {
+                    let mut result: usize = 0;
+
+                    process.read_memory_raw(
+                        address.add(start).0,
+                        &mut result as *mut _ as *mut _,
+                        end - start,
+                    )?;
+
+                    address = result.into();
                 }
+                Subtract { value } => address -= value,
             }
         }
 
-        let (name, value) = if let Some(offset) = offset {
-            log::debug!("  └─ {} @ {:#X}", signature.name, offset);
+        let (name, value) = if address.0 < module.address() {
+            log::debug!("  └─ {} @ {:#X}", signature.name, address.0);
 
-            (signature.name, offset as usize)
+            (signature.name, address.0)
         } else {
             log::debug!(
                 "  └─ {} @ {:#X} ({} + {:#X})",
                 signature.name,
                 address,
                 signature.module,
-                address - module.address()
+                address.sub(module.address())
             );
 
-            (signature.name, address.0 - module.address())
+            (signature.name, address.sub(module.address()).0)
         };
 
         entries
