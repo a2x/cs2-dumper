@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:59.208205 UTC
+// 2023-10-10 02:56:33.046301100 UTC
 
 pub mod ActiveModelConfig_t {
     pub const m_Handle: usize = 0x28; // ModelConfigHandle_t
@@ -1613,9 +1613,9 @@ pub mod C_CSGO_PreviewModel {
 }
 
 pub mod C_CSGO_PreviewPlayer {
-    pub const m_animgraph: usize = 0x22A0; // CUtlString
-    pub const m_animgraphCharacterModeString: usize = 0x22A8; // CUtlString
-    pub const m_flInitialModelScale: usize = 0x22B0; // float
+    pub const m_animgraph: usize = 0x22A8; // CUtlString
+    pub const m_animgraphCharacterModeString: usize = 0x22B0; // CUtlString
+    pub const m_flInitialModelScale: usize = 0x22B8; // float
 }
 
 pub mod C_CSGO_TeamPreviewCamera {
@@ -1794,10 +1794,10 @@ pub mod C_CSPlayerPawn {
     pub const m_vRagdollDamagePosition: usize = 0x1D04; // Vector
     pub const m_szRagdollDamageWeaponName: usize = 0x1D10; // char[64]
     pub const m_bRagdollDamageHeadshot: usize = 0x1D50; // bool
-    pub const m_bLastHeadBoneTransformIsValid: usize = 0x2270; // bool
-    pub const m_lastLandTime: usize = 0x2274; // GameTime_t
-    pub const m_qDeathEyeAngles: usize = 0x2290; // QAngle
-    pub const m_bSkipOneHeadConstraintUpdate: usize = 0x229C; // bool
+    pub const m_bLastHeadBoneTransformIsValid: usize = 0x2278; // bool
+    pub const m_lastLandTime: usize = 0x227C; // GameTime_t
+    pub const m_qDeathEyeAngles: usize = 0x2298; // QAngle
+    pub const m_bSkipOneHeadConstraintUpdate: usize = 0x22A4; // bool
 }
 
 pub mod C_CSPlayerPawnBase {

@@ -119,20 +119,10 @@
     {
       "name": "dwGlowManager",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 2D EE FC 00",
+      "pattern": "48 8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 89 5C 24 ? 48 89 6C 24",
       "operations": [
         {
           "type": "ripRelative"
-        },
-        {
-          "type": "dereference"
-        },
-        {
-          "type": "add",
-          "value": 112
-        },
-        {
-          "type": "dereference"
         }
       ]
     },

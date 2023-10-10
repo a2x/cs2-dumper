@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:57.596617900 UTC
+// 2023-10-10 02:56:32.167197800 UTC
 
 public static class AABB_t {
     public const nint m_vMinBounds = 0x0; // Vector

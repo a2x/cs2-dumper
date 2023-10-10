@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:59.122446900 UTC
+// 2023-10-10 02:56:32.958020200 UTC
 
 namespace ActiveModelConfig_t {
     constexpr std::ptrdiff_t m_Handle = 0x28; // ModelConfigHandle_t
@@ -1615,9 +1615,9 @@ namespace C_CSGO_PreviewModel {
 }
 
 namespace C_CSGO_PreviewPlayer {
-    constexpr std::ptrdiff_t m_animgraph = 0x22A0; // CUtlString
-    constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x22A8; // CUtlString
-    constexpr std::ptrdiff_t m_flInitialModelScale = 0x22B0; // float
+    constexpr std::ptrdiff_t m_animgraph = 0x22A8; // CUtlString
+    constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x22B0; // CUtlString
+    constexpr std::ptrdiff_t m_flInitialModelScale = 0x22B8; // float
 }
 
 namespace C_CSGO_TeamPreviewCamera {
@@ -1796,10 +1796,10 @@ namespace C_CSPlayerPawn {
     constexpr std::ptrdiff_t m_vRagdollDamagePosition = 0x1D04; // Vector
     constexpr std::ptrdiff_t m_szRagdollDamageWeaponName = 0x1D10; // char[64]
     constexpr std::ptrdiff_t m_bRagdollDamageHeadshot = 0x1D50; // bool
-    constexpr std::ptrdiff_t m_bLastHeadBoneTransformIsValid = 0x2270; // bool
-    constexpr std::ptrdiff_t m_lastLandTime = 0x2274; // GameTime_t
-    constexpr std::ptrdiff_t m_qDeathEyeAngles = 0x2290; // QAngle
-    constexpr std::ptrdiff_t m_bSkipOneHeadConstraintUpdate = 0x229C; // bool
+    constexpr std::ptrdiff_t m_bLastHeadBoneTransformIsValid = 0x2278; // bool
+    constexpr std::ptrdiff_t m_lastLandTime = 0x227C; // GameTime_t
+    constexpr std::ptrdiff_t m_qDeathEyeAngles = 0x2298; // QAngle
+    constexpr std::ptrdiff_t m_bSkipOneHeadConstraintUpdate = 0x22A4; // bool
 }
 
 namespace C_CSPlayerPawnBase {

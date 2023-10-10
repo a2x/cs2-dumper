@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:59.251041200 UTC
+// 2023-10-10 02:56:33.087930 UTC
 
 namespace CAnimScriptBase {
     constexpr std::ptrdiff_t m_bIsValid = 0x8; // bool

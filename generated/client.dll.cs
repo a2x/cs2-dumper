@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:59.164619800 UTC
+// 2023-10-10 02:56:33.004076800 UTC
 
 public static class ActiveModelConfig_t {
     public const nint m_Handle = 0x28; // ModelConfigHandle_t
@@ -1611,9 +1611,9 @@ public static class C_CSGO_PreviewModel {
 }
 
 public static class C_CSGO_PreviewPlayer {
-    public const nint m_animgraph = 0x22A0; // CUtlString
-    public const nint m_animgraphCharacterModeString = 0x22A8; // CUtlString
-    public const nint m_flInitialModelScale = 0x22B0; // float
+    public const nint m_animgraph = 0x22A8; // CUtlString
+    public const nint m_animgraphCharacterModeString = 0x22B0; // CUtlString
+    public const nint m_flInitialModelScale = 0x22B8; // float
 }
 
 public static class C_CSGO_TeamPreviewCamera {
@@ -1792,10 +1792,10 @@ public static class C_CSPlayerPawn {
     public const nint m_vRagdollDamagePosition = 0x1D04; // Vector
     public const nint m_szRagdollDamageWeaponName = 0x1D10; // char[64]
     public const nint m_bRagdollDamageHeadshot = 0x1D50; // bool
-    public const nint m_bLastHeadBoneTransformIsValid = 0x2270; // bool
-    public const nint m_lastLandTime = 0x2274; // GameTime_t
-    public const nint m_qDeathEyeAngles = 0x2290; // QAngle
-    public const nint m_bSkipOneHeadConstraintUpdate = 0x229C; // bool
+    public const nint m_bLastHeadBoneTransformIsValid = 0x2278; // bool
+    public const nint m_lastLandTime = 0x227C; // GameTime_t
+    public const nint m_qDeathEyeAngles = 0x2298; // QAngle
+    public const nint m_bSkipOneHeadConstraintUpdate = 0x22A4; // bool
 }
 
 public static class C_CSPlayerPawnBase {

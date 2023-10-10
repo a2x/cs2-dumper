@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:57.602683900 UTC
+// 2023-10-10 02:56:32.173981600 UTC
 
 pub mod RenderInputLayoutField_t {
     pub const m_pSemanticName: usize = 0x0; // uint8_t[32]

@@ -21,69 +21,72 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
     for signature in config.signatures {
         let module = process.get_module_by_name(&signature.module)?;
 
-        let mut address =
-            Address::from(process.find_pattern(&signature.module, &signature.pattern)?);
+        if let Ok(address) = process.find_pattern(&signature.module, &signature.pattern) {
+            let mut address = Address::from(address);
 
-        for operation in signature.operations {
-            match operation {
-                Add { value } => address += value,
-                Dereference { times, size } => {
-                    let times = times.unwrap_or(1);
-                    let size = size.unwrap_or(8);
+            for operation in signature.operations {
+                match operation {
+                    Add { value } => address += value,
+                    Dereference { times, size } => {
+                        let times = times.unwrap_or(1);
+                        let size = size.unwrap_or(8);
 
-                    for _ in 0..times {
-                        process.read_memory_raw(
-                            address.0,
-                            &mut address.0 as *mut _ as *mut _,
-                            size,
-                        )?;
+                        for _ in 0..times {
+                            process.read_memory_raw(
+                                address.0,
+                                &mut address.0 as *mut _ as *mut _,
+                                size,
+                            )?;
+                        }
                     }
-                }
-                Jmp { offset, length } => {
-                    address = process.resolve_jmp(address.0, offset, length)?.into()
-                }
-                RipRelative { offset, length } => {
-                    address = process.resolve_rip(address.0, offset, length)?.into()
-                }
-                Slice { start, end } => {
-                    let mut result: usize = 0;
+                    Jmp { offset, length } => {
+                        address = process.resolve_jmp(address.0, offset, length)?.into()
+                    }
+                    RipRelative { offset, length } => {
+                        address = process.resolve_rip(address.0, offset, length)?.into()
+                    }
+                    Slice { start, end } => {
+                        let mut result: usize = 0;
 
-                    process.read_memory_raw(
-                        address.add(start).0,
-                        &mut result as *mut _ as *mut _,
-                        end - start,
-                    )?;
+                        process.read_memory_raw(
+                            address.add(start).0,
+                            &mut result as *mut _ as *mut _,
+                            end - start,
+                        )?;
 
-                    address = result.into();
+                        address = result.into();
+                    }
+                    Subtract { value } => address -= value,
                 }
-                Subtract { value } => address -= value,
             }
-        }
 
-        let (name, value) = if address.0 < module.address() {
-            log::debug!("  └─ {} @ {:#X}", signature.name, address.0);
+            let (name, value) = if address.0 < module.address() {
+                log::debug!("  └─ {} @ {:#X}", signature.name, address.0);
 
-            (signature.name, address.0)
+                (signature.name, address.0)
+            } else {
+                log::debug!(
+                    "  └─ {} @ {:#X} ({} + {:#X})",
+                    signature.name,
+                    address,
+                    signature.module,
+                    address.sub(module.address())
+                );
+
+                (signature.name, address.sub(module.address()).0)
+            };
+
+            entries
+                .entry(signature.module.replace(".", "_"))
+                .or_default()
+                .push(Entry {
+                    name,
+                    value,
+                    comment: None,
+                });
         } else {
-            log::debug!(
-                "  └─ {} @ {:#X} ({} + {:#X})",
-                signature.name,
-                address,
-                signature.module,
-                address.sub(module.address())
-            );
-
-            (signature.name, address.sub(module.address()).0)
-        };
-
-        entries
-            .entry(signature.module.replace(".", "_"))
-            .or_default()
-            .push(Entry {
-                name,
-                value,
-                comment: None,
-            });
+            log::error!("Failed to find pattern for {}.", signature.name);
+        }
     }
 
     generate_files(builders, &entries, "offsets")?;

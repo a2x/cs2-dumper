@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-07 01:42:57.586627 UTC
+// 2023-10-10 02:56:32.162077100 UTC
 
 pub mod CExampleSchemaVData_Monomorphic {
     pub const m_nExample1: usize = 0x0; // int32_t
