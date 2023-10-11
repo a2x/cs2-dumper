@@ -23,6 +23,40 @@
       ]
     },
     {
+      "name": "dwForceAttack",
+      "module": "client.dll",
+      "pattern": "48 8B 15 ? ? ? ? 48 8D 0D ? ? ? ? E9 BD 4F FD 00",
+      "operations": [
+        {
+          "type": "ripRelative"
+        },
+        {
+          "type": "dereference"
+        },
+        {
+          "type": "add",
+          "value": 440
+        }
+      ]
+    },
+    {
+      "name": "dwForceAttack2",
+      "module": "client.dll",
+      "pattern": "48 8B 15 ? ? ? ? 48 8D 0D ? ? ? ? E9 BD 4F FD 00",
+      "operations": [
+        {
+          "type": "ripRelative"
+        },
+        {
+          "type": "dereference"
+        },
+        {
+          "type": "add",
+          "value": 584
+        }
+      ]
+    },
+    {
       "name": "dwForceBackward",
       "module": "client.dll",
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 1D",

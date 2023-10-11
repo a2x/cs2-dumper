@@ -1,6 +1,8 @@
 {
   "client_dll": {
     "dwEntityList": 24684552,
+    "dwForceAttack": 23665776,
+    "dwForceAttack2": 23665920,
     "dwForceBackward": 23666496,
     "dwForceCrouch": 23667216,
     "dwForceForward": 23666352,

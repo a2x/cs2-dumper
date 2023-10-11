@@ -3,10 +3,12 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-10 02:56:33.654268700 UTC
+// 2023-10-11 03:22:33.059568400 UTC
 
 namespace client_dll {
     constexpr std::ptrdiff_t dwEntityList = 0x178A808;
+    constexpr std::ptrdiff_t dwForceAttack = 0x1691C70;
+    constexpr std::ptrdiff_t dwForceAttack2 = 0x1691D00;
     constexpr std::ptrdiff_t dwForceBackward = 0x1691F40;
     constexpr std::ptrdiff_t dwForceCrouch = 0x1692210;
     constexpr std::ptrdiff_t dwForceForward = 0x1691EB0;

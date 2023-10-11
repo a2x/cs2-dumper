@@ -1,8 +1,10 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-10 02:56:33.655513200 UTC
+// 2023-10-11 03:22:33.060043700 UTC
 
 public static class client_dll {
     public const nint dwEntityList = 0x178A808;
+    public const nint dwForceAttack = 0x1691C70;
+    public const nint dwForceAttack2 = 0x1691D00;
     public const nint dwForceBackward = 0x1691F40;
     public const nint dwForceCrouch = 0x1692210;
     public const nint dwForceForward = 0x1691EB0;
