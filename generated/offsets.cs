@@ -1,5 +1,5 @@
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-11 03:22:33.060043700 UTC
+// 2023-10-12 01:09:26.709104200 UTC
 
 public static class client_dll {
     public const nint dwEntityList = 0x178A808;
@@ -11,6 +11,7 @@ public static class client_dll {
     public const nint dwForceJump = 0x1692180;
     public const nint dwForceLeft = 0x1691FD0;
     public const nint dwForceRight = 0x1692060;
+    public const nint dwGameRules = 0x17E6548;
     public const nint dwGlobalVars = 0x168DD60;
     public const nint dwGlowManager = 0x17E5CC8;
     public const nint dwInterfaceLinkList = 0x1970D48;

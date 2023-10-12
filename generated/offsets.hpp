@@ -3,7 +3,7 @@
 #include <cstddef>
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-11 03:22:33.059568400 UTC
+// 2023-10-12 01:09:26.708632200 UTC
 
 namespace client_dll {
     constexpr std::ptrdiff_t dwEntityList = 0x178A808;
@@ -15,6 +15,7 @@ namespace client_dll {
     constexpr std::ptrdiff_t dwForceJump = 0x1692180;
     constexpr std::ptrdiff_t dwForceLeft = 0x1691FD0;
     constexpr std::ptrdiff_t dwForceRight = 0x1692060;
+    constexpr std::ptrdiff_t dwGameRules = 0x17E6548;
     constexpr std::ptrdiff_t dwGlobalVars = 0x168DD60;
     constexpr std::ptrdiff_t dwGlowManager = 0x17E5CC8;
     constexpr std::ptrdiff_t dwInterfaceLinkList = 0x1970D48;

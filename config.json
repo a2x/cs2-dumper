@@ -141,6 +141,16 @@
       ]
     },
     {
+      "name": "dwGameRules",
+      "module": "client.dll",
+      "pattern": "48 89 0D ? ? ? ? 8B 0D",
+      "operations": [
+        {
+          "type": "ripRelative"
+        }
+      ]
+    },
+    {
       "name": "dwGlobalVars",
       "module": "client.dll",
       "pattern": "48 89 0D ? ? ? ? 48 89 41",
