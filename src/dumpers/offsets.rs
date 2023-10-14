@@ -9,6 +9,69 @@ use crate::remote::Process;
 
 use super::{generate_files, Entries};
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn build_number() -> Result<()> {
+        let process = Process::new("cs2.exe")?;
+
+        let engine_base = process.get_module_by_name("engine2.dll")?.base();
+
+        let build_number = process.read_memory::<u32>(engine_base + 0x487514)?;
+
+        println!("Build number: {}", build_number);
+
+        Ok(())
+    }
+
+    #[test]
+    fn global_vars() -> Result<()> {
+        let process = Process::new("cs2.exe")?;
+
+        let client_base = process.get_module_by_name("client.dll")?.base();
+
+        let global_vars = process.read_memory::<usize>(client_base + 0x1692EE8)?;
+
+        let current_map_name =
+            process.read_string(process.read_memory::<usize>(global_vars + 0x188)?)?;
+
+        println!("Current map name: {}", current_map_name);
+
+        Ok(())
+    }
+
+    #[test]
+    fn local_player() -> Result<()> {
+        let process = Process::new("cs2.exe")?;
+
+        let client_base = process.get_module_by_name("client.dll")?.base();
+
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17DE508)?;
+
+        let player_name = process.read_string(local_player_controller + 0x610)?;
+
+        println!("Name: {}", player_name);
+
+        Ok(())
+    }
+
+    #[test]
+    fn window_size() -> Result<()> {
+        let process = Process::new("cs2.exe")?;
+
+        let engine_base = process.get_module_by_name("engine2.dll")?.base();
+
+        let window_width = process.read_memory::<u32>(engine_base + 0x538670)?;
+        let window_height = process.read_memory::<u32>(engine_base + 0x538674)?;
+
+        println!("Window size: {}x{}", window_width, window_height);
+
+        Ok(())
+    }
+}
+
 pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
     let file = File::open("config.json")?;
 
@@ -60,7 +123,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                 }
             }
 
-            let (name, value) = if address.0 < module.address() {
+            let (name, value) = if address.0 < module.base() {
                 log::debug!("  └─ {} @ {:#X}", signature.name, address.0);
 
                 (signature.name, address.0)
@@ -70,10 +133,10 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                     signature.name,
                     address,
                     signature.module,
-                    address.sub(module.address())
+                    address.sub(module.base())
                 );
 
-                (signature.name, address.sub(module.address()).0)
+                (signature.name, address.sub(module.base()).0)
             };
 
             entries

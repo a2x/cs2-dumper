@@ -1,12 +1,16 @@
-# CS2 Dumper
+# cs2-dumper
 
-Tool to automatically dump offsets and interfaces for Counter-Strike: 2.
+External offsets/interfaces dumper for Counter-Strike: 2, written in Rust.
 
 # Generated Files
 
 Generated files are stored in the `generated` directory.
 
 📂 [Pre-generated Files](./generated)
+
+# Running Tests
+
+`cargo test -- --nocapture`
 
 # License
 

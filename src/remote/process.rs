@@ -35,7 +35,7 @@ impl Process {
         let mut module_data: Vec<u8> = vec![0; module.size() as usize];
 
         self.read_memory_raw(
-            module.address(),
+            module.base(),
             module_data.as_mut_ptr() as *mut _,
             module_data.len(),
         )?;
@@ -54,7 +54,7 @@ impl Process {
             }
 
             if found {
-                return Ok(module.address() + i);
+                return Ok(module.base() + i);
             }
         }
 

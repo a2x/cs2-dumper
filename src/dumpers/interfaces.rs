@@ -36,7 +36,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                     interface_version,
                     interface_ptr,
                     module_name,
-                    interface_ptr - module.address()
+                    interface_ptr - module.base()
                 );
 
                 entries
@@ -44,7 +44,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                     .or_default()
                     .push(Entry {
                         name: interface_version.clone(),
-                        value: interface_ptr - module.address(),
+                        value: interface_ptr - module.base(),
                         comment: None,
                     });
 

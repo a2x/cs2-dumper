@@ -24,7 +24,7 @@ pub struct Section {
 }
 
 pub struct Module<'a> {
-    address: usize,
+    base: usize,
     nt_headers: &'a IMAGE_NT_HEADERS64,
     size: u32,
     exports: Vec<Export>,
@@ -32,10 +32,10 @@ pub struct Module<'a> {
 }
 
 impl<'a> Module<'a> {
-    pub fn new(process: &'a Process, address: usize) -> Result<Self> {
+    pub fn new(process: &'a Process, base: usize) -> Result<Self> {
         let mut headers: [u8; 0x1000] = [0; 0x1000];
 
-        process.read_memory_raw(address, headers.as_mut_ptr() as *mut _, headers.len())?;
+        process.read_memory_raw(base, headers.as_mut_ptr() as *mut _, headers.len())?;
 
         if headers.len() < mem::size_of::<IMAGE_DOS_HEADER>() {
             return Err(Error::BufferSizeMismatch(
@@ -60,11 +60,11 @@ impl<'a> Module<'a> {
 
         let size = nt_headers.OptionalHeader.SizeOfImage;
 
-        let exports = unsafe { Self::parse_exports(process, address, size, nt_headers)? };
-        let sections = unsafe { Self::parse_sections(address, nt_headers) };
+        let exports = unsafe { Self::parse_exports(process, base, size, nt_headers)? };
+        let sections = unsafe { Self::parse_sections(base, nt_headers) };
 
         Ok(Self {
-            address,
+            base,
             nt_headers,
             size,
             exports,
@@ -73,8 +73,8 @@ impl<'a> Module<'a> {
     }
 
     #[inline]
-    pub fn address(&self) -> usize {
-        self.address
+    pub fn base(&self) -> usize {
+        self.base
     }
 
     #[inline]
