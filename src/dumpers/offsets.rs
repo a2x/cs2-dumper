@@ -52,7 +52,7 @@ mod tests {
 
         let player_name = process.read_string(local_player_controller + 0x610)?;
 
-        println!("Name: {}", player_name);
+        println!("Local player name: {}", player_name);
 
         Ok(())
     }

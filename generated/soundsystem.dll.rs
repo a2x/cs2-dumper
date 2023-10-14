@@ -1,7 +1,7 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 
 // Created using https://github.com/a2x/cs2-dumper
-// 2023-10-13 02:10:19.576559900 UTC
+// 2023-10-14 05:19:07.962135 UTC
 
 pub mod CDSPMixgroupModifier {
     pub const m_mixgroup: usize = 0x0; // CUtlString
