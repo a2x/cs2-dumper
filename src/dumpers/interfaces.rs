@@ -15,7 +15,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
 
         if let Some(create_interface_export) = module.export("CreateInterface") {
             log::info!("Dumping interfaces in {}...", module_name);
-
+            if module_name != "crashhandler64.dll"{
             let create_interface_address =
                 process.resolve_rip(create_interface_export.va, None, None)?;
 
@@ -50,6 +50,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
 
                 interface_registry_ptr =
                     process.read_memory::<usize>(interface_registry_ptr + 0x10)?;
+            }
             }
         }
     }
