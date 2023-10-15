@@ -39,7 +39,7 @@ pub fn generate_file(
     if builder.extension() != "json" {
         write!(
             file,
-            "// Created using https://github.com/a2x/cs2-dumper\n// {}\n\n",
+            "/*\n * https://github.com/a2x/cs2-dumper\n * {}\n */\n\n",
             chrono::Utc::now()
         )?;
     }

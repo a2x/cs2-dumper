@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+#![feature(offset_of)]
 
 use std::fs;
 use std::time::Instant;

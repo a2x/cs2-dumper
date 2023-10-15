@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 05:19:07.666106100 UTC
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-15 12:13:31.375847600 UTC
+ */
 
 public static class CEntityComponentHelper {
     public const nint m_flags = 0x8; // uint32_t

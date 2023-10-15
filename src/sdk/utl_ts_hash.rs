@@ -1,86 +1,102 @@
+use std::mem::offset_of;
+
 use crate::error::Result;
 use crate::remote::Process;
 
 #[derive(Debug)]
 #[repr(C)]
-pub struct HashBucketDataInternal<T, K> {
-    data: T,
-    pad_0: [u8; 8],
-    ui_key: K,
+pub struct HashFixedDataInternal<T, K> {
+    ui_key: K,                              // 0x0010
+    next: *mut HashFixedDataInternal<T, K>, // 0x0010
+    data: T,                                // 0x0010
 }
 
-impl<T, K> HashBucketDataInternal<T, K> {
-    pub fn next(&self, process: &Process) -> Result<*const HashBucketDataInternal<T, K>> {
-        process
-            .read_memory::<*const HashBucketDataInternal<T, K>>((self as *const _ as usize) + 0x8)
+impl<T, K> HashFixedDataInternal<T, K> {
+    pub fn next(&self, process: &Process) -> Result<*mut HashFixedDataInternal<T, K>> {
+        process.read_memory::<*mut HashFixedDataInternal<T, K>>(
+            (self as *const _ as usize) + offset_of!(HashFixedDataInternal<T, K>, next),
+        )
     }
 }
 
 #[derive(Debug)]
 #[repr(C)]
-pub struct HashFixedDataInternal<T, K> {
-    ui_key: K,
-    pad_0: [u8; 8],
-    data: T,
+pub struct HashBucketDataInternal<T, K> {
+    data: T,                                // 0x0000
+    next: *mut HashFixedDataInternal<T, K>, // 0x0008
+    ui_key: K,                              // 0x0010
 }
 
-impl<T, K> HashFixedDataInternal<T, K> {
-    pub fn next(&self, process: &Process) -> Result<*const HashFixedDataInternal<T, K>> {
-        process.read_memory::<*const HashFixedDataInternal<T, K>>((self as *const _ as usize) + 0x8)
+impl<T, K> HashBucketDataInternal<T, K> {
+    pub fn next(&self, process: &Process) -> Result<*mut HashFixedDataInternal<T, K>> {
+        process.read_memory::<*mut HashFixedDataInternal<T, K>>(
+            (self as *const _ as usize) + offset_of!(HashBucketDataInternal<T, K>, next),
+        )
     }
 }
 
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashAllocatedData<T, K> {
-    list: [HashFixedDataInternal<T, K>; 128],
+    pad_0: [u8; 0x18],                        // 0x0000
+    list: [HashFixedDataInternal<T, K>; 128], // 0x0018
 }
 
 impl<T, K> HashAllocatedData<T, K> {
     pub fn list(&self, process: &Process) -> Result<[HashFixedDataInternal<T, K>; 128]> {
-        process
-            .read_memory::<[HashFixedDataInternal<T, K>; 128]>((self as *const _ as usize) + 0x18)
+        process.read_memory::<[HashFixedDataInternal<T, K>; 128]>(
+            (self as *const _ as usize) + offset_of!(HashAllocatedData<T, K>, list),
+        )
     }
 }
 
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashUnallocatedData<T, K> {
-    block_list: [HashBucketDataInternal<T, K>; 256],
+    next: *mut HashUnallocatedData<T, K>,            // 0x0000
+    unknown_1: K,                                    // 0x0008
+    ui_key: K,                                       // 0x0010
+    unknown_2: K,                                    // 0x0018
+    block_list: [HashBucketDataInternal<T, K>; 256], // 0x0020
 }
 
 impl<T, K> HashUnallocatedData<T, K> {
-    pub fn next(&self, process: &Process) -> Result<*const HashUnallocatedData<T, K>> {
-        process.read_memory::<*const HashUnallocatedData<T, K>>(self as *const _ as usize)
+    pub fn next(&self, process: &Process) -> Result<*mut HashUnallocatedData<T, K>> {
+        process.read_memory::<*mut HashUnallocatedData<T, K>>(
+            self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, next),
+        )
     }
 
     pub fn ui_key(&self, process: &Process) -> Result<K> {
-        process.read_memory::<K>((self as *const _ as usize) + 0x10)
+        process.read_memory::<K>(
+            (self as *const _ as usize) + offset_of!(HashUnallocatedData<T, K>, ui_key),
+        )
     }
 
     pub fn block_list(&self, process: &Process) -> Result<[HashBucketDataInternal<T, K>; 256]> {
-        process
-            .read_memory::<[HashBucketDataInternal<T, K>; 256]>((self as *const _ as usize) + 0x20)
+        process.read_memory::<[HashBucketDataInternal<T, K>; 256]>(
+            (self as *const _ as usize) + offset_of!(HashUnallocatedData<T, K>, block_list),
+        )
     }
 }
 
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashBucket<T, K> {
-    pad_0: [u8; 16],
-    allocated_data: *const HashAllocatedData<T, K>,
-    unallocated_data: *const HashUnallocatedData<T, K>,
+    pad_0: [u8; 0x10],                                  // 0x0000
+    allocated_data: *const HashAllocatedData<T, K>,     // 0x0010
+    unallocated_data: *const HashUnallocatedData<T, K>, // 0x0018
 }
 
 #[derive(Debug)]
 #[repr(C)]
 pub struct UtlMemoryPool {
-    block_size: i32,
-    blocks_per_blob: i32,
-    grow_mode: i32,
-    blocks_allocated: i32,
-    block_allocated_size: i32,
-    peak_alloc: i32,
+    block_size: i32,           // 0x0000
+    blocks_per_blob: i32,      // 0x0004
+    grow_mode: i32,            // 0x0008
+    blocks_allocated: i32,     // 0x000C
+    block_allocated_size: i32, // 0x0010
+    peak_alloc: i32,           // 0x0014
 }
 
 impl UtlMemoryPool {
@@ -98,8 +114,8 @@ impl UtlMemoryPool {
 #[derive(Debug)]
 #[repr(C)]
 pub struct UtlTsHash<T, K = u64> {
-    entry_memory: UtlMemoryPool,
-    buckets: HashBucket<T, K>,
+    entry_memory: UtlMemoryPool, // 0x0000
+    buckets: HashBucket<T, K>,   // 0x0018
 }
 
 impl<T, K> UtlTsHash<T, K>
@@ -124,19 +140,17 @@ where
         let mut address = self.buckets.unallocated_data;
 
         while !address.is_null() {
-            unsafe {
-                let block_list = (*address).block_list(process)?;
+            let block_list = unsafe { (*address).block_list(process) }?;
 
-                for i in 0..min_size {
-                    list.push(block_list[i].data);
+            for i in 0..min_size {
+                list.push(block_list[i].data);
 
-                    if list.len() >= self.count() as usize {
-                        return Ok(list);
-                    }
+                if list.len() >= self.count() as usize {
+                    return Ok(list);
                 }
-
-                address = (*address).next(process)?;
             }
+
+            address = unsafe { (*address).next(process) }?;
         }
 
         Ok(list)

@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 05:19:08.785381800 UTC
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-15 12:13:32.484000900 UTC
+ */
 
 public static class ActiveModelConfig_t {
     public const nint m_Handle = 0x28; // ModelConfigHandle_t

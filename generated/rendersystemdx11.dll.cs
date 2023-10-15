@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 05:19:07.652584400 UTC
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-15 12:13:31.362776200 UTC
+ */
 
 public static class RenderInputLayoutField_t {
     public const nint m_pSemanticName = 0x0; // uint8_t[32]

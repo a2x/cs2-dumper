@@ -2,8 +2,10 @@
 
 #include <cstddef>
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 05:19:10.044386600 UTC
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-15 12:13:33.670867800 UTC
+ */
 
 namespace client_dll {
     constexpr std::ptrdiff_t dwEntityList = 0x178FC88;

@@ -1,5 +1,7 @@
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 05:19:10.045575200 UTC
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-15 12:13:33.672128500 UTC
+ */
 
 public static class client_dll {
     public const nint dwEntityList = 0x178FC88;

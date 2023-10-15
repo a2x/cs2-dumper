@@ -2,8 +2,10 @@
 
 #include <cstddef>
 
-// Created using https://github.com/a2x/cs2-dumper
-// 2023-10-14 05:19:07.915889900 UTC
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-15 12:13:31.622787900 UTC
+ */
 
 namespace CFeIndexedJiggleBone {
     constexpr std::ptrdiff_t m_nNode = 0x0; // uint32_t
