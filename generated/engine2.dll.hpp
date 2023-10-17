@@ -1,11 +1,11 @@
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-17 02:04:49.694823800 UTC
+ */
+
 #pragma once
 
 #include <cstddef>
-
-/*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.373798700 UTC
- */
 
 namespace CEntityComponentHelper {
     constexpr std::ptrdiff_t m_flags = 0x8; // uint32_t

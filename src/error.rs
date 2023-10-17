@@ -9,7 +9,7 @@ use windows::core::Error as WindowsError;
 
 #[derive(Debug, Error)]
 pub enum Error {
-    #[error("Buffer size mismatch: expected {0}, got {1}")]
+    #[error("Buffer size mismatch. Expected {0}, got {1}")]
     BufferSizeMismatch(usize, usize),
 
     #[error("Invalid magic: {0:#X}")]
@@ -18,14 +18,14 @@ pub enum Error {
     #[error("IO error: {0}")]
     IOError(#[from] io::Error),
 
-    #[error("Module not found")]
-    ModuleNotFound,
+    #[error("Module not found: {0}")]
+    ModuleNotFound(String),
 
-    #[error("Pattern not found")]
-    PatternNotFound,
+    #[error("Pattern not found: {0}")]
+    PatternNotFound(String),
 
-    #[error("Process not found")]
-    ProcessNotFound,
+    #[error("Process not found: {0}")]
+    ProcessNotFound(String),
 
     #[error("Serde error: {0}")]
     SerdeError(#[from] SerdeError),

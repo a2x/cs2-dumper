@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.664413500 UTC
+ * 2023-10-17 02:04:50.029858700 UTC
  */
 
 public static class CDSPMixgroupModifier {

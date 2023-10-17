@@ -4,12 +4,14 @@ pub use cpp_file_builder::CppFileBuilder;
 pub use csharp_file_builder::CSharpFileBuilder;
 pub use file_builder::FileBuilder;
 pub use json_file_builder::JsonFileBuilder;
+pub use python_file_builder::PythonFileBuilder;
 pub use rust_file_builder::RustFileBuilder;
 
 pub mod cpp_file_builder;
 pub mod csharp_file_builder;
 pub mod file_builder;
 pub mod json_file_builder;
+pub mod python_file_builder;
 pub mod rust_file_builder;
 
 #[derive(Debug, PartialEq)]
@@ -17,6 +19,7 @@ pub enum FileBuilderEnum {
     CppFileBuilder(CppFileBuilder),
     CSharpFileBuilder(CSharpFileBuilder),
     JsonFileBuilder(JsonFileBuilder),
+    PythonFileBuilder(PythonFileBuilder),
     RustFileBuilder(RustFileBuilder),
 }
 
@@ -54,6 +57,7 @@ impl FileBuilderEnum {
             FileBuilderEnum::CppFileBuilder(builder) => builder,
             FileBuilderEnum::CSharpFileBuilder(builder) => builder,
             FileBuilderEnum::JsonFileBuilder(builder) => builder,
+            FileBuilderEnum::PythonFileBuilder(builder) => builder,
             FileBuilderEnum::RustFileBuilder(builder) => builder,
         }
     }

@@ -1,14 +1,14 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:33.222923700 UTC
+ * 2023-10-17 02:04:51.720428600 UTC
  */
 
-public static class animationsystem_dll {
+public static class AnimationsystemDll {
     public const nint AnimationSystemUtils_001 = 0x64670;
     public const nint AnimationSystem_001 = 0x5F1D0;
 }
 
-public static class client_dll {
+public static class ClientDll {
     public const nint LegacyGameUI001 = 0x88F360;
     public const nint Source2ClientUI001 = 0x87DE00;
     public const nint Source2ClientPrediction001 = 0x79B660;
@@ -19,7 +19,7 @@ public static class client_dll {
     public const nint Source2ClientConfig001 = 0x4721F0;
 }
 
-public static class engine2_dll {
+public static class Engine2Dll {
     public const nint SimpleEngineLoopService_001 = 0x1E1C70;
     public const nint ClientServerEngineLoopService_001 = 0x1D7940;
     public const nint KeyValueCache001 = 0x1D3F80;
@@ -54,12 +54,12 @@ public static class engine2_dll {
     public const nint Source2EngineToClient001 = 0x5A1B0;
 }
 
-public static class filesystem_stdio_dll {
+public static class FilesystemStdioDll {
     public const nint VAsyncFileSystem2_001 = 0x66D30;
     public const nint VFileSystem017 = 0x66D20;
 }
 
-public static class host_dll {
+public static class HostDll {
     public const nint Source2Host001 = 0x18E10;
     public const nint SinglePlayerSharedMemory001 = 0x18A90;
     public const nint SaveRestoreDataVersion001 = 0x18A80;
@@ -70,25 +70,25 @@ public static class host_dll {
     public const nint DebugDrawQueueManager001 = 0x11710;
 }
 
-public static class imemanager_dll {
+public static class ImemanagerDll {
     public const nint IMEManager001 = 0xC470;
 }
 
-public static class inputsystem_dll {
+public static class InputsystemDll {
     public const nint InputSystemVersion001 = 0x28D0;
     public const nint InputStackSystemVersion001 = 0x16F0;
 }
 
-public static class localize_dll {
+public static class LocalizeDll {
     public const nint Localize_001 = 0x3830;
 }
 
-public static class matchmaking_dll {
+public static class MatchmakingDll {
     public const nint GameTypes001 = 0x50270;
     public const nint MATCHFRAMEWORK_001 = 0x101030;
 }
 
-public static class materialsystem2_dll {
+public static class Materialsystem2Dll {
     public const nint MaterialUtils_001 = 0x4DB80;
     public const nint TextLayout_001 = 0x4A2D0;
     public const nint PostProcessingSystem_001 = 0x42A50;
@@ -96,67 +96,67 @@ public static class materialsystem2_dll {
     public const nint VMaterialSystem2_001 = 0x25EB0;
 }
 
-public static class meshsystem_dll {
+public static class MeshsystemDll {
     public const nint MeshSystem001 = 0x7270;
 }
 
-public static class navsystem_dll {
+public static class NavsystemDll {
     public const nint NavSystem001 = 0x76F0;
 }
 
-public static class networksystem_dll {
+public static class NetworksystemDll {
     public const nint SerializedEntitiesVersion001 = 0xD1A60;
     public const nint NetworkSystemVersion001 = 0xBBF70;
     public const nint NetworkMessagesVersion001 = 0x9C010;
     public const nint FlattenedSerializersVersion001 = 0x7B890;
 }
 
-public static class panorama_dll {
+public static class PanoramaDll {
     public const nint PanoramaUIEngine001 = 0x57EE0;
 }
 
-public static class panorama_text_pango_dll {
+public static class PanoramaTextPangoDll {
     public const nint PanoramaTextServices001 = 0x4CBD0;
 }
 
-public static class panoramauiclient_dll {
+public static class PanoramauiclientDll {
     public const nint PanoramaUIClient001 = 0x12780;
 }
 
-public static class particles_dll {
+public static class ParticlesDll {
     public const nint ParticleSystemMgr003 = 0x52D20;
 }
 
-public static class pulse_system_dll {
+public static class PulseSystemDll {
     public const nint IPulseSystem_001 = 0x5B80;
 }
 
-public static class rendersystemdx11_dll {
+public static class Rendersystemdx11Dll {
     public const nint RenderUtils_001 = 0x52C90;
     public const nint VRenderDeviceMgrBackdoor001 = 0x4A3A0;
     public const nint RenderDeviceMgr001 = 0x4A390;
 }
 
-public static class resourcesystem_dll {
+public static class ResourcesystemDll {
     public const nint ResourceSystem013 = 0x10650;
 }
 
-public static class scenefilecache_dll {
+public static class ScenefilecacheDll {
     public const nint SceneFileCache002 = 0x68E0;
     public const nint ResponseRulesCache001 = 0x3190;
 }
 
-public static class scenesystem_dll {
+public static class ScenesystemDll {
     public const nint SceneUtils_001 = 0x13D030;
     public const nint SceneSystem_002 = 0xCAE10;
     public const nint RenderingPipelines_001 = 0x8EED0;
 }
 
-public static class schemasystem_dll {
+public static class SchemasystemDll {
     public const nint SchemaSystem_001 = 0xA930;
 }
 
-public static class server_dll {
+public static class ServerDll {
     public const nint NavGameTest001 = 0xA2C470;
     public const nint ServerToolsInfo_001 = 0x830DE0;
     public const nint Source2GameClients001 = 0x830DF0;
@@ -169,18 +169,18 @@ public static class server_dll {
     public const nint Source2GameDirector001 = 0x13EAB0;
 }
 
-public static class soundsystem_dll {
+public static class SoundsystemDll {
     public const nint SoundOpSystem001 = 0x156160;
     public const nint SoundOpSystemEdit001 = 0x8B540;
     public const nint VMixEditTool001 = 0x71740;
     public const nint SoundSystem001 = 0x46540;
 }
 
-public static class steamaudio_dll {
+public static class SteamaudioDll {
     public const nint SteamAudio001 = 0x12EE0;
 }
 
-public static class steamclient64_dll {
+public static class Steamclient64Dll {
     public const nint IVALIDATE001 = 0x833640;
     public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0x82F4C0;
     public const nint SteamClient020 = 0x62CAF0;
@@ -202,39 +202,39 @@ public static class steamclient64_dll {
     public const nint p2pvoicesingleton002 = 0xD5840;
 }
 
-public static class tier0_dll {
+public static class Tier0Dll {
     public const nint VStringTokenSystem001 = 0x18C390;
     public const nint TestScriptMgr001 = 0x13F6F0;
     public const nint VProcessUtils002 = 0x12F870;
     public const nint VEngineCvar007 = 0x61C50;
 }
 
-public static class v8system_dll {
+public static class V8SystemDll {
     public const nint Source2V8System001 = 0x1670;
 }
 
-public static class valve_avi_dll {
+public static class ValveAviDll {
     public const nint VAvi001 = 0x2F90;
 }
 
-public static class valve_wmf_dll {
+public static class ValveWmfDll {
     public const nint VMediaFoundation001 = 0x12D0;
 }
 
-public static class vphysics2_dll {
+public static class Vphysics2Dll {
     public const nint VPhysics2_Handle_Interface_001 = 0x5FA50;
     public const nint VPhysics2_Interface_001 = 0x5B7F0;
 }
 
-public static class vscript_dll {
+public static class VscriptDll {
     public const nint VScriptManager010 = 0x31DA0;
 }
 
-public static class vstdlib_s64_dll {
+public static class VstdlibS64Dll {
     public const nint IVALIDATE001 = 0x24FF0;
     public const nint VEngineCvar002 = 0x5750;
 }
 
-public static class worldrenderer_dll {
+public static class WorldrendererDll {
     public const nint WorldRendererMgr001 = 0x21530;
 }

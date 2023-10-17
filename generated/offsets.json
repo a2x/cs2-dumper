@@ -1,5 +1,5 @@
 {
-  "client_dll": {
+  "ClientDll": {
     "dwEntityList": 24706184,
     "dwForceAttack": 23686640,
     "dwForceAttack2": 23686784,
@@ -20,7 +20,7 @@
     "dwViewMatrix": 25680560,
     "dwViewRender": 25683112
   },
-  "engine2_dll": {
+  "Engine2Dll": {
     "dwBuildNumber": 4748564,
     "dwNetworkGameClient": 4745904,
     "dwNetworkGameClient_getLocalPlayer": 240,

@@ -7,14 +7,14 @@ use super::FileBuilder;
 #[derive(Debug, PartialEq)]
 pub struct JsonFileBuilder {
     json: Value,
-    namespace: String,
+    current_namespace: String,
 }
 
 impl Default for JsonFileBuilder {
     fn default() -> Self {
         Self {
             json: Value::Object(Map::new()),
-            namespace: String::new(),
+            current_namespace: String::new(),
         }
     }
 }
@@ -29,7 +29,7 @@ impl FileBuilder for JsonFileBuilder {
     }
 
     fn write_namespace(&mut self, _output: &mut dyn Write, name: &str) -> Result<()> {
-        self.namespace = name.to_string();
+        self.current_namespace = name.to_string();
 
         Ok(())
     }
@@ -42,7 +42,9 @@ impl FileBuilder for JsonFileBuilder {
         _comment: Option<&str>,
     ) -> Result<()> {
         if let Some(map) = self.json.as_object_mut() {
-            let entry = map.entry(&self.namespace).or_insert_with(|| json!({}));
+            let entry = map
+                .entry(&self.current_namespace)
+                .or_insert_with(|| json!({}));
 
             if let Some(object) = entry.as_object_mut() {
                 object.insert(name.to_string(), json!(value));

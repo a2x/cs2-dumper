@@ -2,6 +2,8 @@ use std::collections::BTreeMap;
 use std::fs::File;
 use std::io::Write;
 
+use chrono::Utc;
+
 use crate::builder::{FileBuilder, FileBuilderEnum};
 use crate::error::Result;
 
@@ -34,29 +36,23 @@ pub fn generate_file(
 
     let mut file = File::create(file_path)?;
 
-    builder.write_top_level(&mut file)?;
+    write_banner_to_file(&mut file, builder.extension())?;
 
-    if builder.extension() != "json" {
-        write!(
-            file,
-            "/*\n * https://github.com/a2x/cs2-dumper\n * {}\n */\n\n",
-            chrono::Utc::now()
-        )?;
-    }
+    builder.write_top_level(&mut file)?;
 
     let len = entries.len();
 
     for (i, pair) in entries.iter().enumerate() {
         builder.write_namespace(&mut file, pair.0)?;
 
-        for entry in pair.1 {
+        pair.1.iter().try_for_each(|entry| {
             builder.write_variable(
                 &mut file,
                 &entry.name,
                 entry.value,
                 entry.comment.as_deref(),
-            )?;
-        }
+            )
+        })?;
 
         builder.write_closure(&mut file, i == len - 1)?;
     }
@@ -65,12 +61,28 @@ pub fn generate_file(
 }
 
 pub fn generate_files(
-    builders: &mut Vec<FileBuilderEnum>,
+    builders: &mut [FileBuilderEnum],
     entries: &Entries,
     file_name: &str,
 ) -> Result<()> {
-    for builder in builders {
-        generate_file(builder, &entries, file_name)?;
+    builders
+        .iter_mut()
+        .try_for_each(|builder| generate_file(builder, entries, file_name))
+}
+
+fn write_banner_to_file(file: &mut File, extension: &str) -> Result<()> {
+    let chrono_now = Utc::now();
+
+    const URL: &str = "https://github.com/a2x/cs2-dumper";
+
+    let banner = match extension {
+        "json" => None,
+        "py" => Some(format!("'''\n{}\n{}\n'''\n\n", URL, chrono_now)),
+        _ => Some(format!("/*\n * {}\n * {}\n */\n\n", URL, chrono_now)),
+    };
+
+    if let Some(banner) = banner {
+        write!(file, "{}", banner)?;
     }
 
     Ok(())

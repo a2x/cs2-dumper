@@ -1,11 +1,11 @@
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-17 02:04:49.664660100 UTC
+ */
+
 #pragma once
 
 #include <cstddef>
-
-/*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.347354400 UTC
- */
 
 namespace CExampleSchemaVData_Monomorphic {
     constexpr std::ptrdiff_t m_nExample1 = 0x0; // int32_t

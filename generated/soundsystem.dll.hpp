@@ -1,11 +1,11 @@
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-17 02:04:50.026242900 UTC
+ */
+
 #pragma once
 
 #include <cstddef>
-
-/*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.660932900 UTC
- */
 
 namespace CDSPMixgroupModifier {
     constexpr std::ptrdiff_t m_mixgroup = 0x0; // CUtlString

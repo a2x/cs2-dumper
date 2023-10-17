@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:32.969358100 UTC
+ * 2023-10-17 02:04:51.510044200 UTC
  */
 
 public static class CAnimScriptBase {

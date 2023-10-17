@@ -1,13 +1,13 @@
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-17 02:04:52.169744400 UTC
+ */
+
 #pragma once
 
 #include <cstddef>
 
-/*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:33.670867800 UTC
- */
-
-namespace client_dll {
+namespace ClientDll {
     constexpr std::ptrdiff_t dwEntityList = 0x178FC88;
     constexpr std::ptrdiff_t dwForceAttack = 0x1696DF0;
     constexpr std::ptrdiff_t dwForceAttack2 = 0x1696E80;
@@ -29,7 +29,7 @@ namespace client_dll {
     constexpr std::ptrdiff_t dwViewRender = 0x187E4A8;
 }
 
-namespace engine2_dll {
+namespace Engine2Dll {
     constexpr std::ptrdiff_t dwBuildNumber = 0x487514;
     constexpr std::ptrdiff_t dwNetworkGameClient = 0x486AB0;
     constexpr std::ptrdiff_t dwNetworkGameClient_getLocalPlayer = 0xF0;

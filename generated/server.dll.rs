@@ -1,9 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
-
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:32.557311800 UTC
+ * 2023-10-17 02:04:51.051900700 UTC
  */
+
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod ActiveModelConfig_t {
     pub const m_Handle: usize = 0x28; // ModelConfigHandle_t

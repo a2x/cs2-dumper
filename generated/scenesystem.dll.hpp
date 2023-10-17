@@ -1,11 +1,11 @@
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-17 02:04:50.043752900 UTC
+ */
+
 #pragma once
 
 #include <cstddef>
-
-/*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.674184500 UTC
- */
 
 namespace CSSDSEndFrameViewInfo {
     constexpr std::ptrdiff_t m_nViewId = 0x0; // uint64_t

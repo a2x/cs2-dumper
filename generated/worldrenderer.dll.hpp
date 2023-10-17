@@ -1,11 +1,11 @@
+/*
+ * https://github.com/a2x/cs2-dumper
+ * 2023-10-17 02:04:50.060524800 UTC
+ */
+
 #pragma once
 
 #include <cstddef>
-
-/*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.689004 UTC
- */
 
 namespace AggregateLODSetup_t {
     constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // Vector

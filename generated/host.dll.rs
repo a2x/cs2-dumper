@@ -1,9 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
-
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:32.970197200 UTC
+ * 2023-10-17 02:04:51.511077100 UTC
  */
+
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod CAnimScriptBase {
     pub const m_bIsValid: usize = 0x8; // bool

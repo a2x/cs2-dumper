@@ -67,6 +67,7 @@ fn main() -> Result<()> {
         FileBuilderEnum::CppFileBuilder(CppFileBuilder),
         FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder),
         FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default()),
+        FileBuilderEnum::PythonFileBuilder(PythonFileBuilder),
         FileBuilderEnum::RustFileBuilder(RustFileBuilder),
     ];
 

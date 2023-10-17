@@ -1,11 +1,11 @@
-#![allow(non_snake_case, non_upper_case_globals)]
-
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:33.673543400 UTC
+ * 2023-10-17 02:04:52.173110500 UTC
  */
 
-pub mod client_dll {
+#![allow(non_snake_case, non_upper_case_globals)]
+
+pub mod ClientDll {
     pub const dwEntityList: usize = 0x178FC88;
     pub const dwForceAttack: usize = 0x1696DF0;
     pub const dwForceAttack2: usize = 0x1696E80;
@@ -27,7 +27,7 @@ pub mod client_dll {
     pub const dwViewRender: usize = 0x187E4A8;
 }
 
-pub mod engine2_dll {
+pub mod Engine2Dll {
     pub const dwBuildNumber: usize = 0x487514;
     pub const dwNetworkGameClient: usize = 0x486AB0;
     pub const dwNetworkGameClient_getLocalPlayer: usize = 0xF0;

@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.392118600 UTC
+ * 2023-10-17 02:04:49.716792200 UTC
  */
 
 public static class ChangeAccessorFieldPathIndex_t {

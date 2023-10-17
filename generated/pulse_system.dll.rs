@@ -1,9 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
-
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.716897500 UTC
+ * 2023-10-17 02:04:50.094207700 UTC
  */
+
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod CPulseCell_Base {
     pub const m_nEditorNodeID: usize = 0x8; // PulseDocNodeID_t

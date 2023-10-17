@@ -58,7 +58,7 @@ impl Process {
             }
         }
 
-        Err(Error::PatternNotFound)
+        Err(Error::PatternNotFound(pattern.to_owned()))
     }
 
     pub fn get_loaded_modules(&self) -> Result<Vec<String>> {
@@ -108,7 +108,7 @@ impl Process {
             }
         }
 
-        Err(Error::ModuleNotFound)
+        Err(Error::ModuleNotFound(module_name.to_owned()))
     }
 
     pub fn read_memory_raw(&self, address: usize, buffer: *mut c_void, size: usize) -> Result<()> {
@@ -215,7 +215,7 @@ impl Process {
             }
         }
 
-        Err(Error::ProcessNotFound)
+        Err(Error::ProcessNotFound(process_name.to_owned()))
     }
 
     fn pattern_to_bytes(pattern: &str) -> Vec<i32> {

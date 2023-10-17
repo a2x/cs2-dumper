@@ -1,51 +1,21 @@
-use std::ffi::c_char;
-use std::mem::offset_of;
+use convert_case::{Case, Casing};
 
 use crate::builder::FileBuilderEnum;
 use crate::dumpers::Entry;
 use crate::error::Result;
 use crate::remote::Process;
+use crate::sdk::InterfaceReg;
 
 use super::{generate_files, Entries};
 
-#[derive(Debug)]
-#[repr(C)]
-struct InterfaceReg {
-    create_fn: *const (),    // 0x0000
-    name: *const c_char,     // 0x0008
-    next: *mut InterfaceReg, // 0x0010
-}
-
-impl InterfaceReg {
-    pub fn ptr(&self, process: &Process) -> Result<usize> {
-        process
-            .read_memory::<usize>(self as *const _ as usize + offset_of!(InterfaceReg, create_fn))
-    }
-
-    pub fn name(&self, process: &Process) -> Result<String> {
-        let name_ptr = process
-            .read_memory::<usize>(self as *const _ as usize + offset_of!(InterfaceReg, name))?;
-
-        process.read_string(name_ptr)
-    }
-
-    pub fn next(&self, process: &Process) -> Result<*mut InterfaceReg> {
-        process.read_memory::<*mut InterfaceReg>(
-            self as *const _ as usize + offset_of!(InterfaceReg, next),
-        )
-    }
-}
-
 pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
-    let module_names = process.get_loaded_modules()?;
-
     let mut entries = Entries::new();
 
-    for module_name in module_names {
-        if module_name == "crashhandler64.dll" {
-            continue;
-        }
-
+    for module_name in process
+        .get_loaded_modules()?
+        .into_iter()
+        .filter(|module_name| *module_name != "crashhandler64.dll")
+    {
         let module = process.get_module_by_name(&module_name)?;
 
         if let Some(create_interface_export) = module.export("CreateInterface") {
@@ -70,7 +40,12 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                     );
 
                     entries
-                        .entry(module_name.replace(".", "_"))
+                        .entry(
+                            module_name
+                                .replace(".", "_")
+                                .to_case(Case::Snake)
+                                .to_case(Case::Pascal),
+                        )
                         .or_default()
                         .push(Entry {
                             name: name.clone(),

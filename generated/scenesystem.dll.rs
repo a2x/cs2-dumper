@@ -1,9 +1,9 @@
-#![allow(non_snake_case, non_upper_case_globals)]
-
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-15 12:13:31.676655900 UTC
+ * 2023-10-17 02:04:50.047339600 UTC
  */
+
+#![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod CSSDSEndFrameViewInfo {
     pub const m_nViewId: usize = 0x0; // uint64_t
