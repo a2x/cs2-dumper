@@ -34,7 +34,7 @@ mod tests {
 
         let client_base = process.get_module_by_name("client.dll")?.base();
 
-        let global_vars = process.read_memory::<usize>(client_base + 0x1692EE8)?;
+        let global_vars = process.read_memory::<usize>(client_base + 0x1696F40)?;
 
         let current_map_name =
             process.read_string(process.read_memory::<usize>(global_vars + 0x188)?)?;
