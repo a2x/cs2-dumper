@@ -32,8 +32,8 @@ impl FileBuilder for FileBuilderEnum {
         self.as_mut().write_top_level(output)
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str) -> Result<()> {
-        self.as_mut().write_namespace(output, name)
+    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+        self.as_mut().write_namespace(output, name, comment)
     }
 
     fn write_variable(

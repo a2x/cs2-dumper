@@ -19,6 +19,9 @@ pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
         for class in type_scope.classes()? {
             log::debug!("  {}", class.name());
 
+            let container = entries.entry(class.name().replace("::", "_")).or_default();
+            container.comment = class.parent()?.map(|p| p.name().to_string());
+
             for field in class.fields()? {
                 let field_name = field.name()?;
                 let field_offset = field.offset()?;
@@ -31,14 +34,11 @@ pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                     field_type_name
                 );
 
-                entries
-                    .entry(class.name().replace("::", "_"))
-                    .or_default()
-                    .push(Entry {
-                        name: field_name,
-                        value: field_offset as usize,
-                        comment: Some(field_type_name),
-                    });
+                container.data.push(Entry {
+                    name: field_name,
+                    value: field_offset as usize,
+                    comment: Some(field_type_name),
+                });
             }
         }
 

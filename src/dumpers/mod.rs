@@ -21,7 +21,13 @@ pub struct Entry {
     pub comment: Option<String>,
 }
 
-pub type Entries = BTreeMap<String, Vec<Entry>>;
+#[derive(Default)]
+pub struct EntriesContainer {
+    pub data: Vec<Entry>,
+    pub comment: Option<String>
+}
+
+pub type Entries = BTreeMap<String, EntriesContainer>;
 
 pub fn generate_file(
     builder: &mut FileBuilderEnum,
@@ -43,9 +49,9 @@ pub fn generate_file(
     let len = entries.len();
 
     for (i, pair) in entries.iter().enumerate() {
-        builder.write_namespace(&mut file, pair.0)?;
+        builder.write_namespace(&mut file, pair.0, pair.1.comment.as_deref())?;
 
-        pair.1.iter().try_for_each(|entry| {
+        pair.1.data.iter().try_for_each(|entry| {
             builder.write_variable(
                 &mut file,
                 &entry.name,

@@ -17,8 +17,12 @@ impl FileBuilder for CppFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str) -> Result<()> {
-        write!(output, "namespace {} {{\n", name)?;
+    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+        if let Some(comment) = comment {
+            write!(output, "namespace {} {{ // {}\n", name, comment)?;
+        } else {
+            write!(output, "namespace {} {{\n", name)?;
+        }
 
         Ok(())
     }

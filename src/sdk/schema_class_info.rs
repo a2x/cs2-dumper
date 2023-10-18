@@ -45,4 +45,15 @@ impl<'a> SchemaClassInfo<'a> {
     pub fn fields_count(&self) -> Result<u16> {
         self.process.read_memory::<u16>(self.address + 0x1C)
     }
+
+    pub fn parent(&self) -> Result<Option<SchemaClassInfo>> {
+        let addr = self.process.read_memory::<u64>(self.address + 0x38)?;
+        if addr == 0 {
+            return Ok(None);
+        }
+
+        let parent = self.process.read_memory::<u64>(addr as usize + 0x8)?;
+        let name = self.process.read_string(self.process.read_memory::<usize>(parent as usize + 0x8)?)?;
+        Ok(Some(SchemaClassInfo::new(self.process, parent as usize, &name)))
+    }
 }

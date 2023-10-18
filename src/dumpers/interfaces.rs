@@ -47,6 +47,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                                 .to_case(Case::Pascal),
                         )
                         .or_default()
+                        .data
                         .push(Entry {
                             name: name.clone(),
                             value: ptr - module.base(),
