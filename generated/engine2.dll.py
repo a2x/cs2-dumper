@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-17 02:04:49.699141900 UTC
+2023-10-18 01:33:55.659173400 UTC
 '''
 
 class CEntityComponentHelper:

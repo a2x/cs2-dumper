@@ -1,30 +1,30 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-17 02:04:52.173110500 UTC
+ * 2023-10-18 01:33:57.479634300 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod ClientDll {
-    pub const dwEntityList: usize = 0x178FC88;
-    pub const dwForceAttack: usize = 0x1696DF0;
-    pub const dwForceAttack2: usize = 0x1696E80;
-    pub const dwForceBackward: usize = 0x16970C0;
-    pub const dwForceCrouch: usize = 0x1697390;
-    pub const dwForceForward: usize = 0x1697030;
-    pub const dwForceJump: usize = 0x1697300;
-    pub const dwForceLeft: usize = 0x1697150;
-    pub const dwForceRight: usize = 0x16971E0;
-    pub const dwGameRules: usize = 0x17EB818;
-    pub const dwGlobalVars: usize = 0x1692EE8;
-    pub const dwGlowManager: usize = 0x17EAF98;
-    pub const dwInterfaceLinkList: usize = 0x1976138;
-    pub const dwLocalPlayerController: usize = 0x17DE508;
-    pub const dwLocalPlayerPawn: usize = 0x187CFC8;
-    pub const dwPlantedC4: usize = 0x18838C0;
-    pub const dwViewAngles: usize = 0x18DCAF0;
-    pub const dwViewMatrix: usize = 0x187DAB0;
-    pub const dwViewRender: usize = 0x187E4A8;
+    pub const dwEntityList: usize = 0x1793DC8;
+    pub const dwForceAttack: usize = 0x169AE50;
+    pub const dwForceAttack2: usize = 0x169AEE0;
+    pub const dwForceBackward: usize = 0x169B120;
+    pub const dwForceCrouch: usize = 0x169B3F0;
+    pub const dwForceForward: usize = 0x169B090;
+    pub const dwForceJump: usize = 0x169B360;
+    pub const dwForceLeft: usize = 0x169B1B0;
+    pub const dwForceRight: usize = 0x169B240;
+    pub const dwGameRules: usize = 0x17EFAD8;
+    pub const dwGlobalVars: usize = 0x1696F40;
+    pub const dwGlowManager: usize = 0x17EF258;
+    pub const dwInterfaceLinkList: usize = 0x197A678;
+    pub const dwLocalPlayerController: usize = 0x17E27C8;
+    pub const dwLocalPlayerPawn: usize = 0x1881288;
+    pub const dwPlantedC4: usize = 0x1887FC0;
+    pub const dwViewAngles: usize = 0x18E0DA0;
+    pub const dwViewMatrix: usize = 0x1881D70;
+    pub const dwViewRender: usize = 0x1882768;
 }
 
 pub mod Engine2Dll {
@@ -33,6 +33,6 @@ pub mod Engine2Dll {
     pub const dwNetworkGameClient_getLocalPlayer: usize = 0xF0;
     pub const dwNetworkGameClient_maxClients: usize = 0x250;
     pub const dwNetworkGameClient_signOnState: usize = 0x240;
-    pub const dwWindowHeight: usize = 0x538674;
-    pub const dwWindowWidth: usize = 0x538670;
+    pub const dwWindowHeight: usize = 0x5386D4;
+    pub const dwWindowWidth: usize = 0x5386D0;
 }

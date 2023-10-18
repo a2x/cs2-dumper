@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-17 02:04:49.712772400 UTC
+2023-10-18 01:33:55.669007500 UTC
 '''
 
 class MaterialParamBuffer_t:
