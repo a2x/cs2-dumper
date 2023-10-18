@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-17 02:04:49.994354200 UTC
+2023-10-18 01:33:55.839574800 UTC
 '''
 
 class CFeIndexedJiggleBone:
