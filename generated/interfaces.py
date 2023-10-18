@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:57.027037 UTC
+2023-10-18 10:31:51.207183800 UTC
 '''
 
 class AnimationsystemDll:

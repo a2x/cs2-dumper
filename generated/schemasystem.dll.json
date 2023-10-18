@@ -1,42 +1,148 @@
 {
   "CExampleSchemaVData_Monomorphic": {
-    "m_nExample1": 0,
-    "m_nExample2": 4
+    "data": {
+      "m_nExample1": {
+        "value": 0,
+        "comment": "int32_t"
+      },
+      "m_nExample2": {
+        "value": 4,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CExampleSchemaVData_PolymorphicBase": {
-    "m_nBase": 8
+    "data": {
+      "m_nBase": {
+        "value": 8,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CExampleSchemaVData_PolymorphicDerivedA": {
-    "m_nDerivedA": 16
+    "data": {
+      "m_nDerivedA": {
+        "value": 16,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CExampleSchemaVData_PolymorphicBase"
   },
   "CExampleSchemaVData_PolymorphicDerivedB": {
-    "m_nDerivedB": 16
+    "data": {
+      "m_nDerivedB": {
+        "value": 16,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CExampleSchemaVData_PolymorphicBase"
   },
   "CSchemaSystemInternalRegistration": {
-    "m_CTransform": 256,
-    "m_CUtlBinaryBlock": 296,
-    "m_CUtlString": 320,
-    "m_CUtlSymbol": 328,
-    "m_Color": 224,
-    "m_DegreeEuler": 100,
-    "m_KV3": 368,
-    "m_QAngle": 64,
-    "m_Quaternion": 48,
-    "m_QuaternionStorage": 112,
-    "m_RadianEuler": 88,
-    "m_ResourceTypes": 360,
-    "m_RotationVector": 76,
-    "m_Vector": 8,
-    "m_Vector2D": 0,
-    "m_Vector4D": 228,
-    "m_VectorAligned": 32,
-    "m_matrix3x4_t": 128,
-    "m_matrix3x4a_t": 176,
-    "m_pKeyValues": 288,
-    "m_stringToken": 332,
-    "m_stringTokenWithStorage": 336
+    "data": {
+      "m_CTransform": {
+        "value": 256,
+        "comment": "CTransform"
+      },
+      "m_CUtlBinaryBlock": {
+        "value": 296,
+        "comment": "CUtlBinaryBlock"
+      },
+      "m_CUtlString": {
+        "value": 320,
+        "comment": "CUtlString"
+      },
+      "m_CUtlSymbol": {
+        "value": 328,
+        "comment": "CUtlSymbol"
+      },
+      "m_Color": {
+        "value": 224,
+        "comment": "Color"
+      },
+      "m_DegreeEuler": {
+        "value": 100,
+        "comment": "DegreeEuler"
+      },
+      "m_KV3": {
+        "value": 368,
+        "comment": "KeyValues3"
+      },
+      "m_QAngle": {
+        "value": 64,
+        "comment": "QAngle"
+      },
+      "m_Quaternion": {
+        "value": 48,
+        "comment": "Quaternion"
+      },
+      "m_QuaternionStorage": {
+        "value": 112,
+        "comment": "QuaternionStorage"
+      },
+      "m_RadianEuler": {
+        "value": 88,
+        "comment": "RadianEuler"
+      },
+      "m_ResourceTypes": {
+        "value": 360,
+        "comment": "CResourceArray<CResourcePointer<CResourceString>>"
+      },
+      "m_RotationVector": {
+        "value": 76,
+        "comment": "RotationVector"
+      },
+      "m_Vector": {
+        "value": 8,
+        "comment": "Vector"
+      },
+      "m_Vector2D": {
+        "value": 0,
+        "comment": "Vector2D"
+      },
+      "m_Vector4D": {
+        "value": 228,
+        "comment": "Vector4D"
+      },
+      "m_VectorAligned": {
+        "value": 32,
+        "comment": "VectorAligned"
+      },
+      "m_matrix3x4_t": {
+        "value": 128,
+        "comment": "matrix3x4_t"
+      },
+      "m_matrix3x4a_t": {
+        "value": 176,
+        "comment": "matrix3x4a_t"
+      },
+      "m_pKeyValues": {
+        "value": 288,
+        "comment": "KeyValues*"
+      },
+      "m_stringToken": {
+        "value": 332,
+        "comment": "CUtlStringToken"
+      },
+      "m_stringTokenWithStorage": {
+        "value": 336,
+        "comment": "CUtlStringTokenWithStorage"
+      }
+    },
+    "comment": null
+  },
+  "InfoForResourceTypeCResourceManifestInternal": {
+    "data": {},
+    "comment": null
   },
   "ResourceId_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "uint64_t"
+      }
+    },
+    "comment": null
   }
 }

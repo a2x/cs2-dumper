@@ -1,655 +1,2360 @@
 {
   "CFeIndexedJiggleBone": {
-    "m_jiggleBone": 8,
-    "m_nJiggleParent": 4,
-    "m_nNode": 0
+    "data": {
+      "m_jiggleBone": {
+        "value": 8,
+        "comment": "CFeJiggleBone"
+      },
+      "m_nJiggleParent": {
+        "value": 4,
+        "comment": "uint32_t"
+      },
+      "m_nNode": {
+        "value": 0,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
   },
   "CFeJiggleBone": {
-    "m_flAlongDamping": 32,
-    "m_flAlongStiffness": 28,
-    "m_flAngleLimit": 36,
-    "m_flBaseDamping": 80,
-    "m_flBaseForwardFriction": 116,
-    "m_flBaseLeftFriction": 92,
-    "m_flBaseMass": 72,
-    "m_flBaseMaxForward": 112,
-    "m_flBaseMaxLeft": 88,
-    "m_flBaseMaxUp": 100,
-    "m_flBaseMinForward": 108,
-    "m_flBaseMinLeft": 84,
-    "m_flBaseMinUp": 96,
-    "m_flBaseStiffness": 76,
-    "m_flBaseUpFriction": 104,
-    "m_flLength": 4,
-    "m_flMaxPitch": 60,
-    "m_flMaxYaw": 44,
-    "m_flMinPitch": 56,
-    "m_flMinYaw": 40,
-    "m_flPitchBounce": 68,
-    "m_flPitchDamping": 24,
-    "m_flPitchFriction": 64,
-    "m_flPitchStiffness": 20,
-    "m_flRadius0": 120,
-    "m_flRadius1": 124,
-    "m_flTipMass": 8,
-    "m_flYawBounce": 52,
-    "m_flYawDamping": 16,
-    "m_flYawFriction": 48,
-    "m_flYawStiffness": 12,
-    "m_nCollisionMask": 152,
-    "m_nFlags": 0,
-    "m_vPoint0": 128,
-    "m_vPoint1": 140
+    "data": {
+      "m_flAlongDamping": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flAlongStiffness": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flAngleLimit": {
+        "value": 36,
+        "comment": "float"
+      },
+      "m_flBaseDamping": {
+        "value": 80,
+        "comment": "float"
+      },
+      "m_flBaseForwardFriction": {
+        "value": 116,
+        "comment": "float"
+      },
+      "m_flBaseLeftFriction": {
+        "value": 92,
+        "comment": "float"
+      },
+      "m_flBaseMass": {
+        "value": 72,
+        "comment": "float"
+      },
+      "m_flBaseMaxForward": {
+        "value": 112,
+        "comment": "float"
+      },
+      "m_flBaseMaxLeft": {
+        "value": 88,
+        "comment": "float"
+      },
+      "m_flBaseMaxUp": {
+        "value": 100,
+        "comment": "float"
+      },
+      "m_flBaseMinForward": {
+        "value": 108,
+        "comment": "float"
+      },
+      "m_flBaseMinLeft": {
+        "value": 84,
+        "comment": "float"
+      },
+      "m_flBaseMinUp": {
+        "value": 96,
+        "comment": "float"
+      },
+      "m_flBaseStiffness": {
+        "value": 76,
+        "comment": "float"
+      },
+      "m_flBaseUpFriction": {
+        "value": 104,
+        "comment": "float"
+      },
+      "m_flLength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flMaxPitch": {
+        "value": 60,
+        "comment": "float"
+      },
+      "m_flMaxYaw": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flMinPitch": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_flMinYaw": {
+        "value": 40,
+        "comment": "float"
+      },
+      "m_flPitchBounce": {
+        "value": 68,
+        "comment": "float"
+      },
+      "m_flPitchDamping": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flPitchFriction": {
+        "value": 64,
+        "comment": "float"
+      },
+      "m_flPitchStiffness": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flRadius0": {
+        "value": 120,
+        "comment": "float"
+      },
+      "m_flRadius1": {
+        "value": 124,
+        "comment": "float"
+      },
+      "m_flTipMass": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flYawBounce": {
+        "value": 52,
+        "comment": "float"
+      },
+      "m_flYawDamping": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flYawFriction": {
+        "value": 48,
+        "comment": "float"
+      },
+      "m_flYawStiffness": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_nCollisionMask": {
+        "value": 152,
+        "comment": "uint16_t"
+      },
+      "m_nFlags": {
+        "value": 0,
+        "comment": "uint32_t"
+      },
+      "m_vPoint0": {
+        "value": 128,
+        "comment": "Vector"
+      },
+      "m_vPoint1": {
+        "value": 140,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "CFeMorphLayer": {
-    "m_GoalDamping": 112,
-    "m_GoalStrength": 88,
-    "m_Gravity": 64,
-    "m_InitPos": 40,
-    "m_Name": 0,
-    "m_Nodes": 16,
-    "m_nNameHash": 8
+    "data": {
+      "m_GoalDamping": {
+        "value": 112,
+        "comment": "CUtlVector<float>"
+      },
+      "m_GoalStrength": {
+        "value": 88,
+        "comment": "CUtlVector<float>"
+      },
+      "m_Gravity": {
+        "value": 64,
+        "comment": "CUtlVector<float>"
+      },
+      "m_InitPos": {
+        "value": 40,
+        "comment": "CUtlVector<Vector>"
+      },
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_Nodes": {
+        "value": 16,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_nNameHash": {
+        "value": 8,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
   },
   "CFeNamedJiggleBone": {
-    "m_jiggleBone": 52,
-    "m_nJiggleParent": 48,
-    "m_strParentBone": 0,
-    "m_transform": 16
+    "data": {
+      "m_jiggleBone": {
+        "value": 52,
+        "comment": "CFeJiggleBone"
+      },
+      "m_nJiggleParent": {
+        "value": 48,
+        "comment": "uint32_t"
+      },
+      "m_strParentBone": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_transform": {
+        "value": 16,
+        "comment": "CTransform"
+      }
+    },
+    "comment": null
   },
   "CFeVertexMapBuildArray": {
-    "m_Array": 0
+    "data": {
+      "m_Array": {
+        "value": 0,
+        "comment": "CUtlVector<FeVertexMapBuild_t*>"
+      }
+    },
+    "comment": null
   },
   "CRegionSVM": {
-    "m_Nodes": 24,
-    "m_Planes": 0
+    "data": {
+      "m_Nodes": {
+        "value": 24,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_Planes": {
+        "value": 0,
+        "comment": "CUtlVector<RnPlane_t>"
+      }
+    },
+    "comment": null
   },
   "CastSphereSATParams_t": {
-    "m_flMaxFraction": 28,
-    "m_flRadius": 24,
-    "m_flScale": 32,
-    "m_pHull": 40,
-    "m_vRayDelta": 12,
-    "m_vRayStart": 0
+    "data": {
+      "m_flMaxFraction": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flRadius": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flScale": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_pHull": {
+        "value": 40,
+        "comment": "RnHull_t*"
+      },
+      "m_vRayDelta": {
+        "value": 12,
+        "comment": "Vector"
+      },
+      "m_vRayStart": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "CovMatrix3": {
-    "m_flXY": 12,
-    "m_flXZ": 16,
-    "m_flYZ": 20,
-    "m_vDiag": 0
+    "data": {
+      "m_flXY": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flXZ": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flYZ": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_vDiag": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "Dop26_t": {
-    "m_flSupport": 0
+    "data": {
+      "m_flSupport": {
+        "value": 0,
+        "comment": "float[26]"
+      }
+    },
+    "comment": null
   },
   "FeAnimStrayRadius_t": {
-    "flMaxDist": 4,
-    "flRelaxationFactor": 8,
-    "nNode": 0
+    "data": {
+      "flMaxDist": {
+        "value": 4,
+        "comment": "float"
+      },
+      "flRelaxationFactor": {
+        "value": 8,
+        "comment": "float"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeAxialEdgeBend_t": {
-    "flDist": 8,
-    "flWeight": 12,
-    "nNode": 28,
-    "te": 0,
-    "tv": 4
+    "data": {
+      "flDist": {
+        "value": 8,
+        "comment": "float"
+      },
+      "flWeight": {
+        "value": 12,
+        "comment": "float[4]"
+      },
+      "nNode": {
+        "value": 28,
+        "comment": "uint16_t[6]"
+      },
+      "te": {
+        "value": 0,
+        "comment": "float"
+      },
+      "tv": {
+        "value": 4,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "FeBandBendLimit_t": {
-    "flDistMax": 4,
-    "flDistMin": 0,
-    "nNode": 8
+    "data": {
+      "flDistMax": {
+        "value": 4,
+        "comment": "float"
+      },
+      "flDistMin": {
+        "value": 0,
+        "comment": "float"
+      },
+      "nNode": {
+        "value": 8,
+        "comment": "uint16_t[6]"
+      }
+    },
+    "comment": null
   },
   "FeBoxRigid_t": {
-    "nCollisionMask": 34,
-    "nFlags": 50,
-    "nNode": 32,
-    "nVertexMapIndex": 48,
-    "tmFrame2": 0,
-    "vSize": 36
+    "data": {
+      "nCollisionMask": {
+        "value": 34,
+        "comment": "uint16_t"
+      },
+      "nFlags": {
+        "value": 50,
+        "comment": "uint16_t"
+      },
+      "nNode": {
+        "value": 32,
+        "comment": "uint16_t"
+      },
+      "nVertexMapIndex": {
+        "value": 48,
+        "comment": "uint16_t"
+      },
+      "tmFrame2": {
+        "value": 0,
+        "comment": "CTransform"
+      },
+      "vSize": {
+        "value": 36,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "FeBuildBoxRigid_t": {
-    "m_nPriority": 64,
-    "m_nVertexMapHash": 68
+    "data": {
+      "m_nPriority": {
+        "value": 64,
+        "comment": "int32_t"
+      },
+      "m_nVertexMapHash": {
+        "value": 68,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": "FeBoxRigid_t"
   },
   "FeBuildSphereRigid_t": {
-    "m_nPriority": 32,
-    "m_nVertexMapHash": 36
+    "data": {
+      "m_nPriority": {
+        "value": 32,
+        "comment": "int32_t"
+      },
+      "m_nVertexMapHash": {
+        "value": 36,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": "FeSphereRigid_t"
   },
   "FeBuildTaperedCapsuleRigid_t": {
-    "m_nPriority": 48,
-    "m_nVertexMapHash": 52
+    "data": {
+      "m_nPriority": {
+        "value": 48,
+        "comment": "int32_t"
+      },
+      "m_nVertexMapHash": {
+        "value": 52,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": "FeTaperedCapsuleRigid_t"
   },
   "FeCollisionPlane_t": {
-    "flStrength": 20,
-    "m_Plane": 4,
-    "nChildNode": 2,
-    "nCtrlParent": 0
+    "data": {
+      "flStrength": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_Plane": {
+        "value": 4,
+        "comment": "RnPlane_t"
+      },
+      "nChildNode": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "nCtrlParent": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeCtrlOffset_t": {
-    "nCtrlChild": 14,
-    "nCtrlParent": 12,
-    "vOffset": 0
+    "data": {
+      "nCtrlChild": {
+        "value": 14,
+        "comment": "uint16_t"
+      },
+      "nCtrlParent": {
+        "value": 12,
+        "comment": "uint16_t"
+      },
+      "vOffset": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "FeCtrlOsOffset_t": {
-    "nCtrlChild": 2,
-    "nCtrlParent": 0
+    "data": {
+      "nCtrlChild": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "nCtrlParent": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeCtrlSoftOffset_t": {
-    "flAlpha": 16,
-    "nCtrlChild": 2,
-    "nCtrlParent": 0,
-    "vOffset": 4
+    "data": {
+      "flAlpha": {
+        "value": 16,
+        "comment": "float"
+      },
+      "nCtrlChild": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "nCtrlParent": {
+        "value": 0,
+        "comment": "uint16_t"
+      },
+      "vOffset": {
+        "value": 4,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "FeEdgeDesc_t": {
-    "nEdge": 0,
-    "nSide": 4,
-    "nVirtElem": 12
+    "data": {
+      "nEdge": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      },
+      "nSide": {
+        "value": 4,
+        "comment": "uint16_t[2][2]"
+      },
+      "nVirtElem": {
+        "value": 12,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeEffectDesc_t": {
-    "m_Params": 16,
-    "nNameHash": 8,
-    "nType": 12,
-    "sName": 0
+    "data": {
+      "m_Params": {
+        "value": 16,
+        "comment": "KeyValues3"
+      },
+      "nNameHash": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "nType": {
+        "value": 12,
+        "comment": "int32_t"
+      },
+      "sName": {
+        "value": 0,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
   },
   "FeFitInfluence_t": {
-    "flWeight": 4,
-    "nMatrixNode": 8,
-    "nVertexNode": 0
+    "data": {
+      "flWeight": {
+        "value": 4,
+        "comment": "float"
+      },
+      "nMatrixNode": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "nVertexNode": {
+        "value": 0,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
   },
   "FeFitMatrix_t": {
-    "bone": 0,
-    "nBeginDynamic": 48,
-    "nEnd": 44,
-    "nNode": 46,
-    "vCenter": 32
+    "data": {
+      "bone": {
+        "value": 0,
+        "comment": "CTransform"
+      },
+      "nBeginDynamic": {
+        "value": 48,
+        "comment": "uint16_t"
+      },
+      "nEnd": {
+        "value": 44,
+        "comment": "uint16_t"
+      },
+      "nNode": {
+        "value": 46,
+        "comment": "uint16_t"
+      },
+      "vCenter": {
+        "value": 32,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "FeFitWeight_t": {
-    "flWeight": 0,
-    "nDummy": 6,
-    "nNode": 4
+    "data": {
+      "flWeight": {
+        "value": 0,
+        "comment": "float"
+      },
+      "nDummy": {
+        "value": 6,
+        "comment": "uint16_t"
+      },
+      "nNode": {
+        "value": 4,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeFollowNode_t": {
-    "flWeight": 4,
-    "nChildNode": 2,
-    "nParentNode": 0
+    "data": {
+      "flWeight": {
+        "value": 4,
+        "comment": "float"
+      },
+      "nChildNode": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "nParentNode": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeKelagerBend2_t": {
-    "flHeight0": 12,
-    "flWeight": 0,
-    "nNode": 16,
-    "nReserved": 22
+    "data": {
+      "flHeight0": {
+        "value": 12,
+        "comment": "float"
+      },
+      "flWeight": {
+        "value": 0,
+        "comment": "float[3]"
+      },
+      "nNode": {
+        "value": 16,
+        "comment": "uint16_t[3]"
+      },
+      "nReserved": {
+        "value": 22,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeMorphLayerDepr_t": {
-    "m_GoalDamping": 112,
-    "m_GoalStrength": 88,
-    "m_Gravity": 64,
-    "m_InitPos": 40,
-    "m_Name": 0,
-    "m_Nodes": 16,
-    "m_nFlags": 136,
-    "m_nNameHash": 8
+    "data": {
+      "m_GoalDamping": {
+        "value": 112,
+        "comment": "CUtlVector<float>"
+      },
+      "m_GoalStrength": {
+        "value": 88,
+        "comment": "CUtlVector<float>"
+      },
+      "m_Gravity": {
+        "value": 64,
+        "comment": "CUtlVector<float>"
+      },
+      "m_InitPos": {
+        "value": 40,
+        "comment": "CUtlVector<Vector>"
+      },
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_Nodes": {
+        "value": 16,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_nFlags": {
+        "value": 136,
+        "comment": "uint32_t"
+      },
+      "m_nNameHash": {
+        "value": 8,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
   },
   "FeNodeBase_t": {
-    "nDummy": 2,
-    "nNode": 0,
-    "nNodeX0": 8,
-    "nNodeX1": 10,
-    "nNodeY0": 12,
-    "nNodeY1": 14,
-    "qAdjust": 16
+    "data": {
+      "nDummy": {
+        "value": 2,
+        "comment": "uint16_t[3]"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t"
+      },
+      "nNodeX0": {
+        "value": 8,
+        "comment": "uint16_t"
+      },
+      "nNodeX1": {
+        "value": 10,
+        "comment": "uint16_t"
+      },
+      "nNodeY0": {
+        "value": 12,
+        "comment": "uint16_t"
+      },
+      "nNodeY1": {
+        "value": 14,
+        "comment": "uint16_t"
+      },
+      "qAdjust": {
+        "value": 16,
+        "comment": "QuaternionStorage"
+      }
+    },
+    "comment": null
   },
   "FeNodeIntegrator_t": {
-    "flAnimationForceAttraction": 4,
-    "flAnimationVertexAttraction": 8,
-    "flGravity": 12,
-    "flPointDamping": 0
+    "data": {
+      "flAnimationForceAttraction": {
+        "value": 4,
+        "comment": "float"
+      },
+      "flAnimationVertexAttraction": {
+        "value": 8,
+        "comment": "float"
+      },
+      "flGravity": {
+        "value": 12,
+        "comment": "float"
+      },
+      "flPointDamping": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "FeNodeReverseOffset_t": {
-    "nBoneCtrl": 12,
-    "nTargetNode": 14,
-    "vOffset": 0
+    "data": {
+      "nBoneCtrl": {
+        "value": 12,
+        "comment": "uint16_t"
+      },
+      "nTargetNode": {
+        "value": 14,
+        "comment": "uint16_t"
+      },
+      "vOffset": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "FeNodeWindBase_t": {
-    "nNodeX0": 0,
-    "nNodeX1": 2,
-    "nNodeY0": 4,
-    "nNodeY1": 6
+    "data": {
+      "nNodeX0": {
+        "value": 0,
+        "comment": "uint16_t"
+      },
+      "nNodeX1": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "nNodeY0": {
+        "value": 4,
+        "comment": "uint16_t"
+      },
+      "nNodeY1": {
+        "value": 6,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeProxyVertexMap_t": {
-    "m_Name": 0,
-    "m_flWeight": 8
+    "data": {
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_flWeight": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "FeQuad_t": {
-    "flSlack": 8,
-    "nNode": 0,
-    "vShape": 12
+    "data": {
+      "flSlack": {
+        "value": 8,
+        "comment": "float"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4]"
+      },
+      "vShape": {
+        "value": 12,
+        "comment": "Vector4D[4]"
+      }
+    },
+    "comment": null
   },
   "FeRigidColliderIndices_t": {
-    "m_nBoxRigidIndex": 4,
-    "m_nCollisionPlaneIndex": 6,
-    "m_nSphereRigidIndex": 2,
-    "m_nTaperedCapsuleRigidIndex": 0
+    "data": {
+      "m_nBoxRigidIndex": {
+        "value": 4,
+        "comment": "uint16_t"
+      },
+      "m_nCollisionPlaneIndex": {
+        "value": 6,
+        "comment": "uint16_t"
+      },
+      "m_nSphereRigidIndex": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "m_nTaperedCapsuleRigidIndex": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeRodConstraint_t": {
-    "flMaxDist": 4,
-    "flMinDist": 8,
-    "flRelaxationFactor": 16,
-    "flWeight0": 12,
-    "nNode": 0
+    "data": {
+      "flMaxDist": {
+        "value": 4,
+        "comment": "float"
+      },
+      "flMinDist": {
+        "value": 8,
+        "comment": "float"
+      },
+      "flRelaxationFactor": {
+        "value": 16,
+        "comment": "float"
+      },
+      "flWeight0": {
+        "value": 12,
+        "comment": "float"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeSimdAnimStrayRadius_t": {
-    "flMaxDist": 16,
-    "flRelaxationFactor": 32,
-    "nNode": 0
+    "data": {
+      "flMaxDist": {
+        "value": 16,
+        "comment": "fltx4"
+      },
+      "flRelaxationFactor": {
+        "value": 32,
+        "comment": "fltx4"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4][2]"
+      }
+    },
+    "comment": null
   },
   "FeSimdNodeBase_t": {
-    "nDummy": 40,
-    "nNode": 0,
-    "nNodeX0": 8,
-    "nNodeX1": 16,
-    "nNodeY0": 24,
-    "nNodeY1": 32,
-    "qAdjust": 48
+    "data": {
+      "nDummy": {
+        "value": 40,
+        "comment": "uint16_t[4]"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4]"
+      },
+      "nNodeX0": {
+        "value": 8,
+        "comment": "uint16_t[4]"
+      },
+      "nNodeX1": {
+        "value": 16,
+        "comment": "uint16_t[4]"
+      },
+      "nNodeY0": {
+        "value": 24,
+        "comment": "uint16_t[4]"
+      },
+      "nNodeY1": {
+        "value": 32,
+        "comment": "uint16_t[4]"
+      },
+      "qAdjust": {
+        "value": 48,
+        "comment": "FourQuaternions"
+      }
+    },
+    "comment": null
   },
   "FeSimdQuad_t": {
-    "f4Slack": 32,
-    "f4Weights": 240,
-    "nNode": 0,
-    "vShape": 48
+    "data": {
+      "f4Slack": {
+        "value": 32,
+        "comment": "fltx4"
+      },
+      "f4Weights": {
+        "value": 240,
+        "comment": "fltx4[4]"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4][4]"
+      },
+      "vShape": {
+        "value": 48,
+        "comment": "FourVectors[4]"
+      }
+    },
+    "comment": null
   },
   "FeSimdRodConstraint_t": {
-    "f4MaxDist": 16,
-    "f4MinDist": 32,
-    "f4RelaxationFactor": 64,
-    "f4Weight0": 48,
-    "nNode": 0
+    "data": {
+      "f4MaxDist": {
+        "value": 16,
+        "comment": "fltx4"
+      },
+      "f4MinDist": {
+        "value": 32,
+        "comment": "fltx4"
+      },
+      "f4RelaxationFactor": {
+        "value": 64,
+        "comment": "fltx4"
+      },
+      "f4Weight0": {
+        "value": 48,
+        "comment": "fltx4"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4][2]"
+      }
+    },
+    "comment": null
   },
   "FeSimdSpringIntegrator_t": {
-    "flNodeWeight0": 64,
-    "flSpringConstant": 32,
-    "flSpringDamping": 48,
-    "flSpringRestLength": 16,
-    "nNode": 0
+    "data": {
+      "flNodeWeight0": {
+        "value": 64,
+        "comment": "fltx4"
+      },
+      "flSpringConstant": {
+        "value": 32,
+        "comment": "fltx4"
+      },
+      "flSpringDamping": {
+        "value": 48,
+        "comment": "fltx4"
+      },
+      "flSpringRestLength": {
+        "value": 16,
+        "comment": "fltx4"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4][2]"
+      }
+    },
+    "comment": null
   },
   "FeSimdTri_t": {
-    "nNode": 0,
-    "v1x": 80,
-    "v2": 96,
-    "w1": 48,
-    "w2": 64
+    "data": {
+      "nNode": {
+        "value": 0,
+        "comment": "uint32_t[4][3]"
+      },
+      "v1x": {
+        "value": 80,
+        "comment": "fltx4"
+      },
+      "v2": {
+        "value": 96,
+        "comment": "FourVectors2D"
+      },
+      "w1": {
+        "value": 48,
+        "comment": "fltx4"
+      },
+      "w2": {
+        "value": 64,
+        "comment": "fltx4"
+      }
+    },
+    "comment": null
   },
   "FeSoftParent_t": {
-    "flAlpha": 4,
-    "nParent": 0
+    "data": {
+      "flAlpha": {
+        "value": 4,
+        "comment": "float"
+      },
+      "nParent": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "FeSourceEdge_t": {
-    "nNode": 0
+    "data": {
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeSphereRigid_t": {
-    "nCollisionMask": 18,
-    "nFlags": 22,
-    "nNode": 16,
-    "nVertexMapIndex": 20,
-    "vSphere": 0
+    "data": {
+      "nCollisionMask": {
+        "value": 18,
+        "comment": "uint16_t"
+      },
+      "nFlags": {
+        "value": 22,
+        "comment": "uint16_t"
+      },
+      "nNode": {
+        "value": 16,
+        "comment": "uint16_t"
+      },
+      "nVertexMapIndex": {
+        "value": 20,
+        "comment": "uint16_t"
+      },
+      "vSphere": {
+        "value": 0,
+        "comment": "fltx4"
+      }
+    },
+    "comment": null
   },
   "FeSpringIntegrator_t": {
-    "flNodeWeight0": 16,
-    "flSpringConstant": 8,
-    "flSpringDamping": 12,
-    "flSpringRestLength": 4,
-    "nNode": 0
+    "data": {
+      "flNodeWeight0": {
+        "value": 16,
+        "comment": "float"
+      },
+      "flSpringConstant": {
+        "value": 8,
+        "comment": "float"
+      },
+      "flSpringDamping": {
+        "value": 12,
+        "comment": "float"
+      },
+      "flSpringRestLength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeStiffHingeBuild_t": {
-    "flMaxAngle": 0,
-    "flMotionBias": 8,
-    "flStrength": 4,
-    "nNode": 20
+    "data": {
+      "flMaxAngle": {
+        "value": 0,
+        "comment": "float"
+      },
+      "flMotionBias": {
+        "value": 8,
+        "comment": "float[3]"
+      },
+      "flStrength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "nNode": {
+        "value": 20,
+        "comment": "uint16_t[3]"
+      }
+    },
+    "comment": null
   },
   "FeTaperedCapsuleRigid_t": {
-    "nCollisionMask": 34,
-    "nFlags": 38,
-    "nNode": 32,
-    "nVertexMapIndex": 36,
-    "vSphere": 0
+    "data": {
+      "nCollisionMask": {
+        "value": 34,
+        "comment": "uint16_t"
+      },
+      "nFlags": {
+        "value": 38,
+        "comment": "uint16_t"
+      },
+      "nNode": {
+        "value": 32,
+        "comment": "uint16_t"
+      },
+      "nVertexMapIndex": {
+        "value": 36,
+        "comment": "uint16_t"
+      },
+      "vSphere": {
+        "value": 0,
+        "comment": "fltx4[2]"
+      }
+    },
+    "comment": null
   },
   "FeTaperedCapsuleStretch_t": {
-    "flRadius": 8,
-    "nCollisionMask": 4,
-    "nDummy": 6,
-    "nNode": 0
+    "data": {
+      "flRadius": {
+        "value": 8,
+        "comment": "float[2]"
+      },
+      "nCollisionMask": {
+        "value": 4,
+        "comment": "uint16_t"
+      },
+      "nDummy": {
+        "value": 6,
+        "comment": "uint16_t"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeTreeChildren_t": {
-    "nChild": 0
+    "data": {
+      "nChild": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "FeTri_t": {
-    "nNode": 0,
-    "v1x": 16,
-    "v2": 20,
-    "w1": 8,
-    "w2": 12
+    "data": {
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[3]"
+      },
+      "v1x": {
+        "value": 16,
+        "comment": "float"
+      },
+      "v2": {
+        "value": 20,
+        "comment": "Vector2D"
+      },
+      "w1": {
+        "value": 8,
+        "comment": "float"
+      },
+      "w2": {
+        "value": 12,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "FeTwistConstraint_t": {
-    "flSwingRelax": 8,
-    "flTwistRelax": 4,
-    "nNodeEnd": 2,
-    "nNodeOrient": 0
+    "data": {
+      "flSwingRelax": {
+        "value": 8,
+        "comment": "float"
+      },
+      "flTwistRelax": {
+        "value": 4,
+        "comment": "float"
+      },
+      "nNodeEnd": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "nNodeOrient": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeVertexMapBuild_t": {
-    "m_Color": 12,
-    "m_VertexMapName": 0,
-    "m_Weights": 24,
-    "m_flVolumetricSolveStrength": 16,
-    "m_nNameHash": 8,
-    "m_nScaleSourceNode": 20
+    "data": {
+      "m_Color": {
+        "value": 12,
+        "comment": "Color"
+      },
+      "m_VertexMapName": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_Weights": {
+        "value": 24,
+        "comment": "CUtlVector<float>"
+      },
+      "m_flVolumetricSolveStrength": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_nNameHash": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "m_nScaleSourceNode": {
+        "value": 20,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "FeVertexMapDesc_t": {
-    "flVolumetricSolveStrength": 44,
-    "nColor": 12,
-    "nFlags": 16,
-    "nMapOffset": 24,
-    "nNameHash": 8,
-    "nNodeListCount": 50,
-    "nNodeListOffset": 28,
-    "nScaleSourceNode": 48,
-    "nVertexBase": 20,
-    "nVertexCount": 22,
-    "sName": 0,
-    "vCenterOfMass": 32
+    "data": {
+      "flVolumetricSolveStrength": {
+        "value": 44,
+        "comment": "float"
+      },
+      "nColor": {
+        "value": 12,
+        "comment": "uint32_t"
+      },
+      "nFlags": {
+        "value": 16,
+        "comment": "uint32_t"
+      },
+      "nMapOffset": {
+        "value": 24,
+        "comment": "uint32_t"
+      },
+      "nNameHash": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "nNodeListCount": {
+        "value": 50,
+        "comment": "uint16_t"
+      },
+      "nNodeListOffset": {
+        "value": 28,
+        "comment": "uint32_t"
+      },
+      "nScaleSourceNode": {
+        "value": 48,
+        "comment": "int16_t"
+      },
+      "nVertexBase": {
+        "value": 20,
+        "comment": "uint16_t"
+      },
+      "nVertexCount": {
+        "value": 22,
+        "comment": "uint16_t"
+      },
+      "sName": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "vCenterOfMass": {
+        "value": 32,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "FeWeightedNode_t": {
-    "nNode": 0,
-    "nWeight": 2
+    "data": {
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t"
+      },
+      "nWeight": {
+        "value": 2,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FeWorldCollisionParams_t": {
-    "flGroundFriction": 4,
-    "flWorldFriction": 0,
-    "nListBegin": 8,
-    "nListEnd": 10
+    "data": {
+      "flGroundFriction": {
+        "value": 4,
+        "comment": "float"
+      },
+      "flWorldFriction": {
+        "value": 0,
+        "comment": "float"
+      },
+      "nListBegin": {
+        "value": 8,
+        "comment": "uint16_t"
+      },
+      "nListEnd": {
+        "value": 10,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "FourCovMatrices3": {
-    "m_flXY": 48,
-    "m_flXZ": 64,
-    "m_flYZ": 80,
-    "m_vDiag": 0
+    "data": {
+      "m_flXY": {
+        "value": 48,
+        "comment": "fltx4"
+      },
+      "m_flXZ": {
+        "value": 64,
+        "comment": "fltx4"
+      },
+      "m_flYZ": {
+        "value": 80,
+        "comment": "fltx4"
+      },
+      "m_vDiag": {
+        "value": 0,
+        "comment": "FourVectors"
+      }
+    },
+    "comment": null
   },
   "FourVectors2D": {
-    "x": 0,
-    "y": 16
+    "data": {
+      "x": {
+        "value": 0,
+        "comment": "fltx4"
+      },
+      "y": {
+        "value": 16,
+        "comment": "fltx4"
+      }
+    },
+    "comment": null
+  },
+  "IPhysicsPlayerController": {
+    "data": {},
+    "comment": null
   },
   "OldFeEdge_t": {
-    "c01": 28,
-    "c02": 32,
-    "c03": 36,
-    "c04": 40,
-    "flAxialModelDist": 44,
-    "flAxialModelWeights": 48,
-    "flThetaFactor": 24,
-    "flThetaRelaxed": 20,
-    "invA": 12,
-    "m_flK": 0,
-    "m_nNode": 64,
-    "t": 16
+    "data": {
+      "c01": {
+        "value": 28,
+        "comment": "float"
+      },
+      "c02": {
+        "value": 32,
+        "comment": "float"
+      },
+      "c03": {
+        "value": 36,
+        "comment": "float"
+      },
+      "c04": {
+        "value": 40,
+        "comment": "float"
+      },
+      "flAxialModelDist": {
+        "value": 44,
+        "comment": "float"
+      },
+      "flAxialModelWeights": {
+        "value": 48,
+        "comment": "float[4]"
+      },
+      "flThetaFactor": {
+        "value": 24,
+        "comment": "float"
+      },
+      "flThetaRelaxed": {
+        "value": 20,
+        "comment": "float"
+      },
+      "invA": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flK": {
+        "value": 0,
+        "comment": "float[3]"
+      },
+      "m_nNode": {
+        "value": 64,
+        "comment": "uint16_t[4]"
+      },
+      "t": {
+        "value": 16,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "PhysFeModelDesc_t": {
-    "m_AnimStrayRadii": 960,
-    "m_AxialEdges": 336,
-    "m_BoxRigids": 1160,
-    "m_CollisionPlanes": 456,
-    "m_CtrlHash": 0,
-    "m_CtrlName": 24,
-    "m_CtrlOffsets": 384,
-    "m_CtrlOsOffsets": 408,
-    "m_CtrlSoftOffsets": 1032,
-    "m_DynNodeFriction": 624,
-    "m_DynNodeVertexSet": 1184,
-    "m_DynNodeWindBases": 1424,
-    "m_Effects": 1352,
-    "m_FitMatrices": 888,
-    "m_FitWeights": 912,
-    "m_FollowNodes": 432,
-    "m_FreeNodes": 864,
-    "m_GoalDampedSpringIntegrators": 1104,
-    "m_InitPose": 264,
-    "m_JiggleBones": 1056,
-    "m_KelagerBends": 1008,
-    "m_LegacyStretchForce": 576,
-    "m_LocalForce": 672,
-    "m_LocalRotation": 648,
-    "m_LockToGoal": 1400,
-    "m_LockToParent": 1376,
-    "m_MorphLayers": 1256,
-    "m_MorphSetData": 1280,
-    "m_NodeBases": 120,
-    "m_NodeCollisionRadii": 600,
-    "m_NodeIntegrator": 480,
-    "m_NodeInvMasses": 360,
-    "m_Quads": 168,
-    "m_ReverseOffsets": 936,
-    "m_RigidColliderPriorities": 1232,
-    "m_Rods": 288,
-    "m_Ropes": 96,
-    "m_SimdAnimStrayRadii": 984,
-    "m_SimdNodeBases": 144,
-    "m_SimdQuads": 192,
-    "m_SimdRods": 240,
-    "m_SimdSpringIntegrator": 528,
-    "m_SimdTris": 216,
-    "m_SourceElems": 1080,
-    "m_SphereRigids": 744,
-    "m_SpringIntegrator": 504,
-    "m_TaperedCapsuleRigids": 720,
-    "m_TaperedCapsuleStretches": 696,
-    "m_TreeChildren": 840,
-    "m_TreeCollisionMasks": 816,
-    "m_TreeParents": 792,
-    "m_Tris": 1128,
-    "m_Twists": 312,
-    "m_VertexMapValues": 1328,
-    "m_VertexMaps": 1304,
-    "m_VertexSetNames": 1208,
-    "m_WorldCollisionNodes": 768,
-    "m_WorldCollisionParams": 552,
-    "m_flAddWorldCollisionRadius": 1500,
-    "m_flDefaultExpAirDrag": 1480,
-    "m_flDefaultExpQuadAirDrag": 1488,
-    "m_flDefaultGravityScale": 1472,
-    "m_flDefaultSurfaceStretch": 1464,
-    "m_flDefaultThreadStretch": 1468,
-    "m_flDefaultTimeDilation": 1452,
-    "m_flDefaultVelAirDrag": 1476,
-    "m_flDefaultVelQuadAirDrag": 1484,
-    "m_flDefaultVolumetricSolveAmount": 1504,
-    "m_flInternalPressure": 1448,
-    "m_flLocalForce": 56,
-    "m_flLocalRotation": 60,
-    "m_flQuadVelocitySmoothRate": 1496,
-    "m_flRodVelocitySmoothRate": 1492,
-    "m_flWindDrag": 1460,
-    "m_flWindage": 1456,
-    "m_nDynamicNodeFlags": 52,
-    "m_nExtraGoalIterations": 1158,
-    "m_nExtraIterations": 1159,
-    "m_nExtraPressureIterations": 1157,
-    "m_nFirstPositionDrivenNode": 70,
-    "m_nNodeBaseJiggleboneDependsCount": 86,
-    "m_nNodeCount": 64,
-    "m_nQuadCount1": 80,
-    "m_nQuadCount2": 82,
-    "m_nQuadVelocitySmoothIterations": 1510,
-    "m_nReservedUint8": 1156,
-    "m_nRodVelocitySmoothIterations": 1508,
-    "m_nRopeCount": 88,
-    "m_nRotLockStaticNodes": 68,
-    "m_nSimdQuadCount1": 76,
-    "m_nSimdQuadCount2": 78,
-    "m_nSimdTriCount1": 72,
-    "m_nSimdTriCount2": 74,
-    "m_nStaticNodeFlags": 48,
-    "m_nStaticNodes": 66,
-    "m_nTreeDepth": 84,
-    "m_nTriCount1": 1152,
-    "m_nTriCount2": 1154
+    "data": {
+      "m_AnimStrayRadii": {
+        "value": 960,
+        "comment": "CUtlVector<FeAnimStrayRadius_t>"
+      },
+      "m_AxialEdges": {
+        "value": 336,
+        "comment": "CUtlVector<FeAxialEdgeBend_t>"
+      },
+      "m_BoxRigids": {
+        "value": 1160,
+        "comment": "CUtlVector<FeBoxRigid_t>"
+      },
+      "m_CollisionPlanes": {
+        "value": 456,
+        "comment": "CUtlVector<FeCollisionPlane_t>"
+      },
+      "m_CtrlHash": {
+        "value": 0,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_CtrlName": {
+        "value": 24,
+        "comment": "CUtlVector<CUtlString>"
+      },
+      "m_CtrlOffsets": {
+        "value": 384,
+        "comment": "CUtlVector<FeCtrlOffset_t>"
+      },
+      "m_CtrlOsOffsets": {
+        "value": 408,
+        "comment": "CUtlVector<FeCtrlOsOffset_t>"
+      },
+      "m_CtrlSoftOffsets": {
+        "value": 1032,
+        "comment": "CUtlVector<FeCtrlSoftOffset_t>"
+      },
+      "m_DynNodeFriction": {
+        "value": 624,
+        "comment": "CUtlVector<float>"
+      },
+      "m_DynNodeVertexSet": {
+        "value": 1184,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_DynNodeWindBases": {
+        "value": 1424,
+        "comment": "CUtlVector<FeNodeWindBase_t>"
+      },
+      "m_Effects": {
+        "value": 1352,
+        "comment": "CUtlVector<FeEffectDesc_t>"
+      },
+      "m_FitMatrices": {
+        "value": 888,
+        "comment": "CUtlVector<FeFitMatrix_t>"
+      },
+      "m_FitWeights": {
+        "value": 912,
+        "comment": "CUtlVector<FeFitWeight_t>"
+      },
+      "m_FollowNodes": {
+        "value": 432,
+        "comment": "CUtlVector<FeFollowNode_t>"
+      },
+      "m_FreeNodes": {
+        "value": 864,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_GoalDampedSpringIntegrators": {
+        "value": 1104,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_InitPose": {
+        "value": 264,
+        "comment": "CUtlVector<CTransform>"
+      },
+      "m_JiggleBones": {
+        "value": 1056,
+        "comment": "CUtlVector<CFeIndexedJiggleBone>"
+      },
+      "m_KelagerBends": {
+        "value": 1008,
+        "comment": "CUtlVector<FeKelagerBend2_t>"
+      },
+      "m_LegacyStretchForce": {
+        "value": 576,
+        "comment": "CUtlVector<float>"
+      },
+      "m_LocalForce": {
+        "value": 672,
+        "comment": "CUtlVector<float>"
+      },
+      "m_LocalRotation": {
+        "value": 648,
+        "comment": "CUtlVector<float>"
+      },
+      "m_LockToGoal": {
+        "value": 1400,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_LockToParent": {
+        "value": 1376,
+        "comment": "CUtlVector<FeCtrlOffset_t>"
+      },
+      "m_MorphLayers": {
+        "value": 1256,
+        "comment": "CUtlVector<FeMorphLayerDepr_t>"
+      },
+      "m_MorphSetData": {
+        "value": 1280,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_NodeBases": {
+        "value": 120,
+        "comment": "CUtlVector<FeNodeBase_t>"
+      },
+      "m_NodeCollisionRadii": {
+        "value": 600,
+        "comment": "CUtlVector<float>"
+      },
+      "m_NodeIntegrator": {
+        "value": 480,
+        "comment": "CUtlVector<FeNodeIntegrator_t>"
+      },
+      "m_NodeInvMasses": {
+        "value": 360,
+        "comment": "CUtlVector<float>"
+      },
+      "m_Quads": {
+        "value": 168,
+        "comment": "CUtlVector<FeQuad_t>"
+      },
+      "m_ReverseOffsets": {
+        "value": 936,
+        "comment": "CUtlVector<FeNodeReverseOffset_t>"
+      },
+      "m_RigidColliderPriorities": {
+        "value": 1232,
+        "comment": "CUtlVector<FeRigidColliderIndices_t>"
+      },
+      "m_Rods": {
+        "value": 288,
+        "comment": "CUtlVector<FeRodConstraint_t>"
+      },
+      "m_Ropes": {
+        "value": 96,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_SimdAnimStrayRadii": {
+        "value": 984,
+        "comment": "CUtlVector<FeSimdAnimStrayRadius_t>"
+      },
+      "m_SimdNodeBases": {
+        "value": 144,
+        "comment": "CUtlVector<FeSimdNodeBase_t>"
+      },
+      "m_SimdQuads": {
+        "value": 192,
+        "comment": "CUtlVector<FeSimdQuad_t>"
+      },
+      "m_SimdRods": {
+        "value": 240,
+        "comment": "CUtlVector<FeSimdRodConstraint_t>"
+      },
+      "m_SimdSpringIntegrator": {
+        "value": 528,
+        "comment": "CUtlVector<FeSimdSpringIntegrator_t>"
+      },
+      "m_SimdTris": {
+        "value": 216,
+        "comment": "CUtlVector<FeSimdTri_t>"
+      },
+      "m_SourceElems": {
+        "value": 1080,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_SphereRigids": {
+        "value": 744,
+        "comment": "CUtlVector<FeSphereRigid_t>"
+      },
+      "m_SpringIntegrator": {
+        "value": 504,
+        "comment": "CUtlVector<FeSpringIntegrator_t>"
+      },
+      "m_TaperedCapsuleRigids": {
+        "value": 720,
+        "comment": "CUtlVector<FeTaperedCapsuleRigid_t>"
+      },
+      "m_TaperedCapsuleStretches": {
+        "value": 696,
+        "comment": "CUtlVector<FeTaperedCapsuleStretch_t>"
+      },
+      "m_TreeChildren": {
+        "value": 840,
+        "comment": "CUtlVector<FeTreeChildren_t>"
+      },
+      "m_TreeCollisionMasks": {
+        "value": 816,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_TreeParents": {
+        "value": 792,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_Tris": {
+        "value": 1128,
+        "comment": "CUtlVector<FeTri_t>"
+      },
+      "m_Twists": {
+        "value": 312,
+        "comment": "CUtlVector<FeTwistConstraint_t>"
+      },
+      "m_VertexMapValues": {
+        "value": 1328,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_VertexMaps": {
+        "value": 1304,
+        "comment": "CUtlVector<FeVertexMapDesc_t>"
+      },
+      "m_VertexSetNames": {
+        "value": 1208,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_WorldCollisionNodes": {
+        "value": 768,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_WorldCollisionParams": {
+        "value": 552,
+        "comment": "CUtlVector<FeWorldCollisionParams_t>"
+      },
+      "m_flAddWorldCollisionRadius": {
+        "value": 1500,
+        "comment": "float"
+      },
+      "m_flDefaultExpAirDrag": {
+        "value": 1480,
+        "comment": "float"
+      },
+      "m_flDefaultExpQuadAirDrag": {
+        "value": 1488,
+        "comment": "float"
+      },
+      "m_flDefaultGravityScale": {
+        "value": 1472,
+        "comment": "float"
+      },
+      "m_flDefaultSurfaceStretch": {
+        "value": 1464,
+        "comment": "float"
+      },
+      "m_flDefaultThreadStretch": {
+        "value": 1468,
+        "comment": "float"
+      },
+      "m_flDefaultTimeDilation": {
+        "value": 1452,
+        "comment": "float"
+      },
+      "m_flDefaultVelAirDrag": {
+        "value": 1476,
+        "comment": "float"
+      },
+      "m_flDefaultVelQuadAirDrag": {
+        "value": 1484,
+        "comment": "float"
+      },
+      "m_flDefaultVolumetricSolveAmount": {
+        "value": 1504,
+        "comment": "float"
+      },
+      "m_flInternalPressure": {
+        "value": 1448,
+        "comment": "float"
+      },
+      "m_flLocalForce": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_flLocalRotation": {
+        "value": 60,
+        "comment": "float"
+      },
+      "m_flQuadVelocitySmoothRate": {
+        "value": 1496,
+        "comment": "float"
+      },
+      "m_flRodVelocitySmoothRate": {
+        "value": 1492,
+        "comment": "float"
+      },
+      "m_flWindDrag": {
+        "value": 1460,
+        "comment": "float"
+      },
+      "m_flWindage": {
+        "value": 1456,
+        "comment": "float"
+      },
+      "m_nDynamicNodeFlags": {
+        "value": 52,
+        "comment": "uint32_t"
+      },
+      "m_nExtraGoalIterations": {
+        "value": 1158,
+        "comment": "uint8_t"
+      },
+      "m_nExtraIterations": {
+        "value": 1159,
+        "comment": "uint8_t"
+      },
+      "m_nExtraPressureIterations": {
+        "value": 1157,
+        "comment": "uint8_t"
+      },
+      "m_nFirstPositionDrivenNode": {
+        "value": 70,
+        "comment": "uint16_t"
+      },
+      "m_nNodeBaseJiggleboneDependsCount": {
+        "value": 86,
+        "comment": "uint16_t"
+      },
+      "m_nNodeCount": {
+        "value": 64,
+        "comment": "uint16_t"
+      },
+      "m_nQuadCount1": {
+        "value": 80,
+        "comment": "uint16_t"
+      },
+      "m_nQuadCount2": {
+        "value": 82,
+        "comment": "uint16_t"
+      },
+      "m_nQuadVelocitySmoothIterations": {
+        "value": 1510,
+        "comment": "uint16_t"
+      },
+      "m_nReservedUint8": {
+        "value": 1156,
+        "comment": "uint8_t"
+      },
+      "m_nRodVelocitySmoothIterations": {
+        "value": 1508,
+        "comment": "uint16_t"
+      },
+      "m_nRopeCount": {
+        "value": 88,
+        "comment": "uint16_t"
+      },
+      "m_nRotLockStaticNodes": {
+        "value": 68,
+        "comment": "uint16_t"
+      },
+      "m_nSimdQuadCount1": {
+        "value": 76,
+        "comment": "uint16_t"
+      },
+      "m_nSimdQuadCount2": {
+        "value": 78,
+        "comment": "uint16_t"
+      },
+      "m_nSimdTriCount1": {
+        "value": 72,
+        "comment": "uint16_t"
+      },
+      "m_nSimdTriCount2": {
+        "value": 74,
+        "comment": "uint16_t"
+      },
+      "m_nStaticNodeFlags": {
+        "value": 48,
+        "comment": "uint32_t"
+      },
+      "m_nStaticNodes": {
+        "value": 66,
+        "comment": "uint16_t"
+      },
+      "m_nTreeDepth": {
+        "value": 84,
+        "comment": "uint16_t"
+      },
+      "m_nTriCount1": {
+        "value": 1152,
+        "comment": "uint16_t"
+      },
+      "m_nTriCount2": {
+        "value": 1154,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "RnBlendVertex_t": {
-    "m_nFlags": 12,
-    "m_nIndex0": 2,
-    "m_nIndex1": 6,
-    "m_nIndex2": 10,
-    "m_nTargetIndex": 14,
-    "m_nWeight0": 0,
-    "m_nWeight1": 4,
-    "m_nWeight2": 8
+    "data": {
+      "m_nFlags": {
+        "value": 12,
+        "comment": "uint16_t"
+      },
+      "m_nIndex0": {
+        "value": 2,
+        "comment": "uint16_t"
+      },
+      "m_nIndex1": {
+        "value": 6,
+        "comment": "uint16_t"
+      },
+      "m_nIndex2": {
+        "value": 10,
+        "comment": "uint16_t"
+      },
+      "m_nTargetIndex": {
+        "value": 14,
+        "comment": "uint16_t"
+      },
+      "m_nWeight0": {
+        "value": 0,
+        "comment": "uint16_t"
+      },
+      "m_nWeight1": {
+        "value": 4,
+        "comment": "uint16_t"
+      },
+      "m_nWeight2": {
+        "value": 8,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "RnBodyDesc_t": {
-    "m_LocalInertiaInv": 72,
-    "m_bBuoyancyDragEnabled": 199,
-    "m_bDragEnabled": 198,
-    "m_bEnabled": 195,
-    "m_bGravityDisabled": 200,
-    "m_bHasShadowController": 202,
-    "m_bIsContinuousEnabled": 197,
-    "m_bSleeping": 196,
-    "m_bSpeculativeEnabled": 201,
-    "m_flAngularBuoyancyDrag": 140,
-    "m_flAngularDamping": 124,
-    "m_flAngularDrag": 132,
-    "m_flBuoyancyFactor": 168,
-    "m_flGameMass": 112,
-    "m_flGravityScale": 172,
-    "m_flInertiaScaleInv": 116,
-    "m_flLinearBuoyancyDrag": 136,
-    "m_flLinearDamping": 120,
-    "m_flLinearDrag": 128,
-    "m_flMassInv": 108,
-    "m_flTimeScale": 176,
-    "m_nBodyType": 180,
-    "m_nGameFlags": 188,
-    "m_nGameIndex": 184,
-    "m_nMassPriority": 194,
-    "m_nMinPositionIterations": 193,
-    "m_nMinVelocityIterations": 192,
-    "m_qOrientation": 20,
-    "m_sDebugName": 0,
-    "m_vAngularVelocity": 48,
-    "m_vLastAwakeForceAccum": 144,
-    "m_vLastAwakeTorqueAccum": 156,
-    "m_vLinearVelocity": 36,
-    "m_vLocalMassCenter": 60,
-    "m_vPosition": 8
+    "data": {
+      "m_LocalInertiaInv": {
+        "value": 72,
+        "comment": "Vector[3]"
+      },
+      "m_bBuoyancyDragEnabled": {
+        "value": 199,
+        "comment": "bool"
+      },
+      "m_bDragEnabled": {
+        "value": 198,
+        "comment": "bool"
+      },
+      "m_bEnabled": {
+        "value": 195,
+        "comment": "bool"
+      },
+      "m_bGravityDisabled": {
+        "value": 200,
+        "comment": "bool"
+      },
+      "m_bHasShadowController": {
+        "value": 202,
+        "comment": "bool"
+      },
+      "m_bIsContinuousEnabled": {
+        "value": 197,
+        "comment": "bool"
+      },
+      "m_bSleeping": {
+        "value": 196,
+        "comment": "bool"
+      },
+      "m_bSpeculativeEnabled": {
+        "value": 201,
+        "comment": "bool"
+      },
+      "m_flAngularBuoyancyDrag": {
+        "value": 140,
+        "comment": "float"
+      },
+      "m_flAngularDamping": {
+        "value": 124,
+        "comment": "float"
+      },
+      "m_flAngularDrag": {
+        "value": 132,
+        "comment": "float"
+      },
+      "m_flBuoyancyFactor": {
+        "value": 168,
+        "comment": "float"
+      },
+      "m_flGameMass": {
+        "value": 112,
+        "comment": "float"
+      },
+      "m_flGravityScale": {
+        "value": 172,
+        "comment": "float"
+      },
+      "m_flInertiaScaleInv": {
+        "value": 116,
+        "comment": "float"
+      },
+      "m_flLinearBuoyancyDrag": {
+        "value": 136,
+        "comment": "float"
+      },
+      "m_flLinearDamping": {
+        "value": 120,
+        "comment": "float"
+      },
+      "m_flLinearDrag": {
+        "value": 128,
+        "comment": "float"
+      },
+      "m_flMassInv": {
+        "value": 108,
+        "comment": "float"
+      },
+      "m_flTimeScale": {
+        "value": 176,
+        "comment": "float"
+      },
+      "m_nBodyType": {
+        "value": 180,
+        "comment": "int32_t"
+      },
+      "m_nGameFlags": {
+        "value": 188,
+        "comment": "uint32_t"
+      },
+      "m_nGameIndex": {
+        "value": 184,
+        "comment": "uint32_t"
+      },
+      "m_nMassPriority": {
+        "value": 194,
+        "comment": "int8_t"
+      },
+      "m_nMinPositionIterations": {
+        "value": 193,
+        "comment": "int8_t"
+      },
+      "m_nMinVelocityIterations": {
+        "value": 192,
+        "comment": "int8_t"
+      },
+      "m_qOrientation": {
+        "value": 20,
+        "comment": "QuaternionStorage"
+      },
+      "m_sDebugName": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_vAngularVelocity": {
+        "value": 48,
+        "comment": "Vector"
+      },
+      "m_vLastAwakeForceAccum": {
+        "value": 144,
+        "comment": "Vector"
+      },
+      "m_vLastAwakeTorqueAccum": {
+        "value": 156,
+        "comment": "Vector"
+      },
+      "m_vLinearVelocity": {
+        "value": 36,
+        "comment": "Vector"
+      },
+      "m_vLocalMassCenter": {
+        "value": 60,
+        "comment": "Vector"
+      },
+      "m_vPosition": {
+        "value": 8,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "RnCapsuleDesc_t": {
-    "m_Capsule": 16
+    "data": {
+      "m_Capsule": {
+        "value": 16,
+        "comment": "RnCapsule_t"
+      }
+    },
+    "comment": "RnShapeDesc_t"
   },
   "RnCapsule_t": {
-    "m_flRadius": 24,
-    "m_vCenter": 0
+    "data": {
+      "m_flRadius": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_vCenter": {
+        "value": 0,
+        "comment": "Vector[2]"
+      }
+    },
+    "comment": null
   },
   "RnFace_t": {
-    "m_nEdge": 0
+    "data": {
+      "m_nEdge": {
+        "value": 0,
+        "comment": "uint8_t"
+      }
+    },
+    "comment": null
   },
   "RnHalfEdge_t": {
-    "m_nFace": 3,
-    "m_nNext": 0,
-    "m_nOrigin": 2,
-    "m_nTwin": 1
+    "data": {
+      "m_nFace": {
+        "value": 3,
+        "comment": "uint8_t"
+      },
+      "m_nNext": {
+        "value": 0,
+        "comment": "uint8_t"
+      },
+      "m_nOrigin": {
+        "value": 2,
+        "comment": "uint8_t"
+      },
+      "m_nTwin": {
+        "value": 1,
+        "comment": "uint8_t"
+      }
+    },
+    "comment": null
   },
   "RnHullDesc_t": {
-    "m_Hull": 16
+    "data": {
+      "m_Hull": {
+        "value": 16,
+        "comment": "RnHull_t"
+      }
+    },
+    "comment": "RnShapeDesc_t"
   },
   "RnHull_t": {
-    "m_Bounds": 16,
-    "m_Edges": 128,
-    "m_Faces": 152,
-    "m_MassProperties": 52,
-    "m_Planes": 176,
-    "m_Vertices": 104,
-    "m_flMaxAngularRadius": 12,
-    "m_flVolume": 100,
-    "m_nFlags": 200,
-    "m_pRegionSVM": 208,
-    "m_vCentroid": 0,
-    "m_vOrthographicAreas": 40
+    "data": {
+      "m_Bounds": {
+        "value": 16,
+        "comment": "AABB_t"
+      },
+      "m_Edges": {
+        "value": 128,
+        "comment": "CUtlVector<RnHalfEdge_t>"
+      },
+      "m_Faces": {
+        "value": 152,
+        "comment": "CUtlVector<RnFace_t>"
+      },
+      "m_MassProperties": {
+        "value": 52,
+        "comment": "matrix3x4_t"
+      },
+      "m_Planes": {
+        "value": 176,
+        "comment": "CUtlVector<RnPlane_t>"
+      },
+      "m_Vertices": {
+        "value": 104,
+        "comment": "CUtlVector<Vector>"
+      },
+      "m_flMaxAngularRadius": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flVolume": {
+        "value": 100,
+        "comment": "float"
+      },
+      "m_nFlags": {
+        "value": 200,
+        "comment": "uint32_t"
+      },
+      "m_pRegionSVM": {
+        "value": 208,
+        "comment": "CRegionSVM*"
+      },
+      "m_vCentroid": {
+        "value": 0,
+        "comment": "Vector"
+      },
+      "m_vOrthographicAreas": {
+        "value": 40,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "RnMeshDesc_t": {
-    "m_Mesh": 16
+    "data": {
+      "m_Mesh": {
+        "value": 16,
+        "comment": "RnMesh_t"
+      }
+    },
+    "comment": "RnShapeDesc_t"
   },
   "RnMesh_t": {
-    "m_Materials": 120,
-    "m_Nodes": 24,
-    "m_Triangles": 72,
-    "m_Vertices": 48,
-    "m_Wings": 96,
-    "m_nDebugFlags": 160,
-    "m_nFlags": 156,
-    "m_vMax": 12,
-    "m_vMin": 0,
-    "m_vOrthographicAreas": 144
+    "data": {
+      "m_Materials": {
+        "value": 120,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_Nodes": {
+        "value": 24,
+        "comment": "CUtlVector<RnNode_t>"
+      },
+      "m_Triangles": {
+        "value": 72,
+        "comment": "CUtlVector<RnTriangle_t>"
+      },
+      "m_Vertices": {
+        "value": 48,
+        "comment": "CUtlVectorSIMDPaddedVector"
+      },
+      "m_Wings": {
+        "value": 96,
+        "comment": "CUtlVector<RnWing_t>"
+      },
+      "m_nDebugFlags": {
+        "value": 160,
+        "comment": "uint32_t"
+      },
+      "m_nFlags": {
+        "value": 156,
+        "comment": "uint32_t"
+      },
+      "m_vMax": {
+        "value": 12,
+        "comment": "Vector"
+      },
+      "m_vMin": {
+        "value": 0,
+        "comment": "Vector"
+      },
+      "m_vOrthographicAreas": {
+        "value": 144,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "RnNode_t": {
-    "m_nChildren": 12,
-    "m_nTriangleOffset": 28,
-    "m_vMax": 16,
-    "m_vMin": 0
+    "data": {
+      "m_nChildren": {
+        "value": 12,
+        "comment": "uint32_t"
+      },
+      "m_nTriangleOffset": {
+        "value": 28,
+        "comment": "uint32_t"
+      },
+      "m_vMax": {
+        "value": 16,
+        "comment": "Vector"
+      },
+      "m_vMin": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "RnPlane_t": {
-    "m_flOffset": 12,
-    "m_vNormal": 0
+    "data": {
+      "m_flOffset": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_vNormal": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "RnShapeDesc_t": {
-    "m_UserFriendlyName": 8,
-    "m_nCollisionAttributeIndex": 0,
-    "m_nSurfacePropertyIndex": 4
+    "data": {
+      "m_UserFriendlyName": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_nCollisionAttributeIndex": {
+        "value": 0,
+        "comment": "uint32_t"
+      },
+      "m_nSurfacePropertyIndex": {
+        "value": 4,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
   },
   "RnSoftbodyCapsule_t": {
-    "m_flRadius": 24,
-    "m_nParticle": 28,
-    "m_vCenter": 0
+    "data": {
+      "m_flRadius": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_nParticle": {
+        "value": 28,
+        "comment": "uint16_t[2]"
+      },
+      "m_vCenter": {
+        "value": 0,
+        "comment": "Vector[2]"
+      }
+    },
+    "comment": null
   },
   "RnSoftbodyParticle_t": {
-    "m_flMassInv": 0
+    "data": {
+      "m_flMassInv": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "RnSoftbodySpring_t": {
-    "m_flLength": 4,
-    "m_nParticle": 0
+    "data": {
+      "m_flLength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_nParticle": {
+        "value": 0,
+        "comment": "uint16_t[2]"
+      }
+    },
+    "comment": null
   },
   "RnSphereDesc_t": {
-    "m_Sphere": 16
+    "data": {
+      "m_Sphere": {
+        "value": 16,
+        "comment": "RnSphere_t"
+      }
+    },
+    "comment": "RnShapeDesc_t"
   },
   "RnSphere_t": {
-    "m_flRadius": 12,
-    "m_vCenter": 0
+    "data": {
+      "m_flRadius": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_vCenter": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "RnTriangle_t": {
-    "m_nIndex": 0
+    "data": {
+      "m_nIndex": {
+        "value": 0,
+        "comment": "int32_t[3]"
+      }
+    },
+    "comment": null
   },
   "RnWing_t": {
-    "m_nIndex": 0
+    "data": {
+      "m_nIndex": {
+        "value": 0,
+        "comment": "int32_t[3]"
+      }
+    },
+    "comment": null
   },
   "VertexPositionColor_t": {
-    "m_vPosition": 0
+    "data": {
+      "m_vPosition": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "VertexPositionNormal_t": {
-    "m_vNormal": 12,
-    "m_vPosition": 0
+    "data": {
+      "m_vNormal": {
+        "value": 12,
+        "comment": "Vector"
+      },
+      "m_vPosition": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "constraint_axislimit_t": {
-    "flMaxRotation": 4,
-    "flMinRotation": 0,
-    "flMotorMaxTorque": 12,
-    "flMotorTargetAngSpeed": 8
+    "data": {
+      "flMaxRotation": {
+        "value": 4,
+        "comment": "float"
+      },
+      "flMinRotation": {
+        "value": 0,
+        "comment": "float"
+      },
+      "flMotorMaxTorque": {
+        "value": 12,
+        "comment": "float"
+      },
+      "flMotorTargetAngSpeed": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "constraint_breakableparams_t": {
-    "bodyMassScale": 12,
-    "forceLimit": 4,
-    "isActive": 20,
-    "strength": 0,
-    "torqueLimit": 8
+    "data": {
+      "bodyMassScale": {
+        "value": 12,
+        "comment": "float[2]"
+      },
+      "forceLimit": {
+        "value": 4,
+        "comment": "float"
+      },
+      "isActive": {
+        "value": 20,
+        "comment": "bool"
+      },
+      "strength": {
+        "value": 0,
+        "comment": "float"
+      },
+      "torqueLimit": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "constraint_hingeparams_t": {
-    "constraint": 40,
-    "hingeAxis": 24,
-    "worldAxisDirection": 12,
-    "worldPosition": 0
+    "data": {
+      "constraint": {
+        "value": 40,
+        "comment": "constraint_breakableparams_t"
+      },
+      "hingeAxis": {
+        "value": 24,
+        "comment": "constraint_axislimit_t"
+      },
+      "worldAxisDirection": {
+        "value": 12,
+        "comment": "Vector"
+      },
+      "worldPosition": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "vphysics_save_cphysicsbody_t": {
-    "m_nOldPointer": 208
+    "data": {
+      "m_nOldPointer": {
+        "value": 208,
+        "comment": "uint64_t"
+      }
+    },
+    "comment": "RnBodyDesc_t"
   }
 }

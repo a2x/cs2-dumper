@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.839574800 UTC
+2023-10-18 10:31:50.283793800 UTC
 '''
 
 class CFeIndexedJiggleBone:
@@ -109,15 +109,15 @@ class FeBoxRigid_t:
     nVertexMapIndex = 0x30 # uint16_t
     nFlags = 0x32 # uint16_t
 
-class FeBuildBoxRigid_t:
+class FeBuildBoxRigid_t: # FeBoxRigid_t
     m_nPriority = 0x40 # int32_t
     m_nVertexMapHash = 0x44 # uint32_t
 
-class FeBuildSphereRigid_t:
+class FeBuildSphereRigid_t: # FeSphereRigid_t
     m_nPriority = 0x20 # int32_t
     m_nVertexMapHash = 0x24 # uint32_t
 
-class FeBuildTaperedCapsuleRigid_t:
+class FeBuildTaperedCapsuleRigid_t: # FeTaperedCapsuleRigid_t
     m_nPriority = 0x30 # int32_t
     m_nVertexMapHash = 0x34 # uint32_t
 
@@ -378,6 +378,8 @@ class FourVectors2D:
     x = 0x0 # fltx4
     y = 0x10 # fltx4
 
+class IPhysicsPlayerController:
+
 class OldFeEdge_t:
     m_flK = 0x0 # float[3]
     invA = 0xC # float
@@ -539,7 +541,7 @@ class RnBodyDesc_t:
     m_bSpeculativeEnabled = 0xC9 # bool
     m_bHasShadowController = 0xCA # bool
 
-class RnCapsuleDesc_t:
+class RnCapsuleDesc_t: # RnShapeDesc_t
     m_Capsule = 0x10 # RnCapsule_t
 
 class RnCapsule_t:
@@ -555,7 +557,7 @@ class RnHalfEdge_t:
     m_nOrigin = 0x2 # uint8_t
     m_nFace = 0x3 # uint8_t
 
-class RnHullDesc_t:
+class RnHullDesc_t: # RnShapeDesc_t
     m_Hull = 0x10 # RnHull_t
 
 class RnHull_t:
@@ -572,7 +574,7 @@ class RnHull_t:
     m_nFlags = 0xC8 # uint32_t
     m_pRegionSVM = 0xD0 # CRegionSVM*
 
-class RnMeshDesc_t:
+class RnMeshDesc_t: # RnShapeDesc_t
     m_Mesh = 0x10 # RnMesh_t
 
 class RnMesh_t:
@@ -614,7 +616,7 @@ class RnSoftbodySpring_t:
     m_nParticle = 0x0 # uint16_t[2]
     m_flLength = 0x4 # float
 
-class RnSphereDesc_t:
+class RnSphereDesc_t: # RnShapeDesc_t
     m_Sphere = 0x10 # RnSphere_t
 
 class RnSphere_t:
@@ -653,5 +655,5 @@ class constraint_hingeparams_t:
     hingeAxis = 0x18 # constraint_axislimit_t
     constraint = 0x28 # constraint_breakableparams_t
 
-class vphysics_save_cphysicsbody_t:
+class vphysics_save_cphysicsbody_t: # RnBodyDesc_t
     m_nOldPointer = 0xD0 # uint64_t

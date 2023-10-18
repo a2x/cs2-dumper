@@ -1,147 +1,582 @@
 {
+  "CEmptyEntityInstance": {
+    "data": {},
+    "comment": null
+  },
+  "CEntityComponent": {
+    "data": {},
+    "comment": null
+  },
   "CEntityComponentHelper": {
-    "m_flags": 8,
-    "m_nPriority": 24,
-    "m_pInfo": 16,
-    "m_pNext": 32
+    "data": {
+      "m_flags": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "m_nPriority": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_pInfo": {
+        "value": 16,
+        "comment": "EntComponentInfo_t*"
+      },
+      "m_pNext": {
+        "value": 32,
+        "comment": "CEntityComponentHelper*"
+      }
+    },
+    "comment": null
   },
   "CEntityIOOutput": {
-    "m_Value": 24
+    "data": {
+      "m_Value": {
+        "value": 24,
+        "comment": "CVariantBase<CVariantDefaultAllocator>"
+      }
+    },
+    "comment": null
   },
   "CEntityIdentity": {
-    "m_PathIndex": 64,
-    "m_designerName": 32,
-    "m_fDataObjectTypes": 60,
-    "m_flags": 48,
-    "m_name": 24,
-    "m_nameStringableIndex": 20,
-    "m_pNext": 96,
-    "m_pNextByClass": 112,
-    "m_pPrev": 88,
-    "m_pPrevByClass": 104,
-    "m_worldGroupId": 56
+    "data": {
+      "m_PathIndex": {
+        "value": 64,
+        "comment": "ChangeAccessorFieldPathIndex_t"
+      },
+      "m_designerName": {
+        "value": 32,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_fDataObjectTypes": {
+        "value": 60,
+        "comment": "uint32_t"
+      },
+      "m_flags": {
+        "value": 48,
+        "comment": "uint32_t"
+      },
+      "m_name": {
+        "value": 24,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_nameStringableIndex": {
+        "value": 20,
+        "comment": "int32_t"
+      },
+      "m_pNext": {
+        "value": 96,
+        "comment": "CEntityIdentity*"
+      },
+      "m_pNextByClass": {
+        "value": 112,
+        "comment": "CEntityIdentity*"
+      },
+      "m_pPrev": {
+        "value": 88,
+        "comment": "CEntityIdentity*"
+      },
+      "m_pPrevByClass": {
+        "value": 104,
+        "comment": "CEntityIdentity*"
+      },
+      "m_worldGroupId": {
+        "value": 56,
+        "comment": "WorldGroupId_t"
+      }
+    },
+    "comment": null
   },
   "CEntityInstance": {
-    "m_CScriptComponent": 40,
-    "m_iszPrivateVScripts": 8,
-    "m_pEntity": 16
+    "data": {
+      "m_CScriptComponent": {
+        "value": 40,
+        "comment": "CScriptComponent*"
+      },
+      "m_iszPrivateVScripts": {
+        "value": 8,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_pEntity": {
+        "value": 16,
+        "comment": "CEntityIdentity*"
+      }
+    },
+    "comment": null
   },
   "CNetworkVarChainer": {
-    "m_PathIndex": 32
+    "data": {
+      "m_PathIndex": {
+        "value": 32,
+        "comment": "ChangeAccessorFieldPathIndex_t"
+      }
+    },
+    "comment": null
   },
   "CScriptComponent": {
-    "m_scriptClassName": 48
+    "data": {
+      "m_scriptClassName": {
+        "value": 48,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": "CEntityComponent"
+  },
+  "CVariantDefaultAllocator": {
+    "data": {},
+    "comment": null
   },
   "EngineLoopState_t": {
-    "m_nPlatWindowHeight": 28,
-    "m_nPlatWindowWidth": 24,
-    "m_nRenderHeight": 36,
-    "m_nRenderWidth": 32
+    "data": {
+      "m_nPlatWindowHeight": {
+        "value": 28,
+        "comment": "int32_t"
+      },
+      "m_nPlatWindowWidth": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_nRenderHeight": {
+        "value": 36,
+        "comment": "int32_t"
+      },
+      "m_nRenderWidth": {
+        "value": 32,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "EntComponentInfo_t": {
-    "m_nFlags": 36,
-    "m_nRuntimeIndex": 32,
-    "m_pBaseClassComponentHelper": 96,
-    "m_pCPPClassname": 8,
-    "m_pName": 0,
-    "m_pNetworkDataReferencedDescription": 16,
-    "m_pNetworkDataReferencedPtrPropDescription": 24
+    "data": {
+      "m_nFlags": {
+        "value": 36,
+        "comment": "uint32_t"
+      },
+      "m_nRuntimeIndex": {
+        "value": 32,
+        "comment": "int32_t"
+      },
+      "m_pBaseClassComponentHelper": {
+        "value": 96,
+        "comment": "CEntityComponentHelper*"
+      },
+      "m_pCPPClassname": {
+        "value": 8,
+        "comment": "char*"
+      },
+      "m_pName": {
+        "value": 0,
+        "comment": "char*"
+      },
+      "m_pNetworkDataReferencedDescription": {
+        "value": 16,
+        "comment": "char*"
+      },
+      "m_pNetworkDataReferencedPtrPropDescription": {
+        "value": 24,
+        "comment": "char*"
+      }
+    },
+    "comment": null
+  },
+  "EntInput_t": {
+    "data": {},
+    "comment": null
+  },
+  "EntOutput_t": {
+    "data": {},
+    "comment": null
   },
   "EventAdvanceTick_t": {
-    "m_nCurrentTick": 48,
-    "m_nCurrentTickThisFrame": 52,
-    "m_nTotalTicks": 60,
-    "m_nTotalTicksThisFrame": 56
+    "data": {
+      "m_nCurrentTick": {
+        "value": 48,
+        "comment": "int32_t"
+      },
+      "m_nCurrentTickThisFrame": {
+        "value": 52,
+        "comment": "int32_t"
+      },
+      "m_nTotalTicks": {
+        "value": 60,
+        "comment": "int32_t"
+      },
+      "m_nTotalTicksThisFrame": {
+        "value": 56,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "EventSimulate_t"
   },
   "EventAppShutdown_t": {
-    "m_nDummy0": 0
+    "data": {
+      "m_nDummy0": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "EventClientAdvanceTick_t": {
+    "data": {},
+    "comment": "EventAdvanceTick_t"
   },
   "EventClientFrameSimulate_t": {
-    "m_LoopState": 0,
-    "m_flFrameTime": 44,
-    "m_flRealTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_flFrameTime": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flRealTime": {
+        "value": 40,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "EventClientOutput_t": {
-    "m_LoopState": 0,
-    "m_bRenderOnly": 52,
-    "m_flRealTime": 44,
-    "m_flRenderFrameTimeUnbounded": 48,
-    "m_flRenderTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_bRenderOnly": {
+        "value": 52,
+        "comment": "bool"
+      },
+      "m_flRealTime": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flRenderFrameTimeUnbounded": {
+        "value": 48,
+        "comment": "float"
+      },
+      "m_flRenderTime": {
+        "value": 40,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "EventClientPauseSimulate_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
   },
   "EventClientPollInput_t": {
-    "m_LoopState": 0,
-    "m_flRealTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_flRealTime": {
+        "value": 40,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "EventClientPollNetworking_t": {
-    "m_nTickCount": 0
+    "data": {
+      "m_nTickCount": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "EventClientPostAdvanceTick_t": {
+    "data": {},
+    "comment": "EventPostAdvanceTick_t"
   },
   "EventClientPostOutput_t": {
-    "m_LoopState": 0,
-    "m_bRenderOnly": 56,
-    "m_flRenderFrameTime": 48,
-    "m_flRenderFrameTimeUnbounded": 52,
-    "m_flRenderTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_bRenderOnly": {
+        "value": 56,
+        "comment": "bool"
+      },
+      "m_flRenderFrameTime": {
+        "value": 48,
+        "comment": "float"
+      },
+      "m_flRenderFrameTimeUnbounded": {
+        "value": 52,
+        "comment": "float"
+      },
+      "m_flRenderTime": {
+        "value": 40,
+        "comment": "double"
+      }
+    },
+    "comment": null
+  },
+  "EventClientPostSimulate_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
   },
   "EventClientPreOutput_t": {
-    "m_LoopState": 0,
-    "m_bRenderOnly": 68,
-    "m_flRealTime": 64,
-    "m_flRenderFrameTime": 48,
-    "m_flRenderFrameTimeUnbounded": 56,
-    "m_flRenderTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_bRenderOnly": {
+        "value": 68,
+        "comment": "bool"
+      },
+      "m_flRealTime": {
+        "value": 64,
+        "comment": "float"
+      },
+      "m_flRenderFrameTime": {
+        "value": 48,
+        "comment": "double"
+      },
+      "m_flRenderFrameTimeUnbounded": {
+        "value": 56,
+        "comment": "double"
+      },
+      "m_flRenderTime": {
+        "value": 40,
+        "comment": "double"
+      }
+    },
+    "comment": null
+  },
+  "EventClientPreSimulate_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
+  },
+  "EventClientPredictionPostNetupdate_t": {
+    "data": {},
+    "comment": null
   },
   "EventClientProcessGameInput_t": {
-    "m_LoopState": 0,
-    "m_flFrameTime": 44,
-    "m_flRealTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_flFrameTime": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flRealTime": {
+        "value": 40,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "EventClientProcessInput_t": {
-    "m_LoopState": 0,
-    "m_flRealTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_flRealTime": {
+        "value": 40,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "EventClientProcessNetworking_t": {
+    "data": {},
+    "comment": null
   },
   "EventClientSceneSystemThreadStateChange_t": {
-    "m_bThreadsActive": 0
+    "data": {
+      "m_bThreadsActive": {
+        "value": 0,
+        "comment": "bool"
+      }
+    },
+    "comment": null
   },
   "EventClientSendInput_t": {
-    "m_bFinalClientCommandTick": 0,
-    "m_nAdditionalClientCommandsToCreate": 4
+    "data": {
+      "m_bFinalClientCommandTick": {
+        "value": 0,
+        "comment": "bool"
+      },
+      "m_nAdditionalClientCommandsToCreate": {
+        "value": 4,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "EventClientSimulate_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
   },
   "EventFrameBoundary_t": {
-    "m_flFrameTime": 0
+    "data": {
+      "m_flFrameTime": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "EventModInitialized_t": {
+    "data": {},
+    "comment": null
   },
   "EventPostAdvanceTick_t": {
-    "m_nCurrentTick": 48,
-    "m_nCurrentTickThisFrame": 52,
-    "m_nTotalTicks": 60,
-    "m_nTotalTicksThisFrame": 56
+    "data": {
+      "m_nCurrentTick": {
+        "value": 48,
+        "comment": "int32_t"
+      },
+      "m_nCurrentTickThisFrame": {
+        "value": 52,
+        "comment": "int32_t"
+      },
+      "m_nTotalTicks": {
+        "value": 60,
+        "comment": "int32_t"
+      },
+      "m_nTotalTicksThisFrame": {
+        "value": 56,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "EventSimulate_t"
   },
   "EventPostDataUpdate_t": {
-    "m_nCount": 0
+    "data": {
+      "m_nCount": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "EventPreDataUpdate_t": {
-    "m_nCount": 0
+    "data": {
+      "m_nCount": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "EventProfileStorageAvailable_t": {
-    "m_nSplitScreenSlot": 0
+    "data": {
+      "m_nSplitScreenSlot": {
+        "value": 0,
+        "comment": "CSplitScreenSlot"
+      }
+    },
+    "comment": null
+  },
+  "EventServerAdvanceTick_t": {
+    "data": {},
+    "comment": "EventAdvanceTick_t"
+  },
+  "EventServerPollNetworking_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
+  },
+  "EventServerPostAdvanceTick_t": {
+    "data": {},
+    "comment": "EventPostAdvanceTick_t"
+  },
+  "EventServerPostSimulate_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
+  },
+  "EventServerProcessNetworking_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
+  },
+  "EventServerSimulate_t": {
+    "data": {},
+    "comment": "EventSimulate_t"
   },
   "EventSetTime_t": {
-    "m_LoopState": 0,
-    "m_flRealTime": 48,
-    "m_flRenderFrameTime": 64,
-    "m_flRenderFrameTimeUnbounded": 72,
-    "m_flRenderFrameTimeUnscaled": 80,
-    "m_flRenderTime": 56,
-    "m_flTickRemainder": 88,
-    "m_nClientOutputFrames": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_flRealTime": {
+        "value": 48,
+        "comment": "double"
+      },
+      "m_flRenderFrameTime": {
+        "value": 64,
+        "comment": "double"
+      },
+      "m_flRenderFrameTimeUnbounded": {
+        "value": 72,
+        "comment": "double"
+      },
+      "m_flRenderFrameTimeUnscaled": {
+        "value": 80,
+        "comment": "double"
+      },
+      "m_flRenderTime": {
+        "value": 56,
+        "comment": "double"
+      },
+      "m_flTickRemainder": {
+        "value": 88,
+        "comment": "double"
+      },
+      "m_nClientOutputFrames": {
+        "value": 40,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "EventSimpleLoopFrameUpdate_t": {
-    "m_LoopState": 0,
-    "m_flFrameTime": 44,
-    "m_flRealTime": 40
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_flFrameTime": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flRealTime": {
+        "value": 40,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "EventSimulate_t": {
-    "m_LoopState": 0,
-    "m_bFirstTick": 40,
-    "m_bLastTick": 41
+    "data": {
+      "m_LoopState": {
+        "value": 0,
+        "comment": "EngineLoopState_t"
+      },
+      "m_bFirstTick": {
+        "value": 40,
+        "comment": "bool"
+      },
+      "m_bLastTick": {
+        "value": 41,
+        "comment": "bool"
+      }
+    },
+    "comment": null
+  },
+  "EventSplitScreenStateChanged_t": {
+    "data": {},
+    "comment": null
   }
 }

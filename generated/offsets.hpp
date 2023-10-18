@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:57.475622 UTC
+ * 2023-10-18 10:31:55.050247700 UTC
  */
 
 #pragma once
@@ -27,6 +27,9 @@ namespace ClientDll {
     constexpr std::ptrdiff_t dwViewAngles = 0x18E0DA0;
     constexpr std::ptrdiff_t dwViewMatrix = 0x1881D70;
     constexpr std::ptrdiff_t dwViewRender = 0x1882768;
+    constexpr std::ptrdiff_t dwGameEntitySystem_getBaseEntity = 0x5FFD50;
+    constexpr std::ptrdiff_t dwGameEntitySystem_getHighestEntityIndex = 0x5F1A40;
+    constexpr std::ptrdiff_t dwBaseEntityModel_setModel = 0x57C750;
 }
 
 namespace Engine2Dll {

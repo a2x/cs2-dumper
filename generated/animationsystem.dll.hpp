@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.716393300 UTC
+ * 2023-10-18 10:31:50.199375900 UTC
  */
 
 #pragma once
@@ -72,7 +72,7 @@ namespace AnimationSnapshotBase_t {
     constexpr std::ptrdiff_t m_DecodeDump = 0x98; // AnimationDecodeDebugDumpElement_t
 }
 
-namespace AnimationSnapshot_t {
+namespace AnimationSnapshot_t { // AnimationSnapshotBase_t
     constexpr std::ptrdiff_t m_nEntIndex = 0x110; // int32_t
     constexpr std::ptrdiff_t m_modelName = 0x118; // CUtlString
 }
@@ -95,29 +95,32 @@ namespace BoneDemoCaptureSettings_t {
     constexpr std::ptrdiff_t m_flChainLength = 0x8; // float
 }
 
-namespace CActionComponentUpdater {
+namespace CActionComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_actions = 0x30; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
 }
 
-namespace CAddUpdateNode {
+namespace CAddUpdateNode { // CBinaryUpdateNode
     constexpr std::ptrdiff_t m_footMotionTiming = 0x8C; // BinaryNodeChildOption
     constexpr std::ptrdiff_t m_bApplyToFootMotion = 0x90; // bool
     constexpr std::ptrdiff_t m_bApplyChannelsSeparately = 0x91; // bool
     constexpr std::ptrdiff_t m_bUseModelSpace = 0x92; // bool
 }
 
-namespace CAimConstraint {
+namespace CAimConstraint { // CBaseConstraint
     constexpr std::ptrdiff_t m_qAimOffset = 0x70; // Quaternion
     constexpr std::ptrdiff_t m_nUpType = 0x80; // uint32_t
 }
 
-namespace CAimMatrixUpdateNode {
+namespace CAimMatrixUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedSettings = 0x70; // AimMatrixOpFixedSettings_t
     constexpr std::ptrdiff_t m_target = 0x148; // AnimVectorSource
     constexpr std::ptrdiff_t m_paramIndex = 0x14C; // CAnimParamHandle
     constexpr std::ptrdiff_t m_hSequence = 0x150; // HSequence
     constexpr std::ptrdiff_t m_bResetChild = 0x154; // bool
     constexpr std::ptrdiff_t m_bLockWhenWaning = 0x155; // bool
+}
+
+namespace CAnimActionUpdater {
 }
 
 namespace CAnimActivity {
@@ -158,6 +161,9 @@ namespace CAnimComponentUpdater {
     constexpr std::ptrdiff_t m_id = 0x20; // AnimComponentID
     constexpr std::ptrdiff_t m_networkMode = 0x24; // AnimNodeNetworkMode
     constexpr std::ptrdiff_t m_bStartEnabled = 0x28; // bool
+}
+
+namespace CAnimCycle { // CCycleBase
 }
 
 namespace CAnimData {
@@ -297,8 +303,11 @@ namespace CAnimGraphModelBinding {
     constexpr std::ptrdiff_t m_pSharedData = 0x10; // CSmartPtr<CAnimUpdateSharedData>
 }
 
-namespace CAnimGraphNetworkSettings {
+namespace CAnimGraphNetworkSettings { // CAnimGraphSettingsGroup
     constexpr std::ptrdiff_t m_bNetworkingEnabled = 0x20; // bool
+}
+
+namespace CAnimGraphSettingsGroup {
 }
 
 namespace CAnimGraphSettingsManager {
@@ -387,7 +396,7 @@ namespace CAnimReplayFrame {
     constexpr std::ptrdiff_t m_timeStamp = 0x80; // float
 }
 
-namespace CAnimScriptComponentUpdater {
+namespace CAnimScriptComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_hScript = 0x30; // AnimScriptHandle
 }
 
@@ -461,18 +470,18 @@ namespace CAnimUserDifference {
     constexpr std::ptrdiff_t m_nType = 0x10; // int32_t
 }
 
-namespace CAnimationGraphVisualizerAxis {
+namespace CAnimationGraphVisualizerAxis { // CAnimationGraphVisualizerPrimitiveBase
     constexpr std::ptrdiff_t m_xWsTransform = 0x40; // CTransform
     constexpr std::ptrdiff_t m_flAxisSize = 0x60; // float
 }
 
-namespace CAnimationGraphVisualizerLine {
+namespace CAnimationGraphVisualizerLine { // CAnimationGraphVisualizerPrimitiveBase
     constexpr std::ptrdiff_t m_vWsPositionStart = 0x40; // VectorAligned
     constexpr std::ptrdiff_t m_vWsPositionEnd = 0x50; // VectorAligned
     constexpr std::ptrdiff_t m_Color = 0x60; // Color
 }
 
-namespace CAnimationGraphVisualizerPie {
+namespace CAnimationGraphVisualizerPie { // CAnimationGraphVisualizerPrimitiveBase
     constexpr std::ptrdiff_t m_vWsCenter = 0x40; // VectorAligned
     constexpr std::ptrdiff_t m_vWsStart = 0x50; // VectorAligned
     constexpr std::ptrdiff_t m_vWsEnd = 0x60; // VectorAligned
@@ -485,13 +494,13 @@ namespace CAnimationGraphVisualizerPrimitiveBase {
     constexpr std::ptrdiff_t m_nOwningAnimNodePathCount = 0x38; // int32_t
 }
 
-namespace CAnimationGraphVisualizerSphere {
+namespace CAnimationGraphVisualizerSphere { // CAnimationGraphVisualizerPrimitiveBase
     constexpr std::ptrdiff_t m_vWsPosition = 0x40; // VectorAligned
     constexpr std::ptrdiff_t m_flRadius = 0x50; // float
     constexpr std::ptrdiff_t m_Color = 0x54; // Color
 }
 
-namespace CAnimationGraphVisualizerText {
+namespace CAnimationGraphVisualizerText { // CAnimationGraphVisualizerPrimitiveBase
     constexpr std::ptrdiff_t m_vWsPosition = 0x40; // VectorAligned
     constexpr std::ptrdiff_t m_Color = 0x50; // Color
     constexpr std::ptrdiff_t m_Text = 0x58; // CUtlString
@@ -518,7 +527,7 @@ namespace CAttachment {
     constexpr std::ptrdiff_t m_bIgnoreRotation = 0x84; // bool
 }
 
-namespace CAudioAnimTag {
+namespace CAudioAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_clipName = 0x38; // CUtlString
     constexpr std::ptrdiff_t m_attachmentName = 0x40; // CUtlString
     constexpr std::ptrdiff_t m_flVolume = 0x48; // float
@@ -528,14 +537,14 @@ namespace CAudioAnimTag {
     constexpr std::ptrdiff_t m_bPlayOnClient = 0x4F; // bool
 }
 
-namespace CBaseConstraint {
+namespace CBaseConstraint { // CBoneConstraintBase
     constexpr std::ptrdiff_t m_name = 0x28; // CUtlString
     constexpr std::ptrdiff_t m_vUpVector = 0x30; // Vector
     constexpr std::ptrdiff_t m_slaves = 0x40; // CUtlVector<CConstraintSlave>
     constexpr std::ptrdiff_t m_targets = 0x58; // CUtlVector<CConstraintTarget>
 }
 
-namespace CBinaryUpdateNode {
+namespace CBinaryUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_pChild1 = 0x58; // CAnimUpdateNodeRef
     constexpr std::ptrdiff_t m_pChild2 = 0x68; // CAnimUpdateNodeRef
     constexpr std::ptrdiff_t m_timingBehavior = 0x78; // BinaryNodeTiming
@@ -544,7 +553,10 @@ namespace CBinaryUpdateNode {
     constexpr std::ptrdiff_t m_bResetChild2 = 0x81; // bool
 }
 
-namespace CBlend2DUpdateNode {
+namespace CBindPoseUpdateNode { // CLeafUpdateNode
+}
+
+namespace CBlend2DUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_items = 0x60; // CUtlVector<BlendItem_t>
     constexpr std::ptrdiff_t m_tags = 0x78; // CUtlVector<TagSpan_t>
     constexpr std::ptrdiff_t m_paramSpans = 0x90; // CParamSpanUpdater
@@ -567,7 +579,7 @@ namespace CBlendCurve {
     constexpr std::ptrdiff_t m_flControlPoint2 = 0x4; // float
 }
 
-namespace CBlendUpdateNode {
+namespace CBlendUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_children = 0x60; // CUtlVector<CAnimUpdateNodeRef>
     constexpr std::ptrdiff_t m_sortedOrder = 0x78; // CUtlVector<uint8_t>
     constexpr std::ptrdiff_t m_targetValues = 0x90; // CUtlVector<float>
@@ -581,7 +593,10 @@ namespace CBlendUpdateNode {
     constexpr std::ptrdiff_t m_bLockWhenWaning = 0xCF; // bool
 }
 
-namespace CBodyGroupAnimTag {
+namespace CBlockSelectionMetricEvaluator { // CMotionMetricEvaluator
+}
+
+namespace CBodyGroupAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_nPriority = 0x38; // int32_t
     constexpr std::ptrdiff_t m_bodyGroupSettings = 0x40; // CUtlVector<CBodyGroupSetting>
 }
@@ -591,14 +606,17 @@ namespace CBodyGroupSetting {
     constexpr std::ptrdiff_t m_nBodyGroupOption = 0x8; // int32_t
 }
 
-namespace CBoneConstraintDotToMorph {
+namespace CBoneConstraintBase {
+}
+
+namespace CBoneConstraintDotToMorph { // CBoneConstraintBase
     constexpr std::ptrdiff_t m_sBoneName = 0x28; // CUtlString
     constexpr std::ptrdiff_t m_sTargetBoneName = 0x30; // CUtlString
     constexpr std::ptrdiff_t m_sMorphChannelName = 0x38; // CUtlString
     constexpr std::ptrdiff_t m_flRemap = 0x40; // float[4]
 }
 
-namespace CBoneConstraintPoseSpaceBone {
+namespace CBoneConstraintPoseSpaceBone { // CBaseConstraint
     constexpr std::ptrdiff_t m_inputList = 0x70; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
 }
 
@@ -607,7 +625,7 @@ namespace CBoneConstraintPoseSpaceBone_Input_t {
     constexpr std::ptrdiff_t m_outputTransformList = 0x10; // CUtlVector<CTransform>
 }
 
-namespace CBoneConstraintPoseSpaceMorph {
+namespace CBoneConstraintPoseSpaceMorph { // CBoneConstraintBase
     constexpr std::ptrdiff_t m_sBoneName = 0x28; // CUtlString
     constexpr std::ptrdiff_t m_sAttachmentName = 0x30; // CUtlString
     constexpr std::ptrdiff_t m_outputMorph = 0x38; // CUtlVector<CUtlString>
@@ -620,7 +638,7 @@ namespace CBoneConstraintPoseSpaceMorph_Input_t {
     constexpr std::ptrdiff_t m_outputWeightList = 0x10; // CUtlVector<float>
 }
 
-namespace CBoneMaskUpdateNode {
+namespace CBoneMaskUpdateNode { // CBinaryUpdateNode
     constexpr std::ptrdiff_t m_nWeightListIndex = 0x8C; // int32_t
     constexpr std::ptrdiff_t m_flRootMotionBlend = 0x90; // float
     constexpr std::ptrdiff_t m_blendSpace = 0x94; // BoneMaskBlendSpace
@@ -630,19 +648,19 @@ namespace CBoneMaskUpdateNode {
     constexpr std::ptrdiff_t m_hBlendParameter = 0xA4; // CAnimParamHandle
 }
 
-namespace CBonePositionMetricEvaluator {
+namespace CBonePositionMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_nBoneIndex = 0x50; // int32_t
 }
 
-namespace CBoneVelocityMetricEvaluator {
+namespace CBoneVelocityMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_nBoneIndex = 0x50; // int32_t
 }
 
-namespace CBoolAnimParameter {
+namespace CBoolAnimParameter { // CConcreteAnimParameter
     constexpr std::ptrdiff_t m_bDefaultValue = 0x60; // bool
 }
 
-namespace CCPPScriptComponentUpdater {
+namespace CCPPScriptComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_scriptsToRun = 0x30; // CUtlVector<CGlobalSymbol>
 }
 
@@ -653,7 +671,7 @@ namespace CCachedPose {
     constexpr std::ptrdiff_t m_flCycle = 0x3C; // float
 }
 
-namespace CChoiceUpdateNode {
+namespace CChoiceUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_children = 0x58; // CUtlVector<CAnimUpdateNodeRef>
     constexpr std::ptrdiff_t m_weights = 0x70; // CUtlVector<float>
     constexpr std::ptrdiff_t m_blendTimes = 0x88; // CUtlVector<float>
@@ -666,7 +684,10 @@ namespace CChoiceUpdateNode {
     constexpr std::ptrdiff_t m_bDontResetSameSelection = 0xB2; // bool
 }
 
-namespace CClothSettingsAnimTag {
+namespace CChoreoUpdateNode { // CUnaryUpdateNode
+}
+
+namespace CClothSettingsAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_flStiffness = 0x38; // float
     constexpr std::ptrdiff_t m_flEaseIn = 0x3C; // float
     constexpr std::ptrdiff_t m_flEaseOut = 0x40; // float
@@ -693,7 +714,7 @@ namespace CCompressorGroup {
     constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
 }
 
-namespace CConcreteAnimParameter {
+namespace CConcreteAnimParameter { // CAnimParameterBase
     constexpr std::ptrdiff_t m_previewButton = 0x50; // AnimParamButton_t
     constexpr std::ptrdiff_t m_eNetworkSetting = 0x54; // AnimParamNetworkSetting
     constexpr std::ptrdiff_t m_bUseMostRecentValue = 0x58; // bool
@@ -719,11 +740,17 @@ namespace CConstraintTarget {
     constexpr std::ptrdiff_t m_bIsAttachment = 0x59; // bool
 }
 
+namespace CCurrentRotationVelocityMetricEvaluator { // CMotionMetricEvaluator
+}
+
+namespace CCurrentVelocityMetricEvaluator { // CMotionMetricEvaluator
+}
+
 namespace CCycleBase {
     constexpr std::ptrdiff_t m_flCycle = 0x0; // float
 }
 
-namespace CCycleControlClipUpdateNode {
+namespace CCycleControlClipUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_tags = 0x60; // CUtlVector<TagSpan_t>
     constexpr std::ptrdiff_t m_hSequence = 0x7C; // HSequence
     constexpr std::ptrdiff_t m_duration = 0x80; // float
@@ -731,12 +758,12 @@ namespace CCycleControlClipUpdateNode {
     constexpr std::ptrdiff_t m_paramIndex = 0x88; // CAnimParamHandle
 }
 
-namespace CCycleControlUpdateNode {
+namespace CCycleControlUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_valueSource = 0x68; // AnimValueSource
     constexpr std::ptrdiff_t m_paramIndex = 0x6C; // CAnimParamHandle
 }
 
-namespace CDampedPathAnimMotorUpdater {
+namespace CDampedPathAnimMotorUpdater { // CPathAnimMotorUpdaterBase
     constexpr std::ptrdiff_t m_flAnticipationTime = 0x2C; // float
     constexpr std::ptrdiff_t m_flMinSpeedScale = 0x30; // float
     constexpr std::ptrdiff_t m_hAnticipationPosParam = 0x34; // CAnimParamHandle
@@ -746,7 +773,7 @@ namespace CDampedPathAnimMotorUpdater {
     constexpr std::ptrdiff_t m_flMaxSpringTension = 0x40; // float
 }
 
-namespace CDampedValueComponentUpdater {
+namespace CDampedValueComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_items = 0x30; // CUtlVector<CDampedValueUpdateItem>
 }
 
@@ -756,7 +783,7 @@ namespace CDampedValueUpdateItem {
     constexpr std::ptrdiff_t m_hParamOut = 0x1A; // CAnimParamHandle
 }
 
-namespace CDemoSettingsComponentUpdater {
+namespace CDemoSettingsComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_settings = 0x30; // CAnimDemoCaptureSettings
 }
 
@@ -765,13 +792,13 @@ namespace CDirectPlaybackTagData {
     constexpr std::ptrdiff_t m_tags = 0x8; // CUtlVector<TagSpan_t>
 }
 
-namespace CDirectPlaybackUpdateNode {
+namespace CDirectPlaybackUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_bFinishEarly = 0x6C; // bool
     constexpr std::ptrdiff_t m_bResetOnFinish = 0x6D; // bool
     constexpr std::ptrdiff_t m_allTags = 0x70; // CUtlVector<CDirectPlaybackTagData>
 }
 
-namespace CDirectionalBlendUpdateNode {
+namespace CDirectionalBlendUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_hSequences = 0x5C; // HSequence[8]
     constexpr std::ptrdiff_t m_damping = 0x80; // CAnimInputDamping
     constexpr std::ptrdiff_t m_blendValueSource = 0x90; // AnimValueSource
@@ -782,7 +809,7 @@ namespace CDirectionalBlendUpdateNode {
     constexpr std::ptrdiff_t m_bLockBlendOnReset = 0xA1; // bool
 }
 
-namespace CDistanceRemainingMetricEvaluator {
+namespace CDistanceRemainingMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_flMaxDistance = 0x50; // float
     constexpr std::ptrdiff_t m_flMinDistance = 0x54; // float
     constexpr std::ptrdiff_t m_flStartGoalFilterDistance = 0x58; // float
@@ -798,17 +825,20 @@ namespace CDrawCullingData {
     constexpr std::ptrdiff_t m_ConeCutoff = 0xF; // int8_t
 }
 
-namespace CEmitTagActionUpdater {
+namespace CEditableMotionGraph { // CMotionGraph
+}
+
+namespace CEmitTagActionUpdater { // CAnimActionUpdater
     constexpr std::ptrdiff_t m_nTagIndex = 0x18; // int32_t
     constexpr std::ptrdiff_t m_bIsZeroDuration = 0x1C; // bool
 }
 
-namespace CEnumAnimParameter {
+namespace CEnumAnimParameter { // CConcreteAnimParameter
     constexpr std::ptrdiff_t m_defaultValue = 0x68; // uint8_t
     constexpr std::ptrdiff_t m_enumOptions = 0x70; // CUtlVector<CUtlString>
 }
 
-namespace CExpressionActionUpdater {
+namespace CExpressionActionUpdater { // CAnimActionUpdater
     constexpr std::ptrdiff_t m_hParam = 0x18; // CAnimParamHandle
     constexpr std::ptrdiff_t m_eParamType = 0x1A; // AnimParamType_t
     constexpr std::ptrdiff_t m_hScript = 0x1C; // AnimScriptHandle
@@ -863,18 +893,18 @@ namespace CFlexRule {
     constexpr std::ptrdiff_t m_FlexOps = 0x8; // CUtlVector<CFlexOp>
 }
 
-namespace CFloatAnimParameter {
+namespace CFloatAnimParameter { // CConcreteAnimParameter
     constexpr std::ptrdiff_t m_fDefaultValue = 0x60; // float
     constexpr std::ptrdiff_t m_fMinValue = 0x64; // float
     constexpr std::ptrdiff_t m_fMaxValue = 0x68; // float
     constexpr std::ptrdiff_t m_bInterpolate = 0x6C; // bool
 }
 
-namespace CFollowAttachmentUpdateNode {
+namespace CFollowAttachmentUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedData = 0x70; // FollowAttachmentSettings_t
 }
 
-namespace CFollowPathUpdateNode {
+namespace CFollowPathUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_flBlendOutTime = 0x6C; // float
     constexpr std::ptrdiff_t m_bBlockNonPathMovement = 0x70; // bool
     constexpr std::ptrdiff_t m_bStopFeetAtGoal = 0x71; // bool
@@ -890,7 +920,7 @@ namespace CFollowPathUpdateNode {
     constexpr std::ptrdiff_t m_bTurnToFace = 0xA4; // bool
 }
 
-namespace CFootAdjustmentUpdateNode {
+namespace CFootAdjustmentUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_clips = 0x70; // CUtlVector<HSequence>
     constexpr std::ptrdiff_t m_hBasePoseCacheHandle = 0x88; // CPoseHandle
     constexpr std::ptrdiff_t m_facingTarget = 0x8C; // CAnimParamHandle
@@ -900,6 +930,9 @@ namespace CFootAdjustmentUpdateNode {
     constexpr std::ptrdiff_t m_flStepHeightMaxAngle = 0x9C; // float
     constexpr std::ptrdiff_t m_bResetChild = 0xA0; // bool
     constexpr std::ptrdiff_t m_bAnimationDriven = 0xA1; // bool
+}
+
+namespace CFootCycle { // CCycleBase
 }
 
 namespace CFootCycleDefinition {
@@ -914,7 +947,7 @@ namespace CFootCycleDefinition {
     constexpr std::ptrdiff_t m_footLandCycle = 0x38; // CFootCycle
 }
 
-namespace CFootCycleMetricEvaluator {
+namespace CFootCycleMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32_t>
 }
 
@@ -930,11 +963,11 @@ namespace CFootDefinition {
     constexpr std::ptrdiff_t m_flTraceRadius = 0x3C; // float
 }
 
-namespace CFootFallAnimTag {
+namespace CFootFallAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_foot = 0x38; // FootFallTagFoot_t
 }
 
-namespace CFootLockUpdateNode {
+namespace CFootLockUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedSettings = 0x68; // FootLockPoseOpFixedSettings
     constexpr std::ptrdiff_t m_footSettings = 0xD0; // CUtlVector<FootFixedSettings>
     constexpr std::ptrdiff_t m_hipShiftDamping = 0xE8; // CAnimInputDamping
@@ -963,19 +996,19 @@ namespace CFootMotion {
     constexpr std::ptrdiff_t m_bAdditive = 0x20; // bool
 }
 
-namespace CFootPinningUpdateNode {
+namespace CFootPinningUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_poseOpFixedData = 0x70; // FootPinningPoseOpFixedData_t
     constexpr std::ptrdiff_t m_eTimingSource = 0xA0; // FootPinningTimingSource
     constexpr std::ptrdiff_t m_params = 0xA8; // CUtlVector<CAnimParamHandle>
     constexpr std::ptrdiff_t m_bResetChild = 0xC0; // bool
 }
 
-namespace CFootPositionMetricEvaluator {
+namespace CFootPositionMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32_t>
     constexpr std::ptrdiff_t m_bIgnoreSlope = 0x68; // bool
 }
 
-namespace CFootStepTriggerUpdateNode {
+namespace CFootStepTriggerUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_triggers = 0x68; // CUtlVector<FootStepTrigger>
     constexpr std::ptrdiff_t m_flTolerance = 0x84; // float
 }
@@ -995,19 +1028,19 @@ namespace CFootTrajectory {
     constexpr std::ptrdiff_t m_flProgression = 0x10; // float
 }
 
-namespace CFootstepLandedAnimTag {
+namespace CFootstepLandedAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_FootstepType = 0x38; // FootstepLandedFootSoundType_t
     constexpr std::ptrdiff_t m_OverrideSoundName = 0x40; // CUtlString
     constexpr std::ptrdiff_t m_DebugAnimSourceString = 0x48; // CUtlString
     constexpr std::ptrdiff_t m_BoneName = 0x50; // CUtlString
 }
 
-namespace CFutureFacingMetricEvaluator {
+namespace CFutureFacingMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_flDistance = 0x50; // float
     constexpr std::ptrdiff_t m_flTime = 0x54; // float
 }
 
-namespace CFutureVelocityMetricEvaluator {
+namespace CFutureVelocityMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_flDistance = 0x50; // float
     constexpr std::ptrdiff_t m_flStoppingDistance = 0x54; // float
     constexpr std::ptrdiff_t m_flTargetSpeed = 0x58; // float
@@ -1041,7 +1074,7 @@ namespace CHitBoxSetList {
     constexpr std::ptrdiff_t m_HitBoxSets = 0x0; // CUtlVector<CHitBoxSet>
 }
 
-namespace CHitReactUpdateNode {
+namespace CHitReactUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedSettings = 0x68; // HitReactFixedSettings_t
     constexpr std::ptrdiff_t m_triggerParam = 0xB4; // CAnimParamHandle
     constexpr std::ptrdiff_t m_hitBoneParam = 0xB6; // CAnimParamHandle
@@ -1052,17 +1085,20 @@ namespace CHitReactUpdateNode {
     constexpr std::ptrdiff_t m_bResetChild = 0xC4; // bool
 }
 
-namespace CIntAnimParameter {
+namespace CInputStreamUpdateNode { // CLeafUpdateNode
+}
+
+namespace CIntAnimParameter { // CConcreteAnimParameter
     constexpr std::ptrdiff_t m_defaultValue = 0x60; // int32_t
     constexpr std::ptrdiff_t m_minValue = 0x64; // int32_t
     constexpr std::ptrdiff_t m_maxValue = 0x68; // int32_t
 }
 
-namespace CJiggleBoneUpdateNode {
+namespace CJiggleBoneUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedData = 0x68; // JiggleBoneSettingsList_t
 }
 
-namespace CJumpHelperUpdateNode {
+namespace CJumpHelperUpdateNode { // CSequenceUpdateNode
     constexpr std::ptrdiff_t m_hTargetParam = 0xA8; // CAnimParamHandle
     constexpr std::ptrdiff_t m_flOriginalJumpMovement = 0xAC; // Vector
     constexpr std::ptrdiff_t m_flOriginalJumpDuration = 0xB8; // float
@@ -1073,11 +1109,14 @@ namespace CJumpHelperUpdateNode {
     constexpr std::ptrdiff_t m_bScaleSpeed = 0xCB; // bool
 }
 
-namespace CLODComponentUpdater {
+namespace CLODComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_nServerLOD = 0x30; // int32_t
 }
 
-namespace CLeanMatrixUpdateNode {
+namespace CLeafUpdateNode { // CAnimUpdateNodeBase
+}
+
+namespace CLeanMatrixUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_frameCorners = 0x5C; // int32_t[3][3]
     constexpr std::ptrdiff_t m_poses = 0x80; // CPoseHandle[9]
     constexpr std::ptrdiff_t m_damping = 0xA8; // CAnimInputDamping
@@ -1090,7 +1129,7 @@ namespace CLeanMatrixUpdateNode {
     constexpr std::ptrdiff_t m_nSequenceMaxFrame = 0xE0; // int32_t
 }
 
-namespace CLookAtUpdateNode {
+namespace CLookAtUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedSettings = 0x70; // LookAtOpFixedSettings_t
     constexpr std::ptrdiff_t m_target = 0x138; // AnimVectorSource
     constexpr std::ptrdiff_t m_paramIndex = 0x13C; // CAnimParamHandle
@@ -1099,7 +1138,7 @@ namespace CLookAtUpdateNode {
     constexpr std::ptrdiff_t m_bLockWhenWaning = 0x141; // bool
 }
 
-namespace CLookComponentUpdater {
+namespace CLookComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_hLookHeading = 0x34; // CAnimParamHandle
     constexpr std::ptrdiff_t m_hLookHeadingVelocity = 0x36; // CAnimParamHandle
     constexpr std::ptrdiff_t m_hLookPitch = 0x38; // CAnimParamHandle
@@ -1110,7 +1149,7 @@ namespace CLookComponentUpdater {
     constexpr std::ptrdiff_t m_bNetworkLookTarget = 0x42; // bool
 }
 
-namespace CMaterialAttributeAnimTag {
+namespace CMaterialAttributeAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_AttributeName = 0x38; // CUtlString
     constexpr std::ptrdiff_t m_AttributeType = 0x40; // MatterialAttributeTagType_t
     constexpr std::ptrdiff_t m_flValue = 0x44; // float
@@ -1148,7 +1187,7 @@ namespace CModelConfigElement {
     constexpr std::ptrdiff_t m_NestedElements = 0x10; // CUtlVector<CModelConfigElement*>
 }
 
-namespace CModelConfigElement_AttachedModel {
+namespace CModelConfigElement_AttachedModel { // CModelConfigElement
     constexpr std::ptrdiff_t m_InstanceName = 0x48; // CUtlString
     constexpr std::ptrdiff_t m_EntityClass = 0x50; // CUtlString
     constexpr std::ptrdiff_t m_hModel = 0x58; // CStrongHandle<InfoForResourceTypeCModel>
@@ -1165,43 +1204,43 @@ namespace CModelConfigElement_AttachedModel {
     constexpr std::ptrdiff_t m_MaterialGroupOnOtherModels = 0x98; // CUtlString
 }
 
-namespace CModelConfigElement_Command {
+namespace CModelConfigElement_Command { // CModelConfigElement
     constexpr std::ptrdiff_t m_Command = 0x48; // CUtlString
     constexpr std::ptrdiff_t m_Args = 0x50; // KeyValues3
 }
 
-namespace CModelConfigElement_RandomColor {
+namespace CModelConfigElement_RandomColor { // CModelConfigElement
     constexpr std::ptrdiff_t m_Gradient = 0x48; // CColorGradient
 }
 
-namespace CModelConfigElement_RandomPick {
+namespace CModelConfigElement_RandomPick { // CModelConfigElement
     constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector<CUtlString>
     constexpr std::ptrdiff_t m_ChoiceWeights = 0x60; // CUtlVector<float>
 }
 
-namespace CModelConfigElement_SetBodygroup {
+namespace CModelConfigElement_SetBodygroup { // CModelConfigElement
     constexpr std::ptrdiff_t m_GroupName = 0x48; // CUtlString
     constexpr std::ptrdiff_t m_nChoice = 0x50; // int32_t
 }
 
-namespace CModelConfigElement_SetBodygroupOnAttachedModels {
+namespace CModelConfigElement_SetBodygroupOnAttachedModels { // CModelConfigElement
     constexpr std::ptrdiff_t m_GroupName = 0x48; // CUtlString
     constexpr std::ptrdiff_t m_nChoice = 0x50; // int32_t
 }
 
-namespace CModelConfigElement_SetMaterialGroup {
+namespace CModelConfigElement_SetMaterialGroup { // CModelConfigElement
     constexpr std::ptrdiff_t m_MaterialGroupName = 0x48; // CUtlString
 }
 
-namespace CModelConfigElement_SetMaterialGroupOnAttachedModels {
+namespace CModelConfigElement_SetMaterialGroupOnAttachedModels { // CModelConfigElement
     constexpr std::ptrdiff_t m_MaterialGroupName = 0x48; // CUtlString
 }
 
-namespace CModelConfigElement_SetRenderColor {
+namespace CModelConfigElement_SetRenderColor { // CModelConfigElement
     constexpr std::ptrdiff_t m_Color = 0x48; // Color
 }
 
-namespace CModelConfigElement_UserPick {
+namespace CModelConfigElement_UserPick { // CModelConfigElement
     constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector<CUtlString>
 }
 
@@ -1224,7 +1263,7 @@ namespace CMorphBundleData {
     constexpr std::ptrdiff_t m_ranges = 0x20; // CUtlVector<float>
 }
 
-namespace CMorphConstraint {
+namespace CMorphConstraint { // CBaseConstraint
     constexpr std::ptrdiff_t m_sTargetMorph = 0x70; // CUtlString
     constexpr std::ptrdiff_t m_nSlaveChannel = 0x78; // int32_t
     constexpr std::ptrdiff_t m_flMin = 0x7C; // float
@@ -1286,11 +1325,11 @@ namespace CMotionGraphGroup {
     constexpr std::ptrdiff_t m_hIsActiveScript = 0x100; // AnimScriptHandle
 }
 
-namespace CMotionGraphUpdateNode {
+namespace CMotionGraphUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_pMotionGraph = 0x58; // CSmartPtr<CMotionGraph>
 }
 
-namespace CMotionMatchingUpdateNode {
+namespace CMotionMatchingUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_dataSet = 0x58; // CMotionDataSet
     constexpr std::ptrdiff_t m_metrics = 0x78; // CUtlVector<CSmartPtr<CMotionMetricEvaluator>>
     constexpr std::ptrdiff_t m_weights = 0x90; // CUtlVector<float>
@@ -1328,12 +1367,12 @@ namespace CMotionNode {
     constexpr std::ptrdiff_t m_id = 0x20; // AnimNodeID
 }
 
-namespace CMotionNodeBlend1D {
+namespace CMotionNodeBlend1D { // CMotionNode
     constexpr std::ptrdiff_t m_blendItems = 0x28; // CUtlVector<MotionBlendItem>
     constexpr std::ptrdiff_t m_nParamIndex = 0x40; // int32_t
 }
 
-namespace CMotionNodeSequence {
+namespace CMotionNodeSequence { // CMotionNode
     constexpr std::ptrdiff_t m_tags = 0x28; // CUtlVector<TagSpan_t>
     constexpr std::ptrdiff_t m_hSequence = 0x40; // HSequence
     constexpr std::ptrdiff_t m_flPlaybackSpeed = 0x44; // float
@@ -1353,7 +1392,7 @@ namespace CMotionSearchNode {
     constexpr std::ptrdiff_t m_selectableSamples = 0x68; // CUtlVector<int32_t>
 }
 
-namespace CMovementComponentUpdater {
+namespace CMovementComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_movementModes = 0x30; // CUtlVector<CMovementMode>
     constexpr std::ptrdiff_t m_motors = 0x48; // CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
     constexpr std::ptrdiff_t m_facingDamping = 0x60; // CAnimInputDamping
@@ -1370,7 +1409,7 @@ namespace CMovementMode {
     constexpr std::ptrdiff_t m_flSpeed = 0x8; // float
 }
 
-namespace CMoverUpdateNode {
+namespace CMoverUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_damping = 0x70; // CAnimInputDamping
     constexpr std::ptrdiff_t m_facingTarget = 0x80; // AnimValueSource
     constexpr std::ptrdiff_t m_hMoveVecParam = 0x84; // CAnimParamHandle
@@ -1385,11 +1424,17 @@ namespace CMoverUpdateNode {
     constexpr std::ptrdiff_t m_bLimitOnly = 0x98; // bool
 }
 
+namespace COrientConstraint { // CBaseConstraint
+}
+
 namespace CParamSpanUpdater {
     constexpr std::ptrdiff_t m_spans = 0x0; // CUtlVector<ParamSpan_t>
 }
 
-namespace CParticleAnimTag {
+namespace CParentConstraint { // CBaseConstraint
+}
+
+namespace CParticleAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_hParticleSystem = 0x38; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
     constexpr std::ptrdiff_t m_particleSystemName = 0x40; // CUtlString
     constexpr std::ptrdiff_t m_configName = 0x48; // CUtlString
@@ -1402,16 +1447,19 @@ namespace CParticleAnimTag {
     constexpr std::ptrdiff_t m_attachmentCP1Type = 0x70; // ParticleAttachment_t
 }
 
-namespace CPathAnimMotorUpdaterBase {
+namespace CPathAnimMotorUpdater { // CPathAnimMotorUpdaterBase
+}
+
+namespace CPathAnimMotorUpdaterBase { // CAnimMotorUpdaterBase
     constexpr std::ptrdiff_t m_bLockToPath = 0x20; // bool
 }
 
-namespace CPathHelperUpdateNode {
+namespace CPathHelperUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_flStoppingRadius = 0x68; // float
     constexpr std::ptrdiff_t m_flStoppingSpeedScale = 0x6C; // float
 }
 
-namespace CPathMetricEvaluator {
+namespace CPathMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_pathTimeSamples = 0x50; // CUtlVector<float>
     constexpr std::ptrdiff_t m_flDistance = 0x68; // float
     constexpr std::ptrdiff_t m_bExtrapolateMovement = 0x6C; // bool
@@ -1461,13 +1509,16 @@ namespace CPhysSurfacePropertiesSoundNames {
     constexpr std::ptrdiff_t m_strain = 0x38; // CUtlString
 }
 
-namespace CPlayerInputAnimMotorUpdater {
+namespace CPlayerInputAnimMotorUpdater { // CAnimMotorUpdaterBase
     constexpr std::ptrdiff_t m_sampleTimes = 0x20; // CUtlVector<float>
     constexpr std::ptrdiff_t m_flSpringConstant = 0x3C; // float
     constexpr std::ptrdiff_t m_flAnticipationDistance = 0x40; // float
     constexpr std::ptrdiff_t m_hAnticipationPosParam = 0x44; // CAnimParamHandle
     constexpr std::ptrdiff_t m_hAnticipationHeadingParam = 0x46; // CAnimParamHandle
     constexpr std::ptrdiff_t m_bUseAcceleration = 0x48; // bool
+}
+
+namespace CPointConstraint { // CBaseConstraint
 }
 
 namespace CPoseHandle {
@@ -1480,12 +1531,12 @@ namespace CProductQuantizer {
     constexpr std::ptrdiff_t m_nDimensions = 0x18; // int32_t
 }
 
-namespace CQuaternionAnimParameter {
+namespace CQuaternionAnimParameter { // CConcreteAnimParameter
     constexpr std::ptrdiff_t m_defaultValue = 0x60; // Quaternion
     constexpr std::ptrdiff_t m_bInterpolate = 0x70; // bool
 }
 
-namespace CRagdollAnimTag {
+namespace CRagdollAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_nPoseControl = 0x38; // AnimPoseControl
     constexpr std::ptrdiff_t m_flFrequency = 0x3C; // float
     constexpr std::ptrdiff_t m_flDampingRatio = 0x40; // float
@@ -1494,7 +1545,7 @@ namespace CRagdollAnimTag {
     constexpr std::ptrdiff_t m_bDestroy = 0x4C; // bool
 }
 
-namespace CRagdollComponentUpdater {
+namespace CRagdollComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_ragdollNodePaths = 0x30; // CUtlVector<CAnimNodePath>
     constexpr std::ptrdiff_t m_boneIndices = 0x48; // CUtlVector<int32_t>
     constexpr std::ptrdiff_t m_boneNames = 0x60; // CUtlVector<CUtlString>
@@ -1504,7 +1555,7 @@ namespace CRagdollComponentUpdater {
     constexpr std::ptrdiff_t m_flMaxStretch = 0x98; // float
 }
 
-namespace CRagdollUpdateNode {
+namespace CRagdollUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_nWeightListIndex = 0x68; // int32_t
     constexpr std::ptrdiff_t m_poseControlMethod = 0x6C; // RagdollPoseControl
 }
@@ -1526,6 +1577,9 @@ namespace CRenderSkeleton {
     constexpr std::ptrdiff_t m_nBoneWeightCount = 0x48; // int32_t
 }
 
+namespace CRootUpdateNode { // CUnaryUpdateNode
+}
+
 namespace CSceneObjectData {
     constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
     constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // Vector
@@ -1535,7 +1589,7 @@ namespace CSceneObjectData {
     constexpr std::ptrdiff_t m_vTintColor = 0x60; // Vector4D
 }
 
-namespace CSelectorUpdateNode {
+namespace CSelectorUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_children = 0x58; // CUtlVector<CAnimUpdateNodeRef>
     constexpr std::ptrdiff_t m_tags = 0x70; // CUtlVector<int8_t>
     constexpr std::ptrdiff_t m_blendCurve = 0x8C; // CBlendCurve
@@ -1698,7 +1752,7 @@ namespace CSeqTransition {
     constexpr std::ptrdiff_t m_flFadeOutTime = 0x4; // float
 }
 
-namespace CSequenceFinishedAnimTag {
+namespace CSequenceFinishedAnimTag { // CAnimTagBase
     constexpr std::ptrdiff_t m_sequenceName = 0x38; // CUtlString
 }
 
@@ -1719,7 +1773,7 @@ namespace CSequenceGroupData {
     constexpr std::ptrdiff_t m_localIKAutoplayLockArray = 0x120; // CUtlVector<CSeqIKLock>
 }
 
-namespace CSequenceUpdateNode {
+namespace CSequenceUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_paramSpans = 0x60; // CParamSpanUpdater
     constexpr std::ptrdiff_t m_tags = 0x78; // CUtlVector<TagSpan_t>
     constexpr std::ptrdiff_t m_hSequence = 0x94; // HSequence
@@ -1728,28 +1782,28 @@ namespace CSequenceUpdateNode {
     constexpr std::ptrdiff_t m_bLoop = 0xA0; // bool
 }
 
-namespace CSetFacingUpdateNode {
+namespace CSetFacingUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_facingMode = 0x68; // FacingMode
     constexpr std::ptrdiff_t m_bResetChild = 0x6C; // bool
 }
 
-namespace CSetParameterActionUpdater {
+namespace CSetParameterActionUpdater { // CAnimActionUpdater
     constexpr std::ptrdiff_t m_hParam = 0x18; // CAnimParamHandle
     constexpr std::ptrdiff_t m_value = 0x1A; // CAnimVariant
 }
 
-namespace CSingleFrameUpdateNode {
+namespace CSingleFrameUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_actions = 0x58; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
     constexpr std::ptrdiff_t m_hPoseCacheHandle = 0x70; // CPoseHandle
     constexpr std::ptrdiff_t m_hSequence = 0x74; // HSequence
     constexpr std::ptrdiff_t m_flCycle = 0x78; // float
 }
 
-namespace CSkeletalInputUpdateNode {
+namespace CSkeletalInputUpdateNode { // CLeafUpdateNode
     constexpr std::ptrdiff_t m_fixedOpData = 0x58; // SkeletalInputOpFixedSettings_t
 }
 
-namespace CSlopeComponentUpdater {
+namespace CSlopeComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_flTraceDistance = 0x34; // float
     constexpr std::ptrdiff_t m_hSlopeAngle = 0x38; // CAnimParamHandle
     constexpr std::ptrdiff_t m_hSlopeAngleFront = 0x3A; // CAnimParamHandle
@@ -1759,11 +1813,11 @@ namespace CSlopeComponentUpdater {
     constexpr std::ptrdiff_t m_hSlopeNormal_WorldSpace = 0x42; // CAnimParamHandle
 }
 
-namespace CSlowDownOnSlopesUpdateNode {
+namespace CSlowDownOnSlopesUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_flSlowDownStrength = 0x68; // float
 }
 
-namespace CSolveIKChainUpdateNode {
+namespace CSolveIKChainUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_targetHandles = 0x68; // CUtlVector<CSolveIKTargetHandle_t>
     constexpr std::ptrdiff_t m_opFixedData = 0x80; // SolveIKChainPoseOpFixedSettings_t
 }
@@ -1773,18 +1827,18 @@ namespace CSolveIKTargetHandle_t {
     constexpr std::ptrdiff_t m_orientationHandle = 0x2; // CAnimParamHandle
 }
 
-namespace CSpeedScaleUpdateNode {
+namespace CSpeedScaleUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_paramIndex = 0x68; // CAnimParamHandle
 }
 
-namespace CStanceOverrideUpdateNode {
+namespace CStanceOverrideUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_footStanceInfo = 0x68; // CUtlVector<StanceInfo_t>
     constexpr std::ptrdiff_t m_pStanceSourceNode = 0x80; // CAnimUpdateNodeRef
     constexpr std::ptrdiff_t m_hParameter = 0x90; // CAnimParamHandle
     constexpr std::ptrdiff_t m_eMode = 0x94; // StanceOverrideMode
 }
 
-namespace CStanceScaleUpdateNode {
+namespace CStanceScaleUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_hParam = 0x68; // CAnimParamHandle
 }
 
@@ -1793,11 +1847,11 @@ namespace CStateActionUpdater {
     constexpr std::ptrdiff_t m_eBehavior = 0x8; // StateActionBehavior
 }
 
-namespace CStateMachineComponentUpdater {
+namespace CStateMachineComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_stateMachine = 0x30; // CAnimStateMachineUpdater
 }
 
-namespace CStateMachineUpdateNode {
+namespace CStateMachineUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_stateMachine = 0x68; // CAnimStateMachineUpdater
     constexpr std::ptrdiff_t m_stateData = 0xC0; // CUtlVector<CStateNodeStateData>
     constexpr std::ptrdiff_t m_transitionData = 0xD8; // CUtlVector<CStateNodeTransitionData>
@@ -1835,12 +1889,15 @@ namespace CStaticPoseCache {
     constexpr std::ptrdiff_t m_nMorphCount = 0x2C; // int32_t
 }
 
-namespace CStepsRemainingMetricEvaluator {
+namespace CStaticPoseCacheBuilder { // CStaticPoseCache
+}
+
+namespace CStepsRemainingMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32_t>
     constexpr std::ptrdiff_t m_flMinStepsRemaining = 0x68; // float
 }
 
-namespace CStopAtGoalUpdateNode {
+namespace CStopAtGoalUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_flOuterRadius = 0x6C; // float
     constexpr std::ptrdiff_t m_flInnerRadius = 0x70; // float
     constexpr std::ptrdiff_t m_flMaxScale = 0x74; // float
@@ -1848,26 +1905,32 @@ namespace CStopAtGoalUpdateNode {
     constexpr std::ptrdiff_t m_damping = 0x80; // CAnimInputDamping
 }
 
-namespace CSubtractUpdateNode {
+namespace CStringAnimTag { // CAnimTagBase
+}
+
+namespace CSubtractUpdateNode { // CBinaryUpdateNode
     constexpr std::ptrdiff_t m_footMotionTiming = 0x8C; // BinaryNodeChildOption
     constexpr std::ptrdiff_t m_bApplyToFootMotion = 0x90; // bool
     constexpr std::ptrdiff_t m_bApplyChannelsSeparately = 0x91; // bool
     constexpr std::ptrdiff_t m_bUseModelSpace = 0x92; // bool
 }
 
-namespace CTiltTwistConstraint {
+namespace CTaskStatusAnimTag { // CAnimTagBase
+}
+
+namespace CTiltTwistConstraint { // CBaseConstraint
     constexpr std::ptrdiff_t m_nTargetAxis = 0x70; // int32_t
     constexpr std::ptrdiff_t m_nSlaveAxis = 0x74; // int32_t
 }
 
-namespace CTimeRemainingMetricEvaluator {
+namespace CTimeRemainingMetricEvaluator { // CMotionMetricEvaluator
     constexpr std::ptrdiff_t m_bMatchByTimeRemaining = 0x50; // bool
     constexpr std::ptrdiff_t m_flMaxTimeRemaining = 0x54; // float
     constexpr std::ptrdiff_t m_bFilterByTimeRemaining = 0x58; // bool
     constexpr std::ptrdiff_t m_flMinTimeRemaining = 0x5C; // float
 }
 
-namespace CToggleComponentActionUpdater {
+namespace CToggleComponentActionUpdater { // CAnimActionUpdater
     constexpr std::ptrdiff_t m_componentID = 0x18; // AnimComponentID
     constexpr std::ptrdiff_t m_bSetEnabled = 0x1C; // bool
 }
@@ -1878,7 +1941,7 @@ namespace CTransitionUpdateData {
     constexpr std::ptrdiff_t m_bDisabled = 0x0; // bitfield:1
 }
 
-namespace CTurnHelperUpdateNode {
+namespace CTurnHelperUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_facingTarget = 0x6C; // AnimValueSource
     constexpr std::ptrdiff_t m_turnStartTimeOffset = 0x70; // float
     constexpr std::ptrdiff_t m_turnDuration = 0x74; // float
@@ -1887,17 +1950,17 @@ namespace CTurnHelperUpdateNode {
     constexpr std::ptrdiff_t m_bUseManualTurnOffset = 0x80; // bool
 }
 
-namespace CTwistConstraint {
+namespace CTwistConstraint { // CBaseConstraint
     constexpr std::ptrdiff_t m_bInverse = 0x70; // bool
     constexpr std::ptrdiff_t m_qParentBindRotation = 0x80; // Quaternion
     constexpr std::ptrdiff_t m_qChildBindRotation = 0x90; // Quaternion
 }
 
-namespace CTwoBoneIKUpdateNode {
+namespace CTwoBoneIKUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_opFixedData = 0x70; // TwoBoneIKSettings_t
 }
 
-namespace CUnaryUpdateNode {
+namespace CUnaryUpdateNode { // CAnimUpdateNodeBase
     constexpr std::ptrdiff_t m_pChildNode = 0x58; // CAnimUpdateNodeRef
 }
 
@@ -1905,7 +1968,7 @@ namespace CVPhysXSurfacePropertiesList {
     constexpr std::ptrdiff_t m_surfacePropertiesList = 0x0; // CUtlVector<CPhysSurfaceProperties*>
 }
 
-namespace CVRInputComponentUpdater {
+namespace CVRInputComponentUpdater { // CAnimComponentUpdater
     constexpr std::ptrdiff_t m_FingerCurl_Thumb = 0x34; // CAnimParamHandle
     constexpr std::ptrdiff_t m_FingerCurl_Index = 0x36; // CAnimParamHandle
     constexpr std::ptrdiff_t m_FingerCurl_Middle = 0x38; // CAnimParamHandle
@@ -1917,7 +1980,7 @@ namespace CVRInputComponentUpdater {
     constexpr std::ptrdiff_t m_FingerSplay_Ring_Pinky = 0x44; // CAnimParamHandle
 }
 
-namespace CVectorAnimParameter {
+namespace CVectorAnimParameter { // CConcreteAnimParameter
     constexpr std::ptrdiff_t m_defaultValue = 0x60; // Vector
     constexpr std::ptrdiff_t m_bInterpolate = 0x6C; // bool
 }
@@ -1928,7 +1991,7 @@ namespace CVectorQuantizer {
     constexpr std::ptrdiff_t m_nDimensions = 0x1C; // int32_t
 }
 
-namespace CVirtualAnimParameter {
+namespace CVirtualAnimParameter { // CAnimParameterBase
     constexpr std::ptrdiff_t m_expressionString = 0x50; // CUtlString
     constexpr std::ptrdiff_t m_eParamType = 0x58; // AnimParamType_t
 }
@@ -1942,7 +2005,7 @@ namespace CVrSkeletalInputSettings {
     constexpr std::ptrdiff_t m_eHand = 0x48; // AnimVRHand_t
 }
 
-namespace CWayPointHelperUpdateNode {
+namespace CWayPointHelperUpdateNode { // CUnaryUpdateNode
     constexpr std::ptrdiff_t m_flStartCycle = 0x6C; // float
     constexpr std::ptrdiff_t m_flEndCycle = 0x70; // float
     constexpr std::ptrdiff_t m_bOnlyGoals = 0x74; // bool
@@ -1955,6 +2018,9 @@ namespace CWristBone {
     constexpr std::ptrdiff_t m_vForwardLS = 0x8; // Vector
     constexpr std::ptrdiff_t m_vUpLS = 0x14; // Vector
     constexpr std::ptrdiff_t m_vOffset = 0x20; // Vector
+}
+
+namespace CZeroPoseUpdateNode { // CLeafUpdateNode
 }
 
 namespace ChainToSolveData_t {

@@ -1,5 +1,11 @@
 {
   "ChangeAccessorFieldPathIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int16_t"
+      }
+    },
+    "comment": null
   }
 }

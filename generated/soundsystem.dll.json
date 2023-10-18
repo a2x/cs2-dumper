@@ -1,270 +1,963 @@
 {
   "CDSPMixgroupModifier": {
-    "m_flListenerReverbModifierWhenSourceReverbIsActive": 24,
-    "m_flModifier": 8,
-    "m_flModifierMin": 12,
-    "m_flSourceModifier": 16,
-    "m_flSourceModifierMin": 20,
-    "m_mixgroup": 0
+    "data": {
+      "m_flListenerReverbModifierWhenSourceReverbIsActive": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flModifier": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flModifierMin": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flSourceModifier": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flSourceModifierMin": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_mixgroup": {
+        "value": 0,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
   },
   "CDSPPresetMixgroupModifierTable": {
-    "m_table": 0
+    "data": {
+      "m_table": {
+        "value": 0,
+        "comment": "CUtlVector<CDspPresetModifierList>"
+      }
+    },
+    "comment": null
   },
   "CDspPresetModifierList": {
-    "m_dspName": 0,
-    "m_modifiers": 8
+    "data": {
+      "m_dspName": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_modifiers": {
+        "value": 8,
+        "comment": "CUtlVector<CDSPMixgroupModifier>"
+      }
+    },
+    "comment": null
   },
   "CSosGroupActionLimitSchema": {
-    "m_nMaxCount": 24,
-    "m_nSortType": 32,
-    "m_nStopType": 28
+    "data": {
+      "m_nMaxCount": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_nSortType": {
+        "value": 32,
+        "comment": "SosActionSortType_t"
+      },
+      "m_nStopType": {
+        "value": 28,
+        "comment": "SosActionStopType_t"
+      }
+    },
+    "comment": "CSosGroupActionSchema"
   },
   "CSosGroupActionSchema": {
-    "m_actionInstanceType": 20,
-    "m_actionType": 16,
-    "m_name": 8
+    "data": {
+      "m_actionInstanceType": {
+        "value": 20,
+        "comment": "ActionType_t"
+      },
+      "m_actionType": {
+        "value": 16,
+        "comment": "ActionType_t"
+      },
+      "m_name": {
+        "value": 8,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
   },
   "CSosGroupActionSetSoundeventParameterSchema": {
-    "m_flMaxValue": 32,
-    "m_flMinValue": 28,
-    "m_nMaxCount": 24,
-    "m_nSortType": 48,
-    "m_opvarName": 40
+    "data": {
+      "m_flMaxValue": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flMinValue": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_nMaxCount": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_nSortType": {
+        "value": 48,
+        "comment": "SosActionSortType_t"
+      },
+      "m_opvarName": {
+        "value": 40,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "CSosGroupActionSchema"
   },
   "CSosGroupActionTimeLimitSchema": {
-    "m_flMaxDuration": 24
+    "data": {
+      "m_flMaxDuration": {
+        "value": 24,
+        "comment": "float"
+      }
+    },
+    "comment": "CSosGroupActionSchema"
   },
   "CSosGroupBranchPattern": {
-    "m_bMatchEntIndex": 10,
-    "m_bMatchEventName": 8,
-    "m_bMatchEventSubString": 9,
-    "m_bMatchOpvar": 11
+    "data": {
+      "m_bMatchEntIndex": {
+        "value": 10,
+        "comment": "bool"
+      },
+      "m_bMatchEventName": {
+        "value": 8,
+        "comment": "bool"
+      },
+      "m_bMatchEventSubString": {
+        "value": 9,
+        "comment": "bool"
+      },
+      "m_bMatchOpvar": {
+        "value": 11,
+        "comment": "bool"
+      }
+    },
+    "comment": null
   },
   "CSosGroupMatchPattern": {
-    "m_flEntIndex": 32,
-    "m_flOpvar": 36,
-    "m_matchSoundEventName": 16,
-    "m_matchSoundEventSubString": 24
+    "data": {
+      "m_flEntIndex": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flOpvar": {
+        "value": 36,
+        "comment": "float"
+      },
+      "m_matchSoundEventName": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_matchSoundEventSubString": {
+        "value": 24,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "CSosGroupBranchPattern"
   },
   "CSosSoundEventGroupListSchema": {
-    "m_groupList": 0
+    "data": {
+      "m_groupList": {
+        "value": 0,
+        "comment": "CUtlVector<CSosSoundEventGroupSchema>"
+      }
+    },
+    "comment": null
   },
   "CSosSoundEventGroupSchema": {
-    "m_bInvertMatch": 20,
-    "m_bIsBlocking": 12,
-    "m_branchPattern": 64,
-    "m_matchPattern": 24,
-    "m_nBlockMaxCount": 16,
-    "m_nType": 8,
-    "m_name": 0,
-    "m_vActions": 176
+    "data": {
+      "m_bInvertMatch": {
+        "value": 20,
+        "comment": "bool"
+      },
+      "m_bIsBlocking": {
+        "value": 12,
+        "comment": "bool"
+      },
+      "m_branchPattern": {
+        "value": 64,
+        "comment": "CSosGroupBranchPattern"
+      },
+      "m_matchPattern": {
+        "value": 24,
+        "comment": "CSosGroupMatchPattern"
+      },
+      "m_nBlockMaxCount": {
+        "value": 16,
+        "comment": "int32_t"
+      },
+      "m_nType": {
+        "value": 8,
+        "comment": "SosGroupType_t"
+      },
+      "m_name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_vActions": {
+        "value": 176,
+        "comment": "CSosGroupActionSchema*[4]"
+      }
+    },
+    "comment": null
   },
   "CSoundEventMetaData": {
-    "m_soundEventVMix": 0
+    "data": {
+      "m_soundEventVMix": {
+        "value": 0,
+        "comment": "CStrongHandle<InfoForResourceTypeCVMixListResource>"
+      }
+    },
+    "comment": null
   },
   "SelectedEditItemInfo_t": {
-    "m_EditItems": 0
+    "data": {
+      "m_EditItems": {
+        "value": 0,
+        "comment": "CUtlVector<SosEditItemInfo_t>"
+      }
+    },
+    "comment": null
   },
   "SosEditItemInfo_t": {
-    "itemKVString": 32,
-    "itemName": 8,
-    "itemPos": 40,
-    "itemType": 0,
-    "itemTypeName": 16
+    "data": {
+      "itemKVString": {
+        "value": 32,
+        "comment": "CUtlString"
+      },
+      "itemName": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "itemPos": {
+        "value": 40,
+        "comment": "Vector2D"
+      },
+      "itemType": {
+        "value": 0,
+        "comment": "SosEditItemType_t"
+      },
+      "itemTypeName": {
+        "value": 16,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
   },
   "VMixAutoFilterDesc_t": {
-    "m_filter": 12,
-    "m_flAttackTimeMS": 4,
-    "m_flEnvelopeAmount": 0,
-    "m_flLFOAmount": 28,
-    "m_flLFORate": 32,
-    "m_flPhase": 36,
-    "m_flReleaseTimeMS": 8,
-    "m_nLFOShape": 40
+    "data": {
+      "m_filter": {
+        "value": 12,
+        "comment": "VMixFilterDesc_t"
+      },
+      "m_flAttackTimeMS": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flEnvelopeAmount": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_flLFOAmount": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flLFORate": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flPhase": {
+        "value": 36,
+        "comment": "float"
+      },
+      "m_flReleaseTimeMS": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_nLFOShape": {
+        "value": 40,
+        "comment": "VMixLFOShape_t"
+      }
+    },
+    "comment": null
   },
   "VMixBoxverbDesc_t": {
-    "m_bParallel": 24,
-    "m_filterType": 28,
-    "m_flComplexity": 8,
-    "m_flDepth": 52,
-    "m_flDiffusion": 12,
-    "m_flFeedbackDepth": 68,
-    "m_flFeedbackHeight": 64,
-    "m_flFeedbackScale": 56,
-    "m_flFeedbackWidth": 60,
-    "m_flHeight": 48,
-    "m_flModDepth": 16,
-    "m_flModRate": 20,
-    "m_flOutputGain": 72,
-    "m_flSizeMax": 0,
-    "m_flSizeMin": 4,
-    "m_flTaps": 76,
-    "m_flWidth": 44
+    "data": {
+      "m_bParallel": {
+        "value": 24,
+        "comment": "bool"
+      },
+      "m_filterType": {
+        "value": 28,
+        "comment": "VMixFilterDesc_t"
+      },
+      "m_flComplexity": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flDepth": {
+        "value": 52,
+        "comment": "float"
+      },
+      "m_flDiffusion": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flFeedbackDepth": {
+        "value": 68,
+        "comment": "float"
+      },
+      "m_flFeedbackHeight": {
+        "value": 64,
+        "comment": "float"
+      },
+      "m_flFeedbackScale": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_flFeedbackWidth": {
+        "value": 60,
+        "comment": "float"
+      },
+      "m_flHeight": {
+        "value": 48,
+        "comment": "float"
+      },
+      "m_flModDepth": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flModRate": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flOutputGain": {
+        "value": 72,
+        "comment": "float"
+      },
+      "m_flSizeMax": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_flSizeMin": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flTaps": {
+        "value": 76,
+        "comment": "float"
+      },
+      "m_flWidth": {
+        "value": 44,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixConvolutionDesc_t": {
-    "m_flHighCutoffFreq": 28,
-    "m_flLowCutoffFreq": 24,
-    "m_flPreDelayMS": 4,
-    "m_flWetMix": 8,
-    "m_fldbGain": 0,
-    "m_fldbHigh": 20,
-    "m_fldbLow": 12,
-    "m_fldbMid": 16
+    "data": {
+      "m_flHighCutoffFreq": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flLowCutoffFreq": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flPreDelayMS": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flWetMix": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_fldbGain": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_fldbHigh": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_fldbLow": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_fldbMid": {
+        "value": 16,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixDelayDesc_t": {
-    "m_bEnableFilter": 16,
-    "m_feedbackFilter": 0,
-    "m_flDelay": 20,
-    "m_flDelayGain": 28,
-    "m_flDirectGain": 24,
-    "m_flFeedbackGain": 32,
-    "m_flWidth": 36
+    "data": {
+      "m_bEnableFilter": {
+        "value": 16,
+        "comment": "bool"
+      },
+      "m_feedbackFilter": {
+        "value": 0,
+        "comment": "VMixFilterDesc_t"
+      },
+      "m_flDelay": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flDelayGain": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flDirectGain": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flFeedbackGain": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flWidth": {
+        "value": 36,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixDiffusorDesc_t": {
-    "m_flComplexity": 4,
-    "m_flFeedback": 8,
-    "m_flOutputGain": 12,
-    "m_flSize": 0
+    "data": {
+      "m_flComplexity": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flFeedback": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flOutputGain": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flSize": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixDynamics3BandDesc_t": {
-    "m_bPeakMode": 32,
-    "m_bandDesc": 36,
-    "m_flDepth": 12,
-    "m_flHighCutoffFreq": 28,
-    "m_flLowCutoffFreq": 24,
-    "m_flRMSTimeMS": 4,
-    "m_flTimeScale": 20,
-    "m_flWetMix": 16,
-    "m_fldbGainOutput": 0,
-    "m_fldbKneeWidth": 8
+    "data": {
+      "m_bPeakMode": {
+        "value": 32,
+        "comment": "bool"
+      },
+      "m_bandDesc": {
+        "value": 36,
+        "comment": "VMixDynamicsBand_t[3]"
+      },
+      "m_flDepth": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flHighCutoffFreq": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flLowCutoffFreq": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flRMSTimeMS": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flTimeScale": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flWetMix": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_fldbGainOutput": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_fldbKneeWidth": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixDynamicsBand_t": {
-    "m_bEnable": 32,
-    "m_bSolo": 33,
-    "m_flAttackTimeMS": 24,
-    "m_flRatioAbove": 20,
-    "m_flRatioBelow": 16,
-    "m_flReleaseTimeMS": 28,
-    "m_fldbGainInput": 0,
-    "m_fldbGainOutput": 4,
-    "m_fldbThresholdAbove": 12,
-    "m_fldbThresholdBelow": 8
+    "data": {
+      "m_bEnable": {
+        "value": 32,
+        "comment": "bool"
+      },
+      "m_bSolo": {
+        "value": 33,
+        "comment": "bool"
+      },
+      "m_flAttackTimeMS": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flRatioAbove": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flRatioBelow": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flReleaseTimeMS": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_fldbGainInput": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_fldbGainOutput": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_fldbThresholdAbove": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_fldbThresholdBelow": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixDynamicsCompressorDesc_t": {
-    "m_bPeakMode": 32,
-    "m_flAttackTimeMS": 16,
-    "m_flCompressionRatio": 12,
-    "m_flRMSTimeMS": 24,
-    "m_flReleaseTimeMS": 20,
-    "m_flWetMix": 28,
-    "m_fldbCompressionThreshold": 4,
-    "m_fldbKneeWidth": 8,
-    "m_fldbOutputGain": 0
+    "data": {
+      "m_bPeakMode": {
+        "value": 32,
+        "comment": "bool"
+      },
+      "m_flAttackTimeMS": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flCompressionRatio": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flRMSTimeMS": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flReleaseTimeMS": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flWetMix": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_fldbCompressionThreshold": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_fldbKneeWidth": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_fldbOutputGain": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixDynamicsDesc_t": {
-    "m_bPeakMode": 44,
-    "m_flAttackTimeMS": 28,
-    "m_flLimiterRatio": 24,
-    "m_flRMSTimeMS": 36,
-    "m_flRatio": 20,
-    "m_flReleaseTimeMS": 32,
-    "m_flWetMix": 40,
-    "m_fldbCompressionThreshold": 8,
-    "m_fldbGain": 0,
-    "m_fldbKneeWidth": 16,
-    "m_fldbLimiterThreshold": 12,
-    "m_fldbNoiseGateThreshold": 4
+    "data": {
+      "m_bPeakMode": {
+        "value": 44,
+        "comment": "bool"
+      },
+      "m_flAttackTimeMS": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flLimiterRatio": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flRMSTimeMS": {
+        "value": 36,
+        "comment": "float"
+      },
+      "m_flRatio": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flReleaseTimeMS": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flWetMix": {
+        "value": 40,
+        "comment": "float"
+      },
+      "m_fldbCompressionThreshold": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_fldbGain": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_fldbKneeWidth": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_fldbLimiterThreshold": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_fldbNoiseGateThreshold": {
+        "value": 4,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixEQ8Desc_t": {
-    "m_stages": 0
+    "data": {
+      "m_stages": {
+        "value": 0,
+        "comment": "VMixFilterDesc_t[8]"
+      }
+    },
+    "comment": null
   },
   "VMixEffectChainDesc_t": {
-    "m_flCrossfadeTime": 0
+    "data": {
+      "m_flCrossfadeTime": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixEnvelopeDesc_t": {
-    "m_flAttackTimeMS": 0,
-    "m_flHoldTimeMS": 4,
-    "m_flReleaseTimeMS": 8
+    "data": {
+      "m_flAttackTimeMS": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_flHoldTimeMS": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flReleaseTimeMS": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixFilterDesc_t": {
-    "m_bEnabled": 3,
-    "m_flCutoffFreq": 8,
-    "m_flQ": 12,
-    "m_fldbGain": 4,
-    "m_nFilterSlope": 2,
-    "m_nFilterType": 0
+    "data": {
+      "m_bEnabled": {
+        "value": 3,
+        "comment": "bool"
+      },
+      "m_flCutoffFreq": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flQ": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_fldbGain": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_nFilterSlope": {
+        "value": 2,
+        "comment": "VMixFilterSlope_t"
+      },
+      "m_nFilterType": {
+        "value": 0,
+        "comment": "VMixFilterType_t"
+      }
+    },
+    "comment": null
   },
   "VMixFreeverbDesc_t": {
-    "m_flDamp": 4,
-    "m_flLateReflections": 12,
-    "m_flRoomSize": 0,
-    "m_flWidth": 8
+    "data": {
+      "m_flDamp": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flLateReflections": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flRoomSize": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_flWidth": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixModDelayDesc_t": {
-    "m_bApplyAntialiasing": 44,
-    "m_bPhaseInvert": 16,
-    "m_feedbackFilter": 0,
-    "m_flDelay": 24,
-    "m_flFeedbackGain": 32,
-    "m_flGlideTime": 20,
-    "m_flModDepth": 40,
-    "m_flModRate": 36,
-    "m_flOutputGain": 28
+    "data": {
+      "m_bApplyAntialiasing": {
+        "value": 44,
+        "comment": "bool"
+      },
+      "m_bPhaseInvert": {
+        "value": 16,
+        "comment": "bool"
+      },
+      "m_feedbackFilter": {
+        "value": 0,
+        "comment": "VMixFilterDesc_t"
+      },
+      "m_flDelay": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flFeedbackGain": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flGlideTime": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flModDepth": {
+        "value": 40,
+        "comment": "float"
+      },
+      "m_flModRate": {
+        "value": 36,
+        "comment": "float"
+      },
+      "m_flOutputGain": {
+        "value": 28,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixOscDesc_t": {
-    "m_flPhase": 8,
-    "m_freq": 4,
-    "oscType": 0
+    "data": {
+      "m_flPhase": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_freq": {
+        "value": 4,
+        "comment": "float"
+      },
+      "oscType": {
+        "value": 0,
+        "comment": "VMixLFOShape_t"
+      }
+    },
+    "comment": null
   },
   "VMixPannerDesc_t": {
-    "m_flStrength": 4,
-    "m_type": 0
+    "data": {
+      "m_flStrength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_type": {
+        "value": 0,
+        "comment": "VMixPannerType_t"
+      }
+    },
+    "comment": null
   },
   "VMixPitchShiftDesc_t": {
-    "m_flPitchShift": 4,
-    "m_nGrainSampleCount": 0,
-    "m_nProcType": 12,
-    "m_nQuality": 8
+    "data": {
+      "m_flPitchShift": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_nGrainSampleCount": {
+        "value": 0,
+        "comment": "int32_t"
+      },
+      "m_nProcType": {
+        "value": 12,
+        "comment": "int32_t"
+      },
+      "m_nQuality": {
+        "value": 8,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "VMixPlateverbDesc_t": {
-    "m_flDamp": 16,
-    "m_flDecay": 12,
-    "m_flFeedbackDiffusion1": 20,
-    "m_flFeedbackDiffusion2": 24,
-    "m_flInputDiffusion1": 4,
-    "m_flInputDiffusion2": 8,
-    "m_flPrefilter": 0
+    "data": {
+      "m_flDamp": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flDecay": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flFeedbackDiffusion1": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flFeedbackDiffusion2": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flInputDiffusion1": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flInputDiffusion2": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flPrefilter": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "VMixShaperDesc_t": {
-    "m_flWetMix": 12,
-    "m_fldbDrive": 4,
-    "m_fldbOutputGain": 8,
-    "m_nOversampleFactor": 16,
-    "m_nShape": 0
+    "data": {
+      "m_flWetMix": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_fldbDrive": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_fldbOutputGain": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_nOversampleFactor": {
+        "value": 16,
+        "comment": "int32_t"
+      },
+      "m_nShape": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "VMixSubgraphSwitchDesc_t": {
-    "m_bOnlyTailsOnFadeOut": 4,
-    "m_flInterpolationTime": 8,
-    "m_interpolationMode": 0
+    "data": {
+      "m_bOnlyTailsOnFadeOut": {
+        "value": 4,
+        "comment": "bool"
+      },
+      "m_flInterpolationTime": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_interpolationMode": {
+        "value": 0,
+        "comment": "VMixSubgraphSwitchInterpolationType_t"
+      }
+    },
+    "comment": null
   },
   "VMixUtilityDesc_t": {
-    "m_bBassMono": 16,
-    "m_flBassFreq": 20,
-    "m_flInputPan": 4,
-    "m_flOutputBalance": 8,
-    "m_fldbOutputGain": 12,
-    "m_nOp": 0
+    "data": {
+      "m_bBassMono": {
+        "value": 16,
+        "comment": "bool"
+      },
+      "m_flBassFreq": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flInputPan": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flOutputBalance": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_fldbOutputGain": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_nOp": {
+        "value": 0,
+        "comment": "VMixChannelOperation_t"
+      }
+    },
+    "comment": null
   },
   "VMixVocoderDesc_t": {
-    "m_bPeakMode": 36,
-    "m_flAttackTimeMS": 24,
-    "m_flBandwidth": 4,
-    "m_flFreqRangeEnd": 16,
-    "m_flFreqRangeStart": 12,
-    "m_flReleaseTimeMS": 28,
-    "m_fldBModGain": 8,
-    "m_fldBUnvoicedGain": 20,
-    "m_nBandCount": 0,
-    "m_nDebugBand": 32
+    "data": {
+      "m_bPeakMode": {
+        "value": 36,
+        "comment": "bool"
+      },
+      "m_flAttackTimeMS": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flBandwidth": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flFreqRangeEnd": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flFreqRangeStart": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flReleaseTimeMS": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_fldBModGain": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_fldBUnvoicedGain": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_nBandCount": {
+        "value": 0,
+        "comment": "int32_t"
+      },
+      "m_nDebugBand": {
+        "value": 32,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   }
 }

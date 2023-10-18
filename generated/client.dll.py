@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:56.687439800 UTC
+2023-10-18 10:31:50.989492600 UTC
 '''
 
 class ActiveModelConfig_t:
@@ -50,7 +50,7 @@ class CAttributeManager_cached_attribute_float_t:
     iAttribHook = 0x8 # CUtlSymbolLarge
     flOut = 0x10 # float
 
-class CBaseAnimGraph:
+class CBaseAnimGraph: # C_BaseModelEntity
     m_bInitiallyPopulateInterpHistory = 0xCC0 # bool
     m_bShouldAnimateDuringGameplayPause = 0xCC1 # bool
     m_bSuppressAnimEventSounds = 0xCC3 # bool
@@ -65,7 +65,7 @@ class CBaseAnimGraph:
     m_bClientRagdoll = 0xD20 # bool
     m_bHasAnimatedMaterialAttributes = 0xD30 # bool
 
-class CBaseAnimGraphController:
+class CBaseAnimGraphController: # CSkeletonAnimationController
     m_baseLayer = 0x18 # CNetworkedSequenceOperation
     m_animGraphNetworkedVars = 0x40 # CAnimGraphNetworkedVariables
     m_bSequenceFinished = 0x1320 # bool
@@ -83,7 +83,7 @@ class CBaseAnimGraphController:
     m_hAnimationUpdate = 0x13E4 # AnimationUpdateListHandle_t
     m_hLastAnimEventSequence = 0x13E8 # HSequence
 
-class CBasePlayerController:
+class CBasePlayerController: # C_BaseEntity
     m_nFinalPredictedTick = 0x548 # int32_t
     m_CommandContext = 0x550 # C_CommandContext
     m_nInButtonsWhichAreToggles = 0x5D0 # uint64_t
@@ -100,7 +100,7 @@ class CBasePlayerController:
     m_bIsLocalPlayerController = 0x6A0 # bool
     m_iDesiredFOV = 0x6A4 # uint32_t
 
-class CBasePlayerVData:
+class CBasePlayerVData: # CEntitySubclassVDataBase
     m_sModelName = 0x28 # CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
     m_flHeadDamageMultiplier = 0x108 # CSkillFloat
     m_flChestDamageMultiplier = 0x118 # CSkillFloat
@@ -116,7 +116,7 @@ class CBasePlayerVData:
     m_flUseAngleTolerance = 0x170 # float
     m_flCrouchTime = 0x174 # float
 
-class CBasePlayerWeaponVData:
+class CBasePlayerWeaponVData: # CEntitySubclassVDataBase
     m_szWorldModel = 0x28 # CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
     m_bBuiltRightHanded = 0x108 # bool
     m_bAllowFlipping = 0x109 # bool
@@ -139,48 +139,72 @@ class CBasePlayerWeaponVData:
     m_iSlot = 0x238 # int32_t
     m_iPosition = 0x23C # int32_t
 
-class CBaseProp:
+class CBaseProp: # CBaseAnimGraph
     m_bModelOverrodeBlockLOS = 0xE80 # bool
     m_iShapeType = 0xE84 # int32_t
     m_bConformToCollisionBounds = 0xE88 # bool
     m_mPreferredCatchTransform = 0xE8C # matrix3x4_t
 
-class CBodyComponent:
+class CBodyComponent: # CEntityComponent
     m_pSceneNode = 0x8 # CGameSceneNode*
     __m_pChainEntity = 0x20 # CNetworkVarChainer
 
-class CBodyComponentBaseAnimGraph:
+class CBodyComponentBaseAnimGraph: # CBodyComponentSkeletonInstance
     m_animationController = 0x470 # CBaseAnimGraphController
     __m_pChainEntity = 0x18B0 # CNetworkVarChainer
 
-class CBodyComponentBaseModelEntity:
+class CBodyComponentBaseModelEntity: # CBodyComponentSkeletonInstance
     __m_pChainEntity = 0x470 # CNetworkVarChainer
 
-class CBodyComponentPoint:
+class CBodyComponentPoint: # CBodyComponent
     m_sceneNode = 0x50 # CGameSceneNode
     __m_pChainEntity = 0x1A0 # CNetworkVarChainer
 
-class CBodyComponentSkeletonInstance:
+class CBodyComponentSkeletonInstance: # CBodyComponent
     m_skeletonInstance = 0x50 # CSkeletonInstance
     __m_pChainEntity = 0x440 # CNetworkVarChainer
 
-class CBombTarget:
+class CBombTarget: # C_BaseTrigger
     m_bBombPlantedHere = 0xCC8 # bool
+
+class CBreachCharge: # C_CSWeaponBase
+
+class CBreachChargeProjectile: # C_BaseGrenade
+
+class CBumpMine: # C_CSWeaponBase
+
+class CBumpMineProjectile: # C_BaseGrenade
 
 class CBuoyancyHelper:
     m_flFluidDensity = 0x18 # float
 
+class CCSGO_WingmanIntroCharacterPosition: # C_CSGO_TeamIntroCharacterPosition
+
+class CCSGO_WingmanIntroCounterTerroristPosition: # CCSGO_WingmanIntroCharacterPosition
+
+class CCSGO_WingmanIntroTerroristPosition: # CCSGO_WingmanIntroCharacterPosition
+
 class CCSGameModeRules:
     __m_pChainEntity = 0x8 # CNetworkVarChainer
 
-class CCSGameModeRules_Deathmatch:
+class CCSGameModeRules_Deathmatch: # CCSGameModeRules
     m_bFirstThink = 0x30 # bool
     m_bFirstThinkAfterConnected = 0x31 # bool
     m_flDMBonusStartTime = 0x34 # GameTime_t
     m_flDMBonusTimeLength = 0x38 # float
     m_nDMBonusWeaponLoadoutSlot = 0x3C # int16_t
 
-class CCSObserver_ObserverServices:
+class CCSGameModeRules_Noop: # CCSGameModeRules
+
+class CCSGameModeRules_Scripted: # CCSGameModeRules
+
+class CCSGameModeScript: # CBasePulseGraphInstance
+
+class CCSObserver_CameraServices: # CCSPlayerBase_CameraServices
+
+class CCSObserver_MovementServices: # CPlayer_MovementServices
+
+class CCSObserver_ObserverServices: # CPlayer_ObserverServices
     m_hLastObserverTarget = 0x58 # CEntityHandle
     m_vecObserverInterpolateOffset = 0x5C # Vector
     m_vecObserverInterpStartPos = 0x68 # Vector
@@ -190,7 +214,11 @@ class CCSObserver_ObserverServices:
     m_obsInterpState = 0xA0 # ObserverInterpState_t
     m_bObserverInterpolationNeedsDeferredSetup = 0xA4 # bool
 
-class CCSPlayerBase_CameraServices:
+class CCSObserver_UseServices: # CPlayer_UseServices
+
+class CCSObserver_ViewModelServices: # CPlayer_ViewModelServices
+
+class CCSPlayerBase_CameraServices: # CPlayer_CameraServices
     m_iFOV = 0x210 # uint32_t
     m_iFOVStart = 0x214 # uint32_t
     m_flFOVTime = 0x218 # GameTime_t
@@ -198,7 +226,7 @@ class CCSPlayerBase_CameraServices:
     m_hZoomOwner = 0x220 # CHandle<C_BaseEntity>
     m_flLastShotFOV = 0x224 # float
 
-class CCSPlayerController:
+class CCSPlayerController: # CBasePlayerController
     m_pInGameMoneyServices = 0x6D0 # CCSPlayerController_InGameMoneyServices*
     m_pInventoryServices = 0x6D8 # CCSPlayerController_InventoryServices*
     m_pActionTrackingServices = 0x6E0 # CCSPlayerController_ActionTrackingServices*
@@ -257,25 +285,25 @@ class CCSPlayerController:
     m_iMVPs = 0x800 # int32_t
     m_bIsPlayerNameDirty = 0x804 # bool
 
-class CCSPlayerController_ActionTrackingServices:
+class CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats = 0x40 # C_UtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
     m_matchStats = 0x90 # CSMatchStats_t
     m_iNumRoundKills = 0x108 # int32_t
     m_iNumRoundKillsHeadshots = 0x10C # int32_t
     m_unTotalRoundDamageDealt = 0x110 # uint32_t
 
-class CCSPlayerController_DamageServices:
+class CCSPlayerController_DamageServices: # CPlayerControllerComponent
     m_nSendUpdate = 0x40 # int32_t
     m_DamageList = 0x48 # C_UtlVectorEmbeddedNetworkVar<CDamageRecord>
 
-class CCSPlayerController_InGameMoneyServices:
+class CCSPlayerController_InGameMoneyServices: # CPlayerControllerComponent
     m_iAccount = 0x40 # int32_t
     m_iStartAccount = 0x44 # int32_t
     m_iTotalCashSpent = 0x48 # int32_t
     m_iCashSpentThisRound = 0x4C # int32_t
     m_nPreviousAccount = 0x50 # int32_t
 
-class CCSPlayerController_InventoryServices:
+class CCSPlayerController_InventoryServices: # CPlayerControllerComponent
     m_unMusicID = 0x40 # uint16_t
     m_rank = 0x44 # MedalRank_t[6]
     m_nPersonaDataPublicLevel = 0x5C # int32_t
@@ -284,31 +312,33 @@ class CCSPlayerController_InventoryServices:
     m_nPersonaDataPublicCommendsFriendly = 0x68 # int32_t
     m_vecServerAuthoritativeWeaponSlots = 0x70 # C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
 
-class CCSPlayer_ActionTrackingServices:
+class CCSPlayer_ActionTrackingServices: # CPlayerPawnComponent
     m_hLastWeaponBeforeC4AutoSwitch = 0x40 # CHandle<C_BasePlayerWeapon>
     m_bIsRescuing = 0x44 # bool
     m_weaponPurchasesThisMatch = 0x48 # WeaponPurchaseTracker_t
     m_weaponPurchasesThisRound = 0xA0 # WeaponPurchaseTracker_t
 
-class CCSPlayer_BulletServices:
+class CCSPlayer_BulletServices: # CPlayerPawnComponent
     m_totalHitsOnServer = 0x40 # int32_t
 
-class CCSPlayer_BuyServices:
+class CCSPlayer_BuyServices: # CPlayerPawnComponent
     m_vecSellbackPurchaseEntries = 0x40 # C_UtlVectorEmbeddedNetworkVar<SellbackPurchaseEntry_t>
 
-class CCSPlayer_CameraServices:
+class CCSPlayer_CameraServices: # CCSPlayerBase_CameraServices
     m_flDeathCamTilt = 0x228 # float
 
-class CCSPlayer_HostageServices:
+class CCSPlayer_GlowServices: # CPlayerPawnComponent
+
+class CCSPlayer_HostageServices: # CPlayerPawnComponent
     m_hCarriedHostage = 0x40 # CHandle<C_BaseEntity>
     m_hCarriedHostageProp = 0x44 # CHandle<C_BaseEntity>
 
-class CCSPlayer_ItemServices:
+class CCSPlayer_ItemServices: # CPlayer_ItemServices
     m_bHasDefuser = 0x40 # bool
     m_bHasHelmet = 0x41 # bool
     m_bHasHeavyArmor = 0x42 # bool
 
-class CCSPlayer_MovementServices:
+class CCSPlayer_MovementServices: # CPlayer_MovementServices_Humanoid
     m_flMaxFallVelocity = 0x210 # float
     m_vecLadderNormal = 0x214 # Vector
     m_nLadderSurfacePropIndex = 0x220 # int32_t
@@ -346,23 +376,25 @@ class CCSPlayer_MovementServices:
     m_flStamina = 0x4D0 # float
     m_bUpdatePredictedOriginAfterDataUpdate = 0x4D4 # bool
 
-class CCSPlayer_PingServices:
+class CCSPlayer_PingServices: # CPlayerPawnComponent
     m_hPlayerPing = 0x40 # CHandle<C_BaseEntity>
 
-class CCSPlayer_ViewModelServices:
+class CCSPlayer_UseServices: # CPlayer_UseServices
+
+class CCSPlayer_ViewModelServices: # CPlayer_ViewModelServices
     m_hViewModel = 0x40 # CHandle<C_BaseViewModel>[3]
 
-class CCSPlayer_WaterServices:
+class CCSPlayer_WaterServices: # CPlayer_WaterServices
     m_flWaterJumpTime = 0x40 # float
     m_vecWaterJumpVel = 0x44 # Vector
     m_flSwimSoundTime = 0x50 # float
 
-class CCSPlayer_WeaponServices:
+class CCSPlayer_WeaponServices: # CPlayer_WeaponServices
     m_flNextAttack = 0xA8 # GameTime_t
     m_bIsLookingAtWeapon = 0xAC # bool
     m_bIsHoldingLookAtWeapon = 0xAD # bool
 
-class CCSWeaponBaseVData:
+class CCSWeaponBaseVData: # CBasePlayerWeaponVData
     m_WeaponType = 0x240 # CSWeaponType
     m_WeaponCategory = 0x244 # CSWeaponCategory
     m_szViewModel = 0x248 # CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
@@ -454,7 +486,7 @@ class CCSWeaponBaseVData:
     m_vSmokeColor = 0xD6C # Vector
     m_szAnimClass = 0xD78 # CUtlString
 
-class CClientAlphaProperty:
+class CClientAlphaProperty: # IClientAlphaProperty
     m_nRenderFX = 0x10 # uint8_t
     m_nRenderMode = 0x11 # uint8_t
     m_bAlphaOverride = 0x0 # bitfield:1
@@ -555,6 +587,8 @@ class CEffectData:
     m_iEffectName = 0x6C # uint16_t
     m_nExplosionType = 0x6E # uint8_t
 
+class CEntityComponent:
+
 class CEntityIdentity:
     m_nameStringableIndex = 0x14 # int32_t
     m_name = 0x18 # CUtlSymbolLarge
@@ -573,7 +607,7 @@ class CEntityInstance:
     m_pEntity = 0x10 # CEntityIdentity*
     m_CScriptComponent = 0x28 # CScriptComponent*
 
-class CFireOverlay:
+class CFireOverlay: # CGlowOverlay
     m_pOwner = 0xD0 # C_FireSmoke*
     m_vBaseColors = 0xD8 # Vector[4]
     m_flScale = 0x108 # float
@@ -594,7 +628,7 @@ class CFlashlightEffect:
     m_MuzzleFlashTexture = 0x68 # CStrongHandle<InfoForResourceTypeCTextureBase>
     m_textureName = 0x70 # char[64]
 
-class CFuncWater:
+class CFuncWater: # C_BaseModelEntity
     m_BuoyancyHelper = 0xCC0 # CBuoyancyHelper
 
 class CGameSceneNode:
@@ -717,25 +751,29 @@ class CGlowSprite:
     m_flVertSize = 0x10 # float
     m_hMaterial = 0x18 # CStrongHandle<InfoForResourceTypeIMaterial2>
 
-class CGrenadeTracer:
+class CGrenadeTracer: # C_BaseModelEntity
     m_flTracerDuration = 0xCE0 # float
     m_nType = 0xCE4 # GrenadeType_t
 
-class CHitboxComponent:
+class CHitboxComponent: # CEntityComponent
     m_bvDisabledHitGroups = 0x24 # uint32_t[1]
 
-class CInfoDynamicShadowHint:
+class CHostageRescueZone: # CHostageRescueZoneShim
+
+class CHostageRescueZoneShim: # C_BaseTrigger
+
+class CInfoDynamicShadowHint: # C_PointEntity
     m_bDisabled = 0x540 # bool
     m_flRange = 0x544 # float
     m_nImportance = 0x548 # int32_t
     m_nLightChoice = 0x54C # int32_t
     m_hLight = 0x550 # CHandle<C_BaseEntity>
 
-class CInfoDynamicShadowHintBox:
+class CInfoDynamicShadowHintBox: # CInfoDynamicShadowHint
     m_vBoxMins = 0x558 # Vector
     m_vBoxMaxs = 0x564 # Vector
 
-class CInfoOffscreenPanoramaTexture:
+class CInfoOffscreenPanoramaTexture: # C_PointEntity
     m_bDisabled = 0x540 # bool
     m_nResolutionX = 0x544 # int32_t
     m_nResolutionY = 0x548 # int32_t
@@ -746,7 +784,11 @@ class CInfoOffscreenPanoramaTexture:
     m_vecCSSClasses = 0x580 # C_NetworkUtlVectorBase<CUtlSymbolLarge>
     m_bCheckCSSClasses = 0x6F8 # bool
 
-class CInfoWorldLayer:
+class CInfoParticleTarget: # C_PointEntity
+
+class CInfoTarget: # C_PointEntity
+
+class CInfoWorldLayer: # C_BaseEntity
     m_pOutputOnEntitiesSpawned = 0x540 # CEntityIOOutput
     m_worldName = 0x568 # CUtlSymbolLarge
     m_layerName = 0x570 # CUtlSymbolLarge
@@ -763,7 +805,7 @@ class CInterpolatedValue:
     m_flEndValue = 0xC # float
     m_nInterpType = 0x10 # int32_t
 
-class CLightComponent:
+class CLightComponent: # CEntityComponent
     __m_pChainEntity = 0x48 # CNetworkVarChainer
     m_Color = 0x85 # Color
     m_SecondaryColor = 0x89 # Color
@@ -832,7 +874,7 @@ class CLightComponent:
     m_flCapsuleLength = 0x1B4 # float
     m_flMinRoughness = 0x1B8 # float
 
-class CLogicRelay:
+class CLogicRelay: # CLogicalEntity
     m_OnTrigger = 0x540 # CEntityIOOutput
     m_OnSpawn = 0x568 # CEntityIOOutput
     m_bDisabled = 0x590 # bool
@@ -840,6 +882,8 @@ class CLogicRelay:
     m_bTriggerOnce = 0x592 # bool
     m_bFastRetrigger = 0x593 # bool
     m_bPassthoughCaller = 0x594 # bool
+
+class CLogicalEntity: # C_BaseEntity
 
 class CModelState:
     m_hModel = 0xA0 # CStrongHandle<InfoForResourceTypeCModel>
@@ -860,7 +904,11 @@ class CNetworkedSequenceOperation:
     m_flPrevCycleFromDiscontinuity = 0x20 # float
     m_flPrevCycleForAnimEventDetection = 0x24 # float
 
-class CPlayer_CameraServices:
+class CPlayerSprayDecalRenderHelper:
+
+class CPlayer_AutoaimServices: # CPlayerPawnComponent
+
+class CPlayer_CameraServices: # CPlayerPawnComponent
     m_vecCsViewPunchAngle = 0x40 # QAngle
     m_nCsViewPunchAngleTick = 0x4C # GameTick_t
     m_flCsViewPunchAngleTickRatio = 0x50 # float
@@ -882,7 +930,11 @@ class CPlayer_CameraServices:
     m_hActivePostProcessingVolume = 0x1F4 # CHandle<C_PostProcessingVolume>
     m_angDemoViewAngles = 0x1F8 # QAngle
 
-class CPlayer_MovementServices:
+class CPlayer_FlashlightServices: # CPlayerPawnComponent
+
+class CPlayer_ItemServices: # CPlayerPawnComponent
+
+class CPlayer_MovementServices: # CPlayerPawnComponent
     m_nImpulse = 0x40 # int32_t
     m_nButtons = 0x48 # CInButtonState
     m_nQueuedButtonDownMask = 0x68 # uint64_t
@@ -899,7 +951,7 @@ class CPlayer_MovementServices:
     m_vecLastMovementImpulses = 0x1B0 # Vector
     m_vecOldViewAngles = 0x1BC # QAngle
 
-class CPlayer_MovementServices_Humanoid:
+class CPlayer_MovementServices_Humanoid: # CPlayer_MovementServices
     m_flStepSoundTime = 0x1D0 # float
     m_flFallVelocity = 0x1D4 # float
     m_bInCrouch = 0x1D8 # bool
@@ -913,7 +965,7 @@ class CPlayer_MovementServices_Humanoid:
     m_surfaceProps = 0x1F8 # CUtlStringToken
     m_nStepside = 0x208 # int32_t
 
-class CPlayer_ObserverServices:
+class CPlayer_ObserverServices: # CPlayerPawnComponent
     m_iObserverMode = 0x40 # uint8_t
     m_hObserverTarget = 0x44 # CHandle<C_BaseEntity>
     m_iObserverLastMode = 0x48 # ObserverMode_t
@@ -921,20 +973,26 @@ class CPlayer_ObserverServices:
     m_flObserverChaseDistance = 0x50 # float
     m_flObserverChaseDistanceCalcTime = 0x54 # GameTime_t
 
-class CPlayer_WeaponServices:
+class CPlayer_UseServices: # CPlayerPawnComponent
+
+class CPlayer_ViewModelServices: # CPlayerPawnComponent
+
+class CPlayer_WaterServices: # CPlayerPawnComponent
+
+class CPlayer_WeaponServices: # CPlayerPawnComponent
     m_bAllowSwitchToNoWeapon = 0x40 # bool
     m_hMyWeapons = 0x48 # C_NetworkUtlVectorBase<CHandle<C_BasePlayerWeapon>>
     m_hActiveWeapon = 0x60 # CHandle<C_BasePlayerWeapon>
     m_hLastWeapon = 0x64 # CHandle<C_BasePlayerWeapon>
     m_iAmmo = 0x68 # uint16_t[32]
 
-class CPointOffScreenIndicatorUi:
+class CPointOffScreenIndicatorUi: # C_PointClientUIWorldPanel
     m_bBeenEnabled = 0xF20 # bool
     m_bHide = 0xF21 # bool
     m_flSeenTargetTime = 0xF24 # float
     m_pTargetPanel = 0xF28 # C_PointClientUIWorldPanel*
 
-class CPointTemplate:
+class CPointTemplate: # CLogicalEntity
     m_iszWorldName = 0x540 # CUtlSymbolLarge
     m_iszSource2EntityLumpName = 0x548 # CUtlSymbolLarge
     m_iszEntityFilterName = 0x550 # CUtlSymbolLarge
@@ -948,7 +1006,7 @@ class CPointTemplate:
     m_ScriptSpawnCallback = 0x5C0 # HSCRIPT
     m_ScriptCallbackScope = 0x5C8 # HSCRIPT
 
-class CPrecipitationVData:
+class CPrecipitationVData: # CEntitySubclassVDataBase
     m_szParticlePrecipitationEffect = 0x28 # CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
     m_flInnerDistance = 0x108 # float
     m_nAttachType = 0x10C # ParticleAttachment_t
@@ -989,14 +1047,14 @@ class CProjectedTextureBase:
     m_flRotation = 0x268 # float
     m_bFlipHorizontal = 0x26C # bool
 
-class CRenderComponent:
+class CRenderComponent: # CEntityComponent
     __m_pChainEntity = 0x10 # CNetworkVarChainer
     m_bIsRenderingWithViewModels = 0x50 # bool
     m_nSplitscreenFlags = 0x54 # uint32_t
     m_bEnableRendering = 0x60 # bool
     m_bInterpolationReadyToDraw = 0xB0 # bool
 
-class CSMatchStats_t:
+class CSMatchStats_t: # CSPerRoundStats_t
     m_iEnemy5Ks = 0x68 # int32_t
     m_iEnemy4Ks = 0x6C # int32_t
     m_iEnemy3Ks = 0x70 # int32_t
@@ -1016,10 +1074,12 @@ class CSPerRoundStats_t:
     m_iUtilityDamage = 0x5C # int32_t
     m_iEnemiesFlashed = 0x60 # int32_t
 
-class CScriptComponent:
+class CScriptComponent: # CEntityComponent
     m_scriptClassName = 0x30 # CUtlSymbolLarge
 
-class CSkeletonInstance:
+class CServerOnlyModelEntity: # C_BaseModelEntity
+
+class CSkeletonInstance: # CGameSceneNode
     m_modelState = 0x160 # CModelState
     m_bIsAnimationEnabled = 0x390 # bool
     m_bUseParentRenderBounds = 0x391 # bool
@@ -1029,11 +1089,13 @@ class CSkeletonInstance:
     m_materialGroup = 0x394 # CUtlStringToken
     m_nHitboxSet = 0x398 # uint8_t
 
-class CSkyboxReference:
+class CSkyboxReference: # C_BaseEntity
     m_worldGroupId = 0x540 # WorldGroupId_t
     m_hSkyCamera = 0x544 # CHandle<C_SkyCamera>
 
-class CTimeline:
+class CTablet: # C_CSWeaponBase
+
+class CTimeline: # IntervalTimer
     m_flValues = 0x10 # float[64]
     m_nValueCounts = 0x110 # int32_t[64]
     m_nBucketCount = 0x210 # int32_t
@@ -1042,12 +1104,22 @@ class CTimeline:
     m_nCompressionType = 0x21C # TimelineCompression_t
     m_bStopped = 0x220 # bool
 
-class C_AttributeContainer:
+class CTripWireFire: # C_BaseCSGrenade
+
+class CTripWireFireProjectile: # C_BaseGrenade
+
+class CWaterSplasher: # C_BaseModelEntity
+
+class CWeaponZoneRepulsor: # C_CSWeaponBaseGun
+
+class C_AK47: # C_CSWeaponBaseGun
+
+class C_AttributeContainer: # CAttributeManager
     m_Item = 0x50 # C_EconItemView
     m_iExternalItemProviderRegisteredToken = 0x498 # int32_t
     m_ullRegisteredAsItemID = 0x4A0 # uint64_t
 
-class C_BarnLight:
+class C_BarnLight: # C_BaseModelEntity
     m_bEnabled = 0xCC0 # bool
     m_nColorMode = 0xCC4 # int32_t
     m_Color = 0xCC8 # Color
@@ -1100,12 +1172,12 @@ class C_BarnLight:
     m_vPrecomputedOBBAngles = 0xEA4 # QAngle
     m_vPrecomputedOBBExtent = 0xEB0 # Vector
 
-class C_BaseButton:
+class C_BaseButton: # C_BaseToggle
     m_glowEntity = 0xCC0 # CHandle<C_BaseModelEntity>
     m_usable = 0xCC4 # bool
     m_szDisplayText = 0xCC8 # CUtlSymbolLarge
 
-class C_BaseCSGrenade:
+class C_BaseCSGrenade: # C_CSWeaponBase
     m_bClientPredictDelete = 0x1940 # bool
     m_bRedraw = 0x1968 # bool
     m_bIsHeldByPlayer = 0x1969 # bool
@@ -1117,7 +1189,7 @@ class C_BaseCSGrenade:
     m_flThrowStrengthApproach = 0x1978 # float
     m_fDropTime = 0x197C # GameTime_t
 
-class C_BaseCSGrenadeProjectile:
+class C_BaseCSGrenadeProjectile: # C_BaseGrenade
     m_vInitialVelocity = 0x1068 # Vector
     m_nBounces = 0x1074 # int32_t
     m_nExplodeEffectIndex = 0x1078 # CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
@@ -1134,13 +1206,13 @@ class C_BaseCSGrenadeProjectile:
     m_arrTrajectoryTrailPointCreationTimes = 0x10D0 # CUtlVector<float>
     m_flTrajectoryTrailEffectCreationTime = 0x10E8 # float
 
-class C_BaseClientUIEntity:
+class C_BaseClientUIEntity: # C_BaseModelEntity
     m_bEnabled = 0xCC8 # bool
     m_DialogXMLName = 0xCD0 # CUtlSymbolLarge
     m_PanelClassName = 0xCD8 # CUtlSymbolLarge
     m_PanelID = 0xCE0 # CUtlSymbolLarge
 
-class C_BaseCombatCharacter:
+class C_BaseCombatCharacter: # C_BaseFlex
     m_hMyWearables = 0x1018 # C_NetworkUtlVectorBase<CHandle<C_EconWearable>>
     m_bloodColor = 0x1030 # int32_t
     m_leftFootAttachment = 0x1034 # AttachmentHandle_t
@@ -1150,10 +1222,10 @@ class C_BaseCombatCharacter:
     m_flWaterNextTraceTime = 0x1040 # float
     m_flFieldOfView = 0x1044 # float
 
-class C_BaseDoor:
+class C_BaseDoor: # C_BaseToggle
     m_bIsUsable = 0xCC0 # bool
 
-class C_BaseEntity:
+class C_BaseEntity: # CEntityInstance
     m_CBodyComponent = 0x30 # CBodyComponent*
     m_NetworkTransmitComponent = 0x38 # CNetworkTransmitComponent
     m_nLastThinkTick = 0x308 # GameTick_t
@@ -1233,13 +1305,13 @@ class C_BaseEntity:
     m_bSimulationTimeChanged = 0x52A # bool
     m_sUniqueHammerID = 0x538 # CUtlString
 
-class C_BaseFire:
+class C_BaseFire: # C_BaseEntity
     m_flScale = 0x540 # float
     m_flStartScale = 0x544 # float
     m_flScaleTime = 0x548 # float
     m_nFlags = 0x54C # uint32_t
 
-class C_BaseFlex:
+class C_BaseFlex: # CBaseAnimGraph
     m_flexWeight = 0xE90 # C_NetworkUtlVectorBase<float>
     m_vLookTargetPosition = 0xEA8 # Vector
     m_blinktoggle = 0xEC0 # bool
@@ -1267,7 +1339,7 @@ class C_BaseFlex_Emphasized_Phoneme:
     m_bBasechecked = 0x1D # bool
     m_bValid = 0x1E # bool
 
-class C_BaseGrenade:
+class C_BaseGrenade: # C_BaseFlex
     m_bHasWarnedAI = 0x1018 # bool
     m_bIsSmokeGrenade = 0x1019 # bool
     m_bIsLive = 0x101A # bool
@@ -1281,7 +1353,7 @@ class C_BaseGrenade:
     m_flNextAttack = 0x105C # GameTime_t
     m_hOriginalThrower = 0x1060 # CHandle<C_CSPlayerPawn>
 
-class C_BaseModelEntity:
+class C_BaseModelEntity: # C_BaseEntity
     m_CRenderComponent = 0xA10 # CRenderComponent*
     m_CHitboxComponent = 0xA18 # CHitboxComponent
     m_bInitModelEffects = 0xA60 # bool
@@ -1315,7 +1387,7 @@ class C_BaseModelEntity:
     m_ClientOverrideTint = 0xC80 # Color
     m_bUseClientOverrideTint = 0xC84 # bool
 
-class C_BasePlayerPawn:
+class C_BasePlayerPawn: # C_BaseCombatCharacter
     m_pWeaponServices = 0x10A8 # CPlayer_WeaponServices*
     m_pItemServices = 0x10B0 # CPlayer_ItemServices*
     m_pAutoaimServices = 0x10B8 # CPlayer_AutoaimServices*
@@ -1343,7 +1415,7 @@ class C_BasePlayerPawn:
     m_hController = 0x122C # CHandle<CBasePlayerController>
     m_bIsSwappingToPredictableController = 0x1230 # bool
 
-class C_BasePlayerWeapon:
+class C_BasePlayerWeapon: # C_EconEntity
     m_nNextPrimaryAttackTick = 0x1560 # GameTick_t
     m_flNextPrimaryAttackTickRatio = 0x1564 # float
     m_nNextSecondaryAttackTick = 0x1568 # GameTick_t
@@ -1352,7 +1424,7 @@ class C_BasePlayerWeapon:
     m_iClip2 = 0x1574 # int32_t
     m_pReserveAmmo = 0x1578 # int32_t[2]
 
-class C_BasePropDoor:
+class C_BasePropDoor: # C_DynamicProp
     m_eDoorState = 0x10F8 # DoorState_t
     m_modelChanged = 0x10FC # bool
     m_bLocked = 0x10FD # bool
@@ -1361,11 +1433,13 @@ class C_BasePropDoor:
     m_hMaster = 0x1118 # CHandle<C_BasePropDoor>
     m_vWhereToSetLightingOrigin = 0x111C # Vector
 
-class C_BaseTrigger:
+class C_BaseToggle: # C_BaseModelEntity
+
+class C_BaseTrigger: # C_BaseToggle
     m_bDisabled = 0xCC0 # bool
     m_bClientSidePredicted = 0xCC1 # bool
 
-class C_BaseViewModel:
+class C_BaseViewModel: # CBaseAnimGraph
     m_vecLastFacing = 0xE88 # Vector
     m_nViewModelIndex = 0xE94 # uint32_t
     m_nAnimationParity = 0xE98 # uint32_t
@@ -1384,7 +1458,7 @@ class C_BaseViewModel:
     m_oldLayerStartTime = 0xEE0 # float
     m_hControlPanel = 0xEE4 # CHandle<C_BaseEntity>
 
-class C_Beam:
+class C_Beam: # C_BaseModelEntity
     m_flFrameRate = 0xCC0 # float
     m_flHDRColorScale = 0xCC4 # float
     m_flFireTime = 0xCC8 # GameTime_t
@@ -1410,7 +1484,9 @@ class C_Beam:
     m_vecEndPos = 0xD6C # Vector
     m_hEndEntity = 0xD78 # CHandle<C_BaseEntity>
 
-class C_BreakableProp:
+class C_Breakable: # C_BaseModelEntity
+
+class C_BreakableProp: # CBaseProp
     m_OnBreak = 0xEC8 # CEntityIOOutput
     m_OnHealthChanged = 0xEF0 # CEntityOutputTemplate<float>
     m_OnTakeDamage = 0xF18 # CEntityIOOutput
@@ -1442,7 +1518,7 @@ class C_BreakableProp:
     m_hFlareEnt = 0xFC8 # CHandle<C_BaseEntity>
     m_noGhostCollision = 0xFCC # bool
 
-class C_BulletHitModel:
+class C_BulletHitModel: # CBaseAnimGraph
     m_matLocal = 0xE80 # matrix3x4_t
     m_iBoneIndex = 0xEB0 # int32_t
     m_hPlayerParent = 0xEB4 # CHandle<C_BaseEntity>
@@ -1450,7 +1526,7 @@ class C_BulletHitModel:
     m_flTimeCreated = 0xEBC # float
     m_vecStartPos = 0xEC0 # Vector
 
-class C_C4:
+class C_C4: # C_CSWeaponBase
     m_szScreenText = 0x1940 # char[32]
     m_bombdroppedlightParticleIndex = 0x1960 # ParticleIndex_t
     m_bStartedArming = 0x1964 # bool
@@ -1463,7 +1539,7 @@ class C_C4:
     m_bBombPlanted = 0x1993 # bool
     m_bDroppedFromDeath = 0x1994 # bool
 
-class C_CSGOViewModel:
+class C_CSGOViewModel: # C_PredictedViewModel
     m_bShouldIgnoreOffsetAndAccuracy = 0xF10 # bool
     m_nWeaponParity = 0xF14 # uint32_t
     m_nOldWeaponParity = 0xF18 # uint32_t
@@ -1471,7 +1547,21 @@ class C_CSGOViewModel:
     m_bNeedToQueueHighResComposite = 0xF20 # bool
     m_vLoweredWeaponOffset = 0xF64 # QAngle
 
-class C_CSGO_MapPreviewCameraPath:
+class C_CSGO_CounterTerroristTeamIntroCamera: # C_CSGO_TeamPreviewCamera
+
+class C_CSGO_CounterTerroristWingmanIntroCamera: # C_CSGO_TeamPreviewCamera
+
+class C_CSGO_EndOfMatchCamera: # C_CSGO_TeamPreviewCamera
+
+class C_CSGO_EndOfMatchCharacterPosition: # C_CSGO_TeamPreviewCharacterPosition
+
+class C_CSGO_EndOfMatchLineupEnd: # C_CSGO_EndOfMatchLineupEndpoint
+
+class C_CSGO_EndOfMatchLineupEndpoint: # C_BaseEntity
+
+class C_CSGO_EndOfMatchLineupStart: # C_CSGO_EndOfMatchLineupEndpoint
+
+class C_CSGO_MapPreviewCameraPath: # C_BaseEntity
     m_flZFar = 0x540 # float
     m_flZNear = 0x544 # float
     m_bLoop = 0x548 # bool
@@ -1481,7 +1571,7 @@ class C_CSGO_MapPreviewCameraPath:
     m_flPathLength = 0x590 # float
     m_flPathDuration = 0x594 # float
 
-class C_CSGO_MapPreviewCameraPathNode:
+class C_CSGO_MapPreviewCameraPathNode: # C_BaseEntity
     m_szParentPathUniqueID = 0x540 # CUtlSymbolLarge
     m_nPathIndex = 0x548 # int32_t
     m_vInTangentLocal = 0x54C # Vector
@@ -1493,19 +1583,29 @@ class C_CSGO_MapPreviewCameraPathNode:
     m_vInTangentWorld = 0x574 # Vector
     m_vOutTangentWorld = 0x580 # Vector
 
-class C_CSGO_PreviewModel:
+class C_CSGO_PreviewModel: # C_BaseFlex
     m_animgraph = 0x1018 # CUtlString
     m_animgraphCharacterModeString = 0x1020 # CUtlString
     m_defaultAnim = 0x1028 # CUtlString
     m_nDefaultAnimLoopMode = 0x1030 # AnimLoopMode_t
     m_flInitialModelScale = 0x1034 # float
 
-class C_CSGO_PreviewPlayer:
+class C_CSGO_PreviewModelAlias_csgo_item_previewmodel: # C_CSGO_PreviewModel
+
+class C_CSGO_PreviewPlayer: # C_CSPlayerPawn
     m_animgraph = 0x22C0 # CUtlString
     m_animgraphCharacterModeString = 0x22C8 # CUtlString
     m_flInitialModelScale = 0x22D0 # float
 
-class C_CSGO_TeamPreviewCamera:
+class C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel: # C_CSGO_PreviewPlayer
+
+class C_CSGO_TeamIntroCharacterPosition: # C_CSGO_TeamPreviewCharacterPosition
+
+class C_CSGO_TeamIntroCounterTerroristPosition: # C_CSGO_TeamIntroCharacterPosition
+
+class C_CSGO_TeamIntroTerroristPosition: # C_CSGO_TeamIntroCharacterPosition
+
+class C_CSGO_TeamPreviewCamera: # C_CSGO_MapPreviewCameraPath
     m_nVariant = 0x5A0 # int32_t
     m_bDofEnabled = 0x5A4 # bool
     m_flDofNearBlurry = 0x5A8 # float
@@ -1514,7 +1614,7 @@ class C_CSGO_TeamPreviewCamera:
     m_flDofFarBlurry = 0x5B4 # float
     m_flDofTiltToGround = 0x5B8 # float
 
-class C_CSGO_TeamPreviewCharacterPosition:
+class C_CSGO_TeamPreviewCharacterPosition: # C_BaseEntity
     m_nVariant = 0x540 # int32_t
     m_nRandom = 0x544 # int32_t
     m_nOrdinal = 0x548 # int32_t
@@ -1524,7 +1624,21 @@ class C_CSGO_TeamPreviewCharacterPosition:
     m_glovesItem = 0x9A8 # C_EconItemView
     m_weaponItem = 0xDF0 # C_EconItemView
 
-class C_CSGameRules:
+class C_CSGO_TeamPreviewModel: # C_CSGO_PreviewPlayer
+
+class C_CSGO_TeamSelectCamera: # C_CSGO_TeamPreviewCamera
+
+class C_CSGO_TeamSelectCharacterPosition: # C_CSGO_TeamPreviewCharacterPosition
+
+class C_CSGO_TeamSelectCounterTerroristPosition: # C_CSGO_TeamSelectCharacterPosition
+
+class C_CSGO_TeamSelectTerroristPosition: # C_CSGO_TeamSelectCharacterPosition
+
+class C_CSGO_TerroristTeamIntroCamera: # C_CSGO_TeamPreviewCamera
+
+class C_CSGO_TerroristWingmanIntroCamera: # C_CSGO_TeamPreviewCamera
+
+class C_CSGameRules: # C_TeamplayRules
     __m_pChainEntity = 0x8 # CNetworkVarChainer
     m_bFreezePeriod = 0x30 # bool
     m_bWarmupPeriod = 0x31 # bool
@@ -1627,13 +1741,15 @@ class C_CSGameRules:
     m_bTeamIntroPeriod = 0xEB4 # bool
     m_flLastPerfSampleTime = 0x4EC0 # double
 
-class C_CSGameRulesProxy:
+class C_CSGameRulesProxy: # C_GameRulesProxy
     m_pGameRules = 0x540 # C_CSGameRules*
 
-class C_CSObserverPawn:
+class C_CSMinimapBoundary: # C_BaseEntity
+
+class C_CSObserverPawn: # C_CSPlayerPawnBase
     m_hDetectParentChange = 0x1698 # CEntityHandle
 
-class C_CSPlayerPawn:
+class C_CSPlayerPawn: # C_CSPlayerPawnBase
     m_pBulletServices = 0x1698 # CCSPlayer_BulletServices*
     m_pHostageServices = 0x16A0 # CCSPlayer_HostageServices*
     m_pBuyServices = 0x16A8 # CCSPlayer_BuyServices*
@@ -1685,7 +1801,7 @@ class C_CSPlayerPawn:
     m_qDeathEyeAngles = 0x22AC # QAngle
     m_bSkipOneHeadConstraintUpdate = 0x22B8 # bool
 
-class C_CSPlayerPawnBase:
+class C_CSPlayerPawnBase: # C_BasePlayerPawn
     m_pPingServices = 0x1250 # CCSPlayer_PingServices*
     m_pViewModelServices = 0x1258 # CPlayer_ViewModelServices*
     m_fRenderingClipPlane = 0x1260 # float[4]
@@ -1827,7 +1943,7 @@ class C_CSPlayerPawnBase:
     m_bKilledByHeadshot = 0x1648 # bool
     m_hOriginalController = 0x164C # CHandle<CCSPlayerController>
 
-class C_CSPlayerResource:
+class C_CSPlayerResource: # C_BaseEntity
     m_bHostageAlive = 0x540 # bool[12]
     m_isHostageFollowingSomeone = 0x54C # bool[12]
     m_iHostageEntityIDs = 0x558 # CEntityIndex[12]
@@ -1839,7 +1955,7 @@ class C_CSPlayerResource:
     m_bEndMatchNextMapAllVoted = 0x5D0 # bool
     m_foundGoalPositions = 0x5D1 # bool
 
-class C_CSTeam:
+class C_CSTeam: # C_Team
     m_szTeamMatchStat = 0x5F8 # char[512]
     m_numMapVictories = 0x7F8 # int32_t
     m_bSurrendered = 0x7FC # bool
@@ -1851,7 +1967,7 @@ class C_CSTeam:
     m_szTeamFlagImage = 0x894 # char[8]
     m_szTeamLogoImage = 0x89C # char[8]
 
-class C_CSWeaponBase:
+class C_CSWeaponBase: # C_BasePlayerWeapon
     m_flFireSequenceStartTime = 0x15D0 # float
     m_nFireSequenceStartTimeChange = 0x15D4 # int32_t
     m_nFireSequenceStartTimeAck = 0x15D8 # int32_t
@@ -1914,7 +2030,7 @@ class C_CSWeaponBase:
     m_flLastLOSTraceFailureTime = 0x1900 # GameTime_t
     m_iNumEmptyAttacks = 0x1904 # int32_t
 
-class C_CSWeaponBaseGun:
+class C_CSWeaponBaseGun: # C_CSWeaponBase
     m_zoomLevel = 0x1940 # int32_t
     m_iBurstShotsRemaining = 0x1944 # int32_t
     m_iSilencerBodygroup = 0x1948 # int32_t
@@ -1922,7 +2038,7 @@ class C_CSWeaponBaseGun:
     m_inPrecache = 0x195C # bool
     m_bNeedsBoltAction = 0x195D # bool
 
-class C_Chicken:
+class C_Chicken: # C_DynamicProp
     m_hHolidayHatAddon = 0x10F0 # CHandle<CBaseAnimGraph>
     m_jumpedThisFrame = 0x10F4 # bool
     m_leader = 0x10F8 # CHandle<C_CSPlayerPawnBase>
@@ -1932,7 +2048,7 @@ class C_Chicken:
     m_bAttributesInitialized = 0x15B0 # bool
     m_hWaterWakeParticles = 0x15B4 # ParticleIndex_t
 
-class C_ClientRagdoll:
+class C_ClientRagdoll: # CBaseAnimGraph
     m_bFadeOut = 0xE80 # bool
     m_bImportant = 0xE81 # bool
     m_flEffectTime = 0xE84 # GameTime_t
@@ -1948,7 +2064,7 @@ class C_ClientRagdoll:
     m_flScaleTimeStart = 0xEC8 # GameTime_t[10]
     m_flScaleTimeEnd = 0xEF0 # GameTime_t[10]
 
-class C_ColorCorrection:
+class C_ColorCorrection: # C_BaseEntity
     m_vecOrigin = 0x540 # Vector
     m_MinFalloff = 0x54C # float
     m_MaxFalloff = 0x550 # float
@@ -1968,7 +2084,7 @@ class C_ColorCorrection:
     m_flFadeStartTime = 0x778 # float[1]
     m_flFadeDuration = 0x77C # float[1]
 
-class C_ColorCorrectionVolume:
+class C_ColorCorrectionVolume: # C_BaseTrigger
     m_LastEnterWeight = 0xCC8 # float
     m_LastEnterTime = 0xCCC # float
     m_LastExitWeight = 0xCD0 # float
@@ -1983,14 +2099,18 @@ class C_CommandContext:
     needsprocessing = 0x0 # bool
     command_number = 0x78 # int32_t
 
-class C_CsmFovOverride:
+class C_CsmFovOverride: # C_BaseEntity
     m_cameraName = 0x540 # CUtlString
     m_flCsmFovOverrideValue = 0x548 # float
 
-class C_DecoyProjectile:
+class C_DEagle: # C_CSWeaponBaseGun
+
+class C_DecoyGrenade: # C_BaseCSGrenade
+
+class C_DecoyProjectile: # C_BaseCSGrenadeProjectile
     m_flTimeParticleEffectSpawn = 0x1110 # GameTime_t
 
-class C_DynamicLight:
+class C_DynamicLight: # C_BaseModelEntity
     m_Flags = 0xCC0 # uint8_t
     m_LightStyle = 0xCC1 # uint8_t
     m_Radius = 0xCC4 # float
@@ -1999,7 +2119,7 @@ class C_DynamicLight:
     m_OuterAngle = 0xCD0 # float
     m_SpotRadius = 0xCD4 # float
 
-class C_DynamicProp:
+class C_DynamicProp: # C_BreakableProp
     m_bUseHitboxesForRenderBox = 0xFD0 # bool
     m_bUseAnimGraph = 0xFD1 # bool
     m_pOutputAnimBegun = 0xFD8 # CEntityIOOutput
@@ -2026,7 +2146,13 @@ class C_DynamicProp:
     m_vecCachedRenderMins = 0x10CC # Vector
     m_vecCachedRenderMaxs = 0x10D8 # Vector
 
-class C_EconEntity:
+class C_DynamicPropAlias_cable_dynamic: # C_DynamicProp
+
+class C_DynamicPropAlias_dynamic_prop: # C_DynamicProp
+
+class C_DynamicPropAlias_prop_dynamic_override: # C_DynamicProp
+
+class C_EconEntity: # C_BaseFlex
     m_flFlexDelayTime = 0x1028 # float
     m_flFlexDelayedWeight = 0x1030 # float*
     m_bAttributesInitialized = 0x1038 # bool
@@ -2051,7 +2177,7 @@ class C_EconEntity:
 class C_EconEntity_AttachedModelData_t:
     m_iModelDisplayFlags = 0x0 # int32_t
 
-class C_EconItemView:
+class C_EconItemView: # IEconItemInterface
     m_bInventoryImageRgbaRequested = 0x60 # bool
     m_bInventoryImageTriedCache = 0x61 # bool
     m_nInventoryImageRgbaWidth = 0x80 # int32_t
@@ -2080,11 +2206,11 @@ class C_EconItemView:
     m_szCustomNameOverride = 0x371 # char[161]
     m_bInitializedTags = 0x440 # bool
 
-class C_EconWearable:
+class C_EconWearable: # C_EconEntity
     m_nForceSkin = 0x1560 # int32_t
     m_bAlwaysAllow = 0x1564 # bool
 
-class C_EntityDissolve:
+class C_EntityDissolve: # C_BaseModelEntity
     m_flStartTime = 0xCC8 # GameTime_t
     m_flFadeInStart = 0xCCC # float
     m_flFadeInLength = 0xCD0 # float
@@ -2099,12 +2225,12 @@ class C_EntityDissolve:
     m_bCoreExplode = 0xCFC # bool
     m_bLinkedToServerEnt = 0xCFD # bool
 
-class C_EntityFlame:
+class C_EntityFlame: # C_BaseEntity
     m_hEntAttached = 0x540 # CHandle<C_BaseEntity>
     m_hOldAttached = 0x568 # CHandle<C_BaseEntity>
     m_bCheapEffect = 0x56C # bool
 
-class C_EnvCombinedLightProbeVolume:
+class C_EnvCombinedLightProbeVolume: # C_BaseEntity
     m_Color = 0x15A8 # Color
     m_flBrightness = 0x15AC # float
     m_hCubemapTexture = 0x15B0 # CStrongHandle<InfoForResourceTypeCTextureBase>
@@ -2131,7 +2257,7 @@ class C_EnvCombinedLightProbeVolume:
     m_nLightProbeAtlasZ = 0x1638 # int32_t
     m_bEnabled = 0x1651 # bool
 
-class C_EnvCubemap:
+class C_EnvCubemap: # C_BaseEntity
     m_hCubemapTexture = 0x5C8 # CStrongHandle<InfoForResourceTypeCTextureBase>
     m_bCustomCubemapTexture = 0x5D0 # bool
     m_flInfluenceRadius = 0x5D4 # float
@@ -2152,7 +2278,9 @@ class C_EnvCubemap:
     m_bCopyDiffuseFromDefaultCubemap = 0x620 # bool
     m_bEnabled = 0x630 # bool
 
-class C_EnvCubemapFog:
+class C_EnvCubemapBox: # C_EnvCubemap
+
+class C_EnvCubemapFog: # C_BaseEntity
     m_flEndDistance = 0x540 # float
     m_flStartDistance = 0x544 # float
     m_flFogFalloffExponent = 0x548 # float
@@ -2172,7 +2300,7 @@ class C_EnvCubemapFog:
     m_bHasHeightFogEnd = 0x588 # bool
     m_bFirstTime = 0x589 # bool
 
-class C_EnvDecal:
+class C_EnvDecal: # C_BaseModelEntity
     m_hDecalMaterial = 0xCC0 # CStrongHandle<InfoForResourceTypeIMaterial2>
     m_flWidth = 0xCC8 # float
     m_flHeight = 0xCCC # float
@@ -2183,11 +2311,11 @@ class C_EnvDecal:
     m_bProjectOnWater = 0xCDA # bool
     m_flDepthSortBias = 0xCDC # float
 
-class C_EnvDetailController:
+class C_EnvDetailController: # C_BaseEntity
     m_flFadeStartDist = 0x540 # float
     m_flFadeEndDist = 0x544 # float
 
-class C_EnvLightProbeVolume:
+class C_EnvLightProbeVolume: # C_BaseEntity
     m_hLightProbeTexture = 0x1520 # CStrongHandle<InfoForResourceTypeCTextureBase>
     m_hLightProbeDirectLightIndicesTexture = 0x1528 # CStrongHandle<InfoForResourceTypeCTextureBase>
     m_hLightProbeDirectLightScalarsTexture = 0x1530 # CStrongHandle<InfoForResourceTypeCTextureBase>
@@ -2207,14 +2335,16 @@ class C_EnvLightProbeVolume:
     m_nLightProbeAtlasZ = 0x1584 # int32_t
     m_bEnabled = 0x1591 # bool
 
-class C_EnvParticleGlow:
+class C_EnvParticleGlow: # C_ParticleSystem
     m_flAlphaScale = 0x1270 # float
     m_flRadiusScale = 0x1274 # float
     m_flSelfIllumScale = 0x1278 # float
     m_ColorTint = 0x127C # Color
     m_hTextureOverride = 0x1280 # CStrongHandle<InfoForResourceTypeCTextureBase>
 
-class C_EnvScreenOverlay:
+class C_EnvProjectedTexture: # C_ModelPointEntity
+
+class C_EnvScreenOverlay: # C_PointEntity
     m_iszOverlayNames = 0x540 # CUtlSymbolLarge[10]
     m_flOverlayTimes = 0x590 # float[10]
     m_flStartTime = 0x5B8 # GameTime_t
@@ -2225,7 +2355,7 @@ class C_EnvScreenOverlay:
     m_iCurrentOverlay = 0x5C8 # int32_t
     m_flCurrentOverlayTime = 0x5CC # GameTime_t
 
-class C_EnvSky:
+class C_EnvSky: # C_BaseModelEntity
     m_hSkyMaterial = 0xCC0 # CStrongHandle<InfoForResourceTypeIMaterial2>
     m_hSkyMaterialLightingOnly = 0xCC8 # CStrongHandle<InfoForResourceTypeIMaterial2>
     m_bStartDisabled = 0xCD0 # bool
@@ -2239,7 +2369,7 @@ class C_EnvSky:
     m_flFogMaxEnd = 0xCF0 # float
     m_bEnabled = 0xCF4 # bool
 
-class C_EnvVolumetricFogController:
+class C_EnvVolumetricFogController: # C_BaseEntity
     m_flScattering = 0x540 # float
     m_flAnisotropy = 0x544 # float
     m_flFadeSpeed = 0x548 # float
@@ -2269,7 +2399,7 @@ class C_EnvVolumetricFogController:
     m_nForceRefreshCount = 0x5B8 # int32_t
     m_bFirstTime = 0x5BC # bool
 
-class C_EnvVolumetricFogVolume:
+class C_EnvVolumetricFogVolume: # C_BaseEntity
     m_bActive = 0x540 # bool
     m_vBoxMins = 0x544 # Vector
     m_vBoxMaxs = 0x550 # Vector
@@ -2278,10 +2408,10 @@ class C_EnvVolumetricFogVolume:
     m_nFalloffShape = 0x564 # int32_t
     m_flFalloffExponent = 0x568 # float
 
-class C_EnvWind:
+class C_EnvWind: # C_BaseEntity
     m_EnvWindShared = 0x540 # C_EnvWindShared
 
-class C_EnvWindClientside:
+class C_EnvWindClientside: # C_BaseEntity
     m_EnvWindShared = 0x540 # C_EnvWindShared
 
 class C_EnvWindShared:
@@ -2323,7 +2453,11 @@ class C_EnvWindShared_WindVariationEvent_t:
     m_flWindAngleVariation = 0x0 # float
     m_flWindSpeedVariation = 0x4 # float
 
-class C_FireSmoke:
+class C_FireCrackerBlast: # C_Inferno
+
+class C_FireFromAboveSprite: # C_Sprite
+
+class C_FireSmoke: # C_BaseFire
     m_nFlameModelIndex = 0x550 # int32_t
     m_nFlameFromAboveModelIndex = 0x554 # int32_t
     m_flScaleRegister = 0x558 # float
@@ -2338,11 +2472,11 @@ class C_FireSmoke:
     m_tParticleSpawn = 0x588 # TimedEvent
     m_pFireOverlay = 0x590 # CFireOverlay*
 
-class C_FireSprite:
+class C_FireSprite: # C_Sprite
     m_vecMoveDir = 0xDF0 # Vector
     m_bFadeFromAbove = 0xDFC # bool
 
-class C_Fish:
+class C_Fish: # CBaseAnimGraph
     m_pos = 0xE80 # Vector
     m_vel = 0xE8C # Vector
     m_angles = 0xE98 # QAngle
@@ -2367,20 +2501,26 @@ class C_Fish:
     m_errorHistoryCount = 0xF68 # int32_t
     m_averageError = 0xF6C # float
 
-class C_Fists:
+class C_Fists: # C_CSWeaponBase
     m_bPlayingUninterruptableAct = 0x1940 # bool
     m_nUninterruptableActivity = 0x1944 # PlayerAnimEvent_t
 
-class C_FogController:
+class C_Flashbang: # C_BaseCSGrenade
+
+class C_FlashbangProjectile: # C_BaseCSGrenadeProjectile
+
+class C_FogController: # C_BaseEntity
     m_fog = 0x540 # fogparams_t
     m_bUseAngles = 0x5A8 # bool
     m_iChangedVariables = 0x5AC # int32_t
 
-class C_FootstepControl:
+class C_FootstepControl: # C_BaseTrigger
     m_source = 0xCC8 # CUtlSymbolLarge
     m_destination = 0xCD0 # CUtlSymbolLarge
 
-class C_FuncConveyor:
+class C_FuncBrush: # C_BaseModelEntity
+
+class C_FuncConveyor: # C_BaseModelEntity
     m_vecMoveDirEntitySpace = 0xCC8 # Vector
     m_flTargetSpeed = 0xCD4 # float
     m_nTransitionStartTick = 0xCD8 # GameTick_t
@@ -2390,12 +2530,12 @@ class C_FuncConveyor:
     m_flCurrentConveyorOffset = 0xD00 # float
     m_flCurrentConveyorSpeed = 0xD04 # float
 
-class C_FuncElectrifiedVolume:
+class C_FuncElectrifiedVolume: # C_FuncBrush
     m_nAmbientEffect = 0xCC0 # ParticleIndex_t
     m_EffectName = 0xCC8 # CUtlSymbolLarge
     m_bState = 0xCD0 # bool
 
-class C_FuncLadder:
+class C_FuncLadder: # C_BaseModelEntity
     m_vecLadderDir = 0xCC0 # Vector
     m_Dismounts = 0xCD0 # CUtlVector<CHandle<C_InfoLadderDismount>>
     m_vecLocalTop = 0xCE8 # Vector
@@ -2406,7 +2546,7 @@ class C_FuncLadder:
     m_bFakeLadder = 0xD11 # bool
     m_bHasSlack = 0xD12 # bool
 
-class C_FuncMonitor:
+class C_FuncMonitor: # C_FuncBrush
     m_targetCamera = 0xCC0 # CUtlString
     m_nResolutionEnum = 0xCC8 # int32_t
     m_bRenderShadows = 0xCCC # bool
@@ -2416,15 +2556,23 @@ class C_FuncMonitor:
     m_bEnabled = 0xCDC # bool
     m_bDraw3DSkybox = 0xCDD # bool
 
-class C_FuncTrackTrain:
+class C_FuncMoveLinear: # C_BaseToggle
+
+class C_FuncRotating: # C_BaseModelEntity
+
+class C_FuncTrackTrain: # C_BaseModelEntity
     m_nLongAxis = 0xCC0 # int32_t
     m_flRadius = 0xCC4 # float
     m_flLineLength = 0xCC8 # float
 
-class C_GlobalLight:
+class C_GameRules:
+
+class C_GameRulesProxy: # C_BaseEntity
+
+class C_GlobalLight: # C_BaseEntity
     m_WindClothForceHandle = 0xA00 # uint16_t
 
-class C_GradientFog:
+class C_GradientFog: # C_BaseEntity
     m_hGradientFogTexture = 0x540 # CStrongHandle<InfoForResourceTypeCTextureBase>
     m_flFogStartDistance = 0x548 # float
     m_flFogEndDistance = 0x54C # float
@@ -2442,11 +2590,13 @@ class C_GradientFog:
     m_bIsEnabled = 0x579 # bool
     m_bGradientFogNeedsTextures = 0x57A # bool
 
-class C_HandleTest:
+class C_HEGrenade: # C_BaseCSGrenade
+
+class C_HandleTest: # C_BaseEntity
     m_Handle = 0x540 # CHandle<C_BaseEntity>
     m_bSendHandle = 0x544 # bool
 
-class C_Hostage:
+class C_Hostage: # C_BaseCombatCharacter
     m_entitySpottedState = 0x10A8 # EntitySpottedState_t
     m_leader = 0x10C0 # CHandle<C_BaseEntity>
     m_reuseTimer = 0x10C8 # CountdownTimer
@@ -2471,7 +2621,11 @@ class C_Hostage:
     m_pPredictionOwner = 0x1168 # CBasePlayerController*
     m_fNewestAlphaThinkTime = 0x1170 # GameTime_t
 
-class C_Inferno:
+class C_HostageCarriableProp: # CBaseAnimGraph
+
+class C_IncendiaryGrenade: # C_MolotovGrenade
+
+class C_Inferno: # C_BaseModelEntity
     m_nfxFireDamageEffect = 0xD00 # ParticleIndex_t
     m_fireXDelta = 0xD04 # int32_t[64]
     m_fireYDelta = 0xE04 # int32_t[64]
@@ -2496,7 +2650,11 @@ class C_Inferno:
     m_maxBounds = 0x8280 # Vector
     m_flLastGrassBurnThink = 0x828C # float
 
-class C_InfoVisibilityBox:
+class C_InfoInstructorHintHostageRescueZone: # C_PointEntity
+
+class C_InfoLadderDismount: # C_BaseEntity
+
+class C_InfoVisibilityBox: # C_BaseEntity
     m_nMode = 0x544 # int32_t
     m_vBoxSize = 0x548 # Vector
     m_bEnabled = 0x554 # bool
@@ -2516,18 +2674,26 @@ class C_IronSightController:
     m_flDotBlur = 0xA4 # float
     m_flSpeedRatio = 0xA8 # float
 
-class C_Item:
+class C_Item: # C_EconEntity
     m_bShouldGlow = 0x1560 # bool
     m_pReticleHintTextName = 0x1561 # char[256]
 
-class C_ItemDogtags:
+class C_ItemDogtags: # C_Item
     m_OwningPlayer = 0x1668 # CHandle<C_CSPlayerPawn>
     m_KillingPlayer = 0x166C # CHandle<C_CSPlayerPawn>
 
-class C_LightEntity:
+class C_Item_Healthshot: # C_WeaponBaseItem
+
+class C_Knife: # C_CSWeaponBase
+
+class C_LightDirectionalEntity: # C_LightEntity
+
+class C_LightEntity: # C_BaseModelEntity
     m_CLightComponent = 0xCC0 # CLightComponent*
 
-class C_LightGlow:
+class C_LightEnvironmentEntity: # C_LightDirectionalEntity
+
+class C_LightGlow: # C_BaseModelEntity
     m_nHorizontalSize = 0xCC0 # uint32_t
     m_nVerticalSize = 0xCC4 # uint32_t
     m_nMinDist = 0xCC8 # uint32_t
@@ -2537,7 +2703,7 @@ class C_LightGlow:
     m_flHDRColorScale = 0xCD8 # float
     m_Glow = 0xCE0 # C_LightGlowOverlay
 
-class C_LightGlowOverlay:
+class C_LightGlowOverlay: # CGlowOverlay
     m_vecOrigin = 0xD0 # Vector
     m_vecDirection = 0xDC # Vector
     m_nMinDist = 0xE8 # int32_t
@@ -2546,7 +2712,11 @@ class C_LightGlowOverlay:
     m_bOneSided = 0xF4 # bool
     m_bModulateByDot = 0xF5 # bool
 
-class C_LocalTempEntity:
+class C_LightOrthoEntity: # C_LightEntity
+
+class C_LightSpotEntity: # C_LightEntity
+
+class C_LocalTempEntity: # CBaseAnimGraph
     flags = 0xE98 # int32_t
     die = 0xE9C # GameTime_t
     m_flFrameMax = 0xEA0 # float
@@ -2573,7 +2743,9 @@ class C_LocalTempEntity:
     m_vecPrevAbsOrigin = 0xF28 # Vector
     m_vecTempEntAcceleration = 0xF34 # Vector
 
-class C_MapVetoPickController:
+class C_MapPreviewParticleSystem: # C_ParticleSystem
+
+class C_MapVetoPickController: # C_BaseEntity
     m_nDraftType = 0x550 # int32_t
     m_nTeamWinningCoinToss = 0x554 # int32_t
     m_nTeamWithFirstChoice = 0x558 # int32_t[64]
@@ -2592,21 +2764,29 @@ class C_MapVetoPickController:
     m_nPostDataUpdateTick = 0xE80 # int32_t
     m_bDisabledHud = 0xE84 # bool
 
-class C_Melee:
+class C_Melee: # C_CSWeaponBase
     m_flThrowAt = 0x1940 # GameTime_t
 
-class C_MolotovProjectile:
+class C_ModelPointEntity: # C_BaseModelEntity
+
+class C_MolotovGrenade: # C_BaseCSGrenade
+
+class C_MolotovProjectile: # C_BaseCSGrenadeProjectile
     m_bIsIncGrenade = 0x10F0 # bool
 
-class C_Multimeter:
+class C_Multimeter: # CBaseAnimGraph
     m_hTargetC4 = 0xE88 # CHandle<C_PlantedC4>
 
-class C_OmniLight:
+class C_MultiplayRules: # C_GameRules
+
+class C_NetTestBaseCombatCharacter: # C_BaseCombatCharacter
+
+class C_OmniLight: # C_BarnLight
     m_flInnerAngle = 0xF08 # float
     m_flOuterAngle = 0xF0C # float
     m_bShowLight = 0xF10 # bool
 
-class C_ParticleSystem:
+class C_ParticleSystem: # C_BaseModelEntity
     m_szSnapshotFileName = 0xCC0 # char[512]
     m_bActive = 0xEC0 # bool
     m_bFrozen = 0xEC1 # bool
@@ -2632,7 +2812,7 @@ class C_ParticleSystem:
     m_bOldActive = 0x1258 # bool
     m_bOldFrozen = 0x1259 # bool
 
-class C_PathParticleRope:
+class C_PathParticleRope: # C_BaseEntity
     m_bStartActive = 0x540 # bool
     m_flMaxSimulationTime = 0x544 # float
     m_iszEffectName = 0x548 # CUtlSymbolLarge
@@ -2650,11 +2830,15 @@ class C_PathParticleRope:
     m_PathNodes_PinEnabled = 0x5E8 # C_NetworkUtlVectorBase<bool>
     m_PathNodes_RadiusScale = 0x600 # C_NetworkUtlVectorBase<float>
 
-class C_PhysMagnet:
+class C_PathParticleRopeAlias_path_particle_rope_clientside: # C_PathParticleRope
+
+class C_PhysBox: # C_Breakable
+
+class C_PhysMagnet: # CBaseAnimGraph
     m_aAttachedObjectsFromServer = 0xE80 # CUtlVector<int32_t>
     m_aAttachedObjects = 0xE98 # CUtlVector<CHandle<C_BaseEntity>>
 
-class C_PhysPropClientside:
+class C_PhysPropClientside: # C_BreakableProp
     m_flTouchDelta = 0xFD0 # GameTime_t
     m_fDeathTime = 0xFD4 # GameTime_t
     m_impactEnergyScale = 0xFD8 # float
@@ -2671,10 +2855,12 @@ class C_PhysPropClientside:
     m_vecDamageDirection = 0x1014 # Vector
     m_nDamageType = 0x1020 # int32_t
 
-class C_PhysicsProp:
+class C_PhysicsProp: # C_BreakableProp
     m_bAwake = 0xFD0 # bool
 
-class C_PickUpModelSlerper:
+class C_PhysicsPropMultiplayer: # C_PhysicsProp
+
+class C_PickUpModelSlerper: # CBaseAnimGraph
     m_hPlayerParent = 0xE80 # CHandle<C_BaseEntity>
     m_hItem = 0xE84 # CHandle<C_BaseEntity>
     m_flTimePickedUp = 0xE88 # float
@@ -2682,7 +2868,7 @@ class C_PickUpModelSlerper:
     m_vecPosOriginal = 0xE98 # Vector
     m_angRandom = 0xEA8 # QAngle
 
-class C_PlantedC4:
+class C_PlantedC4: # CBaseAnimGraph
     m_bBombTicking = 0xE80 # bool
     m_nBombSite = 0xE84 # int32_t
     m_nSourceSoundscapeHash = 0xE88 # int32_t
@@ -2710,14 +2896,14 @@ class C_PlantedC4:
     m_fLastDefuseTime = 0xEF0 # GameTime_t
     m_pPredictionOwner = 0xEF8 # CBasePlayerController*
 
-class C_PlayerPing:
+class C_PlayerPing: # C_BaseEntity
     m_hPlayer = 0x570 # CHandle<C_CSPlayerPawn>
     m_hPingedEntity = 0x574 # CHandle<C_BaseEntity>
     m_iType = 0x578 # int32_t
     m_bUrgent = 0x57C # bool
     m_szPlaceName = 0x57D # char[18]
 
-class C_PlayerSprayDecal:
+class C_PlayerSprayDecal: # C_ModelPointEntity
     m_nUniqueID = 0xCC0 # int32_t
     m_unAccountID = 0xCC4 # uint32_t
     m_unTraceID = 0xCC8 # uint32_t
@@ -2735,7 +2921,7 @@ class C_PlayerSprayDecal:
     m_ubSignature = 0xD15 # uint8_t[128]
     m_SprayRenderHelper = 0xDA0 # CPlayerSprayDecalRenderHelper
 
-class C_PlayerVisibility:
+class C_PlayerVisibility: # C_BaseEntity
     m_flVisibilityStrength = 0x540 # float
     m_flFogDistanceMultiplier = 0x544 # float
     m_flFogMaxDensityMultiplier = 0x548 # float
@@ -2743,7 +2929,7 @@ class C_PlayerVisibility:
     m_bStartDisabled = 0x550 # bool
     m_bIsEnabled = 0x551 # bool
 
-class C_PointCamera:
+class C_PointCamera: # C_BaseEntity
     m_FOV = 0x540 # float
     m_Resolution = 0x544 # float
     m_bFogEnable = 0x548 # bool
@@ -2770,14 +2956,14 @@ class C_PointCamera:
     m_bIsOn = 0x594 # bool
     m_pNext = 0x598 # C_PointCamera*
 
-class C_PointCameraVFOV:
+class C_PointCameraVFOV: # C_PointCamera
     m_flVerticalFOV = 0x5A0 # float
 
-class C_PointClientUIDialog:
+class C_PointClientUIDialog: # C_BaseClientUIEntity
     m_hActivator = 0xCF0 # CHandle<C_BaseEntity>
     m_bStartEnabled = 0xCF4 # bool
 
-class C_PointClientUIHUD:
+class C_PointClientUIHUD: # C_BaseClientUIEntity
     m_bCheckCSSClasses = 0xCF8 # bool
     m_bIgnoreInput = 0xE80 # bool
     m_flWidth = 0xE84 # float
@@ -2792,7 +2978,7 @@ class C_PointClientUIHUD:
     m_bAllowInteractionFromAllSceneWorlds = 0xEA8 # bool
     m_vecCSSClasses = 0xEB0 # C_NetworkUtlVectorBase<CUtlSymbolLarge>
 
-class C_PointClientUIWorldPanel:
+class C_PointClientUIWorldPanel: # C_BaseClientUIEntity
     m_bForceRecreateNextUpdate = 0xCF8 # bool
     m_bMoveViewToPlayerNextThink = 0xCF9 # bool
     m_bCheckCSSClasses = 0xCFA # bool
@@ -2822,10 +3008,10 @@ class C_PointClientUIWorldPanel:
     m_bDisableMipGen = 0xF17 # bool
     m_nExplicitImageLayout = 0xF18 # int32_t
 
-class C_PointClientUIWorldTextPanel:
+class C_PointClientUIWorldTextPanel: # C_PointClientUIWorldPanel
     m_messageText = 0xF20 # char[512]
 
-class C_PointCommentaryNode:
+class C_PointCommentaryNode: # CBaseAnimGraph
     m_bActive = 0xE88 # bool
     m_bWasActive = 0xE89 # bool
     m_flEndTime = 0xE8C # GameTime_t
@@ -2840,7 +3026,9 @@ class C_PointCommentaryNode:
     m_hViewPosition = 0xEC8 # CHandle<C_BaseEntity>
     m_bRestartAfterRestore = 0xECC # bool
 
-class C_PointValueRemapper:
+class C_PointEntity: # C_BaseEntity
+
+class C_PointValueRemapper: # C_BaseEntity
     m_bDisabled = 0x540 # bool
     m_bDisabledOld = 0x541 # bool
     m_bUpdateOnClient = 0x542 # bool
@@ -2867,7 +3055,7 @@ class C_PointValueRemapper:
     m_flPreviousUpdateTickTime = 0x5A8 # GameTime_t
     m_vecPreviousTestPoint = 0x5AC # Vector
 
-class C_PointWorldText:
+class C_PointWorldText: # C_ModelPointEntity
     m_bForceRecreateNextUpdate = 0xCC8 # bool
     m_messageText = 0xCD8 # char[512]
     m_FontName = 0xED8 # char[64]
@@ -2881,7 +3069,7 @@ class C_PointWorldText:
     m_nJustifyVertical = 0xF30 # PointWorldTextJustifyVertical_t
     m_nReorientMode = 0xF34 # PointWorldTextReorientMode_t
 
-class C_PostProcessingVolume:
+class C_PostProcessingVolume: # C_BaseTrigger
     m_hPostSettings = 0xCD8 # CStrongHandle<InfoForResourceTypeCPostProcessingResource>
     m_flFadeDuration = 0xCE0 # float
     m_flMinLogExposure = 0xCE4 # float
@@ -2899,7 +3087,7 @@ class C_PostProcessingVolume:
     m_flTonemapPercentBrightPixels = 0xD10 # float
     m_flTonemapMinAvgLum = 0xD14 # float
 
-class C_Precipitation:
+class C_Precipitation: # C_BaseTrigger
     m_flDensity = 0xCC8 # float
     m_flParticleInnerDist = 0xCD8 # float
     m_pParticleDef = 0xCE0 # char*
@@ -2909,14 +3097,16 @@ class C_Precipitation:
     m_bHasSimulatedSinceLastSceneObjectUpdate = 0xD12 # bool
     m_nAvailableSheetSequencesMaxIndex = 0xD14 # int32_t
 
-class C_PredictedViewModel:
+class C_PrecipitationBlocker: # C_BaseModelEntity
+
+class C_PredictedViewModel: # C_BaseViewModel
     m_LagAnglesHistory = 0xEE8 # QAngle
     m_vPredictedOffset = 0xF00 # Vector
 
-class C_RagdollManager:
+class C_RagdollManager: # C_BaseEntity
     m_iCurrentMaxRagdollCount = 0x540 # int8_t
 
-class C_RagdollProp:
+class C_RagdollProp: # CBaseAnimGraph
     m_ragPos = 0xE88 # C_NetworkUtlVectorBase<Vector>
     m_ragAngles = 0xEA0 # C_NetworkUtlVectorBase<QAngle>
     m_flBlendWeight = 0xEB8 # float
@@ -2926,7 +3116,7 @@ class C_RagdollProp:
     m_parentPhysicsBoneIndices = 0xEC8 # CUtlVector<int32_t>
     m_worldSpaceBoneComputationOrder = 0xEE0 # CUtlVector<int32_t>
 
-class C_RagdollPropAttached:
+class C_RagdollPropAttached: # C_RagdollProp
     m_boneIndexAttached = 0xEF8 # uint32_t
     m_ragdollAttachedObjectIndex = 0xEFC # uint32_t
     m_attachmentPointBoneSpace = 0xF00 # Vector
@@ -2935,7 +3125,7 @@ class C_RagdollPropAttached:
     m_parentTime = 0xF24 # float
     m_bHasParent = 0xF28 # bool
 
-class C_RectLight:
+class C_RectLight: # C_BarnLight
     m_bShowLight = 0xF08 # bool
 
 class C_RetakeGameRules:
@@ -2945,7 +3135,7 @@ class C_RetakeGameRules:
     m_iFirstSecondHalfRound = 0x100 # int32_t
     m_iBombSite = 0x104 # int32_t
 
-class C_RopeKeyframe:
+class C_RopeKeyframe: # C_BaseModelEntity
     m_LinksTouchingSomething = 0xCC8 # CBitVec<10>
     m_nLinksTouchingSomething = 0xCCC # int32_t
     m_bApplyWind = 0xCD0 # bool
@@ -2991,7 +3181,7 @@ class C_RopeKeyframe:
 class C_RopeKeyframe_CPhysicsDelegate:
     m_pKeyframe = 0x8 # C_RopeKeyframe*
 
-class C_SceneEntity:
+class C_SceneEntity: # C_PointEntity
     m_bIsPlayingBack = 0x548 # bool
     m_bPaused = 0x549 # bool
     m_bMultiplayer = 0x54A # bool
@@ -3008,16 +3198,24 @@ class C_SceneEntity:
 class C_SceneEntity_QueuedEvents_t:
     starttime = 0x0 # float
 
-class C_ShatterGlassShardPhysics:
+class C_SensorGrenade: # C_BaseCSGrenade
+
+class C_SensorGrenadeProjectile: # C_BaseCSGrenadeProjectile
+
+class C_ShatterGlassShardPhysics: # C_PhysicsProp
     m_ShardDesc = 0xFE0 # shard_model_desc_t
 
-class C_SkyCamera:
+class C_SingleplayRules: # C_GameRules
+
+class C_SkyCamera: # C_BaseEntity
     m_skyboxData = 0x540 # sky3dparams_t
     m_skyboxSlotToken = 0x5D0 # CUtlStringToken
     m_bUseAngles = 0x5D4 # bool
     m_pNext = 0x5D8 # C_SkyCamera*
 
-class C_SmokeGrenadeProjectile:
+class C_SmokeGrenade: # C_BaseCSGrenade
+
+class C_SmokeGrenadeProjectile: # C_BaseCSGrenadeProjectile
     m_nSmokeEffectTickBegin = 0x10F8 # int32_t
     m_bDidSmokeEffect = 0x10FC # bool
     m_nRandomSeed = 0x1100 # int32_t
@@ -3027,31 +3225,41 @@ class C_SmokeGrenadeProjectile:
     m_bSmokeVolumeDataReceived = 0x1138 # bool
     m_bSmokeEffectSpawned = 0x1139 # bool
 
-class C_SoundAreaEntityBase:
+class C_SoundAreaEntityBase: # C_BaseEntity
     m_bDisabled = 0x540 # bool
     m_bWasEnabled = 0x548 # bool
     m_iszSoundAreaType = 0x550 # CUtlSymbolLarge
     m_vPos = 0x558 # Vector
 
-class C_SoundAreaEntityOrientedBox:
+class C_SoundAreaEntityOrientedBox: # C_SoundAreaEntityBase
     m_vMin = 0x568 # Vector
     m_vMax = 0x574 # Vector
 
-class C_SoundAreaEntitySphere:
+class C_SoundAreaEntitySphere: # C_SoundAreaEntityBase
     m_flRadius = 0x568 # float
 
-class C_SoundOpvarSetPointBase:
+class C_SoundOpvarSetAABBEntity: # C_SoundOpvarSetPointEntity
+
+class C_SoundOpvarSetOBBEntity: # C_SoundOpvarSetAABBEntity
+
+class C_SoundOpvarSetOBBWindEntity: # C_SoundOpvarSetPointBase
+
+class C_SoundOpvarSetPathCornerEntity: # C_SoundOpvarSetPointEntity
+
+class C_SoundOpvarSetPointBase: # C_BaseEntity
     m_iszStackName = 0x540 # CUtlSymbolLarge
     m_iszOperatorName = 0x548 # CUtlSymbolLarge
     m_iszOpvarName = 0x550 # CUtlSymbolLarge
     m_iOpvarIndex = 0x558 # int32_t
     m_bUseAutoCompare = 0x55C # bool
 
-class C_SpotlightEnd:
+class C_SoundOpvarSetPointEntity: # C_SoundOpvarSetPointBase
+
+class C_SpotlightEnd: # C_BaseModelEntity
     m_flLightScale = 0xCC0 # float
     m_Radius = 0xCC4 # float
 
-class C_Sprite:
+class C_Sprite: # C_BaseModelEntity
     m_hSpriteMaterial = 0xCD8 # CStrongHandle<InfoForResourceTypeIMaterial2>
     m_hAttachedToEntity = 0xCE0 # CHandle<C_BaseEntity>
     m_nAttachment = 0xCE4 # AttachmentHandle_t
@@ -3077,7 +3285,9 @@ class C_Sprite:
     m_nSpriteWidth = 0xDE8 # int32_t
     m_nSpriteHeight = 0xDEC # int32_t
 
-class C_Sun:
+class C_SpriteOriented: # C_Sprite
+
+class C_Sun: # C_BaseModelEntity
     m_fxSSSunFlareEffectIndex = 0xCC0 # ParticleIndex_t
     m_fxSunFlareEffectIndex = 0xCC4 # ParticleIndex_t
     m_fdistNormalize = 0xCC8 # float
@@ -3097,16 +3307,16 @@ class C_Sun:
     m_flAlphaHdr = 0xD18 # float
     m_flFarZScale = 0xD1C # float
 
-class C_SunGlowOverlay:
+class C_SunGlowOverlay: # CGlowOverlay
     m_bModulateByDot = 0xD0 # bool
 
-class C_Team:
+class C_Team: # C_BaseEntity
     m_aPlayerControllers = 0x540 # C_NetworkUtlVectorBase<CHandle<CBasePlayerController>>
     m_aPlayers = 0x558 # C_NetworkUtlVectorBase<CHandle<C_BasePlayerPawn>>
     m_iScore = 0x570 # int32_t
     m_szTeamname = 0x574 # char[129]
 
-class C_TeamRoundTimer:
+class C_TeamRoundTimer: # C_BaseEntity
     m_bTimerPaused = 0x540 # bool
     m_flTimeRemaining = 0x544 # float
     m_flTimerEndTime = 0x548 # GameTime_t
@@ -3138,7 +3348,9 @@ class C_TeamRoundTimer:
     m_nOldTimerLength = 0x580 # int32_t
     m_nOldTimerState = 0x584 # int32_t
 
-class C_TextureBasedAnimatable:
+class C_TeamplayRules: # C_MultiplayRules
+
+class C_TextureBasedAnimatable: # C_BaseModelEntity
     m_bLoop = 0xCC0 # bool
     m_flFPS = 0xCC4 # float
     m_hPositionKeys = 0xCC8 # CStrongHandle<InfoForResourceTypeCTextureBase>
@@ -3148,7 +3360,9 @@ class C_TextureBasedAnimatable:
     m_flStartTime = 0xCF0 # float
     m_flStartFrame = 0xCF4 # float
 
-class C_TonemapController2:
+class C_TintController: # C_BaseEntity
+
+class C_TonemapController2: # C_BaseEntity
     m_flAutoExposureMin = 0x540 # float
     m_flAutoExposureMax = 0x544 # float
     m_flTonemapPercentTarget = 0x548 # float
@@ -3158,14 +3372,24 @@ class C_TonemapController2:
     m_flExposureAdaptationSpeedDown = 0x558 # float
     m_flTonemapEVSmoothingRange = 0x55C # float
 
-class C_TriggerBuoyancy:
+class C_TonemapController2Alias_env_tonemap_controller2: # C_TonemapController2
+
+class C_TriggerBuoyancy: # C_BaseTrigger
     m_BuoyancyHelper = 0xCC8 # CBuoyancyHelper
     m_flFluidDensity = 0xCE8 # float
 
-class C_ViewmodelWeapon:
+class C_TriggerLerpObject: # C_BaseTrigger
+
+class C_TriggerMultiple: # C_BaseTrigger
+
+class C_TriggerVolume: # C_BaseModelEntity
+
+class C_ViewmodelAttachmentModel: # CBaseAnimGraph
+
+class C_ViewmodelWeapon: # CBaseAnimGraph
     m_worldModel = 0xE80 # char*
 
-class C_VoteController:
+class C_VoteController: # C_BaseEntity
     m_iActiveIssueIndex = 0x550 # int32_t
     m_iOnlyTeamToVote = 0x554 # int32_t
     m_nVoteOptionCount = 0x558 # int32_t[5]
@@ -3174,15 +3398,79 @@ class C_VoteController:
     m_bTypeDirty = 0x571 # bool
     m_bIsYesNoVote = 0x572 # bool
 
-class C_WeaponBaseItem:
+class C_WaterBullet: # CBaseAnimGraph
+
+class C_WeaponAWP: # C_CSWeaponBaseGun
+
+class C_WeaponAug: # C_CSWeaponBaseGun
+
+class C_WeaponBaseItem: # C_CSWeaponBase
     m_SequenceCompleteTimer = 0x1940 # CountdownTimer
     m_bRedraw = 0x1958 # bool
 
-class C_WeaponShield:
+class C_WeaponBizon: # C_CSWeaponBaseGun
+
+class C_WeaponElite: # C_CSWeaponBaseGun
+
+class C_WeaponFamas: # C_CSWeaponBaseGun
+
+class C_WeaponFiveSeven: # C_CSWeaponBaseGun
+
+class C_WeaponG3SG1: # C_CSWeaponBaseGun
+
+class C_WeaponGalilAR: # C_CSWeaponBaseGun
+
+class C_WeaponGlock: # C_CSWeaponBaseGun
+
+class C_WeaponHKP2000: # C_CSWeaponBaseGun
+
+class C_WeaponM249: # C_CSWeaponBaseGun
+
+class C_WeaponM4A1: # C_CSWeaponBaseGun
+
+class C_WeaponMAC10: # C_CSWeaponBaseGun
+
+class C_WeaponMP7: # C_CSWeaponBaseGun
+
+class C_WeaponMP9: # C_CSWeaponBaseGun
+
+class C_WeaponMag7: # C_CSWeaponBaseGun
+
+class C_WeaponNOVA: # C_CSWeaponBase
+
+class C_WeaponNegev: # C_CSWeaponBaseGun
+
+class C_WeaponP250: # C_CSWeaponBaseGun
+
+class C_WeaponP90: # C_CSWeaponBaseGun
+
+class C_WeaponSCAR20: # C_CSWeaponBaseGun
+
+class C_WeaponSG556: # C_CSWeaponBaseGun
+
+class C_WeaponSSG08: # C_CSWeaponBaseGun
+
+class C_WeaponSawedoff: # C_CSWeaponBase
+
+class C_WeaponShield: # C_CSWeaponBaseGun
     m_flDisplayHealth = 0x1960 # float
 
-class C_WeaponTaser:
+class C_WeaponTaser: # C_CSWeaponBaseGun
     m_fFireTime = 0x1960 # GameTime_t
+
+class C_WeaponTec9: # C_CSWeaponBaseGun
+
+class C_WeaponUMP45: # C_CSWeaponBaseGun
+
+class C_WeaponXM1014: # C_CSWeaponBase
+
+class C_World: # C_BaseModelEntity
+
+class C_WorldModelGloves: # CBaseAnimGraph
+
+class C_WorldModelNametag: # CBaseAnimGraph
+
+class C_WorldModelStattrak: # CBaseAnimGraph
 
 class C_fogplayerparams_t:
     m_hCtrl = 0x8 # CHandle<C_FogController>
@@ -3332,6 +3620,8 @@ class EntitySpottedState_t:
 
 class GeneratedTextureHandle_t:
     m_strBitmapName = 0x0 # CUtlString
+
+class IClientAlphaProperty:
 
 class IntervalTimer:
     m_timestamp = 0x8 # GameTime_t

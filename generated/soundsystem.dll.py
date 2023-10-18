@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.867595700 UTC
+2023-10-18 10:31:50.302243400 UTC
 '''
 
 class CDSPMixgroupModifier:
@@ -18,7 +18,7 @@ class CDspPresetModifierList:
     m_dspName = 0x0 # CUtlString
     m_modifiers = 0x8 # CUtlVector<CDSPMixgroupModifier>
 
-class CSosGroupActionLimitSchema:
+class CSosGroupActionLimitSchema: # CSosGroupActionSchema
     m_nMaxCount = 0x18 # int32_t
     m_nStopType = 0x1C # SosActionStopType_t
     m_nSortType = 0x20 # SosActionSortType_t
@@ -28,14 +28,14 @@ class CSosGroupActionSchema:
     m_actionType = 0x10 # ActionType_t
     m_actionInstanceType = 0x14 # ActionType_t
 
-class CSosGroupActionSetSoundeventParameterSchema:
+class CSosGroupActionSetSoundeventParameterSchema: # CSosGroupActionSchema
     m_nMaxCount = 0x18 # int32_t
     m_flMinValue = 0x1C # float
     m_flMaxValue = 0x20 # float
     m_opvarName = 0x28 # CUtlString
     m_nSortType = 0x30 # SosActionSortType_t
 
-class CSosGroupActionTimeLimitSchema:
+class CSosGroupActionTimeLimitSchema: # CSosGroupActionSchema
     m_flMaxDuration = 0x18 # float
 
 class CSosGroupBranchPattern:
@@ -44,7 +44,7 @@ class CSosGroupBranchPattern:
     m_bMatchEntIndex = 0xA # bool
     m_bMatchOpvar = 0xB # bool
 
-class CSosGroupMatchPattern:
+class CSosGroupMatchPattern: # CSosGroupBranchPattern
     m_matchSoundEventName = 0x10 # CUtlString
     m_matchSoundEventSubString = 0x18 # CUtlString
     m_flEntIndex = 0x20 # float

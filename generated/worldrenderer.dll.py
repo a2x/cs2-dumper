@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.890033800 UTC
+2023-10-18 10:31:50.316336200 UTC
 '''
 
 class AggregateLODSetup_t:
@@ -39,6 +39,8 @@ class BakedLightingInfo_t:
 class BaseSceneObjectOverride_t:
     m_nSceneObjectIndex = 0x0 # uint32_t
 
+class CEntityComponent:
+
 class CEntityIdentity:
     m_nameStringableIndex = 0x14 # int32_t
     m_name = 0x18 # CUtlSymbolLarge
@@ -57,7 +59,7 @@ class CEntityInstance:
     m_pEntity = 0x10 # CEntityIdentity*
     m_CScriptComponent = 0x28 # CScriptComponent*
 
-class CScriptComponent:
+class CScriptComponent: # CEntityComponent
     m_scriptClassName = 0x30 # CUtlSymbolLarge
 
 class CVoxelVisibility:
@@ -103,11 +105,13 @@ class EntityKeyValueData_t:
     m_connections = 0x8 # CUtlVector<EntityIOConnectionData_t>
     m_keyValuesData = 0x20 # CUtlBinaryBlock
 
-class ExtraVertexStreamOverride_t:
+class ExtraVertexStreamOverride_t: # BaseSceneObjectOverride_t
     m_nSubSceneObject = 0x4 # uint32_t
     m_nDrawCallIndex = 0x8 # uint32_t
     m_nAdditionalMeshDrawPrimitiveFlags = 0xC # MeshDrawPrimitiveFlags_t
     m_extraBufferBinding = 0x10 # CRenderBufferBinding
+
+class InfoForResourceTypeVMapResourceData_t:
 
 class InfoOverlayData_t:
     m_transform = 0x0 # matrix3x4_t
@@ -121,7 +125,7 @@ class InfoOverlayData_t:
     m_vTintColor = 0x5C # Vector4D
     m_nSequenceOverride = 0x6C # int32_t
 
-class MaterialOverride_t:
+class MaterialOverride_t: # BaseSceneObjectOverride_t
     m_nSubSceneObject = 0x4 # uint32_t
     m_nDrawCallIndex = 0x8 # uint32_t
     m_pMaterial = 0x10 # CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -157,6 +161,8 @@ class SceneObject_t:
     m_nLightProbeVolumePrecomputedHandshake = 0x74 # int32_t
     m_renderableModel = 0x80 # CStrongHandle<InfoForResourceTypeCModel>
     m_renderable = 0x88 # CStrongHandle<InfoForResourceTypeCRenderMesh>
+
+class VMapResourceData_t:
 
 class VoxelVisBlockOffset_t:
     m_nOffset = 0x0 # uint32_t

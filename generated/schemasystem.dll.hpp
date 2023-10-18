@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.632738300 UTC
+ * 2023-10-18 10:31:50.130115100 UTC
  */
 
 #pragma once
@@ -16,11 +16,11 @@ namespace CExampleSchemaVData_PolymorphicBase {
     constexpr std::ptrdiff_t m_nBase = 0x8; // int32_t
 }
 
-namespace CExampleSchemaVData_PolymorphicDerivedA {
+namespace CExampleSchemaVData_PolymorphicDerivedA { // CExampleSchemaVData_PolymorphicBase
     constexpr std::ptrdiff_t m_nDerivedA = 0x10; // int32_t
 }
 
-namespace CExampleSchemaVData_PolymorphicDerivedB {
+namespace CExampleSchemaVData_PolymorphicDerivedB { // CExampleSchemaVData_PolymorphicBase
     constexpr std::ptrdiff_t m_nDerivedB = 0x10; // int32_t
 }
 
@@ -47,6 +47,9 @@ namespace CSchemaSystemInternalRegistration {
     constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
     constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
     constexpr std::ptrdiff_t m_KV3 = 0x170; // KeyValues3
+}
+
+namespace InfoForResourceTypeCResourceManifestInternal {
 }
 
 namespace ResourceId_t {

@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.650180400 UTC
+ * 2023-10-18 10:31:50.138462900 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]

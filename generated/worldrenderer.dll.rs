@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.893194600 UTC
+ * 2023-10-18 10:31:50.317656600 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -46,6 +46,9 @@ pub mod BaseSceneObjectOverride_t {
     pub const m_nSceneObjectIndex: usize = 0x0; // uint32_t
 }
 
+pub mod CEntityComponent {
+}
+
 pub mod CEntityIdentity {
     pub const m_nameStringableIndex: usize = 0x14; // int32_t
     pub const m_name: usize = 0x18; // CUtlSymbolLarge
@@ -66,7 +69,7 @@ pub mod CEntityInstance {
     pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
 }
 
-pub mod CScriptComponent {
+pub mod CScriptComponent { // CEntityComponent
     pub const m_scriptClassName: usize = 0x30; // CUtlSymbolLarge
 }
 
@@ -118,11 +121,14 @@ pub mod EntityKeyValueData_t {
     pub const m_keyValuesData: usize = 0x20; // CUtlBinaryBlock
 }
 
-pub mod ExtraVertexStreamOverride_t {
+pub mod ExtraVertexStreamOverride_t { // BaseSceneObjectOverride_t
     pub const m_nSubSceneObject: usize = 0x4; // uint32_t
     pub const m_nDrawCallIndex: usize = 0x8; // uint32_t
     pub const m_nAdditionalMeshDrawPrimitiveFlags: usize = 0xC; // MeshDrawPrimitiveFlags_t
     pub const m_extraBufferBinding: usize = 0x10; // CRenderBufferBinding
+}
+
+pub mod InfoForResourceTypeVMapResourceData_t {
 }
 
 pub mod InfoOverlayData_t {
@@ -138,7 +144,7 @@ pub mod InfoOverlayData_t {
     pub const m_nSequenceOverride: usize = 0x6C; // int32_t
 }
 
-pub mod MaterialOverride_t {
+pub mod MaterialOverride_t { // BaseSceneObjectOverride_t
     pub const m_nSubSceneObject: usize = 0x4; // uint32_t
     pub const m_nDrawCallIndex: usize = 0x8; // uint32_t
     pub const m_pMaterial: usize = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -177,6 +183,9 @@ pub mod SceneObject_t {
     pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x74; // int32_t
     pub const m_renderableModel: usize = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_renderable: usize = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+}
+
+pub mod VMapResourceData_t {
 }
 
 pub mod VoxelVisBlockOffset_t {

@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.877842700 UTC
+2023-10-18 10:31:50.308014600 UTC
 '''
 
 class CSSDSEndFrameViewInfo:
@@ -17,6 +17,10 @@ class CSSDSMsg_LayerBase:
     m_nLayerId = 0x20 # uint64_t
     m_LayerName = 0x28 # CUtlString
     m_displayText = 0x30 # CUtlString
+
+class CSSDSMsg_PostLayer: # CSSDSMsg_LayerBase
+
+class CSSDSMsg_PreLayer: # CSSDSMsg_LayerBase
 
 class CSSDSMsg_ViewRender:
     m_viewId = 0x0 # SceneViewId_t

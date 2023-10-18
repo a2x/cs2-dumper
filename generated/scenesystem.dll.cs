@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.876541300 UTC
+ * 2023-10-18 10:31:50.307256100 UTC
  */
 
 public static class CSSDSEndFrameViewInfo {
@@ -19,6 +19,12 @@ public static class CSSDSMsg_LayerBase {
     public const nint m_nLayerId = 0x20; // uint64_t
     public const nint m_LayerName = 0x28; // CUtlString
     public const nint m_displayText = 0x30; // CUtlString
+}
+
+public static class CSSDSMsg_PostLayer { // CSSDSMsg_LayerBase
+}
+
+public static class CSSDSMsg_PreLayer { // CSSDSMsg_LayerBase
 }
 
 public static class CSSDSMsg_ViewRender {

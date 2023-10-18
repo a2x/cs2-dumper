@@ -1,35 +1,47 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.909613500 UTC
+ * 2023-10-18 10:31:50.329574300 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
+
+pub mod CBasePulseGraphInstance {
+}
 
 pub mod CPulseCell_Base {
     pub const m_nEditorNodeID: usize = 0x8; // PulseDocNodeID_t
 }
 
-pub mod CPulseCell_Inflow_BaseEntrypoint {
+pub mod CPulseCell_BaseFlow { // CPulseCell_Base
+}
+
+pub mod CPulseCell_BaseValue { // CPulseCell_Base
+}
+
+pub mod CPulseCell_BaseYieldingInflow { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Inflow_BaseEntrypoint { // CPulseCell_BaseFlow
     pub const m_EntryChunk: usize = 0x48; // PulseRuntimeChunkIndex_t
     pub const m_RegisterMap: usize = 0x50; // PulseRegisterMap_t
 }
 
-pub mod CPulseCell_Inflow_EntOutputHandler {
+pub mod CPulseCell_Inflow_EntOutputHandler { // CPulseCell_Inflow_BaseEntrypoint
     pub const m_SourceEntity: usize = 0x70; // CUtlSymbolLarge
     pub const m_SourceOutput: usize = 0x78; // CUtlSymbolLarge
     pub const m_TargetInput: usize = 0x80; // CUtlSymbolLarge
     pub const m_ExpectedParamType: usize = 0x88; // CPulseValueFullType
 }
 
-pub mod CPulseCell_Inflow_EventHandler {
+pub mod CPulseCell_Inflow_EventHandler { // CPulseCell_Inflow_BaseEntrypoint
     pub const m_EventName: usize = 0x70; // CUtlSymbolLarge
 }
 
-pub mod CPulseCell_Inflow_GraphHook {
+pub mod CPulseCell_Inflow_GraphHook { // CPulseCell_Inflow_BaseEntrypoint
     pub const m_HookName: usize = 0x70; // CUtlSymbolLarge
 }
 
-pub mod CPulseCell_Inflow_Method {
+pub mod CPulseCell_Inflow_Method { // CPulseCell_Inflow_BaseEntrypoint
     pub const m_MethodName: usize = 0x70; // CUtlSymbolLarge
     pub const m_Description: usize = 0x78; // CUtlString
     pub const m_bIsPublic: usize = 0x80; // bool
@@ -37,15 +49,15 @@ pub mod CPulseCell_Inflow_Method {
     pub const m_Args: usize = 0x98; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
-pub mod CPulseCell_Inflow_Wait {
+pub mod CPulseCell_Inflow_Wait { // CPulseCell_BaseYieldingInflow
     pub const m_WakeResume: usize = 0x48; // CPulse_ResumePoint
 }
 
-pub mod CPulseCell_Inflow_Yield {
+pub mod CPulseCell_Inflow_Yield { // CPulseCell_BaseYieldingInflow
     pub const m_UnyieldResume: usize = 0x48; // CPulse_ResumePoint
 }
 
-pub mod CPulseCell_Outflow_CycleOrdered {
+pub mod CPulseCell_Outflow_CycleOrdered { // CPulseCell_BaseFlow
     pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
@@ -53,11 +65,11 @@ pub mod CPulseCell_Outflow_CycleOrdered_InstanceState_t {
     pub const m_nNextIndex: usize = 0x0; // int32_t
 }
 
-pub mod CPulseCell_Outflow_CycleRandom {
+pub mod CPulseCell_Outflow_CycleRandom { // CPulseCell_BaseFlow
     pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
-pub mod CPulseCell_Outflow_CycleShuffled {
+pub mod CPulseCell_Outflow_CycleShuffled { // CPulseCell_BaseFlow
     pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
@@ -66,41 +78,77 @@ pub mod CPulseCell_Outflow_CycleShuffled_InstanceState_t {
     pub const m_nNextShuffle: usize = 0x20; // int32_t
 }
 
-pub mod CPulseCell_Outflow_IntSwitch {
+pub mod CPulseCell_Outflow_IntSwitch { // CPulseCell_BaseFlow
     pub const m_DefaultCaseOutflow: usize = 0x48; // CPulse_OutflowConnection
     pub const m_CaseOutflows: usize = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
-pub mod CPulseCell_Outflow_SimultaneousParallel {
+pub mod CPulseCell_Outflow_SimultaneousParallel { // CPulseCell_BaseFlow
     pub const m_Outputs: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
-pub mod CPulseCell_Outflow_StringSwitch {
+pub mod CPulseCell_Outflow_StringSwitch { // CPulseCell_BaseFlow
     pub const m_DefaultCaseOutflow: usize = 0x48; // CPulse_OutflowConnection
     pub const m_CaseOutflows: usize = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
-pub mod CPulseCell_Outflow_TestExplicitYesNo {
+pub mod CPulseCell_Outflow_TestExplicitYesNo { // CPulseCell_BaseFlow
     pub const m_Yes: usize = 0x48; // CPulse_OutflowConnection
     pub const m_No: usize = 0x58; // CPulse_OutflowConnection
 }
 
-pub mod CPulseCell_Outflow_TestRandomYesNo {
+pub mod CPulseCell_Outflow_TestRandomYesNo { // CPulseCell_BaseFlow
     pub const m_Yes: usize = 0x48; // CPulse_OutflowConnection
     pub const m_No: usize = 0x58; // CPulse_OutflowConnection
 }
 
-pub mod CPulseCell_Step_CallExternalMethod {
+pub mod CPulseCell_Step_CallExternalMethod { // CPulseCell_BaseFlow
     pub const m_MethodName: usize = 0x48; // CUtlSymbolLarge
     pub const m_ExpectedArgs: usize = 0x50; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
-pub mod CPulseCell_Step_PublicOutput {
+pub mod CPulseCell_Step_DebugLog { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Step_PublicOutput { // CPulseCell_BaseFlow
     pub const m_OutputIndex: usize = 0x48; // PulseRuntimeOutputIndex_t
 }
 
-pub mod CPulseCell_Step_TestDomainEntFire {
+pub mod CPulseCell_Step_TestDomainCreateFakeEntity { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Step_TestDomainDestroyFakeEntity { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Step_TestDomainEntFire { // CPulseCell_BaseFlow
     pub const m_Input: usize = 0x48; // CUtlString
+}
+
+pub mod CPulseCell_Step_TestDomainTracepoint { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Test_MultiInflow_NoDefault { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Test_MultiInflow_WithDefault { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Test_NoInflow { // CPulseCell_BaseFlow
+}
+
+pub mod CPulseCell_Val_TestDomainFindEntityByName { // CPulseCell_BaseValue
+}
+
+pub mod CPulseCell_Val_TestDomainGetEntityName { // CPulseCell_BaseValue
+}
+
+pub mod CPulseCell_Value_RandomInt { // CPulseCell_BaseValue
+}
+
+pub mod CPulseCell_Value_TestValue50 { // CPulseCell_BaseValue
+}
+
+pub mod CPulseExecCursor {
 }
 
 pub mod CPulseGraphDef {
@@ -115,7 +163,7 @@ pub mod CPulseGraphDef {
     pub const m_OutputConnections: usize = 0xA8; // CUtlVector<CPulse_OutputConnection*>
 }
 
-pub mod CPulseGraphInstance_TestDomain {
+pub mod CPulseGraphInstance_TestDomain { // CBasePulseGraphInstance
     pub const m_bIsRunningUnitTests: usize = 0xD0; // bool
     pub const m_bExplicitTimeStepping: usize = 0xD1; // bool
     pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0xD2; // bool
@@ -124,8 +172,14 @@ pub mod CPulseGraphInstance_TestDomain {
     pub const m_bTestYesOrNoPath: usize = 0xF0; // bool
 }
 
-pub mod CPulseGraphInstance_TestDomain_Derived {
+pub mod CPulseGraphInstance_TestDomain_Derived { // CPulseGraphInstance_TestDomain
     pub const m_nInstanceValueX: usize = 0xF8; // int32_t
+}
+
+pub mod CPulseGraphInstance_TurtleGraphics { // CBasePulseGraphInstance
+}
+
+pub mod CPulseMathlib {
 }
 
 pub mod CPulseRuntimeMethodArg {
@@ -134,7 +188,16 @@ pub mod CPulseRuntimeMethodArg {
     pub const m_Type: usize = 0x40; // CPulseValueFullType
 }
 
-pub mod CPulseTurtleGraphicsCursor {
+pub mod CPulseTestFuncs_DerivedDomain {
+}
+
+pub mod CPulseTestFuncs_LibraryA {
+}
+
+pub mod CPulseTestScriptLib {
+}
+
+pub mod CPulseTurtleGraphicsCursor { // CPulseExecCursor
     pub const m_Color: usize = 0x188; // Color
     pub const m_vPos: usize = 0x18C; // Vector2D
     pub const m_flHeadingDeg: usize = 0x194; // float
@@ -192,6 +255,9 @@ pub mod CPulse_RegisterInfo {
     pub const m_nLastReadByInstruction: usize = 0x54; // int32_t
 }
 
+pub mod CPulse_ResumePoint { // CPulse_OutflowConnection
+}
+
 pub mod CPulse_Variable {
     pub const m_Name: usize = 0x0; // CUtlSymbolLarge
     pub const m_Description: usize = 0x8; // CUtlString
@@ -200,7 +266,7 @@ pub mod CPulse_Variable {
     pub const m_bIsPublic: usize = 0x32; // bool
 }
 
-pub mod CTestDomainDerived_Cursor {
+pub mod CTestDomainDerived_Cursor { // CPulseExecCursor
     pub const m_nCursorValueA: usize = 0x188; // int32_t
     pub const m_nCursorValueB: usize = 0x18C; // int32_t
 }

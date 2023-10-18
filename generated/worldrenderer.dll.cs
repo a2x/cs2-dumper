@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.886672900 UTC
+ * 2023-10-18 10:31:50.314670600 UTC
  */
 
 public static class AggregateLODSetup_t {
@@ -44,6 +44,9 @@ public static class BaseSceneObjectOverride_t {
     public const nint m_nSceneObjectIndex = 0x0; // uint32_t
 }
 
+public static class CEntityComponent {
+}
+
 public static class CEntityIdentity {
     public const nint m_nameStringableIndex = 0x14; // int32_t
     public const nint m_name = 0x18; // CUtlSymbolLarge
@@ -64,7 +67,7 @@ public static class CEntityInstance {
     public const nint m_CScriptComponent = 0x28; // CScriptComponent*
 }
 
-public static class CScriptComponent {
+public static class CScriptComponent { // CEntityComponent
     public const nint m_scriptClassName = 0x30; // CUtlSymbolLarge
 }
 
@@ -116,11 +119,14 @@ public static class EntityKeyValueData_t {
     public const nint m_keyValuesData = 0x20; // CUtlBinaryBlock
 }
 
-public static class ExtraVertexStreamOverride_t {
+public static class ExtraVertexStreamOverride_t { // BaseSceneObjectOverride_t
     public const nint m_nSubSceneObject = 0x4; // uint32_t
     public const nint m_nDrawCallIndex = 0x8; // uint32_t
     public const nint m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
     public const nint m_extraBufferBinding = 0x10; // CRenderBufferBinding
+}
+
+public static class InfoForResourceTypeVMapResourceData_t {
 }
 
 public static class InfoOverlayData_t {
@@ -136,7 +142,7 @@ public static class InfoOverlayData_t {
     public const nint m_nSequenceOverride = 0x6C; // int32_t
 }
 
-public static class MaterialOverride_t {
+public static class MaterialOverride_t { // BaseSceneObjectOverride_t
     public const nint m_nSubSceneObject = 0x4; // uint32_t
     public const nint m_nDrawCallIndex = 0x8; // uint32_t
     public const nint m_pMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -175,6 +181,9 @@ public static class SceneObject_t {
     public const nint m_nLightProbeVolumePrecomputedHandshake = 0x74; // int32_t
     public const nint m_renderableModel = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
     public const nint m_renderable = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+}
+
+public static class VMapResourceData_t {
 }
 
 public static class VoxelVisBlockOffset_t {

@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.883966800 UTC
+ * 2023-10-18 10:31:50.313284800 UTC
  */
 
 #pragma once
@@ -48,6 +48,9 @@ namespace BaseSceneObjectOverride_t {
     constexpr std::ptrdiff_t m_nSceneObjectIndex = 0x0; // uint32_t
 }
 
+namespace CEntityComponent {
+}
+
 namespace CEntityIdentity {
     constexpr std::ptrdiff_t m_nameStringableIndex = 0x14; // int32_t
     constexpr std::ptrdiff_t m_name = 0x18; // CUtlSymbolLarge
@@ -68,7 +71,7 @@ namespace CEntityInstance {
     constexpr std::ptrdiff_t m_CScriptComponent = 0x28; // CScriptComponent*
 }
 
-namespace CScriptComponent {
+namespace CScriptComponent { // CEntityComponent
     constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
 }
 
@@ -120,11 +123,14 @@ namespace EntityKeyValueData_t {
     constexpr std::ptrdiff_t m_keyValuesData = 0x20; // CUtlBinaryBlock
 }
 
-namespace ExtraVertexStreamOverride_t {
+namespace ExtraVertexStreamOverride_t { // BaseSceneObjectOverride_t
     constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32_t
     constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32_t
     constexpr std::ptrdiff_t m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
     constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // CRenderBufferBinding
+}
+
+namespace InfoForResourceTypeVMapResourceData_t {
 }
 
 namespace InfoOverlayData_t {
@@ -140,7 +146,7 @@ namespace InfoOverlayData_t {
     constexpr std::ptrdiff_t m_nSequenceOverride = 0x6C; // int32_t
 }
 
-namespace MaterialOverride_t {
+namespace MaterialOverride_t { // BaseSceneObjectOverride_t
     constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32_t
     constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32_t
     constexpr std::ptrdiff_t m_pMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
@@ -179,6 +185,9 @@ namespace SceneObject_t {
     constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x74; // int32_t
     constexpr std::ptrdiff_t m_renderableModel = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
     constexpr std::ptrdiff_t m_renderable = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+}
+
+namespace VMapResourceData_t {
 }
 
 namespace VoxelVisBlockOffset_t {

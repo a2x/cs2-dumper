@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.879051600 UTC
+ * 2023-10-18 10:31:50.308354900 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -21,6 +21,12 @@ pub mod CSSDSMsg_LayerBase {
     pub const m_nLayerId: usize = 0x20; // uint64_t
     pub const m_LayerName: usize = 0x28; // CUtlString
     pub const m_displayText: usize = 0x30; // CUtlString
+}
+
+pub mod CSSDSMsg_PostLayer { // CSSDSMsg_LayerBase
+}
+
+pub mod CSSDSMsg_PreLayer { // CSSDSMsg_LayerBase
 }
 
 pub mod CSSDSMsg_ViewRender {
