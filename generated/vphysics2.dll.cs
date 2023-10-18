@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.830876700 UTC
+ * 2023-10-18 10:31:50.277276200 UTC
  */
 
 public static class CFeIndexedJiggleBone {
@@ -122,17 +122,17 @@ public static class FeBoxRigid_t {
     public const nint nFlags = 0x32; // uint16_t
 }
 
-public static class FeBuildBoxRigid_t {
+public static class FeBuildBoxRigid_t { // FeBoxRigid_t
     public const nint m_nPriority = 0x40; // int32_t
     public const nint m_nVertexMapHash = 0x44; // uint32_t
 }
 
-public static class FeBuildSphereRigid_t {
+public static class FeBuildSphereRigid_t { // FeSphereRigid_t
     public const nint m_nPriority = 0x20; // int32_t
     public const nint m_nVertexMapHash = 0x24; // uint32_t
 }
 
-public static class FeBuildTaperedCapsuleRigid_t {
+public static class FeBuildTaperedCapsuleRigid_t { // FeTaperedCapsuleRigid_t
     public const nint m_nPriority = 0x30; // int32_t
     public const nint m_nVertexMapHash = 0x34; // uint32_t
 }
@@ -436,6 +436,9 @@ public static class FourVectors2D {
     public const nint y = 0x10; // fltx4
 }
 
+public static class IPhysicsPlayerController {
+}
+
 public static class OldFeEdge_t {
     public const nint m_flK = 0x0; // float[3]
     public const nint invA = 0xC; // float
@@ -601,7 +604,7 @@ public static class RnBodyDesc_t {
     public const nint m_bHasShadowController = 0xCA; // bool
 }
 
-public static class RnCapsuleDesc_t {
+public static class RnCapsuleDesc_t { // RnShapeDesc_t
     public const nint m_Capsule = 0x10; // RnCapsule_t
 }
 
@@ -621,7 +624,7 @@ public static class RnHalfEdge_t {
     public const nint m_nFace = 0x3; // uint8_t
 }
 
-public static class RnHullDesc_t {
+public static class RnHullDesc_t { // RnShapeDesc_t
     public const nint m_Hull = 0x10; // RnHull_t
 }
 
@@ -640,7 +643,7 @@ public static class RnHull_t {
     public const nint m_pRegionSVM = 0xD0; // CRegionSVM*
 }
 
-public static class RnMeshDesc_t {
+public static class RnMeshDesc_t { // RnShapeDesc_t
     public const nint m_Mesh = 0x10; // RnMesh_t
 }
 
@@ -690,7 +693,7 @@ public static class RnSoftbodySpring_t {
     public const nint m_flLength = 0x4; // float
 }
 
-public static class RnSphereDesc_t {
+public static class RnSphereDesc_t { // RnShapeDesc_t
     public const nint m_Sphere = 0x10; // RnSphere_t
 }
 
@@ -738,6 +741,6 @@ public static class constraint_hingeparams_t {
     public const nint constraint = 0x28; // constraint_breakableparams_t
 }
 
-public static class vphysics_save_cphysicsbody_t {
+public static class vphysics_save_cphysicsbody_t { // RnBodyDesc_t
     public const nint m_nOldPointer = 0xD0; // uint64_t
 }

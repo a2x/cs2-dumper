@@ -1,84 +1,116 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.906764800 UTC
+2023-10-18 10:31:50.328079900 UTC
 '''
+
+class CBasePulseGraphInstance:
 
 class CPulseCell_Base:
     m_nEditorNodeID = 0x8 # PulseDocNodeID_t
 
-class CPulseCell_Inflow_BaseEntrypoint:
+class CPulseCell_BaseFlow: # CPulseCell_Base
+
+class CPulseCell_BaseValue: # CPulseCell_Base
+
+class CPulseCell_BaseYieldingInflow: # CPulseCell_BaseFlow
+
+class CPulseCell_Inflow_BaseEntrypoint: # CPulseCell_BaseFlow
     m_EntryChunk = 0x48 # PulseRuntimeChunkIndex_t
     m_RegisterMap = 0x50 # PulseRegisterMap_t
 
-class CPulseCell_Inflow_EntOutputHandler:
+class CPulseCell_Inflow_EntOutputHandler: # CPulseCell_Inflow_BaseEntrypoint
     m_SourceEntity = 0x70 # CUtlSymbolLarge
     m_SourceOutput = 0x78 # CUtlSymbolLarge
     m_TargetInput = 0x80 # CUtlSymbolLarge
     m_ExpectedParamType = 0x88 # CPulseValueFullType
 
-class CPulseCell_Inflow_EventHandler:
+class CPulseCell_Inflow_EventHandler: # CPulseCell_Inflow_BaseEntrypoint
     m_EventName = 0x70 # CUtlSymbolLarge
 
-class CPulseCell_Inflow_GraphHook:
+class CPulseCell_Inflow_GraphHook: # CPulseCell_Inflow_BaseEntrypoint
     m_HookName = 0x70 # CUtlSymbolLarge
 
-class CPulseCell_Inflow_Method:
+class CPulseCell_Inflow_Method: # CPulseCell_Inflow_BaseEntrypoint
     m_MethodName = 0x70 # CUtlSymbolLarge
     m_Description = 0x78 # CUtlString
     m_bIsPublic = 0x80 # bool
     m_ReturnType = 0x88 # CPulseValueFullType
     m_Args = 0x98 # CUtlVector<CPulseRuntimeMethodArg>
 
-class CPulseCell_Inflow_Wait:
+class CPulseCell_Inflow_Wait: # CPulseCell_BaseYieldingInflow
     m_WakeResume = 0x48 # CPulse_ResumePoint
 
-class CPulseCell_Inflow_Yield:
+class CPulseCell_Inflow_Yield: # CPulseCell_BaseYieldingInflow
     m_UnyieldResume = 0x48 # CPulse_ResumePoint
 
-class CPulseCell_Outflow_CycleOrdered:
+class CPulseCell_Outflow_CycleOrdered: # CPulseCell_BaseFlow
     m_Outputs = 0x48 # CUtlVector<CPulse_OutflowConnection>
 
 class CPulseCell_Outflow_CycleOrdered_InstanceState_t:
     m_nNextIndex = 0x0 # int32_t
 
-class CPulseCell_Outflow_CycleRandom:
+class CPulseCell_Outflow_CycleRandom: # CPulseCell_BaseFlow
     m_Outputs = 0x48 # CUtlVector<CPulse_OutflowConnection>
 
-class CPulseCell_Outflow_CycleShuffled:
+class CPulseCell_Outflow_CycleShuffled: # CPulseCell_BaseFlow
     m_Outputs = 0x48 # CUtlVector<CPulse_OutflowConnection>
 
 class CPulseCell_Outflow_CycleShuffled_InstanceState_t:
     m_Shuffle = 0x0 # CUtlVectorFixedGrowable<uint8_t>
     m_nNextShuffle = 0x20 # int32_t
 
-class CPulseCell_Outflow_IntSwitch:
+class CPulseCell_Outflow_IntSwitch: # CPulseCell_BaseFlow
     m_DefaultCaseOutflow = 0x48 # CPulse_OutflowConnection
     m_CaseOutflows = 0x58 # CUtlVector<CPulse_OutflowConnection>
 
-class CPulseCell_Outflow_SimultaneousParallel:
+class CPulseCell_Outflow_SimultaneousParallel: # CPulseCell_BaseFlow
     m_Outputs = 0x48 # CUtlVector<CPulse_OutflowConnection>
 
-class CPulseCell_Outflow_StringSwitch:
+class CPulseCell_Outflow_StringSwitch: # CPulseCell_BaseFlow
     m_DefaultCaseOutflow = 0x48 # CPulse_OutflowConnection
     m_CaseOutflows = 0x58 # CUtlVector<CPulse_OutflowConnection>
 
-class CPulseCell_Outflow_TestExplicitYesNo:
+class CPulseCell_Outflow_TestExplicitYesNo: # CPulseCell_BaseFlow
     m_Yes = 0x48 # CPulse_OutflowConnection
     m_No = 0x58 # CPulse_OutflowConnection
 
-class CPulseCell_Outflow_TestRandomYesNo:
+class CPulseCell_Outflow_TestRandomYesNo: # CPulseCell_BaseFlow
     m_Yes = 0x48 # CPulse_OutflowConnection
     m_No = 0x58 # CPulse_OutflowConnection
 
-class CPulseCell_Step_CallExternalMethod:
+class CPulseCell_Step_CallExternalMethod: # CPulseCell_BaseFlow
     m_MethodName = 0x48 # CUtlSymbolLarge
     m_ExpectedArgs = 0x50 # CUtlVector<CPulseRuntimeMethodArg>
 
-class CPulseCell_Step_PublicOutput:
+class CPulseCell_Step_DebugLog: # CPulseCell_BaseFlow
+
+class CPulseCell_Step_PublicOutput: # CPulseCell_BaseFlow
     m_OutputIndex = 0x48 # PulseRuntimeOutputIndex_t
 
-class CPulseCell_Step_TestDomainEntFire:
+class CPulseCell_Step_TestDomainCreateFakeEntity: # CPulseCell_BaseFlow
+
+class CPulseCell_Step_TestDomainDestroyFakeEntity: # CPulseCell_BaseFlow
+
+class CPulseCell_Step_TestDomainEntFire: # CPulseCell_BaseFlow
     m_Input = 0x48 # CUtlString
+
+class CPulseCell_Step_TestDomainTracepoint: # CPulseCell_BaseFlow
+
+class CPulseCell_Test_MultiInflow_NoDefault: # CPulseCell_BaseFlow
+
+class CPulseCell_Test_MultiInflow_WithDefault: # CPulseCell_BaseFlow
+
+class CPulseCell_Test_NoInflow: # CPulseCell_BaseFlow
+
+class CPulseCell_Val_TestDomainFindEntityByName: # CPulseCell_BaseValue
+
+class CPulseCell_Val_TestDomainGetEntityName: # CPulseCell_BaseValue
+
+class CPulseCell_Value_RandomInt: # CPulseCell_BaseValue
+
+class CPulseCell_Value_TestValue50: # CPulseCell_BaseValue
+
+class CPulseExecCursor:
 
 class CPulseGraphDef:
     m_DomainIdentifier = 0x8 # CUtlSymbolLarge
@@ -91,7 +123,7 @@ class CPulseGraphDef:
     m_CallInfos = 0x90 # CUtlVector<CPulse_CallInfo*>
     m_OutputConnections = 0xA8 # CUtlVector<CPulse_OutputConnection*>
 
-class CPulseGraphInstance_TestDomain:
+class CPulseGraphInstance_TestDomain: # CBasePulseGraphInstance
     m_bIsRunningUnitTests = 0xD0 # bool
     m_bExplicitTimeStepping = 0xD1 # bool
     m_bExpectingToDestroyWithYieldedCursors = 0xD2 # bool
@@ -99,15 +131,25 @@ class CPulseGraphInstance_TestDomain:
     m_Tracepoints = 0xD8 # CUtlVector<CUtlString>
     m_bTestYesOrNoPath = 0xF0 # bool
 
-class CPulseGraphInstance_TestDomain_Derived:
+class CPulseGraphInstance_TestDomain_Derived: # CPulseGraphInstance_TestDomain
     m_nInstanceValueX = 0xF8 # int32_t
+
+class CPulseGraphInstance_TurtleGraphics: # CBasePulseGraphInstance
+
+class CPulseMathlib:
 
 class CPulseRuntimeMethodArg:
     m_Name = 0x0 # CKV3MemberNameWithStorage
     m_Description = 0x38 # CUtlString
     m_Type = 0x40 # CPulseValueFullType
 
-class CPulseTurtleGraphicsCursor:
+class CPulseTestFuncs_DerivedDomain:
+
+class CPulseTestFuncs_LibraryA:
+
+class CPulseTestScriptLib:
+
+class CPulseTurtleGraphicsCursor: # CPulseExecCursor
     m_Color = 0x188 # Color
     m_vPos = 0x18C # Vector2D
     m_flHeadingDeg = 0x194 # float
@@ -157,6 +199,8 @@ class CPulse_RegisterInfo:
     m_nWrittenByInstruction = 0x50 # int32_t
     m_nLastReadByInstruction = 0x54 # int32_t
 
+class CPulse_ResumePoint: # CPulse_OutflowConnection
+
 class CPulse_Variable:
     m_Name = 0x0 # CUtlSymbolLarge
     m_Description = 0x8 # CUtlString
@@ -164,7 +208,7 @@ class CPulse_Variable:
     m_DefaultValue = 0x20 # KeyValues3
     m_bIsPublic = 0x32 # bool
 
-class CTestDomainDerived_Cursor:
+class CTestDomainDerived_Cursor: # CPulseExecCursor
     m_nCursorValueA = 0x188 # int32_t
     m_nCursorValueB = 0x18C # int32_t
 

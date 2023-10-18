@@ -19,8 +19,12 @@ impl FileBuilder for RustFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str) -> Result<()> {
-        write!(output, "pub mod {} {{\n", name)?;
+    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+        if let Some(comment) = comment {
+            write!(output, "pub mod {} {{ // {}\n", name, comment)?;
+        } else {
+            write!(output, "pub mod {} {{\n", name)?;
+        }
 
         Ok(())
     }

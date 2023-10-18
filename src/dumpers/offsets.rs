@@ -34,7 +34,7 @@ mod tests {
 
         let client_base = process.get_module_by_name("client.dll")?.base();
 
-        let global_vars = process.read_memory::<usize>(client_base + 0x1692EE8)?;
+        let global_vars = process.read_memory::<usize>(client_base + 0x1696F40)?;
 
         let current_map_name =
             process.read_string(process.read_memory::<usize>(global_vars + 0x188)?)?;
@@ -84,6 +84,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
     log::info!("Dumping offsets...");
 
     for signature in config.signatures {
+        log::info!("Searching for {}...", signature.name);
         let module = process.get_module_by_name(&signature.module)?;
 
         let mut address = match process.find_pattern(&signature.module, &signature.pattern) {
@@ -156,6 +157,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
                     .to_case(Case::Pascal),
             )
             .or_default()
+            .data
             .push(Entry {
                 name,
                 value,

@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.863716 UTC
+ * 2023-10-18 10:31:50.299998100 UTC
  */
 
 public static class CDSPMixgroupModifier {
@@ -21,7 +21,7 @@ public static class CDspPresetModifierList {
     public const nint m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
 }
 
-public static class CSosGroupActionLimitSchema {
+public static class CSosGroupActionLimitSchema { // CSosGroupActionSchema
     public const nint m_nMaxCount = 0x18; // int32_t
     public const nint m_nStopType = 0x1C; // SosActionStopType_t
     public const nint m_nSortType = 0x20; // SosActionSortType_t
@@ -33,7 +33,7 @@ public static class CSosGroupActionSchema {
     public const nint m_actionInstanceType = 0x14; // ActionType_t
 }
 
-public static class CSosGroupActionSetSoundeventParameterSchema {
+public static class CSosGroupActionSetSoundeventParameterSchema { // CSosGroupActionSchema
     public const nint m_nMaxCount = 0x18; // int32_t
     public const nint m_flMinValue = 0x1C; // float
     public const nint m_flMaxValue = 0x20; // float
@@ -41,7 +41,7 @@ public static class CSosGroupActionSetSoundeventParameterSchema {
     public const nint m_nSortType = 0x30; // SosActionSortType_t
 }
 
-public static class CSosGroupActionTimeLimitSchema {
+public static class CSosGroupActionTimeLimitSchema { // CSosGroupActionSchema
     public const nint m_flMaxDuration = 0x18; // float
 }
 
@@ -52,7 +52,7 @@ public static class CSosGroupBranchPattern {
     public const nint m_bMatchOpvar = 0xB; // bool
 }
 
-public static class CSosGroupMatchPattern {
+public static class CSosGroupMatchPattern { // CSosGroupBranchPattern
     public const nint m_matchSoundEventName = 0x10; // CUtlString
     public const nint m_matchSoundEventSubString = 0x18; // CUtlString
     public const nint m_flEntIndex = 0x20; // float

@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:57.479634300 UTC
+ * 2023-10-18 10:31:55.051133700 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -25,6 +25,9 @@ pub mod ClientDll {
     pub const dwViewAngles: usize = 0x18E0DA0;
     pub const dwViewMatrix: usize = 0x1881D70;
     pub const dwViewRender: usize = 0x1882768;
+    pub const dwGameEntitySystem_getBaseEntity: usize = 0x5FFD50;
+    pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x5F1A40;
+    pub const dwBaseEntityModel_setModel: usize = 0x57C750;
 }
 
 pub mod Engine2Dll {

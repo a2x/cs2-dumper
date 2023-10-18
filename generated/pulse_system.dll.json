@@ -1,231 +1,859 @@
 {
+  "CBasePulseGraphInstance": {
+    "data": {},
+    "comment": null
+  },
   "CPulseCell_Base": {
-    "m_nEditorNodeID": 8
+    "data": {
+      "m_nEditorNodeID": {
+        "value": 8,
+        "comment": "PulseDocNodeID_t"
+      }
+    },
+    "comment": null
+  },
+  "CPulseCell_BaseFlow": {
+    "data": {},
+    "comment": "CPulseCell_Base"
+  },
+  "CPulseCell_BaseValue": {
+    "data": {},
+    "comment": "CPulseCell_Base"
+  },
+  "CPulseCell_BaseYieldingInflow": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Inflow_BaseEntrypoint": {
-    "m_EntryChunk": 72,
-    "m_RegisterMap": 80
+    "data": {
+      "m_EntryChunk": {
+        "value": 72,
+        "comment": "PulseRuntimeChunkIndex_t"
+      },
+      "m_RegisterMap": {
+        "value": 80,
+        "comment": "PulseRegisterMap_t"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Inflow_EntOutputHandler": {
-    "m_ExpectedParamType": 136,
-    "m_SourceEntity": 112,
-    "m_SourceOutput": 120,
-    "m_TargetInput": 128
+    "data": {
+      "m_ExpectedParamType": {
+        "value": 136,
+        "comment": "CPulseValueFullType"
+      },
+      "m_SourceEntity": {
+        "value": 112,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_SourceOutput": {
+        "value": 120,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_TargetInput": {
+        "value": 128,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": "CPulseCell_Inflow_BaseEntrypoint"
   },
   "CPulseCell_Inflow_EventHandler": {
-    "m_EventName": 112
+    "data": {
+      "m_EventName": {
+        "value": 112,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": "CPulseCell_Inflow_BaseEntrypoint"
   },
   "CPulseCell_Inflow_GraphHook": {
-    "m_HookName": 112
+    "data": {
+      "m_HookName": {
+        "value": 112,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": "CPulseCell_Inflow_BaseEntrypoint"
   },
   "CPulseCell_Inflow_Method": {
-    "m_Args": 152,
-    "m_Description": 120,
-    "m_MethodName": 112,
-    "m_ReturnType": 136,
-    "m_bIsPublic": 128
+    "data": {
+      "m_Args": {
+        "value": 152,
+        "comment": "CUtlVector<CPulseRuntimeMethodArg>"
+      },
+      "m_Description": {
+        "value": 120,
+        "comment": "CUtlString"
+      },
+      "m_MethodName": {
+        "value": 112,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_ReturnType": {
+        "value": 136,
+        "comment": "CPulseValueFullType"
+      },
+      "m_bIsPublic": {
+        "value": 128,
+        "comment": "bool"
+      }
+    },
+    "comment": "CPulseCell_Inflow_BaseEntrypoint"
   },
   "CPulseCell_Inflow_Wait": {
-    "m_WakeResume": 72
+    "data": {
+      "m_WakeResume": {
+        "value": 72,
+        "comment": "CPulse_ResumePoint"
+      }
+    },
+    "comment": "CPulseCell_BaseYieldingInflow"
   },
   "CPulseCell_Inflow_Yield": {
-    "m_UnyieldResume": 72
+    "data": {
+      "m_UnyieldResume": {
+        "value": 72,
+        "comment": "CPulse_ResumePoint"
+      }
+    },
+    "comment": "CPulseCell_BaseYieldingInflow"
   },
   "CPulseCell_Outflow_CycleOrdered": {
-    "m_Outputs": 72
+    "data": {
+      "m_Outputs": {
+        "value": 72,
+        "comment": "CUtlVector<CPulse_OutflowConnection>"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_CycleOrdered_InstanceState_t": {
-    "m_nNextIndex": 0
+    "data": {
+      "m_nNextIndex": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CPulseCell_Outflow_CycleRandom": {
-    "m_Outputs": 72
+    "data": {
+      "m_Outputs": {
+        "value": 72,
+        "comment": "CUtlVector<CPulse_OutflowConnection>"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_CycleShuffled": {
-    "m_Outputs": 72
+    "data": {
+      "m_Outputs": {
+        "value": 72,
+        "comment": "CUtlVector<CPulse_OutflowConnection>"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_CycleShuffled_InstanceState_t": {
-    "m_Shuffle": 0,
-    "m_nNextShuffle": 32
+    "data": {
+      "m_Shuffle": {
+        "value": 0,
+        "comment": "CUtlVectorFixedGrowable<uint8_t>"
+      },
+      "m_nNextShuffle": {
+        "value": 32,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CPulseCell_Outflow_IntSwitch": {
-    "m_CaseOutflows": 88,
-    "m_DefaultCaseOutflow": 72
+    "data": {
+      "m_CaseOutflows": {
+        "value": 88,
+        "comment": "CUtlVector<CPulse_OutflowConnection>"
+      },
+      "m_DefaultCaseOutflow": {
+        "value": 72,
+        "comment": "CPulse_OutflowConnection"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_SimultaneousParallel": {
-    "m_Outputs": 72
+    "data": {
+      "m_Outputs": {
+        "value": 72,
+        "comment": "CUtlVector<CPulse_OutflowConnection>"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_StringSwitch": {
-    "m_CaseOutflows": 88,
-    "m_DefaultCaseOutflow": 72
+    "data": {
+      "m_CaseOutflows": {
+        "value": 88,
+        "comment": "CUtlVector<CPulse_OutflowConnection>"
+      },
+      "m_DefaultCaseOutflow": {
+        "value": 72,
+        "comment": "CPulse_OutflowConnection"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_TestExplicitYesNo": {
-    "m_No": 88,
-    "m_Yes": 72
+    "data": {
+      "m_No": {
+        "value": 88,
+        "comment": "CPulse_OutflowConnection"
+      },
+      "m_Yes": {
+        "value": 72,
+        "comment": "CPulse_OutflowConnection"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Outflow_TestRandomYesNo": {
-    "m_No": 88,
-    "m_Yes": 72
+    "data": {
+      "m_No": {
+        "value": 88,
+        "comment": "CPulse_OutflowConnection"
+      },
+      "m_Yes": {
+        "value": 72,
+        "comment": "CPulse_OutflowConnection"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Step_CallExternalMethod": {
-    "m_ExpectedArgs": 80,
-    "m_MethodName": 72
+    "data": {
+      "m_ExpectedArgs": {
+        "value": 80,
+        "comment": "CUtlVector<CPulseRuntimeMethodArg>"
+      },
+      "m_MethodName": {
+        "value": 72,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Step_DebugLog": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Step_PublicOutput": {
-    "m_OutputIndex": 72
+    "data": {
+      "m_OutputIndex": {
+        "value": 72,
+        "comment": "PulseRuntimeOutputIndex_t"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Step_TestDomainCreateFakeEntity": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Step_TestDomainDestroyFakeEntity": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
   },
   "CPulseCell_Step_TestDomainEntFire": {
-    "m_Input": 72
+    "data": {
+      "m_Input": {
+        "value": 72,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Step_TestDomainTracepoint": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Test_MultiInflow_NoDefault": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Test_MultiInflow_WithDefault": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Test_NoInflow": {
+    "data": {},
+    "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Val_TestDomainFindEntityByName": {
+    "data": {},
+    "comment": "CPulseCell_BaseValue"
+  },
+  "CPulseCell_Val_TestDomainGetEntityName": {
+    "data": {},
+    "comment": "CPulseCell_BaseValue"
+  },
+  "CPulseCell_Value_RandomInt": {
+    "data": {},
+    "comment": "CPulseCell_BaseValue"
+  },
+  "CPulseCell_Value_TestValue50": {
+    "data": {},
+    "comment": "CPulseCell_BaseValue"
+  },
+  "CPulseExecCursor": {
+    "data": {},
+    "comment": null
   },
   "CPulseGraphDef": {
-    "m_CallInfos": 144,
-    "m_Cells": 48,
-    "m_Chunks": 24,
-    "m_DomainIdentifier": 8,
-    "m_InvokeBindings": 120,
-    "m_OutputConnections": 168,
-    "m_ParentMapName": 16,
-    "m_PublicOutputs": 96,
-    "m_Vars": 72
+    "data": {
+      "m_CallInfos": {
+        "value": 144,
+        "comment": "CUtlVector<CPulse_CallInfo*>"
+      },
+      "m_Cells": {
+        "value": 48,
+        "comment": "CUtlVector<CPulseCell_Base*>"
+      },
+      "m_Chunks": {
+        "value": 24,
+        "comment": "CUtlVector<CPulse_Chunk*>"
+      },
+      "m_DomainIdentifier": {
+        "value": 8,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_InvokeBindings": {
+        "value": 120,
+        "comment": "CUtlVector<CPulse_InvokeBinding*>"
+      },
+      "m_OutputConnections": {
+        "value": 168,
+        "comment": "CUtlVector<CPulse_OutputConnection*>"
+      },
+      "m_ParentMapName": {
+        "value": 16,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_PublicOutputs": {
+        "value": 96,
+        "comment": "CUtlVector<CPulse_PublicOutput>"
+      },
+      "m_Vars": {
+        "value": 72,
+        "comment": "CUtlVector<CPulse_Variable>"
+      }
+    },
+    "comment": null
   },
   "CPulseGraphInstance_TestDomain": {
-    "m_Tracepoints": 216,
-    "m_bExpectingToDestroyWithYieldedCursors": 210,
-    "m_bExplicitTimeStepping": 209,
-    "m_bIsRunningUnitTests": 208,
-    "m_bTestYesOrNoPath": 240,
-    "m_nNextValidateIndex": 212
+    "data": {
+      "m_Tracepoints": {
+        "value": 216,
+        "comment": "CUtlVector<CUtlString>"
+      },
+      "m_bExpectingToDestroyWithYieldedCursors": {
+        "value": 210,
+        "comment": "bool"
+      },
+      "m_bExplicitTimeStepping": {
+        "value": 209,
+        "comment": "bool"
+      },
+      "m_bIsRunningUnitTests": {
+        "value": 208,
+        "comment": "bool"
+      },
+      "m_bTestYesOrNoPath": {
+        "value": 240,
+        "comment": "bool"
+      },
+      "m_nNextValidateIndex": {
+        "value": 212,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CBasePulseGraphInstance"
   },
   "CPulseGraphInstance_TestDomain_Derived": {
-    "m_nInstanceValueX": 248
+    "data": {
+      "m_nInstanceValueX": {
+        "value": 248,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CPulseGraphInstance_TestDomain"
+  },
+  "CPulseGraphInstance_TurtleGraphics": {
+    "data": {},
+    "comment": "CBasePulseGraphInstance"
+  },
+  "CPulseMathlib": {
+    "data": {},
+    "comment": null
   },
   "CPulseRuntimeMethodArg": {
-    "m_Description": 56,
-    "m_Name": 0,
-    "m_Type": 64
+    "data": {
+      "m_Description": {
+        "value": 56,
+        "comment": "CUtlString"
+      },
+      "m_Name": {
+        "value": 0,
+        "comment": "CKV3MemberNameWithStorage"
+      },
+      "m_Type": {
+        "value": 64,
+        "comment": "CPulseValueFullType"
+      }
+    },
+    "comment": null
+  },
+  "CPulseTestFuncs_DerivedDomain": {
+    "data": {},
+    "comment": null
+  },
+  "CPulseTestFuncs_LibraryA": {
+    "data": {},
+    "comment": null
+  },
+  "CPulseTestScriptLib": {
+    "data": {},
+    "comment": null
   },
   "CPulseTurtleGraphicsCursor": {
-    "m_Color": 392,
-    "m_bPenUp": 408,
-    "m_flHeadingDeg": 404,
-    "m_vPos": 396
+    "data": {
+      "m_Color": {
+        "value": 392,
+        "comment": "Color"
+      },
+      "m_bPenUp": {
+        "value": 408,
+        "comment": "bool"
+      },
+      "m_flHeadingDeg": {
+        "value": 404,
+        "comment": "float"
+      },
+      "m_vPos": {
+        "value": 396,
+        "comment": "Vector2D"
+      }
+    },
+    "comment": "CPulseExecCursor"
   },
   "CPulse_CallInfo": {
-    "m_CallMethodID": 48,
-    "m_PortName": 0,
-    "m_RegisterMap": 16,
-    "m_nEditorNodeID": 8,
-    "m_nSrcChunk": 52,
-    "m_nSrcInstruction": 56
+    "data": {
+      "m_CallMethodID": {
+        "value": 48,
+        "comment": "PulseDocNodeID_t"
+      },
+      "m_PortName": {
+        "value": 0,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_RegisterMap": {
+        "value": 16,
+        "comment": "PulseRegisterMap_t"
+      },
+      "m_nEditorNodeID": {
+        "value": 8,
+        "comment": "PulseDocNodeID_t"
+      },
+      "m_nSrcChunk": {
+        "value": 52,
+        "comment": "PulseRuntimeChunkIndex_t"
+      },
+      "m_nSrcInstruction": {
+        "value": 56,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CPulse_Chunk": {
-    "m_InstructionEditorIDs": 32,
-    "m_Instructions": 0,
-    "m_Registers": 16
+    "data": {
+      "m_InstructionEditorIDs": {
+        "value": 32,
+        "comment": "CUtlLeanVector<PulseDocNodeID_t>"
+      },
+      "m_Instructions": {
+        "value": 0,
+        "comment": "CUtlLeanVector<PGDInstruction_t>"
+      },
+      "m_Registers": {
+        "value": 16,
+        "comment": "CUtlLeanVector<CPulse_RegisterInfo>"
+      }
+    },
+    "comment": null
   },
   "CPulse_InvokeBinding": {
-    "m_FuncName": 32,
-    "m_InstanceType": 48,
-    "m_RegisterMap": 0,
-    "m_nCellIndex": 40,
-    "m_nSrcChunk": 64,
-    "m_nSrcInstruction": 68
+    "data": {
+      "m_FuncName": {
+        "value": 32,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_InstanceType": {
+        "value": 48,
+        "comment": "CPulseValueFullType"
+      },
+      "m_RegisterMap": {
+        "value": 0,
+        "comment": "PulseRegisterMap_t"
+      },
+      "m_nCellIndex": {
+        "value": 40,
+        "comment": "PulseRuntimeCellIndex_t"
+      },
+      "m_nSrcChunk": {
+        "value": 64,
+        "comment": "PulseRuntimeChunkIndex_t"
+      },
+      "m_nSrcInstruction": {
+        "value": 68,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CPulse_OutflowConnection": {
-    "m_SourceOutflowName": 0,
-    "m_nDestChunk": 8,
-    "m_nInstruction": 12
+    "data": {
+      "m_SourceOutflowName": {
+        "value": 0,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_nDestChunk": {
+        "value": 8,
+        "comment": "PulseRuntimeChunkIndex_t"
+      },
+      "m_nInstruction": {
+        "value": 12,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "CPulse_OutputConnection": {
-    "m_Param": 24,
-    "m_SourceOutput": 0,
-    "m_TargetEntity": 8,
-    "m_TargetInput": 16
+    "data": {
+      "m_Param": {
+        "value": 24,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_SourceOutput": {
+        "value": 0,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_TargetEntity": {
+        "value": 8,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_TargetInput": {
+        "value": 16,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": null
   },
   "CPulse_PublicOutput": {
-    "m_Description": 8,
-    "m_Name": 0,
-    "m_ParamType": 16
+    "data": {
+      "m_Description": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_ParamType": {
+        "value": 16,
+        "comment": "CPulseValueFullType"
+      }
+    },
+    "comment": null
   },
   "CPulse_RegisterInfo": {
-    "m_OriginName": 24,
-    "m_Type": 8,
-    "m_nLastReadByInstruction": 84,
-    "m_nReg": 0,
-    "m_nWrittenByInstruction": 80
+    "data": {
+      "m_OriginName": {
+        "value": 24,
+        "comment": "CKV3MemberNameWithStorage"
+      },
+      "m_Type": {
+        "value": 8,
+        "comment": "CPulseValueFullType"
+      },
+      "m_nLastReadByInstruction": {
+        "value": 84,
+        "comment": "int32_t"
+      },
+      "m_nReg": {
+        "value": 0,
+        "comment": "PulseRuntimeRegisterIndex_t"
+      },
+      "m_nWrittenByInstruction": {
+        "value": 80,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "CPulse_ResumePoint": {
+    "data": {},
+    "comment": "CPulse_OutflowConnection"
   },
   "CPulse_Variable": {
-    "m_DefaultValue": 32,
-    "m_Description": 8,
-    "m_Name": 0,
-    "m_Type": 16,
-    "m_bIsPublic": 50
+    "data": {
+      "m_DefaultValue": {
+        "value": 32,
+        "comment": "KeyValues3"
+      },
+      "m_Description": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_Type": {
+        "value": 16,
+        "comment": "CPulseValueFullType"
+      },
+      "m_bIsPublic": {
+        "value": 50,
+        "comment": "bool"
+      }
+    },
+    "comment": null
   },
   "CTestDomainDerived_Cursor": {
-    "m_nCursorValueA": 392,
-    "m_nCursorValueB": 396
+    "data": {
+      "m_nCursorValueA": {
+        "value": 392,
+        "comment": "int32_t"
+      },
+      "m_nCursorValueB": {
+        "value": 396,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CPulseExecCursor"
   },
   "FakeEntity_t": {
-    "m_Class": 16,
-    "m_Name": 8,
-    "m_bDestroyed": 24,
-    "m_bFuncWasCalled": 40,
-    "m_fValue": 44,
-    "m_nHandle": 0,
-    "m_pAssociatedGraphInstance": 32
+    "data": {
+      "m_Class": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_Name": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_bDestroyed": {
+        "value": 24,
+        "comment": "bool"
+      },
+      "m_bFuncWasCalled": {
+        "value": 40,
+        "comment": "bool"
+      },
+      "m_fValue": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_nHandle": {
+        "value": 0,
+        "comment": "PulseTestEHandle_t"
+      },
+      "m_pAssociatedGraphInstance": {
+        "value": 32,
+        "comment": "CPulseGraphInstance_TestDomain*"
+      }
+    },
+    "comment": null
   },
   "PGDInstruction_t": {
-    "m_Arg0Name": 32,
-    "m_Arg1Name": 40,
-    "m_LiteralString": 64,
-    "m_bLiteralBool": 48,
-    "m_flLiteralFloat": 56,
-    "m_nCallInfoIndex": 28,
-    "m_nChunk": 20,
-    "m_nCode": 0,
-    "m_nDestInstruction": 24,
-    "m_nInvokeBindingIndex": 16,
-    "m_nLiteralInt": 52,
-    "m_nReg0": 8,
-    "m_nReg1": 10,
-    "m_nReg2": 12,
-    "m_nVar": 4,
-    "m_vLiteralVec3": 80
+    "data": {
+      "m_Arg0Name": {
+        "value": 32,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_Arg1Name": {
+        "value": 40,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_LiteralString": {
+        "value": 64,
+        "comment": "CBufferString"
+      },
+      "m_bLiteralBool": {
+        "value": 48,
+        "comment": "bool"
+      },
+      "m_flLiteralFloat": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_nCallInfoIndex": {
+        "value": 28,
+        "comment": "PulseRuntimeCallInfoIndex_t"
+      },
+      "m_nChunk": {
+        "value": 20,
+        "comment": "PulseRuntimeChunkIndex_t"
+      },
+      "m_nCode": {
+        "value": 0,
+        "comment": "PulseInstructionCode_t"
+      },
+      "m_nDestInstruction": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_nInvokeBindingIndex": {
+        "value": 16,
+        "comment": "PulseRuntimeInvokeIndex_t"
+      },
+      "m_nLiteralInt": {
+        "value": 52,
+        "comment": "int32_t"
+      },
+      "m_nReg0": {
+        "value": 8,
+        "comment": "PulseRuntimeRegisterIndex_t"
+      },
+      "m_nReg1": {
+        "value": 10,
+        "comment": "PulseRuntimeRegisterIndex_t"
+      },
+      "m_nReg2": {
+        "value": 12,
+        "comment": "PulseRuntimeRegisterIndex_t"
+      },
+      "m_nVar": {
+        "value": 4,
+        "comment": "PulseRuntimeVarIndex_t"
+      },
+      "m_vLiteralVec3": {
+        "value": 80,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
   },
   "PulseDocNodeID_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRegisterMap_t": {
-    "m_Inparams": 0,
-    "m_Outparams": 16
+    "data": {
+      "m_Inparams": {
+        "value": 0,
+        "comment": "KeyValues3"
+      },
+      "m_Outparams": {
+        "value": 16,
+        "comment": "KeyValues3"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeCallInfoIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeCellIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeChunkIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeEntrypointIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeInvokeIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeOutputIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeRegisterIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int16_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeStateOffset_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
   },
   "PulseRuntimeVarIndex_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   },
   "PulseTestEHandle_t": {
-    "m_Value": 0
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
   }
 }

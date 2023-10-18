@@ -1,7 +1,11 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.659173400 UTC
+2023-10-18 10:31:50.144595200 UTC
 '''
+
+class CEmptyEntityInstance:
+
+class CEntityComponent:
 
 class CEntityComponentHelper:
     m_flags = 0x8 # uint32_t
@@ -33,8 +37,10 @@ class CEntityInstance:
 class CNetworkVarChainer:
     m_PathIndex = 0x20 # ChangeAccessorFieldPathIndex_t
 
-class CScriptComponent:
+class CScriptComponent: # CEntityComponent
     m_scriptClassName = 0x30 # CUtlSymbolLarge
+
+class CVariantDefaultAllocator:
 
 class EngineLoopState_t:
     m_nPlatWindowWidth = 0x18 # int32_t
@@ -51,7 +57,11 @@ class EntComponentInfo_t:
     m_nFlags = 0x24 # uint32_t
     m_pBaseClassComponentHelper = 0x60 # CEntityComponentHelper*
 
-class EventAdvanceTick_t:
+class EntInput_t:
+
+class EntOutput_t:
+
+class EventAdvanceTick_t: # EventSimulate_t
     m_nCurrentTick = 0x30 # int32_t
     m_nCurrentTickThisFrame = 0x34 # int32_t
     m_nTotalTicksThisFrame = 0x38 # int32_t
@@ -59,6 +69,8 @@ class EventAdvanceTick_t:
 
 class EventAppShutdown_t:
     m_nDummy0 = 0x0 # int32_t
+
+class EventClientAdvanceTick_t: # EventAdvanceTick_t
 
 class EventClientFrameSimulate_t:
     m_LoopState = 0x0 # EngineLoopState_t
@@ -72,12 +84,16 @@ class EventClientOutput_t:
     m_flRenderFrameTimeUnbounded = 0x30 # float
     m_bRenderOnly = 0x34 # bool
 
+class EventClientPauseSimulate_t: # EventSimulate_t
+
 class EventClientPollInput_t:
     m_LoopState = 0x0 # EngineLoopState_t
     m_flRealTime = 0x28 # float
 
 class EventClientPollNetworking_t:
     m_nTickCount = 0x0 # int32_t
+
+class EventClientPostAdvanceTick_t: # EventPostAdvanceTick_t
 
 class EventClientPostOutput_t:
     m_LoopState = 0x0 # EngineLoopState_t
@@ -86,6 +102,8 @@ class EventClientPostOutput_t:
     m_flRenderFrameTimeUnbounded = 0x34 # float
     m_bRenderOnly = 0x38 # bool
 
+class EventClientPostSimulate_t: # EventSimulate_t
+
 class EventClientPreOutput_t:
     m_LoopState = 0x0 # EngineLoopState_t
     m_flRenderTime = 0x28 # double
@@ -93,6 +111,10 @@ class EventClientPreOutput_t:
     m_flRenderFrameTimeUnbounded = 0x38 # double
     m_flRealTime = 0x40 # float
     m_bRenderOnly = 0x44 # bool
+
+class EventClientPreSimulate_t: # EventSimulate_t
+
+class EventClientPredictionPostNetupdate_t:
 
 class EventClientProcessGameInput_t:
     m_LoopState = 0x0 # EngineLoopState_t
@@ -103,6 +125,8 @@ class EventClientProcessInput_t:
     m_LoopState = 0x0 # EngineLoopState_t
     m_flRealTime = 0x28 # float
 
+class EventClientProcessNetworking_t:
+
 class EventClientSceneSystemThreadStateChange_t:
     m_bThreadsActive = 0x0 # bool
 
@@ -110,10 +134,14 @@ class EventClientSendInput_t:
     m_bFinalClientCommandTick = 0x0 # bool
     m_nAdditionalClientCommandsToCreate = 0x4 # int32_t
 
+class EventClientSimulate_t: # EventSimulate_t
+
 class EventFrameBoundary_t:
     m_flFrameTime = 0x0 # float
 
-class EventPostAdvanceTick_t:
+class EventModInitialized_t:
+
+class EventPostAdvanceTick_t: # EventSimulate_t
     m_nCurrentTick = 0x30 # int32_t
     m_nCurrentTickThisFrame = 0x34 # int32_t
     m_nTotalTicksThisFrame = 0x38 # int32_t
@@ -127,6 +155,18 @@ class EventPreDataUpdate_t:
 
 class EventProfileStorageAvailable_t:
     m_nSplitScreenSlot = 0x0 # CSplitScreenSlot
+
+class EventServerAdvanceTick_t: # EventAdvanceTick_t
+
+class EventServerPollNetworking_t: # EventSimulate_t
+
+class EventServerPostAdvanceTick_t: # EventPostAdvanceTick_t
+
+class EventServerPostSimulate_t: # EventSimulate_t
+
+class EventServerProcessNetworking_t: # EventSimulate_t
+
+class EventServerSimulate_t: # EventSimulate_t
 
 class EventSetTime_t:
     m_LoopState = 0x0 # EngineLoopState_t
@@ -147,3 +187,5 @@ class EventSimulate_t:
     m_LoopState = 0x0 # EngineLoopState_t
     m_bFirstTick = 0x28 # bool
     m_bLastTick = 0x29 # bool
+
+class EventSplitScreenStateChanged_t:

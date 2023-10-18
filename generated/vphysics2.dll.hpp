@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.822492100 UTC
+ * 2023-10-18 10:31:50.272860600 UTC
  */
 
 #pragma once
@@ -126,17 +126,17 @@ namespace FeBoxRigid_t {
     constexpr std::ptrdiff_t nFlags = 0x32; // uint16_t
 }
 
-namespace FeBuildBoxRigid_t {
+namespace FeBuildBoxRigid_t { // FeBoxRigid_t
     constexpr std::ptrdiff_t m_nPriority = 0x40; // int32_t
     constexpr std::ptrdiff_t m_nVertexMapHash = 0x44; // uint32_t
 }
 
-namespace FeBuildSphereRigid_t {
+namespace FeBuildSphereRigid_t { // FeSphereRigid_t
     constexpr std::ptrdiff_t m_nPriority = 0x20; // int32_t
     constexpr std::ptrdiff_t m_nVertexMapHash = 0x24; // uint32_t
 }
 
-namespace FeBuildTaperedCapsuleRigid_t {
+namespace FeBuildTaperedCapsuleRigid_t { // FeTaperedCapsuleRigid_t
     constexpr std::ptrdiff_t m_nPriority = 0x30; // int32_t
     constexpr std::ptrdiff_t m_nVertexMapHash = 0x34; // uint32_t
 }
@@ -440,6 +440,9 @@ namespace FourVectors2D {
     constexpr std::ptrdiff_t y = 0x10; // fltx4
 }
 
+namespace IPhysicsPlayerController {
+}
+
 namespace OldFeEdge_t {
     constexpr std::ptrdiff_t m_flK = 0x0; // float[3]
     constexpr std::ptrdiff_t invA = 0xC; // float
@@ -605,7 +608,7 @@ namespace RnBodyDesc_t {
     constexpr std::ptrdiff_t m_bHasShadowController = 0xCA; // bool
 }
 
-namespace RnCapsuleDesc_t {
+namespace RnCapsuleDesc_t { // RnShapeDesc_t
     constexpr std::ptrdiff_t m_Capsule = 0x10; // RnCapsule_t
 }
 
@@ -625,7 +628,7 @@ namespace RnHalfEdge_t {
     constexpr std::ptrdiff_t m_nFace = 0x3; // uint8_t
 }
 
-namespace RnHullDesc_t {
+namespace RnHullDesc_t { // RnShapeDesc_t
     constexpr std::ptrdiff_t m_Hull = 0x10; // RnHull_t
 }
 
@@ -644,7 +647,7 @@ namespace RnHull_t {
     constexpr std::ptrdiff_t m_pRegionSVM = 0xD0; // CRegionSVM*
 }
 
-namespace RnMeshDesc_t {
+namespace RnMeshDesc_t { // RnShapeDesc_t
     constexpr std::ptrdiff_t m_Mesh = 0x10; // RnMesh_t
 }
 
@@ -694,7 +697,7 @@ namespace RnSoftbodySpring_t {
     constexpr std::ptrdiff_t m_flLength = 0x4; // float
 }
 
-namespace RnSphereDesc_t {
+namespace RnSphereDesc_t { // RnShapeDesc_t
     constexpr std::ptrdiff_t m_Sphere = 0x10; // RnSphere_t
 }
 
@@ -742,6 +745,6 @@ namespace constraint_hingeparams_t {
     constexpr std::ptrdiff_t constraint = 0x28; // constraint_breakableparams_t
 }
 
-namespace vphysics_save_cphysicsbody_t {
+namespace vphysics_save_cphysicsbody_t { // RnBodyDesc_t
     constexpr std::ptrdiff_t m_nOldPointer = 0xD0; // uint64_t
 }

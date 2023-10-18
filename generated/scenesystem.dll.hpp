@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.875577800 UTC
+ * 2023-10-18 10:31:50.306855500 UTC
  */
 
 #pragma once
@@ -23,6 +23,12 @@ namespace CSSDSMsg_LayerBase {
     constexpr std::ptrdiff_t m_nLayerId = 0x20; // uint64_t
     constexpr std::ptrdiff_t m_LayerName = 0x28; // CUtlString
     constexpr std::ptrdiff_t m_displayText = 0x30; // CUtlString
+}
+
+namespace CSSDSMsg_PostLayer { // CSSDSMsg_LayerBase
+}
+
+namespace CSSDSMsg_PreLayer { // CSSDSMsg_LayerBase
 }
 
 namespace CSSDSMsg_ViewRender {

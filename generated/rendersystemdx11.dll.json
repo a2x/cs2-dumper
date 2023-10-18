@@ -1,20 +1,65 @@
 {
   "RenderInputLayoutField_t": {
-    "m_Format": 36,
-    "m_nInstanceStepRate": 52,
-    "m_nOffset": 40,
-    "m_nSemanticIndex": 32,
-    "m_nSlot": 44,
-    "m_nSlotType": 48,
-    "m_pSemanticName": 0
+    "data": {
+      "m_Format": {
+        "value": 36,
+        "comment": "uint32_t"
+      },
+      "m_nInstanceStepRate": {
+        "value": 52,
+        "comment": "int32_t"
+      },
+      "m_nOffset": {
+        "value": 40,
+        "comment": "int32_t"
+      },
+      "m_nSemanticIndex": {
+        "value": 32,
+        "comment": "int32_t"
+      },
+      "m_nSlot": {
+        "value": 44,
+        "comment": "int32_t"
+      },
+      "m_nSlotType": {
+        "value": 48,
+        "comment": "RenderSlotType_t"
+      },
+      "m_pSemanticName": {
+        "value": 0,
+        "comment": "uint8_t[32]"
+      }
+    },
+    "comment": null
   },
   "VsInputSignatureElement_t": {
-    "m_nD3DSemanticIndex": 192,
-    "m_pD3DSemanticName": 128,
-    "m_pName": 0,
-    "m_pSemantic": 64
+    "data": {
+      "m_nD3DSemanticIndex": {
+        "value": 192,
+        "comment": "int32_t"
+      },
+      "m_pD3DSemanticName": {
+        "value": 128,
+        "comment": "char[64]"
+      },
+      "m_pName": {
+        "value": 0,
+        "comment": "char[64]"
+      },
+      "m_pSemantic": {
+        "value": 64,
+        "comment": "char[64]"
+      }
+    },
+    "comment": null
   },
   "VsInputSignature_t": {
-    "m_elems": 0
+    "data": {
+      "m_elems": {
+        "value": 0,
+        "comment": "CUtlVector<VsInputSignatureElement_t>"
+      }
+    },
+    "comment": null
   }
 }

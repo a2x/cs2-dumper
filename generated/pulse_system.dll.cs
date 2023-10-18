@@ -1,33 +1,45 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.903691800 UTC
+ * 2023-10-18 10:31:50.326056900 UTC
  */
+
+public static class CBasePulseGraphInstance {
+}
 
 public static class CPulseCell_Base {
     public const nint m_nEditorNodeID = 0x8; // PulseDocNodeID_t
 }
 
-public static class CPulseCell_Inflow_BaseEntrypoint {
+public static class CPulseCell_BaseFlow { // CPulseCell_Base
+}
+
+public static class CPulseCell_BaseValue { // CPulseCell_Base
+}
+
+public static class CPulseCell_BaseYieldingInflow { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Inflow_BaseEntrypoint { // CPulseCell_BaseFlow
     public const nint m_EntryChunk = 0x48; // PulseRuntimeChunkIndex_t
     public const nint m_RegisterMap = 0x50; // PulseRegisterMap_t
 }
 
-public static class CPulseCell_Inflow_EntOutputHandler {
+public static class CPulseCell_Inflow_EntOutputHandler { // CPulseCell_Inflow_BaseEntrypoint
     public const nint m_SourceEntity = 0x70; // CUtlSymbolLarge
     public const nint m_SourceOutput = 0x78; // CUtlSymbolLarge
     public const nint m_TargetInput = 0x80; // CUtlSymbolLarge
     public const nint m_ExpectedParamType = 0x88; // CPulseValueFullType
 }
 
-public static class CPulseCell_Inflow_EventHandler {
+public static class CPulseCell_Inflow_EventHandler { // CPulseCell_Inflow_BaseEntrypoint
     public const nint m_EventName = 0x70; // CUtlSymbolLarge
 }
 
-public static class CPulseCell_Inflow_GraphHook {
+public static class CPulseCell_Inflow_GraphHook { // CPulseCell_Inflow_BaseEntrypoint
     public const nint m_HookName = 0x70; // CUtlSymbolLarge
 }
 
-public static class CPulseCell_Inflow_Method {
+public static class CPulseCell_Inflow_Method { // CPulseCell_Inflow_BaseEntrypoint
     public const nint m_MethodName = 0x70; // CUtlSymbolLarge
     public const nint m_Description = 0x78; // CUtlString
     public const nint m_bIsPublic = 0x80; // bool
@@ -35,15 +47,15 @@ public static class CPulseCell_Inflow_Method {
     public const nint m_Args = 0x98; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
-public static class CPulseCell_Inflow_Wait {
+public static class CPulseCell_Inflow_Wait { // CPulseCell_BaseYieldingInflow
     public const nint m_WakeResume = 0x48; // CPulse_ResumePoint
 }
 
-public static class CPulseCell_Inflow_Yield {
+public static class CPulseCell_Inflow_Yield { // CPulseCell_BaseYieldingInflow
     public const nint m_UnyieldResume = 0x48; // CPulse_ResumePoint
 }
 
-public static class CPulseCell_Outflow_CycleOrdered {
+public static class CPulseCell_Outflow_CycleOrdered { // CPulseCell_BaseFlow
     public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
@@ -51,11 +63,11 @@ public static class CPulseCell_Outflow_CycleOrdered_InstanceState_t {
     public const nint m_nNextIndex = 0x0; // int32_t
 }
 
-public static class CPulseCell_Outflow_CycleRandom {
+public static class CPulseCell_Outflow_CycleRandom { // CPulseCell_BaseFlow
     public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
-public static class CPulseCell_Outflow_CycleShuffled {
+public static class CPulseCell_Outflow_CycleShuffled { // CPulseCell_BaseFlow
     public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
@@ -64,41 +76,77 @@ public static class CPulseCell_Outflow_CycleShuffled_InstanceState_t {
     public const nint m_nNextShuffle = 0x20; // int32_t
 }
 
-public static class CPulseCell_Outflow_IntSwitch {
+public static class CPulseCell_Outflow_IntSwitch { // CPulseCell_BaseFlow
     public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
     public const nint m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
-public static class CPulseCell_Outflow_SimultaneousParallel {
+public static class CPulseCell_Outflow_SimultaneousParallel { // CPulseCell_BaseFlow
     public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
 }
 
-public static class CPulseCell_Outflow_StringSwitch {
+public static class CPulseCell_Outflow_StringSwitch { // CPulseCell_BaseFlow
     public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
     public const nint m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
-public static class CPulseCell_Outflow_TestExplicitYesNo {
+public static class CPulseCell_Outflow_TestExplicitYesNo { // CPulseCell_BaseFlow
     public const nint m_Yes = 0x48; // CPulse_OutflowConnection
     public const nint m_No = 0x58; // CPulse_OutflowConnection
 }
 
-public static class CPulseCell_Outflow_TestRandomYesNo {
+public static class CPulseCell_Outflow_TestRandomYesNo { // CPulseCell_BaseFlow
     public const nint m_Yes = 0x48; // CPulse_OutflowConnection
     public const nint m_No = 0x58; // CPulse_OutflowConnection
 }
 
-public static class CPulseCell_Step_CallExternalMethod {
+public static class CPulseCell_Step_CallExternalMethod { // CPulseCell_BaseFlow
     public const nint m_MethodName = 0x48; // CUtlSymbolLarge
     public const nint m_ExpectedArgs = 0x50; // CUtlVector<CPulseRuntimeMethodArg>
 }
 
-public static class CPulseCell_Step_PublicOutput {
+public static class CPulseCell_Step_DebugLog { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Step_PublicOutput { // CPulseCell_BaseFlow
     public const nint m_OutputIndex = 0x48; // PulseRuntimeOutputIndex_t
 }
 
-public static class CPulseCell_Step_TestDomainEntFire {
+public static class CPulseCell_Step_TestDomainCreateFakeEntity { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Step_TestDomainDestroyFakeEntity { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Step_TestDomainEntFire { // CPulseCell_BaseFlow
     public const nint m_Input = 0x48; // CUtlString
+}
+
+public static class CPulseCell_Step_TestDomainTracepoint { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Test_MultiInflow_NoDefault { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Test_MultiInflow_WithDefault { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Test_NoInflow { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Val_TestDomainFindEntityByName { // CPulseCell_BaseValue
+}
+
+public static class CPulseCell_Val_TestDomainGetEntityName { // CPulseCell_BaseValue
+}
+
+public static class CPulseCell_Value_RandomInt { // CPulseCell_BaseValue
+}
+
+public static class CPulseCell_Value_TestValue50 { // CPulseCell_BaseValue
+}
+
+public static class CPulseExecCursor {
 }
 
 public static class CPulseGraphDef {
@@ -113,7 +161,7 @@ public static class CPulseGraphDef {
     public const nint m_OutputConnections = 0xA8; // CUtlVector<CPulse_OutputConnection*>
 }
 
-public static class CPulseGraphInstance_TestDomain {
+public static class CPulseGraphInstance_TestDomain { // CBasePulseGraphInstance
     public const nint m_bIsRunningUnitTests = 0xD0; // bool
     public const nint m_bExplicitTimeStepping = 0xD1; // bool
     public const nint m_bExpectingToDestroyWithYieldedCursors = 0xD2; // bool
@@ -122,8 +170,14 @@ public static class CPulseGraphInstance_TestDomain {
     public const nint m_bTestYesOrNoPath = 0xF0; // bool
 }
 
-public static class CPulseGraphInstance_TestDomain_Derived {
+public static class CPulseGraphInstance_TestDomain_Derived { // CPulseGraphInstance_TestDomain
     public const nint m_nInstanceValueX = 0xF8; // int32_t
+}
+
+public static class CPulseGraphInstance_TurtleGraphics { // CBasePulseGraphInstance
+}
+
+public static class CPulseMathlib {
 }
 
 public static class CPulseRuntimeMethodArg {
@@ -132,7 +186,16 @@ public static class CPulseRuntimeMethodArg {
     public const nint m_Type = 0x40; // CPulseValueFullType
 }
 
-public static class CPulseTurtleGraphicsCursor {
+public static class CPulseTestFuncs_DerivedDomain {
+}
+
+public static class CPulseTestFuncs_LibraryA {
+}
+
+public static class CPulseTestScriptLib {
+}
+
+public static class CPulseTurtleGraphicsCursor { // CPulseExecCursor
     public const nint m_Color = 0x188; // Color
     public const nint m_vPos = 0x18C; // Vector2D
     public const nint m_flHeadingDeg = 0x194; // float
@@ -190,6 +253,9 @@ public static class CPulse_RegisterInfo {
     public const nint m_nLastReadByInstruction = 0x54; // int32_t
 }
 
+public static class CPulse_ResumePoint { // CPulse_OutflowConnection
+}
+
 public static class CPulse_Variable {
     public const nint m_Name = 0x0; // CUtlSymbolLarge
     public const nint m_Description = 0x8; // CUtlString
@@ -198,7 +264,7 @@ public static class CPulse_Variable {
     public const nint m_bIsPublic = 0x32; // bool
 }
 
-public static class CTestDomainDerived_Cursor {
+public static class CTestDomainDerived_Cursor { // CPulseExecCursor
     public const nint m_nCursorValueA = 0x188; // int32_t
     public const nint m_nCursorValueB = 0x18C; // int32_t
 }

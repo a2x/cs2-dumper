@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.639573900 UTC
+ * 2023-10-18 10:31:50.134321 UTC
  */
 
 #pragma once
@@ -55,6 +55,138 @@ namespace FuseFunctionIndex_t {
 
 namespace FuseVariableIndex_t {
     constexpr std::ptrdiff_t m_Value = 0x0; // uint16_t
+}
+
+namespace InfoForResourceTypeCAnimData {
+}
+
+namespace InfoForResourceTypeCAnimationGroup {
+}
+
+namespace InfoForResourceTypeCCSGOEconItem {
+}
+
+namespace InfoForResourceTypeCChoreoSceneFileData {
+}
+
+namespace InfoForResourceTypeCCompositeMaterialKit {
+}
+
+namespace InfoForResourceTypeCDACGameDefsData {
+}
+
+namespace InfoForResourceTypeCDOTANovelsList {
+}
+
+namespace InfoForResourceTypeCDOTAPatchNotesList {
+}
+
+namespace InfoForResourceTypeCDotaItemDefinitionResource {
+}
+
+namespace InfoForResourceTypeCEntityLump {
+}
+
+namespace InfoForResourceTypeCJavaScriptResource {
+}
+
+namespace InfoForResourceTypeCModel {
+}
+
+namespace InfoForResourceTypeCMorphSetData {
+}
+
+namespace InfoForResourceTypeCNmClip {
+}
+
+namespace InfoForResourceTypeCNmSkeleton {
+}
+
+namespace InfoForResourceTypeCPanoramaDynamicImages {
+}
+
+namespace InfoForResourceTypeCPanoramaLayout {
+}
+
+namespace InfoForResourceTypeCPanoramaStyle {
+}
+
+namespace InfoForResourceTypeCPhysAggregateData {
+}
+
+namespace InfoForResourceTypeCPostProcessingResource {
+}
+
+namespace InfoForResourceTypeCRenderMesh {
+}
+
+namespace InfoForResourceTypeCResponseRulesList {
+}
+
+namespace InfoForResourceTypeCSequenceGroupData {
+}
+
+namespace InfoForResourceTypeCSmartProp {
+}
+
+namespace InfoForResourceTypeCTextureBase {
+}
+
+namespace InfoForResourceTypeCTypeScriptResource {
+}
+
+namespace InfoForResourceTypeCVDataResource {
+}
+
+namespace InfoForResourceTypeCVMixListResource {
+}
+
+namespace InfoForResourceTypeCVPhysXSurfacePropertiesList {
+}
+
+namespace InfoForResourceTypeCVSoundEventScriptList {
+}
+
+namespace InfoForResourceTypeCVSoundStackScriptList {
+}
+
+namespace InfoForResourceTypeCVoxelVisibility {
+}
+
+namespace InfoForResourceTypeCWorldNode {
+}
+
+namespace InfoForResourceTypeIAnimGraphModelBinding {
+}
+
+namespace InfoForResourceTypeIMaterial2 {
+}
+
+namespace InfoForResourceTypeIParticleSnapshot {
+}
+
+namespace InfoForResourceTypeIParticleSystemDefinition {
+}
+
+namespace InfoForResourceTypeIPulseGraphDef {
+}
+
+namespace InfoForResourceTypeIVectorGraphic {
+}
+
+namespace InfoForResourceTypeManifestTestResource_t {
+}
+
+namespace InfoForResourceTypeProceduralTestResource_t {
+}
+
+namespace InfoForResourceTypeTestResource_t {
+}
+
+namespace InfoForResourceTypeVSound_t {
+}
+
+namespace InfoForResourceTypeWorld_t {
 }
 
 namespace ManifestTestResource_t {

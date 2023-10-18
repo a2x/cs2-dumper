@@ -1,11 +1,17 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.654528600 UTC
+ * 2023-10-18 10:31:50.142139400 UTC
  */
 
 #pragma once
 
 #include <cstddef>
+
+namespace CEmptyEntityInstance {
+}
+
+namespace CEntityComponent {
+}
 
 namespace CEntityComponentHelper {
     constexpr std::ptrdiff_t m_flags = 0x8; // uint32_t
@@ -42,8 +48,11 @@ namespace CNetworkVarChainer {
     constexpr std::ptrdiff_t m_PathIndex = 0x20; // ChangeAccessorFieldPathIndex_t
 }
 
-namespace CScriptComponent {
+namespace CScriptComponent { // CEntityComponent
     constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
+}
+
+namespace CVariantDefaultAllocator {
 }
 
 namespace EngineLoopState_t {
@@ -63,7 +72,13 @@ namespace EntComponentInfo_t {
     constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x60; // CEntityComponentHelper*
 }
 
-namespace EventAdvanceTick_t {
+namespace EntInput_t {
+}
+
+namespace EntOutput_t {
+}
+
+namespace EventAdvanceTick_t { // EventSimulate_t
     constexpr std::ptrdiff_t m_nCurrentTick = 0x30; // int32_t
     constexpr std::ptrdiff_t m_nCurrentTickThisFrame = 0x34; // int32_t
     constexpr std::ptrdiff_t m_nTotalTicksThisFrame = 0x38; // int32_t
@@ -72,6 +87,9 @@ namespace EventAdvanceTick_t {
 
 namespace EventAppShutdown_t {
     constexpr std::ptrdiff_t m_nDummy0 = 0x0; // int32_t
+}
+
+namespace EventClientAdvanceTick_t { // EventAdvanceTick_t
 }
 
 namespace EventClientFrameSimulate_t {
@@ -88,6 +106,9 @@ namespace EventClientOutput_t {
     constexpr std::ptrdiff_t m_bRenderOnly = 0x34; // bool
 }
 
+namespace EventClientPauseSimulate_t { // EventSimulate_t
+}
+
 namespace EventClientPollInput_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
     constexpr std::ptrdiff_t m_flRealTime = 0x28; // float
@@ -95,6 +116,9 @@ namespace EventClientPollInput_t {
 
 namespace EventClientPollNetworking_t {
     constexpr std::ptrdiff_t m_nTickCount = 0x0; // int32_t
+}
+
+namespace EventClientPostAdvanceTick_t { // EventPostAdvanceTick_t
 }
 
 namespace EventClientPostOutput_t {
@@ -105,6 +129,9 @@ namespace EventClientPostOutput_t {
     constexpr std::ptrdiff_t m_bRenderOnly = 0x38; // bool
 }
 
+namespace EventClientPostSimulate_t { // EventSimulate_t
+}
+
 namespace EventClientPreOutput_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
     constexpr std::ptrdiff_t m_flRenderTime = 0x28; // double
@@ -112,6 +139,12 @@ namespace EventClientPreOutput_t {
     constexpr std::ptrdiff_t m_flRenderFrameTimeUnbounded = 0x38; // double
     constexpr std::ptrdiff_t m_flRealTime = 0x40; // float
     constexpr std::ptrdiff_t m_bRenderOnly = 0x44; // bool
+}
+
+namespace EventClientPreSimulate_t { // EventSimulate_t
+}
+
+namespace EventClientPredictionPostNetupdate_t {
 }
 
 namespace EventClientProcessGameInput_t {
@@ -125,6 +158,9 @@ namespace EventClientProcessInput_t {
     constexpr std::ptrdiff_t m_flRealTime = 0x28; // float
 }
 
+namespace EventClientProcessNetworking_t {
+}
+
 namespace EventClientSceneSystemThreadStateChange_t {
     constexpr std::ptrdiff_t m_bThreadsActive = 0x0; // bool
 }
@@ -134,11 +170,17 @@ namespace EventClientSendInput_t {
     constexpr std::ptrdiff_t m_nAdditionalClientCommandsToCreate = 0x4; // int32_t
 }
 
+namespace EventClientSimulate_t { // EventSimulate_t
+}
+
 namespace EventFrameBoundary_t {
     constexpr std::ptrdiff_t m_flFrameTime = 0x0; // float
 }
 
-namespace EventPostAdvanceTick_t {
+namespace EventModInitialized_t {
+}
+
+namespace EventPostAdvanceTick_t { // EventSimulate_t
     constexpr std::ptrdiff_t m_nCurrentTick = 0x30; // int32_t
     constexpr std::ptrdiff_t m_nCurrentTickThisFrame = 0x34; // int32_t
     constexpr std::ptrdiff_t m_nTotalTicksThisFrame = 0x38; // int32_t
@@ -155,6 +197,24 @@ namespace EventPreDataUpdate_t {
 
 namespace EventProfileStorageAvailable_t {
     constexpr std::ptrdiff_t m_nSplitScreenSlot = 0x0; // CSplitScreenSlot
+}
+
+namespace EventServerAdvanceTick_t { // EventAdvanceTick_t
+}
+
+namespace EventServerPollNetworking_t { // EventSimulate_t
+}
+
+namespace EventServerPostAdvanceTick_t { // EventPostAdvanceTick_t
+}
+
+namespace EventServerPostSimulate_t { // EventSimulate_t
+}
+
+namespace EventServerProcessNetworking_t { // EventSimulate_t
+}
+
+namespace EventServerSimulate_t { // EventSimulate_t
 }
 
 namespace EventSetTime_t {
@@ -178,4 +238,7 @@ namespace EventSimulate_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
     constexpr std::ptrdiff_t m_bFirstTick = 0x28; // bool
     constexpr std::ptrdiff_t m_bLastTick = 0x29; // bool
+}
+
+namespace EventSplitScreenStateChanged_t {
 }

@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.636351200 UTC
+ * 2023-10-18 10:31:50.131314700 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -14,11 +14,11 @@ pub mod CExampleSchemaVData_PolymorphicBase {
     pub const m_nBase: usize = 0x8; // int32_t
 }
 
-pub mod CExampleSchemaVData_PolymorphicDerivedA {
+pub mod CExampleSchemaVData_PolymorphicDerivedA { // CExampleSchemaVData_PolymorphicBase
     pub const m_nDerivedA: usize = 0x10; // int32_t
 }
 
-pub mod CExampleSchemaVData_PolymorphicDerivedB {
+pub mod CExampleSchemaVData_PolymorphicDerivedB { // CExampleSchemaVData_PolymorphicBase
     pub const m_nDerivedB: usize = 0x10; // int32_t
 }
 
@@ -45,6 +45,9 @@ pub mod CSchemaSystemInternalRegistration {
     pub const m_stringTokenWithStorage: usize = 0x150; // CUtlStringTokenWithStorage
     pub const m_ResourceTypes: usize = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
     pub const m_KV3: usize = 0x170; // KeyValues3
+}
+
+pub mod InfoForResourceTypeCResourceManifestInternal {
 }
 
 pub mod ResourceId_t {

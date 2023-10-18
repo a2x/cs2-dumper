@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:57.478467300 UTC
+2023-10-18 10:31:55.050894100 UTC
 '''
 
 class ClientDll:
@@ -23,6 +23,9 @@ class ClientDll:
     dwViewAngles = 0x18E0DA0
     dwViewMatrix = 0x1881D70
     dwViewRender = 0x1882768
+    dwGameEntitySystem_getBaseEntity = 0x5FFD50
+    dwGameEntitySystem_getHighestEntityIndex = 0x5F1A40
+    dwBaseEntityModel_setModel = 0x57C750
 
 class Engine2Dll:
     dwBuildNumber = 0x487514

@@ -1,24 +1,24 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.669007500 UTC
+2023-10-18 10:31:50.150877700 UTC
 '''
 
-class MaterialParamBuffer_t:
+class MaterialParamBuffer_t: # MaterialParam_t
     m_value = 0x8 # CUtlBinaryBlock
 
-class MaterialParamFloat_t:
+class MaterialParamFloat_t: # MaterialParam_t
     m_flValue = 0x8 # float
 
-class MaterialParamInt_t:
+class MaterialParamInt_t: # MaterialParam_t
     m_nValue = 0x8 # int32_t
 
-class MaterialParamString_t:
+class MaterialParamString_t: # MaterialParam_t
     m_value = 0x8 # CUtlString
 
-class MaterialParamTexture_t:
+class MaterialParamTexture_t: # MaterialParam_t
     m_pValue = 0x8 # CStrongHandle<InfoForResourceTypeCTextureBase>
 
-class MaterialParamVector_t:
+class MaterialParamVector_t: # MaterialParam_t
     m_value = 0x8 # Vector4D
 
 class MaterialParam_t:

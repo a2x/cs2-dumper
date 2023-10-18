@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.635013500 UTC
+2023-10-18 10:31:50.130944700 UTC
 '''
 
 class CExampleSchemaVData_Monomorphic:
@@ -10,10 +10,10 @@ class CExampleSchemaVData_Monomorphic:
 class CExampleSchemaVData_PolymorphicBase:
     m_nBase = 0x8 # int32_t
 
-class CExampleSchemaVData_PolymorphicDerivedA:
+class CExampleSchemaVData_PolymorphicDerivedA: # CExampleSchemaVData_PolymorphicBase
     m_nDerivedA = 0x10 # int32_t
 
-class CExampleSchemaVData_PolymorphicDerivedB:
+class CExampleSchemaVData_PolymorphicDerivedB: # CExampleSchemaVData_PolymorphicBase
     m_nDerivedB = 0x10 # int32_t
 
 class CSchemaSystemInternalRegistration:
@@ -39,6 +39,8 @@ class CSchemaSystemInternalRegistration:
     m_stringTokenWithStorage = 0x150 # CUtlStringTokenWithStorage
     m_ResourceTypes = 0x168 # CResourceArray<CResourcePointer<CResourceString>>
     m_KV3 = 0x170 # KeyValues3
+
+class InfoForResourceTypeCResourceManifestInternal:
 
 class ResourceId_t:
     m_Value = 0x0 # uint64_t

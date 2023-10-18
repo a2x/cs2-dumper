@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 01:33:55.642565 UTC
+2023-10-18 10:31:50.135814 UTC
 '''
 
 class AABB_t:
@@ -44,6 +44,94 @@ class FuseFunctionIndex_t:
 
 class FuseVariableIndex_t:
     m_Value = 0x0 # uint16_t
+
+class InfoForResourceTypeCAnimData:
+
+class InfoForResourceTypeCAnimationGroup:
+
+class InfoForResourceTypeCCSGOEconItem:
+
+class InfoForResourceTypeCChoreoSceneFileData:
+
+class InfoForResourceTypeCCompositeMaterialKit:
+
+class InfoForResourceTypeCDACGameDefsData:
+
+class InfoForResourceTypeCDOTANovelsList:
+
+class InfoForResourceTypeCDOTAPatchNotesList:
+
+class InfoForResourceTypeCDotaItemDefinitionResource:
+
+class InfoForResourceTypeCEntityLump:
+
+class InfoForResourceTypeCJavaScriptResource:
+
+class InfoForResourceTypeCModel:
+
+class InfoForResourceTypeCMorphSetData:
+
+class InfoForResourceTypeCNmClip:
+
+class InfoForResourceTypeCNmSkeleton:
+
+class InfoForResourceTypeCPanoramaDynamicImages:
+
+class InfoForResourceTypeCPanoramaLayout:
+
+class InfoForResourceTypeCPanoramaStyle:
+
+class InfoForResourceTypeCPhysAggregateData:
+
+class InfoForResourceTypeCPostProcessingResource:
+
+class InfoForResourceTypeCRenderMesh:
+
+class InfoForResourceTypeCResponseRulesList:
+
+class InfoForResourceTypeCSequenceGroupData:
+
+class InfoForResourceTypeCSmartProp:
+
+class InfoForResourceTypeCTextureBase:
+
+class InfoForResourceTypeCTypeScriptResource:
+
+class InfoForResourceTypeCVDataResource:
+
+class InfoForResourceTypeCVMixListResource:
+
+class InfoForResourceTypeCVPhysXSurfacePropertiesList:
+
+class InfoForResourceTypeCVSoundEventScriptList:
+
+class InfoForResourceTypeCVSoundStackScriptList:
+
+class InfoForResourceTypeCVoxelVisibility:
+
+class InfoForResourceTypeCWorldNode:
+
+class InfoForResourceTypeIAnimGraphModelBinding:
+
+class InfoForResourceTypeIMaterial2:
+
+class InfoForResourceTypeIParticleSnapshot:
+
+class InfoForResourceTypeIParticleSystemDefinition:
+
+class InfoForResourceTypeIPulseGraphDef:
+
+class InfoForResourceTypeIVectorGraphic:
+
+class InfoForResourceTypeManifestTestResource_t:
+
+class InfoForResourceTypeProceduralTestResource_t:
+
+class InfoForResourceTypeTestResource_t:
+
+class InfoForResourceTypeVSound_t:
+
+class InfoForResourceTypeWorld_t:
 
 class ManifestTestResource_t:
     m_name = 0x0 # CUtlString

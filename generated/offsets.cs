@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:57.477110800 UTC
+ * 2023-10-18 10:31:55.050527700 UTC
  */
 
 public static class ClientDll {
@@ -23,6 +23,9 @@ public static class ClientDll {
     public const nint dwViewAngles = 0x18E0DA0;
     public const nint dwViewMatrix = 0x1881D70;
     public const nint dwViewRender = 0x1882768;
+    public const nint dwGameEntitySystem_getBaseEntity = 0x5FFD50;
+    public const nint dwGameEntitySystem_getHighestEntityIndex = 0x5F1A40;
+    public const nint dwBaseEntityModel_setModel = 0x57C750;
 }
 
 public static class Engine2Dll {

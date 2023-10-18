@@ -1,11 +1,11 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:56.098085100 UTC
+ * 2023-10-18 10:31:50.494753300 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
-pub mod CBaseRendererSource2 {
+pub mod CBaseRendererSource2 { // CParticleFunctionRenderer
     pub const m_flRadiusScale: usize = 0x200; // CParticleCollectionRendererFloatInput
     pub const m_flAlphaScale: usize = 0x358; // CParticleCollectionRendererFloatInput
     pub const m_flRollScale: usize = 0x4B0; // CParticleCollectionRendererFloatInput
@@ -69,7 +69,7 @@ pub mod CBaseRendererSource2 {
     pub const m_bMaxLuminanceBlendingSequence0: usize = 0x2221; // bool
 }
 
-pub mod CBaseTrailRenderer {
+pub mod CBaseTrailRenderer { // CBaseRendererSource2
     pub const m_nOrientationType: usize = 0x2470; // ParticleOrientationChoiceList_t
     pub const m_nOrientationControlPoint: usize = 0x2474; // int32_t
     pub const m_flMinSize: usize = 0x2478; // float
@@ -79,7 +79,7 @@ pub mod CBaseTrailRenderer {
     pub const m_bClampV: usize = 0x2730; // bool
 }
 
-pub mod CGeneralRandomRotation {
+pub mod CGeneralRandomRotation { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flDegrees: usize = 0x1C4; // float
     pub const m_flDegreesMin: usize = 0x1C8; // float
@@ -88,13 +88,13 @@ pub mod CGeneralRandomRotation {
     pub const m_bRandomlyFlipDirection: usize = 0x1D4; // bool
 }
 
-pub mod CGeneralSpin {
+pub mod CGeneralSpin { // CParticleFunctionOperator
     pub const m_nSpinRateDegrees: usize = 0x1C0; // int32_t
     pub const m_nSpinRateMinDegrees: usize = 0x1C4; // int32_t
     pub const m_fSpinRateStopTime: usize = 0x1CC; // float
 }
 
-pub mod CNewParticleEffect {
+pub mod CNewParticleEffect { // IParticleEffect
     pub const m_pNext: usize = 0x10; // CNewParticleEffect*
     pub const m_pPrev: usize = 0x18; // CNewParticleEffect*
     pub const m_pParticles: usize = 0x20; // IParticleCollection*
@@ -129,7 +129,25 @@ pub mod CNewParticleEffect {
     pub const m_RefCount: usize = 0xC0; // int32_t
 }
 
-pub mod CParticleFloatInput {
+pub mod CParticleBindingRealPulse { // CParticleCollectionBindingInstance
+}
+
+pub mod CParticleCollectionBindingInstance { // CBasePulseGraphInstance
+}
+
+pub mod CParticleCollectionFloatInput { // CParticleFloatInput
+}
+
+pub mod CParticleCollectionRendererFloatInput { // CParticleCollectionFloatInput
+}
+
+pub mod CParticleCollectionRendererVecInput { // CParticleCollectionVecInput
+}
+
+pub mod CParticleCollectionVecInput { // CParticleVecInput
+}
+
+pub mod CParticleFloatInput { // CParticleInput
     pub const m_nType: usize = 0x10; // ParticleFloatType_t
     pub const m_nMapType: usize = 0x14; // ParticleFloatMapType_t
     pub const m_flLiteralValue: usize = 0x18; // float
@@ -197,31 +215,49 @@ pub mod CParticleFunction {
     pub const m_Notes: usize = 0x198; // CUtlString
 }
 
-pub mod CParticleFunctionEmitter {
+pub mod CParticleFunctionConstraint { // CParticleFunction
+}
+
+pub mod CParticleFunctionEmitter { // CParticleFunction
     pub const m_nEmitterIndex: usize = 0x1B8; // int32_t
 }
 
-pub mod CParticleFunctionInitializer {
+pub mod CParticleFunctionForce { // CParticleFunction
+}
+
+pub mod CParticleFunctionInitializer { // CParticleFunction
     pub const m_nAssociatedEmitterIndex: usize = 0x1B8; // int32_t
 }
 
-pub mod CParticleFunctionPreEmission {
+pub mod CParticleFunctionOperator { // CParticleFunction
+}
+
+pub mod CParticleFunctionPreEmission { // CParticleFunctionOperator
     pub const m_bRunOnce: usize = 0x1C0; // bool
 }
 
-pub mod CParticleFunctionRenderer {
+pub mod CParticleFunctionRenderer { // CParticleFunction
     pub const VisibilityInputs: usize = 0x1B8; // CParticleVisibilityInputs
     pub const m_bCannotBeRefracted: usize = 0x1FC; // bool
     pub const m_bSkipRenderingOnMobile: usize = 0x1FD; // bool
 }
 
-pub mod CParticleModelInput {
+pub mod CParticleInput {
+}
+
+pub mod CParticleModelInput { // CParticleInput
     pub const m_nType: usize = 0x10; // ParticleModelType_t
     pub const m_NamedValue: usize = 0x18; // CParticleNamedValueRef
     pub const m_nControlPoint: usize = 0x58; // int32_t
 }
 
-pub mod CParticleSystemDefinition {
+pub mod CParticleProperty {
+}
+
+pub mod CParticleRemapFloatInput { // CParticleFloatInput
+}
+
+pub mod CParticleSystemDefinition { // IParticleSystemDefinition
     pub const m_nBehaviorVersion: usize = 0x8; // int32_t
     pub const m_PreEmissionOperators: usize = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
     pub const m_Emitters: usize = 0x28; // CUtlVector<CParticleFunctionEmitter*>
@@ -288,7 +324,7 @@ pub mod CParticleSystemDefinition {
     pub const m_controlPointConfigurations: usize = 0x370; // CUtlVector<ParticleControlPointConfiguration_t>
 }
 
-pub mod CParticleTransformInput {
+pub mod CParticleTransformInput { // CParticleInput
     pub const m_nType: usize = 0x10; // ParticleTransformType_t
     pub const m_NamedValue: usize = 0x18; // CParticleNamedValueRef
     pub const m_bFollowNamedValue: usize = 0x58; // bool
@@ -304,7 +340,7 @@ pub mod CParticleVariableRef {
     pub const m_variableType: usize = 0x38; // PulseValueType_t
 }
 
-pub mod CParticleVecInput {
+pub mod CParticleVecInput { // CParticleInput
     pub const m_nType: usize = 0x10; // ParticleVecType_t
     pub const m_vLiteralValue: usize = 0x14; // Vector
     pub const m_LiteralColor: usize = 0x20; // Color
@@ -362,12 +398,21 @@ pub mod CPathParameters {
     pub const m_vEndOffset: usize = 0x2C; // Vector
 }
 
+pub mod CPerParticleFloatInput { // CParticleFloatInput
+}
+
+pub mod CPerParticleVecInput { // CParticleVecInput
+}
+
 pub mod CRandomNumberGeneratorParameters {
     pub const m_bDistributeEvenly: usize = 0x0; // bool
     pub const m_nSeed: usize = 0x4; // int32_t
 }
 
-pub mod C_INIT_AddVectorToVector {
+pub mod CSpinUpdateBase { // CParticleFunctionOperator
+}
+
+pub mod C_INIT_AddVectorToVector { // CParticleFunctionInitializer
     pub const m_vecScale: usize = 0x1C0; // Vector
     pub const m_nFieldOutput: usize = 0x1CC; // ParticleAttributeIndex_t
     pub const m_nFieldInput: usize = 0x1D0; // ParticleAttributeIndex_t
@@ -376,7 +421,7 @@ pub mod C_INIT_AddVectorToVector {
     pub const m_randomnessParameters: usize = 0x1EC; // CRandomNumberGeneratorParameters
 }
 
-pub mod C_INIT_AgeNoise {
+pub mod C_INIT_AgeNoise { // CParticleFunctionInitializer
     pub const m_bAbsVal: usize = 0x1C0; // bool
     pub const m_bAbsValInv: usize = 0x1C1; // bool
     pub const m_flOffset: usize = 0x1C4; // float
@@ -387,7 +432,7 @@ pub mod C_INIT_AgeNoise {
     pub const m_vecOffsetLoc: usize = 0x1D8; // Vector
 }
 
-pub mod C_INIT_ChaoticAttractor {
+pub mod C_INIT_ChaoticAttractor { // CParticleFunctionInitializer
     pub const m_flAParm: usize = 0x1C0; // float
     pub const m_flBParm: usize = 0x1C4; // float
     pub const m_flCParm: usize = 0x1C8; // float
@@ -399,7 +444,7 @@ pub mod C_INIT_ChaoticAttractor {
     pub const m_bUniformSpeed: usize = 0x1E0; // bool
 }
 
-pub mod C_INIT_ColorLitPerParticle {
+pub mod C_INIT_ColorLitPerParticle { // CParticleFunctionInitializer
     pub const m_ColorMin: usize = 0x1D8; // Color
     pub const m_ColorMax: usize = 0x1DC; // Color
     pub const m_TintMin: usize = 0x1E0; // Color
@@ -409,7 +454,7 @@ pub mod C_INIT_ColorLitPerParticle {
     pub const m_flLightAmplification: usize = 0x1F0; // float
 }
 
-pub mod C_INIT_CreateAlongPath {
+pub mod C_INIT_CreateAlongPath { // CParticleFunctionInitializer
     pub const m_fMaxDistance: usize = 0x1C0; // float
     pub const m_PathParams: usize = 0x1D0; // CPathParameters
     pub const m_bUseRandomCPs: usize = 0x210; // bool
@@ -417,14 +462,14 @@ pub mod C_INIT_CreateAlongPath {
     pub const m_bSaveOffset: usize = 0x220; // bool
 }
 
-pub mod C_INIT_CreateFromCPs {
+pub mod C_INIT_CreateFromCPs { // CParticleFunctionInitializer
     pub const m_nIncrement: usize = 0x1C0; // int32_t
     pub const m_nMinCP: usize = 0x1C4; // int32_t
     pub const m_nMaxCP: usize = 0x1C8; // int32_t
     pub const m_nDynamicCPCount: usize = 0x1D0; // CParticleCollectionFloatInput
 }
 
-pub mod C_INIT_CreateFromParentParticles {
+pub mod C_INIT_CreateFromParentParticles { // CParticleFunctionInitializer
     pub const m_flVelocityScale: usize = 0x1C0; // float
     pub const m_flIncrement: usize = 0x1C4; // float
     pub const m_bRandomDistribution: usize = 0x1C8; // bool
@@ -432,13 +477,13 @@ pub mod C_INIT_CreateFromParentParticles {
     pub const m_bSubFrame: usize = 0x1D0; // bool
 }
 
-pub mod C_INIT_CreateFromPlaneCache {
+pub mod C_INIT_CreateFromPlaneCache { // CParticleFunctionInitializer
     pub const m_vecOffsetMin: usize = 0x1C0; // Vector
     pub const m_vecOffsetMax: usize = 0x1CC; // Vector
     pub const m_bUseNormal: usize = 0x1D9; // bool
 }
 
-pub mod C_INIT_CreateInEpitrochoid {
+pub mod C_INIT_CreateInEpitrochoid { // CParticleFunctionInitializer
     pub const m_nComponent1: usize = 0x1C0; // int32_t
     pub const m_nComponent2: usize = 0x1C4; // int32_t
     pub const m_TransformInput: usize = 0x1C8; // CParticleTransformInput
@@ -451,7 +496,7 @@ pub mod C_INIT_CreateInEpitrochoid {
     pub const m_bOffsetExistingPos: usize = 0x792; // bool
 }
 
-pub mod C_INIT_CreateOnGrid {
+pub mod C_INIT_CreateOnGrid { // CParticleFunctionInitializer
     pub const m_nXCount: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_nYCount: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_nZCount: usize = 0x470; // CParticleCollectionFloatInput
@@ -464,7 +509,7 @@ pub mod C_INIT_CreateOnGrid {
     pub const m_bHollow: usize = 0x9D6; // bool
 }
 
-pub mod C_INIT_CreateOnModel {
+pub mod C_INIT_CreateOnModel { // CParticleFunctionInitializer
     pub const m_modelInput: usize = 0x1C0; // CParticleModelInput
     pub const m_transformInput: usize = 0x220; // CParticleTransformInput
     pub const m_nForceInModel: usize = 0x288; // int32_t
@@ -480,7 +525,7 @@ pub mod C_INIT_CreateOnModel {
     pub const m_flShellSize: usize = 0xFD8; // CParticleCollectionFloatInput
 }
 
-pub mod C_INIT_CreateOnModelAtHeight {
+pub mod C_INIT_CreateOnModelAtHeight { // CParticleFunctionInitializer
     pub const m_bUseBones: usize = 0x1C0; // bool
     pub const m_bForceZ: usize = 0x1C1; // bool
     pub const m_nControlPointNumber: usize = 0x1C4; // int32_t
@@ -497,7 +542,7 @@ pub mod C_INIT_CreateOnModelAtHeight {
     pub const m_flMaxBoneVelocity: usize = 0x11B8; // CParticleCollectionFloatInput
 }
 
-pub mod C_INIT_CreateParticleImpulse {
+pub mod C_INIT_CreateParticleImpulse { // CParticleFunctionInitializer
     pub const m_InputRadius: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_InputMagnitude: usize = 0x318; // CPerParticleFloatInput
     pub const m_nFalloffFunction: usize = 0x470; // ParticleFalloffFunction_t
@@ -505,7 +550,7 @@ pub mod C_INIT_CreateParticleImpulse {
     pub const m_nImpulseType: usize = 0x5D0; // ParticleImpulseType_t
 }
 
-pub mod C_INIT_CreatePhyllotaxis {
+pub mod C_INIT_CreatePhyllotaxis { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nScaleCP: usize = 0x1C4; // int32_t
     pub const m_nComponent: usize = 0x1C8; // int32_t
@@ -522,7 +567,7 @@ pub mod C_INIT_CreatePhyllotaxis {
     pub const m_bUseOrigRadius: usize = 0x1EE; // bool
 }
 
-pub mod C_INIT_CreateSequentialPath {
+pub mod C_INIT_CreateSequentialPath { // CParticleFunctionInitializer
     pub const m_fMaxDistance: usize = 0x1C0; // float
     pub const m_flNumToAssign: usize = 0x1C4; // float
     pub const m_bLoop: usize = 0x1C8; // bool
@@ -531,7 +576,7 @@ pub mod C_INIT_CreateSequentialPath {
     pub const m_PathParams: usize = 0x1D0; // CPathParameters
 }
 
-pub mod C_INIT_CreateSequentialPathV2 {
+pub mod C_INIT_CreateSequentialPathV2 { // CParticleFunctionInitializer
     pub const m_fMaxDistance: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flNumToAssign: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_bLoop: usize = 0x470; // bool
@@ -540,7 +585,7 @@ pub mod C_INIT_CreateSequentialPathV2 {
     pub const m_PathParams: usize = 0x480; // CPathParameters
 }
 
-pub mod C_INIT_CreateSpiralSphere {
+pub mod C_INIT_CreateSpiralSphere { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nOverrideCP: usize = 0x1C4; // int32_t
     pub const m_nDensity: usize = 0x1C8; // int32_t
@@ -550,7 +595,7 @@ pub mod C_INIT_CreateSpiralSphere {
     pub const m_bUseParticleCount: usize = 0x1D8; // bool
 }
 
-pub mod C_INIT_CreateWithinBox {
+pub mod C_INIT_CreateWithinBox { // CParticleFunctionInitializer
     pub const m_vecMin: usize = 0x1C0; // CPerParticleVecInput
     pub const m_vecMax: usize = 0x818; // CPerParticleVecInput
     pub const m_nControlPointNumber: usize = 0xE70; // int32_t
@@ -558,7 +603,7 @@ pub mod C_INIT_CreateWithinBox {
     pub const m_randomnessParameters: usize = 0xE78; // CRandomNumberGeneratorParameters
 }
 
-pub mod C_INIT_CreateWithinSphereTransform {
+pub mod C_INIT_CreateWithinSphereTransform { // CParticleFunctionInitializer
     pub const m_fRadiusMin: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_fRadiusMax: usize = 0x318; // CPerParticleFloatInput
     pub const m_vecDistanceBias: usize = 0x470; // CPerParticleVecInput
@@ -575,7 +620,7 @@ pub mod C_INIT_CreateWithinSphereTransform {
     pub const m_nFieldVelocity: usize = 0x1AB4; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_CreationNoise {
+pub mod C_INIT_CreationNoise { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_bAbsVal: usize = 0x1C4; // bool
     pub const m_bAbsValInv: usize = 0x1C5; // bool
@@ -588,13 +633,13 @@ pub mod C_INIT_CreationNoise {
     pub const m_flWorldTimeScale: usize = 0x1E8; // float
 }
 
-pub mod C_INIT_DistanceCull {
+pub mod C_INIT_DistanceCull { // CParticleFunctionInitializer
     pub const m_nControlPoint: usize = 0x1C0; // int32_t
     pub const m_flDistance: usize = 0x1C8; // CParticleCollectionFloatInput
     pub const m_bCullInside: usize = 0x320; // bool
 }
 
-pub mod C_INIT_DistanceToCPInit {
+pub mod C_INIT_DistanceToCPInit { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flInputMax: usize = 0x320; // CPerParticleFloatInput
@@ -612,11 +657,11 @@ pub mod C_INIT_DistanceToCPInit {
     pub const m_flRemapBias: usize = 0x928; // float
 }
 
-pub mod C_INIT_DistanceToNeighborCull {
+pub mod C_INIT_DistanceToNeighborCull { // CParticleFunctionInitializer
     pub const m_flDistance: usize = 0x1C0; // CPerParticleFloatInput
 }
 
-pub mod C_INIT_GlobalScale {
+pub mod C_INIT_GlobalScale { // CParticleFunctionInitializer
     pub const m_flScale: usize = 0x1C0; // float
     pub const m_nScaleControlPointNumber: usize = 0x1C4; // int32_t
     pub const m_nControlPointNumber: usize = 0x1C8; // int32_t
@@ -625,7 +670,7 @@ pub mod C_INIT_GlobalScale {
     pub const m_bScaleVelocity: usize = 0x1CE; // bool
 }
 
-pub mod C_INIT_InheritFromParentParticles {
+pub mod C_INIT_InheritFromParentParticles { // CParticleFunctionInitializer
     pub const m_flScale: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nIncrement: usize = 0x1C8; // int32_t
@@ -633,24 +678,24 @@ pub mod C_INIT_InheritFromParentParticles {
     pub const m_nRandomSeed: usize = 0x1D0; // int32_t
 }
 
-pub mod C_INIT_InheritVelocity {
+pub mod C_INIT_InheritVelocity { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_flVelocityScale: usize = 0x1C4; // float
 }
 
-pub mod C_INIT_InitFloat {
+pub mod C_INIT_InitFloat { // CParticleFunctionInitializer
     pub const m_InputValue: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_nOutputField: usize = 0x318; // ParticleAttributeIndex_t
     pub const m_nSetMethod: usize = 0x31C; // ParticleSetMethod_t
     pub const m_InputStrength: usize = 0x320; // CPerParticleFloatInput
 }
 
-pub mod C_INIT_InitFloatCollection {
+pub mod C_INIT_InitFloatCollection { // CParticleFunctionInitializer
     pub const m_InputValue: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_nOutputField: usize = 0x318; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_InitFromCPSnapshot {
+pub mod C_INIT_InitFromCPSnapshot { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nAttributeToRead: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nAttributeToWrite: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -663,11 +708,11 @@ pub mod C_INIT_InitFromCPSnapshot {
     pub const m_bLocalSpaceAngles: usize = 0x48C; // bool
 }
 
-pub mod C_INIT_InitFromParentKilled {
+pub mod C_INIT_InitFromParentKilled { // CParticleFunctionInitializer
     pub const m_nAttributeToCopy: usize = 0x1C0; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_InitFromVectorFieldSnapshot {
+pub mod C_INIT_InitFromVectorFieldSnapshot { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nLocalSpaceCP: usize = 0x1C4; // int32_t
     pub const m_nWeightUpdateCP: usize = 0x1C8; // int32_t
@@ -675,7 +720,7 @@ pub mod C_INIT_InitFromVectorFieldSnapshot {
     pub const m_vecScale: usize = 0x1D0; // CPerParticleVecInput
 }
 
-pub mod C_INIT_InitSkinnedPositionFromCPSnapshot {
+pub mod C_INIT_InitSkinnedPositionFromCPSnapshot { // CParticleFunctionInitializer
     pub const m_nSnapshotControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nControlPointNumber: usize = 0x1C4; // int32_t
     pub const m_bRandom: usize = 0x1C8; // bool
@@ -695,7 +740,7 @@ pub mod C_INIT_InitSkinnedPositionFromCPSnapshot {
     pub const m_bSetRadius: usize = 0x1F2; // bool
 }
 
-pub mod C_INIT_InitVec {
+pub mod C_INIT_InitVec { // CParticleFunctionInitializer
     pub const m_InputValue: usize = 0x1C0; // CPerParticleVecInput
     pub const m_nOutputField: usize = 0x818; // ParticleAttributeIndex_t
     pub const m_nSetMethod: usize = 0x81C; // ParticleSetMethod_t
@@ -703,12 +748,12 @@ pub mod C_INIT_InitVec {
     pub const m_bWritePreviousPosition: usize = 0x821; // bool
 }
 
-pub mod C_INIT_InitVecCollection {
+pub mod C_INIT_InitVecCollection { // CParticleFunctionInitializer
     pub const m_InputValue: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_nOutputField: usize = 0x818; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_InitialRepulsionVelocity {
+pub mod C_INIT_InitialRepulsionVelocity { // CParticleFunctionInitializer
     pub const m_CollisionGroupName: usize = 0x1C0; // char[128]
     pub const m_nTraceSet: usize = 0x240; // ParticleTraceSet_t
     pub const m_vecOutputMin: usize = 0x244; // Vector
@@ -724,7 +769,7 @@ pub mod C_INIT_InitialRepulsionVelocity {
     pub const m_nChildGroupID: usize = 0x270; // int32_t
 }
 
-pub mod C_INIT_InitialSequenceFromModel {
+pub mod C_INIT_InitialSequenceFromModel { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nFieldOutputAnim: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -735,7 +780,7 @@ pub mod C_INIT_InitialSequenceFromModel {
     pub const m_nSetMethod: usize = 0x1DC; // ParticleSetMethod_t
 }
 
-pub mod C_INIT_InitialVelocityFromHitbox {
+pub mod C_INIT_InitialVelocityFromHitbox { // CParticleFunctionInitializer
     pub const m_flVelocityMin: usize = 0x1C0; // float
     pub const m_flVelocityMax: usize = 0x1C4; // float
     pub const m_nControlPointNumber: usize = 0x1C8; // int32_t
@@ -743,7 +788,7 @@ pub mod C_INIT_InitialVelocityFromHitbox {
     pub const m_bUseBones: usize = 0x24C; // bool
 }
 
-pub mod C_INIT_InitialVelocityNoise {
+pub mod C_INIT_InitialVelocityNoise { // CParticleFunctionInitializer
     pub const m_vecAbsVal: usize = 0x1C0; // Vector
     pub const m_vecAbsValInv: usize = 0x1CC; // Vector
     pub const m_vecOffsetLoc: usize = 0x1D8; // CPerParticleVecInput
@@ -756,7 +801,7 @@ pub mod C_INIT_InitialVelocityNoise {
     pub const m_bIgnoreDt: usize = 0x1950; // bool
 }
 
-pub mod C_INIT_LifespanFromVelocity {
+pub mod C_INIT_LifespanFromVelocity { // CParticleFunctionInitializer
     pub const m_vecComponentScale: usize = 0x1C0; // Vector
     pub const m_flTraceOffset: usize = 0x1CC; // float
     pub const m_flMaxTraceLength: usize = 0x1D0; // float
@@ -767,7 +812,7 @@ pub mod C_INIT_LifespanFromVelocity {
     pub const m_bIncludeWater: usize = 0x270; // bool
 }
 
-pub mod C_INIT_ModelCull {
+pub mod C_INIT_ModelCull { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_bBoundBox: usize = 0x1C4; // bool
     pub const m_bCullOutside: usize = 0x1C5; // bool
@@ -775,7 +820,7 @@ pub mod C_INIT_ModelCull {
     pub const m_HitboxSetName: usize = 0x1C7; // char[128]
 }
 
-pub mod C_INIT_MoveBetweenPoints {
+pub mod C_INIT_MoveBetweenPoints { // CParticleFunctionInitializer
     pub const m_flSpeedMin: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flSpeedMax: usize = 0x318; // CPerParticleFloatInput
     pub const m_flEndSpread: usize = 0x470; // CPerParticleFloatInput
@@ -785,12 +830,12 @@ pub mod C_INIT_MoveBetweenPoints {
     pub const m_bTrailBias: usize = 0x87C; // bool
 }
 
-pub mod C_INIT_NormalAlignToCP {
+pub mod C_INIT_NormalAlignToCP { // CParticleFunctionInitializer
     pub const m_transformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_nControlPointAxis: usize = 0x228; // ParticleControlPointAxis_t
 }
 
-pub mod C_INIT_NormalOffset {
+pub mod C_INIT_NormalOffset { // CParticleFunctionInitializer
     pub const m_OffsetMin: usize = 0x1C0; // Vector
     pub const m_OffsetMax: usize = 0x1CC; // Vector
     pub const m_nControlPointNumber: usize = 0x1D8; // int32_t
@@ -798,7 +843,7 @@ pub mod C_INIT_NormalOffset {
     pub const m_bNormalize: usize = 0x1DD; // bool
 }
 
-pub mod C_INIT_OffsetVectorToVector {
+pub mod C_INIT_OffsetVectorToVector { // CParticleFunctionInitializer
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_vecOutputMin: usize = 0x1C8; // Vector
@@ -806,19 +851,19 @@ pub mod C_INIT_OffsetVectorToVector {
     pub const m_randomnessParameters: usize = 0x1E0; // CRandomNumberGeneratorParameters
 }
 
-pub mod C_INIT_Orient2DRelToCP {
+pub mod C_INIT_Orient2DRelToCP { // CParticleFunctionInitializer
     pub const m_nCP: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flRotOffset: usize = 0x1C8; // float
 }
 
-pub mod C_INIT_PlaneCull {
+pub mod C_INIT_PlaneCull { // CParticleFunctionInitializer
     pub const m_nControlPoint: usize = 0x1C0; // int32_t
     pub const m_flDistance: usize = 0x1C8; // CParticleCollectionFloatInput
     pub const m_bCullInside: usize = 0x320; // bool
 }
 
-pub mod C_INIT_PointList {
+pub mod C_INIT_PointList { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_pointList: usize = 0x1C8; // CUtlVector<PointDefinition_t>
     pub const m_bPlaceAlongPath: usize = 0x1E0; // bool
@@ -826,7 +871,7 @@ pub mod C_INIT_PointList {
     pub const m_nNumPointsAlongPath: usize = 0x1E4; // int32_t
 }
 
-pub mod C_INIT_PositionOffset {
+pub mod C_INIT_PositionOffset { // CParticleFunctionInitializer
     pub const m_OffsetMin: usize = 0x1C0; // CPerParticleVecInput
     pub const m_OffsetMax: usize = 0x818; // CPerParticleVecInput
     pub const m_TransformInput: usize = 0xE70; // CParticleTransformInput
@@ -835,13 +880,13 @@ pub mod C_INIT_PositionOffset {
     pub const m_randomnessParameters: usize = 0xEDC; // CRandomNumberGeneratorParameters
 }
 
-pub mod C_INIT_PositionOffsetToCP {
+pub mod C_INIT_PositionOffsetToCP { // CParticleFunctionInitializer
     pub const m_nControlPointNumberStart: usize = 0x1C0; // int32_t
     pub const m_nControlPointNumberEnd: usize = 0x1C4; // int32_t
     pub const m_bLocalCoords: usize = 0x1C8; // bool
 }
 
-pub mod C_INIT_PositionPlaceOnGround {
+pub mod C_INIT_PositionPlaceOnGround { // CParticleFunctionInitializer
     pub const m_flOffset: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flMaxTraceLength: usize = 0x318; // CPerParticleFloatInput
     pub const m_CollisionGroupName: usize = 0x470; // char[128]
@@ -857,7 +902,7 @@ pub mod C_INIT_PositionPlaceOnGround {
     pub const m_nIgnoreCP: usize = 0x514; // int32_t
 }
 
-pub mod C_INIT_PositionWarp {
+pub mod C_INIT_PositionWarp { // CParticleFunctionInitializer
     pub const m_vecWarpMin: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_vecWarpMax: usize = 0x818; // CParticleCollectionVecInput
     pub const m_nScaleControlPointNumber: usize = 0xE70; // int32_t
@@ -870,7 +915,7 @@ pub mod C_INIT_PositionWarp {
     pub const m_bUseCount: usize = 0xE89; // bool
 }
 
-pub mod C_INIT_PositionWarpScalar {
+pub mod C_INIT_PositionWarpScalar { // CParticleFunctionInitializer
     pub const m_vecWarpMin: usize = 0x1C0; // Vector
     pub const m_vecWarpMax: usize = 0x1CC; // Vector
     pub const m_InputValue: usize = 0x1D8; // CPerParticleFloatInput
@@ -879,29 +924,29 @@ pub mod C_INIT_PositionWarpScalar {
     pub const m_nControlPointNumber: usize = 0x338; // int32_t
 }
 
-pub mod C_INIT_QuantizeFloat {
+pub mod C_INIT_QuantizeFloat { // CParticleFunctionInitializer
     pub const m_InputValue: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_nOutputField: usize = 0x318; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_RadiusFromCPObject {
+pub mod C_INIT_RadiusFromCPObject { // CParticleFunctionInitializer
     pub const m_nControlPoint: usize = 0x1C0; // int32_t
 }
 
-pub mod C_INIT_RandomAlpha {
+pub mod C_INIT_RandomAlpha { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nAlphaMin: usize = 0x1C4; // int32_t
     pub const m_nAlphaMax: usize = 0x1C8; // int32_t
     pub const m_flAlphaRandExponent: usize = 0x1D4; // float
 }
 
-pub mod C_INIT_RandomAlphaWindowThreshold {
+pub mod C_INIT_RandomAlphaWindowThreshold { // CParticleFunctionInitializer
     pub const m_flMin: usize = 0x1C0; // float
     pub const m_flMax: usize = 0x1C4; // float
     pub const m_flExponent: usize = 0x1C8; // float
 }
 
-pub mod C_INIT_RandomColor {
+pub mod C_INIT_RandomColor { // CParticleFunctionInitializer
     pub const m_ColorMin: usize = 0x1DC; // Color
     pub const m_ColorMax: usize = 0x1E0; // Color
     pub const m_TintMin: usize = 0x1E4; // Color
@@ -914,19 +959,22 @@ pub mod C_INIT_RandomColor {
     pub const m_flLightAmplification: usize = 0x200; // float
 }
 
-pub mod C_INIT_RandomLifeTime {
+pub mod C_INIT_RandomLifeTime { // CParticleFunctionInitializer
     pub const m_fLifetimeMin: usize = 0x1C0; // float
     pub const m_fLifetimeMax: usize = 0x1C4; // float
     pub const m_fLifetimeRandExponent: usize = 0x1C8; // float
 }
 
-pub mod C_INIT_RandomModelSequence {
+pub mod C_INIT_RandomModelSequence { // CParticleFunctionInitializer
     pub const m_ActivityName: usize = 0x1C0; // char[256]
     pub const m_SequenceName: usize = 0x2C0; // char[256]
     pub const m_hModel: usize = 0x3C0; // CStrongHandle<InfoForResourceTypeCModel>
 }
 
-pub mod C_INIT_RandomNamedModelElement {
+pub mod C_INIT_RandomNamedModelBodyPart { // C_INIT_RandomNamedModelElement
+}
+
+pub mod C_INIT_RandomNamedModelElement { // CParticleFunctionInitializer
     pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_names: usize = 0x1C8; // CUtlVector<CUtlString>
     pub const m_bShuffle: usize = 0x1E0; // bool
@@ -935,25 +983,37 @@ pub mod C_INIT_RandomNamedModelElement {
     pub const m_nFieldOutput: usize = 0x1E4; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_RandomRadius {
+pub mod C_INIT_RandomNamedModelMeshGroup { // C_INIT_RandomNamedModelElement
+}
+
+pub mod C_INIT_RandomNamedModelSequence { // C_INIT_RandomNamedModelElement
+}
+
+pub mod C_INIT_RandomRadius { // CParticleFunctionInitializer
     pub const m_flRadiusMin: usize = 0x1C0; // float
     pub const m_flRadiusMax: usize = 0x1C4; // float
     pub const m_flRadiusRandExponent: usize = 0x1C8; // float
 }
 
-pub mod C_INIT_RandomScalar {
+pub mod C_INIT_RandomRotation { // CGeneralRandomRotation
+}
+
+pub mod C_INIT_RandomRotationSpeed { // CGeneralRandomRotation
+}
+
+pub mod C_INIT_RandomScalar { // CParticleFunctionInitializer
     pub const m_flMin: usize = 0x1C0; // float
     pub const m_flMax: usize = 0x1C4; // float
     pub const m_flExponent: usize = 0x1C8; // float
     pub const m_nFieldOutput: usize = 0x1CC; // ParticleAttributeIndex_t
 }
 
-pub mod C_INIT_RandomSecondSequence {
+pub mod C_INIT_RandomSecondSequence { // CParticleFunctionInitializer
     pub const m_nSequenceMin: usize = 0x1C0; // int32_t
     pub const m_nSequenceMax: usize = 0x1C4; // int32_t
 }
 
-pub mod C_INIT_RandomSequence {
+pub mod C_INIT_RandomSequence { // CParticleFunctionInitializer
     pub const m_nSequenceMin: usize = 0x1C0; // int32_t
     pub const m_nSequenceMax: usize = 0x1C4; // int32_t
     pub const m_bShuffle: usize = 0x1C8; // bool
@@ -961,31 +1021,34 @@ pub mod C_INIT_RandomSequence {
     pub const m_WeightedList: usize = 0x1D0; // CUtlVector<SequenceWeightedList_t>
 }
 
-pub mod C_INIT_RandomTrailLength {
+pub mod C_INIT_RandomTrailLength { // CParticleFunctionInitializer
     pub const m_flMinLength: usize = 0x1C0; // float
     pub const m_flMaxLength: usize = 0x1C4; // float
     pub const m_flLengthRandExponent: usize = 0x1C8; // float
 }
 
-pub mod C_INIT_RandomVector {
+pub mod C_INIT_RandomVector { // CParticleFunctionInitializer
     pub const m_vecMin: usize = 0x1C0; // Vector
     pub const m_vecMax: usize = 0x1CC; // Vector
     pub const m_nFieldOutput: usize = 0x1D8; // ParticleAttributeIndex_t
     pub const m_randomnessParameters: usize = 0x1DC; // CRandomNumberGeneratorParameters
 }
 
-pub mod C_INIT_RandomVectorComponent {
+pub mod C_INIT_RandomVectorComponent { // CParticleFunctionInitializer
     pub const m_flMin: usize = 0x1C0; // float
     pub const m_flMax: usize = 0x1C4; // float
     pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
     pub const m_nComponent: usize = 0x1CC; // int32_t
 }
 
-pub mod C_INIT_RandomYawFlip {
+pub mod C_INIT_RandomYaw { // CGeneralRandomRotation
+}
+
+pub mod C_INIT_RandomYawFlip { // CParticleFunctionInitializer
     pub const m_flPercent: usize = 0x1C0; // float
 }
 
-pub mod C_INIT_RemapCPtoScalar {
+pub mod C_INIT_RemapCPtoScalar { // CParticleFunctionInitializer
     pub const m_nCPInput: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nField: usize = 0x1C8; // int32_t
@@ -999,7 +1062,7 @@ pub mod C_INIT_RemapCPtoScalar {
     pub const m_flRemapBias: usize = 0x1E8; // float
 }
 
-pub mod C_INIT_RemapInitialDirectionToTransformToVector {
+pub mod C_INIT_RemapInitialDirectionToTransformToVector { // CParticleFunctionInitializer
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_nFieldOutput: usize = 0x228; // ParticleAttributeIndex_t
     pub const m_flScale: usize = 0x22C; // float
@@ -1008,14 +1071,14 @@ pub mod C_INIT_RemapInitialDirectionToTransformToVector {
     pub const m_bNormalize: usize = 0x240; // bool
 }
 
-pub mod C_INIT_RemapInitialTransformDirectionToRotation {
+pub mod C_INIT_RemapInitialTransformDirectionToRotation { // CParticleFunctionInitializer
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_nFieldOutput: usize = 0x228; // ParticleAttributeIndex_t
     pub const m_flOffsetRot: usize = 0x22C; // float
     pub const m_nComponent: usize = 0x230; // int32_t
 }
 
-pub mod C_INIT_RemapInitialVisibilityScalar {
+pub mod C_INIT_RemapInitialVisibilityScalar { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
     pub const m_flInputMax: usize = 0x1CC; // float
@@ -1023,7 +1086,10 @@ pub mod C_INIT_RemapInitialVisibilityScalar {
     pub const m_flOutputMax: usize = 0x1D4; // float
 }
 
-pub mod C_INIT_RemapNamedModelElementToScalar {
+pub mod C_INIT_RemapNamedModelBodyPartToScalar { // C_INIT_RemapNamedModelElementToScalar
+}
+
+pub mod C_INIT_RemapNamedModelElementToScalar { // CParticleFunctionInitializer
     pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_names: usize = 0x1C8; // CUtlVector<CUtlString>
     pub const m_values: usize = 0x1E0; // CUtlVector<float>
@@ -1033,14 +1099,29 @@ pub mod C_INIT_RemapNamedModelElementToScalar {
     pub const m_bModelFromRenderer: usize = 0x204; // bool
 }
 
-pub mod C_INIT_RemapParticleCountToNamedModelElementScalar {
+pub mod C_INIT_RemapNamedModelMeshGroupToScalar { // C_INIT_RemapNamedModelElementToScalar
+}
+
+pub mod C_INIT_RemapNamedModelSequenceToScalar { // C_INIT_RemapNamedModelElementToScalar
+}
+
+pub mod C_INIT_RemapParticleCountToNamedModelBodyPartScalar { // C_INIT_RemapParticleCountToNamedModelElementScalar
+}
+
+pub mod C_INIT_RemapParticleCountToNamedModelElementScalar { // C_INIT_RemapParticleCountToScalar
     pub const m_hModel: usize = 0x1F0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_outputMinName: usize = 0x1F8; // CUtlString
     pub const m_outputMaxName: usize = 0x200; // CUtlString
     pub const m_bModelFromRenderer: usize = 0x208; // bool
 }
 
-pub mod C_INIT_RemapParticleCountToScalar {
+pub mod C_INIT_RemapParticleCountToNamedModelMeshGroupScalar { // C_INIT_RemapParticleCountToNamedModelElementScalar
+}
+
+pub mod C_INIT_RemapParticleCountToNamedModelSequenceScalar { // C_INIT_RemapParticleCountToNamedModelElementScalar
+}
+
+pub mod C_INIT_RemapParticleCountToScalar { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nInputMin: usize = 0x1C4; // int32_t
     pub const m_nInputMax: usize = 0x1C8; // int32_t
@@ -1055,11 +1136,11 @@ pub mod C_INIT_RemapParticleCountToScalar {
     pub const m_flRemapBias: usize = 0x1E4; // float
 }
 
-pub mod C_INIT_RemapQAnglesToRotation {
+pub mod C_INIT_RemapQAnglesToRotation { // CParticleFunctionInitializer
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
 }
 
-pub mod C_INIT_RemapScalar {
+pub mod C_INIT_RemapScalar { // CParticleFunctionInitializer
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
@@ -1073,7 +1154,7 @@ pub mod C_INIT_RemapScalar {
     pub const m_flRemapBias: usize = 0x1E8; // float
 }
 
-pub mod C_INIT_RemapScalarToVector {
+pub mod C_INIT_RemapScalarToVector { // CParticleFunctionInitializer
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
@@ -1088,7 +1169,7 @@ pub mod C_INIT_RemapScalarToVector {
     pub const m_flRemapBias: usize = 0x1FC; // float
 }
 
-pub mod C_INIT_RemapSpeedToScalar {
+pub mod C_INIT_RemapSpeedToScalar { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nControlPointNumber: usize = 0x1C4; // int32_t
     pub const m_flStartTime: usize = 0x1C8; // float
@@ -1101,14 +1182,14 @@ pub mod C_INIT_RemapSpeedToScalar {
     pub const m_bPerParticle: usize = 0x1E4; // bool
 }
 
-pub mod C_INIT_RemapTransformOrientationToRotations {
+pub mod C_INIT_RemapTransformOrientationToRotations { // CParticleFunctionInitializer
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_vecRotation: usize = 0x228; // Vector
     pub const m_bUseQuat: usize = 0x234; // bool
     pub const m_bWriteNormal: usize = 0x235; // bool
 }
 
-pub mod C_INIT_RemapTransformToVector {
+pub mod C_INIT_RemapTransformToVector { // CParticleFunctionInitializer
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vInputMin: usize = 0x1C4; // Vector
     pub const m_vInputMax: usize = 0x1D0; // Vector
@@ -1124,7 +1205,7 @@ pub mod C_INIT_RemapTransformToVector {
     pub const m_flRemapBias: usize = 0x2D8; // float
 }
 
-pub mod C_INIT_RingWave {
+pub mod C_INIT_RingWave { // CParticleFunctionInitializer
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_flParticlesPerOrbit: usize = 0x228; // CParticleCollectionFloatInput
     pub const m_flInitialRadius: usize = 0x380; // CPerParticleFloatInput
@@ -1138,7 +1219,7 @@ pub mod C_INIT_RingWave {
     pub const m_bXYVelocityOnly: usize = 0xCE9; // bool
 }
 
-pub mod C_INIT_RtEnvCull {
+pub mod C_INIT_RtEnvCull { // CParticleFunctionInitializer
     pub const m_vecTestDir: usize = 0x1C0; // Vector
     pub const m_vecTestNormal: usize = 0x1CC; // Vector
     pub const m_bUseVelocity: usize = 0x1D8; // bool
@@ -1149,22 +1230,22 @@ pub mod C_INIT_RtEnvCull {
     pub const m_nComponent: usize = 0x260; // int32_t
 }
 
-pub mod C_INIT_ScaleVelocity {
+pub mod C_INIT_ScaleVelocity { // CParticleFunctionInitializer
     pub const m_vecScale: usize = 0x1C0; // CParticleCollectionVecInput
 }
 
-pub mod C_INIT_SequenceFromCP {
+pub mod C_INIT_SequenceFromCP { // CParticleFunctionInitializer
     pub const m_bKillUnused: usize = 0x1C0; // bool
     pub const m_bRadiusScale: usize = 0x1C1; // bool
     pub const m_nCP: usize = 0x1C4; // int32_t
     pub const m_vecOffset: usize = 0x1C8; // Vector
 }
 
-pub mod C_INIT_SequenceLifeTime {
+pub mod C_INIT_SequenceLifeTime { // CParticleFunctionInitializer
     pub const m_flFramerate: usize = 0x1C0; // float
 }
 
-pub mod C_INIT_SetHitboxToClosest {
+pub mod C_INIT_SetHitboxToClosest { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nDesiredHitbox: usize = 0x1C4; // int32_t
     pub const m_vecHitBoxScale: usize = 0x1C8; // CParticleCollectionVecInput
@@ -1176,7 +1257,7 @@ pub mod C_INIT_SetHitboxToClosest {
     pub const m_bUpdatePosition: usize = 0xA00; // bool
 }
 
-pub mod C_INIT_SetHitboxToModel {
+pub mod C_INIT_SetHitboxToModel { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nForceInModel: usize = 0x1C4; // int32_t
     pub const m_nDesiredHitbox: usize = 0x1C8; // int32_t
@@ -1188,14 +1269,14 @@ pub mod C_INIT_SetHitboxToModel {
     pub const m_flShellSize: usize = 0x8B8; // CParticleCollectionFloatInput
 }
 
-pub mod C_INIT_SetRigidAttachment {
+pub mod C_INIT_SetRigidAttachment { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
     pub const m_bLocalSpace: usize = 0x1CC; // bool
 }
 
-pub mod C_INIT_SetVectorAttributeToVectorExpression {
+pub mod C_INIT_SetVectorAttributeToVectorExpression { // CParticleFunctionInitializer
     pub const m_nExpression: usize = 0x1C0; // VectorExpressionType_t
     pub const m_vInput1: usize = 0x1C8; // CPerParticleVecInput
     pub const m_vInput2: usize = 0x820; // CPerParticleVecInput
@@ -1204,7 +1285,7 @@ pub mod C_INIT_SetVectorAttributeToVectorExpression {
     pub const m_bNormalizedOutput: usize = 0xE80; // bool
 }
 
-pub mod C_INIT_StatusEffect {
+pub mod C_INIT_StatusEffect { // CParticleFunctionInitializer
     pub const m_nDetail2Combo: usize = 0x1C0; // Detail2Combo_t
     pub const m_flDetail2Rotation: usize = 0x1C4; // float
     pub const m_flDetail2Scale: usize = 0x1C8; // float
@@ -1225,7 +1306,7 @@ pub mod C_INIT_StatusEffect {
     pub const m_flSelfIllumBlendToFull: usize = 0x204; // float
 }
 
-pub mod C_INIT_StatusEffectCitadel {
+pub mod C_INIT_StatusEffectCitadel { // CParticleFunctionInitializer
     pub const m_flSFXColorWarpAmount: usize = 0x1C0; // float
     pub const m_flSFXNormalAmount: usize = 0x1C4; // float
     pub const m_flSFXMetalnessAmount: usize = 0x1C8; // float
@@ -1247,20 +1328,20 @@ pub mod C_INIT_StatusEffectCitadel {
     pub const m_flSFXSUseModelUVs: usize = 0x208; // float
 }
 
-pub mod C_INIT_VelocityFromCP {
+pub mod C_INIT_VelocityFromCP { // CParticleFunctionInitializer
     pub const m_velocityInput: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_transformInput: usize = 0x818; // CParticleTransformInput
     pub const m_flVelocityScale: usize = 0x880; // float
     pub const m_bDirectionOnly: usize = 0x884; // bool
 }
 
-pub mod C_INIT_VelocityFromNormal {
+pub mod C_INIT_VelocityFromNormal { // CParticleFunctionInitializer
     pub const m_fSpeedMin: usize = 0x1C0; // float
     pub const m_fSpeedMax: usize = 0x1C4; // float
     pub const m_bIgnoreDt: usize = 0x1C8; // bool
 }
 
-pub mod C_INIT_VelocityRadialRandom {
+pub mod C_INIT_VelocityRadialRandom { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_fSpeedMin: usize = 0x1C4; // float
     pub const m_fSpeedMax: usize = 0x1C8; // float
@@ -1268,7 +1349,7 @@ pub mod C_INIT_VelocityRadialRandom {
     pub const m_bIgnoreDelta: usize = 0x1D9; // bool
 }
 
-pub mod C_INIT_VelocityRandom {
+pub mod C_INIT_VelocityRandom { // CParticleFunctionInitializer
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_fSpeedMin: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_fSpeedMax: usize = 0x320; // CPerParticleFloatInput
@@ -1278,11 +1359,11 @@ pub mod C_INIT_VelocityRandom {
     pub const m_randomnessParameters: usize = 0x112C; // CRandomNumberGeneratorParameters
 }
 
-pub mod C_OP_AlphaDecay {
+pub mod C_OP_AlphaDecay { // CParticleFunctionOperator
     pub const m_flMinAlpha: usize = 0x1C0; // float
 }
 
-pub mod C_OP_AttractToControlPoint {
+pub mod C_OP_AttractToControlPoint { // CParticleFunctionForce
     pub const m_vecComponentScale: usize = 0x1D0; // Vector
     pub const m_fForceAmount: usize = 0x1E0; // CPerParticleFloatInput
     pub const m_fFalloffPower: usize = 0x338; // float
@@ -1291,13 +1372,13 @@ pub mod C_OP_AttractToControlPoint {
     pub const m_bApplyMinForce: usize = 0x500; // bool
 }
 
-pub mod C_OP_BasicMovement {
+pub mod C_OP_BasicMovement { // CParticleFunctionOperator
     pub const m_Gravity: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_fDrag: usize = 0x818; // CParticleCollectionFloatInput
     pub const m_nMaxConstraintPasses: usize = 0x970; // int32_t
 }
 
-pub mod C_OP_BoxConstraint {
+pub mod C_OP_BoxConstraint { // CParticleFunctionConstraint
     pub const m_vecMin: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_vecMax: usize = 0x818; // CParticleCollectionVecInput
     pub const m_nCP: usize = 0xE70; // int32_t
@@ -1305,7 +1386,7 @@ pub mod C_OP_BoxConstraint {
     pub const m_bAccountForRadius: usize = 0xE75; // bool
 }
 
-pub mod C_OP_CPOffsetToPercentageBetweenCPs {
+pub mod C_OP_CPOffsetToPercentageBetweenCPs { // CParticleFunctionOperator
     pub const m_flInputMin: usize = 0x1C0; // float
     pub const m_flInputMax: usize = 0x1C4; // float
     pub const m_flInputBias: usize = 0x1C8; // float
@@ -1319,12 +1400,12 @@ pub mod C_OP_CPOffsetToPercentageBetweenCPs {
     pub const m_vecOffset: usize = 0x1E4; // Vector
 }
 
-pub mod C_OP_CPVelocityForce {
+pub mod C_OP_CPVelocityForce { // CParticleFunctionForce
     pub const m_nControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_flScale: usize = 0x1D8; // CPerParticleFloatInput
 }
 
-pub mod C_OP_CalculateVectorAttribute {
+pub mod C_OP_CalculateVectorAttribute { // CParticleFunctionOperator
     pub const m_vStartValue: usize = 0x1C0; // Vector
     pub const m_nFieldInput1: usize = 0x1CC; // ParticleAttributeIndex_t
     pub const m_flInputScale1: usize = 0x1D0; // float
@@ -1338,7 +1419,10 @@ pub mod C_OP_CalculateVectorAttribute {
     pub const m_vFinalOutputScale: usize = 0x210; // Vector
 }
 
-pub mod C_OP_ChladniWave {
+pub mod C_OP_Callback { // CParticleFunctionRenderer
+}
+
+pub mod C_OP_ChladniWave { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flInputMax: usize = 0x320; // CPerParticleFloatInput
@@ -1351,40 +1435,40 @@ pub mod C_OP_ChladniWave {
     pub const m_b3D: usize = 0x13E0; // bool
 }
 
-pub mod C_OP_ChooseRandomChildrenInGroup {
+pub mod C_OP_ChooseRandomChildrenInGroup { // CParticleFunctionPreEmission
     pub const m_nChildGroupID: usize = 0x1D0; // int32_t
     pub const m_flNumberOfChildren: usize = 0x1D8; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_ClampScalar {
+pub mod C_OP_ClampScalar { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flOutputMin: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flOutputMax: usize = 0x320; // CPerParticleFloatInput
 }
 
-pub mod C_OP_ClampVector {
+pub mod C_OP_ClampVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecOutputMin: usize = 0x1C8; // CPerParticleVecInput
     pub const m_vecOutputMax: usize = 0x820; // CPerParticleVecInput
 }
 
-pub mod C_OP_CollideWithParentParticles {
+pub mod C_OP_CollideWithParentParticles { // CParticleFunctionConstraint
     pub const m_flParentRadiusScale: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flRadiusScale: usize = 0x318; // CPerParticleFloatInput
 }
 
-pub mod C_OP_CollideWithSelf {
+pub mod C_OP_CollideWithSelf { // CParticleFunctionConstraint
     pub const m_flRadiusScale: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flMinimumSpeed: usize = 0x318; // CPerParticleFloatInput
 }
 
-pub mod C_OP_ColorAdjustHSL {
+pub mod C_OP_ColorAdjustHSL { // CParticleFunctionOperator
     pub const m_flHueAdjust: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flSaturationAdjust: usize = 0x318; // CPerParticleFloatInput
     pub const m_flLightnessAdjust: usize = 0x470; // CPerParticleFloatInput
 }
 
-pub mod C_OP_ColorInterpolate {
+pub mod C_OP_ColorInterpolate { // CParticleFunctionOperator
     pub const m_ColorFade: usize = 0x1C0; // Color
     pub const m_flFadeStartTime: usize = 0x1D0; // float
     pub const m_flFadeEndTime: usize = 0x1D4; // float
@@ -1393,7 +1477,7 @@ pub mod C_OP_ColorInterpolate {
     pub const m_bUseNewCode: usize = 0x1DD; // bool
 }
 
-pub mod C_OP_ColorInterpolateRandom {
+pub mod C_OP_ColorInterpolateRandom { // CParticleFunctionOperator
     pub const m_ColorFadeMin: usize = 0x1C0; // Color
     pub const m_ColorFadeMax: usize = 0x1DC; // Color
     pub const m_flFadeStartTime: usize = 0x1EC; // float
@@ -1402,12 +1486,12 @@ pub mod C_OP_ColorInterpolateRandom {
     pub const m_bEaseInOut: usize = 0x1F8; // bool
 }
 
-pub mod C_OP_ConnectParentParticleToNearest {
+pub mod C_OP_ConnectParentParticleToNearest { // CParticleFunctionOperator
     pub const m_nFirstControlPoint: usize = 0x1C0; // int32_t
     pub const m_nSecondControlPoint: usize = 0x1C4; // int32_t
 }
 
-pub mod C_OP_ConstrainDistance {
+pub mod C_OP_ConstrainDistance { // CParticleFunctionConstraint
     pub const m_fMinDistance: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_fMaxDistance: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_nControlPointNumber: usize = 0x470; // int32_t
@@ -1415,7 +1499,7 @@ pub mod C_OP_ConstrainDistance {
     pub const m_bGlobalCenter: usize = 0x480; // bool
 }
 
-pub mod C_OP_ConstrainDistanceToPath {
+pub mod C_OP_ConstrainDistanceToPath { // CParticleFunctionConstraint
     pub const m_fMinDistance: usize = 0x1C0; // float
     pub const m_flMaxDistance0: usize = 0x1C4; // float
     pub const m_flMaxDistanceMid: usize = 0x1C8; // float
@@ -1426,7 +1510,7 @@ pub mod C_OP_ConstrainDistanceToPath {
     pub const m_nManualTField: usize = 0x218; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_ConstrainDistanceToUserSpecifiedPath {
+pub mod C_OP_ConstrainDistanceToUserSpecifiedPath { // CParticleFunctionConstraint
     pub const m_fMinDistance: usize = 0x1C0; // float
     pub const m_flMaxDistance: usize = 0x1C4; // float
     pub const m_flTimeScale: usize = 0x1C8; // float
@@ -1434,12 +1518,12 @@ pub mod C_OP_ConstrainDistanceToUserSpecifiedPath {
     pub const m_pointList: usize = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
 }
 
-pub mod C_OP_ConstrainLineLength {
+pub mod C_OP_ConstrainLineLength { // CParticleFunctionConstraint
     pub const m_flMinDistance: usize = 0x1C0; // float
     pub const m_flMaxDistance: usize = 0x1C4; // float
 }
 
-pub mod C_OP_ContinuousEmitter {
+pub mod C_OP_ContinuousEmitter { // CParticleFunctionEmitter
     pub const m_flEmissionDuration: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_flStartTime: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_flEmitRate: usize = 0x470; // CParticleCollectionFloatInput
@@ -1452,7 +1536,7 @@ pub mod C_OP_ContinuousEmitter {
     pub const m_bForceEmitOnLastUpdate: usize = 0x5DD; // bool
 }
 
-pub mod C_OP_ControlPointToRadialScreenSpace {
+pub mod C_OP_ControlPointToRadialScreenSpace { // CParticleFunctionPreEmission
     pub const m_nCPIn: usize = 0x1D0; // int32_t
     pub const m_vecCP1Pos: usize = 0x1D4; // Vector
     pub const m_nCPOut: usize = 0x1E0; // int32_t
@@ -1460,7 +1544,7 @@ pub mod C_OP_ControlPointToRadialScreenSpace {
     pub const m_nCPSSPosOut: usize = 0x1E8; // int32_t
 }
 
-pub mod C_OP_ControlpointLight {
+pub mod C_OP_ControlpointLight { // CParticleFunctionOperator
     pub const m_flScale: usize = 0x1C0; // float
     pub const m_nControlPoint1: usize = 0x690; // int32_t
     pub const m_nControlPoint2: usize = 0x694; // int32_t
@@ -1496,14 +1580,14 @@ pub mod C_OP_ControlpointLight {
     pub const m_bClampUpperRange: usize = 0x70F; // bool
 }
 
-pub mod C_OP_Cull {
+pub mod C_OP_Cull { // CParticleFunctionOperator
     pub const m_flCullPerc: usize = 0x1C0; // float
     pub const m_flCullStart: usize = 0x1C4; // float
     pub const m_flCullEnd: usize = 0x1C8; // float
     pub const m_flCullExp: usize = 0x1CC; // float
 }
 
-pub mod C_OP_CurlNoiseForce {
+pub mod C_OP_CurlNoiseForce { // CParticleFunctionForce
     pub const m_nNoiseType: usize = 0x1D0; // ParticleDirectionNoiseType_t
     pub const m_vecNoiseFreq: usize = 0x1D8; // CPerParticleVecInput
     pub const m_vecNoiseScale: usize = 0x830; // CPerParticleVecInput
@@ -1513,7 +1597,7 @@ pub mod C_OP_CurlNoiseForce {
     pub const m_flWorleyJitter: usize = 0x1C90; // CPerParticleFloatInput
 }
 
-pub mod C_OP_CycleScalar {
+pub mod C_OP_CycleScalar { // CParticleFunctionOperator
     pub const m_nDestField: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flStartValue: usize = 0x1C4; // float
     pub const m_flEndValue: usize = 0x1C8; // float
@@ -1526,7 +1610,7 @@ pub mod C_OP_CycleScalar {
     pub const m_nSetMethod: usize = 0x1E0; // ParticleSetMethod_t
 }
 
-pub mod C_OP_CylindricalDistanceToTransform {
+pub mod C_OP_CylindricalDistanceToTransform { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flInputMax: usize = 0x320; // CPerParticleFloatInput
@@ -1540,22 +1624,22 @@ pub mod C_OP_CylindricalDistanceToTransform {
     pub const m_bCapsule: usize = 0x7FE; // bool
 }
 
-pub mod C_OP_DampenToCP {
+pub mod C_OP_DampenToCP { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_flRange: usize = 0x1C4; // float
     pub const m_flScale: usize = 0x1C8; // float
 }
 
-pub mod C_OP_Decay {
+pub mod C_OP_Decay { // CParticleFunctionOperator
     pub const m_bRopeDecay: usize = 0x1C0; // bool
     pub const m_bForcePreserveParticleOrder: usize = 0x1C1; // bool
 }
 
-pub mod C_OP_DecayClampCount {
+pub mod C_OP_DecayClampCount { // CParticleFunctionOperator
     pub const m_nCount: usize = 0x1C0; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_DecayMaintainCount {
+pub mod C_OP_DecayMaintainCount { // CParticleFunctionOperator
     pub const m_nParticlesToMaintain: usize = 0x1C0; // int32_t
     pub const m_flDecayDelay: usize = 0x1C4; // float
     pub const m_nSnapshotControlPoint: usize = 0x1C8; // int32_t
@@ -1564,17 +1648,17 @@ pub mod C_OP_DecayMaintainCount {
     pub const m_bKillNewest: usize = 0x328; // bool
 }
 
-pub mod C_OP_DecayOffscreen {
+pub mod C_OP_DecayOffscreen { // CParticleFunctionOperator
     pub const m_flOffscreenTime: usize = 0x1C0; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_DensityForce {
+pub mod C_OP_DensityForce { // CParticleFunctionForce
     pub const m_flRadiusScale: usize = 0x1D0; // float
     pub const m_flForceScale: usize = 0x1D4; // float
     pub const m_flTargetDensity: usize = 0x1D8; // float
 }
 
-pub mod C_OP_DifferencePreviousParticle {
+pub mod C_OP_DifferencePreviousParticle { // CParticleFunctionOperator
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
@@ -1586,19 +1670,19 @@ pub mod C_OP_DifferencePreviousParticle {
     pub const m_bSetPreviousParticle: usize = 0x1DD; // bool
 }
 
-pub mod C_OP_Diffusion {
+pub mod C_OP_Diffusion { // CParticleFunctionOperator
     pub const m_flRadiusScale: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nVoxelGridResolution: usize = 0x1C8; // int32_t
 }
 
-pub mod C_OP_DirectionBetweenVecsToVec {
+pub mod C_OP_DirectionBetweenVecsToVec { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecPoint1: usize = 0x1C8; // CPerParticleVecInput
     pub const m_vecPoint2: usize = 0x820; // CPerParticleVecInput
 }
 
-pub mod C_OP_DistanceBetweenCPsToCP {
+pub mod C_OP_DistanceBetweenCPsToCP { // CParticleFunctionPreEmission
     pub const m_nStartCP: usize = 0x1D0; // int32_t
     pub const m_nEndCP: usize = 0x1D4; // int32_t
     pub const m_nOutputCP: usize = 0x1D8; // int32_t
@@ -1616,7 +1700,7 @@ pub mod C_OP_DistanceBetweenCPsToCP {
     pub const m_nSetParent: usize = 0x284; // ParticleParentSetMode_t
 }
 
-pub mod C_OP_DistanceBetweenTransforms {
+pub mod C_OP_DistanceBetweenTransforms { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_TransformStart: usize = 0x1C8; // CParticleTransformInput
     pub const m_TransformEnd: usize = 0x230; // CParticleTransformInput
@@ -1632,7 +1716,7 @@ pub mod C_OP_DistanceBetweenTransforms {
     pub const m_nSetMethod: usize = 0x888; // ParticleSetMethod_t
 }
 
-pub mod C_OP_DistanceBetweenVecs {
+pub mod C_OP_DistanceBetweenVecs { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecPoint1: usize = 0x1C8; // CPerParticleVecInput
     pub const m_vecPoint2: usize = 0x820; // CPerParticleVecInput
@@ -1644,14 +1728,14 @@ pub mod C_OP_DistanceBetweenVecs {
     pub const m_bDeltaTime: usize = 0x13DC; // bool
 }
 
-pub mod C_OP_DistanceCull {
+pub mod C_OP_DistanceCull { // CParticleFunctionOperator
     pub const m_nControlPoint: usize = 0x1C0; // int32_t
     pub const m_vecPointOffset: usize = 0x1C4; // Vector
     pub const m_flDistance: usize = 0x1D0; // float
     pub const m_bCullInside: usize = 0x1D4; // bool
 }
 
-pub mod C_OP_DistanceToTransform {
+pub mod C_OP_DistanceToTransform { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flInputMax: usize = 0x320; // CPerParticleFloatInput
@@ -1669,7 +1753,7 @@ pub mod C_OP_DistanceToTransform {
     pub const m_vecComponentScale: usize = 0x828; // CPerParticleVecInput
 }
 
-pub mod C_OP_DragRelativeToPlane {
+pub mod C_OP_DragRelativeToPlane { // CParticleFunctionOperator
     pub const m_flDragAtPlane: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_flFalloff: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_bDirectional: usize = 0x470; // bool
@@ -1677,7 +1761,7 @@ pub mod C_OP_DragRelativeToPlane {
     pub const m_nControlPointNumber: usize = 0xAD0; // int32_t
 }
 
-pub mod C_OP_DriveCPFromGlobalSoundFloat {
+pub mod C_OP_DriveCPFromGlobalSoundFloat { // CParticleFunctionPreEmission
     pub const m_nOutputControlPoint: usize = 0x1D0; // int32_t
     pub const m_nOutputField: usize = 0x1D4; // int32_t
     pub const m_flInputMin: usize = 0x1D8; // float
@@ -1689,7 +1773,7 @@ pub mod C_OP_DriveCPFromGlobalSoundFloat {
     pub const m_FieldName: usize = 0x1F8; // CUtlString
 }
 
-pub mod C_OP_EnableChildrenFromParentParticleCount {
+pub mod C_OP_EnableChildrenFromParentParticleCount { // CParticleFunctionPreEmission
     pub const m_nChildGroupID: usize = 0x1D0; // int32_t
     pub const m_nFirstChild: usize = 0x1D4; // int32_t
     pub const m_nNumChildrenToEnable: usize = 0x1D8; // CParticleCollectionFloatInput
@@ -1698,15 +1782,18 @@ pub mod C_OP_EnableChildrenFromParentParticleCount {
     pub const m_bDestroyImmediately: usize = 0x332; // bool
 }
 
-pub mod C_OP_EndCapTimedDecay {
+pub mod C_OP_EndCapDecay { // CParticleFunctionOperator
+}
+
+pub mod C_OP_EndCapTimedDecay { // CParticleFunctionOperator
     pub const m_flDecayTime: usize = 0x1C0; // float
 }
 
-pub mod C_OP_EndCapTimedFreeze {
+pub mod C_OP_EndCapTimedFreeze { // CParticleFunctionOperator
     pub const m_flFreezeTime: usize = 0x1C0; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_ExternalGameImpulseForce {
+pub mod C_OP_ExternalGameImpulseForce { // CParticleFunctionForce
     pub const m_flForceScale: usize = 0x1D0; // CPerParticleFloatInput
     pub const m_bRopes: usize = 0x328; // bool
     pub const m_bRopesZOnly: usize = 0x329; // bool
@@ -1714,7 +1801,7 @@ pub mod C_OP_ExternalGameImpulseForce {
     pub const m_bParticles: usize = 0x32B; // bool
 }
 
-pub mod C_OP_ExternalWindForce {
+pub mod C_OP_ExternalWindForce { // CParticleFunctionForce
     pub const m_vecSamplePosition: usize = 0x1D0; // CPerParticleVecInput
     pub const m_vecScale: usize = 0x828; // CPerParticleVecInput
     pub const m_bSampleWind: usize = 0xE80; // bool
@@ -1728,7 +1815,7 @@ pub mod C_OP_ExternalWindForce {
     pub const m_vecBuoyancyForce: usize = 0x1798; // CPerParticleVecInput
 }
 
-pub mod C_OP_FadeAndKill {
+pub mod C_OP_FadeAndKill { // CParticleFunctionOperator
     pub const m_flStartFadeInTime: usize = 0x1C0; // float
     pub const m_flEndFadeInTime: usize = 0x1C4; // float
     pub const m_flStartFadeOutTime: usize = 0x1C8; // float
@@ -1738,7 +1825,7 @@ pub mod C_OP_FadeAndKill {
     pub const m_bForcePreserveParticleOrder: usize = 0x1D8; // bool
 }
 
-pub mod C_OP_FadeAndKillForTracers {
+pub mod C_OP_FadeAndKillForTracers { // CParticleFunctionOperator
     pub const m_flStartFadeInTime: usize = 0x1C0; // float
     pub const m_flEndFadeInTime: usize = 0x1C4; // float
     pub const m_flStartFadeOutTime: usize = 0x1C8; // float
@@ -1747,19 +1834,19 @@ pub mod C_OP_FadeAndKillForTracers {
     pub const m_flEndAlpha: usize = 0x1D4; // float
 }
 
-pub mod C_OP_FadeIn {
+pub mod C_OP_FadeIn { // CParticleFunctionOperator
     pub const m_flFadeInTimeMin: usize = 0x1C0; // float
     pub const m_flFadeInTimeMax: usize = 0x1C4; // float
     pub const m_flFadeInTimeExp: usize = 0x1C8; // float
     pub const m_bProportional: usize = 0x1CC; // bool
 }
 
-pub mod C_OP_FadeInSimple {
+pub mod C_OP_FadeInSimple { // CParticleFunctionOperator
     pub const m_flFadeInTime: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_FadeOut {
+pub mod C_OP_FadeOut { // CParticleFunctionOperator
     pub const m_flFadeOutTimeMin: usize = 0x1C0; // float
     pub const m_flFadeOutTimeMax: usize = 0x1C4; // float
     pub const m_flFadeOutTimeExp: usize = 0x1C8; // float
@@ -1768,12 +1855,12 @@ pub mod C_OP_FadeOut {
     pub const m_bEaseInAndOut: usize = 0x201; // bool
 }
 
-pub mod C_OP_FadeOutSimple {
+pub mod C_OP_FadeOutSimple { // CParticleFunctionOperator
     pub const m_flFadeOutTime: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_ForceBasedOnDistanceToPlane {
+pub mod C_OP_ForceBasedOnDistanceToPlane { // CParticleFunctionForce
     pub const m_flMinDist: usize = 0x1D0; // float
     pub const m_vecForceAtMinDist: usize = 0x1D4; // Vector
     pub const m_flMaxDist: usize = 0x1E0; // float
@@ -1783,31 +1870,31 @@ pub mod C_OP_ForceBasedOnDistanceToPlane {
     pub const m_flExponent: usize = 0x200; // float
 }
 
-pub mod C_OP_ForceControlPointStub {
+pub mod C_OP_ForceControlPointStub { // CParticleFunctionPreEmission
     pub const m_ControlPoint: usize = 0x1D0; // int32_t
 }
 
-pub mod C_OP_GlobalLight {
+pub mod C_OP_GlobalLight { // CParticleFunctionOperator
     pub const m_flScale: usize = 0x1C0; // float
     pub const m_bClampLowerRange: usize = 0x1C4; // bool
     pub const m_bClampUpperRange: usize = 0x1C5; // bool
 }
 
-pub mod C_OP_HSVShiftToCP {
+pub mod C_OP_HSVShiftToCP { // CParticleFunctionPreEmission
     pub const m_nColorCP: usize = 0x1D0; // int32_t
     pub const m_nColorGemEnableCP: usize = 0x1D4; // int32_t
     pub const m_nOutputCP: usize = 0x1D8; // int32_t
     pub const m_DefaultHSVColor: usize = 0x1DC; // Color
 }
 
-pub mod C_OP_InheritFromParentParticles {
+pub mod C_OP_InheritFromParentParticles { // CParticleFunctionOperator
     pub const m_flScale: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nIncrement: usize = 0x1C8; // int32_t
     pub const m_bRandomDistribution: usize = 0x1CC; // bool
 }
 
-pub mod C_OP_InheritFromParentParticlesV2 {
+pub mod C_OP_InheritFromParentParticlesV2 { // CParticleFunctionOperator
     pub const m_flScale: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nIncrement: usize = 0x1C8; // int32_t
@@ -1815,14 +1902,14 @@ pub mod C_OP_InheritFromParentParticlesV2 {
     pub const m_nMissingParentBehavior: usize = 0x1D0; // MissingParentInheritBehavior_t
 }
 
-pub mod C_OP_InheritFromPeerSystem {
+pub mod C_OP_InheritFromPeerSystem { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nIncrement: usize = 0x1C8; // int32_t
     pub const m_nGroupID: usize = 0x1CC; // int32_t
 }
 
-pub mod C_OP_InstantaneousEmitter {
+pub mod C_OP_InstantaneousEmitter { // CParticleFunctionEmitter
     pub const m_nParticlesToEmit: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_flStartTime: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_flInitFromKilledParentParticles: usize = 0x470; // float
@@ -1831,7 +1918,7 @@ pub mod C_OP_InstantaneousEmitter {
     pub const m_nSnapshotControlPoint: usize = 0x5D4; // int32_t
 }
 
-pub mod C_OP_InterpolateRadius {
+pub mod C_OP_InterpolateRadius { // CParticleFunctionOperator
     pub const m_flStartTime: usize = 0x1C0; // float
     pub const m_flEndTime: usize = 0x1C4; // float
     pub const m_flStartScale: usize = 0x1C8; // float
@@ -1840,33 +1927,33 @@ pub mod C_OP_InterpolateRadius {
     pub const m_flBias: usize = 0x1D4; // float
 }
 
-pub mod C_OP_LagCompensation {
+pub mod C_OP_LagCompensation { // CParticleFunctionOperator
     pub const m_nDesiredVelocityCP: usize = 0x1C0; // int32_t
     pub const m_nLatencyCP: usize = 0x1C4; // int32_t
     pub const m_nLatencyCPField: usize = 0x1C8; // int32_t
     pub const m_nDesiredVelocityCPField: usize = 0x1CC; // int32_t
 }
 
-pub mod C_OP_LerpEndCapScalar {
+pub mod C_OP_LerpEndCapScalar { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flOutput: usize = 0x1C4; // float
     pub const m_flLerpTime: usize = 0x1C8; // float
 }
 
-pub mod C_OP_LerpEndCapVector {
+pub mod C_OP_LerpEndCapVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecOutput: usize = 0x1C4; // Vector
     pub const m_flLerpTime: usize = 0x1D0; // float
 }
 
-pub mod C_OP_LerpScalar {
+pub mod C_OP_LerpScalar { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flOutput: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flStartTime: usize = 0x320; // float
     pub const m_flEndTime: usize = 0x324; // float
 }
 
-pub mod C_OP_LerpToInitialPosition {
+pub mod C_OP_LerpToInitialPosition { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_flInterpolation: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_nCacheField: usize = 0x320; // ParticleAttributeIndex_t
@@ -1874,14 +1961,14 @@ pub mod C_OP_LerpToInitialPosition {
     pub const m_vecScale: usize = 0x480; // CParticleCollectionVecInput
 }
 
-pub mod C_OP_LerpToOtherAttribute {
+pub mod C_OP_LerpToOtherAttribute { // CParticleFunctionOperator
     pub const m_flInterpolation: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_nFieldInputFrom: usize = 0x318; // ParticleAttributeIndex_t
     pub const m_nFieldInput: usize = 0x31C; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x320; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_LerpVector {
+pub mod C_OP_LerpVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecOutput: usize = 0x1C4; // Vector
     pub const m_flStartTime: usize = 0x1D0; // float
@@ -1889,7 +1976,7 @@ pub mod C_OP_LerpVector {
     pub const m_nSetMethod: usize = 0x1D8; // ParticleSetMethod_t
 }
 
-pub mod C_OP_LightningSnapshotGenerator {
+pub mod C_OP_LightningSnapshotGenerator { // CParticleFunctionPreEmission
     pub const m_nCPSnapshot: usize = 0x1D0; // int32_t
     pub const m_nCPStartPnt: usize = 0x1D4; // int32_t
     pub const m_nCPEndPnt: usize = 0x1D8; // int32_t
@@ -1907,13 +1994,13 @@ pub mod C_OP_LightningSnapshotGenerator {
     pub const m_flDedicatedPool: usize = 0xF58; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_LocalAccelerationForce {
+pub mod C_OP_LocalAccelerationForce { // CParticleFunctionForce
     pub const m_nCP: usize = 0x1D0; // int32_t
     pub const m_nScaleCP: usize = 0x1D4; // int32_t
     pub const m_vecAccel: usize = 0x1D8; // CParticleCollectionVecInput
 }
 
-pub mod C_OP_LockPoints {
+pub mod C_OP_LockPoints { // CParticleFunctionOperator
     pub const m_nMinCol: usize = 0x1C0; // int32_t
     pub const m_nMaxCol: usize = 0x1C4; // int32_t
     pub const m_nMinRow: usize = 0x1C8; // int32_t
@@ -1922,7 +2009,7 @@ pub mod C_OP_LockPoints {
     pub const m_flBlendValue: usize = 0x1D4; // float
 }
 
-pub mod C_OP_LockToBone {
+pub mod C_OP_LockToBone { // CParticleFunctionOperator
     pub const m_modelInput: usize = 0x1C0; // CParticleModelInput
     pub const m_transformInput: usize = 0x220; // CParticleTransformInput
     pub const m_flLifeTimeFadeStart: usize = 0x288; // float
@@ -1940,7 +2027,7 @@ pub mod C_OP_LockToBone {
     pub const m_flRotLerp: usize = 0x988; // CPerParticleFloatInput
 }
 
-pub mod C_OP_LockToPointList {
+pub mod C_OP_LockToPointList { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_pointList: usize = 0x1C8; // CUtlVector<PointDefinition_t>
     pub const m_bPlaceAlongPath: usize = 0x1E0; // bool
@@ -1948,21 +2035,21 @@ pub mod C_OP_LockToPointList {
     pub const m_nNumPointsAlongPath: usize = 0x1E4; // int32_t
 }
 
-pub mod C_OP_LockToSavedSequentialPath {
+pub mod C_OP_LockToSavedSequentialPath { // CParticleFunctionOperator
     pub const m_flFadeStart: usize = 0x1C4; // float
     pub const m_flFadeEnd: usize = 0x1C8; // float
     pub const m_bCPPairs: usize = 0x1CC; // bool
     pub const m_PathParams: usize = 0x1D0; // CPathParameters
 }
 
-pub mod C_OP_LockToSavedSequentialPathV2 {
+pub mod C_OP_LockToSavedSequentialPathV2 { // CParticleFunctionOperator
     pub const m_flFadeStart: usize = 0x1C0; // float
     pub const m_flFadeEnd: usize = 0x1C4; // float
     pub const m_bCPPairs: usize = 0x1C8; // bool
     pub const m_PathParams: usize = 0x1D0; // CPathParameters
 }
 
-pub mod C_OP_MaintainEmitter {
+pub mod C_OP_MaintainEmitter { // CParticleFunctionEmitter
     pub const m_nParticlesToMaintain: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_flStartTime: usize = 0x318; // float
     pub const m_flEmissionDuration: usize = 0x320; // CParticleCollectionFloatInput
@@ -1973,7 +2060,7 @@ pub mod C_OP_MaintainEmitter {
     pub const m_flScale: usize = 0x488; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_MaintainSequentialPath {
+pub mod C_OP_MaintainSequentialPath { // CParticleFunctionOperator
     pub const m_fMaxDistance: usize = 0x1C0; // float
     pub const m_flNumToAssign: usize = 0x1C4; // float
     pub const m_flCohesionStrength: usize = 0x1C8; // float
@@ -1983,14 +2070,14 @@ pub mod C_OP_MaintainSequentialPath {
     pub const m_PathParams: usize = 0x1E0; // CPathParameters
 }
 
-pub mod C_OP_MaxVelocity {
+pub mod C_OP_MaxVelocity { // CParticleFunctionOperator
     pub const m_flMaxVelocity: usize = 0x1C0; // float
     pub const m_flMinVelocity: usize = 0x1C4; // float
     pub const m_nOverrideCP: usize = 0x1C8; // int32_t
     pub const m_nOverrideCPField: usize = 0x1CC; // int32_t
 }
 
-pub mod C_OP_ModelCull {
+pub mod C_OP_ModelCull { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_bBoundBox: usize = 0x1C4; // bool
     pub const m_bCullOutside: usize = 0x1C5; // bool
@@ -1998,7 +2085,7 @@ pub mod C_OP_ModelCull {
     pub const m_HitboxSetName: usize = 0x1C7; // char[128]
 }
 
-pub mod C_OP_ModelDampenMovement {
+pub mod C_OP_ModelDampenMovement { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_bBoundBox: usize = 0x1C4; // bool
     pub const m_bOutside: usize = 0x1C5; // bool
@@ -2008,7 +2095,7 @@ pub mod C_OP_ModelDampenMovement {
     pub const m_fDrag: usize = 0x8A0; // float
 }
 
-pub mod C_OP_MoveToHitbox {
+pub mod C_OP_MoveToHitbox { // CParticleFunctionOperator
     pub const m_modelInput: usize = 0x1C0; // CParticleModelInput
     pub const m_transformInput: usize = 0x220; // CParticleTransformInput
     pub const m_flLifeTimeLerpStart: usize = 0x28C; // float
@@ -2020,20 +2107,20 @@ pub mod C_OP_MoveToHitbox {
     pub const m_flInterpolation: usize = 0x320; // CPerParticleFloatInput
 }
 
-pub mod C_OP_MovementLoopInsideSphere {
+pub mod C_OP_MovementLoopInsideSphere { // CParticleFunctionOperator
     pub const m_nCP: usize = 0x1C0; // int32_t
     pub const m_flDistance: usize = 0x1C8; // CParticleCollectionFloatInput
     pub const m_vecScale: usize = 0x320; // CParticleCollectionVecInput
     pub const m_nDistSqrAttr: usize = 0x978; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_MovementMaintainOffset {
+pub mod C_OP_MovementMaintainOffset { // CParticleFunctionOperator
     pub const m_vecOffset: usize = 0x1C0; // Vector
     pub const m_nCP: usize = 0x1CC; // int32_t
     pub const m_bRadiusScale: usize = 0x1D0; // bool
 }
 
-pub mod C_OP_MovementMoveAlongSkinnedCPSnapshot {
+pub mod C_OP_MovementMoveAlongSkinnedCPSnapshot { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nSnapshotControlPointNumber: usize = 0x1C4; // int32_t
     pub const m_bSetNormal: usize = 0x1C8; // bool
@@ -2042,7 +2129,7 @@ pub mod C_OP_MovementMoveAlongSkinnedCPSnapshot {
     pub const m_flTValue: usize = 0x328; // CPerParticleFloatInput
 }
 
-pub mod C_OP_MovementPlaceOnGround {
+pub mod C_OP_MovementPlaceOnGround { // CParticleFunctionOperator
     pub const m_flOffset: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flMaxTraceLength: usize = 0x318; // float
     pub const m_flTolerance: usize = 0x31C; // float
@@ -2062,7 +2149,7 @@ pub mod C_OP_MovementPlaceOnGround {
     pub const m_nIgnoreCP: usize = 0x3D0; // int32_t
 }
 
-pub mod C_OP_MovementRigidAttachToCP {
+pub mod C_OP_MovementRigidAttachToCP { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nScaleControlPoint: usize = 0x1C4; // int32_t
     pub const m_nScaleCPField: usize = 0x1C8; // int32_t
@@ -2071,14 +2158,14 @@ pub mod C_OP_MovementRigidAttachToCP {
     pub const m_bOffsetLocal: usize = 0x1D4; // bool
 }
 
-pub mod C_OP_MovementRotateParticleAroundAxis {
+pub mod C_OP_MovementRotateParticleAroundAxis { // CParticleFunctionOperator
     pub const m_vecRotAxis: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_flRotRate: usize = 0x818; // CParticleCollectionFloatInput
     pub const m_TransformInput: usize = 0x970; // CParticleTransformInput
     pub const m_bLocalSpace: usize = 0x9D8; // bool
 }
 
-pub mod C_OP_MovementSkinnedPositionFromCPSnapshot {
+pub mod C_OP_MovementSkinnedPositionFromCPSnapshot { // CParticleFunctionOperator
     pub const m_nSnapshotControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nControlPointNumber: usize = 0x1C4; // int32_t
     pub const m_bRandom: usize = 0x1C8; // bool
@@ -2091,7 +2178,7 @@ pub mod C_OP_MovementSkinnedPositionFromCPSnapshot {
     pub const m_flInterpolation: usize = 0x5E0; // CPerParticleFloatInput
 }
 
-pub mod C_OP_Noise {
+pub mod C_OP_Noise { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flOutputMin: usize = 0x1C4; // float
     pub const m_flOutputMax: usize = 0x1C8; // float
@@ -2100,7 +2187,7 @@ pub mod C_OP_Noise {
     pub const m_flNoiseAnimationTimeScale: usize = 0x1D4; // float
 }
 
-pub mod C_OP_NoiseEmitter {
+pub mod C_OP_NoiseEmitter { // CParticleFunctionEmitter
     pub const m_flEmissionDuration: usize = 0x1C0; // float
     pub const m_flStartTime: usize = 0x1C4; // float
     pub const m_flEmissionScale: usize = 0x1C8; // float
@@ -2118,29 +2205,29 @@ pub mod C_OP_NoiseEmitter {
     pub const m_flWorldTimeScale: usize = 0x1FC; // float
 }
 
-pub mod C_OP_NormalLock {
+pub mod C_OP_NormalLock { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
 }
 
-pub mod C_OP_NormalizeVector {
+pub mod C_OP_NormalizeVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flScale: usize = 0x1C4; // float
 }
 
-pub mod C_OP_Orient2DRelToCP {
+pub mod C_OP_Orient2DRelToCP { // CParticleFunctionOperator
     pub const m_flRotOffset: usize = 0x1C0; // float
     pub const m_flSpinStrength: usize = 0x1C4; // float
     pub const m_nCP: usize = 0x1C8; // int32_t
     pub const m_nFieldOutput: usize = 0x1CC; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_OrientTo2dDirection {
+pub mod C_OP_OrientTo2dDirection { // CParticleFunctionOperator
     pub const m_flRotOffset: usize = 0x1C0; // float
     pub const m_flSpinStrength: usize = 0x1C4; // float
     pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_OscillateScalar {
+pub mod C_OP_OscillateScalar { // CParticleFunctionOperator
     pub const m_RateMin: usize = 0x1C0; // float
     pub const m_RateMax: usize = 0x1C4; // float
     pub const m_FrequencyMin: usize = 0x1C8; // float
@@ -2156,7 +2243,7 @@ pub mod C_OP_OscillateScalar {
     pub const m_flOscAdd: usize = 0x1EC; // float
 }
 
-pub mod C_OP_OscillateScalarSimple {
+pub mod C_OP_OscillateScalarSimple { // CParticleFunctionOperator
     pub const m_Rate: usize = 0x1C0; // float
     pub const m_Frequency: usize = 0x1C4; // float
     pub const m_nField: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -2164,7 +2251,7 @@ pub mod C_OP_OscillateScalarSimple {
     pub const m_flOscAdd: usize = 0x1D0; // float
 }
 
-pub mod C_OP_OscillateVector {
+pub mod C_OP_OscillateVector { // CParticleFunctionOperator
     pub const m_RateMin: usize = 0x1C0; // Vector
     pub const m_RateMax: usize = 0x1CC; // Vector
     pub const m_FrequencyMin: usize = 0x1D8; // Vector
@@ -2182,7 +2269,7 @@ pub mod C_OP_OscillateVector {
     pub const m_flRateScale: usize = 0x4B8; // CPerParticleFloatInput
 }
 
-pub mod C_OP_OscillateVectorSimple {
+pub mod C_OP_OscillateVectorSimple { // CParticleFunctionOperator
     pub const m_Rate: usize = 0x1C0; // Vector
     pub const m_Frequency: usize = 0x1CC; // Vector
     pub const m_nField: usize = 0x1D8; // ParticleAttributeIndex_t
@@ -2191,25 +2278,25 @@ pub mod C_OP_OscillateVectorSimple {
     pub const m_bOffset: usize = 0x1E4; // bool
 }
 
-pub mod C_OP_ParentVortices {
+pub mod C_OP_ParentVortices { // CParticleFunctionForce
     pub const m_flForceScale: usize = 0x1D0; // float
     pub const m_vecTwistAxis: usize = 0x1D4; // Vector
     pub const m_bFlipBasedOnYaw: usize = 0x1E0; // bool
 }
 
-pub mod C_OP_ParticlePhysics {
+pub mod C_OP_ParticlePhysics { // CParticleFunctionOperator
     pub const m_Gravity: usize = 0x1C0; // CParticleCollectionVecInput
     pub const m_fDrag: usize = 0x818; // CParticleCollectionFloatInput
     pub const m_nMaxConstraintPasses: usize = 0x970; // int32_t
 }
 
-pub mod C_OP_PerParticleForce {
+pub mod C_OP_PerParticleForce { // CParticleFunctionForce
     pub const m_flForceScale: usize = 0x1D0; // CPerParticleFloatInput
     pub const m_vForce: usize = 0x328; // CPerParticleVecInput
     pub const m_nCP: usize = 0x980; // int32_t
 }
 
-pub mod C_OP_PercentageBetweenTransformLerpCPs {
+pub mod C_OP_PercentageBetweenTransformLerpCPs { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C4; // float
     pub const m_flInputMax: usize = 0x1C8; // float
@@ -2224,7 +2311,7 @@ pub mod C_OP_PercentageBetweenTransformLerpCPs {
     pub const m_bRadialCheck: usize = 0x2B5; // bool
 }
 
-pub mod C_OP_PercentageBetweenTransforms {
+pub mod C_OP_PercentageBetweenTransforms { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C4; // float
     pub const m_flInputMax: usize = 0x1C8; // float
@@ -2237,7 +2324,7 @@ pub mod C_OP_PercentageBetweenTransforms {
     pub const m_bRadialCheck: usize = 0x2AD; // bool
 }
 
-pub mod C_OP_PercentageBetweenTransformsVector {
+pub mod C_OP_PercentageBetweenTransformsVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C4; // float
     pub const m_flInputMax: usize = 0x1C8; // float
@@ -2250,7 +2337,7 @@ pub mod C_OP_PercentageBetweenTransformsVector {
     pub const m_bRadialCheck: usize = 0x2BD; // bool
 }
 
-pub mod C_OP_PinParticleToCP {
+pub mod C_OP_PinParticleToCP { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_vecOffset: usize = 0x1C8; // CParticleCollectionVecInput
     pub const m_bOffsetLocal: usize = 0x820; // bool
@@ -2266,7 +2353,7 @@ pub mod C_OP_PinParticleToCP {
     pub const m_flInterpolation: usize = 0xEF0; // CPerParticleFloatInput
 }
 
-pub mod C_OP_PlanarConstraint {
+pub mod C_OP_PlanarConstraint { // CParticleFunctionConstraint
     pub const m_PointOnPlane: usize = 0x1C0; // Vector
     pub const m_PlaneNormal: usize = 0x1CC; // Vector
     pub const m_nControlPointNumber: usize = 0x1D8; // int32_t
@@ -2276,24 +2363,24 @@ pub mod C_OP_PlanarConstraint {
     pub const m_flMaximumDistanceToCP: usize = 0x338; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_PlaneCull {
+pub mod C_OP_PlaneCull { // CParticleFunctionOperator
     pub const m_nPlaneControlPoint: usize = 0x1C0; // int32_t
     pub const m_vecPlaneDirection: usize = 0x1C4; // Vector
     pub const m_bLocalSpace: usize = 0x1D0; // bool
     pub const m_flPlaneOffset: usize = 0x1D4; // float
 }
 
-pub mod C_OP_PlayEndCapWhenFinished {
+pub mod C_OP_PlayEndCapWhenFinished { // CParticleFunctionPreEmission
     pub const m_bFireOnEmissionEnd: usize = 0x1D0; // bool
     pub const m_bIncludeChildren: usize = 0x1D1; // bool
 }
 
-pub mod C_OP_PointVectorAtNextParticle {
+pub mod C_OP_PointVectorAtNextParticle { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInterpolation: usize = 0x1C8; // CPerParticleFloatInput
 }
 
-pub mod C_OP_PositionLock {
+pub mod C_OP_PositionLock { // CParticleFunctionOperator
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_flStartTime_min: usize = 0x228; // float
     pub const m_flStartTime_max: usize = 0x22C; // float
@@ -2311,29 +2398,29 @@ pub mod C_OP_PositionLock {
     pub const m_nFieldOutputPrev: usize = 0xA0C; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_QuantizeCPComponent {
+pub mod C_OP_QuantizeCPComponent { // CParticleFunctionPreEmission
     pub const m_flInputValue: usize = 0x1D0; // CParticleCollectionFloatInput
     pub const m_nCPOutput: usize = 0x328; // int32_t
     pub const m_nOutVectorField: usize = 0x32C; // int32_t
     pub const m_flQuantizeValue: usize = 0x330; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_QuantizeFloat {
+pub mod C_OP_QuantizeFloat { // CParticleFunctionOperator
     pub const m_InputValue: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_nOutputField: usize = 0x318; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RadiusDecay {
+pub mod C_OP_RadiusDecay { // CParticleFunctionOperator
     pub const m_flMinRadius: usize = 0x1C0; // float
 }
 
-pub mod C_OP_RampCPLinearRandom {
+pub mod C_OP_RampCPLinearRandom { // CParticleFunctionPreEmission
     pub const m_nOutControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_vecRateMin: usize = 0x1D4; // Vector
     pub const m_vecRateMax: usize = 0x1E0; // Vector
 }
 
-pub mod C_OP_RampScalarLinear {
+pub mod C_OP_RampScalarLinear { // CParticleFunctionOperator
     pub const m_RateMin: usize = 0x1C0; // float
     pub const m_RateMax: usize = 0x1C4; // float
     pub const m_flStartTime_min: usize = 0x1C8; // float
@@ -2344,14 +2431,14 @@ pub mod C_OP_RampScalarLinear {
     pub const m_bProportionalOp: usize = 0x204; // bool
 }
 
-pub mod C_OP_RampScalarLinearSimple {
+pub mod C_OP_RampScalarLinearSimple { // CParticleFunctionOperator
     pub const m_Rate: usize = 0x1C0; // float
     pub const m_flStartTime: usize = 0x1C4; // float
     pub const m_flEndTime: usize = 0x1C8; // float
     pub const m_nField: usize = 0x1F0; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RampScalarSpline {
+pub mod C_OP_RampScalarSpline { // CParticleFunctionOperator
     pub const m_RateMin: usize = 0x1C0; // float
     pub const m_RateMax: usize = 0x1C4; // float
     pub const m_flStartTime_min: usize = 0x1C8; // float
@@ -2364,7 +2451,7 @@ pub mod C_OP_RampScalarSpline {
     pub const m_bEaseOut: usize = 0x205; // bool
 }
 
-pub mod C_OP_RampScalarSplineSimple {
+pub mod C_OP_RampScalarSplineSimple { // CParticleFunctionOperator
     pub const m_Rate: usize = 0x1C0; // float
     pub const m_flStartTime: usize = 0x1C4; // float
     pub const m_flEndTime: usize = 0x1C8; // float
@@ -2372,12 +2459,12 @@ pub mod C_OP_RampScalarSplineSimple {
     pub const m_bEaseOut: usize = 0x1F4; // bool
 }
 
-pub mod C_OP_RandomForce {
+pub mod C_OP_RandomForce { // CParticleFunctionForce
     pub const m_MinForce: usize = 0x1D0; // Vector
     pub const m_MaxForce: usize = 0x1DC; // Vector
 }
 
-pub mod C_OP_ReadFromNeighboringParticle {
+pub mod C_OP_ReadFromNeighboringParticle { // CParticleFunctionOperator
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nIncrement: usize = 0x1C8; // int32_t
@@ -2385,13 +2472,13 @@ pub mod C_OP_ReadFromNeighboringParticle {
     pub const m_flInterpolation: usize = 0x328; // CPerParticleFloatInput
 }
 
-pub mod C_OP_ReinitializeScalarEndCap {
+pub mod C_OP_ReinitializeScalarEndCap { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flOutputMin: usize = 0x1C4; // float
     pub const m_flOutputMax: usize = 0x1C8; // float
 }
 
-pub mod C_OP_RemapAverageHitboxSpeedtoCP {
+pub mod C_OP_RemapAverageHitboxSpeedtoCP { // CParticleFunctionPreEmission
     pub const m_nInControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_nOutControlPointNumber: usize = 0x1D4; // int32_t
     pub const m_nField: usize = 0x1D8; // int32_t
@@ -2405,7 +2492,7 @@ pub mod C_OP_RemapAverageHitboxSpeedtoCP {
     pub const m_HitboxSetName: usize = 0xDA0; // char[128]
 }
 
-pub mod C_OP_RemapAverageScalarValuetoCP {
+pub mod C_OP_RemapAverageScalarValuetoCP { // CParticleFunctionPreEmission
     pub const m_nOutControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_nOutVectorField: usize = 0x1D4; // int32_t
     pub const m_nField: usize = 0x1D8; // ParticleAttributeIndex_t
@@ -2415,7 +2502,7 @@ pub mod C_OP_RemapAverageScalarValuetoCP {
     pub const m_flOutputMax: usize = 0x1E8; // float
 }
 
-pub mod C_OP_RemapBoundingVolumetoCP {
+pub mod C_OP_RemapBoundingVolumetoCP { // CParticleFunctionPreEmission
     pub const m_nOutControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_flInputMin: usize = 0x1D4; // float
     pub const m_flInputMax: usize = 0x1D8; // float
@@ -2423,14 +2510,14 @@ pub mod C_OP_RemapBoundingVolumetoCP {
     pub const m_flOutputMax: usize = 0x1E0; // float
 }
 
-pub mod C_OP_RemapCPVelocityToVector {
+pub mod C_OP_RemapCPVelocityToVector { // CParticleFunctionOperator
     pub const m_nControlPoint: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flScale: usize = 0x1C8; // float
     pub const m_bNormalize: usize = 0x1CC; // bool
 }
 
-pub mod C_OP_RemapCPtoCP {
+pub mod C_OP_RemapCPtoCP { // CParticleFunctionPreEmission
     pub const m_nInputControlPoint: usize = 0x1D0; // int32_t
     pub const m_nOutputControlPoint: usize = 0x1D4; // int32_t
     pub const m_nInputField: usize = 0x1D8; // int32_t
@@ -2443,7 +2530,7 @@ pub mod C_OP_RemapCPtoCP {
     pub const m_flInterpRate: usize = 0x1F4; // float
 }
 
-pub mod C_OP_RemapCPtoScalar {
+pub mod C_OP_RemapCPtoScalar { // CParticleFunctionOperator
     pub const m_nCPInput: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nField: usize = 0x1C8; // int32_t
@@ -2457,7 +2544,7 @@ pub mod C_OP_RemapCPtoScalar {
     pub const m_nSetMethod: usize = 0x1E8; // ParticleSetMethod_t
 }
 
-pub mod C_OP_RemapCPtoVector {
+pub mod C_OP_RemapCPtoVector { // CParticleFunctionOperator
     pub const m_nCPInput: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nLocalSpaceCP: usize = 0x1C8; // int32_t
@@ -2473,32 +2560,32 @@ pub mod C_OP_RemapCPtoVector {
     pub const m_bAccelerate: usize = 0x20D; // bool
 }
 
-pub mod C_OP_RemapControlPointDirectionToVector {
+pub mod C_OP_RemapControlPointDirectionToVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flScale: usize = 0x1C4; // float
     pub const m_nControlPointNumber: usize = 0x1C8; // int32_t
 }
 
-pub mod C_OP_RemapControlPointOrientationToRotation {
+pub mod C_OP_RemapControlPointOrientationToRotation { // CParticleFunctionOperator
     pub const m_nCP: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flOffsetRot: usize = 0x1C8; // float
     pub const m_nComponent: usize = 0x1CC; // int32_t
 }
 
-pub mod C_OP_RemapCrossProductOfTwoVectorsToVector {
+pub mod C_OP_RemapCrossProductOfTwoVectorsToVector { // CParticleFunctionOperator
     pub const m_InputVec1: usize = 0x1C0; // CPerParticleVecInput
     pub const m_InputVec2: usize = 0x818; // CPerParticleVecInput
     pub const m_nFieldOutput: usize = 0xE70; // ParticleAttributeIndex_t
     pub const m_bNormalize: usize = 0xE74; // bool
 }
 
-pub mod C_OP_RemapDensityGradientToVectorAttribute {
+pub mod C_OP_RemapDensityGradientToVectorAttribute { // CParticleFunctionOperator
     pub const m_flRadiusScale: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RemapDensityToVector {
+pub mod C_OP_RemapDensityToVector { // CParticleFunctionOperator
     pub const m_flRadiusScale: usize = 0x1C0; // float
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flDensityMin: usize = 0x1C8; // float
@@ -2509,7 +2596,7 @@ pub mod C_OP_RemapDensityToVector {
     pub const m_nVoxelGridResolution: usize = 0x1EC; // int32_t
 }
 
-pub mod C_OP_RemapDirectionToCPToVector {
+pub mod C_OP_RemapDirectionToCPToVector { // CParticleFunctionOperator
     pub const m_nCP: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flScale: usize = 0x1C8; // float
@@ -2519,7 +2606,7 @@ pub mod C_OP_RemapDirectionToCPToVector {
     pub const m_nFieldStrength: usize = 0x1E0; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RemapDistanceToLineSegmentBase {
+pub mod C_OP_RemapDistanceToLineSegmentBase { // CParticleFunctionOperator
     pub const m_nCP0: usize = 0x1C0; // int32_t
     pub const m_nCP1: usize = 0x1C4; // int32_t
     pub const m_flMinInputValue: usize = 0x1C8; // float
@@ -2527,19 +2614,19 @@ pub mod C_OP_RemapDistanceToLineSegmentBase {
     pub const m_bInfiniteLine: usize = 0x1D0; // bool
 }
 
-pub mod C_OP_RemapDistanceToLineSegmentToScalar {
+pub mod C_OP_RemapDistanceToLineSegmentToScalar { // C_OP_RemapDistanceToLineSegmentBase
     pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
     pub const m_flMinOutputValue: usize = 0x1E4; // float
     pub const m_flMaxOutputValue: usize = 0x1E8; // float
 }
 
-pub mod C_OP_RemapDistanceToLineSegmentToVector {
+pub mod C_OP_RemapDistanceToLineSegmentToVector { // C_OP_RemapDistanceToLineSegmentBase
     pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
     pub const m_vMinOutputValue: usize = 0x1E4; // Vector
     pub const m_vMaxOutputValue: usize = 0x1F0; // Vector
 }
 
-pub mod C_OP_RemapDotProductToCP {
+pub mod C_OP_RemapDotProductToCP { // CParticleFunctionPreEmission
     pub const m_nInputCP1: usize = 0x1D0; // int32_t
     pub const m_nInputCP2: usize = 0x1D4; // int32_t
     pub const m_nOutputCP: usize = 0x1D8; // int32_t
@@ -2550,7 +2637,7 @@ pub mod C_OP_RemapDotProductToCP {
     pub const m_flOutputMax: usize = 0x5E8; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_RemapDotProductToScalar {
+pub mod C_OP_RemapDotProductToScalar { // CParticleFunctionOperator
     pub const m_nInputCP1: usize = 0x1C0; // int32_t
     pub const m_nInputCP2: usize = 0x1C4; // int32_t
     pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -2564,7 +2651,7 @@ pub mod C_OP_RemapDotProductToScalar {
     pub const m_bUseParticleNormal: usize = 0x1E5; // bool
 }
 
-pub mod C_OP_RemapExternalWindToCP {
+pub mod C_OP_RemapExternalWindToCP { // CParticleFunctionPreEmission
     pub const m_nCP: usize = 0x1D0; // int32_t
     pub const m_nCPOutput: usize = 0x1D4; // int32_t
     pub const m_vecScale: usize = 0x1D8; // CParticleCollectionVecInput
@@ -2572,7 +2659,7 @@ pub mod C_OP_RemapExternalWindToCP {
     pub const m_nOutVectorField: usize = 0x834; // int32_t
 }
 
-pub mod C_OP_RemapModelVolumetoCP {
+pub mod C_OP_RemapModelVolumetoCP { // CParticleFunctionPreEmission
     pub const m_nBBoxType: usize = 0x1D0; // BBoxVolumeType_t
     pub const m_nInControlPointNumber: usize = 0x1D4; // int32_t
     pub const m_nOutControlPointNumber: usize = 0x1D8; // int32_t
@@ -2584,7 +2671,13 @@ pub mod C_OP_RemapModelVolumetoCP {
     pub const m_flOutputMax: usize = 0x1F0; // float
 }
 
-pub mod C_OP_RemapNamedModelElementEndCap {
+pub mod C_OP_RemapNamedModelBodyPartEndCap { // C_OP_RemapNamedModelElementEndCap
+}
+
+pub mod C_OP_RemapNamedModelBodyPartOnceTimed { // C_OP_RemapNamedModelElementOnceTimed
+}
+
+pub mod C_OP_RemapNamedModelElementEndCap { // CParticleFunctionOperator
     pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_inNames: usize = 0x1C8; // CUtlVector<CUtlString>
     pub const m_outNames: usize = 0x1E0; // CUtlVector<CUtlString>
@@ -2594,7 +2687,7 @@ pub mod C_OP_RemapNamedModelElementEndCap {
     pub const m_nFieldOutput: usize = 0x218; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RemapNamedModelElementOnceTimed {
+pub mod C_OP_RemapNamedModelElementOnceTimed { // CParticleFunctionOperator
     pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
     pub const m_inNames: usize = 0x1C8; // CUtlVector<CUtlString>
     pub const m_outNames: usize = 0x1E0; // CUtlVector<CUtlString>
@@ -2606,7 +2699,19 @@ pub mod C_OP_RemapNamedModelElementOnceTimed {
     pub const m_flRemapTime: usize = 0x21C; // float
 }
 
-pub mod C_OP_RemapParticleCountOnScalarEndCap {
+pub mod C_OP_RemapNamedModelMeshGroupEndCap { // C_OP_RemapNamedModelElementEndCap
+}
+
+pub mod C_OP_RemapNamedModelMeshGroupOnceTimed { // C_OP_RemapNamedModelElementOnceTimed
+}
+
+pub mod C_OP_RemapNamedModelSequenceEndCap { // C_OP_RemapNamedModelElementEndCap
+}
+
+pub mod C_OP_RemapNamedModelSequenceOnceTimed { // C_OP_RemapNamedModelElementOnceTimed
+}
+
+pub mod C_OP_RemapParticleCountOnScalarEndCap { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nInputMin: usize = 0x1C4; // int32_t
     pub const m_nInputMax: usize = 0x1C8; // int32_t
@@ -2616,7 +2721,7 @@ pub mod C_OP_RemapParticleCountOnScalarEndCap {
     pub const m_nSetMethod: usize = 0x1D8; // ParticleSetMethod_t
 }
 
-pub mod C_OP_RemapParticleCountToScalar {
+pub mod C_OP_RemapParticleCountToScalar { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nInputMin: usize = 0x1C8; // CParticleCollectionFloatInput
     pub const m_nInputMax: usize = 0x320; // CParticleCollectionFloatInput
@@ -2626,7 +2731,7 @@ pub mod C_OP_RemapParticleCountToScalar {
     pub const m_nSetMethod: usize = 0x72C; // ParticleSetMethod_t
 }
 
-pub mod C_OP_RemapSDFDistanceToScalarAttribute {
+pub mod C_OP_RemapSDFDistanceToScalarAttribute { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nVectorFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flMinDistance: usize = 0x1C8; // CParticleCollectionFloatInput
@@ -2637,7 +2742,7 @@ pub mod C_OP_RemapSDFDistanceToScalarAttribute {
     pub const m_flValueAboveMax: usize = 0x880; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_RemapSDFDistanceToVectorAttribute {
+pub mod C_OP_RemapSDFDistanceToVectorAttribute { // CParticleFunctionOperator
     pub const m_nVectorFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nVectorFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flMinDistance: usize = 0x1C8; // CParticleCollectionFloatInput
@@ -2648,11 +2753,11 @@ pub mod C_OP_RemapSDFDistanceToVectorAttribute {
     pub const m_vValueAboveMax: usize = 0x49C; // Vector
 }
 
-pub mod C_OP_RemapSDFGradientToVectorAttribute {
+pub mod C_OP_RemapSDFGradientToVectorAttribute { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RemapScalar {
+pub mod C_OP_RemapScalar { // CParticleFunctionOperator
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
@@ -2662,7 +2767,7 @@ pub mod C_OP_RemapScalar {
     pub const m_bOldCode: usize = 0x1D8; // bool
 }
 
-pub mod C_OP_RemapScalarEndCap {
+pub mod C_OP_RemapScalarEndCap { // CParticleFunctionOperator
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
@@ -2671,7 +2776,7 @@ pub mod C_OP_RemapScalarEndCap {
     pub const m_flOutputMax: usize = 0x1D4; // float
 }
 
-pub mod C_OP_RemapScalarOnceTimed {
+pub mod C_OP_RemapScalarOnceTimed { // CParticleFunctionOperator
     pub const m_bProportional: usize = 0x1C0; // bool
     pub const m_nFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -2682,7 +2787,7 @@ pub mod C_OP_RemapScalarOnceTimed {
     pub const m_flRemapTime: usize = 0x1DC; // float
 }
 
-pub mod C_OP_RemapSpeed {
+pub mod C_OP_RemapSpeed { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C4; // float
     pub const m_flInputMax: usize = 0x1C8; // float
@@ -2692,7 +2797,7 @@ pub mod C_OP_RemapSpeed {
     pub const m_bIgnoreDelta: usize = 0x1D8; // bool
 }
 
-pub mod C_OP_RemapSpeedtoCP {
+pub mod C_OP_RemapSpeedtoCP { // CParticleFunctionPreEmission
     pub const m_nInControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_nOutControlPointNumber: usize = 0x1D4; // int32_t
     pub const m_nField: usize = 0x1D8; // int32_t
@@ -2703,25 +2808,25 @@ pub mod C_OP_RemapSpeedtoCP {
     pub const m_bUseDeltaV: usize = 0x1EC; // bool
 }
 
-pub mod C_OP_RemapTransformOrientationToRotations {
+pub mod C_OP_RemapTransformOrientationToRotations { // CParticleFunctionOperator
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_vecRotation: usize = 0x228; // Vector
     pub const m_bUseQuat: usize = 0x234; // bool
     pub const m_bWriteNormal: usize = 0x235; // bool
 }
 
-pub mod C_OP_RemapTransformOrientationToYaw {
+pub mod C_OP_RemapTransformOrientationToYaw { // CParticleFunctionOperator
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
     pub const m_nFieldOutput: usize = 0x228; // ParticleAttributeIndex_t
     pub const m_flRotOffset: usize = 0x22C; // float
     pub const m_flSpinStrength: usize = 0x230; // float
 }
 
-pub mod C_OP_RemapTransformToVelocity {
+pub mod C_OP_RemapTransformToVelocity { // CParticleFunctionOperator
     pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
 }
 
-pub mod C_OP_RemapTransformVisibilityToScalar {
+pub mod C_OP_RemapTransformVisibilityToScalar { // CParticleFunctionOperator
     pub const m_nSetMethod: usize = 0x1C0; // ParticleSetMethod_t
     pub const m_TransformInput: usize = 0x1C8; // CParticleTransformInput
     pub const m_nFieldOutput: usize = 0x230; // ParticleAttributeIndex_t
@@ -2732,7 +2837,7 @@ pub mod C_OP_RemapTransformVisibilityToScalar {
     pub const m_flRadius: usize = 0x244; // float
 }
 
-pub mod C_OP_RemapTransformVisibilityToVector {
+pub mod C_OP_RemapTransformVisibilityToVector { // CParticleFunctionOperator
     pub const m_nSetMethod: usize = 0x1C0; // ParticleSetMethod_t
     pub const m_TransformInput: usize = 0x1C8; // CParticleTransformInput
     pub const m_nFieldOutput: usize = 0x230; // ParticleAttributeIndex_t
@@ -2743,25 +2848,25 @@ pub mod C_OP_RemapTransformVisibilityToVector {
     pub const m_flRadius: usize = 0x254; // float
 }
 
-pub mod C_OP_RemapVectorComponentToScalar {
+pub mod C_OP_RemapVectorComponentToScalar { // CParticleFunctionOperator
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nComponent: usize = 0x1C8; // int32_t
 }
 
-pub mod C_OP_RemapVectortoCP {
+pub mod C_OP_RemapVectortoCP { // CParticleFunctionOperator
     pub const m_nOutControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nParticleNumber: usize = 0x1C8; // int32_t
 }
 
-pub mod C_OP_RemapVelocityToVector {
+pub mod C_OP_RemapVelocityToVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_flScale: usize = 0x1C4; // float
     pub const m_bNormalize: usize = 0x1C8; // bool
 }
 
-pub mod C_OP_RemapVisibilityScalar {
+pub mod C_OP_RemapVisibilityScalar { // CParticleFunctionOperator
     pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_flInputMin: usize = 0x1C8; // float
@@ -2771,7 +2876,7 @@ pub mod C_OP_RemapVisibilityScalar {
     pub const m_flRadiusScale: usize = 0x1D8; // float
 }
 
-pub mod C_OP_RenderAsModels {
+pub mod C_OP_RenderAsModels { // CParticleFunctionRenderer
     pub const m_ModelList: usize = 0x200; // CUtlVector<ModelReference_t>
     pub const m_flModelScale: usize = 0x21C; // float
     pub const m_bFitToModelSize: usize = 0x220; // bool
@@ -2782,7 +2887,7 @@ pub mod C_OP_RenderAsModels {
     pub const m_nSizeCullBloat: usize = 0x230; // int32_t
 }
 
-pub mod C_OP_RenderBlobs {
+pub mod C_OP_RenderBlobs { // CParticleFunctionRenderer
     pub const m_cubeWidth: usize = 0x200; // CParticleCollectionRendererFloatInput
     pub const m_cutoffRadius: usize = 0x358; // CParticleCollectionRendererFloatInput
     pub const m_renderRadius: usize = 0x4B0; // CParticleCollectionRendererFloatInput
@@ -2791,7 +2896,7 @@ pub mod C_OP_RenderBlobs {
     pub const m_hMaterial: usize = 0x640; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
-pub mod C_OP_RenderCables {
+pub mod C_OP_RenderCables { // CParticleFunctionRenderer
     pub const m_flRadiusScale: usize = 0x200; // CParticleCollectionFloatInput
     pub const m_flAlphaScale: usize = 0x358; // CParticleCollectionFloatInput
     pub const m_vecColorScale: usize = 0x4B0; // CParticleCollectionVecInput
@@ -2816,7 +2921,10 @@ pub mod C_OP_RenderCables {
     pub const m_MaterialVecVars: usize = 0x13E8; // CUtlVector<VecInputMaterialVariable_t>
 }
 
-pub mod C_OP_RenderDeferredLight {
+pub mod C_OP_RenderClothForce { // CParticleFunctionRenderer
+}
+
+pub mod C_OP_RenderDeferredLight { // CParticleFunctionRenderer
     pub const m_bUseAlphaTestWindow: usize = 0x200; // bool
     pub const m_bUseTexture: usize = 0x201; // bool
     pub const m_flRadiusScale: usize = 0x204; // float
@@ -2835,13 +2943,13 @@ pub mod C_OP_RenderDeferredLight {
     pub const m_nHSVShiftControlPoint: usize = 0x890; // int32_t
 }
 
-pub mod C_OP_RenderFlattenGrass {
+pub mod C_OP_RenderFlattenGrass { // CParticleFunctionRenderer
     pub const m_flFlattenStrength: usize = 0x200; // float
     pub const m_nStrengthFieldOverride: usize = 0x204; // ParticleAttributeIndex_t
     pub const m_flRadiusScale: usize = 0x208; // float
 }
 
-pub mod C_OP_RenderGpuImplicit {
+pub mod C_OP_RenderGpuImplicit { // CParticleFunctionRenderer
     pub const m_bUsePerParticleRadius: usize = 0x200; // bool
     pub const m_fGridSize: usize = 0x208; // CParticleCollectionRendererFloatInput
     pub const m_fRadiusScale: usize = 0x360; // CParticleCollectionRendererFloatInput
@@ -2850,7 +2958,7 @@ pub mod C_OP_RenderGpuImplicit {
     pub const m_hMaterial: usize = 0x618; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
-pub mod C_OP_RenderLightBeam {
+pub mod C_OP_RenderLightBeam { // CParticleFunctionRenderer
     pub const m_vColorBlend: usize = 0x200; // CParticleCollectionVecInput
     pub const m_nColorBlendType: usize = 0x858; // ParticleColorBlendType_t
     pub const m_flBrightnessLumensPerMeter: usize = 0x860; // CParticleCollectionFloatInput
@@ -2860,7 +2968,7 @@ pub mod C_OP_RenderLightBeam {
     pub const m_flThickness: usize = 0xC70; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_RenderLights {
+pub mod C_OP_RenderLights { // C_OP_RenderPoints
     pub const m_flAnimationRate: usize = 0x210; // float
     pub const m_nAnimationType: usize = 0x214; // AnimationType_t
     pub const m_bAnimateInFPS: usize = 0x218; // bool
@@ -2870,7 +2978,7 @@ pub mod C_OP_RenderLights {
     pub const m_flEndFadeSize: usize = 0x228; // float
 }
 
-pub mod C_OP_RenderMaterialProxy {
+pub mod C_OP_RenderMaterialProxy { // CParticleFunctionRenderer
     pub const m_nMaterialControlPoint: usize = 0x200; // int32_t
     pub const m_nProxyType: usize = 0x204; // MaterialProxyType_t
     pub const m_MaterialVars: usize = 0x208; // CUtlVector<MaterialVariable_t>
@@ -2881,7 +2989,7 @@ pub mod C_OP_RenderMaterialProxy {
     pub const m_nColorBlendType: usize = 0xB30; // ParticleColorBlendType_t
 }
 
-pub mod C_OP_RenderModels {
+pub mod C_OP_RenderModels { // CParticleFunctionRenderer
     pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x200; // bool
     pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x201; // bool
     pub const m_bUseMixedResolutionRendering: usize = 0x202; // bool
@@ -2934,7 +3042,7 @@ pub mod C_OP_RenderModels {
     pub const m_nColorBlendType: usize = 0x25C0; // ParticleColorBlendType_t
 }
 
-pub mod C_OP_RenderOmni2Light {
+pub mod C_OP_RenderOmni2Light { // CParticleFunctionRenderer
     pub const m_nLightType: usize = 0x200; // ParticleOmni2LightTypeChoiceList_t
     pub const m_vColorBlend: usize = 0x208; // CParticleCollectionVecInput
     pub const m_nColorBlendType: usize = 0x860; // ParticleColorBlendType_t
@@ -2951,17 +3059,17 @@ pub mod C_OP_RenderOmni2Light {
     pub const m_bSphericalCookie: usize = 0x11E0; // bool
 }
 
-pub mod C_OP_RenderPoints {
+pub mod C_OP_RenderPoints { // CParticleFunctionRenderer
     pub const m_hMaterial: usize = 0x200; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
-pub mod C_OP_RenderPostProcessing {
+pub mod C_OP_RenderPostProcessing { // CParticleFunctionRenderer
     pub const m_flPostProcessStrength: usize = 0x200; // CPerParticleFloatInput
     pub const m_hPostTexture: usize = 0x358; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
     pub const m_nPriority: usize = 0x360; // ParticlePostProcessPriorityGroup_t
 }
 
-pub mod C_OP_RenderProjected {
+pub mod C_OP_RenderProjected { // CParticleFunctionRenderer
     pub const m_bProjectCharacter: usize = 0x200; // bool
     pub const m_bProjectWorld: usize = 0x201; // bool
     pub const m_bProjectWater: usize = 0x202; // bool
@@ -2975,7 +3083,7 @@ pub mod C_OP_RenderProjected {
     pub const m_MaterialVars: usize = 0x220; // CUtlVector<MaterialVariable_t>
 }
 
-pub mod C_OP_RenderRopes {
+pub mod C_OP_RenderRopes { // CBaseRendererSource2
     pub const m_bEnableFadingAndClamping: usize = 0x2470; // bool
     pub const m_flMinSize: usize = 0x2474; // float
     pub const m_flMaxSize: usize = 0x2478; // float
@@ -3008,7 +3116,7 @@ pub mod C_OP_RenderRopes {
     pub const m_bGenerateNormals: usize = 0x28DD; // bool
 }
 
-pub mod C_OP_RenderScreenShake {
+pub mod C_OP_RenderScreenShake { // CParticleFunctionRenderer
     pub const m_flDurationScale: usize = 0x200; // float
     pub const m_flRadiusScale: usize = 0x204; // float
     pub const m_flFrequencyScale: usize = 0x208; // float
@@ -3020,12 +3128,12 @@ pub mod C_OP_RenderScreenShake {
     pub const m_nFilterCP: usize = 0x220; // int32_t
 }
 
-pub mod C_OP_RenderScreenVelocityRotate {
+pub mod C_OP_RenderScreenVelocityRotate { // CParticleFunctionRenderer
     pub const m_flRotateRateDegrees: usize = 0x200; // float
     pub const m_flForwardDegrees: usize = 0x204; // float
 }
 
-pub mod C_OP_RenderSound {
+pub mod C_OP_RenderSound { // CParticleFunctionRenderer
     pub const m_flDurationScale: usize = 0x200; // float
     pub const m_flSndLvlScale: usize = 0x204; // float
     pub const m_flPitchScale: usize = 0x208; // float
@@ -3040,7 +3148,7 @@ pub mod C_OP_RenderSound {
     pub const m_bSuppressStopSoundEvent: usize = 0x328; // bool
 }
 
-pub mod C_OP_RenderSprites {
+pub mod C_OP_RenderSprites { // CBaseRendererSource2
     pub const m_nSequenceOverride: usize = 0x2470; // CParticleCollectionRendererFloatInput
     pub const m_nOrientationType: usize = 0x25C8; // ParticleOrientationChoiceList_t
     pub const m_nOrientationControlPoint: usize = 0x25CC; // int32_t
@@ -3070,7 +3178,7 @@ pub mod C_OP_RenderSprites {
     pub const m_flShadowDensity: usize = 0x2B7C; // float
 }
 
-pub mod C_OP_RenderStandardLight {
+pub mod C_OP_RenderStandardLight { // CParticleFunctionRenderer
     pub const m_nLightType: usize = 0x200; // ParticleLightTypeChoiceList_t
     pub const m_vecColorScale: usize = 0x208; // CParticleCollectionVecInput
     pub const m_nColorBlendType: usize = 0x860; // ParticleColorBlendType_t
@@ -3102,7 +3210,7 @@ pub mod C_OP_RenderStandardLight {
     pub const m_flLengthFadeInTime: usize = 0x1374; // float
 }
 
-pub mod C_OP_RenderStatusEffect {
+pub mod C_OP_RenderStatusEffect { // CParticleFunctionRenderer
     pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_pTextureDetail2: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_pTextureDiffuseWarp: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
@@ -3112,7 +3220,7 @@ pub mod C_OP_RenderStatusEffect {
     pub const m_pTextureEnvMap: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
-pub mod C_OP_RenderStatusEffectCitadel {
+pub mod C_OP_RenderStatusEffectCitadel { // CParticleFunctionRenderer
     pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_pTextureNormal: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
     pub const m_pTextureMetalness: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
@@ -3121,19 +3229,19 @@ pub mod C_OP_RenderStatusEffectCitadel {
     pub const m_pTextureDetail: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
 }
 
-pub mod C_OP_RenderText {
+pub mod C_OP_RenderText { // CParticleFunctionRenderer
     pub const m_OutlineColor: usize = 0x200; // Color
     pub const m_DefaultText: usize = 0x208; // CUtlString
 }
 
-pub mod C_OP_RenderTonemapController {
+pub mod C_OP_RenderTonemapController { // CParticleFunctionRenderer
     pub const m_flTonemapLevel: usize = 0x200; // float
     pub const m_flTonemapWeight: usize = 0x204; // float
     pub const m_nTonemapLevelField: usize = 0x208; // ParticleAttributeIndex_t
     pub const m_nTonemapWeightField: usize = 0x20C; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_RenderTrails {
+pub mod C_OP_RenderTrails { // CBaseTrailRenderer
     pub const m_bEnableFadingAndClamping: usize = 0x2740; // bool
     pub const m_flStartFadeDot: usize = 0x2744; // float
     pub const m_flEndFadeDot: usize = 0x2748; // float
@@ -3156,7 +3264,7 @@ pub mod C_OP_RenderTrails {
     pub const m_bFlipUVBasedOnPitchYaw: usize = 0x3984; // bool
 }
 
-pub mod C_OP_RenderTreeShake {
+pub mod C_OP_RenderTreeShake { // CParticleFunctionRenderer
     pub const m_flPeakStrength: usize = 0x200; // float
     pub const m_nPeakStrengthFieldOverride: usize = 0x204; // ParticleAttributeIndex_t
     pub const m_flRadius: usize = 0x208; // float
@@ -3169,14 +3277,14 @@ pub mod C_OP_RenderTreeShake {
     pub const m_nControlPointForLinearDirection: usize = 0x224; // int32_t
 }
 
-pub mod C_OP_RenderVRHapticEvent {
+pub mod C_OP_RenderVRHapticEvent { // CParticleFunctionRenderer
     pub const m_nHand: usize = 0x200; // ParticleVRHandChoiceList_t
     pub const m_nOutputHandCP: usize = 0x204; // int32_t
     pub const m_nOutputField: usize = 0x208; // int32_t
     pub const m_flAmplitude: usize = 0x210; // CPerParticleFloatInput
 }
 
-pub mod C_OP_RepeatedTriggerChildGroup {
+pub mod C_OP_RepeatedTriggerChildGroup { // CParticleFunctionPreEmission
     pub const m_nChildGroupID: usize = 0x1D0; // int32_t
     pub const m_flClusterRefireTime: usize = 0x1D8; // CParticleCollectionFloatInput
     pub const m_flClusterSize: usize = 0x330; // CParticleCollectionFloatInput
@@ -3184,7 +3292,7 @@ pub mod C_OP_RepeatedTriggerChildGroup {
     pub const m_bLimitChildCount: usize = 0x5E0; // bool
 }
 
-pub mod C_OP_RestartAfterDuration {
+pub mod C_OP_RestartAfterDuration { // CParticleFunctionOperator
     pub const m_flDurationMin: usize = 0x1C0; // float
     pub const m_flDurationMax: usize = 0x1C4; // float
     pub const m_nCP: usize = 0x1C8; // int32_t
@@ -3193,7 +3301,7 @@ pub mod C_OP_RestartAfterDuration {
     pub const m_bOnlyChildren: usize = 0x1D4; // bool
 }
 
-pub mod C_OP_RopeSpringConstraint {
+pub mod C_OP_RopeSpringConstraint { // CParticleFunctionConstraint
     pub const m_flRestLength: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_flMinDistance: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_flMaxDistance: usize = 0x470; // CParticleCollectionFloatInput
@@ -3201,7 +3309,7 @@ pub mod C_OP_RopeSpringConstraint {
     pub const m_flInitialRestingLength: usize = 0x5D0; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_RotateVector {
+pub mod C_OP_RotateVector { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecRotAxisMin: usize = 0x1C4; // Vector
     pub const m_vecRotAxisMax: usize = 0x1D0; // Vector
@@ -3211,7 +3319,7 @@ pub mod C_OP_RotateVector {
     pub const m_flScale: usize = 0x1E8; // CPerParticleFloatInput
 }
 
-pub mod C_OP_RtEnvCull {
+pub mod C_OP_RtEnvCull { // CParticleFunctionOperator
     pub const m_vecTestDir: usize = 0x1C0; // Vector
     pub const m_vecTestNormal: usize = 0x1CC; // Vector
     pub const m_bCullOnMiss: usize = 0x1D8; // bool
@@ -3221,23 +3329,23 @@ pub mod C_OP_RtEnvCull {
     pub const m_nComponent: usize = 0x260; // int32_t
 }
 
-pub mod C_OP_SDFConstraint {
+pub mod C_OP_SDFConstraint { // CParticleFunctionConstraint
     pub const m_flMinDist: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_flMaxDist: usize = 0x318; // CParticleCollectionFloatInput
     pub const m_nMaxIterations: usize = 0x470; // int32_t
 }
 
-pub mod C_OP_SDFForce {
+pub mod C_OP_SDFForce { // CParticleFunctionForce
     pub const m_flForceScale: usize = 0x1D0; // float
 }
 
-pub mod C_OP_SDFLighting {
+pub mod C_OP_SDFLighting { // CParticleFunctionOperator
     pub const m_vLightingDir: usize = 0x1C0; // Vector
     pub const m_vTint_0: usize = 0x1CC; // Vector
     pub const m_vTint_1: usize = 0x1D8; // Vector
 }
 
-pub mod C_OP_SelectivelyEnableChildren {
+pub mod C_OP_SelectivelyEnableChildren { // CParticleFunctionPreEmission
     pub const m_nChildGroupID: usize = 0x1D0; // CParticleCollectionFloatInput
     pub const m_nFirstChild: usize = 0x328; // CParticleCollectionFloatInput
     pub const m_nNumChildrenToEnable: usize = 0x480; // CParticleCollectionFloatInput
@@ -3245,7 +3353,7 @@ pub mod C_OP_SelectivelyEnableChildren {
     pub const m_bDestroyImmediately: usize = 0x5D9; // bool
 }
 
-pub mod C_OP_SequenceFromModel {
+pub mod C_OP_SequenceFromModel { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nFieldOutputAnim: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -3256,7 +3364,7 @@ pub mod C_OP_SequenceFromModel {
     pub const m_nSetMethod: usize = 0x1DC; // ParticleSetMethod_t
 }
 
-pub mod C_OP_SetAttributeToScalarExpression {
+pub mod C_OP_SetAttributeToScalarExpression { // CParticleFunctionOperator
     pub const m_nExpression: usize = 0x1C0; // ScalarExpressionType_t
     pub const m_flInput1: usize = 0x1C8; // CPerParticleFloatInput
     pub const m_flInput2: usize = 0x320; // CPerParticleFloatInput
@@ -3264,12 +3372,12 @@ pub mod C_OP_SetAttributeToScalarExpression {
     pub const m_nSetMethod: usize = 0x47C; // ParticleSetMethod_t
 }
 
-pub mod C_OP_SetCPOrientationToDirection {
+pub mod C_OP_SetCPOrientationToDirection { // CParticleFunctionOperator
     pub const m_nInputControlPoint: usize = 0x1C0; // int32_t
     pub const m_nOutputControlPoint: usize = 0x1C4; // int32_t
 }
 
-pub mod C_OP_SetCPOrientationToGroundNormal {
+pub mod C_OP_SetCPOrientationToGroundNormal { // CParticleFunctionOperator
     pub const m_flInterpRate: usize = 0x1C0; // float
     pub const m_flMaxTraceLength: usize = 0x1C4; // float
     pub const m_flTolerance: usize = 0x1C8; // float
@@ -3281,7 +3389,7 @@ pub mod C_OP_SetCPOrientationToGroundNormal {
     pub const m_bIncludeWater: usize = 0x268; // bool
 }
 
-pub mod C_OP_SetCPOrientationToPointAtCP {
+pub mod C_OP_SetCPOrientationToPointAtCP { // CParticleFunctionPreEmission
     pub const m_nInputCP: usize = 0x1D0; // int32_t
     pub const m_nOutputCP: usize = 0x1D4; // int32_t
     pub const m_flInterpolation: usize = 0x1D8; // CParticleCollectionFloatInput
@@ -3290,12 +3398,12 @@ pub mod C_OP_SetCPOrientationToPointAtCP {
     pub const m_bPointAway: usize = 0x332; // bool
 }
 
-pub mod C_OP_SetCPtoVector {
+pub mod C_OP_SetCPtoVector { // CParticleFunctionOperator
     pub const m_nCPInput: usize = 0x1C0; // int32_t
     pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
 }
 
-pub mod C_OP_SetChildControlPoints {
+pub mod C_OP_SetChildControlPoints { // CParticleFunctionOperator
     pub const m_nChildGroupID: usize = 0x1C0; // int32_t
     pub const m_nFirstControlPoint: usize = 0x1C4; // int32_t
     pub const m_nNumControlPoints: usize = 0x1C8; // int32_t
@@ -3304,7 +3412,7 @@ pub mod C_OP_SetChildControlPoints {
     pub const m_bSetOrientation: usize = 0x329; // bool
 }
 
-pub mod C_OP_SetControlPointFieldFromVectorExpression {
+pub mod C_OP_SetControlPointFieldFromVectorExpression { // CParticleFunctionPreEmission
     pub const m_nExpression: usize = 0x1D0; // VectorFloatExpressionType_t
     pub const m_vecInput1: usize = 0x1D8; // CParticleCollectionVecInput
     pub const m_vecInput2: usize = 0x830; // CParticleCollectionVecInput
@@ -3313,7 +3421,7 @@ pub mod C_OP_SetControlPointFieldFromVectorExpression {
     pub const m_nOutVectorField: usize = 0xFE4; // int32_t
 }
 
-pub mod C_OP_SetControlPointFieldToScalarExpression {
+pub mod C_OP_SetControlPointFieldToScalarExpression { // CParticleFunctionPreEmission
     pub const m_nExpression: usize = 0x1D0; // ScalarExpressionType_t
     pub const m_flInput1: usize = 0x1D8; // CParticleCollectionFloatInput
     pub const m_flInput2: usize = 0x330; // CParticleCollectionFloatInput
@@ -3322,18 +3430,18 @@ pub mod C_OP_SetControlPointFieldToScalarExpression {
     pub const m_nOutVectorField: usize = 0x5E4; // int32_t
 }
 
-pub mod C_OP_SetControlPointFieldToWater {
+pub mod C_OP_SetControlPointFieldToWater { // CParticleFunctionPreEmission
     pub const m_nSourceCP: usize = 0x1D0; // int32_t
     pub const m_nDestCP: usize = 0x1D4; // int32_t
     pub const m_nCPField: usize = 0x1D8; // int32_t
 }
 
-pub mod C_OP_SetControlPointFromObjectScale {
+pub mod C_OP_SetControlPointFromObjectScale { // CParticleFunctionPreEmission
     pub const m_nCPInput: usize = 0x1D0; // int32_t
     pub const m_nCPOutput: usize = 0x1D4; // int32_t
 }
 
-pub mod C_OP_SetControlPointOrientation {
+pub mod C_OP_SetControlPointOrientation { // CParticleFunctionPreEmission
     pub const m_bUseWorldLocation: usize = 0x1D0; // bool
     pub const m_bRandomize: usize = 0x1D2; // bool
     pub const m_bSetOnce: usize = 0x1D3; // bool
@@ -3344,25 +3452,25 @@ pub mod C_OP_SetControlPointOrientation {
     pub const m_flInterpolation: usize = 0x1F8; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_SetControlPointOrientationToCPVelocity {
+pub mod C_OP_SetControlPointOrientationToCPVelocity { // CParticleFunctionPreEmission
     pub const m_nCPInput: usize = 0x1D0; // int32_t
     pub const m_nCPOutput: usize = 0x1D4; // int32_t
 }
 
-pub mod C_OP_SetControlPointPositionToRandomActiveCP {
+pub mod C_OP_SetControlPointPositionToRandomActiveCP { // CParticleFunctionPreEmission
     pub const m_nCP1: usize = 0x1D0; // int32_t
     pub const m_nHeadLocationMin: usize = 0x1D4; // int32_t
     pub const m_nHeadLocationMax: usize = 0x1D8; // int32_t
     pub const m_flResetRate: usize = 0x1E0; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_SetControlPointPositionToTimeOfDayValue {
+pub mod C_OP_SetControlPointPositionToTimeOfDayValue { // CParticleFunctionPreEmission
     pub const m_nControlPointNumber: usize = 0x1D0; // int32_t
     pub const m_pszTimeOfDayParameter: usize = 0x1D4; // char[128]
     pub const m_vecDefaultValue: usize = 0x254; // Vector
 }
 
-pub mod C_OP_SetControlPointPositions {
+pub mod C_OP_SetControlPointPositions { // CParticleFunctionPreEmission
     pub const m_bUseWorldLocation: usize = 0x1D0; // bool
     pub const m_bOrient: usize = 0x1D1; // bool
     pub const m_bSetOnce: usize = 0x1D2; // bool
@@ -3377,14 +3485,14 @@ pub mod C_OP_SetControlPointPositions {
     pub const m_nHeadLocation: usize = 0x214; // int32_t
 }
 
-pub mod C_OP_SetControlPointRotation {
+pub mod C_OP_SetControlPointRotation { // CParticleFunctionPreEmission
     pub const m_vecRotAxis: usize = 0x1D0; // CParticleCollectionVecInput
     pub const m_flRotRate: usize = 0x828; // CParticleCollectionFloatInput
     pub const m_nCP: usize = 0x980; // int32_t
     pub const m_nLocalCP: usize = 0x984; // int32_t
 }
 
-pub mod C_OP_SetControlPointToCPVelocity {
+pub mod C_OP_SetControlPointToCPVelocity { // CParticleFunctionPreEmission
     pub const m_nCPInput: usize = 0x1D0; // int32_t
     pub const m_nCPOutputVel: usize = 0x1D4; // int32_t
     pub const m_bNormalize: usize = 0x1D8; // bool
@@ -3393,26 +3501,26 @@ pub mod C_OP_SetControlPointToCPVelocity {
     pub const m_vecComparisonVelocity: usize = 0x1E8; // CParticleCollectionVecInput
 }
 
-pub mod C_OP_SetControlPointToCenter {
+pub mod C_OP_SetControlPointToCenter { // CParticleFunctionPreEmission
     pub const m_nCP1: usize = 0x1D0; // int32_t
     pub const m_vecCP1Pos: usize = 0x1D4; // Vector
     pub const m_nSetParent: usize = 0x1E0; // ParticleParentSetMode_t
 }
 
-pub mod C_OP_SetControlPointToHMD {
+pub mod C_OP_SetControlPointToHMD { // CParticleFunctionPreEmission
     pub const m_nCP1: usize = 0x1D0; // int32_t
     pub const m_vecCP1Pos: usize = 0x1D4; // Vector
     pub const m_bOrientToHMD: usize = 0x1E0; // bool
 }
 
-pub mod C_OP_SetControlPointToHand {
+pub mod C_OP_SetControlPointToHand { // CParticleFunctionPreEmission
     pub const m_nCP1: usize = 0x1D0; // int32_t
     pub const m_nHand: usize = 0x1D4; // int32_t
     pub const m_vecCP1Pos: usize = 0x1D8; // Vector
     pub const m_bOrientToHand: usize = 0x1E4; // bool
 }
 
-pub mod C_OP_SetControlPointToImpactPoint {
+pub mod C_OP_SetControlPointToImpactPoint { // CParticleFunctionPreEmission
     pub const m_nCPOut: usize = 0x1D0; // int32_t
     pub const m_nCPIn: usize = 0x1D4; // int32_t
     pub const m_flUpdateRate: usize = 0x1D8; // float
@@ -3427,13 +3535,13 @@ pub mod C_OP_SetControlPointToImpactPoint {
     pub const m_bIncludeWater: usize = 0x3D2; // bool
 }
 
-pub mod C_OP_SetControlPointToPlayer {
+pub mod C_OP_SetControlPointToPlayer { // CParticleFunctionPreEmission
     pub const m_nCP1: usize = 0x1D0; // int32_t
     pub const m_vecCP1Pos: usize = 0x1D4; // Vector
     pub const m_bOrientToEyes: usize = 0x1E0; // bool
 }
 
-pub mod C_OP_SetControlPointToVectorExpression {
+pub mod C_OP_SetControlPointToVectorExpression { // CParticleFunctionPreEmission
     pub const m_nExpression: usize = 0x1D0; // VectorExpressionType_t
     pub const m_nOutputCP: usize = 0x1D4; // int32_t
     pub const m_vInput1: usize = 0x1D8; // CParticleCollectionVecInput
@@ -3441,7 +3549,7 @@ pub mod C_OP_SetControlPointToVectorExpression {
     pub const m_bNormalizedOutput: usize = 0xE88; // bool
 }
 
-pub mod C_OP_SetControlPointToWaterSurface {
+pub mod C_OP_SetControlPointToWaterSurface { // CParticleFunctionPreEmission
     pub const m_nSourceCP: usize = 0x1D0; // int32_t
     pub const m_nDestCP: usize = 0x1D4; // int32_t
     pub const m_nFlowCP: usize = 0x1D8; // int32_t
@@ -3451,7 +3559,7 @@ pub mod C_OP_SetControlPointToWaterSurface {
     pub const m_bAdaptiveThreshold: usize = 0x340; // bool
 }
 
-pub mod C_OP_SetControlPointsToModelParticles {
+pub mod C_OP_SetControlPointsToModelParticles { // CParticleFunctionOperator
     pub const m_HitboxSetName: usize = 0x1C0; // char[128]
     pub const m_AttachmentName: usize = 0x240; // char[128]
     pub const m_nFirstControlPoint: usize = 0x2C0; // int32_t
@@ -3461,7 +3569,7 @@ pub mod C_OP_SetControlPointsToModelParticles {
     pub const m_bAttachment: usize = 0x2CD; // bool
 }
 
-pub mod C_OP_SetControlPointsToParticle {
+pub mod C_OP_SetControlPointsToParticle { // CParticleFunctionOperator
     pub const m_nChildGroupID: usize = 0x1C0; // int32_t
     pub const m_nFirstControlPoint: usize = 0x1C4; // int32_t
     pub const m_nNumControlPoints: usize = 0x1C8; // int32_t
@@ -3471,7 +3579,7 @@ pub mod C_OP_SetControlPointsToParticle {
     pub const m_nSetParent: usize = 0x1D8; // ParticleParentSetMode_t
 }
 
-pub mod C_OP_SetFloat {
+pub mod C_OP_SetFloat { // CParticleFunctionOperator
     pub const m_InputValue: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_nOutputField: usize = 0x318; // ParticleAttributeIndex_t
     pub const m_nSetMethod: usize = 0x31C; // ParticleSetMethod_t
@@ -3479,7 +3587,7 @@ pub mod C_OP_SetFloat {
     pub const m_bUseNewCode: usize = 0x478; // bool
 }
 
-pub mod C_OP_SetFloatAttributeToVectorExpression {
+pub mod C_OP_SetFloatAttributeToVectorExpression { // CParticleFunctionOperator
     pub const m_nExpression: usize = 0x1C0; // VectorFloatExpressionType_t
     pub const m_vInput1: usize = 0x1C8; // CPerParticleVecInput
     pub const m_vInput2: usize = 0x820; // CPerParticleVecInput
@@ -3488,14 +3596,14 @@ pub mod C_OP_SetFloatAttributeToVectorExpression {
     pub const m_nSetMethod: usize = 0xFD4; // ParticleSetMethod_t
 }
 
-pub mod C_OP_SetFloatCollection {
+pub mod C_OP_SetFloatCollection { // CParticleFunctionOperator
     pub const m_InputValue: usize = 0x1C0; // CParticleCollectionFloatInput
     pub const m_nOutputField: usize = 0x318; // ParticleAttributeIndex_t
     pub const m_nSetMethod: usize = 0x31C; // ParticleSetMethod_t
     pub const m_Lerp: usize = 0x320; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_SetFromCPSnapshot {
+pub mod C_OP_SetFromCPSnapshot { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nAttributeToRead: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nAttributeToWrite: usize = 0x1C8; // ParticleAttributeIndex_t
@@ -3509,7 +3617,7 @@ pub mod C_OP_SetFromCPSnapshot {
     pub const m_bSubSample: usize = 0x5E0; // bool
 }
 
-pub mod C_OP_SetGravityToCP {
+pub mod C_OP_SetGravityToCP { // CParticleFunctionPreEmission
     pub const m_nCPInput: usize = 0x1D0; // int32_t
     pub const m_nCPOutput: usize = 0x1D4; // int32_t
     pub const m_flScale: usize = 0x1D8; // CParticleCollectionFloatInput
@@ -3517,7 +3625,7 @@ pub mod C_OP_SetGravityToCP {
     pub const m_bSetZDown: usize = 0x331; // bool
 }
 
-pub mod C_OP_SetParentControlPointsToChildCP {
+pub mod C_OP_SetParentControlPointsToChildCP { // CParticleFunctionPreEmission
     pub const m_nChildGroupID: usize = 0x1D0; // int32_t
     pub const m_nChildControlPoint: usize = 0x1D4; // int32_t
     pub const m_nNumControlPoints: usize = 0x1D8; // int32_t
@@ -3525,7 +3633,7 @@ pub mod C_OP_SetParentControlPointsToChildCP {
     pub const m_bSetOrientation: usize = 0x1E0; // bool
 }
 
-pub mod C_OP_SetPerChildControlPoint {
+pub mod C_OP_SetPerChildControlPoint { // CParticleFunctionOperator
     pub const m_nChildGroupID: usize = 0x1C0; // int32_t
     pub const m_nFirstControlPoint: usize = 0x1C4; // int32_t
     pub const m_nNumControlPoints: usize = 0x1C8; // int32_t
@@ -3536,7 +3644,7 @@ pub mod C_OP_SetPerChildControlPoint {
     pub const m_bNumBasedOnParticleCount: usize = 0x488; // bool
 }
 
-pub mod C_OP_SetPerChildControlPointFromAttribute {
+pub mod C_OP_SetPerChildControlPointFromAttribute { // CParticleFunctionOperator
     pub const m_nChildGroupID: usize = 0x1C0; // int32_t
     pub const m_nFirstControlPoint: usize = 0x1C4; // int32_t
     pub const m_nNumControlPoints: usize = 0x1C8; // int32_t
@@ -3547,7 +3655,7 @@ pub mod C_OP_SetPerChildControlPointFromAttribute {
     pub const m_nCPField: usize = 0x1DC; // int32_t
 }
 
-pub mod C_OP_SetRandomControlPointPosition {
+pub mod C_OP_SetRandomControlPointPosition { // CParticleFunctionPreEmission
     pub const m_bUseWorldLocation: usize = 0x1D0; // bool
     pub const m_bOrient: usize = 0x1D1; // bool
     pub const m_nCP1: usize = 0x1D4; // int32_t
@@ -3558,24 +3666,24 @@ pub mod C_OP_SetRandomControlPointPosition {
     pub const m_flInterpolation: usize = 0x350; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_SetSimulationRate {
+pub mod C_OP_SetSimulationRate { // CParticleFunctionPreEmission
     pub const m_flSimulationScale: usize = 0x1D0; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_SetSingleControlPointPosition {
+pub mod C_OP_SetSingleControlPointPosition { // CParticleFunctionPreEmission
     pub const m_bSetOnce: usize = 0x1D0; // bool
     pub const m_nCP1: usize = 0x1D4; // int32_t
     pub const m_vecCP1Pos: usize = 0x1D8; // CParticleCollectionVecInput
     pub const m_transformInput: usize = 0x830; // CParticleTransformInput
 }
 
-pub mod C_OP_SetToCP {
+pub mod C_OP_SetToCP { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_vecOffset: usize = 0x1C4; // Vector
     pub const m_bOffsetLocal: usize = 0x1D0; // bool
 }
 
-pub mod C_OP_SetVariable {
+pub mod C_OP_SetVariable { // CParticleFunctionPreEmission
     pub const m_variableReference: usize = 0x1D0; // CParticleVariableRef
     pub const m_transformInput: usize = 0x210; // CParticleTransformInput
     pub const m_positionOffset: usize = 0x278; // Vector
@@ -3584,7 +3692,7 @@ pub mod C_OP_SetVariable {
     pub const m_floatInput: usize = 0x8E8; // CParticleCollectionFloatInput
 }
 
-pub mod C_OP_SetVec {
+pub mod C_OP_SetVec { // CParticleFunctionOperator
     pub const m_InputValue: usize = 0x1C0; // CPerParticleVecInput
     pub const m_nOutputField: usize = 0x818; // ParticleAttributeIndex_t
     pub const m_nSetMethod: usize = 0x81C; // ParticleSetMethod_t
@@ -3592,7 +3700,7 @@ pub mod C_OP_SetVec {
     pub const m_bNormalizedOutput: usize = 0x978; // bool
 }
 
-pub mod C_OP_SetVectorAttributeToVectorExpression {
+pub mod C_OP_SetVectorAttributeToVectorExpression { // CParticleFunctionOperator
     pub const m_nExpression: usize = 0x1C0; // VectorExpressionType_t
     pub const m_vInput1: usize = 0x1C8; // CPerParticleVecInput
     pub const m_vInput2: usize = 0x820; // CPerParticleVecInput
@@ -3601,17 +3709,17 @@ pub mod C_OP_SetVectorAttributeToVectorExpression {
     pub const m_bNormalizedOutput: usize = 0xE80; // bool
 }
 
-pub mod C_OP_ShapeMatchingConstraint {
+pub mod C_OP_ShapeMatchingConstraint { // CParticleFunctionConstraint
     pub const m_flShapeRestorationTime: usize = 0x1C0; // float
 }
 
-pub mod C_OP_SnapshotRigidSkinToBones {
+pub mod C_OP_SnapshotRigidSkinToBones { // CParticleFunctionOperator
     pub const m_bTransformNormals: usize = 0x1C0; // bool
     pub const m_bTransformRadii: usize = 0x1C1; // bool
     pub const m_nControlPointNumber: usize = 0x1C4; // int32_t
 }
 
-pub mod C_OP_SnapshotSkinToBones {
+pub mod C_OP_SnapshotSkinToBones { // CParticleFunctionOperator
     pub const m_bTransformNormals: usize = 0x1C0; // bool
     pub const m_bTransformRadii: usize = 0x1C1; // bool
     pub const m_nControlPointNumber: usize = 0x1C4; // int32_t
@@ -3621,7 +3729,16 @@ pub mod C_OP_SnapshotSkinToBones {
     pub const m_flPrevPosScale: usize = 0x1D4; // float
 }
 
-pub mod C_OP_SpringToVectorConstraint {
+pub mod C_OP_Spin { // CGeneralSpin
+}
+
+pub mod C_OP_SpinUpdate { // CSpinUpdateBase
+}
+
+pub mod C_OP_SpinYaw { // CGeneralSpin
+}
+
+pub mod C_OP_SpringToVectorConstraint { // CParticleFunctionConstraint
     pub const m_flRestLength: usize = 0x1C0; // CPerParticleFloatInput
     pub const m_flMinDistance: usize = 0x318; // CPerParticleFloatInput
     pub const m_flMaxDistance: usize = 0x470; // CPerParticleFloatInput
@@ -3629,13 +3746,13 @@ pub mod C_OP_SpringToVectorConstraint {
     pub const m_vecAnchorVector: usize = 0x720; // CPerParticleVecInput
 }
 
-pub mod C_OP_StopAfterCPDuration {
+pub mod C_OP_StopAfterCPDuration { // CParticleFunctionPreEmission
     pub const m_flDuration: usize = 0x1D0; // CParticleCollectionFloatInput
     pub const m_bDestroyImmediately: usize = 0x328; // bool
     pub const m_bPlayEndCap: usize = 0x329; // bool
 }
 
-pub mod C_OP_TeleportBeam {
+pub mod C_OP_TeleportBeam { // CParticleFunctionOperator
     pub const m_nCPPosition: usize = 0x1C0; // int32_t
     pub const m_nCPVelocity: usize = 0x1C4; // int32_t
     pub const m_nCPMisc: usize = 0x1C8; // int32_t
@@ -3649,14 +3766,14 @@ pub mod C_OP_TeleportBeam {
     pub const m_flAlpha: usize = 0x1F0; // float
 }
 
-pub mod C_OP_TimeVaryingForce {
+pub mod C_OP_TimeVaryingForce { // CParticleFunctionForce
     pub const m_flStartLerpTime: usize = 0x1D0; // float
     pub const m_StartingForce: usize = 0x1D4; // Vector
     pub const m_flEndLerpTime: usize = 0x1E0; // float
     pub const m_EndingForce: usize = 0x1E4; // Vector
 }
 
-pub mod C_OP_TurbulenceForce {
+pub mod C_OP_TurbulenceForce { // CParticleFunctionForce
     pub const m_flNoiseCoordScale0: usize = 0x1D0; // float
     pub const m_flNoiseCoordScale1: usize = 0x1D4; // float
     pub const m_flNoiseCoordScale2: usize = 0x1D8; // float
@@ -3667,14 +3784,14 @@ pub mod C_OP_TurbulenceForce {
     pub const m_vecNoiseAmount3: usize = 0x204; // Vector
 }
 
-pub mod C_OP_TwistAroundAxis {
+pub mod C_OP_TwistAroundAxis { // CParticleFunctionForce
     pub const m_fForceAmount: usize = 0x1D0; // float
     pub const m_TwistAxis: usize = 0x1D4; // Vector
     pub const m_bLocalSpace: usize = 0x1E0; // bool
     pub const m_nControlPointNumber: usize = 0x1E4; // int32_t
 }
 
-pub mod C_OP_UpdateLightSource {
+pub mod C_OP_UpdateLightSource { // CParticleFunctionOperator
     pub const m_vColorTint: usize = 0x1C0; // Color
     pub const m_flBrightnessScale: usize = 0x1C4; // float
     pub const m_flRadiusScale: usize = 0x1C8; // float
@@ -3683,7 +3800,7 @@ pub mod C_OP_UpdateLightSource {
     pub const m_flPositionDampingConstant: usize = 0x1D4; // float
 }
 
-pub mod C_OP_VectorFieldSnapshot {
+pub mod C_OP_VectorFieldSnapshot { // CParticleFunctionOperator
     pub const m_nControlPointNumber: usize = 0x1C0; // int32_t
     pub const m_nAttributeToWrite: usize = 0x1C4; // ParticleAttributeIndex_t
     pub const m_nLocalSpaceCP: usize = 0x1C8; // int32_t
@@ -3695,7 +3812,7 @@ pub mod C_OP_VectorFieldSnapshot {
     pub const m_flGridSpacing: usize = 0x988; // float
 }
 
-pub mod C_OP_VectorNoise {
+pub mod C_OP_VectorNoise { // CParticleFunctionOperator
     pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
     pub const m_vecOutputMin: usize = 0x1C4; // Vector
     pub const m_vecOutputMax: usize = 0x1D0; // Vector
@@ -3705,21 +3822,24 @@ pub mod C_OP_VectorNoise {
     pub const m_flNoiseAnimationTimeScale: usize = 0x1E4; // float
 }
 
-pub mod C_OP_VelocityDecay {
+pub mod C_OP_VelocityDecay { // CParticleFunctionOperator
     pub const m_flMinVelocity: usize = 0x1C0; // float
 }
 
-pub mod C_OP_VelocityMatchingForce {
+pub mod C_OP_VelocityMatchingForce { // CParticleFunctionOperator
     pub const m_flDirScale: usize = 0x1C0; // float
     pub const m_flSpdScale: usize = 0x1C4; // float
     pub const m_nCPBroadcast: usize = 0x1C8; // int32_t
 }
 
-pub mod C_OP_WindForce {
+pub mod C_OP_WindForce { // CParticleFunctionForce
     pub const m_vForce: usize = 0x1D0; // Vector
 }
 
-pub mod C_OP_WorldTraceConstraint {
+pub mod C_OP_WorldCollideConstraint { // CParticleFunctionConstraint
+}
+
+pub mod C_OP_WorldTraceConstraint { // CParticleFunctionConstraint
     pub const m_nCP: usize = 0x1C0; // int32_t
     pub const m_vecCpOffset: usize = 0x1C4; // Vector
     pub const m_nCollisionMode: usize = 0x1D0; // ParticleCollisionMode_t
@@ -3762,6 +3882,18 @@ pub mod ControlPointReference_t {
 pub mod FloatInputMaterialVariable_t {
     pub const m_strVariable: usize = 0x0; // CUtlString
     pub const m_flInput: usize = 0x8; // CParticleCollectionFloatInput
+}
+
+pub mod IControlPointEditorData {
+}
+
+pub mod IParticleCollection {
+}
+
+pub mod IParticleEffect {
+}
+
+pub mod IParticleSystemDefinition {
 }
 
 pub mod MaterialVariable_t {
@@ -3851,7 +3983,7 @@ pub mod ParticlePreviewState_t {
     pub const m_vecPreviewGravity: usize = 0x58; // Vector
 }
 
-pub mod PointDefinitionWithTimeValues_t {
+pub mod PointDefinitionWithTimeValues_t { // PointDefinition_t
     pub const m_flTimeDuration: usize = 0x14; // float
 }
 

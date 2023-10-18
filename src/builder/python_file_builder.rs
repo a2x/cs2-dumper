@@ -14,8 +14,12 @@ impl FileBuilder for PythonFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str) -> Result<()> {
-        write!(output, "class {}:\n", name)?;
+    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+        if let Some(comment) = comment {
+            write!(output, "class {}: # {}\n", name, comment)?;
+        } else {
+            write!(output, "class {}:\n", name)?;
+        }
 
         Ok(())
     }

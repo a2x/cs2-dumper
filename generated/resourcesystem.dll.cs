@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 01:33:55.640777900 UTC
+ * 2023-10-18 10:31:50.134949600 UTC
  */
 
 public static class AABB_t {
@@ -51,6 +51,138 @@ public static class FuseFunctionIndex_t {
 
 public static class FuseVariableIndex_t {
     public const nint m_Value = 0x0; // uint16_t
+}
+
+public static class InfoForResourceTypeCAnimData {
+}
+
+public static class InfoForResourceTypeCAnimationGroup {
+}
+
+public static class InfoForResourceTypeCCSGOEconItem {
+}
+
+public static class InfoForResourceTypeCChoreoSceneFileData {
+}
+
+public static class InfoForResourceTypeCCompositeMaterialKit {
+}
+
+public static class InfoForResourceTypeCDACGameDefsData {
+}
+
+public static class InfoForResourceTypeCDOTANovelsList {
+}
+
+public static class InfoForResourceTypeCDOTAPatchNotesList {
+}
+
+public static class InfoForResourceTypeCDotaItemDefinitionResource {
+}
+
+public static class InfoForResourceTypeCEntityLump {
+}
+
+public static class InfoForResourceTypeCJavaScriptResource {
+}
+
+public static class InfoForResourceTypeCModel {
+}
+
+public static class InfoForResourceTypeCMorphSetData {
+}
+
+public static class InfoForResourceTypeCNmClip {
+}
+
+public static class InfoForResourceTypeCNmSkeleton {
+}
+
+public static class InfoForResourceTypeCPanoramaDynamicImages {
+}
+
+public static class InfoForResourceTypeCPanoramaLayout {
+}
+
+public static class InfoForResourceTypeCPanoramaStyle {
+}
+
+public static class InfoForResourceTypeCPhysAggregateData {
+}
+
+public static class InfoForResourceTypeCPostProcessingResource {
+}
+
+public static class InfoForResourceTypeCRenderMesh {
+}
+
+public static class InfoForResourceTypeCResponseRulesList {
+}
+
+public static class InfoForResourceTypeCSequenceGroupData {
+}
+
+public static class InfoForResourceTypeCSmartProp {
+}
+
+public static class InfoForResourceTypeCTextureBase {
+}
+
+public static class InfoForResourceTypeCTypeScriptResource {
+}
+
+public static class InfoForResourceTypeCVDataResource {
+}
+
+public static class InfoForResourceTypeCVMixListResource {
+}
+
+public static class InfoForResourceTypeCVPhysXSurfacePropertiesList {
+}
+
+public static class InfoForResourceTypeCVSoundEventScriptList {
+}
+
+public static class InfoForResourceTypeCVSoundStackScriptList {
+}
+
+public static class InfoForResourceTypeCVoxelVisibility {
+}
+
+public static class InfoForResourceTypeCWorldNode {
+}
+
+public static class InfoForResourceTypeIAnimGraphModelBinding {
+}
+
+public static class InfoForResourceTypeIMaterial2 {
+}
+
+public static class InfoForResourceTypeIParticleSnapshot {
+}
+
+public static class InfoForResourceTypeIParticleSystemDefinition {
+}
+
+public static class InfoForResourceTypeIPulseGraphDef {
+}
+
+public static class InfoForResourceTypeIVectorGraphic {
+}
+
+public static class InfoForResourceTypeManifestTestResource_t {
+}
+
+public static class InfoForResourceTypeProceduralTestResource_t {
+}
+
+public static class InfoForResourceTypeTestResource_t {
+}
+
+public static class InfoForResourceTypeVSound_t {
+}
+
+public static class InfoForResourceTypeWorld_t {
 }
 
 public static class ManifestTestResource_t {
