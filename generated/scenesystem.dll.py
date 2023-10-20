@@ -1,6 +1,6 @@
 '''
-https://github.com/a2x/cs2-dumper
-2023-10-20 05:22:28.049264300 UTC
+Created using https://github.com/a2x/cs2-dumper
+2023-10-20 23:01:49.478047400 UTC
 '''
 
 class CSSDSEndFrameViewInfo:

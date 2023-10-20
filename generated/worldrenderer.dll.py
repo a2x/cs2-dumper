@@ -1,6 +1,6 @@
 '''
-https://github.com/a2x/cs2-dumper
-2023-10-20 05:22:28.066771600 UTC
+Created using https://github.com/a2x/cs2-dumper
+2023-10-20 23:01:49.495889300 UTC
 '''
 
 class AggregateLODSetup_t:

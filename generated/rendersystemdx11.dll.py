@@ -1,6 +1,6 @@
 '''
-https://github.com/a2x/cs2-dumper
-2023-10-20 05:22:27.723331500 UTC
+Created using https://github.com/a2x/cs2-dumper
+2023-10-20 23:01:49.150834300 UTC
 '''
 
 class RenderInputLayoutField_t:

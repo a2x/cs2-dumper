@@ -1,6 +1,6 @@
 /*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-20 05:22:29.276213200 UTC
+ * Created using https://github.com/a2x/cs2-dumper
+ * 2023-10-20 23:01:50.685740700 UTC
  */
 
 #pragma once
@@ -2192,23 +2192,23 @@ namespace C_CSWeaponBase { // C_BasePlayerWeapon
     constexpr std::ptrdiff_t m_flTimeSilencerSwitchComplete = 0x169C; // GameTime_t
     constexpr std::ptrdiff_t m_iOriginalTeamNumber = 0x16A0; // int32_t
     constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0x16A4; // float
-    constexpr std::ptrdiff_t m_bVisualsDataSet = 0x1720; // bool
-    constexpr std::ptrdiff_t m_bOldFirstPersonSpectatedState = 0x1721; // bool
-    constexpr std::ptrdiff_t m_hOurPing = 0x1724; // CHandle<C_BaseEntity>
-    constexpr std::ptrdiff_t m_nOurPingIndex = 0x1728; // CEntityIndex
-    constexpr std::ptrdiff_t m_vecOurPingPos = 0x172C; // Vector
-    constexpr std::ptrdiff_t m_bGlowForPing = 0x1738; // bool
-    constexpr std::ptrdiff_t m_bUIWeapon = 0x1739; // bool
-    constexpr std::ptrdiff_t m_hPrevOwner = 0x1748; // CHandle<C_CSPlayerPawn>
-    constexpr std::ptrdiff_t m_nDropTick = 0x174C; // GameTick_t
-    constexpr std::ptrdiff_t m_donated = 0x176C; // bool
-    constexpr std::ptrdiff_t m_fLastShotTime = 0x1770; // GameTime_t
-    constexpr std::ptrdiff_t m_bWasOwnedByCT = 0x1774; // bool
-    constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0x1775; // bool
-    constexpr std::ptrdiff_t m_gunHeat = 0x1778; // float
-    constexpr std::ptrdiff_t m_smokeAttachments = 0x177C; // uint32_t
-    constexpr std::ptrdiff_t m_lastSmokeTime = 0x1780; // GameTime_t
-    constexpr std::ptrdiff_t m_flLastClientFireBulletTime = 0x1784; // float
+    constexpr std::ptrdiff_t m_bVisualsDataSet = 0x1728; // bool
+    constexpr std::ptrdiff_t m_bOldFirstPersonSpectatedState = 0x1729; // bool
+    constexpr std::ptrdiff_t m_hOurPing = 0x172C; // CHandle<C_BaseEntity>
+    constexpr std::ptrdiff_t m_nOurPingIndex = 0x1730; // CEntityIndex
+    constexpr std::ptrdiff_t m_vecOurPingPos = 0x1734; // Vector
+    constexpr std::ptrdiff_t m_bGlowForPing = 0x1740; // bool
+    constexpr std::ptrdiff_t m_bUIWeapon = 0x1741; // bool
+    constexpr std::ptrdiff_t m_hPrevOwner = 0x1750; // CHandle<C_CSPlayerPawn>
+    constexpr std::ptrdiff_t m_nDropTick = 0x1754; // GameTick_t
+    constexpr std::ptrdiff_t m_donated = 0x1774; // bool
+    constexpr std::ptrdiff_t m_fLastShotTime = 0x1778; // GameTime_t
+    constexpr std::ptrdiff_t m_bWasOwnedByCT = 0x177C; // bool
+    constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0x177D; // bool
+    constexpr std::ptrdiff_t m_gunHeat = 0x1780; // float
+    constexpr std::ptrdiff_t m_smokeAttachments = 0x1784; // uint32_t
+    constexpr std::ptrdiff_t m_lastSmokeTime = 0x1788; // GameTime_t
+    constexpr std::ptrdiff_t m_flLastClientFireBulletTime = 0x178C; // float
     constexpr std::ptrdiff_t m_IronSightController = 0x1840; // C_IronSightController
     constexpr std::ptrdiff_t m_iIronSightMode = 0x18F0; // int32_t
     constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0x1900; // GameTime_t
@@ -2839,6 +2839,9 @@ namespace C_GradientFog { // C_BaseEntity
 namespace C_HEGrenade { // C_BaseCSGrenade
 }
 
+namespace C_HEGrenadeProjectile { // C_BaseCSGrenadeProjectile
+}
+
 namespace C_HandleTest { // C_BaseEntity
     constexpr std::ptrdiff_t m_Handle = 0x540; // CHandle<C_BaseEntity>
     constexpr std::ptrdiff_t m_bSendHandle = 0x544; // bool
@@ -2878,12 +2881,8 @@ namespace C_IncendiaryGrenade { // C_MolotovGrenade
 
 namespace C_Inferno { // C_BaseModelEntity
     constexpr std::ptrdiff_t m_nfxFireDamageEffect = 0xD00; // ParticleIndex_t
-    constexpr std::ptrdiff_t m_fireXDelta = 0xD04; // int32_t[64]
-    constexpr std::ptrdiff_t m_fireYDelta = 0xE04; // int32_t[64]
-    constexpr std::ptrdiff_t m_fireZDelta = 0xF04; // int32_t[64]
-    constexpr std::ptrdiff_t m_fireParentXDelta = 0x1004; // int32_t[64]
-    constexpr std::ptrdiff_t m_fireParentYDelta = 0x1104; // int32_t[64]
-    constexpr std::ptrdiff_t m_fireParentZDelta = 0x1204; // int32_t[64]
+    constexpr std::ptrdiff_t m_firePositions = 0xD04; // Vector[64]
+    constexpr std::ptrdiff_t m_fireParentPositions = 0x1004; // Vector[64]
     constexpr std::ptrdiff_t m_bFireIsBurning = 0x1304; // bool[64]
     constexpr std::ptrdiff_t m_BurnNormal = 0x1344; // Vector[64]
     constexpr std::ptrdiff_t m_fireCount = 0x1644; // int32_t

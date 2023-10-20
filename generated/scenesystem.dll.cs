@@ -1,6 +1,6 @@
 /*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-20 05:22:28.048326700 UTC
+ * Created using https://github.com/a2x/cs2-dumper
+ * 2023-10-20 23:01:49.477311 UTC
  */
 
 public static class CSSDSEndFrameViewInfo {

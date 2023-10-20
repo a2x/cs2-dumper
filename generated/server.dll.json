@@ -842,39 +842,39 @@
   "CBaseCSGrenade": {
     "data": {
       "m_bIsHeldByPlayer": {
-        "value": 3577,
+        "value": 3585,
         "comment": "bool"
       },
       "m_bJumpThrow": {
-        "value": 3579,
+        "value": 3587,
         "comment": "bool"
       },
       "m_bPinPulled": {
-        "value": 3578,
+        "value": 3586,
         "comment": "bool"
       },
       "m_bRedraw": {
-        "value": 3576,
+        "value": 3584,
         "comment": "bool"
       },
       "m_eThrowStatus": {
-        "value": 3580,
+        "value": 3588,
         "comment": "EGrenadeThrowState"
       },
       "m_fDropTime": {
-        "value": 3596,
+        "value": 3604,
         "comment": "GameTime_t"
       },
       "m_fThrowTime": {
-        "value": 3584,
+        "value": 3592,
         "comment": "GameTime_t"
       },
       "m_flThrowStrength": {
-        "value": 3588,
+        "value": 3596,
         "comment": "float"
       },
       "m_flThrowStrengthApproach": {
-        "value": 3592,
+        "value": 3600,
         "comment": "float"
       }
     },
@@ -3320,51 +3320,51 @@
   "CC4": {
     "data": {
       "m_bBombPlacedAnimation": {
-        "value": 3576,
+        "value": 3584,
         "comment": "bool"
       },
       "m_bBombPlanted": {
-        "value": 3619,
+        "value": 3627,
         "comment": "bool"
       },
       "m_bDoValidDroppedPositionCheck": {
-        "value": 3568,
+        "value": 3576,
         "comment": "bool"
       },
       "m_bDroppedFromDeath": {
-        "value": 3620,
+        "value": 3628,
         "comment": "bool"
       },
       "m_bIsPlantingViaUse": {
-        "value": 3577,
+        "value": 3585,
         "comment": "bool"
       },
       "m_bPlayedArmingBeeps": {
-        "value": 3612,
+        "value": 3620,
         "comment": "bool[7]"
       },
       "m_bStartedArming": {
-        "value": 3569,
+        "value": 3577,
         "comment": "bool"
       },
       "m_entitySpottedState": {
-        "value": 3584,
+        "value": 3592,
         "comment": "EntitySpottedState_t"
       },
       "m_fArmedTime": {
-        "value": 3572,
+        "value": 3580,
         "comment": "GameTime_t"
       },
       "m_nSpotRules": {
-        "value": 3608,
+        "value": 3616,
         "comment": "int32_t"
       },
       "m_vecLastValidDroppedPosition": {
-        "value": 3556,
+        "value": 3564,
         "comment": "Vector"
       },
       "m_vecLastValidPlayerHeldPosition": {
-        "value": 3544,
+        "value": 3552,
         "comment": "Vector"
       }
     },
@@ -6583,7 +6583,7 @@
   "CCSWeaponBase": {
     "data": {
       "m_IronSightController": {
-        "value": 3504,
+        "value": 3512,
         "comment": "CIronSightController"
       },
       "m_OnPlayerPickup": {
@@ -6595,7 +6595,7 @@
         "comment": "bool"
       },
       "m_bCanBePickedUp": {
-        "value": 3432,
+        "value": 3440,
         "comment": "bool"
       },
       "m_bFireOnEmpty": {
@@ -6603,7 +6603,7 @@
         "comment": "bool"
       },
       "m_bFiredOutOfAmmoEvent": {
-        "value": 3494,
+        "value": 3502,
         "comment": "bool"
       },
       "m_bInReload": {
@@ -6643,19 +6643,19 @@
         "comment": "bool"
       },
       "m_bUseCanOverrideNextOwnerTouchTime": {
-        "value": 3433,
+        "value": 3441,
         "comment": "bool"
       },
       "m_bWasOwnedByCT": {
-        "value": 3492,
+        "value": 3500,
         "comment": "bool"
       },
       "m_bWasOwnedByTerrorist": {
-        "value": 3493,
+        "value": 3501,
         "comment": "bool"
       },
       "m_donated": {
-        "value": 3484,
+        "value": 3492,
         "comment": "bool"
       },
       "m_fAccuracyPenalty": {
@@ -6667,7 +6667,7 @@
         "comment": "float"
       },
       "m_fLastShotTime": {
-        "value": 3488,
+        "value": 3496,
         "comment": "GameTime_t"
       },
       "m_fScopeZoomEndTime": {
@@ -6691,7 +6691,7 @@
         "comment": "GameTime_t"
       },
       "m_flLastLOSTraceFailureTime": {
-        "value": 3532,
+        "value": 3540,
         "comment": "GameTime_t"
       },
       "m_flLastTimeInAir": {
@@ -6727,15 +6727,15 @@
         "comment": "float"
       },
       "m_hPrevOwner": {
-        "value": 3444,
+        "value": 3452,
         "comment": "CHandle<CCSPlayerPawn>"
       },
       "m_iIronSightMode": {
-        "value": 3528,
+        "value": 3536,
         "comment": "int32_t"
       },
       "m_iNumEmptyAttacks": {
-        "value": 3536,
+        "value": 3544,
         "comment": "int32_t"
       },
       "m_iOriginalTeamNumber": {
@@ -6751,7 +6751,7 @@
         "comment": "CSWeaponState_t"
       },
       "m_nDropTick": {
-        "value": 3448,
+        "value": 3456,
         "comment": "GameTick_t"
       },
       "m_nFireSequenceStartTimeAck": {
@@ -6767,15 +6767,15 @@
         "comment": "uint32_t"
       },
       "m_nextOwnerTouchTime": {
-        "value": 3436,
+        "value": 3444,
         "comment": "GameTime_t"
       },
       "m_nextPrevOwnerTouchTime": {
-        "value": 3440,
+        "value": 3448,
         "comment": "GameTime_t"
       },
       "m_numRemoveUnownedWeaponThink": {
-        "value": 3496,
+        "value": 3504,
         "comment": "int32_t"
       },
       "m_seqFirePrimary": {
@@ -6804,39 +6804,39 @@
   "CCSWeaponBaseGun": {
     "data": {
       "m_bNeedsBoltAction": {
-        "value": 3565,
+        "value": 3573,
         "comment": "bool"
       },
       "m_bSkillBoltInterruptAvailable": {
-        "value": 3568,
+        "value": 3576,
         "comment": "bool"
       },
       "m_bSkillBoltLiftedFireKey": {
-        "value": 3569,
+        "value": 3577,
         "comment": "bool"
       },
       "m_bSkillReloadAvailable": {
-        "value": 3566,
+        "value": 3574,
         "comment": "bool"
       },
       "m_bSkillReloadLiftedReloadKey": {
-        "value": 3567,
+        "value": 3575,
         "comment": "bool"
       },
       "m_iBurstShotsRemaining": {
-        "value": 3548,
+        "value": 3556,
         "comment": "int32_t"
       },
       "m_inPrecache": {
-        "value": 3564,
+        "value": 3572,
         "comment": "bool"
       },
       "m_silencedModelIndex": {
-        "value": 3560,
+        "value": 3568,
         "comment": "int32_t"
       },
       "m_zoomLevel": {
-        "value": 3544,
+        "value": 3552,
         "comment": "int32_t"
       }
     },
@@ -10441,31 +10441,31 @@
   "CFists": {
     "data": {
       "m_bDelayedHardPunchIncoming": {
-        "value": 3564,
+        "value": 3572,
         "comment": "bool"
       },
       "m_bDestroyAfterTaunt": {
-        "value": 3565,
+        "value": 3573,
         "comment": "bool"
       },
       "m_bPlayingUninterruptableAct": {
-        "value": 3544,
-        "comment": "bool"
-      },
-      "m_bRestorePrevWep": {
         "value": 3552,
         "comment": "bool"
       },
+      "m_bRestorePrevWep": {
+        "value": 3560,
+        "comment": "bool"
+      },
       "m_hWeaponBeforePrevious": {
-        "value": 3556,
+        "value": 3564,
         "comment": "CHandle<CBasePlayerWeapon>"
       },
       "m_hWeaponPrevious": {
-        "value": 3560,
+        "value": 3568,
         "comment": "CHandle<CBasePlayerWeapon>"
       },
       "m_nUninterruptableActivity": {
-        "value": 3548,
+        "value": 3556,
         "comment": "PlayerAnimEvent_t"
       }
     },
@@ -12359,33 +12359,17 @@
         "value": 4176,
         "comment": "int32_t"
       },
-      "m_fireParentXDelta": {
+      "m_fireParentPositions": {
         "value": 2576,
-        "comment": "int32_t[64]"
+        "comment": "Vector[64]"
       },
-      "m_fireParentYDelta": {
-        "value": 2832,
-        "comment": "int32_t[64]"
-      },
-      "m_fireParentZDelta": {
-        "value": 3088,
-        "comment": "int32_t[64]"
+      "m_firePositions": {
+        "value": 1808,
+        "comment": "Vector[64]"
       },
       "m_fireSpawnOffset": {
         "value": 4856,
         "comment": "int32_t"
-      },
-      "m_fireXDelta": {
-        "value": 1808,
-        "comment": "int32_t[64]"
-      },
-      "m_fireYDelta": {
-        "value": 2064,
-        "comment": "int32_t[64]"
-      },
-      "m_fireZDelta": {
-        "value": 2320,
-        "comment": "int32_t[64]"
       },
       "m_nFireEffectTickBegin": {
         "value": 4184,
@@ -14382,15 +14366,15 @@
   "CMelee": {
     "data": {
       "m_bDidThrowDamage": {
-        "value": 3552,
+        "value": 3560,
         "comment": "bool"
       },
       "m_flThrowAt": {
-        "value": 3544,
+        "value": 3552,
         "comment": "GameTime_t"
       },
       "m_hThrower": {
-        "value": 3548,
+        "value": 3556,
         "comment": "CHandle<CBaseEntity>"
       }
     },
@@ -21741,11 +21725,11 @@
   "CWeaponBaseItem": {
     "data": {
       "m_SequenceCompleteTimer": {
-        "value": 3544,
+        "value": 3552,
         "comment": "CountdownTimer"
       },
       "m_bRedraw": {
-        "value": 3568,
+        "value": 3576,
         "comment": "bool"
       }
     },
@@ -21842,15 +21826,15 @@
   "CWeaponShield": {
     "data": {
       "m_flBulletDamageAbsorbed": {
-        "value": 3576,
-        "comment": "float"
-      },
-      "m_flDisplayHealth": {
         "value": 3584,
         "comment": "float"
       },
+      "m_flDisplayHealth": {
+        "value": 3592,
+        "comment": "float"
+      },
       "m_flLastBulletHitSoundTime": {
-        "value": 3580,
+        "value": 3588,
         "comment": "GameTime_t"
       }
     },
@@ -21859,7 +21843,7 @@
   "CWeaponTaser": {
     "data": {
       "m_fFireTime": {
-        "value": 3576,
+        "value": 3584,
         "comment": "GameTime_t"
       }
     },

@@ -1,6 +1,6 @@
 /*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-20 05:22:27.745949200 UTC
+ * Created using https://github.com/a2x/cs2-dumper
+ * 2023-10-20 23:01:49.173945100 UTC
  */
 
 public static class MaterialParamBuffer_t { // MaterialParam_t

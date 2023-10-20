@@ -1,31 +1,31 @@
 '''
-https://github.com/a2x/cs2-dumper
-2023-10-20 05:22:30.277115700 UTC
+Created using https://github.com/a2x/cs2-dumper
+2023-10-20 23:01:51.630645500 UTC
 '''
 
 class ClientDll: # client.dll
-    dwBaseEntityModel_setModel = 0x57C750
-    dwEntityList = 0x1793DC8
-    dwForceAttack = 0x169AE50
-    dwForceAttack2 = 0x169AEE0
-    dwForceBackward = 0x169B120
-    dwForceCrouch = 0x169B3F0
-    dwForceForward = 0x169B090
-    dwForceJump = 0x169B360
-    dwForceLeft = 0x169B1B0
-    dwForceRight = 0x169B240
-    dwGameEntitySystem_getBaseEntity = 0x5FFD50
-    dwGameEntitySystem_getHighestEntityIndex = 0x5F1A40
-    dwGameRules = 0x17EFAD8
-    dwGlobalVars = 0x1696F40
-    dwGlowManager = 0x17EF258
-    dwInterfaceLinkList = 0x197A678
-    dwLocalPlayerController = 0x17E27C8
-    dwLocalPlayerPawn = 0x1881288
-    dwPlantedC4 = 0x1887FC0
-    dwViewAngles = 0x18E0DA0
-    dwViewMatrix = 0x1881D70
-    dwViewRender = 0x1882768
+    dwBaseEntityModel_setModel = 0x57DA70
+    dwEntityList = 0x1798738
+    dwForceAttack = 0x169DE50
+    dwForceAttack2 = 0x169DEE0
+    dwForceBackward = 0x169E120
+    dwForceCrouch = 0x169E3F0
+    dwForceForward = 0x169E090
+    dwForceJump = 0x169E360
+    dwForceLeft = 0x169E1B0
+    dwForceRight = 0x169E240
+    dwGameEntitySystem_getBaseEntity = 0x601070
+    dwGameEntitySystem_getHighestEntityIndex = 0x5F2D60
+    dwGameRules = 0x17F4478
+    dwGlobalVars = 0x1699F40
+    dwGlowManager = 0x17F3BF8
+    dwInterfaceLinkList = 0x197F2B8
+    dwLocalPlayerController = 0x17E7158
+    dwLocalPlayerPawn = 0x1885C28
+    dwPlantedC4 = 0x188CAD0
+    dwViewAngles = 0x18E5740
+    dwViewMatrix = 0x1886710
+    dwViewRender = 0x1887108
 
 class Engine2Dll: # engine2.dll
     dwBuildNumber = 0x487514
@@ -33,5 +33,5 @@ class Engine2Dll: # engine2.dll
     dwNetworkGameClient_getLocalPlayer = 0xF0
     dwNetworkGameClient_maxClients = 0x250
     dwNetworkGameClient_signOnState = 0x240
-    dwWindowHeight = 0x5386D4
-    dwWindowWidth = 0x5386D0
+    dwWindowHeight = 0x53867C
+    dwWindowWidth = 0x538678

@@ -1,6 +1,6 @@
 '''
-https://github.com/a2x/cs2-dumper
-2023-10-20 05:22:29.362919900 UTC
+Created using https://github.com/a2x/cs2-dumper
+2023-10-20 23:01:50.770998900 UTC
 '''
 
 class ActiveModelConfig_t:
@@ -2008,23 +2008,23 @@ class C_CSWeaponBase: # C_BasePlayerWeapon
     m_flTimeSilencerSwitchComplete = 0x169C # GameTime_t
     m_iOriginalTeamNumber = 0x16A0 # int32_t
     m_flNextAttackRenderTimeOffset = 0x16A4 # float
-    m_bVisualsDataSet = 0x1720 # bool
-    m_bOldFirstPersonSpectatedState = 0x1721 # bool
-    m_hOurPing = 0x1724 # CHandle<C_BaseEntity>
-    m_nOurPingIndex = 0x1728 # CEntityIndex
-    m_vecOurPingPos = 0x172C # Vector
-    m_bGlowForPing = 0x1738 # bool
-    m_bUIWeapon = 0x1739 # bool
-    m_hPrevOwner = 0x1748 # CHandle<C_CSPlayerPawn>
-    m_nDropTick = 0x174C # GameTick_t
-    m_donated = 0x176C # bool
-    m_fLastShotTime = 0x1770 # GameTime_t
-    m_bWasOwnedByCT = 0x1774 # bool
-    m_bWasOwnedByTerrorist = 0x1775 # bool
-    m_gunHeat = 0x1778 # float
-    m_smokeAttachments = 0x177C # uint32_t
-    m_lastSmokeTime = 0x1780 # GameTime_t
-    m_flLastClientFireBulletTime = 0x1784 # float
+    m_bVisualsDataSet = 0x1728 # bool
+    m_bOldFirstPersonSpectatedState = 0x1729 # bool
+    m_hOurPing = 0x172C # CHandle<C_BaseEntity>
+    m_nOurPingIndex = 0x1730 # CEntityIndex
+    m_vecOurPingPos = 0x1734 # Vector
+    m_bGlowForPing = 0x1740 # bool
+    m_bUIWeapon = 0x1741 # bool
+    m_hPrevOwner = 0x1750 # CHandle<C_CSPlayerPawn>
+    m_nDropTick = 0x1754 # GameTick_t
+    m_donated = 0x1774 # bool
+    m_fLastShotTime = 0x1778 # GameTime_t
+    m_bWasOwnedByCT = 0x177C # bool
+    m_bWasOwnedByTerrorist = 0x177D # bool
+    m_gunHeat = 0x1780 # float
+    m_smokeAttachments = 0x1784 # uint32_t
+    m_lastSmokeTime = 0x1788 # GameTime_t
+    m_flLastClientFireBulletTime = 0x178C # float
     m_IronSightController = 0x1840 # C_IronSightController
     m_iIronSightMode = 0x18F0 # int32_t
     m_flLastLOSTraceFailureTime = 0x1900 # GameTime_t
@@ -2592,6 +2592,8 @@ class C_GradientFog: # C_BaseEntity
 
 class C_HEGrenade: # C_BaseCSGrenade
 
+class C_HEGrenadeProjectile: # C_BaseCSGrenadeProjectile
+
 class C_HandleTest: # C_BaseEntity
     m_Handle = 0x540 # CHandle<C_BaseEntity>
     m_bSendHandle = 0x544 # bool
@@ -2627,12 +2629,8 @@ class C_IncendiaryGrenade: # C_MolotovGrenade
 
 class C_Inferno: # C_BaseModelEntity
     m_nfxFireDamageEffect = 0xD00 # ParticleIndex_t
-    m_fireXDelta = 0xD04 # int32_t[64]
-    m_fireYDelta = 0xE04 # int32_t[64]
-    m_fireZDelta = 0xF04 # int32_t[64]
-    m_fireParentXDelta = 0x1004 # int32_t[64]
-    m_fireParentYDelta = 0x1104 # int32_t[64]
-    m_fireParentZDelta = 0x1204 # int32_t[64]
+    m_firePositions = 0xD04 # Vector[64]
+    m_fireParentPositions = 0x1004 # Vector[64]
     m_bFireIsBurning = 0x1304 # bool[64]
     m_BurnNormal = 0x1344 # Vector[64]
     m_fireCount = 0x1644 # int32_t

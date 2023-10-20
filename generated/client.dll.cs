@@ -1,6 +1,6 @@
 /*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-20 05:22:29.318309900 UTC
+ * Created using https://github.com/a2x/cs2-dumper
+ * 2023-10-20 23:01:50.727502800 UTC
  */
 
 public static class ActiveModelConfig_t {
@@ -2188,23 +2188,23 @@ public static class C_CSWeaponBase { // C_BasePlayerWeapon
     public const nint m_flTimeSilencerSwitchComplete = 0x169C; // GameTime_t
     public const nint m_iOriginalTeamNumber = 0x16A0; // int32_t
     public const nint m_flNextAttackRenderTimeOffset = 0x16A4; // float
-    public const nint m_bVisualsDataSet = 0x1720; // bool
-    public const nint m_bOldFirstPersonSpectatedState = 0x1721; // bool
-    public const nint m_hOurPing = 0x1724; // CHandle<C_BaseEntity>
-    public const nint m_nOurPingIndex = 0x1728; // CEntityIndex
-    public const nint m_vecOurPingPos = 0x172C; // Vector
-    public const nint m_bGlowForPing = 0x1738; // bool
-    public const nint m_bUIWeapon = 0x1739; // bool
-    public const nint m_hPrevOwner = 0x1748; // CHandle<C_CSPlayerPawn>
-    public const nint m_nDropTick = 0x174C; // GameTick_t
-    public const nint m_donated = 0x176C; // bool
-    public const nint m_fLastShotTime = 0x1770; // GameTime_t
-    public const nint m_bWasOwnedByCT = 0x1774; // bool
-    public const nint m_bWasOwnedByTerrorist = 0x1775; // bool
-    public const nint m_gunHeat = 0x1778; // float
-    public const nint m_smokeAttachments = 0x177C; // uint32_t
-    public const nint m_lastSmokeTime = 0x1780; // GameTime_t
-    public const nint m_flLastClientFireBulletTime = 0x1784; // float
+    public const nint m_bVisualsDataSet = 0x1728; // bool
+    public const nint m_bOldFirstPersonSpectatedState = 0x1729; // bool
+    public const nint m_hOurPing = 0x172C; // CHandle<C_BaseEntity>
+    public const nint m_nOurPingIndex = 0x1730; // CEntityIndex
+    public const nint m_vecOurPingPos = 0x1734; // Vector
+    public const nint m_bGlowForPing = 0x1740; // bool
+    public const nint m_bUIWeapon = 0x1741; // bool
+    public const nint m_hPrevOwner = 0x1750; // CHandle<C_CSPlayerPawn>
+    public const nint m_nDropTick = 0x1754; // GameTick_t
+    public const nint m_donated = 0x1774; // bool
+    public const nint m_fLastShotTime = 0x1778; // GameTime_t
+    public const nint m_bWasOwnedByCT = 0x177C; // bool
+    public const nint m_bWasOwnedByTerrorist = 0x177D; // bool
+    public const nint m_gunHeat = 0x1780; // float
+    public const nint m_smokeAttachments = 0x1784; // uint32_t
+    public const nint m_lastSmokeTime = 0x1788; // GameTime_t
+    public const nint m_flLastClientFireBulletTime = 0x178C; // float
     public const nint m_IronSightController = 0x1840; // C_IronSightController
     public const nint m_iIronSightMode = 0x18F0; // int32_t
     public const nint m_flLastLOSTraceFailureTime = 0x1900; // GameTime_t
@@ -2835,6 +2835,9 @@ public static class C_GradientFog { // C_BaseEntity
 public static class C_HEGrenade { // C_BaseCSGrenade
 }
 
+public static class C_HEGrenadeProjectile { // C_BaseCSGrenadeProjectile
+}
+
 public static class C_HandleTest { // C_BaseEntity
     public const nint m_Handle = 0x540; // CHandle<C_BaseEntity>
     public const nint m_bSendHandle = 0x544; // bool
@@ -2874,12 +2877,8 @@ public static class C_IncendiaryGrenade { // C_MolotovGrenade
 
 public static class C_Inferno { // C_BaseModelEntity
     public const nint m_nfxFireDamageEffect = 0xD00; // ParticleIndex_t
-    public const nint m_fireXDelta = 0xD04; // int32_t[64]
-    public const nint m_fireYDelta = 0xE04; // int32_t[64]
-    public const nint m_fireZDelta = 0xF04; // int32_t[64]
-    public const nint m_fireParentXDelta = 0x1004; // int32_t[64]
-    public const nint m_fireParentYDelta = 0x1104; // int32_t[64]
-    public const nint m_fireParentZDelta = 0x1204; // int32_t[64]
+    public const nint m_firePositions = 0xD04; // Vector[64]
+    public const nint m_fireParentPositions = 0x1004; // Vector[64]
     public const nint m_bFireIsBurning = 0x1304; // bool[64]
     public const nint m_BurnNormal = 0x1344; // Vector[64]
     public const nint m_fireCount = 0x1644; // int32_t

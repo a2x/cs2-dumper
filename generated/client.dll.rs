@@ -1,6 +1,6 @@
 /*
- * https://github.com/a2x/cs2-dumper
- * 2023-10-20 05:22:29.405160900 UTC
+ * Created using https://github.com/a2x/cs2-dumper
+ * 2023-10-20 23:01:50.812595400 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -2190,23 +2190,23 @@ pub mod C_CSWeaponBase { // C_BasePlayerWeapon
     pub const m_flTimeSilencerSwitchComplete: usize = 0x169C; // GameTime_t
     pub const m_iOriginalTeamNumber: usize = 0x16A0; // int32_t
     pub const m_flNextAttackRenderTimeOffset: usize = 0x16A4; // float
-    pub const m_bVisualsDataSet: usize = 0x1720; // bool
-    pub const m_bOldFirstPersonSpectatedState: usize = 0x1721; // bool
-    pub const m_hOurPing: usize = 0x1724; // CHandle<C_BaseEntity>
-    pub const m_nOurPingIndex: usize = 0x1728; // CEntityIndex
-    pub const m_vecOurPingPos: usize = 0x172C; // Vector
-    pub const m_bGlowForPing: usize = 0x1738; // bool
-    pub const m_bUIWeapon: usize = 0x1739; // bool
-    pub const m_hPrevOwner: usize = 0x1748; // CHandle<C_CSPlayerPawn>
-    pub const m_nDropTick: usize = 0x174C; // GameTick_t
-    pub const m_donated: usize = 0x176C; // bool
-    pub const m_fLastShotTime: usize = 0x1770; // GameTime_t
-    pub const m_bWasOwnedByCT: usize = 0x1774; // bool
-    pub const m_bWasOwnedByTerrorist: usize = 0x1775; // bool
-    pub const m_gunHeat: usize = 0x1778; // float
-    pub const m_smokeAttachments: usize = 0x177C; // uint32_t
-    pub const m_lastSmokeTime: usize = 0x1780; // GameTime_t
-    pub const m_flLastClientFireBulletTime: usize = 0x1784; // float
+    pub const m_bVisualsDataSet: usize = 0x1728; // bool
+    pub const m_bOldFirstPersonSpectatedState: usize = 0x1729; // bool
+    pub const m_hOurPing: usize = 0x172C; // CHandle<C_BaseEntity>
+    pub const m_nOurPingIndex: usize = 0x1730; // CEntityIndex
+    pub const m_vecOurPingPos: usize = 0x1734; // Vector
+    pub const m_bGlowForPing: usize = 0x1740; // bool
+    pub const m_bUIWeapon: usize = 0x1741; // bool
+    pub const m_hPrevOwner: usize = 0x1750; // CHandle<C_CSPlayerPawn>
+    pub const m_nDropTick: usize = 0x1754; // GameTick_t
+    pub const m_donated: usize = 0x1774; // bool
+    pub const m_fLastShotTime: usize = 0x1778; // GameTime_t
+    pub const m_bWasOwnedByCT: usize = 0x177C; // bool
+    pub const m_bWasOwnedByTerrorist: usize = 0x177D; // bool
+    pub const m_gunHeat: usize = 0x1780; // float
+    pub const m_smokeAttachments: usize = 0x1784; // uint32_t
+    pub const m_lastSmokeTime: usize = 0x1788; // GameTime_t
+    pub const m_flLastClientFireBulletTime: usize = 0x178C; // float
     pub const m_IronSightController: usize = 0x1840; // C_IronSightController
     pub const m_iIronSightMode: usize = 0x18F0; // int32_t
     pub const m_flLastLOSTraceFailureTime: usize = 0x1900; // GameTime_t
@@ -2837,6 +2837,9 @@ pub mod C_GradientFog { // C_BaseEntity
 pub mod C_HEGrenade { // C_BaseCSGrenade
 }
 
+pub mod C_HEGrenadeProjectile { // C_BaseCSGrenadeProjectile
+}
+
 pub mod C_HandleTest { // C_BaseEntity
     pub const m_Handle: usize = 0x540; // CHandle<C_BaseEntity>
     pub const m_bSendHandle: usize = 0x544; // bool
@@ -2876,12 +2879,8 @@ pub mod C_IncendiaryGrenade { // C_MolotovGrenade
 
 pub mod C_Inferno { // C_BaseModelEntity
     pub const m_nfxFireDamageEffect: usize = 0xD00; // ParticleIndex_t
-    pub const m_fireXDelta: usize = 0xD04; // int32_t[64]
-    pub const m_fireYDelta: usize = 0xE04; // int32_t[64]
-    pub const m_fireZDelta: usize = 0xF04; // int32_t[64]
-    pub const m_fireParentXDelta: usize = 0x1004; // int32_t[64]
-    pub const m_fireParentYDelta: usize = 0x1104; // int32_t[64]
-    pub const m_fireParentZDelta: usize = 0x1204; // int32_t[64]
+    pub const m_firePositions: usize = 0xD04; // Vector[64]
+    pub const m_fireParentPositions: usize = 0x1004; // Vector[64]
     pub const m_bFireIsBurning: usize = 0x1304; // bool[64]
     pub const m_BurnNormal: usize = 0x1344; // Vector[64]
     pub const m_fireCount: usize = 0x1644; // int32_t

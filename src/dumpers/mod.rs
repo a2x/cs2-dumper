@@ -91,8 +91,14 @@ fn write_banner_to_file(file: &mut File, file_ext: &str) -> Result<()> {
 
     let banner = match file_ext {
         "json" => None,
-        "py" => Some(format!("'''\n{}\n{}\n'''\n\n", REPO_URL, now_utc)),
-        _ => Some(format!("/*\n * {}\n * {}\n */\n\n", REPO_URL, now_utc)),
+        "py" => Some(format!(
+            "'''\nCreated using {}\n{}\n'''\n\n",
+            REPO_URL, now_utc
+        )),
+        _ => Some(format!(
+            "/*\n * Created using {}\n * {}\n */\n\n",
+            REPO_URL, now_utc
+        )),
     };
 
     if let Some(banner) = banner {
