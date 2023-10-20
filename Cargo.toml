@@ -1,6 +1,6 @@
 [package]
 name = "cs2-dumper"
-version = "1.1.2"
+version = "1.1.3"
 authors = ["a2x"]
 edition = "2021"
 readme = "README.md"
@@ -8,6 +8,7 @@ repository = "https://github.com/a2x/cs2-dumper"
 license = "MIT"
 
 [dependencies]
+anyhow = "1.0"
 chrono = "0.4"
 clap = { version = "4.4", features = ["derive"] }
 convert_case = "0.6"
@@ -17,7 +18,6 @@ regex = "1.9"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 simple_logger = "4.2"
-thiserror = "1.0"
 
 [dependencies.windows]
 version = "0.51"

@@ -90,7 +90,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "client.dll"
   },
   "Engine2Dll": {
     "data": {
@@ -123,6 +123,6 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "engine2.dll"
   }
 }

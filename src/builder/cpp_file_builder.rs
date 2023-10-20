@@ -2,6 +2,7 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
+/// Represents a C++ header file builder.
 #[derive(Debug, PartialEq)]
 pub struct CppFileBuilder;
 
@@ -17,7 +18,12 @@ impl FileBuilder for CppFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+    fn write_namespace(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        comment: Option<&str>,
+    ) -> Result<()> {
         if let Some(comment) = comment {
             write!(output, "namespace {} {{ // {}\n", name, comment)?;
         } else {

@@ -1,23 +1,33 @@
 use std::fmt::{LowerHex, UpperHex};
 use std::ops::{Add, AddAssign, Sub, SubAssign};
 
-#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+/// Represents a memory address.
+#[derive(Clone, Copy, Debug, Eq, PartialEq, PartialOrd)]
 #[repr(transparent)]
 pub struct Address(pub usize);
 
 impl Address {
+    /// Add the given value to the address.
     pub fn add(&self, value: usize) -> Self {
         Self(self.0 + value)
     }
 
+    /// Returns `true` if the address is zero.
+    pub fn is_zero(&self) -> bool {
+        self.0 == 0
+    }
+
+    /// Subtract the given value from the address.
     pub fn sub(&self, value: usize) -> Self {
         Self(self.0 - value)
     }
 
+    /// Get the address as a pointer.
     pub fn as_ptr<T>(&self) -> *const T {
         self.0 as *const T
     }
 
+    /// Get the address as a mutable pointer.
     pub fn as_mut_ptr<T>(&self) -> *mut T {
         self.0 as *mut T
     }

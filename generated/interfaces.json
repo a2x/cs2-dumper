@@ -10,7 +10,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "animationsystem.dll"
   },
   "ClientDll": {
     "data": {
@@ -47,7 +47,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "client.dll"
   },
   "Engine2Dll": {
     "data": {
@@ -180,7 +180,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "engine2.dll"
   },
   "FilesystemStdioDll": {
     "data": {
@@ -193,7 +193,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "filesystem_stdio.dll"
   },
   "HostDll": {
     "data": {
@@ -230,7 +230,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "host.dll"
   },
   "ImemanagerDll": {
     "data": {
@@ -239,7 +239,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "imemanager.dll"
   },
   "InputsystemDll": {
     "data": {
@@ -252,7 +252,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "inputsystem.dll"
   },
   "LocalizeDll": {
     "data": {
@@ -261,7 +261,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "localize.dll"
   },
   "MatchmakingDll": {
     "data": {
@@ -274,7 +274,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "matchmaking.dll"
   },
   "Materialsystem2Dll": {
     "data": {
@@ -299,7 +299,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "materialsystem2.dll"
   },
   "MeshsystemDll": {
     "data": {
@@ -308,7 +308,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "meshsystem.dll"
   },
   "NavsystemDll": {
     "data": {
@@ -317,7 +317,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "navsystem.dll"
   },
   "NetworksystemDll": {
     "data": {
@@ -338,7 +338,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "networksystem.dll"
   },
   "PanoramaDll": {
     "data": {
@@ -347,7 +347,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "panorama.dll"
   },
   "PanoramaTextPangoDll": {
     "data": {
@@ -356,7 +356,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "panorama_text_pango.dll"
   },
   "PanoramauiclientDll": {
     "data": {
@@ -365,7 +365,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "panoramauiclient.dll"
   },
   "ParticlesDll": {
     "data": {
@@ -374,7 +374,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "particles.dll"
   },
   "PulseSystemDll": {
     "data": {
@@ -383,7 +383,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "pulse_system.dll"
   },
   "Rendersystemdx11Dll": {
     "data": {
@@ -400,7 +400,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "rendersystemdx11.dll"
   },
   "ResourcesystemDll": {
     "data": {
@@ -409,7 +409,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "resourcesystem.dll"
   },
   "ScenefilecacheDll": {
     "data": {
@@ -422,7 +422,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "scenefilecache.dll"
   },
   "ScenesystemDll": {
     "data": {
@@ -439,7 +439,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "scenesystem.dll"
   },
   "SchemasystemDll": {
     "data": {
@@ -448,7 +448,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "schemasystem.dll"
   },
   "ServerDll": {
     "data": {
@@ -493,7 +493,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "server.dll"
   },
   "SoundsystemDll": {
     "data": {
@@ -514,7 +514,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "soundsystem.dll"
   },
   "SteamaudioDll": {
     "data": {
@@ -523,7 +523,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "steamaudio.dll"
   },
   "Steamclient64Dll": {
     "data": {
@@ -604,7 +604,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "steamclient64.dll"
   },
   "Tier0Dll": {
     "data": {
@@ -625,7 +625,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "tier0.dll"
   },
   "V8SystemDll": {
     "data": {
@@ -634,7 +634,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "v8system.dll"
   },
   "ValveAviDll": {
     "data": {
@@ -643,7 +643,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "valve_avi.dll"
   },
   "ValveWmfDll": {
     "data": {
@@ -652,7 +652,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "valve_wmf.dll"
   },
   "Vphysics2Dll": {
     "data": {
@@ -665,7 +665,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "vphysics2.dll"
   },
   "VscriptDll": {
     "data": {
@@ -674,7 +674,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "vscript.dll"
   },
   "VstdlibS64Dll": {
     "data": {
@@ -687,7 +687,7 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "vstdlib_s64.dll"
   },
   "WorldrendererDll": {
     "data": {
@@ -696,6 +696,6 @@
         "comment": null
       }
     },
-    "comment": null
+    "comment": "worldrenderer.dll"
   }
 }

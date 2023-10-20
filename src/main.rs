@@ -4,19 +4,19 @@
 use std::fs;
 use std::time::Instant;
 
+use anyhow::Result;
+
 use clap::Parser;
 
 use simple_logger::SimpleLogger;
 
 use builder::*;
 use dumpers::*;
-use error::Result;
 use remote::Process;
 
 mod builder;
 mod config;
 mod dumpers;
-mod error;
 mod mem;
 mod remote;
 mod sdk;

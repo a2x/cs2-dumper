@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 10:31:50.231577500 UTC
+2023-10-20 05:22:27.907858400 UTC
 '''
 
 class AimMatrixOpFixedSettings_t:

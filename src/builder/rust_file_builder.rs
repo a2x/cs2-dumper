@@ -2,6 +2,7 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
+/// Represents a Rust file builder.
 #[derive(Debug, Default, PartialEq)]
 pub struct RustFileBuilder;
 
@@ -19,7 +20,12 @@ impl FileBuilder for RustFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+    fn write_namespace(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        comment: Option<&str>,
+    ) -> Result<()> {
         if let Some(comment) = comment {
             write!(output, "pub mod {} {{ // {}\n", name, comment)?;
         } else {

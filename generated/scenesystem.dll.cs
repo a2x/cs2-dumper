@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 10:31:50.307256100 UTC
+ * 2023-10-20 05:22:28.048326700 UTC
  */
 
 public static class CSSDSEndFrameViewInfo {

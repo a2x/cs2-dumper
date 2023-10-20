@@ -1,11 +1,12 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 10:31:55.051133700 UTC
+ * 2023-10-20 05:22:30.277591900 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
-pub mod ClientDll {
+pub mod ClientDll { // client.dll
+    pub const dwBaseEntityModel_setModel: usize = 0x57C750;
     pub const dwEntityList: usize = 0x1793DC8;
     pub const dwForceAttack: usize = 0x169AE50;
     pub const dwForceAttack2: usize = 0x169AEE0;
@@ -15,6 +16,8 @@ pub mod ClientDll {
     pub const dwForceJump: usize = 0x169B360;
     pub const dwForceLeft: usize = 0x169B1B0;
     pub const dwForceRight: usize = 0x169B240;
+    pub const dwGameEntitySystem_getBaseEntity: usize = 0x5FFD50;
+    pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x5F1A40;
     pub const dwGameRules: usize = 0x17EFAD8;
     pub const dwGlobalVars: usize = 0x1696F40;
     pub const dwGlowManager: usize = 0x17EF258;
@@ -25,12 +28,9 @@ pub mod ClientDll {
     pub const dwViewAngles: usize = 0x18E0DA0;
     pub const dwViewMatrix: usize = 0x1881D70;
     pub const dwViewRender: usize = 0x1882768;
-    pub const dwGameEntitySystem_getBaseEntity: usize = 0x5FFD50;
-    pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x5F1A40;
-    pub const dwBaseEntityModel_setModel: usize = 0x57C750;
 }
 
-pub mod Engine2Dll {
+pub mod Engine2Dll { // engine2.dll
     pub const dwBuildNumber: usize = 0x487514;
     pub const dwNetworkGameClient: usize = 0x486AB0;
     pub const dwNetworkGameClient_getLocalPlayer: usize = 0xF0;

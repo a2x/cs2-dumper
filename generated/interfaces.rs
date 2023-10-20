@@ -1,16 +1,16 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 10:31:51.208394400 UTC
+ * 2023-10-20 05:22:29.726731400 UTC
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
-pub mod AnimationsystemDll {
+pub mod AnimationsystemDll { // animationsystem.dll
     pub const AnimationSystemUtils_001: usize = 0x64670;
     pub const AnimationSystem_001: usize = 0x5F1D0;
 }
 
-pub mod ClientDll {
+pub mod ClientDll { // client.dll
     pub const LegacyGameUI001: usize = 0x88FF10;
     pub const Source2ClientUI001: usize = 0x87E9B0;
     pub const Source2ClientPrediction001: usize = 0x79C1F0;
@@ -21,7 +21,7 @@ pub mod ClientDll {
     pub const Source2ClientConfig001: usize = 0x472CD0;
 }
 
-pub mod Engine2Dll {
+pub mod Engine2Dll { // engine2.dll
     pub const SimpleEngineLoopService_001: usize = 0x1E1FD0;
     pub const ClientServerEngineLoopService_001: usize = 0x1D7CA0;
     pub const KeyValueCache001: usize = 0x1D42E0;
@@ -56,12 +56,12 @@ pub mod Engine2Dll {
     pub const Source2EngineToClient001: usize = 0x5A1D0;
 }
 
-pub mod FilesystemStdioDll {
+pub mod FilesystemStdioDll { // filesystem_stdio.dll
     pub const VAsyncFileSystem2_001: usize = 0x66D30;
     pub const VFileSystem017: usize = 0x66D20;
 }
 
-pub mod HostDll {
+pub mod HostDll { // host.dll
     pub const Source2Host001: usize = 0x18E10;
     pub const SinglePlayerSharedMemory001: usize = 0x18A90;
     pub const SaveRestoreDataVersion001: usize = 0x18A80;
@@ -72,25 +72,25 @@ pub mod HostDll {
     pub const DebugDrawQueueManager001: usize = 0x11710;
 }
 
-pub mod ImemanagerDll {
+pub mod ImemanagerDll { // imemanager.dll
     pub const IMEManager001: usize = 0xC470;
 }
 
-pub mod InputsystemDll {
+pub mod InputsystemDll { // inputsystem.dll
     pub const InputSystemVersion001: usize = 0x28D0;
     pub const InputStackSystemVersion001: usize = 0x16F0;
 }
 
-pub mod LocalizeDll {
+pub mod LocalizeDll { // localize.dll
     pub const Localize_001: usize = 0x3830;
 }
 
-pub mod MatchmakingDll {
+pub mod MatchmakingDll { // matchmaking.dll
     pub const GameTypes001: usize = 0x50270;
     pub const MATCHFRAMEWORK_001: usize = 0x101030;
 }
 
-pub mod Materialsystem2Dll {
+pub mod Materialsystem2Dll { // materialsystem2.dll
     pub const MaterialUtils_001: usize = 0x4DB90;
     pub const TextLayout_001: usize = 0x4A2E0;
     pub const PostProcessingSystem_001: usize = 0x42A60;
@@ -98,67 +98,67 @@ pub mod Materialsystem2Dll {
     pub const VMaterialSystem2_001: usize = 0x25EC0;
 }
 
-pub mod MeshsystemDll {
+pub mod MeshsystemDll { // meshsystem.dll
     pub const MeshSystem001: usize = 0x7270;
 }
 
-pub mod NavsystemDll {
+pub mod NavsystemDll { // navsystem.dll
     pub const NavSystem001: usize = 0x76F0;
 }
 
-pub mod NetworksystemDll {
+pub mod NetworksystemDll { // networksystem.dll
     pub const SerializedEntitiesVersion001: usize = 0xD1A70;
     pub const NetworkSystemVersion001: usize = 0xBBF80;
     pub const NetworkMessagesVersion001: usize = 0x9C020;
     pub const FlattenedSerializersVersion001: usize = 0x7B8A0;
 }
 
-pub mod PanoramaDll {
+pub mod PanoramaDll { // panorama.dll
     pub const PanoramaUIEngine001: usize = 0x57EE0;
 }
 
-pub mod PanoramaTextPangoDll {
+pub mod PanoramaTextPangoDll { // panorama_text_pango.dll
     pub const PanoramaTextServices001: usize = 0x4CBD0;
 }
 
-pub mod PanoramauiclientDll {
+pub mod PanoramauiclientDll { // panoramauiclient.dll
     pub const PanoramaUIClient001: usize = 0x12780;
 }
 
-pub mod ParticlesDll {
+pub mod ParticlesDll { // particles.dll
     pub const ParticleSystemMgr003: usize = 0x52D20;
 }
 
-pub mod PulseSystemDll {
+pub mod PulseSystemDll { // pulse_system.dll
     pub const IPulseSystem_001: usize = 0x5B80;
 }
 
-pub mod Rendersystemdx11Dll {
+pub mod Rendersystemdx11Dll { // rendersystemdx11.dll
     pub const RenderUtils_001: usize = 0x52C90;
     pub const VRenderDeviceMgrBackdoor001: usize = 0x4A3A0;
     pub const RenderDeviceMgr001: usize = 0x4A390;
 }
 
-pub mod ResourcesystemDll {
+pub mod ResourcesystemDll { // resourcesystem.dll
     pub const ResourceSystem013: usize = 0x10650;
 }
 
-pub mod ScenefilecacheDll {
+pub mod ScenefilecacheDll { // scenefilecache.dll
     pub const SceneFileCache002: usize = 0x68E0;
     pub const ResponseRulesCache001: usize = 0x3190;
 }
 
-pub mod ScenesystemDll {
+pub mod ScenesystemDll { // scenesystem.dll
     pub const SceneUtils_001: usize = 0x13D030;
     pub const SceneSystem_002: usize = 0xCAE10;
     pub const RenderingPipelines_001: usize = 0x8EED0;
 }
 
-pub mod SchemasystemDll {
+pub mod SchemasystemDll { // schemasystem.dll
     pub const SchemaSystem_001: usize = 0xA930;
 }
 
-pub mod ServerDll {
+pub mod ServerDll { // server.dll
     pub const NavGameTest001: usize = 0xA2D150;
     pub const ServerToolsInfo_001: usize = 0x831AC0;
     pub const Source2GameClients001: usize = 0x831AD0;
@@ -171,18 +171,18 @@ pub mod ServerDll {
     pub const Source2GameDirector001: usize = 0x13EFC0;
 }
 
-pub mod SoundsystemDll {
+pub mod SoundsystemDll { // soundsystem.dll
     pub const SoundOpSystem001: usize = 0x1567E0;
     pub const SoundOpSystemEdit001: usize = 0x8BBC0;
     pub const VMixEditTool001: usize = 0x71740;
     pub const SoundSystem001: usize = 0x46540;
 }
 
-pub mod SteamaudioDll {
+pub mod SteamaudioDll { // steamaudio.dll
     pub const SteamAudio001: usize = 0x12EE0;
 }
 
-pub mod Steamclient64Dll {
+pub mod Steamclient64Dll { // steamclient64.dll
     pub const IVALIDATE001: usize = 0x833640;
     pub const CLIENTENGINE_INTERFACE_VERSION005: usize = 0x82F4C0;
     pub const SteamClient020: usize = 0x62CAF0;
@@ -204,39 +204,39 @@ pub mod Steamclient64Dll {
     pub const p2pvoicesingleton002: usize = 0xD5840;
 }
 
-pub mod Tier0Dll {
+pub mod Tier0Dll { // tier0.dll
     pub const VStringTokenSystem001: usize = 0x18C060;
     pub const TestScriptMgr001: usize = 0x13F3C0;
     pub const VProcessUtils002: usize = 0x12F540;
     pub const VEngineCvar007: usize = 0x61920;
 }
 
-pub mod V8SystemDll {
+pub mod V8SystemDll { // v8system.dll
     pub const Source2V8System001: usize = 0x1670;
 }
 
-pub mod ValveAviDll {
+pub mod ValveAviDll { // valve_avi.dll
     pub const VAvi001: usize = 0x2F90;
 }
 
-pub mod ValveWmfDll {
+pub mod ValveWmfDll { // valve_wmf.dll
     pub const VMediaFoundation001: usize = 0x12D0;
 }
 
-pub mod Vphysics2Dll {
+pub mod Vphysics2Dll { // vphysics2.dll
     pub const VPhysics2_Handle_Interface_001: usize = 0x5FA50;
     pub const VPhysics2_Interface_001: usize = 0x5B7F0;
 }
 
-pub mod VscriptDll {
+pub mod VscriptDll { // vscript.dll
     pub const VScriptManager010: usize = 0x31DA0;
 }
 
-pub mod VstdlibS64Dll {
+pub mod VstdlibS64Dll { // vstdlib_s64.dll
     pub const IVALIDATE001: usize = 0x24FF0;
     pub const VEngineCvar002: usize = 0x5750;
 }
 
-pub mod WorldrendererDll {
+pub mod WorldrendererDll { // worldrenderer.dll
     pub const WorldRendererMgr001: usize = 0x21530;
 }

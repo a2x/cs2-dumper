@@ -2,6 +2,7 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
+/// Represents a Python file builder.
 #[derive(Debug, PartialEq)]
 pub struct PythonFileBuilder;
 
@@ -14,7 +15,12 @@ impl FileBuilder for PythonFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+    fn write_namespace(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        comment: Option<&str>,
+    ) -> Result<()> {
         if let Some(comment) = comment {
             write!(output, "class {}: # {}\n", name, comment)?;
         } else {

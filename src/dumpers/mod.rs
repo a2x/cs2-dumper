@@ -2,10 +2,11 @@ use std::collections::BTreeMap;
 use std::fs::File;
 use std::io::Write;
 
+use anyhow::Result;
+
 use chrono::Utc;
 
 use crate::builder::{FileBuilder, FileBuilderEnum};
-use crate::error::Result;
 
 pub use interfaces::dump_interfaces;
 pub use offsets::dump_offsets;
@@ -15,20 +16,25 @@ pub mod interfaces;
 pub mod offsets;
 pub mod schemas;
 
+/// A single entry.
+#[derive(Debug, PartialEq)]
 pub struct Entry {
     pub name: String,
     pub value: usize,
     pub comment: Option<String>,
 }
 
+/// A container for entries.
 #[derive(Default)]
 pub struct EntriesContainer {
     pub data: Vec<Entry>,
-    pub comment: Option<String>
+    pub comment: Option<String>,
 }
 
+/// A map of entries.
 pub type Entries = BTreeMap<String, EntriesContainer>;
 
+/// Generate a file with the given builder.
 pub fn generate_file(
     builder: &mut FileBuilderEnum,
     entries: &Entries,
@@ -66,6 +72,7 @@ pub fn generate_file(
     Ok(())
 }
 
+/// Generate files with the given builders.
 pub fn generate_files(
     builders: &mut [FileBuilderEnum],
     entries: &Entries,
@@ -76,15 +83,16 @@ pub fn generate_files(
         .try_for_each(|builder| generate_file(builder, entries, file_name))
 }
 
-fn write_banner_to_file(file: &mut File, extension: &str) -> Result<()> {
-    let chrono_now = Utc::now();
+/// Writes the banner to the given file.
+fn write_banner_to_file(file: &mut File, file_ext: &str) -> Result<()> {
+    const REPO_URL: &str = "https://github.com/a2x/cs2-dumper";
 
-    const URL: &str = "https://github.com/a2x/cs2-dumper";
+    let now_utc = Utc::now();
 
-    let banner = match extension {
+    let banner = match file_ext {
         "json" => None,
-        "py" => Some(format!("'''\n{}\n{}\n'''\n\n", URL, chrono_now)),
-        _ => Some(format!("/*\n * {}\n * {}\n */\n\n", URL, chrono_now)),
+        "py" => Some(format!("'''\n{}\n{}\n'''\n\n", REPO_URL, now_utc)),
+        _ => Some(format!("/*\n * {}\n * {}\n */\n\n", REPO_URL, now_utc)),
     };
 
     if let Some(banner) = banner {

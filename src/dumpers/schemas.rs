@@ -1,6 +1,7 @@
+use anyhow::Result;
+
 use crate::builder::FileBuilderEnum;
 use crate::dumpers::Entry;
-use crate::error::Result;
 use crate::remote::Process;
 use crate::sdk::SchemaSystem;
 
@@ -20,6 +21,7 @@ pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             log::debug!("  {}", class.name());
 
             let container = entries.entry(class.name().replace("::", "_")).or_default();
+
             container.comment = class.parent()?.map(|p| p.name().to_string());
 
             for field in class.fields()? {

@@ -2,6 +2,7 @@ use std::io::{Result, Write};
 
 use super::FileBuilder;
 
+/// Represents a C# file builder.
 #[derive(Debug, PartialEq)]
 pub struct CSharpFileBuilder;
 
@@ -14,7 +15,12 @@ impl FileBuilder for CSharpFileBuilder {
         Ok(())
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+    fn write_namespace(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        comment: Option<&str>,
+    ) -> Result<()> {
         if let Some(comment) = comment {
             write!(output, "public static class {} {{ // {}\n", name, comment)?;
         } else {

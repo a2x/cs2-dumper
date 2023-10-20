@@ -1,8 +1,10 @@
+use anyhow::Result;
+
 use std::mem::offset_of;
 
-use crate::error::Result;
 use crate::remote::Process;
 
+/// Represents a hash bucket.
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashFixedDataInternal<T, K> {
@@ -14,11 +16,12 @@ pub struct HashFixedDataInternal<T, K> {
 impl<T, K> HashFixedDataInternal<T, K> {
     pub fn next(&self, process: &Process) -> Result<*mut HashFixedDataInternal<T, K>> {
         process.read_memory::<*mut HashFixedDataInternal<T, K>>(
-            (self as *const _ as usize) + offset_of!(HashFixedDataInternal<T, K>, next),
+            (self as *const _ as usize + offset_of!(HashFixedDataInternal<T, K>, next)).into(),
         )
     }
 }
 
+/// Represents a hash bucket.
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashBucketDataInternal<T, K> {
@@ -30,11 +33,12 @@ pub struct HashBucketDataInternal<T, K> {
 impl<T, K> HashBucketDataInternal<T, K> {
     pub fn next(&self, process: &Process) -> Result<*mut HashFixedDataInternal<T, K>> {
         process.read_memory::<*mut HashFixedDataInternal<T, K>>(
-            (self as *const _ as usize) + offset_of!(HashBucketDataInternal<T, K>, next),
+            (self as *const _ as usize + offset_of!(HashBucketDataInternal<T, K>, next)).into(),
         )
     }
 }
 
+/// Represents a hash table.
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashAllocatedData<T, K> {
@@ -45,11 +49,12 @@ pub struct HashAllocatedData<T, K> {
 impl<T, K> HashAllocatedData<T, K> {
     pub fn list(&self, process: &Process) -> Result<[HashFixedDataInternal<T, K>; 128]> {
         process.read_memory::<[HashFixedDataInternal<T, K>; 128]>(
-            (self as *const _ as usize) + offset_of!(HashAllocatedData<T, K>, list),
+            (self as *const _ as usize + offset_of!(HashAllocatedData<T, K>, list)).into(),
         )
     }
 }
 
+/// Represents a hash table.
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashUnallocatedData<T, K> {
@@ -63,23 +68,24 @@ pub struct HashUnallocatedData<T, K> {
 impl<T, K> HashUnallocatedData<T, K> {
     pub fn next(&self, process: &Process) -> Result<*mut HashUnallocatedData<T, K>> {
         process.read_memory::<*mut HashUnallocatedData<T, K>>(
-            self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, next),
+            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, next)).into(),
         )
     }
 
     pub fn ui_key(&self, process: &Process) -> Result<K> {
         process.read_memory::<K>(
-            (self as *const _ as usize) + offset_of!(HashUnallocatedData<T, K>, ui_key),
+            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, ui_key)).into(),
         )
     }
 
     pub fn block_list(&self, process: &Process) -> Result<[HashBucketDataInternal<T, K>; 256]> {
         process.read_memory::<[HashBucketDataInternal<T, K>; 256]>(
-            (self as *const _ as usize) + offset_of!(HashUnallocatedData<T, K>, block_list),
+            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, block_list)).into(),
         )
     }
 }
 
+/// Represents a hash bucket.
 #[derive(Debug)]
 #[repr(C)]
 pub struct HashBucket<T, K> {
@@ -100,17 +106,20 @@ pub struct UtlMemoryPool {
 }
 
 impl UtlMemoryPool {
+    /// Returns the number of blocks per blob.
     #[inline]
     pub fn block_size(&self) -> i32 {
         self.blocks_per_blob
     }
 
+    /// Returns the number of blocks allocated.
     #[inline]
     pub fn count(&self) -> i32 {
         self.block_allocated_size
     }
 }
 
+/// Represents a thread-safe hash table.
 #[derive(Debug)]
 #[repr(C)]
 pub struct UtlTsHash<T, K = u64> {
@@ -122,16 +131,19 @@ impl<T, K> UtlTsHash<T, K>
 where
     T: Copy,
 {
+    /// Returns the number of blocks per blob.
     #[inline]
     pub fn block_size(&self) -> i32 {
         self.entry_memory.block_size()
     }
 
+    /// Returns the number of blocks allocated.
     #[inline]
     pub fn count(&self) -> i32 {
         self.entry_memory.count()
     }
 
+    /// Returns a list of elements in the hash table.
     pub fn elements(&self, process: &Process) -> Result<Vec<T>> {
         let min_size = (self.block_size() as usize).min(self.count() as usize);
 

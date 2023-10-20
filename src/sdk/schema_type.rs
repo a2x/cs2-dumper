@@ -1,12 +1,15 @@
 use std::collections::HashMap;
 
+use anyhow::Result;
+
 use lazy_static::lazy_static;
 
 use regex::Regex;
 
-use crate::error::Result;
+use crate::mem::Address;
 use crate::remote::Process;
 
+/// Map of type names to their C equivalents.
 const TYPE_MAP: &[(&'static str, &'static str)] = &[
     ("uint8", "uint8_t"),
     ("uint16", "uint16_t"),
@@ -32,22 +35,26 @@ lazy_static! {
     };
 }
 
+/// Represents a schema type.
 pub struct SchemaType<'a> {
     process: &'a Process,
-    address: usize,
+
+    /// Address of the schema type.
+    addr: Address,
 }
 
 impl<'a> SchemaType<'a> {
-    pub fn new(process: &'a Process, address: usize) -> Self {
-        Self { process, address }
+    pub fn new(process: &'a Process, addr: Address) -> Self {
+        Self { process, addr }
     }
 
+    /// Returns the name of the type.
     pub fn name(&self) -> Result<String> {
-        let name_ptr = self.process.read_memory::<usize>(self.address + 0x8)?;
+        let name_ptr = self.process.read_memory::<usize>(self.addr + 0x8)?;
 
         let name = self
             .process
-            .read_string(name_ptr)?
+            .read_string(name_ptr.into())?
             .replace(" ", "")
             .to_string();
 

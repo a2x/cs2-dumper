@@ -1,13 +1,13 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 10:31:51.207183800 UTC
+2023-10-20 05:22:29.724470400 UTC
 '''
 
-class AnimationsystemDll:
+class AnimationsystemDll: # animationsystem.dll
     AnimationSystemUtils_001 = 0x64670
     AnimationSystem_001 = 0x5F1D0
 
-class ClientDll:
+class ClientDll: # client.dll
     LegacyGameUI001 = 0x88FF10
     Source2ClientUI001 = 0x87E9B0
     Source2ClientPrediction001 = 0x79C1F0
@@ -17,7 +17,7 @@ class ClientDll:
     EmptyWorldService001_Client = 0x48BCC0
     Source2ClientConfig001 = 0x472CD0
 
-class Engine2Dll:
+class Engine2Dll: # engine2.dll
     SimpleEngineLoopService_001 = 0x1E1FD0
     ClientServerEngineLoopService_001 = 0x1D7CA0
     KeyValueCache001 = 0x1D42E0
@@ -51,11 +51,11 @@ class Engine2Dll:
     Source2EngineToClientStringTable001 = 0x83790
     Source2EngineToClient001 = 0x5A1D0
 
-class FilesystemStdioDll:
+class FilesystemStdioDll: # filesystem_stdio.dll
     VAsyncFileSystem2_001 = 0x66D30
     VFileSystem017 = 0x66D20
 
-class HostDll:
+class HostDll: # host.dll
     Source2Host001 = 0x18E10
     SinglePlayerSharedMemory001 = 0x18A90
     SaveRestoreDataVersion001 = 0x18A80
@@ -65,75 +65,75 @@ class HostDll:
     GameModelInfo001 = 0x11CC0
     DebugDrawQueueManager001 = 0x11710
 
-class ImemanagerDll:
+class ImemanagerDll: # imemanager.dll
     IMEManager001 = 0xC470
 
-class InputsystemDll:
+class InputsystemDll: # inputsystem.dll
     InputSystemVersion001 = 0x28D0
     InputStackSystemVersion001 = 0x16F0
 
-class LocalizeDll:
+class LocalizeDll: # localize.dll
     Localize_001 = 0x3830
 
-class MatchmakingDll:
+class MatchmakingDll: # matchmaking.dll
     GameTypes001 = 0x50270
     MATCHFRAMEWORK_001 = 0x101030
 
-class Materialsystem2Dll:
+class Materialsystem2Dll: # materialsystem2.dll
     MaterialUtils_001 = 0x4DB90
     TextLayout_001 = 0x4A2E0
     PostProcessingSystem_001 = 0x42A60
     FontManager_001 = 0x37900
     VMaterialSystem2_001 = 0x25EC0
 
-class MeshsystemDll:
+class MeshsystemDll: # meshsystem.dll
     MeshSystem001 = 0x7270
 
-class NavsystemDll:
+class NavsystemDll: # navsystem.dll
     NavSystem001 = 0x76F0
 
-class NetworksystemDll:
+class NetworksystemDll: # networksystem.dll
     SerializedEntitiesVersion001 = 0xD1A70
     NetworkSystemVersion001 = 0xBBF80
     NetworkMessagesVersion001 = 0x9C020
     FlattenedSerializersVersion001 = 0x7B8A0
 
-class PanoramaDll:
+class PanoramaDll: # panorama.dll
     PanoramaUIEngine001 = 0x57EE0
 
-class PanoramaTextPangoDll:
+class PanoramaTextPangoDll: # panorama_text_pango.dll
     PanoramaTextServices001 = 0x4CBD0
 
-class PanoramauiclientDll:
+class PanoramauiclientDll: # panoramauiclient.dll
     PanoramaUIClient001 = 0x12780
 
-class ParticlesDll:
+class ParticlesDll: # particles.dll
     ParticleSystemMgr003 = 0x52D20
 
-class PulseSystemDll:
+class PulseSystemDll: # pulse_system.dll
     IPulseSystem_001 = 0x5B80
 
-class Rendersystemdx11Dll:
+class Rendersystemdx11Dll: # rendersystemdx11.dll
     RenderUtils_001 = 0x52C90
     VRenderDeviceMgrBackdoor001 = 0x4A3A0
     RenderDeviceMgr001 = 0x4A390
 
-class ResourcesystemDll:
+class ResourcesystemDll: # resourcesystem.dll
     ResourceSystem013 = 0x10650
 
-class ScenefilecacheDll:
+class ScenefilecacheDll: # scenefilecache.dll
     SceneFileCache002 = 0x68E0
     ResponseRulesCache001 = 0x3190
 
-class ScenesystemDll:
+class ScenesystemDll: # scenesystem.dll
     SceneUtils_001 = 0x13D030
     SceneSystem_002 = 0xCAE10
     RenderingPipelines_001 = 0x8EED0
 
-class SchemasystemDll:
+class SchemasystemDll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
-class ServerDll:
+class ServerDll: # server.dll
     NavGameTest001 = 0xA2D150
     ServerToolsInfo_001 = 0x831AC0
     Source2GameClients001 = 0x831AD0
@@ -145,16 +145,16 @@ class ServerDll:
     customnavsystem001 = 0x245270
     Source2GameDirector001 = 0x13EFC0
 
-class SoundsystemDll:
+class SoundsystemDll: # soundsystem.dll
     SoundOpSystem001 = 0x1567E0
     SoundOpSystemEdit001 = 0x8BBC0
     VMixEditTool001 = 0x71740
     SoundSystem001 = 0x46540
 
-class SteamaudioDll:
+class SteamaudioDll: # steamaudio.dll
     SteamAudio001 = 0x12EE0
 
-class Steamclient64Dll:
+class Steamclient64Dll: # steamclient64.dll
     IVALIDATE001 = 0x833640
     CLIENTENGINE_INTERFACE_VERSION005 = 0x82F4C0
     SteamClient020 = 0x62CAF0
@@ -175,31 +175,31 @@ class Steamclient64Dll:
     p2pvoice002 = 0xD8EA0
     p2pvoicesingleton002 = 0xD5840
 
-class Tier0Dll:
+class Tier0Dll: # tier0.dll
     VStringTokenSystem001 = 0x18C060
     TestScriptMgr001 = 0x13F3C0
     VProcessUtils002 = 0x12F540
     VEngineCvar007 = 0x61920
 
-class V8SystemDll:
+class V8SystemDll: # v8system.dll
     Source2V8System001 = 0x1670
 
-class ValveAviDll:
+class ValveAviDll: # valve_avi.dll
     VAvi001 = 0x2F90
 
-class ValveWmfDll:
+class ValveWmfDll: # valve_wmf.dll
     VMediaFoundation001 = 0x12D0
 
-class Vphysics2Dll:
+class Vphysics2Dll: # vphysics2.dll
     VPhysics2_Handle_Interface_001 = 0x5FA50
     VPhysics2_Interface_001 = 0x5B7F0
 
-class VscriptDll:
+class VscriptDll: # vscript.dll
     VScriptManager010 = 0x31DA0
 
-class VstdlibS64Dll:
+class VstdlibS64Dll: # vstdlib_s64.dll
     IVALIDATE001 = 0x24FF0
     VEngineCvar002 = 0x5750
 
-class WorldrendererDll:
+class WorldrendererDll: # worldrenderer.dll
     WorldRendererMgr001 = 0x21530

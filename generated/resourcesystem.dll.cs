@@ -1,6 +1,6 @@
 /*
  * https://github.com/a2x/cs2-dumper
- * 2023-10-18 10:31:50.134949600 UTC
+ * 2023-10-20 05:22:27.718005600 UTC
  */
 
 public static class AABB_t {

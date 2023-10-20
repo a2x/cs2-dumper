@@ -1,31 +1,40 @@
-use crate::error::Result;
+use anyhow::Result;
+
+use crate::mem::Address;
 use crate::remote::Process;
 
 use super::SchemaType;
 
+/// Represents a class field in a schema.
 pub struct SchemaClassFieldData<'a> {
     process: &'a Process,
-    address: usize,
+
+    /// Address of the class field.
+    addr: Address,
 }
 
 impl<'a> SchemaClassFieldData<'a> {
-    pub fn new(process: &'a Process, address: usize) -> Self {
-        Self { process, address }
+    pub fn new(process: &'a Process, addr: Address) -> Self {
+        Self { process, addr }
     }
 
+    /// Returns the name of the field.
     pub fn name(&self) -> Result<String> {
-        let name_ptr = self.process.read_memory::<usize>(self.address)?;
+        let name_ptr = self.process.read_memory::<usize>(self.addr + 0x0)?;
 
-        self.process.read_string(name_ptr)
+        self.process.read_string_len(name_ptr.into(), 64)
     }
 
+    /// Returns the type of the field.
     pub fn r#type(&self) -> Result<SchemaType> {
-        let type_ptr = self.process.read_memory::<usize>(self.address + 0x8)?;
-
-        Ok(SchemaType::new(self.process, type_ptr))
+        Ok(SchemaType::new(
+            self.process,
+            self.process.read_memory::<usize>(self.addr + 0x8)?.into(),
+        ))
     }
 
+    /// Returns the offset of the field.
     pub fn offset(&self) -> Result<u16> {
-        self.process.read_memory::<u16>(self.address + 0x10)
+        self.process.read_memory::<u16>(self.addr + 0x10)
     }
 }

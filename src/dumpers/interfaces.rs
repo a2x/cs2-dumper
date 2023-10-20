@@ -1,8 +1,9 @@
+use anyhow::Result;
+
 use convert_case::{Case, Casing};
 
 use crate::builder::FileBuilderEnum;
 use crate::dumpers::Entry;
-use crate::error::Result;
 use crate::remote::Process;
 use crate::sdk::InterfaceReg;
 
@@ -21,14 +22,14 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
         if let Some(create_interface_export) = module.export("CreateInterface") {
             log::info!("Dumping interfaces in {}...", module_name);
 
-            let create_interface_address =
-                process.resolve_rip(create_interface_export.va, None, None)?;
+            let create_interface_addr =
+                process.resolve_rip(create_interface_export.va.into(), None, None)?;
 
             if let Ok(mut interface_reg) =
-                process.read_memory::<*mut InterfaceReg>(create_interface_address)
+                process.read_memory::<*mut InterfaceReg>(create_interface_addr)
             {
                 while !interface_reg.is_null() {
-                    let ptr = unsafe { (*interface_reg).ptr(process) }?;
+                    let ptr = unsafe { (*interface_reg).pointer(process) }?;
                     let name = unsafe { (*interface_reg).name(process) }?;
 
                     log::debug!(
@@ -36,23 +37,25 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
                         name,
                         ptr,
                         module_name,
-                        ptr - module.base()
+                        ptr - module.base_address()
                     );
 
-                    entries
+                    let container = entries
                         .entry(
                             module_name
                                 .replace(".", "_")
                                 .to_case(Case::Snake)
                                 .to_case(Case::Pascal),
                         )
-                        .or_default()
-                        .data
-                        .push(Entry {
-                            name: name.clone(),
-                            value: ptr - module.base(),
-                            comment: None,
-                        });
+                        .or_default();
+
+                    container.comment = Some(module_name.clone());
+
+                    container.data.push(Entry {
+                        name: name.clone(),
+                        value: (ptr - module.base_address()).into(),
+                        comment: None,
+                    });
 
                     interface_reg = unsafe { (*interface_reg).next(process) }?;
                 }

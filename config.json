@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "dwBaseEntityModel_setModel",
+      "module": "client.dll",
+      "pattern": "E8 ? ? ? ? F3 0F 10 4C 3B ?",
+      "operations": [
+        {
+          "type": "jmp"
+        }
+      ]
+    },
+    {
       "name": "dwBuildNumber",
       "module": "engine2.dll",
       "pattern": "8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8B 0D ? ? ? ? 48 8D 05",
@@ -139,6 +149,34 @@
         {
           "type": "add",
           "value": 48
+        }
+      ]
+    },
+    {
+      "name": "dwGameEntitySystem_getBaseEntity",
+      "module": "client.dll",
+      "pattern": "8B D3 E8 ? ? ? ? 48 8B F8 48 85 C0 74 76",
+      "operations": [
+        {
+          "type": "add",
+          "value": 2
+        },
+        {
+          "type": "jmp"
+        }
+      ]
+    },
+    {
+      "name": "dwGameEntitySystem_getHighestEntityIndex",
+      "module": "client.dll",
+      "pattern": "33 DB E8 ? ? ? ? 8B 08",
+      "operations": [
+        {
+          "type": "add",
+          "value": 2
+        },
+        {
+          "type": "jmp"
         }
       ]
     },
@@ -324,44 +362,6 @@
           "type": "ripRelative",
           "offset": 2,
           "length": 6
-        }
-      ]
-    },
-    {
-      "name": "dwGameEntitySystem_getBaseEntity",
-      "module": "client.dll",
-      "pattern": "8B D3 E8 ? ? ? ? 48 8B F8 48 85 C0 74 76",
-      "operations": [
-        {
-          "type": "add",
-          "value": 2
-        },
-        {
-          "type": "jmp"
-        }
-      ]
-    },
-    {
-      "name": "dwGameEntitySystem_getHighestEntityIndex",
-      "module": "client.dll",
-      "pattern": "33 DB E8 ? ? ? ? 8B 08",
-      "operations": [
-        {
-          "type": "add",
-          "value": 2
-        },
-        {
-          "type": "jmp"
-        }
-      ]
-    },
-    {
-      "name": "dwBaseEntityModel_setModel",
-      "module": "client.dll",
-      "pattern": "E8 ? ? ? ? F3 0F 10 4C 3B ?",
-      "operations": [
-        {
-          "type": "jmp"
         }
       ]
     }

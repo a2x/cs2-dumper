@@ -1,6 +1,6 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 10:31:50.470124400 UTC
+2023-10-20 05:22:28.366569300 UTC
 '''
 
 class CBaseRendererSource2: # CParticleFunctionRenderer

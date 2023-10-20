@@ -1,9 +1,10 @@
 '''
 https://github.com/a2x/cs2-dumper
-2023-10-18 10:31:55.050894100 UTC
+2023-10-20 05:22:30.277115700 UTC
 '''
 
-class ClientDll:
+class ClientDll: # client.dll
+    dwBaseEntityModel_setModel = 0x57C750
     dwEntityList = 0x1793DC8
     dwForceAttack = 0x169AE50
     dwForceAttack2 = 0x169AEE0
@@ -13,6 +14,8 @@ class ClientDll:
     dwForceJump = 0x169B360
     dwForceLeft = 0x169B1B0
     dwForceRight = 0x169B240
+    dwGameEntitySystem_getBaseEntity = 0x5FFD50
+    dwGameEntitySystem_getHighestEntityIndex = 0x5F1A40
     dwGameRules = 0x17EFAD8
     dwGlobalVars = 0x1696F40
     dwGlowManager = 0x17EF258
@@ -23,11 +26,8 @@ class ClientDll:
     dwViewAngles = 0x18E0DA0
     dwViewMatrix = 0x1881D70
     dwViewRender = 0x1882768
-    dwGameEntitySystem_getBaseEntity = 0x5FFD50
-    dwGameEntitySystem_getHighestEntityIndex = 0x5F1A40
-    dwBaseEntityModel_setModel = 0x57C750
 
-class Engine2Dll:
+class Engine2Dll: # engine2.dll
     dwBuildNumber = 0x487514
     dwNetworkGameClient = 0x486AB0
     dwNetworkGameClient_getLocalPlayer = 0xF0

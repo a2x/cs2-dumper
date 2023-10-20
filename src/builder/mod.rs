@@ -14,6 +14,7 @@ pub mod json_file_builder;
 pub mod python_file_builder;
 pub mod rust_file_builder;
 
+/// Represents a file builder enum.
 #[derive(Debug, PartialEq)]
 pub enum FileBuilderEnum {
     CppFileBuilder(CppFileBuilder),
@@ -32,7 +33,12 @@ impl FileBuilder for FileBuilderEnum {
         self.as_mut().write_top_level(output)
     }
 
-    fn write_namespace(&mut self, output: &mut dyn Write, name: &str, comment: Option<&str>) -> Result<()> {
+    fn write_namespace(
+        &mut self,
+        output: &mut dyn Write,
+        name: &str,
+        comment: Option<&str>,
+    ) -> Result<()> {
         self.as_mut().write_namespace(output, name, comment)
     }
 
