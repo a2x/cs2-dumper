@@ -9,7 +9,7 @@ use crate::sdk::InterfaceReg;
 
 use super::{generate_files, Entries};
 
-pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
+pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process, path: &String) -> Result<()> {
     let mut entries = Entries::new();
 
     for module_name in process
@@ -63,7 +63,7 @@ pub fn dump_interfaces(builders: &mut Vec<FileBuilderEnum>, process: &Process) -
         }
     }
 
-    generate_files(builders, &entries, "interfaces")?;
+    generate_files(builders, &entries, "interfaces", &&path)?;
 
     Ok(())
 }

@@ -117,7 +117,7 @@ mod tests {
     }
 }
 
-pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
+pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process, path: &String) -> Result<()> {
     let file = File::open("config.json")?;
 
     let config: Config = serde_json::from_reader(file)?;
@@ -205,7 +205,7 @@ pub fn dump_offsets(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
         });
     }
 
-    generate_files(builders, &entries, "offsets")?;
+    generate_files(builders, &entries, "offsets", &path)?;
 
     Ok(())
 }

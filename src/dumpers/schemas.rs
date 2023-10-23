@@ -7,7 +7,7 @@ use crate::sdk::SchemaSystem;
 
 use super::{generate_files, Entries};
 
-pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> Result<()> {
+pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process, path: &String) -> Result<()> {
     let schema_system = SchemaSystem::new(&process)?;
 
     for type_scope in schema_system.type_scopes()? {
@@ -44,7 +44,7 @@ pub fn dump_schemas(builders: &mut Vec<FileBuilderEnum>, process: &Process) -> R
             }
         }
 
-        generate_files(builders, &entries, &module_name)?;
+        generate_files(builders, &entries, &module_name, &&path)?;
     }
 
     Ok(())

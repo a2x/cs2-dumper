@@ -6,7 +6,8 @@ use anyhow::Result;
 
 use chrono::Utc;
 
-use crate::builder::{FileBuilder, FileBuilderEnum};
+
+use crate::{builder::{FileBuilder, FileBuilderEnum}, main};
 
 pub use interfaces::dump_interfaces;
 pub use offsets::dump_offsets;
@@ -39,12 +40,13 @@ pub fn generate_file(
     builder: &mut FileBuilderEnum,
     entries: &Entries,
     file_name: &str,
+    path: &&String,
 ) -> Result<()> {
     if entries.is_empty() {
         return Ok(());
     }
 
-    let file_path = format!("generated/{}.{}", file_name, builder.extension());
+    let file_path = format!("{}/{}.{}", path, file_name, builder.extension());
 
     let mut file = File::create(file_path)?;
 
@@ -77,10 +79,11 @@ pub fn generate_files(
     builders: &mut [FileBuilderEnum],
     entries: &Entries,
     file_name: &str,
+    path: &&String,
 ) -> Result<()> {
     builders
         .iter_mut()
-        .try_for_each(|builder| generate_file(builder, entries, file_name))
+        .try_for_each(|builder| generate_file(builder, entries, file_name, &&path))
 }
 
 /// Writes the banner to the given file.

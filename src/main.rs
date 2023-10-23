@@ -34,6 +34,12 @@ struct Args {
     schemas: bool,
 
     #[arg(short, long)]
+    dbuilders: String,
+
+    #[arg(short, long)]
+    path: String,
+
+    #[arg(short, long)]
     verbose: bool,
 }
 
@@ -42,6 +48,8 @@ fn main() -> Result<()> {
         interfaces,
         offsets,
         schemas,
+        dbuilders,
+        path,
         verbose,
     } = Args::parse();
 
@@ -61,28 +69,54 @@ fn main() -> Result<()> {
 
     let process = Process::new("cs2.exe")?;
 
-    fs::create_dir_all("generated")?;
+    fs::create_dir_all(path.clone())?;
 
-    let mut builders: Vec<FileBuilderEnum> = vec![
-        FileBuilderEnum::CppFileBuilder(CppFileBuilder),
-        FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder),
-        FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default()),
-        FileBuilderEnum::PythonFileBuilder(PythonFileBuilder),
-        FileBuilderEnum::RustFileBuilder(RustFileBuilder),
-    ];
+    let mut active_builders: Vec<FileBuilderEnum> = Vec::new();
+
+
+    if dbuilders.len() == 0 {
+        active_builders = vec![
+            FileBuilderEnum::CppFileBuilder(CppFileBuilder),
+            FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder),
+            FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default()),
+            FileBuilderEnum::PythonFileBuilder(PythonFileBuilder),
+            FileBuilderEnum::RustFileBuilder(RustFileBuilder),
+        ];
+    }
+
+    let configured_builders = dbuilders.split(",");
+
+    for active_builder in configured_builders {
+        if active_builder.eq_ignore_ascii_case("JSON"){
+            active_builders.push(FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default()));
+        }else if active_builder.eq_ignore_ascii_case("CPP") {
+            active_builders.push(FileBuilderEnum::CppFileBuilder(CppFileBuilder));
+        }else if active_builder.eq_ignore_ascii_case("CSharp") {
+            active_builders.push(FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder));
+        } else if active_builder.eq_ignore_ascii_case("Python") {
+            active_builders.push(FileBuilderEnum::PythonFileBuilder(PythonFileBuilder));
+        }else if active_builder.eq_ignore_ascii_case("Rust") {
+            active_builders.push(FileBuilderEnum::RustFileBuilder(RustFileBuilder));
+        }
+    }
+
+    
 
     let all = !(interfaces || offsets || schemas);
 
+    let test = path.clone();
+
+
     if schemas || all {
-        dump_schemas(&mut builders, &process)?;
+        dump_schemas(&mut active_builders, &process, &test)?;
     }
 
     if interfaces || all {
-        dump_interfaces(&mut builders, &process)?;
+        dump_interfaces(&mut active_builders, &process, &&test)?;
     }
 
     if offsets || all {
-        dump_offsets(&mut builders, &process)?;
+        dump_offsets(&mut active_builders, &process, &&&test)?;
     }
 
     let duration = start_time.elapsed();
