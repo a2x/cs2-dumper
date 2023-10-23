@@ -22,7 +22,7 @@ mod remote;
 mod sdk;
 
 #[derive(Debug, Parser)]
-#[command(author, version, about, long_about = None)]
+#[command(author, version, about)]
 struct Args {
     #[arg(short, long)]
     interfaces: bool,
@@ -33,7 +33,7 @@ struct Args {
     #[arg(short, long)]
     schemas: bool,
 
-    #[arg(short, long)]
+    #[arg(short, long, default_value = "all")]
     dbuilders: String,
 
     #[arg(short, long)]
@@ -74,7 +74,7 @@ fn main() -> Result<()> {
     let mut active_builders: Vec<FileBuilderEnum> = Vec::new();
 
 
-    if dbuilders.len() == 0 {
+    if dbuilders == "all" {
         active_builders = vec![
             FileBuilderEnum::CppFileBuilder(CppFileBuilder),
             FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder),
