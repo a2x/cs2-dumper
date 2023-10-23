@@ -16,12 +16,12 @@ Generated files are stored in the `generated` directory.
 ## Available Arguments
 | Argument | Type | Description | Default Value | Required
 |--|--|--|--|--|
-| interfaces | bool | Dump Interfaces | True | [] |
-| offsets | bool | Dump Offsets | True | [] |
-| schemas | bool | Dump Schemas | True | [] |
-| dbuilders | String | Comma Separated String **without spaces** specifying the output file formats. Available Builders: [JSON, CPP, CSharp, Python, Rust] | Blank (All) | [] |
-| path | String | Folder name for dumped assets | True | [x] |
-| interfaces | bool | Dump Interfaces | True | [] |
+| interfaces | bool | Dump Interfaces | True | :heavy_multiplication_x: |
+| offsets | bool | Dump Offsets | True | :heavy_multiplication_x: |
+| schemas | bool | Dump Schemas | True | :heavy_multiplication_x: |
+| dbuilders | String | Comma Separated String **without spaces** specifying the output file formats. Available Builders: [JSON, CPP, CSharp, Python, Rust] | Blank (All) | :heavy_multiplication_x: |
+| path | String | Folder name for dumped assets | True | :heavy_check_mark: |
+| interfaces | bool | Dump Interfaces | True | :heavy_multiplication_x: |
   
 
 # License
