@@ -1,8 +1,9 @@
-use std::io::{Result, Write};
-
 use super::FileBuilder;
 
-/// Represents a Rust file builder.
+use std::io::{Result, Write};
+
+/// A structure representing a builder for Rust files.
+/// The builder implements the `FileBuilder` trait.
 #[derive(Debug, Default, PartialEq)]
 pub struct RustFileBuilder;
 
@@ -15,9 +16,7 @@ impl FileBuilder for RustFileBuilder {
         write!(
             output,
             "#![allow(non_snake_case, non_upper_case_globals)]\n\n"
-        )?;
-
-        Ok(())
+        )
     }
 
     fn write_namespace(
@@ -26,13 +25,9 @@ impl FileBuilder for RustFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        if let Some(comment) = comment {
-            write!(output, "pub mod {} {{ // {}\n", name, comment)?;
-        } else {
-            write!(output, "pub mod {} {{\n", name)?;
-        }
+        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
 
-        Ok(())
+        write!(output, "pub mod {} {{ {}\n", name, comment)
     }
 
     fn write_variable(
@@ -41,20 +36,20 @@ impl FileBuilder for RustFileBuilder {
         name: &str,
         value: usize,
         comment: Option<&str>,
+        indentation: Option<usize>,
     ) -> Result<()> {
-        match comment {
-            Some(comment) => write!(
-                output,
-                "    pub const {}: usize = {:#X}; // {}\n",
-                name, value, comment
-            ),
-            None => write!(output, "    pub const {}: usize = {:#X};\n", name, value),
-        }
+        let indentation = " ".repeat(indentation.unwrap_or(4));
+
+        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+
+        write!(
+            output,
+            "{}pub const {}: usize = {:#X}; {}\n",
+            indentation, name, value, comment
+        )
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {
-        write!(output, "{}", if eof { "}" } else { "}\n\n" })?;
-
-        Ok(())
+        write!(output, "{}", if eof { "}" } else { "}\n\n" })
     }
 }

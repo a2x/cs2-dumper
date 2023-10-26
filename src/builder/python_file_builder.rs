@@ -1,8 +1,9 @@
-use std::io::{Result, Write};
-
 use super::FileBuilder;
 
-/// Represents a Python file builder.
+use std::io::{Result, Write};
+
+/// A structure representing a builder for Python files.
+/// The builder implements the `FileBuilder` trait.
 #[derive(Debug, PartialEq)]
 pub struct PythonFileBuilder;
 
@@ -21,13 +22,9 @@ impl FileBuilder for PythonFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        if let Some(comment) = comment {
-            write!(output, "class {}: # {}\n", name, comment)?;
-        } else {
-            write!(output, "class {}:\n", name)?;
-        }
+        let comment = comment.map_or(String::new(), |c| format!("# {}", c));
 
-        Ok(())
+        write!(output, "class {}: {}\n", name, comment)
     }
 
     fn write_variable(
@@ -36,11 +33,17 @@ impl FileBuilder for PythonFileBuilder {
         name: &str,
         value: usize,
         comment: Option<&str>,
+        indentation: Option<usize>,
     ) -> Result<()> {
-        match comment {
-            Some(comment) => write!(output, "    {} = {:#X} # {}\n", name, value, comment),
-            None => write!(output, "    {} = {:#X}\n", name, value),
-        }
+        let indentation = " ".repeat(indentation.unwrap_or(4));
+
+        let comment = comment.map_or(String::new(), |c| format!("# {}", c));
+
+        write!(
+            output,
+            "{}{} = {:#X} {}\n",
+            indentation, name, value, comment
+        )
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {

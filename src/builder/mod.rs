@@ -1,11 +1,11 @@
-pub use std::io::{Result, Write};
-
 pub use cpp_file_builder::CppFileBuilder;
 pub use csharp_file_builder::CSharpFileBuilder;
 pub use file_builder::FileBuilder;
 pub use json_file_builder::JsonFileBuilder;
 pub use python_file_builder::PythonFileBuilder;
 pub use rust_file_builder::RustFileBuilder;
+
+pub use std::io::{Result, Write};
 
 pub mod cpp_file_builder;
 pub mod csharp_file_builder;
@@ -14,13 +14,23 @@ pub mod json_file_builder;
 pub mod python_file_builder;
 pub mod rust_file_builder;
 
-/// Represents a file builder enum.
+/// `FileBuilder` is an enum that defines different kinds of file builders.
+/// Each variant corresponds to a builder for a particular type of file.
 #[derive(Debug, PartialEq)]
 pub enum FileBuilderEnum {
+    /// Represents a builder for C++ header files.
     CppFileBuilder(CppFileBuilder),
+
+    /// Represents a builder for C# files.
     CSharpFileBuilder(CSharpFileBuilder),
+
+    /// Represents a builder for JSON files.
     JsonFileBuilder(JsonFileBuilder),
+
+    /// Represents a builder for Python files.
     PythonFileBuilder(PythonFileBuilder),
+
+    /// Represents a builder for Rust files.
     RustFileBuilder(RustFileBuilder),
 }
 
@@ -48,8 +58,10 @@ impl FileBuilder for FileBuilderEnum {
         name: &str,
         value: usize,
         comment: Option<&str>,
+        indentation: Option<usize>,
     ) -> Result<()> {
-        self.as_mut().write_variable(output, name, value, comment)
+        self.as_mut()
+            .write_variable(output, name, value, comment, indentation)
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {

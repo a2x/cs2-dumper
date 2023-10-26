@@ -1,40 +1,58 @@
 #![allow(dead_code)]
 #![feature(offset_of)]
 
-use std::fs;
-use std::time::Instant;
-
 use anyhow::Result;
+
+use builder::*;
 
 use clap::Parser;
 
-use simple_logger::SimpleLogger;
+use dumper::{dump_interfaces, dump_offsets, dump_schemas};
 
-use builder::*;
-use dumpers::*;
-use remote::Process;
+use log::LevelFilter;
+
+use simplelog::{info, ColorChoice, ConfigBuilder, TermLogger, TerminalMode};
+
+use std::fs;
+use std::time::Instant;
+
+use util::Process;
 
 mod builder;
 mod config;
-mod dumpers;
-mod mem;
-mod remote;
+mod dumper;
 mod sdk;
+mod util;
 
+/// Command line arguments for the program.
 #[derive(Debug, Parser)]
-#[command(author, version, about, long_about = None)]
+#[command(name = "cs2-dumper")]
+#[command(author = "a2x")]
+#[command(version = "1.1.4")]
 struct Args {
+    /// Dump interfaces.
     #[arg(short, long)]
     interfaces: bool,
 
+    /// Dump offsets.
     #[arg(short, long)]
     offsets: bool,
 
+    /// Dump schemas.
     #[arg(short, long)]
     schemas: bool,
 
+    /// Enable verbose output.
     #[arg(short, long)]
     verbose: bool,
+
+    /// Output folder.
+    #[arg(short, long, default_value = "generated")]
+    output: String,
+
+    /// Indentation level.
+    #[arg(long, default_value = "4")]
+    indent: usize,
 }
 
 fn main() -> Result<()> {
@@ -43,25 +61,27 @@ fn main() -> Result<()> {
         offsets,
         schemas,
         verbose,
+        output,
+        indent,
     } = Args::parse();
 
     let log_level = if verbose {
-        log::LevelFilter::Debug
+        LevelFilter::Debug
     } else {
-        log::LevelFilter::Info
+        LevelFilter::Info
     };
 
-    SimpleLogger::new()
-        .with_level(log_level)
-        .without_timestamps()
-        .init()
-        .unwrap();
+    let config = ConfigBuilder::new().add_filter_ignore_str("goblin").build();
 
-    let start_time = Instant::now();
+    TermLogger::init(log_level, config, TerminalMode::Mixed, ColorChoice::Auto)?;
 
-    let process = Process::new("cs2.exe")?;
+    let now = Instant::now();
 
-    fs::create_dir_all("generated")?;
+    fs::create_dir_all(&output)?;
+
+    let mut process = Process::new("cs2.exe")?;
+
+    process.initialize()?;
 
     let mut builders: Vec<FileBuilderEnum> = vec![
         FileBuilderEnum::CppFileBuilder(CppFileBuilder),
@@ -74,20 +94,21 @@ fn main() -> Result<()> {
     let all = !(interfaces || offsets || schemas);
 
     if schemas || all {
-        dump_schemas(&mut builders, &process)?;
+        dump_schemas(&mut process, &mut builders, &output, indent)?;
     }
 
     if interfaces || all {
-        dump_interfaces(&mut builders, &process)?;
+        dump_interfaces(&mut process, &mut builders, &output, indent)?;
     }
 
     if offsets || all {
-        dump_offsets(&mut builders, &process)?;
+        dump_offsets(&mut process, &mut builders, &output, indent)?;
     }
 
-    let duration = start_time.elapsed();
-
-    log::info!("Done! Time elapsed: {:?}", duration);
+    info!(
+        "<on-green>Done!</> <green>Time elapsed: {:?}</>",
+        now.elapsed()
+    );
 
     Ok(())
 }

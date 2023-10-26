@@ -1,25 +1,40 @@
+use crate::util::{Address, Process};
+
 use anyhow::Result;
 
-use crate::mem::Address;
-use crate::remote::Process;
-
-/// Represents a schema type declared class.
+/// Represents a declared class type in the schema.
 pub struct SchemaTypeDeclaredClass<'a> {
     process: &'a Process,
-
-    /// Address of the schema type declared class.
-    addr: Address,
+    address: Address,
 }
 
 impl<'a> SchemaTypeDeclaredClass<'a> {
-    pub fn new(process: &'a Process, addr: Address) -> Self {
-        Self { process, addr }
+    /// Creates a new `SchemaTypeDeclaredClass` instance.
+    ///
+    /// # Arguments
+    ///
+    /// * `process` - A reference to the `Process` struct.
+    /// * `address` - The address of the `SchemaTypeDeclaredClass` instance.
+    ///
+    /// # Returns
+    ///
+    /// * `SchemaTypeDeclaredClass` - The new `SchemaTypeDeclaredClass` instance.
+    pub fn new(process: &'a Process, address: Address) -> Self {
+        Self { process, address }
     }
 
-    /// Returns the name of the class.
+    /// Returns the name of the declared class.
+    ///
+    /// # Arguments
+    ///
+    /// * `&self` - A reference to the `SchemaTypeDeclaredClass` struct.
+    ///
+    /// # Returns
+    ///
+    /// * `Result<String>` - The name of the declared class.
     pub fn name(&self) -> Result<String> {
-        let name_ptr = self.process.read_memory::<usize>(self.addr + 0x8)?;
+        let name_ptr = self.process.read_memory::<usize>(self.address + 0x8)?;
 
-        self.process.read_string_len(name_ptr.into(), 64)
+        self.process.read_string_length(name_ptr.into(), 64)
     }
 }

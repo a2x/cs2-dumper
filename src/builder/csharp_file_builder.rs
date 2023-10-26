@@ -1,8 +1,9 @@
-use std::io::{Result, Write};
-
 use super::FileBuilder;
 
-/// Represents a C# file builder.
+use std::io::{Result, Write};
+
+/// A structure representing a builder for C# files.
+/// The builder implements the `FileBuilder` trait.
 #[derive(Debug, PartialEq)]
 pub struct CSharpFileBuilder;
 
@@ -21,13 +22,9 @@ impl FileBuilder for CSharpFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        if let Some(comment) = comment {
-            write!(output, "public static class {} {{ // {}\n", name, comment)?;
-        } else {
-            write!(output, "public static class {} {{\n", name)?;
-        }
+        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
 
-        Ok(())
+        write!(output, "public static class {} {{ {}\n", name, comment)
     }
 
     fn write_variable(
@@ -36,20 +33,20 @@ impl FileBuilder for CSharpFileBuilder {
         name: &str,
         value: usize,
         comment: Option<&str>,
+        indentation: Option<usize>,
     ) -> Result<()> {
-        match comment {
-            Some(comment) => write!(
-                output,
-                "    public const nint {} = {:#X}; // {}\n",
-                name, value, comment
-            ),
-            None => write!(output, "    public const nint {} = {:#X};\n", name, value),
-        }
+        let indentation = " ".repeat(indentation.unwrap_or(4));
+
+        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+
+        write!(
+            output,
+            "{}public const nint {} = {:#X}; {}\n",
+            indentation, name, value, comment
+        )
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {
-        write!(output, "{}", if eof { "}" } else { "}\n\n" })?;
-
-        Ok(())
+        write!(output, "{}", if eof { "}" } else { "}\n\n" })
     }
 }

@@ -1,8 +1,9 @@
-use std::io::{Result, Write};
-
 use super::FileBuilder;
 
-/// Represents a C++ header file builder.
+use std::io::{Result, Write};
+
+/// A structure representing a builder for C++ header files.
+/// The builder implements the `FileBuilder` trait.
 #[derive(Debug, PartialEq)]
 pub struct CppFileBuilder;
 
@@ -12,10 +13,7 @@ impl FileBuilder for CppFileBuilder {
     }
 
     fn write_top_level(&mut self, output: &mut dyn Write) -> Result<()> {
-        write!(output, "#pragma once\n\n")?;
-        write!(output, "#include <cstddef>\n\n")?;
-
-        Ok(())
+        write!(output, "#pragma once\n\n#include <cstddef>\n\n")
     }
 
     fn write_namespace(
@@ -24,13 +22,9 @@ impl FileBuilder for CppFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        if let Some(comment) = comment {
-            write!(output, "namespace {} {{ // {}\n", name, comment)?;
-        } else {
-            write!(output, "namespace {} {{\n", name)?;
-        }
+        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
 
-        Ok(())
+        write!(output, "namespace {} {{ {}\n", name, comment)
     }
 
     fn write_variable(
@@ -39,24 +33,20 @@ impl FileBuilder for CppFileBuilder {
         name: &str,
         value: usize,
         comment: Option<&str>,
+        indentation: Option<usize>,
     ) -> Result<()> {
-        match comment {
-            Some(comment) => write!(
-                output,
-                "    constexpr std::ptrdiff_t {} = {:#X}; // {}\n",
-                name, value, comment
-            ),
-            None => write!(
-                output,
-                "    constexpr std::ptrdiff_t {} = {:#X};\n",
-                name, value
-            ),
-        }
+        let indentation = " ".repeat(indentation.unwrap_or(4));
+
+        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+
+        write!(
+            output,
+            "{}constexpr std::ptrdiff_t {} = {:#X}; {}\n",
+            indentation, name, value, comment
+        )
     }
 
     fn write_closure(&mut self, output: &mut dyn Write, eof: bool) -> Result<()> {
-        write!(output, "{}", if eof { "}" } else { "}\n\n" })?;
-
-        Ok(())
+        write!(output, "{}", if eof { "}" } else { "}\n\n" })
     }
 }
