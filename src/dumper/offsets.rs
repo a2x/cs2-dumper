@@ -11,7 +11,7 @@ use simplelog::{debug, error, info};
 
 use std::fs::File;
 
-// Dumps all offsets specified in the `config.json` file and writes the results to a file.
+/// Dumps all offsets specified in the `config.json` file and writes the results to a file.
 ///
 /// # Arguments
 ///
@@ -144,9 +144,17 @@ mod tests {
 
     use super::*;
 
+    fn setup() -> Result<Process> {
+        let mut process = Process::new("cs2.exe")?;
+
+        process.initialize()?;
+
+        Ok(process)
+    }
+
     #[test]
     fn build_number() -> Result<()> {
-        let process = Process::new("cs2.exe")?;
+        let process = setup()?;
 
         let engine_base = process
             .get_module_by_name("engine2.dll")
@@ -199,14 +207,14 @@ mod tests {
             }
         }
 
-        let process = Process::new("cs2.exe")?;
+        let process = setup()?;
 
         let client_base = process
             .get_module_by_name("client.dll")
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x1696F40)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x169AFE0)?;
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -221,14 +229,14 @@ mod tests {
 
     #[test]
     fn local_player() -> Result<()> {
-        let process = Process::new("cs2.exe")?;
+        let process = setup()?;
 
         let client_base = process
             .get_module_by_name("client.dll")
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17E27C8)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17E8158)?;
 
         let player_name = process.read_string((local_player_controller + 0x610).into())?;
 
@@ -239,15 +247,15 @@ mod tests {
 
     #[test]
     fn window_size() -> Result<()> {
-        let process = Process::new("cs2.exe")?;
+        let process = setup()?;
 
         let engine_base = process
             .get_module_by_name("engine2.dll")
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x5386D0)?;
-        let window_height = process.read_memory::<u32>(engine_base + 0x5386D4)?;
+        let window_width = process.read_memory::<u32>(engine_base + 0x5386A8)?;
+        let window_height = process.read_memory::<u32>(engine_base + 0x5386AC)?;
 
         println!("Window size: {}x{}", window_width, window_height);
 

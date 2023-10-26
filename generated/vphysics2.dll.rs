@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * 2023-10-20 23:01:49.441693400 UTC
+ * Thu, 26 Oct 2023 06:38:23 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -637,12 +637,13 @@ pub mod RnHull_t {
     pub const m_vOrthographicAreas: usize = 0x28; // Vector
     pub const m_MassProperties: usize = 0x34; // matrix3x4_t
     pub const m_flVolume: usize = 0x64; // float
-    pub const m_Vertices: usize = 0x68; // CUtlVector<Vector>
-    pub const m_Edges: usize = 0x80; // CUtlVector<RnHalfEdge_t>
-    pub const m_Faces: usize = 0x98; // CUtlVector<RnFace_t>
-    pub const m_Planes: usize = 0xB0; // CUtlVector<RnPlane_t>
-    pub const m_nFlags: usize = 0xC8; // uint32_t
-    pub const m_pRegionSVM: usize = 0xD0; // CRegionSVM*
+    pub const m_Vertices: usize = 0x68; // CUtlVector<RnVertex_t>
+    pub const m_VertexPositions: usize = 0x80; // CUtlVector<Vector>
+    pub const m_Edges: usize = 0x98; // CUtlVector<RnHalfEdge_t>
+    pub const m_Faces: usize = 0xB0; // CUtlVector<RnFace_t>
+    pub const m_FacePlanes: usize = 0xC8; // CUtlVector<RnPlane_t>
+    pub const m_nFlags: usize = 0xE0; // uint32_t
+    pub const m_pRegionSVM: usize = 0xE8; // CRegionSVM*
 }
 
 pub mod RnMeshDesc_t { // RnShapeDesc_t
@@ -706,6 +707,10 @@ pub mod RnSphere_t {
 
 pub mod RnTriangle_t {
     pub const m_nIndex: usize = 0x0; // int32_t[3]
+}
+
+pub mod RnVertex_t {
+    pub const m_nEdge: usize = 0x0; // uint8_t
 }
 
 pub mod RnWing_t {

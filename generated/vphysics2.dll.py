@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-2023-10-20 23:01:49.434752900 UTC
+Thu, 26 Oct 2023 06:38:23 +0000
 '''
 
 class CFeIndexedJiggleBone:
@@ -567,12 +567,13 @@ class RnHull_t:
     m_vOrthographicAreas = 0x28 # Vector
     m_MassProperties = 0x34 # matrix3x4_t
     m_flVolume = 0x64 # float
-    m_Vertices = 0x68 # CUtlVector<Vector>
-    m_Edges = 0x80 # CUtlVector<RnHalfEdge_t>
-    m_Faces = 0x98 # CUtlVector<RnFace_t>
-    m_Planes = 0xB0 # CUtlVector<RnPlane_t>
-    m_nFlags = 0xC8 # uint32_t
-    m_pRegionSVM = 0xD0 # CRegionSVM*
+    m_Vertices = 0x68 # CUtlVector<RnVertex_t>
+    m_VertexPositions = 0x80 # CUtlVector<Vector>
+    m_Edges = 0x98 # CUtlVector<RnHalfEdge_t>
+    m_Faces = 0xB0 # CUtlVector<RnFace_t>
+    m_FacePlanes = 0xC8 # CUtlVector<RnPlane_t>
+    m_nFlags = 0xE0 # uint32_t
+    m_pRegionSVM = 0xE8 # CRegionSVM*
 
 class RnMeshDesc_t: # RnShapeDesc_t
     m_Mesh = 0x10 # RnMesh_t
@@ -625,6 +626,9 @@ class RnSphere_t:
 
 class RnTriangle_t:
     m_nIndex = 0x0 # int32_t[3]
+
+class RnVertex_t:
+    m_nEdge = 0x0 # uint8_t
 
 class RnWing_t:
     m_nIndex = 0x0 # int32_t[3]

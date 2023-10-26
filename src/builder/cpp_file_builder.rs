@@ -22,9 +22,9 @@ impl FileBuilder for CppFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+        let comment = comment.map_or(String::new(), |c| format!(" // {}", c));
 
-        write!(output, "namespace {} {{ {}\n", name, comment)
+        write!(output, "namespace {} {{{}\n", name, comment)
     }
 
     fn write_variable(
@@ -37,11 +37,11 @@ impl FileBuilder for CppFileBuilder {
     ) -> Result<()> {
         let indentation = " ".repeat(indentation.unwrap_or(4));
 
-        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+        let comment = comment.map_or(String::new(), |c| format!(" // {}", c));
 
         write!(
             output,
-            "{}constexpr std::ptrdiff_t {} = {:#X}; {}\n",
+            "{}constexpr std::ptrdiff_t {} = {:#X};{}\n",
             indentation, name, value, comment
         )
     }

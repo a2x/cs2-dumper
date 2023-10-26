@@ -38,7 +38,7 @@ struct Args {
     #[arg(short, long)]
     offsets: bool,
 
-    /// Dump schemas.
+    /// Dump schema system classes.
     #[arg(short, long)]
     schemas: bool,
 
@@ -47,7 +47,7 @@ struct Args {
     verbose: bool,
 
     /// Output folder.
-    #[arg(short, long, default_value = "generated")]
+    #[arg(long, default_value = "generated")]
     output: String,
 
     /// Indentation level.

@@ -22,9 +22,9 @@ impl FileBuilder for CSharpFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+        let comment = comment.map_or(String::new(), |c| format!(" // {}", c));
 
-        write!(output, "public static class {} {{ {}\n", name, comment)
+        write!(output, "public static class {} {{{}\n", name, comment)
     }
 
     fn write_variable(
@@ -37,11 +37,11 @@ impl FileBuilder for CSharpFileBuilder {
     ) -> Result<()> {
         let indentation = " ".repeat(indentation.unwrap_or(4));
 
-        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+        let comment = comment.map_or(String::new(), |c| format!(" // {}", c));
 
         write!(
             output,
-            "{}public const nint {} = {:#X}; {}\n",
+            "{}public const nint {} = {:#X};{}\n",
             indentation, name, value, comment
         )
     }

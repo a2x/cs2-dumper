@@ -25,9 +25,9 @@ impl FileBuilder for RustFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+        let comment = comment.map_or(String::new(), |c| format!(" // {}", c));
 
-        write!(output, "pub mod {} {{ {}\n", name, comment)
+        write!(output, "pub mod {} {{{}\n", name, comment)
     }
 
     fn write_variable(
@@ -40,11 +40,11 @@ impl FileBuilder for RustFileBuilder {
     ) -> Result<()> {
         let indentation = " ".repeat(indentation.unwrap_or(4));
 
-        let comment = comment.map_or(String::new(), |c| format!("// {}", c));
+        let comment = comment.map_or(String::new(), |c| format!(" // {}", c));
 
         write!(
             output,
-            "{}pub const {}: usize = {:#X}; {}\n",
+            "{}pub const {}: usize = {:#X};{}\n",
             indentation, name, value, comment
         )
     }

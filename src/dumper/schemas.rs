@@ -8,7 +8,7 @@ use anyhow::Result;
 
 use simplelog::{debug, info};
 
-// Dumps all schema system defined classes and writes the results to a file.
+/// Dumps all schema system classes and writes the results to a file.
 ///
 /// # Arguments
 ///
@@ -36,20 +36,17 @@ pub fn dump_schemas(
         let mut entries = Entries::new();
 
         for class in type_scope.classes()? {
-            let parent_name = match class.parent()?.map(|p| p.name().to_string()) {
-                Some(name) => name,
-                None => continue,
-            };
+            let parent_name = class.parent()?.map(|p| p.name().to_string());
 
             debug!(
                 "<i><u><bright-yellow>{}</></></> : <i><u><yellow>{}</></></>",
                 class.name(),
-                parent_name
+                parent_name.clone().unwrap_or_default()
             );
 
             let container = entries.entry(class.name().replace("::", "_")).or_default();
 
-            container.comment = Some(parent_name);
+            container.comment = parent_name;
 
             for field in class.fields()? {
                 let name = field.name()?;
