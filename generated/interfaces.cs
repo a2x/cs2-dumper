@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 26 Oct 2023 06:38:24 +0000
+ * Fri, 27 Oct 2023 01:03:23 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -20,38 +20,38 @@ public static class client_dll { // client.dll
 }
 
 public static class engine2_dll { // engine2.dll
-    public const nint SimpleEngineLoopService_001 = 0x1E2480;
-    public const nint ClientServerEngineLoopService_001 = 0x1D8150;
-    public const nint KeyValueCache001 = 0x1D4790;
-    public const nint HostStateMgr001 = 0x1D21A0;
-    public const nint GameEventSystemServerV001 = 0x1CD860;
-    public const nint GameEventSystemClientV001 = 0x1CD850;
-    public const nint EngineServiceMgr001 = 0x1C9540;
-    public const nint VProfService_001 = 0x1B6FD0;
-    public const nint ToolService_001 = 0x1B5D20;
-    public const nint StatsService_001 = 0x1B0FA0;
-    public const nint SplitScreenService_001 = 0x1AE210;
-    public const nint SoundService_001 = 0x1A8D60;
-    public const nint ScreenshotService001 = 0x1A4C30;
-    public const nint RenderService_001 = 0x1A1F90;
-    public const nint NetworkService_001 = 0x1A1AA0;
-    public const nint NetworkServerService_001 = 0x19CB40;
-    public const nint NetworkP2PService_001 = 0x198550;
-    public const nint NetworkClientService_001 = 0x192180;
-    public const nint MapListService_001 = 0x18B150;
-    public const nint InputService_001 = 0x178FD0;
-    public const nint GameUIService_001 = 0x1737F0;
-    public const nint GameResourceServiceServerV001 = 0x171550;
-    public const nint GameResourceServiceClientV001 = 0x171540;
-    public const nint BugService001 = 0x16A570;
-    public const nint BenchmarkService001 = 0x168D40;
-    public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x116920;
-    public const nint EngineGameUI001 = 0x115CB0;
-    public const nint INETSUPPORT_001 = 0xE5EC0;
-    public const nint Source2EngineToServerStringTable001 = 0xA1030;
-    public const nint Source2EngineToServer001 = 0x8AEC0;
-    public const nint Source2EngineToClientStringTable001 = 0x83BE0;
-    public const nint Source2EngineToClient001 = 0x5A620;
+    public const nint SimpleEngineLoopService_001 = 0x1E26D0;
+    public const nint ClientServerEngineLoopService_001 = 0x1D83A0;
+    public const nint KeyValueCache001 = 0x1D49E0;
+    public const nint HostStateMgr001 = 0x1D23F0;
+    public const nint GameEventSystemServerV001 = 0x1CDAB0;
+    public const nint GameEventSystemClientV001 = 0x1CDAA0;
+    public const nint EngineServiceMgr001 = 0x1C9790;
+    public const nint VProfService_001 = 0x1B7220;
+    public const nint ToolService_001 = 0x1B5F70;
+    public const nint StatsService_001 = 0x1B11F0;
+    public const nint SplitScreenService_001 = 0x1AE460;
+    public const nint SoundService_001 = 0x1A8FB0;
+    public const nint ScreenshotService001 = 0x1A4E80;
+    public const nint RenderService_001 = 0x1A21E0;
+    public const nint NetworkService_001 = 0x1A1CF0;
+    public const nint NetworkServerService_001 = 0x19CD90;
+    public const nint NetworkP2PService_001 = 0x1987A0;
+    public const nint NetworkClientService_001 = 0x1923D0;
+    public const nint MapListService_001 = 0x18B3A0;
+    public const nint InputService_001 = 0x179220;
+    public const nint GameUIService_001 = 0x173A40;
+    public const nint GameResourceServiceServerV001 = 0x1717A0;
+    public const nint GameResourceServiceClientV001 = 0x171790;
+    public const nint BugService001 = 0x16A7C0;
+    public const nint BenchmarkService001 = 0x168F90;
+    public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x116B70;
+    public const nint EngineGameUI001 = 0x115F00;
+    public const nint INETSUPPORT_001 = 0xE6110;
+    public const nint Source2EngineToServerStringTable001 = 0xA10E0;
+    public const nint Source2EngineToServer001 = 0x8AF40;
+    public const nint Source2EngineToClientStringTable001 = 0x83C60;
+    public const nint Source2EngineToClient001 = 0x5A6A0;
 }
 
 public static class filesystem_stdio_dll { // filesystem_stdio.dll
@@ -181,25 +181,25 @@ public static class steamaudio_dll { // steamaudio.dll
 }
 
 public static class steamclient64_dll { // steamclient64.dll
-    public const nint IVALIDATE001 = 0x833640;
-    public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0x82F4C0;
-    public const nint SteamClient020 = 0x62CAF0;
-    public const nint SteamClient019 = 0x62CAE0;
-    public const nint SteamClient018 = 0x62CAD0;
-    public const nint SteamClient017 = 0x62CAC0;
-    public const nint SteamClient016 = 0x62CAB0;
-    public const nint SteamClient015 = 0x62CAA0;
-    public const nint SteamClient014 = 0x62CA90;
-    public const nint SteamClient013 = 0x62CA80;
-    public const nint SteamClient012 = 0x62CA70;
-    public const nint SteamClient011 = 0x62CA60;
-    public const nint SteamClient010 = 0x62CA50;
-    public const nint SteamClient009 = 0x62CA40;
-    public const nint SteamClient008 = 0x62CA30;
-    public const nint SteamClient007 = 0x62CA20;
-    public const nint SteamClient006 = 0x62CA10;
-    public const nint p2pvoice002 = 0xD8EA0;
-    public const nint p2pvoicesingleton002 = 0xD5840;
+    public const nint IVALIDATE001 = 0x83A8B0;
+    public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0x836760;
+    public const nint SteamClient020 = 0x6313C0;
+    public const nint SteamClient019 = 0x6313B0;
+    public const nint SteamClient018 = 0x6313A0;
+    public const nint SteamClient017 = 0x631390;
+    public const nint SteamClient016 = 0x631380;
+    public const nint SteamClient015 = 0x631370;
+    public const nint SteamClient014 = 0x631360;
+    public const nint SteamClient013 = 0x631350;
+    public const nint SteamClient012 = 0x631340;
+    public const nint SteamClient011 = 0x631330;
+    public const nint SteamClient010 = 0x631320;
+    public const nint SteamClient009 = 0x631310;
+    public const nint SteamClient008 = 0x631300;
+    public const nint SteamClient007 = 0x6312F0;
+    public const nint SteamClient006 = 0x6312E0;
+    public const nint p2pvoice002 = 0xD93D0;
+    public const nint p2pvoicesingleton002 = 0xD5D70;
 }
 
 public static class tier0_dll { // tier0.dll

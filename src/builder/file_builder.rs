@@ -13,7 +13,7 @@ pub trait FileBuilder {
     /// * `&str` - A string slice containing the extension of the file.
     fn extension(&mut self) -> &str;
 
-    /// Write to the top level of the file. The output destination is `output`.
+    /// Writes to the top level of the file. The output destination is `output`.
     ///
     /// # Arguments
     ///
@@ -25,7 +25,7 @@ pub trait FileBuilder {
     /// * `Result<()>` - A generic Result type indicating the operations outcome.
     fn write_top_level(&mut self, output: &mut dyn Write) -> Result<()>;
 
-    /// Write a namespace to the output.
+    /// Writes a namespace to the output.
     ///
     /// # Arguments
     ///
@@ -44,7 +44,7 @@ pub trait FileBuilder {
         comment: Option<&str>,
     ) -> Result<()>;
 
-    /// Write a variable to the output.
+    /// Writes a variable to the output.
     ///
     /// # Arguments
     ///

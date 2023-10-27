@@ -99,11 +99,11 @@
   "engine2_dll": {
     "data": {
       "dwBuildNumber": {
-        "value": 4748564,
+        "value": 4752660,
         "comment": null
       },
       "dwNetworkGameClient": {
-        "value": 4745904,
+        "value": 4750000,
         "comment": null
       },
       "dwNetworkGameClient_getLocalPlayer": {
@@ -119,11 +119,11 @@
         "comment": null
       },
       "dwWindowHeight": {
-        "value": 5473964,
+        "value": 5478108,
         "comment": null
       },
       "dwWindowWidth": {
-        "value": 5473960,
+        "value": 5478104,
         "comment": null
       }
     },

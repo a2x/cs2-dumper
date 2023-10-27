@@ -161,7 +161,7 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let build_number = process.read_memory::<u32>(engine_base + 0x487514)?;
+        let build_number = process.read_memory::<u32>(engine_base + 0x488514)?;
 
         println!("Build number: {}", build_number);
 
@@ -254,8 +254,8 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x5386A8)?;
-        let window_height = process.read_memory::<u32>(engine_base + 0x5386AC)?;
+        let window_width = process.read_memory::<u32>(engine_base + 0x5396D8)?;
+        let window_height = process.read_memory::<u32>(engine_base + 0x5396DC)?;
 
         println!("Window size: {}x{}", window_width, window_height);
 

@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 26 Oct 2023 06:38:41 +0000
+Fri, 27 Oct 2023 01:03:39 +0000
 '''
 
 class client_dll: # client.dll
@@ -29,10 +29,10 @@ class client_dll: # client.dll
     dwViewRender = 0x1888128
 
 class engine2_dll: # engine2.dll
-    dwBuildNumber = 0x487514
-    dwNetworkGameClient = 0x486AB0
+    dwBuildNumber = 0x488514
+    dwNetworkGameClient = 0x487AB0
     dwNetworkGameClient_getLocalPlayer = 0xF0
     dwNetworkGameClient_maxClients = 0x250
     dwNetworkGameClient_signOnState = 0x240
-    dwWindowHeight = 0x5386AC
-    dwWindowWidth = 0x5386A8
+    dwWindowHeight = 0x5396DC
+    dwWindowWidth = 0x5396D8

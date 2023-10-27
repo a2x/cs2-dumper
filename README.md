@@ -12,7 +12,7 @@ For a complete list of all available flags, use `--help`.
 
 # Generated Files
 
-By default, processed files are stored in the `generated` directory. However, this can be modified by specifying your desired output folder using the `--output` flag.
+By default, generated files are stored in the `generated` directory. However, this can be modified by specifying your desired output folder using the `--output` flag.
 
 📂 [Pre-generated Files](./generated)
 
