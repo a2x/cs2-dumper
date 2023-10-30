@@ -128,5 +128,14 @@
       }
     },
     "comment": "engine2.dll"
+  },
+  "inputsystem_dll": {
+    "data": {
+      "dwInputSystem": {
+        "value": 218992,
+        "comment": null
+      }
+    },
+    "comment": "inputsystem.dll"
   }
 }

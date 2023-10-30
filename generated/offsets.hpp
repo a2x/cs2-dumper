@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:39 +0000
+ * Mon, 30 Oct 2023 00:17:09 +0000
  */
 
 #pragma once
@@ -41,4 +41,8 @@ namespace engine2_dll { // engine2.dll
     constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x240;
     constexpr std::ptrdiff_t dwWindowHeight = 0x5396DC;
     constexpr std::ptrdiff_t dwWindowWidth = 0x5396D8;
+}
+
+namespace inputsystem_dll { // inputsystem.dll
+    constexpr std::ptrdiff_t dwInputSystem = 0x35770;
 }

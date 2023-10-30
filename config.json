@@ -213,6 +213,16 @@
       ]
     },
     {
+      "name": "dwInputSystem",
+      "module": "inputsystem.dll",
+      "pattern": "48 89 05 ? ? ? ? 48 8D 05",
+      "operations": [
+        {
+          "type": "ripRelative"
+        }
+      ]
+    },
+    {
       "name": "dwInterfaceLinkList",
       "module": "client.dll",
       "pattern": "4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9",

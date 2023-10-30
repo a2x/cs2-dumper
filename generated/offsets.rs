@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:39 +0000
+ * Mon, 30 Oct 2023 00:17:09 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -39,4 +39,8 @@ pub mod engine2_dll { // engine2.dll
     pub const dwNetworkGameClient_signOnState: usize = 0x240;
     pub const dwWindowHeight: usize = 0x5396DC;
     pub const dwWindowWidth: usize = 0x5396D8;
+}
+
+pub mod inputsystem_dll { // inputsystem.dll
+    pub const dwInputSystem: usize = 0x35770;
 }

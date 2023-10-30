@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 27 Oct 2023 01:03:39 +0000
+Mon, 30 Oct 2023 00:17:09 +0000
 '''
 
 class client_dll: # client.dll
@@ -36,3 +36,6 @@ class engine2_dll: # engine2.dll
     dwNetworkGameClient_signOnState = 0x240
     dwWindowHeight = 0x5396DC
     dwWindowWidth = 0x5396D8
+
+class inputsystem_dll: # inputsystem.dll
+    dwInputSystem = 0x35770
