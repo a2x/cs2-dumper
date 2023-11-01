@@ -139,10 +139,10 @@ pub fn dump_offsets(
 
 #[cfg(test)]
 mod tests {
-    use std::ffi::c_char;
-    use std::mem::offset_of;
-
     use super::*;
+
+    use std::ffi::{c_char, c_void};
+    use std::mem::offset_of;
 
     fn setup() -> Result<Process> {
         let mut process = Process::new("cs2.exe")?;
@@ -175,16 +175,18 @@ mod tests {
         struct GlobalVarsBase {
             real_time: f32,                  // 0x0000
             frame_count: i32,                // 0x0004
-            pad_0: [u8; 0x8],                // 0x0008
+            frame_time: f32,                 // 0x0008
+            absolute_frame_time: f32,        // 0x000C
             max_clients: i32,                // 0x0010
-            interval_per_tick: f32,          // 0x0014
-            pad_1: [u8; 0x14],               // 0x0018
+            pad_0: [u8; 0x14],               // 0x0014
+            frame_time_2: f32,               // 0x0028
             current_time: f32,               // 0x002C
-            current_time2: f32,              // 0x0030
-            pad_2: [u8; 0xC],                // 0x0034
-            tick_count: i32,                 // 0x0040
-            interval_per_tick2: f32,         // 0x0044
-            pad_3: [u8; 0x138],              // 0x0048
+            current_time_2: f32,             // 0x0030
+            pad_1: [u8; 0xC],                // 0x0034
+            tick_count: f32,                 // 0x0040
+            pad_2: [u8; 0x4],                // 0x0044
+            network_channel: *const c_void,  // 0x0048
+            pad_3: [u8; 0x130],              // 0x0050
             current_map: *const c_char,      // 0x0180
             current_map_name: *const c_char, // 0x0188
         }
