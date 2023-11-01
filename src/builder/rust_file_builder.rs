@@ -4,7 +4,7 @@ use std::io::{Result, Write};
 
 /// A structure representing a builder for Rust files.
 /// The builder implements the `FileBuilder` trait.
-#[derive(Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq)]
 pub struct RustFileBuilder;
 
 impl FileBuilder for RustFileBuilder {

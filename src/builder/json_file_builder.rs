@@ -6,7 +6,7 @@ use std::collections::BTreeMap;
 use std::io::{Result, Write};
 
 /// Represents a JSON offset value with an optional comment.
-#[derive(Debug, PartialEq, Default, Serialize)]
+#[derive(Clone, Debug, Default, PartialEq, Serialize)]
 struct JsonOffsetValue {
     value: usize,
     comment: Option<String>,
@@ -14,7 +14,7 @@ struct JsonOffsetValue {
 
 /// Represents a JSON module, which contains data in the form of a `BTreeMap` of string keys and
 /// `JsonOffsetValue` values, as well as an optional comment.
-#[derive(Debug, PartialEq, Default, Serialize)]
+#[derive(Clone, Debug, Default, PartialEq, Serialize)]
 struct JsonModule {
     data: BTreeMap<String, JsonOffsetValue>,
     comment: Option<String>,
@@ -22,7 +22,7 @@ struct JsonModule {
 
 /// A structure representing a builder for JSON files.
 /// The builder implements the `FileBuilder` trait.
-#[derive(Debug, PartialEq, Default)]
+#[derive(Clone, Debug, Default, PartialEq)]
 pub struct JsonFileBuilder {
     data: BTreeMap<String, JsonModule>,
     current_namespace: String,

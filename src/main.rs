@@ -42,17 +42,30 @@ struct Args {
     #[arg(short, long)]
     schemas: bool,
 
-    /// Enable verbose output.
-    #[arg(short, long)]
-    verbose: bool,
+    /// List of file builders to use.
+    /// Valid values are: `.cs`, `.hpp`, `.json`, `.py`, `.rs`.
+    #[arg(
+        short,
+        long,
+        value_parser = parse_extension,
+        value_delimiter = ',',
+        default_values = [".cs", ".hpp", ".json", ".py", ".rs"],
+    )]
+    builders: Vec<FileBuilderEnum>,
 
-    /// Output folder.
+    /// Indentation level for generated files.
+    /// Defaults to 4 spaces.
+    #[arg(long, default_value_t = 4)]
+    indent: usize,
+
+    /// Output directory for generated files.
+    /// Defaults to `generated`.
     #[arg(long, default_value = "generated")]
     output: String,
 
-    /// Indentation level.
-    #[arg(long, default_value = "4")]
-    indent: usize,
+    /// Enable verbose output.
+    #[arg(short, long)]
+    verbose: bool,
 }
 
 fn main() -> Result<()> {
@@ -60,9 +73,10 @@ fn main() -> Result<()> {
         interfaces,
         offsets,
         schemas,
-        verbose,
-        output,
+        mut builders,
         indent,
+        output,
+        verbose,
     } = Args::parse();
 
     let log_level = if verbose {
@@ -83,14 +97,6 @@ fn main() -> Result<()> {
 
     process.initialize()?;
 
-    let mut builders: Vec<FileBuilderEnum> = vec![
-        FileBuilderEnum::CppFileBuilder(CppFileBuilder),
-        FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder),
-        FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default()),
-        FileBuilderEnum::PythonFileBuilder(PythonFileBuilder),
-        FileBuilderEnum::RustFileBuilder(RustFileBuilder),
-    ];
-
     let all = !(interfaces || offsets || schemas);
 
     if schemas || all {
@@ -106,9 +112,30 @@ fn main() -> Result<()> {
     }
 
     info!(
-        "<on-green>Done!</> <green>Time elapsed: {:?}</>",
+        "<on-green>Done!</> <green>Time elapsed: <b>{:?}</></>",
         now.elapsed()
     );
 
     Ok(())
+}
+
+/// Parses the given file extension and returns the corresponding `FileBuilderEnum`.
+///
+/// # Arguments
+///
+/// * `extension` - A string slice that represents the file extension.
+///
+/// # Returns
+///
+/// * `Ok(FileBuilderEnum)` - If the extension is valid, returns the corresponding `FileBuilderEnum`.
+/// * `Err(&'static str)` - If the extension is invalid, returns an error message.
+fn parse_extension(extension: &str) -> Result<FileBuilderEnum, &'static str> {
+    match extension {
+        ".cs" => Ok(FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder)),
+        ".hpp" => Ok(FileBuilderEnum::CppFileBuilder(CppFileBuilder)),
+        ".json" => Ok(FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default())),
+        ".py" => Ok(FileBuilderEnum::PythonFileBuilder(PythonFileBuilder)),
+        ".rs" => Ok(FileBuilderEnum::RustFileBuilder(RustFileBuilder)),
+        _ => Err("Invalid extension"),
+    }
 }

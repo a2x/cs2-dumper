@@ -16,7 +16,7 @@ pub mod rust_file_builder;
 
 /// `FileBuilder` is an enum that defines different kinds of file builders.
 /// Each variant corresponds to a builder for a particular type of file.
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub enum FileBuilderEnum {
     /// Represents a builder for C++ header files.
     CppFileBuilder(CppFileBuilder),

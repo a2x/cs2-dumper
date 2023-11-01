@@ -4,7 +4,7 @@ use std::io::{Result, Write};
 
 /// A structure representing a builder for C++ header files.
 /// The builder implements the `FileBuilder` trait.
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct CppFileBuilder;
 
 impl FileBuilder for CppFileBuilder {
