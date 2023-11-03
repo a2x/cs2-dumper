@@ -9,7 +9,7 @@ pub enum Operation {
     /// `value` is the value to add.
     Add { value: usize },
 
-    /// Represents a dereference operation with optional parameters for the number of times to dereference
+    /// Represents a "dereference" operation with optional parameters for the number of times to dereference
     /// and the size of the resulting value.
     ///
     /// `times` is the number of times to dereference the address. If `None`, the number of times will be `1`.
@@ -19,31 +19,33 @@ pub enum Operation {
         size: Option<usize>,
     },
 
-    /// Represents a jump instruction with an optional offset and length.
+    /// Represents an operation to resolve the absolute address of a relative "jmp" with an optional
+    /// offset and length.
     ///
     /// `offset` is the offset of the displacement value. If `None`, the offset will be `0x1`.
     /// `length` is the length of the instruction. If `None`, the length will be `0x5`.
-    Jmp {
+    ResolveJmp {
         offset: Option<usize>,
         length: Option<usize>,
     },
 
-    /// Represents a relative instruction pointer (RIP) with an optional offset and length.
+    /// Represents an operation to resolve the absolute address of a RIP-relative address with an optional
+    /// offset and length.
     ///
     /// `offset` is the offset of the displacement value. If `None`, the offset will be `0x3`.
     /// `length` is the length of the instruction. If `None`, the length will be `0x7`.
-    RipRelative {
+    ResolveRip {
         offset: Option<usize>,
         length: Option<usize>,
     },
 
-    /// Represents a slice operation with a start and end index.
+    /// Represents a "slice" operation with a start and end index.
     ///
     /// `start` is the start index of the slice.
     /// `end` is the end index of the slice.
     Slice { start: usize, end: usize },
 
-    /// Represents a subtract operation with a given value.
+    /// Represents a "subtract" operation with a given value.
     ///
     /// `value` is the value to subtract.
     Subtract { value: usize },

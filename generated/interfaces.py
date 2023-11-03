@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 3 Nov 2023 01:49:49 +0000
+Fri, 3 Nov 2023 09:09:53 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,14 +8,14 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x8996A0
-    Source2ClientUI001 = 0x8883C0
-    Source2ClientPrediction001 = 0x7A1860
-    ClientToolsInfo_001 = 0x72D800
-    Source2Client002 = 0x72D820
-    GameClientExports001 = 0x72D810
-    EmptyWorldService001_Client = 0x48DEB0
-    Source2ClientConfig001 = 0x474EC0
+    LegacyGameUI001 = 0x8996E0
+    Source2ClientUI001 = 0x888400
+    Source2ClientPrediction001 = 0x7A18A0
+    ClientToolsInfo_001 = 0x72D840
+    Source2Client002 = 0x72D860
+    GameClientExports001 = 0x72D850
+    EmptyWorldService001_Client = 0x48DEF0
+    Source2ClientConfig001 = 0x474F00
 
 class engine2_dll: # engine2.dll
     SimpleEngineLoopService_001 = 0x1E32D0
@@ -134,15 +134,15 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA346B0
-    ServerToolsInfo_001 = 0x838410
-    Source2GameClients001 = 0x838420
-    Source2GameEntities001 = 0x838430
-    Source2Server001 = 0x838440
-    EmptyWorldService001_Server = 0x58D6A0
-    Source2ServerConfig001 = 0x56D6B0
-    EntitySubclassUtilsV001 = 0x2CD440
-    customnavsystem001 = 0x24A370
+    NavGameTest001 = 0xA34720
+    ServerToolsInfo_001 = 0x838480
+    Source2GameClients001 = 0x838490
+    Source2GameEntities001 = 0x8384A0
+    Source2Server001 = 0x8384B0
+    EmptyWorldService001_Server = 0x58D710
+    Source2ServerConfig001 = 0x56D720
+    EntitySubclassUtilsV001 = 0x2CD480
+    customnavsystem001 = 0x24A3B0
     Source2GameDirector001 = 0x151E80
 
 class soundsystem_dll: # soundsystem.dll

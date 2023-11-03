@@ -1,30 +1,33 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 3 Nov 2023 01:49:49 +0000
+ * Fri, 3 Nov 2023 09:10:10 +0000
  */
 
 public static class client_dll { // client.dll
-    public const nint dwBaseEntityModel_setModel = 0x5812D0;
-    public const nint dwEntityList = 0x17AA8F8;
-    public const nint dwForceBackward = 0x16AF570;
-    public const nint dwForceCrouch = 0x16AF840;
-    public const nint dwForceForward = 0x16AF4E0;
-    public const nint dwForceJump = 0x16AF7B0;
-    public const nint dwForceLeft = 0x16AF600;
-    public const nint dwForceRight = 0x16AF690;
-    public const nint dwGameEntitySystem = 0x1964168;
-    public const nint dwGameEntitySystem_getBaseEntity = 0x6048E0;
-    public const nint dwGameEntitySystem_getHighestEntityIndex = 0x5F65D0;
-    public const nint dwGameRules = 0x1806F58;
-    public const nint dwGlobalVars = 0x16AB2E0;
-    public const nint dwGlowManager = 0x18066B8;
-    public const nint dwInterfaceLinkList = 0x1991E78;
-    public const nint dwLocalPlayerController = 0x17F9C18;
-    public const nint dwLocalPlayerPawn = 0x16B6318;
-    public const nint dwPlantedC4 = 0x189DB08;
-    public const nint dwViewAngles = 0x18F8090;
-    public const nint dwViewMatrix = 0x1899080;
-    public const nint dwViewRender = 0x1899A58;
+    public const nint dwBaseEntityModel_setModel = 0x581310;
+    public const nint dwEntityList = 0x17AA8E8;
+    public const nint dwForceAttack = 0x16AF290;
+    public const nint dwForceAttack2 = 0x16AF320;
+    public const nint dwForceBackward = 0x16AF560;
+    public const nint dwForceCrouch = 0x16AF830;
+    public const nint dwForceForward = 0x16AF4D0;
+    public const nint dwForceJump = 0x16AF7A0;
+    public const nint dwForceLeft = 0x16AF5F0;
+    public const nint dwForceRight = 0x16AF680;
+    public const nint dwGameEntitySystem = 0x1964158;
+    public const nint dwGameEntitySystem_getBaseEntity = 0x604920;
+    public const nint dwGameEntitySystem_getHighestEntityIndex = 0x5F6610;
+    public const nint dwGameRules = 0x1806F48;
+    public const nint dwGlobalVars = 0x16AB2D0;
+    public const nint dwGlowManager = 0x18066A8;
+    public const nint dwInterfaceLinkList = 0x1991E68;
+    public const nint dwLocalPlayerController = 0x17F9C08;
+    public const nint dwLocalPlayerPawn = 0x16B6320;
+    public const nint dwPlantedC4 = 0x189DAF8;
+    public const nint dwPrediction = 0x16B61F0;
+    public const nint dwViewAngles = 0x18F8088;
+    public const nint dwViewMatrix = 0x1899070;
+    public const nint dwViewRender = 0x1899A48;
 }
 
 public static class engine2_dll { // engine2.dll

@@ -229,8 +229,7 @@ impl Process {
         Ok(String::from_utf8(buffer)?)
     }
 
-    /// Resolves a jump instruction at the given address by calculating the target address based on the
-    /// displacement value at the given offset.
+    /// Resolves the absolute address of relative "jmp".
     ///
     /// # Arguments
     ///
@@ -243,12 +242,13 @@ impl Process {
     ///
     /// * `Result<Address>` - A `Result` containing the absolute address if successful, or an error if the memory read fails.
     pub fn resolve_jmp(&self, address: Address, offset: usize, length: usize) -> Result<Address> {
+        // The displacement value can be negative.
         let displacement = self.read_memory::<i32>(address.add(offset))?;
 
         Ok(((address.add(length).0 as isize + displacement as isize) as usize).into())
     }
 
-    /// Resolves the absolute address of a relative instruction pointer (RIP) address.
+    /// Resolves the absolute address of a RIP-relative address.
     ///
     /// # Arguments
     ///
@@ -261,6 +261,7 @@ impl Process {
     ///
     /// * `Result<Address>` - A `Result` containing the absolute address if successful, or an error if the memory read fails.
     pub fn resolve_rip(&self, address: Address, offset: usize, length: usize) -> Result<Address> {
+        // The displacement value can be negative.
         let displacement = self.read_memory::<i32>(address.add(offset))?;
 
         Ok(((address.add(length).0 as isize + displacement as isize) as usize).into())

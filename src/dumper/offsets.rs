@@ -74,12 +74,12 @@ pub fn dump_offsets(
                         )?;
                     }
                 }
-                Jmp { offset, length } => {
+                ResolveJmp { offset, length } => {
                     address = process
                         .resolve_jmp(address, offset.unwrap_or(0x1), length.unwrap_or(0x5))?
                         .into()
                 }
-                RipRelative { offset, length } => {
+                ResolveRip { offset, length } => {
                     address = process
                         .resolve_rip(address, offset.unwrap_or(0x3), length.unwrap_or(0x7))?
                         .into()
@@ -216,7 +216,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AB2E0)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AB2D0)?;
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -238,7 +238,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17F9C18)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17F9C08)?;
 
         let player_name = process.read_string((local_player_controller + 0x610).into())?;
 

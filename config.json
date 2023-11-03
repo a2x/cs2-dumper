@@ -6,7 +6,7 @@
       "pattern": "E8 ? ? ? ? F3 0F 10 4C 3B ?",
       "operations": [
         {
-          "type": "jmp"
+          "type": "resolveJmp"
         }
       ]
     },
@@ -16,7 +16,7 @@
       "pattern": "8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8B 0D ? ? ? ? 48 8D 05",
       "operations": [
         {
-          "type": "ripRelative",
+          "type": "resolveRip",
           "offset": 2,
           "length": 6
         }
@@ -28,7 +28,7 @@
       "pattern": "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -38,7 +38,7 @@
       "pattern": "48 8D 0D ? ? ? ? E9 84 44 B4 FF",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -52,7 +52,7 @@
       "pattern": "48 8D 0D ? ? ? ? E9 34 45 B4 FF",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -66,7 +66,7 @@
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 1D",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -80,7 +80,7 @@
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 3D ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -94,7 +94,7 @@
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 0D ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -108,7 +108,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 8D 1D ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -122,7 +122,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 44 8B 15",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -136,7 +136,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 8D 15 ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -150,7 +150,7 @@
       "pattern": "48 8B 1D ? ? ? ? 48 89 1D",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -164,7 +164,7 @@
           "value": 2
         },
         {
-          "type": "jmp"
+          "type": "resolveJmp"
         }
       ]
     },
@@ -178,7 +178,7 @@
           "value": 2
         },
         {
-          "type": "jmp"
+          "type": "resolveJmp"
         }
       ]
     },
@@ -188,7 +188,7 @@
       "pattern": "48 89 0D ? ? ? ? 8B 0D",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -198,7 +198,7 @@
       "pattern": "48 89 0D ? ? ? ? 48 89 41",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -208,7 +208,7 @@
       "pattern": "48 8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 89 5C 24 ? 48 89 6C 24",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -218,7 +218,7 @@
       "pattern": "48 89 05 ? ? ? ? 48 8D 05",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -228,7 +228,7 @@
       "pattern": "4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -238,17 +238,17 @@
       "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
     {
       "name": "dwLocalPlayerPawn",
       "module": "client.dll",
-      "pattern": "48 8B 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 89 5C 24 ? 4C 8B D9",
+      "pattern": "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC ? 8B 0D",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "add",
@@ -262,7 +262,7 @@
       "pattern": "48 89 3D ? ? ? ? 48 8D 15",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -312,7 +312,17 @@
       "pattern": "48 8B 15 ? ? ? ? FF C0 48 8D 4C 24",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
+        }
+      ]
+    },
+    {
+      "name": "dwPrediction",
+      "module": "client.dll",
+      "pattern": "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC ? 8B 0D",
+      "operations": [
+        {
+          "type": "resolveRip"
         }
       ]
     },
@@ -322,14 +332,14 @@
       "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         },
         {
           "type": "dereference"
         },
         {
           "type": "add",
-          "value": 17680
+          "value": 17688
         }
       ]
     },
@@ -339,7 +349,7 @@
       "pattern": "48 8D 0D ? ? ? ? 48 C1 E0 06",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -349,7 +359,7 @@
       "pattern": "48 89 05 ? ? ? ? 48 8B C8 48 85 C0",
       "operations": [
         {
-          "type": "ripRelative"
+          "type": "resolveRip"
         }
       ]
     },
@@ -359,7 +369,7 @@
       "pattern": "8B 05 ? ? ? ? 89 03",
       "operations": [
         {
-          "type": "ripRelative",
+          "type": "resolveRip",
           "offset": 2,
           "length": 6
         }
@@ -371,7 +381,7 @@
       "pattern": "8B 05 ? ? ? ? 89 07",
       "operations": [
         {
-          "type": "ripRelative",
+          "type": "resolveRip",
           "offset": 2,
           "length": 6
         }

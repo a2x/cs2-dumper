@@ -8,7 +8,7 @@ use goblin::pe::options::ParseOptions;
 use goblin::pe::section_table::SectionTable;
 use goblin::pe::PE;
 
-/// Represents a module loaded into the process.
+/// Represents a module loaded in a Windows process.
 pub struct Module<'a> {
     /// The name of the module.
     pub name: &'a str,
