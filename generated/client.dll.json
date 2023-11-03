@@ -2938,10 +2938,6 @@
         "value": 133,
         "comment": "Color"
       },
-      "m_LightGroups": {
-        "value": 304,
-        "comment": "CUtlSymbolLarge"
-      },
       "m_Pattern": {
         "value": 232,
         "comment": "CUtlString"
@@ -2951,27 +2947,27 @@
         "comment": "Color"
       },
       "m_SkyAmbientBounce": {
-        "value": 424,
+        "value": 412,
         "comment": "Color"
       },
       "m_SkyColor": {
-        "value": 416,
+        "value": 404,
         "comment": "Color"
       },
       "m_bEnabled": {
-        "value": 336,
+        "value": 324,
         "comment": "bool"
       },
       "m_bFlicker": {
-        "value": 337,
+        "value": 325,
         "comment": "bool"
       },
       "m_bMixedShadows": {
-        "value": 429,
+        "value": 417,
         "comment": "bool"
       },
       "m_bPrecomputedFieldsValid": {
-        "value": 338,
+        "value": 326,
         "comment": "bool"
       },
       "m_bRenderDiffuse": {
@@ -2987,7 +2983,7 @@
         "comment": "bool"
       },
       "m_bUseSecondaryColor": {
-        "value": 428,
+        "value": 416,
         "comment": "bool"
       },
       "m_bUsesBakedShadowing": {
@@ -3019,15 +3015,15 @@
         "comment": "float"
       },
       "m_flCapsuleLength": {
-        "value": 436,
+        "value": 424,
         "comment": "float"
       },
       "m_flFadeMaxDist": {
-        "value": 324,
+        "value": 312,
         "comment": "float"
       },
       "m_flFadeMinDist": {
-        "value": 320,
+        "value": 308,
         "comment": "float"
       },
       "m_flFalloff": {
@@ -3035,19 +3031,19 @@
         "comment": "float"
       },
       "m_flFogContributionStength": {
-        "value": 408,
+        "value": 396,
         "comment": "float"
       },
       "m_flLightStyleStartTime": {
-        "value": 432,
+        "value": 420,
         "comment": "GameTime_t"
       },
       "m_flMinRoughness": {
-        "value": 440,
+        "value": 428,
         "comment": "float"
       },
       "m_flNearClipPlane": {
-        "value": 412,
+        "value": 400,
         "comment": "float"
       },
       "m_flOrthoLightHeight": {
@@ -3063,7 +3059,7 @@
         "comment": "float"
       },
       "m_flPrecomputedMaxRange": {
-        "value": 400,
+        "value": 388,
         "comment": "float"
       },
       "m_flRange": {
@@ -3095,15 +3091,15 @@
         "comment": "float"
       },
       "m_flShadowFadeMaxDist": {
-        "value": 332,
+        "value": 320,
         "comment": "float"
       },
       "m_flShadowFadeMinDist": {
-        "value": 328,
+        "value": 316,
         "comment": "float"
       },
       "m_flSkyIntensity": {
-        "value": 420,
+        "value": 408,
         "comment": "float"
       },
       "m_flTheta": {
@@ -3131,15 +3127,15 @@
         "comment": "int32_t"
       },
       "m_nDirectLight": {
-        "value": 312,
+        "value": 300,
         "comment": "int32_t"
       },
       "m_nFogLightingMode": {
-        "value": 404,
+        "value": 392,
         "comment": "int32_t"
       },
       "m_nIndirectLight": {
-        "value": 316,
+        "value": 304,
         "comment": "int32_t"
       },
       "m_nRenderSpecular": {
@@ -3179,23 +3175,23 @@
         "comment": "int32_t"
       },
       "m_vPrecomputedBoundsMaxs": {
-        "value": 352,
-        "comment": "Vector"
-      },
-      "m_vPrecomputedBoundsMins": {
         "value": 340,
         "comment": "Vector"
       },
+      "m_vPrecomputedBoundsMins": {
+        "value": 328,
+        "comment": "Vector"
+      },
       "m_vPrecomputedOBBAngles": {
-        "value": 376,
+        "value": 364,
         "comment": "QAngle"
       },
       "m_vPrecomputedOBBExtent": {
-        "value": 388,
+        "value": 376,
         "comment": "Vector"
       },
       "m_vPrecomputedOBBOrigin": {
-        "value": 364,
+        "value": 352,
         "comment": "Vector"
       }
     },
@@ -4290,43 +4286,43 @@
   "C_BaseCSGrenade": {
     "data": {
       "m_bClientPredictDelete": {
-        "value": 6464,
+        "value": 6544,
         "comment": "bool"
       },
       "m_bIsHeldByPlayer": {
-        "value": 6505,
+        "value": 6546,
         "comment": "bool"
       },
       "m_bJumpThrow": {
-        "value": 6507,
+        "value": 6548,
         "comment": "bool"
       },
       "m_bPinPulled": {
-        "value": 6506,
+        "value": 6547,
         "comment": "bool"
       },
       "m_bRedraw": {
-        "value": 6504,
+        "value": 6545,
         "comment": "bool"
       },
       "m_eThrowStatus": {
-        "value": 6508,
+        "value": 6552,
         "comment": "EGrenadeThrowState"
       },
       "m_fDropTime": {
-        "value": 6524,
+        "value": 6568,
         "comment": "GameTime_t"
       },
       "m_fThrowTime": {
-        "value": 6512,
+        "value": 6556,
         "comment": "GameTime_t"
       },
       "m_flThrowStrength": {
-        "value": 6516,
+        "value": 6560,
         "comment": "float"
       },
       "m_flThrowStrengthApproach": {
-        "value": 6520,
+        "value": 6564,
         "comment": "float"
       }
     },
@@ -4987,10 +4983,6 @@
         "value": 2968,
         "comment": "CGlowProperty"
       },
-      "m_LightGroup": {
-        "value": 2784,
-        "comment": "CUtlStringToken"
-      },
       "m_bAllowFadeInView": {
         "value": 2674,
         "comment": "bool"
@@ -5004,7 +4996,7 @@
         "comment": "bool"
       },
       "m_bRenderToCubemaps": {
-        "value": 2788,
+        "value": 2784,
         "comment": "bool"
       },
       "m_bUseClientOverrideTint": {
@@ -5101,7 +5093,7 @@
         "comment": "C_UtlVectorEmbeddedNetworkVar<ViewAngleServerChange_t>"
       },
       "m_bIsSwappingToPredictableController": {
-        "value": 4656,
+        "value": 4672,
         "comment": "bool"
       },
       "m_flDeathTime": {
@@ -5109,15 +5101,19 @@
         "comment": "GameTime_t"
       },
       "m_flFOVSensitivityAdjust": {
-        "value": 4620,
+        "value": 4636,
         "comment": "float"
       },
+      "m_flLastCameraSetupTime": {
+        "value": 4632,
+        "comment": "GameTime_t"
+      },
       "m_flMouseSensitivity": {
-        "value": 4624,
+        "value": 4640,
         "comment": "float"
       },
       "m_flOldSimulationTime": {
-        "value": 4640,
+        "value": 4656,
         "comment": "float"
       },
       "m_flPredictionErrorTime": {
@@ -5125,7 +5121,7 @@
         "comment": "GameTime_t"
       },
       "m_hController": {
-        "value": 4652,
+        "value": 4668,
         "comment": "CHandle<CBasePlayerController>"
       },
       "m_iHideHUD": {
@@ -5137,11 +5133,11 @@
         "comment": "uint32_t"
       },
       "m_nLastExecutedCommandNumber": {
-        "value": 4644,
+        "value": 4660,
         "comment": "int32_t"
       },
       "m_nLastExecutedCommandTick": {
-        "value": 4648,
+        "value": 4664,
         "comment": "int32_t"
       },
       "m_pAutoaimServices": {
@@ -5185,7 +5181,11 @@
         "comment": "sky3dparams_t"
       },
       "m_vOldOrigin": {
-        "value": 4628,
+        "value": 4644,
+        "comment": "Vector"
+      },
+      "m_vecLastCameraSetupLocalOrigin": {
+        "value": 4620,
         "comment": "Vector"
       },
       "m_vecPredictionError": {
@@ -5621,47 +5621,47 @@
   "C_C4": {
     "data": {
       "m_bBombPlacedAnimation": {
-        "value": 6508,
+        "value": 6588,
         "comment": "bool"
       },
       "m_bBombPlanted": {
-        "value": 6547,
+        "value": 6627,
         "comment": "bool"
       },
       "m_bDroppedFromDeath": {
-        "value": 6548,
+        "value": 6628,
         "comment": "bool"
       },
       "m_bIsPlantingViaUse": {
-        "value": 6509,
+        "value": 6589,
         "comment": "bool"
       },
       "m_bPlayedArmingBeeps": {
-        "value": 6540,
+        "value": 6620,
         "comment": "bool[7]"
       },
       "m_bStartedArming": {
-        "value": 6500,
+        "value": 6580,
         "comment": "bool"
       },
       "m_bombdroppedlightParticleIndex": {
-        "value": 6496,
+        "value": 6576,
         "comment": "ParticleIndex_t"
       },
       "m_entitySpottedState": {
-        "value": 6512,
+        "value": 6592,
         "comment": "EntitySpottedState_t"
       },
       "m_fArmedTime": {
-        "value": 6504,
+        "value": 6584,
         "comment": "GameTime_t"
       },
       "m_nSpotRules": {
-        "value": 6536,
+        "value": 6616,
         "comment": "int32_t"
       },
       "m_szScreenText": {
-        "value": 6464,
+        "value": 6544,
         "comment": "char[32]"
       }
     },
@@ -5838,15 +5838,15 @@
   "C_CSGO_PreviewPlayer": {
     "data": {
       "m_animgraph": {
-        "value": 8896,
+        "value": 8920,
         "comment": "CUtlString"
       },
       "m_animgraphCharacterModeString": {
-        "value": 8904,
+        "value": 8928,
         "comment": "CUtlString"
       },
       "m_flInitialModelScale": {
-        "value": 8912,
+        "value": 8936,
         "comment": "float"
       }
     },
@@ -6391,7 +6391,7 @@
   "C_CSObserverPawn": {
     "data": {
       "m_hDetectParentChange": {
-        "value": 5784,
+        "value": 5800,
         "comment": "CEntityHandle"
       }
     },
@@ -6400,203 +6400,207 @@
   "C_CSPlayerPawn": {
     "data": {
       "m_EconGloves": {
-        "value": 6304,
+        "value": 6320,
         "comment": "C_EconItemView"
       },
       "m_RetakesMVPBoostExtraUtility": {
-        "value": 6264,
+        "value": 6280,
         "comment": "loadout_slot_t"
       },
       "m_aimPunchAngle": {
-        "value": 5884,
+        "value": 5900,
         "comment": "QAngle"
       },
       "m_aimPunchAngleVel": {
-        "value": 5896,
+        "value": 5912,
         "comment": "QAngle"
       },
       "m_aimPunchCache": {
-        "value": 5920,
+        "value": 5936,
         "comment": "CUtlVector<QAngle>"
       },
       "m_aimPunchTickBase": {
-        "value": 5908,
+        "value": 5924,
         "comment": "int32_t"
       },
       "m_aimPunchTickFraction": {
-        "value": 5912,
+        "value": 5928,
         "comment": "float"
       },
       "m_bHasFemaleVoice": {
-        "value": 5832,
+        "value": 5848,
         "comment": "bool"
       },
       "m_bInBombZone": {
-        "value": 5961,
+        "value": 5977,
         "comment": "bool"
       },
       "m_bInBuyZone": {
-        "value": 5880,
+        "value": 5896,
         "comment": "bool"
       },
       "m_bInHostageRescueZone": {
-        "value": 5960,
+        "value": 5976,
         "comment": "bool"
       },
       "m_bInLanding": {
-        "value": 5952,
+        "value": 5968,
         "comment": "bool"
       },
       "m_bIsBuyMenuOpen": {
-        "value": 5962,
+        "value": 5978,
         "comment": "bool"
       },
       "m_bLastHeadBoneTransformIsValid": {
-        "value": 8840,
+        "value": 8864,
         "comment": "bool"
       },
       "m_bMustSyncRagdollState": {
-        "value": 7400,
+        "value": 7416,
         "comment": "bool"
       },
       "m_bNeedToReApplyGloves": {
-        "value": 6296,
+        "value": 6312,
         "comment": "bool"
       },
       "m_bOnGroundLastTick": {
-        "value": 8848,
+        "value": 8872,
         "comment": "bool"
       },
       "m_bPrevDefuser": {
-        "value": 5862,
+        "value": 5878,
         "comment": "bool"
       },
       "m_bPrevHelmet": {
-        "value": 5863,
+        "value": 5879,
         "comment": "bool"
       },
       "m_bPreviouslyInBuyZone": {
-        "value": 5881,
+        "value": 5897,
         "comment": "bool"
       },
       "m_bRagdollDamageHeadshot": {
-        "value": 7496,
+        "value": 7512,
         "comment": "bool"
       },
       "m_bRetakesHasDefuseKit": {
-        "value": 6256,
+        "value": 6272,
         "comment": "bool"
       },
       "m_bRetakesMVPLastRound": {
-        "value": 6257,
+        "value": 6273,
         "comment": "bool"
       },
       "m_bSkipOneHeadConstraintUpdate": {
-        "value": 8888,
+        "value": 8912,
         "comment": "bool"
       },
       "m_flHealthShotBoostExpirationTime": {
-        "value": 5824,
+        "value": 5840,
         "comment": "GameTime_t"
       },
       "m_flLandingTime": {
-        "value": 5956,
+        "value": 5972,
         "comment": "float"
       },
       "m_flLandseconds": {
-        "value": 5836,
+        "value": 5852,
         "comment": "float"
       },
       "m_flLastFiredWeaponTime": {
-        "value": 5828,
+        "value": 5844,
         "comment": "GameTime_t"
       },
       "m_flNextSprayDecalTime": {
-        "value": 5968,
+        "value": 5984,
         "comment": "GameTime_t"
       },
       "m_flOldFallVelocity": {
-        "value": 5840,
+        "value": 5856,
         "comment": "float"
       },
       "m_flTimeOfLastInjury": {
-        "value": 5964,
+        "value": 5980,
         "comment": "GameTime_t"
       },
       "m_iRetakesMVPBoostItem": {
-        "value": 6260,
+        "value": 6276,
         "comment": "int32_t"
       },
       "m_iRetakesOffering": {
-        "value": 6248,
+        "value": 6264,
         "comment": "int32_t"
       },
       "m_iRetakesOfferingCard": {
-        "value": 6252,
+        "value": 6268,
         "comment": "int32_t"
       },
       "m_lastLandTime": {
-        "value": 8844,
+        "value": 8868,
         "comment": "GameTime_t"
       },
       "m_nPrevArmorVal": {
-        "value": 5864,
+        "value": 5880,
         "comment": "int32_t"
       },
       "m_nPrevGrenadeAmmoCount": {
-        "value": 5868,
+        "value": 5884,
         "comment": "int32_t"
       },
       "m_nRagdollDamageBone": {
-        "value": 7404,
+        "value": 7420,
         "comment": "int32_t"
       },
       "m_pActionTrackingServices": {
-        "value": 5816,
+        "value": 5832,
         "comment": "CCSPlayer_ActionTrackingServices*"
       },
       "m_pBulletServices": {
-        "value": 5784,
+        "value": 5800,
         "comment": "CCSPlayer_BulletServices*"
       },
       "m_pBuyServices": {
-        "value": 5800,
+        "value": 5816,
         "comment": "CCSPlayer_BuyServices*"
       },
       "m_pGlowServices": {
-        "value": 5808,
+        "value": 5824,
         "comment": "CCSPlayer_GlowServices*"
       },
       "m_pHostageServices": {
-        "value": 5792,
+        "value": 5808,
         "comment": "CCSPlayer_HostageServices*"
       },
       "m_qDeathEyeAngles": {
-        "value": 8876,
+        "value": 8900,
         "comment": "QAngle"
       },
       "m_szLastPlaceName": {
-        "value": 5844,
+        "value": 5860,
         "comment": "char[18]"
       },
       "m_szRagdollDamageWeaponName": {
-        "value": 7432,
+        "value": 7448,
         "comment": "char[64]"
       },
       "m_unPreviousWeaponHash": {
-        "value": 5872,
+        "value": 5888,
         "comment": "uint32_t"
       },
       "m_unWeaponHash": {
-        "value": 5876,
+        "value": 5892,
         "comment": "uint32_t"
       },
       "m_vRagdollDamageForce": {
-        "value": 7408,
+        "value": 7424,
         "comment": "Vector"
       },
       "m_vRagdollDamagePosition": {
-        "value": 7420,
+        "value": 7436,
+        "comment": "Vector"
+      },
+      "m_vRagdollServerOrigin": {
+        "value": 7516,
         "comment": "Vector"
       }
     },
@@ -6605,563 +6609,563 @@
   "C_CSPlayerPawnBase": {
     "data": {
       "m_ArmorValue": {
-        "value": 5360,
+        "value": 5376,
         "comment": "int32_t"
       },
       "m_angEyeAngles": {
-        "value": 5368,
+        "value": 5384,
         "comment": "QAngle"
       },
       "m_angLastMuzzleFlashAngle": {
-        "value": 5228,
+        "value": 5244,
         "comment": "QAngle"
       },
       "m_angShootAngleHistory": {
-        "value": 4844,
+        "value": 4860,
         "comment": "QAngle[2]"
       },
       "m_angStashedShootAngles": {
-        "value": 4808,
+        "value": 4824,
         "comment": "QAngle"
       },
       "m_bCachedPlaneIsValid": {
-        "value": 4749,
+        "value": 4765,
         "comment": "bool"
       },
       "m_bCanMoveDuringFreezePeriod": {
-        "value": 5076,
+        "value": 5092,
         "comment": "bool"
       },
       "m_bClipHitStaticWorld": {
-        "value": 4748,
+        "value": 4764,
         "comment": "bool"
       },
       "m_bDeferStartMusicOnWarmup": {
-        "value": 5484,
+        "value": 5500,
         "comment": "bool"
       },
       "m_bFlashBuildUp": {
-        "value": 5192,
+        "value": 5208,
         "comment": "bool"
       },
       "m_bFlashDspHasBeenCleared": {
-        "value": 5193,
+        "value": 5209,
         "comment": "bool"
       },
       "m_bFlashScreenshotHasBeenGrabbed": {
-        "value": 5194,
+        "value": 5210,
         "comment": "bool"
       },
       "m_bGrenadeParametersStashed": {
-        "value": 4804,
+        "value": 4820,
         "comment": "bool"
       },
       "m_bGuardianShouldSprayCustomXMark": {
-        "value": 5684,
+        "value": 5700,
         "comment": "bool"
       },
       "m_bGunGameImmunity": {
-        "value": 5028,
-        "comment": "bool"
-      },
-      "m_bHasDeathInfo": {
-        "value": 5685,
-        "comment": "bool"
-      },
-      "m_bHasMovedSinceSpawn": {
-        "value": 5029,
-        "comment": "bool"
-      },
-      "m_bHasNightVision": {
-        "value": 5125,
-        "comment": "bool"
-      },
-      "m_bHideTargetID": {
-        "value": 5524,
-        "comment": "bool"
-      },
-      "m_bHud_MiniScoreHidden": {
-        "value": 5398,
-        "comment": "bool"
-      },
-      "m_bHud_RadarHidden": {
-        "value": 5399,
-        "comment": "bool"
-      },
-      "m_bInNoDefuseArea": {
         "value": 5044,
         "comment": "bool"
       },
+      "m_bHasDeathInfo": {
+        "value": 5701,
+        "comment": "bool"
+      },
+      "m_bHasMovedSinceSpawn": {
+        "value": 5045,
+        "comment": "bool"
+      },
+      "m_bHasNightVision": {
+        "value": 5141,
+        "comment": "bool"
+      },
+      "m_bHideTargetID": {
+        "value": 5540,
+        "comment": "bool"
+      },
+      "m_bHud_MiniScoreHidden": {
+        "value": 5414,
+        "comment": "bool"
+      },
+      "m_bHud_RadarHidden": {
+        "value": 5415,
+        "comment": "bool"
+      },
+      "m_bInNoDefuseArea": {
+        "value": 5060,
+        "comment": "bool"
+      },
       "m_bIsDefusing": {
-        "value": 5008,
+        "value": 5024,
         "comment": "bool"
       },
       "m_bIsGrabbingHostage": {
-        "value": 5009,
+        "value": 5025,
         "comment": "bool"
       },
       "m_bIsRescuing": {
-        "value": 5016,
+        "value": 5032,
         "comment": "bool"
       },
       "m_bIsScoped": {
-        "value": 5000,
+        "value": 5016,
         "comment": "bool"
       },
       "m_bIsWalking": {
-        "value": 5001,
+        "value": 5017,
         "comment": "bool"
       },
       "m_bKilledByHeadshot": {
-        "value": 5704,
+        "value": 5720,
         "comment": "bool"
       },
       "m_bKilledByTaser": {
-        "value": 5069,
+        "value": 5085,
         "comment": "bool"
       },
       "m_bNightVisionOn": {
-        "value": 5124,
+        "value": 5140,
         "comment": "bool"
       },
       "m_bOldIsScoped": {
-        "value": 5324,
+        "value": 5340,
         "comment": "bool"
       },
       "m_bResumeZoom": {
-        "value": 5002,
+        "value": 5018,
         "comment": "bool"
       },
       "m_bScreenTearFrameCaptured": {
-        "value": 5176,
+        "value": 5192,
         "comment": "bool"
       },
       "m_bShouldAutobuyDMWeapons": {
-        "value": 5396,
+        "value": 5412,
         "comment": "bool"
       },
       "m_bShouldAutobuyNow": {
-        "value": 5397,
+        "value": 5413,
         "comment": "bool"
       },
       "m_bStrafing": {
-        "value": 5084,
+        "value": 5100,
         "comment": "bool"
       },
       "m_bSuppressGuardianTooFarWarningAudio": {
-        "value": 5068,
+        "value": 5084,
         "comment": "bool"
       },
       "m_bWaitForNoAttack": {
-        "value": 5052,
+        "value": 5068,
         "comment": "bool"
       },
       "m_cycleLatch": {
-        "value": 5488,
+        "value": 5504,
         "comment": "int32_t"
       },
       "m_delayTargetIDTimer": {
-        "value": 5416,
+        "value": 5432,
         "comment": "CountdownTimer"
       },
       "m_entitySpottedState": {
-        "value": 5656,
+        "value": 5672,
         "comment": "EntitySpottedState_t"
       },
       "m_fImmuneToGunGameDamageTime": {
-        "value": 5020,
+        "value": 5036,
         "comment": "GameTime_t"
       },
       "m_fImmuneToGunGameDamageTimeLast": {
-        "value": 5024,
+        "value": 5040,
         "comment": "GameTime_t"
       },
       "m_fMolotovDamageTime": {
-        "value": 5036,
+        "value": 5052,
         "comment": "float"
       },
       "m_fMolotovUseTime": {
-        "value": 5032,
+        "value": 5048,
         "comment": "float"
       },
       "m_fNextThinkPushAway": {
-        "value": 5392,
+        "value": 5408,
         "comment": "float"
       },
       "m_fRenderingClipPlane": {
-        "value": 4704,
+        "value": 4720,
         "comment": "float[4]"
       },
       "m_firstTaserShakeTime": {
-        "value": 5532,
+        "value": 5548,
         "comment": "float"
       },
       "m_flClientDeathTime": {
-        "value": 5168,
+        "value": 5184,
         "comment": "GameTime_t"
       },
       "m_flCurrentMusicStartTime": {
-        "value": 5476,
-        "comment": "float"
-      },
-      "m_flDeathCCWeight": {
-        "value": 5320,
-        "comment": "float"
-      },
-      "m_flDeathInfoTime": {
-        "value": 5688,
-        "comment": "float"
-      },
-      "m_flDetectedByEnemySensorTime": {
-        "value": 5060,
-        "comment": "GameTime_t"
-      },
-      "m_flEmitSoundTime": {
-        "value": 5092,
-        "comment": "GameTime_t"
-      },
-      "m_flFlashBangTime": {
-        "value": 5180,
-        "comment": "float"
-      },
-      "m_flFlashDuration": {
-        "value": 5200,
-        "comment": "float"
-      },
-      "m_flFlashMaxAlpha": {
-        "value": 5196,
-        "comment": "float"
-      },
-      "m_flFlashOverlayAlpha": {
-        "value": 5188,
-        "comment": "float"
-      },
-      "m_flFlashScreenshotAlpha": {
-        "value": 5184,
-        "comment": "float"
-      },
-      "m_flGuardianTooFarDistFrac": {
-        "value": 5056,
-        "comment": "float"
-      },
-      "m_flHealthFadeAlpha": {
-        "value": 5252,
-        "comment": "float"
-      },
-      "m_flHealthFadeValue": {
-        "value": 5248,
-        "comment": "float"
-      },
-      "m_flHitHeading": {
-        "value": 5132,
-        "comment": "float"
-      },
-      "m_flLastCollisionCeiling": {
-        "value": 4764,
-        "comment": "float"
-      },
-      "m_flLastCollisionCeilingChangeTime": {
-        "value": 4768,
-        "comment": "float"
-      },
-      "m_flLastSmokeOverlayAlpha": {
-        "value": 5536,
-        "comment": "float"
-      },
-      "m_flLastSpawnTimeIndex": {
-        "value": 5088,
-        "comment": "GameTime_t"
-      },
-      "m_flLowerBodyYawTarget": {
-        "value": 5080,
-        "comment": "float"
-      },
-      "m_flMusicRoundStartTime": {
-        "value": 5480,
-        "comment": "float"
-      },
-      "m_flNextGuardianTooFarWarning": {
-        "value": 5064,
-        "comment": "float"
-      },
-      "m_flNextMagDropTime": {
-        "value": 5556,
-        "comment": "float"
-      },
-      "m_flNightVisionAlpha": {
-        "value": 5172,
-        "comment": "float"
-      },
-      "m_flPrevMatchEndTime": {
-        "value": 5332,
-        "comment": "float"
-      },
-      "m_flPrevRoundEndTime": {
-        "value": 5328,
-        "comment": "float"
-      },
-      "m_flProgressBarStartTime": {
-        "value": 5112,
-        "comment": "float"
-      },
-      "m_flSlopeDropHeight": {
-        "value": 4960,
-        "comment": "float"
-      },
-      "m_flSlopeDropOffset": {
-        "value": 4944,
-        "comment": "float"
-      },
-      "m_flVelocityModifier": {
-        "value": 5128,
-        "comment": "float"
-      },
-      "m_grenadeParameterStashTime": {
-        "value": 4800,
-        "comment": "GameTime_t"
-      },
-      "m_hMuzzleFlashShape": {
-        "value": 5240,
-        "comment": "CHandle<C_BaseEntity>"
-      },
-      "m_hOriginalController": {
-        "value": 5708,
-        "comment": "CHandle<CCSPlayerController>"
-      },
-      "m_holdTargetIDTimer": {
-        "value": 5448,
-        "comment": "CountdownTimer"
-      },
-      "m_iAddonBits": {
-        "value": 5096,
-        "comment": "int32_t"
-      },
-      "m_iBlockingUseActionInProgress": {
-        "value": 5012,
-        "comment": "CSPlayerBlockingUseAction_t"
-      },
-      "m_iDirection": {
-        "value": 5116,
-        "comment": "int32_t"
-      },
-      "m_iHealthBarRenderMaskIndex": {
-        "value": 5244,
-        "comment": "int32_t"
-      },
-      "m_iIDEntIndex": {
-        "value": 5412,
-        "comment": "CEntityIndex"
-      },
-      "m_iMoveState": {
-        "value": 5072,
-        "comment": "int32_t"
-      },
-      "m_iOldIDEntIndex": {
-        "value": 5444,
-        "comment": "CEntityIndex"
-      },
-      "m_iPlayerState": {
-        "value": 5004,
-        "comment": "CSPlayerState"
-      },
-      "m_iPrimaryAddon": {
-        "value": 5100,
-        "comment": "int32_t"
-      },
-      "m_iProgressBarDuration": {
-        "value": 5108,
-        "comment": "int32_t"
-      },
-      "m_iSecondaryAddon": {
-        "value": 5104,
-        "comment": "int32_t"
-      },
-      "m_iShotsFired": {
-        "value": 5120,
-        "comment": "int32_t"
-      },
-      "m_iStartAccount": {
-        "value": 5140,
-        "comment": "int32_t"
-      },
-      "m_iTargetedWeaponEntIndex": {
-        "value": 5440,
-        "comment": "CEntityIndex"
-      },
-      "m_iThrowGrenadeCounter": {
-        "value": 5048,
-        "comment": "int32_t"
-      },
-      "m_ignoreLadderJumpTime": {
-        "value": 5260,
-        "comment": "float"
-      },
-      "m_ladderSurpressionTimer": {
-        "value": 5264,
-        "comment": "CountdownTimer"
-      },
-      "m_lastLadderNormal": {
-        "value": 5288,
-        "comment": "Vector"
-      },
-      "m_lastLadderPos": {
-        "value": 5300,
-        "comment": "Vector"
-      },
-      "m_lastStandingPos": {
-        "value": 5204,
-        "comment": "Vector"
-      },
-      "m_nDeathCamMusic": {
-        "value": 5408,
-        "comment": "int32_t"
-      },
-      "m_nHeavyAssaultSuitCooldownRemaining": {
-        "value": 5356,
-        "comment": "int32_t"
-      },
-      "m_nHitBodyPart": {
-        "value": 5136,
-        "comment": "int32_t"
-      },
-      "m_nLastClipPlaneSetupFrame": {
-        "value": 4720,
-        "comment": "int32_t"
-      },
-      "m_nLastConcurrentKilled": {
-        "value": 5404,
-        "comment": "int32_t"
-      },
-      "m_nLastKillerIndex": {
-        "value": 5400,
-        "comment": "CEntityIndex"
-      },
-      "m_nLastMagDropAttachmentIndex": {
-        "value": 5560,
-        "comment": "int32_t"
-      },
-      "m_nMyCollisionGroup": {
-        "value": 5256,
-        "comment": "int32_t"
-      },
-      "m_nPlayerSmokedFx": {
-        "value": 5552,
-        "comment": "ParticleIndex_t"
-      },
-      "m_nSurvivalTeamNumber": {
-        "value": 5680,
-        "comment": "int32_t"
-      },
-      "m_nWhichBombZone": {
-        "value": 5040,
-        "comment": "int32_t"
-      },
-      "m_nextTaserShakeTime": {
-        "value": 5528,
-        "comment": "float"
-      },
-      "m_pClippingWeapon": {
-        "value": 4752,
-        "comment": "C_CSWeaponBase*"
-      },
-      "m_pPingServices": {
-        "value": 4688,
-        "comment": "CCSPlayer_PingServices*"
-      },
-      "m_pViewModelServices": {
-        "value": 4696,
-        "comment": "CPlayer_ViewModelServices*"
-      },
-      "m_previousPlayerState": {
-        "value": 4760,
-        "comment": "CSPlayerState"
-      },
-      "m_serverIntendedCycle": {
         "value": 5492,
         "comment": "float"
       },
+      "m_flDeathCCWeight": {
+        "value": 5336,
+        "comment": "float"
+      },
+      "m_flDeathInfoTime": {
+        "value": 5704,
+        "comment": "float"
+      },
+      "m_flDetectedByEnemySensorTime": {
+        "value": 5076,
+        "comment": "GameTime_t"
+      },
+      "m_flEmitSoundTime": {
+        "value": 5108,
+        "comment": "GameTime_t"
+      },
+      "m_flFlashBangTime": {
+        "value": 5196,
+        "comment": "float"
+      },
+      "m_flFlashDuration": {
+        "value": 5216,
+        "comment": "float"
+      },
+      "m_flFlashMaxAlpha": {
+        "value": 5212,
+        "comment": "float"
+      },
+      "m_flFlashOverlayAlpha": {
+        "value": 5204,
+        "comment": "float"
+      },
+      "m_flFlashScreenshotAlpha": {
+        "value": 5200,
+        "comment": "float"
+      },
+      "m_flGuardianTooFarDistFrac": {
+        "value": 5072,
+        "comment": "float"
+      },
+      "m_flHealthFadeAlpha": {
+        "value": 5268,
+        "comment": "float"
+      },
+      "m_flHealthFadeValue": {
+        "value": 5264,
+        "comment": "float"
+      },
+      "m_flHitHeading": {
+        "value": 5148,
+        "comment": "float"
+      },
+      "m_flLastCollisionCeiling": {
+        "value": 4780,
+        "comment": "float"
+      },
+      "m_flLastCollisionCeilingChangeTime": {
+        "value": 4784,
+        "comment": "float"
+      },
+      "m_flLastSmokeOverlayAlpha": {
+        "value": 5552,
+        "comment": "float"
+      },
+      "m_flLastSpawnTimeIndex": {
+        "value": 5104,
+        "comment": "GameTime_t"
+      },
+      "m_flLowerBodyYawTarget": {
+        "value": 5096,
+        "comment": "float"
+      },
+      "m_flMusicRoundStartTime": {
+        "value": 5496,
+        "comment": "float"
+      },
+      "m_flNextGuardianTooFarWarning": {
+        "value": 5080,
+        "comment": "float"
+      },
+      "m_flNextMagDropTime": {
+        "value": 5572,
+        "comment": "float"
+      },
+      "m_flNightVisionAlpha": {
+        "value": 5188,
+        "comment": "float"
+      },
+      "m_flPrevMatchEndTime": {
+        "value": 5348,
+        "comment": "float"
+      },
+      "m_flPrevRoundEndTime": {
+        "value": 5344,
+        "comment": "float"
+      },
+      "m_flProgressBarStartTime": {
+        "value": 5128,
+        "comment": "float"
+      },
+      "m_flSlopeDropHeight": {
+        "value": 4976,
+        "comment": "float"
+      },
+      "m_flSlopeDropOffset": {
+        "value": 4960,
+        "comment": "float"
+      },
+      "m_flVelocityModifier": {
+        "value": 5144,
+        "comment": "float"
+      },
+      "m_grenadeParameterStashTime": {
+        "value": 4816,
+        "comment": "GameTime_t"
+      },
+      "m_hMuzzleFlashShape": {
+        "value": 5256,
+        "comment": "CHandle<C_BaseEntity>"
+      },
+      "m_hOriginalController": {
+        "value": 5724,
+        "comment": "CHandle<CCSPlayerController>"
+      },
+      "m_holdTargetIDTimer": {
+        "value": 5464,
+        "comment": "CountdownTimer"
+      },
+      "m_iAddonBits": {
+        "value": 5112,
+        "comment": "int32_t"
+      },
+      "m_iBlockingUseActionInProgress": {
+        "value": 5028,
+        "comment": "CSPlayerBlockingUseAction_t"
+      },
+      "m_iDirection": {
+        "value": 5132,
+        "comment": "int32_t"
+      },
+      "m_iHealthBarRenderMaskIndex": {
+        "value": 5260,
+        "comment": "int32_t"
+      },
+      "m_iIDEntIndex": {
+        "value": 5428,
+        "comment": "CEntityIndex"
+      },
+      "m_iMoveState": {
+        "value": 5088,
+        "comment": "int32_t"
+      },
+      "m_iOldIDEntIndex": {
+        "value": 5460,
+        "comment": "CEntityIndex"
+      },
+      "m_iPlayerState": {
+        "value": 5020,
+        "comment": "CSPlayerState"
+      },
+      "m_iPrimaryAddon": {
+        "value": 5116,
+        "comment": "int32_t"
+      },
+      "m_iProgressBarDuration": {
+        "value": 5124,
+        "comment": "int32_t"
+      },
+      "m_iSecondaryAddon": {
+        "value": 5120,
+        "comment": "int32_t"
+      },
+      "m_iShotsFired": {
+        "value": 5136,
+        "comment": "int32_t"
+      },
+      "m_iStartAccount": {
+        "value": 5156,
+        "comment": "int32_t"
+      },
+      "m_iTargetedWeaponEntIndex": {
+        "value": 5456,
+        "comment": "CEntityIndex"
+      },
+      "m_iThrowGrenadeCounter": {
+        "value": 5064,
+        "comment": "int32_t"
+      },
+      "m_ignoreLadderJumpTime": {
+        "value": 5276,
+        "comment": "float"
+      },
+      "m_ladderSurpressionTimer": {
+        "value": 5280,
+        "comment": "CountdownTimer"
+      },
+      "m_lastLadderNormal": {
+        "value": 5304,
+        "comment": "Vector"
+      },
+      "m_lastLadderPos": {
+        "value": 5316,
+        "comment": "Vector"
+      },
+      "m_lastStandingPos": {
+        "value": 5220,
+        "comment": "Vector"
+      },
+      "m_nDeathCamMusic": {
+        "value": 5424,
+        "comment": "int32_t"
+      },
+      "m_nHeavyAssaultSuitCooldownRemaining": {
+        "value": 5372,
+        "comment": "int32_t"
+      },
+      "m_nHitBodyPart": {
+        "value": 5152,
+        "comment": "int32_t"
+      },
+      "m_nLastClipPlaneSetupFrame": {
+        "value": 4736,
+        "comment": "int32_t"
+      },
+      "m_nLastConcurrentKilled": {
+        "value": 5420,
+        "comment": "int32_t"
+      },
+      "m_nLastKillerIndex": {
+        "value": 5416,
+        "comment": "CEntityIndex"
+      },
+      "m_nLastMagDropAttachmentIndex": {
+        "value": 5576,
+        "comment": "int32_t"
+      },
+      "m_nMyCollisionGroup": {
+        "value": 5272,
+        "comment": "int32_t"
+      },
+      "m_nPlayerSmokedFx": {
+        "value": 5568,
+        "comment": "ParticleIndex_t"
+      },
+      "m_nSurvivalTeamNumber": {
+        "value": 5696,
+        "comment": "int32_t"
+      },
+      "m_nWhichBombZone": {
+        "value": 5056,
+        "comment": "int32_t"
+      },
+      "m_nextTaserShakeTime": {
+        "value": 5544,
+        "comment": "float"
+      },
+      "m_pClippingWeapon": {
+        "value": 4768,
+        "comment": "C_CSWeaponBase*"
+      },
+      "m_pPingServices": {
+        "value": 4704,
+        "comment": "CCSPlayer_PingServices*"
+      },
+      "m_pViewModelServices": {
+        "value": 4712,
+        "comment": "CPlayer_ViewModelServices*"
+      },
+      "m_previousPlayerState": {
+        "value": 4776,
+        "comment": "CSPlayerState"
+      },
+      "m_serverIntendedCycle": {
+        "value": 5508,
+        "comment": "float"
+      },
       "m_thirdPersonHeading": {
-        "value": 4920,
+        "value": 4936,
         "comment": "QAngle"
       },
       "m_unCurrentEquipmentValue": {
-        "value": 5336,
+        "value": 5352,
         "comment": "uint16_t"
       },
       "m_unFreezetimeEndEquipmentValue": {
-        "value": 5340,
+        "value": 5356,
         "comment": "uint16_t"
       },
       "m_unRoundStartEquipmentValue": {
-        "value": 5338,
+        "value": 5354,
         "comment": "uint16_t"
       },
       "m_vHeadConstraintOffset": {
-        "value": 4976,
+        "value": 4992,
         "comment": "Vector"
       },
       "m_vLastSmokeOverlayColor": {
-        "value": 5540,
+        "value": 5556,
         "comment": "Vector"
       },
       "m_vecBulletHitModels": {
-        "value": 5568,
+        "value": 5584,
         "comment": "CUtlVector<C_BulletHitModel*>"
       },
       "m_vecDeathInfoOrigin": {
-        "value": 5692,
+        "value": 5708,
         "comment": "Vector"
       },
       "m_vecIntroStartEyePosition": {
-        "value": 5144,
+        "value": 5160,
         "comment": "Vector"
       },
       "m_vecIntroStartPlayerForward": {
-        "value": 5156,
+        "value": 5172,
         "comment": "Vector"
       },
       "m_vecLastAliveLocalVelocity": {
-        "value": 5616,
+        "value": 5632,
         "comment": "Vector"
       },
       "m_vecLastClipCameraForward": {
-        "value": 4736,
+        "value": 4752,
         "comment": "Vector"
       },
       "m_vecLastClipCameraPos": {
-        "value": 4724,
+        "value": 4740,
         "comment": "Vector"
       },
       "m_vecLastMuzzleFlashPos": {
-        "value": 5216,
+        "value": 5232,
         "comment": "Vector"
       },
       "m_vecPickupModelSlerpers": {
-        "value": 5592,
+        "value": 5608,
         "comment": "CUtlVector<C_PickUpModelSlerper*>"
       },
       "m_vecPlayerPatchEconIndices": {
-        "value": 5496,
+        "value": 5512,
         "comment": "uint32_t[5]"
       },
       "m_vecStashedGrenadeThrowPosition": {
-        "value": 4820,
+        "value": 4836,
         "comment": "Vector"
       },
       "m_vecStashedVelocity": {
-        "value": 4832,
+        "value": 4848,
         "comment": "Vector"
       },
       "m_vecThirdPersonViewPositionOverride": {
-        "value": 5344,
+        "value": 5360,
         "comment": "Vector"
       },
       "m_vecThrowPositionHistory": {
-        "value": 4868,
+        "value": 4884,
         "comment": "Vector[2]"
       },
       "m_vecVelocityHistory": {
-        "value": 4892,
+        "value": 4908,
         "comment": "Vector[2]"
       }
     },
@@ -7260,39 +7264,39 @@
   "C_CSWeaponBase": {
     "data": {
       "m_ClientPreviousWeaponState": {
-        "value": 5632,
+        "value": 5696,
         "comment": "CSWeaponState_t"
       },
       "m_IronSightController": {
-        "value": 6208,
+        "value": 6288,
         "comment": "C_IronSightController"
       },
       "m_OnPlayerPickup": {
-        "value": 5680,
+        "value": 5744,
         "comment": "CEntityIOOutput"
       },
       "m_bBurstMode": {
-        "value": 5768,
+        "value": 5832,
         "comment": "bool"
       },
       "m_bFireOnEmpty": {
-        "value": 5676,
+        "value": 5740,
         "comment": "bool"
       },
       "m_bGlowForPing": {
-        "value": 5952,
+        "value": 6016,
         "comment": "bool"
       },
       "m_bInReload": {
-        "value": 5776,
+        "value": 5840,
         "comment": "bool"
       },
       "m_bIsHauledBack": {
-        "value": 5784,
+        "value": 5848,
         "comment": "bool"
       },
       "m_bOldFirstPersonSpectatedState": {
-        "value": 5929,
+        "value": 5993,
         "comment": "bool"
       },
       "m_bPlayerFireEventIsPrimary": {
@@ -7300,59 +7304,59 @@
         "comment": "bool"
       },
       "m_bReloadVisuallyComplete": {
-        "value": 5777,
+        "value": 5841,
         "comment": "bool"
       },
       "m_bReloadsWithClips": {
-        "value": 5668,
+        "value": 5732,
         "comment": "bool"
       },
       "m_bSilencerOn": {
-        "value": 5785,
+        "value": 5849,
         "comment": "bool"
       },
       "m_bUIWeapon": {
-        "value": 5953,
+        "value": 6017,
         "comment": "bool"
       },
       "m_bVisualsDataSet": {
-        "value": 5928,
+        "value": 5992,
         "comment": "bool"
       },
       "m_bWasOwnedByCT": {
-        "value": 6012,
+        "value": 6076,
         "comment": "bool"
       },
       "m_bWasOwnedByTerrorist": {
-        "value": 6013,
+        "value": 6077,
         "comment": "bool"
       },
       "m_donated": {
-        "value": 6004,
+        "value": 6068,
         "comment": "bool"
       },
       "m_fAccuracyPenalty": {
-        "value": 5744,
+        "value": 5808,
         "comment": "float"
       },
       "m_fAccuracySmoothedForZoom": {
-        "value": 5752,
+        "value": 5816,
         "comment": "float"
       },
       "m_fLastShotTime": {
-        "value": 6008,
+        "value": 6072,
         "comment": "GameTime_t"
       },
       "m_fScopeZoomEndTime": {
-        "value": 5756,
+        "value": 5820,
         "comment": "GameTime_t"
       },
       "m_flCrosshairDistance": {
-        "value": 5640,
+        "value": 5704,
         "comment": "float"
       },
       "m_flDroppedAtTime": {
-        "value": 5780,
+        "value": 5844,
         "comment": "GameTime_t"
       },
       "m_flFireSequenceStartTime": {
@@ -7360,103 +7364,111 @@
         "comment": "float"
       },
       "m_flGunAccuracyPosition": {
-        "value": 5660,
-        "comment": "float"
-      },
-      "m_flLastAccuracyUpdateTime": {
-        "value": 5748,
-        "comment": "GameTime_t"
-      },
-      "m_flLastClientFireBulletTime": {
-        "value": 6028,
-        "comment": "float"
-      },
-      "m_flLastLOSTraceFailureTime": {
-        "value": 6400,
-        "comment": "GameTime_t"
-      },
-      "m_flNextAttackRenderTimeOffset": {
-        "value": 5796,
-        "comment": "float"
-      },
-      "m_flPostponeFireReadyTime": {
-        "value": 5772,
-        "comment": "GameTime_t"
-      },
-      "m_flRecoilIndex": {
-        "value": 5764,
-        "comment": "float"
-      },
-      "m_flTimeSilencerSwitchComplete": {
-        "value": 5788,
-        "comment": "GameTime_t"
-      },
-      "m_flTimeWeaponIdle": {
-        "value": 5672,
-        "comment": "GameTime_t"
-      },
-      "m_flTurningInaccuracy": {
-        "value": 5740,
-        "comment": "float"
-      },
-      "m_flTurningInaccuracyDelta": {
         "value": 5724,
         "comment": "float"
       },
-      "m_gunHeat": {
-        "value": 6016,
+      "m_flLastAccuracyUpdateTime": {
+        "value": 5812,
+        "comment": "GameTime_t"
+      },
+      "m_flLastLOSTraceFailureTime": {
+        "value": 6480,
+        "comment": "GameTime_t"
+      },
+      "m_flNextAttackRenderTimeOffset": {
+        "value": 5860,
         "comment": "float"
       },
+      "m_flNextClientFireBulletTime": {
+        "value": 6092,
+        "comment": "float"
+      },
+      "m_flNextClientFireBulletTime_Repredict": {
+        "value": 6096,
+        "comment": "float"
+      },
+      "m_flPostponeFireReadyTime": {
+        "value": 5836,
+        "comment": "GameTime_t"
+      },
+      "m_flRecoilIndex": {
+        "value": 5828,
+        "comment": "float"
+      },
+      "m_flTimeSilencerSwitchComplete": {
+        "value": 5852,
+        "comment": "GameTime_t"
+      },
+      "m_flTimeWeaponIdle": {
+        "value": 5736,
+        "comment": "GameTime_t"
+      },
+      "m_flTurningInaccuracy": {
+        "value": 5804,
+        "comment": "float"
+      },
+      "m_flTurningInaccuracyDelta": {
+        "value": 5788,
+        "comment": "float"
+      },
+      "m_gunHeat": {
+        "value": 6080,
+        "comment": "float"
+      },
+      "m_hCurrentThirdPersonSequence": {
+        "value": 5640,
+        "comment": "HSequence"
+      },
       "m_hOurPing": {
-        "value": 5932,
+        "value": 5996,
         "comment": "CHandle<C_BaseEntity>"
       },
       "m_hPrevOwner": {
-        "value": 5968,
+        "value": 6032,
         "comment": "CHandle<C_CSPlayerPawn>"
       },
       "m_iAlpha": {
-        "value": 5648,
+        "value": 5712,
         "comment": "int32_t"
       },
       "m_iAmmoLastCheck": {
-        "value": 5644,
+        "value": 5708,
         "comment": "int32_t"
       },
       "m_iCrosshairTextureID": {
-        "value": 5656,
+        "value": 5720,
         "comment": "int32_t"
       },
       "m_iIronSightMode": {
-        "value": 6384,
+        "value": 6464,
         "comment": "int32_t"
       },
       "m_iNumEmptyAttacks": {
-        "value": 6404,
+        "value": 6484,
         "comment": "int32_t"
       },
       "m_iOriginalTeamNumber": {
-        "value": 5792,
+        "value": 5856,
         "comment": "int32_t"
       },
       "m_iRecoilIndex": {
-        "value": 5760,
+        "value": 5824,
         "comment": "int32_t"
       },
       "m_iScopeTextureID": {
-        "value": 5652,
+        "value": 5716,
         "comment": "int32_t"
       },
       "m_iState": {
-        "value": 5636,
+        "value": 5700,
         "comment": "CSWeaponState_t"
       },
       "m_lastSmokeTime": {
-        "value": 6024,
+        "value": 6088,
         "comment": "GameTime_t"
       },
       "m_nDropTick": {
-        "value": 5972,
+        "value": 6036,
         "comment": "GameTick_t"
       },
       "m_nFireSequenceStartTimeAck": {
@@ -7468,11 +7480,15 @@
         "comment": "int32_t"
       },
       "m_nOurPingIndex": {
-        "value": 5936,
+        "value": 6000,
         "comment": "CEntityIndex"
       },
+      "m_nSilencerBoneIndex": {
+        "value": 5644,
+        "comment": "int32_t"
+      },
       "m_nViewModelIndex": {
-        "value": 5664,
+        "value": 5728,
         "comment": "uint32_t"
       },
       "m_seqFirePrimary": {
@@ -7488,19 +7504,27 @@
         "comment": "HSequence"
       },
       "m_smokeAttachments": {
-        "value": 6020,
+        "value": 6084,
         "comment": "uint32_t"
       },
+      "m_thirdPersonFireSequences": {
+        "value": 5616,
+        "comment": "CUtlVector<HSequence>"
+      },
+      "m_thirdPersonSequences": {
+        "value": 5648,
+        "comment": "HSequence[6]"
+      },
       "m_vecOurPingPos": {
-        "value": 5940,
+        "value": 6004,
         "comment": "Vector"
       },
       "m_vecTurningInaccuracyEyeDirLast": {
-        "value": 5728,
+        "value": 5792,
         "comment": "Vector"
       },
       "m_weaponMode": {
-        "value": 5720,
+        "value": 5784,
         "comment": "CSWeaponMode"
       }
     },
@@ -7509,27 +7533,27 @@
   "C_CSWeaponBaseGun": {
     "data": {
       "m_bNeedsBoltAction": {
-        "value": 6493,
+        "value": 6573,
         "comment": "bool"
       },
       "m_iBurstShotsRemaining": {
-        "value": 6468,
+        "value": 6548,
         "comment": "int32_t"
       },
       "m_iSilencerBodygroup": {
-        "value": 6472,
+        "value": 6552,
         "comment": "int32_t"
       },
       "m_inPrecache": {
-        "value": 6492,
+        "value": 6572,
         "comment": "bool"
       },
       "m_silencedModelIndex": {
-        "value": 6488,
+        "value": 6568,
         "comment": "int32_t"
       },
       "m_zoomLevel": {
-        "value": 6464,
+        "value": 6544,
         "comment": "int32_t"
       }
     },
@@ -7788,8 +7812,16 @@
   "C_DecoyProjectile": {
     "data": {
       "m_flTimeParticleEffectSpawn": {
-        "value": 4368,
+        "value": 4376,
         "comment": "GameTime_t"
+      },
+      "m_nClientLastKnownDecoyShotTick": {
+        "value": 4340,
+        "comment": "int32_t"
+      },
+      "m_nDecoyShotTick": {
+        "value": 4336,
+        "comment": "int32_t"
       }
     },
     "comment": "C_BaseCSGrenadeProjectile"
@@ -8241,103 +8273,99 @@
   "C_EnvCombinedLightProbeVolume": {
     "data": {
       "m_Color": {
-        "value": 5544,
+        "value": 5528,
         "comment": "Color"
       },
-      "m_LightGroups": {
-        "value": 5624,
-        "comment": "CUtlSymbolLarge"
-      },
       "m_bCustomCubemapTexture": {
-        "value": 5560,
+        "value": 5544,
         "comment": "bool"
       },
       "m_bEnabled": {
-        "value": 5713,
+        "value": 5689,
         "comment": "bool"
       },
       "m_bMoveable": {
-        "value": 5632,
+        "value": 5608,
         "comment": "bool"
       },
       "m_bStartDisabled": {
-        "value": 5648,
+        "value": 5624,
         "comment": "bool"
       },
       "m_flBrightness": {
-        "value": 5548,
+        "value": 5532,
         "comment": "float"
       },
       "m_flEdgeFadeDist": {
-        "value": 5652,
+        "value": 5628,
         "comment": "float"
       },
       "m_hCubemapTexture": {
-        "value": 5552,
+        "value": 5536,
         "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
       },
       "m_hLightProbeDirectLightIndicesTexture": {
-        "value": 5576,
+        "value": 5560,
         "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
       },
       "m_hLightProbeDirectLightScalarsTexture": {
-        "value": 5584,
-        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
-      },
-      "m_hLightProbeDirectLightShadowsTexture": {
-        "value": 5592,
-        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
-      },
-      "m_hLightProbeTexture": {
         "value": 5568,
         "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
       },
+      "m_hLightProbeDirectLightShadowsTexture": {
+        "value": 5576,
+        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
+      },
+      "m_hLightProbeTexture": {
+        "value": 5552,
+        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
+      },
       "m_nEnvCubeMapArrayIndex": {
-        "value": 5640,
+        "value": 5616,
         "comment": "int32_t"
       },
       "m_nHandshake": {
-        "value": 5636,
+        "value": 5612,
         "comment": "int32_t"
       },
       "m_nLightProbeAtlasX": {
-        "value": 5680,
+        "value": 5656,
         "comment": "int32_t"
       },
       "m_nLightProbeAtlasY": {
-        "value": 5684,
+        "value": 5660,
         "comment": "int32_t"
       },
       "m_nLightProbeAtlasZ": {
-        "value": 5688,
+        "value": 5664,
         "comment": "int32_t"
       },
       "m_nLightProbeSizeX": {
-        "value": 5668,
-        "comment": "int32_t"
-      },
-      "m_nLightProbeSizeY": {
-        "value": 5672,
-        "comment": "int32_t"
-      },
-      "m_nLightProbeSizeZ": {
-        "value": 5676,
-        "comment": "int32_t"
-      },
-      "m_nPriority": {
         "value": 5644,
         "comment": "int32_t"
       },
+      "m_nLightProbeSizeY": {
+        "value": 5648,
+        "comment": "int32_t"
+      },
+      "m_nLightProbeSizeZ": {
+        "value": 5652,
+        "comment": "int32_t"
+      },
+      "m_nPriority": {
+        "value": 5620,
+        "comment": "int32_t"
+      },
       "m_vBoxMaxs": {
-        "value": 5612,
+        "value": 5596,
         "comment": "Vector"
       },
       "m_vBoxMins": {
-        "value": 5600,
+        "value": 5584,
         "comment": "Vector"
       },
       "m_vEdgeFadeDists": {
-        "value": 5656,
+        "value": 5632,
         "comment": "Vector"
       }
     },
@@ -8345,80 +8373,76 @@
   },
   "C_EnvCubemap": {
     "data": {
-      "m_LightGroups": {
-        "value": 1520,
-        "comment": "CUtlSymbolLarge"
-      },
       "m_bCopyDiffuseFromDefaultCubemap": {
-        "value": 1568,
+        "value": 1552,
         "comment": "bool"
       },
       "m_bCustomCubemapTexture": {
-        "value": 1488,
+        "value": 1480,
         "comment": "bool"
       },
       "m_bDefaultEnvMap": {
-        "value": 1565,
+        "value": 1549,
         "comment": "bool"
       },
       "m_bDefaultSpecEnvMap": {
-        "value": 1566,
+        "value": 1550,
         "comment": "bool"
       },
       "m_bEnabled": {
-        "value": 1584,
+        "value": 1568,
         "comment": "bool"
       },
       "m_bIndoorCubeMap": {
-        "value": 1567,
+        "value": 1551,
         "comment": "bool"
       },
       "m_bMoveable": {
-        "value": 1528,
+        "value": 1512,
         "comment": "bool"
       },
       "m_bStartDisabled": {
-        "value": 1564,
+        "value": 1548,
         "comment": "bool"
       },
       "m_flDiffuseScale": {
-        "value": 1560,
-        "comment": "float"
-      },
-      "m_flEdgeFadeDist": {
         "value": 1544,
         "comment": "float"
       },
+      "m_flEdgeFadeDist": {
+        "value": 1528,
+        "comment": "float"
+      },
       "m_flInfluenceRadius": {
-        "value": 1492,
+        "value": 1484,
         "comment": "float"
       },
       "m_hCubemapTexture": {
-        "value": 1480,
+        "value": 1472,
         "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
       },
       "m_nEnvCubeMapArrayIndex": {
-        "value": 1536,
+        "value": 1520,
         "comment": "int32_t"
       },
       "m_nHandshake": {
-        "value": 1532,
+        "value": 1516,
         "comment": "int32_t"
       },
       "m_nPriority": {
-        "value": 1540,
+        "value": 1524,
         "comment": "int32_t"
       },
       "m_vBoxProjectMaxs": {
-        "value": 1508,
+        "value": 1500,
         "comment": "Vector"
       },
       "m_vBoxProjectMins": {
-        "value": 1496,
+        "value": 1488,
         "comment": "Vector"
       },
       "m_vEdgeFadeDists": {
-        "value": 1548,
+        "value": 1532,
         "comment": "Vector"
       }
     },
@@ -8561,76 +8585,72 @@
   },
   "C_EnvLightProbeVolume": {
     "data": {
-      "m_LightGroups": {
-        "value": 5464,
-        "comment": "CUtlSymbolLarge"
-      },
       "m_bEnabled": {
-        "value": 5521,
+        "value": 5505,
         "comment": "bool"
       },
       "m_bMoveable": {
-        "value": 5472,
+        "value": 5456,
         "comment": "bool"
       },
       "m_bStartDisabled": {
-        "value": 5484,
+        "value": 5468,
         "comment": "bool"
       },
       "m_hLightProbeDirectLightIndicesTexture": {
-        "value": 5416,
-        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
-      },
-      "m_hLightProbeDirectLightScalarsTexture": {
-        "value": 5424,
-        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
-      },
-      "m_hLightProbeDirectLightShadowsTexture": {
-        "value": 5432,
-        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
-      },
-      "m_hLightProbeTexture": {
         "value": 5408,
         "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
       },
+      "m_hLightProbeDirectLightScalarsTexture": {
+        "value": 5416,
+        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
+      },
+      "m_hLightProbeDirectLightShadowsTexture": {
+        "value": 5424,
+        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
+      },
+      "m_hLightProbeTexture": {
+        "value": 5400,
+        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
+      },
       "m_nHandshake": {
-        "value": 5476,
+        "value": 5460,
         "comment": "int32_t"
       },
       "m_nLightProbeAtlasX": {
-        "value": 5500,
+        "value": 5484,
         "comment": "int32_t"
       },
       "m_nLightProbeAtlasY": {
-        "value": 5504,
-        "comment": "int32_t"
-      },
-      "m_nLightProbeAtlasZ": {
-        "value": 5508,
-        "comment": "int32_t"
-      },
-      "m_nLightProbeSizeX": {
         "value": 5488,
         "comment": "int32_t"
       },
-      "m_nLightProbeSizeY": {
+      "m_nLightProbeAtlasZ": {
         "value": 5492,
         "comment": "int32_t"
       },
-      "m_nLightProbeSizeZ": {
-        "value": 5496,
+      "m_nLightProbeSizeX": {
+        "value": 5472,
         "comment": "int32_t"
       },
-      "m_nPriority": {
+      "m_nLightProbeSizeY": {
+        "value": 5476,
+        "comment": "int32_t"
+      },
+      "m_nLightProbeSizeZ": {
         "value": 5480,
         "comment": "int32_t"
       },
+      "m_nPriority": {
+        "value": 5464,
+        "comment": "int32_t"
+      },
       "m_vBoxMaxs": {
-        "value": 5452,
+        "value": 5444,
         "comment": "Vector"
       },
       "m_vBoxMins": {
-        "value": 5440,
+        "value": 5432,
         "comment": "Vector"
       }
     },
@@ -9252,11 +9272,11 @@
   "C_Fists": {
     "data": {
       "m_bPlayingUninterruptableAct": {
-        "value": 6464,
+        "value": 6544,
         "comment": "bool"
       },
       "m_nUninterruptableActivity": {
-        "value": 6468,
+        "value": 6548,
         "comment": "PlayerAnimEvent_t"
       }
     },
@@ -10150,7 +10170,7 @@
   "C_Melee": {
     "data": {
       "m_flThrowAt": {
-        "value": 6464,
+        "value": 6544,
         "comment": "GameTime_t"
       }
     },
@@ -12435,17 +12455,21 @@
   "C_WeaponBaseItem": {
     "data": {
       "m_SequenceCompleteTimer": {
-        "value": 6464,
+        "value": 6544,
         "comment": "CountdownTimer"
       },
       "m_bRedraw": {
-        "value": 6488,
+        "value": 6568,
         "comment": "bool"
       }
     },
     "comment": "C_CSWeaponBase"
   },
   "C_WeaponBizon": {
+    "data": {},
+    "comment": "C_CSWeaponBaseGun"
+  },
+  "C_WeaponCZ75a": {
     "data": {},
     "comment": "C_CSWeaponBaseGun"
   },
@@ -12485,7 +12509,15 @@
     "data": {},
     "comment": "C_CSWeaponBaseGun"
   },
+  "C_WeaponM4A1Silencer": {
+    "data": {},
+    "comment": "C_CSWeaponBaseGun"
+  },
   "C_WeaponMAC10": {
+    "data": {},
+    "comment": "C_CSWeaponBaseGun"
+  },
+  "C_WeaponMP5SD": {
     "data": {},
     "comment": "C_CSWeaponBaseGun"
   },
@@ -12517,6 +12549,10 @@
     "data": {},
     "comment": "C_CSWeaponBaseGun"
   },
+  "C_WeaponRevolver": {
+    "data": {},
+    "comment": "C_CSWeaponBaseGun"
+  },
   "C_WeaponSCAR20": {
     "data": {},
     "comment": "C_CSWeaponBaseGun"
@@ -12536,7 +12572,7 @@
   "C_WeaponShield": {
     "data": {
       "m_flDisplayHealth": {
-        "value": 6496,
+        "value": 6576,
         "comment": "float"
       }
     },
@@ -12545,7 +12581,7 @@
   "C_WeaponTaser": {
     "data": {
       "m_fFireTime": {
-        "value": 6496,
+        "value": 6576,
         "comment": "GameTime_t"
       }
     },
@@ -12556,6 +12592,10 @@
     "comment": "C_CSWeaponBaseGun"
   },
   "C_WeaponUMP45": {
+    "data": {},
+    "comment": "C_CSWeaponBaseGun"
+  },
+  "C_WeaponUSPSilencer": {
     "data": {},
     "comment": "C_CSWeaponBaseGun"
   },
@@ -13434,10 +13474,6 @@
   },
   "shard_model_desc_t": {
     "data": {
-      "m_LightGroup": {
-        "value": 92,
-        "comment": "CUtlStringToken"
-      },
       "m_ShatterPanelMode": {
         "value": 25,
         "comment": "ShatterPanelMode"

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:22 +0000
+ * Fri, 3 Nov 2023 01:49:48 +0000
  */
 
 #pragma once
@@ -1548,38 +1548,38 @@ namespace C_OP_ControlPointToRadialScreenSpace { // CParticleFunctionPreEmission
 
 namespace C_OP_ControlpointLight { // CParticleFunctionOperator
     constexpr std::ptrdiff_t m_flScale = 0x1C0; // float
-    constexpr std::ptrdiff_t m_nControlPoint1 = 0x690; // int32_t
-    constexpr std::ptrdiff_t m_nControlPoint2 = 0x694; // int32_t
-    constexpr std::ptrdiff_t m_nControlPoint3 = 0x698; // int32_t
-    constexpr std::ptrdiff_t m_nControlPoint4 = 0x69C; // int32_t
-    constexpr std::ptrdiff_t m_vecCPOffset1 = 0x6A0; // Vector
-    constexpr std::ptrdiff_t m_vecCPOffset2 = 0x6AC; // Vector
-    constexpr std::ptrdiff_t m_vecCPOffset3 = 0x6B8; // Vector
-    constexpr std::ptrdiff_t m_vecCPOffset4 = 0x6C4; // Vector
-    constexpr std::ptrdiff_t m_LightFiftyDist1 = 0x6D0; // float
-    constexpr std::ptrdiff_t m_LightZeroDist1 = 0x6D4; // float
-    constexpr std::ptrdiff_t m_LightFiftyDist2 = 0x6D8; // float
-    constexpr std::ptrdiff_t m_LightZeroDist2 = 0x6DC; // float
-    constexpr std::ptrdiff_t m_LightFiftyDist3 = 0x6E0; // float
-    constexpr std::ptrdiff_t m_LightZeroDist3 = 0x6E4; // float
-    constexpr std::ptrdiff_t m_LightFiftyDist4 = 0x6E8; // float
-    constexpr std::ptrdiff_t m_LightZeroDist4 = 0x6EC; // float
-    constexpr std::ptrdiff_t m_LightColor1 = 0x6F0; // Color
-    constexpr std::ptrdiff_t m_LightColor2 = 0x6F4; // Color
-    constexpr std::ptrdiff_t m_LightColor3 = 0x6F8; // Color
-    constexpr std::ptrdiff_t m_LightColor4 = 0x6FC; // Color
-    constexpr std::ptrdiff_t m_bLightType1 = 0x700; // bool
-    constexpr std::ptrdiff_t m_bLightType2 = 0x701; // bool
-    constexpr std::ptrdiff_t m_bLightType3 = 0x702; // bool
-    constexpr std::ptrdiff_t m_bLightType4 = 0x703; // bool
-    constexpr std::ptrdiff_t m_bLightDynamic1 = 0x704; // bool
-    constexpr std::ptrdiff_t m_bLightDynamic2 = 0x705; // bool
-    constexpr std::ptrdiff_t m_bLightDynamic3 = 0x706; // bool
-    constexpr std::ptrdiff_t m_bLightDynamic4 = 0x707; // bool
-    constexpr std::ptrdiff_t m_bUseNormal = 0x708; // bool
-    constexpr std::ptrdiff_t m_bUseHLambert = 0x709; // bool
-    constexpr std::ptrdiff_t m_bClampLowerRange = 0x70E; // bool
-    constexpr std::ptrdiff_t m_bClampUpperRange = 0x70F; // bool
+    constexpr std::ptrdiff_t m_nControlPoint1 = 0x650; // int32_t
+    constexpr std::ptrdiff_t m_nControlPoint2 = 0x654; // int32_t
+    constexpr std::ptrdiff_t m_nControlPoint3 = 0x658; // int32_t
+    constexpr std::ptrdiff_t m_nControlPoint4 = 0x65C; // int32_t
+    constexpr std::ptrdiff_t m_vecCPOffset1 = 0x660; // Vector
+    constexpr std::ptrdiff_t m_vecCPOffset2 = 0x66C; // Vector
+    constexpr std::ptrdiff_t m_vecCPOffset3 = 0x678; // Vector
+    constexpr std::ptrdiff_t m_vecCPOffset4 = 0x684; // Vector
+    constexpr std::ptrdiff_t m_LightFiftyDist1 = 0x690; // float
+    constexpr std::ptrdiff_t m_LightZeroDist1 = 0x694; // float
+    constexpr std::ptrdiff_t m_LightFiftyDist2 = 0x698; // float
+    constexpr std::ptrdiff_t m_LightZeroDist2 = 0x69C; // float
+    constexpr std::ptrdiff_t m_LightFiftyDist3 = 0x6A0; // float
+    constexpr std::ptrdiff_t m_LightZeroDist3 = 0x6A4; // float
+    constexpr std::ptrdiff_t m_LightFiftyDist4 = 0x6A8; // float
+    constexpr std::ptrdiff_t m_LightZeroDist4 = 0x6AC; // float
+    constexpr std::ptrdiff_t m_LightColor1 = 0x6B0; // Color
+    constexpr std::ptrdiff_t m_LightColor2 = 0x6B4; // Color
+    constexpr std::ptrdiff_t m_LightColor3 = 0x6B8; // Color
+    constexpr std::ptrdiff_t m_LightColor4 = 0x6BC; // Color
+    constexpr std::ptrdiff_t m_bLightType1 = 0x6C0; // bool
+    constexpr std::ptrdiff_t m_bLightType2 = 0x6C1; // bool
+    constexpr std::ptrdiff_t m_bLightType3 = 0x6C2; // bool
+    constexpr std::ptrdiff_t m_bLightType4 = 0x6C3; // bool
+    constexpr std::ptrdiff_t m_bLightDynamic1 = 0x6C4; // bool
+    constexpr std::ptrdiff_t m_bLightDynamic2 = 0x6C5; // bool
+    constexpr std::ptrdiff_t m_bLightDynamic3 = 0x6C6; // bool
+    constexpr std::ptrdiff_t m_bLightDynamic4 = 0x6C7; // bool
+    constexpr std::ptrdiff_t m_bUseNormal = 0x6C8; // bool
+    constexpr std::ptrdiff_t m_bUseHLambert = 0x6C9; // bool
+    constexpr std::ptrdiff_t m_bClampLowerRange = 0x6CE; // bool
+    constexpr std::ptrdiff_t m_bClampUpperRange = 0x6CF; // bool
 }
 
 namespace C_OP_Cull { // CParticleFunctionOperator

@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 27 Oct 2023 01:03:22 +0000
+Fri, 3 Nov 2023 01:49:48 +0000
 '''
 
 class CBaseRendererSource2: # CParticleFunctionRenderer
@@ -1378,38 +1378,38 @@ class C_OP_ControlPointToRadialScreenSpace: # CParticleFunctionPreEmission
 
 class C_OP_ControlpointLight: # CParticleFunctionOperator
     m_flScale = 0x1C0 # float
-    m_nControlPoint1 = 0x690 # int32_t
-    m_nControlPoint2 = 0x694 # int32_t
-    m_nControlPoint3 = 0x698 # int32_t
-    m_nControlPoint4 = 0x69C # int32_t
-    m_vecCPOffset1 = 0x6A0 # Vector
-    m_vecCPOffset2 = 0x6AC # Vector
-    m_vecCPOffset3 = 0x6B8 # Vector
-    m_vecCPOffset4 = 0x6C4 # Vector
-    m_LightFiftyDist1 = 0x6D0 # float
-    m_LightZeroDist1 = 0x6D4 # float
-    m_LightFiftyDist2 = 0x6D8 # float
-    m_LightZeroDist2 = 0x6DC # float
-    m_LightFiftyDist3 = 0x6E0 # float
-    m_LightZeroDist3 = 0x6E4 # float
-    m_LightFiftyDist4 = 0x6E8 # float
-    m_LightZeroDist4 = 0x6EC # float
-    m_LightColor1 = 0x6F0 # Color
-    m_LightColor2 = 0x6F4 # Color
-    m_LightColor3 = 0x6F8 # Color
-    m_LightColor4 = 0x6FC # Color
-    m_bLightType1 = 0x700 # bool
-    m_bLightType2 = 0x701 # bool
-    m_bLightType3 = 0x702 # bool
-    m_bLightType4 = 0x703 # bool
-    m_bLightDynamic1 = 0x704 # bool
-    m_bLightDynamic2 = 0x705 # bool
-    m_bLightDynamic3 = 0x706 # bool
-    m_bLightDynamic4 = 0x707 # bool
-    m_bUseNormal = 0x708 # bool
-    m_bUseHLambert = 0x709 # bool
-    m_bClampLowerRange = 0x70E # bool
-    m_bClampUpperRange = 0x70F # bool
+    m_nControlPoint1 = 0x650 # int32_t
+    m_nControlPoint2 = 0x654 # int32_t
+    m_nControlPoint3 = 0x658 # int32_t
+    m_nControlPoint4 = 0x65C # int32_t
+    m_vecCPOffset1 = 0x660 # Vector
+    m_vecCPOffset2 = 0x66C # Vector
+    m_vecCPOffset3 = 0x678 # Vector
+    m_vecCPOffset4 = 0x684 # Vector
+    m_LightFiftyDist1 = 0x690 # float
+    m_LightZeroDist1 = 0x694 # float
+    m_LightFiftyDist2 = 0x698 # float
+    m_LightZeroDist2 = 0x69C # float
+    m_LightFiftyDist3 = 0x6A0 # float
+    m_LightZeroDist3 = 0x6A4 # float
+    m_LightFiftyDist4 = 0x6A8 # float
+    m_LightZeroDist4 = 0x6AC # float
+    m_LightColor1 = 0x6B0 # Color
+    m_LightColor2 = 0x6B4 # Color
+    m_LightColor3 = 0x6B8 # Color
+    m_LightColor4 = 0x6BC # Color
+    m_bLightType1 = 0x6C0 # bool
+    m_bLightType2 = 0x6C1 # bool
+    m_bLightType3 = 0x6C2 # bool
+    m_bLightType4 = 0x6C3 # bool
+    m_bLightDynamic1 = 0x6C4 # bool
+    m_bLightDynamic2 = 0x6C5 # bool
+    m_bLightDynamic3 = 0x6C6 # bool
+    m_bLightDynamic4 = 0x6C7 # bool
+    m_bUseNormal = 0x6C8 # bool
+    m_bUseHLambert = 0x6C9 # bool
+    m_bClampLowerRange = 0x6CE # bool
+    m_bClampUpperRange = 0x6CF # bool
 
 class C_OP_Cull: # CParticleFunctionOperator
     m_flCullPerc = 0x1C0 # float

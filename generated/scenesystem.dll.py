@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 27 Oct 2023 01:03:22 +0000
+Fri, 3 Nov 2023 01:49:47 +0000
 '''
 
 class CSSDSEndFrameViewInfo:

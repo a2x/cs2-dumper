@@ -516,19 +516,15 @@
         "comment": "float"
       },
       "m_nCubeMapPrecomputedHandshake": {
-        "value": 112,
+        "value": 108,
         "comment": "int32_t"
       },
       "m_nLODOverride": {
-        "value": 110,
+        "value": 106,
         "comment": "int16_t"
       },
-      "m_nLightGroup": {
-        "value": 104,
-        "comment": "uint32_t"
-      },
       "m_nLightProbeVolumePrecomputedHandshake": {
-        "value": 116,
+        "value": 112,
         "comment": "int32_t"
       },
       "m_nObjectID": {
@@ -540,15 +536,15 @@
         "comment": "ObjectTypeFlags_t"
       },
       "m_nOverlayRenderOrder": {
-        "value": 108,
+        "value": 104,
         "comment": "int16_t"
       },
       "m_renderable": {
-        "value": 136,
+        "value": 128,
         "comment": "CStrongHandle<InfoForResourceTypeCRenderMesh>"
       },
       "m_renderableModel": {
-        "value": 128,
+        "value": 120,
         "comment": "CStrongHandle<InfoForResourceTypeCModel>"
       },
       "m_skin": {

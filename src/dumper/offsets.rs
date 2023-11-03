@@ -216,7 +216,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x169AFE0)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AB2E0)?;
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -238,7 +238,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17E8158)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17F9C18)?;
 
         let player_name = process.read_string((local_player_controller + 0x610).into())?;
 
@@ -256,8 +256,8 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x5396D8)?;
-        let window_height = process.read_memory::<u32>(engine_base + 0x5396DC)?;
+        let window_width = process.read_memory::<u32>(engine_base + 0x5397D8)?;
+        let window_height = process.read_memory::<u32>(engine_base + 0x5397DC)?;
 
         println!("Window size: {}x{}", window_width, window_height);
 

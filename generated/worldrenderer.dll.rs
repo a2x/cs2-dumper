@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:22 +0000
+ * Fri, 3 Nov 2023 01:49:47 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -176,13 +176,12 @@ pub mod SceneObject_t {
     pub const m_skin: usize = 0x50; // CUtlString
     pub const m_nObjectTypeFlags: usize = 0x58; // ObjectTypeFlags_t
     pub const m_vLightingOrigin: usize = 0x5C; // Vector
-    pub const m_nLightGroup: usize = 0x68; // uint32_t
-    pub const m_nOverlayRenderOrder: usize = 0x6C; // int16_t
-    pub const m_nLODOverride: usize = 0x6E; // int16_t
-    pub const m_nCubeMapPrecomputedHandshake: usize = 0x70; // int32_t
-    pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x74; // int32_t
-    pub const m_renderableModel: usize = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
-    pub const m_renderable: usize = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+    pub const m_nOverlayRenderOrder: usize = 0x68; // int16_t
+    pub const m_nLODOverride: usize = 0x6A; // int16_t
+    pub const m_nCubeMapPrecomputedHandshake: usize = 0x6C; // int32_t
+    pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x70; // int32_t
+    pub const m_renderableModel: usize = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
+    pub const m_renderable: usize = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
 }
 
 pub mod VMapResourceData_t {

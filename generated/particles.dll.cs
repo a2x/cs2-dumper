@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:22 +0000
+ * Fri, 3 Nov 2023 01:49:48 +0000
  */
 
 public static class CBaseRendererSource2 { // CParticleFunctionRenderer
@@ -1544,38 +1544,38 @@ public static class C_OP_ControlPointToRadialScreenSpace { // CParticleFunctionP
 
 public static class C_OP_ControlpointLight { // CParticleFunctionOperator
     public const nint m_flScale = 0x1C0; // float
-    public const nint m_nControlPoint1 = 0x690; // int32_t
-    public const nint m_nControlPoint2 = 0x694; // int32_t
-    public const nint m_nControlPoint3 = 0x698; // int32_t
-    public const nint m_nControlPoint4 = 0x69C; // int32_t
-    public const nint m_vecCPOffset1 = 0x6A0; // Vector
-    public const nint m_vecCPOffset2 = 0x6AC; // Vector
-    public const nint m_vecCPOffset3 = 0x6B8; // Vector
-    public const nint m_vecCPOffset4 = 0x6C4; // Vector
-    public const nint m_LightFiftyDist1 = 0x6D0; // float
-    public const nint m_LightZeroDist1 = 0x6D4; // float
-    public const nint m_LightFiftyDist2 = 0x6D8; // float
-    public const nint m_LightZeroDist2 = 0x6DC; // float
-    public const nint m_LightFiftyDist3 = 0x6E0; // float
-    public const nint m_LightZeroDist3 = 0x6E4; // float
-    public const nint m_LightFiftyDist4 = 0x6E8; // float
-    public const nint m_LightZeroDist4 = 0x6EC; // float
-    public const nint m_LightColor1 = 0x6F0; // Color
-    public const nint m_LightColor2 = 0x6F4; // Color
-    public const nint m_LightColor3 = 0x6F8; // Color
-    public const nint m_LightColor4 = 0x6FC; // Color
-    public const nint m_bLightType1 = 0x700; // bool
-    public const nint m_bLightType2 = 0x701; // bool
-    public const nint m_bLightType3 = 0x702; // bool
-    public const nint m_bLightType4 = 0x703; // bool
-    public const nint m_bLightDynamic1 = 0x704; // bool
-    public const nint m_bLightDynamic2 = 0x705; // bool
-    public const nint m_bLightDynamic3 = 0x706; // bool
-    public const nint m_bLightDynamic4 = 0x707; // bool
-    public const nint m_bUseNormal = 0x708; // bool
-    public const nint m_bUseHLambert = 0x709; // bool
-    public const nint m_bClampLowerRange = 0x70E; // bool
-    public const nint m_bClampUpperRange = 0x70F; // bool
+    public const nint m_nControlPoint1 = 0x650; // int32_t
+    public const nint m_nControlPoint2 = 0x654; // int32_t
+    public const nint m_nControlPoint3 = 0x658; // int32_t
+    public const nint m_nControlPoint4 = 0x65C; // int32_t
+    public const nint m_vecCPOffset1 = 0x660; // Vector
+    public const nint m_vecCPOffset2 = 0x66C; // Vector
+    public const nint m_vecCPOffset3 = 0x678; // Vector
+    public const nint m_vecCPOffset4 = 0x684; // Vector
+    public const nint m_LightFiftyDist1 = 0x690; // float
+    public const nint m_LightZeroDist1 = 0x694; // float
+    public const nint m_LightFiftyDist2 = 0x698; // float
+    public const nint m_LightZeroDist2 = 0x69C; // float
+    public const nint m_LightFiftyDist3 = 0x6A0; // float
+    public const nint m_LightZeroDist3 = 0x6A4; // float
+    public const nint m_LightFiftyDist4 = 0x6A8; // float
+    public const nint m_LightZeroDist4 = 0x6AC; // float
+    public const nint m_LightColor1 = 0x6B0; // Color
+    public const nint m_LightColor2 = 0x6B4; // Color
+    public const nint m_LightColor3 = 0x6B8; // Color
+    public const nint m_LightColor4 = 0x6BC; // Color
+    public const nint m_bLightType1 = 0x6C0; // bool
+    public const nint m_bLightType2 = 0x6C1; // bool
+    public const nint m_bLightType3 = 0x6C2; // bool
+    public const nint m_bLightType4 = 0x6C3; // bool
+    public const nint m_bLightDynamic1 = 0x6C4; // bool
+    public const nint m_bLightDynamic2 = 0x6C5; // bool
+    public const nint m_bLightDynamic3 = 0x6C6; // bool
+    public const nint m_bLightDynamic4 = 0x6C7; // bool
+    public const nint m_bUseNormal = 0x6C8; // bool
+    public const nint m_bUseHLambert = 0x6C9; // bool
+    public const nint m_bClampLowerRange = 0x6CE; // bool
+    public const nint m_bClampUpperRange = 0x6CF; // bool
 }
 
 public static class C_OP_Cull { // CParticleFunctionOperator

@@ -35,21 +35,21 @@
     {
       "name": "dwForceAttack",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 64 4B B4 FF",
+      "pattern": "48 8D 0D ? ? ? ? E9 84 44 B4 FF",
       "operations": [
         {
           "type": "ripRelative"
         },
         {
           "type": "add",
-          "value": 40
+          "value": 184
         }
       ]
     },
     {
       "name": "dwForceAttack2",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 74 4B B4 FF",
+      "pattern": "48 8D 0D ? ? ? ? E9 34 45 B4 FF",
       "operations": [
         {
           "type": "ripRelative"
@@ -245,14 +245,14 @@
     {
       "name": "dwLocalPlayerPawn",
       "module": "client.dll",
-      "pattern": "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC ? 8B 0D",
+      "pattern": "48 8B 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 89 5C 24 ? 4C 8B D9",
       "operations": [
         {
           "type": "ripRelative"
         },
         {
           "type": "add",
-          "value": 280
+          "value": 304
         }
       ]
     },

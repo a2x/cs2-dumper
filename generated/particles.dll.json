@@ -4968,99 +4968,99 @@
   "C_OP_ControlpointLight": {
     "data": {
       "m_LightColor1": {
-        "value": 1776,
+        "value": 1712,
         "comment": "Color"
       },
       "m_LightColor2": {
-        "value": 1780,
+        "value": 1716,
         "comment": "Color"
       },
       "m_LightColor3": {
-        "value": 1784,
+        "value": 1720,
         "comment": "Color"
       },
       "m_LightColor4": {
-        "value": 1788,
+        "value": 1724,
         "comment": "Color"
       },
       "m_LightFiftyDist1": {
-        "value": 1744,
+        "value": 1680,
         "comment": "float"
       },
       "m_LightFiftyDist2": {
-        "value": 1752,
+        "value": 1688,
         "comment": "float"
       },
       "m_LightFiftyDist3": {
-        "value": 1760,
+        "value": 1696,
         "comment": "float"
       },
       "m_LightFiftyDist4": {
-        "value": 1768,
+        "value": 1704,
         "comment": "float"
       },
       "m_LightZeroDist1": {
-        "value": 1748,
+        "value": 1684,
         "comment": "float"
       },
       "m_LightZeroDist2": {
-        "value": 1756,
+        "value": 1692,
         "comment": "float"
       },
       "m_LightZeroDist3": {
-        "value": 1764,
+        "value": 1700,
         "comment": "float"
       },
       "m_LightZeroDist4": {
-        "value": 1772,
+        "value": 1708,
         "comment": "float"
       },
       "m_bClampLowerRange": {
-        "value": 1806,
+        "value": 1742,
         "comment": "bool"
       },
       "m_bClampUpperRange": {
-        "value": 1807,
+        "value": 1743,
         "comment": "bool"
       },
       "m_bLightDynamic1": {
-        "value": 1796,
+        "value": 1732,
         "comment": "bool"
       },
       "m_bLightDynamic2": {
-        "value": 1797,
+        "value": 1733,
         "comment": "bool"
       },
       "m_bLightDynamic3": {
-        "value": 1798,
+        "value": 1734,
         "comment": "bool"
       },
       "m_bLightDynamic4": {
-        "value": 1799,
+        "value": 1735,
         "comment": "bool"
       },
       "m_bLightType1": {
-        "value": 1792,
+        "value": 1728,
         "comment": "bool"
       },
       "m_bLightType2": {
-        "value": 1793,
+        "value": 1729,
         "comment": "bool"
       },
       "m_bLightType3": {
-        "value": 1794,
+        "value": 1730,
         "comment": "bool"
       },
       "m_bLightType4": {
-        "value": 1795,
+        "value": 1731,
         "comment": "bool"
       },
       "m_bUseHLambert": {
-        "value": 1801,
+        "value": 1737,
         "comment": "bool"
       },
       "m_bUseNormal": {
-        "value": 1800,
+        "value": 1736,
         "comment": "bool"
       },
       "m_flScale": {
@@ -5068,35 +5068,35 @@
         "comment": "float"
       },
       "m_nControlPoint1": {
-        "value": 1680,
+        "value": 1616,
         "comment": "int32_t"
       },
       "m_nControlPoint2": {
-        "value": 1684,
+        "value": 1620,
         "comment": "int32_t"
       },
       "m_nControlPoint3": {
-        "value": 1688,
+        "value": 1624,
         "comment": "int32_t"
       },
       "m_nControlPoint4": {
-        "value": 1692,
+        "value": 1628,
         "comment": "int32_t"
       },
       "m_vecCPOffset1": {
-        "value": 1696,
+        "value": 1632,
         "comment": "Vector"
       },
       "m_vecCPOffset2": {
-        "value": 1708,
+        "value": 1644,
         "comment": "Vector"
       },
       "m_vecCPOffset3": {
-        "value": 1720,
+        "value": 1656,
         "comment": "Vector"
       },
       "m_vecCPOffset4": {
-        "value": 1732,
+        "value": 1668,
         "comment": "Vector"
       }
     },

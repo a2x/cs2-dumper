@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:22 +0000
+ * Fri, 3 Nov 2023 01:49:47 +0000
  */
 
 #pragma once
@@ -178,13 +178,12 @@ namespace SceneObject_t {
     constexpr std::ptrdiff_t m_skin = 0x50; // CUtlString
     constexpr std::ptrdiff_t m_nObjectTypeFlags = 0x58; // ObjectTypeFlags_t
     constexpr std::ptrdiff_t m_vLightingOrigin = 0x5C; // Vector
-    constexpr std::ptrdiff_t m_nLightGroup = 0x68; // uint32_t
-    constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x6C; // int16_t
-    constexpr std::ptrdiff_t m_nLODOverride = 0x6E; // int16_t
-    constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x70; // int32_t
-    constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x74; // int32_t
-    constexpr std::ptrdiff_t m_renderableModel = 0x80; // CStrongHandle<InfoForResourceTypeCModel>
-    constexpr std::ptrdiff_t m_renderable = 0x88; // CStrongHandle<InfoForResourceTypeCRenderMesh>
+    constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x68; // int16_t
+    constexpr std::ptrdiff_t m_nLODOverride = 0x6A; // int16_t
+    constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x6C; // int32_t
+    constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x70; // int32_t
+    constexpr std::ptrdiff_t m_renderableModel = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
+    constexpr std::ptrdiff_t m_renderable = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
 }
 
 namespace VMapResourceData_t {

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 27 Oct 2023 01:03:22 +0000
+ * Fri, 3 Nov 2023 01:49:48 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1546,38 +1546,38 @@ pub mod C_OP_ControlPointToRadialScreenSpace { // CParticleFunctionPreEmission
 
 pub mod C_OP_ControlpointLight { // CParticleFunctionOperator
     pub const m_flScale: usize = 0x1C0; // float
-    pub const m_nControlPoint1: usize = 0x690; // int32_t
-    pub const m_nControlPoint2: usize = 0x694; // int32_t
-    pub const m_nControlPoint3: usize = 0x698; // int32_t
-    pub const m_nControlPoint4: usize = 0x69C; // int32_t
-    pub const m_vecCPOffset1: usize = 0x6A0; // Vector
-    pub const m_vecCPOffset2: usize = 0x6AC; // Vector
-    pub const m_vecCPOffset3: usize = 0x6B8; // Vector
-    pub const m_vecCPOffset4: usize = 0x6C4; // Vector
-    pub const m_LightFiftyDist1: usize = 0x6D0; // float
-    pub const m_LightZeroDist1: usize = 0x6D4; // float
-    pub const m_LightFiftyDist2: usize = 0x6D8; // float
-    pub const m_LightZeroDist2: usize = 0x6DC; // float
-    pub const m_LightFiftyDist3: usize = 0x6E0; // float
-    pub const m_LightZeroDist3: usize = 0x6E4; // float
-    pub const m_LightFiftyDist4: usize = 0x6E8; // float
-    pub const m_LightZeroDist4: usize = 0x6EC; // float
-    pub const m_LightColor1: usize = 0x6F0; // Color
-    pub const m_LightColor2: usize = 0x6F4; // Color
-    pub const m_LightColor3: usize = 0x6F8; // Color
-    pub const m_LightColor4: usize = 0x6FC; // Color
-    pub const m_bLightType1: usize = 0x700; // bool
-    pub const m_bLightType2: usize = 0x701; // bool
-    pub const m_bLightType3: usize = 0x702; // bool
-    pub const m_bLightType4: usize = 0x703; // bool
-    pub const m_bLightDynamic1: usize = 0x704; // bool
-    pub const m_bLightDynamic2: usize = 0x705; // bool
-    pub const m_bLightDynamic3: usize = 0x706; // bool
-    pub const m_bLightDynamic4: usize = 0x707; // bool
-    pub const m_bUseNormal: usize = 0x708; // bool
-    pub const m_bUseHLambert: usize = 0x709; // bool
-    pub const m_bClampLowerRange: usize = 0x70E; // bool
-    pub const m_bClampUpperRange: usize = 0x70F; // bool
+    pub const m_nControlPoint1: usize = 0x650; // int32_t
+    pub const m_nControlPoint2: usize = 0x654; // int32_t
+    pub const m_nControlPoint3: usize = 0x658; // int32_t
+    pub const m_nControlPoint4: usize = 0x65C; // int32_t
+    pub const m_vecCPOffset1: usize = 0x660; // Vector
+    pub const m_vecCPOffset2: usize = 0x66C; // Vector
+    pub const m_vecCPOffset3: usize = 0x678; // Vector
+    pub const m_vecCPOffset4: usize = 0x684; // Vector
+    pub const m_LightFiftyDist1: usize = 0x690; // float
+    pub const m_LightZeroDist1: usize = 0x694; // float
+    pub const m_LightFiftyDist2: usize = 0x698; // float
+    pub const m_LightZeroDist2: usize = 0x69C; // float
+    pub const m_LightFiftyDist3: usize = 0x6A0; // float
+    pub const m_LightZeroDist3: usize = 0x6A4; // float
+    pub const m_LightFiftyDist4: usize = 0x6A8; // float
+    pub const m_LightZeroDist4: usize = 0x6AC; // float
+    pub const m_LightColor1: usize = 0x6B0; // Color
+    pub const m_LightColor2: usize = 0x6B4; // Color
+    pub const m_LightColor3: usize = 0x6B8; // Color
+    pub const m_LightColor4: usize = 0x6BC; // Color
+    pub const m_bLightType1: usize = 0x6C0; // bool
+    pub const m_bLightType2: usize = 0x6C1; // bool
+    pub const m_bLightType3: usize = 0x6C2; // bool
+    pub const m_bLightType4: usize = 0x6C3; // bool
+    pub const m_bLightDynamic1: usize = 0x6C4; // bool
+    pub const m_bLightDynamic2: usize = 0x6C5; // bool
+    pub const m_bLightDynamic3: usize = 0x6C6; // bool
+    pub const m_bLightDynamic4: usize = 0x6C7; // bool
+    pub const m_bUseNormal: usize = 0x6C8; // bool
+    pub const m_bUseHLambert: usize = 0x6C9; // bool
+    pub const m_bClampLowerRange: usize = 0x6CE; // bool
+    pub const m_bClampUpperRange: usize = 0x6CF; // bool
 }
 
 pub mod C_OP_Cull { // CParticleFunctionOperator
