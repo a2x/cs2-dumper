@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 4 Nov 2023 00:33:21 +0000
+ * Sat, 4 Nov 2023 04:05:17 +0000
  */
 
 #pragma once
@@ -8,7 +8,6 @@
 #include <cstddef>
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t dwBaseEntityModel_setModel = 0x581500;
     constexpr std::ptrdiff_t dwEntityList = 0x17AB958;
     constexpr std::ptrdiff_t dwForceAttack = 0x16B02B0;
     constexpr std::ptrdiff_t dwForceAttack2 = 0x16B0340;
@@ -19,8 +18,7 @@ namespace client_dll { // client.dll
     constexpr std::ptrdiff_t dwForceLeft = 0x16B0610;
     constexpr std::ptrdiff_t dwForceRight = 0x16B06A0;
     constexpr std::ptrdiff_t dwGameEntitySystem = 0x18D51A8;
-    constexpr std::ptrdiff_t dwGameEntitySystem_getBaseEntity = 0x604B10;
-    constexpr std::ptrdiff_t dwGameEntitySystem_getHighestEntityIndex = 0x5F6800;
+    constexpr std::ptrdiff_t dwGameEntitySystem_getHighestEntityIndex = 0x1510;
     constexpr std::ptrdiff_t dwGameRules = 0x1807FA8;
     constexpr std::ptrdiff_t dwGlobalVars = 0x16AC100;
     constexpr std::ptrdiff_t dwGlowManager = 0x1807708;

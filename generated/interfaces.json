@@ -15,7 +15,7 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7527024,
+        "value": 7527072,
         "comment": null
       },
       "EmptyWorldService001_Client": {
@@ -23,15 +23,15 @@
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7527040,
+        "value": 7527088,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9017328,
+        "value": 9017376,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7527056,
+        "value": 7527104,
         "comment": null
       },
       "Source2ClientConfig001": {
@@ -39,11 +39,11 @@
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8001584,
+        "value": 8001632,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8946944,
+        "value": 8946992,
         "comment": null
       }
     },
@@ -461,15 +461,15 @@
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10703856,
+        "value": 10703904,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8619872,
+        "value": 8619920,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8619888,
+        "value": 8619936,
         "comment": null
       },
       "Source2GameDirector001": {
@@ -477,11 +477,11 @@
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8619904,
+        "value": 8619952,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8619920,
+        "value": 8619968,
         "comment": null
       },
       "Source2ServerConfig001": {

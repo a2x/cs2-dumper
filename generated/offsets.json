@@ -1,10 +1,6 @@
 {
   "client_dll": {
     "data": {
-      "dwBaseEntityModel_setModel": {
-        "value": 5772544,
-        "comment": null
-      },
       "dwEntityList": {
         "value": 24820056,
         "comment": null
@@ -45,12 +41,8 @@
         "value": 26038696,
         "comment": null
       },
-      "dwGameEntitySystem_getBaseEntity": {
-        "value": 6310672,
-        "comment": null
-      },
       "dwGameEntitySystem_getHighestEntityIndex": {
-        "value": 6252544,
+        "value": 5392,
         "comment": null
       },
       "dwGameRules": {

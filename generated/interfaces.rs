@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 4 Nov 2023 00:33:04 +0000
+ * Sat, 4 Nov 2023 04:05:17 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -11,12 +11,12 @@ pub mod animationsystem_dll { // animationsystem.dll
 }
 
 pub mod client_dll { // client.dll
-    pub const LegacyGameUI001: usize = 0x8997F0;
-    pub const Source2ClientUI001: usize = 0x888500;
-    pub const Source2ClientPrediction001: usize = 0x7A1830;
-    pub const ClientToolsInfo_001: usize = 0x72DA70;
-    pub const Source2Client002: usize = 0x72DA90;
-    pub const GameClientExports001: usize = 0x72DA80;
+    pub const LegacyGameUI001: usize = 0x899820;
+    pub const Source2ClientUI001: usize = 0x888530;
+    pub const Source2ClientPrediction001: usize = 0x7A1860;
+    pub const ClientToolsInfo_001: usize = 0x72DAA0;
+    pub const Source2Client002: usize = 0x72DAC0;
+    pub const GameClientExports001: usize = 0x72DAB0;
     pub const EmptyWorldService001_Client: usize = 0x48DEF0;
     pub const Source2ClientConfig001: usize = 0x474F00;
 }
@@ -159,11 +159,11 @@ pub mod schemasystem_dll { // schemasystem.dll
 }
 
 pub mod server_dll { // server.dll
-    pub const NavGameTest001: usize = 0xA353F0;
-    pub const ServerToolsInfo_001: usize = 0x838760;
-    pub const Source2GameClients001: usize = 0x838770;
-    pub const Source2GameEntities001: usize = 0x838780;
-    pub const Source2Server001: usize = 0x838790;
+    pub const NavGameTest001: usize = 0xA35420;
+    pub const ServerToolsInfo_001: usize = 0x838790;
+    pub const Source2GameClients001: usize = 0x8387A0;
+    pub const Source2GameEntities001: usize = 0x8387B0;
+    pub const Source2Server001: usize = 0x8387C0;
     pub const EmptyWorldService001_Server: usize = 0x58D750;
     pub const Source2ServerConfig001: usize = 0x56D760;
     pub const EntitySubclassUtilsV001: usize = 0x2CD4C0;

@@ -1,16 +1,6 @@
 {
   "signatures": [
     {
-      "name": "dwBaseEntityModel_setModel",
-      "module": "client.dll",
-      "pattern": "E8 ? ? ? ? F3 0F 10 4C 3B ?",
-      "operations": [
-        {
-          "type": "resolveJmp"
-        }
-      ]
-    },
-    {
       "name": "dwBuildNumber",
       "module": "engine2.dll",
       "pattern": "8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8B 0D ? ? ? ? 48 8D 05",
@@ -155,30 +145,14 @@
       ]
     },
     {
-      "name": "dwGameEntitySystem_getBaseEntity",
-      "module": "client.dll",
-      "pattern": "8B D3 E8 ? ? ? ? 48 8B F8 48 85 C0 74 76",
-      "operations": [
-        {
-          "type": "add",
-          "value": 2
-        },
-        {
-          "type": "resolveJmp"
-        }
-      ]
-    },
-    {
       "name": "dwGameEntitySystem_getHighestEntityIndex",
       "module": "client.dll",
-      "pattern": "33 DB E8 ? ? ? ? 8B 08",
+      "pattern": "8B 81 ? ? ? ? 89 02 48 8B C2 C3 CC CC CC CC 48 89 5C 24 ? 48 89 6C 24",
       "operations": [
         {
-          "type": "add",
-          "value": 2
-        },
-        {
-          "type": "resolveJmp"
+          "type": "slice",
+          "start": 2,
+          "end": 4
         }
       ]
     },

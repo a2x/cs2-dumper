@@ -1,10 +1,9 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 4 Nov 2023 00:33:21 +0000
+ * Sat, 4 Nov 2023 04:05:17 +0000
  */
 
 public static class client_dll { // client.dll
-    public const nint dwBaseEntityModel_setModel = 0x581500;
     public const nint dwEntityList = 0x17AB958;
     public const nint dwForceAttack = 0x16B02B0;
     public const nint dwForceAttack2 = 0x16B0340;
@@ -15,8 +14,7 @@ public static class client_dll { // client.dll
     public const nint dwForceLeft = 0x16B0610;
     public const nint dwForceRight = 0x16B06A0;
     public const nint dwGameEntitySystem = 0x18D51A8;
-    public const nint dwGameEntitySystem_getBaseEntity = 0x604B10;
-    public const nint dwGameEntitySystem_getHighestEntityIndex = 0x5F6800;
+    public const nint dwGameEntitySystem_getHighestEntityIndex = 0x1510;
     public const nint dwGameRules = 0x1807FA8;
     public const nint dwGlobalVars = 0x16AC100;
     public const nint dwGlowManager = 0x1807708;

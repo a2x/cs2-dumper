@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 4 Nov 2023 00:33:04 +0000
+ * Sat, 4 Nov 2023 04:05:17 +0000
  */
 
 #pragma once
@@ -13,12 +13,12 @@ namespace animationsystem_dll { // animationsystem.dll
 }
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8997F0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x888500;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A1830;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x72DA70;
-    constexpr std::ptrdiff_t Source2Client002 = 0x72DA90;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x72DA80;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x899820;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x888530;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A1860;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x72DAA0;
+    constexpr std::ptrdiff_t Source2Client002 = 0x72DAC0;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x72DAB0;
     constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x48DEF0;
     constexpr std::ptrdiff_t Source2ClientConfig001 = 0x474F00;
 }
@@ -161,11 +161,11 @@ namespace schemasystem_dll { // schemasystem.dll
 }
 
 namespace server_dll { // server.dll
-    constexpr std::ptrdiff_t NavGameTest001 = 0xA353F0;
-    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x838760;
-    constexpr std::ptrdiff_t Source2GameClients001 = 0x838770;
-    constexpr std::ptrdiff_t Source2GameEntities001 = 0x838780;
-    constexpr std::ptrdiff_t Source2Server001 = 0x838790;
+    constexpr std::ptrdiff_t NavGameTest001 = 0xA35420;
+    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x838790;
+    constexpr std::ptrdiff_t Source2GameClients001 = 0x8387A0;
+    constexpr std::ptrdiff_t Source2GameEntities001 = 0x8387B0;
+    constexpr std::ptrdiff_t Source2Server001 = 0x8387C0;
     constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x58D750;
     constexpr std::ptrdiff_t Source2ServerConfig001 = 0x56D760;
     constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x2CD4C0;

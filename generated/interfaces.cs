@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 4 Nov 2023 00:33:04 +0000
+ * Sat, 4 Nov 2023 04:05:17 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -9,12 +9,12 @@ public static class animationsystem_dll { // animationsystem.dll
 }
 
 public static class client_dll { // client.dll
-    public const nint LegacyGameUI001 = 0x8997F0;
-    public const nint Source2ClientUI001 = 0x888500;
-    public const nint Source2ClientPrediction001 = 0x7A1830;
-    public const nint ClientToolsInfo_001 = 0x72DA70;
-    public const nint Source2Client002 = 0x72DA90;
-    public const nint GameClientExports001 = 0x72DA80;
+    public const nint LegacyGameUI001 = 0x899820;
+    public const nint Source2ClientUI001 = 0x888530;
+    public const nint Source2ClientPrediction001 = 0x7A1860;
+    public const nint ClientToolsInfo_001 = 0x72DAA0;
+    public const nint Source2Client002 = 0x72DAC0;
+    public const nint GameClientExports001 = 0x72DAB0;
     public const nint EmptyWorldService001_Client = 0x48DEF0;
     public const nint Source2ClientConfig001 = 0x474F00;
 }
@@ -157,11 +157,11 @@ public static class schemasystem_dll { // schemasystem.dll
 }
 
 public static class server_dll { // server.dll
-    public const nint NavGameTest001 = 0xA353F0;
-    public const nint ServerToolsInfo_001 = 0x838760;
-    public const nint Source2GameClients001 = 0x838770;
-    public const nint Source2GameEntities001 = 0x838780;
-    public const nint Source2Server001 = 0x838790;
+    public const nint NavGameTest001 = 0xA35420;
+    public const nint ServerToolsInfo_001 = 0x838790;
+    public const nint Source2GameClients001 = 0x8387A0;
+    public const nint Source2GameEntities001 = 0x8387B0;
+    public const nint Source2Server001 = 0x8387C0;
     public const nint EmptyWorldService001_Server = 0x58D750;
     public const nint Source2ServerConfig001 = 0x56D760;
     public const nint EntitySubclassUtilsV001 = 0x2CD4C0;

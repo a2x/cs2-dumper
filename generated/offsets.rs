@@ -1,12 +1,11 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 4 Nov 2023 00:33:21 +0000
+ * Sat, 4 Nov 2023 04:05:17 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod client_dll { // client.dll
-    pub const dwBaseEntityModel_setModel: usize = 0x581500;
     pub const dwEntityList: usize = 0x17AB958;
     pub const dwForceAttack: usize = 0x16B02B0;
     pub const dwForceAttack2: usize = 0x16B0340;
@@ -17,8 +16,7 @@ pub mod client_dll { // client.dll
     pub const dwForceLeft: usize = 0x16B0610;
     pub const dwForceRight: usize = 0x16B06A0;
     pub const dwGameEntitySystem: usize = 0x18D51A8;
-    pub const dwGameEntitySystem_getBaseEntity: usize = 0x604B10;
-    pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x5F6800;
+    pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x1510;
     pub const dwGameRules: usize = 0x1807FA8;
     pub const dwGlobalVars: usize = 0x16AC100;
     pub const dwGlowManager: usize = 0x1807708;
