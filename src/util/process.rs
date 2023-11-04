@@ -324,13 +324,13 @@ impl Process {
 
                 let mut data = vec![0; entry.modBaseSize as usize];
 
-                self.read_memory_raw(
+                if let Ok(_) = self.read_memory_raw(
                     entry.modBaseAddr.into(),
                     data.as_mut_ptr() as *mut _,
                     data.len(),
-                )?;
-
-                self.modules.insert(name.to_string(), data);
+                ) {
+                    self.modules.insert(name.to_string(), data);
+                }
             }
         }
 
