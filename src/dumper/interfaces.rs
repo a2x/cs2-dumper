@@ -111,34 +111,32 @@ pub fn dump_interfaces(
             let create_interface_address =
                 process.resolve_rip(create_interface_export, 0x3, 0x7)?;
 
-            if let Ok(mut node) =
-                process.read_memory::<*mut InterfaceNode>(create_interface_address)
-            {
-                while !node.is_null() {
-                    let instance = unsafe { (*node).instance(process) }?;
-                    let name = unsafe { (*node).name(process) }?;
+            let mut node = process.read_memory::<*mut InterfaceNode>(create_interface_address)?;
 
-                    debug!(
-                        "Found <i><bright-yellow>{}</></> @ <bright-magenta>{:#X}</> (<i><blue>{}</></> + <bright-blue>{:#X}</>)",
-                        name,
-                        instance,
-                        module.name,
-                        instance - module.base()
-                    );
+            while !node.is_null() {
+                let instance = unsafe { (*node).instance(process) }?;
+                let name = unsafe { (*node).name(process) }?;
 
-                    let container = entries.entry(module.name.replace(".", "_")).or_default();
+                debug!(
+                    "Found <i><bright-yellow>{}</></> @ <bright-magenta>{:#X}</> (<i><blue>{}</></> + <bright-blue>{:#X}</>)",
+                    name,
+                    instance,
+                    module.name,
+                    instance - module.base()
+                );
 
-                    container.comment = Some(module.name.to_string());
+                let container = entries.entry(module.name.replace(".", "_")).or_default();
 
-                    container.data.push(Entry {
-                        name,
-                        value: (instance - module.base()).into(),
-                        comment: None,
-                        indent: Some(indent),
-                    });
+                container.comment = Some(module.name.to_string());
 
-                    node = unsafe { (*node).next(process) }?;
-                }
+                container.data.push(Entry {
+                    name,
+                    value: (instance - module.base()).into(),
+                    comment: None,
+                    indent: Some(indent),
+                });
+
+                node = unsafe { (*node).next(process) }?;
             }
         }
     }

@@ -216,7 +216,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AB2D0)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AC100)?;
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -238,7 +238,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17F9C08)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FAC68)?;
 
         let player_name = process.read_string((local_player_controller + 0x610).into())?;
 
