@@ -74,12 +74,12 @@ pub fn dump_offsets(
                         )?;
                     }
                 }
-                ResolveJmp { offset, length } => {
+                Jmp { offset, length } => {
                     address = process
                         .resolve_jmp(address, offset.unwrap_or(0x1), length.unwrap_or(0x5))?
                         .into()
                 }
-                ResolveRip { offset, length } => {
+                Rip { offset, length } => {
                     address = process
                         .resolve_rip(address, offset.unwrap_or(0x3), length.unwrap_or(0x7))?
                         .into()
@@ -141,8 +141,12 @@ pub fn dump_offsets(
 mod tests {
     use super::*;
 
+    use core::arch::x86_64::_bittest;
+
     use std::ffi::{c_char, c_void};
     use std::mem::offset_of;
+    use std::thread::sleep;
+    use std::time::Duration;
 
     fn setup() -> Result<Process> {
         let mut process = Process::new("cs2.exe")?;
@@ -263,6 +267,33 @@ mod tests {
         };
 
         println!("Current map name: {}", current_map_name);
+
+        Ok(())
+    }
+
+    #[test]
+    fn is_key_down() -> Result<()> {
+        let process = setup()?;
+
+        let input_system_base = process
+            .get_module_by_name("inputsystem.dll")
+            .expect("Failed to find inputsystem.dll")
+            .base();
+
+        let input_system = input_system_base + 0x35770;
+
+        let is_key_down = |key_code: i32| -> bool {
+            let key_map_element = process
+                .read_memory::<i32>((input_system + 0x4 * (key_code as usize / 32) + 0x12A0).into())
+                .unwrap_or(0);
+
+            unsafe { _bittest(&key_map_element, key_code & 0x1F) != 0 }
+        };
+
+        sleep(Duration::from_secs(1));
+
+        // See https://www.unknowncheats.me/forum/3855779-post889.html for button codes.
+        println!("Insert down: {}", is_key_down(73));
 
         Ok(())
     }

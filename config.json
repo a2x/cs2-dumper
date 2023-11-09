@@ -6,7 +6,7 @@
       "pattern": "8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8B 0D ? ? ? ? 48 8D 05",
       "operations": [
         {
-          "type": "resolveRip",
+          "type": "rip",
           "offset": 2,
           "length": 6
         }
@@ -18,7 +18,7 @@
       "pattern": "48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "pattern": "48 8D 0D ? ? ? ? E9 E4 44 B4 FF",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -42,7 +42,7 @@
       "pattern": "48 8D 0D ? ? ? ? E9 F4 44 B4 FF",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -56,7 +56,7 @@
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 1D",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -70,7 +70,7 @@
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 3D ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -84,7 +84,7 @@
       "pattern": "48 8B 05 ? ? ? ? 4C 8D 0D ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -98,7 +98,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 8D 1D ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -112,7 +112,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 44 8B 15",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -126,7 +126,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 8D 15 ? ? ? ? 48 89 45",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -140,7 +140,7 @@
       "pattern": "48 8B 1D ? ? ? ? 48 89 1D",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -162,7 +162,7 @@
       "pattern": "48 89 0D ? ? ? ? 8B 0D",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -172,7 +172,7 @@
       "pattern": "48 89 0D ? ? ? ? 48 89 41",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -182,7 +182,7 @@
       "pattern": "48 8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 89 5C 24 ? 48 89 6C 24",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -192,7 +192,7 @@
       "pattern": "48 89 05 ? ? ? ? 48 8D 05",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -202,7 +202,7 @@
       "pattern": "4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -212,7 +212,7 @@
       "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -222,7 +222,7 @@
       "pattern": "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC ? 8B 0D",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "add",
@@ -236,7 +236,7 @@
       "pattern": "48 89 3D ? ? ? ? 48 8D 15",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -286,7 +286,7 @@
       "pattern": "48 8B 15 ? ? ? ? FF C0 48 8D 4C 24",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -296,7 +296,7 @@
       "pattern": "48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 83 EC ? 8B 0D",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -306,7 +306,7 @@
       "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         },
         {
           "type": "dereference"
@@ -323,7 +323,7 @@
       "pattern": "48 8D 0D ? ? ? ? 48 C1 E0 06",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -333,7 +333,7 @@
       "pattern": "48 89 05 ? ? ? ? 48 8B C8 48 85 C0",
       "operations": [
         {
-          "type": "resolveRip"
+          "type": "rip"
         }
       ]
     },
@@ -343,7 +343,7 @@
       "pattern": "8B 05 ? ? ? ? 89 03",
       "operations": [
         {
-          "type": "resolveRip",
+          "type": "rip",
           "offset": 2,
           "length": 6
         }
@@ -355,7 +355,7 @@
       "pattern": "8B 05 ? ? ? ? 89 07",
       "operations": [
         {
-          "type": "resolveRip",
+          "type": "rip",
           "offset": 2,
           "length": 6
         }

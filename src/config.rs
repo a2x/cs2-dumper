@@ -24,7 +24,7 @@ pub enum Operation {
     ///
     /// `offset` is the offset of the displacement value. If `None`, the offset will be `0x1`.
     /// `length` is the length of the instruction. If `None`, the length will be `0x5`.
-    ResolveJmp {
+    Jmp {
         offset: Option<usize>,
         length: Option<usize>,
     },
@@ -34,7 +34,7 @@ pub enum Operation {
     ///
     /// `offset` is the offset of the displacement value. If `None`, the offset will be `0x3`.
     /// `length` is the length of the instruction. If `None`, the length will be `0x7`.
-    ResolveRip {
+    Rip {
         offset: Option<usize>,
         length: Option<usize>,
     },
