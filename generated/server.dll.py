@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Sat, 4 Nov 2023 04:05:17 +0000
+Thu, 9 Nov 2023 06:05:31 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -232,15 +232,15 @@ class CBaseButton: # CBaseToggle
     m_szDisplayText = 0x8C0 # CUtlSymbolLarge
 
 class CBaseCSGrenade: # CCSWeaponBase
-    m_bRedraw = 0xE18 # bool
-    m_bIsHeldByPlayer = 0xE19 # bool
-    m_bPinPulled = 0xE1A # bool
-    m_bJumpThrow = 0xE1B # bool
-    m_eThrowStatus = 0xE1C # EGrenadeThrowState
-    m_fThrowTime = 0xE20 # GameTime_t
-    m_flThrowStrength = 0xE24 # float
-    m_flThrowStrengthApproach = 0xE28 # float
-    m_fDropTime = 0xE2C # GameTime_t
+    m_bRedraw = 0xE20 # bool
+    m_bIsHeldByPlayer = 0xE21 # bool
+    m_bPinPulled = 0xE22 # bool
+    m_bJumpThrow = 0xE23 # bool
+    m_eThrowStatus = 0xE24 # EGrenadeThrowState
+    m_fThrowTime = 0xE28 # GameTime_t
+    m_flThrowStrength = 0xE2C # float
+    m_flThrowStrengthApproach = 0xE30 # float
+    m_fDropTime = 0xE34 # GameTime_t
 
 class CBaseCSGrenadeProjectile: # CBaseGrenade
     m_vInitialVelocity = 0x9C8 # Vector
@@ -893,18 +893,18 @@ class CBuyZone: # CBaseTrigger
     m_LegacyTeamNum = 0x8A8 # int32_t
 
 class CC4: # CCSWeaponBase
-    m_vecLastValidPlayerHeldPosition = 0xE18 # Vector
-    m_vecLastValidDroppedPosition = 0xE24 # Vector
-    m_bDoValidDroppedPositionCheck = 0xE30 # bool
-    m_bStartedArming = 0xE31 # bool
-    m_fArmedTime = 0xE34 # GameTime_t
-    m_bBombPlacedAnimation = 0xE38 # bool
-    m_bIsPlantingViaUse = 0xE39 # bool
-    m_entitySpottedState = 0xE40 # EntitySpottedState_t
-    m_nSpotRules = 0xE58 # int32_t
-    m_bPlayedArmingBeeps = 0xE5C # bool[7]
-    m_bBombPlanted = 0xE63 # bool
-    m_bDroppedFromDeath = 0xE64 # bool
+    m_vecLastValidPlayerHeldPosition = 0xE20 # Vector
+    m_vecLastValidDroppedPosition = 0xE2C # Vector
+    m_bDoValidDroppedPositionCheck = 0xE38 # bool
+    m_bStartedArming = 0xE39 # bool
+    m_fArmedTime = 0xE3C # GameTime_t
+    m_bBombPlacedAnimation = 0xE40 # bool
+    m_bIsPlantingViaUse = 0xE41 # bool
+    m_entitySpottedState = 0xE48 # EntitySpottedState_t
+    m_nSpotRules = 0xE60 # int32_t
+    m_bPlayedArmingBeeps = 0xE64 # bool[7]
+    m_bBombPlanted = 0xE6B # bool
+    m_bDroppedFromDeath = 0xE6C # bool
 
 class CCSBot: # CBot
     m_lastCoopSpawnPoint = 0xF0 # CHandle<SpawnPointCoopEnemy>
@@ -1363,11 +1363,12 @@ class CCSPlayerController: # CBasePlayerController
     m_iDraftIndex = 0x790 # int32_t
     m_msQueuedModeDisconnectionTimestamp = 0x794 # uint32_t
     m_uiAbandonRecordedReason = 0x798 # uint32_t
-    m_bEverFullyConnected = 0x79C # bool
-    m_bAbandonAllowsSurrender = 0x79D # bool
-    m_bAbandonOffersInstantSurrender = 0x79E # bool
-    m_bDisconnection1MinWarningPrinted = 0x79F # bool
-    m_bScoreReported = 0x7A0 # bool
+    m_bCannotBeKicked = 0x79C # bool
+    m_bEverFullyConnected = 0x79D # bool
+    m_bAbandonAllowsSurrender = 0x79E # bool
+    m_bAbandonOffersInstantSurrender = 0x79F # bool
+    m_bDisconnection1MinWarningPrinted = 0x7A0 # bool
+    m_bScoreReported = 0x7A1 # bool
     m_nDisconnectionTick = 0x7A4 # int32_t
     m_bControllingBot = 0x7B0 # bool
     m_bHasControlledBotThisRound = 0x7B1 # bool
@@ -1395,14 +1396,14 @@ class CCSPlayerController: # CBasePlayerController
     m_iMVPs = 0x810 # int32_t
     m_nUpdateCounter = 0x814 # int32_t
     m_flSmoothedPing = 0x818 # float
-    m_lastHeldVoteTimer = 0xF8C0 # IntervalTimer
-    m_bShowHints = 0xF8D8 # bool
-    m_iNextTimeCheck = 0xF8DC # int32_t
-    m_bJustDidTeamKill = 0xF8E0 # bool
-    m_bPunishForTeamKill = 0xF8E1 # bool
-    m_bGaveTeamDamageWarning = 0xF8E2 # bool
-    m_bGaveTeamDamageWarningThisRound = 0xF8E3 # bool
-    m_LastTeamDamageWarningTime = 0xF8E4 # GameTime_t
+    m_lastHeldVoteTimer = 0x8C0 # IntervalTimer
+    m_bShowHints = 0x8D8 # bool
+    m_iNextTimeCheck = 0x8DC # int32_t
+    m_bJustDidTeamKill = 0x8E0 # bool
+    m_bPunishForTeamKill = 0x8E1 # bool
+    m_bGaveTeamDamageWarning = 0x8E2 # bool
+    m_bGaveTeamDamageWarningThisRound = 0x8E3 # bool
+    m_LastTeamDamageWarningTime = 0x8E4 # GameTime_t
 
 class CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats = 0x40 # CUtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
@@ -1695,6 +1696,8 @@ class CCSPlayer_MovementServices: # CPlayer_MovementServices_Humanoid
     m_flOffsetTickCompleteTime = 0x4E0 # float
     m_flOffsetTickStashedSpeed = 0x4E4 # float
     m_flStamina = 0x4E8 # float
+    m_flHeightAtJumpStart = 0x4EC # float
+    m_flMaxJumpHeightThisJump = 0x4F0 # float
 
 class CCSPlayer_PingServices: # CPlayerPawnComponent
     m_flPlayerPingTokens = 0x40 # GameTime_t[5]
@@ -1759,74 +1762,74 @@ class CCSTeam: # CTeam
 
 class CCSWeaponBase: # CBasePlayerWeapon
     m_bRemoveable = 0xC88 # bool
-    m_flFireSequenceStartTime = 0xC8C # float
-    m_nFireSequenceStartTimeChange = 0xC90 # int32_t
-    m_nFireSequenceStartTimeAck = 0xC94 # int32_t
-    m_bPlayerFireEventIsPrimary = 0xC98 # bool
-    m_seqIdle = 0xC9C # HSequence
-    m_seqFirePrimary = 0xCA0 # HSequence
-    m_seqFireSecondary = 0xCA4 # HSequence
-    m_thirdPersonFireSequences = 0xCA8 # CUtlVector<HSequence>
-    m_hCurrentThirdPersonSequence = 0xCC0 # HSequence
-    m_nSilencerBoneIndex = 0xCC4 # int32_t
-    m_thirdPersonSequences = 0xCC8 # HSequence[6]
-    m_bPlayerAmmoStockOnPickup = 0xCE8 # bool
-    m_bRequireUseToTouch = 0xCE9 # bool
-    m_iState = 0xCEC # CSWeaponState_t
-    m_flLastTimeInAir = 0xCF0 # GameTime_t
-    m_flLastDeployTime = 0xCF4 # GameTime_t
-    m_nViewModelIndex = 0xCF8 # uint32_t
-    m_bReloadsWithClips = 0xCFC # bool
-    m_flTimeWeaponIdle = 0xD18 # GameTime_t
-    m_bFireOnEmpty = 0xD1C # bool
-    m_OnPlayerPickup = 0xD20 # CEntityIOOutput
-    m_weaponMode = 0xD48 # CSWeaponMode
-    m_flTurningInaccuracyDelta = 0xD4C # float
-    m_vecTurningInaccuracyEyeDirLast = 0xD50 # Vector
-    m_flTurningInaccuracy = 0xD5C # float
-    m_fAccuracyPenalty = 0xD60 # float
-    m_flLastAccuracyUpdateTime = 0xD64 # GameTime_t
-    m_fAccuracySmoothedForZoom = 0xD68 # float
-    m_fScopeZoomEndTime = 0xD6C # GameTime_t
-    m_iRecoilIndex = 0xD70 # int32_t
-    m_flRecoilIndex = 0xD74 # float
-    m_bBurstMode = 0xD78 # bool
-    m_flPostponeFireReadyTime = 0xD7C # GameTime_t
-    m_bInReload = 0xD80 # bool
-    m_bReloadVisuallyComplete = 0xD81 # bool
-    m_flDroppedAtTime = 0xD84 # GameTime_t
-    m_bIsHauledBack = 0xD88 # bool
-    m_bSilencerOn = 0xD89 # bool
-    m_flTimeSilencerSwitchComplete = 0xD8C # GameTime_t
-    m_iOriginalTeamNumber = 0xD90 # int32_t
-    m_flNextAttackRenderTimeOffset = 0xD94 # float
-    m_bCanBePickedUp = 0xDA8 # bool
-    m_bUseCanOverrideNextOwnerTouchTime = 0xDA9 # bool
-    m_nextOwnerTouchTime = 0xDAC # GameTime_t
-    m_nextPrevOwnerTouchTime = 0xDB0 # GameTime_t
-    m_hPrevOwner = 0xDB4 # CHandle<CCSPlayerPawn>
-    m_nDropTick = 0xDB8 # GameTick_t
-    m_donated = 0xDDC # bool
-    m_fLastShotTime = 0xDE0 # GameTime_t
-    m_bWasOwnedByCT = 0xDE4 # bool
-    m_bWasOwnedByTerrorist = 0xDE5 # bool
-    m_bFiredOutOfAmmoEvent = 0xDE6 # bool
-    m_numRemoveUnownedWeaponThink = 0xDE8 # int32_t
-    m_IronSightController = 0xDF0 # CIronSightController
-    m_iIronSightMode = 0xE08 # int32_t
-    m_flLastLOSTraceFailureTime = 0xE0C # GameTime_t
-    m_iNumEmptyAttacks = 0xE10 # int32_t
+    m_flFireSequenceStartTime = 0xC90 # float
+    m_nFireSequenceStartTimeChange = 0xC94 # int32_t
+    m_nFireSequenceStartTimeAck = 0xC98 # int32_t
+    m_bPlayerFireEventIsPrimary = 0xC9C # bool
+    m_seqIdle = 0xCA0 # HSequence
+    m_seqFirePrimary = 0xCA4 # HSequence
+    m_seqFireSecondary = 0xCA8 # HSequence
+    m_thirdPersonFireSequences = 0xCB0 # CUtlVector<HSequence>
+    m_hCurrentThirdPersonSequence = 0xCC8 # HSequence
+    m_nSilencerBoneIndex = 0xCCC # int32_t
+    m_thirdPersonSequences = 0xCD0 # HSequence[6]
+    m_bPlayerAmmoStockOnPickup = 0xCF0 # bool
+    m_bRequireUseToTouch = 0xCF1 # bool
+    m_iState = 0xCF4 # CSWeaponState_t
+    m_flLastTimeInAir = 0xCF8 # GameTime_t
+    m_flLastDeployTime = 0xCFC # GameTime_t
+    m_nViewModelIndex = 0xD00 # uint32_t
+    m_bReloadsWithClips = 0xD04 # bool
+    m_flTimeWeaponIdle = 0xD20 # GameTime_t
+    m_bFireOnEmpty = 0xD24 # bool
+    m_OnPlayerPickup = 0xD28 # CEntityIOOutput
+    m_weaponMode = 0xD50 # CSWeaponMode
+    m_flTurningInaccuracyDelta = 0xD54 # float
+    m_vecTurningInaccuracyEyeDirLast = 0xD58 # Vector
+    m_flTurningInaccuracy = 0xD64 # float
+    m_fAccuracyPenalty = 0xD68 # float
+    m_flLastAccuracyUpdateTime = 0xD6C # GameTime_t
+    m_fAccuracySmoothedForZoom = 0xD70 # float
+    m_fScopeZoomEndTime = 0xD74 # GameTime_t
+    m_iRecoilIndex = 0xD78 # int32_t
+    m_flRecoilIndex = 0xD7C # float
+    m_bBurstMode = 0xD80 # bool
+    m_flPostponeFireReadyTime = 0xD84 # GameTime_t
+    m_bInReload = 0xD88 # bool
+    m_bReloadVisuallyComplete = 0xD89 # bool
+    m_flDroppedAtTime = 0xD8C # GameTime_t
+    m_bIsHauledBack = 0xD90 # bool
+    m_bSilencerOn = 0xD91 # bool
+    m_flTimeSilencerSwitchComplete = 0xD94 # GameTime_t
+    m_iOriginalTeamNumber = 0xD98 # int32_t
+    m_flNextAttackRenderTimeOffset = 0xD9C # float
+    m_bCanBePickedUp = 0xDB0 # bool
+    m_bUseCanOverrideNextOwnerTouchTime = 0xDB1 # bool
+    m_nextOwnerTouchTime = 0xDB4 # GameTime_t
+    m_nextPrevOwnerTouchTime = 0xDB8 # GameTime_t
+    m_hPrevOwner = 0xDBC # CHandle<CCSPlayerPawn>
+    m_nDropTick = 0xDC0 # GameTick_t
+    m_donated = 0xDE4 # bool
+    m_fLastShotTime = 0xDE8 # GameTime_t
+    m_bWasOwnedByCT = 0xDEC # bool
+    m_bWasOwnedByTerrorist = 0xDED # bool
+    m_bFiredOutOfAmmoEvent = 0xDEE # bool
+    m_numRemoveUnownedWeaponThink = 0xDF0 # int32_t
+    m_IronSightController = 0xDF8 # CIronSightController
+    m_iIronSightMode = 0xE10 # int32_t
+    m_flLastLOSTraceFailureTime = 0xE14 # GameTime_t
+    m_iNumEmptyAttacks = 0xE18 # int32_t
 
 class CCSWeaponBaseGun: # CCSWeaponBase
-    m_zoomLevel = 0xE18 # int32_t
-    m_iBurstShotsRemaining = 0xE1C # int32_t
-    m_silencedModelIndex = 0xE28 # int32_t
-    m_inPrecache = 0xE2C # bool
-    m_bNeedsBoltAction = 0xE2D # bool
-    m_bSkillReloadAvailable = 0xE2E # bool
-    m_bSkillReloadLiftedReloadKey = 0xE2F # bool
-    m_bSkillBoltInterruptAvailable = 0xE30 # bool
-    m_bSkillBoltLiftedFireKey = 0xE31 # bool
+    m_zoomLevel = 0xE20 # int32_t
+    m_iBurstShotsRemaining = 0xE24 # int32_t
+    m_silencedModelIndex = 0xE30 # int32_t
+    m_inPrecache = 0xE34 # bool
+    m_bNeedsBoltAction = 0xE35 # bool
+    m_bSkillReloadAvailable = 0xE36 # bool
+    m_bSkillReloadLiftedReloadKey = 0xE37 # bool
+    m_bSkillBoltInterruptAvailable = 0xE38 # bool
+    m_bSkillBoltLiftedFireKey = 0xE39 # bool
 
 class CCSWeaponBaseVData: # CBasePlayerWeaponVData
     m_WeaponType = 0x240 # CSWeaponType
@@ -2805,13 +2808,13 @@ class CFishPool: # CBaseEntity
     m_visTimer = 0x4F0 # CountdownTimer
 
 class CFists: # CCSWeaponBase
-    m_bPlayingUninterruptableAct = 0xE18 # bool
-    m_nUninterruptableActivity = 0xE1C # PlayerAnimEvent_t
-    m_bRestorePrevWep = 0xE20 # bool
-    m_hWeaponBeforePrevious = 0xE24 # CHandle<CBasePlayerWeapon>
-    m_hWeaponPrevious = 0xE28 # CHandle<CBasePlayerWeapon>
-    m_bDelayedHardPunchIncoming = 0xE2C # bool
-    m_bDestroyAfterTaunt = 0xE2D # bool
+    m_bPlayingUninterruptableAct = 0xE20 # bool
+    m_nUninterruptableActivity = 0xE24 # PlayerAnimEvent_t
+    m_bRestorePrevWep = 0xE28 # bool
+    m_hWeaponBeforePrevious = 0xE2C # CHandle<CBasePlayerWeapon>
+    m_hWeaponPrevious = 0xE30 # CHandle<CBasePlayerWeapon>
+    m_bDelayedHardPunchIncoming = 0xE34 # bool
+    m_bDestroyAfterTaunt = 0xE35 # bool
 
 class CFlashbang: # CBaseCSGrenade
 
@@ -3541,7 +3544,7 @@ class CKeepUpright: # CPointEntity
     m_bDampAllRotation = 0x4E9 # bool
 
 class CKnife: # CCSWeaponBase
-    m_bFirstAttack = 0xE18 # bool
+    m_bFirstAttack = 0xE20 # bool
 
 class CLightComponent: # CEntityComponent
     __m_pChainEntity = 0x48 # CNetworkVarChainer
@@ -3915,9 +3918,9 @@ class CMathRemap: # CLogicalEntity
     m_OnFellBelowMax = 0x568 # CEntityIOOutput
 
 class CMelee: # CCSWeaponBase
-    m_flThrowAt = 0xE18 # GameTime_t
-    m_hThrower = 0xE1C # CHandle<CBaseEntity>
-    m_bDidThrowDamage = 0xE20 # bool
+    m_flThrowAt = 0xE20 # GameTime_t
+    m_hThrower = 0xE24 # CHandle<CBaseEntity>
+    m_bDidThrowDamage = 0xE28 # bool
 
 class CMessage: # CPointEntity
     m_iszMessage = 0x4B0 # CUtlSymbolLarge
@@ -5980,8 +5983,8 @@ class CWeaponAWP: # CCSWeaponBaseGun
 class CWeaponAug: # CCSWeaponBaseGun
 
 class CWeaponBaseItem: # CCSWeaponBase
-    m_SequenceCompleteTimer = 0xE18 # CountdownTimer
-    m_bRedraw = 0xE30 # bool
+    m_SequenceCompleteTimer = 0xE20 # CountdownTimer
+    m_bRedraw = 0xE38 # bool
 
 class CWeaponBizon: # CCSWeaponBaseGun
 
@@ -6036,12 +6039,12 @@ class CWeaponSSG08: # CCSWeaponBaseGun
 class CWeaponSawedoff: # CCSWeaponBase
 
 class CWeaponShield: # CCSWeaponBaseGun
-    m_flBulletDamageAbsorbed = 0xE38 # float
-    m_flLastBulletHitSoundTime = 0xE3C # GameTime_t
-    m_flDisplayHealth = 0xE40 # float
+    m_flBulletDamageAbsorbed = 0xE40 # float
+    m_flLastBulletHitSoundTime = 0xE44 # GameTime_t
+    m_flDisplayHealth = 0xE48 # float
 
 class CWeaponTaser: # CCSWeaponBaseGun
-    m_fFireTime = 0xE38 # GameTime_t
+    m_fFireTime = 0xE40 # GameTime_t
 
 class CWeaponTec9: # CCSWeaponBaseGun
 

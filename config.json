@@ -25,21 +25,21 @@
     {
       "name": "dwForceAttack",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 84 44 B4 FF",
+      "pattern": "48 8D 0D ? ? ? ? E9 E4 44 B4 FF",
       "operations": [
         {
           "type": "resolveRip"
         },
         {
           "type": "add",
-          "value": 184
+          "value": 40
         }
       ]
     },
     {
       "name": "dwForceAttack2",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 34 45 B4 FF",
+      "pattern": "48 8D 0D ? ? ? ? E9 F4 44 B4 FF",
       "operations": [
         {
           "type": "resolveRip"
@@ -226,7 +226,7 @@
         },
         {
           "type": "add",
-          "value": 304
+          "value": 312
         }
       ]
     },

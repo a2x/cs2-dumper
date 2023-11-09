@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Sat, 4 Nov 2023 04:05:17 +0000
+Thu, 9 Nov 2023 06:05:32 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -257,11 +257,12 @@ class CCSPlayerController: # CBasePlayerController
     m_iDraftIndex = 0x790 # int32_t
     m_msQueuedModeDisconnectionTimestamp = 0x794 # uint32_t
     m_uiAbandonRecordedReason = 0x798 # uint32_t
-    m_bEverFullyConnected = 0x79C # bool
-    m_bAbandonAllowsSurrender = 0x79D # bool
-    m_bAbandonOffersInstantSurrender = 0x79E # bool
-    m_bDisconnection1MinWarningPrinted = 0x79F # bool
-    m_bScoreReported = 0x7A0 # bool
+    m_bCannotBeKicked = 0x79C # bool
+    m_bEverFullyConnected = 0x79D # bool
+    m_bAbandonAllowsSurrender = 0x79E # bool
+    m_bAbandonOffersInstantSurrender = 0x79F # bool
+    m_bDisconnection1MinWarningPrinted = 0x7A0 # bool
+    m_bScoreReported = 0x7A1 # bool
     m_nDisconnectionTick = 0x7A4 # int32_t
     m_bControllingBot = 0x7B0 # bool
     m_bHasControlledBotThisRound = 0x7B1 # bool
@@ -375,6 +376,8 @@ class CCSPlayer_MovementServices: # CPlayer_MovementServices_Humanoid
     m_flOffsetTickStashedSpeed = 0x4CC # float
     m_flStamina = 0x4D0 # float
     m_bUpdatePredictedOriginAfterDataUpdate = 0x4D4 # bool
+    m_flHeightAtJumpStart = 0x4D8 # float
+    m_flMaxJumpHeightThisJump = 0x4DC # float
 
 class CCSPlayer_PingServices: # CPlayerPawnComponent
     m_hPlayerPing = 0x40 # CHandle<C_BaseEntity>
@@ -390,9 +393,9 @@ class CCSPlayer_WaterServices: # CPlayer_WaterServices
     m_flSwimSoundTime = 0x50 # float
 
 class CCSPlayer_WeaponServices: # CPlayer_WeaponServices
-    m_flNextAttack = 0xA8 # GameTime_t
-    m_bIsLookingAtWeapon = 0xAC # bool
-    m_bIsHoldingLookAtWeapon = 0xAD # bool
+    m_flNextAttack = 0xC0 # GameTime_t
+    m_bIsLookingAtWeapon = 0xC4 # bool
+    m_bIsHoldingLookAtWeapon = 0xC5 # bool
 
 class CCSWeaponBaseVData: # CBasePlayerWeaponVData
     m_WeaponType = 0x240 # CSWeaponType
@@ -1177,16 +1180,16 @@ class C_BaseButton: # C_BaseToggle
     m_szDisplayText = 0xCC8 # CUtlSymbolLarge
 
 class C_BaseCSGrenade: # C_CSWeaponBase
-    m_bClientPredictDelete = 0x1990 # bool
-    m_bRedraw = 0x1991 # bool
-    m_bIsHeldByPlayer = 0x1992 # bool
-    m_bPinPulled = 0x1993 # bool
-    m_bJumpThrow = 0x1994 # bool
-    m_eThrowStatus = 0x1998 # EGrenadeThrowState
-    m_fThrowTime = 0x199C # GameTime_t
-    m_flThrowStrength = 0x19A0 # float
-    m_flThrowStrengthApproach = 0x19A4 # float
-    m_fDropTime = 0x19A8 # GameTime_t
+    m_bClientPredictDelete = 0x19D0 # bool
+    m_bRedraw = 0x19D1 # bool
+    m_bIsHeldByPlayer = 0x19D2 # bool
+    m_bPinPulled = 0x19D3 # bool
+    m_bJumpThrow = 0x19D4 # bool
+    m_eThrowStatus = 0x19D8 # EGrenadeThrowState
+    m_fThrowTime = 0x19DC # GameTime_t
+    m_flThrowStrength = 0x19E0 # float
+    m_flThrowStrengthApproach = 0x19E4 # float
+    m_fDropTime = 0x19E8 # GameTime_t
 
 class C_BaseCSGrenadeProjectile: # C_BaseGrenade
     m_vInitialVelocity = 0x1068 # Vector
@@ -1527,17 +1530,17 @@ class C_BulletHitModel: # CBaseAnimGraph
     m_vecStartPos = 0xEC0 # Vector
 
 class C_C4: # C_CSWeaponBase
-    m_szScreenText = 0x1990 # char[32]
-    m_bombdroppedlightParticleIndex = 0x19B0 # ParticleIndex_t
-    m_bStartedArming = 0x19B4 # bool
-    m_fArmedTime = 0x19B8 # GameTime_t
-    m_bBombPlacedAnimation = 0x19BC # bool
-    m_bIsPlantingViaUse = 0x19BD # bool
-    m_entitySpottedState = 0x19C0 # EntitySpottedState_t
-    m_nSpotRules = 0x19D8 # int32_t
-    m_bPlayedArmingBeeps = 0x19DC # bool[7]
-    m_bBombPlanted = 0x19E3 # bool
-    m_bDroppedFromDeath = 0x19E4 # bool
+    m_szScreenText = 0x19D0 # char[32]
+    m_bombdroppedlightParticleIndex = 0x19F0 # ParticleIndex_t
+    m_bStartedArming = 0x19F4 # bool
+    m_fArmedTime = 0x19F8 # GameTime_t
+    m_bBombPlacedAnimation = 0x19FC # bool
+    m_bIsPlantingViaUse = 0x19FD # bool
+    m_entitySpottedState = 0x1A00 # EntitySpottedState_t
+    m_nSpotRules = 0x1A18 # int32_t
+    m_bPlayedArmingBeeps = 0x1A1C # bool[7]
+    m_bBombPlanted = 0x1A23 # bool
+    m_bDroppedFromDeath = 0x1A24 # bool
 
 class C_CSGOViewModel: # C_PredictedViewModel
     m_bShouldIgnoreOffsetAndAccuracy = 0xF10 # bool
@@ -1969,13 +1972,13 @@ class C_CSTeam: # C_Team
     m_szTeamLogoImage = 0x89C # char[8]
 
 class C_CSWeaponBase: # C_BasePlayerWeapon
-    m_flFireSequenceStartTime = 0x15D0 # float
-    m_nFireSequenceStartTimeChange = 0x15D4 # int32_t
-    m_nFireSequenceStartTimeAck = 0x15D8 # int32_t
-    m_bPlayerFireEventIsPrimary = 0x15DC # bool
-    m_seqIdle = 0x15E0 # HSequence
-    m_seqFirePrimary = 0x15E4 # HSequence
-    m_seqFireSecondary = 0x15E8 # HSequence
+    m_flFireSequenceStartTime = 0x15D4 # float
+    m_nFireSequenceStartTimeChange = 0x15D8 # int32_t
+    m_nFireSequenceStartTimeAck = 0x15DC # int32_t
+    m_bPlayerFireEventIsPrimary = 0x15E0 # bool
+    m_seqIdle = 0x15E4 # HSequence
+    m_seqFirePrimary = 0x15E8 # HSequence
+    m_seqFireSecondary = 0x15EC # HSequence
     m_thirdPersonFireSequences = 0x15F0 # CUtlVector<HSequence>
     m_hCurrentThirdPersonSequence = 0x1608 # HSequence
     m_nSilencerBoneIndex = 0x160C # int32_t
@@ -2037,12 +2040,12 @@ class C_CSWeaponBase: # C_BasePlayerWeapon
     m_iNumEmptyAttacks = 0x1954 # int32_t
 
 class C_CSWeaponBaseGun: # C_CSWeaponBase
-    m_zoomLevel = 0x1990 # int32_t
-    m_iBurstShotsRemaining = 0x1994 # int32_t
-    m_iSilencerBodygroup = 0x1998 # int32_t
-    m_silencedModelIndex = 0x19A8 # int32_t
-    m_inPrecache = 0x19AC # bool
-    m_bNeedsBoltAction = 0x19AD # bool
+    m_zoomLevel = 0x19D0 # int32_t
+    m_iBurstShotsRemaining = 0x19D4 # int32_t
+    m_iSilencerBodygroup = 0x19D8 # int32_t
+    m_silencedModelIndex = 0x19E8 # int32_t
+    m_inPrecache = 0x19EC # bool
+    m_bNeedsBoltAction = 0x19ED # bool
 
 class C_Chicken: # C_DynamicProp
     m_hHolidayHatAddon = 0x10F0 # CHandle<CBaseAnimGraph>
@@ -2507,8 +2510,8 @@ class C_Fish: # CBaseAnimGraph
     m_averageError = 0xF6C # float
 
 class C_Fists: # C_CSWeaponBase
-    m_bPlayingUninterruptableAct = 0x1990 # bool
-    m_nUninterruptableActivity = 0x1994 # PlayerAnimEvent_t
+    m_bPlayingUninterruptableAct = 0x19D0 # bool
+    m_nUninterruptableActivity = 0x19D4 # PlayerAnimEvent_t
 
 class C_Flashbang: # C_BaseCSGrenade
 
@@ -2768,7 +2771,7 @@ class C_MapVetoPickController: # C_BaseEntity
     m_bDisabledHud = 0xE84 # bool
 
 class C_Melee: # C_CSWeaponBase
-    m_flThrowAt = 0x1990 # GameTime_t
+    m_flThrowAt = 0x19D0 # GameTime_t
 
 class C_ModelPointEntity: # C_BaseModelEntity
 
@@ -3408,8 +3411,8 @@ class C_WeaponAWP: # C_CSWeaponBaseGun
 class C_WeaponAug: # C_CSWeaponBaseGun
 
 class C_WeaponBaseItem: # C_CSWeaponBase
-    m_SequenceCompleteTimer = 0x1990 # CountdownTimer
-    m_bRedraw = 0x19A8 # bool
+    m_SequenceCompleteTimer = 0x19D0 # CountdownTimer
+    m_bRedraw = 0x19E8 # bool
 
 class C_WeaponBizon: # C_CSWeaponBaseGun
 
@@ -3464,10 +3467,10 @@ class C_WeaponSSG08: # C_CSWeaponBaseGun
 class C_WeaponSawedoff: # C_CSWeaponBase
 
 class C_WeaponShield: # C_CSWeaponBaseGun
-    m_flDisplayHealth = 0x19B0 # float
+    m_flDisplayHealth = 0x19F0 # float
 
 class C_WeaponTaser: # C_CSWeaponBaseGun
-    m_fFireTime = 0x19B0 # GameTime_t
+    m_fFireTime = 0x19F0 # GameTime_t
 
 class C_WeaponTec9: # C_CSWeaponBaseGun
 

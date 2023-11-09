@@ -1,6 +1,6 @@
 # cs2-dumper
 
-An external offsets/interfaces dumper for Counter-Strike 2, written in Rust.
+An external offset/interfaces dumper for Counter-Strike 2, written in Rust.
 
 # Usage
 
@@ -12,11 +12,11 @@ For a complete list of all available flags, use `--help`.
 
 # Generated Files
 
-By default, generated files are stored in the `generated` directory. However, this can be modified by specifying your desired output folder using the `--output` flag.
+By default, generated files are stored in the `generated` directory. However, this can be modified by specifying your desired output directory using the `--output` flag.
 
 📂 [Pre-generated Files](./generated)
 
-# Running Tests
+# Running Tests (WIP)
 To run tests, use the following command: `cargo test -- --nocapture`.
 
 # License

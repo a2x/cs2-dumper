@@ -161,9 +161,47 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let build_number = process.read_memory::<u32>(engine_base + 0x488514)?;
+        let build_number = process.read_memory::<u32>(engine_base + 0x48B524)?;
 
         println!("Build number: {}", build_number);
+
+        Ok(())
+    }
+
+    #[test]
+    fn force_buttons() -> Result<()> {
+        let process = setup()?;
+
+        let client_base = process
+            .get_module_by_name("client.dll")
+            .expect("Failed to find client.dll")
+            .base();
+
+        let force_attack = process.read_memory::<u32>(client_base + 0x16B2320)?;
+        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B23B0)?;
+        let force_backward = process.read_memory::<u32>(client_base + 0x16B25F0)?;
+        let force_crouch = process.read_memory::<u32>(client_base + 0x16B28C0)?;
+        let force_forward = process.read_memory::<u32>(client_base + 0x16B2560)?;
+        let force_jump = process.read_memory::<u32>(client_base + 0x16B2830)?;
+        let force_left = process.read_memory::<u32>(client_base + 0x16B2680)?;
+        let force_right = process.read_memory::<u32>(client_base + 0x16B2710)?;
+
+        let get_key_state = |value: u32| -> &str {
+            match value {
+                256 => "Key up",
+                65537 => "Key down",
+                _ => "Unknown",
+            }
+        };
+
+        println!("Force attack: {}", get_key_state(force_attack));
+        println!("Force attack 2: {}", get_key_state(force_attack_2));
+        println!("Force backward: {}", get_key_state(force_backward));
+        println!("Force crouch: {}", get_key_state(force_crouch));
+        println!("Force forward: {}", get_key_state(force_forward));
+        println!("Force jump: {}", get_key_state(force_jump));
+        println!("Force left: {}", get_key_state(force_left));
+        println!("Force right: {}", get_key_state(force_right));
 
         Ok(())
     }
@@ -216,7 +254,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AC100)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AE4A8)?;
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -230,7 +268,7 @@ mod tests {
     }
 
     #[test]
-    fn local_player() -> Result<()> {
+    fn local_player_controller() -> Result<()> {
         let process = setup()?;
 
         let client_base = process
@@ -238,11 +276,29 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FAC68)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FCDC8)?;
 
         let player_name = process.read_string((local_player_controller + 0x610).into())?;
 
         println!("Local player name: {}", player_name);
+
+        Ok(())
+    }
+
+    #[test]
+    fn local_player_pawn() -> Result<()> {
+        let process = setup()?;
+
+        let client_base = process
+            .get_module_by_name("client.dll")
+            .expect("Failed to find client.dll")
+            .base();
+
+        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16B9398)?;
+
+        let old_origin = process.read_memory::<[f32; 3]>((local_player_pawn + 0x1224).into())?;
+
+        println!("Old local player origin: {:?}", old_origin);
 
         Ok(())
     }
@@ -256,8 +312,8 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x5397D8)?;
-        let window_height = process.read_memory::<u32>(engine_base + 0x5397DC)?;
+        let window_width = process.read_memory::<u32>(engine_base + 0x541E08)?;
+        let window_height = process.read_memory::<u32>(engine_base + 0x541E0C)?;
 
         println!("Window size: {}x{}", window_width, window_height);
 
