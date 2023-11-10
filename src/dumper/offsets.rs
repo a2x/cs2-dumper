@@ -181,14 +181,14 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let force_attack = process.read_memory::<u32>(client_base + 0x16B2320)?;
-        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B23B0)?;
-        let force_backward = process.read_memory::<u32>(client_base + 0x16B25F0)?;
-        let force_crouch = process.read_memory::<u32>(client_base + 0x16B28C0)?;
-        let force_forward = process.read_memory::<u32>(client_base + 0x16B2560)?;
-        let force_jump = process.read_memory::<u32>(client_base + 0x16B2830)?;
-        let force_left = process.read_memory::<u32>(client_base + 0x16B2680)?;
-        let force_right = process.read_memory::<u32>(client_base + 0x16B2710)?;
+        let force_attack = process.read_memory::<u32>(client_base + 0x16B2310)?;
+        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B23A0)?;
+        let force_backward = process.read_memory::<u32>(client_base + 0x16B25E0)?;
+        let force_crouch = process.read_memory::<u32>(client_base + 0x16B28B0)?;
+        let force_forward = process.read_memory::<u32>(client_base + 0x16B2550)?;
+        let force_jump = process.read_memory::<u32>(client_base + 0x16B2820)?;
+        let force_left = process.read_memory::<u32>(client_base + 0x16B2670)?;
+        let force_right = process.read_memory::<u32>(client_base + 0x16B2700)?;
 
         let get_key_state = |value: u32| -> &str {
             match value {
@@ -258,7 +258,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AE4A8)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AE498)?;
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -307,7 +307,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FCDC8)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FCDB8)?;
 
         let player_name = process.read_string((local_player_controller + 0x610).into())?;
 
@@ -325,7 +325,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16B9398)?;
+        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16B9388)?;
 
         let old_origin = process.read_memory::<[f32; 3]>((local_player_pawn + 0x1224).into())?;
 
@@ -343,8 +343,8 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x541E08)?;
-        let window_height = process.read_memory::<u32>(engine_base + 0x541E0C)?;
+        let window_width = process.read_memory::<u32>(engine_base + 0x541E18)?;
+        let window_height = process.read_memory::<u32>(engine_base + 0x541E1C)?;
 
         println!("Window size: {}x{}", window_width, window_height);
 
