@@ -31,7 +31,7 @@ pub fn dump_schemas(
     for type_scope in schema_system.type_scopes()? {
         let module_name = type_scope.module_name()?;
 
-        info!("Generating files for <i><blue>{}</></>...", module_name);
+        info!("Generating files for <blue>{}</>...", module_name);
 
         let mut entries = Entries::new();
 
@@ -39,7 +39,7 @@ pub fn dump_schemas(
             let parent_name = class.parent()?.map(|p| p.name().to_string());
 
             debug!(
-                "<i><u><bright-yellow>{}</></></> : <i><u><yellow>{}</></></>",
+                "<u><bright-yellow>{}</></> : <u><yellow>{}</></>",
                 class.name(),
                 parent_name.clone().unwrap_or_default()
             );

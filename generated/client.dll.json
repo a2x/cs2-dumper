@@ -305,39 +305,39 @@
         "comment": "C_CommandContext"
       },
       "m_bIsHLTV": {
-        "value": 1544,
+        "value": 1568,
         "comment": "bool"
       },
       "m_bIsLocalPlayerController": {
-        "value": 1696,
+        "value": 1720,
         "comment": "bool"
       },
       "m_hPawn": {
-        "value": 1500,
+        "value": 1524,
         "comment": "CHandle<C_BasePlayerPawn>"
       },
       "m_hPredictedPawn": {
-        "value": 1504,
+        "value": 1528,
         "comment": "CHandle<C_BasePlayerPawn>"
       },
       "m_hSplitOwner": {
-        "value": 1512,
+        "value": 1536,
         "comment": "CHandle<CBasePlayerController>"
       },
       "m_hSplitScreenPlayers": {
-        "value": 1520,
+        "value": 1544,
         "comment": "CUtlVector<CHandle<CBasePlayerController>>"
       },
       "m_iConnected": {
-        "value": 1548,
+        "value": 1572,
         "comment": "PlayerConnectedState"
       },
       "m_iDesiredFOV": {
-        "value": 1700,
+        "value": 1724,
         "comment": "uint32_t"
       },
       "m_iszPlayerName": {
-        "value": 1552,
+        "value": 1576,
         "comment": "char[128]"
       },
       "m_nFinalPredictedTick": {
@@ -345,19 +345,19 @@
         "comment": "int32_t"
       },
       "m_nInButtonsWhichAreToggles": {
-        "value": 1488,
+        "value": 1512,
         "comment": "uint64_t"
       },
       "m_nSplitScreenSlot": {
-        "value": 1508,
+        "value": 1532,
         "comment": "CSplitScreenSlot"
       },
       "m_nTickBase": {
-        "value": 1496,
+        "value": 1520,
         "comment": "uint32_t"
       },
       "m_steamID": {
-        "value": 1688,
+        "value": 1712,
         "comment": "uint64_t"
       }
     },
@@ -772,235 +772,235 @@
   "CCSPlayerController": {
     "data": {
       "m_bAbandonAllowsSurrender": {
-        "value": 1950,
+        "value": 1974,
         "comment": "bool"
       },
       "m_bAbandonOffersInstantSurrender": {
-        "value": 1951,
+        "value": 1975,
         "comment": "bool"
       },
       "m_bCanControlObservedBot": {
-        "value": 1976,
-        "comment": "bool"
-      },
-      "m_bCannotBeKicked": {
-        "value": 1948,
-        "comment": "bool"
-      },
-      "m_bControllingBot": {
-        "value": 1968,
-        "comment": "bool"
-      },
-      "m_bDisconnection1MinWarningPrinted": {
-        "value": 1952,
-        "comment": "bool"
-      },
-      "m_bEverFullyConnected": {
-        "value": 1949,
-        "comment": "bool"
-      },
-      "m_bEverPlayedOnTeam": {
-        "value": 1804,
-        "comment": "bool"
-      },
-      "m_bHasBeenControlledByPlayerThisRound": {
-        "value": 1970,
-        "comment": "bool"
-      },
-      "m_bHasCommunicationAbuseMute": {
-        "value": 1780,
-        "comment": "bool"
-      },
-      "m_bHasControlledBotThisRound": {
-        "value": 1969,
-        "comment": "bool"
-      },
-      "m_bIsPlayerNameDirty": {
-        "value": 2052,
-        "comment": "bool"
-      },
-      "m_bPawnHasDefuser": {
         "value": 2000,
         "comment": "bool"
       },
+      "m_bCannotBeKicked": {
+        "value": 1972,
+        "comment": "bool"
+      },
+      "m_bControllingBot": {
+        "value": 1992,
+        "comment": "bool"
+      },
+      "m_bDisconnection1MinWarningPrinted": {
+        "value": 1976,
+        "comment": "bool"
+      },
+      "m_bEverFullyConnected": {
+        "value": 1973,
+        "comment": "bool"
+      },
+      "m_bEverPlayedOnTeam": {
+        "value": 1828,
+        "comment": "bool"
+      },
+      "m_bHasBeenControlledByPlayerThisRound": {
+        "value": 1994,
+        "comment": "bool"
+      },
+      "m_bHasCommunicationAbuseMute": {
+        "value": 1804,
+        "comment": "bool"
+      },
+      "m_bHasControlledBotThisRound": {
+        "value": 1993,
+        "comment": "bool"
+      },
+      "m_bIsPlayerNameDirty": {
+        "value": 2076,
+        "comment": "bool"
+      },
+      "m_bPawnHasDefuser": {
+        "value": 2024,
+        "comment": "bool"
+      },
       "m_bPawnHasHelmet": {
-        "value": 2001,
+        "value": 2025,
         "comment": "bool"
       },
       "m_bPawnIsAlive": {
-        "value": 1988,
+        "value": 2012,
         "comment": "bool"
       },
       "m_bScoreReported": {
-        "value": 1953,
+        "value": 1977,
         "comment": "bool"
       },
       "m_flForceTeamTime": {
-        "value": 1796,
+        "value": 1820,
         "comment": "GameTime_t"
       },
       "m_flPreviousForceJoinTeamTime": {
-        "value": 1808,
+        "value": 1832,
         "comment": "GameTime_t"
       },
       "m_hObserverPawn": {
-        "value": 1984,
+        "value": 2008,
         "comment": "CHandle<C_CSObserverPawn>"
       },
       "m_hOriginalControllerOfCurrentPawn": {
-        "value": 2016,
+        "value": 2040,
         "comment": "CHandle<CCSPlayerController>"
       },
       "m_hPlayerPawn": {
-        "value": 1980,
+        "value": 2004,
         "comment": "CHandle<C_CSPlayerPawn>"
       },
       "m_iCoachingTeam": {
-        "value": 1832,
-        "comment": "int32_t"
-      },
-      "m_iCompTeammateColor": {
-        "value": 1800,
-        "comment": "int32_t"
-      },
-      "m_iCompetitiveRankType": {
-        "value": 1864,
-        "comment": "int8_t"
-      },
-      "m_iCompetitiveRanking": {
         "value": 1856,
         "comment": "int32_t"
       },
-      "m_iCompetitiveRankingPredicted_Loss": {
-        "value": 1872,
+      "m_iCompTeammateColor": {
+        "value": 1824,
         "comment": "int32_t"
       },
-      "m_iCompetitiveRankingPredicted_Tie": {
-        "value": 1876,
-        "comment": "int32_t"
+      "m_iCompetitiveRankType": {
+        "value": 1888,
+        "comment": "int8_t"
       },
-      "m_iCompetitiveRankingPredicted_Win": {
-        "value": 1868,
-        "comment": "int32_t"
-      },
-      "m_iCompetitiveWins": {
-        "value": 1860,
-        "comment": "int32_t"
-      },
-      "m_iDraftIndex": {
-        "value": 1936,
-        "comment": "int32_t"
-      },
-      "m_iMVPs": {
-        "value": 2048,
-        "comment": "int32_t"
-      },
-      "m_iPawnArmor": {
-        "value": 1996,
-        "comment": "int32_t"
-      },
-      "m_iPawnBotDifficulty": {
-        "value": 2012,
-        "comment": "int32_t"
-      },
-      "m_iPawnHealth": {
-        "value": 1992,
-        "comment": "uint32_t"
-      },
-      "m_iPawnLifetimeEnd": {
-        "value": 2008,
-        "comment": "int32_t"
-      },
-      "m_iPawnLifetimeStart": {
-        "value": 2004,
-        "comment": "int32_t"
-      },
-      "m_iPendingTeamNum": {
-        "value": 1792,
-        "comment": "uint8_t"
-      },
-      "m_iPing": {
-        "value": 1776,
-        "comment": "uint32_t"
-      },
-      "m_iScore": {
-        "value": 2020,
-        "comment": "int32_t"
-      },
-      "m_msQueuedModeDisconnectionTimestamp": {
-        "value": 1940,
-        "comment": "uint32_t"
-      },
-      "m_nBotsControlledThisRound": {
-        "value": 1972,
-        "comment": "int32_t"
-      },
-      "m_nDisconnectionTick": {
-        "value": 1956,
-        "comment": "int32_t"
-      },
-      "m_nEndMatchNextMapVote": {
+      "m_iCompetitiveRanking": {
         "value": 1880,
         "comment": "int32_t"
       },
+      "m_iCompetitiveRankingPredicted_Loss": {
+        "value": 1896,
+        "comment": "int32_t"
+      },
+      "m_iCompetitiveRankingPredicted_Tie": {
+        "value": 1900,
+        "comment": "int32_t"
+      },
+      "m_iCompetitiveRankingPredicted_Win": {
+        "value": 1892,
+        "comment": "int32_t"
+      },
+      "m_iCompetitiveWins": {
+        "value": 1884,
+        "comment": "int32_t"
+      },
+      "m_iDraftIndex": {
+        "value": 1960,
+        "comment": "int32_t"
+      },
+      "m_iMVPs": {
+        "value": 2072,
+        "comment": "int32_t"
+      },
+      "m_iPawnArmor": {
+        "value": 2020,
+        "comment": "int32_t"
+      },
+      "m_iPawnBotDifficulty": {
+        "value": 2036,
+        "comment": "int32_t"
+      },
+      "m_iPawnHealth": {
+        "value": 2016,
+        "comment": "uint32_t"
+      },
+      "m_iPawnLifetimeEnd": {
+        "value": 2032,
+        "comment": "int32_t"
+      },
+      "m_iPawnLifetimeStart": {
+        "value": 2028,
+        "comment": "int32_t"
+      },
+      "m_iPendingTeamNum": {
+        "value": 1816,
+        "comment": "uint8_t"
+      },
+      "m_iPing": {
+        "value": 1800,
+        "comment": "uint32_t"
+      },
+      "m_iScore": {
+        "value": 2044,
+        "comment": "int32_t"
+      },
+      "m_msQueuedModeDisconnectionTimestamp": {
+        "value": 1964,
+        "comment": "uint32_t"
+      },
+      "m_nBotsControlledThisRound": {
+        "value": 1996,
+        "comment": "int32_t"
+      },
+      "m_nDisconnectionTick": {
+        "value": 1980,
+        "comment": "int32_t"
+      },
+      "m_nEndMatchNextMapVote": {
+        "value": 1904,
+        "comment": "int32_t"
+      },
       "m_nPawnCharacterDefIndex": {
-        "value": 2002,
+        "value": 2026,
         "comment": "uint16_t"
       },
       "m_nPlayerDominated": {
-        "value": 1840,
+        "value": 1864,
         "comment": "uint64_t"
       },
       "m_nPlayerDominatingMe": {
-        "value": 1848,
+        "value": 1872,
         "comment": "uint64_t"
       },
       "m_nQuestProgressReason": {
-        "value": 1888,
+        "value": 1912,
         "comment": "QuestProgress::Reason"
       },
       "m_pActionTrackingServices": {
-        "value": 1760,
+        "value": 1784,
         "comment": "CCSPlayerController_ActionTrackingServices*"
       },
       "m_pDamageServices": {
-        "value": 1768,
+        "value": 1792,
         "comment": "CCSPlayerController_DamageServices*"
       },
       "m_pInGameMoneyServices": {
-        "value": 1744,
+        "value": 1768,
         "comment": "CCSPlayerController_InGameMoneyServices*"
       },
       "m_pInventoryServices": {
-        "value": 1752,
+        "value": 1776,
         "comment": "CCSPlayerController_InventoryServices*"
       },
       "m_sSanitizedPlayerName": {
-        "value": 1824,
+        "value": 1848,
         "comment": "CUtlString"
       },
       "m_szClan": {
-        "value": 1816,
+        "value": 1840,
         "comment": "CUtlSymbolLarge"
       },
       "m_szCrosshairCodes": {
-        "value": 1784,
+        "value": 1808,
         "comment": "CUtlSymbolLarge"
       },
       "m_uiAbandonRecordedReason": {
-        "value": 1944,
+        "value": 1968,
         "comment": "uint32_t"
       },
       "m_unActiveQuestId": {
-        "value": 1884,
+        "value": 1908,
         "comment": "uint16_t"
       },
       "m_unPlayerTvControlFlags": {
-        "value": 1892,
+        "value": 1916,
         "comment": "uint32_t"
       },
       "m_vecKills": {
-        "value": 2024,
+        "value": 2048,
         "comment": "C_NetworkUtlVectorBase<EKillTypes_t>"
       }
     },
@@ -7790,7 +7790,7 @@
   "C_CommandContext": {
     "data": {
       "command_number": {
-        "value": 120,
+        "value": 144,
         "comment": "int32_t"
       },
       "needsprocessing": {

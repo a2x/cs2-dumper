@@ -38,10 +38,7 @@ pub fn dump_offsets(
     let mut entries = Entries::new();
 
     for signature in config.signatures {
-        debug!(
-            "Searching for <i><bright-yellow>{}</></>...",
-            signature.name
-        );
+        debug!("Searching for <bright-yellow>{}</>...", signature.name);
 
         let module = process
             .get_module_by_name(&signature.module)
@@ -51,7 +48,7 @@ pub fn dump_offsets(
             Some(a) => a,
             None => {
                 error!(
-                    "Failed to find pattern for <i><bright-yellow>{}</></>.",
+                    "Failed to find pattern for <bright-yellow>{}</>.",
                     signature.name
                 );
 
@@ -101,14 +98,14 @@ pub fn dump_offsets(
 
         let (name, value) = if address < module.base() {
             debug!(
-                "Found <i><bright-yellow>{}</></> @ <bright-blue>{:#X}</>",
+                "Found <bright-yellow>{}</> @ <bright-blue>{:#X}</>",
                 signature.name, address
             );
 
             (signature.name, address.0)
         } else {
             debug!(
-                "Found <i><bright-yellow>{}</></> @ <bright-magenta>{:#X}</> (<i><blue>{}</></> + <bright-blue>{:#X}</>)",
+                "Found <bright-yellow>{}</> @ <bright-magenta>{:#X}</> (<blue>{}</> + <bright-blue>{:#X}</>)",
                 signature.name,
                 address,
                 signature.module,
@@ -165,7 +162,7 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let build_number = process.read_memory::<u32>(engine_base + 0x48B524)?;
+        let build_number = process.read_memory::<u32>(engine_base + 0x48B524)?; // dwBuildNumber
 
         println!("Build number: {}", build_number);
 
@@ -181,14 +178,14 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let force_attack = process.read_memory::<u32>(client_base + 0x16B2310)?;
-        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B23A0)?;
-        let force_backward = process.read_memory::<u32>(client_base + 0x16B25E0)?;
-        let force_crouch = process.read_memory::<u32>(client_base + 0x16B28B0)?;
-        let force_forward = process.read_memory::<u32>(client_base + 0x16B2550)?;
-        let force_jump = process.read_memory::<u32>(client_base + 0x16B2820)?;
-        let force_left = process.read_memory::<u32>(client_base + 0x16B2670)?;
-        let force_right = process.read_memory::<u32>(client_base + 0x16B2700)?;
+        let force_attack = process.read_memory::<u32>(client_base + 0x16B2300)?; // dwForceAttack
+        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B2390)?; // dwForceAttack2
+        let force_backward = process.read_memory::<u32>(client_base + 0x16B25D0)?; // dwForceBackward
+        let force_crouch = process.read_memory::<u32>(client_base + 0x16B28A0)?; // dwForceCrouch
+        let force_forward = process.read_memory::<u32>(client_base + 0x16B2540)?; // dwForceForward
+        let force_jump = process.read_memory::<u32>(client_base + 0x16B2810)?; // dwForceJump
+        let force_left = process.read_memory::<u32>(client_base + 0x16B2660)?; // dwForceLeft
+        let force_right = process.read_memory::<u32>(client_base + 0x16B26F0)?; // dwForceRight
 
         let get_key_state = |value: u32| -> &str {
             match value {
@@ -258,7 +255,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AE498)?;
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AE488)?; // dwGlobalVars
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -280,7 +277,7 @@ mod tests {
             .expect("Failed to find inputsystem.dll")
             .base();
 
-        let input_system = input_system_base + 0x35770;
+        let input_system = input_system_base + 0x35770; // dwInputSystem
 
         let is_key_down = |key_code: i32| -> bool {
             let key_map_element = process
@@ -307,9 +304,9 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FCDB8)?;
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FCDC8)?; // dwLocalPlayerController
 
-        let player_name = process.read_string((local_player_controller + 0x610).into())?;
+        let player_name = process.read_string((local_player_controller + 0x628).into())?; // m_iszPlayerName
 
         println!("Local player name: {}", player_name);
 
@@ -325,11 +322,21 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16B9388)?;
+        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16B9388)?; // dwLocalPlayerPawn
 
-        let old_origin = process.read_memory::<[f32; 3]>((local_player_pawn + 0x1224).into())?;
+        let game_scene_node = process.read_memory::<usize>((local_player_pawn + 0x310).into())?; // m_pGameSceneNode
 
-        println!("Old local player origin: {:?}", old_origin);
+        #[derive(Debug)]
+        #[repr(C)]
+        struct Vector3D {
+            x: f32,
+            y: f32,
+            z: f32,
+        }
+
+        let origin = process.read_memory::<Vector3D>((game_scene_node + 0xC8).into())?; // m_vecAbsOrigin
+
+        println!("Local player origin: {:?}", origin);
 
         Ok(())
     }
@@ -343,8 +350,8 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x541E18)?;
-        let window_height = process.read_memory::<u32>(engine_base + 0x541E1C)?;
+        let window_width = process.read_memory::<u32>(engine_base + 0x541E18)?; // dwWindowWidth
+        let window_height = process.read_memory::<u32>(engine_base + 0x541E1C)?; // dwWindowHeight
 
         println!("Window size: {}x{}", window_width, window_height);
 

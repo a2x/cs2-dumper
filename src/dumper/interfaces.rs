@@ -106,7 +106,7 @@ pub fn dump_interfaces(
         .filter(|m| m.name != "crashhandler64.dll")
     {
         if let Some(create_interface_export) = module.get_export_by_name("CreateInterface") {
-            info!("Dumping interfaces in <i><blue>{}</></>...", module.name);
+            info!("Dumping interfaces in <blue>{}</>...", module.name);
 
             let create_interface_address =
                 process.resolve_rip(create_interface_export, 0x3, 0x7)?;
@@ -118,7 +118,7 @@ pub fn dump_interfaces(
                 let name = unsafe { (*node).name(process) }?;
 
                 debug!(
-                    "Found <i><bright-yellow>{}</></> @ <bright-magenta>{:#X}</> (<i><blue>{}</></> + <bright-blue>{:#X}</>)",
+                    "Found <bright-yellow>{}</> @ <bright-magenta>{:#X}</> (<blue>{}</> + <bright-blue>{:#X}</>)",
                     name,
                     instance,
                     module.name,

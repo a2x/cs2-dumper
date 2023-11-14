@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 10 Nov 2023 07:08:46 +0000
+ * Tue, 14 Nov 2023 03:29:46 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -11,14 +11,14 @@ pub mod animationsystem_dll { // animationsystem.dll
 }
 
 pub mod client_dll { // client.dll
-    pub const LegacyGameUI001: usize = 0x89C1E0;
-    pub const Source2ClientUI001: usize = 0x88AEF0;
-    pub const Source2ClientPrediction001: usize = 0x7A3C80;
-    pub const ClientToolsInfo_001: usize = 0x72F6E0;
-    pub const Source2Client002: usize = 0x72F700;
-    pub const GameClientExports001: usize = 0x72F6F0;
-    pub const EmptyWorldService001_Client: usize = 0x48F1F0;
-    pub const Source2ClientConfig001: usize = 0x476200;
+    pub const LegacyGameUI001: usize = 0x89BF60;
+    pub const Source2ClientUI001: usize = 0x88AC70;
+    pub const Source2ClientPrediction001: usize = 0x7A38E0;
+    pub const ClientToolsInfo_001: usize = 0x72F540;
+    pub const Source2Client002: usize = 0x72F560;
+    pub const GameClientExports001: usize = 0x72F550;
+    pub const EmptyWorldService001_Client: usize = 0x48EF20;
+    pub const Source2ClientConfig001: usize = 0x475F30;
 }
 
 pub mod engine2_dll { // engine2.dll
@@ -107,10 +107,10 @@ pub mod navsystem_dll { // navsystem.dll
 }
 
 pub mod networksystem_dll { // networksystem.dll
-    pub const SerializedEntitiesVersion001: usize = 0xD2830;
-    pub const NetworkSystemVersion001: usize = 0xBCCF0;
-    pub const NetworkMessagesVersion001: usize = 0x9CD90;
-    pub const FlattenedSerializersVersion001: usize = 0x7C600;
+    pub const SerializedEntitiesVersion001: usize = 0xD2850;
+    pub const NetworkSystemVersion001: usize = 0xBCD10;
+    pub const NetworkMessagesVersion001: usize = 0x9CDB0;
+    pub const FlattenedSerializersVersion001: usize = 0x7C620;
 }
 
 pub mod panorama_dll { // panorama.dll
@@ -159,15 +159,15 @@ pub mod schemasystem_dll { // schemasystem.dll
 }
 
 pub mod server_dll { // server.dll
-    pub const NavGameTest001: usize = 0xA37380;
-    pub const ServerToolsInfo_001: usize = 0x839CB0;
-    pub const Source2GameClients001: usize = 0x839CC0;
-    pub const Source2GameEntities001: usize = 0x839CD0;
-    pub const Source2Server001: usize = 0x839CE0;
-    pub const EmptyWorldService001_Server: usize = 0x58E590;
-    pub const Source2ServerConfig001: usize = 0x56E5A0;
-    pub const EntitySubclassUtilsV001: usize = 0x2CDA70;
-    pub const customnavsystem001: usize = 0x24A6E0;
+    pub const NavGameTest001: usize = 0xA36FC0;
+    pub const ServerToolsInfo_001: usize = 0x8398E0;
+    pub const Source2GameClients001: usize = 0x8398F0;
+    pub const Source2GameEntities001: usize = 0x839900;
+    pub const Source2Server001: usize = 0x839910;
+    pub const EmptyWorldService001_Server: usize = 0x58E2C0;
+    pub const Source2ServerConfig001: usize = 0x56E2D0;
+    pub const EntitySubclassUtilsV001: usize = 0x2CDB30;
+    pub const customnavsystem001: usize = 0x24A6D0;
     pub const Source2GameDirector001: usize = 0x152060;
 }
 

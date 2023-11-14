@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 10 Nov 2023 07:08:45 +0000
+Tue, 14 Nov 2023 03:29:46 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -86,19 +86,19 @@ class CBaseAnimGraphController: # CSkeletonAnimationController
 class CBasePlayerController: # C_BaseEntity
     m_nFinalPredictedTick = 0x548 # int32_t
     m_CommandContext = 0x550 # C_CommandContext
-    m_nInButtonsWhichAreToggles = 0x5D0 # uint64_t
-    m_nTickBase = 0x5D8 # uint32_t
-    m_hPawn = 0x5DC # CHandle<C_BasePlayerPawn>
-    m_hPredictedPawn = 0x5E0 # CHandle<C_BasePlayerPawn>
-    m_nSplitScreenSlot = 0x5E4 # CSplitScreenSlot
-    m_hSplitOwner = 0x5E8 # CHandle<CBasePlayerController>
-    m_hSplitScreenPlayers = 0x5F0 # CUtlVector<CHandle<CBasePlayerController>>
-    m_bIsHLTV = 0x608 # bool
-    m_iConnected = 0x60C # PlayerConnectedState
-    m_iszPlayerName = 0x610 # char[128]
-    m_steamID = 0x698 # uint64_t
-    m_bIsLocalPlayerController = 0x6A0 # bool
-    m_iDesiredFOV = 0x6A4 # uint32_t
+    m_nInButtonsWhichAreToggles = 0x5E8 # uint64_t
+    m_nTickBase = 0x5F0 # uint32_t
+    m_hPawn = 0x5F4 # CHandle<C_BasePlayerPawn>
+    m_hPredictedPawn = 0x5F8 # CHandle<C_BasePlayerPawn>
+    m_nSplitScreenSlot = 0x5FC # CSplitScreenSlot
+    m_hSplitOwner = 0x600 # CHandle<CBasePlayerController>
+    m_hSplitScreenPlayers = 0x608 # CUtlVector<CHandle<CBasePlayerController>>
+    m_bIsHLTV = 0x620 # bool
+    m_iConnected = 0x624 # PlayerConnectedState
+    m_iszPlayerName = 0x628 # char[128]
+    m_steamID = 0x6B0 # uint64_t
+    m_bIsLocalPlayerController = 0x6B8 # bool
+    m_iDesiredFOV = 0x6BC # uint32_t
 
 class CBasePlayerVData: # CEntitySubclassVDataBase
     m_sModelName = 0x28 # CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
@@ -227,64 +227,64 @@ class CCSPlayerBase_CameraServices: # CPlayer_CameraServices
     m_flLastShotFOV = 0x224 # float
 
 class CCSPlayerController: # CBasePlayerController
-    m_pInGameMoneyServices = 0x6D0 # CCSPlayerController_InGameMoneyServices*
-    m_pInventoryServices = 0x6D8 # CCSPlayerController_InventoryServices*
-    m_pActionTrackingServices = 0x6E0 # CCSPlayerController_ActionTrackingServices*
-    m_pDamageServices = 0x6E8 # CCSPlayerController_DamageServices*
-    m_iPing = 0x6F0 # uint32_t
-    m_bHasCommunicationAbuseMute = 0x6F4 # bool
-    m_szCrosshairCodes = 0x6F8 # CUtlSymbolLarge
-    m_iPendingTeamNum = 0x700 # uint8_t
-    m_flForceTeamTime = 0x704 # GameTime_t
-    m_iCompTeammateColor = 0x708 # int32_t
-    m_bEverPlayedOnTeam = 0x70C # bool
-    m_flPreviousForceJoinTeamTime = 0x710 # GameTime_t
-    m_szClan = 0x718 # CUtlSymbolLarge
-    m_sSanitizedPlayerName = 0x720 # CUtlString
-    m_iCoachingTeam = 0x728 # int32_t
-    m_nPlayerDominated = 0x730 # uint64_t
-    m_nPlayerDominatingMe = 0x738 # uint64_t
-    m_iCompetitiveRanking = 0x740 # int32_t
-    m_iCompetitiveWins = 0x744 # int32_t
-    m_iCompetitiveRankType = 0x748 # int8_t
-    m_iCompetitiveRankingPredicted_Win = 0x74C # int32_t
-    m_iCompetitiveRankingPredicted_Loss = 0x750 # int32_t
-    m_iCompetitiveRankingPredicted_Tie = 0x754 # int32_t
-    m_nEndMatchNextMapVote = 0x758 # int32_t
-    m_unActiveQuestId = 0x75C # uint16_t
-    m_nQuestProgressReason = 0x760 # QuestProgress::Reason
-    m_unPlayerTvControlFlags = 0x764 # uint32_t
-    m_iDraftIndex = 0x790 # int32_t
-    m_msQueuedModeDisconnectionTimestamp = 0x794 # uint32_t
-    m_uiAbandonRecordedReason = 0x798 # uint32_t
-    m_bCannotBeKicked = 0x79C # bool
-    m_bEverFullyConnected = 0x79D # bool
-    m_bAbandonAllowsSurrender = 0x79E # bool
-    m_bAbandonOffersInstantSurrender = 0x79F # bool
-    m_bDisconnection1MinWarningPrinted = 0x7A0 # bool
-    m_bScoreReported = 0x7A1 # bool
-    m_nDisconnectionTick = 0x7A4 # int32_t
-    m_bControllingBot = 0x7B0 # bool
-    m_bHasControlledBotThisRound = 0x7B1 # bool
-    m_bHasBeenControlledByPlayerThisRound = 0x7B2 # bool
-    m_nBotsControlledThisRound = 0x7B4 # int32_t
-    m_bCanControlObservedBot = 0x7B8 # bool
-    m_hPlayerPawn = 0x7BC # CHandle<C_CSPlayerPawn>
-    m_hObserverPawn = 0x7C0 # CHandle<C_CSObserverPawn>
-    m_bPawnIsAlive = 0x7C4 # bool
-    m_iPawnHealth = 0x7C8 # uint32_t
-    m_iPawnArmor = 0x7CC # int32_t
-    m_bPawnHasDefuser = 0x7D0 # bool
-    m_bPawnHasHelmet = 0x7D1 # bool
-    m_nPawnCharacterDefIndex = 0x7D2 # uint16_t
-    m_iPawnLifetimeStart = 0x7D4 # int32_t
-    m_iPawnLifetimeEnd = 0x7D8 # int32_t
-    m_iPawnBotDifficulty = 0x7DC # int32_t
-    m_hOriginalControllerOfCurrentPawn = 0x7E0 # CHandle<CCSPlayerController>
-    m_iScore = 0x7E4 # int32_t
-    m_vecKills = 0x7E8 # C_NetworkUtlVectorBase<EKillTypes_t>
-    m_iMVPs = 0x800 # int32_t
-    m_bIsPlayerNameDirty = 0x804 # bool
+    m_pInGameMoneyServices = 0x6E8 # CCSPlayerController_InGameMoneyServices*
+    m_pInventoryServices = 0x6F0 # CCSPlayerController_InventoryServices*
+    m_pActionTrackingServices = 0x6F8 # CCSPlayerController_ActionTrackingServices*
+    m_pDamageServices = 0x700 # CCSPlayerController_DamageServices*
+    m_iPing = 0x708 # uint32_t
+    m_bHasCommunicationAbuseMute = 0x70C # bool
+    m_szCrosshairCodes = 0x710 # CUtlSymbolLarge
+    m_iPendingTeamNum = 0x718 # uint8_t
+    m_flForceTeamTime = 0x71C # GameTime_t
+    m_iCompTeammateColor = 0x720 # int32_t
+    m_bEverPlayedOnTeam = 0x724 # bool
+    m_flPreviousForceJoinTeamTime = 0x728 # GameTime_t
+    m_szClan = 0x730 # CUtlSymbolLarge
+    m_sSanitizedPlayerName = 0x738 # CUtlString
+    m_iCoachingTeam = 0x740 # int32_t
+    m_nPlayerDominated = 0x748 # uint64_t
+    m_nPlayerDominatingMe = 0x750 # uint64_t
+    m_iCompetitiveRanking = 0x758 # int32_t
+    m_iCompetitiveWins = 0x75C # int32_t
+    m_iCompetitiveRankType = 0x760 # int8_t
+    m_iCompetitiveRankingPredicted_Win = 0x764 # int32_t
+    m_iCompetitiveRankingPredicted_Loss = 0x768 # int32_t
+    m_iCompetitiveRankingPredicted_Tie = 0x76C # int32_t
+    m_nEndMatchNextMapVote = 0x770 # int32_t
+    m_unActiveQuestId = 0x774 # uint16_t
+    m_nQuestProgressReason = 0x778 # QuestProgress::Reason
+    m_unPlayerTvControlFlags = 0x77C # uint32_t
+    m_iDraftIndex = 0x7A8 # int32_t
+    m_msQueuedModeDisconnectionTimestamp = 0x7AC # uint32_t
+    m_uiAbandonRecordedReason = 0x7B0 # uint32_t
+    m_bCannotBeKicked = 0x7B4 # bool
+    m_bEverFullyConnected = 0x7B5 # bool
+    m_bAbandonAllowsSurrender = 0x7B6 # bool
+    m_bAbandonOffersInstantSurrender = 0x7B7 # bool
+    m_bDisconnection1MinWarningPrinted = 0x7B8 # bool
+    m_bScoreReported = 0x7B9 # bool
+    m_nDisconnectionTick = 0x7BC # int32_t
+    m_bControllingBot = 0x7C8 # bool
+    m_bHasControlledBotThisRound = 0x7C9 # bool
+    m_bHasBeenControlledByPlayerThisRound = 0x7CA # bool
+    m_nBotsControlledThisRound = 0x7CC # int32_t
+    m_bCanControlObservedBot = 0x7D0 # bool
+    m_hPlayerPawn = 0x7D4 # CHandle<C_CSPlayerPawn>
+    m_hObserverPawn = 0x7D8 # CHandle<C_CSObserverPawn>
+    m_bPawnIsAlive = 0x7DC # bool
+    m_iPawnHealth = 0x7E0 # uint32_t
+    m_iPawnArmor = 0x7E4 # int32_t
+    m_bPawnHasDefuser = 0x7E8 # bool
+    m_bPawnHasHelmet = 0x7E9 # bool
+    m_nPawnCharacterDefIndex = 0x7EA # uint16_t
+    m_iPawnLifetimeStart = 0x7EC # int32_t
+    m_iPawnLifetimeEnd = 0x7F0 # int32_t
+    m_iPawnBotDifficulty = 0x7F4 # int32_t
+    m_hOriginalControllerOfCurrentPawn = 0x7F8 # CHandle<CCSPlayerController>
+    m_iScore = 0x7FC # int32_t
+    m_vecKills = 0x800 # C_NetworkUtlVectorBase<EKillTypes_t>
+    m_iMVPs = 0x818 # int32_t
+    m_bIsPlayerNameDirty = 0x81C # bool
 
 class CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats = 0x40 # C_UtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
@@ -2106,7 +2106,7 @@ class C_ColorCorrectionVolume: # C_BaseTrigger
 
 class C_CommandContext:
     needsprocessing = 0x0 # bool
-    command_number = 0x78 # int32_t
+    command_number = 0x90 # int32_t
 
 class C_CsmFovOverride: # C_BaseEntity
     m_cameraName = 0x540 # CUtlString

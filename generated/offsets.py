@@ -1,31 +1,31 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 10 Nov 2023 07:08:46 +0000
+Tue, 14 Nov 2023 03:29:46 +0000
 '''
 
 class client_dll: # client.dll
-    dwEntityList = 0x17ADAE0
-    dwForceAttack = 0x16B2310
-    dwForceAttack2 = 0x16B23A0
-    dwForceBackward = 0x16B25E0
-    dwForceCrouch = 0x16B28B0
-    dwForceForward = 0x16B2550
-    dwForceJump = 0x16B2820
-    dwForceLeft = 0x16B2670
-    dwForceRight = 0x16B2700
-    dwGameEntitySystem = 0x18D72D0
+    dwEntityList = 0x17ADAF0
+    dwForceAttack = 0x16B2300
+    dwForceAttack2 = 0x16B2390
+    dwForceBackward = 0x16B25D0
+    dwForceCrouch = 0x16B28A0
+    dwForceForward = 0x16B2540
+    dwForceJump = 0x16B2810
+    dwForceLeft = 0x16B2660
+    dwForceRight = 0x16B26F0
+    dwGameEntitySystem = 0x18D8110
     dwGameEntitySystem_getHighestEntityIndex = 0x1510
-    dwGameRules = 0x1809720
-    dwGlobalVars = 0x16AE498
-    dwGlowManager = 0x1809748
-    dwInterfaceLinkList = 0x1904F68
-    dwLocalPlayerController = 0x17FCDB8
+    dwGameRules = 0x1809740
+    dwGlobalVars = 0x16AE488
+    dwGlowManager = 0x1809768
+    dwInterfaceLinkList = 0x1905DA8
+    dwLocalPlayerController = 0x17FCDC8
     dwLocalPlayerPawn = 0x16B9388
-    dwPlantedC4 = 0x1810CC8
+    dwPlantedC4 = 0x1810CD8
     dwPrediction = 0x16B9250
-    dwViewAngles = 0x186B0F8
-    dwViewMatrix = 0x180C0E0
-    dwViewRender = 0x180C938
+    dwViewAngles = 0x186B108
+    dwViewMatrix = 0x180C100
+    dwViewRender = 0x180C958
 
 class engine2_dll: # engine2.dll
     dwBuildNumber = 0x48B524

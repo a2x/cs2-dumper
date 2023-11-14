@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 10 Nov 2023 07:08:46 +0000
+ * Tue, 14 Nov 2023 03:29:46 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -9,14 +9,14 @@ public static class animationsystem_dll { // animationsystem.dll
 }
 
 public static class client_dll { // client.dll
-    public const nint LegacyGameUI001 = 0x89C1E0;
-    public const nint Source2ClientUI001 = 0x88AEF0;
-    public const nint Source2ClientPrediction001 = 0x7A3C80;
-    public const nint ClientToolsInfo_001 = 0x72F6E0;
-    public const nint Source2Client002 = 0x72F700;
-    public const nint GameClientExports001 = 0x72F6F0;
-    public const nint EmptyWorldService001_Client = 0x48F1F0;
-    public const nint Source2ClientConfig001 = 0x476200;
+    public const nint LegacyGameUI001 = 0x89BF60;
+    public const nint Source2ClientUI001 = 0x88AC70;
+    public const nint Source2ClientPrediction001 = 0x7A38E0;
+    public const nint ClientToolsInfo_001 = 0x72F540;
+    public const nint Source2Client002 = 0x72F560;
+    public const nint GameClientExports001 = 0x72F550;
+    public const nint EmptyWorldService001_Client = 0x48EF20;
+    public const nint Source2ClientConfig001 = 0x475F30;
 }
 
 public static class engine2_dll { // engine2.dll
@@ -105,10 +105,10 @@ public static class navsystem_dll { // navsystem.dll
 }
 
 public static class networksystem_dll { // networksystem.dll
-    public const nint SerializedEntitiesVersion001 = 0xD2830;
-    public const nint NetworkSystemVersion001 = 0xBCCF0;
-    public const nint NetworkMessagesVersion001 = 0x9CD90;
-    public const nint FlattenedSerializersVersion001 = 0x7C600;
+    public const nint SerializedEntitiesVersion001 = 0xD2850;
+    public const nint NetworkSystemVersion001 = 0xBCD10;
+    public const nint NetworkMessagesVersion001 = 0x9CDB0;
+    public const nint FlattenedSerializersVersion001 = 0x7C620;
 }
 
 public static class panorama_dll { // panorama.dll
@@ -157,15 +157,15 @@ public static class schemasystem_dll { // schemasystem.dll
 }
 
 public static class server_dll { // server.dll
-    public const nint NavGameTest001 = 0xA37380;
-    public const nint ServerToolsInfo_001 = 0x839CB0;
-    public const nint Source2GameClients001 = 0x839CC0;
-    public const nint Source2GameEntities001 = 0x839CD0;
-    public const nint Source2Server001 = 0x839CE0;
-    public const nint EmptyWorldService001_Server = 0x58E590;
-    public const nint Source2ServerConfig001 = 0x56E5A0;
-    public const nint EntitySubclassUtilsV001 = 0x2CDA70;
-    public const nint customnavsystem001 = 0x24A6E0;
+    public const nint NavGameTest001 = 0xA36FC0;
+    public const nint ServerToolsInfo_001 = 0x8398E0;
+    public const nint Source2GameClients001 = 0x8398F0;
+    public const nint Source2GameEntities001 = 0x839900;
+    public const nint Source2Server001 = 0x839910;
+    public const nint EmptyWorldService001_Server = 0x58E2C0;
+    public const nint Source2ServerConfig001 = 0x56E2D0;
+    public const nint EntitySubclassUtilsV001 = 0x2CDB30;
+    public const nint customnavsystem001 = 0x24A6D0;
     public const nint Source2GameDirector001 = 0x152060;
 }
 

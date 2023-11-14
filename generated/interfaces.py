@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 10 Nov 2023 07:08:46 +0000
+Tue, 14 Nov 2023 03:29:46 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,14 +8,14 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x89C1E0
-    Source2ClientUI001 = 0x88AEF0
-    Source2ClientPrediction001 = 0x7A3C80
-    ClientToolsInfo_001 = 0x72F6E0
-    Source2Client002 = 0x72F700
-    GameClientExports001 = 0x72F6F0
-    EmptyWorldService001_Client = 0x48F1F0
-    Source2ClientConfig001 = 0x476200
+    LegacyGameUI001 = 0x89BF60
+    Source2ClientUI001 = 0x88AC70
+    Source2ClientPrediction001 = 0x7A38E0
+    ClientToolsInfo_001 = 0x72F540
+    Source2Client002 = 0x72F560
+    GameClientExports001 = 0x72F550
+    EmptyWorldService001_Client = 0x48EF20
+    Source2ClientConfig001 = 0x475F30
 
 class engine2_dll: # engine2.dll
     SimpleEngineLoopService_001 = 0x1E5110
@@ -93,10 +93,10 @@ class navsystem_dll: # navsystem.dll
     NavSystem001 = 0x76F0
 
 class networksystem_dll: # networksystem.dll
-    SerializedEntitiesVersion001 = 0xD2830
-    NetworkSystemVersion001 = 0xBCCF0
-    NetworkMessagesVersion001 = 0x9CD90
-    FlattenedSerializersVersion001 = 0x7C600
+    SerializedEntitiesVersion001 = 0xD2850
+    NetworkSystemVersion001 = 0xBCD10
+    NetworkMessagesVersion001 = 0x9CDB0
+    FlattenedSerializersVersion001 = 0x7C620
 
 class panorama_dll: # panorama.dll
     PanoramaUIEngine001 = 0x57EE0
@@ -134,15 +134,15 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA37380
-    ServerToolsInfo_001 = 0x839CB0
-    Source2GameClients001 = 0x839CC0
-    Source2GameEntities001 = 0x839CD0
-    Source2Server001 = 0x839CE0
-    EmptyWorldService001_Server = 0x58E590
-    Source2ServerConfig001 = 0x56E5A0
-    EntitySubclassUtilsV001 = 0x2CDA70
-    customnavsystem001 = 0x24A6E0
+    NavGameTest001 = 0xA36FC0
+    ServerToolsInfo_001 = 0x8398E0
+    Source2GameClients001 = 0x8398F0
+    Source2GameEntities001 = 0x839900
+    Source2Server001 = 0x839910
+    EmptyWorldService001_Server = 0x58E2C0
+    Source2ServerConfig001 = 0x56E2D0
+    EntitySubclassUtilsV001 = 0x2CDB30
+    customnavsystem001 = 0x24A6D0
     Source2GameDirector001 = 0x152060
 
 class soundsystem_dll: # soundsystem.dll

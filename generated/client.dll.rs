@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 10 Nov 2023 07:08:46 +0000
+ * Tue, 14 Nov 2023 03:29:46 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -95,19 +95,19 @@ pub mod CBaseAnimGraphController { // CSkeletonAnimationController
 pub mod CBasePlayerController { // C_BaseEntity
     pub const m_nFinalPredictedTick: usize = 0x548; // int32_t
     pub const m_CommandContext: usize = 0x550; // C_CommandContext
-    pub const m_nInButtonsWhichAreToggles: usize = 0x5D0; // uint64_t
-    pub const m_nTickBase: usize = 0x5D8; // uint32_t
-    pub const m_hPawn: usize = 0x5DC; // CHandle<C_BasePlayerPawn>
-    pub const m_hPredictedPawn: usize = 0x5E0; // CHandle<C_BasePlayerPawn>
-    pub const m_nSplitScreenSlot: usize = 0x5E4; // CSplitScreenSlot
-    pub const m_hSplitOwner: usize = 0x5E8; // CHandle<CBasePlayerController>
-    pub const m_hSplitScreenPlayers: usize = 0x5F0; // CUtlVector<CHandle<CBasePlayerController>>
-    pub const m_bIsHLTV: usize = 0x608; // bool
-    pub const m_iConnected: usize = 0x60C; // PlayerConnectedState
-    pub const m_iszPlayerName: usize = 0x610; // char[128]
-    pub const m_steamID: usize = 0x698; // uint64_t
-    pub const m_bIsLocalPlayerController: usize = 0x6A0; // bool
-    pub const m_iDesiredFOV: usize = 0x6A4; // uint32_t
+    pub const m_nInButtonsWhichAreToggles: usize = 0x5E8; // uint64_t
+    pub const m_nTickBase: usize = 0x5F0; // uint32_t
+    pub const m_hPawn: usize = 0x5F4; // CHandle<C_BasePlayerPawn>
+    pub const m_hPredictedPawn: usize = 0x5F8; // CHandle<C_BasePlayerPawn>
+    pub const m_nSplitScreenSlot: usize = 0x5FC; // CSplitScreenSlot
+    pub const m_hSplitOwner: usize = 0x600; // CHandle<CBasePlayerController>
+    pub const m_hSplitScreenPlayers: usize = 0x608; // CUtlVector<CHandle<CBasePlayerController>>
+    pub const m_bIsHLTV: usize = 0x620; // bool
+    pub const m_iConnected: usize = 0x624; // PlayerConnectedState
+    pub const m_iszPlayerName: usize = 0x628; // char[128]
+    pub const m_steamID: usize = 0x6B0; // uint64_t
+    pub const m_bIsLocalPlayerController: usize = 0x6B8; // bool
+    pub const m_iDesiredFOV: usize = 0x6BC; // uint32_t
 }
 
 pub mod CBasePlayerVData { // CEntitySubclassVDataBase
@@ -265,64 +265,64 @@ pub mod CCSPlayerBase_CameraServices { // CPlayer_CameraServices
 }
 
 pub mod CCSPlayerController { // CBasePlayerController
-    pub const m_pInGameMoneyServices: usize = 0x6D0; // CCSPlayerController_InGameMoneyServices*
-    pub const m_pInventoryServices: usize = 0x6D8; // CCSPlayerController_InventoryServices*
-    pub const m_pActionTrackingServices: usize = 0x6E0; // CCSPlayerController_ActionTrackingServices*
-    pub const m_pDamageServices: usize = 0x6E8; // CCSPlayerController_DamageServices*
-    pub const m_iPing: usize = 0x6F0; // uint32_t
-    pub const m_bHasCommunicationAbuseMute: usize = 0x6F4; // bool
-    pub const m_szCrosshairCodes: usize = 0x6F8; // CUtlSymbolLarge
-    pub const m_iPendingTeamNum: usize = 0x700; // uint8_t
-    pub const m_flForceTeamTime: usize = 0x704; // GameTime_t
-    pub const m_iCompTeammateColor: usize = 0x708; // int32_t
-    pub const m_bEverPlayedOnTeam: usize = 0x70C; // bool
-    pub const m_flPreviousForceJoinTeamTime: usize = 0x710; // GameTime_t
-    pub const m_szClan: usize = 0x718; // CUtlSymbolLarge
-    pub const m_sSanitizedPlayerName: usize = 0x720; // CUtlString
-    pub const m_iCoachingTeam: usize = 0x728; // int32_t
-    pub const m_nPlayerDominated: usize = 0x730; // uint64_t
-    pub const m_nPlayerDominatingMe: usize = 0x738; // uint64_t
-    pub const m_iCompetitiveRanking: usize = 0x740; // int32_t
-    pub const m_iCompetitiveWins: usize = 0x744; // int32_t
-    pub const m_iCompetitiveRankType: usize = 0x748; // int8_t
-    pub const m_iCompetitiveRankingPredicted_Win: usize = 0x74C; // int32_t
-    pub const m_iCompetitiveRankingPredicted_Loss: usize = 0x750; // int32_t
-    pub const m_iCompetitiveRankingPredicted_Tie: usize = 0x754; // int32_t
-    pub const m_nEndMatchNextMapVote: usize = 0x758; // int32_t
-    pub const m_unActiveQuestId: usize = 0x75C; // uint16_t
-    pub const m_nQuestProgressReason: usize = 0x760; // QuestProgress::Reason
-    pub const m_unPlayerTvControlFlags: usize = 0x764; // uint32_t
-    pub const m_iDraftIndex: usize = 0x790; // int32_t
-    pub const m_msQueuedModeDisconnectionTimestamp: usize = 0x794; // uint32_t
-    pub const m_uiAbandonRecordedReason: usize = 0x798; // uint32_t
-    pub const m_bCannotBeKicked: usize = 0x79C; // bool
-    pub const m_bEverFullyConnected: usize = 0x79D; // bool
-    pub const m_bAbandonAllowsSurrender: usize = 0x79E; // bool
-    pub const m_bAbandonOffersInstantSurrender: usize = 0x79F; // bool
-    pub const m_bDisconnection1MinWarningPrinted: usize = 0x7A0; // bool
-    pub const m_bScoreReported: usize = 0x7A1; // bool
-    pub const m_nDisconnectionTick: usize = 0x7A4; // int32_t
-    pub const m_bControllingBot: usize = 0x7B0; // bool
-    pub const m_bHasControlledBotThisRound: usize = 0x7B1; // bool
-    pub const m_bHasBeenControlledByPlayerThisRound: usize = 0x7B2; // bool
-    pub const m_nBotsControlledThisRound: usize = 0x7B4; // int32_t
-    pub const m_bCanControlObservedBot: usize = 0x7B8; // bool
-    pub const m_hPlayerPawn: usize = 0x7BC; // CHandle<C_CSPlayerPawn>
-    pub const m_hObserverPawn: usize = 0x7C0; // CHandle<C_CSObserverPawn>
-    pub const m_bPawnIsAlive: usize = 0x7C4; // bool
-    pub const m_iPawnHealth: usize = 0x7C8; // uint32_t
-    pub const m_iPawnArmor: usize = 0x7CC; // int32_t
-    pub const m_bPawnHasDefuser: usize = 0x7D0; // bool
-    pub const m_bPawnHasHelmet: usize = 0x7D1; // bool
-    pub const m_nPawnCharacterDefIndex: usize = 0x7D2; // uint16_t
-    pub const m_iPawnLifetimeStart: usize = 0x7D4; // int32_t
-    pub const m_iPawnLifetimeEnd: usize = 0x7D8; // int32_t
-    pub const m_iPawnBotDifficulty: usize = 0x7DC; // int32_t
-    pub const m_hOriginalControllerOfCurrentPawn: usize = 0x7E0; // CHandle<CCSPlayerController>
-    pub const m_iScore: usize = 0x7E4; // int32_t
-    pub const m_vecKills: usize = 0x7E8; // C_NetworkUtlVectorBase<EKillTypes_t>
-    pub const m_iMVPs: usize = 0x800; // int32_t
-    pub const m_bIsPlayerNameDirty: usize = 0x804; // bool
+    pub const m_pInGameMoneyServices: usize = 0x6E8; // CCSPlayerController_InGameMoneyServices*
+    pub const m_pInventoryServices: usize = 0x6F0; // CCSPlayerController_InventoryServices*
+    pub const m_pActionTrackingServices: usize = 0x6F8; // CCSPlayerController_ActionTrackingServices*
+    pub const m_pDamageServices: usize = 0x700; // CCSPlayerController_DamageServices*
+    pub const m_iPing: usize = 0x708; // uint32_t
+    pub const m_bHasCommunicationAbuseMute: usize = 0x70C; // bool
+    pub const m_szCrosshairCodes: usize = 0x710; // CUtlSymbolLarge
+    pub const m_iPendingTeamNum: usize = 0x718; // uint8_t
+    pub const m_flForceTeamTime: usize = 0x71C; // GameTime_t
+    pub const m_iCompTeammateColor: usize = 0x720; // int32_t
+    pub const m_bEverPlayedOnTeam: usize = 0x724; // bool
+    pub const m_flPreviousForceJoinTeamTime: usize = 0x728; // GameTime_t
+    pub const m_szClan: usize = 0x730; // CUtlSymbolLarge
+    pub const m_sSanitizedPlayerName: usize = 0x738; // CUtlString
+    pub const m_iCoachingTeam: usize = 0x740; // int32_t
+    pub const m_nPlayerDominated: usize = 0x748; // uint64_t
+    pub const m_nPlayerDominatingMe: usize = 0x750; // uint64_t
+    pub const m_iCompetitiveRanking: usize = 0x758; // int32_t
+    pub const m_iCompetitiveWins: usize = 0x75C; // int32_t
+    pub const m_iCompetitiveRankType: usize = 0x760; // int8_t
+    pub const m_iCompetitiveRankingPredicted_Win: usize = 0x764; // int32_t
+    pub const m_iCompetitiveRankingPredicted_Loss: usize = 0x768; // int32_t
+    pub const m_iCompetitiveRankingPredicted_Tie: usize = 0x76C; // int32_t
+    pub const m_nEndMatchNextMapVote: usize = 0x770; // int32_t
+    pub const m_unActiveQuestId: usize = 0x774; // uint16_t
+    pub const m_nQuestProgressReason: usize = 0x778; // QuestProgress::Reason
+    pub const m_unPlayerTvControlFlags: usize = 0x77C; // uint32_t
+    pub const m_iDraftIndex: usize = 0x7A8; // int32_t
+    pub const m_msQueuedModeDisconnectionTimestamp: usize = 0x7AC; // uint32_t
+    pub const m_uiAbandonRecordedReason: usize = 0x7B0; // uint32_t
+    pub const m_bCannotBeKicked: usize = 0x7B4; // bool
+    pub const m_bEverFullyConnected: usize = 0x7B5; // bool
+    pub const m_bAbandonAllowsSurrender: usize = 0x7B6; // bool
+    pub const m_bAbandonOffersInstantSurrender: usize = 0x7B7; // bool
+    pub const m_bDisconnection1MinWarningPrinted: usize = 0x7B8; // bool
+    pub const m_bScoreReported: usize = 0x7B9; // bool
+    pub const m_nDisconnectionTick: usize = 0x7BC; // int32_t
+    pub const m_bControllingBot: usize = 0x7C8; // bool
+    pub const m_bHasControlledBotThisRound: usize = 0x7C9; // bool
+    pub const m_bHasBeenControlledByPlayerThisRound: usize = 0x7CA; // bool
+    pub const m_nBotsControlledThisRound: usize = 0x7CC; // int32_t
+    pub const m_bCanControlObservedBot: usize = 0x7D0; // bool
+    pub const m_hPlayerPawn: usize = 0x7D4; // CHandle<C_CSPlayerPawn>
+    pub const m_hObserverPawn: usize = 0x7D8; // CHandle<C_CSObserverPawn>
+    pub const m_bPawnIsAlive: usize = 0x7DC; // bool
+    pub const m_iPawnHealth: usize = 0x7E0; // uint32_t
+    pub const m_iPawnArmor: usize = 0x7E4; // int32_t
+    pub const m_bPawnHasDefuser: usize = 0x7E8; // bool
+    pub const m_bPawnHasHelmet: usize = 0x7E9; // bool
+    pub const m_nPawnCharacterDefIndex: usize = 0x7EA; // uint16_t
+    pub const m_iPawnLifetimeStart: usize = 0x7EC; // int32_t
+    pub const m_iPawnLifetimeEnd: usize = 0x7F0; // int32_t
+    pub const m_iPawnBotDifficulty: usize = 0x7F4; // int32_t
+    pub const m_hOriginalControllerOfCurrentPawn: usize = 0x7F8; // CHandle<CCSPlayerController>
+    pub const m_iScore: usize = 0x7FC; // int32_t
+    pub const m_vecKills: usize = 0x800; // C_NetworkUtlVectorBase<EKillTypes_t>
+    pub const m_iMVPs: usize = 0x818; // int32_t
+    pub const m_bIsPlayerNameDirty: usize = 0x81C; // bool
 }
 
 pub mod CCSPlayerController_ActionTrackingServices { // CPlayerControllerComponent
@@ -2294,7 +2294,7 @@ pub mod C_ColorCorrectionVolume { // C_BaseTrigger
 
 pub mod C_CommandContext {
     pub const needsprocessing: usize = 0x0; // bool
-    pub const command_number: usize = 0x78; // int32_t
+    pub const command_number: usize = 0x90; // int32_t
 }
 
 pub mod C_CsmFovOverride { // C_BaseEntity
