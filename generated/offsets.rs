@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 14 Nov 2023 03:29:46 +0000
+ * Tue, 14 Nov 2023 08:44:01 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -25,7 +25,7 @@ pub mod client_dll { // client.dll
     pub const dwLocalPlayerPawn: usize = 0x16B9388;
     pub const dwPlantedC4: usize = 0x1810CD8;
     pub const dwPrediction: usize = 0x16B9250;
-    pub const dwViewAngles: usize = 0x186B108;
+    pub const dwViewAngles: usize = 0x186BF18;
     pub const dwViewMatrix: usize = 0x180C100;
     pub const dwViewRender: usize = 0x180C958;
 }

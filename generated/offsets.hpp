@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 14 Nov 2023 03:29:46 +0000
+ * Tue, 14 Nov 2023 08:44:01 +0000
  */
 
 #pragma once
@@ -27,7 +27,7 @@ namespace client_dll { // client.dll
     constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x16B9388;
     constexpr std::ptrdiff_t dwPlantedC4 = 0x1810CD8;
     constexpr std::ptrdiff_t dwPrediction = 0x16B9250;
-    constexpr std::ptrdiff_t dwViewAngles = 0x186B108;
+    constexpr std::ptrdiff_t dwViewAngles = 0x186BF18;
     constexpr std::ptrdiff_t dwViewMatrix = 0x180C100;
     constexpr std::ptrdiff_t dwViewRender = 0x180C958;
 }

@@ -303,7 +303,7 @@
     {
       "name": "dwViewAngles",
       "module": "client.dll",
-      "pattern": "48 8B 0D ? ? ? ? 48 8B 01 48 FF 60 30",
+      "pattern": "48 8B 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 40 55",
       "operations": [
         {
           "type": "rip"
@@ -313,7 +313,7 @@
         },
         {
           "type": "add",
-          "value": 17688
+          "value": 21288
         }
       ]
     },
