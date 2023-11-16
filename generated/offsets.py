@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 14 Nov 2023 08:44:01 +0000
+Thu, 16 Nov 2023 14:20:14 +0000
 '''
 
 class client_dll: # client.dll
@@ -23,6 +23,8 @@ class client_dll: # client.dll
     dwLocalPlayerPawn = 0x16B9388
     dwPlantedC4 = 0x1810CD8
     dwPrediction = 0x16B9250
+    dwSensitivity = 0x180ACF8
+    dwSensitivity_sensitivity = 0x40
     dwViewAngles = 0x186BF18
     dwViewMatrix = 0x180C100
     dwViewRender = 0x180C958

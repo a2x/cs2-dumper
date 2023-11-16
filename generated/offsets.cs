@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 14 Nov 2023 08:44:01 +0000
+ * Thu, 16 Nov 2023 14:20:14 +0000
  */
 
 public static class client_dll { // client.dll
@@ -23,6 +23,8 @@ public static class client_dll { // client.dll
     public const nint dwLocalPlayerPawn = 0x16B9388;
     public const nint dwPlantedC4 = 0x1810CD8;
     public const nint dwPrediction = 0x16B9250;
+    public const nint dwSensitivity = 0x180ACF8;
+    public const nint dwSensitivity_sensitivity = 0x40;
     public const nint dwViewAngles = 0x186BF18;
     public const nint dwViewMatrix = 0x180C100;
     public const nint dwViewRender = 0x180C958;

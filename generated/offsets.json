@@ -77,6 +77,14 @@
         "value": 23827024,
         "comment": null
       },
+      "dwSensitivity": {
+        "value": 25210104,
+        "comment": null
+      },
+      "dwSensitivity_sensitivity": {
+        "value": 64,
+        "comment": null
+      },
       "dwViewAngles": {
         "value": 25607960,
         "comment": null

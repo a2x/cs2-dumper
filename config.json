@@ -301,6 +301,28 @@
       ]
     },
     {
+      "name": "dwSensitivity",
+      "module": "client.dll",
+      "pattern": "48 8B 05 ? ? ? ? 48 8B 40 ? F3 0F 10 00 F3 0F 59 86",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    },
+    {
+      "name": "dwSensitivity_sensitivity",
+      "module": "client.dll",
+      "pattern": "FF 50 ? 4C 8B C6 48 8D 55 ? 48 8B CF E8 ? ? ? ? 84 C0 0F 85 ? ? ? ? 4C 8D 45 ? 8B D3 48 8B CF E8 ? ? ? ? E9 ? ? ? ? F3 0F 10 06",
+      "operations": [
+        {
+          "type": "slice",
+          "start": 2,
+          "end": 3
+        }
+      ]
+    },
+    {
       "name": "dwViewAngles",
       "module": "client.dll",
       "pattern": "48 8B 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 40 55",
