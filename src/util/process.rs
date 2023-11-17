@@ -229,7 +229,7 @@ impl Process {
         Ok(String::from_utf8(buffer)?)
     }
 
-    /// Resolves the absolute address of relative "jmp".
+    /// Resolves the absolute address of a relative call.
     ///
     /// # Arguments
     ///
@@ -241,11 +241,18 @@ impl Process {
     /// # Returns
     ///
     /// * `Result<Address>` - A `Result` containing the absolute address if successful, or an error if the memory read fails.
-    pub fn resolve_jmp(&self, address: Address, offset: usize, length: usize) -> Result<Address> {
+    pub fn resolve_jmp(
+        &self,
+        address: Address,
+        offset: Option<usize>,
+        length: Option<usize>,
+    ) -> Result<Address> {
         // The displacement value can be negative.
-        let displacement = self.read_memory::<i32>(address.add(offset))?;
+        let displacement = self.read_memory::<i32>(address.add(offset.unwrap_or(0x1)))?;
 
-        Ok(((address.add(length).0 as isize + displacement as isize) as usize).into())
+        Ok(address
+            .add(length.unwrap_or(0x5))
+            .add(displacement as usize))
     }
 
     /// Resolves the absolute address of a RIP-relative address.
@@ -254,17 +261,24 @@ impl Process {
     ///
     /// * `&self` - A reference to the `Process` struct.
     /// * `address` - The address of the relative instruction pointer (RIP).
-    /// * `offset` - The offset of the displacement value.
-    /// * `length` - The length of the instruction.
+    /// * `offset` - The offset of the displacement value. If `None`, the offset will be `0x3`.
+    /// * `length` - The length of the instruction. If `None`, the length will be `0x7`.
     ///
     /// # Returns
     ///
     /// * `Result<Address>` - A `Result` containing the absolute address if successful, or an error if the memory read fails.
-    pub fn resolve_rip(&self, address: Address, offset: usize, length: usize) -> Result<Address> {
+    pub fn resolve_rip(
+        &self,
+        address: Address,
+        offset: Option<usize>,
+        length: Option<usize>,
+    ) -> Result<Address> {
         // The displacement value can be negative.
-        let displacement = self.read_memory::<i32>(address.add(offset))?;
+        let displacement = self.read_memory::<i32>(address.add(offset.unwrap_or(0x3)))?;
 
-        Ok(((address.add(length).0 as isize + displacement as isize) as usize).into())
+        Ok(address
+            .add(length.unwrap_or(0x7))
+            .add(displacement as usize))
     }
 
     /// Returns the process ID of the first process with the given name.

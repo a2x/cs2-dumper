@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 16 Nov 2023 14:20:13 +0000
+Fri, 17 Nov 2023 02:25:38 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -243,21 +243,24 @@ class CBaseCSGrenade: # CCSWeaponBase
     m_fDropTime = 0xE34 # GameTime_t
 
 class CBaseCSGrenadeProjectile: # CBaseGrenade
-    m_vInitialVelocity = 0x9C8 # Vector
-    m_nBounces = 0x9D4 # int32_t
-    m_nExplodeEffectIndex = 0x9D8 # CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-    m_nExplodeEffectTickBegin = 0x9E0 # int32_t
-    m_vecExplodeEffectOrigin = 0x9E4 # Vector
-    m_flSpawnTime = 0x9F0 # GameTime_t
-    m_unOGSExtraFlags = 0x9F4 # uint8_t
-    m_bDetonationRecorded = 0x9F5 # bool
-    m_flDetonateTime = 0x9F8 # GameTime_t
-    m_nItemIndex = 0x9FC # uint16_t
-    m_vecOriginalSpawnLocation = 0xA00 # Vector
-    m_flLastBounceSoundTime = 0xA0C # GameTime_t
-    m_vecGrenadeSpin = 0xA10 # RotationVector
-    m_vecLastHitSurfaceNormal = 0xA1C # Vector
-    m_nTicksAtZeroVelocity = 0xA28 # int32_t
+    m_vInitialPosition = 0x9C8 # Vector
+    m_vInitialVelocity = 0x9D4 # Vector
+    m_nBounces = 0x9E0 # int32_t
+    m_nExplodeEffectIndex = 0x9E8 # CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+    m_nExplodeEffectTickBegin = 0x9F0 # int32_t
+    m_vecExplodeEffectOrigin = 0x9F4 # Vector
+    m_flSpawnTime = 0xA00 # GameTime_t
+    m_unOGSExtraFlags = 0xA04 # uint8_t
+    m_bDetonationRecorded = 0xA05 # bool
+    m_flDetonateTime = 0xA08 # GameTime_t
+    m_nItemIndex = 0xA0C # uint16_t
+    m_vecOriginalSpawnLocation = 0xA10 # Vector
+    m_flLastBounceSoundTime = 0xA1C # GameTime_t
+    m_vecGrenadeSpin = 0xA20 # RotationVector
+    m_vecLastHitSurfaceNormal = 0xA2C # Vector
+    m_nTicksAtZeroVelocity = 0xA38 # int32_t
+    m_bHasEverHitPlayer = 0xA3C # bool
+    m_bClearFromPlayers = 0xA3D # bool
 
 class CBaseClientUIEntity: # CBaseModelEntity
     m_bEnabled = 0x700 # bool
@@ -1275,10 +1278,10 @@ class CCSGameRules: # CTeamplayRules
     m_flLastThinkTime = 0x124C # GameTime_t
     m_fAccumulatedRoundOffDamage = 0x1250 # float
     m_nShorthandedBonusLastEvalRound = 0x1254 # int32_t
-    m_bMatchAbortedDueToPlayerBan = 0x14D0 # bool
-    m_bHasTriggeredRoundStartMusic = 0x14D1 # bool
-    m_bHasTriggeredCoopSpawnReset = 0x14D2 # bool
-    m_bSwitchingTeamsAtRoundReset = 0x14D3 # bool
+    m_nMatchAbortedEarlyReason = 0x14D0 # int32_t
+    m_bHasTriggeredRoundStartMusic = 0x14D4 # bool
+    m_bHasTriggeredCoopSpawnReset = 0x14D5 # bool
+    m_bSwitchingTeamsAtRoundReset = 0x14D6 # bool
     m_pGameModeRules = 0x14F0 # CCSGameModeRules*
     m_BtGlobalBlackboard = 0x14F8 # KeyValues3
     m_hPlayerResource = 0x1560 # CHandle<CBaseEntity>
@@ -1403,7 +1406,9 @@ class CCSPlayerController: # CBasePlayerController
     m_bPunishForTeamKill = 0xF8E9 # bool
     m_bGaveTeamDamageWarning = 0xF8EA # bool
     m_bGaveTeamDamageWarningThisRound = 0xF8EB # bool
-    m_LastTeamDamageWarningTime = 0xF8EC # GameTime_t
+    m_dblLastReceivedPacketPlatFloatTime = 0xF8F0 # double
+    m_LastTeamDamageWarningTime = 0xF8F8 # GameTime_t
+    m_LastTimePlayerWasDisconnectedForPawnsRemove = 0xF8FC # GameTime_t
 
 class CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats = 0x40 # CUtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
@@ -1446,11 +1451,12 @@ class CCSPlayerPawn: # CCSPlayerPawnBase
     m_bHasFemaleVoice = 0x1590 # bool
     m_strVOPrefix = 0x1598 # CUtlString
     m_szLastPlaceName = 0x15A0 # char[18]
-    m_bInBuyZone = 0x1660 # bool
-    m_bWasInBuyZone = 0x1661 # bool
-    m_bInHostageRescueZone = 0x1662 # bool
-    m_bInBombZone = 0x1663 # bool
-    m_bWasInHostageRescueZone = 0x1664 # bool
+    m_bInHostageResetZone = 0x1660 # bool
+    m_bInBuyZone = 0x1661 # bool
+    m_bWasInBuyZone = 0x1662 # bool
+    m_bInHostageRescueZone = 0x1663 # bool
+    m_bInBombZone = 0x1664 # bool
+    m_bWasInHostageRescueZone = 0x1665 # bool
     m_iRetakesOffering = 0x1668 # int32_t
     m_iRetakesOfferingCard = 0x166C # int32_t
     m_bRetakesHasDefuseKit = 0x1670 # bool
@@ -1465,23 +1471,23 @@ class CCSPlayerPawn: # CCSPlayerPawnBase
     m_aimPunchTickFraction = 0x16A0 # float
     m_aimPunchCache = 0x16A8 # CUtlVector<QAngle>
     m_bIsBuyMenuOpen = 0x16C0 # bool
-    m_xLastHeadBoneTransform = 0x1C30 # CTransform
-    m_bLastHeadBoneTransformIsValid = 0x1C50 # bool
-    m_lastLandTime = 0x1C54 # GameTime_t
-    m_bOnGroundLastTick = 0x1C58 # bool
-    m_iPlayerLocked = 0x1C5C # int32_t
-    m_flTimeOfLastInjury = 0x1C64 # GameTime_t
-    m_flNextSprayDecalTime = 0x1C68 # GameTime_t
-    m_bNextSprayDecalTimeExpedited = 0x1C6C # bool
-    m_nRagdollDamageBone = 0x1C70 # int32_t
-    m_vRagdollDamageForce = 0x1C74 # Vector
-    m_vRagdollDamagePosition = 0x1C80 # Vector
-    m_szRagdollDamageWeaponName = 0x1C8C # char[64]
-    m_bRagdollDamageHeadshot = 0x1CCC # bool
-    m_vRagdollServerOrigin = 0x1CD0 # Vector
-    m_EconGloves = 0x1CE0 # CEconItemView
-    m_qDeathEyeAngles = 0x1F58 # QAngle
-    m_bSkipOneHeadConstraintUpdate = 0x1F64 # bool
+    m_xLastHeadBoneTransform = 0x1C40 # CTransform
+    m_bLastHeadBoneTransformIsValid = 0x1C60 # bool
+    m_lastLandTime = 0x1C64 # GameTime_t
+    m_bOnGroundLastTick = 0x1C68 # bool
+    m_iPlayerLocked = 0x1C6C # int32_t
+    m_flTimeOfLastInjury = 0x1C74 # GameTime_t
+    m_flNextSprayDecalTime = 0x1C78 # GameTime_t
+    m_bNextSprayDecalTimeExpedited = 0x1C7C # bool
+    m_nRagdollDamageBone = 0x1C80 # int32_t
+    m_vRagdollDamageForce = 0x1C84 # Vector
+    m_vRagdollDamagePosition = 0x1C90 # Vector
+    m_szRagdollDamageWeaponName = 0x1C9C # char[64]
+    m_bRagdollDamageHeadshot = 0x1CDC # bool
+    m_vRagdollServerOrigin = 0x1CE0 # Vector
+    m_EconGloves = 0x1CF0 # CEconItemView
+    m_qDeathEyeAngles = 0x1F68 # QAngle
+    m_bSkipOneHeadConstraintUpdate = 0x1F74 # bool
 
 class CCSPlayerPawnBase: # CBasePlayerPawn
     m_CTouchExpansionComponent = 0xB68 # CTouchExpansionComponent
@@ -2081,10 +2087,10 @@ class CDebugHistory: # CBaseEntity
 class CDecoyGrenade: # CBaseCSGrenade
 
 class CDecoyProjectile: # CBaseCSGrenadeProjectile
-    m_nDecoyShotTick = 0xA38 # int32_t
-    m_shotsRemaining = 0xA3C # int32_t
-    m_fExpireTime = 0xA40 # GameTime_t
-    m_decoyWeaponDefIndex = 0xA50 # uint16_t
+    m_nDecoyShotTick = 0xA48 # int32_t
+    m_shotsRemaining = 0xA4C # int32_t
+    m_fExpireTime = 0xA50 # GameTime_t
+    m_decoyWeaponDefIndex = 0xA60 # uint16_t
 
 class CDynamicLight: # CBaseModelEntity
     m_ActualFlags = 0x700 # uint8_t
@@ -2819,9 +2825,9 @@ class CFists: # CCSWeaponBase
 class CFlashbang: # CBaseCSGrenade
 
 class CFlashbangProjectile: # CBaseCSGrenadeProjectile
-    m_flTimeToDetonate = 0xA30 # float
-    m_numOpponentsHit = 0xA34 # uint8_t
-    m_numTeammatesHit = 0xA35 # uint8_t
+    m_flTimeToDetonate = 0xA40 # float
+    m_numOpponentsHit = 0xA44 # uint8_t
+    m_numTeammatesHit = 0xA45 # uint8_t
 
 class CFogController: # CBaseEntity
     m_fog = 0x4B0 # fogparams_t
@@ -3317,6 +3323,7 @@ class CHostage: # CHostageExpresserShim
     m_nApproachRewardPayouts = 0x2C3C # int32_t
     m_nPickupEventCount = 0x2C40 # int32_t
     m_vecSpawnGroundPos = 0x2C44 # Vector
+    m_vecHostageResetPosition = 0x2C64 # Vector
 
 class CHostageAlias_info_hostage_spawn: # CHostage
 
@@ -3717,6 +3724,12 @@ class CLogicDistanceCheck: # CLogicalEntity
     m_InZone2 = 0x4F0 # CEntityIOOutput
     m_InZone3 = 0x518 # CEntityIOOutput
 
+class CLogicEventListener: # CLogicalEntity
+    m_strEventName = 0x4C0 # CUtlString
+    m_bIsEnabled = 0x4C8 # bool
+    m_nTeam = 0x4CC # int32_t
+    m_OnEventFired = 0x4D0 # CEntityIOOutput
+
 class CLogicGameEvent: # CLogicalEntity
     m_iszEventName = 0x4B0 # CUtlSymbolLarge
 
@@ -3951,10 +3964,10 @@ class CModelState:
 class CMolotovGrenade: # CBaseCSGrenade
 
 class CMolotovProjectile: # CBaseCSGrenadeProjectile
-    m_bIsIncGrenade = 0xA30 # bool
-    m_bDetonated = 0xA3C # bool
-    m_stillTimer = 0xA40 # IntervalTimer
-    m_bHasBouncedOffPlayer = 0xB20 # bool
+    m_bIsIncGrenade = 0xA40 # bool
+    m_bDetonated = 0xA4C # bool
+    m_stillTimer = 0xA50 # IntervalTimer
+    m_bHasBouncedOffPlayer = 0xB30 # bool
 
 class CMomentaryRotButton: # CRotButton
     m_Position = 0x8C8 # CEntityOutputTemplate<float>
@@ -5327,9 +5340,9 @@ class CScriptedSequence: # CBaseEntity
 class CSensorGrenade: # CBaseCSGrenade
 
 class CSensorGrenadeProjectile: # CBaseCSGrenadeProjectile
-    m_fExpireTime = 0xA30 # GameTime_t
-    m_fNextDetectPlayerSound = 0xA34 # GameTime_t
-    m_hDisplayGrenade = 0xA38 # CHandle<CBaseEntity>
+    m_fExpireTime = 0xA40 # GameTime_t
+    m_fNextDetectPlayerSound = 0xA44 # GameTime_t
+    m_hDisplayGrenade = 0xA48 # CHandle<CBaseEntity>
 
 class CServerOnlyEntity: # CBaseEntity
 
@@ -5428,14 +5441,14 @@ class CSkyboxReference: # CBaseEntity
 class CSmokeGrenade: # CBaseCSGrenade
 
 class CSmokeGrenadeProjectile: # CBaseCSGrenadeProjectile
-    m_nSmokeEffectTickBegin = 0xA48 # int32_t
-    m_bDidSmokeEffect = 0xA4C # bool
-    m_nRandomSeed = 0xA50 # int32_t
-    m_vSmokeColor = 0xA54 # Vector
-    m_vSmokeDetonationPos = 0xA60 # Vector
-    m_VoxelFrameData = 0xA70 # CUtlVector<uint8_t>
-    m_flLastBounce = 0xA88 # GameTime_t
-    m_fllastSimulationTime = 0xA8C # GameTime_t
+    m_nSmokeEffectTickBegin = 0xA58 # int32_t
+    m_bDidSmokeEffect = 0xA5C # bool
+    m_nRandomSeed = 0xA60 # int32_t
+    m_vSmokeColor = 0xA64 # Vector
+    m_vSmokeDetonationPos = 0xA70 # Vector
+    m_VoxelFrameData = 0xA80 # CUtlVector<uint8_t>
+    m_flLastBounce = 0xA98 # GameTime_t
+    m_fllastSimulationTime = 0xA9C # GameTime_t
 
 class CSmoothFunc:
     m_flSmoothAmplitude = 0x8 # float
@@ -5822,6 +5835,8 @@ class CTriggerGameEvent: # CBaseTrigger
     m_strTriggerID = 0x8B8 # CUtlString
 
 class CTriggerGravity: # CBaseTrigger
+
+class CTriggerHostageReset: # CBaseTrigger
 
 class CTriggerHurt: # CBaseTrigger
     m_flOriginalDamage = 0x8A8 # float

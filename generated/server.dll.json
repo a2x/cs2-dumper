@@ -874,64 +874,76 @@
   },
   "CBaseCSGrenadeProjectile": {
     "data": {
+      "m_bClearFromPlayers": {
+        "value": 2621,
+        "comment": "bool"
+      },
       "m_bDetonationRecorded": {
-        "value": 2549,
+        "value": 2565,
+        "comment": "bool"
+      },
+      "m_bHasEverHitPlayer": {
+        "value": 2620,
         "comment": "bool"
       },
       "m_flDetonateTime": {
-        "value": 2552,
+        "value": 2568,
         "comment": "GameTime_t"
       },
       "m_flLastBounceSoundTime": {
-        "value": 2572,
+        "value": 2588,
         "comment": "GameTime_t"
       },
       "m_flSpawnTime": {
-        "value": 2544,
+        "value": 2560,
         "comment": "GameTime_t"
       },
       "m_nBounces": {
-        "value": 2516,
-        "comment": "int32_t"
-      },
-      "m_nExplodeEffectIndex": {
-        "value": 2520,
-        "comment": "CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>"
-      },
-      "m_nExplodeEffectTickBegin": {
         "value": 2528,
         "comment": "int32_t"
       },
+      "m_nExplodeEffectIndex": {
+        "value": 2536,
+        "comment": "CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>"
+      },
+      "m_nExplodeEffectTickBegin": {
+        "value": 2544,
+        "comment": "int32_t"
+      },
       "m_nItemIndex": {
-        "value": 2556,
+        "value": 2572,
         "comment": "uint16_t"
       },
       "m_nTicksAtZeroVelocity": {
-        "value": 2600,
+        "value": 2616,
         "comment": "int32_t"
       },
       "m_unOGSExtraFlags": {
-        "value": 2548,
+        "value": 2564,
         "comment": "uint8_t"
       },
-      "m_vInitialVelocity": {
+      "m_vInitialPosition": {
         "value": 2504,
         "comment": "Vector"
       },
+      "m_vInitialVelocity": {
+        "value": 2516,
+        "comment": "Vector"
+      },
       "m_vecExplodeEffectOrigin": {
-        "value": 2532,
+        "value": 2548,
         "comment": "Vector"
       },
       "m_vecGrenadeSpin": {
-        "value": 2576,
+        "value": 2592,
         "comment": "RotationVector"
       },
       "m_vecLastHitSurfaceNormal": {
-        "value": 2588,
+        "value": 2604,
         "comment": "Vector"
       },
       "m_vecOriginalSpawnLocation": {
-        "value": 2560,
+        "value": 2576,
         "comment": "Vector"
       }
     },
@@ -4218,11 +4230,11 @@
         "comment": "bool"
       },
       "m_bHasTriggeredCoopSpawnReset": {
-        "value": 5330,
+        "value": 5333,
         "comment": "bool"
       },
       "m_bHasTriggeredRoundStartMusic": {
-        "value": 5329,
+        "value": 5332,
         "comment": "bool"
       },
       "m_bIsDroppingItems": {
@@ -4275,10 +4287,6 @@
       },
       "m_bMapHasRescueZone": {
         "value": 290,
-        "comment": "bool"
-      },
-      "m_bMatchAbortedDueToPlayerBan": {
-        "value": 5328,
         "comment": "bool"
       },
       "m_bMatchWaitingForResume": {
@@ -4342,7 +4350,7 @@
         "comment": "bool"
       },
       "m_bSwitchingTeamsAtRoundReset": {
-        "value": 5331,
+        "value": 5334,
         "comment": "bool"
       },
       "m_bTCantBuy": {
@@ -4701,6 +4709,10 @@
         "value": 3892,
         "comment": "int32_t"
       },
+      "m_nMatchAbortedEarlyReason": {
+        "value": 5328,
+        "comment": "int32_t"
+      },
       "m_nMatchEndCount": {
         "value": 6112,
         "comment": "uint8_t"
@@ -4934,7 +4946,11 @@
         "comment": "int32_t"
       },
       "m_LastTeamDamageWarningTime": {
-        "value": 63724,
+        "value": 63736,
+        "comment": "GameTime_t"
+      },
+      "m_LastTimePlayerWasDisconnectedForPawnsRemove": {
+        "value": 63740,
         "comment": "GameTime_t"
       },
       "m_bAbandonAllowsSurrender": {
@@ -5044,6 +5060,10 @@
       "m_bTeamChanged": {
         "value": 1788,
         "comment": "bool"
+      },
+      "m_dblLastReceivedPacketPlatFloatTime": {
+        "value": 63728,
+        "comment": "double"
       },
       "m_flForceTeamTime": {
         "value": 1772,
@@ -5351,7 +5371,7 @@
   "CCSPlayerPawn": {
     "data": {
       "m_EconGloves": {
-        "value": 7392,
+        "value": 7408,
         "comment": "CEconItemView"
       },
       "m_RetakesMVPBoostExtraUtility": {
@@ -5383,15 +5403,19 @@
         "comment": "bool"
       },
       "m_bInBombZone": {
-        "value": 5731,
+        "value": 5732,
         "comment": "bool"
       },
       "m_bInBuyZone": {
-        "value": 5728,
+        "value": 5729,
         "comment": "bool"
       },
       "m_bInHostageRescueZone": {
-        "value": 5730,
+        "value": 5731,
+        "comment": "bool"
+      },
+      "m_bInHostageResetZone": {
+        "value": 5728,
         "comment": "bool"
       },
       "m_bIsBuyMenuOpen": {
@@ -5399,19 +5423,19 @@
         "comment": "bool"
       },
       "m_bLastHeadBoneTransformIsValid": {
-        "value": 7248,
+        "value": 7264,
         "comment": "bool"
       },
       "m_bNextSprayDecalTimeExpedited": {
-        "value": 7276,
+        "value": 7292,
         "comment": "bool"
       },
       "m_bOnGroundLastTick": {
-        "value": 7256,
+        "value": 7272,
         "comment": "bool"
       },
       "m_bRagdollDamageHeadshot": {
-        "value": 7372,
+        "value": 7388,
         "comment": "bool"
       },
       "m_bRetakesHasDefuseKit": {
@@ -5423,15 +5447,15 @@
         "comment": "bool"
       },
       "m_bSkipOneHeadConstraintUpdate": {
-        "value": 8036,
+        "value": 8052,
         "comment": "bool"
       },
       "m_bWasInBuyZone": {
-        "value": 5729,
+        "value": 5730,
         "comment": "bool"
       },
       "m_bWasInHostageRescueZone": {
-        "value": 5732,
+        "value": 5733,
         "comment": "bool"
       },
       "m_flHealthShotBoostExpirationTime": {
@@ -5443,11 +5467,11 @@
         "comment": "float"
       },
       "m_flNextSprayDecalTime": {
-        "value": 7272,
+        "value": 7288,
         "comment": "GameTime_t"
       },
       "m_flTimeOfLastInjury": {
-        "value": 7268,
+        "value": 7284,
         "comment": "GameTime_t"
       },
       "m_hPreviousModel": {
@@ -5455,7 +5479,7 @@
         "comment": "CStrongHandle<InfoForResourceTypeCModel>"
       },
       "m_iPlayerLocked": {
-        "value": 7260,
+        "value": 7276,
         "comment": "int32_t"
       },
       "m_iRetakesMVPBoostItem": {
@@ -5471,7 +5495,7 @@
         "comment": "int32_t"
       },
       "m_lastLandTime": {
-        "value": 7252,
+        "value": 7268,
         "comment": "GameTime_t"
       },
       "m_nCharacterDefIndex": {
@@ -5479,7 +5503,7 @@
         "comment": "uint16_t"
       },
       "m_nRagdollDamageBone": {
-        "value": 7280,
+        "value": 7296,
         "comment": "int32_t"
       },
       "m_pActionTrackingServices": {
@@ -5507,7 +5531,7 @@
         "comment": "CCSPlayer_RadioServices*"
       },
       "m_qDeathEyeAngles": {
-        "value": 8024,
+        "value": 8040,
         "comment": "QAngle"
       },
       "m_strVOPrefix": {
@@ -5519,23 +5543,23 @@
         "comment": "char[18]"
       },
       "m_szRagdollDamageWeaponName": {
-        "value": 7308,
+        "value": 7324,
         "comment": "char[64]"
       },
       "m_vRagdollDamageForce": {
-        "value": 7284,
+        "value": 7300,
         "comment": "Vector"
       },
       "m_vRagdollDamagePosition": {
-        "value": 7296,
+        "value": 7312,
         "comment": "Vector"
       },
       "m_vRagdollServerOrigin": {
-        "value": 7376,
+        "value": 7392,
         "comment": "Vector"
       },
       "m_xLastHeadBoneTransform": {
-        "value": 7216,
+        "value": 7232,
         "comment": "CTransform"
       }
     },
@@ -7807,19 +7831,19 @@
   "CDecoyProjectile": {
     "data": {
       "m_decoyWeaponDefIndex": {
-        "value": 2640,
+        "value": 2656,
         "comment": "uint16_t"
       },
       "m_fExpireTime": {
-        "value": 2624,
+        "value": 2640,
         "comment": "GameTime_t"
       },
       "m_nDecoyShotTick": {
-        "value": 2616,
+        "value": 2632,
         "comment": "int32_t"
       },
       "m_shotsRemaining": {
-        "value": 2620,
+        "value": 2636,
         "comment": "int32_t"
       }
     },
@@ -10494,15 +10518,15 @@
   "CFlashbangProjectile": {
     "data": {
       "m_flTimeToDetonate": {
-        "value": 2608,
+        "value": 2624,
         "comment": "float"
       },
       "m_numOpponentsHit": {
-        "value": 2612,
+        "value": 2628,
         "comment": "uint8_t"
       },
       "m_numTeammatesHit": {
-        "value": 2613,
+        "value": 2629,
         "comment": "uint8_t"
       }
     },
@@ -12280,6 +12304,10 @@
         "value": 11300,
         "comment": "Vector"
       },
+      "m_vecHostageResetPosition": {
+        "value": 11364,
+        "comment": "Vector"
+      },
       "m_vecPositionWhenStartedDroppingToGround": {
         "value": 11288,
         "comment": "Vector"
@@ -13666,6 +13694,27 @@
     },
     "comment": "CLogicalEntity"
   },
+  "CLogicEventListener": {
+    "data": {
+      "m_OnEventFired": {
+        "value": 1232,
+        "comment": "CEntityIOOutput"
+      },
+      "m_bIsEnabled": {
+        "value": 1224,
+        "comment": "bool"
+      },
+      "m_nTeam": {
+        "value": 1228,
+        "comment": "int32_t"
+      },
+      "m_strEventName": {
+        "value": 1216,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "CLogicalEntity"
+  },
   "CLogicGameEvent": {
     "data": {
       "m_iszEventName": {
@@ -14507,19 +14556,19 @@
   "CMolotovProjectile": {
     "data": {
       "m_bDetonated": {
-        "value": 2620,
+        "value": 2636,
         "comment": "bool"
       },
       "m_bHasBouncedOffPlayer": {
-        "value": 2848,
+        "value": 2864,
         "comment": "bool"
       },
       "m_bIsIncGrenade": {
-        "value": 2608,
+        "value": 2624,
         "comment": "bool"
       },
       "m_stillTimer": {
-        "value": 2624,
+        "value": 2640,
         "comment": "IntervalTimer"
       }
     },
@@ -19464,15 +19513,15 @@
   "CSensorGrenadeProjectile": {
     "data": {
       "m_fExpireTime": {
-        "value": 2608,
+        "value": 2624,
         "comment": "GameTime_t"
       },
       "m_fNextDetectPlayerSound": {
-        "value": 2612,
+        "value": 2628,
         "comment": "GameTime_t"
       },
       "m_hDisplayGrenade": {
-        "value": 2616,
+        "value": 2632,
         "comment": "CHandle<CBaseEntity>"
       }
     },
@@ -19797,35 +19846,35 @@
   "CSmokeGrenadeProjectile": {
     "data": {
       "m_VoxelFrameData": {
-        "value": 2672,
+        "value": 2688,
         "comment": "CUtlVector<uint8_t>"
       },
       "m_bDidSmokeEffect": {
-        "value": 2636,
+        "value": 2652,
         "comment": "bool"
       },
       "m_flLastBounce": {
-        "value": 2696,
+        "value": 2712,
         "comment": "GameTime_t"
       },
       "m_fllastSimulationTime": {
-        "value": 2700,
+        "value": 2716,
         "comment": "GameTime_t"
       },
       "m_nRandomSeed": {
-        "value": 2640,
+        "value": 2656,
         "comment": "int32_t"
       },
       "m_nSmokeEffectTickBegin": {
-        "value": 2632,
+        "value": 2648,
         "comment": "int32_t"
       },
       "m_vSmokeColor": {
-        "value": 2644,
+        "value": 2660,
         "comment": "Vector"
       },
       "m_vSmokeDetonationPos": {
-        "value": 2656,
+        "value": 2672,
         "comment": "Vector"
       }
     },
@@ -21192,6 +21241,10 @@
     "comment": "CBaseTrigger"
   },
   "CTriggerGravity": {
+    "data": {},
+    "comment": "CBaseTrigger"
+  },
+  "CTriggerHostageReset": {
     "data": {},
     "comment": "CBaseTrigger"
   },

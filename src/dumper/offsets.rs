@@ -59,7 +59,7 @@ pub fn dump_offsets(
         for operation in signature.operations {
             match operation {
                 Add { value } => address += value,
-                Dereference { times, size } => {
+                Deref { times, size } => {
                     let times = times.unwrap_or(1);
                     let size = size.unwrap_or(8);
 
@@ -72,14 +72,10 @@ pub fn dump_offsets(
                     }
                 }
                 Jmp { offset, length } => {
-                    address = process
-                        .resolve_jmp(address, offset.unwrap_or(0x1), length.unwrap_or(0x5))?
-                        .into()
+                    address = process.resolve_jmp(address, offset, length)?.into();
                 }
                 Rip { offset, length } => {
-                    address = process
-                        .resolve_rip(address, offset.unwrap_or(0x3), length.unwrap_or(0x7))?
-                        .into()
+                    address = process.resolve_rip(address, offset, length)?.into()
                 }
                 Slice { start, end } => {
                     let mut result: usize = 0;
@@ -92,7 +88,7 @@ pub fn dump_offsets(
 
                     address = result.into();
                 }
-                Subtract { value } => address -= value,
+                Sub { value } => address -= value,
             }
         }
 
@@ -162,7 +158,7 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let build_number = process.read_memory::<u32>(engine_base + 0x48B524)?; // dwBuildNumber
+        let build_number = process.read_memory::<u32>(engine_base + 0x48A514)?; // dwBuildNumber
 
         println!("Build number: {}", build_number);
 
@@ -178,14 +174,14 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let force_attack = process.read_memory::<u32>(client_base + 0x16B2300)?; // dwForceAttack
-        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B2390)?; // dwForceAttack2
-        let force_backward = process.read_memory::<u32>(client_base + 0x16B25D0)?; // dwForceBackward
-        let force_crouch = process.read_memory::<u32>(client_base + 0x16B28A0)?; // dwForceCrouch
-        let force_forward = process.read_memory::<u32>(client_base + 0x16B2540)?; // dwForceForward
-        let force_jump = process.read_memory::<u32>(client_base + 0x16B2810)?; // dwForceJump
-        let force_left = process.read_memory::<u32>(client_base + 0x16B2660)?; // dwForceLeft
-        let force_right = process.read_memory::<u32>(client_base + 0x16B26F0)?; // dwForceRight
+        let force_attack = process.read_memory::<u32>(client_base + 0x16B5410)?; // dwForceAttack
+        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B54A0)?; // dwForceAttack2
+        let force_backward = process.read_memory::<u32>(client_base + 0x16B56E0)?; // dwForceBackward
+        let force_crouch = process.read_memory::<u32>(client_base + 0x16B59B0)?; // dwForceCrouch
+        let force_forward = process.read_memory::<u32>(client_base + 0x16B5650)?; // dwForceForward
+        let force_jump = process.read_memory::<u32>(client_base + 0x16B5920)?; // dwForceJump
+        let force_left = process.read_memory::<u32>(client_base + 0x16B5770)?; // dwForceLeft
+        let force_right = process.read_memory::<u32>(client_base + 0x16B5800)?; // dwForceRight
 
         let get_key_state = |value: u32| -> &str {
             match value {
@@ -255,7 +251,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16AE488)?; // dwGlobalVars
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16B14F0)?; // dwGlobalVars
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -277,7 +273,7 @@ mod tests {
             .expect("Failed to find inputsystem.dll")
             .base();
 
-        let input_system = input_system_base + 0x35770; // dwInputSystem
+        let input_system = input_system_base + 0x35760; // dwInputSystem
 
         let is_key_down = |key_code: i32| -> bool {
             let key_map_element = process
@@ -304,9 +300,9 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_controller = process.read_memory::<usize>(client_base + 0x17FCDC8)?; // dwLocalPlayerController
+        let local_player_controller = process.read_memory::<usize>(client_base + 0x1800008)?; // dwLocalPlayerController
 
-        let player_name = process.read_string((local_player_controller + 0x628).into())?; // m_iszPlayerName
+        let player_name = process.read_string((local_player_controller + 0x640).into())?; // m_iszPlayerName
 
         println!("Local player name: {}", player_name);
 
@@ -322,7 +318,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16B9388)?; // dwLocalPlayerPawn
+        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16BC4B8)?; // dwLocalPlayerPawn
 
         let game_scene_node = process.read_memory::<usize>((local_player_pawn + 0x310).into())?; // m_pGameSceneNode
 
@@ -350,8 +346,8 @@ mod tests {
             .expect("Failed to find engine2.dll")
             .base();
 
-        let window_width = process.read_memory::<u32>(engine_base + 0x541E18)?; // dwWindowWidth
-        let window_height = process.read_memory::<u32>(engine_base + 0x541E1C)?; // dwWindowHeight
+        let window_width = process.read_memory::<u32>(engine_base + 0x540CE0)?; // dwWindowWidth
+        let window_height = process.read_memory::<u32>(engine_base + 0x540CE4)?; // dwWindowHeight
 
         println!("Window size: {}x{}", window_width, window_height);
 

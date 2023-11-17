@@ -26,9 +26,9 @@ impl<'a> SchemaSystem<'a> {
         let mut address = process.find_pattern(
             "schemasystem.dll",
             "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28"
-        ).expect("Failed to find SchemaSystem pattern");
+        ).expect("Failed to find pattern for SchemaSystem");
 
-        address = process.resolve_rip(address, 0x3, 0x7)?;
+        address = process.resolve_rip(address, None, None)?;
 
         Ok(Self { process, address })
     }

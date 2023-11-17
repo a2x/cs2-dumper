@@ -109,7 +109,7 @@ pub fn dump_interfaces(
             info!("Dumping interfaces in <blue>{}</>...", module.name);
 
             let create_interface_address =
-                process.resolve_rip(create_interface_export, 0x3, 0x7)?;
+                process.resolve_rip(create_interface_export, None, None)?;
 
             let mut node = process.read_memory::<*mut InterfaceNode>(create_interface_address)?;
 

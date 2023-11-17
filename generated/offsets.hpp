@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 16 Nov 2023 14:20:14 +0000
+ * Fri, 17 Nov 2023 02:25:39 +0000
  */
 
 #pragma once
@@ -8,42 +8,42 @@
 #include <cstddef>
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t dwEntityList = 0x17ADAF0;
-    constexpr std::ptrdiff_t dwForceAttack = 0x16B2300;
-    constexpr std::ptrdiff_t dwForceAttack2 = 0x16B2390;
-    constexpr std::ptrdiff_t dwForceBackward = 0x16B25D0;
-    constexpr std::ptrdiff_t dwForceCrouch = 0x16B28A0;
-    constexpr std::ptrdiff_t dwForceForward = 0x16B2540;
-    constexpr std::ptrdiff_t dwForceJump = 0x16B2810;
-    constexpr std::ptrdiff_t dwForceLeft = 0x16B2660;
-    constexpr std::ptrdiff_t dwForceRight = 0x16B26F0;
-    constexpr std::ptrdiff_t dwGameEntitySystem = 0x18D8110;
+    constexpr std::ptrdiff_t dwEntityList = 0x17B0CF0;
+    constexpr std::ptrdiff_t dwForceAttack = 0x16B5410;
+    constexpr std::ptrdiff_t dwForceAttack2 = 0x16B54A0;
+    constexpr std::ptrdiff_t dwForceBackward = 0x16B56E0;
+    constexpr std::ptrdiff_t dwForceCrouch = 0x16B59B0;
+    constexpr std::ptrdiff_t dwForceForward = 0x16B5650;
+    constexpr std::ptrdiff_t dwForceJump = 0x16B5920;
+    constexpr std::ptrdiff_t dwForceLeft = 0x16B5770;
+    constexpr std::ptrdiff_t dwForceRight = 0x16B5800;
+    constexpr std::ptrdiff_t dwGameEntitySystem = 0x18DC3D0;
     constexpr std::ptrdiff_t dwGameEntitySystem_getHighestEntityIndex = 0x1510;
-    constexpr std::ptrdiff_t dwGameRules = 0x1809740;
-    constexpr std::ptrdiff_t dwGlobalVars = 0x16AE488;
-    constexpr std::ptrdiff_t dwGlowManager = 0x1809768;
-    constexpr std::ptrdiff_t dwInterfaceLinkList = 0x1905DA8;
-    constexpr std::ptrdiff_t dwLocalPlayerController = 0x17FCDC8;
-    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x16B9388;
-    constexpr std::ptrdiff_t dwPlantedC4 = 0x1810CD8;
-    constexpr std::ptrdiff_t dwPrediction = 0x16B9250;
-    constexpr std::ptrdiff_t dwSensitivity = 0x180ACF8;
+    constexpr std::ptrdiff_t dwGameRules = 0x180C9A0;
+    constexpr std::ptrdiff_t dwGlobalVars = 0x16B14F0;
+    constexpr std::ptrdiff_t dwGlowManager = 0x180C9C8;
+    constexpr std::ptrdiff_t dwInterfaceLinkList = 0x190A068;
+    constexpr std::ptrdiff_t dwLocalPlayerController = 0x1800008;
+    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x16BC4B8;
+    constexpr std::ptrdiff_t dwPlantedC4 = 0x1813F68;
+    constexpr std::ptrdiff_t dwPrediction = 0x16BC380;
+    constexpr std::ptrdiff_t dwSensitivity = 0x180DF58;
     constexpr std::ptrdiff_t dwSensitivity_sensitivity = 0x40;
-    constexpr std::ptrdiff_t dwViewAngles = 0x186BF18;
-    constexpr std::ptrdiff_t dwViewMatrix = 0x180C100;
-    constexpr std::ptrdiff_t dwViewRender = 0x180C958;
+    constexpr std::ptrdiff_t dwViewAngles = 0x186F198;
+    constexpr std::ptrdiff_t dwViewMatrix = 0x180F330;
+    constexpr std::ptrdiff_t dwViewRender = 0x180FBB0;
 }
 
 namespace engine2_dll { // engine2.dll
-    constexpr std::ptrdiff_t dwBuildNumber = 0x48B524;
-    constexpr std::ptrdiff_t dwNetworkGameClient = 0x48AAC0;
+    constexpr std::ptrdiff_t dwBuildNumber = 0x48A514;
+    constexpr std::ptrdiff_t dwNetworkGameClient = 0x489AC0;
     constexpr std::ptrdiff_t dwNetworkGameClient_getLocalPlayer = 0xF0;
     constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x250;
     constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x240;
-    constexpr std::ptrdiff_t dwWindowHeight = 0x541E1C;
-    constexpr std::ptrdiff_t dwWindowWidth = 0x541E18;
+    constexpr std::ptrdiff_t dwWindowHeight = 0x540CE4;
+    constexpr std::ptrdiff_t dwWindowWidth = 0x540CE0;
 }
 
 namespace inputsystem_dll { // inputsystem.dll
-    constexpr std::ptrdiff_t dwInputSystem = 0x35770;
+    constexpr std::ptrdiff_t dwInputSystem = 0x35760;
 }

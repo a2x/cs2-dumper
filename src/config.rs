@@ -4,23 +4,21 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum Operation {
-    /// Represents an "add" operation with a given value.
+    /// Represents an `add` operation.
     ///
     /// `value` is the value to add.
     Add { value: usize },
 
-    /// Represents a "dereference" operation with optional parameters for the number of times to dereference
-    /// and the size of the resulting value.
+    /// Represents a `dereference` operation.
     ///
     /// `times` is the number of times to dereference the address. If `None`, the number of times will be `1`.
     /// `size` is the size of the resulting value. If `None`, the size will be `8`.
-    Dereference {
+    Deref {
         times: Option<usize>,
         size: Option<usize>,
     },
 
-    /// Represents an operation to resolve the absolute address of a relative "jmp" with an optional
-    /// offset and length.
+    /// Represents an operation to resolve the absolute address of a relative call.
     ///
     /// `offset` is the offset of the displacement value. If `None`, the offset will be `0x1`.
     /// `length` is the length of the instruction. If `None`, the length will be `0x5`.
@@ -29,8 +27,7 @@ pub enum Operation {
         length: Option<usize>,
     },
 
-    /// Represents an operation to resolve the absolute address of a RIP-relative address with an optional
-    /// offset and length.
+    /// Represents an operation to resolve the absolute address of a RIP-relative address.
     ///
     /// `offset` is the offset of the displacement value. If `None`, the offset will be `0x3`.
     /// `length` is the length of the instruction. If `None`, the length will be `0x7`.
@@ -39,19 +36,19 @@ pub enum Operation {
         length: Option<usize>,
     },
 
-    /// Represents a "slice" operation with a start and end index.
+    /// Represents a `slice` operation.
     ///
     /// `start` is the start index of the slice.
     /// `end` is the end index of the slice.
     Slice { start: usize, end: usize },
 
-    /// Represents a "subtract" operation with a given value.
+    /// Represents a `subtract` operation.
     ///
     /// `value` is the value to subtract.
-    Subtract { value: usize },
+    Sub { value: usize },
 }
 
-/// Represents a signature for a specific module.
+/// Represents a signature in the `config.json` file.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Signature {
     /// The name of the signature.
@@ -63,12 +60,13 @@ pub struct Signature {
     /// The pattern of the signature.
     pub pattern: String,
 
-    /// The list of operations to perform on the signature.
+    /// The list of operations to perform on the target address.
     pub operations: Vec<Operation>,
 }
 
-/// Configuration struct that holds a vector of `Signature` structs.
+/// Represents the `config.json` file.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Config {
+    /// The list of signatures defined in the `config.json` file.
     pub signatures: Vec<Signature>,
 }
