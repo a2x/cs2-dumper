@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 17 Nov 2023 02:25:39 +0000
+ * Fri, 17 Nov 2023 03:37:55 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -9,12 +9,12 @@ public static class animationsystem_dll { // animationsystem.dll
 }
 
 public static class client_dll { // client.dll
-    public const nint LegacyGameUI001 = 0x89C480;
-    public const nint Source2ClientUI001 = 0x88B190;
-    public const nint Source2ClientPrediction001 = 0x7A34C0;
-    public const nint ClientToolsInfo_001 = 0x72F320;
-    public const nint Source2Client002 = 0x72F340;
-    public const nint GameClientExports001 = 0x72F330;
+    public const nint LegacyGameUI001 = 0x89C470;
+    public const nint Source2ClientUI001 = 0x88B180;
+    public const nint Source2ClientPrediction001 = 0x7A34B0;
+    public const nint ClientToolsInfo_001 = 0x72F310;
+    public const nint Source2Client002 = 0x72F330;
+    public const nint GameClientExports001 = 0x72F320;
     public const nint EmptyWorldService001_Client = 0x48F9D0;
     public const nint Source2ClientConfig001 = 0x476910;
 }
@@ -157,15 +157,15 @@ public static class schemasystem_dll { // schemasystem.dll
 }
 
 public static class server_dll { // server.dll
-    public const nint NavGameTest001 = 0xA3A230;
-    public const nint ServerToolsInfo_001 = 0x83D030;
-    public const nint Source2GameClients001 = 0x83D040;
-    public const nint Source2GameEntities001 = 0x83D050;
-    public const nint Source2Server001 = 0x83D060;
-    public const nint EmptyWorldService001_Server = 0x591890;
-    public const nint Source2ServerConfig001 = 0x5717C0;
-    public const nint EntitySubclassUtilsV001 = 0x2D0800;
-    public const nint customnavsystem001 = 0x24D580;
+    public const nint NavGameTest001 = 0xA3A580;
+    public const nint ServerToolsInfo_001 = 0x83D380;
+    public const nint Source2GameClients001 = 0x83D390;
+    public const nint Source2GameEntities001 = 0x83D3A0;
+    public const nint Source2Server001 = 0x83D3B0;
+    public const nint EmptyWorldService001_Server = 0x591900;
+    public const nint Source2ServerConfig001 = 0x571830;
+    public const nint EntitySubclassUtilsV001 = 0x2D0870;
+    public const nint customnavsystem001 = 0x24D5F0;
     public const nint Source2GameDirector001 = 0x1453B0;
 }
 

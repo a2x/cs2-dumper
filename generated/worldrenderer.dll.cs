@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 17 Nov 2023 02:25:38 +0000
+ * Fri, 17 Nov 2023 03:37:54 +0000
  */
 
 public static class AggregateLODSetup_t {

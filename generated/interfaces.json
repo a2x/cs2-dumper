@@ -15,7 +15,7 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7533344,
+        "value": 7533328,
         "comment": null
       },
       "EmptyWorldService001_Client": {
@@ -23,15 +23,15 @@
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7533360,
+        "value": 7533344,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9028736,
+        "value": 9028720,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7533376,
+        "value": 7533360,
         "comment": null
       },
       "Source2ClientConfig001": {
@@ -39,11 +39,11 @@
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8008896,
+        "value": 8008880,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8958352,
+        "value": 8958336,
         "comment": null
       }
     },
@@ -453,23 +453,23 @@
   "server_dll": {
     "data": {
       "EmptyWorldService001_Server": {
-        "value": 5838992,
+        "value": 5839104,
         "comment": null
       },
       "EntitySubclassUtilsV001": {
-        "value": 2951168,
+        "value": 2951280,
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10723888,
+        "value": 10724736,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8638512,
+        "value": 8639360,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8638528,
+        "value": 8639376,
         "comment": null
       },
       "Source2GameDirector001": {
@@ -477,19 +477,19 @@
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8638544,
+        "value": 8639392,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8638560,
+        "value": 8639408,
         "comment": null
       },
       "Source2ServerConfig001": {
-        "value": 5707712,
+        "value": 5707824,
         "comment": null
       },
       "customnavsystem001": {
-        "value": 2413952,
+        "value": 2414064,
         "comment": null
       }
     },
