@@ -48,7 +48,7 @@ pub enum Operation {
     Sub { value: usize },
 }
 
-/// Represents a signature in the `config.json` file.
+/// Represents a signature specified in the `config.json` file.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Signature {
     /// The name of the signature.
@@ -67,6 +67,6 @@ pub struct Signature {
 /// Represents the `config.json` file.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Config {
-    /// The list of signatures defined in the `config.json` file.
+    /// The list of signatures specified in the `config.json` file.
     pub signatures: Vec<Signature>,
 }

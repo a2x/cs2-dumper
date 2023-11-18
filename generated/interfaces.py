@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 17 Nov 2023 03:37:55 +0000
+Sat, 18 Nov 2023 01:51:41 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,12 +8,12 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x89C470
-    Source2ClientUI001 = 0x88B180
-    Source2ClientPrediction001 = 0x7A34B0
-    ClientToolsInfo_001 = 0x72F310
-    Source2Client002 = 0x72F330
-    GameClientExports001 = 0x72F320
+    LegacyGameUI001 = 0x89C4D0
+    Source2ClientUI001 = 0x88B1E0
+    Source2ClientPrediction001 = 0x7A3500
+    ClientToolsInfo_001 = 0x72F2F0
+    Source2Client002 = 0x72F310
+    GameClientExports001 = 0x72F300
     EmptyWorldService001_Client = 0x48F9D0
     Source2ClientConfig001 = 0x476910
 
@@ -134,16 +134,16 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA3A580
-    ServerToolsInfo_001 = 0x83D380
-    Source2GameClients001 = 0x83D390
-    Source2GameEntities001 = 0x83D3A0
-    Source2Server001 = 0x83D3B0
-    EmptyWorldService001_Server = 0x591900
-    Source2ServerConfig001 = 0x571830
-    EntitySubclassUtilsV001 = 0x2D0870
-    customnavsystem001 = 0x24D5F0
-    Source2GameDirector001 = 0x1453B0
+    NavGameTest001 = 0xA3A620
+    ServerToolsInfo_001 = 0x83D420
+    Source2GameClients001 = 0x83D430
+    Source2GameEntities001 = 0x83D440
+    Source2Server001 = 0x83D450
+    EmptyWorldService001_Server = 0x591920
+    Source2ServerConfig001 = 0x571850
+    EntitySubclassUtilsV001 = 0x2D0890
+    customnavsystem001 = 0x24D610
+    Source2GameDirector001 = 0x1453D0
 
 class soundsystem_dll: # soundsystem.dll
     SoundOpSystem001 = 0x1567E0
@@ -155,25 +155,26 @@ class steamaudio_dll: # steamaudio.dll
     SteamAudio001 = 0x12EE0
 
 class steamclient64_dll: # steamclient64.dll
-    IVALIDATE001 = 0x83A900
-    CLIENTENGINE_INTERFACE_VERSION005 = 0x8367B0
-    SteamClient020 = 0x631440
-    SteamClient019 = 0x631430
-    SteamClient018 = 0x631420
-    SteamClient017 = 0x631410
-    SteamClient016 = 0x631400
-    SteamClient015 = 0x6313F0
-    SteamClient014 = 0x6313E0
-    SteamClient013 = 0x6313D0
-    SteamClient012 = 0x6313C0
-    SteamClient011 = 0x6313B0
-    SteamClient010 = 0x6313A0
-    SteamClient009 = 0x631390
-    SteamClient008 = 0x631380
-    SteamClient007 = 0x631370
-    SteamClient006 = 0x631360
-    p2pvoice002 = 0xD93D0
-    p2pvoicesingleton002 = 0xD5D70
+    IVALIDATE001 = 0x84FD80
+    CLIENTENGINE_INTERFACE_VERSION005 = 0x84BC30
+    SteamClient021 = 0x6460C0
+    SteamClient020 = 0x6460B0
+    SteamClient019 = 0x6460A0
+    SteamClient018 = 0x646090
+    SteamClient017 = 0x646080
+    SteamClient016 = 0x646070
+    SteamClient015 = 0x646060
+    SteamClient014 = 0x646050
+    SteamClient013 = 0x646040
+    SteamClient012 = 0x646030
+    SteamClient011 = 0x646020
+    SteamClient010 = 0x646010
+    SteamClient009 = 0x646000
+    SteamClient008 = 0x645FF0
+    SteamClient007 = 0x645FE0
+    SteamClient006 = 0x645FD0
+    p2pvoice002 = 0xD97D0
+    p2pvoicesingleton002 = 0xD6200
 
 class tier0_dll: # tier0.dll
     VStringTokenSystem001 = 0x18C2B0
@@ -198,8 +199,8 @@ class vscript_dll: # vscript.dll
     VScriptManager010 = 0x31DA0
 
 class vstdlib_s64_dll: # vstdlib_s64.dll
-    IVALIDATE001 = 0x24FF0
-    VEngineCvar002 = 0x5750
+    IVALIDATE001 = 0x25000
+    VEngineCvar002 = 0x5760
 
 class worldrenderer_dll: # worldrenderer.dll
     WorldRendererMgr001 = 0x21650

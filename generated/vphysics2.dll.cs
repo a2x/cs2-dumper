@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 17 Nov 2023 03:37:54 +0000
+ * Sat, 18 Nov 2023 01:51:40 +0000
  */
 
 public static class CFeIndexedJiggleBone {

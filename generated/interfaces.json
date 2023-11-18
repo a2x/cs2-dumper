@@ -15,7 +15,7 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7533328,
+        "value": 7533296,
         "comment": null
       },
       "EmptyWorldService001_Client": {
@@ -23,15 +23,15 @@
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7533344,
+        "value": 7533312,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9028720,
+        "value": 9028816,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7533360,
+        "value": 7533328,
         "comment": null
       },
       "Source2ClientConfig001": {
@@ -39,11 +39,11 @@
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8008880,
+        "value": 8008960,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8958336,
+        "value": 8958432,
         "comment": null
       }
     },
@@ -453,43 +453,43 @@
   "server_dll": {
     "data": {
       "EmptyWorldService001_Server": {
-        "value": 5839104,
+        "value": 5839136,
         "comment": null
       },
       "EntitySubclassUtilsV001": {
-        "value": 2951280,
+        "value": 2951312,
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10724736,
+        "value": 10724896,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8639360,
+        "value": 8639520,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8639376,
+        "value": 8639536,
         "comment": null
       },
       "Source2GameDirector001": {
-        "value": 1332144,
+        "value": 1332176,
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8639392,
+        "value": 8639552,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8639408,
+        "value": 8639568,
         "comment": null
       },
       "Source2ServerConfig001": {
-        "value": 5707824,
+        "value": 5707856,
         "comment": null
       },
       "customnavsystem001": {
-        "value": 2414064,
+        "value": 2414096,
         "comment": null
       }
     },
@@ -528,79 +528,83 @@
   "steamclient64_dll": {
     "data": {
       "CLIENTENGINE_INTERFACE_VERSION005": {
-        "value": 8611760,
+        "value": 8698928,
         "comment": null
       },
       "IVALIDATE001": {
-        "value": 8628480,
+        "value": 8715648,
         "comment": null
       },
       "SteamClient006": {
-        "value": 6493024,
+        "value": 6578128,
         "comment": null
       },
       "SteamClient007": {
-        "value": 6493040,
+        "value": 6578144,
         "comment": null
       },
       "SteamClient008": {
-        "value": 6493056,
+        "value": 6578160,
         "comment": null
       },
       "SteamClient009": {
-        "value": 6493072,
+        "value": 6578176,
         "comment": null
       },
       "SteamClient010": {
-        "value": 6493088,
+        "value": 6578192,
         "comment": null
       },
       "SteamClient011": {
-        "value": 6493104,
+        "value": 6578208,
         "comment": null
       },
       "SteamClient012": {
-        "value": 6493120,
+        "value": 6578224,
         "comment": null
       },
       "SteamClient013": {
-        "value": 6493136,
+        "value": 6578240,
         "comment": null
       },
       "SteamClient014": {
-        "value": 6493152,
+        "value": 6578256,
         "comment": null
       },
       "SteamClient015": {
-        "value": 6493168,
+        "value": 6578272,
         "comment": null
       },
       "SteamClient016": {
-        "value": 6493184,
+        "value": 6578288,
         "comment": null
       },
       "SteamClient017": {
-        "value": 6493200,
+        "value": 6578304,
         "comment": null
       },
       "SteamClient018": {
-        "value": 6493216,
+        "value": 6578320,
         "comment": null
       },
       "SteamClient019": {
-        "value": 6493232,
+        "value": 6578336,
         "comment": null
       },
       "SteamClient020": {
-        "value": 6493248,
+        "value": 6578352,
+        "comment": null
+      },
+      "SteamClient021": {
+        "value": 6578368,
         "comment": null
       },
       "p2pvoice002": {
-        "value": 889808,
+        "value": 890832,
         "comment": null
       },
       "p2pvoicesingleton002": {
-        "value": 875888,
+        "value": 877056,
         "comment": null
       }
     },
@@ -679,11 +683,11 @@
   "vstdlib_s64_dll": {
     "data": {
       "IVALIDATE001": {
-        "value": 151536,
+        "value": 151552,
         "comment": null
       },
       "VEngineCvar002": {
-        "value": 22352,
+        "value": 22368,
         "comment": null
       }
     },

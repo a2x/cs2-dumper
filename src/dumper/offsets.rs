@@ -174,14 +174,14 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let force_attack = process.read_memory::<u32>(client_base + 0x16B5410)?; // dwForceAttack
-        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B54A0)?; // dwForceAttack2
-        let force_backward = process.read_memory::<u32>(client_base + 0x16B56E0)?; // dwForceBackward
-        let force_crouch = process.read_memory::<u32>(client_base + 0x16B59B0)?; // dwForceCrouch
-        let force_forward = process.read_memory::<u32>(client_base + 0x16B5650)?; // dwForceForward
-        let force_jump = process.read_memory::<u32>(client_base + 0x16B5920)?; // dwForceJump
-        let force_left = process.read_memory::<u32>(client_base + 0x16B5770)?; // dwForceLeft
-        let force_right = process.read_memory::<u32>(client_base + 0x16B5800)?; // dwForceRight
+        let force_attack = process.read_memory::<u32>(client_base + 0x16B5400)?; // dwForceAttack
+        let force_attack_2 = process.read_memory::<u32>(client_base + 0x16B5490)?; // dwForceAttack2
+        let force_backward = process.read_memory::<u32>(client_base + 0x16B56D0)?; // dwForceBackward
+        let force_crouch = process.read_memory::<u32>(client_base + 0x16B59A0)?; // dwForceCrouch
+        let force_forward = process.read_memory::<u32>(client_base + 0x16B5640)?; // dwForceForward
+        let force_jump = process.read_memory::<u32>(client_base + 0x16B5910)?; // dwForceJump
+        let force_left = process.read_memory::<u32>(client_base + 0x16B5760)?; // dwForceLeft
+        let force_right = process.read_memory::<u32>(client_base + 0x16B57F0)?; // dwForceRight
 
         let get_key_state = |value: u32| -> &str {
             match value {
@@ -251,7 +251,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16B14F0)?; // dwGlobalVars
+        let global_vars = process.read_memory::<*const GlobalVarsBase>(client_base + 0x16B14E0)?; // dwGlobalVars
 
         let current_map_name = unsafe {
             (*global_vars)
@@ -318,7 +318,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16BC4B8)?; // dwLocalPlayerPawn
+        let local_player_pawn = process.read_memory::<usize>(client_base + 0x16BC4A8)?; // dwLocalPlayerPawn
 
         let game_scene_node = process.read_memory::<usize>((local_player_pawn + 0x310).into())?; // m_pGameSceneNode
 
