@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 18 Nov 2023 01:51:40 +0000
+ * Tue, 21 Nov 2023 00:47:41 +0000
  */
 
 public static class CEmptyEntityInstance {
@@ -171,6 +171,11 @@ public static class EventClientSimulate_t { // EventSimulate_t
 
 public static class EventFrameBoundary_t {
     public const nint m_flFrameTime = 0x0; // float
+}
+
+public static class EventHostTimescaleChanged_t {
+    public const nint m_flOldValue = 0x0; // float
+    public const nint m_flNewValue = 0x4; // float
 }
 
 public static class EventModInitialized_t {

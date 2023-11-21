@@ -428,6 +428,19 @@
     },
     "comment": null
   },
+  "EventHostTimescaleChanged_t": {
+    "data": {
+      "m_flNewValue": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flOldValue": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
   "EventModInitialized_t": {
     "data": {},
     "comment": null

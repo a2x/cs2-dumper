@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 18 Nov 2023 01:51:40 +0000
+ * Tue, 21 Nov 2023 00:47:41 +0000
  */
 
 public static class CBasePulseGraphInstance {
