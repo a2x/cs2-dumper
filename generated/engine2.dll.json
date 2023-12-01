@@ -385,6 +385,14 @@
       "m_flRealTime": {
         "value": 40,
         "comment": "float"
+      },
+      "m_flTickInterval": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flTickStartTime": {
+        "value": 48,
+        "comment": "double"
       }
     },
     "comment": null
@@ -422,19 +430,6 @@
   "EventFrameBoundary_t": {
     "data": {
       "m_flFrameTime": {
-        "value": 0,
-        "comment": "float"
-      }
-    },
-    "comment": null
-  },
-  "EventHostTimescaleChanged_t": {
-    "data": {
-      "m_flNewValue": {
-        "value": 4,
-        "comment": "float"
-      },
-      "m_flOldValue": {
         "value": 0,
         "comment": "float"
       }

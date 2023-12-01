@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 21 Nov 2023 00:47:43 +0000
+ * Fri, 1 Dec 2023 04:38:02 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1308,16 +1308,18 @@ pub mod C_BaseButton { // C_BaseToggle
 }
 
 pub mod C_BaseCSGrenade { // C_CSWeaponBase
-    pub const m_bClientPredictDelete: usize = 0x19F0; // bool
-    pub const m_bRedraw: usize = 0x19F1; // bool
-    pub const m_bIsHeldByPlayer: usize = 0x19F2; // bool
-    pub const m_bPinPulled: usize = 0x19F3; // bool
-    pub const m_bJumpThrow: usize = 0x19F4; // bool
-    pub const m_eThrowStatus: usize = 0x19F8; // EGrenadeThrowState
-    pub const m_fThrowTime: usize = 0x19FC; // GameTime_t
-    pub const m_flThrowStrength: usize = 0x1A00; // float
-    pub const m_flThrowStrengthApproach: usize = 0x1A04; // float
-    pub const m_fDropTime: usize = 0x1A08; // GameTime_t
+    pub const m_bClientPredictDelete: usize = 0x1A00; // bool
+    pub const m_bRedraw: usize = 0x1A01; // bool
+    pub const m_bIsHeldByPlayer: usize = 0x1A02; // bool
+    pub const m_bPinPulled: usize = 0x1A03; // bool
+    pub const m_bJumpThrow: usize = 0x1A04; // bool
+    pub const m_eThrowStatus: usize = 0x1A08; // EGrenadeThrowState
+    pub const m_fThrowTime: usize = 0x1A0C; // GameTime_t
+    pub const m_flThrowStrength: usize = 0x1A10; // float
+    pub const m_flThrowStrengthApproach: usize = 0x1A14; // float
+    pub const m_fDropTime: usize = 0x1A18; // GameTime_t
+    pub const m_nNextHoldTick: usize = 0x1A1C; // GameTick_t
+    pub const m_flNextHoldFrac: usize = 0x1A20; // float
 }
 
 pub mod C_BaseCSGrenadeProjectile { // C_BaseGrenade
@@ -1680,18 +1682,18 @@ pub mod C_BulletHitModel { // CBaseAnimGraph
 }
 
 pub mod C_C4 { // C_CSWeaponBase
-    pub const m_szScreenText: usize = 0x19F0; // char[32]
-    pub const m_activeLightParticleIndex: usize = 0x1A10; // ParticleIndex_t
-    pub const m_eActiveLightEffect: usize = 0x1A14; // C4LightEffect_t
-    pub const m_bStartedArming: usize = 0x1A18; // bool
-    pub const m_fArmedTime: usize = 0x1A1C; // GameTime_t
-    pub const m_bBombPlacedAnimation: usize = 0x1A20; // bool
-    pub const m_bIsPlantingViaUse: usize = 0x1A21; // bool
-    pub const m_entitySpottedState: usize = 0x1A28; // EntitySpottedState_t
-    pub const m_nSpotRules: usize = 0x1A40; // int32_t
-    pub const m_bPlayedArmingBeeps: usize = 0x1A44; // bool[7]
-    pub const m_bBombPlanted: usize = 0x1A4B; // bool
-    pub const m_bDroppedFromDeath: usize = 0x1A4C; // bool
+    pub const m_szScreenText: usize = 0x1A00; // char[32]
+    pub const m_activeLightParticleIndex: usize = 0x1A20; // ParticleIndex_t
+    pub const m_eActiveLightEffect: usize = 0x1A24; // C4LightEffect_t
+    pub const m_bStartedArming: usize = 0x1A28; // bool
+    pub const m_fArmedTime: usize = 0x1A2C; // GameTime_t
+    pub const m_bBombPlacedAnimation: usize = 0x1A30; // bool
+    pub const m_bIsPlantingViaUse: usize = 0x1A31; // bool
+    pub const m_entitySpottedState: usize = 0x1A38; // EntitySpottedState_t
+    pub const m_nSpotRules: usize = 0x1A50; // int32_t
+    pub const m_bPlayedArmingBeeps: usize = 0x1A54; // bool[7]
+    pub const m_bBombPlanted: usize = 0x1A5B; // bool
+    pub const m_bDroppedFromDeath: usize = 0x1A5C; // bool
 }
 
 pub mod C_CSGOViewModel { // C_PredictedViewModel
@@ -1760,9 +1762,9 @@ pub mod C_CSGO_PreviewModelAlias_csgo_item_previewmodel { // C_CSGO_PreviewModel
 }
 
 pub mod C_CSGO_PreviewPlayer { // C_CSPlayerPawn
-    pub const m_animgraph: usize = 0x22E8; // CUtlString
-    pub const m_animgraphCharacterModeString: usize = 0x22F0; // CUtlString
-    pub const m_flInitialModelScale: usize = 0x22F8; // float
+    pub const m_animgraph: usize = 0x23A0; // CUtlString
+    pub const m_animgraphCharacterModeString: usize = 0x23A8; // CUtlString
+    pub const m_flInitialModelScale: usize = 0x23B0; // float
 }
 
 pub mod C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel { // C_CSGO_PreviewPlayer
@@ -1981,11 +1983,11 @@ pub mod C_CSPlayerPawn { // C_CSPlayerPawnBase
     pub const m_szRagdollDamageWeaponName: usize = 0x1D20; // char[64]
     pub const m_bRagdollDamageHeadshot: usize = 0x1D60; // bool
     pub const m_vRagdollServerOrigin: usize = 0x1D64; // Vector
-    pub const m_bLastHeadBoneTransformIsValid: usize = 0x22B0; // bool
-    pub const m_lastLandTime: usize = 0x22B4; // GameTime_t
-    pub const m_bOnGroundLastTick: usize = 0x22B8; // bool
-    pub const m_qDeathEyeAngles: usize = 0x22D4; // QAngle
-    pub const m_bSkipOneHeadConstraintUpdate: usize = 0x22E0; // bool
+    pub const m_bLastHeadBoneTransformIsValid: usize = 0x2368; // bool
+    pub const m_lastLandTime: usize = 0x236C; // GameTime_t
+    pub const m_bOnGroundLastTick: usize = 0x2370; // bool
+    pub const m_qDeathEyeAngles: usize = 0x238C; // QAngle
+    pub const m_bSkipOneHeadConstraintUpdate: usize = 0x2398; // bool
 }
 
 pub mod C_CSPlayerPawnBase { // C_BasePlayerPawn
@@ -2161,78 +2163,80 @@ pub mod C_CSWeaponBase { // C_BasePlayerWeapon
     pub const m_flFireSequenceStartTime: usize = 0x15D4; // float
     pub const m_nFireSequenceStartTimeChange: usize = 0x15D8; // int32_t
     pub const m_nFireSequenceStartTimeAck: usize = 0x15DC; // int32_t
-    pub const m_bPlayerFireEventIsPrimary: usize = 0x15E0; // bool
-    pub const m_seqIdle: usize = 0x15E4; // HSequence
-    pub const m_seqFirePrimary: usize = 0x15E8; // HSequence
-    pub const m_seqFireSecondary: usize = 0x15EC; // HSequence
-    pub const m_thirdPersonFireSequences: usize = 0x15F0; // CUtlVector<HSequence>
-    pub const m_hCurrentThirdPersonSequence: usize = 0x1608; // HSequence
-    pub const m_nSilencerBoneIndex: usize = 0x160C; // int32_t
-    pub const m_thirdPersonSequences: usize = 0x1610; // HSequence[6]
-    pub const m_ClientPreviousWeaponState: usize = 0x1640; // CSWeaponState_t
-    pub const m_iState: usize = 0x1644; // CSWeaponState_t
-    pub const m_flCrosshairDistance: usize = 0x1648; // float
-    pub const m_iAmmoLastCheck: usize = 0x164C; // int32_t
-    pub const m_iAlpha: usize = 0x1650; // int32_t
-    pub const m_iScopeTextureID: usize = 0x1654; // int32_t
-    pub const m_iCrosshairTextureID: usize = 0x1658; // int32_t
-    pub const m_flGunAccuracyPosition: usize = 0x165C; // float
-    pub const m_nViewModelIndex: usize = 0x1660; // uint32_t
-    pub const m_bReloadsWithClips: usize = 0x1664; // bool
-    pub const m_flTimeWeaponIdle: usize = 0x1668; // GameTime_t
-    pub const m_bFireOnEmpty: usize = 0x166C; // bool
-    pub const m_OnPlayerPickup: usize = 0x1670; // CEntityIOOutput
-    pub const m_weaponMode: usize = 0x1698; // CSWeaponMode
-    pub const m_flTurningInaccuracyDelta: usize = 0x169C; // float
-    pub const m_vecTurningInaccuracyEyeDirLast: usize = 0x16A0; // Vector
-    pub const m_flTurningInaccuracy: usize = 0x16AC; // float
-    pub const m_fAccuracyPenalty: usize = 0x16B0; // float
-    pub const m_flLastAccuracyUpdateTime: usize = 0x16B4; // GameTime_t
-    pub const m_fAccuracySmoothedForZoom: usize = 0x16B8; // float
-    pub const m_fScopeZoomEndTime: usize = 0x16BC; // GameTime_t
-    pub const m_iRecoilIndex: usize = 0x16C0; // int32_t
-    pub const m_flRecoilIndex: usize = 0x16C4; // float
-    pub const m_bBurstMode: usize = 0x16C8; // bool
-    pub const m_flPostponeFireReadyTime: usize = 0x16CC; // GameTime_t
-    pub const m_bInReload: usize = 0x16D0; // bool
-    pub const m_bReloadVisuallyComplete: usize = 0x16D1; // bool
-    pub const m_flDroppedAtTime: usize = 0x16D4; // GameTime_t
-    pub const m_bIsHauledBack: usize = 0x16D8; // bool
-    pub const m_bSilencerOn: usize = 0x16D9; // bool
-    pub const m_flTimeSilencerSwitchComplete: usize = 0x16DC; // GameTime_t
-    pub const m_iOriginalTeamNumber: usize = 0x16E0; // int32_t
-    pub const m_flNextAttackRenderTimeOffset: usize = 0x16E4; // float
-    pub const m_bVisualsDataSet: usize = 0x1768; // bool
-    pub const m_bOldFirstPersonSpectatedState: usize = 0x1769; // bool
-    pub const m_hOurPing: usize = 0x176C; // CHandle<C_BaseEntity>
-    pub const m_nOurPingIndex: usize = 0x1770; // CEntityIndex
-    pub const m_vecOurPingPos: usize = 0x1774; // Vector
-    pub const m_bGlowForPing: usize = 0x1780; // bool
-    pub const m_bUIWeapon: usize = 0x1781; // bool
-    pub const m_hPrevOwner: usize = 0x1790; // CHandle<C_CSPlayerPawn>
-    pub const m_nDropTick: usize = 0x1794; // GameTick_t
-    pub const m_donated: usize = 0x17B4; // bool
-    pub const m_fLastShotTime: usize = 0x17B8; // GameTime_t
-    pub const m_bWasOwnedByCT: usize = 0x17BC; // bool
-    pub const m_bWasOwnedByTerrorist: usize = 0x17BD; // bool
-    pub const m_gunHeat: usize = 0x17C0; // float
-    pub const m_smokeAttachments: usize = 0x17C4; // uint32_t
-    pub const m_lastSmokeTime: usize = 0x17C8; // GameTime_t
-    pub const m_flNextClientFireBulletTime: usize = 0x17CC; // float
-    pub const m_flNextClientFireBulletTime_Repredict: usize = 0x17D0; // float
-    pub const m_IronSightController: usize = 0x18B0; // C_IronSightController
-    pub const m_iIronSightMode: usize = 0x1960; // int32_t
-    pub const m_flLastLOSTraceFailureTime: usize = 0x1970; // GameTime_t
-    pub const m_iNumEmptyAttacks: usize = 0x1974; // int32_t
+    pub const m_ePlayerFireEvent: usize = 0x15E0; // PlayerAnimEvent_t
+    pub const m_ePlayerFireEventAttackType: usize = 0x15E4; // WeaponAttackType_t
+    pub const m_seqIdle: usize = 0x15E8; // HSequence
+    pub const m_seqFirePrimary: usize = 0x15EC; // HSequence
+    pub const m_seqFireSecondary: usize = 0x15F0; // HSequence
+    pub const m_thirdPersonFireSequences: usize = 0x15F8; // CUtlVector<HSequence>
+    pub const m_hCurrentThirdPersonSequence: usize = 0x1610; // HSequence
+    pub const m_nSilencerBoneIndex: usize = 0x1614; // int32_t
+    pub const m_thirdPersonSequences: usize = 0x1618; // HSequence[6]
+    pub const m_ClientPreviousWeaponState: usize = 0x1648; // CSWeaponState_t
+    pub const m_iState: usize = 0x164C; // CSWeaponState_t
+    pub const m_flCrosshairDistance: usize = 0x1650; // float
+    pub const m_iAmmoLastCheck: usize = 0x1654; // int32_t
+    pub const m_iAlpha: usize = 0x1658; // int32_t
+    pub const m_iScopeTextureID: usize = 0x165C; // int32_t
+    pub const m_iCrosshairTextureID: usize = 0x1660; // int32_t
+    pub const m_flGunAccuracyPosition: usize = 0x1664; // float
+    pub const m_nViewModelIndex: usize = 0x1668; // uint32_t
+    pub const m_bReloadsWithClips: usize = 0x166C; // bool
+    pub const m_flTimeWeaponIdle: usize = 0x1670; // GameTime_t
+    pub const m_bFireOnEmpty: usize = 0x1674; // bool
+    pub const m_OnPlayerPickup: usize = 0x1678; // CEntityIOOutput
+    pub const m_weaponMode: usize = 0x16A0; // CSWeaponMode
+    pub const m_flTurningInaccuracyDelta: usize = 0x16A4; // float
+    pub const m_vecTurningInaccuracyEyeDirLast: usize = 0x16A8; // Vector
+    pub const m_flTurningInaccuracy: usize = 0x16B4; // float
+    pub const m_fAccuracyPenalty: usize = 0x16B8; // float
+    pub const m_flLastAccuracyUpdateTime: usize = 0x16BC; // GameTime_t
+    pub const m_fAccuracySmoothedForZoom: usize = 0x16C0; // float
+    pub const m_fScopeZoomEndTime: usize = 0x16C4; // GameTime_t
+    pub const m_iRecoilIndex: usize = 0x16C8; // int32_t
+    pub const m_flRecoilIndex: usize = 0x16CC; // float
+    pub const m_bBurstMode: usize = 0x16D0; // bool
+    pub const m_nPostponeFireReadyTicks: usize = 0x16D4; // GameTick_t
+    pub const m_flPostponeFireReadyFrac: usize = 0x16D8; // float
+    pub const m_bInReload: usize = 0x16DC; // bool
+    pub const m_bReloadVisuallyComplete: usize = 0x16DD; // bool
+    pub const m_flDroppedAtTime: usize = 0x16E0; // GameTime_t
+    pub const m_bIsHauledBack: usize = 0x16E4; // bool
+    pub const m_bSilencerOn: usize = 0x16E5; // bool
+    pub const m_flTimeSilencerSwitchComplete: usize = 0x16E8; // GameTime_t
+    pub const m_iOriginalTeamNumber: usize = 0x16EC; // int32_t
+    pub const m_flNextAttackRenderTimeOffset: usize = 0x16F0; // float
+    pub const m_bVisualsDataSet: usize = 0x1778; // bool
+    pub const m_bOldFirstPersonSpectatedState: usize = 0x1779; // bool
+    pub const m_hOurPing: usize = 0x177C; // CHandle<C_BaseEntity>
+    pub const m_nOurPingIndex: usize = 0x1780; // CEntityIndex
+    pub const m_vecOurPingPos: usize = 0x1784; // Vector
+    pub const m_bGlowForPing: usize = 0x1790; // bool
+    pub const m_bUIWeapon: usize = 0x1791; // bool
+    pub const m_hPrevOwner: usize = 0x17A0; // CHandle<C_CSPlayerPawn>
+    pub const m_nDropTick: usize = 0x17A4; // GameTick_t
+    pub const m_donated: usize = 0x17C4; // bool
+    pub const m_fLastShotTime: usize = 0x17C8; // GameTime_t
+    pub const m_bWasOwnedByCT: usize = 0x17CC; // bool
+    pub const m_bWasOwnedByTerrorist: usize = 0x17CD; // bool
+    pub const m_gunHeat: usize = 0x17D0; // float
+    pub const m_smokeAttachments: usize = 0x17D4; // uint32_t
+    pub const m_lastSmokeTime: usize = 0x17D8; // GameTime_t
+    pub const m_flNextClientFireBulletTime: usize = 0x17DC; // float
+    pub const m_flNextClientFireBulletTime_Repredict: usize = 0x17E0; // float
+    pub const m_IronSightController: usize = 0x18C0; // C_IronSightController
+    pub const m_iIronSightMode: usize = 0x1970; // int32_t
+    pub const m_flLastLOSTraceFailureTime: usize = 0x1980; // GameTime_t
+    pub const m_iNumEmptyAttacks: usize = 0x1984; // int32_t
 }
 
 pub mod C_CSWeaponBaseGun { // C_CSWeaponBase
-    pub const m_zoomLevel: usize = 0x19F0; // int32_t
-    pub const m_iBurstShotsRemaining: usize = 0x19F4; // int32_t
-    pub const m_iSilencerBodygroup: usize = 0x19F8; // int32_t
-    pub const m_silencedModelIndex: usize = 0x1A08; // int32_t
-    pub const m_inPrecache: usize = 0x1A0C; // bool
-    pub const m_bNeedsBoltAction: usize = 0x1A0D; // bool
+    pub const m_zoomLevel: usize = 0x1A00; // int32_t
+    pub const m_iBurstShotsRemaining: usize = 0x1A04; // int32_t
+    pub const m_iSilencerBodygroup: usize = 0x1A08; // int32_t
+    pub const m_silencedModelIndex: usize = 0x1A18; // int32_t
+    pub const m_inPrecache: usize = 0x1A1C; // bool
+    pub const m_bNeedsBoltAction: usize = 0x1A1D; // bool
 }
 
 pub mod C_Chicken { // C_DynamicProp
@@ -2741,8 +2745,8 @@ pub mod C_Fish { // CBaseAnimGraph
 }
 
 pub mod C_Fists { // C_CSWeaponBase
-    pub const m_bPlayingUninterruptableAct: usize = 0x19F0; // bool
-    pub const m_nUninterruptableActivity: usize = 0x19F4; // PlayerAnimEvent_t
+    pub const m_bPlayingUninterruptableAct: usize = 0x1A00; // bool
+    pub const m_nUninterruptableActivity: usize = 0x1A04; // PlayerAnimEvent_t
 }
 
 pub mod C_Flashbang { // C_BaseCSGrenade
@@ -3044,7 +3048,6 @@ pub mod C_MapVetoPickController { // C_BaseEntity
 }
 
 pub mod C_Melee { // C_CSWeaponBase
-    pub const m_flThrowAt: usize = 0x19F0; // GameTime_t
 }
 
 pub mod C_ModelPointEntity { // C_BaseModelEntity
@@ -3766,8 +3769,8 @@ pub mod C_WeaponAug { // C_CSWeaponBaseGun
 }
 
 pub mod C_WeaponBaseItem { // C_CSWeaponBase
-    pub const m_SequenceCompleteTimer: usize = 0x19F0; // CountdownTimer
-    pub const m_bRedraw: usize = 0x1A08; // bool
+    pub const m_SequenceCompleteTimer: usize = 0x1A00; // CountdownTimer
+    pub const m_bRedraw: usize = 0x1A18; // bool
 }
 
 pub mod C_WeaponBizon { // C_CSWeaponBaseGun
@@ -3849,11 +3852,11 @@ pub mod C_WeaponSawedoff { // C_CSWeaponBase
 }
 
 pub mod C_WeaponShield { // C_CSWeaponBaseGun
-    pub const m_flDisplayHealth: usize = 0x1A10; // float
+    pub const m_flDisplayHealth: usize = 0x1A20; // float
 }
 
 pub mod C_WeaponTaser { // C_CSWeaponBaseGun
-    pub const m_fFireTime: usize = 0x1A10; // GameTime_t
+    pub const m_fFireTime: usize = 0x1A20; // GameTime_t
 }
 
 pub mod C_WeaponTec9 { // C_CSWeaponBaseGun

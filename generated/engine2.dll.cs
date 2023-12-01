@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 21 Nov 2023 00:47:41 +0000
+ * Fri, 1 Dec 2023 04:38:00 +0000
  */
 
 public static class CEmptyEntityInstance {
@@ -152,6 +152,8 @@ public static class EventClientProcessGameInput_t {
 public static class EventClientProcessInput_t {
     public const nint m_LoopState = 0x0; // EngineLoopState_t
     public const nint m_flRealTime = 0x28; // float
+    public const nint m_flTickInterval = 0x2C; // float
+    public const nint m_flTickStartTime = 0x30; // double
 }
 
 public static class EventClientProcessNetworking_t {
@@ -171,11 +173,6 @@ public static class EventClientSimulate_t { // EventSimulate_t
 
 public static class EventFrameBoundary_t {
     public const nint m_flFrameTime = 0x0; // float
-}
-
-public static class EventHostTimescaleChanged_t {
-    public const nint m_flOldValue = 0x0; // float
-    public const nint m_flNewValue = 0x4; // float
 }
 
 public static class EventModInitialized_t {
