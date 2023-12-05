@@ -15,7 +15,7 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7546656,
+        "value": 7547808,
         "comment": null
       },
       "EmptyWorldService001_Client": {
@@ -23,15 +23,15 @@
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7546672,
+        "value": 7547824,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9041344,
+        "value": 9042560,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7546688,
+        "value": 7547840,
         "comment": null
       },
       "Source2ClientConfig001": {
@@ -39,11 +39,11 @@
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8022384,
+        "value": 8023536,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8972288,
+        "value": 8973504,
         "comment": null
       }
     },
@@ -136,7 +136,7 @@
         "comment": null
       },
       "SimpleEngineLoopService_001": {
-        "value": 1984032,
+        "value": 1984016,
         "comment": null
       },
       "SoundService_001": {
@@ -279,23 +279,23 @@
   "materialsystem2_dll": {
     "data": {
       "FontManager_001": {
-        "value": 227584,
+        "value": 227872,
         "comment": null
       },
       "MaterialUtils_001": {
-        "value": 318352,
+        "value": 318640,
         "comment": null
       },
       "PostProcessingSystem_001": {
-        "value": 272992,
+        "value": 273280,
         "comment": null
       },
       "TextLayout_001": {
-        "value": 303840,
+        "value": 304128,
         "comment": null
       },
       "VMaterialSystem2_001": {
-        "value": 155328,
+        "value": 155584,
         "comment": null
       }
     },
@@ -392,7 +392,7 @@
         "comment": null
       },
       "RenderUtils_001": {
-        "value": 340208,
+        "value": 340224,
         "comment": null
       },
       "VRenderDeviceMgrBackdoor001": {
@@ -453,43 +453,43 @@
   "server_dll": {
     "data": {
       "EmptyWorldService001_Server": {
-        "value": 5840064,
+        "value": 5839840,
         "comment": null
       },
       "EntitySubclassUtilsV001": {
-        "value": 2951248,
+        "value": 2951088,
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10730912,
+        "value": 10732416,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8645504,
+        "value": 8647104,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8645520,
+        "value": 8647120,
         "comment": null
       },
       "Source2GameDirector001": {
-        "value": 1332768,
+        "value": 1332608,
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8645536,
+        "value": 8647136,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8645552,
+        "value": 8647152,
         "comment": null
       },
       "Source2ServerConfig001": {
-        "value": 5708784,
+        "value": 5708560,
         "comment": null
       },
       "customnavsystem001": {
-        "value": 2414720,
+        "value": 2414560,
         "comment": null
       }
     },

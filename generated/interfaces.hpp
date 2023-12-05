@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 1 Dec 2023 04:38:02 +0000
+ * Tue, 5 Dec 2023 00:38:26 +0000
  */
 
 #pragma once
@@ -13,18 +13,18 @@ namespace animationsystem_dll { // animationsystem.dll
 }
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x89F5C0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x88E800;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A6970;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x732720;
-    constexpr std::ptrdiff_t Source2Client002 = 0x732740;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x732730;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x89FA80;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x88ECC0;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A6DF0;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x732BA0;
+    constexpr std::ptrdiff_t Source2Client002 = 0x732BC0;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x732BB0;
     constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x490110;
     constexpr std::ptrdiff_t Source2ClientConfig001 = 0x477050;
 }
 
 namespace engine2_dll { // engine2.dll
-    constexpr std::ptrdiff_t SimpleEngineLoopService_001 = 0x1E4620;
+    constexpr std::ptrdiff_t SimpleEngineLoopService_001 = 0x1E4610;
     constexpr std::ptrdiff_t ClientServerEngineLoopService_001 = 0x1DA110;
     constexpr std::ptrdiff_t KeyValueCache001 = 0x1D6750;
     constexpr std::ptrdiff_t HostStateMgr001 = 0x1D3F50;
@@ -93,11 +93,11 @@ namespace matchmaking_dll { // matchmaking.dll
 }
 
 namespace materialsystem2_dll { // materialsystem2.dll
-    constexpr std::ptrdiff_t MaterialUtils_001 = 0x4DB90;
-    constexpr std::ptrdiff_t TextLayout_001 = 0x4A2E0;
-    constexpr std::ptrdiff_t PostProcessingSystem_001 = 0x42A60;
-    constexpr std::ptrdiff_t FontManager_001 = 0x37900;
-    constexpr std::ptrdiff_t VMaterialSystem2_001 = 0x25EC0;
+    constexpr std::ptrdiff_t MaterialUtils_001 = 0x4DCB0;
+    constexpr std::ptrdiff_t TextLayout_001 = 0x4A400;
+    constexpr std::ptrdiff_t PostProcessingSystem_001 = 0x42B80;
+    constexpr std::ptrdiff_t FontManager_001 = 0x37A20;
+    constexpr std::ptrdiff_t VMaterialSystem2_001 = 0x25FC0;
 }
 
 namespace meshsystem_dll { // meshsystem.dll
@@ -136,7 +136,7 @@ namespace pulse_system_dll { // pulse_system.dll
 }
 
 namespace rendersystemdx11_dll { // rendersystemdx11.dll
-    constexpr std::ptrdiff_t RenderUtils_001 = 0x530F0;
+    constexpr std::ptrdiff_t RenderUtils_001 = 0x53100;
     constexpr std::ptrdiff_t VRenderDeviceMgrBackdoor001 = 0x4A690;
     constexpr std::ptrdiff_t RenderDeviceMgr001 = 0x4A680;
 }
@@ -161,16 +161,16 @@ namespace schemasystem_dll { // schemasystem.dll
 }
 
 namespace server_dll { // server.dll
-    constexpr std::ptrdiff_t NavGameTest001 = 0xA3BDA0;
-    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x83EB80;
-    constexpr std::ptrdiff_t Source2GameClients001 = 0x83EB90;
-    constexpr std::ptrdiff_t Source2GameEntities001 = 0x83EBA0;
-    constexpr std::ptrdiff_t Source2Server001 = 0x83EBB0;
-    constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x591CC0;
-    constexpr std::ptrdiff_t Source2ServerConfig001 = 0x571BF0;
-    constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x2D0850;
-    constexpr std::ptrdiff_t customnavsystem001 = 0x24D880;
-    constexpr std::ptrdiff_t Source2GameDirector001 = 0x145620;
+    constexpr std::ptrdiff_t NavGameTest001 = 0xA3C380;
+    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x83F1C0;
+    constexpr std::ptrdiff_t Source2GameClients001 = 0x83F1D0;
+    constexpr std::ptrdiff_t Source2GameEntities001 = 0x83F1E0;
+    constexpr std::ptrdiff_t Source2Server001 = 0x83F1F0;
+    constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x591BE0;
+    constexpr std::ptrdiff_t Source2ServerConfig001 = 0x571B10;
+    constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x2D07B0;
+    constexpr std::ptrdiff_t customnavsystem001 = 0x24D7E0;
+    constexpr std::ptrdiff_t Source2GameDirector001 = 0x145580;
 }
 
 namespace soundsystem_dll { // soundsystem.dll

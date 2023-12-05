@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 1 Dec 2023 04:38:02 +0000
+ * Tue, 5 Dec 2023 00:38:26 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -1318,6 +1318,8 @@ public static class C_BaseCSGrenade { // C_CSWeaponBase
     public const nint m_fDropTime = 0x1A18; // GameTime_t
     public const nint m_nNextHoldTick = 0x1A1C; // GameTick_t
     public const nint m_flNextHoldFrac = 0x1A20; // float
+    public const nint m_bJustPulledPin = 0x1A24; // bool
+    public const nint m_bSwitchWeaponAfterThrow = 0x1A25; // bool
 }
 
 public static class C_BaseCSGrenadeProjectile { // C_BaseGrenade

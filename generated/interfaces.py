@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 1 Dec 2023 04:38:02 +0000
+Tue, 5 Dec 2023 00:38:26 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,17 +8,17 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x89F5C0
-    Source2ClientUI001 = 0x88E800
-    Source2ClientPrediction001 = 0x7A6970
-    ClientToolsInfo_001 = 0x732720
-    Source2Client002 = 0x732740
-    GameClientExports001 = 0x732730
+    LegacyGameUI001 = 0x89FA80
+    Source2ClientUI001 = 0x88ECC0
+    Source2ClientPrediction001 = 0x7A6DF0
+    ClientToolsInfo_001 = 0x732BA0
+    Source2Client002 = 0x732BC0
+    GameClientExports001 = 0x732BB0
     EmptyWorldService001_Client = 0x490110
     Source2ClientConfig001 = 0x477050
 
 class engine2_dll: # engine2.dll
-    SimpleEngineLoopService_001 = 0x1E4620
+    SimpleEngineLoopService_001 = 0x1E4610
     ClientServerEngineLoopService_001 = 0x1DA110
     KeyValueCache001 = 0x1D6750
     HostStateMgr001 = 0x1D3F50
@@ -80,11 +80,11 @@ class matchmaking_dll: # matchmaking.dll
     MATCHFRAMEWORK_001 = 0x1017D0
 
 class materialsystem2_dll: # materialsystem2.dll
-    MaterialUtils_001 = 0x4DB90
-    TextLayout_001 = 0x4A2E0
-    PostProcessingSystem_001 = 0x42A60
-    FontManager_001 = 0x37900
-    VMaterialSystem2_001 = 0x25EC0
+    MaterialUtils_001 = 0x4DCB0
+    TextLayout_001 = 0x4A400
+    PostProcessingSystem_001 = 0x42B80
+    FontManager_001 = 0x37A20
+    VMaterialSystem2_001 = 0x25FC0
 
 class meshsystem_dll: # meshsystem.dll
     MeshSystem001 = 0x7270
@@ -114,7 +114,7 @@ class pulse_system_dll: # pulse_system.dll
     IPulseSystem_001 = 0x5B30
 
 class rendersystemdx11_dll: # rendersystemdx11.dll
-    RenderUtils_001 = 0x530F0
+    RenderUtils_001 = 0x53100
     VRenderDeviceMgrBackdoor001 = 0x4A690
     RenderDeviceMgr001 = 0x4A680
 
@@ -134,16 +134,16 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA3BDA0
-    ServerToolsInfo_001 = 0x83EB80
-    Source2GameClients001 = 0x83EB90
-    Source2GameEntities001 = 0x83EBA0
-    Source2Server001 = 0x83EBB0
-    EmptyWorldService001_Server = 0x591CC0
-    Source2ServerConfig001 = 0x571BF0
-    EntitySubclassUtilsV001 = 0x2D0850
-    customnavsystem001 = 0x24D880
-    Source2GameDirector001 = 0x145620
+    NavGameTest001 = 0xA3C380
+    ServerToolsInfo_001 = 0x83F1C0
+    Source2GameClients001 = 0x83F1D0
+    Source2GameEntities001 = 0x83F1E0
+    Source2Server001 = 0x83F1F0
+    EmptyWorldService001_Server = 0x591BE0
+    Source2ServerConfig001 = 0x571B10
+    EntitySubclassUtilsV001 = 0x2D07B0
+    customnavsystem001 = 0x24D7E0
+    Source2GameDirector001 = 0x145580
 
 class soundsystem_dll: # soundsystem.dll
     SoundOpSystem001 = 0x1567E0

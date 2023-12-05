@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 1 Dec 2023 04:38:02 +0000
+Tue, 5 Dec 2023 00:38:26 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -1194,6 +1194,8 @@ class C_BaseCSGrenade: # C_CSWeaponBase
     m_fDropTime = 0x1A18 # GameTime_t
     m_nNextHoldTick = 0x1A1C # GameTick_t
     m_flNextHoldFrac = 0x1A20 # float
+    m_bJustPulledPin = 0x1A24 # bool
+    m_bSwitchWeaponAfterThrow = 0x1A25 # bool
 
 class C_BaseCSGrenadeProjectile: # C_BaseGrenade
     m_vInitialPosition = 0x1068 # Vector

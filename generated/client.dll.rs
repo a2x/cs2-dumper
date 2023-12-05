@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 1 Dec 2023 04:38:02 +0000
+ * Tue, 5 Dec 2023 00:38:26 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1320,6 +1320,8 @@ pub mod C_BaseCSGrenade { // C_CSWeaponBase
     pub const m_fDropTime: usize = 0x1A18; // GameTime_t
     pub const m_nNextHoldTick: usize = 0x1A1C; // GameTick_t
     pub const m_flNextHoldFrac: usize = 0x1A20; // float
+    pub const m_bJustPulledPin: usize = 0x1A24; // bool
+    pub const m_bSwitchWeaponAfterThrow: usize = 0x1A25; // bool
 }
 
 pub mod C_BaseCSGrenadeProjectile { // C_BaseGrenade

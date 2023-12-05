@@ -4317,12 +4317,20 @@
         "value": 6660,
         "comment": "bool"
       },
+      "m_bJustPulledPin": {
+        "value": 6692,
+        "comment": "bool"
+      },
       "m_bPinPulled": {
         "value": 6659,
         "comment": "bool"
       },
       "m_bRedraw": {
         "value": 6657,
+        "comment": "bool"
+      },
+      "m_bSwitchWeaponAfterThrow": {
+        "value": 6693,
         "comment": "bool"
       },
       "m_eThrowStatus": {
