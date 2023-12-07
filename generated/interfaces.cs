@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 5 Dec 2023 00:38:26 +0000
+ * Thu, 7 Dec 2023 03:13:25 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -9,49 +9,49 @@ public static class animationsystem_dll { // animationsystem.dll
 }
 
 public static class client_dll { // client.dll
-    public const nint LegacyGameUI001 = 0x89FA80;
-    public const nint Source2ClientUI001 = 0x88ECC0;
-    public const nint Source2ClientPrediction001 = 0x7A6DF0;
-    public const nint ClientToolsInfo_001 = 0x732BA0;
-    public const nint Source2Client002 = 0x732BC0;
-    public const nint GameClientExports001 = 0x732BB0;
-    public const nint EmptyWorldService001_Client = 0x490110;
-    public const nint Source2ClientConfig001 = 0x477050;
+    public const nint LegacyGameUI001 = 0x8A0140;
+    public const nint Source2ClientUI001 = 0x88F380;
+    public const nint Source2ClientPrediction001 = 0x7A74B0;
+    public const nint ClientToolsInfo_001 = 0x733260;
+    public const nint Source2Client002 = 0x733280;
+    public const nint GameClientExports001 = 0x733270;
+    public const nint EmptyWorldService001_Client = 0x490590;
+    public const nint Source2ClientConfig001 = 0x4774D0;
 }
 
 public static class engine2_dll { // engine2.dll
-    public const nint SimpleEngineLoopService_001 = 0x1E4610;
-    public const nint ClientServerEngineLoopService_001 = 0x1DA110;
-    public const nint KeyValueCache001 = 0x1D6750;
-    public const nint HostStateMgr001 = 0x1D3F50;
-    public const nint GameEventSystemServerV001 = 0x1CF5F0;
-    public const nint GameEventSystemClientV001 = 0x1CF5E0;
-    public const nint EngineServiceMgr001 = 0x1CB2B0;
-    public const nint VProfService_001 = 0x1B8BB0;
-    public const nint ToolService_001 = 0x1B7900;
-    public const nint StatsService_001 = 0x1B2B80;
-    public const nint SplitScreenService_001 = 0x1AFD20;
-    public const nint SoundService_001 = 0x1AA800;
-    public const nint ScreenshotService001 = 0x1A66D0;
-    public const nint RenderService_001 = 0x1A3A30;
-    public const nint NetworkService_001 = 0x1A3540;
-    public const nint NetworkServerService_001 = 0x19E3F0;
-    public const nint NetworkP2PService_001 = 0x199EA0;
-    public const nint NetworkClientService_001 = 0x193B30;
-    public const nint MapListService_001 = 0x18CB00;
-    public const nint InputService_001 = 0x17ABE0;
-    public const nint GameUIService_001 = 0x175310;
-    public const nint GameResourceServiceServerV001 = 0x173070;
-    public const nint GameResourceServiceClientV001 = 0x173060;
-    public const nint BugService001 = 0x16C050;
-    public const nint BenchmarkService001 = 0x16A7F0;
-    public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x118300;
-    public const nint EngineGameUI001 = 0x117690;
-    public const nint INETSUPPORT_001 = 0xE6CD0;
-    public const nint Source2EngineToServerStringTable001 = 0xA2150;
-    public const nint Source2EngineToServer001 = 0x8B160;
-    public const nint Source2EngineToClientStringTable001 = 0x83C30;
-    public const nint Source2EngineToClient001 = 0x5A3D0;
+    public const nint SimpleEngineLoopService_001 = 0x1E47C0;
+    public const nint ClientServerEngineLoopService_001 = 0x1DA2C0;
+    public const nint KeyValueCache001 = 0x1D6900;
+    public const nint HostStateMgr001 = 0x1D4100;
+    public const nint GameEventSystemServerV001 = 0x1CF7A0;
+    public const nint GameEventSystemClientV001 = 0x1CF790;
+    public const nint EngineServiceMgr001 = 0x1CB460;
+    public const nint VProfService_001 = 0x1B8D60;
+    public const nint ToolService_001 = 0x1B7AB0;
+    public const nint StatsService_001 = 0x1B2D30;
+    public const nint SplitScreenService_001 = 0x1AFED0;
+    public const nint SoundService_001 = 0x1AA9B0;
+    public const nint ScreenshotService001 = 0x1A6880;
+    public const nint RenderService_001 = 0x1A3BE0;
+    public const nint NetworkService_001 = 0x1A36F0;
+    public const nint NetworkServerService_001 = 0x19E5A0;
+    public const nint NetworkP2PService_001 = 0x19A050;
+    public const nint NetworkClientService_001 = 0x193CE0;
+    public const nint MapListService_001 = 0x18CCB0;
+    public const nint InputService_001 = 0x17AD90;
+    public const nint GameUIService_001 = 0x1754C0;
+    public const nint GameResourceServiceServerV001 = 0x173220;
+    public const nint GameResourceServiceClientV001 = 0x173210;
+    public const nint BugService001 = 0x16C200;
+    public const nint BenchmarkService001 = 0x16A9A0;
+    public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x1184B0;
+    public const nint EngineGameUI001 = 0x117840;
+    public const nint INETSUPPORT_001 = 0xE6E80;
+    public const nint Source2EngineToServerStringTable001 = 0xA2300;
+    public const nint Source2EngineToServer001 = 0x8B310;
+    public const nint Source2EngineToClientStringTable001 = 0x83DE0;
+    public const nint Source2EngineToClient001 = 0x5A570;
 }
 
 public static class filesystem_stdio_dll { // filesystem_stdio.dll
@@ -157,14 +157,14 @@ public static class schemasystem_dll { // schemasystem.dll
 }
 
 public static class server_dll { // server.dll
-    public const nint NavGameTest001 = 0xA3C380;
-    public const nint ServerToolsInfo_001 = 0x83F1C0;
-    public const nint Source2GameClients001 = 0x83F1D0;
-    public const nint Source2GameEntities001 = 0x83F1E0;
-    public const nint Source2Server001 = 0x83F1F0;
-    public const nint EmptyWorldService001_Server = 0x591BE0;
-    public const nint Source2ServerConfig001 = 0x571B10;
-    public const nint EntitySubclassUtilsV001 = 0x2D07B0;
+    public const nint NavGameTest001 = 0xA3C7E0;
+    public const nint ServerToolsInfo_001 = 0x83F620;
+    public const nint Source2GameClients001 = 0x83F630;
+    public const nint Source2GameEntities001 = 0x83F640;
+    public const nint Source2Server001 = 0x83F650;
+    public const nint EmptyWorldService001_Server = 0x591C80;
+    public const nint Source2ServerConfig001 = 0x571BB0;
+    public const nint EntitySubclassUtilsV001 = 0x2D0850;
     public const nint customnavsystem001 = 0x24D7E0;
     public const nint Source2GameDirector001 = 0x145580;
 }

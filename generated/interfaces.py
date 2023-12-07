@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 5 Dec 2023 00:38:26 +0000
+Thu, 7 Dec 2023 03:13:25 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,48 +8,48 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x89FA80
-    Source2ClientUI001 = 0x88ECC0
-    Source2ClientPrediction001 = 0x7A6DF0
-    ClientToolsInfo_001 = 0x732BA0
-    Source2Client002 = 0x732BC0
-    GameClientExports001 = 0x732BB0
-    EmptyWorldService001_Client = 0x490110
-    Source2ClientConfig001 = 0x477050
+    LegacyGameUI001 = 0x8A0140
+    Source2ClientUI001 = 0x88F380
+    Source2ClientPrediction001 = 0x7A74B0
+    ClientToolsInfo_001 = 0x733260
+    Source2Client002 = 0x733280
+    GameClientExports001 = 0x733270
+    EmptyWorldService001_Client = 0x490590
+    Source2ClientConfig001 = 0x4774D0
 
 class engine2_dll: # engine2.dll
-    SimpleEngineLoopService_001 = 0x1E4610
-    ClientServerEngineLoopService_001 = 0x1DA110
-    KeyValueCache001 = 0x1D6750
-    HostStateMgr001 = 0x1D3F50
-    GameEventSystemServerV001 = 0x1CF5F0
-    GameEventSystemClientV001 = 0x1CF5E0
-    EngineServiceMgr001 = 0x1CB2B0
-    VProfService_001 = 0x1B8BB0
-    ToolService_001 = 0x1B7900
-    StatsService_001 = 0x1B2B80
-    SplitScreenService_001 = 0x1AFD20
-    SoundService_001 = 0x1AA800
-    ScreenshotService001 = 0x1A66D0
-    RenderService_001 = 0x1A3A30
-    NetworkService_001 = 0x1A3540
-    NetworkServerService_001 = 0x19E3F0
-    NetworkP2PService_001 = 0x199EA0
-    NetworkClientService_001 = 0x193B30
-    MapListService_001 = 0x18CB00
-    InputService_001 = 0x17ABE0
-    GameUIService_001 = 0x175310
-    GameResourceServiceServerV001 = 0x173070
-    GameResourceServiceClientV001 = 0x173060
-    BugService001 = 0x16C050
-    BenchmarkService001 = 0x16A7F0
-    VENGINE_GAMEUIFUNCS_VERSION005 = 0x118300
-    EngineGameUI001 = 0x117690
-    INETSUPPORT_001 = 0xE6CD0
-    Source2EngineToServerStringTable001 = 0xA2150
-    Source2EngineToServer001 = 0x8B160
-    Source2EngineToClientStringTable001 = 0x83C30
-    Source2EngineToClient001 = 0x5A3D0
+    SimpleEngineLoopService_001 = 0x1E47C0
+    ClientServerEngineLoopService_001 = 0x1DA2C0
+    KeyValueCache001 = 0x1D6900
+    HostStateMgr001 = 0x1D4100
+    GameEventSystemServerV001 = 0x1CF7A0
+    GameEventSystemClientV001 = 0x1CF790
+    EngineServiceMgr001 = 0x1CB460
+    VProfService_001 = 0x1B8D60
+    ToolService_001 = 0x1B7AB0
+    StatsService_001 = 0x1B2D30
+    SplitScreenService_001 = 0x1AFED0
+    SoundService_001 = 0x1AA9B0
+    ScreenshotService001 = 0x1A6880
+    RenderService_001 = 0x1A3BE0
+    NetworkService_001 = 0x1A36F0
+    NetworkServerService_001 = 0x19E5A0
+    NetworkP2PService_001 = 0x19A050
+    NetworkClientService_001 = 0x193CE0
+    MapListService_001 = 0x18CCB0
+    InputService_001 = 0x17AD90
+    GameUIService_001 = 0x1754C0
+    GameResourceServiceServerV001 = 0x173220
+    GameResourceServiceClientV001 = 0x173210
+    BugService001 = 0x16C200
+    BenchmarkService001 = 0x16A9A0
+    VENGINE_GAMEUIFUNCS_VERSION005 = 0x1184B0
+    EngineGameUI001 = 0x117840
+    INETSUPPORT_001 = 0xE6E80
+    Source2EngineToServerStringTable001 = 0xA2300
+    Source2EngineToServer001 = 0x8B310
+    Source2EngineToClientStringTable001 = 0x83DE0
+    Source2EngineToClient001 = 0x5A570
 
 class filesystem_stdio_dll: # filesystem_stdio.dll
     VAsyncFileSystem2_001 = 0x66D30
@@ -134,14 +134,14 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA3C380
-    ServerToolsInfo_001 = 0x83F1C0
-    Source2GameClients001 = 0x83F1D0
-    Source2GameEntities001 = 0x83F1E0
-    Source2Server001 = 0x83F1F0
-    EmptyWorldService001_Server = 0x591BE0
-    Source2ServerConfig001 = 0x571B10
-    EntitySubclassUtilsV001 = 0x2D07B0
+    NavGameTest001 = 0xA3C7E0
+    ServerToolsInfo_001 = 0x83F620
+    Source2GameClients001 = 0x83F630
+    Source2GameEntities001 = 0x83F640
+    Source2Server001 = 0x83F650
+    EmptyWorldService001_Server = 0x591C80
+    Source2ServerConfig001 = 0x571BB0
+    EntitySubclassUtilsV001 = 0x2D0850
     customnavsystem001 = 0x24D7E0
     Source2GameDirector001 = 0x145580
 

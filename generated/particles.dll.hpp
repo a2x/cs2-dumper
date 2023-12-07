@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 5 Dec 2023 00:38:25 +0000
+ * Thu, 7 Dec 2023 03:13:24 +0000
  */
 
 #pragma once
