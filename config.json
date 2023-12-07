@@ -283,7 +283,7 @@
     {
       "name": "dwPlantedC4",
       "module": "client.dll",
-      "pattern": "48 8B 15 ? ? ? ? FF C0 48 8D 4C 24",
+      "pattern": "48 8B 15 ? ? ? ? FF C0 48 8D 4C 24 40",
       "operations": [
         {
           "type": "rip"
