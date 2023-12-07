@@ -16,7 +16,7 @@ By default, generated files are stored in the `generated` directory. However, th
 
 📂 [Pre-generated Files](./generated)
 
-# Running Tests (WIP)
+# Running Tests
 To run tests, use the following command: `cargo test -- --nocapture`.
 
 # License
