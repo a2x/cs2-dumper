@@ -1,0 +1,203 @@
+---
+CBasePulseGraphInstance:
+CPulseCell_Base:
+    m_nEditorNodeID: 8 # PulseDocNodeID_t
+CPulseCell_BaseFlow: # CPulseCell_Base
+CPulseCell_BaseValue: # CPulseCell_Base
+CPulseCell_BaseYieldingInflow: # CPulseCell_BaseFlow
+CPulseCell_Inflow_BaseEntrypoint: # CPulseCell_BaseFlow
+    m_EntryChunk: 72 # PulseRuntimeChunkIndex_t
+    m_RegisterMap: 80 # PulseRegisterMap_t
+CPulseCell_Inflow_EntOutputHandler: # CPulseCell_Inflow_BaseEntrypoint
+    m_SourceEntity: 112 # CUtlSymbolLarge
+    m_SourceOutput: 120 # CUtlSymbolLarge
+    m_TargetInput: 128 # CUtlSymbolLarge
+    m_ExpectedParamType: 136 # CPulseValueFullType
+CPulseCell_Inflow_EventHandler: # CPulseCell_Inflow_BaseEntrypoint
+    m_EventName: 112 # CUtlSymbolLarge
+CPulseCell_Inflow_GraphHook: # CPulseCell_Inflow_BaseEntrypoint
+    m_HookName: 112 # CUtlSymbolLarge
+CPulseCell_Inflow_Method: # CPulseCell_Inflow_BaseEntrypoint
+    m_MethodName: 112 # CUtlSymbolLarge
+    m_Description: 120 # CUtlString
+    m_bIsPublic: 128 # bool
+    m_ReturnType: 136 # CPulseValueFullType
+    m_Args: 152 # CUtlVector<CPulseRuntimeMethodArg>
+CPulseCell_Inflow_Wait: # CPulseCell_BaseYieldingInflow
+    m_WakeResume: 72 # CPulse_ResumePoint
+CPulseCell_Inflow_Yield: # CPulseCell_BaseYieldingInflow
+    m_UnyieldResume: 72 # CPulse_ResumePoint
+CPulseCell_Outflow_CycleOrdered: # CPulseCell_BaseFlow
+    m_Outputs: 72 # CUtlVector<CPulse_OutflowConnection>
+CPulseCell_Outflow_CycleOrdered_InstanceState_t:
+    m_nNextIndex: 0 # int32_t
+CPulseCell_Outflow_CycleRandom: # CPulseCell_BaseFlow
+    m_Outputs: 72 # CUtlVector<CPulse_OutflowConnection>
+CPulseCell_Outflow_CycleShuffled: # CPulseCell_BaseFlow
+    m_Outputs: 72 # CUtlVector<CPulse_OutflowConnection>
+CPulseCell_Outflow_CycleShuffled_InstanceState_t:
+    m_Shuffle: 0 # CUtlVectorFixedGrowable<uint8_t>
+    m_nNextShuffle: 32 # int32_t
+CPulseCell_Outflow_IntSwitch: # CPulseCell_BaseFlow
+    m_DefaultCaseOutflow: 72 # CPulse_OutflowConnection
+    m_CaseOutflows: 88 # CUtlVector<CPulse_OutflowConnection>
+CPulseCell_Outflow_SimultaneousParallel: # CPulseCell_BaseFlow
+    m_Outputs: 72 # CUtlVector<CPulse_OutflowConnection>
+CPulseCell_Outflow_StringSwitch: # CPulseCell_BaseFlow
+    m_DefaultCaseOutflow: 72 # CPulse_OutflowConnection
+    m_CaseOutflows: 88 # CUtlVector<CPulse_OutflowConnection>
+CPulseCell_Outflow_TestExplicitYesNo: # CPulseCell_BaseFlow
+    m_Yes: 72 # CPulse_OutflowConnection
+    m_No: 88 # CPulse_OutflowConnection
+CPulseCell_Outflow_TestRandomYesNo: # CPulseCell_BaseFlow
+    m_Yes: 72 # CPulse_OutflowConnection
+    m_No: 88 # CPulse_OutflowConnection
+CPulseCell_Step_CallExternalMethod: # CPulseCell_BaseFlow
+    m_MethodName: 72 # CUtlSymbolLarge
+    m_ExpectedArgs: 80 # CUtlVector<CPulseRuntimeMethodArg>
+CPulseCell_Step_DebugLog: # CPulseCell_BaseFlow
+CPulseCell_Step_PublicOutput: # CPulseCell_BaseFlow
+    m_OutputIndex: 72 # PulseRuntimeOutputIndex_t
+CPulseCell_Step_TestDomainCreateFakeEntity: # CPulseCell_BaseFlow
+CPulseCell_Step_TestDomainDestroyFakeEntity: # CPulseCell_BaseFlow
+CPulseCell_Step_TestDomainEntFire: # CPulseCell_BaseFlow
+    m_Input: 72 # CUtlString
+CPulseCell_Step_TestDomainTracepoint: # CPulseCell_BaseFlow
+CPulseCell_Test_MultiInflow_NoDefault: # CPulseCell_BaseFlow
+CPulseCell_Test_MultiInflow_WithDefault: # CPulseCell_BaseFlow
+CPulseCell_Test_NoInflow: # CPulseCell_BaseFlow
+CPulseCell_Val_TestDomainFindEntityByName: # CPulseCell_BaseValue
+CPulseCell_Val_TestDomainGetEntityName: # CPulseCell_BaseValue
+CPulseCell_Value_RandomInt: # CPulseCell_BaseValue
+CPulseCell_Value_TestValue50: # CPulseCell_BaseValue
+CPulseExecCursor:
+CPulseGraphDef:
+    m_DomainIdentifier: 8 # CUtlSymbolLarge
+    m_ParentMapName: 16 # CUtlSymbolLarge
+    m_Chunks: 24 # CUtlVector<CPulse_Chunk*>
+    m_Cells: 48 # CUtlVector<CPulseCell_Base*>
+    m_Vars: 72 # CUtlVector<CPulse_Variable>
+    m_PublicOutputs: 96 # CUtlVector<CPulse_PublicOutput>
+    m_InvokeBindings: 120 # CUtlVector<CPulse_InvokeBinding*>
+    m_CallInfos: 144 # CUtlVector<CPulse_CallInfo*>
+    m_OutputConnections: 168 # CUtlVector<CPulse_OutputConnection*>
+CPulseGraphInstance_TestDomain: # CBasePulseGraphInstance
+    m_bIsRunningUnitTests: 208 # bool
+    m_bExplicitTimeStepping: 209 # bool
+    m_bExpectingToDestroyWithYieldedCursors: 210 # bool
+    m_nNextValidateIndex: 212 # int32_t
+    m_Tracepoints: 216 # CUtlVector<CUtlString>
+    m_bTestYesOrNoPath: 240 # bool
+CPulseGraphInstance_TestDomain_Derived: # CPulseGraphInstance_TestDomain
+    m_nInstanceValueX: 248 # int32_t
+CPulseGraphInstance_TurtleGraphics: # CBasePulseGraphInstance
+CPulseMathlib:
+CPulseRuntimeMethodArg:
+    m_Name: 0 # CKV3MemberNameWithStorage
+    m_Description: 56 # CUtlString
+    m_Type: 64 # CPulseValueFullType
+CPulseTestFuncs_DerivedDomain:
+CPulseTestFuncs_LibraryA:
+CPulseTestScriptLib:
+CPulseTurtleGraphicsCursor: # CPulseExecCursor
+    m_Color: 392 # Color
+    m_vPos: 396 # Vector2D
+    m_flHeadingDeg: 404 # float
+    m_bPenUp: 408 # bool
+CPulse_CallInfo:
+    m_PortName: 0 # CUtlSymbolLarge
+    m_nEditorNodeID: 8 # PulseDocNodeID_t
+    m_RegisterMap: 16 # PulseRegisterMap_t
+    m_CallMethodID: 48 # PulseDocNodeID_t
+    m_nSrcChunk: 52 # PulseRuntimeChunkIndex_t
+    m_nSrcInstruction: 56 # int32_t
+CPulse_Chunk:
+    m_Instructions: 0 # CUtlLeanVector<PGDInstruction_t>
+    m_Registers: 16 # CUtlLeanVector<CPulse_RegisterInfo>
+    m_InstructionEditorIDs: 32 # CUtlLeanVector<PulseDocNodeID_t>
+CPulse_InvokeBinding:
+    m_RegisterMap: 0 # PulseRegisterMap_t
+    m_FuncName: 32 # CUtlSymbolLarge
+    m_nCellIndex: 40 # PulseRuntimeCellIndex_t
+    m_InstanceType: 48 # CPulseValueFullType
+    m_nSrcChunk: 64 # PulseRuntimeChunkIndex_t
+    m_nSrcInstruction: 68 # int32_t
+CPulse_OutflowConnection:
+    m_SourceOutflowName: 0 # CUtlSymbolLarge
+    m_nDestChunk: 8 # PulseRuntimeChunkIndex_t
+    m_nInstruction: 12 # int32_t
+CPulse_OutputConnection:
+    m_SourceOutput: 0 # CUtlSymbolLarge
+    m_TargetEntity: 8 # CUtlSymbolLarge
+    m_TargetInput: 16 # CUtlSymbolLarge
+    m_Param: 24 # CUtlSymbolLarge
+CPulse_PublicOutput:
+    m_Name: 0 # CUtlSymbolLarge
+    m_Description: 8 # CUtlString
+    m_ParamType: 16 # CPulseValueFullType
+CPulse_RegisterInfo:
+    m_nReg: 0 # PulseRuntimeRegisterIndex_t
+    m_Type: 8 # CPulseValueFullType
+    m_OriginName: 24 # CKV3MemberNameWithStorage
+    m_nWrittenByInstruction: 80 # int32_t
+    m_nLastReadByInstruction: 84 # int32_t
+CPulse_ResumePoint: # CPulse_OutflowConnection
+CPulse_Variable:
+    m_Name: 0 # CUtlSymbolLarge
+    m_Description: 8 # CUtlString
+    m_Type: 16 # CPulseValueFullType
+    m_DefaultValue: 32 # KeyValues3
+    m_bIsPublic: 50 # bool
+CTestDomainDerived_Cursor: # CPulseExecCursor
+    m_nCursorValueA: 392 # int32_t
+    m_nCursorValueB: 396 # int32_t
+FakeEntity_t:
+    m_nHandle: 0 # PulseTestEHandle_t
+    m_Name: 8 # CUtlString
+    m_Class: 16 # CUtlString
+    m_bDestroyed: 24 # bool
+    m_pAssociatedGraphInstance: 32 # CPulseGraphInstance_TestDomain*
+    m_bFuncWasCalled: 40 # bool
+    m_fValue: 44 # float
+PGDInstruction_t:
+    m_nCode: 0 # PulseInstructionCode_t
+    m_nVar: 4 # PulseRuntimeVarIndex_t
+    m_nReg0: 8 # PulseRuntimeRegisterIndex_t
+    m_nReg1: 10 # PulseRuntimeRegisterIndex_t
+    m_nReg2: 12 # PulseRuntimeRegisterIndex_t
+    m_nInvokeBindingIndex: 16 # PulseRuntimeInvokeIndex_t
+    m_nChunk: 20 # PulseRuntimeChunkIndex_t
+    m_nDestInstruction: 24 # int32_t
+    m_nCallInfoIndex: 28 # PulseRuntimeCallInfoIndex_t
+    m_Arg0Name: 32 # CUtlSymbolLarge
+    m_Arg1Name: 40 # CUtlSymbolLarge
+    m_bLiteralBool: 48 # bool
+    m_nLiteralInt: 52 # int32_t
+    m_flLiteralFloat: 56 # float
+    m_LiteralString: 64 # CBufferString
+    m_vLiteralVec3: 80 # Vector
+PulseDocNodeID_t:
+    m_Value: 0 # int32_t
+PulseRegisterMap_t:
+    m_Inparams: 0 # KeyValues3
+    m_Outparams: 16 # KeyValues3
+PulseRuntimeCallInfoIndex_t:
+    m_Value: 0 # int32_t
+PulseRuntimeCellIndex_t:
+    m_Value: 0 # int32_t
+PulseRuntimeChunkIndex_t:
+    m_Value: 0 # int32_t
+PulseRuntimeEntrypointIndex_t:
+    m_Value: 0 # int32_t
+PulseRuntimeInvokeIndex_t:
+    m_Value: 0 # int32_t
+PulseRuntimeOutputIndex_t:
+    m_Value: 0 # int32_t
+PulseRuntimeRegisterIndex_t:
+    m_Value: 0 # int16_t
+PulseRuntimeStateOffset_t:
+    m_Value: 0 # uint16_t
+PulseRuntimeVarIndex_t:
+    m_Value: 0 # int32_t
+PulseTestEHandle_t:
+    m_Value: 0 # int32_t

@@ -28,7 +28,7 @@ mod util;
 #[derive(Debug, Parser)]
 #[command(name = "cs2-dumper")]
 #[command(author = "a2x")]
-#[command(version = "1.1.4")]
+#[command(version = "1.1.5")]
 struct Args {
     /// Dump interfaces.
     #[arg(short, long)]
@@ -43,13 +43,13 @@ struct Args {
     schemas: bool,
 
     /// List of file builders to use.
-    /// Valid values are: `.cs`, `.hpp`, `.json`, `.py`, `.rs`.
+    /// Valid values are: `.cs`, `.hpp`, `.json`, `.py`, `.rs`, `.yaml`.
     #[arg(
         short,
         long,
         value_parser = parse_extension,
         value_delimiter = ',',
-        default_values = [".cs", ".hpp", ".json", ".py", ".rs"],
+        default_values = [".cs", ".hpp", ".json", ".py", ".rs", ".yaml"],
     )]
     builders: Vec<FileBuilderEnum>,
 
@@ -136,6 +136,7 @@ fn parse_extension(extension: &str) -> Result<FileBuilderEnum, &'static str> {
         ".json" => Ok(FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default())),
         ".py" => Ok(FileBuilderEnum::PythonFileBuilder(PythonFileBuilder)),
         ".rs" => Ok(FileBuilderEnum::RustFileBuilder(RustFileBuilder)),
-        _ => Err("Invalid extension"),
+        ".yaml" => Ok(FileBuilderEnum::YamlFileBuilder(YamlFileBuilder)),
+        _ => Err("Invalid file extension"),
     }
 }

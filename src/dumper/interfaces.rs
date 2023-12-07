@@ -14,7 +14,7 @@ use std::mem::offset_of;
 #[derive(Debug)]
 #[repr(C)]
 struct InterfaceNode {
-    /// Function pointer used to instantiate an instance of the interface.
+    /// Used to instantiate an instance of the interface.
     pub create_fn: *const (),
 
     /// Pointer to the name of the interface.
@@ -43,7 +43,7 @@ impl InterfaceNode {
             .map(|ptr| ptr.into())
     }
 
-    /// Returns the name of the interface.
+    /// Returns the name of the interface with the version number appended.
     ///
     /// E.g. "Source2Client002".
     ///
@@ -100,6 +100,7 @@ pub fn dump_interfaces(
 ) -> Result<()> {
     let mut entries = Entries::new();
 
+    // Iterate over all modules in the process, excluding crashhandler64.dll.
     for module in process
         .modules()?
         .iter()
@@ -113,6 +114,7 @@ pub fn dump_interfaces(
 
             let mut node = process.read_memory::<*mut InterfaceNode>(create_interface_address)?;
 
+            // Iterate over each node in the linked list.
             while !node.is_null() {
                 let instance = unsafe { (*node).instance(process) }?;
                 let name = unsafe { (*node).name(process) }?;
@@ -136,6 +138,7 @@ pub fn dump_interfaces(
                     indent: Some(indent),
                 });
 
+                // Get the next node in the linked list.
                 node = unsafe { (*node).next(process) }?;
             }
         }

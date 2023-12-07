@@ -140,6 +140,7 @@ fn write_banner_to_file(file: &mut File, file_extension: &str) -> Result<()> {
             "'''\nCreated using {}\n{}\n'''\n\n",
             REPO_URL, time_now
         )),
+        "yaml" => None,
         _ => Some(format!(
             "/*\n * Created using {}\n * {}\n */\n\n",
             REPO_URL, time_now

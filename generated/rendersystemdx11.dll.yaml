@@ -1,0 +1,16 @@
+---
+RenderInputLayoutField_t:
+    m_pSemanticName: 0 # uint8_t[32]
+    m_nSemanticIndex: 32 # int32_t
+    m_Format: 36 # uint32_t
+    m_nOffset: 40 # int32_t
+    m_nSlot: 44 # int32_t
+    m_nSlotType: 48 # RenderSlotType_t
+    m_nInstanceStepRate: 52 # int32_t
+VsInputSignatureElement_t:
+    m_pName: 0 # char[64]
+    m_pSemantic: 64 # char[64]
+    m_pD3DSemanticName: 128 # char[64]
+    m_nD3DSemanticIndex: 192 # int32_t
+VsInputSignature_t:
+    m_elems: 0 # CUtlVector<VsInputSignatureElement_t>

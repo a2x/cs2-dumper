@@ -1,0 +1,141 @@
+---
+CEmptyEntityInstance:
+CEntityComponent:
+CEntityComponentHelper:
+    m_flags: 8 # uint32_t
+    m_pInfo: 16 # EntComponentInfo_t*
+    m_nPriority: 24 # int32_t
+    m_pNext: 32 # CEntityComponentHelper*
+CEntityIOOutput:
+    m_Value: 24 # CVariantBase<CVariantDefaultAllocator>
+CEntityIdentity:
+    m_nameStringableIndex: 20 # int32_t
+    m_name: 24 # CUtlSymbolLarge
+    m_designerName: 32 # CUtlSymbolLarge
+    m_flags: 48 # uint32_t
+    m_worldGroupId: 56 # WorldGroupId_t
+    m_fDataObjectTypes: 60 # uint32_t
+    m_PathIndex: 64 # ChangeAccessorFieldPathIndex_t
+    m_pPrev: 88 # CEntityIdentity*
+    m_pNext: 96 # CEntityIdentity*
+    m_pPrevByClass: 104 # CEntityIdentity*
+    m_pNextByClass: 112 # CEntityIdentity*
+CEntityInstance:
+    m_iszPrivateVScripts: 8 # CUtlSymbolLarge
+    m_pEntity: 16 # CEntityIdentity*
+    m_CScriptComponent: 40 # CScriptComponent*
+CNetworkVarChainer:
+    m_PathIndex: 32 # ChangeAccessorFieldPathIndex_t
+CScriptComponent: # CEntityComponent
+    m_scriptClassName: 48 # CUtlSymbolLarge
+CVariantDefaultAllocator:
+EngineLoopState_t:
+    m_nPlatWindowWidth: 24 # int32_t
+    m_nPlatWindowHeight: 28 # int32_t
+    m_nRenderWidth: 32 # int32_t
+    m_nRenderHeight: 36 # int32_t
+EntComponentInfo_t:
+    m_pName: 0 # char*
+    m_pCPPClassname: 8 # char*
+    m_pNetworkDataReferencedDescription: 16 # char*
+    m_pNetworkDataReferencedPtrPropDescription: 24 # char*
+    m_nRuntimeIndex: 32 # int32_t
+    m_nFlags: 36 # uint32_t
+    m_pBaseClassComponentHelper: 96 # CEntityComponentHelper*
+EntInput_t:
+EntOutput_t:
+EventAdvanceTick_t: # EventSimulate_t
+    m_nCurrentTick: 48 # int32_t
+    m_nCurrentTickThisFrame: 52 # int32_t
+    m_nTotalTicksThisFrame: 56 # int32_t
+    m_nTotalTicks: 60 # int32_t
+EventAppShutdown_t:
+    m_nDummy0: 0 # int32_t
+EventClientAdvanceTick_t: # EventAdvanceTick_t
+EventClientFrameSimulate_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRealTime: 40 # float
+    m_flFrameTime: 44 # float
+EventClientOutput_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRenderTime: 40 # float
+    m_flRealTime: 44 # float
+    m_flRenderFrameTimeUnbounded: 48 # float
+    m_bRenderOnly: 52 # bool
+EventClientPauseSimulate_t: # EventSimulate_t
+EventClientPollInput_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRealTime: 40 # float
+EventClientPollNetworking_t:
+    m_nTickCount: 0 # int32_t
+EventClientPostAdvanceTick_t: # EventPostAdvanceTick_t
+EventClientPostOutput_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRenderTime: 40 # double
+    m_flRenderFrameTime: 48 # float
+    m_flRenderFrameTimeUnbounded: 52 # float
+    m_bRenderOnly: 56 # bool
+EventClientPostSimulate_t: # EventSimulate_t
+EventClientPreOutput_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRenderTime: 40 # double
+    m_flRenderFrameTime: 48 # double
+    m_flRenderFrameTimeUnbounded: 56 # double
+    m_flRealTime: 64 # float
+    m_bRenderOnly: 68 # bool
+EventClientPreSimulate_t: # EventSimulate_t
+EventClientPredictionPostNetupdate_t:
+EventClientProcessGameInput_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRealTime: 40 # float
+    m_flFrameTime: 44 # float
+EventClientProcessInput_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRealTime: 40 # float
+    m_flTickInterval: 44 # float
+    m_flTickStartTime: 48 # double
+EventClientProcessNetworking_t:
+EventClientSceneSystemThreadStateChange_t:
+    m_bThreadsActive: 0 # bool
+EventClientSendInput_t:
+    m_bFinalClientCommandTick: 0 # bool
+    m_nAdditionalClientCommandsToCreate: 4 # int32_t
+EventClientSimulate_t: # EventSimulate_t
+EventFrameBoundary_t:
+    m_flFrameTime: 0 # float
+EventModInitialized_t:
+EventPostAdvanceTick_t: # EventSimulate_t
+    m_nCurrentTick: 48 # int32_t
+    m_nCurrentTickThisFrame: 52 # int32_t
+    m_nTotalTicksThisFrame: 56 # int32_t
+    m_nTotalTicks: 60 # int32_t
+EventPostDataUpdate_t:
+    m_nCount: 0 # int32_t
+EventPreDataUpdate_t:
+    m_nCount: 0 # int32_t
+EventProfileStorageAvailable_t:
+    m_nSplitScreenSlot: 0 # CSplitScreenSlot
+EventServerAdvanceTick_t: # EventAdvanceTick_t
+EventServerPollNetworking_t: # EventSimulate_t
+EventServerPostAdvanceTick_t: # EventPostAdvanceTick_t
+EventServerPostSimulate_t: # EventSimulate_t
+EventServerProcessNetworking_t: # EventSimulate_t
+EventServerSimulate_t: # EventSimulate_t
+EventSetTime_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_nClientOutputFrames: 40 # int32_t
+    m_flRealTime: 48 # double
+    m_flRenderTime: 56 # double
+    m_flRenderFrameTime: 64 # double
+    m_flRenderFrameTimeUnbounded: 72 # double
+    m_flRenderFrameTimeUnscaled: 80 # double
+    m_flTickRemainder: 88 # double
+EventSimpleLoopFrameUpdate_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_flRealTime: 40 # float
+    m_flFrameTime: 44 # float
+EventSimulate_t:
+    m_LoopState: 0 # EngineLoopState_t
+    m_bFirstTick: 40 # bool
+    m_bLastTick: 41 # bool
+EventSplitScreenStateChanged_t:

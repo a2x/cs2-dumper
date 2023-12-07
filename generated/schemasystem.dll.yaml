@@ -1,0 +1,36 @@
+---
+CExampleSchemaVData_Monomorphic:
+    m_nExample1: 0 # int32_t
+    m_nExample2: 4 # int32_t
+CExampleSchemaVData_PolymorphicBase:
+    m_nBase: 8 # int32_t
+CExampleSchemaVData_PolymorphicDerivedA: # CExampleSchemaVData_PolymorphicBase
+    m_nDerivedA: 16 # int32_t
+CExampleSchemaVData_PolymorphicDerivedB: # CExampleSchemaVData_PolymorphicBase
+    m_nDerivedB: 16 # int32_t
+CSchemaSystemInternalRegistration:
+    m_Vector2D: 0 # Vector2D
+    m_Vector: 8 # Vector
+    m_VectorAligned: 32 # VectorAligned
+    m_Quaternion: 48 # Quaternion
+    m_QAngle: 64 # QAngle
+    m_RotationVector: 76 # RotationVector
+    m_RadianEuler: 88 # RadianEuler
+    m_DegreeEuler: 100 # DegreeEuler
+    m_QuaternionStorage: 112 # QuaternionStorage
+    m_matrix3x4_t: 128 # matrix3x4_t
+    m_matrix3x4a_t: 176 # matrix3x4a_t
+    m_Color: 224 # Color
+    m_Vector4D: 228 # Vector4D
+    m_CTransform: 256 # CTransform
+    m_pKeyValues: 288 # KeyValues*
+    m_CUtlBinaryBlock: 296 # CUtlBinaryBlock
+    m_CUtlString: 320 # CUtlString
+    m_CUtlSymbol: 328 # CUtlSymbol
+    m_stringToken: 332 # CUtlStringToken
+    m_stringTokenWithStorage: 336 # CUtlStringTokenWithStorage
+    m_ResourceTypes: 360 # CResourceArray<CResourcePointer<CResourceString>>
+    m_KV3: 368 # KeyValues3
+InfoForResourceTypeCResourceManifestInternal:
+ResourceId_t:
+    m_Value: 0 # uint64_t

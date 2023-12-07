@@ -4,6 +4,7 @@ pub use file_builder::FileBuilder;
 pub use json_file_builder::JsonFileBuilder;
 pub use python_file_builder::PythonFileBuilder;
 pub use rust_file_builder::RustFileBuilder;
+pub use yaml_file_builder::YamlFileBuilder;
 
 pub use std::io::{Result, Write};
 
@@ -13,6 +14,7 @@ pub mod file_builder;
 pub mod json_file_builder;
 pub mod python_file_builder;
 pub mod rust_file_builder;
+pub mod yaml_file_builder;
 
 /// `FileBuilder` is an enum that defines different kinds of file builders.
 /// Each variant corresponds to a builder for a particular type of file.
@@ -32,6 +34,9 @@ pub enum FileBuilderEnum {
 
     /// Represents a builder for Rust files.
     RustFileBuilder(RustFileBuilder),
+
+    /// Represents a builder for YAML files.
+    YamlFileBuilder(YamlFileBuilder),
 }
 
 impl FileBuilder for FileBuilderEnum {
@@ -77,6 +82,7 @@ impl FileBuilderEnum {
             FileBuilderEnum::JsonFileBuilder(builder) => builder,
             FileBuilderEnum::PythonFileBuilder(builder) => builder,
             FileBuilderEnum::RustFileBuilder(builder) => builder,
+            FileBuilderEnum::YamlFileBuilder(builder) => builder,
         }
     }
 }

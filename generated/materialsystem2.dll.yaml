@@ -1,0 +1,82 @@
+---
+MaterialParamBuffer_t: # MaterialParam_t
+    m_value: 8 # CUtlBinaryBlock
+MaterialParamFloat_t: # MaterialParam_t
+    m_flValue: 8 # float
+MaterialParamInt_t: # MaterialParam_t
+    m_nValue: 8 # int32_t
+MaterialParamString_t: # MaterialParam_t
+    m_value: 8 # CUtlString
+MaterialParamTexture_t: # MaterialParam_t
+    m_pValue: 8 # CStrongHandle<InfoForResourceTypeCTextureBase>
+MaterialParamVector_t: # MaterialParam_t
+    m_value: 8 # Vector4D
+MaterialParam_t:
+    m_name: 0 # CUtlString
+MaterialResourceData_t:
+    m_materialName: 0 # CUtlString
+    m_shaderName: 8 # CUtlString
+    m_intParams: 16 # CUtlVector<MaterialParamInt_t>
+    m_floatParams: 40 # CUtlVector<MaterialParamFloat_t>
+    m_vectorParams: 64 # CUtlVector<MaterialParamVector_t>
+    m_textureParams: 88 # CUtlVector<MaterialParamTexture_t>
+    m_dynamicParams: 112 # CUtlVector<MaterialParamBuffer_t>
+    m_dynamicTextureParams: 136 # CUtlVector<MaterialParamBuffer_t>
+    m_intAttributes: 160 # CUtlVector<MaterialParamInt_t>
+    m_floatAttributes: 184 # CUtlVector<MaterialParamFloat_t>
+    m_vectorAttributes: 208 # CUtlVector<MaterialParamVector_t>
+    m_textureAttributes: 232 # CUtlVector<MaterialParamTexture_t>
+    m_stringAttributes: 256 # CUtlVector<MaterialParamString_t>
+    m_renderAttributesUsed: 280 # CUtlVector<CUtlString>
+PostProcessingBloomParameters_t:
+    m_blendMode: 0 # BloomBlendMode_t
+    m_flBloomStrength: 4 # float
+    m_flScreenBloomStrength: 8 # float
+    m_flBlurBloomStrength: 12 # float
+    m_flBloomThreshold: 16 # float
+    m_flBloomThresholdWidth: 20 # float
+    m_flSkyboxBloomStrength: 24 # float
+    m_flBloomStartValue: 28 # float
+    m_flBlurWeight: 32 # float[5]
+    m_vBlurTint: 52 # Vector[5]
+PostProcessingLocalContrastParameters_t:
+    m_flLocalContrastStrength: 0 # float
+    m_flLocalContrastEdgeStrength: 4 # float
+    m_flLocalContrastVignetteStart: 8 # float
+    m_flLocalContrastVignetteEnd: 12 # float
+    m_flLocalContrastVignetteBlur: 16 # float
+PostProcessingResource_t:
+    m_bHasTonemapParams: 0 # bool
+    m_toneMapParams: 4 # PostProcessingTonemapParameters_t
+    m_bHasBloomParams: 64 # bool
+    m_bloomParams: 68 # PostProcessingBloomParameters_t
+    m_bHasVignetteParams: 180 # bool
+    m_vignetteParams: 184 # PostProcessingVignetteParameters_t
+    m_bHasLocalContrastParams: 220 # bool
+    m_localConstrastParams: 224 # PostProcessingLocalContrastParameters_t
+    m_nColorCorrectionVolumeDim: 244 # int32_t
+    m_colorCorrectionVolumeData: 248 # CUtlBinaryBlock
+    m_bHasColorCorrection: 272 # bool
+PostProcessingTonemapParameters_t:
+    m_flExposureBias: 0 # float
+    m_flShoulderStrength: 4 # float
+    m_flLinearStrength: 8 # float
+    m_flLinearAngle: 12 # float
+    m_flToeStrength: 16 # float
+    m_flToeNum: 20 # float
+    m_flToeDenom: 24 # float
+    m_flWhitePoint: 28 # float
+    m_flLuminanceSource: 32 # float
+    m_flExposureBiasShadows: 36 # float
+    m_flExposureBiasHighlights: 40 # float
+    m_flMinShadowLum: 44 # float
+    m_flMaxShadowLum: 48 # float
+    m_flMinHighlightLum: 52 # float
+    m_flMaxHighlightLum: 56 # float
+PostProcessingVignetteParameters_t:
+    m_flVignetteStrength: 0 # float
+    m_vCenter: 4 # Vector2D
+    m_flRadius: 12 # float
+    m_flRoundness: 16 # float
+    m_flFeather: 20 # float
+    m_vColorTint: 24 # Vector

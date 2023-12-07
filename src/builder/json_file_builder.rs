@@ -43,8 +43,8 @@ impl FileBuilder for JsonFileBuilder {
         name: &str,
         comment: Option<&str>,
     ) -> Result<()> {
-        self.data.entry(name.to_string()).or_default().comment = comment.map(str::to_string);
         self.current_namespace = name.to_string();
+        self.data.entry(name.to_string()).or_default().comment = comment.map(str::to_string);
 
         Ok(())
     }
