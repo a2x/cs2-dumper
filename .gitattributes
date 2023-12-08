@@ -3,3 +3,4 @@
 *.json linguist-detectable=false
 *.py linguist-detectable=false
 *.rs linguist-detectable=true
+*.yaml linguist-detectable=false
