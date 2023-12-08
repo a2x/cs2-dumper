@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 7 Dec 2023 03:13:25 +0000
+ * Fri, 8 Dec 2023 03:41:08 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1313,15 +1313,15 @@ pub mod C_BaseCSGrenade { // C_CSWeaponBase
     pub const m_bIsHeldByPlayer: usize = 0x1A02; // bool
     pub const m_bPinPulled: usize = 0x1A03; // bool
     pub const m_bJumpThrow: usize = 0x1A04; // bool
-    pub const m_eThrowStatus: usize = 0x1A08; // EGrenadeThrowState
-    pub const m_fThrowTime: usize = 0x1A0C; // GameTime_t
-    pub const m_flThrowStrength: usize = 0x1A10; // float
-    pub const m_flThrowStrengthApproach: usize = 0x1A14; // float
-    pub const m_fDropTime: usize = 0x1A18; // GameTime_t
-    pub const m_bJustPulledPin: usize = 0x1A1C; // bool
-    pub const m_nNextHoldTick: usize = 0x1A20; // GameTick_t
-    pub const m_flNextHoldFrac: usize = 0x1A24; // float
-    pub const m_hSwitchToWeaponAfterThrow: usize = 0x1A28; // CHandle<C_CSWeaponBase>
+    pub const m_bThrowAnimating: usize = 0x1A05; // bool
+    pub const m_fThrowTime: usize = 0x1A08; // GameTime_t
+    pub const m_flThrowStrength: usize = 0x1A0C; // float
+    pub const m_flThrowStrengthApproach: usize = 0x1A10; // float
+    pub const m_fDropTime: usize = 0x1A14; // GameTime_t
+    pub const m_bJustPulledPin: usize = 0x1A18; // bool
+    pub const m_nNextHoldTick: usize = 0x1A1C; // GameTick_t
+    pub const m_flNextHoldFrac: usize = 0x1A20; // float
+    pub const m_hSwitchToWeaponAfterThrow: usize = 0x1A24; // CHandle<C_CSWeaponBase>
 }
 
 pub mod C_BaseCSGrenadeProjectile { // C_BaseGrenade

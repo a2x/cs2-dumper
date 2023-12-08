@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 7 Dec 2023 03:13:25 +0000
+ * Fri, 8 Dec 2023 03:41:08 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -1311,15 +1311,15 @@ public static class C_BaseCSGrenade { // C_CSWeaponBase
     public const nint m_bIsHeldByPlayer = 0x1A02; // bool
     public const nint m_bPinPulled = 0x1A03; // bool
     public const nint m_bJumpThrow = 0x1A04; // bool
-    public const nint m_eThrowStatus = 0x1A08; // EGrenadeThrowState
-    public const nint m_fThrowTime = 0x1A0C; // GameTime_t
-    public const nint m_flThrowStrength = 0x1A10; // float
-    public const nint m_flThrowStrengthApproach = 0x1A14; // float
-    public const nint m_fDropTime = 0x1A18; // GameTime_t
-    public const nint m_bJustPulledPin = 0x1A1C; // bool
-    public const nint m_nNextHoldTick = 0x1A20; // GameTick_t
-    public const nint m_flNextHoldFrac = 0x1A24; // float
-    public const nint m_hSwitchToWeaponAfterThrow = 0x1A28; // CHandle<C_CSWeaponBase>
+    public const nint m_bThrowAnimating = 0x1A05; // bool
+    public const nint m_fThrowTime = 0x1A08; // GameTime_t
+    public const nint m_flThrowStrength = 0x1A0C; // float
+    public const nint m_flThrowStrengthApproach = 0x1A10; // float
+    public const nint m_fDropTime = 0x1A14; // GameTime_t
+    public const nint m_bJustPulledPin = 0x1A18; // bool
+    public const nint m_nNextHoldTick = 0x1A1C; // GameTick_t
+    public const nint m_flNextHoldFrac = 0x1A20; // float
+    public const nint m_hSwitchToWeaponAfterThrow = 0x1A24; // CHandle<C_CSWeaponBase>
 }
 
 public static class C_BaseCSGrenadeProjectile { // C_BaseGrenade

@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 7 Dec 2023 03:13:25 +0000
+Fri, 8 Dec 2023 03:41:08 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -1187,15 +1187,15 @@ class C_BaseCSGrenade: # C_CSWeaponBase
     m_bIsHeldByPlayer = 0x1A02 # bool
     m_bPinPulled = 0x1A03 # bool
     m_bJumpThrow = 0x1A04 # bool
-    m_eThrowStatus = 0x1A08 # EGrenadeThrowState
-    m_fThrowTime = 0x1A0C # GameTime_t
-    m_flThrowStrength = 0x1A10 # float
-    m_flThrowStrengthApproach = 0x1A14 # float
-    m_fDropTime = 0x1A18 # GameTime_t
-    m_bJustPulledPin = 0x1A1C # bool
-    m_nNextHoldTick = 0x1A20 # GameTick_t
-    m_flNextHoldFrac = 0x1A24 # float
-    m_hSwitchToWeaponAfterThrow = 0x1A28 # CHandle<C_CSWeaponBase>
+    m_bThrowAnimating = 0x1A05 # bool
+    m_fThrowTime = 0x1A08 # GameTime_t
+    m_flThrowStrength = 0x1A0C # float
+    m_flThrowStrengthApproach = 0x1A10 # float
+    m_fDropTime = 0x1A14 # GameTime_t
+    m_bJustPulledPin = 0x1A18 # bool
+    m_nNextHoldTick = 0x1A1C # GameTick_t
+    m_flNextHoldFrac = 0x1A20 # float
+    m_hSwitchToWeaponAfterThrow = 0x1A24 # CHandle<C_CSWeaponBase>
 
 class C_BaseCSGrenadeProjectile: # C_BaseGrenade
     m_vInitialPosition = 0x1068 # Vector

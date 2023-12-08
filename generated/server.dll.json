@@ -853,9 +853,9 @@
         "value": 3632,
         "comment": "bool"
       },
-      "m_eThrowStatus": {
+      "m_bThrowAnimating": {
         "value": 3636,
-        "comment": "EGrenadeThrowState"
+        "comment": "bool"
       },
       "m_fDropTime": {
         "value": 3652,

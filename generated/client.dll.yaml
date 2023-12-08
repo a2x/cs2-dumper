@@ -1059,15 +1059,15 @@ C_BaseCSGrenade: # C_CSWeaponBase
     m_bIsHeldByPlayer: 6658 # bool
     m_bPinPulled: 6659 # bool
     m_bJumpThrow: 6660 # bool
-    m_eThrowStatus: 6664 # EGrenadeThrowState
-    m_fThrowTime: 6668 # GameTime_t
-    m_flThrowStrength: 6672 # float
-    m_flThrowStrengthApproach: 6676 # float
-    m_fDropTime: 6680 # GameTime_t
-    m_bJustPulledPin: 6684 # bool
-    m_nNextHoldTick: 6688 # GameTick_t
-    m_flNextHoldFrac: 6692 # float
-    m_hSwitchToWeaponAfterThrow: 6696 # CHandle<C_CSWeaponBase>
+    m_bThrowAnimating: 6661 # bool
+    m_fThrowTime: 6664 # GameTime_t
+    m_flThrowStrength: 6668 # float
+    m_flThrowStrengthApproach: 6672 # float
+    m_fDropTime: 6676 # GameTime_t
+    m_bJustPulledPin: 6680 # bool
+    m_nNextHoldTick: 6684 # GameTick_t
+    m_flNextHoldFrac: 6688 # float
+    m_hSwitchToWeaponAfterThrow: 6692 # CHandle<C_CSWeaponBase>
 C_BaseCSGrenadeProjectile: # C_BaseGrenade
     m_vInitialPosition: 4200 # Vector
     m_vInitialVelocity: 4212 # Vector

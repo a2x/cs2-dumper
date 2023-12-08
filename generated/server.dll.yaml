@@ -207,7 +207,7 @@ CBaseCSGrenade: # CCSWeaponBase
     m_bIsHeldByPlayer: 3633 # bool
     m_bPinPulled: 3634 # bool
     m_bJumpThrow: 3635 # bool
-    m_eThrowStatus: 3636 # EGrenadeThrowState
+    m_bThrowAnimating: 3636 # bool
     m_fThrowTime: 3640 # GameTime_t
     m_flThrowStrength: 3644 # float
     m_flThrowStrengthApproach: 3648 # float

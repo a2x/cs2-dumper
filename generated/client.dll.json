@@ -4318,7 +4318,7 @@
         "comment": "bool"
       },
       "m_bJustPulledPin": {
-        "value": 6684,
+        "value": 6680,
         "comment": "bool"
       },
       "m_bPinPulled": {
@@ -4329,36 +4329,36 @@
         "value": 6657,
         "comment": "bool"
       },
-      "m_eThrowStatus": {
-        "value": 6664,
-        "comment": "EGrenadeThrowState"
+      "m_bThrowAnimating": {
+        "value": 6661,
+        "comment": "bool"
       },
       "m_fDropTime": {
-        "value": 6680,
+        "value": 6676,
         "comment": "GameTime_t"
       },
       "m_fThrowTime": {
-        "value": 6668,
+        "value": 6664,
         "comment": "GameTime_t"
       },
       "m_flNextHoldFrac": {
-        "value": 6692,
+        "value": 6688,
         "comment": "float"
       },
       "m_flThrowStrength": {
-        "value": 6672,
+        "value": 6668,
         "comment": "float"
       },
       "m_flThrowStrengthApproach": {
-        "value": 6676,
+        "value": 6672,
         "comment": "float"
       },
       "m_hSwitchToWeaponAfterThrow": {
-        "value": 6696,
+        "value": 6692,
         "comment": "CHandle<C_CSWeaponBase>"
       },
       "m_nNextHoldTick": {
-        "value": 6688,
+        "value": 6684,
         "comment": "GameTick_t"
       }
     },

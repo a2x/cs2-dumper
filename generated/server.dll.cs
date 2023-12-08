@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 7 Dec 2023 03:13:25 +0000
+ * Fri, 8 Dec 2023 03:41:07 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -261,7 +261,7 @@ public static class CBaseCSGrenade { // CCSWeaponBase
     public const nint m_bIsHeldByPlayer = 0xE31; // bool
     public const nint m_bPinPulled = 0xE32; // bool
     public const nint m_bJumpThrow = 0xE33; // bool
-    public const nint m_eThrowStatus = 0xE34; // EGrenadeThrowState
+    public const nint m_bThrowAnimating = 0xE34; // bool
     public const nint m_fThrowTime = 0xE38; // GameTime_t
     public const nint m_flThrowStrength = 0xE3C; // float
     public const nint m_flThrowStrengthApproach = 0xE40; // float

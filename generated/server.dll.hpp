@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 7 Dec 2023 03:13:25 +0000
+ * Fri, 8 Dec 2023 03:41:07 +0000
  */
 
 #pragma once
@@ -265,7 +265,7 @@ namespace CBaseCSGrenade { // CCSWeaponBase
     constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0xE31; // bool
     constexpr std::ptrdiff_t m_bPinPulled = 0xE32; // bool
     constexpr std::ptrdiff_t m_bJumpThrow = 0xE33; // bool
-    constexpr std::ptrdiff_t m_eThrowStatus = 0xE34; // EGrenadeThrowState
+    constexpr std::ptrdiff_t m_bThrowAnimating = 0xE34; // bool
     constexpr std::ptrdiff_t m_fThrowTime = 0xE38; // GameTime_t
     constexpr std::ptrdiff_t m_flThrowStrength = 0xE3C; // float
     constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0xE40; // float

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 7 Dec 2023 03:13:25 +0000
+ * Fri, 8 Dec 2023 03:41:08 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -9,14 +9,14 @@ public static class animationsystem_dll { // animationsystem.dll
 }
 
 public static class client_dll { // client.dll
-    public const nint LegacyGameUI001 = 0x8A0140;
-    public const nint Source2ClientUI001 = 0x88F380;
-    public const nint Source2ClientPrediction001 = 0x7A74B0;
-    public const nint ClientToolsInfo_001 = 0x733260;
-    public const nint Source2Client002 = 0x733280;
-    public const nint GameClientExports001 = 0x733270;
-    public const nint EmptyWorldService001_Client = 0x490590;
-    public const nint Source2ClientConfig001 = 0x4774D0;
+    public const nint LegacyGameUI001 = 0x8A03B0;
+    public const nint Source2ClientUI001 = 0x88F5F0;
+    public const nint Source2ClientPrediction001 = 0x7A7720;
+    public const nint ClientToolsInfo_001 = 0x7334D0;
+    public const nint Source2Client002 = 0x7334F0;
+    public const nint GameClientExports001 = 0x7334E0;
+    public const nint EmptyWorldService001_Client = 0x490790;
+    public const nint Source2ClientConfig001 = 0x4776D0;
 }
 
 public static class engine2_dll { // engine2.dll

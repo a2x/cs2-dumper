@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 7 Dec 2023 03:13:25 +0000
+ * Fri, 8 Dec 2023 03:41:07 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -263,7 +263,7 @@ pub mod CBaseCSGrenade { // CCSWeaponBase
     pub const m_bIsHeldByPlayer: usize = 0xE31; // bool
     pub const m_bPinPulled: usize = 0xE32; // bool
     pub const m_bJumpThrow: usize = 0xE33; // bool
-    pub const m_eThrowStatus: usize = 0xE34; // EGrenadeThrowState
+    pub const m_bThrowAnimating: usize = 0xE34; // bool
     pub const m_fThrowTime: usize = 0xE38; // GameTime_t
     pub const m_flThrowStrength: usize = 0xE3C; // float
     pub const m_flThrowStrengthApproach: usize = 0xE40; // float
