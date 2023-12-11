@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 8 Dec 2023 03:41:08 +0000
+Mon, 11 Dec 2023 23:16:32 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -155,26 +155,26 @@ class steamaudio_dll: # steamaudio.dll
     SteamAudio001 = 0x12EE0
 
 class steamclient64_dll: # steamclient64.dll
-    IVALIDATE001 = 0x8503A0
-    CLIENTENGINE_INTERFACE_VERSION005 = 0x84C250
-    SteamClient021 = 0x6466D0
-    SteamClient020 = 0x6466C0
-    SteamClient019 = 0x6466B0
-    SteamClient018 = 0x6466A0
-    SteamClient017 = 0x646690
-    SteamClient016 = 0x646680
-    SteamClient015 = 0x646670
-    SteamClient014 = 0x646660
-    SteamClient013 = 0x646650
-    SteamClient012 = 0x646640
-    SteamClient011 = 0x646630
-    SteamClient010 = 0x646620
-    SteamClient009 = 0x646610
-    SteamClient008 = 0x646600
-    SteamClient007 = 0x6465F0
-    SteamClient006 = 0x6465E0
-    p2pvoice002 = 0xD97D0
-    p2pvoicesingleton002 = 0xD6200
+    IVALIDATE001 = 0x84FE60
+    CLIENTENGINE_INTERFACE_VERSION005 = 0x84BD10
+    SteamClient021 = 0x646160
+    SteamClient020 = 0x646150
+    SteamClient019 = 0x646140
+    SteamClient018 = 0x646130
+    SteamClient017 = 0x646120
+    SteamClient016 = 0x646110
+    SteamClient015 = 0x646100
+    SteamClient014 = 0x6460F0
+    SteamClient013 = 0x6460E0
+    SteamClient012 = 0x6460D0
+    SteamClient011 = 0x6460C0
+    SteamClient010 = 0x6460B0
+    SteamClient009 = 0x6460A0
+    SteamClient008 = 0x646090
+    SteamClient007 = 0x646080
+    SteamClient006 = 0x646070
+    p2pvoice002 = 0xD97C0
+    p2pvoicesingleton002 = 0xD6220
 
 class tier0_dll: # tier0.dll
     VStringTokenSystem001 = 0x18C2B0

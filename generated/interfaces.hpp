@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 8 Dec 2023 03:41:08 +0000
+ * Mon, 11 Dec 2023 23:16:32 +0000
  */
 
 #pragma once
@@ -185,26 +185,26 @@ namespace steamaudio_dll { // steamaudio.dll
 }
 
 namespace steamclient64_dll { // steamclient64.dll
-    constexpr std::ptrdiff_t IVALIDATE001 = 0x8503A0;
-    constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x84C250;
-    constexpr std::ptrdiff_t SteamClient021 = 0x6466D0;
-    constexpr std::ptrdiff_t SteamClient020 = 0x6466C0;
-    constexpr std::ptrdiff_t SteamClient019 = 0x6466B0;
-    constexpr std::ptrdiff_t SteamClient018 = 0x6466A0;
-    constexpr std::ptrdiff_t SteamClient017 = 0x646690;
-    constexpr std::ptrdiff_t SteamClient016 = 0x646680;
-    constexpr std::ptrdiff_t SteamClient015 = 0x646670;
-    constexpr std::ptrdiff_t SteamClient014 = 0x646660;
-    constexpr std::ptrdiff_t SteamClient013 = 0x646650;
-    constexpr std::ptrdiff_t SteamClient012 = 0x646640;
-    constexpr std::ptrdiff_t SteamClient011 = 0x646630;
-    constexpr std::ptrdiff_t SteamClient010 = 0x646620;
-    constexpr std::ptrdiff_t SteamClient009 = 0x646610;
-    constexpr std::ptrdiff_t SteamClient008 = 0x646600;
-    constexpr std::ptrdiff_t SteamClient007 = 0x6465F0;
-    constexpr std::ptrdiff_t SteamClient006 = 0x6465E0;
-    constexpr std::ptrdiff_t p2pvoice002 = 0xD97D0;
-    constexpr std::ptrdiff_t p2pvoicesingleton002 = 0xD6200;
+    constexpr std::ptrdiff_t IVALIDATE001 = 0x84FE60;
+    constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x84BD10;
+    constexpr std::ptrdiff_t SteamClient021 = 0x646160;
+    constexpr std::ptrdiff_t SteamClient020 = 0x646150;
+    constexpr std::ptrdiff_t SteamClient019 = 0x646140;
+    constexpr std::ptrdiff_t SteamClient018 = 0x646130;
+    constexpr std::ptrdiff_t SteamClient017 = 0x646120;
+    constexpr std::ptrdiff_t SteamClient016 = 0x646110;
+    constexpr std::ptrdiff_t SteamClient015 = 0x646100;
+    constexpr std::ptrdiff_t SteamClient014 = 0x6460F0;
+    constexpr std::ptrdiff_t SteamClient013 = 0x6460E0;
+    constexpr std::ptrdiff_t SteamClient012 = 0x6460D0;
+    constexpr std::ptrdiff_t SteamClient011 = 0x6460C0;
+    constexpr std::ptrdiff_t SteamClient010 = 0x6460B0;
+    constexpr std::ptrdiff_t SteamClient009 = 0x6460A0;
+    constexpr std::ptrdiff_t SteamClient008 = 0x646090;
+    constexpr std::ptrdiff_t SteamClient007 = 0x646080;
+    constexpr std::ptrdiff_t SteamClient006 = 0x646070;
+    constexpr std::ptrdiff_t p2pvoice002 = 0xD97C0;
+    constexpr std::ptrdiff_t p2pvoicesingleton002 = 0xD6220;
 }
 
 namespace tier0_dll { // tier0.dll

@@ -125,26 +125,26 @@ soundsystem_dll: # soundsystem.dll
 steamaudio_dll: # steamaudio.dll
     SteamAudio001: 77536
 steamclient64_dll: # steamclient64.dll
-    IVALIDATE001: 8717216
-    CLIENTENGINE_INTERFACE_VERSION005: 8700496
-    SteamClient021: 6579920
-    SteamClient020: 6579904
-    SteamClient019: 6579888
-    SteamClient018: 6579872
-    SteamClient017: 6579856
-    SteamClient016: 6579840
-    SteamClient015: 6579824
-    SteamClient014: 6579808
-    SteamClient013: 6579792
-    SteamClient012: 6579776
-    SteamClient011: 6579760
-    SteamClient010: 6579744
-    SteamClient009: 6579728
-    SteamClient008: 6579712
-    SteamClient007: 6579696
-    SteamClient006: 6579680
-    p2pvoice002: 890832
-    p2pvoicesingleton002: 877056
+    IVALIDATE001: 8715872
+    CLIENTENGINE_INTERFACE_VERSION005: 8699152
+    SteamClient021: 6578528
+    SteamClient020: 6578512
+    SteamClient019: 6578496
+    SteamClient018: 6578480
+    SteamClient017: 6578464
+    SteamClient016: 6578448
+    SteamClient015: 6578432
+    SteamClient014: 6578416
+    SteamClient013: 6578400
+    SteamClient012: 6578384
+    SteamClient011: 6578368
+    SteamClient010: 6578352
+    SteamClient009: 6578336
+    SteamClient008: 6578320
+    SteamClient007: 6578304
+    SteamClient006: 6578288
+    p2pvoice002: 890816
+    p2pvoicesingleton002: 877088
 tier0_dll: # tier0.dll
     VStringTokenSystem001: 1622704
     TestScriptMgr001: 1308176

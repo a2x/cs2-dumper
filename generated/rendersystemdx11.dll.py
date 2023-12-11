@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 8 Dec 2023 03:41:06 +0000
+Mon, 11 Dec 2023 23:16:31 +0000
 '''
 
 class RenderInputLayoutField_t:

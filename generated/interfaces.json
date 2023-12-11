@@ -528,83 +528,83 @@
   "steamclient64_dll": {
     "data": {
       "CLIENTENGINE_INTERFACE_VERSION005": {
-        "value": 8700496,
+        "value": 8699152,
         "comment": null
       },
       "IVALIDATE001": {
-        "value": 8717216,
+        "value": 8715872,
         "comment": null
       },
       "SteamClient006": {
-        "value": 6579680,
+        "value": 6578288,
         "comment": null
       },
       "SteamClient007": {
-        "value": 6579696,
+        "value": 6578304,
         "comment": null
       },
       "SteamClient008": {
-        "value": 6579712,
+        "value": 6578320,
         "comment": null
       },
       "SteamClient009": {
-        "value": 6579728,
+        "value": 6578336,
         "comment": null
       },
       "SteamClient010": {
-        "value": 6579744,
+        "value": 6578352,
         "comment": null
       },
       "SteamClient011": {
-        "value": 6579760,
+        "value": 6578368,
         "comment": null
       },
       "SteamClient012": {
-        "value": 6579776,
+        "value": 6578384,
         "comment": null
       },
       "SteamClient013": {
-        "value": 6579792,
+        "value": 6578400,
         "comment": null
       },
       "SteamClient014": {
-        "value": 6579808,
+        "value": 6578416,
         "comment": null
       },
       "SteamClient015": {
-        "value": 6579824,
+        "value": 6578432,
         "comment": null
       },
       "SteamClient016": {
-        "value": 6579840,
+        "value": 6578448,
         "comment": null
       },
       "SteamClient017": {
-        "value": 6579856,
+        "value": 6578464,
         "comment": null
       },
       "SteamClient018": {
-        "value": 6579872,
+        "value": 6578480,
         "comment": null
       },
       "SteamClient019": {
-        "value": 6579888,
+        "value": 6578496,
         "comment": null
       },
       "SteamClient020": {
-        "value": 6579904,
+        "value": 6578512,
         "comment": null
       },
       "SteamClient021": {
-        "value": 6579920,
+        "value": 6578528,
         "comment": null
       },
       "p2pvoice002": {
-        "value": 890832,
+        "value": 890816,
         "comment": null
       },
       "p2pvoicesingleton002": {
-        "value": 877056,
+        "value": 877088,
         "comment": null
       }
     },
