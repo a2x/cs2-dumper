@@ -47,7 +47,7 @@ impl Process {
         })
     }
 
-    /// Initializes the process by parsing the loaded modules.
+    /// Initializes the `Process` instance by parsing all loaded modules in the process.
     ///
     /// # Arguments
     ///

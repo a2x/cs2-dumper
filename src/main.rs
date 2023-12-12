@@ -1,7 +1,7 @@
 #![allow(dead_code)]
 #![feature(offset_of)]
 
-use anyhow::Result;
+use anyhow::{bail, Result};
 
 use builder::*;
 
@@ -14,6 +14,7 @@ use log::LevelFilter;
 use simplelog::{info, ColorChoice, ConfigBuilder, TermLogger, TerminalMode};
 
 use std::fs;
+use std::path::Path;
 use std::time::Instant;
 
 use util::Process;
@@ -43,7 +44,7 @@ struct Args {
     schemas: bool,
 
     /// List of file builders to use.
-    /// Valid values are: `.cs`, `.hpp`, `.json`, `.py`, `.rs`, `.yaml`.
+    /// Valid values: `.cs`, `.hpp`, `.json`, `.py`, `.rs`, `.yaml`.
     #[arg(
         short,
         long,
@@ -89,13 +90,21 @@ fn main() -> Result<()> {
 
     TermLogger::init(log_level, config, TerminalMode::Mixed, ColorChoice::Auto)?;
 
-    let now = Instant::now();
+    // Check if the config file exists.
+    if !Path::new("config.json").exists() {
+        bail!("Missing config.json file");
+    }
 
+    // Create the output directory if it doesn't exist.
     fs::create_dir_all(&output)?;
 
+    // Open a handle to the game process.
     let mut process = Process::new("cs2.exe")?;
 
     process.initialize()?;
+
+    // Start the timer.
+    let now = Instant::now();
 
     let all = !(interfaces || offsets || schemas);
 
@@ -111,6 +120,7 @@ fn main() -> Result<()> {
         dump_offsets(&mut process, &mut builders, &output, indent)?;
     }
 
+    // Stop the timer.
     info!(
         "<on-green>Done!</> <green>Time elapsed: <b>{:?}</></>",
         now.elapsed()
