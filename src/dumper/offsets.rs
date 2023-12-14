@@ -360,7 +360,7 @@ mod tests {
         sleep(Duration::from_secs(1));
 
         // See https://www.unknowncheats.me/forum/3855779-post889.html for button codes.
-        println!("INSERT down: {}", is_key_down(73));
+        println!("INSERT key down: {}", is_key_down(73));
 
         Ok(())
     }
@@ -445,10 +445,10 @@ mod tests {
             .base();
 
         let window_width_offset = get_offset_value("engine2.dll", "dwWindowWidth")
-            .expect("Failed to find dwLocalPlayerPawn offset");
+            .expect("Failed to find dwWindowWidth offset");
 
         let window_height_offset = get_offset_value("engine2.dll", "dwWindowHeight")
-            .expect("Failed to find dwLocalPlayerPawn offset");
+            .expect("Failed to find dwWindowHeight offset");
 
         let window_width =
             process.read_memory::<u32>(engine_base + window_width_offset as usize)?;
