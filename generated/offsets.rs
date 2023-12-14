@@ -1,14 +1,14 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 14 Dec 2023 11:58:28 +0000
+ * Thu, 14 Dec 2023 15:21:21 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod client_dll { // client.dll
     pub const dwEntityList: usize = 0x17C18E0;
-    pub const dwForceAttack: usize = 0x16C2190;
-    pub const dwForceAttack2: usize = 0x16C2340;
+    pub const dwForceAttack: usize = 0x16C1E30;
+    pub const dwForceAttack2: usize = 0x16C1EC0;
     pub const dwForceBackward: usize = 0x16C2100;
     pub const dwForceCrouch: usize = 0x16C23D0;
     pub const dwForceForward: usize = 0x16C2070;

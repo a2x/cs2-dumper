@@ -235,7 +235,7 @@ mod tests {
             .expect("Failed to find client.dll")
             .base();
 
-        const BUTTONS: [&str; 8] = [
+        const FORCE_BUTTONS: [&str; 8] = [
             "dwForceAttack",
             "dwForceAttack2",
             "dwForceBackward",
@@ -257,7 +257,7 @@ mod tests {
         // Sleep for a second so we're able to test.
         sleep(Duration::from_secs(1));
 
-        for button in &BUTTONS {
+        for button in &FORCE_BUTTONS {
             let offset = get_offset_value("client.dll", button)
                 .expect(&format!("Failed to find {} offset", button));
 

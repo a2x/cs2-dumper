@@ -1,12 +1,12 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 14 Dec 2023 11:58:28 +0000
+Thu, 14 Dec 2023 15:21:21 +0000
 '''
 
 class client_dll: # client.dll
     dwEntityList = 0x17C18E0
-    dwForceAttack = 0x16C2190
-    dwForceAttack2 = 0x16C2340
+    dwForceAttack = 0x16C1E30
+    dwForceAttack2 = 0x16C1EC0
     dwForceBackward = 0x16C2100
     dwForceCrouch = 0x16C23D0
     dwForceForward = 0x16C2070
