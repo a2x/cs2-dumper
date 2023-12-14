@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 14 Dec 2023 01:10:27 +0000
+Thu, 14 Dec 2023 11:58:27 +0000
 '''
 
 class ActiveModelConfig_t:

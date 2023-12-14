@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 14 Dec 2023 01:10:27 +0000
+Thu, 14 Dec 2023 11:58:27 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -134,11 +134,11 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA3D1D0
-    ServerToolsInfo_001 = 0x840010
-    Source2GameClients001 = 0x840020
-    Source2GameEntities001 = 0x840030
-    Source2Server001 = 0x840040
+    NavGameTest001 = 0xA3D210
+    ServerToolsInfo_001 = 0x840050
+    Source2GameClients001 = 0x840060
+    Source2GameEntities001 = 0x840070
+    Source2Server001 = 0x840080
     EmptyWorldService001_Server = 0x5920A0
     Source2ServerConfig001 = 0x571FD0
     EntitySubclassUtilsV001 = 0x2D0880
