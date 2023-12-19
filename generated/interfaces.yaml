@@ -3,14 +3,14 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 411248
     AnimationSystem_001: 389584
 client_dll: # client.dll
-    LegacyGameUI001: 9052576
-    Source2ClientUI001: 8983520
-    Source2ClientPrediction001: 8034160
-    ClientToolsInfo_001: 7558464
-    Source2Client002: 7558496
-    GameClientExports001: 7558480
-    EmptyWorldService001_Client: 4786496
-    Source2ClientConfig001: 4683904
+    LegacyGameUI001: 9054688
+    Source2ClientUI001: 8985632
+    Source2ClientPrediction001: 8035456
+    ClientToolsInfo_001: 7559952
+    Source2Client002: 7559984
+    GameClientExports001: 7559968
+    EmptyWorldService001_Client: 4787472
+    Source2ClientConfig001: 4684880
 engine2_dll: # engine2.dll
     SimpleEngineLoopService_001: 1992160
     ClientServerEngineLoopService_001: 1949920
@@ -107,16 +107,16 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43312
 server_dll: # server.dll
-    NavGameTest001: 10736144
-    ServerToolsInfo_001: 8650832
-    Source2GameClients001: 8650848
-    Source2GameEntities001: 8650864
-    Source2Server001: 8650880
-    EmptyWorldService001_Server: 5841056
-    Source2ServerConfig001: 5709776
-    EntitySubclassUtilsV001: 2951296
-    customnavsystem001: 2414784
-    Source2GameDirector001: 1332832
+    NavGameTest001: 10741936
+    ServerToolsInfo_001: 8656784
+    Source2GameClients001: 8656800
+    Source2GameEntities001: 8656816
+    Source2Server001: 8656832
+    EmptyWorldService001_Server: 5846368
+    Source2ServerConfig001: 5715088
+    EntitySubclassUtilsV001: 2955936
+    customnavsystem001: 2419920
+    Source2GameDirector001: 1336368
 soundsystem_dll: # soundsystem.dll
     SoundOpSystem001: 1407744
     SoundOpSystemEdit001: 577248
@@ -157,8 +157,8 @@ valve_avi_dll: # valve_avi.dll
 valve_wmf_dll: # valve_wmf.dll
     VMediaFoundation001: 4816
 vphysics2_dll: # vphysics2.dll
-    VPhysics2_Handle_Interface_001: 397600
-    VPhysics2_Interface_001: 378688
+    VPhysics2_Handle_Interface_001: 399760
+    VPhysics2_Interface_001: 380848
 vscript_dll: # vscript.dll
     VScriptManager010: 204192
 vstdlib_s64_dll: # vstdlib_s64.dll

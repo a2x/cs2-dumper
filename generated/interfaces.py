@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 14 Dec 2023 11:58:27 +0000
+Tue, 19 Dec 2023 04:46:27 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,14 +8,14 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x8A21A0
-    Source2ClientUI001 = 0x8913E0
-    Source2ClientPrediction001 = 0x7A9770
-    ClientToolsInfo_001 = 0x735540
-    Source2Client002 = 0x735560
-    GameClientExports001 = 0x735550
-    EmptyWorldService001_Client = 0x490940
-    Source2ClientConfig001 = 0x477880
+    LegacyGameUI001 = 0x8A29E0
+    Source2ClientUI001 = 0x891C20
+    Source2ClientPrediction001 = 0x7A9C80
+    ClientToolsInfo_001 = 0x735B10
+    Source2Client002 = 0x735B30
+    GameClientExports001 = 0x735B20
+    EmptyWorldService001_Client = 0x490D10
+    Source2ClientConfig001 = 0x477C50
 
 class engine2_dll: # engine2.dll
     SimpleEngineLoopService_001 = 0x1E65E0
@@ -134,16 +134,16 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xA930
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA3D210
-    ServerToolsInfo_001 = 0x840050
-    Source2GameClients001 = 0x840060
-    Source2GameEntities001 = 0x840070
-    Source2Server001 = 0x840080
-    EmptyWorldService001_Server = 0x5920A0
-    Source2ServerConfig001 = 0x571FD0
-    EntitySubclassUtilsV001 = 0x2D0880
-    customnavsystem001 = 0x24D8C0
-    Source2GameDirector001 = 0x145660
+    NavGameTest001 = 0xA3E8B0
+    ServerToolsInfo_001 = 0x841790
+    Source2GameClients001 = 0x8417A0
+    Source2GameEntities001 = 0x8417B0
+    Source2Server001 = 0x8417C0
+    EmptyWorldService001_Server = 0x593560
+    Source2ServerConfig001 = 0x573490
+    EntitySubclassUtilsV001 = 0x2D1AA0
+    customnavsystem001 = 0x24ECD0
+    Source2GameDirector001 = 0x146430
 
 class soundsystem_dll: # soundsystem.dll
     SoundOpSystem001 = 0x157B00
@@ -192,8 +192,8 @@ class valve_wmf_dll: # valve_wmf.dll
     VMediaFoundation001 = 0x12D0
 
 class vphysics2_dll: # vphysics2.dll
-    VPhysics2_Handle_Interface_001 = 0x61120
-    VPhysics2_Interface_001 = 0x5C740
+    VPhysics2_Handle_Interface_001 = 0x61990
+    VPhysics2_Interface_001 = 0x5CFB0
 
 class vscript_dll: # vscript.dll
     VScriptManager010 = 0x31DA0

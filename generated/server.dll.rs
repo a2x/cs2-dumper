@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 14 Dec 2023 11:58:27 +0000
+ * Tue, 19 Dec 2023 04:46:27 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1525,6 +1525,8 @@ pub mod CCSPlayerController { // CBasePlayerController
     pub const m_dblLastReceivedPacketPlatFloatTime: usize = 0xF8F8; // double
     pub const m_LastTeamDamageWarningTime: usize = 0xF900; // GameTime_t
     pub const m_LastTimePlayerWasDisconnectedForPawnsRemove: usize = 0xF904; // GameTime_t
+    pub const m_nSuspiciousHitCount: usize = 0xF908; // uint32_t
+    pub const m_nNonSuspiciousHitStreak: usize = 0xF90C; // uint32_t
 }
 
 pub mod CCSPlayerController_ActionTrackingServices { // CPlayerControllerComponent

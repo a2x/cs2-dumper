@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 14 Dec 2023 11:58:27 +0000
+ * Tue, 19 Dec 2023 04:46:27 +0000
  */
 
 #pragma once
@@ -1527,6 +1527,8 @@ namespace CCSPlayerController { // CBasePlayerController
     constexpr std::ptrdiff_t m_dblLastReceivedPacketPlatFloatTime = 0xF8F8; // double
     constexpr std::ptrdiff_t m_LastTeamDamageWarningTime = 0xF900; // GameTime_t
     constexpr std::ptrdiff_t m_LastTimePlayerWasDisconnectedForPawnsRemove = 0xF904; // GameTime_t
+    constexpr std::ptrdiff_t m_nSuspiciousHitCount = 0xF908; // uint32_t
+    constexpr std::ptrdiff_t m_nNonSuspiciousHitStreak = 0xF90C; // uint32_t
 }
 
 namespace CCSPlayerController_ActionTrackingServices { // CPlayerControllerComponent

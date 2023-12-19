@@ -1301,6 +1301,8 @@ CCSPlayerController: # CBasePlayerController
     m_dblLastReceivedPacketPlatFloatTime: 63736 # double
     m_LastTeamDamageWarningTime: 63744 # GameTime_t
     m_LastTimePlayerWasDisconnectedForPawnsRemove: 63748 # GameTime_t
+    m_nSuspiciousHitCount: 63752 # uint32_t
+    m_nNonSuspiciousHitStreak: 63756 # uint32_t
 CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats: 64 # CUtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
     m_matchStats: 144 # CSMatchStats_t

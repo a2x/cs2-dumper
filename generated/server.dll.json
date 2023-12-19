@@ -5217,6 +5217,10 @@
         "value": 1896,
         "comment": "int32_t"
       },
+      "m_nNonSuspiciousHitStreak": {
+        "value": 63756,
+        "comment": "uint32_t"
+      },
       "m_nPawnCharacterDefIndex": {
         "value": 2026,
         "comment": "uint16_t"
@@ -5232,6 +5236,10 @@
       "m_nQuestProgressReason": {
         "value": 1904,
         "comment": "QuestProgress::Reason"
+      },
+      "m_nSuspiciousHitCount": {
+        "value": 63752,
+        "comment": "uint32_t"
       },
       "m_nUpdateCounter": {
         "value": 2084,
