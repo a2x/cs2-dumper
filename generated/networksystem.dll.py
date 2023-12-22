@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 19 Dec 2023 04:46:26 +0000
+Fri, 22 Dec 2023 03:14:56 +0000
 '''
 
 class ChangeAccessorFieldPathIndex_t:
