@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 22 Dec 2023 03:14:58 +0000
+ * Sat, 30 Dec 2023 03:17:26 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
