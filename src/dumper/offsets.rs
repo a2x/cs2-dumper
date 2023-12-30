@@ -111,6 +111,24 @@ pub fn dump_offsets(
             (signature.name, address.sub(module.base().0).0)
         };
 
+        if name == "dwBuildNumber" {
+            let build_number: u32 = process.read_memory(module.base() + value)?;
+            debug!("Game build number: <bright-yellow>{}</>", build_number);
+
+            let container = entries
+                .entry(String::from("game_info"))
+                .or_default();
+
+            container.comment = Some(String::from("Some additional information about the game at dump time"));
+
+            container.data.push(Entry {
+                name: String::from("buildNumber"),
+                value: build_number as usize,
+                comment: Some(String::from("Game build number")),
+                indent: Some(indent),
+            });
+        }
+
         let container = entries
             .entry(signature.module.replace(".", "_"))
             .or_default();
