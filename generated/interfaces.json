@@ -15,7 +15,7 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7559952,
+        "value": 7560144,
         "comment": null
       },
       "EmptyWorldService001_Client": {
@@ -23,15 +23,15 @@
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7559968,
+        "value": 7560160,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9054688,
+        "value": 9053264,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7559984,
+        "value": 7560176,
         "comment": null
       },
       "Source2ClientConfig001": {
@@ -39,11 +39,11 @@
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8035456,
+        "value": 8034016,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8985632,
+        "value": 8984208,
         "comment": null
       }
     },
@@ -388,15 +388,15 @@
   "rendersystemdx11_dll": {
     "data": {
       "RenderDeviceMgr001": {
-        "value": 304768,
+        "value": 305328,
         "comment": null
       },
       "RenderUtils_001": {
-        "value": 340224,
+        "value": 340784,
         "comment": null
       },
       "VRenderDeviceMgrBackdoor001": {
-        "value": 304784,
+        "value": 305344,
         "comment": null
       }
     },

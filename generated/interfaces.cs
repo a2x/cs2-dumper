@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 30 Dec 2023 03:17:26 +0000
+ * Fri, 5 Jan 2024 01:00:02 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -9,12 +9,12 @@ public static class animationsystem_dll { // animationsystem.dll
 }
 
 public static class client_dll { // client.dll
-    public const nint LegacyGameUI001 = 0x8A29E0;
-    public const nint Source2ClientUI001 = 0x891C20;
-    public const nint Source2ClientPrediction001 = 0x7A9C80;
-    public const nint ClientToolsInfo_001 = 0x735B10;
-    public const nint Source2Client002 = 0x735B30;
-    public const nint GameClientExports001 = 0x735B20;
+    public const nint LegacyGameUI001 = 0x8A2450;
+    public const nint Source2ClientUI001 = 0x891690;
+    public const nint Source2ClientPrediction001 = 0x7A96E0;
+    public const nint ClientToolsInfo_001 = 0x735BD0;
+    public const nint Source2Client002 = 0x735BF0;
+    public const nint GameClientExports001 = 0x735BE0;
     public const nint EmptyWorldService001_Client = 0x490D10;
     public const nint Source2ClientConfig001 = 0x477C50;
 }
@@ -132,9 +132,9 @@ public static class pulse_system_dll { // pulse_system.dll
 }
 
 public static class rendersystemdx11_dll { // rendersystemdx11.dll
-    public const nint RenderUtils_001 = 0x53100;
-    public const nint VRenderDeviceMgrBackdoor001 = 0x4A690;
-    public const nint RenderDeviceMgr001 = 0x4A680;
+    public const nint RenderUtils_001 = 0x53330;
+    public const nint VRenderDeviceMgrBackdoor001 = 0x4A8C0;
+    public const nint RenderDeviceMgr001 = 0x4A8B0;
 }
 
 public static class resourcesystem_dll { // resourcesystem.dll

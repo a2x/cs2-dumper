@@ -3,12 +3,12 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 411248
     AnimationSystem_001: 389584
 client_dll: # client.dll
-    LegacyGameUI001: 9054688
-    Source2ClientUI001: 8985632
-    Source2ClientPrediction001: 8035456
-    ClientToolsInfo_001: 7559952
-    Source2Client002: 7559984
-    GameClientExports001: 7559968
+    LegacyGameUI001: 9053264
+    Source2ClientUI001: 8984208
+    Source2ClientPrediction001: 8034016
+    ClientToolsInfo_001: 7560144
+    Source2Client002: 7560176
+    GameClientExports001: 7560160
     EmptyWorldService001_Client: 4787472
     Source2ClientConfig001: 4684880
 engine2_dll: # engine2.dll
@@ -92,9 +92,9 @@ particles_dll: # particles.dll
 pulse_system_dll: # pulse_system.dll
     IPulseSystem_001: 23344
 rendersystemdx11_dll: # rendersystemdx11.dll
-    RenderUtils_001: 340224
-    VRenderDeviceMgrBackdoor001: 304784
-    RenderDeviceMgr001: 304768
+    RenderUtils_001: 340784
+    VRenderDeviceMgrBackdoor001: 305344
+    RenderDeviceMgr001: 305328
 resourcesystem_dll: # resourcesystem.dll
     ResourceSystem013: 67152
 scenefilecache_dll: # scenefilecache.dll

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 30 Dec 2023 03:17:26 +0000
+ * Fri, 5 Jan 2024 01:00:02 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -11,12 +11,12 @@ pub mod animationsystem_dll { // animationsystem.dll
 }
 
 pub mod client_dll { // client.dll
-    pub const LegacyGameUI001: usize = 0x8A29E0;
-    pub const Source2ClientUI001: usize = 0x891C20;
-    pub const Source2ClientPrediction001: usize = 0x7A9C80;
-    pub const ClientToolsInfo_001: usize = 0x735B10;
-    pub const Source2Client002: usize = 0x735B30;
-    pub const GameClientExports001: usize = 0x735B20;
+    pub const LegacyGameUI001: usize = 0x8A2450;
+    pub const Source2ClientUI001: usize = 0x891690;
+    pub const Source2ClientPrediction001: usize = 0x7A96E0;
+    pub const ClientToolsInfo_001: usize = 0x735BD0;
+    pub const Source2Client002: usize = 0x735BF0;
+    pub const GameClientExports001: usize = 0x735BE0;
     pub const EmptyWorldService001_Client: usize = 0x490D10;
     pub const Source2ClientConfig001: usize = 0x477C50;
 }
@@ -134,9 +134,9 @@ pub mod pulse_system_dll { // pulse_system.dll
 }
 
 pub mod rendersystemdx11_dll { // rendersystemdx11.dll
-    pub const RenderUtils_001: usize = 0x53100;
-    pub const VRenderDeviceMgrBackdoor001: usize = 0x4A690;
-    pub const RenderDeviceMgr001: usize = 0x4A680;
+    pub const RenderUtils_001: usize = 0x53330;
+    pub const VRenderDeviceMgrBackdoor001: usize = 0x4A8C0;
+    pub const RenderDeviceMgr001: usize = 0x4A8B0;
 }
 
 pub mod resourcesystem_dll { // resourcesystem.dll
