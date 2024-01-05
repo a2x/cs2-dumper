@@ -6,39 +6,39 @@
         "comment": null
       },
       "dwForceAttack": {
-        "value": 23862896,
+        "value": 23862928,
         "comment": null
       },
       "dwForceAttack2": {
-        "value": 23863040,
+        "value": 23863072,
         "comment": null
       },
       "dwForceBackward": {
-        "value": 23863616,
+        "value": 23863648,
         "comment": null
       },
       "dwForceCrouch": {
-        "value": 23864336,
+        "value": 23864368,
         "comment": null
       },
       "dwForceForward": {
-        "value": 23863472,
+        "value": 23863504,
         "comment": null
       },
       "dwForceJump": {
-        "value": 23864192,
+        "value": 23864224,
         "comment": null
       },
       "dwForceLeft": {
-        "value": 23863760,
+        "value": 23863792,
         "comment": null
       },
       "dwForceRight": {
-        "value": 23863904,
+        "value": 23863936,
         "comment": null
       },
       "dwGameEntitySystem": {
-        "value": 26137168,
+        "value": 26137152,
         "comment": null
       },
       "dwGameEntitySystem_getHighestEntityIndex": {
@@ -50,7 +50,7 @@
         "comment": null
       },
       "dwGlobalVars": {
-        "value": 23846040,
+        "value": 23846072,
         "comment": null
       },
       "dwGlowManager": {
@@ -58,7 +58,7 @@
         "comment": null
       },
       "dwInterfaceLinkList": {
-        "value": 26324712,
+        "value": 26324696,
         "comment": null
       },
       "dwLocalPlayerController": {
@@ -66,7 +66,7 @@
         "comment": null
       },
       "dwLocalPlayerPawn": {
-        "value": 23891768,
+        "value": 23891800,
         "comment": null
       },
       "dwPlantedC4": {
@@ -74,7 +74,7 @@
         "comment": null
       },
       "dwPrediction": {
-        "value": 23891456,
+        "value": 23891488,
         "comment": null
       },
       "dwSensitivity": {
@@ -103,11 +103,11 @@
   "engine2_dll": {
     "data": {
       "dwBuildNumber": {
-        "value": 5112788,
+        "value": 5116884,
         "comment": null
       },
       "dwNetworkGameClient": {
-        "value": 5110152,
+        "value": 5114248,
         "comment": null
       },
       "dwNetworkGameClient_getLocalPlayer": {
@@ -123,11 +123,11 @@
         "comment": null
       },
       "dwWindowHeight": {
-        "value": 5860892,
+        "value": 5864972,
         "comment": null
       },
       "dwWindowWidth": {
-        "value": 5860888,
+        "value": 5864968,
         "comment": null
       }
     },
@@ -136,7 +136,7 @@
   "game_info": {
     "data": {
       "buildNumber": {
-        "value": 13983,
+        "value": 13984,
         "comment": "Game build number"
       }
     },

@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Sat, 30 Dec 2023 03:17:26 +0000
+Fri, 5 Jan 2024 01:00:02 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,12 +8,12 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x5F1D0
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x8A29E0
-    Source2ClientUI001 = 0x891C20
-    Source2ClientPrediction001 = 0x7A9C80
-    ClientToolsInfo_001 = 0x735B10
-    Source2Client002 = 0x735B30
-    GameClientExports001 = 0x735B20
+    LegacyGameUI001 = 0x8A2450
+    Source2ClientUI001 = 0x891690
+    Source2ClientPrediction001 = 0x7A96E0
+    ClientToolsInfo_001 = 0x735BD0
+    Source2Client002 = 0x735BF0
+    GameClientExports001 = 0x735BE0
     EmptyWorldService001_Client = 0x490D10
     Source2ClientConfig001 = 0x477C50
 
@@ -114,9 +114,9 @@ class pulse_system_dll: # pulse_system.dll
     IPulseSystem_001 = 0x5B30
 
 class rendersystemdx11_dll: # rendersystemdx11.dll
-    RenderUtils_001 = 0x53100
-    VRenderDeviceMgrBackdoor001 = 0x4A690
-    RenderDeviceMgr001 = 0x4A680
+    RenderUtils_001 = 0x53330
+    VRenderDeviceMgrBackdoor001 = 0x4A8C0
+    RenderDeviceMgr001 = 0x4A8B0
 
 class resourcesystem_dll: # resourcesystem.dll
     ResourceSystem013 = 0x10650

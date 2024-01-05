@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 30 Dec 2023 03:17:26 +0000
+ * Fri, 5 Jan 2024 01:00:02 +0000
  */
 
 #pragma once
@@ -13,12 +13,12 @@ namespace animationsystem_dll { // animationsystem.dll
 }
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8A29E0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x891C20;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A9C80;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x735B10;
-    constexpr std::ptrdiff_t Source2Client002 = 0x735B30;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x735B20;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8A2450;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x891690;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A96E0;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x735BD0;
+    constexpr std::ptrdiff_t Source2Client002 = 0x735BF0;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x735BE0;
     constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x490D10;
     constexpr std::ptrdiff_t Source2ClientConfig001 = 0x477C50;
 }
@@ -136,9 +136,9 @@ namespace pulse_system_dll { // pulse_system.dll
 }
 
 namespace rendersystemdx11_dll { // rendersystemdx11.dll
-    constexpr std::ptrdiff_t RenderUtils_001 = 0x53100;
-    constexpr std::ptrdiff_t VRenderDeviceMgrBackdoor001 = 0x4A690;
-    constexpr std::ptrdiff_t RenderDeviceMgr001 = 0x4A680;
+    constexpr std::ptrdiff_t RenderUtils_001 = 0x53330;
+    constexpr std::ptrdiff_t VRenderDeviceMgrBackdoor001 = 0x4A8C0;
+    constexpr std::ptrdiff_t RenderDeviceMgr001 = 0x4A8B0;
 }
 
 namespace resourcesystem_dll { // resourcesystem.dll
