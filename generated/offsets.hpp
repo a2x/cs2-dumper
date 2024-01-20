@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 20 Jan 2024 07:10:58 +0000
+ * Sat, 20 Jan 2024 14:19:41 +0000
  */
 
 #pragma once
@@ -29,7 +29,7 @@ namespace client_dll { // client.dll
     constexpr std::ptrdiff_t dwPrediction = 0x16C8E10;
     constexpr std::ptrdiff_t dwSensitivity = 0x181FA98;
     constexpr std::ptrdiff_t dwSensitivity_sensitivity = 0x40;
-    constexpr std::ptrdiff_t dwViewAngles = 0x1882140;
+    constexpr std::ptrdiff_t dwViewAngles = 0x1884F30;
     constexpr std::ptrdiff_t dwViewMatrix = 0x1820EA0;
     constexpr std::ptrdiff_t dwViewRender = 0x18216E8;
 }

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 20 Jan 2024 07:10:58 +0000
+ * Sat, 20 Jan 2024 14:19:41 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -27,7 +27,7 @@ pub mod client_dll { // client.dll
     pub const dwPrediction: usize = 0x16C8E10;
     pub const dwSensitivity: usize = 0x181FA98;
     pub const dwSensitivity_sensitivity: usize = 0x40;
-    pub const dwViewAngles: usize = 0x1882140;
+    pub const dwViewAngles: usize = 0x1884F30;
     pub const dwViewMatrix: usize = 0x1820EA0;
     pub const dwViewRender: usize = 0x18216E8;
 }

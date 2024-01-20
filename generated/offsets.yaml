@@ -21,7 +21,7 @@ client_dll: # client.dll
     dwPrediction: 23891472
     dwSensitivity: 25295512
     dwSensitivity_sensitivity: 64
-    dwViewAngles: 25698624
+    dwViewAngles: 25710384
     dwViewMatrix: 25300640
     dwViewRender: 25302760
 engine2_dll: # engine2.dll
