@@ -3,14 +3,14 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 411248
     AnimationSystem_001: 389584
 client_dll: # client.dll
-    LegacyGameUI001: 9053264
-    Source2ClientUI001: 8984208
-    Source2ClientPrediction001: 8034016
-    ClientToolsInfo_001: 7560144
-    Source2Client002: 7560176
-    GameClientExports001: 7560160
-    EmptyWorldService001_Client: 4787472
-    Source2ClientConfig001: 4684880
+    LegacyGameUI001: 9053312
+    Source2ClientUI001: 8984256
+    Source2ClientPrediction001: 8034032
+    ClientToolsInfo_001: 7560128
+    Source2Client002: 7560160
+    GameClientExports001: 7560144
+    EmptyWorldService001_Client: 4787456
+    Source2ClientConfig001: 4684864
 engine2_dll: # engine2.dll
     SimpleEngineLoopService_001: 1992160
     ClientServerEngineLoopService_001: 1949920
@@ -125,26 +125,26 @@ soundsystem_dll: # soundsystem.dll
 steamaudio_dll: # steamaudio.dll
     SteamAudio001: 77536
 steamclient64_dll: # steamclient64.dll
-    IVALIDATE001: 8715872
-    CLIENTENGINE_INTERFACE_VERSION005: 8699152
-    SteamClient021: 6578528
-    SteamClient020: 6578512
-    SteamClient019: 6578496
-    SteamClient018: 6578480
-    SteamClient017: 6578464
-    SteamClient016: 6578448
-    SteamClient015: 6578432
-    SteamClient014: 6578416
-    SteamClient013: 6578400
-    SteamClient012: 6578384
-    SteamClient011: 6578368
-    SteamClient010: 6578352
-    SteamClient009: 6578336
-    SteamClient008: 6578320
-    SteamClient007: 6578304
-    SteamClient006: 6578288
-    p2pvoice002: 890816
-    p2pvoicesingleton002: 877088
+    IVALIDATE001: 8787744
+    CLIENTENGINE_INTERFACE_VERSION005: 8771024
+    SteamClient021: 6677872
+    SteamClient020: 6677856
+    SteamClient019: 6677840
+    SteamClient018: 6677824
+    SteamClient017: 6677808
+    SteamClient016: 6677792
+    SteamClient015: 6677776
+    SteamClient014: 6677760
+    SteamClient013: 6677744
+    SteamClient012: 6677728
+    SteamClient011: 6677712
+    SteamClient010: 6677696
+    SteamClient009: 6677680
+    SteamClient008: 6677664
+    SteamClient007: 6677648
+    SteamClient006: 6677632
+    p2pvoice002: 892592
+    p2pvoicesingleton002: 878864
 tier0_dll: # tier0.dll
     VStringTokenSystem001: 1622880
     TestScriptMgr001: 1308352
@@ -162,7 +162,7 @@ vphysics2_dll: # vphysics2.dll
 vscript_dll: # vscript.dll
     VScriptManager010: 204192
 vstdlib_s64_dll: # vstdlib_s64.dll
-    IVALIDATE001: 151552
+    IVALIDATE001: 151776
     VEngineCvar002: 22368
 worldrenderer_dll: # worldrenderer.dll
     WorldRendererMgr001: 136784

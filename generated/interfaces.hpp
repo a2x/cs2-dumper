@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 5 Jan 2024 01:00:02 +0000
+ * Sat, 20 Jan 2024 07:10:57 +0000
  */
 
 #pragma once
@@ -13,14 +13,14 @@ namespace animationsystem_dll { // animationsystem.dll
 }
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8A2450;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x891690;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A96E0;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x735BD0;
-    constexpr std::ptrdiff_t Source2Client002 = 0x735BF0;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x735BE0;
-    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x490D10;
-    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x477C50;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8A2480;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x8916C0;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7A96F0;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x735BC0;
+    constexpr std::ptrdiff_t Source2Client002 = 0x735BE0;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x735BD0;
+    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x490D00;
+    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x477C40;
 }
 
 namespace engine2_dll { // engine2.dll
@@ -185,26 +185,26 @@ namespace steamaudio_dll { // steamaudio.dll
 }
 
 namespace steamclient64_dll { // steamclient64.dll
-    constexpr std::ptrdiff_t IVALIDATE001 = 0x84FE60;
-    constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x84BD10;
-    constexpr std::ptrdiff_t SteamClient021 = 0x646160;
-    constexpr std::ptrdiff_t SteamClient020 = 0x646150;
-    constexpr std::ptrdiff_t SteamClient019 = 0x646140;
-    constexpr std::ptrdiff_t SteamClient018 = 0x646130;
-    constexpr std::ptrdiff_t SteamClient017 = 0x646120;
-    constexpr std::ptrdiff_t SteamClient016 = 0x646110;
-    constexpr std::ptrdiff_t SteamClient015 = 0x646100;
-    constexpr std::ptrdiff_t SteamClient014 = 0x6460F0;
-    constexpr std::ptrdiff_t SteamClient013 = 0x6460E0;
-    constexpr std::ptrdiff_t SteamClient012 = 0x6460D0;
-    constexpr std::ptrdiff_t SteamClient011 = 0x6460C0;
-    constexpr std::ptrdiff_t SteamClient010 = 0x6460B0;
-    constexpr std::ptrdiff_t SteamClient009 = 0x6460A0;
-    constexpr std::ptrdiff_t SteamClient008 = 0x646090;
-    constexpr std::ptrdiff_t SteamClient007 = 0x646080;
-    constexpr std::ptrdiff_t SteamClient006 = 0x646070;
-    constexpr std::ptrdiff_t p2pvoice002 = 0xD97C0;
-    constexpr std::ptrdiff_t p2pvoicesingleton002 = 0xD6220;
+    constexpr std::ptrdiff_t IVALIDATE001 = 0x861720;
+    constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x85D5D0;
+    constexpr std::ptrdiff_t SteamClient021 = 0x65E570;
+    constexpr std::ptrdiff_t SteamClient020 = 0x65E560;
+    constexpr std::ptrdiff_t SteamClient019 = 0x65E550;
+    constexpr std::ptrdiff_t SteamClient018 = 0x65E540;
+    constexpr std::ptrdiff_t SteamClient017 = 0x65E530;
+    constexpr std::ptrdiff_t SteamClient016 = 0x65E520;
+    constexpr std::ptrdiff_t SteamClient015 = 0x65E510;
+    constexpr std::ptrdiff_t SteamClient014 = 0x65E500;
+    constexpr std::ptrdiff_t SteamClient013 = 0x65E4F0;
+    constexpr std::ptrdiff_t SteamClient012 = 0x65E4E0;
+    constexpr std::ptrdiff_t SteamClient011 = 0x65E4D0;
+    constexpr std::ptrdiff_t SteamClient010 = 0x65E4C0;
+    constexpr std::ptrdiff_t SteamClient009 = 0x65E4B0;
+    constexpr std::ptrdiff_t SteamClient008 = 0x65E4A0;
+    constexpr std::ptrdiff_t SteamClient007 = 0x65E490;
+    constexpr std::ptrdiff_t SteamClient006 = 0x65E480;
+    constexpr std::ptrdiff_t p2pvoice002 = 0xD9EB0;
+    constexpr std::ptrdiff_t p2pvoicesingleton002 = 0xD6910;
 }
 
 namespace tier0_dll { // tier0.dll
@@ -236,7 +236,7 @@ namespace vscript_dll { // vscript.dll
 }
 
 namespace vstdlib_s64_dll { // vstdlib_s64.dll
-    constexpr std::ptrdiff_t IVALIDATE001 = 0x25000;
+    constexpr std::ptrdiff_t IVALIDATE001 = 0x250E0;
     constexpr std::ptrdiff_t VEngineCvar002 = 0x5760;
 }
 

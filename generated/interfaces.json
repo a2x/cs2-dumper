@@ -15,35 +15,35 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7560144,
+        "value": 7560128,
         "comment": null
       },
       "EmptyWorldService001_Client": {
-        "value": 4787472,
+        "value": 4787456,
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7560160,
+        "value": 7560144,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9053264,
+        "value": 9053312,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7560176,
+        "value": 7560160,
         "comment": null
       },
       "Source2ClientConfig001": {
-        "value": 4684880,
+        "value": 4684864,
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8034016,
+        "value": 8034032,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8984208,
+        "value": 8984256,
         "comment": null
       }
     },
@@ -528,83 +528,83 @@
   "steamclient64_dll": {
     "data": {
       "CLIENTENGINE_INTERFACE_VERSION005": {
-        "value": 8699152,
+        "value": 8771024,
         "comment": null
       },
       "IVALIDATE001": {
-        "value": 8715872,
+        "value": 8787744,
         "comment": null
       },
       "SteamClient006": {
-        "value": 6578288,
+        "value": 6677632,
         "comment": null
       },
       "SteamClient007": {
-        "value": 6578304,
+        "value": 6677648,
         "comment": null
       },
       "SteamClient008": {
-        "value": 6578320,
+        "value": 6677664,
         "comment": null
       },
       "SteamClient009": {
-        "value": 6578336,
+        "value": 6677680,
         "comment": null
       },
       "SteamClient010": {
-        "value": 6578352,
+        "value": 6677696,
         "comment": null
       },
       "SteamClient011": {
-        "value": 6578368,
+        "value": 6677712,
         "comment": null
       },
       "SteamClient012": {
-        "value": 6578384,
+        "value": 6677728,
         "comment": null
       },
       "SteamClient013": {
-        "value": 6578400,
+        "value": 6677744,
         "comment": null
       },
       "SteamClient014": {
-        "value": 6578416,
+        "value": 6677760,
         "comment": null
       },
       "SteamClient015": {
-        "value": 6578432,
+        "value": 6677776,
         "comment": null
       },
       "SteamClient016": {
-        "value": 6578448,
+        "value": 6677792,
         "comment": null
       },
       "SteamClient017": {
-        "value": 6578464,
+        "value": 6677808,
         "comment": null
       },
       "SteamClient018": {
-        "value": 6578480,
+        "value": 6677824,
         "comment": null
       },
       "SteamClient019": {
-        "value": 6578496,
+        "value": 6677840,
         "comment": null
       },
       "SteamClient020": {
-        "value": 6578512,
+        "value": 6677856,
         "comment": null
       },
       "SteamClient021": {
-        "value": 6578528,
+        "value": 6677872,
         "comment": null
       },
       "p2pvoice002": {
-        "value": 890816,
+        "value": 892592,
         "comment": null
       },
       "p2pvoicesingleton002": {
-        "value": 877088,
+        "value": 878864,
         "comment": null
       }
     },
@@ -683,7 +683,7 @@
   "vstdlib_s64_dll": {
     "data": {
       "IVALIDATE001": {
-        "value": 151552,
+        "value": 151776,
         "comment": null
       },
       "VEngineCvar002": {
