@@ -15,35 +15,35 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7560128,
+        "value": 7560672,
         "comment": null
       },
       "EmptyWorldService001_Client": {
-        "value": 4787456,
+        "value": 4788000,
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7560144,
+        "value": 7560688,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9053312,
+        "value": 9053872,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7560160,
+        "value": 7560704,
         "comment": null
       },
       "Source2ClientConfig001": {
-        "value": 4684864,
+        "value": 4685408,
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8034032,
+        "value": 8034592,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 8984256,
+        "value": 8984816,
         "comment": null
       }
     },
