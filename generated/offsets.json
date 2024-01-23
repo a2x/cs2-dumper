@@ -133,6 +133,15 @@
     },
     "comment": "engine2.dll"
   },
+  "game_info": {
+    "data": {
+      "buildNumber": {
+        "value": 13985,
+        "comment": "Game build number"
+      }
+    },
+    "comment": "Some additional information about the game at dump time"
+  },
   "inputsystem_dll": {
     "data": {
       "dwInputSystem": {

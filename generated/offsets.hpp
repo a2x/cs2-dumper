@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 00:52:46 +0000
+ * Tue, 23 Jan 2024 06:17:35 +0000
  */
 
 #pragma once
@@ -42,6 +42,10 @@ namespace engine2_dll { // engine2.dll
     constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x240;
     constexpr std::ptrdiff_t dwWindowHeight = 0x597E0C;
     constexpr std::ptrdiff_t dwWindowWidth = 0x597E08;
+}
+
+namespace game_info { // Some additional information about the game at dump time
+    constexpr std::ptrdiff_t buildNumber = 0x36A1; // Game build number
 }
 
 namespace inputsystem_dll { // inputsystem.dll

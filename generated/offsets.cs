@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 00:52:46 +0000
+ * Tue, 23 Jan 2024 06:17:35 +0000
  */
 
 public static class client_dll { // client.dll
@@ -38,6 +38,10 @@ public static class engine2_dll { // engine2.dll
     public const nint dwNetworkGameClient_signOnState = 0x240;
     public const nint dwWindowHeight = 0x597E0C;
     public const nint dwWindowWidth = 0x597E08;
+}
+
+public static class game_info { // Some additional information about the game at dump time
+    public const nint buildNumber = 0x36A1; // Game build number
 }
 
 public static class inputsystem_dll { // inputsystem.dll

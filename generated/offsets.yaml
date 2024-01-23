@@ -32,5 +32,7 @@ engine2_dll: # engine2.dll
     dwNetworkGameClient_signOnState: 576
     dwWindowHeight: 5864972
     dwWindowWidth: 5864968
+game_info: # Some additional information about the game at dump time
+    buildNumber: 13985 # Game build number
 inputsystem_dll: # inputsystem.dll
     dwInputSystem: 218976
