@@ -24,6 +24,15 @@
     "data": {},
     "comment": "CPulseCell_BaseFlow"
   },
+  "CPulseCell_CursorQueue": {
+    "data": {
+      "m_nCursorsAllowedToRunParallel": {
+        "value": 96,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CPulseCell_WaitForCursorsWithTagBase"
+  },
   "CPulseCell_Inflow_BaseEntrypoint": {
     "data": {
       "m_EntryChunk": {
@@ -181,15 +190,6 @@
     },
     "comment": "CPulseCell_BaseFlow"
   },
-  "CPulseCell_Outflow_SimultaneousParallel": {
-    "data": {
-      "m_Outputs": {
-        "value": 72,
-        "comment": "CUtlVector<CPulse_OutflowConnection>"
-      }
-    },
-    "comment": "CPulseCell_BaseFlow"
-  },
   "CPulseCell_Outflow_StringSwitch": {
     "data": {
       "m_CaseOutflows": {
@@ -238,9 +238,17 @@
       "m_MethodName": {
         "value": 72,
         "comment": "CUtlSymbolLarge"
+      },
+      "m_OnFinished": {
+        "value": 112,
+        "comment": "CPulse_ResumePoint"
+      },
+      "m_nAsyncCallMode": {
+        "value": 104,
+        "comment": "PulseMethodCallMode_t"
       }
     },
-    "comment": "CPulseCell_BaseFlow"
+    "comment": "CPulseCell_BaseYieldingInflow"
   },
   "CPulseCell_Step_DebugLog": {
     "data": {},
@@ -276,6 +284,36 @@
     "data": {},
     "comment": "CPulseCell_BaseFlow"
   },
+  "CPulseCell_TestWaitWithCursorState": {
+    "data": {
+      "m_WakeCancel": {
+        "value": 88,
+        "comment": "CPulse_ResumePoint"
+      },
+      "m_WakeFail": {
+        "value": 104,
+        "comment": "CPulse_ResumePoint"
+      },
+      "m_WakeResume": {
+        "value": 72,
+        "comment": "CPulse_ResumePoint"
+      }
+    },
+    "comment": "CPulseCell_BaseYieldingInflow"
+  },
+  "CPulseCell_TestWaitWithCursorState_CursorState_t": {
+    "data": {
+      "bFailOnCancel": {
+        "value": 4,
+        "comment": "bool"
+      },
+      "flWaitValue": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
   "CPulseCell_Test_MultiInflow_NoDefault": {
     "data": {},
     "comment": "CPulseCell_BaseFlow"
@@ -287,6 +325,48 @@
   "CPulseCell_Test_NoInflow": {
     "data": {},
     "comment": "CPulseCell_BaseFlow"
+  },
+  "CPulseCell_Timeline": {
+    "data": {
+      "m_OnCanceled": {
+        "value": 120,
+        "comment": "CPulse_ResumePoint"
+      },
+      "m_OnFinished": {
+        "value": 104,
+        "comment": "CPulse_ResumePoint"
+      },
+      "m_TimelineEvents": {
+        "value": 72,
+        "comment": "CUtlVector<CPulseCell_Timeline::TimelineEvent_t>"
+      },
+      "m_bWaitForChildOutflows": {
+        "value": 96,
+        "comment": "bool"
+      }
+    },
+    "comment": "CPulseCell_BaseYieldingInflow"
+  },
+  "CPulseCell_Timeline_TimelineEvent_t": {
+    "data": {
+      "m_EventOutflow": {
+        "value": 8,
+        "comment": "CPulse_OutflowConnection"
+      },
+      "m_bCallModeSync": {
+        "value": 5,
+        "comment": "bool"
+      },
+      "m_bPauseForPreviousEvents": {
+        "value": 4,
+        "comment": "bool"
+      },
+      "m_flTimeFromPrevious": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
   },
   "CPulseCell_Val_TestDomainFindEntityByName": {
     "data": {},
@@ -303,6 +383,45 @@
   "CPulseCell_Value_TestValue50": {
     "data": {},
     "comment": "CPulseCell_BaseValue"
+  },
+  "CPulseCell_WaitForCursorsWithTag": {
+    "data": {
+      "m_bTagSelfWhenComplete": {
+        "value": 96,
+        "comment": "bool"
+      },
+      "m_nDesiredKillPriority": {
+        "value": 100,
+        "comment": "PulseCursorCancelPriority_t"
+      }
+    },
+    "comment": "CPulseCell_WaitForCursorsWithTagBase"
+  },
+  "CPulseCell_WaitForCursorsWithTagBase": {
+    "data": {
+      "m_WaitComplete": {
+        "value": 80,
+        "comment": "CPulse_ResumePoint"
+      },
+      "m_nCursorsAllowedToWait": {
+        "value": 72,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CPulseCell_BaseYieldingInflow"
+  },
+  "CPulseCell_WaitForCursorsWithTagBase_CursorState_t": {
+    "data": {
+      "m_TagName": {
+        "value": 0,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": null
+  },
+  "CPulseCursorFuncs": {
+    "data": {},
+    "comment": null
   },
   "CPulseExecCursor": {
     "data": {},
@@ -322,6 +441,10 @@
         "value": 24,
         "comment": "CUtlVector<CPulse_Chunk*>"
       },
+      "m_Constants": {
+        "value": 168,
+        "comment": "CUtlVector<CPulse_Constant>"
+      },
       "m_DomainIdentifier": {
         "value": 8,
         "comment": "CUtlSymbolLarge"
@@ -331,7 +454,7 @@
         "comment": "CUtlVector<CPulse_InvokeBinding*>"
       },
       "m_OutputConnections": {
-        "value": 168,
+        "value": 192,
         "comment": "CUtlVector<CPulse_OutputConnection*>"
       },
       "m_ParentMapName": {
@@ -352,27 +475,27 @@
   "CPulseGraphInstance_TestDomain": {
     "data": {
       "m_Tracepoints": {
-        "value": 216,
+        "value": 224,
         "comment": "CUtlVector<CUtlString>"
       },
       "m_bExpectingToDestroyWithYieldedCursors": {
-        "value": 210,
+        "value": 218,
         "comment": "bool"
       },
       "m_bExplicitTimeStepping": {
-        "value": 209,
+        "value": 217,
         "comment": "bool"
       },
       "m_bIsRunningUnitTests": {
-        "value": 208,
+        "value": 216,
         "comment": "bool"
       },
       "m_bTestYesOrNoPath": {
-        "value": 240,
+        "value": 248,
         "comment": "bool"
       },
       "m_nNextValidateIndex": {
-        "value": 212,
+        "value": 220,
         "comment": "int32_t"
       }
     },
@@ -381,7 +504,7 @@
   "CPulseGraphInstance_TestDomain_Derived": {
     "data": {
       "m_nInstanceValueX": {
-        "value": 248,
+        "value": 256,
         "comment": "int32_t"
       }
     },
@@ -427,19 +550,19 @@
   "CPulseTurtleGraphicsCursor": {
     "data": {
       "m_Color": {
-        "value": 392,
+        "value": 360,
         "comment": "Color"
       },
       "m_bPenUp": {
-        "value": 408,
+        "value": 376,
         "comment": "bool"
       },
       "m_flHeadingDeg": {
-        "value": 404,
+        "value": 372,
         "comment": "float"
       },
       "m_vPos": {
-        "value": 396,
+        "value": 364,
         "comment": "Vector2D"
       }
     },
@@ -491,15 +614,24 @@
     },
     "comment": null
   },
+  "CPulse_Constant": {
+    "data": {
+      "m_Type": {
+        "value": 0,
+        "comment": "CPulseValueFullType"
+      },
+      "m_Value": {
+        "value": 16,
+        "comment": "KeyValues3"
+      }
+    },
+    "comment": null
+  },
   "CPulse_InvokeBinding": {
     "data": {
       "m_FuncName": {
         "value": 32,
         "comment": "CUtlSymbolLarge"
-      },
-      "m_InstanceType": {
-        "value": 48,
-        "comment": "CPulseValueFullType"
       },
       "m_RegisterMap": {
         "value": 0,
@@ -510,11 +642,11 @@
         "comment": "PulseRuntimeCellIndex_t"
       },
       "m_nSrcChunk": {
-        "value": 64,
+        "value": 44,
         "comment": "PulseRuntimeChunkIndex_t"
       },
       "m_nSrcInstruction": {
-        "value": 68,
+        "value": 48,
         "comment": "int32_t"
       }
     },
@@ -632,11 +764,11 @@
   "CTestDomainDerived_Cursor": {
     "data": {
       "m_nCursorValueA": {
-        "value": 392,
+        "value": 360,
         "comment": "int32_t"
       },
       "m_nCursorValueB": {
-        "value": 396,
+        "value": 364,
         "comment": "int32_t"
       }
     },
@@ -675,27 +807,15 @@
     },
     "comment": null
   },
+  "FakeEntity_tAPI": {
+    "data": {},
+    "comment": null
+  },
   "PGDInstruction_t": {
     "data": {
-      "m_Arg0Name": {
-        "value": 32,
-        "comment": "CUtlSymbolLarge"
-      },
-      "m_Arg1Name": {
+      "m_DomainValue": {
         "value": 40,
-        "comment": "CUtlSymbolLarge"
-      },
-      "m_LiteralString": {
-        "value": 64,
         "comment": "CBufferString"
-      },
-      "m_bLiteralBool": {
-        "value": 48,
-        "comment": "bool"
-      },
-      "m_flLiteralFloat": {
-        "value": 56,
-        "comment": "float"
       },
       "m_nCallInfoIndex": {
         "value": 28,
@@ -709,6 +829,10 @@
         "value": 0,
         "comment": "PulseInstructionCode_t"
       },
+      "m_nConstIdx": {
+        "value": 32,
+        "comment": "PulseRuntimeConstantIndex_t"
+      },
       "m_nDestInstruction": {
         "value": 24,
         "comment": "int32_t"
@@ -716,10 +840,6 @@
       "m_nInvokeBindingIndex": {
         "value": 16,
         "comment": "PulseRuntimeInvokeIndex_t"
-      },
-      "m_nLiteralInt": {
-        "value": 52,
-        "comment": "int32_t"
       },
       "m_nReg0": {
         "value": 8,
@@ -736,10 +856,24 @@
       "m_nVar": {
         "value": 4,
         "comment": "PulseRuntimeVarIndex_t"
-      },
-      "m_vLiteralVec3": {
-        "value": 80,
-        "comment": "Vector"
+      }
+    },
+    "comment": null
+  },
+  "PulseCursorID_t": {
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "PulseCursorYieldToken_t": {
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int32_t"
       }
     },
     "comment": null
@@ -749,6 +883,15 @@
       "m_Value": {
         "value": 0,
         "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "PulseGraphInstanceID_t": {
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "uint32_t"
       }
     },
     "comment": null
@@ -789,6 +932,15 @@
       "m_Value": {
         "value": 0,
         "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "PulseRuntimeConstantIndex_t": {
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "int16_t"
       }
     },
     "comment": null
@@ -851,7 +1003,7 @@
     "data": {
       "m_Value": {
         "value": 0,
-        "comment": "int32_t"
+        "comment": "uint32_t"
       }
     },
     "comment": null

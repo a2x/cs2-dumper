@@ -906,6 +906,23 @@
     },
     "comment": null
   },
+  "FeSimdRodConstraintAnim_t": {
+    "data": {
+      "f4RelaxationFactor": {
+        "value": 32,
+        "comment": "fltx4"
+      },
+      "f4Weight0": {
+        "value": 16,
+        "comment": "fltx4"
+      },
+      "nNode": {
+        "value": 0,
+        "comment": "uint16_t[4][2]"
+      }
+    },
+    "comment": null
+  },
   "FeSimdRodConstraint_t": {
     "data": {
       "f4MaxDist": {
@@ -1385,19 +1402,19 @@
   "PhysFeModelDesc_t": {
     "data": {
       "m_AnimStrayRadii": {
-        "value": 960,
+        "value": 984,
         "comment": "CUtlVector<FeAnimStrayRadius_t>"
       },
       "m_AxialEdges": {
-        "value": 336,
+        "value": 360,
         "comment": "CUtlVector<FeAxialEdgeBend_t>"
       },
       "m_BoxRigids": {
-        "value": 1160,
+        "value": 1184,
         "comment": "CUtlVector<FeBoxRigid_t>"
       },
       "m_CollisionPlanes": {
-        "value": 456,
+        "value": 480,
         "comment": "CUtlVector<FeCollisionPlane_t>"
       },
       "m_CtrlHash": {
@@ -1409,91 +1426,91 @@
         "comment": "CUtlVector<CUtlString>"
       },
       "m_CtrlOffsets": {
-        "value": 384,
+        "value": 408,
         "comment": "CUtlVector<FeCtrlOffset_t>"
       },
       "m_CtrlOsOffsets": {
-        "value": 408,
+        "value": 432,
         "comment": "CUtlVector<FeCtrlOsOffset_t>"
       },
       "m_CtrlSoftOffsets": {
-        "value": 1032,
+        "value": 1056,
         "comment": "CUtlVector<FeCtrlSoftOffset_t>"
       },
       "m_DynNodeFriction": {
-        "value": 624,
-        "comment": "CUtlVector<float>"
-      },
-      "m_DynNodeVertexSet": {
-        "value": 1184,
-        "comment": "CUtlVector<uint8_t>"
-      },
-      "m_DynNodeWindBases": {
-        "value": 1424,
-        "comment": "CUtlVector<FeNodeWindBase_t>"
-      },
-      "m_Effects": {
-        "value": 1352,
-        "comment": "CUtlVector<FeEffectDesc_t>"
-      },
-      "m_FitMatrices": {
-        "value": 888,
-        "comment": "CUtlVector<FeFitMatrix_t>"
-      },
-      "m_FitWeights": {
-        "value": 912,
-        "comment": "CUtlVector<FeFitWeight_t>"
-      },
-      "m_FollowNodes": {
-        "value": 432,
-        "comment": "CUtlVector<FeFollowNode_t>"
-      },
-      "m_FreeNodes": {
-        "value": 864,
-        "comment": "CUtlVector<uint16_t>"
-      },
-      "m_GoalDampedSpringIntegrators": {
-        "value": 1104,
-        "comment": "CUtlVector<uint32_t>"
-      },
-      "m_InitPose": {
-        "value": 264,
-        "comment": "CUtlVector<CTransform>"
-      },
-      "m_JiggleBones": {
-        "value": 1056,
-        "comment": "CUtlVector<CFeIndexedJiggleBone>"
-      },
-      "m_KelagerBends": {
-        "value": 1008,
-        "comment": "CUtlVector<FeKelagerBend2_t>"
-      },
-      "m_LegacyStretchForce": {
-        "value": 576,
-        "comment": "CUtlVector<float>"
-      },
-      "m_LocalForce": {
-        "value": 672,
-        "comment": "CUtlVector<float>"
-      },
-      "m_LocalRotation": {
         "value": 648,
         "comment": "CUtlVector<float>"
       },
+      "m_DynNodeVertexSet": {
+        "value": 1208,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_DynNodeWindBases": {
+        "value": 1472,
+        "comment": "CUtlVector<FeNodeWindBase_t>"
+      },
+      "m_Effects": {
+        "value": 1376,
+        "comment": "CUtlVector<FeEffectDesc_t>"
+      },
+      "m_FitMatrices": {
+        "value": 912,
+        "comment": "CUtlVector<FeFitMatrix_t>"
+      },
+      "m_FitWeights": {
+        "value": 936,
+        "comment": "CUtlVector<FeFitWeight_t>"
+      },
+      "m_FollowNodes": {
+        "value": 456,
+        "comment": "CUtlVector<FeFollowNode_t>"
+      },
+      "m_FreeNodes": {
+        "value": 888,
+        "comment": "CUtlVector<uint16_t>"
+      },
+      "m_GoalDampedSpringIntegrators": {
+        "value": 1128,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_InitPose": {
+        "value": 288,
+        "comment": "CUtlVector<CTransform>"
+      },
+      "m_JiggleBones": {
+        "value": 1080,
+        "comment": "CUtlVector<CFeIndexedJiggleBone>"
+      },
+      "m_KelagerBends": {
+        "value": 1032,
+        "comment": "CUtlVector<FeKelagerBend2_t>"
+      },
+      "m_LegacyStretchForce": {
+        "value": 600,
+        "comment": "CUtlVector<float>"
+      },
+      "m_LocalForce": {
+        "value": 696,
+        "comment": "CUtlVector<float>"
+      },
+      "m_LocalRotation": {
+        "value": 672,
+        "comment": "CUtlVector<float>"
+      },
       "m_LockToGoal": {
-        "value": 1400,
+        "value": 1424,
         "comment": "CUtlVector<uint16_t>"
       },
       "m_LockToParent": {
-        "value": 1376,
+        "value": 1400,
         "comment": "CUtlVector<FeCtrlOffset_t>"
       },
       "m_MorphLayers": {
-        "value": 1256,
+        "value": 1280,
         "comment": "CUtlVector<FeMorphLayerDepr_t>"
       },
       "m_MorphSetData": {
-        "value": 1280,
+        "value": 1304,
         "comment": "CUtlVector<uint8_t>"
       },
       "m_NodeBases": {
@@ -1501,15 +1518,15 @@
         "comment": "CUtlVector<FeNodeBase_t>"
       },
       "m_NodeCollisionRadii": {
-        "value": 600,
+        "value": 624,
         "comment": "CUtlVector<float>"
       },
       "m_NodeIntegrator": {
-        "value": 480,
+        "value": 504,
         "comment": "CUtlVector<FeNodeIntegrator_t>"
       },
       "m_NodeInvMasses": {
-        "value": 360,
+        "value": 384,
         "comment": "CUtlVector<float>"
       },
       "m_Quads": {
@@ -1517,15 +1534,15 @@
         "comment": "CUtlVector<FeQuad_t>"
       },
       "m_ReverseOffsets": {
-        "value": 936,
+        "value": 960,
         "comment": "CUtlVector<FeNodeReverseOffset_t>"
       },
       "m_RigidColliderPriorities": {
-        "value": 1232,
+        "value": 1256,
         "comment": "CUtlVector<FeRigidColliderIndices_t>"
       },
       "m_Rods": {
-        "value": 288,
+        "value": 312,
         "comment": "CUtlVector<FeRodConstraint_t>"
       },
       "m_Ropes": {
@@ -1533,7 +1550,7 @@
         "comment": "CUtlVector<uint16_t>"
       },
       "m_SimdAnimStrayRadii": {
-        "value": 984,
+        "value": 1008,
         "comment": "CUtlVector<FeSimdAnimStrayRadius_t>"
       },
       "m_SimdNodeBases": {
@@ -1548,116 +1565,124 @@
         "value": 240,
         "comment": "CUtlVector<FeSimdRodConstraint_t>"
       },
+      "m_SimdRodsAnim": {
+        "value": 264,
+        "comment": "CUtlVector<FeSimdRodConstraintAnim_t>"
+      },
       "m_SimdSpringIntegrator": {
-        "value": 528,
+        "value": 552,
         "comment": "CUtlVector<FeSimdSpringIntegrator_t>"
       },
       "m_SimdTris": {
         "value": 216,
         "comment": "CUtlVector<FeSimdTri_t>"
       },
+      "m_SkelParents": {
+        "value": 1448,
+        "comment": "CUtlVector<int16_t>"
+      },
       "m_SourceElems": {
-        "value": 1080,
+        "value": 1104,
         "comment": "CUtlVector<uint16_t>"
       },
       "m_SphereRigids": {
-        "value": 744,
+        "value": 768,
         "comment": "CUtlVector<FeSphereRigid_t>"
       },
       "m_SpringIntegrator": {
-        "value": 504,
+        "value": 528,
         "comment": "CUtlVector<FeSpringIntegrator_t>"
       },
       "m_TaperedCapsuleRigids": {
-        "value": 720,
+        "value": 744,
         "comment": "CUtlVector<FeTaperedCapsuleRigid_t>"
       },
       "m_TaperedCapsuleStretches": {
-        "value": 696,
+        "value": 720,
         "comment": "CUtlVector<FeTaperedCapsuleStretch_t>"
       },
       "m_TreeChildren": {
-        "value": 840,
+        "value": 864,
         "comment": "CUtlVector<FeTreeChildren_t>"
       },
       "m_TreeCollisionMasks": {
-        "value": 816,
+        "value": 840,
         "comment": "CUtlVector<uint16_t>"
       },
       "m_TreeParents": {
-        "value": 792,
+        "value": 816,
         "comment": "CUtlVector<uint16_t>"
       },
       "m_Tris": {
-        "value": 1128,
+        "value": 1152,
         "comment": "CUtlVector<FeTri_t>"
       },
       "m_Twists": {
-        "value": 312,
+        "value": 336,
         "comment": "CUtlVector<FeTwistConstraint_t>"
       },
       "m_VertexMapValues": {
-        "value": 1328,
+        "value": 1352,
         "comment": "CUtlVector<uint8_t>"
       },
       "m_VertexMaps": {
-        "value": 1304,
+        "value": 1328,
         "comment": "CUtlVector<FeVertexMapDesc_t>"
       },
       "m_VertexSetNames": {
-        "value": 1208,
+        "value": 1232,
         "comment": "CUtlVector<uint32_t>"
       },
       "m_WorldCollisionNodes": {
-        "value": 768,
+        "value": 792,
         "comment": "CUtlVector<uint16_t>"
       },
       "m_WorldCollisionParams": {
-        "value": 552,
+        "value": 576,
         "comment": "CUtlVector<FeWorldCollisionParams_t>"
       },
       "m_flAddWorldCollisionRadius": {
-        "value": 1500,
+        "value": 1548,
         "comment": "float"
       },
       "m_flDefaultExpAirDrag": {
-        "value": 1480,
+        "value": 1528,
         "comment": "float"
       },
       "m_flDefaultExpQuadAirDrag": {
-        "value": 1488,
+        "value": 1536,
         "comment": "float"
       },
       "m_flDefaultGravityScale": {
-        "value": 1472,
+        "value": 1520,
         "comment": "float"
       },
       "m_flDefaultSurfaceStretch": {
-        "value": 1464,
+        "value": 1512,
         "comment": "float"
       },
       "m_flDefaultThreadStretch": {
-        "value": 1468,
+        "value": 1516,
         "comment": "float"
       },
       "m_flDefaultTimeDilation": {
-        "value": 1452,
+        "value": 1500,
         "comment": "float"
       },
       "m_flDefaultVelAirDrag": {
-        "value": 1476,
+        "value": 1524,
         "comment": "float"
       },
       "m_flDefaultVelQuadAirDrag": {
-        "value": 1484,
+        "value": 1532,
         "comment": "float"
       },
       "m_flDefaultVolumetricSolveAmount": {
-        "value": 1504,
+        "value": 1552,
         "comment": "float"
       },
       "m_flInternalPressure": {
-        "value": 1448,
+        "value": 1496,
         "comment": "float"
       },
       "m_flLocalForce": {
@@ -1669,19 +1694,19 @@
         "comment": "float"
       },
       "m_flQuadVelocitySmoothRate": {
-        "value": 1496,
+        "value": 1544,
         "comment": "float"
       },
       "m_flRodVelocitySmoothRate": {
-        "value": 1492,
+        "value": 1540,
         "comment": "float"
       },
       "m_flWindDrag": {
-        "value": 1460,
+        "value": 1508,
         "comment": "float"
       },
       "m_flWindage": {
-        "value": 1456,
+        "value": 1504,
         "comment": "float"
       },
       "m_nDynamicNodeFlags": {
@@ -1689,15 +1714,15 @@
         "comment": "uint32_t"
       },
       "m_nExtraGoalIterations": {
-        "value": 1158,
+        "value": 1182,
         "comment": "uint8_t"
       },
       "m_nExtraIterations": {
-        "value": 1159,
+        "value": 1183,
         "comment": "uint8_t"
       },
       "m_nExtraPressureIterations": {
-        "value": 1157,
+        "value": 1181,
         "comment": "uint8_t"
       },
       "m_nFirstPositionDrivenNode": {
@@ -1721,15 +1746,15 @@
         "comment": "uint16_t"
       },
       "m_nQuadVelocitySmoothIterations": {
-        "value": 1510,
+        "value": 1558,
         "comment": "uint16_t"
       },
       "m_nReservedUint8": {
-        "value": 1156,
+        "value": 1180,
         "comment": "uint8_t"
       },
       "m_nRodVelocitySmoothIterations": {
-        "value": 1508,
+        "value": 1556,
         "comment": "uint16_t"
       },
       "m_nRopeCount": {
@@ -1769,11 +1794,11 @@
         "comment": "uint16_t"
       },
       "m_nTriCount1": {
-        "value": 1152,
+        "value": 1176,
         "comment": "uint16_t"
       },
       "m_nTriCount2": {
-        "value": 1154,
+        "value": 1178,
         "comment": "uint16_t"
       }
     },
@@ -2029,15 +2054,15 @@
         "comment": "AABB_t"
       },
       "m_Edges": {
-        "value": 152,
+        "value": 160,
         "comment": "CUtlVector<RnHalfEdge_t>"
       },
       "m_FacePlanes": {
-        "value": 200,
+        "value": 208,
         "comment": "CUtlVector<RnPlane_t>"
       },
       "m_Faces": {
-        "value": 176,
+        "value": 184,
         "comment": "CUtlVector<RnFace_t>"
       },
       "m_MassProperties": {
@@ -2045,15 +2070,19 @@
         "comment": "matrix3x4_t"
       },
       "m_VertexPositions": {
-        "value": 128,
+        "value": 136,
         "comment": "CUtlVector<Vector>"
       },
       "m_Vertices": {
-        "value": 104,
+        "value": 112,
         "comment": "CUtlVector<RnVertex_t>"
       },
       "m_flMaxAngularRadius": {
         "value": 12,
+        "comment": "float"
+      },
+      "m_flSurfaceArea": {
+        "value": 104,
         "comment": "float"
       },
       "m_flVolume": {
@@ -2061,11 +2090,11 @@
         "comment": "float"
       },
       "m_nFlags": {
-        "value": 224,
+        "value": 232,
         "comment": "uint32_t"
       },
       "m_pRegionSVM": {
-        "value": 232,
+        "value": 240,
         "comment": "CRegionSVM*"
       },
       "m_vCentroid": {
@@ -2227,23 +2256,10 @@
     "data": {
       "m_Sphere": {
         "value": 16,
-        "comment": "RnSphere_t"
+        "comment": "SphereBase_t<float>"
       }
     },
     "comment": "RnShapeDesc_t"
-  },
-  "RnSphere_t": {
-    "data": {
-      "m_flRadius": {
-        "value": 12,
-        "comment": "float"
-      },
-      "m_vCenter": {
-        "value": 0,
-        "comment": "Vector"
-      }
-    },
-    "comment": null
   },
   "RnTriangle_t": {
     "data": {

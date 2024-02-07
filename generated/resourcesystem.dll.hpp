@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #pragma once
@@ -87,6 +87,9 @@ namespace InfoForResourceTypeCDotaItemDefinitionResource {
 namespace InfoForResourceTypeCEntityLump {
 }
 
+namespace InfoForResourceTypeCGcExportableExternalData {
+}
+
 namespace InfoForResourceTypeCJavaScriptResource {
 }
 
@@ -97,6 +100,12 @@ namespace InfoForResourceTypeCMorphSetData {
 }
 
 namespace InfoForResourceTypeCNmClip {
+}
+
+namespace InfoForResourceTypeCNmGraph {
+}
+
+namespace InfoForResourceTypeCNmGraphDataSet {
 }
 
 namespace InfoForResourceTypeCNmSkeleton {
@@ -150,6 +159,9 @@ namespace InfoForResourceTypeCVSoundEventScriptList {
 namespace InfoForResourceTypeCVSoundStackScriptList {
 }
 
+namespace InfoForResourceTypeCVoiceContainerBase {
+}
+
 namespace InfoForResourceTypeCVoxelVisibility {
 }
 
@@ -181,9 +193,6 @@ namespace InfoForResourceTypeProceduralTestResource_t {
 }
 
 namespace InfoForResourceTypeTestResource_t {
-}
-
-namespace InfoForResourceTypeVSound_t {
 }
 
 namespace InfoForResourceTypeWorld_t {

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 public static class AABB_t {
@@ -83,6 +83,9 @@ public static class InfoForResourceTypeCDotaItemDefinitionResource {
 public static class InfoForResourceTypeCEntityLump {
 }
 
+public static class InfoForResourceTypeCGcExportableExternalData {
+}
+
 public static class InfoForResourceTypeCJavaScriptResource {
 }
 
@@ -93,6 +96,12 @@ public static class InfoForResourceTypeCMorphSetData {
 }
 
 public static class InfoForResourceTypeCNmClip {
+}
+
+public static class InfoForResourceTypeCNmGraph {
+}
+
+public static class InfoForResourceTypeCNmGraphDataSet {
 }
 
 public static class InfoForResourceTypeCNmSkeleton {
@@ -146,6 +155,9 @@ public static class InfoForResourceTypeCVSoundEventScriptList {
 public static class InfoForResourceTypeCVSoundStackScriptList {
 }
 
+public static class InfoForResourceTypeCVoiceContainerBase {
+}
+
 public static class InfoForResourceTypeCVoxelVisibility {
 }
 
@@ -177,9 +189,6 @@ public static class InfoForResourceTypeProceduralTestResource_t {
 }
 
 public static class InfoForResourceTypeTestResource_t {
-}
-
-public static class InfoForResourceTypeVSound_t {
 }
 
 public static class InfoForResourceTypeWorld_t {

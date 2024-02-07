@@ -25,6 +25,17 @@ CSosGroupActionSetSoundeventParameterSchema: # CSosGroupActionSchema
     m_flMaxValue: 32 # float
     m_opvarName: 40 # CUtlString
     m_nSortType: 48 # SosActionSortType_t
+CSosGroupActionSoundeventClusterSchema: # CSosGroupActionSchema
+    m_nMinNearby: 24 # int32_t
+    m_flClusterEpsilon: 28 # float
+    m_shouldPlayOpvar: 32 # CUtlString
+    m_shouldPlayClusterChild: 40 # CUtlString
+    m_clusterSizeOpvar: 48 # CUtlString
+    m_groupBoundingBoxMinsOpvar: 56 # CUtlString
+    m_groupBoundingBoxMaxsOpvar: 64 # CUtlString
+CSosGroupActionTimeBlockLimitSchema: # CSosGroupActionSchema
+    m_nMaxCount: 24 # int32_t
+    m_flMaxDuration: 28 # float
 CSosGroupActionTimeLimitSchema: # CSosGroupActionSchema
     m_flMaxDuration: 24 # float
 CSosGroupBranchPattern:
@@ -50,6 +61,44 @@ CSosSoundEventGroupSchema:
     m_vActions: 176 # CSosGroupActionSchema*[4]
 CSoundEventMetaData:
     m_soundEventVMix: 0 # CStrongHandle<InfoForResourceTypeCVMixListResource>
+CVoiceContainerAmpedDecayingSineWave: # CVoiceContainerDecayingSineWave
+    m_flGainAmount: 104 # float
+CVoiceContainerBase:
+    m_curves: 32 # CUtlDict<CPiecewiseCurve,F(size=1)>
+CVoiceContainerBlend: # CVoiceContainerBase
+    m_hSoundOne: 96 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_hSoundTwo: 104 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flBlendAmount: 112 # float
+CVoiceContainerDecayingSineWave: # CVoiceContainerBase
+    m_flFrequency: 96 # float
+    m_flDecayTime: 100 # float
+CVoiceContainerDefault: # CVoiceContainerBase
+CVoiceContainerEngineSound: # CVoiceContainerBase
+    m_SoundToPlay: 96 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flTestConstantParam: 104 # float
+    m_flTestSoundEventBoundParam: 108 # float
+    m_flEngineRPM: 112 # float
+CVoiceContainerEnvelopeAnalyzer: # CVoiceContainerWavFileReader
+    m_envBuffer: 104 # CUtlVector<float>
+CVoiceContainerRandomSampler: # CVoiceContainerBase
+    m_flLoudAmplitude: 96 # float
+    m_flLoudAmplitudeJitter: 100 # float
+    m_flSoftAmplitude: 104 # float
+    m_flSoftAmplitudeJitter: 108 # float
+    m_flLoudTimeJitter: 112 # float
+    m_flSoftTimeJitter: 116 # float
+    m_grainResources: 120 # CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+CVoiceContainerRealtimeFMSineWave: # CVoiceContainerBase
+    m_flCarrierFrequency: 96 # float
+    m_flModulatorFrequency: 100 # float
+    m_flModulatorAmount: 104 # float
+CVoiceContainerTestConstant: # CVoiceContainerWavFileReader
+    m_flTestConstantParam: 104 # bool
+CVoiceContainerTestNestedDynamic: # CVoiceContainerBase
+    m_SoundToPlay: 96 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flTestConstantParam: 104 # float
+CVoiceContainerWavFileReader: # CVoiceContainerBase
+    m_wavFilePath: 96 # CUtlString
 SelectedEditItemInfo_t:
     m_EditItems: 0 # CUtlVector<SosEditItemInfo_t>
 SosEditItemInfo_t:

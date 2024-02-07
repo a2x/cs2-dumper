@@ -6,79 +6,79 @@
         "comment": "bool"
       },
       "m_bBlendFramesSeq0": {
-        "value": 8736,
+        "value": 9420,
         "comment": "bool"
       },
       "m_bDisableZBuffering": {
-        "value": 7688,
+        "value": 8032,
         "comment": "bool"
       },
       "m_bGammaCorrectVertexColors": {
-        "value": 4628,
+        "value": 4972,
         "comment": "bool"
       },
       "m_bMaxLuminanceBlendingSequence0": {
-        "value": 8737,
+        "value": 9421,
         "comment": "bool"
       },
       "m_bOnlyRenderInEffecsGameOverlay": {
-        "value": 7427,
+        "value": 7771,
         "comment": "bool"
       },
       "m_bOnlyRenderInEffectsBloomPass": {
-        "value": 7424,
+        "value": 7768,
         "comment": "bool"
       },
       "m_bOnlyRenderInEffectsWaterPass": {
-        "value": 7425,
+        "value": 7769,
         "comment": "bool"
       },
       "m_bRefract": {
-        "value": 7064,
+        "value": 7408,
         "comment": "bool"
       },
       "m_bRefractSolid": {
-        "value": 7065,
+        "value": 7409,
         "comment": "bool"
       },
       "m_bReverseZBuffering": {
-        "value": 7687,
+        "value": 8031,
         "comment": "bool"
       },
       "m_bSaturateColorPreAlphaBlend": {
-        "value": 4629,
+        "value": 4973,
         "comment": "bool"
       },
       "m_bStencilTestExclude": {
-        "value": 7556,
+        "value": 7900,
         "comment": "bool"
       },
       "m_bTintByFOW": {
-        "value": 6016,
+        "value": 6360,
         "comment": "bool"
       },
       "m_bTintByGlobalLight": {
-        "value": 6017,
+        "value": 6361,
         "comment": "bool"
       },
       "m_bUseMixedResolutionRendering": {
-        "value": 7426,
+        "value": 7770,
         "comment": "bool"
       },
       "m_bWriteStencilOnDepthFail": {
-        "value": 7686,
+        "value": 8030,
         "comment": "bool"
       },
       "m_bWriteStencilOnDepthPass": {
-        "value": 7685,
+        "value": 8029,
         "comment": "bool"
       },
       "m_flAddSelfAmount": {
-        "value": 4632,
+        "value": 4976,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flAlphaReferenceSoftness": {
-        "value": 6032,
+        "value": 6376,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flAlphaScale": {
@@ -102,35 +102,39 @@
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flDepthBias": {
-        "value": 8728,
-        "comment": "float"
+        "value": 9072,
+        "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flDesaturation": {
-        "value": 4976,
+        "value": 5320,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flDiffuseAmount": {
         "value": 4272,
         "comment": "CParticleCollectionRendererFloatInput"
       },
+      "m_flDiffuseClamp": {
+        "value": 4616,
+        "comment": "CParticleCollectionRendererFloatInput"
+      },
       "m_flFeatheringFilter": {
-        "value": 8384,
+        "value": 8728,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flFeatheringMaxDist": {
-        "value": 8040,
+        "value": 8384,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flFeatheringMinDist": {
-        "value": 7696,
+        "value": 8040,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flFogAmount": {
-        "value": 5672,
+        "value": 6016,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flOverbrightFactor": {
-        "value": 5320,
+        "value": 5664,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flRadiusScale": {
@@ -138,7 +142,7 @@
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flRefractAmount": {
-        "value": 7072,
+        "value": 7416,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flRollScale": {
@@ -150,11 +154,11 @@
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flSourceAlphaValueToMapToOne": {
-        "value": 6720,
+        "value": 7064,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flSourceAlphaValueToMapToZero": {
-        "value": 6376,
+        "value": 6720,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_nAlpha2Field": {
@@ -162,7 +166,7 @@
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nAlphaReferenceType": {
-        "value": 6028,
+        "value": 6372,
         "comment": "ParticleAlphaReferenceType_t"
       },
       "m_nAnimationType": {
@@ -178,43 +182,43 @@
         "comment": "ParticleSequenceCropOverride_t"
       },
       "m_nFeatheringMode": {
-        "value": 7692,
+        "value": 8036,
         "comment": "ParticleDepthFeatheringMode_t"
       },
       "m_nFogType": {
-        "value": 5668,
+        "value": 6012,
         "comment": "ParticleFogType_t"
       },
       "m_nHSVShiftControlPoint": {
-        "value": 5664,
+        "value": 6008,
         "comment": "int32_t"
       },
       "m_nLightingControlPoint": {
-        "value": 4616,
+        "value": 4960,
         "comment": "int32_t"
       },
       "m_nOutputBlendMode": {
-        "value": 4624,
+        "value": 4968,
         "comment": "ParticleOutputBlendMode_t"
       },
       "m_nPerParticleAlphaRefWindow": {
-        "value": 6024,
+        "value": 6368,
         "comment": "SpriteCardPerParticleScale_t"
       },
       "m_nPerParticleAlphaReference": {
-        "value": 6020,
+        "value": 6364,
         "comment": "SpriteCardPerParticleScale_t"
       },
       "m_nRefractBlurRadius": {
-        "value": 7416,
+        "value": 7760,
         "comment": "int32_t"
       },
       "m_nRefractBlurType": {
-        "value": 7420,
+        "value": 7764,
         "comment": "BlurFilterType_t"
       },
       "m_nSelfIllumPerParticle": {
-        "value": 4620,
+        "value": 4964,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nShaderType": {
@@ -222,15 +226,15 @@
         "comment": "SpriteCardShaderType_t"
       },
       "m_nSortMethod": {
-        "value": 8732,
+        "value": 9416,
         "comment": "ParticleSortingChoiceList_t"
       },
       "m_stencilTestID": {
-        "value": 7428,
+        "value": 7772,
         "comment": "char[128]"
       },
       "m_stencilWriteID": {
-        "value": 7557,
+        "value": 7901,
         "comment": "char[128]"
       },
       "m_strShaderOverride": {
@@ -251,31 +255,31 @@
   "CBaseTrailRenderer": {
     "data": {
       "m_bClampV": {
-        "value": 10032,
+        "value": 10704,
         "comment": "bool"
       },
       "m_flEndFadeSize": {
-        "value": 9688,
+        "value": 10360,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flMaxSize": {
-        "value": 9340,
+        "value": 10012,
         "comment": "float"
       },
       "m_flMinSize": {
-        "value": 9336,
+        "value": 10008,
         "comment": "float"
       },
       "m_flStartFadeSize": {
-        "value": 9344,
+        "value": 10016,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_nOrientationControlPoint": {
-        "value": 9332,
+        "value": 10004,
         "comment": "int32_t"
       },
       "m_nOrientationType": {
-        "value": 9328,
+        "value": 10000,
         "comment": "ParticleOrientationChoiceList_t"
       }
     },
@@ -459,10 +463,6 @@
       }
     },
     "comment": "IParticleEffect"
-  },
-  "CParticleBindingRealPulse": {
-    "data": {},
-    "comment": "CParticleCollectionBindingInstance"
   },
   "CParticleCollectionBindingInstance": {
     "data": {},
@@ -1706,6 +1706,10 @@
         "value": 4049,
         "comment": "bool"
       },
+      "m_bUseMesh": {
+        "value": 4050,
+        "comment": "bool"
+      },
       "m_flBoneVelocity": {
         "value": 2288,
         "comment": "float"
@@ -2392,11 +2396,11 @@
   "C_INIT_InitSkinnedPositionFromCPSnapshot": {
     "data": {
       "m_bCopyAlpha": {
-        "value": 497,
+        "value": 845,
         "comment": "bool"
       },
       "m_bCopyColor": {
-        "value": 496,
+        "value": 844,
         "comment": "bool"
       },
       "m_bIgnoreDt": {
@@ -2416,19 +2420,19 @@
         "comment": "bool"
       },
       "m_bSetRadius": {
-        "value": 498,
+        "value": 846,
         "comment": "bool"
       },
       "m_flBoneVelocity": {
-        "value": 488,
+        "value": 836,
         "comment": "float"
       },
       "m_flBoneVelocityMax": {
-        "value": 492,
+        "value": 840,
         "comment": "float"
       },
       "m_flIncrement": {
-        "value": 476,
+        "value": 824,
         "comment": "float"
       },
       "m_flMaxNormalVelocity": {
@@ -2439,20 +2443,28 @@
         "value": 468,
         "comment": "float"
       },
+      "m_flReadIndex": {
+        "value": 480,
+        "comment": "CPerParticleFloatInput"
+      },
       "m_nControlPointNumber": {
         "value": 452,
         "comment": "int32_t"
       },
       "m_nFullLoopIncrement": {
-        "value": 480,
+        "value": 828,
         "comment": "int32_t"
+      },
+      "m_nIndexType": {
+        "value": 476,
+        "comment": "SnapshotIndexType_t"
       },
       "m_nRandomSeed": {
         "value": 460,
         "comment": "int32_t"
       },
       "m_nSnapShotStartPoint": {
-        "value": 484,
+        "value": 832,
         "comment": "int32_t"
       },
       "m_nSnapshotControlPointNumber": {
@@ -4008,6 +4020,35 @@
     },
     "comment": "CParticleFunctionInitializer"
   },
+  "C_INIT_SetAttributeToScalarExpression": {
+    "data": {
+      "m_flInput1": {
+        "value": 456,
+        "comment": "CPerParticleFloatInput"
+      },
+      "m_flInput2": {
+        "value": 800,
+        "comment": "CPerParticleFloatInput"
+      },
+      "m_flOutputRemap": {
+        "value": 1144,
+        "comment": "CParticleRemapFloatInput"
+      },
+      "m_nExpression": {
+        "value": 448,
+        "comment": "ScalarExpressionType_t"
+      },
+      "m_nOutputField": {
+        "value": 1488,
+        "comment": "ParticleAttributeIndex_t"
+      },
+      "m_nSetMethod": {
+        "value": 1492,
+        "comment": "ParticleSetMethod_t"
+      }
+    },
+    "comment": "CParticleFunctionInitializer"
+  },
   "C_INIT_SetHitboxToClosest": {
     "data": {
       "m_HitboxSetName": {
@@ -4784,6 +4825,18 @@
   },
   "C_OP_ConnectParentParticleToNearest": {
     "data": {
+      "m_bUseRadius": {
+        "value": 456,
+        "comment": "bool"
+      },
+      "m_flParentRadiusScale": {
+        "value": 808,
+        "comment": "CParticleCollectionFloatInput"
+      },
+      "m_flRadiusScale": {
+        "value": 464,
+        "comment": "CParticleCollectionFloatInput"
+      },
       "m_nFirstControlPoint": {
         "value": 448,
         "comment": "int32_t"
@@ -6987,11 +7040,15 @@
         "comment": "bool"
       },
       "m_flIncrement": {
-        "value": 472,
+        "value": 816,
         "comment": "CParticleCollectionFloatInput"
       },
       "m_flInterpolation": {
-        "value": 1504,
+        "value": 1848,
+        "comment": "CPerParticleFloatInput"
+      },
+      "m_flReadIndex": {
+        "value": 472,
         "comment": "CPerParticleFloatInput"
       },
       "m_nControlPointNumber": {
@@ -6999,15 +7056,19 @@
         "comment": "int32_t"
       },
       "m_nFullLoopIncrement": {
-        "value": 816,
+        "value": 1160,
         "comment": "CParticleCollectionFloatInput"
+      },
+      "m_nIndexType": {
+        "value": 468,
+        "comment": "SnapshotIndexType_t"
       },
       "m_nRandomSeed": {
         "value": 460,
         "comment": "int32_t"
       },
       "m_nSnapShotStartPoint": {
-        "value": 1160,
+        "value": 1504,
         "comment": "CParticleCollectionFloatInput"
       },
       "m_nSnapshotControlPointNumber": {
@@ -7614,6 +7675,10 @@
       },
       "m_bGlobalOrigin": {
         "value": 476,
+        "comment": "bool"
+      },
+      "m_bUseOldCode": {
+        "value": 1168,
         "comment": "bool"
       },
       "m_flMaximumDistanceToCP": {
@@ -9627,15 +9692,15 @@
   "C_OP_RenderModels": {
     "data": {
       "m_ActivityName": {
-        "value": 5472,
+        "value": 5816,
         "comment": "char[256]"
       },
       "m_EconSlotName": {
-        "value": 6476,
+        "value": 7164,
         "comment": "char[256]"
       },
       "m_MaterialVars": {
-        "value": 6352,
+        "value": 6696,
         "comment": "CUtlVector<MaterialVariable_t>"
       },
       "m_ModelList": {
@@ -9643,11 +9708,15 @@
         "comment": "CUtlVector<ModelReference_t>"
       },
       "m_SequenceName": {
-        "value": 5728,
+        "value": 6072,
         "comment": "char[256]"
       },
       "m_bAcceptsDecals": {
-        "value": 6736,
+        "value": 7425,
+        "comment": "bool"
+      },
+      "m_bAllowApproximateTransforms": {
+        "value": 7429,
         "comment": "bool"
       },
       "m_bAnimated": {
@@ -9658,24 +9727,28 @@
         "value": 558,
         "comment": "bool"
       },
+      "m_bDisableDepthPrepass": {
+        "value": 7424,
+        "comment": "bool"
+      },
       "m_bDisableShadows": {
-        "value": 6735,
+        "value": 7423,
         "comment": "bool"
       },
       "m_bDoNotDrawInParticlePass": {
-        "value": 6738,
+        "value": 7427,
         "comment": "bool"
       },
       "m_bEnableClothSimulation": {
-        "value": 5984,
+        "value": 6328,
         "comment": "bool"
       },
       "m_bForceDrawInterlevedWithSiblings": {
-        "value": 6737,
+        "value": 7426,
         "comment": "bool"
       },
       "m_bForceLoopingAnimation": {
-        "value": 5457,
+        "value": 5801,
         "comment": "bool"
       },
       "m_bIgnoreNormal": {
@@ -9691,7 +9764,7 @@
         "comment": "bool"
       },
       "m_bManualAnimFrame": {
-        "value": 5459,
+        "value": 5803,
         "comment": "bool"
       },
       "m_bOnlyRenderInEffecsGameOverlay": {
@@ -9711,23 +9784,27 @@
         "comment": "bool"
       },
       "m_bOriginalModel": {
-        "value": 6732,
+        "value": 7420,
         "comment": "bool"
       },
       "m_bOverrideTranslucentMaterials": {
-        "value": 6000,
+        "value": 6344,
         "comment": "bool"
       },
       "m_bResetAnimOnStop": {
-        "value": 5458,
+        "value": 5802,
         "comment": "bool"
       },
       "m_bScaleAnimationRate": {
-        "value": 5456,
+        "value": 5800,
         "comment": "bool"
       },
       "m_bSuppressTint": {
-        "value": 6733,
+        "value": 7421,
+        "comment": "bool"
+      },
+      "m_bUseFastModelCollectionRenderPath": {
+        "value": 7428,
         "comment": "bool"
       },
       "m_bUseMixedResolutionRendering": {
@@ -9735,43 +9812,47 @@
         "comment": "bool"
       },
       "m_bUseRawMeshGroup": {
-        "value": 6734,
+        "value": 7422,
         "comment": "bool"
       },
       "m_flAlphaScale": {
-        "value": 7344,
+        "value": 8040,
         "comment": "CParticleCollectionFloatInput"
       },
       "m_flAnimationRate": {
-        "value": 5452,
-        "comment": "float"
+        "value": 5456,
+        "comment": "CPerParticleFloatInput"
+      },
+      "m_flManualModelSelection": {
+        "value": 6720,
+        "comment": "CPerParticleFloatInput"
       },
       "m_flRadiusScale": {
-        "value": 7000,
+        "value": 7696,
         "comment": "CParticleCollectionFloatInput"
       },
       "m_flRollScale": {
-        "value": 7688,
+        "value": 8384,
         "comment": "CParticleCollectionFloatInput"
       },
       "m_hOverrideMaterial": {
-        "value": 5992,
+        "value": 6336,
         "comment": "CStrongHandle<InfoForResourceTypeIMaterial2>"
       },
       "m_modelInput": {
-        "value": 6376,
+        "value": 7064,
         "comment": "CParticleModelInput"
       },
       "m_nAlpha2Field": {
-        "value": 8032,
+        "value": 8728,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nAnimationField": {
-        "value": 5464,
+        "value": 5808,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nAnimationScaleField": {
-        "value": 5460,
+        "value": 5804,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nBodyGroupField": {
@@ -9779,15 +9860,15 @@
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nColorBlendType": {
-        "value": 9664,
+        "value": 10360,
         "comment": "ParticleColorBlendType_t"
       },
       "m_nLOD": {
-        "value": 6472,
+        "value": 7160,
         "comment": "int32_t"
       },
       "m_nManualFrameField": {
-        "value": 5468,
+        "value": 5812,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nModelScaleCP": {
@@ -9799,7 +9880,7 @@
         "comment": "int32_t"
       },
       "m_nSkin": {
-        "value": 6008,
+        "value": 6352,
         "comment": "CPerParticleFloatInput"
       },
       "m_nSubModelField": {
@@ -9807,11 +9888,11 @@
         "comment": "ParticleAttributeIndex_t"
       },
       "m_szRenderAttribute": {
-        "value": 6739,
+        "value": 7430,
         "comment": "char[260]"
       },
       "m_vecColorScale": {
-        "value": 8040,
+        "value": 8736,
         "comment": "CParticleCollectionVecInput"
       },
       "m_vecComponentScale": {
@@ -9919,7 +10000,7 @@
   "C_OP_RenderProjected": {
     "data": {
       "m_MaterialVars": {
-        "value": 544,
+        "value": 904,
         "comment": "CUtlVector<MaterialVariable_t>"
       },
       "m_bEnableProjectedDepthControls": {
@@ -9931,7 +10012,7 @@
         "comment": "bool"
       },
       "m_bOrientToNormal": {
-        "value": 540,
+        "value": 900,
         "comment": "bool"
       },
       "m_bProjectCharacter": {
@@ -9947,8 +10028,12 @@
         "comment": "bool"
       },
       "m_flAnimationTimeScale": {
-        "value": 536,
+        "value": 896,
         "comment": "float"
+      },
+      "m_flMaterialSelection": {
+        "value": 552,
+        "comment": "CPerParticleFloatInput"
       },
       "m_flMaxProjectionDepth": {
         "value": 524,
@@ -9958,9 +10043,9 @@
         "value": 520,
         "comment": "float"
       },
-      "m_hProjectedMaterial": {
+      "m_vecProjectedMaterials": {
         "value": 528,
-        "comment": "CStrongHandle<InfoForResourceTypeIMaterial2>"
+        "comment": "CUtlVector<RenderProjectedMaterial_t>"
       }
     },
     "comment": "CParticleFunctionRenderer"
@@ -9968,123 +10053,123 @@
   "C_OP_RenderRopes": {
     "data": {
       "m_bClampV": {
-        "value": 10412,
+        "value": 11084,
         "comment": "bool"
       },
       "m_bClosedLoop": {
-        "value": 10449,
+        "value": 11121,
         "comment": "bool"
       },
       "m_bDrawAsOpaque": {
-        "value": 10460,
+        "value": 11132,
         "comment": "bool"
       },
       "m_bEnableFadingAndClamping": {
-        "value": 9328,
+        "value": 10000,
         "comment": "bool"
       },
       "m_bGenerateNormals": {
-        "value": 10461,
+        "value": 11133,
         "comment": "bool"
       },
       "m_bReverseOrder": {
-        "value": 10448,
+        "value": 11120,
         "comment": "bool"
       },
       "m_bUseScalarForTextureCoordinate": {
-        "value": 10437,
+        "value": 11109,
         "comment": "bool"
       },
       "m_flEndFadeDot": {
-        "value": 9352,
+        "value": 10024,
         "comment": "float"
       },
       "m_flEndFadeSize": {
-        "value": 9344,
+        "value": 10016,
         "comment": "float"
       },
       "m_flMaxSize": {
-        "value": 9336,
+        "value": 10008,
         "comment": "float"
       },
       "m_flMinSize": {
-        "value": 9332,
+        "value": 10004,
         "comment": "float"
       },
       "m_flRadiusTaper": {
-        "value": 9356,
+        "value": 10028,
         "comment": "float"
       },
       "m_flScalarAttributeTextureCoordScale": {
-        "value": 10444,
+        "value": 11116,
         "comment": "float"
       },
       "m_flScaleVOffsetByControlPointDistance": {
-        "value": 10432,
+        "value": 11104,
         "comment": "float"
       },
       "m_flScaleVScrollByControlPointDistance": {
-        "value": 10428,
+        "value": 11100,
         "comment": "float"
       },
       "m_flScaleVSizeByControlPointDistance": {
-        "value": 10424,
+        "value": 11096,
         "comment": "float"
       },
       "m_flStartFadeDot": {
-        "value": 9348,
+        "value": 10020,
         "comment": "float"
       },
       "m_flStartFadeSize": {
-        "value": 9340,
+        "value": 10012,
         "comment": "float"
       },
       "m_flTessScale": {
-        "value": 9368,
+        "value": 10040,
         "comment": "float"
       },
       "m_flTextureVOffset": {
-        "value": 10064,
+        "value": 10736,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flTextureVScrollRate": {
-        "value": 9720,
+        "value": 10392,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flTextureVWorldSize": {
-        "value": 9376,
+        "value": 10048,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_nMaxTesselation": {
-        "value": 9364,
+        "value": 10036,
         "comment": "int32_t"
       },
       "m_nMinTesselation": {
-        "value": 9360,
+        "value": 10032,
         "comment": "int32_t"
       },
       "m_nOrientationType": {
-        "value": 10452,
+        "value": 11124,
         "comment": "ParticleOrientationChoiceList_t"
       },
       "m_nScalarFieldForTextureCoordinate": {
-        "value": 10440,
+        "value": 11112,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nScaleCP1": {
-        "value": 10416,
+        "value": 11088,
         "comment": "int32_t"
       },
       "m_nScaleCP2": {
-        "value": 10420,
+        "value": 11092,
         "comment": "int32_t"
       },
       "m_nTextureVParamsCP": {
-        "value": 10408,
+        "value": 11080,
         "comment": "int32_t"
       },
       "m_nVectorFieldForOrientation": {
-        "value": 10456,
+        "value": 11128,
         "comment": "ParticleAttributeIndex_t"
       }
     },
@@ -10140,6 +10225,31 @@
       "m_flRotateRateDegrees": {
         "value": 512,
         "comment": "float"
+      }
+    },
+    "comment": "CParticleFunctionRenderer"
+  },
+  "C_OP_RenderSimpleModelCollection": {
+    "data": {
+      "m_bAcceptsDecals": {
+        "value": 621,
+        "comment": "bool"
+      },
+      "m_bCenterOffset": {
+        "value": 512,
+        "comment": "bool"
+      },
+      "m_bDisableShadows": {
+        "value": 620,
+        "comment": "bool"
+      },
+      "m_modelInput": {
+        "value": 520,
+        "comment": "CParticleModelInput"
+      },
+      "m_nLOD": {
+        "value": 616,
+        "comment": "int32_t"
       }
     },
     "comment": "CParticleFunctionRenderer"
@@ -10200,111 +10310,111 @@
   "C_OP_RenderSprites": {
     "data": {
       "m_OutlineColor": {
-        "value": 10405,
+        "value": 12101,
         "comment": "Color"
       },
       "m_bDistanceAlpha": {
-        "value": 10392,
+        "value": 12088,
         "comment": "bool"
       },
       "m_bOutline": {
-        "value": 10404,
+        "value": 12100,
         "comment": "bool"
       },
       "m_bParticleShadows": {
-        "value": 11128,
+        "value": 12824,
         "comment": "bool"
       },
       "m_bSoftEdges": {
-        "value": 10393,
+        "value": 12089,
         "comment": "bool"
       },
       "m_bUseYawWithNormalAligned": {
-        "value": 9680,
+        "value": 10352,
         "comment": "bool"
       },
       "m_flAlphaAdjustWithSizeAdjust": {
-        "value": 9692,
-        "comment": "float"
+        "value": 11048,
+        "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flEdgeSoftnessEnd": {
-        "value": 10400,
+        "value": 12096,
         "comment": "float"
       },
       "m_flEdgeSoftnessStart": {
-        "value": 10396,
+        "value": 12092,
         "comment": "float"
       },
       "m_flEndFadeDot": {
-        "value": 10388,
+        "value": 12084,
         "comment": "float"
       },
       "m_flEndFadeSize": {
-        "value": 10040,
+        "value": 11736,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flLightingDirectionality": {
-        "value": 10784,
+        "value": 12480,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flLightingTessellation": {
-        "value": 10440,
+        "value": 12136,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flMaxSize": {
-        "value": 9688,
-        "comment": "float"
+        "value": 10704,
+        "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flMinSize": {
-        "value": 9684,
-        "comment": "float"
+        "value": 10360,
+        "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_flOutlineEnd0": {
-        "value": 10424,
+        "value": 12120,
         "comment": "float"
       },
       "m_flOutlineEnd1": {
-        "value": 10428,
+        "value": 12124,
         "comment": "float"
       },
       "m_flOutlineStart0": {
-        "value": 10416,
+        "value": 12112,
         "comment": "float"
       },
       "m_flOutlineStart1": {
-        "value": 10420,
+        "value": 12116,
         "comment": "float"
       },
       "m_flShadowDensity": {
-        "value": 11132,
+        "value": 12828,
         "comment": "float"
       },
       "m_flStartFadeDot": {
-        "value": 10384,
+        "value": 12080,
         "comment": "float"
       },
       "m_flStartFadeSize": {
-        "value": 9696,
+        "value": 11392,
         "comment": "CParticleCollectionRendererFloatInput"
       },
       "m_nLightingMode": {
-        "value": 10432,
+        "value": 12128,
         "comment": "ParticleLightingQuality_t"
       },
       "m_nOrientationControlPoint": {
-        "value": 9676,
+        "value": 10348,
         "comment": "int32_t"
       },
       "m_nOrientationType": {
-        "value": 9672,
+        "value": 10344,
         "comment": "ParticleOrientationChoiceList_t"
       },
       "m_nOutlineAlpha": {
-        "value": 10412,
+        "value": 12108,
         "comment": "int32_t"
       },
       "m_nSequenceOverride": {
-        "value": 9328,
+        "value": 10000,
         "comment": "CParticleCollectionRendererFloatInput"
       }
     },
@@ -10530,83 +10640,83 @@
   "C_OP_RenderTrails": {
     "data": {
       "m_bEnableFadingAndClamping": {
-        "value": 10048,
+        "value": 10720,
         "comment": "bool"
       },
       "m_bFlipUVBasedOnPitchYaw": {
-        "value": 14724,
+        "value": 15396,
         "comment": "bool"
       },
       "m_bIgnoreDT": {
-        "value": 10072,
+        "value": 10744,
         "comment": "bool"
       },
       "m_flConstrainRadiusToLengthRatio": {
-        "value": 10076,
+        "value": 10748,
         "comment": "float"
       },
       "m_flEndFadeDot": {
-        "value": 10056,
+        "value": 10728,
         "comment": "float"
       },
       "m_flForwardShift": {
-        "value": 14720,
+        "value": 15392,
         "comment": "float"
       },
       "m_flHeadAlphaScale": {
-        "value": 12056,
+        "value": 12728,
         "comment": "CPerParticleFloatInput"
       },
       "m_flLengthFadeInTime": {
-        "value": 10084,
+        "value": 10756,
         "comment": "float"
       },
       "m_flLengthScale": {
-        "value": 10080,
+        "value": 10752,
         "comment": "float"
       },
       "m_flMaxLength": {
-        "value": 10064,
+        "value": 10736,
         "comment": "float"
       },
       "m_flMinLength": {
-        "value": 10068,
+        "value": 10740,
         "comment": "float"
       },
       "m_flRadiusHeadTaper": {
-        "value": 10088,
+        "value": 10760,
         "comment": "CPerParticleFloatInput"
       },
       "m_flRadiusTaper": {
-        "value": 12400,
+        "value": 13072,
         "comment": "CPerParticleFloatInput"
       },
       "m_flStartFadeDot": {
-        "value": 10052,
+        "value": 10724,
         "comment": "float"
       },
       "m_flTailAlphaScale": {
-        "value": 14368,
+        "value": 15040,
         "comment": "CPerParticleFloatInput"
       },
       "m_nHorizCropField": {
-        "value": 14712,
+        "value": 15384,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nPrevPntSource": {
-        "value": 10060,
+        "value": 10732,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nVertCropField": {
-        "value": 14716,
+        "value": 15388,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_vecHeadColorScale": {
-        "value": 10432,
+        "value": 11104,
         "comment": "CParticleCollectionVecInput"
       },
       "m_vecTailColorScale": {
-        "value": 12744,
+        "value": 13416,
         "comment": "CParticleCollectionVecInput"
       }
     },
@@ -10938,16 +11048,20 @@
         "value": 800,
         "comment": "CPerParticleFloatInput"
       },
+      "m_flOutputRemap": {
+        "value": 1144,
+        "comment": "CParticleRemapFloatInput"
+      },
       "m_nExpression": {
         "value": 448,
         "comment": "ScalarExpressionType_t"
       },
       "m_nOutputField": {
-        "value": 1144,
+        "value": 1488,
         "comment": "ParticleAttributeIndex_t"
       },
       "m_nSetMethod": {
-        "value": 1148,
+        "value": 1492,
         "comment": "ParticleSetMethod_t"
       }
     },
@@ -11683,6 +11797,10 @@
   },
   "C_OP_SetFromCPSnapshot": {
     "data": {
+      "m_bPrev": {
+        "value": 1505,
+        "comment": "bool"
+      },
       "m_bRandom": {
         "value": 464,
         "comment": "bool"
@@ -12858,6 +12976,15 @@
       "m_vOffset": {
         "value": 8,
         "comment": "Vector"
+      }
+    },
+    "comment": null
+  },
+  "RenderProjectedMaterial_t": {
+    "data": {
+      "m_hMaterial": {
+        "value": 0,
+        "comment": "CStrongHandle<InfoForResourceTypeIMaterial2>"
       }
     },
     "comment": null

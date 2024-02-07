@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 23 Jan 2024 06:17:17 +0000
+Wed, 7 Feb 2024 04:10:48 +0000
 '''
 
 class AABB_t:
@@ -65,6 +65,8 @@ class InfoForResourceTypeCDotaItemDefinitionResource:
 
 class InfoForResourceTypeCEntityLump:
 
+class InfoForResourceTypeCGcExportableExternalData:
+
 class InfoForResourceTypeCJavaScriptResource:
 
 class InfoForResourceTypeCModel:
@@ -72,6 +74,10 @@ class InfoForResourceTypeCModel:
 class InfoForResourceTypeCMorphSetData:
 
 class InfoForResourceTypeCNmClip:
+
+class InfoForResourceTypeCNmGraph:
+
+class InfoForResourceTypeCNmGraphDataSet:
 
 class InfoForResourceTypeCNmSkeleton:
 
@@ -107,6 +113,8 @@ class InfoForResourceTypeCVSoundEventScriptList:
 
 class InfoForResourceTypeCVSoundStackScriptList:
 
+class InfoForResourceTypeCVoiceContainerBase:
+
 class InfoForResourceTypeCVoxelVisibility:
 
 class InfoForResourceTypeCWorldNode:
@@ -128,8 +136,6 @@ class InfoForResourceTypeManifestTestResource_t:
 class InfoForResourceTypeProceduralTestResource_t:
 
 class InfoForResourceTypeTestResource_t:
-
-class InfoForResourceTypeVSound_t:
 
 class InfoForResourceTypeWorld_t:
 

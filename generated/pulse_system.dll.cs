@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 public static class CBasePulseGraphInstance {
@@ -17,6 +17,10 @@ public static class CPulseCell_BaseValue { // CPulseCell_Base
 }
 
 public static class CPulseCell_BaseYieldingInflow { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_CursorQueue { // CPulseCell_WaitForCursorsWithTagBase
+    public const nint m_nCursorsAllowedToRunParallel = 0x60; // int32_t
 }
 
 public static class CPulseCell_Inflow_BaseEntrypoint { // CPulseCell_BaseFlow
@@ -81,10 +85,6 @@ public static class CPulseCell_Outflow_IntSwitch { // CPulseCell_BaseFlow
     public const nint m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
-public static class CPulseCell_Outflow_SimultaneousParallel { // CPulseCell_BaseFlow
-    public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
-}
-
 public static class CPulseCell_Outflow_StringSwitch { // CPulseCell_BaseFlow
     public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
     public const nint m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
@@ -100,9 +100,11 @@ public static class CPulseCell_Outflow_TestRandomYesNo { // CPulseCell_BaseFlow
     public const nint m_No = 0x58; // CPulse_OutflowConnection
 }
 
-public static class CPulseCell_Step_CallExternalMethod { // CPulseCell_BaseFlow
+public static class CPulseCell_Step_CallExternalMethod { // CPulseCell_BaseYieldingInflow
     public const nint m_MethodName = 0x48; // CUtlSymbolLarge
     public const nint m_ExpectedArgs = 0x50; // CUtlVector<CPulseRuntimeMethodArg>
+    public const nint m_nAsyncCallMode = 0x68; // PulseMethodCallMode_t
+    public const nint m_OnFinished = 0x70; // CPulse_ResumePoint
 }
 
 public static class CPulseCell_Step_DebugLog { // CPulseCell_BaseFlow
@@ -125,6 +127,17 @@ public static class CPulseCell_Step_TestDomainEntFire { // CPulseCell_BaseFlow
 public static class CPulseCell_Step_TestDomainTracepoint { // CPulseCell_BaseFlow
 }
 
+public static class CPulseCell_TestWaitWithCursorState { // CPulseCell_BaseYieldingInflow
+    public const nint m_WakeResume = 0x48; // CPulse_ResumePoint
+    public const nint m_WakeCancel = 0x58; // CPulse_ResumePoint
+    public const nint m_WakeFail = 0x68; // CPulse_ResumePoint
+}
+
+public static class CPulseCell_TestWaitWithCursorState_CursorState_t {
+    public const nint flWaitValue = 0x0; // float
+    public const nint bFailOnCancel = 0x4; // bool
+}
+
 public static class CPulseCell_Test_MultiInflow_NoDefault { // CPulseCell_BaseFlow
 }
 
@@ -132,6 +145,20 @@ public static class CPulseCell_Test_MultiInflow_WithDefault { // CPulseCell_Base
 }
 
 public static class CPulseCell_Test_NoInflow { // CPulseCell_BaseFlow
+}
+
+public static class CPulseCell_Timeline { // CPulseCell_BaseYieldingInflow
+    public const nint m_TimelineEvents = 0x48; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
+    public const nint m_bWaitForChildOutflows = 0x60; // bool
+    public const nint m_OnFinished = 0x68; // CPulse_ResumePoint
+    public const nint m_OnCanceled = 0x78; // CPulse_ResumePoint
+}
+
+public static class CPulseCell_Timeline_TimelineEvent_t {
+    public const nint m_flTimeFromPrevious = 0x0; // float
+    public const nint m_bPauseForPreviousEvents = 0x4; // bool
+    public const nint m_bCallModeSync = 0x5; // bool
+    public const nint m_EventOutflow = 0x8; // CPulse_OutflowConnection
 }
 
 public static class CPulseCell_Val_TestDomainFindEntityByName { // CPulseCell_BaseValue
@@ -146,6 +173,23 @@ public static class CPulseCell_Value_RandomInt { // CPulseCell_BaseValue
 public static class CPulseCell_Value_TestValue50 { // CPulseCell_BaseValue
 }
 
+public static class CPulseCell_WaitForCursorsWithTag { // CPulseCell_WaitForCursorsWithTagBase
+    public const nint m_bTagSelfWhenComplete = 0x60; // bool
+    public const nint m_nDesiredKillPriority = 0x64; // PulseCursorCancelPriority_t
+}
+
+public static class CPulseCell_WaitForCursorsWithTagBase { // CPulseCell_BaseYieldingInflow
+    public const nint m_nCursorsAllowedToWait = 0x48; // int32_t
+    public const nint m_WaitComplete = 0x50; // CPulse_ResumePoint
+}
+
+public static class CPulseCell_WaitForCursorsWithTagBase_CursorState_t {
+    public const nint m_TagName = 0x0; // CUtlSymbolLarge
+}
+
+public static class CPulseCursorFuncs {
+}
+
 public static class CPulseExecCursor {
 }
 
@@ -158,20 +202,21 @@ public static class CPulseGraphDef {
     public const nint m_PublicOutputs = 0x60; // CUtlVector<CPulse_PublicOutput>
     public const nint m_InvokeBindings = 0x78; // CUtlVector<CPulse_InvokeBinding*>
     public const nint m_CallInfos = 0x90; // CUtlVector<CPulse_CallInfo*>
-    public const nint m_OutputConnections = 0xA8; // CUtlVector<CPulse_OutputConnection*>
+    public const nint m_Constants = 0xA8; // CUtlVector<CPulse_Constant>
+    public const nint m_OutputConnections = 0xC0; // CUtlVector<CPulse_OutputConnection*>
 }
 
 public static class CPulseGraphInstance_TestDomain { // CBasePulseGraphInstance
-    public const nint m_bIsRunningUnitTests = 0xD0; // bool
-    public const nint m_bExplicitTimeStepping = 0xD1; // bool
-    public const nint m_bExpectingToDestroyWithYieldedCursors = 0xD2; // bool
-    public const nint m_nNextValidateIndex = 0xD4; // int32_t
-    public const nint m_Tracepoints = 0xD8; // CUtlVector<CUtlString>
-    public const nint m_bTestYesOrNoPath = 0xF0; // bool
+    public const nint m_bIsRunningUnitTests = 0xD8; // bool
+    public const nint m_bExplicitTimeStepping = 0xD9; // bool
+    public const nint m_bExpectingToDestroyWithYieldedCursors = 0xDA; // bool
+    public const nint m_nNextValidateIndex = 0xDC; // int32_t
+    public const nint m_Tracepoints = 0xE0; // CUtlVector<CUtlString>
+    public const nint m_bTestYesOrNoPath = 0xF8; // bool
 }
 
 public static class CPulseGraphInstance_TestDomain_Derived { // CPulseGraphInstance_TestDomain
-    public const nint m_nInstanceValueX = 0xF8; // int32_t
+    public const nint m_nInstanceValueX = 0x100; // int32_t
 }
 
 public static class CPulseGraphInstance_TurtleGraphics { // CBasePulseGraphInstance
@@ -196,10 +241,10 @@ public static class CPulseTestScriptLib {
 }
 
 public static class CPulseTurtleGraphicsCursor { // CPulseExecCursor
-    public const nint m_Color = 0x188; // Color
-    public const nint m_vPos = 0x18C; // Vector2D
-    public const nint m_flHeadingDeg = 0x194; // float
-    public const nint m_bPenUp = 0x198; // bool
+    public const nint m_Color = 0x168; // Color
+    public const nint m_vPos = 0x16C; // Vector2D
+    public const nint m_flHeadingDeg = 0x174; // float
+    public const nint m_bPenUp = 0x178; // bool
 }
 
 public static class CPulse_CallInfo {
@@ -217,13 +262,17 @@ public static class CPulse_Chunk {
     public const nint m_InstructionEditorIDs = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
 }
 
+public static class CPulse_Constant {
+    public const nint m_Type = 0x0; // CPulseValueFullType
+    public const nint m_Value = 0x10; // KeyValues3
+}
+
 public static class CPulse_InvokeBinding {
     public const nint m_RegisterMap = 0x0; // PulseRegisterMap_t
     public const nint m_FuncName = 0x20; // CUtlSymbolLarge
     public const nint m_nCellIndex = 0x28; // PulseRuntimeCellIndex_t
-    public const nint m_InstanceType = 0x30; // CPulseValueFullType
-    public const nint m_nSrcChunk = 0x40; // PulseRuntimeChunkIndex_t
-    public const nint m_nSrcInstruction = 0x44; // int32_t
+    public const nint m_nSrcChunk = 0x2C; // PulseRuntimeChunkIndex_t
+    public const nint m_nSrcInstruction = 0x30; // int32_t
 }
 
 public static class CPulse_OutflowConnection {
@@ -265,8 +314,8 @@ public static class CPulse_Variable {
 }
 
 public static class CTestDomainDerived_Cursor { // CPulseExecCursor
-    public const nint m_nCursorValueA = 0x188; // int32_t
-    public const nint m_nCursorValueB = 0x18C; // int32_t
+    public const nint m_nCursorValueA = 0x168; // int32_t
+    public const nint m_nCursorValueB = 0x16C; // int32_t
 }
 
 public static class FakeEntity_t {
@@ -279,6 +328,9 @@ public static class FakeEntity_t {
     public const nint m_fValue = 0x2C; // float
 }
 
+public static class FakeEntity_tAPI {
+}
+
 public static class PGDInstruction_t {
     public const nint m_nCode = 0x0; // PulseInstructionCode_t
     public const nint m_nVar = 0x4; // PulseRuntimeVarIndex_t
@@ -289,17 +341,24 @@ public static class PGDInstruction_t {
     public const nint m_nChunk = 0x14; // PulseRuntimeChunkIndex_t
     public const nint m_nDestInstruction = 0x18; // int32_t
     public const nint m_nCallInfoIndex = 0x1C; // PulseRuntimeCallInfoIndex_t
-    public const nint m_Arg0Name = 0x20; // CUtlSymbolLarge
-    public const nint m_Arg1Name = 0x28; // CUtlSymbolLarge
-    public const nint m_bLiteralBool = 0x30; // bool
-    public const nint m_nLiteralInt = 0x34; // int32_t
-    public const nint m_flLiteralFloat = 0x38; // float
-    public const nint m_LiteralString = 0x40; // CBufferString
-    public const nint m_vLiteralVec3 = 0x50; // Vector
+    public const nint m_nConstIdx = 0x20; // PulseRuntimeConstantIndex_t
+    public const nint m_DomainValue = 0x28; // CBufferString
+}
+
+public static class PulseCursorID_t {
+    public const nint m_Value = 0x0; // int32_t
+}
+
+public static class PulseCursorYieldToken_t {
+    public const nint m_Value = 0x0; // int32_t
 }
 
 public static class PulseDocNodeID_t {
     public const nint m_Value = 0x0; // int32_t
+}
+
+public static class PulseGraphInstanceID_t {
+    public const nint m_Value = 0x0; // uint32_t
 }
 
 public static class PulseRegisterMap_t {
@@ -317,6 +376,10 @@ public static class PulseRuntimeCellIndex_t {
 
 public static class PulseRuntimeChunkIndex_t {
     public const nint m_Value = 0x0; // int32_t
+}
+
+public static class PulseRuntimeConstantIndex_t {
+    public const nint m_Value = 0x0; // int16_t
 }
 
 public static class PulseRuntimeEntrypointIndex_t {
@@ -344,5 +407,5 @@ public static class PulseRuntimeVarIndex_t {
 }
 
 public static class PulseTestEHandle_t {
-    public const nint m_Value = 0x0; // int32_t
+    public const nint m_Value = 0x0; // uint32_t
 }

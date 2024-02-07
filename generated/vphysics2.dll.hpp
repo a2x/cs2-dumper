@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #pragma once
@@ -302,6 +302,12 @@ namespace FeSimdQuad_t {
     constexpr std::ptrdiff_t f4Weights = 0xF0; // fltx4[4]
 }
 
+namespace FeSimdRodConstraintAnim_t {
+    constexpr std::ptrdiff_t nNode = 0x0; // uint16_t[4][2]
+    constexpr std::ptrdiff_t f4Weight0 = 0x10; // fltx4
+    constexpr std::ptrdiff_t f4RelaxationFactor = 0x20; // fltx4
+}
+
 namespace FeSimdRodConstraint_t {
     constexpr std::ptrdiff_t nNode = 0x0; // uint16_t[4][2]
     constexpr std::ptrdiff_t f4MaxDist = 0x10; // fltx4
@@ -485,78 +491,80 @@ namespace PhysFeModelDesc_t {
     constexpr std::ptrdiff_t m_SimdQuads = 0xC0; // CUtlVector<FeSimdQuad_t>
     constexpr std::ptrdiff_t m_SimdTris = 0xD8; // CUtlVector<FeSimdTri_t>
     constexpr std::ptrdiff_t m_SimdRods = 0xF0; // CUtlVector<FeSimdRodConstraint_t>
-    constexpr std::ptrdiff_t m_InitPose = 0x108; // CUtlVector<CTransform>
-    constexpr std::ptrdiff_t m_Rods = 0x120; // CUtlVector<FeRodConstraint_t>
-    constexpr std::ptrdiff_t m_Twists = 0x138; // CUtlVector<FeTwistConstraint_t>
-    constexpr std::ptrdiff_t m_AxialEdges = 0x150; // CUtlVector<FeAxialEdgeBend_t>
-    constexpr std::ptrdiff_t m_NodeInvMasses = 0x168; // CUtlVector<float>
-    constexpr std::ptrdiff_t m_CtrlOffsets = 0x180; // CUtlVector<FeCtrlOffset_t>
-    constexpr std::ptrdiff_t m_CtrlOsOffsets = 0x198; // CUtlVector<FeCtrlOsOffset_t>
-    constexpr std::ptrdiff_t m_FollowNodes = 0x1B0; // CUtlVector<FeFollowNode_t>
-    constexpr std::ptrdiff_t m_CollisionPlanes = 0x1C8; // CUtlVector<FeCollisionPlane_t>
-    constexpr std::ptrdiff_t m_NodeIntegrator = 0x1E0; // CUtlVector<FeNodeIntegrator_t>
-    constexpr std::ptrdiff_t m_SpringIntegrator = 0x1F8; // CUtlVector<FeSpringIntegrator_t>
-    constexpr std::ptrdiff_t m_SimdSpringIntegrator = 0x210; // CUtlVector<FeSimdSpringIntegrator_t>
-    constexpr std::ptrdiff_t m_WorldCollisionParams = 0x228; // CUtlVector<FeWorldCollisionParams_t>
-    constexpr std::ptrdiff_t m_LegacyStretchForce = 0x240; // CUtlVector<float>
-    constexpr std::ptrdiff_t m_NodeCollisionRadii = 0x258; // CUtlVector<float>
-    constexpr std::ptrdiff_t m_DynNodeFriction = 0x270; // CUtlVector<float>
-    constexpr std::ptrdiff_t m_LocalRotation = 0x288; // CUtlVector<float>
-    constexpr std::ptrdiff_t m_LocalForce = 0x2A0; // CUtlVector<float>
-    constexpr std::ptrdiff_t m_TaperedCapsuleStretches = 0x2B8; // CUtlVector<FeTaperedCapsuleStretch_t>
-    constexpr std::ptrdiff_t m_TaperedCapsuleRigids = 0x2D0; // CUtlVector<FeTaperedCapsuleRigid_t>
-    constexpr std::ptrdiff_t m_SphereRigids = 0x2E8; // CUtlVector<FeSphereRigid_t>
-    constexpr std::ptrdiff_t m_WorldCollisionNodes = 0x300; // CUtlVector<uint16_t>
-    constexpr std::ptrdiff_t m_TreeParents = 0x318; // CUtlVector<uint16_t>
-    constexpr std::ptrdiff_t m_TreeCollisionMasks = 0x330; // CUtlVector<uint16_t>
-    constexpr std::ptrdiff_t m_TreeChildren = 0x348; // CUtlVector<FeTreeChildren_t>
-    constexpr std::ptrdiff_t m_FreeNodes = 0x360; // CUtlVector<uint16_t>
-    constexpr std::ptrdiff_t m_FitMatrices = 0x378; // CUtlVector<FeFitMatrix_t>
-    constexpr std::ptrdiff_t m_FitWeights = 0x390; // CUtlVector<FeFitWeight_t>
-    constexpr std::ptrdiff_t m_ReverseOffsets = 0x3A8; // CUtlVector<FeNodeReverseOffset_t>
-    constexpr std::ptrdiff_t m_AnimStrayRadii = 0x3C0; // CUtlVector<FeAnimStrayRadius_t>
-    constexpr std::ptrdiff_t m_SimdAnimStrayRadii = 0x3D8; // CUtlVector<FeSimdAnimStrayRadius_t>
-    constexpr std::ptrdiff_t m_KelagerBends = 0x3F0; // CUtlVector<FeKelagerBend2_t>
-    constexpr std::ptrdiff_t m_CtrlSoftOffsets = 0x408; // CUtlVector<FeCtrlSoftOffset_t>
-    constexpr std::ptrdiff_t m_JiggleBones = 0x420; // CUtlVector<CFeIndexedJiggleBone>
-    constexpr std::ptrdiff_t m_SourceElems = 0x438; // CUtlVector<uint16_t>
-    constexpr std::ptrdiff_t m_GoalDampedSpringIntegrators = 0x450; // CUtlVector<uint32_t>
-    constexpr std::ptrdiff_t m_Tris = 0x468; // CUtlVector<FeTri_t>
-    constexpr std::ptrdiff_t m_nTriCount1 = 0x480; // uint16_t
-    constexpr std::ptrdiff_t m_nTriCount2 = 0x482; // uint16_t
-    constexpr std::ptrdiff_t m_nReservedUint8 = 0x484; // uint8_t
-    constexpr std::ptrdiff_t m_nExtraPressureIterations = 0x485; // uint8_t
-    constexpr std::ptrdiff_t m_nExtraGoalIterations = 0x486; // uint8_t
-    constexpr std::ptrdiff_t m_nExtraIterations = 0x487; // uint8_t
-    constexpr std::ptrdiff_t m_BoxRigids = 0x488; // CUtlVector<FeBoxRigid_t>
-    constexpr std::ptrdiff_t m_DynNodeVertexSet = 0x4A0; // CUtlVector<uint8_t>
-    constexpr std::ptrdiff_t m_VertexSetNames = 0x4B8; // CUtlVector<uint32_t>
-    constexpr std::ptrdiff_t m_RigidColliderPriorities = 0x4D0; // CUtlVector<FeRigidColliderIndices_t>
-    constexpr std::ptrdiff_t m_MorphLayers = 0x4E8; // CUtlVector<FeMorphLayerDepr_t>
-    constexpr std::ptrdiff_t m_MorphSetData = 0x500; // CUtlVector<uint8_t>
-    constexpr std::ptrdiff_t m_VertexMaps = 0x518; // CUtlVector<FeVertexMapDesc_t>
-    constexpr std::ptrdiff_t m_VertexMapValues = 0x530; // CUtlVector<uint8_t>
-    constexpr std::ptrdiff_t m_Effects = 0x548; // CUtlVector<FeEffectDesc_t>
-    constexpr std::ptrdiff_t m_LockToParent = 0x560; // CUtlVector<FeCtrlOffset_t>
-    constexpr std::ptrdiff_t m_LockToGoal = 0x578; // CUtlVector<uint16_t>
-    constexpr std::ptrdiff_t m_DynNodeWindBases = 0x590; // CUtlVector<FeNodeWindBase_t>
-    constexpr std::ptrdiff_t m_flInternalPressure = 0x5A8; // float
-    constexpr std::ptrdiff_t m_flDefaultTimeDilation = 0x5AC; // float
-    constexpr std::ptrdiff_t m_flWindage = 0x5B0; // float
-    constexpr std::ptrdiff_t m_flWindDrag = 0x5B4; // float
-    constexpr std::ptrdiff_t m_flDefaultSurfaceStretch = 0x5B8; // float
-    constexpr std::ptrdiff_t m_flDefaultThreadStretch = 0x5BC; // float
-    constexpr std::ptrdiff_t m_flDefaultGravityScale = 0x5C0; // float
-    constexpr std::ptrdiff_t m_flDefaultVelAirDrag = 0x5C4; // float
-    constexpr std::ptrdiff_t m_flDefaultExpAirDrag = 0x5C8; // float
-    constexpr std::ptrdiff_t m_flDefaultVelQuadAirDrag = 0x5CC; // float
-    constexpr std::ptrdiff_t m_flDefaultExpQuadAirDrag = 0x5D0; // float
-    constexpr std::ptrdiff_t m_flRodVelocitySmoothRate = 0x5D4; // float
-    constexpr std::ptrdiff_t m_flQuadVelocitySmoothRate = 0x5D8; // float
-    constexpr std::ptrdiff_t m_flAddWorldCollisionRadius = 0x5DC; // float
-    constexpr std::ptrdiff_t m_flDefaultVolumetricSolveAmount = 0x5E0; // float
-    constexpr std::ptrdiff_t m_nRodVelocitySmoothIterations = 0x5E4; // uint16_t
-    constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x5E6; // uint16_t
+    constexpr std::ptrdiff_t m_SimdRodsAnim = 0x108; // CUtlVector<FeSimdRodConstraintAnim_t>
+    constexpr std::ptrdiff_t m_InitPose = 0x120; // CUtlVector<CTransform>
+    constexpr std::ptrdiff_t m_Rods = 0x138; // CUtlVector<FeRodConstraint_t>
+    constexpr std::ptrdiff_t m_Twists = 0x150; // CUtlVector<FeTwistConstraint_t>
+    constexpr std::ptrdiff_t m_AxialEdges = 0x168; // CUtlVector<FeAxialEdgeBend_t>
+    constexpr std::ptrdiff_t m_NodeInvMasses = 0x180; // CUtlVector<float>
+    constexpr std::ptrdiff_t m_CtrlOffsets = 0x198; // CUtlVector<FeCtrlOffset_t>
+    constexpr std::ptrdiff_t m_CtrlOsOffsets = 0x1B0; // CUtlVector<FeCtrlOsOffset_t>
+    constexpr std::ptrdiff_t m_FollowNodes = 0x1C8; // CUtlVector<FeFollowNode_t>
+    constexpr std::ptrdiff_t m_CollisionPlanes = 0x1E0; // CUtlVector<FeCollisionPlane_t>
+    constexpr std::ptrdiff_t m_NodeIntegrator = 0x1F8; // CUtlVector<FeNodeIntegrator_t>
+    constexpr std::ptrdiff_t m_SpringIntegrator = 0x210; // CUtlVector<FeSpringIntegrator_t>
+    constexpr std::ptrdiff_t m_SimdSpringIntegrator = 0x228; // CUtlVector<FeSimdSpringIntegrator_t>
+    constexpr std::ptrdiff_t m_WorldCollisionParams = 0x240; // CUtlVector<FeWorldCollisionParams_t>
+    constexpr std::ptrdiff_t m_LegacyStretchForce = 0x258; // CUtlVector<float>
+    constexpr std::ptrdiff_t m_NodeCollisionRadii = 0x270; // CUtlVector<float>
+    constexpr std::ptrdiff_t m_DynNodeFriction = 0x288; // CUtlVector<float>
+    constexpr std::ptrdiff_t m_LocalRotation = 0x2A0; // CUtlVector<float>
+    constexpr std::ptrdiff_t m_LocalForce = 0x2B8; // CUtlVector<float>
+    constexpr std::ptrdiff_t m_TaperedCapsuleStretches = 0x2D0; // CUtlVector<FeTaperedCapsuleStretch_t>
+    constexpr std::ptrdiff_t m_TaperedCapsuleRigids = 0x2E8; // CUtlVector<FeTaperedCapsuleRigid_t>
+    constexpr std::ptrdiff_t m_SphereRigids = 0x300; // CUtlVector<FeSphereRigid_t>
+    constexpr std::ptrdiff_t m_WorldCollisionNodes = 0x318; // CUtlVector<uint16_t>
+    constexpr std::ptrdiff_t m_TreeParents = 0x330; // CUtlVector<uint16_t>
+    constexpr std::ptrdiff_t m_TreeCollisionMasks = 0x348; // CUtlVector<uint16_t>
+    constexpr std::ptrdiff_t m_TreeChildren = 0x360; // CUtlVector<FeTreeChildren_t>
+    constexpr std::ptrdiff_t m_FreeNodes = 0x378; // CUtlVector<uint16_t>
+    constexpr std::ptrdiff_t m_FitMatrices = 0x390; // CUtlVector<FeFitMatrix_t>
+    constexpr std::ptrdiff_t m_FitWeights = 0x3A8; // CUtlVector<FeFitWeight_t>
+    constexpr std::ptrdiff_t m_ReverseOffsets = 0x3C0; // CUtlVector<FeNodeReverseOffset_t>
+    constexpr std::ptrdiff_t m_AnimStrayRadii = 0x3D8; // CUtlVector<FeAnimStrayRadius_t>
+    constexpr std::ptrdiff_t m_SimdAnimStrayRadii = 0x3F0; // CUtlVector<FeSimdAnimStrayRadius_t>
+    constexpr std::ptrdiff_t m_KelagerBends = 0x408; // CUtlVector<FeKelagerBend2_t>
+    constexpr std::ptrdiff_t m_CtrlSoftOffsets = 0x420; // CUtlVector<FeCtrlSoftOffset_t>
+    constexpr std::ptrdiff_t m_JiggleBones = 0x438; // CUtlVector<CFeIndexedJiggleBone>
+    constexpr std::ptrdiff_t m_SourceElems = 0x450; // CUtlVector<uint16_t>
+    constexpr std::ptrdiff_t m_GoalDampedSpringIntegrators = 0x468; // CUtlVector<uint32_t>
+    constexpr std::ptrdiff_t m_Tris = 0x480; // CUtlVector<FeTri_t>
+    constexpr std::ptrdiff_t m_nTriCount1 = 0x498; // uint16_t
+    constexpr std::ptrdiff_t m_nTriCount2 = 0x49A; // uint16_t
+    constexpr std::ptrdiff_t m_nReservedUint8 = 0x49C; // uint8_t
+    constexpr std::ptrdiff_t m_nExtraPressureIterations = 0x49D; // uint8_t
+    constexpr std::ptrdiff_t m_nExtraGoalIterations = 0x49E; // uint8_t
+    constexpr std::ptrdiff_t m_nExtraIterations = 0x49F; // uint8_t
+    constexpr std::ptrdiff_t m_BoxRigids = 0x4A0; // CUtlVector<FeBoxRigid_t>
+    constexpr std::ptrdiff_t m_DynNodeVertexSet = 0x4B8; // CUtlVector<uint8_t>
+    constexpr std::ptrdiff_t m_VertexSetNames = 0x4D0; // CUtlVector<uint32_t>
+    constexpr std::ptrdiff_t m_RigidColliderPriorities = 0x4E8; // CUtlVector<FeRigidColliderIndices_t>
+    constexpr std::ptrdiff_t m_MorphLayers = 0x500; // CUtlVector<FeMorphLayerDepr_t>
+    constexpr std::ptrdiff_t m_MorphSetData = 0x518; // CUtlVector<uint8_t>
+    constexpr std::ptrdiff_t m_VertexMaps = 0x530; // CUtlVector<FeVertexMapDesc_t>
+    constexpr std::ptrdiff_t m_VertexMapValues = 0x548; // CUtlVector<uint8_t>
+    constexpr std::ptrdiff_t m_Effects = 0x560; // CUtlVector<FeEffectDesc_t>
+    constexpr std::ptrdiff_t m_LockToParent = 0x578; // CUtlVector<FeCtrlOffset_t>
+    constexpr std::ptrdiff_t m_LockToGoal = 0x590; // CUtlVector<uint16_t>
+    constexpr std::ptrdiff_t m_SkelParents = 0x5A8; // CUtlVector<int16_t>
+    constexpr std::ptrdiff_t m_DynNodeWindBases = 0x5C0; // CUtlVector<FeNodeWindBase_t>
+    constexpr std::ptrdiff_t m_flInternalPressure = 0x5D8; // float
+    constexpr std::ptrdiff_t m_flDefaultTimeDilation = 0x5DC; // float
+    constexpr std::ptrdiff_t m_flWindage = 0x5E0; // float
+    constexpr std::ptrdiff_t m_flWindDrag = 0x5E4; // float
+    constexpr std::ptrdiff_t m_flDefaultSurfaceStretch = 0x5E8; // float
+    constexpr std::ptrdiff_t m_flDefaultThreadStretch = 0x5EC; // float
+    constexpr std::ptrdiff_t m_flDefaultGravityScale = 0x5F0; // float
+    constexpr std::ptrdiff_t m_flDefaultVelAirDrag = 0x5F4; // float
+    constexpr std::ptrdiff_t m_flDefaultExpAirDrag = 0x5F8; // float
+    constexpr std::ptrdiff_t m_flDefaultVelQuadAirDrag = 0x5FC; // float
+    constexpr std::ptrdiff_t m_flDefaultExpQuadAirDrag = 0x600; // float
+    constexpr std::ptrdiff_t m_flRodVelocitySmoothRate = 0x604; // float
+    constexpr std::ptrdiff_t m_flQuadVelocitySmoothRate = 0x608; // float
+    constexpr std::ptrdiff_t m_flAddWorldCollisionRadius = 0x60C; // float
+    constexpr std::ptrdiff_t m_flDefaultVolumetricSolveAmount = 0x610; // float
+    constexpr std::ptrdiff_t m_nRodVelocitySmoothIterations = 0x614; // uint16_t
+    constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x616; // uint16_t
 }
 
 namespace RnBlendVertex_t {
@@ -639,13 +647,14 @@ namespace RnHull_t {
     constexpr std::ptrdiff_t m_vOrthographicAreas = 0x28; // Vector
     constexpr std::ptrdiff_t m_MassProperties = 0x34; // matrix3x4_t
     constexpr std::ptrdiff_t m_flVolume = 0x64; // float
-    constexpr std::ptrdiff_t m_Vertices = 0x68; // CUtlVector<RnVertex_t>
-    constexpr std::ptrdiff_t m_VertexPositions = 0x80; // CUtlVector<Vector>
-    constexpr std::ptrdiff_t m_Edges = 0x98; // CUtlVector<RnHalfEdge_t>
-    constexpr std::ptrdiff_t m_Faces = 0xB0; // CUtlVector<RnFace_t>
-    constexpr std::ptrdiff_t m_FacePlanes = 0xC8; // CUtlVector<RnPlane_t>
-    constexpr std::ptrdiff_t m_nFlags = 0xE0; // uint32_t
-    constexpr std::ptrdiff_t m_pRegionSVM = 0xE8; // CRegionSVM*
+    constexpr std::ptrdiff_t m_flSurfaceArea = 0x68; // float
+    constexpr std::ptrdiff_t m_Vertices = 0x70; // CUtlVector<RnVertex_t>
+    constexpr std::ptrdiff_t m_VertexPositions = 0x88; // CUtlVector<Vector>
+    constexpr std::ptrdiff_t m_Edges = 0xA0; // CUtlVector<RnHalfEdge_t>
+    constexpr std::ptrdiff_t m_Faces = 0xB8; // CUtlVector<RnFace_t>
+    constexpr std::ptrdiff_t m_FacePlanes = 0xD0; // CUtlVector<RnPlane_t>
+    constexpr std::ptrdiff_t m_nFlags = 0xE8; // uint32_t
+    constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // CRegionSVM*
 }
 
 namespace RnMeshDesc_t { // RnShapeDesc_t
@@ -699,12 +708,7 @@ namespace RnSoftbodySpring_t {
 }
 
 namespace RnSphereDesc_t { // RnShapeDesc_t
-    constexpr std::ptrdiff_t m_Sphere = 0x10; // RnSphere_t
-}
-
-namespace RnSphere_t {
-    constexpr std::ptrdiff_t m_vCenter = 0x0; // Vector
-    constexpr std::ptrdiff_t m_flRadius = 0xC; // float
+    constexpr std::ptrdiff_t m_Sphere = 0x10; // SphereBase_t<float>
 }
 
 namespace RnTriangle_t {

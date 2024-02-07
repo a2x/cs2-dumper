@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #pragma once
@@ -42,6 +42,7 @@ namespace CEntityInstance {
     constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
     constexpr std::ptrdiff_t m_pEntity = 0x10; // CEntityIdentity*
     constexpr std::ptrdiff_t m_CScriptComponent = 0x28; // CScriptComponent*
+    constexpr std::ptrdiff_t m_bVisibleinPVS = 0x30; // bool
 }
 
 namespace CNetworkVarChainer {
@@ -96,6 +97,7 @@ namespace EventClientFrameSimulate_t {
     constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
     constexpr std::ptrdiff_t m_flRealTime = 0x28; // float
     constexpr std::ptrdiff_t m_flFrameTime = 0x2C; // float
+    constexpr std::ptrdiff_t m_flWhenScheduleSendTickPacket = 0x30; // double
 }
 
 namespace EventClientOutput_t {
@@ -165,11 +167,6 @@ namespace EventClientProcessNetworking_t {
 
 namespace EventClientSceneSystemThreadStateChange_t {
     constexpr std::ptrdiff_t m_bThreadsActive = 0x0; // bool
-}
-
-namespace EventClientSendInput_t {
-    constexpr std::ptrdiff_t m_bFinalClientCommandTick = 0x0; // bool
-    constexpr std::ptrdiff_t m_nAdditionalClientCommandsToCreate = 0x4; // int32_t
 }
 
 namespace EventClientSimulate_t { // EventSimulate_t

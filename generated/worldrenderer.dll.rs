@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -67,6 +67,7 @@ pub mod CEntityInstance {
     pub const m_iszPrivateVScripts: usize = 0x8; // CUtlSymbolLarge
     pub const m_pEntity: usize = 0x10; // CEntityIdentity*
     pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
+    pub const m_bVisibleinPVS: usize = 0x30; // bool
 }
 
 pub mod CScriptComponent { // CEntityComponent

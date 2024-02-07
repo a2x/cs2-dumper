@@ -187,6 +187,10 @@
         "value": 40,
         "comment": "CScriptComponent*"
       },
+      "m_bVisibleinPVS": {
+        "value": 48,
+        "comment": "bool"
+      },
       "m_iszPrivateVScripts": {
         "value": 8,
         "comment": "CUtlSymbolLarge"

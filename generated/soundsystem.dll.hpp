@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #pragma once
@@ -45,6 +45,21 @@ namespace CSosGroupActionSetSoundeventParameterSchema { // CSosGroupActionSchema
     constexpr std::ptrdiff_t m_nSortType = 0x30; // SosActionSortType_t
 }
 
+namespace CSosGroupActionSoundeventClusterSchema { // CSosGroupActionSchema
+    constexpr std::ptrdiff_t m_nMinNearby = 0x18; // int32_t
+    constexpr std::ptrdiff_t m_flClusterEpsilon = 0x1C; // float
+    constexpr std::ptrdiff_t m_shouldPlayOpvar = 0x20; // CUtlString
+    constexpr std::ptrdiff_t m_shouldPlayClusterChild = 0x28; // CUtlString
+    constexpr std::ptrdiff_t m_clusterSizeOpvar = 0x30; // CUtlString
+    constexpr std::ptrdiff_t m_groupBoundingBoxMinsOpvar = 0x38; // CUtlString
+    constexpr std::ptrdiff_t m_groupBoundingBoxMaxsOpvar = 0x40; // CUtlString
+}
+
+namespace CSosGroupActionTimeBlockLimitSchema { // CSosGroupActionSchema
+    constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32_t
+    constexpr std::ptrdiff_t m_flMaxDuration = 0x1C; // float
+}
+
 namespace CSosGroupActionTimeLimitSchema { // CSosGroupActionSchema
     constexpr std::ptrdiff_t m_flMaxDuration = 0x18; // float
 }
@@ -80,6 +95,68 @@ namespace CSosSoundEventGroupSchema {
 
 namespace CSoundEventMetaData {
     constexpr std::ptrdiff_t m_soundEventVMix = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
+}
+
+namespace CVoiceContainerAmpedDecayingSineWave { // CVoiceContainerDecayingSineWave
+    constexpr std::ptrdiff_t m_flGainAmount = 0x68; // float
+}
+
+namespace CVoiceContainerBase {
+    constexpr std::ptrdiff_t m_curves = 0x20; // CUtlDict<CPiecewiseCurve,F(size=1)>
+}
+
+namespace CVoiceContainerBlend { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_hSoundOne = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    constexpr std::ptrdiff_t m_hSoundTwo = 0x68; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    constexpr std::ptrdiff_t m_flBlendAmount = 0x70; // float
+}
+
+namespace CVoiceContainerDecayingSineWave { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_flFrequency = 0x60; // float
+    constexpr std::ptrdiff_t m_flDecayTime = 0x64; // float
+}
+
+namespace CVoiceContainerDefault { // CVoiceContainerBase
+}
+
+namespace CVoiceContainerEngineSound { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // float
+    constexpr std::ptrdiff_t m_flTestSoundEventBoundParam = 0x6C; // float
+    constexpr std::ptrdiff_t m_flEngineRPM = 0x70; // float
+}
+
+namespace CVoiceContainerEnvelopeAnalyzer { // CVoiceContainerWavFileReader
+    constexpr std::ptrdiff_t m_envBuffer = 0x68; // CUtlVector<float>
+}
+
+namespace CVoiceContainerRandomSampler { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_flLoudAmplitude = 0x60; // float
+    constexpr std::ptrdiff_t m_flLoudAmplitudeJitter = 0x64; // float
+    constexpr std::ptrdiff_t m_flSoftAmplitude = 0x68; // float
+    constexpr std::ptrdiff_t m_flSoftAmplitudeJitter = 0x6C; // float
+    constexpr std::ptrdiff_t m_flLoudTimeJitter = 0x70; // float
+    constexpr std::ptrdiff_t m_flSoftTimeJitter = 0x74; // float
+    constexpr std::ptrdiff_t m_grainResources = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+}
+
+namespace CVoiceContainerRealtimeFMSineWave { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_flCarrierFrequency = 0x60; // float
+    constexpr std::ptrdiff_t m_flModulatorFrequency = 0x64; // float
+    constexpr std::ptrdiff_t m_flModulatorAmount = 0x68; // float
+}
+
+namespace CVoiceContainerTestConstant { // CVoiceContainerWavFileReader
+    constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // bool
+}
+
+namespace CVoiceContainerTestNestedDynamic { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // float
+}
+
+namespace CVoiceContainerWavFileReader { // CVoiceContainerBase
+    constexpr std::ptrdiff_t m_wavFilePath = 0x60; // CUtlString
 }
 
 namespace SelectedEditItemInfo_t {

@@ -109,6 +109,52 @@
     },
     "comment": "CSosGroupActionSchema"
   },
+  "CSosGroupActionSoundeventClusterSchema": {
+    "data": {
+      "m_clusterSizeOpvar": {
+        "value": 48,
+        "comment": "CUtlString"
+      },
+      "m_flClusterEpsilon": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_groupBoundingBoxMaxsOpvar": {
+        "value": 64,
+        "comment": "CUtlString"
+      },
+      "m_groupBoundingBoxMinsOpvar": {
+        "value": 56,
+        "comment": "CUtlString"
+      },
+      "m_nMinNearby": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_shouldPlayClusterChild": {
+        "value": 40,
+        "comment": "CUtlString"
+      },
+      "m_shouldPlayOpvar": {
+        "value": 32,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "CSosGroupActionSchema"
+  },
+  "CSosGroupActionTimeBlockLimitSchema": {
+    "data": {
+      "m_flMaxDuration": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_nMaxCount": {
+        "value": 24,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "CSosGroupActionSchema"
+  },
   "CSosGroupActionTimeLimitSchema": {
     "data": {
       "m_flMaxDuration": {
@@ -214,6 +260,169 @@
       }
     },
     "comment": null
+  },
+  "CVoiceContainerAmpedDecayingSineWave": {
+    "data": {
+      "m_flGainAmount": {
+        "value": 104,
+        "comment": "float"
+      }
+    },
+    "comment": "CVoiceContainerDecayingSineWave"
+  },
+  "CVoiceContainerBase": {
+    "data": {
+      "m_curves": {
+        "value": 32,
+        "comment": "CUtlDict<CPiecewiseCurve,F(size=1)>"
+      }
+    },
+    "comment": null
+  },
+  "CVoiceContainerBlend": {
+    "data": {
+      "m_flBlendAmount": {
+        "value": 112,
+        "comment": "float"
+      },
+      "m_hSoundOne": {
+        "value": 96,
+        "comment": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>"
+      },
+      "m_hSoundTwo": {
+        "value": 104,
+        "comment": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>"
+      }
+    },
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerDecayingSineWave": {
+    "data": {
+      "m_flDecayTime": {
+        "value": 100,
+        "comment": "float"
+      },
+      "m_flFrequency": {
+        "value": 96,
+        "comment": "float"
+      }
+    },
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerDefault": {
+    "data": {},
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerEngineSound": {
+    "data": {
+      "m_SoundToPlay": {
+        "value": 96,
+        "comment": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>"
+      },
+      "m_flEngineRPM": {
+        "value": 112,
+        "comment": "float"
+      },
+      "m_flTestConstantParam": {
+        "value": 104,
+        "comment": "float"
+      },
+      "m_flTestSoundEventBoundParam": {
+        "value": 108,
+        "comment": "float"
+      }
+    },
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerEnvelopeAnalyzer": {
+    "data": {
+      "m_envBuffer": {
+        "value": 104,
+        "comment": "CUtlVector<float>"
+      }
+    },
+    "comment": "CVoiceContainerWavFileReader"
+  },
+  "CVoiceContainerRandomSampler": {
+    "data": {
+      "m_flLoudAmplitude": {
+        "value": 96,
+        "comment": "float"
+      },
+      "m_flLoudAmplitudeJitter": {
+        "value": 100,
+        "comment": "float"
+      },
+      "m_flLoudTimeJitter": {
+        "value": 112,
+        "comment": "float"
+      },
+      "m_flSoftAmplitude": {
+        "value": 104,
+        "comment": "float"
+      },
+      "m_flSoftAmplitudeJitter": {
+        "value": 108,
+        "comment": "float"
+      },
+      "m_flSoftTimeJitter": {
+        "value": 116,
+        "comment": "float"
+      },
+      "m_grainResources": {
+        "value": 120,
+        "comment": "CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>"
+      }
+    },
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerRealtimeFMSineWave": {
+    "data": {
+      "m_flCarrierFrequency": {
+        "value": 96,
+        "comment": "float"
+      },
+      "m_flModulatorAmount": {
+        "value": 104,
+        "comment": "float"
+      },
+      "m_flModulatorFrequency": {
+        "value": 100,
+        "comment": "float"
+      }
+    },
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerTestConstant": {
+    "data": {
+      "m_flTestConstantParam": {
+        "value": 104,
+        "comment": "bool"
+      }
+    },
+    "comment": "CVoiceContainerWavFileReader"
+  },
+  "CVoiceContainerTestNestedDynamic": {
+    "data": {
+      "m_SoundToPlay": {
+        "value": 96,
+        "comment": "CStrongHandle<InfoForResourceTypeCVoiceContainerBase>"
+      },
+      "m_flTestConstantParam": {
+        "value": 104,
+        "comment": "float"
+      }
+    },
+    "comment": "CVoiceContainerBase"
+  },
+  "CVoiceContainerWavFileReader": {
+    "data": {
+      "m_wavFilePath": {
+        "value": 96,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "CVoiceContainerBase"
   },
   "SelectedEditItemInfo_t": {
     "data": {

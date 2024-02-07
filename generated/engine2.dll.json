@@ -92,6 +92,10 @@
         "value": 40,
         "comment": "CScriptComponent*"
       },
+      "m_bVisibleinPVS": {
+        "value": 48,
+        "comment": "bool"
+      },
       "m_iszPrivateVScripts": {
         "value": 8,
         "comment": "CUtlSymbolLarge"
@@ -234,6 +238,10 @@
       "m_flRealTime": {
         "value": 40,
         "comment": "float"
+      },
+      "m_flWhenScheduleSendTickPacket": {
+        "value": 48,
+        "comment": "double"
       }
     },
     "comment": null
@@ -406,19 +414,6 @@
       "m_bThreadsActive": {
         "value": 0,
         "comment": "bool"
-      }
-    },
-    "comment": null
-  },
-  "EventClientSendInput_t": {
-    "data": {
-      "m_bFinalClientCommandTick": {
-        "value": 0,
-        "comment": "bool"
-      },
-      "m_nAdditionalClientCommandsToCreate": {
-        "value": 4,
-        "comment": "int32_t"
       }
     },
     "comment": null

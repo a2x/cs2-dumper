@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 23 Jan 2024 06:17:17 +0000
+Wed, 7 Feb 2024 04:10:48 +0000
 '''
 
 class CDSPMixgroupModifier:
@@ -35,6 +35,19 @@ class CSosGroupActionSetSoundeventParameterSchema: # CSosGroupActionSchema
     m_opvarName = 0x28 # CUtlString
     m_nSortType = 0x30 # SosActionSortType_t
 
+class CSosGroupActionSoundeventClusterSchema: # CSosGroupActionSchema
+    m_nMinNearby = 0x18 # int32_t
+    m_flClusterEpsilon = 0x1C # float
+    m_shouldPlayOpvar = 0x20 # CUtlString
+    m_shouldPlayClusterChild = 0x28 # CUtlString
+    m_clusterSizeOpvar = 0x30 # CUtlString
+    m_groupBoundingBoxMinsOpvar = 0x38 # CUtlString
+    m_groupBoundingBoxMaxsOpvar = 0x40 # CUtlString
+
+class CSosGroupActionTimeBlockLimitSchema: # CSosGroupActionSchema
+    m_nMaxCount = 0x18 # int32_t
+    m_flMaxDuration = 0x1C # float
+
 class CSosGroupActionTimeLimitSchema: # CSosGroupActionSchema
     m_flMaxDuration = 0x18 # float
 
@@ -65,6 +78,56 @@ class CSosSoundEventGroupSchema:
 
 class CSoundEventMetaData:
     m_soundEventVMix = 0x0 # CStrongHandle<InfoForResourceTypeCVMixListResource>
+
+class CVoiceContainerAmpedDecayingSineWave: # CVoiceContainerDecayingSineWave
+    m_flGainAmount = 0x68 # float
+
+class CVoiceContainerBase:
+    m_curves = 0x20 # CUtlDict<CPiecewiseCurve,F(size=1)>
+
+class CVoiceContainerBlend: # CVoiceContainerBase
+    m_hSoundOne = 0x60 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_hSoundTwo = 0x68 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flBlendAmount = 0x70 # float
+
+class CVoiceContainerDecayingSineWave: # CVoiceContainerBase
+    m_flFrequency = 0x60 # float
+    m_flDecayTime = 0x64 # float
+
+class CVoiceContainerDefault: # CVoiceContainerBase
+
+class CVoiceContainerEngineSound: # CVoiceContainerBase
+    m_SoundToPlay = 0x60 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flTestConstantParam = 0x68 # float
+    m_flTestSoundEventBoundParam = 0x6C # float
+    m_flEngineRPM = 0x70 # float
+
+class CVoiceContainerEnvelopeAnalyzer: # CVoiceContainerWavFileReader
+    m_envBuffer = 0x68 # CUtlVector<float>
+
+class CVoiceContainerRandomSampler: # CVoiceContainerBase
+    m_flLoudAmplitude = 0x60 # float
+    m_flLoudAmplitudeJitter = 0x64 # float
+    m_flSoftAmplitude = 0x68 # float
+    m_flSoftAmplitudeJitter = 0x6C # float
+    m_flLoudTimeJitter = 0x70 # float
+    m_flSoftTimeJitter = 0x74 # float
+    m_grainResources = 0x78 # CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+
+class CVoiceContainerRealtimeFMSineWave: # CVoiceContainerBase
+    m_flCarrierFrequency = 0x60 # float
+    m_flModulatorFrequency = 0x64 # float
+    m_flModulatorAmount = 0x68 # float
+
+class CVoiceContainerTestConstant: # CVoiceContainerWavFileReader
+    m_flTestConstantParam = 0x68 # bool
+
+class CVoiceContainerTestNestedDynamic: # CVoiceContainerBase
+    m_SoundToPlay = 0x60 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flTestConstantParam = 0x68 # float
+
+class CVoiceContainerWavFileReader: # CVoiceContainerBase
+    m_wavFilePath = 0x60 # CUtlString
 
 class SelectedEditItemInfo_t:
     m_EditItems = 0x0 # CUtlVector<SosEditItemInfo_t>

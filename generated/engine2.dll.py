@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 23 Jan 2024 06:17:17 +0000
+Wed, 7 Feb 2024 04:10:48 +0000
 '''
 
 class CEmptyEntityInstance:
@@ -33,6 +33,7 @@ class CEntityInstance:
     m_iszPrivateVScripts = 0x8 # CUtlSymbolLarge
     m_pEntity = 0x10 # CEntityIdentity*
     m_CScriptComponent = 0x28 # CScriptComponent*
+    m_bVisibleinPVS = 0x30 # bool
 
 class CNetworkVarChainer:
     m_PathIndex = 0x20 # ChangeAccessorFieldPathIndex_t
@@ -76,6 +77,7 @@ class EventClientFrameSimulate_t:
     m_LoopState = 0x0 # EngineLoopState_t
     m_flRealTime = 0x28 # float
     m_flFrameTime = 0x2C # float
+    m_flWhenScheduleSendTickPacket = 0x30 # double
 
 class EventClientOutput_t:
     m_LoopState = 0x0 # EngineLoopState_t
@@ -131,10 +133,6 @@ class EventClientProcessNetworking_t:
 
 class EventClientSceneSystemThreadStateChange_t:
     m_bThreadsActive = 0x0 # bool
-
-class EventClientSendInput_t:
-    m_bFinalClientCommandTick = 0x0 # bool
-    m_nAdditionalClientCommandsToCreate = 0x4 # int32_t
 
 class EventClientSimulate_t: # EventSimulate_t
 

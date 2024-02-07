@@ -183,6 +183,10 @@
     "data": {},
     "comment": null
   },
+  "InfoForResourceTypeCGcExportableExternalData": {
+    "data": {},
+    "comment": null
+  },
   "InfoForResourceTypeCJavaScriptResource": {
     "data": {},
     "comment": null
@@ -196,6 +200,14 @@
     "comment": null
   },
   "InfoForResourceTypeCNmClip": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCNmGraph": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCNmGraphDataSet": {
     "data": {},
     "comment": null
   },
@@ -267,6 +279,10 @@
     "data": {},
     "comment": null
   },
+  "InfoForResourceTypeCVoiceContainerBase": {
+    "data": {},
+    "comment": null
+  },
   "InfoForResourceTypeCVoxelVisibility": {
     "data": {},
     "comment": null
@@ -308,10 +324,6 @@
     "comment": null
   },
   "InfoForResourceTypeTestResource_t": {
-    "data": {},
-    "comment": null
-  },
-  "InfoForResourceTypeVSound_t": {
     "data": {},
     "comment": null
   },

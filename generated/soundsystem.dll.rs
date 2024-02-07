@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -43,6 +43,21 @@ pub mod CSosGroupActionSetSoundeventParameterSchema { // CSosGroupActionSchema
     pub const m_nSortType: usize = 0x30; // SosActionSortType_t
 }
 
+pub mod CSosGroupActionSoundeventClusterSchema { // CSosGroupActionSchema
+    pub const m_nMinNearby: usize = 0x18; // int32_t
+    pub const m_flClusterEpsilon: usize = 0x1C; // float
+    pub const m_shouldPlayOpvar: usize = 0x20; // CUtlString
+    pub const m_shouldPlayClusterChild: usize = 0x28; // CUtlString
+    pub const m_clusterSizeOpvar: usize = 0x30; // CUtlString
+    pub const m_groupBoundingBoxMinsOpvar: usize = 0x38; // CUtlString
+    pub const m_groupBoundingBoxMaxsOpvar: usize = 0x40; // CUtlString
+}
+
+pub mod CSosGroupActionTimeBlockLimitSchema { // CSosGroupActionSchema
+    pub const m_nMaxCount: usize = 0x18; // int32_t
+    pub const m_flMaxDuration: usize = 0x1C; // float
+}
+
 pub mod CSosGroupActionTimeLimitSchema { // CSosGroupActionSchema
     pub const m_flMaxDuration: usize = 0x18; // float
 }
@@ -78,6 +93,68 @@ pub mod CSosSoundEventGroupSchema {
 
 pub mod CSoundEventMetaData {
     pub const m_soundEventVMix: usize = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
+}
+
+pub mod CVoiceContainerAmpedDecayingSineWave { // CVoiceContainerDecayingSineWave
+    pub const m_flGainAmount: usize = 0x68; // float
+}
+
+pub mod CVoiceContainerBase {
+    pub const m_curves: usize = 0x20; // CUtlDict<CPiecewiseCurve,F(size=1)>
+}
+
+pub mod CVoiceContainerBlend { // CVoiceContainerBase
+    pub const m_hSoundOne: usize = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    pub const m_hSoundTwo: usize = 0x68; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    pub const m_flBlendAmount: usize = 0x70; // float
+}
+
+pub mod CVoiceContainerDecayingSineWave { // CVoiceContainerBase
+    pub const m_flFrequency: usize = 0x60; // float
+    pub const m_flDecayTime: usize = 0x64; // float
+}
+
+pub mod CVoiceContainerDefault { // CVoiceContainerBase
+}
+
+pub mod CVoiceContainerEngineSound { // CVoiceContainerBase
+    pub const m_SoundToPlay: usize = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    pub const m_flTestConstantParam: usize = 0x68; // float
+    pub const m_flTestSoundEventBoundParam: usize = 0x6C; // float
+    pub const m_flEngineRPM: usize = 0x70; // float
+}
+
+pub mod CVoiceContainerEnvelopeAnalyzer { // CVoiceContainerWavFileReader
+    pub const m_envBuffer: usize = 0x68; // CUtlVector<float>
+}
+
+pub mod CVoiceContainerRandomSampler { // CVoiceContainerBase
+    pub const m_flLoudAmplitude: usize = 0x60; // float
+    pub const m_flLoudAmplitudeJitter: usize = 0x64; // float
+    pub const m_flSoftAmplitude: usize = 0x68; // float
+    pub const m_flSoftAmplitudeJitter: usize = 0x6C; // float
+    pub const m_flLoudTimeJitter: usize = 0x70; // float
+    pub const m_flSoftTimeJitter: usize = 0x74; // float
+    pub const m_grainResources: usize = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+}
+
+pub mod CVoiceContainerRealtimeFMSineWave { // CVoiceContainerBase
+    pub const m_flCarrierFrequency: usize = 0x60; // float
+    pub const m_flModulatorFrequency: usize = 0x64; // float
+    pub const m_flModulatorAmount: usize = 0x68; // float
+}
+
+pub mod CVoiceContainerTestConstant { // CVoiceContainerWavFileReader
+    pub const m_flTestConstantParam: usize = 0x68; // bool
+}
+
+pub mod CVoiceContainerTestNestedDynamic { // CVoiceContainerBase
+    pub const m_SoundToPlay: usize = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    pub const m_flTestConstantParam: usize = 0x68; // float
+}
+
+pub mod CVoiceContainerWavFileReader { // CVoiceContainerBase
+    pub const m_wavFilePath: usize = 0x60; // CUtlString
 }
 
 pub mod SelectedEditItemInfo_t {

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 public static class AggregateLODSetup_t {
@@ -65,6 +65,7 @@ public static class CEntityInstance {
     public const nint m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
     public const nint m_pEntity = 0x10; // CEntityIdentity*
     public const nint m_CScriptComponent = 0x28; // CScriptComponent*
+    public const nint m_bVisibleinPVS = 0x30; // bool
 }
 
 public static class CScriptComponent { // CEntityComponent

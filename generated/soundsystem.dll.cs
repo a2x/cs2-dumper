@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 public static class CDSPMixgroupModifier {
@@ -41,6 +41,21 @@ public static class CSosGroupActionSetSoundeventParameterSchema { // CSosGroupAc
     public const nint m_nSortType = 0x30; // SosActionSortType_t
 }
 
+public static class CSosGroupActionSoundeventClusterSchema { // CSosGroupActionSchema
+    public const nint m_nMinNearby = 0x18; // int32_t
+    public const nint m_flClusterEpsilon = 0x1C; // float
+    public const nint m_shouldPlayOpvar = 0x20; // CUtlString
+    public const nint m_shouldPlayClusterChild = 0x28; // CUtlString
+    public const nint m_clusterSizeOpvar = 0x30; // CUtlString
+    public const nint m_groupBoundingBoxMinsOpvar = 0x38; // CUtlString
+    public const nint m_groupBoundingBoxMaxsOpvar = 0x40; // CUtlString
+}
+
+public static class CSosGroupActionTimeBlockLimitSchema { // CSosGroupActionSchema
+    public const nint m_nMaxCount = 0x18; // int32_t
+    public const nint m_flMaxDuration = 0x1C; // float
+}
+
 public static class CSosGroupActionTimeLimitSchema { // CSosGroupActionSchema
     public const nint m_flMaxDuration = 0x18; // float
 }
@@ -76,6 +91,68 @@ public static class CSosSoundEventGroupSchema {
 
 public static class CSoundEventMetaData {
     public const nint m_soundEventVMix = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
+}
+
+public static class CVoiceContainerAmpedDecayingSineWave { // CVoiceContainerDecayingSineWave
+    public const nint m_flGainAmount = 0x68; // float
+}
+
+public static class CVoiceContainerBase {
+    public const nint m_curves = 0x20; // CUtlDict<CPiecewiseCurve,F(size=1)>
+}
+
+public static class CVoiceContainerBlend { // CVoiceContainerBase
+    public const nint m_hSoundOne = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    public const nint m_hSoundTwo = 0x68; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    public const nint m_flBlendAmount = 0x70; // float
+}
+
+public static class CVoiceContainerDecayingSineWave { // CVoiceContainerBase
+    public const nint m_flFrequency = 0x60; // float
+    public const nint m_flDecayTime = 0x64; // float
+}
+
+public static class CVoiceContainerDefault { // CVoiceContainerBase
+}
+
+public static class CVoiceContainerEngineSound { // CVoiceContainerBase
+    public const nint m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    public const nint m_flTestConstantParam = 0x68; // float
+    public const nint m_flTestSoundEventBoundParam = 0x6C; // float
+    public const nint m_flEngineRPM = 0x70; // float
+}
+
+public static class CVoiceContainerEnvelopeAnalyzer { // CVoiceContainerWavFileReader
+    public const nint m_envBuffer = 0x68; // CUtlVector<float>
+}
+
+public static class CVoiceContainerRandomSampler { // CVoiceContainerBase
+    public const nint m_flLoudAmplitude = 0x60; // float
+    public const nint m_flLoudAmplitudeJitter = 0x64; // float
+    public const nint m_flSoftAmplitude = 0x68; // float
+    public const nint m_flSoftAmplitudeJitter = 0x6C; // float
+    public const nint m_flLoudTimeJitter = 0x70; // float
+    public const nint m_flSoftTimeJitter = 0x74; // float
+    public const nint m_grainResources = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+}
+
+public static class CVoiceContainerRealtimeFMSineWave { // CVoiceContainerBase
+    public const nint m_flCarrierFrequency = 0x60; // float
+    public const nint m_flModulatorFrequency = 0x64; // float
+    public const nint m_flModulatorAmount = 0x68; // float
+}
+
+public static class CVoiceContainerTestConstant { // CVoiceContainerWavFileReader
+    public const nint m_flTestConstantParam = 0x68; // bool
+}
+
+public static class CVoiceContainerTestNestedDynamic { // CVoiceContainerBase
+    public const nint m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    public const nint m_flTestConstantParam = 0x68; // float
+}
+
+public static class CVoiceContainerWavFileReader { // CVoiceContainerBase
+    public const nint m_wavFilePath = 0x60; // CUtlString
 }
 
 public static class SelectedEditItemInfo_t {

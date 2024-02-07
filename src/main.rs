@@ -1,5 +1,4 @@
 #![allow(dead_code)]
-#![feature(offset_of)]
 
 use anyhow::{bail, Result};
 

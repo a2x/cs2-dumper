@@ -216,6 +216,10 @@ FeSimdQuad_t:
     f4Slack: 32 # fltx4
     vShape: 48 # FourVectors[4]
     f4Weights: 240 # fltx4[4]
+FeSimdRodConstraintAnim_t:
+    nNode: 0 # uint16_t[4][2]
+    f4Weight0: 16 # fltx4
+    f4RelaxationFactor: 32 # fltx4
 FeSimdRodConstraint_t:
     nNode: 0 # uint16_t[4][2]
     f4MaxDist: 16 # fltx4
@@ -357,78 +361,80 @@ PhysFeModelDesc_t:
     m_SimdQuads: 192 # CUtlVector<FeSimdQuad_t>
     m_SimdTris: 216 # CUtlVector<FeSimdTri_t>
     m_SimdRods: 240 # CUtlVector<FeSimdRodConstraint_t>
-    m_InitPose: 264 # CUtlVector<CTransform>
-    m_Rods: 288 # CUtlVector<FeRodConstraint_t>
-    m_Twists: 312 # CUtlVector<FeTwistConstraint_t>
-    m_AxialEdges: 336 # CUtlVector<FeAxialEdgeBend_t>
-    m_NodeInvMasses: 360 # CUtlVector<float>
-    m_CtrlOffsets: 384 # CUtlVector<FeCtrlOffset_t>
-    m_CtrlOsOffsets: 408 # CUtlVector<FeCtrlOsOffset_t>
-    m_FollowNodes: 432 # CUtlVector<FeFollowNode_t>
-    m_CollisionPlanes: 456 # CUtlVector<FeCollisionPlane_t>
-    m_NodeIntegrator: 480 # CUtlVector<FeNodeIntegrator_t>
-    m_SpringIntegrator: 504 # CUtlVector<FeSpringIntegrator_t>
-    m_SimdSpringIntegrator: 528 # CUtlVector<FeSimdSpringIntegrator_t>
-    m_WorldCollisionParams: 552 # CUtlVector<FeWorldCollisionParams_t>
-    m_LegacyStretchForce: 576 # CUtlVector<float>
-    m_NodeCollisionRadii: 600 # CUtlVector<float>
-    m_DynNodeFriction: 624 # CUtlVector<float>
-    m_LocalRotation: 648 # CUtlVector<float>
-    m_LocalForce: 672 # CUtlVector<float>
-    m_TaperedCapsuleStretches: 696 # CUtlVector<FeTaperedCapsuleStretch_t>
-    m_TaperedCapsuleRigids: 720 # CUtlVector<FeTaperedCapsuleRigid_t>
-    m_SphereRigids: 744 # CUtlVector<FeSphereRigid_t>
-    m_WorldCollisionNodes: 768 # CUtlVector<uint16_t>
-    m_TreeParents: 792 # CUtlVector<uint16_t>
-    m_TreeCollisionMasks: 816 # CUtlVector<uint16_t>
-    m_TreeChildren: 840 # CUtlVector<FeTreeChildren_t>
-    m_FreeNodes: 864 # CUtlVector<uint16_t>
-    m_FitMatrices: 888 # CUtlVector<FeFitMatrix_t>
-    m_FitWeights: 912 # CUtlVector<FeFitWeight_t>
-    m_ReverseOffsets: 936 # CUtlVector<FeNodeReverseOffset_t>
-    m_AnimStrayRadii: 960 # CUtlVector<FeAnimStrayRadius_t>
-    m_SimdAnimStrayRadii: 984 # CUtlVector<FeSimdAnimStrayRadius_t>
-    m_KelagerBends: 1008 # CUtlVector<FeKelagerBend2_t>
-    m_CtrlSoftOffsets: 1032 # CUtlVector<FeCtrlSoftOffset_t>
-    m_JiggleBones: 1056 # CUtlVector<CFeIndexedJiggleBone>
-    m_SourceElems: 1080 # CUtlVector<uint16_t>
-    m_GoalDampedSpringIntegrators: 1104 # CUtlVector<uint32_t>
-    m_Tris: 1128 # CUtlVector<FeTri_t>
-    m_nTriCount1: 1152 # uint16_t
-    m_nTriCount2: 1154 # uint16_t
-    m_nReservedUint8: 1156 # uint8_t
-    m_nExtraPressureIterations: 1157 # uint8_t
-    m_nExtraGoalIterations: 1158 # uint8_t
-    m_nExtraIterations: 1159 # uint8_t
-    m_BoxRigids: 1160 # CUtlVector<FeBoxRigid_t>
-    m_DynNodeVertexSet: 1184 # CUtlVector<uint8_t>
-    m_VertexSetNames: 1208 # CUtlVector<uint32_t>
-    m_RigidColliderPriorities: 1232 # CUtlVector<FeRigidColliderIndices_t>
-    m_MorphLayers: 1256 # CUtlVector<FeMorphLayerDepr_t>
-    m_MorphSetData: 1280 # CUtlVector<uint8_t>
-    m_VertexMaps: 1304 # CUtlVector<FeVertexMapDesc_t>
-    m_VertexMapValues: 1328 # CUtlVector<uint8_t>
-    m_Effects: 1352 # CUtlVector<FeEffectDesc_t>
-    m_LockToParent: 1376 # CUtlVector<FeCtrlOffset_t>
-    m_LockToGoal: 1400 # CUtlVector<uint16_t>
-    m_DynNodeWindBases: 1424 # CUtlVector<FeNodeWindBase_t>
-    m_flInternalPressure: 1448 # float
-    m_flDefaultTimeDilation: 1452 # float
-    m_flWindage: 1456 # float
-    m_flWindDrag: 1460 # float
-    m_flDefaultSurfaceStretch: 1464 # float
-    m_flDefaultThreadStretch: 1468 # float
-    m_flDefaultGravityScale: 1472 # float
-    m_flDefaultVelAirDrag: 1476 # float
-    m_flDefaultExpAirDrag: 1480 # float
-    m_flDefaultVelQuadAirDrag: 1484 # float
-    m_flDefaultExpQuadAirDrag: 1488 # float
-    m_flRodVelocitySmoothRate: 1492 # float
-    m_flQuadVelocitySmoothRate: 1496 # float
-    m_flAddWorldCollisionRadius: 1500 # float
-    m_flDefaultVolumetricSolveAmount: 1504 # float
-    m_nRodVelocitySmoothIterations: 1508 # uint16_t
-    m_nQuadVelocitySmoothIterations: 1510 # uint16_t
+    m_SimdRodsAnim: 264 # CUtlVector<FeSimdRodConstraintAnim_t>
+    m_InitPose: 288 # CUtlVector<CTransform>
+    m_Rods: 312 # CUtlVector<FeRodConstraint_t>
+    m_Twists: 336 # CUtlVector<FeTwistConstraint_t>
+    m_AxialEdges: 360 # CUtlVector<FeAxialEdgeBend_t>
+    m_NodeInvMasses: 384 # CUtlVector<float>
+    m_CtrlOffsets: 408 # CUtlVector<FeCtrlOffset_t>
+    m_CtrlOsOffsets: 432 # CUtlVector<FeCtrlOsOffset_t>
+    m_FollowNodes: 456 # CUtlVector<FeFollowNode_t>
+    m_CollisionPlanes: 480 # CUtlVector<FeCollisionPlane_t>
+    m_NodeIntegrator: 504 # CUtlVector<FeNodeIntegrator_t>
+    m_SpringIntegrator: 528 # CUtlVector<FeSpringIntegrator_t>
+    m_SimdSpringIntegrator: 552 # CUtlVector<FeSimdSpringIntegrator_t>
+    m_WorldCollisionParams: 576 # CUtlVector<FeWorldCollisionParams_t>
+    m_LegacyStretchForce: 600 # CUtlVector<float>
+    m_NodeCollisionRadii: 624 # CUtlVector<float>
+    m_DynNodeFriction: 648 # CUtlVector<float>
+    m_LocalRotation: 672 # CUtlVector<float>
+    m_LocalForce: 696 # CUtlVector<float>
+    m_TaperedCapsuleStretches: 720 # CUtlVector<FeTaperedCapsuleStretch_t>
+    m_TaperedCapsuleRigids: 744 # CUtlVector<FeTaperedCapsuleRigid_t>
+    m_SphereRigids: 768 # CUtlVector<FeSphereRigid_t>
+    m_WorldCollisionNodes: 792 # CUtlVector<uint16_t>
+    m_TreeParents: 816 # CUtlVector<uint16_t>
+    m_TreeCollisionMasks: 840 # CUtlVector<uint16_t>
+    m_TreeChildren: 864 # CUtlVector<FeTreeChildren_t>
+    m_FreeNodes: 888 # CUtlVector<uint16_t>
+    m_FitMatrices: 912 # CUtlVector<FeFitMatrix_t>
+    m_FitWeights: 936 # CUtlVector<FeFitWeight_t>
+    m_ReverseOffsets: 960 # CUtlVector<FeNodeReverseOffset_t>
+    m_AnimStrayRadii: 984 # CUtlVector<FeAnimStrayRadius_t>
+    m_SimdAnimStrayRadii: 1008 # CUtlVector<FeSimdAnimStrayRadius_t>
+    m_KelagerBends: 1032 # CUtlVector<FeKelagerBend2_t>
+    m_CtrlSoftOffsets: 1056 # CUtlVector<FeCtrlSoftOffset_t>
+    m_JiggleBones: 1080 # CUtlVector<CFeIndexedJiggleBone>
+    m_SourceElems: 1104 # CUtlVector<uint16_t>
+    m_GoalDampedSpringIntegrators: 1128 # CUtlVector<uint32_t>
+    m_Tris: 1152 # CUtlVector<FeTri_t>
+    m_nTriCount1: 1176 # uint16_t
+    m_nTriCount2: 1178 # uint16_t
+    m_nReservedUint8: 1180 # uint8_t
+    m_nExtraPressureIterations: 1181 # uint8_t
+    m_nExtraGoalIterations: 1182 # uint8_t
+    m_nExtraIterations: 1183 # uint8_t
+    m_BoxRigids: 1184 # CUtlVector<FeBoxRigid_t>
+    m_DynNodeVertexSet: 1208 # CUtlVector<uint8_t>
+    m_VertexSetNames: 1232 # CUtlVector<uint32_t>
+    m_RigidColliderPriorities: 1256 # CUtlVector<FeRigidColliderIndices_t>
+    m_MorphLayers: 1280 # CUtlVector<FeMorphLayerDepr_t>
+    m_MorphSetData: 1304 # CUtlVector<uint8_t>
+    m_VertexMaps: 1328 # CUtlVector<FeVertexMapDesc_t>
+    m_VertexMapValues: 1352 # CUtlVector<uint8_t>
+    m_Effects: 1376 # CUtlVector<FeEffectDesc_t>
+    m_LockToParent: 1400 # CUtlVector<FeCtrlOffset_t>
+    m_LockToGoal: 1424 # CUtlVector<uint16_t>
+    m_SkelParents: 1448 # CUtlVector<int16_t>
+    m_DynNodeWindBases: 1472 # CUtlVector<FeNodeWindBase_t>
+    m_flInternalPressure: 1496 # float
+    m_flDefaultTimeDilation: 1500 # float
+    m_flWindage: 1504 # float
+    m_flWindDrag: 1508 # float
+    m_flDefaultSurfaceStretch: 1512 # float
+    m_flDefaultThreadStretch: 1516 # float
+    m_flDefaultGravityScale: 1520 # float
+    m_flDefaultVelAirDrag: 1524 # float
+    m_flDefaultExpAirDrag: 1528 # float
+    m_flDefaultVelQuadAirDrag: 1532 # float
+    m_flDefaultExpQuadAirDrag: 1536 # float
+    m_flRodVelocitySmoothRate: 1540 # float
+    m_flQuadVelocitySmoothRate: 1544 # float
+    m_flAddWorldCollisionRadius: 1548 # float
+    m_flDefaultVolumetricSolveAmount: 1552 # float
+    m_nRodVelocitySmoothIterations: 1556 # uint16_t
+    m_nQuadVelocitySmoothIterations: 1558 # uint16_t
 RnBlendVertex_t:
     m_nWeight0: 0 # uint16_t
     m_nIndex0: 2 # uint16_t
@@ -495,13 +501,14 @@ RnHull_t:
     m_vOrthographicAreas: 40 # Vector
     m_MassProperties: 52 # matrix3x4_t
     m_flVolume: 100 # float
-    m_Vertices: 104 # CUtlVector<RnVertex_t>
-    m_VertexPositions: 128 # CUtlVector<Vector>
-    m_Edges: 152 # CUtlVector<RnHalfEdge_t>
-    m_Faces: 176 # CUtlVector<RnFace_t>
-    m_FacePlanes: 200 # CUtlVector<RnPlane_t>
-    m_nFlags: 224 # uint32_t
-    m_pRegionSVM: 232 # CRegionSVM*
+    m_flSurfaceArea: 104 # float
+    m_Vertices: 112 # CUtlVector<RnVertex_t>
+    m_VertexPositions: 136 # CUtlVector<Vector>
+    m_Edges: 160 # CUtlVector<RnHalfEdge_t>
+    m_Faces: 184 # CUtlVector<RnFace_t>
+    m_FacePlanes: 208 # CUtlVector<RnPlane_t>
+    m_nFlags: 232 # uint32_t
+    m_pRegionSVM: 240 # CRegionSVM*
 RnMeshDesc_t: # RnShapeDesc_t
     m_Mesh: 16 # RnMesh_t
 RnMesh_t:
@@ -537,10 +544,7 @@ RnSoftbodySpring_t:
     m_nParticle: 0 # uint16_t[2]
     m_flLength: 4 # float
 RnSphereDesc_t: # RnShapeDesc_t
-    m_Sphere: 16 # RnSphere_t
-RnSphere_t:
-    m_vCenter: 0 # Vector
-    m_flRadius: 12 # float
+    m_Sphere: 16 # SphereBase_t<float>
 RnTriangle_t:
     m_nIndex: 0 # int32_t[3]
 RnVertex_t:

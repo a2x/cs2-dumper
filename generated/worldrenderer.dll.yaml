@@ -47,6 +47,7 @@ CEntityInstance:
     m_iszPrivateVScripts: 8 # CUtlSymbolLarge
     m_pEntity: 16 # CEntityIdentity*
     m_CScriptComponent: 40 # CScriptComponent*
+    m_bVisibleinPVS: 48 # bool
 CScriptComponent: # CEntityComponent
     m_scriptClassName: 48 # CUtlSymbolLarge
 CVoxelVisibility:

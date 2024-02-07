@@ -1080,11 +1080,11 @@
   "CAnimParameterBase": {
     "data": {
       "m_bIsReferenced": {
-        "value": 77,
+        "value": 97,
         "comment": "bool"
       },
       "m_bNetworkingRequested": {
-        "value": 76,
+        "value": 96,
         "comment": "bool"
       },
       "m_componentName": {
@@ -1248,7 +1248,7 @@
   "CAnimTagBase": {
     "data": {
       "m_bIsReferenced": {
-        "value": 44,
+        "value": 64,
         "comment": "bool"
       },
       "m_group": {
@@ -1547,31 +1547,31 @@
   "CAudioAnimTag": {
     "data": {
       "m_attachmentName": {
-        "value": 64,
+        "value": 88,
         "comment": "CUtlString"
       },
       "m_bPlayOnClient": {
-        "value": 79,
+        "value": 103,
         "comment": "bool"
       },
       "m_bPlayOnServer": {
-        "value": 78,
+        "value": 102,
         "comment": "bool"
       },
       "m_bStopWhenGraphEnds": {
-        "value": 77,
+        "value": 101,
         "comment": "bool"
       },
       "m_bStopWhenTagEnds": {
-        "value": 76,
+        "value": 100,
         "comment": "bool"
       },
       "m_clipName": {
-        "value": 56,
+        "value": 80,
         "comment": "CUtlString"
       },
       "m_flVolume": {
-        "value": 72,
+        "value": 96,
         "comment": "float"
       }
     },
@@ -1765,11 +1765,11 @@
   "CBodyGroupAnimTag": {
     "data": {
       "m_bodyGroupSettings": {
-        "value": 64,
+        "value": 88,
         "comment": "CUtlVector<CBodyGroupSetting>"
       },
       "m_nPriority": {
-        "value": 56,
+        "value": 80,
         "comment": "int32_t"
       }
     },
@@ -1927,7 +1927,7 @@
   "CBoolAnimParameter": {
     "data": {
       "m_bDefaultValue": {
-        "value": 96,
+        "value": 120,
         "comment": "bool"
       }
     },
@@ -2015,19 +2015,19 @@
   "CClothSettingsAnimTag": {
     "data": {
       "m_flEaseIn": {
-        "value": 60,
+        "value": 84,
         "comment": "float"
       },
       "m_flEaseOut": {
-        "value": 64,
+        "value": 88,
         "comment": "float"
       },
       "m_flStiffness": {
-        "value": 56,
+        "value": 80,
         "comment": "float"
       },
       "m_nVertexSet": {
-        "value": 72,
+        "value": 96,
         "comment": "CUtlString"
       }
     },
@@ -2109,27 +2109,27 @@
   "CConcreteAnimParameter": {
     "data": {
       "m_bAutoReset": {
-        "value": 89,
+        "value": 113,
         "comment": "bool"
       },
       "m_bGameWritable": {
-        "value": 90,
+        "value": 114,
         "comment": "bool"
       },
       "m_bGraphWritable": {
-        "value": 91,
+        "value": 115,
         "comment": "bool"
       },
       "m_bUseMostRecentValue": {
-        "value": 88,
+        "value": 112,
         "comment": "bool"
       },
       "m_eNetworkSetting": {
-        "value": 84,
+        "value": 108,
         "comment": "AnimParamNetworkSetting"
       },
       "m_previewButton": {
-        "value": 80,
+        "value": 104,
         "comment": "AnimParamButton_t"
       }
     },
@@ -2449,11 +2449,11 @@
   "CEnumAnimParameter": {
     "data": {
       "m_defaultValue": {
-        "value": 104,
+        "value": 128,
         "comment": "uint8_t"
       },
       "m_enumOptions": {
-        "value": 112,
+        "value": 136,
         "comment": "CUtlVector<CUtlString>"
       }
     },
@@ -2475,97 +2475,6 @@
       }
     },
     "comment": "CAnimActionUpdater"
-  },
-  "CFingerBone": {
-    "data": {
-      "m_boneName": {
-        "value": 0,
-        "comment": "CUtlString"
-      },
-      "m_flMaxAngle": {
-        "value": 48,
-        "comment": "float"
-      },
-      "m_flMinAngle": {
-        "value": 44,
-        "comment": "float"
-      },
-      "m_flRadius": {
-        "value": 52,
-        "comment": "float"
-      },
-      "m_hingeAxis": {
-        "value": 8,
-        "comment": "Vector"
-      },
-      "m_vCapsulePos1": {
-        "value": 20,
-        "comment": "Vector"
-      },
-      "m_vCapsulePos2": {
-        "value": 32,
-        "comment": "Vector"
-      }
-    },
-    "comment": null
-  },
-  "CFingerChain": {
-    "data": {
-      "m_bones": {
-        "value": 24,
-        "comment": "CUtlVector<CFingerBone>"
-      },
-      "m_flFingerScaleRatio": {
-        "value": 108,
-        "comment": "float"
-      },
-      "m_flSplayMaxAngle": {
-        "value": 104,
-        "comment": "float"
-      },
-      "m_flSplayMinAngle": {
-        "value": 100,
-        "comment": "float"
-      },
-      "m_metacarpalBoneName": {
-        "value": 80,
-        "comment": "CUtlString"
-      },
-      "m_name": {
-        "value": 48,
-        "comment": "CUtlString"
-      },
-      "m_targets": {
-        "value": 0,
-        "comment": "CUtlVector<CFingerSource>"
-      },
-      "m_tipParentBoneName": {
-        "value": 56,
-        "comment": "CUtlString"
-      },
-      "m_vSplayHingeAxis": {
-        "value": 88,
-        "comment": "Vector"
-      },
-      "m_vTipOffset": {
-        "value": 64,
-        "comment": "Vector"
-      }
-    },
-    "comment": null
-  },
-  "CFingerSource": {
-    "data": {
-      "m_flFingerWeight": {
-        "value": 4,
-        "comment": "float"
-      },
-      "m_nFingerIndex": {
-        "value": 0,
-        "comment": "AnimVRFinger_t"
-      }
-    },
-    "comment": null
   },
   "CFlexController": {
     "data": {
@@ -2626,19 +2535,19 @@
   "CFloatAnimParameter": {
     "data": {
       "m_bInterpolate": {
-        "value": 108,
+        "value": 132,
         "comment": "bool"
       },
       "m_fDefaultValue": {
-        "value": 96,
+        "value": 120,
         "comment": "float"
       },
       "m_fMaxValue": {
-        "value": 104,
+        "value": 128,
         "comment": "float"
       },
       "m_fMinValue": {
-        "value": 100,
+        "value": 124,
         "comment": "float"
       }
     },
@@ -2849,7 +2758,7 @@
   "CFootFallAnimTag": {
     "data": {
       "m_foot": {
-        "value": 56,
+        "value": 80,
         "comment": "FootFallTagFoot_t"
       }
     },
@@ -3046,19 +2955,19 @@
   "CFootstepLandedAnimTag": {
     "data": {
       "m_BoneName": {
-        "value": 80,
+        "value": 104,
         "comment": "CUtlString"
       },
       "m_DebugAnimSourceString": {
-        "value": 72,
+        "value": 96,
         "comment": "CUtlString"
       },
       "m_FootstepType": {
-        "value": 56,
+        "value": 80,
         "comment": "FootstepLandedFootSoundType_t"
       },
       "m_OverrideSoundName": {
-        "value": 64,
+        "value": 88,
         "comment": "CUtlString"
       }
     },
@@ -3229,15 +3138,15 @@
   "CIntAnimParameter": {
     "data": {
       "m_defaultValue": {
-        "value": 96,
+        "value": 120,
         "comment": "int32_t"
       },
       "m_maxValue": {
-        "value": 104,
+        "value": 128,
         "comment": "int32_t"
       },
       "m_minValue": {
-        "value": 100,
+        "value": 124,
         "comment": "int32_t"
       }
     },
@@ -3416,19 +3325,19 @@
   "CMaterialAttributeAnimTag": {
     "data": {
       "m_AttributeName": {
-        "value": 56,
+        "value": 80,
         "comment": "CUtlString"
       },
       "m_AttributeType": {
-        "value": 64,
+        "value": 88,
         "comment": "MatterialAttributeTagType_t"
       },
       "m_Color": {
-        "value": 72,
+        "value": 96,
         "comment": "Color"
       },
       "m_flValue": {
-        "value": 68,
+        "value": 92,
         "comment": "float"
       }
     },
@@ -4150,56 +4059,43 @@
   "CMovementComponentUpdater": {
     "data": {
       "m_bMoveVarsDisabled": {
-        "value": 128,
+        "value": 108,
         "comment": "bool"
       },
       "m_bNetworkFacing": {
-        "value": 130,
+        "value": 110,
         "comment": "bool"
       },
       "m_bNetworkPath": {
-        "value": 129,
+        "value": 109,
         "comment": "bool"
       },
       "m_eDefaultFacingMode": {
-        "value": 112,
+        "value": 88,
         "comment": "FacingMode"
       },
       "m_facingDamping": {
-        "value": 96,
+        "value": 72,
         "comment": "CAnimInputDamping"
       },
+      "m_flDefaultRunSpeed": {
+        "value": 104,
+        "comment": "float"
+      },
       "m_motors": {
-        "value": 72,
+        "value": 48,
         "comment": "CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>"
       },
-      "m_movementModes": {
-        "value": 48,
-        "comment": "CUtlVector<CMovementMode>"
-      },
       "m_nDefaultMotorIndex": {
-        "value": 124,
+        "value": 100,
         "comment": "int32_t"
       },
       "m_paramHandles": {
-        "value": 131,
+        "value": 111,
         "comment": "CAnimParamHandle[30]"
       }
     },
     "comment": "CAnimComponentUpdater"
-  },
-  "CMovementMode": {
-    "data": {
-      "m_flSpeed": {
-        "value": 8,
-        "comment": "float"
-      },
-      "m_name": {
-        "value": 0,
-        "comment": "CUtlString"
-      }
-    },
-    "comment": null
   },
   "CMoverUpdateNode": {
     "data": {
@@ -4254,6 +4150,323 @@
     },
     "comment": "CUnaryUpdateNode"
   },
+  "CNmBoneMask": {
+    "data": {
+      "m_ID": {
+        "value": 0,
+        "comment": "CGlobalSymbol"
+      },
+      "m_weightInfo": {
+        "value": 8,
+        "comment": "CNmBoneMask::WeightInfo_t"
+      },
+      "m_weights": {
+        "value": 24,
+        "comment": "CUtlVector<float>"
+      }
+    },
+    "comment": null
+  },
+  "CNmClip": {
+    "data": {
+      "m_bIsAdditive": {
+        "value": 416,
+        "comment": "bool"
+      },
+      "m_compressedPoseData": {
+        "value": 16,
+        "comment": "CUtlBinaryBlock"
+      },
+      "m_compressedPoseOffsets": {
+        "value": 64,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_flDuration": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_nNumFrames": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "m_rootMotion": {
+        "value": 336,
+        "comment": "CNmRootMotionData"
+      },
+      "m_skeleton": {
+        "value": 0,
+        "comment": "CStrongHandle<InfoForResourceTypeCNmSkeleton>"
+      },
+      "m_syncTrack": {
+        "value": 160,
+        "comment": "CNmSyncTrack"
+      },
+      "m_trackCompressionSettings": {
+        "value": 40,
+        "comment": "CUtlVector<NmCompressionSettings_t>"
+      }
+    },
+    "comment": null
+  },
+  "CNmEvent": {
+    "data": {
+      "m_flDuration": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flStartTime": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "CNmFootEvent": {
+    "data": {
+      "m_phase": {
+        "value": 16,
+        "comment": "NmFootPhase_t"
+      }
+    },
+    "comment": "CNmEvent"
+  },
+  "CNmFrameSnapEvent": {
+    "data": {
+      "m_frameSnapMode": {
+        "value": 16,
+        "comment": "NmFrameSnapEventMode_t"
+      }
+    },
+    "comment": "CNmEvent"
+  },
+  "CNmGraph": {
+    "data": {
+      "m_childGraphSlots": {
+        "value": 136,
+        "comment": "CUtlVector<CNmGraph::ChildGraphSlot_t>"
+      },
+      "m_controlParameterIDs": {
+        "value": 64,
+        "comment": "CUtlVector<CGlobalSymbol>"
+      },
+      "m_externalGraphSlots": {
+        "value": 160,
+        "comment": "CUtlVector<CNmGraph::ExternalGraphSlot_t>"
+      },
+      "m_instanceNodeStartOffsets": {
+        "value": 24,
+        "comment": "CUtlVector<uint32_t>"
+      },
+      "m_instanceRequiredAlignment": {
+        "value": 52,
+        "comment": "uint32_t"
+      },
+      "m_instanceRequiredMemory": {
+        "value": 48,
+        "comment": "uint32_t"
+      },
+      "m_persistentNodeIndices": {
+        "value": 0,
+        "comment": "CUtlVector<int16_t>"
+      },
+      "m_rootNodeIdx": {
+        "value": 56,
+        "comment": "int16_t"
+      },
+      "m_virtualParameterIDs": {
+        "value": 88,
+        "comment": "CUtlVector<CGlobalSymbol>"
+      },
+      "m_virtualParameterNodeIndices": {
+        "value": 112,
+        "comment": "CUtlVector<int16_t>"
+      }
+    },
+    "comment": null
+  },
+  "CNmGraphDataSet": {
+    "data": {
+      "m_resources": {
+        "value": 16,
+        "comment": "CUtlVector<CStrongHandleVoid>"
+      },
+      "m_skeleton": {
+        "value": 8,
+        "comment": "CStrongHandle<InfoForResourceTypeCNmSkeleton>"
+      },
+      "m_variationID": {
+        "value": 0,
+        "comment": "CGlobalSymbol"
+      }
+    },
+    "comment": null
+  },
+  "CNmGraphVariation": {
+    "data": {
+      "m_dataSet": {
+        "value": 8,
+        "comment": "CStrongHandle<InfoForResourceTypeCNmGraphDataSet>"
+      },
+      "m_graph": {
+        "value": 0,
+        "comment": "CStrongHandle<InfoForResourceTypeCNmGraph>"
+      }
+    },
+    "comment": null
+  },
+  "CNmGraph_ChildGraphSlot_t": {
+    "data": {
+      "m_dataSlotIdx": {
+        "value": 2,
+        "comment": "int16_t"
+      },
+      "m_nNodeIdx": {
+        "value": 0,
+        "comment": "int16_t"
+      }
+    },
+    "comment": null
+  },
+  "CNmGraph_ExternalGraphSlot_t": {
+    "data": {
+      "m_nNodeIdx": {
+        "value": 0,
+        "comment": "int16_t"
+      },
+      "m_slotID": {
+        "value": 8,
+        "comment": "CGlobalSymbol"
+      }
+    },
+    "comment": null
+  },
+  "CNmIDEvent": {
+    "data": {
+      "m_ID": {
+        "value": 16,
+        "comment": "CGlobalSymbol"
+      }
+    },
+    "comment": "CNmEvent"
+  },
+  "CNmLegacyEvent": {
+    "data": {},
+    "comment": "CNmEvent"
+  },
+  "CNmRootMotionData": {
+    "data": {
+      "m_flAverageAngularVelocityRadians": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flAverageLinearVelocity": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_nNumFrames": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_totalDelta": {
+        "value": 48,
+        "comment": "CTransform"
+      },
+      "m_transforms": {
+        "value": 0,
+        "comment": "CUtlVector<CTransform>"
+      }
+    },
+    "comment": null
+  },
+  "CNmSkeleton": {
+    "data": {
+      "m_ID": {
+        "value": 0,
+        "comment": "CGlobalSymbol"
+      },
+      "m_boneIDs": {
+        "value": 8,
+        "comment": "CUtlLeanVector<CGlobalSymbol>"
+      },
+      "m_boneMasks": {
+        "value": 104,
+        "comment": "CUtlLeanVector<CNmBoneMask>"
+      },
+      "m_modelSpaceReferencePose": {
+        "value": 72,
+        "comment": "CUtlVector<CTransform>"
+      },
+      "m_numBonesToSampleAtLowLOD": {
+        "value": 96,
+        "comment": "int32_t"
+      },
+      "m_parentIndices": {
+        "value": 24,
+        "comment": "CUtlVector<int32_t>"
+      },
+      "m_parentSpaceReferencePose": {
+        "value": 48,
+        "comment": "CUtlVector<CTransform>"
+      }
+    },
+    "comment": null
+  },
+  "CNmSyncTrack": {
+    "data": {
+      "m_nStartEventOffset": {
+        "value": 168,
+        "comment": "int32_t"
+      },
+      "m_syncEvents": {
+        "value": 0,
+        "comment": "CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>"
+      }
+    },
+    "comment": null
+  },
+  "CNmSyncTrack_EventMarker_t": {
+    "data": {
+      "m_ID": {
+        "value": 8,
+        "comment": "CGlobalSymbol"
+      },
+      "m_startTime": {
+        "value": 0,
+        "comment": "NmPercent_t"
+      }
+    },
+    "comment": null
+  },
+  "CNmSyncTrack_Event_t": {
+    "data": {
+      "m_ID": {
+        "value": 0,
+        "comment": "CGlobalSymbol"
+      },
+      "m_duration": {
+        "value": 12,
+        "comment": "NmPercent_t"
+      },
+      "m_startTime": {
+        "value": 8,
+        "comment": "NmPercent_t"
+      }
+    },
+    "comment": null
+  },
+  "CNmTransitionEvent": {
+    "data": {
+      "m_ID": {
+        "value": 24,
+        "comment": "CGlobalSymbol"
+      },
+      "m_rule": {
+        "value": 16,
+        "comment": "NmTransitionRule_t"
+      }
+    },
+    "comment": "CNmEvent"
+  },
   "COrientConstraint": {
     "data": {},
     "comment": "CBaseConstraint"
@@ -4274,43 +4487,43 @@
   "CParticleAnimTag": {
     "data": {
       "m_attachmentCP1Name": {
-        "value": 104,
+        "value": 128,
         "comment": "CUtlString"
       },
       "m_attachmentCP1Type": {
-        "value": 112,
+        "value": 136,
         "comment": "ParticleAttachment_t"
       },
       "m_attachmentName": {
-        "value": 88,
+        "value": 112,
         "comment": "CUtlString"
       },
       "m_attachmentType": {
-        "value": 96,
+        "value": 120,
         "comment": "ParticleAttachment_t"
       },
       "m_bDetachFromOwner": {
-        "value": 80,
+        "value": 104,
         "comment": "bool"
       },
       "m_bStopWhenTagEnds": {
-        "value": 81,
+        "value": 105,
         "comment": "bool"
       },
       "m_bTagEndStopIsInstant": {
-        "value": 82,
+        "value": 106,
         "comment": "bool"
       },
       "m_configName": {
-        "value": 72,
+        "value": 96,
         "comment": "CUtlString"
       },
       "m_hParticleSystem": {
-        "value": 56,
+        "value": 80,
         "comment": "CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>"
       },
       "m_particleSystemName": {
-        "value": 64,
+        "value": 88,
         "comment": "CUtlString"
       }
     },
@@ -4569,11 +4782,11 @@
   "CQuaternionAnimParameter": {
     "data": {
       "m_bInterpolate": {
-        "value": 112,
+        "value": 144,
         "comment": "bool"
       },
       "m_defaultValue": {
-        "value": 96,
+        "value": 128,
         "comment": "Quaternion"
       }
     },
@@ -4582,27 +4795,27 @@
   "CRagdollAnimTag": {
     "data": {
       "m_bDestroy": {
-        "value": 76,
+        "value": 100,
         "comment": "bool"
       },
       "m_flDampingRatio": {
-        "value": 64,
+        "value": 88,
         "comment": "float"
       },
       "m_flDecayBias": {
-        "value": 72,
+        "value": 96,
         "comment": "float"
       },
       "m_flDecayDuration": {
-        "value": 68,
+        "value": 92,
         "comment": "float"
       },
       "m_flFrequency": {
-        "value": 60,
+        "value": 84,
         "comment": "float"
       },
       "m_nPoseControl": {
-        "value": 56,
+        "value": 80,
         "comment": "AnimPoseControl"
       }
     },
@@ -4610,6 +4823,10 @@
   },
   "CRagdollComponentUpdater": {
     "data": {
+      "m_bSolidCollisionAtZeroWeight": {
+        "value": 156,
+        "comment": "bool"
+      },
       "m_boneIndices": {
         "value": 72,
         "comment": "CUtlVector<int32_t>"
@@ -4667,11 +4884,52 @@
     },
     "comment": null
   },
+  "CRenderGroom": {
+    "data": {
+      "m_hairInfoBufferData": {
+        "value": 24,
+        "comment": "CUtlBinaryBlock"
+      },
+      "m_hairs": {
+        "value": 48,
+        "comment": "CUtlVector<RenderHairStrandInfo_t>"
+      },
+      "m_nAttachBoneIdx": {
+        "value": 16,
+        "comment": "int32_t"
+      },
+      "m_nGroomGroupID": {
+        "value": 12,
+        "comment": "int32_t"
+      },
+      "m_nGuideHairCount": {
+        "value": 4,
+        "comment": "int32_t"
+      },
+      "m_nHairCount": {
+        "value": 8,
+        "comment": "int32_t"
+      },
+      "m_nSegmentsPerHairStrand": {
+        "value": 0,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
   "CRenderMesh": {
     "data": {
       "m_constraints": {
         "value": 160,
         "comment": "CUtlVector<CBaseConstraint*>"
+      },
+      "m_meshDeformParams": {
+        "value": 480,
+        "comment": "DynamicMeshDeformParams_t"
+      },
+      "m_pGroomData": {
+        "value": 496,
+        "comment": "CRenderGroom*"
       },
       "m_sceneObjects": {
         "value": 16,
@@ -4987,6 +5245,14 @@
         "value": 100,
         "comment": "bool"
       },
+      "m_bFixedBlendWeight": {
+        "value": 101,
+        "comment": "bool"
+      },
+      "m_flFixedBlendWeightVals": {
+        "value": 104,
+        "comment": "float[2]"
+      },
       "m_flags": {
         "value": 0,
         "comment": "CSeqMultiFetchFlag"
@@ -5112,23 +5378,23 @@
   "CSeqS1SeqDesc": {
     "data": {
       "m_IKLockArray": {
-        "value": 168,
+        "value": 176,
         "comment": "CUtlVector<CSeqIKLock>"
       },
       "m_LegacyKeyValueText": {
-        "value": 216,
+        "value": 224,
         "comment": "CBufferString"
       },
       "m_SequenceKeys": {
-        "value": 200,
+        "value": 208,
         "comment": "KeyValues3"
       },
       "m_activityArray": {
-        "value": 232,
+        "value": 240,
         "comment": "CUtlVector<CAnimActivity>"
       },
       "m_autoLayerArray": {
-        "value": 144,
+        "value": 152,
         "comment": "CUtlVector<CSeqAutoLayer>"
       },
       "m_fetch": {
@@ -5140,11 +5406,11 @@
         "comment": "CSeqSeqDescFlag"
       },
       "m_footMotion": {
-        "value": 256,
+        "value": 264,
         "comment": "CUtlVector<CFootMotion>"
       },
       "m_nLocalWeightlist": {
-        "value": 136,
+        "value": 144,
         "comment": "int32_t"
       },
       "m_sName": {
@@ -5152,7 +5418,7 @@
         "comment": "CBufferString"
       },
       "m_transition": {
-        "value": 192,
+        "value": 200,
         "comment": "CSeqTransition"
       }
     },
@@ -5277,7 +5543,7 @@
   "CSequenceFinishedAnimTag": {
     "data": {
       "m_sequenceName": {
-        "value": 56,
+        "value": 80,
         "comment": "CUtlString"
       }
     },
@@ -5416,15 +5682,6 @@
       "m_hSequence": {
         "value": 116,
         "comment": "HSequence"
-      }
-    },
-    "comment": "CLeafUpdateNode"
-  },
-  "CSkeletalInputUpdateNode": {
-    "data": {
-      "m_fixedOpData": {
-        "value": 88,
-        "comment": "SkeletalInputOpFixedSettings_t"
       }
     },
     "comment": "CLeafUpdateNode"
@@ -5742,6 +5999,15 @@
     },
     "comment": "CBinaryUpdateNode"
   },
+  "CSymbolAnimParameter": {
+    "data": {
+      "m_defaultValue": {
+        "value": 120,
+        "comment": "CGlobalSymbol"
+      }
+    },
+    "comment": "CConcreteAnimParameter"
+  },
   "CTaskStatusAnimTag": {
     "data": {},
     "comment": "CAnimTagBase"
@@ -5883,55 +6149,14 @@
     },
     "comment": null
   },
-  "CVRInputComponentUpdater": {
-    "data": {
-      "m_FingerCurl_Index": {
-        "value": 54,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerCurl_Middle": {
-        "value": 56,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerCurl_Pinky": {
-        "value": 60,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerCurl_Ring": {
-        "value": 58,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerCurl_Thumb": {
-        "value": 52,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerSplay_Index_Middle": {
-        "value": 64,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerSplay_Middle_Ring": {
-        "value": 66,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerSplay_Ring_Pinky": {
-        "value": 68,
-        "comment": "CAnimParamHandle"
-      },
-      "m_FingerSplay_Thumb_Index": {
-        "value": 62,
-        "comment": "CAnimParamHandle"
-      }
-    },
-    "comment": "CAnimComponentUpdater"
-  },
   "CVectorAnimParameter": {
     "data": {
       "m_bInterpolate": {
-        "value": 108,
+        "value": 132,
         "comment": "bool"
       },
       "m_defaultValue": {
-        "value": 96,
+        "value": 120,
         "comment": "Vector"
       }
     },
@@ -5957,44 +6182,15 @@
   "CVirtualAnimParameter": {
     "data": {
       "m_eParamType": {
-        "value": 88,
+        "value": 112,
         "comment": "AnimParamType_t"
       },
       "m_expressionString": {
-        "value": 80,
+        "value": 104,
         "comment": "CUtlString"
       }
     },
     "comment": "CAnimParameterBase"
-  },
-  "CVrSkeletalInputSettings": {
-    "data": {
-      "m_eHand": {
-        "value": 72,
-        "comment": "AnimVRHand_t"
-      },
-      "m_fingers": {
-        "value": 24,
-        "comment": "CUtlVector<CFingerChain>"
-      },
-      "m_name": {
-        "value": 48,
-        "comment": "CUtlString"
-      },
-      "m_outerKnuckle1": {
-        "value": 56,
-        "comment": "CUtlString"
-      },
-      "m_outerKnuckle2": {
-        "value": 64,
-        "comment": "CUtlString"
-      },
-      "m_wristBones": {
-        "value": 0,
-        "comment": "CUtlVector<CWristBone>"
-      }
-    },
-    "comment": null
   },
   "CWayPointHelperUpdateNode": {
     "data": {
@@ -6020,27 +6216,6 @@
       }
     },
     "comment": "CUnaryUpdateNode"
-  },
-  "CWristBone": {
-    "data": {
-      "m_name": {
-        "value": 0,
-        "comment": "CUtlString"
-      },
-      "m_vForwardLS": {
-        "value": 8,
-        "comment": "Vector"
-      },
-      "m_vOffset": {
-        "value": 32,
-        "comment": "Vector"
-      },
-      "m_vUpLS": {
-        "value": 20,
-        "comment": "Vector"
-      }
-    },
-    "comment": null
   },
   "CZeroPoseUpdateNode": {
     "data": {},
@@ -6088,89 +6263,23 @@
     },
     "comment": null
   },
-  "FingerBone_t": {
+  "DynamicMeshDeformParams_t": {
     "data": {
-      "m_boneIndex": {
+      "m_bComputeDynamicMeshTensionAfterAnimation": {
+        "value": 9,
+        "comment": "bool"
+      },
+      "m_bRecomputeSmoothNormalsAfterAnimation": {
+        "value": 8,
+        "comment": "bool"
+      },
+      "m_flTensionCompressScale": {
         "value": 0,
-        "comment": "int32_t"
-      },
-      "m_flMaxAngle": {
-        "value": 44,
         "comment": "float"
       },
-      "m_flMinAngle": {
-        "value": 40,
-        "comment": "float"
-      },
-      "m_flRadius": {
-        "value": 48,
-        "comment": "float"
-      },
-      "m_hingeAxis": {
-        "value": 4,
-        "comment": "Vector"
-      },
-      "m_vCapsulePos1": {
-        "value": 16,
-        "comment": "Vector"
-      },
-      "m_vCapsulePos2": {
-        "value": 28,
-        "comment": "Vector"
-      }
-    },
-    "comment": null
-  },
-  "FingerChain_t": {
-    "data": {
-      "m_bones": {
-        "value": 24,
-        "comment": "CUtlVector<FingerBone_t>"
-      },
-      "m_flFingerScaleRatio": {
-        "value": 88,
-        "comment": "float"
-      },
-      "m_flSplayMaxAngle": {
-        "value": 84,
-        "comment": "float"
-      },
-      "m_flSplayMinAngle": {
-        "value": 80,
-        "comment": "float"
-      },
-      "m_metacarpalBoneIndex": {
-        "value": 76,
-        "comment": "int32_t"
-      },
-      "m_targets": {
-        "value": 0,
-        "comment": "CUtlVector<FingerSource_t>"
-      },
-      "m_tipParentBoneIndex": {
-        "value": 72,
-        "comment": "int32_t"
-      },
-      "m_vSplayHingeAxis": {
-        "value": 60,
-        "comment": "Vector"
-      },
-      "m_vTipOffset": {
-        "value": 48,
-        "comment": "Vector"
-      }
-    },
-    "comment": null
-  },
-  "FingerSource_t": {
-    "data": {
-      "m_flFingerWeight": {
+      "m_flTensionStretchScale": {
         "value": 4,
         "comment": "float"
-      },
-      "m_nFingerIndex": {
-        "value": 0,
-        "comment": "AnimVRFinger_t"
       }
     },
     "comment": null
@@ -6864,6 +6973,91 @@
     },
     "comment": null
   },
+  "NmCompressionSettings_t": {
+    "data": {
+      "m_bIsRotationStatic": {
+        "value": 48,
+        "comment": "bool"
+      },
+      "m_bIsScaleStatic": {
+        "value": 50,
+        "comment": "bool"
+      },
+      "m_bIsTranslationStatic": {
+        "value": 49,
+        "comment": "bool"
+      },
+      "m_constantRotation": {
+        "value": 32,
+        "comment": "Quaternion"
+      },
+      "m_scaleRange": {
+        "value": 24,
+        "comment": "NmCompressionSettings_t::QuantizationRange_t"
+      },
+      "m_translationRangeX": {
+        "value": 0,
+        "comment": "NmCompressionSettings_t::QuantizationRange_t"
+      },
+      "m_translationRangeY": {
+        "value": 8,
+        "comment": "NmCompressionSettings_t::QuantizationRange_t"
+      },
+      "m_translationRangeZ": {
+        "value": 16,
+        "comment": "NmCompressionSettings_t::QuantizationRange_t"
+      }
+    },
+    "comment": null
+  },
+  "NmCompressionSettings_t_QuantizationRange_t": {
+    "data": {
+      "m_flRangeLength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flRangeStart": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "NmPercent_t": {
+    "data": {
+      "m_flValue": {
+        "value": 0,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "NmSyncTrackTimeRange_t": {
+    "data": {
+      "m_endTime": {
+        "value": 8,
+        "comment": "NmSyncTrackTime_t"
+      },
+      "m_startTime": {
+        "value": 0,
+        "comment": "NmSyncTrackTime_t"
+      }
+    },
+    "comment": null
+  },
+  "NmSyncTrackTime_t": {
+    "data": {
+      "m_nEventIdx": {
+        "value": 0,
+        "comment": "int32_t"
+      },
+      "m_percentageThrough": {
+        "value": 4,
+        "comment": "NmPercent_t"
+      }
+    },
+    "comment": null
+  },
   "ParamSpanSample_t": {
     "data": {
       "m_flCycle": {
@@ -7107,6 +7301,39 @@
     },
     "comment": null
   },
+  "RenderHairStrandInfo_t": {
+    "data": {
+      "m_nBaseTriIdx": {
+        "value": 12,
+        "comment": "uint32_t"
+      },
+      "m_nGuideIdx": {
+        "value": 0,
+        "comment": "uint32_t[3]"
+      },
+      "m_nPackedBaseMeshUv": {
+        "value": 40,
+        "comment": "uint32_t"
+      },
+      "m_nPad": {
+        "value": 44,
+        "comment": "uint32_t"
+      },
+      "m_vBaseBarycentric": {
+        "value": 24,
+        "comment": "Vector2D"
+      },
+      "m_vGuideBarycentric": {
+        "value": 16,
+        "comment": "Vector2D"
+      },
+      "m_vRootOffset_flLengthScale": {
+        "value": 32,
+        "comment": "uint16_t[4]"
+      }
+    },
+    "comment": null
+  },
   "RenderSkeletonBone_t": {
     "data": {
       "m_bbox": {
@@ -7166,43 +7393,155 @@
     },
     "comment": null
   },
-  "SkeletalInputOpFixedSettings_t": {
+  "SkeletonAnimCapture_t": {
     "data": {
-      "m_bEnableCollision": {
-        "value": 69,
+      "m_CaptureName": {
+        "value": 40,
+        "comment": "CUtlString"
+      },
+      "m_FeModelInitPose": {
+        "value": 72,
+        "comment": "CUtlVector<SkeletonAnimCapture_t::Bone_t>"
+      },
+      "m_Frames": {
+        "value": 168,
+        "comment": "CUtlVector<SkeletonAnimCapture_t::Frame_t>"
+      },
+      "m_ImportedCollision": {
+        "value": 8,
+        "comment": "CUtlVector<CEntityIndex>"
+      },
+      "m_ModelBindPose": {
+        "value": 48,
+        "comment": "CUtlVector<SkeletonAnimCapture_t::Bone_t>"
+      },
+      "m_ModelName": {
+        "value": 32,
+        "comment": "CUtlString"
+      },
+      "m_bPredicted": {
+        "value": 100,
         "comment": "bool"
       },
-      "m_bEnableIK": {
-        "value": 68,
-        "comment": "bool"
+      "m_nEntIndex": {
+        "value": 0,
+        "comment": "CEntityIndex"
       },
-      "m_eHand": {
-        "value": 56,
-        "comment": "AnimVRHand_t"
+      "m_nEntParent": {
+        "value": 4,
+        "comment": "CEntityIndex"
       },
-      "m_eMotionRange": {
-        "value": 60,
-        "comment": "AnimVRHandMotionRange_t"
+      "m_nFlexControllers": {
+        "value": 96,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "SkeletonAnimCapture_t_Bone_t": {
+    "data": {
+      "m_BindPose": {
+        "value": 16,
+        "comment": "CTransform"
       },
-      "m_eTransformSource": {
-        "value": 64,
-        "comment": "AnimVrBoneTransformSource_t"
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlString"
       },
-      "m_fingers": {
-        "value": 24,
-        "comment": "CUtlVector<FingerChain_t>"
-      },
-      "m_outerKnuckle1": {
+      "m_nParent": {
         "value": 48,
         "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "SkeletonAnimCapture_t_Camera_t": {
+    "data": {
+      "m_flTime": {
+        "value": 32,
+        "comment": "float"
       },
-      "m_outerKnuckle2": {
-        "value": 52,
+      "m_tmCamera": {
+        "value": 0,
+        "comment": "CTransform"
+      }
+    },
+    "comment": null
+  },
+  "SkeletonAnimCapture_t_FrameStamp_t": {
+    "data": {
+      "m_bPredicted": {
+        "value": 9,
+        "comment": "bool"
+      },
+      "m_bTeleportTick": {
+        "value": 8,
+        "comment": "bool"
+      },
+      "m_flCurTime": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flEntitySimTime": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flRealTime": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flTime": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_nFrameCount": {
+        "value": 20,
         "comment": "int32_t"
       },
-      "m_wristBones": {
+      "m_nTickCount": {
+        "value": 24,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "SkeletonAnimCapture_t_Frame_t": {
+    "data": {
+      "m_CompositeBones": {
+        "value": 72,
+        "comment": "CUtlVector<CTransform>"
+      },
+      "m_FeModelAnims": {
+        "value": 120,
+        "comment": "CUtlVector<CTransform>"
+      },
+      "m_FeModelPos": {
+        "value": 144,
+        "comment": "CUtlVector<VectorAligned>"
+      },
+      "m_FlexControllerWeights": {
+        "value": 168,
+        "comment": "CUtlVector<float>"
+      },
+      "m_SimStateBones": {
+        "value": 96,
+        "comment": "CUtlVector<CTransform>"
+      },
+      "m_Stamp": {
+        "value": 4,
+        "comment": "SkeletonAnimCapture_t::FrameStamp_t"
+      },
+      "m_Transform": {
+        "value": 32,
+        "comment": "CTransform"
+      },
+      "m_bTeleport": {
+        "value": 64,
+        "comment": "bool"
+      },
+      "m_flTime": {
         "value": 0,
-        "comment": "CUtlVector<WristBone_t>"
+        "comment": "float"
       }
     },
     "comment": null
@@ -7216,6 +7555,23 @@
       "m_vecSize": {
         "value": 12,
         "comment": "Vector"
+      }
+    },
+    "comment": null
+  },
+  "SkeletonDemoDb_t": {
+    "data": {
+      "m_AnimCaptures": {
+        "value": 0,
+        "comment": "CUtlVector<SkeletonAnimCapture_t*>"
+      },
+      "m_CameraTrack": {
+        "value": 24,
+        "comment": "CUtlVector<SkeletonAnimCapture_t::Camera_t>"
+      },
+      "m_flRecordingTime": {
+        "value": 48,
+        "comment": "float"
       }
     },
     "comment": null
@@ -7850,19 +8206,6 @@
       "m_weights": {
         "value": 8,
         "comment": "CUtlVector<float>"
-      }
-    },
-    "comment": null
-  },
-  "WristBone_t": {
-    "data": {
-      "m_boneIndex": {
-        "value": 32,
-        "comment": "int32_t"
-      },
-      "m_xOffsetTransformMS": {
-        "value": 0,
-        "comment": "CTransform"
       }
     },
     "comment": null

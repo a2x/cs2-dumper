@@ -24,6 +24,7 @@ CEntityInstance:
     m_iszPrivateVScripts: 8 # CUtlSymbolLarge
     m_pEntity: 16 # CEntityIdentity*
     m_CScriptComponent: 40 # CScriptComponent*
+    m_bVisibleinPVS: 48 # bool
 CNetworkVarChainer:
     m_PathIndex: 32 # ChangeAccessorFieldPathIndex_t
 CScriptComponent: # CEntityComponent
@@ -56,6 +57,7 @@ EventClientFrameSimulate_t:
     m_LoopState: 0 # EngineLoopState_t
     m_flRealTime: 40 # float
     m_flFrameTime: 44 # float
+    m_flWhenScheduleSendTickPacket: 48 # double
 EventClientOutput_t:
     m_LoopState: 0 # EngineLoopState_t
     m_flRenderTime: 40 # float
@@ -97,9 +99,6 @@ EventClientProcessInput_t:
 EventClientProcessNetworking_t:
 EventClientSceneSystemThreadStateChange_t:
     m_bThreadsActive: 0 # bool
-EventClientSendInput_t:
-    m_bFinalClientCommandTick: 0 # bool
-    m_nAdditionalClientCommandsToCreate: 4 # int32_t
 EventClientSimulate_t: # EventSimulate_t
 EventFrameBoundary_t:
     m_flFrameTime: 0 # float

@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 23 Jan 2024 06:17:17 +0000
+Wed, 7 Feb 2024 04:10:48 +0000
 '''
 
 class AimMatrixOpFixedSettings_t:
@@ -318,8 +318,8 @@ class CAnimParameterBase:
     m_group = 0x20 # CUtlString
     m_id = 0x28 # AnimParamID
     m_componentName = 0x40 # CUtlString
-    m_bNetworkingRequested = 0x4C # bool
-    m_bIsReferenced = 0x4D # bool
+    m_bNetworkingRequested = 0x60 # bool
+    m_bIsReferenced = 0x61 # bool
 
 class CAnimParameterManagerUpdater:
     m_parameters = 0x18 # CUtlVector<CSmartPtr<CAnimParameterBase>>
@@ -365,7 +365,7 @@ class CAnimTagBase:
     m_name = 0x18 # CGlobalSymbol
     m_group = 0x20 # CGlobalSymbol
     m_tagID = 0x28 # AnimTagID
-    m_bIsReferenced = 0x2C # bool
+    m_bIsReferenced = 0x40 # bool
 
 class CAnimTagManagerUpdater:
     m_tags = 0x18 # CUtlVector<CSmartPtr<CAnimTagBase>>
@@ -448,13 +448,13 @@ class CAttachment:
     m_bIgnoreRotation = 0x84 # bool
 
 class CAudioAnimTag: # CAnimTagBase
-    m_clipName = 0x38 # CUtlString
-    m_attachmentName = 0x40 # CUtlString
-    m_flVolume = 0x48 # float
-    m_bStopWhenTagEnds = 0x4C # bool
-    m_bStopWhenGraphEnds = 0x4D # bool
-    m_bPlayOnServer = 0x4E # bool
-    m_bPlayOnClient = 0x4F # bool
+    m_clipName = 0x50 # CUtlString
+    m_attachmentName = 0x58 # CUtlString
+    m_flVolume = 0x60 # float
+    m_bStopWhenTagEnds = 0x64 # bool
+    m_bStopWhenGraphEnds = 0x65 # bool
+    m_bPlayOnServer = 0x66 # bool
+    m_bPlayOnClient = 0x67 # bool
 
 class CBaseConstraint: # CBoneConstraintBase
     m_name = 0x28 # CUtlString
@@ -509,8 +509,8 @@ class CBlendUpdateNode: # CAnimUpdateNodeBase
 class CBlockSelectionMetricEvaluator: # CMotionMetricEvaluator
 
 class CBodyGroupAnimTag: # CAnimTagBase
-    m_nPriority = 0x38 # int32_t
-    m_bodyGroupSettings = 0x40 # CUtlVector<CBodyGroupSetting>
+    m_nPriority = 0x50 # int32_t
+    m_bodyGroupSettings = 0x58 # CUtlVector<CBodyGroupSetting>
 
 class CBodyGroupSetting:
     m_BodyGroupName = 0x0 # CUtlString
@@ -558,7 +558,7 @@ class CBoneVelocityMetricEvaluator: # CMotionMetricEvaluator
     m_nBoneIndex = 0x50 # int32_t
 
 class CBoolAnimParameter: # CConcreteAnimParameter
-    m_bDefaultValue = 0x60 # bool
+    m_bDefaultValue = 0x78 # bool
 
 class CCPPScriptComponentUpdater: # CAnimComponentUpdater
     m_scriptsToRun = 0x30 # CUtlVector<CGlobalSymbol>
@@ -584,10 +584,10 @@ class CChoiceUpdateNode: # CAnimUpdateNodeBase
 class CChoreoUpdateNode: # CUnaryUpdateNode
 
 class CClothSettingsAnimTag: # CAnimTagBase
-    m_flStiffness = 0x38 # float
-    m_flEaseIn = 0x3C # float
-    m_flEaseOut = 0x40 # float
-    m_nVertexSet = 0x48 # CUtlString
+    m_flStiffness = 0x50 # float
+    m_flEaseIn = 0x54 # float
+    m_flEaseOut = 0x58 # float
+    m_nVertexSet = 0x60 # CUtlString
 
 class CCompressorGroup:
     m_nTotalElementCount = 0x0 # int32_t
@@ -609,12 +609,12 @@ class CCompressorGroup:
     m_vector4DCompressor = 0x188 # CUtlVector<CCompressor<Vector4D>*>
 
 class CConcreteAnimParameter: # CAnimParameterBase
-    m_previewButton = 0x50 # AnimParamButton_t
-    m_eNetworkSetting = 0x54 # AnimParamNetworkSetting
-    m_bUseMostRecentValue = 0x58 # bool
-    m_bAutoReset = 0x59 # bool
-    m_bGameWritable = 0x5A # bool
-    m_bGraphWritable = 0x5B # bool
+    m_previewButton = 0x68 # AnimParamButton_t
+    m_eNetworkSetting = 0x6C # AnimParamNetworkSetting
+    m_bUseMostRecentValue = 0x70 # bool
+    m_bAutoReset = 0x71 # bool
+    m_bGameWritable = 0x72 # bool
+    m_bGraphWritable = 0x73 # bool
 
 class CConstraintSlave:
     m_qBaseOrientation = 0x0 # Quaternion
@@ -709,38 +709,13 @@ class CEmitTagActionUpdater: # CAnimActionUpdater
     m_bIsZeroDuration = 0x1C # bool
 
 class CEnumAnimParameter: # CConcreteAnimParameter
-    m_defaultValue = 0x68 # uint8_t
-    m_enumOptions = 0x70 # CUtlVector<CUtlString>
+    m_defaultValue = 0x80 # uint8_t
+    m_enumOptions = 0x88 # CUtlVector<CUtlString>
 
 class CExpressionActionUpdater: # CAnimActionUpdater
     m_hParam = 0x18 # CAnimParamHandle
     m_eParamType = 0x1A # AnimParamType_t
     m_hScript = 0x1C # AnimScriptHandle
-
-class CFingerBone:
-    m_boneName = 0x0 # CUtlString
-    m_hingeAxis = 0x8 # Vector
-    m_vCapsulePos1 = 0x14 # Vector
-    m_vCapsulePos2 = 0x20 # Vector
-    m_flMinAngle = 0x2C # float
-    m_flMaxAngle = 0x30 # float
-    m_flRadius = 0x34 # float
-
-class CFingerChain:
-    m_targets = 0x0 # CUtlVector<CFingerSource>
-    m_bones = 0x18 # CUtlVector<CFingerBone>
-    m_name = 0x30 # CUtlString
-    m_tipParentBoneName = 0x38 # CUtlString
-    m_vTipOffset = 0x40 # Vector
-    m_metacarpalBoneName = 0x50 # CUtlString
-    m_vSplayHingeAxis = 0x58 # Vector
-    m_flSplayMinAngle = 0x64 # float
-    m_flSplayMaxAngle = 0x68 # float
-    m_flFingerScaleRatio = 0x6C # float
-
-class CFingerSource:
-    m_nFingerIndex = 0x0 # AnimVRFinger_t
-    m_flFingerWeight = 0x4 # float
 
 class CFlexController:
     m_szName = 0x0 # CUtlString
@@ -760,10 +735,10 @@ class CFlexRule:
     m_FlexOps = 0x8 # CUtlVector<CFlexOp>
 
 class CFloatAnimParameter: # CConcreteAnimParameter
-    m_fDefaultValue = 0x60 # float
-    m_fMinValue = 0x64 # float
-    m_fMaxValue = 0x68 # float
-    m_bInterpolate = 0x6C # bool
+    m_fDefaultValue = 0x78 # float
+    m_fMinValue = 0x7C # float
+    m_fMaxValue = 0x80 # float
+    m_bInterpolate = 0x84 # bool
 
 class CFollowAttachmentUpdateNode: # CUnaryUpdateNode
     m_opFixedData = 0x70 # FollowAttachmentSettings_t
@@ -822,7 +797,7 @@ class CFootDefinition:
     m_flTraceRadius = 0x3C # float
 
 class CFootFallAnimTag: # CAnimTagBase
-    m_foot = 0x38 # FootFallTagFoot_t
+    m_foot = 0x50 # FootFallTagFoot_t
 
 class CFootLockUpdateNode: # CUnaryUpdateNode
     m_opFixedSettings = 0x68 # FootLockPoseOpFixedSettings
@@ -878,10 +853,10 @@ class CFootTrajectory:
     m_flProgression = 0x10 # float
 
 class CFootstepLandedAnimTag: # CAnimTagBase
-    m_FootstepType = 0x38 # FootstepLandedFootSoundType_t
-    m_OverrideSoundName = 0x40 # CUtlString
-    m_DebugAnimSourceString = 0x48 # CUtlString
-    m_BoneName = 0x50 # CUtlString
+    m_FootstepType = 0x50 # FootstepLandedFootSoundType_t
+    m_OverrideSoundName = 0x58 # CUtlString
+    m_DebugAnimSourceString = 0x60 # CUtlString
+    m_BoneName = 0x68 # CUtlString
 
 class CFutureFacingMetricEvaluator: # CMotionMetricEvaluator
     m_flDistance = 0x50 # float
@@ -930,9 +905,9 @@ class CHitReactUpdateNode: # CUnaryUpdateNode
 class CInputStreamUpdateNode: # CLeafUpdateNode
 
 class CIntAnimParameter: # CConcreteAnimParameter
-    m_defaultValue = 0x60 # int32_t
-    m_minValue = 0x64 # int32_t
-    m_maxValue = 0x68 # int32_t
+    m_defaultValue = 0x78 # int32_t
+    m_minValue = 0x7C # int32_t
+    m_maxValue = 0x80 # int32_t
 
 class CJiggleBoneUpdateNode: # CUnaryUpdateNode
     m_opFixedData = 0x68 # JiggleBoneSettingsList_t
@@ -983,10 +958,10 @@ class CLookComponentUpdater: # CAnimComponentUpdater
     m_bNetworkLookTarget = 0x42 # bool
 
 class CMaterialAttributeAnimTag: # CAnimTagBase
-    m_AttributeName = 0x38 # CUtlString
-    m_AttributeType = 0x40 # MatterialAttributeTagType_t
-    m_flValue = 0x44 # float
-    m_Color = 0x48 # Color
+    m_AttributeName = 0x50 # CUtlString
+    m_AttributeType = 0x58 # MatterialAttributeTagType_t
+    m_flValue = 0x5C # float
+    m_Color = 0x60 # Color
 
 class CMaterialDrawDescriptor:
     m_nPrimitiveType = 0x0 # RenderPrimitiveType_t
@@ -1192,19 +1167,15 @@ class CMotionSearchNode:
     m_selectableSamples = 0x68 # CUtlVector<int32_t>
 
 class CMovementComponentUpdater: # CAnimComponentUpdater
-    m_movementModes = 0x30 # CUtlVector<CMovementMode>
-    m_motors = 0x48 # CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
-    m_facingDamping = 0x60 # CAnimInputDamping
-    m_eDefaultFacingMode = 0x70 # FacingMode
-    m_nDefaultMotorIndex = 0x7C # int32_t
-    m_bMoveVarsDisabled = 0x80 # bool
-    m_bNetworkPath = 0x81 # bool
-    m_bNetworkFacing = 0x82 # bool
-    m_paramHandles = 0x83 # CAnimParamHandle[30]
-
-class CMovementMode:
-    m_name = 0x0 # CUtlString
-    m_flSpeed = 0x8 # float
+    m_motors = 0x30 # CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
+    m_facingDamping = 0x48 # CAnimInputDamping
+    m_eDefaultFacingMode = 0x58 # FacingMode
+    m_nDefaultMotorIndex = 0x64 # int32_t
+    m_flDefaultRunSpeed = 0x68 # float
+    m_bMoveVarsDisabled = 0x6C # bool
+    m_bNetworkPath = 0x6D # bool
+    m_bNetworkFacing = 0x6E # bool
+    m_paramHandles = 0x6F # CAnimParamHandle[30]
 
 class CMoverUpdateNode: # CUnaryUpdateNode
     m_damping = 0x70 # CAnimInputDamping
@@ -1220,6 +1191,99 @@ class CMoverUpdateNode: # CUnaryUpdateNode
     m_bApplyRotation = 0x97 # bool
     m_bLimitOnly = 0x98 # bool
 
+class CNmBoneMask:
+    m_ID = 0x0 # CGlobalSymbol
+    m_weightInfo = 0x8 # CNmBoneMask::WeightInfo_t
+    m_weights = 0x18 # CUtlVector<float>
+
+class CNmClip:
+    m_skeleton = 0x0 # CStrongHandle<InfoForResourceTypeCNmSkeleton>
+    m_nNumFrames = 0x8 # uint32_t
+    m_flDuration = 0xC # float
+    m_compressedPoseData = 0x10 # CUtlBinaryBlock
+    m_trackCompressionSettings = 0x28 # CUtlVector<NmCompressionSettings_t>
+    m_compressedPoseOffsets = 0x40 # CUtlVector<uint32_t>
+    m_syncTrack = 0xA0 # CNmSyncTrack
+    m_rootMotion = 0x150 # CNmRootMotionData
+    m_bIsAdditive = 0x1A0 # bool
+
+class CNmEvent:
+    m_flStartTime = 0x8 # float
+    m_flDuration = 0xC # float
+
+class CNmFootEvent: # CNmEvent
+    m_phase = 0x10 # NmFootPhase_t
+
+class CNmFrameSnapEvent: # CNmEvent
+    m_frameSnapMode = 0x10 # NmFrameSnapEventMode_t
+
+class CNmGraph:
+    m_persistentNodeIndices = 0x0 # CUtlVector<int16_t>
+    m_instanceNodeStartOffsets = 0x18 # CUtlVector<uint32_t>
+    m_instanceRequiredMemory = 0x30 # uint32_t
+    m_instanceRequiredAlignment = 0x34 # uint32_t
+    m_rootNodeIdx = 0x38 # int16_t
+    m_controlParameterIDs = 0x40 # CUtlVector<CGlobalSymbol>
+    m_virtualParameterIDs = 0x58 # CUtlVector<CGlobalSymbol>
+    m_virtualParameterNodeIndices = 0x70 # CUtlVector<int16_t>
+    m_childGraphSlots = 0x88 # CUtlVector<CNmGraph::ChildGraphSlot_t>
+    m_externalGraphSlots = 0xA0 # CUtlVector<CNmGraph::ExternalGraphSlot_t>
+
+class CNmGraphDataSet:
+    m_variationID = 0x0 # CGlobalSymbol
+    m_skeleton = 0x8 # CStrongHandle<InfoForResourceTypeCNmSkeleton>
+    m_resources = 0x10 # CUtlVector<CStrongHandleVoid>
+
+class CNmGraphVariation:
+    m_graph = 0x0 # CStrongHandle<InfoForResourceTypeCNmGraph>
+    m_dataSet = 0x8 # CStrongHandle<InfoForResourceTypeCNmGraphDataSet>
+
+class CNmGraph_ChildGraphSlot_t:
+    m_nNodeIdx = 0x0 # int16_t
+    m_dataSlotIdx = 0x2 # int16_t
+
+class CNmGraph_ExternalGraphSlot_t:
+    m_nNodeIdx = 0x0 # int16_t
+    m_slotID = 0x8 # CGlobalSymbol
+
+class CNmIDEvent: # CNmEvent
+    m_ID = 0x10 # CGlobalSymbol
+
+class CNmLegacyEvent: # CNmEvent
+
+class CNmRootMotionData:
+    m_transforms = 0x0 # CUtlVector<CTransform>
+    m_nNumFrames = 0x18 # int32_t
+    m_flAverageLinearVelocity = 0x1C # float
+    m_flAverageAngularVelocityRadians = 0x20 # float
+    m_totalDelta = 0x30 # CTransform
+
+class CNmSkeleton:
+    m_ID = 0x0 # CGlobalSymbol
+    m_boneIDs = 0x8 # CUtlLeanVector<CGlobalSymbol>
+    m_parentIndices = 0x18 # CUtlVector<int32_t>
+    m_parentSpaceReferencePose = 0x30 # CUtlVector<CTransform>
+    m_modelSpaceReferencePose = 0x48 # CUtlVector<CTransform>
+    m_numBonesToSampleAtLowLOD = 0x60 # int32_t
+    m_boneMasks = 0x68 # CUtlLeanVector<CNmBoneMask>
+
+class CNmSyncTrack:
+    m_syncEvents = 0x0 # CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>
+    m_nStartEventOffset = 0xA8 # int32_t
+
+class CNmSyncTrack_EventMarker_t:
+    m_startTime = 0x0 # NmPercent_t
+    m_ID = 0x8 # CGlobalSymbol
+
+class CNmSyncTrack_Event_t:
+    m_ID = 0x0 # CGlobalSymbol
+    m_startTime = 0x8 # NmPercent_t
+    m_duration = 0xC # NmPercent_t
+
+class CNmTransitionEvent: # CNmEvent
+    m_rule = 0x10 # NmTransitionRule_t
+    m_ID = 0x18 # CGlobalSymbol
+
 class COrientConstraint: # CBaseConstraint
 
 class CParamSpanUpdater:
@@ -1228,16 +1292,16 @@ class CParamSpanUpdater:
 class CParentConstraint: # CBaseConstraint
 
 class CParticleAnimTag: # CAnimTagBase
-    m_hParticleSystem = 0x38 # CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-    m_particleSystemName = 0x40 # CUtlString
-    m_configName = 0x48 # CUtlString
-    m_bDetachFromOwner = 0x50 # bool
-    m_bStopWhenTagEnds = 0x51 # bool
-    m_bTagEndStopIsInstant = 0x52 # bool
-    m_attachmentName = 0x58 # CUtlString
-    m_attachmentType = 0x60 # ParticleAttachment_t
-    m_attachmentCP1Name = 0x68 # CUtlString
-    m_attachmentCP1Type = 0x70 # ParticleAttachment_t
+    m_hParticleSystem = 0x50 # CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+    m_particleSystemName = 0x58 # CUtlString
+    m_configName = 0x60 # CUtlString
+    m_bDetachFromOwner = 0x68 # bool
+    m_bStopWhenTagEnds = 0x69 # bool
+    m_bTagEndStopIsInstant = 0x6A # bool
+    m_attachmentName = 0x70 # CUtlString
+    m_attachmentType = 0x78 # ParticleAttachment_t
+    m_attachmentCP1Name = 0x80 # CUtlString
+    m_attachmentCP1Type = 0x88 # ParticleAttachment_t
 
 class CPathAnimMotorUpdater: # CPathAnimMotorUpdaterBase
 
@@ -1312,16 +1376,16 @@ class CProductQuantizer:
     m_nDimensions = 0x18 # int32_t
 
 class CQuaternionAnimParameter: # CConcreteAnimParameter
-    m_defaultValue = 0x60 # Quaternion
-    m_bInterpolate = 0x70 # bool
+    m_defaultValue = 0x80 # Quaternion
+    m_bInterpolate = 0x90 # bool
 
 class CRagdollAnimTag: # CAnimTagBase
-    m_nPoseControl = 0x38 # AnimPoseControl
-    m_flFrequency = 0x3C # float
-    m_flDampingRatio = 0x40 # float
-    m_flDecayDuration = 0x44 # float
-    m_flDecayBias = 0x48 # float
-    m_bDestroy = 0x4C # bool
+    m_nPoseControl = 0x50 # AnimPoseControl
+    m_flFrequency = 0x54 # float
+    m_flDampingRatio = 0x58 # float
+    m_flDecayDuration = 0x5C # float
+    m_flDecayBias = 0x60 # float
+    m_bDestroy = 0x64 # bool
 
 class CRagdollComponentUpdater: # CAnimComponentUpdater
     m_ragdollNodePaths = 0x30 # CUtlVector<CAnimNodePath>
@@ -1331,6 +1395,7 @@ class CRagdollComponentUpdater: # CAnimComponentUpdater
     m_flSpringFrequencyMin = 0x90 # float
     m_flSpringFrequencyMax = 0x94 # float
     m_flMaxStretch = 0x98 # float
+    m_bSolidCollisionAtZeroWeight = 0x9C # bool
 
 class CRagdollUpdateNode: # CUnaryUpdateNode
     m_nWeightListIndex = 0x68 # int32_t
@@ -1340,10 +1405,21 @@ class CRenderBufferBinding:
     m_hBuffer = 0x0 # uint64_t
     m_nBindOffsetBytes = 0x10 # uint32_t
 
+class CRenderGroom:
+    m_nSegmentsPerHairStrand = 0x0 # int32_t
+    m_nGuideHairCount = 0x4 # int32_t
+    m_nHairCount = 0x8 # int32_t
+    m_nGroomGroupID = 0xC # int32_t
+    m_nAttachBoneIdx = 0x10 # int32_t
+    m_hairInfoBufferData = 0x18 # CUtlBinaryBlock
+    m_hairs = 0x30 # CUtlVector<RenderHairStrandInfo_t>
+
 class CRenderMesh:
     m_sceneObjects = 0x10 # CUtlVectorFixedGrowable<CSceneObjectData>
     m_constraints = 0xA0 # CUtlVector<CBaseConstraint*>
     m_skeleton = 0xB8 # CRenderSkeleton
+    m_meshDeformParams = 0x1E0 # DynamicMeshDeformParams_t
+    m_pGroomData = 0x1F0 # CRenderGroom*
 
 class CRenderSkeleton:
     m_bones = 0x0 # CUtlVector<RenderSkeletonBone_t>
@@ -1436,6 +1512,8 @@ class CSeqMultiFetch:
     m_poseKeyArray1 = 0x48 # CUtlVector<float>
     m_nLocalCyclePoseParameter = 0x60 # int32_t
     m_bCalculatePoseParameters = 0x64 # bool
+    m_bFixedBlendWeight = 0x65 # bool
+    m_flFixedBlendWeightVals = 0x68 # float[2]
 
 class CSeqMultiFetchFlag:
     m_bRealtime = 0x0 # bool
@@ -1466,14 +1544,14 @@ class CSeqS1SeqDesc:
     m_sName = 0x0 # CBufferString
     m_flags = 0x10 # CSeqSeqDescFlag
     m_fetch = 0x20 # CSeqMultiFetch
-    m_nLocalWeightlist = 0x88 # int32_t
-    m_autoLayerArray = 0x90 # CUtlVector<CSeqAutoLayer>
-    m_IKLockArray = 0xA8 # CUtlVector<CSeqIKLock>
-    m_transition = 0xC0 # CSeqTransition
-    m_SequenceKeys = 0xC8 # KeyValues3
-    m_LegacyKeyValueText = 0xD8 # CBufferString
-    m_activityArray = 0xE8 # CUtlVector<CAnimActivity>
-    m_footMotion = 0x100 # CUtlVector<CFootMotion>
+    m_nLocalWeightlist = 0x90 # int32_t
+    m_autoLayerArray = 0x98 # CUtlVector<CSeqAutoLayer>
+    m_IKLockArray = 0xB0 # CUtlVector<CSeqIKLock>
+    m_transition = 0xC8 # CSeqTransition
+    m_SequenceKeys = 0xD0 # KeyValues3
+    m_LegacyKeyValueText = 0xE0 # CBufferString
+    m_activityArray = 0xF0 # CUtlVector<CAnimActivity>
+    m_footMotion = 0x108 # CUtlVector<CFootMotion>
 
 class CSeqScaleSet:
     m_sName = 0x0 # CBufferString
@@ -1508,7 +1586,7 @@ class CSeqTransition:
     m_flFadeOutTime = 0x4 # float
 
 class CSequenceFinishedAnimTag: # CAnimTagBase
-    m_sequenceName = 0x38 # CUtlString
+    m_sequenceName = 0x50 # CUtlString
 
 class CSequenceGroupData:
     m_sName = 0x10 # CBufferString
@@ -1547,9 +1625,6 @@ class CSingleFrameUpdateNode: # CLeafUpdateNode
     m_hPoseCacheHandle = 0x70 # CPoseHandle
     m_hSequence = 0x74 # HSequence
     m_flCycle = 0x78 # float
-
-class CSkeletalInputUpdateNode: # CLeafUpdateNode
-    m_fixedOpData = 0x58 # SkeletalInputOpFixedSettings_t
 
 class CSlopeComponentUpdater: # CAnimComponentUpdater
     m_flTraceDistance = 0x34 # float
@@ -1644,6 +1719,9 @@ class CSubtractUpdateNode: # CBinaryUpdateNode
     m_bApplyChannelsSeparately = 0x91 # bool
     m_bUseModelSpace = 0x92 # bool
 
+class CSymbolAnimParameter: # CConcreteAnimParameter
+    m_defaultValue = 0x78 # CGlobalSymbol
+
 class CTaskStatusAnimTag: # CAnimTagBase
 
 class CTiltTwistConstraint: # CBaseConstraint
@@ -1687,20 +1765,9 @@ class CUnaryUpdateNode: # CAnimUpdateNodeBase
 class CVPhysXSurfacePropertiesList:
     m_surfacePropertiesList = 0x0 # CUtlVector<CPhysSurfaceProperties*>
 
-class CVRInputComponentUpdater: # CAnimComponentUpdater
-    m_FingerCurl_Thumb = 0x34 # CAnimParamHandle
-    m_FingerCurl_Index = 0x36 # CAnimParamHandle
-    m_FingerCurl_Middle = 0x38 # CAnimParamHandle
-    m_FingerCurl_Ring = 0x3A # CAnimParamHandle
-    m_FingerCurl_Pinky = 0x3C # CAnimParamHandle
-    m_FingerSplay_Thumb_Index = 0x3E # CAnimParamHandle
-    m_FingerSplay_Index_Middle = 0x40 # CAnimParamHandle
-    m_FingerSplay_Middle_Ring = 0x42 # CAnimParamHandle
-    m_FingerSplay_Ring_Pinky = 0x44 # CAnimParamHandle
-
 class CVectorAnimParameter: # CConcreteAnimParameter
-    m_defaultValue = 0x60 # Vector
-    m_bInterpolate = 0x6C # bool
+    m_defaultValue = 0x78 # Vector
+    m_bInterpolate = 0x84 # bool
 
 class CVectorQuantizer:
     m_centroidVectors = 0x0 # CUtlVector<float>
@@ -1708,16 +1775,8 @@ class CVectorQuantizer:
     m_nDimensions = 0x1C # int32_t
 
 class CVirtualAnimParameter: # CAnimParameterBase
-    m_expressionString = 0x50 # CUtlString
-    m_eParamType = 0x58 # AnimParamType_t
-
-class CVrSkeletalInputSettings:
-    m_wristBones = 0x0 # CUtlVector<CWristBone>
-    m_fingers = 0x18 # CUtlVector<CFingerChain>
-    m_name = 0x30 # CUtlString
-    m_outerKnuckle1 = 0x38 # CUtlString
-    m_outerKnuckle2 = 0x40 # CUtlString
-    m_eHand = 0x48 # AnimVRHand_t
+    m_expressionString = 0x68 # CUtlString
+    m_eParamType = 0x70 # AnimParamType_t
 
 class CWayPointHelperUpdateNode: # CUnaryUpdateNode
     m_flStartCycle = 0x6C # float
@@ -1725,12 +1784,6 @@ class CWayPointHelperUpdateNode: # CUnaryUpdateNode
     m_bOnlyGoals = 0x74 # bool
     m_bPreventOvershoot = 0x75 # bool
     m_bPreventUndershoot = 0x76 # bool
-
-class CWristBone:
-    m_name = 0x0 # CUtlString
-    m_vForwardLS = 0x8 # Vector
-    m_vUpLS = 0x14 # Vector
-    m_vOffset = 0x20 # Vector
 
 class CZeroPoseUpdateNode: # CLeafUpdateNode
 
@@ -1746,29 +1799,11 @@ class ConfigIndex:
     m_nGroup = 0x0 # uint16_t
     m_nConfig = 0x2 # uint16_t
 
-class FingerBone_t:
-    m_boneIndex = 0x0 # int32_t
-    m_hingeAxis = 0x4 # Vector
-    m_vCapsulePos1 = 0x10 # Vector
-    m_vCapsulePos2 = 0x1C # Vector
-    m_flMinAngle = 0x28 # float
-    m_flMaxAngle = 0x2C # float
-    m_flRadius = 0x30 # float
-
-class FingerChain_t:
-    m_targets = 0x0 # CUtlVector<FingerSource_t>
-    m_bones = 0x18 # CUtlVector<FingerBone_t>
-    m_vTipOffset = 0x30 # Vector
-    m_vSplayHingeAxis = 0x3C # Vector
-    m_tipParentBoneIndex = 0x48 # int32_t
-    m_metacarpalBoneIndex = 0x4C # int32_t
-    m_flSplayMinAngle = 0x50 # float
-    m_flSplayMaxAngle = 0x54 # float
-    m_flFingerScaleRatio = 0x58 # float
-
-class FingerSource_t:
-    m_nFingerIndex = 0x0 # AnimVRFinger_t
-    m_flFingerWeight = 0x4 # float
+class DynamicMeshDeformParams_t:
+    m_flTensionCompressScale = 0x0 # float
+    m_flTensionStretchScale = 0x4 # float
+    m_bRecomputeSmoothNormalsAfterAnimation = 0x8 # bool
+    m_bComputeDynamicMeshTensionAfterAnimation = 0x9 # bool
 
 class FollowAttachmentSettings_t:
     m_attachment = 0x0 # CAnimAttachment
@@ -1961,6 +1996,31 @@ class MotionIndex:
     m_nGroup = 0x0 # uint16_t
     m_nMotion = 0x2 # uint16_t
 
+class NmCompressionSettings_t:
+    m_translationRangeX = 0x0 # NmCompressionSettings_t::QuantizationRange_t
+    m_translationRangeY = 0x8 # NmCompressionSettings_t::QuantizationRange_t
+    m_translationRangeZ = 0x10 # NmCompressionSettings_t::QuantizationRange_t
+    m_scaleRange = 0x18 # NmCompressionSettings_t::QuantizationRange_t
+    m_constantRotation = 0x20 # Quaternion
+    m_bIsRotationStatic = 0x30 # bool
+    m_bIsTranslationStatic = 0x31 # bool
+    m_bIsScaleStatic = 0x32 # bool
+
+class NmCompressionSettings_t_QuantizationRange_t:
+    m_flRangeStart = 0x0 # float
+    m_flRangeLength = 0x4 # float
+
+class NmPercent_t:
+    m_flValue = 0x0 # float
+
+class NmSyncTrackTimeRange_t:
+    m_startTime = 0x0 # NmSyncTrackTime_t
+    m_endTime = 0x8 # NmSyncTrackTime_t
+
+class NmSyncTrackTime_t:
+    m_nEventIdx = 0x0 # int32_t
+    m_percentageThrough = 0x4 # NmPercent_t
+
 class ParamSpanSample_t:
     m_value = 0x0 # CAnimVariant
     m_flCycle = 0x14 # float
@@ -2027,6 +2087,15 @@ class PhysSoftbodyDesc_t:
     m_InitPose = 0x60 # CUtlVector<CTransform>
     m_ParticleBoneName = 0x78 # CUtlVector<CUtlString>
 
+class RenderHairStrandInfo_t:
+    m_nGuideIdx = 0x0 # uint32_t[3]
+    m_nBaseTriIdx = 0xC # uint32_t
+    m_vGuideBarycentric = 0x10 # Vector2D
+    m_vBaseBarycentric = 0x18 # Vector2D
+    m_vRootOffset_flLengthScale = 0x20 # uint16_t[4]
+    m_nPackedBaseMeshUv = 0x28 # uint32_t
+    m_nPad = 0x2C # uint32_t
+
 class RenderSkeletonBone_t:
     m_boneName = 0x0 # CUtlString
     m_parentName = 0x8 # CUtlString
@@ -2044,20 +2113,56 @@ class ScriptInfo_t:
     m_proxyWriteParams = 0x38 # CUtlVector<int32_t>
     m_eScriptType = 0x50 # AnimScriptType
 
-class SkeletalInputOpFixedSettings_t:
-    m_wristBones = 0x0 # CUtlVector<WristBone_t>
-    m_fingers = 0x18 # CUtlVector<FingerChain_t>
-    m_outerKnuckle1 = 0x30 # int32_t
-    m_outerKnuckle2 = 0x34 # int32_t
-    m_eHand = 0x38 # AnimVRHand_t
-    m_eMotionRange = 0x3C # AnimVRHandMotionRange_t
-    m_eTransformSource = 0x40 # AnimVrBoneTransformSource_t
-    m_bEnableIK = 0x44 # bool
-    m_bEnableCollision = 0x45 # bool
+class SkeletonAnimCapture_t:
+    m_nEntIndex = 0x0 # CEntityIndex
+    m_nEntParent = 0x4 # CEntityIndex
+    m_ImportedCollision = 0x8 # CUtlVector<CEntityIndex>
+    m_ModelName = 0x20 # CUtlString
+    m_CaptureName = 0x28 # CUtlString
+    m_ModelBindPose = 0x30 # CUtlVector<SkeletonAnimCapture_t::Bone_t>
+    m_FeModelInitPose = 0x48 # CUtlVector<SkeletonAnimCapture_t::Bone_t>
+    m_nFlexControllers = 0x60 # int32_t
+    m_bPredicted = 0x64 # bool
+    m_Frames = 0xA8 # CUtlVector<SkeletonAnimCapture_t::Frame_t>
+
+class SkeletonAnimCapture_t_Bone_t:
+    m_Name = 0x0 # CUtlString
+    m_BindPose = 0x10 # CTransform
+    m_nParent = 0x30 # int32_t
+
+class SkeletonAnimCapture_t_Camera_t:
+    m_tmCamera = 0x0 # CTransform
+    m_flTime = 0x20 # float
+
+class SkeletonAnimCapture_t_FrameStamp_t:
+    m_flTime = 0x0 # float
+    m_flEntitySimTime = 0x4 # float
+    m_bTeleportTick = 0x8 # bool
+    m_bPredicted = 0x9 # bool
+    m_flCurTime = 0xC # float
+    m_flRealTime = 0x10 # float
+    m_nFrameCount = 0x14 # int32_t
+    m_nTickCount = 0x18 # int32_t
+
+class SkeletonAnimCapture_t_Frame_t:
+    m_flTime = 0x0 # float
+    m_Stamp = 0x4 # SkeletonAnimCapture_t::FrameStamp_t
+    m_Transform = 0x20 # CTransform
+    m_bTeleport = 0x40 # bool
+    m_CompositeBones = 0x48 # CUtlVector<CTransform>
+    m_SimStateBones = 0x60 # CUtlVector<CTransform>
+    m_FeModelAnims = 0x78 # CUtlVector<CTransform>
+    m_FeModelPos = 0x90 # CUtlVector<VectorAligned>
+    m_FlexControllerWeights = 0xA8 # CUtlVector<float>
 
 class SkeletonBoneBounds_t:
     m_vecCenter = 0x0 # Vector
     m_vecSize = 0xC # Vector
+
+class SkeletonDemoDb_t:
+    m_AnimCaptures = 0x0 # CUtlVector<SkeletonAnimCapture_t*>
+    m_CameraTrack = 0x18 # CUtlVector<SkeletonAnimCapture_t::Camera_t>
+    m_flRecordingTime = 0x30 # float
 
 class SolveIKChainPoseOpFixedSettings_t:
     m_ChainsToSolveData = 0x0 # CUtlVector<ChainToSolveData_t>
@@ -2227,7 +2332,3 @@ class VPhysics2ShapeDef_t:
 class WeightList:
     m_name = 0x0 # CUtlString
     m_weights = 0x8 # CUtlVector<float>
-
-class WristBone_t:
-    m_xOffsetTransformMS = 0x0 # CTransform
-    m_boneIndex = 0x20 # int32_t

@@ -25,35 +25,35 @@
     {
       "name": "dwForceAttack",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 04 EC B3 FF",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 4D ? 48 8D 05",
       "operations": [
         {
           "type": "rip"
         },
         {
           "type": "add",
-          "value": 40
+          "value": 48
         }
       ]
     },
     {
       "name": "dwForceAttack2",
       "module": "client.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 14 EC B3 FF",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
         },
         {
           "type": "add",
-          "value": 40
+          "value": 48
         }
       ]
     },
     {
       "name": "dwForceBackward",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 4C 8D 1D",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
@@ -67,7 +67,7 @@
     {
       "name": "dwForceCrouch",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 4C 8D 3D ? ? ? ? 48 89 45",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
@@ -81,7 +81,7 @@
     {
       "name": "dwForceForward",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 4C 8D 0D ? ? ? ? 48 89 45",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
@@ -95,7 +95,7 @@
     {
       "name": "dwForceJump",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 48 8D 1D ? ? ? ? 48 89 45",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 4D ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
@@ -109,7 +109,7 @@
     {
       "name": "dwForceLeft",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 44 8B 15",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
@@ -123,7 +123,7 @@
     {
       "name": "dwForceRight",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 48 8D 15 ? ? ? ? 48 89 45",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
       "operations": [
         {
           "type": "rip"
@@ -179,7 +179,7 @@
     {
       "name": "dwGlowManager",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 89 5C 24 ? 48 89 6C 24",
+      "pattern": "48 8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 8B 41",
       "operations": [
         {
           "type": "rip"
@@ -259,7 +259,7 @@
     {
       "name": "dwNetworkGameClient_maxClients",
       "module": "engine2.dll",
-      "pattern": "8B 81 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8D 81",
+      "pattern": "8B 81 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 8B 81 ? ? ? ? FF C0",
       "operations": [
         {
           "type": "slice",
@@ -335,7 +335,7 @@
         },
         {
           "type": "add",
-          "value": 36656
+          "value": 21392
         }
       ]
     },

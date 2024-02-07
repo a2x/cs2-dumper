@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:18 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 public static class CBaseRendererSource2 { // CParticleFunctionRenderer
@@ -22,59 +22,60 @@ public static class CBaseRendererSource2 { // CParticleFunctionRenderer
     public const nint m_bAnimateInFPS = 0xF50; // bool
     public const nint m_flSelfIllumAmount = 0xF58; // CParticleCollectionRendererFloatInput
     public const nint m_flDiffuseAmount = 0x10B0; // CParticleCollectionRendererFloatInput
-    public const nint m_nLightingControlPoint = 0x1208; // int32_t
-    public const nint m_nSelfIllumPerParticle = 0x120C; // ParticleAttributeIndex_t
-    public const nint m_nOutputBlendMode = 0x1210; // ParticleOutputBlendMode_t
-    public const nint m_bGammaCorrectVertexColors = 0x1214; // bool
-    public const nint m_bSaturateColorPreAlphaBlend = 0x1215; // bool
-    public const nint m_flAddSelfAmount = 0x1218; // CParticleCollectionRendererFloatInput
-    public const nint m_flDesaturation = 0x1370; // CParticleCollectionRendererFloatInput
-    public const nint m_flOverbrightFactor = 0x14C8; // CParticleCollectionRendererFloatInput
-    public const nint m_nHSVShiftControlPoint = 0x1620; // int32_t
-    public const nint m_nFogType = 0x1624; // ParticleFogType_t
-    public const nint m_flFogAmount = 0x1628; // CParticleCollectionRendererFloatInput
-    public const nint m_bTintByFOW = 0x1780; // bool
-    public const nint m_bTintByGlobalLight = 0x1781; // bool
-    public const nint m_nPerParticleAlphaReference = 0x1784; // SpriteCardPerParticleScale_t
-    public const nint m_nPerParticleAlphaRefWindow = 0x1788; // SpriteCardPerParticleScale_t
-    public const nint m_nAlphaReferenceType = 0x178C; // ParticleAlphaReferenceType_t
-    public const nint m_flAlphaReferenceSoftness = 0x1790; // CParticleCollectionRendererFloatInput
-    public const nint m_flSourceAlphaValueToMapToZero = 0x18E8; // CParticleCollectionRendererFloatInput
-    public const nint m_flSourceAlphaValueToMapToOne = 0x1A40; // CParticleCollectionRendererFloatInput
-    public const nint m_bRefract = 0x1B98; // bool
-    public const nint m_bRefractSolid = 0x1B99; // bool
-    public const nint m_flRefractAmount = 0x1BA0; // CParticleCollectionRendererFloatInput
-    public const nint m_nRefractBlurRadius = 0x1CF8; // int32_t
-    public const nint m_nRefractBlurType = 0x1CFC; // BlurFilterType_t
-    public const nint m_bOnlyRenderInEffectsBloomPass = 0x1D00; // bool
-    public const nint m_bOnlyRenderInEffectsWaterPass = 0x1D01; // bool
-    public const nint m_bUseMixedResolutionRendering = 0x1D02; // bool
-    public const nint m_bOnlyRenderInEffecsGameOverlay = 0x1D03; // bool
-    public const nint m_stencilTestID = 0x1D04; // char[128]
-    public const nint m_bStencilTestExclude = 0x1D84; // bool
-    public const nint m_stencilWriteID = 0x1D85; // char[128]
-    public const nint m_bWriteStencilOnDepthPass = 0x1E05; // bool
-    public const nint m_bWriteStencilOnDepthFail = 0x1E06; // bool
-    public const nint m_bReverseZBuffering = 0x1E07; // bool
-    public const nint m_bDisableZBuffering = 0x1E08; // bool
-    public const nint m_nFeatheringMode = 0x1E0C; // ParticleDepthFeatheringMode_t
-    public const nint m_flFeatheringMinDist = 0x1E10; // CParticleCollectionRendererFloatInput
-    public const nint m_flFeatheringMaxDist = 0x1F68; // CParticleCollectionRendererFloatInput
-    public const nint m_flFeatheringFilter = 0x20C0; // CParticleCollectionRendererFloatInput
-    public const nint m_flDepthBias = 0x2218; // float
-    public const nint m_nSortMethod = 0x221C; // ParticleSortingChoiceList_t
-    public const nint m_bBlendFramesSeq0 = 0x2220; // bool
-    public const nint m_bMaxLuminanceBlendingSequence0 = 0x2221; // bool
+    public const nint m_flDiffuseClamp = 0x1208; // CParticleCollectionRendererFloatInput
+    public const nint m_nLightingControlPoint = 0x1360; // int32_t
+    public const nint m_nSelfIllumPerParticle = 0x1364; // ParticleAttributeIndex_t
+    public const nint m_nOutputBlendMode = 0x1368; // ParticleOutputBlendMode_t
+    public const nint m_bGammaCorrectVertexColors = 0x136C; // bool
+    public const nint m_bSaturateColorPreAlphaBlend = 0x136D; // bool
+    public const nint m_flAddSelfAmount = 0x1370; // CParticleCollectionRendererFloatInput
+    public const nint m_flDesaturation = 0x14C8; // CParticleCollectionRendererFloatInput
+    public const nint m_flOverbrightFactor = 0x1620; // CParticleCollectionRendererFloatInput
+    public const nint m_nHSVShiftControlPoint = 0x1778; // int32_t
+    public const nint m_nFogType = 0x177C; // ParticleFogType_t
+    public const nint m_flFogAmount = 0x1780; // CParticleCollectionRendererFloatInput
+    public const nint m_bTintByFOW = 0x18D8; // bool
+    public const nint m_bTintByGlobalLight = 0x18D9; // bool
+    public const nint m_nPerParticleAlphaReference = 0x18DC; // SpriteCardPerParticleScale_t
+    public const nint m_nPerParticleAlphaRefWindow = 0x18E0; // SpriteCardPerParticleScale_t
+    public const nint m_nAlphaReferenceType = 0x18E4; // ParticleAlphaReferenceType_t
+    public const nint m_flAlphaReferenceSoftness = 0x18E8; // CParticleCollectionRendererFloatInput
+    public const nint m_flSourceAlphaValueToMapToZero = 0x1A40; // CParticleCollectionRendererFloatInput
+    public const nint m_flSourceAlphaValueToMapToOne = 0x1B98; // CParticleCollectionRendererFloatInput
+    public const nint m_bRefract = 0x1CF0; // bool
+    public const nint m_bRefractSolid = 0x1CF1; // bool
+    public const nint m_flRefractAmount = 0x1CF8; // CParticleCollectionRendererFloatInput
+    public const nint m_nRefractBlurRadius = 0x1E50; // int32_t
+    public const nint m_nRefractBlurType = 0x1E54; // BlurFilterType_t
+    public const nint m_bOnlyRenderInEffectsBloomPass = 0x1E58; // bool
+    public const nint m_bOnlyRenderInEffectsWaterPass = 0x1E59; // bool
+    public const nint m_bUseMixedResolutionRendering = 0x1E5A; // bool
+    public const nint m_bOnlyRenderInEffecsGameOverlay = 0x1E5B; // bool
+    public const nint m_stencilTestID = 0x1E5C; // char[128]
+    public const nint m_bStencilTestExclude = 0x1EDC; // bool
+    public const nint m_stencilWriteID = 0x1EDD; // char[128]
+    public const nint m_bWriteStencilOnDepthPass = 0x1F5D; // bool
+    public const nint m_bWriteStencilOnDepthFail = 0x1F5E; // bool
+    public const nint m_bReverseZBuffering = 0x1F5F; // bool
+    public const nint m_bDisableZBuffering = 0x1F60; // bool
+    public const nint m_nFeatheringMode = 0x1F64; // ParticleDepthFeatheringMode_t
+    public const nint m_flFeatheringMinDist = 0x1F68; // CParticleCollectionRendererFloatInput
+    public const nint m_flFeatheringMaxDist = 0x20C0; // CParticleCollectionRendererFloatInput
+    public const nint m_flFeatheringFilter = 0x2218; // CParticleCollectionRendererFloatInput
+    public const nint m_flDepthBias = 0x2370; // CParticleCollectionRendererFloatInput
+    public const nint m_nSortMethod = 0x24C8; // ParticleSortingChoiceList_t
+    public const nint m_bBlendFramesSeq0 = 0x24CC; // bool
+    public const nint m_bMaxLuminanceBlendingSequence0 = 0x24CD; // bool
 }
 
 public static class CBaseTrailRenderer { // CBaseRendererSource2
-    public const nint m_nOrientationType = 0x2470; // ParticleOrientationChoiceList_t
-    public const nint m_nOrientationControlPoint = 0x2474; // int32_t
-    public const nint m_flMinSize = 0x2478; // float
-    public const nint m_flMaxSize = 0x247C; // float
-    public const nint m_flStartFadeSize = 0x2480; // CParticleCollectionRendererFloatInput
-    public const nint m_flEndFadeSize = 0x25D8; // CParticleCollectionRendererFloatInput
-    public const nint m_bClampV = 0x2730; // bool
+    public const nint m_nOrientationType = 0x2710; // ParticleOrientationChoiceList_t
+    public const nint m_nOrientationControlPoint = 0x2714; // int32_t
+    public const nint m_flMinSize = 0x2718; // float
+    public const nint m_flMaxSize = 0x271C; // float
+    public const nint m_flStartFadeSize = 0x2720; // CParticleCollectionRendererFloatInput
+    public const nint m_flEndFadeSize = 0x2878; // CParticleCollectionRendererFloatInput
+    public const nint m_bClampV = 0x29D0; // bool
 }
 
 public static class CGeneralRandomRotation { // CParticleFunctionInitializer
@@ -125,9 +126,6 @@ public static class CNewParticleEffect { // IParticleEffect
     public const nint m_nSplitScreenUser = 0x98; // CSplitScreenSlot
     public const nint m_vecAggregationCenter = 0x9C; // Vector
     public const nint m_RefCount = 0xC0; // int32_t
-}
-
-public static class CParticleBindingRealPulse { // CParticleCollectionBindingInstance
 }
 
 public static class CParticleCollectionBindingInstance { // CBasePulseGraphInstance
@@ -520,6 +518,7 @@ public static class C_INIT_CreateOnModel { // CParticleFunctionInitializer
     public const nint m_HitboxSetName = 0xF50; // char[128]
     public const nint m_bLocalCoords = 0xFD0; // bool
     public const nint m_bUseBones = 0xFD1; // bool
+    public const nint m_bUseMesh = 0xFD2; // bool
     public const nint m_flShellSize = 0xFD8; // CParticleCollectionFloatInput
 }
 
@@ -728,14 +727,16 @@ public static class C_INIT_InitSkinnedPositionFromCPSnapshot { // CParticleFunct
     public const nint m_bIgnoreDt = 0x1D2; // bool
     public const nint m_flMinNormalVelocity = 0x1D4; // float
     public const nint m_flMaxNormalVelocity = 0x1D8; // float
-    public const nint m_flIncrement = 0x1DC; // float
-    public const nint m_nFullLoopIncrement = 0x1E0; // int32_t
-    public const nint m_nSnapShotStartPoint = 0x1E4; // int32_t
-    public const nint m_flBoneVelocity = 0x1E8; // float
-    public const nint m_flBoneVelocityMax = 0x1EC; // float
-    public const nint m_bCopyColor = 0x1F0; // bool
-    public const nint m_bCopyAlpha = 0x1F1; // bool
-    public const nint m_bSetRadius = 0x1F2; // bool
+    public const nint m_nIndexType = 0x1DC; // SnapshotIndexType_t
+    public const nint m_flReadIndex = 0x1E0; // CPerParticleFloatInput
+    public const nint m_flIncrement = 0x338; // float
+    public const nint m_nFullLoopIncrement = 0x33C; // int32_t
+    public const nint m_nSnapShotStartPoint = 0x340; // int32_t
+    public const nint m_flBoneVelocity = 0x344; // float
+    public const nint m_flBoneVelocityMax = 0x348; // float
+    public const nint m_bCopyColor = 0x34C; // bool
+    public const nint m_bCopyAlpha = 0x34D; // bool
+    public const nint m_bSetRadius = 0x34E; // bool
 }
 
 public static class C_INIT_InitVec { // CParticleFunctionInitializer
@@ -1243,6 +1244,15 @@ public static class C_INIT_SequenceLifeTime { // CParticleFunctionInitializer
     public const nint m_flFramerate = 0x1C0; // float
 }
 
+public static class C_INIT_SetAttributeToScalarExpression { // CParticleFunctionInitializer
+    public const nint m_nExpression = 0x1C0; // ScalarExpressionType_t
+    public const nint m_flInput1 = 0x1C8; // CPerParticleFloatInput
+    public const nint m_flInput2 = 0x320; // CPerParticleFloatInput
+    public const nint m_flOutputRemap = 0x478; // CParticleRemapFloatInput
+    public const nint m_nOutputField = 0x5D0; // ParticleAttributeIndex_t
+    public const nint m_nSetMethod = 0x5D4; // ParticleSetMethod_t
+}
+
 public static class C_INIT_SetHitboxToClosest { // CParticleFunctionInitializer
     public const nint m_nControlPointNumber = 0x1C0; // int32_t
     public const nint m_nDesiredHitbox = 0x1C4; // int32_t
@@ -1487,6 +1497,9 @@ public static class C_OP_ColorInterpolateRandom { // CParticleFunctionOperator
 public static class C_OP_ConnectParentParticleToNearest { // CParticleFunctionOperator
     public const nint m_nFirstControlPoint = 0x1C0; // int32_t
     public const nint m_nSecondControlPoint = 0x1C4; // int32_t
+    public const nint m_bUseRadius = 0x1C8; // bool
+    public const nint m_flRadiusScale = 0x1D0; // CParticleCollectionFloatInput
+    public const nint m_flParentRadiusScale = 0x328; // CParticleCollectionFloatInput
 }
 
 public static class C_OP_ConstrainDistance { // CParticleFunctionConstraint
@@ -2170,10 +2183,12 @@ public static class C_OP_MovementSkinnedPositionFromCPSnapshot { // CParticleFun
     public const nint m_nRandomSeed = 0x1CC; // int32_t
     public const nint m_bSetNormal = 0x1D0; // bool
     public const nint m_bSetRadius = 0x1D1; // bool
-    public const nint m_flIncrement = 0x1D8; // CParticleCollectionFloatInput
-    public const nint m_nFullLoopIncrement = 0x330; // CParticleCollectionFloatInput
-    public const nint m_nSnapShotStartPoint = 0x488; // CParticleCollectionFloatInput
-    public const nint m_flInterpolation = 0x5E0; // CPerParticleFloatInput
+    public const nint m_nIndexType = 0x1D4; // SnapshotIndexType_t
+    public const nint m_flReadIndex = 0x1D8; // CPerParticleFloatInput
+    public const nint m_flIncrement = 0x330; // CParticleCollectionFloatInput
+    public const nint m_nFullLoopIncrement = 0x488; // CParticleCollectionFloatInput
+    public const nint m_nSnapShotStartPoint = 0x5E0; // CParticleCollectionFloatInput
+    public const nint m_flInterpolation = 0x738; // CPerParticleFloatInput
 }
 
 public static class C_OP_Noise { // CParticleFunctionOperator
@@ -2359,6 +2374,7 @@ public static class C_OP_PlanarConstraint { // CParticleFunctionConstraint
     public const nint m_bGlobalNormal = 0x1DD; // bool
     public const nint m_flRadiusScale = 0x1E0; // CPerParticleFloatInput
     public const nint m_flMaximumDistanceToCP = 0x338; // CParticleCollectionFloatInput
+    public const nint m_bUseOldCode = 0x490; // bool
 }
 
 public static class C_OP_PlaneCull { // CParticleFunctionOperator
@@ -3006,38 +3022,42 @@ public static class C_OP_RenderModels { // CParticleFunctionRenderer
     public const nint m_bLocalScale = 0x1540; // bool
     public const nint m_nSizeCullBloat = 0x1544; // int32_t
     public const nint m_bAnimated = 0x1548; // bool
-    public const nint m_flAnimationRate = 0x154C; // float
-    public const nint m_bScaleAnimationRate = 0x1550; // bool
-    public const nint m_bForceLoopingAnimation = 0x1551; // bool
-    public const nint m_bResetAnimOnStop = 0x1552; // bool
-    public const nint m_bManualAnimFrame = 0x1553; // bool
-    public const nint m_nAnimationScaleField = 0x1554; // ParticleAttributeIndex_t
-    public const nint m_nAnimationField = 0x1558; // ParticleAttributeIndex_t
-    public const nint m_nManualFrameField = 0x155C; // ParticleAttributeIndex_t
-    public const nint m_ActivityName = 0x1560; // char[256]
-    public const nint m_SequenceName = 0x1660; // char[256]
-    public const nint m_bEnableClothSimulation = 0x1760; // bool
-    public const nint m_hOverrideMaterial = 0x1768; // CStrongHandle<InfoForResourceTypeIMaterial2>
-    public const nint m_bOverrideTranslucentMaterials = 0x1770; // bool
-    public const nint m_nSkin = 0x1778; // CPerParticleFloatInput
-    public const nint m_MaterialVars = 0x18D0; // CUtlVector<MaterialVariable_t>
-    public const nint m_modelInput = 0x18E8; // CParticleModelInput
-    public const nint m_nLOD = 0x1948; // int32_t
-    public const nint m_EconSlotName = 0x194C; // char[256]
-    public const nint m_bOriginalModel = 0x1A4C; // bool
-    public const nint m_bSuppressTint = 0x1A4D; // bool
-    public const nint m_bUseRawMeshGroup = 0x1A4E; // bool
-    public const nint m_bDisableShadows = 0x1A4F; // bool
-    public const nint m_bAcceptsDecals = 0x1A50; // bool
-    public const nint m_bForceDrawInterlevedWithSiblings = 0x1A51; // bool
-    public const nint m_bDoNotDrawInParticlePass = 0x1A52; // bool
-    public const nint m_szRenderAttribute = 0x1A53; // char[260]
-    public const nint m_flRadiusScale = 0x1B58; // CParticleCollectionFloatInput
-    public const nint m_flAlphaScale = 0x1CB0; // CParticleCollectionFloatInput
-    public const nint m_flRollScale = 0x1E08; // CParticleCollectionFloatInput
-    public const nint m_nAlpha2Field = 0x1F60; // ParticleAttributeIndex_t
-    public const nint m_vecColorScale = 0x1F68; // CParticleCollectionVecInput
-    public const nint m_nColorBlendType = 0x25C0; // ParticleColorBlendType_t
+    public const nint m_flAnimationRate = 0x1550; // CPerParticleFloatInput
+    public const nint m_bScaleAnimationRate = 0x16A8; // bool
+    public const nint m_bForceLoopingAnimation = 0x16A9; // bool
+    public const nint m_bResetAnimOnStop = 0x16AA; // bool
+    public const nint m_bManualAnimFrame = 0x16AB; // bool
+    public const nint m_nAnimationScaleField = 0x16AC; // ParticleAttributeIndex_t
+    public const nint m_nAnimationField = 0x16B0; // ParticleAttributeIndex_t
+    public const nint m_nManualFrameField = 0x16B4; // ParticleAttributeIndex_t
+    public const nint m_ActivityName = 0x16B8; // char[256]
+    public const nint m_SequenceName = 0x17B8; // char[256]
+    public const nint m_bEnableClothSimulation = 0x18B8; // bool
+    public const nint m_hOverrideMaterial = 0x18C0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+    public const nint m_bOverrideTranslucentMaterials = 0x18C8; // bool
+    public const nint m_nSkin = 0x18D0; // CPerParticleFloatInput
+    public const nint m_MaterialVars = 0x1A28; // CUtlVector<MaterialVariable_t>
+    public const nint m_flManualModelSelection = 0x1A40; // CPerParticleFloatInput
+    public const nint m_modelInput = 0x1B98; // CParticleModelInput
+    public const nint m_nLOD = 0x1BF8; // int32_t
+    public const nint m_EconSlotName = 0x1BFC; // char[256]
+    public const nint m_bOriginalModel = 0x1CFC; // bool
+    public const nint m_bSuppressTint = 0x1CFD; // bool
+    public const nint m_bUseRawMeshGroup = 0x1CFE; // bool
+    public const nint m_bDisableShadows = 0x1CFF; // bool
+    public const nint m_bDisableDepthPrepass = 0x1D00; // bool
+    public const nint m_bAcceptsDecals = 0x1D01; // bool
+    public const nint m_bForceDrawInterlevedWithSiblings = 0x1D02; // bool
+    public const nint m_bDoNotDrawInParticlePass = 0x1D03; // bool
+    public const nint m_bUseFastModelCollectionRenderPath = 0x1D04; // bool
+    public const nint m_bAllowApproximateTransforms = 0x1D05; // bool
+    public const nint m_szRenderAttribute = 0x1D06; // char[260]
+    public const nint m_flRadiusScale = 0x1E10; // CParticleCollectionFloatInput
+    public const nint m_flAlphaScale = 0x1F68; // CParticleCollectionFloatInput
+    public const nint m_flRollScale = 0x20C0; // CParticleCollectionFloatInput
+    public const nint m_nAlpha2Field = 0x2218; // ParticleAttributeIndex_t
+    public const nint m_vecColorScale = 0x2220; // CParticleCollectionVecInput
+    public const nint m_nColorBlendType = 0x2878; // ParticleColorBlendType_t
 }
 
 public static class C_OP_RenderOmni2Light { // CParticleFunctionRenderer
@@ -3075,43 +3095,44 @@ public static class C_OP_RenderProjected { // CParticleFunctionRenderer
     public const nint m_bEnableProjectedDepthControls = 0x204; // bool
     public const nint m_flMinProjectionDepth = 0x208; // float
     public const nint m_flMaxProjectionDepth = 0x20C; // float
-    public const nint m_hProjectedMaterial = 0x210; // CStrongHandle<InfoForResourceTypeIMaterial2>
-    public const nint m_flAnimationTimeScale = 0x218; // float
-    public const nint m_bOrientToNormal = 0x21C; // bool
-    public const nint m_MaterialVars = 0x220; // CUtlVector<MaterialVariable_t>
+    public const nint m_vecProjectedMaterials = 0x210; // CUtlVector<RenderProjectedMaterial_t>
+    public const nint m_flMaterialSelection = 0x228; // CPerParticleFloatInput
+    public const nint m_flAnimationTimeScale = 0x380; // float
+    public const nint m_bOrientToNormal = 0x384; // bool
+    public const nint m_MaterialVars = 0x388; // CUtlVector<MaterialVariable_t>
 }
 
 public static class C_OP_RenderRopes { // CBaseRendererSource2
-    public const nint m_bEnableFadingAndClamping = 0x2470; // bool
-    public const nint m_flMinSize = 0x2474; // float
-    public const nint m_flMaxSize = 0x2478; // float
-    public const nint m_flStartFadeSize = 0x247C; // float
-    public const nint m_flEndFadeSize = 0x2480; // float
-    public const nint m_flStartFadeDot = 0x2484; // float
-    public const nint m_flEndFadeDot = 0x2488; // float
-    public const nint m_flRadiusTaper = 0x248C; // float
-    public const nint m_nMinTesselation = 0x2490; // int32_t
-    public const nint m_nMaxTesselation = 0x2494; // int32_t
-    public const nint m_flTessScale = 0x2498; // float
-    public const nint m_flTextureVWorldSize = 0x24A0; // CParticleCollectionRendererFloatInput
-    public const nint m_flTextureVScrollRate = 0x25F8; // CParticleCollectionRendererFloatInput
-    public const nint m_flTextureVOffset = 0x2750; // CParticleCollectionRendererFloatInput
-    public const nint m_nTextureVParamsCP = 0x28A8; // int32_t
-    public const nint m_bClampV = 0x28AC; // bool
-    public const nint m_nScaleCP1 = 0x28B0; // int32_t
-    public const nint m_nScaleCP2 = 0x28B4; // int32_t
-    public const nint m_flScaleVSizeByControlPointDistance = 0x28B8; // float
-    public const nint m_flScaleVScrollByControlPointDistance = 0x28BC; // float
-    public const nint m_flScaleVOffsetByControlPointDistance = 0x28C0; // float
-    public const nint m_bUseScalarForTextureCoordinate = 0x28C5; // bool
-    public const nint m_nScalarFieldForTextureCoordinate = 0x28C8; // ParticleAttributeIndex_t
-    public const nint m_flScalarAttributeTextureCoordScale = 0x28CC; // float
-    public const nint m_bReverseOrder = 0x28D0; // bool
-    public const nint m_bClosedLoop = 0x28D1; // bool
-    public const nint m_nOrientationType = 0x28D4; // ParticleOrientationChoiceList_t
-    public const nint m_nVectorFieldForOrientation = 0x28D8; // ParticleAttributeIndex_t
-    public const nint m_bDrawAsOpaque = 0x28DC; // bool
-    public const nint m_bGenerateNormals = 0x28DD; // bool
+    public const nint m_bEnableFadingAndClamping = 0x2710; // bool
+    public const nint m_flMinSize = 0x2714; // float
+    public const nint m_flMaxSize = 0x2718; // float
+    public const nint m_flStartFadeSize = 0x271C; // float
+    public const nint m_flEndFadeSize = 0x2720; // float
+    public const nint m_flStartFadeDot = 0x2724; // float
+    public const nint m_flEndFadeDot = 0x2728; // float
+    public const nint m_flRadiusTaper = 0x272C; // float
+    public const nint m_nMinTesselation = 0x2730; // int32_t
+    public const nint m_nMaxTesselation = 0x2734; // int32_t
+    public const nint m_flTessScale = 0x2738; // float
+    public const nint m_flTextureVWorldSize = 0x2740; // CParticleCollectionRendererFloatInput
+    public const nint m_flTextureVScrollRate = 0x2898; // CParticleCollectionRendererFloatInput
+    public const nint m_flTextureVOffset = 0x29F0; // CParticleCollectionRendererFloatInput
+    public const nint m_nTextureVParamsCP = 0x2B48; // int32_t
+    public const nint m_bClampV = 0x2B4C; // bool
+    public const nint m_nScaleCP1 = 0x2B50; // int32_t
+    public const nint m_nScaleCP2 = 0x2B54; // int32_t
+    public const nint m_flScaleVSizeByControlPointDistance = 0x2B58; // float
+    public const nint m_flScaleVScrollByControlPointDistance = 0x2B5C; // float
+    public const nint m_flScaleVOffsetByControlPointDistance = 0x2B60; // float
+    public const nint m_bUseScalarForTextureCoordinate = 0x2B65; // bool
+    public const nint m_nScalarFieldForTextureCoordinate = 0x2B68; // ParticleAttributeIndex_t
+    public const nint m_flScalarAttributeTextureCoordScale = 0x2B6C; // float
+    public const nint m_bReverseOrder = 0x2B70; // bool
+    public const nint m_bClosedLoop = 0x2B71; // bool
+    public const nint m_nOrientationType = 0x2B74; // ParticleOrientationChoiceList_t
+    public const nint m_nVectorFieldForOrientation = 0x2B78; // ParticleAttributeIndex_t
+    public const nint m_bDrawAsOpaque = 0x2B7C; // bool
+    public const nint m_bGenerateNormals = 0x2B7D; // bool
 }
 
 public static class C_OP_RenderScreenShake { // CParticleFunctionRenderer
@@ -3131,6 +3152,14 @@ public static class C_OP_RenderScreenVelocityRotate { // CParticleFunctionRender
     public const nint m_flForwardDegrees = 0x204; // float
 }
 
+public static class C_OP_RenderSimpleModelCollection { // CParticleFunctionRenderer
+    public const nint m_bCenterOffset = 0x200; // bool
+    public const nint m_modelInput = 0x208; // CParticleModelInput
+    public const nint m_nLOD = 0x268; // int32_t
+    public const nint m_bDisableShadows = 0x26C; // bool
+    public const nint m_bAcceptsDecals = 0x26D; // bool
+}
+
 public static class C_OP_RenderSound { // CParticleFunctionRenderer
     public const nint m_flDurationScale = 0x200; // float
     public const nint m_flSndLvlScale = 0x204; // float
@@ -3147,33 +3176,33 @@ public static class C_OP_RenderSound { // CParticleFunctionRenderer
 }
 
 public static class C_OP_RenderSprites { // CBaseRendererSource2
-    public const nint m_nSequenceOverride = 0x2470; // CParticleCollectionRendererFloatInput
-    public const nint m_nOrientationType = 0x25C8; // ParticleOrientationChoiceList_t
-    public const nint m_nOrientationControlPoint = 0x25CC; // int32_t
-    public const nint m_bUseYawWithNormalAligned = 0x25D0; // bool
-    public const nint m_flMinSize = 0x25D4; // float
-    public const nint m_flMaxSize = 0x25D8; // float
-    public const nint m_flAlphaAdjustWithSizeAdjust = 0x25DC; // float
-    public const nint m_flStartFadeSize = 0x25E0; // CParticleCollectionRendererFloatInput
-    public const nint m_flEndFadeSize = 0x2738; // CParticleCollectionRendererFloatInput
-    public const nint m_flStartFadeDot = 0x2890; // float
-    public const nint m_flEndFadeDot = 0x2894; // float
-    public const nint m_bDistanceAlpha = 0x2898; // bool
-    public const nint m_bSoftEdges = 0x2899; // bool
-    public const nint m_flEdgeSoftnessStart = 0x289C; // float
-    public const nint m_flEdgeSoftnessEnd = 0x28A0; // float
-    public const nint m_bOutline = 0x28A4; // bool
-    public const nint m_OutlineColor = 0x28A5; // Color
-    public const nint m_nOutlineAlpha = 0x28AC; // int32_t
-    public const nint m_flOutlineStart0 = 0x28B0; // float
-    public const nint m_flOutlineStart1 = 0x28B4; // float
-    public const nint m_flOutlineEnd0 = 0x28B8; // float
-    public const nint m_flOutlineEnd1 = 0x28BC; // float
-    public const nint m_nLightingMode = 0x28C0; // ParticleLightingQuality_t
-    public const nint m_flLightingTessellation = 0x28C8; // CParticleCollectionRendererFloatInput
-    public const nint m_flLightingDirectionality = 0x2A20; // CParticleCollectionRendererFloatInput
-    public const nint m_bParticleShadows = 0x2B78; // bool
-    public const nint m_flShadowDensity = 0x2B7C; // float
+    public const nint m_nSequenceOverride = 0x2710; // CParticleCollectionRendererFloatInput
+    public const nint m_nOrientationType = 0x2868; // ParticleOrientationChoiceList_t
+    public const nint m_nOrientationControlPoint = 0x286C; // int32_t
+    public const nint m_bUseYawWithNormalAligned = 0x2870; // bool
+    public const nint m_flMinSize = 0x2878; // CParticleCollectionRendererFloatInput
+    public const nint m_flMaxSize = 0x29D0; // CParticleCollectionRendererFloatInput
+    public const nint m_flAlphaAdjustWithSizeAdjust = 0x2B28; // CParticleCollectionRendererFloatInput
+    public const nint m_flStartFadeSize = 0x2C80; // CParticleCollectionRendererFloatInput
+    public const nint m_flEndFadeSize = 0x2DD8; // CParticleCollectionRendererFloatInput
+    public const nint m_flStartFadeDot = 0x2F30; // float
+    public const nint m_flEndFadeDot = 0x2F34; // float
+    public const nint m_bDistanceAlpha = 0x2F38; // bool
+    public const nint m_bSoftEdges = 0x2F39; // bool
+    public const nint m_flEdgeSoftnessStart = 0x2F3C; // float
+    public const nint m_flEdgeSoftnessEnd = 0x2F40; // float
+    public const nint m_bOutline = 0x2F44; // bool
+    public const nint m_OutlineColor = 0x2F45; // Color
+    public const nint m_nOutlineAlpha = 0x2F4C; // int32_t
+    public const nint m_flOutlineStart0 = 0x2F50; // float
+    public const nint m_flOutlineStart1 = 0x2F54; // float
+    public const nint m_flOutlineEnd0 = 0x2F58; // float
+    public const nint m_flOutlineEnd1 = 0x2F5C; // float
+    public const nint m_nLightingMode = 0x2F60; // ParticleLightingQuality_t
+    public const nint m_flLightingTessellation = 0x2F68; // CParticleCollectionRendererFloatInput
+    public const nint m_flLightingDirectionality = 0x30C0; // CParticleCollectionRendererFloatInput
+    public const nint m_bParticleShadows = 0x3218; // bool
+    public const nint m_flShadowDensity = 0x321C; // float
 }
 
 public static class C_OP_RenderStandardLight { // CParticleFunctionRenderer
@@ -3240,26 +3269,26 @@ public static class C_OP_RenderTonemapController { // CParticleFunctionRenderer
 }
 
 public static class C_OP_RenderTrails { // CBaseTrailRenderer
-    public const nint m_bEnableFadingAndClamping = 0x2740; // bool
-    public const nint m_flStartFadeDot = 0x2744; // float
-    public const nint m_flEndFadeDot = 0x2748; // float
-    public const nint m_nPrevPntSource = 0x274C; // ParticleAttributeIndex_t
-    public const nint m_flMaxLength = 0x2750; // float
-    public const nint m_flMinLength = 0x2754; // float
-    public const nint m_bIgnoreDT = 0x2758; // bool
-    public const nint m_flConstrainRadiusToLengthRatio = 0x275C; // float
-    public const nint m_flLengthScale = 0x2760; // float
-    public const nint m_flLengthFadeInTime = 0x2764; // float
-    public const nint m_flRadiusHeadTaper = 0x2768; // CPerParticleFloatInput
-    public const nint m_vecHeadColorScale = 0x28C0; // CParticleCollectionVecInput
-    public const nint m_flHeadAlphaScale = 0x2F18; // CPerParticleFloatInput
-    public const nint m_flRadiusTaper = 0x3070; // CPerParticleFloatInput
-    public const nint m_vecTailColorScale = 0x31C8; // CParticleCollectionVecInput
-    public const nint m_flTailAlphaScale = 0x3820; // CPerParticleFloatInput
-    public const nint m_nHorizCropField = 0x3978; // ParticleAttributeIndex_t
-    public const nint m_nVertCropField = 0x397C; // ParticleAttributeIndex_t
-    public const nint m_flForwardShift = 0x3980; // float
-    public const nint m_bFlipUVBasedOnPitchYaw = 0x3984; // bool
+    public const nint m_bEnableFadingAndClamping = 0x29E0; // bool
+    public const nint m_flStartFadeDot = 0x29E4; // float
+    public const nint m_flEndFadeDot = 0x29E8; // float
+    public const nint m_nPrevPntSource = 0x29EC; // ParticleAttributeIndex_t
+    public const nint m_flMaxLength = 0x29F0; // float
+    public const nint m_flMinLength = 0x29F4; // float
+    public const nint m_bIgnoreDT = 0x29F8; // bool
+    public const nint m_flConstrainRadiusToLengthRatio = 0x29FC; // float
+    public const nint m_flLengthScale = 0x2A00; // float
+    public const nint m_flLengthFadeInTime = 0x2A04; // float
+    public const nint m_flRadiusHeadTaper = 0x2A08; // CPerParticleFloatInput
+    public const nint m_vecHeadColorScale = 0x2B60; // CParticleCollectionVecInput
+    public const nint m_flHeadAlphaScale = 0x31B8; // CPerParticleFloatInput
+    public const nint m_flRadiusTaper = 0x3310; // CPerParticleFloatInput
+    public const nint m_vecTailColorScale = 0x3468; // CParticleCollectionVecInput
+    public const nint m_flTailAlphaScale = 0x3AC0; // CPerParticleFloatInput
+    public const nint m_nHorizCropField = 0x3C18; // ParticleAttributeIndex_t
+    public const nint m_nVertCropField = 0x3C1C; // ParticleAttributeIndex_t
+    public const nint m_flForwardShift = 0x3C20; // float
+    public const nint m_bFlipUVBasedOnPitchYaw = 0x3C24; // bool
 }
 
 public static class C_OP_RenderTreeShake { // CParticleFunctionRenderer
@@ -3366,8 +3395,9 @@ public static class C_OP_SetAttributeToScalarExpression { // CParticleFunctionOp
     public const nint m_nExpression = 0x1C0; // ScalarExpressionType_t
     public const nint m_flInput1 = 0x1C8; // CPerParticleFloatInput
     public const nint m_flInput2 = 0x320; // CPerParticleFloatInput
-    public const nint m_nOutputField = 0x478; // ParticleAttributeIndex_t
-    public const nint m_nSetMethod = 0x47C; // ParticleSetMethod_t
+    public const nint m_flOutputRemap = 0x478; // CParticleRemapFloatInput
+    public const nint m_nOutputField = 0x5D0; // ParticleAttributeIndex_t
+    public const nint m_nSetMethod = 0x5D4; // ParticleSetMethod_t
 }
 
 public static class C_OP_SetCPOrientationToDirection { // CParticleFunctionOperator
@@ -3613,6 +3643,7 @@ public static class C_OP_SetFromCPSnapshot { // CParticleFunctionOperator
     public const nint m_nSnapShotIncrement = 0x330; // CParticleCollectionFloatInput
     public const nint m_flInterpolation = 0x488; // CPerParticleFloatInput
     public const nint m_bSubSample = 0x5E0; // bool
+    public const nint m_bPrev = 0x5E1; // bool
 }
 
 public static class C_OP_SetGravityToCP { // CParticleFunctionPreEmission
@@ -3989,6 +4020,10 @@ public static class PointDefinition_t {
     public const nint m_nControlPoint = 0x0; // int32_t
     public const nint m_bLocalCoords = 0x4; // bool
     public const nint m_vOffset = 0x8; // Vector
+}
+
+public static class RenderProjectedMaterial_t {
+    public const nint m_hMaterial = 0x0; // CStrongHandle<InfoForResourceTypeIMaterial2>
 }
 
 public static class SequenceWeightedList_t {

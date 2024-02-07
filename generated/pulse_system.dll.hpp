@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #pragma once
@@ -21,6 +21,10 @@ namespace CPulseCell_BaseValue { // CPulseCell_Base
 }
 
 namespace CPulseCell_BaseYieldingInflow { // CPulseCell_BaseFlow
+}
+
+namespace CPulseCell_CursorQueue { // CPulseCell_WaitForCursorsWithTagBase
+    constexpr std::ptrdiff_t m_nCursorsAllowedToRunParallel = 0x60; // int32_t
 }
 
 namespace CPulseCell_Inflow_BaseEntrypoint { // CPulseCell_BaseFlow
@@ -85,10 +89,6 @@ namespace CPulseCell_Outflow_IntSwitch { // CPulseCell_BaseFlow
     constexpr std::ptrdiff_t m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
 }
 
-namespace CPulseCell_Outflow_SimultaneousParallel { // CPulseCell_BaseFlow
-    constexpr std::ptrdiff_t m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
-}
-
 namespace CPulseCell_Outflow_StringSwitch { // CPulseCell_BaseFlow
     constexpr std::ptrdiff_t m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
     constexpr std::ptrdiff_t m_CaseOutflows = 0x58; // CUtlVector<CPulse_OutflowConnection>
@@ -104,9 +104,11 @@ namespace CPulseCell_Outflow_TestRandomYesNo { // CPulseCell_BaseFlow
     constexpr std::ptrdiff_t m_No = 0x58; // CPulse_OutflowConnection
 }
 
-namespace CPulseCell_Step_CallExternalMethod { // CPulseCell_BaseFlow
+namespace CPulseCell_Step_CallExternalMethod { // CPulseCell_BaseYieldingInflow
     constexpr std::ptrdiff_t m_MethodName = 0x48; // CUtlSymbolLarge
     constexpr std::ptrdiff_t m_ExpectedArgs = 0x50; // CUtlVector<CPulseRuntimeMethodArg>
+    constexpr std::ptrdiff_t m_nAsyncCallMode = 0x68; // PulseMethodCallMode_t
+    constexpr std::ptrdiff_t m_OnFinished = 0x70; // CPulse_ResumePoint
 }
 
 namespace CPulseCell_Step_DebugLog { // CPulseCell_BaseFlow
@@ -129,6 +131,17 @@ namespace CPulseCell_Step_TestDomainEntFire { // CPulseCell_BaseFlow
 namespace CPulseCell_Step_TestDomainTracepoint { // CPulseCell_BaseFlow
 }
 
+namespace CPulseCell_TestWaitWithCursorState { // CPulseCell_BaseYieldingInflow
+    constexpr std::ptrdiff_t m_WakeResume = 0x48; // CPulse_ResumePoint
+    constexpr std::ptrdiff_t m_WakeCancel = 0x58; // CPulse_ResumePoint
+    constexpr std::ptrdiff_t m_WakeFail = 0x68; // CPulse_ResumePoint
+}
+
+namespace CPulseCell_TestWaitWithCursorState_CursorState_t {
+    constexpr std::ptrdiff_t flWaitValue = 0x0; // float
+    constexpr std::ptrdiff_t bFailOnCancel = 0x4; // bool
+}
+
 namespace CPulseCell_Test_MultiInflow_NoDefault { // CPulseCell_BaseFlow
 }
 
@@ -136,6 +149,20 @@ namespace CPulseCell_Test_MultiInflow_WithDefault { // CPulseCell_BaseFlow
 }
 
 namespace CPulseCell_Test_NoInflow { // CPulseCell_BaseFlow
+}
+
+namespace CPulseCell_Timeline { // CPulseCell_BaseYieldingInflow
+    constexpr std::ptrdiff_t m_TimelineEvents = 0x48; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
+    constexpr std::ptrdiff_t m_bWaitForChildOutflows = 0x60; // bool
+    constexpr std::ptrdiff_t m_OnFinished = 0x68; // CPulse_ResumePoint
+    constexpr std::ptrdiff_t m_OnCanceled = 0x78; // CPulse_ResumePoint
+}
+
+namespace CPulseCell_Timeline_TimelineEvent_t {
+    constexpr std::ptrdiff_t m_flTimeFromPrevious = 0x0; // float
+    constexpr std::ptrdiff_t m_bPauseForPreviousEvents = 0x4; // bool
+    constexpr std::ptrdiff_t m_bCallModeSync = 0x5; // bool
+    constexpr std::ptrdiff_t m_EventOutflow = 0x8; // CPulse_OutflowConnection
 }
 
 namespace CPulseCell_Val_TestDomainFindEntityByName { // CPulseCell_BaseValue
@@ -150,6 +177,23 @@ namespace CPulseCell_Value_RandomInt { // CPulseCell_BaseValue
 namespace CPulseCell_Value_TestValue50 { // CPulseCell_BaseValue
 }
 
+namespace CPulseCell_WaitForCursorsWithTag { // CPulseCell_WaitForCursorsWithTagBase
+    constexpr std::ptrdiff_t m_bTagSelfWhenComplete = 0x60; // bool
+    constexpr std::ptrdiff_t m_nDesiredKillPriority = 0x64; // PulseCursorCancelPriority_t
+}
+
+namespace CPulseCell_WaitForCursorsWithTagBase { // CPulseCell_BaseYieldingInflow
+    constexpr std::ptrdiff_t m_nCursorsAllowedToWait = 0x48; // int32_t
+    constexpr std::ptrdiff_t m_WaitComplete = 0x50; // CPulse_ResumePoint
+}
+
+namespace CPulseCell_WaitForCursorsWithTagBase_CursorState_t {
+    constexpr std::ptrdiff_t m_TagName = 0x0; // CUtlSymbolLarge
+}
+
+namespace CPulseCursorFuncs {
+}
+
 namespace CPulseExecCursor {
 }
 
@@ -162,20 +206,21 @@ namespace CPulseGraphDef {
     constexpr std::ptrdiff_t m_PublicOutputs = 0x60; // CUtlVector<CPulse_PublicOutput>
     constexpr std::ptrdiff_t m_InvokeBindings = 0x78; // CUtlVector<CPulse_InvokeBinding*>
     constexpr std::ptrdiff_t m_CallInfos = 0x90; // CUtlVector<CPulse_CallInfo*>
-    constexpr std::ptrdiff_t m_OutputConnections = 0xA8; // CUtlVector<CPulse_OutputConnection*>
+    constexpr std::ptrdiff_t m_Constants = 0xA8; // CUtlVector<CPulse_Constant>
+    constexpr std::ptrdiff_t m_OutputConnections = 0xC0; // CUtlVector<CPulse_OutputConnection*>
 }
 
 namespace CPulseGraphInstance_TestDomain { // CBasePulseGraphInstance
-    constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0xD0; // bool
-    constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0xD1; // bool
-    constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0xD2; // bool
-    constexpr std::ptrdiff_t m_nNextValidateIndex = 0xD4; // int32_t
-    constexpr std::ptrdiff_t m_Tracepoints = 0xD8; // CUtlVector<CUtlString>
-    constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0xF0; // bool
+    constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0xD8; // bool
+    constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0xD9; // bool
+    constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0xDA; // bool
+    constexpr std::ptrdiff_t m_nNextValidateIndex = 0xDC; // int32_t
+    constexpr std::ptrdiff_t m_Tracepoints = 0xE0; // CUtlVector<CUtlString>
+    constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0xF8; // bool
 }
 
 namespace CPulseGraphInstance_TestDomain_Derived { // CPulseGraphInstance_TestDomain
-    constexpr std::ptrdiff_t m_nInstanceValueX = 0xF8; // int32_t
+    constexpr std::ptrdiff_t m_nInstanceValueX = 0x100; // int32_t
 }
 
 namespace CPulseGraphInstance_TurtleGraphics { // CBasePulseGraphInstance
@@ -200,10 +245,10 @@ namespace CPulseTestScriptLib {
 }
 
 namespace CPulseTurtleGraphicsCursor { // CPulseExecCursor
-    constexpr std::ptrdiff_t m_Color = 0x188; // Color
-    constexpr std::ptrdiff_t m_vPos = 0x18C; // Vector2D
-    constexpr std::ptrdiff_t m_flHeadingDeg = 0x194; // float
-    constexpr std::ptrdiff_t m_bPenUp = 0x198; // bool
+    constexpr std::ptrdiff_t m_Color = 0x168; // Color
+    constexpr std::ptrdiff_t m_vPos = 0x16C; // Vector2D
+    constexpr std::ptrdiff_t m_flHeadingDeg = 0x174; // float
+    constexpr std::ptrdiff_t m_bPenUp = 0x178; // bool
 }
 
 namespace CPulse_CallInfo {
@@ -221,13 +266,17 @@ namespace CPulse_Chunk {
     constexpr std::ptrdiff_t m_InstructionEditorIDs = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
 }
 
+namespace CPulse_Constant {
+    constexpr std::ptrdiff_t m_Type = 0x0; // CPulseValueFullType
+    constexpr std::ptrdiff_t m_Value = 0x10; // KeyValues3
+}
+
 namespace CPulse_InvokeBinding {
     constexpr std::ptrdiff_t m_RegisterMap = 0x0; // PulseRegisterMap_t
     constexpr std::ptrdiff_t m_FuncName = 0x20; // CUtlSymbolLarge
     constexpr std::ptrdiff_t m_nCellIndex = 0x28; // PulseRuntimeCellIndex_t
-    constexpr std::ptrdiff_t m_InstanceType = 0x30; // CPulseValueFullType
-    constexpr std::ptrdiff_t m_nSrcChunk = 0x40; // PulseRuntimeChunkIndex_t
-    constexpr std::ptrdiff_t m_nSrcInstruction = 0x44; // int32_t
+    constexpr std::ptrdiff_t m_nSrcChunk = 0x2C; // PulseRuntimeChunkIndex_t
+    constexpr std::ptrdiff_t m_nSrcInstruction = 0x30; // int32_t
 }
 
 namespace CPulse_OutflowConnection {
@@ -269,8 +318,8 @@ namespace CPulse_Variable {
 }
 
 namespace CTestDomainDerived_Cursor { // CPulseExecCursor
-    constexpr std::ptrdiff_t m_nCursorValueA = 0x188; // int32_t
-    constexpr std::ptrdiff_t m_nCursorValueB = 0x18C; // int32_t
+    constexpr std::ptrdiff_t m_nCursorValueA = 0x168; // int32_t
+    constexpr std::ptrdiff_t m_nCursorValueB = 0x16C; // int32_t
 }
 
 namespace FakeEntity_t {
@@ -283,6 +332,9 @@ namespace FakeEntity_t {
     constexpr std::ptrdiff_t m_fValue = 0x2C; // float
 }
 
+namespace FakeEntity_tAPI {
+}
+
 namespace PGDInstruction_t {
     constexpr std::ptrdiff_t m_nCode = 0x0; // PulseInstructionCode_t
     constexpr std::ptrdiff_t m_nVar = 0x4; // PulseRuntimeVarIndex_t
@@ -293,17 +345,24 @@ namespace PGDInstruction_t {
     constexpr std::ptrdiff_t m_nChunk = 0x14; // PulseRuntimeChunkIndex_t
     constexpr std::ptrdiff_t m_nDestInstruction = 0x18; // int32_t
     constexpr std::ptrdiff_t m_nCallInfoIndex = 0x1C; // PulseRuntimeCallInfoIndex_t
-    constexpr std::ptrdiff_t m_Arg0Name = 0x20; // CUtlSymbolLarge
-    constexpr std::ptrdiff_t m_Arg1Name = 0x28; // CUtlSymbolLarge
-    constexpr std::ptrdiff_t m_bLiteralBool = 0x30; // bool
-    constexpr std::ptrdiff_t m_nLiteralInt = 0x34; // int32_t
-    constexpr std::ptrdiff_t m_flLiteralFloat = 0x38; // float
-    constexpr std::ptrdiff_t m_LiteralString = 0x40; // CBufferString
-    constexpr std::ptrdiff_t m_vLiteralVec3 = 0x50; // Vector
+    constexpr std::ptrdiff_t m_nConstIdx = 0x20; // PulseRuntimeConstantIndex_t
+    constexpr std::ptrdiff_t m_DomainValue = 0x28; // CBufferString
+}
+
+namespace PulseCursorID_t {
+    constexpr std::ptrdiff_t m_Value = 0x0; // int32_t
+}
+
+namespace PulseCursorYieldToken_t {
+    constexpr std::ptrdiff_t m_Value = 0x0; // int32_t
 }
 
 namespace PulseDocNodeID_t {
     constexpr std::ptrdiff_t m_Value = 0x0; // int32_t
+}
+
+namespace PulseGraphInstanceID_t {
+    constexpr std::ptrdiff_t m_Value = 0x0; // uint32_t
 }
 
 namespace PulseRegisterMap_t {
@@ -321,6 +380,10 @@ namespace PulseRuntimeCellIndex_t {
 
 namespace PulseRuntimeChunkIndex_t {
     constexpr std::ptrdiff_t m_Value = 0x0; // int32_t
+}
+
+namespace PulseRuntimeConstantIndex_t {
+    constexpr std::ptrdiff_t m_Value = 0x0; // int16_t
 }
 
 namespace PulseRuntimeEntrypointIndex_t {
@@ -348,5 +411,5 @@ namespace PulseRuntimeVarIndex_t {
 }
 
 namespace PulseTestEHandle_t {
-    constexpr std::ptrdiff_t m_Value = 0x0; // int32_t
+    constexpr std::ptrdiff_t m_Value = 0x0; // uint32_t
 }

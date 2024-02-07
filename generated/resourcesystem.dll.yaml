@@ -43,10 +43,13 @@ InfoForResourceTypeCDOTANovelsList:
 InfoForResourceTypeCDOTAPatchNotesList:
 InfoForResourceTypeCDotaItemDefinitionResource:
 InfoForResourceTypeCEntityLump:
+InfoForResourceTypeCGcExportableExternalData:
 InfoForResourceTypeCJavaScriptResource:
 InfoForResourceTypeCModel:
 InfoForResourceTypeCMorphSetData:
 InfoForResourceTypeCNmClip:
+InfoForResourceTypeCNmGraph:
+InfoForResourceTypeCNmGraphDataSet:
 InfoForResourceTypeCNmSkeleton:
 InfoForResourceTypeCPanoramaDynamicImages:
 InfoForResourceTypeCPanoramaLayout:
@@ -64,6 +67,7 @@ InfoForResourceTypeCVMixListResource:
 InfoForResourceTypeCVPhysXSurfacePropertiesList:
 InfoForResourceTypeCVSoundEventScriptList:
 InfoForResourceTypeCVSoundStackScriptList:
+InfoForResourceTypeCVoiceContainerBase:
 InfoForResourceTypeCVoxelVisibility:
 InfoForResourceTypeCWorldNode:
 InfoForResourceTypeIAnimGraphModelBinding:
@@ -75,7 +79,6 @@ InfoForResourceTypeIVectorGraphic:
 InfoForResourceTypeManifestTestResource_t:
 InfoForResourceTypeProceduralTestResource_t:
 InfoForResourceTypeTestResource_t:
-InfoForResourceTypeVSound_t:
 InfoForResourceTypeWorld_t:
 ManifestTestResource_t:
     m_name: 0 # CUtlString

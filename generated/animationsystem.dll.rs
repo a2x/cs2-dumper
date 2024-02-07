@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -373,8 +373,8 @@ pub mod CAnimParameterBase {
     pub const m_group: usize = 0x20; // CUtlString
     pub const m_id: usize = 0x28; // AnimParamID
     pub const m_componentName: usize = 0x40; // CUtlString
-    pub const m_bNetworkingRequested: usize = 0x4C; // bool
-    pub const m_bIsReferenced: usize = 0x4D; // bool
+    pub const m_bNetworkingRequested: usize = 0x60; // bool
+    pub const m_bIsReferenced: usize = 0x61; // bool
 }
 
 pub mod CAnimParameterManagerUpdater {
@@ -428,7 +428,7 @@ pub mod CAnimTagBase {
     pub const m_name: usize = 0x18; // CGlobalSymbol
     pub const m_group: usize = 0x20; // CGlobalSymbol
     pub const m_tagID: usize = 0x28; // AnimTagID
-    pub const m_bIsReferenced: usize = 0x2C; // bool
+    pub const m_bIsReferenced: usize = 0x40; // bool
 }
 
 pub mod CAnimTagManagerUpdater {
@@ -526,13 +526,13 @@ pub mod CAttachment {
 }
 
 pub mod CAudioAnimTag { // CAnimTagBase
-    pub const m_clipName: usize = 0x38; // CUtlString
-    pub const m_attachmentName: usize = 0x40; // CUtlString
-    pub const m_flVolume: usize = 0x48; // float
-    pub const m_bStopWhenTagEnds: usize = 0x4C; // bool
-    pub const m_bStopWhenGraphEnds: usize = 0x4D; // bool
-    pub const m_bPlayOnServer: usize = 0x4E; // bool
-    pub const m_bPlayOnClient: usize = 0x4F; // bool
+    pub const m_clipName: usize = 0x50; // CUtlString
+    pub const m_attachmentName: usize = 0x58; // CUtlString
+    pub const m_flVolume: usize = 0x60; // float
+    pub const m_bStopWhenTagEnds: usize = 0x64; // bool
+    pub const m_bStopWhenGraphEnds: usize = 0x65; // bool
+    pub const m_bPlayOnServer: usize = 0x66; // bool
+    pub const m_bPlayOnClient: usize = 0x67; // bool
 }
 
 pub mod CBaseConstraint { // CBoneConstraintBase
@@ -595,8 +595,8 @@ pub mod CBlockSelectionMetricEvaluator { // CMotionMetricEvaluator
 }
 
 pub mod CBodyGroupAnimTag { // CAnimTagBase
-    pub const m_nPriority: usize = 0x38; // int32_t
-    pub const m_bodyGroupSettings: usize = 0x40; // CUtlVector<CBodyGroupSetting>
+    pub const m_nPriority: usize = 0x50; // int32_t
+    pub const m_bodyGroupSettings: usize = 0x58; // CUtlVector<CBodyGroupSetting>
 }
 
 pub mod CBodyGroupSetting {
@@ -655,7 +655,7 @@ pub mod CBoneVelocityMetricEvaluator { // CMotionMetricEvaluator
 }
 
 pub mod CBoolAnimParameter { // CConcreteAnimParameter
-    pub const m_bDefaultValue: usize = 0x60; // bool
+    pub const m_bDefaultValue: usize = 0x78; // bool
 }
 
 pub mod CCPPScriptComponentUpdater { // CAnimComponentUpdater
@@ -686,10 +686,10 @@ pub mod CChoreoUpdateNode { // CUnaryUpdateNode
 }
 
 pub mod CClothSettingsAnimTag { // CAnimTagBase
-    pub const m_flStiffness: usize = 0x38; // float
-    pub const m_flEaseIn: usize = 0x3C; // float
-    pub const m_flEaseOut: usize = 0x40; // float
-    pub const m_nVertexSet: usize = 0x48; // CUtlString
+    pub const m_flStiffness: usize = 0x50; // float
+    pub const m_flEaseIn: usize = 0x54; // float
+    pub const m_flEaseOut: usize = 0x58; // float
+    pub const m_nVertexSet: usize = 0x60; // CUtlString
 }
 
 pub mod CCompressorGroup {
@@ -713,12 +713,12 @@ pub mod CCompressorGroup {
 }
 
 pub mod CConcreteAnimParameter { // CAnimParameterBase
-    pub const m_previewButton: usize = 0x50; // AnimParamButton_t
-    pub const m_eNetworkSetting: usize = 0x54; // AnimParamNetworkSetting
-    pub const m_bUseMostRecentValue: usize = 0x58; // bool
-    pub const m_bAutoReset: usize = 0x59; // bool
-    pub const m_bGameWritable: usize = 0x5A; // bool
-    pub const m_bGraphWritable: usize = 0x5B; // bool
+    pub const m_previewButton: usize = 0x68; // AnimParamButton_t
+    pub const m_eNetworkSetting: usize = 0x6C; // AnimParamNetworkSetting
+    pub const m_bUseMostRecentValue: usize = 0x70; // bool
+    pub const m_bAutoReset: usize = 0x71; // bool
+    pub const m_bGameWritable: usize = 0x72; // bool
+    pub const m_bGraphWritable: usize = 0x73; // bool
 }
 
 pub mod CConstraintSlave {
@@ -832,42 +832,14 @@ pub mod CEmitTagActionUpdater { // CAnimActionUpdater
 }
 
 pub mod CEnumAnimParameter { // CConcreteAnimParameter
-    pub const m_defaultValue: usize = 0x68; // uint8_t
-    pub const m_enumOptions: usize = 0x70; // CUtlVector<CUtlString>
+    pub const m_defaultValue: usize = 0x80; // uint8_t
+    pub const m_enumOptions: usize = 0x88; // CUtlVector<CUtlString>
 }
 
 pub mod CExpressionActionUpdater { // CAnimActionUpdater
     pub const m_hParam: usize = 0x18; // CAnimParamHandle
     pub const m_eParamType: usize = 0x1A; // AnimParamType_t
     pub const m_hScript: usize = 0x1C; // AnimScriptHandle
-}
-
-pub mod CFingerBone {
-    pub const m_boneName: usize = 0x0; // CUtlString
-    pub const m_hingeAxis: usize = 0x8; // Vector
-    pub const m_vCapsulePos1: usize = 0x14; // Vector
-    pub const m_vCapsulePos2: usize = 0x20; // Vector
-    pub const m_flMinAngle: usize = 0x2C; // float
-    pub const m_flMaxAngle: usize = 0x30; // float
-    pub const m_flRadius: usize = 0x34; // float
-}
-
-pub mod CFingerChain {
-    pub const m_targets: usize = 0x0; // CUtlVector<CFingerSource>
-    pub const m_bones: usize = 0x18; // CUtlVector<CFingerBone>
-    pub const m_name: usize = 0x30; // CUtlString
-    pub const m_tipParentBoneName: usize = 0x38; // CUtlString
-    pub const m_vTipOffset: usize = 0x40; // Vector
-    pub const m_metacarpalBoneName: usize = 0x50; // CUtlString
-    pub const m_vSplayHingeAxis: usize = 0x58; // Vector
-    pub const m_flSplayMinAngle: usize = 0x64; // float
-    pub const m_flSplayMaxAngle: usize = 0x68; // float
-    pub const m_flFingerScaleRatio: usize = 0x6C; // float
-}
-
-pub mod CFingerSource {
-    pub const m_nFingerIndex: usize = 0x0; // AnimVRFinger_t
-    pub const m_flFingerWeight: usize = 0x4; // float
 }
 
 pub mod CFlexController {
@@ -892,10 +864,10 @@ pub mod CFlexRule {
 }
 
 pub mod CFloatAnimParameter { // CConcreteAnimParameter
-    pub const m_fDefaultValue: usize = 0x60; // float
-    pub const m_fMinValue: usize = 0x64; // float
-    pub const m_fMaxValue: usize = 0x68; // float
-    pub const m_bInterpolate: usize = 0x6C; // bool
+    pub const m_fDefaultValue: usize = 0x78; // float
+    pub const m_fMinValue: usize = 0x7C; // float
+    pub const m_fMaxValue: usize = 0x80; // float
+    pub const m_bInterpolate: usize = 0x84; // bool
 }
 
 pub mod CFollowAttachmentUpdateNode { // CUnaryUpdateNode
@@ -962,7 +934,7 @@ pub mod CFootDefinition {
 }
 
 pub mod CFootFallAnimTag { // CAnimTagBase
-    pub const m_foot: usize = 0x38; // FootFallTagFoot_t
+    pub const m_foot: usize = 0x50; // FootFallTagFoot_t
 }
 
 pub mod CFootLockUpdateNode { // CUnaryUpdateNode
@@ -1027,10 +999,10 @@ pub mod CFootTrajectory {
 }
 
 pub mod CFootstepLandedAnimTag { // CAnimTagBase
-    pub const m_FootstepType: usize = 0x38; // FootstepLandedFootSoundType_t
-    pub const m_OverrideSoundName: usize = 0x40; // CUtlString
-    pub const m_DebugAnimSourceString: usize = 0x48; // CUtlString
-    pub const m_BoneName: usize = 0x50; // CUtlString
+    pub const m_FootstepType: usize = 0x50; // FootstepLandedFootSoundType_t
+    pub const m_OverrideSoundName: usize = 0x58; // CUtlString
+    pub const m_DebugAnimSourceString: usize = 0x60; // CUtlString
+    pub const m_BoneName: usize = 0x68; // CUtlString
 }
 
 pub mod CFutureFacingMetricEvaluator { // CMotionMetricEvaluator
@@ -1087,9 +1059,9 @@ pub mod CInputStreamUpdateNode { // CLeafUpdateNode
 }
 
 pub mod CIntAnimParameter { // CConcreteAnimParameter
-    pub const m_defaultValue: usize = 0x60; // int32_t
-    pub const m_minValue: usize = 0x64; // int32_t
-    pub const m_maxValue: usize = 0x68; // int32_t
+    pub const m_defaultValue: usize = 0x78; // int32_t
+    pub const m_minValue: usize = 0x7C; // int32_t
+    pub const m_maxValue: usize = 0x80; // int32_t
 }
 
 pub mod CJiggleBoneUpdateNode { // CUnaryUpdateNode
@@ -1148,10 +1120,10 @@ pub mod CLookComponentUpdater { // CAnimComponentUpdater
 }
 
 pub mod CMaterialAttributeAnimTag { // CAnimTagBase
-    pub const m_AttributeName: usize = 0x38; // CUtlString
-    pub const m_AttributeType: usize = 0x40; // MatterialAttributeTagType_t
-    pub const m_flValue: usize = 0x44; // float
-    pub const m_Color: usize = 0x48; // Color
+    pub const m_AttributeName: usize = 0x50; // CUtlString
+    pub const m_AttributeType: usize = 0x58; // MatterialAttributeTagType_t
+    pub const m_flValue: usize = 0x5C; // float
+    pub const m_Color: usize = 0x60; // Color
 }
 
 pub mod CMaterialDrawDescriptor {
@@ -1391,20 +1363,15 @@ pub mod CMotionSearchNode {
 }
 
 pub mod CMovementComponentUpdater { // CAnimComponentUpdater
-    pub const m_movementModes: usize = 0x30; // CUtlVector<CMovementMode>
-    pub const m_motors: usize = 0x48; // CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
-    pub const m_facingDamping: usize = 0x60; // CAnimInputDamping
-    pub const m_eDefaultFacingMode: usize = 0x70; // FacingMode
-    pub const m_nDefaultMotorIndex: usize = 0x7C; // int32_t
-    pub const m_bMoveVarsDisabled: usize = 0x80; // bool
-    pub const m_bNetworkPath: usize = 0x81; // bool
-    pub const m_bNetworkFacing: usize = 0x82; // bool
-    pub const m_paramHandles: usize = 0x83; // CAnimParamHandle[30]
-}
-
-pub mod CMovementMode {
-    pub const m_name: usize = 0x0; // CUtlString
-    pub const m_flSpeed: usize = 0x8; // float
+    pub const m_motors: usize = 0x30; // CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
+    pub const m_facingDamping: usize = 0x48; // CAnimInputDamping
+    pub const m_eDefaultFacingMode: usize = 0x58; // FacingMode
+    pub const m_nDefaultMotorIndex: usize = 0x64; // int32_t
+    pub const m_flDefaultRunSpeed: usize = 0x68; // float
+    pub const m_bMoveVarsDisabled: usize = 0x6C; // bool
+    pub const m_bNetworkPath: usize = 0x6D; // bool
+    pub const m_bNetworkFacing: usize = 0x6E; // bool
+    pub const m_paramHandles: usize = 0x6F; // CAnimParamHandle[30]
 }
 
 pub mod CMoverUpdateNode { // CUnaryUpdateNode
@@ -1422,6 +1389,117 @@ pub mod CMoverUpdateNode { // CUnaryUpdateNode
     pub const m_bLimitOnly: usize = 0x98; // bool
 }
 
+pub mod CNmBoneMask {
+    pub const m_ID: usize = 0x0; // CGlobalSymbol
+    pub const m_weightInfo: usize = 0x8; // CNmBoneMask::WeightInfo_t
+    pub const m_weights: usize = 0x18; // CUtlVector<float>
+}
+
+pub mod CNmClip {
+    pub const m_skeleton: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+    pub const m_nNumFrames: usize = 0x8; // uint32_t
+    pub const m_flDuration: usize = 0xC; // float
+    pub const m_compressedPoseData: usize = 0x10; // CUtlBinaryBlock
+    pub const m_trackCompressionSettings: usize = 0x28; // CUtlVector<NmCompressionSettings_t>
+    pub const m_compressedPoseOffsets: usize = 0x40; // CUtlVector<uint32_t>
+    pub const m_syncTrack: usize = 0xA0; // CNmSyncTrack
+    pub const m_rootMotion: usize = 0x150; // CNmRootMotionData
+    pub const m_bIsAdditive: usize = 0x1A0; // bool
+}
+
+pub mod CNmEvent {
+    pub const m_flStartTime: usize = 0x8; // float
+    pub const m_flDuration: usize = 0xC; // float
+}
+
+pub mod CNmFootEvent { // CNmEvent
+    pub const m_phase: usize = 0x10; // NmFootPhase_t
+}
+
+pub mod CNmFrameSnapEvent { // CNmEvent
+    pub const m_frameSnapMode: usize = 0x10; // NmFrameSnapEventMode_t
+}
+
+pub mod CNmGraph {
+    pub const m_persistentNodeIndices: usize = 0x0; // CUtlVector<int16_t>
+    pub const m_instanceNodeStartOffsets: usize = 0x18; // CUtlVector<uint32_t>
+    pub const m_instanceRequiredMemory: usize = 0x30; // uint32_t
+    pub const m_instanceRequiredAlignment: usize = 0x34; // uint32_t
+    pub const m_rootNodeIdx: usize = 0x38; // int16_t
+    pub const m_controlParameterIDs: usize = 0x40; // CUtlVector<CGlobalSymbol>
+    pub const m_virtualParameterIDs: usize = 0x58; // CUtlVector<CGlobalSymbol>
+    pub const m_virtualParameterNodeIndices: usize = 0x70; // CUtlVector<int16_t>
+    pub const m_childGraphSlots: usize = 0x88; // CUtlVector<CNmGraph::ChildGraphSlot_t>
+    pub const m_externalGraphSlots: usize = 0xA0; // CUtlVector<CNmGraph::ExternalGraphSlot_t>
+}
+
+pub mod CNmGraphDataSet {
+    pub const m_variationID: usize = 0x0; // CGlobalSymbol
+    pub const m_skeleton: usize = 0x8; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+    pub const m_resources: usize = 0x10; // CUtlVector<CStrongHandleVoid>
+}
+
+pub mod CNmGraphVariation {
+    pub const m_graph: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmGraph>
+    pub const m_dataSet: usize = 0x8; // CStrongHandle<InfoForResourceTypeCNmGraphDataSet>
+}
+
+pub mod CNmGraph_ChildGraphSlot_t {
+    pub const m_nNodeIdx: usize = 0x0; // int16_t
+    pub const m_dataSlotIdx: usize = 0x2; // int16_t
+}
+
+pub mod CNmGraph_ExternalGraphSlot_t {
+    pub const m_nNodeIdx: usize = 0x0; // int16_t
+    pub const m_slotID: usize = 0x8; // CGlobalSymbol
+}
+
+pub mod CNmIDEvent { // CNmEvent
+    pub const m_ID: usize = 0x10; // CGlobalSymbol
+}
+
+pub mod CNmLegacyEvent { // CNmEvent
+}
+
+pub mod CNmRootMotionData {
+    pub const m_transforms: usize = 0x0; // CUtlVector<CTransform>
+    pub const m_nNumFrames: usize = 0x18; // int32_t
+    pub const m_flAverageLinearVelocity: usize = 0x1C; // float
+    pub const m_flAverageAngularVelocityRadians: usize = 0x20; // float
+    pub const m_totalDelta: usize = 0x30; // CTransform
+}
+
+pub mod CNmSkeleton {
+    pub const m_ID: usize = 0x0; // CGlobalSymbol
+    pub const m_boneIDs: usize = 0x8; // CUtlLeanVector<CGlobalSymbol>
+    pub const m_parentIndices: usize = 0x18; // CUtlVector<int32_t>
+    pub const m_parentSpaceReferencePose: usize = 0x30; // CUtlVector<CTransform>
+    pub const m_modelSpaceReferencePose: usize = 0x48; // CUtlVector<CTransform>
+    pub const m_numBonesToSampleAtLowLOD: usize = 0x60; // int32_t
+    pub const m_boneMasks: usize = 0x68; // CUtlLeanVector<CNmBoneMask>
+}
+
+pub mod CNmSyncTrack {
+    pub const m_syncEvents: usize = 0x0; // CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>
+    pub const m_nStartEventOffset: usize = 0xA8; // int32_t
+}
+
+pub mod CNmSyncTrack_EventMarker_t {
+    pub const m_startTime: usize = 0x0; // NmPercent_t
+    pub const m_ID: usize = 0x8; // CGlobalSymbol
+}
+
+pub mod CNmSyncTrack_Event_t {
+    pub const m_ID: usize = 0x0; // CGlobalSymbol
+    pub const m_startTime: usize = 0x8; // NmPercent_t
+    pub const m_duration: usize = 0xC; // NmPercent_t
+}
+
+pub mod CNmTransitionEvent { // CNmEvent
+    pub const m_rule: usize = 0x10; // NmTransitionRule_t
+    pub const m_ID: usize = 0x18; // CGlobalSymbol
+}
+
 pub mod COrientConstraint { // CBaseConstraint
 }
 
@@ -1433,16 +1511,16 @@ pub mod CParentConstraint { // CBaseConstraint
 }
 
 pub mod CParticleAnimTag { // CAnimTagBase
-    pub const m_hParticleSystem: usize = 0x38; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-    pub const m_particleSystemName: usize = 0x40; // CUtlString
-    pub const m_configName: usize = 0x48; // CUtlString
-    pub const m_bDetachFromOwner: usize = 0x50; // bool
-    pub const m_bStopWhenTagEnds: usize = 0x51; // bool
-    pub const m_bTagEndStopIsInstant: usize = 0x52; // bool
-    pub const m_attachmentName: usize = 0x58; // CUtlString
-    pub const m_attachmentType: usize = 0x60; // ParticleAttachment_t
-    pub const m_attachmentCP1Name: usize = 0x68; // CUtlString
-    pub const m_attachmentCP1Type: usize = 0x70; // ParticleAttachment_t
+    pub const m_hParticleSystem: usize = 0x50; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+    pub const m_particleSystemName: usize = 0x58; // CUtlString
+    pub const m_configName: usize = 0x60; // CUtlString
+    pub const m_bDetachFromOwner: usize = 0x68; // bool
+    pub const m_bStopWhenTagEnds: usize = 0x69; // bool
+    pub const m_bTagEndStopIsInstant: usize = 0x6A; // bool
+    pub const m_attachmentName: usize = 0x70; // CUtlString
+    pub const m_attachmentType: usize = 0x78; // ParticleAttachment_t
+    pub const m_attachmentCP1Name: usize = 0x80; // CUtlString
+    pub const m_attachmentCP1Type: usize = 0x88; // ParticleAttachment_t
 }
 
 pub mod CPathAnimMotorUpdater { // CPathAnimMotorUpdaterBase
@@ -1530,17 +1608,17 @@ pub mod CProductQuantizer {
 }
 
 pub mod CQuaternionAnimParameter { // CConcreteAnimParameter
-    pub const m_defaultValue: usize = 0x60; // Quaternion
-    pub const m_bInterpolate: usize = 0x70; // bool
+    pub const m_defaultValue: usize = 0x80; // Quaternion
+    pub const m_bInterpolate: usize = 0x90; // bool
 }
 
 pub mod CRagdollAnimTag { // CAnimTagBase
-    pub const m_nPoseControl: usize = 0x38; // AnimPoseControl
-    pub const m_flFrequency: usize = 0x3C; // float
-    pub const m_flDampingRatio: usize = 0x40; // float
-    pub const m_flDecayDuration: usize = 0x44; // float
-    pub const m_flDecayBias: usize = 0x48; // float
-    pub const m_bDestroy: usize = 0x4C; // bool
+    pub const m_nPoseControl: usize = 0x50; // AnimPoseControl
+    pub const m_flFrequency: usize = 0x54; // float
+    pub const m_flDampingRatio: usize = 0x58; // float
+    pub const m_flDecayDuration: usize = 0x5C; // float
+    pub const m_flDecayBias: usize = 0x60; // float
+    pub const m_bDestroy: usize = 0x64; // bool
 }
 
 pub mod CRagdollComponentUpdater { // CAnimComponentUpdater
@@ -1551,6 +1629,7 @@ pub mod CRagdollComponentUpdater { // CAnimComponentUpdater
     pub const m_flSpringFrequencyMin: usize = 0x90; // float
     pub const m_flSpringFrequencyMax: usize = 0x94; // float
     pub const m_flMaxStretch: usize = 0x98; // float
+    pub const m_bSolidCollisionAtZeroWeight: usize = 0x9C; // bool
 }
 
 pub mod CRagdollUpdateNode { // CUnaryUpdateNode
@@ -1563,10 +1642,22 @@ pub mod CRenderBufferBinding {
     pub const m_nBindOffsetBytes: usize = 0x10; // uint32_t
 }
 
+pub mod CRenderGroom {
+    pub const m_nSegmentsPerHairStrand: usize = 0x0; // int32_t
+    pub const m_nGuideHairCount: usize = 0x4; // int32_t
+    pub const m_nHairCount: usize = 0x8; // int32_t
+    pub const m_nGroomGroupID: usize = 0xC; // int32_t
+    pub const m_nAttachBoneIdx: usize = 0x10; // int32_t
+    pub const m_hairInfoBufferData: usize = 0x18; // CUtlBinaryBlock
+    pub const m_hairs: usize = 0x30; // CUtlVector<RenderHairStrandInfo_t>
+}
+
 pub mod CRenderMesh {
     pub const m_sceneObjects: usize = 0x10; // CUtlVectorFixedGrowable<CSceneObjectData>
     pub const m_constraints: usize = 0xA0; // CUtlVector<CBaseConstraint*>
     pub const m_skeleton: usize = 0xB8; // CRenderSkeleton
+    pub const m_meshDeformParams: usize = 0x1E0; // DynamicMeshDeformParams_t
+    pub const m_pGroomData: usize = 0x1F0; // CRenderGroom*
 }
 
 pub mod CRenderSkeleton {
@@ -1670,6 +1761,8 @@ pub mod CSeqMultiFetch {
     pub const m_poseKeyArray1: usize = 0x48; // CUtlVector<float>
     pub const m_nLocalCyclePoseParameter: usize = 0x60; // int32_t
     pub const m_bCalculatePoseParameters: usize = 0x64; // bool
+    pub const m_bFixedBlendWeight: usize = 0x65; // bool
+    pub const m_flFixedBlendWeightVals: usize = 0x68; // float[2]
 }
 
 pub mod CSeqMultiFetchFlag {
@@ -1704,14 +1797,14 @@ pub mod CSeqS1SeqDesc {
     pub const m_sName: usize = 0x0; // CBufferString
     pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
     pub const m_fetch: usize = 0x20; // CSeqMultiFetch
-    pub const m_nLocalWeightlist: usize = 0x88; // int32_t
-    pub const m_autoLayerArray: usize = 0x90; // CUtlVector<CSeqAutoLayer>
-    pub const m_IKLockArray: usize = 0xA8; // CUtlVector<CSeqIKLock>
-    pub const m_transition: usize = 0xC0; // CSeqTransition
-    pub const m_SequenceKeys: usize = 0xC8; // KeyValues3
-    pub const m_LegacyKeyValueText: usize = 0xD8; // CBufferString
-    pub const m_activityArray: usize = 0xE8; // CUtlVector<CAnimActivity>
-    pub const m_footMotion: usize = 0x100; // CUtlVector<CFootMotion>
+    pub const m_nLocalWeightlist: usize = 0x90; // int32_t
+    pub const m_autoLayerArray: usize = 0x98; // CUtlVector<CSeqAutoLayer>
+    pub const m_IKLockArray: usize = 0xB0; // CUtlVector<CSeqIKLock>
+    pub const m_transition: usize = 0xC8; // CSeqTransition
+    pub const m_SequenceKeys: usize = 0xD0; // KeyValues3
+    pub const m_LegacyKeyValueText: usize = 0xE0; // CBufferString
+    pub const m_activityArray: usize = 0xF0; // CUtlVector<CAnimActivity>
+    pub const m_footMotion: usize = 0x108; // CUtlVector<CFootMotion>
 }
 
 pub mod CSeqScaleSet {
@@ -1751,7 +1844,7 @@ pub mod CSeqTransition {
 }
 
 pub mod CSequenceFinishedAnimTag { // CAnimTagBase
-    pub const m_sequenceName: usize = 0x38; // CUtlString
+    pub const m_sequenceName: usize = 0x50; // CUtlString
 }
 
 pub mod CSequenceGroupData {
@@ -1795,10 +1888,6 @@ pub mod CSingleFrameUpdateNode { // CLeafUpdateNode
     pub const m_hPoseCacheHandle: usize = 0x70; // CPoseHandle
     pub const m_hSequence: usize = 0x74; // HSequence
     pub const m_flCycle: usize = 0x78; // float
-}
-
-pub mod CSkeletalInputUpdateNode { // CLeafUpdateNode
-    pub const m_fixedOpData: usize = 0x58; // SkeletalInputOpFixedSettings_t
 }
 
 pub mod CSlopeComponentUpdater { // CAnimComponentUpdater
@@ -1913,6 +2002,10 @@ pub mod CSubtractUpdateNode { // CBinaryUpdateNode
     pub const m_bUseModelSpace: usize = 0x92; // bool
 }
 
+pub mod CSymbolAnimParameter { // CConcreteAnimParameter
+    pub const m_defaultValue: usize = 0x78; // CGlobalSymbol
+}
+
 pub mod CTaskStatusAnimTag { // CAnimTagBase
 }
 
@@ -1966,21 +2059,9 @@ pub mod CVPhysXSurfacePropertiesList {
     pub const m_surfacePropertiesList: usize = 0x0; // CUtlVector<CPhysSurfaceProperties*>
 }
 
-pub mod CVRInputComponentUpdater { // CAnimComponentUpdater
-    pub const m_FingerCurl_Thumb: usize = 0x34; // CAnimParamHandle
-    pub const m_FingerCurl_Index: usize = 0x36; // CAnimParamHandle
-    pub const m_FingerCurl_Middle: usize = 0x38; // CAnimParamHandle
-    pub const m_FingerCurl_Ring: usize = 0x3A; // CAnimParamHandle
-    pub const m_FingerCurl_Pinky: usize = 0x3C; // CAnimParamHandle
-    pub const m_FingerSplay_Thumb_Index: usize = 0x3E; // CAnimParamHandle
-    pub const m_FingerSplay_Index_Middle: usize = 0x40; // CAnimParamHandle
-    pub const m_FingerSplay_Middle_Ring: usize = 0x42; // CAnimParamHandle
-    pub const m_FingerSplay_Ring_Pinky: usize = 0x44; // CAnimParamHandle
-}
-
 pub mod CVectorAnimParameter { // CConcreteAnimParameter
-    pub const m_defaultValue: usize = 0x60; // Vector
-    pub const m_bInterpolate: usize = 0x6C; // bool
+    pub const m_defaultValue: usize = 0x78; // Vector
+    pub const m_bInterpolate: usize = 0x84; // bool
 }
 
 pub mod CVectorQuantizer {
@@ -1990,17 +2071,8 @@ pub mod CVectorQuantizer {
 }
 
 pub mod CVirtualAnimParameter { // CAnimParameterBase
-    pub const m_expressionString: usize = 0x50; // CUtlString
-    pub const m_eParamType: usize = 0x58; // AnimParamType_t
-}
-
-pub mod CVrSkeletalInputSettings {
-    pub const m_wristBones: usize = 0x0; // CUtlVector<CWristBone>
-    pub const m_fingers: usize = 0x18; // CUtlVector<CFingerChain>
-    pub const m_name: usize = 0x30; // CUtlString
-    pub const m_outerKnuckle1: usize = 0x38; // CUtlString
-    pub const m_outerKnuckle2: usize = 0x40; // CUtlString
-    pub const m_eHand: usize = 0x48; // AnimVRHand_t
+    pub const m_expressionString: usize = 0x68; // CUtlString
+    pub const m_eParamType: usize = 0x70; // AnimParamType_t
 }
 
 pub mod CWayPointHelperUpdateNode { // CUnaryUpdateNode
@@ -2009,13 +2081,6 @@ pub mod CWayPointHelperUpdateNode { // CUnaryUpdateNode
     pub const m_bOnlyGoals: usize = 0x74; // bool
     pub const m_bPreventOvershoot: usize = 0x75; // bool
     pub const m_bPreventUndershoot: usize = 0x76; // bool
-}
-
-pub mod CWristBone {
-    pub const m_name: usize = 0x0; // CUtlString
-    pub const m_vForwardLS: usize = 0x8; // Vector
-    pub const m_vUpLS: usize = 0x14; // Vector
-    pub const m_vOffset: usize = 0x20; // Vector
 }
 
 pub mod CZeroPoseUpdateNode { // CLeafUpdateNode
@@ -2035,31 +2100,11 @@ pub mod ConfigIndex {
     pub const m_nConfig: usize = 0x2; // uint16_t
 }
 
-pub mod FingerBone_t {
-    pub const m_boneIndex: usize = 0x0; // int32_t
-    pub const m_hingeAxis: usize = 0x4; // Vector
-    pub const m_vCapsulePos1: usize = 0x10; // Vector
-    pub const m_vCapsulePos2: usize = 0x1C; // Vector
-    pub const m_flMinAngle: usize = 0x28; // float
-    pub const m_flMaxAngle: usize = 0x2C; // float
-    pub const m_flRadius: usize = 0x30; // float
-}
-
-pub mod FingerChain_t {
-    pub const m_targets: usize = 0x0; // CUtlVector<FingerSource_t>
-    pub const m_bones: usize = 0x18; // CUtlVector<FingerBone_t>
-    pub const m_vTipOffset: usize = 0x30; // Vector
-    pub const m_vSplayHingeAxis: usize = 0x3C; // Vector
-    pub const m_tipParentBoneIndex: usize = 0x48; // int32_t
-    pub const m_metacarpalBoneIndex: usize = 0x4C; // int32_t
-    pub const m_flSplayMinAngle: usize = 0x50; // float
-    pub const m_flSplayMaxAngle: usize = 0x54; // float
-    pub const m_flFingerScaleRatio: usize = 0x58; // float
-}
-
-pub mod FingerSource_t {
-    pub const m_nFingerIndex: usize = 0x0; // AnimVRFinger_t
-    pub const m_flFingerWeight: usize = 0x4; // float
+pub mod DynamicMeshDeformParams_t {
+    pub const m_flTensionCompressScale: usize = 0x0; // float
+    pub const m_flTensionStretchScale: usize = 0x4; // float
+    pub const m_bRecomputeSmoothNormalsAfterAnimation: usize = 0x8; // bool
+    pub const m_bComputeDynamicMeshTensionAfterAnimation: usize = 0x9; // bool
 }
 
 pub mod FollowAttachmentSettings_t {
@@ -2278,6 +2323,36 @@ pub mod MotionIndex {
     pub const m_nMotion: usize = 0x2; // uint16_t
 }
 
+pub mod NmCompressionSettings_t {
+    pub const m_translationRangeX: usize = 0x0; // NmCompressionSettings_t::QuantizationRange_t
+    pub const m_translationRangeY: usize = 0x8; // NmCompressionSettings_t::QuantizationRange_t
+    pub const m_translationRangeZ: usize = 0x10; // NmCompressionSettings_t::QuantizationRange_t
+    pub const m_scaleRange: usize = 0x18; // NmCompressionSettings_t::QuantizationRange_t
+    pub const m_constantRotation: usize = 0x20; // Quaternion
+    pub const m_bIsRotationStatic: usize = 0x30; // bool
+    pub const m_bIsTranslationStatic: usize = 0x31; // bool
+    pub const m_bIsScaleStatic: usize = 0x32; // bool
+}
+
+pub mod NmCompressionSettings_t_QuantizationRange_t {
+    pub const m_flRangeStart: usize = 0x0; // float
+    pub const m_flRangeLength: usize = 0x4; // float
+}
+
+pub mod NmPercent_t {
+    pub const m_flValue: usize = 0x0; // float
+}
+
+pub mod NmSyncTrackTimeRange_t {
+    pub const m_startTime: usize = 0x0; // NmSyncTrackTime_t
+    pub const m_endTime: usize = 0x8; // NmSyncTrackTime_t
+}
+
+pub mod NmSyncTrackTime_t {
+    pub const m_nEventIdx: usize = 0x0; // int32_t
+    pub const m_percentageThrough: usize = 0x4; // NmPercent_t
+}
+
 pub mod ParamSpanSample_t {
     pub const m_value: usize = 0x0; // CAnimVariant
     pub const m_flCycle: usize = 0x14; // float
@@ -2351,6 +2426,16 @@ pub mod PhysSoftbodyDesc_t {
     pub const m_ParticleBoneName: usize = 0x78; // CUtlVector<CUtlString>
 }
 
+pub mod RenderHairStrandInfo_t {
+    pub const m_nGuideIdx: usize = 0x0; // uint32_t[3]
+    pub const m_nBaseTriIdx: usize = 0xC; // uint32_t
+    pub const m_vGuideBarycentric: usize = 0x10; // Vector2D
+    pub const m_vBaseBarycentric: usize = 0x18; // Vector2D
+    pub const m_vRootOffset_flLengthScale: usize = 0x20; // uint16_t[4]
+    pub const m_nPackedBaseMeshUv: usize = 0x28; // uint32_t
+    pub const m_nPad: usize = 0x2C; // uint32_t
+}
+
 pub mod RenderSkeletonBone_t {
     pub const m_boneName: usize = 0x0; // CUtlString
     pub const m_parentName: usize = 0x8; // CUtlString
@@ -2371,21 +2456,62 @@ pub mod ScriptInfo_t {
     pub const m_eScriptType: usize = 0x50; // AnimScriptType
 }
 
-pub mod SkeletalInputOpFixedSettings_t {
-    pub const m_wristBones: usize = 0x0; // CUtlVector<WristBone_t>
-    pub const m_fingers: usize = 0x18; // CUtlVector<FingerChain_t>
-    pub const m_outerKnuckle1: usize = 0x30; // int32_t
-    pub const m_outerKnuckle2: usize = 0x34; // int32_t
-    pub const m_eHand: usize = 0x38; // AnimVRHand_t
-    pub const m_eMotionRange: usize = 0x3C; // AnimVRHandMotionRange_t
-    pub const m_eTransformSource: usize = 0x40; // AnimVrBoneTransformSource_t
-    pub const m_bEnableIK: usize = 0x44; // bool
-    pub const m_bEnableCollision: usize = 0x45; // bool
+pub mod SkeletonAnimCapture_t {
+    pub const m_nEntIndex: usize = 0x0; // CEntityIndex
+    pub const m_nEntParent: usize = 0x4; // CEntityIndex
+    pub const m_ImportedCollision: usize = 0x8; // CUtlVector<CEntityIndex>
+    pub const m_ModelName: usize = 0x20; // CUtlString
+    pub const m_CaptureName: usize = 0x28; // CUtlString
+    pub const m_ModelBindPose: usize = 0x30; // CUtlVector<SkeletonAnimCapture_t::Bone_t>
+    pub const m_FeModelInitPose: usize = 0x48; // CUtlVector<SkeletonAnimCapture_t::Bone_t>
+    pub const m_nFlexControllers: usize = 0x60; // int32_t
+    pub const m_bPredicted: usize = 0x64; // bool
+    pub const m_Frames: usize = 0xA8; // CUtlVector<SkeletonAnimCapture_t::Frame_t>
+}
+
+pub mod SkeletonAnimCapture_t_Bone_t {
+    pub const m_Name: usize = 0x0; // CUtlString
+    pub const m_BindPose: usize = 0x10; // CTransform
+    pub const m_nParent: usize = 0x30; // int32_t
+}
+
+pub mod SkeletonAnimCapture_t_Camera_t {
+    pub const m_tmCamera: usize = 0x0; // CTransform
+    pub const m_flTime: usize = 0x20; // float
+}
+
+pub mod SkeletonAnimCapture_t_FrameStamp_t {
+    pub const m_flTime: usize = 0x0; // float
+    pub const m_flEntitySimTime: usize = 0x4; // float
+    pub const m_bTeleportTick: usize = 0x8; // bool
+    pub const m_bPredicted: usize = 0x9; // bool
+    pub const m_flCurTime: usize = 0xC; // float
+    pub const m_flRealTime: usize = 0x10; // float
+    pub const m_nFrameCount: usize = 0x14; // int32_t
+    pub const m_nTickCount: usize = 0x18; // int32_t
+}
+
+pub mod SkeletonAnimCapture_t_Frame_t {
+    pub const m_flTime: usize = 0x0; // float
+    pub const m_Stamp: usize = 0x4; // SkeletonAnimCapture_t::FrameStamp_t
+    pub const m_Transform: usize = 0x20; // CTransform
+    pub const m_bTeleport: usize = 0x40; // bool
+    pub const m_CompositeBones: usize = 0x48; // CUtlVector<CTransform>
+    pub const m_SimStateBones: usize = 0x60; // CUtlVector<CTransform>
+    pub const m_FeModelAnims: usize = 0x78; // CUtlVector<CTransform>
+    pub const m_FeModelPos: usize = 0x90; // CUtlVector<VectorAligned>
+    pub const m_FlexControllerWeights: usize = 0xA8; // CUtlVector<float>
 }
 
 pub mod SkeletonBoneBounds_t {
     pub const m_vecCenter: usize = 0x0; // Vector
     pub const m_vecSize: usize = 0xC; // Vector
+}
+
+pub mod SkeletonDemoDb_t {
+    pub const m_AnimCaptures: usize = 0x0; // CUtlVector<SkeletonAnimCapture_t*>
+    pub const m_CameraTrack: usize = 0x18; // CUtlVector<SkeletonAnimCapture_t::Camera_t>
+    pub const m_flRecordingTime: usize = 0x30; // float
 }
 
 pub mod SolveIKChainPoseOpFixedSettings_t {
@@ -2569,9 +2695,4 @@ pub mod VPhysics2ShapeDef_t {
 pub mod WeightList {
     pub const m_name: usize = 0x0; // CUtlString
     pub const m_weights: usize = 0x8; // CUtlVector<float>
-}
-
-pub mod WristBone_t {
-    pub const m_xOffsetTransformMS: usize = 0x0; // CTransform
-    pub const m_boneIndex: usize = 0x20; // int32_t
 }

@@ -18,57 +18,58 @@ CBaseRendererSource2: # CParticleFunctionRenderer
     m_bAnimateInFPS: 3920 # bool
     m_flSelfIllumAmount: 3928 # CParticleCollectionRendererFloatInput
     m_flDiffuseAmount: 4272 # CParticleCollectionRendererFloatInput
-    m_nLightingControlPoint: 4616 # int32_t
-    m_nSelfIllumPerParticle: 4620 # ParticleAttributeIndex_t
-    m_nOutputBlendMode: 4624 # ParticleOutputBlendMode_t
-    m_bGammaCorrectVertexColors: 4628 # bool
-    m_bSaturateColorPreAlphaBlend: 4629 # bool
-    m_flAddSelfAmount: 4632 # CParticleCollectionRendererFloatInput
-    m_flDesaturation: 4976 # CParticleCollectionRendererFloatInput
-    m_flOverbrightFactor: 5320 # CParticleCollectionRendererFloatInput
-    m_nHSVShiftControlPoint: 5664 # int32_t
-    m_nFogType: 5668 # ParticleFogType_t
-    m_flFogAmount: 5672 # CParticleCollectionRendererFloatInput
-    m_bTintByFOW: 6016 # bool
-    m_bTintByGlobalLight: 6017 # bool
-    m_nPerParticleAlphaReference: 6020 # SpriteCardPerParticleScale_t
-    m_nPerParticleAlphaRefWindow: 6024 # SpriteCardPerParticleScale_t
-    m_nAlphaReferenceType: 6028 # ParticleAlphaReferenceType_t
-    m_flAlphaReferenceSoftness: 6032 # CParticleCollectionRendererFloatInput
-    m_flSourceAlphaValueToMapToZero: 6376 # CParticleCollectionRendererFloatInput
-    m_flSourceAlphaValueToMapToOne: 6720 # CParticleCollectionRendererFloatInput
-    m_bRefract: 7064 # bool
-    m_bRefractSolid: 7065 # bool
-    m_flRefractAmount: 7072 # CParticleCollectionRendererFloatInput
-    m_nRefractBlurRadius: 7416 # int32_t
-    m_nRefractBlurType: 7420 # BlurFilterType_t
-    m_bOnlyRenderInEffectsBloomPass: 7424 # bool
-    m_bOnlyRenderInEffectsWaterPass: 7425 # bool
-    m_bUseMixedResolutionRendering: 7426 # bool
-    m_bOnlyRenderInEffecsGameOverlay: 7427 # bool
-    m_stencilTestID: 7428 # char[128]
-    m_bStencilTestExclude: 7556 # bool
-    m_stencilWriteID: 7557 # char[128]
-    m_bWriteStencilOnDepthPass: 7685 # bool
-    m_bWriteStencilOnDepthFail: 7686 # bool
-    m_bReverseZBuffering: 7687 # bool
-    m_bDisableZBuffering: 7688 # bool
-    m_nFeatheringMode: 7692 # ParticleDepthFeatheringMode_t
-    m_flFeatheringMinDist: 7696 # CParticleCollectionRendererFloatInput
-    m_flFeatheringMaxDist: 8040 # CParticleCollectionRendererFloatInput
-    m_flFeatheringFilter: 8384 # CParticleCollectionRendererFloatInput
-    m_flDepthBias: 8728 # float
-    m_nSortMethod: 8732 # ParticleSortingChoiceList_t
-    m_bBlendFramesSeq0: 8736 # bool
-    m_bMaxLuminanceBlendingSequence0: 8737 # bool
+    m_flDiffuseClamp: 4616 # CParticleCollectionRendererFloatInput
+    m_nLightingControlPoint: 4960 # int32_t
+    m_nSelfIllumPerParticle: 4964 # ParticleAttributeIndex_t
+    m_nOutputBlendMode: 4968 # ParticleOutputBlendMode_t
+    m_bGammaCorrectVertexColors: 4972 # bool
+    m_bSaturateColorPreAlphaBlend: 4973 # bool
+    m_flAddSelfAmount: 4976 # CParticleCollectionRendererFloatInput
+    m_flDesaturation: 5320 # CParticleCollectionRendererFloatInput
+    m_flOverbrightFactor: 5664 # CParticleCollectionRendererFloatInput
+    m_nHSVShiftControlPoint: 6008 # int32_t
+    m_nFogType: 6012 # ParticleFogType_t
+    m_flFogAmount: 6016 # CParticleCollectionRendererFloatInput
+    m_bTintByFOW: 6360 # bool
+    m_bTintByGlobalLight: 6361 # bool
+    m_nPerParticleAlphaReference: 6364 # SpriteCardPerParticleScale_t
+    m_nPerParticleAlphaRefWindow: 6368 # SpriteCardPerParticleScale_t
+    m_nAlphaReferenceType: 6372 # ParticleAlphaReferenceType_t
+    m_flAlphaReferenceSoftness: 6376 # CParticleCollectionRendererFloatInput
+    m_flSourceAlphaValueToMapToZero: 6720 # CParticleCollectionRendererFloatInput
+    m_flSourceAlphaValueToMapToOne: 7064 # CParticleCollectionRendererFloatInput
+    m_bRefract: 7408 # bool
+    m_bRefractSolid: 7409 # bool
+    m_flRefractAmount: 7416 # CParticleCollectionRendererFloatInput
+    m_nRefractBlurRadius: 7760 # int32_t
+    m_nRefractBlurType: 7764 # BlurFilterType_t
+    m_bOnlyRenderInEffectsBloomPass: 7768 # bool
+    m_bOnlyRenderInEffectsWaterPass: 7769 # bool
+    m_bUseMixedResolutionRendering: 7770 # bool
+    m_bOnlyRenderInEffecsGameOverlay: 7771 # bool
+    m_stencilTestID: 7772 # char[128]
+    m_bStencilTestExclude: 7900 # bool
+    m_stencilWriteID: 7901 # char[128]
+    m_bWriteStencilOnDepthPass: 8029 # bool
+    m_bWriteStencilOnDepthFail: 8030 # bool
+    m_bReverseZBuffering: 8031 # bool
+    m_bDisableZBuffering: 8032 # bool
+    m_nFeatheringMode: 8036 # ParticleDepthFeatheringMode_t
+    m_flFeatheringMinDist: 8040 # CParticleCollectionRendererFloatInput
+    m_flFeatheringMaxDist: 8384 # CParticleCollectionRendererFloatInput
+    m_flFeatheringFilter: 8728 # CParticleCollectionRendererFloatInput
+    m_flDepthBias: 9072 # CParticleCollectionRendererFloatInput
+    m_nSortMethod: 9416 # ParticleSortingChoiceList_t
+    m_bBlendFramesSeq0: 9420 # bool
+    m_bMaxLuminanceBlendingSequence0: 9421 # bool
 CBaseTrailRenderer: # CBaseRendererSource2
-    m_nOrientationType: 9328 # ParticleOrientationChoiceList_t
-    m_nOrientationControlPoint: 9332 # int32_t
-    m_flMinSize: 9336 # float
-    m_flMaxSize: 9340 # float
-    m_flStartFadeSize: 9344 # CParticleCollectionRendererFloatInput
-    m_flEndFadeSize: 9688 # CParticleCollectionRendererFloatInput
-    m_bClampV: 10032 # bool
+    m_nOrientationType: 10000 # ParticleOrientationChoiceList_t
+    m_nOrientationControlPoint: 10004 # int32_t
+    m_flMinSize: 10008 # float
+    m_flMaxSize: 10012 # float
+    m_flStartFadeSize: 10016 # CParticleCollectionRendererFloatInput
+    m_flEndFadeSize: 10360 # CParticleCollectionRendererFloatInput
+    m_bClampV: 10704 # bool
 CGeneralRandomRotation: # CParticleFunctionInitializer
     m_nFieldOutput: 448 # ParticleAttributeIndex_t
     m_flDegrees: 452 # float
@@ -113,7 +114,6 @@ CNewParticleEffect: # IParticleEffect
     m_nSplitScreenUser: 152 # CSplitScreenSlot
     m_vecAggregationCenter: 156 # Vector
     m_RefCount: 192 # int32_t
-CParticleBindingRealPulse: # CParticleCollectionBindingInstance
 CParticleCollectionBindingInstance: # CBasePulseGraphInstance
 CParticleCollectionFloatInput: # CParticleFloatInput
 CParticleCollectionRendererFloatInput: # CParticleCollectionFloatInput
@@ -428,6 +428,7 @@ C_INIT_CreateOnModel: # CParticleFunctionInitializer
     m_HitboxSetName: 3920 # char[128]
     m_bLocalCoords: 4048 # bool
     m_bUseBones: 4049 # bool
+    m_bUseMesh: 4050 # bool
     m_flShellSize: 4056 # CParticleCollectionFloatInput
 C_INIT_CreateOnModelAtHeight: # CParticleFunctionInitializer
     m_bUseBones: 448 # bool
@@ -594,14 +595,16 @@ C_INIT_InitSkinnedPositionFromCPSnapshot: # CParticleFunctionInitializer
     m_bIgnoreDt: 466 # bool
     m_flMinNormalVelocity: 468 # float
     m_flMaxNormalVelocity: 472 # float
-    m_flIncrement: 476 # float
-    m_nFullLoopIncrement: 480 # int32_t
-    m_nSnapShotStartPoint: 484 # int32_t
-    m_flBoneVelocity: 488 # float
-    m_flBoneVelocityMax: 492 # float
-    m_bCopyColor: 496 # bool
-    m_bCopyAlpha: 497 # bool
-    m_bSetRadius: 498 # bool
+    m_nIndexType: 476 # SnapshotIndexType_t
+    m_flReadIndex: 480 # CPerParticleFloatInput
+    m_flIncrement: 824 # float
+    m_nFullLoopIncrement: 828 # int32_t
+    m_nSnapShotStartPoint: 832 # int32_t
+    m_flBoneVelocity: 836 # float
+    m_flBoneVelocityMax: 840 # float
+    m_bCopyColor: 844 # bool
+    m_bCopyAlpha: 845 # bool
+    m_bSetRadius: 846 # bool
 C_INIT_InitVec: # CParticleFunctionInitializer
     m_InputValue: 448 # CPerParticleVecInput
     m_nOutputField: 2072 # ParticleAttributeIndex_t
@@ -975,6 +978,13 @@ C_INIT_SequenceFromCP: # CParticleFunctionInitializer
     m_vecOffset: 456 # Vector
 C_INIT_SequenceLifeTime: # CParticleFunctionInitializer
     m_flFramerate: 448 # float
+C_INIT_SetAttributeToScalarExpression: # CParticleFunctionInitializer
+    m_nExpression: 448 # ScalarExpressionType_t
+    m_flInput1: 456 # CPerParticleFloatInput
+    m_flInput2: 800 # CPerParticleFloatInput
+    m_flOutputRemap: 1144 # CParticleRemapFloatInput
+    m_nOutputField: 1488 # ParticleAttributeIndex_t
+    m_nSetMethod: 1492 # ParticleSetMethod_t
 C_INIT_SetHitboxToClosest: # CParticleFunctionInitializer
     m_nControlPointNumber: 448 # int32_t
     m_nDesiredHitbox: 452 # int32_t
@@ -1165,6 +1175,9 @@ C_OP_ColorInterpolateRandom: # CParticleFunctionOperator
 C_OP_ConnectParentParticleToNearest: # CParticleFunctionOperator
     m_nFirstControlPoint: 448 # int32_t
     m_nSecondControlPoint: 452 # int32_t
+    m_bUseRadius: 456 # bool
+    m_flRadiusScale: 464 # CParticleCollectionFloatInput
+    m_flParentRadiusScale: 808 # CParticleCollectionFloatInput
 C_OP_ConstrainDistance: # CParticleFunctionConstraint
     m_fMinDistance: 448 # CParticleCollectionFloatInput
     m_fMaxDistance: 792 # CParticleCollectionFloatInput
@@ -1698,10 +1711,12 @@ C_OP_MovementSkinnedPositionFromCPSnapshot: # CParticleFunctionOperator
     m_nRandomSeed: 460 # int32_t
     m_bSetNormal: 464 # bool
     m_bSetRadius: 465 # bool
-    m_flIncrement: 472 # CParticleCollectionFloatInput
-    m_nFullLoopIncrement: 816 # CParticleCollectionFloatInput
-    m_nSnapShotStartPoint: 1160 # CParticleCollectionFloatInput
-    m_flInterpolation: 1504 # CPerParticleFloatInput
+    m_nIndexType: 468 # SnapshotIndexType_t
+    m_flReadIndex: 472 # CPerParticleFloatInput
+    m_flIncrement: 816 # CParticleCollectionFloatInput
+    m_nFullLoopIncrement: 1160 # CParticleCollectionFloatInput
+    m_nSnapShotStartPoint: 1504 # CParticleCollectionFloatInput
+    m_flInterpolation: 1848 # CPerParticleFloatInput
 C_OP_Noise: # CParticleFunctionOperator
     m_nFieldOutput: 448 # ParticleAttributeIndex_t
     m_flOutputMin: 452 # float
@@ -1851,6 +1866,7 @@ C_OP_PlanarConstraint: # CParticleFunctionConstraint
     m_bGlobalNormal: 477 # bool
     m_flRadiusScale: 480 # CPerParticleFloatInput
     m_flMaximumDistanceToCP: 824 # CParticleCollectionFloatInput
+    m_bUseOldCode: 1168 # bool
 C_OP_PlaneCull: # CParticleFunctionOperator
     m_nPlaneControlPoint: 448 # int32_t
     m_vecPlaneDirection: 452 # Vector
@@ -2352,38 +2368,42 @@ C_OP_RenderModels: # CParticleFunctionRenderer
     m_bLocalScale: 5440 # bool
     m_nSizeCullBloat: 5444 # int32_t
     m_bAnimated: 5448 # bool
-    m_flAnimationRate: 5452 # float
-    m_bScaleAnimationRate: 5456 # bool
-    m_bForceLoopingAnimation: 5457 # bool
-    m_bResetAnimOnStop: 5458 # bool
-    m_bManualAnimFrame: 5459 # bool
-    m_nAnimationScaleField: 5460 # ParticleAttributeIndex_t
-    m_nAnimationField: 5464 # ParticleAttributeIndex_t
-    m_nManualFrameField: 5468 # ParticleAttributeIndex_t
-    m_ActivityName: 5472 # char[256]
-    m_SequenceName: 5728 # char[256]
-    m_bEnableClothSimulation: 5984 # bool
-    m_hOverrideMaterial: 5992 # CStrongHandle<InfoForResourceTypeIMaterial2>
-    m_bOverrideTranslucentMaterials: 6000 # bool
-    m_nSkin: 6008 # CPerParticleFloatInput
-    m_MaterialVars: 6352 # CUtlVector<MaterialVariable_t>
-    m_modelInput: 6376 # CParticleModelInput
-    m_nLOD: 6472 # int32_t
-    m_EconSlotName: 6476 # char[256]
-    m_bOriginalModel: 6732 # bool
-    m_bSuppressTint: 6733 # bool
-    m_bUseRawMeshGroup: 6734 # bool
-    m_bDisableShadows: 6735 # bool
-    m_bAcceptsDecals: 6736 # bool
-    m_bForceDrawInterlevedWithSiblings: 6737 # bool
-    m_bDoNotDrawInParticlePass: 6738 # bool
-    m_szRenderAttribute: 6739 # char[260]
-    m_flRadiusScale: 7000 # CParticleCollectionFloatInput
-    m_flAlphaScale: 7344 # CParticleCollectionFloatInput
-    m_flRollScale: 7688 # CParticleCollectionFloatInput
-    m_nAlpha2Field: 8032 # ParticleAttributeIndex_t
-    m_vecColorScale: 8040 # CParticleCollectionVecInput
-    m_nColorBlendType: 9664 # ParticleColorBlendType_t
+    m_flAnimationRate: 5456 # CPerParticleFloatInput
+    m_bScaleAnimationRate: 5800 # bool
+    m_bForceLoopingAnimation: 5801 # bool
+    m_bResetAnimOnStop: 5802 # bool
+    m_bManualAnimFrame: 5803 # bool
+    m_nAnimationScaleField: 5804 # ParticleAttributeIndex_t
+    m_nAnimationField: 5808 # ParticleAttributeIndex_t
+    m_nManualFrameField: 5812 # ParticleAttributeIndex_t
+    m_ActivityName: 5816 # char[256]
+    m_SequenceName: 6072 # char[256]
+    m_bEnableClothSimulation: 6328 # bool
+    m_hOverrideMaterial: 6336 # CStrongHandle<InfoForResourceTypeIMaterial2>
+    m_bOverrideTranslucentMaterials: 6344 # bool
+    m_nSkin: 6352 # CPerParticleFloatInput
+    m_MaterialVars: 6696 # CUtlVector<MaterialVariable_t>
+    m_flManualModelSelection: 6720 # CPerParticleFloatInput
+    m_modelInput: 7064 # CParticleModelInput
+    m_nLOD: 7160 # int32_t
+    m_EconSlotName: 7164 # char[256]
+    m_bOriginalModel: 7420 # bool
+    m_bSuppressTint: 7421 # bool
+    m_bUseRawMeshGroup: 7422 # bool
+    m_bDisableShadows: 7423 # bool
+    m_bDisableDepthPrepass: 7424 # bool
+    m_bAcceptsDecals: 7425 # bool
+    m_bForceDrawInterlevedWithSiblings: 7426 # bool
+    m_bDoNotDrawInParticlePass: 7427 # bool
+    m_bUseFastModelCollectionRenderPath: 7428 # bool
+    m_bAllowApproximateTransforms: 7429 # bool
+    m_szRenderAttribute: 7430 # char[260]
+    m_flRadiusScale: 7696 # CParticleCollectionFloatInput
+    m_flAlphaScale: 8040 # CParticleCollectionFloatInput
+    m_flRollScale: 8384 # CParticleCollectionFloatInput
+    m_nAlpha2Field: 8728 # ParticleAttributeIndex_t
+    m_vecColorScale: 8736 # CParticleCollectionVecInput
+    m_nColorBlendType: 10360 # ParticleColorBlendType_t
 C_OP_RenderOmni2Light: # CParticleFunctionRenderer
     m_nLightType: 512 # ParticleOmni2LightTypeChoiceList_t
     m_vColorBlend: 520 # CParticleCollectionVecInput
@@ -2413,41 +2433,42 @@ C_OP_RenderProjected: # CParticleFunctionRenderer
     m_bEnableProjectedDepthControls: 516 # bool
     m_flMinProjectionDepth: 520 # float
     m_flMaxProjectionDepth: 524 # float
-    m_hProjectedMaterial: 528 # CStrongHandle<InfoForResourceTypeIMaterial2>
-    m_flAnimationTimeScale: 536 # float
-    m_bOrientToNormal: 540 # bool
-    m_MaterialVars: 544 # CUtlVector<MaterialVariable_t>
+    m_vecProjectedMaterials: 528 # CUtlVector<RenderProjectedMaterial_t>
+    m_flMaterialSelection: 552 # CPerParticleFloatInput
+    m_flAnimationTimeScale: 896 # float
+    m_bOrientToNormal: 900 # bool
+    m_MaterialVars: 904 # CUtlVector<MaterialVariable_t>
 C_OP_RenderRopes: # CBaseRendererSource2
-    m_bEnableFadingAndClamping: 9328 # bool
-    m_flMinSize: 9332 # float
-    m_flMaxSize: 9336 # float
-    m_flStartFadeSize: 9340 # float
-    m_flEndFadeSize: 9344 # float
-    m_flStartFadeDot: 9348 # float
-    m_flEndFadeDot: 9352 # float
-    m_flRadiusTaper: 9356 # float
-    m_nMinTesselation: 9360 # int32_t
-    m_nMaxTesselation: 9364 # int32_t
-    m_flTessScale: 9368 # float
-    m_flTextureVWorldSize: 9376 # CParticleCollectionRendererFloatInput
-    m_flTextureVScrollRate: 9720 # CParticleCollectionRendererFloatInput
-    m_flTextureVOffset: 10064 # CParticleCollectionRendererFloatInput
-    m_nTextureVParamsCP: 10408 # int32_t
-    m_bClampV: 10412 # bool
-    m_nScaleCP1: 10416 # int32_t
-    m_nScaleCP2: 10420 # int32_t
-    m_flScaleVSizeByControlPointDistance: 10424 # float
-    m_flScaleVScrollByControlPointDistance: 10428 # float
-    m_flScaleVOffsetByControlPointDistance: 10432 # float
-    m_bUseScalarForTextureCoordinate: 10437 # bool
-    m_nScalarFieldForTextureCoordinate: 10440 # ParticleAttributeIndex_t
-    m_flScalarAttributeTextureCoordScale: 10444 # float
-    m_bReverseOrder: 10448 # bool
-    m_bClosedLoop: 10449 # bool
-    m_nOrientationType: 10452 # ParticleOrientationChoiceList_t
-    m_nVectorFieldForOrientation: 10456 # ParticleAttributeIndex_t
-    m_bDrawAsOpaque: 10460 # bool
-    m_bGenerateNormals: 10461 # bool
+    m_bEnableFadingAndClamping: 10000 # bool
+    m_flMinSize: 10004 # float
+    m_flMaxSize: 10008 # float
+    m_flStartFadeSize: 10012 # float
+    m_flEndFadeSize: 10016 # float
+    m_flStartFadeDot: 10020 # float
+    m_flEndFadeDot: 10024 # float
+    m_flRadiusTaper: 10028 # float
+    m_nMinTesselation: 10032 # int32_t
+    m_nMaxTesselation: 10036 # int32_t
+    m_flTessScale: 10040 # float
+    m_flTextureVWorldSize: 10048 # CParticleCollectionRendererFloatInput
+    m_flTextureVScrollRate: 10392 # CParticleCollectionRendererFloatInput
+    m_flTextureVOffset: 10736 # CParticleCollectionRendererFloatInput
+    m_nTextureVParamsCP: 11080 # int32_t
+    m_bClampV: 11084 # bool
+    m_nScaleCP1: 11088 # int32_t
+    m_nScaleCP2: 11092 # int32_t
+    m_flScaleVSizeByControlPointDistance: 11096 # float
+    m_flScaleVScrollByControlPointDistance: 11100 # float
+    m_flScaleVOffsetByControlPointDistance: 11104 # float
+    m_bUseScalarForTextureCoordinate: 11109 # bool
+    m_nScalarFieldForTextureCoordinate: 11112 # ParticleAttributeIndex_t
+    m_flScalarAttributeTextureCoordScale: 11116 # float
+    m_bReverseOrder: 11120 # bool
+    m_bClosedLoop: 11121 # bool
+    m_nOrientationType: 11124 # ParticleOrientationChoiceList_t
+    m_nVectorFieldForOrientation: 11128 # ParticleAttributeIndex_t
+    m_bDrawAsOpaque: 11132 # bool
+    m_bGenerateNormals: 11133 # bool
 C_OP_RenderScreenShake: # CParticleFunctionRenderer
     m_flDurationScale: 512 # float
     m_flRadiusScale: 516 # float
@@ -2461,6 +2482,12 @@ C_OP_RenderScreenShake: # CParticleFunctionRenderer
 C_OP_RenderScreenVelocityRotate: # CParticleFunctionRenderer
     m_flRotateRateDegrees: 512 # float
     m_flForwardDegrees: 516 # float
+C_OP_RenderSimpleModelCollection: # CParticleFunctionRenderer
+    m_bCenterOffset: 512 # bool
+    m_modelInput: 520 # CParticleModelInput
+    m_nLOD: 616 # int32_t
+    m_bDisableShadows: 620 # bool
+    m_bAcceptsDecals: 621 # bool
 C_OP_RenderSound: # CParticleFunctionRenderer
     m_flDurationScale: 512 # float
     m_flSndLvlScale: 516 # float
@@ -2475,33 +2502,33 @@ C_OP_RenderSound: # CParticleFunctionRenderer
     m_pszSoundName: 552 # char[256]
     m_bSuppressStopSoundEvent: 808 # bool
 C_OP_RenderSprites: # CBaseRendererSource2
-    m_nSequenceOverride: 9328 # CParticleCollectionRendererFloatInput
-    m_nOrientationType: 9672 # ParticleOrientationChoiceList_t
-    m_nOrientationControlPoint: 9676 # int32_t
-    m_bUseYawWithNormalAligned: 9680 # bool
-    m_flMinSize: 9684 # float
-    m_flMaxSize: 9688 # float
-    m_flAlphaAdjustWithSizeAdjust: 9692 # float
-    m_flStartFadeSize: 9696 # CParticleCollectionRendererFloatInput
-    m_flEndFadeSize: 10040 # CParticleCollectionRendererFloatInput
-    m_flStartFadeDot: 10384 # float
-    m_flEndFadeDot: 10388 # float
-    m_bDistanceAlpha: 10392 # bool
-    m_bSoftEdges: 10393 # bool
-    m_flEdgeSoftnessStart: 10396 # float
-    m_flEdgeSoftnessEnd: 10400 # float
-    m_bOutline: 10404 # bool
-    m_OutlineColor: 10405 # Color
-    m_nOutlineAlpha: 10412 # int32_t
-    m_flOutlineStart0: 10416 # float
-    m_flOutlineStart1: 10420 # float
-    m_flOutlineEnd0: 10424 # float
-    m_flOutlineEnd1: 10428 # float
-    m_nLightingMode: 10432 # ParticleLightingQuality_t
-    m_flLightingTessellation: 10440 # CParticleCollectionRendererFloatInput
-    m_flLightingDirectionality: 10784 # CParticleCollectionRendererFloatInput
-    m_bParticleShadows: 11128 # bool
-    m_flShadowDensity: 11132 # float
+    m_nSequenceOverride: 10000 # CParticleCollectionRendererFloatInput
+    m_nOrientationType: 10344 # ParticleOrientationChoiceList_t
+    m_nOrientationControlPoint: 10348 # int32_t
+    m_bUseYawWithNormalAligned: 10352 # bool
+    m_flMinSize: 10360 # CParticleCollectionRendererFloatInput
+    m_flMaxSize: 10704 # CParticleCollectionRendererFloatInput
+    m_flAlphaAdjustWithSizeAdjust: 11048 # CParticleCollectionRendererFloatInput
+    m_flStartFadeSize: 11392 # CParticleCollectionRendererFloatInput
+    m_flEndFadeSize: 11736 # CParticleCollectionRendererFloatInput
+    m_flStartFadeDot: 12080 # float
+    m_flEndFadeDot: 12084 # float
+    m_bDistanceAlpha: 12088 # bool
+    m_bSoftEdges: 12089 # bool
+    m_flEdgeSoftnessStart: 12092 # float
+    m_flEdgeSoftnessEnd: 12096 # float
+    m_bOutline: 12100 # bool
+    m_OutlineColor: 12101 # Color
+    m_nOutlineAlpha: 12108 # int32_t
+    m_flOutlineStart0: 12112 # float
+    m_flOutlineStart1: 12116 # float
+    m_flOutlineEnd0: 12120 # float
+    m_flOutlineEnd1: 12124 # float
+    m_nLightingMode: 12128 # ParticleLightingQuality_t
+    m_flLightingTessellation: 12136 # CParticleCollectionRendererFloatInput
+    m_flLightingDirectionality: 12480 # CParticleCollectionRendererFloatInput
+    m_bParticleShadows: 12824 # bool
+    m_flShadowDensity: 12828 # float
 C_OP_RenderStandardLight: # CParticleFunctionRenderer
     m_nLightType: 512 # ParticleLightTypeChoiceList_t
     m_vecColorScale: 520 # CParticleCollectionVecInput
@@ -2556,26 +2583,26 @@ C_OP_RenderTonemapController: # CParticleFunctionRenderer
     m_nTonemapLevelField: 520 # ParticleAttributeIndex_t
     m_nTonemapWeightField: 524 # ParticleAttributeIndex_t
 C_OP_RenderTrails: # CBaseTrailRenderer
-    m_bEnableFadingAndClamping: 10048 # bool
-    m_flStartFadeDot: 10052 # float
-    m_flEndFadeDot: 10056 # float
-    m_nPrevPntSource: 10060 # ParticleAttributeIndex_t
-    m_flMaxLength: 10064 # float
-    m_flMinLength: 10068 # float
-    m_bIgnoreDT: 10072 # bool
-    m_flConstrainRadiusToLengthRatio: 10076 # float
-    m_flLengthScale: 10080 # float
-    m_flLengthFadeInTime: 10084 # float
-    m_flRadiusHeadTaper: 10088 # CPerParticleFloatInput
-    m_vecHeadColorScale: 10432 # CParticleCollectionVecInput
-    m_flHeadAlphaScale: 12056 # CPerParticleFloatInput
-    m_flRadiusTaper: 12400 # CPerParticleFloatInput
-    m_vecTailColorScale: 12744 # CParticleCollectionVecInput
-    m_flTailAlphaScale: 14368 # CPerParticleFloatInput
-    m_nHorizCropField: 14712 # ParticleAttributeIndex_t
-    m_nVertCropField: 14716 # ParticleAttributeIndex_t
-    m_flForwardShift: 14720 # float
-    m_bFlipUVBasedOnPitchYaw: 14724 # bool
+    m_bEnableFadingAndClamping: 10720 # bool
+    m_flStartFadeDot: 10724 # float
+    m_flEndFadeDot: 10728 # float
+    m_nPrevPntSource: 10732 # ParticleAttributeIndex_t
+    m_flMaxLength: 10736 # float
+    m_flMinLength: 10740 # float
+    m_bIgnoreDT: 10744 # bool
+    m_flConstrainRadiusToLengthRatio: 10748 # float
+    m_flLengthScale: 10752 # float
+    m_flLengthFadeInTime: 10756 # float
+    m_flRadiusHeadTaper: 10760 # CPerParticleFloatInput
+    m_vecHeadColorScale: 11104 # CParticleCollectionVecInput
+    m_flHeadAlphaScale: 12728 # CPerParticleFloatInput
+    m_flRadiusTaper: 13072 # CPerParticleFloatInput
+    m_vecTailColorScale: 13416 # CParticleCollectionVecInput
+    m_flTailAlphaScale: 15040 # CPerParticleFloatInput
+    m_nHorizCropField: 15384 # ParticleAttributeIndex_t
+    m_nVertCropField: 15388 # ParticleAttributeIndex_t
+    m_flForwardShift: 15392 # float
+    m_bFlipUVBasedOnPitchYaw: 15396 # bool
 C_OP_RenderTreeShake: # CParticleFunctionRenderer
     m_flPeakStrength: 512 # float
     m_nPeakStrengthFieldOverride: 516 # ParticleAttributeIndex_t
@@ -2656,8 +2683,9 @@ C_OP_SetAttributeToScalarExpression: # CParticleFunctionOperator
     m_nExpression: 448 # ScalarExpressionType_t
     m_flInput1: 456 # CPerParticleFloatInput
     m_flInput2: 800 # CPerParticleFloatInput
-    m_nOutputField: 1144 # ParticleAttributeIndex_t
-    m_nSetMethod: 1148 # ParticleSetMethod_t
+    m_flOutputRemap: 1144 # CParticleRemapFloatInput
+    m_nOutputField: 1488 # ParticleAttributeIndex_t
+    m_nSetMethod: 1492 # ParticleSetMethod_t
 C_OP_SetCPOrientationToDirection: # CParticleFunctionOperator
     m_nInputControlPoint: 448 # int32_t
     m_nOutputControlPoint: 452 # int32_t
@@ -2845,6 +2873,7 @@ C_OP_SetFromCPSnapshot: # CParticleFunctionOperator
     m_nSnapShotIncrement: 816 # CParticleCollectionFloatInput
     m_flInterpolation: 1160 # CPerParticleFloatInput
     m_bSubSample: 1504 # bool
+    m_bPrev: 1505 # bool
 C_OP_SetGravityToCP: # CParticleFunctionPreEmission
     m_nCPInput: 464 # int32_t
     m_nCPOutput: 468 # int32_t
@@ -3117,6 +3146,8 @@ PointDefinition_t:
     m_nControlPoint: 0 # int32_t
     m_bLocalCoords: 4 # bool
     m_vOffset: 8 # Vector
+RenderProjectedMaterial_t:
+    m_hMaterial: 0 # CStrongHandle<InfoForResourceTypeIMaterial2>
 SequenceWeightedList_t:
     m_nSequence: 0 # int32_t
     m_flRelativeWeight: 4 # float

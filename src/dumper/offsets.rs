@@ -272,7 +272,7 @@ mod tests {
             }
         };
 
-        // Sleep for a second so we're able to test.
+        // Sleep for a second, so we're able to test.
         sleep(Duration::from_secs(1));
 
         for button in &FORCE_BUTTONS {
@@ -374,7 +374,7 @@ mod tests {
             unsafe { _bittest(&key_map_element, key_code & 0x1F) != 0 }
         };
 
-        // Sleep for a second so we're able to test.
+        // Sleep for a second, so we're able to test.
         sleep(Duration::from_secs(1));
 
         // See https://www.unknowncheats.me/forum/3855779-post889.html for button codes.

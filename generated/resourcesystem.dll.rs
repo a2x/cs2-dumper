@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 23 Jan 2024 06:17:17 +0000
+ * Wed, 7 Feb 2024 04:10:48 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -85,6 +85,9 @@ pub mod InfoForResourceTypeCDotaItemDefinitionResource {
 pub mod InfoForResourceTypeCEntityLump {
 }
 
+pub mod InfoForResourceTypeCGcExportableExternalData {
+}
+
 pub mod InfoForResourceTypeCJavaScriptResource {
 }
 
@@ -95,6 +98,12 @@ pub mod InfoForResourceTypeCMorphSetData {
 }
 
 pub mod InfoForResourceTypeCNmClip {
+}
+
+pub mod InfoForResourceTypeCNmGraph {
+}
+
+pub mod InfoForResourceTypeCNmGraphDataSet {
 }
 
 pub mod InfoForResourceTypeCNmSkeleton {
@@ -148,6 +157,9 @@ pub mod InfoForResourceTypeCVSoundEventScriptList {
 pub mod InfoForResourceTypeCVSoundStackScriptList {
 }
 
+pub mod InfoForResourceTypeCVoiceContainerBase {
+}
+
 pub mod InfoForResourceTypeCVoxelVisibility {
 }
 
@@ -179,9 +191,6 @@ pub mod InfoForResourceTypeProceduralTestResource_t {
 }
 
 pub mod InfoForResourceTypeTestResource_t {
-}
-
-pub mod InfoForResourceTypeVSound_t {
 }
 
 pub mod InfoForResourceTypeWorld_t {
