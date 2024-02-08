@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Wed, 7 Feb 2024 04:10:48 +0000
+Thu, 8 Feb 2024 02:46:17 +0000
 '''
 
 class MaterialParamBuffer_t: # MaterialParam_t

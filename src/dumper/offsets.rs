@@ -112,19 +112,19 @@ pub fn dump_offsets(
         };
 
         if name == "dwBuildNumber" {
-            let build_number: u32 = process.read_memory(module.base() + value)?;
+            let build_number = process.read_memory::<u32>(module.base() + value)?;
+
             debug!("Game build number: <bright-yellow>{}</>", build_number);
 
-            let container = entries
-                .entry(String::from("game_info"))
-                .or_default();
+            let container = entries.entry("game_info".to_string()).or_default();
 
-            container.comment = Some(String::from("Some additional information about the game at dump time"));
+            container.comment =
+                Some("Some additional information about the game at dump time".to_string());
 
             container.data.push(Entry {
-                name: String::from("buildNumber"),
+                name: "buildNumber".to_string(),
                 value: build_number as usize,
-                comment: Some(String::from("Game build number")),
+                comment: Some("Game build number".to_string()),
                 indent: Some(indent),
             });
         }

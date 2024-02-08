@@ -3,47 +3,47 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 470656
     AnimationSystem_001: 449024
 client_dll: # client.dll
-    LegacyGameUI001: 9082784
-    Source2ClientUI001: 9013760
-    Source2ClientPrediction001: 8044816
-    ClientToolsInfo_001: 7539232
-    Source2Client002: 7539264
-    GameClientExports001: 7539248
-    EmptyWorldService001_Client: 4731952
-    Source2ClientConfig001: 4646512
+    LegacyGameUI001: 9086336
+    Source2ClientUI001: 9017312
+    Source2ClientPrediction001: 8046352
+    ClientToolsInfo_001: 7540768
+    Source2Client002: 7540800
+    GameClientExports001: 7540784
+    EmptyWorldService001_Client: 4733744
+    Source2ClientConfig001: 4646736
 engine2_dll: # engine2.dll
-    SimpleEngineLoopService_001: 2053664
-    ClientServerEngineLoopService_001: 2004224
-    KeyValueCache001: 1989728
-    HostStateMgr001: 1979456
-    GameEventSystemServerV001: 1960432
-    GameEventSystemClientV001: 1960416
-    EngineServiceMgr001: 1942336
-    VProfService_001: 1866016
-    ToolService_001: 1861024
-    StatsService_001: 1841488
-    SplitScreenService_001: 1830000
-    SoundService_001: 1803184
-    ScreenshotService001: 1785264
-    RenderService_001: 1774576
-    NetworkService_001: 1773312
-    NetworkServerService_001: 1752288
-    NetworkP2PService_001: 1734512
-    NetworkClientService_001: 1706544
-    MapListService_001: 1677424
-    InputService_001: 1601920
-    GameUIService_001: 1578624
-    GameResourceServiceServerV001: 1567968
-    GameResourceServiceClientV001: 1567952
-    BugService001: 1538832
-    BenchmarkService001: 1532592
-    VENGINE_GAMEUIFUNCS_VERSION005: 1188080
-    EngineGameUI001: 1184896
-    INETSUPPORT_001: 984272
-    Source2EngineToServerStringTable001: 692496
-    Source2EngineToServer001: 597728
-    Source2EngineToClientStringTable001: 567568
-    Source2EngineToClient001: 399408
+    SimpleEngineLoopService_001: 2053920
+    ClientServerEngineLoopService_001: 2004480
+    KeyValueCache001: 1989984
+    HostStateMgr001: 1979712
+    GameEventSystemServerV001: 1960688
+    GameEventSystemClientV001: 1960672
+    EngineServiceMgr001: 1942592
+    VProfService_001: 1866272
+    ToolService_001: 1861280
+    StatsService_001: 1841744
+    SplitScreenService_001: 1830256
+    SoundService_001: 1803440
+    ScreenshotService001: 1785520
+    RenderService_001: 1774832
+    NetworkService_001: 1773568
+    NetworkServerService_001: 1752544
+    NetworkP2PService_001: 1734768
+    NetworkClientService_001: 1706800
+    MapListService_001: 1677680
+    InputService_001: 1602000
+    GameUIService_001: 1578704
+    GameResourceServiceServerV001: 1568048
+    GameResourceServiceClientV001: 1568032
+    BugService001: 1538912
+    BenchmarkService001: 1532672
+    VENGINE_GAMEUIFUNCS_VERSION005: 1188160
+    EngineGameUI001: 1184976
+    INETSUPPORT_001: 984352
+    Source2EngineToServerStringTable001: 692576
+    Source2EngineToServer001: 597808
+    Source2EngineToClientStringTable001: 567648
+    Source2EngineToClient001: 399488
 filesystem_stdio_dll: # filesystem_stdio.dll
     VAsyncFileSystem2_001: 424288
     VFileSystem017: 424272
@@ -92,9 +92,9 @@ particles_dll: # particles.dll
 pulse_system_dll: # pulse_system.dll
     IPulseSystem_001: 37824
 rendersystemdx11_dll: # rendersystemdx11.dll
-    RenderUtils_001: 341632
-    VRenderDeviceMgrBackdoor001: 306544
-    RenderDeviceMgr001: 306528
+    RenderUtils_001: 342336
+    VRenderDeviceMgrBackdoor001: 307248
+    RenderDeviceMgr001: 307232
 resourcesystem_dll: # resourcesystem.dll
     ResourceSystem013: 67872
 scenefilecache_dll: # scenefilecache.dll
@@ -107,13 +107,13 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43600
 server_dll: # server.dll
-    NavGameTest001: 10752288
-    ServerToolsInfo_001: 8581968
-    Source2GameClients001: 8581984
-    Source2GameEntities001: 8582000
-    Source2Server001: 8582016
-    EmptyWorldService001_Server: 5716192
-    Source2ServerConfig001: 5657328
+    NavGameTest001: 10752752
+    ServerToolsInfo_001: 8583728
+    Source2GameClients001: 8583744
+    Source2GameEntities001: 8583760
+    Source2Server001: 8583776
+    EmptyWorldService001_Server: 5718112
+    Source2ServerConfig001: 5657552
     EntitySubclassUtilsV001: 2854704
     customnavsystem001: 2317808
     Source2GameDirector001: 1220528
