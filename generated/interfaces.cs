@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 9 Feb 2024 00:34:46 +0000
+ * Fri, 9 Feb 2024 02:38:11 +0000
  */
 
 public static class animationsystem_dll { // animationsystem.dll
@@ -157,11 +157,11 @@ public static class schemasystem_dll { // schemasystem.dll
 }
 
 public static class server_dll { // server.dll
-    public const nint NavGameTest001 = 0xA418B0;
-    public const nint ServerToolsInfo_001 = 0x82FFB0;
-    public const nint Source2GameClients001 = 0x82FFC0;
-    public const nint Source2GameEntities001 = 0x82FFD0;
-    public const nint Source2Server001 = 0x82FFE0;
+    public const nint NavGameTest001 = 0xA418E0;
+    public const nint ServerToolsInfo_001 = 0x82FFA0;
+    public const nint Source2GameClients001 = 0x82FFB0;
+    public const nint Source2GameEntities001 = 0x82FFC0;
+    public const nint Source2Server001 = 0x82FFD0;
     public const nint EmptyWorldService001_Server = 0x5745B0;
     public const nint Source2ServerConfig001 = 0x565920;
     public const nint EntitySubclassUtilsV001 = 0x2B8F50;

@@ -461,15 +461,15 @@
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10754224,
+        "value": 10754272,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8585136,
+        "value": 8585120,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8585152,
+        "value": 8585136,
         "comment": null
       },
       "Source2GameDirector001": {
@@ -477,11 +477,11 @@
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8585168,
+        "value": 8585152,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8585184,
+        "value": 8585168,
         "comment": null
       },
       "Source2ServerConfig001": {

@@ -107,11 +107,11 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43600
 server_dll: # server.dll
-    NavGameTest001: 10754224
-    ServerToolsInfo_001: 8585136
-    Source2GameClients001: 8585152
-    Source2GameEntities001: 8585168
-    Source2Server001: 8585184
+    NavGameTest001: 10754272
+    ServerToolsInfo_001: 8585120
+    Source2GameClients001: 8585136
+    Source2GameEntities001: 8585152
+    Source2Server001: 8585168
     EmptyWorldService001_Server: 5719472
     Source2ServerConfig001: 5658912
     EntitySubclassUtilsV001: 2854736

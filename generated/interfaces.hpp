@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 9 Feb 2024 00:34:46 +0000
+ * Fri, 9 Feb 2024 02:38:11 +0000
  */
 
 #pragma once
@@ -161,11 +161,11 @@ namespace schemasystem_dll { // schemasystem.dll
 }
 
 namespace server_dll { // server.dll
-    constexpr std::ptrdiff_t NavGameTest001 = 0xA418B0;
-    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x82FFB0;
-    constexpr std::ptrdiff_t Source2GameClients001 = 0x82FFC0;
-    constexpr std::ptrdiff_t Source2GameEntities001 = 0x82FFD0;
-    constexpr std::ptrdiff_t Source2Server001 = 0x82FFE0;
+    constexpr std::ptrdiff_t NavGameTest001 = 0xA418E0;
+    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x82FFA0;
+    constexpr std::ptrdiff_t Source2GameClients001 = 0x82FFB0;
+    constexpr std::ptrdiff_t Source2GameEntities001 = 0x82FFC0;
+    constexpr std::ptrdiff_t Source2Server001 = 0x82FFD0;
     constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x5745B0;
     constexpr std::ptrdiff_t Source2ServerConfig001 = 0x565920;
     constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x2B8F50;

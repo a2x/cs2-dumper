@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 9 Feb 2024 00:34:46 +0000
+ * Fri, 9 Feb 2024 02:38:11 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -159,11 +159,11 @@ pub mod schemasystem_dll { // schemasystem.dll
 }
 
 pub mod server_dll { // server.dll
-    pub const NavGameTest001: usize = 0xA418B0;
-    pub const ServerToolsInfo_001: usize = 0x82FFB0;
-    pub const Source2GameClients001: usize = 0x82FFC0;
-    pub const Source2GameEntities001: usize = 0x82FFD0;
-    pub const Source2Server001: usize = 0x82FFE0;
+    pub const NavGameTest001: usize = 0xA418E0;
+    pub const ServerToolsInfo_001: usize = 0x82FFA0;
+    pub const Source2GameClients001: usize = 0x82FFB0;
+    pub const Source2GameEntities001: usize = 0x82FFC0;
+    pub const Source2Server001: usize = 0x82FFD0;
     pub const EmptyWorldService001_Server: usize = 0x5745B0;
     pub const Source2ServerConfig001: usize = 0x565920;
     pub const EntitySubclassUtilsV001: usize = 0x2B8F50;
