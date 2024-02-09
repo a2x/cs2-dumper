@@ -1,33 +1,33 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 8 Feb 2024 02:46:19 +0000
+Fri, 9 Feb 2024 00:34:46 +0000
 '''
 
 class client_dll: # client.dll
-    dwEntityList = 0x18B0FB8
-    dwForceAttack = 0x171F150
-    dwForceAttack2 = 0x171F1E0
-    dwForceBackward = 0x171F420
-    dwForceCrouch = 0x171F6F0
-    dwForceForward = 0x171F390
-    dwForceJump = 0x171F660
-    dwForceLeft = 0x171F4B0
-    dwForceRight = 0x171F540
-    dwGameEntitySystem = 0x19CC7C0
+    dwEntityList = 0x18B0FC8
+    dwForceAttack = 0x171F160
+    dwForceAttack2 = 0x171F1F0
+    dwForceBackward = 0x171F430
+    dwForceCrouch = 0x171F700
+    dwForceForward = 0x171F3A0
+    dwForceJump = 0x171F670
+    dwForceLeft = 0x171F4C0
+    dwForceRight = 0x171F550
+    dwGameEntitySystem = 0x19CC7D0
     dwGameEntitySystem_getHighestEntityIndex = 0x1510
-    dwGameRules = 0x190DF90
-    dwGlobalVars = 0x1719E30
-    dwGlowManager = 0x190E3A8
-    dwInterfaceLinkList = 0x19FD7E8
-    dwLocalPlayerController = 0x1900918
-    dwLocalPlayerPawn = 0x17262D8
-    dwPlantedC4 = 0x19161B8
-    dwPrediction = 0x17261A0
-    dwSensitivity = 0x190ECC8
+    dwGameRules = 0x190DFA0
+    dwGlobalVars = 0x1719E40
+    dwGlowManager = 0x190E3B8
+    dwInterfaceLinkList = 0x19FD7F8
+    dwLocalPlayerController = 0x1900928
+    dwLocalPlayerPawn = 0x17262E8
+    dwPlantedC4 = 0x19161C8
+    dwPrediction = 0x17261B0
+    dwSensitivity = 0x190ECD8
     dwSensitivity_sensitivity = 0x40
-    dwViewAngles = 0x191E0D0
-    dwViewMatrix = 0x19102A0
-    dwViewRender = 0x1910B20
+    dwViewAngles = 0x191E0E0
+    dwViewMatrix = 0x19102B0
+    dwViewRender = 0x1910B30
 
 class engine2_dll: # engine2.dll
     dwBuildNumber = 0x512554
@@ -35,11 +35,11 @@ class engine2_dll: # engine2.dll
     dwNetworkGameClient_getLocalPlayer = 0xF0
     dwNetworkGameClient_maxClients = 0x250
     dwNetworkGameClient_signOnState = 0x240
-    dwWindowHeight = 0x5C9A6C
-    dwWindowWidth = 0x5C9A68
+    dwWindowHeight = 0x5C99FC
+    dwWindowWidth = 0x5C99F8
 
 class game_info: # Some additional information about the game at dump time
-    buildNumber = 0x36A4 # Game build number
+    buildNumber = 0x36A5 # Game build number
 
 class inputsystem_dll: # inputsystem.dll
     dwInputSystem = 0x367A0

@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 8 Feb 2024 02:46:17 +0000
+ * Fri, 9 Feb 2024 00:34:45 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]

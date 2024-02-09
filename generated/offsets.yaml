@@ -1,38 +1,38 @@
 ---
 client_dll: # client.dll
-    dwEntityList: 25890744
-    dwForceAttack: 24244560
-    dwForceAttack2: 24244704
-    dwForceBackward: 24245280
-    dwForceCrouch: 24246000
-    dwForceForward: 24245136
-    dwForceJump: 24245856
-    dwForceLeft: 24245424
-    dwForceRight: 24245568
-    dwGameEntitySystem: 27051968
+    dwEntityList: 25890760
+    dwForceAttack: 24244576
+    dwForceAttack2: 24244720
+    dwForceBackward: 24245296
+    dwForceCrouch: 24246016
+    dwForceForward: 24245152
+    dwForceJump: 24245872
+    dwForceLeft: 24245440
+    dwForceRight: 24245584
+    dwGameEntitySystem: 27051984
     dwGameEntitySystem_getHighestEntityIndex: 5392
-    dwGameRules: 26271632
-    dwGlobalVars: 24223280
-    dwGlowManager: 26272680
-    dwInterfaceLinkList: 27252712
-    dwLocalPlayerController: 26216728
-    dwLocalPlayerPawn: 24273624
-    dwPlantedC4: 26304952
-    dwPrediction: 24273312
-    dwSensitivity: 26275016
+    dwGameRules: 26271648
+    dwGlobalVars: 24223296
+    dwGlowManager: 26272696
+    dwInterfaceLinkList: 27252728
+    dwLocalPlayerController: 26216744
+    dwLocalPlayerPawn: 24273640
+    dwPlantedC4: 26304968
+    dwPrediction: 24273328
+    dwSensitivity: 26275032
     dwSensitivity_sensitivity: 64
-    dwViewAngles: 26337488
-    dwViewMatrix: 26280608
-    dwViewRender: 26282784
+    dwViewAngles: 26337504
+    dwViewMatrix: 26280624
+    dwViewRender: 26282800
 engine2_dll: # engine2.dll
     dwBuildNumber: 5317972
     dwNetworkGameClient: 5315272
     dwNetworkGameClient_getLocalPlayer: 240
     dwNetworkGameClient_maxClients: 592
     dwNetworkGameClient_signOnState: 576
-    dwWindowHeight: 6068844
-    dwWindowWidth: 6068840
+    dwWindowHeight: 6068732
+    dwWindowWidth: 6068728
 game_info: # Some additional information about the game at dump time
-    buildNumber: 13988 # Game build number
+    buildNumber: 13989 # Game build number
 inputsystem_dll: # inputsystem.dll
     dwInputSystem: 223136
