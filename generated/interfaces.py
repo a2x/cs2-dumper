@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 9 Feb 2024 02:38:11 +0000
+Tue, 13 Feb 2024 02:41:15 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,45 +8,45 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x6DA00
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x8AA820
-    Source2ClientUI001 = 0x899A80
-    Source2ClientPrediction001 = 0x7AC9B0
-    ClientToolsInfo_001 = 0x7312C0
-    Source2Client002 = 0x7312E0
-    GameClientExports001 = 0x7312D0
+    LegacyGameUI001 = 0x8AA960
+    Source2ClientUI001 = 0x899BC0
+    Source2ClientPrediction001 = 0x7ACAF0
+    ClientToolsInfo_001 = 0x7313D0
+    Source2Client002 = 0x7313F0
+    GameClientExports001 = 0x7313E0
     EmptyWorldService001_Client = 0x483D80
     Source2ClientConfig001 = 0x46E9A0
 
 class engine2_dll: # engine2.dll
-    SimpleEngineLoopService_001 = 0x1F5730
-    ClientServerEngineLoopService_001 = 0x1E9610
-    KeyValueCache001 = 0x1E5D70
-    HostStateMgr001 = 0x1E3550
-    GameEventSystemServerV001 = 0x1DEB00
-    GameEventSystemClientV001 = 0x1DEAF0
-    EngineServiceMgr001 = 0x1DA450
-    VProfService_001 = 0x1C7A30
-    ToolService_001 = 0x1C66B0
-    StatsService_001 = 0x1C1A60
-    SplitScreenService_001 = 0x1BED80
-    SoundService_001 = 0x1B84C0
-    ScreenshotService001 = 0x1B3EC0
-    RenderService_001 = 0x1B1500
-    NetworkService_001 = 0x1B1010
-    NetworkServerService_001 = 0x1ABDF0
-    NetworkP2PService_001 = 0x1A7880
-    NetworkClientService_001 = 0x1A0B40
-    MapListService_001 = 0x199980
-    InputService_001 = 0x1871E0
-    GameUIService_001 = 0x1816E0
-    GameResourceServiceServerV001 = 0x17ED40
-    GameResourceServiceClientV001 = 0x17ED30
-    BugService001 = 0x177B70
-    BenchmarkService001 = 0x176310
-    VENGINE_GAMEUIFUNCS_VERSION005 = 0x122150
-    EngineGameUI001 = 0x1214E0
-    INETSUPPORT_001 = 0xF0530
-    Source2EngineToServerStringTable001 = 0xA9170
+    SimpleEngineLoopService_001 = 0x1F5BF0
+    ClientServerEngineLoopService_001 = 0x1E9AD0
+    KeyValueCache001 = 0x1E6230
+    HostStateMgr001 = 0x1E3A10
+    GameEventSystemServerV001 = 0x1DEFC0
+    GameEventSystemClientV001 = 0x1DEFB0
+    EngineServiceMgr001 = 0x1DA910
+    VProfService_001 = 0x1C7EF0
+    ToolService_001 = 0x1C6B70
+    StatsService_001 = 0x1C1F20
+    SplitScreenService_001 = 0x1BF240
+    SoundService_001 = 0x1B89D0
+    ScreenshotService001 = 0x1B43D0
+    RenderService_001 = 0x1B1A10
+    NetworkService_001 = 0x1B1520
+    NetworkServerService_001 = 0x1AC300
+    NetworkP2PService_001 = 0x1A7D90
+    NetworkClientService_001 = 0x1A1050
+    MapListService_001 = 0x199E90
+    InputService_001 = 0x1876F0
+    GameUIService_001 = 0x181BF0
+    GameResourceServiceServerV001 = 0x17F250
+    GameResourceServiceClientV001 = 0x17F240
+    BugService001 = 0x178080
+    BenchmarkService001 = 0x176820
+    VENGINE_GAMEUIFUNCS_VERSION005 = 0x122660
+    EngineGameUI001 = 0x1219F0
+    INETSUPPORT_001 = 0xF0A30
+    Source2EngineToServerStringTable001 = 0xA95C0
     Source2EngineToServer001 = 0x91F40
     Source2EngineToClientStringTable001 = 0x8A970
     Source2EngineToClient001 = 0x61890
@@ -126,19 +126,19 @@ class scenefilecache_dll: # scenefilecache.dll
     ResponseRulesCache001 = 0x31A0
 
 class scenesystem_dll: # scenesystem.dll
-    SceneUtils_001 = 0x12FCE0
-    SceneSystem_002 = 0xBD1F0
-    RenderingPipelines_001 = 0x86470
+    SceneUtils_001 = 0x12FCF0
+    SceneSystem_002 = 0xBD200
+    RenderingPipelines_001 = 0x86480
 
 class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xAA50
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA418E0
-    ServerToolsInfo_001 = 0x82FFA0
-    Source2GameClients001 = 0x82FFB0
-    Source2GameEntities001 = 0x82FFC0
-    Source2Server001 = 0x82FFD0
+    NavGameTest001 = 0xA41980
+    ServerToolsInfo_001 = 0x830040
+    Source2GameClients001 = 0x830050
+    Source2GameEntities001 = 0x830060
+    Source2Server001 = 0x830070
     EmptyWorldService001_Server = 0x5745B0
     Source2ServerConfig001 = 0x565920
     EntitySubclassUtilsV001 = 0x2B8F50
