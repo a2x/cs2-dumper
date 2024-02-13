@@ -3,12 +3,12 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 470656
     AnimationSystem_001: 449024
 client_dll: # client.dll
-    LegacyGameUI001: 9087328
-    Source2ClientUI001: 9018304
-    Source2ClientPrediction001: 8047344
-    ClientToolsInfo_001: 7541712
-    Source2Client002: 7541744
-    GameClientExports001: 7541728
+    LegacyGameUI001: 9087264
+    Source2ClientUI001: 9018240
+    Source2ClientPrediction001: 8047280
+    ClientToolsInfo_001: 7541696
+    Source2Client002: 7541728
+    GameClientExports001: 7541712
     EmptyWorldService001_Client: 4734336
     Source2ClientConfig001: 4647328
 engine2_dll: # engine2.dll
@@ -107,11 +107,11 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43600
 server_dll: # server.dll
-    NavGameTest001: 10754432
-    ServerToolsInfo_001: 8585280
-    Source2GameClients001: 8585296
-    Source2GameEntities001: 8585312
-    Source2Server001: 8585328
+    NavGameTest001: 10754416
+    ServerToolsInfo_001: 8585264
+    Source2GameClients001: 8585280
+    Source2GameEntities001: 8585296
+    Source2Server001: 8585312
     EmptyWorldService001_Server: 5719472
     Source2ServerConfig001: 5658912
     EntitySubclassUtilsV001: 2854736

@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 13 Feb 2024 02:41:15 +0000
+Tue, 13 Feb 2024 04:04:49 +0000
 '''
 
 class client_dll: # client.dll
@@ -39,7 +39,7 @@ class engine2_dll: # engine2.dll
     dwWindowWidth = 0x5C9A28
 
 class game_info: # Some additional information about the game at dump time
-    buildNumber = 0x36A7 # Game build number
+    buildNumber = 0x36A8 # Game build number
 
 class inputsystem_dll: # inputsystem.dll
     dwInputSystem = 0x367A0

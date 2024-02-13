@@ -1,3 +1,8 @@
+/*
+ * Created using https://github.com/a2x/cs2-dumper
+ * Tue, 13 Feb 2024 04:04:48 +0000
+ */
+
 public static class ActiveModelConfig_t {
     public const nint m_Handle = 0x28; // ModelConfigHandle_t
     public const nint m_Name = 0x30; // CUtlSymbolLarge
