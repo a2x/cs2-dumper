@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Tue, 13 Feb 2024 04:04:49 +0000
+Thu, 15 Feb 2024 02:02:58 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,14 +8,14 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x6DA00
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x8AA920
-    Source2ClientUI001 = 0x899B80
-    Source2ClientPrediction001 = 0x7ACAB0
-    ClientToolsInfo_001 = 0x7313C0
-    Source2Client002 = 0x7313E0
-    GameClientExports001 = 0x7313D0
-    EmptyWorldService001_Client = 0x483D80
-    Source2ClientConfig001 = 0x46E9A0
+    LegacyGameUI001 = 0x8AAF90
+    Source2ClientUI001 = 0x89A1F0
+    Source2ClientPrediction001 = 0x7AD120
+    ClientToolsInfo_001 = 0x731A30
+    Source2Client002 = 0x731A50
+    GameClientExports001 = 0x731A40
+    EmptyWorldService001_Client = 0x4840B0
+    Source2ClientConfig001 = 0x46ECD0
 
 class engine2_dll: # engine2.dll
     SimpleEngineLoopService_001 = 0x1F5BF0
@@ -105,7 +105,7 @@ class panorama_text_pango_dll: # panorama_text_pango.dll
     PanoramaTextServices001 = 0x4CBE0
 
 class panoramauiclient_dll: # panoramauiclient.dll
-    PanoramaUIClient001 = 0x11F50
+    PanoramaUIClient001 = 0x12010
 
 class particles_dll: # particles.dll
     ParticleSystemMgr003 = 0x5C380
@@ -134,16 +134,16 @@ class schemasystem_dll: # schemasystem.dll
     SchemaSystem_001 = 0xAA50
 
 class server_dll: # server.dll
-    NavGameTest001 = 0xA41970
-    ServerToolsInfo_001 = 0x830030
-    Source2GameClients001 = 0x830040
-    Source2GameEntities001 = 0x830050
-    Source2Server001 = 0x830060
-    EmptyWorldService001_Server = 0x5745B0
-    Source2ServerConfig001 = 0x565920
-    EntitySubclassUtilsV001 = 0x2B8F50
-    customnavsystem001 = 0x235E10
-    Source2GameDirector001 = 0x129FC0
+    NavGameTest001 = 0xA41A60
+    ServerToolsInfo_001 = 0x830120
+    Source2GameClients001 = 0x830130
+    Source2GameEntities001 = 0x830140
+    Source2Server001 = 0x830150
+    EmptyWorldService001_Server = 0x574950
+    Source2ServerConfig001 = 0x565A80
+    EntitySubclassUtilsV001 = 0x2B9040
+    customnavsystem001 = 0x235F00
+    Source2GameDirector001 = 0x12A0B0
 
 class soundsystem_dll: # soundsystem.dll
     SoundOpSystem001 = 0x16A640

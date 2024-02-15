@@ -15,35 +15,35 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7541696,
+        "value": 7543344,
         "comment": null
       },
       "EmptyWorldService001_Client": {
-        "value": 4734336,
+        "value": 4735152,
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7541712,
+        "value": 7543360,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9087264,
+        "value": 9088912,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7541728,
+        "value": 7543376,
         "comment": null
       },
       "Source2ClientConfig001": {
-        "value": 4647328,
+        "value": 4648144,
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8047280,
+        "value": 8048928,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 9018240,
+        "value": 9019888,
         "comment": null
       }
     },
@@ -361,7 +361,7 @@
   "panoramauiclient_dll": {
     "data": {
       "PanoramaUIClient001": {
-        "value": 73552,
+        "value": 73744,
         "comment": null
       }
     },
@@ -453,43 +453,43 @@
   "server_dll": {
     "data": {
       "EmptyWorldService001_Server": {
-        "value": 5719472,
+        "value": 5720400,
         "comment": null
       },
       "EntitySubclassUtilsV001": {
-        "value": 2854736,
+        "value": 2854976,
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10754416,
+        "value": 10754656,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8585264,
+        "value": 8585504,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8585280,
+        "value": 8585520,
         "comment": null
       },
       "Source2GameDirector001": {
-        "value": 1220544,
+        "value": 1220784,
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8585296,
+        "value": 8585536,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8585312,
+        "value": 8585552,
         "comment": null
       },
       "Source2ServerConfig001": {
-        "value": 5658912,
+        "value": 5659264,
         "comment": null
       },
       "customnavsystem001": {
-        "value": 2317840,
+        "value": 2318080,
         "comment": null
       }
     },

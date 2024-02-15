@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Tue, 13 Feb 2024 04:04:49 +0000
+ * Thu, 15 Feb 2024 02:02:58 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -11,14 +11,14 @@ pub mod animationsystem_dll { // animationsystem.dll
 }
 
 pub mod client_dll { // client.dll
-    pub const LegacyGameUI001: usize = 0x8AA920;
-    pub const Source2ClientUI001: usize = 0x899B80;
-    pub const Source2ClientPrediction001: usize = 0x7ACAB0;
-    pub const ClientToolsInfo_001: usize = 0x7313C0;
-    pub const Source2Client002: usize = 0x7313E0;
-    pub const GameClientExports001: usize = 0x7313D0;
-    pub const EmptyWorldService001_Client: usize = 0x483D80;
-    pub const Source2ClientConfig001: usize = 0x46E9A0;
+    pub const LegacyGameUI001: usize = 0x8AAF90;
+    pub const Source2ClientUI001: usize = 0x89A1F0;
+    pub const Source2ClientPrediction001: usize = 0x7AD120;
+    pub const ClientToolsInfo_001: usize = 0x731A30;
+    pub const Source2Client002: usize = 0x731A50;
+    pub const GameClientExports001: usize = 0x731A40;
+    pub const EmptyWorldService001_Client: usize = 0x4840B0;
+    pub const Source2ClientConfig001: usize = 0x46ECD0;
 }
 
 pub mod engine2_dll { // engine2.dll
@@ -122,7 +122,7 @@ pub mod panorama_text_pango_dll { // panorama_text_pango.dll
 }
 
 pub mod panoramauiclient_dll { // panoramauiclient.dll
-    pub const PanoramaUIClient001: usize = 0x11F50;
+    pub const PanoramaUIClient001: usize = 0x12010;
 }
 
 pub mod particles_dll { // particles.dll
@@ -159,16 +159,16 @@ pub mod schemasystem_dll { // schemasystem.dll
 }
 
 pub mod server_dll { // server.dll
-    pub const NavGameTest001: usize = 0xA41970;
-    pub const ServerToolsInfo_001: usize = 0x830030;
-    pub const Source2GameClients001: usize = 0x830040;
-    pub const Source2GameEntities001: usize = 0x830050;
-    pub const Source2Server001: usize = 0x830060;
-    pub const EmptyWorldService001_Server: usize = 0x5745B0;
-    pub const Source2ServerConfig001: usize = 0x565920;
-    pub const EntitySubclassUtilsV001: usize = 0x2B8F50;
-    pub const customnavsystem001: usize = 0x235E10;
-    pub const Source2GameDirector001: usize = 0x129FC0;
+    pub const NavGameTest001: usize = 0xA41A60;
+    pub const ServerToolsInfo_001: usize = 0x830120;
+    pub const Source2GameClients001: usize = 0x830130;
+    pub const Source2GameEntities001: usize = 0x830140;
+    pub const Source2Server001: usize = 0x830150;
+    pub const EmptyWorldService001_Server: usize = 0x574950;
+    pub const Source2ServerConfig001: usize = 0x565A80;
+    pub const EntitySubclassUtilsV001: usize = 0x2B9040;
+    pub const customnavsystem001: usize = 0x235F00;
+    pub const Source2GameDirector001: usize = 0x12A0B0;
 }
 
 pub mod soundsystem_dll { // soundsystem.dll

@@ -3,14 +3,14 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 470656
     AnimationSystem_001: 449024
 client_dll: # client.dll
-    LegacyGameUI001: 9087264
-    Source2ClientUI001: 9018240
-    Source2ClientPrediction001: 8047280
-    ClientToolsInfo_001: 7541696
-    Source2Client002: 7541728
-    GameClientExports001: 7541712
-    EmptyWorldService001_Client: 4734336
-    Source2ClientConfig001: 4647328
+    LegacyGameUI001: 9088912
+    Source2ClientUI001: 9019888
+    Source2ClientPrediction001: 8048928
+    ClientToolsInfo_001: 7543344
+    Source2Client002: 7543376
+    GameClientExports001: 7543360
+    EmptyWorldService001_Client: 4735152
+    Source2ClientConfig001: 4648144
 engine2_dll: # engine2.dll
     SimpleEngineLoopService_001: 2055152
     ClientServerEngineLoopService_001: 2005712
@@ -86,7 +86,7 @@ panorama_dll: # panorama.dll
 panorama_text_pango_dll: # panorama_text_pango.dll
     PanoramaTextServices001: 314336
 panoramauiclient_dll: # panoramauiclient.dll
-    PanoramaUIClient001: 73552
+    PanoramaUIClient001: 73744
 particles_dll: # particles.dll
     ParticleSystemMgr003: 377728
 pulse_system_dll: # pulse_system.dll
@@ -107,16 +107,16 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43600
 server_dll: # server.dll
-    NavGameTest001: 10754416
-    ServerToolsInfo_001: 8585264
-    Source2GameClients001: 8585280
-    Source2GameEntities001: 8585296
-    Source2Server001: 8585312
-    EmptyWorldService001_Server: 5719472
-    Source2ServerConfig001: 5658912
-    EntitySubclassUtilsV001: 2854736
-    customnavsystem001: 2317840
-    Source2GameDirector001: 1220544
+    NavGameTest001: 10754656
+    ServerToolsInfo_001: 8585504
+    Source2GameClients001: 8585520
+    Source2GameEntities001: 8585536
+    Source2Server001: 8585552
+    EmptyWorldService001_Server: 5720400
+    Source2ServerConfig001: 5659264
+    EntitySubclassUtilsV001: 2854976
+    customnavsystem001: 2318080
+    Source2GameDirector001: 1220784
 soundsystem_dll: # soundsystem.dll
     SoundOpSystem001: 1484352
     SoundOpSystemEdit001: 617040
