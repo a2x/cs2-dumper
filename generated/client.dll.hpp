@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 15 Feb 2024 02:02:57 +0000
+ * Fri, 16 Feb 2024 11:36:44 +0000
  */
 
 #pragma once
@@ -1747,7 +1747,7 @@ namespace C_CSGOViewModel { // C_PredictedViewModel
     constexpr std::ptrdiff_t m_nOldWeaponParity = 0xF70; // uint32_t
     constexpr std::ptrdiff_t m_nLastKnownAssociatedWeaponEntIndex = 0xF74; // CEntityIndex
     constexpr std::ptrdiff_t m_bNeedToQueueHighResComposite = 0xF78; // bool
-    constexpr std::ptrdiff_t m_vLoweredWeaponOffset = 0xFBC; // QAngle
+    constexpr std::ptrdiff_t m_vLoweredWeaponOffset = 0xFDC; // QAngle
 }
 
 namespace C_CSGO_CounterTerroristTeamIntroCamera { // C_CSGO_TeamPreviewCamera
@@ -2266,7 +2266,7 @@ namespace C_CSWeaponBase { // C_BasePlayerWeapon
     constexpr std::ptrdiff_t m_iAlpha = 0x16B8; // int32_t
     constexpr std::ptrdiff_t m_iScopeTextureID = 0x16BC; // int32_t
     constexpr std::ptrdiff_t m_iCrosshairTextureID = 0x16C0; // int32_t
-    constexpr std::ptrdiff_t m_flGunAccuracyPosition = 0x16C4; // float
+    constexpr std::ptrdiff_t m_flGunAccuracyPositionDeprecated = 0x16C4; // float
     constexpr std::ptrdiff_t m_nLastEmptySoundCmdNum = 0x16C8; // int32_t
     constexpr std::ptrdiff_t m_nViewModelIndex = 0x16CC; // uint32_t
     constexpr std::ptrdiff_t m_bReloadsWithClips = 0x16D0; // bool
@@ -3508,8 +3508,9 @@ namespace C_PrecipitationBlocker { // C_BaseModelEntity
 }
 
 namespace C_PredictedViewModel { // C_BaseViewModel
-    constexpr std::ptrdiff_t m_LagAnglesHistory = 0xF40; // QAngle
-    constexpr std::ptrdiff_t m_vPredictedOffset = 0xF58; // Vector
+    constexpr std::ptrdiff_t m_vPredictedLagOffset = 0xF40; // Vector
+    constexpr std::ptrdiff_t m_targetSpeed = 0xF4C; // QAngle
+    constexpr std::ptrdiff_t m_currentSpeed = 0xF58; // QAngle
 }
 
 namespace C_PropDoorRotating { // C_BasePropDoor

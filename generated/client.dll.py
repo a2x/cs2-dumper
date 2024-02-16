@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Thu, 15 Feb 2024 02:02:58 +0000
+Fri, 16 Feb 2024 11:36:44 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -1585,7 +1585,7 @@ class C_CSGOViewModel: # C_PredictedViewModel
     m_nOldWeaponParity = 0xF70 # uint32_t
     m_nLastKnownAssociatedWeaponEntIndex = 0xF74 # CEntityIndex
     m_bNeedToQueueHighResComposite = 0xF78 # bool
-    m_vLoweredWeaponOffset = 0xFBC # QAngle
+    m_vLoweredWeaponOffset = 0xFDC # QAngle
 
 class C_CSGO_CounterTerroristTeamIntroCamera: # C_CSGO_TeamPreviewCamera
 
@@ -2066,7 +2066,7 @@ class C_CSWeaponBase: # C_BasePlayerWeapon
     m_iAlpha = 0x16B8 # int32_t
     m_iScopeTextureID = 0x16BC # int32_t
     m_iCrosshairTextureID = 0x16C0 # int32_t
-    m_flGunAccuracyPosition = 0x16C4 # float
+    m_flGunAccuracyPositionDeprecated = 0x16C4 # float
     m_nLastEmptySoundCmdNum = 0x16C8 # int32_t
     m_nViewModelIndex = 0x16CC # uint32_t
     m_bReloadsWithClips = 0x16D0 # bool
@@ -3187,8 +3187,9 @@ class C_Precipitation: # C_BaseTrigger
 class C_PrecipitationBlocker: # C_BaseModelEntity
 
 class C_PredictedViewModel: # C_BaseViewModel
-    m_LagAnglesHistory = 0xF40 # QAngle
-    m_vPredictedOffset = 0xF58 # Vector
+    m_vPredictedLagOffset = 0xF40 # Vector
+    m_targetSpeed = 0xF4C # QAngle
+    m_currentSpeed = 0xF58 # QAngle
 
 class C_PropDoorRotating: # C_BasePropDoor
 

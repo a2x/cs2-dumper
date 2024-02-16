@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 15 Feb 2024 02:02:58 +0000
+ * Fri, 16 Feb 2024 11:36:44 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1745,7 +1745,7 @@ pub mod C_CSGOViewModel { // C_PredictedViewModel
     pub const m_nOldWeaponParity: usize = 0xF70; // uint32_t
     pub const m_nLastKnownAssociatedWeaponEntIndex: usize = 0xF74; // CEntityIndex
     pub const m_bNeedToQueueHighResComposite: usize = 0xF78; // bool
-    pub const m_vLoweredWeaponOffset: usize = 0xFBC; // QAngle
+    pub const m_vLoweredWeaponOffset: usize = 0xFDC; // QAngle
 }
 
 pub mod C_CSGO_CounterTerroristTeamIntroCamera { // C_CSGO_TeamPreviewCamera
@@ -2264,7 +2264,7 @@ pub mod C_CSWeaponBase { // C_BasePlayerWeapon
     pub const m_iAlpha: usize = 0x16B8; // int32_t
     pub const m_iScopeTextureID: usize = 0x16BC; // int32_t
     pub const m_iCrosshairTextureID: usize = 0x16C0; // int32_t
-    pub const m_flGunAccuracyPosition: usize = 0x16C4; // float
+    pub const m_flGunAccuracyPositionDeprecated: usize = 0x16C4; // float
     pub const m_nLastEmptySoundCmdNum: usize = 0x16C8; // int32_t
     pub const m_nViewModelIndex: usize = 0x16CC; // uint32_t
     pub const m_bReloadsWithClips: usize = 0x16D0; // bool
@@ -3506,8 +3506,9 @@ pub mod C_PrecipitationBlocker { // C_BaseModelEntity
 }
 
 pub mod C_PredictedViewModel { // C_BaseViewModel
-    pub const m_LagAnglesHistory: usize = 0xF40; // QAngle
-    pub const m_vPredictedOffset: usize = 0xF58; // Vector
+    pub const m_vPredictedLagOffset: usize = 0xF40; // Vector
+    pub const m_targetSpeed: usize = 0xF4C; // QAngle
+    pub const m_currentSpeed: usize = 0xF58; // QAngle
 }
 
 pub mod C_PropDoorRotating { // C_BasePropDoor

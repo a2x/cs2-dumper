@@ -1423,7 +1423,7 @@ C_CSGOViewModel: # C_PredictedViewModel
     m_nOldWeaponParity: 3952 # uint32_t
     m_nLastKnownAssociatedWeaponEntIndex: 3956 # CEntityIndex
     m_bNeedToQueueHighResComposite: 3960 # bool
-    m_vLoweredWeaponOffset: 4028 # QAngle
+    m_vLoweredWeaponOffset: 4060 # QAngle
 C_CSGO_CounterTerroristTeamIntroCamera: # C_CSGO_TeamPreviewCamera
 C_CSGO_CounterTerroristWingmanIntroCamera: # C_CSGO_TeamPreviewCamera
 C_CSGO_EndOfMatchCamera: # C_CSGO_TeamPreviewCamera
@@ -1866,7 +1866,7 @@ C_CSWeaponBase: # C_BasePlayerWeapon
     m_iAlpha: 5816 # int32_t
     m_iScopeTextureID: 5820 # int32_t
     m_iCrosshairTextureID: 5824 # int32_t
-    m_flGunAccuracyPosition: 5828 # float
+    m_flGunAccuracyPositionDeprecated: 5828 # float
     m_nLastEmptySoundCmdNum: 5832 # int32_t
     m_nViewModelIndex: 5836 # uint32_t
     m_bReloadsWithClips: 5840 # bool
@@ -2866,8 +2866,9 @@ C_Precipitation: # C_BaseTrigger
     m_nAvailableSheetSequencesMaxIndex: 3364 # int32_t
 C_PrecipitationBlocker: # C_BaseModelEntity
 C_PredictedViewModel: # C_BaseViewModel
-    m_LagAnglesHistory: 3904 # QAngle
-    m_vPredictedOffset: 3928 # Vector
+    m_vPredictedLagOffset: 3904 # Vector
+    m_targetSpeed: 3916 # QAngle
+    m_currentSpeed: 3928 # QAngle
 C_PropDoorRotating: # C_BasePropDoor
 C_RagdollManager: # C_BaseEntity
     m_iCurrentMaxRagdollCount: 1360 # int8_t

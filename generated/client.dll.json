@@ -5805,7 +5805,7 @@
         "comment": "uint32_t"
       },
       "m_vLoweredWeaponOffset": {
-        "value": 4028,
+        "value": 4060,
         "comment": "QAngle"
       }
     },
@@ -7620,7 +7620,7 @@
         "value": 5676,
         "comment": "float"
       },
-      "m_flGunAccuracyPosition": {
+      "m_flGunAccuracyPositionDeprecated": {
         "value": 5828,
         "comment": "float"
       },
@@ -11674,12 +11674,16 @@
   },
   "C_PredictedViewModel": {
     "data": {
-      "m_LagAnglesHistory": {
-        "value": 3904,
+      "m_currentSpeed": {
+        "value": 3928,
         "comment": "QAngle"
       },
-      "m_vPredictedOffset": {
-        "value": 3928,
+      "m_targetSpeed": {
+        "value": 3916,
+        "comment": "QAngle"
+      },
+      "m_vPredictedLagOffset": {
+        "value": 3904,
         "comment": "Vector"
       }
     },

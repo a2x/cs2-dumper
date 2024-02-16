@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Thu, 15 Feb 2024 02:02:57 +0000
+ * Fri, 16 Feb 2024 11:36:44 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -1743,7 +1743,7 @@ public static class C_CSGOViewModel { // C_PredictedViewModel
     public const nint m_nOldWeaponParity = 0xF70; // uint32_t
     public const nint m_nLastKnownAssociatedWeaponEntIndex = 0xF74; // CEntityIndex
     public const nint m_bNeedToQueueHighResComposite = 0xF78; // bool
-    public const nint m_vLoweredWeaponOffset = 0xFBC; // QAngle
+    public const nint m_vLoweredWeaponOffset = 0xFDC; // QAngle
 }
 
 public static class C_CSGO_CounterTerroristTeamIntroCamera { // C_CSGO_TeamPreviewCamera
@@ -2262,7 +2262,7 @@ public static class C_CSWeaponBase { // C_BasePlayerWeapon
     public const nint m_iAlpha = 0x16B8; // int32_t
     public const nint m_iScopeTextureID = 0x16BC; // int32_t
     public const nint m_iCrosshairTextureID = 0x16C0; // int32_t
-    public const nint m_flGunAccuracyPosition = 0x16C4; // float
+    public const nint m_flGunAccuracyPositionDeprecated = 0x16C4; // float
     public const nint m_nLastEmptySoundCmdNum = 0x16C8; // int32_t
     public const nint m_nViewModelIndex = 0x16CC; // uint32_t
     public const nint m_bReloadsWithClips = 0x16D0; // bool
@@ -3504,8 +3504,9 @@ public static class C_PrecipitationBlocker { // C_BaseModelEntity
 }
 
 public static class C_PredictedViewModel { // C_BaseViewModel
-    public const nint m_LagAnglesHistory = 0xF40; // QAngle
-    public const nint m_vPredictedOffset = 0xF58; // Vector
+    public const nint m_vPredictedLagOffset = 0xF40; // Vector
+    public const nint m_targetSpeed = 0xF4C; // QAngle
+    public const nint m_currentSpeed = 0xF58; // QAngle
 }
 
 public static class C_PropDoorRotating { // C_BasePropDoor
