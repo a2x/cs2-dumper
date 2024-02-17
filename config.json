@@ -167,6 +167,30 @@
       ]
     },
     {
+      "name": "dwGameTypes",
+      "module": "matchmaking.dll",
+      "pattern": "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC ? F0 81 0D",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    },
+    {
+      "name": "dwGameTypes_mapName",
+      "module": "matchmaking.dll",
+      "pattern": "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC ? F0 81 0D",
+      "operations": [
+        {
+          "type": "rip"
+        },
+        {
+          "type": "add",
+          "value": 288
+        }
+      ]
+    },
+    {
       "name": "dwGlobalVars",
       "module": "client.dll",
       "pattern": "48 89 0D ? ? ? ? 48 89 41",

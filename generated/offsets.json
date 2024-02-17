@@ -150,5 +150,18 @@
       }
     },
     "comment": "inputsystem.dll"
+  },
+  "matchmaking_dll": {
+    "data": {
+      "dwGameTypes": {
+        "value": 1909216,
+        "comment": null
+      },
+      "dwGameTypes_mapName": {
+        "value": 1909504,
+        "comment": null
+      }
+    },
+    "comment": "matchmaking.dll"
   }
 }

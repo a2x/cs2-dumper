@@ -36,3 +36,6 @@ game_info: # Some additional information about the game at dump time
     buildNumber: 13994 # Game build number
 inputsystem_dll: # inputsystem.dll
     dwInputSystem: 223136
+matchmaking_dll: # matchmaking.dll
+    dwGameTypes: 1909216
+    dwGameTypes_mapName: 1909504
