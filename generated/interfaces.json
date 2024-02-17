@@ -15,7 +15,7 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7545568,
+        "value": 7545712,
         "comment": null
       },
       "EmptyWorldService001_Client": {
@@ -23,15 +23,15 @@
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7545584,
+        "value": 7545728,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9092208,
+        "value": 9092352,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7545600,
+        "value": 7545744,
         "comment": null
       },
       "Source2ClientConfig001": {
@@ -39,11 +39,11 @@
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8052576,
+        "value": 8052720,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 9023184,
+        "value": 9023328,
         "comment": null
       }
     },
@@ -52,131 +52,131 @@
   "engine2_dll": {
     "data": {
       "BenchmarkService001": {
-        "value": 1536016,
+        "value": 1536064,
         "comment": null
       },
       "BugService001": {
-        "value": 1542256,
+        "value": 1542304,
         "comment": null
       },
       "ClientServerEngineLoopService_001": {
-        "value": 2009920,
+        "value": 2009968,
         "comment": null
       },
       "EngineGameUI001": {
-        "value": 1186896,
+        "value": 1186944,
         "comment": null
       },
       "EngineServiceMgr001": {
-        "value": 1947888,
+        "value": 1947936,
         "comment": null
       },
       "GameEventSystemClientV001": {
-        "value": 1965968,
+        "value": 1966016,
         "comment": null
       },
       "GameEventSystemServerV001": {
-        "value": 1965984,
+        "value": 1966032,
         "comment": null
       },
       "GameResourceServiceClientV001": {
-        "value": 1571376,
+        "value": 1571424,
         "comment": null
       },
       "GameResourceServiceServerV001": {
-        "value": 1571392,
+        "value": 1571440,
         "comment": null
       },
       "GameUIService_001": {
-        "value": 1582048,
+        "value": 1582096,
         "comment": null
       },
       "HostStateMgr001": {
-        "value": 1985008,
+        "value": 1985056,
         "comment": null
       },
       "INETSUPPORT_001": {
-        "value": 986048,
+        "value": 986096,
         "comment": null
       },
       "InputService_001": {
-        "value": 1605376,
+        "value": 1605424,
         "comment": null
       },
       "KeyValueCache001": {
-        "value": 1995280,
+        "value": 1995328,
         "comment": null
       },
       "MapListService_001": {
-        "value": 1683008,
+        "value": 1683056,
         "comment": null
       },
       "NetworkClientService_001": {
-        "value": 1712128,
+        "value": 1712176,
         "comment": null
       },
       "NetworkP2PService_001": {
-        "value": 1740096,
+        "value": 1740144,
         "comment": null
       },
       "NetworkServerService_001": {
-        "value": 1757872,
+        "value": 1757920,
         "comment": null
       },
       "NetworkService_001": {
-        "value": 1778896,
+        "value": 1778944,
         "comment": null
       },
       "RenderService_001": {
-        "value": 1780160,
+        "value": 1780208,
         "comment": null
       },
       "ScreenshotService001": {
-        "value": 1790848,
+        "value": 1790896,
         "comment": null
       },
       "SimpleEngineLoopService_001": {
-        "value": 2059568,
+        "value": 2059616,
         "comment": null
       },
       "SoundService_001": {
-        "value": 1808768,
+        "value": 1808816,
         "comment": null
       },
       "Source2EngineToClient001": {
-        "value": 399904,
+        "value": 399952,
         "comment": null
       },
       "Source2EngineToClientStringTable001": {
-        "value": 568064,
+        "value": 568112,
         "comment": null
       },
       "Source2EngineToServer001": {
-        "value": 598224,
+        "value": 598272,
         "comment": null
       },
       "Source2EngineToServerStringTable001": {
-        "value": 694096,
+        "value": 694144,
         "comment": null
       },
       "SplitScreenService_001": {
-        "value": 1835552,
+        "value": 1835600,
         "comment": null
       },
       "StatsService_001": {
-        "value": 1847040,
+        "value": 1847088,
         "comment": null
       },
       "ToolService_001": {
-        "value": 1866576,
+        "value": 1866624,
         "comment": null
       },
       "VENGINE_GAMEUIFUNCS_VERSION005": {
-        "value": 1190080,
+        "value": 1190128,
         "comment": null
       },
       "VProfService_001": {
-        "value": 1871568,
+        "value": 1871616,
         "comment": null
       }
     },
@@ -334,7 +334,7 @@
         "comment": null
       },
       "SerializedEntitiesVersion001": {
-        "value": 873872,
+        "value": 873952,
         "comment": null
       }
     },
@@ -461,15 +461,15 @@
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10755312,
+        "value": 10755392,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8586160,
+        "value": 8586240,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8586176,
+        "value": 8586256,
         "comment": null
       },
       "Source2GameDirector001": {
@@ -477,11 +477,11 @@
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8586192,
+        "value": 8586272,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8586208,
+        "value": 8586288,
         "comment": null
       },
       "Source2ServerConfig001": {
@@ -613,7 +613,7 @@
   "tier0_dll": {
     "data": {
       "TestScriptMgr001": {
-        "value": 1313936,
+        "value": 1313952,
         "comment": null
       },
       "VEngineCvar007": {
@@ -621,11 +621,11 @@
         "comment": null
       },
       "VProcessUtils002": {
-        "value": 1253744,
+        "value": 1253760,
         "comment": null
       },
       "VStringTokenSystem001": {
-        "value": 1641216,
+        "value": 1641232,
         "comment": null
       }
     },

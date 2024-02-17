@@ -1,6 +1,6 @@
 '''
 Created using https://github.com/a2x/cs2-dumper
-Fri, 16 Feb 2024 11:36:44 +0000
+Sat, 17 Feb 2024 01:42:30 +0000
 '''
 
 class CAnimScriptBase:
