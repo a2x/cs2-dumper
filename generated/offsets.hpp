@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 17 Feb 2024 02:19:06 +0000
+ * Fri, 23 Feb 2024 13:32:08 +0000
  */
 
 #pragma once
@@ -38,6 +38,7 @@ namespace engine2_dll { // engine2.dll
     constexpr std::ptrdiff_t dwBuildNumber = 0x513564;
     constexpr std::ptrdiff_t dwNetworkGameClient = 0x512AC8;
     constexpr std::ptrdiff_t dwNetworkGameClient_getLocalPlayer = 0xF0;
+    constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x258;
     constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x250;
     constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x240;
     constexpr std::ptrdiff_t dwWindowHeight = 0x5CABC4;

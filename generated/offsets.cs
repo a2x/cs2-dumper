@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Sat, 17 Feb 2024 02:19:06 +0000
+ * Fri, 23 Feb 2024 13:32:08 +0000
  */
 
 public static class client_dll { // client.dll
@@ -34,6 +34,7 @@ public static class engine2_dll { // engine2.dll
     public const nint dwBuildNumber = 0x513564;
     public const nint dwNetworkGameClient = 0x512AC8;
     public const nint dwNetworkGameClient_getLocalPlayer = 0xF0;
+    public const nint dwNetworkGameClient_deltaTick = 0x258;
     public const nint dwNetworkGameClient_maxClients = 0x250;
     public const nint dwNetworkGameClient_signOnState = 0x240;
     public const nint dwWindowHeight = 0x5CABC4;
