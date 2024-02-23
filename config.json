@@ -280,6 +280,18 @@
         }
       ]
     },
+	{
+      "name": "dwNetworkGameClient_deltaTick",
+      "module": "engine2.dll",
+      "pattern": "89 83 ? ? ? ? 40 b7",
+      "operations": [
+        {
+          "type": "slice",
+          "start": 2,
+          "end": 4
+        }
+      ]
+    },
     {
       "name": "dwNetworkGameClient_maxClients",
       "module": "engine2.dll",
