@@ -110,6 +110,10 @@
         "value": 5319368,
         "comment": null
       },
+      "dwNetworkGameClient_deltaTick": {
+        "value": 600,
+        "comment": null
+      },
       "dwNetworkGameClient_getLocalPlayer": {
         "value": 240,
         "comment": null

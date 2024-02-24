@@ -28,6 +28,7 @@ engine2_dll: # engine2.dll
     dwBuildNumber: 5322084
     dwNetworkGameClient: 5319368
     dwNetworkGameClient_getLocalPlayer: 240
+    dwNetworkGameClient_deltaTick: 600
     dwNetworkGameClient_maxClients: 592
     dwNetworkGameClient_signOnState: 576
     dwWindowHeight: 6073284
