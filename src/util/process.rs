@@ -7,10 +7,19 @@ use std::ffi::{c_void, CStr};
 use std::mem;
 use std::ptr;
 
-use windows::Win32::Foundation::{CloseHandle, HANDLE};
-use windows::Win32::System::Diagnostics::Debug::ReadProcessMemory;
-use windows::Win32::System::Diagnostics::ToolHelp::*;
-use windows::Win32::System::Threading::{OpenProcess, PROCESS_ALL_ACCESS};
+#[cfg(target_os = "windows")]
+use windows::Win32::{
+    Foundation::{CloseHandle, HANDLE},
+    System::Diagnostics::Debug::ReadProcessMemory,
+    System::Diagnostics::ToolHelp::*,
+    System::Threading::{OpenProcess, PROCESS_ALL_ACCESS},
+};
+
+#[cfg(target_os = "linux")]
+use procfs::process::{self, all_processes};
+use std::fs::File;
+use std::io::{Read, Seek, SeekFrom};
+use std::path::{Path, PathBuf};
 
 /// Represents a Windows process.
 #[derive(Debug)]
@@ -18,6 +27,7 @@ pub struct Process {
     /// ID of the process.
     id: u32,
 
+    #[cfg(target_os = "windows")]
     /// Handle to the process.
     handle: HANDLE,
 
@@ -35,6 +45,7 @@ impl Process {
     /// # Returns
     ///
     /// * `Result<Self>` - A `Result` containing the `Process` instance if successful, or an error if the process could not be found.
+    #[cfg(target_os = "windows")]
     pub fn new(name: &str) -> Result<Self> {
         let id = Self::get_process_id_by_name(name)?;
 
@@ -43,6 +54,15 @@ impl Process {
         Ok(Self {
             id,
             handle,
+            modules: HashMap::new(),
+        })
+    }
+
+    #[cfg(target_os = "linux")]
+    pub fn new(process_name: &str) -> Result<Self> {
+        let id = Self::get_process_id_by_name(process_name.strip_suffix(".exe").unwrap())?;
+        Ok(Self {
+            id,
             modules: HashMap::new(),
         })
     }
@@ -165,6 +185,8 @@ impl Process {
     /// # Returns
     ///
     /// * `Result<()>` - A `Result` indicating the outcome of the operation.
+
+    #[cfg(target_os = "windows")]
     pub fn read_memory_raw(
         &self,
         address: Address,
@@ -181,6 +203,28 @@ impl Process {
             )
         }
         .map_err(|e| e.into())
+    }
+
+    #[cfg(target_os = "linux")]
+    pub fn read_memory_raw(
+        &self,
+        address: Address,
+        buffer: *mut c_void,
+        size: usize,
+    ) -> Result<()> {
+        let proc_mem_path = format!("/proc/{}/mem", self.id);
+        let mut mem_file = File::open(proc_mem_path)?;
+
+        // Go to the start address
+        mem_file.seek(SeekFrom::Start(
+            <Address as Into<usize>>::into(address) as u64
+        ))?;
+
+        let buffer_slice = unsafe { std::slice::from_raw_parts_mut(buffer as *mut u8, size) };
+
+        // Try to read the data
+        mem_file.read_exact(buffer_slice)?;
+        Ok(())
     }
 
     /// Reads a null-terminated string from the process memory at the given address.
@@ -290,6 +334,7 @@ impl Process {
     /// # Returns
     ///
     /// * `Result<u32>` - A `Result` containing the process ID if successful, or an error if the process could not be found.
+    #[cfg(target_os = "windows")]
     fn get_process_id_by_name(process_name: &str) -> Result<u32> {
         let snapshot = unsafe { CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0) }?;
 
@@ -313,6 +358,26 @@ impl Process {
         bail!("Process not found: {}", process_name)
     }
 
+    #[cfg(target_os = "linux")]
+    fn get_process_id_by_name(process_name: &str) -> Result<u32> {
+        use std::io::{BufRead, BufReader};
+
+        for process_iter in all_processes()? {
+            let Ok(process) = process_iter else { continue };
+            let comm_path = format!("/proc/{}/comm", process.pid());
+            if let Ok(comm_file) = File::open(Path::new(&comm_path)) {
+                let mut comm = String::new();
+                if BufReader::new(comm_file).read_line(&mut comm).is_ok() {
+                    comm.pop();
+                    if comm == process_name && process.pid() > 0 {
+                        return Ok(process.pid() as u32);
+                    }
+                }
+            }
+        }
+        bail!("Process not found: {}", process_name);
+    }
+
     /// Parses the loaded modules of a process and stores them in a HashMap with the module name as the key and the module data as the value.
     ///
     /// # Arguments
@@ -322,6 +387,8 @@ impl Process {
     /// # Returns
     ///
     /// * `Result<()>` - A `Result` indicating the outcome of the operation.
+
+    #[cfg(target_os = "windows")]
     fn parse_loaded_modules(&mut self) -> Result<()> {
         let snapshot = unsafe { CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, self.id) }?;
 
@@ -345,6 +412,59 @@ impl Process {
                 ) {
                     self.modules.insert(name.to_string(), data);
                 }
+            }
+        }
+
+        Ok(())
+    }
+
+    fn get_transformed_module_name(path: PathBuf) -> Option<String> {
+        if let Ok(module_path) = path.into_os_string().into_string() {
+            if let Some(module_name) = module_path.split('/').last() {
+                if module_name.starts_with("lib") && module_name.ends_with(".so") {
+                    return Some(format!(
+                        "{}.dll",
+                        module_name.strip_prefix("lib")?.strip_suffix(".so")?
+                    ));
+                }
+            }
+        }
+        None
+    }
+
+    #[cfg(target_os = "linux")]
+    fn parse_loaded_modules(&mut self) -> Result<()> {
+        let process = process::Process::new(self.id as i32)?;
+
+        let mut modules_info: HashMap<String, (u64, u64)> = HashMap::new();
+
+        for mmap in process.maps()? {
+            let mmap_path = match mmap.pathname {
+                process::MMapPath::Path(path) => path,
+                _ => continue,
+            };
+            let module_name = match Process::get_transformed_module_name(mmap_path) {
+                Some(new_path) => new_path,
+                None => continue,
+            };
+            let module_entry = modules_info
+                .entry(module_name)
+                .or_insert_with(|| (mmap.address));
+            *module_entry = (
+                std::cmp::min(mmap.address.0, module_entry.0),
+                std::cmp::max(mmap.address.1, module_entry.1),
+            );
+        }
+
+        for (module_name, address_space) in modules_info.into_iter() {
+            let (start, end) = address_space;
+            let mut data = vec![0; (end - start + 1) as usize];
+            if let Ok(_) = self.read_memory_raw(
+                (start as usize).into(),
+                data.as_mut_ptr() as *mut _,
+                data.len(),
+            ) {
+                self.modules.insert(module_name, data);
             }
         }
 
@@ -377,6 +497,7 @@ impl Process {
 /// Implements the `Drop` trait for the `Process` struct.
 ///
 /// When a `Process` instance goes out of scope, this implementation will automatically close the process handle if it is not invalid.
+#[cfg(target_os = "windows")]
 impl Drop for Process {
     fn drop(&mut self) {
         if !self.handle.is_invalid() {

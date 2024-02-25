@@ -102,6 +102,7 @@ fn main() -> Result<()> {
 
     process.initialize()?;
 
+    /*
     // Start the timer.
     let now = Instant::now();
 
@@ -123,7 +124,7 @@ fn main() -> Result<()> {
     info!(
         "<on-green>Done!</> <green>Time elapsed: <b>{:?}</></>",
         now.elapsed()
-    );
+    ); */
 
     Ok(())
 }
