@@ -1,4 +1,4 @@
-use super::{Address, Module};
+use super::{Address, Module, ModuleEntry};
 
 use anyhow::{bail, Result};
 
@@ -32,7 +32,11 @@ pub struct Process {
     handle: HANDLE,
 
     /// A HashMap containing the name of each module and its corresponding raw data.
+    #[cfg(target_os = "windows")]
     modules: HashMap<String, Vec<u8>>,
+
+    #[cfg(target_os = "linux")]
+    modules: HashMap<String, ModuleEntry>,
 }
 
 impl Process {
@@ -91,12 +95,37 @@ impl Process {
     /// # Returns
     ///
     /// * `Option<Address>` - The address of the first occurrence of the pattern if found, or `None` if the pattern was not found.
+    #[cfg(target_os = "windows")]
     pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<Address> {
         let module = self.get_module_by_name(module_name)?;
 
         let pattern_bytes = Self::pattern_to_bytes(pattern);
 
         for (i, window) in module.data.windows(pattern_bytes.len()).enumerate() {
+            if window
+                .iter()
+                .zip(&pattern_bytes)
+                .all(|(&x, &y)| x == y as u8 || y == -1)
+            {
+                return Some(module.base() + i);
+            }
+        }
+
+        None
+    }
+
+    #[cfg(target_os = "linux")]
+    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<Address> {
+        let module = self.get_module_by_name(module_name)?;
+
+        let pattern_bytes = Self::pattern_to_bytes(pattern);
+
+        for (i, window) in module
+            .module_info
+            .data
+            .windows(pattern_bytes.len())
+            .enumerate()
+        {
             if window
                 .iter()
                 .zip(&pattern_bytes)
@@ -122,7 +151,8 @@ impl Process {
     pub fn get_module_by_name<'a>(&'a self, name: &'a str) -> Option<Module<'a>> {
         self.modules
             .get(name)
-            .map(|data| Module::parse(name, data).unwrap())
+            .map(|entry| Module::parse(name, entry).unwrap())
+        // Module::parse(name, self.modules.get_mut(name)?).ok()
     }
 
     /// Returns a vector of `Module` instances parsed from the process's loaded modules.
@@ -137,8 +167,8 @@ impl Process {
     pub fn modules(&self) -> Result<Vec<Module>> {
         let mut modules = Vec::new();
 
-        for (name, data) in &self.modules {
-            modules.push(Module::parse(name, data)?);
+        for (name, entry) in &self.modules {
+            modules.push(Module::parse(name, entry)?);
         }
 
         Ok(modules)
@@ -418,6 +448,15 @@ impl Process {
         Ok(())
     }
 
+    #[cfg(target_os = "linux")]
+    fn read_elf_file(path: &PathBuf) -> Result<Vec<u8>> {
+        let mut file = File::open(path)?;
+        let mut data = Vec::new();
+        file.read_to_end(&mut data)?;
+
+        Ok(data)
+    }
+
     fn get_transformed_module_name(path: PathBuf) -> Option<String> {
         if let Ok(module_path) = path.into_os_string().into_string() {
             if let Some(module_name) = module_path.split('/').last() {
@@ -436,27 +475,35 @@ impl Process {
     fn parse_loaded_modules(&mut self) -> Result<()> {
         let process = process::Process::new(self.id as i32)?;
 
-        let mut modules_info: HashMap<String, (u64, u64)> = HashMap::new();
+        let mut modules_info: HashMap<String, ((u64, u64), PathBuf)> = HashMap::new();
 
         for mmap in process.maps()? {
             let mmap_path = match mmap.pathname {
                 process::MMapPath::Path(path) => path,
                 _ => continue,
             };
-            let module_name = match Process::get_transformed_module_name(mmap_path) {
+            let module_name = match Process::get_transformed_module_name(mmap_path.clone()) {
                 Some(new_path) => new_path,
                 None => continue,
             };
+            if module_name != "client.dll"
+                && module_name != "engine2.dll"
+                && module_name != "inputsystem.dll"
+                && module_name != "matchmaking.dll"
+                && module_name != "schemasystem.dll"
+            {
+                continue;
+            }
             let module_entry = modules_info
                 .entry(module_name)
-                .or_insert_with(|| (mmap.address));
-            *module_entry = (
-                std::cmp::min(mmap.address.0, module_entry.0),
-                std::cmp::max(mmap.address.1, module_entry.1),
+                .or_insert_with(|| (mmap.address, mmap_path));
+            module_entry.0 = (
+                std::cmp::min(mmap.address.0, module_entry.0 .0),
+                std::cmp::max(mmap.address.1, module_entry.0 .1),
             );
         }
 
-        for (module_name, address_space) in modules_info.into_iter() {
+        for (module_name, (address_space, path)) in modules_info.into_iter() {
             let (start, end) = address_space;
             let mut data = vec![0; (end - start + 1) as usize];
             if let Ok(_) = self.read_memory_raw(
@@ -464,7 +511,15 @@ impl Process {
                 data.as_mut_ptr() as *mut _,
                 data.len(),
             ) {
-                self.modules.insert(module_name, data);
+                self.modules.insert(
+                    module_name,
+                    ModuleEntry {
+                        path: path.clone(),
+                        start_addr: (start as usize).into(),
+                        data: data,
+                        module_file_data: Process::read_elf_file(&path)?,
+                    },
+                );
             }
         }
 
