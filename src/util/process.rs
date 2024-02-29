@@ -322,11 +322,12 @@ impl Process {
         length: Option<usize>,
     ) -> Result<Address> {
         // The displacement value can be negative.
-        let displacement = self.read_memory::<i32>(address.add(offset.unwrap_or(0x1)))?;
+        let displacement =
+            self.read_memory::<i32>(address.add(offset.unwrap_or(0x1).try_into().unwrap()))?;
 
         Ok(address
-            .add(length.unwrap_or(0x5))
-            .add(displacement as usize))
+            .add(length.unwrap_or(0x5).try_into().unwrap())
+            .add(displacement.into()))
     }
 
     /// Resolves the absolute address of a RIP-relative address.
@@ -348,11 +349,12 @@ impl Process {
         length: Option<usize>,
     ) -> Result<Address> {
         // The displacement value can be negative.
-        let displacement = self.read_memory::<i32>(address.add(offset.unwrap_or(0x3)))?;
+        let displacement =
+            self.read_memory::<i32>(address.add(offset.unwrap_or(0x3).try_into().unwrap()))?;
 
         Ok(address
-            .add(length.unwrap_or(0x7))
-            .add(displacement as usize))
+            .add(length.unwrap_or(0x7).try_into().unwrap())
+            .add(displacement.into()))
     }
 
     /// Returns the process ID of the first process with the given name.

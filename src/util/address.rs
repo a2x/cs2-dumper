@@ -18,8 +18,12 @@ impl Address {
     ///
     /// * `Address` - A new `Address` struct with the value of the current address plus the given value.
     #[inline]
-    pub fn add(&self, value: usize) -> Self {
-        Self(self.0 + value)
+    pub fn add(&self, value: i64) -> Self {
+        if value.is_negative() {
+            self.sub(value.wrapping_abs() as usize)
+        } else {
+            Self(self.0 + value as usize)
+        }
     }
 
     /// Returns true if the value of the address is zero.

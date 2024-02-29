@@ -81,7 +81,7 @@ pub fn dump_offsets(
                     let mut result: usize = 0;
 
                     process.read_memory_raw(
-                        address.add(start),
+                        address.add(start.try_into().unwrap()),
                         &mut result as *mut _ as *mut _,
                         end - start,
                     )?;
