@@ -3,12 +3,24 @@
     {
       "name": "dwBuildNumber",
       "module": "engine2.dll",
-      "pattern": "8B 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC 48 8B 0D ? ? ? ? 48 8D 05",
+      "pattern": "89 05 ? ? ? ? 48 8D 0D ? ? ? ? FF 15 ? ? ? ? E9",
       "operations": [
         {
           "type": "rip",
           "offset": 2,
           "length": 6
+        }
+      ]
+    },
+    {
+      "name": "dwNetworkGameClient_deltaTick",
+      "module": "engine2.dll",
+      "pattern": "89 83 ? ? ? ? 40 B7",
+      "operations": [
+        {
+          "type": "slice",
+          "start": 2,
+          "end": 4
         }
       ]
     },
@@ -280,18 +292,6 @@
         }
       ]
     },
-	{
-      "name": "dwNetworkGameClient_deltaTick",
-      "module": "engine2.dll",
-      "pattern": "89 83 ? ? ? ? 40 b7",
-      "operations": [
-        {
-          "type": "slice",
-          "start": 2,
-          "end": 4
-        }
-      ]
-    },
     {
       "name": "dwNetworkGameClient_maxClients",
       "module": "engine2.dll",
@@ -361,7 +361,7 @@
     {
       "name": "dwViewAngles",
       "module": "client.dll",
-      "pattern": "48 8B 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 C7 02",
+      "pattern": "4C 8B 0D ? ? ? ? 48 8D 04 5B",
       "operations": [
         {
           "type": "rip"
