@@ -109,8 +109,21 @@ pub fn dump_interfaces(
         if let Some(create_interface_export) = module.get_export_by_name("CreateInterface") {
             info!("Dumping interfaces in <blue>{}</>...", module.name);
 
-            let create_interface_address =
-                process.resolve_rip(create_interface_export, None, None)?;
+            let create_interface_address;
+
+            #[cfg(target_os = "windows")]
+            {
+                create_interface_address =
+                    process.resolve_rip(create_interface_export, None, None)?;
+            }
+
+            #[cfg(target_os = "linux")]
+            {
+                let create_interface_fn =
+                    process.resolve_jmp(create_interface_export, None, None)?;
+                create_interface_address =
+                    process.resolve_rip(create_interface_fn.add(0x10), None, None)?;
+            }
 
             let mut node = process.read_memory::<*mut InterfaceNode>(create_interface_address)?;
 
