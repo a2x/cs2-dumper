@@ -3,47 +3,47 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 470656
     AnimationSystem_001: 449024
 client_dll: # client.dll
-    LegacyGameUI001: 9092352
-    Source2ClientUI001: 9023328
-    Source2ClientPrediction001: 8052720
-    ClientToolsInfo_001: 7545712
-    Source2Client002: 7545744
-    GameClientExports001: 7545728
-    EmptyWorldService001_Client: 4735744
-    Source2ClientConfig001: 4648736
+    LegacyGameUI001: 9099504
+    Source2ClientUI001: 9030480
+    Source2ClientPrediction001: 8053440
+    ClientToolsInfo_001: 7542864
+    Source2Client002: 7542896
+    GameClientExports001: 7542880
+    EmptyWorldService001_Client: 4715552
+    Source2ClientConfig001: 4634432
 engine2_dll: # engine2.dll
-    SimpleEngineLoopService_001: 2059616
-    ClientServerEngineLoopService_001: 2009968
-    KeyValueCache001: 1995328
-    HostStateMgr001: 1985056
-    GameEventSystemServerV001: 1966032
-    GameEventSystemClientV001: 1966016
-    EngineServiceMgr001: 1947936
-    VProfService_001: 1871616
-    ToolService_001: 1866624
-    StatsService_001: 1847088
-    SplitScreenService_001: 1835600
-    SoundService_001: 1808816
-    ScreenshotService001: 1790896
-    RenderService_001: 1780208
-    NetworkService_001: 1778944
-    NetworkServerService_001: 1757920
-    NetworkP2PService_001: 1740144
-    NetworkClientService_001: 1712176
-    MapListService_001: 1683056
-    InputService_001: 1605424
-    GameUIService_001: 1582096
-    GameResourceServiceServerV001: 1571440
-    GameResourceServiceClientV001: 1571424
-    BugService001: 1542304
-    BenchmarkService001: 1536064
-    VENGINE_GAMEUIFUNCS_VERSION005: 1190128
-    EngineGameUI001: 1186944
-    INETSUPPORT_001: 986096
-    Source2EngineToServerStringTable001: 694144
-    Source2EngineToServer001: 598272
-    Source2EngineToClientStringTable001: 568112
-    Source2EngineToClient001: 399952
+    SimpleEngineLoopService_001: 2059792
+    ClientServerEngineLoopService_001: 2010144
+    KeyValueCache001: 1995504
+    HostStateMgr001: 1985232
+    GameEventSystemServerV001: 1966208
+    GameEventSystemClientV001: 1966192
+    EngineServiceMgr001: 1948112
+    VProfService_001: 1871520
+    ToolService_001: 1866528
+    StatsService_001: 1846992
+    SplitScreenService_001: 1835504
+    SoundService_001: 1808720
+    ScreenshotService001: 1790800
+    RenderService_001: 1780112
+    NetworkService_001: 1778848
+    NetworkServerService_001: 1757824
+    NetworkP2PService_001: 1740048
+    NetworkClientService_001: 1712080
+    MapListService_001: 1682960
+    InputService_001: 1605344
+    GameUIService_001: 1582016
+    GameResourceServiceServerV001: 1571360
+    GameResourceServiceClientV001: 1571344
+    BugService001: 1542224
+    BenchmarkService001: 1535984
+    VENGINE_GAMEUIFUNCS_VERSION005: 1190048
+    EngineGameUI001: 1186864
+    INETSUPPORT_001: 986016
+    Source2EngineToServerStringTable001: 694064
+    Source2EngineToServer001: 598192
+    Source2EngineToClientStringTable001: 568032
+    Source2EngineToClient001: 399872
 filesystem_stdio_dll: # filesystem_stdio.dll
     VAsyncFileSystem2_001: 424288
     VFileSystem017: 424272
@@ -77,10 +77,10 @@ meshsystem_dll: # meshsystem.dll
 navsystem_dll: # navsystem.dll
     NavSystem001: 36400
 networksystem_dll: # networksystem.dll
-    SerializedEntitiesVersion001: 873952
-    NetworkSystemVersion001: 784688
-    NetworkMessagesVersion001: 654272
-    FlattenedSerializersVersion001: 519968
+    SerializedEntitiesVersion001: 878800
+    NetworkSystemVersion001: 784800
+    NetworkMessagesVersion001: 654384
+    FlattenedSerializersVersion001: 520080
 panorama_dll: # panorama.dll
     PanoramaUIEngine001: 383328
 panorama_text_pango_dll: # panorama_text_pango.dll
@@ -88,13 +88,13 @@ panorama_text_pango_dll: # panorama_text_pango.dll
 panoramauiclient_dll: # panoramauiclient.dll
     PanoramaUIClient001: 73744
 particles_dll: # particles.dll
-    ParticleSystemMgr003: 377728
+    ParticleSystemMgr003: 365008
 pulse_system_dll: # pulse_system.dll
-    IPulseSystem_001: 37824
+    IPulseSystem_001: 17600
 rendersystemdx11_dll: # rendersystemdx11.dll
-    RenderUtils_001: 343072
-    VRenderDeviceMgrBackdoor001: 307888
-    RenderDeviceMgr001: 307872
+    RenderUtils_001: 348496
+    VRenderDeviceMgrBackdoor001: 313312
+    RenderDeviceMgr001: 313296
 resourcesystem_dll: # resourcesystem.dll
     ResourceSystem013: 67872
 scenefilecache_dll: # scenefilecache.dll
@@ -107,16 +107,16 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43600
 server_dll: # server.dll
-    NavGameTest001: 10755392
-    ServerToolsInfo_001: 8586240
-    Source2GameClients001: 8586256
-    Source2GameEntities001: 8586272
-    Source2Server001: 8586288
-    EmptyWorldService001_Server: 5720400
-    Source2ServerConfig001: 5659264
-    EntitySubclassUtilsV001: 2854976
-    customnavsystem001: 2318080
-    Source2GameDirector001: 1220784
+    NavGameTest001: 10767456
+    ServerToolsInfo_001: 8585440
+    Source2GameClients001: 8585456
+    Source2GameEntities001: 8585472
+    Source2Server001: 8585488
+    EmptyWorldService001_Server: 5708624
+    Source2ServerConfig001: 5660368
+    EntitySubclassUtilsV001: 2814496
+    customnavsystem001: 2277600
+    Source2GameDirector001: 1174080
 soundsystem_dll: # soundsystem.dll
     SoundOpSystem001: 1484352
     SoundOpSystemEdit001: 617040
@@ -125,33 +125,33 @@ soundsystem_dll: # soundsystem.dll
 steamaudio_dll: # steamaudio.dll
     SteamAudio001: 371312
 steamclient64_dll: # steamclient64.dll
-    IVALIDATE001: 8787744
-    CLIENTENGINE_INTERFACE_VERSION005: 8771024
-    SteamClient021: 6677872
-    SteamClient020: 6677856
-    SteamClient019: 6677840
-    SteamClient018: 6677824
-    SteamClient017: 6677808
-    SteamClient016: 6677792
-    SteamClient015: 6677776
-    SteamClient014: 6677760
-    SteamClient013: 6677744
-    SteamClient012: 6677728
-    SteamClient011: 6677712
-    SteamClient010: 6677696
-    SteamClient009: 6677680
-    SteamClient008: 6677664
-    SteamClient007: 6677648
-    SteamClient006: 6677632
-    p2pvoice002: 892592
-    p2pvoicesingleton002: 878864
+    IVALIDATE001: 8806832
+    CLIENTENGINE_INTERFACE_VERSION005: 8790304
+    SteamClient021: 6698832
+    SteamClient020: 6698816
+    SteamClient019: 6698800
+    SteamClient018: 6698784
+    SteamClient017: 6698768
+    SteamClient016: 6698752
+    SteamClient015: 6698736
+    SteamClient014: 6698720
+    SteamClient013: 6698704
+    SteamClient012: 6698688
+    SteamClient011: 6698672
+    SteamClient010: 6698656
+    SteamClient009: 6698640
+    SteamClient008: 6698624
+    SteamClient007: 6698608
+    SteamClient006: 6698592
+    p2pvoice002: 892784
+    p2pvoicesingleton002: 879056
 tier0_dll: # tier0.dll
     VStringTokenSystem001: 1641232
     TestScriptMgr001: 1313952
     VProcessUtils002: 1253760
     VEngineCvar007: 406976
 v8system_dll: # v8system.dll
-    Source2V8System001: 5776
+    Source2V8System001: 6480
 valve_avi_dll: # valve_avi.dll
     VAvi001: 12176
 valve_wmf_dll: # valve_wmf.dll
@@ -162,7 +162,7 @@ vphysics2_dll: # vphysics2.dll
 vscript_dll: # vscript.dll
     VScriptManager010: 204800
 vstdlib_s64_dll: # vstdlib_s64.dll
-    IVALIDATE001: 151776
+    IVALIDATE001: 151840
     VEngineCvar002: 22368
 worldrenderer_dll: # worldrenderer.dll
     WorldRendererMgr001: 132576

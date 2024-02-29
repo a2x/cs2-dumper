@@ -827,7 +827,11 @@
         "comment": "bool"
       },
       "m_bIsPlayerNameDirty": {
-        "value": 2092,
+        "value": 2108,
+        "comment": "bool"
+      },
+      "m_bMvpNoMusic": {
+        "value": 2088,
         "comment": "bool"
       },
       "m_bPawnHasDefuser": {
@@ -845,6 +849,10 @@
       "m_bScoreReported": {
         "value": 1993,
         "comment": "bool"
+      },
+      "m_eMvpReason": {
+        "value": 2092,
+        "comment": "int32_t"
       },
       "m_flForceTeamTime": {
         "value": 1836,
@@ -903,7 +911,15 @@
         "comment": "int32_t"
       },
       "m_iMVPs": {
-        "value": 2088,
+        "value": 2104,
+        "comment": "int32_t"
+      },
+      "m_iMusicKitID": {
+        "value": 2096,
+        "comment": "int32_t"
+      },
+      "m_iMusicKitMVPs": {
+        "value": 2100,
         "comment": "int32_t"
       },
       "m_iPawnArmor": {
@@ -5741,10 +5757,6 @@
       },
       "m_bBombPlanted": {
         "value": 6859,
-        "comment": "bool"
-      },
-      "m_bDroppedFromDeath": {
-        "value": 6860,
         "comment": "bool"
       },
       "m_bIsPlantingViaUse": {

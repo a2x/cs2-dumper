@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 23 Feb 2024 13:31:36 +0000
+ * Thu, 29 Feb 2024 02:15:36 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -327,8 +327,12 @@ public static class CCSPlayerController { // CBasePlayerController
     public const nint m_hOriginalControllerOfCurrentPawn = 0x808; // CHandle<CCSPlayerController>
     public const nint m_iScore = 0x80C; // int32_t
     public const nint m_vecKills = 0x810; // C_NetworkUtlVectorBase<EKillTypes_t>
-    public const nint m_iMVPs = 0x828; // int32_t
-    public const nint m_bIsPlayerNameDirty = 0x82C; // bool
+    public const nint m_bMvpNoMusic = 0x828; // bool
+    public const nint m_eMvpReason = 0x82C; // int32_t
+    public const nint m_iMusicKitID = 0x830; // int32_t
+    public const nint m_iMusicKitMVPs = 0x834; // int32_t
+    public const nint m_iMVPs = 0x838; // int32_t
+    public const nint m_bIsPlayerNameDirty = 0x83C; // bool
 }
 
 public static class CCSPlayerControllerAPI {
@@ -1734,7 +1738,6 @@ public static class C_C4 { // C_CSWeaponBase
     public const nint m_nSpotRules = 0x1AC0; // int32_t
     public const nint m_bPlayedArmingBeeps = 0x1AC4; // bool[7]
     public const nint m_bBombPlanted = 0x1ACB; // bool
-    public const nint m_bDroppedFromDeath = 0x1ACC; // bool
 }
 
 public static class C_CSGOViewModel { // C_PredictedViewModel

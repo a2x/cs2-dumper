@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 23 Feb 2024 13:31:36 +0000
+ * Thu, 29 Feb 2024 02:15:36 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -988,7 +988,6 @@ pub mod CC4 { // CCSWeaponBase
     pub const m_nSpotRules: usize = 0xED0; // int32_t
     pub const m_bPlayedArmingBeeps: usize = 0xED4; // bool[7]
     pub const m_bBombPlanted: usize = 0xEDB; // bool
-    pub const m_bDroppedFromDeath: usize = 0xEDC; // bool
 }
 
 pub mod CCSArmsRaceScript { // CCSGameModeScript
@@ -1320,11 +1319,12 @@ pub mod CCSGameRules { // CTeamplayRules
     pub const m_iNumSpawnableTerrorist: usize = 0xDC8; // int32_t
     pub const m_iNumSpawnableCT: usize = 0xDCC; // int32_t
     pub const m_arrSelectedHostageSpawnIndices: usize = 0xDD0; // CUtlVector<int32_t>
-    pub const m_bFirstConnected: usize = 0xDE8; // bool
-    pub const m_bCompleteReset: usize = 0xDE9; // bool
-    pub const m_bPickNewTeamsOnReset: usize = 0xDEA; // bool
-    pub const m_bScrambleTeamsOnRestart: usize = 0xDEB; // bool
-    pub const m_bSwapTeamsOnRestart: usize = 0xDEC; // bool
+    pub const m_nSpawnPointsRandomSeed: usize = 0xDE8; // int32_t
+    pub const m_bFirstConnected: usize = 0xDEC; // bool
+    pub const m_bCompleteReset: usize = 0xDED; // bool
+    pub const m_bPickNewTeamsOnReset: usize = 0xDEE; // bool
+    pub const m_bScrambleTeamsOnRestart: usize = 0xDEF; // bool
+    pub const m_bSwapTeamsOnRestart: usize = 0xDF0; // bool
     pub const m_nEndMatchTiedVotes: usize = 0xDF8; // CUtlVector<int32_t>
     pub const m_bNeedToAskPlayersForContinueVote: usize = 0xE14; // bool
     pub const m_numQueuedMatchmakingAccounts: usize = 0xE18; // uint32_t
@@ -1378,56 +1378,58 @@ pub mod CCSGameRules { // CTeamplayRules
     pub const m_vecMainCTSpawnPos: usize = 0xF58; // Vector
     pub const m_CTSpawnPointsMasterList: usize = 0xF68; // CUtlVector<SpawnPoint*>
     pub const m_TerroristSpawnPointsMasterList: usize = 0xF80; // CUtlVector<SpawnPoint*>
-    pub const m_iNextCTSpawnPoint: usize = 0xF98; // int32_t
-    pub const m_iNextTerroristSpawnPoint: usize = 0xF9C; // int32_t
-    pub const m_CTSpawnPoints: usize = 0xFA0; // CUtlVector<SpawnPoint*>
-    pub const m_TerroristSpawnPoints: usize = 0xFB8; // CUtlVector<SpawnPoint*>
-    pub const m_bIsUnreservedGameServer: usize = 0xFD0; // bool
-    pub const m_fAutobalanceDisplayTime: usize = 0xFD4; // float
-    pub const m_bAllowWeaponSwitch: usize = 0x1240; // bool
-    pub const m_bRoundTimeWarningTriggered: usize = 0x1241; // bool
-    pub const m_phaseChangeAnnouncementTime: usize = 0x1244; // GameTime_t
-    pub const m_fNextUpdateTeamClanNamesTime: usize = 0x1248; // float
-    pub const m_flLastThinkTime: usize = 0x124C; // GameTime_t
-    pub const m_fAccumulatedRoundOffDamage: usize = 0x1250; // float
-    pub const m_nShorthandedBonusLastEvalRound: usize = 0x1254; // int32_t
-    pub const m_nMatchAbortedEarlyReason: usize = 0x14D0; // int32_t
-    pub const m_bHasTriggeredRoundStartMusic: usize = 0x14D4; // bool
-    pub const m_bHasTriggeredCoopSpawnReset: usize = 0x14D5; // bool
-    pub const m_bSwitchingTeamsAtRoundReset: usize = 0x14D6; // bool
-    pub const m_pGameModeRules: usize = 0x14F0; // CCSGameModeRules*
-    pub const m_BtGlobalBlackboard: usize = 0x14F8; // KeyValues3
-    pub const m_hPlayerResource: usize = 0x1560; // CHandle<CBaseEntity>
-    pub const m_RetakeRules: usize = 0x1568; // CRetakeGameRules
-    pub const m_GuardianBotSkillLevelMax: usize = 0x174C; // int32_t
-    pub const m_GuardianBotSkillLevelMin: usize = 0x1750; // int32_t
-    pub const m_arrTeamUniqueKillWeaponsMatch: usize = 0x1758; // CUtlVector<int32_t>[4]
-    pub const m_bTeamLastKillUsedUniqueWeaponMatch: usize = 0x17B8; // bool[4]
-    pub const m_nMatchEndCount: usize = 0x17E0; // uint8_t
-    pub const m_nTTeamIntroVariant: usize = 0x17E4; // int32_t
-    pub const m_nCTTeamIntroVariant: usize = 0x17E8; // int32_t
-    pub const m_bTeamIntroPeriod: usize = 0x17EC; // bool
-    pub const m_fTeamIntroPeriodEnd: usize = 0x17F0; // GameTime_t
-    pub const m_bPlayedTeamIntroVO: usize = 0x17F4; // bool
-    pub const m_iRoundEndWinnerTeam: usize = 0x17F8; // int32_t
-    pub const m_eRoundEndReason: usize = 0x17FC; // int32_t
-    pub const m_bRoundEndShowTimerDefend: usize = 0x1800; // bool
-    pub const m_iRoundEndTimerTime: usize = 0x1804; // int32_t
-    pub const m_sRoundEndFunFactToken: usize = 0x1808; // CUtlString
-    pub const m_iRoundEndFunFactPlayerSlot: usize = 0x1810; // CPlayerSlot
-    pub const m_iRoundEndFunFactData1: usize = 0x1814; // int32_t
-    pub const m_iRoundEndFunFactData2: usize = 0x1818; // int32_t
-    pub const m_iRoundEndFunFactData3: usize = 0x181C; // int32_t
-    pub const m_sRoundEndMessage: usize = 0x1820; // CUtlString
-    pub const m_iRoundEndPlayerCount: usize = 0x1828; // int32_t
-    pub const m_bRoundEndNoMusic: usize = 0x182C; // bool
-    pub const m_iRoundEndLegacy: usize = 0x1830; // int32_t
-    pub const m_nRoundEndCount: usize = 0x1834; // uint8_t
-    pub const m_iRoundStartRoundNumber: usize = 0x1838; // int32_t
-    pub const m_nRoundStartCount: usize = 0x183C; // uint8_t
-    pub const m_nRoundStartTicks: usize = 0x1840; // CUtlVector<int32_t>
-    pub const m_flLastPerfSampleTime: usize = 0x5860; // double
-    pub const m_bSkipNextServerPerfSample: usize = 0x5868; // bool
+    pub const m_bRespawningAllRespawnablePlayers: usize = 0xF98; // bool
+    pub const m_iNextCTSpawnPoint: usize = 0xF9C; // int32_t
+    pub const m_flCTSpawnPointUsedTime: usize = 0xFA0; // float
+    pub const m_iNextTerroristSpawnPoint: usize = 0xFA4; // int32_t
+    pub const m_flTerroristSpawnPointUsedTime: usize = 0xFA8; // float
+    pub const m_CTSpawnPoints: usize = 0xFB0; // CUtlVector<SpawnPoint*>
+    pub const m_TerroristSpawnPoints: usize = 0xFC8; // CUtlVector<SpawnPoint*>
+    pub const m_bIsUnreservedGameServer: usize = 0xFE0; // bool
+    pub const m_fAutobalanceDisplayTime: usize = 0xFE4; // float
+    pub const m_bAllowWeaponSwitch: usize = 0x1250; // bool
+    pub const m_bRoundTimeWarningTriggered: usize = 0x1251; // bool
+    pub const m_phaseChangeAnnouncementTime: usize = 0x1254; // GameTime_t
+    pub const m_fNextUpdateTeamClanNamesTime: usize = 0x1258; // float
+    pub const m_flLastThinkTime: usize = 0x125C; // GameTime_t
+    pub const m_fAccumulatedRoundOffDamage: usize = 0x1260; // float
+    pub const m_nShorthandedBonusLastEvalRound: usize = 0x1264; // int32_t
+    pub const m_nMatchAbortedEarlyReason: usize = 0x14E0; // int32_t
+    pub const m_bHasTriggeredRoundStartMusic: usize = 0x14E4; // bool
+    pub const m_bHasTriggeredCoopSpawnReset: usize = 0x14E5; // bool
+    pub const m_bSwitchingTeamsAtRoundReset: usize = 0x14E6; // bool
+    pub const m_pGameModeRules: usize = 0x1500; // CCSGameModeRules*
+    pub const m_BtGlobalBlackboard: usize = 0x1508; // KeyValues3
+    pub const m_hPlayerResource: usize = 0x1570; // CHandle<CBaseEntity>
+    pub const m_RetakeRules: usize = 0x1578; // CRetakeGameRules
+    pub const m_GuardianBotSkillLevelMax: usize = 0x175C; // int32_t
+    pub const m_GuardianBotSkillLevelMin: usize = 0x1760; // int32_t
+    pub const m_arrTeamUniqueKillWeaponsMatch: usize = 0x1768; // CUtlVector<int32_t>[4]
+    pub const m_bTeamLastKillUsedUniqueWeaponMatch: usize = 0x17C8; // bool[4]
+    pub const m_nMatchEndCount: usize = 0x17F0; // uint8_t
+    pub const m_nTTeamIntroVariant: usize = 0x17F4; // int32_t
+    pub const m_nCTTeamIntroVariant: usize = 0x17F8; // int32_t
+    pub const m_bTeamIntroPeriod: usize = 0x17FC; // bool
+    pub const m_fTeamIntroPeriodEnd: usize = 0x1800; // GameTime_t
+    pub const m_bPlayedTeamIntroVO: usize = 0x1804; // bool
+    pub const m_iRoundEndWinnerTeam: usize = 0x1808; // int32_t
+    pub const m_eRoundEndReason: usize = 0x180C; // int32_t
+    pub const m_bRoundEndShowTimerDefend: usize = 0x1810; // bool
+    pub const m_iRoundEndTimerTime: usize = 0x1814; // int32_t
+    pub const m_sRoundEndFunFactToken: usize = 0x1818; // CUtlString
+    pub const m_iRoundEndFunFactPlayerSlot: usize = 0x1820; // CPlayerSlot
+    pub const m_iRoundEndFunFactData1: usize = 0x1824; // int32_t
+    pub const m_iRoundEndFunFactData2: usize = 0x1828; // int32_t
+    pub const m_iRoundEndFunFactData3: usize = 0x182C; // int32_t
+    pub const m_sRoundEndMessage: usize = 0x1830; // CUtlString
+    pub const m_iRoundEndPlayerCount: usize = 0x1838; // int32_t
+    pub const m_bRoundEndNoMusic: usize = 0x183C; // bool
+    pub const m_iRoundEndLegacy: usize = 0x1840; // int32_t
+    pub const m_nRoundEndCount: usize = 0x1844; // uint8_t
+    pub const m_iRoundStartRoundNumber: usize = 0x1848; // int32_t
+    pub const m_nRoundStartCount: usize = 0x184C; // uint8_t
+    pub const m_flLastPerfSampleTime: usize = 0x5858; // double
+    pub const m_bSkipNextServerPerfSample: usize = 0x5860; // bool
 }
 
 pub mod CCSGameRulesProxy { // CGameRulesProxy
@@ -1540,21 +1542,25 @@ pub mod CCSPlayerController { // CBasePlayerController
     pub const m_iRoundScore: usize = 0x808; // int32_t
     pub const m_iRoundsWon: usize = 0x80C; // int32_t
     pub const m_vecKills: usize = 0x810; // CNetworkUtlVectorBase<EKillTypes_t>
-    pub const m_iMVPs: usize = 0x828; // int32_t
-    pub const m_nUpdateCounter: usize = 0x82C; // int32_t
-    pub const m_flSmoothedPing: usize = 0x830; // float
-    pub const m_lastHeldVoteTimer: usize = 0xF8D8; // IntervalTimer
-    pub const m_bShowHints: usize = 0xF8F0; // bool
-    pub const m_iNextTimeCheck: usize = 0xF8F4; // int32_t
-    pub const m_bJustDidTeamKill: usize = 0xF8F8; // bool
-    pub const m_bPunishForTeamKill: usize = 0xF8F9; // bool
-    pub const m_bGaveTeamDamageWarning: usize = 0xF8FA; // bool
-    pub const m_bGaveTeamDamageWarningThisRound: usize = 0xF8FB; // bool
-    pub const m_dblLastReceivedPacketPlatFloatTime: usize = 0xF900; // double
-    pub const m_LastTeamDamageWarningTime: usize = 0xF908; // GameTime_t
-    pub const m_LastTimePlayerWasDisconnectedForPawnsRemove: usize = 0xF90C; // GameTime_t
-    pub const m_nSuspiciousHitCount: usize = 0xF910; // uint32_t
-    pub const m_nNonSuspiciousHitStreak: usize = 0xF914; // uint32_t
+    pub const m_bMvpNoMusic: usize = 0x828; // bool
+    pub const m_eMvpReason: usize = 0x82C; // int32_t
+    pub const m_iMusicKitID: usize = 0x830; // int32_t
+    pub const m_iMusicKitMVPs: usize = 0x834; // int32_t
+    pub const m_iMVPs: usize = 0x838; // int32_t
+    pub const m_nUpdateCounter: usize = 0x83C; // int32_t
+    pub const m_flSmoothedPing: usize = 0x840; // float
+    pub const m_lastHeldVoteTimer: usize = 0xF8E8; // IntervalTimer
+    pub const m_bShowHints: usize = 0xF900; // bool
+    pub const m_iNextTimeCheck: usize = 0xF904; // int32_t
+    pub const m_bJustDidTeamKill: usize = 0xF908; // bool
+    pub const m_bPunishForTeamKill: usize = 0xF909; // bool
+    pub const m_bGaveTeamDamageWarning: usize = 0xF90A; // bool
+    pub const m_bGaveTeamDamageWarningThisRound: usize = 0xF90B; // bool
+    pub const m_dblLastReceivedPacketPlatFloatTime: usize = 0xF910; // double
+    pub const m_LastTeamDamageWarningTime: usize = 0xF918; // GameTime_t
+    pub const m_LastTimePlayerWasDisconnectedForPawnsRemove: usize = 0xF91C; // GameTime_t
+    pub const m_nSuspiciousHitCount: usize = 0xF920; // uint32_t
+    pub const m_nNonSuspiciousHitStreak: usize = 0xF924; // uint32_t
 }
 
 pub mod CCSPlayerControllerAPI {
@@ -1696,7 +1702,7 @@ pub mod CCSPlayerPawnBase { // CBasePlayerPawn
     pub const m_iNumSpawns: usize = 0xD9C; // int32_t
     pub const m_iShouldHaveCash: usize = 0xDA0; // int32_t
     pub const m_bInvalidSteamLogonDelayed: usize = 0xDA4; // bool
-    pub const m_flLastAction: usize = 0xDA8; // GameTime_t
+    pub const m_flIdleTimeSinceLastAction: usize = 0xDA8; // float
     pub const m_flNameChangeHistory: usize = 0xDAC; // float[5]
     pub const m_fLastGivenDefuserTime: usize = 0xDC0; // float
     pub const m_fLastGivenBombTime: usize = 0xDC4; // float
@@ -4981,9 +4987,8 @@ pub mod CPlantedC4 { // CBaseAnimGraph
     pub const m_bVoiceAlertFired: usize = 0x9C4; // bool
     pub const m_bVoiceAlertPlayed: usize = 0x9C5; // bool[4]
     pub const m_flNextBotBeepTime: usize = 0x9CC; // GameTime_t
-    pub const m_bPlantedAfterPickup: usize = 0x9D4; // bool
-    pub const m_angCatchUpToPlayerEye: usize = 0x9D8; // QAngle
-    pub const m_flLastSpinDetectionTime: usize = 0x9E4; // GameTime_t
+    pub const m_angCatchUpToPlayerEye: usize = 0x9D4; // QAngle
+    pub const m_flLastSpinDetectionTime: usize = 0x9E0; // GameTime_t
 }
 
 pub mod CPlatTrigger { // CBaseModelEntity

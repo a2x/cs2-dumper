@@ -826,7 +826,6 @@ CC4: # CCSWeaponBase
     m_nSpotRules: 3792 # int32_t
     m_bPlayedArmingBeeps: 3796 # bool[7]
     m_bBombPlanted: 3803 # bool
-    m_bDroppedFromDeath: 3804 # bool
 CCSArmsRaceScript: # CCSGameModeScript
     m_pOuter: 216 # CCSGameModeRules_ArmsRace*
 CCSBot: # CBot
@@ -1112,11 +1111,12 @@ CCSGameRules: # CTeamplayRules
     m_iNumSpawnableTerrorist: 3528 # int32_t
     m_iNumSpawnableCT: 3532 # int32_t
     m_arrSelectedHostageSpawnIndices: 3536 # CUtlVector<int32_t>
-    m_bFirstConnected: 3560 # bool
-    m_bCompleteReset: 3561 # bool
-    m_bPickNewTeamsOnReset: 3562 # bool
-    m_bScrambleTeamsOnRestart: 3563 # bool
-    m_bSwapTeamsOnRestart: 3564 # bool
+    m_nSpawnPointsRandomSeed: 3560 # int32_t
+    m_bFirstConnected: 3564 # bool
+    m_bCompleteReset: 3565 # bool
+    m_bPickNewTeamsOnReset: 3566 # bool
+    m_bScrambleTeamsOnRestart: 3567 # bool
+    m_bSwapTeamsOnRestart: 3568 # bool
     m_nEndMatchTiedVotes: 3576 # CUtlVector<int32_t>
     m_bNeedToAskPlayersForContinueVote: 3604 # bool
     m_numQueuedMatchmakingAccounts: 3608 # uint32_t
@@ -1170,56 +1170,58 @@ CCSGameRules: # CTeamplayRules
     m_vecMainCTSpawnPos: 3928 # Vector
     m_CTSpawnPointsMasterList: 3944 # CUtlVector<SpawnPoint*>
     m_TerroristSpawnPointsMasterList: 3968 # CUtlVector<SpawnPoint*>
-    m_iNextCTSpawnPoint: 3992 # int32_t
-    m_iNextTerroristSpawnPoint: 3996 # int32_t
-    m_CTSpawnPoints: 4000 # CUtlVector<SpawnPoint*>
-    m_TerroristSpawnPoints: 4024 # CUtlVector<SpawnPoint*>
-    m_bIsUnreservedGameServer: 4048 # bool
-    m_fAutobalanceDisplayTime: 4052 # float
-    m_bAllowWeaponSwitch: 4672 # bool
-    m_bRoundTimeWarningTriggered: 4673 # bool
-    m_phaseChangeAnnouncementTime: 4676 # GameTime_t
-    m_fNextUpdateTeamClanNamesTime: 4680 # float
-    m_flLastThinkTime: 4684 # GameTime_t
-    m_fAccumulatedRoundOffDamage: 4688 # float
-    m_nShorthandedBonusLastEvalRound: 4692 # int32_t
-    m_nMatchAbortedEarlyReason: 5328 # int32_t
-    m_bHasTriggeredRoundStartMusic: 5332 # bool
-    m_bHasTriggeredCoopSpawnReset: 5333 # bool
-    m_bSwitchingTeamsAtRoundReset: 5334 # bool
-    m_pGameModeRules: 5360 # CCSGameModeRules*
-    m_BtGlobalBlackboard: 5368 # KeyValues3
-    m_hPlayerResource: 5472 # CHandle<CBaseEntity>
-    m_RetakeRules: 5480 # CRetakeGameRules
-    m_GuardianBotSkillLevelMax: 5964 # int32_t
-    m_GuardianBotSkillLevelMin: 5968 # int32_t
-    m_arrTeamUniqueKillWeaponsMatch: 5976 # CUtlVector<int32_t>[4]
-    m_bTeamLastKillUsedUniqueWeaponMatch: 6072 # bool[4]
-    m_nMatchEndCount: 6112 # uint8_t
-    m_nTTeamIntroVariant: 6116 # int32_t
-    m_nCTTeamIntroVariant: 6120 # int32_t
-    m_bTeamIntroPeriod: 6124 # bool
-    m_fTeamIntroPeriodEnd: 6128 # GameTime_t
-    m_bPlayedTeamIntroVO: 6132 # bool
-    m_iRoundEndWinnerTeam: 6136 # int32_t
-    m_eRoundEndReason: 6140 # int32_t
-    m_bRoundEndShowTimerDefend: 6144 # bool
-    m_iRoundEndTimerTime: 6148 # int32_t
-    m_sRoundEndFunFactToken: 6152 # CUtlString
-    m_iRoundEndFunFactPlayerSlot: 6160 # CPlayerSlot
-    m_iRoundEndFunFactData1: 6164 # int32_t
-    m_iRoundEndFunFactData2: 6168 # int32_t
-    m_iRoundEndFunFactData3: 6172 # int32_t
-    m_sRoundEndMessage: 6176 # CUtlString
-    m_iRoundEndPlayerCount: 6184 # int32_t
-    m_bRoundEndNoMusic: 6188 # bool
-    m_iRoundEndLegacy: 6192 # int32_t
-    m_nRoundEndCount: 6196 # uint8_t
-    m_iRoundStartRoundNumber: 6200 # int32_t
-    m_nRoundStartCount: 6204 # uint8_t
-    m_nRoundStartTicks: 6208 # CUtlVector<int32_t>
-    m_flLastPerfSampleTime: 22624 # double
-    m_bSkipNextServerPerfSample: 22632 # bool
+    m_bRespawningAllRespawnablePlayers: 3992 # bool
+    m_iNextCTSpawnPoint: 3996 # int32_t
+    m_flCTSpawnPointUsedTime: 4000 # float
+    m_iNextTerroristSpawnPoint: 4004 # int32_t
+    m_flTerroristSpawnPointUsedTime: 4008 # float
+    m_CTSpawnPoints: 4016 # CUtlVector<SpawnPoint*>
+    m_TerroristSpawnPoints: 4040 # CUtlVector<SpawnPoint*>
+    m_bIsUnreservedGameServer: 4064 # bool
+    m_fAutobalanceDisplayTime: 4068 # float
+    m_bAllowWeaponSwitch: 4688 # bool
+    m_bRoundTimeWarningTriggered: 4689 # bool
+    m_phaseChangeAnnouncementTime: 4692 # GameTime_t
+    m_fNextUpdateTeamClanNamesTime: 4696 # float
+    m_flLastThinkTime: 4700 # GameTime_t
+    m_fAccumulatedRoundOffDamage: 4704 # float
+    m_nShorthandedBonusLastEvalRound: 4708 # int32_t
+    m_nMatchAbortedEarlyReason: 5344 # int32_t
+    m_bHasTriggeredRoundStartMusic: 5348 # bool
+    m_bHasTriggeredCoopSpawnReset: 5349 # bool
+    m_bSwitchingTeamsAtRoundReset: 5350 # bool
+    m_pGameModeRules: 5376 # CCSGameModeRules*
+    m_BtGlobalBlackboard: 5384 # KeyValues3
+    m_hPlayerResource: 5488 # CHandle<CBaseEntity>
+    m_RetakeRules: 5496 # CRetakeGameRules
+    m_GuardianBotSkillLevelMax: 5980 # int32_t
+    m_GuardianBotSkillLevelMin: 5984 # int32_t
+    m_arrTeamUniqueKillWeaponsMatch: 5992 # CUtlVector<int32_t>[4]
+    m_bTeamLastKillUsedUniqueWeaponMatch: 6088 # bool[4]
+    m_nMatchEndCount: 6128 # uint8_t
+    m_nTTeamIntroVariant: 6132 # int32_t
+    m_nCTTeamIntroVariant: 6136 # int32_t
+    m_bTeamIntroPeriod: 6140 # bool
+    m_fTeamIntroPeriodEnd: 6144 # GameTime_t
+    m_bPlayedTeamIntroVO: 6148 # bool
+    m_iRoundEndWinnerTeam: 6152 # int32_t
+    m_eRoundEndReason: 6156 # int32_t
+    m_bRoundEndShowTimerDefend: 6160 # bool
+    m_iRoundEndTimerTime: 6164 # int32_t
+    m_sRoundEndFunFactToken: 6168 # CUtlString
+    m_iRoundEndFunFactPlayerSlot: 6176 # CPlayerSlot
+    m_iRoundEndFunFactData1: 6180 # int32_t
+    m_iRoundEndFunFactData2: 6184 # int32_t
+    m_iRoundEndFunFactData3: 6188 # int32_t
+    m_sRoundEndMessage: 6192 # CUtlString
+    m_iRoundEndPlayerCount: 6200 # int32_t
+    m_bRoundEndNoMusic: 6204 # bool
+    m_iRoundEndLegacy: 6208 # int32_t
+    m_nRoundEndCount: 6212 # uint8_t
+    m_iRoundStartRoundNumber: 6216 # int32_t
+    m_nRoundStartCount: 6220 # uint8_t
+    m_flLastPerfSampleTime: 22616 # double
+    m_bSkipNextServerPerfSample: 22624 # bool
 CCSGameRulesProxy: # CGameRulesProxy
     m_pGameRules: 1216 # CCSGameRules*
 CCSMinimapBoundary: # CBaseEntity
@@ -1308,21 +1310,25 @@ CCSPlayerController: # CBasePlayerController
     m_iRoundScore: 2056 # int32_t
     m_iRoundsWon: 2060 # int32_t
     m_vecKills: 2064 # CNetworkUtlVectorBase<EKillTypes_t>
-    m_iMVPs: 2088 # int32_t
-    m_nUpdateCounter: 2092 # int32_t
-    m_flSmoothedPing: 2096 # float
-    m_lastHeldVoteTimer: 63704 # IntervalTimer
-    m_bShowHints: 63728 # bool
-    m_iNextTimeCheck: 63732 # int32_t
-    m_bJustDidTeamKill: 63736 # bool
-    m_bPunishForTeamKill: 63737 # bool
-    m_bGaveTeamDamageWarning: 63738 # bool
-    m_bGaveTeamDamageWarningThisRound: 63739 # bool
-    m_dblLastReceivedPacketPlatFloatTime: 63744 # double
-    m_LastTeamDamageWarningTime: 63752 # GameTime_t
-    m_LastTimePlayerWasDisconnectedForPawnsRemove: 63756 # GameTime_t
-    m_nSuspiciousHitCount: 63760 # uint32_t
-    m_nNonSuspiciousHitStreak: 63764 # uint32_t
+    m_bMvpNoMusic: 2088 # bool
+    m_eMvpReason: 2092 # int32_t
+    m_iMusicKitID: 2096 # int32_t
+    m_iMusicKitMVPs: 2100 # int32_t
+    m_iMVPs: 2104 # int32_t
+    m_nUpdateCounter: 2108 # int32_t
+    m_flSmoothedPing: 2112 # float
+    m_lastHeldVoteTimer: 63720 # IntervalTimer
+    m_bShowHints: 63744 # bool
+    m_iNextTimeCheck: 63748 # int32_t
+    m_bJustDidTeamKill: 63752 # bool
+    m_bPunishForTeamKill: 63753 # bool
+    m_bGaveTeamDamageWarning: 63754 # bool
+    m_bGaveTeamDamageWarningThisRound: 63755 # bool
+    m_dblLastReceivedPacketPlatFloatTime: 63760 # double
+    m_LastTeamDamageWarningTime: 63768 # GameTime_t
+    m_LastTimePlayerWasDisconnectedForPawnsRemove: 63772 # GameTime_t
+    m_nSuspiciousHitCount: 63776 # uint32_t
+    m_nNonSuspiciousHitStreak: 63780 # uint32_t
 CCSPlayerControllerAPI:
 CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats: 64 # CUtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
@@ -1448,7 +1454,7 @@ CCSPlayerPawnBase: # CBasePlayerPawn
     m_iNumSpawns: 3484 # int32_t
     m_iShouldHaveCash: 3488 # int32_t
     m_bInvalidSteamLogonDelayed: 3492 # bool
-    m_flLastAction: 3496 # GameTime_t
+    m_flIdleTimeSinceLastAction: 3496 # float
     m_flNameChangeHistory: 3500 # float[5]
     m_fLastGivenDefuserTime: 3520 # float
     m_fLastGivenBombTime: 3524 # float
@@ -4041,9 +4047,8 @@ CPlantedC4: # CBaseAnimGraph
     m_bVoiceAlertFired: 2500 # bool
     m_bVoiceAlertPlayed: 2501 # bool[4]
     m_flNextBotBeepTime: 2508 # GameTime_t
-    m_bPlantedAfterPickup: 2516 # bool
-    m_angCatchUpToPlayerEye: 2520 # QAngle
-    m_flLastSpinDetectionTime: 2532 # GameTime_t
+    m_angCatchUpToPlayerEye: 2516 # QAngle
+    m_flLastSpinDetectionTime: 2528 # GameTime_t
 CPlatTrigger: # CBaseModelEntity
     m_pPlatform: 1808 # CHandle<CFuncPlat>
 CPlayerControllerComponent:

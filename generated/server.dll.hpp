@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 23 Feb 2024 13:31:36 +0000
+ * Thu, 29 Feb 2024 02:15:36 +0000
  */
 
 #pragma once
@@ -990,7 +990,6 @@ namespace CC4 { // CCSWeaponBase
     constexpr std::ptrdiff_t m_nSpotRules = 0xED0; // int32_t
     constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0xED4; // bool[7]
     constexpr std::ptrdiff_t m_bBombPlanted = 0xEDB; // bool
-    constexpr std::ptrdiff_t m_bDroppedFromDeath = 0xEDC; // bool
 }
 
 namespace CCSArmsRaceScript { // CCSGameModeScript
@@ -1322,11 +1321,12 @@ namespace CCSGameRules { // CTeamplayRules
     constexpr std::ptrdiff_t m_iNumSpawnableTerrorist = 0xDC8; // int32_t
     constexpr std::ptrdiff_t m_iNumSpawnableCT = 0xDCC; // int32_t
     constexpr std::ptrdiff_t m_arrSelectedHostageSpawnIndices = 0xDD0; // CUtlVector<int32_t>
-    constexpr std::ptrdiff_t m_bFirstConnected = 0xDE8; // bool
-    constexpr std::ptrdiff_t m_bCompleteReset = 0xDE9; // bool
-    constexpr std::ptrdiff_t m_bPickNewTeamsOnReset = 0xDEA; // bool
-    constexpr std::ptrdiff_t m_bScrambleTeamsOnRestart = 0xDEB; // bool
-    constexpr std::ptrdiff_t m_bSwapTeamsOnRestart = 0xDEC; // bool
+    constexpr std::ptrdiff_t m_nSpawnPointsRandomSeed = 0xDE8; // int32_t
+    constexpr std::ptrdiff_t m_bFirstConnected = 0xDEC; // bool
+    constexpr std::ptrdiff_t m_bCompleteReset = 0xDED; // bool
+    constexpr std::ptrdiff_t m_bPickNewTeamsOnReset = 0xDEE; // bool
+    constexpr std::ptrdiff_t m_bScrambleTeamsOnRestart = 0xDEF; // bool
+    constexpr std::ptrdiff_t m_bSwapTeamsOnRestart = 0xDF0; // bool
     constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDF8; // CUtlVector<int32_t>
     constexpr std::ptrdiff_t m_bNeedToAskPlayersForContinueVote = 0xE14; // bool
     constexpr std::ptrdiff_t m_numQueuedMatchmakingAccounts = 0xE18; // uint32_t
@@ -1380,56 +1380,58 @@ namespace CCSGameRules { // CTeamplayRules
     constexpr std::ptrdiff_t m_vecMainCTSpawnPos = 0xF58; // Vector
     constexpr std::ptrdiff_t m_CTSpawnPointsMasterList = 0xF68; // CUtlVector<SpawnPoint*>
     constexpr std::ptrdiff_t m_TerroristSpawnPointsMasterList = 0xF80; // CUtlVector<SpawnPoint*>
-    constexpr std::ptrdiff_t m_iNextCTSpawnPoint = 0xF98; // int32_t
-    constexpr std::ptrdiff_t m_iNextTerroristSpawnPoint = 0xF9C; // int32_t
-    constexpr std::ptrdiff_t m_CTSpawnPoints = 0xFA0; // CUtlVector<SpawnPoint*>
-    constexpr std::ptrdiff_t m_TerroristSpawnPoints = 0xFB8; // CUtlVector<SpawnPoint*>
-    constexpr std::ptrdiff_t m_bIsUnreservedGameServer = 0xFD0; // bool
-    constexpr std::ptrdiff_t m_fAutobalanceDisplayTime = 0xFD4; // float
-    constexpr std::ptrdiff_t m_bAllowWeaponSwitch = 0x1240; // bool
-    constexpr std::ptrdiff_t m_bRoundTimeWarningTriggered = 0x1241; // bool
-    constexpr std::ptrdiff_t m_phaseChangeAnnouncementTime = 0x1244; // GameTime_t
-    constexpr std::ptrdiff_t m_fNextUpdateTeamClanNamesTime = 0x1248; // float
-    constexpr std::ptrdiff_t m_flLastThinkTime = 0x124C; // GameTime_t
-    constexpr std::ptrdiff_t m_fAccumulatedRoundOffDamage = 0x1250; // float
-    constexpr std::ptrdiff_t m_nShorthandedBonusLastEvalRound = 0x1254; // int32_t
-    constexpr std::ptrdiff_t m_nMatchAbortedEarlyReason = 0x14D0; // int32_t
-    constexpr std::ptrdiff_t m_bHasTriggeredRoundStartMusic = 0x14D4; // bool
-    constexpr std::ptrdiff_t m_bHasTriggeredCoopSpawnReset = 0x14D5; // bool
-    constexpr std::ptrdiff_t m_bSwitchingTeamsAtRoundReset = 0x14D6; // bool
-    constexpr std::ptrdiff_t m_pGameModeRules = 0x14F0; // CCSGameModeRules*
-    constexpr std::ptrdiff_t m_BtGlobalBlackboard = 0x14F8; // KeyValues3
-    constexpr std::ptrdiff_t m_hPlayerResource = 0x1560; // CHandle<CBaseEntity>
-    constexpr std::ptrdiff_t m_RetakeRules = 0x1568; // CRetakeGameRules
-    constexpr std::ptrdiff_t m_GuardianBotSkillLevelMax = 0x174C; // int32_t
-    constexpr std::ptrdiff_t m_GuardianBotSkillLevelMin = 0x1750; // int32_t
-    constexpr std::ptrdiff_t m_arrTeamUniqueKillWeaponsMatch = 0x1758; // CUtlVector<int32_t>[4]
-    constexpr std::ptrdiff_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x17B8; // bool[4]
-    constexpr std::ptrdiff_t m_nMatchEndCount = 0x17E0; // uint8_t
-    constexpr std::ptrdiff_t m_nTTeamIntroVariant = 0x17E4; // int32_t
-    constexpr std::ptrdiff_t m_nCTTeamIntroVariant = 0x17E8; // int32_t
-    constexpr std::ptrdiff_t m_bTeamIntroPeriod = 0x17EC; // bool
-    constexpr std::ptrdiff_t m_fTeamIntroPeriodEnd = 0x17F0; // GameTime_t
-    constexpr std::ptrdiff_t m_bPlayedTeamIntroVO = 0x17F4; // bool
-    constexpr std::ptrdiff_t m_iRoundEndWinnerTeam = 0x17F8; // int32_t
-    constexpr std::ptrdiff_t m_eRoundEndReason = 0x17FC; // int32_t
-    constexpr std::ptrdiff_t m_bRoundEndShowTimerDefend = 0x1800; // bool
-    constexpr std::ptrdiff_t m_iRoundEndTimerTime = 0x1804; // int32_t
-    constexpr std::ptrdiff_t m_sRoundEndFunFactToken = 0x1808; // CUtlString
-    constexpr std::ptrdiff_t m_iRoundEndFunFactPlayerSlot = 0x1810; // CPlayerSlot
-    constexpr std::ptrdiff_t m_iRoundEndFunFactData1 = 0x1814; // int32_t
-    constexpr std::ptrdiff_t m_iRoundEndFunFactData2 = 0x1818; // int32_t
-    constexpr std::ptrdiff_t m_iRoundEndFunFactData3 = 0x181C; // int32_t
-    constexpr std::ptrdiff_t m_sRoundEndMessage = 0x1820; // CUtlString
-    constexpr std::ptrdiff_t m_iRoundEndPlayerCount = 0x1828; // int32_t
-    constexpr std::ptrdiff_t m_bRoundEndNoMusic = 0x182C; // bool
-    constexpr std::ptrdiff_t m_iRoundEndLegacy = 0x1830; // int32_t
-    constexpr std::ptrdiff_t m_nRoundEndCount = 0x1834; // uint8_t
-    constexpr std::ptrdiff_t m_iRoundStartRoundNumber = 0x1838; // int32_t
-    constexpr std::ptrdiff_t m_nRoundStartCount = 0x183C; // uint8_t
-    constexpr std::ptrdiff_t m_nRoundStartTicks = 0x1840; // CUtlVector<int32_t>
-    constexpr std::ptrdiff_t m_flLastPerfSampleTime = 0x5860; // double
-    constexpr std::ptrdiff_t m_bSkipNextServerPerfSample = 0x5868; // bool
+    constexpr std::ptrdiff_t m_bRespawningAllRespawnablePlayers = 0xF98; // bool
+    constexpr std::ptrdiff_t m_iNextCTSpawnPoint = 0xF9C; // int32_t
+    constexpr std::ptrdiff_t m_flCTSpawnPointUsedTime = 0xFA0; // float
+    constexpr std::ptrdiff_t m_iNextTerroristSpawnPoint = 0xFA4; // int32_t
+    constexpr std::ptrdiff_t m_flTerroristSpawnPointUsedTime = 0xFA8; // float
+    constexpr std::ptrdiff_t m_CTSpawnPoints = 0xFB0; // CUtlVector<SpawnPoint*>
+    constexpr std::ptrdiff_t m_TerroristSpawnPoints = 0xFC8; // CUtlVector<SpawnPoint*>
+    constexpr std::ptrdiff_t m_bIsUnreservedGameServer = 0xFE0; // bool
+    constexpr std::ptrdiff_t m_fAutobalanceDisplayTime = 0xFE4; // float
+    constexpr std::ptrdiff_t m_bAllowWeaponSwitch = 0x1250; // bool
+    constexpr std::ptrdiff_t m_bRoundTimeWarningTriggered = 0x1251; // bool
+    constexpr std::ptrdiff_t m_phaseChangeAnnouncementTime = 0x1254; // GameTime_t
+    constexpr std::ptrdiff_t m_fNextUpdateTeamClanNamesTime = 0x1258; // float
+    constexpr std::ptrdiff_t m_flLastThinkTime = 0x125C; // GameTime_t
+    constexpr std::ptrdiff_t m_fAccumulatedRoundOffDamage = 0x1260; // float
+    constexpr std::ptrdiff_t m_nShorthandedBonusLastEvalRound = 0x1264; // int32_t
+    constexpr std::ptrdiff_t m_nMatchAbortedEarlyReason = 0x14E0; // int32_t
+    constexpr std::ptrdiff_t m_bHasTriggeredRoundStartMusic = 0x14E4; // bool
+    constexpr std::ptrdiff_t m_bHasTriggeredCoopSpawnReset = 0x14E5; // bool
+    constexpr std::ptrdiff_t m_bSwitchingTeamsAtRoundReset = 0x14E6; // bool
+    constexpr std::ptrdiff_t m_pGameModeRules = 0x1500; // CCSGameModeRules*
+    constexpr std::ptrdiff_t m_BtGlobalBlackboard = 0x1508; // KeyValues3
+    constexpr std::ptrdiff_t m_hPlayerResource = 0x1570; // CHandle<CBaseEntity>
+    constexpr std::ptrdiff_t m_RetakeRules = 0x1578; // CRetakeGameRules
+    constexpr std::ptrdiff_t m_GuardianBotSkillLevelMax = 0x175C; // int32_t
+    constexpr std::ptrdiff_t m_GuardianBotSkillLevelMin = 0x1760; // int32_t
+    constexpr std::ptrdiff_t m_arrTeamUniqueKillWeaponsMatch = 0x1768; // CUtlVector<int32_t>[4]
+    constexpr std::ptrdiff_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x17C8; // bool[4]
+    constexpr std::ptrdiff_t m_nMatchEndCount = 0x17F0; // uint8_t
+    constexpr std::ptrdiff_t m_nTTeamIntroVariant = 0x17F4; // int32_t
+    constexpr std::ptrdiff_t m_nCTTeamIntroVariant = 0x17F8; // int32_t
+    constexpr std::ptrdiff_t m_bTeamIntroPeriod = 0x17FC; // bool
+    constexpr std::ptrdiff_t m_fTeamIntroPeriodEnd = 0x1800; // GameTime_t
+    constexpr std::ptrdiff_t m_bPlayedTeamIntroVO = 0x1804; // bool
+    constexpr std::ptrdiff_t m_iRoundEndWinnerTeam = 0x1808; // int32_t
+    constexpr std::ptrdiff_t m_eRoundEndReason = 0x180C; // int32_t
+    constexpr std::ptrdiff_t m_bRoundEndShowTimerDefend = 0x1810; // bool
+    constexpr std::ptrdiff_t m_iRoundEndTimerTime = 0x1814; // int32_t
+    constexpr std::ptrdiff_t m_sRoundEndFunFactToken = 0x1818; // CUtlString
+    constexpr std::ptrdiff_t m_iRoundEndFunFactPlayerSlot = 0x1820; // CPlayerSlot
+    constexpr std::ptrdiff_t m_iRoundEndFunFactData1 = 0x1824; // int32_t
+    constexpr std::ptrdiff_t m_iRoundEndFunFactData2 = 0x1828; // int32_t
+    constexpr std::ptrdiff_t m_iRoundEndFunFactData3 = 0x182C; // int32_t
+    constexpr std::ptrdiff_t m_sRoundEndMessage = 0x1830; // CUtlString
+    constexpr std::ptrdiff_t m_iRoundEndPlayerCount = 0x1838; // int32_t
+    constexpr std::ptrdiff_t m_bRoundEndNoMusic = 0x183C; // bool
+    constexpr std::ptrdiff_t m_iRoundEndLegacy = 0x1840; // int32_t
+    constexpr std::ptrdiff_t m_nRoundEndCount = 0x1844; // uint8_t
+    constexpr std::ptrdiff_t m_iRoundStartRoundNumber = 0x1848; // int32_t
+    constexpr std::ptrdiff_t m_nRoundStartCount = 0x184C; // uint8_t
+    constexpr std::ptrdiff_t m_flLastPerfSampleTime = 0x5858; // double
+    constexpr std::ptrdiff_t m_bSkipNextServerPerfSample = 0x5860; // bool
 }
 
 namespace CCSGameRulesProxy { // CGameRulesProxy
@@ -1542,21 +1544,25 @@ namespace CCSPlayerController { // CBasePlayerController
     constexpr std::ptrdiff_t m_iRoundScore = 0x808; // int32_t
     constexpr std::ptrdiff_t m_iRoundsWon = 0x80C; // int32_t
     constexpr std::ptrdiff_t m_vecKills = 0x810; // CNetworkUtlVectorBase<EKillTypes_t>
-    constexpr std::ptrdiff_t m_iMVPs = 0x828; // int32_t
-    constexpr std::ptrdiff_t m_nUpdateCounter = 0x82C; // int32_t
-    constexpr std::ptrdiff_t m_flSmoothedPing = 0x830; // float
-    constexpr std::ptrdiff_t m_lastHeldVoteTimer = 0xF8D8; // IntervalTimer
-    constexpr std::ptrdiff_t m_bShowHints = 0xF8F0; // bool
-    constexpr std::ptrdiff_t m_iNextTimeCheck = 0xF8F4; // int32_t
-    constexpr std::ptrdiff_t m_bJustDidTeamKill = 0xF8F8; // bool
-    constexpr std::ptrdiff_t m_bPunishForTeamKill = 0xF8F9; // bool
-    constexpr std::ptrdiff_t m_bGaveTeamDamageWarning = 0xF8FA; // bool
-    constexpr std::ptrdiff_t m_bGaveTeamDamageWarningThisRound = 0xF8FB; // bool
-    constexpr std::ptrdiff_t m_dblLastReceivedPacketPlatFloatTime = 0xF900; // double
-    constexpr std::ptrdiff_t m_LastTeamDamageWarningTime = 0xF908; // GameTime_t
-    constexpr std::ptrdiff_t m_LastTimePlayerWasDisconnectedForPawnsRemove = 0xF90C; // GameTime_t
-    constexpr std::ptrdiff_t m_nSuspiciousHitCount = 0xF910; // uint32_t
-    constexpr std::ptrdiff_t m_nNonSuspiciousHitStreak = 0xF914; // uint32_t
+    constexpr std::ptrdiff_t m_bMvpNoMusic = 0x828; // bool
+    constexpr std::ptrdiff_t m_eMvpReason = 0x82C; // int32_t
+    constexpr std::ptrdiff_t m_iMusicKitID = 0x830; // int32_t
+    constexpr std::ptrdiff_t m_iMusicKitMVPs = 0x834; // int32_t
+    constexpr std::ptrdiff_t m_iMVPs = 0x838; // int32_t
+    constexpr std::ptrdiff_t m_nUpdateCounter = 0x83C; // int32_t
+    constexpr std::ptrdiff_t m_flSmoothedPing = 0x840; // float
+    constexpr std::ptrdiff_t m_lastHeldVoteTimer = 0xF8E8; // IntervalTimer
+    constexpr std::ptrdiff_t m_bShowHints = 0xF900; // bool
+    constexpr std::ptrdiff_t m_iNextTimeCheck = 0xF904; // int32_t
+    constexpr std::ptrdiff_t m_bJustDidTeamKill = 0xF908; // bool
+    constexpr std::ptrdiff_t m_bPunishForTeamKill = 0xF909; // bool
+    constexpr std::ptrdiff_t m_bGaveTeamDamageWarning = 0xF90A; // bool
+    constexpr std::ptrdiff_t m_bGaveTeamDamageWarningThisRound = 0xF90B; // bool
+    constexpr std::ptrdiff_t m_dblLastReceivedPacketPlatFloatTime = 0xF910; // double
+    constexpr std::ptrdiff_t m_LastTeamDamageWarningTime = 0xF918; // GameTime_t
+    constexpr std::ptrdiff_t m_LastTimePlayerWasDisconnectedForPawnsRemove = 0xF91C; // GameTime_t
+    constexpr std::ptrdiff_t m_nSuspiciousHitCount = 0xF920; // uint32_t
+    constexpr std::ptrdiff_t m_nNonSuspiciousHitStreak = 0xF924; // uint32_t
 }
 
 namespace CCSPlayerControllerAPI {
@@ -1698,7 +1704,7 @@ namespace CCSPlayerPawnBase { // CBasePlayerPawn
     constexpr std::ptrdiff_t m_iNumSpawns = 0xD9C; // int32_t
     constexpr std::ptrdiff_t m_iShouldHaveCash = 0xDA0; // int32_t
     constexpr std::ptrdiff_t m_bInvalidSteamLogonDelayed = 0xDA4; // bool
-    constexpr std::ptrdiff_t m_flLastAction = 0xDA8; // GameTime_t
+    constexpr std::ptrdiff_t m_flIdleTimeSinceLastAction = 0xDA8; // float
     constexpr std::ptrdiff_t m_flNameChangeHistory = 0xDAC; // float[5]
     constexpr std::ptrdiff_t m_fLastGivenDefuserTime = 0xDC0; // float
     constexpr std::ptrdiff_t m_fLastGivenBombTime = 0xDC4; // float
@@ -4983,9 +4989,8 @@ namespace CPlantedC4 { // CBaseAnimGraph
     constexpr std::ptrdiff_t m_bVoiceAlertFired = 0x9C4; // bool
     constexpr std::ptrdiff_t m_bVoiceAlertPlayed = 0x9C5; // bool[4]
     constexpr std::ptrdiff_t m_flNextBotBeepTime = 0x9CC; // GameTime_t
-    constexpr std::ptrdiff_t m_bPlantedAfterPickup = 0x9D4; // bool
-    constexpr std::ptrdiff_t m_angCatchUpToPlayerEye = 0x9D8; // QAngle
-    constexpr std::ptrdiff_t m_flLastSpinDetectionTime = 0x9E4; // GameTime_t
+    constexpr std::ptrdiff_t m_angCatchUpToPlayerEye = 0x9D4; // QAngle
+    constexpr std::ptrdiff_t m_flLastSpinDetectionTime = 0x9E0; // GameTime_t
 }
 
 namespace CPlatTrigger { // CBaseModelEntity

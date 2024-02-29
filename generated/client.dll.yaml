@@ -245,8 +245,12 @@ CCSPlayerController: # CBasePlayerController
     m_hOriginalControllerOfCurrentPawn: 2056 # CHandle<CCSPlayerController>
     m_iScore: 2060 # int32_t
     m_vecKills: 2064 # C_NetworkUtlVectorBase<EKillTypes_t>
-    m_iMVPs: 2088 # int32_t
-    m_bIsPlayerNameDirty: 2092 # bool
+    m_bMvpNoMusic: 2088 # bool
+    m_eMvpReason: 2092 # int32_t
+    m_iMusicKitID: 2096 # int32_t
+    m_iMusicKitMVPs: 2100 # int32_t
+    m_iMVPs: 2104 # int32_t
+    m_bIsPlayerNameDirty: 2108 # bool
 CCSPlayerControllerAPI:
 CCSPlayerController_ActionTrackingServices: # CPlayerControllerComponent
     m_perRoundStats: 64 # C_UtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
@@ -1416,7 +1420,6 @@ C_C4: # C_CSWeaponBase
     m_nSpotRules: 6848 # int32_t
     m_bPlayedArmingBeeps: 6852 # bool[7]
     m_bBombPlanted: 6859 # bool
-    m_bDroppedFromDeath: 6860 # bool
 C_CSGOViewModel: # C_PredictedViewModel
     m_bShouldIgnoreOffsetAndAccuracy: 3944 # bool
     m_nWeaponParity: 3948 # uint32_t

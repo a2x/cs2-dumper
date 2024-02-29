@@ -1,6 +1,6 @@
 /*
  * Created using https://github.com/a2x/cs2-dumper
- * Fri, 23 Feb 2024 13:31:37 +0000
+ * Thu, 29 Feb 2024 02:15:37 +0000
  */
 
 #pragma once
@@ -331,8 +331,12 @@ namespace CCSPlayerController { // CBasePlayerController
     constexpr std::ptrdiff_t m_hOriginalControllerOfCurrentPawn = 0x808; // CHandle<CCSPlayerController>
     constexpr std::ptrdiff_t m_iScore = 0x80C; // int32_t
     constexpr std::ptrdiff_t m_vecKills = 0x810; // C_NetworkUtlVectorBase<EKillTypes_t>
-    constexpr std::ptrdiff_t m_iMVPs = 0x828; // int32_t
-    constexpr std::ptrdiff_t m_bIsPlayerNameDirty = 0x82C; // bool
+    constexpr std::ptrdiff_t m_bMvpNoMusic = 0x828; // bool
+    constexpr std::ptrdiff_t m_eMvpReason = 0x82C; // int32_t
+    constexpr std::ptrdiff_t m_iMusicKitID = 0x830; // int32_t
+    constexpr std::ptrdiff_t m_iMusicKitMVPs = 0x834; // int32_t
+    constexpr std::ptrdiff_t m_iMVPs = 0x838; // int32_t
+    constexpr std::ptrdiff_t m_bIsPlayerNameDirty = 0x83C; // bool
 }
 
 namespace CCSPlayerControllerAPI {
@@ -1738,7 +1742,6 @@ namespace C_C4 { // C_CSWeaponBase
     constexpr std::ptrdiff_t m_nSpotRules = 0x1AC0; // int32_t
     constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0x1AC4; // bool[7]
     constexpr std::ptrdiff_t m_bBombPlanted = 0x1ACB; // bool
-    constexpr std::ptrdiff_t m_bDroppedFromDeath = 0x1ACC; // bool
 }
 
 namespace C_CSGOViewModel { // C_PredictedViewModel
