@@ -16,7 +16,6 @@ pub struct ModuleEntry {
     pub path: PathBuf,
     pub start_addr: usize,
     pub data: Vec<u8>,
-    pub module_file_data: Vec<u8>,
 }
 /// Represents a module loaded in a Windows process.
 pub struct Module<'a> {
@@ -54,7 +53,7 @@ impl<'a> Module<'a> {
     // parse the elf
     #[cfg(target_os = "linux")]
     pub fn parse(name: &'a str, module_entry: &'a ModuleEntry) -> Result<Self> {
-        let elf = Elf::parse(&module_entry.module_file_data)?;
+        let elf = Elf::parse(&module_entry.data)?;
         Ok(Self {
             name,
             module_info: module_entry,

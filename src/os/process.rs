@@ -355,19 +355,14 @@ impl Process {
 
         for (module_name, (address_space, path)) in modules_info.into_iter() {
             let (start, end) = address_space;
-            let mut data = vec![0; (end - start + 1) as usize];
-            if let Ok(_) = self.read_memory_raw(
-                (start as usize).into(),
-                data.as_mut_ptr() as *mut _,
-                data.len(),
-            ) {
+            // let mut data = vec![0; (end - start + 1) as usize];
+            if let Ok(data) = Process::read_elf_file(&path) {
                 self.modules.insert(
                     module_name,
                     ModuleEntry {
                         path: path.clone(),
                         start_addr: start as usize,
                         data: data,
-                        module_file_data: Process::read_elf_file(&path)?,
                     },
                 );
             }
