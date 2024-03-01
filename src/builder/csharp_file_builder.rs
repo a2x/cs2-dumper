@@ -1,9 +1,7 @@
-use super::FileBuilder;
-
 use std::io::{Result, Write};
 
-/// A structure representing a builder for C# files.
-/// The builder implements the `FileBuilder` trait.
+use super::FileBuilder;
+
 #[derive(Clone, Debug, PartialEq)]
 pub struct CSharpFileBuilder;
 

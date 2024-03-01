@@ -1,25 +1,13 @@
+use anyhow::Result;
+
+use simplelog::{debug, info};
+
 use super::{generate_files, Entries, Entry};
 
 use crate::builder::FileBuilderEnum;
 use crate::sdk::SchemaSystem;
 use crate::util::Process;
 
-use anyhow::Result;
-
-use simplelog::{debug, info};
-
-/// Dumps all schema system classes and writes the results to a file.
-///
-/// # Arguments
-///
-/// * `process` - A reference to the `Process` struct.
-/// * `builders` - A mutable reference to a vector of `FileBuilderEnum`.
-/// * `file_path` - A string slice representing the path to the file to write the results to.
-/// * `indent` - The number of spaces to use for indentation in the output file.
-///
-/// # Returns
-///
-/// * `Result<()>` - A `Result` indicating the outcome of the operation.
 pub fn dump_schemas(
     process: &Process,
     builders: &mut Vec<FileBuilderEnum>,

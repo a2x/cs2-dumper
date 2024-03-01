@@ -1,27 +1,22 @@
-use super::FileBuilder;
-
-use serde::Serialize;
-
 use std::collections::BTreeMap;
 use std::io::{Result, Write};
 
-/// Represents a JSON offset value with an optional comment.
+use serde::Serialize;
+
+use super::FileBuilder;
+
 #[derive(Clone, Debug, Default, PartialEq, Serialize)]
 struct JsonOffsetValue {
     value: usize,
     comment: Option<String>,
 }
 
-/// Represents a JSON module, which contains data in the form of a `BTreeMap` of string keys and
-/// `JsonOffsetValue` values, as well as an optional comment.
 #[derive(Clone, Debug, Default, PartialEq, Serialize)]
 struct JsonModule {
     data: BTreeMap<String, JsonOffsetValue>,
     comment: Option<String>,
 }
 
-/// A structure representing a builder for JSON files.
-/// The builder implements the `FileBuilder` trait.
 #[derive(Clone, Debug, Default, PartialEq)]
 pub struct JsonFileBuilder {
     data: BTreeMap<String, JsonModule>,

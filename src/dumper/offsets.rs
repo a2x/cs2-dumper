@@ -1,3 +1,9 @@
+use std::fs::File;
+
+use anyhow::Result;
+
+use simplelog::{debug, error, info};
+
 use super::{generate_files, Entries, Entry};
 
 use crate::builder::FileBuilderEnum;
@@ -5,24 +11,6 @@ use crate::config::Config;
 use crate::config::Operation::*;
 use crate::util::Process;
 
-use anyhow::Result;
-
-use simplelog::{debug, error, info};
-
-use std::fs::File;
-
-/// Dumps all offsets specified in the `config.json` file and writes the results to a file.
-///
-/// # Arguments
-///
-/// * `process` - A reference to the `Process` struct.
-/// * `builders` - A mutable reference to a vector of `FileBuilderEnum`.
-/// * `file_path` - A string slice representing the path to the file to write the results to.
-/// * `indent` - The number of spaces to use for indentation in the output file.
-///
-/// # Returns
-///
-/// * `Result<()>` - A `Result` indicating the outcome of the operation.
 pub fn dump_offsets(
     process: &Process,
     builders: &mut Vec<FileBuilderEnum>,

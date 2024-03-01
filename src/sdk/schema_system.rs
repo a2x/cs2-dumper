@@ -1,27 +1,17 @@
+use std::mem;
+
+use anyhow::{bail, Result};
+
 use super::SchemaSystemTypeScope;
 
 use crate::util::{Address, Process};
 
-use anyhow::{bail, Result};
-
-use std::mem;
-
-/// Represents the schema system.
 pub struct SchemaSystem<'a> {
     process: &'a Process,
     address: Address,
 }
 
 impl<'a> SchemaSystem<'a> {
-    /// Creates a new `SchemaSystem` instance.
-    ///
-    /// # Arguments
-    ///
-    /// * `process` - A reference to the `Process` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<SchemaSystem>` - The new `SchemaSystem` instance.
     pub fn new(process: &'a Process) -> Result<Self> {
         let mut address = process.find_pattern(
             "schemasystem.dll",
@@ -33,15 +23,6 @@ impl<'a> SchemaSystem<'a> {
         Ok(Self { process, address })
     }
 
-    /// Returns a vector of `SchemaSystemTypeScope` objects.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `SchemaSystem` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<Vec<SchemaSystemTypeScope>>` - A vector of `SchemaSystemTypeScope` objects.
     pub fn type_scopes(&self) -> Result<Vec<SchemaSystemTypeScope>> {
         let size = self.process.read_memory::<u32>(self.address + 0x190)?;
 
