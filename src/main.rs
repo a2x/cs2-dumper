@@ -119,8 +119,8 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn map_file_extension_to_builder(ext: &str) -> Result<FileBuilderEnum, &'static str> {
-    match ext {
+fn map_file_extension_to_builder(extension: &str) -> Result<FileBuilderEnum, &'static str> {
+    match extension {
         ".cs" => Ok(FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder)),
         ".hpp" => Ok(FileBuilderEnum::CppFileBuilder(CppFileBuilder)),
         ".json" => Ok(FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default())),

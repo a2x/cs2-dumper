@@ -28,14 +28,14 @@ pub enum Operation {
 }
 
 #[derive(Debug, Deserialize, Serialize)]
+pub struct Config {
+    pub signatures: Vec<Signature>,
+}
+
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Signature {
     pub name: String,
     pub module: String,
     pub pattern: String,
     pub operations: Vec<Operation>,
-}
-
-#[derive(Debug, Deserialize, Serialize)]
-pub struct Config {
-    pub signatures: Vec<Signature>,
 }

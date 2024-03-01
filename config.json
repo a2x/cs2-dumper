@@ -79,7 +79,7 @@
     {
       "name": "dwForceCrouch",
       "module": "client.dll",
-      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 05 ? ? ? ? 48 83 C4 ? E9 ? ? ? ? CC CC CC CC CC CC CC CC CC CC 48 83 EC ? 66 C7 44 24",
       "operations": [
         {
           "type": "rip"
@@ -93,7 +93,7 @@
     {
       "name": "dwForceForward",
       "module": "client.dll",
-      "pattern": "48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 48 8D 05 ? ? ? ? 48 89 45 ? 4C 6B E3",
+      "pattern": "48 8D 05 ? ? ? ? 48 89 05 ? ? ? ? 48 83 C4 ? E9 ? ? ? ? CC CC CC CC CC CC CC CC CC CC 48 81 EC",
       "operations": [
         {
           "type": "rip"
@@ -149,7 +149,7 @@
     {
       "name": "dwGameEntitySystem",
       "module": "client.dll",
-      "pattern": "48 8B 1D ? ? ? ? 48 89 1D",
+      "pattern": "48 89 0D ? ? ? ? E9 ? ? ? ? CC",
       "operations": [
         {
           "type": "rip"
@@ -181,7 +181,7 @@
     {
       "name": "dwGameTypes",
       "module": "matchmaking.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC ? F0 81 0D",
+      "pattern": "48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 33 D2",
       "operations": [
         {
           "type": "rip"
@@ -191,7 +191,7 @@
     {
       "name": "dwGameTypes_mapName",
       "module": "matchmaking.dll",
-      "pattern": "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC ? F0 81 0D",
+      "pattern": "48 8B 05 ? ? ? ? 48 8D 0D ? ? ? ? 33 D2",
       "operations": [
         {
           "type": "rip"
@@ -205,7 +205,7 @@
     {
       "name": "dwGlobalVars",
       "module": "client.dll",
-      "pattern": "48 89 0D ? ? ? ? 48 89 41",
+      "pattern": "48 89 15 ? ? ? ? 48 8D 05 ? ? ? ? 48 85 D2",
       "operations": [
         {
           "type": "rip"
@@ -245,7 +245,7 @@
     {
       "name": "dwLocalPlayerController",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 4F",
+      "pattern": "48 8B 05 ? ? ? ? 48 85 C0 74 ? 8B 88",
       "operations": [
         {
           "type": "rip"
@@ -339,7 +339,7 @@
     {
       "name": "dwSensitivity",
       "module": "client.dll",
-      "pattern": "48 8B 05 ? ? ? ? 48 8B 40 ? F3 0F 10 00 F3 0F 59 86",
+      "pattern": "48 8B 05 ? ? ? ? 48 8B 40 ? F3 41 0F 59 F4",
       "operations": [
         {
           "type": "rip"
