@@ -71,7 +71,7 @@ pub fn dump_interfaces(
                 let create_interface_fn =
                     process.resolve_jmp(create_interface_export, None, None)?;
                 create_interface_address =
-                    process.resolve_rip(create_interface_fn.add(0x10), None, None)?;
+                    process.resolve_rip(create_interface_fn + 0x10, None, None)?;
             }
 
             let mut node = process.read_memory::<*mut InterfaceNode>(create_interface_address)?;
