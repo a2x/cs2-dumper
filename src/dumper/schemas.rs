@@ -5,8 +5,8 @@ use simplelog::{debug, info};
 use super::{generate_files, Entries, Entry};
 
 use crate::builder::FileBuilderEnum;
+use crate::os::Process;
 use crate::sdk::SchemaSystem;
-use crate::util::Process;
 
 pub fn dump_schemas(
     process: &Process,

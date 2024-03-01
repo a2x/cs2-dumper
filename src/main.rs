@@ -14,13 +14,13 @@ use simplelog::{info, ColorChoice, ConfigBuilder, TermLogger, TerminalMode};
 
 use builder::*;
 use dumper::{dump_interfaces, dump_offsets, dump_schemas};
-use util::Process;
+use os::Process;
 
 mod builder;
 mod config;
 mod dumper;
+mod os;
 mod sdk;
-mod util;
 
 #[derive(Debug, Parser)]
 #[command(name = "cs2-dumper")]

@@ -2,7 +2,7 @@ use anyhow::Result;
 
 use super::{SchemaClassInfo, SchemaTypeDeclaredClass, UtlTsHash};
 
-use crate::util::{Address, Process};
+use crate::os::{Address, Process};
 
 pub struct SchemaSystemTypeScope<'a> {
     process: &'a Process,

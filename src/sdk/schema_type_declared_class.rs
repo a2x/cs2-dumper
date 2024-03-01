@@ -1,6 +1,6 @@
 use anyhow::Result;
 
-use crate::util::{Address, Process};
+use crate::os::{Address, Process};
 
 pub struct SchemaTypeDeclaredClass<'a> {
     process: &'a Process,

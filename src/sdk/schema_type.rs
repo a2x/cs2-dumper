@@ -6,7 +6,7 @@ use lazy_static::lazy_static;
 
 use regex::Regex;
 
-use crate::util::{Address, Process};
+use crate::os::{Address, Process};
 
 const TYPE_MAP: &[(&'static str, &'static str)] = &[
     ("uint8", "uint8_t"),

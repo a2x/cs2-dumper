@@ -4,7 +4,7 @@ use anyhow::{bail, Result};
 
 use super::SchemaSystemTypeScope;
 
-use crate::util::{Address, Process};
+use crate::os::{Address, Process};
 
 pub struct SchemaSystem<'a> {
     process: &'a Process,

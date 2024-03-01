@@ -2,7 +2,7 @@ use std::mem::offset_of;
 
 use anyhow::Result;
 
-use crate::util::Process;
+use crate::os::Process;
 
 #[derive(Debug)]
 #[repr(C)]

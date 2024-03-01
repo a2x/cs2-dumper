@@ -8,7 +8,7 @@ use simplelog::{debug, info};
 use super::{generate_files, Entries, Entry};
 
 use crate::builder::FileBuilderEnum;
-use crate::util::{Address, Process};
+use crate::os::{Address, Process};
 
 #[derive(Debug)]
 #[repr(C)]

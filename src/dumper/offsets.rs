@@ -9,7 +9,7 @@ use super::{generate_files, Entries, Entry};
 use crate::builder::FileBuilderEnum;
 use crate::config::Config;
 use crate::config::Operation::*;
-use crate::util::Process;
+use crate::os::Process;
 
 pub fn dump_offsets(
     process: &Process,

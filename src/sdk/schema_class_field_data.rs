@@ -2,7 +2,7 @@ use anyhow::Result;
 
 use super::SchemaType;
 
-use crate::util::{Address, Process};
+use crate::os::{Address, Process};
 
 pub struct SchemaClassFieldData<'a> {
     process: &'a Process,
