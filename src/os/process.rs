@@ -199,7 +199,12 @@ impl Process {
         // The displacement value can be negative.
         let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x1))?;
 
-        Ok((address + displacement as usize) + length.unwrap_or(0x5))
+        let final_address = if displacement.is_negative() {
+            address - displacement.wrapping_abs() as usize
+        } else {
+            address + displacement as usize
+        } + length.unwrap_or(0x5);
+        Ok(final_address)
     }
 
     pub fn resolve_rip(
@@ -211,7 +216,12 @@ impl Process {
         // The displacement value can be negative.
         let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x3))?;
 
-        Ok((address + displacement as usize) + length.unwrap_or(0x7))
+        let final_address = if displacement.is_negative() {
+            address - displacement.wrapping_abs() as usize
+        } else {
+            address + displacement as usize
+        } + length.unwrap_or(0x7);
+        Ok(final_address)
     }
 
     #[cfg(target_os = "windows")]
