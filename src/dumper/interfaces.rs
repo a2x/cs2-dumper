@@ -8,7 +8,7 @@ use simplelog::{debug, info};
 use super::{generate_files, Entries, Entry};
 
 use crate::builder::FileBuilderEnum;
-use crate::os::{Address, Process};
+use crate::os::Process;
 
 #[derive(Debug)]
 #[repr(C)]
@@ -19,7 +19,7 @@ struct InterfaceNode {
 }
 
 impl InterfaceNode {
-    fn instance(&self, process: &Process) -> Result<Address> {
+    fn instance(&self, process: &Process) -> Result<usize> {
         process
             .read_memory::<usize>(
                 (self as *const _ as usize + offset_of!(InterfaceNode, create_fn)).into(),

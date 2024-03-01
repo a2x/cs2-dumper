@@ -4,11 +4,11 @@ use anyhow::{bail, Result};
 
 use super::SchemaSystemTypeScope;
 
-use crate::os::{Address, Process};
+use crate::os::Process;
 
 pub struct SchemaSystem<'a> {
     process: &'a Process,
-    address: Address,
+    address: usize,
 }
 
 impl<'a> SchemaSystem<'a> {
@@ -16,7 +16,7 @@ impl<'a> SchemaSystem<'a> {
         let mut address = process.find_pattern(
             "schemasystem.dll",
             "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28"
-        ).expect("Failed to find pattern for SchemaSystem");
+        ).expect("unable to find schema system pattern");
 
         address = process.resolve_rip(address, None, None)?;
 
@@ -27,7 +27,7 @@ impl<'a> SchemaSystem<'a> {
         let size = self.process.read_memory::<u32>(self.address + 0x190)?;
 
         if size == 0 {
-            bail!("Type scopes size is 0");
+            bail!("no type scopes found");
         }
 
         let data = self.process.read_memory::<usize>(self.address + 0x198)?;
@@ -42,7 +42,7 @@ impl<'a> SchemaSystem<'a> {
 
         let type_scopes: Vec<SchemaSystemTypeScope> = addresses
             .iter()
-            .map(|&address| SchemaSystemTypeScope::new(self.process, address.into()))
+            .map(|&address| SchemaSystemTypeScope::new(self.process, address))
             .collect();
 
         Ok(type_scopes)

@@ -2,26 +2,26 @@ use anyhow::Result;
 
 use super::SchemaClassFieldData;
 
-use crate::os::{Address, Process};
+use crate::os::Process;
 
 pub struct SchemaClassInfo<'a> {
     process: &'a Process,
-    address: Address,
-    class_name: String,
+    address: usize,
+    name: String,
 }
 
 impl<'a> SchemaClassInfo<'a> {
-    pub fn new(process: &'a Process, address: Address, class_name: &str) -> Self {
+    pub fn new(process: &'a Process, address: usize, name: &str) -> Self {
         Self {
             process,
             address,
-            class_name: class_name.to_string(),
+            name: name.to_string(),
         }
     }
 
     #[inline]
     pub fn name(&self) -> &str {
-        &self.class_name
+        &self.name
     }
 
     pub fn fields(&self) -> Result<Vec<SchemaClassFieldData>> {
@@ -46,14 +46,13 @@ impl<'a> SchemaClassInfo<'a> {
     }
 
     pub fn parent(&self) -> Result<Option<SchemaClassInfo>> {
-        let address = Address::from(self.process.read_memory::<usize>(self.address + 0x38)?);
+        let address = self.process.read_memory::<usize>(self.address + 0x38)?;
 
-        if address.is_zero() {
+        if address == 0 {
             return Ok(None);
         }
 
-        let parent = Address::from(self.process.read_memory::<usize>(address + 0x8)?);
-
+        let parent = self.process.read_memory::<usize>(address + 0x8)?;
         let name_ptr = self.process.read_memory::<usize>(parent + 0x8)?;
         let name = self.process.read_string(name_ptr.into())?;
 

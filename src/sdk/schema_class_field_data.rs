@@ -2,15 +2,15 @@ use anyhow::Result;
 
 use super::SchemaType;
 
-use crate::os::{Address, Process};
+use crate::os::Process;
 
 pub struct SchemaClassFieldData<'a> {
     process: &'a Process,
-    address: Address,
+    address: usize,
 }
 
 impl<'a> SchemaClassFieldData<'a> {
-    pub fn new(process: &'a Process, address: Address) -> Self {
+    pub fn new(process: &'a Process, address: usize) -> Self {
         Self { process, address }
     }
 
@@ -21,12 +21,9 @@ impl<'a> SchemaClassFieldData<'a> {
     }
 
     pub fn r#type(&self) -> Result<SchemaType> {
-        Ok(SchemaType::new(
-            self.process,
-            self.process
-                .read_memory::<usize>(self.address + 0x8)?
-                .into(),
-        ))
+        let address = self.process.read_memory::<usize>(self.address + 0x8)?;
+
+        Ok(SchemaType::new(self.process, address))
     }
 
     pub fn offset(&self) -> Result<u16> {

@@ -52,11 +52,7 @@ pub fn dump_offsets(
                     let size = size.unwrap_or(8);
 
                     for _ in 0..times {
-                        process.read_memory_raw(
-                            address,
-                            &mut address.0 as *mut _ as *mut _,
-                            size,
-                        )?;
+                        process.read_memory_raw(address, &mut address as *mut _ as *mut _, size)?;
                     }
                 }
                 Jmp { offset, length } => {
@@ -69,7 +65,7 @@ pub fn dump_offsets(
                     let mut result: usize = 0;
 
                     process.read_memory_raw(
-                        address.add(start),
+                        address + start,
                         &mut result as *mut _ as *mut _,
                         end - start,
                     )?;
@@ -86,17 +82,17 @@ pub fn dump_offsets(
                 signature.name, address
             );
 
-            (signature.name, address.0)
+            (signature.name, address)
         } else {
             debug!(
                 "Found <bright-yellow>{}</> @ <bright-magenta>{:#X}</> (<blue>{}</> + <bright-blue>{:#X}</>)",
                 signature.name,
                 address,
                 signature.module,
-                address.sub(module.base().0)
+                address - module.base()
             );
 
-            (signature.name, address.sub(module.base().0).0)
+            (signature.name, address - module.base())
         };
 
         if name == "dwBuildNumber" {

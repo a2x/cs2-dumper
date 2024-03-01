@@ -10,7 +10,7 @@ use windows::Win32::System::Diagnostics::Debug::ReadProcessMemory;
 use windows::Win32::System::Diagnostics::ToolHelp::*;
 use windows::Win32::System::Threading::{OpenProcess, PROCESS_ALL_ACCESS};
 
-use super::{Address, Module};
+use super::Module;
 
 #[derive(Debug)]
 pub struct Process {
@@ -36,7 +36,7 @@ impl Process {
         Ok(process)
     }
 
-    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<Address> {
+    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<usize> {
         let module = self.get_module_by_name(module_name)?;
 
         let pattern_bytes = Self::pattern_to_bytes(pattern);
@@ -70,7 +70,7 @@ impl Process {
         Ok(modules)
     }
 
-    pub fn read_memory<T>(&self, address: Address) -> Result<T> {
+    pub fn read_memory<T>(&self, address: usize) -> Result<T> {
         let mut buffer: T = unsafe { mem::zeroed() };
 
         self.read_memory_raw(
@@ -82,16 +82,11 @@ impl Process {
         Ok(buffer)
     }
 
-    pub fn read_memory_raw(
-        &self,
-        address: Address,
-        buffer: *mut c_void,
-        size: usize,
-    ) -> Result<()> {
+    pub fn read_memory_raw(&self, address: usize, buffer: *mut c_void, size: usize) -> Result<()> {
         unsafe {
             ReadProcessMemory(
                 self.handle,
-                address.as_ptr(),
+                address as *mut _,
                 buffer,
                 size,
                 Some(ptr::null_mut()),
@@ -100,7 +95,7 @@ impl Process {
         .map_err(|e| e.into())
     }
 
-    pub fn read_string(&self, address: Address) -> Result<String> {
+    pub fn read_string(&self, address: usize) -> Result<String> {
         let mut buffer = Vec::new();
 
         for i in 0.. {
@@ -113,7 +108,7 @@ impl Process {
         Ok(String::from_utf8(buffer)?)
     }
 
-    pub fn read_string_length(&self, address: Address, length: usize) -> Result<String> {
+    pub fn read_string_length(&self, address: usize, length: usize) -> Result<String> {
         let mut buffer = vec![0; length];
 
         self.read_memory_raw(address, buffer.as_mut_ptr() as *mut _, length)?;
@@ -127,30 +122,26 @@ impl Process {
 
     pub fn resolve_jmp(
         &self,
-        address: Address,
+        address: usize,
         offset: Option<usize>,
         length: Option<usize>,
-    ) -> Result<Address> {
+    ) -> Result<usize> {
         // The displacement value can be negative.
-        let displacement = self.read_memory::<i32>(address.add(offset.unwrap_or(0x1)))?;
+        let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x1))?;
 
-        Ok(address
-            .add(length.unwrap_or(0x5))
-            .add(displacement as usize))
+        Ok((address + displacement as usize) + length.unwrap_or(0x5))
     }
 
     pub fn resolve_rip(
         &self,
-        address: Address,
+        address: usize,
         offset: Option<usize>,
         length: Option<usize>,
-    ) -> Result<Address> {
+    ) -> Result<usize> {
         // The displacement value can be negative.
-        let displacement = self.read_memory::<i32>(address.add(offset.unwrap_or(0x3)))?;
+        let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x3))?;
 
-        Ok(address
-            .add(length.unwrap_or(0x7))
-            .add(displacement as usize))
+        Ok((address + displacement as usize) + length.unwrap_or(0x7))
     }
 
     fn get_process_id_by_name(process_name: &str) -> Result<u32> {
@@ -193,7 +184,7 @@ impl Process {
                 let mut data = vec![0; entry.modBaseSize as usize];
 
                 if let Ok(_) = self.read_memory_raw(
-                    entry.modBaseAddr.into(),
+                    entry.modBaseAddr as _,
                     data.as_mut_ptr() as *mut _,
                     data.len(),
                 ) {

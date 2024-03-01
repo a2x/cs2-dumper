@@ -15,7 +15,7 @@ struct HashFixedDataInternal<T, K> {
 impl<T, K> HashFixedDataInternal<T, K> {
     fn next(&self, process: &Process) -> Result<*mut HashFixedDataInternal<T, K>> {
         process.read_memory::<*mut HashFixedDataInternal<T, K>>(
-            (self as *const _ as usize + offset_of!(HashFixedDataInternal<T, K>, next)).into(),
+            (self as *const _ as usize + offset_of!(HashFixedDataInternal<T, K>, next)) as _,
         )
     }
 }
@@ -31,7 +31,7 @@ struct HashBucketDataInternal<T, K> {
 impl<T, K> HashBucketDataInternal<T, K> {
     fn next(&self, process: &Process) -> Result<*mut HashFixedDataInternal<T, K>> {
         process.read_memory::<*mut HashFixedDataInternal<T, K>>(
-            (self as *const _ as usize + offset_of!(HashBucketDataInternal<T, K>, next)).into(),
+            (self as *const _ as usize + offset_of!(HashBucketDataInternal<T, K>, next)) as _,
         )
     }
 }
@@ -46,7 +46,7 @@ pub struct HashAllocatedData<T, K> {
 impl<T, K> HashAllocatedData<T, K> {
     fn list(&self, process: &Process) -> Result<[HashFixedDataInternal<T, K>; 128]> {
         process.read_memory::<[HashFixedDataInternal<T, K>; 128]>(
-            (self as *const _ as usize + offset_of!(HashAllocatedData<T, K>, list)).into(),
+            (self as *const _ as usize + offset_of!(HashAllocatedData<T, K>, list)) as _,
         )
     }
 }
@@ -64,19 +64,19 @@ struct HashUnallocatedData<T, K> {
 impl<T, K> HashUnallocatedData<T, K> {
     fn next(&self, process: &Process) -> Result<*mut HashUnallocatedData<T, K>> {
         process.read_memory::<*mut HashUnallocatedData<T, K>>(
-            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, next)).into(),
+            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, next)) as _,
         )
     }
 
     fn ui_key(&self, process: &Process) -> Result<K> {
         process.read_memory::<K>(
-            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, ui_key)).into(),
+            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, ui_key)) as _,
         )
     }
 
     fn block_list(&self, process: &Process) -> Result<[HashBucketDataInternal<T, K>; 256]> {
         process.read_memory::<[HashBucketDataInternal<T, K>; 256]>(
-            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, block_list)).into(),
+            (self as *const _ as usize + offset_of!(HashUnallocatedData<T, K>, block_list)) as _,
         )
     }
 }

@@ -6,7 +6,7 @@ use lazy_static::lazy_static;
 
 use regex::Regex;
 
-use crate::os::{Address, Process};
+use crate::os::Process;
 
 const TYPE_MAP: &[(&'static str, &'static str)] = &[
     ("uint8", "uint8_t"),
@@ -35,11 +35,11 @@ lazy_static! {
 
 pub struct SchemaType<'a> {
     process: &'a Process,
-    address: Address,
+    address: usize,
 }
 
 impl<'a> SchemaType<'a> {
-    pub fn new(process: &'a Process, address: Address) -> Self {
+    pub fn new(process: &'a Process, address: usize) -> Self {
         Self { process, address }
     }
 

@@ -6,8 +6,6 @@ use goblin::pe::options::ParseOptions;
 use goblin::pe::section_table::SectionTable;
 use goblin::pe::PE;
 
-use super::Address;
-
 pub struct Module<'a> {
     pub name: &'a str,
     pub data: &'a [u8],
@@ -28,8 +26,8 @@ impl<'a> Module<'a> {
     }
 
     #[inline]
-    pub fn base(&self) -> Address {
-        self.pe.image_base.into()
+    pub fn base(&self) -> usize {
+        self.pe.image_base
     }
 
     #[inline]
@@ -43,21 +41,21 @@ impl<'a> Module<'a> {
     }
 
     #[inline]
-    pub fn export_by_name(&self, name: &str) -> Option<Address> {
+    pub fn export_by_name(&self, name: &str) -> Option<usize> {
         self.pe
             .exports
             .iter()
             .find(|e| e.name.unwrap() == name)
-            .map(|e| (self.pe.image_base + e.rva).into())
+            .map(|e| self.pe.image_base + e.rva)
     }
 
     #[inline]
-    pub fn import_by_name(&self, name: &str) -> Option<Address> {
+    pub fn import_by_name(&self, name: &str) -> Option<usize> {
         self.pe
             .imports
             .iter()
             .find(|i| i.name.to_string() == name)
-            .map(|i| (self.pe.image_base + i.rva).into())
+            .map(|i| self.pe.image_base + i.rva)
     }
 
     #[inline]

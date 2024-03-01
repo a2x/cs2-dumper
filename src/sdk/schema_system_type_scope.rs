@@ -2,15 +2,15 @@ use anyhow::Result;
 
 use super::{SchemaClassInfo, SchemaTypeDeclaredClass, UtlTsHash};
 
-use crate::os::{Address, Process};
+use crate::os::Process;
 
 pub struct SchemaSystemTypeScope<'a> {
     process: &'a Process,
-    address: Address,
+    address: usize,
 }
 
 impl<'a> SchemaSystemTypeScope<'a> {
-    pub fn new(process: &'a Process, address: Address) -> Self {
+    pub fn new(process: &'a Process, address: usize) -> Self {
         Self { process, address }
     }
 
@@ -22,8 +22,8 @@ impl<'a> SchemaSystemTypeScope<'a> {
         let classes: Vec<SchemaClassInfo> = declared_classes
             .elements(self.process)?
             .iter()
-            .filter_map(|&a| {
-                let address = Address::from(a as usize);
+            .filter_map(|&class_ptr| {
+                let address = class_ptr as usize;
 
                 let declared_class = SchemaTypeDeclaredClass::new(self.process, address);
 
