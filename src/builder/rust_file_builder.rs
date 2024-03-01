@@ -2,8 +2,6 @@ use super::FileBuilder;
 
 use std::io::{Result, Write};
 
-/// A structure representing a builder for Rust files.
-/// The builder implements the `FileBuilder` trait.
 #[derive(Clone, Debug, Default, PartialEq)]
 pub struct RustFileBuilder;
 

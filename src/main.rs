@@ -1,44 +1,41 @@
 #![allow(dead_code)]
 
+use std::fs;
+use std::path::Path;
+use std::time::Instant;
+
 use anyhow::{bail, Result};
 
-use builder::*;
-
 use clap::Parser;
-
-use dumper::{dump_interfaces, dump_offsets, dump_schemas};
 
 use log::LevelFilter;
 
 use simplelog::{info, ColorChoice, ConfigBuilder, TermLogger, TerminalMode};
 
-use std::fs;
-use std::path::Path;
-use std::time::Instant;
-
-use util::Process;
+use builder::*;
+use dumper::{dump_interfaces, dump_offsets, dump_schemas};
+use os::Process;
 
 mod builder;
 mod config;
 mod dumper;
+mod os;
 mod sdk;
-mod util;
 
-/// Command line arguments for the program.
 #[derive(Debug, Parser)]
 #[command(name = "cs2-dumper")]
 #[command(author = "a2x")]
 #[command(version = "1.1.5")]
 struct Args {
-    /// Dump interfaces.
+    /// Whether to dump interfaces.
     #[arg(short, long)]
     interfaces: bool,
 
-    /// Dump offsets.
+    /// Whether to dump offsets.
     #[arg(short, long)]
     offsets: bool,
 
-    /// Dump schema system classes.
+    /// Whether to dump schema classes.
     #[arg(short, long)]
     schemas: bool,
 
@@ -47,7 +44,7 @@ struct Args {
     #[arg(
         short,
         long,
-        value_parser = parse_extension,
+        value_parser = map_file_extension_to_builder,
         value_delimiter = ',',
         default_values = [".cs", ".hpp", ".json", ".py", ".rs", ".yaml"],
     )]
@@ -89,7 +86,6 @@ fn main() -> Result<()> {
 
     TermLogger::init(log_level, config, TerminalMode::Mixed, ColorChoice::Auto)?;
 
-    // Check if the config file exists.
     if !Path::new("config.json").exists() {
         bail!("Missing config.json file");
     }
@@ -97,13 +93,8 @@ fn main() -> Result<()> {
     // Create the output directory if it doesn't exist.
     fs::create_dir_all(&output)?;
 
-    // Open a handle to the game process.
     let mut process = Process::new("cs2.exe")?;
 
-    process.initialize()?;
-
-    /*
-    // Start the timer.
     let now = Instant::now();
 
     let all = !(interfaces || offsets || schemas);
@@ -120,26 +111,15 @@ fn main() -> Result<()> {
         dump_offsets(&mut process, &mut builders, &output, indent)?;
     }
 
-    // Stop the timer.
     info!(
         "<on-green>Done!</> <green>Time elapsed: <b>{:?}</></>",
         now.elapsed()
-    ); */
+    );
 
     Ok(())
 }
 
-/// Parses the given file extension and returns the corresponding `FileBuilderEnum`.
-///
-/// # Arguments
-///
-/// * `extension` - A string slice that represents the file extension.
-///
-/// # Returns
-///
-/// * `Ok(FileBuilderEnum)` - If the extension is valid, returns the corresponding `FileBuilderEnum`.
-/// * `Err(&'static str)` - If the extension is invalid, returns an error message.
-fn parse_extension(extension: &str) -> Result<FileBuilderEnum, &'static str> {
+fn map_file_extension_to_builder(extension: &str) -> Result<FileBuilderEnum, &'static str> {
     match extension {
         ".cs" => Ok(FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder)),
         ".hpp" => Ok(FileBuilderEnum::CppFileBuilder(CppFileBuilder)),

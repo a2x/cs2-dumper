@@ -1,28 +1,16 @@
-use super::{generate_files, Entries, Entry};
-
-use crate::builder::FileBuilderEnum;
-use crate::config::Config;
-use crate::config::Operation::*;
-use crate::util::Process;
+use std::fs::File;
 
 use anyhow::Result;
 
 use simplelog::{debug, error, info};
 
-use std::fs::File;
+use super::{generate_files, Entries, Entry};
 
-/// Dumps all offsets specified in the `config.json` file and writes the results to a file.
-///
-/// # Arguments
-///
-/// * `process` - A reference to the `Process` struct.
-/// * `builders` - A mutable reference to a vector of `FileBuilderEnum`.
-/// * `file_path` - A string slice representing the path to the file to write the results to.
-/// * `indent` - The number of spaces to use for indentation in the output file.
-///
-/// # Returns
-///
-/// * `Result<()>` - A `Result` indicating the outcome of the operation.
+use crate::builder::FileBuilderEnum;
+use crate::config::Config;
+use crate::config::Operation::*;
+use crate::os::Process;
+
 pub fn dump_offsets(
     process: &Process,
     builders: &mut Vec<FileBuilderEnum>,
@@ -64,11 +52,7 @@ pub fn dump_offsets(
                     let size = size.unwrap_or(8);
 
                     for _ in 0..times {
-                        process.read_memory_raw(
-                            address,
-                            &mut address.0 as *mut _ as *mut _,
-                            size,
-                        )?;
+                        process.read_memory_raw(address, &mut address as *mut _ as *mut _, size)?;
                     }
                 }
                 Jmp { offset, length } => {
@@ -81,7 +65,7 @@ pub fn dump_offsets(
                     let mut result: usize = 0;
 
                     process.read_memory_raw(
-                        address.add(start.try_into().unwrap()),
+                        address + start,
                         &mut result as *mut _ as *mut _,
                         end - start,
                     )?;
@@ -98,17 +82,17 @@ pub fn dump_offsets(
                 signature.name, address
             );
 
-            (signature.name, address.0)
+            (signature.name, address)
         } else {
             debug!(
                 "Found <bright-yellow>{}</> @ <bright-magenta>{:#X}</> (<blue>{}</> + <bright-blue>{:#X}</>)",
                 signature.name,
                 address,
                 signature.module,
-                address.sub(module.base().0)
+                address - module.base()
             );
 
-            (signature.name, address.sub(module.base().0).0)
+            (signature.name, address - module.base())
         };
 
         if name == "dwBuildNumber" {
@@ -164,8 +148,6 @@ mod tests {
 
     fn setup() -> Result<Process> {
         let mut process = Process::new("cs2.exe")?;
-
-        process.initialize()?;
 
         Ok(process)
     }

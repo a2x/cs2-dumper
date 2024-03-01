@@ -1,4 +1,4 @@
-use super::{Address, Module, ModuleEntry};
+use super::{Module, ModuleEntry};
 
 use anyhow::{bail, Result};
 
@@ -40,61 +40,31 @@ pub struct Process {
 }
 
 impl Process {
-    /// Creates a new `Process` instance with the given name.
-    ///
-    /// # Arguments
-    ///
-    /// * `name` - A string slice that holds the name of the process.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<Self>` - A `Result` containing the `Process` instance if successful, or an error if the process could not be found.
     #[cfg(target_os = "windows")]
     pub fn new(name: &str) -> Result<Self> {
         let id = Self::get_process_id_by_name(name)?;
 
         let handle = unsafe { OpenProcess(PROCESS_ALL_ACCESS, false, id) }?;
 
-        Ok(Self {
+        let mut process = Self {
             id,
             handle,
             modules: HashMap::new(),
-        })
+        };
+        process.parse_loaded_modules()?;
+        Ok(process)
     }
 
     #[cfg(target_os = "linux")]
     pub fn new(process_name: &str) -> Result<Self> {
         let id = Self::get_process_id_by_name(process_name.strip_suffix(".exe").unwrap())?;
-        Ok(Self {
+        let mut process = Self {
             id,
             modules: HashMap::new(),
-        })
+        };
+        process.parse_loaded_modules()?;
+        Ok(process)
     }
-
-    /// Initializes the `Process` instance by parsing all loaded modules in the process.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A mutable reference to the `Process` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<()>` - A `Result` indicating the outcome of the operation.
-    pub fn initialize(&mut self) -> Result<()> {
-        self.parse_loaded_modules()
-    }
-
-    /// Searches for a pattern in the memory of a specified module and returns the address of the first occurrence.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `module_name` - A string slice that holds the name of the module to search in.
-    /// * `pattern` - A string slice that holds the pattern to search for.
-    ///
-    /// # Returns
-    ///
-    /// * `Option<Address>` - The address of the first occurrence of the pattern if found, or `None` if the pattern was not found.
     #[cfg(target_os = "windows")]
     pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<Address> {
         let module = self.get_module_by_name(module_name)?;
@@ -115,7 +85,7 @@ impl Process {
     }
 
     #[cfg(target_os = "linux")]
-    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<Address> {
+    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<usize> {
         let module = self.get_module_by_name(module_name)?;
 
         let pattern_bytes = Self::pattern_to_bytes(pattern);
@@ -138,60 +108,23 @@ impl Process {
         None
     }
 
-    /// Returns an optional `Module` instance by its name.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `name` - A string slice representing the name of the module to retrieve.
-    ///
-    /// # Returns
-    ///
-    /// * `Option<Module>` - An optional `Module` instance if the module was found, or `None` if the module was not found.
     pub fn get_module_by_name<'a>(&'a self, name: &'a str) -> Option<Module<'a>> {
         self.modules
             .get(name)
-            .map(|entry| Module::parse(name, entry).unwrap())
-        // Module::parse(name, self.modules.get_mut(name)?).ok()
+            .map(|data| Module::parse(name, data).unwrap())
     }
 
-    /// Returns a vector of `Module` instances parsed from the process's loaded modules.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<Vec<Module>>` - A `Result` containing a vector of `Module` instances if successful, or an error if the modules could not be parsed.
     pub fn modules(&self) -> Result<Vec<Module>> {
         let mut modules = Vec::new();
 
-        for (name, entry) in &self.modules {
-            modules.push(Module::parse(name, entry)?);
+        for (name, data) in &self.modules {
+            modules.push(Module::parse(name, data)?);
         }
 
         Ok(modules)
     }
 
-    /// Reads the memory at the specified address and returns the value as type T.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `address` - The address to read from.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// let process = Process::new(pid)?;
-    /// let value: i32 = process.read_memory(address)?;
-    /// ```
-    ///
-    /// # Returns
-    ///
-    /// * `Result<T>` - A `Result` containing the value if successful, or an error if the memory read fails.
-    pub fn read_memory<T>(&self, address: Address) -> Result<T> {
+    pub fn read_memory<T>(&self, address: usize) -> Result<T> {
         let mut buffer: T = unsafe { mem::zeroed() };
 
         self.read_memory_raw(
@@ -203,30 +136,12 @@ impl Process {
         Ok(buffer)
     }
 
-    /// Reads the memory of a process and stores it in a buffer.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `address` - The address to start reading from.
-    /// * `buffer` - A pointer to the buffer where the read data will be stored.
-    /// * `size` - The number of bytes to read.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<()>` - A `Result` indicating the outcome of the operation.
-
     #[cfg(target_os = "windows")]
-    pub fn read_memory_raw(
-        &self,
-        address: Address,
-        buffer: *mut c_void,
-        size: usize,
-    ) -> Result<()> {
+    pub fn read_memory_raw(&self, address: usize, buffer: *mut c_void, size: usize) -> Result<()> {
         unsafe {
             ReadProcessMemory(
                 self.handle,
-                address.as_ptr(),
+                address as *mut _,
                 buffer,
                 size,
                 Some(ptr::null_mut()),
@@ -236,19 +151,12 @@ impl Process {
     }
 
     #[cfg(target_os = "linux")]
-    pub fn read_memory_raw(
-        &self,
-        address: Address,
-        buffer: *mut c_void,
-        size: usize,
-    ) -> Result<()> {
+    pub fn read_memory_raw(&self, address: usize, buffer: *mut c_void, size: usize) -> Result<()> {
         let proc_mem_path = format!("/proc/{}/mem", self.id);
         let mut mem_file = File::open(proc_mem_path)?;
 
         // Go to the start address
-        mem_file.seek(SeekFrom::Start(
-            <Address as Into<usize>>::into(address) as u64
-        ))?;
+        mem_file.seek(SeekFrom::Start(address as u64))?;
 
         let buffer_slice = unsafe { std::slice::from_raw_parts_mut(buffer as *mut u8, size) };
 
@@ -257,17 +165,7 @@ impl Process {
         Ok(())
     }
 
-    /// Reads a null-terminated string from the process memory at the given address.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `address` - The address in the process memory where the string is located.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<String>` - A `Result` containing the string read from the process memory if successful, or an error if the memory read fails or if the string contains invalid UTF-8.
-    pub fn read_string(&self, address: Address) -> Result<String> {
+    pub fn read_string(&self, address: usize) -> Result<String> {
         let mut buffer = Vec::new();
 
         for i in 0.. {
@@ -280,18 +178,7 @@ impl Process {
         Ok(String::from_utf8(buffer)?)
     }
 
-    /// Reads a string of the specified length from the process memory at the given address.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `address` - The address to read the string from.
-    /// * `length` - The length of the string to read.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<String>` - A `Result` containing the string read from the process memory if successful, or an error if the memory read fails or if the string contains invalid UTF-8.
-    pub fn read_string_length(&self, address: Address, length: usize) -> Result<String> {
+    pub fn read_string_length(&self, address: usize, length: usize) -> Result<String> {
         let mut buffer = vec![0; length];
 
         self.read_memory_raw(address, buffer.as_mut_ptr() as *mut _, length)?;
@@ -303,69 +190,30 @@ impl Process {
         Ok(String::from_utf8(buffer)?)
     }
 
-    /// Resolves the absolute address of a relative call.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `address` - The address of the jump instruction.
-    /// * `offset` - The offset of the displacement value.
-    /// * `length` - The length of the instruction.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<Address>` - A `Result` containing the absolute address if successful, or an error if the memory read fails.
     pub fn resolve_jmp(
         &self,
-        address: Address,
+        address: usize,
         offset: Option<usize>,
         length: Option<usize>,
-    ) -> Result<Address> {
+    ) -> Result<usize> {
         // The displacement value can be negative.
-        let displacement =
-            self.read_memory::<i32>(address.add(offset.unwrap_or(0x1).try_into().unwrap()))?;
+        let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x1))?;
 
-        Ok(address
-            .add(length.unwrap_or(0x5).try_into().unwrap())
-            .add(displacement.into()))
+        Ok((address + displacement as usize) + length.unwrap_or(0x5))
     }
 
-    /// Resolves the absolute address of a RIP-relative address.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Process` struct.
-    /// * `address` - The address of the relative instruction pointer (RIP).
-    /// * `offset` - The offset of the displacement value. If `None`, the offset will be `0x3`.
-    /// * `length` - The length of the instruction. If `None`, the length will be `0x7`.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<Address>` - A `Result` containing the absolute address if successful, or an error if the memory read fails.
     pub fn resolve_rip(
         &self,
-        address: Address,
+        address: usize,
         offset: Option<usize>,
         length: Option<usize>,
-    ) -> Result<Address> {
+    ) -> Result<usize> {
         // The displacement value can be negative.
-        let displacement =
-            self.read_memory::<i32>(address.add(offset.unwrap_or(0x3).try_into().unwrap()))?;
+        let displacement = self.read_memory::<i32>(address + offset.unwrap_or(0x3))?;
 
-        Ok(address
-            .add(length.unwrap_or(0x7).try_into().unwrap())
-            .add(displacement.into()))
+        Ok((address + displacement as usize) + length.unwrap_or(0x7))
     }
 
-    /// Returns the process ID of the first process with the given name.
-    ///
-    /// # Arguments
-    ///
-    /// * `process_name` - A string slice that holds the name of the process to search for.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<u32>` - A `Result` containing the process ID if successful, or an error if the process could not be found.
     #[cfg(target_os = "windows")]
     fn get_process_id_by_name(process_name: &str) -> Result<u32> {
         let snapshot = unsafe { CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0) }?;
@@ -410,16 +258,6 @@ impl Process {
         bail!("Process not found: {}", process_name);
     }
 
-    /// Parses the loaded modules of a process and stores them in a HashMap with the module name as the key and the module data as the value.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A mutable reference to the `Process` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<()>` - A `Result` indicating the outcome of the operation.
-
     #[cfg(target_os = "windows")]
     fn parse_loaded_modules(&mut self) -> Result<()> {
         let snapshot = unsafe { CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, self.id) }?;
@@ -438,7 +276,7 @@ impl Process {
                 let mut data = vec![0; entry.modBaseSize as usize];
 
                 if let Ok(_) = self.read_memory_raw(
-                    entry.modBaseAddr.into(),
+                    entry.modBaseAddr as _,
                     data.as_mut_ptr() as *mut _,
                     data.len(),
                 ) {
@@ -517,7 +355,7 @@ impl Process {
                     module_name,
                     ModuleEntry {
                         path: path.clone(),
-                        start_addr: (start as usize).into(),
+                        start_addr: start as usize,
                         data: data,
                         module_file_data: Process::read_elf_file(&path)?,
                     },
@@ -528,15 +366,6 @@ impl Process {
         Ok(())
     }
 
-    /// Converts a pattern string to a vector of bytes.
-    ///
-    /// # Arguments
-    ///
-    /// * `pattern` - A string slice that represents the pattern to be converted.
-    ///
-    /// # Returns
-    ///
-    /// * `Vec<i32>` - A vector of bytes representing the pattern.
     fn pattern_to_bytes(pattern: &str) -> Vec<i32> {
         pattern
             .split_whitespace()
@@ -551,9 +380,6 @@ impl Process {
     }
 }
 
-/// Implements the `Drop` trait for the `Process` struct.
-///
-/// When a `Process` instance goes out of scope, this implementation will automatically close the process handle if it is not invalid.
 #[cfg(target_os = "windows")]
 impl Drop for Process {
     fn drop(&mut self) {

@@ -1,9 +1,7 @@
-use super::FileBuilder;
-
 use std::io::{Result, Write};
 
-/// A structure representing a builder for C++ header files.
-/// The builder implements the `FileBuilder` trait.
+use super::FileBuilder;
+
 #[derive(Clone, Debug, PartialEq)]
 pub struct CppFileBuilder;
 
@@ -13,7 +11,10 @@ impl FileBuilder for CppFileBuilder {
     }
 
     fn write_top_level(&mut self, output: &mut dyn Write) -> Result<()> {
-        write!(output, "#pragma once\n\n#include <cstddef>\n\n")
+        writeln!(output, "#pragma once\n")?;
+        writeln!(output, "#include <cstddef>\n")?;
+
+        Ok(())
     }
 
     fn write_namespace(

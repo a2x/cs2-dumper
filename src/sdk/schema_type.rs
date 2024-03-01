@@ -1,4 +1,4 @@
-use crate::util::{Address, Process};
+use std::collections::HashMap;
 
 use anyhow::Result;
 
@@ -6,9 +6,8 @@ use lazy_static::lazy_static;
 
 use regex::Regex;
 
-use std::collections::HashMap;
+use crate::os::Process;
 
-/// Map of type names to their `C` equivalents.
 const TYPE_MAP: &[(&'static str, &'static str)] = &[
     ("uint8", "uint8_t"),
     ("uint16", "uint16_t"),
@@ -23,8 +22,6 @@ const TYPE_MAP: &[(&'static str, &'static str)] = &[
 ];
 
 lazy_static! {
-    /// A static HashMap that maps a string to a Regex pattern.
-    /// The Regex pattern is created by wrapping the string with word boundaries `(\b)`.
     static ref REGEX_MAP: HashMap<&'static str, Regex> = {
         let mut map = HashMap::with_capacity(TYPE_MAP.len());
 
@@ -36,36 +33,16 @@ lazy_static! {
     };
 }
 
-/// Represents a type in the schema.
 pub struct SchemaType<'a> {
     process: &'a Process,
-    address: Address,
+    address: usize,
 }
 
 impl<'a> SchemaType<'a> {
-    /// Creates a new `SchemaType` instance.
-    ///
-    /// # Arguments
-    ///
-    /// * `process` - A reference to the `Process` struct.
-    /// * `address` - The address of the `SchemaType` instance.
-    ///
-    /// # Returns
-    ///
-    /// * `SchemaType` - The new `SchemaType` instance.
-    pub fn new(process: &'a Process, address: Address) -> Self {
+    pub fn new(process: &'a Process, address: usize) -> Self {
         Self { process, address }
     }
 
-    /// Returns the name of the schema type.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `SchemaType` instance.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<String>` - The name of the schema type, wrapped in a `Result` object.
     pub fn name(&self) -> Result<String> {
         let name_ptr = self.process.read_memory::<usize>(self.address + 0x8)?;
 
@@ -78,15 +55,6 @@ impl<'a> SchemaType<'a> {
         Ok(Self::convert_type_name(&name))
     }
 
-    /// Converts a schema type name to its `C` equivalent.
-    ///
-    /// # Arguments
-    ///
-    /// * `type_name` - A string slice that holds the name of the schema type.
-    ///
-    /// # Returns
-    ///
-    /// * `String` - The `C` equivalent of the schema type name.
     fn convert_type_name(type_name: &str) -> String {
         let mut result = type_name.to_string();
 

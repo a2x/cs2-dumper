@@ -1,5 +1,3 @@
-use super::Address;
-
 use anyhow::Result;
 
 use goblin::pe::export::Export;
@@ -16,7 +14,7 @@ use std::path::PathBuf;
 #[derive(Debug)]
 pub struct ModuleEntry {
     pub path: PathBuf,
-    pub start_addr: Address,
+    pub start_addr: usize,
     pub data: Vec<u8>,
     pub module_file_data: Vec<u8>,
 }
@@ -28,8 +26,9 @@ pub struct Module<'a> {
     /// A reference to a slice of bytes containing the module data.
     #[cfg(target_os = "windows")]
     pub data: &'a [u8],
-    // #[cfg(target_os = "linux")]
+    #[cfg(target_os = "linux")]
     pub module_info: &'a ModuleEntry,
+
     #[cfg(target_os = "windows")]
     /// The PE file format representation of the module.
     pub pe: PE<'a>,
@@ -39,16 +38,6 @@ pub struct Module<'a> {
 }
 
 impl<'a> Module<'a> {
-    /// Parses the given module name and data and returns a `Result` containing a `Module` struct.
-    ///
-    /// # Arguments
-    ///
-    /// * `name` - A string slice that holds the name of the module.
-    /// * `data` - A byte slice that holds the data of the module.
-    ///
-    /// # Returns
-    ///
-    /// * `Result<Self>` - A `Result` containing a `Module` instance if successful, or an error if the module could not be parsed.
     #[cfg(target_os = "windows")]
     pub fn parse(name: &'a str, data: &'a [u8]) -> Result<Self> {
         let pe = PE::parse_with_opts(
@@ -73,40 +62,22 @@ impl<'a> Module<'a> {
         })
     }
 
-    /// Returns the base address of the module.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Address` - The base address of the module.
     #[inline]
     #[cfg(target_os = "windows")]
-    pub fn base(&self) -> Address {
-        self.pe.image_base.into()
+    pub fn base(&self) -> usize {
+        self.pe.image_base
     }
 
     #[inline]
     #[cfg(target_os = "linux")]
-    pub fn base(&self) -> Address {
+    pub fn base(&self) -> usize {
         self.module_info.start_addr
     }
 
-    /// Returns a slice of `Export` structs representing the exports of the module.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `&[Export]` - A slice of `Export` structs representing the exports of the module.
     #[inline]
     #[cfg(target_os = "windows")]
-    pub fn exports(&self) -> &'a [Export] {
-        self.pe.exports.as_slice()
+    pub fn exports(&self) -> &[Export] {
+        &self.pe.exports
     }
 
     #[inline]
@@ -121,82 +92,10 @@ impl<'a> Module<'a> {
         exports
     }
 
-    /// Returns the address of the export with the given name, if it exists.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Option<Address>` - The address of the export with the given name, if it exists.
     #[inline]
     #[cfg(target_os = "windows")]
-    pub fn get_export_by_name(&self, name: &str) -> Option<Address> {
-        self.pe
-            .exports
-            .iter()
-            .find(|e| e.name.unwrap() == name)
-            .map(|e| (self.pe.image_base + e.rva).into())
-    }
-
-    #[inline]
-    #[cfg(target_os = "linux")]
-    pub fn get_export_by_name(&self, name: &str) -> Option<Address> {
-        let base_addr: usize = self.base().into();
-        self.elf
-            .dynsyms
-            .iter()
-            .find(|sym| {
-                (sym.st_bind() == sym::STB_GLOBAL || sym.st_bind() == sym::STB_WEAK)
-                    && self.elf.dynstrtab.get_at(sym.st_name) == Some(name)
-            })
-            .map(|sym| ((base_addr as u64 + sym.st_value) as usize).into())
-    }
-
-    /// Returns the address of the imported function with the given name, if it exists.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `Option<Address>` - The address of the imported function with the given name, if it exists.
-    #[inline]
-    #[cfg(target_os = "windows")]
-    pub fn get_import_by_name(&self, name: &str) -> Option<Address> {
-        self.pe
-            .imports
-            .iter()
-            .find(|i| i.name.to_string() == name)
-            .map(|i| (self.pe.image_base + i.rva).into())
-    }
-
-    #[inline]
-    #[cfg(target_os = "linux")]
-    pub fn get_import_by_name(&self, name: &str) -> Option<Address> {
-        let base_addr: usize = self.base().into();
-        self.elf
-            .dynsyms
-            .iter()
-            .find(|sym| sym.is_import() && self.elf.dynstrtab.get_at(sym.st_name) == Some(name))
-            .map(|sym| ((base_addr as u64 + sym.st_value) as usize).into())
-    }
-
-    /// Returns a slice of the imported functions of the module.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `&[Import]` - A slice of `Import` structs representing the imported functions of the module.
-    #[inline]
-    #[cfg(target_os = "windows")]
-    pub fn imports(&self) -> &'a [Import] {
-        self.pe.imports.as_slice()
+    pub fn imports(&self) -> &[Import] {
+        self.pe.imports
     }
 
     #[inline]
@@ -211,19 +110,56 @@ impl<'a> Module<'a> {
         imports
     }
 
-    /// Returns a slice of the section table entries in the module's PE header.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `&[SectionTable]` - A slice of `SectionTable` structs representing the section table entries in the module's PE header.
+    #[inline]
+    #[cfg(target_os = "windows")]
+    pub fn export_by_name(&self, name: &str) -> Option<usize> {
+        self.pe
+            .exports
+            .iter()
+            .find(|e| e.name.unwrap() == name)
+            .map(|e| self.pe.image_base + e.rva)
+    }
+
+    #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn export_by_name(&self, name: &str) -> Option<usize> {
+        let base_addr: usize = self.base();
+        self.elf
+            .dynsyms
+            .iter()
+            .find(|sym| {
+                (sym.st_bind() == sym::STB_GLOBAL || sym.st_bind() == sym::STB_WEAK)
+                    && self.elf.dynstrtab.get_at(sym.st_name) == Some(name)
+            })
+            .map(|sym| (base_addr as u64 + sym.st_value) as usize)
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
+    #[inline]
+    pub fn import_by_name(&self, name: &str) -> Option<usize> {
+        self.pe
+            .imports
+            .iter()
+            .find(|i| i.name.to_string() == name)
+            .map(|i| self.pe.image_base + i.rva)
+    }
+
+    #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn get_import_by_name(&self, name: &str) -> Option<usize> {
+        let base_addr: usize = self.base().into();
+        self.elf
+            .dynsyms
+            .iter()
+            .find(|sym| sym.is_import() && self.elf.dynstrtab.get_at(sym.st_name) == Some(name))
+            .map(|sym| (base_addr as u64 + sym.st_value) as usize)
+    }
+
     #[inline]
     #[cfg(target_os = "windows")]
     pub fn sections(&self) -> &[SectionTable] {
-        self.pe.sections.as_slice()
+        self.pe.sections
     }
 
     #[inline]
@@ -232,22 +168,13 @@ impl<'a> Module<'a> {
         self.elf.section_headers.as_slice()
     }
 
-    /// Returns the size of the module.
-    ///
-    /// # Arguments
-    ///
-    /// * `&self` - A reference to the `Module` struct.
-    ///
-    /// # Returns
-    ///
-    /// * `u32` - The size of the module.
     #[inline]
     #[cfg(target_os = "windows")]
     pub fn size(&self) -> u32 {
         self.pe
             .header
             .optional_header
-            .unwrap()
+            .expect("optional header not found")
             .windows_fields
             .size_of_image
     }
