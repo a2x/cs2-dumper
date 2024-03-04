@@ -13,10 +13,13 @@ pub struct SchemaSystem<'a> {
 
 impl<'a> SchemaSystem<'a> {
     pub fn new(process: &'a Process) -> Result<Self> {
-        let mut address = process.find_pattern(
-            "schemasystem.dll",
-            "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28"
-        ).expect("unable to find schema system pattern");
+        let mut address = process
+            .find_pattern(
+                "schemasystem.dll",
+                "48 8D 05 ? ? ? ? c3 ? ? ? 00 00 00 00 00 48 8d 05 ? ? ? ? c3 ? ? ? 00 00 00 00 00 48 ? ? ? c3"
+                // "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28"
+            )
+            .expect("unable to find schema system pattern");
 
         address = process.resolve_rip(address, None, None)?;
 
@@ -24,13 +27,15 @@ impl<'a> SchemaSystem<'a> {
     }
 
     pub fn type_scopes(&self) -> Result<Vec<SchemaSystemTypeScope>> {
-        let size = self.process.read_memory::<u32>(self.address + 0x190)?;
+        // let size = self.process.read_memory::<u32>(self.address + 0x190)?;
+        let size = self.process.read_memory::<u32>(self.address + 0x1f8)?;
 
         if size == 0 {
             bail!("no type scopes found");
         }
 
-        let data = self.process.read_memory::<usize>(self.address + 0x198)?;
+        // let data = self.process.read_memory::<usize>(self.address + 0x198)?;
+        let data = self.process.read_memory::<usize>(self.address + 0x200)?;
 
         let mut addresses = vec![0; size as usize];
 

@@ -17,7 +17,8 @@ impl<'a> SchemaSystemTypeScope<'a> {
     pub fn classes(&self) -> Result<Vec<SchemaClassInfo>> {
         let declared_classes = self
             .process
-            .read_memory::<UtlTsHash<*mut SchemaTypeDeclaredClass>>(self.address + 0x5B8)?;
+            .read_memory::<UtlTsHash<*mut SchemaTypeDeclaredClass>>(self.address + 0x620)?;
+        // .read_memory::<UtlTsHash<*mut SchemaTypeDeclaredClass>>(self.address + 0x5B8)?;
 
         let classes: Vec<SchemaClassInfo> = declared_classes
             .elements(self.process)?
