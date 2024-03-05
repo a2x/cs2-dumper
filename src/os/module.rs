@@ -94,7 +94,7 @@ impl<'a> Module<'a> {
     #[inline]
     #[cfg(target_os = "windows")]
     pub fn imports(&self) -> &[Import] {
-        self.pe.imports
+        &self.pe.imports
     }
 
     #[inline]
@@ -158,7 +158,7 @@ impl<'a> Module<'a> {
     #[inline]
     #[cfg(target_os = "windows")]
     pub fn sections(&self) -> &[SectionTable] {
-        self.pe.sections
+        &self.pe.sections
     }
 
     #[inline]

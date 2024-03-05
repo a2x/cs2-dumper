@@ -1,4 +1,6 @@
-use super::{Module, ModuleEntry};
+use super::Module;
+#[cfg(target_os = "linux")]
+use super::ModuleEntry;
 
 use anyhow::{bail, Result};
 
@@ -66,7 +68,7 @@ impl Process {
         Ok(process)
     }
     #[cfg(target_os = "windows")]
-    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<Address> {
+    pub fn find_pattern(&self, module_name: &str, pattern: &str) -> Option<usize> {
         let module = self.get_module_by_name(module_name)?;
 
         let pattern_bytes = Self::pattern_to_bytes(pattern);
