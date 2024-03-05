@@ -4,6 +4,8 @@ use super::{SchemaClassInfo, SchemaTypeDeclaredClass, UtlTsHash};
 
 use crate::os::Process;
 
+use crate::config::SCHEMA_CONF;
+
 pub struct SchemaSystemTypeScope<'a> {
     process: &'a Process,
     address: usize,
@@ -17,8 +19,9 @@ impl<'a> SchemaSystemTypeScope<'a> {
     pub fn classes(&self) -> Result<Vec<SchemaClassInfo>> {
         let declared_classes = self
             .process
-            .read_memory::<UtlTsHash<*mut SchemaTypeDeclaredClass>>(self.address + 0x620)?;
-        // .read_memory::<UtlTsHash<*mut SchemaTypeDeclaredClass>>(self.address + 0x5B8)?;
+            .read_memory::<UtlTsHash<*mut SchemaTypeDeclaredClass>>(
+                self.address + SCHEMA_CONF.declared_classes_offset,
+            )?;
 
         let classes: Vec<SchemaClassInfo> = declared_classes
             .elements(self.process)?

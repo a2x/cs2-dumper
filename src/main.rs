@@ -93,7 +93,7 @@ fn main() -> Result<()> {
     // Create the output directory if it doesn't exist.
     fs::create_dir_all(&output)?;
 
-    let mut process = Process::new("cs2.exe")?;
+    let mut process = Process::new(config::PROC_NAME)?;
 
     let now = Instant::now();
 

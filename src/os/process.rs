@@ -56,8 +56,8 @@ impl Process {
     }
 
     #[cfg(target_os = "linux")]
-    pub fn new(process_name: &str) -> Result<Self> {
-        let id = Self::get_process_id_by_name(process_name.strip_suffix(".exe").unwrap())?;
+    pub fn new(name: &str) -> Result<Self> {
+        let id = Self::get_process_id_by_name(name)?;
         let mut process = Self {
             id,
             modules: HashMap::new(),
@@ -299,64 +299,43 @@ impl Process {
     }
 
     #[cfg(target_os = "linux")]
-    fn read_elf_file(path: &PathBuf) -> Result<Vec<u8>> {
-        let mut file = File::open(path)?;
-        let mut data = Vec::new();
-        file.read_to_end(&mut data)?;
-
-        Ok(data)
-    }
-
-    fn get_transformed_module_name(path: PathBuf) -> Option<String> {
-        if let Ok(module_path) = path.into_os_string().into_string() {
-            if let Some(module_name) = module_path.split('/').last() {
-                if module_name.starts_with("lib") && module_name.ends_with(".so") {
-                    return Some(format!(
-                        "{}.dll",
-                        module_name.strip_prefix("lib")?.strip_suffix(".so")?
-                    ));
-                }
-            }
-        }
-        None
-    }
-
-    #[cfg(target_os = "linux")]
     fn parse_loaded_modules(&mut self) -> Result<()> {
         let process = process::Process::new(self.id as i32)?;
 
         let mut modules_info: HashMap<String, ((u64, u64), PathBuf)> = HashMap::new();
 
         for mmap in process.maps()? {
-            let mmap_path = match mmap.pathname {
+            let module_path = match mmap.pathname {
                 process::MMapPath::Path(path) => path,
                 _ => continue,
             };
-            let module_name = match Process::get_transformed_module_name(mmap_path.clone()) {
-                Some(new_path) => new_path,
-                None => continue,
+            let get_module_name = |path: &PathBuf| -> Option<String> {
+                path.file_name()
+                    .and_then(|name| name.to_str())
+                    .filter(|name| name.starts_with("lib") && name.ends_with(".so"))
+                    .map(|name| name.to_string())
             };
-            if module_name != "client.dll"
-                && module_name != "engine2.dll"
-                && module_name != "inputsystem.dll"
-                && module_name != "matchmaking.dll"
-                && module_name != "schemasystem.dll"
-            {
-                continue;
+            if let Some(module_name) = get_module_name(&module_path) {
+                let module_entry = modules_info
+                    .entry(module_name)
+                    .or_insert_with(|| (mmap.address, module_path));
+                module_entry.0 = (
+                    std::cmp::min(mmap.address.0, module_entry.0 .0),
+                    std::cmp::max(mmap.address.1, module_entry.0 .1),
+                );
             }
-            let module_entry = modules_info
-                .entry(module_name)
-                .or_insert_with(|| (mmap.address, mmap_path));
-            module_entry.0 = (
-                std::cmp::min(mmap.address.0, module_entry.0 .0),
-                std::cmp::max(mmap.address.1, module_entry.0 .1),
-            );
         }
 
         for (module_name, (address_space, path)) in modules_info.into_iter() {
             let (start, end) = address_space;
-            // let mut data = vec![0; (end - start + 1) as usize];
-            if let Ok(data) = Process::read_elf_file(&path) {
+            let read_elf_file = |path: &PathBuf| -> Result<Vec<u8>> {
+                let mut file = File::open(path)?;
+                let mut data = Vec::new();
+                file.read_to_end(&mut data)?;
+
+                Ok(data)
+            };
+            if let Ok(data) = read_elf_file(&path) {
                 self.modules.insert(
                     module_name,
                     ModuleEntry {
