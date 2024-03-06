@@ -86,8 +86,8 @@ fn main() -> Result<()> {
 
     TermLogger::init(log_level, config, TerminalMode::Mixed, ColorChoice::Auto)?;
 
-    if !Path::new("config.json").exists() {
-        bail!("Missing config.json file");
+    if !Path::new(config::OFFSETS_CONF).exists() {
+        bail!("Missing {} file", config::OFFSETS_CONF);
     }
 
     // Create the output directory if it doesn't exist.

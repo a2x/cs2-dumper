@@ -1,0 +1,132 @@
+{
+  "signatures": [
+    {
+      "name": "dwBuildNumber",
+      "module": "libengine2.so",
+      "pattern": "89 15 ? ? ? ? 48 83 ? ? 48 8D 3D ? ? ? ?",
+      "operations": [
+        {
+          "type": "rip",
+          "offset": 2,
+          "length": 6
+        }
+      ]
+    },
+    {
+      "name": "dwNetworkGameClient_deltaTick",
+      "module": "libengine2.so",
+      "pattern": "89 83 ? ? ? ? B8 01",
+      "operations": [
+        {
+          "type": "slice",
+          "start": 2,
+          "end": 4
+        }
+      ]
+    },
+    {
+      "name": "dwEntityList",
+      "module": "libclient.so",
+      "pattern": "48 8B 3D ? ? ? ? 44 89 E3 45 89 E6 C1 ? 0E",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    },
+    {
+      "name": "dwForceAttack",
+      "module": "libclient.so",
+      "pattern": "4c 8d ? ? ? ? ? 4d 89 ? 48 89 ? ? ? ? ? eb",
+      "operations": [
+        {
+          "type": "rip"
+        },
+        {
+          "type": "add",
+          "value": 48
+        }
+      ]
+    },
+    {
+      "name": "dwForceAttack2",
+      "module": "libclient.so",
+      "pattern": "4c 8d ? ? ? ? ? 48 8d ? ? ? ? ? 48 89 ? ? ? ? ? e8 ? ? ? ? 49 ? ? ? 31 d2 48 c7 ? ? ? ? ? ? 08",
+      "operations": [
+        {
+          "type": "rip"
+        },
+        {
+          "type": "add",
+          "value": 48
+        }
+      ]
+    },
+    {
+      "name": "dwGameEntitySystem",
+      "module": "libclient.so",
+      "pattern": "48 89 3d ? ? ? ? e9 ? ? ? ? 55",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    },
+    {
+      "name": "dwGameEntitySystem_getHighestEntityIndex",
+      "module": "libclient.so",
+      "pattern": "8b 87 ? ? ? ? c3 66 ? ? ? ? ? ? ? ? 8b 97",
+      "operations": [
+        {
+          "type": "slice",
+          "start": 2,
+          "end": 4
+        }
+      ]
+    },
+    {
+      "name": "dwGameRules",
+      "module": "libclient.so",
+      "pattern": "48 89 3d ? ? ? ? 8b",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    },
+    {
+      "name": "dwLocalPlayerController",
+      "module": "libclient.so",
+      "pattern": "48 8B 15 ? ? ? ? 31 C0 48 85 D2 74 5C",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    },
+    {
+      "name": "dwLocalPlayerPawn",
+      "module": "libclient.so",
+      "pattern": "48 8D 05 ? ? ? ? C3 ? ? ? 00 00 00 00 00 C7 47 40",
+      "operations": [
+        {
+          "type": "rip"
+        },
+        {
+          "type": "add",
+          "value": 56
+        }
+      ]
+    },
+    {
+      "name": "dwViewMatrix",
+      "module": "libclient.so",
+      "pattern": "4c 8d 05 ? ? ? ? 48 ? ? 48 8d ? ? ? ? ? e8 ? ? ? ? 8b",
+      "operations": [
+        {
+          "type": "rip"
+        }
+      ]
+    }
+  ]
+}

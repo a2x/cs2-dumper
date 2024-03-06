@@ -72,3 +72,9 @@ pub const PROC_NAME: &str = "cs2.exe";
 
 #[cfg(target_os = "linux")]
 pub const PROC_NAME: &str = "cs2";
+
+#[cfg(target_os = "windows")]
+pub const OFFSETS_CONF: &str = "config.json";
+
+#[cfg(target_os = "linux")]
+pub const OFFSETS_CONF: &str = "config_linux.json";

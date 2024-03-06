@@ -7,8 +7,8 @@ use simplelog::{debug, error, info};
 use super::{generate_files, Entries, Entry};
 
 use crate::builder::FileBuilderEnum;
-use crate::config::Config;
 use crate::config::Operation::*;
+use crate::config::{self, Config};
 use crate::os::Process;
 
 pub fn dump_offsets(
@@ -17,7 +17,7 @@ pub fn dump_offsets(
     file_path: &str,
     indent: usize,
 ) -> Result<()> {
-    let file = File::open("config.json")?;
+    let file = File::open(config::OFFSETS_CONF)?;
 
     let config: Config = serde_json::from_reader(file)?;
 
