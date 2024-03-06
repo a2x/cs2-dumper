@@ -1,13 +1,13 @@
 use anyhow::Result;
 
-use goblin::pe::export::Export;
-use goblin::pe::import::Import;
-use goblin::pe::options::ParseOptions;
-use goblin::pe::section_table::SectionTable;
-use goblin::pe::PE;
+#[cfg(target_os = "windows")]
+use goblin::pe::{
+    export::Export, import::Import, options::ParseOptions, section_table::SectionTable, PE,
+};
 
 #[cfg(target_os = "linux")]
-use goblin::elf::{program_header, sym, Elf, SectionHeader};
+use goblin::elf::{sym, Elf, SectionHeader};
+#[cfg(target_os = "linux")]
 use std::path::PathBuf;
 
 #[cfg(target_os = "linux")]

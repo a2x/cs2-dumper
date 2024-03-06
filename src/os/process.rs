@@ -5,10 +5,13 @@ use super::ModuleEntry;
 use anyhow::{bail, Result};
 
 use std::collections::HashMap;
-use std::ffi::{c_void, CStr};
+use std::ffi::c_void;
 use std::mem;
-use std::ptr;
 
+#[cfg(target_os = "windows")]
+use std::ffi::CStr;
+#[cfg(target_os = "windows")]
+use std::ptr;
 #[cfg(target_os = "windows")]
 use windows::Win32::{
     Foundation::{CloseHandle, HANDLE},
