@@ -22,8 +22,11 @@ use windows::Win32::{
 
 #[cfg(target_os = "linux")]
 use procfs::process::{self, all_processes};
+#[cfg(target_os = "linux")]
 use std::fs::File;
+#[cfg(target_os = "linux")]
 use std::io::{Read, Seek, SeekFrom};
+#[cfg(target_os = "linux")]
 use std::path::{Path, PathBuf};
 
 /// Represents a Windows process.
