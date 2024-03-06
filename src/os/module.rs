@@ -135,7 +135,6 @@ impl<'a> Module<'a> {
 
     #[inline]
     #[cfg(target_os = "windows")]
-    #[inline]
     pub fn import_by_name(&self, name: &str) -> Option<usize> {
         self.pe
             .imports
