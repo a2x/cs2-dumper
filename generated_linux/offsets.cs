@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 7 Mar 2024 10:34:48 +0000
+ * Thu, 7 Mar 2024 22:17:31 +0000
  */
 
 public static class game_info { // Some additional information about the game at dump time
@@ -15,7 +15,7 @@ public static class libclient_so { // libclient.so
     public const nint dwGameEntitySystem_getHighestEntityIndex = 0x1540;
     public const nint dwGameRules = 0x3731248;
     public const nint dwLocalPlayerController = 0x3716778;
-    public const nint dwLocalPlayerPawn = 0x3736A38;
+    public const nint dwLocalPlayerPawn = 0x3736B38;
     public const nint dwViewMatrix = 0x3737660;
 }
 

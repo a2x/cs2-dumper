@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 7 Mar 2024 10:34:48 +0000
+ * Thu, 7 Mar 2024 22:17:31 +0000
  */
 
 #pragma once
@@ -19,7 +19,7 @@ namespace libclient_so { // libclient.so
     constexpr std::ptrdiff_t dwGameEntitySystem_getHighestEntityIndex = 0x1540;
     constexpr std::ptrdiff_t dwGameRules = 0x3731248;
     constexpr std::ptrdiff_t dwLocalPlayerController = 0x3716778;
-    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x3736A38;
+    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x3736B38;
     constexpr std::ptrdiff_t dwViewMatrix = 0x3737660;
 }
 

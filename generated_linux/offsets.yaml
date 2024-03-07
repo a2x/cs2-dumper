@@ -9,7 +9,7 @@ libclient_so: # libclient.so
     dwGameEntitySystem_getHighestEntityIndex: 5440
     dwGameRules: 57872968
     dwLocalPlayerController: 57763704
-    dwLocalPlayerPawn: 57895480
+    dwLocalPlayerPawn: 57895736
     dwViewMatrix: 57898592
 libengine2_so: # libengine2.so
     dwBuildNumber: 7157236
