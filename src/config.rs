@@ -78,3 +78,9 @@ pub const OFFSETS_CONF: &str = "config.json";
 
 #[cfg(target_os = "linux")]
 pub const OFFSETS_CONF: &str = "config_linux.json";
+
+#[cfg(target_os = "windows")]
+pub const DEFAULT_OUT_DIR: &str = "generated";
+
+#[cfg(target_os = "linux")]
+pub const DEFAULT_OUT_DIR: &str = "generated_linux";

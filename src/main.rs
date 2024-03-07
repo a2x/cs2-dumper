@@ -57,7 +57,7 @@ struct Args {
 
     /// Output directory for generated files.
     /// Defaults to `generated`.
-    #[arg(long, default_value = "generated")]
+    #[arg(long, default_value = config::DEFAULT_OUT_DIR)]
     output: String,
 
     /// Enable verbose output.
