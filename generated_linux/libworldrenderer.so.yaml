@@ -1,0 +1,173 @@
+---
+AggregateLODSetup_t:
+    m_vLODOrigin: 0 # Vector
+    m_fMaxObjectScale: 12 # float
+    m_fSwitchDistances: 16 # CUtlVectorFixedGrowable<float>
+AggregateMeshInfo_t:
+    m_nVisClusterMemberOffset: 0 # uint32_t
+    m_nVisClusterMemberCount: 4 # uint8_t
+    m_bHasTransform: 5 # bool
+    m_nDrawCallIndex: 6 # int16_t
+    m_nLODSetupIndex: 8 # int16_t
+    m_nLODGroupMask: 10 # uint8_t
+    m_vTintColor: 11 # Color
+    m_objectFlags: 16 # ObjectTypeFlags_t
+    m_nLightProbeVolumePrecomputedHandshake: 20 # int32_t
+AggregateSceneObject_t:
+    m_allFlags: 0 # ObjectTypeFlags_t
+    m_anyFlags: 4 # ObjectTypeFlags_t
+    m_nLayer: 8 # int16_t
+    m_aggregateMeshes: 16 # CUtlVector<AggregateMeshInfo_t>
+    m_lodSetups: 40 # CUtlVector<AggregateLODSetup_t>
+    m_visClusterMembership: 64 # CUtlVector<uint16_t>
+    m_fragmentTransforms: 88 # CUtlVector<matrix3x4_t>
+    m_renderableModel: 112 # CStrongHandle<InfoForResourceTypeCModel>
+BakedLightingInfo_t:
+    m_nLightmapVersionNumber: 0 # uint32_t
+    m_nLightmapGameVersionNumber: 4 # uint32_t
+    m_vLightmapUvScale: 8 # Vector2D
+    m_bHasLightmaps: 16 # bool
+    m_lightMaps: 24 # CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
+BaseSceneObjectOverride_t:
+    m_nSceneObjectIndex: 0 # uint32_t
+CEntityComponent:
+CEntityIdentity:
+    m_nameStringableIndex: 20 # int32_t
+    m_name: 24 # CUtlSymbolLarge
+    m_designerName: 32 # CUtlSymbolLarge
+    m_flags: 48 # uint32_t
+    m_worldGroupId: 56 # WorldGroupId_t
+    m_fDataObjectTypes: 60 # uint32_t
+    m_PathIndex: 64 # ChangeAccessorFieldPathIndex_t
+    m_pPrev: 88 # CEntityIdentity*
+    m_pNext: 96 # CEntityIdentity*
+    m_pPrevByClass: 104 # CEntityIdentity*
+    m_pNextByClass: 112 # CEntityIdentity*
+CEntityInstance:
+    m_iszPrivateVScripts: 8 # CUtlSymbolLarge
+    m_pEntity: 16 # CEntityIdentity*
+    m_CScriptComponent: 40 # CScriptComponent*
+    m_bVisibleinPVS: 48 # bool
+CScriptComponent: # CEntityComponent
+    m_scriptClassName: 48 # CUtlSymbolLarge
+CVoxelVisibility:
+    m_nBaseClusterCount: 64 # uint32_t
+    m_nPVSBytesPerCluster: 68 # uint32_t
+    m_vMinBounds: 72 # Vector
+    m_vMaxBounds: 84 # Vector
+    m_flGridSize: 96 # float
+    m_nSkyVisibilityCluster: 100 # uint32_t
+    m_nSunVisibilityCluster: 104 # uint32_t
+    m_NodeBlock: 108 # VoxelVisBlockOffset_t
+    m_RegionBlock: 116 # VoxelVisBlockOffset_t
+    m_EnclosedClusterListBlock: 124 # VoxelVisBlockOffset_t
+    m_EnclosedClustersBlock: 132 # VoxelVisBlockOffset_t
+    m_MasksBlock: 140 # VoxelVisBlockOffset_t
+    m_nVisBlocks: 148 # VoxelVisBlockOffset_t
+ClutterSceneObject_t:
+    m_Bounds: 0 # AABB_t
+    m_flags: 24 # ObjectTypeFlags_t
+    m_nLayer: 28 # int16_t
+    m_instancePositions: 32 # CUtlVector<Vector>
+    m_instanceScales: 80 # CUtlVector<float>
+    m_instanceTintSrgb: 104 # CUtlVector<Color>
+    m_tiles: 128 # CUtlVector<ClutterTile_t>
+    m_renderableModel: 152 # CStrongHandle<InfoForResourceTypeCModel>
+ClutterTile_t:
+    m_nFirstInstance: 0 # uint32_t
+    m_nLastInstance: 4 # uint32_t
+    m_BoundsWs: 8 # AABB_t
+EntityIOConnectionData_t:
+    m_outputName: 0 # CUtlString
+    m_targetType: 8 # uint32_t
+    m_targetName: 16 # CUtlString
+    m_inputName: 24 # CUtlString
+    m_overrideParam: 32 # CUtlString
+    m_flDelay: 40 # float
+    m_nTimesToFire: 44 # int32_t
+EntityKeyValueData_t:
+    m_connections: 8 # CUtlVector<EntityIOConnectionData_t>
+    m_keyValuesData: 32 # CUtlBinaryBlock
+ExtraVertexStreamOverride_t: # BaseSceneObjectOverride_t
+    m_nSubSceneObject: 4 # uint32_t
+    m_nDrawCallIndex: 8 # uint32_t
+    m_nAdditionalMeshDrawPrimitiveFlags: 12 # MeshDrawPrimitiveFlags_t
+    m_extraBufferBinding: 16 # CRenderBufferBinding
+InfoForResourceTypeVMapResourceData_t:
+InfoOverlayData_t:
+    m_transform: 0 # matrix3x4_t
+    m_flWidth: 48 # float
+    m_flHeight: 52 # float
+    m_flDepth: 56 # float
+    m_vUVStart: 60 # Vector2D
+    m_vUVEnd: 68 # Vector2D
+    m_pMaterial: 80 # CStrongHandle<InfoForResourceTypeIMaterial2>
+    m_nRenderOrder: 88 # int32_t
+    m_vTintColor: 92 # Vector4D
+    m_nSequenceOverride: 108 # int32_t
+MaterialOverride_t: # BaseSceneObjectOverride_t
+    m_nSubSceneObject: 4 # uint32_t
+    m_nDrawCallIndex: 8 # uint32_t
+    m_pMaterial: 16 # CStrongHandle<InfoForResourceTypeIMaterial2>
+NodeData_t:
+    m_nParent: 0 # int32_t
+    m_vOrigin: 4 # Vector
+    m_vMinBounds: 16 # Vector
+    m_vMaxBounds: 28 # Vector
+    m_flMinimumDistance: 40 # float
+    m_ChildNodeIndices: 48 # CUtlVector<int32_t>
+    m_worldNodePrefix: 72 # CUtlString
+PermEntityLumpData_t:
+    m_name: 8 # CUtlString
+    m_hammerUniqueId: 16 # CUtlString
+    m_childLumps: 24 # CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+    m_entityKeyValues: 48 # CUtlLeanVector<EntityKeyValueData_t>
+SceneObject_t:
+    m_nObjectID: 0 # uint32_t
+    m_vTransform: 4 # Vector4D[3]
+    m_flFadeStartDistance: 52 # float
+    m_flFadeEndDistance: 56 # float
+    m_vTintColor: 60 # Vector4D
+    m_skin: 80 # CUtlString
+    m_nObjectTypeFlags: 88 # ObjectTypeFlags_t
+    m_vLightingOrigin: 92 # Vector
+    m_nOverlayRenderOrder: 104 # int16_t
+    m_nLODOverride: 106 # int16_t
+    m_nCubeMapPrecomputedHandshake: 108 # int32_t
+    m_nLightProbeVolumePrecomputedHandshake: 112 # int32_t
+    m_renderableModel: 120 # CStrongHandle<InfoForResourceTypeCModel>
+    m_renderable: 128 # CStrongHandle<InfoForResourceTypeCRenderMesh>
+VMapResourceData_t:
+VoxelVisBlockOffset_t:
+    m_nOffset: 0 # uint32_t
+    m_nElementCount: 4 # uint32_t
+WorldBuilderParams_t:
+    m_flMinDrawVolumeSize: 0 # float
+    m_bBuildBakedLighting: 4 # bool
+    m_vLightmapUvScale: 8 # Vector2D
+    m_nCompileTimestamp: 16 # uint64_t
+    m_nCompileFingerprint: 24 # uint64_t
+WorldNodeOnDiskBufferData_t:
+    m_nElementCount: 0 # int32_t
+    m_nElementSizeInBytes: 4 # int32_t
+    m_inputLayoutFields: 8 # CUtlVector<RenderInputLayoutField_t>
+    m_pData: 32 # CUtlVector<uint8_t>
+WorldNode_t:
+    m_sceneObjects: 0 # CUtlVector<SceneObject_t>
+    m_infoOverlays: 24 # CUtlVector<InfoOverlayData_t>
+    m_visClusterMembership: 48 # CUtlVector<uint16_t>
+    m_aggregateSceneObjects: 72 # CUtlVector<AggregateSceneObject_t>
+    m_clutterSceneObjects: 96 # CUtlVector<ClutterSceneObject_t>
+    m_extraVertexStreamOverrides: 120 # CUtlVector<ExtraVertexStreamOverride_t>
+    m_materialOverrides: 144 # CUtlVector<MaterialOverride_t>
+    m_extraVertexStreams: 168 # CUtlVector<WorldNodeOnDiskBufferData_t>
+    m_layerNames: 192 # CUtlVector<CUtlString>
+    m_sceneObjectLayerIndices: 216 # CUtlVector<uint8_t>
+    m_overlayLayerIndices: 240 # CUtlVector<uint8_t>
+    m_grassFileName: 264 # CUtlString
+    m_nodeLightingInfo: 272 # BakedLightingInfo_t
+World_t:
+    m_builderParams: 0 # WorldBuilderParams_t
+    m_worldNodes: 32 # CUtlVector<NodeData_t>
+    m_worldLightingInfo: 56 # BakedLightingInfo_t
+    m_entityLumps: 104 # CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>

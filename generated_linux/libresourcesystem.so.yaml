@@ -1,0 +1,97 @@
+---
+AABB_t:
+    m_vMinBounds: 0 # Vector
+    m_vMaxBounds: 12 # Vector
+CFuseProgram:
+    m_programBuffer: 0 # CUtlVector<uint8_t>
+    m_variablesRead: 24 # CUtlVector<FuseVariableIndex_t>
+    m_variablesWritten: 48 # CUtlVector<FuseVariableIndex_t>
+    m_nMaxTempVarsUsed: 72 # int32_t
+CFuseSymbolTable:
+    m_constants: 0 # CUtlVector<ConstantInfo_t>
+    m_variables: 24 # CUtlVector<VariableInfo_t>
+    m_functions: 48 # CUtlVector<FunctionInfo_t>
+    m_constantMap: 72 # CUtlHashtable<CUtlStringToken,int32_t>
+    m_variableMap: 104 # CUtlHashtable<CUtlStringToken,int32_t>
+    m_functionMap: 136 # CUtlHashtable<CUtlStringToken,int32_t>
+ConstantInfo_t:
+    m_name: 0 # CUtlString
+    m_nameToken: 8 # CUtlStringToken
+    m_flValue: 12 # float
+FourQuaternions:
+    x: 0 # fltx4
+    y: 16 # fltx4
+    z: 32 # fltx4
+    w: 48 # fltx4
+FunctionInfo_t:
+    m_name: 8 # CUtlString
+    m_nameToken: 16 # CUtlStringToken
+    m_nParamCount: 20 # int32_t
+    m_nIndex: 24 # FuseFunctionIndex_t
+    m_bIsPure: 26 # bool
+FuseFunctionIndex_t:
+    m_Value: 0 # uint16_t
+FuseVariableIndex_t:
+    m_Value: 0 # uint16_t
+InfoForResourceTypeCAnimData:
+InfoForResourceTypeCAnimationGroup:
+InfoForResourceTypeCCSGOEconItem:
+InfoForResourceTypeCChoreoSceneFileData:
+InfoForResourceTypeCCompositeMaterialKit:
+InfoForResourceTypeCDACGameDefsData:
+InfoForResourceTypeCDOTANovelsList:
+InfoForResourceTypeCDOTAPatchNotesList:
+InfoForResourceTypeCDotaItemDefinitionResource:
+InfoForResourceTypeCEntityLump:
+InfoForResourceTypeCGcExportableExternalData:
+InfoForResourceTypeCJavaScriptResource:
+InfoForResourceTypeCModel:
+InfoForResourceTypeCMorphSetData:
+InfoForResourceTypeCNmClip:
+InfoForResourceTypeCNmGraph:
+InfoForResourceTypeCNmGraphDataSet:
+InfoForResourceTypeCNmSkeleton:
+InfoForResourceTypeCPanoramaDynamicImages:
+InfoForResourceTypeCPanoramaLayout:
+InfoForResourceTypeCPanoramaStyle:
+InfoForResourceTypeCPhysAggregateData:
+InfoForResourceTypeCPostProcessingResource:
+InfoForResourceTypeCRenderMesh:
+InfoForResourceTypeCResponseRulesList:
+InfoForResourceTypeCSequenceGroupData:
+InfoForResourceTypeCSmartProp:
+InfoForResourceTypeCTextureBase:
+InfoForResourceTypeCTypeScriptResource:
+InfoForResourceTypeCVDataResource:
+InfoForResourceTypeCVMixListResource:
+InfoForResourceTypeCVPhysXSurfacePropertiesList:
+InfoForResourceTypeCVSoundEventScriptList:
+InfoForResourceTypeCVSoundStackScriptList:
+InfoForResourceTypeCVoiceContainerBase:
+InfoForResourceTypeCVoxelVisibility:
+InfoForResourceTypeCWorldNode:
+InfoForResourceTypeIAnimGraphModelBinding:
+InfoForResourceTypeIMaterial2:
+InfoForResourceTypeIParticleSnapshot:
+InfoForResourceTypeIParticleSystemDefinition:
+InfoForResourceTypeIPulseGraphDef:
+InfoForResourceTypeIVectorGraphic:
+InfoForResourceTypeManifestTestResource_t:
+InfoForResourceTypeProceduralTestResource_t:
+InfoForResourceTypeTestResource_t:
+InfoForResourceTypeWorld_t:
+ManifestTestResource_t:
+    m_name: 0 # CUtlString
+    m_child: 8 # CStrongHandle<InfoForResourceTypeManifestTestResource_t>
+PackedAABB_t:
+    m_nPackedMin: 0 # uint32_t
+    m_nPackedMax: 4 # uint32_t
+TestResource_t:
+    m_name: 0 # CUtlString
+VariableInfo_t:
+    m_name: 0 # CUtlString
+    m_nameToken: 8 # CUtlStringToken
+    m_nIndex: 12 # FuseVariableIndex_t
+    m_nNumComponents: 14 # uint8_t
+    m_eVarType: 15 # FuseVariableType_t
+    m_eAccess: 16 # FuseVariableAccess_t

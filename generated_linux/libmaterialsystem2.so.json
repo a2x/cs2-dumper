@@ -1,0 +1,339 @@
+{
+  "MaterialParamBuffer_t": {
+    "data": {
+      "m_value": {
+        "value": 8,
+        "comment": "CUtlBinaryBlock"
+      }
+    },
+    "comment": "MaterialParam_t"
+  },
+  "MaterialParamFloat_t": {
+    "data": {
+      "m_flValue": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": "MaterialParam_t"
+  },
+  "MaterialParamInt_t": {
+    "data": {
+      "m_nValue": {
+        "value": 8,
+        "comment": "int32_t"
+      }
+    },
+    "comment": "MaterialParam_t"
+  },
+  "MaterialParamString_t": {
+    "data": {
+      "m_value": {
+        "value": 8,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": "MaterialParam_t"
+  },
+  "MaterialParamTexture_t": {
+    "data": {
+      "m_pValue": {
+        "value": 8,
+        "comment": "CStrongHandle<InfoForResourceTypeCTextureBase>"
+      }
+    },
+    "comment": "MaterialParam_t"
+  },
+  "MaterialParamVector_t": {
+    "data": {
+      "m_value": {
+        "value": 8,
+        "comment": "Vector4D"
+      }
+    },
+    "comment": "MaterialParam_t"
+  },
+  "MaterialParam_t": {
+    "data": {
+      "m_name": {
+        "value": 0,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
+  },
+  "MaterialResourceData_t": {
+    "data": {
+      "m_dynamicParams": {
+        "value": 112,
+        "comment": "CUtlVector<MaterialParamBuffer_t>"
+      },
+      "m_dynamicTextureParams": {
+        "value": 136,
+        "comment": "CUtlVector<MaterialParamBuffer_t>"
+      },
+      "m_floatAttributes": {
+        "value": 184,
+        "comment": "CUtlVector<MaterialParamFloat_t>"
+      },
+      "m_floatParams": {
+        "value": 40,
+        "comment": "CUtlVector<MaterialParamFloat_t>"
+      },
+      "m_intAttributes": {
+        "value": 160,
+        "comment": "CUtlVector<MaterialParamInt_t>"
+      },
+      "m_intParams": {
+        "value": 16,
+        "comment": "CUtlVector<MaterialParamInt_t>"
+      },
+      "m_materialName": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_renderAttributesUsed": {
+        "value": 280,
+        "comment": "CUtlVector<CUtlString>"
+      },
+      "m_shaderName": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_stringAttributes": {
+        "value": 256,
+        "comment": "CUtlVector<MaterialParamString_t>"
+      },
+      "m_textureAttributes": {
+        "value": 232,
+        "comment": "CUtlVector<MaterialParamTexture_t>"
+      },
+      "m_textureParams": {
+        "value": 88,
+        "comment": "CUtlVector<MaterialParamTexture_t>"
+      },
+      "m_vectorAttributes": {
+        "value": 208,
+        "comment": "CUtlVector<MaterialParamVector_t>"
+      },
+      "m_vectorParams": {
+        "value": 64,
+        "comment": "CUtlVector<MaterialParamVector_t>"
+      }
+    },
+    "comment": null
+  },
+  "PostProcessingBloomParameters_t": {
+    "data": {
+      "m_blendMode": {
+        "value": 0,
+        "comment": "BloomBlendMode_t"
+      },
+      "m_flBloomStartValue": {
+        "value": 28,
+        "comment": "float"
+      },
+      "m_flBloomStrength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flBloomThreshold": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flBloomThresholdWidth": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flBlurBloomStrength": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flBlurWeight": {
+        "value": 32,
+        "comment": "float[5]"
+      },
+      "m_flScreenBloomStrength": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flSkyboxBloomStrength": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_vBlurTint": {
+        "value": 52,
+        "comment": "Vector[5]"
+      }
+    },
+    "comment": null
+  },
+  "PostProcessingLocalContrastParameters_t": {
+    "data": {
+      "m_flLocalContrastEdgeStrength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flLocalContrastStrength": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_flLocalContrastVignetteBlur": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flLocalContrastVignetteEnd": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flLocalContrastVignetteStart": {
+        "value": 8,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "PostProcessingResource_t": {
+    "data": {
+      "m_bHasBloomParams": {
+        "value": 64,
+        "comment": "bool"
+      },
+      "m_bHasColorCorrection": {
+        "value": 272,
+        "comment": "bool"
+      },
+      "m_bHasLocalContrastParams": {
+        "value": 220,
+        "comment": "bool"
+      },
+      "m_bHasTonemapParams": {
+        "value": 0,
+        "comment": "bool"
+      },
+      "m_bHasVignetteParams": {
+        "value": 180,
+        "comment": "bool"
+      },
+      "m_bloomParams": {
+        "value": 68,
+        "comment": "PostProcessingBloomParameters_t"
+      },
+      "m_colorCorrectionVolumeData": {
+        "value": 248,
+        "comment": "CUtlBinaryBlock"
+      },
+      "m_localConstrastParams": {
+        "value": 224,
+        "comment": "PostProcessingLocalContrastParameters_t"
+      },
+      "m_nColorCorrectionVolumeDim": {
+        "value": 244,
+        "comment": "int32_t"
+      },
+      "m_toneMapParams": {
+        "value": 4,
+        "comment": "PostProcessingTonemapParameters_t"
+      },
+      "m_vignetteParams": {
+        "value": 184,
+        "comment": "PostProcessingVignetteParameters_t"
+      }
+    },
+    "comment": null
+  },
+  "PostProcessingTonemapParameters_t": {
+    "data": {
+      "m_flExposureBias": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_flExposureBiasHighlights": {
+        "value": 40,
+        "comment": "float"
+      },
+      "m_flExposureBiasShadows": {
+        "value": 36,
+        "comment": "float"
+      },
+      "m_flLinearAngle": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flLinearStrength": {
+        "value": 8,
+        "comment": "float"
+      },
+      "m_flLuminanceSource": {
+        "value": 32,
+        "comment": "float"
+      },
+      "m_flMaxHighlightLum": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_flMaxShadowLum": {
+        "value": 48,
+        "comment": "float"
+      },
+      "m_flMinHighlightLum": {
+        "value": 52,
+        "comment": "float"
+      },
+      "m_flMinShadowLum": {
+        "value": 44,
+        "comment": "float"
+      },
+      "m_flShoulderStrength": {
+        "value": 4,
+        "comment": "float"
+      },
+      "m_flToeDenom": {
+        "value": 24,
+        "comment": "float"
+      },
+      "m_flToeNum": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flToeStrength": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flWhitePoint": {
+        "value": 28,
+        "comment": "float"
+      }
+    },
+    "comment": null
+  },
+  "PostProcessingVignetteParameters_t": {
+    "data": {
+      "m_flFeather": {
+        "value": 20,
+        "comment": "float"
+      },
+      "m_flRadius": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_flRoundness": {
+        "value": 16,
+        "comment": "float"
+      },
+      "m_flVignetteStrength": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_vCenter": {
+        "value": 4,
+        "comment": "Vector2D"
+      },
+      "m_vColorTint": {
+        "value": 24,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
+  }
+}

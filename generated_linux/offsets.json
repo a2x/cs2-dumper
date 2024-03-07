@@ -1,0 +1,65 @@
+{
+  "game_info": {
+    "data": {
+      "buildNumber": {
+        "value": 13995,
+        "comment": "Game build number"
+      }
+    },
+    "comment": "Some additional information about the game at dump time"
+  },
+  "libclient_so": {
+    "data": {
+      "dwEntityList": {
+        "value": 56252424,
+        "comment": null
+      },
+      "dwForceAttack": {
+        "value": 57867952,
+        "comment": null
+      },
+      "dwForceAttack2": {
+        "value": 57867792,
+        "comment": null
+      },
+      "dwGameEntitySystem": {
+        "value": 59094784,
+        "comment": null
+      },
+      "dwGameEntitySystem_getHighestEntityIndex": {
+        "value": 5440,
+        "comment": null
+      },
+      "dwGameRules": {
+        "value": 57872968,
+        "comment": null
+      },
+      "dwLocalPlayerController": {
+        "value": 57763704,
+        "comment": null
+      },
+      "dwLocalPlayerPawn": {
+        "value": 57895480,
+        "comment": null
+      },
+      "dwViewMatrix": {
+        "value": 57898592,
+        "comment": null
+      }
+    },
+    "comment": "libclient.so"
+  },
+  "libengine2_so": {
+    "data": {
+      "dwBuildNumber": {
+        "value": 7157236,
+        "comment": null
+      },
+      "dwNetworkGameClient_deltaTick": {
+        "value": 632,
+        "comment": null
+      }
+    },
+    "comment": "libengine2.so"
+  }
+}

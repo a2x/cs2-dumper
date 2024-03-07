@@ -1,0 +1,20 @@
+{
+  "CAnimScriptBase": {
+    "data": {
+      "m_bIsValid": {
+        "value": 8,
+        "comment": "bool"
+      }
+    },
+    "comment": null
+  },
+  "EmptyTestScript": {
+    "data": {
+      "m_hTest": {
+        "value": 16,
+        "comment": "CAnimScriptParam<float>"
+      }
+    },
+    "comment": "CAnimScriptBase"
+  }
+}
