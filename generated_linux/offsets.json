@@ -34,6 +34,18 @@
         "value": 57872968,
         "comment": null
       },
+      "dwGlobalVars": {
+        "value": 55994832,
+        "comment": null
+      },
+      "dwGlowManager": {
+        "value": 57891664,
+        "comment": null
+      },
+      "dwInterfaceLinkList": {
+        "value": 58515248,
+        "comment": null
+      },
       "dwLocalPlayerController": {
         "value": 57763704,
         "comment": null
@@ -42,8 +54,28 @@
         "value": 57895736,
         "comment": null
       },
+      "dwPlantedC4": {
+        "value": 57979800,
+        "comment": null
+      },
+      "dwPrediction": {
+        "value": 57895424,
+        "comment": null
+      },
+      "dwSensitivity_sensitivity": {
+        "value": 64,
+        "comment": null
+      },
+      "dwViewAngles": {
+        "value": 57948272,
+        "comment": null
+      },
       "dwViewMatrix": {
         "value": 57898592,
+        "comment": null
+      },
+      "dwViewRender": {
+        "value": 57899024,
         "comment": null
       }
     },
@@ -55,11 +87,44 @@
         "value": 7157236,
         "comment": null
       },
+      "dwNetworkGameClient": {
+        "value": 7159688,
+        "comment": null
+      },
       "dwNetworkGameClient_deltaTick": {
         "value": 632,
+        "comment": null
+      },
+      "dwNetworkGameClient_maxClients": {
+        "value": 592,
+        "comment": null
+      },
+      "dwNetworkGameClient_signOnState": {
+        "value": 608,
+        "comment": null
+      },
+      "dwWindowHeight": {
+        "value": 7196092,
+        "comment": null
+      },
+      "dwWindowWidth": {
+        "value": 7196088,
         "comment": null
       }
     },
     "comment": "libengine2.so"
+  },
+  "libmatchmaking_so": {
+    "data": {
+      "dwGameTypes": {
+        "value": 3656096,
+        "comment": null
+      },
+      "dwGameTypes_mapName": {
+        "value": 3656384,
+        "comment": null
+      }
+    },
+    "comment": "libmatchmaking.so"
   }
 }

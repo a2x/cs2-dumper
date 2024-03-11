@@ -8,9 +8,25 @@ libclient_so: # libclient.so
     dwGameEntitySystem: 59094784
     dwGameEntitySystem_getHighestEntityIndex: 5440
     dwGameRules: 57872968
+    dwGlobalVars: 55994832
+    dwGlowManager: 57891664
+    dwInterfaceLinkList: 58515248
     dwLocalPlayerController: 57763704
     dwLocalPlayerPawn: 57895736
+    dwPlantedC4: 57979800
+    dwPrediction: 57895424
+    dwSensitivity_sensitivity: 64
+    dwViewAngles: 57948272
     dwViewMatrix: 57898592
+    dwViewRender: 57899024
 libengine2_so: # libengine2.so
     dwBuildNumber: 7157236
     dwNetworkGameClient_deltaTick: 632
+    dwNetworkGameClient: 7159688
+    dwNetworkGameClient_maxClients: 592
+    dwNetworkGameClient_signOnState: 608
+    dwWindowHeight: 7196092
+    dwWindowWidth: 7196088
+libmatchmaking_so: # libmatchmaking.so
+    dwGameTypes: 3656096
+    dwGameTypes_mapName: 3656384
