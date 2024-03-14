@@ -1,6 +1,6 @@
 /*
- * Created using https://github.com/a2x/cs2-dumper
- * Thu, 29 Feb 2024 02:15:37 +0000
+ * Generated using https://github.com/a2x/cs2-dumper
+ * Thu, 14 Mar 2024 05:07:42 +0000
  */
 
 #pragma once
@@ -13,14 +13,14 @@ namespace animationsystem_dll { // animationsystem.dll
 }
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8AD8F0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x89CB50;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7AE2C0;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x731850;
-    constexpr std::ptrdiff_t Source2Client002 = 0x731870;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x731860;
-    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x47F420;
-    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x46B740;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8AEEA0;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x89E100;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7AF770;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x732CE0;
+    constexpr std::ptrdiff_t Source2Client002 = 0x732D00;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x732CF0;
+    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x480640;
+    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x46BA50;
 }
 
 namespace engine2_dll { // engine2.dll
@@ -109,9 +109,9 @@ namespace navsystem_dll { // navsystem.dll
 }
 
 namespace networksystem_dll { // networksystem.dll
-    constexpr std::ptrdiff_t SerializedEntitiesVersion001 = 0xD68D0;
-    constexpr std::ptrdiff_t NetworkSystemVersion001 = 0xBF9A0;
-    constexpr std::ptrdiff_t NetworkMessagesVersion001 = 0x9FC30;
+    constexpr std::ptrdiff_t SerializedEntitiesVersion001 = 0xD6930;
+    constexpr std::ptrdiff_t NetworkSystemVersion001 = 0xBFA00;
+    constexpr std::ptrdiff_t NetworkMessagesVersion001 = 0x9FC90;
     constexpr std::ptrdiff_t FlattenedSerializersVersion001 = 0x7EF90;
 }
 
@@ -161,13 +161,13 @@ namespace schemasystem_dll { // schemasystem.dll
 }
 
 namespace server_dll { // server.dll
-    constexpr std::ptrdiff_t NavGameTest001 = 0xA44C60;
-    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x8300E0;
-    constexpr std::ptrdiff_t Source2GameClients001 = 0x8300F0;
-    constexpr std::ptrdiff_t Source2GameEntities001 = 0x830100;
-    constexpr std::ptrdiff_t Source2Server001 = 0x830110;
-    constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x571B50;
-    constexpr std::ptrdiff_t Source2ServerConfig001 = 0x565ED0;
+    constexpr std::ptrdiff_t NavGameTest001 = 0xA464B0;
+    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x831870;
+    constexpr std::ptrdiff_t Source2GameClients001 = 0x831880;
+    constexpr std::ptrdiff_t Source2GameEntities001 = 0x831890;
+    constexpr std::ptrdiff_t Source2Server001 = 0x8318A0;
+    constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x571DF0;
+    constexpr std::ptrdiff_t Source2ServerConfig001 = 0x566170;
     constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x2AF220;
     constexpr std::ptrdiff_t customnavsystem001 = 0x22C0E0;
     constexpr std::ptrdiff_t Source2GameDirector001 = 0x11EA40;
@@ -185,33 +185,33 @@ namespace steamaudio_dll { // steamaudio.dll
 }
 
 namespace steamclient64_dll { // steamclient64.dll
-    constexpr std::ptrdiff_t IVALIDATE001 = 0x8661B0;
-    constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x862120;
-    constexpr std::ptrdiff_t SteamClient021 = 0x663750;
-    constexpr std::ptrdiff_t SteamClient020 = 0x663740;
-    constexpr std::ptrdiff_t SteamClient019 = 0x663730;
-    constexpr std::ptrdiff_t SteamClient018 = 0x663720;
-    constexpr std::ptrdiff_t SteamClient017 = 0x663710;
-    constexpr std::ptrdiff_t SteamClient016 = 0x663700;
-    constexpr std::ptrdiff_t SteamClient015 = 0x6636F0;
-    constexpr std::ptrdiff_t SteamClient014 = 0x6636E0;
-    constexpr std::ptrdiff_t SteamClient013 = 0x6636D0;
-    constexpr std::ptrdiff_t SteamClient012 = 0x6636C0;
-    constexpr std::ptrdiff_t SteamClient011 = 0x6636B0;
-    constexpr std::ptrdiff_t SteamClient010 = 0x6636A0;
-    constexpr std::ptrdiff_t SteamClient009 = 0x663690;
-    constexpr std::ptrdiff_t SteamClient008 = 0x663680;
-    constexpr std::ptrdiff_t SteamClient007 = 0x663670;
-    constexpr std::ptrdiff_t SteamClient006 = 0x663660;
-    constexpr std::ptrdiff_t p2pvoice002 = 0xD9F70;
-    constexpr std::ptrdiff_t p2pvoicesingleton002 = 0xD69D0;
+    constexpr std::ptrdiff_t IVALIDATE001 = 0x866250;
+    constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x8621C0;
+    constexpr std::ptrdiff_t SteamClient021 = 0x6637F0;
+    constexpr std::ptrdiff_t SteamClient020 = 0x6637E0;
+    constexpr std::ptrdiff_t SteamClient019 = 0x6637D0;
+    constexpr std::ptrdiff_t SteamClient018 = 0x6637C0;
+    constexpr std::ptrdiff_t SteamClient017 = 0x6637B0;
+    constexpr std::ptrdiff_t SteamClient016 = 0x6637A0;
+    constexpr std::ptrdiff_t SteamClient015 = 0x663790;
+    constexpr std::ptrdiff_t SteamClient014 = 0x663780;
+    constexpr std::ptrdiff_t SteamClient013 = 0x663770;
+    constexpr std::ptrdiff_t SteamClient012 = 0x663760;
+    constexpr std::ptrdiff_t SteamClient011 = 0x663750;
+    constexpr std::ptrdiff_t SteamClient010 = 0x663740;
+    constexpr std::ptrdiff_t SteamClient009 = 0x663730;
+    constexpr std::ptrdiff_t SteamClient008 = 0x663720;
+    constexpr std::ptrdiff_t SteamClient007 = 0x663710;
+    constexpr std::ptrdiff_t SteamClient006 = 0x663700;
+    constexpr std::ptrdiff_t p2pvoice002 = 0xD9FD0;
+    constexpr std::ptrdiff_t p2pvoicesingleton002 = 0xD6A30;
 }
 
 namespace tier0_dll { // tier0.dll
-    constexpr std::ptrdiff_t VStringTokenSystem001 = 0x190B10;
-    constexpr std::ptrdiff_t TestScriptMgr001 = 0x140CA0;
-    constexpr std::ptrdiff_t VProcessUtils002 = 0x132180;
-    constexpr std::ptrdiff_t VEngineCvar007 = 0x635C0;
+    constexpr std::ptrdiff_t VStringTokenSystem001 = 0x190600;
+    constexpr std::ptrdiff_t TestScriptMgr001 = 0x140790;
+    constexpr std::ptrdiff_t VProcessUtils002 = 0x131C70;
+    constexpr std::ptrdiff_t VEngineCvar007 = 0x63290;
 }
 
 namespace v8system_dll { // v8system.dll

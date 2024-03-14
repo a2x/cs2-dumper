@@ -1,6 +1,6 @@
 /*
- * Created using https://github.com/a2x/cs2-dumper
- * Thu, 29 Feb 2024 02:15:37 +0000
+ * Generated using https://github.com/a2x/cs2-dumper
+ * Thu, 14 Mar 2024 05:07:41 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -2202,12 +2202,13 @@ pub mod C_CSPlayerPawnBase { // C_BasePlayerPawn
     pub const m_vecPlayerPatchEconIndices: usize = 0x15F8; // uint32_t[5]
     pub const m_bHideTargetID: usize = 0x1614; // bool
     pub const m_flLastSmokeOverlayAlpha: usize = 0x1618; // float
-    pub const m_vLastSmokeOverlayColor: usize = 0x161C; // Vector
-    pub const m_nPlayerSmokedFx: usize = 0x1628; // ParticleIndex_t
-    pub const m_nPlayerInfernoBodyFx: usize = 0x162C; // ParticleIndex_t
-    pub const m_nPlayerInfernoFootFx: usize = 0x1630; // ParticleIndex_t
-    pub const m_flNextMagDropTime: usize = 0x1634; // float
-    pub const m_nLastMagDropAttachmentIndex: usize = 0x1638; // int32_t
+    pub const m_flLastSmokeAge: usize = 0x161C; // float
+    pub const m_vLastSmokeOverlayColor: usize = 0x1620; // Vector
+    pub const m_nPlayerSmokedFx: usize = 0x162C; // ParticleIndex_t
+    pub const m_nPlayerInfernoBodyFx: usize = 0x1630; // ParticleIndex_t
+    pub const m_nPlayerInfernoFootFx: usize = 0x1634; // ParticleIndex_t
+    pub const m_flNextMagDropTime: usize = 0x1638; // float
+    pub const m_nLastMagDropAttachmentIndex: usize = 0x163C; // int32_t
     pub const m_vecBulletHitModels: usize = 0x1640; // CUtlVector<C_BulletHitModel*>
     pub const m_vecPickupModelSlerpers: usize = 0x1658; // CUtlVector<C_PickUpModelSlerper*>
     pub const m_vecLastAliveLocalVelocity: usize = 0x1670; // Vector

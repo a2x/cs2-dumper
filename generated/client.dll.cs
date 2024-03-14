@@ -1,6 +1,6 @@
 /*
- * Created using https://github.com/a2x/cs2-dumper
- * Thu, 29 Feb 2024 02:15:36 +0000
+ * Generated using https://github.com/a2x/cs2-dumper
+ * Thu, 14 Mar 2024 05:07:41 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -2200,12 +2200,13 @@ public static class C_CSPlayerPawnBase { // C_BasePlayerPawn
     public const nint m_vecPlayerPatchEconIndices = 0x15F8; // uint32_t[5]
     public const nint m_bHideTargetID = 0x1614; // bool
     public const nint m_flLastSmokeOverlayAlpha = 0x1618; // float
-    public const nint m_vLastSmokeOverlayColor = 0x161C; // Vector
-    public const nint m_nPlayerSmokedFx = 0x1628; // ParticleIndex_t
-    public const nint m_nPlayerInfernoBodyFx = 0x162C; // ParticleIndex_t
-    public const nint m_nPlayerInfernoFootFx = 0x1630; // ParticleIndex_t
-    public const nint m_flNextMagDropTime = 0x1634; // float
-    public const nint m_nLastMagDropAttachmentIndex = 0x1638; // int32_t
+    public const nint m_flLastSmokeAge = 0x161C; // float
+    public const nint m_vLastSmokeOverlayColor = 0x1620; // Vector
+    public const nint m_nPlayerSmokedFx = 0x162C; // ParticleIndex_t
+    public const nint m_nPlayerInfernoBodyFx = 0x1630; // ParticleIndex_t
+    public const nint m_nPlayerInfernoFootFx = 0x1634; // ParticleIndex_t
+    public const nint m_flNextMagDropTime = 0x1638; // float
+    public const nint m_nLastMagDropAttachmentIndex = 0x163C; // int32_t
     public const nint m_vecBulletHitModels = 0x1640; // CUtlVector<C_BulletHitModel*>
     public const nint m_vecPickupModelSlerpers = 0x1658; // CUtlVector<C_PickUpModelSlerper*>
     public const nint m_vecLastAliveLocalVelocity = 0x1670; // Vector

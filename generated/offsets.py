@@ -1,33 +1,33 @@
 '''
-Created using https://github.com/a2x/cs2-dumper
-Thu, 29 Feb 2024 02:15:37 +0000
+Generated using https://github.com/a2x/cs2-dumper
+Thu, 14 Mar 2024 05:07:42 +0000
 '''
 
 class client_dll: # client.dll
-    dwEntityList = 0x18BBAF8
-    dwForceAttack = 0x1728F90
-    dwForceAttack2 = 0x1729020
-    dwForceBackward = 0x1729260
-    dwForceCrouch = 0x1729530
-    dwForceForward = 0x17291D0
-    dwForceJump = 0x17294A0
-    dwForceLeft = 0x17292F0
-    dwForceRight = 0x1729380
-    dwGameEntitySystem = 0x19D9450
+    dwEntityList = 0x18BFC08
+    dwForceAttack = 0x172D030
+    dwForceAttack2 = 0x172D0C0
+    dwForceBackward = 0x172D300
+    dwForceCrouch = 0x172D5D0
+    dwForceForward = 0x172D270
+    dwForceJump = 0x172D540
+    dwForceLeft = 0x172D390
+    dwForceRight = 0x172D420
+    dwGameEntitySystem = 0x19DD590
     dwGameEntitySystem_getHighestEntityIndex = 0x1510
-    dwGameRules = 0x1918A30
-    dwGlobalVars = 0x1723B10
-    dwGlowManager = 0x1918E50
-    dwInterfaceLinkList = 0x1A0A598
-    dwLocalPlayerController = 0x190B308
-    dwLocalPlayerPawn = 0x1730118
-    dwPlantedC4 = 0x1921858
-    dwPrediction = 0x172FFE0
-    dwSensitivity = 0x1919778
+    dwGameRules = 0x191CB50
+    dwGlobalVars = 0x1727BB0
+    dwGlowManager = 0x191CF70
+    dwInterfaceLinkList = 0x1A0E6D8
+    dwLocalPlayerController = 0x190F428
+    dwLocalPlayerPawn = 0x17341B8
+    dwPlantedC4 = 0x1925988
+    dwPrediction = 0x1734080
+    dwSensitivity = 0x191D898
     dwSensitivity_sensitivity = 0x40
-    dwViewAngles = 0x1929730
-    dwViewMatrix = 0x191CF30
-    dwViewRender = 0x191D7B0
+    dwViewAngles = 0x192D860
+    dwViewMatrix = 0x1921050
+    dwViewRender = 0x19218D0
 
 class engine2_dll: # engine2.dll
     dwBuildNumber = 0x513574
@@ -40,7 +40,7 @@ class engine2_dll: # engine2.dll
     dwWindowWidth = 0x5CBC60
 
 class game_info: # Some additional information about the game at dump time
-    buildNumber = 0x36AB # Game build number
+    buildNumber = 0x36AC # Game build number
 
 class inputsystem_dll: # inputsystem.dll
     dwInputSystem = 0x367A0
