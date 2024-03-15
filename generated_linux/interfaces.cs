@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 7 Mar 2024 10:34:35 +0000
+ * Fri, 15 Mar 2024 16:09:40 +0000
  */
 
 public static class libanimationsystem_so { // libanimationsystem.so
@@ -9,20 +9,20 @@ public static class libanimationsystem_so { // libanimationsystem.so
 }
 
 public static class libclient_so { // libclient.so
-    public const nint LegacyGameUI001 = 0xF1E6F0;
-    public const nint Source2ClientUI001 = 0xEDD000;
-    public const nint Source2ClientPrediction001 = 0xDE2230;
-    public const nint ClientToolsInfo_001 = 0xD53030;
-    public const nint Source2Client002 = 0xD52CF0;
-    public const nint GameClientExports001 = 0xD52C80;
-    public const nint EmptyWorldService001_Client = 0xA47C90;
-    public const nint Source2ClientConfig001 = 0xA2B8D0;
+    public const nint LegacyGameUI001 = 0xF1FD40;
+    public const nint Source2ClientUI001 = 0xEDE680;
+    public const nint Source2ClientPrediction001 = 0xDE3760;
+    public const nint ClientToolsInfo_001 = 0xD54560;
+    public const nint Source2Client002 = 0xD54220;
+    public const nint GameClientExports001 = 0xD541B0;
+    public const nint EmptyWorldService001_Client = 0xA47F20;
+    public const nint Source2ClientConfig001 = 0xA2BB50;
 }
 
 public static class libengine2_so { // libengine2.so
-    public const nint EngineGameUI001 = 0x3752D0;
-    public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x374D50;
-    public const nint INETSUPPORT_001 = 0x33EFF0;
+    public const nint EngineGameUI001 = 0x3752F0;
+    public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x374D70;
+    public const nint INETSUPPORT_001 = 0x33F010;
     public const nint Source2EngineToServer001 = 0x2ED7F0;
     public const nint Source2EngineToServerStringTable001 = 0x2CFF80;
     public const nint Source2EngineToClient001 = 0x2C6E60;
@@ -104,7 +104,7 @@ public static class libnetworksystem_so { // libnetworksystem.so
 }
 
 public static class libpanorama_so { // libpanorama.so
-    public const nint PanoramaUIEngine001 = 0x220F70;
+    public const nint PanoramaUIEngine001 = 0x220F80;
 }
 
 public static class libpanorama_text_pango_so { // libpanorama_text_pango.so
@@ -148,16 +148,16 @@ public static class libschemasystem_so { // libschemasystem.so
 }
 
 public static class libserver_so { // libserver.so
-    public const nint NavGameTest001 = 0x1091E40;
-    public const nint ServerToolsInfo_001 = 0xE6FEA0;
-    public const nint Source2GameClients001 = 0xE6FE30;
-    public const nint Source2GameEntities001 = 0xE6FE20;
-    public const nint Source2Server001 = 0xE6FB10;
-    public const nint EmptyWorldService001_Server = 0xB82960;
-    public const nint Source2ServerConfig001 = 0xB0E800;
-    public const nint EntitySubclassUtilsV001 = 0x860D40;
-    public const nint customnavsystem001 = 0x7F7D80;
-    public const nint Source2GameDirector001 = 0x6C4140;
+    public const nint NavGameTest001 = 0x1093830;
+    public const nint ServerToolsInfo_001 = 0xE718D0;
+    public const nint Source2GameClients001 = 0xE71860;
+    public const nint Source2GameEntities001 = 0xE71850;
+    public const nint Source2Server001 = 0xE71540;
+    public const nint EmptyWorldService001_Server = 0xB82B90;
+    public const nint Source2ServerConfig001 = 0xB0EA30;
+    public const nint EntitySubclassUtilsV001 = 0x860D50;
+    public const nint customnavsystem001 = 0x7F7D90;
+    public const nint Source2GameDirector001 = 0x6C4150;
 }
 
 public static class libsoundsystem_so { // libsoundsystem.so
@@ -172,10 +172,10 @@ public static class libsteamaudio_so { // libsteamaudio.so
 }
 
 public static class libtier0_so { // libtier0.so
-    public const nint VStringTokenSystem001 = 0x1EAA20;
-    public const nint TestScriptMgr001 = 0x1BEA40;
-    public const nint VProcessUtils002 = 0x19C4C0;
-    public const nint VEngineCvar007 = 0xF1450;
+    public const nint VStringTokenSystem001 = 0x1EA8D0;
+    public const nint TestScriptMgr001 = 0x1BE8F0;
+    public const nint VProcessUtils002 = 0x19C370;
+    public const nint VEngineCvar007 = 0xF1370;
 }
 
 public static class libv8system_so { // libv8system.so

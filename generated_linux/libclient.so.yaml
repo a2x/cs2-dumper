@@ -1810,12 +1810,13 @@ C_CSPlayerPawnBase: # C_BasePlayerPawn
     m_vecPlayerPatchEconIndices: 5528 # uint32_t[5]
     m_bHideTargetID: 5556 # bool
     m_flLastSmokeOverlayAlpha: 5560 # float
-    m_vLastSmokeOverlayColor: 5564 # Vector
-    m_nPlayerSmokedFx: 5576 # ParticleIndex_t
-    m_nPlayerInfernoBodyFx: 5580 # ParticleIndex_t
-    m_nPlayerInfernoFootFx: 5584 # ParticleIndex_t
-    m_flNextMagDropTime: 5588 # float
-    m_nLastMagDropAttachmentIndex: 5592 # int32_t
+    m_flLastSmokeAge: 5564 # float
+    m_vLastSmokeOverlayColor: 5568 # Vector
+    m_nPlayerSmokedFx: 5580 # ParticleIndex_t
+    m_nPlayerInfernoBodyFx: 5584 # ParticleIndex_t
+    m_nPlayerInfernoFootFx: 5588 # ParticleIndex_t
+    m_flNextMagDropTime: 5592 # float
+    m_nLastMagDropAttachmentIndex: 5596 # int32_t
     m_vecBulletHitModels: 5600 # CUtlVector<C_BulletHitModel*>
     m_vecPickupModelSlerpers: 5624 # CUtlVector<C_PickUpModelSlerper*>
     m_vecLastAliveLocalVelocity: 5648 # Vector

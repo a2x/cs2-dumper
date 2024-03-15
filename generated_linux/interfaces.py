@@ -1,6 +1,6 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Thu, 7 Mar 2024 10:34:35 +0000
+Fri, 15 Mar 2024 16:09:40 +0000
 '''
 
 class libanimationsystem_so: # libanimationsystem.so
@@ -8,19 +8,19 @@ class libanimationsystem_so: # libanimationsystem.so
     AnimationSystem_001 = 0x18C850
 
 class libclient_so: # libclient.so
-    LegacyGameUI001 = 0xF1E6F0
-    Source2ClientUI001 = 0xEDD000
-    Source2ClientPrediction001 = 0xDE2230
-    ClientToolsInfo_001 = 0xD53030
-    Source2Client002 = 0xD52CF0
-    GameClientExports001 = 0xD52C80
-    EmptyWorldService001_Client = 0xA47C90
-    Source2ClientConfig001 = 0xA2B8D0
+    LegacyGameUI001 = 0xF1FD40
+    Source2ClientUI001 = 0xEDE680
+    Source2ClientPrediction001 = 0xDE3760
+    ClientToolsInfo_001 = 0xD54560
+    Source2Client002 = 0xD54220
+    GameClientExports001 = 0xD541B0
+    EmptyWorldService001_Client = 0xA47F20
+    Source2ClientConfig001 = 0xA2BB50
 
 class libengine2_so: # libengine2.so
-    EngineGameUI001 = 0x3752D0
-    VENGINE_GAMEUIFUNCS_VERSION005 = 0x374D50
-    INETSUPPORT_001 = 0x33EFF0
+    EngineGameUI001 = 0x3752F0
+    VENGINE_GAMEUIFUNCS_VERSION005 = 0x374D70
+    INETSUPPORT_001 = 0x33F010
     Source2EngineToServer001 = 0x2ED7F0
     Source2EngineToServerStringTable001 = 0x2CFF80
     Source2EngineToClient001 = 0x2C6E60
@@ -93,7 +93,7 @@ class libnetworksystem_so: # libnetworksystem.so
     FlattenedSerializersVersion001 = 0x159460
 
 class libpanorama_so: # libpanorama.so
-    PanoramaUIEngine001 = 0x220F70
+    PanoramaUIEngine001 = 0x220F80
 
 class libpanorama_text_pango_so: # libpanorama_text_pango.so
     PanoramaTextServices001 = 0xBC4C0
@@ -127,16 +127,16 @@ class libschemasystem_so: # libschemasystem.so
     SchemaSystem_001 = 0x211F0
 
 class libserver_so: # libserver.so
-    NavGameTest001 = 0x1091E40
-    ServerToolsInfo_001 = 0xE6FEA0
-    Source2GameClients001 = 0xE6FE30
-    Source2GameEntities001 = 0xE6FE20
-    Source2Server001 = 0xE6FB10
-    EmptyWorldService001_Server = 0xB82960
-    Source2ServerConfig001 = 0xB0E800
-    EntitySubclassUtilsV001 = 0x860D40
-    customnavsystem001 = 0x7F7D80
-    Source2GameDirector001 = 0x6C4140
+    NavGameTest001 = 0x1093830
+    ServerToolsInfo_001 = 0xE718D0
+    Source2GameClients001 = 0xE71860
+    Source2GameEntities001 = 0xE71850
+    Source2Server001 = 0xE71540
+    EmptyWorldService001_Server = 0xB82B90
+    Source2ServerConfig001 = 0xB0EA30
+    EntitySubclassUtilsV001 = 0x860D50
+    customnavsystem001 = 0x7F7D90
+    Source2GameDirector001 = 0x6C4150
 
 class libsoundsystem_so: # libsoundsystem.so
     VMixEditTool001 = 0x1F4340
@@ -148,10 +148,10 @@ class libsteamaudio_so: # libsteamaudio.so
     SteamAudio001 = 0x31590
 
 class libtier0_so: # libtier0.so
-    VStringTokenSystem001 = 0x1EAA20
-    TestScriptMgr001 = 0x1BEA40
-    VProcessUtils002 = 0x19C4C0
-    VEngineCvar007 = 0xF1450
+    VStringTokenSystem001 = 0x1EA8D0
+    TestScriptMgr001 = 0x1BE8F0
+    VProcessUtils002 = 0x19C370
+    VEngineCvar007 = 0xF1370
 
 class libv8system_so: # libv8system.so
     Source2V8System001 = 0x1B630

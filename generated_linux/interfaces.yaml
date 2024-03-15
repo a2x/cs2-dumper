@@ -3,18 +3,18 @@ libanimationsystem_so: # libanimationsystem.so
     AnimationSystemUtils_001: 1624672
     AnimationSystem_001: 1624144
 libclient_so: # libclient.so
-    LegacyGameUI001: 15853296
-    Source2ClientUI001: 15585280
-    Source2ClientPrediction001: 14557744
-    ClientToolsInfo_001: 13971504
-    Source2Client002: 13970672
-    GameClientExports001: 13970560
-    EmptyWorldService001_Client: 10779792
-    Source2ClientConfig001: 10664144
+    LegacyGameUI001: 15859008
+    Source2ClientUI001: 15591040
+    Source2ClientPrediction001: 14563168
+    ClientToolsInfo_001: 13976928
+    Source2Client002: 13976096
+    GameClientExports001: 13975984
+    EmptyWorldService001_Client: 10780448
+    Source2ClientConfig001: 10664784
 libengine2_so: # libengine2.so
-    EngineGameUI001: 3625680
-    VENGINE_GAMEUIFUNCS_VERSION005: 3624272
-    INETSUPPORT_001: 3403760
+    EngineGameUI001: 3625712
+    VENGINE_GAMEUIFUNCS_VERSION005: 3624304
+    INETSUPPORT_001: 3403792
     Source2EngineToServer001: 3069936
     Source2EngineToServerStringTable001: 2948992
     Source2EngineToClient001: 2911840
@@ -78,7 +78,7 @@ libnetworksystem_so: # libnetworksystem.so
     NetworkMessagesVersion001: 1575824
     FlattenedSerializersVersion001: 1414240
 libpanorama_so: # libpanorama.so
-    PanoramaUIEngine001: 2232176
+    PanoramaUIEngine001: 2232192
 libpanorama_text_pango_so: # libpanorama_text_pango.so
     PanoramaTextServices001: 771264
 libpanoramauiclient_so: # libpanoramauiclient.so
@@ -102,16 +102,16 @@ libscenesystem_so: # libscenesystem.so
 libschemasystem_so: # libschemasystem.so
     SchemaSystem_001: 135664
 libserver_so: # libserver.so
-    NavGameTest001: 17374784
-    ServerToolsInfo_001: 15138464
-    Source2GameClients001: 15138352
-    Source2GameEntities001: 15138336
-    Source2Server001: 15137552
-    EmptyWorldService001_Server: 12069216
-    Source2ServerConfig001: 11593728
-    EntitySubclassUtilsV001: 8785216
-    customnavsystem001: 8355200
-    Source2GameDirector001: 7094592
+    NavGameTest001: 17381424
+    ServerToolsInfo_001: 15145168
+    Source2GameClients001: 15145056
+    Source2GameEntities001: 15145040
+    Source2Server001: 15144256
+    EmptyWorldService001_Server: 12069776
+    Source2ServerConfig001: 11594288
+    EntitySubclassUtilsV001: 8785232
+    customnavsystem001: 8355216
+    Source2GameDirector001: 7094608
 libsoundsystem_so: # libsoundsystem.so
     VMixEditTool001: 2048832
     SoundSystem001: 1853728
@@ -120,10 +120,10 @@ libsoundsystem_so: # libsoundsystem.so
 libsteamaudio_so: # libsteamaudio.so
     SteamAudio001: 202128
 libtier0_so: # libtier0.so
-    VStringTokenSystem001: 2009632
-    TestScriptMgr001: 1829440
-    VProcessUtils002: 1688768
-    VEngineCvar007: 988240
+    VStringTokenSystem001: 2009296
+    TestScriptMgr001: 1829104
+    VProcessUtils002: 1688432
+    VEngineCvar007: 988016
 libv8system_so: # libv8system.so
     Source2V8System001: 112176
 libvphysics2_so: # libvphysics2.so

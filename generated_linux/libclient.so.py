@@ -1,6 +1,6 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Thu, 7 Mar 2024 10:34:35 +0000
+Fri, 15 Mar 2024 16:09:39 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -2007,12 +2007,13 @@ class C_CSPlayerPawnBase: # C_BasePlayerPawn
     m_vecPlayerPatchEconIndices = 0x1598 # uint32_t[5]
     m_bHideTargetID = 0x15B4 # bool
     m_flLastSmokeOverlayAlpha = 0x15B8 # float
-    m_vLastSmokeOverlayColor = 0x15BC # Vector
-    m_nPlayerSmokedFx = 0x15C8 # ParticleIndex_t
-    m_nPlayerInfernoBodyFx = 0x15CC # ParticleIndex_t
-    m_nPlayerInfernoFootFx = 0x15D0 # ParticleIndex_t
-    m_flNextMagDropTime = 0x15D4 # float
-    m_nLastMagDropAttachmentIndex = 0x15D8 # int32_t
+    m_flLastSmokeAge = 0x15BC # float
+    m_vLastSmokeOverlayColor = 0x15C0 # Vector
+    m_nPlayerSmokedFx = 0x15CC # ParticleIndex_t
+    m_nPlayerInfernoBodyFx = 0x15D0 # ParticleIndex_t
+    m_nPlayerInfernoFootFx = 0x15D4 # ParticleIndex_t
+    m_flNextMagDropTime = 0x15D8 # float
+    m_nLastMagDropAttachmentIndex = 0x15DC # int32_t
     m_vecBulletHitModels = 0x15E0 # CUtlVector<C_BulletHitModel*>
     m_vecPickupModelSlerpers = 0x15F8 # CUtlVector<C_PickUpModelSlerper*>
     m_vecLastAliveLocalVelocity = 0x1610 # Vector

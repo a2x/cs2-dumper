@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 7 Mar 2024 10:34:35 +0000
+ * Fri, 15 Mar 2024 16:09:40 +0000
  */
 
 #pragma once
@@ -13,20 +13,20 @@ namespace libanimationsystem_so { // libanimationsystem.so
 }
 
 namespace libclient_so { // libclient.so
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0xF1E6F0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0xEDD000;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0xDE2230;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0xD53030;
-    constexpr std::ptrdiff_t Source2Client002 = 0xD52CF0;
-    constexpr std::ptrdiff_t GameClientExports001 = 0xD52C80;
-    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0xA47C90;
-    constexpr std::ptrdiff_t Source2ClientConfig001 = 0xA2B8D0;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0xF1FD40;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0xEDE680;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0xDE3760;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0xD54560;
+    constexpr std::ptrdiff_t Source2Client002 = 0xD54220;
+    constexpr std::ptrdiff_t GameClientExports001 = 0xD541B0;
+    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0xA47F20;
+    constexpr std::ptrdiff_t Source2ClientConfig001 = 0xA2BB50;
 }
 
 namespace libengine2_so { // libengine2.so
-    constexpr std::ptrdiff_t EngineGameUI001 = 0x3752D0;
-    constexpr std::ptrdiff_t VENGINE_GAMEUIFUNCS_VERSION005 = 0x374D50;
-    constexpr std::ptrdiff_t INETSUPPORT_001 = 0x33EFF0;
+    constexpr std::ptrdiff_t EngineGameUI001 = 0x3752F0;
+    constexpr std::ptrdiff_t VENGINE_GAMEUIFUNCS_VERSION005 = 0x374D70;
+    constexpr std::ptrdiff_t INETSUPPORT_001 = 0x33F010;
     constexpr std::ptrdiff_t Source2EngineToServer001 = 0x2ED7F0;
     constexpr std::ptrdiff_t Source2EngineToServerStringTable001 = 0x2CFF80;
     constexpr std::ptrdiff_t Source2EngineToClient001 = 0x2C6E60;
@@ -108,7 +108,7 @@ namespace libnetworksystem_so { // libnetworksystem.so
 }
 
 namespace libpanorama_so { // libpanorama.so
-    constexpr std::ptrdiff_t PanoramaUIEngine001 = 0x220F70;
+    constexpr std::ptrdiff_t PanoramaUIEngine001 = 0x220F80;
 }
 
 namespace libpanorama_text_pango_so { // libpanorama_text_pango.so
@@ -152,16 +152,16 @@ namespace libschemasystem_so { // libschemasystem.so
 }
 
 namespace libserver_so { // libserver.so
-    constexpr std::ptrdiff_t NavGameTest001 = 0x1091E40;
-    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0xE6FEA0;
-    constexpr std::ptrdiff_t Source2GameClients001 = 0xE6FE30;
-    constexpr std::ptrdiff_t Source2GameEntities001 = 0xE6FE20;
-    constexpr std::ptrdiff_t Source2Server001 = 0xE6FB10;
-    constexpr std::ptrdiff_t EmptyWorldService001_Server = 0xB82960;
-    constexpr std::ptrdiff_t Source2ServerConfig001 = 0xB0E800;
-    constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x860D40;
-    constexpr std::ptrdiff_t customnavsystem001 = 0x7F7D80;
-    constexpr std::ptrdiff_t Source2GameDirector001 = 0x6C4140;
+    constexpr std::ptrdiff_t NavGameTest001 = 0x1093830;
+    constexpr std::ptrdiff_t ServerToolsInfo_001 = 0xE718D0;
+    constexpr std::ptrdiff_t Source2GameClients001 = 0xE71860;
+    constexpr std::ptrdiff_t Source2GameEntities001 = 0xE71850;
+    constexpr std::ptrdiff_t Source2Server001 = 0xE71540;
+    constexpr std::ptrdiff_t EmptyWorldService001_Server = 0xB82B90;
+    constexpr std::ptrdiff_t Source2ServerConfig001 = 0xB0EA30;
+    constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x860D50;
+    constexpr std::ptrdiff_t customnavsystem001 = 0x7F7D90;
+    constexpr std::ptrdiff_t Source2GameDirector001 = 0x6C4150;
 }
 
 namespace libsoundsystem_so { // libsoundsystem.so
@@ -176,10 +176,10 @@ namespace libsteamaudio_so { // libsteamaudio.so
 }
 
 namespace libtier0_so { // libtier0.so
-    constexpr std::ptrdiff_t VStringTokenSystem001 = 0x1EAA20;
-    constexpr std::ptrdiff_t TestScriptMgr001 = 0x1BEA40;
-    constexpr std::ptrdiff_t VProcessUtils002 = 0x19C4C0;
-    constexpr std::ptrdiff_t VEngineCvar007 = 0xF1450;
+    constexpr std::ptrdiff_t VStringTokenSystem001 = 0x1EA8D0;
+    constexpr std::ptrdiff_t TestScriptMgr001 = 0x1BE8F0;
+    constexpr std::ptrdiff_t VProcessUtils002 = 0x19C370;
+    constexpr std::ptrdiff_t VEngineCvar007 = 0xF1370;
 }
 
 namespace libv8system_so { // libv8system.so

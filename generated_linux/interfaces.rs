@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 7 Mar 2024 10:34:35 +0000
+ * Fri, 15 Mar 2024 16:09:40 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -11,20 +11,20 @@ pub mod libanimationsystem_so { // libanimationsystem.so
 }
 
 pub mod libclient_so { // libclient.so
-    pub const LegacyGameUI001: usize = 0xF1E6F0;
-    pub const Source2ClientUI001: usize = 0xEDD000;
-    pub const Source2ClientPrediction001: usize = 0xDE2230;
-    pub const ClientToolsInfo_001: usize = 0xD53030;
-    pub const Source2Client002: usize = 0xD52CF0;
-    pub const GameClientExports001: usize = 0xD52C80;
-    pub const EmptyWorldService001_Client: usize = 0xA47C90;
-    pub const Source2ClientConfig001: usize = 0xA2B8D0;
+    pub const LegacyGameUI001: usize = 0xF1FD40;
+    pub const Source2ClientUI001: usize = 0xEDE680;
+    pub const Source2ClientPrediction001: usize = 0xDE3760;
+    pub const ClientToolsInfo_001: usize = 0xD54560;
+    pub const Source2Client002: usize = 0xD54220;
+    pub const GameClientExports001: usize = 0xD541B0;
+    pub const EmptyWorldService001_Client: usize = 0xA47F20;
+    pub const Source2ClientConfig001: usize = 0xA2BB50;
 }
 
 pub mod libengine2_so { // libengine2.so
-    pub const EngineGameUI001: usize = 0x3752D0;
-    pub const VENGINE_GAMEUIFUNCS_VERSION005: usize = 0x374D50;
-    pub const INETSUPPORT_001: usize = 0x33EFF0;
+    pub const EngineGameUI001: usize = 0x3752F0;
+    pub const VENGINE_GAMEUIFUNCS_VERSION005: usize = 0x374D70;
+    pub const INETSUPPORT_001: usize = 0x33F010;
     pub const Source2EngineToServer001: usize = 0x2ED7F0;
     pub const Source2EngineToServerStringTable001: usize = 0x2CFF80;
     pub const Source2EngineToClient001: usize = 0x2C6E60;
@@ -106,7 +106,7 @@ pub mod libnetworksystem_so { // libnetworksystem.so
 }
 
 pub mod libpanorama_so { // libpanorama.so
-    pub const PanoramaUIEngine001: usize = 0x220F70;
+    pub const PanoramaUIEngine001: usize = 0x220F80;
 }
 
 pub mod libpanorama_text_pango_so { // libpanorama_text_pango.so
@@ -150,16 +150,16 @@ pub mod libschemasystem_so { // libschemasystem.so
 }
 
 pub mod libserver_so { // libserver.so
-    pub const NavGameTest001: usize = 0x1091E40;
-    pub const ServerToolsInfo_001: usize = 0xE6FEA0;
-    pub const Source2GameClients001: usize = 0xE6FE30;
-    pub const Source2GameEntities001: usize = 0xE6FE20;
-    pub const Source2Server001: usize = 0xE6FB10;
-    pub const EmptyWorldService001_Server: usize = 0xB82960;
-    pub const Source2ServerConfig001: usize = 0xB0E800;
-    pub const EntitySubclassUtilsV001: usize = 0x860D40;
-    pub const customnavsystem001: usize = 0x7F7D80;
-    pub const Source2GameDirector001: usize = 0x6C4140;
+    pub const NavGameTest001: usize = 0x1093830;
+    pub const ServerToolsInfo_001: usize = 0xE718D0;
+    pub const Source2GameClients001: usize = 0xE71860;
+    pub const Source2GameEntities001: usize = 0xE71850;
+    pub const Source2Server001: usize = 0xE71540;
+    pub const EmptyWorldService001_Server: usize = 0xB82B90;
+    pub const Source2ServerConfig001: usize = 0xB0EA30;
+    pub const EntitySubclassUtilsV001: usize = 0x860D50;
+    pub const customnavsystem001: usize = 0x7F7D90;
+    pub const Source2GameDirector001: usize = 0x6C4150;
 }
 
 pub mod libsoundsystem_so { // libsoundsystem.so
@@ -174,10 +174,10 @@ pub mod libsteamaudio_so { // libsteamaudio.so
 }
 
 pub mod libtier0_so { // libtier0.so
-    pub const VStringTokenSystem001: usize = 0x1EAA20;
-    pub const TestScriptMgr001: usize = 0x1BEA40;
-    pub const VProcessUtils002: usize = 0x19C4C0;
-    pub const VEngineCvar007: usize = 0xF1450;
+    pub const VStringTokenSystem001: usize = 0x1EA8D0;
+    pub const TestScriptMgr001: usize = 0x1BE8F0;
+    pub const VProcessUtils002: usize = 0x19C370;
+    pub const VEngineCvar007: usize = 0xF1370;
 }
 
 pub mod libv8system_so { // libv8system.so

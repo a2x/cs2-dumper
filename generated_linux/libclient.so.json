@@ -7129,6 +7129,10 @@
         "value": 4792,
         "comment": "float"
       },
+      "m_flLastSmokeAge": {
+        "value": 5564,
+        "comment": "float"
+      },
       "m_flLastSmokeOverlayAlpha": {
         "value": 5560,
         "comment": "float"
@@ -7150,7 +7154,7 @@
         "comment": "float"
       },
       "m_flNextMagDropTime": {
-        "value": 5588,
+        "value": 5592,
         "comment": "float"
       },
       "m_flNightVisionAlpha": {
@@ -7302,7 +7306,7 @@
         "comment": "CEntityIndex"
       },
       "m_nLastMagDropAttachmentIndex": {
-        "value": 5592,
+        "value": 5596,
         "comment": "int32_t"
       },
       "m_nMyCollisionGroup": {
@@ -7310,15 +7314,15 @@
         "comment": "int32_t"
       },
       "m_nPlayerInfernoBodyFx": {
-        "value": 5580,
-        "comment": "ParticleIndex_t"
-      },
-      "m_nPlayerInfernoFootFx": {
         "value": 5584,
         "comment": "ParticleIndex_t"
       },
+      "m_nPlayerInfernoFootFx": {
+        "value": 5588,
+        "comment": "ParticleIndex_t"
+      },
       "m_nPlayerSmokedFx": {
-        "value": 5576,
+        "value": 5580,
         "comment": "ParticleIndex_t"
       },
       "m_nSurvivalTeamNumber": {
@@ -7370,7 +7374,7 @@
         "comment": "Vector"
       },
       "m_vLastSmokeOverlayColor": {
-        "value": 5564,
+        "value": 5568,
         "comment": "Vector"
       },
       "m_vecBulletHitModels": {
