@@ -1,24 +1,24 @@
 ---
 game_info: # Some additional information about the game at dump time
-    buildNumber: 13996 # Game build number
+    buildNumber: 13998 # Game build number
 libclient_so: # libclient.so
-    dwEntityList: 56260680
-    dwForceAttack: 57876432
-    dwForceAttack2: 57876272
-    dwGameEntitySystem: 59103360
+    dwEntityList: 56273096
+    dwForceAttack: 57888848
+    dwForceAttack2: 57888688
+    dwGameEntitySystem: 59115968
     dwGameEntitySystem_getHighestEntityIndex: 5440
-    dwGameRules: 57881448
-    dwGlobalVars: 56003024
-    dwGlowManager: 57900144
-    dwInterfaceLinkList: 58523824
-    dwLocalPlayerController: 57772184
-    dwLocalPlayerPawn: 57904216
-    dwPlantedC4: 57988280
-    dwPrediction: 57903904
+    dwGameRules: 57893864
+    dwGlobalVars: 58320768
+    dwGlowManager: 57912560
+    dwInterfaceLinkList: 58536240
+    dwLocalPlayerController: 57784600
+    dwLocalPlayerPawn: 57916632
+    dwPlantedC4: 58000696
+    dwPrediction: 57916320
     dwSensitivity_sensitivity: 64
-    dwViewAngles: 57956768
-    dwViewMatrix: 57907072
-    dwViewRender: 57907504
+    dwViewAngles: 57969184
+    dwViewMatrix: 57919488
+    dwViewRender: 57919920
 libengine2_so: # libengine2.so
     dwBuildNumber: 7157236
     dwNetworkGameClient_deltaTick: 632

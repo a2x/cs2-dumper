@@ -3,8 +3,8 @@ libanimationsystem_so: # libanimationsystem.so
     AnimationSystemUtils_001: 1624672
     AnimationSystem_001: 1624144
 libclient_so: # libclient.so
-    LegacyGameUI001: 15859008
-    Source2ClientUI001: 15591040
+    LegacyGameUI001: 15859120
+    Source2ClientUI001: 15591360
     Source2ClientPrediction001: 14563168
     ClientToolsInfo_001: 13976928
     Source2Client002: 13976096

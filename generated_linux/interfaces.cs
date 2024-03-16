@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Fri, 15 Mar 2024 16:09:40 +0000
+ * Sat, 16 Mar 2024 22:03:50 +0000
  */
 
 public static class libanimationsystem_so { // libanimationsystem.so
@@ -9,8 +9,8 @@ public static class libanimationsystem_so { // libanimationsystem.so
 }
 
 public static class libclient_so { // libclient.so
-    public const nint LegacyGameUI001 = 0xF1FD40;
-    public const nint Source2ClientUI001 = 0xEDE680;
+    public const nint LegacyGameUI001 = 0xF1FDB0;
+    public const nint Source2ClientUI001 = 0xEDE7C0;
     public const nint Source2ClientPrediction001 = 0xDE3760;
     public const nint ClientToolsInfo_001 = 0xD54560;
     public const nint Source2Client002 = 0xD54220;

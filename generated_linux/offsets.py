@@ -1,29 +1,29 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Fri, 15 Mar 2024 16:10:00 +0000
+Sat, 16 Mar 2024 22:04:11 +0000
 '''
 
 class game_info: # Some additional information about the game at dump time
-    buildNumber = 0x36AC # Game build number
+    buildNumber = 0x36AE # Game build number
 
 class libclient_so: # libclient.so
-    dwEntityList = 0x35A7848
-    dwForceAttack = 0x3731FD0
-    dwForceAttack2 = 0x3731F30
-    dwGameEntitySystem = 0x385D880
+    dwEntityList = 0x35AA8C8
+    dwForceAttack = 0x3735050
+    dwForceAttack2 = 0x3734FB0
+    dwGameEntitySystem = 0x38609C0
     dwGameEntitySystem_getHighestEntityIndex = 0x1540
-    dwGameRules = 0x3733368
-    dwGlobalVars = 0x35689D0
-    dwGlowManager = 0x3737C70
-    dwInterfaceLinkList = 0x37D00B0
-    dwLocalPlayerController = 0x3718898
-    dwLocalPlayerPawn = 0x3738C58
-    dwPlantedC4 = 0x374D4B8
-    dwPrediction = 0x3738B20
+    dwGameRules = 0x37363E8
+    dwGlobalVars = 0x379E780
+    dwGlowManager = 0x373ACF0
+    dwInterfaceLinkList = 0x37D3130
+    dwLocalPlayerController = 0x371B918
+    dwLocalPlayerPawn = 0x373BCD8
+    dwPlantedC4 = 0x3750538
+    dwPrediction = 0x373BBA0
     dwSensitivity_sensitivity = 0x40
-    dwViewAngles = 0x37459A0
-    dwViewMatrix = 0x3739780
-    dwViewRender = 0x3739930
+    dwViewAngles = 0x3748A20
+    dwViewMatrix = 0x373C800
+    dwViewRender = 0x373C9B0
 
 class libengine2_so: # libengine2.so
     dwBuildNumber = 0x6D35F4

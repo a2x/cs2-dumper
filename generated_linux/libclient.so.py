@@ -1,6 +1,6 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Fri, 15 Mar 2024 16:09:39 +0000
+Sat, 16 Mar 2024 22:03:49 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -1632,6 +1632,7 @@ class C_CSGO_PreviewModel: # C_BaseFlex
     m_defaultAnim = 0x1020 # CUtlString
     m_nDefaultAnimLoopMode = 0x1028 # AnimLoopMode_t
     m_flInitialModelScale = 0x102C # float
+    m_sInitialWeaponState = 0x1030 # CUtlString
 
 class C_CSGO_PreviewModelAlias_csgo_item_previewmodel: # C_CSGO_PreviewModel
 

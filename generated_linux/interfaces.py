@@ -1,6 +1,6 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Fri, 15 Mar 2024 16:09:40 +0000
+Sat, 16 Mar 2024 22:03:50 +0000
 '''
 
 class libanimationsystem_so: # libanimationsystem.so
@@ -8,8 +8,8 @@ class libanimationsystem_so: # libanimationsystem.so
     AnimationSystem_001 = 0x18C850
 
 class libclient_so: # libclient.so
-    LegacyGameUI001 = 0xF1FD40
-    Source2ClientUI001 = 0xEDE680
+    LegacyGameUI001 = 0xF1FDB0
+    Source2ClientUI001 = 0xEDE7C0
     Source2ClientPrediction001 = 0xDE3760
     ClientToolsInfo_001 = 0xD54560
     Source2Client002 = 0xD54220

@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Fri, 15 Mar 2024 16:09:40 +0000
+ * Sat, 16 Mar 2024 22:03:50 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -11,8 +11,8 @@ pub mod libanimationsystem_so { // libanimationsystem.so
 }
 
 pub mod libclient_so { // libclient.so
-    pub const LegacyGameUI001: usize = 0xF1FD40;
-    pub const Source2ClientUI001: usize = 0xEDE680;
+    pub const LegacyGameUI001: usize = 0xF1FDB0;
+    pub const Source2ClientUI001: usize = 0xEDE7C0;
     pub const Source2ClientPrediction001: usize = 0xDE3760;
     pub const ClientToolsInfo_001: usize = 0xD54560;
     pub const Source2Client002: usize = 0xD54220;

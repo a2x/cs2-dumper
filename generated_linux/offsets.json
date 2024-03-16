@@ -2,7 +2,7 @@
   "game_info": {
     "data": {
       "buildNumber": {
-        "value": 13996,
+        "value": 13998,
         "comment": "Game build number"
       }
     },
@@ -11,19 +11,19 @@
   "libclient_so": {
     "data": {
       "dwEntityList": {
-        "value": 56260680,
+        "value": 56273096,
         "comment": null
       },
       "dwForceAttack": {
-        "value": 57876432,
+        "value": 57888848,
         "comment": null
       },
       "dwForceAttack2": {
-        "value": 57876272,
+        "value": 57888688,
         "comment": null
       },
       "dwGameEntitySystem": {
-        "value": 59103360,
+        "value": 59115968,
         "comment": null
       },
       "dwGameEntitySystem_getHighestEntityIndex": {
@@ -31,35 +31,35 @@
         "comment": null
       },
       "dwGameRules": {
-        "value": 57881448,
+        "value": 57893864,
         "comment": null
       },
       "dwGlobalVars": {
-        "value": 56003024,
+        "value": 58320768,
         "comment": null
       },
       "dwGlowManager": {
-        "value": 57900144,
+        "value": 57912560,
         "comment": null
       },
       "dwInterfaceLinkList": {
-        "value": 58523824,
+        "value": 58536240,
         "comment": null
       },
       "dwLocalPlayerController": {
-        "value": 57772184,
+        "value": 57784600,
         "comment": null
       },
       "dwLocalPlayerPawn": {
-        "value": 57904216,
+        "value": 57916632,
         "comment": null
       },
       "dwPlantedC4": {
-        "value": 57988280,
+        "value": 58000696,
         "comment": null
       },
       "dwPrediction": {
-        "value": 57903904,
+        "value": 57916320,
         "comment": null
       },
       "dwSensitivity_sensitivity": {
@@ -67,15 +67,15 @@
         "comment": null
       },
       "dwViewAngles": {
-        "value": 57956768,
+        "value": 57969184,
         "comment": null
       },
       "dwViewMatrix": {
-        "value": 57907072,
+        "value": 57919488,
         "comment": null
       },
       "dwViewRender": {
-        "value": 57907504,
+        "value": 57919920,
         "comment": null
       }
     },

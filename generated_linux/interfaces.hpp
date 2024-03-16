@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Fri, 15 Mar 2024 16:09:40 +0000
+ * Sat, 16 Mar 2024 22:03:50 +0000
  */
 
 #pragma once
@@ -13,8 +13,8 @@ namespace libanimationsystem_so { // libanimationsystem.so
 }
 
 namespace libclient_so { // libclient.so
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0xF1FD40;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0xEDE680;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0xF1FDB0;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0xEDE7C0;
     constexpr std::ptrdiff_t Source2ClientPrediction001 = 0xDE3760;
     constexpr std::ptrdiff_t ClientToolsInfo_001 = 0xD54560;
     constexpr std::ptrdiff_t Source2Client002 = 0xD54220;

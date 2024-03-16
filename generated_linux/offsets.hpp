@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Fri, 15 Mar 2024 16:10:00 +0000
+ * Sat, 16 Mar 2024 22:04:11 +0000
  */
 
 #pragma once
@@ -8,27 +8,27 @@
 #include <cstddef>
 
 namespace game_info { // Some additional information about the game at dump time
-    constexpr std::ptrdiff_t buildNumber = 0x36AC; // Game build number
+    constexpr std::ptrdiff_t buildNumber = 0x36AE; // Game build number
 }
 
 namespace libclient_so { // libclient.so
-    constexpr std::ptrdiff_t dwEntityList = 0x35A7848;
-    constexpr std::ptrdiff_t dwForceAttack = 0x3731FD0;
-    constexpr std::ptrdiff_t dwForceAttack2 = 0x3731F30;
-    constexpr std::ptrdiff_t dwGameEntitySystem = 0x385D880;
+    constexpr std::ptrdiff_t dwEntityList = 0x35AA8C8;
+    constexpr std::ptrdiff_t dwForceAttack = 0x3735050;
+    constexpr std::ptrdiff_t dwForceAttack2 = 0x3734FB0;
+    constexpr std::ptrdiff_t dwGameEntitySystem = 0x38609C0;
     constexpr std::ptrdiff_t dwGameEntitySystem_getHighestEntityIndex = 0x1540;
-    constexpr std::ptrdiff_t dwGameRules = 0x3733368;
-    constexpr std::ptrdiff_t dwGlobalVars = 0x35689D0;
-    constexpr std::ptrdiff_t dwGlowManager = 0x3737C70;
-    constexpr std::ptrdiff_t dwInterfaceLinkList = 0x37D00B0;
-    constexpr std::ptrdiff_t dwLocalPlayerController = 0x3718898;
-    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x3738C58;
-    constexpr std::ptrdiff_t dwPlantedC4 = 0x374D4B8;
-    constexpr std::ptrdiff_t dwPrediction = 0x3738B20;
+    constexpr std::ptrdiff_t dwGameRules = 0x37363E8;
+    constexpr std::ptrdiff_t dwGlobalVars = 0x379E780;
+    constexpr std::ptrdiff_t dwGlowManager = 0x373ACF0;
+    constexpr std::ptrdiff_t dwInterfaceLinkList = 0x37D3130;
+    constexpr std::ptrdiff_t dwLocalPlayerController = 0x371B918;
+    constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x373BCD8;
+    constexpr std::ptrdiff_t dwPlantedC4 = 0x3750538;
+    constexpr std::ptrdiff_t dwPrediction = 0x373BBA0;
     constexpr std::ptrdiff_t dwSensitivity_sensitivity = 0x40;
-    constexpr std::ptrdiff_t dwViewAngles = 0x37459A0;
-    constexpr std::ptrdiff_t dwViewMatrix = 0x3739780;
-    constexpr std::ptrdiff_t dwViewRender = 0x3739930;
+    constexpr std::ptrdiff_t dwViewAngles = 0x3748A20;
+    constexpr std::ptrdiff_t dwViewMatrix = 0x373C800;
+    constexpr std::ptrdiff_t dwViewRender = 0x373C9B0;
 }
 
 namespace libengine2_so { // libengine2.so

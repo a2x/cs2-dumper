@@ -1,32 +1,32 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Fri, 15 Mar 2024 16:10:00 +0000
+ * Sat, 16 Mar 2024 22:04:11 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
 
 pub mod game_info { // Some additional information about the game at dump time
-    pub const buildNumber: usize = 0x36AC; // Game build number
+    pub const buildNumber: usize = 0x36AE; // Game build number
 }
 
 pub mod libclient_so { // libclient.so
-    pub const dwEntityList: usize = 0x35A7848;
-    pub const dwForceAttack: usize = 0x3731FD0;
-    pub const dwForceAttack2: usize = 0x3731F30;
-    pub const dwGameEntitySystem: usize = 0x385D880;
+    pub const dwEntityList: usize = 0x35AA8C8;
+    pub const dwForceAttack: usize = 0x3735050;
+    pub const dwForceAttack2: usize = 0x3734FB0;
+    pub const dwGameEntitySystem: usize = 0x38609C0;
     pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x1540;
-    pub const dwGameRules: usize = 0x3733368;
-    pub const dwGlobalVars: usize = 0x35689D0;
-    pub const dwGlowManager: usize = 0x3737C70;
-    pub const dwInterfaceLinkList: usize = 0x37D00B0;
-    pub const dwLocalPlayerController: usize = 0x3718898;
-    pub const dwLocalPlayerPawn: usize = 0x3738C58;
-    pub const dwPlantedC4: usize = 0x374D4B8;
-    pub const dwPrediction: usize = 0x3738B20;
+    pub const dwGameRules: usize = 0x37363E8;
+    pub const dwGlobalVars: usize = 0x379E780;
+    pub const dwGlowManager: usize = 0x373ACF0;
+    pub const dwInterfaceLinkList: usize = 0x37D3130;
+    pub const dwLocalPlayerController: usize = 0x371B918;
+    pub const dwLocalPlayerPawn: usize = 0x373BCD8;
+    pub const dwPlantedC4: usize = 0x3750538;
+    pub const dwPrediction: usize = 0x373BBA0;
     pub const dwSensitivity_sensitivity: usize = 0x40;
-    pub const dwViewAngles: usize = 0x37459A0;
-    pub const dwViewMatrix: usize = 0x3739780;
-    pub const dwViewRender: usize = 0x3739930;
+    pub const dwViewAngles: usize = 0x3748A20;
+    pub const dwViewMatrix: usize = 0x373C800;
+    pub const dwViewRender: usize = 0x373C9B0;
 }
 
 pub mod libengine2_so { // libengine2.so
