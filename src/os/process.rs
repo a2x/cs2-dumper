@@ -30,20 +30,27 @@ use std::io::{Read, Seek, SeekFrom};
 use std::path::{Path, PathBuf};
 
 /// Represents a Windows process.
+#[cfg(target_os = "windows")]
 #[derive(Debug)]
 pub struct Process {
     /// ID of the process.
     id: u32,
 
-    #[cfg(target_os = "windows")]
     /// Handle to the process.
     handle: HANDLE,
 
     /// A HashMap containing the name of each module and its corresponding raw data.
-    #[cfg(target_os = "windows")]
     modules: HashMap<String, Vec<u8>>,
+}
 
-    #[cfg(target_os = "linux")]
+/// Represents a Linux process.
+#[cfg(target_os = "linux")]
+#[derive(Debug)]
+pub struct Process {
+    /// PID of the process.
+    pid: u32,
+
+    /// A HashMap containing the name of each module and its corresponding data.
     modules: HashMap<String, ModuleEntry>,
 }
 
@@ -65,9 +72,9 @@ impl Process {
 
     #[cfg(target_os = "linux")]
     pub fn new(name: &str) -> Result<Self> {
-        let id = Self::get_process_id_by_name(name)?;
+        let pid = Self::get_process_pid_by_name(name)?;
         let mut process = Self {
-            id,
+            pid,
             modules: HashMap::new(),
         };
         process.parse_loaded_modules()?;
@@ -160,7 +167,7 @@ impl Process {
 
     #[cfg(target_os = "linux")]
     pub fn read_memory_raw(&self, address: usize, buffer: *mut c_void, size: usize) -> Result<()> {
-        let proc_mem_path = format!("/proc/{}/mem", self.id);
+        let proc_mem_path = format!("/proc/{}/mem", self.pid);
         let mut mem_file = File::open(proc_mem_path)?;
 
         // Go to the start address
@@ -257,7 +264,7 @@ impl Process {
     }
 
     #[cfg(target_os = "linux")]
-    fn get_process_id_by_name(process_name: &str) -> Result<u32> {
+    fn get_process_pid_by_name(process_name: &str) -> Result<u32> {
         use std::io::{BufRead, BufReader};
 
         for process_iter in all_processes()? {
@@ -308,7 +315,7 @@ impl Process {
 
     #[cfg(target_os = "linux")]
     fn parse_loaded_modules(&mut self) -> Result<()> {
-        let process = process::Process::new(self.id as i32)?;
+        let process = process::Process::new(self.pid as i32)?;
 
         let mut modules_info: HashMap<String, ((u64, u64), PathBuf)> = HashMap::new();
 

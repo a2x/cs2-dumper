@@ -10,6 +10,7 @@ use goblin::elf::{sym, Elf, SectionHeader};
 #[cfg(target_os = "linux")]
 use std::path::PathBuf;
 
+/// Represents the data associated with a specific module on Linux.
 #[cfg(target_os = "linux")]
 #[derive(Debug)]
 pub struct ModuleEntry {
@@ -17,22 +18,30 @@ pub struct ModuleEntry {
     pub start_addr: usize,
     pub data: Vec<u8>,
 }
+
 /// Represents a module loaded in a Windows process.
+#[cfg(target_os = "windows")]
 pub struct Module<'a> {
     /// The name of the module.
     pub name: &'a str,
 
     /// A reference to a slice of bytes containing the module data.
-    #[cfg(target_os = "windows")]
     pub data: &'a [u8],
-    #[cfg(target_os = "linux")]
-    pub module_info: &'a ModuleEntry,
 
-    #[cfg(target_os = "windows")]
     /// The PE file format representation of the module.
     pub pe: PE<'a>,
+}
 
-    #[cfg(target_os = "linux")]
+/// Represents a module loaded in a Linux process.
+#[cfg(target_os = "linux")]
+pub struct Module<'a> {
+    /// The name of the module.
+    pub name: &'a str,
+
+    /// A reference to a slice of bytes containing the module info.
+    pub module_info: &'a ModuleEntry,
+
+    /// The Elf file format representation of the module.
     pub elf: Elf<'a>,
 }
 
