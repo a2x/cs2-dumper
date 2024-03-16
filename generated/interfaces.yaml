@@ -3,14 +3,14 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 470656
     AnimationSystem_001: 449024
 client_dll: # client.dll
-    LegacyGameUI001: 9105056
-    Source2ClientUI001: 9036032
-    Source2ClientPrediction001: 8058736
-    ClientToolsInfo_001: 7548128
-    Source2Client002: 7548160
-    GameClientExports001: 7548144
-    EmptyWorldService001_Client: 4720192
-    Source2ClientConfig001: 4635216
+    LegacyGameUI001: 9104464
+    Source2ClientUI001: 9036400
+    Source2ClientPrediction001: 8058784
+    ClientToolsInfo_001: 7548176
+    Source2Client002: 7548208
+    GameClientExports001: 7548192
+    EmptyWorldService001_Client: 4720240
+    Source2ClientConfig001: 4635264
 engine2_dll: # engine2.dll
     SimpleEngineLoopService_001: 2059792
     ClientServerEngineLoopService_001: 2010144

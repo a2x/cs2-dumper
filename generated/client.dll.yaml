@@ -1460,6 +1460,7 @@ C_CSGO_PreviewModel: # C_BaseFlex
     m_defaultAnim: 4224 # CUtlString
     m_nDefaultAnimLoopMode: 4232 # AnimLoopMode_t
     m_flInitialModelScale: 4236 # float
+    m_sInitialWeaponState: 4240 # CUtlString
 C_CSGO_PreviewModelAlias_csgo_item_previewmodel: # C_CSGO_PreviewModel
 C_CSGO_PreviewModel_GraphController: # CAnimGraphControllerBase
     m_pszCharacterMode: 24 # CAnimGraphParamOptionalRef<char*>

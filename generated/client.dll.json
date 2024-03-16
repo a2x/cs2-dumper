@@ -5954,6 +5954,10 @@
       "m_nDefaultAnimLoopMode": {
         "value": 4232,
         "comment": "AnimLoopMode_t"
+      },
+      "m_sInitialWeaponState": {
+        "value": 4240,
+        "comment": "CUtlString"
       }
     },
     "comment": "C_BaseFlex"

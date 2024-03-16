@@ -1,33 +1,33 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Thu, 14 Mar 2024 05:07:42 +0000
+Sat, 16 Mar 2024 00:42:38 +0000
 '''
 
 class client_dll: # client.dll
-    dwEntityList = 0x18BFC08
-    dwForceAttack = 0x172D030
-    dwForceAttack2 = 0x172D0C0
-    dwForceBackward = 0x172D300
-    dwForceCrouch = 0x172D5D0
-    dwForceForward = 0x172D270
-    dwForceJump = 0x172D540
-    dwForceLeft = 0x172D390
-    dwForceRight = 0x172D420
-    dwGameEntitySystem = 0x19DD590
+    dwEntityList = 0x18C2D58
+    dwForceAttack = 0x1730020
+    dwForceAttack2 = 0x17300B0
+    dwForceBackward = 0x17302F0
+    dwForceCrouch = 0x17305C0
+    dwForceForward = 0x1730260
+    dwForceJump = 0x1730530
+    dwForceLeft = 0x1730380
+    dwForceRight = 0x1730410
+    dwGameEntitySystem = 0x19E0790
     dwGameEntitySystem_getHighestEntityIndex = 0x1510
-    dwGameRules = 0x191CB50
-    dwGlobalVars = 0x1727BB0
-    dwGlowManager = 0x191CF70
-    dwInterfaceLinkList = 0x1A0E6D8
-    dwLocalPlayerController = 0x190F428
-    dwLocalPlayerPawn = 0x17341B8
-    dwPlantedC4 = 0x1925988
-    dwPrediction = 0x1734080
-    dwSensitivity = 0x191D898
+    dwGameRules = 0x191FCA0
+    dwGlobalVars = 0x172ABA0
+    dwGlowManager = 0x19200C0
+    dwInterfaceLinkList = 0x1A118D8
+    dwLocalPlayerController = 0x1912578
+    dwLocalPlayerPawn = 0x17371A8
+    dwPlantedC4 = 0x1928AD8
+    dwPrediction = 0x1737070
+    dwSensitivity = 0x19209E8
     dwSensitivity_sensitivity = 0x40
-    dwViewAngles = 0x192D860
-    dwViewMatrix = 0x1921050
-    dwViewRender = 0x19218D0
+    dwViewAngles = 0x19309B0
+    dwViewMatrix = 0x19241A0
+    dwViewRender = 0x1924A20
 
 class engine2_dll: # engine2.dll
     dwBuildNumber = 0x513574
@@ -40,7 +40,7 @@ class engine2_dll: # engine2.dll
     dwWindowWidth = 0x5CBC60
 
 class game_info: # Some additional information about the game at dump time
-    buildNumber = 0x36AC # Game build number
+    buildNumber = 0x36AD # Game build number
 
 class inputsystem_dll: # inputsystem.dll
     dwInputSystem = 0x367A0

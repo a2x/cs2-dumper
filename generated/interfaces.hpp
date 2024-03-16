@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 14 Mar 2024 05:07:42 +0000
+ * Sat, 16 Mar 2024 00:42:38 +0000
  */
 
 #pragma once
@@ -13,14 +13,14 @@ namespace animationsystem_dll { // animationsystem.dll
 }
 
 namespace client_dll { // client.dll
-    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8AEEA0;
-    constexpr std::ptrdiff_t Source2ClientUI001 = 0x89E100;
-    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7AF770;
-    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x732CE0;
-    constexpr std::ptrdiff_t Source2Client002 = 0x732D00;
-    constexpr std::ptrdiff_t GameClientExports001 = 0x732CF0;
-    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x480640;
-    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x46BA50;
+    constexpr std::ptrdiff_t LegacyGameUI001 = 0x8AEC50;
+    constexpr std::ptrdiff_t Source2ClientUI001 = 0x89E270;
+    constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7AF7A0;
+    constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x732D10;
+    constexpr std::ptrdiff_t Source2Client002 = 0x732D30;
+    constexpr std::ptrdiff_t GameClientExports001 = 0x732D20;
+    constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x480670;
+    constexpr std::ptrdiff_t Source2ClientConfig001 = 0x46BA80;
 }
 
 namespace engine2_dll { // engine2.dll

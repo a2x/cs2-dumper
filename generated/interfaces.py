@@ -1,6 +1,6 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Thu, 14 Mar 2024 05:07:42 +0000
+Sat, 16 Mar 2024 00:42:38 +0000
 '''
 
 class animationsystem_dll: # animationsystem.dll
@@ -8,14 +8,14 @@ class animationsystem_dll: # animationsystem.dll
     AnimationSystem_001 = 0x6DA00
 
 class client_dll: # client.dll
-    LegacyGameUI001 = 0x8AEEA0
-    Source2ClientUI001 = 0x89E100
-    Source2ClientPrediction001 = 0x7AF770
-    ClientToolsInfo_001 = 0x732CE0
-    Source2Client002 = 0x732D00
-    GameClientExports001 = 0x732CF0
-    EmptyWorldService001_Client = 0x480640
-    Source2ClientConfig001 = 0x46BA50
+    LegacyGameUI001 = 0x8AEC50
+    Source2ClientUI001 = 0x89E270
+    Source2ClientPrediction001 = 0x7AF7A0
+    ClientToolsInfo_001 = 0x732D10
+    Source2Client002 = 0x732D30
+    GameClientExports001 = 0x732D20
+    EmptyWorldService001_Client = 0x480670
+    Source2ClientConfig001 = 0x46BA80
 
 class engine2_dll: # engine2.dll
     SimpleEngineLoopService_001 = 0x1F6E10

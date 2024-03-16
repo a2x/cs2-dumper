@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Thu, 14 Mar 2024 05:07:41 +0000
+ * Sat, 16 Mar 2024 00:42:38 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1802,6 +1802,7 @@ pub mod C_CSGO_PreviewModel { // C_BaseFlex
     pub const m_defaultAnim: usize = 0x1080; // CUtlString
     pub const m_nDefaultAnimLoopMode: usize = 0x1088; // AnimLoopMode_t
     pub const m_flInitialModelScale: usize = 0x108C; // float
+    pub const m_sInitialWeaponState: usize = 0x1090; // CUtlString
 }
 
 pub mod C_CSGO_PreviewModelAlias_csgo_item_previewmodel { // C_CSGO_PreviewModel
