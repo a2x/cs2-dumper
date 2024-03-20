@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Sat, 16 Mar 2024 00:42:38 +0000
+ * Wed, 20 Mar 2024 01:24:49 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -44,7 +44,7 @@ pub mod engine2_dll { // engine2.dll
 }
 
 pub mod game_info { // Some additional information about the game at dump time
-    pub const buildNumber: usize = 0x36AD; // Game build number
+    pub const buildNumber: usize = 0x36AF; // Game build number
 }
 
 pub mod inputsystem_dll { // inputsystem.dll

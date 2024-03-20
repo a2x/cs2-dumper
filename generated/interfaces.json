@@ -15,35 +15,35 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7548176,
+        "value": 7548672,
         "comment": null
       },
       "EmptyWorldService001_Client": {
-        "value": 4720240,
+        "value": 4720720,
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7548192,
+        "value": 7548688,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9104464,
+        "value": 9104960,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7548208,
+        "value": 7548704,
         "comment": null
       },
       "Source2ClientConfig001": {
-        "value": 4635264,
+        "value": 4635280,
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8058784,
+        "value": 8059280,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 9036400,
+        "value": 9036896,
         "comment": null
       }
     },
@@ -453,43 +453,43 @@
   "server_dll": {
     "data": {
       "EmptyWorldService001_Server": {
-        "value": 5709296,
+        "value": 5711952,
         "comment": null
       },
       "EntitySubclassUtilsV001": {
-        "value": 2814496,
+        "value": 2815952,
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10773680,
+        "value": 10776352,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8591472,
+        "value": 8594144,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8591488,
+        "value": 8594160,
         "comment": null
       },
       "Source2GameDirector001": {
-        "value": 1174080,
+        "value": 1174192,
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8591504,
+        "value": 8594176,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8591520,
+        "value": 8594192,
         "comment": null
       },
       "Source2ServerConfig001": {
-        "value": 5661040,
+        "value": 5663696,
         "comment": null
       },
       "customnavsystem001": {
-        "value": 2277600,
+        "value": 2279056,
         "comment": null
       }
     },

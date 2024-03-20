@@ -3,14 +3,14 @@ animationsystem_dll: # animationsystem.dll
     AnimationSystemUtils_001: 470656
     AnimationSystem_001: 449024
 client_dll: # client.dll
-    LegacyGameUI001: 9104464
-    Source2ClientUI001: 9036400
-    Source2ClientPrediction001: 8058784
-    ClientToolsInfo_001: 7548176
-    Source2Client002: 7548208
-    GameClientExports001: 7548192
-    EmptyWorldService001_Client: 4720240
-    Source2ClientConfig001: 4635264
+    LegacyGameUI001: 9104960
+    Source2ClientUI001: 9036896
+    Source2ClientPrediction001: 8059280
+    ClientToolsInfo_001: 7548672
+    Source2Client002: 7548704
+    GameClientExports001: 7548688
+    EmptyWorldService001_Client: 4720720
+    Source2ClientConfig001: 4635280
 engine2_dll: # engine2.dll
     SimpleEngineLoopService_001: 2059792
     ClientServerEngineLoopService_001: 2010144
@@ -107,16 +107,16 @@ scenesystem_dll: # scenesystem.dll
 schemasystem_dll: # schemasystem.dll
     SchemaSystem_001: 43600
 server_dll: # server.dll
-    NavGameTest001: 10773680
-    ServerToolsInfo_001: 8591472
-    Source2GameClients001: 8591488
-    Source2GameEntities001: 8591504
-    Source2Server001: 8591520
-    EmptyWorldService001_Server: 5709296
-    Source2ServerConfig001: 5661040
-    EntitySubclassUtilsV001: 2814496
-    customnavsystem001: 2277600
-    Source2GameDirector001: 1174080
+    NavGameTest001: 10776352
+    ServerToolsInfo_001: 8594144
+    Source2GameClients001: 8594160
+    Source2GameEntities001: 8594176
+    Source2Server001: 8594192
+    EmptyWorldService001_Server: 5711952
+    Source2ServerConfig001: 5663696
+    EntitySubclassUtilsV001: 2815952
+    customnavsystem001: 2279056
+    Source2GameDirector001: 1174192
 soundsystem_dll: # soundsystem.dll
     SoundOpSystem001: 1484352
     SoundOpSystemEdit001: 617040

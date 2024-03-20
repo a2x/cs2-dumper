@@ -34,7 +34,7 @@ engine2_dll: # engine2.dll
     dwWindowHeight: 6077540
     dwWindowWidth: 6077536
 game_info: # Some additional information about the game at dump time
-    buildNumber: 13997 # Game build number
+    buildNumber: 13999 # Game build number
 inputsystem_dll: # inputsystem.dll
     dwInputSystem: 223136
 matchmaking_dll: # matchmaking.dll
