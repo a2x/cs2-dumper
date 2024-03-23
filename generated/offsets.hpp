@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Wed, 20 Mar 2024 01:24:49 +0000
+ * Sat, 23 Mar 2024 05:02:05 +0000
  */
 
 #pragma once
@@ -35,18 +35,18 @@ namespace client_dll { // client.dll
 }
 
 namespace engine2_dll { // engine2.dll
-    constexpr std::ptrdiff_t dwBuildNumber = 0x513574;
+    constexpr std::ptrdiff_t dwBuildNumber = 0x514574;
     constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x258;
-    constexpr std::ptrdiff_t dwNetworkGameClient = 0x512AC8;
+    constexpr std::ptrdiff_t dwNetworkGameClient = 0x513AC8;
     constexpr std::ptrdiff_t dwNetworkGameClient_getLocalPlayer = 0xF0;
     constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x250;
     constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x240;
-    constexpr std::ptrdiff_t dwWindowHeight = 0x5CBC64;
-    constexpr std::ptrdiff_t dwWindowWidth = 0x5CBC60;
+    constexpr std::ptrdiff_t dwWindowHeight = 0x5CCCDC;
+    constexpr std::ptrdiff_t dwWindowWidth = 0x5CCCD8;
 }
 
 namespace game_info { // Some additional information about the game at dump time
-    constexpr std::ptrdiff_t buildNumber = 0x36AF; // Game build number
+    constexpr std::ptrdiff_t buildNumber = 0x36B0; // Game build number
 }
 
 namespace inputsystem_dll { // inputsystem.dll

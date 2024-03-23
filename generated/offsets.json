@@ -103,11 +103,11 @@
   "engine2_dll": {
     "data": {
       "dwBuildNumber": {
-        "value": 5322100,
+        "value": 5326196,
         "comment": null
       },
       "dwNetworkGameClient": {
-        "value": 5319368,
+        "value": 5323464,
         "comment": null
       },
       "dwNetworkGameClient_deltaTick": {
@@ -127,11 +127,11 @@
         "comment": null
       },
       "dwWindowHeight": {
-        "value": 6077540,
+        "value": 6081756,
         "comment": null
       },
       "dwWindowWidth": {
-        "value": 6077536,
+        "value": 6081752,
         "comment": null
       }
     },
@@ -140,7 +140,7 @@
   "game_info": {
     "data": {
       "buildNumber": {
-        "value": 13999,
+        "value": 14000,
         "comment": "Game build number"
       }
     },

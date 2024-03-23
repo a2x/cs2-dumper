@@ -25,16 +25,16 @@ client_dll: # client.dll
     dwViewMatrix: 26362272
     dwViewRender: 26364448
 engine2_dll: # engine2.dll
-    dwBuildNumber: 5322100
+    dwBuildNumber: 5326196
     dwNetworkGameClient_deltaTick: 600
-    dwNetworkGameClient: 5319368
+    dwNetworkGameClient: 5323464
     dwNetworkGameClient_getLocalPlayer: 240
     dwNetworkGameClient_maxClients: 592
     dwNetworkGameClient_signOnState: 576
-    dwWindowHeight: 6077540
-    dwWindowWidth: 6077536
+    dwWindowHeight: 6081756
+    dwWindowWidth: 6081752
 game_info: # Some additional information about the game at dump time
-    buildNumber: 13999 # Game build number
+    buildNumber: 14000 # Game build number
 inputsystem_dll: # inputsystem.dll
     dwInputSystem: 223136
 matchmaking_dll: # matchmaking.dll

@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Wed, 20 Mar 2024 01:24:48 +0000
+ * Sat, 23 Mar 2024 05:02:04 +0000
  */
 
 #pragma once
@@ -1703,7 +1703,6 @@ namespace CCSPlayerPawnBase { // CBasePlayerPawn
     constexpr std::ptrdiff_t m_flEmitSoundTime = 0xD98; // GameTime_t
     constexpr std::ptrdiff_t m_iNumSpawns = 0xD9C; // int32_t
     constexpr std::ptrdiff_t m_iShouldHaveCash = 0xDA0; // int32_t
-    constexpr std::ptrdiff_t m_bInvalidSteamLogonDelayed = 0xDA4; // bool
     constexpr std::ptrdiff_t m_flIdleTimeSinceLastAction = 0xDA8; // float
     constexpr std::ptrdiff_t m_flNameChangeHistory = 0xDAC; // float[5]
     constexpr std::ptrdiff_t m_fLastGivenDefuserTime = 0xDC0; // float

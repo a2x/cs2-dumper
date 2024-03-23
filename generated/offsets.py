@@ -1,6 +1,6 @@
 '''
 Generated using https://github.com/a2x/cs2-dumper
-Wed, 20 Mar 2024 01:24:49 +0000
+Sat, 23 Mar 2024 05:02:05 +0000
 '''
 
 class client_dll: # client.dll
@@ -30,17 +30,17 @@ class client_dll: # client.dll
     dwViewRender = 0x1924A20
 
 class engine2_dll: # engine2.dll
-    dwBuildNumber = 0x513574
+    dwBuildNumber = 0x514574
     dwNetworkGameClient_deltaTick = 0x258
-    dwNetworkGameClient = 0x512AC8
+    dwNetworkGameClient = 0x513AC8
     dwNetworkGameClient_getLocalPlayer = 0xF0
     dwNetworkGameClient_maxClients = 0x250
     dwNetworkGameClient_signOnState = 0x240
-    dwWindowHeight = 0x5CBC64
-    dwWindowWidth = 0x5CBC60
+    dwWindowHeight = 0x5CCCDC
+    dwWindowWidth = 0x5CCCD8
 
 class game_info: # Some additional information about the game at dump time
-    buildNumber = 0x36AF # Game build number
+    buildNumber = 0x36B0 # Game build number
 
 class inputsystem_dll: # inputsystem.dll
     dwInputSystem = 0x367A0

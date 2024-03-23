@@ -1,6 +1,6 @@
 /*
  * Generated using https://github.com/a2x/cs2-dumper
- * Wed, 20 Mar 2024 01:24:49 +0000
+ * Sat, 23 Mar 2024 05:02:05 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -33,18 +33,18 @@ pub mod client_dll { // client.dll
 }
 
 pub mod engine2_dll { // engine2.dll
-    pub const dwBuildNumber: usize = 0x513574;
+    pub const dwBuildNumber: usize = 0x514574;
     pub const dwNetworkGameClient_deltaTick: usize = 0x258;
-    pub const dwNetworkGameClient: usize = 0x512AC8;
+    pub const dwNetworkGameClient: usize = 0x513AC8;
     pub const dwNetworkGameClient_getLocalPlayer: usize = 0xF0;
     pub const dwNetworkGameClient_maxClients: usize = 0x250;
     pub const dwNetworkGameClient_signOnState: usize = 0x240;
-    pub const dwWindowHeight: usize = 0x5CBC64;
-    pub const dwWindowWidth: usize = 0x5CBC60;
+    pub const dwWindowHeight: usize = 0x5CCCDC;
+    pub const dwWindowWidth: usize = 0x5CCCD8;
 }
 
 pub mod game_info { // Some additional information about the game at dump time
-    pub const buildNumber: usize = 0x36AF; // Game build number
+    pub const buildNumber: usize = 0x36B0; // Game build number
 }
 
 pub mod inputsystem_dll { // inputsystem.dll
