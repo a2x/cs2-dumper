@@ -1,61 +1,61 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-03-28 07:07:08.835893701 UTC
+// 2024-03-29 08:41:42.046663095 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: libanimationsystem.so
     public static class Libanimationsystem {
-        public const nint AnimationSystemUtils001 = 0x18CA60;
-        public const nint AnimationSystem001 = 0x18C850;
+        public const nint AnimationSystemUtils_001 = 0x18CA60;
+        public const nint AnimationSystem_001 = 0x18C850;
     }
     // Module: libclient.so
     public static class Libclient {
-        public const nint ClientToolsInfo001 = 0xD54880;
-        public const nint EmptyWorldService001Client = 0xA47F30;
+        public const nint ClientToolsInfo_001 = 0xD54880;
+        public const nint EmptyWorldService001_Client = 0xA47F30;
         public const nint GameClientExports001 = 0xD544D0;
-        public const nint LegacyGameUi001 = 0xF200B0;
+        public const nint LegacyGameUI001 = 0xF200B0;
         public const nint Source2Client002 = 0xD54540;
         public const nint Source2ClientConfig001 = 0xA2BB50;
         public const nint Source2ClientPrediction001 = 0xDE3A80;
-        public const nint Source2ClientUi001 = 0xEDEAC0;
+        public const nint Source2ClientUI001 = 0xEDEAC0;
     }
     // Module: libengine2.so
     public static class Libengine2 {
         public const nint BenchmarkService001 = 0x1E5FA0;
         public const nint BugService001 = 0x1E21A0;
-        public const nint ClientServerEngineLoopService001 = 0x1B3AF0;
-        public const nint EngineGameUi001 = 0x375580;
+        public const nint ClientServerEngineLoopService_001 = 0x1B3AF0;
+        public const nint EngineGameUI001 = 0x375580;
         public const nint EngineServiceMgr001 = 0x1A3A60;
         public const nint GameEventSystemClientV001 = 0x1A8AD0;
         public const nint GameEventSystemServerV001 = 0x1A8AE0;
         public const nint GameResourceServiceClientV001 = 0x1E78D0;
         public const nint GameResourceServiceServerV001 = 0x1E78E0;
-        public const nint GameUiService001 = 0x1EF410;
+        public const nint GameUIService_001 = 0x1EF410;
         public const nint HostStateMgr001 = 0x1AE650;
-        public const nint Inetsupport001 = 0x33F2A0;
-        public const nint InputService001 = 0x1F39E0;
+        public const nint INETSUPPORT_001 = 0x33F2A0;
+        public const nint InputService_001 = 0x1F39E0;
         public const nint KeyValueCache001 = 0x1B0FA0;
-        public const nint MapListService001 = 0x2079E0;
-        public const nint NetworkClientService001 = 0x22E320;
-        public const nint NetworkP2pService001 = 0x244940;
-        public const nint NetworkServerService001 = 0x20BA90;
-        public const nint NetworkService001 = 0x20B1B0;
-        public const nint RenderService001 = 0x249D00;
+        public const nint MapListService_001 = 0x2079E0;
+        public const nint NetworkClientService_001 = 0x22E320;
+        public const nint NetworkP2PService_001 = 0x244940;
+        public const nint NetworkServerService_001 = 0x20BA90;
+        public const nint NetworkService_001 = 0x20B1B0;
+        public const nint RenderService_001 = 0x249D00;
         public const nint ScreenshotService001 = 0x24C8F0;
-        public const nint SimpleEngineLoopService001 = 0x1C87B0;
-        public const nint SoundService001 = 0x250F10;
+        public const nint SimpleEngineLoopService_001 = 0x1C87B0;
+        public const nint SoundService_001 = 0x250F10;
         public const nint Source2EngineToClient001 = 0x2C6EE0;
         public const nint Source2EngineToClientStringTable001 = 0x29E6D0;
         public const nint Source2EngineToServer001 = 0x2ED890;
         public const nint Source2EngineToServerStringTable001 = 0x2D0000;
-        public const nint SplitScreenService001 = 0x258290;
-        public const nint StatsService001 = 0x25B9E0;
-        public const nint ToolService001 = 0x260C60;
-        public const nint VengineGameuifuncsVersion005 = 0x375000;
-        public const nint VProfService001 = 0x262410;
+        public const nint SplitScreenService_001 = 0x258290;
+        public const nint StatsService_001 = 0x25B9E0;
+        public const nint ToolService_001 = 0x260C60;
+        public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x375000;
+        public const nint VProfService_001 = 0x262410;
     }
     // Module: libfilesystem_stdio.so
     public static class LibfilesystemStdio {
-        public const nint VAsyncFileSystem2001 = 0x80180;
+        public const nint VAsyncFileSystem2_001 = 0x80180;
         public const nint VFileSystem017 = 0x80170;
     }
     // Module: libhost.so
@@ -76,20 +76,20 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: liblocalize.so
     public static class Liblocalize {
-        public const nint Localize001 = 0x1DB00;
+        public const nint Localize_001 = 0x1DB00;
     }
     // Module: libmatchmaking.so
     public static class Libmatchmaking {
         public const nint GameTypes001 = 0x12FF60;
-        public const nint Matchframework001 = 0x204440;
+        public const nint MATCHFRAMEWORK_001 = 0x204440;
     }
     // Module: libmaterialsystem2.so
     public static class Libmaterialsystem2 {
-        public const nint FontManager001 = 0x7A340;
-        public const nint MaterialUtils001 = 0x64B80;
-        public const nint PostProcessingSystem001 = 0x89C70;
-        public const nint TextLayout001 = 0x87200;
-        public const nint VMaterialSystem2001 = 0x2C7A0;
+        public const nint FontManager_001 = 0x7A340;
+        public const nint MaterialUtils_001 = 0x64B80;
+        public const nint PostProcessingSystem_001 = 0x89C70;
+        public const nint TextLayout_001 = 0x87200;
+        public const nint VMaterialSystem2_001 = 0x2C7A0;
     }
     // Module: libmeshsystem.so
     public static class Libmeshsystem {
@@ -104,7 +104,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: libpanorama.so
     public static class Libpanorama {
-        public const nint PanoramaUiEngine001 = 0x220F80;
+        public const nint PanoramaUIEngine001 = 0x220F80;
     }
     // Module: libpanorama_text_pango.so
     public static class LibpanoramaTextPango {
@@ -112,7 +112,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: libpanoramauiclient.so
     public static class Libpanoramauiclient {
-        public const nint PanoramaUiClient001 = 0x10AAC0;
+        public const nint PanoramaUIClient001 = 0x10AAC0;
     }
     // Module: libparticles.so
     public static class Libparticles {
@@ -120,12 +120,12 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: libpulse_system.so
     public static class LibpulseSystem {
-        public const nint IPulseSystem001 = 0x357B0;
+        public const nint IPulseSystem_001 = 0x357B0;
     }
     // Module: librendersystemvulkan.so
     public static class Librendersystemvulkan {
         public const nint RenderDeviceMgr001 = 0x185100;
-        public const nint RenderUtils001 = 0x1019A0;
+        public const nint RenderUtils_001 = 0x1019A0;
     }
     // Module: libresourcesystem.so
     public static class Libresourcesystem {
@@ -138,26 +138,26 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: libscenesystem.so
     public static class Libscenesystem {
-        public const nint RenderingPipelines001 = 0x120E20;
-        public const nint SceneSystem002 = 0x164300;
-        public const nint SceneUtils001 = 0x1E0A70;
+        public const nint RenderingPipelines_001 = 0x120E20;
+        public const nint SceneSystem_002 = 0x164300;
+        public const nint SceneUtils_001 = 0x1E0A70;
     }
     // Module: libschemasystem.so
     public static class Libschemasystem {
-        public const nint SchemaSystem001 = 0x211F0;
+        public const nint SchemaSystem_001 = 0x211F0;
     }
     // Module: libserver.so
     public static class Libserver {
-        public const nint EmptyWorldService001Server = 0xB83320;
+        public const nint EmptyWorldService001_Server = 0xB83320;
         public const nint EntitySubclassUtilsV001 = 0x8611F0;
         public const nint NavGameTest001 = 0x1094010;
-        public const nint ServerToolsInfo001 = 0xE72080;
+        public const nint ServerToolsInfo_001 = 0xE72080;
         public const nint Source2GameClients001 = 0xE72010;
         public const nint Source2GameDirector001 = 0x6C41A0;
         public const nint Source2GameEntities001 = 0xE72000;
         public const nint Source2Server001 = 0xE71CF0;
         public const nint Source2ServerConfig001 = 0xB0EED0;
-        public const nint Customnavsystem001 = 0x7F8230;
+        public const nint customnavsystem001 = 0x7F8230;
     }
     // Module: libsoundsystem.so
     public static class Libsoundsystem {
@@ -183,8 +183,8 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: libvphysics2.so
     public static class Libvphysics2 {
-        public const nint VPhysics2HandleInterface001 = 0xC1FD0;
-        public const nint VPhysics2Interface001 = 0xC1BC0;
+        public const nint VPhysics2_Handle_Interface_001 = 0xC1FD0;
+        public const nint VPhysics2_Interface_001 = 0xC1BC0;
     }
     // Module: libvscript.so
     public static class Libvscript {
@@ -196,8 +196,8 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: steamclient.so
     public static class Steamclient {
-        public const nint ClientengineInterfaceVersion005 = 0x11260D0;
-        public const nint Ivalidate001 = 0x1122650;
+        public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0x11260D0;
+        public const nint IVALIDATE001 = 0x1122650;
         public const nint SteamClient006 = 0xDDA7A0;
         public const nint SteamClient007 = 0xDDA7B0;
         public const nint SteamClient008 = 0xDDA7C0;
@@ -214,7 +214,7 @@ namespace CS2Dumper.Interfaces {
         public const nint SteamClient019 = 0xDDA8F0;
         public const nint SteamClient020 = 0xDDA920;
         public const nint SteamClient021 = 0xDDA950;
-        public const nint P2pvoice002 = 0x174B380;
-        public const nint P2pvoicesingleton002 = 0x17443B0;
+        public const nint p2pvoice002 = 0x174B380;
+        public const nint p2pvoicesingleton002 = 0x17443B0;
     }
 }

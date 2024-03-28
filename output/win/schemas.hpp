@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-03-28 15:47:06.987281800 UTC
+// 2024-03-29 08:38:09.039088900 UTC
 
 #pragma once
 
@@ -13,674 +13,674 @@ namespace cs2_dumper {
         namespace animationsystem {
             // Alignment: 4
             // Members count: 2
-            enum class MoodType_t : int32_t {
-                eMoodType_Head = 0,
-                eMoodType_Body = 1
+            enum class MoodType_t : uint32_t {
+                eMoodType_Head = 0x0,
+                eMoodType_Body = 0x1
             }
             // Alignment: 4
             // Members count: 6
-            enum class AnimationProcessingType_t : int32_t {
-                ANIMATION_PROCESSING_SERVER_SIMULATION = 0,
-                ANIMATION_PROCESSING_CLIENT_SIMULATION = 1,
-                ANIMATION_PROCESSING_CLIENT_PREDICTION = 2,
-                ANIMATION_PROCESSING_CLIENT_INTERPOLATION = 3,
-                ANIMATION_PROCESSING_CLIENT_RENDER = 4,
-                ANIMATION_PROCESSING_MAX = 5
+            enum class AnimationProcessingType_t : uint32_t {
+                ANIMATION_PROCESSING_SERVER_SIMULATION = 0x0,
+                ANIMATION_PROCESSING_CLIENT_SIMULATION = 0x1,
+                ANIMATION_PROCESSING_CLIENT_PREDICTION = 0x2,
+                ANIMATION_PROCESSING_CLIENT_INTERPOLATION = 0x3,
+                ANIMATION_PROCESSING_CLIENT_RENDER = 0x4,
+                ANIMATION_PROCESSING_MAX = 0x5
             }
             // Alignment: 4
             // Members count: 7
-            enum class AnimationSnapshotType_t : int32_t {
-                ANIMATION_SNAPSHOT_SERVER_SIMULATION = 0,
-                ANIMATION_SNAPSHOT_CLIENT_SIMULATION = 1,
-                ANIMATION_SNAPSHOT_CLIENT_PREDICTION = 2,
-                ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION = 3,
-                ANIMATION_SNAPSHOT_CLIENT_RENDER = 4,
-                ANIMATION_SNAPSHOT_FINAL_COMPOSITE = 5,
-                ANIMATION_SNAPSHOT_MAX = 6
+            enum class AnimationSnapshotType_t : uint32_t {
+                ANIMATION_SNAPSHOT_SERVER_SIMULATION = 0x0,
+                ANIMATION_SNAPSHOT_CLIENT_SIMULATION = 0x1,
+                ANIMATION_SNAPSHOT_CLIENT_PREDICTION = 0x2,
+                ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION = 0x3,
+                ANIMATION_SNAPSHOT_CLIENT_RENDER = 0x4,
+                ANIMATION_SNAPSHOT_FINAL_COMPOSITE = 0x5,
+                ANIMATION_SNAPSHOT_MAX = 0x6
             }
             // Alignment: 4
             // Members count: 17
-            enum class SeqCmd_t : int32_t {
-                SeqCmd_Nop = 0,
-                SeqCmd_LinearDelta = 1,
-                SeqCmd_FetchFrameRange = 2,
-                SeqCmd_Slerp = 3,
-                SeqCmd_Add = 4,
-                SeqCmd_Subtract = 5,
-                SeqCmd_Scale = 6,
-                SeqCmd_Copy = 7,
-                SeqCmd_Blend = 8,
-                SeqCmd_Worldspace = 9,
-                SeqCmd_Sequence = 10,
-                SeqCmd_FetchCycle = 11,
-                SeqCmd_FetchFrame = 12,
-                SeqCmd_IKLockInPlace = 13,
-                SeqCmd_IKRestoreAll = 14,
-                SeqCmd_ReverseSequence = 15,
-                SeqCmd_Transform = 16
+            enum class SeqCmd_t : uint32_t {
+                SeqCmd_Nop = 0x0,
+                SeqCmd_LinearDelta = 0x1,
+                SeqCmd_FetchFrameRange = 0x2,
+                SeqCmd_Slerp = 0x3,
+                SeqCmd_Add = 0x4,
+                SeqCmd_Subtract = 0x5,
+                SeqCmd_Scale = 0x6,
+                SeqCmd_Copy = 0x7,
+                SeqCmd_Blend = 0x8,
+                SeqCmd_Worldspace = 0x9,
+                SeqCmd_Sequence = 0xA,
+                SeqCmd_FetchCycle = 0xB,
+                SeqCmd_FetchFrame = 0xC,
+                SeqCmd_IKLockInPlace = 0xD,
+                SeqCmd_IKRestoreAll = 0xE,
+                SeqCmd_ReverseSequence = 0xF,
+                SeqCmd_Transform = 0x10
             }
             // Alignment: 4
             // Members count: 4
-            enum class SeqPoseSetting_t : int32_t {
-                SEQ_POSE_SETTING_CONSTANT = 0,
-                SEQ_POSE_SETTING_ROTATION = 1,
-                SEQ_POSE_SETTING_POSITION = 2,
-                SEQ_POSE_SETTING_VELOCITY = 3
+            enum class SeqPoseSetting_t : uint32_t {
+                SEQ_POSE_SETTING_CONSTANT = 0x0,
+                SEQ_POSE_SETTING_ROTATION = 0x1,
+                SEQ_POSE_SETTING_POSITION = 0x2,
+                SEQ_POSE_SETTING_VELOCITY = 0x3
             }
             // Alignment: 4
             // Members count: 18
-            enum class ParticleAttachment_t : int32_t {
-                PATTACH_INVALID = -1,
-                PATTACH_ABSORIGIN = 0,
-                PATTACH_ABSORIGIN_FOLLOW = 1,
-                PATTACH_CUSTOMORIGIN = 2,
-                PATTACH_CUSTOMORIGIN_FOLLOW = 3,
-                PATTACH_POINT = 4,
-                PATTACH_POINT_FOLLOW = 5,
-                PATTACH_EYES_FOLLOW = 6,
-                PATTACH_OVERHEAD_FOLLOW = 7,
-                PATTACH_WORLDORIGIN = 8,
-                PATTACH_ROOTBONE_FOLLOW = 9,
-                PATTACH_RENDERORIGIN_FOLLOW = 10,
-                PATTACH_MAIN_VIEW = 11,
-                PATTACH_WATERWAKE = 12,
-                PATTACH_CENTER_FOLLOW = 13,
-                PATTACH_CUSTOM_GAME_STATE_1 = 14,
-                PATTACH_HEALTHBAR = 15,
-                MAX_PATTACH_TYPES = 16
+            enum class ParticleAttachment_t : uint32_t {
+                PATTACH_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PATTACH_ABSORIGIN = 0x0,
+                PATTACH_ABSORIGIN_FOLLOW = 0x1,
+                PATTACH_CUSTOMORIGIN = 0x2,
+                PATTACH_CUSTOMORIGIN_FOLLOW = 0x3,
+                PATTACH_POINT = 0x4,
+                PATTACH_POINT_FOLLOW = 0x5,
+                PATTACH_EYES_FOLLOW = 0x6,
+                PATTACH_OVERHEAD_FOLLOW = 0x7,
+                PATTACH_WORLDORIGIN = 0x8,
+                PATTACH_ROOTBONE_FOLLOW = 0x9,
+                PATTACH_RENDERORIGIN_FOLLOW = 0xA,
+                PATTACH_MAIN_VIEW = 0xB,
+                PATTACH_WATERWAKE = 0xC,
+                PATTACH_CENTER_FOLLOW = 0xD,
+                PATTACH_CUSTOM_GAME_STATE_1 = 0xE,
+                PATTACH_HEALTHBAR = 0xF,
+                MAX_PATTACH_TYPES = 0x10
             }
             // Alignment: 1
             // Members count: 9
-            enum class AnimParamType_t : int8_t {
-                ANIMPARAM_UNKNOWN = 0,
-                ANIMPARAM_BOOL = 1,
-                ANIMPARAM_ENUM = 2,
-                ANIMPARAM_INT = 3,
-                ANIMPARAM_FLOAT = 4,
-                ANIMPARAM_VECTOR = 5,
-                ANIMPARAM_QUATERNION = 6,
-                ANIMPARAM_GLOBALSYMBOL = 7,
-                ANIMPARAM_COUNT = 8
+            enum class AnimParamType_t : uint8_t {
+                ANIMPARAM_UNKNOWN = 0x0,
+                ANIMPARAM_BOOL = 0x1,
+                ANIMPARAM_ENUM = 0x2,
+                ANIMPARAM_INT = 0x3,
+                ANIMPARAM_FLOAT = 0x4,
+                ANIMPARAM_VECTOR = 0x5,
+                ANIMPARAM_QUATERNION = 0x6,
+                ANIMPARAM_GLOBALSYMBOL = 0x7,
+                ANIMPARAM_COUNT = 0x8
             }
             // Alignment: 4
             // Members count: 4
-            enum class BoneTransformSpace_t : int32_t {
-                BoneTransformSpace_Invalid = -1,
-                BoneTransformSpace_Parent = 0,
-                BoneTransformSpace_Model = 1,
-                BoneTransformSpace_World = 2
+            enum class BoneTransformSpace_t : uint32_t {
+                BoneTransformSpace_Invalid = 0xFFFFFFFFFFFFFFFF,
+                BoneTransformSpace_Parent = 0x0,
+                BoneTransformSpace_Model = 0x1,
+                BoneTransformSpace_World = 0x2
             }
             // Alignment: 4
             // Members count: 13
-            enum class AnimParamButton_t : int32_t {
-                ANIMPARAM_BUTTON_NONE = 0,
-                ANIMPARAM_BUTTON_DPAD_UP = 1,
-                ANIMPARAM_BUTTON_DPAD_RIGHT = 2,
-                ANIMPARAM_BUTTON_DPAD_DOWN = 3,
-                ANIMPARAM_BUTTON_DPAD_LEFT = 4,
-                ANIMPARAM_BUTTON_A = 5,
-                ANIMPARAM_BUTTON_B = 6,
-                ANIMPARAM_BUTTON_X = 7,
-                ANIMPARAM_BUTTON_Y = 8,
-                ANIMPARAM_BUTTON_LEFT_SHOULDER = 9,
-                ANIMPARAM_BUTTON_RIGHT_SHOULDER = 10,
-                ANIMPARAM_BUTTON_LTRIGGER = 11,
-                ANIMPARAM_BUTTON_RTRIGGER = 12
+            enum class AnimParamButton_t : uint32_t {
+                ANIMPARAM_BUTTON_NONE = 0x0,
+                ANIMPARAM_BUTTON_DPAD_UP = 0x1,
+                ANIMPARAM_BUTTON_DPAD_RIGHT = 0x2,
+                ANIMPARAM_BUTTON_DPAD_DOWN = 0x3,
+                ANIMPARAM_BUTTON_DPAD_LEFT = 0x4,
+                ANIMPARAM_BUTTON_A = 0x5,
+                ANIMPARAM_BUTTON_B = 0x6,
+                ANIMPARAM_BUTTON_X = 0x7,
+                ANIMPARAM_BUTTON_Y = 0x8,
+                ANIMPARAM_BUTTON_LEFT_SHOULDER = 0x9,
+                ANIMPARAM_BUTTON_RIGHT_SHOULDER = 0xA,
+                ANIMPARAM_BUTTON_LTRIGGER = 0xB,
+                ANIMPARAM_BUTTON_RTRIGGER = 0xC
             }
             // Alignment: 4
             // Members count: 3
-            enum class AnimParamNetworkSetting : int32_t {
-                Auto = 0,
-                AlwaysNetwork = 1,
-                NeverNetwork = 2
+            enum class AnimParamNetworkSetting : uint32_t {
+                Auto = 0x0,
+                AlwaysNetwork = 0x1,
+                NeverNetwork = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class FootstepLandedFootSoundType_t : int32_t {
-                FOOTSOUND_Left = 0,
-                FOOTSOUND_Right = 1,
-                FOOTSOUND_UseOverrideSound = 2
+            enum class FootstepLandedFootSoundType_t : uint32_t {
+                FOOTSOUND_Left = 0x0,
+                FOOTSOUND_Right = 0x1,
+                FOOTSOUND_UseOverrideSound = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class AnimPoseControl : int32_t {
-                NoPoseControl = 0,
-                AbsolutePoseControl = 1,
-                RelativePoseControl = 2
+            enum class AnimPoseControl : uint32_t {
+                NoPoseControl = 0x0,
+                AbsolutePoseControl = 0x1,
+                RelativePoseControl = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class RagdollPoseControl : int32_t {
-                Absolute = 0,
-                Relative = 1
+            enum class RagdollPoseControl : uint32_t {
+                Absolute = 0x0,
+                Relative = 0x1
             }
             // Alignment: 4
             // Members count: 5
-            enum class VPhysXBodyPart_t__VPhysXFlagEnum_t : int32_t {
-                FLAG_STATIC = 1,
-                FLAG_KINEMATIC = 2,
-                FLAG_JOINT = 4,
-                FLAG_MASS = 8,
-                FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 16
+            enum class VPhysXBodyPart_t__VPhysXFlagEnum_t : uint32_t {
+                FLAG_STATIC = 0x1,
+                FLAG_KINEMATIC = 0x2,
+                FLAG_JOINT = 0x4,
+                FLAG_MASS = 0x8,
+                FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 0x10
             }
             // Alignment: 4
             // Members count: 4
-            enum class VPhysXConstraintParams_t__EnumFlags0_t : int32_t {
-                FLAG0_SHIFT_INTERPENETRATE = 0,
-                FLAG0_SHIFT_CONSTRAIN = 1,
-                FLAG0_SHIFT_BREAKABLE_FORCE = 2,
-                FLAG0_SHIFT_BREAKABLE_TORQUE = 3
+            enum class VPhysXConstraintParams_t__EnumFlags0_t : uint32_t {
+                FLAG0_SHIFT_INTERPENETRATE = 0x0,
+                FLAG0_SHIFT_CONSTRAIN = 0x1,
+                FLAG0_SHIFT_BREAKABLE_FORCE = 0x2,
+                FLAG0_SHIFT_BREAKABLE_TORQUE = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class VPhysXJoint_t__Flags_t : int32_t {
-                JOINT_FLAGS_NONE = 0,
-                JOINT_FLAGS_BODY1_FIXED = 1,
-                JOINT_FLAGS_USE_BLOCK_SOLVER = 2
+            enum class VPhysXJoint_t__Flags_t : uint32_t {
+                JOINT_FLAGS_NONE = 0x0,
+                JOINT_FLAGS_BODY1_FIXED = 0x1,
+                JOINT_FLAGS_USE_BLOCK_SOLVER = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class VPhysXAggregateData_t__VPhysXFlagEnum_t : int32_t {
-                FLAG_IS_POLYSOUP_GEOMETRY = 1,
-                FLAG_LEVEL_COLLISION = 16,
-                FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE = 32
+            enum class VPhysXAggregateData_t__VPhysXFlagEnum_t : uint32_t {
+                FLAG_IS_POLYSOUP_GEOMETRY = 0x1,
+                FLAG_LEVEL_COLLISION = 0x10,
+                FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE = 0x20
             }
             // Alignment: 4
             // Members count: 8
-            enum class MeshDrawPrimitiveFlags_t : int32_t {
-                MESH_DRAW_FLAGS_NONE = 0,
-                MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 1,
-                MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 2,
-                MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 8,
-                MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 16,
-                MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 32,
-                MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 64,
-                MESH_DRAW_FLAGS_DRAW_LAST = 128
+            enum class MeshDrawPrimitiveFlags_t : uint32_t {
+                MESH_DRAW_FLAGS_NONE = 0x0,
+                MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 0x1,
+                MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 0x2,
+                MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 0x8,
+                MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 0x10,
+                MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 0x20,
+                MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 0x40,
+                MESH_DRAW_FLAGS_DRAW_LAST = 0x80
             }
             // Alignment: 4
             // Members count: 22
-            enum class ModelSkeletonData_t__BoneFlags_t : int32_t {
-                FLAG_NO_BONE_FLAGS = 0,
-                FLAG_BONEFLEXDRIVER = 4,
-                FLAG_CLOTH = 8,
-                FLAG_PHYSICS = 16,
-                FLAG_ATTACHMENT = 32,
-                FLAG_ANIMATION = 64,
-                FLAG_MESH = 128,
-                FLAG_HITBOX = 256,
-                FLAG_BONE_USED_BY_VERTEX_LOD0 = 1024,
-                FLAG_BONE_USED_BY_VERTEX_LOD1 = 2048,
-                FLAG_BONE_USED_BY_VERTEX_LOD2 = 4096,
-                FLAG_BONE_USED_BY_VERTEX_LOD3 = 8192,
-                FLAG_BONE_USED_BY_VERTEX_LOD4 = 16384,
-                FLAG_BONE_USED_BY_VERTEX_LOD5 = 32768,
-                FLAG_BONE_USED_BY_VERTEX_LOD6 = 65536,
-                FLAG_BONE_USED_BY_VERTEX_LOD7 = 131072,
-                FLAG_BONE_MERGE_READ = 262144,
-                FLAG_BONE_MERGE_WRITE = 524288,
-                FLAG_ALL_BONE_FLAGS = 1048575,
-                BLEND_PREALIGNED = 1048576,
-                FLAG_RIGIDLENGTH = 2097152,
-                FLAG_PROCEDURAL = 4194304
+            enum class ModelSkeletonData_t__BoneFlags_t : uint32_t {
+                FLAG_NO_BONE_FLAGS = 0x0,
+                FLAG_BONEFLEXDRIVER = 0x4,
+                FLAG_CLOTH = 0x8,
+                FLAG_PHYSICS = 0x10,
+                FLAG_ATTACHMENT = 0x20,
+                FLAG_ANIMATION = 0x40,
+                FLAG_MESH = 0x80,
+                FLAG_HITBOX = 0x100,
+                FLAG_BONE_USED_BY_VERTEX_LOD0 = 0x400,
+                FLAG_BONE_USED_BY_VERTEX_LOD1 = 0x800,
+                FLAG_BONE_USED_BY_VERTEX_LOD2 = 0x1000,
+                FLAG_BONE_USED_BY_VERTEX_LOD3 = 0x2000,
+                FLAG_BONE_USED_BY_VERTEX_LOD4 = 0x4000,
+                FLAG_BONE_USED_BY_VERTEX_LOD5 = 0x8000,
+                FLAG_BONE_USED_BY_VERTEX_LOD6 = 0x10000,
+                FLAG_BONE_USED_BY_VERTEX_LOD7 = 0x20000,
+                FLAG_BONE_MERGE_READ = 0x40000,
+                FLAG_BONE_MERGE_WRITE = 0x80000,
+                FLAG_ALL_BONE_FLAGS = 0xFFFFF,
+                BLEND_PREALIGNED = 0x100000,
+                FLAG_RIGIDLENGTH = 0x200000,
+                FLAG_PROCEDURAL = 0x400000
             }
             // Alignment: 4
             // Members count: 15
-            enum class PermModelInfo_t__FlagEnum : int32_t {
-                FLAG_TRANSLUCENT = 1,
-                FLAG_TRANSLUCENT_TWO_PASS = 2,
-                FLAG_MODEL_IS_RUNTIME_COMBINED = 4,
-                FLAG_SOURCE1_IMPORT = 8,
-                FLAG_MODEL_PART_CHILD = 16,
-                FLAG_NAV_GEN_NONE = 32,
-                FLAG_NAV_GEN_HULL = 64,
-                FLAG_NO_FORCED_FADE = 2048,
-                FLAG_HAS_SKINNED_MESHES = 1024,
-                FLAG_DO_NOT_CAST_SHADOWS = 131072,
-                FLAG_FORCE_PHONEME_CROSSFADE = 4096,
-                FLAG_NO_ANIM_EVENTS = 1048576,
-                FLAG_ANIMATION_DRIVEN_FLEXES = 2097152,
-                FLAG_IMPLICIT_BIND_POSE_SEQUENCE = 4194304,
-                FLAG_MODEL_DOC = 8388608
+            enum class PermModelInfo_t__FlagEnum : uint32_t {
+                FLAG_TRANSLUCENT = 0x1,
+                FLAG_TRANSLUCENT_TWO_PASS = 0x2,
+                FLAG_MODEL_IS_RUNTIME_COMBINED = 0x4,
+                FLAG_SOURCE1_IMPORT = 0x8,
+                FLAG_MODEL_PART_CHILD = 0x10,
+                FLAG_NAV_GEN_NONE = 0x20,
+                FLAG_NAV_GEN_HULL = 0x40,
+                FLAG_NO_FORCED_FADE = 0x800,
+                FLAG_HAS_SKINNED_MESHES = 0x400,
+                FLAG_DO_NOT_CAST_SHADOWS = 0x20000,
+                FLAG_FORCE_PHONEME_CROSSFADE = 0x1000,
+                FLAG_NO_ANIM_EVENTS = 0x100000,
+                FLAG_ANIMATION_DRIVEN_FLEXES = 0x200000,
+                FLAG_IMPLICIT_BIND_POSE_SEQUENCE = 0x400000,
+                FLAG_MODEL_DOC = 0x800000
             }
             // Alignment: 4
             // Members count: 4
-            enum class ModelBoneFlexComponent_t : int32_t {
-                MODEL_BONE_FLEX_INVALID = -1,
-                MODEL_BONE_FLEX_TX = 0,
-                MODEL_BONE_FLEX_TY = 1,
-                MODEL_BONE_FLEX_TZ = 2
+            enum class ModelBoneFlexComponent_t : uint32_t {
+                MODEL_BONE_FLEX_INVALID = 0xFFFFFFFFFFFFFFFF,
+                MODEL_BONE_FLEX_TX = 0x0,
+                MODEL_BONE_FLEX_TY = 0x1,
+                MODEL_BONE_FLEX_TZ = 0x2
             }
             // Alignment: 4
             // Members count: 5
-            enum class ModelConfigAttachmentType_t : int32_t {
-                MODEL_CONFIG_ATTACHMENT_INVALID = -1,
-                MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0,
-                MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 1,
-                MODEL_CONFIG_ATTACHMENT_BONEMERGE = 2,
-                MODEL_CONFIG_ATTACHMENT_COUNT = 3
+            enum class ModelConfigAttachmentType_t : uint32_t {
+                MODEL_CONFIG_ATTACHMENT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
+                MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
+                MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
+                MODEL_CONFIG_ATTACHMENT_COUNT = 0x3
             }
             // Alignment: 4
             // Members count: 26
-            enum class FlexOpCode_t : int32_t {
-                FLEX_OP_CONST = 1,
-                FLEX_OP_FETCH1 = 2,
-                FLEX_OP_FETCH2 = 3,
-                FLEX_OP_ADD = 4,
-                FLEX_OP_SUB = 5,
-                FLEX_OP_MUL = 6,
-                FLEX_OP_DIV = 7,
-                FLEX_OP_NEG = 8,
-                FLEX_OP_EXP = 9,
-                FLEX_OP_OPEN = 10,
-                FLEX_OP_CLOSE = 11,
-                FLEX_OP_COMMA = 12,
-                FLEX_OP_MAX = 13,
-                FLEX_OP_MIN = 14,
-                FLEX_OP_2WAY_0 = 15,
-                FLEX_OP_2WAY_1 = 16,
-                FLEX_OP_NWAY = 17,
-                FLEX_OP_COMBO = 18,
-                FLEX_OP_DOMINATE = 19,
-                FLEX_OP_DME_LOWER_EYELID = 20,
-                FLEX_OP_DME_UPPER_EYELID = 21,
-                FLEX_OP_SQRT = 22,
-                FLEX_OP_REMAPVALCLAMPED = 23,
-                FLEX_OP_SIN = 24,
-                FLEX_OP_COS = 25,
-                FLEX_OP_ABS = 26
+            enum class FlexOpCode_t : uint32_t {
+                FLEX_OP_CONST = 0x1,
+                FLEX_OP_FETCH1 = 0x2,
+                FLEX_OP_FETCH2 = 0x3,
+                FLEX_OP_ADD = 0x4,
+                FLEX_OP_SUB = 0x5,
+                FLEX_OP_MUL = 0x6,
+                FLEX_OP_DIV = 0x7,
+                FLEX_OP_NEG = 0x8,
+                FLEX_OP_EXP = 0x9,
+                FLEX_OP_OPEN = 0xA,
+                FLEX_OP_CLOSE = 0xB,
+                FLEX_OP_COMMA = 0xC,
+                FLEX_OP_MAX = 0xD,
+                FLEX_OP_MIN = 0xE,
+                FLEX_OP_2WAY_0 = 0xF,
+                FLEX_OP_2WAY_1 = 0x10,
+                FLEX_OP_NWAY = 0x11,
+                FLEX_OP_COMBO = 0x12,
+                FLEX_OP_DOMINATE = 0x13,
+                FLEX_OP_DME_LOWER_EYELID = 0x14,
+                FLEX_OP_DME_UPPER_EYELID = 0x15,
+                FLEX_OP_SQRT = 0x16,
+                FLEX_OP_REMAPVALCLAMPED = 0x17,
+                FLEX_OP_SIN = 0x18,
+                FLEX_OP_COS = 0x19,
+                FLEX_OP_ABS = 0x1A
             }
             // Alignment: 4
             // Members count: 4
-            enum class MorphFlexControllerRemapType_t : int32_t {
-                MORPH_FLEXCONTROLLER_REMAP_PASSTHRU = 0,
-                MORPH_FLEXCONTROLLER_REMAP_2WAY = 1,
-                MORPH_FLEXCONTROLLER_REMAP_NWAY = 2,
-                MORPH_FLEXCONTROLLER_REMAP_EYELID = 3
+            enum class MorphFlexControllerRemapType_t : uint32_t {
+                MORPH_FLEXCONTROLLER_REMAP_PASSTHRU = 0x0,
+                MORPH_FLEXCONTROLLER_REMAP_2WAY = 0x1,
+                MORPH_FLEXCONTROLLER_REMAP_NWAY = 0x2,
+                MORPH_FLEXCONTROLLER_REMAP_EYELID = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class MorphBundleType_t : int32_t {
-                MORPH_BUNDLE_TYPE_NONE = 0,
-                MORPH_BUNDLE_TYPE_POSITION_SPEED = 1,
-                MORPH_BUNDLE_TYPE_NORMAL_WRINKLE = 2,
-                MORPH_BUNDLE_TYPE_COUNT = 3
+            enum class MorphBundleType_t : uint32_t {
+                MORPH_BUNDLE_TYPE_NONE = 0x0,
+                MORPH_BUNDLE_TYPE_POSITION_SPEED = 0x1,
+                MORPH_BUNDLE_TYPE_NORMAL_WRINKLE = 0x2,
+                MORPH_BUNDLE_TYPE_COUNT = 0x3
             }
             // Alignment: 1
             // Members count: 5
-            enum class MovementGait_t : int8_t {
-                eInvalid = -1,
-                eWalk = 0,
-                eJog = 1,
-                eRun = 2,
-                eSprint = 3
+            enum class MovementGait_t : uint8_t {
+                eInvalid = 0xFFFFFFFFFFFFFFFF,
+                eWalk = 0x0,
+                eJog = 0x1,
+                eRun = 0x2,
+                eSprint = 0x3
             }
             // Alignment: 1
             // Members count: 3
-            enum class CNmBoneMask__WeightInfo_t : int8_t {
-                Zero = 0,
-                Mixed = 1,
-                One = 2
+            enum class CNmBoneMask__WeightInfo_t : uint8_t {
+                Zero = 0x0,
+                Mixed = 0x1,
+                One = 0x2
             }
             // Alignment: 1
             // Members count: 4
-            enum class NmFootPhase_t : int8_t {
-                LeftFootDown = 0,
-                RightFootPassing = 1,
-                RightFootDown = 2,
-                LeftFootPassing = 3
+            enum class NmFootPhase_t : uint8_t {
+                LeftFootDown = 0x0,
+                RightFootPassing = 0x1,
+                RightFootDown = 0x2,
+                LeftFootPassing = 0x3
             }
             // Alignment: 1
             // Members count: 6
-            enum class NmFootPhaseCondition_t : int8_t {
-                LeftFootDown = 0,
-                LeftFootPassing = 1,
-                LeftPhase = 4,
-                RightFootDown = 2,
-                RightFootPassing = 3,
-                RightPhase = 5
+            enum class NmFootPhaseCondition_t : uint8_t {
+                LeftFootDown = 0x0,
+                LeftFootPassing = 0x1,
+                LeftPhase = 0x4,
+                RightFootDown = 0x2,
+                RightFootPassing = 0x3,
+                RightPhase = 0x5
             }
             // Alignment: 1
             // Members count: 3
-            enum class NmTransitionRule_t : int8_t {
-                AllowTransition = 0,
-                ConditionallyAllowTransition = 1,
-                BlockTransition = 2
+            enum class NmTransitionRule_t : uint8_t {
+                AllowTransition = 0x0,
+                ConditionallyAllowTransition = 0x1,
+                BlockTransition = 0x2
             }
             // Alignment: 1
             // Members count: 4
-            enum class NmTransitionRuleCondition_t : int8_t {
-                AnyAllowed = 0,
-                FullyAllowed = 1,
-                ConditionallyAllowed = 2,
-                Blocked = 3
+            enum class NmTransitionRuleCondition_t : uint8_t {
+                AnyAllowed = 0x0,
+                FullyAllowed = 0x1,
+                ConditionallyAllowed = 0x2,
+                Blocked = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class NmFrameSnapEventMode_t : int32_t {
-                Floor = 0,
-                Round = 1
+            enum class NmFrameSnapEventMode_t : uint32_t {
+                Floor = 0x0,
+                Round = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class IKChannelMode : int32_t {
-                TwoBone = 0,
-                TwoBone_Translate = 1,
-                OneBone = 2,
-                OneBone_Translate = 3
+            enum class IKChannelMode : uint32_t {
+                TwoBone = 0x0,
+                TwoBone_Translate = 0x1,
+                OneBone = 0x2,
+                OneBone_Translate = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class EDemoBoneSelectionMode : int32_t {
-                CaptureAllBones = 0,
-                CaptureSelectedBones = 1
+            enum class EDemoBoneSelectionMode : uint32_t {
+                CaptureAllBones = 0x0,
+                CaptureSelectedBones = 0x1
             }
             // Alignment: 4
             // Members count: 37
-            enum class AnimValueSource : int32_t {
-                MoveHeading = 0,
-                MoveSpeed = 1,
-                ForwardSpeed = 2,
-                StrafeSpeed = 3,
-                FacingHeading = 4,
-                ManualFacingHeading = 5,
-                LookHeading = 6,
-                LookPitch = 7,
-                LookDistance = 8,
-                Parameter = 9,
-                WayPointHeading = 10,
-                WayPointDistance = 11,
-                BoundaryRadius = 12,
-                TargetMoveHeading = 13,
-                TargetMoveSpeed = 14,
-                AccelerationHeading = 15,
-                AccelerationSpeed = 16,
-                SlopeHeading = 17,
-                SlopeAngle = 18,
-                SlopePitch = 19,
-                SlopeYaw = 20,
-                GoalDistance = 21,
-                AccelerationLeftRight = 22,
-                AccelerationFrontBack = 23,
-                RootMotionSpeed = 24,
-                RootMotionTurnSpeed = 25,
-                MoveHeadingRelativeToLookHeading = 26,
-                MaxMoveSpeed = 27,
-                FingerCurl_Thumb = 28,
-                FingerCurl_Index = 29,
-                FingerCurl_Middle = 30,
-                FingerCurl_Ring = 31,
-                FingerCurl_Pinky = 32,
-                FingerSplay_Thumb_Index = 33,
-                FingerSplay_Index_Middle = 34,
-                FingerSplay_Middle_Ring = 35,
-                FingerSplay_Ring_Pinky = 36
+            enum class AnimValueSource : uint32_t {
+                MoveHeading = 0x0,
+                MoveSpeed = 0x1,
+                ForwardSpeed = 0x2,
+                StrafeSpeed = 0x3,
+                FacingHeading = 0x4,
+                ManualFacingHeading = 0x5,
+                LookHeading = 0x6,
+                LookPitch = 0x7,
+                LookDistance = 0x8,
+                Parameter = 0x9,
+                WayPointHeading = 0xA,
+                WayPointDistance = 0xB,
+                BoundaryRadius = 0xC,
+                TargetMoveHeading = 0xD,
+                TargetMoveSpeed = 0xE,
+                AccelerationHeading = 0xF,
+                AccelerationSpeed = 0x10,
+                SlopeHeading = 0x11,
+                SlopeAngle = 0x12,
+                SlopePitch = 0x13,
+                SlopeYaw = 0x14,
+                GoalDistance = 0x15,
+                AccelerationLeftRight = 0x16,
+                AccelerationFrontBack = 0x17,
+                RootMotionSpeed = 0x18,
+                RootMotionTurnSpeed = 0x19,
+                MoveHeadingRelativeToLookHeading = 0x1A,
+                MaxMoveSpeed = 0x1B,
+                FingerCurl_Thumb = 0x1C,
+                FingerCurl_Index = 0x1D,
+                FingerCurl_Middle = 0x1E,
+                FingerCurl_Ring = 0x1F,
+                FingerCurl_Pinky = 0x20,
+                FingerSplay_Thumb_Index = 0x21,
+                FingerSplay_Index_Middle = 0x22,
+                FingerSplay_Middle_Ring = 0x23,
+                FingerSplay_Ring_Pinky = 0x24
             }
             // Alignment: 4
             // Members count: 13
-            enum class AnimVectorSource : int32_t {
-                MoveDirection = 0,
-                FacingDirection = 1,
-                LookDirection = 2,
-                VectorParameter = 3,
-                WayPointDirection = 4,
-                Acceleration = 5,
-                SlopeNormal = 6,
-                SlopeNormal_WorldSpace = 7,
-                LookTarget = 8,
-                LookTarget_WorldSpace = 9,
-                WayPointPosition = 10,
-                GoalPosition = 11,
-                RootMotionVelocity = 12
+            enum class AnimVectorSource : uint32_t {
+                MoveDirection = 0x0,
+                FacingDirection = 0x1,
+                LookDirection = 0x2,
+                VectorParameter = 0x3,
+                WayPointDirection = 0x4,
+                Acceleration = 0x5,
+                SlopeNormal = 0x6,
+                SlopeNormal_WorldSpace = 0x7,
+                LookTarget = 0x8,
+                LookTarget_WorldSpace = 0x9,
+                WayPointPosition = 0xA,
+                GoalPosition = 0xB,
+                RootMotionVelocity = 0xC
             }
             // Alignment: 4
             // Members count: 3
-            enum class DampingSpeedFunction : int32_t {
-                NoDamping = 0,
-                Constant = 1,
-                Spring = 2
+            enum class DampingSpeedFunction : uint32_t {
+                NoDamping = 0x0,
+                Constant = 0x1,
+                Spring = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class AnimNodeNetworkMode : int32_t {
-                ServerAuthoritative = 0,
-                ClientSimulate = 1
+            enum class AnimNodeNetworkMode : uint32_t {
+                ServerAuthoritative = 0x0,
+                ClientSimulate = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class StateActionBehavior : int32_t {
-                STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT = 0,
-                STATETAGBEHAVIOR_FIRE_ON_ENTER = 1,
-                STATETAGBEHAVIOR_FIRE_ON_EXIT = 2,
-                STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT = 3
+            enum class StateActionBehavior : uint32_t {
+                STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT = 0x0,
+                STATETAGBEHAVIOR_FIRE_ON_ENTER = 0x1,
+                STATETAGBEHAVIOR_FIRE_ON_EXIT = 0x2,
+                STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class FieldNetworkOption : int32_t {
-                Auto = 0,
-                ForceEnable = 1,
-                ForceDisable = 2
+            enum class FieldNetworkOption : uint32_t {
+                Auto = 0x0,
+                ForceEnable = 0x1,
+                ForceDisable = 0x2
             }
             // Alignment: 4
             // Members count: 8
-            enum class FootFallTagFoot_t : int32_t {
-                FOOT1 = 0,
-                FOOT2 = 1,
-                FOOT3 = 2,
-                FOOT4 = 3,
-                FOOT5 = 4,
-                FOOT6 = 5,
-                FOOT7 = 6,
-                FOOT8 = 7
+            enum class FootFallTagFoot_t : uint32_t {
+                FOOT1 = 0x0,
+                FOOT2 = 0x1,
+                FOOT3 = 0x2,
+                FOOT4 = 0x3,
+                FOOT5 = 0x4,
+                FOOT6 = 0x5,
+                FOOT7 = 0x6,
+                FOOT8 = 0x7
             }
             // Alignment: 4
             // Members count: 2
-            enum class MatterialAttributeTagType_t : int32_t {
-                MATERIAL_ATTRIBUTE_TAG_VALUE = 0,
-                MATERIAL_ATTRIBUTE_TAG_COLOR = 1
+            enum class MatterialAttributeTagType_t : uint32_t {
+                MATERIAL_ATTRIBUTE_TAG_VALUE = 0x0,
+                MATERIAL_ATTRIBUTE_TAG_COLOR = 0x1
             }
             // Alignment: 1
             // Members count: 3
-            enum class VelocityMetricMode : int8_t {
-                DirectionOnly = 0,
-                MagnitudeOnly = 1,
-                DirectionAndMagnitude = 2
+            enum class VelocityMetricMode : uint8_t {
+                DirectionOnly = 0x0,
+                MagnitudeOnly = 0x1,
+                DirectionAndMagnitude = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class AimMatrixBlendMode : int32_t {
-                AimMatrixBlendMode_None = 0,
-                AimMatrixBlendMode_Additive = 1,
-                AimMatrixBlendMode_ModelSpaceAdditive = 2,
-                AimMatrixBlendMode_BoneMask = 3
+            enum class AimMatrixBlendMode : uint32_t {
+                AimMatrixBlendMode_None = 0x0,
+                AimMatrixBlendMode_Additive = 0x1,
+                AimMatrixBlendMode_ModelSpaceAdditive = 0x2,
+                AimMatrixBlendMode_BoneMask = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class BoneMaskBlendSpace : int32_t {
-                BlendSpace_Parent = 0,
-                BlendSpace_Model = 1,
-                BlendSpace_Model_RotationOnly = 2,
-                BlendSpace_Model_TranslationOnly = 3
+            enum class BoneMaskBlendSpace : uint32_t {
+                BlendSpace_Parent = 0x0,
+                BlendSpace_Model = 0x1,
+                BlendSpace_Model_RotationOnly = 0x2,
+                BlendSpace_Model_TranslationOnly = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class JiggleBoneSimSpace : int32_t {
-                SimSpace_Local = 0,
-                SimSpace_Model = 1,
-                SimSpace_World = 2
+            enum class JiggleBoneSimSpace : uint32_t {
+                SimSpace_Local = 0x0,
+                SimSpace_Model = 0x1,
+                SimSpace_World = 0x2
             }
             // Alignment: 4
             // Members count: 7
-            enum class SolveIKChainAnimNodeDebugSetting : int32_t {
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_None = 0,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_X_Axis_Circle = 1,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Y_Axis_Circle = 2,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Z_Axis_Circle = 3,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Forward = 4,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Up = 5,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Left = 6
+            enum class SolveIKChainAnimNodeDebugSetting : uint32_t {
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_None = 0x0,
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_X_Axis_Circle = 0x1,
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_Y_Axis_Circle = 0x2,
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_Z_Axis_Circle = 0x3,
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_Forward = 0x4,
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_Up = 0x5,
+                SOLVEIKCHAINANIMNODEDEBUGSETTING_Left = 0x6
             }
             // Alignment: 2
             // Members count: 3
-            enum class AnimScriptType : int16_t {
-                ANIMSCRIPT_TYPE_INVALID = -1,
-                ANIMSCRIPT_FUSE_GENERAL = 0,
-                ANIMSCRIPT_FUSE_STATEMACHINE = 1
+            enum class AnimScriptType : uint16_t {
+                ANIMSCRIPT_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ANIMSCRIPT_FUSE_GENERAL = 0x0,
+                ANIMSCRIPT_FUSE_STATEMACHINE = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class BinaryNodeTiming : int32_t {
-                UseChild1 = 0,
-                UseChild2 = 1,
-                SyncChildren = 2
+            enum class BinaryNodeTiming : uint32_t {
+                UseChild1 = 0x0,
+                UseChild2 = 0x1,
+                SyncChildren = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class BinaryNodeChildOption : int32_t {
-                Child1 = 0,
-                Child2 = 1
+            enum class BinaryNodeChildOption : uint32_t {
+                Child1 = 0x0,
+                Child2 = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class BlendKeyType : int32_t {
-                BlendKey_UserValue = 0,
-                BlendKey_Velocity = 1,
-                BlendKey_Distance = 2,
-                BlendKey_RemainingDistance = 3
+            enum class BlendKeyType : uint32_t {
+                BlendKey_UserValue = 0x0,
+                BlendKey_Velocity = 0x1,
+                BlendKey_Distance = 0x2,
+                BlendKey_RemainingDistance = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class Blend2DMode : int32_t {
-                Blend2DMode_General = 0,
-                Blend2DMode_Directional = 1
+            enum class Blend2DMode : uint32_t {
+                Blend2DMode_General = 0x0,
+                Blend2DMode_Directional = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class ChoiceMethod : int32_t {
-                WeightedRandom = 0,
-                WeightedRandomNoRepeat = 1,
-                Iterate = 2,
-                IterateRandom = 3
+            enum class ChoiceMethod : uint32_t {
+                WeightedRandom = 0x0,
+                WeightedRandomNoRepeat = 0x1,
+                Iterate = 0x2,
+                IterateRandom = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class ChoiceChangeMethod : int32_t {
-                OnReset = 0,
-                OnCycleEnd = 1,
-                OnResetOrCycleEnd = 2
+            enum class ChoiceChangeMethod : uint32_t {
+                OnReset = 0x0,
+                OnCycleEnd = 0x1,
+                OnResetOrCycleEnd = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class ChoiceBlendMethod : int32_t {
-                SingleBlendTime = 0,
-                PerChoiceBlendTimes = 1
+            enum class ChoiceBlendMethod : uint32_t {
+                SingleBlendTime = 0x0,
+                PerChoiceBlendTimes = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class FootLockSubVisualization : int32_t {
-                FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0,
-                FOOTLOCKSUBVISUALIZATION_IKSolve = 1
+            enum class FootLockSubVisualization : uint32_t {
+                FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0x0,
+                FOOTLOCKSUBVISUALIZATION_IKSolve = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class FootPinningTimingSource : int32_t {
-                FootMotion = 0,
-                Tag = 1,
-                Parameter = 2
+            enum class FootPinningTimingSource : uint32_t {
+                FootMotion = 0x0,
+                Tag = 0x1,
+                Parameter = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class StepPhase : int32_t {
-                StepPhase_OnGround = 0,
-                StepPhase_InAir = 1
+            enum class StepPhase : uint32_t {
+                StepPhase_OnGround = 0x0,
+                StepPhase_InAir = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class JumpCorrectionMethod : int32_t {
-                ScaleMotion = 0,
-                AddCorrectionDelta = 1
+            enum class JumpCorrectionMethod : uint32_t {
+                ScaleMotion = 0x0,
+                AddCorrectionDelta = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class SelectorTagBehavior_t : int32_t {
-                SelectorTagBehavior_OnWhileCurrent = 0,
-                SelectorTagBehavior_OffWhenFinished = 1,
-                SelectorTagBehavior_OffBeforeFinished = 2
+            enum class SelectorTagBehavior_t : uint32_t {
+                SelectorTagBehavior_OnWhileCurrent = 0x0,
+                SelectorTagBehavior_OffWhenFinished = 0x1,
+                SelectorTagBehavior_OffBeforeFinished = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class StanceOverrideMode : int32_t {
-                Sequence = 0,
-                Node = 1
+            enum class StanceOverrideMode : uint32_t {
+                Sequence = 0x0,
+                Node = 0x1
             }
             // Alignment: 4
             // Members count: 5
-            enum class ResetCycleOption : int32_t {
-                Beginning = 0,
-                SameCycleAsSource = 1,
-                InverseSourceCycle = 2,
-                FixedValue = 3,
-                SameTimeAsSource = 4
+            enum class ResetCycleOption : uint32_t {
+                Beginning = 0x0,
+                SameCycleAsSource = 0x1,
+                InverseSourceCycle = 0x2,
+                FixedValue = 0x3,
+                SameTimeAsSource = 0x4
             }
             // Alignment: 4
             // Members count: 2
-            enum class IkEndEffectorType : int32_t {
-                IkEndEffector_Attachment = 0,
-                IkEndEffector_Bone = 1
+            enum class IkEndEffectorType : uint32_t {
+                IkEndEffector_Attachment = 0x0,
+                IkEndEffector_Bone = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class IkTargetType : int32_t {
-                IkTarget_Attachment = 0,
-                IkTarget_Bone = 1,
-                IkTarget_Parameter_ModelSpace = 2,
-                IkTarget_Parameter_WorldSpace = 3
+            enum class IkTargetType : uint32_t {
+                IkTarget_Attachment = 0x0,
+                IkTarget_Bone = 0x1,
+                IkTarget_Parameter_ModelSpace = 0x2,
+                IkTarget_Parameter_WorldSpace = 0x3
             }
             // Alignment: 1
             // Members count: 3
-            enum class PoseType_t : int8_t {
-                POSETYPE_STATIC = 0,
-                POSETYPE_DYNAMIC = 1,
-                POSETYPE_INVALID = 255
+            enum class PoseType_t : uint8_t {
+                POSETYPE_STATIC = 0x0,
+                POSETYPE_DYNAMIC = 0x1,
+                POSETYPE_INVALID = 0xFF
             }
             // Alignment: 4
             // Members count: 5
-            enum class CAnimationGraphVisualizerPrimitiveType : int32_t {
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Text = 0,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Sphere = 1,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Line = 2,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Pie = 3,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Axis = 4
+            enum class CAnimationGraphVisualizerPrimitiveType : uint32_t {
+                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Text = 0x0,
+                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Sphere = 0x1,
+                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Line = 0x2,
+                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Pie = 0x3,
+                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Axis = 0x4
             }
             // Alignment: 4
             // Members count: 3
-            enum class FacingMode : int32_t {
-                FacingMode_Manual = 0,
-                FacingMode_Path = 1,
-                FacingMode_LookTarget = 2
+            enum class FacingMode : uint32_t {
+                FacingMode_Manual = 0x0,
+                FacingMode_Path = 0x1,
+                FacingMode_LookTarget = 0x2
             }
             // Alignment: 4
             // Members count: 6
-            enum class IKSolverType : int32_t {
-                IKSOLVER_Perlin = 0,
-                IKSOLVER_TwoBone = 1,
-                IKSOLVER_Fabrik = 2,
-                IKSOLVER_DogLeg3Bone = 3,
-                IKSOLVER_CCD = 4,
-                IKSOLVER_COUNT = 5
+            enum class IKSolverType : uint32_t {
+                IKSOLVER_Perlin = 0x0,
+                IKSOLVER_TwoBone = 0x1,
+                IKSOLVER_Fabrik = 0x2,
+                IKSOLVER_DogLeg3Bone = 0x3,
+                IKSOLVER_CCD = 0x4,
+                IKSOLVER_COUNT = 0x5
             }
             // Alignment: 4
             // Members count: 3
-            enum class IKTargetSource : int32_t {
-                IKTARGETSOURCE_Bone = 0,
-                IKTARGETSOURCE_AnimgraphParameter = 1,
-                IKTARGETSOURCE_COUNT = 2
+            enum class IKTargetSource : uint32_t {
+                IKTARGETSOURCE_Bone = 0x0,
+                IKTARGETSOURCE_AnimgraphParameter = 0x1,
+                IKTARGETSOURCE_COUNT = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class IKTargetCoordinateSystem : int32_t {
-                IKTARGETCOORDINATESYSTEM_WorldSpace = 0,
-                IKTARGETCOORDINATESYSTEM_ModelSpace = 1,
-                IKTARGETCOORDINATESYSTEM_COUNT = 2
+            enum class IKTargetCoordinateSystem : uint32_t {
+                IKTARGETCOORDINATESYSTEM_WorldSpace = 0x0,
+                IKTARGETCOORDINATESYSTEM_ModelSpace = 0x1,
+                IKTARGETCOORDINATESYSTEM_COUNT = 0x2
             }
             // Parent: None
             // Fields count: 2
@@ -702,7 +702,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_sName = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_bActiveListening = 0x8; // bool
                 constexpr std::ptrdiff_t m_bActiveTalking = 0x9; // bool
-                constexpr std::ptrdiff_t m_layerAnimations = 0x10; // CUtlVector< MoodAnimation_t >
+                constexpr std::ptrdiff_t m_layerAnimations = 0x10; // CUtlVector<MoodAnimation_t>
                 constexpr std::ptrdiff_t m_flIntensity = 0x28; // CRangeFloat
                 constexpr std::ptrdiff_t m_flDurationScale = 0x30; // CRangeFloat
                 constexpr std::ptrdiff_t m_bScaleWithInts = 0x38; // bool
@@ -720,10 +720,10 @@ namespace cs2_dumper {
             namespace AnimationDecodeDebugDumpElement_t {
                 constexpr std::ptrdiff_t m_nEntityIndex = 0x0; // int32
                 constexpr std::ptrdiff_t m_modelName = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_poseParams = 0x10; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_decodeOps = 0x28; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_internalOps = 0x40; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_decodedAnims = 0x58; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_poseParams = 0x10; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_decodeOps = 0x28; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_internalOps = 0x40; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_decodedAnims = 0x58; // CUtlVector<CUtlString>
             }
             // Parent: None
             // Fields count: 2
@@ -732,7 +732,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace AnimationDecodeDebugDump_t {
                 constexpr std::ptrdiff_t m_processingType = 0x0; // AnimationProcessingType_t
-                constexpr std::ptrdiff_t m_elems = 0x8; // CUtlVector< AnimationDecodeDebugDumpElement_t >
+                constexpr std::ptrdiff_t m_elems = 0x8; // CUtlVector<AnimationDecodeDebugDumpElement_t>
             }
             // Parent: None
             // Fields count: 9
@@ -743,9 +743,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRealTime = 0x0; // float32
                 constexpr std::ptrdiff_t m_rootToWorld = 0x10; // matrix3x4a_t
                 constexpr std::ptrdiff_t m_bBonesInWorldSpace = 0x40; // bool
-                constexpr std::ptrdiff_t m_boneSetupMask = 0x48; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_boneTransforms = 0x60; // CUtlVector< matrix3x4a_t >
-                constexpr std::ptrdiff_t m_flexControllers = 0x78; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_boneSetupMask = 0x48; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_boneTransforms = 0x60; // CUtlVector<matrix3x4a_t>
+                constexpr std::ptrdiff_t m_flexControllers = 0x78; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_SnapshotType = 0x90; // AnimationSnapshotType_t
                 constexpr std::ptrdiff_t m_bHasDecodeDump = 0x94; // bool
                 constexpr std::ptrdiff_t m_DecodeDump = 0x98; // AnimationDecodeDebugDumpElement_t
@@ -794,13 +794,13 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimEncodeDifference {
-                constexpr std::ptrdiff_t m_boneArray = 0x0; // CUtlVector< CAnimBoneDifference >
-                constexpr std::ptrdiff_t m_morphArray = 0x18; // CUtlVector< CAnimMorphDifference >
-                constexpr std::ptrdiff_t m_userArray = 0x30; // CUtlVector< CAnimUserDifference >
-                constexpr std::ptrdiff_t m_bHasRotationBitArray = 0x48; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_bHasMovementBitArray = 0x60; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_bHasMorphBitArray = 0x78; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_bHasUserBitArray = 0x90; // CUtlVector< uint8 >
+                constexpr std::ptrdiff_t m_boneArray = 0x0; // CUtlVector<CAnimBoneDifference>
+                constexpr std::ptrdiff_t m_morphArray = 0x18; // CUtlVector<CAnimMorphDifference>
+                constexpr std::ptrdiff_t m_userArray = 0x30; // CUtlVector<CAnimUserDifference>
+                constexpr std::ptrdiff_t m_bHasRotationBitArray = 0x48; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_bHasMovementBitArray = 0x60; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_bHasUserBitArray = 0x90; // CUtlVector<uint8>
             }
             // Parent: None
             // Fields count: 5
@@ -870,7 +870,7 @@ namespace cs2_dumper {
             namespace CAnimFrameBlockAnim {
                 constexpr std::ptrdiff_t m_nStartFrame = 0x0; // int32
                 constexpr std::ptrdiff_t m_nEndFrame = 0x4; // int32
-                constexpr std::ptrdiff_t m_segmentIndexArray = 0x8; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_segmentIndexArray = 0x8; // CUtlVector<int32>
             }
             // Parent: None
             // Fields count: 5
@@ -881,7 +881,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fileName = 0x0; // CBufferString
                 constexpr std::ptrdiff_t m_nFrames = 0x10; // int32
                 constexpr std::ptrdiff_t m_nFramesPerBlock = 0x14; // int32
-                constexpr std::ptrdiff_t m_frameblockArray = 0x18; // CUtlVector< CAnimFrameBlockAnim >
+                constexpr std::ptrdiff_t m_frameblockArray = 0x18; // CUtlVector<CAnimFrameBlockAnim>
                 constexpr std::ptrdiff_t m_usageDifferences = 0x30; // CAnimEncodeDifference
             }
             // Parent: None
@@ -918,15 +918,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flags = 0x10; // CAnimDesc_Flag
                 constexpr std::ptrdiff_t fps = 0x18; // float32
                 constexpr std::ptrdiff_t m_Data = 0x20; // CAnimEncodedFrames
-                constexpr std::ptrdiff_t m_movementArray = 0xF8; // CUtlVector< CAnimMovement >
-                constexpr std::ptrdiff_t m_eventArray = 0x110; // CUtlVector< CAnimEventDefinition >
-                constexpr std::ptrdiff_t m_activityArray = 0x128; // CUtlVector< CAnimActivity >
-                constexpr std::ptrdiff_t m_hierarchyArray = 0x140; // CUtlVector< CAnimLocalHierarchy >
+                constexpr std::ptrdiff_t m_movementArray = 0xF8; // CUtlVector<CAnimMovement>
+                constexpr std::ptrdiff_t m_eventArray = 0x110; // CUtlVector<CAnimEventDefinition>
+                constexpr std::ptrdiff_t m_activityArray = 0x128; // CUtlVector<CAnimActivity>
+                constexpr std::ptrdiff_t m_hierarchyArray = 0x140; // CUtlVector<CAnimLocalHierarchy>
                 constexpr std::ptrdiff_t framestalltime = 0x158; // float32
                 constexpr std::ptrdiff_t m_vecRootMin = 0x15C; // 
                 constexpr std::ptrdiff_t m_vecRootMax = 0x168; // 
-                constexpr std::ptrdiff_t m_vecBoneWorldMin = 0x178; // CUtlVector< Vector >
-                constexpr std::ptrdiff_t m_vecBoneWorldMax = 0x190; // CUtlVector< Vector >
+                constexpr std::ptrdiff_t m_vecBoneWorldMin = 0x178; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_vecBoneWorldMax = 0x190; // CUtlVector<Vector>
                 constexpr std::ptrdiff_t m_sequenceParams = 0x1A8; // CAnimSequenceParams
             }
             // Parent: None
@@ -947,10 +947,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimData {
                 constexpr std::ptrdiff_t m_name = 0x10; // CBufferString
-                constexpr std::ptrdiff_t m_animArray = 0x20; // CUtlVector< CAnimDesc >
-                constexpr std::ptrdiff_t m_decoderArray = 0x38; // CUtlVector< CAnimDecoder >
+                constexpr std::ptrdiff_t m_animArray = 0x20; // CUtlVector<CAnimDesc>
+                constexpr std::ptrdiff_t m_decoderArray = 0x38; // CUtlVector<CAnimDecoder>
                 constexpr std::ptrdiff_t m_nMaxUniqueFrameIndex = 0x50; // int32
-                constexpr std::ptrdiff_t m_segmentArray = 0x58; // CUtlVector< CAnimFrameSegment >
+                constexpr std::ptrdiff_t m_segmentArray = 0x58; // CUtlVector<CAnimFrameSegment>
             }
             // Parent: None
             // Fields count: 7
@@ -987,9 +987,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nType = 0x24; // int32
                 constexpr std::ptrdiff_t m_szGrouping = 0x28; // CBufferString
                 constexpr std::ptrdiff_t m_szDescription = 0x38; // CBufferString
-                constexpr std::ptrdiff_t m_szElementNameArray = 0x48; // CUtlVector< CBufferString >
-                constexpr std::ptrdiff_t m_nElementIndexArray = 0x60; // CUtlVector< int32 >
-                constexpr std::ptrdiff_t m_nElementMaskArray = 0x78; // CUtlVector< uint32 >
+                constexpr std::ptrdiff_t m_szElementNameArray = 0x48; // CUtlVector<CBufferString>
+                constexpr std::ptrdiff_t m_nElementIndexArray = 0x60; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_nElementMaskArray = 0x78; // CUtlVector<uint32>
             }
             // Parent: None
             // Fields count: 6
@@ -998,11 +998,11 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimKeyData {
                 constexpr std::ptrdiff_t m_name = 0x0; // CBufferString
-                constexpr std::ptrdiff_t m_boneArray = 0x10; // CUtlVector< CAnimBone >
-                constexpr std::ptrdiff_t m_userArray = 0x28; // CUtlVector< CAnimUser >
-                constexpr std::ptrdiff_t m_morphArray = 0x40; // CUtlVector< CBufferString >
+                constexpr std::ptrdiff_t m_boneArray = 0x10; // CUtlVector<CAnimBone>
+                constexpr std::ptrdiff_t m_userArray = 0x28; // CUtlVector<CAnimUser>
+                constexpr std::ptrdiff_t m_morphArray = 0x40; // CUtlVector<CBufferString>
                 constexpr std::ptrdiff_t m_nChannelElements = 0x58; // int32
-                constexpr std::ptrdiff_t m_dataChannelArray = 0x60; // CUtlVector< CAnimDataChannelDesc >
+                constexpr std::ptrdiff_t m_dataChannelArray = 0x60; // CUtlVector<CAnimDataChannelDesc>
             }
             // Parent: None
             // Fields count: 7
@@ -1012,11 +1012,11 @@ namespace cs2_dumper {
             namespace CAnimationGroup {
                 constexpr std::ptrdiff_t m_nFlags = 0x10; // uint32
                 constexpr std::ptrdiff_t m_name = 0x18; // CBufferString
-                constexpr std::ptrdiff_t m_localHAnimArray_Handle = 0x60; // CUtlVector< CStrongHandle< InfoForResourceTypeCAnimData > >
-                constexpr std::ptrdiff_t m_includedGroupArray_Handle = 0x78; // CUtlVector< CStrongHandle< InfoForResourceTypeCAnimationGroup > >
-                constexpr std::ptrdiff_t m_directHSeqGroup_Handle = 0x90; // CStrongHandle< InfoForResourceTypeCSequenceGroupData >
+                constexpr std::ptrdiff_t m_localHAnimArray_Handle = 0x60; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimData>>
+                constexpr std::ptrdiff_t m_includedGroupArray_Handle = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+                constexpr std::ptrdiff_t m_directHSeqGroup_Handle = 0x90; // CStrongHandle<InfoForResourceTypeCSequenceGroupData>
                 constexpr std::ptrdiff_t m_decodeKey = 0x98; // CAnimKeyData
-                constexpr std::ptrdiff_t m_szScripts = 0x110; // CUtlVector< CBufferString >
+                constexpr std::ptrdiff_t m_szScripts = 0x110; // CUtlVector<CBufferString>
             }
             // Parent: None
             // Fields count: 8
@@ -1065,10 +1065,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CSeqBoneMaskList {
                 constexpr std::ptrdiff_t m_sName = 0x0; // CBufferString
-                constexpr std::ptrdiff_t m_nLocalBoneArray = 0x10; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_flBoneWeightArray = 0x28; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_nLocalBoneArray = 0x10; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_flBoneWeightArray = 0x28; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_flDefaultMorphCtrlWeight = 0x40; // float32
-                constexpr std::ptrdiff_t m_morphCtrlWeightArray = 0x48; // CUtlVector< CUtlPair< CBufferString, float32 > >
+                constexpr std::ptrdiff_t m_morphCtrlWeightArray = 0x48; // CUtlVector<CUtlPair<CBufferString,float32>>
             }
             // Parent: None
             // Fields count: 5
@@ -1079,8 +1079,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_sName = 0x0; // CBufferString
                 constexpr std::ptrdiff_t m_bRootOffset = 0x10; // bool
                 constexpr std::ptrdiff_t m_vRootOffset = 0x14; // 
-                constexpr std::ptrdiff_t m_nLocalBoneArray = 0x20; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_flBoneScaleArray = 0x38; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_nLocalBoneArray = 0x20; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_flBoneScaleArray = 0x38; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 6
@@ -1102,11 +1102,11 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CSeqMultiFetch {
                 constexpr std::ptrdiff_t m_flags = 0x0; // CSeqMultiFetchFlag
-                constexpr std::ptrdiff_t m_localReferenceArray = 0x8; // CUtlVector< int16 >
+                constexpr std::ptrdiff_t m_localReferenceArray = 0x8; // CUtlVector<int16>
                 constexpr std::ptrdiff_t m_nGroupSize = 0x20; // int32[2]
                 constexpr std::ptrdiff_t m_nLocalPose = 0x28; // int32[2]
-                constexpr std::ptrdiff_t m_poseKeyArray0 = 0x30; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_poseKeyArray1 = 0x48; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_poseKeyArray0 = 0x30; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_poseKeyArray1 = 0x48; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_nLocalCyclePoseParameter = 0x60; // int32
                 constexpr std::ptrdiff_t m_bCalculatePoseParameters = 0x64; // bool
                 constexpr std::ptrdiff_t m_bFixedBlendWeight = 0x65; // bool
@@ -1149,13 +1149,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flags = 0x10; // CSeqSeqDescFlag
                 constexpr std::ptrdiff_t m_fetch = 0x20; // CSeqMultiFetch
                 constexpr std::ptrdiff_t m_nLocalWeightlist = 0x90; // int32
-                constexpr std::ptrdiff_t m_autoLayerArray = 0x98; // CUtlVector< CSeqAutoLayer >
-                constexpr std::ptrdiff_t m_IKLockArray = 0xB0; // CUtlVector< CSeqIKLock >
+                constexpr std::ptrdiff_t m_autoLayerArray = 0x98; // CUtlVector<CSeqAutoLayer>
+                constexpr std::ptrdiff_t m_IKLockArray = 0xB0; // CUtlVector<CSeqIKLock>
                 constexpr std::ptrdiff_t m_transition = 0xC8; // CSeqTransition
                 constexpr std::ptrdiff_t m_SequenceKeys = 0xD0; // KeyValues3
                 constexpr std::ptrdiff_t m_LegacyKeyValueText = 0xE0; // CBufferString
-                constexpr std::ptrdiff_t m_activityArray = 0xF0; // CUtlVector< CAnimActivity >
-                constexpr std::ptrdiff_t m_footMotion = 0x108; // CUtlVector< CFootMotion >
+                constexpr std::ptrdiff_t m_activityArray = 0xF0; // CUtlVector<CAnimActivity>
+                constexpr std::ptrdiff_t m_footMotion = 0x108; // CUtlVector<CFootMotion>
             }
             // Parent: None
             // Fields count: 6
@@ -1168,7 +1168,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_transition = 0x1C; // CSeqTransition
                 constexpr std::ptrdiff_t m_nLocalBaseReference = 0x24; // int16
                 constexpr std::ptrdiff_t m_nLocalBoneMask = 0x26; // int16
-                constexpr std::ptrdiff_t m_activityArray = 0x28; // CUtlVector< CAnimActivity >
+                constexpr std::ptrdiff_t m_activityArray = 0x28; // CUtlVector<CAnimActivity>
             }
             // Parent: None
             // Fields count: 9
@@ -1215,10 +1215,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFPS = 0x28; // float32
                 constexpr std::ptrdiff_t m_nSubCycles = 0x2C; // int16
                 constexpr std::ptrdiff_t m_numLocalResults = 0x2E; // int16
-                constexpr std::ptrdiff_t m_cmdLayerArray = 0x30; // CUtlVector< CSeqCmdLayer >
-                constexpr std::ptrdiff_t m_eventArray = 0x48; // CUtlVector< CAnimEventDefinition >
-                constexpr std::ptrdiff_t m_activityArray = 0x60; // CUtlVector< CAnimActivity >
-                constexpr std::ptrdiff_t m_poseSettingArray = 0x78; // CUtlVector< CSeqPoseSetting >
+                constexpr std::ptrdiff_t m_cmdLayerArray = 0x30; // CUtlVector<CSeqCmdLayer>
+                constexpr std::ptrdiff_t m_eventArray = 0x48; // CUtlVector<CAnimEventDefinition>
+                constexpr std::ptrdiff_t m_activityArray = 0x60; // CUtlVector<CAnimActivity>
+                constexpr std::ptrdiff_t m_poseSettingArray = 0x78; // CUtlVector<CSeqPoseSetting>
             }
             // Parent: None
             // Fields count: 5
@@ -1240,39 +1240,39 @@ namespace cs2_dumper {
             namespace CSequenceGroupData {
                 constexpr std::ptrdiff_t m_sName = 0x10; // CBufferString
                 constexpr std::ptrdiff_t m_nFlags = 0x20; // uint32
-                constexpr std::ptrdiff_t m_localSequenceNameArray = 0x28; // CUtlVector< CBufferString >
-                constexpr std::ptrdiff_t m_localS1SeqDescArray = 0x40; // CUtlVector< CSeqS1SeqDesc >
-                constexpr std::ptrdiff_t m_localMultiSeqDescArray = 0x58; // CUtlVector< CSeqS1SeqDesc >
-                constexpr std::ptrdiff_t m_localSynthAnimDescArray = 0x70; // CUtlVector< CSeqSynthAnimDesc >
-                constexpr std::ptrdiff_t m_localCmdSeqDescArray = 0x88; // CUtlVector< CSeqCmdSeqDesc >
-                constexpr std::ptrdiff_t m_localBoneMaskArray = 0xA0; // CUtlVector< CSeqBoneMaskList >
-                constexpr std::ptrdiff_t m_localScaleSetArray = 0xB8; // CUtlVector< CSeqScaleSet >
-                constexpr std::ptrdiff_t m_localBoneNameArray = 0xD0; // CUtlVector< CBufferString >
+                constexpr std::ptrdiff_t m_localSequenceNameArray = 0x28; // CUtlVector<CBufferString>
+                constexpr std::ptrdiff_t m_localS1SeqDescArray = 0x40; // CUtlVector<CSeqS1SeqDesc>
+                constexpr std::ptrdiff_t m_localMultiSeqDescArray = 0x58; // CUtlVector<CSeqS1SeqDesc>
+                constexpr std::ptrdiff_t m_localSynthAnimDescArray = 0x70; // CUtlVector<CSeqSynthAnimDesc>
+                constexpr std::ptrdiff_t m_localCmdSeqDescArray = 0x88; // CUtlVector<CSeqCmdSeqDesc>
+                constexpr std::ptrdiff_t m_localBoneMaskArray = 0xA0; // CUtlVector<CSeqBoneMaskList>
+                constexpr std::ptrdiff_t m_localScaleSetArray = 0xB8; // CUtlVector<CSeqScaleSet>
+                constexpr std::ptrdiff_t m_localBoneNameArray = 0xD0; // CUtlVector<CBufferString>
                 constexpr std::ptrdiff_t m_localNodeName = 0xE8; // CBufferString
-                constexpr std::ptrdiff_t m_localPoseParamArray = 0xF8; // CUtlVector< CSeqPoseParamDesc >
+                constexpr std::ptrdiff_t m_localPoseParamArray = 0xF8; // CUtlVector<CSeqPoseParamDesc>
                 constexpr std::ptrdiff_t m_keyValues = 0x110; // KeyValues3
-                constexpr std::ptrdiff_t m_localIKAutoplayLockArray = 0x120; // CUtlVector< CSeqIKLock >
+                constexpr std::ptrdiff_t m_localIKAutoplayLockArray = 0x120; // CUtlVector<CSeqIKLock>
             }
             // Parent: None
             // Fields count: 17
             namespace CCompressorGroup {
                 constexpr std::ptrdiff_t m_nTotalElementCount = 0x0; // int32
-                constexpr std::ptrdiff_t m_szChannelClass = 0x8; // CUtlVector< char* >
-                constexpr std::ptrdiff_t m_szVariableName = 0x20; // CUtlVector< char* >
-                constexpr std::ptrdiff_t m_nType = 0x38; // CUtlVector< fieldtype_t >
-                constexpr std::ptrdiff_t m_nFlags = 0x50; // CUtlVector< int32 >
-                constexpr std::ptrdiff_t m_szGrouping = 0x68; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_nCompressorIndex = 0x80; // CUtlVector< int32 >
-                constexpr std::ptrdiff_t m_szElementNames = 0x98; // CUtlVector< CUtlVector< char* > >
-                constexpr std::ptrdiff_t m_nElementUniqueID = 0xB0; // CUtlVector< CUtlVector< int32 > >
-                constexpr std::ptrdiff_t m_nElementMask = 0xC8; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_vectorCompressor = 0xF8; // CUtlVector< CCompressor< Vector >* >
-                constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // CUtlVector< CCompressor< QuaternionStorage >* >
-                constexpr std::ptrdiff_t m_intCompressor = 0x128; // CUtlVector< CCompressor< int32 >* >
-                constexpr std::ptrdiff_t m_boolCompressor = 0x140; // CUtlVector< CCompressor< bool >* >
-                constexpr std::ptrdiff_t m_colorCompressor = 0x158; // CUtlVector< CCompressor< Color >* >
-                constexpr std::ptrdiff_t m_vector2DCompressor = 0x170; // CUtlVector< CCompressor< Vector2D >* >
-                constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // CUtlVector< CCompressor< Vector4D >* >
+                constexpr std::ptrdiff_t m_szChannelClass = 0x8; // CUtlVector<char*>
+                constexpr std::ptrdiff_t m_szVariableName = 0x20; // CUtlVector<char*>
+                constexpr std::ptrdiff_t m_nType = 0x38; // CUtlVector<fieldtype_t>
+                constexpr std::ptrdiff_t m_nFlags = 0x50; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_szGrouping = 0x68; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_nCompressorIndex = 0x80; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_szElementNames = 0x98; // CUtlVector<CUtlVector<char*>>
+                constexpr std::ptrdiff_t m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
+                constexpr std::ptrdiff_t m_nElementMask = 0xC8; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
+                constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
+                constexpr std::ptrdiff_t m_intCompressor = 0x128; // CUtlVector<CCompressor<int32>*>
+                constexpr std::ptrdiff_t m_boolCompressor = 0x140; // CUtlVector<CCompressor<bool>*>
+                constexpr std::ptrdiff_t m_colorCompressor = 0x158; // CUtlVector<CCompressor<Color>*>
+                constexpr std::ptrdiff_t m_vector2DCompressor = 0x170; // CUtlVector<CCompressor<Vector2D>*>
+                constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
             }
             // Parent: None
             // Fields count: 1
@@ -1363,11 +1363,11 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace VPhysics2ShapeDef_t {
-                constexpr std::ptrdiff_t m_spheres = 0x0; // CUtlVector< RnSphereDesc_t >
-                constexpr std::ptrdiff_t m_capsules = 0x18; // CUtlVector< RnCapsuleDesc_t >
-                constexpr std::ptrdiff_t m_hulls = 0x30; // CUtlVector< RnHullDesc_t >
-                constexpr std::ptrdiff_t m_meshes = 0x48; // CUtlVector< RnMeshDesc_t >
-                constexpr std::ptrdiff_t m_CollisionAttributeIndices = 0x60; // CUtlVector< uint16 >
+                constexpr std::ptrdiff_t m_spheres = 0x0; // CUtlVector<RnSphereDesc_t>
+                constexpr std::ptrdiff_t m_capsules = 0x18; // CUtlVector<RnCapsuleDesc_t>
+                constexpr std::ptrdiff_t m_hulls = 0x30; // CUtlVector<RnHullDesc_t>
+                constexpr std::ptrdiff_t m_meshes = 0x48; // CUtlVector<RnMeshDesc_t>
+                constexpr std::ptrdiff_t m_CollisionAttributeIndices = 0x60; // CUtlVector<uint16>
             }
             // Parent: None
             // Fields count: 10
@@ -1393,13 +1393,13 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace VPhysXCollisionAttributes_t {
                 constexpr std::ptrdiff_t m_CollisionGroup = 0x0; // uint32
-                constexpr std::ptrdiff_t m_InteractAs = 0x8; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_InteractWith = 0x20; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_InteractExclude = 0x38; // CUtlVector< uint32 >
+                constexpr std::ptrdiff_t m_InteractAs = 0x8; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_InteractWith = 0x20; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_InteractExclude = 0x38; // CUtlVector<uint32>
                 constexpr std::ptrdiff_t m_CollisionGroupString = 0x50; // CUtlString
-                constexpr std::ptrdiff_t m_InteractAsStrings = 0x58; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_InteractWithStrings = 0x70; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_InteractExcludeStrings = 0x88; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_InteractAsStrings = 0x58; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_InteractWithStrings = 0x70; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_InteractExcludeStrings = 0x88; // CUtlVector<CUtlString>
             }
             // Parent: None
             // Fields count: 2
@@ -1511,12 +1511,12 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace PhysSoftbodyDesc_t {
-                constexpr std::ptrdiff_t m_ParticleBoneHash = 0x0; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_Particles = 0x18; // CUtlVector< RnSoftbodyParticle_t >
-                constexpr std::ptrdiff_t m_Springs = 0x30; // CUtlVector< RnSoftbodySpring_t >
-                constexpr std::ptrdiff_t m_Capsules = 0x48; // CUtlVector< RnSoftbodyCapsule_t >
-                constexpr std::ptrdiff_t m_InitPose = 0x60; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_ParticleBoneName = 0x78; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_ParticleBoneHash = 0x0; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_Particles = 0x18; // CUtlVector<RnSoftbodyParticle_t>
+                constexpr std::ptrdiff_t m_Springs = 0x30; // CUtlVector<RnSoftbodySpring_t>
+                constexpr std::ptrdiff_t m_Capsules = 0x48; // CUtlVector<RnSoftbodyCapsule_t>
+                constexpr std::ptrdiff_t m_InitPose = 0x60; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_ParticleBoneName = 0x78; // CUtlVector<CUtlString>
             }
             // Parent: None
             // Fields count: 16
@@ -1526,19 +1526,19 @@ namespace cs2_dumper {
             namespace VPhysXAggregateData_t {
                 constexpr std::ptrdiff_t m_nFlags = 0x0; // uint16
                 constexpr std::ptrdiff_t m_nRefCounter = 0x2; // uint16
-                constexpr std::ptrdiff_t m_bonesHash = 0x8; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_boneNames = 0x20; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_indexNames = 0x38; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_indexHash = 0x50; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_bindPose = 0x68; // CUtlVector< matrix3x4a_t >
-                constexpr std::ptrdiff_t m_parts = 0x80; // CUtlVector< VPhysXBodyPart_t >
-                constexpr std::ptrdiff_t m_constraints2 = 0x98; // CUtlVector< VPhysXConstraint2_t >
-                constexpr std::ptrdiff_t m_joints = 0xB0; // CUtlVector< VPhysXJoint_t >
+                constexpr std::ptrdiff_t m_bonesHash = 0x8; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_boneNames = 0x20; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_indexNames = 0x38; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_indexHash = 0x50; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_bindPose = 0x68; // CUtlVector<matrix3x4a_t>
+                constexpr std::ptrdiff_t m_parts = 0x80; // CUtlVector<VPhysXBodyPart_t>
+                constexpr std::ptrdiff_t m_constraints2 = 0x98; // CUtlVector<VPhysXConstraint2_t>
+                constexpr std::ptrdiff_t m_joints = 0xB0; // CUtlVector<VPhysXJoint_t>
                 constexpr std::ptrdiff_t m_pFeModel = 0xC8; // PhysFeModelDesc_t*
-                constexpr std::ptrdiff_t m_boneParents = 0xD0; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_surfacePropertyHashes = 0xE8; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_collisionAttributes = 0x100; // CUtlVector< VPhysXCollisionAttributes_t >
-                constexpr std::ptrdiff_t m_debugPartNames = 0x118; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_boneParents = 0xD0; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_surfacePropertyHashes = 0xE8; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_collisionAttributes = 0x100; // CUtlVector<VPhysXCollisionAttributes_t>
+                constexpr std::ptrdiff_t m_debugPartNames = 0x118; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_embeddedKeyvalues = 0x130; // CUtlString
             }
             // Parent: None
@@ -1606,7 +1606,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVPhysXSurfacePropertiesList {
-                constexpr std::ptrdiff_t m_surfacePropertiesList = 0x0; // CUtlVector< CPhysSurfaceProperties* >
+                constexpr std::ptrdiff_t m_surfacePropertiesList = 0x0; // CUtlVector<CPhysSurfaceProperties*>
             }
             // Parent: None
             // Fields count: 2
@@ -1615,7 +1615,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace MaterialGroup_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_materials = 0x8; // CUtlVector< CStrongHandle< InfoForResourceTypeIMaterial2 > >
+                constexpr std::ptrdiff_t m_materials = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeIMaterial2>>
             }
             // Parent: None
             // Fields count: 7
@@ -1623,13 +1623,13 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace ModelSkeletonData_t {
-                constexpr std::ptrdiff_t m_boneName = 0x0; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_nParent = 0x18; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_boneSphere = 0x30; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_nFlag = 0x48; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_bonePosParent = 0x60; // CUtlVector< Vector >
-                constexpr std::ptrdiff_t m_boneRotParent = 0x78; // CUtlVector< QuaternionStorage >
-                constexpr std::ptrdiff_t m_boneScaleParent = 0x90; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_boneName = 0x0; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_nParent = 0x18; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_boneSphere = 0x30; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_nFlag = 0x48; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_bonePosParent = 0x60; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_boneRotParent = 0x78; // CUtlVector<QuaternionStorage>
+                constexpr std::ptrdiff_t m_boneScaleParent = 0x90; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 10
@@ -1657,7 +1657,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Transform = 0x0; // CTransform
                 constexpr std::ptrdiff_t m_Name = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_nParent = 0x28; // int32
-                constexpr std::ptrdiff_t m_refModel = 0x30; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_refModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Fields count: 5
@@ -1679,7 +1679,7 @@ namespace cs2_dumper {
             namespace ModelBoneFlexDriver_t {
                 constexpr std::ptrdiff_t m_boneName = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_boneNameToken = 0x8; // uint32
-                constexpr std::ptrdiff_t m_controls = 0x10; // CUtlVector< ModelBoneFlexDriverControl_t >
+                constexpr std::ptrdiff_t m_controls = 0x10; // CUtlVector<ModelBoneFlexDriverControl_t>
             }
             // Parent: None
             // Fields count: 2
@@ -1698,27 +1698,27 @@ namespace cs2_dumper {
             namespace PermModelData_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_modelInfo = 0x8; // PermModelInfo_t
-                constexpr std::ptrdiff_t m_ExtParts = 0x60; // CUtlVector< PermModelExtPart_t >
-                constexpr std::ptrdiff_t m_refMeshes = 0x78; // CUtlVector< CStrongHandle< InfoForResourceTypeCRenderMesh > >
-                constexpr std::ptrdiff_t m_refMeshGroupMasks = 0x90; // CUtlVector< uint64 >
-                constexpr std::ptrdiff_t m_refPhysGroupMasks = 0xA8; // CUtlVector< uint64 >
-                constexpr std::ptrdiff_t m_refLODGroupMasks = 0xC0; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_lodGroupSwitchDistances = 0xD8; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_refPhysicsData = 0xF0; // CUtlVector< CStrongHandle< InfoForResourceTypeCPhysAggregateData > >
-                constexpr std::ptrdiff_t m_refPhysicsHitboxData = 0x108; // CUtlVector< CStrongHandle< InfoForResourceTypeCPhysAggregateData > >
-                constexpr std::ptrdiff_t m_refAnimGroups = 0x120; // CUtlVector< CStrongHandle< InfoForResourceTypeCAnimationGroup > >
-                constexpr std::ptrdiff_t m_refSequenceGroups = 0x138; // CUtlVector< CStrongHandle< InfoForResourceTypeCSequenceGroupData > >
-                constexpr std::ptrdiff_t m_meshGroups = 0x150; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_materialGroups = 0x168; // CUtlVector< MaterialGroup_t >
+                constexpr std::ptrdiff_t m_ExtParts = 0x60; // CUtlVector<PermModelExtPart_t>
+                constexpr std::ptrdiff_t m_refMeshes = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCRenderMesh>>
+                constexpr std::ptrdiff_t m_refMeshGroupMasks = 0x90; // CUtlVector<uint64>
+                constexpr std::ptrdiff_t m_refPhysGroupMasks = 0xA8; // CUtlVector<uint64>
+                constexpr std::ptrdiff_t m_refLODGroupMasks = 0xC0; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_lodGroupSwitchDistances = 0xD8; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_refPhysicsData = 0xF0; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
+                constexpr std::ptrdiff_t m_refPhysicsHitboxData = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
+                constexpr std::ptrdiff_t m_refAnimGroups = 0x120; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+                constexpr std::ptrdiff_t m_refSequenceGroups = 0x138; // CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
+                constexpr std::ptrdiff_t m_meshGroups = 0x150; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_materialGroups = 0x168; // CUtlVector<MaterialGroup_t>
                 constexpr std::ptrdiff_t m_nDefaultMeshGroupMask = 0x180; // uint64
                 constexpr std::ptrdiff_t m_modelSkeleton = 0x188; // ModelSkeletonData_t
-                constexpr std::ptrdiff_t m_remappingTable = 0x230; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_remappingTableStarts = 0x248; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_boneFlexDrivers = 0x260; // CUtlVector< ModelBoneFlexDriver_t >
+                constexpr std::ptrdiff_t m_remappingTable = 0x230; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_remappingTableStarts = 0x248; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_boneFlexDrivers = 0x260; // CUtlVector<ModelBoneFlexDriver_t>
                 constexpr std::ptrdiff_t m_pModelConfigList = 0x278; // CModelConfigList*
-                constexpr std::ptrdiff_t m_BodyGroupsHiddenInTools = 0x280; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_refAnimIncludeModels = 0x298; // CUtlVector< CStrongHandle< InfoForResourceTypeCModel > >
-                constexpr std::ptrdiff_t m_AnimatedMaterialAttributes = 0x2B0; // CUtlVector< PermModelDataAnimatedMaterialAttribute_t >
+                constexpr std::ptrdiff_t m_BodyGroupsHiddenInTools = 0x280; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_refAnimIncludeModels = 0x298; // CUtlVector<CStrongHandle<InfoForResourceTypeCModel>>
+                constexpr std::ptrdiff_t m_AnimatedMaterialAttributes = 0x2B0; // CUtlVector<PermModelDataAnimatedMaterialAttribute_t>
             }
             // Parent: None
             // Fields count: 2
@@ -1727,7 +1727,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CModelConfigElement {
                 constexpr std::ptrdiff_t m_ElementName = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_NestedElements = 0x10; // CUtlVector< CModelConfigElement* >
+                constexpr std::ptrdiff_t m_NestedElements = 0x10; // CUtlVector<CModelConfigElement*>
             }
             // Parent: CModelConfigElement
             // Fields count: 14
@@ -1737,7 +1737,7 @@ namespace cs2_dumper {
             namespace CModelConfigElement_AttachedModel {
                 constexpr std::ptrdiff_t m_InstanceName = 0x48; // CUtlString
                 constexpr std::ptrdiff_t m_EntityClass = 0x50; // CUtlString
-                constexpr std::ptrdiff_t m_hModel = 0x58; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_hModel = 0x58; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_vOffset = 0x60; // 
                 constexpr std::ptrdiff_t m_aAngOffset = 0x6C; // QAngle
                 constexpr std::ptrdiff_t m_AttachmentName = 0x78; // CUtlString
@@ -1756,7 +1756,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CModelConfigElement_UserPick {
-                constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector<CUtlString>
             }
             // Parent: CModelConfigElement
             // Fields count: 2
@@ -1764,8 +1764,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CModelConfigElement_RandomPick {
-                constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_ChoiceWeights = 0x60; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_Choices = 0x48; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_ChoiceWeights = 0x60; // CUtlVector<float32>
             }
             // Parent: CModelConfigElement
             // Fields count: 1
@@ -1833,7 +1833,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CModelConfig {
                 constexpr std::ptrdiff_t m_ConfigName = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_Elements = 0x8; // CUtlVector< CModelConfigElement* >
+                constexpr std::ptrdiff_t m_Elements = 0x8; // CUtlVector<CModelConfigElement*>
                 constexpr std::ptrdiff_t m_bTopLevel = 0x20; // bool
             }
             // Parent: None
@@ -1844,7 +1844,7 @@ namespace cs2_dumper {
             namespace CModelConfigList {
                 constexpr std::ptrdiff_t m_bHideMaterialGroupInTools = 0x0; // bool
                 constexpr std::ptrdiff_t m_bHideRenderColorInTools = 0x1; // bool
-                constexpr std::ptrdiff_t m_Configs = 0x8; // CUtlVector< CModelConfig* >
+                constexpr std::ptrdiff_t m_Configs = 0x8; // CUtlVector<CModelConfig*>
             }
             // Parent: None
             // Fields count: 2
@@ -1882,8 +1882,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CRenderSkeleton {
-                constexpr std::ptrdiff_t m_bones = 0x0; // CUtlVector< RenderSkeletonBone_t >
-                constexpr std::ptrdiff_t m_boneParents = 0x30; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_bones = 0x0; // CUtlVector<RenderSkeletonBone_t>
+                constexpr std::ptrdiff_t m_boneParents = 0x30; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_nBoneWeightCount = 0x48; // int32
             }
             // Parent: None
@@ -1913,7 +1913,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFirstMeshlet = 0x2C; // uint32
                 constexpr std::ptrdiff_t m_nNumMeshlets = 0x30; // uint16
                 constexpr std::ptrdiff_t m_indexBuffer = 0xB8; // CRenderBufferBinding
-                constexpr std::ptrdiff_t m_material = 0xE0; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_material = 0xE0; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
             // Fields count: 2
@@ -1932,9 +1932,9 @@ namespace cs2_dumper {
             namespace CSceneObjectData {
                 constexpr std::ptrdiff_t m_vMinBounds = 0x0; // 
                 constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // 
-                constexpr std::ptrdiff_t m_drawCalls = 0x18; // CUtlVector< CMaterialDrawDescriptor >
-                constexpr std::ptrdiff_t m_drawBounds = 0x30; // CUtlVector< AABB_t >
-                constexpr std::ptrdiff_t m_meshlets = 0x48; // CUtlVector< CMeshletDescriptor >
+                constexpr std::ptrdiff_t m_drawCalls = 0x18; // CUtlVector<CMaterialDrawDescriptor>
+                constexpr std::ptrdiff_t m_drawBounds = 0x30; // CUtlVector<AABB_t>
+                constexpr std::ptrdiff_t m_meshlets = 0x48; // CUtlVector<CMeshletDescriptor>
                 constexpr std::ptrdiff_t m_vTintColor = 0x60; // Vector4D
             }
             // Parent: None
@@ -1980,7 +1980,7 @@ namespace cs2_dumper {
             namespace CHitBoxSet {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_nNameHash = 0x8; // uint32
-                constexpr std::ptrdiff_t m_HitBoxes = 0x10; // CUtlVector< CHitBox >
+                constexpr std::ptrdiff_t m_HitBoxes = 0x10; // CUtlVector<CHitBox>
                 constexpr std::ptrdiff_t m_SourceFilename = 0x28; // CUtlString
             }
             // Parent: None
@@ -1989,7 +1989,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CHitBoxSetList {
-                constexpr std::ptrdiff_t m_HitBoxSets = 0x0; // CUtlVector< CHitBoxSet >
+                constexpr std::ptrdiff_t m_HitBoxSets = 0x0; // CUtlVector<CHitBoxSet>
             }
             // Parent: None
             // Fields count: 4
@@ -2028,7 +2028,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nGroomGroupID = 0xC; // int32
                 constexpr std::ptrdiff_t m_nAttachBoneIdx = 0x10; // int32
                 constexpr std::ptrdiff_t m_hairInfoBufferData = 0x18; // CUtlBinaryBlock
-                constexpr std::ptrdiff_t m_hairs = 0x30; // CUtlVector< RenderHairStrandInfo_t >
+                constexpr std::ptrdiff_t m_hairs = 0x30; // CUtlVector<RenderHairStrandInfo_t>
             }
             // Parent: None
             // Fields count: 5
@@ -2036,8 +2036,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CRenderMesh {
-                constexpr std::ptrdiff_t m_sceneObjects = 0x10; // CUtlVectorFixedGrowable< CSceneObjectData >
-                constexpr std::ptrdiff_t m_constraints = 0xA0; // CUtlVector< CBaseConstraint* >
+                constexpr std::ptrdiff_t m_sceneObjects = 0x10; // CUtlVectorFixedGrowable<CSceneObjectData>
+                constexpr std::ptrdiff_t m_constraints = 0xA0; // CUtlVector<CBaseConstraint*>
                 constexpr std::ptrdiff_t m_skeleton = 0xB8; // CRenderSkeleton
                 constexpr std::ptrdiff_t m_meshDeformParams = 0x1E0; // DynamicMeshDeformParams_t
                 constexpr std::ptrdiff_t m_pGroomData = 0x1F0; // CRenderGroom*
@@ -2082,8 +2082,8 @@ namespace cs2_dumper {
             namespace CBaseConstraint {
                 constexpr std::ptrdiff_t m_name = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_vUpVector = 0x30; // 
-                constexpr std::ptrdiff_t m_slaves = 0x40; // CUtlVector< CConstraintSlave >
-                constexpr std::ptrdiff_t m_targets = 0x58; // CUtlVector< CConstraintTarget >
+                constexpr std::ptrdiff_t m_slaves = 0x40; // CUtlVector<CConstraintSlave>
+                constexpr std::ptrdiff_t m_targets = 0x58; // CUtlVector<CConstraintTarget>
             }
             // Parent: CBaseConstraint
             // Fields count: 0
@@ -2153,15 +2153,15 @@ namespace cs2_dumper {
             namespace CBoneConstraintPoseSpaceMorph {
                 constexpr std::ptrdiff_t m_sBoneName = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_sAttachmentName = 0x30; // CUtlString
-                constexpr std::ptrdiff_t m_outputMorph = 0x38; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_inputList = 0x50; // CUtlVector< CBoneConstraintPoseSpaceMorph::Input_t >
+                constexpr std::ptrdiff_t m_outputMorph = 0x38; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_inputList = 0x50; // CUtlVector<CBoneConstraintPoseSpaceMorph::Input_t>
                 constexpr std::ptrdiff_t m_bClamp = 0x68; // bool
             }
             // Parent: None
             // Fields count: 2
             namespace CBoneConstraintPoseSpaceMorph__Input_t {
                 constexpr std::ptrdiff_t m_inputValue = 0x0; // 
-                constexpr std::ptrdiff_t m_outputWeightList = 0x10; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_outputWeightList = 0x10; // CUtlVector<float32>
             }
             // Parent: CBaseConstraint
             // Fields count: 1
@@ -2169,13 +2169,13 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CBoneConstraintPoseSpaceBone {
-                constexpr std::ptrdiff_t m_inputList = 0x70; // CUtlVector< CBoneConstraintPoseSpaceBone::Input_t >
+                constexpr std::ptrdiff_t m_inputList = 0x70; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
             }
             // Parent: None
             // Fields count: 2
             namespace CBoneConstraintPoseSpaceBone__Input_t {
                 constexpr std::ptrdiff_t m_inputValue = 0x0; // 
-                constexpr std::ptrdiff_t m_outputTransformList = 0x10; // CUtlVector< CTransform >
+                constexpr std::ptrdiff_t m_outputTransformList = 0x10; // CUtlVector<CTransform>
             }
             // Parent: CBoneConstraintBase
             // Fields count: 4
@@ -2204,7 +2204,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CFlexRule {
                 constexpr std::ptrdiff_t m_nFlex = 0x0; // int32
-                constexpr std::ptrdiff_t m_FlexOps = 0x8; // CUtlVector< CFlexOp >
+                constexpr std::ptrdiff_t m_FlexOps = 0x8; // CUtlVector<CFlexOp>
             }
             // Parent: None
             // Fields count: 1
@@ -2233,8 +2233,8 @@ namespace cs2_dumper {
             namespace CMorphBundleData {
                 constexpr std::ptrdiff_t m_flULeftSrc = 0x0; // float32
                 constexpr std::ptrdiff_t m_flVTopSrc = 0x4; // float32
-                constexpr std::ptrdiff_t m_offsets = 0x8; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_ranges = 0x20; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_offsets = 0x8; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_ranges = 0x20; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 5
@@ -2246,7 +2246,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nYTopDst = 0x2; // int16
                 constexpr std::ptrdiff_t m_flUWidthSrc = 0x4; // float32
                 constexpr std::ptrdiff_t m_flVHeightSrc = 0x8; // float32
-                constexpr std::ptrdiff_t m_bundleDatas = 0x10; // CUtlVector< CMorphBundleData >
+                constexpr std::ptrdiff_t m_bundleDatas = 0x10; // CUtlVector<CMorphBundleData>
             }
             // Parent: None
             // Fields count: 2
@@ -2255,7 +2255,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CMorphData {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_morphRectDatas = 0x8; // CUtlVector< CMorphRectData >
+                constexpr std::ptrdiff_t m_morphRectDatas = 0x8; // CUtlVector<CMorphRectData>
             }
             // Parent: None
             // Fields count: 8
@@ -2265,12 +2265,12 @@ namespace cs2_dumper {
             namespace CMorphSetData {
                 constexpr std::ptrdiff_t m_nWidth = 0x10; // int32
                 constexpr std::ptrdiff_t m_nHeight = 0x14; // int32
-                constexpr std::ptrdiff_t m_bundleTypes = 0x18; // CUtlVector< MorphBundleType_t >
-                constexpr std::ptrdiff_t m_morphDatas = 0x30; // CUtlVector< CMorphData >
-                constexpr std::ptrdiff_t m_pTextureAtlas = 0x48; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_FlexDesc = 0x50; // CUtlVector< CFlexDesc >
-                constexpr std::ptrdiff_t m_FlexControllers = 0x68; // CUtlVector< CFlexController >
-                constexpr std::ptrdiff_t m_FlexRules = 0x80; // CUtlVector< CFlexRule >
+                constexpr std::ptrdiff_t m_bundleTypes = 0x18; // CUtlVector<MorphBundleType_t>
+                constexpr std::ptrdiff_t m_morphDatas = 0x30; // CUtlVector<CMorphData>
+                constexpr std::ptrdiff_t m_pTextureAtlas = 0x48; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_FlexDesc = 0x50; // CUtlVector<CFlexDesc>
+                constexpr std::ptrdiff_t m_FlexControllers = 0x68; // CUtlVector<CFlexController>
+                constexpr std::ptrdiff_t m_FlexRules = 0x80; // CUtlVector<CFlexRule>
             }
             // Parent: None
             // Fields count: 5
@@ -2290,14 +2290,14 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimSkeleton {
-                constexpr std::ptrdiff_t m_localSpaceTransforms = 0x10; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_modelSpaceTransforms = 0x28; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_boneNames = 0x40; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_children = 0x58; // CUtlVector< CUtlVector< int32 > >
-                constexpr std::ptrdiff_t m_parents = 0x70; // CUtlVector< int32 >
-                constexpr std::ptrdiff_t m_feet = 0x88; // CUtlVector< CAnimFoot >
-                constexpr std::ptrdiff_t m_morphNames = 0xA0; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_lodBoneCounts = 0xB8; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_localSpaceTransforms = 0x10; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_modelSpaceTransforms = 0x28; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_boneNames = 0x40; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_children = 0x58; // CUtlVector<CUtlVector<int32>>
+                constexpr std::ptrdiff_t m_parents = 0x70; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_feet = 0x88; // CUtlVector<CAnimFoot>
+                constexpr std::ptrdiff_t m_morphNames = 0xA0; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_lodBoneCounts = 0xB8; // CUtlVector<int32>
             }
             // Parent: None
             // Fields count: 9
@@ -2369,7 +2369,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFootTrajectories {
-                constexpr std::ptrdiff_t m_trajectories = 0x0; // CUtlVector< CFootTrajectory >
+                constexpr std::ptrdiff_t m_trajectories = 0x0; // CUtlVector<CFootTrajectory>
             }
             // Parent: None
             // Fields count: 2
@@ -2386,7 +2386,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFootMotion {
-                constexpr std::ptrdiff_t m_strides = 0x0; // CUtlVector< CFootStride >
+                constexpr std::ptrdiff_t m_strides = 0x0; // CUtlVector<CFootStride>
                 constexpr std::ptrdiff_t m_name = 0x18; // CUtlString
                 constexpr std::ptrdiff_t m_bAdditive = 0x20; // bool
             }
@@ -2398,14 +2398,14 @@ namespace cs2_dumper {
             namespace SkeletonAnimCapture_t {
                 constexpr std::ptrdiff_t m_nEntIndex = 0x0; // CEntityIndex
                 constexpr std::ptrdiff_t m_nEntParent = 0x4; // CEntityIndex
-                constexpr std::ptrdiff_t m_ImportedCollision = 0x8; // CUtlVector< CEntityIndex >
+                constexpr std::ptrdiff_t m_ImportedCollision = 0x8; // CUtlVector<CEntityIndex>
                 constexpr std::ptrdiff_t m_ModelName = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_CaptureName = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_ModelBindPose = 0x30; // CUtlVector< SkeletonAnimCapture_t::Bone_t >
-                constexpr std::ptrdiff_t m_FeModelInitPose = 0x48; // CUtlVector< SkeletonAnimCapture_t::Bone_t >
+                constexpr std::ptrdiff_t m_ModelBindPose = 0x30; // CUtlVector<SkeletonAnimCapture_t::Bone_t>
+                constexpr std::ptrdiff_t m_FeModelInitPose = 0x48; // CUtlVector<SkeletonAnimCapture_t::Bone_t>
                 constexpr std::ptrdiff_t m_nFlexControllers = 0x60; // int32
                 constexpr std::ptrdiff_t m_bPredicted = 0x64; // bool
-                constexpr std::ptrdiff_t m_Frames = 0xA8; // CUtlVector< SkeletonAnimCapture_t::Frame_t >
+                constexpr std::ptrdiff_t m_Frames = 0xA8; // CUtlVector<SkeletonAnimCapture_t::Frame_t>
             }
             // Parent: None
             // Fields count: 3
@@ -2442,11 +2442,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Stamp = 0x4; // SkeletonAnimCapture_t::FrameStamp_t
                 constexpr std::ptrdiff_t m_Transform = 0x20; // CTransform
                 constexpr std::ptrdiff_t m_bTeleport = 0x40; // bool
-                constexpr std::ptrdiff_t m_CompositeBones = 0x48; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_SimStateBones = 0x60; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_FeModelAnims = 0x78; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_FeModelPos = 0x90; // CUtlVector< VectorAligned >
-                constexpr std::ptrdiff_t m_FlexControllerWeights = 0xA8; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_CompositeBones = 0x48; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_SimStateBones = 0x60; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_FeModelAnims = 0x78; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_FeModelPos = 0x90; // CUtlVector<VectorAligned>
+                constexpr std::ptrdiff_t m_FlexControllerWeights = 0xA8; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 2
@@ -2463,8 +2463,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace SkeletonDemoDb_t {
-                constexpr std::ptrdiff_t m_AnimCaptures = 0x0; // CUtlVector< SkeletonAnimCapture_t* >
-                constexpr std::ptrdiff_t m_CameraTrack = 0x18; // CUtlVector< SkeletonAnimCapture_t::Camera_t >
+                constexpr std::ptrdiff_t m_AnimCaptures = 0x0; // CUtlVector<SkeletonAnimCapture_t*>
+                constexpr std::ptrdiff_t m_CameraTrack = 0x18; // CUtlVector<SkeletonAnimCapture_t::Camera_t>
                 constexpr std::ptrdiff_t m_flRecordingTime = 0x30; // float32
             }
             // Parent: None
@@ -2475,7 +2475,7 @@ namespace cs2_dumper {
             namespace CNmBoneMask {
                 constexpr std::ptrdiff_t m_ID = 0x0; // CGlobalSymbol
                 constexpr std::ptrdiff_t m_weightInfo = 0x8; // CNmBoneMask::WeightInfo_t
-                constexpr std::ptrdiff_t m_weights = 0x18; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_weights = 0x18; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 9
@@ -2483,12 +2483,12 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmClip {
-                constexpr std::ptrdiff_t m_skeleton = 0x0; // CStrongHandle< InfoForResourceTypeCNmSkeleton >
+                constexpr std::ptrdiff_t m_skeleton = 0x0; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
                 constexpr std::ptrdiff_t m_nNumFrames = 0x8; // uint32
                 constexpr std::ptrdiff_t m_flDuration = 0xC; // float32
                 constexpr std::ptrdiff_t m_compressedPoseData = 0x10; // CUtlBinaryBlock
-                constexpr std::ptrdiff_t m_trackCompressionSettings = 0x28; // CUtlVector< NmCompressionSettings_t >
-                constexpr std::ptrdiff_t m_compressedPoseOffsets = 0x40; // CUtlVector< uint32 >
+                constexpr std::ptrdiff_t m_trackCompressionSettings = 0x28; // CUtlVector<NmCompressionSettings_t>
+                constexpr std::ptrdiff_t m_compressedPoseOffsets = 0x40; // CUtlVector<uint32>
                 constexpr std::ptrdiff_t m_syncTrack = 0xA0; // CNmSyncTrack
                 constexpr std::ptrdiff_t m_rootMotion = 0x150; // CNmRootMotionData
                 constexpr std::ptrdiff_t m_bIsAdditive = 0x1A0; // bool
@@ -2532,7 +2532,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmRootMotionData {
-                constexpr std::ptrdiff_t m_transforms = 0x0; // CUtlVector< CTransform >
+                constexpr std::ptrdiff_t m_transforms = 0x0; // CUtlVector<CTransform>
                 constexpr std::ptrdiff_t m_nNumFrames = 0x18; // int32
                 constexpr std::ptrdiff_t m_flAverageLinearVelocity = 0x1C; // float32
                 constexpr std::ptrdiff_t m_flAverageAngularVelocityRadians = 0x20; // float32
@@ -2545,12 +2545,12 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CNmSkeleton {
                 constexpr std::ptrdiff_t m_ID = 0x0; // CGlobalSymbol
-                constexpr std::ptrdiff_t m_boneIDs = 0x8; // CUtlLeanVector< CGlobalSymbol >
-                constexpr std::ptrdiff_t m_parentIndices = 0x18; // CUtlVector< int32 >
-                constexpr std::ptrdiff_t m_parentSpaceReferencePose = 0x30; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_modelSpaceReferencePose = 0x48; // CUtlVector< CTransform >
+                constexpr std::ptrdiff_t m_boneIDs = 0x8; // CUtlLeanVector<CGlobalSymbol>
+                constexpr std::ptrdiff_t m_parentIndices = 0x18; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_parentSpaceReferencePose = 0x30; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_modelSpaceReferencePose = 0x48; // CUtlVector<CTransform>
                 constexpr std::ptrdiff_t m_numBonesToSampleAtLowLOD = 0x60; // int32
-                constexpr std::ptrdiff_t m_boneMasks = 0x68; // CUtlLeanVector< CNmBoneMask >
+                constexpr std::ptrdiff_t m_boneMasks = 0x68; // CUtlLeanVector<CNmBoneMask>
             }
             // Parent: None
             // Fields count: 2
@@ -2576,7 +2576,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmSyncTrack {
-                constexpr std::ptrdiff_t m_syncEvents = 0x0; // CUtlLeanVectorFixedGrowable< CNmSyncTrack::Event_t >
+                constexpr std::ptrdiff_t m_syncEvents = 0x0; // CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>
                 constexpr std::ptrdiff_t m_nStartEventOffset = 0xA8; // int32
             }
             // Parent: None
@@ -2653,8 +2653,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CNmGraphDataSet {
                 constexpr std::ptrdiff_t m_variationID = 0x0; // CGlobalSymbol
-                constexpr std::ptrdiff_t m_skeleton = 0x8; // CStrongHandle< InfoForResourceTypeCNmSkeleton >
-                constexpr std::ptrdiff_t m_resources = 0x10; // CUtlVector< CStrongHandleVoid >
+                constexpr std::ptrdiff_t m_skeleton = 0x8; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+                constexpr std::ptrdiff_t m_resources = 0x10; // CUtlVector<CStrongHandleVoid>
             }
             // Parent: None
             // Fields count: 10
@@ -2662,16 +2662,16 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmGraph {
-                constexpr std::ptrdiff_t m_persistentNodeIndices = 0x0; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_instanceNodeStartOffsets = 0x18; // CUtlVector< uint32 >
+                constexpr std::ptrdiff_t m_persistentNodeIndices = 0x0; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_instanceNodeStartOffsets = 0x18; // CUtlVector<uint32>
                 constexpr std::ptrdiff_t m_instanceRequiredMemory = 0x30; // uint32
                 constexpr std::ptrdiff_t m_instanceRequiredAlignment = 0x34; // uint32
                 constexpr std::ptrdiff_t m_rootNodeIdx = 0x38; // int16
-                constexpr std::ptrdiff_t m_controlParameterIDs = 0x40; // CUtlVector< CGlobalSymbol >
-                constexpr std::ptrdiff_t m_virtualParameterIDs = 0x58; // CUtlVector< CGlobalSymbol >
-                constexpr std::ptrdiff_t m_virtualParameterNodeIndices = 0x70; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_childGraphSlots = 0x88; // CUtlVector< CNmGraph::ChildGraphSlot_t >
-                constexpr std::ptrdiff_t m_externalGraphSlots = 0xA0; // CUtlVector< CNmGraph::ExternalGraphSlot_t >
+                constexpr std::ptrdiff_t m_controlParameterIDs = 0x40; // CUtlVector<CGlobalSymbol>
+                constexpr std::ptrdiff_t m_virtualParameterIDs = 0x58; // CUtlVector<CGlobalSymbol>
+                constexpr std::ptrdiff_t m_virtualParameterNodeIndices = 0x70; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_childGraphSlots = 0x88; // CUtlVector<CNmGraph::ChildGraphSlot_t>
+                constexpr std::ptrdiff_t m_externalGraphSlots = 0xA0; // CUtlVector<CNmGraph::ExternalGraphSlot_t>
             }
             // Parent: None
             // Fields count: 2
@@ -2697,8 +2697,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CNmGraphVariation {
-                constexpr std::ptrdiff_t m_graph = 0x0; // CStrongHandle< InfoForResourceTypeCNmGraph >
-                constexpr std::ptrdiff_t m_dataSet = 0x8; // CStrongHandle< InfoForResourceTypeCNmGraphDataSet >
+                constexpr std::ptrdiff_t m_graph = 0x0; // CStrongHandle<InfoForResourceTypeCNmGraph>
+                constexpr std::ptrdiff_t m_dataSet = 0x8; // CStrongHandle<InfoForResourceTypeCNmGraphDataSet>
             }
             // Parent: None
             // Fields count: 2
@@ -2741,8 +2741,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_baseSequence = 0x38; // CUtlString
                 constexpr std::ptrdiff_t m_nBaseSequenceFrame = 0x40; // int32
                 constexpr std::ptrdiff_t m_boneSelectionMode = 0x44; // EDemoBoneSelectionMode
-                constexpr std::ptrdiff_t m_bones = 0x48; // CUtlVector< BoneDemoCaptureSettings_t >
-                constexpr std::ptrdiff_t m_ikChains = 0x60; // CUtlVector< IKDemoCaptureSettings_t >
+                constexpr std::ptrdiff_t m_bones = 0x48; // CUtlVector<BoneDemoCaptureSettings_t>
+                constexpr std::ptrdiff_t m_ikChains = 0x60; // CUtlVector<IKDemoCaptureSettings_t>
             }
             // Parent: None
             // Fields count: 5
@@ -2750,7 +2750,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimReplayFrame {
-                constexpr std::ptrdiff_t m_inputDataBlocks = 0x10; // CUtlVector< CUtlBinaryBlock >
+                constexpr std::ptrdiff_t m_inputDataBlocks = 0x10; // CUtlVector<CUtlBinaryBlock>
                 constexpr std::ptrdiff_t m_instanceData = 0x28; // CUtlBinaryBlock
                 constexpr std::ptrdiff_t m_startingLocalToWorldTransform = 0x40; // CTransform
                 constexpr std::ptrdiff_t m_localToWorldTransform = 0x60; // CTransform
@@ -2763,7 +2763,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimGraphDebugReplay {
                 constexpr std::ptrdiff_t m_animGraphFileName = 0x40; // CUtlString
-                constexpr std::ptrdiff_t m_frameList = 0x48; // CUtlVector< CSmartPtr< CAnimReplayFrame > >
+                constexpr std::ptrdiff_t m_frameList = 0x48; // CUtlVector<CSmartPtr<CAnimReplayFrame>>
                 constexpr std::ptrdiff_t m_startIndex = 0x60; // int32
                 constexpr std::ptrdiff_t m_writeIndex = 0x64; // int32
                 constexpr std::ptrdiff_t m_frameCount = 0x68; // int32
@@ -2775,7 +2775,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimGraphModelBinding {
                 constexpr std::ptrdiff_t m_modelName = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_pSharedData = 0x10; // CSmartPtr< CAnimUpdateSharedData >
+                constexpr std::ptrdiff_t m_pSharedData = 0x10; // CSmartPtr<CAnimUpdateSharedData>
             }
             // Parent: None
             // Fields count: 2
@@ -2802,7 +2802,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimParamHandleMap {
-                constexpr std::ptrdiff_t m_list = 0x0; // CUtlHashtable< uint16, int16 >
+                constexpr std::ptrdiff_t m_list = 0x0; // CUtlHashtable<uint16,int16>
             }
             // Parent: None
             // Fields count: 6
@@ -2810,12 +2810,12 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimParameterManagerUpdater {
-                constexpr std::ptrdiff_t m_parameters = 0x18; // CUtlVector< CSmartPtr< CAnimParameterBase > >
-                constexpr std::ptrdiff_t m_idToIndexMap = 0x30; // CUtlHashtable< AnimParamID, int32 >
-                constexpr std::ptrdiff_t m_nameToIndexMap = 0x50; // CUtlHashtable< CUtlString, int32 >
-                constexpr std::ptrdiff_t m_indexToHandle = 0x70; // CUtlVector< CAnimParamHandle >
-                constexpr std::ptrdiff_t m_autoResetParams = 0x88; // CUtlVector< CUtlPair< CAnimParamHandle, CAnimVariant > >
-                constexpr std::ptrdiff_t m_autoResetMap = 0xA0; // CUtlHashtable< CAnimParamHandle, int16 >
+                constexpr std::ptrdiff_t m_parameters = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
+                constexpr std::ptrdiff_t m_idToIndexMap = 0x30; // CUtlHashtable<AnimParamID,int32>
+                constexpr std::ptrdiff_t m_nameToIndexMap = 0x50; // CUtlHashtable<CUtlString,int32>
+                constexpr std::ptrdiff_t m_indexToHandle = 0x70; // CUtlVector<CAnimParamHandle>
+                constexpr std::ptrdiff_t m_autoResetParams = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
+                constexpr std::ptrdiff_t m_autoResetMap = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
             }
             // Parent: None
             // Fields count: 10
@@ -2823,15 +2823,15 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimUpdateSharedData {
-                constexpr std::ptrdiff_t m_nodes = 0x10; // CUtlVector< CSmartPtr< CAnimUpdateNodeBase > >
-                constexpr std::ptrdiff_t m_nodeIndexMap = 0x28; // CUtlHashtable< CAnimNodePath, int32 >
-                constexpr std::ptrdiff_t m_components = 0x48; // CUtlVector< CSmartPtr< CAnimComponentUpdater > >
-                constexpr std::ptrdiff_t m_pParamListUpdater = 0x60; // CSmartPtr< CAnimParameterManagerUpdater >
-                constexpr std::ptrdiff_t m_pTagManagerUpdater = 0x68; // CSmartPtr< CAnimTagManagerUpdater >
-                constexpr std::ptrdiff_t m_scriptManager = 0x70; // CSmartPtr< CAnimScriptManager >
+                constexpr std::ptrdiff_t m_nodes = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
+                constexpr std::ptrdiff_t m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32>
+                constexpr std::ptrdiff_t m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
+                constexpr std::ptrdiff_t m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
+                constexpr std::ptrdiff_t m_pTagManagerUpdater = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
+                constexpr std::ptrdiff_t m_scriptManager = 0x70; // CSmartPtr<CAnimScriptManager>
                 constexpr std::ptrdiff_t m_settings = 0x78; // CAnimGraphSettingsManager
-                constexpr std::ptrdiff_t m_pStaticPoseCache = 0xA8; // CSmartPtr< CStaticPoseCacheBuilder >
-                constexpr std::ptrdiff_t m_pSkeleton = 0xB0; // CSmartPtr< CAnimSkeleton >
+                constexpr std::ptrdiff_t m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
+                constexpr std::ptrdiff_t m_pSkeleton = 0xB0; // CSmartPtr<CAnimSkeleton>
                 constexpr std::ptrdiff_t m_rootNodePath = 0xB8; // CAnimNodePath
             }
             // Parent: None
@@ -2858,7 +2858,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace ParamSpan_t {
-                constexpr std::ptrdiff_t m_samples = 0x0; // CUtlVector< ParamSpanSample_t >
+                constexpr std::ptrdiff_t m_samples = 0x0; // CUtlVector<ParamSpanSample_t>
                 constexpr std::ptrdiff_t m_hParam = 0x18; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_eParamType = 0x1A; // AnimParamType_t
                 constexpr std::ptrdiff_t m_flStartCycle = 0x1C; // float32
@@ -2870,7 +2870,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CParamSpanUpdater {
-                constexpr std::ptrdiff_t m_spans = 0x0; // CUtlVector< ParamSpan_t >
+                constexpr std::ptrdiff_t m_spans = 0x0; // CUtlVector<ParamSpan_t>
             }
             // Parent: None
             // Fields count: 0
@@ -2885,7 +2885,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimGraphSettingsManager {
-                constexpr std::ptrdiff_t m_settingsGroups = 0x18; // CUtlVector< CSmartPtr< CAnimGraphSettingsGroup > >
+                constexpr std::ptrdiff_t m_settingsGroups = 0x18; // CUtlVector<CSmartPtr<CAnimGraphSettingsGroup>>
             }
             // Parent: None
             // Fields count: 4
@@ -2893,8 +2893,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CCachedPose {
-                constexpr std::ptrdiff_t m_transforms = 0x8; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_morphWeights = 0x20; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_transforms = 0x8; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_morphWeights = 0x20; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_hSequence = 0x38; // HSequence
                 constexpr std::ptrdiff_t m_flCycle = 0x3C; // float32
             }
@@ -2904,7 +2904,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CStaticPoseCache {
-                constexpr std::ptrdiff_t m_poses = 0x10; // CUtlVector< CCachedPose >
+                constexpr std::ptrdiff_t m_poses = 0x10; // CUtlVector<CCachedPose>
                 constexpr std::ptrdiff_t m_nBoneCount = 0x28; // int32
                 constexpr std::ptrdiff_t m_nMorphCount = 0x2C; // int32
             }
@@ -2976,7 +2976,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimTagManagerUpdater {
-                constexpr std::ptrdiff_t m_tags = 0x18; // CUtlVector< CSmartPtr< CAnimTagBase > >
+                constexpr std::ptrdiff_t m_tags = 0x18; // CUtlVector<CSmartPtr<CAnimTagBase>>
             }
             // Parent: CAnimTagBase
             // Fields count: 7
@@ -3012,7 +3012,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             namespace CBodyGroupAnimTag {
                 constexpr std::ptrdiff_t m_nPriority = 0x50; // int32
-                constexpr std::ptrdiff_t m_bodyGroupSettings = 0x58; // CUtlVector< CBodyGroupSetting >
+                constexpr std::ptrdiff_t m_bodyGroupSettings = 0x58; // CUtlVector<CBodyGroupSetting>
             }
             // Parent: CAnimTagBase
             // Fields count: 4
@@ -3066,7 +3066,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             namespace CParticleAnimTag {
-                constexpr std::ptrdiff_t m_hParticleSystem = 0x50; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_hParticleSystem = 0x50; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_particleSystemName = 0x58; // CUtlString
                 constexpr std::ptrdiff_t m_configName = 0x60; // CUtlString
                 constexpr std::ptrdiff_t m_bDetachFromOwner = 0x68; // bool
@@ -3141,7 +3141,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CCPPScriptComponentUpdater {
-                constexpr std::ptrdiff_t m_scriptsToRun = 0x30; // CUtlVector< CGlobalSymbol >
+                constexpr std::ptrdiff_t m_scriptsToRun = 0x30; // CUtlVector<CGlobalSymbol>
             }
             // Parent: None
             // Fields count: 3
@@ -3159,7 +3159,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CDampedValueComponentUpdater {
-                constexpr std::ptrdiff_t m_items = 0x30; // CUtlVector< CDampedValueUpdateItem >
+                constexpr std::ptrdiff_t m_items = 0x30; // CUtlVector<CDampedValueUpdateItem>
             }
             // Parent: CAnimComponentUpdater
             // Fields count: 1
@@ -3198,7 +3198,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CMovementComponentUpdater {
-                constexpr std::ptrdiff_t m_motors = 0x30; // CUtlVector< CSmartPtr< CAnimMotorUpdaterBase > >
+                constexpr std::ptrdiff_t m_motors = 0x30; // CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
                 constexpr std::ptrdiff_t m_facingDamping = 0x48; // CAnimInputDamping
                 constexpr std::ptrdiff_t m_eDefaultFacingMode = 0x58; // FacingMode
                 constexpr std::ptrdiff_t m_nDefaultMotorIndex = 0x64; // int32
@@ -3215,7 +3215,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace WeightList {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_weights = 0x8; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_weights = 0x8; // CUtlVector<float32>
             }
             // Parent: CAnimComponentUpdater
             // Fields count: 8
@@ -3223,10 +3223,10 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CRagdollComponentUpdater {
-                constexpr std::ptrdiff_t m_ragdollNodePaths = 0x30; // CUtlVector< CAnimNodePath >
-                constexpr std::ptrdiff_t m_boneIndices = 0x48; // CUtlVector< int32 >
-                constexpr std::ptrdiff_t m_boneNames = 0x60; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_weightLists = 0x78; // CUtlVector< WeightList >
+                constexpr std::ptrdiff_t m_ragdollNodePaths = 0x30; // CUtlVector<CAnimNodePath>
+                constexpr std::ptrdiff_t m_boneIndices = 0x48; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_boneNames = 0x60; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_weightLists = 0x78; // CUtlVector<WeightList>
                 constexpr std::ptrdiff_t m_flSpringFrequencyMin = 0x90; // float32
                 constexpr std::ptrdiff_t m_flSpringFrequencyMax = 0x94; // float32
                 constexpr std::ptrdiff_t m_flMaxStretch = 0x98; // float32
@@ -3260,7 +3260,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CMotionDataSet {
-                constexpr std::ptrdiff_t m_groups = 0x0; // CUtlVector< CMotionGraphGroup >
+                constexpr std::ptrdiff_t m_groups = 0x0; // CUtlVector<CMotionGraphGroup>
                 constexpr std::ptrdiff_t m_nDimensionCount = 0x18; // int32
             }
             // Parent: None
@@ -3270,9 +3270,9 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CMotionGraphGroup {
                 constexpr std::ptrdiff_t m_searchDB = 0x0; // CMotionSearchDB
-                constexpr std::ptrdiff_t m_motionGraphs = 0xB8; // CUtlVector< CSmartPtr< CMotionGraph > >
-                constexpr std::ptrdiff_t m_motionGraphConfigs = 0xD0; // CUtlVector< CMotionGraphConfig >
-                constexpr std::ptrdiff_t m_sampleToConfig = 0xE8; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_motionGraphs = 0xB8; // CUtlVector<CSmartPtr<CMotionGraph>>
+                constexpr std::ptrdiff_t m_motionGraphConfigs = 0xD0; // CUtlVector<CMotionGraphConfig>
+                constexpr std::ptrdiff_t m_sampleToConfig = 0xE8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_hIsActiveScript = 0x100; // AnimScriptHandle
             }
             // Parent: None
@@ -3297,7 +3297,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVectorQuantizer {
-                constexpr std::ptrdiff_t m_centroidVectors = 0x0; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_centroidVectors = 0x0; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_nCentroids = 0x18; // int32
                 constexpr std::ptrdiff_t m_nDimensions = 0x1C; // int32
             }
@@ -3307,7 +3307,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CProductQuantizer {
-                constexpr std::ptrdiff_t m_subQuantizers = 0x0; // CUtlVector< CVectorQuantizer >
+                constexpr std::ptrdiff_t m_subQuantizers = 0x0; // CUtlVector<CVectorQuantizer>
                 constexpr std::ptrdiff_t m_nDimensions = 0x18; // int32
             }
             // Parent: None
@@ -3316,11 +3316,11 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CMotionSearchNode {
-                constexpr std::ptrdiff_t m_children = 0x0; // CUtlVector< CMotionSearchNode* >
+                constexpr std::ptrdiff_t m_children = 0x0; // CUtlVector<CMotionSearchNode*>
                 constexpr std::ptrdiff_t m_quantizer = 0x18; // CVectorQuantizer
-                constexpr std::ptrdiff_t m_sampleCodes = 0x38; // CUtlVector< CUtlVector< SampleCode > >
-                constexpr std::ptrdiff_t m_sampleIndices = 0x50; // CUtlVector< CUtlVector< int32 > >
-                constexpr std::ptrdiff_t m_selectableSamples = 0x68; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_sampleCodes = 0x38; // CUtlVector<CUtlVector<SampleCode>>
+                constexpr std::ptrdiff_t m_sampleIndices = 0x50; // CUtlVector<CUtlVector<int32>>
+                constexpr std::ptrdiff_t m_selectableSamples = 0x68; // CUtlVector<int32>
             }
             // Parent: None
             // Fields count: 3
@@ -3330,7 +3330,7 @@ namespace cs2_dumper {
             namespace CMotionSearchDB {
                 constexpr std::ptrdiff_t m_rootNode = 0x0; // CMotionSearchNode
                 constexpr std::ptrdiff_t m_residualQuantizer = 0x80; // CProductQuantizer
-                constexpr std::ptrdiff_t m_codeIndices = 0xA0; // CUtlVector< MotionDBIndex >
+                constexpr std::ptrdiff_t m_codeIndices = 0xA0; // CUtlVector<MotionDBIndex>
             }
             // Parent: None
             // Fields count: 7
@@ -3339,8 +3339,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CMotionGraph {
                 constexpr std::ptrdiff_t m_paramSpans = 0x10; // CParamSpanUpdater
-                constexpr std::ptrdiff_t m_tags = 0x28; // CUtlVector< TagSpan_t >
-                constexpr std::ptrdiff_t m_pRootNode = 0x40; // CSmartPtr< CMotionNode >
+                constexpr std::ptrdiff_t m_tags = 0x28; // CUtlVector<TagSpan_t>
+                constexpr std::ptrdiff_t m_pRootNode = 0x40; // CSmartPtr<CMotionNode>
                 constexpr std::ptrdiff_t m_nParameterCount = 0x48; // int32
                 constexpr std::ptrdiff_t m_nConfigStartIndex = 0x4C; // int32
                 constexpr std::ptrdiff_t m_nConfigCount = 0x50; // int32
@@ -3368,7 +3368,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CMotionNodeSequence {
-                constexpr std::ptrdiff_t m_tags = 0x28; // CUtlVector< TagSpan_t >
+                constexpr std::ptrdiff_t m_tags = 0x28; // CUtlVector<TagSpan_t>
                 constexpr std::ptrdiff_t m_hSequence = 0x40; // HSequence
                 constexpr std::ptrdiff_t m_flPlaybackSpeed = 0x44; // float32
             }
@@ -3378,7 +3378,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace MotionBlendItem {
-                constexpr std::ptrdiff_t m_pChild = 0x0; // CSmartPtr< CMotionNode >
+                constexpr std::ptrdiff_t m_pChild = 0x0; // CSmartPtr<CMotionNode>
                 constexpr std::ptrdiff_t m_flKeyValue = 0x8; // float32
             }
             // Parent: CMotionNode
@@ -3387,7 +3387,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CMotionNodeBlend1D {
-                constexpr std::ptrdiff_t m_blendItems = 0x28; // CUtlVector< MotionBlendItem >
+                constexpr std::ptrdiff_t m_blendItems = 0x28; // CUtlVector<MotionBlendItem>
                 constexpr std::ptrdiff_t m_nParamIndex = 0x40; // int32
             }
             // Parent: None
@@ -3396,8 +3396,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CMotionMetricEvaluator {
-                constexpr std::ptrdiff_t m_means = 0x18; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_standardDeviations = 0x30; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_means = 0x18; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_standardDeviations = 0x30; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_flWeight = 0x48; // float32
                 constexpr std::ptrdiff_t m_nDimensionStartIndex = 0x4C; // int32
             }
@@ -3458,7 +3458,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFootCycleMetricEvaluator {
-                constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32>
             }
             // Parent: CMotionMetricEvaluator
             // Fields count: 2
@@ -3466,7 +3466,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFootPositionMetricEvaluator {
-                constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_bIgnoreSlope = 0x68; // bool
             }
             // Parent: CMotionMetricEvaluator
@@ -3495,7 +3495,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPathMetricEvaluator {
-                constexpr std::ptrdiff_t m_pathTimeSamples = 0x50; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_pathTimeSamples = 0x50; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_flDistance = 0x68; // float32
                 constexpr std::ptrdiff_t m_bExtrapolateMovement = 0x6C; // bool
                 constexpr std::ptrdiff_t m_flMinExtrapolationSpeed = 0x70; // float32
@@ -3506,7 +3506,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CStepsRemainingMetricEvaluator {
-                constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_flMinStepsRemaining = 0x68; // float32
             }
             // Parent: CMotionMetricEvaluator
@@ -3564,7 +3564,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPlayerInputAnimMotorUpdater {
-                constexpr std::ptrdiff_t m_sampleTimes = 0x20; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_sampleTimes = 0x20; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_flSpringConstant = 0x3C; // float32
                 constexpr std::ptrdiff_t m_flAnticipationDistance = 0x40; // float32
                 constexpr std::ptrdiff_t m_hAnticipationPosParam = 0x44; // CAnimParamHandle
@@ -3578,88 +3578,88 @@ namespace cs2_dumper {
         namespace client {
             // Alignment: 4
             // Members count: 5
-            enum class C_BaseCombatCharacter__WaterWakeMode_t : int32_t {
-                WATER_WAKE_NONE = 0,
-                WATER_WAKE_IDLE = 1,
-                WATER_WAKE_WALKING = 2,
-                WATER_WAKE_RUNNING = 3,
-                WATER_WAKE_WATER_OVERHEAD = 4
+            enum class C_BaseCombatCharacter__WaterWakeMode_t : uint32_t {
+                WATER_WAKE_NONE = 0x0,
+                WATER_WAKE_IDLE = 0x1,
+                WATER_WAKE_WALKING = 0x2,
+                WATER_WAKE_RUNNING = 0x3,
+                WATER_WAKE_WATER_OVERHEAD = 0x4
             }
             // Alignment: 4
             // Members count: 6
-            enum class CompositeMaterialMatchFilterType_t : int32_t {
-                MATCH_FILTER_MATERIAL_ATTRIBUTE_EXISTS = 0,
-                MATCH_FILTER_MATERIAL_SHADER = 1,
-                MATCH_FILTER_MATERIAL_NAME_SUBSTR = 2,
-                MATCH_FILTER_MATERIAL_ATTRIBUTE_EQUALS = 3,
-                MATCH_FILTER_MATERIAL_PROPERTY_EXISTS = 4,
-                MATCH_FILTER_MATERIAL_PROPERTY_EQUALS = 5
+            enum class CompositeMaterialMatchFilterType_t : uint32_t {
+                MATCH_FILTER_MATERIAL_ATTRIBUTE_EXISTS = 0x0,
+                MATCH_FILTER_MATERIAL_SHADER = 0x1,
+                MATCH_FILTER_MATERIAL_NAME_SUBSTR = 0x2,
+                MATCH_FILTER_MATERIAL_ATTRIBUTE_EQUALS = 0x3,
+                MATCH_FILTER_MATERIAL_PROPERTY_EXISTS = 0x4,
+                MATCH_FILTER_MATERIAL_PROPERTY_EQUALS = 0x5
             }
             // Alignment: 4
             // Members count: 2
-            enum class CompositeMaterialVarSystemVar_t : int32_t {
-                COMPMATSYSVAR_COMPOSITETIME = 0,
-                COMPMATSYSVAR_EMPTY_RESOURCE_SPACER = 1
+            enum class CompositeMaterialVarSystemVar_t : uint32_t {
+                COMPMATSYSVAR_COMPOSITETIME = 0x0,
+                COMPMATSYSVAR_EMPTY_RESOURCE_SPACER = 0x1
             }
             // Alignment: 4
             // Members count: 14
-            enum class CompositeMaterialInputLooseVariableType_t : int32_t {
-                LOOSE_VARIABLE_TYPE_BOOLEAN = 0,
-                LOOSE_VARIABLE_TYPE_INTEGER1 = 1,
-                LOOSE_VARIABLE_TYPE_INTEGER2 = 2,
-                LOOSE_VARIABLE_TYPE_INTEGER3 = 3,
-                LOOSE_VARIABLE_TYPE_INTEGER4 = 4,
-                LOOSE_VARIABLE_TYPE_FLOAT1 = 5,
-                LOOSE_VARIABLE_TYPE_FLOAT2 = 6,
-                LOOSE_VARIABLE_TYPE_FLOAT3 = 7,
-                LOOSE_VARIABLE_TYPE_FLOAT4 = 8,
-                LOOSE_VARIABLE_TYPE_COLOR4 = 9,
-                LOOSE_VARIABLE_TYPE_STRING = 10,
-                LOOSE_VARIABLE_TYPE_SYSTEMVAR = 11,
-                LOOSE_VARIABLE_TYPE_RESOURCE_MATERIAL = 12,
-                LOOSE_VARIABLE_TYPE_RESOURCE_TEXTURE = 13
+            enum class CompositeMaterialInputLooseVariableType_t : uint32_t {
+                LOOSE_VARIABLE_TYPE_BOOLEAN = 0x0,
+                LOOSE_VARIABLE_TYPE_INTEGER1 = 0x1,
+                LOOSE_VARIABLE_TYPE_INTEGER2 = 0x2,
+                LOOSE_VARIABLE_TYPE_INTEGER3 = 0x3,
+                LOOSE_VARIABLE_TYPE_INTEGER4 = 0x4,
+                LOOSE_VARIABLE_TYPE_FLOAT1 = 0x5,
+                LOOSE_VARIABLE_TYPE_FLOAT2 = 0x6,
+                LOOSE_VARIABLE_TYPE_FLOAT3 = 0x7,
+                LOOSE_VARIABLE_TYPE_FLOAT4 = 0x8,
+                LOOSE_VARIABLE_TYPE_COLOR4 = 0x9,
+                LOOSE_VARIABLE_TYPE_STRING = 0xA,
+                LOOSE_VARIABLE_TYPE_SYSTEMVAR = 0xB,
+                LOOSE_VARIABLE_TYPE_RESOURCE_MATERIAL = 0xC,
+                LOOSE_VARIABLE_TYPE_RESOURCE_TEXTURE = 0xD
             }
             // Alignment: 4
             // Members count: 7
-            enum class CompositeMaterialInputTextureType_t : int32_t {
-                INPUT_TEXTURE_TYPE_DEFAULT = 0,
-                INPUT_TEXTURE_TYPE_NORMALMAP = 1,
-                INPUT_TEXTURE_TYPE_COLOR = 2,
-                INPUT_TEXTURE_TYPE_MASKS = 3,
-                INPUT_TEXTURE_TYPE_ROUGHNESS = 4,
-                INPUT_TEXTURE_TYPE_PEARLESCENCE_MASK = 5,
-                INPUT_TEXTURE_TYPE_AO = 6
+            enum class CompositeMaterialInputTextureType_t : uint32_t {
+                INPUT_TEXTURE_TYPE_DEFAULT = 0x0,
+                INPUT_TEXTURE_TYPE_NORMALMAP = 0x1,
+                INPUT_TEXTURE_TYPE_COLOR = 0x2,
+                INPUT_TEXTURE_TYPE_MASKS = 0x3,
+                INPUT_TEXTURE_TYPE_ROUGHNESS = 0x4,
+                INPUT_TEXTURE_TYPE_PEARLESCENCE_MASK = 0x5,
+                INPUT_TEXTURE_TYPE_AO = 0x6
             }
             // Alignment: 4
             // Members count: 10
-            enum class CompMatPropertyMutatorType_t : int32_t {
-                COMP_MAT_PROPERTY_MUTATOR_INIT = 0,
-                COMP_MAT_PROPERTY_MUTATOR_COPY_MATCHING_KEYS = 1,
-                COMP_MAT_PROPERTY_MUTATOR_COPY_KEYS_WITH_SUFFIX = 2,
-                COMP_MAT_PROPERTY_MUTATOR_COPY_PROPERTY = 3,
-                COMP_MAT_PROPERTY_MUTATOR_SET_VALUE = 4,
-                COMP_MAT_PROPERTY_MUTATOR_GENERATE_TEXTURE = 5,
-                COMP_MAT_PROPERTY_MUTATOR_CONDITIONAL_MUTATORS = 6,
-                COMP_MAT_PROPERTY_MUTATOR_POP_INPUT_QUEUE = 7,
-                COMP_MAT_PROPERTY_MUTATOR_DRAW_TEXT = 8,
-                COMP_MAT_PROPERTY_MUTATOR_RANDOM_ROLL_INPUT_VARIABLES = 9
+            enum class CompMatPropertyMutatorType_t : uint32_t {
+                COMP_MAT_PROPERTY_MUTATOR_INIT = 0x0,
+                COMP_MAT_PROPERTY_MUTATOR_COPY_MATCHING_KEYS = 0x1,
+                COMP_MAT_PROPERTY_MUTATOR_COPY_KEYS_WITH_SUFFIX = 0x2,
+                COMP_MAT_PROPERTY_MUTATOR_COPY_PROPERTY = 0x3,
+                COMP_MAT_PROPERTY_MUTATOR_SET_VALUE = 0x4,
+                COMP_MAT_PROPERTY_MUTATOR_GENERATE_TEXTURE = 0x5,
+                COMP_MAT_PROPERTY_MUTATOR_CONDITIONAL_MUTATORS = 0x6,
+                COMP_MAT_PROPERTY_MUTATOR_POP_INPUT_QUEUE = 0x7,
+                COMP_MAT_PROPERTY_MUTATOR_DRAW_TEXT = 0x8,
+                COMP_MAT_PROPERTY_MUTATOR_RANDOM_ROLL_INPUT_VARIABLES = 0x9
             }
             // Alignment: 4
             // Members count: 3
-            enum class CompMatPropertyMutatorConditionType_t : int32_t {
-                COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_EXISTS = 0,
-                COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS = 1,
-                COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS = 2
+            enum class CompMatPropertyMutatorConditionType_t : uint32_t {
+                COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_EXISTS = 0x0,
+                COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS = 0x1,
+                COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS = 0x2
             }
             // Alignment: 4
             // Members count: 6
-            enum class CompositeMaterialInputContainerSourceType_t : int32_t {
-                CONTAINER_SOURCE_TYPE_TARGET_MATERIAL = 0,
-                CONTAINER_SOURCE_TYPE_MATERIAL_FROM_TARGET_ATTR = 1,
-                CONTAINER_SOURCE_TYPE_SPECIFIC_MATERIAL = 2,
-                CONTAINER_SOURCE_TYPE_LOOSE_VARIABLES = 3,
-                CONTAINER_SOURCE_TYPE_VARIABLE_FROM_TARGET_ATTR = 4,
-                CONTAINER_SOURCE_TYPE_TARGET_INSTANCE_MATERIAL = 5
+            enum class CompositeMaterialInputContainerSourceType_t : uint32_t {
+                CONTAINER_SOURCE_TYPE_TARGET_MATERIAL = 0x0,
+                CONTAINER_SOURCE_TYPE_MATERIAL_FROM_TARGET_ATTR = 0x1,
+                CONTAINER_SOURCE_TYPE_SPECIFIC_MATERIAL = 0x2,
+                CONTAINER_SOURCE_TYPE_LOOSE_VARIABLES = 0x3,
+                CONTAINER_SOURCE_TYPE_VARIABLE_FROM_TARGET_ATTR = 0x4,
+                CONTAINER_SOURCE_TYPE_TARGET_INSTANCE_MATERIAL = 0x5
             }
             // Parent: None
             // Fields count: 0
@@ -3815,7 +3815,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAttenuation2 = 0xAC; // float32
                 constexpr std::ptrdiff_t m_flTheta = 0xB0; // float32
                 constexpr std::ptrdiff_t m_flPhi = 0xB4; // float32
-                constexpr std::ptrdiff_t m_hLightCookie = 0xB8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hLightCookie = 0xB8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_nCascades = 0xC0; // int32
                 constexpr std::ptrdiff_t m_nCastShadows = 0xC4; // int32
                 constexpr std::ptrdiff_t m_nShadowWidth = 0xC8; // int32
@@ -3955,21 +3955,21 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCsViewPunchAngleTick = 0x4C; // GameTick_t
                 constexpr std::ptrdiff_t m_flCsViewPunchAngleTickRatio = 0x50; // float32
                 constexpr std::ptrdiff_t m_PlayerFog = 0x58; // C_fogplayerparams_t
-                constexpr std::ptrdiff_t m_hColorCorrectionCtrl = 0x98; // CHandle< C_ColorCorrection >
-                constexpr std::ptrdiff_t m_hViewEntity = 0x9C; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hTonemapController = 0xA0; // CHandle< C_TonemapController2 >
+                constexpr std::ptrdiff_t m_hColorCorrectionCtrl = 0x98; // CHandle<C_ColorCorrection>
+                constexpr std::ptrdiff_t m_hViewEntity = 0x9C; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hTonemapController = 0xA0; // CHandle<C_TonemapController2>
                 constexpr std::ptrdiff_t m_audio = 0xA8; // audioparams_t
-                constexpr std::ptrdiff_t m_PostProcessingVolumes = 0x120; // C_NetworkUtlVectorBase< CHandle< C_PostProcessingVolume > >
+                constexpr std::ptrdiff_t m_PostProcessingVolumes = 0x120; // C_NetworkUtlVectorBase<CHandle<C_PostProcessingVolume>>
                 constexpr std::ptrdiff_t m_flOldPlayerZ = 0x138; // float32
                 constexpr std::ptrdiff_t m_flOldPlayerViewOffsetZ = 0x13C; // float32
                 constexpr std::ptrdiff_t m_CurrentFog = 0x140; // fogparams_t
-                constexpr std::ptrdiff_t m_hOldFogController = 0x1A8; // CHandle< C_FogController >
+                constexpr std::ptrdiff_t m_hOldFogController = 0x1A8; // CHandle<C_FogController>
                 constexpr std::ptrdiff_t m_bOverrideFogColor = 0x1AC; // bool[5]
                 constexpr std::ptrdiff_t m_OverrideFogColor = 0x1B1; // Color[5]
                 constexpr std::ptrdiff_t m_bOverrideFogStartEnd = 0x1C5; // bool[5]
                 constexpr std::ptrdiff_t m_fOverrideFogStart = 0x1CC; // float32[5]
                 constexpr std::ptrdiff_t m_fOverrideFogEnd = 0x1E0; // float32[5]
-                constexpr std::ptrdiff_t m_hActivePostProcessingVolume = 0x1F4; // CHandle< C_PostProcessingVolume >
+                constexpr std::ptrdiff_t m_hActivePostProcessingVolume = 0x1F4; // CHandle<C_PostProcessingVolume>
                 constexpr std::ptrdiff_t m_angDemoViewAngles = 0x1F8; // QAngle
             }
             // Parent: CPlayerPawnComponent
@@ -4037,7 +4037,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hObserverTarget (CHandle< CBaseEntity>)
             namespace CPlayer_ObserverServices {
                 constexpr std::ptrdiff_t m_iObserverMode = 0x40; // uint8
-                constexpr std::ptrdiff_t m_hObserverTarget = 0x44; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hObserverTarget = 0x44; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_iObserverLastMode = 0x48; // ObserverMode_t
                 constexpr std::ptrdiff_t m_bForcedObserverMode = 0x4C; // bool
                 constexpr std::ptrdiff_t m_flObserverChaseDistance = 0x50; // float32
@@ -4060,9 +4060,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hLastWeapon (CHandle< CBasePlayerWeapon>)
             // NetworkVarNames: m_iAmmo (uint16)
             namespace CPlayer_WeaponServices {
-                constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // C_NetworkUtlVectorBase< CHandle< C_BasePlayerWeapon > >
-                constexpr std::ptrdiff_t m_hActiveWeapon = 0x58; // CHandle< C_BasePlayerWeapon >
-                constexpr std::ptrdiff_t m_hLastWeapon = 0x5C; // CHandle< C_BasePlayerWeapon >
+                constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // C_NetworkUtlVectorBase<CHandle<C_BasePlayerWeapon>>
+                constexpr std::ptrdiff_t m_hActiveWeapon = 0x58; // CHandle<C_BasePlayerWeapon>
+                constexpr std::ptrdiff_t m_hLastWeapon = 0x5C; // CHandle<C_BasePlayerWeapon>
                 constexpr std::ptrdiff_t m_iAmmo = 0x60; // uint16[32]
             }
             // Parent: CBodyComponentSkeletonInstance
@@ -4095,8 +4095,8 @@ namespace cs2_dumper {
             namespace ActiveModelConfig_t {
                 constexpr std::ptrdiff_t m_Handle = 0x28; // ModelConfigHandle_t
                 constexpr std::ptrdiff_t m_Name = 0x30; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_AssociatedEntities = 0x38; // C_NetworkUtlVectorBase< CHandle< C_BaseModelEntity > >
-                constexpr std::ptrdiff_t m_AssociatedEntityNames = 0x50; // C_NetworkUtlVectorBase< CUtlSymbolLarge >
+                constexpr std::ptrdiff_t m_AssociatedEntities = 0x38; // C_NetworkUtlVectorBase<CHandle<C_BaseModelEntity>>
+                constexpr std::ptrdiff_t m_AssociatedEntityNames = 0x50; // C_NetworkUtlVectorBase<CUtlSymbolLarge>
             }
             // Parent: CBodyComponentSkeletonInstance
             // Fields count: 1
@@ -4193,7 +4193,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_MeshGroupMask (MeshGroupMask_t)
             // NetworkVarNames: m_nIdealMotionType (int8)
             namespace CModelState {
-                constexpr std::ptrdiff_t m_hModel = 0xA0; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_hModel = 0xA0; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_ModelName = 0xA8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_bClientClothCreationSuppressed = 0xE8; // bool
                 constexpr std::ptrdiff_t m_MeshGroupMask = 0x180; // uint64
@@ -4305,26 +4305,26 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nRandomSeedOffset (int)
             // NetworkVarNames: m_flLastTeleportTime (float)
             namespace CAnimGraphNetworkedVariables {
-                constexpr std::ptrdiff_t m_PredNetBoolVariables = 0x8; // C_NetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_PredNetByteVariables = 0x20; // C_NetworkUtlVectorBase< uint8 >
-                constexpr std::ptrdiff_t m_PredNetUInt16Variables = 0x38; // C_NetworkUtlVectorBase< uint16 >
-                constexpr std::ptrdiff_t m_PredNetIntVariables = 0x50; // C_NetworkUtlVectorBase< int32 >
-                constexpr std::ptrdiff_t m_PredNetUInt32Variables = 0x68; // C_NetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_PredNetUInt64Variables = 0x80; // C_NetworkUtlVectorBase< uint64 >
-                constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // C_NetworkUtlVectorBase< float32 >
-                constexpr std::ptrdiff_t m_PredNetVectorVariables = 0xB0; // C_NetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_PredNetQuaternionVariables = 0xC8; // C_NetworkUtlVectorBase< Quaternion >
-                constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // C_NetworkUtlVectorBase< CGlobalSymbol >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetBoolVariables = 0xF8; // C_NetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetByteVariables = 0x110; // C_NetworkUtlVectorBase< uint8 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt16Variables = 0x128; // C_NetworkUtlVectorBase< uint16 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetIntVariables = 0x140; // C_NetworkUtlVectorBase< int32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt32Variables = 0x158; // C_NetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt64Variables = 0x170; // C_NetworkUtlVectorBase< uint64 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetFloatVariables = 0x188; // C_NetworkUtlVectorBase< float32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetVectorVariables = 0x1A0; // C_NetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetQuaternionVariables = 0x1B8; // C_NetworkUtlVectorBase< Quaternion >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetGlobalSymbolVariables = 0x1D0; // C_NetworkUtlVectorBase< CGlobalSymbol >
+                constexpr std::ptrdiff_t m_PredNetBoolVariables = 0x8; // C_NetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_PredNetByteVariables = 0x20; // C_NetworkUtlVectorBase<uint8>
+                constexpr std::ptrdiff_t m_PredNetUInt16Variables = 0x38; // C_NetworkUtlVectorBase<uint16>
+                constexpr std::ptrdiff_t m_PredNetIntVariables = 0x50; // C_NetworkUtlVectorBase<int32>
+                constexpr std::ptrdiff_t m_PredNetUInt32Variables = 0x68; // C_NetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_PredNetUInt64Variables = 0x80; // C_NetworkUtlVectorBase<uint64>
+                constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // C_NetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_PredNetVectorVariables = 0xB0; // C_NetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PredNetQuaternionVariables = 0xC8; // C_NetworkUtlVectorBase<Quaternion>
+                constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // C_NetworkUtlVectorBase<CGlobalSymbol>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetBoolVariables = 0xF8; // C_NetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetByteVariables = 0x110; // C_NetworkUtlVectorBase<uint8>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt16Variables = 0x128; // C_NetworkUtlVectorBase<uint16>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetIntVariables = 0x140; // C_NetworkUtlVectorBase<int32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt32Variables = 0x158; // C_NetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt64Variables = 0x170; // C_NetworkUtlVectorBase<uint64>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetFloatVariables = 0x188; // C_NetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetVectorVariables = 0x1A0; // C_NetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetQuaternionVariables = 0x1B8; // C_NetworkUtlVectorBase<Quaternion>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetGlobalSymbolVariables = 0x1D0; // C_NetworkUtlVectorBase<CGlobalSymbol>
                 constexpr std::ptrdiff_t m_nBoolVariablesCount = 0x1E8; // int32
                 constexpr std::ptrdiff_t m_nOwnerOnlyBoolVariablesCount = 0x1EC; // int32
                 constexpr std::ptrdiff_t m_nRandomSeedOffset = 0x1F0; // int32
@@ -4421,7 +4421,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTakeDamageFlags = 0x33C; // TakeDamageFlags_t
                 constexpr std::ptrdiff_t m_bIsPlatform = 0x340; // bool
                 constexpr std::ptrdiff_t m_ubInterpolationFrame = 0x341; // uint8
-                constexpr std::ptrdiff_t m_hSceneObjectController = 0x344; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hSceneObjectController = 0x344; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_nNoInterpolationTick = 0x348; // int32
                 constexpr std::ptrdiff_t m_nVisibilityNoInterpolationTick = 0x34C; // int32
                 constexpr std::ptrdiff_t m_flProxyRandomValue = 0x350; // float32
@@ -4434,7 +4434,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSubclassID = 0x360; // CUtlStringToken
                 constexpr std::ptrdiff_t m_nSimulationTick = 0x370; // int32
                 constexpr std::ptrdiff_t m_iCurrentThinkContext = 0x374; // int32
-                constexpr std::ptrdiff_t m_aThinkFunctions = 0x378; // CUtlVector< thinkfunc_t >
+                constexpr std::ptrdiff_t m_aThinkFunctions = 0x378; // CUtlVector<thinkfunc_t>
                 constexpr std::ptrdiff_t m_nDisableContextThinkStartTick = 0x390; // GameTick_t
                 constexpr std::ptrdiff_t m_flAnimTime = 0x394; // float32
                 constexpr std::ptrdiff_t m_flSimulationTime = 0x398; // float32
@@ -4455,14 +4455,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecAbsVelocity = 0x3D8; // 
                 constexpr std::ptrdiff_t m_vecVelocity = 0x3E8; // CNetworkVelocityVector
                 constexpr std::ptrdiff_t m_vecBaseVelocity = 0x418; // 
-                constexpr std::ptrdiff_t m_hEffectEntity = 0x424; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hOwnerEntity = 0x428; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hEffectEntity = 0x424; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hOwnerEntity = 0x428; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_MoveCollide = 0x42C; // MoveCollide_t
                 constexpr std::ptrdiff_t m_MoveType = 0x42D; // MoveType_t
                 constexpr std::ptrdiff_t m_nActualMoveType = 0x42E; // MoveType_t
                 constexpr std::ptrdiff_t m_flWaterLevel = 0x430; // float32
                 constexpr std::ptrdiff_t m_fEffects = 0x434; // uint32
-                constexpr std::ptrdiff_t m_hGroundEntity = 0x438; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hGroundEntity = 0x438; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_flFriction = 0x43C; // float32
                 constexpr std::ptrdiff_t m_flElasticity = 0x440; // float32
                 constexpr std::ptrdiff_t m_flGravityScale = 0x444; // float32
@@ -4476,14 +4476,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSplitUserPlayerPredictionSlot = 0x464; // CSplitScreenSlot
                 constexpr std::ptrdiff_t m_nFirstPredictableCommand = 0x468; // int32
                 constexpr std::ptrdiff_t m_nLastPredictableCommand = 0x46C; // int32
-                constexpr std::ptrdiff_t m_hOldMoveParent = 0x470; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hOldMoveParent = 0x470; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_Particles = 0x478; // CParticleProperty
-                constexpr std::ptrdiff_t m_vecPredictedScriptFloats = 0x4A0; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_vecPredictedScriptFloatIDs = 0x4B8; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_vecPredictedScriptFloats = 0x4A0; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecPredictedScriptFloatIDs = 0x4B8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_nNextScriptVarRecordID = 0x4E8; // int32
                 constexpr std::ptrdiff_t m_vecAngVelocity = 0x4F8; // QAngle
                 constexpr std::ptrdiff_t m_DataChangeEventRef = 0x504; // int32
-                constexpr std::ptrdiff_t m_dependencies = 0x508; // CUtlVector< CEntityHandle >
+                constexpr std::ptrdiff_t m_dependencies = 0x508; // CUtlVector<CEntityHandle>
                 constexpr std::ptrdiff_t m_nCreationTick = 0x520; // int32
                 constexpr std::ptrdiff_t m_bAnimTimeChanged = 0x539; // bool
                 constexpr std::ptrdiff_t m_bSimulationTimeChanged = 0x53A; // bool
@@ -4553,8 +4553,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hEntAttached (CHandle< C_BaseEntity>)
             // NetworkVarNames: m_bCheapEffect (bool)
             namespace C_EntityFlame {
-                constexpr std::ptrdiff_t m_hEntAttached = 0x550; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hOldAttached = 0x578; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hEntAttached = 0x550; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hOldAttached = 0x578; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_bCheapEffect = 0x57C; // bool
             }
             // Parent: None
@@ -4592,7 +4592,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flRotation (float32)
             // NetworkVarNames: m_bFlipHorizontal (bool)
             namespace CProjectedTextureBase {
-                constexpr std::ptrdiff_t m_hTargetEntity = 0xC; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hTargetEntity = 0xC; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_bState = 0x10; // bool
                 constexpr std::ptrdiff_t m_bAlwaysUpdate = 0x11; // bool
                 constexpr std::ptrdiff_t m_flLightFOV = 0x14; // float32
@@ -4687,8 +4687,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flLinearAtten = 0x54; // float32
                 constexpr std::ptrdiff_t m_bCastsShadows = 0x58; // bool
                 constexpr std::ptrdiff_t m_flCurrentPullBackDist = 0x5C; // float32
-                constexpr std::ptrdiff_t m_FlashlightTexture = 0x60; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_MuzzleFlashTexture = 0x68; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_FlashlightTexture = 0x60; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_MuzzleFlashTexture = 0x68; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_textureName = 0x70; // char[64]
             }
             // Parent: None
@@ -4706,7 +4706,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vColor = 0x0; // 
                 constexpr std::ptrdiff_t m_flHorzSize = 0xC; // float32
                 constexpr std::ptrdiff_t m_flVertSize = 0x10; // float32
-                constexpr std::ptrdiff_t m_hMaterial = 0x18; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hMaterial = 0x18; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
             // Fields count: 15
@@ -4735,7 +4735,7 @@ namespace cs2_dumper {
             // Fields count: 2
             namespace CSkyboxReference {
                 constexpr std::ptrdiff_t m_worldGroupId = 0x550; // WorldGroupId_t
-                constexpr std::ptrdiff_t m_hSkyCamera = 0x554; // CHandle< C_SkyCamera >
+                constexpr std::ptrdiff_t m_hSkyCamera = 0x554; // CHandle<C_SkyCamera>
             }
             // Parent: C_BaseEntity
             // Fields count: 4
@@ -4866,7 +4866,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMagnitude = 0x44; // float32
                 constexpr std::ptrdiff_t m_flRadius = 0x48; // float32
                 constexpr std::ptrdiff_t m_nSurfaceProp = 0x4C; // CUtlStringToken
-                constexpr std::ptrdiff_t m_nEffectIndex = 0x50; // CWeakHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_nEffectIndex = 0x50; // CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_nDamageType = 0x58; // uint32
                 constexpr std::ptrdiff_t m_nPenetrate = 0x5C; // uint8
                 constexpr std::ptrdiff_t m_nMaterial = 0x5E; // uint16
@@ -4971,13 +4971,13 @@ namespace cs2_dumper {
             // NetworkVarNames: m_SurfacePropStringToken (CUtlStringToken)
             namespace shard_model_desc_t {
                 constexpr std::ptrdiff_t m_nModelID = 0x8; // int32
-                constexpr std::ptrdiff_t m_hMaterial = 0x10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_solid = 0x18; // ShardSolid_t
                 constexpr std::ptrdiff_t m_ShatterPanelMode = 0x19; // ShatterPanelMode
                 constexpr std::ptrdiff_t m_vecPanelSize = 0x1C; // Vector2D
                 constexpr std::ptrdiff_t m_vecStressPositionA = 0x24; // Vector2D
                 constexpr std::ptrdiff_t m_vecStressPositionB = 0x2C; // Vector2D
-                constexpr std::ptrdiff_t m_vecPanelVertices = 0x38; // C_NetworkUtlVectorBase< Vector2D >
+                constexpr std::ptrdiff_t m_vecPanelVertices = 0x38; // C_NetworkUtlVectorBase<Vector2D>
                 constexpr std::ptrdiff_t m_flGlassHalfThickness = 0x50; // float32
                 constexpr std::ptrdiff_t m_bHasParent = 0x54; // bool
                 constexpr std::ptrdiff_t m_bParentFrozen = 0x55; // bool
@@ -5082,7 +5082,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hCtrl (CHandle< CFogController>)
             namespace C_fogplayerparams_t {
-                constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle< C_FogController >
+                constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle<C_FogController>
                 constexpr std::ptrdiff_t m_flTransitionTime = 0xC; // float32
                 constexpr std::ptrdiff_t m_OldColor = 0x10; // Color
                 constexpr std::ptrdiff_t m_flOldStart = 0x14; // float32
@@ -5123,8 +5123,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hOwner (EHANDLE)
             namespace PhysicsRagdollPose_t {
                 constexpr std::ptrdiff_t __m_pChainEntity = 0x8; // CNetworkVarChainer
-                constexpr std::ptrdiff_t m_Transforms = 0x30; // C_NetworkUtlVectorBase< CTransform >
-                constexpr std::ptrdiff_t m_hOwner = 0x48; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_Transforms = 0x30; // C_NetworkUtlVectorBase<CTransform>
+                constexpr std::ptrdiff_t m_hOwner = 0x48; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_bDirty = 0x68; // bool
             }
             // Parent: C_GameRules
@@ -5232,7 +5232,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_Attributes (CEconItemAttribute)
             namespace CAttributeList {
-                constexpr std::ptrdiff_t m_Attributes = 0x8; // C_UtlVectorEmbeddedNetworkVar< CEconItemAttribute >
+                constexpr std::ptrdiff_t m_Attributes = 0x8; // C_UtlVectorEmbeddedNetworkVar<CEconItemAttribute>
                 constexpr std::ptrdiff_t m_pManager = 0x58; // CAttributeManager*
             }
             // Parent: None
@@ -5259,12 +5259,12 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hOuter (EHANDLE)
             // NetworkVarNames: m_ProviderType (attributeprovidertypes_t)
             namespace CAttributeManager {
-                constexpr std::ptrdiff_t m_Providers = 0x8; // CUtlVector< CHandle< C_BaseEntity > >
+                constexpr std::ptrdiff_t m_Providers = 0x8; // CUtlVector<CHandle<C_BaseEntity>>
                 constexpr std::ptrdiff_t m_iReapplyProvisionParity = 0x20; // int32
-                constexpr std::ptrdiff_t m_hOuter = 0x24; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hOuter = 0x24; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_bPreventLoopback = 0x28; // bool
                 constexpr std::ptrdiff_t m_ProviderType = 0x2C; // attributeprovidertypes_t
-                constexpr std::ptrdiff_t m_CachedResults = 0x30; // CUtlVector< CAttributeManager::cached_attribute_float_t >
+                constexpr std::ptrdiff_t m_CachedResults = 0x30; // CUtlVector<CAttributeManager::cached_attribute_float_t>
             }
             // Parent: None
             // Fields count: 3
@@ -5572,7 +5572,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_WeaponSequence (CUtlString)
             namespace CCSGameModeRules_ArmsRace {
-                constexpr std::ptrdiff_t m_WeaponSequence = 0x38; // C_NetworkUtlVectorBase< CUtlString >
+                constexpr std::ptrdiff_t m_WeaponSequence = 0x38; // C_NetworkUtlVectorBase<CUtlString>
             }
             // Parent: CCSGameModeScript
             // Fields count: 1
@@ -5742,8 +5742,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bUrgent (bool)
             // NetworkVarNames: m_szPlaceName (char)
             namespace C_PlayerPing {
-                constexpr std::ptrdiff_t m_hPlayer = 0x580; // CHandle< C_CSPlayerPawn >
-                constexpr std::ptrdiff_t m_hPingedEntity = 0x584; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hPlayer = 0x580; // CHandle<C_CSPlayerPawn>
+                constexpr std::ptrdiff_t m_hPingedEntity = 0x584; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_iType = 0x588; // int32
                 constexpr std::ptrdiff_t m_bUrgent = 0x58C; // bool
                 constexpr std::ptrdiff_t m_szPlaceName = 0x58D; // char[18]
@@ -5754,7 +5754,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hPlayerPing (CHandle< CBaseEntity>)
             namespace CCSPlayer_PingServices {
-                constexpr std::ptrdiff_t m_hPlayerPing = 0x40; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hPlayerPing = 0x40; // CHandle<C_BaseEntity>
             }
             // Parent: C_BaseEntity
             // Fields count: 10
@@ -5770,8 +5770,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hostageRescueZ (int)
             // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
             namespace C_CSPlayerResource {
-                constexpr std::ptrdiff_t m_bHostageAlive = 0x550; // 
-                constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x55C; // 
+                constexpr std::ptrdiff_t m_bHostageAlive = 0x550; // bool[12]
+                constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x55C; // bool[12]
                 constexpr std::ptrdiff_t m_iHostageEntityIDs = 0x568; // CEntityIndex[12]
                 constexpr std::ptrdiff_t m_bombsiteCenterA = 0x598; // 
                 constexpr std::ptrdiff_t m_bombsiteCenterB = 0x5A4; // 
@@ -5807,7 +5807,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iFOVStart = 0x214; // uint32
                 constexpr std::ptrdiff_t m_flFOVTime = 0x218; // GameTime_t
                 constexpr std::ptrdiff_t m_flFOVRate = 0x21C; // float32
-                constexpr std::ptrdiff_t m_hZoomOwner = 0x220; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hZoomOwner = 0x220; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_flLastShotFOV = 0x224; // float32
             }
             // Parent: None
@@ -5826,7 +5826,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_weaponPurchases (WeaponPurchaseCount_t)
             namespace WeaponPurchaseTracker_t {
-                constexpr std::ptrdiff_t m_weaponPurchases = 0x8; // C_UtlVectorEmbeddedNetworkVar< WeaponPurchaseCount_t >
+                constexpr std::ptrdiff_t m_weaponPurchases = 0x8; // C_UtlVectorEmbeddedNetworkVar<WeaponPurchaseCount_t>
             }
             // Parent: CPlayerPawnComponent
             // Fields count: 4
@@ -5836,7 +5836,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_weaponPurchasesThisMatch (WeaponPurchaseTracker_t)
             // NetworkVarNames: m_weaponPurchasesThisRound (WeaponPurchaseTracker_t)
             namespace CCSPlayer_ActionTrackingServices {
-                constexpr std::ptrdiff_t m_hLastWeaponBeforeC4AutoSwitch = 0x40; // CHandle< C_BasePlayerWeapon >
+                constexpr std::ptrdiff_t m_hLastWeaponBeforeC4AutoSwitch = 0x40; // CHandle<C_BasePlayerWeapon>
                 constexpr std::ptrdiff_t m_bIsRescuing = 0x44; // bool
                 constexpr std::ptrdiff_t m_weaponPurchasesThisMatch = 0x48; // WeaponPurchaseTracker_t
                 constexpr std::ptrdiff_t m_weaponPurchasesThisRound = 0xA0; // WeaponPurchaseTracker_t
@@ -5871,7 +5871,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_vecSellbackPurchaseEntries (SellbackPurchaseEntry_t)
             namespace CCSPlayer_BuyServices {
-                constexpr std::ptrdiff_t m_vecSellbackPurchaseEntries = 0x40; // C_UtlVectorEmbeddedNetworkVar< SellbackPurchaseEntry_t >
+                constexpr std::ptrdiff_t m_vecSellbackPurchaseEntries = 0x40; // C_UtlVectorEmbeddedNetworkVar<SellbackPurchaseEntry_t>
             }
             // Parent: CCSPlayerBase_CameraServices
             // Fields count: 1
@@ -5885,8 +5885,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hCarriedHostage (CHandle< CBaseEntity>)
             // NetworkVarNames: m_hCarriedHostageProp (CHandle< CBaseEntity>)
             namespace CCSPlayer_HostageServices {
-                constexpr std::ptrdiff_t m_hCarriedHostage = 0x40; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hCarriedHostageProp = 0x44; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hCarriedHostage = 0x40; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hCarriedHostageProp = 0x44; // CHandle<C_BaseEntity>
             }
             // Parent: CPlayer_ItemServices
             // Fields count: 3
@@ -5973,7 +5973,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hViewModel (CHandle< CBaseViewModel >)
             namespace CCSPlayer_ViewModelServices {
-                constexpr std::ptrdiff_t m_hViewModel = 0x40; // CHandle< C_BaseViewModel >[3]
+                constexpr std::ptrdiff_t m_hViewModel = 0x40; // CHandle<C_BaseViewModel>[3]
             }
             // Parent: CPlayer_WaterServices
             // Fields count: 3
@@ -6034,7 +6034,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iNumRoundKillsHeadshots (int)
             // NetworkVarNames: m_unTotalRoundDamageDealt (uint32)
             namespace CCSPlayerController_ActionTrackingServices {
-                constexpr std::ptrdiff_t m_perRoundStats = 0x40; // C_UtlVectorEmbeddedNetworkVar< CSPerRoundStats_t >
+                constexpr std::ptrdiff_t m_perRoundStats = 0x40; // C_UtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
                 constexpr std::ptrdiff_t m_matchStats = 0x90; // CSMatchStats_t
                 constexpr std::ptrdiff_t m_iNumRoundKills = 0x110; // int32
                 constexpr std::ptrdiff_t m_iNumRoundKillsHeadshots = 0x114; // int32
@@ -6059,10 +6059,10 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bIsOtherEnemy (bool)
             // NetworkVarNames: m_killType (EKillTypes_t)
             namespace CDamageRecord {
-                constexpr std::ptrdiff_t m_PlayerDamager = 0x28; // CHandle< C_CSPlayerPawnBase >
-                constexpr std::ptrdiff_t m_PlayerRecipient = 0x2C; // CHandle< C_CSPlayerPawnBase >
-                constexpr std::ptrdiff_t m_hPlayerControllerDamager = 0x30; // CHandle< CCSPlayerController >
-                constexpr std::ptrdiff_t m_hPlayerControllerRecipient = 0x34; // CHandle< CCSPlayerController >
+                constexpr std::ptrdiff_t m_PlayerDamager = 0x28; // CHandle<C_CSPlayerPawnBase>
+                constexpr std::ptrdiff_t m_PlayerRecipient = 0x2C; // CHandle<C_CSPlayerPawnBase>
+                constexpr std::ptrdiff_t m_hPlayerControllerDamager = 0x30; // CHandle<CCSPlayerController>
+                constexpr std::ptrdiff_t m_hPlayerControllerRecipient = 0x34; // CHandle<CCSPlayerController>
                 constexpr std::ptrdiff_t m_szPlayerDamagerName = 0x38; // CUtlString
                 constexpr std::ptrdiff_t m_szPlayerRecipientName = 0x40; // CUtlString
                 constexpr std::ptrdiff_t m_DamagerXuid = 0x48; // uint64
@@ -6082,7 +6082,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_DamageList (CDamageRecord)
             namespace CCSPlayerController_DamageServices {
                 constexpr std::ptrdiff_t m_nSendUpdate = 0x40; // int32
-                constexpr std::ptrdiff_t m_DamageList = 0x48; // C_UtlVectorEmbeddedNetworkVar< CDamageRecord >
+                constexpr std::ptrdiff_t m_DamageList = 0x48; // C_UtlVectorEmbeddedNetworkVar<CDamageRecord>
             }
             // Parent: CPlayerControllerComponent
             // Fields count: 5
@@ -6126,7 +6126,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsTeacher = 0x64; // int32
                 constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsFriendly = 0x68; // int32
                 constexpr std::ptrdiff_t m_nPersonaDataXpTrailLevel = 0x6C; // int32
-                constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x70; // C_UtlVectorEmbeddedNetworkVar< ServerAuthoritativeWeaponSlot_t >
+                constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x70; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: None
             // Fields count: 0
@@ -6242,7 +6242,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_strCopyProperty_InputContainerProperty = 0x18; // CUtlString
                 constexpr std::ptrdiff_t m_strCopyProperty_TargetProperty = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_strRandomRollInputVars_SeedInputVar = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_vecRandomRollInputVars_InputVarsToRoll = 0x30; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_vecRandomRollInputVars_InputVarsToRoll = 0x30; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_strCopyMatchingKeys_InputContainerSrc = 0x48; // CUtlString
                 constexpr std::ptrdiff_t m_strCopyKeysWithSuffix_InputContainerSrc = 0x50; // CUtlString
                 constexpr std::ptrdiff_t m_strCopyKeysWithSuffix_FindSuffix = 0x58; // CUtlString
@@ -6254,15 +6254,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bIsScratchTarget = 0x2EC; // bool
                 constexpr std::ptrdiff_t m_bSplatDebugInfo = 0x2ED; // bool
                 constexpr std::ptrdiff_t m_bCaptureInRenderDoc = 0x2EE; // bool
-                constexpr std::ptrdiff_t m_vecTexGenInstructions = 0x2F0; // CUtlVector< CompMatPropertyMutator_t >
-                constexpr std::ptrdiff_t m_vecConditionalMutators = 0x308; // CUtlVector< CompMatPropertyMutator_t >
+                constexpr std::ptrdiff_t m_vecTexGenInstructions = 0x2F0; // CUtlVector<CompMatPropertyMutator_t>
+                constexpr std::ptrdiff_t m_vecConditionalMutators = 0x308; // CUtlVector<CompMatPropertyMutator_t>
                 constexpr std::ptrdiff_t m_strPopInputQueue_Container = 0x320; // CUtlString
                 constexpr std::ptrdiff_t m_strDrawText_InputContainerSrc = 0x328; // CUtlString
                 constexpr std::ptrdiff_t m_strDrawText_InputContainerProperty = 0x330; // CUtlString
                 constexpr std::ptrdiff_t m_vecDrawText_Position = 0x338; // Vector2D
                 constexpr std::ptrdiff_t m_colDrawText_Color = 0x340; // Color
                 constexpr std::ptrdiff_t m_strDrawText_Font = 0x348; // CUtlString
-                constexpr std::ptrdiff_t m_vecConditions = 0x350; // CUtlVector< CompMatMutatorCondition_t >
+                constexpr std::ptrdiff_t m_vecConditions = 0x350; // CUtlVector<CompMatMutatorCondition_t>
             }
             // Parent: None
             // Fields count: 8
@@ -6276,7 +6276,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_strSpecificContainerMaterial = 0x8; // CResourceName
                 constexpr std::ptrdiff_t m_strAttrName = 0xE8; // CUtlString
                 constexpr std::ptrdiff_t m_strAlias = 0xF0; // CUtlString
-                constexpr std::ptrdiff_t m_vecLooseVariables = 0xF8; // CUtlVector< CompositeMaterialInputLooseVariable_t >
+                constexpr std::ptrdiff_t m_vecLooseVariables = 0xF8; // CUtlVector<CompositeMaterialInputLooseVariable_t>
                 constexpr std::ptrdiff_t m_strAttrNameForVar = 0x110; // CUtlString
                 constexpr std::ptrdiff_t m_bExposeExternally = 0x118; // bool
             }
@@ -6287,10 +6287,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             // MPropertyElementNameFn
             namespace CompositeMaterialAssemblyProcedure_t {
-                constexpr std::ptrdiff_t m_vecCompMatIncludes = 0x0; // CUtlVector< CResourceName >
-                constexpr std::ptrdiff_t m_vecMatchFilters = 0x18; // CUtlVector< CompositeMaterialMatchFilter_t >
-                constexpr std::ptrdiff_t m_vecCompositeInputContainers = 0x30; // CUtlVector< CompositeMaterialInputContainer_t >
-                constexpr std::ptrdiff_t m_vecPropertyMutators = 0x48; // CUtlVector< CompMatPropertyMutator_t >
+                constexpr std::ptrdiff_t m_vecCompMatIncludes = 0x0; // CUtlVector<CResourceName>
+                constexpr std::ptrdiff_t m_vecMatchFilters = 0x18; // CUtlVector<CompositeMaterialMatchFilter_t>
+                constexpr std::ptrdiff_t m_vecCompositeInputContainers = 0x30; // CUtlVector<CompositeMaterialInputContainer_t>
+                constexpr std::ptrdiff_t m_vecPropertyMutators = 0x48; // CUtlVector<CompMatPropertyMutator_t>
             }
             // Parent: None
             // Fields count: 1
@@ -6309,7 +6309,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_TargetKVs = 0x8; // KeyValues3
                 constexpr std::ptrdiff_t m_PreGenerationKVs = 0x18; // KeyValues3
                 constexpr std::ptrdiff_t m_FinalKVs = 0x28; // KeyValues3
-                constexpr std::ptrdiff_t m_vecGeneratedTextures = 0x40; // CUtlVector< GeneratedTextureHandle_t >
+                constexpr std::ptrdiff_t m_vecGeneratedTextures = 0x40; // CUtlVector<GeneratedTextureHandle_t>
             }
             // Parent: None
             // Fields count: 8
@@ -6323,8 +6323,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_KVModelStateChoices = 0xE8; // KeyValues3
                 constexpr std::ptrdiff_t m_bEnableChildModel = 0xF8; // bool
                 constexpr std::ptrdiff_t m_ChildModelName = 0x100; // CResourceName
-                constexpr std::ptrdiff_t m_vecCompositeMaterialAssemblyProcedures = 0x1E0; // CUtlVector< CompositeMaterialAssemblyProcedure_t >
-                constexpr std::ptrdiff_t m_vecCompositeMaterials = 0x1F8; // CUtlVector< CompositeMaterial_t >
+                constexpr std::ptrdiff_t m_vecCompositeMaterialAssemblyProcedures = 0x1E0; // CUtlVector<CompositeMaterialAssemblyProcedure_t>
+                constexpr std::ptrdiff_t m_vecCompositeMaterials = 0x1F8; // CUtlVector<CompositeMaterial_t>
             }
             // Parent: None
             // Fields count: 3
@@ -6333,7 +6333,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CCompositeMaterialEditorDoc {
                 constexpr std::ptrdiff_t m_nVersion = 0x8; // int32
-                constexpr std::ptrdiff_t m_Points = 0x10; // CUtlVector< CompositeMaterialEditorPoint_t >
+                constexpr std::ptrdiff_t m_Points = 0x10; // CUtlVector<CompositeMaterialEditorPoint_t>
                 constexpr std::ptrdiff_t m_KVthumbnail = 0x28; // KeyValues3
             }
             // Parent: None
@@ -6380,8 +6380,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_WorldPoints = 0xF0; // Vector[8]
                 constexpr std::ptrdiff_t m_vFogOffsetLayer0 = 0x4A8; // Vector2D
                 constexpr std::ptrdiff_t m_vFogOffsetLayer1 = 0x4B0; // Vector2D
-                constexpr std::ptrdiff_t m_hEnvWind = 0x4B8; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hEnvSky = 0x4BC; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hEnvWind = 0x4B8; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hEnvSky = 0x4BC; // CHandle<C_BaseEntity>
             }
             // Parent: C_BaseEntity
             // Fields count: 1
@@ -6391,22 +6391,22 @@ namespace cs2_dumper {
             // Parent: CAnimGraphControllerBase
             // Fields count: 4
             namespace C_CSGO_PreviewModel_GraphController {
-                constexpr std::ptrdiff_t m_pszCharacterMode = 0x18; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszWeaponState = 0x38; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszWeaponType = 0x58; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszEndOfMatchCelebration = 0x78; // CAnimGraphParamOptionalRef< char* >
+                constexpr std::ptrdiff_t m_pszCharacterMode = 0x18; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszWeaponState = 0x38; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszWeaponType = 0x58; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszEndOfMatchCelebration = 0x78; // CAnimGraphParamOptionalRef<char*>
             }
             // Parent: CAnimGraphControllerBase
             // Fields count: 8
             namespace C_CSGO_PreviewPlayer_GraphController {
-                constexpr std::ptrdiff_t m_pszCharacterMode = 0x18; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszTeamPreviewVariant = 0x38; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszTeamPreviewPosition = 0x58; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszEndOfMatchCelebration = 0x78; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_nTeamPreviewRandom = 0x98; // CAnimGraphParamOptionalRef< int32 >
-                constexpr std::ptrdiff_t m_pszWeaponState = 0xB0; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_pszWeaponType = 0xD0; // CAnimGraphParamOptionalRef< char* >
-                constexpr std::ptrdiff_t m_bCT = 0xF0; // CAnimGraphParamOptionalRef< bool >
+                constexpr std::ptrdiff_t m_pszCharacterMode = 0x18; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszTeamPreviewVariant = 0x38; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszTeamPreviewPosition = 0x58; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszEndOfMatchCelebration = 0x78; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_nTeamPreviewRandom = 0x98; // CAnimGraphParamOptionalRef<int32>
+                constexpr std::ptrdiff_t m_pszWeaponState = 0xB0; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_pszWeaponType = 0xD0; // CAnimGraphParamOptionalRef<char*>
+                constexpr std::ptrdiff_t m_bCT = 0xF0; // CAnimGraphParamOptionalRef<bool>
             }
             // Parent: C_BaseEntity
             // Fields count: 10
@@ -6606,12 +6606,12 @@ namespace cs2_dumper {
             namespace C_EnvCombinedLightProbeVolume {
                 constexpr std::ptrdiff_t m_Color = 0x15A8; // Color
                 constexpr std::ptrdiff_t m_flBrightness = 0x15AC; // float32
-                constexpr std::ptrdiff_t m_hCubemapTexture = 0x15B0; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hCubemapTexture = 0x15B0; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_bCustomCubemapTexture = 0x15B8; // bool
-                constexpr std::ptrdiff_t m_hLightProbeTexture = 0x15C0; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_hLightProbeDirectLightIndicesTexture = 0x15C8; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_hLightProbeDirectLightScalarsTexture = 0x15D0; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_hLightProbeDirectLightShadowsTexture = 0x15D8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hLightProbeTexture = 0x15C0; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hLightProbeDirectLightIndicesTexture = 0x15C8; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hLightProbeDirectLightScalarsTexture = 0x15D0; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hLightProbeDirectLightShadowsTexture = 0x15D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_vBoxMins = 0x15E0; // 
                 constexpr std::ptrdiff_t m_vBoxMaxs = 0x15EC; // 
                 constexpr std::ptrdiff_t m_bMoveable = 0x15F8; // bool
@@ -6652,7 +6652,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bCopyDiffuseFromDefaultCubemap (bool)
             // NetworkVarNames: m_bEnabled (bool)
             namespace C_EnvCubemap {
-                constexpr std::ptrdiff_t m_hCubemapTexture = 0x5D0; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hCubemapTexture = 0x5D0; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_bCustomCubemapTexture = 0x5D8; // bool
                 constexpr std::ptrdiff_t m_flInfluenceRadius = 0x5DC; // float32
                 constexpr std::ptrdiff_t m_vBoxProjectMins = 0x5E0; // 
@@ -6710,9 +6710,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bStartDisabled = 0x575; // bool
                 constexpr std::ptrdiff_t m_flFogMaxOpacity = 0x578; // float32
                 constexpr std::ptrdiff_t m_nCubemapSourceType = 0x57C; // int32
-                constexpr std::ptrdiff_t m_hSkyMaterial = 0x580; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hSkyMaterial = 0x580; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_iszSkyEntity = 0x588; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hFogCubemapTexture = 0x590; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hFogCubemapTexture = 0x590; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_bHasHeightFogEnd = 0x598; // bool
                 constexpr std::ptrdiff_t m_bFirstTime = 0x599; // bool
             }
@@ -6736,7 +6736,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bStartDisabled (bool)
             // NetworkVarNames: m_bIsEnabled (bool)
             namespace C_GradientFog {
-                constexpr std::ptrdiff_t m_hGradientFogTexture = 0x550; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hGradientFogTexture = 0x550; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_flFogStartDistance = 0x558; // float32
                 constexpr std::ptrdiff_t m_flFogEndDistance = 0x55C; // float32
                 constexpr std::ptrdiff_t m_bHeightFogEnabled = 0x560; // bool
@@ -6775,10 +6775,10 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nLightProbeAtlasZ (int)
             // NetworkVarNames: m_bEnabled (bool)
             namespace C_EnvLightProbeVolume {
-                constexpr std::ptrdiff_t m_hLightProbeTexture = 0x1528; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_hLightProbeDirectLightIndicesTexture = 0x1530; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_hLightProbeDirectLightScalarsTexture = 0x1538; // CStrongHandle< InfoForResourceTypeCTextureBase >
-                constexpr std::ptrdiff_t m_hLightProbeDirectLightShadowsTexture = 0x1540; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hLightProbeTexture = 0x1528; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hLightProbeDirectLightIndicesTexture = 0x1530; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hLightProbeDirectLightScalarsTexture = 0x1538; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hLightProbeDirectLightShadowsTexture = 0x1540; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_vBoxMins = 0x1548; // 
                 constexpr std::ptrdiff_t m_vBoxMaxs = 0x1554; // 
                 constexpr std::ptrdiff_t m_bMoveable = 0x1560; // bool
@@ -6890,7 +6890,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bStartDisabled = 0x5B8; // bool
                 constexpr std::ptrdiff_t m_bEnableIndirect = 0x5B9; // bool
                 constexpr std::ptrdiff_t m_bIsMaster = 0x5BA; // bool
-                constexpr std::ptrdiff_t m_hFogIndirectTexture = 0x5C0; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hFogIndirectTexture = 0x5C0; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_nForceRefreshCount = 0x5C8; // int32
                 constexpr std::ptrdiff_t m_bFirstTime = 0x5CC; // bool
             }
@@ -7030,8 +7030,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pOutputOnSpawned = 0x570; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_clientOnlyEntityBehavior = 0x598; // PointTemplateClientOnlyEntityBehavior_t
                 constexpr std::ptrdiff_t m_ownerSpawnGroupType = 0x59C; // PointTemplateOwnerSpawnGroupType_t
-                constexpr std::ptrdiff_t m_createdSpawnGroupHandles = 0x5A0; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_SpawnedEntityHandles = 0x5B8; // CUtlVector< CEntityHandle >
+                constexpr std::ptrdiff_t m_createdSpawnGroupHandles = 0x5A0; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_SpawnedEntityHandles = 0x5B8; // CUtlVector<CEntityHandle>
                 constexpr std::ptrdiff_t m_ScriptSpawnCallback = 0x5D0; // HSCRIPT
                 constexpr std::ptrdiff_t m_ScriptCallbackScope = 0x5D8; // HSCRIPT
             }
@@ -7076,8 +7076,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iScore (int32)
             // NetworkVarNames: m_szTeamname (char)
             namespace C_Team {
-                constexpr std::ptrdiff_t m_aPlayerControllers = 0x550; // C_NetworkUtlVectorBase< CHandle< CBasePlayerController > >
-                constexpr std::ptrdiff_t m_aPlayers = 0x568; // C_NetworkUtlVectorBase< CHandle< C_BasePlayerPawn > >
+                constexpr std::ptrdiff_t m_aPlayerControllers = 0x550; // C_NetworkUtlVectorBase<CHandle<CBasePlayerController>>
+                constexpr std::ptrdiff_t m_aPlayers = 0x568; // C_NetworkUtlVectorBase<CHandle<C_BasePlayerPawn>>
                 constexpr std::ptrdiff_t m_iScore = 0x580; // int32
                 constexpr std::ptrdiff_t m_szTeamname = 0x584; // char[129]
             }
@@ -7106,11 +7106,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_CommandContext = 0x560; // C_CommandContext
                 constexpr std::ptrdiff_t m_nInButtonsWhichAreToggles = 0x5F8; // uint64
                 constexpr std::ptrdiff_t m_nTickBase = 0x600; // uint32
-                constexpr std::ptrdiff_t m_hPawn = 0x604; // CHandle< C_BasePlayerPawn >
-                constexpr std::ptrdiff_t m_hPredictedPawn = 0x608; // CHandle< C_BasePlayerPawn >
+                constexpr std::ptrdiff_t m_hPawn = 0x604; // CHandle<C_BasePlayerPawn>
+                constexpr std::ptrdiff_t m_hPredictedPawn = 0x608; // CHandle<C_BasePlayerPawn>
                 constexpr std::ptrdiff_t m_nSplitScreenSlot = 0x60C; // CSplitScreenSlot
-                constexpr std::ptrdiff_t m_hSplitOwner = 0x610; // CHandle< CBasePlayerController >
-                constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x618; // CUtlVector< CHandle< CBasePlayerController > >
+                constexpr std::ptrdiff_t m_hSplitOwner = 0x610; // CHandle<CBasePlayerController>
+                constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x618; // CUtlVector<CHandle<CBasePlayerController>>
                 constexpr std::ptrdiff_t m_bIsHLTV = 0x630; // bool
                 constexpr std::ptrdiff_t m_iConnected = 0x634; // PlayerConnectedState
                 constexpr std::ptrdiff_t m_iszPlayerName = 0x638; // char[128]
@@ -7124,7 +7124,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CBasePlayerVData {
-                constexpr std::ptrdiff_t m_sModelName = 0x28; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
+                constexpr std::ptrdiff_t m_sModelName = 0x28; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_flHeadDamageMultiplier = 0x108; // CSkillFloat
                 constexpr std::ptrdiff_t m_flChestDamageMultiplier = 0x118; // CSkillFloat
                 constexpr std::ptrdiff_t m_flStomachDamageMultiplier = 0x128; // CSkillFloat
@@ -7145,11 +7145,11 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CBasePlayerWeaponVData {
-                constexpr std::ptrdiff_t m_szWorldModel = 0x28; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > >
+                constexpr std::ptrdiff_t m_szWorldModel = 0x28; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_bBuiltRightHanded = 0x108; // bool
                 constexpr std::ptrdiff_t m_bAllowFlipping = 0x109; // bool
                 constexpr std::ptrdiff_t m_sMuzzleAttachment = 0x110; // CUtlString
-                constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x118; // CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > >
+                constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x118; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_iFlags = 0x1F8; // ItemFlagTypes_t
                 constexpr std::ptrdiff_t m_nPrimaryAmmoType = 0x1F9; // AmmoIndex_t
                 constexpr std::ptrdiff_t m_nSecondaryAmmoType = 0x1FA; // AmmoIndex_t
@@ -7162,7 +7162,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bAutoSwitchFrom = 0x211; // bool
                 constexpr std::ptrdiff_t m_iRumbleEffect = 0x214; // RumbleEffect_t
                 constexpr std::ptrdiff_t m_bLinkedCooldowns = 0x218; // bool
-                constexpr std::ptrdiff_t m_aShootSounds = 0x220; // CUtlMap< WeaponSound_t, CSoundEventName >
+                constexpr std::ptrdiff_t m_aShootSounds = 0x220; // CUtlMap<WeaponSound_t,CSoundEventName>
                 constexpr std::ptrdiff_t m_iSlot = 0x240; // int32
                 constexpr std::ptrdiff_t m_iPosition = 0x244; // int32
             }
@@ -7227,7 +7227,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nRenderFX = 0xA81; // RenderFx_t
                 constexpr std::ptrdiff_t m_bAllowFadeInView = 0xA82; // bool
                 constexpr std::ptrdiff_t m_clrRender = 0xA83; // Color
-                constexpr std::ptrdiff_t m_vecRenderAttributes = 0xA88; // C_UtlVectorEmbeddedNetworkVar< EntityRenderAttribute_t >
+                constexpr std::ptrdiff_t m_vecRenderAttributes = 0xA88; // C_UtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
                 constexpr std::ptrdiff_t m_bRenderToCubemaps = 0xAF0; // bool
                 constexpr std::ptrdiff_t m_Collision = 0xAF8; // CCollisionProperty
                 constexpr std::ptrdiff_t m_Glow = 0xBA8; // CGlowProperty
@@ -7242,7 +7242,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vDecalForwardAxis = 0xC28; // 
                 constexpr std::ptrdiff_t m_flDecalHealBloodRate = 0xC34; // float32
                 constexpr std::ptrdiff_t m_flDecalHealHeightRate = 0xC38; // float32
-                constexpr std::ptrdiff_t m_ConfigEntitiesToPropagateMaterialDecalsTo = 0xC40; // C_NetworkUtlVectorBase< CHandle< C_BaseModelEntity > >
+                constexpr std::ptrdiff_t m_ConfigEntitiesToPropagateMaterialDecalsTo = 0xC40; // C_NetworkUtlVectorBase<CHandle<C_BaseModelEntity>>
                 constexpr std::ptrdiff_t m_vecViewOffset = 0xC58; // CNetworkViewOffsetVector
                 constexpr std::ptrdiff_t m_pClientAlphaProperty = 0xC88; // CClientAlphaProperty*
                 constexpr std::ptrdiff_t m_ClientOverrideTint = 0xC90; // Color
@@ -7299,12 +7299,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFreezeTransitionDuration = 0xED4; // float32
                 constexpr std::ptrdiff_t m_nStopType = 0xED8; // int32
                 constexpr std::ptrdiff_t m_bAnimateDuringGameplayPause = 0xEDC; // bool
-                constexpr std::ptrdiff_t m_iEffectIndex = 0xEE0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_iEffectIndex = 0xEE0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_flStartTime = 0xEE8; // GameTime_t
                 constexpr std::ptrdiff_t m_flPreSimTime = 0xEEC; // float32
                 constexpr std::ptrdiff_t m_vServerControlPoints = 0xEF0; // Vector[4]
                 constexpr std::ptrdiff_t m_iServerControlPointAssignments = 0xF20; // uint8[4]
-                constexpr std::ptrdiff_t m_hControlPointEnts = 0xF24; // CHandle< C_BaseEntity >[64]
+                constexpr std::ptrdiff_t m_hControlPointEnts = 0xF24; // CHandle<C_BaseEntity>[64]
                 constexpr std::ptrdiff_t m_bNoSave = 0x1024; // bool
                 constexpr std::ptrdiff_t m_bNoFreeze = 0x1025; // bool
                 constexpr std::ptrdiff_t m_bNoRamp = 0x1026; // bool
@@ -7338,19 +7338,19 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bStartActive = 0x550; // bool
                 constexpr std::ptrdiff_t m_flMaxSimulationTime = 0x554; // float32
                 constexpr std::ptrdiff_t m_iszEffectName = 0x558; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_PathNodes_Name = 0x560; // CUtlVector< CUtlSymbolLarge >
+                constexpr std::ptrdiff_t m_PathNodes_Name = 0x560; // CUtlVector<CUtlSymbolLarge>
                 constexpr std::ptrdiff_t m_flParticleSpacing = 0x578; // float32
                 constexpr std::ptrdiff_t m_flSlack = 0x57C; // float32
                 constexpr std::ptrdiff_t m_flRadius = 0x580; // float32
                 constexpr std::ptrdiff_t m_ColorTint = 0x584; // Color
                 constexpr std::ptrdiff_t m_nEffectState = 0x588; // int32
-                constexpr std::ptrdiff_t m_iEffectIndex = 0x590; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
-                constexpr std::ptrdiff_t m_PathNodes_Position = 0x598; // C_NetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_PathNodes_TangentIn = 0x5B0; // C_NetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_PathNodes_TangentOut = 0x5C8; // C_NetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_PathNodes_Color = 0x5E0; // C_NetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_PathNodes_PinEnabled = 0x5F8; // C_NetworkUtlVectorBase< bool >
-                constexpr std::ptrdiff_t m_PathNodes_RadiusScale = 0x610; // C_NetworkUtlVectorBase< float32 >
+                constexpr std::ptrdiff_t m_iEffectIndex = 0x590; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_PathNodes_Position = 0x598; // C_NetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PathNodes_TangentIn = 0x5B0; // C_NetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PathNodes_TangentOut = 0x5C8; // C_NetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PathNodes_Color = 0x5E0; // C_NetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PathNodes_PinEnabled = 0x5F8; // C_NetworkUtlVectorBase<bool>
+                constexpr std::ptrdiff_t m_PathNodes_RadiusScale = 0x610; // C_NetworkUtlVectorBase<float32>
             }
             // Parent: C_PathParticleRope
             // Fields count: 0
@@ -7484,14 +7484,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bDisabledOld = 0x551; // bool
                 constexpr std::ptrdiff_t m_bUpdateOnClient = 0x552; // bool
                 constexpr std::ptrdiff_t m_nInputType = 0x554; // ValueRemapperInputType_t
-                constexpr std::ptrdiff_t m_hRemapLineStart = 0x558; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hRemapLineEnd = 0x55C; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hRemapLineStart = 0x558; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hRemapLineEnd = 0x55C; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_flMaximumChangePerSecond = 0x560; // float32
                 constexpr std::ptrdiff_t m_flDisengageDistance = 0x564; // float32
                 constexpr std::ptrdiff_t m_flEngageDistance = 0x568; // float32
                 constexpr std::ptrdiff_t m_bRequiresUseKey = 0x56C; // bool
                 constexpr std::ptrdiff_t m_nOutputType = 0x570; // ValueRemapperOutputType_t
-                constexpr std::ptrdiff_t m_hOutputEntities = 0x578; // C_NetworkUtlVectorBase< CHandle< C_BaseEntity > >
+                constexpr std::ptrdiff_t m_hOutputEntities = 0x578; // C_NetworkUtlVectorBase<CHandle<C_BaseEntity>>
                 constexpr std::ptrdiff_t m_nHapticsType = 0x590; // ValueRemapperHapticsType_t
                 constexpr std::ptrdiff_t m_nMomentumType = 0x594; // ValueRemapperMomentumType_t
                 constexpr std::ptrdiff_t m_flMomentumModifier = 0x598; // float32
@@ -7542,7 +7542,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_Handle (CHandle< CBaseEntity>)
             // NetworkVarNames: m_bSendHandle (bool)
             namespace C_HandleTest {
-                constexpr std::ptrdiff_t m_Handle = 0x550; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_Handle = 0x550; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_bSendHandle = 0x554; // bool
             }
             // Parent: C_BaseEntity
@@ -7569,7 +7569,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_usable (bool)
             // NetworkVarNames: m_szDisplayText (string_t)
             namespace C_BaseButton {
-                constexpr std::ptrdiff_t m_glowEntity = 0xCD0; // CHandle< C_BaseModelEntity >
+                constexpr std::ptrdiff_t m_glowEntity = 0xCD0; // CHandle<C_BaseModelEntity>
                 constexpr std::ptrdiff_t m_usable = 0xCD4; // bool
                 constexpr std::ptrdiff_t m_szDisplayText = 0xCD8; // CUtlSymbolLarge
             }
@@ -7624,7 +7624,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bProjectOnWater (bool)
             // NetworkVarNames: m_flDepthSortBias (float)
             namespace C_EnvDecal {
-                constexpr std::ptrdiff_t m_hDecalMaterial = 0xCD0; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hDecalMaterial = 0xCD0; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_flWidth = 0xCD8; // float32
                 constexpr std::ptrdiff_t m_flHeight = 0xCDC; // float32
                 constexpr std::ptrdiff_t m_flDepth = 0xCE0; // float32
@@ -7701,7 +7701,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_Width (float32)
             // NetworkVarNames: m_bConstrainBetweenEndpoints (bool)
             namespace C_RopeKeyframe {
-                constexpr std::ptrdiff_t m_LinksTouchingSomething = 0xCD8; // CBitVec< 10 >
+                constexpr std::ptrdiff_t m_LinksTouchingSomething = 0xCD8; // CBitVec<10>
                 constexpr std::ptrdiff_t m_nLinksTouchingSomething = 0xCDC; // int32
                 constexpr std::ptrdiff_t m_bApplyWind = 0xCE0; // bool
                 constexpr std::ptrdiff_t m_fPrevLockedPoints = 0xCE4; // int32
@@ -7711,11 +7711,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flCurScroll = 0xD08; // float32
                 constexpr std::ptrdiff_t m_flScrollSpeed = 0xD0C; // float32
                 constexpr std::ptrdiff_t m_RopeFlags = 0xD10; // uint16
-                constexpr std::ptrdiff_t m_iRopeMaterialModelIndex = 0xD18; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_iRopeMaterialModelIndex = 0xD18; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_LightValues = 0xF90; // Vector[10]
                 constexpr std::ptrdiff_t m_nSegments = 0x1008; // uint8
-                constexpr std::ptrdiff_t m_hStartPoint = 0x100C; // CHandle< C_BaseEntity >
-                constexpr std::ptrdiff_t m_hEndPoint = 0x1010; // CHandle< C_BaseEntity >
+                constexpr std::ptrdiff_t m_hStartPoint = 0x100C; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_hEndPoint = 0x1010; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_iStartAttachment = 0x1014; // AttachmentHandle_t
                 constexpr std::ptrdiff_t m_iEndAttachment = 0x1015; // AttachmentHandle_t
                 constexpr std::ptrdiff_t m_Subdiv = 0x1016; // uint8
@@ -7726,7 +7726,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nChangeCount = 0x1021; // uint8
                 constexpr std::ptrdiff_t m_Width = 0x1024; // float32
                 constexpr std::ptrdiff_t m_PhysicsDelegate = 0x1028; // C_RopeKeyframe::CPhysicsDelegate
-                constexpr std::ptrdiff_t m_hMaterial = 0x1038; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hMaterial = 0x1038; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_TextureHeight = 0x1040; // int32
                 constexpr std::ptrdiff_t m_vecImpulse = 0x1044; // 
                 constexpr std::ptrdiff_t m_vecPreviousImpulse = 0x1050; // 
@@ -7762,10 +7762,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flForceClientTime = 0x55C; // float32
                 constexpr std::ptrdiff_t m_nSceneStringIndex = 0x560; // uint16
                 constexpr std::ptrdiff_t m_bClientOnly = 0x562; // bool
-                constexpr std::ptrdiff_t m_hOwner = 0x564; // CHandle< C_BaseFlex >
-                constexpr std::ptrdiff_t m_hActorList = 0x568; // C_NetworkUtlVectorBase< CHandle< C_BaseFlex > >
+                constexpr std::ptrdiff_t m_hOwner = 0x564; // CHandle<C_BaseFlex>
+                constexpr std::ptrdiff_t m_hActorList = 0x568; // C_NetworkUtlVectorBase<CHandle<C_BaseFlex>>
                 constexpr std::ptrdiff_t m_bWasPlaying = 0x580; // bool
-                constexpr std::ptrdiff_t m_QueuedEvents = 0x590; // CUtlVector< C_SceneEntity::QueuedEvents_t >
+                constexpr std::ptrdiff_t m_QueuedEvents = 0x590; // CUtlVector<C_SceneEntity::QueuedEvents_t>
                 constexpr std::ptrdiff_t m_flCurrentTime = 0x5A8; // float32
             }
             // Parent: CGlowOverlay
@@ -7839,34 +7839,34 @@ namespace cs2_dumper {
         namespace engine2 {
             // Alignment: 4
             // Members count: 3
-            enum class SpawnDebugOverrideState_t : int32_t {
-                SPAWN_DEBUG_OVERRIDE_NONE = 0,
-                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 1,
-                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 2
+            enum class SpawnDebugOverrideState_t : uint32_t {
+                SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
+                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
+                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
             }
             // Alignment: 4
             // Members count: 5
-            enum class SpawnDebugRestrictionOverrideState_t : int32_t {
-                SPAWN_DEBUG_RESTRICT_NONE = 0,
-                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 1,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 2,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 4,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 8
+            enum class SpawnDebugRestrictionOverrideState_t : uint32_t {
+                SPAWN_DEBUG_RESTRICT_NONE = 0x0,
+                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
             }
             // Alignment: 4
             // Members count: 3
-            enum class EntityDormancyType_t : int32_t {
-                ENTITY_NOT_DORMANT = 0,
-                ENTITY_DORMANT = 1,
-                ENTITY_SUSPENDED = 2
+            enum class EntityDormancyType_t : uint32_t {
+                ENTITY_NOT_DORMANT = 0x0,
+                ENTITY_DORMANT = 0x1,
+                ENTITY_SUSPENDED = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class EntityIOTargetType_t : int32_t {
-                ENTITY_IO_TARGET_INVALID = -1,
-                ENTITY_IO_TARGET_ENTITYNAME = 2,
-                ENTITY_IO_TARGET_EHANDLE = 6,
-                ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 7
+            enum class EntityIOTargetType_t : uint32_t {
+                ENTITY_IO_TARGET_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ENTITY_IO_TARGET_ENTITYNAME = 0x2,
+                ENTITY_IO_TARGET_EHANDLE = 0x6,
+                ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
             }
             // Parent: None
             // Fields count: 4
@@ -8151,7 +8151,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 1
             namespace CEntityIOOutput {
-                constexpr std::ptrdiff_t m_Value = 0x18; // CVariantBase< CVariantDefaultAllocator >
+                constexpr std::ptrdiff_t m_Value = 0x18; // CVariantBase<CVariantDefaultAllocator>
             }
             // Parent: CEntityComponent
             // Fields count: 1
@@ -8171,7 +8171,7 @@ namespace cs2_dumper {
             // Parent: CAnimScriptBase
             // Fields count: 1
             namespace EmptyTestScript {
-                constexpr std::ptrdiff_t m_hTest = 0x10; // CAnimScriptParam< float32 >
+                constexpr std::ptrdiff_t m_hTest = 0x10; // CAnimScriptParam<float32>
             }
         }
         // Module: materialsystem2.dll
@@ -8180,40 +8180,40 @@ namespace cs2_dumper {
         namespace materialsystem2 {
             // Alignment: 4
             // Members count: 4
-            enum class HorizJustification_e : int32_t {
-                HORIZ_JUSTIFICATION_LEFT = 0,
-                HORIZ_JUSTIFICATION_CENTER = 1,
-                HORIZ_JUSTIFICATION_RIGHT = 2,
-                HORIZ_JUSTIFICATION_NONE = 3
+            enum class HorizJustification_e : uint32_t {
+                HORIZ_JUSTIFICATION_LEFT = 0x0,
+                HORIZ_JUSTIFICATION_CENTER = 0x1,
+                HORIZ_JUSTIFICATION_RIGHT = 0x2,
+                HORIZ_JUSTIFICATION_NONE = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class VertJustification_e : int32_t {
-                VERT_JUSTIFICATION_TOP = 0,
-                VERT_JUSTIFICATION_CENTER = 1,
-                VERT_JUSTIFICATION_BOTTOM = 2,
-                VERT_JUSTIFICATION_NONE = 3
+            enum class VertJustification_e : uint32_t {
+                VERT_JUSTIFICATION_TOP = 0x0,
+                VERT_JUSTIFICATION_CENTER = 0x1,
+                VERT_JUSTIFICATION_BOTTOM = 0x2,
+                VERT_JUSTIFICATION_NONE = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class LayoutPositionType_e : int32_t {
-                LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0,
-                LAYOUTPOSITIONTYPE_FRACTIONAL = 1,
-                LAYOUTPOSITIONTYPE_NONE = 2
+            enum class LayoutPositionType_e : uint32_t {
+                LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
+                LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
+                LAYOUTPOSITIONTYPE_NONE = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class BloomBlendMode_t : int32_t {
-                BLOOM_BLEND_ADD = 0,
-                BLOOM_BLEND_SCREEN = 1,
-                BLOOM_BLEND_BLUR = 2
+            enum class BloomBlendMode_t : uint32_t {
+                BLOOM_BLEND_ADD = 0x0,
+                BLOOM_BLEND_SCREEN = 0x1,
+                BLOOM_BLEND_BLUR = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class ViewFadeMode_t : int32_t {
-                VIEW_FADE_CONSTANT_COLOR = 0,
-                VIEW_FADE_MODULATE = 1,
-                VIEW_FADE_MOD2X = 2
+            enum class ViewFadeMode_t : uint32_t {
+                VIEW_FADE_CONSTANT_COLOR = 0x0,
+                VIEW_FADE_MODULATE = 0x1,
+                VIEW_FADE_MOD2X = 0x2
             }
             // Parent: None
             // Fields count: 1
@@ -8253,7 +8253,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace MaterialParamTexture_t {
-                constexpr std::ptrdiff_t m_pValue = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: MaterialParam_t
             // Fields count: 1
@@ -8279,18 +8279,18 @@ namespace cs2_dumper {
             namespace MaterialResourceData_t {
                 constexpr std::ptrdiff_t m_materialName = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_shaderName = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_intParams = 0x10; // CUtlVector< MaterialParamInt_t >
-                constexpr std::ptrdiff_t m_floatParams = 0x28; // CUtlVector< MaterialParamFloat_t >
-                constexpr std::ptrdiff_t m_vectorParams = 0x40; // CUtlVector< MaterialParamVector_t >
-                constexpr std::ptrdiff_t m_textureParams = 0x58; // CUtlVector< MaterialParamTexture_t >
-                constexpr std::ptrdiff_t m_dynamicParams = 0x70; // CUtlVector< MaterialParamBuffer_t >
-                constexpr std::ptrdiff_t m_dynamicTextureParams = 0x88; // CUtlVector< MaterialParamBuffer_t >
-                constexpr std::ptrdiff_t m_intAttributes = 0xA0; // CUtlVector< MaterialParamInt_t >
-                constexpr std::ptrdiff_t m_floatAttributes = 0xB8; // CUtlVector< MaterialParamFloat_t >
-                constexpr std::ptrdiff_t m_vectorAttributes = 0xD0; // CUtlVector< MaterialParamVector_t >
-                constexpr std::ptrdiff_t m_textureAttributes = 0xE8; // CUtlVector< MaterialParamTexture_t >
-                constexpr std::ptrdiff_t m_stringAttributes = 0x100; // CUtlVector< MaterialParamString_t >
-                constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_intParams = 0x10; // CUtlVector<MaterialParamInt_t>
+                constexpr std::ptrdiff_t m_floatParams = 0x28; // CUtlVector<MaterialParamFloat_t>
+                constexpr std::ptrdiff_t m_vectorParams = 0x40; // CUtlVector<MaterialParamVector_t>
+                constexpr std::ptrdiff_t m_textureParams = 0x58; // CUtlVector<MaterialParamTexture_t>
+                constexpr std::ptrdiff_t m_dynamicParams = 0x70; // CUtlVector<MaterialParamBuffer_t>
+                constexpr std::ptrdiff_t m_dynamicTextureParams = 0x88; // CUtlVector<MaterialParamBuffer_t>
+                constexpr std::ptrdiff_t m_intAttributes = 0xA0; // CUtlVector<MaterialParamInt_t>
+                constexpr std::ptrdiff_t m_floatAttributes = 0xB8; // CUtlVector<MaterialParamFloat_t>
+                constexpr std::ptrdiff_t m_vectorAttributes = 0xD0; // CUtlVector<MaterialParamVector_t>
+                constexpr std::ptrdiff_t m_textureAttributes = 0xE8; // CUtlVector<MaterialParamTexture_t>
+                constexpr std::ptrdiff_t m_stringAttributes = 0x100; // CUtlVector<MaterialParamString_t>
+                constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
             }
             // Parent: None
             // Fields count: 15
@@ -8396,39 +8396,39 @@ namespace cs2_dumper {
         namespace panorama {
             // Alignment: 4
             // Members count: 13
-            enum class ELayoutNodeType : int32_t {
-                ROOT = 0,
-                STYLES = 1,
-                SCRIPT_BODY = 2,
-                SCRIPTS = 3,
-                SNIPPETS = 4,
-                INCLUDE = 5,
-                SNIPPET = 6,
-                PANEL = 7,
-                PANEL_ATTRIBUTE = 8,
-                PANEL_ATTRIBUTE_VALUE = 9,
-                REFERENCE_CONTENT = 10,
-                REFERENCE_COMPILED = 11,
-                REFERENCE_PASSTHROUGH = 12
+            enum class ELayoutNodeType : uint32_t {
+                ROOT = 0x0,
+                STYLES = 0x1,
+                SCRIPT_BODY = 0x2,
+                SCRIPTS = 0x3,
+                SNIPPETS = 0x4,
+                INCLUDE = 0x5,
+                SNIPPET = 0x6,
+                PANEL = 0x7,
+                PANEL_ATTRIBUTE = 0x8,
+                PANEL_ATTRIBUTE_VALUE = 0x9,
+                REFERENCE_CONTENT = 0xA,
+                REFERENCE_COMPILED = 0xB,
+                REFERENCE_PASSTHROUGH = 0xC
             }
             // Alignment: 4
             // Members count: 15
-            enum class EStyleNodeType : int32_t {
-                ROOT = 0,
-                EXPRESSION = 1,
-                PROPERTY = 2,
-                DEFINE = 3,
-                IMPORT = 4,
-                KEYFRAMES = 5,
-                KEYFRAME_SELECTOR = 6,
-                STYLE_SELECTOR = 7,
-                WHITESPACE = 8,
-                EXPRESSION_TEXT = 9,
-                EXPRESSION_URL = 10,
-                EXPRESSION_CONCAT = 11,
-                REFERENCE_CONTENT = 12,
-                REFERENCE_COMPILED = 13,
-                REFERENCE_PASSTHROUGH = 14
+            enum class EStyleNodeType : uint32_t {
+                ROOT = 0x0,
+                EXPRESSION = 0x1,
+                PROPERTY = 0x2,
+                DEFINE = 0x3,
+                IMPORT = 0x4,
+                KEYFRAMES = 0x5,
+                KEYFRAME_SELECTOR = 0x6,
+                STYLE_SELECTOR = 0x7,
+                WHITESPACE = 0x8,
+                EXPRESSION_TEXT = 0x9,
+                EXPRESSION_URL = 0xA,
+                EXPRESSION_CONCAT = 0xB,
+                REFERENCE_CONTENT = 0xC,
+                REFERENCE_COMPILED = 0xD,
+                REFERENCE_PASSTHROUGH = 0xE
             }
         }
         // Module: particles.dll
@@ -8437,649 +8437,649 @@ namespace cs2_dumper {
         namespace particles {
             // Alignment: 4
             // Members count: 6
-            enum class ParticleControlPointAxis_t : int32_t {
-                PARTICLE_CP_AXIS_X = 0,
-                PARTICLE_CP_AXIS_Y = 1,
-                PARTICLE_CP_AXIS_Z = 2,
-                PARTICLE_CP_AXIS_NEGATIVE_X = 3,
-                PARTICLE_CP_AXIS_NEGATIVE_Y = 4,
-                PARTICLE_CP_AXIS_NEGATIVE_Z = 5
+            enum class ParticleControlPointAxis_t : uint32_t {
+                PARTICLE_CP_AXIS_X = 0x0,
+                PARTICLE_CP_AXIS_Y = 0x1,
+                PARTICLE_CP_AXIS_Z = 0x2,
+                PARTICLE_CP_AXIS_NEGATIVE_X = 0x3,
+                PARTICLE_CP_AXIS_NEGATIVE_Y = 0x4,
+                PARTICLE_CP_AXIS_NEGATIVE_Z = 0x5
             }
             // Alignment: 4
             // Members count: 6
-            enum class ParticleImpulseType_t : int32_t {
-                IMPULSE_TYPE_NONE = 0,
-                IMPULSE_TYPE_GENERIC = 1,
-                IMPULSE_TYPE_ROPE = 2,
-                IMPULSE_TYPE_EXPLOSION = 4,
-                IMPULSE_TYPE_EXPLOSION_UNDERWATER = 8,
-                IMPULSE_TYPE_PARTICLE_SYSTEM = 16
+            enum class ParticleImpulseType_t : uint32_t {
+                IMPULSE_TYPE_NONE = 0x0,
+                IMPULSE_TYPE_GENERIC = 0x1,
+                IMPULSE_TYPE_ROPE = 0x2,
+                IMPULSE_TYPE_EXPLOSION = 0x4,
+                IMPULSE_TYPE_EXPLOSION_UNDERWATER = 0x8,
+                IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleFalloffFunction_t : int32_t {
-                PARTICLE_FALLOFF_CONSTANT = 0,
-                PARTICLE_FALLOFF_LINEAR = 1,
-                PARTICLE_FALLOFF_EXPONENTIAL = 2
+            enum class ParticleFalloffFunction_t : uint32_t {
+                PARTICLE_FALLOFF_CONSTANT = 0x0,
+                PARTICLE_FALLOFF_LINEAR = 0x1,
+                PARTICLE_FALLOFF_EXPONENTIAL = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class AnimationType_t : int32_t {
-                ANIMATION_TYPE_FIXED_RATE = 0,
-                ANIMATION_TYPE_FIT_LIFETIME = 1,
-                ANIMATION_TYPE_MANUAL_FRAMES = 2
+            enum class AnimationType_t : uint32_t {
+                ANIMATION_TYPE_FIXED_RATE = 0x0,
+                ANIMATION_TYPE_FIT_LIFETIME = 0x1,
+                ANIMATION_TYPE_MANUAL_FRAMES = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class ClosestPointTestType_t : int32_t {
-                PARTICLE_CLOSEST_TYPE_BOX = 0,
-                PARTICLE_CLOSEST_TYPE_CAPSULE = 1,
-                PARTICLE_CLOSEST_TYPE_HYBRID = 2
+            enum class ClosestPointTestType_t : uint32_t {
+                PARTICLE_CLOSEST_TYPE_BOX = 0x0,
+                PARTICLE_CLOSEST_TYPE_CAPSULE = 0x1,
+                PARTICLE_CLOSEST_TYPE_HYBRID = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class InheritableBoolType_t : int32_t {
-                INHERITABLE_BOOL_INHERIT = 0,
-                INHERITABLE_BOOL_FALSE = 1,
-                INHERITABLE_BOOL_TRUE = 2
+            enum class InheritableBoolType_t : uint32_t {
+                INHERITABLE_BOOL_INHERIT = 0x0,
+                INHERITABLE_BOOL_FALSE = 0x1,
+                INHERITABLE_BOOL_TRUE = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleHitboxBiasType_t : int32_t {
-                PARTICLE_HITBOX_BIAS_ENTITY = 0,
-                PARTICLE_HITBOX_BIAS_HITBOX = 1
+            enum class ParticleHitboxBiasType_t : uint32_t {
+                PARTICLE_HITBOX_BIAS_ENTITY = 0x0,
+                PARTICLE_HITBOX_BIAS_HITBOX = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleAttrBoxFlags_t : int32_t {
-                PARTICLE_ATTR_BOX_FLAGS_NONE = 0,
-                PARTICLE_ATTR_BOX_FLAGS_WATER = 1
+            enum class ParticleAttrBoxFlags_t : uint32_t {
+                PARTICLE_ATTR_BOX_FLAGS_NONE = 0x0,
+                PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1
             }
             // Alignment: 4
             // Members count: 7
-            enum class PFuncVisualizationType_t : int32_t {
-                PFUNC_VISUALIZATION_SPHERE_WIREFRAME = 0,
-                PFUNC_VISUALIZATION_SPHERE_SOLID = 1,
-                PFUNC_VISUALIZATION_BOX = 2,
-                PFUNC_VISUALIZATION_RING = 3,
-                PFUNC_VISUALIZATION_PLANE = 4,
-                PFUNC_VISUALIZATION_LINE = 5,
-                PFUNC_VISUALIZATION_CYLINDER = 6
+            enum class PFuncVisualizationType_t : uint32_t {
+                PFUNC_VISUALIZATION_SPHERE_WIREFRAME = 0x0,
+                PFUNC_VISUALIZATION_SPHERE_SOLID = 0x1,
+                PFUNC_VISUALIZATION_BOX = 0x2,
+                PFUNC_VISUALIZATION_RING = 0x3,
+                PFUNC_VISUALIZATION_PLANE = 0x4,
+                PFUNC_VISUALIZATION_LINE = 0x5,
+                PFUNC_VISUALIZATION_CYLINDER = 0x6
             }
             // Alignment: 4
             // Members count: 3
-            enum class PetGroundType_t : int32_t {
-                PET_GROUND_NONE = 0,
-                PET_GROUND_GRID = 1,
-                PET_GROUND_PLANE = 2
+            enum class PetGroundType_t : uint32_t {
+                PET_GROUND_NONE = 0x0,
+                PET_GROUND_GRID = 0x1,
+                PET_GROUND_PLANE = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class SpriteCardShaderType_t : int32_t {
-                SPRITECARD_SHADER_BASE = 0,
-                SPRITECARD_SHADER_CUSTOM = 1
+            enum class SpriteCardShaderType_t : uint32_t {
+                SPRITECARD_SHADER_BASE = 0x0,
+                SPRITECARD_SHADER_CUSTOM = 0x1
             }
             // Alignment: 4
             // Members count: 5
-            enum class ParticleTopology_t : int32_t {
-                PARTICLE_TOPOLOGY_POINTS = 0,
-                PARTICLE_TOPOLOGY_LINES = 1,
-                PARTICLE_TOPOLOGY_TRIS = 2,
-                PARTICLE_TOPOLOGY_QUADS = 3,
-                PARTICLE_TOPOLOGY_CUBES = 4
+            enum class ParticleTopology_t : uint32_t {
+                PARTICLE_TOPOLOGY_POINTS = 0x0,
+                PARTICLE_TOPOLOGY_LINES = 0x1,
+                PARTICLE_TOPOLOGY_TRIS = 0x2,
+                PARTICLE_TOPOLOGY_QUADS = 0x3,
+                PARTICLE_TOPOLOGY_CUBES = 0x4
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleDetailLevel_t : int32_t {
-                PARTICLEDETAIL_LOW = 0,
-                PARTICLEDETAIL_MEDIUM = 1,
-                PARTICLEDETAIL_HIGH = 2,
-                PARTICLEDETAIL_ULTRA = 3
+            enum class ParticleDetailLevel_t : uint32_t {
+                PARTICLEDETAIL_LOW = 0x0,
+                PARTICLEDETAIL_MEDIUM = 0x1,
+                PARTICLEDETAIL_HIGH = 0x2,
+                PARTICLEDETAIL_ULTRA = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleTraceSet_t : int32_t {
-                PARTICLE_TRACE_SET_ALL = 0,
-                PARTICLE_TRACE_SET_STATIC = 1,
-                PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 2,
-                PARTICLE_TRACE_SET_DYNAMIC = 3
+            enum class ParticleTraceSet_t : uint32_t {
+                PARTICLE_TRACE_SET_ALL = 0x0,
+                PARTICLE_TRACE_SET_STATIC = 0x1,
+                PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
+                PARTICLE_TRACE_SET_DYNAMIC = 0x3
             }
             // Alignment: 4
             // Members count: 5
-            enum class ParticleCollisionMode_t : int32_t {
-                COLLISION_MODE_PER_PARTICLE_TRACE = 3,
-                COLLISION_MODE_USE_NEAREST_TRACE = 2,
-                COLLISION_MODE_PER_FRAME_PLANESET = 1,
-                COLLISION_MODE_INITIAL_TRACE_DOWN = 0,
-                COLLISION_MODE_DISABLED = -1
+            enum class ParticleCollisionMode_t : uint32_t {
+                COLLISION_MODE_PER_PARTICLE_TRACE = 0x3,
+                COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
+                COLLISION_MODE_PER_FRAME_PLANESET = 0x1,
+                COLLISION_MODE_INITIAL_TRACE_DOWN = 0x0,
+                COLLISION_MODE_DISABLED = 0xFFFFFFFFFFFFFFFF
             }
             // Alignment: 4
             // Members count: 5
-            enum class ParticleColorBlendMode_t : int32_t {
-                PARTICLEBLEND_DEFAULT = 0,
-                PARTICLEBLEND_OVERLAY = 1,
-                PARTICLEBLEND_DARKEN = 2,
-                PARTICLEBLEND_LIGHTEN = 3,
-                PARTICLEBLEND_MULTIPLY = 4
+            enum class ParticleColorBlendMode_t : uint32_t {
+                PARTICLEBLEND_DEFAULT = 0x0,
+                PARTICLEBLEND_OVERLAY = 0x1,
+                PARTICLEBLEND_DARKEN = 0x2,
+                PARTICLEBLEND_LIGHTEN = 0x3,
+                PARTICLEBLEND_MULTIPLY = 0x4
             }
             // Alignment: 4
             // Members count: 7
-            enum class Detail2Combo_t : int32_t {
-                DETAIL_2_COMBO_UNINITIALIZED = -1,
-                DETAIL_2_COMBO_OFF = 0,
-                DETAIL_2_COMBO_ADD = 1,
-                DETAIL_2_COMBO_ADD_SELF_ILLUM = 2,
-                DETAIL_2_COMBO_MOD2X = 3,
-                DETAIL_2_COMBO_MUL = 4,
-                DETAIL_2_COMBO_CROSSFADE = 5
+            enum class Detail2Combo_t : uint32_t {
+                DETAIL_2_COMBO_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                DETAIL_2_COMBO_OFF = 0x0,
+                DETAIL_2_COMBO_ADD = 0x1,
+                DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
+                DETAIL_2_COMBO_MOD2X = 0x3,
+                DETAIL_2_COMBO_MUL = 0x4,
+                DETAIL_2_COMBO_CROSSFADE = 0x5
             }
             // Alignment: 4
             // Members count: 4
-            enum class DetailCombo_t : int32_t {
-                DETAIL_COMBO_OFF = 0,
-                DETAIL_COMBO_ADD = 1,
-                DETAIL_COMBO_ADD_SELF_ILLUM = 2,
-                DETAIL_COMBO_MOD2X = 3
+            enum class DetailCombo_t : uint32_t {
+                DETAIL_COMBO_OFF = 0x0,
+                DETAIL_COMBO_ADD = 0x1,
+                DETAIL_COMBO_ADD_SELF_ILLUM = 0x2,
+                DETAIL_COMBO_MOD2X = 0x3
             }
             // Alignment: 4
             // Members count: 9
-            enum class ScalarExpressionType_t : int32_t {
-                SCALAR_EXPRESSION_UNINITIALIZED = -1,
-                SCALAR_EXPRESSION_ADD = 0,
-                SCALAR_EXPRESSION_SUBTRACT = 1,
-                SCALAR_EXPRESSION_MUL = 2,
-                SCALAR_EXPRESSION_DIVIDE = 3,
-                SCALAR_EXPRESSION_INPUT_1 = 4,
-                SCALAR_EXPRESSION_MIN = 5,
-                SCALAR_EXPRESSION_MAX = 6,
-                SCALAR_EXPRESSION_MOD = 7
+            enum class ScalarExpressionType_t : uint32_t {
+                SCALAR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                SCALAR_EXPRESSION_ADD = 0x0,
+                SCALAR_EXPRESSION_SUBTRACT = 0x1,
+                SCALAR_EXPRESSION_MUL = 0x2,
+                SCALAR_EXPRESSION_DIVIDE = 0x3,
+                SCALAR_EXPRESSION_INPUT_1 = 0x4,
+                SCALAR_EXPRESSION_MIN = 0x5,
+                SCALAR_EXPRESSION_MAX = 0x6,
+                SCALAR_EXPRESSION_MOD = 0x7
             }
             // Alignment: 4
             // Members count: 9
-            enum class VectorExpressionType_t : int32_t {
-                VECTOR_EXPRESSION_UNINITIALIZED = -1,
-                VECTOR_EXPRESSION_ADD = 0,
-                VECTOR_EXPRESSION_SUBTRACT = 1,
-                VECTOR_EXPRESSION_MUL = 2,
-                VECTOR_EXPRESSION_DIVIDE = 3,
-                VECTOR_EXPRESSION_INPUT_1 = 4,
-                VECTOR_EXPRESSION_MIN = 5,
-                VECTOR_EXPRESSION_MAX = 6,
-                VECTOR_EXPRESSION_CROSSPRODUCT = 7
+            enum class VectorExpressionType_t : uint32_t {
+                VECTOR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                VECTOR_EXPRESSION_ADD = 0x0,
+                VECTOR_EXPRESSION_SUBTRACT = 0x1,
+                VECTOR_EXPRESSION_MUL = 0x2,
+                VECTOR_EXPRESSION_DIVIDE = 0x3,
+                VECTOR_EXPRESSION_INPUT_1 = 0x4,
+                VECTOR_EXPRESSION_MIN = 0x5,
+                VECTOR_EXPRESSION_MAX = 0x6,
+                VECTOR_EXPRESSION_CROSSPRODUCT = 0x7
             }
             // Alignment: 4
             // Members count: 7
-            enum class VectorFloatExpressionType_t : int32_t {
-                VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = -1,
-                VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0,
-                VECTOR_FLOAT_EXPRESSION_DISTANCE = 1,
-                VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 2,
-                VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTH = 3,
-                VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTHSQR = 4,
-                VECTOR_FLOAT_EXPRESSION_INPUT1_NOISE = 5
+            enum class VectorFloatExpressionType_t : uint32_t {
+                VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
+                VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,
+                VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 0x2,
+                VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTH = 0x3,
+                VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTHSQR = 0x4,
+                VECTOR_FLOAT_EXPRESSION_INPUT1_NOISE = 0x5
             }
             // Alignment: 4
             // Members count: 4
-            enum class MissingParentInheritBehavior_t : int32_t {
-                MISSING_PARENT_DO_NOTHING = -1,
-                MISSING_PARENT_KILL = 0,
-                MISSING_PARENT_FIND_NEW = 1,
-                MISSING_PARENT_SAME_INDEX = 2
+            enum class MissingParentInheritBehavior_t : uint32_t {
+                MISSING_PARENT_DO_NOTHING = 0xFFFFFFFFFFFFFFFF,
+                MISSING_PARENT_KILL = 0x0,
+                MISSING_PARENT_FIND_NEW = 0x1,
+                MISSING_PARENT_SAME_INDEX = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class HitboxLerpType_t : int32_t {
-                HITBOX_LERP_LIFETIME = 0,
-                HITBOX_LERP_CONSTANT = 1
+            enum class HitboxLerpType_t : uint32_t {
+                HITBOX_LERP_LIFETIME = 0x0,
+                HITBOX_LERP_CONSTANT = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleSelection_t : int32_t {
-                PARTICLE_SELECTION_FIRST = 0,
-                PARTICLE_SELECTION_LAST = 1,
-                PARTICLE_SELECTION_NUMBER = 2
+            enum class ParticleSelection_t : uint32_t {
+                PARTICLE_SELECTION_FIRST = 0x0,
+                PARTICLE_SELECTION_LAST = 0x1,
+                PARTICLE_SELECTION_NUMBER = 0x2
             }
             // Alignment: 4
             // Members count: 12
-            enum class ParticlePinDistance_t : int32_t {
-                PARTICLE_PIN_DISTANCE_NONE = -1,
-                PARTICLE_PIN_DISTANCE_NEIGHBOR = 0,
-                PARTICLE_PIN_DISTANCE_FARTHEST = 1,
-                PARTICLE_PIN_DISTANCE_FIRST = 2,
-                PARTICLE_PIN_DISTANCE_LAST = 3,
-                PARTICLE_PIN_DISTANCE_CENTER = 5,
-                PARTICLE_PIN_DISTANCE_CP = 6,
-                PARTICLE_PIN_DISTANCE_CP_PAIR_EITHER = 7,
-                PARTICLE_PIN_DISTANCE_CP_PAIR_BOTH = 8,
-                PARTICLE_PIN_SPEED = 9,
-                PARTICLE_PIN_COLLECTION_AGE = 10,
-                PARTICLE_PIN_FLOAT_VALUE = 11
+            enum class ParticlePinDistance_t : uint32_t {
+                PARTICLE_PIN_DISTANCE_NONE = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
+                PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,
+                PARTICLE_PIN_DISTANCE_FIRST = 0x2,
+                PARTICLE_PIN_DISTANCE_LAST = 0x3,
+                PARTICLE_PIN_DISTANCE_CENTER = 0x5,
+                PARTICLE_PIN_DISTANCE_CP = 0x6,
+                PARTICLE_PIN_DISTANCE_CP_PAIR_EITHER = 0x7,
+                PARTICLE_PIN_DISTANCE_CP_PAIR_BOTH = 0x8,
+                PARTICLE_PIN_SPEED = 0x9,
+                PARTICLE_PIN_COLLECTION_AGE = 0xA,
+                PARTICLE_PIN_FLOAT_VALUE = 0xB
             }
             // Alignment: 4
             // Members count: 13
-            enum class ParticleColorBlendType_t : int32_t {
-                PARTICLE_COLOR_BLEND_MULTIPLY = 0,
-                PARTICLE_COLOR_BLEND_MULTIPLY2X = 1,
-                PARTICLE_COLOR_BLEND_DIVIDE = 2,
-                PARTICLE_COLOR_BLEND_ADD = 3,
-                PARTICLE_COLOR_BLEND_SUBTRACT = 4,
-                PARTICLE_COLOR_BLEND_MOD2X = 5,
-                PARTICLE_COLOR_BLEND_SCREEN = 6,
-                PARTICLE_COLOR_BLEND_MAX = 7,
-                PARTICLE_COLOR_BLEND_MIN = 8,
-                PARTICLE_COLOR_BLEND_REPLACE = 9,
-                PARTICLE_COLOR_BLEND_AVERAGE = 10,
-                PARTICLE_COLOR_BLEND_NEGATE = 11,
-                PARTICLE_COLOR_BLEND_LUMINANCE = 12
+            enum class ParticleColorBlendType_t : uint32_t {
+                PARTICLE_COLOR_BLEND_MULTIPLY = 0x0,
+                PARTICLE_COLOR_BLEND_MULTIPLY2X = 0x1,
+                PARTICLE_COLOR_BLEND_DIVIDE = 0x2,
+                PARTICLE_COLOR_BLEND_ADD = 0x3,
+                PARTICLE_COLOR_BLEND_SUBTRACT = 0x4,
+                PARTICLE_COLOR_BLEND_MOD2X = 0x5,
+                PARTICLE_COLOR_BLEND_SCREEN = 0x6,
+                PARTICLE_COLOR_BLEND_MAX = 0x7,
+                PARTICLE_COLOR_BLEND_MIN = 0x8,
+                PARTICLE_COLOR_BLEND_REPLACE = 0x9,
+                PARTICLE_COLOR_BLEND_AVERAGE = 0xA,
+                PARTICLE_COLOR_BLEND_NEGATE = 0xB,
+                PARTICLE_COLOR_BLEND_LUMINANCE = 0xC
             }
             // Alignment: 4
             // Members count: 6
-            enum class ParticleSetMethod_t : int32_t {
-                PARTICLE_SET_REPLACE_VALUE = 0,
-                PARTICLE_SET_SCALE_INITIAL_VALUE = 1,
-                PARTICLE_SET_ADD_TO_INITIAL_VALUE = 2,
-                PARTICLE_SET_RAMP_CURRENT_VALUE = 3,
-                PARTICLE_SET_SCALE_CURRENT_VALUE = 4,
-                PARTICLE_SET_ADD_TO_CURRENT_VALUE = 5
+            enum class ParticleSetMethod_t : uint32_t {
+                PARTICLE_SET_REPLACE_VALUE = 0x0,
+                PARTICLE_SET_SCALE_INITIAL_VALUE = 0x1,
+                PARTICLE_SET_ADD_TO_INITIAL_VALUE = 0x2,
+                PARTICLE_SET_RAMP_CURRENT_VALUE = 0x3,
+                PARTICLE_SET_SCALE_CURRENT_VALUE = 0x4,
+                PARTICLE_SET_ADD_TO_CURRENT_VALUE = 0x5
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleDirectionNoiseType_t : int32_t {
-                PARTICLE_DIR_NOISE_PERLIN = 0,
-                PARTICLE_DIR_NOISE_CURL = 1,
-                PARTICLE_DIR_NOISE_WORLEY_BASIC = 2
+            enum class ParticleDirectionNoiseType_t : uint32_t {
+                PARTICLE_DIR_NOISE_PERLIN = 0x0,
+                PARTICLE_DIR_NOISE_CURL = 0x1,
+                PARTICLE_DIR_NOISE_WORLEY_BASIC = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleRotationLockType_t : int32_t {
-                PARTICLE_ROTATION_LOCK_NONE = 0,
-                PARTICLE_ROTATION_LOCK_ROTATIONS = 1,
-                PARTICLE_ROTATION_LOCK_NORMAL = 2
+            enum class ParticleRotationLockType_t : uint32_t {
+                PARTICLE_ROTATION_LOCK_NONE = 0x0,
+                PARTICLE_ROTATION_LOCK_ROTATIONS = 0x1,
+                PARTICLE_ROTATION_LOCK_NORMAL = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleEndcapMode_t : int32_t {
-                PARTICLE_ENDCAP_ALWAYS_ON = -1,
-                PARTICLE_ENDCAP_ENDCAP_OFF = 0,
-                PARTICLE_ENDCAP_ENDCAP_ON = 1
+            enum class ParticleEndcapMode_t : uint32_t {
+                PARTICLE_ENDCAP_ALWAYS_ON = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
+                PARTICLE_ENDCAP_ENDCAP_ON = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleLightingQuality_t : int32_t {
-                PARTICLE_LIGHTING_PER_PARTICLE = 0,
-                PARTICLE_LIGHTING_PER_VERTEX = 1,
-                PARTICLE_LIGHTING_PER_PIXEL = -1
+            enum class ParticleLightingQuality_t : uint32_t {
+                PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
+                PARTICLE_LIGHTING_PER_VERTEX = 0x1,
+                PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFFFFFFFFFF
             }
             // Alignment: 4
             // Members count: 2
-            enum class StandardLightingAttenuationStyle_t : int32_t {
-                LIGHT_STYLE_OLD = 0,
-                LIGHT_STYLE_NEW = 1
+            enum class StandardLightingAttenuationStyle_t : uint32_t {
+                LIGHT_STYLE_OLD = 0x0,
+                LIGHT_STYLE_NEW = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleTraceMissBehavior_t : int32_t {
-                PARTICLE_TRACE_MISS_BEHAVIOR_NONE = 0,
-                PARTICLE_TRACE_MISS_BEHAVIOR_KILL = 1,
-                PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END = 2
+            enum class ParticleTraceMissBehavior_t : uint32_t {
+                PARTICLE_TRACE_MISS_BEHAVIOR_NONE = 0x0,
+                PARTICLE_TRACE_MISS_BEHAVIOR_KILL = 0x1,
+                PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleOrientationSetMode_t : int32_t {
-                PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0,
-                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 1
+            enum class ParticleOrientationSetMode_t : uint32_t {
+                PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
+                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleLightnintBranchBehavior_t : int32_t {
-                PARTICLE_LIGHTNING_BRANCH_CURRENT_DIR = 0,
-                PARTICLE_LIGHTNING_BRANCH_ENDPOINT_DIR = 1
+            enum class ParticleLightnintBranchBehavior_t : uint32_t {
+                PARTICLE_LIGHTNING_BRANCH_CURRENT_DIR = 0x0,
+                PARTICLE_LIGHTNING_BRANCH_ENDPOINT_DIR = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleLightFogLightingMode_t : int32_t {
-                PARTICLE_LIGHT_FOG_LIGHTING_MODE_NONE = 0,
-                PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC = 2,
-                PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC_NOSHADOWS = 4
+            enum class ParticleLightFogLightingMode_t : uint32_t {
+                PARTICLE_LIGHT_FOG_LIGHTING_MODE_NONE = 0x0,
+                PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC = 0x2,
+                PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC_NOSHADOWS = 0x4
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleSequenceCropOverride_t : int32_t {
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = -1,
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0,
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 1
+            enum class ParticleSequenceCropOverride_t : uint32_t {
+                PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
+                PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleParentSetMode_t : int32_t {
-                PARTICLE_SET_PARENT_NO = 0,
-                PARTICLE_SET_PARENT_IMMEDIATE = 1,
-                PARTICLE_SET_PARENT_ROOT = 1
+            enum class ParticleParentSetMode_t : uint32_t {
+                PARTICLE_SET_PARENT_NO = 0x0,
+                PARTICLE_SET_PARENT_IMMEDIATE = 0x1,
+                PARTICLE_SET_PARENT_ROOT = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class MaterialProxyType_t : int32_t {
-                MATERIAL_PROXY_STATUS_EFFECT = 0,
-                MATERIAL_PROXY_TINT = 1
+            enum class MaterialProxyType_t : uint32_t {
+                MATERIAL_PROXY_STATUS_EFFECT = 0x0,
+                MATERIAL_PROXY_TINT = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class BBoxVolumeType_t : int32_t {
-                BBOX_VOLUME = 0,
-                BBOX_DIMENSIONS = 1,
-                BBOX_MINS_MAXS = 2
+            enum class BBoxVolumeType_t : uint32_t {
+                BBOX_VOLUME = 0x0,
+                BBOX_DIMENSIONS = 0x1,
+                BBOX_MINS_MAXS = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleHitboxDataSelection_t : int32_t {
-                PARTICLE_HITBOX_AVERAGE_SPEED = 0,
-                PARTICLE_HITBOX_COUNT = 1
+            enum class ParticleHitboxDataSelection_t : uint32_t {
+                PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
+                PARTICLE_HITBOX_COUNT = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class SnapshotIndexType_t : int32_t {
-                SNAPSHOT_INDEX_INCREMENT = 0,
-                SNAPSHOT_INDEX_DIRECT = 1
+            enum class SnapshotIndexType_t : uint32_t {
+                SNAPSHOT_INDEX_INCREMENT = 0x0,
+                SNAPSHOT_INDEX_DIRECT = 0x1
             }
             // Alignment: 4
             // Members count: 6
-            enum class ParticleOrientationChoiceList_t : int32_t {
-                PARTICLE_ORIENTATION_SCREEN_ALIGNED = 0,
-                PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED = 1,
-                PARTICLE_ORIENTATION_WORLD_Z_ALIGNED = 2,
-                PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL = 3,
-                PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL = 4,
-                PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION = 5
+            enum class ParticleOrientationChoiceList_t : uint32_t {
+                PARTICLE_ORIENTATION_SCREEN_ALIGNED = 0x0,
+                PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED = 0x1,
+                PARTICLE_ORIENTATION_WORLD_Z_ALIGNED = 0x2,
+                PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL = 0x3,
+                PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL = 0x4,
+                PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION = 0x5
             }
             // Alignment: 4
             // Members count: 7
-            enum class ParticleOutputBlendMode_t : int32_t {
-                PARTICLE_OUTPUT_BLEND_MODE_ALPHA = 0,
-                PARTICLE_OUTPUT_BLEND_MODE_ADD = 1,
-                PARTICLE_OUTPUT_BLEND_MODE_BLEND_ADD = 2,
-                PARTICLE_OUTPUT_BLEND_MODE_HALF_BLEND_ADD = 3,
-                PARTICLE_OUTPUT_BLEND_MODE_NEG_HALF_BLEND_ADD = 4,
-                PARTICLE_OUTPUT_BLEND_MODE_MOD2X = 5,
-                PARTICLE_OUTPUT_BLEND_MODE_LIGHTEN = 6
+            enum class ParticleOutputBlendMode_t : uint32_t {
+                PARTICLE_OUTPUT_BLEND_MODE_ALPHA = 0x0,
+                PARTICLE_OUTPUT_BLEND_MODE_ADD = 0x1,
+                PARTICLE_OUTPUT_BLEND_MODE_BLEND_ADD = 0x2,
+                PARTICLE_OUTPUT_BLEND_MODE_HALF_BLEND_ADD = 0x3,
+                PARTICLE_OUTPUT_BLEND_MODE_NEG_HALF_BLEND_ADD = 0x4,
+                PARTICLE_OUTPUT_BLEND_MODE_MOD2X = 0x5,
+                PARTICLE_OUTPUT_BLEND_MODE_LIGHTEN = 0x6
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleAlphaReferenceType_t : int32_t {
-                PARTICLE_ALPHA_REFERENCE_ALPHA_ALPHA = 0,
-                PARTICLE_ALPHA_REFERENCE_OPAQUE_ALPHA = 1,
-                PARTICLE_ALPHA_REFERENCE_ALPHA_OPAQUE = 2,
-                PARTICLE_ALPHA_REFERENCE_OPAQUE_OPAQUE = 3
+            enum class ParticleAlphaReferenceType_t : uint32_t {
+                PARTICLE_ALPHA_REFERENCE_ALPHA_ALPHA = 0x0,
+                PARTICLE_ALPHA_REFERENCE_OPAQUE_ALPHA = 0x1,
+                PARTICLE_ALPHA_REFERENCE_ALPHA_OPAQUE = 0x2,
+                PARTICLE_ALPHA_REFERENCE_OPAQUE_OPAQUE = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class BlurFilterType_t : int32_t {
-                BLURFILTER_GAUSSIAN = 0,
-                BLURFILTER_BOX = 1
+            enum class BlurFilterType_t : uint32_t {
+                BLURFILTER_GAUSSIAN = 0x0,
+                BLURFILTER_BOX = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleLightTypeChoiceList_t : int32_t {
-                PARTICLE_LIGHT_TYPE_POINT = 0,
-                PARTICLE_LIGHT_TYPE_SPOT = 1,
-                PARTICLE_LIGHT_TYPE_FX = 2,
-                PARTICLE_LIGHT_TYPE_CAPSULE = 3
+            enum class ParticleLightTypeChoiceList_t : uint32_t {
+                PARTICLE_LIGHT_TYPE_POINT = 0x0,
+                PARTICLE_LIGHT_TYPE_SPOT = 0x1,
+                PARTICLE_LIGHT_TYPE_FX = 0x2,
+                PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleLightUnitChoiceList_t : int32_t {
-                PARTICLE_LIGHT_UNIT_CANDELAS = 0,
-                PARTICLE_LIGHT_UNIT_LUMENS = 1
+            enum class ParticleLightUnitChoiceList_t : uint32_t {
+                PARTICLE_LIGHT_UNIT_CANDELAS = 0x0,
+                PARTICLE_LIGHT_UNIT_LUMENS = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleOmni2LightTypeChoiceList_t : int32_t {
-                PARTICLE_OMNI2_LIGHT_TYPE_POINT = 0,
-                PARTICLE_OMNI2_LIGHT_TYPE_SPHERE = 1
+            enum class ParticleOmni2LightTypeChoiceList_t : uint32_t {
+                PARTICLE_OMNI2_LIGHT_TYPE_POINT = 0x0,
+                PARTICLE_OMNI2_LIGHT_TYPE_SPHERE = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleLightBehaviorChoiceList_t : int32_t {
-                PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0,
-                PARTICLE_LIGHT_BEHAVIOR_ROPE = 1,
-                PARTICLE_LIGHT_BEHAVIOR_TRAILS = 2
+            enum class ParticleLightBehaviorChoiceList_t : uint32_t {
+                PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0x0,
+                PARTICLE_LIGHT_BEHAVIOR_ROPE = 0x1,
+                PARTICLE_LIGHT_BEHAVIOR_TRAILS = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleDepthFeatheringMode_t : int32_t {
-                PARTICLE_DEPTH_FEATHERING_OFF = 0,
-                PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL = 1,
-                PARTICLE_DEPTH_FEATHERING_ON_REQUIRED = 2
+            enum class ParticleDepthFeatheringMode_t : uint32_t {
+                PARTICLE_DEPTH_FEATHERING_OFF = 0x0,
+                PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL = 0x1,
+                PARTICLE_DEPTH_FEATHERING_ON_REQUIRED = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleVRHandChoiceList_t : int32_t {
-                PARTICLE_VRHAND_LEFT = 0,
-                PARTICLE_VRHAND_RIGHT = 1,
-                PARTICLE_VRHAND_CP = 2,
-                PARTICLE_VRHAND_CP_OBJECT = 3
+            enum class ParticleVRHandChoiceList_t : uint32_t {
+                PARTICLE_VRHAND_LEFT = 0x0,
+                PARTICLE_VRHAND_RIGHT = 0x1,
+                PARTICLE_VRHAND_CP = 0x2,
+                PARTICLE_VRHAND_CP_OBJECT = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class ParticleSortingChoiceList_t : int32_t {
-                PARTICLE_SORTING_NEAREST = 0,
-                PARTICLE_SORTING_CREATION_TIME = 1
+            enum class ParticleSortingChoiceList_t : uint32_t {
+                PARTICLE_SORTING_NEAREST = 0x0,
+                PARTICLE_SORTING_CREATION_TIME = 0x1
             }
             // Alignment: 4
             // Members count: 10
-            enum class SpriteCardTextureType_t : int32_t {
-                SPRITECARD_TEXTURE_DIFFUSE = 0,
-                SPRITECARD_TEXTURE_ZOOM = 1,
-                SPRITECARD_TEXTURE_1D_COLOR_LOOKUP = 2,
-                SPRITECARD_TEXTURE_UVDISTORTION = 3,
-                SPRITECARD_TEXTURE_UVDISTORTION_ZOOM = 4,
-                SPRITECARD_TEXTURE_NORMALMAP = 5,
-                SPRITECARD_TEXTURE_ANIMMOTIONVEC = 6,
-                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_A = 7,
-                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_B = 8,
-                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C = 9
+            enum class SpriteCardTextureType_t : uint32_t {
+                SPRITECARD_TEXTURE_DIFFUSE = 0x0,
+                SPRITECARD_TEXTURE_ZOOM = 0x1,
+                SPRITECARD_TEXTURE_1D_COLOR_LOOKUP = 0x2,
+                SPRITECARD_TEXTURE_UVDISTORTION = 0x3,
+                SPRITECARD_TEXTURE_UVDISTORTION_ZOOM = 0x4,
+                SPRITECARD_TEXTURE_NORMALMAP = 0x5,
+                SPRITECARD_TEXTURE_ANIMMOTIONVEC = 0x6,
+                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_A = 0x7,
+                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_B = 0x8,
+                SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C = 0x9
             }
             // Alignment: 4
             // Members count: 15
-            enum class SpriteCardTextureChannel_t : int32_t {
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB = 0,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA = 1,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_A = 2,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A = 3,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_ALPHAMASK = 4,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_RGBMASK = 5,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA_RGBALPHA = 6,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_A_RGBALPHA = 7,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A_RGBALPHA = 8,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_R = 9,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_G = 10,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_B = 11,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_RALPHA = 12,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_GALPHA = 13,
-                SPRITECARD_TEXTURE_CHANNEL_MIX_BALPHA = 14
+            enum class SpriteCardTextureChannel_t : uint32_t {
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB = 0x0,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA = 0x1,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_A = 0x2,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A = 0x3,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_ALPHAMASK = 0x4,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_RGBMASK = 0x5,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA_RGBALPHA = 0x6,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_A_RGBALPHA = 0x7,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A_RGBALPHA = 0x8,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_R = 0x9,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_G = 0xA,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_B = 0xB,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_RALPHA = 0xC,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_GALPHA = 0xD,
+                SPRITECARD_TEXTURE_CHANNEL_MIX_BALPHA = 0xE
             }
             // Alignment: 4
             // Members count: 14
-            enum class SpriteCardPerParticleScale_t : int32_t {
-                SPRITECARD_TEXTURE_PP_SCALE_NONE = 0,
-                SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_AGE = 1,
-                SPRITECARD_TEXTURE_PP_SCALE_ANIMATION_FRAME = 2,
-                SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA1 = 3,
-                SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA2 = 4,
-                SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_ALPHA = 5,
-                SPRITECARD_TEXTURE_PP_SCALE_SHADER_RADIUS = 6,
-                SPRITECARD_TEXTURE_PP_SCALE_ROLL = 7,
-                SPRITECARD_TEXTURE_PP_SCALE_YAW = 8,
-                SPRITECARD_TEXTURE_PP_SCALE_PITCH = 9,
-                SPRITECARD_TEXTURE_PP_SCALE_RANDOM = 10,
-                SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM = 11,
-                SPRITECARD_TEXTURE_PP_SCALE_RANDOM_TIME = 12,
-                SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM_TIME = 13
+            enum class SpriteCardPerParticleScale_t : uint32_t {
+                SPRITECARD_TEXTURE_PP_SCALE_NONE = 0x0,
+                SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_AGE = 0x1,
+                SPRITECARD_TEXTURE_PP_SCALE_ANIMATION_FRAME = 0x2,
+                SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA1 = 0x3,
+                SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA2 = 0x4,
+                SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_ALPHA = 0x5,
+                SPRITECARD_TEXTURE_PP_SCALE_SHADER_RADIUS = 0x6,
+                SPRITECARD_TEXTURE_PP_SCALE_ROLL = 0x7,
+                SPRITECARD_TEXTURE_PP_SCALE_YAW = 0x8,
+                SPRITECARD_TEXTURE_PP_SCALE_PITCH = 0x9,
+                SPRITECARD_TEXTURE_PP_SCALE_RANDOM = 0xA,
+                SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM = 0xB,
+                SPRITECARD_TEXTURE_PP_SCALE_RANDOM_TIME = 0xC,
+                SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM_TIME = 0xD
             }
             // Alignment: 4
             // Members count: 7
-            enum class ParticleTextureLayerBlendType_t : int32_t {
-                SPRITECARD_TEXTURE_BLEND_MULTIPLY = 0,
-                SPRITECARD_TEXTURE_BLEND_MOD2X = 1,
-                SPRITECARD_TEXTURE_BLEND_REPLACE = 2,
-                SPRITECARD_TEXTURE_BLEND_ADD = 3,
-                SPRITECARD_TEXTURE_BLEND_SUBTRACT = 4,
-                SPRITECARD_TEXTURE_BLEND_AVERAGE = 5,
-                SPRITECARD_TEXTURE_BLEND_LUMINANCE = 6
+            enum class ParticleTextureLayerBlendType_t : uint32_t {
+                SPRITECARD_TEXTURE_BLEND_MULTIPLY = 0x0,
+                SPRITECARD_TEXTURE_BLEND_MOD2X = 0x1,
+                SPRITECARD_TEXTURE_BLEND_REPLACE = 0x2,
+                SPRITECARD_TEXTURE_BLEND_ADD = 0x3,
+                SPRITECARD_TEXTURE_BLEND_SUBTRACT = 0x4,
+                SPRITECARD_TEXTURE_BLEND_AVERAGE = 0x5,
+                SPRITECARD_TEXTURE_BLEND_LUMINANCE = 0x6
             }
             // Alignment: 4
             // Members count: 6
-            enum class ParticlePostProcessPriorityGroup_t : int32_t {
-                PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME = 0,
-                PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE = 1,
-                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_EFFECT = 2,
-                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW = 3,
-                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 4,
-                PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 5
+            enum class ParticlePostProcessPriorityGroup_t : uint32_t {
+                PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME = 0x0,
+                PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE = 0x1,
+                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_EFFECT = 0x2,
+                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW = 0x3,
+                PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 0x4,
+                PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 0x5
             }
             // Alignment: 4
             // Members count: 3
-            enum class ParticleFogType_t : int32_t {
-                PARTICLE_FOG_GAME_DEFAULT = 0,
-                PARTICLE_FOG_ENABLED = 1,
-                PARTICLE_FOG_DISABLED = 2
+            enum class ParticleFogType_t : uint32_t {
+                PARTICLE_FOG_GAME_DEFAULT = 0x0,
+                PARTICLE_FOG_ENABLED = 0x1,
+                PARTICLE_FOG_DISABLED = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class TextureRepetitionMode_t : int32_t {
-                TEXTURE_REPETITION_PARTICLE = 0,
-                TEXTURE_REPETITION_PATH = 1
+            enum class TextureRepetitionMode_t : uint32_t {
+                TEXTURE_REPETITION_PARTICLE = 0x0,
+                TEXTURE_REPETITION_PATH = 0x1
             }
             // Alignment: 4
             // Members count: 24
-            enum class ParticleFloatType_t : int32_t {
-                PF_TYPE_INVALID = -1,
-                PF_TYPE_LITERAL = 0,
-                PF_TYPE_NAMED_VALUE = 1,
-                PF_TYPE_RANDOM_UNIFORM = 2,
-                PF_TYPE_RANDOM_BIASED = 3,
-                PF_TYPE_COLLECTION_AGE = 4,
-                PF_TYPE_ENDCAP_AGE = 5,
-                PF_TYPE_CONTROL_POINT_COMPONENT = 6,
-                PF_TYPE_CONTROL_POINT_CHANGE_AGE = 7,
-                PF_TYPE_CONTROL_POINT_SPEED = 8,
-                PF_TYPE_PARTICLE_DETAIL_LEVEL = 9,
-                PF_TYPE_CONCURRENT_DEF_COUNT = 10,
-                PF_TYPE_CLOSEST_CAMERA_DISTANCE = 11,
-                PF_TYPE_RENDERER_CAMERA_DISTANCE = 12,
-                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 13,
-                PF_TYPE_PARTICLE_NOISE = 14,
-                PF_TYPE_PARTICLE_AGE = 15,
-                PF_TYPE_PARTICLE_AGE_NORMALIZED = 16,
-                PF_TYPE_PARTICLE_FLOAT = 17,
-                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 18,
-                PF_TYPE_PARTICLE_SPEED = 19,
-                PF_TYPE_PARTICLE_NUMBER = 20,
-                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 21,
-                PF_TYPE_COUNT = 22
+            enum class ParticleFloatType_t : uint32_t {
+                PF_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_TYPE_LITERAL = 0x0,
+                PF_TYPE_NAMED_VALUE = 0x1,
+                PF_TYPE_RANDOM_UNIFORM = 0x2,
+                PF_TYPE_RANDOM_BIASED = 0x3,
+                PF_TYPE_COLLECTION_AGE = 0x4,
+                PF_TYPE_ENDCAP_AGE = 0x5,
+                PF_TYPE_CONTROL_POINT_COMPONENT = 0x6,
+                PF_TYPE_CONTROL_POINT_CHANGE_AGE = 0x7,
+                PF_TYPE_CONTROL_POINT_SPEED = 0x8,
+                PF_TYPE_PARTICLE_DETAIL_LEVEL = 0x9,
+                PF_TYPE_CONCURRENT_DEF_COUNT = 0xA,
+                PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xB,
+                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0xC,
+                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0xD,
+                PF_TYPE_PARTICLE_NOISE = 0xE,
+                PF_TYPE_PARTICLE_AGE = 0xF,
+                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x10,
+                PF_TYPE_PARTICLE_FLOAT = 0x11,
+                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x12,
+                PF_TYPE_PARTICLE_SPEED = 0x13,
+                PF_TYPE_PARTICLE_NUMBER = 0x14,
+                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x15,
+                PF_TYPE_COUNT = 0x16
             }
             // Alignment: 4
             // Members count: 5
-            enum class ParticleFloatBiasType_t : int32_t {
-                PF_BIAS_TYPE_INVALID = -1,
-                PF_BIAS_TYPE_STANDARD = 0,
-                PF_BIAS_TYPE_GAIN = 1,
-                PF_BIAS_TYPE_EXPONENTIAL = 2,
-                PF_BIAS_TYPE_COUNT = 3
+            enum class ParticleFloatBiasType_t : uint32_t {
+                PF_BIAS_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_BIAS_TYPE_STANDARD = 0x0,
+                PF_BIAS_TYPE_GAIN = 0x1,
+                PF_BIAS_TYPE_EXPONENTIAL = 0x2,
+                PF_BIAS_TYPE_COUNT = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class PFNoiseType_t : int32_t {
-                PF_NOISE_TYPE_PERLIN = 0,
-                PF_NOISE_TYPE_SIMPLEX = 1,
-                PF_NOISE_TYPE_WORLEY = 2,
-                PF_NOISE_TYPE_CURL = 3
+            enum class PFNoiseType_t : uint32_t {
+                PF_NOISE_TYPE_PERLIN = 0x0,
+                PF_NOISE_TYPE_SIMPLEX = 0x1,
+                PF_NOISE_TYPE_WORLEY = 0x2,
+                PF_NOISE_TYPE_CURL = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class PFNoiseModifier_t : int32_t {
-                PF_NOISE_MODIFIER_NONE = 0,
-                PF_NOISE_MODIFIER_LINES = 1,
-                PF_NOISE_MODIFIER_CLUMPS = 2,
-                PF_NOISE_MODIFIER_RINGS = 3
+            enum class PFNoiseModifier_t : uint32_t {
+                PF_NOISE_MODIFIER_NONE = 0x0,
+                PF_NOISE_MODIFIER_LINES = 0x1,
+                PF_NOISE_MODIFIER_CLUMPS = 0x2,
+                PF_NOISE_MODIFIER_RINGS = 0x3
             }
             // Alignment: 4
             // Members count: 6
-            enum class PFNoiseTurbulence_t : int32_t {
-                PF_NOISE_TURB_NONE = 0,
-                PF_NOISE_TURB_HIGHLIGHT = 1,
-                PF_NOISE_TURB_FEEDBACK = 2,
-                PF_NOISE_TURB_LOOPY = 3,
-                PF_NOISE_TURB_CONTRAST = 4,
-                PF_NOISE_TURB_ALTERNATE = 5
+            enum class PFNoiseTurbulence_t : uint32_t {
+                PF_NOISE_TURB_NONE = 0x0,
+                PF_NOISE_TURB_HIGHLIGHT = 0x1,
+                PF_NOISE_TURB_FEEDBACK = 0x2,
+                PF_NOISE_TURB_LOOPY = 0x3,
+                PF_NOISE_TURB_CONTRAST = 0x4,
+                PF_NOISE_TURB_ALTERNATE = 0x5
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleFloatRandomMode_t : int32_t {
-                PF_RANDOM_MODE_INVALID = -1,
-                PF_RANDOM_MODE_CONSTANT = 0,
-                PF_RANDOM_MODE_VARYING = 1,
-                PF_RANDOM_MODE_COUNT = 2
+            enum class ParticleFloatRandomMode_t : uint32_t {
+                PF_RANDOM_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_RANDOM_MODE_CONSTANT = 0x0,
+                PF_RANDOM_MODE_VARYING = 0x1,
+                PF_RANDOM_MODE_COUNT = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class ParticleFloatInputMode_t : int32_t {
-                PF_INPUT_MODE_INVALID = -1,
-                PF_INPUT_MODE_CLAMPED = 0,
-                PF_INPUT_MODE_LOOPED = 1,
-                PF_INPUT_MODE_COUNT = 2
+            enum class ParticleFloatInputMode_t : uint32_t {
+                PF_INPUT_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_INPUT_MODE_CLAMPED = 0x0,
+                PF_INPUT_MODE_LOOPED = 0x1,
+                PF_INPUT_MODE_COUNT = 0x2
             }
             // Alignment: 4
             // Members count: 8
-            enum class ParticleFloatMapType_t : int32_t {
-                PF_MAP_TYPE_INVALID = -1,
-                PF_MAP_TYPE_DIRECT = 0,
-                PF_MAP_TYPE_MULT = 1,
-                PF_MAP_TYPE_REMAP = 2,
-                PF_MAP_TYPE_REMAP_BIASED = 3,
-                PF_MAP_TYPE_CURVE = 4,
-                PF_MAP_TYPE_NOTCHED = 5,
-                PF_MAP_TYPE_COUNT = 6
+            enum class ParticleFloatMapType_t : uint32_t {
+                PF_MAP_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_MAP_TYPE_DIRECT = 0x0,
+                PF_MAP_TYPE_MULT = 0x1,
+                PF_MAP_TYPE_REMAP = 0x2,
+                PF_MAP_TYPE_REMAP_BIASED = 0x3,
+                PF_MAP_TYPE_CURVE = 0x4,
+                PF_MAP_TYPE_NOTCHED = 0x5,
+                PF_MAP_TYPE_COUNT = 0x6
             }
             // Alignment: 4
             // Members count: 5
-            enum class ParticleTransformType_t : int32_t {
-                PT_TYPE_INVALID = 0,
-                PT_TYPE_NAMED_VALUE = 1,
-                PT_TYPE_CONTROL_POINT = 2,
-                PT_TYPE_CONTROL_POINT_RANGE = 3,
-                PT_TYPE_COUNT = 4
+            enum class ParticleTransformType_t : uint32_t {
+                PT_TYPE_INVALID = 0x0,
+                PT_TYPE_NAMED_VALUE = 0x1,
+                PT_TYPE_CONTROL_POINT = 0x2,
+                PT_TYPE_CONTROL_POINT_RANGE = 0x3,
+                PT_TYPE_COUNT = 0x4
             }
             // Alignment: 4
             // Members count: 5
-            enum class ParticleModelType_t : int32_t {
-                PM_TYPE_INVALID = 0,
-                PM_TYPE_NAMED_VALUE_MODEL = 1,
-                PM_TYPE_NAMED_VALUE_EHANDLE = 2,
-                PM_TYPE_CONTROL_POINT = 3,
-                PM_TYPE_COUNT = 4
+            enum class ParticleModelType_t : uint32_t {
+                PM_TYPE_INVALID = 0x0,
+                PM_TYPE_NAMED_VALUE_MODEL = 0x1,
+                PM_TYPE_NAMED_VALUE_EHANDLE = 0x2,
+                PM_TYPE_CONTROL_POINT = 0x3,
+                PM_TYPE_COUNT = 0x4
             }
             // Alignment: 4
             // Members count: 19
-            enum class ParticleVecType_t : int32_t {
-                PVEC_TYPE_INVALID = -1,
-                PVEC_TYPE_LITERAL = 0,
-                PVEC_TYPE_LITERAL_COLOR = 1,
-                PVEC_TYPE_NAMED_VALUE = 2,
-                PVEC_TYPE_PARTICLE_VECTOR = 3,
-                PVEC_TYPE_PARTICLE_VELOCITY = 4,
-                PVEC_TYPE_CP_VALUE = 5,
-                PVEC_TYPE_CP_RELATIVE_POSITION = 6,
-                PVEC_TYPE_CP_RELATIVE_DIR = 7,
-                PVEC_TYPE_CP_RELATIVE_RANDOM_DIR = 8,
-                PVEC_TYPE_FLOAT_COMPONENTS = 9,
-                PVEC_TYPE_FLOAT_INTERP_CLAMPED = 10,
-                PVEC_TYPE_FLOAT_INTERP_OPEN = 11,
-                PVEC_TYPE_FLOAT_INTERP_GRADIENT = 12,
-                PVEC_TYPE_RANDOM_UNIFORM = 13,
-                PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 14,
-                PVEC_TYPE_CP_DELTA = 15,
-                PVEC_TYPE_CLOSEST_CAMERA_POSITION = 16,
-                PVEC_TYPE_COUNT = 17
+            enum class ParticleVecType_t : uint32_t {
+                PVEC_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PVEC_TYPE_LITERAL = 0x0,
+                PVEC_TYPE_LITERAL_COLOR = 0x1,
+                PVEC_TYPE_NAMED_VALUE = 0x2,
+                PVEC_TYPE_PARTICLE_VECTOR = 0x3,
+                PVEC_TYPE_PARTICLE_VELOCITY = 0x4,
+                PVEC_TYPE_CP_VALUE = 0x5,
+                PVEC_TYPE_CP_RELATIVE_POSITION = 0x6,
+                PVEC_TYPE_CP_RELATIVE_DIR = 0x7,
+                PVEC_TYPE_CP_RELATIVE_RANDOM_DIR = 0x8,
+                PVEC_TYPE_FLOAT_COMPONENTS = 0x9,
+                PVEC_TYPE_FLOAT_INTERP_CLAMPED = 0xA,
+                PVEC_TYPE_FLOAT_INTERP_OPEN = 0xB,
+                PVEC_TYPE_FLOAT_INTERP_GRADIENT = 0xC,
+                PVEC_TYPE_RANDOM_UNIFORM = 0xD,
+                PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xE,
+                PVEC_TYPE_CP_DELTA = 0xF,
+                PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x10,
+                PVEC_TYPE_COUNT = 0x11
             }
             // Parent: None
             // Fields count: 2
@@ -9106,7 +9106,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RenderProjectedMaterial_t {
-                constexpr std::ptrdiff_t m_hMaterial = 0x0; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hMaterial = 0x0; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
             // Fields count: 2
@@ -9130,7 +9130,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFireParticleOnSequenceFrame = 0x18; // int32
                 constexpr std::ptrdiff_t m_hitboxSetName = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_materialGroupName = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_vecBodyGroups = 0x30; // CUtlVector< ParticlePreviewBodyGroup_t >
+                constexpr std::ptrdiff_t m_vecBodyGroups = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
                 constexpr std::ptrdiff_t m_flPlaybackSpeed = 0x48; // float32
                 constexpr std::ptrdiff_t m_flParticleSimulationRate = 0x4C; // float32
                 constexpr std::ptrdiff_t m_bShouldDrawHitboxes = 0x50; // bool
@@ -9160,7 +9160,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace ParticleControlPointConfiguration_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_drivers = 0x8; // CUtlVector< ParticleControlPointDriver_t >
+                constexpr std::ptrdiff_t m_drivers = 0x8; // CUtlVector<ParticleControlPointDriver_t>
                 constexpr std::ptrdiff_t m_previewState = 0x20; // ParticlePreviewState_t
             }
             // Parent: None
@@ -9224,7 +9224,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace ParticleChildrenInfo_t {
-                constexpr std::ptrdiff_t m_ChildRef = 0x0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_ChildRef = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_flDelay = 0x8; // float32
                 constexpr std::ptrdiff_t m_bEndCap = 0xC; // bool
                 constexpr std::ptrdiff_t m_bDisableChild = 0xD; // bool
@@ -9246,7 +9246,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace ModelReference_t {
-                constexpr std::ptrdiff_t m_model = 0x0; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_model = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_flRelativeProbabilityOfSpawn = 0x8; // float32
             }
             // Parent: None
@@ -9291,14 +9291,14 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CParticleSystemDefinition {
                 constexpr std::ptrdiff_t m_nBehaviorVersion = 0x8; // int32
-                constexpr std::ptrdiff_t m_PreEmissionOperators = 0x10; // CUtlVector< CParticleFunctionPreEmission* >
-                constexpr std::ptrdiff_t m_Emitters = 0x28; // CUtlVector< CParticleFunctionEmitter* >
-                constexpr std::ptrdiff_t m_Initializers = 0x40; // CUtlVector< CParticleFunctionInitializer* >
-                constexpr std::ptrdiff_t m_Operators = 0x58; // CUtlVector< CParticleFunctionOperator* >
-                constexpr std::ptrdiff_t m_ForceGenerators = 0x70; // CUtlVector< CParticleFunctionForce* >
-                constexpr std::ptrdiff_t m_Constraints = 0x88; // CUtlVector< CParticleFunctionConstraint* >
-                constexpr std::ptrdiff_t m_Renderers = 0xA0; // CUtlVector< CParticleFunctionRenderer* >
-                constexpr std::ptrdiff_t m_Children = 0xB8; // CUtlVector< ParticleChildrenInfo_t >
+                constexpr std::ptrdiff_t m_PreEmissionOperators = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
+                constexpr std::ptrdiff_t m_Emitters = 0x28; // CUtlVector<CParticleFunctionEmitter*>
+                constexpr std::ptrdiff_t m_Initializers = 0x40; // CUtlVector<CParticleFunctionInitializer*>
+                constexpr std::ptrdiff_t m_Operators = 0x58; // CUtlVector<CParticleFunctionOperator*>
+                constexpr std::ptrdiff_t m_ForceGenerators = 0x70; // CUtlVector<CParticleFunctionForce*>
+                constexpr std::ptrdiff_t m_Constraints = 0x88; // CUtlVector<CParticleFunctionConstraint*>
+                constexpr std::ptrdiff_t m_Renderers = 0xA0; // CUtlVector<CParticleFunctionRenderer*>
+                constexpr std::ptrdiff_t m_Children = 0xB8; // CUtlVector<ParticleChildrenInfo_t>
                 constexpr std::ptrdiff_t m_nFirstMultipleOverride_BackwardCompat = 0x178; // int32
                 constexpr std::ptrdiff_t m_nInitialParticles = 0x210; // int32
                 constexpr std::ptrdiff_t m_nMaxParticles = 0x214; // int32
@@ -9310,7 +9310,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bInfiniteBounds = 0x23C; // bool
                 constexpr std::ptrdiff_t m_bEnableNamedValues = 0x23D; // bool
                 constexpr std::ptrdiff_t m_NamedValueDomain = 0x240; // CUtlString
-                constexpr std::ptrdiff_t m_NamedValueLocals = 0x248; // CUtlVector< ParticleNamedValueSource_t* >
+                constexpr std::ptrdiff_t m_NamedValueLocals = 0x248; // CUtlVector<ParticleNamedValueSource_t*>
                 constexpr std::ptrdiff_t m_ConstantColor = 0x260; // Color
                 constexpr std::ptrdiff_t m_ConstantNormal = 0x264; // 
                 constexpr std::ptrdiff_t m_flConstantRadius = 0x270; // float32
@@ -9320,15 +9320,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nConstantSequenceNumber = 0x280; // int32
                 constexpr std::ptrdiff_t m_nConstantSequenceNumber1 = 0x284; // int32
                 constexpr std::ptrdiff_t m_nSnapshotControlPoint = 0x288; // int32
-                constexpr std::ptrdiff_t m_hSnapshot = 0x290; // CStrongHandle< InfoForResourceTypeIParticleSnapshot >
-                constexpr std::ptrdiff_t m_pszCullReplacementName = 0x298; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_hSnapshot = 0x290; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
+                constexpr std::ptrdiff_t m_pszCullReplacementName = 0x298; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_flCullRadius = 0x2A0; // float32
                 constexpr std::ptrdiff_t m_flCullFillCost = 0x2A4; // float32
                 constexpr std::ptrdiff_t m_nCullControlPoint = 0x2A8; // int32
-                constexpr std::ptrdiff_t m_hFallback = 0x2B0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_hFallback = 0x2B0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_nFallbackMaxCount = 0x2B8; // int32
-                constexpr std::ptrdiff_t m_hLowViolenceDef = 0x2C0; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
-                constexpr std::ptrdiff_t m_hReferenceReplacement = 0x2C8; // CStrongHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_hLowViolenceDef = 0x2C0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_hReferenceReplacement = 0x2C8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_flPreSimulationTime = 0x2D0; // float32
                 constexpr std::ptrdiff_t m_flStopSimulationAfterTime = 0x2D4; // float32
                 constexpr std::ptrdiff_t m_flMaximumTimeStep = 0x2D8; // float32
@@ -9353,7 +9353,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSkipRenderControlPoint = 0x320; // int32
                 constexpr std::ptrdiff_t m_nAllowRenderControlPoint = 0x324; // int32
                 constexpr std::ptrdiff_t m_bShouldSort = 0x328; // bool
-                constexpr std::ptrdiff_t m_controlPointConfigurations = 0x370; // CUtlVector< ParticleControlPointConfiguration_t >
+                constexpr std::ptrdiff_t m_controlPointConfigurations = 0x370; // CUtlVector<ParticleControlPointConfiguration_t>
             }
             // Parent: None
             // Fields count: 16
@@ -9464,7 +9464,7 @@ namespace cs2_dumper {
             namespace TextureGroup_t {
                 constexpr std::ptrdiff_t m_bEnabled = 0x0; // bool
                 constexpr std::ptrdiff_t m_bReplaceTextureWithGradient = 0x1; // bool
-                constexpr std::ptrdiff_t m_hTexture = 0x8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hTexture = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_Gradient = 0x10; // CColorGradient
                 constexpr std::ptrdiff_t m_nTextureType = 0x28; // SpriteCardTextureType_t
                 constexpr std::ptrdiff_t m_nTextureChannels = 0x2C; // SpriteCardTextureChannel_t
@@ -9490,7 +9490,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flCenterYOffset = 0xDD0; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_flBumpStrength = 0xF28; // float32
                 constexpr std::ptrdiff_t m_nCropTextureOverride = 0xF2C; // ParticleSequenceCropOverride_t
-                constexpr std::ptrdiff_t m_vecTexturesInput = 0xF30; // CUtlVector< TextureGroup_t >
+                constexpr std::ptrdiff_t m_vecTexturesInput = 0xF30; // CUtlVector<TextureGroup_t>
                 constexpr std::ptrdiff_t m_flAnimationRate = 0xF48; // float32
                 constexpr std::ptrdiff_t m_nAnimationType = 0xF4C; // AnimationType_t
                 constexpr std::ptrdiff_t m_bAnimateInFPS = 0xF50; // bool
@@ -9603,7 +9603,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAlphaScale = 0x358; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_vecColorScale = 0x4B0; // CParticleCollectionVecInput
                 constexpr std::ptrdiff_t m_nColorBlendType = 0xB08; // ParticleColorBlendType_t
-                constexpr std::ptrdiff_t m_hMaterial = 0xB10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hMaterial = 0xB10; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_nTextureRepetitionMode = 0xB18; // TextureRepetitionMode_t
                 constexpr std::ptrdiff_t m_flTextureRepeatsPerSegment = 0xB20; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flTextureRepeatsCircumference = 0xC78; // CParticleCollectionFloatInput
@@ -9619,8 +9619,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nMaxTesselation = 0x1344; // int32
                 constexpr std::ptrdiff_t m_nRoundness = 0x1348; // int32
                 constexpr std::ptrdiff_t m_LightingTransform = 0x1350; // CParticleTransformInput
-                constexpr std::ptrdiff_t m_MaterialFloatVars = 0x13B8; // CUtlVector< FloatInputMaterialVariable_t >
-                constexpr std::ptrdiff_t m_MaterialVecVars = 0x13E8; // CUtlVector< VecInputMaterialVariable_t >
+                constexpr std::ptrdiff_t m_MaterialFloatVars = 0x13B8; // CUtlVector<FloatInputMaterialVariable_t>
+                constexpr std::ptrdiff_t m_MaterialVecVars = 0x13E8; // CUtlVector<VecInputMaterialVariable_t>
             }
             // Parent: None
             // Fields count: 0
@@ -9722,7 +9722,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_IsPublic = 0x8; // bool
                 constexpr std::ptrdiff_t m_ValueType = 0xC; // PulseValueType_t
                 constexpr std::ptrdiff_t m_DefaultConfig = 0x10; // ParticleNamedValueConfiguration_t
-                constexpr std::ptrdiff_t m_NamedConfigs = 0x48; // CUtlVector< ParticleNamedValueConfiguration_t >
+                constexpr std::ptrdiff_t m_NamedConfigs = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
             }
             // Parent: None
             // Fields count: 2
@@ -9829,7 +9829,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMaxDistance = 0x1C4; // float32
                 constexpr std::ptrdiff_t m_flTimeScale = 0x1C8; // float32
                 constexpr std::ptrdiff_t m_bLoopedPath = 0x1CC; // bool
-                constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector< PointDefinitionWithTimeValues_t >
+                constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
             }
             // Parent: CParticleFunctionConstraint
             // Fields count: 8
@@ -10424,7 +10424,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSequenceMax = 0x1C4; // int32
                 constexpr std::ptrdiff_t m_bShuffle = 0x1C8; // bool
                 constexpr std::ptrdiff_t m_bLinear = 0x1C9; // bool
-                constexpr std::ptrdiff_t m_WeightedList = 0x1D0; // CUtlVector< SequenceWeightedList_t >
+                constexpr std::ptrdiff_t m_WeightedList = 0x1D0; // CUtlVector<SequenceWeightedList_t>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 4
@@ -10445,7 +10445,7 @@ namespace cs2_dumper {
             namespace C_INIT_RandomModelSequence {
                 constexpr std::ptrdiff_t m_ActivityName = 0x1C0; // char[256]
                 constexpr std::ptrdiff_t m_SequenceName = 0x2C0; // char[256]
-                constexpr std::ptrdiff_t m_hModel = 0x3C0; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_hModel = 0x3C0; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 1
@@ -10571,7 +10571,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_RemapParticleCountToNamedModelElementScalar {
-                constexpr std::ptrdiff_t m_hModel = 0x1F0; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_hModel = 0x1F0; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_outputMinName = 0x1F8; // CUtlString
                 constexpr std::ptrdiff_t m_outputMaxName = 0x200; // CUtlString
                 constexpr std::ptrdiff_t m_bModelFromRenderer = 0x208; // bool
@@ -11138,7 +11138,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_INIT_PointList {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector< PointDefinition_t >
+                constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
                 constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_bClosedLoop = 0x1E1; // bool
                 constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1E4; // int32
@@ -11149,8 +11149,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_RandomNamedModelElement {
-                constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-                constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+                constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_bShuffle = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_bLinear = 0x1E1; // bool
                 constexpr std::ptrdiff_t m_bModelFromRenderer = 0x1E2; // bool
@@ -11183,9 +11183,9 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_RemapNamedModelElementToScalar {
-                constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle< InfoForResourceTypeCModel >
-                constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_values = 0x1E0; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_hModel = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+                constexpr std::ptrdiff_t m_names = 0x1C8; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_values = 0x1E0; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_nFieldInput = 0x1F8; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1FC; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nSetMethod = 0x200; // ParticleSetMethod_t
@@ -12263,128 +12263,128 @@ namespace cs2_dumper {
         namespace pulse_system {
             // Alignment: 2
             // Members count: 61
-            enum class PulseInstructionCode_t : int16_t {
-                INVALID = 0,
-                IMMEDIATE_HALT = 1,
-                RETURN_VOID = 2,
-                RETURN_VALUE = 3,
-                NOP = 4,
-                JUMP = 5,
-                JUMP_COND = 6,
-                CHUNK_LEAP = 7,
-                CHUNK_LEAP_COND = 8,
-                PULSE_CALL_SYNC = 9,
-                PULSE_CALL_ASYNC_FIRE = 10,
-                CELL_INVOKE = 11,
-                LIBRARY_INVOKE = 12,
-                SET_VAR = 13,
-                GET_VAR = 14,
-                GET_CONST = 15,
-                SET_REGISTER_DOMAIN_VALUE = 16,
-                COPY = 17,
-                NOT = 18,
-                NEGATE = 19,
-                ADD = 20,
-                SUB = 21,
-                MUL = 22,
-                DIV = 23,
-                MOD = 24,
-                LT = 25,
-                LTE = 26,
-                EQ = 27,
-                NE = 28,
-                AND = 29,
-                OR = 30,
-                CONVERT_VALUE = 31,
-                LAST_SERIALIZED_CODE = 32,
-                NEGATE_INT = 33,
-                NEGATE_FLOAT = 34,
-                ADD_INT = 35,
-                ADD_FLOAT = 36,
-                ADD_STRING = 37,
-                SUB_INT = 38,
-                SUB_FLOAT = 39,
-                MUL_INT = 40,
-                MUL_FLOAT = 41,
-                DIV_INT = 42,
-                DIV_FLOAT = 43,
-                MOD_INT = 44,
-                MOD_FLOAT = 45,
-                LT_INT = 46,
-                LT_FLOAT = 47,
-                LTE_INT = 48,
-                LTE_FLOAT = 49,
-                EQ_BOOL = 50,
-                EQ_INT = 51,
-                EQ_FLOAT = 52,
-                EQ_STRING = 53,
-                EQ_ENTITY_NAME = 54,
-                NE_BOOL = 55,
-                NE_INT = 56,
-                NE_FLOAT = 57,
-                NE_STRING = 58,
-                NE_ENTITY_NAME = 59,
-                GET_CONST_INLINE_STORAGE = 60
+            enum class PulseInstructionCode_t : uint16_t {
+                INVALID = 0x0,
+                IMMEDIATE_HALT = 0x1,
+                RETURN_VOID = 0x2,
+                RETURN_VALUE = 0x3,
+                NOP = 0x4,
+                JUMP = 0x5,
+                JUMP_COND = 0x6,
+                CHUNK_LEAP = 0x7,
+                CHUNK_LEAP_COND = 0x8,
+                PULSE_CALL_SYNC = 0x9,
+                PULSE_CALL_ASYNC_FIRE = 0xA,
+                CELL_INVOKE = 0xB,
+                LIBRARY_INVOKE = 0xC,
+                SET_VAR = 0xD,
+                GET_VAR = 0xE,
+                GET_CONST = 0xF,
+                SET_REGISTER_DOMAIN_VALUE = 0x10,
+                COPY = 0x11,
+                NOT = 0x12,
+                NEGATE = 0x13,
+                ADD = 0x14,
+                SUB = 0x15,
+                MUL = 0x16,
+                DIV = 0x17,
+                MOD = 0x18,
+                LT = 0x19,
+                LTE = 0x1A,
+                EQ = 0x1B,
+                NE = 0x1C,
+                AND = 0x1D,
+                OR = 0x1E,
+                CONVERT_VALUE = 0x1F,
+                LAST_SERIALIZED_CODE = 0x20,
+                NEGATE_INT = 0x21,
+                NEGATE_FLOAT = 0x22,
+                ADD_INT = 0x23,
+                ADD_FLOAT = 0x24,
+                ADD_STRING = 0x25,
+                SUB_INT = 0x26,
+                SUB_FLOAT = 0x27,
+                MUL_INT = 0x28,
+                MUL_FLOAT = 0x29,
+                DIV_INT = 0x2A,
+                DIV_FLOAT = 0x2B,
+                MOD_INT = 0x2C,
+                MOD_FLOAT = 0x2D,
+                LT_INT = 0x2E,
+                LT_FLOAT = 0x2F,
+                LTE_INT = 0x30,
+                LTE_FLOAT = 0x31,
+                EQ_BOOL = 0x32,
+                EQ_INT = 0x33,
+                EQ_FLOAT = 0x34,
+                EQ_STRING = 0x35,
+                EQ_ENTITY_NAME = 0x36,
+                NE_BOOL = 0x37,
+                NE_INT = 0x38,
+                NE_FLOAT = 0x39,
+                NE_STRING = 0x3A,
+                NE_ENTITY_NAME = 0x3B,
+                GET_CONST_INLINE_STORAGE = 0x3C
             }
             // Alignment: 4
             // Members count: 2
-            enum class PulseMethodCallMode_t : int32_t {
-                SYNC_WAIT_FOR_COMPLETION = 0,
-                ASYNC_FIRE_AND_FORGET = 1
+            enum class PulseMethodCallMode_t : uint32_t {
+                SYNC_WAIT_FOR_COMPLETION = 0x0,
+                ASYNC_FIRE_AND_FORGET = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class PulseCursorExecResult_t : int32_t {
-                Succeeded = 0,
-                Canceled = 1,
-                Failed = 2
+            enum class PulseCursorExecResult_t : uint32_t {
+                Succeeded = 0x0,
+                Canceled = 0x1,
+                Failed = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class PulseCursorCancelPriority_t : int32_t {
-                None = 0,
-                CancelOnSucceeded = 1,
-                SoftCancel = 2,
-                HardCancel = 3
+            enum class PulseCursorCancelPriority_t : uint32_t {
+                None = 0x0,
+                CancelOnSucceeded = 0x1,
+                SoftCancel = 0x2,
+                HardCancel = 0x3
             }
             // Alignment: 4
             // Members count: 19
-            enum class PulseValueType_t : int32_t {
-                PVAL_INVALID = -1,
-                PVAL_BOOL = 0,
-                PVAL_INT = 1,
-                PVAL_FLOAT = 2,
-                PVAL_STRING = 3,
-                PVAL_VEC3 = 4,
-                PVAL_TRANSFORM = 5,
-                PVAL_COLOR_RGB = 6,
-                PVAL_EHANDLE = 7,
-                PVAL_RESOURCE = 8,
-                PVAL_SNDEVT_GUID = 9,
-                PVAL_ENTITY_NAME = 10,
-                PVAL_SCHEMA_PTR = 11,
-                PVAL_TYPESAFE_INT = 12,
-                PVAL_CURSOR_FLOW = 13,
-                PVAL_ANY = 14,
-                PVAL_SCHEMA_ENUM = 15,
-                PVAL_PANORAMA_PANEL_HANDLE = 16,
-                PVAL_COUNT = 17
+            enum class PulseValueType_t : uint32_t {
+                PVAL_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PVAL_BOOL = 0x0,
+                PVAL_INT = 0x1,
+                PVAL_FLOAT = 0x2,
+                PVAL_STRING = 0x3,
+                PVAL_VEC3 = 0x4,
+                PVAL_TRANSFORM = 0x5,
+                PVAL_COLOR_RGB = 0x6,
+                PVAL_EHANDLE = 0x7,
+                PVAL_RESOURCE = 0x8,
+                PVAL_SNDEVT_GUID = 0x9,
+                PVAL_ENTITY_NAME = 0xA,
+                PVAL_SCHEMA_PTR = 0xB,
+                PVAL_TYPESAFE_INT = 0xC,
+                PVAL_CURSOR_FLOW = 0xD,
+                PVAL_ANY = 0xE,
+                PVAL_SCHEMA_ENUM = 0xF,
+                PVAL_PANORAMA_PANEL_HANDLE = 0x10,
+                PVAL_COUNT = 0x11
             }
             // Alignment: 4
             // Members count: 5
-            enum class PulseTestEnumColor_t : int32_t {
-                BLACK = 0,
-                WHITE = 1,
-                RED = 2,
-                GREEN = 3,
-                BLUE = 4
+            enum class PulseTestEnumColor_t : uint32_t {
+                BLACK = 0x0,
+                WHITE = 0x1,
+                RED = 0x2,
+                GREEN = 0x3,
+                BLUE = 0x4
             }
             // Alignment: 4
             // Members count: 3
-            enum class PulseTestEnumShape_t : int32_t {
-                CIRCLE = 100,
-                SQUARE = 200,
-                TRIANGLE = 300
+            enum class PulseTestEnumShape_t : uint32_t {
+                CIRCLE = 0x64,
+                SQUARE = 0xC8,
+                TRIANGLE = 0x12C
             }
             // Parent: None
             // Fields count: 0
@@ -12433,9 +12433,9 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulse_Chunk {
-                constexpr std::ptrdiff_t m_Instructions = 0x0; // CUtlLeanVector< PGDInstruction_t >
-                constexpr std::ptrdiff_t m_Registers = 0x10; // CUtlLeanVector< CPulse_RegisterInfo >
-                constexpr std::ptrdiff_t m_InstructionEditorIDs = 0x20; // CUtlLeanVector< PulseDocNodeID_t >
+                constexpr std::ptrdiff_t m_Instructions = 0x0; // CUtlLeanVector<PGDInstruction_t>
+                constexpr std::ptrdiff_t m_Registers = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
+                constexpr std::ptrdiff_t m_InstructionEditorIDs = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
             }
             // Parent: None
             // Fields count: 5
@@ -12512,14 +12512,14 @@ namespace cs2_dumper {
             namespace CPulseGraphDef {
                 constexpr std::ptrdiff_t m_DomainIdentifier = 0x8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_ParentMapName = 0x10; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_Chunks = 0x18; // CUtlVector< CPulse_Chunk* >
-                constexpr std::ptrdiff_t m_Cells = 0x30; // CUtlVector< CPulseCell_Base* >
-                constexpr std::ptrdiff_t m_Vars = 0x48; // CUtlVector< CPulse_Variable >
-                constexpr std::ptrdiff_t m_PublicOutputs = 0x60; // CUtlVector< CPulse_PublicOutput >
-                constexpr std::ptrdiff_t m_InvokeBindings = 0x78; // CUtlVector< CPulse_InvokeBinding* >
-                constexpr std::ptrdiff_t m_CallInfos = 0x90; // CUtlVector< CPulse_CallInfo* >
-                constexpr std::ptrdiff_t m_Constants = 0xA8; // CUtlVector< CPulse_Constant >
-                constexpr std::ptrdiff_t m_OutputConnections = 0xC0; // CUtlVector< CPulse_OutputConnection* >
+                constexpr std::ptrdiff_t m_Chunks = 0x18; // CUtlVector<CPulse_Chunk*>
+                constexpr std::ptrdiff_t m_Cells = 0x30; // CUtlVector<CPulseCell_Base*>
+                constexpr std::ptrdiff_t m_Vars = 0x48; // CUtlVector<CPulse_Variable>
+                constexpr std::ptrdiff_t m_PublicOutputs = 0x60; // CUtlVector<CPulse_PublicOutput>
+                constexpr std::ptrdiff_t m_InvokeBindings = 0x78; // CUtlVector<CPulse_InvokeBinding*>
+                constexpr std::ptrdiff_t m_CallInfos = 0x90; // CUtlVector<CPulse_CallInfo*>
+                constexpr std::ptrdiff_t m_Constants = 0xA8; // CUtlVector<CPulse_Constant>
+                constexpr std::ptrdiff_t m_OutputConnections = 0xC0; // CUtlVector<CPulse_OutputConnection*>
             }
             // Parent: None
             // Fields count: 0
@@ -12656,7 +12656,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_Outflow_CycleShuffled__InstanceState_t {
-                constexpr std::ptrdiff_t m_Shuffle = 0x0; // CUtlVectorFixedGrowable< uint8 >
+                constexpr std::ptrdiff_t m_Shuffle = 0x0; // CUtlVectorFixedGrowable<uint8>
                 constexpr std::ptrdiff_t m_nNextShuffle = 0x20; // int32
             }
             // Parent: CPulseCell_BaseFlow
@@ -12742,7 +12742,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0xD9; // bool
                 constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0xDA; // bool
                 constexpr std::ptrdiff_t m_nNextValidateIndex = 0xDC; // int32
-                constexpr std::ptrdiff_t m_Tracepoints = 0xE0; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_Tracepoints = 0xE0; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0xF8; // bool
             }
             // Parent: CPulseCell_BaseFlow
@@ -12914,63 +12914,63 @@ namespace cs2_dumper {
         namespace rendersystemdx11 {
             // Alignment: 4
             // Members count: 3
-            enum class RenderSlotType_t : int32_t {
-                RENDER_SLOT_INVALID = -1,
-                RENDER_SLOT_PER_VERTEX = 0,
-                RENDER_SLOT_PER_INSTANCE = 1
+            enum class RenderSlotType_t : uint32_t {
+                RENDER_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RENDER_SLOT_PER_VERTEX = 0x0,
+                RENDER_SLOT_PER_INSTANCE = 0x1
             }
             // Alignment: 4
             // Members count: 12
-            enum class RenderBufferFlags_t : int32_t {
-                RENDER_BUFFER_USAGE_VERTEX_BUFFER = 1,
-                RENDER_BUFFER_USAGE_INDEX_BUFFER = 2,
-                RENDER_BUFFER_USAGE_SHADER_RESOURCE = 4,
-                RENDER_BUFFER_USAGE_UNORDERED_ACCESS = 8,
-                RENDER_BUFFER_BYTEADDRESS_BUFFER = 16,
-                RENDER_BUFFER_STRUCTURED_BUFFER = 32,
-                RENDER_BUFFER_APPEND_CONSUME_BUFFER = 64,
-                RENDER_BUFFER_UAV_COUNTER = 128,
-                RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 256,
-                RENDER_BUFFER_ACCELERATION_STRUCTURE = 512,
-                RENDER_BUFFER_SHADER_BINDING_TABLE = 1024,
-                RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 2048
+            enum class RenderBufferFlags_t : uint32_t {
+                RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
+                RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
+                RENDER_BUFFER_USAGE_SHADER_RESOURCE = 0x4,
+                RENDER_BUFFER_USAGE_UNORDERED_ACCESS = 0x8,
+                RENDER_BUFFER_BYTEADDRESS_BUFFER = 0x10,
+                RENDER_BUFFER_STRUCTURED_BUFFER = 0x20,
+                RENDER_BUFFER_APPEND_CONSUME_BUFFER = 0x40,
+                RENDER_BUFFER_UAV_COUNTER = 0x80,
+                RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
+                RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
+                RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
+                RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800
             }
             // Alignment: 4
             // Members count: 13
-            enum class RenderPrimitiveType_t : int32_t {
-                RENDER_PRIM_POINTS = 0,
-                RENDER_PRIM_LINES = 1,
-                RENDER_PRIM_LINES_WITH_ADJACENCY = 2,
-                RENDER_PRIM_LINE_STRIP = 3,
-                RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY = 4,
-                RENDER_PRIM_TRIANGLES = 5,
-                RENDER_PRIM_TRIANGLES_WITH_ADJACENCY = 6,
-                RENDER_PRIM_TRIANGLE_STRIP = 7,
-                RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY = 8,
-                RENDER_PRIM_INSTANCED_QUADS = 9,
-                RENDER_PRIM_HETEROGENOUS = 10,
-                RENDER_PRIM_COMPUTE_SHADER = 11,
-                RENDER_PRIM_TYPE_COUNT = 12
+            enum class RenderPrimitiveType_t : uint32_t {
+                RENDER_PRIM_POINTS = 0x0,
+                RENDER_PRIM_LINES = 0x1,
+                RENDER_PRIM_LINES_WITH_ADJACENCY = 0x2,
+                RENDER_PRIM_LINE_STRIP = 0x3,
+                RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY = 0x4,
+                RENDER_PRIM_TRIANGLES = 0x5,
+                RENDER_PRIM_TRIANGLES_WITH_ADJACENCY = 0x6,
+                RENDER_PRIM_TRIANGLE_STRIP = 0x7,
+                RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY = 0x8,
+                RENDER_PRIM_INSTANCED_QUADS = 0x9,
+                RENDER_PRIM_HETEROGENOUS = 0xA,
+                RENDER_PRIM_COMPUTE_SHADER = 0xB,
+                RENDER_PRIM_TYPE_COUNT = 0xC
             }
             // Alignment: 4
             // Members count: 4
-            enum class InputLayoutVariation_t : int32_t {
-                INPUT_LAYOUT_VARIATION_DEFAULT = 0,
-                INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 1,
-                INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 2,
-                INPUT_LAYOUT_VARIATION_MAX = 3
+            enum class InputLayoutVariation_t : uint32_t {
+                INPUT_LAYOUT_VARIATION_DEFAULT = 0x0,
+                INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x1,
+                INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
+                INPUT_LAYOUT_VARIATION_MAX = 0x3
             }
             // Alignment: 1
             // Members count: 8
-            enum class RenderMultisampleType_t : int8_t {
-                RENDER_MULTISAMPLE_INVALID = -1,
-                RENDER_MULTISAMPLE_NONE = 0,
-                RENDER_MULTISAMPLE_2X = 1,
-                RENDER_MULTISAMPLE_4X = 2,
-                RENDER_MULTISAMPLE_6X = 3,
-                RENDER_MULTISAMPLE_8X = 4,
-                RENDER_MULTISAMPLE_16X = 5,
-                RENDER_MULTISAMPLE_TYPE_COUNT = 6
+            enum class RenderMultisampleType_t : uint8_t {
+                RENDER_MULTISAMPLE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RENDER_MULTISAMPLE_NONE = 0x0,
+                RENDER_MULTISAMPLE_2X = 0x1,
+                RENDER_MULTISAMPLE_4X = 0x2,
+                RENDER_MULTISAMPLE_6X = 0x3,
+                RENDER_MULTISAMPLE_8X = 0x4,
+                RENDER_MULTISAMPLE_16X = 0x5,
+                RENDER_MULTISAMPLE_TYPE_COUNT = 0x6
             }
             // Parent: None
             // Fields count: 7
@@ -12994,7 +12994,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 1
             namespace VsInputSignature_t {
-                constexpr std::ptrdiff_t m_elems = 0x0; // CUtlVector< VsInputSignatureElement_t >
+                constexpr std::ptrdiff_t m_elems = 0x0; // CUtlVector<VsInputSignatureElement_t>
             }
         }
         // Module: resourcesystem.dll
@@ -13003,22 +13003,22 @@ namespace cs2_dumper {
         namespace resourcesystem {
             // Alignment: 1
             // Members count: 2
-            enum class FuseVariableAccess_t : int8_t {
-                WRITABLE = 0,
-                READ_ONLY = 1
+            enum class FuseVariableAccess_t : uint8_t {
+                WRITABLE = 0x0,
+                READ_ONLY = 0x1
             }
             // Alignment: 1
             // Members count: 9
-            enum class FuseVariableType_t : int8_t {
-                INVALID = 0,
-                BOOL = 1,
-                INT8 = 2,
-                INT16 = 3,
-                INT32 = 4,
-                UINT8 = 5,
-                UINT16 = 6,
-                UINT32 = 7,
-                FLOAT32 = 8
+            enum class FuseVariableType_t : uint8_t {
+                INVALID = 0x0,
+                BOOL = 0x1,
+                INT8 = 0x2,
+                INT16 = 0x3,
+                INT32 = 0x4,
+                UINT8 = 0x5,
+                UINT16 = 0x6,
+                UINT32 = 0x7,
+                FLOAT32 = 0x8
             }
             // Parent: None
             // Fields count: 1
@@ -13056,7 +13056,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace ManifestTestResource_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_child = 0x8; // CStrongHandle< InfoForResourceTypeManifestTestResource_t >
+                constexpr std::ptrdiff_t m_child = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
             }
             // Parent: None
             // Fields count: 0
@@ -13407,9 +13407,9 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFuseProgram {
-                constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector< FuseVariableIndex_t >
-                constexpr std::ptrdiff_t m_variablesWritten = 0x30; // CUtlVector< FuseVariableIndex_t >
+                constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector<FuseVariableIndex_t>
+                constexpr std::ptrdiff_t m_variablesWritten = 0x30; // CUtlVector<FuseVariableIndex_t>
                 constexpr std::ptrdiff_t m_nMaxTempVarsUsed = 0x48; // int32
             }
             // Parent: None
@@ -13418,12 +13418,12 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFuseSymbolTable {
-                constexpr std::ptrdiff_t m_constants = 0x0; // CUtlVector< ConstantInfo_t >
-                constexpr std::ptrdiff_t m_variables = 0x18; // CUtlVector< VariableInfo_t >
-                constexpr std::ptrdiff_t m_functions = 0x30; // CUtlVector< FunctionInfo_t >
-                constexpr std::ptrdiff_t m_constantMap = 0x48; // CUtlHashtable< CUtlStringToken, int32 >
-                constexpr std::ptrdiff_t m_variableMap = 0x68; // CUtlHashtable< CUtlStringToken, int32 >
-                constexpr std::ptrdiff_t m_functionMap = 0x88; // CUtlHashtable< CUtlStringToken, int32 >
+                constexpr std::ptrdiff_t m_constants = 0x0; // CUtlVector<ConstantInfo_t>
+                constexpr std::ptrdiff_t m_variables = 0x18; // CUtlVector<VariableInfo_t>
+                constexpr std::ptrdiff_t m_functions = 0x30; // CUtlVector<FunctionInfo_t>
+                constexpr std::ptrdiff_t m_constantMap = 0x48; // CUtlHashtable<CUtlStringToken,int32>
+                constexpr std::ptrdiff_t m_variableMap = 0x68; // CUtlHashtable<CUtlStringToken,int32>
+                constexpr std::ptrdiff_t m_functionMap = 0x88; // CUtlHashtable<CUtlStringToken,int32>
             }
             // Parent: None
             // Fields count: 2
@@ -13457,11 +13457,11 @@ namespace cs2_dumper {
         namespace scenesystem {
             // Alignment: 1
             // Members count: 4
-            enum class DisableShadows_t : int8_t {
-                kDisableShadows_None = 0,
-                kDisableShadows_All = 1,
-                kDisableShadows_Baked = 2,
-                kDisableShadows_Realtime = 3
+            enum class DisableShadows_t : uint8_t {
+                kDisableShadows_None = 0x0,
+                kDisableShadows_All = 0x1,
+                kDisableShadows_Baked = 0x2,
+                kDisableShadows_Realtime = 0x3
             }
             // Parent: None
             // Fields count: 2
@@ -13478,7 +13478,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_EndFrame {
-                constexpr std::ptrdiff_t m_Views = 0x0; // CUtlVector< CSSDSEndFrameViewInfo >
+                constexpr std::ptrdiff_t m_Views = 0x0; // CUtlVector<CSSDSEndFrameViewInfo>
             }
             // Parent: None
             // Fields count: 2
@@ -13536,7 +13536,7 @@ namespace cs2_dumper {
             namespace CSSDSMsg_ViewTargetList {
                 constexpr std::ptrdiff_t m_viewId = 0x0; // SceneViewId_t
                 constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
-                constexpr std::ptrdiff_t m_Targets = 0x18; // CUtlVector< CSSDSMsg_ViewTarget >
+                constexpr std::ptrdiff_t m_Targets = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
             }
             // Parent: CSSDSMsg_LayerBase
             // Fields count: 0
@@ -13559,95 +13559,95 @@ namespace cs2_dumper {
         namespace schemasystem {
             // Alignment: 4
             // Members count: 3
-            enum class ThreeState_t : int32_t {
-                TRS_FALSE = 0,
-                TRS_TRUE = 1,
-                TRS_NONE = 2
+            enum class ThreeState_t : uint32_t {
+                TRS_FALSE = 0x0,
+                TRS_TRUE = 0x1,
+                TRS_NONE = 0x2
             }
             // Alignment: 1
             // Members count: 81
-            enum class fieldtype_t : int8_t {
-                FIELD_VOID = 0,
-                FIELD_FLOAT32 = 1,
-                FIELD_STRING = 2,
-                FIELD_VECTOR = 3,
-                FIELD_QUATERNION = 4,
-                FIELD_INT32 = 5,
-                FIELD_BOOLEAN = 6,
-                FIELD_INT16 = 7,
-                FIELD_CHARACTER = 8,
-                FIELD_COLOR32 = 9,
-                FIELD_EMBEDDED = 10,
-                FIELD_CUSTOM = 11,
-                FIELD_CLASSPTR = 12,
-                FIELD_EHANDLE = 13,
-                FIELD_POSITION_VECTOR = 14,
-                FIELD_TIME = 15,
-                FIELD_TICK = 16,
-                FIELD_SOUNDNAME = 17,
-                FIELD_INPUT = 18,
-                FIELD_FUNCTION = 19,
-                FIELD_VMATRIX = 20,
-                FIELD_VMATRIX_WORLDSPACE = 21,
-                FIELD_MATRIX3X4_WORLDSPACE = 22,
-                FIELD_INTERVAL = 23,
-                FIELD_UNUSED = 24,
-                FIELD_VECTOR2D = 25,
-                FIELD_INT64 = 26,
-                FIELD_VECTOR4D = 27,
-                FIELD_RESOURCE = 28,
-                FIELD_TYPEUNKNOWN = 29,
-                FIELD_CSTRING = 30,
-                FIELD_HSCRIPT = 31,
-                FIELD_VARIANT = 32,
-                FIELD_UINT64 = 33,
-                FIELD_FLOAT64 = 34,
-                FIELD_POSITIVEINTEGER_OR_NULL = 35,
-                FIELD_HSCRIPT_NEW_INSTANCE = 36,
-                FIELD_UINT32 = 37,
-                FIELD_UTLSTRINGTOKEN = 38,
-                FIELD_QANGLE = 39,
-                FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 40,
-                FIELD_HMATERIAL = 41,
-                FIELD_HMODEL = 42,
-                FIELD_NETWORK_QUANTIZED_VECTOR = 43,
-                FIELD_NETWORK_QUANTIZED_FLOAT = 44,
-                FIELD_DIRECTION_VECTOR_WORLDSPACE = 45,
-                FIELD_QANGLE_WORLDSPACE = 46,
-                FIELD_QUATERNION_WORLDSPACE = 47,
-                FIELD_HSCRIPT_LIGHTBINDING = 48,
-                FIELD_V8_VALUE = 49,
-                FIELD_V8_OBJECT = 50,
-                FIELD_V8_ARRAY = 51,
-                FIELD_V8_CALLBACK_INFO = 52,
-                FIELD_UTLSTRING = 53,
-                FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 54,
-                FIELD_HRENDERTEXTURE = 55,
-                FIELD_HPARTICLESYSTEMDEFINITION = 56,
-                FIELD_UINT8 = 57,
-                FIELD_UINT16 = 58,
-                FIELD_CTRANSFORM = 59,
-                FIELD_CTRANSFORM_WORLDSPACE = 60,
-                FIELD_HPOSTPROCESSING = 61,
-                FIELD_MATRIX3X4 = 62,
-                FIELD_SHIM = 63,
-                FIELD_CMOTIONTRANSFORM = 64,
-                FIELD_CMOTIONTRANSFORM_WORLDSPACE = 65,
-                FIELD_ATTACHMENT_HANDLE = 66,
-                FIELD_AMMO_INDEX = 67,
-                FIELD_CONDITION_ID = 68,
-                FIELD_AI_SCHEDULE_BITS = 69,
-                FIELD_MODIFIER_HANDLE = 70,
-                FIELD_ROTATION_VECTOR = 71,
-                FIELD_ROTATION_VECTOR_WORLDSPACE = 72,
-                FIELD_HVDATA = 73,
-                FIELD_SCALE32 = 74,
-                FIELD_STRING_AND_TOKEN = 75,
-                FIELD_ENGINE_TIME = 76,
-                FIELD_ENGINE_TICK = 77,
-                FIELD_WORLD_GROUP_ID = 78,
-                FIELD_GLOBALSYMBOL = 79,
-                FIELD_TYPECOUNT = 80
+            enum class fieldtype_t : uint8_t {
+                FIELD_VOID = 0x0,
+                FIELD_FLOAT32 = 0x1,
+                FIELD_STRING = 0x2,
+                FIELD_VECTOR = 0x3,
+                FIELD_QUATERNION = 0x4,
+                FIELD_INT32 = 0x5,
+                FIELD_BOOLEAN = 0x6,
+                FIELD_INT16 = 0x7,
+                FIELD_CHARACTER = 0x8,
+                FIELD_COLOR32 = 0x9,
+                FIELD_EMBEDDED = 0xA,
+                FIELD_CUSTOM = 0xB,
+                FIELD_CLASSPTR = 0xC,
+                FIELD_EHANDLE = 0xD,
+                FIELD_POSITION_VECTOR = 0xE,
+                FIELD_TIME = 0xF,
+                FIELD_TICK = 0x10,
+                FIELD_SOUNDNAME = 0x11,
+                FIELD_INPUT = 0x12,
+                FIELD_FUNCTION = 0x13,
+                FIELD_VMATRIX = 0x14,
+                FIELD_VMATRIX_WORLDSPACE = 0x15,
+                FIELD_MATRIX3X4_WORLDSPACE = 0x16,
+                FIELD_INTERVAL = 0x17,
+                FIELD_UNUSED = 0x18,
+                FIELD_VECTOR2D = 0x19,
+                FIELD_INT64 = 0x1A,
+                FIELD_VECTOR4D = 0x1B,
+                FIELD_RESOURCE = 0x1C,
+                FIELD_TYPEUNKNOWN = 0x1D,
+                FIELD_CSTRING = 0x1E,
+                FIELD_HSCRIPT = 0x1F,
+                FIELD_VARIANT = 0x20,
+                FIELD_UINT64 = 0x21,
+                FIELD_FLOAT64 = 0x22,
+                FIELD_POSITIVEINTEGER_OR_NULL = 0x23,
+                FIELD_HSCRIPT_NEW_INSTANCE = 0x24,
+                FIELD_UINT32 = 0x25,
+                FIELD_UTLSTRINGTOKEN = 0x26,
+                FIELD_QANGLE = 0x27,
+                FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 0x28,
+                FIELD_HMATERIAL = 0x29,
+                FIELD_HMODEL = 0x2A,
+                FIELD_NETWORK_QUANTIZED_VECTOR = 0x2B,
+                FIELD_NETWORK_QUANTIZED_FLOAT = 0x2C,
+                FIELD_DIRECTION_VECTOR_WORLDSPACE = 0x2D,
+                FIELD_QANGLE_WORLDSPACE = 0x2E,
+                FIELD_QUATERNION_WORLDSPACE = 0x2F,
+                FIELD_HSCRIPT_LIGHTBINDING = 0x30,
+                FIELD_V8_VALUE = 0x31,
+                FIELD_V8_OBJECT = 0x32,
+                FIELD_V8_ARRAY = 0x33,
+                FIELD_V8_CALLBACK_INFO = 0x34,
+                FIELD_UTLSTRING = 0x35,
+                FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 0x36,
+                FIELD_HRENDERTEXTURE = 0x37,
+                FIELD_HPARTICLESYSTEMDEFINITION = 0x38,
+                FIELD_UINT8 = 0x39,
+                FIELD_UINT16 = 0x3A,
+                FIELD_CTRANSFORM = 0x3B,
+                FIELD_CTRANSFORM_WORLDSPACE = 0x3C,
+                FIELD_HPOSTPROCESSING = 0x3D,
+                FIELD_MATRIX3X4 = 0x3E,
+                FIELD_SHIM = 0x3F,
+                FIELD_CMOTIONTRANSFORM = 0x40,
+                FIELD_CMOTIONTRANSFORM_WORLDSPACE = 0x41,
+                FIELD_ATTACHMENT_HANDLE = 0x42,
+                FIELD_AMMO_INDEX = 0x43,
+                FIELD_CONDITION_ID = 0x44,
+                FIELD_AI_SCHEDULE_BITS = 0x45,
+                FIELD_MODIFIER_HANDLE = 0x46,
+                FIELD_ROTATION_VECTOR = 0x47,
+                FIELD_ROTATION_VECTOR_WORLDSPACE = 0x48,
+                FIELD_HVDATA = 0x49,
+                FIELD_SCALE32 = 0x4A,
+                FIELD_STRING_AND_TOKEN = 0x4B,
+                FIELD_ENGINE_TIME = 0x4C,
+                FIELD_ENGINE_TICK = 0x4D,
+                FIELD_WORLD_GROUP_ID = 0x4E,
+                FIELD_GLOBALSYMBOL = 0x4F,
+                FIELD_TYPECOUNT = 0x50
             }
             // Parent: None
             // Fields count: 22
@@ -13672,7 +13672,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_CUtlSymbol = 0x148; // CUtlSymbol
                 constexpr std::ptrdiff_t m_stringToken = 0x14C; // CUtlStringToken
                 constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
-                constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray< CResourcePointer< CResourceString > >
+                constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
                 constexpr std::ptrdiff_t m_KV3 = 0x170; // KeyValues3
             }
             // Parent: None
@@ -13722,1527 +13722,1527 @@ namespace cs2_dumper {
         namespace server {
             // Alignment: 4
             // Members count: 19
-            enum class NavAttributeEnum : int32_t {
-                NAV_MESH_AVOID = 128,
-                NAV_MESH_STAIRS = 4096,
-                NAV_MESH_NON_ZUP = 32768,
-                NAV_MESH_SHORT_HEIGHT = 65536,
-                NAV_MESH_CROUCH = 65536,
-                NAV_MESH_JUMP = 2,
-                NAV_MESH_PRECISE = 4,
-                NAV_MESH_NO_JUMP = 8,
-                NAV_MESH_STOP = 16,
-                NAV_MESH_RUN = 32,
-                NAV_MESH_WALK = 64,
-                NAV_MESH_TRANSIENT = 256,
-                NAV_MESH_DONT_HIDE = 512,
-                NAV_MESH_STAND = 1024,
-                NAV_MESH_NO_HOSTAGES = 2048,
-                NAV_MESH_NO_MERGE = 8192,
-                NAV_MESH_OBSTACLE_TOP = 16384,
-                NAV_ATTR_FIRST_GAME_INDEX = 19,
-                NAV_ATTR_LAST_INDEX = 31
+            enum class NavAttributeEnum : uint32_t {
+                NAV_MESH_AVOID = 0x80,
+                NAV_MESH_STAIRS = 0x1000,
+                NAV_MESH_NON_ZUP = 0x8000,
+                NAV_MESH_SHORT_HEIGHT = 0x10000,
+                NAV_MESH_CROUCH = 0x10000,
+                NAV_MESH_JUMP = 0x2,
+                NAV_MESH_PRECISE = 0x4,
+                NAV_MESH_NO_JUMP = 0x8,
+                NAV_MESH_STOP = 0x10,
+                NAV_MESH_RUN = 0x20,
+                NAV_MESH_WALK = 0x40,
+                NAV_MESH_TRANSIENT = 0x100,
+                NAV_MESH_DONT_HIDE = 0x200,
+                NAV_MESH_STAND = 0x400,
+                NAV_MESH_NO_HOSTAGES = 0x800,
+                NAV_MESH_NO_MERGE = 0x2000,
+                NAV_MESH_OBSTACLE_TOP = 0x4000,
+                NAV_ATTR_FIRST_GAME_INDEX = 0x13,
+                NAV_ATTR_LAST_INDEX = 0x1F
             }
             // Alignment: 4
             // Members count: 5
-            enum class NavDirType : int32_t {
-                NORTH = 0,
-                EAST = 1,
-                SOUTH = 2,
-                WEST = 3,
-                NUM_NAV_DIR_TYPE_DIRECTIONS = 4
+            enum class NavDirType : uint32_t {
+                NORTH = 0x0,
+                EAST = 0x1,
+                SOUTH = 0x2,
+                WEST = 0x3,
+                NUM_NAV_DIR_TYPE_DIRECTIONS = 0x4
             }
             // Alignment: 1
             // Members count: 3
-            enum class SequenceFinishNotifyState_t : int8_t {
-                eDoNotNotify = 0,
-                eNotifyWhenFinished = 1,
-                eNotifyTriggered = 2
+            enum class SequenceFinishNotifyState_t : uint8_t {
+                eDoNotNotify = 0x0,
+                eNotifyWhenFinished = 0x1,
+                eNotifyTriggered = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class PointTemplateOwnerSpawnGroupType_t : int32_t {
-                INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP = 0,
-                INSERT_INTO_CURRENTLY_ACTIVE_SPAWN_GROUP = 1,
-                INSERT_INTO_NEWLY_CREATED_SPAWN_GROUP = 2
+            enum class PointTemplateOwnerSpawnGroupType_t : uint32_t {
+                INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP = 0x0,
+                INSERT_INTO_CURRENTLY_ACTIVE_SPAWN_GROUP = 0x1,
+                INSERT_INTO_NEWLY_CREATED_SPAWN_GROUP = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class PointTemplateClientOnlyEntityBehavior_t : int32_t {
-                CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY = 0,
-                CREATE_FOR_CLIENTS_WHO_CONNECT_LATER = 1
+            enum class PointTemplateClientOnlyEntityBehavior_t : uint32_t {
+                CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY = 0x0,
+                CREATE_FOR_CLIENTS_WHO_CONNECT_LATER = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class PerformanceMode_t : int32_t {
-                PM_NORMAL = 0,
-                PM_NO_GIBS = 1,
-                PM_FULL_GIBS = 2,
-                PM_REDUCED_GIBS = 3
+            enum class PerformanceMode_t : uint32_t {
+                PM_NORMAL = 0x0,
+                PM_NO_GIBS = 0x1,
+                PM_FULL_GIBS = 0x2,
+                PM_REDUCED_GIBS = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class AmmoPosition_t : int32_t {
-                AMMO_POSITION_INVALID = -1,
-                AMMO_POSITION_PRIMARY = 0,
-                AMMO_POSITION_SECONDARY = 1,
-                AMMO_POSITION_COUNT = 2
+            enum class AmmoPosition_t : uint32_t {
+                AMMO_POSITION_INVALID = 0xFFFFFFFFFFFFFFFF,
+                AMMO_POSITION_PRIMARY = 0x0,
+                AMMO_POSITION_SECONDARY = 0x1,
+                AMMO_POSITION_COUNT = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class ChatIgnoreType_t : int32_t {
-                CHAT_IGNORE_NONE = 0,
-                CHAT_IGNORE_ALL = 1,
-                CHAT_IGNORE_TEAM = 2
+            enum class ChatIgnoreType_t : uint32_t {
+                CHAT_IGNORE_NONE = 0x0,
+                CHAT_IGNORE_ALL = 0x1,
+                CHAT_IGNORE_TEAM = 0x2
             }
             // Alignment: 1
             // Members count: 3
-            enum class FixAngleSet_t : int8_t {
-                None = 0,
-                Absolute = 1,
-                Relative = 2
+            enum class FixAngleSet_t : uint8_t {
+                None = 0x0,
+                Absolute = 0x1,
+                Relative = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class CommandExecMode_t : int32_t {
-                EXEC_MANUAL = 0,
-                EXEC_LEVELSTART = 1,
-                EXEC_PERIODIC = 2,
-                EXEC_MODES_COUNT = 3
+            enum class CommandExecMode_t : uint32_t {
+                EXEC_MANUAL = 0x0,
+                EXEC_LEVELSTART = 0x1,
+                EXEC_PERIODIC = 0x2,
+                EXEC_MODES_COUNT = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class CommandEntitySpecType_t : int32_t {
-                SPEC_SEARCH = 0,
-                SPEC_TYPES_COUNT = 1
+            enum class CommandEntitySpecType_t : uint32_t {
+                SPEC_SEARCH = 0x0,
+                SPEC_TYPES_COUNT = 0x1
             }
             // Alignment: 4
             // Members count: 43
-            enum class GameAnimEventIndex_t : int32_t {
-                AE_EMPTY = 0,
-                AE_CL_PLAYSOUND = 1,
-                AE_CL_PLAYSOUND_ATTACHMENT = 2,
-                AE_CL_PLAYSOUND_POSITION = 3,
-                AE_SV_PLAYSOUND = 4,
-                AE_CL_STOPSOUND = 5,
-                AE_CL_PLAYSOUND_LOOPING = 6,
-                AE_CL_CREATE_PARTICLE_EFFECT = 7,
-                AE_CL_STOP_PARTICLE_EFFECT = 8,
-                AE_CL_CREATE_PARTICLE_EFFECT_CFG = 9,
-                AE_SV_CREATE_PARTICLE_EFFECT_CFG = 10,
-                AE_SV_STOP_PARTICLE_EFFECT = 11,
-                AE_FOOTSTEP = 12,
-                AE_RAGDOLL = 13,
-                AE_CL_STOP_RAGDOLL_CONTROL = 14,
-                AE_CL_ENABLE_BODYGROUP = 15,
-                AE_CL_DISABLE_BODYGROUP = 16,
-                AE_BODYGROUP_SET_VALUE = 17,
-                AE_CL_BODYGROUP_SET_VALUE_CMODEL_WPN = 18,
-                AE_WEAPON_PERFORM_ATTACK = 19,
-                AE_FIRE_INPUT = 20,
-                AE_CL_CLOTH_ATTR = 21,
-                AE_CL_CLOTH_GROUND_OFFSET = 22,
-                AE_CL_CLOTH_STIFFEN = 23,
-                AE_CL_CLOTH_EFFECT = 24,
-                AE_CL_CREATE_ANIM_SCOPE_PROP = 25,
-                AE_PULSE_GRAPH = 26,
-                AE_PULSE_GRAPH_LOOKAT = 27,
-                AE_PULSE_GRAPH_AIMAT = 28,
-                AE_PULSE_GRAPH_IKLOCKLEFTARM = 29,
-                AE_PULSE_GRAPH_IKLOCKRIGHTARM = 30,
-                AE_CL_WEAPON_TRANSITION_INTO_HAND = 31,
-                AE_CL_BODYGROUP_SET_TO_CLIP = 32,
-                AE_CL_BODYGROUP_SET_TO_NEXTCLIP = 33,
-                AE_SV_SHOW_SILENCER = 34,
-                AE_SV_ATTACH_SILENCER_COMPLETE = 35,
-                AE_SV_HIDE_SILENCER = 36,
-                AE_SV_DETACH_SILENCER_COMPLETE = 37,
-                AE_CL_EJECT_MAG = 38,
-                AE_WPN_COMPLETE_RELOAD = 39,
-                AE_WPN_HEALTHSHOT_INJECT = 40,
-                AE_CL_C4_SCREEN_TEXT = 41,
-                AE_GRENADE_THROW_COMPLETE = 42
+            enum class GameAnimEventIndex_t : uint32_t {
+                AE_EMPTY = 0x0,
+                AE_CL_PLAYSOUND = 0x1,
+                AE_CL_PLAYSOUND_ATTACHMENT = 0x2,
+                AE_CL_PLAYSOUND_POSITION = 0x3,
+                AE_SV_PLAYSOUND = 0x4,
+                AE_CL_STOPSOUND = 0x5,
+                AE_CL_PLAYSOUND_LOOPING = 0x6,
+                AE_CL_CREATE_PARTICLE_EFFECT = 0x7,
+                AE_CL_STOP_PARTICLE_EFFECT = 0x8,
+                AE_CL_CREATE_PARTICLE_EFFECT_CFG = 0x9,
+                AE_SV_CREATE_PARTICLE_EFFECT_CFG = 0xA,
+                AE_SV_STOP_PARTICLE_EFFECT = 0xB,
+                AE_FOOTSTEP = 0xC,
+                AE_RAGDOLL = 0xD,
+                AE_CL_STOP_RAGDOLL_CONTROL = 0xE,
+                AE_CL_ENABLE_BODYGROUP = 0xF,
+                AE_CL_DISABLE_BODYGROUP = 0x10,
+                AE_BODYGROUP_SET_VALUE = 0x11,
+                AE_CL_BODYGROUP_SET_VALUE_CMODEL_WPN = 0x12,
+                AE_WEAPON_PERFORM_ATTACK = 0x13,
+                AE_FIRE_INPUT = 0x14,
+                AE_CL_CLOTH_ATTR = 0x15,
+                AE_CL_CLOTH_GROUND_OFFSET = 0x16,
+                AE_CL_CLOTH_STIFFEN = 0x17,
+                AE_CL_CLOTH_EFFECT = 0x18,
+                AE_CL_CREATE_ANIM_SCOPE_PROP = 0x19,
+                AE_PULSE_GRAPH = 0x1A,
+                AE_PULSE_GRAPH_LOOKAT = 0x1B,
+                AE_PULSE_GRAPH_AIMAT = 0x1C,
+                AE_PULSE_GRAPH_IKLOCKLEFTARM = 0x1D,
+                AE_PULSE_GRAPH_IKLOCKRIGHTARM = 0x1E,
+                AE_CL_WEAPON_TRANSITION_INTO_HAND = 0x1F,
+                AE_CL_BODYGROUP_SET_TO_CLIP = 0x20,
+                AE_CL_BODYGROUP_SET_TO_NEXTCLIP = 0x21,
+                AE_SV_SHOW_SILENCER = 0x22,
+                AE_SV_ATTACH_SILENCER_COMPLETE = 0x23,
+                AE_SV_HIDE_SILENCER = 0x24,
+                AE_SV_DETACH_SILENCER_COMPLETE = 0x25,
+                AE_CL_EJECT_MAG = 0x26,
+                AE_WPN_COMPLETE_RELOAD = 0x27,
+                AE_WPN_HEALTHSHOT_INJECT = 0x28,
+                AE_CL_C4_SCREEN_TEXT = 0x29,
+                AE_GRENADE_THROW_COMPLETE = 0x2A
             }
             // Alignment: 4
             // Members count: 7
-            enum class ObserverMode_t : int32_t {
-                OBS_MODE_NONE = 0,
-                OBS_MODE_FIXED = 1,
-                OBS_MODE_IN_EYE = 2,
-                OBS_MODE_CHASE = 3,
-                OBS_MODE_ROAMING = 4,
-                OBS_MODE_DIRECTED = 5,
-                NUM_OBSERVER_MODES = 6
+            enum class ObserverMode_t : uint32_t {
+                OBS_MODE_NONE = 0x0,
+                OBS_MODE_FIXED = 0x1,
+                OBS_MODE_IN_EYE = 0x2,
+                OBS_MODE_CHASE = 0x3,
+                OBS_MODE_ROAMING = 0x4,
+                OBS_MODE_DIRECTED = 0x5,
+                NUM_OBSERVER_MODES = 0x6
             }
             // Alignment: 4
             // Members count: 3
-            enum class ObserverInterpState_t : int32_t {
-                OBSERVER_INTERP_NONE = 0,
-                OBSERVER_INTERP_TRAVELING = 1,
-                OBSERVER_INTERP_SETTLING = 2
+            enum class ObserverInterpState_t : uint32_t {
+                OBSERVER_INTERP_NONE = 0x0,
+                OBSERVER_INTERP_TRAVELING = 0x1,
+                OBSERVER_INTERP_SETTLING = 0x2
             }
             // Alignment: 4
             // Members count: 27
-            enum class RumbleEffect_t : int32_t {
-                RUMBLE_INVALID = -1,
-                RUMBLE_STOP_ALL = 0,
-                RUMBLE_PISTOL = 1,
-                RUMBLE_357 = 2,
-                RUMBLE_SMG1 = 3,
-                RUMBLE_AR2 = 4,
-                RUMBLE_SHOTGUN_SINGLE = 5,
-                RUMBLE_SHOTGUN_DOUBLE = 6,
-                RUMBLE_AR2_ALT_FIRE = 7,
-                RUMBLE_RPG_MISSILE = 8,
-                RUMBLE_CROWBAR_SWING = 9,
-                RUMBLE_AIRBOAT_GUN = 10,
-                RUMBLE_JEEP_ENGINE_LOOP = 11,
-                RUMBLE_FLAT_LEFT = 12,
-                RUMBLE_FLAT_RIGHT = 13,
-                RUMBLE_FLAT_BOTH = 14,
-                RUMBLE_DMG_LOW = 15,
-                RUMBLE_DMG_MED = 16,
-                RUMBLE_DMG_HIGH = 17,
-                RUMBLE_FALL_LONG = 18,
-                RUMBLE_FALL_SHORT = 19,
-                RUMBLE_PHYSCANNON_OPEN = 20,
-                RUMBLE_PHYSCANNON_PUNT = 21,
-                RUMBLE_PHYSCANNON_LOW = 22,
-                RUMBLE_PHYSCANNON_MEDIUM = 23,
-                RUMBLE_PHYSCANNON_HIGH = 24,
-                NUM_RUMBLE_EFFECTS = 25
+            enum class RumbleEffect_t : uint32_t {
+                RUMBLE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RUMBLE_STOP_ALL = 0x0,
+                RUMBLE_PISTOL = 0x1,
+                RUMBLE_357 = 0x2,
+                RUMBLE_SMG1 = 0x3,
+                RUMBLE_AR2 = 0x4,
+                RUMBLE_SHOTGUN_SINGLE = 0x5,
+                RUMBLE_SHOTGUN_DOUBLE = 0x6,
+                RUMBLE_AR2_ALT_FIRE = 0x7,
+                RUMBLE_RPG_MISSILE = 0x8,
+                RUMBLE_CROWBAR_SWING = 0x9,
+                RUMBLE_AIRBOAT_GUN = 0xA,
+                RUMBLE_JEEP_ENGINE_LOOP = 0xB,
+                RUMBLE_FLAT_LEFT = 0xC,
+                RUMBLE_FLAT_RIGHT = 0xD,
+                RUMBLE_FLAT_BOTH = 0xE,
+                RUMBLE_DMG_LOW = 0xF,
+                RUMBLE_DMG_MED = 0x10,
+                RUMBLE_DMG_HIGH = 0x11,
+                RUMBLE_FALL_LONG = 0x12,
+                RUMBLE_FALL_SHORT = 0x13,
+                RUMBLE_PHYSCANNON_OPEN = 0x14,
+                RUMBLE_PHYSCANNON_PUNT = 0x15,
+                RUMBLE_PHYSCANNON_LOW = 0x16,
+                RUMBLE_PHYSCANNON_MEDIUM = 0x17,
+                RUMBLE_PHYSCANNON_HIGH = 0x18,
+                NUM_RUMBLE_EFFECTS = 0x19
             }
             // Alignment: 4
             // Members count: 25
-            enum class WeaponSound_t : int32_t {
-                WEAPON_SOUND_EMPTY = 0,
-                WEAPON_SOUND_SECONDARY_EMPTY = 1,
-                WEAPON_SOUND_SINGLE = 2,
-                WEAPON_SOUND_SECONDARY_ATTACK = 3,
-                WEAPON_SOUND_MELEE_MISS = 4,
-                WEAPON_SOUND_MELEE_HIT = 5,
-                WEAPON_SOUND_MELEE_HIT_WORLD = 6,
-                WEAPON_SOUND_MELEE_HIT_PLAYER = 7,
-                WEAPON_SOUND_MELEE_HIT_NPC = 8,
-                WEAPON_SOUND_SPECIAL1 = 9,
-                WEAPON_SOUND_SPECIAL2 = 10,
-                WEAPON_SOUND_SPECIAL3 = 11,
-                WEAPON_SOUND_NEARLYEMPTY = 12,
-                WEAPON_SOUND_IMPACT = 13,
-                WEAPON_SOUND_REFLECT = 14,
-                WEAPON_SOUND_SECONDARY_IMPACT = 15,
-                WEAPON_SOUND_SECONDARY_REFLECT = 16,
-                WEAPON_SOUND_RELOAD = 17,
-                WEAPON_SOUND_SINGLE_ACCURATE = 18,
-                WEAPON_SOUND_ZOOM_IN = 19,
-                WEAPON_SOUND_ZOOM_OUT = 20,
-                WEAPON_SOUND_MOUSE_PRESSED = 21,
-                WEAPON_SOUND_DROP = 22,
-                WEAPON_SOUND_RADIO_USE = 23,
-                WEAPON_SOUND_NUM_TYPES = 24
+            enum class WeaponSound_t : uint32_t {
+                WEAPON_SOUND_EMPTY = 0x0,
+                WEAPON_SOUND_SECONDARY_EMPTY = 0x1,
+                WEAPON_SOUND_SINGLE = 0x2,
+                WEAPON_SOUND_SECONDARY_ATTACK = 0x3,
+                WEAPON_SOUND_MELEE_MISS = 0x4,
+                WEAPON_SOUND_MELEE_HIT = 0x5,
+                WEAPON_SOUND_MELEE_HIT_WORLD = 0x6,
+                WEAPON_SOUND_MELEE_HIT_PLAYER = 0x7,
+                WEAPON_SOUND_MELEE_HIT_NPC = 0x8,
+                WEAPON_SOUND_SPECIAL1 = 0x9,
+                WEAPON_SOUND_SPECIAL2 = 0xA,
+                WEAPON_SOUND_SPECIAL3 = 0xB,
+                WEAPON_SOUND_NEARLYEMPTY = 0xC,
+                WEAPON_SOUND_IMPACT = 0xD,
+                WEAPON_SOUND_REFLECT = 0xE,
+                WEAPON_SOUND_SECONDARY_IMPACT = 0xF,
+                WEAPON_SOUND_SECONDARY_REFLECT = 0x10,
+                WEAPON_SOUND_RELOAD = 0x11,
+                WEAPON_SOUND_SINGLE_ACCURATE = 0x12,
+                WEAPON_SOUND_ZOOM_IN = 0x13,
+                WEAPON_SOUND_ZOOM_OUT = 0x14,
+                WEAPON_SOUND_MOUSE_PRESSED = 0x15,
+                WEAPON_SOUND_DROP = 0x16,
+                WEAPON_SOUND_RADIO_USE = 0x17,
+                WEAPON_SOUND_NUM_TYPES = 0x18
             }
             // Alignment: 4
             // Members count: 3
-            enum class AmmoFlags_t : int32_t {
-                AMMO_FORCE_DROP_IF_CARRIED = 1,
-                AMMO_RESERVE_STAYS_WITH_WEAPON = 2,
-                AMMO_FLAG_MAX = 2
+            enum class AmmoFlags_t : uint32_t {
+                AMMO_FORCE_DROP_IF_CARRIED = 0x1,
+                AMMO_RESERVE_STAYS_WITH_WEAPON = 0x2,
+                AMMO_FLAG_MAX = 0x2
             }
             // Alignment: 4
             // Members count: 15
-            enum class TakeDamageFlags_t : int32_t {
-                DFLAG_NONE = 0,
-                DFLAG_SUPPRESS_HEALTH_CHANGES = 1,
-                DFLAG_SUPPRESS_PHYSICS_FORCE = 2,
-                DFLAG_SUPPRESS_EFFECTS = 4,
-                DFLAG_PREVENT_DEATH = 8,
-                DFLAG_FORCE_DEATH = 16,
-                DFLAG_ALWAYS_GIB = 32,
-                DFLAG_NEVER_GIB = 64,
-                DFLAG_REMOVE_NO_RAGDOLL = 128,
-                DFLAG_SUPPRESS_DAMAGE_MODIFICATION = 256,
-                DFLAG_ALWAYS_FIRE_DAMAGE_EVENTS = 512,
-                DFLAG_RADIUS_DMG = 1024,
-                DMG_LASTDFLAG = 1024,
-                DFLAG_IGNORE_ARMOR = 2048,
-                DFLAG_SUPPRESS_UTILREMOVE = 4096
+            enum class TakeDamageFlags_t : uint32_t {
+                DFLAG_NONE = 0x0,
+                DFLAG_SUPPRESS_HEALTH_CHANGES = 0x1,
+                DFLAG_SUPPRESS_PHYSICS_FORCE = 0x2,
+                DFLAG_SUPPRESS_EFFECTS = 0x4,
+                DFLAG_PREVENT_DEATH = 0x8,
+                DFLAG_FORCE_DEATH = 0x10,
+                DFLAG_ALWAYS_GIB = 0x20,
+                DFLAG_NEVER_GIB = 0x40,
+                DFLAG_REMOVE_NO_RAGDOLL = 0x80,
+                DFLAG_SUPPRESS_DAMAGE_MODIFICATION = 0x100,
+                DFLAG_ALWAYS_FIRE_DAMAGE_EVENTS = 0x200,
+                DFLAG_RADIUS_DMG = 0x400,
+                DMG_LASTDFLAG = 0x400,
+                DFLAG_IGNORE_ARMOR = 0x800,
+                DFLAG_SUPPRESS_UTILREMOVE = 0x1000
             }
             // Alignment: 4
             // Members count: 24
-            enum class DamageTypes_t : int32_t {
-                DMG_GENERIC = 0,
-                DMG_CRUSH = 1,
-                DMG_BULLET = 2,
-                DMG_SLASH = 4,
-                DMG_BURN = 8,
-                DMG_VEHICLE = 16,
-                DMG_FALL = 32,
-                DMG_BLAST = 64,
-                DMG_CLUB = 128,
-                DMG_SHOCK = 256,
-                DMG_SONIC = 512,
-                DMG_ENERGYBEAM = 1024,
-                DMG_DROWN = 16384,
-                DMG_POISON = 32768,
-                DMG_RADIATION = 65536,
-                DMG_DROWNRECOVER = 131072,
-                DMG_ACID = 262144,
-                DMG_PHYSGUN = 1048576,
-                DMG_DISSOLVE = 2097152,
-                DMG_BLAST_SURFACE = 4194304,
-                DMG_BUCKSHOT = 16777216,
-                DMG_LASTGENERICFLAG = 16777216,
-                DMG_HEADSHOT = 33554432,
-                DMG_DANGERZONE = 67108864
+            enum class DamageTypes_t : uint32_t {
+                DMG_GENERIC = 0x0,
+                DMG_CRUSH = 0x1,
+                DMG_BULLET = 0x2,
+                DMG_SLASH = 0x4,
+                DMG_BURN = 0x8,
+                DMG_VEHICLE = 0x10,
+                DMG_FALL = 0x20,
+                DMG_BLAST = 0x40,
+                DMG_CLUB = 0x80,
+                DMG_SHOCK = 0x100,
+                DMG_SONIC = 0x200,
+                DMG_ENERGYBEAM = 0x400,
+                DMG_DROWN = 0x4000,
+                DMG_POISON = 0x8000,
+                DMG_RADIATION = 0x10000,
+                DMG_DROWNRECOVER = 0x20000,
+                DMG_ACID = 0x40000,
+                DMG_PHYSGUN = 0x100000,
+                DMG_DISSOLVE = 0x200000,
+                DMG_BLAST_SURFACE = 0x400000,
+                DMG_BUCKSHOT = 0x1000000,
+                DMG_LASTGENERICFLAG = 0x1000000,
+                DMG_HEADSHOT = 0x2000000,
+                DMG_DANGERZONE = 0x4000000
             }
             // Alignment: 4
             // Members count: 17
-            enum class BaseExplosionTypes_t : int32_t {
-                EXPLOSION_TYPE_DEFAULT = 0,
-                EXPLOSION_TYPE_GRENADE = 1,
-                EXPLOSION_TYPE_MOLOTOV = 2,
-                EXPLOSION_TYPE_FIREWORKS = 3,
-                EXPLOSION_TYPE_GASCAN = 4,
-                EXPLOSION_TYPE_GASCYLINDER = 5,
-                EXPLOSION_TYPE_EXPLOSIVEBARREL = 6,
-                EXPLOSION_TYPE_ELECTRICAL = 7,
-                EXPLOSION_TYPE_EMP = 8,
-                EXPLOSION_TYPE_SHRAPNEL = 9,
-                EXPLOSION_TYPE_SMOKEGRENADE = 10,
-                EXPLOSION_TYPE_FLASHBANG = 11,
-                EXPLOSION_TYPE_TRIPMINE = 12,
-                EXPLOSION_TYPE_ICE = 13,
-                EXPLOSION_TYPE_NONE = 14,
-                EXPLOSION_TYPE_CUSTOM = 15,
-                EXPLOSION_TYPE_COUNT = 16
+            enum class BaseExplosionTypes_t : uint32_t {
+                EXPLOSION_TYPE_DEFAULT = 0x0,
+                EXPLOSION_TYPE_GRENADE = 0x1,
+                EXPLOSION_TYPE_MOLOTOV = 0x2,
+                EXPLOSION_TYPE_FIREWORKS = 0x3,
+                EXPLOSION_TYPE_GASCAN = 0x4,
+                EXPLOSION_TYPE_GASCYLINDER = 0x5,
+                EXPLOSION_TYPE_EXPLOSIVEBARREL = 0x6,
+                EXPLOSION_TYPE_ELECTRICAL = 0x7,
+                EXPLOSION_TYPE_EMP = 0x8,
+                EXPLOSION_TYPE_SHRAPNEL = 0x9,
+                EXPLOSION_TYPE_SMOKEGRENADE = 0xA,
+                EXPLOSION_TYPE_FLASHBANG = 0xB,
+                EXPLOSION_TYPE_TRIPMINE = 0xC,
+                EXPLOSION_TYPE_ICE = 0xD,
+                EXPLOSION_TYPE_NONE = 0xE,
+                EXPLOSION_TYPE_CUSTOM = 0xF,
+                EXPLOSION_TYPE_COUNT = 0x10
             }
             // Alignment: 4
             // Members count: 6
-            enum class HierarchyType_t : int32_t {
-                HIERARCHY_NONE = 0,
-                HIERARCHY_BONE_MERGE = 1,
-                HIERARCHY_ATTACHMENT = 2,
-                HIERARCHY_ABSORIGIN = 3,
-                HIERARCHY_BONE = 4,
-                HIERARCHY_TYPE_COUNT = 5
+            enum class HierarchyType_t : uint32_t {
+                HIERARCHY_NONE = 0x0,
+                HIERARCHY_BONE_MERGE = 0x1,
+                HIERARCHY_ATTACHMENT = 0x2,
+                HIERARCHY_ABSORIGIN = 0x3,
+                HIERARCHY_BONE = 0x4,
+                HIERARCHY_TYPE_COUNT = 0x5
             }
             // Alignment: 4
             // Members count: 3
-            enum class CanPlaySequence_t : int32_t {
-                CANNOT_PLAY = 0,
-                CAN_PLAY_NOW = 1,
-                CAN_PLAY_ENQUEUED = 2
+            enum class CanPlaySequence_t : uint32_t {
+                CANNOT_PLAY = 0x0,
+                CAN_PLAY_NOW = 0x1,
+                CAN_PLAY_ENQUEUED = 0x2
             }
             // Alignment: 4
             // Members count: 6
-            enum class ScriptedMoveTo_t : int32_t {
-                CINE_MOVETO_WAIT = 0,
-                CINE_MOVETO_WALK = 1,
-                CINE_MOVETO_RUN = 2,
-                CINE_MOVETO_CUSTOM = 3,
-                CINE_MOVETO_TELEPORT = 4,
-                CINE_MOVETO_WAIT_FACING = 5
+            enum class ScriptedMoveTo_t : uint32_t {
+                CINE_MOVETO_WAIT = 0x0,
+                CINE_MOVETO_WALK = 0x1,
+                CINE_MOVETO_RUN = 0x2,
+                CINE_MOVETO_CUSTOM = 0x3,
+                CINE_MOVETO_TELEPORT = 0x4,
+                CINE_MOVETO_WAIT_FACING = 0x5
             }
             // Alignment: 4
             // Members count: 4
-            enum class ScriptedOnDeath_t : int32_t {
-                SS_ONDEATH_NOT_APPLICABLE = -1,
-                SS_ONDEATH_UNDEFINED = 0,
-                SS_ONDEATH_RAGDOLL = 1,
-                SS_ONDEATH_ANIMATED_DEATH = 2
+            enum class ScriptedOnDeath_t : uint32_t {
+                SS_ONDEATH_NOT_APPLICABLE = 0xFFFFFFFFFFFFFFFF,
+                SS_ONDEATH_UNDEFINED = 0x0,
+                SS_ONDEATH_RAGDOLL = 0x1,
+                SS_ONDEATH_ANIMATED_DEATH = 0x2
             }
             // Alignment: 4
             // Members count: 7
-            enum class IChoreoServices__ScriptState_t : int32_t {
-                SCRIPT_PLAYING = 0,
-                SCRIPT_WAIT = 1,
-                SCRIPT_POST_IDLE = 2,
-                SCRIPT_CLEANUP = 3,
-                SCRIPT_WALK_TO_MARK = 4,
-                SCRIPT_RUN_TO_MARK = 5,
-                SCRIPT_CUSTOM_MOVE_TO_MARK = 6
+            enum class IChoreoServices__ScriptState_t : uint32_t {
+                SCRIPT_PLAYING = 0x0,
+                SCRIPT_WAIT = 0x1,
+                SCRIPT_POST_IDLE = 0x2,
+                SCRIPT_CLEANUP = 0x3,
+                SCRIPT_WALK_TO_MARK = 0x4,
+                SCRIPT_RUN_TO_MARK = 0x5,
+                SCRIPT_CUSTOM_MOVE_TO_MARK = 0x6
             }
             // Alignment: 4
             // Members count: 7
-            enum class IChoreoServices__ChoreoState_t : int32_t {
-                STATE_PRE_SCRIPT = 0,
-                STATE_WAIT_FOR_SCRIPT = 1,
-                STATE_WALK_TO_MARK = 2,
-                STATE_SYNCHRONIZE_SCRIPT = 3,
-                STATE_PLAY_SCRIPT = 4,
-                STATE_PLAY_SCRIPT_POST_IDLE = 5,
-                STATE_PLAY_SCRIPT_POST_IDLE_DONE = 6
+            enum class IChoreoServices__ChoreoState_t : uint32_t {
+                STATE_PRE_SCRIPT = 0x0,
+                STATE_WAIT_FOR_SCRIPT = 0x1,
+                STATE_WALK_TO_MARK = 0x2,
+                STATE_SYNCHRONIZE_SCRIPT = 0x3,
+                STATE_PLAY_SCRIPT = 0x4,
+                STATE_PLAY_SCRIPT_POST_IDLE = 0x5,
+                STATE_PLAY_SCRIPT_POST_IDLE_DONE = 0x6
             }
             // Alignment: 8
             // Members count: 21
-            enum class InputBitMask_t : int64_t {
-                IN_NONE = 0,
-                IN_ALL = -1,
-                IN_ATTACK = 1,
-                IN_JUMP = 2,
-                IN_DUCK = 4,
-                IN_FORWARD = 8,
-                IN_BACK = 16,
-                IN_USE = 32,
-                IN_TURNLEFT = 128,
-                IN_TURNRIGHT = 256,
-                IN_MOVELEFT = 512,
-                IN_MOVERIGHT = 1024,
-                IN_ATTACK2 = 2048,
-                IN_RELOAD = 8192,
-                IN_SPEED = 65536,
-                IN_JOYAUTOSPRINT = 131072,
-                IN_FIRST_MOD_SPECIFIC_BIT = 4294967296,
-                IN_USEORRELOAD = 4294967296,
-                IN_SCORE = 8589934592,
-                IN_ZOOM = 17179869184,
-                IN_LOOK_AT_WEAPON = 34359738368
+            enum class InputBitMask_t : uint64_t {
+                IN_NONE = 0x0,
+                IN_ALL = 0xFFFFFFFFFFFFFFFF,
+                IN_ATTACK = 0x1,
+                IN_JUMP = 0x2,
+                IN_DUCK = 0x4,
+                IN_FORWARD = 0x8,
+                IN_BACK = 0x10,
+                IN_USE = 0x20,
+                IN_TURNLEFT = 0x80,
+                IN_TURNRIGHT = 0x100,
+                IN_MOVELEFT = 0x200,
+                IN_MOVERIGHT = 0x400,
+                IN_ATTACK2 = 0x800,
+                IN_RELOAD = 0x2000,
+                IN_SPEED = 0x10000,
+                IN_JOYAUTOSPRINT = 0x20000,
+                IN_FIRST_MOD_SPECIFIC_BIT = 0x100000000,
+                IN_USEORRELOAD = 0x100000000,
+                IN_SCORE = 0x200000000,
+                IN_ZOOM = 0x400000000,
+                IN_LOOK_AT_WEAPON = 0x800000000
             }
             // Alignment: 4
             // Members count: 9
-            enum class EInButtonState : int32_t {
-                IN_BUTTON_UP = 0,
-                IN_BUTTON_DOWN = 1,
-                IN_BUTTON_DOWN_UP = 2,
-                IN_BUTTON_UP_DOWN = 3,
-                IN_BUTTON_UP_DOWN_UP = 4,
-                IN_BUTTON_DOWN_UP_DOWN = 5,
-                IN_BUTTON_DOWN_UP_DOWN_UP = 6,
-                IN_BUTTON_UP_DOWN_UP_DOWN = 7,
-                IN_BUTTON_STATE_COUNT = 8
+            enum class EInButtonState : uint32_t {
+                IN_BUTTON_UP = 0x0,
+                IN_BUTTON_DOWN = 0x1,
+                IN_BUTTON_DOWN_UP = 0x2,
+                IN_BUTTON_UP_DOWN = 0x3,
+                IN_BUTTON_UP_DOWN_UP = 0x4,
+                IN_BUTTON_DOWN_UP_DOWN = 0x5,
+                IN_BUTTON_DOWN_UP_DOWN_UP = 0x6,
+                IN_BUTTON_UP_DOWN_UP_DOWN = 0x7,
+                IN_BUTTON_STATE_COUNT = 0x8
             }
             // Alignment: 4
             // Members count: 6
-            enum class ShakeCommand_t : int32_t {
-                SHAKE_START = 0,
-                SHAKE_STOP = 1,
-                SHAKE_AMPLITUDE = 2,
-                SHAKE_FREQUENCY = 3,
-                SHAKE_START_RUMBLEONLY = 4,
-                SHAKE_START_NORUMBLE = 5
+            enum class ShakeCommand_t : uint32_t {
+                SHAKE_START = 0x0,
+                SHAKE_STOP = 0x1,
+                SHAKE_AMPLITUDE = 0x2,
+                SHAKE_FREQUENCY = 0x3,
+                SHAKE_START_RUMBLEONLY = 0x4,
+                SHAKE_START_NORUMBLE = 0x5
             }
             // Alignment: 4
             // Members count: 5
-            enum class TimelineCompression_t : int32_t {
-                TIMELINE_COMPRESSION_SUM = 0,
-                TIMELINE_COMPRESSION_COUNT_PER_INTERVAL = 1,
-                TIMELINE_COMPRESSION_AVERAGE = 2,
-                TIMELINE_COMPRESSION_AVERAGE_BLEND = 3,
-                TIMELINE_COMPRESSION_TOTAL = 4
+            enum class TimelineCompression_t : uint32_t {
+                TIMELINE_COMPRESSION_SUM = 0x0,
+                TIMELINE_COMPRESSION_COUNT_PER_INTERVAL = 0x1,
+                TIMELINE_COMPRESSION_AVERAGE = 0x2,
+                TIMELINE_COMPRESSION_AVERAGE_BLEND = 0x3,
+                TIMELINE_COMPRESSION_TOTAL = 0x4
             }
             // Alignment: 8
             // Members count: 39
-            enum class DebugOverlayBits_t : int64_t {
-                OVERLAY_TEXT_BIT = 1,
-                OVERLAY_NAME_BIT = 2,
-                OVERLAY_BBOX_BIT = 4,
-                OVERLAY_PIVOT_BIT = 8,
-                OVERLAY_MESSAGE_BIT = 16,
-                OVERLAY_ABSBOX_BIT = 32,
-                OVERLAY_RBOX_BIT = 64,
-                OVERLAY_SHOW_BLOCKSLOS = 128,
-                OVERLAY_ATTACHMENTS_BIT = 256,
-                OVERLAY_INTERPOLATED_ATTACHMENTS_BIT = 512,
-                OVERLAY_INTERPOLATED_PIVOT_BIT = 1024,
-                OVERLAY_SKELETON_BIT = 2048,
-                OVERLAY_INTERPOLATED_SKELETON_BIT = 4096,
-                OVERLAY_TRIGGER_BOUNDS_BIT = 8192,
-                OVERLAY_HITBOX_BIT = 16384,
-                OVERLAY_INTERPOLATED_HITBOX_BIT = 32768,
-                OVERLAY_AUTOAIM_BIT = 65536,
-                OVERLAY_NPC_SELECTED_BIT = 131072,
-                OVERLAY_JOINT_INFO_BIT = 262144,
-                OVERLAY_NPC_ROUTE_BIT = 524288,
-                OVERLAY_VISIBILITY_TRACES_BIT = 1048576,
-                OVERLAY_NPC_ENEMIES_BIT = 4194304,
-                OVERLAY_NPC_CONDITIONS_BIT = 8388608,
-                OVERLAY_NPC_COMBAT_BIT = 16777216,
-                OVERLAY_NPC_TASK_BIT = 33554432,
-                OVERLAY_NPC_BODYLOCATIONS = 67108864,
-                OVERLAY_NPC_VIEWCONE_BIT = 134217728,
-                OVERLAY_NPC_KILL_BIT = 268435456,
-                OVERLAY_WC_CHANGE_ENTITY = 536870912,
-                OVERLAY_BUDDHA_MODE = 1073741824,
-                OVERLAY_NPC_STEERING_REGULATIONS = 2147483648,
-                OVERLAY_NPC_TASK_TEXT_BIT = 4294967296,
-                OVERLAY_PROP_DEBUG = 8589934592,
-                OVERLAY_NPC_RELATION_BIT = 17179869184,
-                OVERLAY_VIEWOFFSET = 34359738368,
-                OVERLAY_VCOLLIDE_WIREFRAME_BIT = 68719476736,
-                OVERLAY_ACTORNAME_BIT = 274877906944,
-                OVERLAY_NPC_CONDITIONS_TEXT_BIT = 549755813888,
-                OVERLAY_NPC_ABILITY_RANGE_DEBUG_BIT = 1099511627776
+            enum class DebugOverlayBits_t : uint64_t {
+                OVERLAY_TEXT_BIT = 0x1,
+                OVERLAY_NAME_BIT = 0x2,
+                OVERLAY_BBOX_BIT = 0x4,
+                OVERLAY_PIVOT_BIT = 0x8,
+                OVERLAY_MESSAGE_BIT = 0x10,
+                OVERLAY_ABSBOX_BIT = 0x20,
+                OVERLAY_RBOX_BIT = 0x40,
+                OVERLAY_SHOW_BLOCKSLOS = 0x80,
+                OVERLAY_ATTACHMENTS_BIT = 0x100,
+                OVERLAY_INTERPOLATED_ATTACHMENTS_BIT = 0x200,
+                OVERLAY_INTERPOLATED_PIVOT_BIT = 0x400,
+                OVERLAY_SKELETON_BIT = 0x800,
+                OVERLAY_INTERPOLATED_SKELETON_BIT = 0x1000,
+                OVERLAY_TRIGGER_BOUNDS_BIT = 0x2000,
+                OVERLAY_HITBOX_BIT = 0x4000,
+                OVERLAY_INTERPOLATED_HITBOX_BIT = 0x8000,
+                OVERLAY_AUTOAIM_BIT = 0x10000,
+                OVERLAY_NPC_SELECTED_BIT = 0x20000,
+                OVERLAY_JOINT_INFO_BIT = 0x40000,
+                OVERLAY_NPC_ROUTE_BIT = 0x80000,
+                OVERLAY_VISIBILITY_TRACES_BIT = 0x100000,
+                OVERLAY_NPC_ENEMIES_BIT = 0x400000,
+                OVERLAY_NPC_CONDITIONS_BIT = 0x800000,
+                OVERLAY_NPC_COMBAT_BIT = 0x1000000,
+                OVERLAY_NPC_TASK_BIT = 0x2000000,
+                OVERLAY_NPC_BODYLOCATIONS = 0x4000000,
+                OVERLAY_NPC_VIEWCONE_BIT = 0x8000000,
+                OVERLAY_NPC_KILL_BIT = 0x10000000,
+                OVERLAY_WC_CHANGE_ENTITY = 0x20000000,
+                OVERLAY_BUDDHA_MODE = 0x40000000,
+                OVERLAY_NPC_STEERING_REGULATIONS = 0x80000000,
+                OVERLAY_NPC_TASK_TEXT_BIT = 0x100000000,
+                OVERLAY_PROP_DEBUG = 0x200000000,
+                OVERLAY_NPC_RELATION_BIT = 0x400000000,
+                OVERLAY_VIEWOFFSET = 0x800000000,
+                OVERLAY_VCOLLIDE_WIREFRAME_BIT = 0x1000000000,
+                OVERLAY_ACTORNAME_BIT = 0x4000000000,
+                OVERLAY_NPC_CONDITIONS_TEXT_BIT = 0x8000000000,
+                OVERLAY_NPC_ABILITY_RANGE_DEBUG_BIT = 0x10000000000
             }
             // Alignment: 1
             // Members count: 14
-            enum class MoveType_t : int8_t {
-                MOVETYPE_NONE = 0,
-                MOVETYPE_OBSOLETE = 1,
-                MOVETYPE_WALK = 2,
-                MOVETYPE_FLY = 3,
-                MOVETYPE_FLYGRAVITY = 4,
-                MOVETYPE_VPHYSICS = 5,
-                MOVETYPE_PUSH = 6,
-                MOVETYPE_NOCLIP = 7,
-                MOVETYPE_OBSERVER = 8,
-                MOVETYPE_LADDER = 9,
-                MOVETYPE_CUSTOM = 10,
-                MOVETYPE_LAST = 11,
-                MOVETYPE_INVALID = 11,
-                MOVETYPE_MAX_BITS = 5
+            enum class MoveType_t : uint8_t {
+                MOVETYPE_NONE = 0x0,
+                MOVETYPE_OBSOLETE = 0x1,
+                MOVETYPE_WALK = 0x2,
+                MOVETYPE_FLY = 0x3,
+                MOVETYPE_FLYGRAVITY = 0x4,
+                MOVETYPE_VPHYSICS = 0x5,
+                MOVETYPE_PUSH = 0x6,
+                MOVETYPE_NOCLIP = 0x7,
+                MOVETYPE_OBSERVER = 0x8,
+                MOVETYPE_LADDER = 0x9,
+                MOVETYPE_CUSTOM = 0xA,
+                MOVETYPE_LAST = 0xB,
+                MOVETYPE_INVALID = 0xB,
+                MOVETYPE_MAX_BITS = 0x5
             }
             // Alignment: 1
             // Members count: 6
-            enum class MoveCollide_t : int8_t {
-                MOVECOLLIDE_DEFAULT = 0,
-                MOVECOLLIDE_FLY_BOUNCE = 1,
-                MOVECOLLIDE_FLY_CUSTOM = 2,
-                MOVECOLLIDE_FLY_SLIDE = 3,
-                MOVECOLLIDE_COUNT = 4,
-                MOVECOLLIDE_MAX_BITS = 3
+            enum class MoveCollide_t : uint8_t {
+                MOVECOLLIDE_DEFAULT = 0x0,
+                MOVECOLLIDE_FLY_BOUNCE = 0x1,
+                MOVECOLLIDE_FLY_CUSTOM = 0x2,
+                MOVECOLLIDE_FLY_SLIDE = 0x3,
+                MOVECOLLIDE_COUNT = 0x4,
+                MOVECOLLIDE_MAX_BITS = 0x3
             }
             // Alignment: 1
             // Members count: 9
-            enum class SolidType_t : int8_t {
-                SOLID_NONE = 0,
-                SOLID_BSP = 1,
-                SOLID_BBOX = 2,
-                SOLID_OBB = 3,
-                SOLID_SPHERE = 4,
-                SOLID_POINT = 5,
-                SOLID_VPHYSICS = 6,
-                SOLID_CAPSULE = 7,
-                SOLID_LAST = 8
+            enum class SolidType_t : uint8_t {
+                SOLID_NONE = 0x0,
+                SOLID_BSP = 0x1,
+                SOLID_BBOX = 0x2,
+                SOLID_OBB = 0x3,
+                SOLID_SPHERE = 0x4,
+                SOLID_POINT = 0x5,
+                SOLID_VPHYSICS = 0x6,
+                SOLID_CAPSULE = 0x7,
+                SOLID_LAST = 0x8
             }
             // Alignment: 4
             // Members count: 3
-            enum class BrushSolidities_e : int32_t {
-                BRUSHSOLID_TOGGLE = 0,
-                BRUSHSOLID_NEVER = 1,
-                BRUSHSOLID_ALWAYS = 2
+            enum class BrushSolidities_e : uint32_t {
+                BRUSHSOLID_TOGGLE = 0x0,
+                BRUSHSOLID_NEVER = 0x1,
+                BRUSHSOLID_ALWAYS = 0x2
             }
             // Alignment: 1
             // Members count: 13
-            enum class RenderMode_t : int8_t {
-                kRenderNormal = 0,
-                kRenderTransColor = 1,
-                kRenderTransTexture = 2,
-                kRenderGlow = 3,
-                kRenderTransAlpha = 4,
-                kRenderTransAdd = 5,
-                kRenderEnvironmental = 6,
-                kRenderTransAddFrameBlend = 7,
-                kRenderTransAlphaAdd = 8,
-                kRenderWorldGlow = 9,
-                kRenderNone = 10,
-                kRenderDevVisualizer = 11,
-                kRenderModeCount = 12
+            enum class RenderMode_t : uint8_t {
+                kRenderNormal = 0x0,
+                kRenderTransColor = 0x1,
+                kRenderTransTexture = 0x2,
+                kRenderGlow = 0x3,
+                kRenderTransAlpha = 0x4,
+                kRenderTransAdd = 0x5,
+                kRenderEnvironmental = 0x6,
+                kRenderTransAddFrameBlend = 0x7,
+                kRenderTransAlphaAdd = 0x8,
+                kRenderWorldGlow = 0x9,
+                kRenderNone = 0xA,
+                kRenderDevVisualizer = 0xB,
+                kRenderModeCount = 0xC
             }
             // Alignment: 1
             // Members count: 20
-            enum class RenderFx_t : int8_t {
-                kRenderFxNone = 0,
-                kRenderFxPulseSlow = 1,
-                kRenderFxPulseFast = 2,
-                kRenderFxPulseSlowWide = 3,
-                kRenderFxPulseFastWide = 4,
-                kRenderFxFadeSlow = 5,
-                kRenderFxFadeFast = 6,
-                kRenderFxSolidSlow = 7,
-                kRenderFxSolidFast = 8,
-                kRenderFxStrobeSlow = 9,
-                kRenderFxStrobeFast = 10,
-                kRenderFxStrobeFaster = 11,
-                kRenderFxFlickerSlow = 12,
-                kRenderFxFlickerFast = 13,
-                kRenderFxNoDissipation = 14,
-                kRenderFxFadeOut = 15,
-                kRenderFxFadeIn = 16,
-                kRenderFxPulseFastWider = 17,
-                kRenderFxGlowShell = 18,
-                kRenderFxMax = 19
+            enum class RenderFx_t : uint8_t {
+                kRenderFxNone = 0x0,
+                kRenderFxPulseSlow = 0x1,
+                kRenderFxPulseFast = 0x2,
+                kRenderFxPulseSlowWide = 0x3,
+                kRenderFxPulseFastWide = 0x4,
+                kRenderFxFadeSlow = 0x5,
+                kRenderFxFadeFast = 0x6,
+                kRenderFxSolidSlow = 0x7,
+                kRenderFxSolidFast = 0x8,
+                kRenderFxStrobeSlow = 0x9,
+                kRenderFxStrobeFast = 0xA,
+                kRenderFxStrobeFaster = 0xB,
+                kRenderFxFlickerSlow = 0xC,
+                kRenderFxFlickerFast = 0xD,
+                kRenderFxNoDissipation = 0xE,
+                kRenderFxFadeOut = 0xF,
+                kRenderFxFadeIn = 0x10,
+                kRenderFxPulseFastWider = 0x11,
+                kRenderFxGlowShell = 0x12,
+                kRenderFxMax = 0x13
             }
             // Alignment: 4
             // Members count: 2
-            enum class CRR_Response__ResponseEnum_t : int32_t {
-                MAX_RESPONSE_NAME = 192,
-                MAX_RULE_NAME = 128
+            enum class CRR_Response__ResponseEnum_t : uint32_t {
+                MAX_RESPONSE_NAME = 0xC0,
+                MAX_RULE_NAME = 0x80
             }
             // Alignment: 4
             // Members count: 3
-            enum class LessonPanelLayoutFileTypes_t : int32_t {
-                LAYOUT_HAND_DEFAULT = 0,
-                LAYOUT_WORLD_DEFAULT = 1,
-                LAYOUT_CUSTOM = 2
+            enum class LessonPanelLayoutFileTypes_t : uint32_t {
+                LAYOUT_HAND_DEFAULT = 0x0,
+                LAYOUT_WORLD_DEFAULT = 0x1,
+                LAYOUT_CUSTOM = 0x2
             }
             // Alignment: 4
             // Members count: 5
-            enum class Touch_t : int32_t {
-                touch_none = 0,
-                touch_player_only = 1,
-                touch_npc_only = 2,
-                touch_player_or_npc = 3,
-                touch_player_or_npc_or_physicsprop = 4
+            enum class Touch_t : uint32_t {
+                touch_none = 0x0,
+                touch_player_only = 0x1,
+                touch_npc_only = 0x2,
+                touch_player_or_npc = 0x3,
+                touch_player_or_npc_or_physicsprop = 0x4
             }
             // Alignment: 4
             // Members count: 4
-            enum class ScriptedMoveType_t : int32_t {
-                SCRIPTED_MOVETYPE_NONE = 0,
-                SCRIPTED_MOVETYPE_TO_WITH_DURATION = 1,
-                SCRIPTED_MOVETYPE_TO_WITH_MOVESPEED = 2,
-                SCRIPTED_MOVETYPE_SWEEP_TO_AT_MOVEMENT_SPEED = 3
+            enum class ScriptedMoveType_t : uint32_t {
+                SCRIPTED_MOVETYPE_NONE = 0x0,
+                SCRIPTED_MOVETYPE_TO_WITH_DURATION = 0x1,
+                SCRIPTED_MOVETYPE_TO_WITH_MOVESPEED = 0x2,
+                SCRIPTED_MOVETYPE_SWEEP_TO_AT_MOVEMENT_SPEED = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class ForcedCrouchState_t : int32_t {
-                FORCEDCROUCH_NONE = 0,
-                FORCEDCROUCH_CROUCHED = 1,
-                FORCEDCROUCH_UNCROUCHED = 2
+            enum class ForcedCrouchState_t : uint32_t {
+                FORCEDCROUCH_NONE = 0x0,
+                FORCEDCROUCH_CROUCHED = 0x1,
+                FORCEDCROUCH_UNCROUCHED = 0x2
             }
             // Alignment: 4
             // Members count: 12
-            enum class Hull_t : int32_t {
-                HULL_HUMAN = 0,
-                HULL_SMALL_CENTERED = 1,
-                HULL_WIDE_HUMAN = 2,
-                HULL_TINY = 3,
-                HULL_MEDIUM = 4,
-                HULL_TINY_CENTERED = 5,
-                HULL_LARGE = 6,
-                HULL_LARGE_CENTERED = 7,
-                HULL_MEDIUM_TALL = 8,
-                HULL_SMALL = 9,
-                NUM_HULLS = 10,
-                HULL_NONE = 11
+            enum class Hull_t : uint32_t {
+                HULL_HUMAN = 0x0,
+                HULL_SMALL_CENTERED = 0x1,
+                HULL_WIDE_HUMAN = 0x2,
+                HULL_TINY = 0x3,
+                HULL_MEDIUM = 0x4,
+                HULL_TINY_CENTERED = 0x5,
+                HULL_LARGE = 0x6,
+                HULL_LARGE_CENTERED = 0x7,
+                HULL_MEDIUM_TALL = 0x8,
+                HULL_SMALL = 0x9,
+                NUM_HULLS = 0xA,
+                HULL_NONE = 0xB
             }
             // Alignment: 4
             // Members count: 1
-            enum class navproperties_t : int32_t {
-                NAV_IGNORE = 1
+            enum class navproperties_t : uint32_t {
+                NAV_IGNORE = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class CLogicBranchList__LogicBranchListenerLastState_t : int32_t {
-                LOGIC_BRANCH_LISTENER_NOT_INIT = 0,
-                LOGIC_BRANCH_LISTENER_ALL_TRUE = 1,
-                LOGIC_BRANCH_LISTENER_ALL_FALSE = 2,
-                LOGIC_BRANCH_LISTENER_MIXED = 3
+            enum class CLogicBranchList__LogicBranchListenerLastState_t : uint32_t {
+                LOGIC_BRANCH_LISTENER_NOT_INIT = 0x0,
+                LOGIC_BRANCH_LISTENER_ALL_TRUE = 0x1,
+                LOGIC_BRANCH_LISTENER_ALL_FALSE = 0x2,
+                LOGIC_BRANCH_LISTENER_MIXED = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class EntFinderMethod_t : int32_t {
-                ENT_FIND_METHOD_NEAREST = 0,
-                ENT_FIND_METHOD_FARTHEST = 1,
-                ENT_FIND_METHOD_RANDOM = 2
+            enum class EntFinderMethod_t : uint32_t {
+                ENT_FIND_METHOD_NEAREST = 0x0,
+                ENT_FIND_METHOD_FARTHEST = 0x1,
+                ENT_FIND_METHOD_RANDOM = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class ValueRemapperInputType_t : int32_t {
-                InputType_PlayerShootPosition = 0,
-                InputType_PlayerShootPositionAroundAxis = 1
+            enum class ValueRemapperInputType_t : uint32_t {
+                InputType_PlayerShootPosition = 0x0,
+                InputType_PlayerShootPositionAroundAxis = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class ValueRemapperOutputType_t : int32_t {
-                OutputType_AnimationCycle = 0,
-                OutputType_RotationX = 1,
-                OutputType_RotationY = 2,
-                OutputType_RotationZ = 3
+            enum class ValueRemapperOutputType_t : uint32_t {
+                OutputType_AnimationCycle = 0x0,
+                OutputType_RotationX = 0x1,
+                OutputType_RotationY = 0x2,
+                OutputType_RotationZ = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class ValueRemapperHapticsType_t : int32_t {
-                HaticsType_Default = 0,
-                HaticsType_None = 1
+            enum class ValueRemapperHapticsType_t : uint32_t {
+                HaticsType_Default = 0x0,
+                HaticsType_None = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class ValueRemapperMomentumType_t : int32_t {
-                MomentumType_None = 0,
-                MomentumType_Friction = 1,
-                MomentumType_SpringTowardSnapValue = 2,
-                MomentumType_SpringAwayFromSnapValue = 3
+            enum class ValueRemapperMomentumType_t : uint32_t {
+                MomentumType_None = 0x0,
+                MomentumType_Friction = 0x1,
+                MomentumType_SpringTowardSnapValue = 0x2,
+                MomentumType_SpringAwayFromSnapValue = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class ValueRemapperRatchetType_t : int32_t {
-                RatchetType_Absolute = 0,
-                RatchetType_EachEngage = 1
+            enum class ValueRemapperRatchetType_t : uint32_t {
+                RatchetType_Absolute = 0x0,
+                RatchetType_EachEngage = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class PointWorldTextJustifyHorizontal_t : int32_t {
-                POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_LEFT = 0,
-                POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER = 1,
-                POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_RIGHT = 2
+            enum class PointWorldTextJustifyHorizontal_t : uint32_t {
+                POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_LEFT = 0x0,
+                POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER = 0x1,
+                POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_RIGHT = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class PointWorldTextJustifyVertical_t : int32_t {
-                POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM = 0,
-                POINT_WORLD_TEXT_JUSTIFY_VERTICAL_CENTER = 1,
-                POINT_WORLD_TEXT_JUSTIFY_VERTICAL_TOP = 2
+            enum class PointWorldTextJustifyVertical_t : uint32_t {
+                POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM = 0x0,
+                POINT_WORLD_TEXT_JUSTIFY_VERTICAL_CENTER = 0x1,
+                POINT_WORLD_TEXT_JUSTIFY_VERTICAL_TOP = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class PointWorldTextReorientMode_t : int32_t {
-                POINT_WORLD_TEXT_REORIENT_NONE = 0,
-                POINT_WORLD_TEXT_REORIENT_AROUND_UP = 1
+            enum class PointWorldTextReorientMode_t : uint32_t {
+                POINT_WORLD_TEXT_REORIENT_NONE = 0x0,
+                POINT_WORLD_TEXT_REORIENT_AROUND_UP = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class doorCheck_e : int32_t {
-                DOOR_CHECK_FORWARD = 0,
-                DOOR_CHECK_BACKWARD = 1,
-                DOOR_CHECK_FULL = 2
+            enum class doorCheck_e : uint32_t {
+                DOOR_CHECK_FORWARD = 0x0,
+                DOOR_CHECK_BACKWARD = 0x1,
+                DOOR_CHECK_FULL = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class PropDoorRotatingSpawnPos_t : int32_t {
-                DOOR_SPAWN_CLOSED = 0,
-                DOOR_SPAWN_OPEN_FORWARD = 1,
-                DOOR_SPAWN_OPEN_BACK = 2,
-                DOOR_SPAWN_AJAR = 3
+            enum class PropDoorRotatingSpawnPos_t : uint32_t {
+                DOOR_SPAWN_CLOSED = 0x0,
+                DOOR_SPAWN_OPEN_FORWARD = 0x1,
+                DOOR_SPAWN_OPEN_BACK = 0x2,
+                DOOR_SPAWN_AJAR = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class PropDoorRotatingOpenDirection_e : int32_t {
-                DOOR_ROTATING_OPEN_BOTH_WAYS = 0,
-                DOOR_ROTATING_OPEN_FORWARD = 1,
-                DOOR_ROTATING_OPEN_BACKWARD = 2
+            enum class PropDoorRotatingOpenDirection_e : uint32_t {
+                DOOR_ROTATING_OPEN_BOTH_WAYS = 0x0,
+                DOOR_ROTATING_OPEN_FORWARD = 0x1,
+                DOOR_ROTATING_OPEN_BACKWARD = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class SceneOnPlayerDeath_t : int32_t {
-                SCENE_ONPLAYERDEATH_DO_NOTHING = 0,
-                SCENE_ONPLAYERDEATH_CANCEL = 1
+            enum class SceneOnPlayerDeath_t : uint32_t {
+                SCENE_ONPLAYERDEATH_DO_NOTHING = 0x0,
+                SCENE_ONPLAYERDEATH_CANCEL = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class ScriptedConflictResponse_t : int32_t {
-                SS_CONFLICT_ENQUEUE = 0,
-                SS_CONFLICT_INTERRUPT = 1
+            enum class ScriptedConflictResponse_t : uint32_t {
+                SS_CONFLICT_ENQUEUE = 0x0,
+                SS_CONFLICT_INTERRUPT = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class TRAIN_CODE : int32_t {
-                TRAIN_SAFE = 0,
-                TRAIN_BLOCKING = 1,
-                TRAIN_FOLLOWING = 2
+            enum class TRAIN_CODE : uint32_t {
+                TRAIN_SAFE = 0x0,
+                TRAIN_BLOCKING = 0x1,
+                TRAIN_FOLLOWING = 0x2
             }
             // Alignment: 4
             // Members count: 5
-            enum class NPCFollowFormation_t : int32_t {
-                Default = -1,
-                CloseCircle = 0,
-                WideCircle = 1,
-                MediumCircle = 5,
-                Sidekick = 6
+            enum class NPCFollowFormation_t : uint32_t {
+                Default = 0xFFFFFFFFFFFFFFFF,
+                CloseCircle = 0x0,
+                WideCircle = 0x1,
+                MediumCircle = 0x5,
+                Sidekick = 0x6
             }
             // Alignment: 4
             // Members count: 3
-            enum class NPCLookType_t : int32_t {
-                Chest = 0,
-                Head = 1,
-                Eyes = 2
+            enum class NPCLookType_t : uint32_t {
+                Chest = 0x0,
+                Head = 0x1,
+                Eyes = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class SoundEventStartType_t : int32_t {
-                SOUNDEVENT_START_PLAYER = 0,
-                SOUNDEVENT_START_WORLD = 1,
-                SOUNDEVENT_START_ENTITY = 2
+            enum class SoundEventStartType_t : uint32_t {
+                SOUNDEVENT_START_PLAYER = 0x0,
+                SOUNDEVENT_START_WORLD = 0x1,
+                SOUNDEVENT_START_ENTITY = 0x2
             }
             // Alignment: 4
             // Members count: 8
-            enum class TOGGLE_STATE : int32_t {
-                TS_AT_TOP = 0,
-                TS_AT_BOTTOM = 1,
-                TS_GOING_UP = 2,
-                TS_GOING_DOWN = 3,
-                DOOR_OPEN = 0,
-                DOOR_CLOSED = 1,
-                DOOR_OPENING = 2,
-                DOOR_CLOSING = 3
+            enum class TOGGLE_STATE : uint32_t {
+                TS_AT_TOP = 0x0,
+                TS_AT_BOTTOM = 0x1,
+                TS_GOING_UP = 0x2,
+                TS_GOING_DOWN = 0x3,
+                DOOR_OPEN = 0x0,
+                DOOR_CLOSED = 0x1,
+                DOOR_OPENING = 0x2,
+                DOOR_CLOSING = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class FuncDoorSpawnPos_t : int32_t {
-                FUNC_DOOR_SPAWN_CLOSED = 0,
-                FUNC_DOOR_SPAWN_OPEN = 1
+            enum class FuncDoorSpawnPos_t : uint32_t {
+                FUNC_DOOR_SPAWN_CLOSED = 0x0,
+                FUNC_DOOR_SPAWN_OPEN = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class filter_t : int32_t {
-                FILTER_AND = 0,
-                FILTER_OR = 1
+            enum class filter_t : uint32_t {
+                FILTER_AND = 0x0,
+                FILTER_OR = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class Explosions : int32_t {
-                expRandom = 0,
-                expDirected = 1,
-                expUsePrecise = 2
+            enum class Explosions : uint32_t {
+                expRandom = 0x0,
+                expDirected = 0x1,
+                expUsePrecise = 0x2
             }
             // Alignment: 4
             // Members count: 12
-            enum class Materials : int32_t {
-                matGlass = 0,
-                matWood = 1,
-                matMetal = 2,
-                matFlesh = 3,
-                matCinderBlock = 4,
-                matCeilingTile = 5,
-                matComputer = 6,
-                matUnbreakableGlass = 7,
-                matRocks = 8,
-                matWeb = 9,
-                matNone = 10,
-                matLastMaterial = 11
+            enum class Materials : uint32_t {
+                matGlass = 0x0,
+                matWood = 0x1,
+                matMetal = 0x2,
+                matFlesh = 0x3,
+                matCinderBlock = 0x4,
+                matCeilingTile = 0x5,
+                matComputer = 0x6,
+                matUnbreakableGlass = 0x7,
+                matRocks = 0x8,
+                matWeb = 0x9,
+                matNone = 0xA,
+                matLastMaterial = 0xB
             }
             // Alignment: 4
             // Members count: 3
-            enum class EOverrideBlockLOS_t : int32_t {
-                BLOCK_LOS_DEFAULT = 0,
-                BLOCK_LOS_FORCE_FALSE = 1,
-                BLOCK_LOS_FORCE_TRUE = 2
+            enum class EOverrideBlockLOS_t : uint32_t {
+                BLOCK_LOS_DEFAULT = 0x0,
+                BLOCK_LOS_FORCE_FALSE = 0x1,
+                BLOCK_LOS_FORCE_TRUE = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class MoveLinearAuthoredPos_t : int32_t {
-                MOVELINEAR_AUTHORED_AT_START_POSITION = 0,
-                MOVELINEAR_AUTHORED_AT_OPEN_POSITION = 1,
-                MOVELINEAR_AUTHORED_AT_CLOSED_POSITION = 2
+            enum class MoveLinearAuthoredPos_t : uint32_t {
+                MOVELINEAR_AUTHORED_AT_START_POSITION = 0x0,
+                MOVELINEAR_AUTHORED_AT_OPEN_POSITION = 0x1,
+                MOVELINEAR_AUTHORED_AT_CLOSED_POSITION = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class TrackOrientationType_t : int32_t {
-                TrackOrientation_Fixed = 0,
-                TrackOrientation_FacePath = 1,
-                TrackOrientation_FacePathAngles = 2
+            enum class TrackOrientationType_t : uint32_t {
+                TrackOrientation_Fixed = 0x0,
+                TrackOrientation_FacePath = 0x1,
+                TrackOrientation_FacePathAngles = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class SimpleConstraintSoundProfile__SimpleConstraintsSoundProfileKeypoints_t : int32_t {
-                kMIN_THRESHOLD = 0,
-                kMIN_FULL = 1,
-                kHIGHWATER = 2
+            enum class SimpleConstraintSoundProfile__SimpleConstraintsSoundProfileKeypoints_t : uint32_t {
+                kMIN_THRESHOLD = 0x0,
+                kMIN_FULL = 0x1,
+                kHIGHWATER = 0x2
             }
             // Alignment: 4
             // Members count: 23
-            enum class SoundFlags_t : int32_t {
-                SOUND_NONE = 0,
-                SOUND_COMBAT = 1,
-                SOUND_WORLD = 2,
-                SOUND_PLAYER = 4,
-                SOUND_DANGER = 8,
-                SOUND_BULLET_IMPACT = 16,
-                SOUND_THUMPER = 32,
-                SOUND_PHYSICS_DANGER = 64,
-                SOUND_MOVE_AWAY = 128,
-                SOUND_PLAYER_VEHICLE = 256,
-                SOUND_GLASS_BREAK = 512,
-                SOUND_PHYSICS_OBJECT = 1024,
-                SOUND_CONTEXT_GUNFIRE = 1048576,
-                SOUND_CONTEXT_COMBINE_ONLY = 2097152,
-                SOUND_CONTEXT_REACT_TO_SOURCE = 4194304,
-                SOUND_CONTEXT_EXPLOSION = 8388608,
-                SOUND_CONTEXT_EXCLUDE_COMBINE = 16777216,
-                SOUND_CONTEXT_DANGER_APPROACH = 33554432,
-                SOUND_CONTEXT_ALLIES_ONLY = 67108864,
-                SOUND_CONTEXT_PANIC_NPCS = 134217728,
-                ALL_CONTEXTS = -1048576,
-                ALL_SCENTS = 0,
-                ALL_SOUNDS = 1048575
+            enum class SoundFlags_t : uint32_t {
+                SOUND_NONE = 0x0,
+                SOUND_COMBAT = 0x1,
+                SOUND_WORLD = 0x2,
+                SOUND_PLAYER = 0x4,
+                SOUND_DANGER = 0x8,
+                SOUND_BULLET_IMPACT = 0x10,
+                SOUND_THUMPER = 0x20,
+                SOUND_PHYSICS_DANGER = 0x40,
+                SOUND_MOVE_AWAY = 0x80,
+                SOUND_PLAYER_VEHICLE = 0x100,
+                SOUND_GLASS_BREAK = 0x200,
+                SOUND_PHYSICS_OBJECT = 0x400,
+                SOUND_CONTEXT_GUNFIRE = 0x100000,
+                SOUND_CONTEXT_COMBINE_ONLY = 0x200000,
+                SOUND_CONTEXT_REACT_TO_SOURCE = 0x400000,
+                SOUND_CONTEXT_EXPLOSION = 0x800000,
+                SOUND_CONTEXT_EXCLUDE_COMBINE = 0x1000000,
+                SOUND_CONTEXT_DANGER_APPROACH = 0x2000000,
+                SOUND_CONTEXT_ALLIES_ONLY = 0x4000000,
+                SOUND_CONTEXT_PANIC_NPCS = 0x8000000,
+                ALL_CONTEXTS = 0xFFFFFFFFFFF00000,
+                ALL_SCENTS = 0x0,
+                ALL_SOUNDS = 0xFFFFF
             }
             // Alignment: 4
             // Members count: 3
-            enum class TrainVelocityType_t : int32_t {
-                TrainVelocity_Instantaneous = 0,
-                TrainVelocity_LinearBlend = 1,
-                TrainVelocity_EaseInEaseOut = 2
+            enum class TrainVelocityType_t : uint32_t {
+                TrainVelocity_Instantaneous = 0x0,
+                TrainVelocity_LinearBlend = 0x1,
+                TrainVelocity_EaseInEaseOut = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class TrainOrientationType_t : int32_t {
-                TrainOrientation_Fixed = 0,
-                TrainOrientation_AtPathTracks = 1,
-                TrainOrientation_LinearBlend = 2,
-                TrainOrientation_EaseInEaseOut = 3
+            enum class TrainOrientationType_t : uint32_t {
+                TrainOrientation_Fixed = 0x0,
+                TrainOrientation_AtPathTracks = 0x1,
+                TrainOrientation_LinearBlend = 0x2,
+                TrainOrientation_EaseInEaseOut = 0x3
             }
             // Alignment: 4
             // Members count: 7
-            enum class BeamType_t : int32_t {
-                BEAM_INVALID = 0,
-                BEAM_POINTS = 1,
-                BEAM_ENTPOINT = 2,
-                BEAM_ENTS = 3,
-                BEAM_HOSE = 4,
-                BEAM_SPLINE = 5,
-                BEAM_LASER = 6
+            enum class BeamType_t : uint32_t {
+                BEAM_INVALID = 0x0,
+                BEAM_POINTS = 0x1,
+                BEAM_ENTPOINT = 0x2,
+                BEAM_ENTS = 0x3,
+                BEAM_HOSE = 0x4,
+                BEAM_SPLINE = 0x5,
+                BEAM_LASER = 0x6
             }
             // Alignment: 4
             // Members count: 4
-            enum class BeamClipStyle_t : int32_t {
-                kNOCLIP = 0,
-                kGEOCLIP = 1,
-                kMODELCLIP = 2,
-                kBEAMCLIPSTYLE_NUMBITS = 2
+            enum class BeamClipStyle_t : uint32_t {
+                kNOCLIP = 0x0,
+                kGEOCLIP = 0x1,
+                kMODELCLIP = 0x2,
+                kBEAMCLIPSTYLE_NUMBITS = 0x2
             }
             // Alignment: 1
             // Members count: 10
-            enum class SurroundingBoundsType_t : int8_t {
-                USE_OBB_COLLISION_BOUNDS = 0,
-                USE_BEST_COLLISION_BOUNDS = 1,
-                USE_HITBOXES = 2,
-                USE_SPECIFIED_BOUNDS = 3,
-                USE_GAME_CODE = 4,
-                USE_ROTATION_EXPANDED_BOUNDS = 5,
-                USE_ROTATION_EXPANDED_ORIENTED_BOUNDS = 6,
-                USE_COLLISION_BOUNDS_NEVER_VPHYSICS = 7,
-                USE_ROTATION_EXPANDED_SEQUENCE_BOUNDS = 8,
-                SURROUNDING_TYPE_BIT_COUNT = 3
+            enum class SurroundingBoundsType_t : uint8_t {
+                USE_OBB_COLLISION_BOUNDS = 0x0,
+                USE_BEST_COLLISION_BOUNDS = 0x1,
+                USE_HITBOXES = 0x2,
+                USE_SPECIFIED_BOUNDS = 0x3,
+                USE_GAME_CODE = 0x4,
+                USE_ROTATION_EXPANDED_BOUNDS = 0x5,
+                USE_ROTATION_EXPANDED_ORIENTED_BOUNDS = 0x6,
+                USE_COLLISION_BOUNDS_NEVER_VPHYSICS = 0x7,
+                USE_ROTATION_EXPANDED_SEQUENCE_BOUNDS = 0x8,
+                SURROUNDING_TYPE_BIT_COUNT = 0x3
             }
             // Alignment: 1
             // Members count: 2
-            enum class ShatterPanelMode : int8_t {
-                SHATTER_GLASS = 0,
-                SHATTER_DRYWALL = 1
+            enum class ShatterPanelMode : uint8_t {
+                SHATTER_GLASS = 0x0,
+                SHATTER_DRYWALL = 0x1
             }
             // Alignment: 1
             // Members count: 5
-            enum class ShatterDamageCause : int8_t {
-                SHATTERDAMAGE_BULLET = 0,
-                SHATTERDAMAGE_MELEE = 1,
-                SHATTERDAMAGE_THROWN = 2,
-                SHATTERDAMAGE_SCRIPT = 3,
-                SHATTERDAMAGE_EXPLOSIVE = 4
+            enum class ShatterDamageCause : uint8_t {
+                SHATTERDAMAGE_BULLET = 0x0,
+                SHATTERDAMAGE_MELEE = 0x1,
+                SHATTERDAMAGE_THROWN = 0x2,
+                SHATTERDAMAGE_SCRIPT = 0x3,
+                SHATTERDAMAGE_EXPLOSIVE = 0x4
             }
             // Alignment: 1
             // Members count: 5
-            enum class ShatterGlassStressType : int8_t {
-                SHATTERGLASS_BLUNT = 0,
-                SHATTERGLASS_BALLISTIC = 1,
-                SHATTERGLASS_PULSE = 2,
-                SHATTERDRYWALL_CHUNKS = 3,
-                SHATTERGLASS_EXPLOSIVE = 4
+            enum class ShatterGlassStressType : uint8_t {
+                SHATTERGLASS_BLUNT = 0x0,
+                SHATTERGLASS_BALLISTIC = 0x1,
+                SHATTERGLASS_PULSE = 0x2,
+                SHATTERDRYWALL_CHUNKS = 0x3,
+                SHATTERGLASS_EXPLOSIVE = 0x4
             }
             // Alignment: 1
             // Members count: 3
-            enum class OnFrame : int8_t {
-                ONFRAME_UNKNOWN = 0,
-                ONFRAME_TRUE = 1,
-                ONFRAME_FALSE = 2
+            enum class OnFrame : uint8_t {
+                ONFRAME_UNKNOWN = 0x0,
+                ONFRAME_TRUE = 0x1,
+                ONFRAME_FALSE = 0x2
             }
             // Alignment: 1
             // Members count: 2
-            enum class ShardSolid_t : int8_t {
-                SHARD_SOLID = 0,
-                SHARD_DEBRIS = 1
+            enum class ShardSolid_t : uint8_t {
+                SHARD_SOLID = 0x0,
+                SHARD_DEBRIS = 0x1
             }
             // Alignment: 4
             // Members count: 5
-            enum class AnimLoopMode_t : int32_t {
-                ANIM_LOOP_MODE_INVALID = -1,
-                ANIM_LOOP_MODE_NOT_LOOPING = 0,
-                ANIM_LOOP_MODE_LOOPING = 1,
-                ANIM_LOOP_MODE_USE_SEQUENCE_SETTINGS = 2,
-                ANIM_LOOP_MODE_COUNT = 3
+            enum class AnimLoopMode_t : uint32_t {
+                ANIM_LOOP_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ANIM_LOOP_MODE_NOT_LOOPING = 0x0,
+                ANIM_LOOP_MODE_LOOPING = 0x1,
+                ANIM_LOOP_MODE_USE_SEQUENCE_SETTINGS = 0x2,
+                ANIM_LOOP_MODE_COUNT = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class EntitySubclassScope_t : int32_t {
-                SUBCLASS_SCOPE_NONE = -1,
-                SUBCLASS_SCOPE_PRECIPITATION = 0,
-                SUBCLASS_SCOPE_PLAYER_WEAPONS = 1,
-                SUBCLASS_SCOPE_COUNT = 2
+            enum class EntitySubclassScope_t : uint32_t {
+                SUBCLASS_SCOPE_NONE = 0xFFFFFFFFFFFFFFFF,
+                SUBCLASS_SCOPE_PRECIPITATION = 0x0,
+                SUBCLASS_SCOPE_PLAYER_WEAPONS = 0x1,
+                SUBCLASS_SCOPE_COUNT = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class SubclassVDataChangeType_t : int32_t {
-                SUBCLASS_VDATA_CREATED = 0,
-                SUBCLASS_VDATA_SUBCLASS_CHANGED = 1,
-                SUBCLASS_VDATA_RELOADED = 2
+            enum class SubclassVDataChangeType_t : uint32_t {
+                SUBCLASS_VDATA_CREATED = 0x0,
+                SUBCLASS_VDATA_SUBCLASS_CHANGED = 0x1,
+                SUBCLASS_VDATA_RELOADED = 0x2
             }
             // Alignment: 4
             // Members count: 7
-            enum class PlayerConnectedState : int32_t {
-                PlayerNeverConnected = -1,
-                PlayerConnected = 0,
-                PlayerConnecting = 1,
-                PlayerReconnecting = 2,
-                PlayerDisconnecting = 3,
-                PlayerDisconnected = 4,
-                PlayerReserved = 5
+            enum class PlayerConnectedState : uint32_t {
+                PlayerNeverConnected = 0xFFFFFFFFFFFFFFFF,
+                PlayerConnected = 0x0,
+                PlayerConnecting = 0x1,
+                PlayerReconnecting = 0x2,
+                PlayerDisconnecting = 0x3,
+                PlayerDisconnected = 0x4,
+                PlayerReserved = 0x5
             }
             // Alignment: 4
             // Members count: 3
-            enum class WeaponSwitchReason_t : int32_t {
-                eDrawn = 0,
-                eEquipped = 1,
-                eUserInitiatedSwitchToLast = 2
+            enum class WeaponSwitchReason_t : uint32_t {
+                eDrawn = 0x0,
+                eEquipped = 0x1,
+                eUserInitiatedSwitchToLast = 0x2
             }
             // Alignment: 4
             // Members count: 4
-            enum class WeaponAttackType_t : int32_t {
-                eInvalid = -1,
-                ePrimary = 0,
-                eSecondary = 1,
-                eCount = 2
+            enum class WeaponAttackType_t : uint32_t {
+                eInvalid = 0xFFFFFFFFFFFFFFFF,
+                ePrimary = 0x0,
+                eSecondary = 0x1,
+                eCount = 0x2
             }
             // Alignment: 4
             // Members count: 35
-            enum class vote_create_failed_t : int32_t {
-                VOTE_FAILED_GENERIC = 0,
-                VOTE_FAILED_TRANSITIONING_PLAYERS = 1,
-                VOTE_FAILED_RATE_EXCEEDED = 2,
-                VOTE_FAILED_YES_MUST_EXCEED_NO = 3,
-                VOTE_FAILED_QUORUM_FAILURE = 4,
-                VOTE_FAILED_ISSUE_DISABLED = 5,
-                VOTE_FAILED_MAP_NOT_FOUND = 6,
-                VOTE_FAILED_MAP_NAME_REQUIRED = 7,
-                VOTE_FAILED_FAILED_RECENTLY = 8,
-                VOTE_FAILED_TEAM_CANT_CALL = 9,
-                VOTE_FAILED_WAITINGFORPLAYERS = 10,
-                VOTE_FAILED_PLAYERNOTFOUND = 11,
-                VOTE_FAILED_CANNOT_KICK_ADMIN = 12,
-                VOTE_FAILED_SCRAMBLE_IN_PROGRESS = 13,
-                VOTE_FAILED_SPECTATOR = 14,
-                VOTE_FAILED_FAILED_RECENT_KICK = 15,
-                VOTE_FAILED_FAILED_RECENT_CHANGEMAP = 16,
-                VOTE_FAILED_FAILED_RECENT_SWAPTEAMS = 17,
-                VOTE_FAILED_FAILED_RECENT_SCRAMBLETEAMS = 18,
-                VOTE_FAILED_FAILED_RECENT_RESTART = 19,
-                VOTE_FAILED_SWAP_IN_PROGRESS = 20,
-                VOTE_FAILED_DISABLED = 21,
-                VOTE_FAILED_NEXTLEVEL_SET = 22,
-                VOTE_FAILED_TOO_EARLY_SURRENDER = 23,
-                VOTE_FAILED_MATCH_PAUSED = 24,
-                VOTE_FAILED_MATCH_NOT_PAUSED = 25,
-                VOTE_FAILED_NOT_IN_WARMUP = 26,
-                VOTE_FAILED_NOT_10_PLAYERS = 27,
-                VOTE_FAILED_TIMEOUT_ACTIVE = 28,
-                VOTE_FAILED_TIMEOUT_INACTIVE = 29,
-                VOTE_FAILED_TIMEOUT_EXHAUSTED = 30,
-                VOTE_FAILED_CANT_ROUND_END = 31,
-                VOTE_FAILED_REMATCH = 32,
-                VOTE_FAILED_CONTINUE = 33,
-                VOTE_FAILED_MAX = 34
+            enum class vote_create_failed_t : uint32_t {
+                VOTE_FAILED_GENERIC = 0x0,
+                VOTE_FAILED_TRANSITIONING_PLAYERS = 0x1,
+                VOTE_FAILED_RATE_EXCEEDED = 0x2,
+                VOTE_FAILED_YES_MUST_EXCEED_NO = 0x3,
+                VOTE_FAILED_QUORUM_FAILURE = 0x4,
+                VOTE_FAILED_ISSUE_DISABLED = 0x5,
+                VOTE_FAILED_MAP_NOT_FOUND = 0x6,
+                VOTE_FAILED_MAP_NAME_REQUIRED = 0x7,
+                VOTE_FAILED_FAILED_RECENTLY = 0x8,
+                VOTE_FAILED_TEAM_CANT_CALL = 0x9,
+                VOTE_FAILED_WAITINGFORPLAYERS = 0xA,
+                VOTE_FAILED_PLAYERNOTFOUND = 0xB,
+                VOTE_FAILED_CANNOT_KICK_ADMIN = 0xC,
+                VOTE_FAILED_SCRAMBLE_IN_PROGRESS = 0xD,
+                VOTE_FAILED_SPECTATOR = 0xE,
+                VOTE_FAILED_FAILED_RECENT_KICK = 0xF,
+                VOTE_FAILED_FAILED_RECENT_CHANGEMAP = 0x10,
+                VOTE_FAILED_FAILED_RECENT_SWAPTEAMS = 0x11,
+                VOTE_FAILED_FAILED_RECENT_SCRAMBLETEAMS = 0x12,
+                VOTE_FAILED_FAILED_RECENT_RESTART = 0x13,
+                VOTE_FAILED_SWAP_IN_PROGRESS = 0x14,
+                VOTE_FAILED_DISABLED = 0x15,
+                VOTE_FAILED_NEXTLEVEL_SET = 0x16,
+                VOTE_FAILED_TOO_EARLY_SURRENDER = 0x17,
+                VOTE_FAILED_MATCH_PAUSED = 0x18,
+                VOTE_FAILED_MATCH_NOT_PAUSED = 0x19,
+                VOTE_FAILED_NOT_IN_WARMUP = 0x1A,
+                VOTE_FAILED_NOT_10_PLAYERS = 0x1B,
+                VOTE_FAILED_TIMEOUT_ACTIVE = 0x1C,
+                VOTE_FAILED_TIMEOUT_INACTIVE = 0x1D,
+                VOTE_FAILED_TIMEOUT_EXHAUSTED = 0x1E,
+                VOTE_FAILED_CANT_ROUND_END = 0x1F,
+                VOTE_FAILED_REMATCH = 0x20,
+                VOTE_FAILED_CONTINUE = 0x21,
+                VOTE_FAILED_MAX = 0x22
             }
             // Alignment: 1
             // Members count: 9
-            enum class ItemFlagTypes_t : int8_t {
-                ITEM_FLAG_NONE = 0,
-                ITEM_FLAG_CAN_SELECT_WITHOUT_AMMO = 1,
-                ITEM_FLAG_NOAUTORELOAD = 2,
-                ITEM_FLAG_NOAUTOSWITCHEMPTY = 4,
-                ITEM_FLAG_LIMITINWORLD = 8,
-                ITEM_FLAG_EXHAUSTIBLE = 16,
-                ITEM_FLAG_DOHITLOCATIONDMG = 32,
-                ITEM_FLAG_NOAMMOPICKUPS = 64,
-                ITEM_FLAG_NOITEMPICKUP = 128
+            enum class ItemFlagTypes_t : uint8_t {
+                ITEM_FLAG_NONE = 0x0,
+                ITEM_FLAG_CAN_SELECT_WITHOUT_AMMO = 0x1,
+                ITEM_FLAG_NOAUTORELOAD = 0x2,
+                ITEM_FLAG_NOAUTOSWITCHEMPTY = 0x4,
+                ITEM_FLAG_LIMITINWORLD = 0x8,
+                ITEM_FLAG_EXHAUSTIBLE = 0x10,
+                ITEM_FLAG_DOHITLOCATIONDMG = 0x20,
+                ITEM_FLAG_NOAMMOPICKUPS = 0x40,
+                ITEM_FLAG_NOITEMPICKUP = 0x80
             }
             // Alignment: 4
             // Members count: 5
-            enum class EntityDisolveType_t : int32_t {
-                ENTITY_DISSOLVE_INVALID = -1,
-                ENTITY_DISSOLVE_NORMAL = 0,
-                ENTITY_DISSOLVE_ELECTRICAL = 1,
-                ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 2,
-                ENTITY_DISSOLVE_CORE = 3
+            enum class EntityDisolveType_t : uint32_t {
+                ENTITY_DISSOLVE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ENTITY_DISSOLVE_NORMAL = 0x0,
+                ENTITY_DISSOLVE_ELECTRICAL = 0x1,
+                ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 0x2,
+                ENTITY_DISSOLVE_CORE = 0x3
             }
             // Alignment: 4
             // Members count: 14
-            enum class HitGroup_t : int32_t {
-                HITGROUP_INVALID = -1,
-                HITGROUP_GENERIC = 0,
-                HITGROUP_HEAD = 1,
-                HITGROUP_CHEST = 2,
-                HITGROUP_STOMACH = 3,
-                HITGROUP_LEFTARM = 4,
-                HITGROUP_RIGHTARM = 5,
-                HITGROUP_LEFTLEG = 6,
-                HITGROUP_RIGHTLEG = 7,
-                HITGROUP_NECK = 8,
-                HITGROUP_UNUSED = 9,
-                HITGROUP_GEAR = 10,
-                HITGROUP_SPECIAL = 11,
-                HITGROUP_COUNT = 12
+            enum class HitGroup_t : uint32_t {
+                HITGROUP_INVALID = 0xFFFFFFFFFFFFFFFF,
+                HITGROUP_GENERIC = 0x0,
+                HITGROUP_HEAD = 0x1,
+                HITGROUP_CHEST = 0x2,
+                HITGROUP_STOMACH = 0x3,
+                HITGROUP_LEFTARM = 0x4,
+                HITGROUP_RIGHTARM = 0x5,
+                HITGROUP_LEFTLEG = 0x6,
+                HITGROUP_RIGHTLEG = 0x7,
+                HITGROUP_NECK = 0x8,
+                HITGROUP_UNUSED = 0x9,
+                HITGROUP_GEAR = 0xA,
+                HITGROUP_SPECIAL = 0xB,
+                HITGROUP_COUNT = 0xC
             }
             // Alignment: 1
             // Members count: 7
-            enum class WaterLevel_t : int8_t {
-                WL_NotInWater = 0,
-                WL_Feet = 1,
-                WL_Knees = 2,
-                WL_Waist = 3,
-                WL_Chest = 4,
-                WL_FullyUnderwater = 5,
-                WL_Count = 6
+            enum class WaterLevel_t : uint8_t {
+                WL_NotInWater = 0x0,
+                WL_Feet = 0x1,
+                WL_Knees = 0x2,
+                WL_Waist = 0x3,
+                WL_Chest = 0x4,
+                WL_FullyUnderwater = 0x5,
+                WL_Count = 0x6
             }
             // Alignment: 4
             // Members count: 5
-            enum class DoorState_t : int32_t {
-                DOOR_STATE_CLOSED = 0,
-                DOOR_STATE_OPENING = 1,
-                DOOR_STATE_OPEN = 2,
-                DOOR_STATE_CLOSING = 3,
-                DOOR_STATE_AJAR = 4
+            enum class DoorState_t : uint32_t {
+                DOOR_STATE_CLOSED = 0x0,
+                DOOR_STATE_OPENING = 0x1,
+                DOOR_STATE_OPEN = 0x2,
+                DOOR_STATE_CLOSING = 0x3,
+                DOOR_STATE_AJAR = 0x4
             }
             // Alignment: 4
             // Members count: 2
-            enum class ShadowType_t : int32_t {
-                SHADOWS_NONE = 0,
-                SHADOWS_SIMPLE = 1
+            enum class ShadowType_t : uint32_t {
+                SHADOWS_NONE = 0x0,
+                SHADOWS_SIMPLE = 0x1
             }
             // Alignment: 4
             // Members count: 10
-            enum class Class_T : int32_t {
-                CLASS_NONE = 0,
-                CLASS_PLAYER = 1,
-                CLASS_PLAYER_ALLY = 2,
-                CLASS_BOMB = 3,
-                CLASS_FOOT_CONTACT_SHADOW = 4,
-                CLASS_WEAPON = 5,
-                CLASS_WATER_SPLASHER = 6,
-                CLASS_WEAPON_VIEWMODEL = 7,
-                CLASS_DOOR = 8,
-                NUM_CLASSIFY_CLASSES = 9
+            enum class Class_T : uint32_t {
+                CLASS_NONE = 0x0,
+                CLASS_PLAYER = 0x1,
+                CLASS_PLAYER_ALLY = 0x2,
+                CLASS_BOMB = 0x3,
+                CLASS_FOOT_CONTACT_SHADOW = 0x4,
+                CLASS_WEAPON = 0x5,
+                CLASS_WATER_SPLASHER = 0x6,
+                CLASS_WEAPON_VIEWMODEL = 0x7,
+                CLASS_DOOR = 0x8,
+                NUM_CLASSIFY_CLASSES = 0x9
             }
             // Alignment: 4
             // Members count: 10
-            enum class Disposition_t : int32_t {
-                D_ER = 0,
-                D_HT = 1,
-                D_FR = 2,
-                D_LI = 3,
-                D_NU = 4,
-                D_ERROR = 0,
-                D_HATE = 1,
-                D_FEAR = 2,
-                D_LIKE = 3,
-                D_NEUTRAL = 4
+            enum class Disposition_t : uint32_t {
+                D_ER = 0x0,
+                D_HT = 0x1,
+                D_FR = 0x2,
+                D_LI = 0x3,
+                D_NU = 0x4,
+                D_ERROR = 0x0,
+                D_HATE = 0x1,
+                D_FEAR = 0x2,
+                D_LIKE = 0x3,
+                D_NEUTRAL = 0x4
             }
             // Alignment: 4
             // Members count: 6
-            enum class LatchDirtyPermission_t : int32_t {
-                LATCH_DIRTY_DISALLOW = 0,
-                LATCH_DIRTY_SERVER_CONTROLLED = 1,
-                LATCH_DIRTY_CLIENT_SIMULATED = 2,
-                LATCH_DIRTY_PREDICTION = 3,
-                LATCH_DIRTY_FRAMESIMULATE = 4,
-                LATCH_DIRTY_PARTICLE_SIMULATE = 5
+            enum class LatchDirtyPermission_t : uint32_t {
+                LATCH_DIRTY_DISALLOW = 0x0,
+                LATCH_DIRTY_SERVER_CONTROLLED = 0x1,
+                LATCH_DIRTY_CLIENT_SIMULATED = 0x2,
+                LATCH_DIRTY_PREDICTION = 0x3,
+                LATCH_DIRTY_FRAMESIMULATE = 0x4,
+                LATCH_DIRTY_PARTICLE_SIMULATE = 0x5
             }
             // Alignment: 4
             // Members count: 5
-            enum class LifeState_t : int32_t {
-                LIFE_ALIVE = 0,
-                LIFE_DYING = 1,
-                LIFE_DEAD = 2,
-                LIFE_RESPAWNABLE = 3,
-                LIFE_RESPAWNING = 4
+            enum class LifeState_t : uint32_t {
+                LIFE_ALIVE = 0x0,
+                LIFE_DYING = 0x1,
+                LIFE_DEAD = 0x2,
+                LIFE_RESPAWNABLE = 0x3,
+                LIFE_RESPAWNING = 0x4
             }
             // Alignment: 4
             // Members count: 5
-            enum class StanceType_t : int32_t {
-                STANCE_CURRENT = -1,
-                STANCE_DEFAULT = 0,
-                STANCE_CROUCHING = 1,
-                STANCE_PRONE = 2,
-                NUM_STANCES = 3
+            enum class StanceType_t : uint32_t {
+                STANCE_CURRENT = 0xFFFFFFFFFFFFFFFF,
+                STANCE_DEFAULT = 0x0,
+                STANCE_CROUCHING = 0x1,
+                STANCE_PRONE = 0x2,
+                NUM_STANCES = 0x3
             }
             // Alignment: 4
             // Members count: 2
-            enum class ModifyDamageReturn_t : int32_t {
-                CONTINUE_TO_APPLY_DAMAGE = 0,
-                ABORT_DO_NOT_APPLY_DAMAGE = 1
+            enum class ModifyDamageReturn_t : uint32_t {
+                CONTINUE_TO_APPLY_DAMAGE = 0x0,
+                ABORT_DO_NOT_APPLY_DAMAGE = 0x1
             }
             // Alignment: 1
             // Members count: 3
-            enum class BeginDeathLifeStateTransition_t : int8_t {
-                NO_CHANGE_IN_LIFESTATE = 0,
-                TRANSITION_TO_LIFESTATE_DYING = 1,
-                TRANSITION_TO_LIFESTATE_DEAD = 2
+            enum class BeginDeathLifeStateTransition_t : uint8_t {
+                NO_CHANGE_IN_LIFESTATE = 0x0,
+                TRANSITION_TO_LIFESTATE_DYING = 0x1,
+                TRANSITION_TO_LIFESTATE_DEAD = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class WorldTextPanelHorizontalAlign_t : int32_t {
-                WORLDTEXT_HORIZONTAL_ALIGN_LEFT = 0,
-                WORLDTEXT_HORIZONTAL_ALIGN_CENTER = 1,
-                WORLDTEXT_HORIZONTAL_ALIGN_RIGHT = 2
+            enum class WorldTextPanelHorizontalAlign_t : uint32_t {
+                WORLDTEXT_HORIZONTAL_ALIGN_LEFT = 0x0,
+                WORLDTEXT_HORIZONTAL_ALIGN_CENTER = 0x1,
+                WORLDTEXT_HORIZONTAL_ALIGN_RIGHT = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class WorldTextPanelVerticalAlign_t : int32_t {
-                WORLDTEXT_VERTICAL_ALIGN_TOP = 0,
-                WORLDTEXT_VERTICAL_ALIGN_CENTER = 1,
-                WORLDTEXT_VERTICAL_ALIGN_BOTTOM = 2
+            enum class WorldTextPanelVerticalAlign_t : uint32_t {
+                WORLDTEXT_VERTICAL_ALIGN_TOP = 0x0,
+                WORLDTEXT_VERTICAL_ALIGN_CENTER = 0x1,
+                WORLDTEXT_VERTICAL_ALIGN_BOTTOM = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class WorldTextPanelOrientation_t : int32_t {
-                WORLDTEXT_ORIENTATION_DEFAULT = 0,
-                WORLDTEXT_ORIENTATION_FACEUSER = 1,
-                WORLDTEXT_ORIENTATION_FACEUSER_UPRIGHT = 2
+            enum class WorldTextPanelOrientation_t : uint32_t {
+                WORLDTEXT_ORIENTATION_DEFAULT = 0x0,
+                WORLDTEXT_ORIENTATION_FACEUSER = 0x1,
+                WORLDTEXT_ORIENTATION_FACEUSER_UPRIGHT = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class attributeprovidertypes_t : int32_t {
-                PROVIDER_GENERIC = 0,
-                PROVIDER_WEAPON = 1
+            enum class attributeprovidertypes_t : uint32_t {
+                PROVIDER_GENERIC = 0x0,
+                PROVIDER_WEAPON = 0x1
             }
             // Alignment: 4
             // Members count: 4
-            enum class SpawnPointCoopEnemy__BotDefaultBehavior_t : int32_t {
-                DEFEND_AREA = 0,
-                HUNT = 1,
-                CHARGE_ENEMY = 2,
-                DEFEND_INVESTIGATE = 3
+            enum class SpawnPointCoopEnemy__BotDefaultBehavior_t : uint32_t {
+                DEFEND_AREA = 0x0,
+                HUNT = 0x1,
+                CHARGE_ENEMY = 0x2,
+                DEFEND_INVESTIGATE = 0x3
             }
             // Alignment: 4
             // Members count: 4
-            enum class MoveMountingAmount_t : int32_t {
-                MOVE_MOUNT_NONE = 0,
-                MOVE_MOUNT_LOW = 1,
-                MOVE_MOUNT_HIGH = 2,
-                MOVE_MOUNT_MAXCOUNT = 3
+            enum class MoveMountingAmount_t : uint32_t {
+                MOVE_MOUNT_NONE = 0x0,
+                MOVE_MOUNT_LOW = 0x1,
+                MOVE_MOUNT_HIGH = 0x2,
+                MOVE_MOUNT_MAXCOUNT = 0x3
             }
             // Alignment: 4
             // Members count: 10
-            enum class CSPlayerState : int32_t {
-                STATE_ACTIVE = 0,
-                STATE_WELCOME = 1,
-                STATE_PICKINGTEAM = 2,
-                STATE_PICKINGCLASS = 3,
-                STATE_DEATH_ANIM = 4,
-                STATE_DEATH_WAIT_FOR_KEY = 5,
-                STATE_OBSERVER_MODE = 6,
-                STATE_GUNGAME_RESPAWN = 7,
-                STATE_DORMANT = 8,
-                NUM_PLAYER_STATES = 9
+            enum class CSPlayerState : uint32_t {
+                STATE_ACTIVE = 0x0,
+                STATE_WELCOME = 0x1,
+                STATE_PICKINGTEAM = 0x2,
+                STATE_PICKINGCLASS = 0x3,
+                STATE_DEATH_ANIM = 0x4,
+                STATE_DEATH_WAIT_FOR_KEY = 0x5,
+                STATE_OBSERVER_MODE = 0x6,
+                STATE_GUNGAME_RESPAWN = 0x7,
+                STATE_DORMANT = 0x8,
+                NUM_PLAYER_STATES = 0x9
             }
             // Alignment: 4
             // Members count: 18
-            enum class CSPlayerBlockingUseAction_t : int32_t {
-                k_CSPlayerBlockingUseAction_None = 0,
-                k_CSPlayerBlockingUseAction_DefusingDefault = 1,
-                k_CSPlayerBlockingUseAction_DefusingWithKit = 2,
-                k_CSPlayerBlockingUseAction_HostageGrabbing = 3,
-                k_CSPlayerBlockingUseAction_HostageDropping = 4,
-                k_CSPlayerBlockingUseAction_OpeningSafe = 5,
-                k_CSPlayerBlockingUseAction_EquippingParachute = 6,
-                k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 7,
-                k_CSPlayerBlockingUseAction_EquippingContract = 8,
-                k_CSPlayerBlockingUseAction_EquippingTabletUpgrade = 9,
-                k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 10,
-                k_CSPlayerBlockingUseAction_PayingToOpenDoor = 11,
-                k_CSPlayerBlockingUseAction_CancelingSpawnRappelling = 12,
-                k_CSPlayerBlockingUseAction_EquippingExoJump = 13,
-                k_CSPlayerBlockingUseAction_PickingUpBumpMine = 14,
-                k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 15,
-                k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 16,
-                k_CSPlayerBlockingUseAction_MaxCount = 17
+            enum class CSPlayerBlockingUseAction_t : uint32_t {
+                k_CSPlayerBlockingUseAction_None = 0x0,
+                k_CSPlayerBlockingUseAction_DefusingDefault = 0x1,
+                k_CSPlayerBlockingUseAction_DefusingWithKit = 0x2,
+                k_CSPlayerBlockingUseAction_HostageGrabbing = 0x3,
+                k_CSPlayerBlockingUseAction_HostageDropping = 0x4,
+                k_CSPlayerBlockingUseAction_OpeningSafe = 0x5,
+                k_CSPlayerBlockingUseAction_EquippingParachute = 0x6,
+                k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 0x7,
+                k_CSPlayerBlockingUseAction_EquippingContract = 0x8,
+                k_CSPlayerBlockingUseAction_EquippingTabletUpgrade = 0x9,
+                k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 0xA,
+                k_CSPlayerBlockingUseAction_PayingToOpenDoor = 0xB,
+                k_CSPlayerBlockingUseAction_CancelingSpawnRappelling = 0xC,
+                k_CSPlayerBlockingUseAction_EquippingExoJump = 0xD,
+                k_CSPlayerBlockingUseAction_PickingUpBumpMine = 0xE,
+                k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0xF,
+                k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x10,
+                k_CSPlayerBlockingUseAction_MaxCount = 0x11
             }
             // Alignment: 4
             // Members count: 8
-            enum class GrenadeType_t : int32_t {
-                GRENADE_TYPE_EXPLOSIVE = 0,
-                GRENADE_TYPE_FLASH = 1,
-                GRENADE_TYPE_FIRE = 2,
-                GRENADE_TYPE_DECOY = 3,
-                GRENADE_TYPE_SMOKE = 4,
-                GRENADE_TYPE_SENSOR = 5,
-                GRENADE_TYPE_SNOWBALL = 6,
-                GRENADE_TYPE_TOTAL = 7
+            enum class GrenadeType_t : uint32_t {
+                GRENADE_TYPE_EXPLOSIVE = 0x0,
+                GRENADE_TYPE_FLASH = 0x1,
+                GRENADE_TYPE_FIRE = 0x2,
+                GRENADE_TYPE_DECOY = 0x3,
+                GRENADE_TYPE_SMOKE = 0x4,
+                GRENADE_TYPE_SENSOR = 0x5,
+                GRENADE_TYPE_SNOWBALL = 0x6,
+                GRENADE_TYPE_TOTAL = 0x7
             }
             // Alignment: 4
             // Members count: 13
-            enum class QuestProgress__Reason : int32_t {
-                QUEST_NONINITIALIZED = 0,
-                QUEST_OK = 1,
-                QUEST_NOT_ENOUGH_PLAYERS = 2,
-                QUEST_WARMUP = 3,
-                QUEST_NOT_CONNECTED_TO_STEAM = 4,
-                QUEST_NONOFFICIAL_SERVER = 5,
-                QUEST_NO_ENTITLEMENT = 6,
-                QUEST_NO_QUEST = 7,
-                QUEST_PLAYER_IS_BOT = 8,
-                QUEST_WRONG_MAP = 9,
-                QUEST_WRONG_MODE = 10,
-                QUEST_NOT_SYNCED_WITH_SERVER = 11,
-                QUEST_REASON_MAX = 12
+            enum class QuestProgress__Reason : uint32_t {
+                QUEST_NONINITIALIZED = 0x0,
+                QUEST_OK = 0x1,
+                QUEST_NOT_ENOUGH_PLAYERS = 0x2,
+                QUEST_WARMUP = 0x3,
+                QUEST_NOT_CONNECTED_TO_STEAM = 0x4,
+                QUEST_NONOFFICIAL_SERVER = 0x5,
+                QUEST_NO_ENTITLEMENT = 0x6,
+                QUEST_NO_QUEST = 0x7,
+                QUEST_PLAYER_IS_BOT = 0x8,
+                QUEST_WRONG_MAP = 0x9,
+                QUEST_WRONG_MODE = 0xA,
+                QUEST_NOT_SYNCED_WITH_SERVER = 0xB,
+                QUEST_REASON_MAX = 0xC
             }
             // Alignment: 4
             // Members count: 74
-            enum class loadout_slot_t : int32_t {
-                LOADOUT_SLOT_PROMOTED = -2,
-                LOADOUT_SLOT_INVALID = -1,
-                LOADOUT_SLOT_MELEE = 0,
-                LOADOUT_SLOT_C4 = 1,
-                LOADOUT_SLOT_FIRST_AUTO_BUY_WEAPON = 0,
-                LOADOUT_SLOT_LAST_AUTO_BUY_WEAPON = 1,
-                LOADOUT_SLOT_SECONDARY0 = 2,
-                LOADOUT_SLOT_SECONDARY1 = 3,
-                LOADOUT_SLOT_SECONDARY2 = 4,
-                LOADOUT_SLOT_SECONDARY3 = 5,
-                LOADOUT_SLOT_SECONDARY4 = 6,
-                LOADOUT_SLOT_SECONDARY5 = 7,
-                LOADOUT_SLOT_SMG0 = 8,
-                LOADOUT_SLOT_SMG1 = 9,
-                LOADOUT_SLOT_SMG2 = 10,
-                LOADOUT_SLOT_SMG3 = 11,
-                LOADOUT_SLOT_SMG4 = 12,
-                LOADOUT_SLOT_SMG5 = 13,
-                LOADOUT_SLOT_RIFLE0 = 14,
-                LOADOUT_SLOT_RIFLE1 = 15,
-                LOADOUT_SLOT_RIFLE2 = 16,
-                LOADOUT_SLOT_RIFLE3 = 17,
-                LOADOUT_SLOT_RIFLE4 = 18,
-                LOADOUT_SLOT_RIFLE5 = 19,
-                LOADOUT_SLOT_HEAVY0 = 20,
-                LOADOUT_SLOT_HEAVY1 = 21,
-                LOADOUT_SLOT_HEAVY2 = 22,
-                LOADOUT_SLOT_HEAVY3 = 23,
-                LOADOUT_SLOT_HEAVY4 = 24,
-                LOADOUT_SLOT_HEAVY5 = 25,
-                LOADOUT_SLOT_FIRST_WHEEL_WEAPON = 2,
-                LOADOUT_SLOT_LAST_WHEEL_WEAPON = 25,
-                LOADOUT_SLOT_FIRST_PRIMARY_WEAPON = 8,
-                LOADOUT_SLOT_LAST_PRIMARY_WEAPON = 25,
-                LOADOUT_SLOT_FIRST_WHEEL_GRENADE = 26,
-                LOADOUT_SLOT_GRENADE0 = 26,
-                LOADOUT_SLOT_GRENADE1 = 27,
-                LOADOUT_SLOT_GRENADE2 = 28,
-                LOADOUT_SLOT_GRENADE3 = 29,
-                LOADOUT_SLOT_GRENADE4 = 30,
-                LOADOUT_SLOT_GRENADE5 = 31,
-                LOADOUT_SLOT_LAST_WHEEL_GRENADE = 31,
-                LOADOUT_SLOT_EQUIPMENT0 = 32,
-                LOADOUT_SLOT_EQUIPMENT1 = 33,
-                LOADOUT_SLOT_EQUIPMENT2 = 34,
-                LOADOUT_SLOT_EQUIPMENT3 = 35,
-                LOADOUT_SLOT_EQUIPMENT4 = 36,
-                LOADOUT_SLOT_EQUIPMENT5 = 37,
-                LOADOUT_SLOT_FIRST_WHEEL_EQUIPMENT = 32,
-                LOADOUT_SLOT_LAST_WHEEL_EQUIPMENT = 37,
-                LOADOUT_SLOT_CLOTHING_CUSTOMPLAYER = 38,
-                LOADOUT_SLOT_PET = 39,
-                LOADOUT_SLOT_CLOTHING_FACEMASK = 40,
-                LOADOUT_SLOT_CLOTHING_HANDS = 41,
-                LOADOUT_SLOT_FIRST_COSMETIC = 41,
-                LOADOUT_SLOT_LAST_COSMETIC = 41,
-                LOADOUT_SLOT_CLOTHING_EYEWEAR = 42,
-                LOADOUT_SLOT_CLOTHING_HAT = 43,
-                LOADOUT_SLOT_CLOTHING_LOWERBODY = 44,
-                LOADOUT_SLOT_CLOTHING_TORSO = 45,
-                LOADOUT_SLOT_CLOTHING_APPEARANCE = 46,
-                LOADOUT_SLOT_MISC0 = 47,
-                LOADOUT_SLOT_MISC1 = 48,
-                LOADOUT_SLOT_MISC2 = 49,
-                LOADOUT_SLOT_MISC3 = 50,
-                LOADOUT_SLOT_MISC4 = 51,
-                LOADOUT_SLOT_MISC5 = 52,
-                LOADOUT_SLOT_MISC6 = 53,
-                LOADOUT_SLOT_MUSICKIT = 54,
-                LOADOUT_SLOT_FLAIR0 = 55,
-                LOADOUT_SLOT_SPRAY0 = 56,
-                LOADOUT_SLOT_FIRST_ALL_CHARACTER = 54,
-                LOADOUT_SLOT_LAST_ALL_CHARACTER = 56,
-                LOADOUT_SLOT_COUNT = 57
+            enum class loadout_slot_t : uint32_t {
+                LOADOUT_SLOT_PROMOTED = 0xFFFFFFFFFFFFFFFE,
+                LOADOUT_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                LOADOUT_SLOT_MELEE = 0x0,
+                LOADOUT_SLOT_C4 = 0x1,
+                LOADOUT_SLOT_FIRST_AUTO_BUY_WEAPON = 0x0,
+                LOADOUT_SLOT_LAST_AUTO_BUY_WEAPON = 0x1,
+                LOADOUT_SLOT_SECONDARY0 = 0x2,
+                LOADOUT_SLOT_SECONDARY1 = 0x3,
+                LOADOUT_SLOT_SECONDARY2 = 0x4,
+                LOADOUT_SLOT_SECONDARY3 = 0x5,
+                LOADOUT_SLOT_SECONDARY4 = 0x6,
+                LOADOUT_SLOT_SECONDARY5 = 0x7,
+                LOADOUT_SLOT_SMG0 = 0x8,
+                LOADOUT_SLOT_SMG1 = 0x9,
+                LOADOUT_SLOT_SMG2 = 0xA,
+                LOADOUT_SLOT_SMG3 = 0xB,
+                LOADOUT_SLOT_SMG4 = 0xC,
+                LOADOUT_SLOT_SMG5 = 0xD,
+                LOADOUT_SLOT_RIFLE0 = 0xE,
+                LOADOUT_SLOT_RIFLE1 = 0xF,
+                LOADOUT_SLOT_RIFLE2 = 0x10,
+                LOADOUT_SLOT_RIFLE3 = 0x11,
+                LOADOUT_SLOT_RIFLE4 = 0x12,
+                LOADOUT_SLOT_RIFLE5 = 0x13,
+                LOADOUT_SLOT_HEAVY0 = 0x14,
+                LOADOUT_SLOT_HEAVY1 = 0x15,
+                LOADOUT_SLOT_HEAVY2 = 0x16,
+                LOADOUT_SLOT_HEAVY3 = 0x17,
+                LOADOUT_SLOT_HEAVY4 = 0x18,
+                LOADOUT_SLOT_HEAVY5 = 0x19,
+                LOADOUT_SLOT_FIRST_WHEEL_WEAPON = 0x2,
+                LOADOUT_SLOT_LAST_WHEEL_WEAPON = 0x19,
+                LOADOUT_SLOT_FIRST_PRIMARY_WEAPON = 0x8,
+                LOADOUT_SLOT_LAST_PRIMARY_WEAPON = 0x19,
+                LOADOUT_SLOT_FIRST_WHEEL_GRENADE = 0x1A,
+                LOADOUT_SLOT_GRENADE0 = 0x1A,
+                LOADOUT_SLOT_GRENADE1 = 0x1B,
+                LOADOUT_SLOT_GRENADE2 = 0x1C,
+                LOADOUT_SLOT_GRENADE3 = 0x1D,
+                LOADOUT_SLOT_GRENADE4 = 0x1E,
+                LOADOUT_SLOT_GRENADE5 = 0x1F,
+                LOADOUT_SLOT_LAST_WHEEL_GRENADE = 0x1F,
+                LOADOUT_SLOT_EQUIPMENT0 = 0x20,
+                LOADOUT_SLOT_EQUIPMENT1 = 0x21,
+                LOADOUT_SLOT_EQUIPMENT2 = 0x22,
+                LOADOUT_SLOT_EQUIPMENT3 = 0x23,
+                LOADOUT_SLOT_EQUIPMENT4 = 0x24,
+                LOADOUT_SLOT_EQUIPMENT5 = 0x25,
+                LOADOUT_SLOT_FIRST_WHEEL_EQUIPMENT = 0x20,
+                LOADOUT_SLOT_LAST_WHEEL_EQUIPMENT = 0x25,
+                LOADOUT_SLOT_CLOTHING_CUSTOMPLAYER = 0x26,
+                LOADOUT_SLOT_PET = 0x27,
+                LOADOUT_SLOT_CLOTHING_FACEMASK = 0x28,
+                LOADOUT_SLOT_CLOTHING_HANDS = 0x29,
+                LOADOUT_SLOT_FIRST_COSMETIC = 0x29,
+                LOADOUT_SLOT_LAST_COSMETIC = 0x29,
+                LOADOUT_SLOT_CLOTHING_EYEWEAR = 0x2A,
+                LOADOUT_SLOT_CLOTHING_HAT = 0x2B,
+                LOADOUT_SLOT_CLOTHING_LOWERBODY = 0x2C,
+                LOADOUT_SLOT_CLOTHING_TORSO = 0x2D,
+                LOADOUT_SLOT_CLOTHING_APPEARANCE = 0x2E,
+                LOADOUT_SLOT_MISC0 = 0x2F,
+                LOADOUT_SLOT_MISC1 = 0x30,
+                LOADOUT_SLOT_MISC2 = 0x31,
+                LOADOUT_SLOT_MISC3 = 0x32,
+                LOADOUT_SLOT_MISC4 = 0x33,
+                LOADOUT_SLOT_MISC5 = 0x34,
+                LOADOUT_SLOT_MISC6 = 0x35,
+                LOADOUT_SLOT_MUSICKIT = 0x36,
+                LOADOUT_SLOT_FLAIR0 = 0x37,
+                LOADOUT_SLOT_SPRAY0 = 0x38,
+                LOADOUT_SLOT_FIRST_ALL_CHARACTER = 0x36,
+                LOADOUT_SLOT_LAST_ALL_CHARACTER = 0x38,
+                LOADOUT_SLOT_COUNT = 0x39
             }
             // Alignment: 1
             // Members count: 8
-            enum class EKillTypes_t : int8_t {
-                KILL_NONE = 0,
-                KILL_DEFAULT = 1,
-                KILL_HEADSHOT = 2,
-                KILL_BLAST = 3,
-                KILL_BURN = 4,
-                KILL_SLASH = 5,
-                KILL_SHOCK = 6,
-                KILLTYPE_COUNT = 7
+            enum class EKillTypes_t : uint8_t {
+                KILL_NONE = 0x0,
+                KILL_DEFAULT = 0x1,
+                KILL_HEADSHOT = 0x2,
+                KILL_BLAST = 0x3,
+                KILL_BURN = 0x4,
+                KILL_SLASH = 0x5,
+                KILL_SHOCK = 0x6,
+                KILLTYPE_COUNT = 0x7
             }
             // Alignment: 4
             // Members count: 9
-            enum class PreviewCharacterMode : int32_t {
-                DIORAMA = 0,
-                MAIN_MENU = 1,
-                BUY_MENU = 2,
-                TEAM_SELECT = 3,
-                END_OF_MATCH = 4,
-                INVENTORY_INSPECT = 5,
-                WALKING = 6,
-                TEAM_INTRO = 7,
-                WINGMAN_INTRO = 8
+            enum class PreviewCharacterMode : uint32_t {
+                DIORAMA = 0x0,
+                MAIN_MENU = 0x1,
+                BUY_MENU = 0x2,
+                TEAM_SELECT = 0x3,
+                END_OF_MATCH = 0x4,
+                INVENTORY_INSPECT = 0x5,
+                WALKING = 0x6,
+                TEAM_INTRO = 0x7,
+                WINGMAN_INTRO = 0x8
             }
             // Alignment: 4
             // Members count: 6
-            enum class PreviewWeaponState : int32_t {
-                DROPPED = 0,
-                HOLSTERED = 1,
-                DEPLOYED = 2,
-                PLANTED = 3,
-                INSPECT = 4,
-                ICON = 5
+            enum class PreviewWeaponState : uint32_t {
+                DROPPED = 0x0,
+                HOLSTERED = 0x1,
+                DEPLOYED = 0x2,
+                PLANTED = 0x3,
+                INSPECT = 0x4,
+                ICON = 0x5
             }
             // Alignment: 4
             // Members count: 23
-            enum class PreviewEOMCelebration : int32_t {
-                WALKUP = 0,
-                PUNCHING = 1,
-                SWAGGER = 2,
-                DROPDOWN = 3,
-                STRETCH = 4,
-                SWAT_FEMALE = 5,
-                MASK_F = 6,
-                GUERILLA = 7,
-                GUERILLA02 = 8,
-                GENDARMERIE = 9,
-                SCUBA_FEMALE = 10,
-                SCUBA_MALE = 11,
-                AVA_DEFEAT = 12,
-                GENDARMERIE_DEFEAT = 13,
-                MAE_DEFEAT = 14,
-                RICKSAW_DEFEAT = 15,
-                SCUBA_FEMALE_DEFEAT = 16,
-                SCUBA_MALE_DEFEAT = 17,
-                CRASSWATER_DEFEAT = 18,
-                DARRYL_DEFEAT = 19,
-                DOCTOR_DEFEAT = 20,
-                MUHLIK_DEFEAT = 21,
-                VYPA_DEFEAT = 22
+            enum class PreviewEOMCelebration : uint32_t {
+                WALKUP = 0x0,
+                PUNCHING = 0x1,
+                SWAGGER = 0x2,
+                DROPDOWN = 0x3,
+                STRETCH = 0x4,
+                SWAT_FEMALE = 0x5,
+                MASK_F = 0x6,
+                GUERILLA = 0x7,
+                GUERILLA02 = 0x8,
+                GENDARMERIE = 0x9,
+                SCUBA_FEMALE = 0xA,
+                SCUBA_MALE = 0xB,
+                AVA_DEFEAT = 0xC,
+                GENDARMERIE_DEFEAT = 0xD,
+                MAE_DEFEAT = 0xE,
+                RICKSAW_DEFEAT = 0xF,
+                SCUBA_FEMALE_DEFEAT = 0x10,
+                SCUBA_MALE_DEFEAT = 0x11,
+                CRASSWATER_DEFEAT = 0x12,
+                DARRYL_DEFEAT = 0x13,
+                DOCTOR_DEFEAT = 0x14,
+                MUHLIK_DEFEAT = 0x15,
+                VYPA_DEFEAT = 0x16
             }
             // Alignment: 4
             // Members count: 20
-            enum class CSWeaponType : int32_t {
-                WEAPONTYPE_KNIFE = 0,
-                WEAPONTYPE_PISTOL = 1,
-                WEAPONTYPE_SUBMACHINEGUN = 2,
-                WEAPONTYPE_RIFLE = 3,
-                WEAPONTYPE_SHOTGUN = 4,
-                WEAPONTYPE_SNIPER_RIFLE = 5,
-                WEAPONTYPE_MACHINEGUN = 6,
-                WEAPONTYPE_C4 = 7,
-                WEAPONTYPE_TASER = 8,
-                WEAPONTYPE_GRENADE = 9,
-                WEAPONTYPE_EQUIPMENT = 10,
-                WEAPONTYPE_STACKABLEITEM = 11,
-                WEAPONTYPE_FISTS = 12,
-                WEAPONTYPE_BREACHCHARGE = 13,
-                WEAPONTYPE_BUMPMINE = 14,
-                WEAPONTYPE_TABLET = 15,
-                WEAPONTYPE_MELEE = 16,
-                WEAPONTYPE_SHIELD = 17,
-                WEAPONTYPE_ZONE_REPULSOR = 18,
-                WEAPONTYPE_UNKNOWN = 19
+            enum class CSWeaponType : uint32_t {
+                WEAPONTYPE_KNIFE = 0x0,
+                WEAPONTYPE_PISTOL = 0x1,
+                WEAPONTYPE_SUBMACHINEGUN = 0x2,
+                WEAPONTYPE_RIFLE = 0x3,
+                WEAPONTYPE_SHOTGUN = 0x4,
+                WEAPONTYPE_SNIPER_RIFLE = 0x5,
+                WEAPONTYPE_MACHINEGUN = 0x6,
+                WEAPONTYPE_C4 = 0x7,
+                WEAPONTYPE_TASER = 0x8,
+                WEAPONTYPE_GRENADE = 0x9,
+                WEAPONTYPE_EQUIPMENT = 0xA,
+                WEAPONTYPE_STACKABLEITEM = 0xB,
+                WEAPONTYPE_FISTS = 0xC,
+                WEAPONTYPE_BREACHCHARGE = 0xD,
+                WEAPONTYPE_BUMPMINE = 0xE,
+                WEAPONTYPE_TABLET = 0xF,
+                WEAPONTYPE_MELEE = 0x10,
+                WEAPONTYPE_SHIELD = 0x11,
+                WEAPONTYPE_ZONE_REPULSOR = 0x12,
+                WEAPONTYPE_UNKNOWN = 0x13
             }
             // Alignment: 4
             // Members count: 7
-            enum class CSWeaponCategory : int32_t {
-                WEAPONCATEGORY_OTHER = 0,
-                WEAPONCATEGORY_MELEE = 1,
-                WEAPONCATEGORY_SECONDARY = 2,
-                WEAPONCATEGORY_SMG = 3,
-                WEAPONCATEGORY_RIFLE = 4,
-                WEAPONCATEGORY_HEAVY = 5,
-                WEAPONCATEGORY_COUNT = 6
+            enum class CSWeaponCategory : uint32_t {
+                WEAPONCATEGORY_OTHER = 0x0,
+                WEAPONCATEGORY_MELEE = 0x1,
+                WEAPONCATEGORY_SECONDARY = 0x2,
+                WEAPONCATEGORY_SMG = 0x3,
+                WEAPONCATEGORY_RIFLE = 0x4,
+                WEAPONCATEGORY_HEAVY = 0x5,
+                WEAPONCATEGORY_COUNT = 0x6
             }
             // Alignment: 4
             // Members count: 3
-            enum class CSWeaponSilencerType : int32_t {
-                WEAPONSILENCER_NONE = 0,
-                WEAPONSILENCER_DETACHABLE = 1,
-                WEAPONSILENCER_INTEGRATED = 2
+            enum class CSWeaponSilencerType : uint32_t {
+                WEAPONSILENCER_NONE = 0x0,
+                WEAPONSILENCER_DETACHABLE = 0x1,
+                WEAPONSILENCER_INTEGRATED = 0x2
             }
             // Alignment: 4
             // Members count: 24
-            enum class PlayerAnimEvent_t : int32_t {
-                PLAYERANIMEVENT_FIRE_GUN_PRIMARY = 0,
-                PLAYERANIMEVENT_FIRE_GUN_SECONDARY = 1,
-                PLAYERANIMEVENT_GRENADE_PULL_PIN = 2,
-                PLAYERANIMEVENT_THROW_GRENADE = 3,
-                PLAYERANIMEVENT_JUMP = 4,
-                PLAYERANIMEVENT_RELOAD = 5,
-                PLAYERANIMEVENT_CLEAR_FIRING = 6,
-                PLAYERANIMEVENT_DEPLOY = 7,
-                PLAYERANIMEVENT_SILENCER_STATE = 8,
-                PLAYERANIMEVENT_SILENCER_TOGGLE = 9,
-                PLAYERANIMEVENT_THROW_GRENADE_UNDERHAND = 10,
-                PLAYERANIMEVENT_CATCH_WEAPON = 11,
-                PLAYERANIMEVENT_LOOKATWEAPON_REQUEST = 12,
-                PLAYERANIMEVENT_RELOAD_CANCEL_LOOKATWEAPON = 13,
-                PLAYERANIMEVENT_HAULBACK = 14,
-                PLAYERANIMEVENT_IDLE = 15,
-                PLAYERANIMEVENT_STRIKE_HIT = 16,
-                PLAYERANIMEVENT_STRIKE_MISS = 17,
-                PLAYERANIMEVENT_BACKSTAB = 18,
-                PLAYERANIMEVENT_DRYFIRE = 19,
-                PLAYERANIMEVENT_FIDGET = 20,
-                PLAYERANIMEVENT_RELEASE = 21,
-                PLAYERANIMEVENT_TAUNT = 22,
-                PLAYERANIMEVENT_COUNT = 23
+            enum class PlayerAnimEvent_t : uint32_t {
+                PLAYERANIMEVENT_FIRE_GUN_PRIMARY = 0x0,
+                PLAYERANIMEVENT_FIRE_GUN_SECONDARY = 0x1,
+                PLAYERANIMEVENT_GRENADE_PULL_PIN = 0x2,
+                PLAYERANIMEVENT_THROW_GRENADE = 0x3,
+                PLAYERANIMEVENT_JUMP = 0x4,
+                PLAYERANIMEVENT_RELOAD = 0x5,
+                PLAYERANIMEVENT_CLEAR_FIRING = 0x6,
+                PLAYERANIMEVENT_DEPLOY = 0x7,
+                PLAYERANIMEVENT_SILENCER_STATE = 0x8,
+                PLAYERANIMEVENT_SILENCER_TOGGLE = 0x9,
+                PLAYERANIMEVENT_THROW_GRENADE_UNDERHAND = 0xA,
+                PLAYERANIMEVENT_CATCH_WEAPON = 0xB,
+                PLAYERANIMEVENT_LOOKATWEAPON_REQUEST = 0xC,
+                PLAYERANIMEVENT_RELOAD_CANCEL_LOOKATWEAPON = 0xD,
+                PLAYERANIMEVENT_HAULBACK = 0xE,
+                PLAYERANIMEVENT_IDLE = 0xF,
+                PLAYERANIMEVENT_STRIKE_HIT = 0x10,
+                PLAYERANIMEVENT_STRIKE_MISS = 0x11,
+                PLAYERANIMEVENT_BACKSTAB = 0x12,
+                PLAYERANIMEVENT_DRYFIRE = 0x13,
+                PLAYERANIMEVENT_FIDGET = 0x14,
+                PLAYERANIMEVENT_RELEASE = 0x15,
+                PLAYERANIMEVENT_TAUNT = 0x16,
+                PLAYERANIMEVENT_COUNT = 0x17
             }
             // Alignment: 4
             // Members count: 5
-            enum class MedalRank_t : int32_t {
-                MEDAL_RANK_NONE = 0,
-                MEDAL_RANK_BRONZE = 1,
-                MEDAL_RANK_SILVER = 2,
-                MEDAL_RANK_GOLD = 3,
-                MEDAL_RANK_COUNT = 4
+            enum class MedalRank_t : uint32_t {
+                MEDAL_RANK_NONE = 0x0,
+                MEDAL_RANK_BRONZE = 0x1,
+                MEDAL_RANK_SILVER = 0x2,
+                MEDAL_RANK_GOLD = 0x3,
+                MEDAL_RANK_COUNT = 0x4
             }
             // Alignment: 4
             // Members count: 3
-            enum class CSWeaponState_t : int32_t {
-                WEAPON_NOT_CARRIED = 0,
-                WEAPON_IS_CARRIED_BY_PLAYER = 1,
-                WEAPON_IS_ACTIVE = 2
+            enum class CSWeaponState_t : uint32_t {
+                WEAPON_NOT_CARRIED = 0x0,
+                WEAPON_IS_CARRIED_BY_PLAYER = 0x1,
+                WEAPON_IS_ACTIVE = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class CSWeaponMode : int32_t {
-                Primary_Mode = 0,
-                Secondary_Mode = 1,
-                WeaponMode_MAX = 2
+            enum class CSWeaponMode : uint32_t {
+                Primary_Mode = 0x0,
+                Secondary_Mode = 0x1,
+                WeaponMode_MAX = 0x2
             }
             // Alignment: 4
             // Members count: 3
-            enum class C4LightEffect_t : int32_t {
-                eLightEffectNone = 0,
-                eLightEffectDropped = 1,
-                eLightEffectThirdPersonHeld = 2
+            enum class C4LightEffect_t : uint32_t {
+                eLightEffectNone = 0x0,
+                eLightEffectDropped = 0x1,
+                eLightEffectThirdPersonHeld = 0x2
             }
             // Alignment: 4
             // Members count: 17
-            enum class gear_slot_t : int32_t {
-                GEAR_SLOT_INVALID = -1,
-                GEAR_SLOT_RIFLE = 0,
-                GEAR_SLOT_PISTOL = 1,
-                GEAR_SLOT_KNIFE = 2,
-                GEAR_SLOT_GRENADES = 3,
-                GEAR_SLOT_C4 = 4,
-                GEAR_SLOT_RESERVED_SLOT6 = 5,
-                GEAR_SLOT_RESERVED_SLOT7 = 6,
-                GEAR_SLOT_RESERVED_SLOT8 = 7,
-                GEAR_SLOT_RESERVED_SLOT9 = 8,
-                GEAR_SLOT_RESERVED_SLOT10 = 9,
-                GEAR_SLOT_RESERVED_SLOT11 = 10,
-                GEAR_SLOT_BOOSTS = 11,
-                GEAR_SLOT_UTILITY = 12,
-                GEAR_SLOT_COUNT = 13,
-                GEAR_SLOT_FIRST = 0,
-                GEAR_SLOT_LAST = 12
+            enum class gear_slot_t : uint32_t {
+                GEAR_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                GEAR_SLOT_RIFLE = 0x0,
+                GEAR_SLOT_PISTOL = 0x1,
+                GEAR_SLOT_KNIFE = 0x2,
+                GEAR_SLOT_GRENADES = 0x3,
+                GEAR_SLOT_C4 = 0x4,
+                GEAR_SLOT_RESERVED_SLOT6 = 0x5,
+                GEAR_SLOT_RESERVED_SLOT7 = 0x6,
+                GEAR_SLOT_RESERVED_SLOT8 = 0x7,
+                GEAR_SLOT_RESERVED_SLOT9 = 0x8,
+                GEAR_SLOT_RESERVED_SLOT10 = 0x9,
+                GEAR_SLOT_RESERVED_SLOT11 = 0xA,
+                GEAR_SLOT_BOOSTS = 0xB,
+                GEAR_SLOT_UTILITY = 0xC,
+                GEAR_SLOT_COUNT = 0xD,
+                GEAR_SLOT_FIRST = 0x0,
+                GEAR_SLOT_LAST = 0xC
             }
             // Alignment: 4
             // Members count: 7
-            enum class ChickenActivity : int32_t {
-                IDLE = 0,
-                WALK = 1,
-                RUN = 2,
-                HOP = 3,
-                JUMP = 4,
-                GLIDE = 5,
-                LAND = 6
+            enum class ChickenActivity : uint32_t {
+                IDLE = 0x0,
+                WALK = 0x1,
+                RUN = 0x2,
+                HOP = 0x3,
+                JUMP = 0x4,
+                GLIDE = 0x5,
+                LAND = 0x6
             }
             // Parent: None
             // Fields count: 1
@@ -15450,7 +15450,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAttenuation2 = 0xAC; // float32
                 constexpr std::ptrdiff_t m_flTheta = 0xB0; // float32
                 constexpr std::ptrdiff_t m_flPhi = 0xB4; // float32
-                constexpr std::ptrdiff_t m_hLightCookie = 0xB8; // CStrongHandle< InfoForResourceTypeCTextureBase >
+                constexpr std::ptrdiff_t m_hLightCookie = 0xB8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_nCascades = 0xC0; // int32
                 constexpr std::ptrdiff_t m_nCastShadows = 0xC4; // int32
                 constexpr std::ptrdiff_t m_nShadowWidth = 0xC8; // int32
@@ -15676,14 +15676,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCsViewPunchAngleTick = 0x4C; // GameTick_t
                 constexpr std::ptrdiff_t m_flCsViewPunchAngleTickRatio = 0x50; // float32
                 constexpr std::ptrdiff_t m_PlayerFog = 0x58; // fogplayerparams_t
-                constexpr std::ptrdiff_t m_hColorCorrectionCtrl = 0x98; // CHandle< CColorCorrection >
-                constexpr std::ptrdiff_t m_hViewEntity = 0x9C; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_hTonemapController = 0xA0; // CHandle< CTonemapController2 >
+                constexpr std::ptrdiff_t m_hColorCorrectionCtrl = 0x98; // CHandle<CColorCorrection>
+                constexpr std::ptrdiff_t m_hViewEntity = 0x9C; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hTonemapController = 0xA0; // CHandle<CTonemapController2>
                 constexpr std::ptrdiff_t m_audio = 0xA8; // audioparams_t
-                constexpr std::ptrdiff_t m_PostProcessingVolumes = 0x120; // CNetworkUtlVectorBase< CHandle< CPostProcessingVolume > >
+                constexpr std::ptrdiff_t m_PostProcessingVolumes = 0x120; // CNetworkUtlVectorBase<CHandle<CPostProcessingVolume>>
                 constexpr std::ptrdiff_t m_flOldPlayerZ = 0x138; // float32
                 constexpr std::ptrdiff_t m_flOldPlayerViewOffsetZ = 0x13C; // float32
-                constexpr std::ptrdiff_t m_hTriggerSoundscapeList = 0x158; // CUtlVector< CHandle< CEnvSoundscapeTriggerable > >
+                constexpr std::ptrdiff_t m_hTriggerSoundscapeList = 0x158; // CUtlVector<CHandle<CEnvSoundscapeTriggerable>>
             }
             // Parent: CPlayerPawnComponent
             // Fields count: 0
@@ -15752,7 +15752,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hObserverTarget (CHandle< CBaseEntity>)
             namespace CPlayer_ObserverServices {
                 constexpr std::ptrdiff_t m_iObserverMode = 0x40; // uint8
-                constexpr std::ptrdiff_t m_hObserverTarget = 0x44; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hObserverTarget = 0x44; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_iObserverLastMode = 0x48; // ObserverMode_t
                 constexpr std::ptrdiff_t m_bForcedObserverMode = 0x4C; // bool
             }
@@ -15773,9 +15773,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hLastWeapon (CHandle< CBasePlayerWeapon>)
             // NetworkVarNames: m_iAmmo (uint16)
             namespace CPlayer_WeaponServices {
-                constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // CNetworkUtlVectorBase< CHandle< CBasePlayerWeapon > >
-                constexpr std::ptrdiff_t m_hActiveWeapon = 0x58; // CHandle< CBasePlayerWeapon >
-                constexpr std::ptrdiff_t m_hLastWeapon = 0x5C; // CHandle< CBasePlayerWeapon >
+                constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // CNetworkUtlVectorBase<CHandle<CBasePlayerWeapon>>
+                constexpr std::ptrdiff_t m_hActiveWeapon = 0x58; // CHandle<CBasePlayerWeapon>
+                constexpr std::ptrdiff_t m_hLastWeapon = 0x5C; // CHandle<CBasePlayerWeapon>
                 constexpr std::ptrdiff_t m_iAmmo = 0x60; // uint16[32]
                 constexpr std::ptrdiff_t m_bPreventWeaponPickup = 0xA0; // bool
             }
@@ -15825,8 +15825,8 @@ namespace cs2_dumper {
             namespace ActiveModelConfig_t {
                 constexpr std::ptrdiff_t m_Handle = 0x28; // ModelConfigHandle_t
                 constexpr std::ptrdiff_t m_Name = 0x30; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_AssociatedEntities = 0x38; // CNetworkUtlVectorBase< CHandle< CBaseModelEntity > >
-                constexpr std::ptrdiff_t m_AssociatedEntityNames = 0x50; // CNetworkUtlVectorBase< CUtlSymbolLarge >
+                constexpr std::ptrdiff_t m_AssociatedEntities = 0x38; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
+                constexpr std::ptrdiff_t m_AssociatedEntityNames = 0x50; // CNetworkUtlVectorBase<CUtlSymbolLarge>
             }
             // Parent: CBodyComponentSkeletonInstance
             // Fields count: 1
@@ -15836,8 +15836,8 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 2
             namespace CRopeOverlapHit {
-                constexpr std::ptrdiff_t m_hEntity = 0x0; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_vecOverlappingLinks = 0x8; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_hEntity = 0x0; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_vecOverlappingLinks = 0x8; // CUtlVector<int32>
             }
             // Parent: None
             // Fields count: 2
@@ -15947,7 +15947,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_MeshGroupMask (MeshGroupMask_t)
             // NetworkVarNames: m_nIdealMotionType (int8)
             namespace CModelState {
-                constexpr std::ptrdiff_t m_hModel = 0xA0; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_hModel = 0xA0; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_ModelName = 0xA8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_bClientClothCreationSuppressed = 0xE8; // bool
                 constexpr std::ptrdiff_t m_MeshGroupMask = 0x180; // uint64
@@ -16059,26 +16059,26 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nRandomSeedOffset (int)
             // NetworkVarNames: m_flLastTeleportTime (float)
             namespace CAnimGraphNetworkedVariables {
-                constexpr std::ptrdiff_t m_PredNetBoolVariables = 0x8; // CNetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_PredNetByteVariables = 0x20; // CNetworkUtlVectorBase< uint8 >
-                constexpr std::ptrdiff_t m_PredNetUInt16Variables = 0x38; // CNetworkUtlVectorBase< uint16 >
-                constexpr std::ptrdiff_t m_PredNetIntVariables = 0x50; // CNetworkUtlVectorBase< int32 >
-                constexpr std::ptrdiff_t m_PredNetUInt32Variables = 0x68; // CNetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_PredNetUInt64Variables = 0x80; // CNetworkUtlVectorBase< uint64 >
-                constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // CNetworkUtlVectorBase< float32 >
-                constexpr std::ptrdiff_t m_PredNetVectorVariables = 0xB0; // CNetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_PredNetQuaternionVariables = 0xC8; // CNetworkUtlVectorBase< Quaternion >
-                constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // CNetworkUtlVectorBase< CGlobalSymbol >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetBoolVariables = 0xF8; // CNetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetByteVariables = 0x110; // CNetworkUtlVectorBase< uint8 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt16Variables = 0x128; // CNetworkUtlVectorBase< uint16 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetIntVariables = 0x140; // CNetworkUtlVectorBase< int32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt32Variables = 0x158; // CNetworkUtlVectorBase< uint32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt64Variables = 0x170; // CNetworkUtlVectorBase< uint64 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetFloatVariables = 0x188; // CNetworkUtlVectorBase< float32 >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetVectorVariables = 0x1A0; // CNetworkUtlVectorBase< Vector >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetQuaternionVariables = 0x1B8; // CNetworkUtlVectorBase< Quaternion >
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetGlobalSymbolVariables = 0x1D0; // CNetworkUtlVectorBase< CGlobalSymbol >
+                constexpr std::ptrdiff_t m_PredNetBoolVariables = 0x8; // CNetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_PredNetByteVariables = 0x20; // CNetworkUtlVectorBase<uint8>
+                constexpr std::ptrdiff_t m_PredNetUInt16Variables = 0x38; // CNetworkUtlVectorBase<uint16>
+                constexpr std::ptrdiff_t m_PredNetIntVariables = 0x50; // CNetworkUtlVectorBase<int32>
+                constexpr std::ptrdiff_t m_PredNetUInt32Variables = 0x68; // CNetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_PredNetUInt64Variables = 0x80; // CNetworkUtlVectorBase<uint64>
+                constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // CNetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_PredNetVectorVariables = 0xB0; // CNetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PredNetQuaternionVariables = 0xC8; // CNetworkUtlVectorBase<Quaternion>
+                constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // CNetworkUtlVectorBase<CGlobalSymbol>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetBoolVariables = 0xF8; // CNetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetByteVariables = 0x110; // CNetworkUtlVectorBase<uint8>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt16Variables = 0x128; // CNetworkUtlVectorBase<uint16>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetIntVariables = 0x140; // CNetworkUtlVectorBase<int32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt32Variables = 0x158; // CNetworkUtlVectorBase<uint32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt64Variables = 0x170; // CNetworkUtlVectorBase<uint64>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetFloatVariables = 0x188; // CNetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetVectorVariables = 0x1A0; // CNetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetQuaternionVariables = 0x1B8; // CNetworkUtlVectorBase<Quaternion>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetGlobalSymbolVariables = 0x1D0; // CNetworkUtlVectorBase<CGlobalSymbol>
                 constexpr std::ptrdiff_t m_nBoolVariablesCount = 0x1E8; // int32
                 constexpr std::ptrdiff_t m_nOwnerOnlyBoolVariablesCount = 0x1EC; // int32
                 constexpr std::ptrdiff_t m_nRandomSeedOffset = 0x1F0; // int32
@@ -16127,8 +16127,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_szSpeakerContext = 0x170; // char*
                 constexpr std::ptrdiff_t m_szWorldContext = 0x178; // char*
                 constexpr std::ptrdiff_t m_Followup = 0x180; // ResponseFollowup
-                constexpr std::ptrdiff_t m_pchCriteriaNames = 0x1B8; // CUtlVector< CUtlSymbol >
-                constexpr std::ptrdiff_t m_pchCriteriaValues = 0x1D0; // CUtlVector< char* >
+                constexpr std::ptrdiff_t m_pchCriteriaNames = 0x1B8; // CUtlVector<CUtlSymbol>
+                constexpr std::ptrdiff_t m_pchCriteriaValues = 0x1D0; // CUtlVector<char*>
             }
             // Parent: None
             // Fields count: 2
@@ -16152,14 +16152,14 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 1
             namespace CResponseQueue {
-                constexpr std::ptrdiff_t m_ExpresserTargets = 0x48; // CUtlVector< CAI_Expresser* >
+                constexpr std::ptrdiff_t m_ExpresserTargets = 0x48; // CUtlVector<CAI_Expresser*>
             }
             // Parent: None
             // Fields count: 5
             namespace CResponseQueue__CDeferredResponse {
                 constexpr std::ptrdiff_t m_contexts = 0x8; // CResponseCriteriaSet
                 constexpr std::ptrdiff_t m_fDispatchTime = 0x38; // float32
-                constexpr std::ptrdiff_t m_hIssuer = 0x3C; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hIssuer = 0x3C; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_response = 0x48; // CRR_Response
                 constexpr std::ptrdiff_t m_bResponseValid = 0x230; // bool
             }
@@ -16190,10 +16190,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iTeleportStage = 0x18; // int32
                 constexpr std::ptrdiff_t m_bCheatState = 0x1C; // bool
                 constexpr std::ptrdiff_t m_bIsFirstSpawnGroupToLoad = 0x1D; // bool
-                constexpr std::ptrdiff_t m_hCurrentNode = 0x38; // CHandle< CPointCommentaryNode >
-                constexpr std::ptrdiff_t m_hActiveCommentaryNode = 0x3C; // CHandle< CPointCommentaryNode >
-                constexpr std::ptrdiff_t m_hLastCommentaryNode = 0x40; // CHandle< CPointCommentaryNode >
-                constexpr std::ptrdiff_t m_vecNodes = 0x48; // CUtlVector< CHandle< CPointCommentaryNode > >
+                constexpr std::ptrdiff_t m_hCurrentNode = 0x38; // CHandle<CPointCommentaryNode>
+                constexpr std::ptrdiff_t m_hActiveCommentaryNode = 0x3C; // CHandle<CPointCommentaryNode>
+                constexpr std::ptrdiff_t m_hLastCommentaryNode = 0x40; // CHandle<CPointCommentaryNode>
+                constexpr std::ptrdiff_t m_vecNodes = 0x48; // CUtlVector<CHandle<CPointCommentaryNode>>
             }
             // Parent: None
             // Fields count: 1
@@ -16226,8 +16226,8 @@ namespace cs2_dumper {
             // Parent: IChoreoServices
             // Fields count: 5
             namespace CGameChoreoServices {
-                constexpr std::ptrdiff_t m_hOwner = 0x8; // CHandle< CBaseAnimGraph >
-                constexpr std::ptrdiff_t m_hScriptedSequence = 0xC; // CHandle< CScriptedSequence >
+                constexpr std::ptrdiff_t m_hOwner = 0x8; // CHandle<CBaseAnimGraph>
+                constexpr std::ptrdiff_t m_hScriptedSequence = 0xC; // CHandle<CScriptedSequence>
                 constexpr std::ptrdiff_t m_scriptState = 0x10; // IChoreoServices::ScriptState_t
                 constexpr std::ptrdiff_t m_choreoState = 0x14; // IChoreoServices::ChoreoState_t
                 constexpr std::ptrdiff_t m_flTimeStartedState = 0x18; // GameTime_t
@@ -16274,7 +16274,7 @@ namespace cs2_dumper {
             // Fields count: 2
             namespace CCopyRecipientFilter {
                 constexpr std::ptrdiff_t m_Flags = 0x8; // int32
-                constexpr std::ptrdiff_t m_Recipients = 0x10; // CUtlVector< CPlayerSlot >
+                constexpr std::ptrdiff_t m_Recipients = 0x10; // CUtlVector<CPlayerSlot>
             }
             // Parent: None
             // Fields count: 13
@@ -16284,7 +16284,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_shutdownTime = 0x30; // float32
                 constexpr std::ptrdiff_t m_flLastTime = 0x34; // float32
                 constexpr std::ptrdiff_t m_iszSoundScriptName = 0x38; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hEnt = 0x40; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hEnt = 0x40; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_soundEntityIndex = 0x44; // CEntityIndex
                 constexpr std::ptrdiff_t m_soundOrigin = 0x48; // 
                 constexpr std::ptrdiff_t m_isPlaying = 0x54; // int32
@@ -16314,7 +16314,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 4
             namespace CPulseGraphComponentBase {
-                constexpr std::ptrdiff_t m_hOwner = 0x8; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hOwner = 0x8; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_sNameFixupStaticPrefix = 0x10; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_sNameFixupParent = 0x18; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_sNameFixupLocal = 0x20; // CUtlSymbolLarge
@@ -16361,12 +16361,12 @@ namespace cs2_dumper {
             namespace CPulseCell_Outflow_PlaySceneBase {
                 constexpr std::ptrdiff_t m_OnFinished = 0x48; // CPulse_ResumePoint
                 constexpr std::ptrdiff_t m_OnCanceled = 0x58; // CPulse_ResumePoint
-                constexpr std::ptrdiff_t m_Triggers = 0x68; // CUtlVector< CPulse_OutflowConnection >
+                constexpr std::ptrdiff_t m_Triggers = 0x68; // CUtlVector<CPulse_OutflowConnection>
             }
             // Parent: None
             // Fields count: 1
             namespace CPulseCell_Outflow_PlaySceneBase__CursorState_t {
-                constexpr std::ptrdiff_t m_sceneInstance = 0x0; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_sceneInstance = 0x0; // CHandle<CBaseEntity>
             }
             // Parent: None
             // Fields count: 9
@@ -16387,7 +16387,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 1
             namespace CPulseCell_Outflow_ScriptedSequence__CursorState_t {
-                constexpr std::ptrdiff_t m_scriptedSequence = 0x0; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_scriptedSequence = 0x0; // CHandle<CBaseEntity>
             }
             // Parent: CEntityComponent
             // Fields count: 0
@@ -16486,13 +16486,13 @@ namespace cs2_dumper {
             namespace CBaseEntity {
                 constexpr std::ptrdiff_t m_CBodyComponent = 0x38; // CBodyComponent*
                 constexpr std::ptrdiff_t m_NetworkTransmitComponent = 0x40; // CNetworkTransmitComponent
-                constexpr std::ptrdiff_t m_aThinkFunctions = 0x230; // CUtlVector< thinkfunc_t >
+                constexpr std::ptrdiff_t m_aThinkFunctions = 0x230; // CUtlVector<thinkfunc_t>
                 constexpr std::ptrdiff_t m_iCurrentThinkContext = 0x248; // int32
                 constexpr std::ptrdiff_t m_nLastThinkTick = 0x24C; // GameTick_t
                 constexpr std::ptrdiff_t m_nDisableContextThinkStartTick = 0x250; // GameTick_t
-                constexpr std::ptrdiff_t m_isSteadyState = 0x260; // CBitVec< 64 >
+                constexpr std::ptrdiff_t m_isSteadyState = 0x260; // CBitVec<64>
                 constexpr std::ptrdiff_t m_lastNetworkChange = 0x268; // float32
-                constexpr std::ptrdiff_t m_ResponseContexts = 0x278; // CUtlVector< ResponseContext_t >
+                constexpr std::ptrdiff_t m_ResponseContexts = 0x278; // CUtlVector<ResponseContext_t>
                 constexpr std::ptrdiff_t m_iszResponseContext = 0x290; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_iHealth = 0x2B8; // int32
                 constexpr std::ptrdiff_t m_iMaxHealth = 0x2BC; // int32
@@ -16508,7 +16508,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSlimeTouch = 0x2D6; // uint8
                 constexpr std::ptrdiff_t m_bRestoreInHierarchy = 0x2D7; // bool
                 constexpr std::ptrdiff_t m_target = 0x2D8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hDamageFilter = 0x2E0; // CHandle< CBaseFilter >
+                constexpr std::ptrdiff_t m_hDamageFilter = 0x2E0; // CHandle<CBaseFilter>
                 constexpr std::ptrdiff_t m_iszDamageFilterName = 0x2E8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_flMoveDoneTime = 0x2F0; // float32
                 constexpr std::ptrdiff_t m_nSubclassID = 0x2F4; // CUtlStringToken
@@ -16533,10 +16533,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecBaseVelocity = 0x3B0; // 
                 constexpr std::ptrdiff_t m_nPushEnumCount = 0x3BC; // int32
                 constexpr std::ptrdiff_t m_pCollision = 0x3C0; // CCollisionProperty*
-                constexpr std::ptrdiff_t m_hEffectEntity = 0x3C8; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_hOwnerEntity = 0x3CC; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hEffectEntity = 0x3C8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hOwnerEntity = 0x3CC; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_fEffects = 0x3D0; // uint32
-                constexpr std::ptrdiff_t m_hGroundEntity = 0x3D4; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hGroundEntity = 0x3D4; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_flFriction = 0x3D8; // float32
                 constexpr std::ptrdiff_t m_flElasticity = 0x3DC; // float32
                 constexpr std::ptrdiff_t m_flGravityScale = 0x3E0; // float32
@@ -16556,7 +16556,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bNetworkQuantizeOriginAndAngles = 0x4AC; // bool
                 constexpr std::ptrdiff_t m_bLagCompensate = 0x4AD; // bool
                 constexpr std::ptrdiff_t m_flOverriddenFriction = 0x4B0; // float32
-                constexpr std::ptrdiff_t m_pBlocker = 0x4B4; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_pBlocker = 0x4B4; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_flLocalTime = 0x4B8; // float32
                 constexpr std::ptrdiff_t m_flVPhysicsUpdateLocalTime = 0x4BC; // float32
             }
@@ -16614,14 +16614,14 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hEntAttached (CHandle< CBaseEntity>)
             // NetworkVarNames: m_bCheapEffect (bool)
             namespace CEntityFlame {
-                constexpr std::ptrdiff_t m_hEntAttached = 0x4C0; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hEntAttached = 0x4C0; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_bCheapEffect = 0x4C4; // bool
                 constexpr std::ptrdiff_t m_flSize = 0x4C8; // float32
                 constexpr std::ptrdiff_t m_bUseHitboxes = 0x4CC; // bool
                 constexpr std::ptrdiff_t m_iNumHitboxFires = 0x4D0; // int32
                 constexpr std::ptrdiff_t m_flHitboxFireScale = 0x4D4; // float32
                 constexpr std::ptrdiff_t m_flLifetime = 0x4D8; // GameTime_t
-                constexpr std::ptrdiff_t m_hAttacker = 0x4DC; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hAttacker = 0x4DC; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_iDangerSound = 0x4E0; // int32
                 constexpr std::ptrdiff_t m_flDirectDamagePerSecond = 0x4E4; // float32
                 constexpr std::ptrdiff_t m_iCustomDamageType = 0x4E8; // int32
@@ -16638,7 +16638,7 @@ namespace cs2_dumper {
             namespace CFilterMultiple {
                 constexpr std::ptrdiff_t m_nFilterType = 0x518; // filter_t
                 constexpr std::ptrdiff_t m_iFilterName = 0x520; // CUtlSymbolLarge[10]
-                constexpr std::ptrdiff_t m_hFilter = 0x570; // CHandle< CBaseEntity >[10]
+                constexpr std::ptrdiff_t m_hFilter = 0x570; // CHandle<CBaseEntity>[10]
                 constexpr std::ptrdiff_t m_nFilterCount = 0x598; // int32
             }
             // Parent: CBaseFilter
@@ -16687,7 +16687,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_swimDepth = 0x4D8; // float32
                 constexpr std::ptrdiff_t m_waterLevel = 0x4DC; // float32
                 constexpr std::ptrdiff_t m_isDormant = 0x4E0; // bool
-                constexpr std::ptrdiff_t m_fishes = 0x4E8; // CUtlVector< CHandle< CFish > >
+                constexpr std::ptrdiff_t m_fishes = 0x4E8; // CUtlVector<CHandle<CFish>>
                 constexpr std::ptrdiff_t m_visTimer = 0x500; // CountdownTimer
             }
             // Parent: CServerOnlyEntity
@@ -16705,7 +16705,7 @@ namespace cs2_dumper {
             // Fields count: 4
             namespace CLogicBranch {
                 constexpr std::ptrdiff_t m_bInValue = 0x4C0; // bool
-                constexpr std::ptrdiff_t m_Listeners = 0x4C8; // CUtlVector< CHandle< CBaseEntity > >
+                constexpr std::ptrdiff_t m_Listeners = 0x4C8; // CUtlVector<CHandle<CBaseEntity>>
                 constexpr std::ptrdiff_t m_OnTrue = 0x4E0; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnFalse = 0x508; // CEntityIOOutput
             }
@@ -16758,7 +16758,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 1
             namespace magnetted_objects_t {
-                constexpr std::ptrdiff_t hEntity = 0x8; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t hEntity = 0x8; // CHandle<CBaseEntity>
             }
             // Parent: CServerOnlyPointEntity
             // Fields count: 6
@@ -16768,13 +16768,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_associatedRelayTargetName = 0x4D0; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_fixupNames = 0x4D8; // bool
                 constexpr std::ptrdiff_t m_bLoadDynamic = 0x4D9; // bool
-                constexpr std::ptrdiff_t m_associatedRelayEntity = 0x4DC; // CHandle< CPointPrefab >
+                constexpr std::ptrdiff_t m_associatedRelayEntity = 0x4DC; // CHandle<CPointPrefab>
             }
             // Parent: CBaseEntity
             // Fields count: 2
             namespace CSkyboxReference {
                 constexpr std::ptrdiff_t m_worldGroupId = 0x4C0; // WorldGroupId_t
-                constexpr std::ptrdiff_t m_hSkyCamera = 0x4C4; // CHandle< CSkyCamera >
+                constexpr std::ptrdiff_t m_hSkyCamera = 0x4C4; // CHandle<CSkyCamera>
             }
             // Parent: CBaseEntity
             // Fields count: 4
@@ -16791,8 +16791,8 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 12
             namespace CSound {
-                constexpr std::ptrdiff_t m_hOwner = 0x0; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_hTarget = 0x4; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hOwner = 0x0; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hTarget = 0x4; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_iVolume = 0x8; // int32
                 constexpr std::ptrdiff_t m_flOcclusionScale = 0xC; // float32
                 constexpr std::ptrdiff_t m_iType = 0x10; // int32
@@ -16816,7 +16816,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_soundscapeEntityListId = 0x508; // int32
                 constexpr std::ptrdiff_t m_soundEventHash = 0x50C; // uint32
                 constexpr std::ptrdiff_t m_positionNames = 0x510; // CUtlSymbolLarge[8]
-                constexpr std::ptrdiff_t m_hProxySoundscape = 0x550; // CHandle< CEnvSoundscape >
+                constexpr std::ptrdiff_t m_hProxySoundscape = 0x550; // CHandle<CEnvSoundscape>
                 constexpr std::ptrdiff_t m_bDisabled = 0x554; // bool
             }
             // Parent: CEnvSoundscape
@@ -16831,7 +16831,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 6
             namespace lerpdata_t {
-                constexpr std::ptrdiff_t m_hEnt = 0x0; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hEnt = 0x0; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_MoveType = 0x4; // MoveType_t
                 constexpr std::ptrdiff_t m_flStartTime = 0x8; // GameTime_t
                 constexpr std::ptrdiff_t m_vecStartOrigin = 0xC; // 
@@ -16956,7 +16956,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMagnitude = 0x44; // float32
                 constexpr std::ptrdiff_t m_flRadius = 0x48; // float32
                 constexpr std::ptrdiff_t m_nSurfaceProp = 0x4C; // CUtlStringToken
-                constexpr std::ptrdiff_t m_nEffectIndex = 0x50; // CWeakHandle< InfoForResourceTypeIParticleSystemDefinition >
+                constexpr std::ptrdiff_t m_nEffectIndex = 0x50; // CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>
                 constexpr std::ptrdiff_t m_nDamageType = 0x58; // uint32
                 constexpr std::ptrdiff_t m_nPenetrate = 0x5C; // uint8
                 constexpr std::ptrdiff_t m_nMaterial = 0x5E; // uint16
@@ -17063,13 +17063,13 @@ namespace cs2_dumper {
             // NetworkVarNames: m_SurfacePropStringToken (CUtlStringToken)
             namespace shard_model_desc_t {
                 constexpr std::ptrdiff_t m_nModelID = 0x8; // int32
-                constexpr std::ptrdiff_t m_hMaterial = 0x10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_hMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_solid = 0x18; // ShardSolid_t
                 constexpr std::ptrdiff_t m_ShatterPanelMode = 0x19; // ShatterPanelMode
                 constexpr std::ptrdiff_t m_vecPanelSize = 0x1C; // Vector2D
                 constexpr std::ptrdiff_t m_vecStressPositionA = 0x24; // Vector2D
                 constexpr std::ptrdiff_t m_vecStressPositionB = 0x2C; // Vector2D
-                constexpr std::ptrdiff_t m_vecPanelVertices = 0x38; // CNetworkUtlVectorBase< Vector2D >
+                constexpr std::ptrdiff_t m_vecPanelVertices = 0x38; // CNetworkUtlVectorBase<Vector2D>
                 constexpr std::ptrdiff_t m_flGlassHalfThickness = 0x50; // float32
                 constexpr std::ptrdiff_t m_bHasParent = 0x54; // bool
                 constexpr std::ptrdiff_t m_bParentFrozen = 0x55; // bool
@@ -17079,11 +17079,11 @@ namespace cs2_dumper {
             // Fields count: 30
             namespace CShatterGlassShard {
                 constexpr std::ptrdiff_t m_hShardHandle = 0x8; // uint32
-                constexpr std::ptrdiff_t m_vecPanelVertices = 0x10; // CUtlVector< Vector2D >
+                constexpr std::ptrdiff_t m_vecPanelVertices = 0x10; // CUtlVector<Vector2D>
                 constexpr std::ptrdiff_t m_vLocalPanelSpaceOrigin = 0x28; // Vector2D
-                constexpr std::ptrdiff_t m_hModel = 0x30; // CStrongHandle< InfoForResourceTypeCModel >
-                constexpr std::ptrdiff_t m_hPhysicsEntity = 0x38; // CHandle< CShatterGlassShardPhysics >
-                constexpr std::ptrdiff_t m_hParentPanel = 0x3C; // CHandle< CFuncShatterglass >
+                constexpr std::ptrdiff_t m_hModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
+                constexpr std::ptrdiff_t m_hPhysicsEntity = 0x38; // CHandle<CShatterGlassShardPhysics>
+                constexpr std::ptrdiff_t m_hParentPanel = 0x3C; // CHandle<CFuncShatterglass>
                 constexpr std::ptrdiff_t m_hParentShard = 0x40; // uint32
                 constexpr std::ptrdiff_t m_ShatterStressType = 0x44; // ShatterGlassStressType
                 constexpr std::ptrdiff_t m_vecStressVelocity = 0x48; // 
@@ -17106,8 +17106,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bFlaggedForRemoval = 0x9A; // bool
                 constexpr std::ptrdiff_t m_flPhysicsEntitySpawnedAtTime = 0x9C; // GameTime_t
                 constexpr std::ptrdiff_t m_bShatterRateLimited = 0xA0; // bool
-                constexpr std::ptrdiff_t m_hEntityHittingMe = 0xA4; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_vecNeighbors = 0xA8; // CUtlVector< uint32 >
+                constexpr std::ptrdiff_t m_hEntityHittingMe = 0xA4; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_vecNeighbors = 0xA8; // CUtlVector<uint32>
             }
             // Parent: CBaseEntity
             // Fields count: 0
@@ -17210,7 +17210,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hCtrl (CHandle< CFogController>)
             namespace fogplayerparams_t {
-                constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle< CFogController >
+                constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle<CFogController>
                 constexpr std::ptrdiff_t m_flTransitionTime = 0xC; // float32
                 constexpr std::ptrdiff_t m_OldColor = 0x10; // Color
                 constexpr std::ptrdiff_t m_flOldStart = 0x14; // float32
@@ -17266,8 +17266,8 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 4
             namespace ragdoll_t {
-                constexpr std::ptrdiff_t list = 0x0; // CUtlVector< ragdollelement_t >
-                constexpr std::ptrdiff_t boneIndex = 0x18; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t list = 0x0; // CUtlVector<ragdollelement_t>
+                constexpr std::ptrdiff_t boneIndex = 0x18; // CUtlVector<int32>
                 constexpr std::ptrdiff_t allowStretch = 0x30; // bool
                 constexpr std::ptrdiff_t unused = 0x31; // bool
             }
@@ -17279,8 +17279,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hOwner (EHANDLE)
             namespace PhysicsRagdollPose_t {
                 constexpr std::ptrdiff_t __m_pChainEntity = 0x8; // CNetworkVarChainer
-                constexpr std::ptrdiff_t m_Transforms = 0x30; // CNetworkUtlVectorBase< CTransform >
-                constexpr std::ptrdiff_t m_hOwner = 0x48; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_Transforms = 0x30; // CNetworkUtlVectorBase<CTransform>
+                constexpr std::ptrdiff_t m_hOwner = 0x48; // CHandle<CBaseEntity>
             }
             // Parent: None
             // Fields count: 13
@@ -17294,7 +17294,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flNext = 0x18; // GameTime_t
                 constexpr std::ptrdiff_t m_bIsGesture = 0x1C; // bool
                 constexpr std::ptrdiff_t m_bShouldRemove = 0x1D; // bool
-                constexpr std::ptrdiff_t m_hTarget = 0x44; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hTarget = 0x44; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_nSceneEventId = 0x48; // uint32
                 constexpr std::ptrdiff_t m_bClientSide = 0x4C; // bool
                 constexpr std::ptrdiff_t m_bStarted = 0x4D; // bool
@@ -17446,7 +17446,7 @@ namespace cs2_dumper {
             // Parent: CSoundOpvarSetPointEntity
             // Fields count: 4
             namespace CSoundOpvarSetAutoRoomEntity {
-                constexpr std::ptrdiff_t m_traceResults = 0x668; // CUtlVector< SoundOpvarTraceResult_t >
+                constexpr std::ptrdiff_t m_traceResults = 0x668; // CUtlVector<SoundOpvarTraceResult_t>
                 constexpr std::ptrdiff_t m_flSize = 0x698; // float32
                 constexpr std::ptrdiff_t m_flHeightTolerance = 0x69C; // float32
                 constexpr std::ptrdiff_t m_flSizeSqr = 0x6A0; // float32
@@ -17470,9 +17470,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecDamagePosition = 0x14; // 
                 constexpr std::ptrdiff_t m_vecReportedPosition = 0x20; // 
                 constexpr std::ptrdiff_t m_vecDamageDirection = 0x2C; // 
-                constexpr std::ptrdiff_t m_hInflictor = 0x38; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_hAttacker = 0x3C; // CHandle< CBaseEntity >
-                constexpr std::ptrdiff_t m_hAbility = 0x40; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hInflictor = 0x38; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hAttacker = 0x3C; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hAbility = 0x40; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_flDamage = 0x44; // float32
                 constexpr std::ptrdiff_t m_bitsDamageType = 0x48; // int32
                 constexpr std::ptrdiff_t m_iDamageCustom = 0x4C; // int32
@@ -17497,12 +17497,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nSummarisedCount = 0x0; // int32
                 constexpr std::ptrdiff_t info = 0x8; // CTakeDamageInfo
                 constexpr std::ptrdiff_t result = 0xA0; // CTakeDamageResult
-                constexpr std::ptrdiff_t hTarget = 0xA8; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t hTarget = 0xA8; // CHandle<CBaseEntity>
             }
             // Parent: None
             // Fields count: 1
             namespace CTakeDamageSummaryScopeGuard {
-                constexpr std::ptrdiff_t m_vecSummaries = 0x8; // CUtlVector< SummaryTakeDamageInfo_t* >
+                constexpr std::ptrdiff_t m_vecSummaries = 0x8; // CUtlVector<SummaryTakeDamageInfo_t*>
             }
             // Parent: CMultiplayRules
             // Fields count: 0
@@ -17514,7 +17514,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_Attributes (CEconItemAttribute)
             namespace CAttributeList {
-                constexpr std::ptrdiff_t m_Attributes = 0x8; // CUtlVectorEmbeddedNetworkVar< CEconItemAttribute >
+                constexpr std::ptrdiff_t m_Attributes = 0x8; // CUtlVectorEmbeddedNetworkVar<CEconItemAttribute>
                 constexpr std::ptrdiff_t m_pManager = 0x58; // CAttributeManager*
             }
             // Parent: None
@@ -17545,12 +17545,12 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hOuter (EHANDLE)
             // NetworkVarNames: m_ProviderType (attributeprovidertypes_t)
             namespace CAttributeManager {
-                constexpr std::ptrdiff_t m_Providers = 0x8; // CUtlVector< CHandle< CBaseEntity > >
+                constexpr std::ptrdiff_t m_Providers = 0x8; // CUtlVector<CHandle<CBaseEntity>>
                 constexpr std::ptrdiff_t m_iReapplyProvisionParity = 0x20; // int32
-                constexpr std::ptrdiff_t m_hOuter = 0x24; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hOuter = 0x24; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_bPreventLoopback = 0x28; // bool
                 constexpr std::ptrdiff_t m_ProviderType = 0x2C; // attributeprovidertypes_t
-                constexpr std::ptrdiff_t m_CachedResults = 0x30; // CUtlVector< CAttributeManager::cached_attribute_float_t >
+                constexpr std::ptrdiff_t m_CachedResults = 0x30; // CUtlVector<CAttributeManager::cached_attribute_float_t>
             }
             // Parent: None
             // Fields count: 3
@@ -17735,7 +17735,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nRoundStartCount (uint8)
             namespace CCSGameRules {
                 constexpr std::ptrdiff_t __m_pChainEntity = 0x98; // CNetworkVarChainer
-                constexpr std::ptrdiff_t m_coopMissionManager = 0xC0; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_coopMissionManager = 0xC0; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_bFreezePeriod = 0xC4; // bool
                 constexpr std::ptrdiff_t m_bWarmupPeriod = 0xC5; // bool
                 constexpr std::ptrdiff_t m_fWarmupPeriodEnd = 0xC8; // GameTime_t
@@ -17837,14 +17837,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iNumCT = 0xDC4; // int32
                 constexpr std::ptrdiff_t m_iNumSpawnableTerrorist = 0xDC8; // int32
                 constexpr std::ptrdiff_t m_iNumSpawnableCT = 0xDCC; // int32
-                constexpr std::ptrdiff_t m_arrSelectedHostageSpawnIndices = 0xDD0; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_arrSelectedHostageSpawnIndices = 0xDD0; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_nSpawnPointsRandomSeed = 0xDE8; // int32
                 constexpr std::ptrdiff_t m_bFirstConnected = 0xDEC; // bool
                 constexpr std::ptrdiff_t m_bCompleteReset = 0xDED; // bool
                 constexpr std::ptrdiff_t m_bPickNewTeamsOnReset = 0xDEE; // bool
                 constexpr std::ptrdiff_t m_bScrambleTeamsOnRestart = 0xDEF; // bool
                 constexpr std::ptrdiff_t m_bSwapTeamsOnRestart = 0xDF0; // bool
-                constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDF8; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDF8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_bNeedToAskPlayersForContinueVote = 0xE14; // bool
                 constexpr std::ptrdiff_t m_numQueuedMatchmakingAccounts = 0xE18; // uint32
                 constexpr std::ptrdiff_t m_pQueuedMatchmakingReservationString = 0xE20; // char*
@@ -17895,15 +17895,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bBombDefused = 0xF39; // bool
                 constexpr std::ptrdiff_t m_bMapHasBombZone = 0xF3A; // bool
                 constexpr std::ptrdiff_t m_vecMainCTSpawnPos = 0xF58; // 
-                constexpr std::ptrdiff_t m_CTSpawnPointsMasterList = 0xF68; // CUtlVector< SpawnPoint* >
-                constexpr std::ptrdiff_t m_TerroristSpawnPointsMasterList = 0xF80; // CUtlVector< SpawnPoint* >
+                constexpr std::ptrdiff_t m_CTSpawnPointsMasterList = 0xF68; // CUtlVector<SpawnPoint*>
+                constexpr std::ptrdiff_t m_TerroristSpawnPointsMasterList = 0xF80; // CUtlVector<SpawnPoint*>
                 constexpr std::ptrdiff_t m_bRespawningAllRespawnablePlayers = 0xF98; // bool
                 constexpr std::ptrdiff_t m_iNextCTSpawnPoint = 0xF9C; // int32
                 constexpr std::ptrdiff_t m_flCTSpawnPointUsedTime = 0xFA0; // float32
                 constexpr std::ptrdiff_t m_iNextTerroristSpawnPoint = 0xFA4; // int32
                 constexpr std::ptrdiff_t m_flTerroristSpawnPointUsedTime = 0xFA8; // float32
-                constexpr std::ptrdiff_t m_CTSpawnPoints = 0xFB0; // CUtlVector< SpawnPoint* >
-                constexpr std::ptrdiff_t m_TerroristSpawnPoints = 0xFC8; // CUtlVector< SpawnPoint* >
+                constexpr std::ptrdiff_t m_CTSpawnPoints = 0xFB0; // CUtlVector<SpawnPoint*>
+                constexpr std::ptrdiff_t m_TerroristSpawnPoints = 0xFC8; // CUtlVector<SpawnPoint*>
                 constexpr std::ptrdiff_t m_bIsUnreservedGameServer = 0xFE0; // bool
                 constexpr std::ptrdiff_t m_fAutobalanceDisplayTime = 0xFE4; // float32
                 constexpr std::ptrdiff_t m_bAllowWeaponSwitch = 0x1250; // bool
@@ -17919,11 +17919,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bSwitchingTeamsAtRoundReset = 0x14E6; // bool
                 constexpr std::ptrdiff_t m_pGameModeRules = 0x1500; // CCSGameModeRules*
                 constexpr std::ptrdiff_t m_BtGlobalBlackboard = 0x1508; // KeyValues3
-                constexpr std::ptrdiff_t m_hPlayerResource = 0x1570; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hPlayerResource = 0x1570; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_RetakeRules = 0x1578; // CRetakeGameRules
                 constexpr std::ptrdiff_t m_GuardianBotSkillLevelMax = 0x175C; // int32
                 constexpr std::ptrdiff_t m_GuardianBotSkillLevelMin = 0x1760; // int32
-                constexpr std::ptrdiff_t m_arrTeamUniqueKillWeaponsMatch = 0x1768; // CUtlVector< int32 >[4]
+                constexpr std::ptrdiff_t m_arrTeamUniqueKillWeaponsMatch = 0x1768; // CUtlVector<int32>[4]
                 constexpr std::ptrdiff_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x17C8; // bool[4]
                 constexpr std::ptrdiff_t m_nMatchEndCount = 0x17F0; // uint8
                 constexpr std::ptrdiff_t m_nTTeamIntroVariant = 0x17F4; // int32
@@ -17989,7 +17989,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_WeaponSequence (CUtlString)
             namespace CCSGameModeRules_ArmsRace {
-                constexpr std::ptrdiff_t m_WeaponSequence = 0x38; // CNetworkUtlVectorBase< CUtlString >
+                constexpr std::ptrdiff_t m_WeaponSequence = 0x38; // CNetworkUtlVectorBase<CUtlString>
             }
             // Parent: CCSGameModeScript
             // Fields count: 1
@@ -18190,8 +18190,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bUrgent (bool)
             // NetworkVarNames: m_szPlaceName (char)
             namespace CPlayerPing {
-                constexpr std::ptrdiff_t m_hPlayer = 0x4C8; // CHandle< CCSPlayerPawn >
-                constexpr std::ptrdiff_t m_hPingedEntity = 0x4CC; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_hPlayer = 0x4C8; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_hPingedEntity = 0x4CC; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_iType = 0x4D0; // int32
                 constexpr std::ptrdiff_t m_bUrgent = 0x4D4; // bool
                 constexpr std::ptrdiff_t m_szPlaceName = 0x4D5; // char[18]
@@ -18202,8 +18202,8 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hPlayerPing (CHandle< CBaseEntity>)
             namespace CCSPlayer_PingServices {
-                constexpr std::ptrdiff_t m_flPlayerPingTokens = 0x40; // GameTime_t[5]
-                constexpr std::ptrdiff_t m_hPlayerPing = 0x54; // CHandle< CBaseEntity >
+                constexpr std::ptrdiff_t m_flPlayerPingTokens = 0x40; // 
+                constexpr std::ptrdiff_t m_hPlayerPing = 0x54; // CHandle<CBaseEntity>
             }
             // Parent: CBaseEntity
             // Fields count: 10
@@ -18219,8 +18219,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hostageRescueZ (int)
             // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
             namespace CCSPlayerResource {
-                constexpr std::ptrdiff_t m_bHostageAlive = 0x4C0; // 
-                constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x4CC; // 
+                constexpr std::ptrdiff_t m_bHostageAlive = 0x4C0; // bool[12]
+                constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x4CC; // bool[12]
                 constexpr std::ptrdiff_t m_iHostageEntityIDs = 0x4D8; // CEntityIndex[12]
                 constexpr std::ptrdiff_t m_bombsiteCenterA = 0x508; // 
                 constexpr std::ptrdiff_t m_bombsiteCenterB = 0x514; // 
@@ -18249,169 +18249,169 @@ namespace cs2_dumper {
         namespace soundsystem {
             // Alignment: 4
             // Members count: 30
-            enum class soundlevel_t : int32_t {
-                SNDLVL_NONE = 0,
-                SNDLVL_20dB = 20,
-                SNDLVL_25dB = 25,
-                SNDLVL_30dB = 30,
-                SNDLVL_35dB = 35,
-                SNDLVL_40dB = 40,
-                SNDLVL_45dB = 45,
-                SNDLVL_50dB = 50,
-                SNDLVL_55dB = 55,
-                SNDLVL_IDLE = 60,
-                SNDLVL_60dB = 60,
-                SNDLVL_65dB = 65,
-                SNDLVL_STATIC = 66,
-                SNDLVL_70dB = 70,
-                SNDLVL_NORM = 75,
-                SNDLVL_75dB = 75,
-                SNDLVL_80dB = 80,
-                SNDLVL_TALKING = 80,
-                SNDLVL_85dB = 85,
-                SNDLVL_90dB = 90,
-                SNDLVL_95dB = 95,
-                SNDLVL_100dB = 100,
-                SNDLVL_105dB = 105,
-                SNDLVL_110dB = 110,
-                SNDLVL_120dB = 120,
-                SNDLVL_130dB = 130,
-                SNDLVL_GUNFIRE = 140,
-                SNDLVL_140dB = 140,
-                SNDLVL_150dB = 150,
-                SNDLVL_180dB = 180
+            enum class soundlevel_t : uint32_t {
+                SNDLVL_NONE = 0x0,
+                SNDLVL_20dB = 0x14,
+                SNDLVL_25dB = 0x19,
+                SNDLVL_30dB = 0x1E,
+                SNDLVL_35dB = 0x23,
+                SNDLVL_40dB = 0x28,
+                SNDLVL_45dB = 0x2D,
+                SNDLVL_50dB = 0x32,
+                SNDLVL_55dB = 0x37,
+                SNDLVL_IDLE = 0x3C,
+                SNDLVL_60dB = 0x3C,
+                SNDLVL_65dB = 0x41,
+                SNDLVL_STATIC = 0x42,
+                SNDLVL_70dB = 0x46,
+                SNDLVL_NORM = 0x4B,
+                SNDLVL_75dB = 0x4B,
+                SNDLVL_80dB = 0x50,
+                SNDLVL_TALKING = 0x50,
+                SNDLVL_85dB = 0x55,
+                SNDLVL_90dB = 0x5A,
+                SNDLVL_95dB = 0x5F,
+                SNDLVL_100dB = 0x64,
+                SNDLVL_105dB = 0x69,
+                SNDLVL_110dB = 0x6E,
+                SNDLVL_120dB = 0x78,
+                SNDLVL_130dB = 0x82,
+                SNDLVL_GUNFIRE = 0x8C,
+                SNDLVL_140dB = 0x8C,
+                SNDLVL_150dB = 0x96,
+                SNDLVL_180dB = 0xB4
             }
             // Alignment: 4
             // Members count: 6
-            enum class ActionType_t : int32_t {
-                SOS_ACTION_NONE = 0,
-                SOS_ACTION_LIMITER = 1,
-                SOS_ACTION_TIME_LIMIT = 2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 5
+            enum class ActionType_t : uint32_t {
+                SOS_ACTION_NONE = 0x0,
+                SOS_ACTION_LIMITER = 0x1,
+                SOS_ACTION_TIME_LIMIT = 0x2,
+                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
+                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
+                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5
             }
             // Alignment: 4
             // Members count: 3
-            enum class SosActionStopType_t : int32_t {
-                SOS_STOPTYPE_NONE = 0,
-                SOS_STOPTYPE_TIME = 1,
-                SOS_STOPTYPE_OPVAR = 2
+            enum class SosActionStopType_t : uint32_t {
+                SOS_STOPTYPE_NONE = 0x0,
+                SOS_STOPTYPE_TIME = 0x1,
+                SOS_STOPTYPE_OPVAR = 0x2
             }
             // Alignment: 4
             // Members count: 2
-            enum class SosActionSortType_t : int32_t {
-                SOS_SORTTYPE_HIGHEST = 0,
-                SOS_SORTTYPE_LOWEST = 1
+            enum class SosActionSortType_t : uint32_t {
+                SOS_SORTTYPE_HIGHEST = 0x0,
+                SOS_SORTTYPE_LOWEST = 0x1
             }
             // Alignment: 4
             // Members count: 2
-            enum class SosGroupType_t : int32_t {
-                SOS_GROUPTYPE_DYNAMIC = 0,
-                SOS_GROUPTYPE_STATIC = 1
+            enum class SosGroupType_t : uint32_t {
+                SOS_GROUPTYPE_DYNAMIC = 0x0,
+                SOS_GROUPTYPE_STATIC = 0x1
             }
             // Alignment: 4
             // Members count: 6
-            enum class SosEditItemType_t : int32_t {
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0,
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 1,
-                SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 2,
-                SOS_EDIT_ITEM_TYPE_STACK = 3,
-                SOS_EDIT_ITEM_TYPE_OPERATOR = 4,
-                SOS_EDIT_ITEM_TYPE_FIELD = 5
+            enum class SosEditItemType_t : uint32_t {
+                SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
+                SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
+                SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
+                SOS_EDIT_ITEM_TYPE_STACK = 0x3,
+                SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
+                SOS_EDIT_ITEM_TYPE_FIELD = 0x5
             }
             // Alignment: 2
             // Members count: 10
-            enum class VMixFilterType_t : int16_t {
-                FILTER_UNKNOWN = -1,
-                FILTER_LOWPASS = 0,
-                FILTER_HIGHPASS = 1,
-                FILTER_BANDPASS = 2,
-                FILTER_NOTCH = 3,
-                FILTER_PEAKING_EQ = 4,
-                FILTER_LOW_SHELF = 5,
-                FILTER_HIGH_SHELF = 6,
-                FILTER_ALLPASS = 7,
-                FILTER_PASSTHROUGH = 8
+            enum class VMixFilterType_t : uint16_t {
+                FILTER_UNKNOWN = 0xFFFFFFFFFFFFFFFF,
+                FILTER_LOWPASS = 0x0,
+                FILTER_HIGHPASS = 0x1,
+                FILTER_BANDPASS = 0x2,
+                FILTER_NOTCH = 0x3,
+                FILTER_PEAKING_EQ = 0x4,
+                FILTER_LOW_SHELF = 0x5,
+                FILTER_HIGH_SHELF = 0x6,
+                FILTER_ALLPASS = 0x7,
+                FILTER_PASSTHROUGH = 0x8
             }
             // Alignment: 1
             // Members count: 9
-            enum class VMixFilterSlope_t : int8_t {
-                FILTER_SLOPE_1POLE_6dB = 0,
-                FILTER_SLOPE_1POLE_12dB = 1,
-                FILTER_SLOPE_1POLE_18dB = 2,
-                FILTER_SLOPE_1POLE_24dB = 3,
-                FILTER_SLOPE_12dB = 4,
-                FILTER_SLOPE_24dB = 5,
-                FILTER_SLOPE_36dB = 6,
-                FILTER_SLOPE_48dB = 7,
-                FILTER_SLOPE_MAX = 7
+            enum class VMixFilterSlope_t : uint8_t {
+                FILTER_SLOPE_1POLE_6dB = 0x0,
+                FILTER_SLOPE_1POLE_12dB = 0x1,
+                FILTER_SLOPE_1POLE_18dB = 0x2,
+                FILTER_SLOPE_1POLE_24dB = 0x3,
+                FILTER_SLOPE_12dB = 0x4,
+                FILTER_SLOPE_24dB = 0x5,
+                FILTER_SLOPE_36dB = 0x6,
+                FILTER_SLOPE_48dB = 0x7,
+                FILTER_SLOPE_MAX = 0x7
             }
             // Alignment: 2
             // Members count: 30
-            enum class VMixProcessorType_t : int16_t {
-                VPROCESSOR_UNKNOWN = 0,
-                VPROCESSOR_STEAMAUDIO_REVERB = 1,
-                VPROCESSOR_RT_PITCH = 2,
-                VPROCESSOR_STEAMAUDIO_HRTF = 3,
-                VPROCESSOR_DYNAMICS = 4,
-                VPROCESSOR_PRESETDSP = 5,
-                VPROCESSOR_DELAY = 6,
-                VPROCESSOR_MOD_DELAY = 7,
-                VPROCESSOR_DIFFUSOR = 8,
-                VPROCESSOR_BOXVERB = 9,
-                VPROCESSOR_FREEVERB = 10,
-                VPROCESSOR_PLATEVERB = 11,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 12,
-                VPROCESSOR_FILTER = 13,
-                VPROCESSOR_STEAMAUDIO_PATHING = 14,
-                VPROCESSOR_EQ8 = 15,
-                VPROCESSOR_ENVELOPE = 16,
-                VPROCESSOR_VOCODER = 17,
-                VPROCESSOR_CONVOLUTION = 18,
-                VPROCESSOR_DYNAMICS_3BAND = 19,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 20,
-                VPROCESSOR_SHAPER = 21,
-                VPROCESSOR_PANNER = 22,
-                VPROCESSOR_UTILITY = 23,
-                VPROCESSOR_AUTOFILTER = 24,
-                VPROCESSOR_OSC = 25,
-                VPROCESSOR_STEREODELAY = 26,
-                VPROCESSOR_EFFECT_CHAIN = 27,
-                VPROCESSOR_SUBGRAPH_SWITCH = 28,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 29
+            enum class VMixProcessorType_t : uint16_t {
+                VPROCESSOR_UNKNOWN = 0x0,
+                VPROCESSOR_STEAMAUDIO_REVERB = 0x1,
+                VPROCESSOR_RT_PITCH = 0x2,
+                VPROCESSOR_STEAMAUDIO_HRTF = 0x3,
+                VPROCESSOR_DYNAMICS = 0x4,
+                VPROCESSOR_PRESETDSP = 0x5,
+                VPROCESSOR_DELAY = 0x6,
+                VPROCESSOR_MOD_DELAY = 0x7,
+                VPROCESSOR_DIFFUSOR = 0x8,
+                VPROCESSOR_BOXVERB = 0x9,
+                VPROCESSOR_FREEVERB = 0xA,
+                VPROCESSOR_PLATEVERB = 0xB,
+                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
+                VPROCESSOR_FILTER = 0xD,
+                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
+                VPROCESSOR_EQ8 = 0xF,
+                VPROCESSOR_ENVELOPE = 0x10,
+                VPROCESSOR_VOCODER = 0x11,
+                VPROCESSOR_CONVOLUTION = 0x12,
+                VPROCESSOR_DYNAMICS_3BAND = 0x13,
+                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x14,
+                VPROCESSOR_SHAPER = 0x15,
+                VPROCESSOR_PANNER = 0x16,
+                VPROCESSOR_UTILITY = 0x17,
+                VPROCESSOR_AUTOFILTER = 0x18,
+                VPROCESSOR_OSC = 0x19,
+                VPROCESSOR_STEREODELAY = 0x1A,
+                VPROCESSOR_EFFECT_CHAIN = 0x1B,
+                VPROCESSOR_SUBGRAPH_SWITCH = 0x1C,
+                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1D
             }
             // Alignment: 4
             // Members count: 5
-            enum class VMixLFOShape_t : int32_t {
-                LFO_SHAPE_SINE = 0,
-                LFO_SHAPE_SQUARE = 1,
-                LFO_SHAPE_TRI = 2,
-                LFO_SHAPE_SAW = 3,
-                LFO_SHAPE_NOISE = 4
+            enum class VMixLFOShape_t : uint32_t {
+                LFO_SHAPE_SINE = 0x0,
+                LFO_SHAPE_SQUARE = 0x1,
+                LFO_SHAPE_TRI = 0x2,
+                LFO_SHAPE_SAW = 0x3,
+                LFO_SHAPE_NOISE = 0x4
             }
             // Alignment: 4
             // Members count: 2
-            enum class VMixPannerType_t : int32_t {
-                PANNER_TYPE_LINEAR = 0,
-                PANNER_TYPE_EQUAL_POWER = 1
+            enum class VMixPannerType_t : uint32_t {
+                PANNER_TYPE_LINEAR = 0x0,
+                PANNER_TYPE_EQUAL_POWER = 0x1
             }
             // Alignment: 4
             // Members count: 3
-            enum class VMixSubgraphSwitchInterpolationType_t : int32_t {
-                SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0,
-                SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 1,
-                SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 2
+            enum class VMixSubgraphSwitchInterpolationType_t : uint32_t {
+                SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
+                SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 0x1,
+                SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 0x2
             }
             // Alignment: 4
             // Members count: 6
-            enum class VMixChannelOperation_t : int32_t {
-                VMIX_CHAN_STEREO = 0,
-                VMIX_CHAN_LEFT = 1,
-                VMIX_CHAN_RIGHT = 2,
-                VMIX_CHAN_SWAP = 3,
-                VMIX_CHAN_MONO = 4,
-                VMIX_CHAN_MID_SIDE = 5
+            enum class VMixChannelOperation_t : uint32_t {
+                VMIX_CHAN_STEREO = 0x0,
+                VMIX_CHAN_LEFT = 0x1,
+                VMIX_CHAN_RIGHT = 0x2,
+                VMIX_CHAN_SWAP = 0x3,
+                VMIX_CHAN_MONO = 0x4,
+                VMIX_CHAN_MID_SIDE = 0x5
             }
             // Parent: None
             // Fields count: 3
@@ -18521,7 +18521,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSosSoundEventGroupListSchema {
-                constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector< CSosSoundEventGroupSchema >
+                constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
             }
             // Parent: None
             // Fields count: 5
@@ -18541,7 +18541,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace SelectedEditItemInfo_t {
-                constexpr std::ptrdiff_t m_EditItems = 0x0; // CUtlVector< SosEditItemInfo_t >
+                constexpr std::ptrdiff_t m_EditItems = 0x0; // CUtlVector<SosEditItemInfo_t>
             }
             // Parent: None
             // Fields count: 1
@@ -18549,7 +18549,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSoundEventMetaData {
-                constexpr std::ptrdiff_t m_soundEventVMix = 0x0; // CStrongHandle< InfoForResourceTypeCVMixListResource >
+                constexpr std::ptrdiff_t m_soundEventVMix = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
             }
             // Parent: None
             // Fields count: 6
@@ -18571,7 +18571,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CDspPresetModifierList {
                 constexpr std::ptrdiff_t m_dspName = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector< CDSPMixgroupModifier >
+                constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
             }
             // Parent: None
             // Fields count: 1
@@ -18579,7 +18579,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerBase {
-                constexpr std::ptrdiff_t m_curves = 0x20; // CUtlDict< CPiecewiseCurve, F( size=1 ) >
+                constexpr std::ptrdiff_t m_curves = 0x20; // CUtlDict<CPiecewiseCurve,F(size=1)>
             }
             // Parent: CVoiceContainerBase
             // Fields count: 0
@@ -18610,7 +18610,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerTestNestedDynamic {
-                constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle< InfoForResourceTypeCVoiceContainerBase >
+                constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
                 constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // float32
             }
             // Parent: CVoiceContainerBase
@@ -18646,8 +18646,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerBlend {
-                constexpr std::ptrdiff_t m_hSoundOne = 0x60; // CStrongHandle< InfoForResourceTypeCVoiceContainerBase >
-                constexpr std::ptrdiff_t m_hSoundTwo = 0x68; // CStrongHandle< InfoForResourceTypeCVoiceContainerBase >
+                constexpr std::ptrdiff_t m_hSoundOne = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_hSoundTwo = 0x68; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
                 constexpr std::ptrdiff_t m_flBlendAmount = 0x70; // float32
             }
             // Parent: CVoiceContainerBase
@@ -18656,7 +18656,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerEngineSound {
-                constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle< InfoForResourceTypeCVoiceContainerBase >
+                constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
                 constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // float32
                 constexpr std::ptrdiff_t m_flTestSoundEventBoundParam = 0x6C; // float32
                 constexpr std::ptrdiff_t m_flEngineRPM = 0x70; // float32
@@ -18667,7 +18667,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerEnvelopeAnalyzer {
-                constexpr std::ptrdiff_t m_envBuffer = 0x68; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_envBuffer = 0x68; // CUtlVector<float32>
             }
             // Parent: CVoiceContainerBase
             // Fields count: 7
@@ -18681,7 +18681,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flSoftAmplitudeJitter = 0x6C; // float32
                 constexpr std::ptrdiff_t m_flLoudTimeJitter = 0x70; // float32
                 constexpr std::ptrdiff_t m_flSoftTimeJitter = 0x74; // float32
-                constexpr std::ptrdiff_t m_grainResources = 0x78; // CUtlVector< CStrongHandle< InfoForResourceTypeCVoiceContainerBase > >
+                constexpr std::ptrdiff_t m_grainResources = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             }
             // Parent: None
             // Fields count: 6
@@ -19000,18 +19000,18 @@ namespace cs2_dumper {
         namespace vphysics2 {
             // Alignment: 4
             // Members count: 4
-            enum class JointAxis_t : int32_t {
-                JOINT_AXIS_X = 0,
-                JOINT_AXIS_Y = 1,
-                JOINT_AXIS_Z = 2,
-                JOINT_AXIS_COUNT = 3
+            enum class JointAxis_t : uint32_t {
+                JOINT_AXIS_X = 0x0,
+                JOINT_AXIS_Y = 0x1,
+                JOINT_AXIS_Z = 0x2,
+                JOINT_AXIS_COUNT = 0x3
             }
             // Alignment: 4
             // Members count: 3
-            enum class JointMotion_t : int32_t {
-                JOINT_MOTION_FREE = 0,
-                JOINT_MOTION_LOCKED = 1,
-                JOINT_MOTION_COUNT = 2
+            enum class JointMotion_t : uint32_t {
+                JOINT_MOTION_FREE = 0x0,
+                JOINT_MOTION_LOCKED = 0x1,
+                JOINT_MOTION_COUNT = 0x2
             }
             // Parent: None
             // Fields count: 5
@@ -19111,8 +19111,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace PhysFeModelDesc_t {
-                constexpr std::ptrdiff_t m_CtrlHash = 0x0; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_CtrlName = 0x18; // CUtlVector< CUtlString >
+                constexpr std::ptrdiff_t m_CtrlHash = 0x0; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_CtrlName = 0x18; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_nStaticNodeFlags = 0x30; // uint32
                 constexpr std::ptrdiff_t m_nDynamicNodeFlags = 0x34; // uint32
                 constexpr std::ptrdiff_t m_flLocalForce = 0x38; // float32
@@ -19130,70 +19130,70 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTreeDepth = 0x54; // uint16
                 constexpr std::ptrdiff_t m_nNodeBaseJiggleboneDependsCount = 0x56; // uint16
                 constexpr std::ptrdiff_t m_nRopeCount = 0x58; // uint16
-                constexpr std::ptrdiff_t m_Ropes = 0x60; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_NodeBases = 0x78; // CUtlVector< FeNodeBase_t >
-                constexpr std::ptrdiff_t m_SimdNodeBases = 0x90; // CUtlVector< FeSimdNodeBase_t >
-                constexpr std::ptrdiff_t m_Quads = 0xA8; // CUtlVector< FeQuad_t >
-                constexpr std::ptrdiff_t m_SimdQuads = 0xC0; // CUtlVector< FeSimdQuad_t >
-                constexpr std::ptrdiff_t m_SimdTris = 0xD8; // CUtlVector< FeSimdTri_t >
-                constexpr std::ptrdiff_t m_SimdRods = 0xF0; // CUtlVector< FeSimdRodConstraint_t >
-                constexpr std::ptrdiff_t m_SimdRodsAnim = 0x108; // CUtlVector< FeSimdRodConstraintAnim_t >
-                constexpr std::ptrdiff_t m_InitPose = 0x120; // CUtlVector< CTransform >
-                constexpr std::ptrdiff_t m_Rods = 0x138; // CUtlVector< FeRodConstraint_t >
-                constexpr std::ptrdiff_t m_Twists = 0x150; // CUtlVector< FeTwistConstraint_t >
-                constexpr std::ptrdiff_t m_AxialEdges = 0x168; // CUtlVector< FeAxialEdgeBend_t >
-                constexpr std::ptrdiff_t m_NodeInvMasses = 0x180; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_CtrlOffsets = 0x198; // CUtlVector< FeCtrlOffset_t >
-                constexpr std::ptrdiff_t m_CtrlOsOffsets = 0x1B0; // CUtlVector< FeCtrlOsOffset_t >
-                constexpr std::ptrdiff_t m_FollowNodes = 0x1C8; // CUtlVector< FeFollowNode_t >
-                constexpr std::ptrdiff_t m_CollisionPlanes = 0x1E0; // CUtlVector< FeCollisionPlane_t >
-                constexpr std::ptrdiff_t m_NodeIntegrator = 0x1F8; // CUtlVector< FeNodeIntegrator_t >
-                constexpr std::ptrdiff_t m_SpringIntegrator = 0x210; // CUtlVector< FeSpringIntegrator_t >
-                constexpr std::ptrdiff_t m_SimdSpringIntegrator = 0x228; // CUtlVector< FeSimdSpringIntegrator_t >
-                constexpr std::ptrdiff_t m_WorldCollisionParams = 0x240; // CUtlVector< FeWorldCollisionParams_t >
-                constexpr std::ptrdiff_t m_LegacyStretchForce = 0x258; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_NodeCollisionRadii = 0x270; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_DynNodeFriction = 0x288; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_LocalRotation = 0x2A0; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_LocalForce = 0x2B8; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_TaperedCapsuleStretches = 0x2D0; // CUtlVector< FeTaperedCapsuleStretch_t >
-                constexpr std::ptrdiff_t m_TaperedCapsuleRigids = 0x2E8; // CUtlVector< FeTaperedCapsuleRigid_t >
-                constexpr std::ptrdiff_t m_SphereRigids = 0x300; // CUtlVector< FeSphereRigid_t >
-                constexpr std::ptrdiff_t m_WorldCollisionNodes = 0x318; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_TreeParents = 0x330; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_TreeCollisionMasks = 0x348; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_TreeChildren = 0x360; // CUtlVector< FeTreeChildren_t >
-                constexpr std::ptrdiff_t m_FreeNodes = 0x378; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_FitMatrices = 0x390; // CUtlVector< FeFitMatrix_t >
-                constexpr std::ptrdiff_t m_FitWeights = 0x3A8; // CUtlVector< FeFitWeight_t >
-                constexpr std::ptrdiff_t m_ReverseOffsets = 0x3C0; // CUtlVector< FeNodeReverseOffset_t >
-                constexpr std::ptrdiff_t m_AnimStrayRadii = 0x3D8; // CUtlVector< FeAnimStrayRadius_t >
-                constexpr std::ptrdiff_t m_SimdAnimStrayRadii = 0x3F0; // CUtlVector< FeSimdAnimStrayRadius_t >
-                constexpr std::ptrdiff_t m_KelagerBends = 0x408; // CUtlVector< FeKelagerBend2_t >
-                constexpr std::ptrdiff_t m_CtrlSoftOffsets = 0x420; // CUtlVector< FeCtrlSoftOffset_t >
-                constexpr std::ptrdiff_t m_JiggleBones = 0x438; // CUtlVector< CFeIndexedJiggleBone >
-                constexpr std::ptrdiff_t m_SourceElems = 0x450; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_GoalDampedSpringIntegrators = 0x468; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_Tris = 0x480; // CUtlVector< FeTri_t >
+                constexpr std::ptrdiff_t m_Ropes = 0x60; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_NodeBases = 0x78; // CUtlVector<FeNodeBase_t>
+                constexpr std::ptrdiff_t m_SimdNodeBases = 0x90; // CUtlVector<FeSimdNodeBase_t>
+                constexpr std::ptrdiff_t m_Quads = 0xA8; // CUtlVector<FeQuad_t>
+                constexpr std::ptrdiff_t m_SimdQuads = 0xC0; // CUtlVector<FeSimdQuad_t>
+                constexpr std::ptrdiff_t m_SimdTris = 0xD8; // CUtlVector<FeSimdTri_t>
+                constexpr std::ptrdiff_t m_SimdRods = 0xF0; // CUtlVector<FeSimdRodConstraint_t>
+                constexpr std::ptrdiff_t m_SimdRodsAnim = 0x108; // CUtlVector<FeSimdRodConstraintAnim_t>
+                constexpr std::ptrdiff_t m_InitPose = 0x120; // CUtlVector<CTransform>
+                constexpr std::ptrdiff_t m_Rods = 0x138; // CUtlVector<FeRodConstraint_t>
+                constexpr std::ptrdiff_t m_Twists = 0x150; // CUtlVector<FeTwistConstraint_t>
+                constexpr std::ptrdiff_t m_AxialEdges = 0x168; // CUtlVector<FeAxialEdgeBend_t>
+                constexpr std::ptrdiff_t m_NodeInvMasses = 0x180; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_CtrlOffsets = 0x198; // CUtlVector<FeCtrlOffset_t>
+                constexpr std::ptrdiff_t m_CtrlOsOffsets = 0x1B0; // CUtlVector<FeCtrlOsOffset_t>
+                constexpr std::ptrdiff_t m_FollowNodes = 0x1C8; // CUtlVector<FeFollowNode_t>
+                constexpr std::ptrdiff_t m_CollisionPlanes = 0x1E0; // CUtlVector<FeCollisionPlane_t>
+                constexpr std::ptrdiff_t m_NodeIntegrator = 0x1F8; // CUtlVector<FeNodeIntegrator_t>
+                constexpr std::ptrdiff_t m_SpringIntegrator = 0x210; // CUtlVector<FeSpringIntegrator_t>
+                constexpr std::ptrdiff_t m_SimdSpringIntegrator = 0x228; // CUtlVector<FeSimdSpringIntegrator_t>
+                constexpr std::ptrdiff_t m_WorldCollisionParams = 0x240; // CUtlVector<FeWorldCollisionParams_t>
+                constexpr std::ptrdiff_t m_LegacyStretchForce = 0x258; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_NodeCollisionRadii = 0x270; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_DynNodeFriction = 0x288; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_LocalRotation = 0x2A0; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_LocalForce = 0x2B8; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_TaperedCapsuleStretches = 0x2D0; // CUtlVector<FeTaperedCapsuleStretch_t>
+                constexpr std::ptrdiff_t m_TaperedCapsuleRigids = 0x2E8; // CUtlVector<FeTaperedCapsuleRigid_t>
+                constexpr std::ptrdiff_t m_SphereRigids = 0x300; // CUtlVector<FeSphereRigid_t>
+                constexpr std::ptrdiff_t m_WorldCollisionNodes = 0x318; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_TreeParents = 0x330; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_TreeCollisionMasks = 0x348; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_TreeChildren = 0x360; // CUtlVector<FeTreeChildren_t>
+                constexpr std::ptrdiff_t m_FreeNodes = 0x378; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_FitMatrices = 0x390; // CUtlVector<FeFitMatrix_t>
+                constexpr std::ptrdiff_t m_FitWeights = 0x3A8; // CUtlVector<FeFitWeight_t>
+                constexpr std::ptrdiff_t m_ReverseOffsets = 0x3C0; // CUtlVector<FeNodeReverseOffset_t>
+                constexpr std::ptrdiff_t m_AnimStrayRadii = 0x3D8; // CUtlVector<FeAnimStrayRadius_t>
+                constexpr std::ptrdiff_t m_SimdAnimStrayRadii = 0x3F0; // CUtlVector<FeSimdAnimStrayRadius_t>
+                constexpr std::ptrdiff_t m_KelagerBends = 0x408; // CUtlVector<FeKelagerBend2_t>
+                constexpr std::ptrdiff_t m_CtrlSoftOffsets = 0x420; // CUtlVector<FeCtrlSoftOffset_t>
+                constexpr std::ptrdiff_t m_JiggleBones = 0x438; // CUtlVector<CFeIndexedJiggleBone>
+                constexpr std::ptrdiff_t m_SourceElems = 0x450; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_GoalDampedSpringIntegrators = 0x468; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_Tris = 0x480; // CUtlVector<FeTri_t>
                 constexpr std::ptrdiff_t m_nTriCount1 = 0x498; // uint16
                 constexpr std::ptrdiff_t m_nTriCount2 = 0x49A; // uint16
                 constexpr std::ptrdiff_t m_nReservedUint8 = 0x49C; // uint8
                 constexpr std::ptrdiff_t m_nExtraPressureIterations = 0x49D; // uint8
                 constexpr std::ptrdiff_t m_nExtraGoalIterations = 0x49E; // uint8
                 constexpr std::ptrdiff_t m_nExtraIterations = 0x49F; // uint8
-                constexpr std::ptrdiff_t m_BoxRigids = 0x4A0; // CUtlVector< FeBoxRigid_t >
-                constexpr std::ptrdiff_t m_DynNodeVertexSet = 0x4B8; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_VertexSetNames = 0x4D0; // CUtlVector< uint32 >
-                constexpr std::ptrdiff_t m_RigidColliderPriorities = 0x4E8; // CUtlVector< FeRigidColliderIndices_t >
-                constexpr std::ptrdiff_t m_MorphLayers = 0x500; // CUtlVector< FeMorphLayerDepr_t >
-                constexpr std::ptrdiff_t m_MorphSetData = 0x518; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_VertexMaps = 0x530; // CUtlVector< FeVertexMapDesc_t >
-                constexpr std::ptrdiff_t m_VertexMapValues = 0x548; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_Effects = 0x560; // CUtlVector< FeEffectDesc_t >
-                constexpr std::ptrdiff_t m_LockToParent = 0x578; // CUtlVector< FeCtrlOffset_t >
-                constexpr std::ptrdiff_t m_LockToGoal = 0x590; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_SkelParents = 0x5A8; // CUtlVector< int16 >
-                constexpr std::ptrdiff_t m_DynNodeWindBases = 0x5C0; // CUtlVector< FeNodeWindBase_t >
+                constexpr std::ptrdiff_t m_BoxRigids = 0x4A0; // CUtlVector<FeBoxRigid_t>
+                constexpr std::ptrdiff_t m_DynNodeVertexSet = 0x4B8; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_VertexSetNames = 0x4D0; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_RigidColliderPriorities = 0x4E8; // CUtlVector<FeRigidColliderIndices_t>
+                constexpr std::ptrdiff_t m_MorphLayers = 0x500; // CUtlVector<FeMorphLayerDepr_t>
+                constexpr std::ptrdiff_t m_MorphSetData = 0x518; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_VertexMaps = 0x530; // CUtlVector<FeVertexMapDesc_t>
+                constexpr std::ptrdiff_t m_VertexMapValues = 0x548; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_Effects = 0x560; // CUtlVector<FeEffectDesc_t>
+                constexpr std::ptrdiff_t m_LockToParent = 0x578; // CUtlVector<FeCtrlOffset_t>
+                constexpr std::ptrdiff_t m_LockToGoal = 0x590; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_SkelParents = 0x5A8; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_DynNodeWindBases = 0x5C0; // CUtlVector<FeNodeWindBase_t>
                 constexpr std::ptrdiff_t m_flInternalPressure = 0x5D8; // float32
                 constexpr std::ptrdiff_t m_flDefaultTimeDilation = 0x5DC; // float32
                 constexpr std::ptrdiff_t m_flWindage = 0x5E0; // float32
@@ -19746,7 +19746,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Color = 0xC; // Color
                 constexpr std::ptrdiff_t m_flVolumetricSolveStrength = 0x10; // float32
                 constexpr std::ptrdiff_t m_nScaleSourceNode = 0x14; // int32
-                constexpr std::ptrdiff_t m_Weights = 0x18; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_Weights = 0x18; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 1
@@ -19754,7 +19754,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFeVertexMapBuildArray {
-                constexpr std::ptrdiff_t m_Array = 0x0; // CUtlVector< FeVertexMapBuild_t* >
+                constexpr std::ptrdiff_t m_Array = 0x0; // CUtlVector<FeVertexMapBuild_t*>
             }
             // Parent: None
             // Fields count: 2
@@ -19792,11 +19792,11 @@ namespace cs2_dumper {
             namespace FeMorphLayerDepr_t {
                 constexpr std::ptrdiff_t m_Name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_nNameHash = 0x8; // uint32
-                constexpr std::ptrdiff_t m_Nodes = 0x10; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_InitPos = 0x28; // CUtlVector< Vector >
-                constexpr std::ptrdiff_t m_Gravity = 0x40; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_GoalStrength = 0x58; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_GoalDamping = 0x70; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_Nodes = 0x10; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_InitPos = 0x28; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_Gravity = 0x40; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_GoalStrength = 0x58; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_GoalDamping = 0x70; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_nFlags = 0x88; // uint32
             }
             // Parent: None
@@ -19807,11 +19807,11 @@ namespace cs2_dumper {
             namespace CFeMorphLayer {
                 constexpr std::ptrdiff_t m_Name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_nNameHash = 0x8; // uint32
-                constexpr std::ptrdiff_t m_Nodes = 0x10; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_InitPos = 0x28; // CUtlVector< Vector >
-                constexpr std::ptrdiff_t m_Gravity = 0x40; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_GoalStrength = 0x58; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_GoalDamping = 0x70; // CUtlVector< float32 >
+                constexpr std::ptrdiff_t m_Nodes = 0x10; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_InitPos = 0x28; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_Gravity = 0x40; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_GoalStrength = 0x58; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_GoalDamping = 0x70; // CUtlVector<float32>
             }
             // Parent: None
             // Fields count: 1
@@ -19872,8 +19872,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CRegionSVM {
-                constexpr std::ptrdiff_t m_Planes = 0x0; // CUtlVector< RnPlane_t >
-                constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector< uint32 >
+                constexpr std::ptrdiff_t m_Planes = 0x0; // CUtlVector<RnPlane_t>
+                constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector<uint32>
             }
             // Parent: None
             // Fields count: 14
@@ -19888,11 +19888,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_MassProperties = 0x34; // matrix3x4_t
                 constexpr std::ptrdiff_t m_flVolume = 0x64; // float32
                 constexpr std::ptrdiff_t m_flSurfaceArea = 0x68; // float32
-                constexpr std::ptrdiff_t m_Vertices = 0x70; // CUtlVector< RnVertex_t >
-                constexpr std::ptrdiff_t m_VertexPositions = 0x88; // CUtlVector< Vector >
-                constexpr std::ptrdiff_t m_Edges = 0xA0; // CUtlVector< RnHalfEdge_t >
-                constexpr std::ptrdiff_t m_Faces = 0xB8; // CUtlVector< RnFace_t >
-                constexpr std::ptrdiff_t m_FacePlanes = 0xD0; // CUtlVector< RnPlane_t >
+                constexpr std::ptrdiff_t m_Vertices = 0x70; // CUtlVector<RnVertex_t>
+                constexpr std::ptrdiff_t m_VertexPositions = 0x88; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_Edges = 0xA0; // CUtlVector<RnHalfEdge_t>
+                constexpr std::ptrdiff_t m_Faces = 0xB8; // CUtlVector<RnFace_t>
+                constexpr std::ptrdiff_t m_FacePlanes = 0xD0; // CUtlVector<RnPlane_t>
                 constexpr std::ptrdiff_t m_nFlags = 0xE8; // uint32
                 constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // CRegionSVM*
             }
@@ -19931,11 +19931,11 @@ namespace cs2_dumper {
             namespace RnMesh_t {
                 constexpr std::ptrdiff_t m_vMin = 0x0; // 
                 constexpr std::ptrdiff_t m_vMax = 0xC; // 
-                constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector< RnNode_t >
+                constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector<RnNode_t>
                 constexpr std::ptrdiff_t m_Vertices = 0x30; // CUtlVectorSIMDPaddedVector
-                constexpr std::ptrdiff_t m_Triangles = 0x48; // CUtlVector< RnTriangle_t >
-                constexpr std::ptrdiff_t m_Wings = 0x60; // CUtlVector< RnWing_t >
-                constexpr std::ptrdiff_t m_Materials = 0x78; // CUtlVector< uint8 >
+                constexpr std::ptrdiff_t m_Triangles = 0x48; // CUtlVector<RnTriangle_t>
+                constexpr std::ptrdiff_t m_Wings = 0x60; // CUtlVector<RnWing_t>
+                constexpr std::ptrdiff_t m_Materials = 0x78; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_vOrthographicAreas = 0x90; // 
                 constexpr std::ptrdiff_t m_nFlags = 0x9C; // uint32
                 constexpr std::ptrdiff_t m_nDebugFlags = 0xA0; // uint32
@@ -19956,7 +19956,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnSphereDesc_t {
-                constexpr std::ptrdiff_t m_Sphere = 0x10; // SphereBase_t< float32 >
+                constexpr std::ptrdiff_t m_Sphere = 0x10; // SphereBase_t<float32>
             }
             // Parent: RnShapeDesc_t
             // Fields count: 1
@@ -20105,20 +20105,20 @@ namespace cs2_dumper {
         namespace worldrenderer {
             // Alignment: 4
             // Members count: 13
-            enum class ObjectTypeFlags_t : int32_t {
-                OBJECT_TYPE_NONE = 0,
-                OBJECT_TYPE_MODEL = 8,
-                OBJECT_TYPE_BLOCK_LIGHT = 16,
-                OBJECT_TYPE_NO_SHADOWS = 32,
-                OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 64,
-                OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 128,
-                OBJECT_TYPE_NO_SUN_SHADOWS = 256,
-                OBJECT_TYPE_RENDER_WITH_DYNAMIC = 512,
-                OBJECT_TYPE_RENDER_TO_CUBEMAPS = 1024,
-                OBJECT_TYPE_MODEL_HAS_LODS = 2048,
-                OBJECT_TYPE_OVERLAY = 8192,
-                OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 16384,
-                OBJECT_TYPE_STATIC_CUBE_MAP = 32768
+            enum class ObjectTypeFlags_t : uint32_t {
+                OBJECT_TYPE_NONE = 0x0,
+                OBJECT_TYPE_MODEL = 0x8,
+                OBJECT_TYPE_BLOCK_LIGHT = 0x10,
+                OBJECT_TYPE_NO_SHADOWS = 0x20,
+                OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
+                OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
+                OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
+                OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
+                OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
+                OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
+                OBJECT_TYPE_OVERLAY = 0x2000,
+                OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
+                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
             }
             // Parent: None
             // Fields count: 7
@@ -20140,7 +20140,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace EntityKeyValueData_t {
-                constexpr std::ptrdiff_t m_connections = 0x8; // CUtlVector< EntityIOConnectionData_t >
+                constexpr std::ptrdiff_t m_connections = 0x8; // CUtlVector<EntityIOConnectionData_t>
                 constexpr std::ptrdiff_t m_keyValuesData = 0x20; // CUtlBinaryBlock
             }
             // Parent: None
@@ -20151,8 +20151,8 @@ namespace cs2_dumper {
             namespace PermEntityLumpData_t {
                 constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_hammerUniqueId = 0x10; // CUtlString
-                constexpr std::ptrdiff_t m_childLumps = 0x18; // CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > >
-                constexpr std::ptrdiff_t m_entityKeyValues = 0x30; // CUtlLeanVector< EntityKeyValueData_t >
+                constexpr std::ptrdiff_t m_childLumps = 0x18; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+                constexpr std::ptrdiff_t m_entityKeyValues = 0x30; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
             // Fields count: 14
@@ -20172,8 +20172,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLODOverride = 0x6A; // int16
                 constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x6C; // int32
                 constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x70; // int32
-                constexpr std::ptrdiff_t m_renderableModel = 0x78; // CStrongHandle< InfoForResourceTypeCModel >
-                constexpr std::ptrdiff_t m_renderable = 0x80; // CStrongHandle< InfoForResourceTypeCRenderMesh >
+                constexpr std::ptrdiff_t m_renderableModel = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
+                constexpr std::ptrdiff_t m_renderable = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
             }
             // Parent: None
             // Fields count: 1
@@ -20202,7 +20202,7 @@ namespace cs2_dumper {
             namespace MaterialOverride_t {
                 constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32
                 constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32
-                constexpr std::ptrdiff_t m_pMaterial = 0x10; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_pMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
             // Fields count: 10
@@ -20216,7 +20216,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDepth = 0x38; // float32
                 constexpr std::ptrdiff_t m_vUVStart = 0x3C; // Vector2D
                 constexpr std::ptrdiff_t m_vUVEnd = 0x44; // Vector2D
-                constexpr std::ptrdiff_t m_pMaterial = 0x50; // CStrongHandle< InfoForResourceTypeIMaterial2 >
+                constexpr std::ptrdiff_t m_pMaterial = 0x50; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_nRenderOrder = 0x58; // int32
                 constexpr std::ptrdiff_t m_vTintColor = 0x5C; // Vector4D
                 constexpr std::ptrdiff_t m_nSequenceOverride = 0x6C; // int32
@@ -20231,7 +20231,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLightmapGameVersionNumber = 0x4; // uint32
                 constexpr std::ptrdiff_t m_vLightmapUvScale = 0x8; // Vector2D
                 constexpr std::ptrdiff_t m_bHasLightmaps = 0x10; // bool
-                constexpr std::ptrdiff_t m_lightMaps = 0x18; // CUtlVector< CStrongHandle< InfoForResourceTypeCTextureBase > >
+                constexpr std::ptrdiff_t m_lightMaps = 0x18; // CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
             }
             // Parent: None
             // Fields count: 4
@@ -20241,8 +20241,8 @@ namespace cs2_dumper {
             namespace WorldNodeOnDiskBufferData_t {
                 constexpr std::ptrdiff_t m_nElementCount = 0x0; // int32
                 constexpr std::ptrdiff_t m_nElementSizeInBytes = 0x4; // int32
-                constexpr std::ptrdiff_t m_inputLayoutFields = 0x8; // CUtlVector< RenderInputLayoutField_t >
-                constexpr std::ptrdiff_t m_pData = 0x20; // CUtlVector< uint8 >
+                constexpr std::ptrdiff_t m_inputLayoutFields = 0x8; // CUtlVector<RenderInputLayoutField_t>
+                constexpr std::ptrdiff_t m_pData = 0x20; // CUtlVector<uint8>
             }
             // Parent: None
             // Fields count: 9
@@ -20268,7 +20268,7 @@ namespace cs2_dumper {
             namespace AggregateLODSetup_t {
                 constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // 
                 constexpr std::ptrdiff_t m_fMaxObjectScale = 0xC; // float32
-                constexpr std::ptrdiff_t m_fSwitchDistances = 0x10; // CUtlVectorFixedGrowable< float32 >
+                constexpr std::ptrdiff_t m_fSwitchDistances = 0x10; // CUtlVectorFixedGrowable<float32>
             }
             // Parent: None
             // Fields count: 8
@@ -20279,11 +20279,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_allFlags = 0x0; // ObjectTypeFlags_t
                 constexpr std::ptrdiff_t m_anyFlags = 0x4; // ObjectTypeFlags_t
                 constexpr std::ptrdiff_t m_nLayer = 0x8; // int16
-                constexpr std::ptrdiff_t m_aggregateMeshes = 0x10; // CUtlVector< AggregateMeshInfo_t >
-                constexpr std::ptrdiff_t m_lodSetups = 0x28; // CUtlVector< AggregateLODSetup_t >
-                constexpr std::ptrdiff_t m_visClusterMembership = 0x40; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_fragmentTransforms = 0x58; // CUtlVector< matrix3x4_t >
-                constexpr std::ptrdiff_t m_renderableModel = 0x70; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_aggregateMeshes = 0x10; // CUtlVector<AggregateMeshInfo_t>
+                constexpr std::ptrdiff_t m_lodSetups = 0x28; // CUtlVector<AggregateLODSetup_t>
+                constexpr std::ptrdiff_t m_visClusterMembership = 0x40; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_fragmentTransforms = 0x58; // CUtlVector<matrix3x4_t>
+                constexpr std::ptrdiff_t m_renderableModel = 0x70; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Fields count: 3
@@ -20304,11 +20304,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Bounds = 0x0; // AABB_t
                 constexpr std::ptrdiff_t m_flags = 0x18; // ObjectTypeFlags_t
                 constexpr std::ptrdiff_t m_nLayer = 0x1C; // int16
-                constexpr std::ptrdiff_t m_instancePositions = 0x20; // CUtlVector< Vector >
-                constexpr std::ptrdiff_t m_instanceScales = 0x50; // CUtlVector< float32 >
-                constexpr std::ptrdiff_t m_instanceTintSrgb = 0x68; // CUtlVector< Color >
-                constexpr std::ptrdiff_t m_tiles = 0x80; // CUtlVector< ClutterTile_t >
-                constexpr std::ptrdiff_t m_renderableModel = 0x98; // CStrongHandle< InfoForResourceTypeCModel >
+                constexpr std::ptrdiff_t m_instancePositions = 0x20; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_instanceScales = 0x50; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_instanceTintSrgb = 0x68; // CUtlVector<Color>
+                constexpr std::ptrdiff_t m_tiles = 0x80; // CUtlVector<ClutterTile_t>
+                constexpr std::ptrdiff_t m_renderableModel = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Fields count: 13
@@ -20316,17 +20316,17 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace WorldNode_t {
-                constexpr std::ptrdiff_t m_sceneObjects = 0x0; // CUtlVector< SceneObject_t >
-                constexpr std::ptrdiff_t m_infoOverlays = 0x18; // CUtlVector< InfoOverlayData_t >
-                constexpr std::ptrdiff_t m_visClusterMembership = 0x30; // CUtlVector< uint16 >
-                constexpr std::ptrdiff_t m_aggregateSceneObjects = 0x48; // CUtlVector< AggregateSceneObject_t >
-                constexpr std::ptrdiff_t m_clutterSceneObjects = 0x60; // CUtlVector< ClutterSceneObject_t >
-                constexpr std::ptrdiff_t m_extraVertexStreamOverrides = 0x78; // CUtlVector< ExtraVertexStreamOverride_t >
-                constexpr std::ptrdiff_t m_materialOverrides = 0x90; // CUtlVector< MaterialOverride_t >
-                constexpr std::ptrdiff_t m_extraVertexStreams = 0xA8; // CUtlVector< WorldNodeOnDiskBufferData_t >
-                constexpr std::ptrdiff_t m_layerNames = 0xC0; // CUtlVector< CUtlString >
-                constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0xD8; // CUtlVector< uint8 >
-                constexpr std::ptrdiff_t m_overlayLayerIndices = 0xF0; // CUtlVector< uint8 >
+                constexpr std::ptrdiff_t m_sceneObjects = 0x0; // CUtlVector<SceneObject_t>
+                constexpr std::ptrdiff_t m_infoOverlays = 0x18; // CUtlVector<InfoOverlayData_t>
+                constexpr std::ptrdiff_t m_visClusterMembership = 0x30; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_aggregateSceneObjects = 0x48; // CUtlVector<AggregateSceneObject_t>
+                constexpr std::ptrdiff_t m_clutterSceneObjects = 0x60; // CUtlVector<ClutterSceneObject_t>
+                constexpr std::ptrdiff_t m_extraVertexStreamOverrides = 0x78; // CUtlVector<ExtraVertexStreamOverride_t>
+                constexpr std::ptrdiff_t m_materialOverrides = 0x90; // CUtlVector<MaterialOverride_t>
+                constexpr std::ptrdiff_t m_extraVertexStreams = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
+                constexpr std::ptrdiff_t m_layerNames = 0xC0; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0xD8; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_overlayLayerIndices = 0xF0; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_grassFileName = 0x108; // CUtlString
                 constexpr std::ptrdiff_t m_nodeLightingInfo = 0x110; // BakedLightingInfo_t
             }
@@ -20353,7 +20353,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vMinBounds = 0x10; // 
                 constexpr std::ptrdiff_t m_vMaxBounds = 0x1C; // 
                 constexpr std::ptrdiff_t m_flMinimumDistance = 0x28; // float32
-                constexpr std::ptrdiff_t m_ChildNodeIndices = 0x30; // CUtlVector< int32 >
+                constexpr std::ptrdiff_t m_ChildNodeIndices = 0x30; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_worldNodePrefix = 0x48; // CUtlString
             }
             // Parent: None
@@ -20363,9 +20363,9 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace World_t {
                 constexpr std::ptrdiff_t m_builderParams = 0x0; // WorldBuilderParams_t
-                constexpr std::ptrdiff_t m_worldNodes = 0x20; // CUtlVector< NodeData_t >
+                constexpr std::ptrdiff_t m_worldNodes = 0x20; // CUtlVector<NodeData_t>
                 constexpr std::ptrdiff_t m_worldLightingInfo = 0x38; // BakedLightingInfo_t
-                constexpr std::ptrdiff_t m_entityLumps = 0x68; // CUtlVector< CStrongHandleCopyable< InfoForResourceTypeCEntityLump > >
+                constexpr std::ptrdiff_t m_entityLumps = 0x68; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
             }
             // Parent: None
             // Fields count: 2

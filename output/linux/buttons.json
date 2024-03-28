@@ -1,68 +1,20 @@
 {
-  "buttons": [
-    {
-      "name": "attack",
-      "value": 57892944
-    },
-    {
-      "name": "attack2",
-      "value": 57892784
-    },
-    {
-      "name": "back",
-      "value": 57891888
-    },
-    {
-      "name": "duck",
-      "value": 57890704
-    },
-    {
-      "name": "forward",
-      "value": 57892048
-    },
-    {
-      "name": "jump",
-      "value": 57890864
-    },
-    {
-      "name": "left",
-      "value": 57891728
-    },
-    {
-      "name": "lookatweapon",
-      "value": 57973840
-    },
-    {
-      "name": "reload",
-      "value": 57893104
-    },
-    {
-      "name": "right",
-      "value": 57891568
-    },
-    {
-      "name": "showscores",
-      "value": 57974160
-    },
-    {
-      "name": "sprint",
-      "value": 57893264
-    },
-    {
-      "name": "turnleft",
-      "value": 57892624
-    },
-    {
-      "name": "turnright",
-      "value": 57892464
-    },
-    {
-      "name": "use",
-      "value": 57891024
-    },
-    {
-      "name": "zoom",
-      "value": 57974000
-    }
-  ]
+  "libclient.so": {
+    "attack": 57892944,
+    "attack2": 57892784,
+    "back": 57891888,
+    "duck": 57890704,
+    "forward": 57892048,
+    "jump": 57890864,
+    "left": 57891728,
+    "lookatweapon": 57973840,
+    "reload": 57893104,
+    "right": 57891568,
+    "showscores": 57974160,
+    "sprint": 57893264,
+    "turnleft": 57892624,
+    "turnright": 57892464,
+    "use": 57891024,
+    "zoom": 57974000
+  }
 }
