@@ -1,6 +1,6 @@
 /*
- * Created using https://github.com/a2x/cs2-dumper
- * Thu, 29 Feb 2024 02:15:36 +0000
+ * Generated using https://github.com/a2x/cs2-dumper
+ * Sat, 23 Mar 2024 05:02:04 +0000
  */
 
 public static class ActiveModelConfig_t {
@@ -1699,7 +1699,6 @@ public static class CCSPlayerPawnBase { // CBasePlayerPawn
     public const nint m_flEmitSoundTime = 0xD98; // GameTime_t
     public const nint m_iNumSpawns = 0xD9C; // int32_t
     public const nint m_iShouldHaveCash = 0xDA0; // int32_t
-    public const nint m_bInvalidSteamLogonDelayed = 0xDA4; // bool
     public const nint m_flIdleTimeSinceLastAction = 0xDA8; // float
     public const nint m_flNameChangeHistory = 0xDAC; // float[5]
     public const nint m_fLastGivenDefuserTime = 0xDC0; // float

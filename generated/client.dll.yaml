@@ -1460,6 +1460,7 @@ C_CSGO_PreviewModel: # C_BaseFlex
     m_defaultAnim: 4224 # CUtlString
     m_nDefaultAnimLoopMode: 4232 # AnimLoopMode_t
     m_flInitialModelScale: 4236 # float
+    m_sInitialWeaponState: 4240 # CUtlString
 C_CSGO_PreviewModelAlias_csgo_item_previewmodel: # C_CSGO_PreviewModel
 C_CSGO_PreviewModel_GraphController: # CAnimGraphControllerBase
     m_pszCharacterMode: 24 # CAnimGraphParamOptionalRef<char*>
@@ -1810,12 +1811,13 @@ C_CSPlayerPawnBase: # C_BasePlayerPawn
     m_vecPlayerPatchEconIndices: 5624 # uint32_t[5]
     m_bHideTargetID: 5652 # bool
     m_flLastSmokeOverlayAlpha: 5656 # float
-    m_vLastSmokeOverlayColor: 5660 # Vector
-    m_nPlayerSmokedFx: 5672 # ParticleIndex_t
-    m_nPlayerInfernoBodyFx: 5676 # ParticleIndex_t
-    m_nPlayerInfernoFootFx: 5680 # ParticleIndex_t
-    m_flNextMagDropTime: 5684 # float
-    m_nLastMagDropAttachmentIndex: 5688 # int32_t
+    m_flLastSmokeAge: 5660 # float
+    m_vLastSmokeOverlayColor: 5664 # Vector
+    m_nPlayerSmokedFx: 5676 # ParticleIndex_t
+    m_nPlayerInfernoBodyFx: 5680 # ParticleIndex_t
+    m_nPlayerInfernoFootFx: 5684 # ParticleIndex_t
+    m_flNextMagDropTime: 5688 # float
+    m_nLastMagDropAttachmentIndex: 5692 # int32_t
     m_vecBulletHitModels: 5696 # CUtlVector<C_BulletHitModel*>
     m_vecPickupModelSlerpers: 5720 # CUtlVector<C_PickUpModelSlerper*>
     m_vecLastAliveLocalVelocity: 5744 # Vector

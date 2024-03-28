@@ -136,106 +136,76 @@ pub fn dump_offsets(
 mod tests {
     use super::*;
 
-    use core::arch::x86_64::_bittest;
-
-    use serde_json::Value;
-
     use std::ffi::{c_char, c_void};
     use std::fs;
     use std::mem::offset_of;
-    use std::thread::sleep;
+    use std::thread;
     use std::time::Duration;
 
-    fn setup() -> Result<Process> {
-        let mut process = Process::new("cs2.exe")?;
+    use core::arch::x86_64::_bittest;
 
-        Ok(process)
+    use anyhow::anyhow;
+
+    use serde_json::Value;
+
+    fn read_json_value(file_path: &str) -> Result<Value> {
+        let content = fs::read_to_string(file_path)?;
+
+        serde_json::from_str(&content).map_err(Into::into)
     }
 
-    fn get_class_field(module_name: &str, class_name: &str, class_key: &str) -> Option<u64> {
-        let content = match fs::read_to_string(format!("generated/{}.json", module_name)) {
-            Ok(content) => content,
-            Err(e) => {
-                eprintln!("Error reading file: {}", e);
+    fn get_class_field(module_name: &str, class_name: &str, class_key: &str) -> Result<u64> {
+        let value = read_json_value(&format!("generated/{}.json", module_name))
+            .expect("unable to read json file");
 
-                return None;
-            }
-        };
-
-        let value: Value = match serde_json::from_str(&content) {
-            Ok(parsed_value) => parsed_value,
-            Err(e) => {
-                eprintln!("Error parsing JSON: {}", e);
-
-                return None;
-            }
-        };
-
-        let class_value = &value[class_name];
-        let class_data = &class_value["data"];
-        let class_key_value = &class_data[class_key];
-        let value = class_key_value["value"].as_u64();
-
-        value
+        value[class_name]["data"][class_key]["value"]
+            .as_u64()
+            .ok_or_else(|| {
+                anyhow!(
+                    "unable to find class field {} in class {}",
+                    class_key,
+                    class_name
+                )
+            })
     }
 
-    fn get_offset_value(module_name: &str, offset_name: &str) -> Option<u64> {
-        let content = match fs::read_to_string("generated/offsets.json") {
-            Ok(content) => content,
-            Err(e) => {
-                eprintln!("Error reading file: {}", e);
+    fn get_offset_value(module_name: &str, offset_name: &str) -> Result<u64> {
+        let value = read_json_value("generated/offsets.json").expect("unable to read offsets.json");
 
-                return None;
-            }
-        };
-
-        let value: Value = match serde_json::from_str(&content) {
-            Ok(parsed_value) => parsed_value,
-            Err(e) => {
-                eprintln!("Error parsing JSON: {}", e);
-
-                return None;
-            }
-        };
-
-        let class_value = &value[module_name.replace(".", "_")];
-        let class_data = &class_value["data"];
-        let class_key_value = &class_data[offset_name];
-        let value = class_key_value["value"].as_u64();
-
-        value
+        value[module_name.replace(".", "_")]["data"][offset_name]["value"]
+            .as_u64()
+            .ok_or_else(|| anyhow!("unable to find offset"))
     }
 
     #[test]
     fn build_number() -> Result<()> {
-        let process = setup()?;
+        let process = Process::new("cs2.exe")?;
 
         let engine_base = process
             .get_module_by_name("engine2.dll")
-            .expect("Failed to find engine2.dll")
+            .expect("unable to find engine2.dll")
             .base();
 
-        let build_number_offset = get_offset_value("engine2.dll", "dwBuildNumber")
-            .expect("Failed to find dwBuildNumber offset");
+        let build_number_offset = get_offset_value("engine2.dll", "dwBuildNumber")?;
 
         let build_number =
             process.read_memory::<u32>(engine_base + build_number_offset as usize)?;
 
-        println!("Build number: {}", build_number);
+        println!("build number: {}", build_number);
 
         Ok(())
     }
 
     #[test]
-    fn force_buttons() -> Result<()> {
-        let process = setup()?;
+    fn key_buttons() -> Result<()> {
+        let process = Process::new("cs2.exe")?;
 
         let client_base = process
             .get_module_by_name("client.dll")
-            .expect("Failed to find client.dll")
+            .expect("unable to find client.dll")
             .base();
 
-        const FORCE_BUTTONS: [&str; 8] = [
+        const KEY_BUTTONS: [&str; 8] = [
             "dwForceAttack",
             "dwForceAttack2",
             "dwForceBackward",
@@ -246,24 +216,21 @@ mod tests {
             "dwForceRight",
         ];
 
-        let get_key_state = |value: u32| -> &str {
-            match value {
-                256 => "Key up",
-                65537 => "Key down",
-                _ => "Unknown",
-            }
+        let get_key_state = |value: u32| match value {
+            256 => "key up",
+            65537 => "key down",
+            _ => "unknown",
         };
 
         // Sleep for a second, so we're able to test.
-        sleep(Duration::from_secs(1));
+        thread::sleep(Duration::from_secs(1));
 
-        for button in &FORCE_BUTTONS {
-            let offset = get_offset_value("client.dll", button)
-                .expect(&format!("Failed to find {} offset", button));
+        for button in &KEY_BUTTONS {
+            let offset = get_offset_value("client.dll", button).expect("unable to find client.dll");
 
             let value = process.read_memory::<u32>(client_base + offset as usize)?;
 
-            println!("{}: {}", button, get_key_state(value));
+            println!("key button: {} (state: {})", button, get_key_state(value));
         }
 
         Ok(())
@@ -310,15 +277,14 @@ mod tests {
             }
         }
 
-        let process = setup()?;
+        let process = Process::new("cs2.exe")?;
 
         let client_base = process
             .get_module_by_name("client.dll")
-            .expect("Failed to find client.dll")
+            .expect("unable to find client.dll")
             .base();
 
-        let global_vars_offset = get_offset_value("client.dll", "dwGlobalVars")
-            .expect("Failed to find dwGlobalVars offset");
+        let global_vars_offset = get_offset_value("client.dll", "dwGlobalVars")?;
 
         let global_vars = process
             .read_memory::<*const GlobalVarsBase>(client_base + global_vars_offset as usize)?;
@@ -329,58 +295,55 @@ mod tests {
                 .unwrap_or_default()
         };
 
-        println!("Current map name: {}", current_map_name);
+        println!("current map name: {}", current_map_name);
 
         Ok(())
     }
 
     #[test]
     fn is_key_down() -> Result<()> {
-        let process = setup()?;
+        let process = Process::new("cs2.exe")?;
 
         let input_system_base = process
             .get_module_by_name("inputsystem.dll")
-            .expect("Failed to find inputsystem.dll")
+            .expect("unable to find inputsystem.dll")
             .base();
 
-        let input_system_offset = get_offset_value("inputsystem.dll", "dwInputSystem")
-            .expect("Failed to find dwInputSystem offset");
+        let input_system_offset = get_offset_value("inputsystem.dll", "dwInputSystem")?;
 
         let input_system = input_system_base + input_system_offset as usize;
 
         let is_key_down = |key_code: i32| -> bool {
-            let key_map_element = process
+            let element = process
                 .read_memory::<i32>((input_system + 0x4 * (key_code as usize / 32) + 0x12A0).into())
-                .unwrap_or(0);
+                .unwrap_or_default();
 
-            unsafe { _bittest(&key_map_element, key_code & 0x1F) != 0 }
+            unsafe { _bittest(&element, key_code & 0x1F) != 0 }
         };
 
         // Sleep for a second, so we're able to test.
-        sleep(Duration::from_secs(1));
+        thread::sleep(Duration::from_secs(1));
 
         // See https://www.unknowncheats.me/forum/3855779-post889.html for button codes.
-        println!("INSERT key down: {}", is_key_down(73));
+        println!("insert key down: {}", is_key_down(73));
 
         Ok(())
     }
 
     #[test]
     fn local_player_controller() -> Result<()> {
-        let process = setup()?;
+        let process = Process::new("cs2.exe")?;
 
         let client_base = process
             .get_module_by_name("client.dll")
-            .expect("Failed to find client.dll")
+            .expect("unable to find client.dll")
             .base();
 
         let local_player_controller_offset =
-            get_offset_value("client.dll", "dwLocalPlayerController")
-                .expect("Failed to find dwLocalPlayerController offset");
+            get_offset_value("client.dll", "dwLocalPlayerController")?;
 
         let player_name_offset =
-            get_class_field("client.dll", "CBasePlayerController", "m_iszPlayerName")
-                .expect("Failed to find m_iszPlayerName offset");
+            get_class_field("client.dll", "CBasePlayerController", "m_iszPlayerName")?;
 
         let local_player_controller =
             process.read_memory::<usize>(client_base + local_player_controller_offset as usize)?;
@@ -388,7 +351,7 @@ mod tests {
         let player_name =
             process.read_string((local_player_controller + player_name_offset as usize).into())?;
 
-        println!("Local player name: {}", player_name);
+        println!("local player name: {}", player_name);
 
         Ok(())
     }
@@ -403,23 +366,20 @@ mod tests {
             z: f32,
         }
 
-        let process = setup()?;
+        let process = Process::new("cs2.exe")?;
 
         let client_base = process
             .get_module_by_name("client.dll")
-            .expect("Failed to find client.dll")
+            .expect("unable to find client.dll")
             .base();
 
-        let local_player_pawn_offset = get_offset_value("client.dll", "dwLocalPlayerPawn")
-            .expect("Failed to find dwLocalPlayerPawn offset");
+        let local_player_pawn_offset = get_offset_value("client.dll", "dwLocalPlayerPawn")?;
 
         let game_scene_node_offset =
-            get_class_field("client.dll", "C_BaseEntity", "m_pGameSceneNode")
-                .expect("Failed to find m_pGameSceneNode offset");
+            get_class_field("client.dll", "C_BaseEntity", "m_pGameSceneNode")?;
 
         let absolute_origin_offset =
-            get_class_field("client.dll", "CGameSceneNode", "m_vecAbsOrigin")
-                .expect("Failed to find m_vecAbsOrigin offset");
+            get_class_field("client.dll", "CGameSceneNode", "m_vecAbsOrigin")?;
 
         let local_player_pawn =
             process.read_memory::<usize>(client_base + local_player_pawn_offset as usize)?;
@@ -430,25 +390,22 @@ mod tests {
         let absolute_origin = process
             .read_memory::<Vector3D>((game_scene_node + absolute_origin_offset as usize).into())?;
 
-        println!("Local player origin: {:?}", absolute_origin);
+        println!("local player origin: {:?}", absolute_origin);
 
         Ok(())
     }
 
     #[test]
     fn window_size() -> Result<()> {
-        let process = setup()?;
+        let process = Process::new("cs2.exe")?;
 
         let engine_base = process
             .get_module_by_name("engine2.dll")
-            .expect("Failed to find engine2.dll")
+            .expect("unable to find engine2.dll")
             .base();
 
-        let window_width_offset = get_offset_value("engine2.dll", "dwWindowWidth")
-            .expect("Failed to find dwWindowWidth offset");
-
-        let window_height_offset = get_offset_value("engine2.dll", "dwWindowHeight")
-            .expect("Failed to find dwWindowHeight offset");
+        let window_width_offset = get_offset_value("engine2.dll", "dwWindowWidth")?;
+        let window_height_offset = get_offset_value("engine2.dll", "dwWindowHeight")?;
 
         let window_width =
             process.read_memory::<u32>(engine_base + window_width_offset as usize)?;
@@ -456,7 +413,7 @@ mod tests {
         let window_height =
             process.read_memory::<u32>(engine_base + window_height_offset as usize)?;
 
-        println!("Window size: {}x{}", window_width, window_height);
+        println!("window size: {}x{}", window_width, window_height);
 
         Ok(())
     }

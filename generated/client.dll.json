@@ -5954,6 +5954,10 @@
       "m_nDefaultAnimLoopMode": {
         "value": 4232,
         "comment": "AnimLoopMode_t"
+      },
+      "m_sInitialWeaponState": {
+        "value": 4240,
+        "comment": "CUtlString"
       }
     },
     "comment": "C_BaseFlex"
@@ -7129,6 +7133,10 @@
         "value": 4888,
         "comment": "float"
       },
+      "m_flLastSmokeAge": {
+        "value": 5660,
+        "comment": "float"
+      },
       "m_flLastSmokeOverlayAlpha": {
         "value": 5656,
         "comment": "float"
@@ -7150,7 +7158,7 @@
         "comment": "float"
       },
       "m_flNextMagDropTime": {
-        "value": 5684,
+        "value": 5688,
         "comment": "float"
       },
       "m_flNightVisionAlpha": {
@@ -7302,7 +7310,7 @@
         "comment": "CEntityIndex"
       },
       "m_nLastMagDropAttachmentIndex": {
-        "value": 5688,
+        "value": 5692,
         "comment": "int32_t"
       },
       "m_nMyCollisionGroup": {
@@ -7310,15 +7318,15 @@
         "comment": "int32_t"
       },
       "m_nPlayerInfernoBodyFx": {
-        "value": 5676,
-        "comment": "ParticleIndex_t"
-      },
-      "m_nPlayerInfernoFootFx": {
         "value": 5680,
         "comment": "ParticleIndex_t"
       },
+      "m_nPlayerInfernoFootFx": {
+        "value": 5684,
+        "comment": "ParticleIndex_t"
+      },
       "m_nPlayerSmokedFx": {
-        "value": 5672,
+        "value": 5676,
         "comment": "ParticleIndex_t"
       },
       "m_nSurvivalTeamNumber": {
@@ -7370,7 +7378,7 @@
         "comment": "Vector"
       },
       "m_vLastSmokeOverlayColor": {
-        "value": 5660,
+        "value": 5664,
         "comment": "Vector"
       },
       "m_vecBulletHitModels": {

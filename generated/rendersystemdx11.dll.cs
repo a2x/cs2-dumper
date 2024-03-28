@@ -1,6 +1,6 @@
 /*
- * Created using https://github.com/a2x/cs2-dumper
- * Thu, 29 Feb 2024 02:15:35 +0000
+ * Generated using https://github.com/a2x/cs2-dumper
+ * Sat, 23 Mar 2024 05:02:03 +0000
  */
 
 public static class RenderInputLayoutField_t {

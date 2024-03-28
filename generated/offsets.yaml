@@ -1,40 +1,40 @@
 ---
 client_dll: # client.dll
-    dwEntityList: 25934584
-    dwForceAttack: 24285072
-    dwForceAttack2: 24285216
-    dwForceBackward: 24285792
-    dwForceCrouch: 24286512
-    dwForceForward: 24285648
-    dwForceJump: 24286368
-    dwForceLeft: 24285936
-    dwForceRight: 24286080
-    dwGameEntitySystem: 27104336
+    dwEntityList: 25963864
+    dwForceAttack: 24313888
+    dwForceAttack2: 24314032
+    dwForceBackward: 24314608
+    dwForceCrouch: 24315328
+    dwForceForward: 24314464
+    dwForceJump: 24315184
+    dwForceLeft: 24314752
+    dwForceRight: 24314896
+    dwGameEntitySystem: 27133840
     dwGameEntitySystem_getHighestEntityIndex: 5392
-    dwGameRules: 26315312
-    dwGlobalVars: 24263440
-    dwGlowManager: 26316368
-    dwInterfaceLinkList: 27305368
-    dwLocalPlayerController: 26260232
-    dwLocalPlayerPawn: 24314136
-    dwPlantedC4: 26351704
-    dwPrediction: 24313824
-    dwSensitivity: 26318712
+    dwGameRules: 26344608
+    dwGlobalVars: 24292256
+    dwGlowManager: 26345664
+    dwInterfaceLinkList: 27334872
+    dwLocalPlayerController: 26289528
+    dwLocalPlayerPawn: 24342952
+    dwPlantedC4: 26381016
+    dwPrediction: 24342640
+    dwSensitivity: 26348008
     dwSensitivity_sensitivity: 64
-    dwViewAngles: 26384176
-    dwViewMatrix: 26332976
-    dwViewRender: 26335152
+    dwViewAngles: 26413488
+    dwViewMatrix: 26362272
+    dwViewRender: 26364448
 engine2_dll: # engine2.dll
-    dwBuildNumber: 5322100
+    dwBuildNumber: 5326196
     dwNetworkGameClient_deltaTick: 600
-    dwNetworkGameClient: 5319368
+    dwNetworkGameClient: 5323464
     dwNetworkGameClient_getLocalPlayer: 240
     dwNetworkGameClient_maxClients: 592
     dwNetworkGameClient_signOnState: 576
-    dwWindowHeight: 6077540
-    dwWindowWidth: 6077536
+    dwWindowHeight: 6081756
+    dwWindowWidth: 6081752
 game_info: # Some additional information about the game at dump time
-    buildNumber: 13995 # Game build number
+    buildNumber: 14000 # Game build number
 inputsystem_dll: # inputsystem.dll
     dwInputSystem: 223136
 matchmaking_dll: # matchmaking.dll

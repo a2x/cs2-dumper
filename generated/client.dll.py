@@ -1,6 +1,6 @@
 '''
-Created using https://github.com/a2x/cs2-dumper
-Thu, 29 Feb 2024 02:15:37 +0000
+Generated using https://github.com/a2x/cs2-dumper
+Sat, 23 Mar 2024 05:02:04 +0000
 '''
 
 class ActiveModelConfig_t:
@@ -1632,6 +1632,7 @@ class C_CSGO_PreviewModel: # C_BaseFlex
     m_defaultAnim = 0x1080 # CUtlString
     m_nDefaultAnimLoopMode = 0x1088 # AnimLoopMode_t
     m_flInitialModelScale = 0x108C # float
+    m_sInitialWeaponState = 0x1090 # CUtlString
 
 class C_CSGO_PreviewModelAlias_csgo_item_previewmodel: # C_CSGO_PreviewModel
 
@@ -2007,12 +2008,13 @@ class C_CSPlayerPawnBase: # C_BasePlayerPawn
     m_vecPlayerPatchEconIndices = 0x15F8 # uint32_t[5]
     m_bHideTargetID = 0x1614 # bool
     m_flLastSmokeOverlayAlpha = 0x1618 # float
-    m_vLastSmokeOverlayColor = 0x161C # Vector
-    m_nPlayerSmokedFx = 0x1628 # ParticleIndex_t
-    m_nPlayerInfernoBodyFx = 0x162C # ParticleIndex_t
-    m_nPlayerInfernoFootFx = 0x1630 # ParticleIndex_t
-    m_flNextMagDropTime = 0x1634 # float
-    m_nLastMagDropAttachmentIndex = 0x1638 # int32_t
+    m_flLastSmokeAge = 0x161C # float
+    m_vLastSmokeOverlayColor = 0x1620 # Vector
+    m_nPlayerSmokedFx = 0x162C # ParticleIndex_t
+    m_nPlayerInfernoBodyFx = 0x1630 # ParticleIndex_t
+    m_nPlayerInfernoFootFx = 0x1634 # ParticleIndex_t
+    m_flNextMagDropTime = 0x1638 # float
+    m_nLastMagDropAttachmentIndex = 0x163C # int32_t
     m_vecBulletHitModels = 0x1640 # CUtlVector<C_BulletHitModel*>
     m_vecPickupModelSlerpers = 0x1658 # CUtlVector<C_PickUpModelSlerper*>
     m_vecLastAliveLocalVelocity = 0x1670 # Vector

@@ -1453,7 +1453,6 @@ CCSPlayerPawnBase: # CBasePlayerPawn
     m_flEmitSoundTime: 3480 # GameTime_t
     m_iNumSpawns: 3484 # int32_t
     m_iShouldHaveCash: 3488 # int32_t
-    m_bInvalidSteamLogonDelayed: 3492 # bool
     m_flIdleTimeSinceLastAction: 3496 # float
     m_flNameChangeHistory: 3500 # float[5]
     m_fLastGivenDefuserTime: 3520 # float

@@ -1,6 +1,6 @@
 /*
- * Created using https://github.com/a2x/cs2-dumper
- * Thu, 29 Feb 2024 02:15:36 +0000
+ * Generated using https://github.com/a2x/cs2-dumper
+ * Sat, 23 Mar 2024 05:02:04 +0000
  */
 
 #![allow(non_snake_case, non_upper_case_globals)]
@@ -1701,7 +1701,6 @@ pub mod CCSPlayerPawnBase { // CBasePlayerPawn
     pub const m_flEmitSoundTime: usize = 0xD98; // GameTime_t
     pub const m_iNumSpawns: usize = 0xD9C; // int32_t
     pub const m_iShouldHaveCash: usize = 0xDA0; // int32_t
-    pub const m_bInvalidSteamLogonDelayed: usize = 0xDA4; // bool
     pub const m_flIdleTimeSinceLastAction: usize = 0xDA8; // float
     pub const m_flNameChangeHistory: usize = 0xDAC; // float[5]
     pub const m_fLastGivenDefuserTime: usize = 0xDC0; // float

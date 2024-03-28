@@ -15,35 +15,35 @@
   "client_dll": {
     "data": {
       "ClientToolsInfo_001": {
-        "value": 7542864,
+        "value": 7548672,
         "comment": null
       },
       "EmptyWorldService001_Client": {
-        "value": 4715552,
+        "value": 4720720,
         "comment": null
       },
       "GameClientExports001": {
-        "value": 7542880,
+        "value": 7548688,
         "comment": null
       },
       "LegacyGameUI001": {
-        "value": 9099504,
+        "value": 9104960,
         "comment": null
       },
       "Source2Client002": {
-        "value": 7542896,
+        "value": 7548704,
         "comment": null
       },
       "Source2ClientConfig001": {
-        "value": 4634432,
+        "value": 4635280,
         "comment": null
       },
       "Source2ClientPrediction001": {
-        "value": 8053440,
+        "value": 8059280,
         "comment": null
       },
       "Source2ClientUI001": {
-        "value": 9030480,
+        "value": 9036896,
         "comment": null
       }
     },
@@ -52,131 +52,131 @@
   "engine2_dll": {
     "data": {
       "BenchmarkService001": {
-        "value": 1535984,
+        "value": 1536560,
         "comment": null
       },
       "BugService001": {
-        "value": 1542224,
+        "value": 1542800,
         "comment": null
       },
       "ClientServerEngineLoopService_001": {
-        "value": 2010144,
+        "value": 2010720,
         "comment": null
       },
       "EngineGameUI001": {
-        "value": 1186864,
+        "value": 1187440,
         "comment": null
       },
       "EngineServiceMgr001": {
-        "value": 1948112,
+        "value": 1948688,
         "comment": null
       },
       "GameEventSystemClientV001": {
-        "value": 1966192,
+        "value": 1966768,
         "comment": null
       },
       "GameEventSystemServerV001": {
-        "value": 1966208,
+        "value": 1966784,
         "comment": null
       },
       "GameResourceServiceClientV001": {
-        "value": 1571344,
+        "value": 1571920,
         "comment": null
       },
       "GameResourceServiceServerV001": {
-        "value": 1571360,
+        "value": 1571936,
         "comment": null
       },
       "GameUIService_001": {
-        "value": 1582016,
+        "value": 1582592,
         "comment": null
       },
       "HostStateMgr001": {
-        "value": 1985232,
+        "value": 1985808,
         "comment": null
       },
       "INETSUPPORT_001": {
-        "value": 986016,
+        "value": 986592,
         "comment": null
       },
       "InputService_001": {
-        "value": 1605344,
+        "value": 1605920,
         "comment": null
       },
       "KeyValueCache001": {
-        "value": 1995504,
+        "value": 1996080,
         "comment": null
       },
       "MapListService_001": {
-        "value": 1682960,
+        "value": 1683536,
         "comment": null
       },
       "NetworkClientService_001": {
-        "value": 1712080,
+        "value": 1712656,
         "comment": null
       },
       "NetworkP2PService_001": {
-        "value": 1740048,
+        "value": 1740624,
         "comment": null
       },
       "NetworkServerService_001": {
-        "value": 1757824,
+        "value": 1758400,
         "comment": null
       },
       "NetworkService_001": {
-        "value": 1778848,
+        "value": 1779424,
         "comment": null
       },
       "RenderService_001": {
-        "value": 1780112,
+        "value": 1780688,
         "comment": null
       },
       "ScreenshotService001": {
-        "value": 1790800,
+        "value": 1791376,
         "comment": null
       },
       "SimpleEngineLoopService_001": {
-        "value": 2059792,
+        "value": 2060368,
         "comment": null
       },
       "SoundService_001": {
-        "value": 1808720,
+        "value": 1809296,
         "comment": null
       },
       "Source2EngineToClient001": {
-        "value": 399872,
+        "value": 400016,
         "comment": null
       },
       "Source2EngineToClientStringTable001": {
-        "value": 568032,
+        "value": 568176,
         "comment": null
       },
       "Source2EngineToServer001": {
-        "value": 598192,
+        "value": 598336,
         "comment": null
       },
       "Source2EngineToServerStringTable001": {
-        "value": 694064,
+        "value": 694320,
         "comment": null
       },
       "SplitScreenService_001": {
-        "value": 1835504,
+        "value": 1836080,
         "comment": null
       },
       "StatsService_001": {
-        "value": 1846992,
+        "value": 1847568,
         "comment": null
       },
       "ToolService_001": {
-        "value": 1866528,
+        "value": 1867104,
         "comment": null
       },
       "VENGINE_GAMEUIFUNCS_VERSION005": {
-        "value": 1190048,
+        "value": 1190624,
         "comment": null
       },
       "VProfService_001": {
-        "value": 1871520,
+        "value": 1872096,
         "comment": null
       }
     },
@@ -326,15 +326,15 @@
         "comment": null
       },
       "NetworkMessagesVersion001": {
-        "value": 654384,
+        "value": 654480,
         "comment": null
       },
       "NetworkSystemVersion001": {
-        "value": 784800,
+        "value": 784896,
         "comment": null
       },
       "SerializedEntitiesVersion001": {
-        "value": 878800,
+        "value": 878896,
         "comment": null
       }
     },
@@ -453,43 +453,43 @@
   "server_dll": {
     "data": {
       "EmptyWorldService001_Server": {
-        "value": 5708624,
+        "value": 5711936,
         "comment": null
       },
       "EntitySubclassUtilsV001": {
-        "value": 2814496,
+        "value": 2815904,
         "comment": null
       },
       "NavGameTest001": {
-        "value": 10767456,
+        "value": 10776336,
         "comment": null
       },
       "ServerToolsInfo_001": {
-        "value": 8585440,
+        "value": 8594128,
         "comment": null
       },
       "Source2GameClients001": {
-        "value": 8585456,
+        "value": 8594144,
         "comment": null
       },
       "Source2GameDirector001": {
-        "value": 1174080,
+        "value": 1174192,
         "comment": null
       },
       "Source2GameEntities001": {
-        "value": 8585472,
+        "value": 8594160,
         "comment": null
       },
       "Source2Server001": {
-        "value": 8585488,
+        "value": 8594176,
         "comment": null
       },
       "Source2ServerConfig001": {
-        "value": 5660368,
+        "value": 5663680,
         "comment": null
       },
       "customnavsystem001": {
-        "value": 2277600,
+        "value": 2279008,
         "comment": null
       }
     },
@@ -528,83 +528,83 @@
   "steamclient64_dll": {
     "data": {
       "CLIENTENGINE_INTERFACE_VERSION005": {
-        "value": 8790304,
+        "value": 8790464,
         "comment": null
       },
       "IVALIDATE001": {
-        "value": 8806832,
+        "value": 8806992,
         "comment": null
       },
       "SteamClient006": {
-        "value": 6698592,
-        "comment": null
-      },
-      "SteamClient007": {
-        "value": 6698608,
-        "comment": null
-      },
-      "SteamClient008": {
-        "value": 6698624,
-        "comment": null
-      },
-      "SteamClient009": {
-        "value": 6698640,
-        "comment": null
-      },
-      "SteamClient010": {
-        "value": 6698656,
-        "comment": null
-      },
-      "SteamClient011": {
-        "value": 6698672,
-        "comment": null
-      },
-      "SteamClient012": {
-        "value": 6698688,
-        "comment": null
-      },
-      "SteamClient013": {
-        "value": 6698704,
-        "comment": null
-      },
-      "SteamClient014": {
-        "value": 6698720,
-        "comment": null
-      },
-      "SteamClient015": {
-        "value": 6698736,
-        "comment": null
-      },
-      "SteamClient016": {
         "value": 6698752,
         "comment": null
       },
-      "SteamClient017": {
+      "SteamClient007": {
         "value": 6698768,
         "comment": null
       },
-      "SteamClient018": {
+      "SteamClient008": {
         "value": 6698784,
         "comment": null
       },
-      "SteamClient019": {
+      "SteamClient009": {
         "value": 6698800,
         "comment": null
       },
-      "SteamClient020": {
+      "SteamClient010": {
         "value": 6698816,
         "comment": null
       },
-      "SteamClient021": {
+      "SteamClient011": {
         "value": 6698832,
         "comment": null
       },
+      "SteamClient012": {
+        "value": 6698848,
+        "comment": null
+      },
+      "SteamClient013": {
+        "value": 6698864,
+        "comment": null
+      },
+      "SteamClient014": {
+        "value": 6698880,
+        "comment": null
+      },
+      "SteamClient015": {
+        "value": 6698896,
+        "comment": null
+      },
+      "SteamClient016": {
+        "value": 6698912,
+        "comment": null
+      },
+      "SteamClient017": {
+        "value": 6698928,
+        "comment": null
+      },
+      "SteamClient018": {
+        "value": 6698944,
+        "comment": null
+      },
+      "SteamClient019": {
+        "value": 6698960,
+        "comment": null
+      },
+      "SteamClient020": {
+        "value": 6698976,
+        "comment": null
+      },
+      "SteamClient021": {
+        "value": 6698992,
+        "comment": null
+      },
       "p2pvoice002": {
-        "value": 892784,
+        "value": 892880,
         "comment": null
       },
       "p2pvoicesingleton002": {
-        "value": 879056,
+        "value": 879152,
         "comment": null
       }
     },
@@ -613,19 +613,19 @@
   "tier0_dll": {
     "data": {
       "TestScriptMgr001": {
-        "value": 1313952,
+        "value": 1312656,
         "comment": null
       },
       "VEngineCvar007": {
-        "value": 406976,
+        "value": 406160,
         "comment": null
       },
       "VProcessUtils002": {
-        "value": 1253760,
+        "value": 1252464,
         "comment": null
       },
       "VStringTokenSystem001": {
-        "value": 1641232,
+        "value": 1639936,
         "comment": null
       }
     },
