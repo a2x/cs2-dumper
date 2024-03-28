@@ -1,8 +1,6 @@
 use std::env;
 use std::fmt::Write;
 
-use heck::{AsPascalCase, AsShoutySnakeCase, AsSnakeCase};
-
 use super::{Button, CodeGen, Results};
 
 use crate::error::Result;
@@ -18,8 +16,7 @@ impl CodeGen for Vec<Button> {
                         writeln!(
                             fmt,
                             "public const nint {} = {:#X};",
-                            AsPascalCase(&button.name),
-                            button.value
+                            button.name, button.value
                         )?;
                     }
 
@@ -44,8 +41,7 @@ impl CodeGen for Vec<Button> {
                         writeln!(
                             fmt,
                             "constexpr std::ptrdiff_t {} = {:#X};",
-                            AsSnakeCase(&button.name),
-                            button.value
+                            button.name, button.value
                         )?;
                     }
 
@@ -59,6 +55,8 @@ impl CodeGen for Vec<Button> {
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
+            writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
+
             fmt.block("pub mod cs2_dumper", |fmt| {
                 writeln!(fmt, "// Module: {}", get_module_name())?;
 
@@ -67,8 +65,7 @@ impl CodeGen for Vec<Button> {
                         writeln!(
                             fmt,
                             "pub const {}: usize = {:#X};",
-                            AsShoutySnakeCase(&button.name),
-                            button.value
+                            button.name, button.value
                         )?;
                     }
 

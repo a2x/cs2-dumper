@@ -1,8 +1,8 @@
 use std::fmt::{self, Write};
 
-use heck::{AsPascalCase, AsShoutySnakeCase, AsSnakeCase};
+use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{format_module_name, CodeGen, Formatter, Results, SchemaMap};
+use super::{format_module_name, sanitize_name, CodeGen, Formatter, Results, SchemaMap};
 
 use crate::analysis::ClassMetadata;
 use crate::error::Result;
@@ -35,17 +35,13 @@ impl CodeGen for SchemaMap {
                                 writeln!(fmt, "// Members count: {}", enum_.size)?;
 
                                 fmt.block(
-                                    &format!("public enum {} : {}", AsPascalCase(&enum_.name), ty),
+                                    &format!("public enum {} : {}", sanitize_name(&enum_.name), ty),
                                     |fmt| {
                                         let members = enum_
                                             .members
                                             .iter()
                                             .map(|member| {
-                                                format!(
-                                                    "{} = {}",
-                                                    AsPascalCase(&member.name),
-                                                    member.value
-                                                )
+                                                format!("{} = {}", member.name, member.value)
                                             })
                                             .collect::<Vec<_>>()
                                             .join(",\n");
@@ -59,7 +55,7 @@ impl CodeGen for SchemaMap {
                                 let parent_name = class
                                     .parent
                                     .as_ref()
-                                    .map(|parent| format!("{}", AsPascalCase(&parent.name)))
+                                    .map(|parent| format!("{}", sanitize_name(&parent.name)))
                                     .unwrap_or_else(|| "None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
@@ -68,15 +64,13 @@ impl CodeGen for SchemaMap {
                                 write_metadata(fmt, &class.metadata)?;
 
                                 fmt.block(
-                                    &format!("public static class {}", AsPascalCase(&class.name)),
+                                    &format!("public static class {}", sanitize_name(&class.name)),
                                     |fmt| {
                                         for field in &class.fields {
                                             writeln!(
                                                 fmt,
                                                 "public const nint {} = {:#X}; // {}",
-                                                AsPascalCase(&field.name),
-                                                field.offset,
-                                                field.ty
+                                                field.name, field.offset, field.ty
                                             )?;
                                         }
 
@@ -127,7 +121,7 @@ impl CodeGen for SchemaMap {
                                     fmt.block(
                                         &format!(
                                             "enum class {} : {}",
-                                            AsSnakeCase(&enum_.name),
+                                            sanitize_name(&enum_.name),
                                             ty
                                         ),
                                         |fmt| {
@@ -135,11 +129,7 @@ impl CodeGen for SchemaMap {
                                                 .members
                                                 .iter()
                                                 .map(|member| {
-                                                    format!(
-                                                        "{} = {}",
-                                                        AsSnakeCase(&member.name),
-                                                        member.value
-                                                    )
+                                                    format!("{} = {}", member.name, member.value)
                                                 })
                                                 .collect::<Vec<_>>()
                                                 .join(",\n");
@@ -153,7 +143,7 @@ impl CodeGen for SchemaMap {
                                     let parent_name = class
                                         .parent
                                         .as_ref()
-                                        .map(|parent| format!("{}", AsSnakeCase(&parent.name)))
+                                        .map(|parent| format!("{}", sanitize_name(&parent.name)))
                                         .unwrap_or_else(|| "None".to_string());
 
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
@@ -162,15 +152,13 @@ impl CodeGen for SchemaMap {
                                     write_metadata(fmt, &class.metadata)?;
 
                                     fmt.block(
-                                        &format!("namespace {}", AsSnakeCase(&class.name)),
+                                        &format!("namespace {}", sanitize_name(&class.name)),
                                         |fmt| {
                                             for field in &class.fields {
                                                 writeln!(
                                                     fmt,
                                                     "constexpr std::ptrdiff_t {} = {:#X}; // {}",
-                                                    AsSnakeCase(&field.name),
-                                                    field.offset,
-                                                    field.ty
+                                                    field.name, field.offset, field.ty
                                                 )?;
                                             }
 
@@ -194,6 +182,8 @@ impl CodeGen for SchemaMap {
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
+            writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
+
             fmt.block("pub mod cs2_dumper", |fmt| {
                 fmt.block("pub mod schemas", |fmt| {
                     for (module_name, (classes, enums)) in self {
@@ -220,7 +210,7 @@ impl CodeGen for SchemaMap {
                                         &format!(
                                             "#[repr({})]\npub enum {}",
                                             ty,
-                                            AsPascalCase(&enum_.name),
+                                            sanitize_name(&enum_.name),
                                         ),
                                         |fmt| {
                                             // TODO: Handle the case where multiple members share
@@ -229,11 +219,7 @@ impl CodeGen for SchemaMap {
                                                 .members
                                                 .iter()
                                                 .map(|member| {
-                                                    format!(
-                                                        "{} = {}",
-                                                        AsPascalCase(&member.name),
-                                                        member.value
-                                                    )
+                                                    format!("{} = {}", member.name, member.value)
                                                 })
                                                 .collect::<Vec<_>>()
                                                 .join(",\n");
@@ -247,7 +233,7 @@ impl CodeGen for SchemaMap {
                                     let parent_name = class
                                         .parent
                                         .as_ref()
-                                        .map(|parent| format!("{}", AsSnakeCase(&parent.name)))
+                                        .map(|parent| format!("{}", sanitize_name(&parent.name)))
                                         .unwrap_or_else(|| "None".to_string());
 
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
@@ -256,15 +242,13 @@ impl CodeGen for SchemaMap {
                                     write_metadata(fmt, &class.metadata)?;
 
                                     fmt.block(
-                                        &format!("pub mod {}", AsSnakeCase(&class.name)),
+                                        &format!("pub mod {}", sanitize_name(&class.name)),
                                         |fmt| {
                                             for field in &class.fields {
                                                 writeln!(
                                                     fmt,
                                                     "pub const {}: usize = {:#X}; // {}",
-                                                    AsShoutySnakeCase(&field.name),
-                                                    field.offset,
-                                                    field.ty
+                                                    field.name, field.offset, field.ty
                                                 )?;
                                             }
 

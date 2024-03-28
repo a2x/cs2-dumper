@@ -220,3 +220,8 @@ pub fn format_module_name(module_name: &String) -> String {
 
     module_name.strip_suffix(extension).unwrap().to_string()
 }
+
+#[inline]
+pub fn sanitize_name(name: &str) -> String {
+    name.replace(|c: char| !c.is_alphanumeric(), "_")
+}

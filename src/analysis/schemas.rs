@@ -87,7 +87,7 @@ fn read_class_binding(
                 s,
                 match env::consts::OS {
                     "linux" => "so",
-                    "windows" => ".dll",
+                    "windows" => "dll",
                     _ => panic!("unsupported os"),
                 }
             )

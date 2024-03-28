@@ -1,6 +1,6 @@
 use std::fmt::Write;
 
-use heck::{AsPascalCase, AsShoutySnakeCase, AsSnakeCase};
+use heck::{AsPascalCase, AsSnakeCase};
 
 use super::{format_module_name, CodeGen, OffsetMap, Results};
 
@@ -23,8 +23,7 @@ impl CodeGen for OffsetMap {
                                 writeln!(
                                     fmt,
                                     "public const nint {} = {:#X};",
-                                    AsPascalCase(&offset.name),
-                                    offset.value
+                                    offset.name, offset.value
                                 )?;
                             }
 
@@ -57,8 +56,7 @@ impl CodeGen for OffsetMap {
                                     writeln!(
                                         fmt,
                                         "constexpr std::ptrdiff_t {} = {:#X};",
-                                        AsSnakeCase(&offset.name),
-                                        offset.value
+                                        offset.name, offset.value
                                     )?;
                                 }
 
@@ -77,6 +75,8 @@ impl CodeGen for OffsetMap {
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
+            writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
+
             fmt.block("pub mod cs2_dumper", |fmt| {
                 fmt.block("pub mod offsets", |fmt| {
                     for (module_name, offsets) in self {
@@ -89,8 +89,7 @@ impl CodeGen for OffsetMap {
                                     writeln!(
                                         fmt,
                                         "pub const {}: usize = {:#X};",
-                                        AsShoutySnakeCase(&offset.name),
-                                        offset.value
+                                        offset.name, offset.value
                                     )?;
                                 }
 
