@@ -1,0 +1,149 @@
+{
+  "CSSDSEndFrameViewInfo": {
+    "data": {
+      "m_ViewName": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_nViewId": {
+        "value": 0,
+        "comment": "uint64_t"
+      }
+    },
+    "comment": null
+  },
+  "CSSDSMsg_EndFrame": {
+    "data": {
+      "m_Views": {
+        "value": 0,
+        "comment": "CUtlVector<CSSDSEndFrameViewInfo>"
+      }
+    },
+    "comment": null
+  },
+  "CSSDSMsg_LayerBase": {
+    "data": {
+      "m_LayerName": {
+        "value": 40,
+        "comment": "CUtlString"
+      },
+      "m_ViewName": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_displayText": {
+        "value": 48,
+        "comment": "CUtlString"
+      },
+      "m_nLayerId": {
+        "value": 32,
+        "comment": "uint64_t"
+      },
+      "m_nLayerIndex": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_viewId": {
+        "value": 0,
+        "comment": "SceneViewId_t"
+      }
+    },
+    "comment": null
+  },
+  "CSSDSMsg_PostLayer": {
+    "data": {},
+    "comment": "CSSDSMsg_LayerBase"
+  },
+  "CSSDSMsg_PreLayer": {
+    "data": {},
+    "comment": "CSSDSMsg_LayerBase"
+  },
+  "CSSDSMsg_ViewRender": {
+    "data": {
+      "m_ViewName": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_viewId": {
+        "value": 0,
+        "comment": "SceneViewId_t"
+      }
+    },
+    "comment": null
+  },
+  "CSSDSMsg_ViewTarget": {
+    "data": {
+      "m_Name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_TextureId": {
+        "value": 8,
+        "comment": "uint64_t"
+      },
+      "m_nDepth": {
+        "value": 36,
+        "comment": "int32_t"
+      },
+      "m_nFormat": {
+        "value": 44,
+        "comment": "int32_t"
+      },
+      "m_nHeight": {
+        "value": 20,
+        "comment": "int32_t"
+      },
+      "m_nMultisampleNumSamples": {
+        "value": 40,
+        "comment": "int32_t"
+      },
+      "m_nNumMipLevels": {
+        "value": 32,
+        "comment": "int32_t"
+      },
+      "m_nRequestedHeight": {
+        "value": 28,
+        "comment": "int32_t"
+      },
+      "m_nRequestedWidth": {
+        "value": 24,
+        "comment": "int32_t"
+      },
+      "m_nWidth": {
+        "value": 16,
+        "comment": "int32_t"
+      }
+    },
+    "comment": null
+  },
+  "CSSDSMsg_ViewTargetList": {
+    "data": {
+      "m_Targets": {
+        "value": 24,
+        "comment": "CUtlVector<CSSDSMsg_ViewTarget>"
+      },
+      "m_ViewName": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_viewId": {
+        "value": 0,
+        "comment": "SceneViewId_t"
+      }
+    },
+    "comment": null
+  },
+  "SceneViewId_t": {
+    "data": {
+      "m_nFrameCount": {
+        "value": 8,
+        "comment": "uint64_t"
+      },
+      "m_nViewId": {
+        "value": 0,
+        "comment": "uint64_t"
+      }
+    },
+    "comment": null
+  }
+}

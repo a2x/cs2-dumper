@@ -1,0 +1,65 @@
+{
+  "RenderInputLayoutField_t": {
+    "data": {
+      "m_Format": {
+        "value": 36,
+        "comment": "uint32_t"
+      },
+      "m_nInstanceStepRate": {
+        "value": 52,
+        "comment": "int32_t"
+      },
+      "m_nOffset": {
+        "value": 40,
+        "comment": "int32_t"
+      },
+      "m_nSemanticIndex": {
+        "value": 32,
+        "comment": "int32_t"
+      },
+      "m_nSlot": {
+        "value": 44,
+        "comment": "int32_t"
+      },
+      "m_nSlotType": {
+        "value": 48,
+        "comment": "RenderSlotType_t"
+      },
+      "m_pSemanticName": {
+        "value": 0,
+        "comment": "uint8_t[32]"
+      }
+    },
+    "comment": null
+  },
+  "VsInputSignatureElement_t": {
+    "data": {
+      "m_nD3DSemanticIndex": {
+        "value": 192,
+        "comment": "int32_t"
+      },
+      "m_pD3DSemanticName": {
+        "value": 128,
+        "comment": "char[64]"
+      },
+      "m_pName": {
+        "value": 0,
+        "comment": "char[64]"
+      },
+      "m_pSemantic": {
+        "value": 64,
+        "comment": "char[64]"
+      }
+    },
+    "comment": null
+  },
+  "VsInputSignature_t": {
+    "data": {
+      "m_elems": {
+        "value": 0,
+        "comment": "CUtlVector<VsInputSignatureElement_t>"
+      }
+    },
+    "comment": null
+  }
+}

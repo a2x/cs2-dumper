@@ -1,0 +1,714 @@
+{
+  "AggregateLODSetup_t": {
+    "data": {
+      "m_fMaxObjectScale": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_fSwitchDistances": {
+        "value": 16,
+        "comment": "CUtlVectorFixedGrowable<float>"
+      },
+      "m_vLODOrigin": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
+  },
+  "AggregateMeshInfo_t": {
+    "data": {
+      "m_bHasTransform": {
+        "value": 5,
+        "comment": "bool"
+      },
+      "m_nDrawCallIndex": {
+        "value": 6,
+        "comment": "int16_t"
+      },
+      "m_nLODGroupMask": {
+        "value": 10,
+        "comment": "uint8_t"
+      },
+      "m_nLODSetupIndex": {
+        "value": 8,
+        "comment": "int16_t"
+      },
+      "m_nLightProbeVolumePrecomputedHandshake": {
+        "value": 20,
+        "comment": "int32_t"
+      },
+      "m_nVisClusterMemberCount": {
+        "value": 4,
+        "comment": "uint8_t"
+      },
+      "m_nVisClusterMemberOffset": {
+        "value": 0,
+        "comment": "uint32_t"
+      },
+      "m_objectFlags": {
+        "value": 16,
+        "comment": "ObjectTypeFlags_t"
+      },
+      "m_vTintColor": {
+        "value": 11,
+        "comment": "Color"
+      }
+    },
+    "comment": null
+  },
+  "AggregateSceneObject_t": {
+    "data": {
+      "m_aggregateMeshes": {
+        "value": 16,
+        "comment": "CUtlVector<AggregateMeshInfo_t>"
+      },
+      "m_allFlags": {
+        "value": 0,
+        "comment": "ObjectTypeFlags_t"
+      },
+      "m_anyFlags": {
+        "value": 4,
+        "comment": "ObjectTypeFlags_t"
+      },
+      "m_fragmentTransforms": {
+        "value": 88,
+        "comment": "CUtlVector<matrix3x4_t>"
+      },
+      "m_lodSetups": {
+        "value": 40,
+        "comment": "CUtlVector<AggregateLODSetup_t>"
+      },
+      "m_nLayer": {
+        "value": 8,
+        "comment": "int16_t"
+      },
+      "m_renderableModel": {
+        "value": 112,
+        "comment": "CStrongHandle<InfoForResourceTypeCModel>"
+      },
+      "m_visClusterMembership": {
+        "value": 64,
+        "comment": "CUtlVector<uint16_t>"
+      }
+    },
+    "comment": null
+  },
+  "BakedLightingInfo_t": {
+    "data": {
+      "m_bHasLightmaps": {
+        "value": 16,
+        "comment": "bool"
+      },
+      "m_lightMaps": {
+        "value": 24,
+        "comment": "CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>"
+      },
+      "m_nLightmapGameVersionNumber": {
+        "value": 4,
+        "comment": "uint32_t"
+      },
+      "m_nLightmapVersionNumber": {
+        "value": 0,
+        "comment": "uint32_t"
+      },
+      "m_vLightmapUvScale": {
+        "value": 8,
+        "comment": "Vector2D"
+      }
+    },
+    "comment": null
+  },
+  "BaseSceneObjectOverride_t": {
+    "data": {
+      "m_nSceneObjectIndex": {
+        "value": 0,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
+  },
+  "CEntityComponent": {
+    "data": {},
+    "comment": null
+  },
+  "CEntityIdentity": {
+    "data": {
+      "m_PathIndex": {
+        "value": 64,
+        "comment": "ChangeAccessorFieldPathIndex_t"
+      },
+      "m_designerName": {
+        "value": 32,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_fDataObjectTypes": {
+        "value": 60,
+        "comment": "uint32_t"
+      },
+      "m_flags": {
+        "value": 48,
+        "comment": "uint32_t"
+      },
+      "m_name": {
+        "value": 24,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_nameStringableIndex": {
+        "value": 20,
+        "comment": "int32_t"
+      },
+      "m_pNext": {
+        "value": 96,
+        "comment": "CEntityIdentity*"
+      },
+      "m_pNextByClass": {
+        "value": 112,
+        "comment": "CEntityIdentity*"
+      },
+      "m_pPrev": {
+        "value": 88,
+        "comment": "CEntityIdentity*"
+      },
+      "m_pPrevByClass": {
+        "value": 104,
+        "comment": "CEntityIdentity*"
+      },
+      "m_worldGroupId": {
+        "value": 56,
+        "comment": "WorldGroupId_t"
+      }
+    },
+    "comment": null
+  },
+  "CEntityInstance": {
+    "data": {
+      "m_CScriptComponent": {
+        "value": 40,
+        "comment": "CScriptComponent*"
+      },
+      "m_bVisibleinPVS": {
+        "value": 48,
+        "comment": "bool"
+      },
+      "m_iszPrivateVScripts": {
+        "value": 8,
+        "comment": "CUtlSymbolLarge"
+      },
+      "m_pEntity": {
+        "value": 16,
+        "comment": "CEntityIdentity*"
+      }
+    },
+    "comment": null
+  },
+  "CScriptComponent": {
+    "data": {
+      "m_scriptClassName": {
+        "value": 48,
+        "comment": "CUtlSymbolLarge"
+      }
+    },
+    "comment": "CEntityComponent"
+  },
+  "CVoxelVisibility": {
+    "data": {
+      "m_EnclosedClusterListBlock": {
+        "value": 124,
+        "comment": "VoxelVisBlockOffset_t"
+      },
+      "m_EnclosedClustersBlock": {
+        "value": 132,
+        "comment": "VoxelVisBlockOffset_t"
+      },
+      "m_MasksBlock": {
+        "value": 140,
+        "comment": "VoxelVisBlockOffset_t"
+      },
+      "m_NodeBlock": {
+        "value": 108,
+        "comment": "VoxelVisBlockOffset_t"
+      },
+      "m_RegionBlock": {
+        "value": 116,
+        "comment": "VoxelVisBlockOffset_t"
+      },
+      "m_flGridSize": {
+        "value": 96,
+        "comment": "float"
+      },
+      "m_nBaseClusterCount": {
+        "value": 64,
+        "comment": "uint32_t"
+      },
+      "m_nPVSBytesPerCluster": {
+        "value": 68,
+        "comment": "uint32_t"
+      },
+      "m_nSkyVisibilityCluster": {
+        "value": 100,
+        "comment": "uint32_t"
+      },
+      "m_nSunVisibilityCluster": {
+        "value": 104,
+        "comment": "uint32_t"
+      },
+      "m_nVisBlocks": {
+        "value": 148,
+        "comment": "VoxelVisBlockOffset_t"
+      },
+      "m_vMaxBounds": {
+        "value": 84,
+        "comment": "Vector"
+      },
+      "m_vMinBounds": {
+        "value": 72,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
+  },
+  "ClutterSceneObject_t": {
+    "data": {
+      "m_Bounds": {
+        "value": 0,
+        "comment": "AABB_t"
+      },
+      "m_flags": {
+        "value": 24,
+        "comment": "ObjectTypeFlags_t"
+      },
+      "m_instancePositions": {
+        "value": 32,
+        "comment": "CUtlVector<Vector>"
+      },
+      "m_instanceScales": {
+        "value": 80,
+        "comment": "CUtlVector<float>"
+      },
+      "m_instanceTintSrgb": {
+        "value": 104,
+        "comment": "CUtlVector<Color>"
+      },
+      "m_nLayer": {
+        "value": 28,
+        "comment": "int16_t"
+      },
+      "m_renderableModel": {
+        "value": 152,
+        "comment": "CStrongHandle<InfoForResourceTypeCModel>"
+      },
+      "m_tiles": {
+        "value": 128,
+        "comment": "CUtlVector<ClutterTile_t>"
+      }
+    },
+    "comment": null
+  },
+  "ClutterTile_t": {
+    "data": {
+      "m_BoundsWs": {
+        "value": 8,
+        "comment": "AABB_t"
+      },
+      "m_nFirstInstance": {
+        "value": 0,
+        "comment": "uint32_t"
+      },
+      "m_nLastInstance": {
+        "value": 4,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
+  },
+  "EntityIOConnectionData_t": {
+    "data": {
+      "m_flDelay": {
+        "value": 40,
+        "comment": "float"
+      },
+      "m_inputName": {
+        "value": 24,
+        "comment": "CUtlString"
+      },
+      "m_nTimesToFire": {
+        "value": 44,
+        "comment": "int32_t"
+      },
+      "m_outputName": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_overrideParam": {
+        "value": 32,
+        "comment": "CUtlString"
+      },
+      "m_targetName": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_targetType": {
+        "value": 8,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
+  },
+  "EntityKeyValueData_t": {
+    "data": {
+      "m_connections": {
+        "value": 8,
+        "comment": "CUtlVector<EntityIOConnectionData_t>"
+      },
+      "m_keyValuesData": {
+        "value": 32,
+        "comment": "CUtlBinaryBlock"
+      }
+    },
+    "comment": null
+  },
+  "ExtraVertexStreamOverride_t": {
+    "data": {
+      "m_extraBufferBinding": {
+        "value": 16,
+        "comment": "CRenderBufferBinding"
+      },
+      "m_nAdditionalMeshDrawPrimitiveFlags": {
+        "value": 12,
+        "comment": "MeshDrawPrimitiveFlags_t"
+      },
+      "m_nDrawCallIndex": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "m_nSubSceneObject": {
+        "value": 4,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": "BaseSceneObjectOverride_t"
+  },
+  "InfoForResourceTypeVMapResourceData_t": {
+    "data": {},
+    "comment": null
+  },
+  "InfoOverlayData_t": {
+    "data": {
+      "m_flDepth": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_flHeight": {
+        "value": 52,
+        "comment": "float"
+      },
+      "m_flWidth": {
+        "value": 48,
+        "comment": "float"
+      },
+      "m_nRenderOrder": {
+        "value": 88,
+        "comment": "int32_t"
+      },
+      "m_nSequenceOverride": {
+        "value": 108,
+        "comment": "int32_t"
+      },
+      "m_pMaterial": {
+        "value": 80,
+        "comment": "CStrongHandle<InfoForResourceTypeIMaterial2>"
+      },
+      "m_transform": {
+        "value": 0,
+        "comment": "matrix3x4_t"
+      },
+      "m_vTintColor": {
+        "value": 92,
+        "comment": "Vector4D"
+      },
+      "m_vUVEnd": {
+        "value": 68,
+        "comment": "Vector2D"
+      },
+      "m_vUVStart": {
+        "value": 60,
+        "comment": "Vector2D"
+      }
+    },
+    "comment": null
+  },
+  "MaterialOverride_t": {
+    "data": {
+      "m_nDrawCallIndex": {
+        "value": 8,
+        "comment": "uint32_t"
+      },
+      "m_nSubSceneObject": {
+        "value": 4,
+        "comment": "uint32_t"
+      },
+      "m_pMaterial": {
+        "value": 16,
+        "comment": "CStrongHandle<InfoForResourceTypeIMaterial2>"
+      }
+    },
+    "comment": "BaseSceneObjectOverride_t"
+  },
+  "NodeData_t": {
+    "data": {
+      "m_ChildNodeIndices": {
+        "value": 48,
+        "comment": "CUtlVector<int32_t>"
+      },
+      "m_flMinimumDistance": {
+        "value": 40,
+        "comment": "float"
+      },
+      "m_nParent": {
+        "value": 0,
+        "comment": "int32_t"
+      },
+      "m_vMaxBounds": {
+        "value": 28,
+        "comment": "Vector"
+      },
+      "m_vMinBounds": {
+        "value": 16,
+        "comment": "Vector"
+      },
+      "m_vOrigin": {
+        "value": 4,
+        "comment": "Vector"
+      },
+      "m_worldNodePrefix": {
+        "value": 72,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
+  },
+  "PermEntityLumpData_t": {
+    "data": {
+      "m_childLumps": {
+        "value": 24,
+        "comment": "CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>"
+      },
+      "m_entityKeyValues": {
+        "value": 48,
+        "comment": "CUtlLeanVector<EntityKeyValueData_t>"
+      },
+      "m_hammerUniqueId": {
+        "value": 16,
+        "comment": "CUtlString"
+      },
+      "m_name": {
+        "value": 8,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
+  },
+  "SceneObject_t": {
+    "data": {
+      "m_flFadeEndDistance": {
+        "value": 56,
+        "comment": "float"
+      },
+      "m_flFadeStartDistance": {
+        "value": 52,
+        "comment": "float"
+      },
+      "m_nCubeMapPrecomputedHandshake": {
+        "value": 108,
+        "comment": "int32_t"
+      },
+      "m_nLODOverride": {
+        "value": 106,
+        "comment": "int16_t"
+      },
+      "m_nLightProbeVolumePrecomputedHandshake": {
+        "value": 112,
+        "comment": "int32_t"
+      },
+      "m_nObjectID": {
+        "value": 0,
+        "comment": "uint32_t"
+      },
+      "m_nObjectTypeFlags": {
+        "value": 88,
+        "comment": "ObjectTypeFlags_t"
+      },
+      "m_nOverlayRenderOrder": {
+        "value": 104,
+        "comment": "int16_t"
+      },
+      "m_renderable": {
+        "value": 128,
+        "comment": "CStrongHandle<InfoForResourceTypeCRenderMesh>"
+      },
+      "m_renderableModel": {
+        "value": 120,
+        "comment": "CStrongHandle<InfoForResourceTypeCModel>"
+      },
+      "m_skin": {
+        "value": 80,
+        "comment": "CUtlString"
+      },
+      "m_vLightingOrigin": {
+        "value": 92,
+        "comment": "Vector"
+      },
+      "m_vTintColor": {
+        "value": 60,
+        "comment": "Vector4D"
+      },
+      "m_vTransform": {
+        "value": 4,
+        "comment": "Vector4D[3]"
+      }
+    },
+    "comment": null
+  },
+  "VMapResourceData_t": {
+    "data": {},
+    "comment": null
+  },
+  "VoxelVisBlockOffset_t": {
+    "data": {
+      "m_nElementCount": {
+        "value": 4,
+        "comment": "uint32_t"
+      },
+      "m_nOffset": {
+        "value": 0,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
+  },
+  "WorldBuilderParams_t": {
+    "data": {
+      "m_bBuildBakedLighting": {
+        "value": 4,
+        "comment": "bool"
+      },
+      "m_flMinDrawVolumeSize": {
+        "value": 0,
+        "comment": "float"
+      },
+      "m_nCompileFingerprint": {
+        "value": 24,
+        "comment": "uint64_t"
+      },
+      "m_nCompileTimestamp": {
+        "value": 16,
+        "comment": "uint64_t"
+      },
+      "m_vLightmapUvScale": {
+        "value": 8,
+        "comment": "Vector2D"
+      }
+    },
+    "comment": null
+  },
+  "WorldNodeOnDiskBufferData_t": {
+    "data": {
+      "m_inputLayoutFields": {
+        "value": 8,
+        "comment": "CUtlVector<RenderInputLayoutField_t>"
+      },
+      "m_nElementCount": {
+        "value": 0,
+        "comment": "int32_t"
+      },
+      "m_nElementSizeInBytes": {
+        "value": 4,
+        "comment": "int32_t"
+      },
+      "m_pData": {
+        "value": 32,
+        "comment": "CUtlVector<uint8_t>"
+      }
+    },
+    "comment": null
+  },
+  "WorldNode_t": {
+    "data": {
+      "m_aggregateSceneObjects": {
+        "value": 72,
+        "comment": "CUtlVector<AggregateSceneObject_t>"
+      },
+      "m_clutterSceneObjects": {
+        "value": 96,
+        "comment": "CUtlVector<ClutterSceneObject_t>"
+      },
+      "m_extraVertexStreamOverrides": {
+        "value": 120,
+        "comment": "CUtlVector<ExtraVertexStreamOverride_t>"
+      },
+      "m_extraVertexStreams": {
+        "value": 168,
+        "comment": "CUtlVector<WorldNodeOnDiskBufferData_t>"
+      },
+      "m_grassFileName": {
+        "value": 264,
+        "comment": "CUtlString"
+      },
+      "m_infoOverlays": {
+        "value": 24,
+        "comment": "CUtlVector<InfoOverlayData_t>"
+      },
+      "m_layerNames": {
+        "value": 192,
+        "comment": "CUtlVector<CUtlString>"
+      },
+      "m_materialOverrides": {
+        "value": 144,
+        "comment": "CUtlVector<MaterialOverride_t>"
+      },
+      "m_nodeLightingInfo": {
+        "value": 272,
+        "comment": "BakedLightingInfo_t"
+      },
+      "m_overlayLayerIndices": {
+        "value": 240,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_sceneObjectLayerIndices": {
+        "value": 216,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_sceneObjects": {
+        "value": 0,
+        "comment": "CUtlVector<SceneObject_t>"
+      },
+      "m_visClusterMembership": {
+        "value": 48,
+        "comment": "CUtlVector<uint16_t>"
+      }
+    },
+    "comment": null
+  },
+  "World_t": {
+    "data": {
+      "m_builderParams": {
+        "value": 0,
+        "comment": "WorldBuilderParams_t"
+      },
+      "m_entityLumps": {
+        "value": 104,
+        "comment": "CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>"
+      },
+      "m_worldLightingInfo": {
+        "value": 56,
+        "comment": "BakedLightingInfo_t"
+      },
+      "m_worldNodes": {
+        "value": 32,
+        "comment": "CUtlVector<NodeData_t>"
+      }
+    },
+    "comment": null
+  }
+}

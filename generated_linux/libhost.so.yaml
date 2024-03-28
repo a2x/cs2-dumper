@@ -1,0 +1,5 @@
+---
+CAnimScriptBase:
+    m_bIsValid: 8 # bool
+EmptyTestScript: # CAnimScriptBase
+    m_hTest: 16 # CAnimScriptParam<float>

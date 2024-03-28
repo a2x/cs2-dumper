@@ -30,5 +30,8 @@ features = [
     "Win32_System_Threading",
 ]
 
+[target.'cfg(target_os = "linux")'.dependencies]
+procfs = "0.16.0"
+
 [profile.release]
 strip = true

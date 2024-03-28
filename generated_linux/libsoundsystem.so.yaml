@@ -1,0 +1,281 @@
+---
+CDSPMixgroupModifier:
+    m_mixgroup: 0 # CUtlString
+    m_flModifier: 8 # float
+    m_flModifierMin: 12 # float
+    m_flSourceModifier: 16 # float
+    m_flSourceModifierMin: 20 # float
+    m_flListenerReverbModifierWhenSourceReverbIsActive: 24 # float
+CDSPPresetMixgroupModifierTable:
+    m_table: 0 # CUtlVector<CDspPresetModifierList>
+CDspPresetModifierList:
+    m_dspName: 0 # CUtlString
+    m_modifiers: 8 # CUtlVector<CDSPMixgroupModifier>
+CSosGroupActionLimitSchema: # CSosGroupActionSchema
+    m_nMaxCount: 24 # int32_t
+    m_nStopType: 28 # SosActionStopType_t
+    m_nSortType: 32 # SosActionSortType_t
+CSosGroupActionSchema:
+    m_name: 8 # CUtlString
+    m_actionType: 16 # ActionType_t
+    m_actionInstanceType: 20 # ActionType_t
+CSosGroupActionSetSoundeventParameterSchema: # CSosGroupActionSchema
+    m_nMaxCount: 24 # int32_t
+    m_flMinValue: 28 # float
+    m_flMaxValue: 32 # float
+    m_opvarName: 40 # CUtlString
+    m_nSortType: 48 # SosActionSortType_t
+CSosGroupActionSoundeventClusterSchema: # CSosGroupActionSchema
+    m_nMinNearby: 24 # int32_t
+    m_flClusterEpsilon: 28 # float
+    m_shouldPlayOpvar: 32 # CUtlString
+    m_shouldPlayClusterChild: 40 # CUtlString
+    m_clusterSizeOpvar: 48 # CUtlString
+    m_groupBoundingBoxMinsOpvar: 56 # CUtlString
+    m_groupBoundingBoxMaxsOpvar: 64 # CUtlString
+CSosGroupActionTimeBlockLimitSchema: # CSosGroupActionSchema
+    m_nMaxCount: 24 # int32_t
+    m_flMaxDuration: 28 # float
+CSosGroupActionTimeLimitSchema: # CSosGroupActionSchema
+    m_flMaxDuration: 24 # float
+CSosGroupBranchPattern:
+    m_bMatchEventName: 8 # bool
+    m_bMatchEventSubString: 9 # bool
+    m_bMatchEntIndex: 10 # bool
+    m_bMatchOpvar: 11 # bool
+CSosGroupMatchPattern: # CSosGroupBranchPattern
+    m_matchSoundEventName: 16 # CUtlString
+    m_matchSoundEventSubString: 24 # CUtlString
+    m_flEntIndex: 32 # float
+    m_flOpvar: 36 # float
+CSosSoundEventGroupListSchema:
+    m_groupList: 0 # CUtlVector<CSosSoundEventGroupSchema>
+CSosSoundEventGroupSchema:
+    m_name: 0 # CUtlString
+    m_nType: 8 # SosGroupType_t
+    m_bIsBlocking: 12 # bool
+    m_nBlockMaxCount: 16 # int32_t
+    m_bInvertMatch: 20 # bool
+    m_matchPattern: 24 # CSosGroupMatchPattern
+    m_branchPattern: 64 # CSosGroupBranchPattern
+    m_vActions: 176 # CSosGroupActionSchema*[4]
+CSoundEventMetaData:
+    m_soundEventVMix: 0 # CStrongHandle<InfoForResourceTypeCVMixListResource>
+CVoiceContainerAmpedDecayingSineWave: # CVoiceContainerDecayingSineWave
+    m_flGainAmount: 104 # float
+CVoiceContainerBase:
+    m_curves: 32 # CUtlDict<CPiecewiseCurve,F(size=1)>
+CVoiceContainerBlend: # CVoiceContainerBase
+    m_hSoundOne: 96 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_hSoundTwo: 104 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flBlendAmount: 112 # float
+CVoiceContainerDecayingSineWave: # CVoiceContainerBase
+    m_flFrequency: 96 # float
+    m_flDecayTime: 100 # float
+CVoiceContainerDefault: # CVoiceContainerBase
+CVoiceContainerEngineSound: # CVoiceContainerBase
+    m_SoundToPlay: 96 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flTestConstantParam: 104 # float
+    m_flTestSoundEventBoundParam: 108 # float
+    m_flEngineRPM: 112 # float
+CVoiceContainerEnvelopeAnalyzer: # CVoiceContainerWavFileReader
+    m_envBuffer: 104 # CUtlVector<float>
+CVoiceContainerRandomSampler: # CVoiceContainerBase
+    m_flLoudAmplitude: 96 # float
+    m_flLoudAmplitudeJitter: 100 # float
+    m_flSoftAmplitude: 104 # float
+    m_flSoftAmplitudeJitter: 108 # float
+    m_flLoudTimeJitter: 112 # float
+    m_flSoftTimeJitter: 116 # float
+    m_grainResources: 120 # CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+CVoiceContainerRealtimeFMSineWave: # CVoiceContainerBase
+    m_flCarrierFrequency: 96 # float
+    m_flModulatorFrequency: 100 # float
+    m_flModulatorAmount: 104 # float
+CVoiceContainerTestConstant: # CVoiceContainerWavFileReader
+    m_flTestConstantParam: 104 # bool
+CVoiceContainerTestNestedDynamic: # CVoiceContainerBase
+    m_SoundToPlay: 96 # CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+    m_flTestConstantParam: 104 # float
+CVoiceContainerWavFileReader: # CVoiceContainerBase
+    m_wavFilePath: 96 # CUtlString
+SelectedEditItemInfo_t:
+    m_EditItems: 0 # CUtlVector<SosEditItemInfo_t>
+SosEditItemInfo_t:
+    itemType: 0 # SosEditItemType_t
+    itemName: 8 # CUtlString
+    itemTypeName: 16 # CUtlString
+    itemKVString: 32 # CUtlString
+    itemPos: 40 # Vector2D
+VMixAutoFilterDesc_t:
+    m_flEnvelopeAmount: 0 # float
+    m_flAttackTimeMS: 4 # float
+    m_flReleaseTimeMS: 8 # float
+    m_filter: 12 # VMixFilterDesc_t
+    m_flLFOAmount: 28 # float
+    m_flLFORate: 32 # float
+    m_flPhase: 36 # float
+    m_nLFOShape: 40 # VMixLFOShape_t
+VMixBoxverbDesc_t:
+    m_flSizeMax: 0 # float
+    m_flSizeMin: 4 # float
+    m_flComplexity: 8 # float
+    m_flDiffusion: 12 # float
+    m_flModDepth: 16 # float
+    m_flModRate: 20 # float
+    m_bParallel: 24 # bool
+    m_filterType: 28 # VMixFilterDesc_t
+    m_flWidth: 44 # float
+    m_flHeight: 48 # float
+    m_flDepth: 52 # float
+    m_flFeedbackScale: 56 # float
+    m_flFeedbackWidth: 60 # float
+    m_flFeedbackHeight: 64 # float
+    m_flFeedbackDepth: 68 # float
+    m_flOutputGain: 72 # float
+    m_flTaps: 76 # float
+VMixConvolutionDesc_t:
+    m_fldbGain: 0 # float
+    m_flPreDelayMS: 4 # float
+    m_flWetMix: 8 # float
+    m_fldbLow: 12 # float
+    m_fldbMid: 16 # float
+    m_fldbHigh: 20 # float
+    m_flLowCutoffFreq: 24 # float
+    m_flHighCutoffFreq: 28 # float
+VMixDelayDesc_t:
+    m_feedbackFilter: 0 # VMixFilterDesc_t
+    m_bEnableFilter: 16 # bool
+    m_flDelay: 20 # float
+    m_flDirectGain: 24 # float
+    m_flDelayGain: 28 # float
+    m_flFeedbackGain: 32 # float
+    m_flWidth: 36 # float
+VMixDiffusorDesc_t:
+    m_flSize: 0 # float
+    m_flComplexity: 4 # float
+    m_flFeedback: 8 # float
+    m_flOutputGain: 12 # float
+VMixDynamics3BandDesc_t:
+    m_fldbGainOutput: 0 # float
+    m_flRMSTimeMS: 4 # float
+    m_fldbKneeWidth: 8 # float
+    m_flDepth: 12 # float
+    m_flWetMix: 16 # float
+    m_flTimeScale: 20 # float
+    m_flLowCutoffFreq: 24 # float
+    m_flHighCutoffFreq: 28 # float
+    m_bPeakMode: 32 # bool
+    m_bandDesc: 36 # VMixDynamicsBand_t[3]
+VMixDynamicsBand_t:
+    m_fldbGainInput: 0 # float
+    m_fldbGainOutput: 4 # float
+    m_fldbThresholdBelow: 8 # float
+    m_fldbThresholdAbove: 12 # float
+    m_flRatioBelow: 16 # float
+    m_flRatioAbove: 20 # float
+    m_flAttackTimeMS: 24 # float
+    m_flReleaseTimeMS: 28 # float
+    m_bEnable: 32 # bool
+    m_bSolo: 33 # bool
+VMixDynamicsCompressorDesc_t:
+    m_fldbOutputGain: 0 # float
+    m_fldbCompressionThreshold: 4 # float
+    m_fldbKneeWidth: 8 # float
+    m_flCompressionRatio: 12 # float
+    m_flAttackTimeMS: 16 # float
+    m_flReleaseTimeMS: 20 # float
+    m_flRMSTimeMS: 24 # float
+    m_flWetMix: 28 # float
+    m_bPeakMode: 32 # bool
+VMixDynamicsDesc_t:
+    m_fldbGain: 0 # float
+    m_fldbNoiseGateThreshold: 4 # float
+    m_fldbCompressionThreshold: 8 # float
+    m_fldbLimiterThreshold: 12 # float
+    m_fldbKneeWidth: 16 # float
+    m_flRatio: 20 # float
+    m_flLimiterRatio: 24 # float
+    m_flAttackTimeMS: 28 # float
+    m_flReleaseTimeMS: 32 # float
+    m_flRMSTimeMS: 36 # float
+    m_flWetMix: 40 # float
+    m_bPeakMode: 44 # bool
+VMixEQ8Desc_t:
+    m_stages: 0 # VMixFilterDesc_t[8]
+VMixEffectChainDesc_t:
+    m_flCrossfadeTime: 0 # float
+VMixEnvelopeDesc_t:
+    m_flAttackTimeMS: 0 # float
+    m_flHoldTimeMS: 4 # float
+    m_flReleaseTimeMS: 8 # float
+VMixFilterDesc_t:
+    m_nFilterType: 0 # VMixFilterType_t
+    m_nFilterSlope: 2 # VMixFilterSlope_t
+    m_bEnabled: 3 # bool
+    m_fldbGain: 4 # float
+    m_flCutoffFreq: 8 # float
+    m_flQ: 12 # float
+VMixFreeverbDesc_t:
+    m_flRoomSize: 0 # float
+    m_flDamp: 4 # float
+    m_flWidth: 8 # float
+    m_flLateReflections: 12 # float
+VMixModDelayDesc_t:
+    m_feedbackFilter: 0 # VMixFilterDesc_t
+    m_bPhaseInvert: 16 # bool
+    m_flGlideTime: 20 # float
+    m_flDelay: 24 # float
+    m_flOutputGain: 28 # float
+    m_flFeedbackGain: 32 # float
+    m_flModRate: 36 # float
+    m_flModDepth: 40 # float
+    m_bApplyAntialiasing: 44 # bool
+VMixOscDesc_t:
+    oscType: 0 # VMixLFOShape_t
+    m_freq: 4 # float
+    m_flPhase: 8 # float
+VMixPannerDesc_t:
+    m_type: 0 # VMixPannerType_t
+    m_flStrength: 4 # float
+VMixPitchShiftDesc_t:
+    m_nGrainSampleCount: 0 # int32_t
+    m_flPitchShift: 4 # float
+    m_nQuality: 8 # int32_t
+    m_nProcType: 12 # int32_t
+VMixPlateverbDesc_t:
+    m_flPrefilter: 0 # float
+    m_flInputDiffusion1: 4 # float
+    m_flInputDiffusion2: 8 # float
+    m_flDecay: 12 # float
+    m_flDamp: 16 # float
+    m_flFeedbackDiffusion1: 20 # float
+    m_flFeedbackDiffusion2: 24 # float
+VMixShaperDesc_t:
+    m_nShape: 0 # int32_t
+    m_fldbDrive: 4 # float
+    m_fldbOutputGain: 8 # float
+    m_flWetMix: 12 # float
+    m_nOversampleFactor: 16 # int32_t
+VMixSubgraphSwitchDesc_t:
+    m_interpolationMode: 0 # VMixSubgraphSwitchInterpolationType_t
+    m_bOnlyTailsOnFadeOut: 4 # bool
+    m_flInterpolationTime: 8 # float
+VMixUtilityDesc_t:
+    m_nOp: 0 # VMixChannelOperation_t
+    m_flInputPan: 4 # float
+    m_flOutputBalance: 8 # float
+    m_fldbOutputGain: 12 # float
+    m_bBassMono: 16 # bool
+    m_flBassFreq: 20 # float
+VMixVocoderDesc_t:
+    m_nBandCount: 0 # int32_t
+    m_flBandwidth: 4 # float
+    m_fldBModGain: 8 # float
+    m_flFreqRangeStart: 12 # float
+    m_flFreqRangeEnd: 16 # float
+    m_fldBUnvoicedGain: 20 # float
+    m_flAttackTimeMS: 24 # float
+    m_flReleaseTimeMS: 28 # float
+    m_nDebugBand: 32 # int32_t
+    m_bPeakMode: 36 # bool

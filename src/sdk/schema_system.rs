@@ -6,6 +6,8 @@ use super::SchemaSystemTypeScope;
 
 use crate::os::Process;
 
+use crate::config::SCHEMA_CONF;
+
 pub struct SchemaSystem<'a> {
     process: &'a Process,
     address: usize,
@@ -13,10 +15,9 @@ pub struct SchemaSystem<'a> {
 
 impl<'a> SchemaSystem<'a> {
     pub fn new(process: &'a Process) -> Result<Self> {
-        let mut address = process.find_pattern(
-            "schemasystem.dll",
-            "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28"
-        ).expect("unable to find schema system pattern");
+        let mut address = process
+            .find_pattern(SCHEMA_CONF.module_name, SCHEMA_CONF.pattern)
+            .expect("unable to find schema system pattern");
 
         address = process.resolve_rip(address, None, None)?;
 
@@ -24,13 +25,17 @@ impl<'a> SchemaSystem<'a> {
     }
 
     pub fn type_scopes(&self) -> Result<Vec<SchemaSystemTypeScope>> {
-        let size = self.process.read_memory::<u32>(self.address + 0x190)?;
+        let size = self
+            .process
+            .read_memory::<u32>(self.address + SCHEMA_CONF.type_scope_size_offset)?;
 
         if size == 0 {
             bail!("no type scopes found");
         }
 
-        let data = self.process.read_memory::<usize>(self.address + 0x198)?;
+        let data = self
+            .process
+            .read_memory::<usize>(self.address + SCHEMA_CONF.type_scope_data_offset)?;
 
         let mut addresses = vec![0; size as usize];
 

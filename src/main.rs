@@ -57,7 +57,7 @@ struct Args {
 
     /// Output directory for generated files.
     /// Defaults to `generated`.
-    #[arg(long, default_value = "generated")]
+    #[arg(long, default_value = config::DEFAULT_OUT_DIR)]
     output: String,
 
     /// Enable verbose output.
@@ -86,14 +86,14 @@ fn main() -> Result<()> {
 
     TermLogger::init(log_level, config, TerminalMode::Mixed, ColorChoice::Auto)?;
 
-    if !Path::new("config.json").exists() {
-        bail!("Missing config.json file");
+    if !Path::new(config::OFFSETS_CONF).exists() {
+        bail!("Missing {} file", config::OFFSETS_CONF);
     }
 
     // Create the output directory if it doesn't exist.
     fs::create_dir_all(&output)?;
 
-    let mut process = Process::new("cs2.exe")?;
+    let mut process = Process::new(config::PROC_NAME)?;
 
     let now = Instant::now();
 

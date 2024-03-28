@@ -1,18 +1,52 @@
 use anyhow::Result;
 
-use goblin::pe::export::Export;
-use goblin::pe::import::Import;
-use goblin::pe::options::ParseOptions;
-use goblin::pe::section_table::SectionTable;
-use goblin::pe::PE;
+#[cfg(target_os = "windows")]
+use goblin::pe::{
+    export::Export, import::Import, options::ParseOptions, section_table::SectionTable, PE,
+};
 
+#[cfg(target_os = "linux")]
+use goblin::elf::{sym, Elf, SectionHeader};
+#[cfg(target_os = "linux")]
+use std::path::PathBuf;
+
+/// Represents the data associated with a specific module on Linux.
+#[cfg(target_os = "linux")]
+#[derive(Debug)]
+pub struct ModuleEntry {
+    pub path: PathBuf,
+    pub start_addr: usize,
+    pub data: Vec<u8>,
+}
+
+/// Represents a module loaded in a Windows process.
+#[cfg(target_os = "windows")]
 pub struct Module<'a> {
+    /// The name of the module.
     pub name: &'a str,
+
+    /// A reference to a slice of bytes containing the module data.
     pub data: &'a [u8],
+
+    /// The PE file format representation of the module.
     pub pe: PE<'a>,
 }
 
+/// Represents a module loaded in a Linux process.
+#[cfg(target_os = "linux")]
+pub struct Module<'a> {
+    /// The name of the module.
+    pub name: &'a str,
+
+    /// A reference to a slice of bytes containing the module info.
+    pub module_info: &'a ModuleEntry,
+
+    /// The Elf file format representation of the module.
+    pub elf: Elf<'a>,
+}
+
 impl<'a> Module<'a> {
+    #[cfg(target_os = "windows")]
     pub fn parse(name: &'a str, data: &'a [u8]) -> Result<Self> {
         let pe = PE::parse_with_opts(
             data,
@@ -25,22 +59,67 @@ impl<'a> Module<'a> {
         Ok(Self { name, data, pe })
     }
 
+    // parse the elf
+    #[cfg(target_os = "linux")]
+    pub fn parse(name: &'a str, module_entry: &'a ModuleEntry) -> Result<Self> {
+        let elf = Elf::parse(&module_entry.data)?;
+        Ok(Self {
+            name,
+            module_info: module_entry,
+            elf,
+        })
+    }
+
     #[inline]
+    #[cfg(target_os = "windows")]
     pub fn base(&self) -> usize {
         self.pe.image_base
     }
 
     #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn base(&self) -> usize {
+        self.module_info.start_addr
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
     pub fn exports(&self) -> &[Export] {
         &self.pe.exports
     }
 
     #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn exports(&self) -> Vec<sym::Sym> {
+        let exports: Vec<sym::Sym> = self
+            .elf
+            .dynsyms
+            .iter()
+            .filter(|sym| sym.st_bind() == sym::STB_GLOBAL || sym.st_bind() == sym::STB_WEAK)
+            .collect();
+        exports
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
     pub fn imports(&self) -> &[Import] {
         &self.pe.imports
     }
 
     #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn imports(&self) -> Vec<sym::Sym> {
+        let imports: Vec<sym::Sym> = self
+            .elf
+            .dynsyms
+            .iter()
+            .filter(|sym| sym.is_import())
+            .collect();
+        imports
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
     pub fn export_by_name(&self, name: &str) -> Option<usize> {
         self.pe
             .exports
@@ -50,6 +129,21 @@ impl<'a> Module<'a> {
     }
 
     #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn export_by_name(&self, name: &str) -> Option<usize> {
+        let base_addr: usize = self.base();
+        self.elf
+            .dynsyms
+            .iter()
+            .find(|sym| {
+                (sym.st_bind() == sym::STB_GLOBAL || sym.st_bind() == sym::STB_WEAK)
+                    && self.elf.dynstrtab.get_at(sym.st_name) == Some(name)
+            })
+            .map(|sym| (base_addr as u64 + sym.st_value) as usize)
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
     pub fn import_by_name(&self, name: &str) -> Option<usize> {
         self.pe
             .imports
@@ -59,11 +153,30 @@ impl<'a> Module<'a> {
     }
 
     #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn get_import_by_name(&self, name: &str) -> Option<usize> {
+        let base_addr: usize = self.base().into();
+        self.elf
+            .dynsyms
+            .iter()
+            .find(|sym| sym.is_import() && self.elf.dynstrtab.get_at(sym.st_name) == Some(name))
+            .map(|sym| (base_addr as u64 + sym.st_value) as usize)
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
     pub fn sections(&self) -> &[SectionTable] {
         &self.pe.sections
     }
 
     #[inline]
+    #[cfg(target_os = "linux")]
+    pub fn sections(&self) -> &[SectionHeader] {
+        self.elf.section_headers.as_slice()
+    }
+
+    #[inline]
+    #[cfg(target_os = "windows")]
     pub fn size(&self) -> u32 {
         self.pe
             .header

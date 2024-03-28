@@ -1,0 +1,398 @@
+{
+  "AABB_t": {
+    "data": {
+      "m_vMaxBounds": {
+        "value": 12,
+        "comment": "Vector"
+      },
+      "m_vMinBounds": {
+        "value": 0,
+        "comment": "Vector"
+      }
+    },
+    "comment": null
+  },
+  "CFuseProgram": {
+    "data": {
+      "m_nMaxTempVarsUsed": {
+        "value": 72,
+        "comment": "int32_t"
+      },
+      "m_programBuffer": {
+        "value": 0,
+        "comment": "CUtlVector<uint8_t>"
+      },
+      "m_variablesRead": {
+        "value": 24,
+        "comment": "CUtlVector<FuseVariableIndex_t>"
+      },
+      "m_variablesWritten": {
+        "value": 48,
+        "comment": "CUtlVector<FuseVariableIndex_t>"
+      }
+    },
+    "comment": null
+  },
+  "CFuseSymbolTable": {
+    "data": {
+      "m_constantMap": {
+        "value": 72,
+        "comment": "CUtlHashtable<CUtlStringToken,int32_t>"
+      },
+      "m_constants": {
+        "value": 0,
+        "comment": "CUtlVector<ConstantInfo_t>"
+      },
+      "m_functionMap": {
+        "value": 136,
+        "comment": "CUtlHashtable<CUtlStringToken,int32_t>"
+      },
+      "m_functions": {
+        "value": 48,
+        "comment": "CUtlVector<FunctionInfo_t>"
+      },
+      "m_variableMap": {
+        "value": 104,
+        "comment": "CUtlHashtable<CUtlStringToken,int32_t>"
+      },
+      "m_variables": {
+        "value": 24,
+        "comment": "CUtlVector<VariableInfo_t>"
+      }
+    },
+    "comment": null
+  },
+  "ConstantInfo_t": {
+    "data": {
+      "m_flValue": {
+        "value": 12,
+        "comment": "float"
+      },
+      "m_name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_nameToken": {
+        "value": 8,
+        "comment": "CUtlStringToken"
+      }
+    },
+    "comment": null
+  },
+  "FourQuaternions": {
+    "data": {
+      "w": {
+        "value": 48,
+        "comment": "fltx4"
+      },
+      "x": {
+        "value": 0,
+        "comment": "fltx4"
+      },
+      "y": {
+        "value": 16,
+        "comment": "fltx4"
+      },
+      "z": {
+        "value": 32,
+        "comment": "fltx4"
+      }
+    },
+    "comment": null
+  },
+  "FunctionInfo_t": {
+    "data": {
+      "m_bIsPure": {
+        "value": 26,
+        "comment": "bool"
+      },
+      "m_nIndex": {
+        "value": 24,
+        "comment": "FuseFunctionIndex_t"
+      },
+      "m_nParamCount": {
+        "value": 20,
+        "comment": "int32_t"
+      },
+      "m_name": {
+        "value": 8,
+        "comment": "CUtlString"
+      },
+      "m_nameToken": {
+        "value": 16,
+        "comment": "CUtlStringToken"
+      }
+    },
+    "comment": null
+  },
+  "FuseFunctionIndex_t": {
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
+  },
+  "FuseVariableIndex_t": {
+    "data": {
+      "m_Value": {
+        "value": 0,
+        "comment": "uint16_t"
+      }
+    },
+    "comment": null
+  },
+  "InfoForResourceTypeCAnimData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCAnimationGroup": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCCSGOEconItem": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCChoreoSceneFileData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCCompositeMaterialKit": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCDACGameDefsData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCDOTANovelsList": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCDOTAPatchNotesList": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCDotaItemDefinitionResource": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCEntityLump": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCGcExportableExternalData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCJavaScriptResource": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCModel": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCMorphSetData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCNmClip": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCNmGraph": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCNmGraphDataSet": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCNmSkeleton": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCPanoramaDynamicImages": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCPanoramaLayout": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCPanoramaStyle": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCPhysAggregateData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCPostProcessingResource": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCRenderMesh": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCResponseRulesList": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCSequenceGroupData": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCSmartProp": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCTextureBase": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCTypeScriptResource": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVDataResource": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVMixListResource": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVPhysXSurfacePropertiesList": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVSoundEventScriptList": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVSoundStackScriptList": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVoiceContainerBase": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCVoxelVisibility": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeCWorldNode": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeIAnimGraphModelBinding": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeIMaterial2": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeIParticleSnapshot": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeIParticleSystemDefinition": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeIPulseGraphDef": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeIVectorGraphic": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeManifestTestResource_t": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeProceduralTestResource_t": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeTestResource_t": {
+    "data": {},
+    "comment": null
+  },
+  "InfoForResourceTypeWorld_t": {
+    "data": {},
+    "comment": null
+  },
+  "ManifestTestResource_t": {
+    "data": {
+      "m_child": {
+        "value": 8,
+        "comment": "CStrongHandle<InfoForResourceTypeManifestTestResource_t>"
+      },
+      "m_name": {
+        "value": 0,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
+  },
+  "PackedAABB_t": {
+    "data": {
+      "m_nPackedMax": {
+        "value": 4,
+        "comment": "uint32_t"
+      },
+      "m_nPackedMin": {
+        "value": 0,
+        "comment": "uint32_t"
+      }
+    },
+    "comment": null
+  },
+  "TestResource_t": {
+    "data": {
+      "m_name": {
+        "value": 0,
+        "comment": "CUtlString"
+      }
+    },
+    "comment": null
+  },
+  "VariableInfo_t": {
+    "data": {
+      "m_eAccess": {
+        "value": 16,
+        "comment": "FuseVariableAccess_t"
+      },
+      "m_eVarType": {
+        "value": 15,
+        "comment": "FuseVariableType_t"
+      },
+      "m_nIndex": {
+        "value": 12,
+        "comment": "FuseVariableIndex_t"
+      },
+      "m_nNumComponents": {
+        "value": 14,
+        "comment": "uint8_t"
+      },
+      "m_name": {
+        "value": 0,
+        "comment": "CUtlString"
+      },
+      "m_nameToken": {
+        "value": 8,
+        "comment": "CUtlStringToken"
+      }
+    },
+    "comment": null
+  }
+}

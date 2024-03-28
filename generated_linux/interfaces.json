@@ -1,0 +1,567 @@
+{
+  "libanimationsystem_so": {
+    "data": {
+      "AnimationSystemUtils_001": {
+        "value": 1624672,
+        "comment": null
+      },
+      "AnimationSystem_001": {
+        "value": 1624144,
+        "comment": null
+      }
+    },
+    "comment": "libanimationsystem.so"
+  },
+  "libclient_so": {
+    "data": {
+      "ClientToolsInfo_001": {
+        "value": 13976928,
+        "comment": null
+      },
+      "EmptyWorldService001_Client": {
+        "value": 10780448,
+        "comment": null
+      },
+      "GameClientExports001": {
+        "value": 13975984,
+        "comment": null
+      },
+      "LegacyGameUI001": {
+        "value": 15859120,
+        "comment": null
+      },
+      "Source2Client002": {
+        "value": 13976096,
+        "comment": null
+      },
+      "Source2ClientConfig001": {
+        "value": 10664784,
+        "comment": null
+      },
+      "Source2ClientPrediction001": {
+        "value": 14563168,
+        "comment": null
+      },
+      "Source2ClientUI001": {
+        "value": 15591360,
+        "comment": null
+      }
+    },
+    "comment": "libclient.so"
+  },
+  "libengine2_so": {
+    "data": {
+      "BenchmarkService001": {
+        "value": 1990432,
+        "comment": null
+      },
+      "BugService001": {
+        "value": 1974560,
+        "comment": null
+      },
+      "ClientServerEngineLoopService_001": {
+        "value": 1784432,
+        "comment": null
+      },
+      "EngineGameUI001": {
+        "value": 3625712,
+        "comment": null
+      },
+      "EngineServiceMgr001": {
+        "value": 1718752,
+        "comment": null
+      },
+      "GameEventSystemClientV001": {
+        "value": 1739344,
+        "comment": null
+      },
+      "GameEventSystemServerV001": {
+        "value": 1739360,
+        "comment": null
+      },
+      "GameResourceServiceClientV001": {
+        "value": 1996880,
+        "comment": null
+      },
+      "GameResourceServiceServerV001": {
+        "value": 1996896,
+        "comment": null
+      },
+      "GameUIService_001": {
+        "value": 2028432,
+        "comment": null
+      },
+      "HostStateMgr001": {
+        "value": 1762768,
+        "comment": null
+      },
+      "INETSUPPORT_001": {
+        "value": 3403792,
+        "comment": null
+      },
+      "InputService_001": {
+        "value": 2046304,
+        "comment": null
+      },
+      "KeyValueCache001": {
+        "value": 1773344,
+        "comment": null
+      },
+      "MapListService_001": {
+        "value": 2128224,
+        "comment": null
+      },
+      "NetworkClientService_001": {
+        "value": 2286240,
+        "comment": null
+      },
+      "NetworkP2PService_001": {
+        "value": 2377920,
+        "comment": null
+      },
+      "NetworkServerService_001": {
+        "value": 2144784,
+        "comment": null
+      },
+      "NetworkService_001": {
+        "value": 2142512,
+        "comment": null
+      },
+      "RenderService_001": {
+        "value": 2399360,
+        "comment": null
+      },
+      "ScreenshotService001": {
+        "value": 2410608,
+        "comment": null
+      },
+      "SimpleEngineLoopService_001": {
+        "value": 1869616,
+        "comment": null
+      },
+      "SoundService_001": {
+        "value": 2428560,
+        "comment": null
+      },
+      "Source2EngineToClient001": {
+        "value": 2911840,
+        "comment": null
+      },
+      "Source2EngineToClientStringTable001": {
+        "value": 2745936,
+        "comment": null
+      },
+      "Source2EngineToServer001": {
+        "value": 3069936,
+        "comment": null
+      },
+      "Source2EngineToServerStringTable001": {
+        "value": 2948992,
+        "comment": null
+      },
+      "SplitScreenService_001": {
+        "value": 2458128,
+        "comment": null
+      },
+      "StatsService_001": {
+        "value": 2472288,
+        "comment": null
+      },
+      "ToolService_001": {
+        "value": 2493408,
+        "comment": null
+      },
+      "VENGINE_GAMEUIFUNCS_VERSION005": {
+        "value": 3624304,
+        "comment": null
+      },
+      "VProfService_001": {
+        "value": 2499472,
+        "comment": null
+      }
+    },
+    "comment": "libengine2.so"
+  },
+  "libfilesystem_stdio_so": {
+    "data": {
+      "VAsyncFileSystem2_001": {
+        "value": 524672,
+        "comment": null
+      },
+      "VFileSystem017": {
+        "value": 524656,
+        "comment": null
+      }
+    },
+    "comment": "libfilesystem_stdio.so"
+  },
+  "libhost_so": {
+    "data": {
+      "DebugDrawQueueManager001": {
+        "value": 797808,
+        "comment": null
+      },
+      "GameModelInfo001": {
+        "value": 776432,
+        "comment": null
+      },
+      "GameSystem2HostHook": {
+        "value": 778288,
+        "comment": null
+      },
+      "HostUtils001": {
+        "value": 779440,
+        "comment": null
+      },
+      "PredictionDiffManager001": {
+        "value": 783424,
+        "comment": null
+      },
+      "SaveRestoreDataVersion001": {
+        "value": 792496,
+        "comment": null
+      },
+      "SinglePlayerSharedMemory001": {
+        "value": 793200,
+        "comment": null
+      },
+      "Source2Host001": {
+        "value": 795088,
+        "comment": null
+      }
+    },
+    "comment": "libhost.so"
+  },
+  "libinputsystem_so": {
+    "data": {
+      "InputStackSystemVersion001": {
+        "value": 71744,
+        "comment": null
+      },
+      "InputSystemVersion001": {
+        "value": 77104,
+        "comment": null
+      }
+    },
+    "comment": "libinputsystem.so"
+  },
+  "liblocalize_so": {
+    "data": {
+      "Localize_001": {
+        "value": 121600,
+        "comment": null
+      }
+    },
+    "comment": "liblocalize.so"
+  },
+  "libmatchmaking_so": {
+    "data": {
+      "GameTypes001": {
+        "value": 1245024,
+        "comment": null
+      },
+      "MATCHFRAMEWORK_001": {
+        "value": 2114624,
+        "comment": null
+      }
+    },
+    "comment": "libmatchmaking.so"
+  },
+  "libmaterialsystem2_so": {
+    "data": {
+      "FontManager_001": {
+        "value": 500544,
+        "comment": null
+      },
+      "MaterialUtils_001": {
+        "value": 412544,
+        "comment": null
+      },
+      "PostProcessingSystem_001": {
+        "value": 564336,
+        "comment": null
+      },
+      "TextLayout_001": {
+        "value": 553472,
+        "comment": null
+      },
+      "VMaterialSystem2_001": {
+        "value": 182176,
+        "comment": null
+      }
+    },
+    "comment": "libmaterialsystem2.so"
+  },
+  "libmeshsystem_so": {
+    "data": {
+      "MeshSystem001": {
+        "value": 608272,
+        "comment": null
+      }
+    },
+    "comment": "libmeshsystem.so"
+  },
+  "libnetworksystem_so": {
+    "data": {
+      "FlattenedSerializersVersion001": {
+        "value": 1414240,
+        "comment": null
+      },
+      "NetworkMessagesVersion001": {
+        "value": 1575824,
+        "comment": null
+      },
+      "NetworkSystemVersion001": {
+        "value": 1744096,
+        "comment": null
+      },
+      "SerializedEntitiesVersion001": {
+        "value": 1845072,
+        "comment": null
+      }
+    },
+    "comment": "libnetworksystem.so"
+  },
+  "libpanorama_so": {
+    "data": {
+      "PanoramaUIEngine001": {
+        "value": 2232192,
+        "comment": null
+      }
+    },
+    "comment": "libpanorama.so"
+  },
+  "libpanorama_text_pango_so": {
+    "data": {
+      "PanoramaTextServices001": {
+        "value": 771264,
+        "comment": null
+      }
+    },
+    "comment": "libpanorama_text_pango.so"
+  },
+  "libpanoramauiclient_so": {
+    "data": {
+      "PanoramaUIClient001": {
+        "value": 1092288,
+        "comment": null
+      }
+    },
+    "comment": "libpanoramauiclient.so"
+  },
+  "libparticles_so": {
+    "data": {
+      "ParticleSystemMgr003": {
+        "value": 2014816,
+        "comment": null
+      }
+    },
+    "comment": "libparticles.so"
+  },
+  "libpulse_system_so": {
+    "data": {
+      "IPulseSystem_001": {
+        "value": 219056,
+        "comment": null
+      }
+    },
+    "comment": "libpulse_system.so"
+  },
+  "librendersystemvulkan_so": {
+    "data": {
+      "RenderDeviceMgr001": {
+        "value": 1593600,
+        "comment": null
+      },
+      "RenderUtils_001": {
+        "value": 1055136,
+        "comment": null
+      }
+    },
+    "comment": "librendersystemvulkan.so"
+  },
+  "libresourcesystem_so": {
+    "data": {
+      "ResourceSystem013": {
+        "value": 199312,
+        "comment": null
+      }
+    },
+    "comment": "libresourcesystem.so"
+  },
+  "libscenefilecache_so": {
+    "data": {
+      "ResponseRulesCache001": {
+        "value": 560704,
+        "comment": null
+      },
+      "SceneFileCache002": {
+        "value": 547600,
+        "comment": null
+      }
+    },
+    "comment": "libscenefilecache.so"
+  },
+  "libscenesystem_so": {
+    "data": {
+      "RenderingPipelines_001": {
+        "value": 1183264,
+        "comment": null
+      },
+      "SceneSystem_002": {
+        "value": 1458944,
+        "comment": null
+      },
+      "SceneUtils_001": {
+        "value": 1968752,
+        "comment": null
+      }
+    },
+    "comment": "libscenesystem.so"
+  },
+  "libschemasystem_so": {
+    "data": {
+      "SchemaSystem_001": {
+        "value": 135664,
+        "comment": null
+      }
+    },
+    "comment": "libschemasystem.so"
+  },
+  "libserver_so": {
+    "data": {
+      "EmptyWorldService001_Server": {
+        "value": 12069776,
+        "comment": null
+      },
+      "EntitySubclassUtilsV001": {
+        "value": 8785232,
+        "comment": null
+      },
+      "NavGameTest001": {
+        "value": 17381424,
+        "comment": null
+      },
+      "ServerToolsInfo_001": {
+        "value": 15145168,
+        "comment": null
+      },
+      "Source2GameClients001": {
+        "value": 15145056,
+        "comment": null
+      },
+      "Source2GameDirector001": {
+        "value": 7094608,
+        "comment": null
+      },
+      "Source2GameEntities001": {
+        "value": 15145040,
+        "comment": null
+      },
+      "Source2Server001": {
+        "value": 15144256,
+        "comment": null
+      },
+      "Source2ServerConfig001": {
+        "value": 11594288,
+        "comment": null
+      },
+      "customnavsystem001": {
+        "value": 8355216,
+        "comment": null
+      }
+    },
+    "comment": "libserver.so"
+  },
+  "libsoundsystem_so": {
+    "data": {
+      "SoundOpSystem001": {
+        "value": 1400448,
+        "comment": null
+      },
+      "SoundOpSystemEdit001": {
+        "value": 709456,
+        "comment": null
+      },
+      "SoundSystem001": {
+        "value": 1853728,
+        "comment": null
+      },
+      "VMixEditTool001": {
+        "value": 2048832,
+        "comment": null
+      }
+    },
+    "comment": "libsoundsystem.so"
+  },
+  "libsteamaudio_so": {
+    "data": {
+      "SteamAudio001": {
+        "value": 202128,
+        "comment": null
+      }
+    },
+    "comment": "libsteamaudio.so"
+  },
+  "libtier0_so": {
+    "data": {
+      "TestScriptMgr001": {
+        "value": 1829104,
+        "comment": null
+      },
+      "VEngineCvar007": {
+        "value": 988016,
+        "comment": null
+      },
+      "VProcessUtils002": {
+        "value": 1688432,
+        "comment": null
+      },
+      "VStringTokenSystem001": {
+        "value": 2009296,
+        "comment": null
+      }
+    },
+    "comment": "libtier0.so"
+  },
+  "libv8system_so": {
+    "data": {
+      "Source2V8System001": {
+        "value": 112176,
+        "comment": null
+      }
+    },
+    "comment": "libv8system.so"
+  },
+  "libvphysics2_so": {
+    "data": {
+      "VPhysics2_Handle_Interface_001": {
+        "value": 794576,
+        "comment": null
+      },
+      "VPhysics2_Interface_001": {
+        "value": 793536,
+        "comment": null
+      }
+    },
+    "comment": "libvphysics2.so"
+  },
+  "libvscript_so": {
+    "data": {
+      "VScriptManager010": {
+        "value": 156208,
+        "comment": null
+      }
+    },
+    "comment": "libvscript.so"
+  },
+  "libworldrenderer_so": {
+    "data": {
+      "WorldRendererMgr001": {
+        "value": 623280,
+        "comment": null
+      }
+    },
+    "comment": "libworldrenderer.so"
+  }
+}
