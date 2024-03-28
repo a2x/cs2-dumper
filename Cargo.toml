@@ -1,6 +1,6 @@
 [package]
 name = "cs2-dumper"
-version = "1.1.5"
+version = "0.1.0"
 authors = ["a2x"]
 edition = "2021"
 readme = "README.md"
@@ -8,30 +8,26 @@ repository = "https://github.com/a2x/cs2-dumper"
 license = "MIT"
 
 [dependencies]
-anyhow = "1.0"
-chrono = "0.4"
-clap = { version = "4.4", features = ["derive"] }
-goblin = { git = "https://github.com/m4b/goblin" }
-lazy_static = "1.4"
+bitflags = { version = "2.5", features = ["serde"] }
+clap = { version = "4.5", features = ["cargo"] }
+chrono = { version = "0.4", features = ["serde"] }
+heck = "0.5"
 log = "0.4"
-regex = "1.10"
+memflow = "0.2"
+memflow-native = { git = "https://github.com/memflow/memflow-native" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-simplelog = { version = "0.12", features = ["paris"] }
+simplelog = "0.12"
+skidscan = "2.0"
+skidscan-macros = "0.1"
+thiserror = "1.0"
 
-[dependencies.windows]
-version = "0.54"
-features = [
-    "Win32_Foundation",
-    "Win32_System_Diagnostics_Debug",
-    "Win32_System_Diagnostics_ToolHelp",
-    "Win32_System_SystemInformation",
-    "Win32_System_SystemServices",
-    "Win32_System_Threading",
-]
+[profile.dev]
+opt-level = 1
 
-[target.'cfg(target_os = "linux")'.dependencies]
-procfs = "0.16.0"
+[profile.dev.package."*"]
+opt-level = 3
 
 [profile.release]
+lto = true
 strip = true

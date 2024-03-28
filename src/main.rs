@@ -1,132 +1,148 @@
-#![allow(dead_code)]
+#![feature(lazy_cell)]
 
-use std::fs;
-use std::path::Path;
+use std::path::PathBuf;
 use std::time::Instant;
+use std::{env, fs};
 
-use anyhow::{bail, Result};
+use clap::*;
 
-use clap::Parser;
+use log::{info, Level};
 
-use log::LevelFilter;
+use memflow::prelude::v1::*;
 
-use simplelog::{info, ColorChoice, ConfigBuilder, TermLogger, TerminalMode};
+use simplelog::{ColorChoice, TermLogger};
 
-use builder::*;
-use dumper::{dump_interfaces, dump_offsets, dump_schemas};
-use os::Process;
+use config::CONFIG;
+use error::Result;
+use output::Results;
 
-mod builder;
+mod analysis;
 mod config;
-mod dumper;
-mod os;
-mod sdk;
-
-#[derive(Debug, Parser)]
-#[command(name = "cs2-dumper")]
-#[command(author = "a2x")]
-#[command(version = "1.1.5")]
-struct Args {
-    /// Whether to dump interfaces.
-    #[arg(short, long)]
-    interfaces: bool,
-
-    /// Whether to dump offsets.
-    #[arg(short, long)]
-    offsets: bool,
-
-    /// Whether to dump schema classes.
-    #[arg(short, long)]
-    schemas: bool,
-
-    /// List of file builders to use.
-    /// Valid values: `.cs`, `.hpp`, `.json`, `.py`, `.rs`, `.yaml`.
-    #[arg(
-        short,
-        long,
-        value_parser = map_file_extension_to_builder,
-        value_delimiter = ',',
-        default_values = [".cs", ".hpp", ".json", ".py", ".rs", ".yaml"],
-    )]
-    builders: Vec<FileBuilderEnum>,
-
-    /// Indentation level for generated files.
-    /// Defaults to 4 spaces.
-    #[arg(long, default_value_t = 4)]
-    indent: usize,
-
-    /// Output directory for generated files.
-    /// Defaults to `generated`.
-    #[arg(long, default_value = config::DEFAULT_OUT_DIR)]
-    output: String,
-
-    /// Enable verbose output.
-    #[arg(short, long)]
-    verbose: bool,
-}
+mod error;
+mod output;
+mod source_engine;
 
 fn main() -> Result<()> {
-    let Args {
-        interfaces,
-        offsets,
-        schemas,
-        mut builders,
-        indent,
-        output,
-        verbose,
-    } = Args::parse();
+    let start_time = Instant::now();
 
-    let log_level = if verbose {
-        LevelFilter::Debug
-    } else {
-        LevelFilter::Info
-    };
-
-    let config = ConfigBuilder::new().add_filter_ignore_str("goblin").build();
-
-    TermLogger::init(log_level, config, TerminalMode::Mixed, ColorChoice::Auto)?;
-
-    if !Path::new(config::OFFSETS_CONF).exists() {
-        bail!("Missing {} file", config::OFFSETS_CONF);
-    }
+    let matches = parse_args();
+    let (conn_name, conn_args, indent_size, out_dir) = extract_args(&matches)?;
 
     // Create the output directory if it doesn't exist.
-    fs::create_dir_all(&output)?;
+    fs::create_dir_all(&out_dir)?;
 
-    let mut process = Process::new(config::PROC_NAME)?;
+    let os = if let Some(conn_name) = conn_name {
+        let inventory = Inventory::scan();
 
-    let now = Instant::now();
+        let os_name = match env::consts::OS {
+            "linux" => "linux",
+            "windows" => "win32",
+            _ => panic!("unsupported os"),
+        };
 
-    let all = !(interfaces || offsets || schemas);
+        inventory
+            .builder()
+            .connector(&conn_name)
+            .args(conn_args)
+            .os(os_name)
+            .build()?
+    } else {
+        // Fallback to the native OS layer if no connector name was provided.
+        memflow_native::create_os(&Default::default(), Default::default())?
+    };
 
-    if schemas || all {
-        dump_schemas(&mut process, &mut builders, &output, indent)?;
-    }
+    let mut process = os.into_process_by_name(&CONFIG.executable)?;
 
-    if interfaces || all {
-        dump_interfaces(&mut process, &mut builders, &output, indent)?;
-    }
+    let buttons = analysis::buttons(&mut process)?;
+    let interfaces = analysis::interfaces(&mut process)?;
+    let offsets = analysis::offsets(&mut process)?;
+    let schemas = analysis::schemas(&mut process)?;
 
-    if offsets || all {
-        dump_offsets(&mut process, &mut builders, &output, indent)?;
-    }
+    let results = Results::new(buttons, interfaces, offsets, schemas);
 
-    info!(
-        "<on-green>Done!</> <green>Time elapsed: <b>{:?}</></>",
-        now.elapsed()
-    );
+    results.dump_all(&out_dir, indent_size)?;
+
+    info!("finished in {:?}", start_time.elapsed());
 
     Ok(())
 }
 
-fn map_file_extension_to_builder(extension: &str) -> Result<FileBuilderEnum, &'static str> {
-    match extension {
-        ".cs" => Ok(FileBuilderEnum::CSharpFileBuilder(CSharpFileBuilder)),
-        ".hpp" => Ok(FileBuilderEnum::CppFileBuilder(CppFileBuilder)),
-        ".json" => Ok(FileBuilderEnum::JsonFileBuilder(JsonFileBuilder::default())),
-        ".py" => Ok(FileBuilderEnum::PythonFileBuilder(PythonFileBuilder)),
-        ".rs" => Ok(FileBuilderEnum::RustFileBuilder(RustFileBuilder)),
-        ".yaml" => Ok(FileBuilderEnum::YamlFileBuilder(YamlFileBuilder)),
-        _ => Err("Invalid file extension"),
-    }
+fn parse_args() -> ArgMatches {
+    Command::new("cs2-dumper")
+        .version(crate_version!())
+        .author(crate_authors!())
+        .arg(
+            Arg::new("verbose")
+                .help("Increase logging verbosity. Can be specified multiple times.")
+                .short('v')
+                .action(ArgAction::Count),
+        )
+        .arg(
+            Arg::new("connector")
+                .help("The name of the memflow connector to use.")
+                .long("connector")
+                .short('c')
+                .required(false),
+        )
+        .arg(
+            Arg::new("connector-args")
+                .help("Additional arguments to supply to the connector.")
+                .long("connector-args")
+                .short('a')
+                .required(false),
+        )
+        .arg(
+            Arg::new("output")
+                .help("The output directory to write the generated files to.")
+                .long("output")
+                .short('o')
+                .default_value("output")
+                .value_parser(value_parser!(PathBuf))
+                .required(false),
+        )
+        .arg(
+            Arg::new("indent-size")
+                .help("The number of spaces to use per indentation level.")
+                .long("indent-size")
+                .short('i')
+                .default_value("4")
+                .value_parser(value_parser!(usize))
+                .required(false),
+        )
+        .get_matches()
+}
+
+fn extract_args(matches: &ArgMatches) -> Result<(Option<String>, ConnectorArgs, usize, &PathBuf)> {
+    use std::str::FromStr;
+
+    let log_level = match matches.get_count("verbose") {
+        0 => Level::Error,
+        1 => Level::Warn,
+        2 => Level::Info,
+        3 => Level::Debug,
+        4 => Level::Trace,
+        _ => Level::Trace,
+    };
+
+    TermLogger::init(
+        log_level.to_level_filter(),
+        Default::default(),
+        Default::default(),
+        ColorChoice::Auto,
+    )
+    .unwrap();
+
+    let conn_name = matches
+        .get_one::<String>("connector")
+        .map(|s| s.to_string());
+
+    let conn_args = matches
+        .get_one::<String>("connector-args")
+        .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
+        .unwrap_or_default();
+
+    let indent_size = *matches.get_one::<usize>("indent-size").unwrap();
+    let out_dir = matches.get_one::<PathBuf>("output").unwrap();
+
+    Ok((conn_name, conn_args, indent_size, out_dir))
 }

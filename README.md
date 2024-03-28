@@ -1,26 +1,37 @@
 # cs2-dumper
 
-An external offset/interfaces dumper for Counter-Strike 2, written in Rust.
+An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux.
 
-*Note:* New commits are being pushed regularly to the [dev](https://github.com/a2x/cs2-dumper/tree/dev) branch.
+Powered by [memflow](https://github.com/memflow/memflow).
 
-# Usage
+## Getting Started
 
-You can either download the latest release from [Releases](https://github.com/a2x/cs2-dumper/releases) or build it yourself. Note that building it yourself requires Rust's nightly toolchain.
+You can download the latest release from [Releases](https://github.com/a2x/cs2-dumper/releases) or compile it yourself.
+Note that compiling it yourself requires your Rust compiler version to be at least 1.74.0 or newer, and the nightly
+toolchain must be installed.
 
-If you want to see more detailed runtime messages, you can pass the `--verbose` flag.
+## Usage
 
-For a complete list of all available flags, use `--help`.
+1. Ensure the game process is running (Being in the main menu should suffice).
+2. Run the `cs2-dumper` executable (Note that some memflow connectors require elevated privileges).
 
-# Generated Files
+When running the executable without providing an optional memflow connector name, it will default to using the
+memflow-native cross-platform OS layer to read the game's memory. However, any existing memflow connectors should work
+out of the box.
+Just pass the `connector` and optional `connector-args` arguments to the program.
 
-By default, generated files are stored in the `generated` directory. However, this can be modified by specifying your desired directory using the `--output` flag.
+E.g. `cs2-dumper.exe -c pcileech -a device=fpga -vvv`
 
-📂 [Pre-generated Files](./generated)
+### Available Arguments
 
-# Running Tests
-To run tests, use the following command: `cargo test -- --nocapture`.
+- `-v...`: Increase logging verbosity. Can be specified multiple times.
+- `-c, --connector <connector>`: The name of the memflow connector to use.
+- `-a, --connector-args <connector-args>`: Additional arguments to supply to the connector.
+- `-o, --output <output>`: The output directory to write the generated files to. Default: `output`.
+- `-i, --indent-size <indent-size>`: The number of spaces to use per indentation level. Default: `4`.
+- `-h, --help`: Print help.
+- `-V, --version`: Print version.
 
-# License
+## License
 
-Please refer to the [LICENSE](./LICENSE) file for more details.
+Licensed under the MIT license ([LICENSE](./LICENSE)).

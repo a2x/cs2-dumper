@@ -1,86 +1,61 @@
+use std::collections::HashMap;
+use std::sync::LazyLock;
+use std::{env, fs};
+
 use serde::{Deserialize, Serialize};
 
+pub static CONFIG: LazyLock<Config> = LazyLock::new(|| {
+    let file_name = match env::consts::OS {
+        "linux" => "config_linux.json",
+        "windows" => "config_win.json",
+        _ => panic!("unsupported os"),
+    };
+
+    let content = fs::read_to_string(file_name).expect("unable to read config file");
+    let config: Config = serde_json::from_str(&content).expect("unable to parse config file");
+
+    config
+});
+
 #[derive(Debug, Deserialize, Serialize)]
-#[serde(tag = "type", rename_all = "camelCase")]
+#[serde(rename_all = "snake_case", tag = "type")]
 pub enum Operation {
-    Add {
-        value: usize,
-    },
-    Deref {
-        times: Option<usize>,
-        size: Option<usize>,
-    },
-    Jmp {
-        offset: Option<usize>,
-        length: Option<usize>,
-    },
+    /// Adds the specified value to the current address.
+    Add { value: usize },
+
+    /// Resolves the absolute address of a RIP-relative address.
     Rip {
         offset: Option<usize>,
-        length: Option<usize>,
+        len: Option<usize>,
     },
-    Slice {
-        start: usize,
-        end: usize,
-    },
-    Sub {
-        value: usize,
-    },
+
+    /// Reads the value at the current address, treating it as a pointer.
+    Read,
+
+    /// Extracts a range of bytes from the current address and interprets them as a value.
+    Slice { start: usize, end: usize },
+
+    /// Subtracts the specified value from the current address.
+    Sub { value: usize },
 }
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Config {
-    pub signatures: Vec<Signature>,
+    /// Name of the process.
+    pub executable: String,
+
+    /// List of signatures to search for.
+    pub signatures: Vec<HashMap<String, Vec<Signature>>>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Signature {
+    /// Name of the signature.
     pub name: String,
-    pub module: String,
+
+    /// An IDA-style pattern containing the bytes to search for.
     pub pattern: String,
+
+    /// List of operations to perform on the matched address.
     pub operations: Vec<Operation>,
 }
-
-#[derive(Debug)]
-pub struct SchemaSystemConfig {
-    pub module_name: &'static str,
-    pub pattern: &'static str,
-    pub type_scope_size_offset: usize,
-    pub type_scope_data_offset: usize,
-    pub declared_classes_offset: usize,
-}
-
-#[cfg(target_os = "windows")]
-pub const SCHEMA_CONF: SchemaSystemConfig = SchemaSystemConfig {
-    module_name: "schemasystem.dll",
-    pattern: "48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 8D 0D ? ? ? ? E9 ? ? ? ? CC CC CC CC 48 83 EC 28",
-    type_scope_size_offset: 0x190,
-    type_scope_data_offset: 0x198,
-    declared_classes_offset: 0x5B8,
-};
-
-#[cfg(target_os = "linux")]
-pub const SCHEMA_CONF: SchemaSystemConfig = SchemaSystemConfig {
-    module_name: "libschemasystem.so",
-    pattern: "48 8D 05 ? ? ? ? c3 ? ? ? 00 00 00 00 00 48 8d 05 ? ? ? ? c3 ? ? ? 00 00 00 00 00 48 ? ? ? c3",
-    type_scope_size_offset: 0x1f8,
-    type_scope_data_offset: 0x200,
-    declared_classes_offset: 0x620,
-};
-
-#[cfg(target_os = "windows")]
-pub const PROC_NAME: &str = "cs2.exe";
-
-#[cfg(target_os = "linux")]
-pub const PROC_NAME: &str = "cs2";
-
-#[cfg(target_os = "windows")]
-pub const OFFSETS_CONF: &str = "config.json";
-
-#[cfg(target_os = "linux")]
-pub const OFFSETS_CONF: &str = "config_linux.json";
-
-#[cfg(target_os = "windows")]
-pub const DEFAULT_OUT_DIR: &str = "generated";
-
-#[cfg(target_os = "linux")]
-pub const DEFAULT_OUT_DIR: &str = "generated_linux";

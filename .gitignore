@@ -1,4 +1,4 @@
-.idea/
-.vscode/
+/.idea
+/.vscode
+/target
 Cargo.lock
-target/
