@@ -4,12 +4,15 @@ use std::{env, fs};
 
 use chrono::{DateTime, Utc};
 
+use memflow::prelude::v1::*;
+
 use serde::{Deserialize, Serialize};
+use serde_json::json;
 
 use formatter::Formatter;
 
 use crate::analysis::*;
-use crate::error::Result;
+use crate::error::{Error, Result};
 
 mod buttons;
 mod formatter;
@@ -121,7 +124,12 @@ impl Results {
         }
     }
 
-    pub fn dump_all<P: AsRef<Path>>(&self, out_dir: P, indent_size: usize) -> Result<()> {
+    pub fn dump_all<P: AsRef<Path>>(
+        &self,
+        process: &mut IntoProcessInstanceArcBox<'_>,
+        out_dir: P,
+        indent_size: usize,
+    ) -> Result<()> {
         let items = [
             ("buttons", Item::Buttons(&self.buttons)),
             ("interfaces", Item::Interfaces(&self.interfaces)),
@@ -140,6 +148,8 @@ impl Results {
             }
         }
 
+        self.dump_info_file(process, out_dir)?;
+
         Ok(())
     }
 
@@ -157,6 +167,40 @@ impl Results {
         fs::write(file_path, content)?;
 
         Ok(())
+    }
+
+    fn dump_info_file<P: AsRef<Path>>(
+        &self,
+        process: &mut IntoProcessInstanceArcBox<'_>,
+        out_dir: P,
+    ) -> Result<()> {
+        let info = json!({
+            "timestamp": self.timestamp.to_rfc3339(),
+            "build_number": self.read_build_number(process).unwrap_or(0),
+        });
+
+        self.dump_file(
+            out_dir.as_ref(),
+            "info",
+            "json",
+            &serde_json::to_string_pretty(&info)?,
+        )
+    }
+
+    fn read_build_number(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<u32> {
+        self.offsets
+            .iter()
+            .find_map(|(module_name, offsets)| {
+                offsets
+                    .iter()
+                    .find(|o| o.name == "dwBuildNumber")
+                    .and_then(|offset| {
+                        let module_base = process.module_by_name(module_name).ok()?;
+
+                        process.read(module_base.base + offset.value).ok()
+                    })
+            })
+            .ok_or_else(|| Error::Other("unable to read build number".into()))
     }
 
     fn write_banner(&self, fmt: &mut Formatter<'_>) -> Result<()> {

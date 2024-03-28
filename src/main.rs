@@ -60,7 +60,7 @@ fn main() -> Result<()> {
 
     let results = Results::new(buttons, interfaces, offsets, schemas);
 
-    results.dump_all(&out_dir, indent_size)?;
+    results.dump_all(&mut process, &out_dir, indent_size)?;
 
     info!("finished in {:?}", start_time.elapsed());
 
