@@ -6,7 +6,7 @@ Powered by [memflow](https://github.com/memflow/memflow).
 
 ## Where did client.dll and other stuff go?
 
-This repository was reformatted with the new support for linux, you can find old offsets in the [schemas.hpp](https://github.com/a2x/cs2-dumper/blob/main/output/win/schemas.hpp) file (and its other forms in different languages), please go through them and adjust your cheats accordingly if you used this repo, please do not open new issues where did things go, its still in here, just under different names i recommend searching for them the way you did the first time you used this.
+Please see: https://github.com/a2x/cs2-dumper/issues/87
 
 ## Getting Started
 
