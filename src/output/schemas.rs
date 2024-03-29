@@ -64,7 +64,9 @@ impl CodeGen for SchemaMap {
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                write_metadata(fmt, &class.metadata)?;
+                                if let Some(metadata) = &class.metadata {
+                                    write_metadata(fmt, metadata)?;
+                                }
 
                                 fmt.block(
                                     &format!("public static class {}", sanitize_name(&class.name)),
@@ -152,7 +154,9 @@ impl CodeGen for SchemaMap {
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
                                     writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                    write_metadata(fmt, &class.metadata)?;
+                                    if let Some(metadata) = &class.metadata {
+                                        write_metadata(fmt, metadata)?;
+                                    }
 
                                     fmt.block(
                                         &format!("namespace {}", sanitize_name(&class.name)),
@@ -198,6 +202,8 @@ impl CodeGen for SchemaMap {
 
                         let metadata: Vec<_> = class
                             .metadata
+                            .as_ref()
+                            .unwrap_or(&vec![])
                             .iter()
                             .map(|metadata| match metadata {
                                 ClassMetadata::NetworkChangeCallback { name } => json!({
@@ -319,7 +325,9 @@ impl CodeGen for SchemaMap {
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
                                     writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                    write_metadata(fmt, &class.metadata)?;
+                                    if let Some(metadata) = &class.metadata {
+                                        write_metadata(fmt, metadata)?;
+                                    }
 
                                     fmt.block(
                                         &format!("pub mod {}", sanitize_name(&class.name)),

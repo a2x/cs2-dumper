@@ -74,19 +74,19 @@ pub struct UtlTsHash<T: HashData, K: HashKey = u64> {
 
 impl<T: HashData, K: HashKey> UtlTsHash<T, K> {
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<T>> {
-        let block_size = self.entry.blocks_per_blob as usize;
-        let num_blocks = self.entry.block_alloc_size as usize;
-
         let mut element_ptr = self.buckets.unallocated_data;
 
-        let mut list = Vec::with_capacity(num_blocks);
+        let min_size =
+            (self.entry.blocks_per_blob as usize).min(self.entry.block_alloc_size as usize);
+
+        let mut list = Vec::with_capacity(min_size);
 
         while !element_ptr.is_null() {
             let element = element_ptr.read(process)?;
 
-            for i in 0..num_blocks {
-                if i >= block_size || list.len() >= block_size {
-                    break;
+            for i in 0..min_size {
+                if list.len() >= self.entry.block_alloc_size as usize {
+                    return Ok(list);
                 }
 
                 list.push(element.block_list[i].data);

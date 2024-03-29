@@ -28,7 +28,7 @@ pub struct Class {
     pub name: String,
     pub module_name: String,
     pub parent: Option<Box<Class>>,
-    pub metadata: Vec<ClassMetadata>,
+    pub metadata: Option<Vec<ClassMetadata>>,
     pub fields: Vec<ClassField>,
 }
 
@@ -99,7 +99,7 @@ fn read_class_binding(
             .map(Box::new)
     });
 
-    let metadata = read_class_binding_metadata(process, &binding)?;
+    let metadata = read_class_binding_metadata(process, &binding).map(Some)?;
     let fields = read_class_binding_fields(process, &binding)?;
 
     debug!(
@@ -108,7 +108,7 @@ fn read_class_binding(
         binding_ptr.to_umem(),
         module_name,
         parent.as_ref().map(|parent| parent.name.clone()),
-        metadata.len(),
+        metadata.as_ref().map(|metadata| metadata.len()).unwrap_or(0),
         fields.len()
     );
 
@@ -159,7 +159,7 @@ fn read_class_binding_metadata(
     binding: &SchemaClassBinding,
 ) -> Result<Vec<ClassMetadata>> {
     if binding.static_metadata.is_null() {
-        return Ok(Vec::new());
+        return Err(Error::Other("class metadata is null"));
     }
 
     (0..binding.static_metadata_count)
