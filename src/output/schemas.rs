@@ -1,6 +1,9 @@
+use std::collections::BTreeMap;
 use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
+
+use serde_json::json;
 
 use super::{format_module_name, sanitize_name, CodeGen, Formatter, Results, SchemaMap};
 
@@ -37,13 +40,13 @@ impl CodeGen for SchemaMap {
                                 fmt.block(
                                     &format!("public enum {} : {}", sanitize_name(&enum_.name), ty),
                                     |fmt| {
-                                        let members = enum_
+                                        let members: Vec<_> = enum_
                                             .members
                                             .iter()
                                             .map(|member| {
                                                 format!("{} = {}", member.name, member.value)
                                             })
-                                            .collect::<Vec<_>>()
+                                            .collect()
                                             .join(",\n");
 
                                         writeln!(fmt, "{}", members)
@@ -125,13 +128,13 @@ impl CodeGen for SchemaMap {
                                             ty
                                         ),
                                         |fmt| {
-                                            let members = enum_
+                                            let members: Vec<_> = enum_
                                                 .members
                                                 .iter()
                                                 .map(|member| {
                                                     format!("{} = {}", member.name, member.value)
                                                 })
-                                                .collect::<Vec<_>>()
+                                                .collect()
                                                 .join(",\n");
 
                                             writeln!(fmt, "{}", members)
@@ -180,6 +183,83 @@ impl CodeGen for SchemaMap {
         })
     }
 
+    fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
+        let content: BTreeMap<_, _> = self
+            .iter()
+            .map(|(module_name, (classes, enums))| {
+                let classes: BTreeMap<_, _> = classes
+                    .iter()
+                    .map(|class| {
+                        let fields: BTreeMap<_, _> = class
+                            .fields
+                            .iter()
+                            .map(|field| (&field.name, field.offset))
+                            .collect();
+
+                        let metadata: Vec<_> = class
+                            .metadata
+                            .iter()
+                            .map(|metadata| match metadata {
+                                ClassMetadata::NetworkChangeCallback { name } => json!({
+                                    "type": "NetworkChangeCallback",
+                                    "name": name,
+                                }),
+                                ClassMetadata::NetworkVarNames { name, ty } => json!({
+                                    "type": "NetworkVarNames",
+                                    "name": name,
+                                    "ty": ty,
+                                }),
+                                ClassMetadata::Unknown { name } => json!({
+                                    "type": "Unknown",
+                                    "name": name,
+                                }),
+                            })
+                            .collect();
+
+                        (
+                            sanitize_name(&class.name),
+                            json!({
+                                "parent": class.parent.as_ref().map(|parent| &parent.name),
+                                "fields": fields,
+                                "metadata": metadata
+                            }),
+                        )
+                    })
+                    .collect();
+
+                let enums: BTreeMap<_, _> = enums
+                    .iter()
+                    .map(|enum_| {
+                        let members: BTreeMap<_, _> = enum_
+                            .members
+                            .iter()
+                            .map(|member| (&member.name, member.value))
+                            .collect();
+
+                        (
+                            sanitize_name(&enum_.name),
+                            json!({
+                                "alignment": enum_.alignment,
+                                "type": enum_.ty,
+                                "members": members,
+                            }),
+                        )
+                    })
+                    .collect();
+
+                (
+                    module_name,
+                    json!({
+                        "classes": classes,
+                        "enums": enums,
+                    }),
+                )
+            })
+            .collect();
+
+        serde_json::to_string_pretty(&content).map_err(Into::into)
+    }
+
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
             writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
@@ -215,13 +295,13 @@ impl CodeGen for SchemaMap {
                                         |fmt| {
                                             // TODO: Handle the case where multiple members share
                                             // the same value.
-                                            let members = enum_
+                                            let members: Vec<_> = enum_
                                                 .members
                                                 .iter()
                                                 .map(|member| {
                                                     format!("{} = {}", member.name, member.value)
                                                 })
-                                                .collect::<Vec<_>>()
+                                                .collect()
                                                 .join(",\n");
 
                                             writeln!(fmt, "{}", members)

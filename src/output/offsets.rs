@@ -1,3 +1,4 @@
+use std::collections::BTreeMap;
 use std::fmt::Write;
 
 use heck::{AsPascalCase, AsSnakeCase};
@@ -71,6 +72,22 @@ impl CodeGen for OffsetMap {
 
             Ok(())
         })
+    }
+
+    fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
+        let content: BTreeMap<_, _> = self
+            .iter()
+            .map(|(module_name, offsets)| {
+                let offsets: BTreeMap<_, _> = offsets
+                    .iter()
+                    .map(|offset| (&offset.name, offset.value))
+                    .collect();
+
+                (module_name, offsets)
+            })
+            .collect();
+
+        serde_json::to_string_pretty(&content).map_err(Into::into)
     }
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {

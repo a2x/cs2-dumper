@@ -1,3 +1,4 @@
+use std::collections::BTreeMap;
 use std::env;
 use std::fmt::Write;
 
@@ -51,6 +52,19 @@ impl CodeGen for Vec<Button> {
 
             Ok(())
         })
+    }
+
+    fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
+        let content = {
+            let buttons: BTreeMap<_, _> = self
+                .iter()
+                .map(|button| (&button.name, button.value))
+                .collect();
+
+            BTreeMap::from_iter([(get_module_name(), buttons)])
+        };
+
+        serde_json::to_string_pretty(&content).map_err(Into::into)
     }
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {

@@ -1,3 +1,4 @@
+use std::collections::BTreeMap;
 use std::fmt::Write;
 
 use heck::{AsPascalCase, AsSnakeCase};
@@ -71,6 +72,22 @@ impl CodeGen for InterfaceMap {
 
             Ok(())
         })
+    }
+
+    fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
+        let content: BTreeMap<_, _> = self
+            .iter()
+            .map(|(module_name, ifaces)| {
+                let ifaces: BTreeMap<_, _> = ifaces
+                    .iter()
+                    .map(|iface| (&iface.name, iface.value))
+                    .collect();
+
+                (module_name, ifaces)
+            })
+            .collect();
+
+        serde_json::to_string_pretty(&content).map_err(Into::into)
     }
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {

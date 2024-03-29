@@ -30,20 +30,28 @@ enum Item<'a> {
 }
 
 impl<'a> Item<'a> {
-    fn generate(&self, results: &Results, indent_size: usize, file_type: &str) -> Result<String> {
-        match file_type {
+    fn generate(&self, results: &Results, indent_size: usize, file_ext: &str) -> Result<String> {
+        match file_ext {
             "cs" => self.to_cs(results, indent_size),
             "hpp" => self.to_hpp(results, indent_size),
+            "json" => self.to_json(results, indent_size),
             "rs" => self.to_rs(results, indent_size),
-            "json" => serde_json::to_string_pretty(self).map_err(Into::into),
             _ => unreachable!(),
         }
     }
 }
 
 trait CodeGen {
+    /// Converts an [`Item`] to formatted C# code.
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String>;
+
+    /// Converts an [`Item`] to formatted C++ code.
     fn to_hpp(&self, results: &Results, indent_size: usize) -> Result<String>;
+
+    /// Converts an [`Item`] to formatted JSON.
+    fn to_json(&self, results: &Results, indent_size: usize) -> Result<String>;
+
+    /// Converts an [`Item`] to formatted Rust code.
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String>;
 
     fn write_content<F>(&self, results: &Results, indent_size: usize, callback: F) -> Result<String>
@@ -77,6 +85,15 @@ impl<'a> CodeGen for Item<'a> {
             Item::Interfaces(interfaces) => interfaces.to_hpp(results, indent_size),
             Item::Offsets(offsets) => offsets.to_hpp(results, indent_size),
             Item::Schemas(schemas) => schemas.to_hpp(results, indent_size),
+        }
+    }
+
+    fn to_json(&self, results: &Results, indent_size: usize) -> Result<String> {
+        match self {
+            Item::Buttons(buttons) => buttons.to_json(results, indent_size),
+            Item::Interfaces(interfaces) => interfaces.to_json(results, indent_size),
+            Item::Offsets(offsets) => offsets.to_json(results, indent_size),
+            Item::Schemas(schemas) => schemas.to_json(results, indent_size),
         }
     }
 
@@ -138,13 +155,13 @@ impl Results {
         ];
 
         // TODO: Make this user-configurable.
-        let file_types = ["cs", "hpp", "json", "rs"];
+        let file_exts = ["cs", "hpp", "json", "rs"];
 
         for (file_name, item) in &items {
-            for &file_type in &file_types {
-                let content = item.generate(self, indent_size, file_type)?;
+            for ext in file_exts {
+                let content = item.generate(self, indent_size, ext)?;
 
-                self.dump_file(out_dir.as_ref(), file_name, file_type, &content)?;
+                self.dump_file(out_dir.as_ref(), file_name, ext, &content)?;
             }
         }
 
@@ -157,12 +174,10 @@ impl Results {
         &self,
         out_dir: P,
         file_name: &str,
-        file_type: &str,
+        file_ext: &str,
         content: &str,
     ) -> Result<()> {
-        let file_path = out_dir
-            .as_ref()
-            .join(format!("{}.{}", file_name, file_type));
+        let file_path = out_dir.as_ref().join(format!("{}.{}", file_name, file_ext));
 
         fs::write(file_path, content)?;
 
