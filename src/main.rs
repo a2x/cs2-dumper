@@ -26,7 +26,7 @@ fn main() -> Result<()> {
     let start_time = Instant::now();
 
     let matches = parse_args();
-    let (conn_name, conn_args, indent_size, out_dir) = extract_args(&matches)?;
+    let (conn_name, conn_args, os_name, indent_size, out_dir) = extract_args(&matches)?;
 
     // Create the output directory if it doesn't exist.
     fs::create_dir_all(&out_dir)?;
@@ -34,17 +34,11 @@ fn main() -> Result<()> {
     let os = if let Some(conn_name) = conn_name {
         let inventory = Inventory::scan();
 
-        let os_name = match env::consts::OS {
-            "linux" => "linux",
-            "windows" => "win32",
-            _ => panic!("unsupported os"),
-        };
-
         inventory
             .builder()
             .connector(&conn_name)
             .args(conn_args)
-            .os(os_name)
+            .os(&os_name)
             .build()?
     } else {
         // Fallback to the native OS layer if no connector name was provided.
@@ -92,10 +86,17 @@ fn parse_args() -> ArgMatches {
                 .required(false),
         )
         .arg(
-            Arg::new("output")
-                .help("The output directory to write the generated files to.")
-                .long("output")
+            Arg::new("os")
+                .help("The name of the target operating system.")
+                .long("os")
                 .short('o')
+                .required(false),
+        )
+        .arg(
+            Arg::new("directory")
+                .help("The output directory to write the generated files to.")
+                .long("directory")
+                .short('d')
                 .default_value("output")
                 .value_parser(value_parser!(PathBuf))
                 .required(false),
@@ -112,7 +113,9 @@ fn parse_args() -> ArgMatches {
         .get_matches()
 }
 
-fn extract_args(matches: &ArgMatches) -> Result<(Option<String>, ConnectorArgs, usize, &PathBuf)> {
+fn extract_args(
+    matches: &ArgMatches,
+) -> Result<(Option<String>, ConnectorArgs, String, usize, &PathBuf)> {
     use std::str::FromStr;
 
     let log_level = match matches.get_count("verbose") {
@@ -141,8 +144,17 @@ fn extract_args(matches: &ArgMatches) -> Result<(Option<String>, ConnectorArgs, 
         .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
         .unwrap_or_default();
 
-    let indent_size = *matches.get_one::<usize>("indent-size").unwrap();
-    let out_dir = matches.get_one::<PathBuf>("output").unwrap();
+    let os_name = matches
+        .get_one::<String>("os")
+        .map(|s| s.to_string())
+        .unwrap_or_else(|| match env::consts::OS {
+            "linux" => "linux".to_string(),
+            "windows" => "win32".to_string(),
+            _ => panic!("unsupported os"),
+        });
 
-    Ok((conn_name, conn_args, indent_size, out_dir))
+    let indent_size = *matches.get_one::<usize>("indent-size").unwrap();
+    let out_dir = matches.get_one::<PathBuf>("directory").unwrap();
+
+    Ok((conn_name, conn_args, os_name, indent_size, out_dir))
 }
