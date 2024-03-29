@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-03-29 14:38:50.188610842 UTC
+// 2024-03-29 21:16:02.890657436 UTC
 
 namespace CS2Dumper {
     // Module: libclient.so

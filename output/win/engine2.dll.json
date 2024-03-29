@@ -1,0 +1,91 @@
+{
+  "engine2.dll": {
+    "classes": {
+      "CEntityIdentity": {
+        "fields": {
+          "m_PathIndex": 64,
+          "m_designerName": 32,
+          "m_fDataObjectTypes": 60,
+          "m_flags": 48,
+          "m_name": 24,
+          "m_nameStringableIndex": 20,
+          "m_pNext": 96,
+          "m_pNextByClass": 112,
+          "m_pPrev": 88,
+          "m_pPrevByClass": 104,
+          "m_worldGroupId": 56
+        },
+        "metadata": [
+          {
+            "name": "m_nameStringableIndex",
+            "ty": "int32",
+            "type": "NetworkVarNames"
+          }
+        ],
+        "parent": null
+      },
+      "CEntityInstance": {
+        "fields": {
+          "m_CScriptComponent": 40,
+          "m_bVisibleinPVS": 48,
+          "m_iszPrivateVScripts": 8,
+          "m_pEntity": 16
+        },
+        "metadata": [
+          {
+            "name": "m_pEntity",
+            "ty": "CEntityIdentity*",
+            "type": "NetworkVarNames"
+          },
+          {
+            "name": "m_CScriptComponent",
+            "ty": "CScriptComponent::Storage_t",
+            "type": "NetworkVarNames"
+          }
+        ],
+        "parent": null
+      }
+    },
+    "enums": {
+      "EntityDormancyType_t": {
+        "alignment": 4,
+        "members": {
+          "ENTITY_DORMANT": 1,
+          "ENTITY_NOT_DORMANT": 0,
+          "ENTITY_SUSPENDED": 2
+        },
+        "type": "uint32"
+      },
+      "EntityIOTargetType_t": {
+        "alignment": 4,
+        "members": {
+          "ENTITY_IO_TARGET_EHANDLE": 6,
+          "ENTITY_IO_TARGET_ENTITYNAME": 2,
+          "ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME": 7,
+          "ENTITY_IO_TARGET_INVALID": -1
+        },
+        "type": "uint32"
+      },
+      "SpawnDebugOverrideState_t": {
+        "alignment": 4,
+        "members": {
+          "SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED": 2,
+          "SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED": 1,
+          "SPAWN_DEBUG_OVERRIDE_NONE": 0
+        },
+        "type": "uint32"
+      },
+      "SpawnDebugRestrictionOverrideState_t": {
+        "alignment": 4,
+        "members": {
+          "SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS": 1,
+          "SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS": 8,
+          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS": 4,
+          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS": 2,
+          "SPAWN_DEBUG_RESTRICT_NONE": 0
+        },
+        "type": "uint32"
+      }
+    }
+  }
+}
