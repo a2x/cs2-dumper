@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-03-29 13:53:37.711801971 UTC
+// 2024-03-29 14:38:50.188610842 UTC
 
 #pragma once
 
@@ -4112,7 +4112,7 @@ namespace cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // NetworkVarNames: m_pEntity (CEntityIdentity *)
+            // NetworkVarNames: m_pEntity (CEntityIdentity*)
             // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
             namespace CEntityInstance {
                 constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
@@ -4335,9 +4335,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nCsViewPunchAngleTick (GameTick_t)
             // NetworkVarNames: m_flCsViewPunchAngleTickRatio (float32)
             // NetworkVarNames: m_PlayerFog (fogplayerparams_t)
-            // NetworkVarNames: m_hColorCorrectionCtrl (CHandle< CColorCorrection>)
-            // NetworkVarNames: m_hViewEntity (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hTonemapController (CHandle< CTonemapController2>)
+            // NetworkVarNames: m_hColorCorrectionCtrl (CHandle<CColorCorrection>)
+            // NetworkVarNames: m_hViewEntity (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hTonemapController (CHandle<CTonemapController2>)
             // NetworkVarNames: m_audio (audioparams_t)
             // NetworkVarNames: m_PostProcessingVolumes (CHandle<C_PostProcessingVolume>)
             namespace CPlayer_CameraServices {
@@ -4416,7 +4416,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // NetworkVarNames: m_iObserverMode (uint8)
-            // NetworkVarNames: m_hObserverTarget (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hObserverTarget (CHandle<CBaseEntity>)
             namespace CPlayer_ObserverServices {
                 constexpr std::ptrdiff_t m_iObserverMode = 0x40; // uint8
                 constexpr std::ptrdiff_t m_hObserverTarget = 0x44; // CHandle<C_BaseEntity>
@@ -4429,9 +4429,9 @@ namespace cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // NetworkVarNames: m_hMyWeapons (CHandle< C_BasePlayerWeapon >)
-            // NetworkVarNames: m_hActiveWeapon (CHandle< CBasePlayerWeapon>)
-            // NetworkVarNames: m_hLastWeapon (CHandle< CBasePlayerWeapon>)
+            // NetworkVarNames: m_hMyWeapons (CHandle<C_BasePlayerWeapon>)
+            // NetworkVarNames: m_hActiveWeapon (CHandle<CBasePlayerWeapon>)
+            // NetworkVarNames: m_hLastWeapon (CHandle<CBasePlayerWeapon>)
             // NetworkVarNames: m_iAmmo (uint16)
             namespace CPlayer_WeaponServices {
                 constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // C_NetworkUtlVectorBase<CHandle<C_BasePlayerWeapon>>
@@ -4464,7 +4464,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_Handle (ModelConfigHandle_t)
             // NetworkVarNames: m_Name (string_t)
-            // NetworkVarNames: m_AssociatedEntities (CHandle< C_BaseModelEntity >)
+            // NetworkVarNames: m_AssociatedEntities (CHandle<C_BaseModelEntity>)
             // NetworkVarNames: m_AssociatedEntityNames (string_t)
             namespace ActiveModelConfig_t {
                 constexpr std::ptrdiff_t m_Handle = 0x28; // ModelConfigHandle_t
@@ -4753,13 +4753,13 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nNextThinkTick (GameTick_t)
             // NetworkVarNames: m_fFlags (uint32)
             // NetworkVarNames: m_vecBaseVelocity (Vector)
-            // NetworkVarNames: m_hEffectEntity (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hOwnerEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hEffectEntity (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hOwnerEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_MoveCollide (MoveCollide_t)
             // NetworkVarNames: m_MoveType (MoveType_t)
             // NetworkVarNames: m_flWaterLevel (float32)
             // NetworkVarNames: m_fEffects (uint32)
-            // NetworkVarNames: m_hGroundEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hGroundEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_flFriction (float32)
             // NetworkVarNames: m_flElasticity (float32)
             // NetworkVarNames: m_flGravityScale (float32)
@@ -4896,7 +4896,7 @@ namespace cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // NetworkVarNames: m_hEntAttached (CHandle< C_BaseEntity>)
+            // NetworkVarNames: m_hEntAttached (CHandle<C_BaseEntity>)
             // NetworkVarNames: m_bCheapEffect (bool)
             namespace C_EntityFlame {
                 constexpr std::ptrdiff_t m_hEntAttached = 0x6D0; // CHandle<C_BaseEntity>
@@ -4907,7 +4907,7 @@ namespace cs2_dumper {
             // Fields count: 30
             //
             // Metadata:
-            // NetworkVarNames: m_hTargetEntity (CHandle< C_BaseEntity>)
+            // NetworkVarNames: m_hTargetEntity (CHandle<C_BaseEntity>)
             // NetworkVarNames: m_bState (bool)
             // NetworkVarNames: m_bAlwaysUpdate (bool)
             // NetworkVarNames: m_flLightFOV (float32)
@@ -5299,7 +5299,7 @@ namespace cs2_dumper {
             // Fields count: 14
             //
             // Metadata:
-            // NetworkVarNames: m_hCtrl (CHandle< CFogController>)
+            // NetworkVarNames: m_hCtrl (CHandle<CFogController>)
             namespace C_fogplayerparams_t {
                 constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle<C_FogController>
                 constexpr std::ptrdiff_t m_flTransitionTime = 0xC; // float32
@@ -5574,7 +5574,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iNumConsecutiveCTLoses (int)
             // NetworkVarNames: m_iNumConsecutiveTerroristLoses (int)
             // NetworkVarNames: m_nMatchAbortedEarlyReason (int)
-            // NetworkVarNames: m_pGameModeRules (CCSGameModeRules *)
+            // NetworkVarNames: m_pGameModeRules (CCSGameModeRules*)
             // NetworkVarNames: m_RetakeRules (CRetakeGameRules)
             // NetworkVarNames: m_nMatchEndCount (uint8)
             // NetworkVarNames: m_nTTeamIntroVariant (int)
@@ -5862,8 +5862,8 @@ namespace cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // NetworkVarNames: m_hPlayer (CHandle< CCSPlayerPawn>)
-            // NetworkVarNames: m_hPingedEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hPlayer (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_hPingedEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_iType (int)
             // NetworkVarNames: m_bUrgent (bool)
             // NetworkVarNames: m_szPlaceName (char)
@@ -5878,7 +5878,7 @@ namespace cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // NetworkVarNames: m_hPlayerPing (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hPlayerPing (CHandle<CBaseEntity>)
             namespace CCSPlayer_PingServices {
                 constexpr std::ptrdiff_t m_hPlayerPing = 0x40; // CHandle<C_BaseEntity>
             }
@@ -5923,7 +5923,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iFOVStart (uint32)
             // NetworkVarNames: m_flFOVTime (GameTime_t)
             // NetworkVarNames: m_flFOVRate (float32)
-            // NetworkVarNames: m_hZoomOwner (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hZoomOwner (CHandle<CBaseEntity>)
             namespace CCSPlayerBase_CameraServices {
                 constexpr std::ptrdiff_t m_iFOV = 0x210; // uint32
                 constexpr std::ptrdiff_t m_iFOVStart = 0x214; // uint32
@@ -5999,8 +5999,8 @@ namespace cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // NetworkVarNames: m_hCarriedHostage (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hCarriedHostageProp (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hCarriedHostage (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hCarriedHostageProp (CHandle<CBaseEntity>)
             namespace CCSPlayer_HostageServices {
                 constexpr std::ptrdiff_t m_hCarriedHostage = 0x40; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_hCarriedHostageProp = 0x44; // CHandle<C_BaseEntity>
@@ -6084,7 +6084,7 @@ namespace cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // NetworkVarNames: m_hViewModel (CHandle< CBaseViewModel >)
+            // NetworkVarNames: m_hViewModel (CHandle<CBaseViewModel>)
             namespace CCSPlayer_ViewModelServices {
                 constexpr std::ptrdiff_t m_hViewModel = 0x40; // CHandle<C_BaseViewModel>[3]
             }
@@ -6122,10 +6122,10 @@ namespace cs2_dumper {
             // Fields count: 14
             //
             // Metadata:
-            // NetworkVarNames: m_PlayerDamager (CHandle< CCSPlayerPawnBase >)
-            // NetworkVarNames: m_PlayerRecipient (CHandle< CCSPlayerPawnBase >)
-            // NetworkVarNames: m_hPlayerControllerDamager (CHandle< CCSPlayerController >)
-            // NetworkVarNames: m_hPlayerControllerRecipient (CHandle< CCSPlayerController >)
+            // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawnBase>)
+            // NetworkVarNames: m_PlayerRecipient (CHandle<CCSPlayerPawnBase>)
+            // NetworkVarNames: m_hPlayerControllerDamager (CHandle<CCSPlayerController>)
+            // NetworkVarNames: m_hPlayerControllerRecipient (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_szPlayerDamagerName (CUtlString)
             // NetworkVarNames: m_szPlayerRecipientName (CUtlString)
             // NetworkVarNames: m_DamagerXuid (uint64)
@@ -6925,8 +6925,8 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MNetworkIncludeByName
-            // NetworkVarNames: m_aPlayerControllers (CHandle< CBasePlayerController >)
-            // NetworkVarNames: m_aPlayers (CHandle< C_BasePlayerPawn >)
+            // NetworkVarNames: m_aPlayerControllers (CHandle<CBasePlayerController>)
+            // NetworkVarNames: m_aPlayers (CHandle<C_BasePlayerPawn>)
             // NetworkVarNames: m_iScore (int32)
             // NetworkVarNames: m_szTeamname (char)
             namespace C_Team {
@@ -6949,7 +6949,7 @@ namespace cs2_dumper {
             // MNetworkUserGroupProxy
             // MNetworkIncludeByUserGroup
             // NetworkVarNames: m_nTickBase (uint32)
-            // NetworkVarNames: m_hPawn (CHandle< CBasePlayerPawn>)
+            // NetworkVarNames: m_hPawn (CHandle<CBasePlayerPawn>)
             // NetworkVarNames: m_iConnected (PlayerConnectedState)
             // NetworkVarNames: m_iszPlayerName (char)
             // NetworkVarNames: m_steamID (uint64)
@@ -7068,7 +7068,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vDecalForwardAxis (Vector)
             // NetworkVarNames: m_flDecalHealBloodRate (float)
             // NetworkVarNames: m_flDecalHealHeightRate (float)
-            // NetworkVarNames: m_ConfigEntitiesToPropagateMaterialDecalsTo (CHandle< C_BaseModelEntity >)
+            // NetworkVarNames: m_ConfigEntitiesToPropagateMaterialDecalsTo (CHandle<C_BaseModelEntity>)
             namespace C_BaseModelEntity {
                 constexpr std::ptrdiff_t m_CRenderComponent = 0x9A0; // CRenderComponent*
                 constexpr std::ptrdiff_t m_CHitboxComponent = 0x9A8; // CHitboxComponent
@@ -7123,7 +7123,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flPreSimTime (float32)
             // NetworkVarNames: m_vServerControlPoints (Vector)
             // NetworkVarNames: m_iServerControlPointAssignments (uint8)
-            // NetworkVarNames: m_hControlPointEnts (CHandle< CBaseEntity >)
+            // NetworkVarNames: m_hControlPointEnts (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bNoSave (bool)
             // NetworkVarNames: m_bNoFreeze (bool)
             // NetworkVarNames: m_bNoRamp (bool)
@@ -7278,14 +7278,14 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bDisabled (bool)
             // NetworkVarNames: m_bUpdateOnClient (bool)
             // NetworkVarNames: m_nInputType (ValueRemapperInputType_t)
-            // NetworkVarNames: m_hRemapLineStart (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hRemapLineEnd (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hRemapLineStart (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hRemapLineEnd (CHandle<CBaseEntity>)
             // NetworkVarNames: m_flMaximumChangePerSecond (float)
             // NetworkVarNames: m_flDisengageDistance (float)
             // NetworkVarNames: m_flEngageDistance (float)
             // NetworkVarNames: m_bRequiresUseKey (bool)
             // NetworkVarNames: m_nOutputType (ValueRemapperOutputType_t)
-            // NetworkVarNames: m_hOutputEntities (CHandle< C_BaseEntity >)
+            // NetworkVarNames: m_hOutputEntities (CHandle<C_BaseEntity>)
             // NetworkVarNames: m_nHapticsType (ValueRemapperHapticsType_t)
             // NetworkVarNames: m_nMomentumType (ValueRemapperMomentumType_t)
             // NetworkVarNames: m_flMomentumModifier (float)
@@ -7352,7 +7352,7 @@ namespace cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // NetworkVarNames: m_Handle (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_Handle (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bSendHandle (bool)
             namespace C_HandleTest {
                 constexpr std::ptrdiff_t m_Handle = 0x6D0; // CHandle<C_BaseEntity>
@@ -7370,7 +7370,7 @@ namespace cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // NetworkVarNames: m_glowEntity (CHandle< C_BaseModelEntity>)
+            // NetworkVarNames: m_glowEntity (CHandle<C_BaseModelEntity>)
             // NetworkVarNames: m_usable (bool)
             // NetworkVarNames: m_szDisplayText (string_t)
             namespace C_BaseButton {
@@ -7465,8 +7465,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_RopeFlags (uint16)
             // NetworkVarNames: m_iRopeMaterialModelIndex (HMaterialStrong)
             // NetworkVarNames: m_nSegments (uint8)
-            // NetworkVarNames: m_hStartPoint (CHandle< C_BaseEntity>)
-            // NetworkVarNames: m_hEndPoint (CHandle< C_BaseEntity>)
+            // NetworkVarNames: m_hStartPoint (CHandle<C_BaseEntity>)
+            // NetworkVarNames: m_hEndPoint (CHandle<C_BaseEntity>)
             // NetworkVarNames: m_iStartAttachment (AttachmentHandle_t)
             // NetworkVarNames: m_iEndAttachment (AttachmentHandle_t)
             // NetworkVarNames: m_Subdiv (uint8)
@@ -7530,7 +7530,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bAutogenerated (bool)
             // NetworkVarNames: m_flForceClientTime (float32)
             // NetworkVarNames: m_nSceneStringIndex (uint16)
-            // NetworkVarNames: m_hActorList (CHandle< C_BaseFlex >)
+            // NetworkVarNames: m_hActorList (CHandle<C_BaseFlex>)
             namespace C_SceneEntity {
                 constexpr std::ptrdiff_t m_bIsPlayingBack = 0x6D8; // bool
                 constexpr std::ptrdiff_t m_bPaused = 0x6D9; // bool
@@ -7650,7 +7650,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nHaloIndex (HMaterialStrong)
             // NetworkVarNames: m_nBeamType (BeamType_t)
             // NetworkVarNames: m_nBeamFlags (uint32)
-            // NetworkVarNames: m_hAttachEntity (CHandle< CBaseEntity >)
+            // NetworkVarNames: m_hAttachEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_nAttachIndex (AttachmentHandle_t)
             // NetworkVarNames: m_fWidth (float32)
             // NetworkVarNames: m_fEndWidth (float32)
@@ -7728,7 +7728,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // NetworkVarNames: m_hSpriteMaterial (HMaterialStrong)
-            // NetworkVarNames: m_hAttachedToEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hAttachedToEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_nAttachment (AttachmentHandle_t)
             // NetworkVarNames: m_flSpriteFramerate (float32)
             // NetworkVarNames: m_flFrame (float32)
@@ -7893,7 +7893,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nResolutionY (int)
             // NetworkVarNames: m_szLayoutFileName (string_t)
             // NetworkVarNames: m_RenderAttrName (string_t)
-            // NetworkVarNames: m_TargetEntities (CHandle< C_BaseModelEntity >)
+            // NetworkVarNames: m_TargetEntities (CHandle<C_BaseModelEntity>)
             // NetworkVarNames: m_nTargetChangeCount (int)
             // NetworkVarNames: m_vecCSSClasses (string_t)
             namespace CInfoOffscreenPanoramaTexture {
@@ -7976,10 +7976,10 @@ namespace cs2_dumper {
             // MNetworkUserGroupProxy
             // MNetworkUserGroupProxy
             // MNetworkUserGroupProxy
-            // NetworkVarNames: m_pInGameMoneyServices (CCSPlayerController_InGameMoneyServices *)
-            // NetworkVarNames: m_pInventoryServices (CCSPlayerController_InventoryServices *)
-            // NetworkVarNames: m_pActionTrackingServices (CCSPlayerController_ActionTrackingServices *)
-            // NetworkVarNames: m_pDamageServices (CCSPlayerController_DamageServices *)
+            // NetworkVarNames: m_pInGameMoneyServices (CCSPlayerController_InGameMoneyServices*)
+            // NetworkVarNames: m_pInventoryServices (CCSPlayerController_InventoryServices*)
+            // NetworkVarNames: m_pActionTrackingServices (CCSPlayerController_ActionTrackingServices*)
+            // NetworkVarNames: m_pDamageServices (CCSPlayerController_DamageServices*)
             // NetworkVarNames: m_iPing (uint32)
             // NetworkVarNames: m_bHasCommunicationAbuseMute (bool)
             // NetworkVarNames: m_szCrosshairCodes (string_t)
@@ -8005,8 +8005,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bControllingBot (bool)
             // NetworkVarNames: m_bHasControlledBotThisRound (bool)
             // NetworkVarNames: m_bCanControlObservedBot (bool)
-            // NetworkVarNames: m_hPlayerPawn (CHandle< CCSPlayerPawn>)
-            // NetworkVarNames: m_hObserverPawn (CHandle< CCSObserverPawn>)
+            // NetworkVarNames: m_hPlayerPawn (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_hObserverPawn (CHandle<CCSObserverPawn>)
             // NetworkVarNames: m_bPawnIsAlive (bool)
             // NetworkVarNames: m_iPawnHealth (uint32)
             // NetworkVarNames: m_iPawnArmor (int)
@@ -8016,7 +8016,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iPawnLifetimeStart (int)
             // NetworkVarNames: m_iPawnLifetimeEnd (int)
             // NetworkVarNames: m_iPawnBotDifficulty (int)
-            // NetworkVarNames: m_hOriginalControllerOfCurrentPawn (CHandle< CCSPlayerController>)
+            // NetworkVarNames: m_hOriginalControllerOfCurrentPawn (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_iScore (int32)
             // NetworkVarNames: m_vecKills (EKillTypes_t)
             // NetworkVarNames: m_bMvpNoMusic (bool)
@@ -8311,7 +8311,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flLightStyleStartTime (GameTime_t)
             // NetworkVarNames: m_QueuedLightStyleStrings (CUtlString)
             // NetworkVarNames: m_LightStyleEvents (CUtlString)
-            // NetworkVarNames: m_LightStyleTargets (CHandle< C_BaseModelEntity >)
+            // NetworkVarNames: m_LightStyleTargets (CHandle<C_BaseModelEntity>)
             // NetworkVarNames: m_hLightCookie (HRenderTextureStrong)
             // NetworkVarNames: m_flShape (float)
             // NetworkVarNames: m_flSoftX (float)
@@ -8717,7 +8717,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iNodeNumber (int)
             // NetworkVarNames: m_iNodeNumberMax (int)
             // NetworkVarNames: m_bListenedTo (bool)
-            // NetworkVarNames: m_hViewPosition (CHandle< C_BaseEntity>)
+            // NetworkVarNames: m_hViewPosition (CHandle<C_BaseEntity>)
             namespace C_PointCommentaryNode {
                 constexpr std::ptrdiff_t m_bActive = 0xE80; // bool
                 constexpr std::ptrdiff_t m_bWasActive = 0xE81; // bool
@@ -8835,7 +8835,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bLocked (bool)
             // NetworkVarNames: m_closedPosition (Vector)
             // NetworkVarNames: m_closedAngles (QAngle)
-            // NetworkVarNames: m_hMaster (CHandle< C_BasePropDoor>)
+            // NetworkVarNames: m_hMaster (CHandle<C_BasePropDoor>)
             namespace C_BasePropDoor {
                 constexpr std::ptrdiff_t m_eDoorState = 0x10E4; // DoorState_t
                 constexpr std::ptrdiff_t m_modelChanged = 0x10E8; // bool
@@ -8925,7 +8925,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_DmgRadius (float32)
             // NetworkVarNames: m_flDetonateTime (GameTime_t)
             // NetworkVarNames: m_flDamage (float32)
-            // NetworkVarNames: m_hThrower (CHandle< CCSPlayerPawn >)
+            // NetworkVarNames: m_hThrower (CHandle<CCSPlayerPawn>)
             namespace C_BaseGrenade {
                 constexpr std::ptrdiff_t m_bHasWarnedAI = 0x1010; // bool
                 constexpr std::ptrdiff_t m_bIsSmokeGrenade = 0x1011; // bool
@@ -8962,8 +8962,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nViewModelIndex (uint32)
             // NetworkVarNames: m_nAnimationParity (uint32)
             // NetworkVarNames: m_flAnimationStartTime (float32)
-            // NetworkVarNames: m_hWeapon (CHandle< CBasePlayerWeapon>)
-            // NetworkVarNames: m_hControlPanel (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hWeapon (CHandle<CBasePlayerWeapon>)
+            // NetworkVarNames: m_hControlPanel (CHandle<CBaseEntity>)
             namespace C_BaseViewModel {
                 constexpr std::ptrdiff_t m_vecLastFacing = 0xE80; // Vector
                 constexpr std::ptrdiff_t m_nViewModelIndex = 0xE8C; // uint32
@@ -9027,8 +9027,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flDefuseLength (float)
             // NetworkVarNames: m_flDefuseCountDown (GameTime_t)
             // NetworkVarNames: m_bBombDefused (bool)
-            // NetworkVarNames: m_hBombDefuser (CHandle< CCSPlayerPawn>)
-            // NetworkVarNames: m_hControlPanel (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hBombDefuser (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_hControlPanel (CHandle<CBaseEntity>)
             namespace C_PlantedC4 {
                 constexpr std::ptrdiff_t m_bBombTicking = 0xE78; // bool
                 constexpr std::ptrdiff_t m_nBombSite = 0xE7C; // int32
@@ -9074,7 +9074,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // NetworkVarNames: m_jumpedThisFrame (bool)
-            // NetworkVarNames: m_leader (CHandle< CCSPlayerPawn>)
+            // NetworkVarNames: m_leader (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_AttributeManager (CAttributeContainer)
             // NetworkVarNames: m_OriginalOwnerXuidLow (uint32)
             // NetworkVarNames: m_OriginalOwnerXuidHigh (uint32)
@@ -9137,7 +9137,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MNetworkExcludeByUserGroup
-            // NetworkVarNames: m_hMyWearables (CHandle<C_EconWearable >)
+            // NetworkVarNames: m_hMyWearables (CHandle<C_EconWearable>)
             // NetworkVarNames: m_flFieldOfView (float)
             namespace C_BaseCombatCharacter {
                 constexpr std::ptrdiff_t m_hMyWearables = 0x1010; // C_NetworkUtlVectorBase<CHandle<C_EconWearable>>
@@ -9171,20 +9171,20 @@ namespace cs2_dumper {
             // MNetworkExcludeByName
             // MNetworkExcludeByName
             // MNetworkExcludeByName
-            // NetworkVarNames: m_pWeaponServices (CPlayer_WeaponServices *)
-            // NetworkVarNames: m_pItemServices (CPlayer_ItemServices *)
-            // NetworkVarNames: m_pAutoaimServices (CPlayer_AutoaimServices *)
-            // NetworkVarNames: m_pObserverServices (CPlayer_ObserverServices *)
-            // NetworkVarNames: m_pWaterServices (CPlayer_WaterServices *)
-            // NetworkVarNames: m_pUseServices (CPlayer_UseServices *)
-            // NetworkVarNames: m_pFlashlightServices (CPlayer_FlashlightServices *)
-            // NetworkVarNames: m_pCameraServices (CPlayer_CameraServices *)
-            // NetworkVarNames: m_pMovementServices (CPlayer_MovementServices *)
+            // NetworkVarNames: m_pWeaponServices (CPlayer_WeaponServices*)
+            // NetworkVarNames: m_pItemServices (CPlayer_ItemServices*)
+            // NetworkVarNames: m_pAutoaimServices (CPlayer_AutoaimServices*)
+            // NetworkVarNames: m_pObserverServices (CPlayer_ObserverServices*)
+            // NetworkVarNames: m_pWaterServices (CPlayer_WaterServices*)
+            // NetworkVarNames: m_pUseServices (CPlayer_UseServices*)
+            // NetworkVarNames: m_pFlashlightServices (CPlayer_FlashlightServices*)
+            // NetworkVarNames: m_pCameraServices (CPlayer_CameraServices*)
+            // NetworkVarNames: m_pMovementServices (CPlayer_MovementServices*)
             // NetworkVarNames: m_ServerViewAngleChanges (ViewAngleServerChange_t)
             // NetworkVarNames: m_iHideHUD (uint32)
             // NetworkVarNames: m_skybox3d (sky3dparams_t)
             // NetworkVarNames: m_flDeathTime (GameTime_t)
-            // NetworkVarNames: m_hController (CHandle< CBasePlayerController>)
+            // NetworkVarNames: m_hController (CHandle<CBasePlayerController>)
             namespace C_BasePlayerPawn {
                 constexpr std::ptrdiff_t m_pWeaponServices = 0x10A0; // CPlayer_WeaponServices*
                 constexpr std::ptrdiff_t m_pItemServices = 0x10A8; // CPlayer_ItemServices*
@@ -9256,7 +9256,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bSilencerOn (bool)
             // NetworkVarNames: m_flTimeSilencerSwitchComplete (GameTime_t)
             // NetworkVarNames: m_iOriginalTeamNumber (int)
-            // NetworkVarNames: m_hPrevOwner (CHandle< CCSPlayerPawn>)
+            // NetworkVarNames: m_hPrevOwner (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_nDropTick (GameTick_t)
             // NetworkVarNames: m_fLastShotTime (GameTime_t)
             // NetworkVarNames: m_iIronSightMode (int)
@@ -9441,7 +9441,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bJustPulledPin (bool)
             // NetworkVarNames: m_nNextHoldTick (GameTick_t)
             // NetworkVarNames: m_flNextHoldFrac (float)
-            // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle< CCSWeaponBase>)
+            // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
             namespace C_BaseCSGrenade {
                 constexpr std::ptrdiff_t m_bClientPredictDelete = 0x2908; // bool
                 constexpr std::ptrdiff_t m_bRedraw = 0x2909; // bool
@@ -9498,8 +9498,8 @@ namespace cs2_dumper {
             // MNetworkExcludeByName
             // MNetworkExcludeByName
             // MNetworkIncludeByName
-            // NetworkVarNames: m_pPingServices (CCSPlayer_PingServices *)
-            // NetworkVarNames: m_pViewModelServices (CPlayer_ViewModelServices *)
+            // NetworkVarNames: m_pPingServices (CCSPlayer_PingServices*)
+            // NetworkVarNames: m_pViewModelServices (CPlayer_ViewModelServices*)
             // NetworkVarNames: m_bIsScoped (bool)
             // NetworkVarNames: m_bIsWalking (bool)
             // NetworkVarNames: m_bResumeZoom (bool)
@@ -9557,7 +9557,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
             // NetworkVarNames: m_nSurvivalTeamNumber (int)
             // NetworkVarNames: m_bKilledByHeadshot (bool)
-            // NetworkVarNames: m_hOriginalController (CHandle< CCSPlayerController>)
+            // NetworkVarNames: m_hOriginalController (CHandle<CCSPlayerController>)
             namespace C_CSPlayerPawnBase {
                 constexpr std::ptrdiff_t m_pPingServices = 0x1260; // CCSPlayer_PingServices*
                 constexpr std::ptrdiff_t m_pViewModelServices = 0x1268; // CPlayer_ViewModelServices*
@@ -9723,11 +9723,11 @@ namespace cs2_dumper {
             // Fields count: 52
             //
             // Metadata:
-            // NetworkVarNames: m_pBulletServices (CCSPlayer_BulletServices *)
-            // NetworkVarNames: m_pHostageServices (CCSPlayer_HostageServices *)
-            // NetworkVarNames: m_pBuyServices (CCSPlayer_BuyServices *)
-            // NetworkVarNames: m_pGlowServices (CCSPlayer_GlowServices *)
-            // NetworkVarNames: m_pActionTrackingServices (CCSPlayer_ActionTrackingServices *)
+            // NetworkVarNames: m_pBulletServices (CCSPlayer_BulletServices*)
+            // NetworkVarNames: m_pHostageServices (CCSPlayer_HostageServices*)
+            // NetworkVarNames: m_pBuyServices (CCSPlayer_BuyServices*)
+            // NetworkVarNames: m_pGlowServices (CCSPlayer_GlowServices*)
+            // NetworkVarNames: m_pActionTrackingServices (CCSPlayer_ActionTrackingServices*)
             // MNetworkVarTypeOverride
             // MNetworkIncludeByName
             // MNetworkVarTypeOverride
@@ -9835,14 +9835,14 @@ namespace cs2_dumper {
             // MNetworkIncludeByName
             // MNetworkOverride
             // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
-            // NetworkVarNames: m_leader (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_leader (CHandle<CBaseEntity>)
             // NetworkVarNames: m_reuseTimer (CountdownTimer)
             // NetworkVarNames: m_vel (Vector)
             // NetworkVarNames: m_isRescued (bool)
             // NetworkVarNames: m_jumpedThisFrame (bool)
             // NetworkVarNames: m_nHostageState (int)
             // NetworkVarNames: m_bHandsHaveBeenCut (bool)
-            // NetworkVarNames: m_hHostageGrabber (CHandle< CCSPlayerPawn>)
+            // NetworkVarNames: m_hHostageGrabber (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_flRescueStartTime (GameTime_t)
             // NetworkVarNames: m_flGrabSuccessTime (GameTime_t)
             // NetworkVarNames: m_flDropStartTime (GameTime_t)
@@ -9898,7 +9898,7 @@ namespace cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // NetworkVarNames: m_pEntity (CEntityIdentity *)
+            // NetworkVarNames: m_pEntity (CEntityIdentity*)
             // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
             namespace CEntityInstance {
                 constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
@@ -16808,7 +16808,7 @@ namespace cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // NetworkVarNames: m_pEntity (CEntityIdentity *)
+            // NetworkVarNames: m_pEntity (CEntityIdentity*)
             // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
             namespace CEntityInstance {
                 constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
@@ -17084,9 +17084,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nCsViewPunchAngleTick (GameTick_t)
             // NetworkVarNames: m_flCsViewPunchAngleTickRatio (float32)
             // NetworkVarNames: m_PlayerFog (fogplayerparams_t)
-            // NetworkVarNames: m_hColorCorrectionCtrl (CHandle< CColorCorrection>)
-            // NetworkVarNames: m_hViewEntity (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hTonemapController (CHandle< CTonemapController2>)
+            // NetworkVarNames: m_hColorCorrectionCtrl (CHandle<CColorCorrection>)
+            // NetworkVarNames: m_hViewEntity (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hTonemapController (CHandle<CTonemapController2>)
             // NetworkVarNames: m_audio (audioparams_t)
             // NetworkVarNames: m_PostProcessingVolumes (CHandle<CPostProcessingVolume>)
             namespace CPlayer_CameraServices {
@@ -17159,7 +17159,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // NetworkVarNames: m_iObserverMode (uint8)
-            // NetworkVarNames: m_hObserverTarget (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hObserverTarget (CHandle<CBaseEntity>)
             namespace CPlayer_ObserverServices {
                 constexpr std::ptrdiff_t m_iObserverMode = 0x40; // uint8
                 constexpr std::ptrdiff_t m_hObserverTarget = 0x44; // CHandle<CBaseEntity>
@@ -17170,9 +17170,9 @@ namespace cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // NetworkVarNames: m_hMyWeapons (CHandle< CBasePlayerWeapon >)
-            // NetworkVarNames: m_hActiveWeapon (CHandle< CBasePlayerWeapon>)
-            // NetworkVarNames: m_hLastWeapon (CHandle< CBasePlayerWeapon>)
+            // NetworkVarNames: m_hMyWeapons (CHandle<CBasePlayerWeapon>)
+            // NetworkVarNames: m_hActiveWeapon (CHandle<CBasePlayerWeapon>)
+            // NetworkVarNames: m_hLastWeapon (CHandle<CBasePlayerWeapon>)
             // NetworkVarNames: m_iAmmo (uint16)
             namespace CPlayer_WeaponServices {
                 constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // CNetworkUtlVectorBase<CHandle<CBasePlayerWeapon>>
@@ -17218,7 +17218,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_Handle (ModelConfigHandle_t)
             // NetworkVarNames: m_Name (string_t)
-            // NetworkVarNames: m_AssociatedEntities (CHandle< CBaseModelEntity >)
+            // NetworkVarNames: m_AssociatedEntities (CHandle<CBaseModelEntity>)
             // NetworkVarNames: m_AssociatedEntityNames (string_t)
             namespace ActiveModelConfig_t {
                 constexpr std::ptrdiff_t m_Handle = 0x28; // ModelConfigHandle_t
@@ -17588,10 +17588,10 @@ namespace cs2_dumper {
             // NetworkVarNames: m_fFlags (uint32)
             // NetworkVarNames: m_vecVelocity (CNetworkVelocityVector)
             // NetworkVarNames: m_vecBaseVelocity (Vector)
-            // NetworkVarNames: m_hEffectEntity (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hOwnerEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hEffectEntity (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hOwnerEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_fEffects (uint32)
-            // NetworkVarNames: m_hGroundEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hGroundEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_flFriction (float32)
             // NetworkVarNames: m_flElasticity (float32)
             // NetworkVarNames: m_flGravityScale (float32)
@@ -17715,7 +17715,7 @@ namespace cs2_dumper {
             // Fields count: 11
             //
             // Metadata:
-            // NetworkVarNames: m_hEntAttached (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hEntAttached (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bCheapEffect (bool)
             namespace CEntityFlame {
                 constexpr std::ptrdiff_t m_hEntAttached = 0x7A8; // CHandle<CBaseEntity>
@@ -18058,7 +18058,7 @@ namespace cs2_dumper {
             // Fields count: 14
             //
             // Metadata:
-            // NetworkVarNames: m_hCtrl (CHandle< CFogController>)
+            // NetworkVarNames: m_hCtrl (CHandle<CFogController>)
             namespace fogplayerparams_t {
                 constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle<CFogController>
                 constexpr std::ptrdiff_t m_flTransitionTime = 0xC; // float32
@@ -18292,7 +18292,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iNumConsecutiveCTLoses (int)
             // NetworkVarNames: m_iNumConsecutiveTerroristLoses (int)
             // NetworkVarNames: m_nMatchAbortedEarlyReason (int)
-            // NetworkVarNames: m_pGameModeRules (CCSGameModeRules *)
+            // NetworkVarNames: m_pGameModeRules (CCSGameModeRules*)
             // NetworkVarNames: m_RetakeRules (CRetakeGameRules)
             // NetworkVarNames: m_nMatchEndCount (uint8)
             // NetworkVarNames: m_nTTeamIntroVariant (int)
@@ -18708,8 +18708,8 @@ namespace cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // NetworkVarNames: m_hPlayer (CHandle< CCSPlayerPawn>)
-            // NetworkVarNames: m_hPingedEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hPlayer (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_hPingedEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_iType (int)
             // NetworkVarNames: m_bUrgent (bool)
             // NetworkVarNames: m_szPlaceName (char)
@@ -18724,7 +18724,7 @@ namespace cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // NetworkVarNames: m_hPlayerPing (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hPlayerPing (CHandle<CBaseEntity>)
             namespace CCSPlayer_PingServices {
                 constexpr std::ptrdiff_t m_flPlayerPingTokens = 0x40; // GameTime_t[5]
                 constexpr std::ptrdiff_t m_hPlayerPing = 0x54; // CHandle<CBaseEntity>
@@ -18770,7 +18770,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iFOVStart (uint32)
             // NetworkVarNames: m_flFOVTime (GameTime_t)
             // NetworkVarNames: m_flFOVRate (float32)
-            // NetworkVarNames: m_hZoomOwner (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hZoomOwner (CHandle<CBaseEntity>)
             namespace CCSPlayerBase_CameraServices {
                 constexpr std::ptrdiff_t m_iFOV = 0x170; // uint32
                 constexpr std::ptrdiff_t m_iFOVStart = 0x174; // uint32
@@ -18847,8 +18847,8 @@ namespace cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // NetworkVarNames: m_hCarriedHostage (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hCarriedHostageProp (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hCarriedHostage (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hCarriedHostageProp (CHandle<CBaseEntity>)
             namespace CCSPlayer_HostageServices {
                 constexpr std::ptrdiff_t m_hCarriedHostage = 0x40; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_hCarriedHostageProp = 0x44; // CHandle<CBaseEntity>
@@ -18934,7 +18934,7 @@ namespace cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // NetworkVarNames: m_hViewModel (CHandle< CBaseViewModel >)
+            // NetworkVarNames: m_hViewModel (CHandle<CBaseViewModel>)
             namespace CCSPlayer_ViewModelServices {
                 constexpr std::ptrdiff_t m_hViewModel = 0x40; // CHandle<CBaseViewModel>[3]
             }
@@ -18981,10 +18981,10 @@ namespace cs2_dumper {
             // Fields count: 14
             //
             // Metadata:
-            // NetworkVarNames: m_PlayerDamager (CHandle< CCSPlayerPawnBase >)
-            // NetworkVarNames: m_PlayerRecipient (CHandle< CCSPlayerPawnBase >)
-            // NetworkVarNames: m_hPlayerControllerDamager (CHandle< CCSPlayerController >)
-            // NetworkVarNames: m_hPlayerControllerRecipient (CHandle< CCSPlayerController >)
+            // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawnBase>)
+            // NetworkVarNames: m_PlayerRecipient (CHandle<CCSPlayerPawnBase>)
+            // NetworkVarNames: m_hPlayerControllerDamager (CHandle<CCSPlayerController>)
+            // NetworkVarNames: m_hPlayerControllerRecipient (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_szPlayerDamagerName (CUtlString)
             // NetworkVarNames: m_szPlayerRecipientName (CUtlString)
             // NetworkVarNames: m_DamagerXuid (uint64)
@@ -19648,8 +19648,8 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MNetworkIncludeByName
-            // NetworkVarNames: m_aPlayerControllers (CHandle< CBasePlayerController >)
-            // NetworkVarNames: m_aPlayers (CHandle< CBasePlayerPawn >)
+            // NetworkVarNames: m_aPlayerControllers (CHandle<CBasePlayerController>)
+            // NetworkVarNames: m_aPlayers (CHandle<CBasePlayerPawn>)
             // NetworkVarNames: m_iScore (int32)
             // NetworkVarNames: m_szTeamname (char)
             namespace CTeam {
@@ -19672,7 +19672,7 @@ namespace cs2_dumper {
             // MNetworkUserGroupProxy
             // MNetworkIncludeByUserGroup
             // NetworkVarNames: m_nTickBase (uint32)
-            // NetworkVarNames: m_hPawn (CHandle< CBasePlayerPawn>)
+            // NetworkVarNames: m_hPawn (CHandle<CBasePlayerPawn>)
             // NetworkVarNames: m_iConnected (PlayerConnectedState)
             // NetworkVarNames: m_iszPlayerName (char)
             // NetworkVarNames: m_steamID (uint64)
@@ -19800,7 +19800,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vDecalForwardAxis (Vector)
             // NetworkVarNames: m_flDecalHealBloodRate (float)
             // NetworkVarNames: m_flDecalHealHeightRate (float)
-            // NetworkVarNames: m_ConfigEntitiesToPropagateMaterialDecalsTo (CHandle< CBaseModelEntity >)
+            // NetworkVarNames: m_ConfigEntitiesToPropagateMaterialDecalsTo (CHandle<CBaseModelEntity>)
             // NetworkVarNames: m_vecViewOffset (CNetworkViewOffsetVector)
             namespace CBaseModelEntity {
                 constexpr std::ptrdiff_t m_CRenderComponent = 0x7A8; // CRenderComponent*
@@ -19850,7 +19850,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flPreSimTime (float32)
             // NetworkVarNames: m_vServerControlPoints (Vector)
             // NetworkVarNames: m_iServerControlPointAssignments (uint8)
-            // NetworkVarNames: m_hControlPointEnts (CHandle< CBaseEntity >)
+            // NetworkVarNames: m_hControlPointEnts (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bNoSave (bool)
             // NetworkVarNames: m_bNoFreeze (bool)
             // NetworkVarNames: m_bNoRamp (bool)
@@ -20013,14 +20013,14 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bDisabled (bool)
             // NetworkVarNames: m_bUpdateOnClient (bool)
             // NetworkVarNames: m_nInputType (ValueRemapperInputType_t)
-            // NetworkVarNames: m_hRemapLineStart (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hRemapLineEnd (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hRemapLineStart (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hRemapLineEnd (CHandle<CBaseEntity>)
             // NetworkVarNames: m_flMaximumChangePerSecond (float)
             // NetworkVarNames: m_flDisengageDistance (float)
             // NetworkVarNames: m_flEngageDistance (float)
             // NetworkVarNames: m_bRequiresUseKey (bool)
             // NetworkVarNames: m_nOutputType (ValueRemapperOutputType_t)
-            // NetworkVarNames: m_hOutputEntities (CHandle< CBaseEntity >)
+            // NetworkVarNames: m_hOutputEntities (CHandle<CBaseEntity>)
             // NetworkVarNames: m_nHapticsType (ValueRemapperHapticsType_t)
             // NetworkVarNames: m_nMomentumType (ValueRemapperMomentumType_t)
             // NetworkVarNames: m_flMomentumModifier (float)
@@ -20120,7 +20120,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bMultiplayer (bool)
             // NetworkVarNames: m_bAutogenerated (bool)
             // NetworkVarNames: m_flForceClientTime (float32)
-            // NetworkVarNames: m_hActorList (CHandle< CBaseFlex >)
+            // NetworkVarNames: m_hActorList (CHandle<CBaseFlex>)
             // NetworkVarNames: m_nSceneStringIndex (uint16)
             namespace CSceneEntity {
                 constexpr std::ptrdiff_t m_iszSceneFile = 0x7B0; // CUtlSymbolLarge
@@ -20227,7 +20227,7 @@ namespace cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // NetworkVarNames: m_Handle (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_Handle (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bSendHandle (bool)
             namespace CHandleTest {
                 constexpr std::ptrdiff_t m_Handle = 0x7A8; // CHandle<CBaseEntity>
@@ -20237,7 +20237,7 @@ namespace cs2_dumper {
             // Fields count: 24
             //
             // Metadata:
-            // NetworkVarNames: m_glowEntity (CHandle< CBaseModelEntity>)
+            // NetworkVarNames: m_glowEntity (CHandle<CBaseModelEntity>)
             // NetworkVarNames: m_usable (bool)
             // NetworkVarNames: m_szDisplayText (string_t)
             namespace CBaseButton {
@@ -20330,7 +20330,7 @@ namespace cs2_dumper {
             // Fields count: 30
             //
             // Metadata:
-            // NetworkVarNames: m_hTargetEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hTargetEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bState (bool)
             // NetworkVarNames: m_bAlwaysUpdate (bool)
             // NetworkVarNames: m_flLightFOV (float32)
@@ -20488,8 +20488,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_RopeLength (int16)
             // NetworkVarNames: m_fLockedPoints (uint8)
             // NetworkVarNames: m_flScrollSpeed (float32)
-            // NetworkVarNames: m_hStartPoint (CHandle< CBaseEntity>)
-            // NetworkVarNames: m_hEndPoint (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hStartPoint (CHandle<CBaseEntity>)
+            // NetworkVarNames: m_hEndPoint (CHandle<CBaseEntity>)
             // NetworkVarNames: m_iStartAttachment (AttachmentHandle_t)
             // NetworkVarNames: m_iEndAttachment (AttachmentHandle_t)
             namespace CRopeKeyframe {
@@ -20565,7 +20565,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nHaloIndex (HMaterialStrong)
             // NetworkVarNames: m_nBeamType (BeamType_t)
             // NetworkVarNames: m_nBeamFlags (uint32)
-            // NetworkVarNames: m_hAttachEntity (CHandle< CBaseEntity >)
+            // NetworkVarNames: m_hAttachEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_nAttachIndex (AttachmentHandle_t)
             // NetworkVarNames: m_fWidth (float32)
             // NetworkVarNames: m_fEndWidth (float32)
@@ -20646,7 +20646,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // NetworkVarNames: m_hSpriteMaterial (HMaterialStrong)
-            // NetworkVarNames: m_hAttachedToEntity (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hAttachedToEntity (CHandle<CBaseEntity>)
             // NetworkVarNames: m_nAttachment (AttachmentHandle_t)
             // NetworkVarNames: m_flSpriteFramerate (float32)
             // NetworkVarNames: m_flFrame (float32)
@@ -20784,7 +20784,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nResolutionY (int)
             // NetworkVarNames: m_szLayoutFileName (string_t)
             // NetworkVarNames: m_RenderAttrName (string_t)
-            // NetworkVarNames: m_TargetEntities (CHandle< CBaseModelEntity >)
+            // NetworkVarNames: m_TargetEntities (CHandle<CBaseModelEntity>)
             // NetworkVarNames: m_nTargetChangeCount (int)
             // NetworkVarNames: m_vecCSSClasses (string_t)
             namespace CInfoOffscreenPanoramaTexture {
@@ -20861,10 +20861,10 @@ namespace cs2_dumper {
             // MNetworkUserGroupProxy
             // MNetworkUserGroupProxy
             // MNetworkUserGroupProxy
-            // NetworkVarNames: m_pInGameMoneyServices (CCSPlayerController_InGameMoneyServices *)
-            // NetworkVarNames: m_pInventoryServices (CCSPlayerController_InventoryServices *)
-            // NetworkVarNames: m_pActionTrackingServices (CCSPlayerController_ActionTrackingServices *)
-            // NetworkVarNames: m_pDamageServices (CCSPlayerController_DamageServices *)
+            // NetworkVarNames: m_pInGameMoneyServices (CCSPlayerController_InGameMoneyServices*)
+            // NetworkVarNames: m_pInventoryServices (CCSPlayerController_InventoryServices*)
+            // NetworkVarNames: m_pActionTrackingServices (CCSPlayerController_ActionTrackingServices*)
+            // NetworkVarNames: m_pDamageServices (CCSPlayerController_DamageServices*)
             // NetworkVarNames: m_iPing (uint32)
             // NetworkVarNames: m_bHasCommunicationAbuseMute (bool)
             // NetworkVarNames: m_szCrosshairCodes (string_t)
@@ -20890,8 +20890,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bControllingBot (bool)
             // NetworkVarNames: m_bHasControlledBotThisRound (bool)
             // NetworkVarNames: m_bCanControlObservedBot (bool)
-            // NetworkVarNames: m_hPlayerPawn (CHandle< CCSPlayerPawn>)
-            // NetworkVarNames: m_hObserverPawn (CHandle< CCSObserverPawn>)
+            // NetworkVarNames: m_hPlayerPawn (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_hObserverPawn (CHandle<CCSObserverPawn>)
             // NetworkVarNames: m_bPawnIsAlive (bool)
             // NetworkVarNames: m_iPawnHealth (uint32)
             // NetworkVarNames: m_iPawnArmor (int)
@@ -20901,7 +20901,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iPawnLifetimeStart (int)
             // NetworkVarNames: m_iPawnLifetimeEnd (int)
             // NetworkVarNames: m_iPawnBotDifficulty (int)
-            // NetworkVarNames: m_hOriginalControllerOfCurrentPawn (CHandle< CCSPlayerController>)
+            // NetworkVarNames: m_hOriginalControllerOfCurrentPawn (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_iScore (int32)
             // NetworkVarNames: m_vecKills (EKillTypes_t)
             // NetworkVarNames: m_bMvpNoMusic (bool)
@@ -21226,7 +21226,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flLightStyleStartTime (GameTime_t)
             // NetworkVarNames: m_QueuedLightStyleStrings (CUtlString)
             // NetworkVarNames: m_LightStyleEvents (CUtlString)
-            // NetworkVarNames: m_LightStyleTargets (CHandle< CBaseModelEntity >)
+            // NetworkVarNames: m_LightStyleTargets (CHandle<CBaseModelEntity>)
             // NetworkVarNames: m_hLightCookie (HRenderTextureStrong)
             // NetworkVarNames: m_flShape (float)
             // NetworkVarNames: m_flSoftX (float)
@@ -21598,7 +21598,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // NetworkVarNames: m_iszCommentaryFile (string_t)
-            // NetworkVarNames: m_hViewPosition (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hViewPosition (CHandle<CBaseEntity>)
             // NetworkVarNames: m_bActive (bool)
             // NetworkVarNames: m_flStartTime (GameTime_t)
             // NetworkVarNames: m_flStartTimeInCommentary (float32)
@@ -21770,7 +21770,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bLocked (bool)
             // NetworkVarNames: m_closedPosition (Vector)
             // NetworkVarNames: m_closedAngles (QAngle)
-            // NetworkVarNames: m_hMaster (CHandle< CBasePropDoor>)
+            // NetworkVarNames: m_hMaster (CHandle<CBasePropDoor>)
             namespace CBasePropDoor {
                 constexpr std::ptrdiff_t m_flAutoReturnDelay = 0xE74; // float32
                 constexpr std::ptrdiff_t m_hDoorList = 0xE78; // CUtlVector<CHandle<CBasePropDoor>>
@@ -21987,7 +21987,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_DmgRadius (float32)
             // NetworkVarNames: m_flDetonateTime (GameTime_t)
             // NetworkVarNames: m_flDamage (float32)
-            // NetworkVarNames: m_hThrower (CHandle< CCSPlayerPawn >)
+            // NetworkVarNames: m_hThrower (CHandle<CCSPlayerPawn>)
             namespace CBaseGrenade {
                 constexpr std::ptrdiff_t m_OnPlayerPickup = 0xC88; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnExplode = 0xCB0; // CEntityIOOutput
@@ -22026,8 +22026,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nViewModelIndex (uint32)
             // NetworkVarNames: m_nAnimationParity (uint32)
             // NetworkVarNames: m_flAnimationStartTime (float32)
-            // NetworkVarNames: m_hWeapon (CHandle< CBasePlayerWeapon>)
-            // NetworkVarNames: m_hControlPanel (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hWeapon (CHandle<CBasePlayerWeapon>)
+            // NetworkVarNames: m_hControlPanel (CHandle<CBaseEntity>)
             namespace CBaseViewModel {
                 constexpr std::ptrdiff_t m_vecLastFacing = 0xBF8; // Vector
                 constexpr std::ptrdiff_t m_nViewModelIndex = 0xC04; // uint32
@@ -22057,8 +22057,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flDefuseLength (float)
             // NetworkVarNames: m_flDefuseCountDown (GameTime_t)
             // NetworkVarNames: m_bBombDefused (bool)
-            // NetworkVarNames: m_hBombDefuser (CHandle< CCSPlayerPawn>)
-            // NetworkVarNames: m_hControlPanel (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_hBombDefuser (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_hControlPanel (CHandle<CBaseEntity>)
             namespace CPlantedC4 {
                 constexpr std::ptrdiff_t m_bBombTicking = 0xBF0; // bool
                 constexpr std::ptrdiff_t m_flC4Blow = 0xBF4; // GameTime_t
@@ -22135,7 +22135,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_OriginalOwnerXuidLow (uint32)
             // NetworkVarNames: m_OriginalOwnerXuidHigh (uint32)
             // NetworkVarNames: m_jumpedThisFrame (bool)
-            // NetworkVarNames: m_leader (CHandle< CCSPlayerPawn>)
+            // NetworkVarNames: m_leader (CHandle<CCSPlayerPawn>)
             namespace CChicken {
                 constexpr std::ptrdiff_t m_AttributeManager = 0xE88; // CAttributeContainer
                 constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0x1150; // uint32
@@ -22221,7 +22221,7 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MNetworkExcludeByUserGroup
-            // NetworkVarNames: m_hMyWearables (CHandle< CEconWearable >)
+            // NetworkVarNames: m_hMyWearables (CHandle<CEconWearable>)
             // NetworkVarNames: m_flFieldOfView (float)
             namespace CBaseCombatCharacter {
                 constexpr std::ptrdiff_t m_bForceServerRagdoll = 0xC80; // bool
@@ -22259,21 +22259,21 @@ namespace cs2_dumper {
             // MNetworkExcludeByName
             // MNetworkExcludeByName
             // MNetworkExcludeByName
-            // NetworkVarNames: m_pWeaponServices (CPlayer_WeaponServices *)
-            // NetworkVarNames: m_pItemServices (CPlayer_ItemServices *)
-            // NetworkVarNames: m_pAutoaimServices (CPlayer_AutoaimServices *)
-            // NetworkVarNames: m_pObserverServices (CPlayer_ObserverServices *)
-            // NetworkVarNames: m_pWaterServices (CPlayer_WaterServices *)
-            // NetworkVarNames: m_pUseServices (CPlayer_UseServices *)
-            // NetworkVarNames: m_pFlashlightServices (CPlayer_FlashlightServices *)
-            // NetworkVarNames: m_pCameraServices (CPlayer_CameraServices *)
-            // NetworkVarNames: m_pMovementServices (CPlayer_MovementServices *)
+            // NetworkVarNames: m_pWeaponServices (CPlayer_WeaponServices*)
+            // NetworkVarNames: m_pItemServices (CPlayer_ItemServices*)
+            // NetworkVarNames: m_pAutoaimServices (CPlayer_AutoaimServices*)
+            // NetworkVarNames: m_pObserverServices (CPlayer_ObserverServices*)
+            // NetworkVarNames: m_pWaterServices (CPlayer_WaterServices*)
+            // NetworkVarNames: m_pUseServices (CPlayer_UseServices*)
+            // NetworkVarNames: m_pFlashlightServices (CPlayer_FlashlightServices*)
+            // NetworkVarNames: m_pCameraServices (CPlayer_CameraServices*)
+            // NetworkVarNames: m_pMovementServices (CPlayer_MovementServices*)
             // MNetworkUserGroupProxy
             // NetworkVarNames: m_ServerViewAngleChanges (ViewAngleServerChange_t)
             // NetworkVarNames: m_iHideHUD (uint32)
             // NetworkVarNames: m_skybox3d (sky3dparams_t)
             // NetworkVarNames: m_flDeathTime (GameTime_t)
-            // NetworkVarNames: m_hController (CHandle< CBasePlayerController>)
+            // NetworkVarNames: m_hController (CHandle<CBasePlayerController>)
             namespace CBasePlayerPawn {
                 constexpr std::ptrdiff_t m_pWeaponServices = 0xD18; // CPlayer_WeaponServices*
                 constexpr std::ptrdiff_t m_pItemServices = 0xD20; // CPlayer_ItemServices*
@@ -22339,7 +22339,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bSilencerOn (bool)
             // NetworkVarNames: m_flTimeSilencerSwitchComplete (GameTime_t)
             // NetworkVarNames: m_iOriginalTeamNumber (int)
-            // NetworkVarNames: m_hPrevOwner (CHandle< CCSPlayerPawn>)
+            // NetworkVarNames: m_hPrevOwner (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_nDropTick (GameTick_t)
             // NetworkVarNames: m_fLastShotTime (GameTime_t)
             // NetworkVarNames: m_iIronSightMode (int)
@@ -22524,7 +22524,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bJustPulledPin (bool)
             // NetworkVarNames: m_nNextHoldTick (GameTick_t)
             // NetworkVarNames: m_flNextHoldFrac (float)
-            // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle< CCSWeaponBase>)
+            // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
             namespace CBaseCSGrenade {
                 constexpr std::ptrdiff_t m_bRedraw = 0x1198; // bool
                 constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x1199; // bool
@@ -22575,9 +22575,9 @@ namespace cs2_dumper {
             // MNetworkExcludeByUserGroup
             // MNetworkExcludeByName
             // MNetworkExcludeByName
-            // NetworkVarNames: m_pPingServices (CCSPlayer_PingServices *)
-            // NetworkVarNames: m_pViewModelServices (CPlayer_ViewModelServices *)
-            // NetworkVarNames: m_hOriginalController (CHandle< CCSPlayerController>)
+            // NetworkVarNames: m_pPingServices (CCSPlayer_PingServices*)
+            // NetworkVarNames: m_pViewModelServices (CPlayer_ViewModelServices*)
+            // NetworkVarNames: m_hOriginalController (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
             // NetworkVarNames: m_iPlayerState (CSPlayerState)
             // NetworkVarNames: m_bIsScoped (bool)
@@ -22807,10 +22807,10 @@ namespace cs2_dumper {
             // MNetworkIncludeByName
             // MNetworkVarTypeOverride
             // MNetworkIncludeByName
-            // NetworkVarNames: m_pBulletServices (CCSPlayer_BulletServices *)
-            // NetworkVarNames: m_pHostageServices (CCSPlayer_HostageServices *)
-            // NetworkVarNames: m_pBuyServices (CCSPlayer_BuyServices *)
-            // NetworkVarNames: m_pActionTrackingServices (CCSPlayer_ActionTrackingServices *)
+            // NetworkVarNames: m_pBulletServices (CCSPlayer_BulletServices*)
+            // NetworkVarNames: m_pHostageServices (CCSPlayer_HostageServices*)
+            // NetworkVarNames: m_pBuyServices (CCSPlayer_BuyServices*)
+            // NetworkVarNames: m_pActionTrackingServices (CCSPlayer_ActionTrackingServices*)
             // NetworkVarNames: m_bHasFemaleVoice (bool)
             // NetworkVarNames: m_szLastPlaceName (char)
             // NetworkVarNames: m_bInBuyZone (bool)
@@ -22904,10 +22904,10 @@ namespace cs2_dumper {
             // NetworkVarNames: m_isRescued (bool)
             // NetworkVarNames: m_jumpedThisFrame (bool)
             // NetworkVarNames: m_nHostageState (int)
-            // NetworkVarNames: m_leader (CHandle< CBaseEntity>)
+            // NetworkVarNames: m_leader (CHandle<CBaseEntity>)
             // NetworkVarNames: m_reuseTimer (CountdownTimer)
             // NetworkVarNames: m_bHandsHaveBeenCut (bool)
-            // NetworkVarNames: m_hHostageGrabber (CHandle< CCSPlayerPawn>)
+            // NetworkVarNames: m_hHostageGrabber (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_flRescueStartTime (GameTime_t)
             // NetworkVarNames: m_flGrabSuccessTime (GameTime_t)
             // NetworkVarNames: m_flDropStartTime (GameTime_t)
@@ -24614,7 +24614,7 @@ namespace cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // NetworkVarNames: m_pEntity (CEntityIdentity *)
+            // NetworkVarNames: m_pEntity (CEntityIdentity*)
             // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
             namespace CEntityInstance {
                 constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge

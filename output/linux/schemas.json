@@ -5582,7 +5582,7 @@
           },
           {
             "name": "m_AssociatedEntities",
-            "ty": "CHandle< C_BaseModelEntity >",
+            "ty": "CHandle<C_BaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -5947,7 +5947,7 @@
           },
           {
             "name": "m_hPawn",
-            "ty": "CHandle< CBasePlayerPawn>",
+            "ty": "CHandle<CBasePlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -6230,7 +6230,7 @@
           },
           {
             "name": "m_hZoomOwner",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -6316,22 +6316,22 @@
           },
           {
             "name": "m_pInGameMoneyServices",
-            "ty": "CCSPlayerController_InGameMoneyServices *",
+            "ty": "CCSPlayerController_InGameMoneyServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pInventoryServices",
-            "ty": "CCSPlayerController_InventoryServices *",
+            "ty": "CCSPlayerController_InventoryServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pActionTrackingServices",
-            "ty": "CCSPlayerController_ActionTrackingServices *",
+            "ty": "CCSPlayerController_ActionTrackingServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pDamageServices",
-            "ty": "CCSPlayerController_DamageServices *",
+            "ty": "CCSPlayerController_DamageServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -6461,12 +6461,12 @@
           },
           {
             "name": "m_hPlayerPawn",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hObserverPawn",
-            "ty": "CHandle< CCSObserverPawn>",
+            "ty": "CHandle<CCSObserverPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -6516,7 +6516,7 @@
           },
           {
             "name": "m_hOriginalControllerOfCurrentPawn",
-            "ty": "CHandle< CCSPlayerController>",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
@@ -6774,12 +6774,12 @@
         "metadata": [
           {
             "name": "m_hCarriedHostage",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hCarriedHostageProp",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -6961,7 +6961,7 @@
         "metadata": [
           {
             "name": "m_hPlayerPing",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -6974,7 +6974,7 @@
         "metadata": [
           {
             "name": "m_hViewModel",
-            "ty": "CHandle< CBaseViewModel >",
+            "ty": "CHandle<CBaseViewModel>",
             "type": "NetworkVarNames"
           }
         ],
@@ -7298,22 +7298,22 @@
         "metadata": [
           {
             "name": "m_PlayerDamager",
-            "ty": "CHandle< CCSPlayerPawnBase >",
+            "ty": "CHandle<CCSPlayerPawnBase>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_PlayerRecipient",
-            "ty": "CHandle< CCSPlayerPawnBase >",
+            "ty": "CHandle<CCSPlayerPawnBase>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hPlayerControllerDamager",
-            "ty": "CHandle< CCSPlayerController >",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hPlayerControllerRecipient",
-            "ty": "CHandle< CCSPlayerController >",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
@@ -7586,7 +7586,7 @@
         "metadata": [
           {
             "name": "m_pEntity",
-            "ty": "CEntityIdentity *",
+            "ty": "CEntityIdentity*",
             "type": "NetworkVarNames"
           },
           {
@@ -7801,7 +7801,7 @@
           },
           {
             "name": "m_TargetEntities",
-            "ty": "CHandle< C_BaseModelEntity >",
+            "ty": "CHandle<C_BaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -8360,17 +8360,17 @@
           },
           {
             "name": "m_hColorCorrectionCtrl",
-            "ty": "CHandle< CColorCorrection>",
+            "ty": "CHandle<CColorCorrection>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hViewEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hTonemapController",
-            "ty": "CHandle< CTonemapController2>",
+            "ty": "CHandle<CTonemapController2>",
             "type": "NetworkVarNames"
           },
           {
@@ -8494,7 +8494,7 @@
           },
           {
             "name": "m_hObserverTarget",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -8510,17 +8510,17 @@
         "metadata": [
           {
             "name": "m_hMyWeapons",
-            "ty": "CHandle< C_BasePlayerWeapon >",
+            "ty": "CHandle<C_BasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hActiveWeapon",
-            "ty": "CHandle< CBasePlayerWeapon>",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hLastWeapon",
-            "ty": "CHandle< CBasePlayerWeapon>",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
@@ -8585,7 +8585,7 @@
         "metadata": [
           {
             "name": "m_hTargetEntity",
-            "ty": "CHandle< C_BaseEntity>",
+            "ty": "CHandle<C_BaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -9144,7 +9144,7 @@
           },
           {
             "name": "m_LightStyleTargets",
-            "ty": "CHandle< C_BaseModelEntity >",
+            "ty": "CHandle<C_BaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -9329,7 +9329,7 @@
         "metadata": [
           {
             "name": "m_glowEntity",
-            "ty": "CHandle< C_BaseModelEntity>",
+            "ty": "CHandle<C_BaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -9425,7 +9425,7 @@
           },
           {
             "name": "m_hSwitchToWeaponAfterThrow",
-            "ty": "CHandle< CCSWeaponBase>",
+            "ty": "CHandle<CCSWeaponBase>",
             "type": "NetworkVarNames"
           }
         ],
@@ -9533,7 +9533,7 @@
           },
           {
             "name": "m_hMyWearables",
-            "ty": "CHandle<C_EconWearable >",
+            "ty": "CHandle<C_EconWearable>",
             "type": "NetworkVarNames"
           },
           {
@@ -9769,12 +9769,12 @@
           },
           {
             "name": "m_hEffectEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hOwnerEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -9799,7 +9799,7 @@
           },
           {
             "name": "m_hGroundEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -10002,7 +10002,7 @@
           },
           {
             "name": "m_hThrower",
-            "ty": "CHandle< CCSPlayerPawn >",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           }
         ],
@@ -10145,7 +10145,7 @@
           },
           {
             "name": "m_ConfigEntitiesToPropagateMaterialDecalsTo",
-            "ty": "CHandle< C_BaseModelEntity >",
+            "ty": "CHandle<C_BaseModelEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -10257,47 +10257,47 @@
           },
           {
             "name": "m_pWeaponServices",
-            "ty": "CPlayer_WeaponServices *",
+            "ty": "CPlayer_WeaponServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pItemServices",
-            "ty": "CPlayer_ItemServices *",
+            "ty": "CPlayer_ItemServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pAutoaimServices",
-            "ty": "CPlayer_AutoaimServices *",
+            "ty": "CPlayer_AutoaimServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pObserverServices",
-            "ty": "CPlayer_ObserverServices *",
+            "ty": "CPlayer_ObserverServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pWaterServices",
-            "ty": "CPlayer_WaterServices *",
+            "ty": "CPlayer_WaterServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pUseServices",
-            "ty": "CPlayer_UseServices *",
+            "ty": "CPlayer_UseServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pFlashlightServices",
-            "ty": "CPlayer_FlashlightServices *",
+            "ty": "CPlayer_FlashlightServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pCameraServices",
-            "ty": "CPlayer_CameraServices *",
+            "ty": "CPlayer_CameraServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pMovementServices",
-            "ty": "CPlayer_MovementServices *",
+            "ty": "CPlayer_MovementServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -10322,7 +10322,7 @@
           },
           {
             "name": "m_hController",
-            "ty": "CHandle< CBasePlayerController>",
+            "ty": "CHandle<CBasePlayerController>",
             "type": "NetworkVarNames"
           }
         ],
@@ -10466,7 +10466,7 @@
           },
           {
             "name": "m_hMaster",
-            "ty": "CHandle< C_BasePropDoor>",
+            "ty": "CHandle<C_BasePropDoor>",
             "type": "NetworkVarNames"
           }
         ],
@@ -10593,12 +10593,12 @@
           },
           {
             "name": "m_hWeapon",
-            "ty": "CHandle< CBasePlayerWeapon>",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hControlPanel",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -10697,7 +10697,7 @@
           },
           {
             "name": "m_hAttachEntity",
-            "ty": "CHandle< CBaseEntity >",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -11478,7 +11478,7 @@
           },
           {
             "name": "m_pGameModeRules",
-            "ty": "CCSGameModeRules *",
+            "ty": "CCSGameModeRules*",
             "type": "NetworkVarNames"
           },
           {
@@ -11722,27 +11722,27 @@
         "metadata": [
           {
             "name": "m_pBulletServices",
-            "ty": "CCSPlayer_BulletServices *",
+            "ty": "CCSPlayer_BulletServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pHostageServices",
-            "ty": "CCSPlayer_HostageServices *",
+            "ty": "CCSPlayer_HostageServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pBuyServices",
-            "ty": "CCSPlayer_BuyServices *",
+            "ty": "CCSPlayer_BuyServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pGlowServices",
-            "ty": "CCSPlayer_GlowServices *",
+            "ty": "CCSPlayer_GlowServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pActionTrackingServices",
-            "ty": "CCSPlayer_ActionTrackingServices *",
+            "ty": "CCSPlayer_ActionTrackingServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -12130,12 +12130,12 @@
           },
           {
             "name": "m_pPingServices",
-            "ty": "CCSPlayer_PingServices *",
+            "ty": "CCSPlayer_PingServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pViewModelServices",
-            "ty": "CPlayer_ViewModelServices *",
+            "ty": "CPlayer_ViewModelServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -12425,7 +12425,7 @@
           },
           {
             "name": "m_hOriginalController",
-            "ty": "CHandle< CCSPlayerController>",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           }
         ],
@@ -12746,7 +12746,7 @@
           },
           {
             "name": "m_hPrevOwner",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -12819,7 +12819,7 @@
           },
           {
             "name": "m_leader",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -13300,7 +13300,7 @@
         "metadata": [
           {
             "name": "m_hEntAttached",
-            "ty": "CHandle< C_BaseEntity>",
+            "ty": "CHandle<C_BaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -14850,7 +14850,7 @@
         "metadata": [
           {
             "name": "m_Handle",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -14919,7 +14919,7 @@
           },
           {
             "name": "m_leader",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -14954,7 +14954,7 @@
           },
           {
             "name": "m_hHostageGrabber",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -15433,7 +15433,7 @@
           },
           {
             "name": "m_hControlPointEnts",
-            "ty": "CHandle< CBaseEntity >",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -15673,12 +15673,12 @@
           },
           {
             "name": "m_hBombDefuser",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hControlPanel",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -15695,12 +15695,12 @@
         "metadata": [
           {
             "name": "m_hPlayer",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hPingedEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -16320,7 +16320,7 @@
           },
           {
             "name": "m_hViewPosition",
-            "ty": "CHandle< C_BaseEntity>",
+            "ty": "CHandle<C_BaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -16372,12 +16372,12 @@
           },
           {
             "name": "m_hRemapLineStart",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hRemapLineEnd",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -16407,7 +16407,7 @@
           },
           {
             "name": "m_hOutputEntities",
-            "ty": "CHandle< C_BaseEntity >",
+            "ty": "CHandle<C_BaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -16847,12 +16847,12 @@
           },
           {
             "name": "m_hStartPoint",
-            "ty": "CHandle< C_BaseEntity>",
+            "ty": "CHandle<C_BaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hEndPoint",
-            "ty": "CHandle< C_BaseEntity>",
+            "ty": "CHandle<C_BaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -16956,7 +16956,7 @@
           },
           {
             "name": "m_hActorList",
-            "ty": "CHandle< C_BaseFlex >",
+            "ty": "CHandle<C_BaseFlex>",
             "type": "NetworkVarNames"
           }
         ],
@@ -17194,7 +17194,7 @@
           },
           {
             "name": "m_hAttachedToEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -17383,12 +17383,12 @@
           },
           {
             "name": "m_aPlayerControllers",
-            "ty": "CHandle< CBasePlayerController >",
+            "ty": "CHandle<CBasePlayerController>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_aPlayers",
-            "ty": "CHandle< C_BasePlayerPawn >",
+            "ty": "CHandle<C_BasePlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -17829,7 +17829,7 @@
         "metadata": [
           {
             "name": "m_hCtrl",
-            "ty": "CHandle< CFogController>",
+            "ty": "CHandle<CFogController>",
             "type": "NetworkVarNames"
           }
         ],
@@ -18686,7 +18686,7 @@
         "metadata": [
           {
             "name": "m_pEntity",
-            "ty": "CEntityIdentity *",
+            "ty": "CEntityIdentity*",
             "type": "NetworkVarNames"
           },
           {
@@ -27938,7 +27938,7 @@
           },
           {
             "name": "m_AssociatedEntities",
-            "ty": "CHandle< CBaseModelEntity >",
+            "ty": "CHandle<CBaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -28320,7 +28320,7 @@
           },
           {
             "name": "m_LightStyleTargets",
-            "ty": "CHandle< CBaseModelEntity >",
+            "ty": "CHandle<CBaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -28622,7 +28622,7 @@
         "metadata": [
           {
             "name": "m_glowEntity",
-            "ty": "CHandle< CBaseModelEntity>",
+            "ty": "CHandle<CBaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -28717,7 +28717,7 @@
           },
           {
             "name": "m_hSwitchToWeaponAfterThrow",
-            "ty": "CHandle< CCSWeaponBase>",
+            "ty": "CHandle<CCSWeaponBase>",
             "type": "NetworkVarNames"
           }
         ],
@@ -28841,7 +28841,7 @@
           },
           {
             "name": "m_hMyWearables",
-            "ty": "CHandle< CEconWearable >",
+            "ty": "CHandle<CEconWearable>",
             "type": "NetworkVarNames"
           },
           {
@@ -29109,12 +29109,12 @@
           },
           {
             "name": "m_hEffectEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hOwnerEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -29124,7 +29124,7 @@
           },
           {
             "name": "m_hGroundEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -29327,7 +29327,7 @@
           },
           {
             "name": "m_hThrower",
-            "ty": "CHandle< CCSPlayerPawn >",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           }
         ],
@@ -29464,7 +29464,7 @@
           },
           {
             "name": "m_ConfigEntitiesToPropagateMaterialDecalsTo",
-            "ty": "CHandle< CBaseModelEntity >",
+            "ty": "CHandle<CBaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -29547,7 +29547,7 @@
           },
           {
             "name": "m_hPawn",
-            "ty": "CHandle< CBasePlayerPawn>",
+            "ty": "CHandle<CBasePlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -29690,47 +29690,47 @@
           },
           {
             "name": "m_pWeaponServices",
-            "ty": "CPlayer_WeaponServices *",
+            "ty": "CPlayer_WeaponServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pItemServices",
-            "ty": "CPlayer_ItemServices *",
+            "ty": "CPlayer_ItemServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pAutoaimServices",
-            "ty": "CPlayer_AutoaimServices *",
+            "ty": "CPlayer_AutoaimServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pObserverServices",
-            "ty": "CPlayer_ObserverServices *",
+            "ty": "CPlayer_ObserverServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pWaterServices",
-            "ty": "CPlayer_WaterServices *",
+            "ty": "CPlayer_WaterServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pUseServices",
-            "ty": "CPlayer_UseServices *",
+            "ty": "CPlayer_UseServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pFlashlightServices",
-            "ty": "CPlayer_FlashlightServices *",
+            "ty": "CPlayer_FlashlightServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pCameraServices",
-            "ty": "CPlayer_CameraServices *",
+            "ty": "CPlayer_CameraServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pMovementServices",
-            "ty": "CPlayer_MovementServices *",
+            "ty": "CPlayer_MovementServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -29759,7 +29759,7 @@
           },
           {
             "name": "m_hController",
-            "ty": "CHandle< CBasePlayerController>",
+            "ty": "CHandle<CBasePlayerController>",
             "type": "NetworkVarNames"
           }
         ],
@@ -29990,7 +29990,7 @@
           },
           {
             "name": "m_hMaster",
-            "ty": "CHandle< CBasePropDoor>",
+            "ty": "CHandle<CBasePropDoor>",
             "type": "NetworkVarNames"
           }
         ],
@@ -30120,12 +30120,12 @@
           },
           {
             "name": "m_hWeapon",
-            "ty": "CHandle< CBasePlayerWeapon>",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hControlPanel",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -30224,7 +30224,7 @@
           },
           {
             "name": "m_hAttachEntity",
-            "ty": "CHandle< CBaseEntity >",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -31283,7 +31283,7 @@
           },
           {
             "name": "m_pGameModeRules",
-            "ty": "CCSGameModeRules *",
+            "ty": "CCSGameModeRules*",
             "type": "NetworkVarNames"
           },
           {
@@ -31500,7 +31500,7 @@
           },
           {
             "name": "m_hZoomOwner",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -31610,22 +31610,22 @@
           },
           {
             "name": "m_pInGameMoneyServices",
-            "ty": "CCSPlayerController_InGameMoneyServices *",
+            "ty": "CCSPlayerController_InGameMoneyServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pInventoryServices",
-            "ty": "CCSPlayerController_InventoryServices *",
+            "ty": "CCSPlayerController_InventoryServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pActionTrackingServices",
-            "ty": "CCSPlayerController_ActionTrackingServices *",
+            "ty": "CCSPlayerController_ActionTrackingServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pDamageServices",
-            "ty": "CCSPlayerController_DamageServices *",
+            "ty": "CCSPlayerController_DamageServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -31755,12 +31755,12 @@
           },
           {
             "name": "m_hPlayerPawn",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hObserverPawn",
-            "ty": "CHandle< CCSObserverPawn>",
+            "ty": "CHandle<CCSObserverPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -31810,7 +31810,7 @@
           },
           {
             "name": "m_hOriginalControllerOfCurrentPawn",
-            "ty": "CHandle< CCSPlayerController>",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
@@ -32121,22 +32121,22 @@
           },
           {
             "name": "m_pBulletServices",
-            "ty": "CCSPlayer_BulletServices *",
+            "ty": "CCSPlayer_BulletServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pHostageServices",
-            "ty": "CCSPlayer_HostageServices *",
+            "ty": "CCSPlayer_HostageServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pBuyServices",
-            "ty": "CCSPlayer_BuyServices *",
+            "ty": "CCSPlayer_BuyServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pActionTrackingServices",
-            "ty": "CCSPlayer_ActionTrackingServices *",
+            "ty": "CCSPlayer_ActionTrackingServices*",
             "type": "NetworkVarNames"
           },
           {
@@ -32463,17 +32463,17 @@
           },
           {
             "name": "m_pPingServices",
-            "ty": "CCSPlayer_PingServices *",
+            "ty": "CCSPlayer_PingServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_pViewModelServices",
-            "ty": "CPlayer_ViewModelServices *",
+            "ty": "CPlayer_ViewModelServices*",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hOriginalController",
-            "ty": "CHandle< CCSPlayerController>",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
@@ -32886,12 +32886,12 @@
         "metadata": [
           {
             "name": "m_hCarriedHostage",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hCarriedHostageProp",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -33076,7 +33076,7 @@
         "metadata": [
           {
             "name": "m_hPlayerPing",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -33089,7 +33089,7 @@
         "metadata": [
           {
             "name": "m_hViewModel",
-            "ty": "CHandle< CBaseViewModel >",
+            "ty": "CHandle<CBaseViewModel>",
             "type": "NetworkVarNames"
           }
         ],
@@ -33411,7 +33411,7 @@
           },
           {
             "name": "m_hPrevOwner",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -33667,7 +33667,7 @@
           },
           {
             "name": "m_leader",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           }
         ],
@@ -33912,22 +33912,22 @@
         "metadata": [
           {
             "name": "m_PlayerDamager",
-            "ty": "CHandle< CCSPlayerPawnBase >",
+            "ty": "CHandle<CCSPlayerPawnBase>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_PlayerRecipient",
-            "ty": "CHandle< CCSPlayerPawnBase >",
+            "ty": "CHandle<CCSPlayerPawnBase>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hPlayerControllerDamager",
-            "ty": "CHandle< CCSPlayerController >",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hPlayerControllerRecipient",
-            "ty": "CHandle< CCSPlayerController >",
+            "ty": "CHandle<CCSPlayerController>",
             "type": "NetworkVarNames"
           },
           {
@@ -34482,7 +34482,7 @@
         "metadata": [
           {
             "name": "m_hEntAttached",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -34526,7 +34526,7 @@
         "metadata": [
           {
             "name": "m_pEntity",
-            "ty": "CEntityIdentity *",
+            "ty": "CEntityIdentity*",
             "type": "NetworkVarNames"
           },
           {
@@ -35191,7 +35191,7 @@
         "metadata": [
           {
             "name": "m_hTargetEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -36498,7 +36498,7 @@
         "metadata": [
           {
             "name": "m_Handle",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -36612,7 +36612,7 @@
           },
           {
             "name": "m_leader",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -36627,7 +36627,7 @@
           },
           {
             "name": "m_hHostageGrabber",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -36766,7 +36766,7 @@
           },
           {
             "name": "m_TargetEntities",
-            "ty": "CHandle< CBaseModelEntity >",
+            "ty": "CHandle<CBaseModelEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -37689,7 +37689,7 @@
           },
           {
             "name": "m_hControlPointEnts",
-            "ty": "CHandle< CBaseEntity >",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -37959,12 +37959,12 @@
           },
           {
             "name": "m_hBombDefuser",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hControlPanel",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -37981,12 +37981,12 @@
         "metadata": [
           {
             "name": "m_hPlayer",
-            "ty": "CHandle< CCSPlayerPawn>",
+            "ty": "CHandle<CCSPlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hPingedEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -38185,17 +38185,17 @@
           },
           {
             "name": "m_hColorCorrectionCtrl",
-            "ty": "CHandle< CColorCorrection>",
+            "ty": "CHandle<CColorCorrection>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hViewEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hTonemapController",
-            "ty": "CHandle< CTonemapController2>",
+            "ty": "CHandle<CTonemapController2>",
             "type": "NetworkVarNames"
           },
           {
@@ -38319,7 +38319,7 @@
           },
           {
             "name": "m_hObserverTarget",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           }
         ],
@@ -38336,17 +38336,17 @@
         "metadata": [
           {
             "name": "m_hMyWeapons",
-            "ty": "CHandle< CBasePlayerWeapon >",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hActiveWeapon",
-            "ty": "CHandle< CBasePlayerWeapon>",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hLastWeapon",
-            "ty": "CHandle< CBasePlayerWeapon>",
+            "ty": "CHandle<CBasePlayerWeapon>",
             "type": "NetworkVarNames"
           },
           {
@@ -38707,7 +38707,7 @@
           },
           {
             "name": "m_hViewPosition",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -38818,12 +38818,12 @@
           },
           {
             "name": "m_hRemapLineStart",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hRemapLineEnd",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -38853,7 +38853,7 @@
           },
           {
             "name": "m_hOutputEntities",
-            "ty": "CHandle< CBaseEntity >",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -39485,12 +39485,12 @@
           },
           {
             "name": "m_hStartPoint",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_hEndPoint",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -39739,7 +39739,7 @@
           },
           {
             "name": "m_hActorList",
-            "ty": "CHandle< CBaseFlex >",
+            "ty": "CHandle<CBaseFlex>",
             "type": "NetworkVarNames"
           },
           {
@@ -40065,7 +40065,7 @@
           },
           {
             "name": "m_hAttachedToEntity",
-            "ty": "CHandle< CBaseEntity>",
+            "ty": "CHandle<CBaseEntity>",
             "type": "NetworkVarNames"
           },
           {
@@ -40244,12 +40244,12 @@
           },
           {
             "name": "m_aPlayerControllers",
-            "ty": "CHandle< CBasePlayerController >",
+            "ty": "CHandle<CBasePlayerController>",
             "type": "NetworkVarNames"
           },
           {
             "name": "m_aPlayers",
-            "ty": "CHandle< CBasePlayerPawn >",
+            "ty": "CHandle<CBasePlayerPawn>",
             "type": "NetworkVarNames"
           },
           {
@@ -41215,7 +41215,7 @@
         "metadata": [
           {
             "name": "m_hCtrl",
-            "ty": "CHandle< CFogController>",
+            "ty": "CHandle<CFogController>",
             "type": "NetworkVarNames"
           }
         ],
@@ -43630,7 +43630,7 @@
         "metadata": [
           {
             "name": "m_pEntity",
-            "ty": "CEntityIdentity *",
+            "ty": "CEntityIdentity*",
             "type": "NetworkVarNames"
           },
           {
