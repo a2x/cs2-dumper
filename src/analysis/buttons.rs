@@ -51,8 +51,8 @@ fn read_buttons(
     let mut key_ptr = Pointer64::<KeyboardKey>::from(process.read_addr64(list_addr)?);
 
     while !key_ptr.is_null() {
-        let key = process.read_ptr(key_ptr)?;
-        let name = process.read_char_string(key.name.address())?;
+        let key = key_ptr.read(process)?;
+        let name = key.name.read_string(process)?.to_string();
 
         let value =
             ((key_ptr.address() - module.base) + offset_of!(KeyboardKey.state) as i64) as u32;

@@ -77,26 +77,22 @@ fn read_class_binding(
     process: &mut IntoProcessInstanceArcBox<'_>,
     binding_ptr: Pointer64<SchemaClassBinding>,
 ) -> Result<Class> {
-    let binding = process.read_ptr(binding_ptr)?;
+    let binding = binding_ptr.read(process)?;
 
-    let module_name = process
-        .read_char_string(binding.module_name.address())
-        .map(|s| {
-            format!(
-                "{}.{}",
-                s,
-                match env::consts::OS {
-                    "linux" => "so",
-                    "windows" => "dll",
-                    _ => panic!("unsupported os"),
-                }
-            )
-        })?;
+    let module_name = binding.module_name.read_string(process).map(|s| {
+        let file_ext = match env::consts::OS {
+            "linux" => "so",
+            "windows" => "dll",
+            _ => panic!("unsupported os"),
+        };
 
-    let name = process.read_char_string(binding.name.address())?;
+        format!("{}.{}", s, file_ext)
+    })?;
+
+    let name = binding.name.read_string(process)?.to_string();
 
     let parent = binding.base_classes.non_null().and_then(|ptr| {
-        let base_class = process.read_ptr(ptr).ok()?;
+        let base_class = ptr.read(process).ok()?;
 
         read_class_binding(process, base_class.prev)
             .ok()
@@ -137,19 +133,17 @@ fn read_class_binding_fields(
                 .add(i * mem::size_of::<SchemaClassFieldData>() as u16)
                 .into();
 
-            let field = process.read_ptr(field_ptr)?;
+            let field = field_ptr.read(process)?;
 
             if field.schema_type.is_null() {
                 return Err(Error::Other("field schema type is null"));
             }
 
-            let name = process.read_char_string(field.name.address())?;
-            let schema_type = process.read_ptr(field.schema_type)?;
+            let name = field.name.read_string(process)?.to_string();
+            let schema_type = field.schema_type.read(process)?;
 
             // TODO: Parse this properly.
-            let ty = process
-                .read_char_string(schema_type.name.address())?
-                .replace(" ", "");
+            let ty = schema_type.name.read_string(process)?.replace(" ", "");
 
             Ok(ClassField {
                 name,
@@ -173,27 +167,30 @@ fn read_class_binding_metadata(
             let metadata_ptr: Pointer64<SchemaMetadataEntryData> =
                 binding.static_metadata.offset(i as _).into();
 
-            let metadata = process.read_ptr(metadata_ptr)?;
+            let metadata = metadata_ptr.read(process)?;
 
             if metadata.network_value.is_null() {
                 return Err(Error::Other("class metadata network value is null"));
             }
 
-            let name = process.read_char_string(metadata.name.address())?;
-            let network_value = process.read_ptr(metadata.network_value)?;
+            let name = metadata.name.read_string(process)?.to_string();
+            let network_value = metadata.network_value.read(process)?;
 
             let metadata = match name.as_str() {
                 "MNetworkChangeCallback" => unsafe {
-                    let name =
-                        process.read_char_string(network_value.union_data.name_ptr.address())?;
+                    let name = network_value
+                        .union_data
+                        .name_ptr
+                        .read_string(process)?
+                        .to_string();
 
                     ClassMetadata::NetworkChangeCallback { name }
                 },
                 "MNetworkVarNames" => unsafe {
                     let var_value = network_value.union_data.var_value;
 
-                    let name = process.read_char_string(var_value.name.address())?;
-                    let ty = process.read_char_string(var_value.ty.address())?;
+                    let name = var_value.name.read_string(process)?.to_string();
+                    let ty = var_value.ty.read_string(process)?.to_string();
 
                     ClassMetadata::NetworkVarNames { name, ty }
                 },
@@ -209,8 +206,8 @@ fn read_enum_binding(
     process: &mut IntoProcessInstanceArcBox<'_>,
     binding_ptr: Pointer64<SchemaEnumBinding>,
 ) -> Result<Enum> {
-    let binding = process.read_ptr(binding_ptr)?;
-    let name = process.read_char_string(binding.name.address())?;
+    let binding = binding_ptr.read(process)?;
+    let name = binding.name.read_string(process)?.to_string();
 
     let members = read_enum_binding_members(process, &binding)?;
 
@@ -244,8 +241,8 @@ fn read_enum_binding_members(
                 .add(i * mem::size_of::<SchemaEnumeratorInfoData>() as u16)
                 .into();
 
-            let enumerator_info = process.read_ptr(enumerator_info_ptr)?;
-            let name = process.read_char_string(enumerator_info.name.address())?;
+            let enumerator_info = enumerator_info_ptr.read(process)?;
+            let name = enumerator_info.name.read_string(process)?.to_string();
 
             let value = {
                 let value = unsafe { enumerator_info.union_data.ulong } as i64;
@@ -301,7 +298,7 @@ fn read_type_scopes(
     (0..type_scopes.size)
         .map(|i| {
             let type_scope_ptr = type_scopes.get(process, i as _)?;
-            let type_scope = process.read_ptr(type_scope_ptr)?;
+            let type_scope = type_scope_ptr.read(process)?;
 
             let name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
                 .to_string_lossy()

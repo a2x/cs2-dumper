@@ -22,7 +22,7 @@ impl<T: Sized + Pod> UtlVector<T> {
 
         let ptr = Pointer64::from(self.mem.address() + (idx * mem::size_of::<T>()));
 
-        Ok(process.read_ptr(ptr)?)
+        Ok(ptr.read(process)?)
     }
 }
 

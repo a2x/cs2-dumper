@@ -56,8 +56,8 @@ fn read_interfaces(
     let mut reg_ptr = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
 
     while !reg_ptr.is_null() {
-        let reg = process.read_ptr(reg_ptr)?;
-        let name = process.read_char_string(reg.name.address())?;
+        let reg = reg_ptr.read(process)?;
+        let name = reg.name.read_string(process)?.to_string();
 
         let value = (reg.create_fn - module.base) as u32;
 

@@ -212,13 +212,13 @@ impl Results {
 }
 
 pub fn format_module_name(module_name: &String) -> String {
-    let extension = match env::consts::OS {
+    let file_ext = match env::consts::OS {
         "linux" => ".so",
         "windows" => ".dll",
         _ => panic!("unsupported os"),
     };
 
-    module_name.strip_suffix(extension).unwrap().to_string()
+    module_name.strip_suffix(file_ext).unwrap().to_string()
 }
 
 #[inline]

@@ -82,7 +82,7 @@ impl<T: HashData, K: HashKey> UtlTsHash<T, K> {
         let mut list = Vec::with_capacity(num_blocks);
 
         while !element_ptr.is_null() {
-            let element = process.read_ptr(element_ptr)?;
+            let element = element_ptr.read(process)?;
 
             for i in 0..num_blocks {
                 if i >= block_size || list.len() >= block_size {
