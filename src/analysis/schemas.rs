@@ -147,7 +147,9 @@ fn read_class_binding_fields(
             let schema_type = process.read_ptr(field.schema_type)?;
 
             // TODO: Parse this properly.
-            let ty = process.read_char_string(schema_type.name.address())?;
+            let ty = process
+                .read_char_string(schema_type.name.address())?
+                .replace(" ", "");
 
             Ok(ClassField {
                 name,
