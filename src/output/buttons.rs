@@ -9,10 +9,10 @@ use crate::error::Result;
 impl CodeGen for Vec<Button> {
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            fmt.block("namespace CS2Dumper", |fmt| {
+            fmt.block("namespace CS2Dumper", false, |fmt| {
                 writeln!(fmt, "// Module: {}", get_module_name())?;
 
-                fmt.block("public static class Buttons", |fmt| {
+                fmt.block("public static class Buttons", false, |fmt| {
                     for button in self {
                         writeln!(
                             fmt,
@@ -34,10 +34,10 @@ impl CodeGen for Vec<Button> {
             writeln!(fmt, "#pragma once\n")?;
             writeln!(fmt, "#include <cstddef>\n")?;
 
-            fmt.block("namespace cs2_dumper", |fmt| {
+            fmt.block("namespace cs2_dumper", false, |fmt| {
                 writeln!(fmt, "// Module: {}", get_module_name())?;
 
-                fmt.block("namespace buttons", |fmt| {
+                fmt.block("namespace buttons", false, |fmt| {
                     for button in self {
                         writeln!(
                             fmt,
@@ -71,10 +71,10 @@ impl CodeGen for Vec<Button> {
         self.write_content(results, indent_size, |fmt| {
             writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-            fmt.block("pub mod cs2_dumper", |fmt| {
+            fmt.block("pub mod cs2_dumper", false, |fmt| {
                 writeln!(fmt, "// Module: {}", get_module_name())?;
 
-                fmt.block("pub mod buttons", |fmt| {
+                fmt.block("pub mod buttons", false, |fmt| {
                     for button in self {
                         writeln!(
                             fmt,

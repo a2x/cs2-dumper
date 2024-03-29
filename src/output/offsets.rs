@@ -10,7 +10,7 @@ use crate::error::Result;
 impl CodeGen for OffsetMap {
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            fmt.block("namespace CS2Dumper.Offsets", |fmt| {
+            fmt.block("namespace CS2Dumper.Offsets", false, |fmt| {
                 for (module_name, offsets) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
 
@@ -19,6 +19,7 @@ impl CodeGen for OffsetMap {
                             "public static class {}",
                             AsPascalCase(format_module_name(module_name))
                         ),
+                        false,
                         |fmt| {
                             for offset in offsets {
                                 writeln!(
@@ -45,13 +46,14 @@ impl CodeGen for OffsetMap {
             writeln!(fmt, "#pragma once\n")?;
             writeln!(fmt, "#include <cstddef>\n")?;
 
-            fmt.block("namespace cs2_dumper", |fmt| {
-                fmt.block("namespace offsets", |fmt| {
+            fmt.block("namespace cs2_dumper", false, |fmt| {
+                fmt.block("namespace offsets", false, |fmt| {
                     for (module_name, offsets) in self {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
                             &format!("namespace {}", AsSnakeCase(format_module_name(module_name))),
+                            false,
                             |fmt| {
                                 for offset in offsets {
                                     writeln!(
@@ -94,13 +96,14 @@ impl CodeGen for OffsetMap {
         self.write_content(results, indent_size, |fmt| {
             writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-            fmt.block("pub mod cs2_dumper", |fmt| {
-                fmt.block("pub mod offsets", |fmt| {
+            fmt.block("pub mod cs2_dumper", false, |fmt| {
+                fmt.block("pub mod offsets", false, |fmt| {
                     for (module_name, offsets) in self {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
                             &format!("pub mod {}", AsSnakeCase(format_module_name(module_name))),
+                            false,
                             |fmt| {
                                 for offset in offsets {
                                     writeln!(

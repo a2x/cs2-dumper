@@ -24,7 +24,7 @@ pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Interfa
     let sig = match env::consts::OS {
         "linux" => signature!("48 8B 1D ? ? ? ? 48 85 DB 74 ? 49 89 FC"),
         "windows" => signature!("4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9"),
-        _ => panic!("unsupported os"),
+        os => panic!("unsupported os: {}", os),
     };
 
     process

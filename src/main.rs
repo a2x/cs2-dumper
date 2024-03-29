@@ -150,7 +150,7 @@ fn extract_args(
         .unwrap_or_else(|| match env::consts::OS {
             "linux" => "linux".to_string(),
             "windows" => "win32".to_string(),
-            _ => panic!("unsupported os"),
+            os => panic!("unsupported os: {}", os),
         });
 
     let indent_size = *matches.get_one::<usize>("indent-size").unwrap();

@@ -10,7 +10,7 @@ use crate::error::Result;
 impl CodeGen for InterfaceMap {
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            fmt.block("namespace CS2Dumper.Interfaces", |fmt| {
+            fmt.block("namespace CS2Dumper.Interfaces", false, |fmt| {
                 for (module_name, ifaces) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
 
@@ -19,6 +19,7 @@ impl CodeGen for InterfaceMap {
                             "public static class {}",
                             AsPascalCase(format_module_name(module_name))
                         ),
+                        false,
                         |fmt| {
                             for iface in ifaces {
                                 writeln!(
@@ -45,13 +46,14 @@ impl CodeGen for InterfaceMap {
             writeln!(fmt, "#pragma once\n")?;
             writeln!(fmt, "#include <cstddef>\n")?;
 
-            fmt.block("namespace cs2_dumper", |fmt| {
-                fmt.block("namespace interfaces", |fmt| {
+            fmt.block("namespace cs2_dumper", false, |fmt| {
+                fmt.block("namespace interfaces", false, |fmt| {
                     for (module_name, ifaces) in self {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
                             &format!("namespace {}", AsSnakeCase(format_module_name(module_name))),
+                            false,
                             |fmt| {
                                 for iface in ifaces {
                                     writeln!(
@@ -94,13 +96,14 @@ impl CodeGen for InterfaceMap {
         self.write_content(results, indent_size, |fmt| {
             writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-            fmt.block("pub mod cs2_dumper", |fmt| {
-                fmt.block("pub mod interfaces", |fmt| {
+            fmt.block("pub mod cs2_dumper", false, |fmt| {
+                fmt.block("pub mod interfaces", false, |fmt| {
                     for (module_name, ifaces) in self {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
                             &format!("pub mod {}", AsSnakeCase(format_module_name(module_name))),
+                            false,
                             |fmt| {
                                 for iface in ifaces {
                                     writeln!(

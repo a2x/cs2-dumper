@@ -16,14 +16,14 @@ use crate::source_engine::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
 
-#[derive(Debug, Eq, Ord, PartialEq, PartialOrd, Deserialize, Serialize)]
+#[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd, Deserialize, Serialize)]
 pub enum ClassMetadata {
     Unknown { name: String },
     NetworkChangeCallback { name: String },
     NetworkVarNames { name: String, ty: String },
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Class {
     pub name: String,
     pub module_name: String,
@@ -32,14 +32,14 @@ pub struct Class {
     pub fields: Vec<ClassField>,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct ClassField {
     pub name: String,
     pub ty: String,
     pub offset: u32,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Enum {
     pub name: String,
     pub ty: String,
@@ -48,7 +48,7 @@ pub struct Enum {
     pub members: Vec<EnumMember>,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct EnumMember {
     pub name: String,
     pub value: i64,
@@ -81,9 +81,9 @@ fn read_class_binding(
 
     let module_name = binding.module_name.read_string(process).map(|s| {
         let file_ext = match env::consts::OS {
-            "linux" => "so",
-            "windows" => "dll",
-            _ => panic!("unsupported os"),
+            "linux" => ".so",
+            "windows" => ".dll",
+            os => panic!("unsupported os: {}", os),
         };
 
         format!("{}.{}", s, file_ext)
@@ -269,7 +269,7 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
             "schemasystem.dll",
             signature!("48 89 05 ? ? ? ? 4C 8D 45"),
         ),
-        _ => panic!("unsupported os"),
+        os => panic!("unsupported os: {}", os),
     };
 
     let module = process.module_by_name(&module_name)?;

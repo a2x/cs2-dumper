@@ -8,7 +8,7 @@ pub static CONFIG: LazyLock<Config> = LazyLock::new(|| {
     let file_name = match env::consts::OS {
         "linux" => "config_linux.json",
         "windows" => "config_win.json",
-        _ => panic!("unsupported os"),
+        os => panic!("unsupported os: {}", os),
     };
 
     let content = fs::read_to_string(file_name).expect("unable to read config file");

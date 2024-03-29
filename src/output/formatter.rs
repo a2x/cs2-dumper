@@ -21,15 +21,15 @@ impl<'a> Formatter<'a> {
         }
     }
 
-    pub fn block<F>(&mut self, heading: &str, f: F) -> fmt::Result
+    pub fn block<F>(&mut self, heading: &str, semicolon: bool, f: F) -> fmt::Result
     where
         F: FnOnce(&mut Self) -> fmt::Result,
     {
-        write!(self, "{} {{\n", heading)?;
+        writeln!(self, "{} {{", heading)?;
 
         self.indent(f)?;
 
-        write!(self, "}}\n")?;
+        writeln!(self, "{}", if semicolon { "};" } else { "}" })?;
 
         Ok(())
     }
@@ -48,10 +48,10 @@ impl<'a> Formatter<'a> {
     }
 
     #[inline]
-    #[rustfmt::skip]
     fn push_indentation(&mut self) {
         if self.indent_level > 0 {
-            self.out.push_str(&" ".repeat(self.indent_level * self.indent_size));
+            self.out
+                .push_str(&" ".repeat(self.indent_level * self.indent_size));
         }
     }
 }
@@ -61,7 +61,6 @@ impl<'a> Write for Formatter<'a> {
         let mut lines = s.lines().peekable();
 
         while let Some(line) = lines.next() {
-            // Add indentation before the line if necessary.
             if self.out.ends_with('\n') && !line.is_empty() {
                 self.push_indentation();
             }

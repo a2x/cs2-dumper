@@ -27,7 +27,7 @@ pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<Button
             "client.dll",
             signature!("48 8B 15 ? ? ? ? 48 85 D2 74 ? 0F 1F 40"),
         ),
-        _ => panic!("unsupported os"),
+        os => panic!("unsupported os: {}", os),
     };
 
     let module = process.module_by_name(&module_name)?;

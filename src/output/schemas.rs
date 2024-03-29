@@ -13,7 +13,7 @@ use crate::error::Result;
 impl CodeGen for SchemaMap {
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            fmt.block("namespace CS2Dumper.Schemas", |fmt| {
+            fmt.block("namespace CS2Dumper.Schemas", false, |fmt| {
                 for (module_name, (classes, enums)) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
                     writeln!(fmt, "// Classes count: {}", classes.len())?;
@@ -24,6 +24,7 @@ impl CodeGen for SchemaMap {
                             "public static class {}",
                             AsPascalCase(format_module_name(module_name))
                         ),
+                        false,
                         |fmt| {
                             for enum_ in enums {
                                 let ty = match enum_.ty.as_str() {
@@ -39,6 +40,7 @@ impl CodeGen for SchemaMap {
 
                                 fmt.block(
                                     &format!("public enum {} : {}", sanitize_name(&enum_.name), ty),
+                                    false,
                                     |fmt| {
                                         let members = enum_
                                             .members
@@ -70,6 +72,7 @@ impl CodeGen for SchemaMap {
 
                                 fmt.block(
                                     &format!("public static class {}", sanitize_name(&class.name)),
+                                    false,
                                     |fmt| {
                                         for field in &class.fields {
                                             writeln!(
@@ -101,8 +104,8 @@ impl CodeGen for SchemaMap {
             writeln!(fmt, "#pragma once\n")?;
             writeln!(fmt, "#include <cstddef>\n")?;
 
-            fmt.block("namespace cs2_dumper", |fmt| {
-                fmt.block("namespace schemas", |fmt| {
+            fmt.block("namespace cs2_dumper", false, |fmt| {
+                fmt.block("namespace schemas", false, |fmt| {
                     for (module_name, (classes, enums)) in self {
                         writeln!(fmt, "// Module: {}", module_name)?;
                         writeln!(fmt, "// Classes count: {}", classes.len())?;
@@ -110,6 +113,7 @@ impl CodeGen for SchemaMap {
 
                         fmt.block(
                             &format!("namespace {}", AsSnakeCase(format_module_name(module_name))),
+                            false,
                             |fmt| {
                                 for enum_ in enums {
                                     let ty = match enum_.ty.as_str() {
@@ -129,6 +133,7 @@ impl CodeGen for SchemaMap {
                                             sanitize_name(&enum_.name),
                                             ty
                                         ),
+                                        true,
                                         |fmt| {
                                             let members = enum_
                                                 .members
@@ -160,6 +165,7 @@ impl CodeGen for SchemaMap {
 
                                     fmt.block(
                                         &format!("namespace {}", sanitize_name(&class.name)),
+                                        false,
                                         |fmt| {
                                             for field in &class.fields {
                                                 writeln!(
@@ -270,8 +276,8 @@ impl CodeGen for SchemaMap {
         self.write_content(results, indent_size, |fmt| {
             writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-            fmt.block("pub mod cs2_dumper", |fmt| {
-                fmt.block("pub mod schemas", |fmt| {
+            fmt.block("pub mod cs2_dumper", false, |fmt| {
+                fmt.block("pub mod schemas", false, |fmt| {
                     for (module_name, (classes, enums)) in self {
                         writeln!(fmt, "// Module: {}", module_name)?;
                         writeln!(fmt, "// Classes count: {}", classes.len())?;
@@ -279,6 +285,7 @@ impl CodeGen for SchemaMap {
 
                         fmt.block(
                             &format!("pub mod {}", AsSnakeCase(format_module_name(module_name))),
+                            false,
                             |fmt| {
                                 for enum_ in enums {
                                     let ty = match enum_.ty.as_str() {
@@ -298,6 +305,7 @@ impl CodeGen for SchemaMap {
                                             ty,
                                             sanitize_name(&enum_.name),
                                         ),
+                                        false,
                                         |fmt| {
                                             // TODO: Handle the case where multiple members share
                                             // the same value.
@@ -331,6 +339,7 @@ impl CodeGen for SchemaMap {
 
                                     fmt.block(
                                         &format!("pub mod {}", sanitize_name(&class.name)),
+                                        false,
                                         |fmt| {
                                             for field in &class.fields {
                                                 writeln!(

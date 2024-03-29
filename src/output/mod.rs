@@ -147,22 +147,23 @@ impl Results {
         out_dir: P,
         indent_size: usize,
     ) -> Result<()> {
+        // TODO: Make this user-configurable.
+        const FILE_EXTS: &[&str] = &["cs", "hpp", "json", "rs"];
+
         let items = [
             ("buttons", Item::Buttons(&self.buttons)),
             ("interfaces", Item::Interfaces(&self.interfaces)),
             ("offsets", Item::Offsets(&self.offsets)),
-            ("schemas", Item::Schemas(&self.schemas)),
         ];
 
-        // TODO: Make this user-configurable.
-        let file_exts = ["cs", "hpp", "json", "rs"];
+        self.dump_items(&items, out_dir.as_ref(), indent_size, FILE_EXTS)?;
 
-        for (file_name, item) in &items {
-            for ext in file_exts {
-                let content = item.generate(self, indent_size, ext)?;
+        for (module_name, (classes, enums)) in &self.schemas {
+            let schemas = [(module_name.clone(), (classes.clone(), enums.clone()))].into();
 
-                self.dump_file(out_dir.as_ref(), file_name, ext, &content)?;
-            }
+            let item = Item::Schemas(&schemas);
+
+            self.dump_item(&item, out_dir.as_ref(), indent_size, FILE_EXTS, module_name)?;
         }
 
         self.dump_info_file(process, out_dir)?;
@@ -189,17 +190,46 @@ impl Results {
         process: &mut IntoProcessInstanceArcBox<'_>,
         out_dir: P,
     ) -> Result<()> {
-        let info = json!({
-            "timestamp": self.timestamp.to_rfc3339(),
-            "build_number": self.read_build_number(process).unwrap_or(0),
-        });
-
         self.dump_file(
             out_dir.as_ref(),
             "info",
             "json",
-            &serde_json::to_string_pretty(&info)?,
+            &serde_json::to_string_pretty(&json!({
+                "timestamp": self.timestamp.to_rfc3339(),
+                "build_number": self.read_build_number(process).unwrap_or(0),
+            }))?,
         )
+    }
+
+    fn dump_item<P: AsRef<Path>>(
+        &self,
+        item: &Item,
+        out_dir: P,
+        indent_size: usize,
+        file_exts: &[&str],
+        file_name: &str,
+    ) -> Result<()> {
+        for ext in file_exts {
+            let content = item.generate(self, indent_size, ext)?;
+
+            self.dump_file(out_dir.as_ref(), file_name, ext, &content)?;
+        }
+
+        Ok(())
+    }
+
+    fn dump_items<P: AsRef<Path>>(
+        &self,
+        items: &[(&str, Item)],
+        out_dir: P,
+        indent_size: usize,
+        file_exts: &[&str],
+    ) -> Result<()> {
+        for (file_name, item) in items {
+            self.dump_item(item, out_dir.as_ref(), indent_size, file_exts, file_name)?;
+        }
+
+        Ok(())
     }
 
     fn read_build_number(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<u32> {
@@ -230,7 +260,7 @@ pub fn format_module_name(module_name: &String) -> String {
     let file_ext = match env::consts::OS {
         "linux" => ".so",
         "windows" => ".dll",
-        _ => panic!("unsupported os"),
+        os => panic!("unsupported os: {}", os),
     };
 
     module_name.strip_suffix(file_ext).unwrap().to_string()
