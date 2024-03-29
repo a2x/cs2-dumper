@@ -190,7 +190,7 @@ fn read_class_binding_metadata(
                     let var_value = network_value.union_data.var_value;
 
                     let name = var_value.name.read_string(process)?.to_string();
-                    let ty = var_value.ty.read_string(process)?.to_string();
+                    let ty = var_value.ty.read_string(process)?.replace(" ", "");
 
                     ClassMetadata::NetworkVarNames { name, ty }
                 },
