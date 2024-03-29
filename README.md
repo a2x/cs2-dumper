@@ -4,10 +4,6 @@ An external offset/interface dumper for Counter-Strike 2, with support for both 
 
 Powered by [memflow](https://github.com/memflow/memflow).
 
-## Where did client.dll and other stuff go?
-
-Please see: https://github.com/a2x/cs2-dumper/issues/87
-
 ## Getting Started
 
 You can download the latest release from [Releases](https://github.com/a2x/cs2-dumper/releases) or compile it yourself.
