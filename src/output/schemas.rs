@@ -27,10 +27,10 @@ impl CodeGen for SchemaMap {
                         |fmt| {
                             for enum_ in enums {
                                 let ty = match enum_.ty.as_str() {
-                                    "int8" => "sbyte",
-                                    "int16" => "short",
-                                    "int32" => "int",
-                                    "int64" => "long",
+                                    "uint8" => "byte",
+                                    "uint16" => "ushort",
+                                    "uint32" => "uint",
+                                    "uint64" => "ulong",
                                     _ => continue,
                                 };
 
@@ -40,13 +40,13 @@ impl CodeGen for SchemaMap {
                                 fmt.block(
                                     &format!("public enum {} : {}", sanitize_name(&enum_.name), ty),
                                     |fmt| {
-                                        let members: Vec<_> = enum_
+                                        let members = enum_
                                             .members
                                             .iter()
                                             .map(|member| {
-                                                format!("{} = {}", member.name, member.value)
+                                                format!("{} = {:#X}", member.name, member.value)
                                             })
-                                            .collect()
+                                            .collect::<Vec<_>>()
                                             .join(",\n");
 
                                         writeln!(fmt, "{}", members)
@@ -111,10 +111,10 @@ impl CodeGen for SchemaMap {
                             |fmt| {
                                 for enum_ in enums {
                                     let ty = match enum_.ty.as_str() {
-                                        "int8" => "int8_t",
-                                        "int16" => "int16_t",
-                                        "int32" => "int32_t",
-                                        "int64" => "int64_t",
+                                        "uint8" => "uint8_t",
+                                        "uint16" => "uint16_t",
+                                        "uint32" => "uint32_t",
+                                        "uint64" => "uint64_t",
                                         _ => continue,
                                     };
 
@@ -128,13 +128,13 @@ impl CodeGen for SchemaMap {
                                             ty
                                         ),
                                         |fmt| {
-                                            let members: Vec<_> = enum_
+                                            let members = enum_
                                                 .members
                                                 .iter()
                                                 .map(|member| {
-                                                    format!("{} = {}", member.name, member.value)
+                                                    format!("{} = {:#X}", member.name, member.value)
                                                 })
-                                                .collect()
+                                                .collect::<Vec<_>>()
                                                 .join(",\n");
 
                                             writeln!(fmt, "{}", members)
@@ -276,10 +276,10 @@ impl CodeGen for SchemaMap {
                             |fmt| {
                                 for enum_ in enums {
                                     let ty = match enum_.ty.as_str() {
-                                        "int8" => "i8",
-                                        "int16" => "i16",
-                                        "int32" => "i32",
-                                        "int64" => "i64",
+                                        "uint8" => "u8",
+                                        "uint16" => "u16",
+                                        "uint32" => "u32",
+                                        "uint64" => "u64",
                                         _ => continue,
                                     };
 
@@ -295,13 +295,13 @@ impl CodeGen for SchemaMap {
                                         |fmt| {
                                             // TODO: Handle the case where multiple members share
                                             // the same value.
-                                            let members: Vec<_> = enum_
+                                            let members = enum_
                                                 .members
                                                 .iter()
                                                 .map(|member| {
-                                                    format!("{} = {}", member.name, member.value)
+                                                    format!("{} = {:#X}", member.name, member.value)
                                                 })
-                                                .collect()
+                                                .collect::<Vec<_>>()
                                                 .join(",\n");
 
                                             writeln!(fmt, "{}", members)

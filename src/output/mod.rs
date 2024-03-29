@@ -73,7 +73,7 @@ impl<'a> CodeGen for Item<'a> {
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
         match self {
             Item::Buttons(buttons) => buttons.to_cs(results, indent_size),
-            Item::Interfaces(interfaces) => interfaces.to_cs(results, indent_size),
+            Item::Interfaces(ifaces) => ifaces.to_cs(results, indent_size),
             Item::Offsets(offsets) => offsets.to_cs(results, indent_size),
             Item::Schemas(schemas) => schemas.to_cs(results, indent_size),
         }
@@ -82,7 +82,7 @@ impl<'a> CodeGen for Item<'a> {
     fn to_hpp(&self, results: &Results, indent_size: usize) -> Result<String> {
         match self {
             Item::Buttons(buttons) => buttons.to_hpp(results, indent_size),
-            Item::Interfaces(interfaces) => interfaces.to_hpp(results, indent_size),
+            Item::Interfaces(ifaces) => ifaces.to_hpp(results, indent_size),
             Item::Offsets(offsets) => offsets.to_hpp(results, indent_size),
             Item::Schemas(schemas) => schemas.to_hpp(results, indent_size),
         }
@@ -91,7 +91,7 @@ impl<'a> CodeGen for Item<'a> {
     fn to_json(&self, results: &Results, indent_size: usize) -> Result<String> {
         match self {
             Item::Buttons(buttons) => buttons.to_json(results, indent_size),
-            Item::Interfaces(interfaces) => interfaces.to_json(results, indent_size),
+            Item::Interfaces(ifaces) => ifaces.to_json(results, indent_size),
             Item::Offsets(offsets) => offsets.to_json(results, indent_size),
             Item::Schemas(schemas) => schemas.to_json(results, indent_size),
         }
@@ -100,7 +100,7 @@ impl<'a> CodeGen for Item<'a> {
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         match self {
             Item::Buttons(buttons) => buttons.to_rs(results, indent_size),
-            Item::Interfaces(interfaces) => interfaces.to_rs(results, indent_size),
+            Item::Interfaces(ifaces) => ifaces.to_rs(results, indent_size),
             Item::Offsets(offsets) => offsets.to_rs(results, indent_size),
             Item::Schemas(schemas) => schemas.to_rs(results, indent_size),
         }

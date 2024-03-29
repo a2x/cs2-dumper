@@ -23,10 +23,10 @@ impl SchemaEnumInfoData {
     #[inline]
     pub fn type_name(&self) -> &str {
         match self.alignment {
-            1 => "int8",
-            2 => "int16",
-            4 => "int32",
-            8 => "int64",
+            1 => "uint8",
+            2 => "uint16",
+            4 => "uint32",
+            8 => "uint64",
             _ => "unknown",
         }
     }
