@@ -13,7 +13,11 @@ toolchain must be installed.
 ## Usage
 
 1. Ensure the game process is running (Being in the main menu should suffice).
-2. Run the `cs2-dumper` executable (Note that some memflow connectors require elevated privileges).
+2. Run the `cs2-dumper` executable.
+   - Note that some memflow connectors may require elevated privileges to work.
+   - Ensure that you have the appropriate config file in the same directory as the `cs2-dumper` executable:
+     - For Linux: `config_linux.json`
+     - For Windows: `config_win.json`
 
 When running the executable without providing an optional memflow connector name, it will default to using the
 memflow-native cross-platform OS layer to read the game's memory. However, any existing memflow connectors should work
