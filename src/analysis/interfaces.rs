@@ -30,7 +30,6 @@ pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Interfa
     process
         .module_list()?
         .iter()
-        .filter(|module| !module.name.starts_with("nvidia")) // Temporary workaround for upstream bug: https://github.com/memflow/memflow-native/blob/1b063fc573957498b88a13b6120120480bc65ea5/src/linux/mem.rs#L168
         .filter_map(|module| {
             let buf = process.read_raw(module.base, module.size as _).ok()?;
 
