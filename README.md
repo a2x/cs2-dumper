@@ -19,19 +19,15 @@ toolchain must be installed.
      - For Linux: `config_linux.json`
      - For Windows: `config_win.json`
 
-When running the executable without providing an optional memflow connector name, it will default to using the
-memflow-native cross-platform OS layer to read the game's memory. However, any existing memflow connectors should work
-out of the box.
-Just pass the `connector` and optional `connector-args` arguments to the program.
+When running the executable without providing an optional memflow connector name, it will default to using the [memflow-native](https://github.com/memflow/memflow-native) cross-platform OS layer to read the memory of the game process. If you wish to use an existing memflow connector instead, pass the `connector` and optional `connector-args` arguments to the program.
 
-E.g. `cs2-dumper.exe -c pcileech -a device=fpga -vvv`
+E.g. `./cs2-dumper -c kvm -vvv`
 
 ### Available Arguments
 
 - `-v...`: Increase logging verbosity. Can be specified multiple times.
 - `-c, --connector <connector>`: The name of the memflow connector to use.
 - `-a, --connector-args <connector-args>`: Additional arguments to supply to the connector.
-- `-o, --os <os>`: The name of the target operating system.
 - `-d, --directory <directory>`: The output directory to write the generated files to. Default: `output`.
 - `-i, --indent-size <indent-size>`: The number of spaces to use per indentation level. Default: `4`.
 - `-h, --help`: Print help.
