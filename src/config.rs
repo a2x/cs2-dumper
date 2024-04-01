@@ -5,16 +5,16 @@ use std::{env, fs};
 use serde::{Deserialize, Serialize};
 
 pub static CONFIG: LazyLock<Config> = LazyLock::new(|| {
-    let file_name = match env::consts::OS {
-        "linux" => "config_linux.json",
-        "windows" => "config_win.json",
-        os => panic!("unsupported os: {}", os),
-    };
+    let file_name = get_config_file_name();
 
-    let content = fs::read_to_string(file_name).expect("unable to read config file");
-    let config: Config = serde_json::from_str(&content).expect("unable to parse config file");
+    let content = fs::read_to_string(&file_name).unwrap_or_else(|_| {
+        panic!(
+            "unable to read config file: {}\nmake sure the file is placed in the same directory as the cs2-dumper executable",
+            file_name
+        )
+    });
 
-    config
+    serde_json::from_str(&content).expect("unable to parse config file")
 });
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -58,4 +58,19 @@ pub struct Signature {
 
     /// List of operations to perform on the matched address.
     pub operations: Vec<Operation>,
+}
+
+/// Returns the correct config file name, depending on the target OS.
+fn get_config_file_name() -> &'static str {
+    // Assume that if the user has provided a connector name, they are targetting the Windows
+    // version of the game.
+    if env::args().any(|arg| arg.starts_with("--connector") || arg.starts_with("-c")) {
+        "config_win.json"
+    } else {
+        match env::consts::OS {
+            "linux" => "config_linux.json",
+            "windows" => "config_win.json",
+            os => panic!("unsupported os: {}", os),
+        }
+    }
 }
