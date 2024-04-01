@@ -28,7 +28,7 @@ E.g. `./cs2-dumper -c kvm -vvv`
 - `-v...`: Increase logging verbosity. Can be specified multiple times.
 - `-c, --connector <connector>`: The name of the memflow connector to use.
 - `-a, --connector-args <connector-args>`: Additional arguments to supply to the connector.
-- `-d, --directory <directory>`: The output directory to write the generated files to. Default: `output`.
+- `-o, --output <output>`: The output directory to write the generated files to. Default: `output`.
 - `-i, --indent-size <indent-size>`: The number of spaces to use per indentation level. Default: `4`.
 - `-h, --help`: Print help.
 - `-V, --version`: Print version.

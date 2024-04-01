@@ -86,10 +86,10 @@ fn parse_args() -> ArgMatches {
                 .required(false),
         )
         .arg(
-            Arg::new("directory")
+            Arg::new("output")
                 .help("The output directory to write the generated files to.")
-                .long("directory")
-                .short('d')
+                .long("output")
+                .short('o')
                 .default_value("output")
                 .value_parser(value_parser!(PathBuf))
                 .required(false),
@@ -136,7 +136,7 @@ fn extract_args(matches: &ArgMatches) -> Result<(Option<String>, ConnectorArgs, 
         .unwrap_or_default();
 
     let indent_size = *matches.get_one::<usize>("indent-size").unwrap();
-    let out_dir = matches.get_one::<PathBuf>("directory").unwrap();
+    let out_dir = matches.get_one::<PathBuf>("output").unwrap();
 
     Ok((conn_name, conn_args, indent_size, out_dir))
 }
