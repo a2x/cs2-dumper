@@ -1,16 +1,16 @@
-use std::env;
-
 use log::debug;
 
 use memflow::prelude::v1::*;
 
+use pelite::pattern;
+use pelite::pe64::{Pe, PeView};
+
 use serde::{Deserialize, Serialize};
 
-use skidscan_macros::signature;
-
 use crate::error::{Error, Result};
-use crate::source_engine::KeyboardKey;
+use crate::source2::KeyboardKey;
 
+/// Represents a key button.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Button {
     pub name: String,
@@ -18,27 +18,21 @@ pub struct Button {
 }
 
 pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<Button>> {
-    let (module_name, sig) = match env::consts::OS {
-        "linux" => (
-            "libclient.so",
-            signature!("48 8B 15 ? ? ? ? 48 89 83 ? ? ? ? 48 85 D2"),
-        ),
-        "windows" => (
-            "client.dll",
-            signature!("48 8B 15 ? ? ? ? 48 85 D2 74 ? 0F 1F 40"),
-        ),
-        os => panic!("unsupported os: {}", os),
-    };
-
-    let module = process.module_by_name(&module_name)?;
+    let module = process.module_by_name("client.dll")?;
     let buf = process.read_raw(module.base, module.size as _)?;
 
-    let list_addr = sig
-        .scan(&buf)
-        .and_then(|ptr| process.read_addr64_rip(module.base + ptr).ok())
-        .ok_or_else(|| Error::Other("unable to read button list address"))?;
+    let view = PeView::from_bytes(&buf)?;
 
-    read_buttons(process, &module, list_addr)
+    let mut save = [0; 2];
+
+    if !view
+        .scanner()
+        .finds_code(pattern!("488b15${'} 4885d2 74? 0f1f40"), &mut save)
+    {
+        return Err(Error::Other("unable to find button list signature"));
+    }
+
+    read_buttons(process, &module, module.base + save[1])
 }
 
 fn read_buttons(
@@ -70,6 +64,7 @@ fn read_buttons(
         key_ptr = key.next;
     }
 
+    // Sort buttons by name.
     buttons.sort_unstable_by(|a, b| a.name.cmp(&b.name));
 
     Ok(buttons)

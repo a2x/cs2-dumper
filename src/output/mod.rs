@@ -1,6 +1,6 @@
 use std::fmt::Write;
+use std::fs;
 use std::path::Path;
-use std::{env, fs};
 
 use chrono::{DateTime, Utc};
 
@@ -53,6 +53,11 @@ trait CodeGen {
 
     /// Converts an [`Item`] to formatted Rust code.
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String>;
+
+    #[inline]
+    fn sanitize_name(name: &str) -> String {
+        name.replace(|c: char| !c.is_alphanumeric(), "_")
+    }
 
     fn write_content<F>(&self, results: &Results, indent_size: usize, callback: F) -> Result<String>
     where
@@ -150,6 +155,9 @@ impl Results {
         // TODO: Make this user-configurable.
         const FILE_EXTS: &[&str] = &["cs", "hpp", "json", "rs"];
 
+        // Create the output directory if it doesn't exist.
+        fs::create_dir_all(&out_dir)?;
+
         let items = [
             ("buttons", Item::Buttons(&self.buttons)),
             ("interfaces", Item::Interfaces(&self.interfaces)),
@@ -158,6 +166,7 @@ impl Results {
 
         self.dump_items(&items, out_dir.as_ref(), indent_size, FILE_EXTS)?;
 
+        // Write a new file for each module.
         for (module_name, (classes, enums)) in &self.schemas {
             let schemas = [(module_name.clone(), (classes.clone(), enums.clone()))].into();
 
@@ -180,7 +189,7 @@ impl Results {
     ) -> Result<()> {
         let file_path = out_dir.as_ref().join(format!("{}.{}", file_name, file_ext));
 
-        fs::write(file_path, content)?;
+        fs::write(&file_path, content)?;
 
         Ok(())
     }
@@ -190,15 +199,12 @@ impl Results {
         process: &mut IntoProcessInstanceArcBox<'_>,
         out_dir: P,
     ) -> Result<()> {
-        self.dump_file(
-            out_dir.as_ref(),
-            "info",
-            "json",
-            &serde_json::to_string_pretty(&json!({
-                "timestamp": self.timestamp.to_rfc3339(),
-                "build_number": self.read_build_number(process).unwrap_or(0),
-            }))?,
-        )
+        let content = &serde_json::to_string_pretty(&json!({
+            "timestamp": self.timestamp.to_rfc3339(),
+            "build_number": self.read_build_number(process).unwrap_or(0),
+        }))?;
+
+        self.dump_file(out_dir.as_ref(), "info", "json", &content)
     }
 
     fn dump_item<P: AsRef<Path>>(
@@ -236,16 +242,12 @@ impl Results {
         self.offsets
             .iter()
             .find_map(|(module_name, offsets)| {
-                offsets
-                    .iter()
-                    .find(|o| o.name == "dwBuildNumber")
-                    .and_then(|offset| {
-                        let module_base = process.module_by_name(module_name).ok()?;
+                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?;
+                let module = process.module_by_name(module_name).ok()?;
 
-                        process.read(module_base.base + offset.value).ok()
-                    })
+                process.read(module.base + offset.1).ok()
             })
-            .ok_or_else(|| Error::Other("unable to read build number".into()))
+            .ok_or(Error::Other("unable to read build number"))
     }
 
     fn write_banner(&self, fmt: &mut Formatter<'_>) -> Result<()> {
@@ -254,19 +256,4 @@ impl Results {
 
         Ok(())
     }
-}
-
-pub fn format_module_name(module_name: &String) -> String {
-    let file_ext = match env::consts::OS {
-        "linux" => ".so",
-        "windows" => ".dll",
-        os => panic!("unsupported os: {}", os),
-    };
-
-    module_name.strip_suffix(file_ext).unwrap().to_string()
-}
-
-#[inline]
-pub fn sanitize_name(name: &str) -> String {
-    name.replace(|c: char| !c.is_alphanumeric(), "_")
 }

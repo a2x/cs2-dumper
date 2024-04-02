@@ -5,7 +5,7 @@ use heck::{AsPascalCase, AsSnakeCase};
 
 use serde_json::json;
 
-use super::{format_module_name, sanitize_name, CodeGen, Formatter, Results, SchemaMap};
+use super::{CodeGen, Formatter, Results, SchemaMap};
 
 use crate::analysis::ClassMetadata;
 use crate::error::Result;
@@ -15,6 +15,11 @@ impl CodeGen for SchemaMap {
         self.write_content(results, indent_size, |fmt| {
             fmt.block("namespace CS2Dumper.Schemas", false, |fmt| {
                 for (module_name, (classes, enums)) in self {
+                    // Skip empty modules.
+                    if classes.is_empty() && enums.is_empty() {
+                        continue;
+                    }
+
                     writeln!(fmt, "// Module: {}", module_name)?;
                     writeln!(fmt, "// Classes count: {}", classes.len())?;
                     writeln!(fmt, "// Enums count: {}", enums.len())?;
@@ -22,16 +27,16 @@ impl CodeGen for SchemaMap {
                     fmt.block(
                         &format!(
                             "public static class {}",
-                            AsPascalCase(format_module_name(module_name))
+                            AsPascalCase(Self::sanitize_name(module_name))
                         ),
                         false,
                         |fmt| {
                             for enum_ in enums {
-                                let ty = match enum_.ty.as_str() {
-                                    "uint8" => "byte",
-                                    "uint16" => "ushort",
-                                    "uint32" => "uint",
-                                    "uint64" => "ulong",
+                                let ty = match enum_.alignment {
+                                    1 => "byte",
+                                    2 => "ushort",
+                                    4 => "uint",
+                                    8 => "ulong",
                                     _ => continue,
                                 };
 
@@ -39,7 +44,11 @@ impl CodeGen for SchemaMap {
                                 writeln!(fmt, "// Members count: {}", enum_.size)?;
 
                                 fmt.block(
-                                    &format!("public enum {} : {}", sanitize_name(&enum_.name), ty),
+                                    &format!(
+                                        "public enum {} : {}",
+                                        Self::sanitize_name(&enum_.name),
+                                        ty
+                                    ),
                                     false,
                                     |fmt| {
                                         let members = enum_
@@ -60,7 +69,7 @@ impl CodeGen for SchemaMap {
                                 let parent_name = class
                                     .parent
                                     .as_ref()
-                                    .map(|parent| format!("{}", sanitize_name(&parent.name)))
+                                    .map(|parent| Self::sanitize_name(&parent.name))
                                     .unwrap_or_else(|| "None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
@@ -71,7 +80,10 @@ impl CodeGen for SchemaMap {
                                 }
 
                                 fmt.block(
-                                    &format!("public static class {}", sanitize_name(&class.name)),
+                                    &format!(
+                                        "public static class {}",
+                                        Self::sanitize_name(&class.name)
+                                    ),
                                     false,
                                     |fmt| {
                                         for field in &class.fields {
@@ -107,20 +119,28 @@ impl CodeGen for SchemaMap {
             fmt.block("namespace cs2_dumper", false, |fmt| {
                 fmt.block("namespace schemas", false, |fmt| {
                     for (module_name, (classes, enums)) in self {
+                        // Skip empty modules.
+                        if classes.is_empty() && enums.is_empty() {
+                            continue;
+                        }
+
                         writeln!(fmt, "// Module: {}", module_name)?;
                         writeln!(fmt, "// Classes count: {}", classes.len())?;
                         writeln!(fmt, "// Enums count: {}", enums.len())?;
 
                         fmt.block(
-                            &format!("namespace {}", AsSnakeCase(format_module_name(module_name))),
+                            &format!(
+                                "namespace {}",
+                                AsSnakeCase(Self::sanitize_name(module_name))
+                            ),
                             false,
                             |fmt| {
                                 for enum_ in enums {
-                                    let ty = match enum_.ty.as_str() {
-                                        "uint8" => "uint8_t",
-                                        "uint16" => "uint16_t",
-                                        "uint32" => "uint32_t",
-                                        "uint64" => "uint64_t",
+                                    let ty = match enum_.alignment {
+                                        1 => "uint8_t",
+                                        2 => "uint16_t",
+                                        4 => "uint32_t",
+                                        8 => "uint64_t",
                                         _ => continue,
                                     };
 
@@ -130,7 +150,7 @@ impl CodeGen for SchemaMap {
                                     fmt.block(
                                         &format!(
                                             "enum class {} : {}",
-                                            sanitize_name(&enum_.name),
+                                            Self::sanitize_name(&enum_.name),
                                             ty
                                         ),
                                         true,
@@ -153,7 +173,7 @@ impl CodeGen for SchemaMap {
                                     let parent_name = class
                                         .parent
                                         .as_ref()
-                                        .map(|parent| format!("{}", sanitize_name(&parent.name)))
+                                        .map(|parent| Self::sanitize_name(&parent.name))
                                         .unwrap_or_else(|| "None".to_string());
 
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
@@ -164,7 +184,7 @@ impl CodeGen for SchemaMap {
                                     }
 
                                     fmt.block(
-                                        &format!("namespace {}", sanitize_name(&class.name)),
+                                        &format!("namespace {}", Self::sanitize_name(&class.name)),
                                         false,
                                         |fmt| {
                                             for field in &class.fields {
@@ -229,7 +249,7 @@ impl CodeGen for SchemaMap {
                             .collect();
 
                         (
-                            sanitize_name(&class.name),
+                            Self::sanitize_name(&class.name),
                             json!({
                                 "parent": class.parent.as_ref().map(|parent| &parent.name),
                                 "fields": fields,
@@ -248,11 +268,19 @@ impl CodeGen for SchemaMap {
                             .map(|member| (&member.name, member.value))
                             .collect();
 
+                        let ty = match enum_.alignment {
+                            1 => "uint8",
+                            2 => "uint16",
+                            4 => "uint32",
+                            8 => "uint64",
+                            _ => "unknown",
+                        };
+
                         (
-                            sanitize_name(&enum_.name),
+                            Self::sanitize_name(&enum_.name),
                             json!({
                                 "alignment": enum_.alignment,
-                                "type": enum_.ty,
+                                "type": ty,
                                 "members": members,
                             }),
                         )
@@ -274,25 +302,33 @@ impl CodeGen for SchemaMap {
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
+            writeln!(
+                fmt,
+                "#![allow(non_upper_case_globals, non_camel_case_types, unused)]\n"
+            )?;
 
             fmt.block("pub mod cs2_dumper", false, |fmt| {
                 fmt.block("pub mod schemas", false, |fmt| {
                     for (module_name, (classes, enums)) in self {
+                        // Skip empty modules.
+                        if classes.is_empty() && enums.is_empty() {
+                            continue;
+                        }
+
                         writeln!(fmt, "// Module: {}", module_name)?;
                         writeln!(fmt, "// Classes count: {}", classes.len())?;
                         writeln!(fmt, "// Enums count: {}", enums.len())?;
 
                         fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(format_module_name(module_name))),
+                            &format!("pub mod {}", AsSnakeCase(Self::sanitize_name(module_name))),
                             false,
                             |fmt| {
                                 for enum_ in enums {
-                                    let ty = match enum_.ty.as_str() {
-                                        "uint8" => "u8",
-                                        "uint16" => "u16",
-                                        "uint32" => "u32",
-                                        "uint64" => "u64",
+                                    let ty = match enum_.alignment {
+                                        1 => "u8",
+                                        2 => "u16",
+                                        4 => "u32",
+                                        8 => "u64",
                                         _ => continue,
                                     };
 
@@ -303,7 +339,7 @@ impl CodeGen for SchemaMap {
                                         &format!(
                                             "#[repr({})]\npub enum {}",
                                             ty,
-                                            sanitize_name(&enum_.name),
+                                            Self::sanitize_name(&enum_.name),
                                         ),
                                         false,
                                         |fmt| {
@@ -327,7 +363,7 @@ impl CodeGen for SchemaMap {
                                     let parent_name = class
                                         .parent
                                         .as_ref()
-                                        .map(|parent| format!("{}", sanitize_name(&parent.name)))
+                                        .map(|parent| Self::sanitize_name(&parent.name))
                                         .unwrap_or_else(|| "None".to_string());
 
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
@@ -338,7 +374,7 @@ impl CodeGen for SchemaMap {
                                     }
 
                                     fmt.block(
-                                        &format!("pub mod {}", sanitize_name(&class.name)),
+                                        &format!("pub mod {}", Self::sanitize_name(&class.name)),
                                         false,
                                         |fmt| {
                                             for field in &class.fields {
