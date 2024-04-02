@@ -1,19 +1,20 @@
 use std::collections::BTreeMap;
-use std::env;
 
 use log::debug;
 
 use memflow::prelude::v1::*;
 
+use pelite::pattern;
+use pelite::pe64::{Pe, PeView};
+
 use serde::{Deserialize, Serialize};
 
-use skidscan_macros::signature;
-
 use crate::error::Result;
-use crate::source_engine::InterfaceReg;
+use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, Vec<Interface>>;
 
+/// Represents an exposed interface.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Interface {
     pub name: String,
@@ -21,23 +22,24 @@ pub struct Interface {
 }
 
 pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<InterfaceMap> {
-    let sig = match env::consts::OS {
-        "linux" => signature!("48 8B 1D ? ? ? ? 48 85 DB 74 ? 49 89 FC"),
-        "windows" => signature!("4C 8B 0D ? ? ? ? 4C 8B D2 4C 8B D9"),
-        os => panic!("unsupported os: {}", os),
-    };
-
     process
         .module_list()?
         .iter()
         .filter_map(|module| {
             let buf = process.read_raw(module.base, module.size as _).ok()?;
 
-            let list_addr = sig
-                .scan(&buf)
-                .and_then(|ptr| process.read_addr64_rip(module.base + ptr).ok())?;
+            let view = PeView::from_bytes(&buf).ok()?;
 
-            read_interfaces(process, module, list_addr)
+            let mut save = [0; 2];
+
+            if !view
+                .scanner()
+                .finds_code(pattern!("4c8b0d${'} 4c8bd2 4c8bd9"), &mut save)
+            {
+                return None;
+            }
+
+            read_interfaces(process, module, module.base + save[1])
                 .ok()
                 .filter(|ifaces| !ifaces.is_empty())
                 .map(|ifaces| Ok((module.name.to_string(), ifaces)))
@@ -73,6 +75,7 @@ fn read_interfaces(
         reg_ptr = reg.next;
     }
 
+    // Sort interfaces by name.
     ifaces.sort_unstable_by(|a, b| a.name.cmp(&b.name));
 
     Ok(ifaces)

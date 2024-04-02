@@ -3,7 +3,7 @@ use std::fmt::Write;
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{format_module_name, CodeGen, InterfaceMap, Results};
+use super::{CodeGen, InterfaceMap, Results};
 
 use crate::error::Result;
 
@@ -17,7 +17,7 @@ impl CodeGen for InterfaceMap {
                     fmt.block(
                         &format!(
                             "public static class {}",
-                            AsPascalCase(format_module_name(module_name))
+                            AsPascalCase(Self::sanitize_name(module_name))
                         ),
                         false,
                         |fmt| {
@@ -52,7 +52,10 @@ impl CodeGen for InterfaceMap {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
-                            &format!("namespace {}", AsSnakeCase(format_module_name(module_name))),
+                            &format!(
+                                "namespace {}",
+                                AsSnakeCase(Self::sanitize_name(module_name))
+                            ),
                             false,
                             |fmt| {
                                 for iface in ifaces {
@@ -94,7 +97,10 @@ impl CodeGen for InterfaceMap {
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
+            writeln!(
+                fmt,
+                "#![allow(non_upper_case_globals, non_camel_case_types, unused)]\n"
+            )?;
 
             fmt.block("pub mod cs2_dumper", false, |fmt| {
                 fmt.block("pub mod interfaces", false, |fmt| {
@@ -102,7 +108,7 @@ impl CodeGen for InterfaceMap {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(format_module_name(module_name))),
+                            &format!("pub mod {}", AsSnakeCase(Self::sanitize_name(module_name))),
                             false,
                             |fmt| {
                                 for iface in ifaces {

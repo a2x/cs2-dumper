@@ -1,8 +1,6 @@
-#![feature(lazy_cell)]
-
+use std::env;
 use std::path::PathBuf;
 use std::time::Instant;
-use std::{env, fs};
 
 use clap::*;
 
@@ -12,24 +10,21 @@ use memflow::prelude::v1::*;
 
 use simplelog::{ColorChoice, TermLogger};
 
-use config::CONFIG;
 use error::Result;
 use output::Results;
 
 mod analysis;
-mod config;
 mod error;
 mod output;
-mod source_engine;
+mod source2;
+
+const PROCESS_NAME: &str = "cs2.exe";
 
 fn main() -> Result<()> {
     let start_time = Instant::now();
 
     let matches = parse_args();
     let (conn_name, conn_args, indent_size, out_dir) = extract_args(&matches)?;
-
-    // Create the output directory if it doesn't exist.
-    fs::create_dir_all(&out_dir)?;
 
     let os = if let Some(conn_name) = conn_name {
         let inventory = Inventory::scan();
@@ -45,7 +40,7 @@ fn main() -> Result<()> {
         memflow_native::create_os(&Default::default(), Default::default())?
     };
 
-    let mut process = os.into_process_by_name(&CONFIG.executable)?;
+    let mut process = os.into_process_by_name(PROCESS_NAME)?;
 
     let buttons = analysis::buttons(&mut process)?;
     let interfaces = analysis::interfaces(&mut process)?;

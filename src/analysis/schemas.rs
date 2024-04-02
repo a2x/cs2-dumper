@@ -1,18 +1,19 @@
 use std::collections::BTreeMap;
 use std::ffi::CStr;
+use std::mem;
 use std::ops::Add;
-use std::{env, mem};
 
 use log::debug;
 
 use memflow::prelude::v1::*;
 
+use pelite::pattern;
+use pelite::pe64::{Pe, PeView};
+
 use serde::{Deserialize, Serialize};
 
-use skidscan_macros::signature;
-
 use crate::error::{Error, Result};
-use crate::source_engine::*;
+use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
 
@@ -42,7 +43,6 @@ pub struct ClassField {
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Enum {
     pub name: String,
-    pub ty: String,
     pub alignment: u8,
     pub size: u16,
     pub members: Vec<EnumMember>,
@@ -54,7 +54,7 @@ pub struct EnumMember {
     pub value: i64,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct TypeScope {
     pub name: String,
     pub classes: Vec<Class>,
@@ -79,15 +79,10 @@ fn read_class_binding(
 ) -> Result<Class> {
     let binding = binding_ptr.read(process)?;
 
-    let module_name = binding.module_name.read_string(process).map(|s| {
-        let file_ext = match env::consts::OS {
-            "linux" => ".so",
-            "windows" => ".dll",
-            os => panic!("unsupported os: {}", os),
-        };
-
-        format!("{}.{}", s, file_ext)
-    })?;
+    let module_name = binding
+        .module_name
+        .read_string(process)
+        .map(|s| format!("{}.dll", s))?;
 
     let name = binding.name.read_string(process)?.to_string();
 
@@ -135,15 +130,15 @@ fn read_class_binding_fields(
 
             let field = field_ptr.read(process)?;
 
-            if field.schema_type.is_null() {
+            if field.type_.is_null() {
                 return Err(Error::Other("field schema type is null"));
             }
 
             let name = field.name.read_string(process)?.to_string();
-            let schema_type = field.schema_type.read(process)?;
+            let type_ = field.type_.read(process)?;
 
             // TODO: Parse this properly.
-            let ty = schema_type.name.read_string(process)?.replace(" ", "");
+            let ty = type_.name.read_string(process)?.replace(" ", "");
 
             Ok(ClassField {
                 name,
@@ -178,16 +173,12 @@ fn read_class_binding_metadata(
 
             let metadata = match name.as_str() {
                 "MNetworkChangeCallback" => unsafe {
-                    let name = network_value
-                        .union_data
-                        .name_ptr
-                        .read_string(process)?
-                        .to_string();
+                    let name = network_value.u.name_ptr.read_string(process)?.to_string();
 
                     ClassMetadata::NetworkChangeCallback { name }
                 },
                 "MNetworkVarNames" => unsafe {
-                    let var_value = network_value.union_data.var_value;
+                    let var_value = network_value.u.var_value;
 
                     let name = var_value.name.read_string(process)?.to_string();
                     let ty = var_value.ty.read_string(process)?.replace(" ", "");
@@ -208,21 +199,18 @@ fn read_enum_binding(
 ) -> Result<Enum> {
     let binding = binding_ptr.read(process)?;
     let name = binding.name.read_string(process)?.to_string();
-
     let members = read_enum_binding_members(process, &binding)?;
 
     debug!(
-        "found enum: {} at {:#X} (type name: {}) (alignment: {}) (members count: {})",
+        "found enum: {} at {:#X} (alignment: {}) (members count: {})",
         name,
         binding_ptr.to_umem(),
-        binding.type_name(),
         binding.alignment,
         binding.size,
     );
 
     Ok(Enum {
         name,
-        ty: binding.type_name().to_string(),
         alignment: binding.alignment,
         size: binding.size,
         members,
@@ -235,17 +223,17 @@ fn read_enum_binding_members(
 ) -> Result<Vec<EnumMember>> {
     (0..binding.size)
         .map(|i| {
-            let enumerator_info_ptr: Pointer64<SchemaEnumeratorInfoData> = binding
+            let enum_info_ptr: Pointer64<SchemaEnumeratorInfoData> = binding
                 .enum_info
                 .address()
                 .add(i * mem::size_of::<SchemaEnumeratorInfoData>() as u16)
                 .into();
 
-            let enumerator_info = enumerator_info_ptr.read(process)?;
-            let name = enumerator_info.name.read_string(process)?.to_string();
+            let enum_info = enum_info_ptr.read(process)?;
+            let name = enum_info.name.read_string(process)?.to_string();
 
             let value = {
-                let value = unsafe { enumerator_info.union_data.ulong } as i64;
+                let value = unsafe { enum_info.u.ulong } as i64;
 
                 if value == i64::MAX {
                     -1
@@ -260,27 +248,21 @@ fn read_enum_binding_members(
 }
 
 fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaSystem> {
-    let (module_name, sig) = match env::consts::OS {
-        "linux" => (
-            "libschemasystem.so",
-            signature!("48 8D 35 ? ? ? ? 48 8D 3D ? ? ? ? E8 ? ? ? ? 48 8D 15 ? ? ? ? 48 8D 35 ? ? ? ? 48 8D 3D"),
-        ),
-        "windows" => (
-            "schemasystem.dll",
-            signature!("48 89 05 ? ? ? ? 4C 8D 45"),
-        ),
-        os => panic!("unsupported os: {}", os),
-    };
-
-    let module = process.module_by_name(&module_name)?;
+    let module = process.module_by_name("schemasystem.dll")?;
     let buf = process.read_raw(module.base, module.size as _)?;
 
-    let addr = sig
-        .scan(&buf)
-        .and_then(|ptr| process.read_addr64_rip(module.base + ptr).ok())
-        .ok_or_else(|| Error::Other("unable to read schema system address"))?;
+    let view = PeView::from_bytes(&buf)?;
 
-    let schema_system: SchemaSystem = process.read(addr)?;
+    let mut save = [0; 2];
+
+    if !view
+        .scanner()
+        .finds_code(pattern!("488905${'} 4c8d45"), &mut save)
+    {
+        return Err(Error::Other("unable to find schema system signature"));
+    }
+
+    let schema_system: SchemaSystem = process.read(module.base + save[1]).data_part()?;
 
     if schema_system.num_registrations == 0 {
         return Err(Error::Other("no schema system registrations found"));
@@ -297,8 +279,7 @@ fn read_type_scopes(
 
     (0..type_scopes.size)
         .map(|i| {
-            let type_scope_ptr = type_scopes.get(process, i as _)?;
-            let type_scope = type_scope_ptr.read(process)?;
+            let type_scope = type_scopes.get(process, i as _)?.read(process)?;
 
             let name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
                 .to_string_lossy()
@@ -319,9 +300,8 @@ fn read_type_scopes(
                 .collect();
 
             debug!(
-                "found type scope: {} at {:#X} (classes count: {}) (enums count: {})",
+                "found type scope: {} (classes: {}) (enums: {})",
                 name,
-                type_scope_ptr.to_umem(),
                 classes.len(),
                 enums.len()
             );

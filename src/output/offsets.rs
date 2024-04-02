@@ -1,9 +1,8 @@
-use std::collections::BTreeMap;
 use std::fmt::Write;
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{format_module_name, CodeGen, OffsetMap, Results};
+use super::{CodeGen, OffsetMap, Results};
 
 use crate::error::Result;
 
@@ -17,16 +16,12 @@ impl CodeGen for OffsetMap {
                     fmt.block(
                         &format!(
                             "public static class {}",
-                            AsPascalCase(format_module_name(module_name))
+                            AsPascalCase(Self::sanitize_name(module_name))
                         ),
                         false,
                         |fmt| {
-                            for offset in offsets {
-                                writeln!(
-                                    fmt,
-                                    "public const nint {} = {:#X};",
-                                    offset.name, offset.value
-                                )?;
+                            for (name, value) in offsets {
+                                writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
                             }
 
                             Ok(())
@@ -52,14 +47,17 @@ impl CodeGen for OffsetMap {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
-                            &format!("namespace {}", AsSnakeCase(format_module_name(module_name))),
+                            &format!(
+                                "namespace {}",
+                                AsSnakeCase(Self::sanitize_name(module_name))
+                            ),
                             false,
                             |fmt| {
-                                for offset in offsets {
+                                for (name, value) in offsets {
                                     writeln!(
                                         fmt,
                                         "constexpr std::ptrdiff_t {} = {:#X};",
-                                        offset.name, offset.value
+                                        name, value
                                     )?;
                                 }
 
@@ -77,24 +75,15 @@ impl CodeGen for OffsetMap {
     }
 
     fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
-        let content: BTreeMap<_, _> = self
-            .iter()
-            .map(|(module_name, offsets)| {
-                let offsets: BTreeMap<_, _> = offsets
-                    .iter()
-                    .map(|offset| (&offset.name, offset.value))
-                    .collect();
-
-                (module_name, offsets)
-            })
-            .collect();
-
-        serde_json::to_string_pretty(&content).map_err(Into::into)
+        serde_json::to_string_pretty(self).map_err(Into::into)
     }
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
         self.write_content(results, indent_size, |fmt| {
-            writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
+            writeln!(
+                fmt,
+                "#![allow(non_upper_case_globals, non_camel_case_types, unused)]\n"
+            )?;
 
             fmt.block("pub mod cs2_dumper", false, |fmt| {
                 fmt.block("pub mod offsets", false, |fmt| {
@@ -102,15 +91,11 @@ impl CodeGen for OffsetMap {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(format_module_name(module_name))),
+                            &format!("pub mod {}", AsSnakeCase(Self::sanitize_name(module_name))),
                             false,
                             |fmt| {
-                                for offset in offsets {
-                                    writeln!(
-                                        fmt,
-                                        "pub const {}: usize = {:#X};",
-                                        offset.name, offset.value
-                                    )?;
+                                for (name, value) in offsets {
+                                    writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
                                 }
 
                                 Ok(())

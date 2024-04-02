@@ -50,8 +50,9 @@ impl<'a> Formatter<'a> {
     #[inline]
     fn push_indentation(&mut self) {
         if self.indent_level > 0 {
-            self.out
-                .push_str(&" ".repeat(self.indent_level * self.indent_size));
+            let indentation = " ".repeat(self.indent_level * self.indent_size);
+
+            self.out.push_str(&indentation);
         }
     }
 }
