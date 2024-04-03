@@ -10,7 +10,7 @@ use crate::source2::UtlTsHash;
 pub struct SchemaSystemTypeScope {
     pad_0000: [u8; 0x8],
     pub name: [c_char; 256],
-    pad_0108: [u8; 0x4B0],
+    pad_0108: [u8; 0x4B8],
     pub class_bindings: UtlTsHash<Pointer64<SchemaClassBinding>>,
     pad_05f0: [u8; 0x2810],
     pub enum_bindings: UtlTsHash<Pointer64<SchemaEnumBinding>>,
