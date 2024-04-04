@@ -78,11 +78,12 @@ impl CodeGen for Vec<Button> {
 
                 fmt.block("pub mod buttons", false, |fmt| {
                     for button in self {
-                        writeln!(
-                            fmt,
-                            "pub const {}: usize = {:#X};",
-                            button.name, button.value
-                        )?;
+                        let mut name = button.name.clone();
+                        if name == "use" {
+                            name = format!("r#{}", name);
+                        }
+
+                        writeln!(fmt, "pub const {}: usize = {:#X};", name, button.value)?;
                     }
 
                     Ok(())
