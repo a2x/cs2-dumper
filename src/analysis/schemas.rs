@@ -120,7 +120,7 @@ fn read_class_binding_fields(
     process: &mut IntoProcessInstanceArcBox<'_>,
     binding: &SchemaClassBinding,
 ) -> Result<Vec<ClassField>> {
-    (0..binding.fields_count)
+    (0..binding.num_fields)
         .map(|i| {
             let field_ptr: Pointer64<SchemaClassFieldData> = binding
                 .fields
@@ -157,7 +157,7 @@ fn read_class_binding_metadata(
         return Err(Error::Other("class metadata is null"));
     }
 
-    (0..binding.static_metadata_count)
+    (0..binding.num_static_metadata)
         .map(|i| {
             let metadata_ptr: Pointer64<SchemaMetadataEntryData> =
                 binding.static_metadata.offset(i as _).into();
@@ -199,6 +199,7 @@ fn read_enum_binding(
 ) -> Result<Enum> {
     let binding = binding_ptr.read(process)?;
     let name = binding.name.read_string(process)?.to_string();
+
     let members = read_enum_binding_members(process, &binding)?;
 
     debug!(
@@ -271,6 +272,43 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
     Ok(schema_system)
 }
 
+fn read_class_bindings(
+    process: &mut IntoProcessInstanceArcBox<'_>,
+    type_scope_ptr: Pointer64<SchemaSystemTypeScope>,
+) -> Result<Vec<Class>> {
+    let tree: UtlRbTree = process.read(type_scope_ptr.address() + 0x4C8)?;
+
+    let classes = (0..1000) // TODO: `num_elements` doesn't seem to work for all modules.
+        .filter_map(|i| {
+            let element = tree.elements.at(i as _).read(process).ok()?;
+
+            let binding_ptr = Pointer64::<SchemaTypeDeclaredClass>::from(element.data.address())
+                .read(process)
+                .ok()?
+                .binding;
+
+            if binding_ptr.is_null() {
+                return None;
+            }
+
+            read_class_binding(process, binding_ptr).ok()
+        })
+        .collect();
+
+    Ok(classes)
+}
+
+fn read_enum_bindings(
+    process: &mut IntoProcessInstanceArcBox<'_>,
+    type_scope_ptr: Pointer64<SchemaSystemTypeScope>,
+) -> Result<Vec<Enum>> {
+    let _tree: UtlRbTree = process.read(type_scope_ptr.address() + 0x4F8)?;
+
+    // TODO: Implement this.
+
+    Ok(Vec::new())
+}
+
 fn read_type_scopes(
     process: &mut IntoProcessInstanceArcBox<'_>,
     schema_system: &SchemaSystem,
@@ -279,28 +317,18 @@ fn read_type_scopes(
 
     (0..type_scopes.size)
         .map(|i| {
-            let type_scope = type_scopes.get(process, i as _)?.read(process)?;
+            let type_scope_ptr = type_scopes.get(process, i as _)?;
+            let type_scope = type_scope_ptr.read(process)?;
 
             let name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
                 .to_string_lossy()
                 .to_string();
 
-            let classes: Vec<_> = type_scope
-                .class_bindings
-                .elements(process)?
-                .iter()
-                .filter_map(|ptr| read_class_binding(process, *ptr).ok())
-                .collect();
-
-            let enums: Vec<_> = type_scope
-                .enum_bindings
-                .elements(process)?
-                .iter()
-                .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
-                .collect();
+            let classes = read_class_bindings(process, type_scope_ptr)?;
+            let enums = read_enum_bindings(process, type_scope_ptr)?;
 
             debug!(
-                "found type scope: {} (classes: {}) (enums: {})",
+                "found type scope: {} (classes count: {}) (enums count: {})",
                 name,
                 classes.len(),
                 enums.len()

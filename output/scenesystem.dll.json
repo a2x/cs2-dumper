@@ -1,6 +1,65 @@
 {
   "scenesystem.dll": {
     "classes": {
+      "CDSPMixgroupModifier": {
+        "fields": {
+          "m_flListenerReverbModifierWhenSourceReverbIsActive": 24,
+          "m_flModifier": 8,
+          "m_flModifierMin": 12,
+          "m_flSourceModifier": 16,
+          "m_flSourceModifierMin": 20,
+          "m_mixgroup": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CDspPresetModifierList": {
+        "fields": {
+          "m_dspName": 0,
+          "m_modifiers": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CParticleVisibilityInputs": {
+        "fields": {
+          "m_bDotCPAngles": 40,
+          "m_bDotCameraAngles": 41,
+          "m_bRightEye": 64,
+          "m_flAlphaScaleMax": 48,
+          "m_flAlphaScaleMin": 44,
+          "m_flCameraBias": 0,
+          "m_flDistanceInputMax": 28,
+          "m_flDistanceInputMin": 24,
+          "m_flDotInputMax": 36,
+          "m_flDotInputMin": 32,
+          "m_flInputMax": 16,
+          "m_flInputMin": 12,
+          "m_flNoPixelVisibilityFallback": 20,
+          "m_flProxyRadius": 8,
+          "m_flRadiusScaleFOVBase": 60,
+          "m_flRadiusScaleMax": 56,
+          "m_flRadiusScaleMin": 52,
+          "m_nCPin": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CSSDSEndFrameViewInfo": {
         "fields": {
           "m_ViewName": 8,
@@ -111,6 +170,40 @@
         ],
         "parent": null
       },
+      "CSosSoundEventGroupListSchema": {
+        "fields": {
+          "m_groupList": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSoundEventMetaData": {
+        "fields": {
+          "m_soundEventVMix": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "IParticleSystemDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "SceneViewId_t": {
         "fields": {
           "m_nFrameCount": 8,
@@ -123,19 +216,36 @@
           }
         ],
         "parent": null
+      },
+      "SelectedEditItemInfo_t": {
+        "fields": {
+          "m_EditItems": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SosEditItemInfo_t": {
+        "fields": {
+          "itemKVString": 32,
+          "itemName": 8,
+          "itemPos": 40,
+          "itemType": 0,
+          "itemTypeName": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
       }
     },
-    "enums": {
-      "DisableShadows_t": {
-        "alignment": 1,
-        "members": {
-          "kDisableShadows_All": 1,
-          "kDisableShadows_Baked": 2,
-          "kDisableShadows_None": 0,
-          "kDisableShadows_Realtime": 3
-        },
-        "type": "uint8"
-      }
-    }
+    "enums": {}
   }
 }

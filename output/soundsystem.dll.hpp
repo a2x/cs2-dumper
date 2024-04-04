@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 #pragma once
 
@@ -8,175 +8,9 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
-        // Classes count: 50
-        // Enums count: 13
+        // Classes count: 78
+        // Enums count: 0
         namespace soundsystem_dll {
-            // Alignment: 4
-            // Members count: 30
-            enum class soundlevel_t : uint32_t {
-                SNDLVL_NONE = 0x0,
-                SNDLVL_20dB = 0x14,
-                SNDLVL_25dB = 0x19,
-                SNDLVL_30dB = 0x1E,
-                SNDLVL_35dB = 0x23,
-                SNDLVL_40dB = 0x28,
-                SNDLVL_45dB = 0x2D,
-                SNDLVL_50dB = 0x32,
-                SNDLVL_55dB = 0x37,
-                SNDLVL_IDLE = 0x3C,
-                SNDLVL_60dB = 0x3C,
-                SNDLVL_65dB = 0x41,
-                SNDLVL_STATIC = 0x42,
-                SNDLVL_70dB = 0x46,
-                SNDLVL_NORM = 0x4B,
-                SNDLVL_75dB = 0x4B,
-                SNDLVL_80dB = 0x50,
-                SNDLVL_TALKING = 0x50,
-                SNDLVL_85dB = 0x55,
-                SNDLVL_90dB = 0x5A,
-                SNDLVL_95dB = 0x5F,
-                SNDLVL_100dB = 0x64,
-                SNDLVL_105dB = 0x69,
-                SNDLVL_110dB = 0x6E,
-                SNDLVL_120dB = 0x78,
-                SNDLVL_130dB = 0x82,
-                SNDLVL_GUNFIRE = 0x8C,
-                SNDLVL_140dB = 0x8C,
-                SNDLVL_150dB = 0x96,
-                SNDLVL_180dB = 0xB4
-            };
-            // Alignment: 4
-            // Members count: 6
-            enum class ActionType_t : uint32_t {
-                SOS_ACTION_NONE = 0x0,
-                SOS_ACTION_LIMITER = 0x1,
-                SOS_ACTION_TIME_LIMIT = 0x2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5
-            };
-            // Alignment: 4
-            // Members count: 3
-            enum class SosActionStopType_t : uint32_t {
-                SOS_STOPTYPE_NONE = 0x0,
-                SOS_STOPTYPE_TIME = 0x1,
-                SOS_STOPTYPE_OPVAR = 0x2
-            };
-            // Alignment: 4
-            // Members count: 2
-            enum class SosActionSortType_t : uint32_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
-            };
-            // Alignment: 4
-            // Members count: 2
-            enum class SosGroupType_t : uint32_t {
-                SOS_GROUPTYPE_DYNAMIC = 0x0,
-                SOS_GROUPTYPE_STATIC = 0x1
-            };
-            // Alignment: 4
-            // Members count: 6
-            enum class SosEditItemType_t : uint32_t {
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
-                SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
-                SOS_EDIT_ITEM_TYPE_STACK = 0x3,
-                SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
-                SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-            };
-            // Alignment: 2
-            // Members count: 10
-            enum class VMixFilterType_t : uint16_t {
-                FILTER_UNKNOWN = 0xFFFFFFFFFFFFFFFF,
-                FILTER_LOWPASS = 0x0,
-                FILTER_HIGHPASS = 0x1,
-                FILTER_BANDPASS = 0x2,
-                FILTER_NOTCH = 0x3,
-                FILTER_PEAKING_EQ = 0x4,
-                FILTER_LOW_SHELF = 0x5,
-                FILTER_HIGH_SHELF = 0x6,
-                FILTER_ALLPASS = 0x7,
-                FILTER_PASSTHROUGH = 0x8
-            };
-            // Alignment: 1
-            // Members count: 9
-            enum class VMixFilterSlope_t : uint8_t {
-                FILTER_SLOPE_1POLE_6dB = 0x0,
-                FILTER_SLOPE_1POLE_12dB = 0x1,
-                FILTER_SLOPE_1POLE_18dB = 0x2,
-                FILTER_SLOPE_1POLE_24dB = 0x3,
-                FILTER_SLOPE_12dB = 0x4,
-                FILTER_SLOPE_24dB = 0x5,
-                FILTER_SLOPE_36dB = 0x6,
-                FILTER_SLOPE_48dB = 0x7,
-                FILTER_SLOPE_MAX = 0x7
-            };
-            // Alignment: 2
-            // Members count: 30
-            enum class VMixProcessorType_t : uint16_t {
-                VPROCESSOR_UNKNOWN = 0x0,
-                VPROCESSOR_STEAMAUDIO_REVERB = 0x1,
-                VPROCESSOR_RT_PITCH = 0x2,
-                VPROCESSOR_STEAMAUDIO_HRTF = 0x3,
-                VPROCESSOR_DYNAMICS = 0x4,
-                VPROCESSOR_PRESETDSP = 0x5,
-                VPROCESSOR_DELAY = 0x6,
-                VPROCESSOR_MOD_DELAY = 0x7,
-                VPROCESSOR_DIFFUSOR = 0x8,
-                VPROCESSOR_BOXVERB = 0x9,
-                VPROCESSOR_FREEVERB = 0xA,
-                VPROCESSOR_PLATEVERB = 0xB,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
-                VPROCESSOR_FILTER = 0xD,
-                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
-                VPROCESSOR_EQ8 = 0xF,
-                VPROCESSOR_ENVELOPE = 0x10,
-                VPROCESSOR_VOCODER = 0x11,
-                VPROCESSOR_CONVOLUTION = 0x12,
-                VPROCESSOR_DYNAMICS_3BAND = 0x13,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x14,
-                VPROCESSOR_SHAPER = 0x15,
-                VPROCESSOR_PANNER = 0x16,
-                VPROCESSOR_UTILITY = 0x17,
-                VPROCESSOR_AUTOFILTER = 0x18,
-                VPROCESSOR_OSC = 0x19,
-                VPROCESSOR_STEREODELAY = 0x1A,
-                VPROCESSOR_EFFECT_CHAIN = 0x1B,
-                VPROCESSOR_SUBGRAPH_SWITCH = 0x1C,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1D
-            };
-            // Alignment: 4
-            // Members count: 5
-            enum class VMixLFOShape_t : uint32_t {
-                LFO_SHAPE_SINE = 0x0,
-                LFO_SHAPE_SQUARE = 0x1,
-                LFO_SHAPE_TRI = 0x2,
-                LFO_SHAPE_SAW = 0x3,
-                LFO_SHAPE_NOISE = 0x4
-            };
-            // Alignment: 4
-            // Members count: 2
-            enum class VMixPannerType_t : uint32_t {
-                PANNER_TYPE_LINEAR = 0x0,
-                PANNER_TYPE_EQUAL_POWER = 0x1
-            };
-            // Alignment: 4
-            // Members count: 3
-            enum class VMixSubgraphSwitchInterpolationType_t : uint32_t {
-                SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
-                SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 0x1,
-                SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 0x2
-            };
-            // Alignment: 4
-            // Members count: 6
-            enum class VMixChannelOperation_t : uint32_t {
-                VMIX_CHAN_STEREO = 0x0,
-                VMIX_CHAN_LEFT = 0x1,
-                VMIX_CHAN_RIGHT = 0x2,
-                VMIX_CHAN_SWAP = 0x3,
-                VMIX_CHAN_MONO = 0x4,
-                VMIX_CHAN_MID_SIDE = 0x5
-            };
             // Parent: None
             // Fields count: 3
             //
@@ -756,6 +590,245 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_interpolationMode = 0x0; // VMixSubgraphSwitchInterpolationType_t
                 constexpr std::ptrdiff_t m_bOnlyTailsOnFadeOut = 0x4; // bool
                 constexpr std::ptrdiff_t m_flInterpolationTime = 0x8; // float32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CovMatrix3 {
+                constexpr std::ptrdiff_t m_vDiag = 0x0; // 
+                constexpr std::ptrdiff_t m_flXY = 0xC; // float32
+                constexpr std::ptrdiff_t m_flXZ = 0x10; // float32
+                constexpr std::ptrdiff_t m_flYZ = 0x14; // float32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FourCovMatrices3 {
+                constexpr std::ptrdiff_t m_vDiag = 0x0; // FourVectors
+                constexpr std::ptrdiff_t m_flXY = 0x30; // fltx4
+                constexpr std::ptrdiff_t m_flXZ = 0x40; // fltx4
+                constexpr std::ptrdiff_t m_flYZ = 0x50; // fltx4
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeFitInfluence_t {
+                constexpr std::ptrdiff_t nVertexNode = 0x0; // uint32
+                constexpr std::ptrdiff_t flWeight = 0x4; // float32
+                constexpr std::ptrdiff_t nMatrixNode = 0x8; // uint32
+            }
+            // Parent: FeTaperedCapsuleRigid_t
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeBuildTaperedCapsuleRigid_t {
+                constexpr std::ptrdiff_t m_nPriority = 0x30; // int32
+                constexpr std::ptrdiff_t m_nVertexMapHash = 0x34; // uint32
+            }
+            // Parent: FeBoxRigid_t
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeBuildBoxRigid_t {
+                constexpr std::ptrdiff_t m_nPriority = 0x40; // int32
+                constexpr std::ptrdiff_t m_nVertexMapHash = 0x44; // uint32
+            }
+            // Parent: FeSphereRigid_t
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeBuildSphereRigid_t {
+                constexpr std::ptrdiff_t m_nPriority = 0x20; // int32
+                constexpr std::ptrdiff_t m_nVertexMapHash = 0x24; // uint32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeSourceEdge_t {
+                constexpr std::ptrdiff_t nNode = 0x0; // uint16[2]
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeVertexMapBuild_t {
+                constexpr std::ptrdiff_t m_VertexMapName = 0x0; // CUtlString
+                constexpr std::ptrdiff_t m_nNameHash = 0x8; // uint32
+                constexpr std::ptrdiff_t m_Color = 0xC; // Color
+                constexpr std::ptrdiff_t m_flVolumetricSolveStrength = 0x10; // float32
+                constexpr std::ptrdiff_t m_nScaleSourceNode = 0x14; // int32
+                constexpr std::ptrdiff_t m_Weights = 0x18; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CFeVertexMapBuildArray {
+                constexpr std::ptrdiff_t m_Array = 0x0; // CUtlVector<FeVertexMapBuild_t*>
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace FeProxyVertexMap_t {
+                constexpr std::ptrdiff_t m_Name = 0x0; // CUtlString
+                constexpr std::ptrdiff_t m_flWeight = 0x8; // float32
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CFeMorphLayer {
+                constexpr std::ptrdiff_t m_Name = 0x0; // CUtlString
+                constexpr std::ptrdiff_t m_nNameHash = 0x8; // uint32
+                constexpr std::ptrdiff_t m_Nodes = 0x10; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_InitPos = 0x28; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_Gravity = 0x40; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_GoalStrength = 0x58; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_GoalDamping = 0x70; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace Dop26_t {
+                constexpr std::ptrdiff_t m_flSupport = 0x0; // float32[26]
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace RnCapsule_t {
+                constexpr std::ptrdiff_t m_vCenter = 0x0; // Vector[2]
+                constexpr std::ptrdiff_t m_flRadius = 0x18; // float32
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace KeyValues {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__Vector__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__QuaternionStorage__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__int32__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__bool__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__Color__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__Vector2D__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CCompressor__Vector4D__ {
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_ConstrainDistance {
+                constexpr std::ptrdiff_t m_fMinDistance = 0x1C0; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_fMaxDistance = 0x318; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_nControlPointNumber = 0x470; // int32
+                constexpr std::ptrdiff_t m_CenterOffset = 0x474; // 
+                constexpr std::ptrdiff_t m_bGlobalCenter = 0x480; // bool
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_CollideWithSelf {
+                constexpr std::ptrdiff_t m_flRadiusScale = 0x1C0; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flMinimumSpeed = 0x318; // CPerParticleFloatInput
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_CollideWithParentParticles {
+                constexpr std::ptrdiff_t m_flParentRadiusScale = 0x1C0; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flRadiusScale = 0x318; // CPerParticleFloatInput
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_ConstrainDistanceToPath {
+                constexpr std::ptrdiff_t m_fMinDistance = 0x1C0; // float32
+                constexpr std::ptrdiff_t m_flMaxDistance0 = 0x1C4; // float32
+                constexpr std::ptrdiff_t m_flMaxDistanceMid = 0x1C8; // float32
+                constexpr std::ptrdiff_t m_flMaxDistance1 = 0x1CC; // float32
+                constexpr std::ptrdiff_t m_PathParameters = 0x1D0; // CPathParameters
+                constexpr std::ptrdiff_t m_flTravelTime = 0x210; // float32
+                constexpr std::ptrdiff_t m_nFieldScale = 0x214; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_nManualTField = 0x218; // ParticleAttributeIndex_t
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_ConstrainDistanceToUserSpecifiedPath {
+                constexpr std::ptrdiff_t m_fMinDistance = 0x1C0; // float32
+                constexpr std::ptrdiff_t m_flMaxDistance = 0x1C4; // float32
+                constexpr std::ptrdiff_t m_flTimeScale = 0x1C8; // float32
+                constexpr std::ptrdiff_t m_bLoopedPath = 0x1CC; // bool
+                constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_PlanarConstraint {
+                constexpr std::ptrdiff_t m_PointOnPlane = 0x1C0; // 
+                constexpr std::ptrdiff_t m_PlaneNormal = 0x1CC; // 
+                constexpr std::ptrdiff_t m_nControlPointNumber = 0x1D8; // int32
+                constexpr std::ptrdiff_t m_bGlobalOrigin = 0x1DC; // bool
+                constexpr std::ptrdiff_t m_bGlobalNormal = 0x1DD; // bool
+                constexpr std::ptrdiff_t m_flRadiusScale = 0x1E0; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flMaximumDistanceToCP = 0x338; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_bUseOldCode = 0x490; // bool
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_WorldCollideConstraint {
             }
         }
     }

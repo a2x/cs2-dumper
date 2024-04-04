@@ -4,10 +4,10 @@ use super::SchemaMetadataEntryData;
 
 #[repr(C)]
 pub struct SchemaEnumeratorInfoData {
-    pub name: Pointer64<ReprCString>,
-    pub u: SchemaEnumeratorInfoDataUnion,
-    pub metadata_count: u32,
-    pub metadata: Pointer64<SchemaMetadataEntryData>,
+    pub name: Pointer64<ReprCString>,                 // 0x0000
+    pub u: SchemaEnumeratorInfoDataUnion,             // 0x0008
+    pub num_metadata: u32,                            // 0x0010
+    pub metadata: Pointer64<SchemaMetadataEntryData>, // 0x0018
 }
 
 unsafe impl Pod for SchemaEnumeratorInfoData {}

@@ -1,42 +1,11 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: engine2.dll
-    // Classes count: 2
-    // Enums count: 4
+    // Classes count: 15
+    // Enums count: 0
     public static class Engine2Dll {
-        // Alignment: 4
-        // Members count: 3
-        public enum SpawnDebugOverrideState_t : uint {
-            SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
-            SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
-            SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum SpawnDebugRestrictionOverrideState_t : uint {
-            SPAWN_DEBUG_RESTRICT_NONE = 0x0,
-            SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
-            SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
-            SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
-            SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum EntityDormancyType_t : uint {
-            ENTITY_NOT_DORMANT = 0x0,
-            ENTITY_DORMANT = 0x1,
-            ENTITY_SUSPENDED = 0x2
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum EntityIOTargetType_t : uint {
-            ENTITY_IO_TARGET_INVALID = 0xFFFFFFFFFFFFFFFF,
-            ENTITY_IO_TARGET_ENTITYNAME = 0x2,
-            ENTITY_IO_TARGET_EHANDLE = 0x6,
-            ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
-        }
         // Parent: None
         // Fields count: 11
         //
@@ -66,6 +35,107 @@ namespace CS2Dumper.Schemas {
             public const nint m_pEntity = 0x10; // CEntityIdentity*
             public const nint m_CScriptComponent = 0x28; // CScriptComponent*
             public const nint m_bVisibleinPVS = 0x30; // bool
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class TestResource_t {
+            public const nint m_name = 0x0; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCVoxelVisibility {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCRenderMesh {
+        }
+        // Parent: None
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CFuseSymbolTable {
+            public const nint m_constants = 0x0; // CUtlVector<ConstantInfo_t>
+            public const nint m_variables = 0x18; // CUtlVector<VariableInfo_t>
+            public const nint m_functions = 0x30; // CUtlVector<FunctionInfo_t>
+            public const nint m_constantMap = 0x48; // CUtlHashtable<CUtlStringToken,int32>
+            public const nint m_variableMap = 0x68; // CUtlHashtable<CUtlStringToken,int32>
+            public const nint m_functionMap = 0x88; // CUtlHashtable<CUtlStringToken,int32>
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCJavaScriptResource {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeIAnimGraphModelBinding {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCGcExportableExternalData {
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ConstantInfo_t {
+            public const nint m_name = 0x0; // CUtlString
+            public const nint m_nameToken = 0x8; // CUtlStringToken
+            public const nint m_flValue = 0xC; // float32
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeManifestTestResource_t {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCVPhysXSurfacePropertiesList {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCVSoundStackScriptList {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCChoreoSceneFileData {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCMorphSetData {
         }
     }
 }

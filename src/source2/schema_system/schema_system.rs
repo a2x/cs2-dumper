@@ -6,10 +6,10 @@ use crate::source2::UtlVector;
 
 #[repr(C)]
 pub struct SchemaSystem {
-    pad_0000: [u8; 0x190],
-    pub type_scopes: UtlVector<Pointer64<SchemaSystemTypeScope>>,
-    pad_01a0: [u8; 0x120],
-    pub num_registrations: u32,
+    pad_0000: [u8; 0x190],                                        // 0x0000
+    pub type_scopes: UtlVector<Pointer64<SchemaSystemTypeScope>>, // 0x0190
+    pad_01a0: [u8; 0x120],                                        // 0x01A0
+    pub num_registrations: u32,                                   // 0x02C0
 }
 
 unsafe impl Pod for SchemaSystem {}

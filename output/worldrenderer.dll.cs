@@ -1,28 +1,11 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
-    // Classes count: 24
-    // Enums count: 1
+    // Classes count: 47
+    // Enums count: 0
     public static class WorldrendererDll {
-        // Alignment: 4
-        // Members count: 13
-        public enum ObjectTypeFlags_t : uint {
-            OBJECT_TYPE_NONE = 0x0,
-            OBJECT_TYPE_MODEL = 0x8,
-            OBJECT_TYPE_BLOCK_LIGHT = 0x10,
-            OBJECT_TYPE_NO_SHADOWS = 0x20,
-            OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
-            OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
-            OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
-            OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
-            OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
-            OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
-            OBJECT_TYPE_OVERLAY = 0x2000,
-            OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-            OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
-        }
         // Parent: None
         // Fields count: 7
         //
@@ -335,6 +318,256 @@ namespace CS2Dumper.Schemas {
             public const nint m_pEntity = 0x10; // CEntityIdentity*
             public const nint m_CScriptComponent = 0x28; // CScriptComponent*
             public const nint m_bVisibleinPVS = 0x30; // bool
+        }
+        // Parent: CVoiceContainerBase
+        // Fields count: 7
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CVoiceContainerRandomSampler {
+            public const nint m_flLoudAmplitude = 0x60; // float32
+            public const nint m_flLoudAmplitudeJitter = 0x64; // float32
+            public const nint m_flSoftAmplitude = 0x68; // float32
+            public const nint m_flSoftAmplitudeJitter = 0x6C; // float32
+            public const nint m_flLoudTimeJitter = 0x70; // float32
+            public const nint m_flSoftTimeJitter = 0x74; // float32
+            public const nint m_grainResources = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+        }
+        // Parent: None
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class VMixFilterDesc_t {
+            public const nint m_nFilterType = 0x0; // VMixFilterType_t
+            public const nint m_nFilterSlope = 0x2; // VMixFilterSlope_t
+            public const nint m_bEnabled = 0x3; // bool
+            public const nint m_fldbGain = 0x4; // float32
+            public const nint m_flCutoffFreq = 0x8; // float32
+            public const nint m_flQ = 0xC; // float32
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class VMixEQ8Desc_t {
+            public const nint m_stages = 0x0; // VMixFilterDesc_t[8]
+        }
+        // Parent: None
+        // Fields count: 7
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class VMixDelayDesc_t {
+            public const nint m_feedbackFilter = 0x0; // VMixFilterDesc_t
+            public const nint m_bEnableFilter = 0x10; // bool
+            public const nint m_flDelay = 0x14; // float32
+            public const nint m_flDirectGain = 0x18; // float32
+            public const nint m_flDelayGain = 0x1C; // float32
+            public const nint m_flFeedbackGain = 0x20; // float32
+            public const nint m_flWidth = 0x24; // float32
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class VMixPannerDesc_t {
+            public const nint m_type = 0x0; // VMixPannerType_t
+            public const nint m_flStrength = 0x4; // float32
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCWorldNode {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCPanoramaStyle {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCDACGameDefsData {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CParticleCollectionFloatInput {
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ParticlePreviewBodyGroup_t {
+            public const nint m_bodyGroupName = 0x0; // CUtlString
+            public const nint m_nValue = 0x8; // int32
+        }
+        // Parent: None
+        // Fields count: 16
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ParticlePreviewState_t {
+            public const nint m_previewModel = 0x0; // CUtlString
+            public const nint m_nModSpecificData = 0x8; // uint32
+            public const nint m_groundType = 0xC; // PetGroundType_t
+            public const nint m_sequenceName = 0x10; // CUtlString
+            public const nint m_nFireParticleOnSequenceFrame = 0x18; // int32
+            public const nint m_hitboxSetName = 0x20; // CUtlString
+            public const nint m_materialGroupName = 0x28; // CUtlString
+            public const nint m_vecBodyGroups = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
+            public const nint m_flPlaybackSpeed = 0x48; // float32
+            public const nint m_flParticleSimulationRate = 0x4C; // float32
+            public const nint m_bShouldDrawHitboxes = 0x50; // bool
+            public const nint m_bShouldDrawAttachments = 0x51; // bool
+            public const nint m_bShouldDrawAttachmentNames = 0x52; // bool
+            public const nint m_bShouldDrawControlPointAxes = 0x53; // bool
+            public const nint m_bAnimationNonLooping = 0x54; // bool
+            public const nint m_vecPreviewGravity = 0x58; // 
+        }
+        // Parent: None
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ParticleControlPointDriver_t {
+            public const nint m_iControlPoint = 0x0; // int32
+            public const nint m_iAttachType = 0x4; // ParticleAttachment_t
+            public const nint m_attachmentName = 0x8; // CUtlString
+            public const nint m_vecOffset = 0x10; // 
+            public const nint m_angOffset = 0x1C; // QAngle
+            public const nint m_entityName = 0x28; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class IParticleSystemDefinition {
+        }
+        // Parent: None
+        // Fields count: 18
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleVisibilityInputs {
+            public const nint m_flCameraBias = 0x0; // float32
+            public const nint m_nCPin = 0x4; // int32
+            public const nint m_flProxyRadius = 0x8; // float32
+            public const nint m_flInputMin = 0xC; // float32
+            public const nint m_flInputMax = 0x10; // float32
+            public const nint m_flNoPixelVisibilityFallback = 0x14; // float32
+            public const nint m_flDistanceInputMin = 0x18; // float32
+            public const nint m_flDistanceInputMax = 0x1C; // float32
+            public const nint m_flDotInputMin = 0x20; // float32
+            public const nint m_flDotInputMax = 0x24; // float32
+            public const nint m_bDotCPAngles = 0x28; // bool
+            public const nint m_bDotCameraAngles = 0x29; // bool
+            public const nint m_flAlphaScaleMin = 0x2C; // float32
+            public const nint m_flAlphaScaleMax = 0x30; // float32
+            public const nint m_flRadiusScaleMin = 0x34; // float32
+            public const nint m_flRadiusScaleMax = 0x38; // float32
+            public const nint m_flRadiusScaleFOVBase = 0x3C; // float32
+            public const nint m_bRightEye = 0x40; // bool
+        }
+        // Parent: None
+        // Fields count: 8
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CPathParameters {
+            public const nint m_nStartControlPointNumber = 0x0; // int32
+            public const nint m_nEndControlPointNumber = 0x4; // int32
+            public const nint m_nBulgeControl = 0x8; // int32
+            public const nint m_flBulge = 0xC; // float32
+            public const nint m_flMidPoint = 0x10; // float32
+            public const nint m_vStartPointOffset = 0x14; // 
+            public const nint m_vMidPointOffset = 0x20; // 
+            public const nint m_vEndOffset = 0x2C; // 
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ParticleChildrenInfo_t {
+            public const nint m_ChildRef = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_flDelay = 0x8; // float32
+            public const nint m_bEndCap = 0xC; // bool
+            public const nint m_bDisableChild = 0xD; // bool
+            public const nint m_nDetailLevel = 0x10; // ParticleDetailLevel_t
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ModelReference_t {
+            public const nint m_model = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
+            public const nint m_flRelativeProbabilityOfSpawn = 0x8; // float32
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class SequenceWeightedList_t {
+            public const nint m_nSequence = 0x0; // int32
+            public const nint m_flRelativeWeight = 0x4; // float32
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CollisionGroupContext_t {
+            public const nint m_nCollisionGroupNumber = 0x0; // int32
+        }
+        // Parent: CParticleFunctionOperator
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionPreEmission {
+            public const nint m_bRunOnce = 0x1C0; // bool
+        }
+        // Parent: CParticleFunction
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionInitializer {
+            public const nint m_nAssociatedEmitterIndex = 0x1B8; // int32
+        }
+        // Parent: CParticleFunction
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionForce {
+        }
+        // Parent: CParticleFunction
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionRenderer {
+            public const nint VisibilityInputs = 0x1B8; // CParticleVisibilityInputs
+            public const nint m_bCannotBeRefracted = 0x1FC; // bool
+            public const nint m_bSkipRenderingOnMobile = 0x1FD; // bool
         }
     }
 }

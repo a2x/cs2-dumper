@@ -4,15 +4,15 @@ use memflow::prelude::v1::*;
 
 #[repr(C)]
 pub struct SchemaMetadataEntryData {
-    pub name: Pointer64<ReprCString>,
-    pub network_value: Pointer64<SchemaNetworkValue>,
+    pub name: Pointer64<ReprCString>,                 // 0x0000
+    pub network_value: Pointer64<SchemaNetworkValue>, // 0x0008
 }
 
 unsafe impl Pod for SchemaMetadataEntryData {}
 
 #[repr(C)]
 pub struct SchemaNetworkValue {
-    pub u: SchemaNetworkValueUnion,
+    pub u: SchemaNetworkValueUnion, // 0x0000
 }
 
 unsafe impl Pod for SchemaNetworkValue {}
@@ -30,6 +30,6 @@ pub union SchemaNetworkValueUnion {
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaVarName {
-    pub name: Pointer64<ReprCString>,
-    pub ty: Pointer64<ReprCString>,
+    pub name: Pointer64<ReprCString>, // 0x0000
+    pub ty: Pointer64<ReprCString>,   // 0x0008
 }

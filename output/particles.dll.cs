@@ -1,656 +1,42 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
-    // Classes count: 424
-    // Enums count: 71
+    // Classes count: 492
+    // Enums count: 0
     public static class ParticlesDll {
-        // Alignment: 4
-        // Members count: 6
-        public enum ParticleControlPointAxis_t : uint {
-            PARTICLE_CP_AXIS_X = 0x0,
-            PARTICLE_CP_AXIS_Y = 0x1,
-            PARTICLE_CP_AXIS_Z = 0x2,
-            PARTICLE_CP_AXIS_NEGATIVE_X = 0x3,
-            PARTICLE_CP_AXIS_NEGATIVE_Y = 0x4,
-            PARTICLE_CP_AXIS_NEGATIVE_Z = 0x5
-        }
-        // Alignment: 4
-        // Members count: 6
-        public enum ParticleImpulseType_t : uint {
-            IMPULSE_TYPE_NONE = 0x0,
-            IMPULSE_TYPE_GENERIC = 0x1,
-            IMPULSE_TYPE_ROPE = 0x2,
-            IMPULSE_TYPE_EXPLOSION = 0x4,
-            IMPULSE_TYPE_EXPLOSION_UNDERWATER = 0x8,
-            IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleFalloffFunction_t : uint {
-            PARTICLE_FALLOFF_CONSTANT = 0x0,
-            PARTICLE_FALLOFF_LINEAR = 0x1,
-            PARTICLE_FALLOFF_EXPONENTIAL = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum AnimationType_t : uint {
-            ANIMATION_TYPE_FIXED_RATE = 0x0,
-            ANIMATION_TYPE_FIT_LIFETIME = 0x1,
-            ANIMATION_TYPE_MANUAL_FRAMES = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ClosestPointTestType_t : uint {
-            PARTICLE_CLOSEST_TYPE_BOX = 0x0,
-            PARTICLE_CLOSEST_TYPE_CAPSULE = 0x1,
-            PARTICLE_CLOSEST_TYPE_HYBRID = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum InheritableBoolType_t : uint {
-            INHERITABLE_BOOL_INHERIT = 0x0,
-            INHERITABLE_BOOL_FALSE = 0x1,
-            INHERITABLE_BOOL_TRUE = 0x2
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleHitboxBiasType_t : uint {
-            PARTICLE_HITBOX_BIAS_ENTITY = 0x0,
-            PARTICLE_HITBOX_BIAS_HITBOX = 0x1
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleAttrBoxFlags_t : uint {
-            PARTICLE_ATTR_BOX_FLAGS_NONE = 0x0,
-            PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1
-        }
-        // Alignment: 4
-        // Members count: 7
-        public enum PFuncVisualizationType_t : uint {
-            PFUNC_VISUALIZATION_SPHERE_WIREFRAME = 0x0,
-            PFUNC_VISUALIZATION_SPHERE_SOLID = 0x1,
-            PFUNC_VISUALIZATION_BOX = 0x2,
-            PFUNC_VISUALIZATION_RING = 0x3,
-            PFUNC_VISUALIZATION_PLANE = 0x4,
-            PFUNC_VISUALIZATION_LINE = 0x5,
-            PFUNC_VISUALIZATION_CYLINDER = 0x6
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum PetGroundType_t : uint {
-            PET_GROUND_NONE = 0x0,
-            PET_GROUND_GRID = 0x1,
-            PET_GROUND_PLANE = 0x2
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum SpriteCardShaderType_t : uint {
-            SPRITECARD_SHADER_BASE = 0x0,
-            SPRITECARD_SHADER_CUSTOM = 0x1
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum ParticleTopology_t : uint {
-            PARTICLE_TOPOLOGY_POINTS = 0x0,
-            PARTICLE_TOPOLOGY_LINES = 0x1,
-            PARTICLE_TOPOLOGY_TRIS = 0x2,
-            PARTICLE_TOPOLOGY_QUADS = 0x3,
-            PARTICLE_TOPOLOGY_CUBES = 0x4
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleDetailLevel_t : uint {
-            PARTICLEDETAIL_LOW = 0x0,
-            PARTICLEDETAIL_MEDIUM = 0x1,
-            PARTICLEDETAIL_HIGH = 0x2,
-            PARTICLEDETAIL_ULTRA = 0x3
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleTraceSet_t : uint {
-            PARTICLE_TRACE_SET_ALL = 0x0,
-            PARTICLE_TRACE_SET_STATIC = 0x1,
-            PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
-            PARTICLE_TRACE_SET_DYNAMIC = 0x3
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum ParticleCollisionMode_t : uint {
-            COLLISION_MODE_PER_PARTICLE_TRACE = 0x3,
-            COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
-            COLLISION_MODE_PER_FRAME_PLANESET = 0x1,
-            COLLISION_MODE_INITIAL_TRACE_DOWN = 0x0,
-            COLLISION_MODE_DISABLED = 0xFFFFFFFFFFFFFFFF
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum ParticleColorBlendMode_t : uint {
-            PARTICLEBLEND_DEFAULT = 0x0,
-            PARTICLEBLEND_OVERLAY = 0x1,
-            PARTICLEBLEND_DARKEN = 0x2,
-            PARTICLEBLEND_LIGHTEN = 0x3,
-            PARTICLEBLEND_MULTIPLY = 0x4
-        }
-        // Alignment: 4
-        // Members count: 7
-        public enum Detail2Combo_t : uint {
-            DETAIL_2_COMBO_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
-            DETAIL_2_COMBO_OFF = 0x0,
-            DETAIL_2_COMBO_ADD = 0x1,
-            DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
-            DETAIL_2_COMBO_MOD2X = 0x3,
-            DETAIL_2_COMBO_MUL = 0x4,
-            DETAIL_2_COMBO_CROSSFADE = 0x5
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum DetailCombo_t : uint {
-            DETAIL_COMBO_OFF = 0x0,
-            DETAIL_COMBO_ADD = 0x1,
-            DETAIL_COMBO_ADD_SELF_ILLUM = 0x2,
-            DETAIL_COMBO_MOD2X = 0x3
-        }
-        // Alignment: 4
-        // Members count: 9
-        public enum ScalarExpressionType_t : uint {
-            SCALAR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
-            SCALAR_EXPRESSION_ADD = 0x0,
-            SCALAR_EXPRESSION_SUBTRACT = 0x1,
-            SCALAR_EXPRESSION_MUL = 0x2,
-            SCALAR_EXPRESSION_DIVIDE = 0x3,
-            SCALAR_EXPRESSION_INPUT_1 = 0x4,
-            SCALAR_EXPRESSION_MIN = 0x5,
-            SCALAR_EXPRESSION_MAX = 0x6,
-            SCALAR_EXPRESSION_MOD = 0x7
-        }
-        // Alignment: 4
-        // Members count: 9
-        public enum VectorExpressionType_t : uint {
-            VECTOR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
-            VECTOR_EXPRESSION_ADD = 0x0,
-            VECTOR_EXPRESSION_SUBTRACT = 0x1,
-            VECTOR_EXPRESSION_MUL = 0x2,
-            VECTOR_EXPRESSION_DIVIDE = 0x3,
-            VECTOR_EXPRESSION_INPUT_1 = 0x4,
-            VECTOR_EXPRESSION_MIN = 0x5,
-            VECTOR_EXPRESSION_MAX = 0x6,
-            VECTOR_EXPRESSION_CROSSPRODUCT = 0x7
-        }
-        // Alignment: 4
-        // Members count: 7
-        public enum VectorFloatExpressionType_t : uint {
-            VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
-            VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
-            VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,
-            VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 0x2,
-            VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTH = 0x3,
-            VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTHSQR = 0x4,
-            VECTOR_FLOAT_EXPRESSION_INPUT1_NOISE = 0x5
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum MissingParentInheritBehavior_t : uint {
-            MISSING_PARENT_DO_NOTHING = 0xFFFFFFFFFFFFFFFF,
-            MISSING_PARENT_KILL = 0x0,
-            MISSING_PARENT_FIND_NEW = 0x1,
-            MISSING_PARENT_SAME_INDEX = 0x2
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum HitboxLerpType_t : uint {
-            HITBOX_LERP_LIFETIME = 0x0,
-            HITBOX_LERP_CONSTANT = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleSelection_t : uint {
-            PARTICLE_SELECTION_FIRST = 0x0,
-            PARTICLE_SELECTION_LAST = 0x1,
-            PARTICLE_SELECTION_NUMBER = 0x2
-        }
-        // Alignment: 4
-        // Members count: 12
-        public enum ParticlePinDistance_t : uint {
-            PARTICLE_PIN_DISTANCE_NONE = 0xFFFFFFFFFFFFFFFF,
-            PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
-            PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,
-            PARTICLE_PIN_DISTANCE_FIRST = 0x2,
-            PARTICLE_PIN_DISTANCE_LAST = 0x3,
-            PARTICLE_PIN_DISTANCE_CENTER = 0x5,
-            PARTICLE_PIN_DISTANCE_CP = 0x6,
-            PARTICLE_PIN_DISTANCE_CP_PAIR_EITHER = 0x7,
-            PARTICLE_PIN_DISTANCE_CP_PAIR_BOTH = 0x8,
-            PARTICLE_PIN_SPEED = 0x9,
-            PARTICLE_PIN_COLLECTION_AGE = 0xA,
-            PARTICLE_PIN_FLOAT_VALUE = 0xB
-        }
-        // Alignment: 4
-        // Members count: 13
-        public enum ParticleColorBlendType_t : uint {
-            PARTICLE_COLOR_BLEND_MULTIPLY = 0x0,
-            PARTICLE_COLOR_BLEND_MULTIPLY2X = 0x1,
-            PARTICLE_COLOR_BLEND_DIVIDE = 0x2,
-            PARTICLE_COLOR_BLEND_ADD = 0x3,
-            PARTICLE_COLOR_BLEND_SUBTRACT = 0x4,
-            PARTICLE_COLOR_BLEND_MOD2X = 0x5,
-            PARTICLE_COLOR_BLEND_SCREEN = 0x6,
-            PARTICLE_COLOR_BLEND_MAX = 0x7,
-            PARTICLE_COLOR_BLEND_MIN = 0x8,
-            PARTICLE_COLOR_BLEND_REPLACE = 0x9,
-            PARTICLE_COLOR_BLEND_AVERAGE = 0xA,
-            PARTICLE_COLOR_BLEND_NEGATE = 0xB,
-            PARTICLE_COLOR_BLEND_LUMINANCE = 0xC
-        }
-        // Alignment: 4
-        // Members count: 6
-        public enum ParticleSetMethod_t : uint {
-            PARTICLE_SET_REPLACE_VALUE = 0x0,
-            PARTICLE_SET_SCALE_INITIAL_VALUE = 0x1,
-            PARTICLE_SET_ADD_TO_INITIAL_VALUE = 0x2,
-            PARTICLE_SET_RAMP_CURRENT_VALUE = 0x3,
-            PARTICLE_SET_SCALE_CURRENT_VALUE = 0x4,
-            PARTICLE_SET_ADD_TO_CURRENT_VALUE = 0x5
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleDirectionNoiseType_t : uint {
-            PARTICLE_DIR_NOISE_PERLIN = 0x0,
-            PARTICLE_DIR_NOISE_CURL = 0x1,
-            PARTICLE_DIR_NOISE_WORLEY_BASIC = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleRotationLockType_t : uint {
-            PARTICLE_ROTATION_LOCK_NONE = 0x0,
-            PARTICLE_ROTATION_LOCK_ROTATIONS = 0x1,
-            PARTICLE_ROTATION_LOCK_NORMAL = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleEndcapMode_t : uint {
-            PARTICLE_ENDCAP_ALWAYS_ON = 0xFFFFFFFFFFFFFFFF,
-            PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
-            PARTICLE_ENDCAP_ENDCAP_ON = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleLightingQuality_t : uint {
-            PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
-            PARTICLE_LIGHTING_PER_VERTEX = 0x1,
-            PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFFFFFFFFFF
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum StandardLightingAttenuationStyle_t : uint {
-            LIGHT_STYLE_OLD = 0x0,
-            LIGHT_STYLE_NEW = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleTraceMissBehavior_t : uint {
-            PARTICLE_TRACE_MISS_BEHAVIOR_NONE = 0x0,
-            PARTICLE_TRACE_MISS_BEHAVIOR_KILL = 0x1,
-            PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END = 0x2
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleOrientationSetMode_t : uint {
-            PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
-            PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleLightnintBranchBehavior_t : uint {
-            PARTICLE_LIGHTNING_BRANCH_CURRENT_DIR = 0x0,
-            PARTICLE_LIGHTNING_BRANCH_ENDPOINT_DIR = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleLightFogLightingMode_t : uint {
-            PARTICLE_LIGHT_FOG_LIGHTING_MODE_NONE = 0x0,
-            PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC = 0x2,
-            PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC_NOSHADOWS = 0x4
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleSequenceCropOverride_t : uint {
-            PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = 0xFFFFFFFFFFFFFFFF,
-            PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
-            PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleParentSetMode_t : uint {
-            PARTICLE_SET_PARENT_NO = 0x0,
-            PARTICLE_SET_PARENT_IMMEDIATE = 0x1,
-            PARTICLE_SET_PARENT_ROOT = 0x1
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum MaterialProxyType_t : uint {
-            MATERIAL_PROXY_STATUS_EFFECT = 0x0,
-            MATERIAL_PROXY_TINT = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum BBoxVolumeType_t : uint {
-            BBOX_VOLUME = 0x0,
-            BBOX_DIMENSIONS = 0x1,
-            BBOX_MINS_MAXS = 0x2
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleHitboxDataSelection_t : uint {
-            PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
-            PARTICLE_HITBOX_COUNT = 0x1
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum SnapshotIndexType_t : uint {
-            SNAPSHOT_INDEX_INCREMENT = 0x0,
-            SNAPSHOT_INDEX_DIRECT = 0x1
-        }
-        // Alignment: 4
-        // Members count: 6
-        public enum ParticleOrientationChoiceList_t : uint {
-            PARTICLE_ORIENTATION_SCREEN_ALIGNED = 0x0,
-            PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED = 0x1,
-            PARTICLE_ORIENTATION_WORLD_Z_ALIGNED = 0x2,
-            PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL = 0x3,
-            PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL = 0x4,
-            PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION = 0x5
-        }
-        // Alignment: 4
-        // Members count: 7
-        public enum ParticleOutputBlendMode_t : uint {
-            PARTICLE_OUTPUT_BLEND_MODE_ALPHA = 0x0,
-            PARTICLE_OUTPUT_BLEND_MODE_ADD = 0x1,
-            PARTICLE_OUTPUT_BLEND_MODE_BLEND_ADD = 0x2,
-            PARTICLE_OUTPUT_BLEND_MODE_HALF_BLEND_ADD = 0x3,
-            PARTICLE_OUTPUT_BLEND_MODE_NEG_HALF_BLEND_ADD = 0x4,
-            PARTICLE_OUTPUT_BLEND_MODE_MOD2X = 0x5,
-            PARTICLE_OUTPUT_BLEND_MODE_LIGHTEN = 0x6
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleAlphaReferenceType_t : uint {
-            PARTICLE_ALPHA_REFERENCE_ALPHA_ALPHA = 0x0,
-            PARTICLE_ALPHA_REFERENCE_OPAQUE_ALPHA = 0x1,
-            PARTICLE_ALPHA_REFERENCE_ALPHA_OPAQUE = 0x2,
-            PARTICLE_ALPHA_REFERENCE_OPAQUE_OPAQUE = 0x3
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum BlurFilterType_t : uint {
-            BLURFILTER_GAUSSIAN = 0x0,
-            BLURFILTER_BOX = 0x1
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleLightTypeChoiceList_t : uint {
-            PARTICLE_LIGHT_TYPE_POINT = 0x0,
-            PARTICLE_LIGHT_TYPE_SPOT = 0x1,
-            PARTICLE_LIGHT_TYPE_FX = 0x2,
-            PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleLightUnitChoiceList_t : uint {
-            PARTICLE_LIGHT_UNIT_CANDELAS = 0x0,
-            PARTICLE_LIGHT_UNIT_LUMENS = 0x1
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleOmni2LightTypeChoiceList_t : uint {
-            PARTICLE_OMNI2_LIGHT_TYPE_POINT = 0x0,
-            PARTICLE_OMNI2_LIGHT_TYPE_SPHERE = 0x1
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleLightBehaviorChoiceList_t : uint {
-            PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0x0,
-            PARTICLE_LIGHT_BEHAVIOR_ROPE = 0x1,
-            PARTICLE_LIGHT_BEHAVIOR_TRAILS = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleDepthFeatheringMode_t : uint {
-            PARTICLE_DEPTH_FEATHERING_OFF = 0x0,
-            PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL = 0x1,
-            PARTICLE_DEPTH_FEATHERING_ON_REQUIRED = 0x2
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleVRHandChoiceList_t : uint {
-            PARTICLE_VRHAND_LEFT = 0x0,
-            PARTICLE_VRHAND_RIGHT = 0x1,
-            PARTICLE_VRHAND_CP = 0x2,
-            PARTICLE_VRHAND_CP_OBJECT = 0x3
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum ParticleSortingChoiceList_t : uint {
-            PARTICLE_SORTING_NEAREST = 0x0,
-            PARTICLE_SORTING_CREATION_TIME = 0x1
-        }
-        // Alignment: 4
-        // Members count: 10
-        public enum SpriteCardTextureType_t : uint {
-            SPRITECARD_TEXTURE_DIFFUSE = 0x0,
-            SPRITECARD_TEXTURE_ZOOM = 0x1,
-            SPRITECARD_TEXTURE_1D_COLOR_LOOKUP = 0x2,
-            SPRITECARD_TEXTURE_UVDISTORTION = 0x3,
-            SPRITECARD_TEXTURE_UVDISTORTION_ZOOM = 0x4,
-            SPRITECARD_TEXTURE_NORMALMAP = 0x5,
-            SPRITECARD_TEXTURE_ANIMMOTIONVEC = 0x6,
-            SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_A = 0x7,
-            SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_B = 0x8,
-            SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C = 0x9
-        }
-        // Alignment: 4
-        // Members count: 15
-        public enum SpriteCardTextureChannel_t : uint {
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB = 0x0,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA = 0x1,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_A = 0x2,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A = 0x3,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_ALPHAMASK = 0x4,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_RGBMASK = 0x5,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA_RGBALPHA = 0x6,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_A_RGBALPHA = 0x7,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A_RGBALPHA = 0x8,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_R = 0x9,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_G = 0xA,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_B = 0xB,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_RALPHA = 0xC,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_GALPHA = 0xD,
-            SPRITECARD_TEXTURE_CHANNEL_MIX_BALPHA = 0xE
-        }
-        // Alignment: 4
-        // Members count: 14
-        public enum SpriteCardPerParticleScale_t : uint {
-            SPRITECARD_TEXTURE_PP_SCALE_NONE = 0x0,
-            SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_AGE = 0x1,
-            SPRITECARD_TEXTURE_PP_SCALE_ANIMATION_FRAME = 0x2,
-            SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA1 = 0x3,
-            SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA2 = 0x4,
-            SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_ALPHA = 0x5,
-            SPRITECARD_TEXTURE_PP_SCALE_SHADER_RADIUS = 0x6,
-            SPRITECARD_TEXTURE_PP_SCALE_ROLL = 0x7,
-            SPRITECARD_TEXTURE_PP_SCALE_YAW = 0x8,
-            SPRITECARD_TEXTURE_PP_SCALE_PITCH = 0x9,
-            SPRITECARD_TEXTURE_PP_SCALE_RANDOM = 0xA,
-            SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM = 0xB,
-            SPRITECARD_TEXTURE_PP_SCALE_RANDOM_TIME = 0xC,
-            SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM_TIME = 0xD
-        }
-        // Alignment: 4
-        // Members count: 7
-        public enum ParticleTextureLayerBlendType_t : uint {
-            SPRITECARD_TEXTURE_BLEND_MULTIPLY = 0x0,
-            SPRITECARD_TEXTURE_BLEND_MOD2X = 0x1,
-            SPRITECARD_TEXTURE_BLEND_REPLACE = 0x2,
-            SPRITECARD_TEXTURE_BLEND_ADD = 0x3,
-            SPRITECARD_TEXTURE_BLEND_SUBTRACT = 0x4,
-            SPRITECARD_TEXTURE_BLEND_AVERAGE = 0x5,
-            SPRITECARD_TEXTURE_BLEND_LUMINANCE = 0x6
-        }
-        // Alignment: 4
-        // Members count: 6
-        public enum ParticlePostProcessPriorityGroup_t : uint {
-            PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME = 0x0,
-            PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE = 0x1,
-            PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_EFFECT = 0x2,
-            PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW = 0x3,
-            PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 0x4,
-            PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 0x5
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ParticleFogType_t : uint {
-            PARTICLE_FOG_GAME_DEFAULT = 0x0,
-            PARTICLE_FOG_ENABLED = 0x1,
-            PARTICLE_FOG_DISABLED = 0x2
-        }
-        // Alignment: 4
-        // Members count: 2
-        public enum TextureRepetitionMode_t : uint {
-            TEXTURE_REPETITION_PARTICLE = 0x0,
-            TEXTURE_REPETITION_PATH = 0x1
-        }
-        // Alignment: 4
-        // Members count: 24
-        public enum ParticleFloatType_t : uint {
-            PF_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
-            PF_TYPE_LITERAL = 0x0,
-            PF_TYPE_NAMED_VALUE = 0x1,
-            PF_TYPE_RANDOM_UNIFORM = 0x2,
-            PF_TYPE_RANDOM_BIASED = 0x3,
-            PF_TYPE_COLLECTION_AGE = 0x4,
-            PF_TYPE_ENDCAP_AGE = 0x5,
-            PF_TYPE_CONTROL_POINT_COMPONENT = 0x6,
-            PF_TYPE_CONTROL_POINT_CHANGE_AGE = 0x7,
-            PF_TYPE_CONTROL_POINT_SPEED = 0x8,
-            PF_TYPE_PARTICLE_DETAIL_LEVEL = 0x9,
-            PF_TYPE_CONCURRENT_DEF_COUNT = 0xA,
-            PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xB,
-            PF_TYPE_RENDERER_CAMERA_DISTANCE = 0xC,
-            PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0xD,
-            PF_TYPE_PARTICLE_NOISE = 0xE,
-            PF_TYPE_PARTICLE_AGE = 0xF,
-            PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x10,
-            PF_TYPE_PARTICLE_FLOAT = 0x11,
-            PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x12,
-            PF_TYPE_PARTICLE_SPEED = 0x13,
-            PF_TYPE_PARTICLE_NUMBER = 0x14,
-            PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x15,
-            PF_TYPE_COUNT = 0x16
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum ParticleFloatBiasType_t : uint {
-            PF_BIAS_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
-            PF_BIAS_TYPE_STANDARD = 0x0,
-            PF_BIAS_TYPE_GAIN = 0x1,
-            PF_BIAS_TYPE_EXPONENTIAL = 0x2,
-            PF_BIAS_TYPE_COUNT = 0x3
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum PFNoiseType_t : uint {
-            PF_NOISE_TYPE_PERLIN = 0x0,
-            PF_NOISE_TYPE_SIMPLEX = 0x1,
-            PF_NOISE_TYPE_WORLEY = 0x2,
-            PF_NOISE_TYPE_CURL = 0x3
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum PFNoiseModifier_t : uint {
-            PF_NOISE_MODIFIER_NONE = 0x0,
-            PF_NOISE_MODIFIER_LINES = 0x1,
-            PF_NOISE_MODIFIER_CLUMPS = 0x2,
-            PF_NOISE_MODIFIER_RINGS = 0x3
-        }
-        // Alignment: 4
-        // Members count: 6
-        public enum PFNoiseTurbulence_t : uint {
-            PF_NOISE_TURB_NONE = 0x0,
-            PF_NOISE_TURB_HIGHLIGHT = 0x1,
-            PF_NOISE_TURB_FEEDBACK = 0x2,
-            PF_NOISE_TURB_LOOPY = 0x3,
-            PF_NOISE_TURB_CONTRAST = 0x4,
-            PF_NOISE_TURB_ALTERNATE = 0x5
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleFloatRandomMode_t : uint {
-            PF_RANDOM_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
-            PF_RANDOM_MODE_CONSTANT = 0x0,
-            PF_RANDOM_MODE_VARYING = 0x1,
-            PF_RANDOM_MODE_COUNT = 0x2
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum ParticleFloatInputMode_t : uint {
-            PF_INPUT_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
-            PF_INPUT_MODE_CLAMPED = 0x0,
-            PF_INPUT_MODE_LOOPED = 0x1,
-            PF_INPUT_MODE_COUNT = 0x2
-        }
-        // Alignment: 4
-        // Members count: 8
-        public enum ParticleFloatMapType_t : uint {
-            PF_MAP_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
-            PF_MAP_TYPE_DIRECT = 0x0,
-            PF_MAP_TYPE_MULT = 0x1,
-            PF_MAP_TYPE_REMAP = 0x2,
-            PF_MAP_TYPE_REMAP_BIASED = 0x3,
-            PF_MAP_TYPE_CURVE = 0x4,
-            PF_MAP_TYPE_NOTCHED = 0x5,
-            PF_MAP_TYPE_COUNT = 0x6
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum ParticleTransformType_t : uint {
-            PT_TYPE_INVALID = 0x0,
-            PT_TYPE_NAMED_VALUE = 0x1,
-            PT_TYPE_CONTROL_POINT = 0x2,
-            PT_TYPE_CONTROL_POINT_RANGE = 0x3,
-            PT_TYPE_COUNT = 0x4
-        }
-        // Alignment: 4
-        // Members count: 5
-        public enum ParticleModelType_t : uint {
-            PM_TYPE_INVALID = 0x0,
-            PM_TYPE_NAMED_VALUE_MODEL = 0x1,
-            PM_TYPE_NAMED_VALUE_EHANDLE = 0x2,
-            PM_TYPE_CONTROL_POINT = 0x3,
-            PM_TYPE_COUNT = 0x4
-        }
-        // Alignment: 4
-        // Members count: 19
-        public enum ParticleVecType_t : uint {
-            PVEC_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
-            PVEC_TYPE_LITERAL = 0x0,
-            PVEC_TYPE_LITERAL_COLOR = 0x1,
-            PVEC_TYPE_NAMED_VALUE = 0x2,
-            PVEC_TYPE_PARTICLE_VECTOR = 0x3,
-            PVEC_TYPE_PARTICLE_VELOCITY = 0x4,
-            PVEC_TYPE_CP_VALUE = 0x5,
-            PVEC_TYPE_CP_RELATIVE_POSITION = 0x6,
-            PVEC_TYPE_CP_RELATIVE_DIR = 0x7,
-            PVEC_TYPE_CP_RELATIVE_RANDOM_DIR = 0x8,
-            PVEC_TYPE_FLOAT_COMPONENTS = 0x9,
-            PVEC_TYPE_FLOAT_INTERP_CLAMPED = 0xA,
-            PVEC_TYPE_FLOAT_INTERP_OPEN = 0xB,
-            PVEC_TYPE_FLOAT_INTERP_GRADIENT = 0xC,
-            PVEC_TYPE_RANDOM_UNIFORM = 0xD,
-            PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xE,
-            PVEC_TYPE_CP_DELTA = 0xF,
-            PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x10,
-            PVEC_TYPE_COUNT = 0x11
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CPerParticleFloatInput {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CParticleCollectionFloatInput {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CPerParticleVecInput {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CParticleCollectionVecInput {
         }
         // Parent: None
         // Fields count: 2
@@ -918,6 +304,73 @@ namespace CS2Dumper.Schemas {
             public const nint m_bShouldSort = 0x328; // bool
             public const nint m_controlPointConfigurations = 0x370; // CUtlVector<ParticleControlPointConfiguration_t>
         }
+        // Parent: CParticleFunctionOperator
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionPreEmission {
+            public const nint m_bRunOnce = 0x1C0; // bool
+        }
+        // Parent: CParticleFunction
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionEmitter {
+            public const nint m_nEmitterIndex = 0x1B8; // int32
+        }
+        // Parent: CParticleFunction
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionInitializer {
+            public const nint m_nAssociatedEmitterIndex = 0x1B8; // int32
+        }
+        // Parent: CParticleFunction
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionOperator {
+        }
+        // Parent: CParticleFunction
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionForce {
+        }
+        // Parent: CParticleFunction
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionConstraint {
+        }
+        // Parent: CParticleFunction
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleFunctionRenderer {
+            public const nint VisibilityInputs = 0x1B8; // CParticleVisibilityInputs
+            public const nint m_bCannotBeRefracted = 0x1FC; // bool
+            public const nint m_bSkipRenderingOnMobile = 0x1FD; // bool
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ParticleNamedValueSource_t {
+            public const nint m_Name = 0x0; // CUtlString
+            public const nint m_IsPublic = 0x8; // bool
+            public const nint m_ValueType = 0xC; // PulseValueType_t
+            public const nint m_DefaultConfig = 0x10; // ParticleNamedValueConfiguration_t
+            public const nint m_NamedConfigs = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
+        }
         // Parent: None
         // Fields count: 16
         //
@@ -941,61 +394,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisableOperator = 0x196; // bool
             public const nint m_Notes = 0x198; // CUtlString
         }
-        // Parent: CParticleFunction
-        // Fields count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionInitializer {
-            public const nint m_nAssociatedEmitterIndex = 0x1B8; // int32
-        }
-        // Parent: CParticleFunction
-        // Fields count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionEmitter {
-            public const nint m_nEmitterIndex = 0x1B8; // int32
-        }
-        // Parent: CParticleFunction
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionConstraint {
-        }
-        // Parent: CParticleFunction
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionOperator {
-        }
-        // Parent: CParticleFunction
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionForce {
-        }
-        // Parent: CParticleFunctionOperator
-        // Fields count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionPreEmission {
-            public const nint m_bRunOnce = 0x1C0; // bool
-        }
-        // Parent: CParticleFunction
-        // Fields count: 3
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CParticleFunctionRenderer {
-            public const nint VisibilityInputs = 0x1B8; // CParticleVisibilityInputs
-            public const nint m_bCannotBeRefracted = 0x1FC; // bool
-            public const nint m_bSkipRenderingOnMobile = 0x1FD; // bool
-        }
         // Parent: None
         // Fields count: 16
         //
@@ -1018,6 +416,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPerParticleRotation = 0x97C; // SpriteCardPerParticleScale_t
             public const nint m_nPerParticleZoom = 0x980; // SpriteCardPerParticleScale_t
             public const nint m_nPerParticleDistortion = 0x984; // SpriteCardPerParticleScale_t
+        }
+        // Parent: CParticleCollectionFloatInput
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CParticleCollectionRendererFloatInput {
         }
         // Parent: None
         // Fields count: 9
@@ -1103,6 +509,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_nSortMethod = 0x24C8; // ParticleSortingChoiceList_t
             public const nint m_bBlendFramesSeq0 = 0x24CC; // bool
             public const nint m_bMaxLuminanceBlendingSequence0 = 0x24CD; // bool
+        }
+        // Parent: CParticleCollectionVecInput
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyCustomEditor
+        public static class CParticleCollectionRendererVecInput {
         }
         // Parent: CBaseRendererSource2
         // Fields count: 27
@@ -1198,55 +612,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         // MPropertyCustomEditor
-        public static class CPerParticleFloatInput {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MPropertyCustomEditor
-        public static class CParticleCollectionFloatInput {
-        }
-        // Parent: CParticleCollectionFloatInput
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MPropertyCustomEditor
-        public static class CParticleCollectionRendererFloatInput {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MPropertyCustomEditor
         public static class CParticleRemapFloatInput {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MPropertyCustomEditor
-        public static class CPerParticleVecInput {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MPropertyCustomEditor
-        public static class CParticleCollectionVecInput {
-        }
-        // Parent: CParticleCollectionVecInput
-        // Fields count: 0
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MPropertyCustomEditor
-        public static class CParticleCollectionRendererVecInput {
         }
         // Parent: None
         // Fields count: 6
@@ -1260,18 +626,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_BoundEntityPath = 0x20; // CUtlString
             public const nint m_strEntityScope = 0x28; // CUtlString
             public const nint m_strAttachmentName = 0x30; // CUtlString
-        }
-        // Parent: None
-        // Fields count: 5
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class ParticleNamedValueSource_t {
-            public const nint m_Name = 0x0; // CUtlString
-            public const nint m_IsPublic = 0x8; // bool
-            public const nint m_ValueType = 0xC; // PulseValueType_t
-            public const nint m_DefaultConfig = 0x10; // ParticleNamedValueConfiguration_t
-            public const nint m_NamedConfigs = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
         }
         // Parent: None
         // Fields count: 2
@@ -6252,6 +5606,726 @@ namespace CS2Dumper.Schemas {
             public const nint m_Gravity = 0x1C0; // CParticleCollectionVecInput
             public const nint m_fDrag = 0x818; // CParticleCollectionFloatInput
             public const nint m_nMaxConstraintPasses = 0x970; // int32
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ModelBoneFlexDriver_t {
+            public const nint m_boneName = 0x0; // CUtlString
+            public const nint m_boneNameToken = 0x8; // uint32
+            public const nint m_controls = 0x10; // CUtlVector<ModelBoneFlexDriverControl_t>
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyEditClassAsString
+        public static class AnimStateID {
+            public const nint m_id = 0x0; // uint32
+        }
+        // Parent: None
+        // Fields count: 8
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSeqAutoLayerFlag {
+            public const nint m_bPost = 0x0; // bool
+            public const nint m_bSpline = 0x1; // bool
+            public const nint m_bXFade = 0x2; // bool
+            public const nint m_bNoBlend = 0x3; // bool
+            public const nint m_bLocal = 0x4; // bool
+            public const nint m_bPose = 0x5; // bool
+            public const nint m_bFetchFrame = 0x6; // bool
+            public const nint m_bSubtract = 0x7; // bool
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CModelConfigList {
+            public const nint m_bHideMaterialGroupInTools = 0x0; // bool
+            public const nint m_bHideRenderColorInTools = 0x1; // bool
+            public const nint m_Configs = 0x8; // CUtlVector<CModelConfig*>
+        }
+        // Parent: CMotionMetricEvaluator
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CBlockSelectionMetricEvaluator {
+        }
+        // Parent: CLeafUpdateNode
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSingleFrameUpdateNode {
+            public const nint m_actions = 0x58; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
+            public const nint m_hPoseCacheHandle = 0x70; // CPoseHandle
+            public const nint m_hSequence = 0x74; // HSequence
+            public const nint m_flCycle = 0x78; // float32
+        }
+        // Parent: CAnimGraphSettingsGroup
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CAnimGraphNetworkSettings {
+            public const nint m_bNetworkingEnabled = 0x20; // bool
+        }
+        // Parent: CAnimComponentUpdater
+        // Fields count: 8
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CLookComponentUpdater {
+            public const nint m_hLookHeading = 0x34; // CAnimParamHandle
+            public const nint m_hLookHeadingVelocity = 0x36; // CAnimParamHandle
+            public const nint m_hLookPitch = 0x38; // CAnimParamHandle
+            public const nint m_hLookDistance = 0x3A; // CAnimParamHandle
+            public const nint m_hLookDirection = 0x3C; // CAnimParamHandle
+            public const nint m_hLookTarget = 0x3E; // CAnimParamHandle
+            public const nint m_hLookTargetWorldSpace = 0x40; // CAnimParamHandle
+            public const nint m_bNetworkLookTarget = 0x42; // bool
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyEditClassAsString
+        public static class AnimNodeID {
+            public const nint m_id = 0x0; // uint32
+        }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FollowAttachmentSettings_t {
+            public const nint m_attachment = 0x0; // CAnimAttachment
+            public const nint m_boneIndex = 0x80; // int32
+            public const nint m_bMatchTranslation = 0x84; // bool
+            public const nint m_bMatchRotation = 0x85; // bool
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class MotionIndex {
+            public const nint m_nGroup = 0x0; // uint16
+            public const nint m_nMotion = 0x2; // uint16
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class WeightList {
+            public const nint m_name = 0x0; // CUtlString
+            public const nint m_weights = 0x8; // CUtlVector<float32>
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimParamHandle {
+            public const nint m_type = 0x0; // AnimParamType_t
+            public const nint m_index = 0x1; // uint8
+        }
+        // Parent: CLeafUpdateNode
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CMotionGraphUpdateNode {
+            public const nint m_pMotionGraph = 0x58; // CSmartPtr<CMotionGraph>
+        }
+        // Parent: CUnaryUpdateNode
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CRootUpdateNode {
+        }
+        // Parent: None
+        // Fields count: 7
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimEncodeDifference {
+            public const nint m_boneArray = 0x0; // CUtlVector<CAnimBoneDifference>
+            public const nint m_morphArray = 0x18; // CUtlVector<CAnimMorphDifference>
+            public const nint m_userArray = 0x30; // CUtlVector<CAnimUserDifference>
+            public const nint m_bHasRotationBitArray = 0x48; // CUtlVector<uint8>
+            public const nint m_bHasMovementBitArray = 0x60; // CUtlVector<uint8>
+            public const nint m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
+            public const nint m_bHasUserBitArray = 0x90; // CUtlVector<uint8>
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class LookAtBone_t {
+            public const nint m_index = 0x0; // int32
+            public const nint m_weight = 0x4; // float32
+        }
+        // Parent: CUnaryUpdateNode
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CStanceOverrideUpdateNode {
+            public const nint m_footStanceInfo = 0x68; // CUtlVector<StanceInfo_t>
+            public const nint m_pStanceSourceNode = 0x80; // CAnimUpdateNodeRef
+            public const nint m_hParameter = 0x90; // CAnimParamHandle
+            public const nint m_eMode = 0x94; // StanceOverrideMode
+        }
+        // Parent: CConcreteAnimParameter
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CVectorAnimParameter {
+            public const nint m_defaultValue = 0x78; // 
+            public const nint m_bInterpolate = 0x84; // bool
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimGraphDebugReplay {
+            public const nint m_animGraphFileName = 0x40; // CUtlString
+            public const nint m_frameList = 0x48; // CUtlVector<CSmartPtr<CAnimReplayFrame>>
+            public const nint m_startIndex = 0x60; // int32
+            public const nint m_writeIndex = 0x64; // int32
+            public const nint m_frameCount = 0x68; // int32
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimGraphSettingsGroup {
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSeqTransition {
+            public const nint m_flFadeInTime = 0x0; // float32
+            public const nint m_flFadeOutTime = 0x4; // float32
+        }
+        // Parent: AnimationSnapshotBase_t
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class AnimationSnapshot_t {
+            public const nint m_nEntIndex = 0x110; // int32
+            public const nint m_modelName = 0x118; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 7
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CMotionGraph {
+            public const nint m_paramSpans = 0x10; // CParamSpanUpdater
+            public const nint m_tags = 0x28; // CUtlVector<TagSpan_t>
+            public const nint m_pRootNode = 0x40; // CSmartPtr<CMotionNode>
+            public const nint m_nParameterCount = 0x48; // int32
+            public const nint m_nConfigStartIndex = 0x4C; // int32
+            public const nint m_nConfigCount = 0x50; // int32
+            public const nint m_bLoop = 0x54; // bool
+        }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimTagBase {
+            public const nint m_name = 0x18; // CGlobalSymbol
+            public const nint m_group = 0x20; // CGlobalSymbol
+            public const nint m_tagID = 0x28; // AnimTagID
+            public const nint m_bIsReferenced = 0x40; // bool
+        }
+        // Parent: None
+        // Fields count: 17
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class HitReactFixedSettings_t {
+            public const nint m_nWeightListIndex = 0x0; // int32
+            public const nint m_nEffectedBoneCount = 0x4; // int32
+            public const nint m_flMaxImpactForce = 0x8; // float32
+            public const nint m_flMinImpactForce = 0xC; // float32
+            public const nint m_flWhipImpactScale = 0x10; // float32
+            public const nint m_flCounterRotationScale = 0x14; // float32
+            public const nint m_flDistanceFadeScale = 0x18; // float32
+            public const nint m_flPropagationScale = 0x1C; // float32
+            public const nint m_flWhipDelay = 0x20; // float32
+            public const nint m_flSpringStrength = 0x24; // float32
+            public const nint m_flWhipSpringStrength = 0x28; // float32
+            public const nint m_flMaxAngleRadians = 0x2C; // float32
+            public const nint m_nHipBoneIndex = 0x30; // int32
+            public const nint m_flHipBoneTranslationScale = 0x34; // float32
+            public const nint m_flHipDipSpringStrength = 0x38; // float32
+            public const nint m_flHipDipImpactScale = 0x3C; // float32
+            public const nint m_flHipDipDelay = 0x40; // float32
+        }
+        // Parent: CUnaryUpdateNode
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CStanceScaleUpdateNode {
+            public const nint m_hParam = 0x68; // CAnimParamHandle
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class StanceInfo_t {
+            public const nint m_vPosition = 0x0; // 
+            public const nint m_flDirection = 0xC; // float32
+        }
+        // Parent: None
+        // Fields count: 10
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class PermModelInfo_t {
+            public const nint m_nFlags = 0x0; // uint32
+            public const nint m_vHullMin = 0x4; // 
+            public const nint m_vHullMax = 0x10; // 
+            public const nint m_vViewMin = 0x1C; // 
+            public const nint m_vViewMax = 0x28; // 
+            public const nint m_flMass = 0x34; // float32
+            public const nint m_vEyePosition = 0x38; // 
+            public const nint m_flMaxEyeDeflection = 0x44; // float32
+            public const nint m_sSurfaceProperty = 0x48; // CUtlString
+            public const nint m_keyValueText = 0x50; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 11
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSeqSeqDescFlag {
+            public const nint m_bLooping = 0x0; // bool
+            public const nint m_bSnap = 0x1; // bool
+            public const nint m_bAutoplay = 0x2; // bool
+            public const nint m_bPost = 0x3; // bool
+            public const nint m_bHidden = 0x4; // bool
+            public const nint m_bMulti = 0x5; // bool
+            public const nint m_bLegacyDelta = 0x6; // bool
+            public const nint m_bLegacyWorldspace = 0x7; // bool
+            public const nint m_bLegacyCyclepose = 0x8; // bool
+            public const nint m_bLegacyRealtime = 0x9; // bool
+            public const nint m_bModelDoc = 0xA; // bool
+        }
+        // Parent: CLeafUpdateNode
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSequenceUpdateNode {
+            public const nint m_paramSpans = 0x60; // CParamSpanUpdater
+            public const nint m_tags = 0x78; // CUtlVector<TagSpan_t>
+            public const nint m_hSequence = 0x94; // HSequence
+            public const nint m_playbackSpeed = 0x98; // float32
+            public const nint m_duration = 0x9C; // float32
+            public const nint m_bLoop = 0xA0; // bool
+        }
+        // Parent: None
+        // Fields count: 8
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class VPhysXCollisionAttributes_t {
+            public const nint m_CollisionGroup = 0x0; // uint32
+            public const nint m_InteractAs = 0x8; // CUtlVector<uint32>
+            public const nint m_InteractWith = 0x20; // CUtlVector<uint32>
+            public const nint m_InteractExclude = 0x38; // CUtlVector<uint32>
+            public const nint m_CollisionGroupString = 0x50; // CUtlString
+            public const nint m_InteractAsStrings = 0x58; // CUtlVector<CUtlString>
+            public const nint m_InteractWithStrings = 0x70; // CUtlVector<CUtlString>
+            public const nint m_InteractExcludeStrings = 0x88; // CUtlVector<CUtlString>
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class ConfigIndex {
+            public const nint m_nGroup = 0x0; // uint16
+            public const nint m_nConfig = 0x2; // uint16
+        }
+        // Parent: None
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class AnimationDecodeDebugDumpElement_t {
+            public const nint m_nEntityIndex = 0x0; // int32
+            public const nint m_modelName = 0x8; // CUtlString
+            public const nint m_poseParams = 0x10; // CUtlVector<CUtlString>
+            public const nint m_decodeOps = 0x28; // CUtlVector<CUtlString>
+            public const nint m_internalOps = 0x40; // CUtlVector<CUtlString>
+            public const nint m_decodedAnims = 0x58; // CUtlVector<CUtlString>
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimScriptManager {
+            public const nint m_scriptInfo = 0x10; // CUtlVector<ScriptInfo_t>
+        }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimActivity {
+            public const nint m_name = 0x0; // CBufferString
+            public const nint m_nActivity = 0x10; // int32
+            public const nint m_nFlags = 0x14; // int32
+            public const nint m_nWeight = 0x18; // int32
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CMotionSearchNode {
+            public const nint m_children = 0x0; // CUtlVector<CMotionSearchNode*>
+            public const nint m_quantizer = 0x18; // CVectorQuantizer
+            public const nint m_sampleCodes = 0x38; // CUtlVector<CUtlVector<SampleCode>>
+            public const nint m_sampleIndices = 0x50; // CUtlVector<CUtlVector<int32>>
+            public const nint m_selectableSamples = 0x68; // CUtlVector<int32>
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CMotionGraphConfig {
+            public const nint m_paramValues = 0x0; // float32[4]
+            public const nint m_flDuration = 0x10; // float32
+            public const nint m_nMotionIndex = 0x14; // MotionIndex
+            public const nint m_nSampleStart = 0x18; // int32
+            public const nint m_nSampleCount = 0x1C; // int32
+        }
+        // Parent: CAnimTagBase
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CTaskStatusAnimTag {
+        }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CCachedPose {
+            public const nint m_transforms = 0x8; // CUtlVector<CTransform>
+            public const nint m_morphWeights = 0x20; // CUtlVector<float32>
+            public const nint m_hSequence = 0x38; // HSequence
+            public const nint m_flCycle = 0x3C; // float32
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class SampleCode {
+            public const nint m_subCode = 0x0; // uint8[8]
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimEncodedFrames {
+            public const nint m_fileName = 0x0; // CBufferString
+            public const nint m_nFrames = 0x10; // int32
+            public const nint m_nFramesPerBlock = 0x14; // int32
+            public const nint m_frameblockArray = 0x18; // CUtlVector<CAnimFrameBlockAnim>
+            public const nint m_usageDifferences = 0x30; // CAnimEncodeDifference
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSeqBoneMaskList {
+            public const nint m_sName = 0x0; // CBufferString
+            public const nint m_nLocalBoneArray = 0x10; // CUtlVector<int16>
+            public const nint m_flBoneWeightArray = 0x28; // CUtlVector<float32>
+            public const nint m_flDefaultMorphCtrlWeight = 0x40; // float32
+            public const nint m_morphCtrlWeightArray = 0x48; // CUtlVector<CUtlPair<CBufferString,float32>>
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CNmSyncTrack {
+            public const nint m_syncEvents = 0x0; // CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>
+            public const nint m_nStartEventOffset = 0xA8; // int32
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyEditClassAsString
+        public static class AnimNodeOutputID {
+            public const nint m_id = 0x0; // uint32
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimNodePath {
+            public const nint m_path = 0x0; // AnimNodeID[11]
+            public const nint m_nCount = 0x2C; // int32
+        }
+        // Parent: CNmEvent
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CNmFrameSnapEvent {
+            public const nint m_frameSnapMode = 0x10; // NmFrameSnapEventMode_t
+        }
+        // Parent: CConcreteAnimParameter
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CIntAnimParameter {
+            public const nint m_defaultValue = 0x78; // int32
+            public const nint m_minValue = 0x7C; // int32
+            public const nint m_maxValue = 0x80; // int32
+        }
+        // Parent: CLeafUpdateNode
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CInputStreamUpdateNode {
+        }
+        // Parent: CCycleBase
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CFootCycle {
+        }
+        // Parent: None
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSceneObjectData {
+            public const nint m_vMinBounds = 0x0; // 
+            public const nint m_vMaxBounds = 0xC; // 
+            public const nint m_drawCalls = 0x18; // CUtlVector<CMaterialDrawDescriptor>
+            public const nint m_drawBounds = 0x30; // CUtlVector<AABB_t>
+            public const nint m_meshlets = 0x48; // CUtlVector<CMeshletDescriptor>
+            public const nint m_vTintColor = 0x60; // Vector4D
+        }
+        // Parent: CAnimTagBase
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CSequenceFinishedAnimTag {
+            public const nint m_sequenceName = 0x50; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimParameterBase {
+            public const nint m_name = 0x18; // CGlobalSymbol
+            public const nint m_group = 0x20; // CUtlString
+            public const nint m_id = 0x28; // AnimParamID
+            public const nint m_componentName = 0x40; // CUtlString
+            public const nint m_bNetworkingRequested = 0x60; // bool
+            public const nint m_bIsReferenced = 0x61; // bool
+        }
+        // Parent: CUnaryUpdateNode
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSlowDownOnSlopesUpdateNode {
+            public const nint m_flSlowDownStrength = 0x68; // float32
+        }
+        // Parent: CLeafUpdateNode
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CZeroPoseUpdateNode {
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CAnimFrameBlockAnim {
+            public const nint m_nStartFrame = 0x0; // int32
+            public const nint m_nEndFrame = 0x4; // int32
+            public const nint m_segmentIndexArray = 0x8; // CUtlVector<int32>
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeFitInfluence_t {
+            public const nint nVertexNode = 0x0; // uint32
+            public const nint flWeight = 0x4; // float32
+            public const nint nMatrixNode = 0x8; // uint32
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeSimdTri_t {
+            public const nint nNode = 0x0; // uint32[4][3]
+            public const nint w1 = 0x30; // fltx4
+            public const nint w2 = 0x40; // fltx4
+            public const nint v1x = 0x50; // fltx4
+            public const nint v2 = 0x60; // FourVectors2D
+        }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnHalfEdge_t {
+            public const nint m_nNext = 0x0; // uint8
+            public const nint m_nTwin = 0x1; // uint8
+            public const nint m_nOrigin = 0x2; // uint8
+            public const nint m_nFace = 0x3; // uint8
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeFitWeight_t {
+            public const nint flWeight = 0x0; // float32
+            public const nint nNode = 0x4; // uint16
+            public const nint nDummy = 0x6; // uint16
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeRodConstraint_t {
+            public const nint nNode = 0x0; // uint16[2]
+            public const nint flMaxDist = 0x4; // float32
+            public const nint flMinDist = 0x8; // float32
+            public const nint flWeight0 = 0xC; // float32
+            public const nint flRelaxationFactor = 0x10; // float32
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeTreeChildren_t {
+            public const nint nChild = 0x0; // uint16[2]
+        }
+        // Parent: None
+        // Fields count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnShapeDesc_t {
+            public const nint m_nCollisionAttributeIndex = 0x0; // uint32
+            public const nint m_nSurfacePropertyIndex = 0x4; // uint32
+            public const nint m_UserFriendlyName = 0x8; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeSoftParent_t {
+            public const nint nParent = 0x0; // int32
+            public const nint flAlpha = 0x4; // float32
+        }
+        // Parent: FeTaperedCapsuleRigid_t
+        // Fields count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeBuildTaperedCapsuleRigid_t {
+            public const nint m_nPriority = 0x30; // int32
+            public const nint m_nVertexMapHash = 0x34; // uint32
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeSphereRigid_t {
+            public const nint vSphere = 0x0; // fltx4
+            public const nint nNode = 0x10; // uint16
+            public const nint nCollisionMask = 0x12; // uint16
+            public const nint nVertexMapIndex = 0x14; // uint16
+            public const nint nFlags = 0x16; // uint16
+        }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FourCovMatrices3 {
+            public const nint m_vDiag = 0x0; // FourVectors
+            public const nint m_flXY = 0x30; // fltx4
+            public const nint m_flXZ = 0x40; // fltx4
+            public const nint m_flYZ = 0x50; // fltx4
+        }
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeAxialEdgeBend_t {
+            public const nint te = 0x0; // float32
+            public const nint tv = 0x4; // float32
+            public const nint flDist = 0x8; // float32
+            public const nint flWeight = 0xC; // float32[4]
+            public const nint nNode = 0x1C; // uint16[6]
         }
     }
 }

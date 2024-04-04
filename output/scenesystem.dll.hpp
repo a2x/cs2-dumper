@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 #pragma once
 
@@ -8,17 +8,9 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: scenesystem.dll
-        // Classes count: 9
-        // Enums count: 1
+        // Classes count: 17
+        // Enums count: 0
         namespace scenesystem_dll {
-            // Alignment: 1
-            // Members count: 4
-            enum class DisableShadows_t : uint8_t {
-                kDisableShadows_None = 0x0,
-                kDisableShadows_All = 0x1,
-                kDisableShadows_Baked = 0x2,
-                kDisableShadows_Realtime = 0x3
-            };
             // Parent: None
             // Fields count: 2
             //
@@ -51,7 +43,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_ViewRender {
-                constexpr std::ptrdiff_t m_viewId = 0x0; // SceneViewId_t
+                constexpr std::ptrdiff_t m_viewId = 0x0; // 
                 constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
             }
             // Parent: None
@@ -60,7 +52,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_LayerBase {
-                constexpr std::ptrdiff_t m_viewId = 0x0; // SceneViewId_t
+                constexpr std::ptrdiff_t m_viewId = 0x0; // 
                 constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
                 constexpr std::ptrdiff_t m_nLayerIndex = 0x18; // int32
                 constexpr std::ptrdiff_t m_nLayerId = 0x20; // uint64
@@ -90,7 +82,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_ViewTargetList {
-                constexpr std::ptrdiff_t m_viewId = 0x0; // SceneViewId_t
+                constexpr std::ptrdiff_t m_viewId = 0x0; // 
                 constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
                 constexpr std::ptrdiff_t m_Targets = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
             }
@@ -107,6 +99,96 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_PostLayer {
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSosSoundEventGroupListSchema {
+                constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
+            }
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace SosEditItemInfo_t {
+                constexpr std::ptrdiff_t itemType = 0x0; // SosEditItemType_t
+                constexpr std::ptrdiff_t itemName = 0x8; // CUtlString
+                constexpr std::ptrdiff_t itemTypeName = 0x10; // CUtlString
+                constexpr std::ptrdiff_t itemKVString = 0x20; // CUtlString
+                constexpr std::ptrdiff_t itemPos = 0x28; // Vector2D
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace SelectedEditItemInfo_t {
+                constexpr std::ptrdiff_t m_EditItems = 0x0; // CUtlVector<SosEditItemInfo_t>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSoundEventMetaData {
+                constexpr std::ptrdiff_t m_soundEventVMix = 0x0; // CStrongHandle<InfoForResourceTypeCVMixListResource>
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CDSPMixgroupModifier {
+                constexpr std::ptrdiff_t m_mixgroup = 0x0; // CUtlString
+                constexpr std::ptrdiff_t m_flModifier = 0x8; // float32
+                constexpr std::ptrdiff_t m_flModifierMin = 0xC; // float32
+                constexpr std::ptrdiff_t m_flSourceModifier = 0x10; // float32
+                constexpr std::ptrdiff_t m_flSourceModifierMin = 0x14; // float32
+                constexpr std::ptrdiff_t m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CDspPresetModifierList {
+                constexpr std::ptrdiff_t m_dspName = 0x0; // CUtlString
+                constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace IParticleSystemDefinition {
+            }
+            // Parent: None
+            // Fields count: 18
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CParticleVisibilityInputs {
+                constexpr std::ptrdiff_t m_flCameraBias = 0x0; // float32
+                constexpr std::ptrdiff_t m_nCPin = 0x4; // int32
+                constexpr std::ptrdiff_t m_flProxyRadius = 0x8; // float32
+                constexpr std::ptrdiff_t m_flInputMin = 0xC; // float32
+                constexpr std::ptrdiff_t m_flInputMax = 0x10; // float32
+                constexpr std::ptrdiff_t m_flNoPixelVisibilityFallback = 0x14; // float32
+                constexpr std::ptrdiff_t m_flDistanceInputMin = 0x18; // float32
+                constexpr std::ptrdiff_t m_flDistanceInputMax = 0x1C; // float32
+                constexpr std::ptrdiff_t m_flDotInputMin = 0x20; // float32
+                constexpr std::ptrdiff_t m_flDotInputMax = 0x24; // float32
+                constexpr std::ptrdiff_t m_bDotCPAngles = 0x28; // bool
+                constexpr std::ptrdiff_t m_bDotCameraAngles = 0x29; // bool
+                constexpr std::ptrdiff_t m_flAlphaScaleMin = 0x2C; // float32
+                constexpr std::ptrdiff_t m_flAlphaScaleMax = 0x30; // float32
+                constexpr std::ptrdiff_t m_flRadiusScaleMin = 0x34; // float32
+                constexpr std::ptrdiff_t m_flRadiusScaleMax = 0x38; // float32
+                constexpr std::ptrdiff_t m_flRadiusScaleFOVBase = 0x3C; // float32
+                constexpr std::ptrdiff_t m_bRightEye = 0x40; // bool
             }
         }
     }

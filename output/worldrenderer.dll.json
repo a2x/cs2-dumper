@@ -126,6 +126,134 @@
         ],
         "parent": null
       },
+      "CParticleCollectionFloatInput": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyCustomEditor",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CParticleFunctionForce": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunction"
+      },
+      "CParticleFunctionInitializer": {
+        "fields": {
+          "m_nAssociatedEmitterIndex": 440
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunction"
+      },
+      "CParticleFunctionPreEmission": {
+        "fields": {
+          "m_bRunOnce": 448
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionOperator"
+      },
+      "CParticleFunctionRenderer": {
+        "fields": {
+          "VisibilityInputs": 440,
+          "m_bCannotBeRefracted": 508,
+          "m_bSkipRenderingOnMobile": 509
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunction"
+      },
+      "CParticleVisibilityInputs": {
+        "fields": {
+          "m_bDotCPAngles": 40,
+          "m_bDotCameraAngles": 41,
+          "m_bRightEye": 64,
+          "m_flAlphaScaleMax": 48,
+          "m_flAlphaScaleMin": 44,
+          "m_flCameraBias": 0,
+          "m_flDistanceInputMax": 28,
+          "m_flDistanceInputMin": 24,
+          "m_flDotInputMax": 36,
+          "m_flDotInputMin": 32,
+          "m_flInputMax": 16,
+          "m_flInputMin": 12,
+          "m_flNoPixelVisibilityFallback": 20,
+          "m_flProxyRadius": 8,
+          "m_flRadiusScaleFOVBase": 60,
+          "m_flRadiusScaleMax": 56,
+          "m_flRadiusScaleMin": 52,
+          "m_nCPin": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPathParameters": {
+        "fields": {
+          "m_flBulge": 12,
+          "m_flMidPoint": 16,
+          "m_nBulgeControl": 8,
+          "m_nEndControlPointNumber": 4,
+          "m_nStartControlPointNumber": 0,
+          "m_vEndOffset": 44,
+          "m_vMidPointOffset": 32,
+          "m_vStartPointOffset": 20
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerRandomSampler": {
+        "fields": {
+          "m_flLoudAmplitude": 96,
+          "m_flLoudAmplitudeJitter": 100,
+          "m_flLoudTimeJitter": 112,
+          "m_flSoftAmplitude": 104,
+          "m_flSoftAmplitudeJitter": 108,
+          "m_flSoftTimeJitter": 116,
+          "m_grainResources": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
       "CVoxelVisibility": {
         "fields": {
           "m_EnclosedClusterListBlock": 124,
@@ -183,6 +311,18 @@
         ],
         "parent": null
       },
+      "CollisionGroupContext_t": {
+        "fields": {
+          "m_nCollisionGroupNumber": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "EntityIOConnectionData_t": {
         "fields": {
           "m_flDelay": 40,
@@ -229,6 +369,46 @@
         ],
         "parent": "BaseSceneObjectOverride_t"
       },
+      "IParticleSystemDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCDACGameDefsData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCPanoramaStyle": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCWorldNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "InfoForResourceTypeVMapResourceData_t": {
         "fields": {},
         "metadata": [
@@ -274,6 +454,19 @@
         ],
         "parent": "BaseSceneObjectOverride_t"
       },
+      "ModelReference_t": {
+        "fields": {
+          "m_flRelativeProbabilityOfSpawn": 8,
+          "m_model": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "NodeData_t": {
         "fields": {
           "m_ChildNodeIndices": 48,
@@ -283,6 +476,79 @@
           "m_vMinBounds": 16,
           "m_vOrigin": 4,
           "m_worldNodePrefix": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ParticleChildrenInfo_t": {
+        "fields": {
+          "m_ChildRef": 0,
+          "m_bDisableChild": 13,
+          "m_bEndCap": 12,
+          "m_flDelay": 8,
+          "m_nDetailLevel": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ParticleControlPointDriver_t": {
+        "fields": {
+          "m_angOffset": 28,
+          "m_attachmentName": 8,
+          "m_entityName": 40,
+          "m_iAttachType": 4,
+          "m_iControlPoint": 0,
+          "m_vecOffset": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ParticlePreviewBodyGroup_t": {
+        "fields": {
+          "m_bodyGroupName": 0,
+          "m_nValue": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ParticlePreviewState_t": {
+        "fields": {
+          "m_bAnimationNonLooping": 84,
+          "m_bShouldDrawAttachmentNames": 82,
+          "m_bShouldDrawAttachments": 81,
+          "m_bShouldDrawControlPointAxes": 83,
+          "m_bShouldDrawHitboxes": 80,
+          "m_flParticleSimulationRate": 76,
+          "m_flPlaybackSpeed": 72,
+          "m_groundType": 12,
+          "m_hitboxSetName": 32,
+          "m_materialGroupName": 40,
+          "m_nFireParticleOnSequenceFrame": 24,
+          "m_nModSpecificData": 8,
+          "m_previewModel": 0,
+          "m_sequenceName": 16,
+          "m_vecBodyGroups": 48,
+          "m_vecPreviewGravity": 88
         },
         "metadata": [
           {
@@ -323,6 +589,79 @@
           "m_vLightingOrigin": 92,
           "m_vTintColor": 60,
           "m_vTransform": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SequenceWeightedList_t": {
+        "fields": {
+          "m_flRelativeWeight": 4,
+          "m_nSequence": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixDelayDesc_t": {
+        "fields": {
+          "m_bEnableFilter": 16,
+          "m_feedbackFilter": 0,
+          "m_flDelay": 20,
+          "m_flDelayGain": 28,
+          "m_flDirectGain": 24,
+          "m_flFeedbackGain": 32,
+          "m_flWidth": 36
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixEQ8Desc_t": {
+        "fields": {
+          "m_stages": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixFilterDesc_t": {
+        "fields": {
+          "m_bEnabled": 3,
+          "m_flCutoffFreq": 8,
+          "m_flQ": 12,
+          "m_fldbGain": 4,
+          "m_nFilterSlope": 2,
+          "m_nFilterType": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMixPannerDesc_t": {
+        "fields": {
+          "m_flStrength": 4,
+          "m_type": 0
         },
         "metadata": [
           {
@@ -416,26 +755,6 @@
         "parent": null
       }
     },
-    "enums": {
-      "ObjectTypeFlags_t": {
-        "alignment": 4,
-        "members": {
-          "OBJECT_TYPE_BLOCK_LIGHT": 16,
-          "OBJECT_TYPE_DISABLED_IN_LOW_QUALITY": 128,
-          "OBJECT_TYPE_MODEL": 8,
-          "OBJECT_TYPE_MODEL_HAS_LODS": 2048,
-          "OBJECT_TYPE_NONE": 0,
-          "OBJECT_TYPE_NO_SHADOWS": 32,
-          "OBJECT_TYPE_NO_SUN_SHADOWS": 256,
-          "OBJECT_TYPE_OVERLAY": 8192,
-          "OBJECT_TYPE_PRECOMPUTED_VISMEMBERS": 16384,
-          "OBJECT_TYPE_RENDER_TO_CUBEMAPS": 1024,
-          "OBJECT_TYPE_RENDER_WITH_DYNAMIC": 512,
-          "OBJECT_TYPE_STATIC_CUBE_MAP": 32768,
-          "OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND": 64
-        },
-        "type": "uint32"
-      }
-    }
+    "enums": {}
   }
 }

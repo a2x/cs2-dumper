@@ -44,48 +44,151 @@
           }
         ],
         "parent": null
+      },
+      "CFuseSymbolTable": {
+        "fields": {
+          "m_constantMap": 72,
+          "m_constants": 0,
+          "m_functionMap": 136,
+          "m_functions": 48,
+          "m_variableMap": 104,
+          "m_variables": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ConstantInfo_t": {
+        "fields": {
+          "m_flValue": 12,
+          "m_name": 0,
+          "m_nameToken": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCChoreoSceneFileData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCGcExportableExternalData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCJavaScriptResource": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCMorphSetData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCRenderMesh": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCVPhysXSurfacePropertiesList": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCVSoundStackScriptList": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCVoxelVisibility": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeIAnimGraphModelBinding": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeManifestTestResource_t": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "TestResource_t": {
+        "fields": {
+          "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
       }
     },
-    "enums": {
-      "EntityDormancyType_t": {
-        "alignment": 4,
-        "members": {
-          "ENTITY_DORMANT": 1,
-          "ENTITY_NOT_DORMANT": 0,
-          "ENTITY_SUSPENDED": 2
-        },
-        "type": "uint32"
-      },
-      "EntityIOTargetType_t": {
-        "alignment": 4,
-        "members": {
-          "ENTITY_IO_TARGET_EHANDLE": 6,
-          "ENTITY_IO_TARGET_ENTITYNAME": 2,
-          "ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME": 7,
-          "ENTITY_IO_TARGET_INVALID": -1
-        },
-        "type": "uint32"
-      },
-      "SpawnDebugOverrideState_t": {
-        "alignment": 4,
-        "members": {
-          "SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED": 2,
-          "SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED": 1,
-          "SPAWN_DEBUG_OVERRIDE_NONE": 0
-        },
-        "type": "uint32"
-      },
-      "SpawnDebugRestrictionOverrideState_t": {
-        "alignment": 4,
-        "members": {
-          "SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS": 1,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS": 8,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS": 4,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS": 2,
-          "SPAWN_DEBUG_RESTRICT_NONE": 0
-        },
-        "type": "uint32"
-      }
-    }
+    "enums": {}
   }
 }

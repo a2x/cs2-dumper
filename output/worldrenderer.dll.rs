@@ -1,32 +1,14 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: worldrenderer.dll
-        // Classes count: 24
-        // Enums count: 1
+        // Classes count: 47
+        // Enums count: 0
         pub mod worldrenderer_dll {
-            // Alignment: 4
-            // Members count: 13
-            #[repr(u32)]
-            pub enum ObjectTypeFlags_t {
-                OBJECT_TYPE_NONE = 0x0,
-                OBJECT_TYPE_MODEL = 0x8,
-                OBJECT_TYPE_BLOCK_LIGHT = 0x10,
-                OBJECT_TYPE_NO_SHADOWS = 0x20,
-                OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
-                OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
-                OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
-                OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
-                OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
-                OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
-                OBJECT_TYPE_OVERLAY = 0x2000,
-                OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
-            }
             // Parent: None
             // Fields count: 7
             //
@@ -339,6 +321,256 @@ pub mod cs2_dumper {
                 pub const m_pEntity: usize = 0x10; // CEntityIdentity*
                 pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
                 pub const m_bVisibleinPVS: usize = 0x30; // bool
+            }
+            // Parent: CVoiceContainerBase
+            // Fields count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CVoiceContainerRandomSampler {
+                pub const m_flLoudAmplitude: usize = 0x60; // float32
+                pub const m_flLoudAmplitudeJitter: usize = 0x64; // float32
+                pub const m_flSoftAmplitude: usize = 0x68; // float32
+                pub const m_flSoftAmplitudeJitter: usize = 0x6C; // float32
+                pub const m_flLoudTimeJitter: usize = 0x70; // float32
+                pub const m_flSoftTimeJitter: usize = 0x74; // float32
+                pub const m_grainResources: usize = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod VMixFilterDesc_t {
+                pub const m_nFilterType: usize = 0x0; // VMixFilterType_t
+                pub const m_nFilterSlope: usize = 0x2; // VMixFilterSlope_t
+                pub const m_bEnabled: usize = 0x3; // bool
+                pub const m_fldbGain: usize = 0x4; // float32
+                pub const m_flCutoffFreq: usize = 0x8; // float32
+                pub const m_flQ: usize = 0xC; // float32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod VMixEQ8Desc_t {
+                pub const m_stages: usize = 0x0; // VMixFilterDesc_t[8]
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod VMixDelayDesc_t {
+                pub const m_feedbackFilter: usize = 0x0; // VMixFilterDesc_t
+                pub const m_bEnableFilter: usize = 0x10; // bool
+                pub const m_flDelay: usize = 0x14; // float32
+                pub const m_flDirectGain: usize = 0x18; // float32
+                pub const m_flDelayGain: usize = 0x1C; // float32
+                pub const m_flFeedbackGain: usize = 0x20; // float32
+                pub const m_flWidth: usize = 0x24; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod VMixPannerDesc_t {
+                pub const m_type: usize = 0x0; // VMixPannerType_t
+                pub const m_flStrength: usize = 0x4; // float32
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCWorldNode {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCPanoramaStyle {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCDACGameDefsData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyCustomEditor
+            pub mod CParticleCollectionFloatInput {
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod ParticlePreviewBodyGroup_t {
+                pub const m_bodyGroupName: usize = 0x0; // CUtlString
+                pub const m_nValue: usize = 0x8; // int32
+            }
+            // Parent: None
+            // Fields count: 16
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod ParticlePreviewState_t {
+                pub const m_previewModel: usize = 0x0; // CUtlString
+                pub const m_nModSpecificData: usize = 0x8; // uint32
+                pub const m_groundType: usize = 0xC; // PetGroundType_t
+                pub const m_sequenceName: usize = 0x10; // CUtlString
+                pub const m_nFireParticleOnSequenceFrame: usize = 0x18; // int32
+                pub const m_hitboxSetName: usize = 0x20; // CUtlString
+                pub const m_materialGroupName: usize = 0x28; // CUtlString
+                pub const m_vecBodyGroups: usize = 0x30; // CUtlVector<ParticlePreviewBodyGroup_t>
+                pub const m_flPlaybackSpeed: usize = 0x48; // float32
+                pub const m_flParticleSimulationRate: usize = 0x4C; // float32
+                pub const m_bShouldDrawHitboxes: usize = 0x50; // bool
+                pub const m_bShouldDrawAttachments: usize = 0x51; // bool
+                pub const m_bShouldDrawAttachmentNames: usize = 0x52; // bool
+                pub const m_bShouldDrawControlPointAxes: usize = 0x53; // bool
+                pub const m_bAnimationNonLooping: usize = 0x54; // bool
+                pub const m_vecPreviewGravity: usize = 0x58; // 
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod ParticleControlPointDriver_t {
+                pub const m_iControlPoint: usize = 0x0; // int32
+                pub const m_iAttachType: usize = 0x4; // ParticleAttachment_t
+                pub const m_attachmentName: usize = 0x8; // CUtlString
+                pub const m_vecOffset: usize = 0x10; // 
+                pub const m_angOffset: usize = 0x1C; // QAngle
+                pub const m_entityName: usize = 0x28; // CUtlString
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod IParticleSystemDefinition {
+            }
+            // Parent: None
+            // Fields count: 18
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CParticleVisibilityInputs {
+                pub const m_flCameraBias: usize = 0x0; // float32
+                pub const m_nCPin: usize = 0x4; // int32
+                pub const m_flProxyRadius: usize = 0x8; // float32
+                pub const m_flInputMin: usize = 0xC; // float32
+                pub const m_flInputMax: usize = 0x10; // float32
+                pub const m_flNoPixelVisibilityFallback: usize = 0x14; // float32
+                pub const m_flDistanceInputMin: usize = 0x18; // float32
+                pub const m_flDistanceInputMax: usize = 0x1C; // float32
+                pub const m_flDotInputMin: usize = 0x20; // float32
+                pub const m_flDotInputMax: usize = 0x24; // float32
+                pub const m_bDotCPAngles: usize = 0x28; // bool
+                pub const m_bDotCameraAngles: usize = 0x29; // bool
+                pub const m_flAlphaScaleMin: usize = 0x2C; // float32
+                pub const m_flAlphaScaleMax: usize = 0x30; // float32
+                pub const m_flRadiusScaleMin: usize = 0x34; // float32
+                pub const m_flRadiusScaleMax: usize = 0x38; // float32
+                pub const m_flRadiusScaleFOVBase: usize = 0x3C; // float32
+                pub const m_bRightEye: usize = 0x40; // bool
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPathParameters {
+                pub const m_nStartControlPointNumber: usize = 0x0; // int32
+                pub const m_nEndControlPointNumber: usize = 0x4; // int32
+                pub const m_nBulgeControl: usize = 0x8; // int32
+                pub const m_flBulge: usize = 0xC; // float32
+                pub const m_flMidPoint: usize = 0x10; // float32
+                pub const m_vStartPointOffset: usize = 0x14; // 
+                pub const m_vMidPointOffset: usize = 0x20; // 
+                pub const m_vEndOffset: usize = 0x2C; // 
+            }
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod ParticleChildrenInfo_t {
+                pub const m_ChildRef: usize = 0x0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                pub const m_flDelay: usize = 0x8; // float32
+                pub const m_bEndCap: usize = 0xC; // bool
+                pub const m_bDisableChild: usize = 0xD; // bool
+                pub const m_nDetailLevel: usize = 0x10; // ParticleDetailLevel_t
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod ModelReference_t {
+                pub const m_model: usize = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_flRelativeProbabilityOfSpawn: usize = 0x8; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod SequenceWeightedList_t {
+                pub const m_nSequence: usize = 0x0; // int32
+                pub const m_flRelativeWeight: usize = 0x4; // float32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CollisionGroupContext_t {
+                pub const m_nCollisionGroupNumber: usize = 0x0; // int32
+            }
+            // Parent: CParticleFunctionOperator
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CParticleFunctionPreEmission {
+                pub const m_bRunOnce: usize = 0x1C0; // bool
+            }
+            // Parent: CParticleFunction
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CParticleFunctionInitializer {
+                pub const m_nAssociatedEmitterIndex: usize = 0x1B8; // int32
+            }
+            // Parent: CParticleFunction
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CParticleFunctionForce {
+            }
+            // Parent: CParticleFunction
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CParticleFunctionRenderer {
+                pub const VisibilityInputs: usize = 0x1B8; // CParticleVisibilityInputs
+                pub const m_bCannotBeRefracted: usize = 0x1FC; // bool
+                pub const m_bSkipRenderingOnMobile: usize = 0x1FD; // bool
             }
         }
     }

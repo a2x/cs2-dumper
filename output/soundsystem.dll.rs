@@ -1,193 +1,14 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: soundsystem.dll
-        // Classes count: 50
-        // Enums count: 13
+        // Classes count: 78
+        // Enums count: 0
         pub mod soundsystem_dll {
-            // Alignment: 4
-            // Members count: 30
-            #[repr(u32)]
-            pub enum soundlevel_t {
-                SNDLVL_NONE = 0x0,
-                SNDLVL_20dB = 0x14,
-                SNDLVL_25dB = 0x19,
-                SNDLVL_30dB = 0x1E,
-                SNDLVL_35dB = 0x23,
-                SNDLVL_40dB = 0x28,
-                SNDLVL_45dB = 0x2D,
-                SNDLVL_50dB = 0x32,
-                SNDLVL_55dB = 0x37,
-                SNDLVL_IDLE = 0x3C,
-                SNDLVL_60dB = 0x3C,
-                SNDLVL_65dB = 0x41,
-                SNDLVL_STATIC = 0x42,
-                SNDLVL_70dB = 0x46,
-                SNDLVL_NORM = 0x4B,
-                SNDLVL_75dB = 0x4B,
-                SNDLVL_80dB = 0x50,
-                SNDLVL_TALKING = 0x50,
-                SNDLVL_85dB = 0x55,
-                SNDLVL_90dB = 0x5A,
-                SNDLVL_95dB = 0x5F,
-                SNDLVL_100dB = 0x64,
-                SNDLVL_105dB = 0x69,
-                SNDLVL_110dB = 0x6E,
-                SNDLVL_120dB = 0x78,
-                SNDLVL_130dB = 0x82,
-                SNDLVL_GUNFIRE = 0x8C,
-                SNDLVL_140dB = 0x8C,
-                SNDLVL_150dB = 0x96,
-                SNDLVL_180dB = 0xB4
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum ActionType_t {
-                SOS_ACTION_NONE = 0x0,
-                SOS_ACTION_LIMITER = 0x1,
-                SOS_ACTION_TIME_LIMIT = 0x2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum SosActionStopType_t {
-                SOS_STOPTYPE_NONE = 0x0,
-                SOS_STOPTYPE_TIME = 0x1,
-                SOS_STOPTYPE_OPVAR = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum SosActionSortType_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum SosGroupType_t {
-                SOS_GROUPTYPE_DYNAMIC = 0x0,
-                SOS_GROUPTYPE_STATIC = 0x1
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum SosEditItemType_t {
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
-                SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
-                SOS_EDIT_ITEM_TYPE_STACK = 0x3,
-                SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
-                SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-            }
-            // Alignment: 2
-            // Members count: 10
-            #[repr(u16)]
-            pub enum VMixFilterType_t {
-                FILTER_UNKNOWN = 0xFFFFFFFFFFFFFFFF,
-                FILTER_LOWPASS = 0x0,
-                FILTER_HIGHPASS = 0x1,
-                FILTER_BANDPASS = 0x2,
-                FILTER_NOTCH = 0x3,
-                FILTER_PEAKING_EQ = 0x4,
-                FILTER_LOW_SHELF = 0x5,
-                FILTER_HIGH_SHELF = 0x6,
-                FILTER_ALLPASS = 0x7,
-                FILTER_PASSTHROUGH = 0x8
-            }
-            // Alignment: 1
-            // Members count: 9
-            #[repr(u8)]
-            pub enum VMixFilterSlope_t {
-                FILTER_SLOPE_1POLE_6dB = 0x0,
-                FILTER_SLOPE_1POLE_12dB = 0x1,
-                FILTER_SLOPE_1POLE_18dB = 0x2,
-                FILTER_SLOPE_1POLE_24dB = 0x3,
-                FILTER_SLOPE_12dB = 0x4,
-                FILTER_SLOPE_24dB = 0x5,
-                FILTER_SLOPE_36dB = 0x6,
-                FILTER_SLOPE_48dB = 0x7,
-                FILTER_SLOPE_MAX = 0x7
-            }
-            // Alignment: 2
-            // Members count: 30
-            #[repr(u16)]
-            pub enum VMixProcessorType_t {
-                VPROCESSOR_UNKNOWN = 0x0,
-                VPROCESSOR_STEAMAUDIO_REVERB = 0x1,
-                VPROCESSOR_RT_PITCH = 0x2,
-                VPROCESSOR_STEAMAUDIO_HRTF = 0x3,
-                VPROCESSOR_DYNAMICS = 0x4,
-                VPROCESSOR_PRESETDSP = 0x5,
-                VPROCESSOR_DELAY = 0x6,
-                VPROCESSOR_MOD_DELAY = 0x7,
-                VPROCESSOR_DIFFUSOR = 0x8,
-                VPROCESSOR_BOXVERB = 0x9,
-                VPROCESSOR_FREEVERB = 0xA,
-                VPROCESSOR_PLATEVERB = 0xB,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
-                VPROCESSOR_FILTER = 0xD,
-                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
-                VPROCESSOR_EQ8 = 0xF,
-                VPROCESSOR_ENVELOPE = 0x10,
-                VPROCESSOR_VOCODER = 0x11,
-                VPROCESSOR_CONVOLUTION = 0x12,
-                VPROCESSOR_DYNAMICS_3BAND = 0x13,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x14,
-                VPROCESSOR_SHAPER = 0x15,
-                VPROCESSOR_PANNER = 0x16,
-                VPROCESSOR_UTILITY = 0x17,
-                VPROCESSOR_AUTOFILTER = 0x18,
-                VPROCESSOR_OSC = 0x19,
-                VPROCESSOR_STEREODELAY = 0x1A,
-                VPROCESSOR_EFFECT_CHAIN = 0x1B,
-                VPROCESSOR_SUBGRAPH_SWITCH = 0x1C,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1D
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum VMixLFOShape_t {
-                LFO_SHAPE_SINE = 0x0,
-                LFO_SHAPE_SQUARE = 0x1,
-                LFO_SHAPE_TRI = 0x2,
-                LFO_SHAPE_SAW = 0x3,
-                LFO_SHAPE_NOISE = 0x4
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum VMixPannerType_t {
-                PANNER_TYPE_LINEAR = 0x0,
-                PANNER_TYPE_EQUAL_POWER = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum VMixSubgraphSwitchInterpolationType_t {
-                SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
-                SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 0x1,
-                SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 0x2
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum VMixChannelOperation_t {
-                VMIX_CHAN_STEREO = 0x0,
-                VMIX_CHAN_LEFT = 0x1,
-                VMIX_CHAN_RIGHT = 0x2,
-                VMIX_CHAN_SWAP = 0x3,
-                VMIX_CHAN_MONO = 0x4,
-                VMIX_CHAN_MID_SIDE = 0x5
-            }
             // Parent: None
             // Fields count: 3
             //
@@ -767,6 +588,245 @@ pub mod cs2_dumper {
                 pub const m_interpolationMode: usize = 0x0; // VMixSubgraphSwitchInterpolationType_t
                 pub const m_bOnlyTailsOnFadeOut: usize = 0x4; // bool
                 pub const m_flInterpolationTime: usize = 0x8; // float32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CovMatrix3 {
+                pub const m_vDiag: usize = 0x0; // 
+                pub const m_flXY: usize = 0xC; // float32
+                pub const m_flXZ: usize = 0x10; // float32
+                pub const m_flYZ: usize = 0x14; // float32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FourCovMatrices3 {
+                pub const m_vDiag: usize = 0x0; // FourVectors
+                pub const m_flXY: usize = 0x30; // fltx4
+                pub const m_flXZ: usize = 0x40; // fltx4
+                pub const m_flYZ: usize = 0x50; // fltx4
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeFitInfluence_t {
+                pub const nVertexNode: usize = 0x0; // uint32
+                pub const flWeight: usize = 0x4; // float32
+                pub const nMatrixNode: usize = 0x8; // uint32
+            }
+            // Parent: FeTaperedCapsuleRigid_t
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeBuildTaperedCapsuleRigid_t {
+                pub const m_nPriority: usize = 0x30; // int32
+                pub const m_nVertexMapHash: usize = 0x34; // uint32
+            }
+            // Parent: FeBoxRigid_t
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeBuildBoxRigid_t {
+                pub const m_nPriority: usize = 0x40; // int32
+                pub const m_nVertexMapHash: usize = 0x44; // uint32
+            }
+            // Parent: FeSphereRigid_t
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeBuildSphereRigid_t {
+                pub const m_nPriority: usize = 0x20; // int32
+                pub const m_nVertexMapHash: usize = 0x24; // uint32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeSourceEdge_t {
+                pub const nNode: usize = 0x0; // uint16[2]
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeVertexMapBuild_t {
+                pub const m_VertexMapName: usize = 0x0; // CUtlString
+                pub const m_nNameHash: usize = 0x8; // uint32
+                pub const m_Color: usize = 0xC; // Color
+                pub const m_flVolumetricSolveStrength: usize = 0x10; // float32
+                pub const m_nScaleSourceNode: usize = 0x14; // int32
+                pub const m_Weights: usize = 0x18; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CFeVertexMapBuildArray {
+                pub const m_Array: usize = 0x0; // CUtlVector<FeVertexMapBuild_t*>
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeProxyVertexMap_t {
+                pub const m_Name: usize = 0x0; // CUtlString
+                pub const m_flWeight: usize = 0x8; // float32
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CFeMorphLayer {
+                pub const m_Name: usize = 0x0; // CUtlString
+                pub const m_nNameHash: usize = 0x8; // uint32
+                pub const m_Nodes: usize = 0x10; // CUtlVector<uint16>
+                pub const m_InitPos: usize = 0x28; // CUtlVector<Vector>
+                pub const m_Gravity: usize = 0x40; // CUtlVector<float32>
+                pub const m_GoalStrength: usize = 0x58; // CUtlVector<float32>
+                pub const m_GoalDamping: usize = 0x70; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod Dop26_t {
+                pub const m_flSupport: usize = 0x0; // float32[26]
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnCapsule_t {
+                pub const m_vCenter: usize = 0x0; // Vector[2]
+                pub const m_flRadius: usize = 0x18; // float32
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod KeyValues {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__Vector__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__QuaternionStorage__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__int32__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__bool__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__Color__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__Vector2D__ {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod CCompressor__Vector4D__ {
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_ConstrainDistance {
+                pub const m_fMinDistance: usize = 0x1C0; // CParticleCollectionFloatInput
+                pub const m_fMaxDistance: usize = 0x318; // CParticleCollectionFloatInput
+                pub const m_nControlPointNumber: usize = 0x470; // int32
+                pub const m_CenterOffset: usize = 0x474; // 
+                pub const m_bGlobalCenter: usize = 0x480; // bool
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_CollideWithSelf {
+                pub const m_flRadiusScale: usize = 0x1C0; // CPerParticleFloatInput
+                pub const m_flMinimumSpeed: usize = 0x318; // CPerParticleFloatInput
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_CollideWithParentParticles {
+                pub const m_flParentRadiusScale: usize = 0x1C0; // CPerParticleFloatInput
+                pub const m_flRadiusScale: usize = 0x318; // CPerParticleFloatInput
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_ConstrainDistanceToPath {
+                pub const m_fMinDistance: usize = 0x1C0; // float32
+                pub const m_flMaxDistance0: usize = 0x1C4; // float32
+                pub const m_flMaxDistanceMid: usize = 0x1C8; // float32
+                pub const m_flMaxDistance1: usize = 0x1CC; // float32
+                pub const m_PathParameters: usize = 0x1D0; // CPathParameters
+                pub const m_flTravelTime: usize = 0x210; // float32
+                pub const m_nFieldScale: usize = 0x214; // ParticleAttributeIndex_t
+                pub const m_nManualTField: usize = 0x218; // ParticleAttributeIndex_t
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_ConstrainDistanceToUserSpecifiedPath {
+                pub const m_fMinDistance: usize = 0x1C0; // float32
+                pub const m_flMaxDistance: usize = 0x1C4; // float32
+                pub const m_flTimeScale: usize = 0x1C8; // float32
+                pub const m_bLoopedPath: usize = 0x1CC; // bool
+                pub const m_pointList: usize = 0x1D0; // CUtlVector<PointDefinitionWithTimeValues_t>
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_PlanarConstraint {
+                pub const m_PointOnPlane: usize = 0x1C0; // 
+                pub const m_PlaneNormal: usize = 0x1CC; // 
+                pub const m_nControlPointNumber: usize = 0x1D8; // int32
+                pub const m_bGlobalOrigin: usize = 0x1DC; // bool
+                pub const m_bGlobalNormal: usize = 0x1DD; // bool
+                pub const m_flRadiusScale: usize = 0x1E0; // CPerParticleFloatInput
+                pub const m_flMaximumDistanceToCP: usize = 0x338; // CParticleCollectionFloatInput
+                pub const m_bUseOldCode: usize = 0x490; // bool
+            }
+            // Parent: CParticleFunctionConstraint
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_WorldCollideConstraint {
             }
         }
     }

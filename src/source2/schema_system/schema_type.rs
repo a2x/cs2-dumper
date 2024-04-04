@@ -31,56 +31,56 @@ pub enum SchemaTypeCategory {
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaArray {
-    pub array_size: u32,
-    pad_0004: [u8; 0x4],
-    pub element_type: Pointer64<SchemaType>,
+    pub array_size: u32,                     // 0x0000
+    pad_0004: [u8; 0x4],                     // 0x0004
+    pub element_type: Pointer64<SchemaType>, // 0x0008
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomic {
-    pub element_type: Pointer64<SchemaType>,
-    pad_0008: [u8; 0x8],
-    pub template_ty: Pointer64<SchemaType>,
+    pub element_type: Pointer64<SchemaType>,  // 0x0000
+    pad_0008: [u8; 0x8],                      // 0x0008
+    pub template_type: Pointer64<SchemaType>, // 0x0010
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicI {
-    pad_0000: [u8; 0x10],
-    pub value: u64,
+    pad_0000: [u8; 0x10], // 0x0000
+    pub value: u64,       // 0x0010
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicTF {
-    pad_0000: [u8; 0x10],
-    pub template_ty: Pointer64<SchemaType>,
-    pub size: u32,
+    pad_0000: [u8; 0x10],                     // 0x0000
+    pub template_type: Pointer64<SchemaType>, // 0x0010
+    pub size: u32,                            // 0x0018
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicTT {
-    pad_0000: [u8; 0x10],
-    pub templates: [Pointer64<SchemaType>; 2],
+    pad_0000: [u8; 0x10],                      // 0x0000
+    pub templates: [Pointer64<SchemaType>; 2], // 0x0010
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicTTF {
-    pad_0000: [u8; 0x10],
-    pub templates: [Pointer64<SchemaType>; 2],
-    pub size: u32,
+    pad_0000: [u8; 0x10],                      // 0x0000
+    pub templates: [Pointer64<SchemaType>; 2], // 0x0010
+    pub size: u32,                             // 0x0020
 }
 
 #[repr(C)]
 pub struct SchemaType {
-    pad_0000: [u8; 0x8],
-    pub name: Pointer64<ReprCString>,
-    pub type_scope: Pointer64<SchemaSystemTypeScope>,
-    pub type_category: SchemaTypeCategory,
-    pub atomic_category: SchemaAtomicCategory,
+    pad_0000: [u8; 0x8],                              // 0x0000
+    pub name: Pointer64<ReprCString>,                 // 0x0008
+    pub type_scope: Pointer64<SchemaSystemTypeScope>, // 0x0010
+    pub type_category: SchemaTypeCategory,            // 0x0018
+    pub atomic_category: SchemaAtomicCategory,        // 0x0019
 }
 
 unsafe impl Pod for SchemaType {}

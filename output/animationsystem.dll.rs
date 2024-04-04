@@ -1,754 +1,41 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-02 16:10:48.961749300 UTC
+// 2024-04-04 13:40:42.514657500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: animationsystem.dll
-        // Classes count: 353
-        // Enums count: 70
+        // Classes count: 362
+        // Enums count: 0
         pub mod animationsystem_dll {
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum MoodType_t {
-                eMoodType_Head = 0x0,
-                eMoodType_Body = 0x1
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum AnimationProcessingType_t {
-                ANIMATION_PROCESSING_SERVER_SIMULATION = 0x0,
-                ANIMATION_PROCESSING_CLIENT_SIMULATION = 0x1,
-                ANIMATION_PROCESSING_CLIENT_PREDICTION = 0x2,
-                ANIMATION_PROCESSING_CLIENT_INTERPOLATION = 0x3,
-                ANIMATION_PROCESSING_CLIENT_RENDER = 0x4,
-                ANIMATION_PROCESSING_MAX = 0x5
-            }
-            // Alignment: 4
-            // Members count: 7
-            #[repr(u32)]
-            pub enum AnimationSnapshotType_t {
-                ANIMATION_SNAPSHOT_SERVER_SIMULATION = 0x0,
-                ANIMATION_SNAPSHOT_CLIENT_SIMULATION = 0x1,
-                ANIMATION_SNAPSHOT_CLIENT_PREDICTION = 0x2,
-                ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION = 0x3,
-                ANIMATION_SNAPSHOT_CLIENT_RENDER = 0x4,
-                ANIMATION_SNAPSHOT_FINAL_COMPOSITE = 0x5,
-                ANIMATION_SNAPSHOT_MAX = 0x6
-            }
-            // Alignment: 4
-            // Members count: 17
-            #[repr(u32)]
-            pub enum SeqCmd_t {
-                SeqCmd_Nop = 0x0,
-                SeqCmd_LinearDelta = 0x1,
-                SeqCmd_FetchFrameRange = 0x2,
-                SeqCmd_Slerp = 0x3,
-                SeqCmd_Add = 0x4,
-                SeqCmd_Subtract = 0x5,
-                SeqCmd_Scale = 0x6,
-                SeqCmd_Copy = 0x7,
-                SeqCmd_Blend = 0x8,
-                SeqCmd_Worldspace = 0x9,
-                SeqCmd_Sequence = 0xA,
-                SeqCmd_FetchCycle = 0xB,
-                SeqCmd_FetchFrame = 0xC,
-                SeqCmd_IKLockInPlace = 0xD,
-                SeqCmd_IKRestoreAll = 0xE,
-                SeqCmd_ReverseSequence = 0xF,
-                SeqCmd_Transform = 0x10
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum SeqPoseSetting_t {
-                SEQ_POSE_SETTING_CONSTANT = 0x0,
-                SEQ_POSE_SETTING_ROTATION = 0x1,
-                SEQ_POSE_SETTING_POSITION = 0x2,
-                SEQ_POSE_SETTING_VELOCITY = 0x3
-            }
-            // Alignment: 4
-            // Members count: 18
-            #[repr(u32)]
-            pub enum ParticleAttachment_t {
-                PATTACH_INVALID = 0xFFFFFFFFFFFFFFFF,
-                PATTACH_ABSORIGIN = 0x0,
-                PATTACH_ABSORIGIN_FOLLOW = 0x1,
-                PATTACH_CUSTOMORIGIN = 0x2,
-                PATTACH_CUSTOMORIGIN_FOLLOW = 0x3,
-                PATTACH_POINT = 0x4,
-                PATTACH_POINT_FOLLOW = 0x5,
-                PATTACH_EYES_FOLLOW = 0x6,
-                PATTACH_OVERHEAD_FOLLOW = 0x7,
-                PATTACH_WORLDORIGIN = 0x8,
-                PATTACH_ROOTBONE_FOLLOW = 0x9,
-                PATTACH_RENDERORIGIN_FOLLOW = 0xA,
-                PATTACH_MAIN_VIEW = 0xB,
-                PATTACH_WATERWAKE = 0xC,
-                PATTACH_CENTER_FOLLOW = 0xD,
-                PATTACH_CUSTOM_GAME_STATE_1 = 0xE,
-                PATTACH_HEALTHBAR = 0xF,
-                MAX_PATTACH_TYPES = 0x10
-            }
-            // Alignment: 1
-            // Members count: 9
-            #[repr(u8)]
-            pub enum AnimParamType_t {
-                ANIMPARAM_UNKNOWN = 0x0,
-                ANIMPARAM_BOOL = 0x1,
-                ANIMPARAM_ENUM = 0x2,
-                ANIMPARAM_INT = 0x3,
-                ANIMPARAM_FLOAT = 0x4,
-                ANIMPARAM_VECTOR = 0x5,
-                ANIMPARAM_QUATERNION = 0x6,
-                ANIMPARAM_GLOBALSYMBOL = 0x7,
-                ANIMPARAM_COUNT = 0x8
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum BoneTransformSpace_t {
-                BoneTransformSpace_Invalid = 0xFFFFFFFFFFFFFFFF,
-                BoneTransformSpace_Parent = 0x0,
-                BoneTransformSpace_Model = 0x1,
-                BoneTransformSpace_World = 0x2
-            }
-            // Alignment: 4
-            // Members count: 13
-            #[repr(u32)]
-            pub enum AnimParamButton_t {
-                ANIMPARAM_BUTTON_NONE = 0x0,
-                ANIMPARAM_BUTTON_DPAD_UP = 0x1,
-                ANIMPARAM_BUTTON_DPAD_RIGHT = 0x2,
-                ANIMPARAM_BUTTON_DPAD_DOWN = 0x3,
-                ANIMPARAM_BUTTON_DPAD_LEFT = 0x4,
-                ANIMPARAM_BUTTON_A = 0x5,
-                ANIMPARAM_BUTTON_B = 0x6,
-                ANIMPARAM_BUTTON_X = 0x7,
-                ANIMPARAM_BUTTON_Y = 0x8,
-                ANIMPARAM_BUTTON_LEFT_SHOULDER = 0x9,
-                ANIMPARAM_BUTTON_RIGHT_SHOULDER = 0xA,
-                ANIMPARAM_BUTTON_LTRIGGER = 0xB,
-                ANIMPARAM_BUTTON_RTRIGGER = 0xC
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum AnimParamNetworkSetting {
-                Auto = 0x0,
-                AlwaysNetwork = 0x1,
-                NeverNetwork = 0x2
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FootstepLandedFootSoundType_t {
-                FOOTSOUND_Left = 0x0,
-                FOOTSOUND_Right = 0x1,
-                FOOTSOUND_UseOverrideSound = 0x2
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum AnimPoseControl {
-                NoPoseControl = 0x0,
-                AbsolutePoseControl = 0x1,
-                RelativePoseControl = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum RagdollPoseControl {
-                Absolute = 0x0,
-                Relative = 0x1
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum VPhysXBodyPart_t__VPhysXFlagEnum_t {
-                FLAG_STATIC = 0x1,
-                FLAG_KINEMATIC = 0x2,
-                FLAG_JOINT = 0x4,
-                FLAG_MASS = 0x8,
-                FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 0x10
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum VPhysXConstraintParams_t__EnumFlags0_t {
-                FLAG0_SHIFT_INTERPENETRATE = 0x0,
-                FLAG0_SHIFT_CONSTRAIN = 0x1,
-                FLAG0_SHIFT_BREAKABLE_FORCE = 0x2,
-                FLAG0_SHIFT_BREAKABLE_TORQUE = 0x3
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum VPhysXJoint_t__Flags_t {
-                JOINT_FLAGS_NONE = 0x0,
-                JOINT_FLAGS_BODY1_FIXED = 0x1,
-                JOINT_FLAGS_USE_BLOCK_SOLVER = 0x2
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum VPhysXAggregateData_t__VPhysXFlagEnum_t {
-                FLAG_IS_POLYSOUP_GEOMETRY = 0x1,
-                FLAG_LEVEL_COLLISION = 0x10,
-                FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE = 0x20
-            }
-            // Alignment: 4
-            // Members count: 8
-            #[repr(u32)]
-            pub enum MeshDrawPrimitiveFlags_t {
-                MESH_DRAW_FLAGS_NONE = 0x0,
-                MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 0x1,
-                MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 0x2,
-                MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 0x8,
-                MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 0x10,
-                MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 0x20,
-                MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 0x40,
-                MESH_DRAW_FLAGS_DRAW_LAST = 0x80
-            }
-            // Alignment: 4
-            // Members count: 22
-            #[repr(u32)]
-            pub enum ModelSkeletonData_t__BoneFlags_t {
-                FLAG_NO_BONE_FLAGS = 0x0,
-                FLAG_BONEFLEXDRIVER = 0x4,
-                FLAG_CLOTH = 0x8,
-                FLAG_PHYSICS = 0x10,
-                FLAG_ATTACHMENT = 0x20,
-                FLAG_ANIMATION = 0x40,
-                FLAG_MESH = 0x80,
-                FLAG_HITBOX = 0x100,
-                FLAG_BONE_USED_BY_VERTEX_LOD0 = 0x400,
-                FLAG_BONE_USED_BY_VERTEX_LOD1 = 0x800,
-                FLAG_BONE_USED_BY_VERTEX_LOD2 = 0x1000,
-                FLAG_BONE_USED_BY_VERTEX_LOD3 = 0x2000,
-                FLAG_BONE_USED_BY_VERTEX_LOD4 = 0x4000,
-                FLAG_BONE_USED_BY_VERTEX_LOD5 = 0x8000,
-                FLAG_BONE_USED_BY_VERTEX_LOD6 = 0x10000,
-                FLAG_BONE_USED_BY_VERTEX_LOD7 = 0x20000,
-                FLAG_BONE_MERGE_READ = 0x40000,
-                FLAG_BONE_MERGE_WRITE = 0x80000,
-                FLAG_ALL_BONE_FLAGS = 0xFFFFF,
-                BLEND_PREALIGNED = 0x100000,
-                FLAG_RIGIDLENGTH = 0x200000,
-                FLAG_PROCEDURAL = 0x400000
-            }
-            // Alignment: 4
-            // Members count: 15
-            #[repr(u32)]
-            pub enum PermModelInfo_t__FlagEnum {
-                FLAG_TRANSLUCENT = 0x1,
-                FLAG_TRANSLUCENT_TWO_PASS = 0x2,
-                FLAG_MODEL_IS_RUNTIME_COMBINED = 0x4,
-                FLAG_SOURCE1_IMPORT = 0x8,
-                FLAG_MODEL_PART_CHILD = 0x10,
-                FLAG_NAV_GEN_NONE = 0x20,
-                FLAG_NAV_GEN_HULL = 0x40,
-                FLAG_NO_FORCED_FADE = 0x800,
-                FLAG_HAS_SKINNED_MESHES = 0x400,
-                FLAG_DO_NOT_CAST_SHADOWS = 0x20000,
-                FLAG_FORCE_PHONEME_CROSSFADE = 0x1000,
-                FLAG_NO_ANIM_EVENTS = 0x100000,
-                FLAG_ANIMATION_DRIVEN_FLEXES = 0x200000,
-                FLAG_IMPLICIT_BIND_POSE_SEQUENCE = 0x400000,
-                FLAG_MODEL_DOC = 0x800000
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum ModelBoneFlexComponent_t {
-                MODEL_BONE_FLEX_INVALID = 0xFFFFFFFFFFFFFFFF,
-                MODEL_BONE_FLEX_TX = 0x0,
-                MODEL_BONE_FLEX_TY = 0x1,
-                MODEL_BONE_FLEX_TZ = 0x2
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum ModelConfigAttachmentType_t {
-                MODEL_CONFIG_ATTACHMENT_INVALID = 0xFFFFFFFFFFFFFFFF,
-                MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
-                MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
-                MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
-                MODEL_CONFIG_ATTACHMENT_COUNT = 0x3
-            }
-            // Alignment: 4
-            // Members count: 26
-            #[repr(u32)]
-            pub enum FlexOpCode_t {
-                FLEX_OP_CONST = 0x1,
-                FLEX_OP_FETCH1 = 0x2,
-                FLEX_OP_FETCH2 = 0x3,
-                FLEX_OP_ADD = 0x4,
-                FLEX_OP_SUB = 0x5,
-                FLEX_OP_MUL = 0x6,
-                FLEX_OP_DIV = 0x7,
-                FLEX_OP_NEG = 0x8,
-                FLEX_OP_EXP = 0x9,
-                FLEX_OP_OPEN = 0xA,
-                FLEX_OP_CLOSE = 0xB,
-                FLEX_OP_COMMA = 0xC,
-                FLEX_OP_MAX = 0xD,
-                FLEX_OP_MIN = 0xE,
-                FLEX_OP_2WAY_0 = 0xF,
-                FLEX_OP_2WAY_1 = 0x10,
-                FLEX_OP_NWAY = 0x11,
-                FLEX_OP_COMBO = 0x12,
-                FLEX_OP_DOMINATE = 0x13,
-                FLEX_OP_DME_LOWER_EYELID = 0x14,
-                FLEX_OP_DME_UPPER_EYELID = 0x15,
-                FLEX_OP_SQRT = 0x16,
-                FLEX_OP_REMAPVALCLAMPED = 0x17,
-                FLEX_OP_SIN = 0x18,
-                FLEX_OP_COS = 0x19,
-                FLEX_OP_ABS = 0x1A
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum MorphFlexControllerRemapType_t {
-                MORPH_FLEXCONTROLLER_REMAP_PASSTHRU = 0x0,
-                MORPH_FLEXCONTROLLER_REMAP_2WAY = 0x1,
-                MORPH_FLEXCONTROLLER_REMAP_NWAY = 0x2,
-                MORPH_FLEXCONTROLLER_REMAP_EYELID = 0x3
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum MorphBundleType_t {
-                MORPH_BUNDLE_TYPE_NONE = 0x0,
-                MORPH_BUNDLE_TYPE_POSITION_SPEED = 0x1,
-                MORPH_BUNDLE_TYPE_NORMAL_WRINKLE = 0x2,
-                MORPH_BUNDLE_TYPE_COUNT = 0x3
-            }
-            // Alignment: 1
-            // Members count: 5
-            #[repr(u8)]
-            pub enum MovementGait_t {
-                eInvalid = 0xFFFFFFFFFFFFFFFF,
-                eWalk = 0x0,
-                eJog = 0x1,
-                eRun = 0x2,
-                eSprint = 0x3
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum CNmBoneMask__WeightInfo_t {
-                Zero = 0x0,
-                Mixed = 0x1,
-                One = 0x2
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmFootPhase_t {
-                LeftFootDown = 0x0,
-                RightFootPassing = 0x1,
-                RightFootDown = 0x2,
-                LeftFootPassing = 0x3
-            }
-            // Alignment: 1
-            // Members count: 6
-            #[repr(u8)]
-            pub enum NmFootPhaseCondition_t {
-                LeftFootDown = 0x0,
-                LeftFootPassing = 0x1,
-                LeftPhase = 0x4,
-                RightFootDown = 0x2,
-                RightFootPassing = 0x3,
-                RightPhase = 0x5
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum NmTransitionRule_t {
-                AllowTransition = 0x0,
-                ConditionallyAllowTransition = 0x1,
-                BlockTransition = 0x2
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmTransitionRuleCondition_t {
-                AnyAllowed = 0x0,
-                FullyAllowed = 0x1,
-                ConditionallyAllowed = 0x2,
-                Blocked = 0x3
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum NmFrameSnapEventMode_t {
-                Floor = 0x0,
-                Round = 0x1
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum IKChannelMode {
-                TwoBone = 0x0,
-                TwoBone_Translate = 0x1,
-                OneBone = 0x2,
-                OneBone_Translate = 0x3
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum EDemoBoneSelectionMode {
-                CaptureAllBones = 0x0,
-                CaptureSelectedBones = 0x1
-            }
-            // Alignment: 4
-            // Members count: 37
-            #[repr(u32)]
-            pub enum AnimValueSource {
-                MoveHeading = 0x0,
-                MoveSpeed = 0x1,
-                ForwardSpeed = 0x2,
-                StrafeSpeed = 0x3,
-                FacingHeading = 0x4,
-                ManualFacingHeading = 0x5,
-                LookHeading = 0x6,
-                LookPitch = 0x7,
-                LookDistance = 0x8,
-                Parameter = 0x9,
-                WayPointHeading = 0xA,
-                WayPointDistance = 0xB,
-                BoundaryRadius = 0xC,
-                TargetMoveHeading = 0xD,
-                TargetMoveSpeed = 0xE,
-                AccelerationHeading = 0xF,
-                AccelerationSpeed = 0x10,
-                SlopeHeading = 0x11,
-                SlopeAngle = 0x12,
-                SlopePitch = 0x13,
-                SlopeYaw = 0x14,
-                GoalDistance = 0x15,
-                AccelerationLeftRight = 0x16,
-                AccelerationFrontBack = 0x17,
-                RootMotionSpeed = 0x18,
-                RootMotionTurnSpeed = 0x19,
-                MoveHeadingRelativeToLookHeading = 0x1A,
-                MaxMoveSpeed = 0x1B,
-                FingerCurl_Thumb = 0x1C,
-                FingerCurl_Index = 0x1D,
-                FingerCurl_Middle = 0x1E,
-                FingerCurl_Ring = 0x1F,
-                FingerCurl_Pinky = 0x20,
-                FingerSplay_Thumb_Index = 0x21,
-                FingerSplay_Index_Middle = 0x22,
-                FingerSplay_Middle_Ring = 0x23,
-                FingerSplay_Ring_Pinky = 0x24
-            }
-            // Alignment: 4
-            // Members count: 13
-            #[repr(u32)]
-            pub enum AnimVectorSource {
-                MoveDirection = 0x0,
-                FacingDirection = 0x1,
-                LookDirection = 0x2,
-                VectorParameter = 0x3,
-                WayPointDirection = 0x4,
-                Acceleration = 0x5,
-                SlopeNormal = 0x6,
-                SlopeNormal_WorldSpace = 0x7,
-                LookTarget = 0x8,
-                LookTarget_WorldSpace = 0x9,
-                WayPointPosition = 0xA,
-                GoalPosition = 0xB,
-                RootMotionVelocity = 0xC
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum DampingSpeedFunction {
-                NoDamping = 0x0,
-                Constant = 0x1,
-                Spring = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum AnimNodeNetworkMode {
-                ServerAuthoritative = 0x0,
-                ClientSimulate = 0x1
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum StateActionBehavior {
-                STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT = 0x0,
-                STATETAGBEHAVIOR_FIRE_ON_ENTER = 0x1,
-                STATETAGBEHAVIOR_FIRE_ON_EXIT = 0x2,
-                STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT = 0x3
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FieldNetworkOption {
-                Auto = 0x0,
-                ForceEnable = 0x1,
-                ForceDisable = 0x2
-            }
-            // Alignment: 4
-            // Members count: 8
-            #[repr(u32)]
-            pub enum FootFallTagFoot_t {
-                FOOT1 = 0x0,
-                FOOT2 = 0x1,
-                FOOT3 = 0x2,
-                FOOT4 = 0x3,
-                FOOT5 = 0x4,
-                FOOT6 = 0x5,
-                FOOT7 = 0x6,
-                FOOT8 = 0x7
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum MatterialAttributeTagType_t {
-                MATERIAL_ATTRIBUTE_TAG_VALUE = 0x0,
-                MATERIAL_ATTRIBUTE_TAG_COLOR = 0x1
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum VelocityMetricMode {
-                DirectionOnly = 0x0,
-                MagnitudeOnly = 0x1,
-                DirectionAndMagnitude = 0x2
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum AimMatrixBlendMode {
-                AimMatrixBlendMode_None = 0x0,
-                AimMatrixBlendMode_Additive = 0x1,
-                AimMatrixBlendMode_ModelSpaceAdditive = 0x2,
-                AimMatrixBlendMode_BoneMask = 0x3
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum BoneMaskBlendSpace {
-                BlendSpace_Parent = 0x0,
-                BlendSpace_Model = 0x1,
-                BlendSpace_Model_RotationOnly = 0x2,
-                BlendSpace_Model_TranslationOnly = 0x3
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum JiggleBoneSimSpace {
-                SimSpace_Local = 0x0,
-                SimSpace_Model = 0x1,
-                SimSpace_World = 0x2
-            }
-            // Alignment: 4
-            // Members count: 7
-            #[repr(u32)]
-            pub enum SolveIKChainAnimNodeDebugSetting {
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_None = 0x0,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_X_Axis_Circle = 0x1,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Y_Axis_Circle = 0x2,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Z_Axis_Circle = 0x3,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Forward = 0x4,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Up = 0x5,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Left = 0x6
-            }
-            // Alignment: 2
-            // Members count: 3
-            #[repr(u16)]
-            pub enum AnimScriptType {
-                ANIMSCRIPT_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
-                ANIMSCRIPT_FUSE_GENERAL = 0x0,
-                ANIMSCRIPT_FUSE_STATEMACHINE = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum BinaryNodeTiming {
-                UseChild1 = 0x0,
-                UseChild2 = 0x1,
-                SyncChildren = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum BinaryNodeChildOption {
-                Child1 = 0x0,
-                Child2 = 0x1
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum BlendKeyType {
-                BlendKey_UserValue = 0x0,
-                BlendKey_Velocity = 0x1,
-                BlendKey_Distance = 0x2,
-                BlendKey_RemainingDistance = 0x3
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum Blend2DMode {
-                Blend2DMode_General = 0x0,
-                Blend2DMode_Directional = 0x1
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum ChoiceMethod {
-                WeightedRandom = 0x0,
-                WeightedRandomNoRepeat = 0x1,
-                Iterate = 0x2,
-                IterateRandom = 0x3
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum ChoiceChangeMethod {
-                OnReset = 0x0,
-                OnCycleEnd = 0x1,
-                OnResetOrCycleEnd = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum ChoiceBlendMethod {
-                SingleBlendTime = 0x0,
-                PerChoiceBlendTimes = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum FootLockSubVisualization {
-                FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0x0,
-                FOOTLOCKSUBVISUALIZATION_IKSolve = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FootPinningTimingSource {
-                FootMotion = 0x0,
-                Tag = 0x1,
-                Parameter = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum StepPhase {
-                StepPhase_OnGround = 0x0,
-                StepPhase_InAir = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum JumpCorrectionMethod {
-                ScaleMotion = 0x0,
-                AddCorrectionDelta = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum SelectorTagBehavior_t {
-                SelectorTagBehavior_OnWhileCurrent = 0x0,
-                SelectorTagBehavior_OffWhenFinished = 0x1,
-                SelectorTagBehavior_OffBeforeFinished = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum StanceOverrideMode {
-                Sequence = 0x0,
-                Node = 0x1
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum ResetCycleOption {
-                Beginning = 0x0,
-                SameCycleAsSource = 0x1,
-                InverseSourceCycle = 0x2,
-                FixedValue = 0x3,
-                SameTimeAsSource = 0x4
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum IkEndEffectorType {
-                IkEndEffector_Attachment = 0x0,
-                IkEndEffector_Bone = 0x1
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum IkTargetType {
-                IkTarget_Attachment = 0x0,
-                IkTarget_Bone = 0x1,
-                IkTarget_Parameter_ModelSpace = 0x2,
-                IkTarget_Parameter_WorldSpace = 0x3
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum PoseType_t {
-                POSETYPE_STATIC = 0x0,
-                POSETYPE_DYNAMIC = 0x1,
-                POSETYPE_INVALID = 0xFF
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum CAnimationGraphVisualizerPrimitiveType {
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Text = 0x0,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Sphere = 0x1,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Line = 0x2,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Pie = 0x3,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Axis = 0x4
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FacingMode {
-                FacingMode_Manual = 0x0,
-                FacingMode_Path = 0x1,
-                FacingMode_LookTarget = 0x2
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum IKSolverType {
-                IKSOLVER_Perlin = 0x0,
-                IKSOLVER_TwoBone = 0x1,
-                IKSOLVER_Fabrik = 0x2,
-                IKSOLVER_DogLeg3Bone = 0x3,
-                IKSOLVER_CCD = 0x4,
-                IKSOLVER_COUNT = 0x5
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum IKTargetSource {
-                IKTARGETSOURCE_Bone = 0x0,
-                IKTARGETSOURCE_AnimgraphParameter = 0x1,
-                IKTARGETSOURCE_COUNT = 0x2
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum IKTargetCoordinateSystem {
-                IKTARGETCOORDINATESYSTEM_WorldSpace = 0x0,
-                IKTARGETCOORDINATESYSTEM_ModelSpace = 0x1,
-                IKTARGETCOORDINATESYSTEM_COUNT = 0x2
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyEditClassAsString
+            pub mod AnimParamID {
+                pub const m_id: usize = 0x0; // uint32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            pub mod CAnimInputDamping {
+                pub const m_speedFunction: usize = 0x8; // DampingSpeedFunction
+                pub const m_fSpeedScale: usize = 0xC; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimParamHandle {
+                pub const m_type: usize = 0x0; // AnimParamType_t
+                pub const m_index: usize = 0x1; // uint8
             }
             // Parent: None
             // Fields count: 2
@@ -779,6 +66,14 @@ pub mod cs2_dumper {
                 pub const m_flEndOffset: usize = 0x4C; // CRangeFloat
                 pub const m_flFadeIn: usize = 0x54; // float32
                 pub const m_flFadeOut: usize = 0x58; // float32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MPropertyCustomEditor
+            pub mod CRangeFloat {
+                pub const m_pValue: usize = 0x0; // float32[2]
             }
             // Parent: None
             // Fields count: 6
@@ -1226,6 +521,16 @@ pub mod cs2_dumper {
                 pub const m_footMotion: usize = 0x108; // CUtlVector<CFootMotion>
             }
             // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CFootMotion {
+                pub const m_strides: usize = 0x0; // CUtlVector<CFootStride>
+                pub const m_name: usize = 0x18; // CUtlString
+                pub const m_bAdditive: usize = 0x20; // bool
+            }
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
@@ -1362,15 +667,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyEditClassAsString
-            pub mod AnimParamID {
-                pub const m_id: usize = 0x0; // uint32
-            }
-            // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
             pub mod AnimTagID {
                 pub const m_id: usize = 0x0; // uint32
             }
@@ -1415,6 +711,38 @@ pub mod cs2_dumper {
                 pub const m_hulls: usize = 0x30; // CUtlVector<RnHullDesc_t>
                 pub const m_meshes: usize = 0x48; // CUtlVector<RnMeshDesc_t>
                 pub const m_CollisionAttributeIndices: usize = 0x60; // CUtlVector<uint16>
+            }
+            // Parent: RnShapeDesc_t
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnSphereDesc_t {
+                pub const m_Sphere: usize = 0x10; // SphereBase_t<float32>
+            }
+            // Parent: RnShapeDesc_t
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnCapsuleDesc_t {
+                pub const m_Capsule: usize = 0x10; // RnCapsule_t
+            }
+            // Parent: RnShapeDesc_t
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnHullDesc_t {
+                pub const m_Hull: usize = 0x10; // RnHull_t
+            }
+            // Parent: RnShapeDesc_t
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnMeshDesc_t {
+                pub const m_Mesh: usize = 0x10; // RnMesh_t
             }
             // Parent: None
             // Fields count: 10
@@ -1566,6 +894,33 @@ pub mod cs2_dumper {
                 pub const m_ParticleBoneName: usize = 0x78; // CUtlVector<CUtlString>
             }
             // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnSoftbodyParticle_t {
+                pub const m_flMassInv: usize = 0x0; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnSoftbodySpring_t {
+                pub const m_nParticle: usize = 0x0; // uint16[2]
+                pub const m_flLength: usize = 0x4; // float32
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnSoftbodyCapsule_t {
+                pub const m_vCenter: usize = 0x0; // Vector[2]
+                pub const m_flRadius: usize = 0x18; // float32
+                pub const m_nParticle: usize = 0x1C; // uint16[2]
+            }
+            // Parent: None
             // Fields count: 16
             //
             // Metadata:
@@ -1587,6 +942,113 @@ pub mod cs2_dumper {
                 pub const m_collisionAttributes: usize = 0x100; // CUtlVector<VPhysXCollisionAttributes_t>
                 pub const m_debugPartNames: usize = 0x118; // CUtlVector<CUtlString>
                 pub const m_embeddedKeyvalues: usize = 0x130; // CUtlString
+            }
+            // Parent: None
+            // Fields count: 100
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod PhysFeModelDesc_t {
+                pub const m_CtrlHash: usize = 0x0; // CUtlVector<uint32>
+                pub const m_CtrlName: usize = 0x18; // CUtlVector<CUtlString>
+                pub const m_nStaticNodeFlags: usize = 0x30; // uint32
+                pub const m_nDynamicNodeFlags: usize = 0x34; // uint32
+                pub const m_flLocalForce: usize = 0x38; // float32
+                pub const m_flLocalRotation: usize = 0x3C; // float32
+                pub const m_nNodeCount: usize = 0x40; // uint16
+                pub const m_nStaticNodes: usize = 0x42; // uint16
+                pub const m_nRotLockStaticNodes: usize = 0x44; // uint16
+                pub const m_nFirstPositionDrivenNode: usize = 0x46; // uint16
+                pub const m_nSimdTriCount1: usize = 0x48; // uint16
+                pub const m_nSimdTriCount2: usize = 0x4A; // uint16
+                pub const m_nSimdQuadCount1: usize = 0x4C; // uint16
+                pub const m_nSimdQuadCount2: usize = 0x4E; // uint16
+                pub const m_nQuadCount1: usize = 0x50; // uint16
+                pub const m_nQuadCount2: usize = 0x52; // uint16
+                pub const m_nTreeDepth: usize = 0x54; // uint16
+                pub const m_nNodeBaseJiggleboneDependsCount: usize = 0x56; // uint16
+                pub const m_nRopeCount: usize = 0x58; // uint16
+                pub const m_Ropes: usize = 0x60; // CUtlVector<uint16>
+                pub const m_NodeBases: usize = 0x78; // CUtlVector<FeNodeBase_t>
+                pub const m_SimdNodeBases: usize = 0x90; // CUtlVector<FeSimdNodeBase_t>
+                pub const m_Quads: usize = 0xA8; // CUtlVector<FeQuad_t>
+                pub const m_SimdQuads: usize = 0xC0; // CUtlVector<FeSimdQuad_t>
+                pub const m_SimdTris: usize = 0xD8; // CUtlVector<FeSimdTri_t>
+                pub const m_SimdRods: usize = 0xF0; // CUtlVector<FeSimdRodConstraint_t>
+                pub const m_SimdRodsAnim: usize = 0x108; // CUtlVector<FeSimdRodConstraintAnim_t>
+                pub const m_InitPose: usize = 0x120; // CUtlVector<CTransform>
+                pub const m_Rods: usize = 0x138; // CUtlVector<FeRodConstraint_t>
+                pub const m_Twists: usize = 0x150; // CUtlVector<FeTwistConstraint_t>
+                pub const m_AxialEdges: usize = 0x168; // CUtlVector<FeAxialEdgeBend_t>
+                pub const m_NodeInvMasses: usize = 0x180; // CUtlVector<float32>
+                pub const m_CtrlOffsets: usize = 0x198; // CUtlVector<FeCtrlOffset_t>
+                pub const m_CtrlOsOffsets: usize = 0x1B0; // CUtlVector<FeCtrlOsOffset_t>
+                pub const m_FollowNodes: usize = 0x1C8; // CUtlVector<FeFollowNode_t>
+                pub const m_CollisionPlanes: usize = 0x1E0; // CUtlVector<FeCollisionPlane_t>
+                pub const m_NodeIntegrator: usize = 0x1F8; // CUtlVector<FeNodeIntegrator_t>
+                pub const m_SpringIntegrator: usize = 0x210; // CUtlVector<FeSpringIntegrator_t>
+                pub const m_SimdSpringIntegrator: usize = 0x228; // CUtlVector<FeSimdSpringIntegrator_t>
+                pub const m_WorldCollisionParams: usize = 0x240; // CUtlVector<FeWorldCollisionParams_t>
+                pub const m_LegacyStretchForce: usize = 0x258; // CUtlVector<float32>
+                pub const m_NodeCollisionRadii: usize = 0x270; // CUtlVector<float32>
+                pub const m_DynNodeFriction: usize = 0x288; // CUtlVector<float32>
+                pub const m_LocalRotation: usize = 0x2A0; // CUtlVector<float32>
+                pub const m_LocalForce: usize = 0x2B8; // CUtlVector<float32>
+                pub const m_TaperedCapsuleStretches: usize = 0x2D0; // CUtlVector<FeTaperedCapsuleStretch_t>
+                pub const m_TaperedCapsuleRigids: usize = 0x2E8; // CUtlVector<FeTaperedCapsuleRigid_t>
+                pub const m_SphereRigids: usize = 0x300; // CUtlVector<FeSphereRigid_t>
+                pub const m_WorldCollisionNodes: usize = 0x318; // CUtlVector<uint16>
+                pub const m_TreeParents: usize = 0x330; // CUtlVector<uint16>
+                pub const m_TreeCollisionMasks: usize = 0x348; // CUtlVector<uint16>
+                pub const m_TreeChildren: usize = 0x360; // CUtlVector<FeTreeChildren_t>
+                pub const m_FreeNodes: usize = 0x378; // CUtlVector<uint16>
+                pub const m_FitMatrices: usize = 0x390; // CUtlVector<FeFitMatrix_t>
+                pub const m_FitWeights: usize = 0x3A8; // CUtlVector<FeFitWeight_t>
+                pub const m_ReverseOffsets: usize = 0x3C0; // CUtlVector<FeNodeReverseOffset_t>
+                pub const m_AnimStrayRadii: usize = 0x3D8; // CUtlVector<FeAnimStrayRadius_t>
+                pub const m_SimdAnimStrayRadii: usize = 0x3F0; // CUtlVector<FeSimdAnimStrayRadius_t>
+                pub const m_KelagerBends: usize = 0x408; // CUtlVector<FeKelagerBend2_t>
+                pub const m_CtrlSoftOffsets: usize = 0x420; // CUtlVector<FeCtrlSoftOffset_t>
+                pub const m_JiggleBones: usize = 0x438; // CUtlVector<CFeIndexedJiggleBone>
+                pub const m_SourceElems: usize = 0x450; // CUtlVector<uint16>
+                pub const m_GoalDampedSpringIntegrators: usize = 0x468; // CUtlVector<uint32>
+                pub const m_Tris: usize = 0x480; // CUtlVector<FeTri_t>
+                pub const m_nTriCount1: usize = 0x498; // uint16
+                pub const m_nTriCount2: usize = 0x49A; // uint16
+                pub const m_nReservedUint8: usize = 0x49C; // uint8
+                pub const m_nExtraPressureIterations: usize = 0x49D; // uint8
+                pub const m_nExtraGoalIterations: usize = 0x49E; // uint8
+                pub const m_nExtraIterations: usize = 0x49F; // uint8
+                pub const m_BoxRigids: usize = 0x4A0; // CUtlVector<FeBoxRigid_t>
+                pub const m_DynNodeVertexSet: usize = 0x4B8; // CUtlVector<uint8>
+                pub const m_VertexSetNames: usize = 0x4D0; // CUtlVector<uint32>
+                pub const m_RigidColliderPriorities: usize = 0x4E8; // CUtlVector<FeRigidColliderIndices_t>
+                pub const m_MorphLayers: usize = 0x500; // CUtlVector<FeMorphLayerDepr_t>
+                pub const m_MorphSetData: usize = 0x518; // CUtlVector<uint8>
+                pub const m_VertexMaps: usize = 0x530; // CUtlVector<FeVertexMapDesc_t>
+                pub const m_VertexMapValues: usize = 0x548; // CUtlVector<uint8>
+                pub const m_Effects: usize = 0x560; // CUtlVector<FeEffectDesc_t>
+                pub const m_LockToParent: usize = 0x578; // CUtlVector<FeCtrlOffset_t>
+                pub const m_LockToGoal: usize = 0x590; // CUtlVector<uint16>
+                pub const m_SkelParents: usize = 0x5A8; // CUtlVector<int16>
+                pub const m_DynNodeWindBases: usize = 0x5C0; // CUtlVector<FeNodeWindBase_t>
+                pub const m_flInternalPressure: usize = 0x5D8; // float32
+                pub const m_flDefaultTimeDilation: usize = 0x5DC; // float32
+                pub const m_flWindage: usize = 0x5E0; // float32
+                pub const m_flWindDrag: usize = 0x5E4; // float32
+                pub const m_flDefaultSurfaceStretch: usize = 0x5E8; // float32
+                pub const m_flDefaultThreadStretch: usize = 0x5EC; // float32
+                pub const m_flDefaultGravityScale: usize = 0x5F0; // float32
+                pub const m_flDefaultVelAirDrag: usize = 0x5F4; // float32
+                pub const m_flDefaultExpAirDrag: usize = 0x5F8; // float32
+                pub const m_flDefaultVelQuadAirDrag: usize = 0x5FC; // float32
+                pub const m_flDefaultExpQuadAirDrag: usize = 0x600; // float32
+                pub const m_flRodVelocitySmoothRate: usize = 0x604; // float32
+                pub const m_flQuadVelocitySmoothRate: usize = 0x608; // float32
+                pub const m_flAddWorldCollisionRadius: usize = 0x60C; // float32
+                pub const m_flDefaultVolumetricSolveAmount: usize = 0x610; // float32
+                pub const m_nRodVelocitySmoothIterations: usize = 0x614; // uint16
+                pub const m_nQuadVelocitySmoothIterations: usize = 0x616; // uint16
             }
             // Parent: None
             // Fields count: 7
@@ -1768,6 +1230,16 @@ pub mod cs2_dumper {
                 pub const m_AnimatedMaterialAttributes: usize = 0x2B0; // CUtlVector<PermModelDataAnimatedMaterialAttribute_t>
             }
             // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CModelConfigList {
+                pub const m_bHideMaterialGroupInTools: usize = 0x0; // bool
+                pub const m_bHideRenderColorInTools: usize = 0x1; // bool
+                pub const m_Configs: usize = 0x8; // CUtlVector<CModelConfig*>
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -1882,16 +1354,6 @@ pub mod cs2_dumper {
                 pub const m_ConfigName: usize = 0x0; // CUtlString
                 pub const m_Elements: usize = 0x8; // CUtlVector<CModelConfigElement*>
                 pub const m_bTopLevel: usize = 0x20; // bool
-            }
-            // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CModelConfigList {
-                pub const m_bHideMaterialGroupInTools: usize = 0x0; // bool
-                pub const m_bHideRenderColorInTools: usize = 0x1; // bool
-                pub const m_Configs: usize = 0x8; // CUtlVector<CModelConfig*>
             }
             // Parent: None
             // Fields count: 2
@@ -2089,6 +1551,17 @@ pub mod cs2_dumper {
                 pub const m_meshDeformParams: usize = 0x1E0; // DynamicMeshDeformParams_t
                 pub const m_pGroomData: usize = 0x1F0; // CRenderGroom*
             }
+            // Parent: CBoneConstraintBase
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CBaseConstraint {
+                pub const m_name: usize = 0x28; // CUtlString
+                pub const m_vUpVector: usize = 0x30; // 
+                pub const m_slaves: usize = 0x40; // CUtlVector<CConstraintSlave>
+                pub const m_targets: usize = 0x58; // CUtlVector<CConstraintTarget>
+            }
             // Parent: None
             // Fields count: 6
             //
@@ -2120,17 +1593,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CBoneConstraintBase {
-            }
-            // Parent: CBoneConstraintBase
-            // Fields count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CBaseConstraint {
-                pub const m_name: usize = 0x28; // CUtlString
-                pub const m_vUpVector: usize = 0x30; // 
-                pub const m_slaves: usize = 0x40; // CUtlVector<CConstraintSlave>
-                pub const m_targets: usize = 0x58; // CUtlVector<CConstraintTarget>
             }
             // Parent: CBaseConstraint
             // Fields count: 0
@@ -2416,16 +1878,6 @@ pub mod cs2_dumper {
                 pub const m_trajectories: usize = 0x40; // CFootTrajectories
             }
             // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CFootMotion {
-                pub const m_strides: usize = 0x0; // CUtlVector<CFootStride>
-                pub const m_name: usize = 0x18; // CUtlString
-                pub const m_bAdditive: usize = 0x20; // bool
-            }
-            // Parent: None
             // Fields count: 10
             //
             // Metadata:
@@ -2453,21 +1905,6 @@ pub mod cs2_dumper {
                 pub const m_nParent: usize = 0x30; // int32
             }
             // Parent: None
-            // Fields count: 8
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod SkeletonAnimCapture_t__FrameStamp_t {
-                pub const m_flTime: usize = 0x0; // float32
-                pub const m_flEntitySimTime: usize = 0x4; // float32
-                pub const m_bTeleportTick: usize = 0x8; // bool
-                pub const m_bPredicted: usize = 0x9; // bool
-                pub const m_flCurTime: usize = 0xC; // float32
-                pub const m_flRealTime: usize = 0x10; // float32
-                pub const m_nFrameCount: usize = 0x14; // int32
-                pub const m_nTickCount: usize = 0x18; // int32
-            }
-            // Parent: None
             // Fields count: 9
             //
             // Metadata:
@@ -2482,6 +1919,21 @@ pub mod cs2_dumper {
                 pub const m_FeModelAnims: usize = 0x78; // CUtlVector<CTransform>
                 pub const m_FeModelPos: usize = 0x90; // CUtlVector<VectorAligned>
                 pub const m_FlexControllerWeights: usize = 0xA8; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod SkeletonAnimCapture_t__FrameStamp_t {
+                pub const m_flTime: usize = 0x0; // float32
+                pub const m_flEntitySimTime: usize = 0x4; // float32
+                pub const m_bTeleportTick: usize = 0x8; // bool
+                pub const m_bPredicted: usize = 0x9; // bool
+                pub const m_flCurTime: usize = 0xC; // float32
+                pub const m_flRealTime: usize = 0x10; // float32
+                pub const m_nFrameCount: usize = 0x14; // int32
+                pub const m_nTickCount: usize = 0x18; // int32
             }
             // Parent: None
             // Fields count: 2
@@ -2548,18 +2000,9 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            pub mod NmCompressionSettings_t__QuantizationRange_t {
-                pub const m_flRangeStart: usize = 0x0; // float32
-                pub const m_flRangeLength: usize = 0x4; // float32
-            }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmEvent {
-                pub const m_flStartTime: usize = 0x8; // float32
-                pub const m_flDuration: usize = 0xC; // float32
+            pub mod CNmSyncTrack {
+                pub const m_syncEvents: usize = 0x0; // CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>
+                pub const m_nStartEventOffset: usize = 0xA8; // int32
             }
             // Parent: None
             // Fields count: 5
@@ -2572,6 +2015,24 @@ pub mod cs2_dumper {
                 pub const m_flAverageLinearVelocity: usize = 0x1C; // float32
                 pub const m_flAverageAngularVelocityRadians: usize = 0x20; // float32
                 pub const m_totalDelta: usize = 0x30; // CTransform
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod NmCompressionSettings_t__QuantizationRange_t {
+                pub const m_flRangeStart: usize = 0x0; // float32
+                pub const m_flRangeLength: usize = 0x4; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmEvent {
+                pub const m_flStartTime: usize = 0x8; // float32
+                pub const m_flDuration: usize = 0xC; // float32
             }
             // Parent: None
             // Fields count: 7
@@ -2597,6 +2058,14 @@ pub mod cs2_dumper {
                 pub const m_percentageThrough: usize = 0x4; // NmPercent_t
             }
             // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod NmPercent_t {
+                pub const m_flValue: usize = 0x0; // float32
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -2604,24 +2073,6 @@ pub mod cs2_dumper {
             pub mod NmSyncTrackTimeRange_t {
                 pub const m_startTime: usize = 0x0; // NmSyncTrackTime_t
                 pub const m_endTime: usize = 0x8; // NmSyncTrackTime_t
-            }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmSyncTrack {
-                pub const m_syncEvents: usize = 0x0; // CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t>
-                pub const m_nStartEventOffset: usize = 0xA8; // int32
-            }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmSyncTrack__EventMarker_t {
-                pub const m_startTime: usize = 0x0; // NmPercent_t
-                pub const m_ID: usize = 0x8; // CGlobalSymbol
             }
             // Parent: None
             // Fields count: 3
@@ -2634,12 +2085,13 @@ pub mod cs2_dumper {
                 pub const m_duration: usize = 0xC; // NmPercent_t
             }
             // Parent: None
-            // Fields count: 1
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            pub mod NmPercent_t {
-                pub const m_flValue: usize = 0x0; // float32
+            pub mod CNmSyncTrack__EventMarker_t {
+                pub const m_startTime: usize = 0x0; // NmPercent_t
+                pub const m_ID: usize = 0x8; // CGlobalSymbol
             }
             // Parent: CNmEvent
             // Fields count: 0
@@ -2713,18 +2165,18 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            pub mod CNmGraph__ExternalGraphSlot_t {
+            pub mod CNmGraph__ChildGraphSlot_t {
                 pub const m_nNodeIdx: usize = 0x0; // int16
-                pub const m_slotID: usize = 0x8; // CGlobalSymbol
+                pub const m_dataSlotIdx: usize = 0x2; // int16
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            pub mod CNmGraph__ChildGraphSlot_t {
+            pub mod CNmGraph__ExternalGraphSlot_t {
                 pub const m_nNodeIdx: usize = 0x0; // int16
-                pub const m_dataSlotIdx: usize = 0x2; // int16
+                pub const m_slotID: usize = 0x8; // CGlobalSymbol
             }
             // Parent: None
             // Fields count: 2
@@ -2813,23 +2265,21 @@ pub mod cs2_dumper {
                 pub const m_pSharedData: usize = 0x10; // CSmartPtr<CAnimUpdateSharedData>
             }
             // Parent: None
-            // Fields count: 2
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            pub mod CAnimInputDamping {
-                pub const m_speedFunction: usize = 0x8; // DampingSpeedFunction
-                pub const m_fSpeedScale: usize = 0xC; // float32
-            }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimParamHandle {
-                pub const m_type: usize = 0x0; // AnimParamType_t
-                pub const m_index: usize = 0x1; // uint8
+            pub mod CAnimUpdateSharedData {
+                pub const m_nodes: usize = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
+                pub const m_nodeIndexMap: usize = 0x28; // CUtlHashtable<CAnimNodePath,int32>
+                pub const m_components: usize = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
+                pub const m_pParamListUpdater: usize = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
+                pub const m_pTagManagerUpdater: usize = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
+                pub const m_scriptManager: usize = 0x70; // CSmartPtr<CAnimScriptManager>
+                pub const m_settings: usize = 0x78; // CAnimGraphSettingsManager
+                pub const m_pStaticPoseCache: usize = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
+                pub const m_pSkeleton: usize = 0xB0; // CSmartPtr<CAnimSkeleton>
+                pub const m_rootNodePath: usize = 0xB8; // CAnimNodePath
             }
             // Parent: None
             // Fields count: 1
@@ -2853,21 +2303,78 @@ pub mod cs2_dumper {
                 pub const m_autoResetMap: usize = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
             }
             // Parent: None
-            // Fields count: 10
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            pub mod CAnimUpdateSharedData {
-                pub const m_nodes: usize = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
-                pub const m_nodeIndexMap: usize = 0x28; // CUtlHashtable<CAnimNodePath,int32>
-                pub const m_components: usize = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
-                pub const m_pParamListUpdater: usize = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
-                pub const m_pTagManagerUpdater: usize = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
-                pub const m_scriptManager: usize = 0x70; // CSmartPtr<CAnimScriptManager>
-                pub const m_settings: usize = 0x78; // CAnimGraphSettingsManager
-                pub const m_pStaticPoseCache: usize = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
-                pub const m_pSkeleton: usize = 0xB0; // CSmartPtr<CAnimSkeleton>
-                pub const m_rootNodePath: usize = 0xB8; // CAnimNodePath
+            pub mod CAnimParameterBase {
+                pub const m_name: usize = 0x18; // CGlobalSymbol
+                pub const m_group: usize = 0x20; // CUtlString
+                pub const m_id: usize = 0x28; // AnimParamID
+                pub const m_componentName: usize = 0x40; // CUtlString
+                pub const m_bNetworkingRequested: usize = 0x60; // bool
+                pub const m_bIsReferenced: usize = 0x61; // bool
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimUpdateNodeBase {
+                pub const m_nodePath: usize = 0x18; // CAnimNodePath
+                pub const m_networkMode: usize = 0x48; // AnimNodeNetworkMode
+                pub const m_name: usize = 0x50; // CUtlString
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimNodePath {
+                pub const m_path: usize = 0x0; // AnimNodeID[11]
+                pub const m_nCount: usize = 0x2C; // int32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimComponentUpdater {
+                pub const m_name: usize = 0x18; // CUtlString
+                pub const m_id: usize = 0x20; // AnimComponentID
+                pub const m_networkMode: usize = 0x24; // AnimNodeNetworkMode
+                pub const m_bStartEnabled: usize = 0x28; // bool
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimTagManagerUpdater {
+                pub const m_tags: usize = 0x18; // CUtlVector<CSmartPtr<CAnimTagBase>>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimScriptManager {
+                pub const m_scriptInfo: usize = 0x10; // CUtlVector<ScriptInfo_t>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimGraphSettingsManager {
+                pub const m_settingsGroups: usize = 0x18; // CUtlVector<CSmartPtr<CAnimGraphSettingsGroup>>
+            }
+            // Parent: CStaticPoseCache
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CStaticPoseCacheBuilder {
             }
             // Parent: None
             // Fields count: 2
@@ -2915,14 +2422,6 @@ pub mod cs2_dumper {
             pub mod CAnimGraphSettingsGroup {
             }
             // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimGraphSettingsManager {
-                pub const m_settingsGroups: usize = 0x18; // CUtlVector<CSmartPtr<CAnimGraphSettingsGroup>>
-            }
-            // Parent: None
             // Fields count: 4
             //
             // Metadata:
@@ -2942,13 +2441,6 @@ pub mod cs2_dumper {
                 pub const m_poses: usize = 0x10; // CUtlVector<CCachedPose>
                 pub const m_nBoneCount: usize = 0x28; // int32
                 pub const m_nMorphCount: usize = 0x2C; // int32
-            }
-            // Parent: CStaticPoseCache
-            // Fields count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CStaticPoseCacheBuilder {
             }
             // Parent: None
             // Fields count: 0
@@ -3004,14 +2496,6 @@ pub mod cs2_dumper {
                 pub const m_group: usize = 0x20; // CGlobalSymbol
                 pub const m_tagID: usize = 0x28; // AnimTagID
                 pub const m_bIsReferenced: usize = 0x40; // bool
-            }
-            // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimTagManagerUpdater {
-                pub const m_tags: usize = 0x18; // CUtlVector<CSmartPtr<CAnimTagBase>>
             }
             // Parent: CAnimTagBase
             // Fields count: 7
@@ -3151,17 +2635,6 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             pub mod CTaskStatusAnimTag {
             }
-            // Parent: None
-            // Fields count: 4
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimComponentUpdater {
-                pub const m_name: usize = 0x18; // CUtlString
-                pub const m_id: usize = 0x20; // AnimComponentID
-                pub const m_networkMode: usize = 0x24; // AnimNodeNetworkMode
-                pub const m_bStartEnabled: usize = 0x28; // bool
-            }
             // Parent: CAnimComponentUpdater
             // Fields count: 1
             //
@@ -3248,6 +2721,15 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            pub mod CAnimMotorUpdaterBase {
+                pub const m_name: usize = 0x10; // CUtlString
+                pub const m_bDefault: usize = 0x18; // bool
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             pub mod WeightList {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_weights: usize = 0x8; // CUtlVector<float32>
@@ -3290,6 +2772,16 @@ pub mod cs2_dumper {
                 pub const m_stateMachine: usize = 0x30; // CAnimStateMachineUpdater
             }
             // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CAnimStateMachineUpdater {
+                pub const m_states: usize = 0x8; // CUtlVector<CStateUpdateData>
+                pub const m_transitions: usize = 0x20; // CUtlVector<CTransitionUpdateData>
+                pub const m_startStateIndex: usize = 0x50; // int32
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -3309,6 +2801,42 @@ pub mod cs2_dumper {
                 pub const m_motionGraphConfigs: usize = 0xD0; // CUtlVector<CMotionGraphConfig>
                 pub const m_sampleToConfig: usize = 0xE8; // CUtlVector<int32>
                 pub const m_hIsActiveScript: usize = 0x100; // AnimScriptHandle
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CMotionSearchDB {
+                pub const m_rootNode: usize = 0x0; // CMotionSearchNode
+                pub const m_residualQuantizer: usize = 0x80; // CProductQuantizer
+                pub const m_codeIndices: usize = 0xA0; // CUtlVector<MotionDBIndex>
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CMotionGraph {
+                pub const m_paramSpans: usize = 0x10; // CParamSpanUpdater
+                pub const m_tags: usize = 0x28; // CUtlVector<TagSpan_t>
+                pub const m_pRootNode: usize = 0x40; // CSmartPtr<CMotionNode>
+                pub const m_nParameterCount: usize = 0x48; // int32
+                pub const m_nConfigStartIndex: usize = 0x4C; // int32
+                pub const m_nConfigCount: usize = 0x50; // int32
+                pub const m_bLoop: usize = 0x54; // bool
+            }
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CMotionGraphConfig {
+                pub const m_paramValues: usize = 0x0; // float32[4]
+                pub const m_flDuration: usize = 0x10; // float32
+                pub const m_nMotionIndex: usize = 0x14; // MotionIndex
+                pub const m_nSampleStart: usize = 0x18; // int32
+                pub const m_nSampleCount: usize = 0x1C; // int32
             }
             // Parent: None
             // Fields count: 1
@@ -3362,31 +2890,10 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            pub mod CMotionSearchDB {
-                pub const m_rootNode: usize = 0x0; // CMotionSearchNode
-                pub const m_residualQuantizer: usize = 0x80; // CProductQuantizer
-                pub const m_codeIndices: usize = 0xA0; // CUtlVector<MotionDBIndex>
-            }
-            // Parent: None
-            // Fields count: 7
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CMotionGraph {
-                pub const m_paramSpans: usize = 0x10; // CParamSpanUpdater
-                pub const m_tags: usize = 0x28; // CUtlVector<TagSpan_t>
-                pub const m_pRootNode: usize = 0x40; // CSmartPtr<CMotionNode>
-                pub const m_nParameterCount: usize = 0x48; // int32
-                pub const m_nConfigStartIndex: usize = 0x4C; // int32
-                pub const m_nConfigCount: usize = 0x50; // int32
-                pub const m_bLoop: usize = 0x54; // bool
-            }
-            // Parent: CMotionGraph
-            // Fields count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CEditableMotionGraph {
+            pub mod TagSpan_t {
+                pub const m_tagIndex: usize = 0x0; // int32
+                pub const m_startCycle: usize = 0x4; // float32
+                pub const m_endCycle: usize = 0x8; // float32
             }
             // Parent: None
             // Fields count: 2
@@ -3396,6 +2903,13 @@ pub mod cs2_dumper {
             pub mod CMotionNode {
                 pub const m_name: usize = 0x18; // CUtlString
                 pub const m_id: usize = 0x20; // AnimNodeID
+            }
+            // Parent: CMotionGraph
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CEditableMotionGraph {
             }
             // Parent: CMotionNode
             // Fields count: 3
@@ -3555,15 +3069,6 @@ pub mod cs2_dumper {
                 pub const m_bFilterByTimeRemaining: usize = 0x58; // bool
                 pub const m_flMinTimeRemaining: usize = 0x5C; // float32
             }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimMotorUpdaterBase {
-                pub const m_name: usize = 0x10; // CUtlString
-                pub const m_bDefault: usize = 0x18; // bool
-            }
             // Parent: CAnimMotorUpdaterBase
             // Fields count: 1
             //
@@ -3622,6 +3127,15 @@ pub mod cs2_dumper {
                 pub const m_bTargetIsPosition: usize = 0xC8; // bool
             }
             // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPoseHandle {
+                pub const m_nIndex: usize = 0x0; // uint16
+                pub const m_eType: usize = 0x2; // PoseType_t
+            }
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
@@ -3656,6 +3170,24 @@ pub mod cs2_dumper {
                 pub const m_bEnableStretching: usize = 0x50; // bool
                 pub const m_flMaxStretchAmount: usize = 0x54; // float32
                 pub const m_flStretchExtensionScale: usize = 0x58; // float32
+            }
+            // Parent: None
+            // Fields count: 11
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FootFixedData_t {
+                pub const m_vToeOffset: usize = 0x0; // VectorAligned
+                pub const m_vHeelOffset: usize = 0x10; // VectorAligned
+                pub const m_nTargetBoneIndex: usize = 0x20; // int32
+                pub const m_nAnkleBoneIndex: usize = 0x24; // int32
+                pub const m_nIKAnchorBoneIndex: usize = 0x28; // int32
+                pub const m_ikChainIndex: usize = 0x2C; // int32
+                pub const m_flMaxIKLength: usize = 0x30; // float32
+                pub const m_nFootIndex: usize = 0x34; // int32
+                pub const m_nTagIndex: usize = 0x38; // int32
+                pub const m_flMaxRotationLeft: usize = 0x3C; // float32
+                pub const m_flMaxRotationRight: usize = 0x40; // float32
             }
             // Parent: None
             // Fields count: 7
@@ -3766,19 +3298,6 @@ pub mod cs2_dumper {
                 pub const m_ChainsToSolveData: usize = 0x0; // CUtlVector<ChainToSolveData_t>
                 pub const m_bMatchTargetOrientation: usize = 0x18; // bool
             }
-            // Parent: None
-            // Fields count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimParameterBase {
-                pub const m_name: usize = 0x18; // CGlobalSymbol
-                pub const m_group: usize = 0x20; // CUtlString
-                pub const m_id: usize = 0x28; // AnimParamID
-                pub const m_componentName: usize = 0x40; // CUtlString
-                pub const m_bNetworkingRequested: usize = 0x60; // bool
-                pub const m_bIsReferenced: usize = 0x61; // bool
-            }
             // Parent: CAnimParameterBase
             // Fields count: 6
             //
@@ -3885,14 +3404,6 @@ pub mod cs2_dumper {
                 pub const m_eScriptType: usize = 0x50; // AnimScriptType
             }
             // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimScriptManager {
-                pub const m_scriptInfo: usize = 0x10; // CUtlVector<ScriptInfo_t>
-            }
-            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -3927,32 +3438,12 @@ pub mod cs2_dumper {
                 pub const m_bIsPassthrough: usize = 0x0; // bitfield:1
             }
             // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimStateMachineUpdater {
-                pub const m_states: usize = 0x8; // CUtlVector<CStateUpdateData>
-                pub const m_transitions: usize = 0x20; // CUtlVector<CTransitionUpdateData>
-                pub const m_startStateIndex: usize = 0x50; // int32
-            }
-            // Parent: None
             // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CAnimUpdateNodeRef {
                 pub const m_nodeIndex: usize = 0x8; // int32
-            }
-            // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimUpdateNodeBase {
-                pub const m_nodePath: usize = 0x18; // CAnimNodePath
-                pub const m_networkMode: usize = 0x48; // AnimNodeNetworkMode
-                pub const m_name: usize = 0x50; // CUtlString
             }
             // Parent: CAnimUpdateNodeBase
             // Fields count: 6
@@ -4059,24 +3550,6 @@ pub mod cs2_dumper {
             pub mod CDirectPlaybackTagData {
                 pub const m_sequenceName: usize = 0x0; // CUtlString
                 pub const m_tags: usize = 0x8; // CUtlVector<TagSpan_t>
-            }
-            // Parent: None
-            // Fields count: 11
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod FootFixedData_t {
-                pub const m_vToeOffset: usize = 0x0; // VectorAligned
-                pub const m_vHeelOffset: usize = 0x10; // VectorAligned
-                pub const m_nTargetBoneIndex: usize = 0x20; // int32
-                pub const m_nAnkleBoneIndex: usize = 0x24; // int32
-                pub const m_nIKAnchorBoneIndex: usize = 0x28; // int32
-                pub const m_ikChainIndex: usize = 0x2C; // int32
-                pub const m_flMaxIKLength: usize = 0x30; // float32
-                pub const m_nFootIndex: usize = 0x34; // int32
-                pub const m_nTagIndex: usize = 0x38; // int32
-                pub const m_flMaxRotationLeft: usize = 0x3C; // float32
-                pub const m_flMaxRotationRight: usize = 0x40; // float32
             }
             // Parent: None
             // Fields count: 2
@@ -4327,25 +3800,6 @@ pub mod cs2_dumper {
             pub mod CZeroPoseUpdateNode {
             }
             // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod TagSpan_t {
-                pub const m_tagIndex: usize = 0x0; // int32
-                pub const m_startCycle: usize = 0x4; // float32
-                pub const m_endCycle: usize = 0x8; // float32
-            }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAnimNodePath {
-                pub const m_path: usize = 0x0; // AnimNodeID[11]
-                pub const m_nCount: usize = 0x2C; // int32
-            }
-            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -4362,27 +3816,6 @@ pub mod cs2_dumper {
             pub mod MotionIndex {
                 pub const m_nGroup: usize = 0x0; // uint16
                 pub const m_nMotion: usize = 0x2; // uint16
-            }
-            // Parent: None
-            // Fields count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CMotionGraphConfig {
-                pub const m_paramValues: usize = 0x0; // float32[4]
-                pub const m_flDuration: usize = 0x10; // float32
-                pub const m_nMotionIndex: usize = 0x14; // MotionIndex
-                pub const m_nSampleStart: usize = 0x18; // int32
-                pub const m_nSampleCount: usize = 0x1C; // int32
-            }
-            // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CPoseHandle {
-                pub const m_nIndex: usize = 0x0; // uint16
-                pub const m_eType: usize = 0x2; // PoseType_t
             }
             // Parent: None
             // Fields count: 3
