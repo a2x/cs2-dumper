@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-04 13:40:42.514657500 UTC
+// 2024-04-05 17:13:47.447480800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
@@ -20,7 +20,7 @@ pub mod cs2_dumper {
         pub const sprint: usize = 0x172EF40;
         pub const turnleft: usize = 0x172F180;
         pub const turnright: usize = 0x172F210;
-        pub const use: usize = 0x172F4E0;
+        pub const r#use: usize = 0x172F4E0;
         pub const zoom: usize = 0x192A440;
     }
 }

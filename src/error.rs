@@ -17,9 +17,6 @@ pub enum Error {
     #[error(transparent)]
     Serde(#[from] serde_json::Error),
 
-    #[error("index {idx} is out of bounds for array with length {len}")]
-    OutOfBounds { idx: usize, len: usize },
-
     #[error("{0}")]
     Other(&'static str),
 }

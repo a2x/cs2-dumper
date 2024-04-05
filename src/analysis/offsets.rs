@@ -128,13 +128,13 @@ pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap>
         ("matchmaking.dll", matchmaking::offsets),
     ];
 
-    for (module_name, callback) in &modules {
+    for (module_name, offsets) in &modules {
         let module = process.module_by_name(module_name)?;
         let buf = process.read_raw(module.base, module.size as _)?;
 
         let view = PeView::from_bytes(&buf)?;
 
-        map.insert(module_name.to_string(), callback(view));
+        map.insert(module_name.to_string(), offsets(view));
     }
 
     Ok(map)

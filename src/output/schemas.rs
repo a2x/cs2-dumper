@@ -32,7 +32,7 @@ impl CodeGen for SchemaMap {
                         false,
                         |fmt| {
                             for enum_ in enums {
-                                let ty = match enum_.alignment {
+                                let type_name = match enum_.alignment {
                                     1 => "byte",
                                     2 => "ushort",
                                     4 => "uint",
@@ -47,7 +47,7 @@ impl CodeGen for SchemaMap {
                                     &format!(
                                         "public enum {} : {}",
                                         Self::sanitize_name(&enum_.name),
-                                        ty
+                                        type_name
                                     ),
                                     false,
                                     |fmt| {
@@ -90,7 +90,7 @@ impl CodeGen for SchemaMap {
                                             writeln!(
                                                 fmt,
                                                 "public const nint {} = {:#X}; // {}",
-                                                field.name, field.offset, field.ty
+                                                field.name, field.offset, field.type_name
                                             )?;
                                         }
 
@@ -136,7 +136,7 @@ impl CodeGen for SchemaMap {
                             false,
                             |fmt| {
                                 for enum_ in enums {
-                                    let ty = match enum_.alignment {
+                                    let type_name = match enum_.alignment {
                                         1 => "uint8_t",
                                         2 => "uint16_t",
                                         4 => "uint32_t",
@@ -151,7 +151,7 @@ impl CodeGen for SchemaMap {
                                         &format!(
                                             "enum class {} : {}",
                                             Self::sanitize_name(&enum_.name),
-                                            ty
+                                            type_name
                                         ),
                                         true,
                                         |fmt| {
@@ -191,7 +191,7 @@ impl CodeGen for SchemaMap {
                                                 writeln!(
                                                     fmt,
                                                     "constexpr std::ptrdiff_t {} = {:#X}; // {}",
-                                                    field.name, field.offset, field.ty
+                                                    field.name, field.offset, field.type_name
                                                 )?;
                                             }
 
@@ -236,10 +236,10 @@ impl CodeGen for SchemaMap {
                                     "type": "NetworkChangeCallback",
                                     "name": name,
                                 }),
-                                ClassMetadata::NetworkVarNames { name, ty } => json!({
+                                ClassMetadata::NetworkVarNames { name, type_name } => json!({
                                     "type": "NetworkVarNames",
                                     "name": name,
-                                    "ty": ty,
+                                    "type_name": type_name,
                                 }),
                                 ClassMetadata::Unknown { name } => json!({
                                     "type": "Unknown",
@@ -268,7 +268,7 @@ impl CodeGen for SchemaMap {
                             .map(|member| (&member.name, member.value))
                             .collect();
 
-                        let ty = match enum_.alignment {
+                        let type_name = match enum_.alignment {
                             1 => "uint8",
                             2 => "uint16",
                             4 => "uint32",
@@ -280,7 +280,7 @@ impl CodeGen for SchemaMap {
                             Self::sanitize_name(&enum_.name),
                             json!({
                                 "alignment": enum_.alignment,
-                                "type": ty,
+                                "type": type_name,
                                 "members": members,
                             }),
                         )
@@ -324,7 +324,7 @@ impl CodeGen for SchemaMap {
                             false,
                             |fmt| {
                                 for enum_ in enums {
-                                    let ty = match enum_.alignment {
+                                    let type_name = match enum_.alignment {
                                         1 => "u8",
                                         2 => "u16",
                                         4 => "u32",
@@ -338,7 +338,7 @@ impl CodeGen for SchemaMap {
                                     fmt.block(
                                         &format!(
                                             "#[repr({})]\npub enum {}",
-                                            ty,
+                                            type_name,
                                             Self::sanitize_name(&enum_.name),
                                         ),
                                         false,
@@ -381,7 +381,7 @@ impl CodeGen for SchemaMap {
                                                 writeln!(
                                                     fmt,
                                                     "pub const {}: usize = {:#X}; // {}",
-                                                    field.name, field.offset, field.ty
+                                                    field.name, field.offset, field.type_name
                                                 )?;
                                             }
 
@@ -417,8 +417,8 @@ fn write_metadata(fmt: &mut Formatter<'_>, metadata: &[ClassMetadata]) -> fmt::R
             ClassMetadata::NetworkChangeCallback { name } => {
                 writeln!(fmt, "// NetworkChangeCallback: {}", name)?;
             }
-            ClassMetadata::NetworkVarNames { name, ty } => {
-                writeln!(fmt, "// NetworkVarNames: {} ({})", name, ty)?;
+            ClassMetadata::NetworkVarNames { name, type_name } => {
+                writeln!(fmt, "// NetworkVarNames: {} ({})", name, type_name)?;
             }
             ClassMetadata::Unknown { name } => {
                 writeln!(fmt, "// {}", name)?;

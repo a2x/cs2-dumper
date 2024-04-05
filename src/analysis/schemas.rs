@@ -17,14 +17,14 @@ use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
 
-#[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub enum ClassMetadata {
     Unknown { name: String },
     NetworkChangeCallback { name: String },
-    NetworkVarNames { name: String, ty: String },
+    NetworkVarNames { name: String, type_name: String },
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Class {
     pub name: String,
     pub module_name: String,
@@ -33,14 +33,14 @@ pub struct Class {
     pub fields: Vec<ClassField>,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct ClassField {
     pub name: String,
-    pub ty: String,
+    pub type_name: String,
     pub offset: u32,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Enum {
     pub name: String,
     pub alignment: u8,
@@ -48,13 +48,13 @@ pub struct Enum {
     pub members: Vec<EnumMember>,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct EnumMember {
     pub name: String,
     pub value: i64,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct TypeScope {
     pub name: String,
     pub classes: Vec<Class>,
@@ -120,6 +120,10 @@ fn read_class_binding_fields(
     process: &mut IntoProcessInstanceArcBox<'_>,
     binding: &SchemaClassBinding,
 ) -> Result<Vec<ClassField>> {
+    if binding.fields.is_null() {
+        return Err(Error::Other("schema class fields is null"));
+    }
+
     (0..binding.num_fields)
         .map(|i| {
             let field_ptr: Pointer64<SchemaClassFieldData> = binding
@@ -131,18 +135,18 @@ fn read_class_binding_fields(
             let field = field_ptr.read(process)?;
 
             if field.type_.is_null() {
-                return Err(Error::Other("field schema type is null"));
+                return Err(Error::Other("schema field type is null"));
             }
 
             let name = field.name.read_string(process)?.to_string();
             let type_ = field.type_.read(process)?;
 
             // TODO: Parse this properly.
-            let ty = type_.name.read_string(process)?.replace(" ", "");
+            let type_name = type_.name.read_string(process)?.replace(" ", "");
 
             Ok(ClassField {
                 name,
-                ty,
+                type_name,
                 offset: field.offset,
             })
         })
@@ -154,18 +158,18 @@ fn read_class_binding_metadata(
     binding: &SchemaClassBinding,
 ) -> Result<Vec<ClassMetadata>> {
     if binding.static_metadata.is_null() {
-        return Err(Error::Other("class metadata is null"));
+        return Err(Error::Other("schema class metadata is null"));
     }
 
     (0..binding.num_static_metadata)
         .map(|i| {
-            let metadata_ptr: Pointer64<SchemaMetadataEntryData> =
-                binding.static_metadata.offset(i as _).into();
+            let metadata_ptr =
+                Pointer64::<SchemaMetadataEntryData>::from(binding.static_metadata.offset(i as _));
 
             let metadata = metadata_ptr.read(process)?;
 
             if metadata.network_value.is_null() {
-                return Err(Error::Other("class metadata network value is null"));
+                return Err(Error::Other("schema class metadata network value is null"));
             }
 
             let name = metadata.name.read_string(process)?.to_string();
@@ -181,9 +185,9 @@ fn read_class_binding_metadata(
                     let var_value = network_value.u.var_value;
 
                     let name = var_value.name.read_string(process)?.to_string();
-                    let ty = var_value.ty.read_string(process)?.replace(" ", "");
+                    let type_name = var_value.ty.read_string(process)?.replace(" ", "");
 
-                    ClassMetadata::NetworkVarNames { name, ty }
+                    ClassMetadata::NetworkVarNames { name, type_name }
                 },
                 _ => ClassMetadata::Unknown { name },
             };
@@ -260,53 +264,16 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
         .scanner()
         .finds_code(pattern!("488905${'} 4c8d45"), &mut save)
     {
-        return Err(Error::Other("unable to find schema system signature"));
+        return Err(Error::Other("unable to find schema system pattern"));
     }
 
-    let schema_system: SchemaSystem = process.read(module.base + save[1]).data_part()?;
+    let schema_system: SchemaSystem = process.read(module.base + save[1])?;
 
     if schema_system.num_registrations == 0 {
         return Err(Error::Other("no schema system registrations found"));
     }
 
     Ok(schema_system)
-}
-
-fn read_class_bindings(
-    process: &mut IntoProcessInstanceArcBox<'_>,
-    type_scope_ptr: Pointer64<SchemaSystemTypeScope>,
-) -> Result<Vec<Class>> {
-    let tree: UtlRbTree = process.read(type_scope_ptr.address() + 0x4C8)?;
-
-    let classes = (0..1000) // TODO: `num_elements` doesn't seem to work for all modules.
-        .filter_map(|i| {
-            let element = tree.elements.at(i as _).read(process).ok()?;
-
-            let binding_ptr = Pointer64::<SchemaTypeDeclaredClass>::from(element.data.address())
-                .read(process)
-                .ok()?
-                .binding;
-
-            if binding_ptr.is_null() {
-                return None;
-            }
-
-            read_class_binding(process, binding_ptr).ok()
-        })
-        .collect();
-
-    Ok(classes)
-}
-
-fn read_enum_bindings(
-    process: &mut IntoProcessInstanceArcBox<'_>,
-    type_scope_ptr: Pointer64<SchemaSystemTypeScope>,
-) -> Result<Vec<Enum>> {
-    let _tree: UtlRbTree = process.read(type_scope_ptr.address() + 0x4F8)?;
-
-    // TODO: Implement this.
-
-    Ok(Vec::new())
 }
 
 fn read_type_scopes(
@@ -317,22 +284,26 @@ fn read_type_scopes(
 
     (0..type_scopes.size)
         .map(|i| {
-            let type_scope_ptr = type_scopes.get(process, i as _)?;
+            let type_scope_ptr = type_scopes.element(process, i as _)?;
             let type_scope = type_scope_ptr.read(process)?;
 
             let name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
                 .to_string_lossy()
                 .to_string();
 
-            let classes = read_class_bindings(process, type_scope_ptr)?;
-            let enums = read_enum_bindings(process, type_scope_ptr)?;
+            let classes: Vec<_> = type_scope
+                .class_bindings
+                .elements(process)?
+                .iter()
+                .filter_map(|ptr| read_class_binding(process, *ptr).ok())
+                .collect();
 
-            debug!(
-                "found type scope: {} (classes count: {}) (enums count: {})",
-                name,
-                classes.len(),
-                enums.len()
-            );
+            let enums: Vec<_> = type_scope
+                .enum_bindings
+                .elements(process)?
+                .iter()
+                .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
+                .collect();
 
             Ok(TypeScope {
                 name,

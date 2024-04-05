@@ -54,13 +54,12 @@ fn read_interfaces(
 ) -> Result<Vec<Interface>> {
     let mut ifaces = Vec::new();
 
-    let mut reg_ptr = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
+    let mut cur_reg = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
 
-    while !reg_ptr.is_null() {
-        let reg = reg_ptr.read(process)?;
+    while !cur_reg.is_null() {
+        let reg = cur_reg.read(process)?;
         let name = reg.name.read_string(process)?.to_string();
-
-        let value = (reg.create_fn - module.base) as u32;
+        let value = (reg.create_fn.address() - module.base) as u32;
 
         debug!(
             "found interface: {} at {:#X} ({} + {:#X})",
@@ -72,7 +71,7 @@ fn read_interfaces(
 
         ifaces.push(Interface { name, value });
 
-        reg_ptr = reg.next;
+        cur_reg = reg.next;
     }
 
     // Sort interfaces by name.

@@ -1,14 +1,49 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-04 13:40:42.514657500 UTC
+// 2024-04-05 17:13:47.447480800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: engine2.dll
-        // Classes count: 15
-        // Enums count: 0
+        // Classes count: 2
+        // Enums count: 4
         pub mod engine2_dll {
+            // Alignment: 4
+            // Members count: 3
+            #[repr(u32)]
+            pub enum EntityDormancyType_t {
+                ENTITY_NOT_DORMANT = 0x0,
+                ENTITY_DORMANT = 0x1,
+                ENTITY_SUSPENDED = 0x2
+            }
+            // Alignment: 4
+            // Members count: 4
+            #[repr(u32)]
+            pub enum EntityIOTargetType_t {
+                ENTITY_IO_TARGET_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ENTITY_IO_TARGET_ENTITYNAME = 0x2,
+                ENTITY_IO_TARGET_EHANDLE = 0x6,
+                ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
+            }
+            // Alignment: 4
+            // Members count: 3
+            #[repr(u32)]
+            pub enum SpawnDebugOverrideState_t {
+                SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
+                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
+                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
+            }
+            // Alignment: 4
+            // Members count: 5
+            #[repr(u32)]
+            pub enum SpawnDebugRestrictionOverrideState_t {
+                SPAWN_DEBUG_RESTRICT_NONE = 0x0,
+                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
+            }
             // Parent: None
             // Fields count: 11
             //
@@ -38,107 +73,6 @@ pub mod cs2_dumper {
                 pub const m_pEntity: usize = 0x10; // CEntityIdentity*
                 pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
                 pub const m_bVisibleinPVS: usize = 0x30; // bool
-            }
-            // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod TestResource_t {
-                pub const m_name: usize = 0x0; // CUtlString
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVoxelVisibility {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCRenderMesh {
-            }
-            // Parent: None
-            // Fields count: 6
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CFuseSymbolTable {
-                pub const m_constants: usize = 0x0; // CUtlVector<ConstantInfo_t>
-                pub const m_variables: usize = 0x18; // CUtlVector<VariableInfo_t>
-                pub const m_functions: usize = 0x30; // CUtlVector<FunctionInfo_t>
-                pub const m_constantMap: usize = 0x48; // CUtlHashtable<CUtlStringToken,int32>
-                pub const m_variableMap: usize = 0x68; // CUtlHashtable<CUtlStringToken,int32>
-                pub const m_functionMap: usize = 0x88; // CUtlHashtable<CUtlStringToken,int32>
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCJavaScriptResource {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeIAnimGraphModelBinding {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCGcExportableExternalData {
-            }
-            // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod ConstantInfo_t {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_nameToken: usize = 0x8; // CUtlStringToken
-                pub const m_flValue: usize = 0xC; // float32
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeManifestTestResource_t {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVPhysXSurfacePropertiesList {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCVSoundStackScriptList {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCChoreoSceneFileData {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCMorphSetData {
             }
         }
     }

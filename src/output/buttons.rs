@@ -79,6 +79,7 @@ impl CodeGen for Vec<Button> {
                 fmt.block("pub mod buttons", false, |fmt| {
                     for button in self {
                         let mut name = button.name.clone();
+
                         if name == "use" {
                             name = format!("r#{}", name);
                         }

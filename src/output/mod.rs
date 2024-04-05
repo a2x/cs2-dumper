@@ -42,16 +42,12 @@ impl<'a> Item<'a> {
 }
 
 trait CodeGen {
-    /// Converts an [`Item`] to formatted C# code.
     fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String>;
 
-    /// Converts an [`Item`] to formatted C++ code.
     fn to_hpp(&self, results: &Results, indent_size: usize) -> Result<String>;
 
-    /// Converts an [`Item`] to formatted JSON.
     fn to_json(&self, results: &Results, indent_size: usize) -> Result<String>;
 
-    /// Converts an [`Item`] to formatted Rust code.
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String>;
 
     #[inline]
@@ -126,7 +122,7 @@ pub struct Results {
     /// Map of offsets to dump.
     pub offsets: OffsetMap,
 
-    /// Map of schema classes and enums to dump.
+    /// Map of schema classes/enums to dump.
     pub schemas: SchemaMap,
 }
 
@@ -152,10 +148,8 @@ impl Results {
         out_dir: P,
         indent_size: usize,
     ) -> Result<()> {
-        // TODO: Make this user-configurable.
         const FILE_EXTS: &[&str] = &["cs", "hpp", "json", "rs"];
 
-        // Create the output directory if it doesn't exist.
         fs::create_dir_all(&out_dir)?;
 
         let items = [
@@ -164,18 +158,12 @@ impl Results {
             ("offsets", Item::Offsets(&self.offsets)),
         ];
 
-        self.dump_items(&items, out_dir.as_ref(), indent_size, FILE_EXTS)?;
-
-        // Write a new file for each module.
-        for (module_name, (classes, enums)) in &self.schemas {
-            let schemas = [(module_name.clone(), (classes.clone(), enums.clone()))].into();
-
-            let item = Item::Schemas(&schemas);
-
-            self.dump_item(&item, out_dir.as_ref(), indent_size, FILE_EXTS, module_name)?;
+        for (file_name, item) in &items {
+            self.dump_item(item, &out_dir, indent_size, FILE_EXTS, file_name)?;
         }
 
-        self.dump_info_file(process, out_dir)?;
+        self.dump_schemas(&out_dir, indent_size, FILE_EXTS)?;
+        self.dump_info(process, &out_dir)?;
 
         Ok(())
     }
@@ -194,19 +182,6 @@ impl Results {
         Ok(())
     }
 
-    fn dump_info_file<P: AsRef<Path>>(
-        &self,
-        process: &mut IntoProcessInstanceArcBox<'_>,
-        out_dir: P,
-    ) -> Result<()> {
-        let content = &serde_json::to_string_pretty(&json!({
-            "timestamp": self.timestamp.to_rfc3339(),
-            "build_number": self.read_build_number(process).unwrap_or(0),
-        }))?;
-
-        self.dump_file(out_dir.as_ref(), "info", "json", &content)
-    }
-
     fn dump_item<P: AsRef<Path>>(
         &self,
         item: &Item,
@@ -218,21 +193,36 @@ impl Results {
         for ext in file_exts {
             let content = item.generate(self, indent_size, ext)?;
 
-            self.dump_file(out_dir.as_ref(), file_name, ext, &content)?;
+            self.dump_file(&out_dir, file_name, ext, &content)?;
         }
 
         Ok(())
     }
 
-    fn dump_items<P: AsRef<Path>>(
+    fn dump_info<P: AsRef<Path>>(
         &self,
-        items: &[(&str, Item)],
+        process: &mut IntoProcessInstanceArcBox<'_>,
+        out_dir: P,
+    ) -> Result<()> {
+        let content = &serde_json::to_string_pretty(&json!({
+            "timestamp": self.timestamp.to_rfc3339(),
+            "build_number": self.read_build_number(process).unwrap_or(0),
+        }))?;
+
+        self.dump_file(&out_dir, "info", "json", &content)
+    }
+
+    fn dump_schemas<P: AsRef<Path>>(
+        &self,
         out_dir: P,
         indent_size: usize,
         file_exts: &[&str],
     ) -> Result<()> {
-        for (file_name, item) in items {
-            self.dump_item(item, out_dir.as_ref(), indent_size, file_exts, file_name)?;
+        for (module_name, (classes, enums)) in &self.schemas {
+            let map = SchemaMap::from([(module_name.clone(), (classes.clone(), enums.clone()))]);
+            let item = Item::Schemas(&map);
+
+            self.dump_item(&item, &out_dir, indent_size, file_exts, &module_name)?;
         }
 
         Ok(())
@@ -242,10 +232,10 @@ impl Results {
         self.offsets
             .iter()
             .find_map(|(module_name, offsets)| {
-                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?;
+                let (_name, value) = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?;
                 let module = process.module_by_name(module_name).ok()?;
 
-                process.read(module.base + offset.1).ok()
+                process.read(module.base + value).ok()
             })
             .ok_or(Error::Other("unable to read build number"))
     }

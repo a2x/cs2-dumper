@@ -15,6 +15,7 @@ use output::Results;
 
 mod analysis;
 mod error;
+mod mem;
 mod output;
 mod source2;
 
