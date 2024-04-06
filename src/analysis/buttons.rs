@@ -42,13 +42,14 @@ fn read_buttons(
 ) -> Result<Vec<Button>> {
     let mut buttons = Vec::new();
 
-    let mut key_ptr = Pointer64::<KeyButton>::from(process.read_addr64(list_addr)?);
+    let mut cur_button = Pointer64::<KeyButton>::from(process.read_addr64(list_addr)?);
 
-    while !key_ptr.is_null() {
-        let key = key_ptr.read(process)?;
-        let name = key.name.read_string(process)?.to_string();
+    while !cur_button.is_null() {
+        let button = cur_button.read(process)?;
+        let name = button.name.read_string(process)?.to_string();
 
-        let value = ((key_ptr.address() - module.base) + offset_of!(KeyButton.state) as i64) as u32;
+        let value =
+            ((cur_button.address() - module.base) + offset_of!(KeyButton.state) as i64) as u32;
 
         debug!(
             "found button: {} at {:#X} ({} + {:#X})",
@@ -60,7 +61,7 @@ fn read_buttons(
 
         buttons.push(Button { name, value });
 
-        key_ptr = key.next;
+        cur_button = button.next;
     }
 
     // Sort buttons by name.

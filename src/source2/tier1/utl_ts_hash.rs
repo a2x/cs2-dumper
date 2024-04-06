@@ -17,9 +17,9 @@ unsafe impl<D: 'static> Pod for HashAllocatedBlob<D> {}
 
 #[repr(C)]
 pub struct HashBucket<D, K> {
-    pad_0000: [u8; 0x18],                                 // 0x0000,
-    pub first: Pointer64<HashFixedData<D, K>>,            // 0x0018
-    pub first_uncommited: Pointer64<HashFixedData<D, K>>, // 0x0020
+    pad_0000: [u8; 0x18],                                  // 0x0000,
+    pub first: Pointer64<HashFixedData<D, K>>,             // 0x0018
+    pub first_uncommitted: Pointer64<HashFixedData<D, K>>, // 0x0020
 }
 
 #[repr(C)]
@@ -45,21 +45,23 @@ pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
 impl<D: Pod + IsNull, const C: usize, K: Pod> UtlTsHash<D, C, K> {
     /// Returns all elements in the hash table.
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
+        // TODO: Refactor this.
+
         let mut elements: Vec<_> = self
             .buckets
             .iter()
             .flat_map(|bucket| {
-                let mut element_ptr = bucket.first;
+                let mut cur_element = bucket.first;
 
                 let mut list = Vec::new();
 
-                while !element_ptr.is_null() {
-                    if let Ok(element) = element_ptr.read(process) {
+                while !cur_element.is_null() {
+                    if let Ok(element) = cur_element.read(process) {
                         if !element.data.is_null() {
                             list.push(element.data);
                         }
 
-                        element_ptr = element.next;
+                        cur_element = element.next;
                     }
                 }
 
@@ -86,8 +88,6 @@ impl<D: Pod + IsNull, const C: usize, K: Pod> UtlTsHash<D, C, K> {
                 }
             }
         }
-
-        // TODO: Separate allocated and unallocated data.
 
         Ok(elements)
     }

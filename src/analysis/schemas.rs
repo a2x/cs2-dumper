@@ -185,7 +185,7 @@ fn read_class_binding_metadata(
                     let var_value = network_value.u.var_value;
 
                     let name = var_value.name.read_string(process)?.to_string();
-                    let type_name = var_value.ty.read_string(process)?.replace(" ", "");
+                    let type_name = var_value.type_name.read_string(process)?.replace(" ", "");
 
                     ClassMetadata::NetworkVarNames { name, type_name }
                 },
@@ -304,6 +304,14 @@ fn read_type_scopes(
                 .iter()
                 .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
                 .collect();
+
+            debug!(
+                "found type scope: {} at {:#X} (classes count: {}) (enums count: {})",
+                name,
+                type_scope_ptr.to_umem(),
+                classes.len(),
+                enums.len()
+            );
 
             Ok(TypeScope {
                 name,

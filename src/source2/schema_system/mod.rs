@@ -131,7 +131,7 @@ pub struct SchemaEnumInfoData {
     pub alignment: u8,
     pad_0019: [u8; 0x3],
     pub size: u16,
-    pub static_metadata_count: u16,
+    pub num_static_metadata: u16,
     pub enum_info: Pointer64<SchemaEnumeratorInfoData>,
     pub static_metadata: Pointer64<SchemaMetadataEntryData>,
     pub type_scope: Pointer64<SchemaSystemTypeScope>,

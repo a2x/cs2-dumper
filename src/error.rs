@@ -1,5 +1,7 @@
 use thiserror::Error;
 
+pub type Result<T> = std::result::Result<T, Error>;
+
 #[derive(Debug, Error)]
 pub enum Error {
     #[error(transparent)]
@@ -27,5 +29,3 @@ impl<T> From<memflow::error::PartialError<T>> for Error {
         Error::Memflow(err.into())
     }
 }
-
-pub type Result<T> = std::result::Result<T, Error>;
