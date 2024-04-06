@@ -1,3 +1,3 @@
-pub use input::*;
+pub use input::KeyButton;
 
 pub mod input;

@@ -912,6 +912,11 @@
         ],
         "parent": null
       },
+      "IPhysicsPlayerController": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "OldFeEdge_t": {
         "fields": {
           "c01": 28,
@@ -1360,6 +1365,52 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "VertexPositionColor_t": {
+        "fields": {
+          "m_vPosition": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "VertexPositionNormal_t": {
+        "fields": {
+          "m_vNormal": 12,
+          "m_vPosition": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "constraint_axislimit_t": {
+        "fields": {
+          "flMaxRotation": 4,
+          "flMinRotation": 0,
+          "flMotorMaxTorque": 12,
+          "flMotorTargetAngSpeed": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "constraint_breakableparams_t": {
+        "fields": {
+          "bodyMassScale": 12,
+          "forceLimit": 4,
+          "isActive": 20,
+          "strength": 0,
+          "torqueLimit": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "constraint_hingeparams_t": {
+        "fields": {
+          "constraint": 40,
+          "hingeAxis": 24,
+          "worldAxisDirection": 12,
+          "worldPosition": 0
+        },
+        "metadata": [],
         "parent": null
       },
       "vphysics_save_cphysicsbody_t": {

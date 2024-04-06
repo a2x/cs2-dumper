@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: vphysics2.dll
-        // Classes count: 82
+        // Classes count: 88
         // Enums count: 2
         pub mod vphysics2_dll {
             // Alignment: 4
@@ -241,6 +241,14 @@ pub mod cs2_dumper {
                 pub const flRadius: usize = 0x8; // float32[2]
             }
             // Parent: None
+            // Fields count: 4
+            pub mod constraint_axislimit_t {
+                pub const flMinRotation: usize = 0x0; // float32
+                pub const flMaxRotation: usize = 0x4; // float32
+                pub const flMotorTargetAngSpeed: usize = 0x8; // float32
+                pub const flMotorMaxTorque: usize = 0xC; // float32
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
@@ -261,6 +269,14 @@ pub mod cs2_dumper {
                 pub const f4MinDist: usize = 0x20; // fltx4
                 pub const f4Weight0: usize = 0x30; // fltx4
                 pub const f4RelaxationFactor: usize = 0x40; // fltx4
+            }
+            // Parent: None
+            // Fields count: 4
+            pub mod constraint_hingeparams_t {
+                pub const worldPosition: usize = 0x0; // 
+                pub const worldAxisDirection: usize = 0xC; // 
+                pub const hingeAxis: usize = 0x18; // constraint_axislimit_t
+                pub const constraint: usize = 0x28; // constraint_breakableparams_t
             }
             // Parent: FeSphereRigid_t
             // Fields count: 2
@@ -416,6 +432,12 @@ pub mod cs2_dumper {
                 pub const m_vOrthographicAreas: usize = 0x90; // 
                 pub const m_nFlags: usize = 0x9C; // uint32
                 pub const m_nDebugFlags: usize = 0xA0; // uint32
+            }
+            // Parent: None
+            // Fields count: 2
+            pub mod VertexPositionNormal_t {
+                pub const m_vPosition: usize = 0x0; // 
+                pub const m_vNormal: usize = 0xC; // 
             }
             // Parent: None
             // Fields count: 8
@@ -804,6 +826,10 @@ pub mod cs2_dumper {
                 pub const nCtrlChild: usize = 0xE; // uint16
             }
             // Parent: None
+            // Fields count: 0
+            pub mod IPhysicsPlayerController {
+            }
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
@@ -970,6 +996,15 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 5
+            pub mod constraint_breakableparams_t {
+                pub const strength: usize = 0x0; // float32
+                pub const forceLimit: usize = 0x4; // float32
+                pub const torqueLimit: usize = 0x8; // float32
+                pub const bodyMassScale: usize = 0xC; // float32[2]
+                pub const isActive: usize = 0x14; // bool
+            }
+            // Parent: None
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1060,6 +1095,11 @@ pub mod cs2_dumper {
                 pub const w2: usize = 0x40; // fltx4
                 pub const v1x: usize = 0x50; // fltx4
                 pub const v2: usize = 0x60; // FourVectors2D
+            }
+            // Parent: None
+            // Fields count: 1
+            pub mod VertexPositionColor_t {
+                pub const m_vPosition: usize = 0x0; // 
             }
             // Parent: None
             // Fields count: 3

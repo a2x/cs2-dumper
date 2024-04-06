@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: scenesystem.dll
-        // Classes count: 7
+        // Classes count: 9
         // Enums count: 1
         namespace scenesystem_dll {
             // Alignment: 1
@@ -54,6 +54,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nViewId = 0x0; // uint64
                 constexpr std::ptrdiff_t m_ViewName = 0x8; // CUtlString
             }
+            // Parent: CSSDSMsg_LayerBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSSDSMsg_PostLayer {
+            }
             // Parent: None
             // Fields count: 6
             //
@@ -66,6 +73,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLayerId = 0x20; // uint64
                 constexpr std::ptrdiff_t m_LayerName = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_displayText = 0x30; // CUtlString
+            }
+            // Parent: CSSDSMsg_LayerBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSSDSMsg_PreLayer {
             }
             // Parent: None
             // Fields count: 3

@@ -195,6 +195,13 @@
         ],
         "parent": "AnimationSnapshotBase_t"
       },
+      "AttachmentHandle_t": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "BlendItem_t": {
         "fields": {
           "m_bUseCustomDuration": 56,
@@ -282,6 +289,16 @@
         ],
         "parent": "CUnaryUpdateNode"
       },
+      "CAnimActionUpdater": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CAnimActivity": {
         "fields": {
           "m_nActivity": 16,
@@ -361,6 +378,16 @@
           }
         ],
         "parent": null
+      },
+      "CAnimCycle": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CCycleBase"
       },
       "CAnimData": {
         "fields": {
@@ -630,6 +657,16 @@
           },
           {
             "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CAnimGraphSettingsGroup"
+      },
+      "CAnimGraphSettingsGroup": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
@@ -1155,7 +1192,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CBoneConstraintBase"
       },
       "CBinaryUpdateNode": {
         "fields": {
@@ -1173,6 +1210,16 @@
           }
         ],
         "parent": "CAnimUpdateNodeBase"
+      },
+      "CBindPoseUpdateNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CLeafUpdateNode"
       },
       "CBlend2DUpdateNode": {
         "fields": {
@@ -1235,6 +1282,16 @@
         ],
         "parent": "CAnimUpdateNodeBase"
       },
+      "CBlockSelectionMetricEvaluator": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CMotionMetricEvaluator"
+      },
       "CBodyGroupAnimTag": {
         "fields": {
           "m_bodyGroupSettings": 88,
@@ -1273,6 +1330,16 @@
         ],
         "parent": null
       },
+      "CBoneConstraintBase": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CBoneConstraintDotToMorph": {
         "fields": {
           "m_flRemap": 64,
@@ -1286,7 +1353,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CBoneConstraintBase"
       },
       "CBoneConstraintPoseSpaceBone": {
         "fields": {
@@ -1299,6 +1366,14 @@
           }
         ],
         "parent": "CBaseConstraint"
+      },
+      "CBoneConstraintPoseSpaceBone__Input_t": {
+        "fields": {
+          "m_inputValue": 0,
+          "m_outputTransformList": 16
+        },
+        "metadata": [],
+        "parent": null
       },
       "CBoneConstraintPoseSpaceMorph": {
         "fields": {
@@ -1314,6 +1389,14 @@
             "type": "Unknown"
           }
         ],
+        "parent": "CBoneConstraintBase"
+      },
+      "CBoneConstraintPoseSpaceMorph__Input_t": {
+        "fields": {
+          "m_inputValue": 0,
+          "m_outputWeightList": 16
+        },
+        "metadata": [],
         "parent": null
       },
       "CBoneMaskUpdateNode": {
@@ -1422,6 +1505,16 @@
         ],
         "parent": "CAnimUpdateNodeBase"
       },
+      "CChoreoUpdateNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CUnaryUpdateNode"
+      },
       "CClothSettingsAnimTag": {
         "fields": {
           "m_flEaseIn": 84,
@@ -1440,6 +1533,29 @@
           }
         ],
         "parent": "CAnimTagBase"
+      },
+      "CCompressorGroup": {
+        "fields": {
+          "m_boolCompressor": 320,
+          "m_colorCompressor": 344,
+          "m_intCompressor": 296,
+          "m_nCompressorIndex": 128,
+          "m_nElementMask": 200,
+          "m_nElementUniqueID": 176,
+          "m_nFlags": 80,
+          "m_nTotalElementCount": 0,
+          "m_nType": 56,
+          "m_quaternionCompressor": 272,
+          "m_szChannelClass": 8,
+          "m_szElementNames": 152,
+          "m_szGrouping": 104,
+          "m_szVariableName": 32,
+          "m_vector2DCompressor": 368,
+          "m_vector4DCompressor": 392,
+          "m_vectorCompressor": 248
+        },
+        "metadata": [],
+        "parent": null
       },
       "CConcreteAnimParameter": {
         "fields": {
@@ -1491,6 +1607,26 @@
         ],
         "parent": null
       },
+      "CCurrentRotationVelocityMetricEvaluator": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CMotionMetricEvaluator"
+      },
+      "CCurrentVelocityMetricEvaluator": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CMotionMetricEvaluator"
+      },
       "CCycleBase": {
         "fields": {
           "m_flCycle": 0
@@ -1517,7 +1653,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CCycleControlUpdateNode": {
         "fields": {
@@ -1632,7 +1768,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CDistanceRemainingMetricEvaluator": {
         "fields": {
@@ -1666,6 +1802,16 @@
         ],
         "parent": null
       },
+      "CEditableMotionGraph": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CMotionGraph"
+      },
       "CEmitTagActionUpdater": {
         "fields": {
           "m_bIsZeroDuration": 28,
@@ -1677,7 +1823,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CAnimActionUpdater"
       },
       "CEnumAnimParameter": {
         "fields": {
@@ -1708,7 +1854,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CAnimActionUpdater"
       },
       "CFlexController": {
         "fields": {
@@ -1837,6 +1983,16 @@
           }
         ],
         "parent": "CUnaryUpdateNode"
+      },
+      "CFootCycle": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CCycleBase"
       },
       "CFootCycleDefinition": {
         "fields": {
@@ -2148,6 +2304,16 @@
         ],
         "parent": "CUnaryUpdateNode"
       },
+      "CInputStreamUpdateNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CLeafUpdateNode"
+      },
       "CIntAnimParameter": {
         "fields": {
           "m_defaultValue": 120,
@@ -2209,6 +2375,16 @@
         ],
         "parent": "CAnimComponentUpdater"
       },
+      "CLeafUpdateNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CAnimUpdateNodeBase"
+      },
       "CLeanMatrixUpdateNode": {
         "fields": {
           "m_blendSource": 184,
@@ -2228,7 +2404,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CLookAtUpdateNode": {
         "fields": {
@@ -2499,6 +2675,24 @@
         ],
         "parent": null
       },
+      "CMoodVData": {
+        "fields": {
+          "m_animationLayers": 232,
+          "m_nMoodType": 224,
+          "m_sModelName": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataOverlayType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CMorphBundleData": {
         "fields": {
           "m_flULeftSrc": 0,
@@ -2650,7 +2844,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CMotionMatchingUpdateNode": {
         "fields": {
@@ -2684,7 +2878,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CMotionMetricEvaluator": {
         "fields": {
@@ -2971,6 +3165,16 @@
         ],
         "parent": "CNmEvent"
       },
+      "CNmLegacyEvent": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmEvent"
+      },
       "CNmRootMotionData": {
         "fields": {
           "m_flAverageAngularVelocityRadians": 32,
@@ -3058,6 +3262,16 @@
         ],
         "parent": "CNmEvent"
       },
+      "COrientConstraint": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CBaseConstraint"
+      },
       "CParamSpanUpdater": {
         "fields": {
           "m_spans": 0
@@ -3069,6 +3283,16 @@
           }
         ],
         "parent": null
+      },
+      "CParentConstraint": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CBaseConstraint"
       },
       "CParticleAnimTag": {
         "fields": {
@@ -3094,6 +3318,16 @@
           }
         ],
         "parent": "CAnimTagBase"
+      },
+      "CPathAnimMotorUpdater": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CPathAnimMotorUpdaterBase"
       },
       "CPathAnimMotorUpdaterBase": {
         "fields": {
@@ -3226,6 +3460,16 @@
           }
         ],
         "parent": "CAnimMotorUpdaterBase"
+      },
+      "CPointConstraint": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CBaseConstraint"
       },
       "CPoseHandle": {
         "fields": {
@@ -3383,6 +3627,16 @@
           }
         ],
         "parent": null
+      },
+      "CRootUpdateNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CUnaryUpdateNode"
       },
       "CSceneObjectData": {
         "fields": {
@@ -3750,7 +4004,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CSetFacingUpdateNode": {
         "fields": {
@@ -3776,7 +4030,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CAnimActionUpdater"
       },
       "CSingleFrameUpdateNode": {
         "fields": {
@@ -3791,7 +4045,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CLeafUpdateNode"
       },
       "CSlopeComponentUpdater": {
         "fields": {
@@ -3991,6 +4245,16 @@
         ],
         "parent": null
       },
+      "CStaticPoseCacheBuilder": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CStaticPoseCache"
+      },
       "CStepsRemainingMetricEvaluator": {
         "fields": {
           "m_flMinStepsRemaining": 104,
@@ -4019,6 +4283,20 @@
           }
         ],
         "parent": "CUnaryUpdateNode"
+      },
+      "CStringAnimTag": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CAnimTagBase"
       },
       "CSubtractUpdateNode": {
         "fields": {
@@ -4050,6 +4328,20 @@
           }
         ],
         "parent": "CConcreteAnimParameter"
+      },
+      "CTaskStatusAnimTag": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CAnimTagBase"
       },
       "CTiltTwistConstraint": {
         "fields": {
@@ -4090,7 +4382,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": null
+        "parent": "CAnimActionUpdater"
       },
       "CTransitionUpdateData": {
         "fields": {
@@ -4232,6 +4524,16 @@
           }
         ],
         "parent": "CUnaryUpdateNode"
+      },
+      "CZeroPoseUpdateNode": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CLeafUpdateNode"
       },
       "ChainToSolveData_t": {
         "fields": {
@@ -4397,6 +4699,13 @@
         ],
         "parent": null
       },
+      "HSequence": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "HitReactFixedSettings_t": {
         "fields": {
           "m_flCounterRotationScale": 20,
@@ -4425,6 +4734,13 @@
         ],
         "parent": null
       },
+      "IKBoneNameAndIndex_t": {
+        "fields": {
+          "m_Name": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "IKDemoCaptureSettings_t": {
         "fields": {
           "m_eMode": 8,
@@ -4439,6 +4755,25 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "IKSolverSettings_t": {
+        "fields": {
+          "m_SolverType": 0,
+          "m_nNumIterations": 4
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "IKTargetSettings_t": {
+        "fields": {
+          "m_AnimgraphParameterNameOrientation": 28,
+          "m_AnimgraphParameterNamePosition": 24,
+          "m_Bone": 8,
+          "m_TargetCoordSystem": 32,
+          "m_TargetSource": 0
+        },
+        "metadata": [],
         "parent": null
       },
       "JiggleBoneSettingsList_t": {

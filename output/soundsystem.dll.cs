@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
-    // Classes count: 49
+    // Classes count: 51
     // Enums count: 13
     public static class SoundsystemDll {
         // Alignment: 4
@@ -196,6 +196,22 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLoudTimeJitter = 0x70; // float32
             public const nint m_flSoftTimeJitter = 0x74; // float32
             public const nint m_grainResources = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+        }
+        // Parent: CVoiceContainerBase
+        // Fields count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CVoiceContainerDefault {
+        }
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MVDataNodeType
+        public static class CDSPPresetMixgroupModifierTable {
+            public const nint m_table = 0x0; // CUtlVector<CDspPresetModifierList>
         }
         // Parent: CSosGroupActionSchema
         // Fields count: 7

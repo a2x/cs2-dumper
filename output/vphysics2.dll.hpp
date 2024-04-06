@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: vphysics2.dll
-        // Classes count: 82
+        // Classes count: 88
         // Enums count: 2
         namespace vphysics2_dll {
             // Alignment: 4
@@ -241,6 +241,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flRadius = 0x8; // float32[2]
             }
             // Parent: None
+            // Fields count: 4
+            namespace constraint_axislimit_t {
+                constexpr std::ptrdiff_t flMinRotation = 0x0; // float32
+                constexpr std::ptrdiff_t flMaxRotation = 0x4; // float32
+                constexpr std::ptrdiff_t flMotorTargetAngSpeed = 0x8; // float32
+                constexpr std::ptrdiff_t flMotorMaxTorque = 0xC; // float32
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
@@ -261,6 +269,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t f4MinDist = 0x20; // fltx4
                 constexpr std::ptrdiff_t f4Weight0 = 0x30; // fltx4
                 constexpr std::ptrdiff_t f4RelaxationFactor = 0x40; // fltx4
+            }
+            // Parent: None
+            // Fields count: 4
+            namespace constraint_hingeparams_t {
+                constexpr std::ptrdiff_t worldPosition = 0x0; // 
+                constexpr std::ptrdiff_t worldAxisDirection = 0xC; // 
+                constexpr std::ptrdiff_t hingeAxis = 0x18; // constraint_axislimit_t
+                constexpr std::ptrdiff_t constraint = 0x28; // constraint_breakableparams_t
             }
             // Parent: FeSphereRigid_t
             // Fields count: 2
@@ -416,6 +432,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vOrthographicAreas = 0x90; // 
                 constexpr std::ptrdiff_t m_nFlags = 0x9C; // uint32
                 constexpr std::ptrdiff_t m_nDebugFlags = 0xA0; // uint32
+            }
+            // Parent: None
+            // Fields count: 2
+            namespace VertexPositionNormal_t {
+                constexpr std::ptrdiff_t m_vPosition = 0x0; // 
+                constexpr std::ptrdiff_t m_vNormal = 0xC; // 
             }
             // Parent: None
             // Fields count: 8
@@ -804,6 +826,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nCtrlChild = 0xE; // uint16
             }
             // Parent: None
+            // Fields count: 0
+            namespace IPhysicsPlayerController {
+            }
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
@@ -970,6 +996,15 @@ namespace cs2_dumper {
             }
             // Parent: None
             // Fields count: 5
+            namespace constraint_breakableparams_t {
+                constexpr std::ptrdiff_t strength = 0x0; // float32
+                constexpr std::ptrdiff_t forceLimit = 0x4; // float32
+                constexpr std::ptrdiff_t torqueLimit = 0x8; // float32
+                constexpr std::ptrdiff_t bodyMassScale = 0xC; // float32[2]
+                constexpr std::ptrdiff_t isActive = 0x14; // bool
+            }
+            // Parent: None
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1060,6 +1095,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t w2 = 0x40; // fltx4
                 constexpr std::ptrdiff_t v1x = 0x50; // fltx4
                 constexpr std::ptrdiff_t v2 = 0x60; // FourVectors2D
+            }
+            // Parent: None
+            // Fields count: 1
+            namespace VertexPositionColor_t {
+                constexpr std::ptrdiff_t m_vPosition = 0x0; // 
             }
             // Parent: None
             // Fields count: 3

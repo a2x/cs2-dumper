@@ -27,7 +27,7 @@ impl CodeGen for SchemaMap {
                     fmt.block(
                         &format!(
                             "public static class {}",
-                            AsPascalCase(Self::sanitize_name(module_name))
+                            AsPascalCase(Self::slugify(module_name))
                         ),
                         false,
                         |fmt| {
@@ -46,11 +46,13 @@ impl CodeGen for SchemaMap {
                                 fmt.block(
                                     &format!(
                                         "public enum {} : {}",
-                                        Self::sanitize_name(&enum_.name),
+                                        Self::slugify(&enum_.name),
                                         type_name
                                     ),
                                     false,
                                     |fmt| {
+                                        // TODO: Handle the case where multiple members share
+                                        // the same value.
                                         let members = enum_
                                             .members
                                             .iter()
@@ -69,21 +71,16 @@ impl CodeGen for SchemaMap {
                                 let parent_name = class
                                     .parent
                                     .as_ref()
-                                    .map(|parent| Self::sanitize_name(&parent.name))
+                                    .map(|parent| Self::slugify(&parent.name))
                                     .unwrap_or_else(|| "None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                if let Some(metadata) = &class.metadata {
-                                    write_metadata(fmt, metadata)?;
-                                }
+                                write_metadata(fmt, &class.metadata)?;
 
                                 fmt.block(
-                                    &format!(
-                                        "public static class {}",
-                                        Self::sanitize_name(&class.name)
-                                    ),
+                                    &format!("public static class {}", Self::slugify(&class.name)),
                                     false,
                                     |fmt| {
                                         for field in &class.fields {
@@ -129,10 +126,7 @@ impl CodeGen for SchemaMap {
                         writeln!(fmt, "// Enums count: {}", enums.len())?;
 
                         fmt.block(
-                            &format!(
-                                "namespace {}",
-                                AsSnakeCase(Self::sanitize_name(module_name))
-                            ),
+                            &format!("namespace {}", AsSnakeCase(Self::slugify(module_name))),
                             false,
                             |fmt| {
                                 for enum_ in enums {
@@ -150,11 +144,13 @@ impl CodeGen for SchemaMap {
                                     fmt.block(
                                         &format!(
                                             "enum class {} : {}",
-                                            Self::sanitize_name(&enum_.name),
+                                            Self::slugify(&enum_.name),
                                             type_name
                                         ),
                                         true,
                                         |fmt| {
+                                            // TODO: Handle the case where multiple members share
+                                            // the same value.
                                             let members = enum_
                                                 .members
                                                 .iter()
@@ -173,18 +169,16 @@ impl CodeGen for SchemaMap {
                                     let parent_name = class
                                         .parent
                                         .as_ref()
-                                        .map(|parent| Self::sanitize_name(&parent.name))
+                                        .map(|parent| Self::slugify(&parent.name))
                                         .unwrap_or_else(|| "None".to_string());
 
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
                                     writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                    if let Some(metadata) = &class.metadata {
-                                        write_metadata(fmt, metadata)?;
-                                    }
+                                    write_metadata(fmt, &class.metadata)?;
 
                                     fmt.block(
-                                        &format!("namespace {}", Self::sanitize_name(&class.name)),
+                                        &format!("namespace {}", Self::slugify(&class.name)),
                                         false,
                                         |fmt| {
                                             for field in &class.fields {
@@ -228,8 +222,6 @@ impl CodeGen for SchemaMap {
 
                         let metadata: Vec<_> = class
                             .metadata
-                            .as_ref()
-                            .unwrap_or(&vec![])
                             .iter()
                             .map(|metadata| match metadata {
                                 ClassMetadata::NetworkChangeCallback { name } => json!({
@@ -249,7 +241,7 @@ impl CodeGen for SchemaMap {
                             .collect();
 
                         (
-                            Self::sanitize_name(&class.name),
+                            Self::slugify(&class.name),
                             json!({
                                 "parent": class.parent.as_ref().map(|parent| &parent.name),
                                 "fields": fields,
@@ -277,7 +269,7 @@ impl CodeGen for SchemaMap {
                         };
 
                         (
-                            Self::sanitize_name(&enum_.name),
+                            Self::slugify(&enum_.name),
                             json!({
                                 "alignment": enum_.alignment,
                                 "type": type_name,
@@ -320,7 +312,7 @@ impl CodeGen for SchemaMap {
                         writeln!(fmt, "// Enums count: {}", enums.len())?;
 
                         fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(Self::sanitize_name(module_name))),
+                            &format!("pub mod {}", AsSnakeCase(Self::slugify(module_name))),
                             false,
                             |fmt| {
                                 for enum_ in enums {
@@ -339,7 +331,7 @@ impl CodeGen for SchemaMap {
                                         &format!(
                                             "#[repr({})]\npub enum {}",
                                             type_name,
-                                            Self::sanitize_name(&enum_.name),
+                                            Self::slugify(&enum_.name),
                                         ),
                                         false,
                                         |fmt| {
@@ -363,18 +355,16 @@ impl CodeGen for SchemaMap {
                                     let parent_name = class
                                         .parent
                                         .as_ref()
-                                        .map(|parent| Self::sanitize_name(&parent.name))
+                                        .map(|parent| Self::slugify(&parent.name))
                                         .unwrap_or_else(|| "None".to_string());
 
                                     writeln!(fmt, "// Parent: {}", parent_name)?;
                                     writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                    if let Some(metadata) = &class.metadata {
-                                        write_metadata(fmt, metadata)?;
-                                    }
+                                    write_metadata(fmt, &class.metadata)?;
 
                                     fmt.block(
-                                        &format!("pub mod {}", Self::sanitize_name(&class.name)),
+                                        &format!("pub mod {}", Self::slugify(&class.name)),
                                         false,
                                         |fmt| {
                                             for field in &class.fields {

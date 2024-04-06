@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: animationsystem.dll
-        // Classes count: 330
+        // Classes count: 362
         // Enums count: 70
         namespace animationsystem_dll {
             // Alignment: 4
@@ -692,6 +692,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nEndFrame = 0x4; // int32
                 constexpr std::ptrdiff_t m_segmentIndexArray = 0x8; // CUtlVector<int32>
             }
+            // Parent: CLeafUpdateNode
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CZeroPoseUpdateNode {
+            }
             // Parent: CUnaryUpdateNode
             // Fields count: 1
             //
@@ -734,6 +741,20 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_drawBounds = 0x30; // CUtlVector<AABB_t>
                 constexpr std::ptrdiff_t m_meshlets = 0x48; // CUtlVector<CMeshletDescriptor>
                 constexpr std::ptrdiff_t m_vTintColor = 0x60; // Vector4D
+            }
+            // Parent: CCycleBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CFootCycle {
+            }
+            // Parent: CLeafUpdateNode
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CInputStreamUpdateNode {
             }
             // Parent: CConcreteAnimParameter
             // Fields count: 3
@@ -824,6 +845,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hSequence = 0x38; // HSequence
                 constexpr std::ptrdiff_t m_flCycle = 0x3C; // float32
             }
+            // Parent: CAnimTagBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            namespace CTaskStatusAnimTag {
+            }
             // Parent: None
             // Fields count: 5
             //
@@ -904,7 +933,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_InteractWithStrings = 0x70; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_InteractExcludeStrings = 0x88; // CUtlVector<CUtlString>
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Fields count: 6
             //
             // Metadata:
@@ -960,6 +989,11 @@ namespace cs2_dumper {
             namespace StanceInfo_t {
                 constexpr std::ptrdiff_t m_vPosition = 0x0; // 
                 constexpr std::ptrdiff_t m_flDirection = 0xC; // float32
+            }
+            // Parent: None
+            // Fields count: 1
+            namespace IKBoneNameAndIndex_t {
+                constexpr std::ptrdiff_t m_Name = 0x0; // CUtlString
             }
             // Parent: CUnaryUpdateNode
             // Fields count: 1
@@ -1037,6 +1071,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFadeOutTime = 0x4; // float32
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CAnimGraphSettingsGroup {
+            }
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
@@ -1092,7 +1133,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_bHasUserBitArray = 0x90; // CUtlVector<uint8>
             }
-            // Parent: None
+            // Parent: CUnaryUpdateNode
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CRootUpdateNode {
+            }
+            // Parent: CLeafUpdateNode
             // Fields count: 1
             //
             // Metadata:
@@ -1162,7 +1210,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hLookTargetWorldSpace = 0x40; // CAnimParamHandle
                 constexpr std::ptrdiff_t m_bNetworkLookTarget = 0x42; // bool
             }
-            // Parent: None
+            // Parent: CAnimGraphSettingsGroup
             // Fields count: 1
             //
             // Metadata:
@@ -1171,7 +1219,7 @@ namespace cs2_dumper {
             namespace CAnimGraphNetworkSettings {
                 constexpr std::ptrdiff_t m_bNetworkingEnabled = 0x20; // bool
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Fields count: 4
             //
             // Metadata:
@@ -1181,6 +1229,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hPoseCacheHandle = 0x70; // CPoseHandle
                 constexpr std::ptrdiff_t m_hSequence = 0x74; // HSequence
                 constexpr std::ptrdiff_t m_flCycle = 0x78; // float32
+            }
+            // Parent: CMotionMetricEvaluator
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CBlockSelectionMetricEvaluator {
             }
             // Parent: None
             // Fields count: 3
@@ -1489,6 +1544,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasRotation = 0x2C; // bool
                 constexpr std::ptrdiff_t m_bHasMovement = 0x2D; // bool
             }
+            // Parent: CCycleBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CAnimCycle {
+            }
             // Parent: CAnimComponentUpdater
             // Fields count: 1
             //
@@ -1590,6 +1652,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flStepHeightMaxAngle = 0x9C; // float32
                 constexpr std::ptrdiff_t m_bResetChild = 0xA0; // bool
                 constexpr std::ptrdiff_t m_bAnimationDriven = 0xA1; // bool
+            }
+            // Parent: CUnaryUpdateNode
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CChoreoUpdateNode {
             }
             // Parent: CBaseConstraint
             // Fields count: 2
@@ -1805,7 +1874,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_BindPose = 0x10; // CTransform
                 constexpr std::ptrdiff_t m_nParent = 0x30; // int32
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Fields count: 3
             //
             // Metadata:
@@ -1842,7 +1911,7 @@ namespace cs2_dumper {
             namespace CDampedValueComponentUpdater {
                 constexpr std::ptrdiff_t m_items = 0x30; // CUtlVector<CDampedValueUpdateItem>
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Fields count: 4
             //
             // Metadata:
@@ -2026,7 +2095,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nParent = 0x28; // int32
                 constexpr std::ptrdiff_t m_refModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Fields count: 10
             //
             // Metadata:
@@ -2085,6 +2154,13 @@ namespace cs2_dumper {
             namespace CParamSpanUpdater {
                 constexpr std::ptrdiff_t m_spans = 0x0; // CUtlVector<ParamSpan_t>
             }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CAnimActionUpdater {
+            }
             // Parent: CAnimTagBase
             // Fields count: 10
             //
@@ -2127,7 +2203,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasDecodeDump = 0x94; // bool
                 constexpr std::ptrdiff_t m_DecodeDump = 0x98; // AnimationDecodeDebugDumpElement_t
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Fields count: 2
             //
             // Metadata:
@@ -2164,6 +2240,27 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CUnaryUpdateNode {
                 constexpr std::ptrdiff_t m_pChildNode = 0x58; // CAnimUpdateNodeRef
+            }
+            // Parent: None
+            // Fields count: 17
+            namespace CCompressorGroup {
+                constexpr std::ptrdiff_t m_nTotalElementCount = 0x0; // int32
+                constexpr std::ptrdiff_t m_szChannelClass = 0x8; // CUtlVector<char*>
+                constexpr std::ptrdiff_t m_szVariableName = 0x20; // CUtlVector<char*>
+                constexpr std::ptrdiff_t m_nType = 0x38; // CUtlVector<fieldtype_t>
+                constexpr std::ptrdiff_t m_nFlags = 0x50; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_szGrouping = 0x68; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_nCompressorIndex = 0x80; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_szElementNames = 0x98; // CUtlVector<CUtlVector<char*>>
+                constexpr std::ptrdiff_t m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
+                constexpr std::ptrdiff_t m_nElementMask = 0xC8; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
+                constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
+                constexpr std::ptrdiff_t m_intCompressor = 0x128; // CUtlVector<CCompressor<int32>*>
+                constexpr std::ptrdiff_t m_boolCompressor = 0x140; // CUtlVector<CCompressor<bool>*>
+                constexpr std::ptrdiff_t m_colorCompressor = 0x158; // CUtlVector<CCompressor<Color>*>
+                constexpr std::ptrdiff_t m_vector2DCompressor = 0x170; // CUtlVector<CCompressor<Vector2D>*>
+                constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
             }
             // Parent: CAnimUpdateNodeBase
             // Fields count: 8
@@ -2467,6 +2564,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_weightInfo = 0x8; // CNmBoneMask::WeightInfo_t
                 constexpr std::ptrdiff_t m_weights = 0x18; // CUtlVector<float32>
             }
+            // Parent: CBaseConstraint
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CParentConstraint {
+            }
             // Parent: CMotionMetricEvaluator
             // Fields count: 2
             //
@@ -2475,6 +2579,11 @@ namespace cs2_dumper {
             namespace CFootPositionMetricEvaluator {
                 constexpr std::ptrdiff_t m_footIndices = 0x50; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_bIgnoreSlope = 0x68; // bool
+            }
+            // Parent: None
+            // Fields count: 1
+            namespace HSequence {
+                constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
             // Parent: None
             // Fields count: 3
@@ -2557,6 +2666,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_refAnimIncludeModels = 0x298; // CUtlVector<CStrongHandle<InfoForResourceTypeCModel>>
                 constexpr std::ptrdiff_t m_AnimatedMaterialAttributes = 0x2B0; // CUtlVector<PermModelDataAnimatedMaterialAttribute_t>
             }
+            // Parent: CStaticPoseCache
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CStaticPoseCacheBuilder {
+            }
             // Parent: None
             // Fields count: 14
             //
@@ -2586,7 +2702,7 @@ namespace cs2_dumper {
             namespace CStateMachineUpdateNode {
                 constexpr std::ptrdiff_t m_stateMachine = 0x68; // CAnimStateMachineUpdater
                 constexpr std::ptrdiff_t m_stateData = 0xC0; // CUtlVector<CStateNodeStateData>
-                constexpr std::ptrdiff_t m_transitionData = 0xD8; // CUtlVector<CStateNodeTransitionData>
+                constexpr std::ptrdiff_t m_transitionData = 0xD8; // CUtlVector<CStateNodeTransition
                 constexpr std::ptrdiff_t m_bBlockWaningTags = 0xF4; // bool
                 constexpr std::ptrdiff_t m_bLockStateWhenWaning = 0xF5; // bool
             }
@@ -2752,6 +2868,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flChainLength = 0x8; // float32
             }
             // Parent: None
+            // Fields count: 2
+            namespace CBoneConstraintPoseSpaceMorph__Input_t {
+                constexpr std::ptrdiff_t m_inputValue = 0x0; // 
+                constexpr std::ptrdiff_t m_outputWeightList = 0x10; // CUtlVector<float32>
+            }
+            // Parent: None
             // Fields count: 12
             //
             // Metadata:
@@ -2787,6 +2909,13 @@ namespace cs2_dumper {
             namespace CModelConfigElement_SetBodygroupOnAttachedModels {
                 constexpr std::ptrdiff_t m_GroupName = 0x48; // CUtlString
                 constexpr std::ptrdiff_t m_nChoice = 0x50; // int32
+            }
+            // Parent: CMotionMetricEvaluator
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CCurrentVelocityMetricEvaluator {
             }
             // Parent: None
             // Fields count: 5
@@ -2927,6 +3056,13 @@ namespace cs2_dumper {
             namespace CFootStride {
                 constexpr std::ptrdiff_t m_definition = 0x0; // CFootCycleDefinition
                 constexpr std::ptrdiff_t m_trajectories = 0x40; // CFootTrajectories
+            }
+            // Parent: CNmEvent
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CNmLegacyEvent {
             }
             // Parent: None
             // Fields count: 2
@@ -3096,7 +3232,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_networkMode = 0x48; // AnimNodeNetworkMode
                 constexpr std::ptrdiff_t m_name = 0x50; // CUtlString
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Fields count: 2
             //
             // Metadata:
@@ -3247,6 +3383,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bDisabled = 0x0; // bitfield:1
             }
             // Parent: None
+            // Fields count: 2
+            namespace CBoneConstraintPoseSpaceBone__Input_t {
+                constexpr std::ptrdiff_t m_inputValue = 0x0; // 
+                constexpr std::ptrdiff_t m_outputTransformList = 0x10; // CUtlVector<CTransform>
+            }
+            // Parent: None
             // Fields count: 10
             //
             // Metadata:
@@ -3345,7 +3487,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_rootMotion = 0x150; // CNmRootMotionData
                 constexpr std::ptrdiff_t m_bIsAdditive = 0x1A0; // bool
             }
-            // Parent: None
+            // Parent: CAnimActionUpdater
             // Fields count: 2
             //
             // Metadata:
@@ -3363,6 +3505,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Type = 0x8; // CAnimationGraphVisualizerPrimitiveType
                 constexpr std::ptrdiff_t m_OwningAnimNodePaths = 0xC; // AnimNodeID[11]
                 constexpr std::ptrdiff_t m_nOwningAnimNodePathCount = 0x38; // int32
+            }
+            // Parent: CLeafUpdateNode
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CBindPoseUpdateNode {
             }
             // Parent: None
             // Fields count: 2
@@ -3393,7 +3542,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRotationOffset = 0xC; // float32
                 constexpr std::ptrdiff_t m_flProgression = 0x10; // float32
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Fields count: 23
             //
             // Metadata:
@@ -3690,7 +3839,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nPackedBaseMeshUv = 0x28; // uint32
                 constexpr std::ptrdiff_t m_nPad = 0x2C; // uint32
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Fields count: 5
             //
             // Metadata:
@@ -3764,7 +3913,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pChild = 0x0; // CSmartPtr<CMotionNode>
                 constexpr std::ptrdiff_t m_flKeyValue = 0x8; // float32
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Fields count: 5
             //
             // Metadata:
@@ -3894,7 +4043,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vWsEnd = 0x60; // VectorAligned
                 constexpr std::ptrdiff_t m_Color = 0x70; // Color
             }
-            // Parent: None
+            // Parent: CBoneConstraintBase
             // Fields count: 4
             //
             // Metadata:
@@ -3904,6 +4053,20 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_sTargetBoneName = 0x30; // CUtlString
                 constexpr std::ptrdiff_t m_sMorphChannelName = 0x38; // CUtlString
                 constexpr std::ptrdiff_t m_flRemap = 0x40; // float32[4]
+            }
+            // Parent: CBaseConstraint
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPointConstraint {
+            }
+            // Parent: CMotionMetricEvaluator
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CCurrentRotationVelocityMetricEvaluator {
             }
             // Parent: None
             // Fields count: 2
@@ -3990,6 +4153,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bIsStartState = 0x0; // bitfield:1
                 constexpr std::ptrdiff_t m_bIsEndState = 0x0; // bitfield:1
                 constexpr std::ptrdiff_t m_bIsPassthrough = 0x0; // bitfield:1
+            }
+            // Parent: CBaseConstraint
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace COrientConstraint {
             }
             // Parent: CUnaryUpdateNode
             // Fields count: 12
@@ -4089,6 +4259,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_blendValueSource = 0xA0; // AnimValueSource
                 constexpr std::ptrdiff_t m_hBlendParameter = 0xA4; // CAnimParamHandle
             }
+            // Parent: CAnimUpdateNodeBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CLeafUpdateNode {
+            }
             // Parent: None
             // Fields count: 2
             //
@@ -4156,6 +4333,21 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CFootTrajectories {
                 constexpr std::ptrdiff_t m_trajectories = 0x0; // CUtlVector<CFootTrajectory>
+            }
+            // Parent: CMotionGraph
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CEditableMotionGraph {
+            }
+            // Parent: CAnimTagBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            namespace CStringAnimTag {
             }
             // Parent: CConcreteAnimParameter
             // Fields count: 1
@@ -4229,7 +4421,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLocalBoneArray = 0x20; // CUtlVector<int16>
                 constexpr std::ptrdiff_t m_flBoneScaleArray = 0x38; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: CLeafUpdateNode
             // Fields count: 8
             //
             // Metadata:
@@ -4264,6 +4456,15 @@ namespace cs2_dumper {
             namespace CFootStepTriggerUpdateNode {
                 constexpr std::ptrdiff_t m_triggers = 0x68; // CUtlVector<FootStepTrigger>
                 constexpr std::ptrdiff_t m_flTolerance = 0x84; // float32
+            }
+            // Parent: None
+            // Fields count: 5
+            namespace IKTargetSettings_t {
+                constexpr std::ptrdiff_t m_TargetSource = 0x0; // IKTargetSource
+                constexpr std::ptrdiff_t m_Bone = 0x8; // IKBoneNameAndIndex_t
+                constexpr std::ptrdiff_t m_AnimgraphParameterNamePosition = 0x18; // AnimParamID
+                constexpr std::ptrdiff_t m_AnimgraphParameterNameOrientation = 0x1C; // AnimParamID
+                constexpr std::ptrdiff_t m_TargetCoordSystem = 0x20; // IKTargetCoordinateSystem
             }
             // Parent: CModelConfigElement
             // Fields count: 1
@@ -4378,6 +4579,20 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nWeightListIndex = 0x68; // int32
                 constexpr std::ptrdiff_t m_poseControlMethod = 0x6C; // RagdollPoseControl
             }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CBoneConstraintBase {
+            }
+            // Parent: CPathAnimMotorUpdaterBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPathAnimMotorUpdater {
+            }
             // Parent: CAnimTagBase
             // Fields count: 4
             //
@@ -4469,6 +4684,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nMaxUniqueFrameIndex = 0x50; // int32
                 constexpr std::ptrdiff_t m_segmentArray = 0x58; // CUtlVector<CAnimFrameSegment>
             }
+            // Parent: None
+            // Fields count: 2
+            namespace IKSolverSettings_t {
+                constexpr std::ptrdiff_t m_SolverType = 0x0; // IKSolverType
+                constexpr std::ptrdiff_t m_nNumIterations = 0x4; // int32
+            }
             // Parent: CAnimUpdateNodeBase
             // Fields count: 6
             //
@@ -4494,6 +4715,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_morphArray = 0x40; // CUtlVector<CBufferString>
                 constexpr std::ptrdiff_t m_nChannelElements = 0x58; // int32
                 constexpr std::ptrdiff_t m_dataChannelArray = 0x60; // CUtlVector<CAnimDataChannelDesc>
+            }
+            // Parent: None
+            // Fields count: 1
+            namespace AttachmentHandle_t {
+                constexpr std::ptrdiff_t m_Value = 0x0; // uint8
             }
             // Parent: None
             // Fields count: 1
@@ -4563,6 +4789,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bOnlyGoals = 0x74; // bool
                 constexpr std::ptrdiff_t m_bPreventOvershoot = 0x75; // bool
                 constexpr std::ptrdiff_t m_bPreventUndershoot = 0x76; // bool
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MVDataOverlayType
+            namespace CMoodVData {
+                constexpr std::ptrdiff_t m_sModelName = 0x0; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
+                constexpr std::ptrdiff_t m_nMoodType = 0xE0; // MoodType_t
+                constexpr std::ptrdiff_t m_animationLayers = 0xE8; // CUtlVector<MoodAnimationLayer_t>
             }
             // Parent: CModelConfigElement
             // Fields count: 14

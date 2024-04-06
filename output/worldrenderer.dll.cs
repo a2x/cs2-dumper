@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
@@ -22,36 +22,6 @@ namespace CS2Dumper.Schemas {
             OBJECT_TYPE_OVERLAY = 0x2000,
             OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
             OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
-        }
-        // Parent: None
-        // Fields count: 11
-        //
-        // Metadata:
-        // NetworkVarNames: m_nameStringableIndex (int32)
-        public static class CEntityIdentity {
-            public const nint m_nameStringableIndex = 0x14; // int32
-            public const nint m_name = 0x18; // CUtlSymbolLarge
-            public const nint m_designerName = 0x20; // CUtlSymbolLarge
-            public const nint m_flags = 0x30; // uint32
-            public const nint m_worldGroupId = 0x38; // WorldGroupId_t
-            public const nint m_fDataObjectTypes = 0x3C; // uint32
-            public const nint m_PathIndex = 0x40; // ChangeAccessorFieldPathIndex_t
-            public const nint m_pPrev = 0x58; // CEntityIdentity*
-            public const nint m_pNext = 0x60; // CEntityIdentity*
-            public const nint m_pPrevByClass = 0x68; // CEntityIdentity*
-            public const nint m_pNextByClass = 0x70; // CEntityIdentity*
-        }
-        // Parent: None
-        // Fields count: 4
-        //
-        // Metadata:
-        // NetworkVarNames: m_pEntity (CEntityIdentity*)
-        // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
-        public static class CEntityInstance {
-            public const nint m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
-            public const nint m_pEntity = 0x10; // CEntityIdentity*
-            public const nint m_CScriptComponent = 0x28; // CScriptComponent*
-            public const nint m_bVisibleinPVS = 0x30; // bool
         }
         // Parent: None
         // Fields count: 14
@@ -133,6 +103,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMinimumDistance = 0x28; // float32
             public const nint m_ChildNodeIndices = 0x30; // CUtlVector<int32>
             public const nint m_worldNodePrefix = 0x48; // CUtlString
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class VMapResourceData_t {
         }
         // Parent: None
         // Fields count: 8
@@ -234,6 +208,13 @@ namespace CS2Dumper.Schemas {
         public static class VoxelVisBlockOffset_t {
             public const nint m_nOffset = 0x0; // uint32
             public const nint m_nElementCount = 0x4; // uint32
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeVMapResourceData_t {
         }
         // Parent: None
         // Fields count: 4

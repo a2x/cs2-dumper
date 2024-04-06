@@ -50,12 +50,13 @@ trait CodeGen {
 
     fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String>;
 
+    /// Replaces non-alphanumeric characters in a string with underscores.
     #[inline]
-    fn sanitize_name(name: &str) -> String {
-        name.replace(|c: char| !c.is_alphanumeric(), "_")
+    fn slugify(input: &str) -> String {
+        input.replace(|c: char| !c.is_alphanumeric(), "_")
     }
 
-    fn write_content<F>(&self, results: &Results, indent_size: usize, callback: F) -> Result<String>
+    fn write_content<F>(&self, results: &Results, indent_size: usize, f: F) -> Result<String>
     where
         F: FnOnce(&mut Formatter<'_>) -> Result<()>,
     {
@@ -64,7 +65,7 @@ trait CodeGen {
 
         results.write_banner(&mut fmt)?;
 
-        callback(&mut fmt)?;
+        f(&mut fmt)?;
 
         Ok(buf)
     }
@@ -148,6 +149,7 @@ impl Results {
         out_dir: P,
         indent_size: usize,
     ) -> Result<()> {
+        // TODO: Make this user-configurable.
         const FILE_EXTS: &[&str] = &["cs", "hpp", "json", "rs"];
 
         fs::create_dir_all(&out_dir)?;
@@ -162,8 +164,8 @@ impl Results {
             self.dump_item(item, &out_dir, indent_size, FILE_EXTS, file_name)?;
         }
 
-        self.dump_schemas(&out_dir, indent_size, FILE_EXTS)?;
         self.dump_info(process, &out_dir)?;
+        self.dump_schemas(&out_dir, indent_size, FILE_EXTS)?;
 
         Ok(())
     }

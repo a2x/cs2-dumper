@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: scenesystem.dll
-        // Classes count: 7
+        // Classes count: 9
         // Enums count: 1
         pub mod scenesystem_dll {
             // Alignment: 1
@@ -53,6 +53,13 @@ pub mod cs2_dumper {
                 pub const m_nViewId: usize = 0x0; // uint64
                 pub const m_ViewName: usize = 0x8; // CUtlString
             }
+            // Parent: CSSDSMsg_LayerBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CSSDSMsg_PostLayer {
+            }
             // Parent: None
             // Fields count: 6
             //
@@ -65,6 +72,13 @@ pub mod cs2_dumper {
                 pub const m_nLayerId: usize = 0x20; // uint64
                 pub const m_LayerName: usize = 0x28; // CUtlString
                 pub const m_displayText: usize = 0x30; // CUtlString
+            }
+            // Parent: CSSDSMsg_LayerBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CSSDSMsg_PreLayer {
             }
             // Parent: None
             // Fields count: 3

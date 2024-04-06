@@ -16,7 +16,7 @@ impl CodeGen for OffsetMap {
                     fmt.block(
                         &format!(
                             "public static class {}",
-                            AsPascalCase(Self::sanitize_name(module_name))
+                            AsPascalCase(Self::slugify(module_name))
                         ),
                         false,
                         |fmt| {
@@ -47,10 +47,7 @@ impl CodeGen for OffsetMap {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
-                            &format!(
-                                "namespace {}",
-                                AsSnakeCase(Self::sanitize_name(module_name))
-                            ),
+                            &format!("namespace {}", AsSnakeCase(Self::slugify(module_name))),
                             false,
                             |fmt| {
                                 for (name, value) in offsets {
@@ -91,7 +88,7 @@ impl CodeGen for OffsetMap {
                         writeln!(fmt, "// Module: {}", module_name)?;
 
                         fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(Self::sanitize_name(module_name))),
+                            &format!("pub mod {}", AsSnakeCase(Self::slugify(module_name))),
                             false,
                             |fmt| {
                                 for (name, value) in offsets {

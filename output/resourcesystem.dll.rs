@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Classes count: 7
+        // Classes count: 59
         // Enums count: 2
         pub mod resourcesystem_dll {
             // Alignment: 1
@@ -31,6 +31,61 @@ pub mod cs2_dumper {
                 READ_ONLY = 0x1
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCResponseRulesList {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCDotaItemDefinitionResource {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCMorphSetData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCChoreoSceneFileData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVSoundStackScriptList {
+            }
+            // Parent: None
+            // Fields count: 2
+            pub mod PackedAABB_t {
+                pub const m_nPackedMin: usize = 0x0; // uint32
+                pub const m_nPackedMax: usize = 0x4; // uint32
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVPhysXSurfacePropertiesList {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeManifestTestResource_t {
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
@@ -39,6 +94,32 @@ pub mod cs2_dumper {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_nameToken: usize = 0x8; // CUtlStringToken
                 pub const m_flValue: usize = 0xC; // float32
+            }
+            // Parent: None
+            // Fields count: 1
+            pub mod FuseFunctionIndex_t {
+                pub const m_Value: usize = 0x0; // uint16
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCGcExportableExternalData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeIAnimGraphModelBinding {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCJavaScriptResource {
             }
             // Parent: None
             // Fields count: 6
@@ -54,12 +135,67 @@ pub mod cs2_dumper {
                 pub const m_functionMap: usize = 0x88; // CUtlHashtable<CUtlStringToken,int32>
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCRenderMesh {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVoxelVisibility {
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod TestResource_t {
                 pub const m_name: usize = 0x0; // CUtlString
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCPhysAggregateData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCNmClip {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeWorld_t {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeProceduralTestResource_t {
+            }
+            // Parent: None
+            // Fields count: 2
+            pub mod AABB_t {
+                pub const m_vMinBounds: usize = 0x0; // 
+                pub const m_vMaxBounds: usize = 0xC; // 
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCPostProcessingResource {
             }
             // Parent: None
             // Fields count: 6
@@ -75,6 +211,112 @@ pub mod cs2_dumper {
                 pub const m_eAccess: usize = 0x10; // FuseVariableAccess_t
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeIParticleSnapshot {
+            }
+            // Parent: None
+            // Fields count: 4
+            pub mod FourQuaternions {
+                pub const x: usize = 0x0; // fltx4
+                pub const y: usize = 0x10; // fltx4
+                pub const z: usize = 0x20; // fltx4
+                pub const w: usize = 0x30; // fltx4
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCPanoramaLayout {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCTypeScriptResource {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCNmSkeleton {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeTestResource_t {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCAnimationGroup {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVSoundEventScriptList {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVoiceContainerBase {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCNmGraph {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCDACGameDefsData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCPanoramaStyle {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCWorldNode {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCCSGOEconItem {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCSmartProp {
+            }
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
@@ -84,6 +326,55 @@ pub mod cs2_dumper {
                 pub const m_variablesRead: usize = 0x18; // CUtlVector<FuseVariableIndex_t>
                 pub const m_variablesWritten: usize = 0x30; // CUtlVector<FuseVariableIndex_t>
                 pub const m_nMaxTempVarsUsed: usize = 0x48; // int32
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCCompositeMaterialKit {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVMixListResource {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCAnimData {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeIMaterial2 {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeIVectorGraphic {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCPanoramaDynamicImages {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeIPulseGraphDef {
             }
             // Parent: None
             // Fields count: 5
@@ -98,6 +389,60 @@ pub mod cs2_dumper {
                 pub const m_bIsPure: usize = 0x1A; // bool
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVDataResource {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCModel {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCDOTANovelsList {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCTextureBase {
+            }
+            // Parent: None
+            // Fields count: 1
+            pub mod FuseVariableIndex_t {
+                pub const m_Value: usize = 0x0; // uint16
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCNmGraphDataSet {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeIParticleSystemDefinition {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCSequenceGroupData {
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -105,6 +450,20 @@ pub mod cs2_dumper {
             pub mod ManifestTestResource_t {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_child: usize = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCEntityLump {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCDOTAPatchNotesList {
             }
         }
     }

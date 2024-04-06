@@ -1,6 +1,6 @@
 use memflow::prelude::v1::*;
 
-use super::UtlMemoryPool;
+use super::UtlMemoryPoolBase;
 
 use crate::error::Result;
 use crate::mem::IsNull;
@@ -17,79 +17,98 @@ unsafe impl<D: 'static> Pod for HashAllocatedBlob<D> {}
 
 #[repr(C)]
 pub struct HashBucket<D, K> {
-    pad_0000: [u8; 0x18],                                  // 0x0000,
-    pub first: Pointer64<HashFixedData<D, K>>,             // 0x0018
-    pub first_uncommitted: Pointer64<HashFixedData<D, K>>, // 0x0020
+    pad_0000: [u8; 0x18],                                          // 0x0000,
+    pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0018
+    pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0020
 }
 
 #[repr(C)]
-pub struct HashFixedData<D, K> {
-    pub ui_key: K,                            // 0x0000
-    pub next: Pointer64<HashFixedData<D, K>>, // 0x0008
-    pub data: D,                              // 0x0010
+pub struct HashFixedDataInternal<D, K> {
+    pub ui_key: K,                                    // 0x0000
+    pub next: Pointer64<HashFixedDataInternal<D, K>>, // 0x0008
+    pub data: D,                                      // 0x0010
 }
 
-unsafe impl<D: 'static, K: 'static> Pod for HashFixedData<D, K> {}
+unsafe impl<D: 'static, K: 'static> Pod for HashFixedDataInternal<D, K> {}
 
 /// Represents a thread-safe hash table.
 #[repr(C)]
 pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
-    pub entry_mem: UtlMemoryPool,               // 0x0000
-    pad_0018: [u8; 0x8],                        // 0x0018
-    pub blobs: Pointer64<HashAllocatedBlob<D>>, // 0x0020
-    pad_0028: [u8; 0x58],                       // 0x0028
-    pub buckets: [HashBucket<D, K>; C],         // 0x0080
-    pad_2880: [u8; 0x10],                       // 0x2880
+    pub entry_mem: UtlMemoryPoolBase,   // 0x0000
+    pub buckets: [HashBucket<D, K>; C], // 0x0080
+    pub needs_commit: bool,             // 0x2880
+    pad_2881: [u8; 0xF],                // 0x2881
 }
 
 impl<D: Pod + IsNull, const C: usize, K: Pod> UtlTsHash<D, C, K> {
+    /// Returns the number of allocated blocks.
+    #[inline]
+    pub fn blocks_alloc(&self) -> i32 {
+        self.entry_mem.blocks_alloc
+    }
+
+    /// Returns the size of a block.
+    #[inline]
+    pub fn block_size(&self) -> i32 {
+        self.entry_mem.block_size
+    }
+
+    /// Returns the maximum number of allocated blocks.
+    #[inline]
+    pub fn peak_count(&self) -> i32 {
+        self.entry_mem.peak_alloc
+    }
+
     /// Returns all elements in the hash table.
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
-        // TODO: Refactor this.
+        let blocks_alloc = self.blocks_alloc() as usize;
+        let peak_alloc = self.peak_count() as usize;
 
-        let mut elements: Vec<_> = self
-            .buckets
-            .iter()
-            .flat_map(|bucket| {
-                let mut cur_element = bucket.first;
+        let mut allocated_list = Vec::with_capacity(peak_alloc);
+        let mut unallocated_list = Vec::with_capacity(blocks_alloc);
 
-                let mut list = Vec::new();
+        for bucket in &self.buckets {
+            let mut cur_element = bucket.first_uncommitted;
 
-                while !cur_element.is_null() {
-                    if let Ok(element) = cur_element.read(process) {
-                        if !element.data.is_null() {
-                            list.push(element.data);
-                        }
+            while !cur_element.is_null() {
+                let element = cur_element.read(process)?;
 
-                        cur_element = element.next;
-                    }
+                if !element.data.is_null() {
+                    unallocated_list.push(element.data);
                 }
 
-                list
-            })
-            .collect();
-
-        if let Ok(blob) = self.blobs.read(process) {
-            let mut unallocated_data = blob.next;
-
-            if !unallocated_data.is_null() {
-                if !blob.data.is_null() {
-                    elements.push(blob.data);
+                // Check if we have too many elements.
+                if unallocated_list.len() >= blocks_alloc {
+                    break;
                 }
 
-                while !unallocated_data.is_null() {
-                    if let Ok(element) = unallocated_data.read(process) {
-                        if !element.data.is_null() {
-                            elements.push(element.data);
-                        }
-
-                        unallocated_data = element.next;
-                    }
-                }
+                cur_element = element.next;
             }
         }
 
-        Ok(elements)
+        let mut cur_blob =
+            Pointer64::<HashAllocatedBlob<D>>::from(self.entry_mem.free_list_head.address());
+
+        while !cur_blob.is_null() {
+            let blob = cur_blob.read(process)?;
+
+            if !blob.data.is_null() {
+                allocated_list.push(blob.data);
+            }
+
+            // Check if we have too many elements.
+            if allocated_list.len() >= peak_alloc {
+                break;
+            }
+
+            cur_blob = blob.next;
+        }
+
+        Ok(if unallocated_list.len() > allocated_list.len() {
+            unallocated_list
+        } else {
+            allocated_list
+        })
     }
 }
 

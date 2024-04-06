@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, unused)]
 
@@ -26,36 +26,6 @@ pub mod cs2_dumper {
                 OBJECT_TYPE_OVERLAY = 0x2000,
                 OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
                 OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
-            }
-            // Parent: None
-            // Fields count: 11
-            //
-            // Metadata:
-            // NetworkVarNames: m_nameStringableIndex (int32)
-            pub mod CEntityIdentity {
-                pub const m_nameStringableIndex: usize = 0x14; // int32
-                pub const m_name: usize = 0x18; // CUtlSymbolLarge
-                pub const m_designerName: usize = 0x20; // CUtlSymbolLarge
-                pub const m_flags: usize = 0x30; // uint32
-                pub const m_worldGroupId: usize = 0x38; // WorldGroupId_t
-                pub const m_fDataObjectTypes: usize = 0x3C; // uint32
-                pub const m_PathIndex: usize = 0x40; // ChangeAccessorFieldPathIndex_t
-                pub const m_pPrev: usize = 0x58; // CEntityIdentity*
-                pub const m_pNext: usize = 0x60; // CEntityIdentity*
-                pub const m_pPrevByClass: usize = 0x68; // CEntityIdentity*
-                pub const m_pNextByClass: usize = 0x70; // CEntityIdentity*
-            }
-            // Parent: None
-            // Fields count: 4
-            //
-            // Metadata:
-            // NetworkVarNames: m_pEntity (CEntityIdentity*)
-            // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
-            pub mod CEntityInstance {
-                pub const m_iszPrivateVScripts: usize = 0x8; // CUtlSymbolLarge
-                pub const m_pEntity: usize = 0x10; // CEntityIdentity*
-                pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
-                pub const m_bVisibleinPVS: usize = 0x30; // bool
             }
             // Parent: None
             // Fields count: 14
@@ -137,6 +107,10 @@ pub mod cs2_dumper {
                 pub const m_flMinimumDistance: usize = 0x28; // float32
                 pub const m_ChildNodeIndices: usize = 0x30; // CUtlVector<int32>
                 pub const m_worldNodePrefix: usize = 0x48; // CUtlString
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod VMapResourceData_t {
             }
             // Parent: None
             // Fields count: 8
@@ -238,6 +212,13 @@ pub mod cs2_dumper {
             pub mod VoxelVisBlockOffset_t {
                 pub const m_nOffset: usize = 0x0; // uint32
                 pub const m_nElementCount: usize = 0x4; // uint32
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeVMapResourceData_t {
             }
             // Parent: None
             // Fields count: 4

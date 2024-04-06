@@ -43,6 +43,26 @@
         ],
         "parent": null
       },
+      "CSSDSMsg_PostLayer": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CSSDSMsg_LayerBase"
+      },
+      "CSSDSMsg_PreLayer": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CSSDSMsg_LayerBase"
+      },
       "CSSDSMsg_ViewRender": {
         "fields": {
           "m_ViewName": 16,

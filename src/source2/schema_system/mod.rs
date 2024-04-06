@@ -82,7 +82,7 @@ pub struct SchemaAtomicTTF {
 #[derive(Pod)]
 #[repr(C)]
 pub struct SchemaBaseClassInfoData {
-    pub offset: u32,                          // 0x0000
+    pub offset: i32,                          // 0x0000
     pad_0004: [u8; 0x4],                      // 0x0004
     pub prev: Pointer64<SchemaClassInfoData>, // 0x0008
 }
@@ -91,9 +91,9 @@ pub struct SchemaBaseClassInfoData {
 #[repr(C)]
 pub struct SchemaClassFieldData {
     pub name: Pointer64<ReprCString>,                 // 0x0000
-    pub type_: Pointer64<SchemaType>,                 // 0x0008
-    pub offset: u32,                                  // 0x0010
-    pub num_metadata: u32,                            // 0x0014
+    pub schema_type: Pointer64<SchemaType>,           // 0x0008
+    pub offset: i32,                                  // 0x0010
+    pub num_metadata: i32,                            // 0x0014
     pub metadata: Pointer64<SchemaMetadataEntryData>, // 0x0018
 }
 
@@ -101,41 +101,43 @@ pub struct SchemaClassFieldData {
 #[derive(Pod)]
 #[repr(C)]
 pub struct SchemaClassInfoData {
-    pub base: Pointer64<SchemaClassInfoData>,                // 0x0000
-    pub name: Pointer64<ReprCString>,                        // 0x0008
-    pub module_name: Pointer64<ReprCString>,                 // 0x0010
-    pub size: u32,                                           // 0x0018
-    pub num_fields: u16,                                     // 0x001C
-    pub num_static_fields: u16,                              // 0x001E
-    pub num_static_metadata: u16,                            // 0x0020
-    pub alignment: u8,                                       // 0x0022
-    pub has_base_class: u8,                                  // 0x0023
-    pub total_class_size: u16,                               // 0x0024
-    pub derived_class_size: u16,                             // 0x0026
-    pub fields: Pointer64<SchemaClassFieldData>,             // 0x0028
-    pub static_fields: Pointer64<SchemaStaticFieldData>,     // 0x0030
-    pub base_classes: Pointer64<SchemaBaseClassInfoData>,    // 0x0038
-    pad_0040: [u8; 0x8],                                     // 0x0040
-    pub static_metadata: Pointer64<SchemaMetadataEntryData>, // 0x0048
-    pub type_scope: Pointer64<SchemaSystemTypeScope>,        // 0x0050
-    pub type_: Pointer64<SchemaType>,                        // 0x0058
-    pad_0060: [u8; 0x10],                                    // 0x0060
+    pub base: Pointer64<SchemaClassInfoData>,                  // 0x0000
+    pub name: Pointer64<ReprCString>,                          // 0x0008
+    pub module_name: Pointer64<ReprCString>,                   // 0x0010
+    pub size: i32,                                             // 0x0018
+    pub num_fields: i16,                                       // 0x001C
+    pub num_static_fields: i16,                                // 0x001E
+    pub num_static_metadata: i16,                              // 0x0020
+    pub alignment: u8,                                         // 0x0022
+    pub has_base_class: u8,                                    // 0x0023
+    pub total_class_size: i16,                                 // 0x0024
+    pub derived_class_size: i16,                               // 0x0026
+    pub fields: Pointer64<[SchemaClassFieldData]>,             // 0x0028
+    pub static_fields: Pointer64<[SchemaStaticFieldData]>,     // 0x0030
+    pub base_classes: Pointer64<SchemaBaseClassInfoData>,      // 0x0038
+    pad_0040: [u8; 0x8],                                       // 0x0040
+    pub static_metadata: Pointer64<[SchemaMetadataEntryData]>, // 0x0048
+    pub type_scope: Pointer64<SchemaSystemTypeScope>,          // 0x0050
+    pub schema_type: Pointer64<SchemaType>,                    // 0x0058
+    pad_0060: [u8; 0x10],                                      // 0x0060
 }
 
+#[rustfmt::skip]
 #[derive(Pod)]
 #[repr(C)]
 pub struct SchemaEnumInfoData {
-    pub base: Pointer64<SchemaEnumInfoData>,
-    pub name: Pointer64<ReprCString>,
-    pub module_name: Pointer64<ReprCString>,
-    pub alignment: u8,
-    pad_0019: [u8; 0x3],
-    pub size: u16,
-    pub num_static_metadata: u16,
-    pub enum_info: Pointer64<SchemaEnumeratorInfoData>,
-    pub static_metadata: Pointer64<SchemaMetadataEntryData>,
-    pub type_scope: Pointer64<SchemaSystemTypeScope>,
-    pad_0038: [u8; 0x10],
+    pub base: Pointer64<SchemaEnumInfoData>,                 // 0x0000
+    pub name: Pointer64<ReprCString>,                        // 0x0008
+    pub module_name: Pointer64<ReprCString>,                 // 0x0010
+    pub size: u8,                                            // 0x0018
+    pub alignment: u8,                                       // 0x0019
+    pad_001a: u16,                                           // 0x001A
+    pub num_enumerators: i16,                                // 0x001C
+    pub num_static_metadata: i16,                            // 0x001E
+    pub enumerators: Pointer64<[SchemaEnumeratorInfoData]>,  // 0x0020
+    pub static_metadata: Pointer64<SchemaMetadataEntryData>, // 0x0028
+    pub type_scope: Pointer64<SchemaSystemTypeScope>,        // 0x0030
+    pad_0038: [u8; 0x10],                                    // 0x0038
 }
 
 #[repr(C)]

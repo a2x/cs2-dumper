@@ -18,6 +18,22 @@
         ],
         "parent": null
       },
+      "CDSPPresetMixgroupModifierTable": {
+        "fields": {
+          "m_table": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MVDataNodeType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CDspPresetModifierList": {
         "fields": {
           "m_dspName": 0,
@@ -242,6 +258,16 @@
           "m_flDecayTime": 100,
           "m_flFrequency": 96
         },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
+      "CVoiceContainerDefault": {
+        "fields": {},
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",

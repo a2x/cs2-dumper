@@ -82,50 +82,6 @@
         ],
         "parent": null
       },
-      "CEntityIdentity": {
-        "fields": {
-          "m_PathIndex": 64,
-          "m_designerName": 32,
-          "m_fDataObjectTypes": 60,
-          "m_flags": 48,
-          "m_name": 24,
-          "m_nameStringableIndex": 20,
-          "m_pNext": 96,
-          "m_pNextByClass": 112,
-          "m_pPrev": 88,
-          "m_pPrevByClass": 104,
-          "m_worldGroupId": 56
-        },
-        "metadata": [
-          {
-            "name": "m_nameStringableIndex",
-            "type": "NetworkVarNames",
-            "type_name": "int32"
-          }
-        ],
-        "parent": null
-      },
-      "CEntityInstance": {
-        "fields": {
-          "m_CScriptComponent": 40,
-          "m_bVisibleinPVS": 48,
-          "m_iszPrivateVScripts": 8,
-          "m_pEntity": 16
-        },
-        "metadata": [
-          {
-            "name": "m_pEntity",
-            "type": "NetworkVarNames",
-            "type_name": "CEntityIdentity*"
-          },
-          {
-            "name": "m_CScriptComponent",
-            "type": "NetworkVarNames",
-            "type_name": "CScriptComponent::Storage_t"
-          }
-        ],
-        "parent": null
-      },
       "CVoxelVisibility": {
         "fields": {
           "m_EnclosedClusterListBlock": 124,
@@ -229,6 +185,16 @@
         ],
         "parent": "BaseSceneObjectOverride_t"
       },
+      "InfoForResourceTypeVMapResourceData_t": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "InfoOverlayData_t": {
         "fields": {
           "m_flDepth": 56,
@@ -320,6 +286,11 @@
             "type": "Unknown"
           }
         ],
+        "parent": null
+      },
+      "VMapResourceData_t": {
+        "fields": {},
+        "metadata": [],
         "parent": null
       },
       "VoxelVisBlockOffset_t": {

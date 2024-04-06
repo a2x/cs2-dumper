@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-05 17:13:47.447480800 UTC
+// 2024-04-06 17:17:10.780616100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
-    // Classes count: 82
+    // Classes count: 88
     // Enums count: 2
     public static class Vphysics2Dll {
         // Alignment: 4
@@ -236,6 +236,14 @@ namespace CS2Dumper.Schemas {
             public const nint flRadius = 0x8; // float32[2]
         }
         // Parent: None
+        // Fields count: 4
+        public static class constraint_axislimit_t {
+            public const nint flMinRotation = 0x0; // float32
+            public const nint flMaxRotation = 0x4; // float32
+            public const nint flMotorTargetAngSpeed = 0x8; // float32
+            public const nint flMotorMaxTorque = 0xC; // float32
+        }
+        // Parent: None
         // Fields count: 3
         //
         // Metadata:
@@ -256,6 +264,14 @@ namespace CS2Dumper.Schemas {
             public const nint f4MinDist = 0x20; // fltx4
             public const nint f4Weight0 = 0x30; // fltx4
             public const nint f4RelaxationFactor = 0x40; // fltx4
+        }
+        // Parent: None
+        // Fields count: 4
+        public static class constraint_hingeparams_t {
+            public const nint worldPosition = 0x0; // 
+            public const nint worldAxisDirection = 0xC; // 
+            public const nint hingeAxis = 0x18; // constraint_axislimit_t
+            public const nint constraint = 0x28; // constraint_breakableparams_t
         }
         // Parent: FeSphereRigid_t
         // Fields count: 2
@@ -411,6 +427,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_vOrthographicAreas = 0x90; // 
             public const nint m_nFlags = 0x9C; // uint32
             public const nint m_nDebugFlags = 0xA0; // uint32
+        }
+        // Parent: None
+        // Fields count: 2
+        public static class VertexPositionNormal_t {
+            public const nint m_vPosition = 0x0; // 
+            public const nint m_vNormal = 0xC; // 
         }
         // Parent: None
         // Fields count: 8
@@ -799,6 +821,10 @@ namespace CS2Dumper.Schemas {
             public const nint nCtrlChild = 0xE; // uint16
         }
         // Parent: None
+        // Fields count: 0
+        public static class IPhysicsPlayerController {
+        }
+        // Parent: None
         // Fields count: 7
         //
         // Metadata:
@@ -965,6 +991,15 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Fields count: 5
+        public static class constraint_breakableparams_t {
+            public const nint strength = 0x0; // float32
+            public const nint forceLimit = 0x4; // float32
+            public const nint torqueLimit = 0x8; // float32
+            public const nint bodyMassScale = 0xC; // float32[2]
+            public const nint isActive = 0x14; // bool
+        }
+        // Parent: None
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1055,6 +1090,11 @@ namespace CS2Dumper.Schemas {
             public const nint w2 = 0x40; // fltx4
             public const nint v1x = 0x50; // fltx4
             public const nint v2 = 0x60; // FourVectors2D
+        }
+        // Parent: None
+        // Fields count: 1
+        public static class VertexPositionColor_t {
+            public const nint m_vPosition = 0x0; // 
         }
         // Parent: None
         // Fields count: 3
