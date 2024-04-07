@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
@@ -23,7 +23,7 @@ pub mod cs2_dumper {
             // Members count: 10
             #[repr(u16)]
             pub enum VMixFilterType_t {
-                FILTER_UNKNOWN = 0xFFFFFFFFFFFFFFFF,
+                FILTER_UNKNOWN = u16::MAX,
                 FILTER_LOWPASS = 0x0,
                 FILTER_HIGHPASS = 0x1,
                 FILTER_BANDPASS = 0x2,

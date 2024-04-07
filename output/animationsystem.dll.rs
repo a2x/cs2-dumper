@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
@@ -35,7 +35,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum BoneTransformSpace_t {
-                BoneTransformSpace_Invalid = 0xFFFFFFFFFFFFFFFF,
+                BoneTransformSpace_Invalid = u32::MAX,
                 BoneTransformSpace_Parent = 0x0,
                 BoneTransformSpace_Model = 0x1,
                 BoneTransformSpace_World = 0x2
@@ -82,7 +82,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u8)]
             pub enum MovementGait_t {
-                eInvalid = 0xFFFFFFFFFFFFFFFF,
+                eInvalid = u8::MAX,
                 eWalk = 0x0,
                 eJog = 0x1,
                 eRun = 0x2,
@@ -266,7 +266,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum ModelBoneFlexComponent_t {
-                MODEL_BONE_FLEX_INVALID = 0xFFFFFFFFFFFFFFFF,
+                MODEL_BONE_FLEX_INVALID = u32::MAX,
                 MODEL_BONE_FLEX_TX = 0x0,
                 MODEL_BONE_FLEX_TY = 0x1,
                 MODEL_BONE_FLEX_TZ = 0x2
@@ -538,7 +538,7 @@ pub mod cs2_dumper {
             // Members count: 3
             #[repr(u16)]
             pub enum AnimScriptType {
-                ANIMSCRIPT_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ANIMSCRIPT_TYPE_INVALID = u16::MAX,
                 ANIMSCRIPT_FUSE_GENERAL = 0x0,
                 ANIMSCRIPT_FUSE_STATEMACHINE = 0x1
             }
@@ -589,7 +589,7 @@ pub mod cs2_dumper {
             // Members count: 18
             #[repr(u32)]
             pub enum ParticleAttachment_t {
-                PATTACH_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PATTACH_INVALID = u32::MAX,
                 PATTACH_ABSORIGIN = 0x0,
                 PATTACH_ABSORIGIN_FOLLOW = 0x1,
                 PATTACH_CUSTOMORIGIN = 0x2,
@@ -723,7 +723,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u32)]
             pub enum ModelConfigAttachmentType_t {
-                MODEL_CONFIG_ATTACHMENT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                MODEL_CONFIG_ATTACHMENT_INVALID = u32::MAX,
                 MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
                 MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
                 MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
@@ -2770,7 +2770,7 @@ pub mod cs2_dumper {
             pub mod CStateMachineUpdateNode {
                 pub const m_stateMachine: usize = 0x68; // CAnimStateMachineUpdater
                 pub const m_stateData: usize = 0xC0; // CUtlVector<CStateNodeStateData>
-                pub const m_transitionData: usize = 0xD8; // CUtlVector<CStateNodeTransition
+                pub const m_transitionData: usize = 0xD8; // CUtlVector<CStateNodeTransitionData>
                 pub const m_bBlockWaningTags: usize = 0xF4; // bool
                 pub const m_bLockStateWhenWaning: usize = 0xF5; // bool
             }

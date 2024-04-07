@@ -296,7 +296,7 @@ impl CodeGen for SchemaMap {
         self.write_content(results, indent_size, |fmt| {
             writeln!(
                 fmt,
-                "#![allow(non_upper_case_globals, non_camel_case_types, unused)]\n"
+                "#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]\n"
             )?;
 
             fmt.block("pub mod cs2_dumper", false, |fmt| {
@@ -341,7 +341,15 @@ impl CodeGen for SchemaMap {
                                                 .members
                                                 .iter()
                                                 .map(|member| {
-                                                    format!("{} = {:#X}", member.name, member.value)
+                                                    format!(
+                                                        "{} = {}",
+                                                        member.name,
+                                                        if member.value == -1 {
+                                                            format!("{}::MAX", type_name)
+                                                        } else {
+                                                            format!("{:#X}", member.value)
+                                                        }
+                                                    )
                                                 })
                                                 .collect::<Vec<_>>()
                                                 .join(",\n");

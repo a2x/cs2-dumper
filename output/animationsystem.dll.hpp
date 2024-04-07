@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
 #pragma once
 
@@ -2702,7 +2702,7 @@ namespace cs2_dumper {
             namespace CStateMachineUpdateNode {
                 constexpr std::ptrdiff_t m_stateMachine = 0x68; // CAnimStateMachineUpdater
                 constexpr std::ptrdiff_t m_stateData = 0xC0; // CUtlVector<CStateNodeStateData>
-                constexpr std::ptrdiff_t m_transitionData = 0xD8; // CUtlVector<CStateNodeTransition
+                constexpr std::ptrdiff_t m_transitionData = 0xD8; // CUtlVector<CStateNodeTransitionData>
                 constexpr std::ptrdiff_t m_bBlockWaningTags = 0xF4; // bool
                 constexpr std::ptrdiff_t m_bLockStateWhenWaning = 0xF5; // bool
             }

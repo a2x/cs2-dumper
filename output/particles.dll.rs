@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
@@ -24,7 +24,7 @@ pub mod cs2_dumper {
             // Members count: 7
             #[repr(u32)]
             pub enum Detail2Combo_t {
-                DETAIL_2_COMBO_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                DETAIL_2_COMBO_UNINITIALIZED = u32::MAX,
                 DETAIL_2_COMBO_OFF = 0x0,
                 DETAIL_2_COMBO_ADD = 0x1,
                 DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
@@ -36,7 +36,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum MissingParentInheritBehavior_t {
-                MISSING_PARENT_DO_NOTHING = 0xFFFFFFFFFFFFFFFF,
+                MISSING_PARENT_DO_NOTHING = u32::MAX,
                 MISSING_PARENT_KILL = 0x0,
                 MISSING_PARENT_FIND_NEW = 0x1,
                 MISSING_PARENT_SAME_INDEX = 0x2
@@ -45,7 +45,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u32)]
             pub enum ParticleFloatBiasType_t {
-                PF_BIAS_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_BIAS_TYPE_INVALID = u32::MAX,
                 PF_BIAS_TYPE_STANDARD = 0x0,
                 PF_BIAS_TYPE_GAIN = 0x1,
                 PF_BIAS_TYPE_EXPONENTIAL = 0x2,
@@ -100,7 +100,7 @@ pub mod cs2_dumper {
             // Members count: 24
             #[repr(u32)]
             pub enum ParticleFloatType_t {
-                PF_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_TYPE_INVALID = u32::MAX,
                 PF_TYPE_LITERAL = 0x0,
                 PF_TYPE_NAMED_VALUE = 0x1,
                 PF_TYPE_RANDOM_UNIFORM = 0x2,
@@ -188,7 +188,7 @@ pub mod cs2_dumper {
             // Members count: 9
             #[repr(u32)]
             pub enum ScalarExpressionType_t {
-                SCALAR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                SCALAR_EXPRESSION_UNINITIALIZED = u32::MAX,
                 SCALAR_EXPRESSION_ADD = 0x0,
                 SCALAR_EXPRESSION_SUBTRACT = 0x1,
                 SCALAR_EXPRESSION_MUL = 0x2,
@@ -255,7 +255,7 @@ pub mod cs2_dumper {
             pub enum ParticleLightingQuality_t {
                 PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
                 PARTICLE_LIGHTING_PER_VERTEX = 0x1,
-                PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFFFFFFFFFF
+                PARTICLE_LIGHTING_PER_PIXEL = u32::MAX
             }
             // Alignment: 4
             // Members count: 4
@@ -296,7 +296,7 @@ pub mod cs2_dumper {
             // Members count: 12
             #[repr(u32)]
             pub enum ParticlePinDistance_t {
-                PARTICLE_PIN_DISTANCE_NONE = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_PIN_DISTANCE_NONE = u32::MAX,
                 PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
                 PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,
                 PARTICLE_PIN_DISTANCE_FIRST = 0x2,
@@ -313,7 +313,7 @@ pub mod cs2_dumper {
             // Members count: 7
             #[repr(u32)]
             pub enum VectorFloatExpressionType_t {
-                VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = u32::MAX,
                 VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
                 VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,
                 VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 0x2,
@@ -333,7 +333,7 @@ pub mod cs2_dumper {
             // Members count: 9
             #[repr(u32)]
             pub enum VectorExpressionType_t {
-                VECTOR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                VECTOR_EXPRESSION_UNINITIALIZED = u32::MAX,
                 VECTOR_EXPRESSION_ADD = 0x0,
                 VECTOR_EXPRESSION_SUBTRACT = 0x1,
                 VECTOR_EXPRESSION_MUL = 0x2,
@@ -395,7 +395,7 @@ pub mod cs2_dumper {
             // Members count: 8
             #[repr(u32)]
             pub enum ParticleFloatMapType_t {
-                PF_MAP_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_MAP_TYPE_INVALID = u32::MAX,
                 PF_MAP_TYPE_DIRECT = 0x0,
                 PF_MAP_TYPE_MULT = 0x1,
                 PF_MAP_TYPE_REMAP = 0x2,
@@ -437,7 +437,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum ParticleFloatInputMode_t {
-                PF_INPUT_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_INPUT_MODE_INVALID = u32::MAX,
                 PF_INPUT_MODE_CLAMPED = 0x0,
                 PF_INPUT_MODE_LOOPED = 0x1,
                 PF_INPUT_MODE_COUNT = 0x2
@@ -487,7 +487,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum ParticleFloatRandomMode_t {
-                PF_RANDOM_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PF_RANDOM_MODE_INVALID = u32::MAX,
                 PF_RANDOM_MODE_CONSTANT = 0x0,
                 PF_RANDOM_MODE_VARYING = 0x1,
                 PF_RANDOM_MODE_COUNT = 0x2
@@ -505,7 +505,7 @@ pub mod cs2_dumper {
             // Members count: 19
             #[repr(u32)]
             pub enum ParticleVecType_t {
-                PVEC_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PVEC_TYPE_INVALID = u32::MAX,
                 PVEC_TYPE_LITERAL = 0x0,
                 PVEC_TYPE_LITERAL_COLOR = 0x1,
                 PVEC_TYPE_NAMED_VALUE = 0x2,
@@ -544,7 +544,7 @@ pub mod cs2_dumper {
             // Members count: 3
             #[repr(u32)]
             pub enum ParticleSequenceCropOverride_t {
-                PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = u32::MAX,
                 PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
                 PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1
             }
@@ -645,7 +645,7 @@ pub mod cs2_dumper {
                 COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
                 COLLISION_MODE_PER_FRAME_PLANESET = 0x1,
                 COLLISION_MODE_INITIAL_TRACE_DOWN = 0x0,
-                COLLISION_MODE_DISABLED = 0xFFFFFFFFFFFFFFFF
+                COLLISION_MODE_DISABLED = u32::MAX
             }
             // Alignment: 4
             // Members count: 2
@@ -658,7 +658,7 @@ pub mod cs2_dumper {
             // Members count: 3
             #[repr(u32)]
             pub enum ParticleEndcapMode_t {
-                PARTICLE_ENDCAP_ALWAYS_ON = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_ENDCAP_ALWAYS_ON = u32::MAX,
                 PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
                 PARTICLE_ENDCAP_ENDCAP_ON = 0x1
             }
@@ -4687,9 +4687,9 @@ pub mod cs2_dumper {
                 pub const m_nControlPointNumber: usize = 0x1C0; // int32
                 pub const m_vecOffset: usize = 0x1C8; // CParticleCollectionVecInput
                 pub const m_bOffsetLocal: usize = 0x820; // bool
-                pub const m_nParticleSelection: usize = 0x824; // 
+                pub const m_nParticleSelection: usize = 0x824; // ParticleSelection_t
                 pub const m_nParticleNumber: usize = 0x828; // CParticleCollectionFloatInput
-                pub const m_nPinBreakType: usize = 0x980; // ParticlePinDistance_t
+                pub const m_nPinBreakType: usize = 0x980; // 
                 pub const m_flBreakDistance: usize = 0x988; // CParticleCollectionFloatInput
                 pub const m_flBreakSpeed: usize = 0xAE0; // CParticleCollectionFloatInput
                 pub const m_flAge: usize = 0xC38; // CParticleCollectionFloatInput

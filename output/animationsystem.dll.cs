@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -2697,7 +2697,7 @@ namespace CS2Dumper.Schemas {
         public static class CStateMachineUpdateNode {
             public const nint m_stateMachine = 0x68; // CAnimStateMachineUpdater
             public const nint m_stateData = 0xC0; // CUtlVector<CStateNodeStateData>
-            public const nint m_transitionData = 0xD8; // CUtlVector<CStateNodeTransition
+            public const nint m_transitionData = 0xD8; // CUtlVector<CStateNodeTransitionData>
             public const nint m_bBlockWaningTags = 0xF4; // bool
             public const nint m_bLockStateWhenWaning = 0xF5; // bool
         }

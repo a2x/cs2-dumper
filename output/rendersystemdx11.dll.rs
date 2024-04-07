@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
@@ -48,7 +48,7 @@ pub mod cs2_dumper {
             // Members count: 8
             #[repr(u8)]
             pub enum RenderMultisampleType_t {
-                RENDER_MULTISAMPLE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RENDER_MULTISAMPLE_INVALID = u8::MAX,
                 RENDER_MULTISAMPLE_NONE = 0x0,
                 RENDER_MULTISAMPLE_2X = 0x1,
                 RENDER_MULTISAMPLE_4X = 0x2,
@@ -70,7 +70,7 @@ pub mod cs2_dumper {
             // Members count: 3
             #[repr(u32)]
             pub enum RenderSlotType_t {
-                RENDER_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RENDER_SLOT_INVALID = u32::MAX,
                 RENDER_SLOT_PER_VERTEX = 0x0,
                 RENDER_SLOT_PER_INSTANCE = 0x1
             }

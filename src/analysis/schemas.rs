@@ -227,17 +227,10 @@ fn read_enum_binding_members(
         let enumerator = binding.enumerators.at(i as _).read(process)?;
         let name = enumerator.name.read_string(process)?.to_string();
 
-        let value = {
-            let value = unsafe { enumerator.u.ulong } as i64;
-
-            if value == i64::MAX {
-                -1
-            } else {
-                value
-            }
-        };
-
-        acc.push(EnumMember { name, value });
+        acc.push(EnumMember {
+            name,
+            value: unsafe { enumerator.u.ulong } as i64,
+        });
 
         Ok(acc)
     })

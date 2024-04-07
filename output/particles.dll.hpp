@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
 #pragma once
 
@@ -4618,9 +4618,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1C0; // int32
                 constexpr std::ptrdiff_t m_vecOffset = 0x1C8; // CParticleCollectionVecInput
                 constexpr std::ptrdiff_t m_bOffsetLocal = 0x820; // bool
-                constexpr std::ptrdiff_t m_nParticleSelection = 0x824; // 
+                constexpr std::ptrdiff_t m_nParticleSelection = 0x824; // ParticleSelection_t
                 constexpr std::ptrdiff_t m_nParticleNumber = 0x828; // CParticleCollectionFloatInput
-                constexpr std::ptrdiff_t m_nPinBreakType = 0x980; // ParticlePinDistance_t
+                constexpr std::ptrdiff_t m_nPinBreakType = 0x980; // 
                 constexpr std::ptrdiff_t m_flBreakDistance = 0x988; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flBreakSpeed = 0xAE0; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flAge = 0xC38; // CParticleCollectionFloatInput

@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
@@ -62,7 +62,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u32)]
             pub enum StanceType_t {
-                STANCE_CURRENT = 0xFFFFFFFFFFFFFFFF,
+                STANCE_CURRENT = u32::MAX,
                 STANCE_DEFAULT = 0x0,
                 STANCE_CROUCHING = 0x1,
                 STANCE_PRONE = 0x2,
@@ -238,7 +238,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u32)]
             pub enum NPCFollowFormation_t {
-                Default = 0xFFFFFFFFFFFFFFFF,
+                Default = u32::MAX,
                 CloseCircle = 0x0,
                 WideCircle = 0x1,
                 MediumCircle = 0x5,
@@ -292,7 +292,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u32)]
             pub enum AnimLoopMode_t {
-                ANIM_LOOP_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ANIM_LOOP_MODE_INVALID = u32::MAX,
                 ANIM_LOOP_MODE_NOT_LOOPING = 0x0,
                 ANIM_LOOP_MODE_LOOPING = 0x1,
                 ANIM_LOOP_MODE_USE_SEQUENCE_SETTINGS = 0x2,
@@ -573,7 +573,7 @@ pub mod cs2_dumper {
             #[repr(u32)]
             pub enum loadout_slot_t {
                 LOADOUT_SLOT_PROMOTED = 0xFFFFFFFFFFFFFFFE,
-                LOADOUT_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                LOADOUT_SLOT_INVALID = u32::MAX,
                 LOADOUT_SLOT_MELEE = 0x0,
                 LOADOUT_SLOT_C4 = 0x1,
                 LOADOUT_SLOT_FIRST_AUTO_BUY_WEAPON = 0x0,
@@ -743,7 +743,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum WeaponAttackType_t {
-                eInvalid = 0xFFFFFFFFFFFFFFFF,
+                eInvalid = u32::MAX,
                 ePrimary = 0x0,
                 eSecondary = 0x1,
                 eCount = 0x2
@@ -802,7 +802,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum ScriptedOnDeath_t {
-                SS_ONDEATH_NOT_APPLICABLE = 0xFFFFFFFFFFFFFFFF,
+                SS_ONDEATH_NOT_APPLICABLE = u32::MAX,
                 SS_ONDEATH_UNDEFINED = 0x0,
                 SS_ONDEATH_RAGDOLL = 0x1,
                 SS_ONDEATH_ANIMATED_DEATH = 0x2
@@ -828,7 +828,7 @@ pub mod cs2_dumper {
             // Members count: 17
             #[repr(u32)]
             pub enum gear_slot_t {
-                GEAR_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+                GEAR_SLOT_INVALID = u32::MAX,
                 GEAR_SLOT_RIFLE = 0x0,
                 GEAR_SLOT_PISTOL = 0x1,
                 GEAR_SLOT_KNIFE = 0x2,
@@ -892,7 +892,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum AmmoPosition_t {
-                AMMO_POSITION_INVALID = 0xFFFFFFFFFFFFFFFF,
+                AMMO_POSITION_INVALID = u32::MAX,
                 AMMO_POSITION_PRIMARY = 0x0,
                 AMMO_POSITION_SECONDARY = 0x1,
                 AMMO_POSITION_COUNT = 0x2
@@ -929,7 +929,7 @@ pub mod cs2_dumper {
             // Members count: 5
             #[repr(u32)]
             pub enum EntityDisolveType_t {
-                ENTITY_DISSOLVE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ENTITY_DISSOLVE_INVALID = u32::MAX,
                 ENTITY_DISSOLVE_NORMAL = 0x0,
                 ENTITY_DISSOLVE_ELECTRICAL = 0x1,
                 ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 0x2,
@@ -940,7 +940,7 @@ pub mod cs2_dumper {
             #[repr(u64)]
             pub enum InputBitMask_t {
                 IN_NONE = 0x0,
-                IN_ALL = 0xFFFFFFFFFFFFFFFF,
+                IN_ALL = u64::MAX,
                 IN_ATTACK = 0x1,
                 IN_JUMP = 0x2,
                 IN_DUCK = 0x4,
@@ -965,7 +965,7 @@ pub mod cs2_dumper {
             // Members count: 14
             #[repr(u32)]
             pub enum HitGroup_t {
-                HITGROUP_INVALID = 0xFFFFFFFFFFFFFFFF,
+                HITGROUP_INVALID = u32::MAX,
                 HITGROUP_GENERIC = 0x0,
                 HITGROUP_HEAD = 0x1,
                 HITGROUP_CHEST = 0x2,
@@ -1086,7 +1086,7 @@ pub mod cs2_dumper {
             // Members count: 4
             #[repr(u32)]
             pub enum EntitySubclassScope_t {
-                SUBCLASS_SCOPE_NONE = 0xFFFFFFFFFFFFFFFF,
+                SUBCLASS_SCOPE_NONE = u32::MAX,
                 SUBCLASS_SCOPE_PRECIPITATION = 0x0,
                 SUBCLASS_SCOPE_PLAYER_WEAPONS = 0x1,
                 SUBCLASS_SCOPE_COUNT = 0x2
@@ -1226,7 +1226,7 @@ pub mod cs2_dumper {
             // Members count: 27
             #[repr(u32)]
             pub enum RumbleEffect_t {
-                RUMBLE_INVALID = 0xFFFFFFFFFFFFFFFF,
+                RUMBLE_INVALID = u32::MAX,
                 RUMBLE_STOP_ALL = 0x0,
                 RUMBLE_PISTOL = 0x1,
                 RUMBLE_357 = 0x2,
@@ -1287,7 +1287,7 @@ pub mod cs2_dumper {
             // Members count: 7
             #[repr(u32)]
             pub enum PlayerConnectedState {
-                PlayerNeverConnected = 0xFFFFFFFFFFFFFFFF,
+                PlayerNeverConnected = u32::MAX,
                 PlayerConnected = 0x0,
                 PlayerConnecting = 0x1,
                 PlayerReconnecting = 0x2,
@@ -2717,7 +2717,7 @@ pub mod cs2_dumper {
                 pub const m_vecBackBoundsMin: usize = 0xE64; // 
                 pub const m_vecBackBoundsMax: usize = 0xE70; // 
                 pub const m_bAjarDoorShouldntAlwaysOpen: usize = 0xE7C; // bool
-                pub const m_hEntityBlocker: usize = 0xE80; // 
+                pub const m_hEntityBlocker: usize = 0xE80; // CHandle<CEntityBlocker>
             }
             // Parent: CBaseModelEntity
             // Fields count: 21
@@ -3134,7 +3134,7 @@ pub mod cs2_dumper {
                 pub const m_numCloseAttempts: usize = 0xC48; // int32
                 pub const m_nPhysicsMaterial: usize = 0xC4C; // CUtlStringToken
                 pub const m_SlaveName: usize = 0xC50; // CUtlSymbolLarge
-                pub const m_hMaster: usize = 0xC58; // CHandle<CBasePropDoor>
+                pub const m_hMaster: usize = 0xC58; // 
                 pub const m_OnBlockedClosing: usize = 0xC60; // CEntityIOOutput
                 pub const m_OnBlockedOpening: usize = 0xC88; // CEntityIOOutput
                 pub const m_OnUnblockedClosing: usize = 0xCB0; // CEntityIOOutput
@@ -4464,7 +4464,7 @@ pub mod cs2_dumper {
                 pub const m_OnPostIdleEndSequence: usize = 0x5E0; // CEntityIOOutput
                 pub const m_OnCancelSequence: usize = 0x608; // CEntityIOOutput
                 pub const m_OnCancelFailedSequence: usize = 0x630; // CEntityIOOutput
-                pub const m_OnScriptEvent: usize = 0x658; // 
+                pub const m_OnScriptEvent: usize = 0x658; // CEntityIOOutput[8]
                 pub const m_matOtherToMain: usize = 0x7A0; // CTransform
                 pub const m_hInteractionMainEntity: usize = 0x7C0; // CHandle<CBaseEntity>
                 pub const m_iPlayerDeathBehavior: usize = 0x7C4; // int32

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -4613,9 +4613,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nControlPointNumber = 0x1C0; // int32
             public const nint m_vecOffset = 0x1C8; // CParticleCollectionVecInput
             public const nint m_bOffsetLocal = 0x820; // bool
-            public const nint m_nParticleSelection = 0x824; // 
+            public const nint m_nParticleSelection = 0x824; // ParticleSelection_t
             public const nint m_nParticleNumber = 0x828; // CParticleCollectionFloatInput
-            public const nint m_nPinBreakType = 0x980; // ParticlePinDistance_t
+            public const nint m_nPinBreakType = 0x980; // 
             public const nint m_flBreakDistance = 0x988; // CParticleCollectionFloatInput
             public const nint m_flBreakSpeed = 0xAE0; // CParticleCollectionFloatInput
             public const nint m_flAge = 0xC38; // CParticleCollectionFloatInput

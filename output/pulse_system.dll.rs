@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
@@ -36,7 +36,7 @@ pub mod cs2_dumper {
             // Members count: 19
             #[repr(u32)]
             pub enum PulseValueType_t {
-                PVAL_INVALID = 0xFFFFFFFFFFFFFFFF,
+                PVAL_INVALID = u32::MAX,
                 PVAL_BOOL = 0x0,
                 PVAL_INT = 0x1,
                 PVAL_FLOAT = 0x2,

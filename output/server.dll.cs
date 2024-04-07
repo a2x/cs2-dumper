@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2588,7 +2588,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecBackBoundsMin = 0xE64; // 
             public const nint m_vecBackBoundsMax = 0xE70; // 
             public const nint m_bAjarDoorShouldntAlwaysOpen = 0xE7C; // bool
-            public const nint m_hEntityBlocker = 0xE80; // 
+            public const nint m_hEntityBlocker = 0xE80; // CHandle<CEntityBlocker>
         }
         // Parent: CBaseModelEntity
         // Fields count: 21
@@ -3005,7 +3005,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_numCloseAttempts = 0xC48; // int32
             public const nint m_nPhysicsMaterial = 0xC4C; // CUtlStringToken
             public const nint m_SlaveName = 0xC50; // CUtlSymbolLarge
-            public const nint m_hMaster = 0xC58; // CHandle<CBasePropDoor>
+            public const nint m_hMaster = 0xC58; // 
             public const nint m_OnBlockedClosing = 0xC60; // CEntityIOOutput
             public const nint m_OnBlockedOpening = 0xC88; // CEntityIOOutput
             public const nint m_OnUnblockedClosing = 0xCB0; // CEntityIOOutput
@@ -4335,7 +4335,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnPostIdleEndSequence = 0x5E0; // CEntityIOOutput
             public const nint m_OnCancelSequence = 0x608; // CEntityIOOutput
             public const nint m_OnCancelFailedSequence = 0x630; // CEntityIOOutput
-            public const nint m_OnScriptEvent = 0x658; // 
+            public const nint m_OnScriptEvent = 0x658; // CEntityIOOutput[8]
             public const nint m_matOtherToMain = 0x7A0; // CTransform
             public const nint m_hInteractionMainEntity = 0x7C0; // CHandle<CBaseEntity>
             public const nint m_iPlayerDeathBehavior = 0x7C4; // int32

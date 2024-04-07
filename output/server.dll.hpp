@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-06 17:17:10.780616100 UTC
+// 2024-04-07 05:30:39.851724900 UTC
 
 #pragma once
 
@@ -2593,7 +2593,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecBackBoundsMin = 0xE64; // 
                 constexpr std::ptrdiff_t m_vecBackBoundsMax = 0xE70; // 
                 constexpr std::ptrdiff_t m_bAjarDoorShouldntAlwaysOpen = 0xE7C; // bool
-                constexpr std::ptrdiff_t m_hEntityBlocker = 0xE80; // 
+                constexpr std::ptrdiff_t m_hEntityBlocker = 0xE80; // CHandle<CEntityBlocker>
             }
             // Parent: CBaseModelEntity
             // Fields count: 21
@@ -3010,7 +3010,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_numCloseAttempts = 0xC48; // int32
                 constexpr std::ptrdiff_t m_nPhysicsMaterial = 0xC4C; // CUtlStringToken
                 constexpr std::ptrdiff_t m_SlaveName = 0xC50; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hMaster = 0xC58; // CHandle<CBasePropDoor>
+                constexpr std::ptrdiff_t m_hMaster = 0xC58; // 
                 constexpr std::ptrdiff_t m_OnBlockedClosing = 0xC60; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnBlockedOpening = 0xC88; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnUnblockedClosing = 0xCB0; // CEntityIOOutput
@@ -4340,7 +4340,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OnPostIdleEndSequence = 0x5E0; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnCancelSequence = 0x608; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnCancelFailedSequence = 0x630; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnScriptEvent = 0x658; // 
+                constexpr std::ptrdiff_t m_OnScriptEvent = 0x658; // CEntityIOOutput[8]
                 constexpr std::ptrdiff_t m_matOtherToMain = 0x7A0; // CTransform
                 constexpr std::ptrdiff_t m_hInteractionMainEntity = 0x7C0; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_iPlayerDeathBehavior = 0x7C4; // int32
