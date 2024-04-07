@@ -15,11 +15,6 @@ impl CodeGen for SchemaMap {
         self.write_content(results, indent_size, |fmt| {
             fmt.block("namespace CS2Dumper.Schemas", false, |fmt| {
                 for (module_name, (classes, enums)) in self {
-                    // Skip empty modules.
-                    if classes.is_empty() && enums.is_empty() {
-                        continue;
-                    }
-
                     writeln!(fmt, "// Module: {}", module_name)?;
                     writeln!(fmt, "// Classes count: {}", classes.len())?;
                     writeln!(fmt, "// Enums count: {}", enums.len())?;
@@ -116,11 +111,6 @@ impl CodeGen for SchemaMap {
             fmt.block("namespace cs2_dumper", false, |fmt| {
                 fmt.block("namespace schemas", false, |fmt| {
                     for (module_name, (classes, enums)) in self {
-                        // Skip empty modules.
-                        if classes.is_empty() && enums.is_empty() {
-                            continue;
-                        }
-
                         writeln!(fmt, "// Module: {}", module_name)?;
                         writeln!(fmt, "// Classes count: {}", classes.len())?;
                         writeln!(fmt, "// Enums count: {}", enums.len())?;
@@ -302,11 +292,6 @@ impl CodeGen for SchemaMap {
             fmt.block("pub mod cs2_dumper", false, |fmt| {
                 fmt.block("pub mod schemas", false, |fmt| {
                     for (module_name, (classes, enums)) in self {
-                        // Skip empty modules.
-                        if classes.is_empty() && enums.is_empty() {
-                            continue;
-                        }
-
                         writeln!(fmt, "// Module: {}", module_name)?;
                         writeln!(fmt, "// Classes count: {}", classes.len())?;
                         writeln!(fmt, "// Enums count: {}", enums.len())?;

@@ -266,42 +266,46 @@ fn read_type_scopes(
 ) -> Result<Vec<TypeScope>> {
     let type_scopes = &schema_system.type_scopes;
 
-    (0..type_scopes.size)
-        .map(|i| {
-            let type_scope_ptr = type_scopes.element(process, i as _)?;
-            let type_scope = type_scope_ptr.read(process)?;
+    (0..type_scopes.size).try_fold(Vec::new(), |mut acc, i| {
+        let type_scope_ptr = type_scopes.element(process, i as _)?;
+        let type_scope = type_scope_ptr.read(process)?;
 
-            let module_name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
-                .to_string_lossy()
-                .to_string();
+        let module_name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
+            .to_string_lossy()
+            .to_string();
 
-            let classes: Vec<_> = type_scope
-                .class_bindings
-                .elements(process)?
-                .iter()
-                .filter_map(|ptr| read_class_binding(process, *ptr).ok())
-                .collect();
+        let classes: Vec<_> = type_scope
+            .class_bindings
+            .elements(process)?
+            .iter()
+            .filter_map(|ptr| read_class_binding(process, *ptr).ok())
+            .collect();
 
-            let enums: Vec<_> = type_scope
-                .enum_bindings
-                .elements(process)?
-                .iter()
-                .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
-                .collect();
+        let enums: Vec<_> = type_scope
+            .enum_bindings
+            .elements(process)?
+            .iter()
+            .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
+            .collect();
 
-            debug!(
-                "found type scope: {} at {:#X} (classes count: {}) (enums count: {})",
-                module_name,
-                type_scope_ptr.to_umem(),
-                classes.len(),
-                enums.len()
-            );
+        if classes.is_empty() && enums.is_empty() {
+            return Ok(acc);
+        }
 
-            Ok(TypeScope {
-                module_name,
-                classes,
-                enums,
-            })
-        })
-        .collect()
+        debug!(
+            "found type scope: {} at {:#X} (classes count: {}) (enums count: {})",
+            module_name,
+            type_scope_ptr.to_umem(),
+            classes.len(),
+            enums.len(),
+        );
+
+        acc.push(TypeScope {
+            module_name,
+            classes,
+            enums,
+        });
+
+        Ok(acc)
+    })
 }

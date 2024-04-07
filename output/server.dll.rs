@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 05:30:39.851724900 UTC
+// 2024-04-07 08:19:03.265339800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2717,7 +2717,7 @@ pub mod cs2_dumper {
                 pub const m_vecBackBoundsMin: usize = 0xE64; // 
                 pub const m_vecBackBoundsMax: usize = 0xE70; // 
                 pub const m_bAjarDoorShouldntAlwaysOpen: usize = 0xE7C; // bool
-                pub const m_hEntityBlocker: usize = 0xE80; // CHandle<CEntityBlocker>
+                pub const m_hEntityBlocker: usize = 0xE80; // 
             }
             // Parent: CBaseModelEntity
             // Fields count: 21
@@ -3134,7 +3134,7 @@ pub mod cs2_dumper {
                 pub const m_numCloseAttempts: usize = 0xC48; // int32
                 pub const m_nPhysicsMaterial: usize = 0xC4C; // CUtlStringToken
                 pub const m_SlaveName: usize = 0xC50; // CUtlSymbolLarge
-                pub const m_hMaster: usize = 0xC58; // 
+                pub const m_hMaster: usize = 0xC58; // CHandle<CBasePropDoor>
                 pub const m_OnBlockedClosing: usize = 0xC60; // CEntityIOOutput
                 pub const m_OnBlockedOpening: usize = 0xC88; // CEntityIOOutput
                 pub const m_OnUnblockedClosing: usize = 0xCB0; // CEntityIOOutput
@@ -6898,8 +6898,8 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_hostageRescueZ (int)
             // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
             pub mod CCSPlayerResource {
-                pub const m_bHostageAlive: usize = 0x4C0; // bool[12]
-                pub const m_isHostageFollowingSomeone: usize = 0x4CC; // bool[12]
+                pub const m_bHostageAlive: usize = 0x4C0; // 
+                pub const m_isHostageFollowingSomeone: usize = 0x4CC; // 
                 pub const m_iHostageEntityIDs: usize = 0x4D8; // CEntityIndex[12]
                 pub const m_bombsiteCenterA: usize = 0x508; // 
                 pub const m_bombsiteCenterB: usize = 0x514; // 

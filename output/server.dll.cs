@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 05:30:39.851724900 UTC
+// 2024-04-07 08:19:03.265339800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2588,7 +2588,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecBackBoundsMin = 0xE64; // 
             public const nint m_vecBackBoundsMax = 0xE70; // 
             public const nint m_bAjarDoorShouldntAlwaysOpen = 0xE7C; // bool
-            public const nint m_hEntityBlocker = 0xE80; // CHandle<CEntityBlocker>
+            public const nint m_hEntityBlocker = 0xE80; // 
         }
         // Parent: CBaseModelEntity
         // Fields count: 21
@@ -3005,7 +3005,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_numCloseAttempts = 0xC48; // int32
             public const nint m_nPhysicsMaterial = 0xC4C; // CUtlStringToken
             public const nint m_SlaveName = 0xC50; // CUtlSymbolLarge
-            public const nint m_hMaster = 0xC58; // 
+            public const nint m_hMaster = 0xC58; // CHandle<CBasePropDoor>
             public const nint m_OnBlockedClosing = 0xC60; // CEntityIOOutput
             public const nint m_OnBlockedOpening = 0xC88; // CEntityIOOutput
             public const nint m_OnUnblockedClosing = 0xCB0; // CEntityIOOutput
@@ -6769,8 +6769,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_hostageRescueZ (int)
         // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
         public static class CCSPlayerResource {
-            public const nint m_bHostageAlive = 0x4C0; // bool[12]
-            public const nint m_isHostageFollowingSomeone = 0x4CC; // bool[12]
+            public const nint m_bHostageAlive = 0x4C0; // 
+            public const nint m_isHostageFollowingSomeone = 0x4CC; // 
             public const nint m_iHostageEntityIDs = 0x4D8; // CEntityIndex[12]
             public const nint m_bombsiteCenterA = 0x508; // 
             public const nint m_bombsiteCenterB = 0x514; // 

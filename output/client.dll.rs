@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 05:30:39.851724900 UTC
+// 2024-04-07 08:19:03.265339800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -742,7 +742,7 @@ pub mod cs2_dumper {
                 pub const m_flOldPlayerZ: usize = 0x138; // float32
                 pub const m_flOldPlayerViewOffsetZ: usize = 0x13C; // float32
                 pub const m_CurrentFog: usize = 0x140; // fogparams_t
-                pub const m_hOldFogController: usize = 0x1A8; // CHandle<C_FogController>
+                pub const m_hOldFogController: usize = 0x1A8; // 
                 pub const m_bOverrideFogColor: usize = 0x1AC; // bool[5]
                 pub const m_OverrideFogColor: usize = 0x1B1; // Color[5]
                 pub const m_bOverrideFogStartEnd: usize = 0x1C5; // bool[5]
@@ -920,8 +920,8 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_hostageRescueZ (int)
             // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
             pub mod C_CSPlayerResource {
-                pub const m_bHostageAlive: usize = 0x550; // bool[12]
-                pub const m_isHostageFollowingSomeone: usize = 0x55C; // bool[12]
+                pub const m_bHostageAlive: usize = 0x550; // 
+                pub const m_isHostageFollowingSomeone: usize = 0x55C; // 
                 pub const m_iHostageEntityIDs: usize = 0x568; // CEntityIndex[12]
                 pub const m_bombsiteCenterA: usize = 0x598; // 
                 pub const m_bombsiteCenterB: usize = 0x5A4; // 
@@ -1946,7 +1946,7 @@ pub mod cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hCtrl (CHandle<CFogController>)
             pub mod C_fogplayerparams_t {
-                pub const m_hCtrl: usize = 0x8; // CHandle<C_FogController>
+                pub const m_hCtrl: usize = 0x8; // 
                 pub const m_flTransitionTime: usize = 0xC; // float32
                 pub const m_OldColor: usize = 0x10; // Color
                 pub const m_flOldStart: usize = 0x14; // float32
@@ -4255,8 +4255,8 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_iAmmo (uint16)
             pub mod CPlayer_WeaponServices {
                 pub const m_hMyWeapons: usize = 0x40; // C_NetworkUtlVectorBase<CHandle<C_BasePlayerWeapon>>
-                pub const m_hActiveWeapon: usize = 0x58; // 
-                pub const m_hLastWeapon: usize = 0x5C; // 
+                pub const m_hActiveWeapon: usize = 0x58; // CHandle<C_BasePlayerWeapon>
+                pub const m_hLastWeapon: usize = 0x5C; // CHandle<C_BasePlayerWeapon>
                 pub const m_iAmmo: usize = 0x60; // uint16[32]
             }
             // Parent: None
@@ -4536,7 +4536,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_weaponPurchasesThisMatch (WeaponPurchaseTracker_t)
             // NetworkVarNames: m_weaponPurchasesThisRound (WeaponPurchaseTracker_t)
             pub mod CCSPlayer_ActionTrackingServices {
-                pub const m_hLastWeaponBeforeC4AutoSwitch: usize = 0x40; // 
+                pub const m_hLastWeaponBeforeC4AutoSwitch: usize = 0x40; // CHandle<C_BasePlayerWeapon>
                 pub const m_bIsRescuing: usize = 0x44; // bool
                 pub const m_weaponPurchasesThisMatch: usize = 0x48; // WeaponPurchaseTracker_t
                 pub const m_weaponPurchasesThisRound: usize = 0xA0; // WeaponPurchaseTracker_t
@@ -6312,7 +6312,7 @@ pub mod cs2_dumper {
                 pub const m_nViewModelIndex: usize = 0xEEC; // uint32
                 pub const m_nAnimationParity: usize = 0xEF0; // uint32
                 pub const m_flAnimationStartTime: usize = 0xEF4; // float32
-                pub const m_hWeapon: usize = 0xEF8; // 
+                pub const m_hWeapon: usize = 0xEF8; // CHandle<C_BasePlayerWeapon>
                 pub const m_sVMName: usize = 0xF00; // CUtlSymbolLarge
                 pub const m_sAnimationPrefix: usize = 0xF08; // CUtlSymbolLarge
                 pub const m_hWeaponModel: usize = 0xF10; // CHandle<C_ViewmodelWeapon>

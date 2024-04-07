@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 05:30:39.851724900 UTC
+// 2024-04-07 08:19:03.265339800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -732,7 +732,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flOldPlayerZ = 0x138; // float32
             public const nint m_flOldPlayerViewOffsetZ = 0x13C; // float32
             public const nint m_CurrentFog = 0x140; // fogparams_t
-            public const nint m_hOldFogController = 0x1A8; // CHandle<C_FogController>
+            public const nint m_hOldFogController = 0x1A8; // 
             public const nint m_bOverrideFogColor = 0x1AC; // bool[5]
             public const nint m_OverrideFogColor = 0x1B1; // Color[5]
             public const nint m_bOverrideFogStartEnd = 0x1C5; // bool[5]
@@ -910,8 +910,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_hostageRescueZ (int)
         // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
         public static class C_CSPlayerResource {
-            public const nint m_bHostageAlive = 0x550; // bool[12]
-            public const nint m_isHostageFollowingSomeone = 0x55C; // bool[12]
+            public const nint m_bHostageAlive = 0x550; // 
+            public const nint m_isHostageFollowingSomeone = 0x55C; // 
             public const nint m_iHostageEntityIDs = 0x568; // CEntityIndex[12]
             public const nint m_bombsiteCenterA = 0x598; // 
             public const nint m_bombsiteCenterB = 0x5A4; // 
@@ -1936,7 +1936,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_hCtrl (CHandle<CFogController>)
         public static class C_fogplayerparams_t {
-            public const nint m_hCtrl = 0x8; // CHandle<C_FogController>
+            public const nint m_hCtrl = 0x8; // 
             public const nint m_flTransitionTime = 0xC; // float32
             public const nint m_OldColor = 0x10; // Color
             public const nint m_flOldStart = 0x14; // float32
@@ -4245,8 +4245,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iAmmo (uint16)
         public static class CPlayer_WeaponServices {
             public const nint m_hMyWeapons = 0x40; // C_NetworkUtlVectorBase<CHandle<C_BasePlayerWeapon>>
-            public const nint m_hActiveWeapon = 0x58; // 
-            public const nint m_hLastWeapon = 0x5C; // 
+            public const nint m_hActiveWeapon = 0x58; // CHandle<C_BasePlayerWeapon>
+            public const nint m_hLastWeapon = 0x5C; // CHandle<C_BasePlayerWeapon>
             public const nint m_iAmmo = 0x60; // uint16[32]
         }
         // Parent: None
@@ -4526,7 +4526,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_weaponPurchasesThisMatch (WeaponPurchaseTracker_t)
         // NetworkVarNames: m_weaponPurchasesThisRound (WeaponPurchaseTracker_t)
         public static class CCSPlayer_ActionTrackingServices {
-            public const nint m_hLastWeaponBeforeC4AutoSwitch = 0x40; // 
+            public const nint m_hLastWeaponBeforeC4AutoSwitch = 0x40; // CHandle<C_BasePlayerWeapon>
             public const nint m_bIsRescuing = 0x44; // bool
             public const nint m_weaponPurchasesThisMatch = 0x48; // WeaponPurchaseTracker_t
             public const nint m_weaponPurchasesThisRound = 0xA0; // WeaponPurchaseTracker_t
@@ -6302,7 +6302,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nViewModelIndex = 0xEEC; // uint32
             public const nint m_nAnimationParity = 0xEF0; // uint32
             public const nint m_flAnimationStartTime = 0xEF4; // float32
-            public const nint m_hWeapon = 0xEF8; // 
+            public const nint m_hWeapon = 0xEF8; // CHandle<C_BasePlayerWeapon>
             public const nint m_sVMName = 0xF00; // CUtlSymbolLarge
             public const nint m_sAnimationPrefix = 0xF08; // CUtlSymbolLarge
             public const nint m_hWeaponModel = 0xF10; // CHandle<C_ViewmodelWeapon>

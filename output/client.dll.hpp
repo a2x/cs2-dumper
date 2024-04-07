@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 05:30:39.851724900 UTC
+// 2024-04-07 08:19:03.265339800 UTC
 
 #pragma once
 
@@ -737,7 +737,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flOldPlayerZ = 0x138; // float32
                 constexpr std::ptrdiff_t m_flOldPlayerViewOffsetZ = 0x13C; // float32
                 constexpr std::ptrdiff_t m_CurrentFog = 0x140; // fogparams_t
-                constexpr std::ptrdiff_t m_hOldFogController = 0x1A8; // CHandle<C_FogController>
+                constexpr std::ptrdiff_t m_hOldFogController = 0x1A8; // 
                 constexpr std::ptrdiff_t m_bOverrideFogColor = 0x1AC; // bool[5]
                 constexpr std::ptrdiff_t m_OverrideFogColor = 0x1B1; // Color[5]
                 constexpr std::ptrdiff_t m_bOverrideFogStartEnd = 0x1C5; // bool[5]
@@ -915,8 +915,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hostageRescueZ (int)
             // NetworkVarNames: m_bEndMatchNextMapAllVoted (bool)
             namespace C_CSPlayerResource {
-                constexpr std::ptrdiff_t m_bHostageAlive = 0x550; // bool[12]
-                constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x55C; // bool[12]
+                constexpr std::ptrdiff_t m_bHostageAlive = 0x550; // 
+                constexpr std::ptrdiff_t m_isHostageFollowingSomeone = 0x55C; // 
                 constexpr std::ptrdiff_t m_iHostageEntityIDs = 0x568; // CEntityIndex[12]
                 constexpr std::ptrdiff_t m_bombsiteCenterA = 0x598; // 
                 constexpr std::ptrdiff_t m_bombsiteCenterB = 0x5A4; // 
@@ -1941,7 +1941,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hCtrl (CHandle<CFogController>)
             namespace C_fogplayerparams_t {
-                constexpr std::ptrdiff_t m_hCtrl = 0x8; // CHandle<C_FogController>
+                constexpr std::ptrdiff_t m_hCtrl = 0x8; // 
                 constexpr std::ptrdiff_t m_flTransitionTime = 0xC; // float32
                 constexpr std::ptrdiff_t m_OldColor = 0x10; // Color
                 constexpr std::ptrdiff_t m_flOldStart = 0x14; // float32
@@ -4250,8 +4250,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iAmmo (uint16)
             namespace CPlayer_WeaponServices {
                 constexpr std::ptrdiff_t m_hMyWeapons = 0x40; // C_NetworkUtlVectorBase<CHandle<C_BasePlayerWeapon>>
-                constexpr std::ptrdiff_t m_hActiveWeapon = 0x58; // 
-                constexpr std::ptrdiff_t m_hLastWeapon = 0x5C; // 
+                constexpr std::ptrdiff_t m_hActiveWeapon = 0x58; // CHandle<C_BasePlayerWeapon>
+                constexpr std::ptrdiff_t m_hLastWeapon = 0x5C; // CHandle<C_BasePlayerWeapon>
                 constexpr std::ptrdiff_t m_iAmmo = 0x60; // uint16[32]
             }
             // Parent: None
@@ -4531,7 +4531,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_weaponPurchasesThisMatch (WeaponPurchaseTracker_t)
             // NetworkVarNames: m_weaponPurchasesThisRound (WeaponPurchaseTracker_t)
             namespace CCSPlayer_ActionTrackingServices {
-                constexpr std::ptrdiff_t m_hLastWeaponBeforeC4AutoSwitch = 0x40; // 
+                constexpr std::ptrdiff_t m_hLastWeaponBeforeC4AutoSwitch = 0x40; // CHandle<C_BasePlayerWeapon>
                 constexpr std::ptrdiff_t m_bIsRescuing = 0x44; // bool
                 constexpr std::ptrdiff_t m_weaponPurchasesThisMatch = 0x48; // WeaponPurchaseTracker_t
                 constexpr std::ptrdiff_t m_weaponPurchasesThisRound = 0xA0; // WeaponPurchaseTracker_t
@@ -6307,7 +6307,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nViewModelIndex = 0xEEC; // uint32
                 constexpr std::ptrdiff_t m_nAnimationParity = 0xEF0; // uint32
                 constexpr std::ptrdiff_t m_flAnimationStartTime = 0xEF4; // float32
-                constexpr std::ptrdiff_t m_hWeapon = 0xEF8; // 
+                constexpr std::ptrdiff_t m_hWeapon = 0xEF8; // CHandle<C_BasePlayerWeapon>
                 constexpr std::ptrdiff_t m_sVMName = 0xF00; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_sAnimationPrefix = 0xF08; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_hWeaponModel = 0xF10; // CHandle<C_ViewmodelWeapon>

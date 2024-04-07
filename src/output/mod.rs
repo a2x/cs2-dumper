@@ -234,10 +234,10 @@ impl Results {
         self.offsets
             .iter()
             .find_map(|(module_name, offsets)| {
-                let (_name, value) = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?;
                 let module = process.module_by_name(module_name).ok()?;
+                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?;
 
-                process.read(module.base + value).ok()
+                process.read(module.base + offset.1).ok()
             })
             .ok_or(Error::Other("unable to read build number"))
     }
