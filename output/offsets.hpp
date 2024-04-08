@@ -25,6 +25,8 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t dwViewAngles = 0x192F940;
             constexpr std::ptrdiff_t dwViewMatrix = 0x19231B0;
             constexpr std::ptrdiff_t dwViewRender = 0x19239B0;
+            // force jump
+            constexpr std::ptrdiff_t dwForceJump = 0x172F570;
         }
         // Module: engine2.dll
         namespace engine2_dll {
