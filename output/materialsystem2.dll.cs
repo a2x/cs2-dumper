@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: materialsystem2.dll
@@ -104,7 +104,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRadius = 0xC; // float32
             public const nint m_flRoundness = 0x10; // float32
             public const nint m_flFeather = 0x14; // float32
-            public const nint m_vColorTint = 0x18; // 
+            public const nint m_vColorTint = 0x18; // Vector
         }
         // Parent: None
         // Fields count: 5
@@ -200,7 +200,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class MaterialParamTexture_t {
-            public const nint m_pValue = 0x8; // 
+            public const nint m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
         }
     }
 }

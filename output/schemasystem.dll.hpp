@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #pragma once
 
@@ -114,7 +114,7 @@ namespace cs2_dumper {
             // Fields count: 22
             namespace CSchemaSystemInternalRegistration {
                 constexpr std::ptrdiff_t m_Vector2D = 0x0; // Vector2D
-                constexpr std::ptrdiff_t m_Vector = 0x8; // 
+                constexpr std::ptrdiff_t m_Vector = 0x8; // Vector
                 constexpr std::ptrdiff_t m_VectorAligned = 0x20; // VectorAligned
                 constexpr std::ptrdiff_t m_Quaternion = 0x30; // Quaternion
                 constexpr std::ptrdiff_t m_QAngle = 0x40; // QAngle

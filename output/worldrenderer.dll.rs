@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -40,7 +40,7 @@ pub mod cs2_dumper {
                 pub const m_vTintColor: usize = 0x3C; // Vector4D
                 pub const m_skin: usize = 0x50; // CUtlString
                 pub const m_nObjectTypeFlags: usize = 0x58; // ObjectTypeFlags_t
-                pub const m_vLightingOrigin: usize = 0x5C; // 
+                pub const m_vLightingOrigin: usize = 0x5C; // Vector
                 pub const m_nOverlayRenderOrder: usize = 0x68; // int16
                 pub const m_nLODOverride: usize = 0x6A; // int16
                 pub const m_nCubeMapPrecomputedHandshake: usize = 0x6C; // int32
@@ -54,7 +54,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod AggregateLODSetup_t {
-                pub const m_vLODOrigin: usize = 0x0; // 
+                pub const m_vLODOrigin: usize = 0x0; // Vector
                 pub const m_fMaxObjectScale: usize = 0xC; // float32
                 pub const m_fSwitchDistances: usize = 0x10; // CUtlVectorFixedGrowable<float32>
             }
@@ -101,9 +101,9 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod NodeData_t {
                 pub const m_nParent: usize = 0x0; // int32
-                pub const m_vOrigin: usize = 0x4; // 
-                pub const m_vMinBounds: usize = 0x10; // 
-                pub const m_vMaxBounds: usize = 0x1C; // 
+                pub const m_vOrigin: usize = 0x4; // Vector
+                pub const m_vMinBounds: usize = 0x10; // Vector
+                pub const m_vMaxBounds: usize = 0x1C; // Vector
                 pub const m_flMinimumDistance: usize = 0x28; // float32
                 pub const m_ChildNodeIndices: usize = 0x30; // CUtlVector<int32>
                 pub const m_worldNodePrefix: usize = 0x48; // CUtlString
@@ -302,8 +302,8 @@ pub mod cs2_dumper {
             pub mod CVoxelVisibility {
                 pub const m_nBaseClusterCount: usize = 0x40; // uint32
                 pub const m_nPVSBytesPerCluster: usize = 0x44; // uint32
-                pub const m_vMinBounds: usize = 0x48; // 
-                pub const m_vMaxBounds: usize = 0x54; // 
+                pub const m_vMinBounds: usize = 0x48; // Vector
+                pub const m_vMaxBounds: usize = 0x54; // Vector
                 pub const m_flGridSize: usize = 0x60; // float32
                 pub const m_nSkyVisibilityCluster: usize = 0x64; // uint32
                 pub const m_nSunVisibilityCluster: usize = 0x68; // uint32

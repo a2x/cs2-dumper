@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #pragma once
 
@@ -273,8 +273,8 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 4
             namespace constraint_hingeparams_t {
-                constexpr std::ptrdiff_t worldPosition = 0x0; // 
-                constexpr std::ptrdiff_t worldAxisDirection = 0xC; // 
+                constexpr std::ptrdiff_t worldPosition = 0x0; // Vector
+                constexpr std::ptrdiff_t worldAxisDirection = 0xC; // Vector
                 constexpr std::ptrdiff_t hingeAxis = 0x18; // constraint_axislimit_t
                 constexpr std::ptrdiff_t constraint = 0x28; // constraint_breakableparams_t
             }
@@ -352,11 +352,11 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace RnBodyDesc_t {
                 constexpr std::ptrdiff_t m_sDebugName = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_vPosition = 0x8; // 
+                constexpr std::ptrdiff_t m_vPosition = 0x8; // Vector
                 constexpr std::ptrdiff_t m_qOrientation = 0x14; // QuaternionStorage
-                constexpr std::ptrdiff_t m_vLinearVelocity = 0x24; // 
-                constexpr std::ptrdiff_t m_vAngularVelocity = 0x30; // 
-                constexpr std::ptrdiff_t m_vLocalMassCenter = 0x3C; // 
+                constexpr std::ptrdiff_t m_vLinearVelocity = 0x24; // Vector
+                constexpr std::ptrdiff_t m_vAngularVelocity = 0x30; // Vector
+                constexpr std::ptrdiff_t m_vLocalMassCenter = 0x3C; // Vector
                 constexpr std::ptrdiff_t m_LocalInertiaInv = 0x48; // Vector[3]
                 constexpr std::ptrdiff_t m_flMassInv = 0x6C; // float32
                 constexpr std::ptrdiff_t m_flGameMass = 0x70; // float32
@@ -367,8 +367,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAngularDrag = 0x84; // float32
                 constexpr std::ptrdiff_t m_flLinearBuoyancyDrag = 0x88; // float32
                 constexpr std::ptrdiff_t m_flAngularBuoyancyDrag = 0x8C; // float32
-                constexpr std::ptrdiff_t m_vLastAwakeForceAccum = 0x90; // 
-                constexpr std::ptrdiff_t m_vLastAwakeTorqueAccum = 0x9C; // 
+                constexpr std::ptrdiff_t m_vLastAwakeForceAccum = 0x90; // Vector
+                constexpr std::ptrdiff_t m_vLastAwakeTorqueAccum = 0x9C; // Vector
                 constexpr std::ptrdiff_t m_flBuoyancyFactor = 0xA8; // float32
                 constexpr std::ptrdiff_t m_flGravityScale = 0xAC; // float32
                 constexpr std::ptrdiff_t m_flTimeScale = 0xB0; // float32
@@ -422,22 +422,22 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnMesh_t {
-                constexpr std::ptrdiff_t m_vMin = 0x0; // 
-                constexpr std::ptrdiff_t m_vMax = 0xC; // 
+                constexpr std::ptrdiff_t m_vMin = 0x0; // Vector
+                constexpr std::ptrdiff_t m_vMax = 0xC; // Vector
                 constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector<RnNode_t>
                 constexpr std::ptrdiff_t m_Vertices = 0x30; // CUtlVectorSIMDPaddedVector
                 constexpr std::ptrdiff_t m_Triangles = 0x48; // CUtlVector<RnTriangle_t>
                 constexpr std::ptrdiff_t m_Wings = 0x60; // CUtlVector<RnWing_t>
                 constexpr std::ptrdiff_t m_Materials = 0x78; // CUtlVector<uint8>
-                constexpr std::ptrdiff_t m_vOrthographicAreas = 0x90; // 
+                constexpr std::ptrdiff_t m_vOrthographicAreas = 0x90; // Vector
                 constexpr std::ptrdiff_t m_nFlags = 0x9C; // uint32
                 constexpr std::ptrdiff_t m_nDebugFlags = 0xA0; // uint32
             }
             // Parent: None
             // Fields count: 2
             namespace VertexPositionNormal_t {
-                constexpr std::ptrdiff_t m_vPosition = 0x0; // 
-                constexpr std::ptrdiff_t m_vNormal = 0xC; // 
+                constexpr std::ptrdiff_t m_vPosition = 0x0; // Vector
+                constexpr std::ptrdiff_t m_vNormal = 0xC; // Vector
             }
             // Parent: None
             // Fields count: 8
@@ -476,7 +476,7 @@ namespace cs2_dumper {
             namespace FeCtrlSoftOffset_t {
                 constexpr std::ptrdiff_t nCtrlParent = 0x0; // uint16
                 constexpr std::ptrdiff_t nCtrlChild = 0x2; // uint16
-                constexpr std::ptrdiff_t vOffset = 0x4; // 
+                constexpr std::ptrdiff_t vOffset = 0x4; // Vector
                 constexpr std::ptrdiff_t flAlpha = 0x10; // float32
             }
             // Parent: None
@@ -493,7 +493,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nVertexCount = 0x16; // uint16
                 constexpr std::ptrdiff_t nMapOffset = 0x18; // uint32
                 constexpr std::ptrdiff_t nNodeListOffset = 0x1C; // uint32
-                constexpr std::ptrdiff_t vCenterOfMass = 0x20; // 
+                constexpr std::ptrdiff_t vCenterOfMass = 0x20; // Vector
                 constexpr std::ptrdiff_t flVolumetricSolveStrength = 0x2C; // float32
                 constexpr std::ptrdiff_t nScaleSourceNode = 0x30; // int16
                 constexpr std::ptrdiff_t nNodeListCount = 0x32; // uint16
@@ -536,7 +536,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace FeNodeReverseOffset_t {
-                constexpr std::ptrdiff_t vOffset = 0x0; // 
+                constexpr std::ptrdiff_t vOffset = 0x0; // Vector
                 constexpr std::ptrdiff_t nBoneCtrl = 0xC; // uint16
                 constexpr std::ptrdiff_t nTargetNode = 0xE; // uint16
             }
@@ -546,7 +546,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnPlane_t {
-                constexpr std::ptrdiff_t m_vNormal = 0x0; // 
+                constexpr std::ptrdiff_t m_vNormal = 0x0; // Vector
                 constexpr std::ptrdiff_t m_flOffset = 0xC; // float32
             }
             // Parent: None
@@ -587,8 +587,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flBaseForwardFriction = 0x74; // float32
                 constexpr std::ptrdiff_t m_flRadius0 = 0x78; // float32
                 constexpr std::ptrdiff_t m_flRadius1 = 0x7C; // float32
-                constexpr std::ptrdiff_t m_vPoint0 = 0x80; // 
-                constexpr std::ptrdiff_t m_vPoint1 = 0x8C; // 
+                constexpr std::ptrdiff_t m_vPoint0 = 0x80; // Vector
+                constexpr std::ptrdiff_t m_vPoint1 = 0x8C; // Vector
                 constexpr std::ptrdiff_t m_nCollisionMask = 0x98; // uint16
             }
             // Parent: None
@@ -617,9 +617,9 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnNode_t {
-                constexpr std::ptrdiff_t m_vMin = 0x0; // 
+                constexpr std::ptrdiff_t m_vMin = 0x0; // Vector
                 constexpr std::ptrdiff_t m_nChildren = 0xC; // uint32
-                constexpr std::ptrdiff_t m_vMax = 0x10; // 
+                constexpr std::ptrdiff_t m_vMax = 0x10; // Vector
                 constexpr std::ptrdiff_t m_nTriangleOffset = 0x1C; // uint32
             }
             // Parent: None
@@ -629,7 +629,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace FeFitMatrix_t {
                 constexpr std::ptrdiff_t bone = 0x0; // CTransform
-                constexpr std::ptrdiff_t vCenter = 0x20; // 
+                constexpr std::ptrdiff_t vCenter = 0x20; // Vector
                 constexpr std::ptrdiff_t nEnd = 0x2C; // uint16
                 constexpr std::ptrdiff_t nNode = 0x2E; // uint16
                 constexpr std::ptrdiff_t nBeginDynamic = 0x30; // uint16
@@ -747,8 +747,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CastSphereSATParams_t {
-                constexpr std::ptrdiff_t m_vRayStart = 0x0; // 
-                constexpr std::ptrdiff_t m_vRayDelta = 0xC; // 
+                constexpr std::ptrdiff_t m_vRayStart = 0x0; // Vector
+                constexpr std::ptrdiff_t m_vRayDelta = 0xC; // Vector
                 constexpr std::ptrdiff_t m_flRadius = 0x18; // float32
                 constexpr std::ptrdiff_t m_flMaxFraction = 0x1C; // float32
                 constexpr std::ptrdiff_t m_flScale = 0x20; // float32
@@ -796,7 +796,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t tmFrame2 = 0x0; // CTransform
                 constexpr std::ptrdiff_t nNode = 0x20; // uint16
                 constexpr std::ptrdiff_t nCollisionMask = 0x22; // uint16
-                constexpr std::ptrdiff_t vSize = 0x24; // 
+                constexpr std::ptrdiff_t vSize = 0x24; // Vector
                 constexpr std::ptrdiff_t nVertexMapIndex = 0x30; // uint16
                 constexpr std::ptrdiff_t nFlags = 0x32; // uint16
             }
@@ -821,7 +821,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace FeCtrlOffset_t {
-                constexpr std::ptrdiff_t vOffset = 0x0; // 
+                constexpr std::ptrdiff_t vOffset = 0x0; // Vector
                 constexpr std::ptrdiff_t nCtrlParent = 0xC; // uint16
                 constexpr std::ptrdiff_t nCtrlChild = 0xE; // uint16
             }
@@ -882,10 +882,10 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnHull_t {
-                constexpr std::ptrdiff_t m_vCentroid = 0x0; // 
+                constexpr std::ptrdiff_t m_vCentroid = 0x0; // Vector
                 constexpr std::ptrdiff_t m_flMaxAngularRadius = 0xC; // float32
                 constexpr std::ptrdiff_t m_Bounds = 0x10; // AABB_t
-                constexpr std::ptrdiff_t m_vOrthographicAreas = 0x28; // 
+                constexpr std::ptrdiff_t m_vOrthographicAreas = 0x28; // Vector
                 constexpr std::ptrdiff_t m_MassProperties = 0x34; // matrix3x4_t
                 constexpr std::ptrdiff_t m_flVolume = 0x64; // float32
                 constexpr std::ptrdiff_t m_flSurfaceArea = 0x68; // float32
@@ -903,7 +903,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CovMatrix3 {
-                constexpr std::ptrdiff_t m_vDiag = 0x0; // 
+                constexpr std::ptrdiff_t m_vDiag = 0x0; // Vector
                 constexpr std::ptrdiff_t m_flXY = 0xC; // float32
                 constexpr std::ptrdiff_t m_flXZ = 0x10; // float32
                 constexpr std::ptrdiff_t m_flYZ = 0x14; // float32
@@ -1099,7 +1099,7 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 1
             namespace VertexPositionColor_t {
-                constexpr std::ptrdiff_t m_vPosition = 0x0; // 
+                constexpr std::ptrdiff_t m_vPosition = 0x0; // Vector
             }
             // Parent: None
             // Fields count: 3

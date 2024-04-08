@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -112,7 +112,7 @@ pub mod cs2_dumper {
                 pub const m_flRadius: usize = 0xC; // float32
                 pub const m_flRoundness: usize = 0x10; // float32
                 pub const m_flFeather: usize = 0x14; // float32
-                pub const m_vColorTint: usize = 0x18; // 
+                pub const m_vColorTint: usize = 0x18; // Vector
             }
             // Parent: None
             // Fields count: 5
@@ -208,7 +208,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod MaterialParamTexture_t {
-                pub const m_pValue: usize = 0x8; // 
+                pub const m_pValue: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
         }
     }

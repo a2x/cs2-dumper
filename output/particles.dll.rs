@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -755,7 +755,7 @@ pub mod cs2_dumper {
                 pub const m_nAlphaTestPointField: usize = 0x87C; // ParticleAttributeIndex_t
                 pub const m_nAlphaTestRangeField: usize = 0x880; // ParticleAttributeIndex_t
                 pub const m_nAlphaTestSharpnessField: usize = 0x884; // ParticleAttributeIndex_t
-                pub const m_hTexture: usize = 0x888; // 
+                pub const m_hTexture: usize = 0x888; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_nHSVShiftControlPoint: usize = 0x890; // int32
             }
             // Parent: CParticleFunctionPreEmission
@@ -961,10 +961,10 @@ pub mod cs2_dumper {
                 pub const m_nVectorFieldInput: usize = 0x1C4; // ParticleAttributeIndex_t
                 pub const m_flMinDistance: usize = 0x1C8; // CParticleCollectionFloatInput
                 pub const m_flMaxDistance: usize = 0x320; // CParticleCollectionFloatInput
-                pub const m_vValueBelowMin: usize = 0x478; // 
-                pub const m_vValueAtMin: usize = 0x484; // 
-                pub const m_vValueAtMax: usize = 0x490; // 
-                pub const m_vValueAboveMax: usize = 0x49C; // 
+                pub const m_vValueBelowMin: usize = 0x478; // Vector
+                pub const m_vValueAtMin: usize = 0x484; // Vector
+                pub const m_vValueAtMax: usize = 0x490; // Vector
+                pub const m_vValueAboveMax: usize = 0x49C; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 4
@@ -1038,8 +1038,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RtEnvCull {
-                pub const m_vecTestDir: usize = 0x1C0; // 
-                pub const m_vecTestNormal: usize = 0x1CC; // 
+                pub const m_vecTestDir: usize = 0x1C0; // Vector
+                pub const m_vecTestNormal: usize = 0x1CC; // Vector
                 pub const m_bUseVelocity: usize = 0x1D8; // bool
                 pub const m_bCullOnMiss: usize = 0x1D9; // bool
                 pub const m_bLifeAdjust: usize = 0x1DA; // bool
@@ -1056,7 +1056,7 @@ pub mod cs2_dumper {
                 pub const m_fMinDistance: usize = 0x1C0; // CParticleCollectionFloatInput
                 pub const m_fMaxDistance: usize = 0x318; // CParticleCollectionFloatInput
                 pub const m_nControlPointNumber: usize = 0x470; // int32
-                pub const m_CenterOffset: usize = 0x474; // 
+                pub const m_CenterOffset: usize = 0x474; // Vector
                 pub const m_bGlobalCenter: usize = 0x480; // bool
             }
             // Parent: CParticleFunctionInitializer
@@ -1065,8 +1065,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomVector {
-                pub const m_vecMin: usize = 0x1C0; // 
-                pub const m_vecMax: usize = 0x1CC; // 
+                pub const m_vecMin: usize = 0x1C0; // Vector
+                pub const m_vecMax: usize = 0x1CC; // Vector
                 pub const m_nFieldOutput: usize = 0x1D8; // ParticleAttributeIndex_t
                 pub const m_randomnessParameters: usize = 0x1DC; // CRandomNumberGeneratorParameters
             }
@@ -1076,8 +1076,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_InitialVelocityNoise {
-                pub const m_vecAbsVal: usize = 0x1C0; // 
-                pub const m_vecAbsValInv: usize = 0x1CC; // 
+                pub const m_vecAbsVal: usize = 0x1C0; // Vector
+                pub const m_vecAbsValInv: usize = 0x1CC; // Vector
                 pub const m_vecOffsetLoc: usize = 0x1D8; // CPerParticleVecInput
                 pub const m_flOffset: usize = 0x830; // CPerParticleFloatInput
                 pub const m_vecOutputMin: usize = 0x988; // CPerParticleVecInput
@@ -1128,7 +1128,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_PlaneCull {
                 pub const m_nPlaneControlPoint: usize = 0x1C0; // int32
-                pub const m_vecPlaneDirection: usize = 0x1C4; // 
+                pub const m_vecPlaneDirection: usize = 0x1C4; // Vector
                 pub const m_bLocalSpace: usize = 0x1D0; // bool
                 pub const m_flPlaneOffset: usize = 0x1D4; // float32
             }
@@ -1167,7 +1167,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_TwistAroundAxis {
                 pub const m_fForceAmount: usize = 0x1D0; // float32
-                pub const m_TwistAxis: usize = 0x1D4; // 
+                pub const m_TwistAxis: usize = 0x1D4; // Vector
                 pub const m_bLocalSpace: usize = 0x1E0; // bool
                 pub const m_nControlPointNumber: usize = 0x1E4; // int32
             }
@@ -1183,7 +1183,7 @@ pub mod cs2_dumper {
                 pub const m_nCPColor: usize = 0x1CC; // int32
                 pub const m_nCPInvalidColor: usize = 0x1D0; // int32
                 pub const m_nCPExtraArcData: usize = 0x1D4; // int32
-                pub const m_vGravity: usize = 0x1D8; // 
+                pub const m_vGravity: usize = 0x1D8; // Vector
                 pub const m_flArcMaxDuration: usize = 0x1E4; // float32
                 pub const m_flSegmentBreak: usize = 0x1E8; // float32
                 pub const m_flArcSpeed: usize = 0x1EC; // float32
@@ -1348,7 +1348,7 @@ pub mod cs2_dumper {
             pub mod C_OP_SetControlPointPositionToTimeOfDayValue {
                 pub const m_nControlPointNumber: usize = 0x1D0; // int32
                 pub const m_pszTimeOfDayParameter: usize = 0x1D4; // char[128]
-                pub const m_vecDefaultValue: usize = 0x254; // 
+                pub const m_vecDefaultValue: usize = 0x254; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -1617,8 +1617,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_OscillateVectorSimple {
-                pub const m_Rate: usize = 0x1C0; // 
-                pub const m_Frequency: usize = 0x1CC; // 
+                pub const m_Rate: usize = 0x1C0; // Vector
+                pub const m_Frequency: usize = 0x1CC; // Vector
                 pub const m_nField: usize = 0x1D8; // ParticleAttributeIndex_t
                 pub const m_flOscMult: usize = 0x1DC; // float32
                 pub const m_flOscAdd: usize = 0x1E0; // float32
@@ -1762,8 +1762,8 @@ pub mod cs2_dumper {
             pub mod C_INIT_OffsetVectorToVector {
                 pub const m_nFieldInput: usize = 0x1C0; // ParticleAttributeIndex_t
                 pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
-                pub const m_vecOutputMin: usize = 0x1C8; // 
-                pub const m_vecOutputMax: usize = 0x1D4; // 
+                pub const m_vecOutputMin: usize = 0x1C8; // Vector
+                pub const m_vecOutputMax: usize = 0x1D4; // Vector
                 pub const m_randomnessParameters: usize = 0x1E0; // CRandomNumberGeneratorParameters
             }
             // Parent: CParticleFunctionOperator
@@ -1840,7 +1840,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_AttractToControlPoint {
-                pub const m_vecComponentScale: usize = 0x1D0; // 
+                pub const m_vecComponentScale: usize = 0x1D0; // Vector
                 pub const m_fForceAmount: usize = 0x1E0; // CPerParticleFloatInput
                 pub const m_fFalloffPower: usize = 0x338; // float32
                 pub const m_TransformInput: usize = 0x340; // CParticleTransformInput
@@ -1873,7 +1873,7 @@ pub mod cs2_dumper {
                 pub const m_nControlPointNumber: usize = 0x1C0; // int32
                 pub const m_fSpeedMin: usize = 0x1C4; // float32
                 pub const m_fSpeedMax: usize = 0x1C8; // float32
-                pub const m_vecLocalCoordinateSystemSpeedScale: usize = 0x1CC; // 
+                pub const m_vecLocalCoordinateSystemSpeedScale: usize = 0x1CC; // Vector
                 pub const m_bIgnoreDelta: usize = 0x1D9; // bool
             }
             // Parent: CParticleFunctionInitializer
@@ -1927,7 +1927,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod ControlPointReference_t {
                 pub const m_controlPointNameString: usize = 0x0; // int32
-                pub const m_vOffsetFromControlPoint: usize = 0x4; // 
+                pub const m_vOffsetFromControlPoint: usize = 0x4; // Vector
                 pub const m_bOffsetInLocalSpace: usize = 0x10; // bool
             }
             // Parent: CParticleFunctionPreEmission
@@ -2098,8 +2098,8 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x230; // ParticleAttributeIndex_t
                 pub const m_flInputMin: usize = 0x234; // float32
                 pub const m_flInputMax: usize = 0x238; // float32
-                pub const m_vecOutputMin: usize = 0x23C; // 
-                pub const m_vecOutputMax: usize = 0x248; // 
+                pub const m_vecOutputMin: usize = 0x23C; // Vector
+                pub const m_vecOutputMax: usize = 0x248; // Vector
                 pub const m_flRadius: usize = 0x254; // float32
             }
             // Parent: CParticleFunctionOperator
@@ -2175,9 +2175,9 @@ pub mod cs2_dumper {
                 pub const m_nBulgeControl: usize = 0x8; // int32
                 pub const m_flBulge: usize = 0xC; // float32
                 pub const m_flMidPoint: usize = 0x10; // float32
-                pub const m_vStartPointOffset: usize = 0x14; // 
-                pub const m_vMidPointOffset: usize = 0x20; // 
-                pub const m_vEndOffset: usize = 0x2C; // 
+                pub const m_vStartPointOffset: usize = 0x14; // Vector
+                pub const m_vMidPointOffset: usize = 0x20; // Vector
+                pub const m_vEndOffset: usize = 0x2C; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -2198,8 +2198,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_CreateFromPlaneCache {
-                pub const m_vecOffsetMin: usize = 0x1C0; // 
-                pub const m_vecOffsetMax: usize = 0x1CC; // 
+                pub const m_vecOffsetMin: usize = 0x1C0; // Vector
+                pub const m_vecOffsetMax: usize = 0x1CC; // Vector
                 pub const m_bUseNormal: usize = 0x1D9; // bool
             }
             // Parent: CParticleFunctionPreEmission
@@ -2209,7 +2209,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_ControlPointToRadialScreenSpace {
                 pub const m_nCPIn: usize = 0x1D0; // int32
-                pub const m_vecCP1Pos: usize = 0x1D4; // 
+                pub const m_vecCP1Pos: usize = 0x1D4; // Vector
                 pub const m_nCPOut: usize = 0x1E0; // int32
                 pub const m_nCPOutField: usize = 0x1E4; // int32
                 pub const m_nCPSSPosOut: usize = 0x1E8; // int32
@@ -2227,8 +2227,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_NormalOffset {
-                pub const m_OffsetMin: usize = 0x1C0; // 
-                pub const m_OffsetMax: usize = 0x1CC; // 
+                pub const m_OffsetMin: usize = 0x1C0; // Vector
+                pub const m_OffsetMax: usize = 0x1CC; // Vector
                 pub const m_nControlPointNumber: usize = 0x1D8; // int32
                 pub const m_bLocalCoords: usize = 0x1DC; // bool
                 pub const m_bNormalize: usize = 0x1DD; // bool
@@ -2240,8 +2240,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapDistanceToLineSegmentToVector {
                 pub const m_nFieldOutput: usize = 0x1E0; // ParticleAttributeIndex_t
-                pub const m_vMinOutputValue: usize = 0x1E4; // 
-                pub const m_vMaxOutputValue: usize = 0x1F0; // 
+                pub const m_vMinOutputValue: usize = 0x1E4; // Vector
+                pub const m_vMaxOutputValue: usize = 0x1F0; // Vector
             }
             // Parent: CParticleFunctionRenderer
             // Fields count: 8
@@ -2272,7 +2272,7 @@ pub mod cs2_dumper {
                 pub const m_flOutputMax: usize = 0x1D0; // float32
                 pub const m_flNoiseScale: usize = 0x1D4; // float32
                 pub const m_flNoiseScaleLoc: usize = 0x1D8; // float32
-                pub const m_vecOffsetLoc: usize = 0x1DC; // 
+                pub const m_vecOffsetLoc: usize = 0x1DC; // Vector
                 pub const m_flWorldTimeScale: usize = 0x1E8; // float32
             }
             // Parent: CGeneralSpin
@@ -2303,28 +2303,28 @@ pub mod cs2_dumper {
             // MParticleCustomFieldDefaultValue
             pub mod CParticleVecInput {
                 pub const m_nType: usize = 0x10; // ParticleVecType_t
-                pub const m_vLiteralValue: usize = 0x14; // 
+                pub const m_vLiteralValue: usize = 0x14; // Vector
                 pub const m_LiteralColor: usize = 0x20; // Color
                 pub const m_NamedValue: usize = 0x28; // CParticleNamedValueRef
                 pub const m_bFollowNamedValue: usize = 0x68; // bool
                 pub const m_nVectorAttribute: usize = 0x6C; // ParticleAttributeIndex_t
-                pub const m_vVectorAttributeScale: usize = 0x70; // 
+                pub const m_vVectorAttributeScale: usize = 0x70; // Vector
                 pub const m_nControlPoint: usize = 0x7C; // int32
                 pub const m_nDeltaControlPoint: usize = 0x80; // int32
-                pub const m_vCPValueScale: usize = 0x84; // 
-                pub const m_vCPRelativePosition: usize = 0x90; // 
-                pub const m_vCPRelativeDir: usize = 0x9C; // 
+                pub const m_vCPValueScale: usize = 0x84; // Vector
+                pub const m_vCPRelativePosition: usize = 0x90; // Vector
+                pub const m_vCPRelativeDir: usize = 0x9C; // Vector
                 pub const m_FloatComponentX: usize = 0xA8; // CParticleFloatInput
                 pub const m_FloatComponentY: usize = 0x200; // CParticleFloatInput
                 pub const m_FloatComponentZ: usize = 0x358; // CParticleFloatInput
                 pub const m_FloatInterp: usize = 0x4B0; // CParticleFloatInput
                 pub const m_flInterpInput0: usize = 0x608; // float32
                 pub const m_flInterpInput1: usize = 0x60C; // float32
-                pub const m_vInterpOutput0: usize = 0x610; // 
-                pub const m_vInterpOutput1: usize = 0x61C; // 
+                pub const m_vInterpOutput0: usize = 0x610; // Vector
+                pub const m_vInterpOutput1: usize = 0x61C; // Vector
                 pub const m_Gradient: usize = 0x628; // CColorGradient
-                pub const m_vRandomMin: usize = 0x640; // 
-                pub const m_vRandomMax: usize = 0x64C; // 
+                pub const m_vRandomMin: usize = 0x640; // Vector
+                pub const m_vRandomMax: usize = 0x64C; // Vector
             }
             // Parent: CParticleFunctionEmitter
             // Fields count: 6
@@ -2354,7 +2354,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_LifespanFromVelocity {
-                pub const m_vecComponentScale: usize = 0x1C0; // 
+                pub const m_vecComponentScale: usize = 0x1C0; // Vector
                 pub const m_flTraceOffset: usize = 0x1CC; // float32
                 pub const m_flMaxTraceLength: usize = 0x1D0; // float32
                 pub const m_flTraceTolerance: usize = 0x1D4; // float32
@@ -2428,10 +2428,10 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_OscillateVector {
-                pub const m_RateMin: usize = 0x1C0; // 
-                pub const m_RateMax: usize = 0x1CC; // 
-                pub const m_FrequencyMin: usize = 0x1D8; // 
-                pub const m_FrequencyMax: usize = 0x1E4; // 
+                pub const m_RateMin: usize = 0x1C0; // Vector
+                pub const m_RateMax: usize = 0x1CC; // Vector
+                pub const m_FrequencyMin: usize = 0x1D8; // Vector
+                pub const m_FrequencyMax: usize = 0x1E4; // Vector
                 pub const m_nField: usize = 0x1F0; // ParticleAttributeIndex_t
                 pub const m_bProportional: usize = 0x1F4; // bool
                 pub const m_bProportionalOp: usize = 0x1F5; // bool
@@ -2489,7 +2489,7 @@ pub mod cs2_dumper {
                 pub const m_flTraceLength: usize = 0x1E0; // CParticleCollectionFloatInput
                 pub const m_flStartOffset: usize = 0x338; // float32
                 pub const m_flOffset: usize = 0x33C; // float32
-                pub const m_vecTraceDir: usize = 0x340; // 
+                pub const m_vecTraceDir: usize = 0x340; // Vector
                 pub const m_CollisionGroupName: usize = 0x34C; // char[128]
                 pub const m_nTraceSet: usize = 0x3CC; // ParticleTraceSet_t
                 pub const m_bSetToEndpoint: usize = 0x3D0; // bool
@@ -2534,10 +2534,10 @@ pub mod cs2_dumper {
                 pub const m_flNoiseCoordScale1: usize = 0x1D4; // float32
                 pub const m_flNoiseCoordScale2: usize = 0x1D8; // float32
                 pub const m_flNoiseCoordScale3: usize = 0x1DC; // float32
-                pub const m_vecNoiseAmount0: usize = 0x1E0; // 
-                pub const m_vecNoiseAmount1: usize = 0x1EC; // 
-                pub const m_vecNoiseAmount2: usize = 0x1F8; // 
-                pub const m_vecNoiseAmount3: usize = 0x204; // 
+                pub const m_vecNoiseAmount0: usize = 0x1E0; // Vector
+                pub const m_vecNoiseAmount1: usize = 0x1EC; // Vector
+                pub const m_vecNoiseAmount2: usize = 0x1F8; // Vector
+                pub const m_vecNoiseAmount3: usize = 0x204; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 9
@@ -2562,7 +2562,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_SetControlPointToPlayer {
                 pub const m_nCP1: usize = 0x1D0; // int32
-                pub const m_vecCP1Pos: usize = 0x1D4; // 
+                pub const m_vecCP1Pos: usize = 0x1D4; // Vector
                 pub const m_bOrientToEyes: usize = 0x1E0; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -2606,7 +2606,7 @@ pub mod cs2_dumper {
                 pub const m_bDisableAggregation: usize = 0x0; // bitfield:1
                 pub const m_bShouldSimulateDuringGamePaused: usize = 0x0; // bitfield:1
                 pub const m_bShouldCheckFoW: usize = 0x0; // bitfield:1
-                pub const m_vSortOrigin: usize = 0x40; // 
+                pub const m_vSortOrigin: usize = 0x40; // Vector
                 pub const m_flScale: usize = 0x4C; // float32
                 pub const m_hOwner: usize = 0x50; // PARTICLE_EHANDLE__*
                 pub const m_pOwningParticleProperty: usize = 0x58; // CParticleProperty*
@@ -2616,10 +2616,10 @@ pub mod cs2_dumper {
                 pub const m_bFreezeTransitionActive: usize = 0x7C; // bool
                 pub const m_bFreezeTargetState: usize = 0x7D; // bool
                 pub const m_bCanFreeze: usize = 0x7E; // bool
-                pub const m_LastMin: usize = 0x80; // 
-                pub const m_LastMax: usize = 0x8C; // 
+                pub const m_LastMin: usize = 0x80; // Vector
+                pub const m_LastMax: usize = 0x8C; // Vector
                 pub const m_nSplitScreenUser: usize = 0x98; // CSplitScreenSlot
-                pub const m_vecAggregationCenter: usize = 0x9C; // 
+                pub const m_vecAggregationCenter: usize = 0x9C; // Vector
                 pub const m_RefCount: usize = 0xC0; // int32
             }
             // Parent: CParticleFunctionPreEmission
@@ -2633,8 +2633,8 @@ pub mod cs2_dumper {
                 pub const m_nCP1: usize = 0x1D4; // int32
                 pub const m_nHeadLocation: usize = 0x1D8; // int32
                 pub const m_flReRandomRate: usize = 0x1E0; // CParticleCollectionFloatInput
-                pub const m_vecCPMinPos: usize = 0x338; // 
-                pub const m_vecCPMaxPos: usize = 0x344; // 
+                pub const m_vecCPMinPos: usize = 0x338; // Vector
+                pub const m_vecCPMaxPos: usize = 0x344; // Vector
                 pub const m_flInterpolation: usize = 0x350; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionOperator
@@ -2785,8 +2785,8 @@ pub mod cs2_dumper {
                 pub const m_nInitialParticles: usize = 0x210; // int32
                 pub const m_nMaxParticles: usize = 0x214; // int32
                 pub const m_nGroupID: usize = 0x218; // int32
-                pub const m_BoundingBoxMin: usize = 0x21C; // 
-                pub const m_BoundingBoxMax: usize = 0x228; // 
+                pub const m_BoundingBoxMin: usize = 0x21C; // Vector
+                pub const m_BoundingBoxMax: usize = 0x228; // Vector
                 pub const m_flDepthSortBias: usize = 0x234; // float32
                 pub const m_nSortOverridePositionCP: usize = 0x238; // int32
                 pub const m_bInfiniteBounds: usize = 0x23C; // bool
@@ -2794,7 +2794,7 @@ pub mod cs2_dumper {
                 pub const m_NamedValueDomain: usize = 0x240; // CUtlString
                 pub const m_NamedValueLocals: usize = 0x248; // CUtlVector<ParticleNamedValueSource_t*>
                 pub const m_ConstantColor: usize = 0x260; // Color
-                pub const m_ConstantNormal: usize = 0x264; // 
+                pub const m_ConstantNormal: usize = 0x264; // Vector
                 pub const m_flConstantRadius: usize = 0x270; // float32
                 pub const m_flConstantRotation: usize = 0x274; // float32
                 pub const m_flConstantRotationSpeed: usize = 0x278; // float32
@@ -2853,8 +2853,8 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
                 pub const m_flInputMin: usize = 0x1C4; // float32
                 pub const m_flInputMax: usize = 0x1C8; // float32
-                pub const m_vecOutputMin: usize = 0x1CC; // 
-                pub const m_vecOutputMax: usize = 0x1D8; // 
+                pub const m_vecOutputMin: usize = 0x1CC; // Vector
+                pub const m_vecOutputMax: usize = 0x1D8; // Vector
                 pub const m_TransformStart: usize = 0x1E8; // CParticleTransformInput
                 pub const m_TransformEnd: usize = 0x250; // CParticleTransformInput
                 pub const m_nSetMethod: usize = 0x2B8; // ParticleSetMethod_t
@@ -2915,10 +2915,10 @@ pub mod cs2_dumper {
                 pub const m_nControlPoint2: usize = 0x654; // int32
                 pub const m_nControlPoint3: usize = 0x658; // int32
                 pub const m_nControlPoint4: usize = 0x65C; // int32
-                pub const m_vecCPOffset1: usize = 0x660; // 
-                pub const m_vecCPOffset2: usize = 0x66C; // 
-                pub const m_vecCPOffset3: usize = 0x678; // 
-                pub const m_vecCPOffset4: usize = 0x684; // 
+                pub const m_vecCPOffset1: usize = 0x660; // Vector
+                pub const m_vecCPOffset2: usize = 0x66C; // Vector
+                pub const m_vecCPOffset3: usize = 0x678; // Vector
+                pub const m_vecCPOffset4: usize = 0x684; // Vector
                 pub const m_LightFiftyDist1: usize = 0x690; // float32
                 pub const m_LightZeroDist1: usize = 0x694; // float32
                 pub const m_LightFiftyDist2: usize = 0x698; // float32
@@ -3026,7 +3026,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_WorldTraceConstraint {
                 pub const m_nCP: usize = 0x1C0; // int32
-                pub const m_vecCpOffset: usize = 0x1C4; // 
+                pub const m_vecCpOffset: usize = 0x1C4; // Vector
                 pub const m_nCollisionMode: usize = 0x1D0; // ParticleCollisionMode_t
                 pub const m_nCollisionModeMin: usize = 0x1D4; // ParticleCollisionMode_t
                 pub const m_nTraceSet: usize = 0x1D8; // ParticleTraceSet_t
@@ -3191,11 +3191,11 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_AddVectorToVector {
-                pub const m_vecScale: usize = 0x1C0; // 
+                pub const m_vecScale: usize = 0x1C0; // Vector
                 pub const m_nFieldOutput: usize = 0x1CC; // ParticleAttributeIndex_t
                 pub const m_nFieldInput: usize = 0x1D0; // ParticleAttributeIndex_t
-                pub const m_vOffsetMin: usize = 0x1D4; // 
-                pub const m_vOffsetMax: usize = 0x1E0; // 
+                pub const m_vOffsetMin: usize = 0x1D4; // Vector
+                pub const m_vOffsetMax: usize = 0x1E0; // Vector
                 pub const m_randomnessParameters: usize = 0x1EC; // CRandomNumberGeneratorParameters
             }
             // Parent: CParticleFunctionInitializer
@@ -3227,13 +3227,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffect {
-                pub const m_pTextureColorWarp: usize = 0x200; // 
-                pub const m_pTextureDetail2: usize = 0x208; // 
-                pub const m_pTextureDiffuseWarp: usize = 0x210; // 
-                pub const m_pTextureFresnelColorWarp: usize = 0x218; // 
-                pub const m_pTextureFresnelWarp: usize = 0x220; // 
-                pub const m_pTextureSpecularWarp: usize = 0x228; // 
-                pub const m_pTextureEnvMap: usize = 0x230; // 
+                pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail2: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDiffuseWarp: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureFresnelColorWarp: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureFresnelWarp: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSpecularWarp: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureEnvMap: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CParticleFunctionForce
             // Fields count: 2
@@ -3241,8 +3241,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RandomForce {
-                pub const m_MinForce: usize = 0x1D0; // 
-                pub const m_MaxForce: usize = 0x1DC; // 
+                pub const m_MinForce: usize = 0x1D0; // Vector
+                pub const m_MaxForce: usize = 0x1DC; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 7
@@ -3279,7 +3279,7 @@ pub mod cs2_dumper {
                 pub const m_bShouldDrawAttachmentNames: usize = 0x52; // bool
                 pub const m_bShouldDrawControlPointAxes: usize = 0x53; // bool
                 pub const m_bAnimationNonLooping: usize = 0x54; // bool
-                pub const m_vecPreviewGravity: usize = 0x58; // 
+                pub const m_vecPreviewGravity: usize = 0x58; // Vector
             }
             // Parent: CParticleFunctionForce
             // Fields count: 3
@@ -3322,10 +3322,10 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapTransformToVector {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-                pub const m_vInputMin: usize = 0x1C4; // 
-                pub const m_vInputMax: usize = 0x1D0; // 
-                pub const m_vOutputMin: usize = 0x1DC; // 
-                pub const m_vOutputMax: usize = 0x1E8; // 
+                pub const m_vInputMin: usize = 0x1C4; // Vector
+                pub const m_vInputMax: usize = 0x1D0; // Vector
+                pub const m_vOutputMin: usize = 0x1DC; // Vector
+                pub const m_vOutputMax: usize = 0x1E8; // Vector
                 pub const m_TransformInput: usize = 0x1F8; // CParticleTransformInput
                 pub const m_LocalSpaceTransform: usize = 0x260; // CParticleTransformInput
                 pub const m_flStartTime: usize = 0x2C8; // float32
@@ -3341,9 +3341,9 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SDFLighting {
-                pub const m_vLightingDir: usize = 0x1C0; // 
-                pub const m_vTint_0: usize = 0x1CC; // 
-                pub const m_vTint_1: usize = 0x1D8; // 
+                pub const m_vLightingDir: usize = 0x1C0; // Vector
+                pub const m_vTint_0: usize = 0x1CC; // Vector
+                pub const m_vTint_1: usize = 0x1D8; // Vector
             }
             // Parent: C_OP_RemapDistanceToLineSegmentBase
             // Fields count: 3
@@ -3422,7 +3422,7 @@ pub mod cs2_dumper {
             pub mod C_OP_SetControlPointToHand {
                 pub const m_nCP1: usize = 0x1D0; // int32
                 pub const m_nHand: usize = 0x1D4; // int32
-                pub const m_vecCP1Pos: usize = 0x1D8; // 
+                pub const m_vecCP1Pos: usize = 0x1D8; // Vector
                 pub const m_bOrientToHand: usize = 0x1E4; // bool
             }
             // Parent: CParticleFunctionConstraint
@@ -3447,7 +3447,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_DistanceCull {
                 pub const m_nControlPoint: usize = 0x1C0; // int32
-                pub const m_vecPointOffset: usize = 0x1C4; // 
+                pub const m_vecPointOffset: usize = 0x1C4; // Vector
                 pub const m_flDistance: usize = 0x1D0; // float32
                 pub const m_bCullInside: usize = 0x1D4; // bool
             }
@@ -3475,7 +3475,7 @@ pub mod cs2_dumper {
                 pub const m_fMaxDistance: usize = 0x1C0; // float32
                 pub const m_PathParams: usize = 0x1D0; // CPathParameters
                 pub const m_bUseRandomCPs: usize = 0x210; // bool
-                pub const m_vEndOffset: usize = 0x214; // 
+                pub const m_vEndOffset: usize = 0x214; // Vector
                 pub const m_bSaveOffset: usize = 0x220; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -3602,8 +3602,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_RampCPLinearRandom {
                 pub const m_nOutControlPointNumber: usize = 0x1D0; // int32
-                pub const m_vecRateMin: usize = 0x1D4; // 
-                pub const m_vecRateMax: usize = 0x1E0; // 
+                pub const m_vecRateMin: usize = 0x1D4; // Vector
+                pub const m_vecRateMax: usize = 0x1E0; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3
@@ -3723,7 +3723,7 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x228; // ParticleAttributeIndex_t
                 pub const m_flScale: usize = 0x22C; // float32
                 pub const m_flOffsetRot: usize = 0x230; // float32
-                pub const m_vecOffsetAxis: usize = 0x234; // 
+                pub const m_vecOffsetAxis: usize = 0x234; // Vector
                 pub const m_bNormalize: usize = 0x240; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -3753,7 +3753,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapTransformOrientationToRotations {
                 pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
-                pub const m_vecRotation: usize = 0x228; // 
+                pub const m_vecRotation: usize = 0x228; // Vector
                 pub const m_bUseQuat: usize = 0x234; // bool
                 pub const m_bWriteNormal: usize = 0x235; // bool
             }
@@ -3840,7 +3840,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_LerpEndCapVector {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-                pub const m_vecOutput: usize = 0x1C4; // 
+                pub const m_vecOutput: usize = 0x1C4; // Vector
                 pub const m_flLerpTime: usize = 0x1D0; // float32
             }
             // Parent: CParticleFunctionOperator
@@ -3927,7 +3927,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapTransformOrientationToRotations {
                 pub const m_TransformInput: usize = 0x1C0; // CParticleTransformInput
-                pub const m_vecRotation: usize = 0x228; // 
+                pub const m_vecRotation: usize = 0x228; // Vector
                 pub const m_bUseQuat: usize = 0x234; // bool
                 pub const m_bWriteNormal: usize = 0x235; // bool
             }
@@ -3979,7 +3979,7 @@ pub mod cs2_dumper {
             pub mod PointDefinition_t {
                 pub const m_nControlPoint: usize = 0x0; // int32
                 pub const m_bLocalCoords: usize = 0x4; // bool
-                pub const m_vOffset: usize = 0x8; // 
+                pub const m_vOffset: usize = 0x8; // Vector
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 4
@@ -4015,7 +4015,7 @@ pub mod cs2_dumper {
                 pub const m_flAgeMax: usize = 0x1CC; // float32
                 pub const m_flNoiseScale: usize = 0x1D0; // float32
                 pub const m_flNoiseScaleLoc: usize = 0x1D4; // float32
-                pub const m_vecOffsetLoc: usize = 0x1D8; // 
+                pub const m_vecOffsetLoc: usize = 0x1D8; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3
@@ -4072,7 +4072,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_CalculateVectorAttribute {
-                pub const m_vStartValue: usize = 0x1C0; // 
+                pub const m_vStartValue: usize = 0x1C0; // Vector
                 pub const m_nFieldInput1: usize = 0x1CC; // ParticleAttributeIndex_t
                 pub const m_flInputScale1: usize = 0x1D0; // float32
                 pub const m_nFieldInput2: usize = 0x1D4; // ParticleAttributeIndex_t
@@ -4082,7 +4082,7 @@ pub mod cs2_dumper {
                 pub const m_nControlPointInput2: usize = 0x1F4; // ControlPointReference_t
                 pub const m_flControlPointScale2: usize = 0x208; // float32
                 pub const m_nFieldOutput: usize = 0x20C; // ParticleAttributeIndex_t
-                pub const m_vFinalOutputScale: usize = 0x210; // 
+                pub const m_vFinalOutputScale: usize = 0x210; // Vector
             }
             // Parent: CParticleInput
             // Fields count: 8
@@ -4136,7 +4136,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_MovementMaintainOffset {
-                pub const m_vecOffset: usize = 0x1C0; // 
+                pub const m_vecOffset: usize = 0x1C0; // Vector
                 pub const m_nCP: usize = 0x1CC; // int32
                 pub const m_bRadiusScale: usize = 0x1D0; // bool
             }
@@ -4198,7 +4198,7 @@ pub mod cs2_dumper {
                 pub const m_flRange: usize = 0xDD0; // CPerParticleFloatInput
                 pub const m_flInnerConeAngle: usize = 0xF28; // CPerParticleFloatInput
                 pub const m_flOuterConeAngle: usize = 0x1080; // CPerParticleFloatInput
-                pub const m_hLightCookie: usize = 0x11D8; // 
+                pub const m_hLightCookie: usize = 0x11D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_bSphericalCookie: usize = 0x11E0; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -4364,7 +4364,7 @@ pub mod cs2_dumper {
                 pub const m_nForceInModel: usize = 0x1C4; // int32
                 pub const m_nDesiredHitbox: usize = 0x1C8; // int32
                 pub const m_vecHitBoxScale: usize = 0x1D0; // CParticleCollectionVecInput
-                pub const m_vecDirectionBias: usize = 0x828; // 
+                pub const m_vecDirectionBias: usize = 0x828; // Vector
                 pub const m_bMaintainHitbox: usize = 0x834; // bool
                 pub const m_bUseBones: usize = 0x835; // bool
                 pub const m_HitboxSetName: usize = 0x836; // char[128]
@@ -4402,8 +4402,8 @@ pub mod cs2_dumper {
             pub mod C_INIT_InitialRepulsionVelocity {
                 pub const m_CollisionGroupName: usize = 0x1C0; // char[128]
                 pub const m_nTraceSet: usize = 0x240; // ParticleTraceSet_t
-                pub const m_vecOutputMin: usize = 0x244; // 
-                pub const m_vecOutputMax: usize = 0x250; // 
+                pub const m_vecOutputMin: usize = 0x244; // Vector
+                pub const m_vecOutputMax: usize = 0x250; // Vector
                 pub const m_nControlPointNumber: usize = 0x25C; // int32
                 pub const m_bPerParticle: usize = 0x260; // bool
                 pub const m_bTranslate: usize = 0x261; // bool
@@ -4431,7 +4431,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_SetControlPointToHMD {
                 pub const m_nCP1: usize = 0x1D0; // int32
-                pub const m_vecCP1Pos: usize = 0x1D4; // 
+                pub const m_vecCP1Pos: usize = 0x1D4; // Vector
                 pub const m_bOrientToHMD: usize = 0x1E0; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -4644,7 +4644,7 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
                 pub const m_flScale: usize = 0x1C8; // float32
                 pub const m_flOffsetRot: usize = 0x1CC; // float32
-                pub const m_vecOffsetAxis: usize = 0x1D0; // 
+                pub const m_vecOffsetAxis: usize = 0x1D0; // Vector
                 pub const m_bNormalize: usize = 0x1DC; // bool
                 pub const m_nFieldStrength: usize = 0x1E0; // ParticleAttributeIndex_t
             }
@@ -4670,8 +4670,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RtEnvCull {
-                pub const m_vecTestDir: usize = 0x1C0; // 
-                pub const m_vecTestNormal: usize = 0x1CC; // 
+                pub const m_vecTestDir: usize = 0x1C0; // Vector
+                pub const m_vecTestNormal: usize = 0x1CC; // Vector
                 pub const m_bCullOnMiss: usize = 0x1D8; // bool
                 pub const m_bStickInsteadOfCull: usize = 0x1D9; // bool
                 pub const m_RtEnvName: usize = 0x1DA; // char[128]
@@ -4689,7 +4689,7 @@ pub mod cs2_dumper {
                 pub const m_bOffsetLocal: usize = 0x820; // bool
                 pub const m_nParticleSelection: usize = 0x824; // ParticleSelection_t
                 pub const m_nParticleNumber: usize = 0x828; // CParticleCollectionFloatInput
-                pub const m_nPinBreakType: usize = 0x980; // 
+                pub const m_nPinBreakType: usize = 0x980; // ParticlePinDistance_t
                 pub const m_flBreakDistance: usize = 0x988; // CParticleCollectionFloatInput
                 pub const m_flBreakSpeed: usize = 0xAE0; // CParticleCollectionFloatInput
                 pub const m_flAge: usize = 0xC38; // CParticleCollectionFloatInput
@@ -4707,10 +4707,10 @@ pub mod cs2_dumper {
                 pub const m_nCPInput: usize = 0x1C0; // int32
                 pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
                 pub const m_nLocalSpaceCP: usize = 0x1C8; // int32
-                pub const m_vInputMin: usize = 0x1CC; // 
-                pub const m_vInputMax: usize = 0x1D8; // 
-                pub const m_vOutputMin: usize = 0x1E4; // 
-                pub const m_vOutputMax: usize = 0x1F0; // 
+                pub const m_vInputMin: usize = 0x1CC; // Vector
+                pub const m_vInputMax: usize = 0x1D8; // Vector
+                pub const m_vOutputMin: usize = 0x1E4; // Vector
+                pub const m_vOutputMax: usize = 0x1F0; // Vector
                 pub const m_flStartTime: usize = 0x1FC; // float32
                 pub const m_flEndTime: usize = 0x200; // float32
                 pub const m_flInterpRate: usize = 0x204; // float32
@@ -4782,10 +4782,10 @@ pub mod cs2_dumper {
                 pub const m_nCP2: usize = 0x1D8; // int32
                 pub const m_nCP3: usize = 0x1DC; // int32
                 pub const m_nCP4: usize = 0x1E0; // int32
-                pub const m_vecCP1Pos: usize = 0x1E4; // 
-                pub const m_vecCP2Pos: usize = 0x1F0; // 
-                pub const m_vecCP3Pos: usize = 0x1FC; // 
-                pub const m_vecCP4Pos: usize = 0x208; // 
+                pub const m_vecCP1Pos: usize = 0x1E4; // Vector
+                pub const m_vecCP2Pos: usize = 0x1F0; // Vector
+                pub const m_vecCP3Pos: usize = 0x1FC; // Vector
+                pub const m_vecCP4Pos: usize = 0x208; // Vector
                 pub const m_nHeadLocation: usize = 0x214; // int32
             }
             // Parent: CParticleFunctionOperator
@@ -5097,12 +5097,12 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffectCitadel {
-                pub const m_pTextureColorWarp: usize = 0x200; // 
-                pub const m_pTextureNormal: usize = 0x208; // 
-                pub const m_pTextureMetalness: usize = 0x210; // 
-                pub const m_pTextureRoughness: usize = 0x218; // 
-                pub const m_pTextureSelfIllum: usize = 0x220; // 
-                pub const m_pTextureDetail: usize = 0x228; // 
+                pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureNormal: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureMetalness: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureRoughness: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSelfIllum: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 11
@@ -5143,7 +5143,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_WindForce {
-                pub const m_vForce: usize = 0x1D0; // 
+                pub const m_vForce: usize = 0x1D0; // Vector
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 6
@@ -5153,7 +5153,7 @@ pub mod cs2_dumper {
             pub mod C_OP_SetVariable {
                 pub const m_variableReference: usize = 0x1D0; // CParticleVariableRef
                 pub const m_transformInput: usize = 0x210; // CParticleTransformInput
-                pub const m_positionOffset: usize = 0x278; // 
+                pub const m_positionOffset: usize = 0x278; // Vector
                 pub const m_rotationOffset: usize = 0x284; // QAngle
                 pub const m_vecInput: usize = 0x290; // CParticleCollectionVecInput
                 pub const m_floatInput: usize = 0x8E8; // CParticleCollectionFloatInput
@@ -5234,7 +5234,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_SetControlPointToCenter {
                 pub const m_nCP1: usize = 0x1D0; // int32
-                pub const m_vecCP1Pos: usize = 0x1D4; // 
+                pub const m_vecCP1Pos: usize = 0x1D4; // Vector
                 pub const m_nSetParent: usize = 0x1E0; // ParticleParentSetMode_t
             }
             // Parent: CParticleFunctionPreEmission
@@ -5423,7 +5423,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_LerpVector {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-                pub const m_vecOutput: usize = 0x1C4; // 
+                pub const m_vecOutput: usize = 0x1C4; // Vector
                 pub const m_flStartTime: usize = 0x1D0; // float32
                 pub const m_flEndTime: usize = 0x1D4; // float32
                 pub const m_nSetMethod: usize = 0x1D8; // ParticleSetMethod_t
@@ -5446,7 +5446,7 @@ pub mod cs2_dumper {
             pub mod TextureGroup_t {
                 pub const m_bEnabled: usize = 0x0; // bool
                 pub const m_bReplaceTextureWithGradient: usize = 0x1; // bool
-                pub const m_hTexture: usize = 0x8; // 
+                pub const m_hTexture: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_Gradient: usize = 0x10; // CColorGradient
                 pub const m_nTextureType: usize = 0x28; // SpriteCardTextureType_t
                 pub const m_nTextureChannels: usize = 0x2C; // SpriteCardTextureChannel_t
@@ -5461,9 +5461,9 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_TimeVaryingForce {
                 pub const m_flStartLerpTime: usize = 0x1D0; // float32
-                pub const m_StartingForce: usize = 0x1D4; // 
+                pub const m_StartingForce: usize = 0x1D4; // Vector
                 pub const m_flEndLerpTime: usize = 0x1E0; // float32
-                pub const m_EndingForce: usize = 0x1E4; // 
+                pub const m_EndingForce: usize = 0x1E4; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 9
@@ -5504,7 +5504,7 @@ pub mod cs2_dumper {
                 pub const m_fRadiusMin: usize = 0x1C0; // CPerParticleFloatInput
                 pub const m_fRadiusMax: usize = 0x318; // CPerParticleFloatInput
                 pub const m_vecDistanceBias: usize = 0x470; // CPerParticleVecInput
-                pub const m_vecDistanceBiasAbs: usize = 0xAC8; // 
+                pub const m_vecDistanceBiasAbs: usize = 0xAC8; // Vector
                 pub const m_TransformInput: usize = 0xAD8; // CParticleTransformInput
                 pub const m_fSpeedMin: usize = 0xB40; // CPerParticleFloatInput
                 pub const m_fSpeedMax: usize = 0xC98; // CPerParticleFloatInput
@@ -5541,8 +5541,8 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
                 pub const m_flInputMin: usize = 0x1C8; // float32
                 pub const m_flInputMax: usize = 0x1CC; // float32
-                pub const m_vecOutputMin: usize = 0x1D0; // 
-                pub const m_vecOutputMax: usize = 0x1DC; // 
+                pub const m_vecOutputMin: usize = 0x1D0; // Vector
+                pub const m_vecOutputMax: usize = 0x1DC; // Vector
                 pub const m_flStartTime: usize = 0x1E8; // float32
                 pub const m_flEndTime: usize = 0x1EC; // float32
                 pub const m_nSetMethod: usize = 0x1F0; // ParticleSetMethod_t
@@ -5584,7 +5584,7 @@ pub mod cs2_dumper {
                 pub const m_flOutputMax: usize = 0x1E4; // float32
                 pub const m_flNoiseScale: usize = 0x1E8; // float32
                 pub const m_flWorldNoiseScale: usize = 0x1EC; // float32
-                pub const m_vecOffsetLoc: usize = 0x1F0; // 
+                pub const m_vecOffsetLoc: usize = 0x1F0; // Vector
                 pub const m_flWorldTimeScale: usize = 0x1FC; // float32
             }
             // Parent: CParticleFunction
@@ -5622,8 +5622,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_PlanarConstraint {
-                pub const m_PointOnPlane: usize = 0x1C0; // 
-                pub const m_PlaneNormal: usize = 0x1CC; // 
+                pub const m_PointOnPlane: usize = 0x1C0; // Vector
+                pub const m_PlaneNormal: usize = 0x1CC; // Vector
                 pub const m_nControlPointNumber: usize = 0x1D8; // int32
                 pub const m_bGlobalOrigin: usize = 0x1DC; // bool
                 pub const m_bGlobalNormal: usize = 0x1DD; // bool
@@ -5744,7 +5744,7 @@ pub mod cs2_dumper {
                 pub const m_flNoiseOutputMin: usize = 0x9C; // float32
                 pub const m_flNoiseOutputMax: usize = 0xA0; // float32
                 pub const m_flNoiseScale: usize = 0xA4; // float32
-                pub const m_vecNoiseOffsetRate: usize = 0xA8; // 
+                pub const m_vecNoiseOffsetRate: usize = 0xA8; // Vector
                 pub const m_flNoiseOffset: usize = 0xB4; // float32
                 pub const m_nNoiseOctaves: usize = 0xB8; // int32
                 pub const m_nNoiseTurbulence: usize = 0xBC; // PFNoiseTurbulence_t
@@ -5949,7 +5949,7 @@ pub mod cs2_dumper {
                 pub const m_flLOSScale: usize = 0x910; // float32
                 pub const m_nSetMethod: usize = 0x914; // ParticleSetMethod_t
                 pub const m_bActiveRange: usize = 0x918; // bool
-                pub const m_vecDistanceScale: usize = 0x91C; // 
+                pub const m_vecDistanceScale: usize = 0x91C; // Vector
                 pub const m_flRemapBias: usize = 0x928; // float32
             }
             // Parent: CParticleFunctionOperator
@@ -5966,10 +5966,10 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_ForceBasedOnDistanceToPlane {
                 pub const m_flMinDist: usize = 0x1D0; // float32
-                pub const m_vecForceAtMinDist: usize = 0x1D4; // 
+                pub const m_vecForceAtMinDist: usize = 0x1D4; // Vector
                 pub const m_flMaxDist: usize = 0x1E0; // float32
-                pub const m_vecForceAtMaxDist: usize = 0x1E4; // 
-                pub const m_vecPlaneNormal: usize = 0x1F0; // 
+                pub const m_vecForceAtMaxDist: usize = 0x1E4; // Vector
+                pub const m_vecPlaneNormal: usize = 0x1F0; // Vector
                 pub const m_nControlPointNumber: usize = 0x1FC; // int32
                 pub const m_flExponent: usize = 0x200; // float32
             }
@@ -5983,8 +5983,8 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x1C4; // ParticleAttributeIndex_t
                 pub const m_flDensityMin: usize = 0x1C8; // float32
                 pub const m_flDensityMax: usize = 0x1CC; // float32
-                pub const m_vecOutputMin: usize = 0x1D0; // 
-                pub const m_vecOutputMax: usize = 0x1DC; // 
+                pub const m_vecOutputMin: usize = 0x1D0; // Vector
+                pub const m_vecOutputMax: usize = 0x1DC; // Vector
                 pub const m_bUseParentDensity: usize = 0x1E8; // bool
                 pub const m_nVoxelGridResolution: usize = 0x1EC; // int32
             }
@@ -6143,8 +6143,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_PositionWarpScalar {
-                pub const m_vecWarpMin: usize = 0x1C0; // 
-                pub const m_vecWarpMax: usize = 0x1CC; // 
+                pub const m_vecWarpMin: usize = 0x1C0; // Vector
+                pub const m_vecWarpMax: usize = 0x1CC; // Vector
                 pub const m_InputValue: usize = 0x1D8; // CPerParticleFloatInput
                 pub const m_flPrevPosScale: usize = 0x330; // float32
                 pub const m_nScaleControlPointNumber: usize = 0x334; // int32
@@ -6165,8 +6165,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_VectorNoise {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-                pub const m_vecOutputMin: usize = 0x1C4; // 
-                pub const m_vecOutputMax: usize = 0x1D0; // 
+                pub const m_vecOutputMin: usize = 0x1C4; // Vector
+                pub const m_vecOutputMax: usize = 0x1D0; // Vector
                 pub const m_fl4NoiseScale: usize = 0x1DC; // float32
                 pub const m_bAdditive: usize = 0x1E0; // bool
                 pub const m_bOffset: usize = 0x1E1; // bool
@@ -6222,7 +6222,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_SetToCP {
                 pub const m_nControlPointNumber: usize = 0x1C0; // int32
-                pub const m_vecOffset: usize = 0x1C4; // 
+                pub const m_vecOffset: usize = 0x1C4; // Vector
                 pub const m_bOffsetLocal: usize = 0x1D0; // bool
             }
             // Parent: None
@@ -6234,7 +6234,7 @@ pub mod cs2_dumper {
                 pub const m_iControlPoint: usize = 0x0; // int32
                 pub const m_iAttachType: usize = 0x4; // ParticleAttachment_t
                 pub const m_attachmentName: usize = 0x8; // CUtlString
-                pub const m_vecOffset: usize = 0x10; // 
+                pub const m_vecOffset: usize = 0x10; // Vector
                 pub const m_angOffset: usize = 0x1C; // QAngle
                 pub const m_entityName: usize = 0x28; // CUtlString
             }
@@ -6245,7 +6245,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_ParentVortices {
                 pub const m_flForceScale: usize = 0x1D0; // float32
-                pub const m_vecTwistAxis: usize = 0x1D4; // 
+                pub const m_vecTwistAxis: usize = 0x1D4; // Vector
                 pub const m_bFlipBasedOnYaw: usize = 0x1E0; // bool
             }
             // Parent: CParticleFunctionPreEmission
@@ -6490,8 +6490,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_RotateVector {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-                pub const m_vecRotAxisMin: usize = 0x1C4; // 
-                pub const m_vecRotAxisMax: usize = 0x1D0; // 
+                pub const m_vecRotAxisMin: usize = 0x1C4; // Vector
+                pub const m_vecRotAxisMax: usize = 0x1D0; // Vector
                 pub const m_flRotRateMin: usize = 0x1DC; // float32
                 pub const m_flRotRateMax: usize = 0x1E0; // float32
                 pub const m_bNormalize: usize = 0x1E4; // bool
@@ -6522,7 +6522,7 @@ pub mod cs2_dumper {
                 pub const m_bKillUnused: usize = 0x1C0; // bool
                 pub const m_bRadiusScale: usize = 0x1C1; // bool
                 pub const m_nCP: usize = 0x1C4; // int32
-                pub const m_vecOffset: usize = 0x1C8; // 
+                pub const m_vecOffset: usize = 0x1C8; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 11
@@ -6540,7 +6540,7 @@ pub mod cs2_dumper {
                 pub const m_nInputCP: usize = 0x1DC; // int32
                 pub const m_bRadialCheck: usize = 0x1E0; // bool
                 pub const m_bScaleOffset: usize = 0x1E1; // bool
-                pub const m_vecOffset: usize = 0x1E4; // 
+                pub const m_vecOffset: usize = 0x1E4; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3

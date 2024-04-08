@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -273,8 +273,8 @@ pub mod cs2_dumper {
             // Parent: None
             // Fields count: 4
             pub mod constraint_hingeparams_t {
-                pub const worldPosition: usize = 0x0; // 
-                pub const worldAxisDirection: usize = 0xC; // 
+                pub const worldPosition: usize = 0x0; // Vector
+                pub const worldAxisDirection: usize = 0xC; // Vector
                 pub const hingeAxis: usize = 0x18; // constraint_axislimit_t
                 pub const constraint: usize = 0x28; // constraint_breakableparams_t
             }
@@ -352,11 +352,11 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod RnBodyDesc_t {
                 pub const m_sDebugName: usize = 0x0; // CUtlString
-                pub const m_vPosition: usize = 0x8; // 
+                pub const m_vPosition: usize = 0x8; // Vector
                 pub const m_qOrientation: usize = 0x14; // QuaternionStorage
-                pub const m_vLinearVelocity: usize = 0x24; // 
-                pub const m_vAngularVelocity: usize = 0x30; // 
-                pub const m_vLocalMassCenter: usize = 0x3C; // 
+                pub const m_vLinearVelocity: usize = 0x24; // Vector
+                pub const m_vAngularVelocity: usize = 0x30; // Vector
+                pub const m_vLocalMassCenter: usize = 0x3C; // Vector
                 pub const m_LocalInertiaInv: usize = 0x48; // Vector[3]
                 pub const m_flMassInv: usize = 0x6C; // float32
                 pub const m_flGameMass: usize = 0x70; // float32
@@ -367,8 +367,8 @@ pub mod cs2_dumper {
                 pub const m_flAngularDrag: usize = 0x84; // float32
                 pub const m_flLinearBuoyancyDrag: usize = 0x88; // float32
                 pub const m_flAngularBuoyancyDrag: usize = 0x8C; // float32
-                pub const m_vLastAwakeForceAccum: usize = 0x90; // 
-                pub const m_vLastAwakeTorqueAccum: usize = 0x9C; // 
+                pub const m_vLastAwakeForceAccum: usize = 0x90; // Vector
+                pub const m_vLastAwakeTorqueAccum: usize = 0x9C; // Vector
                 pub const m_flBuoyancyFactor: usize = 0xA8; // float32
                 pub const m_flGravityScale: usize = 0xAC; // float32
                 pub const m_flTimeScale: usize = 0xB0; // float32
@@ -422,22 +422,22 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnMesh_t {
-                pub const m_vMin: usize = 0x0; // 
-                pub const m_vMax: usize = 0xC; // 
+                pub const m_vMin: usize = 0x0; // Vector
+                pub const m_vMax: usize = 0xC; // Vector
                 pub const m_Nodes: usize = 0x18; // CUtlVector<RnNode_t>
                 pub const m_Vertices: usize = 0x30; // CUtlVectorSIMDPaddedVector
                 pub const m_Triangles: usize = 0x48; // CUtlVector<RnTriangle_t>
                 pub const m_Wings: usize = 0x60; // CUtlVector<RnWing_t>
                 pub const m_Materials: usize = 0x78; // CUtlVector<uint8>
-                pub const m_vOrthographicAreas: usize = 0x90; // 
+                pub const m_vOrthographicAreas: usize = 0x90; // Vector
                 pub const m_nFlags: usize = 0x9C; // uint32
                 pub const m_nDebugFlags: usize = 0xA0; // uint32
             }
             // Parent: None
             // Fields count: 2
             pub mod VertexPositionNormal_t {
-                pub const m_vPosition: usize = 0x0; // 
-                pub const m_vNormal: usize = 0xC; // 
+                pub const m_vPosition: usize = 0x0; // Vector
+                pub const m_vNormal: usize = 0xC; // Vector
             }
             // Parent: None
             // Fields count: 8
@@ -476,7 +476,7 @@ pub mod cs2_dumper {
             pub mod FeCtrlSoftOffset_t {
                 pub const nCtrlParent: usize = 0x0; // uint16
                 pub const nCtrlChild: usize = 0x2; // uint16
-                pub const vOffset: usize = 0x4; // 
+                pub const vOffset: usize = 0x4; // Vector
                 pub const flAlpha: usize = 0x10; // float32
             }
             // Parent: None
@@ -493,7 +493,7 @@ pub mod cs2_dumper {
                 pub const nVertexCount: usize = 0x16; // uint16
                 pub const nMapOffset: usize = 0x18; // uint32
                 pub const nNodeListOffset: usize = 0x1C; // uint32
-                pub const vCenterOfMass: usize = 0x20; // 
+                pub const vCenterOfMass: usize = 0x20; // Vector
                 pub const flVolumetricSolveStrength: usize = 0x2C; // float32
                 pub const nScaleSourceNode: usize = 0x30; // int16
                 pub const nNodeListCount: usize = 0x32; // uint16
@@ -536,7 +536,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod FeNodeReverseOffset_t {
-                pub const vOffset: usize = 0x0; // 
+                pub const vOffset: usize = 0x0; // Vector
                 pub const nBoneCtrl: usize = 0xC; // uint16
                 pub const nTargetNode: usize = 0xE; // uint16
             }
@@ -546,7 +546,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnPlane_t {
-                pub const m_vNormal: usize = 0x0; // 
+                pub const m_vNormal: usize = 0x0; // Vector
                 pub const m_flOffset: usize = 0xC; // float32
             }
             // Parent: None
@@ -587,8 +587,8 @@ pub mod cs2_dumper {
                 pub const m_flBaseForwardFriction: usize = 0x74; // float32
                 pub const m_flRadius0: usize = 0x78; // float32
                 pub const m_flRadius1: usize = 0x7C; // float32
-                pub const m_vPoint0: usize = 0x80; // 
-                pub const m_vPoint1: usize = 0x8C; // 
+                pub const m_vPoint0: usize = 0x80; // Vector
+                pub const m_vPoint1: usize = 0x8C; // Vector
                 pub const m_nCollisionMask: usize = 0x98; // uint16
             }
             // Parent: None
@@ -617,9 +617,9 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnNode_t {
-                pub const m_vMin: usize = 0x0; // 
+                pub const m_vMin: usize = 0x0; // Vector
                 pub const m_nChildren: usize = 0xC; // uint32
-                pub const m_vMax: usize = 0x10; // 
+                pub const m_vMax: usize = 0x10; // Vector
                 pub const m_nTriangleOffset: usize = 0x1C; // uint32
             }
             // Parent: None
@@ -629,7 +629,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod FeFitMatrix_t {
                 pub const bone: usize = 0x0; // CTransform
-                pub const vCenter: usize = 0x20; // 
+                pub const vCenter: usize = 0x20; // Vector
                 pub const nEnd: usize = 0x2C; // uint16
                 pub const nNode: usize = 0x2E; // uint16
                 pub const nBeginDynamic: usize = 0x30; // uint16
@@ -747,8 +747,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CastSphereSATParams_t {
-                pub const m_vRayStart: usize = 0x0; // 
-                pub const m_vRayDelta: usize = 0xC; // 
+                pub const m_vRayStart: usize = 0x0; // Vector
+                pub const m_vRayDelta: usize = 0xC; // Vector
                 pub const m_flRadius: usize = 0x18; // float32
                 pub const m_flMaxFraction: usize = 0x1C; // float32
                 pub const m_flScale: usize = 0x20; // float32
@@ -796,7 +796,7 @@ pub mod cs2_dumper {
                 pub const tmFrame2: usize = 0x0; // CTransform
                 pub const nNode: usize = 0x20; // uint16
                 pub const nCollisionMask: usize = 0x22; // uint16
-                pub const vSize: usize = 0x24; // 
+                pub const vSize: usize = 0x24; // Vector
                 pub const nVertexMapIndex: usize = 0x30; // uint16
                 pub const nFlags: usize = 0x32; // uint16
             }
@@ -821,7 +821,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod FeCtrlOffset_t {
-                pub const vOffset: usize = 0x0; // 
+                pub const vOffset: usize = 0x0; // Vector
                 pub const nCtrlParent: usize = 0xC; // uint16
                 pub const nCtrlChild: usize = 0xE; // uint16
             }
@@ -882,10 +882,10 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnHull_t {
-                pub const m_vCentroid: usize = 0x0; // 
+                pub const m_vCentroid: usize = 0x0; // Vector
                 pub const m_flMaxAngularRadius: usize = 0xC; // float32
                 pub const m_Bounds: usize = 0x10; // AABB_t
-                pub const m_vOrthographicAreas: usize = 0x28; // 
+                pub const m_vOrthographicAreas: usize = 0x28; // Vector
                 pub const m_MassProperties: usize = 0x34; // matrix3x4_t
                 pub const m_flVolume: usize = 0x64; // float32
                 pub const m_flSurfaceArea: usize = 0x68; // float32
@@ -903,7 +903,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CovMatrix3 {
-                pub const m_vDiag: usize = 0x0; // 
+                pub const m_vDiag: usize = 0x0; // Vector
                 pub const m_flXY: usize = 0xC; // float32
                 pub const m_flXZ: usize = 0x10; // float32
                 pub const m_flYZ: usize = 0x14; // float32
@@ -1099,7 +1099,7 @@ pub mod cs2_dumper {
             // Parent: None
             // Fields count: 1
             pub mod VertexPositionColor_t {
-                pub const m_vPosition: usize = 0x0; // 
+                pub const m_vPosition: usize = 0x0; // Vector
             }
             // Parent: None
             // Fields count: 3

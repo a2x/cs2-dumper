@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #pragma once
 
@@ -109,7 +109,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRadius = 0xC; // float32
                 constexpr std::ptrdiff_t m_flRoundness = 0x10; // float32
                 constexpr std::ptrdiff_t m_flFeather = 0x14; // float32
-                constexpr std::ptrdiff_t m_vColorTint = 0x18; // 
+                constexpr std::ptrdiff_t m_vColorTint = 0x18; // Vector
             }
             // Parent: None
             // Fields count: 5
@@ -205,7 +205,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace MaterialParamTexture_t {
-                constexpr std::ptrdiff_t m_pValue = 0x8; // 
+                constexpr std::ptrdiff_t m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
         }
     }

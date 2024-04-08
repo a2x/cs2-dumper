@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -187,8 +187,8 @@ pub mod cs2_dumper {
             // Parent: None
             // Fields count: 2
             pub mod AABB_t {
-                pub const m_vMinBounds: usize = 0x0; // 
-                pub const m_vMaxBounds: usize = 0xC; // 
+                pub const m_vMinBounds: usize = 0x0; // Vector
+                pub const m_vMaxBounds: usize = 0xC; // Vector
             }
             // Parent: None
             // Fields count: 0

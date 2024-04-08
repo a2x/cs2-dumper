@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #pragma once
 
@@ -686,7 +686,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nAlphaTestPointField = 0x87C; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nAlphaTestRangeField = 0x880; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nAlphaTestSharpnessField = 0x884; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_hTexture = 0x888; // 
+                constexpr std::ptrdiff_t m_hTexture = 0x888; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_nHSVShiftControlPoint = 0x890; // int32
             }
             // Parent: CParticleFunctionPreEmission
@@ -892,10 +892,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nVectorFieldInput = 0x1C4; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flMinDistance = 0x1C8; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flMaxDistance = 0x320; // CParticleCollectionFloatInput
-                constexpr std::ptrdiff_t m_vValueBelowMin = 0x478; // 
-                constexpr std::ptrdiff_t m_vValueAtMin = 0x484; // 
-                constexpr std::ptrdiff_t m_vValueAtMax = 0x490; // 
-                constexpr std::ptrdiff_t m_vValueAboveMax = 0x49C; // 
+                constexpr std::ptrdiff_t m_vValueBelowMin = 0x478; // Vector
+                constexpr std::ptrdiff_t m_vValueAtMin = 0x484; // Vector
+                constexpr std::ptrdiff_t m_vValueAtMax = 0x490; // Vector
+                constexpr std::ptrdiff_t m_vValueAboveMax = 0x49C; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 4
@@ -969,8 +969,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_RtEnvCull {
-                constexpr std::ptrdiff_t m_vecTestDir = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vecTestNormal = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecTestDir = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vecTestNormal = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_bUseVelocity = 0x1D8; // bool
                 constexpr std::ptrdiff_t m_bCullOnMiss = 0x1D9; // bool
                 constexpr std::ptrdiff_t m_bLifeAdjust = 0x1DA; // bool
@@ -987,7 +987,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fMinDistance = 0x1C0; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_fMaxDistance = 0x318; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x470; // int32
-                constexpr std::ptrdiff_t m_CenterOffset = 0x474; // 
+                constexpr std::ptrdiff_t m_CenterOffset = 0x474; // Vector
                 constexpr std::ptrdiff_t m_bGlobalCenter = 0x480; // bool
             }
             // Parent: CParticleFunctionInitializer
@@ -996,8 +996,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_RandomVector {
-                constexpr std::ptrdiff_t m_vecMin = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vecMax = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecMin = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vecMax = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1D8; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_randomnessParameters = 0x1DC; // CRandomNumberGeneratorParameters
             }
@@ -1007,8 +1007,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_InitialVelocityNoise {
-                constexpr std::ptrdiff_t m_vecAbsVal = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vecAbsValInv = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecAbsVal = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vecAbsValInv = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1D8; // CPerParticleVecInput
                 constexpr std::ptrdiff_t m_flOffset = 0x830; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_vecOutputMin = 0x988; // CPerParticleVecInput
@@ -1059,7 +1059,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_PlaneCull {
                 constexpr std::ptrdiff_t m_nPlaneControlPoint = 0x1C0; // int32
-                constexpr std::ptrdiff_t m_vecPlaneDirection = 0x1C4; // 
+                constexpr std::ptrdiff_t m_vecPlaneDirection = 0x1C4; // Vector
                 constexpr std::ptrdiff_t m_bLocalSpace = 0x1D0; // bool
                 constexpr std::ptrdiff_t m_flPlaneOffset = 0x1D4; // float32
             }
@@ -1098,7 +1098,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_TwistAroundAxis {
                 constexpr std::ptrdiff_t m_fForceAmount = 0x1D0; // float32
-                constexpr std::ptrdiff_t m_TwistAxis = 0x1D4; // 
+                constexpr std::ptrdiff_t m_TwistAxis = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_bLocalSpace = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1E4; // int32
             }
@@ -1114,7 +1114,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCPColor = 0x1CC; // int32
                 constexpr std::ptrdiff_t m_nCPInvalidColor = 0x1D0; // int32
                 constexpr std::ptrdiff_t m_nCPExtraArcData = 0x1D4; // int32
-                constexpr std::ptrdiff_t m_vGravity = 0x1D8; // 
+                constexpr std::ptrdiff_t m_vGravity = 0x1D8; // Vector
                 constexpr std::ptrdiff_t m_flArcMaxDuration = 0x1E4; // float32
                 constexpr std::ptrdiff_t m_flSegmentBreak = 0x1E8; // float32
                 constexpr std::ptrdiff_t m_flArcSpeed = 0x1EC; // float32
@@ -1279,7 +1279,7 @@ namespace cs2_dumper {
             namespace C_OP_SetControlPointPositionToTimeOfDayValue {
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1D0; // int32
                 constexpr std::ptrdiff_t m_pszTimeOfDayParameter = 0x1D4; // char[128]
-                constexpr std::ptrdiff_t m_vecDefaultValue = 0x254; // 
+                constexpr std::ptrdiff_t m_vecDefaultValue = 0x254; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -1548,8 +1548,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_OscillateVectorSimple {
-                constexpr std::ptrdiff_t m_Rate = 0x1C0; // 
-                constexpr std::ptrdiff_t m_Frequency = 0x1CC; // 
+                constexpr std::ptrdiff_t m_Rate = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_Frequency = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_nField = 0x1D8; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flOscMult = 0x1DC; // float32
                 constexpr std::ptrdiff_t m_flOscAdd = 0x1E0; // float32
@@ -1693,8 +1693,8 @@ namespace cs2_dumper {
             namespace C_INIT_OffsetVectorToVector {
                 constexpr std::ptrdiff_t m_nFieldInput = 0x1C0; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C4; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x1C8; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x1C8; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_randomnessParameters = 0x1E0; // CRandomNumberGeneratorParameters
             }
             // Parent: CParticleFunctionOperator
@@ -1771,7 +1771,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_AttractToControlPoint {
-                constexpr std::ptrdiff_t m_vecComponentScale = 0x1D0; // 
+                constexpr std::ptrdiff_t m_vecComponentScale = 0x1D0; // Vector
                 constexpr std::ptrdiff_t m_fForceAmount = 0x1E0; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_fFalloffPower = 0x338; // float32
                 constexpr std::ptrdiff_t m_TransformInput = 0x340; // CParticleTransformInput
@@ -1804,7 +1804,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1C0; // int32
                 constexpr std::ptrdiff_t m_fSpeedMin = 0x1C4; // float32
                 constexpr std::ptrdiff_t m_fSpeedMax = 0x1C8; // float32
-                constexpr std::ptrdiff_t m_vecLocalCoordinateSystemSpeedScale = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecLocalCoordinateSystemSpeedScale = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_bIgnoreDelta = 0x1D9; // bool
             }
             // Parent: CParticleFunctionInitializer
@@ -1858,7 +1858,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace ControlPointReference_t {
                 constexpr std::ptrdiff_t m_controlPointNameString = 0x0; // int32
-                constexpr std::ptrdiff_t m_vOffsetFromControlPoint = 0x4; // 
+                constexpr std::ptrdiff_t m_vOffsetFromControlPoint = 0x4; // Vector
                 constexpr std::ptrdiff_t m_bOffsetInLocalSpace = 0x10; // bool
             }
             // Parent: CParticleFunctionPreEmission
@@ -2029,8 +2029,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x230; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flInputMin = 0x234; // float32
                 constexpr std::ptrdiff_t m_flInputMax = 0x238; // float32
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x23C; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x248; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x23C; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x248; // Vector
                 constexpr std::ptrdiff_t m_flRadius = 0x254; // float32
             }
             // Parent: CParticleFunctionOperator
@@ -2106,9 +2106,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nBulgeControl = 0x8; // int32
                 constexpr std::ptrdiff_t m_flBulge = 0xC; // float32
                 constexpr std::ptrdiff_t m_flMidPoint = 0x10; // float32
-                constexpr std::ptrdiff_t m_vStartPointOffset = 0x14; // 
-                constexpr std::ptrdiff_t m_vMidPointOffset = 0x20; // 
-                constexpr std::ptrdiff_t m_vEndOffset = 0x2C; // 
+                constexpr std::ptrdiff_t m_vStartPointOffset = 0x14; // Vector
+                constexpr std::ptrdiff_t m_vMidPointOffset = 0x20; // Vector
+                constexpr std::ptrdiff_t m_vEndOffset = 0x2C; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -2129,8 +2129,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_CreateFromPlaneCache {
-                constexpr std::ptrdiff_t m_vecOffsetMin = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vecOffsetMax = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecOffsetMin = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vecOffsetMax = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_bUseNormal = 0x1D9; // bool
             }
             // Parent: CParticleFunctionPreEmission
@@ -2140,7 +2140,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_ControlPointToRadialScreenSpace {
                 constexpr std::ptrdiff_t m_nCPIn = 0x1D0; // int32
-                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_nCPOut = 0x1E0; // int32
                 constexpr std::ptrdiff_t m_nCPOutField = 0x1E4; // int32
                 constexpr std::ptrdiff_t m_nCPSSPosOut = 0x1E8; // int32
@@ -2158,8 +2158,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_NormalOffset {
-                constexpr std::ptrdiff_t m_OffsetMin = 0x1C0; // 
-                constexpr std::ptrdiff_t m_OffsetMax = 0x1CC; // 
+                constexpr std::ptrdiff_t m_OffsetMin = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_OffsetMax = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1D8; // int32
                 constexpr std::ptrdiff_t m_bLocalCoords = 0x1DC; // bool
                 constexpr std::ptrdiff_t m_bNormalize = 0x1DD; // bool
@@ -2171,8 +2171,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_RemapDistanceToLineSegmentToVector {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1E0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vMinOutputValue = 0x1E4; // 
-                constexpr std::ptrdiff_t m_vMaxOutputValue = 0x1F0; // 
+                constexpr std::ptrdiff_t m_vMinOutputValue = 0x1E4; // Vector
+                constexpr std::ptrdiff_t m_vMaxOutputValue = 0x1F0; // Vector
             }
             // Parent: CParticleFunctionRenderer
             // Fields count: 8
@@ -2203,7 +2203,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flOutputMax = 0x1D0; // float32
                 constexpr std::ptrdiff_t m_flNoiseScale = 0x1D4; // float32
                 constexpr std::ptrdiff_t m_flNoiseScaleLoc = 0x1D8; // float32
-                constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1DC; // 
+                constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1DC; // Vector
                 constexpr std::ptrdiff_t m_flWorldTimeScale = 0x1E8; // float32
             }
             // Parent: CGeneralSpin
@@ -2234,28 +2234,28 @@ namespace cs2_dumper {
             // MParticleCustomFieldDefaultValue
             namespace CParticleVecInput {
                 constexpr std::ptrdiff_t m_nType = 0x10; // ParticleVecType_t
-                constexpr std::ptrdiff_t m_vLiteralValue = 0x14; // 
+                constexpr std::ptrdiff_t m_vLiteralValue = 0x14; // Vector
                 constexpr std::ptrdiff_t m_LiteralColor = 0x20; // Color
                 constexpr std::ptrdiff_t m_NamedValue = 0x28; // CParticleNamedValueRef
                 constexpr std::ptrdiff_t m_bFollowNamedValue = 0x68; // bool
                 constexpr std::ptrdiff_t m_nVectorAttribute = 0x6C; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vVectorAttributeScale = 0x70; // 
+                constexpr std::ptrdiff_t m_vVectorAttributeScale = 0x70; // Vector
                 constexpr std::ptrdiff_t m_nControlPoint = 0x7C; // int32
                 constexpr std::ptrdiff_t m_nDeltaControlPoint = 0x80; // int32
-                constexpr std::ptrdiff_t m_vCPValueScale = 0x84; // 
-                constexpr std::ptrdiff_t m_vCPRelativePosition = 0x90; // 
-                constexpr std::ptrdiff_t m_vCPRelativeDir = 0x9C; // 
+                constexpr std::ptrdiff_t m_vCPValueScale = 0x84; // Vector
+                constexpr std::ptrdiff_t m_vCPRelativePosition = 0x90; // Vector
+                constexpr std::ptrdiff_t m_vCPRelativeDir = 0x9C; // Vector
                 constexpr std::ptrdiff_t m_FloatComponentX = 0xA8; // CParticleFloatInput
                 constexpr std::ptrdiff_t m_FloatComponentY = 0x200; // CParticleFloatInput
                 constexpr std::ptrdiff_t m_FloatComponentZ = 0x358; // CParticleFloatInput
                 constexpr std::ptrdiff_t m_FloatInterp = 0x4B0; // CParticleFloatInput
                 constexpr std::ptrdiff_t m_flInterpInput0 = 0x608; // float32
                 constexpr std::ptrdiff_t m_flInterpInput1 = 0x60C; // float32
-                constexpr std::ptrdiff_t m_vInterpOutput0 = 0x610; // 
-                constexpr std::ptrdiff_t m_vInterpOutput1 = 0x61C; // 
+                constexpr std::ptrdiff_t m_vInterpOutput0 = 0x610; // Vector
+                constexpr std::ptrdiff_t m_vInterpOutput1 = 0x61C; // Vector
                 constexpr std::ptrdiff_t m_Gradient = 0x628; // CColorGradient
-                constexpr std::ptrdiff_t m_vRandomMin = 0x640; // 
-                constexpr std::ptrdiff_t m_vRandomMax = 0x64C; // 
+                constexpr std::ptrdiff_t m_vRandomMin = 0x640; // Vector
+                constexpr std::ptrdiff_t m_vRandomMax = 0x64C; // Vector
             }
             // Parent: CParticleFunctionEmitter
             // Fields count: 6
@@ -2285,7 +2285,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_LifespanFromVelocity {
-                constexpr std::ptrdiff_t m_vecComponentScale = 0x1C0; // 
+                constexpr std::ptrdiff_t m_vecComponentScale = 0x1C0; // Vector
                 constexpr std::ptrdiff_t m_flTraceOffset = 0x1CC; // float32
                 constexpr std::ptrdiff_t m_flMaxTraceLength = 0x1D0; // float32
                 constexpr std::ptrdiff_t m_flTraceTolerance = 0x1D4; // float32
@@ -2359,10 +2359,10 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_OscillateVector {
-                constexpr std::ptrdiff_t m_RateMin = 0x1C0; // 
-                constexpr std::ptrdiff_t m_RateMax = 0x1CC; // 
-                constexpr std::ptrdiff_t m_FrequencyMin = 0x1D8; // 
-                constexpr std::ptrdiff_t m_FrequencyMax = 0x1E4; // 
+                constexpr std::ptrdiff_t m_RateMin = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_RateMax = 0x1CC; // Vector
+                constexpr std::ptrdiff_t m_FrequencyMin = 0x1D8; // Vector
+                constexpr std::ptrdiff_t m_FrequencyMax = 0x1E4; // Vector
                 constexpr std::ptrdiff_t m_nField = 0x1F0; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_bProportional = 0x1F4; // bool
                 constexpr std::ptrdiff_t m_bProportionalOp = 0x1F5; // bool
@@ -2420,7 +2420,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTraceLength = 0x1E0; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flStartOffset = 0x338; // float32
                 constexpr std::ptrdiff_t m_flOffset = 0x33C; // float32
-                constexpr std::ptrdiff_t m_vecTraceDir = 0x340; // 
+                constexpr std::ptrdiff_t m_vecTraceDir = 0x340; // Vector
                 constexpr std::ptrdiff_t m_CollisionGroupName = 0x34C; // char[128]
                 constexpr std::ptrdiff_t m_nTraceSet = 0x3CC; // ParticleTraceSet_t
                 constexpr std::ptrdiff_t m_bSetToEndpoint = 0x3D0; // bool
@@ -2465,10 +2465,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flNoiseCoordScale1 = 0x1D4; // float32
                 constexpr std::ptrdiff_t m_flNoiseCoordScale2 = 0x1D8; // float32
                 constexpr std::ptrdiff_t m_flNoiseCoordScale3 = 0x1DC; // float32
-                constexpr std::ptrdiff_t m_vecNoiseAmount0 = 0x1E0; // 
-                constexpr std::ptrdiff_t m_vecNoiseAmount1 = 0x1EC; // 
-                constexpr std::ptrdiff_t m_vecNoiseAmount2 = 0x1F8; // 
-                constexpr std::ptrdiff_t m_vecNoiseAmount3 = 0x204; // 
+                constexpr std::ptrdiff_t m_vecNoiseAmount0 = 0x1E0; // Vector
+                constexpr std::ptrdiff_t m_vecNoiseAmount1 = 0x1EC; // Vector
+                constexpr std::ptrdiff_t m_vecNoiseAmount2 = 0x1F8; // Vector
+                constexpr std::ptrdiff_t m_vecNoiseAmount3 = 0x204; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 9
@@ -2493,7 +2493,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_SetControlPointToPlayer {
                 constexpr std::ptrdiff_t m_nCP1 = 0x1D0; // int32
-                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_bOrientToEyes = 0x1E0; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -2537,7 +2537,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bDisableAggregation = 0x0; // bitfield:1
                 constexpr std::ptrdiff_t m_bShouldSimulateDuringGamePaused = 0x0; // bitfield:1
                 constexpr std::ptrdiff_t m_bShouldCheckFoW = 0x0; // bitfield:1
-                constexpr std::ptrdiff_t m_vSortOrigin = 0x40; // 
+                constexpr std::ptrdiff_t m_vSortOrigin = 0x40; // Vector
                 constexpr std::ptrdiff_t m_flScale = 0x4C; // float32
                 constexpr std::ptrdiff_t m_hOwner = 0x50; // PARTICLE_EHANDLE__*
                 constexpr std::ptrdiff_t m_pOwningParticleProperty = 0x58; // CParticleProperty*
@@ -2547,10 +2547,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bFreezeTransitionActive = 0x7C; // bool
                 constexpr std::ptrdiff_t m_bFreezeTargetState = 0x7D; // bool
                 constexpr std::ptrdiff_t m_bCanFreeze = 0x7E; // bool
-                constexpr std::ptrdiff_t m_LastMin = 0x80; // 
-                constexpr std::ptrdiff_t m_LastMax = 0x8C; // 
+                constexpr std::ptrdiff_t m_LastMin = 0x80; // Vector
+                constexpr std::ptrdiff_t m_LastMax = 0x8C; // Vector
                 constexpr std::ptrdiff_t m_nSplitScreenUser = 0x98; // CSplitScreenSlot
-                constexpr std::ptrdiff_t m_vecAggregationCenter = 0x9C; // 
+                constexpr std::ptrdiff_t m_vecAggregationCenter = 0x9C; // Vector
                 constexpr std::ptrdiff_t m_RefCount = 0xC0; // int32
             }
             // Parent: CParticleFunctionPreEmission
@@ -2564,8 +2564,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCP1 = 0x1D4; // int32
                 constexpr std::ptrdiff_t m_nHeadLocation = 0x1D8; // int32
                 constexpr std::ptrdiff_t m_flReRandomRate = 0x1E0; // CParticleCollectionFloatInput
-                constexpr std::ptrdiff_t m_vecCPMinPos = 0x338; // 
-                constexpr std::ptrdiff_t m_vecCPMaxPos = 0x344; // 
+                constexpr std::ptrdiff_t m_vecCPMinPos = 0x338; // Vector
+                constexpr std::ptrdiff_t m_vecCPMaxPos = 0x344; // Vector
                 constexpr std::ptrdiff_t m_flInterpolation = 0x350; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionOperator
@@ -2716,8 +2716,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nInitialParticles = 0x210; // int32
                 constexpr std::ptrdiff_t m_nMaxParticles = 0x214; // int32
                 constexpr std::ptrdiff_t m_nGroupID = 0x218; // int32
-                constexpr std::ptrdiff_t m_BoundingBoxMin = 0x21C; // 
-                constexpr std::ptrdiff_t m_BoundingBoxMax = 0x228; // 
+                constexpr std::ptrdiff_t m_BoundingBoxMin = 0x21C; // Vector
+                constexpr std::ptrdiff_t m_BoundingBoxMax = 0x228; // Vector
                 constexpr std::ptrdiff_t m_flDepthSortBias = 0x234; // float32
                 constexpr std::ptrdiff_t m_nSortOverridePositionCP = 0x238; // int32
                 constexpr std::ptrdiff_t m_bInfiniteBounds = 0x23C; // bool
@@ -2725,7 +2725,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_NamedValueDomain = 0x240; // CUtlString
                 constexpr std::ptrdiff_t m_NamedValueLocals = 0x248; // CUtlVector<ParticleNamedValueSource_t*>
                 constexpr std::ptrdiff_t m_ConstantColor = 0x260; // Color
-                constexpr std::ptrdiff_t m_ConstantNormal = 0x264; // 
+                constexpr std::ptrdiff_t m_ConstantNormal = 0x264; // Vector
                 constexpr std::ptrdiff_t m_flConstantRadius = 0x270; // float32
                 constexpr std::ptrdiff_t m_flConstantRotation = 0x274; // float32
                 constexpr std::ptrdiff_t m_flConstantRotationSpeed = 0x278; // float32
@@ -2784,8 +2784,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flInputMin = 0x1C4; // float32
                 constexpr std::ptrdiff_t m_flInputMax = 0x1C8; // float32
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x1CC; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x1D8; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x1CC; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x1D8; // Vector
                 constexpr std::ptrdiff_t m_TransformStart = 0x1E8; // CParticleTransformInput
                 constexpr std::ptrdiff_t m_TransformEnd = 0x250; // CParticleTransformInput
                 constexpr std::ptrdiff_t m_nSetMethod = 0x2B8; // ParticleSetMethod_t
@@ -2846,10 +2846,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nControlPoint2 = 0x654; // int32
                 constexpr std::ptrdiff_t m_nControlPoint3 = 0x658; // int32
                 constexpr std::ptrdiff_t m_nControlPoint4 = 0x65C; // int32
-                constexpr std::ptrdiff_t m_vecCPOffset1 = 0x660; // 
-                constexpr std::ptrdiff_t m_vecCPOffset2 = 0x66C; // 
-                constexpr std::ptrdiff_t m_vecCPOffset3 = 0x678; // 
-                constexpr std::ptrdiff_t m_vecCPOffset4 = 0x684; // 
+                constexpr std::ptrdiff_t m_vecCPOffset1 = 0x660; // Vector
+                constexpr std::ptrdiff_t m_vecCPOffset2 = 0x66C; // Vector
+                constexpr std::ptrdiff_t m_vecCPOffset3 = 0x678; // Vector
+                constexpr std::ptrdiff_t m_vecCPOffset4 = 0x684; // Vector
                 constexpr std::ptrdiff_t m_LightFiftyDist1 = 0x690; // float32
                 constexpr std::ptrdiff_t m_LightZeroDist1 = 0x694; // float32
                 constexpr std::ptrdiff_t m_LightFiftyDist2 = 0x698; // float32
@@ -2957,7 +2957,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_WorldTraceConstraint {
                 constexpr std::ptrdiff_t m_nCP = 0x1C0; // int32
-                constexpr std::ptrdiff_t m_vecCpOffset = 0x1C4; // 
+                constexpr std::ptrdiff_t m_vecCpOffset = 0x1C4; // Vector
                 constexpr std::ptrdiff_t m_nCollisionMode = 0x1D0; // ParticleCollisionMode_t
                 constexpr std::ptrdiff_t m_nCollisionModeMin = 0x1D4; // ParticleCollisionMode_t
                 constexpr std::ptrdiff_t m_nTraceSet = 0x1D8; // ParticleTraceSet_t
@@ -3122,11 +3122,11 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_AddVectorToVector {
-                constexpr std::ptrdiff_t m_vecScale = 0x1C0; // 
+                constexpr std::ptrdiff_t m_vecScale = 0x1C0; // Vector
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1CC; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nFieldInput = 0x1D0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vOffsetMin = 0x1D4; // 
-                constexpr std::ptrdiff_t m_vOffsetMax = 0x1E0; // 
+                constexpr std::ptrdiff_t m_vOffsetMin = 0x1D4; // Vector
+                constexpr std::ptrdiff_t m_vOffsetMax = 0x1E0; // Vector
                 constexpr std::ptrdiff_t m_randomnessParameters = 0x1EC; // CRandomNumberGeneratorParameters
             }
             // Parent: CParticleFunctionInitializer
@@ -3158,13 +3158,13 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderStatusEffect {
-                constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // 
-                constexpr std::ptrdiff_t m_pTextureDetail2 = 0x208; // 
-                constexpr std::ptrdiff_t m_pTextureDiffuseWarp = 0x210; // 
-                constexpr std::ptrdiff_t m_pTextureFresnelColorWarp = 0x218; // 
-                constexpr std::ptrdiff_t m_pTextureFresnelWarp = 0x220; // 
-                constexpr std::ptrdiff_t m_pTextureSpecularWarp = 0x228; // 
-                constexpr std::ptrdiff_t m_pTextureEnvMap = 0x230; // 
+                constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureDetail2 = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureDiffuseWarp = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureFresnelColorWarp = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureFresnelWarp = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureSpecularWarp = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureEnvMap = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CParticleFunctionForce
             // Fields count: 2
@@ -3172,8 +3172,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RandomForce {
-                constexpr std::ptrdiff_t m_MinForce = 0x1D0; // 
-                constexpr std::ptrdiff_t m_MaxForce = 0x1DC; // 
+                constexpr std::ptrdiff_t m_MinForce = 0x1D0; // Vector
+                constexpr std::ptrdiff_t m_MaxForce = 0x1DC; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 7
@@ -3210,7 +3210,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bShouldDrawAttachmentNames = 0x52; // bool
                 constexpr std::ptrdiff_t m_bShouldDrawControlPointAxes = 0x53; // bool
                 constexpr std::ptrdiff_t m_bAnimationNonLooping = 0x54; // bool
-                constexpr std::ptrdiff_t m_vecPreviewGravity = 0x58; // 
+                constexpr std::ptrdiff_t m_vecPreviewGravity = 0x58; // Vector
             }
             // Parent: CParticleFunctionForce
             // Fields count: 3
@@ -3253,10 +3253,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_INIT_RemapTransformToVector {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vInputMin = 0x1C4; // 
-                constexpr std::ptrdiff_t m_vInputMax = 0x1D0; // 
-                constexpr std::ptrdiff_t m_vOutputMin = 0x1DC; // 
-                constexpr std::ptrdiff_t m_vOutputMax = 0x1E8; // 
+                constexpr std::ptrdiff_t m_vInputMin = 0x1C4; // Vector
+                constexpr std::ptrdiff_t m_vInputMax = 0x1D0; // Vector
+                constexpr std::ptrdiff_t m_vOutputMin = 0x1DC; // Vector
+                constexpr std::ptrdiff_t m_vOutputMax = 0x1E8; // Vector
                 constexpr std::ptrdiff_t m_TransformInput = 0x1F8; // CParticleTransformInput
                 constexpr std::ptrdiff_t m_LocalSpaceTransform = 0x260; // CParticleTransformInput
                 constexpr std::ptrdiff_t m_flStartTime = 0x2C8; // float32
@@ -3272,9 +3272,9 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_SDFLighting {
-                constexpr std::ptrdiff_t m_vLightingDir = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vTint_0 = 0x1CC; // 
-                constexpr std::ptrdiff_t m_vTint_1 = 0x1D8; // 
+                constexpr std::ptrdiff_t m_vLightingDir = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vTint_0 = 0x1CC; // Vector
+                constexpr std::ptrdiff_t m_vTint_1 = 0x1D8; // Vector
             }
             // Parent: C_OP_RemapDistanceToLineSegmentBase
             // Fields count: 3
@@ -3353,7 +3353,7 @@ namespace cs2_dumper {
             namespace C_OP_SetControlPointToHand {
                 constexpr std::ptrdiff_t m_nCP1 = 0x1D0; // int32
                 constexpr std::ptrdiff_t m_nHand = 0x1D4; // int32
-                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D8; // 
+                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D8; // Vector
                 constexpr std::ptrdiff_t m_bOrientToHand = 0x1E4; // bool
             }
             // Parent: CParticleFunctionConstraint
@@ -3378,7 +3378,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_DistanceCull {
                 constexpr std::ptrdiff_t m_nControlPoint = 0x1C0; // int32
-                constexpr std::ptrdiff_t m_vecPointOffset = 0x1C4; // 
+                constexpr std::ptrdiff_t m_vecPointOffset = 0x1C4; // Vector
                 constexpr std::ptrdiff_t m_flDistance = 0x1D0; // float32
                 constexpr std::ptrdiff_t m_bCullInside = 0x1D4; // bool
             }
@@ -3406,7 +3406,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fMaxDistance = 0x1C0; // float32
                 constexpr std::ptrdiff_t m_PathParams = 0x1D0; // CPathParameters
                 constexpr std::ptrdiff_t m_bUseRandomCPs = 0x210; // bool
-                constexpr std::ptrdiff_t m_vEndOffset = 0x214; // 
+                constexpr std::ptrdiff_t m_vEndOffset = 0x214; // Vector
                 constexpr std::ptrdiff_t m_bSaveOffset = 0x220; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -3533,8 +3533,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_RampCPLinearRandom {
                 constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1D0; // int32
-                constexpr std::ptrdiff_t m_vecRateMin = 0x1D4; // 
-                constexpr std::ptrdiff_t m_vecRateMax = 0x1E0; // 
+                constexpr std::ptrdiff_t m_vecRateMin = 0x1D4; // Vector
+                constexpr std::ptrdiff_t m_vecRateMax = 0x1E0; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3
@@ -3654,7 +3654,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x228; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flScale = 0x22C; // float32
                 constexpr std::ptrdiff_t m_flOffsetRot = 0x230; // float32
-                constexpr std::ptrdiff_t m_vecOffsetAxis = 0x234; // 
+                constexpr std::ptrdiff_t m_vecOffsetAxis = 0x234; // Vector
                 constexpr std::ptrdiff_t m_bNormalize = 0x240; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -3684,7 +3684,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_INIT_RemapTransformOrientationToRotations {
                 constexpr std::ptrdiff_t m_TransformInput = 0x1C0; // CParticleTransformInput
-                constexpr std::ptrdiff_t m_vecRotation = 0x228; // 
+                constexpr std::ptrdiff_t m_vecRotation = 0x228; // Vector
                 constexpr std::ptrdiff_t m_bUseQuat = 0x234; // bool
                 constexpr std::ptrdiff_t m_bWriteNormal = 0x235; // bool
             }
@@ -3771,7 +3771,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_LerpEndCapVector {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vecOutput = 0x1C4; // 
+                constexpr std::ptrdiff_t m_vecOutput = 0x1C4; // Vector
                 constexpr std::ptrdiff_t m_flLerpTime = 0x1D0; // float32
             }
             // Parent: CParticleFunctionOperator
@@ -3858,7 +3858,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_RemapTransformOrientationToRotations {
                 constexpr std::ptrdiff_t m_TransformInput = 0x1C0; // CParticleTransformInput
-                constexpr std::ptrdiff_t m_vecRotation = 0x228; // 
+                constexpr std::ptrdiff_t m_vecRotation = 0x228; // Vector
                 constexpr std::ptrdiff_t m_bUseQuat = 0x234; // bool
                 constexpr std::ptrdiff_t m_bWriteNormal = 0x235; // bool
             }
@@ -3910,7 +3910,7 @@ namespace cs2_dumper {
             namespace PointDefinition_t {
                 constexpr std::ptrdiff_t m_nControlPoint = 0x0; // int32
                 constexpr std::ptrdiff_t m_bLocalCoords = 0x4; // bool
-                constexpr std::ptrdiff_t m_vOffset = 0x8; // 
+                constexpr std::ptrdiff_t m_vOffset = 0x8; // Vector
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 4
@@ -3946,7 +3946,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAgeMax = 0x1CC; // float32
                 constexpr std::ptrdiff_t m_flNoiseScale = 0x1D0; // float32
                 constexpr std::ptrdiff_t m_flNoiseScaleLoc = 0x1D4; // float32
-                constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1D8; // 
+                constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1D8; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3
@@ -4003,7 +4003,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_CalculateVectorAttribute {
-                constexpr std::ptrdiff_t m_vStartValue = 0x1C0; // 
+                constexpr std::ptrdiff_t m_vStartValue = 0x1C0; // Vector
                 constexpr std::ptrdiff_t m_nFieldInput1 = 0x1CC; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flInputScale1 = 0x1D0; // float32
                 constexpr std::ptrdiff_t m_nFieldInput2 = 0x1D4; // ParticleAttributeIndex_t
@@ -4013,7 +4013,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nControlPointInput2 = 0x1F4; // ControlPointReference_t
                 constexpr std::ptrdiff_t m_flControlPointScale2 = 0x208; // float32
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x20C; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vFinalOutputScale = 0x210; // 
+                constexpr std::ptrdiff_t m_vFinalOutputScale = 0x210; // Vector
             }
             // Parent: CParticleInput
             // Fields count: 8
@@ -4067,7 +4067,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_MovementMaintainOffset {
-                constexpr std::ptrdiff_t m_vecOffset = 0x1C0; // 
+                constexpr std::ptrdiff_t m_vecOffset = 0x1C0; // Vector
                 constexpr std::ptrdiff_t m_nCP = 0x1CC; // int32
                 constexpr std::ptrdiff_t m_bRadiusScale = 0x1D0; // bool
             }
@@ -4129,7 +4129,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRange = 0xDD0; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_flInnerConeAngle = 0xF28; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_flOuterConeAngle = 0x1080; // CPerParticleFloatInput
-                constexpr std::ptrdiff_t m_hLightCookie = 0x11D8; // 
+                constexpr std::ptrdiff_t m_hLightCookie = 0x11D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_bSphericalCookie = 0x11E0; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -4295,7 +4295,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nForceInModel = 0x1C4; // int32
                 constexpr std::ptrdiff_t m_nDesiredHitbox = 0x1C8; // int32
                 constexpr std::ptrdiff_t m_vecHitBoxScale = 0x1D0; // CParticleCollectionVecInput
-                constexpr std::ptrdiff_t m_vecDirectionBias = 0x828; // 
+                constexpr std::ptrdiff_t m_vecDirectionBias = 0x828; // Vector
                 constexpr std::ptrdiff_t m_bMaintainHitbox = 0x834; // bool
                 constexpr std::ptrdiff_t m_bUseBones = 0x835; // bool
                 constexpr std::ptrdiff_t m_HitboxSetName = 0x836; // char[128]
@@ -4333,8 +4333,8 @@ namespace cs2_dumper {
             namespace C_INIT_InitialRepulsionVelocity {
                 constexpr std::ptrdiff_t m_CollisionGroupName = 0x1C0; // char[128]
                 constexpr std::ptrdiff_t m_nTraceSet = 0x240; // ParticleTraceSet_t
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x244; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x250; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x244; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x250; // Vector
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x25C; // int32
                 constexpr std::ptrdiff_t m_bPerParticle = 0x260; // bool
                 constexpr std::ptrdiff_t m_bTranslate = 0x261; // bool
@@ -4362,7 +4362,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_SetControlPointToHMD {
                 constexpr std::ptrdiff_t m_nCP1 = 0x1D0; // int32
-                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_bOrientToHMD = 0x1E0; // bool
             }
             // Parent: CParticleFunctionOperator
@@ -4575,7 +4575,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C4; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flScale = 0x1C8; // float32
                 constexpr std::ptrdiff_t m_flOffsetRot = 0x1CC; // float32
-                constexpr std::ptrdiff_t m_vecOffsetAxis = 0x1D0; // 
+                constexpr std::ptrdiff_t m_vecOffsetAxis = 0x1D0; // Vector
                 constexpr std::ptrdiff_t m_bNormalize = 0x1DC; // bool
                 constexpr std::ptrdiff_t m_nFieldStrength = 0x1E0; // ParticleAttributeIndex_t
             }
@@ -4601,8 +4601,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RtEnvCull {
-                constexpr std::ptrdiff_t m_vecTestDir = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vecTestNormal = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecTestDir = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vecTestNormal = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_bCullOnMiss = 0x1D8; // bool
                 constexpr std::ptrdiff_t m_bStickInsteadOfCull = 0x1D9; // bool
                 constexpr std::ptrdiff_t m_RtEnvName = 0x1DA; // char[128]
@@ -4620,7 +4620,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bOffsetLocal = 0x820; // bool
                 constexpr std::ptrdiff_t m_nParticleSelection = 0x824; // ParticleSelection_t
                 constexpr std::ptrdiff_t m_nParticleNumber = 0x828; // CParticleCollectionFloatInput
-                constexpr std::ptrdiff_t m_nPinBreakType = 0x980; // 
+                constexpr std::ptrdiff_t m_nPinBreakType = 0x980; // ParticlePinDistance_t
                 constexpr std::ptrdiff_t m_flBreakDistance = 0x988; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flBreakSpeed = 0xAE0; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flAge = 0xC38; // CParticleCollectionFloatInput
@@ -4638,10 +4638,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCPInput = 0x1C0; // int32
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C4; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nLocalSpaceCP = 0x1C8; // int32
-                constexpr std::ptrdiff_t m_vInputMin = 0x1CC; // 
-                constexpr std::ptrdiff_t m_vInputMax = 0x1D8; // 
-                constexpr std::ptrdiff_t m_vOutputMin = 0x1E4; // 
-                constexpr std::ptrdiff_t m_vOutputMax = 0x1F0; // 
+                constexpr std::ptrdiff_t m_vInputMin = 0x1CC; // Vector
+                constexpr std::ptrdiff_t m_vInputMax = 0x1D8; // Vector
+                constexpr std::ptrdiff_t m_vOutputMin = 0x1E4; // Vector
+                constexpr std::ptrdiff_t m_vOutputMax = 0x1F0; // Vector
                 constexpr std::ptrdiff_t m_flStartTime = 0x1FC; // float32
                 constexpr std::ptrdiff_t m_flEndTime = 0x200; // float32
                 constexpr std::ptrdiff_t m_flInterpRate = 0x204; // float32
@@ -4713,10 +4713,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCP2 = 0x1D8; // int32
                 constexpr std::ptrdiff_t m_nCP3 = 0x1DC; // int32
                 constexpr std::ptrdiff_t m_nCP4 = 0x1E0; // int32
-                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1E4; // 
-                constexpr std::ptrdiff_t m_vecCP2Pos = 0x1F0; // 
-                constexpr std::ptrdiff_t m_vecCP3Pos = 0x1FC; // 
-                constexpr std::ptrdiff_t m_vecCP4Pos = 0x208; // 
+                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1E4; // Vector
+                constexpr std::ptrdiff_t m_vecCP2Pos = 0x1F0; // Vector
+                constexpr std::ptrdiff_t m_vecCP3Pos = 0x1FC; // Vector
+                constexpr std::ptrdiff_t m_vecCP4Pos = 0x208; // Vector
                 constexpr std::ptrdiff_t m_nHeadLocation = 0x214; // int32
             }
             // Parent: CParticleFunctionOperator
@@ -5028,12 +5028,12 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderStatusEffectCitadel {
-                constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // 
-                constexpr std::ptrdiff_t m_pTextureNormal = 0x208; // 
-                constexpr std::ptrdiff_t m_pTextureMetalness = 0x210; // 
-                constexpr std::ptrdiff_t m_pTextureRoughness = 0x218; // 
-                constexpr std::ptrdiff_t m_pTextureSelfIllum = 0x220; // 
-                constexpr std::ptrdiff_t m_pTextureDetail = 0x228; // 
+                constexpr std::ptrdiff_t m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureNormal = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureMetalness = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureRoughness = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureSelfIllum = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_pTextureDetail = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 11
@@ -5074,7 +5074,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_WindForce {
-                constexpr std::ptrdiff_t m_vForce = 0x1D0; // 
+                constexpr std::ptrdiff_t m_vForce = 0x1D0; // Vector
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 6
@@ -5084,7 +5084,7 @@ namespace cs2_dumper {
             namespace C_OP_SetVariable {
                 constexpr std::ptrdiff_t m_variableReference = 0x1D0; // CParticleVariableRef
                 constexpr std::ptrdiff_t m_transformInput = 0x210; // CParticleTransformInput
-                constexpr std::ptrdiff_t m_positionOffset = 0x278; // 
+                constexpr std::ptrdiff_t m_positionOffset = 0x278; // Vector
                 constexpr std::ptrdiff_t m_rotationOffset = 0x284; // QAngle
                 constexpr std::ptrdiff_t m_vecInput = 0x290; // CParticleCollectionVecInput
                 constexpr std::ptrdiff_t m_floatInput = 0x8E8; // CParticleCollectionFloatInput
@@ -5165,7 +5165,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_SetControlPointToCenter {
                 constexpr std::ptrdiff_t m_nCP1 = 0x1D0; // int32
-                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecCP1Pos = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_nSetParent = 0x1E0; // ParticleParentSetMode_t
             }
             // Parent: CParticleFunctionPreEmission
@@ -5354,7 +5354,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_LerpVector {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vecOutput = 0x1C4; // 
+                constexpr std::ptrdiff_t m_vecOutput = 0x1C4; // Vector
                 constexpr std::ptrdiff_t m_flStartTime = 0x1D0; // float32
                 constexpr std::ptrdiff_t m_flEndTime = 0x1D4; // float32
                 constexpr std::ptrdiff_t m_nSetMethod = 0x1D8; // ParticleSetMethod_t
@@ -5377,7 +5377,7 @@ namespace cs2_dumper {
             namespace TextureGroup_t {
                 constexpr std::ptrdiff_t m_bEnabled = 0x0; // bool
                 constexpr std::ptrdiff_t m_bReplaceTextureWithGradient = 0x1; // bool
-                constexpr std::ptrdiff_t m_hTexture = 0x8; // 
+                constexpr std::ptrdiff_t m_hTexture = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_Gradient = 0x10; // CColorGradient
                 constexpr std::ptrdiff_t m_nTextureType = 0x28; // SpriteCardTextureType_t
                 constexpr std::ptrdiff_t m_nTextureChannels = 0x2C; // SpriteCardTextureChannel_t
@@ -5392,9 +5392,9 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_TimeVaryingForce {
                 constexpr std::ptrdiff_t m_flStartLerpTime = 0x1D0; // float32
-                constexpr std::ptrdiff_t m_StartingForce = 0x1D4; // 
+                constexpr std::ptrdiff_t m_StartingForce = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_flEndLerpTime = 0x1E0; // float32
-                constexpr std::ptrdiff_t m_EndingForce = 0x1E4; // 
+                constexpr std::ptrdiff_t m_EndingForce = 0x1E4; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 9
@@ -5435,7 +5435,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fRadiusMin = 0x1C0; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_fRadiusMax = 0x318; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_vecDistanceBias = 0x470; // CPerParticleVecInput
-                constexpr std::ptrdiff_t m_vecDistanceBiasAbs = 0xAC8; // 
+                constexpr std::ptrdiff_t m_vecDistanceBiasAbs = 0xAC8; // Vector
                 constexpr std::ptrdiff_t m_TransformInput = 0xAD8; // CParticleTransformInput
                 constexpr std::ptrdiff_t m_fSpeedMin = 0xB40; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_fSpeedMax = 0xC98; // CPerParticleFloatInput
@@ -5472,8 +5472,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C4; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flInputMin = 0x1C8; // float32
                 constexpr std::ptrdiff_t m_flInputMax = 0x1CC; // float32
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x1D0; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x1DC; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x1D0; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x1DC; // Vector
                 constexpr std::ptrdiff_t m_flStartTime = 0x1E8; // float32
                 constexpr std::ptrdiff_t m_flEndTime = 0x1EC; // float32
                 constexpr std::ptrdiff_t m_nSetMethod = 0x1F0; // ParticleSetMethod_t
@@ -5515,7 +5515,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flOutputMax = 0x1E4; // float32
                 constexpr std::ptrdiff_t m_flNoiseScale = 0x1E8; // float32
                 constexpr std::ptrdiff_t m_flWorldNoiseScale = 0x1EC; // float32
-                constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1F0; // 
+                constexpr std::ptrdiff_t m_vecOffsetLoc = 0x1F0; // Vector
                 constexpr std::ptrdiff_t m_flWorldTimeScale = 0x1FC; // float32
             }
             // Parent: CParticleFunction
@@ -5553,8 +5553,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_PlanarConstraint {
-                constexpr std::ptrdiff_t m_PointOnPlane = 0x1C0; // 
-                constexpr std::ptrdiff_t m_PlaneNormal = 0x1CC; // 
+                constexpr std::ptrdiff_t m_PointOnPlane = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_PlaneNormal = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1D8; // int32
                 constexpr std::ptrdiff_t m_bGlobalOrigin = 0x1DC; // bool
                 constexpr std::ptrdiff_t m_bGlobalNormal = 0x1DD; // bool
@@ -5675,7 +5675,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flNoiseOutputMin = 0x9C; // float32
                 constexpr std::ptrdiff_t m_flNoiseOutputMax = 0xA0; // float32
                 constexpr std::ptrdiff_t m_flNoiseScale = 0xA4; // float32
-                constexpr std::ptrdiff_t m_vecNoiseOffsetRate = 0xA8; // 
+                constexpr std::ptrdiff_t m_vecNoiseOffsetRate = 0xA8; // Vector
                 constexpr std::ptrdiff_t m_flNoiseOffset = 0xB4; // float32
                 constexpr std::ptrdiff_t m_nNoiseOctaves = 0xB8; // int32
                 constexpr std::ptrdiff_t m_nNoiseTurbulence = 0xBC; // PFNoiseTurbulence_t
@@ -5880,7 +5880,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flLOSScale = 0x910; // float32
                 constexpr std::ptrdiff_t m_nSetMethod = 0x914; // ParticleSetMethod_t
                 constexpr std::ptrdiff_t m_bActiveRange = 0x918; // bool
-                constexpr std::ptrdiff_t m_vecDistanceScale = 0x91C; // 
+                constexpr std::ptrdiff_t m_vecDistanceScale = 0x91C; // Vector
                 constexpr std::ptrdiff_t m_flRemapBias = 0x928; // float32
             }
             // Parent: CParticleFunctionOperator
@@ -5897,10 +5897,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_ForceBasedOnDistanceToPlane {
                 constexpr std::ptrdiff_t m_flMinDist = 0x1D0; // float32
-                constexpr std::ptrdiff_t m_vecForceAtMinDist = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecForceAtMinDist = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_flMaxDist = 0x1E0; // float32
-                constexpr std::ptrdiff_t m_vecForceAtMaxDist = 0x1E4; // 
-                constexpr std::ptrdiff_t m_vecPlaneNormal = 0x1F0; // 
+                constexpr std::ptrdiff_t m_vecForceAtMaxDist = 0x1E4; // Vector
+                constexpr std::ptrdiff_t m_vecPlaneNormal = 0x1F0; // Vector
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1FC; // int32
                 constexpr std::ptrdiff_t m_flExponent = 0x200; // float32
             }
@@ -5914,8 +5914,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C4; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_flDensityMin = 0x1C8; // float32
                 constexpr std::ptrdiff_t m_flDensityMax = 0x1CC; // float32
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x1D0; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x1DC; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x1D0; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x1DC; // Vector
                 constexpr std::ptrdiff_t m_bUseParentDensity = 0x1E8; // bool
                 constexpr std::ptrdiff_t m_nVoxelGridResolution = 0x1EC; // int32
             }
@@ -6074,8 +6074,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_INIT_PositionWarpScalar {
-                constexpr std::ptrdiff_t m_vecWarpMin = 0x1C0; // 
-                constexpr std::ptrdiff_t m_vecWarpMax = 0x1CC; // 
+                constexpr std::ptrdiff_t m_vecWarpMin = 0x1C0; // Vector
+                constexpr std::ptrdiff_t m_vecWarpMax = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_InputValue = 0x1D8; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_flPrevPosScale = 0x330; // float32
                 constexpr std::ptrdiff_t m_nScaleControlPointNumber = 0x334; // int32
@@ -6096,8 +6096,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_VectorNoise {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vecOutputMin = 0x1C4; // 
-                constexpr std::ptrdiff_t m_vecOutputMax = 0x1D0; // 
+                constexpr std::ptrdiff_t m_vecOutputMin = 0x1C4; // Vector
+                constexpr std::ptrdiff_t m_vecOutputMax = 0x1D0; // Vector
                 constexpr std::ptrdiff_t m_fl4NoiseScale = 0x1DC; // float32
                 constexpr std::ptrdiff_t m_bAdditive = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_bOffset = 0x1E1; // bool
@@ -6153,7 +6153,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_SetToCP {
                 constexpr std::ptrdiff_t m_nControlPointNumber = 0x1C0; // int32
-                constexpr std::ptrdiff_t m_vecOffset = 0x1C4; // 
+                constexpr std::ptrdiff_t m_vecOffset = 0x1C4; // Vector
                 constexpr std::ptrdiff_t m_bOffsetLocal = 0x1D0; // bool
             }
             // Parent: None
@@ -6165,7 +6165,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iControlPoint = 0x0; // int32
                 constexpr std::ptrdiff_t m_iAttachType = 0x4; // ParticleAttachment_t
                 constexpr std::ptrdiff_t m_attachmentName = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_vecOffset = 0x10; // 
+                constexpr std::ptrdiff_t m_vecOffset = 0x10; // Vector
                 constexpr std::ptrdiff_t m_angOffset = 0x1C; // QAngle
                 constexpr std::ptrdiff_t m_entityName = 0x28; // CUtlString
             }
@@ -6176,7 +6176,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_ParentVortices {
                 constexpr std::ptrdiff_t m_flForceScale = 0x1D0; // float32
-                constexpr std::ptrdiff_t m_vecTwistAxis = 0x1D4; // 
+                constexpr std::ptrdiff_t m_vecTwistAxis = 0x1D4; // Vector
                 constexpr std::ptrdiff_t m_bFlipBasedOnYaw = 0x1E0; // bool
             }
             // Parent: CParticleFunctionPreEmission
@@ -6421,8 +6421,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_RotateVector {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_vecRotAxisMin = 0x1C4; // 
-                constexpr std::ptrdiff_t m_vecRotAxisMax = 0x1D0; // 
+                constexpr std::ptrdiff_t m_vecRotAxisMin = 0x1C4; // Vector
+                constexpr std::ptrdiff_t m_vecRotAxisMax = 0x1D0; // Vector
                 constexpr std::ptrdiff_t m_flRotRateMin = 0x1DC; // float32
                 constexpr std::ptrdiff_t m_flRotRateMax = 0x1E0; // float32
                 constexpr std::ptrdiff_t m_bNormalize = 0x1E4; // bool
@@ -6453,7 +6453,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bKillUnused = 0x1C0; // bool
                 constexpr std::ptrdiff_t m_bRadiusScale = 0x1C1; // bool
                 constexpr std::ptrdiff_t m_nCP = 0x1C4; // int32
-                constexpr std::ptrdiff_t m_vecOffset = 0x1C8; // 
+                constexpr std::ptrdiff_t m_vecOffset = 0x1C8; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 11
@@ -6471,7 +6471,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nInputCP = 0x1DC; // int32
                 constexpr std::ptrdiff_t m_bRadialCheck = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_bScaleOffset = 0x1E1; // bool
-                constexpr std::ptrdiff_t m_vecOffset = 0x1E4; // 
+                constexpr std::ptrdiff_t m_vecOffset = 0x1E4; // Vector
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3

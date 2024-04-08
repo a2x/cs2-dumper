@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #pragma once
 
@@ -41,7 +41,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vTintColor = 0x3C; // Vector4D
                 constexpr std::ptrdiff_t m_skin = 0x50; // CUtlString
                 constexpr std::ptrdiff_t m_nObjectTypeFlags = 0x58; // ObjectTypeFlags_t
-                constexpr std::ptrdiff_t m_vLightingOrigin = 0x5C; // 
+                constexpr std::ptrdiff_t m_vLightingOrigin = 0x5C; // Vector
                 constexpr std::ptrdiff_t m_nOverlayRenderOrder = 0x68; // int16
                 constexpr std::ptrdiff_t m_nLODOverride = 0x6A; // int16
                 constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x6C; // int32
@@ -55,7 +55,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace AggregateLODSetup_t {
-                constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // 
+                constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // Vector
                 constexpr std::ptrdiff_t m_fMaxObjectScale = 0xC; // float32
                 constexpr std::ptrdiff_t m_fSwitchDistances = 0x10; // CUtlVectorFixedGrowable<float32>
             }
@@ -102,9 +102,9 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace NodeData_t {
                 constexpr std::ptrdiff_t m_nParent = 0x0; // int32
-                constexpr std::ptrdiff_t m_vOrigin = 0x4; // 
-                constexpr std::ptrdiff_t m_vMinBounds = 0x10; // 
-                constexpr std::ptrdiff_t m_vMaxBounds = 0x1C; // 
+                constexpr std::ptrdiff_t m_vOrigin = 0x4; // Vector
+                constexpr std::ptrdiff_t m_vMinBounds = 0x10; // Vector
+                constexpr std::ptrdiff_t m_vMaxBounds = 0x1C; // Vector
                 constexpr std::ptrdiff_t m_flMinimumDistance = 0x28; // float32
                 constexpr std::ptrdiff_t m_ChildNodeIndices = 0x30; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_worldNodePrefix = 0x48; // CUtlString
@@ -303,8 +303,8 @@ namespace cs2_dumper {
             namespace CVoxelVisibility {
                 constexpr std::ptrdiff_t m_nBaseClusterCount = 0x40; // uint32
                 constexpr std::ptrdiff_t m_nPVSBytesPerCluster = 0x44; // uint32
-                constexpr std::ptrdiff_t m_vMinBounds = 0x48; // 
-                constexpr std::ptrdiff_t m_vMaxBounds = 0x54; // 
+                constexpr std::ptrdiff_t m_vMinBounds = 0x48; // Vector
+                constexpr std::ptrdiff_t m_vMaxBounds = 0x54; // Vector
                 constexpr std::ptrdiff_t m_flGridSize = 0x60; // float32
                 constexpr std::ptrdiff_t m_nSkyVisibilityCluster = 0x64; // uint32
                 constexpr std::ptrdiff_t m_nSunVisibilityCluster = 0x68; // uint32

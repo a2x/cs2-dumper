@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 #pragma once
 
@@ -187,8 +187,8 @@ namespace cs2_dumper {
             // Parent: None
             // Fields count: 2
             namespace AABB_t {
-                constexpr std::ptrdiff_t m_vMinBounds = 0x0; // 
-                constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // 
+                constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
+                constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // Vector
             }
             // Parent: None
             // Fields count: 0

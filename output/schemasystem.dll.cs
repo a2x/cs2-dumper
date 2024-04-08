@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: schemasystem.dll
@@ -109,7 +109,7 @@ namespace CS2Dumper.Schemas {
         // Fields count: 22
         public static class CSchemaSystemInternalRegistration {
             public const nint m_Vector2D = 0x0; // Vector2D
-            public const nint m_Vector = 0x8; // 
+            public const nint m_Vector = 0x8; // Vector
             public const nint m_VectorAligned = 0x20; // VectorAligned
             public const nint m_Quaternion = 0x30; // Quaternion
             public const nint m_QAngle = 0x40; // QAngle

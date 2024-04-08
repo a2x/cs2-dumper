@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-07 08:19:03.265339800 UTC
+// 2024-04-08 07:10:44.298916800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
@@ -36,7 +36,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vTintColor = 0x3C; // Vector4D
             public const nint m_skin = 0x50; // CUtlString
             public const nint m_nObjectTypeFlags = 0x58; // ObjectTypeFlags_t
-            public const nint m_vLightingOrigin = 0x5C; // 
+            public const nint m_vLightingOrigin = 0x5C; // Vector
             public const nint m_nOverlayRenderOrder = 0x68; // int16
             public const nint m_nLODOverride = 0x6A; // int16
             public const nint m_nCubeMapPrecomputedHandshake = 0x6C; // int32
@@ -50,7 +50,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class AggregateLODSetup_t {
-            public const nint m_vLODOrigin = 0x0; // 
+            public const nint m_vLODOrigin = 0x0; // Vector
             public const nint m_fMaxObjectScale = 0xC; // float32
             public const nint m_fSwitchDistances = 0x10; // CUtlVectorFixedGrowable<float32>
         }
@@ -97,9 +97,9 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class NodeData_t {
             public const nint m_nParent = 0x0; // int32
-            public const nint m_vOrigin = 0x4; // 
-            public const nint m_vMinBounds = 0x10; // 
-            public const nint m_vMaxBounds = 0x1C; // 
+            public const nint m_vOrigin = 0x4; // Vector
+            public const nint m_vMinBounds = 0x10; // Vector
+            public const nint m_vMaxBounds = 0x1C; // Vector
             public const nint m_flMinimumDistance = 0x28; // float32
             public const nint m_ChildNodeIndices = 0x30; // CUtlVector<int32>
             public const nint m_worldNodePrefix = 0x48; // CUtlString
@@ -298,8 +298,8 @@ namespace CS2Dumper.Schemas {
         public static class CVoxelVisibility {
             public const nint m_nBaseClusterCount = 0x40; // uint32
             public const nint m_nPVSBytesPerCluster = 0x44; // uint32
-            public const nint m_vMinBounds = 0x48; // 
-            public const nint m_vMaxBounds = 0x54; // 
+            public const nint m_vMinBounds = 0x48; // Vector
+            public const nint m_vMaxBounds = 0x54; // Vector
             public const nint m_flGridSize = 0x60; // float32
             public const nint m_nSkyVisibilityCluster = 0x64; // uint32
             public const nint m_nSunVisibilityCluster = 0x68; // uint32
