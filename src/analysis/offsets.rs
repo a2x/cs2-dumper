@@ -98,9 +98,9 @@ pattern_map! {
         "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("8983u4 40b7") => None,
         "dwNetworkGameClient_getLocalPlayer" => pattern!("4883c0u1 488d0440 458b04c7") => Some(|_view, map, rva| {
-            // .text 48 83 C0 0A   add rax, 0Ah
-            // .text 48 8D 04 40   lea rax, [rax+rax*2]
-            // .text 45 8B 04 C7   mov r8d, [r15+rax*8]
+            // .text 48 83 C0 0A | add rax, 0Ah
+            // .text 48 8D 04 40 | lea rax, [rax + rax * 2]
+            // .text 45 8B 04 C7 | mov r8d, [r15 + rax * 8]
             map.insert("dwNetworkGameClient_getLocalPlayer".to_string(), (rva + (rva * 2)) * 8);
         }),
         "dwNetworkGameClient_getMaxClients" => pattern!("8b81u2?? c3cccccccccccccccccc 8b81${} ffc0") => None,

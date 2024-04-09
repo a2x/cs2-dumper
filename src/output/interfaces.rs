@@ -1,30 +1,54 @@
 use std::collections::BTreeMap;
-use std::fmt::Write;
+use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{CodeGen, InterfaceMap, Results};
+use super::{slugify, CodeWriter, Formatter, InterfaceMap};
 
-use crate::error::Result;
+impl CodeWriter for InterfaceMap {
+    fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("namespace CS2Dumper.Interfaces", false, |fmt| {
+            for (module_name, ifaces) in self {
+                writeln!(fmt, "// Module: {}", module_name)?;
 
-impl CodeGen for InterfaceMap {
-    fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
-        self.write_content(results, indent_size, |fmt| {
-            fmt.block("namespace CS2Dumper.Interfaces", false, |fmt| {
+                fmt.block(
+                    &format!("public static class {}", AsPascalCase(slugify(module_name))),
+                    false,
+                    |fmt| {
+                        for iface in ifaces {
+                            writeln!(
+                                fmt,
+                                "public const nint {} = {:#X};",
+                                iface.name, iface.value
+                            )?;
+                        }
+
+                        Ok(())
+                    },
+                )?;
+            }
+
+            Ok(())
+        })
+    }
+
+    fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        writeln!(fmt, "#pragma once\n")?;
+        writeln!(fmt, "#include <cstddef>\n")?;
+
+        fmt.block("namespace cs2_dumper", false, |fmt| {
+            fmt.block("namespace interfaces", false, |fmt| {
                 for (module_name, ifaces) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
 
                     fmt.block(
-                        &format!(
-                            "public static class {}",
-                            AsPascalCase(Self::slugify(module_name))
-                        ),
+                        &format!("namespace {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
                             for iface in ifaces {
                                 writeln!(
                                     fmt,
-                                    "public const nint {} = {:#X};",
+                                    "constexpr std::ptrdiff_t {} = {:#X};",
                                     iface.name, iface.value
                                 )?;
                             }
@@ -35,48 +59,11 @@ impl CodeGen for InterfaceMap {
                 }
 
                 Ok(())
-            })?;
-
-            Ok(())
+            })
         })
     }
 
-    fn to_hpp(&self, results: &Results, indent_size: usize) -> Result<String> {
-        self.write_content(results, indent_size, |fmt| {
-            writeln!(fmt, "#pragma once\n")?;
-            writeln!(fmt, "#include <cstddef>\n")?;
-
-            fmt.block("namespace cs2_dumper", false, |fmt| {
-                fmt.block("namespace interfaces", false, |fmt| {
-                    for (module_name, ifaces) in self {
-                        writeln!(fmt, "// Module: {}", module_name)?;
-
-                        fmt.block(
-                            &format!("namespace {}", AsSnakeCase(Self::slugify(module_name))),
-                            false,
-                            |fmt| {
-                                for iface in ifaces {
-                                    writeln!(
-                                        fmt,
-                                        "constexpr std::ptrdiff_t {} = {:#X};",
-                                        iface.name, iface.value
-                                    )?;
-                                }
-
-                                Ok(())
-                            },
-                        )?;
-                    }
-
-                    Ok(())
-                })
-            })?;
-
-            Ok(())
-        })
-    }
-
-    fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
+    fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         let content: BTreeMap<_, _> = self
             .iter()
             .map(|(module_name, ifaces)| {
@@ -89,43 +76,36 @@ impl CodeGen for InterfaceMap {
             })
             .collect();
 
-        serde_json::to_string_pretty(&content).map_err(Into::into)
+        fmt.write_str(&serde_json::to_string_pretty(&content).expect("failed to serialize"))
     }
 
-    fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
-        self.write_content(results, indent_size, |fmt| {
-            writeln!(
-                fmt,
-                "#![allow(non_upper_case_globals, non_camel_case_types, unused)]\n"
-            )?;
+    fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        writeln!(fmt, "#![allow(non_upper_case_globals, unused)]\n")?;
 
-            fmt.block("pub mod cs2_dumper", false, |fmt| {
-                fmt.block("pub mod interfaces", false, |fmt| {
-                    for (module_name, ifaces) in self {
-                        writeln!(fmt, "// Module: {}", module_name)?;
+        fmt.block("pub mod cs2_dumper", false, |fmt| {
+            fmt.block("pub mod interfaces", false, |fmt| {
+                for (module_name, ifaces) in self {
+                    writeln!(fmt, "// Module: {}", module_name)?;
 
-                        fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(Self::slugify(module_name))),
-                            false,
-                            |fmt| {
-                                for iface in ifaces {
-                                    writeln!(
-                                        fmt,
-                                        "pub const {}: usize = {:#X};",
-                                        iface.name, iface.value
-                                    )?;
-                                }
+                    fmt.block(
+                        &format!("pub mod {}", AsSnakeCase(slugify(module_name))),
+                        false,
+                        |fmt| {
+                            for iface in ifaces {
+                                writeln!(
+                                    fmt,
+                                    "pub const {}: usize = {:#X};",
+                                    iface.name, iface.value
+                                )?;
+                            }
 
-                                Ok(())
-                            },
-                        )?;
-                    }
+                            Ok(())
+                        },
+                    )?;
+                }
 
-                    Ok(())
-                })
-            })?;
-
-            Ok(())
+                Ok(())
+            })
         })
     }
 }

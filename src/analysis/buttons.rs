@@ -10,7 +10,6 @@ use serde::{Deserialize, Serialize};
 use crate::error::{Error, Result};
 use crate::source2::KeyButton;
 
-/// Represents a keyboard button.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Button {
     pub name: String,

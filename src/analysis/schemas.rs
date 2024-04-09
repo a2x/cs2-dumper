@@ -15,14 +15,14 @@ use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub enum ClassMetadata {
     Unknown { name: String },
     NetworkChangeCallback { name: String },
     NetworkVarNames { name: String, type_name: String },
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Class {
     pub name: String,
     pub module_name: String,
@@ -31,14 +31,14 @@ pub struct Class {
     pub fields: Vec<ClassField>,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct ClassField {
     pub name: String,
     pub type_name: String,
     pub offset: i32,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Enum {
     pub name: String,
     pub alignment: u8,
@@ -46,13 +46,13 @@ pub struct Enum {
     pub members: Vec<EnumMember>,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct EnumMember {
     pub name: String,
     pub value: i64,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct TypeScope {
     pub module_name: String,
     pub classes: Vec<Class>,
@@ -63,7 +63,7 @@ pub fn schemas(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaMap>
     let schema_system = read_schema_system(process)?;
     let type_scopes = read_type_scopes(process, &schema_system)?;
 
-    let map: BTreeMap<_, _> = type_scopes
+    let map = type_scopes
         .into_iter()
         .map(|type_scope| {
             (
@@ -134,10 +134,10 @@ fn read_class_binding_fields(
         }
 
         let name = field.name.read_string(process)?.to_string();
-        let type_ = field.schema_type.read(process)?;
+        let schema_type = field.schema_type.read(process)?;
 
         // TODO: Parse this properly.
-        let type_name = type_.name.read_string(process)?.replace(" ", "");
+        let type_name = schema_type.name.read_string(process)?.replace(" ", "");
 
         acc.push(ClassField {
             name,

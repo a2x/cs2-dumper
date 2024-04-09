@@ -23,7 +23,6 @@ pub struct FreeList {
     pub next: Pointer64<FreeList>, // 0x0000
 }
 
-/// Represents an optimized pool memory allocator.
 #[repr(C)]
 pub struct UtlMemoryPoolBase {
     pub block_size: i32,                                // 0x0000

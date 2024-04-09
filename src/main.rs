@@ -1,4 +1,3 @@
-use std::env;
 use std::path::PathBuf;
 use std::time::Instant;
 
@@ -11,7 +10,7 @@ use memflow::prelude::v1::*;
 use simplelog::{ColorChoice, TermLogger};
 
 use error::Result;
-use output::Results;
+use output::Output;
 
 mod analysis;
 mod error;
@@ -22,10 +21,10 @@ mod source2;
 const PROCESS_NAME: &str = "cs2.exe";
 
 fn main() -> Result<()> {
-    let start_time = Instant::now();
+    let now = Instant::now();
 
     let matches = parse_args();
-    let (conn_name, conn_args, indent_size, out_dir) = extract_args(&matches)?;
+    let (conn_name, conn_args, file_types, indent_size, out_dir) = extract_args(&matches)?;
 
     let os = if let Some(conn_name) = conn_name {
         let inventory = Inventory::scan();
@@ -37,22 +36,18 @@ fn main() -> Result<()> {
             .os("win32")
             .build()?
     } else {
-        // Fallback to the native OS layer if no connector name was provided.
+        // Fallback to the native OS layer if no connector name was specified.
         memflow_native::create_os(&Default::default(), Default::default())?
     };
 
     let mut process = os.into_process_by_name(PROCESS_NAME)?;
 
-    let buttons = analysis::buttons(&mut process)?;
-    let interfaces = analysis::interfaces(&mut process)?;
-    let offsets = analysis::offsets(&mut process)?;
-    let schemas = analysis::schemas(&mut process)?;
+    let result = analysis::analyze_all(&mut process)?;
+    let output = Output::new(&file_types, indent_size, &out_dir, &result)?;
 
-    let results = Results::new(buttons, interfaces, offsets, schemas);
+    output.dump_all(&mut process)?;
 
-    results.dump_all(&mut process, &out_dir, indent_size)?;
-
-    info!("finished in {:?}", start_time.elapsed());
+    info!("finished in {:?}", now.elapsed());
 
     Ok(())
 }
@@ -62,12 +57,6 @@ fn parse_args() -> ArgMatches {
         .version(crate_version!())
         .author(crate_authors!())
         .arg(
-            Arg::new("verbose")
-                .help("Increase logging verbosity. Can be specified multiple times.")
-                .short('v')
-                .action(ArgAction::Count),
-        )
-        .arg(
             Arg::new("connector")
                 .help("The name of the memflow connector to use.")
                 .long("connector")
@@ -76,9 +65,29 @@ fn parse_args() -> ArgMatches {
         )
         .arg(
             Arg::new("connector-args")
-                .help("Additional arguments to supply to the connector.")
+                .help("Additional arguments to pass to the connector.")
                 .long("connector-args")
                 .short('a')
+                .required(false),
+        )
+        .arg(
+            Arg::new("file-types")
+                .help("The types of files to generate.")
+                .long("file-types")
+                .short('f')
+                .action(ArgAction::Append)
+                .default_values(["cs", "hpp", "json", "rs"])
+                .value_parser(["cs", "hpp", "json", "rs"])
+                .value_delimiter(',')
+                .required(false),
+        )
+        .arg(
+            Arg::new("indent-size")
+                .help("The number of spaces to use per indentation level.")
+                .long("indent-size")
+                .short('i')
+                .default_value("4")
+                .value_parser(value_parser!(usize))
                 .required(false),
         )
         .arg(
@@ -91,18 +100,17 @@ fn parse_args() -> ArgMatches {
                 .required(false),
         )
         .arg(
-            Arg::new("indent-size")
-                .help("The number of spaces to use per indentation level.")
-                .long("indent-size")
-                .short('i')
-                .default_value("4")
-                .value_parser(value_parser!(usize))
-                .required(false),
+            Arg::new("verbose")
+                .help("Increase logging verbosity. Can be specified multiple times.")
+                .short('v')
+                .action(ArgAction::Count),
         )
         .get_matches()
 }
 
-fn extract_args(matches: &ArgMatches) -> Result<(Option<String>, ConnectorArgs, usize, &PathBuf)> {
+fn extract_args(
+    matches: &ArgMatches,
+) -> Result<(Option<String>, ConnectorArgs, Vec<String>, usize, &PathBuf)> {
     use std::str::FromStr;
 
     let log_level = match matches.get_count("verbose") {
@@ -131,8 +139,14 @@ fn extract_args(matches: &ArgMatches) -> Result<(Option<String>, ConnectorArgs, 
         .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
         .unwrap_or_default();
 
+    let file_types = matches
+        .get_many::<String>("file-types")
+        .unwrap()
+        .map(|s| s.to_string())
+        .collect();
+
     let indent_size = *matches.get_one::<usize>("indent-size").unwrap();
     let out_dir = matches.get_one::<PathBuf>("output").unwrap();
 
-    Ok((conn_name, conn_args, indent_size, out_dir))
+    Ok((conn_name, conn_args, file_types, indent_size, out_dir))
 }

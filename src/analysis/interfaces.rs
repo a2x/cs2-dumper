@@ -14,7 +14,6 @@ use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, Vec<Interface>>;
 
-/// Represents an exposed interface.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Interface {
     pub name: String,

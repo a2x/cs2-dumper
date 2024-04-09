@@ -2,7 +2,6 @@ use memflow::prelude::v1::*;
 
 use crate::error::{Error, Result};
 
-/// Represents a growable memory class that doubles in size by default.
 #[repr(C)]
 pub struct UtlMemory<T> {
     pub mem: Pointer64<[T]>, // 0x0000

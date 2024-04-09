@@ -2,7 +2,6 @@ use memflow::prelude::v1::*;
 
 use crate::error::{Error, Result};
 
-/// Represents a growable array class that doubles in size by default.
 #[repr(C)]
 pub struct UtlVector<T> {
     pub size: i32,           // 0x0000

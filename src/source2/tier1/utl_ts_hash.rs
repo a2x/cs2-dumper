@@ -31,7 +31,6 @@ pub struct HashFixedDataInternal<D, K> {
 
 unsafe impl<D: 'static, K: 'static> Pod for HashFixedDataInternal<D, K> {}
 
-/// Represents a thread-safe hash table.
 #[repr(C)]
 pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
     pub entry_mem: UtlMemoryPoolBase,   // 0x0000
@@ -63,7 +62,7 @@ where
         self.entry_mem.peak_alloc
     }
 
-    /// Returns all elements in the hash table.
+    // TODO:
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
         let blocks_alloc = self.blocks_alloc() as usize;
         let peak_alloc = self.peak_count() as usize;

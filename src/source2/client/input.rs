@@ -1,6 +1,5 @@
 use memflow::prelude::v1::*;
 
-/// Represents a keyboard button.
 #[derive(Pod)]
 #[repr(C)]
 pub struct KeyButton {
