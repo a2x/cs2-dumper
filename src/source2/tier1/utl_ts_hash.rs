@@ -3,7 +3,7 @@ use memflow::prelude::v1::*;
 use super::UtlMemoryPoolBase;
 
 use crate::error::Result;
-use crate::mem::IsNull;
+use crate::mem::PointerExt;
 
 #[repr(C)]
 pub struct HashAllocatedBlob<D> {
@@ -17,7 +17,7 @@ unsafe impl<D: 'static> Pod for HashAllocatedBlob<D> {}
 
 #[repr(C)]
 pub struct HashBucket<D, K> {
-    pad_0000: [u8; 0x18],                                          // 0x0000,
+    pad_0000: [u8; 0x18],                                          // 0x0000
     pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0018
     pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0020
 }
@@ -40,7 +40,11 @@ pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
     pad_2881: [u8; 0xF],                // 0x2881
 }
 
-impl<D: Pod + IsNull, const C: usize, K: Pod> UtlTsHash<D, C, K> {
+impl<D, const C: usize, K> UtlTsHash<D, C, K>
+where
+    D: Pod + PointerExt,
+    K: Pod,
+{
     /// Returns the number of allocated blocks.
     #[inline]
     pub fn blocks_alloc(&self) -> i32 {
@@ -77,7 +81,6 @@ impl<D: Pod + IsNull, const C: usize, K: Pod> UtlTsHash<D, C, K> {
                     unallocated_list.push(element.data);
                 }
 
-                // Check if we have too many elements.
                 if unallocated_list.len() >= blocks_alloc {
                     break;
                 }
@@ -96,7 +99,6 @@ impl<D: Pod + IsNull, const C: usize, K: Pod> UtlTsHash<D, C, K> {
                 allocated_list.push(blob.data);
             }
 
-            // Check if we have too many elements.
             if allocated_list.len() >= peak_alloc {
                 break;
             }

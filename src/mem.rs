@@ -1,13 +1,13 @@
-use memflow::types::Pointer64;
+use memflow::types::{Pointer, PrimitiveAddress};
 
-pub trait IsNull {
+pub trait PointerExt {
+    /// Returns `true` if the pointer is null.
     fn is_null(&self) -> bool;
 }
 
-impl<T> IsNull for Pointer64<T> {
-    /// Returns `true` if the pointer is null.
+impl<U: PrimitiveAddress, T> PointerExt for Pointer<U, T> {
     #[inline]
     fn is_null(&self) -> bool {
-        self.inner == 0
+        self.inner.is_null()
     }
 }

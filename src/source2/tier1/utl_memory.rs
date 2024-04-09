@@ -19,7 +19,6 @@ impl<T: Pod> UtlMemory<T> {
 
     /// Returns the element at the specified index.
     pub fn element(&self, process: &mut IntoProcessInstanceArcBox<'_>, idx: usize) -> Result<T> {
-        // Check if the index is out of bounds.
         if idx >= self.count() as usize {
             return Err(Error::Other("index out of bounds"));
         }
@@ -27,7 +26,7 @@ impl<T: Pod> UtlMemory<T> {
         self.mem.at(idx as _).read(process).map_err(Into::into)
     }
 
-    /// Returns `true` if the memory is externally allocated.
+    /// Returns `true` if the memory was externally allocated.
     #[inline]
     pub fn is_externally_allocated(&self) -> bool {
         self.grow_size < 0

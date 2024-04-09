@@ -18,7 +18,6 @@ impl<T: Pod> UtlVector<T> {
 
     /// Returns the element at the specified index.
     pub fn element(&self, process: &mut IntoProcessInstanceArcBox<'_>, idx: usize) -> Result<T> {
-        // Check if the index is out of bounds.
         if idx >= self.count() as usize {
             return Err(Error::Other("index out of bounds"));
         }
