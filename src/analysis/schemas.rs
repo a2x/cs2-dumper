@@ -89,12 +89,21 @@ fn read_class_binding(
 
     let name = binding.name.read_string(process)?.to_string();
 
-    let parent = binding
-        .base_classes
-        .non_null()
-        .and_then(|ptr| ptr.read(process).ok())
-        .and_then(|base_class| read_class_binding(process, base_class.prev).ok())
-        .map(Box::new);
+    let parent = binding.base_classes.non_null().and_then(|ptr| {
+        let base_class = ptr.read(process).ok()?;
+        let parent_class = base_class.prev.read(process).ok()?;
+
+        let module_name = parent_class.module_name.read_string(process).ok()?.to_string();
+        let name = parent_class.name.read_string(process).ok()?.to_string();
+
+        Some(Box::new(Class {
+            name,
+            module_name,
+            parent: None,
+            metadata: Vec::new(),
+            fields: Vec::new(),
+        }))
+    });
 
     let fields = read_class_binding_fields(process, &binding)?;
     let metadata = read_class_binding_metadata(process, &binding)?;
