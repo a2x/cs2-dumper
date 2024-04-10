@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-08 07:10:44.298916800 UTC
+// 2024-04-10 01:18:49.435410600 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
@@ -20,6 +20,7 @@ namespace CS2Dumper.Offsets {
         public const nint dwViewAngles = 0x192F940;
         public const nint dwViewMatrix = 0x19231B0;
         public const nint dwViewRender = 0x19239B0;
+        public const nint dwWeaponC4 = 0x18C5210;
     }
     // Module: engine2.dll
     public static class Engine2Dll {

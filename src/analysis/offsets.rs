@@ -70,7 +70,7 @@ macro_rules! pattern_map {
 
 pattern_map! {
     client => {
-        "dwCSGOInput" => pattern!("4c8b0d${*{'}} 488d045b") => Some(|view, map, rva| {
+        "dwCSGOInput" => pattern!("488905${'} 488d05${} 48890d${} 488905${} 488d05") => Some(|view, map, rva| {
             let mut save = [0; 2];
 
             if view.scanner().finds_code(pattern!("498d81u4 4803c7"), &mut save) {
@@ -92,6 +92,7 @@ pattern_map! {
         "dwSensitivity_sensitivity" => pattern!("ff50u1 4c8bc6 488d55? 488bcf e8${} 84c0 0f85${} 4c8d45? 8bd3 488bcf e8${} e9${} f30f1006") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
+        "dwWeaponC4" => pattern!("488b15${'} ffc0 8905${} 488bc7") => None,
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} e9") => None,

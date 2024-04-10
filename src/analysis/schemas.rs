@@ -93,7 +93,12 @@ fn read_class_binding(
         let base_class = ptr.read(process).ok()?;
         let parent_class = base_class.prev.read(process).ok()?;
 
-        let module_name = parent_class.module_name.read_string(process).ok()?.to_string();
+        let module_name = parent_class
+            .module_name
+            .read_string(process)
+            .ok()?
+            .to_string();
+
         let name = parent_class.name.read_string(process).ok()?.to_string();
 
         Some(Box::new(Class {

@@ -15,7 +15,8 @@
     "dwSensitivity_sensitivity": 64,
     "dwViewAngles": 26409280,
     "dwViewMatrix": 26358192,
-    "dwViewRender": 26360240
+    "dwViewRender": 26360240,
+    "dwWeaponC4": 25973264
   },
   "engine2.dll": {
     "dwBuildNumber": 5330276,

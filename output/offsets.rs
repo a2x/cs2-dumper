@@ -1,7 +1,7 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-08 07:10:44.298916800 UTC
+// 2024-04-10 01:18:49.435410600 UTC
 
-#![allow(non_upper_case_globals, non_camel_case_types, unused)]
+#![allow(non_upper_case_globals, unused)]
 
 pub mod cs2_dumper {
     pub mod offsets {
@@ -23,6 +23,7 @@ pub mod cs2_dumper {
             pub const dwViewAngles: usize = 0x192F940;
             pub const dwViewMatrix: usize = 0x19231B0;
             pub const dwViewRender: usize = 0x19239B0;
+            pub const dwWeaponC4: usize = 0x18C5210;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
