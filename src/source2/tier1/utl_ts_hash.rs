@@ -62,7 +62,7 @@ where
         self.entry_mem.peak_alloc
     }
 
-    // TODO:
+    /// Returns a list of allocated or unallocated elements.
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
         let blocks_alloc = self.blocks_alloc() as usize;
         let peak_alloc = self.peak_count() as usize;

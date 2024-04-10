@@ -5,7 +5,6 @@ pub enum MemoryPoolGrowType {
     None = 0,
     Fast,
     Slow,
-    RbTree,
 }
 
 #[derive(Pod)]
@@ -36,13 +35,14 @@ pub struct UtlMemoryPoolBase {
     pub free_list_head: Pointer64<FreeList>,            // 0x0020
     pad_0028: [u8; 0x44],                               // 0x0028
     pub blob_head: Pointer64<Blob>,                     // 0x0070
-    pad_0078: [u8; 0x8],                                // 0x0078
+    pub total_size: i32,                                // 0x0078
+    pad_007c: [u8; 0x4],                                // 0x007C
 }
 
 impl UtlMemoryPoolBase {
     /// Returns the total size of the memory pool.
     #[inline]
     pub fn size(&self) -> i32 {
-        (self.num_blobs as i32 * self.blocks_per_blob) * self.block_size
+        self.total_size
     }
 }
