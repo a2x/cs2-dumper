@@ -5655,6 +5655,818 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "AimMatrixBlendMode": {
+        "alignment": 4,
+        "members": {
+          "AimMatrixBlendMode_Additive": 1,
+          "AimMatrixBlendMode_BoneMask": 3,
+          "AimMatrixBlendMode_ModelSpaceAdditive": 2,
+          "AimMatrixBlendMode_None": 0
+        },
+        "type": "uint32"
+      },
+      "AnimNodeNetworkMode": {
+        "alignment": 4,
+        "members": {
+          "ClientSimulate": 1,
+          "ServerAuthoritative": 0
+        },
+        "type": "uint32"
+      },
+      "AnimParamButton_t": {
+        "alignment": 4,
+        "members": {
+          "ANIMPARAM_BUTTON_A": 5,
+          "ANIMPARAM_BUTTON_B": 6,
+          "ANIMPARAM_BUTTON_DPAD_DOWN": 3,
+          "ANIMPARAM_BUTTON_DPAD_LEFT": 4,
+          "ANIMPARAM_BUTTON_DPAD_RIGHT": 2,
+          "ANIMPARAM_BUTTON_DPAD_UP": 1,
+          "ANIMPARAM_BUTTON_LEFT_SHOULDER": 9,
+          "ANIMPARAM_BUTTON_LTRIGGER": 11,
+          "ANIMPARAM_BUTTON_NONE": 0,
+          "ANIMPARAM_BUTTON_RIGHT_SHOULDER": 10,
+          "ANIMPARAM_BUTTON_RTRIGGER": 12,
+          "ANIMPARAM_BUTTON_X": 7,
+          "ANIMPARAM_BUTTON_Y": 8
+        },
+        "type": "uint32"
+      },
+      "AnimParamNetworkSetting": {
+        "alignment": 4,
+        "members": {
+          "AlwaysNetwork": 1,
+          "Auto": 0,
+          "NeverNetwork": 2
+        },
+        "type": "uint32"
+      },
+      "AnimParamType_t": {
+        "alignment": 1,
+        "members": {
+          "ANIMPARAM_BOOL": 1,
+          "ANIMPARAM_COUNT": 8,
+          "ANIMPARAM_ENUM": 2,
+          "ANIMPARAM_FLOAT": 4,
+          "ANIMPARAM_GLOBALSYMBOL": 7,
+          "ANIMPARAM_INT": 3,
+          "ANIMPARAM_QUATERNION": 6,
+          "ANIMPARAM_UNKNOWN": 0,
+          "ANIMPARAM_VECTOR": 5
+        },
+        "type": "uint8"
+      },
+      "AnimPoseControl": {
+        "alignment": 4,
+        "members": {
+          "AbsolutePoseControl": 1,
+          "NoPoseControl": 0,
+          "RelativePoseControl": 2
+        },
+        "type": "uint32"
+      },
+      "AnimScriptType": {
+        "alignment": 2,
+        "members": {
+          "ANIMSCRIPT_FUSE_GENERAL": 0,
+          "ANIMSCRIPT_FUSE_STATEMACHINE": 1,
+          "ANIMSCRIPT_TYPE_INVALID": -1
+        },
+        "type": "uint16"
+      },
+      "AnimValueSource": {
+        "alignment": 4,
+        "members": {
+          "AccelerationFrontBack": 23,
+          "AccelerationHeading": 15,
+          "AccelerationLeftRight": 22,
+          "AccelerationSpeed": 16,
+          "BoundaryRadius": 12,
+          "FacingHeading": 4,
+          "FingerCurl_Index": 29,
+          "FingerCurl_Middle": 30,
+          "FingerCurl_Pinky": 32,
+          "FingerCurl_Ring": 31,
+          "FingerCurl_Thumb": 28,
+          "FingerSplay_Index_Middle": 34,
+          "FingerSplay_Middle_Ring": 35,
+          "FingerSplay_Ring_Pinky": 36,
+          "FingerSplay_Thumb_Index": 33,
+          "ForwardSpeed": 2,
+          "GoalDistance": 21,
+          "LookDistance": 8,
+          "LookHeading": 6,
+          "LookPitch": 7,
+          "ManualFacingHeading": 5,
+          "MaxMoveSpeed": 27,
+          "MoveHeading": 0,
+          "MoveHeadingRelativeToLookHeading": 26,
+          "MoveSpeed": 1,
+          "Parameter": 9,
+          "RootMotionSpeed": 24,
+          "RootMotionTurnSpeed": 25,
+          "SlopeAngle": 18,
+          "SlopeHeading": 17,
+          "SlopePitch": 19,
+          "SlopeYaw": 20,
+          "StrafeSpeed": 3,
+          "TargetMoveHeading": 13,
+          "TargetMoveSpeed": 14,
+          "WayPointDistance": 11,
+          "WayPointHeading": 10
+        },
+        "type": "uint32"
+      },
+      "AnimVectorSource": {
+        "alignment": 4,
+        "members": {
+          "Acceleration": 5,
+          "FacingDirection": 1,
+          "GoalPosition": 11,
+          "LookDirection": 2,
+          "LookTarget": 8,
+          "LookTarget_WorldSpace": 9,
+          "MoveDirection": 0,
+          "RootMotionVelocity": 12,
+          "SlopeNormal": 6,
+          "SlopeNormal_WorldSpace": 7,
+          "VectorParameter": 3,
+          "WayPointDirection": 4,
+          "WayPointPosition": 10
+        },
+        "type": "uint32"
+      },
+      "AnimationProcessingType_t": {
+        "alignment": 4,
+        "members": {
+          "ANIMATION_PROCESSING_CLIENT_INTERPOLATION": 3,
+          "ANIMATION_PROCESSING_CLIENT_PREDICTION": 2,
+          "ANIMATION_PROCESSING_CLIENT_RENDER": 4,
+          "ANIMATION_PROCESSING_CLIENT_SIMULATION": 1,
+          "ANIMATION_PROCESSING_MAX": 5,
+          "ANIMATION_PROCESSING_SERVER_SIMULATION": 0
+        },
+        "type": "uint32"
+      },
+      "AnimationSnapshotType_t": {
+        "alignment": 4,
+        "members": {
+          "ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION": 3,
+          "ANIMATION_SNAPSHOT_CLIENT_PREDICTION": 2,
+          "ANIMATION_SNAPSHOT_CLIENT_RENDER": 4,
+          "ANIMATION_SNAPSHOT_CLIENT_SIMULATION": 1,
+          "ANIMATION_SNAPSHOT_FINAL_COMPOSITE": 5,
+          "ANIMATION_SNAPSHOT_MAX": 6,
+          "ANIMATION_SNAPSHOT_SERVER_SIMULATION": 0
+        },
+        "type": "uint32"
+      },
+      "BinaryNodeChildOption": {
+        "alignment": 4,
+        "members": {
+          "Child1": 0,
+          "Child2": 1
+        },
+        "type": "uint32"
+      },
+      "BinaryNodeTiming": {
+        "alignment": 4,
+        "members": {
+          "SyncChildren": 2,
+          "UseChild1": 0,
+          "UseChild2": 1
+        },
+        "type": "uint32"
+      },
+      "Blend2DMode": {
+        "alignment": 4,
+        "members": {
+          "Blend2DMode_Directional": 1,
+          "Blend2DMode_General": 0
+        },
+        "type": "uint32"
+      },
+      "BlendKeyType": {
+        "alignment": 4,
+        "members": {
+          "BlendKey_Distance": 2,
+          "BlendKey_RemainingDistance": 3,
+          "BlendKey_UserValue": 0,
+          "BlendKey_Velocity": 1
+        },
+        "type": "uint32"
+      },
+      "BoneMaskBlendSpace": {
+        "alignment": 4,
+        "members": {
+          "BlendSpace_Model": 1,
+          "BlendSpace_Model_RotationOnly": 2,
+          "BlendSpace_Model_TranslationOnly": 3,
+          "BlendSpace_Parent": 0
+        },
+        "type": "uint32"
+      },
+      "BoneTransformSpace_t": {
+        "alignment": 4,
+        "members": {
+          "BoneTransformSpace_Invalid": -1,
+          "BoneTransformSpace_Model": 1,
+          "BoneTransformSpace_Parent": 0,
+          "BoneTransformSpace_World": 2
+        },
+        "type": "uint32"
+      },
+      "CAnimationGraphVisualizerPrimitiveType": {
+        "alignment": 4,
+        "members": {
+          "ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Axis": 4,
+          "ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Line": 2,
+          "ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Pie": 3,
+          "ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Sphere": 1,
+          "ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Text": 0
+        },
+        "type": "uint32"
+      },
+      "CNmBoneMask__WeightInfo_t": {
+        "alignment": 1,
+        "members": {
+          "Mixed": 1,
+          "One": 2,
+          "Zero": 0
+        },
+        "type": "uint8"
+      },
+      "ChoiceBlendMethod": {
+        "alignment": 4,
+        "members": {
+          "PerChoiceBlendTimes": 1,
+          "SingleBlendTime": 0
+        },
+        "type": "uint32"
+      },
+      "ChoiceChangeMethod": {
+        "alignment": 4,
+        "members": {
+          "OnCycleEnd": 1,
+          "OnReset": 0,
+          "OnResetOrCycleEnd": 2
+        },
+        "type": "uint32"
+      },
+      "ChoiceMethod": {
+        "alignment": 4,
+        "members": {
+          "Iterate": 2,
+          "IterateRandom": 3,
+          "WeightedRandom": 0,
+          "WeightedRandomNoRepeat": 1
+        },
+        "type": "uint32"
+      },
+      "DampingSpeedFunction": {
+        "alignment": 4,
+        "members": {
+          "Constant": 1,
+          "NoDamping": 0,
+          "Spring": 2
+        },
+        "type": "uint32"
+      },
+      "EDemoBoneSelectionMode": {
+        "alignment": 4,
+        "members": {
+          "CaptureAllBones": 0,
+          "CaptureSelectedBones": 1
+        },
+        "type": "uint32"
+      },
+      "FacingMode": {
+        "alignment": 4,
+        "members": {
+          "FacingMode_LookTarget": 2,
+          "FacingMode_Manual": 0,
+          "FacingMode_Path": 1
+        },
+        "type": "uint32"
+      },
+      "FieldNetworkOption": {
+        "alignment": 4,
+        "members": {
+          "Auto": 0,
+          "ForceDisable": 2,
+          "ForceEnable": 1
+        },
+        "type": "uint32"
+      },
+      "FlexOpCode_t": {
+        "alignment": 4,
+        "members": {
+          "FLEX_OP_2WAY_0": 15,
+          "FLEX_OP_2WAY_1": 16,
+          "FLEX_OP_ABS": 26,
+          "FLEX_OP_ADD": 4,
+          "FLEX_OP_CLOSE": 11,
+          "FLEX_OP_COMBO": 18,
+          "FLEX_OP_COMMA": 12,
+          "FLEX_OP_CONST": 1,
+          "FLEX_OP_COS": 25,
+          "FLEX_OP_DIV": 7,
+          "FLEX_OP_DME_LOWER_EYELID": 20,
+          "FLEX_OP_DME_UPPER_EYELID": 21,
+          "FLEX_OP_DOMINATE": 19,
+          "FLEX_OP_EXP": 9,
+          "FLEX_OP_FETCH1": 2,
+          "FLEX_OP_FETCH2": 3,
+          "FLEX_OP_MAX": 13,
+          "FLEX_OP_MIN": 14,
+          "FLEX_OP_MUL": 6,
+          "FLEX_OP_NEG": 8,
+          "FLEX_OP_NWAY": 17,
+          "FLEX_OP_OPEN": 10,
+          "FLEX_OP_REMAPVALCLAMPED": 23,
+          "FLEX_OP_SIN": 24,
+          "FLEX_OP_SQRT": 22,
+          "FLEX_OP_SUB": 5
+        },
+        "type": "uint32"
+      },
+      "FootFallTagFoot_t": {
+        "alignment": 4,
+        "members": {
+          "FOOT1": 0,
+          "FOOT2": 1,
+          "FOOT3": 2,
+          "FOOT4": 3,
+          "FOOT5": 4,
+          "FOOT6": 5,
+          "FOOT7": 6,
+          "FOOT8": 7
+        },
+        "type": "uint32"
+      },
+      "FootLockSubVisualization": {
+        "alignment": 4,
+        "members": {
+          "FOOTLOCKSUBVISUALIZATION_IKSolve": 1,
+          "FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis": 0
+        },
+        "type": "uint32"
+      },
+      "FootPinningTimingSource": {
+        "alignment": 4,
+        "members": {
+          "FootMotion": 0,
+          "Parameter": 2,
+          "Tag": 1
+        },
+        "type": "uint32"
+      },
+      "FootstepLandedFootSoundType_t": {
+        "alignment": 4,
+        "members": {
+          "FOOTSOUND_Left": 0,
+          "FOOTSOUND_Right": 1,
+          "FOOTSOUND_UseOverrideSound": 2
+        },
+        "type": "uint32"
+      },
+      "IKChannelMode": {
+        "alignment": 4,
+        "members": {
+          "OneBone": 2,
+          "OneBone_Translate": 3,
+          "TwoBone": 0,
+          "TwoBone_Translate": 1
+        },
+        "type": "uint32"
+      },
+      "IKSolverType": {
+        "alignment": 4,
+        "members": {
+          "IKSOLVER_CCD": 4,
+          "IKSOLVER_COUNT": 5,
+          "IKSOLVER_DogLeg3Bone": 3,
+          "IKSOLVER_Fabrik": 2,
+          "IKSOLVER_Perlin": 0,
+          "IKSOLVER_TwoBone": 1
+        },
+        "type": "uint32"
+      },
+      "IKTargetCoordinateSystem": {
+        "alignment": 4,
+        "members": {
+          "IKTARGETCOORDINATESYSTEM_COUNT": 2,
+          "IKTARGETCOORDINATESYSTEM_ModelSpace": 1,
+          "IKTARGETCOORDINATESYSTEM_WorldSpace": 0
+        },
+        "type": "uint32"
+      },
+      "IKTargetSource": {
+        "alignment": 4,
+        "members": {
+          "IKTARGETSOURCE_AnimgraphParameter": 1,
+          "IKTARGETSOURCE_Bone": 0,
+          "IKTARGETSOURCE_COUNT": 2
+        },
+        "type": "uint32"
+      },
+      "IkEndEffectorType": {
+        "alignment": 4,
+        "members": {
+          "IkEndEffector_Attachment": 0,
+          "IkEndEffector_Bone": 1
+        },
+        "type": "uint32"
+      },
+      "IkTargetType": {
+        "alignment": 4,
+        "members": {
+          "IkTarget_Attachment": 0,
+          "IkTarget_Bone": 1,
+          "IkTarget_Parameter_ModelSpace": 2,
+          "IkTarget_Parameter_WorldSpace": 3
+        },
+        "type": "uint32"
+      },
+      "JiggleBoneSimSpace": {
+        "alignment": 4,
+        "members": {
+          "SimSpace_Local": 0,
+          "SimSpace_Model": 1,
+          "SimSpace_World": 2
+        },
+        "type": "uint32"
+      },
+      "JumpCorrectionMethod": {
+        "alignment": 4,
+        "members": {
+          "AddCorrectionDelta": 1,
+          "ScaleMotion": 0
+        },
+        "type": "uint32"
+      },
+      "MatterialAttributeTagType_t": {
+        "alignment": 4,
+        "members": {
+          "MATERIAL_ATTRIBUTE_TAG_COLOR": 1,
+          "MATERIAL_ATTRIBUTE_TAG_VALUE": 0
+        },
+        "type": "uint32"
+      },
+      "MeshDrawPrimitiveFlags_t": {
+        "alignment": 4,
+        "members": {
+          "MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS": 64,
+          "MESH_DRAW_FLAGS_DRAW_LAST": 128,
+          "MESH_DRAW_FLAGS_NONE": 0,
+          "MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT": 2,
+          "MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING": 16,
+          "MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH": 1,
+          "MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING": 32,
+          "MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL": 8
+        },
+        "type": "uint32"
+      },
+      "ModelBoneFlexComponent_t": {
+        "alignment": 4,
+        "members": {
+          "MODEL_BONE_FLEX_INVALID": -1,
+          "MODEL_BONE_FLEX_TX": 0,
+          "MODEL_BONE_FLEX_TY": 1,
+          "MODEL_BONE_FLEX_TZ": 2
+        },
+        "type": "uint32"
+      },
+      "ModelConfigAttachmentType_t": {
+        "alignment": 4,
+        "members": {
+          "MODEL_CONFIG_ATTACHMENT_BONEMERGE": 2,
+          "MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT": 0,
+          "MODEL_CONFIG_ATTACHMENT_COUNT": 3,
+          "MODEL_CONFIG_ATTACHMENT_INVALID": -1,
+          "MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE": 1
+        },
+        "type": "uint32"
+      },
+      "ModelSkeletonData_t__BoneFlags_t": {
+        "alignment": 4,
+        "members": {
+          "BLEND_PREALIGNED": 1048576,
+          "FLAG_ALL_BONE_FLAGS": 1048575,
+          "FLAG_ANIMATION": 64,
+          "FLAG_ATTACHMENT": 32,
+          "FLAG_BONEFLEXDRIVER": 4,
+          "FLAG_BONE_MERGE_READ": 262144,
+          "FLAG_BONE_MERGE_WRITE": 524288,
+          "FLAG_BONE_USED_BY_VERTEX_LOD0": 1024,
+          "FLAG_BONE_USED_BY_VERTEX_LOD1": 2048,
+          "FLAG_BONE_USED_BY_VERTEX_LOD2": 4096,
+          "FLAG_BONE_USED_BY_VERTEX_LOD3": 8192,
+          "FLAG_BONE_USED_BY_VERTEX_LOD4": 16384,
+          "FLAG_BONE_USED_BY_VERTEX_LOD5": 32768,
+          "FLAG_BONE_USED_BY_VERTEX_LOD6": 65536,
+          "FLAG_BONE_USED_BY_VERTEX_LOD7": 131072,
+          "FLAG_CLOTH": 8,
+          "FLAG_HITBOX": 256,
+          "FLAG_MESH": 128,
+          "FLAG_NO_BONE_FLAGS": 0,
+          "FLAG_PHYSICS": 16,
+          "FLAG_PROCEDURAL": 4194304,
+          "FLAG_RIGIDLENGTH": 2097152
+        },
+        "type": "uint32"
+      },
+      "MoodType_t": {
+        "alignment": 4,
+        "members": {
+          "eMoodType_Body": 1,
+          "eMoodType_Head": 0
+        },
+        "type": "uint32"
+      },
+      "MorphBundleType_t": {
+        "alignment": 4,
+        "members": {
+          "MORPH_BUNDLE_TYPE_COUNT": 3,
+          "MORPH_BUNDLE_TYPE_NONE": 0,
+          "MORPH_BUNDLE_TYPE_NORMAL_WRINKLE": 2,
+          "MORPH_BUNDLE_TYPE_POSITION_SPEED": 1
+        },
+        "type": "uint32"
+      },
+      "MorphFlexControllerRemapType_t": {
+        "alignment": 4,
+        "members": {
+          "MORPH_FLEXCONTROLLER_REMAP_2WAY": 1,
+          "MORPH_FLEXCONTROLLER_REMAP_EYELID": 3,
+          "MORPH_FLEXCONTROLLER_REMAP_NWAY": 2,
+          "MORPH_FLEXCONTROLLER_REMAP_PASSTHRU": 0
+        },
+        "type": "uint32"
+      },
+      "MovementGait_t": {
+        "alignment": 1,
+        "members": {
+          "eInvalid": -1,
+          "eJog": 1,
+          "eRun": 2,
+          "eSprint": 3,
+          "eWalk": 0
+        },
+        "type": "uint8"
+      },
+      "NmFootPhaseCondition_t": {
+        "alignment": 1,
+        "members": {
+          "LeftFootDown": 0,
+          "LeftFootPassing": 1,
+          "LeftPhase": 4,
+          "RightFootDown": 2,
+          "RightFootPassing": 3,
+          "RightPhase": 5
+        },
+        "type": "uint8"
+      },
+      "NmFootPhase_t": {
+        "alignment": 1,
+        "members": {
+          "LeftFootDown": 0,
+          "LeftFootPassing": 3,
+          "RightFootDown": 2,
+          "RightFootPassing": 1
+        },
+        "type": "uint8"
+      },
+      "NmFrameSnapEventMode_t": {
+        "alignment": 4,
+        "members": {
+          "Floor": 0,
+          "Round": 1
+        },
+        "type": "uint32"
+      },
+      "NmTransitionRuleCondition_t": {
+        "alignment": 1,
+        "members": {
+          "AnyAllowed": 0,
+          "Blocked": 3,
+          "ConditionallyAllowed": 2,
+          "FullyAllowed": 1
+        },
+        "type": "uint8"
+      },
+      "NmTransitionRule_t": {
+        "alignment": 1,
+        "members": {
+          "AllowTransition": 0,
+          "BlockTransition": 2,
+          "ConditionallyAllowTransition": 1
+        },
+        "type": "uint8"
+      },
+      "ParticleAttachment_t": {
+        "alignment": 4,
+        "members": {
+          "MAX_PATTACH_TYPES": 16,
+          "PATTACH_ABSORIGIN": 0,
+          "PATTACH_ABSORIGIN_FOLLOW": 1,
+          "PATTACH_CENTER_FOLLOW": 13,
+          "PATTACH_CUSTOMORIGIN": 2,
+          "PATTACH_CUSTOMORIGIN_FOLLOW": 3,
+          "PATTACH_CUSTOM_GAME_STATE_1": 14,
+          "PATTACH_EYES_FOLLOW": 6,
+          "PATTACH_HEALTHBAR": 15,
+          "PATTACH_INVALID": -1,
+          "PATTACH_MAIN_VIEW": 11,
+          "PATTACH_OVERHEAD_FOLLOW": 7,
+          "PATTACH_POINT": 4,
+          "PATTACH_POINT_FOLLOW": 5,
+          "PATTACH_RENDERORIGIN_FOLLOW": 10,
+          "PATTACH_ROOTBONE_FOLLOW": 9,
+          "PATTACH_WATERWAKE": 12,
+          "PATTACH_WORLDORIGIN": 8
+        },
+        "type": "uint32"
+      },
+      "PermModelInfo_t__FlagEnum": {
+        "alignment": 4,
+        "members": {
+          "FLAG_ANIMATION_DRIVEN_FLEXES": 2097152,
+          "FLAG_DO_NOT_CAST_SHADOWS": 131072,
+          "FLAG_FORCE_PHONEME_CROSSFADE": 4096,
+          "FLAG_HAS_SKINNED_MESHES": 1024,
+          "FLAG_IMPLICIT_BIND_POSE_SEQUENCE": 4194304,
+          "FLAG_MODEL_DOC": 8388608,
+          "FLAG_MODEL_IS_RUNTIME_COMBINED": 4,
+          "FLAG_MODEL_PART_CHILD": 16,
+          "FLAG_NAV_GEN_HULL": 64,
+          "FLAG_NAV_GEN_NONE": 32,
+          "FLAG_NO_ANIM_EVENTS": 1048576,
+          "FLAG_NO_FORCED_FADE": 2048,
+          "FLAG_SOURCE1_IMPORT": 8,
+          "FLAG_TRANSLUCENT": 1,
+          "FLAG_TRANSLUCENT_TWO_PASS": 2
+        },
+        "type": "uint32"
+      },
+      "PoseType_t": {
+        "alignment": 1,
+        "members": {
+          "POSETYPE_DYNAMIC": 1,
+          "POSETYPE_INVALID": 255,
+          "POSETYPE_STATIC": 0
+        },
+        "type": "uint8"
+      },
+      "RagdollPoseControl": {
+        "alignment": 4,
+        "members": {
+          "Absolute": 0,
+          "Relative": 1
+        },
+        "type": "uint32"
+      },
+      "ResetCycleOption": {
+        "alignment": 4,
+        "members": {
+          "Beginning": 0,
+          "FixedValue": 3,
+          "InverseSourceCycle": 2,
+          "SameCycleAsSource": 1,
+          "SameTimeAsSource": 4
+        },
+        "type": "uint32"
+      },
+      "SelectorTagBehavior_t": {
+        "alignment": 4,
+        "members": {
+          "SelectorTagBehavior_OffBeforeFinished": 2,
+          "SelectorTagBehavior_OffWhenFinished": 1,
+          "SelectorTagBehavior_OnWhileCurrent": 0
+        },
+        "type": "uint32"
+      },
+      "SeqCmd_t": {
+        "alignment": 4,
+        "members": {
+          "SeqCmd_Add": 4,
+          "SeqCmd_Blend": 8,
+          "SeqCmd_Copy": 7,
+          "SeqCmd_FetchCycle": 11,
+          "SeqCmd_FetchFrame": 12,
+          "SeqCmd_FetchFrameRange": 2,
+          "SeqCmd_IKLockInPlace": 13,
+          "SeqCmd_IKRestoreAll": 14,
+          "SeqCmd_LinearDelta": 1,
+          "SeqCmd_Nop": 0,
+          "SeqCmd_ReverseSequence": 15,
+          "SeqCmd_Scale": 6,
+          "SeqCmd_Sequence": 10,
+          "SeqCmd_Slerp": 3,
+          "SeqCmd_Subtract": 5,
+          "SeqCmd_Transform": 16,
+          "SeqCmd_Worldspace": 9
+        },
+        "type": "uint32"
+      },
+      "SeqPoseSetting_t": {
+        "alignment": 4,
+        "members": {
+          "SEQ_POSE_SETTING_CONSTANT": 0,
+          "SEQ_POSE_SETTING_POSITION": 2,
+          "SEQ_POSE_SETTING_ROTATION": 1,
+          "SEQ_POSE_SETTING_VELOCITY": 3
+        },
+        "type": "uint32"
+      },
+      "SolveIKChainAnimNodeDebugSetting": {
+        "alignment": 4,
+        "members": {
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_Forward": 4,
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_Left": 6,
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_None": 0,
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_Up": 5,
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_X_Axis_Circle": 1,
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_Y_Axis_Circle": 2,
+          "SOLVEIKCHAINANIMNODEDEBUGSETTING_Z_Axis_Circle": 3
+        },
+        "type": "uint32"
+      },
+      "StanceOverrideMode": {
+        "alignment": 4,
+        "members": {
+          "Node": 1,
+          "Sequence": 0
+        },
+        "type": "uint32"
+      },
+      "StateActionBehavior": {
+        "alignment": 4,
+        "members": {
+          "STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT": 0,
+          "STATETAGBEHAVIOR_FIRE_ON_ENTER": 1,
+          "STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT": 3,
+          "STATETAGBEHAVIOR_FIRE_ON_EXIT": 2
+        },
+        "type": "uint32"
+      },
+      "StepPhase": {
+        "alignment": 4,
+        "members": {
+          "StepPhase_InAir": 1,
+          "StepPhase_OnGround": 0
+        },
+        "type": "uint32"
+      },
+      "VPhysXAggregateData_t__VPhysXFlagEnum_t": {
+        "alignment": 4,
+        "members": {
+          "FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE": 32,
+          "FLAG_IS_POLYSOUP_GEOMETRY": 1,
+          "FLAG_LEVEL_COLLISION": 16
+        },
+        "type": "uint32"
+      },
+      "VPhysXBodyPart_t__VPhysXFlagEnum_t": {
+        "alignment": 4,
+        "members": {
+          "FLAG_ALWAYS_DYNAMIC_ON_CLIENT": 16,
+          "FLAG_JOINT": 4,
+          "FLAG_KINEMATIC": 2,
+          "FLAG_MASS": 8,
+          "FLAG_STATIC": 1
+        },
+        "type": "uint32"
+      },
+      "VPhysXConstraintParams_t__EnumFlags0_t": {
+        "alignment": 4,
+        "members": {
+          "FLAG0_SHIFT_BREAKABLE_FORCE": 2,
+          "FLAG0_SHIFT_BREAKABLE_TORQUE": 3,
+          "FLAG0_SHIFT_CONSTRAIN": 1,
+          "FLAG0_SHIFT_INTERPENETRATE": 0
+        },
+        "type": "uint32"
+      },
+      "VPhysXJoint_t__Flags_t": {
+        "alignment": 4,
+        "members": {
+          "JOINT_FLAGS_BODY1_FIXED": 1,
+          "JOINT_FLAGS_NONE": 0,
+          "JOINT_FLAGS_USE_BLOCK_SOLVER": 2
+        },
+        "type": "uint32"
+      },
+      "VelocityMetricMode": {
+        "alignment": 1,
+        "members": {
+          "DirectionAndMagnitude": 2,
+          "DirectionOnly": 0,
+          "MagnitudeOnly": 1
+        },
+        "type": "uint8"
+      }
+    }
   }
 }

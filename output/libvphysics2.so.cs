@@ -1,11 +1,26 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libvphysics2.so
     // Classes count: 88
-    // Enums count: 0
+    // Enums count: 2
     public static class Libvphysics2So {
+        // Alignment: 4
+        // Members count: 3
+        public enum JointMotion_t : uint {
+            JOINT_MOTION_FREE = 0x0,
+            JOINT_MOTION_LOCKED = 0x1,
+            JOINT_MOTION_COUNT = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum JointAxis_t : uint {
+            JOINT_AXIS_X = 0x0,
+            JOINT_AXIS_Y = 0x1,
+            JOINT_AXIS_Z = 0x2,
+            JOINT_AXIS_COUNT = 0x3
+        }
         // Parent: None
         // Fields count: 2
         //

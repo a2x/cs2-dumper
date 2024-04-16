@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 #pragma once
 
@@ -9,8 +9,25 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: libworldrenderer.so
         // Classes count: 23
-        // Enums count: 0
+        // Enums count: 1
         namespace libworldrenderer_so {
+            // Alignment: 4
+            // Members count: 13
+            enum class ObjectTypeFlags_t : uint32_t {
+                OBJECT_TYPE_NONE = 0x0,
+                OBJECT_TYPE_MODEL = 0x8,
+                OBJECT_TYPE_BLOCK_LIGHT = 0x10,
+                OBJECT_TYPE_NO_SHADOWS = 0x20,
+                OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
+                OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
+                OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
+                OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
+                OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
+                OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
+                OBJECT_TYPE_OVERLAY = 0x2000,
+                OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
+                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
+            };
             // Parent: None
             // Fields count: 14
             //

@@ -1,11 +1,657 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libparticles.so
     // Classes count: 441
-    // Enums count: 0
+    // Enums count: 71
     public static class LibparticlesSo {
+        // Alignment: 4
+        // Members count: 6
+        public enum ParticleSetMethod_t : uint {
+            PARTICLE_SET_REPLACE_VALUE = 0x0,
+            PARTICLE_SET_SCALE_INITIAL_VALUE = 0x1,
+            PARTICLE_SET_ADD_TO_INITIAL_VALUE = 0x2,
+            PARTICLE_SET_RAMP_CURRENT_VALUE = 0x3,
+            PARTICLE_SET_SCALE_CURRENT_VALUE = 0x4,
+            PARTICLE_SET_ADD_TO_CURRENT_VALUE = 0x5
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum Detail2Combo_t : uint {
+            DETAIL_2_COMBO_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            DETAIL_2_COMBO_OFF = 0x0,
+            DETAIL_2_COMBO_ADD = 0x1,
+            DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
+            DETAIL_2_COMBO_MOD2X = 0x3,
+            DETAIL_2_COMBO_MUL = 0x4,
+            DETAIL_2_COMBO_CROSSFADE = 0x5
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum MissingParentInheritBehavior_t : uint {
+            MISSING_PARENT_DO_NOTHING = 0xFFFFFFFFFFFFFFFF,
+            MISSING_PARENT_KILL = 0x0,
+            MISSING_PARENT_FIND_NEW = 0x1,
+            MISSING_PARENT_SAME_INDEX = 0x2
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ParticleFloatBiasType_t : uint {
+            PF_BIAS_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_BIAS_TYPE_STANDARD = 0x0,
+            PF_BIAS_TYPE_GAIN = 0x1,
+            PF_BIAS_TYPE_EXPONENTIAL = 0x2,
+            PF_BIAS_TYPE_COUNT = 0x3
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleTraceMissBehavior_t : uint {
+            PARTICLE_TRACE_MISS_BEHAVIOR_NONE = 0x0,
+            PARTICLE_TRACE_MISS_BEHAVIOR_KILL = 0x1,
+            PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END = 0x2
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum PFuncVisualizationType_t : uint {
+            PFUNC_VISUALIZATION_SPHERE_WIREFRAME = 0x0,
+            PFUNC_VISUALIZATION_SPHERE_SOLID = 0x1,
+            PFUNC_VISUALIZATION_BOX = 0x2,
+            PFUNC_VISUALIZATION_RING = 0x3,
+            PFUNC_VISUALIZATION_PLANE = 0x4,
+            PFUNC_VISUALIZATION_LINE = 0x5,
+            PFUNC_VISUALIZATION_CYLINDER = 0x6
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleVRHandChoiceList_t : uint {
+            PARTICLE_VRHAND_LEFT = 0x0,
+            PARTICLE_VRHAND_RIGHT = 0x1,
+            PARTICLE_VRHAND_CP = 0x2,
+            PARTICLE_VRHAND_CP_OBJECT = 0x3
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum PetGroundType_t : uint {
+            PET_GROUND_NONE = 0x0,
+            PET_GROUND_GRID = 0x1,
+            PET_GROUND_PLANE = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum InheritableBoolType_t : uint {
+            INHERITABLE_BOOL_INHERIT = 0x0,
+            INHERITABLE_BOOL_FALSE = 0x1,
+            INHERITABLE_BOOL_TRUE = 0x2
+        }
+        // Alignment: 4
+        // Members count: 24
+        public enum ParticleFloatType_t : uint {
+            PF_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_TYPE_LITERAL = 0x0,
+            PF_TYPE_NAMED_VALUE = 0x1,
+            PF_TYPE_RANDOM_UNIFORM = 0x2,
+            PF_TYPE_RANDOM_BIASED = 0x3,
+            PF_TYPE_COLLECTION_AGE = 0x4,
+            PF_TYPE_ENDCAP_AGE = 0x5,
+            PF_TYPE_CONTROL_POINT_COMPONENT = 0x6,
+            PF_TYPE_CONTROL_POINT_CHANGE_AGE = 0x7,
+            PF_TYPE_CONTROL_POINT_SPEED = 0x8,
+            PF_TYPE_PARTICLE_DETAIL_LEVEL = 0x9,
+            PF_TYPE_CONCURRENT_DEF_COUNT = 0xA,
+            PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xB,
+            PF_TYPE_RENDERER_CAMERA_DISTANCE = 0xC,
+            PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0xD,
+            PF_TYPE_PARTICLE_NOISE = 0xE,
+            PF_TYPE_PARTICLE_AGE = 0xF,
+            PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x10,
+            PF_TYPE_PARTICLE_FLOAT = 0x11,
+            PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x12,
+            PF_TYPE_PARTICLE_SPEED = 0x13,
+            PF_TYPE_PARTICLE_NUMBER = 0x14,
+            PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x15,
+            PF_TYPE_COUNT = 0x16
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum ParticlePostProcessPriorityGroup_t : uint {
+            PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME = 0x0,
+            PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE = 0x1,
+            PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_EFFECT = 0x2,
+            PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW = 0x3,
+            PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 0x4,
+            PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 0x5
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum PFNoiseTurbulence_t : uint {
+            PF_NOISE_TURB_NONE = 0x0,
+            PF_NOISE_TURB_HIGHLIGHT = 0x1,
+            PF_NOISE_TURB_FEEDBACK = 0x2,
+            PF_NOISE_TURB_LOOPY = 0x3,
+            PF_NOISE_TURB_CONTRAST = 0x4,
+            PF_NOISE_TURB_ALTERNATE = 0x5
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ParticleColorBlendMode_t : uint {
+            PARTICLEBLEND_DEFAULT = 0x0,
+            PARTICLEBLEND_OVERLAY = 0x1,
+            PARTICLEBLEND_DARKEN = 0x2,
+            PARTICLEBLEND_LIGHTEN = 0x3,
+            PARTICLEBLEND_MULTIPLY = 0x4
+        }
+        // Alignment: 4
+        // Members count: 13
+        public enum ParticleColorBlendType_t : uint {
+            PARTICLE_COLOR_BLEND_MULTIPLY = 0x0,
+            PARTICLE_COLOR_BLEND_MULTIPLY2X = 0x1,
+            PARTICLE_COLOR_BLEND_DIVIDE = 0x2,
+            PARTICLE_COLOR_BLEND_ADD = 0x3,
+            PARTICLE_COLOR_BLEND_SUBTRACT = 0x4,
+            PARTICLE_COLOR_BLEND_MOD2X = 0x5,
+            PARTICLE_COLOR_BLEND_SCREEN = 0x6,
+            PARTICLE_COLOR_BLEND_MAX = 0x7,
+            PARTICLE_COLOR_BLEND_MIN = 0x8,
+            PARTICLE_COLOR_BLEND_REPLACE = 0x9,
+            PARTICLE_COLOR_BLEND_AVERAGE = 0xA,
+            PARTICLE_COLOR_BLEND_NEGATE = 0xB,
+            PARTICLE_COLOR_BLEND_LUMINANCE = 0xC
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum DetailCombo_t : uint {
+            DETAIL_COMBO_OFF = 0x0,
+            DETAIL_COMBO_ADD = 0x1,
+            DETAIL_COMBO_ADD_SELF_ILLUM = 0x2,
+            DETAIL_COMBO_MOD2X = 0x3
+        }
+        // Alignment: 4
+        // Members count: 9
+        public enum ScalarExpressionType_t : uint {
+            SCALAR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            SCALAR_EXPRESSION_ADD = 0x0,
+            SCALAR_EXPRESSION_SUBTRACT = 0x1,
+            SCALAR_EXPRESSION_MUL = 0x2,
+            SCALAR_EXPRESSION_DIVIDE = 0x3,
+            SCALAR_EXPRESSION_INPUT_1 = 0x4,
+            SCALAR_EXPRESSION_MIN = 0x5,
+            SCALAR_EXPRESSION_MAX = 0x6,
+            SCALAR_EXPRESSION_MOD = 0x7
+        }
+        // Alignment: 4
+        // Members count: 14
+        public enum SpriteCardPerParticleScale_t : uint {
+            SPRITECARD_TEXTURE_PP_SCALE_NONE = 0x0,
+            SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_AGE = 0x1,
+            SPRITECARD_TEXTURE_PP_SCALE_ANIMATION_FRAME = 0x2,
+            SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA1 = 0x3,
+            SPRITECARD_TEXTURE_PP_SCALE_SHADER_EXTRA_DATA2 = 0x4,
+            SPRITECARD_TEXTURE_PP_SCALE_PARTICLE_ALPHA = 0x5,
+            SPRITECARD_TEXTURE_PP_SCALE_SHADER_RADIUS = 0x6,
+            SPRITECARD_TEXTURE_PP_SCALE_ROLL = 0x7,
+            SPRITECARD_TEXTURE_PP_SCALE_YAW = 0x8,
+            SPRITECARD_TEXTURE_PP_SCALE_PITCH = 0x9,
+            SPRITECARD_TEXTURE_PP_SCALE_RANDOM = 0xA,
+            SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM = 0xB,
+            SPRITECARD_TEXTURE_PP_SCALE_RANDOM_TIME = 0xC,
+            SPRITECARD_TEXTURE_PP_SCALE_NEG_RANDOM_TIME = 0xD
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum BlurFilterType_t : uint {
+            BLURFILTER_GAUSSIAN = 0x0,
+            BLURFILTER_BOX = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum StandardLightingAttenuationStyle_t : uint {
+            LIGHT_STYLE_OLD = 0x0,
+            LIGHT_STYLE_NEW = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleParentSetMode_t : uint {
+            PARTICLE_SET_PARENT_NO = 0x0,
+            PARTICLE_SET_PARENT_IMMEDIATE = 0x1,
+            PARTICLE_SET_PARENT_ROOT = 0x1
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ParticleModelType_t : uint {
+            PM_TYPE_INVALID = 0x0,
+            PM_TYPE_NAMED_VALUE_MODEL = 0x1,
+            PM_TYPE_NAMED_VALUE_EHANDLE = 0x2,
+            PM_TYPE_CONTROL_POINT = 0x3,
+            PM_TYPE_COUNT = 0x4
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleLightingQuality_t : uint {
+            PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
+            PARTICLE_LIGHTING_PER_VERTEX = 0x1,
+            PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFFFFFFFFFF
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum PFNoiseType_t : uint {
+            PF_NOISE_TYPE_PERLIN = 0x0,
+            PF_NOISE_TYPE_SIMPLEX = 0x1,
+            PF_NOISE_TYPE_WORLEY = 0x2,
+            PF_NOISE_TYPE_CURL = 0x3
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleDirectionNoiseType_t : uint {
+            PARTICLE_DIR_NOISE_PERLIN = 0x0,
+            PARTICLE_DIR_NOISE_CURL = 0x1,
+            PARTICLE_DIR_NOISE_WORLEY_BASIC = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleHitboxBiasType_t : uint {
+            PARTICLE_HITBOX_BIAS_ENTITY = 0x0,
+            PARTICLE_HITBOX_BIAS_HITBOX = 0x1
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum ParticleControlPointAxis_t : uint {
+            PARTICLE_CP_AXIS_X = 0x0,
+            PARTICLE_CP_AXIS_Y = 0x1,
+            PARTICLE_CP_AXIS_Z = 0x2,
+            PARTICLE_CP_AXIS_NEGATIVE_X = 0x3,
+            PARTICLE_CP_AXIS_NEGATIVE_Y = 0x4,
+            PARTICLE_CP_AXIS_NEGATIVE_Z = 0x5
+        }
+        // Alignment: 4
+        // Members count: 12
+        public enum ParticlePinDistance_t : uint {
+            PARTICLE_PIN_DISTANCE_NONE = 0xFFFFFFFFFFFFFFFF,
+            PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
+            PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,
+            PARTICLE_PIN_DISTANCE_FIRST = 0x2,
+            PARTICLE_PIN_DISTANCE_LAST = 0x3,
+            PARTICLE_PIN_DISTANCE_CENTER = 0x5,
+            PARTICLE_PIN_DISTANCE_CP = 0x6,
+            PARTICLE_PIN_DISTANCE_CP_PAIR_EITHER = 0x7,
+            PARTICLE_PIN_DISTANCE_CP_PAIR_BOTH = 0x8,
+            PARTICLE_PIN_SPEED = 0x9,
+            PARTICLE_PIN_COLLECTION_AGE = 0xA,
+            PARTICLE_PIN_FLOAT_VALUE = 0xB
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum VectorFloatExpressionType_t : uint {
+            VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
+            VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,
+            VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 0x2,
+            VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTH = 0x3,
+            VECTOR_FLOAT_EXPRESSION_INPUT1_LENGTHSQR = 0x4,
+            VECTOR_FLOAT_EXPRESSION_INPUT1_NOISE = 0x5
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleFogType_t : uint {
+            PARTICLE_FOG_GAME_DEFAULT = 0x0,
+            PARTICLE_FOG_ENABLED = 0x1,
+            PARTICLE_FOG_DISABLED = 0x2
+        }
+        // Alignment: 4
+        // Members count: 9
+        public enum VectorExpressionType_t : uint {
+            VECTOR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            VECTOR_EXPRESSION_ADD = 0x0,
+            VECTOR_EXPRESSION_SUBTRACT = 0x1,
+            VECTOR_EXPRESSION_MUL = 0x2,
+            VECTOR_EXPRESSION_DIVIDE = 0x3,
+            VECTOR_EXPRESSION_INPUT_1 = 0x4,
+            VECTOR_EXPRESSION_MIN = 0x5,
+            VECTOR_EXPRESSION_MAX = 0x6,
+            VECTOR_EXPRESSION_CROSSPRODUCT = 0x7
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleRotationLockType_t : uint {
+            PARTICLE_ROTATION_LOCK_NONE = 0x0,
+            PARTICLE_ROTATION_LOCK_ROTATIONS = 0x1,
+            PARTICLE_ROTATION_LOCK_NORMAL = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum HitboxLerpType_t : uint {
+            HITBOX_LERP_LIFETIME = 0x0,
+            HITBOX_LERP_CONSTANT = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum AnimationType_t : uint {
+            ANIMATION_TYPE_FIXED_RATE = 0x0,
+            ANIMATION_TYPE_FIT_LIFETIME = 0x1,
+            ANIMATION_TYPE_MANUAL_FRAMES = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleAttrBoxFlags_t : uint {
+            PARTICLE_ATTR_BOX_FLAGS_NONE = 0x0,
+            PARTICLE_ATTR_BOX_FLAGS_WATER = 0x1
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ParticleTopology_t : uint {
+            PARTICLE_TOPOLOGY_POINTS = 0x0,
+            PARTICLE_TOPOLOGY_LINES = 0x1,
+            PARTICLE_TOPOLOGY_TRIS = 0x2,
+            PARTICLE_TOPOLOGY_QUADS = 0x3,
+            PARTICLE_TOPOLOGY_CUBES = 0x4
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleLightBehaviorChoiceList_t : uint {
+            PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0x0,
+            PARTICLE_LIGHT_BEHAVIOR_ROPE = 0x1,
+            PARTICLE_LIGHT_BEHAVIOR_TRAILS = 0x2
+        }
+        // Alignment: 4
+        // Members count: 8
+        public enum ParticleFloatMapType_t : uint {
+            PF_MAP_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_MAP_TYPE_DIRECT = 0x0,
+            PF_MAP_TYPE_MULT = 0x1,
+            PF_MAP_TYPE_REMAP = 0x2,
+            PF_MAP_TYPE_REMAP_BIASED = 0x3,
+            PF_MAP_TYPE_CURVE = 0x4,
+            PF_MAP_TYPE_NOTCHED = 0x5,
+            PF_MAP_TYPE_COUNT = 0x6
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleTraceSet_t : uint {
+            PARTICLE_TRACE_SET_ALL = 0x0,
+            PARTICLE_TRACE_SET_STATIC = 0x1,
+            PARTICLE_TRACE_SET_STATIC_AND_KEYFRAMED = 0x2,
+            PARTICLE_TRACE_SET_DYNAMIC = 0x3
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum ParticleTextureLayerBlendType_t : uint {
+            SPRITECARD_TEXTURE_BLEND_MULTIPLY = 0x0,
+            SPRITECARD_TEXTURE_BLEND_MOD2X = 0x1,
+            SPRITECARD_TEXTURE_BLEND_REPLACE = 0x2,
+            SPRITECARD_TEXTURE_BLEND_ADD = 0x3,
+            SPRITECARD_TEXTURE_BLEND_SUBTRACT = 0x4,
+            SPRITECARD_TEXTURE_BLEND_AVERAGE = 0x5,
+            SPRITECARD_TEXTURE_BLEND_LUMINANCE = 0x6
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleSelection_t : uint {
+            PARTICLE_SELECTION_FIRST = 0x0,
+            PARTICLE_SELECTION_LAST = 0x1,
+            PARTICLE_SELECTION_NUMBER = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleFloatInputMode_t : uint {
+            PF_INPUT_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_INPUT_MODE_CLAMPED = 0x0,
+            PF_INPUT_MODE_LOOPED = 0x1,
+            PF_INPUT_MODE_COUNT = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum SnapshotIndexType_t : uint {
+            SNAPSHOT_INDEX_INCREMENT = 0x0,
+            SNAPSHOT_INDEX_DIRECT = 0x1
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum ParticleOutputBlendMode_t : uint {
+            PARTICLE_OUTPUT_BLEND_MODE_ALPHA = 0x0,
+            PARTICLE_OUTPUT_BLEND_MODE_ADD = 0x1,
+            PARTICLE_OUTPUT_BLEND_MODE_BLEND_ADD = 0x2,
+            PARTICLE_OUTPUT_BLEND_MODE_HALF_BLEND_ADD = 0x3,
+            PARTICLE_OUTPUT_BLEND_MODE_NEG_HALF_BLEND_ADD = 0x4,
+            PARTICLE_OUTPUT_BLEND_MODE_MOD2X = 0x5,
+            PARTICLE_OUTPUT_BLEND_MODE_LIGHTEN = 0x6
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleLightnintBranchBehavior_t : uint {
+            PARTICLE_LIGHTNING_BRANCH_CURRENT_DIR = 0x0,
+            PARTICLE_LIGHTNING_BRANCH_ENDPOINT_DIR = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum MaterialProxyType_t : uint {
+            MATERIAL_PROXY_STATUS_EFFECT = 0x0,
+            MATERIAL_PROXY_TINT = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleDepthFeatheringMode_t : uint {
+            PARTICLE_DEPTH_FEATHERING_OFF = 0x0,
+            PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL = 0x1,
+            PARTICLE_DEPTH_FEATHERING_ON_REQUIRED = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleFloatRandomMode_t : uint {
+            PF_RANDOM_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_RANDOM_MODE_CONSTANT = 0x0,
+            PF_RANDOM_MODE_VARYING = 0x1,
+            PF_RANDOM_MODE_COUNT = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum PFNoiseModifier_t : uint {
+            PF_NOISE_MODIFIER_NONE = 0x0,
+            PF_NOISE_MODIFIER_LINES = 0x1,
+            PF_NOISE_MODIFIER_CLUMPS = 0x2,
+            PF_NOISE_MODIFIER_RINGS = 0x3
+        }
+        // Alignment: 4
+        // Members count: 19
+        public enum ParticleVecType_t : uint {
+            PVEC_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PVEC_TYPE_LITERAL = 0x0,
+            PVEC_TYPE_LITERAL_COLOR = 0x1,
+            PVEC_TYPE_NAMED_VALUE = 0x2,
+            PVEC_TYPE_PARTICLE_VECTOR = 0x3,
+            PVEC_TYPE_PARTICLE_VELOCITY = 0x4,
+            PVEC_TYPE_CP_VALUE = 0x5,
+            PVEC_TYPE_CP_RELATIVE_POSITION = 0x6,
+            PVEC_TYPE_CP_RELATIVE_DIR = 0x7,
+            PVEC_TYPE_CP_RELATIVE_RANDOM_DIR = 0x8,
+            PVEC_TYPE_FLOAT_COMPONENTS = 0x9,
+            PVEC_TYPE_FLOAT_INTERP_CLAMPED = 0xA,
+            PVEC_TYPE_FLOAT_INTERP_OPEN = 0xB,
+            PVEC_TYPE_FLOAT_INTERP_GRADIENT = 0xC,
+            PVEC_TYPE_RANDOM_UNIFORM = 0xD,
+            PVEC_TYPE_RANDOM_UNIFORM_OFFSET = 0xE,
+            PVEC_TYPE_CP_DELTA = 0xF,
+            PVEC_TYPE_CLOSEST_CAMERA_POSITION = 0x10,
+            PVEC_TYPE_COUNT = 0x11
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleLightUnitChoiceList_t : uint {
+            PARTICLE_LIGHT_UNIT_CANDELAS = 0x0,
+            PARTICLE_LIGHT_UNIT_LUMENS = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleFalloffFunction_t : uint {
+            PARTICLE_FALLOFF_CONSTANT = 0x0,
+            PARTICLE_FALLOFF_LINEAR = 0x1,
+            PARTICLE_FALLOFF_EXPONENTIAL = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleSequenceCropOverride_t : uint {
+            PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = 0xFFFFFFFFFFFFFFFF,
+            PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
+            PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleDetailLevel_t : uint {
+            PARTICLEDETAIL_LOW = 0x0,
+            PARTICLEDETAIL_MEDIUM = 0x1,
+            PARTICLEDETAIL_HIGH = 0x2,
+            PARTICLEDETAIL_ULTRA = 0x3
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum BBoxVolumeType_t : uint {
+            BBOX_VOLUME = 0x0,
+            BBOX_DIMENSIONS = 0x1,
+            BBOX_MINS_MAXS = 0x2
+        }
+        // Alignment: 4
+        // Members count: 10
+        public enum SpriteCardTextureType_t : uint {
+            SPRITECARD_TEXTURE_DIFFUSE = 0x0,
+            SPRITECARD_TEXTURE_ZOOM = 0x1,
+            SPRITECARD_TEXTURE_1D_COLOR_LOOKUP = 0x2,
+            SPRITECARD_TEXTURE_UVDISTORTION = 0x3,
+            SPRITECARD_TEXTURE_UVDISTORTION_ZOOM = 0x4,
+            SPRITECARD_TEXTURE_NORMALMAP = 0x5,
+            SPRITECARD_TEXTURE_ANIMMOTIONVEC = 0x6,
+            SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_A = 0x7,
+            SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_B = 0x8,
+            SPRITECARD_TEXTURE_SPHERICAL_HARMONICS_C = 0x9
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleAlphaReferenceType_t : uint {
+            PARTICLE_ALPHA_REFERENCE_ALPHA_ALPHA = 0x0,
+            PARTICLE_ALPHA_REFERENCE_OPAQUE_ALPHA = 0x1,
+            PARTICLE_ALPHA_REFERENCE_ALPHA_OPAQUE = 0x2,
+            PARTICLE_ALPHA_REFERENCE_OPAQUE_OPAQUE = 0x3
+        }
+        // Alignment: 4
+        // Members count: 15
+        public enum SpriteCardTextureChannel_t : uint {
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB = 0x0,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA = 0x1,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_A = 0x2,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A = 0x3,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_ALPHAMASK = 0x4,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_RGBMASK = 0x5,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA_RGBALPHA = 0x6,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_A_RGBALPHA = 0x7,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RGB_A_RGBALPHA = 0x8,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_R = 0x9,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_G = 0xA,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_B = 0xB,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_RALPHA = 0xC,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_GALPHA = 0xD,
+            SPRITECARD_TEXTURE_CHANNEL_MIX_BALPHA = 0xE
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ParticleTransformType_t : uint {
+            PT_TYPE_INVALID = 0x0,
+            PT_TYPE_NAMED_VALUE = 0x1,
+            PT_TYPE_CONTROL_POINT = 0x2,
+            PT_TYPE_CONTROL_POINT_RANGE = 0x3,
+            PT_TYPE_COUNT = 0x4
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleHitboxDataSelection_t : uint {
+            PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
+            PARTICLE_HITBOX_COUNT = 0x1
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum ParticleOrientationChoiceList_t : uint {
+            PARTICLE_ORIENTATION_SCREEN_ALIGNED = 0x0,
+            PARTICLE_ORIENTATION_SCREEN_Z_ALIGNED = 0x1,
+            PARTICLE_ORIENTATION_WORLD_Z_ALIGNED = 0x2,
+            PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL = 0x3,
+            PARTICLE_ORIENTATION_SCREENALIGN_TO_PARTICLE_NORMAL = 0x4,
+            PARTICLE_ORIENTATION_FULL_3AXIS_ROTATION = 0x5
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ParticleCollisionMode_t : uint {
+            COLLISION_MODE_PER_PARTICLE_TRACE = 0x3,
+            COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
+            COLLISION_MODE_PER_FRAME_PLANESET = 0x1,
+            COLLISION_MODE_INITIAL_TRACE_DOWN = 0x0,
+            COLLISION_MODE_DISABLED = 0xFFFFFFFFFFFFFFFF
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleSortingChoiceList_t : uint {
+            PARTICLE_SORTING_NEAREST = 0x0,
+            PARTICLE_SORTING_CREATION_TIME = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleEndcapMode_t : uint {
+            PARTICLE_ENDCAP_ALWAYS_ON = 0xFFFFFFFFFFFFFFFF,
+            PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
+            PARTICLE_ENDCAP_ENDCAP_ON = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ClosestPointTestType_t : uint {
+            PARTICLE_CLOSEST_TYPE_BOX = 0x0,
+            PARTICLE_CLOSEST_TYPE_CAPSULE = 0x1,
+            PARTICLE_CLOSEST_TYPE_HYBRID = 0x2
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum ParticleImpulseType_t : uint {
+            IMPULSE_TYPE_NONE = 0x0,
+            IMPULSE_TYPE_GENERIC = 0x1,
+            IMPULSE_TYPE_ROPE = 0x2,
+            IMPULSE_TYPE_EXPLOSION = 0x4,
+            IMPULSE_TYPE_EXPLOSION_UNDERWATER = 0x8,
+            IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum SpriteCardShaderType_t : uint {
+            SPRITECARD_SHADER_BASE = 0x0,
+            SPRITECARD_SHADER_CUSTOM = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleOmni2LightTypeChoiceList_t : uint {
+            PARTICLE_OMNI2_LIGHT_TYPE_POINT = 0x0,
+            PARTICLE_OMNI2_LIGHT_TYPE_SPHERE = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ParticleLightFogLightingMode_t : uint {
+            PARTICLE_LIGHT_FOG_LIGHTING_MODE_NONE = 0x0,
+            PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC = 0x2,
+            PARTICLE_LIGHT_FOG_LIGHTING_MODE_DYNAMIC_NOSHADOWS = 0x4
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ParticleLightTypeChoiceList_t : uint {
+            PARTICLE_LIGHT_TYPE_POINT = 0x0,
+            PARTICLE_LIGHT_TYPE_SPOT = 0x1,
+            PARTICLE_LIGHT_TYPE_FX = 0x2,
+            PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleOrientationSetMode_t : uint {
+            PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
+            PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum TextureRepetitionMode_t : uint {
+            TEXTURE_REPETITION_PARTICLE = 0x0,
+            TEXTURE_REPETITION_PATH = 0x1
+        }
         // Parent: CParticleFunctionOperator
         // Fields count: 2
         //

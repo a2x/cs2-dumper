@@ -1363,6 +1363,146 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "PulseCursorCancelPriority_t": {
+        "alignment": 4,
+        "members": {
+          "CancelOnSucceeded": 1,
+          "HardCancel": 3,
+          "None": 0,
+          "SoftCancel": 2
+        },
+        "type": "uint32"
+      },
+      "PulseCursorExecResult_t": {
+        "alignment": 4,
+        "members": {
+          "Canceled": 1,
+          "Failed": 2,
+          "Succeeded": 0
+        },
+        "type": "uint32"
+      },
+      "PulseInstructionCode_t": {
+        "alignment": 2,
+        "members": {
+          "ADD": 20,
+          "ADD_FLOAT": 36,
+          "ADD_INT": 35,
+          "ADD_STRING": 37,
+          "AND": 29,
+          "CELL_INVOKE": 11,
+          "CHUNK_LEAP": 7,
+          "CHUNK_LEAP_COND": 8,
+          "CONVERT_VALUE": 31,
+          "COPY": 17,
+          "DIV": 23,
+          "DIV_FLOAT": 43,
+          "DIV_INT": 42,
+          "EQ": 27,
+          "EQ_BOOL": 50,
+          "EQ_ENTITY_NAME": 54,
+          "EQ_FLOAT": 52,
+          "EQ_INT": 51,
+          "EQ_STRING": 53,
+          "GET_CONST": 15,
+          "GET_CONST_INLINE_STORAGE": 60,
+          "GET_VAR": 14,
+          "IMMEDIATE_HALT": 1,
+          "INVALID": 0,
+          "JUMP": 5,
+          "JUMP_COND": 6,
+          "LAST_SERIALIZED_CODE": 32,
+          "LIBRARY_INVOKE": 12,
+          "LT": 25,
+          "LTE": 26,
+          "LTE_FLOAT": 49,
+          "LTE_INT": 48,
+          "LT_FLOAT": 47,
+          "LT_INT": 46,
+          "MOD": 24,
+          "MOD_FLOAT": 45,
+          "MOD_INT": 44,
+          "MUL": 22,
+          "MUL_FLOAT": 41,
+          "MUL_INT": 40,
+          "NE": 28,
+          "NEGATE": 19,
+          "NEGATE_FLOAT": 34,
+          "NEGATE_INT": 33,
+          "NE_BOOL": 55,
+          "NE_ENTITY_NAME": 59,
+          "NE_FLOAT": 57,
+          "NE_INT": 56,
+          "NE_STRING": 58,
+          "NOP": 4,
+          "NOT": 18,
+          "OR": 30,
+          "PULSE_CALL_ASYNC_FIRE": 10,
+          "PULSE_CALL_SYNC": 9,
+          "RETURN_VALUE": 3,
+          "RETURN_VOID": 2,
+          "SET_REGISTER_DOMAIN_VALUE": 16,
+          "SET_VAR": 13,
+          "SUB": 21,
+          "SUB_FLOAT": 39,
+          "SUB_INT": 38
+        },
+        "type": "uint16"
+      },
+      "PulseMethodCallMode_t": {
+        "alignment": 4,
+        "members": {
+          "ASYNC_FIRE_AND_FORGET": 1,
+          "SYNC_WAIT_FOR_COMPLETION": 0
+        },
+        "type": "uint32"
+      },
+      "PulseTestEnumColor_t": {
+        "alignment": 4,
+        "members": {
+          "BLACK": 0,
+          "BLUE": 4,
+          "GREEN": 3,
+          "RED": 2,
+          "WHITE": 1
+        },
+        "type": "uint32"
+      },
+      "PulseTestEnumShape_t": {
+        "alignment": 4,
+        "members": {
+          "CIRCLE": 100,
+          "SQUARE": 200,
+          "TRIANGLE": 300
+        },
+        "type": "uint32"
+      },
+      "PulseValueType_t": {
+        "alignment": 4,
+        "members": {
+          "PVAL_ANY": 14,
+          "PVAL_BOOL": 0,
+          "PVAL_COLOR_RGB": 6,
+          "PVAL_COUNT": 17,
+          "PVAL_CURSOR_FLOW": 13,
+          "PVAL_EHANDLE": 7,
+          "PVAL_ENTITY_NAME": 10,
+          "PVAL_FLOAT": 2,
+          "PVAL_INT": 1,
+          "PVAL_INVALID": -1,
+          "PVAL_PANORAMA_PANEL_HANDLE": 16,
+          "PVAL_RESOURCE": 8,
+          "PVAL_SCHEMA_ENUM": 15,
+          "PVAL_SCHEMA_PTR": 11,
+          "PVAL_SNDEVT_GUID": 9,
+          "PVAL_STRING": 3,
+          "PVAL_TRANSFORM": 5,
+          "PVAL_TYPESAFE_INT": 12,
+          "PVAL_VEC3": 4
+        },
+        "type": "uint32"
+      }
+    }
   }
 }

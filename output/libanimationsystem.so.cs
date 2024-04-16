@@ -1,11 +1,682 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libanimationsystem.so
     // Classes count: 362
-    // Enums count: 0
+    // Enums count: 70
     public static class LibanimationsystemSo {
+        // Alignment: 4
+        // Members count: 17
+        public enum SeqCmd_t : uint {
+            SeqCmd_Nop = 0x0,
+            SeqCmd_LinearDelta = 0x1,
+            SeqCmd_FetchFrameRange = 0x2,
+            SeqCmd_Slerp = 0x3,
+            SeqCmd_Add = 0x4,
+            SeqCmd_Subtract = 0x5,
+            SeqCmd_Scale = 0x6,
+            SeqCmd_Copy = 0x7,
+            SeqCmd_Blend = 0x8,
+            SeqCmd_Worldspace = 0x9,
+            SeqCmd_Sequence = 0xA,
+            SeqCmd_FetchCycle = 0xB,
+            SeqCmd_FetchFrame = 0xC,
+            SeqCmd_IKLockInPlace = 0xD,
+            SeqCmd_IKRestoreAll = 0xE,
+            SeqCmd_ReverseSequence = 0xF,
+            SeqCmd_Transform = 0x10
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum BoneTransformSpace_t : uint {
+            BoneTransformSpace_Invalid = 0xFFFFFFFFFFFFFFFF,
+            BoneTransformSpace_Parent = 0x0,
+            BoneTransformSpace_Model = 0x1,
+            BoneTransformSpace_World = 0x2
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum CAnimationGraphVisualizerPrimitiveType : uint {
+            ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Text = 0x0,
+            ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Sphere = 0x1,
+            ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Line = 0x2,
+            ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Pie = 0x3,
+            ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Axis = 0x4
+        }
+        // Alignment: 1
+        // Members count: 3
+        public enum NmTransitionRule_t : byte {
+            AllowTransition = 0x0,
+            ConditionallyAllowTransition = 0x1,
+            BlockTransition = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum BinaryNodeTiming : uint {
+            UseChild1 = 0x0,
+            UseChild2 = 0x1,
+            SyncChildren = 0x2
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum SolveIKChainAnimNodeDebugSetting : uint {
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_None = 0x0,
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_X_Axis_Circle = 0x1,
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_Y_Axis_Circle = 0x2,
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_Z_Axis_Circle = 0x3,
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_Forward = 0x4,
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_Up = 0x5,
+            SOLVEIKCHAINANIMNODEDEBUGSETTING_Left = 0x6
+        }
+        // Alignment: 1
+        // Members count: 5
+        public enum MovementGait_t : byte {
+            eInvalid = 0xFFFFFFFFFFFFFFFF,
+            eWalk = 0x0,
+            eJog = 0x1,
+            eRun = 0x2,
+            eSprint = 0x3
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum IKTargetCoordinateSystem : uint {
+            IKTARGETCOORDINATESYSTEM_WorldSpace = 0x0,
+            IKTARGETCOORDINATESYSTEM_ModelSpace = 0x1,
+            IKTARGETCOORDINATESYSTEM_COUNT = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum VPhysXAggregateData_t__VPhysXFlagEnum_t : uint {
+            FLAG_IS_POLYSOUP_GEOMETRY = 0x1,
+            FLAG_LEVEL_COLLISION = 0x10,
+            FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE = 0x20
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum MatterialAttributeTagType_t : uint {
+            MATERIAL_ATTRIBUTE_TAG_VALUE = 0x0,
+            MATERIAL_ATTRIBUTE_TAG_COLOR = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum AnimPoseControl : uint {
+            NoPoseControl = 0x0,
+            AbsolutePoseControl = 0x1,
+            RelativePoseControl = 0x2
+        }
+        // Alignment: 1
+        // Members count: 4
+        public enum NmTransitionRuleCondition_t : byte {
+            AnyAllowed = 0x0,
+            FullyAllowed = 0x1,
+            ConditionallyAllowed = 0x2,
+            Blocked = 0x3
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum EDemoBoneSelectionMode : uint {
+            CaptureAllBones = 0x0,
+            CaptureSelectedBones = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum StepPhase : uint {
+            StepPhase_OnGround = 0x0,
+            StepPhase_InAir = 0x1
+        }
+        // Alignment: 4
+        // Members count: 26
+        public enum FlexOpCode_t : uint {
+            FLEX_OP_CONST = 0x1,
+            FLEX_OP_FETCH1 = 0x2,
+            FLEX_OP_FETCH2 = 0x3,
+            FLEX_OP_ADD = 0x4,
+            FLEX_OP_SUB = 0x5,
+            FLEX_OP_MUL = 0x6,
+            FLEX_OP_DIV = 0x7,
+            FLEX_OP_NEG = 0x8,
+            FLEX_OP_EXP = 0x9,
+            FLEX_OP_OPEN = 0xA,
+            FLEX_OP_CLOSE = 0xB,
+            FLEX_OP_COMMA = 0xC,
+            FLEX_OP_MAX = 0xD,
+            FLEX_OP_MIN = 0xE,
+            FLEX_OP_2WAY_0 = 0xF,
+            FLEX_OP_2WAY_1 = 0x10,
+            FLEX_OP_NWAY = 0x11,
+            FLEX_OP_COMBO = 0x12,
+            FLEX_OP_DOMINATE = 0x13,
+            FLEX_OP_DME_LOWER_EYELID = 0x14,
+            FLEX_OP_DME_UPPER_EYELID = 0x15,
+            FLEX_OP_SQRT = 0x16,
+            FLEX_OP_REMAPVALCLAMPED = 0x17,
+            FLEX_OP_SIN = 0x18,
+            FLEX_OP_COS = 0x19,
+            FLEX_OP_ABS = 0x1A
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum AnimNodeNetworkMode : uint {
+            ServerAuthoritative = 0x0,
+            ClientSimulate = 0x1
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum VPhysXBodyPart_t__VPhysXFlagEnum_t : uint {
+            FLAG_STATIC = 0x1,
+            FLAG_KINEMATIC = 0x2,
+            FLAG_JOINT = 0x4,
+            FLAG_MASS = 0x8,
+            FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 0x10
+        }
+        // Alignment: 1
+        // Members count: 9
+        public enum AnimParamType_t : byte {
+            ANIMPARAM_UNKNOWN = 0x0,
+            ANIMPARAM_BOOL = 0x1,
+            ANIMPARAM_ENUM = 0x2,
+            ANIMPARAM_INT = 0x3,
+            ANIMPARAM_FLOAT = 0x4,
+            ANIMPARAM_VECTOR = 0x5,
+            ANIMPARAM_QUATERNION = 0x6,
+            ANIMPARAM_GLOBALSYMBOL = 0x7,
+            ANIMPARAM_COUNT = 0x8
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum IKTargetSource : uint {
+            IKTARGETSOURCE_Bone = 0x0,
+            IKTARGETSOURCE_AnimgraphParameter = 0x1,
+            IKTARGETSOURCE_COUNT = 0x2
+        }
+        // Alignment: 4
+        // Members count: 15
+        public enum PermModelInfo_t__FlagEnum : uint {
+            FLAG_TRANSLUCENT = 0x1,
+            FLAG_TRANSLUCENT_TWO_PASS = 0x2,
+            FLAG_MODEL_IS_RUNTIME_COMBINED = 0x4,
+            FLAG_SOURCE1_IMPORT = 0x8,
+            FLAG_MODEL_PART_CHILD = 0x10,
+            FLAG_NAV_GEN_NONE = 0x20,
+            FLAG_NAV_GEN_HULL = 0x40,
+            FLAG_NO_FORCED_FADE = 0x800,
+            FLAG_HAS_SKINNED_MESHES = 0x400,
+            FLAG_DO_NOT_CAST_SHADOWS = 0x20000,
+            FLAG_FORCE_PHONEME_CROSSFADE = 0x1000,
+            FLAG_NO_ANIM_EVENTS = 0x100000,
+            FLAG_ANIMATION_DRIVEN_FLEXES = 0x200000,
+            FLAG_IMPLICIT_BIND_POSE_SEQUENCE = 0x400000,
+            FLAG_MODEL_DOC = 0x800000
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum AnimParamNetworkSetting : uint {
+            Auto = 0x0,
+            AlwaysNetwork = 0x1,
+            NeverNetwork = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum MorphFlexControllerRemapType_t : uint {
+            MORPH_FLEXCONTROLLER_REMAP_PASSTHRU = 0x0,
+            MORPH_FLEXCONTROLLER_REMAP_2WAY = 0x1,
+            MORPH_FLEXCONTROLLER_REMAP_NWAY = 0x2,
+            MORPH_FLEXCONTROLLER_REMAP_EYELID = 0x3
+        }
+        // Alignment: 4
+        // Members count: 8
+        public enum MeshDrawPrimitiveFlags_t : uint {
+            MESH_DRAW_FLAGS_NONE = 0x0,
+            MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 0x1,
+            MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 0x2,
+            MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 0x8,
+            MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 0x10,
+            MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 0x20,
+            MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 0x40,
+            MESH_DRAW_FLAGS_DRAW_LAST = 0x80
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ModelBoneFlexComponent_t : uint {
+            MODEL_BONE_FLEX_INVALID = 0xFFFFFFFFFFFFFFFF,
+            MODEL_BONE_FLEX_TX = 0x0,
+            MODEL_BONE_FLEX_TY = 0x1,
+            MODEL_BONE_FLEX_TZ = 0x2
+        }
+        // Alignment: 1
+        // Members count: 3
+        public enum PoseType_t : byte {
+            POSETYPE_STATIC = 0x0,
+            POSETYPE_DYNAMIC = 0x1,
+            POSETYPE_INVALID = 0xFF
+        }
+        // Alignment: 4
+        // Members count: 37
+        public enum AnimValueSource : uint {
+            MoveHeading = 0x0,
+            MoveSpeed = 0x1,
+            ForwardSpeed = 0x2,
+            StrafeSpeed = 0x3,
+            FacingHeading = 0x4,
+            ManualFacingHeading = 0x5,
+            LookHeading = 0x6,
+            LookPitch = 0x7,
+            LookDistance = 0x8,
+            Parameter = 0x9,
+            WayPointHeading = 0xA,
+            WayPointDistance = 0xB,
+            BoundaryRadius = 0xC,
+            TargetMoveHeading = 0xD,
+            TargetMoveSpeed = 0xE,
+            AccelerationHeading = 0xF,
+            AccelerationSpeed = 0x10,
+            SlopeHeading = 0x11,
+            SlopeAngle = 0x12,
+            SlopePitch = 0x13,
+            SlopeYaw = 0x14,
+            GoalDistance = 0x15,
+            AccelerationLeftRight = 0x16,
+            AccelerationFrontBack = 0x17,
+            RootMotionSpeed = 0x18,
+            RootMotionTurnSpeed = 0x19,
+            MoveHeadingRelativeToLookHeading = 0x1A,
+            MaxMoveSpeed = 0x1B,
+            FingerCurl_Thumb = 0x1C,
+            FingerCurl_Index = 0x1D,
+            FingerCurl_Middle = 0x1E,
+            FingerCurl_Ring = 0x1F,
+            FingerCurl_Pinky = 0x20,
+            FingerSplay_Thumb_Index = 0x21,
+            FingerSplay_Index_Middle = 0x22,
+            FingerSplay_Middle_Ring = 0x23,
+            FingerSplay_Ring_Pinky = 0x24
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum RagdollPoseControl : uint {
+            Absolute = 0x0,
+            Relative = 0x1
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum IKSolverType : uint {
+            IKSOLVER_Perlin = 0x0,
+            IKSOLVER_TwoBone = 0x1,
+            IKSOLVER_Fabrik = 0x2,
+            IKSOLVER_DogLeg3Bone = 0x3,
+            IKSOLVER_CCD = 0x4,
+            IKSOLVER_COUNT = 0x5
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum Blend2DMode : uint {
+            Blend2DMode_General = 0x0,
+            Blend2DMode_Directional = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum ChoiceChangeMethod : uint {
+            OnReset = 0x0,
+            OnCycleEnd = 0x1,
+            OnResetOrCycleEnd = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ChoiceBlendMethod : uint {
+            SingleBlendTime = 0x0,
+            PerChoiceBlendTimes = 0x1
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum VPhysXConstraintParams_t__EnumFlags0_t : uint {
+            FLAG0_SHIFT_INTERPENETRATE = 0x0,
+            FLAG0_SHIFT_CONSTRAIN = 0x1,
+            FLAG0_SHIFT_BREAKABLE_FORCE = 0x2,
+            FLAG0_SHIFT_BREAKABLE_TORQUE = 0x3
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum BlendKeyType : uint {
+            BlendKey_UserValue = 0x0,
+            BlendKey_Velocity = 0x1,
+            BlendKey_Distance = 0x2,
+            BlendKey_RemainingDistance = 0x3
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum StateActionBehavior : uint {
+            STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT = 0x0,
+            STATETAGBEHAVIOR_FIRE_ON_ENTER = 0x1,
+            STATETAGBEHAVIOR_FIRE_ON_EXIT = 0x2,
+            STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT = 0x3
+        }
+        // Alignment: 1
+        // Members count: 6
+        public enum NmFootPhaseCondition_t : byte {
+            LeftFootDown = 0x0,
+            LeftFootPassing = 0x1,
+            LeftPhase = 0x4,
+            RightFootDown = 0x2,
+            RightFootPassing = 0x3,
+            RightPhase = 0x5
+        }
+        // Alignment: 4
+        // Members count: 22
+        public enum ModelSkeletonData_t__BoneFlags_t : uint {
+            FLAG_NO_BONE_FLAGS = 0x0,
+            FLAG_BONEFLEXDRIVER = 0x4,
+            FLAG_CLOTH = 0x8,
+            FLAG_PHYSICS = 0x10,
+            FLAG_ATTACHMENT = 0x20,
+            FLAG_ANIMATION = 0x40,
+            FLAG_MESH = 0x80,
+            FLAG_HITBOX = 0x100,
+            FLAG_BONE_USED_BY_VERTEX_LOD0 = 0x400,
+            FLAG_BONE_USED_BY_VERTEX_LOD1 = 0x800,
+            FLAG_BONE_USED_BY_VERTEX_LOD2 = 0x1000,
+            FLAG_BONE_USED_BY_VERTEX_LOD3 = 0x2000,
+            FLAG_BONE_USED_BY_VERTEX_LOD4 = 0x4000,
+            FLAG_BONE_USED_BY_VERTEX_LOD5 = 0x8000,
+            FLAG_BONE_USED_BY_VERTEX_LOD6 = 0x10000,
+            FLAG_BONE_USED_BY_VERTEX_LOD7 = 0x20000,
+            FLAG_BONE_MERGE_READ = 0x40000,
+            FLAG_BONE_MERGE_WRITE = 0x80000,
+            FLAG_ALL_BONE_FLAGS = 0xFFFFF,
+            BLEND_PREALIGNED = 0x100000,
+            FLAG_RIGIDLENGTH = 0x200000,
+            FLAG_PROCEDURAL = 0x400000
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum MorphBundleType_t : uint {
+            MORPH_BUNDLE_TYPE_NONE = 0x0,
+            MORPH_BUNDLE_TYPE_POSITION_SPEED = 0x1,
+            MORPH_BUNDLE_TYPE_NORMAL_WRINKLE = 0x2,
+            MORPH_BUNDLE_TYPE_COUNT = 0x3
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ResetCycleOption : uint {
+            Beginning = 0x0,
+            SameCycleAsSource = 0x1,
+            InverseSourceCycle = 0x2,
+            FixedValue = 0x3,
+            SameTimeAsSource = 0x4
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum IKChannelMode : uint {
+            TwoBone = 0x0,
+            TwoBone_Translate = 0x1,
+            OneBone = 0x2,
+            OneBone_Translate = 0x3
+        }
+        // Alignment: 1
+        // Members count: 4
+        public enum NmFootPhase_t : byte {
+            LeftFootDown = 0x0,
+            RightFootPassing = 0x1,
+            RightFootDown = 0x2,
+            LeftFootPassing = 0x3
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum FootstepLandedFootSoundType_t : uint {
+            FOOTSOUND_Left = 0x0,
+            FOOTSOUND_Right = 0x1,
+            FOOTSOUND_UseOverrideSound = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum FootLockSubVisualization : uint {
+            FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0x0,
+            FOOTLOCKSUBVISUALIZATION_IKSolve = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum NmFrameSnapEventMode_t : uint {
+            Floor = 0x0,
+            Round = 0x1
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum FootPinningTimingSource : uint {
+            FootMotion = 0x0,
+            Tag = 0x1,
+            Parameter = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum DampingSpeedFunction : uint {
+            NoDamping = 0x0,
+            Constant = 0x1,
+            Spring = 0x2
+        }
+        // Alignment: 4
+        // Members count: 6
+        public enum AnimationProcessingType_t : uint {
+            ANIMATION_PROCESSING_SERVER_SIMULATION = 0x0,
+            ANIMATION_PROCESSING_CLIENT_SIMULATION = 0x1,
+            ANIMATION_PROCESSING_CLIENT_PREDICTION = 0x2,
+            ANIMATION_PROCESSING_CLIENT_INTERPOLATION = 0x3,
+            ANIMATION_PROCESSING_CLIENT_RENDER = 0x4,
+            ANIMATION_PROCESSING_MAX = 0x5
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum JiggleBoneSimSpace : uint {
+            SimSpace_Local = 0x0,
+            SimSpace_Model = 0x1,
+            SimSpace_World = 0x2
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum StanceOverrideMode : uint {
+            Sequence = 0x0,
+            Node = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum IkEndEffectorType : uint {
+            IkEndEffector_Attachment = 0x0,
+            IkEndEffector_Bone = 0x1
+        }
+        // Alignment: 2
+        // Members count: 3
+        public enum AnimScriptType : ushort {
+            ANIMSCRIPT_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            ANIMSCRIPT_FUSE_GENERAL = 0x0,
+            ANIMSCRIPT_FUSE_STATEMACHINE = 0x1
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum SeqPoseSetting_t : uint {
+            SEQ_POSE_SETTING_CONSTANT = 0x0,
+            SEQ_POSE_SETTING_ROTATION = 0x1,
+            SEQ_POSE_SETTING_POSITION = 0x2,
+            SEQ_POSE_SETTING_VELOCITY = 0x3
+        }
+        // Alignment: 4
+        // Members count: 13
+        public enum AnimParamButton_t : uint {
+            ANIMPARAM_BUTTON_NONE = 0x0,
+            ANIMPARAM_BUTTON_DPAD_UP = 0x1,
+            ANIMPARAM_BUTTON_DPAD_RIGHT = 0x2,
+            ANIMPARAM_BUTTON_DPAD_DOWN = 0x3,
+            ANIMPARAM_BUTTON_DPAD_LEFT = 0x4,
+            ANIMPARAM_BUTTON_A = 0x5,
+            ANIMPARAM_BUTTON_B = 0x6,
+            ANIMPARAM_BUTTON_X = 0x7,
+            ANIMPARAM_BUTTON_Y = 0x8,
+            ANIMPARAM_BUTTON_LEFT_SHOULDER = 0x9,
+            ANIMPARAM_BUTTON_RIGHT_SHOULDER = 0xA,
+            ANIMPARAM_BUTTON_LTRIGGER = 0xB,
+            ANIMPARAM_BUTTON_RTRIGGER = 0xC
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum SelectorTagBehavior_t : uint {
+            SelectorTagBehavior_OnWhileCurrent = 0x0,
+            SelectorTagBehavior_OffWhenFinished = 0x1,
+            SelectorTagBehavior_OffBeforeFinished = 0x2
+        }
+        // Alignment: 1
+        // Members count: 3
+        public enum CNmBoneMask__WeightInfo_t : byte {
+            Zero = 0x0,
+            Mixed = 0x1,
+            One = 0x2
+        }
+        // Alignment: 4
+        // Members count: 18
+        public enum ParticleAttachment_t : uint {
+            PATTACH_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PATTACH_ABSORIGIN = 0x0,
+            PATTACH_ABSORIGIN_FOLLOW = 0x1,
+            PATTACH_CUSTOMORIGIN = 0x2,
+            PATTACH_CUSTOMORIGIN_FOLLOW = 0x3,
+            PATTACH_POINT = 0x4,
+            PATTACH_POINT_FOLLOW = 0x5,
+            PATTACH_EYES_FOLLOW = 0x6,
+            PATTACH_OVERHEAD_FOLLOW = 0x7,
+            PATTACH_WORLDORIGIN = 0x8,
+            PATTACH_ROOTBONE_FOLLOW = 0x9,
+            PATTACH_RENDERORIGIN_FOLLOW = 0xA,
+            PATTACH_MAIN_VIEW = 0xB,
+            PATTACH_WATERWAKE = 0xC,
+            PATTACH_CENTER_FOLLOW = 0xD,
+            PATTACH_CUSTOM_GAME_STATE_1 = 0xE,
+            PATTACH_HEALTHBAR = 0xF,
+            MAX_PATTACH_TYPES = 0x10
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum FieldNetworkOption : uint {
+            Auto = 0x0,
+            ForceEnable = 0x1,
+            ForceDisable = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum VPhysXJoint_t__Flags_t : uint {
+            JOINT_FLAGS_NONE = 0x0,
+            JOINT_FLAGS_BODY1_FIXED = 0x1,
+            JOINT_FLAGS_USE_BLOCK_SOLVER = 0x2
+        }
+        // Alignment: 1
+        // Members count: 3
+        public enum VelocityMetricMode : byte {
+            DirectionOnly = 0x0,
+            MagnitudeOnly = 0x1,
+            DirectionAndMagnitude = 0x2
+        }
+        // Alignment: 4
+        // Members count: 3
+        public enum FacingMode : uint {
+            FacingMode_Manual = 0x0,
+            FacingMode_Path = 0x1,
+            FacingMode_LookTarget = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum AimMatrixBlendMode : uint {
+            AimMatrixBlendMode_None = 0x0,
+            AimMatrixBlendMode_Additive = 0x1,
+            AimMatrixBlendMode_ModelSpaceAdditive = 0x2,
+            AimMatrixBlendMode_BoneMask = 0x3
+        }
+        // Alignment: 4
+        // Members count: 7
+        public enum AnimationSnapshotType_t : uint {
+            ANIMATION_SNAPSHOT_SERVER_SIMULATION = 0x0,
+            ANIMATION_SNAPSHOT_CLIENT_SIMULATION = 0x1,
+            ANIMATION_SNAPSHOT_CLIENT_PREDICTION = 0x2,
+            ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION = 0x3,
+            ANIMATION_SNAPSHOT_CLIENT_RENDER = 0x4,
+            ANIMATION_SNAPSHOT_FINAL_COMPOSITE = 0x5,
+            ANIMATION_SNAPSHOT_MAX = 0x6
+        }
+        // Alignment: 4
+        // Members count: 8
+        public enum FootFallTagFoot_t : uint {
+            FOOT1 = 0x0,
+            FOOT2 = 0x1,
+            FOOT3 = 0x2,
+            FOOT4 = 0x3,
+            FOOT5 = 0x4,
+            FOOT6 = 0x5,
+            FOOT7 = 0x6,
+            FOOT8 = 0x7
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ChoiceMethod : uint {
+            WeightedRandom = 0x0,
+            WeightedRandomNoRepeat = 0x1,
+            Iterate = 0x2,
+            IterateRandom = 0x3
+        }
+        // Alignment: 4
+        // Members count: 13
+        public enum AnimVectorSource : uint {
+            MoveDirection = 0x0,
+            FacingDirection = 0x1,
+            LookDirection = 0x2,
+            VectorParameter = 0x3,
+            WayPointDirection = 0x4,
+            Acceleration = 0x5,
+            SlopeNormal = 0x6,
+            SlopeNormal_WorldSpace = 0x7,
+            LookTarget = 0x8,
+            LookTarget_WorldSpace = 0x9,
+            WayPointPosition = 0xA,
+            GoalPosition = 0xB,
+            RootMotionVelocity = 0xC
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum IkTargetType : uint {
+            IkTarget_Attachment = 0x0,
+            IkTarget_Bone = 0x1,
+            IkTarget_Parameter_ModelSpace = 0x2,
+            IkTarget_Parameter_WorldSpace = 0x3
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum BoneMaskBlendSpace : uint {
+            BlendSpace_Parent = 0x0,
+            BlendSpace_Model = 0x1,
+            BlendSpace_Model_RotationOnly = 0x2,
+            BlendSpace_Model_TranslationOnly = 0x3
+        }
+        // Alignment: 4
+        // Members count: 5
+        public enum ModelConfigAttachmentType_t : uint {
+            MODEL_CONFIG_ATTACHMENT_INVALID = 0xFFFFFFFFFFFFFFFF,
+            MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
+            MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
+            MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
+            MODEL_CONFIG_ATTACHMENT_COUNT = 0x3
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum BinaryNodeChildOption : uint {
+            Child1 = 0x0,
+            Child2 = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum JumpCorrectionMethod : uint {
+            ScaleMotion = 0x0,
+            AddCorrectionDelta = 0x1
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum MoodType_t : uint {
+            eMoodType_Head = 0x0,
+            eMoodType_Body = 0x1
+        }
         // Parent: None
         // Fields count: 3
         //

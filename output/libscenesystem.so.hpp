@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 #pragma once
 
@@ -9,8 +9,16 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: libscenesystem.so
         // Classes count: 9
-        // Enums count: 0
+        // Enums count: 1
         namespace libscenesystem_so {
+            // Alignment: 1
+            // Members count: 4
+            enum class DisableShadows_t : uint8_t {
+                kDisableShadows_None = 0x0,
+                kDisableShadows_All = 0x1,
+                kDisableShadows_Baked = 0x2,
+                kDisableShadows_Realtime = 0x3
+            };
             // Parent: None
             // Fields count: 10
             //

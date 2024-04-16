@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,8 +7,140 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: libpulse_system.so
         // Classes count: 85
-        // Enums count: 0
+        // Enums count: 7
         pub mod libpulse_system_so {
+            // Alignment: 4
+            // Members count: 3
+            #[repr(u32)]
+            pub enum PulseTestEnumShape_t {
+                CIRCLE = 0x64,
+                SQUARE = 0xC8,
+                TRIANGLE = 0x12C
+            }
+            // Alignment: 4
+            // Members count: 2
+            #[repr(u32)]
+            pub enum PulseMethodCallMode_t {
+                SYNC_WAIT_FOR_COMPLETION = 0x0,
+                ASYNC_FIRE_AND_FORGET = 0x1
+            }
+            // Alignment: 4
+            // Members count: 3
+            #[repr(u32)]
+            pub enum PulseCursorExecResult_t {
+                Succeeded = 0x0,
+                Canceled = 0x1,
+                Failed = 0x2
+            }
+            // Alignment: 4
+            // Members count: 19
+            #[repr(u32)]
+            pub enum PulseValueType_t {
+                PVAL_INVALID = u32::MAX,
+                PVAL_BOOL = 0x0,
+                PVAL_INT = 0x1,
+                PVAL_FLOAT = 0x2,
+                PVAL_STRING = 0x3,
+                PVAL_VEC3 = 0x4,
+                PVAL_TRANSFORM = 0x5,
+                PVAL_COLOR_RGB = 0x6,
+                PVAL_EHANDLE = 0x7,
+                PVAL_RESOURCE = 0x8,
+                PVAL_SNDEVT_GUID = 0x9,
+                PVAL_ENTITY_NAME = 0xA,
+                PVAL_SCHEMA_PTR = 0xB,
+                PVAL_TYPESAFE_INT = 0xC,
+                PVAL_CURSOR_FLOW = 0xD,
+                PVAL_ANY = 0xE,
+                PVAL_SCHEMA_ENUM = 0xF,
+                PVAL_PANORAMA_PANEL_HANDLE = 0x10,
+                PVAL_COUNT = 0x11
+            }
+            // Alignment: 2
+            // Members count: 61
+            #[repr(u16)]
+            pub enum PulseInstructionCode_t {
+                INVALID = 0x0,
+                IMMEDIATE_HALT = 0x1,
+                RETURN_VOID = 0x2,
+                RETURN_VALUE = 0x3,
+                NOP = 0x4,
+                JUMP = 0x5,
+                JUMP_COND = 0x6,
+                CHUNK_LEAP = 0x7,
+                CHUNK_LEAP_COND = 0x8,
+                PULSE_CALL_SYNC = 0x9,
+                PULSE_CALL_ASYNC_FIRE = 0xA,
+                CELL_INVOKE = 0xB,
+                LIBRARY_INVOKE = 0xC,
+                SET_VAR = 0xD,
+                GET_VAR = 0xE,
+                GET_CONST = 0xF,
+                SET_REGISTER_DOMAIN_VALUE = 0x10,
+                COPY = 0x11,
+                NOT = 0x12,
+                NEGATE = 0x13,
+                ADD = 0x14,
+                SUB = 0x15,
+                MUL = 0x16,
+                DIV = 0x17,
+                MOD = 0x18,
+                LT = 0x19,
+                LTE = 0x1A,
+                EQ = 0x1B,
+                NE = 0x1C,
+                AND = 0x1D,
+                OR = 0x1E,
+                CONVERT_VALUE = 0x1F,
+                LAST_SERIALIZED_CODE = 0x20,
+                NEGATE_INT = 0x21,
+                NEGATE_FLOAT = 0x22,
+                ADD_INT = 0x23,
+                ADD_FLOAT = 0x24,
+                ADD_STRING = 0x25,
+                SUB_INT = 0x26,
+                SUB_FLOAT = 0x27,
+                MUL_INT = 0x28,
+                MUL_FLOAT = 0x29,
+                DIV_INT = 0x2A,
+                DIV_FLOAT = 0x2B,
+                MOD_INT = 0x2C,
+                MOD_FLOAT = 0x2D,
+                LT_INT = 0x2E,
+                LT_FLOAT = 0x2F,
+                LTE_INT = 0x30,
+                LTE_FLOAT = 0x31,
+                EQ_BOOL = 0x32,
+                EQ_INT = 0x33,
+                EQ_FLOAT = 0x34,
+                EQ_STRING = 0x35,
+                EQ_ENTITY_NAME = 0x36,
+                NE_BOOL = 0x37,
+                NE_INT = 0x38,
+                NE_FLOAT = 0x39,
+                NE_STRING = 0x3A,
+                NE_ENTITY_NAME = 0x3B,
+                GET_CONST_INLINE_STORAGE = 0x3C
+            }
+            // Alignment: 4
+            // Members count: 5
+            #[repr(u32)]
+            pub enum PulseTestEnumColor_t {
+                BLACK = 0x0,
+                WHITE = 0x1,
+                RED = 0x2,
+                GREEN = 0x3,
+                BLUE = 0x4
+            }
+            // Alignment: 4
+            // Members count: 4
+            #[repr(u32)]
+            pub enum PulseCursorCancelPriority_t {
+                None = 0x0,
+                CancelOnSucceeded = 0x1,
+                SoftCancel = 0x2,
+                HardCancel = 0x3
+            }
             // Parent: CPulseCell_BaseFlow
             // Fields count: 1
             //

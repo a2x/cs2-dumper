@@ -1,11 +1,30 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libresourcesystem.so
     // Classes count: 59
-    // Enums count: 0
+    // Enums count: 2
     public static class LibresourcesystemSo {
+        // Alignment: 1
+        // Members count: 9
+        public enum FuseVariableType_t : byte {
+            INVALID = 0x0,
+            BOOL = 0x1,
+            INT8 = 0x2,
+            INT16 = 0x3,
+            INT32 = 0x4,
+            UINT8 = 0x5,
+            UINT16 = 0x6,
+            UINT32 = 0x7,
+            FLOAT32 = 0x8
+        }
+        // Alignment: 1
+        // Members count: 2
+        public enum FuseVariableAccess_t : byte {
+            WRITABLE = 0x0,
+            READ_ONLY = 0x1
+        }
         // Parent: None
         // Fields count: 0
         //

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:29:53.956513739 UTC
+// 2024-04-16 02:45:41.243985329 UTC
 
 #pragma once
 
@@ -9,8 +9,39 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: libengine2.so
         // Classes count: 44
-        // Enums count: 0
+        // Enums count: 4
         namespace libengine2_so {
+            // Alignment: 4
+            // Members count: 3
+            enum class EntityDormancyType_t : uint32_t {
+                ENTITY_NOT_DORMANT = 0x0,
+                ENTITY_DORMANT = 0x1,
+                ENTITY_SUSPENDED = 0x2
+            };
+            // Alignment: 4
+            // Members count: 4
+            enum class EntityIOTargetType_t : uint32_t {
+                ENTITY_IO_TARGET_INVALID = 0xFFFFFFFFFFFFFFFF,
+                ENTITY_IO_TARGET_ENTITYNAME = 0x2,
+                ENTITY_IO_TARGET_EHANDLE = 0x6,
+                ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
+            };
+            // Alignment: 4
+            // Members count: 3
+            enum class SpawnDebugOverrideState_t : uint32_t {
+                SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
+                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
+                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
+            };
+            // Alignment: 4
+            // Members count: 5
+            enum class SpawnDebugRestrictionOverrideState_t : uint32_t {
+                SPAWN_DEBUG_RESTRICT_NONE = 0x0,
+                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
+                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
+            };
             // Parent: EventSimulate_t
             // Fields count: 0
             namespace EventClientPostSimulate_t {

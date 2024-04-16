@@ -377,6 +377,26 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "ObjectTypeFlags_t": {
+        "alignment": 4,
+        "members": {
+          "OBJECT_TYPE_BLOCK_LIGHT": 16,
+          "OBJECT_TYPE_DISABLED_IN_LOW_QUALITY": 128,
+          "OBJECT_TYPE_MODEL": 8,
+          "OBJECT_TYPE_MODEL_HAS_LODS": 2048,
+          "OBJECT_TYPE_NONE": 0,
+          "OBJECT_TYPE_NO_SHADOWS": 32,
+          "OBJECT_TYPE_NO_SUN_SHADOWS": 256,
+          "OBJECT_TYPE_OVERLAY": 8192,
+          "OBJECT_TYPE_PRECOMPUTED_VISMEMBERS": 16384,
+          "OBJECT_TYPE_RENDER_TO_CUBEMAPS": 1024,
+          "OBJECT_TYPE_RENDER_WITH_DYNAMIC": 512,
+          "OBJECT_TYPE_STATIC_CUBE_MAP": 32768,
+          "OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND": 64
+        },
+        "type": "uint32"
+      }
+    }
   }
 }

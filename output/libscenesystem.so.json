@@ -125,6 +125,17 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "DisableShadows_t": {
+        "alignment": 1,
+        "members": {
+          "kDisableShadows_All": 1,
+          "kDisableShadows_Baked": 2,
+          "kDisableShadows_None": 0,
+          "kDisableShadows_Realtime": 3
+        },
+        "type": "uint8"
+      }
+    }
   }
 }
