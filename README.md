@@ -1,8 +1,8 @@
 # cs2-dumper
 
-An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux (soon).
+An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux. Powered by [memflow](https://github.com/memflow/memflow).
 
-Powered by [memflow](https://github.com/memflow/memflow).
+The native Linux version is available in the [linux](https://github.com/a2x/cs2-dumper/tree/linux) branch.
 
 ## Getting Started
 
