@@ -5,52 +5,125 @@ use heck::{AsPascalCase, AsSnakeCase};
 
 use serde_json::json;
 
-use super::{CodeGen, Formatter, Results, SchemaMap};
+use super::{slugify, CodeWriter, Formatter, SchemaMap};
 
 use crate::analysis::ClassMetadata;
-use crate::error::Result;
 
-impl CodeGen for SchemaMap {
-    fn to_cs(&self, results: &Results, indent_size: usize) -> Result<String> {
-        self.write_content(results, indent_size, |fmt| {
-            fmt.block("namespace CS2Dumper.Schemas", false, |fmt| {
+impl CodeWriter for SchemaMap {
+    fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("namespace CS2Dumper.Schemas", false, |fmt| {
+            for (module_name, (classes, enums)) in self {
+                writeln!(fmt, "// Module: {}", module_name)?;
+                writeln!(fmt, "// Classes count: {}", classes.len())?;
+                writeln!(fmt, "// Enums count: {}", enums.len())?;
+
+                fmt.block(
+                    &format!("public static class {}", AsPascalCase(slugify(module_name))),
+                    false,
+                    |fmt| {
+                        for enum_ in enums {
+                            let type_name = match enum_.alignment {
+                                1 => "byte",
+                                2 => "ushort",
+                                4 => "uint",
+                                8 => "ulong",
+                                _ => continue,
+                            };
+
+                            writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
+                            writeln!(fmt, "// Members count: {}", enum_.size)?;
+
+                            fmt.block(
+                                &format!("public enum {} : {}", slugify(&enum_.name), type_name),
+                                false,
+                                |fmt| {
+                                    // TODO: Handle the case where multiple members share
+                                    // the same value.
+                                    let members = enum_
+                                        .members
+                                        .iter()
+                                        .map(|member| {
+                                            format!("{} = {:#X}", member.name, member.value)
+                                        })
+                                        .collect::<Vec<_>>()
+                                        .join(",\n");
+
+                                    writeln!(fmt, "{}", members)
+                                },
+                            )?;
+                        }
+
+                        for class in classes {
+                            let parent_name = class
+                                .parent
+                                .as_ref()
+                                .map(|parent| slugify(&parent.name))
+                                .unwrap_or_else(|| "None".to_string());
+
+                            writeln!(fmt, "// Parent: {}", parent_name)?;
+                            writeln!(fmt, "// Fields count: {}", class.fields.len())?;
+
+                            write_metadata(fmt, &class.metadata)?;
+
+                            fmt.block(
+                                &format!("public static class {}", slugify(&class.name)),
+                                false,
+                                |fmt| {
+                                    for field in &class.fields {
+                                        writeln!(
+                                            fmt,
+                                            "public const nint {} = {:#X}; // {}",
+                                            field.name, field.offset, field.type_name
+                                        )?;
+                                    }
+
+                                    Ok(())
+                                },
+                            )?;
+                        }
+
+                        Ok(())
+                    },
+                )?;
+            }
+
+            Ok(())
+        })
+    }
+
+    fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        writeln!(fmt, "#pragma once\n")?;
+        writeln!(fmt, "#include <cstddef>\n")?;
+
+        fmt.block("namespace cs2_dumper", false, |fmt| {
+            fmt.block("namespace schemas", false, |fmt| {
                 for (module_name, (classes, enums)) in self {
-                    // Skip empty modules.
-                    if classes.is_empty() && enums.is_empty() {
-                        continue;
-                    }
-
                     writeln!(fmt, "// Module: {}", module_name)?;
-                    writeln!(fmt, "// Classes: {}", classes.len())?;
-                    writeln!(fmt, "// Enums: {}", enums.len())?;
+                    writeln!(fmt, "// Classes count: {}", classes.len())?;
+                    writeln!(fmt, "// Enums count: {}", enums.len())?;
 
                     fmt.block(
-                        &format!(
-                            "public static class {}",
-                            AsPascalCase(Self::sanitize_name(module_name))
-                        ),
+                        &format!("namespace {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
                             for enum_ in enums {
-                                let ty = match enum_.alignment {
-                                    1 => "byte",
-                                    2 => "ushort",
-                                    4 => "uint",
-                                    8 => "ulong",
+                                let type_name = match enum_.alignment {
+                                    1 => "uint8_t",
+                                    2 => "uint16_t",
+                                    4 => "uint32_t",
+                                    8 => "uint64_t",
                                     _ => continue,
                                 };
 
                                 writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
-                                writeln!(fmt, "// Members: {}", enum_.size)?;
+                                writeln!(fmt, "// Members count: {}", enum_.size)?;
 
                                 fmt.block(
-                                    &format!(
-                                        "public enum {} : {}",
-                                        Self::sanitize_name(&enum_.name),
-                                        ty
-                                    ),
-                                    false,
+                                    &format!("enum class {} : {}", slugify(&enum_.name), type_name),
+                                    true,
                                     |fmt| {
+                                        // TODO: Handle the case where multiple members share
+                                        // the same value.
                                         let members = enum_
                                             .members
                                             .iter()
@@ -69,28 +142,23 @@ impl CodeGen for SchemaMap {
                                 let parent_name = class
                                     .parent
                                     .as_ref()
-                                    .map(|parent| Self::sanitize_name(&parent.name))
+                                    .map(|parent| slugify(&parent.name))
                                     .unwrap_or_else(|| "None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
-                                writeln!(fmt, "// Fields: {}", class.fields.len())?;
+                                writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                if let Some(metadata) = &class.metadata {
-                                    write_metadata(fmt, metadata)?;
-                                }
+                                write_metadata(fmt, &class.metadata)?;
 
                                 fmt.block(
-                                    &format!(
-                                        "public static class {}",
-                                        Self::sanitize_name(&class.name)
-                                    ),
+                                    &format!("namespace {}", slugify(&class.name)),
                                     false,
                                     |fmt| {
                                         for field in &class.fields {
                                             writeln!(
                                                 fmt,
-                                                "public const nint {} = {:#X}; // {}",
-                                                field.name, field.offset, field.ty
+                                                "constexpr std::ptrdiff_t {} = {:#X}; // {}",
+                                                field.name, field.offset, field.type_name
                                             )?;
                                         }
 
@@ -105,115 +173,11 @@ impl CodeGen for SchemaMap {
                 }
 
                 Ok(())
-            })?;
-
-            Ok(())
+            })
         })
     }
 
-    fn to_hpp(&self, results: &Results, indent_size: usize) -> Result<String> {
-        self.write_content(results, indent_size, |fmt| {
-            writeln!(fmt, "#pragma once\n")?;
-            writeln!(fmt, "#include <cstddef>\n")?;
-
-            fmt.block("namespace cs2_dumper", false, |fmt| {
-                fmt.block("namespace schemas", false, |fmt| {
-                    for (module_name, (classes, enums)) in self {
-                        // Skip empty modules.
-                        if classes.is_empty() && enums.is_empty() {
-                            continue;
-                        }
-
-                        writeln!(fmt, "// Module: {}", module_name)?;
-                        writeln!(fmt, "// Classes: {}", classes.len())?;
-                        writeln!(fmt, "// Enums: {}", enums.len())?;
-
-                        fmt.block(
-                            &format!(
-                                "namespace {}",
-                                AsSnakeCase(Self::sanitize_name(module_name))
-                            ),
-                            false,
-                            |fmt| {
-                                for enum_ in enums {
-                                    let ty = match enum_.alignment {
-                                        1 => "uint8_t",
-                                        2 => "uint16_t",
-                                        4 => "uint32_t",
-                                        8 => "uint64_t",
-                                        _ => continue,
-                                    };
-
-                                    writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
-                                    writeln!(fmt, "// Members: {}", enum_.size)?;
-
-                                    fmt.block(
-                                        &format!(
-                                            "enum class {} : {}",
-                                            Self::sanitize_name(&enum_.name),
-                                            ty
-                                        ),
-                                        true,
-                                        |fmt| {
-                                            let members = enum_
-                                                .members
-                                                .iter()
-                                                .map(|member| {
-                                                    format!("{} = {:#X}", member.name, member.value)
-                                                })
-                                                .collect::<Vec<_>>()
-                                                .join(",\n");
-
-                                            writeln!(fmt, "{}", members)
-                                        },
-                                    )?;
-                                }
-
-                                for class in classes {
-                                    let parent_name = class
-                                        .parent
-                                        .as_ref()
-                                        .map(|parent| Self::sanitize_name(&parent.name))
-                                        .unwrap_or_else(|| "None".to_string());
-
-                                    writeln!(fmt, "// Parent: {}", parent_name)?;
-                                    writeln!(fmt, "// Fields: {}", class.fields.len())?;
-
-                                    if let Some(metadata) = &class.metadata {
-                                        write_metadata(fmt, metadata)?;
-                                    }
-
-                                    fmt.block(
-                                        &format!("namespace {}", Self::sanitize_name(&class.name)),
-                                        false,
-                                        |fmt| {
-                                            for field in &class.fields {
-                                                writeln!(
-                                                    fmt,
-                                                    "constexpr std::ptrdiff_t {} = {:#X}; // {}",
-                                                    field.name, field.offset, field.ty
-                                                )?;
-                                            }
-
-                                            Ok(())
-                                        },
-                                    )?;
-                                }
-
-                                Ok(())
-                            },
-                        )?;
-                    }
-
-                    Ok(())
-                })
-            })?;
-
-            Ok(())
-        })
-    }
-
-    fn to_json(&self, _results: &Results, _indent_size: usize) -> Result<String> {
+    fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         let content: BTreeMap<_, _> = self
             .iter()
             .map(|(module_name, (classes, enums))| {
@@ -228,18 +192,16 @@ impl CodeGen for SchemaMap {
 
                         let metadata: Vec<_> = class
                             .metadata
-                            .as_ref()
-                            .unwrap_or(&vec![])
                             .iter()
                             .map(|metadata| match metadata {
                                 ClassMetadata::NetworkChangeCallback { name } => json!({
                                     "type": "NetworkChangeCallback",
                                     "name": name,
                                 }),
-                                ClassMetadata::NetworkVarNames { name, ty } => json!({
+                                ClassMetadata::NetworkVarNames { name, type_name } => json!({
                                     "type": "NetworkVarNames",
                                     "name": name,
-                                    "ty": ty,
+                                    "type_name": type_name,
                                 }),
                                 ClassMetadata::Unknown { name } => json!({
                                     "type": "Unknown",
@@ -249,7 +211,7 @@ impl CodeGen for SchemaMap {
                             .collect();
 
                         (
-                            Self::sanitize_name(&class.name),
+                            slugify(&class.name),
                             json!({
                                 "parent": class.parent.as_ref().map(|parent| &parent.name),
                                 "fields": fields,
@@ -268,7 +230,7 @@ impl CodeGen for SchemaMap {
                             .map(|member| (&member.name, member.value))
                             .collect();
 
-                        let ty = match enum_.alignment {
+                        let type_name = match enum_.alignment {
                             1 => "uint8",
                             2 => "uint16",
                             4 => "uint32",
@@ -277,10 +239,10 @@ impl CodeGen for SchemaMap {
                         };
 
                         (
-                            Self::sanitize_name(&enum_.name),
+                            slugify(&enum_.name),
                             json!({
                                 "alignment": enum_.alignment,
-                                "type": ty,
+                                "type": type_name,
                                 "members": members,
                             }),
                         )
@@ -297,109 +259,106 @@ impl CodeGen for SchemaMap {
             })
             .collect();
 
-        serde_json::to_string_pretty(&content).map_err(Into::into)
+        fmt.write_str(&serde_json::to_string_pretty(&content).expect("failed to serialize"))
     }
 
-    fn to_rs(&self, results: &Results, indent_size: usize) -> Result<String> {
-        self.write_content(results, indent_size, |fmt| {
-            writeln!(
-                fmt,
-                "#![allow(non_upper_case_globals, non_camel_case_types, unused)]\n"
-            )?;
+    fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        writeln!(
+            fmt,
+            "#![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]\n"
+        )?;
 
-            fmt.block("pub mod cs2_dumper", false, |fmt| {
-                fmt.block("pub mod schemas", false, |fmt| {
-                    for (module_name, (classes, enums)) in self {
-                        // Skip empty modules.
-                        if classes.is_empty() && enums.is_empty() {
-                            continue;
-                        }
+        fmt.block("pub mod cs2_dumper", false, |fmt| {
+            fmt.block("pub mod schemas", false, |fmt| {
+                for (module_name, (classes, enums)) in self {
+                    writeln!(fmt, "// Module: {}", module_name)?;
+                    writeln!(fmt, "// Classes count: {}", classes.len())?;
+                    writeln!(fmt, "// Enums count: {}", enums.len())?;
 
-                        writeln!(fmt, "// Module: {}", module_name)?;
-                        writeln!(fmt, "// Classes: {}", classes.len())?;
-                        writeln!(fmt, "// Enums: {}", enums.len())?;
+                    fmt.block(
+                        &format!("pub mod {}", AsSnakeCase(slugify(module_name))),
+                        false,
+                        |fmt| {
+                            for enum_ in enums {
+                                let type_name = match enum_.alignment {
+                                    1 => "u8",
+                                    2 => "u16",
+                                    4 => "u32",
+                                    8 => "u64",
+                                    _ => continue,
+                                };
 
-                        fmt.block(
-                            &format!("pub mod {}", AsSnakeCase(Self::sanitize_name(module_name))),
-                            false,
-                            |fmt| {
-                                for enum_ in enums {
-                                    let ty = match enum_.alignment {
-                                        1 => "u8",
-                                        2 => "u16",
-                                        4 => "u32",
-                                        8 => "u64",
-                                        _ => continue,
-                                    };
+                                writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
+                                writeln!(fmt, "// Members count: {}", enum_.size)?;
 
-                                    writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
-                                    writeln!(fmt, "// Members: {}", enum_.size)?;
+                                fmt.block(
+                                    &format!(
+                                        "#[repr({})]\npub enum {}",
+                                        type_name,
+                                        slugify(&enum_.name),
+                                    ),
+                                    false,
+                                    |fmt| {
+                                        // TODO: Handle the case where multiple members share
+                                        // the same value.
+                                        let members = enum_
+                                            .members
+                                            .iter()
+                                            .map(|member| {
+                                                format!(
+                                                    "{} = {}",
+                                                    member.name,
+                                                    if member.value == -1 {
+                                                        format!("{}::MAX", type_name)
+                                                    } else {
+                                                        format!("{:#X}", member.value)
+                                                    }
+                                                )
+                                            })
+                                            .collect::<Vec<_>>()
+                                            .join(",\n");
 
-                                    fmt.block(
-                                        &format!(
-                                            "#[repr({})]\npub enum {}",
-                                            ty,
-                                            Self::sanitize_name(&enum_.name),
-                                        ),
-                                        false,
-                                        |fmt| {
-                                            // TODO: Handle the case where multiple members share
-                                            // the same value.
-                                            let members = enum_
-                                                .members
-                                                .iter()
-                                                .map(|member| {
-                                                    format!("{} = {:#X}", member.name, member.value)
-                                                })
-                                                .collect::<Vec<_>>()
-                                                .join(",\n");
+                                        writeln!(fmt, "{}", members)
+                                    },
+                                )?;
+                            }
 
-                                            writeln!(fmt, "{}", members)
-                                        },
-                                    )?;
-                                }
+                            for class in classes {
+                                let parent_name = class
+                                    .parent
+                                    .as_ref()
+                                    .map(|parent| slugify(&parent.name))
+                                    .unwrap_or_else(|| "None".to_string());
 
-                                for class in classes {
-                                    let parent_name = class
-                                        .parent
-                                        .as_ref()
-                                        .map(|parent| Self::sanitize_name(&parent.name))
-                                        .unwrap_or_else(|| "None".to_string());
+                                writeln!(fmt, "// Parent: {}", parent_name)?;
+                                writeln!(fmt, "// Fields count: {}", class.fields.len())?;
 
-                                    writeln!(fmt, "// Parent: {}", parent_name)?;
-                                    writeln!(fmt, "// Fields: {}", class.fields.len())?;
+                                write_metadata(fmt, &class.metadata)?;
 
-                                    if let Some(metadata) = &class.metadata {
-                                        write_metadata(fmt, metadata)?;
-                                    }
+                                fmt.block(
+                                    &format!("pub mod {}", slugify(&class.name)),
+                                    false,
+                                    |fmt| {
+                                        for field in &class.fields {
+                                            writeln!(
+                                                fmt,
+                                                "pub const {}: usize = {:#X}; // {}",
+                                                field.name, field.offset, field.type_name
+                                            )?;
+                                        }
 
-                                    fmt.block(
-                                        &format!("pub mod {}", Self::sanitize_name(&class.name)),
-                                        false,
-                                        |fmt| {
-                                            for field in &class.fields {
-                                                writeln!(
-                                                    fmt,
-                                                    "pub const {}: usize = {:#X}; // {}",
-                                                    field.name, field.offset, field.ty
-                                                )?;
-                                            }
+                                        Ok(())
+                                    },
+                                )?;
+                            }
 
-                                            Ok(())
-                                        },
-                                    )?;
-                                }
+                            Ok(())
+                        },
+                    )?;
+                }
 
-                                Ok(())
-                            },
-                        )?;
-                    }
-
-                    Ok(())
-                })
-            })?;
-
-            Ok(())
+                Ok(())
+            })
         })
     }
 }
@@ -417,8 +376,8 @@ fn write_metadata(fmt: &mut Formatter<'_>, metadata: &[ClassMetadata]) -> fmt::R
             ClassMetadata::NetworkChangeCallback { name } => {
                 writeln!(fmt, "// NetworkChangeCallback: {}", name)?;
             }
-            ClassMetadata::NetworkVarNames { name, ty } => {
-                writeln!(fmt, "// NetworkVarNames: {} ({})", name, ty)?;
+            ClassMetadata::NetworkVarNames { name, type_name } => {
+                writeln!(fmt, "// NetworkVarNames: {} ({})", name, type_name)?;
             }
             ClassMetadata::Unknown { name } => {
                 writeln!(fmt, "// {}", name)?;

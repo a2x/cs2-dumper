@@ -1,0 +1,300 @@
+{
+  "executable": "cs2",
+  "signatures": [
+    {
+      "libclient.so": [
+        {
+          "name": "dwCSGOInput",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 55 48 89 E5 41 56 41 55 49 89 FD 41 54 49 89 F4",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwEntityList",
+          "pattern": "4C 89 25 ? ? ? ? 48 89 05 ? ? ? ? 49 8B 5D",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwGameEntitySystem",
+          "pattern": "48 89 3D ? ? ? ? E9 ? ? ? ? 55",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwGameEntitySystem_getHighestEntityIndex",
+          "pattern": "8B 87 ? ? ? ? C3 66 0F 1F 84 00 ? ? ? ? 8B 97",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "name": "dwGameRules",
+          "pattern": "48 89 3D ? ? ? ? 8B 3B",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwGlobalVars",
+          "pattern": "48 89 35 ? ? ? ? 48 89 46",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwGlowManager",
+          "pattern": "48 8B 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 48 8D 05 ? ? ? ? 48 C7 47",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwLocalPlayerController",
+          "pattern": "48 8B 15 ? ? ? ? 31 C0 48 85 D2 74 ? 8B B2",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwLocalPlayerPawn",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? C7 47 ? ? ? ? ? C7 47 ? ? ? ? ? C3",
+          "operations": [
+            {
+              "type": "rip"
+            },
+            {
+              "type": "add",
+              "value": 312
+            }
+          ]
+        },
+        {
+          "name": "dwPlantedC4",
+          "pattern": "48 8B 05 ? ? ? ? 4C 89 24 D8 49 8B 44 24",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwPrediction",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? C7 47 ? ? ? ? ? C7 47 ? ? ? ? ? C3",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwSensitivity",
+          "pattern": "48 8B 05 ? ? ? ? 48 8B 40 ? E9 ? ? ? ? 48 8B 05 ? ? ? ? 48 8B 40 ? EB ? 0F 1F 00 55 48 89 E5 41 57 66 41 0F 7E DF",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwSensitivity_sensitivity",
+          "pattern": "FF 53 ? 48 8D 4D AC",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 3
+            }
+          ]
+        },
+        {
+          "name": "dwViewAngles",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 55 48 89 E5 41 56 41 55 49 89 FD 41 54 49 89 F4",
+          "operations": [
+            {
+              "type": "rip"
+            },
+            {
+              "type": "add",
+              "value": 21408
+            }
+          ]
+        },
+        {
+          "name": "dwViewMatrix",
+          "pattern": "4C 8D 05 ? ? ? ? 48 8B 38 48 8D 0D",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwViewRender",
+          "pattern": "48 8D 05 ? ? ? ? 48 89 38 48 85 FF",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        }
+      ],
+      "libengine2.so": [
+        {
+          "name": "dwBuildNumber",
+          "pattern": "89 15 ? ? ? ? 48 83 C3",
+          "operations": [
+            {
+              "type": "rip",
+              "offset": 2,
+              "len": 6
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient",
+          "pattern": "48 89 1D ? ? ? ? 49 8B 04 24",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient_deltaTick",
+          "pattern": "89 83 ? ? ? ? B8 ? ? ? ? 5B",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient_getLocalPlayer",
+          "pattern": "48 8B 87 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 55 48 89 E5",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 3,
+              "end": 4
+            },
+            {
+              "type": "add",
+              "value": 4856
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient_getMaxClients",
+          "pattern": "48 8B 87 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 48 89 B7 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 8B 87",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 3,
+              "end": 6
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient_signOnState",
+          "pattern": "8B 97 ? ? ? ? 31 C0 45 31 ED",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "name": "dwWindowHeight",
+          "pattern": "89 05 ? ? ? ? F3 0F 59 C1",
+          "operations": [
+            {
+              "type": "rip",
+              "offset": 2,
+              "length": 6
+            },
+            {
+              "type": "add",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "name": "dwWindowWidth",
+          "pattern": "89 05 ? ? ? ? F3 0F 59 C1",
+          "operations": [
+            {
+              "type": "rip",
+              "offset": 2,
+              "length": 6
+            },
+            {
+              "type": "add",
+              "value": 7
+            }
+          ]
+        }
+      ],
+      "libinputsystem.so": [
+        {
+          "name": "dwInputSystem",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 8B 87",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        }
+      ],
+      "libmatchmaking.so": [
+        {
+          "name": "dwGameTypes",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 48 8B 07",
+          "operations": [
+            {
+              "type": "rip"
+            }
+          ]
+        },
+        {
+          "name": "dwGameTypes_mapName",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 48 8B 07",
+          "operations": [
+            {
+              "type": "rip"
+            },
+            {
+              "type": "add",
+              "value": 288
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

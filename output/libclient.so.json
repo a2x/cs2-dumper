@@ -1,0 +1,5858 @@
+{
+  "libclient.so": {
+    "classes": {
+      "ActiveModelConfig_t": {
+        "fields": {
+          "m_AssociatedEntities": 56,
+          "m_AssociatedEntityNames": 80,
+          "m_Handle": 40,
+          "m_Name": 48
+        },
+        "metadata": [
+          {
+            "name": "m_Handle",
+            "type": "NetworkVarNames",
+            "type_name": "ModelConfigHandle_t"
+          },
+          {
+            "name": "m_Name",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          },
+          {
+            "name": "m_AssociatedEntities",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseModelEntity>"
+          },
+          {
+            "name": "m_AssociatedEntityNames",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          }
+        ],
+        "parent": null
+      },
+      "CAttributeList": {
+        "fields": {
+          "m_Attributes": 8,
+          "m_pManager": 88
+        },
+        "metadata": [
+          {
+            "name": "m_Attributes",
+            "type": "NetworkVarNames",
+            "type_name": "CEconItemAttribute"
+          }
+        ],
+        "parent": null
+      },
+      "CBaseAnimGraphController": {
+        "fields": {
+          "m_animGraphNetworkedVars": 24,
+          "m_bLastUpdateSkipped": 5328,
+          "m_bNetworkedAnimationInputsChanged": 5326,
+          "m_bNetworkedSequenceChanged": 5327,
+          "m_bSequenceFinished": 5288,
+          "m_flPlaybackRate": 5312,
+          "m_flPrevAnimUpdateTime": 5332,
+          "m_flSeqFixedCycle": 5304,
+          "m_flSeqStartTime": 5300,
+          "m_flSoundSyncTime": 5292,
+          "m_hSequence": 5296,
+          "m_nAnimLoopMode": 5308,
+          "m_nNotifyState": 5324
+        },
+        "metadata": [
+          {
+            "name": "m_animGraphNetworkedVars",
+            "type": "NetworkVarNames",
+            "type_name": "CAnimGraphNetworkedVariables"
+          },
+          {
+            "name": "m_hSequence",
+            "type": "NetworkVarNames",
+            "type_name": "HSequence"
+          },
+          {
+            "name": "m_flSeqStartTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flSeqFixedCycle",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nAnimLoopMode",
+            "type": "NetworkVarNames",
+            "type_name": "AnimLoopMode_t"
+          }
+        ],
+        "parent": "CSkeletonAnimationController"
+      },
+      "CBasePlayerWeaponVData": {
+        "fields": {
+          "m_aShootSounds": 544,
+          "m_bAllowFlipping": 265,
+          "m_bAutoSwitchFrom": 529,
+          "m_bAutoSwitchTo": 528,
+          "m_bBuiltRightHanded": 264,
+          "m_bLinkedCooldowns": 536,
+          "m_iDefaultClip1": 516,
+          "m_iDefaultClip2": 520,
+          "m_iFlags": 504,
+          "m_iMaxClip1": 508,
+          "m_iMaxClip2": 512,
+          "m_iPosition": 580,
+          "m_iRumbleEffect": 532,
+          "m_iSlot": 576,
+          "m_iWeight": 524,
+          "m_nPrimaryAmmoType": 505,
+          "m_nSecondaryAmmoType": 506,
+          "m_sMuzzleAttachment": 272,
+          "m_szMuzzleFlashParticle": 280,
+          "m_szWorldModel": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CEntitySubclassVDataBase"
+      },
+      "CBreachCharge": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBase"
+      },
+      "CCSDeathmatchScript": {
+        "fields": {
+          "m_pOuter": 216
+        },
+        "metadata": [
+          {
+            "name": "MPulseInstanceDomainInfo",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseLibraryBindings",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseDomainOptInFeatureTag",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CCSGameModeScript"
+      },
+      "CCSGO_WingmanIntroCharacterPosition": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSGO_TeamIntroCharacterPosition"
+      },
+      "CCSGO_WingmanIntroTerroristPosition": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CCSGO_WingmanIntroCharacterPosition"
+      },
+      "CCSGameModeRules": {
+        "fields": {
+          "__m_pChainEntity": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CCSGameModeRules_Noop": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CCSGameModeRules"
+      },
+      "CCSPlayerBase_CameraServices": {
+        "fields": {
+          "m_flFOVRate": 540,
+          "m_flFOVTime": 536,
+          "m_flLastShotFOV": 548,
+          "m_hZoomOwner": 544,
+          "m_iFOV": 528,
+          "m_iFOVStart": 532
+        },
+        "metadata": [
+          {
+            "name": "m_iFOV",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_iFOVStart",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_flFOVTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flFOVRate",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_hZoomOwner",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CBaseEntity>"
+          }
+        ],
+        "parent": "CPlayer_CameraServices"
+      },
+      "CCSPlayerController_ActionTrackingServices": {
+        "fields": {
+          "m_iNumRoundKills": 264,
+          "m_iNumRoundKillsHeadshots": 268,
+          "m_matchStats": 144,
+          "m_perRoundStats": 64,
+          "m_unTotalRoundDamageDealt": 272
+        },
+        "metadata": [
+          {
+            "name": "m_perRoundStats",
+            "type": "NetworkVarNames",
+            "type_name": "CSPerRoundStats_t"
+          },
+          {
+            "name": "m_matchStats",
+            "type": "NetworkVarNames",
+            "type_name": "CSMatchStats_t"
+          },
+          {
+            "name": "m_iNumRoundKills",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iNumRoundKillsHeadshots",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_unTotalRoundDamageDealt",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          }
+        ],
+        "parent": "CPlayerControllerComponent"
+      },
+      "CCSPlayer_ActionTrackingServices": {
+        "fields": {
+          "m_bIsRescuing": 68,
+          "m_hLastWeaponBeforeC4AutoSwitch": 64,
+          "m_weaponPurchasesThisMatch": 72,
+          "m_weaponPurchasesThisRound": 160
+        },
+        "metadata": [
+          {
+            "name": "m_bIsRescuing",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_weaponPurchasesThisMatch",
+            "type": "NetworkVarNames",
+            "type_name": "WeaponPurchaseTracker_t"
+          },
+          {
+            "name": "m_weaponPurchasesThisRound",
+            "type": "NetworkVarNames",
+            "type_name": "WeaponPurchaseTracker_t"
+          }
+        ],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CCSPlayer_GlowServices": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CCSPlayer_ItemServices": {
+        "fields": {
+          "m_bHasDefuser": 64,
+          "m_bHasHeavyArmor": 66,
+          "m_bHasHelmet": 65
+        },
+        "metadata": [
+          {
+            "name": "m_bHasDefuser",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bHasHelmet",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bHasHeavyArmor",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "CPlayer_ItemServices"
+      },
+      "CCSPlayer_MovementServices": {
+        "fields": {
+          "m_StuckLast": 1132,
+          "m_bDesiresDuck": 561,
+          "m_bDuckOverride": 560,
+          "m_bHasWalkMovedSinceLastJump": 601,
+          "m_bInStuckTest": 602,
+          "m_bOldJumpPressed": 1188,
+          "m_bSpeedCropped": 1136,
+          "m_duckUntilOnGround": 600,
+          "m_fStashGrenadeParameterWhen": 1204,
+          "m_flDuckAmount": 552,
+          "m_flDuckOffset": 564,
+          "m_flDuckSpeed": 556,
+          "m_flHeightAtJumpStart": 1228,
+          "m_flJumpPressedTime": 1192,
+          "m_flJumpUntil": 1196,
+          "m_flJumpVel": 1200,
+          "m_flLastDuckTime": 580,
+          "m_flMaxFallVelocity": 532,
+          "m_flMaxJumpHeightThisJump": 1232,
+          "m_flOffsetTickCompleteTime": 1216,
+          "m_flOffsetTickStashedSpeed": 1220,
+          "m_flStamina": 1224,
+          "m_flStuckCheckTime": 616,
+          "m_flWaterEntryTime": 1144,
+          "m_nButtonDownMaskPrev": 1208,
+          "m_nDuckJumpTimeMsecs": 572,
+          "m_nDuckTimeMsecs": 568,
+          "m_nGameCodeHasMovedPlayerAfterCommand": 1184,
+          "m_nJumpTimeMsecs": 576,
+          "m_nLadderSurfacePropIndex": 548,
+          "m_nOldWaterLevel": 1140,
+          "m_nTraceCount": 1128,
+          "m_vecForward": 1148,
+          "m_vecLadderNormal": 536,
+          "m_vecLastPositionAtFullCrouchSpeed": 592,
+          "m_vecLeft": 1160,
+          "m_vecUp": 1172
+        },
+        "metadata": [
+          {
+            "name": "m_flMaxFallVelocity",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vecLadderNormal",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_nLadderSurfacePropIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flDuckAmount",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDuckSpeed",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bDuckOverride",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bDesiresDuck",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nDuckTimeMsecs",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_nDuckJumpTimeMsecs",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_nJumpTimeMsecs",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_flLastDuckTime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nGameCodeHasMovedPlayerAfterCommand",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bOldJumpPressed",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flJumpUntil",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flJumpVel",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_fStashGrenadeParameterWhen",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_nButtonDownMaskPrev",
+            "type": "NetworkVarNames",
+            "type_name": "ButtonBitMask_t"
+          },
+          {
+            "name": "m_flOffsetTickCompleteTime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flOffsetTickStashedSpeed",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flStamina",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "CPlayer_MovementServices_Humanoid"
+      },
+      "CCSPlayer_PingServices": {
+        "fields": {
+          "m_hPlayerPing": 64
+        },
+        "metadata": [
+          {
+            "name": "m_hPlayerPing",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CBaseEntity>"
+          }
+        ],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CCSPlayer_ViewModelServices": {
+        "fields": {
+          "m_hViewModel": 64
+        },
+        "metadata": [
+          {
+            "name": "m_hViewModel",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CBaseViewModel>"
+          }
+        ],
+        "parent": "CPlayer_ViewModelServices"
+      },
+      "CCSWeaponBaseAPI": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPulseProvideFeatureTag",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseLibraryBindings",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CCollisionProperty": {
+        "fields": {
+          "m_CollisionGroup": 94,
+          "m_collisionAttribute": 16,
+          "m_flBoundingRadius": 96,
+          "m_flCapsuleRadius": 172,
+          "m_nEnablePhysics": 95,
+          "m_nSolidType": 91,
+          "m_nSurroundType": 93,
+          "m_triggerBloat": 92,
+          "m_usSolidFlags": 90,
+          "m_vCapsuleCenter1": 148,
+          "m_vCapsuleCenter2": 160,
+          "m_vecMaxs": 76,
+          "m_vecMins": 64,
+          "m_vecSpecifiedSurroundingMaxs": 112,
+          "m_vecSpecifiedSurroundingMins": 100,
+          "m_vecSurroundingMaxs": 124,
+          "m_vecSurroundingMins": 136
+        },
+        "metadata": [
+          {
+            "name": "m_collisionAttribute",
+            "type": "NetworkVarNames",
+            "type_name": "VPhysicsCollisionAttribute_t"
+          },
+          {
+            "name": "m_vecMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vecMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_usSolidFlags",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nSolidType",
+            "type": "NetworkVarNames",
+            "type_name": "SolidType_t"
+          },
+          {
+            "name": "m_triggerBloat",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nSurroundType",
+            "type": "NetworkVarNames",
+            "type_name": "SurroundingBoundsType_t"
+          },
+          {
+            "name": "m_CollisionGroup",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nEnablePhysics",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_vecSpecifiedSurroundingMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vecSpecifiedSurroundingMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vCapsuleCenter1",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vCapsuleCenter2",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_flCapsuleRadius",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": null
+      },
+      "CEntityComponent": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CHitboxComponent": {
+        "fields": {
+          "m_bvDisabledHitGroups": 36
+        },
+        "metadata": [
+          {
+            "name": "m_bvDisabledHitGroups",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          }
+        ],
+        "parent": "CEntityComponent"
+      },
+      "CLightComponent": {
+        "fields": {
+          "__m_pChainEntity": 88,
+          "m_Color": 149,
+          "m_Pattern": 248,
+          "m_SecondaryColor": 153,
+          "m_SkyAmbientBounce": 428,
+          "m_SkyColor": 420,
+          "m_bEnabled": 340,
+          "m_bFlicker": 341,
+          "m_bMixedShadows": 433,
+          "m_bPrecomputedFieldsValid": 342,
+          "m_bRenderDiffuse": 224,
+          "m_bRenderToCubemaps": 312,
+          "m_bRenderTransmissive": 232,
+          "m_bUseSecondaryColor": 432,
+          "m_bUsesBakedShadowing": 300,
+          "m_flAttenuation0": 180,
+          "m_flAttenuation1": 184,
+          "m_flAttenuation2": 188,
+          "m_flBrightness": 160,
+          "m_flBrightnessMult": 168,
+          "m_flBrightnessScale": 164,
+          "m_flCapsuleLength": 440,
+          "m_flFadeMaxDist": 328,
+          "m_flFadeMinDist": 324,
+          "m_flFalloff": 176,
+          "m_flFogContributionStength": 412,
+          "m_flLightStyleStartTime": 436,
+          "m_flMinRoughness": 444,
+          "m_flNearClipPlane": 416,
+          "m_flOrthoLightHeight": 240,
+          "m_flOrthoLightWidth": 236,
+          "m_flPhi": 196,
+          "m_flPrecomputedMaxRange": 404,
+          "m_flRange": 172,
+          "m_flShadowCascadeCrossFade": 260,
+          "m_flShadowCascadeDistance0": 268,
+          "m_flShadowCascadeDistance1": 272,
+          "m_flShadowCascadeDistance2": 276,
+          "m_flShadowCascadeDistance3": 280,
+          "m_flShadowCascadeDistanceFade": 264,
+          "m_flShadowFadeMaxDist": 336,
+          "m_flShadowFadeMinDist": 332,
+          "m_flSkyIntensity": 424,
+          "m_flTheta": 192,
+          "m_hLightCookie": 200,
+          "m_nBakedShadowIndex": 308,
+          "m_nCascadeRenderStaticObjects": 256,
+          "m_nCascades": 208,
+          "m_nCastShadows": 212,
+          "m_nDirectLight": 316,
+          "m_nFogLightingMode": 408,
+          "m_nIndirectLight": 320,
+          "m_nRenderSpecular": 228,
+          "m_nShadowCascadeResolution0": 284,
+          "m_nShadowCascadeResolution1": 288,
+          "m_nShadowCascadeResolution2": 292,
+          "m_nShadowCascadeResolution3": 296,
+          "m_nShadowHeight": 220,
+          "m_nShadowPriority": 304,
+          "m_nShadowWidth": 216,
+          "m_nStyle": 244,
+          "m_vPrecomputedBoundsMaxs": 356,
+          "m_vPrecomputedBoundsMins": 344,
+          "m_vPrecomputedOBBAngles": 380,
+          "m_vPrecomputedOBBExtent": 392,
+          "m_vPrecomputedOBBOrigin": 368
+        },
+        "metadata": [
+          {
+            "name": "m_Color",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_SecondaryColor",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flBrightness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flBrightnessScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flBrightnessMult",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flRange",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFalloff",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flAttenuation0",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flAttenuation1",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flAttenuation2",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTheta",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flPhi",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_hLightCookie",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_nCascades",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nCastShadows",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowWidth",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowHeight",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bRenderDiffuse",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nRenderSpecular",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bRenderTransmissive",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flOrthoLightWidth",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flOrthoLightHeight",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nStyle",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_Pattern",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlString"
+          },
+          {
+            "name": "m_nCascadeRenderStaticObjects",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flShadowCascadeCrossFade",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowCascadeDistanceFade",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowCascadeDistance0",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowCascadeDistance1",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowCascadeDistance2",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowCascadeDistance3",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nShadowCascadeResolution0",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowCascadeResolution1",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowCascadeResolution2",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowCascadeResolution3",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bUsesBakedShadowing",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nShadowPriority",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nBakedShadowIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bRenderToCubemaps",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nDirectLight",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nIndirectLight",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flFadeMinDist",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeMaxDist",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowFadeMinDist",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowFadeMaxDist",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bFlicker",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bPrecomputedFieldsValid",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_vPrecomputedBoundsMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vPrecomputedBoundsMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vPrecomputedOBBOrigin",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vPrecomputedOBBAngles",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
+          },
+          {
+            "name": "m_vPrecomputedOBBExtent",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_flPrecomputedMaxRange",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nFogLightingMode",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flFogContributionStength",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flNearClipPlane",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_SkyColor",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flSkyIntensity",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_SkyAmbientBounce",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_bUseSecondaryColor",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bMixedShadows",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flLightStyleStartTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flCapsuleLength",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flMinRoughness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "CEntityComponent"
+      },
+      "CNetworkedSequenceOperation": {
+        "fields": {
+          "m_bDiscontinuity": 29,
+          "m_bSequenceChangeNetworked": 28,
+          "m_flCycle": 16,
+          "m_flPrevCycle": 12,
+          "m_flPrevCycleForAnimEventDetection": 36,
+          "m_flPrevCycleFromDiscontinuity": 32,
+          "m_flWeight": 20,
+          "m_hSequence": 8
+        },
+        "metadata": [
+          {
+            "name": "m_hSequence",
+            "type": "NetworkVarNames",
+            "type_name": "HSequence"
+          },
+          {
+            "name": "m_flPrevCycle",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flCycle",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          }
+        ],
+        "parent": null
+      },
+      "CPlayer_CameraServices": {
+        "fields": {
+          "m_CurrentFog": 320,
+          "m_OverrideFogColor": 433,
+          "m_PlayerFog": 88,
+          "m_PostProcessingVolumes": 288,
+          "m_angDemoViewAngles": 504,
+          "m_audio": 168,
+          "m_bOverrideFogColor": 428,
+          "m_bOverrideFogStartEnd": 453,
+          "m_fOverrideFogEnd": 480,
+          "m_fOverrideFogStart": 460,
+          "m_flCsViewPunchAngleTickRatio": 80,
+          "m_flOldPlayerViewOffsetZ": 316,
+          "m_flOldPlayerZ": 312,
+          "m_hActivePostProcessingVolume": 500,
+          "m_hColorCorrectionCtrl": 152,
+          "m_hOldFogController": 424,
+          "m_hTonemapController": 160,
+          "m_hViewEntity": 156,
+          "m_nCsViewPunchAngleTick": 76,
+          "m_vecCsViewPunchAngle": 64
+        },
+        "metadata": [
+          {
+            "name": "m_vecCsViewPunchAngle",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
+          },
+          {
+            "name": "m_nCsViewPunchAngleTick",
+            "type": "NetworkVarNames",
+            "type_name": "GameTick_t"
+          },
+          {
+            "name": "m_flCsViewPunchAngleTickRatio",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_PlayerFog",
+            "type": "NetworkVarNames",
+            "type_name": "fogplayerparams_t"
+          },
+          {
+            "name": "m_hColorCorrectionCtrl",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CColorCorrection>"
+          },
+          {
+            "name": "m_hViewEntity",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CBaseEntity>"
+          },
+          {
+            "name": "m_hTonemapController",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CTonemapController2>"
+          },
+          {
+            "name": "m_audio",
+            "type": "NetworkVarNames",
+            "type_name": "audioparams_t"
+          },
+          {
+            "name": "m_PostProcessingVolumes",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_PostProcessingVolume>"
+          }
+        ],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CPlayer_FlashlightServices": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CPlayer_MovementServices": {
+        "fields": {
+          "m_arrForceSubtickMoveWhen": 412,
+          "m_flForwardMove": 428,
+          "m_flLeftMove": 432,
+          "m_flMaxspeed": 408,
+          "m_flUpMove": 436,
+          "m_nButtonDoublePressed": 120,
+          "m_nButtons": 72,
+          "m_nImpulse": 64,
+          "m_nLastCommandNumberProcessed": 384,
+          "m_nQueuedButtonChangeMask": 112,
+          "m_nQueuedButtonDownMask": 104,
+          "m_nToggleButtonDownMask": 392,
+          "m_pButtonPressedCmdNumber": 128,
+          "m_vecLastMovementImpulses": 440,
+          "m_vecOldViewAngles": 452
+        },
+        "metadata": [
+          {
+            "name": "m_nToggleButtonDownMask",
+            "type": "NetworkVarNames",
+            "type_name": "ButtonBitMask_t"
+          },
+          {
+            "name": "m_flMaxspeed",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_arrForceSubtickMoveWhen",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          }
+        ],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CPlayer_ObserverServices": {
+        "fields": {
+          "m_bForcedObserverMode": 76,
+          "m_flObserverChaseDistance": 80,
+          "m_flObserverChaseDistanceCalcTime": 84,
+          "m_hObserverTarget": 68,
+          "m_iObserverLastMode": 72,
+          "m_iObserverMode": 64
+        },
+        "metadata": [
+          {
+            "name": "m_iObserverMode",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_hObserverTarget",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CBaseEntity>"
+          }
+        ],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CPlayer_WaterServices": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CPlayerPawnComponent"
+      },
+      "CPointTemplate": {
+        "fields": {
+          "m_ScriptCallbackScope": 1880,
+          "m_ScriptSpawnCallback": 1872,
+          "m_SpawnedEntityHandles": 1848,
+          "m_bAsynchronouslySpawnEntities": 1772,
+          "m_clientOnlyEntityBehavior": 1816,
+          "m_createdSpawnGroupHandles": 1824,
+          "m_flTimeoutInterval": 1768,
+          "m_iszEntityFilterName": 1760,
+          "m_iszSource2EntityLumpName": 1752,
+          "m_iszWorldName": 1744,
+          "m_ownerSpawnGroupType": 1820,
+          "m_pOutputOnSpawned": 1776
+        },
+        "metadata": [],
+        "parent": "CLogicalEntity"
+      },
+      "CProjectedTextureBase": {
+        "fields": {
+          "m_LightColor": 36,
+          "m_SpotlightTextureName": 84,
+          "m_bAlwaysUpdate": 17,
+          "m_bCameraSpace": 28,
+          "m_bEnableShadows": 24,
+          "m_bFlipHorizontal": 620,
+          "m_bLightOnlyTarget": 26,
+          "m_bLightWorld": 27,
+          "m_bSimpleProjection": 25,
+          "m_bState": 16,
+          "m_bVolumetric": 52,
+          "m_flAmbient": 80,
+          "m_flBrightnessScale": 32,
+          "m_flColorTransitionTime": 76,
+          "m_flFarZ": 608,
+          "m_flFlashlightTime": 64,
+          "m_flIntensity": 40,
+          "m_flLightFOV": 20,
+          "m_flLinearAttenuation": 44,
+          "m_flNearZ": 604,
+          "m_flNoiseStrength": 60,
+          "m_flPlaneOffset": 72,
+          "m_flProjectionSize": 612,
+          "m_flQuadraticAttenuation": 48,
+          "m_flRotation": 616,
+          "m_flVolumetricIntensity": 56,
+          "m_hTargetEntity": 12,
+          "m_nNumPlanes": 68,
+          "m_nShadowQuality": 600,
+          "m_nSpotlightTextureFrame": 596
+        },
+        "metadata": [
+          {
+            "name": "m_hTargetEntity",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseEntity>"
+          },
+          {
+            "name": "m_bState",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bAlwaysUpdate",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flLightFOV",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_bEnableShadows",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bSimpleProjection",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bLightOnlyTarget",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bLightWorld",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bCameraSpace",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flBrightnessScale",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_LightColor",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flIntensity",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flLinearAttenuation",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flQuadraticAttenuation",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_bVolumetric",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flVolumetricIntensity",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flNoiseStrength",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flFlashlightTime",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_nNumPlanes",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_flPlaneOffset",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flColorTransitionTime",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flAmbient",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_SpotlightTextureName",
+            "type": "NetworkVarNames",
+            "type_name": "char"
+          },
+          {
+            "name": "m_nSpotlightTextureFrame",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_nShadowQuality",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_flNearZ",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flFarZ",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flProjectionSize",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flRotation",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_bFlipHorizontal",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": null
+      },
+      "CSMatchStats_t": {
+        "fields": {
+          "m_iEnemy3Ks": 108,
+          "m_iEnemy4Ks": 104,
+          "m_iEnemy5Ks": 100,
+          "m_iEnemyKnifeKills": 112,
+          "m_iEnemyTaserKills": 116
+        },
+        "metadata": [
+          {
+            "name": "m_iEnemy5Ks",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iEnemy4Ks",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iEnemy3Ks",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iEnemyKnifeKills",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iEnemyTaserKills",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          }
+        ],
+        "parent": "CSPerRoundStats_t"
+      },
+      "CSkeletonInstance": {
+        "fields": {
+          "m_bDirtyMotionType": 0,
+          "m_bDisableSolidCollisionsForHierarchy": 898,
+          "m_bIsAnimationEnabled": 896,
+          "m_bIsGeneratingLatchedParentSpaceState": 0,
+          "m_bUseParentRenderBounds": 897,
+          "m_materialGroup": 900,
+          "m_modelState": 352,
+          "m_nHitboxSet": 904
+        },
+        "metadata": [
+          {
+            "name": "m_modelState",
+            "type": "NetworkVarNames",
+            "type_name": "CModelState"
+          },
+          {
+            "name": "m_bIsAnimationEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bUseParentRenderBounds",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_materialGroup",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlStringToken"
+          },
+          {
+            "name": "m_nHitboxSet",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          }
+        ],
+        "parent": "CGameSceneNode"
+      },
+      "CTripWireFire": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseCSGrenade"
+      },
+      "CWeaponZoneRepulsor": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_BarnLight": {
+        "fields": {
+          "m_Color": 3160,
+          "m_LightStyleEvents": 3240,
+          "m_LightStyleString": 3200,
+          "m_LightStyleTargets": 3264,
+          "m_QueuedLightStyleStrings": 3216,
+          "m_StyleEvent": 3288,
+          "m_bContactShadow": 3532,
+          "m_bEnabled": 3152,
+          "m_bPrecomputedFieldsValid": 3596,
+          "m_fAlternateColorBrightness": 3560,
+          "m_flBounceScale": 3540,
+          "m_flBrightness": 3168,
+          "m_flBrightnessScale": 3172,
+          "m_flColorTemperature": 3164,
+          "m_flFadeSizeEnd": 3584,
+          "m_flFadeSizeStart": 3580,
+          "m_flFogScale": 3576,
+          "m_flFogStrength": 3568,
+          "m_flLightStyleStartTime": 3208,
+          "m_flLuminaireAnisotropy": 3192,
+          "m_flLuminaireSize": 3188,
+          "m_flMinRoughness": 3544,
+          "m_flRange": 3488,
+          "m_flShadowFadeSizeEnd": 3592,
+          "m_flShadowFadeSizeStart": 3588,
+          "m_flShape": 3456,
+          "m_flSkirt": 3468,
+          "m_flSkirtNear": 3472,
+          "m_flSoftX": 3460,
+          "m_flSoftY": 3464,
+          "m_hLightCookie": 3448,
+          "m_nBakeSpecularToCubemaps": 3504,
+          "m_nBakedShadowIndex": 3180,
+          "m_nBounceLight": 3536,
+          "m_nCastShadows": 3520,
+          "m_nColorMode": 3156,
+          "m_nDirectLight": 3176,
+          "m_nFog": 3564,
+          "m_nFogShadows": 3572,
+          "m_nLuminaireShape": 3184,
+          "m_nShadowMapSize": 3524,
+          "m_nShadowPriority": 3528,
+          "m_vAlternateColor": 3548,
+          "m_vBakeSpecularToCubemapsSize": 3508,
+          "m_vPrecomputedBoundsMaxs": 3612,
+          "m_vPrecomputedBoundsMins": 3600,
+          "m_vPrecomputedOBBAngles": 3636,
+          "m_vPrecomputedOBBExtent": 3648,
+          "m_vPrecomputedOBBOrigin": 3624,
+          "m_vShear": 3492,
+          "m_vSizeParams": 3476
+        },
+        "metadata": [
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nColorMode",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_Color",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flColorTemperature",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flBrightness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flBrightnessScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nDirectLight",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nBakedShadowIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLuminaireShape",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flLuminaireSize",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flLuminaireAnisotropy",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_LightStyleString",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlString"
+          },
+          {
+            "name": "m_flLightStyleStartTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_QueuedLightStyleStrings",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlString"
+          },
+          {
+            "name": "m_LightStyleEvents",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlString"
+          },
+          {
+            "name": "m_LightStyleTargets",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseModelEntity>"
+          },
+          {
+            "name": "m_hLightCookie",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_flShape",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flSoftX",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flSoftY",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flSkirt",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flSkirtNear",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vSizeParams",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_flRange",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vShear",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_nBakeSpecularToCubemaps",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vBakeSpecularToCubemapsSize",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_nCastShadows",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowMapSize",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nShadowPriority",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bContactShadow",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nBounceLight",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flBounceScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flMinRoughness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vAlternateColor",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_fAlternateColorBrightness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nFog",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flFogStrength",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nFogShadows",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flFogScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeSizeStart",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeSizeEnd",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowFadeSizeStart",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flShadowFadeSizeEnd",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bPrecomputedFieldsValid",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_vPrecomputedBoundsMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vPrecomputedBoundsMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vPrecomputedOBBOrigin",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vPrecomputedOBBAngles",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
+          },
+          {
+            "name": "m_vPrecomputedOBBExtent",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_BaseButton": {
+        "fields": {
+          "m_glowEntity": 3152,
+          "m_szDisplayText": 3160,
+          "m_usable": 3156
+        },
+        "metadata": [
+          {
+            "name": "m_glowEntity",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseModelEntity>"
+          },
+          {
+            "name": "m_usable",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_szDisplayText",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          }
+        ],
+        "parent": "C_BaseToggle"
+      },
+      "C_BaseCSGrenade": {
+        "fields": {
+          "m_bClientPredictDelete": 10504,
+          "m_bIsHeldByPlayer": 10506,
+          "m_bJumpThrow": 10508,
+          "m_bJustPulledPin": 10528,
+          "m_bPinPulled": 10507,
+          "m_bRedraw": 10505,
+          "m_bThrowAnimating": 10509,
+          "m_fDropTime": 10524,
+          "m_fThrowTime": 10512,
+          "m_flNextHoldFrac": 10536,
+          "m_flThrowStrength": 10516,
+          "m_flThrowStrengthApproach": 10520,
+          "m_hSwitchToWeaponAfterThrow": 10540,
+          "m_nNextHoldTick": 10532
+        },
+        "metadata": [
+          {
+            "name": "m_bRedraw",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIsHeldByPlayer",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bPinPulled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bJumpThrow",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bThrowAnimating",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_fThrowTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flThrowStrength",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flThrowStrengthApproach",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_fDropTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_bJustPulledPin",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nNextHoldTick",
+            "type": "NetworkVarNames",
+            "type_name": "GameTick_t"
+          },
+          {
+            "name": "m_flNextHoldFrac",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_hSwitchToWeaponAfterThrow",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CCSWeaponBase>"
+          }
+        ],
+        "parent": "C_CSWeaponBase"
+      },
+      "C_BaseCSGrenadeProjectile": {
+        "fields": {
+          "flNextTrailLineTime": 4256,
+          "m_arrTrajectoryTrailPointCreationTimes": 4304,
+          "m_arrTrajectoryTrailPoints": 4280,
+          "m_bCanCreateGrenadeTrail": 4261,
+          "m_bExplodeEffectBegan": 4260,
+          "m_flSpawnTime": 4240,
+          "m_flTrajectoryTrailEffectCreationTime": 4328,
+          "m_hSnapshotTrajectoryParticleSnapshot": 4272,
+          "m_nBounces": 4212,
+          "m_nExplodeEffectIndex": 4216,
+          "m_nExplodeEffectTickBegin": 4224,
+          "m_nSnapshotTrajectoryEffectIndex": 4264,
+          "m_vInitialPosition": 4188,
+          "m_vInitialVelocity": 4200,
+          "m_vecExplodeEffectOrigin": 4228,
+          "vecLastTrailLinePos": 4244
+        },
+        "metadata": [
+          {
+            "name": "m_vInitialPosition",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vInitialVelocity",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_nBounces",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nExplodeEffectIndex",
+            "type": "NetworkVarNames",
+            "type_name": "HParticleSystemDefinitionStrong"
+          },
+          {
+            "name": "m_nExplodeEffectTickBegin",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vecExplodeEffectOrigin",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          }
+        ],
+        "parent": "C_BaseGrenade"
+      },
+      "C_BaseClientUIEntity": {
+        "fields": {
+          "m_DialogXMLName": 3168,
+          "m_PanelClassName": 3176,
+          "m_PanelID": 3184,
+          "m_bEnabled": 3160
+        },
+        "metadata": [
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_DialogXMLName",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          },
+          {
+            "name": "m_PanelClassName",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          },
+          {
+            "name": "m_PanelID",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_BaseFlex": {
+        "fields": {
+          "m_CachedViewTarget": 3868,
+          "m_PhonemeClasses": 4016,
+          "m_bResetFlexWeightsOnModelChange": 3910,
+          "m_blinktime": 3888,
+          "m_blinktoggle": 3768,
+          "m_flBlinkAmount": 3904,
+          "m_flJawOpenAmount": 3900,
+          "m_flexWeight": 3720,
+          "m_iBlink": 3884,
+          "m_iEyeAttachment": 3909,
+          "m_iJawOpen": 3896,
+          "m_iMouthAttachment": 3908,
+          "m_mEyeOcclusionRendererCameraToBoneTransform": 3940,
+          "m_nEyeOcclusionRendererBone": 3936,
+          "m_nLastFlexUpdateFrameCount": 3864,
+          "m_nNextSceneEventId": 3880,
+          "m_prevblinktoggle": 3892,
+          "m_vEyeOcclusionRendererHalfExtent": 3988,
+          "m_vLookTargetPosition": 3744
+        },
+        "metadata": [
+          {
+            "name": "m_flexWeight",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_blinktoggle",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "CBaseAnimGraph"
+      },
+      "C_BaseFlex__Emphasized_Phoneme": {
+        "fields": {
+          "m_bBasechecked": 29,
+          "m_bRequired": 28,
+          "m_bValid": 30,
+          "m_flAmount": 24,
+          "m_sClassName": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "C_BaseGrenade": {
+        "fields": {
+          "m_DmgRadius": 4116,
+          "m_ExplosionSound": 4144,
+          "m_bHasWarnedAI": 4112,
+          "m_bIsLive": 4114,
+          "m_bIsSmokeGrenade": 4113,
+          "m_flDamage": 4128,
+          "m_flDetonateTime": 4120,
+          "m_flNextAttack": 4180,
+          "m_flWarnAITime": 4124,
+          "m_hOriginalThrower": 4184,
+          "m_hThrower": 4156,
+          "m_iszBounceSound": 4136
+        },
+        "metadata": [
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_bIsLive",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_DmgRadius",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flDetonateTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flDamage",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_hThrower",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CCSPlayerPawn>"
+          }
+        ],
+        "parent": "C_BaseFlex"
+      },
+      "C_BaseModelEntity": {
+        "fields": {
+          "m_CHitboxComponent": 2472,
+          "m_CRenderComponent": 2464,
+          "m_ClientOverrideTint": 3088,
+          "m_Collision": 2680,
+          "m_ConfigEntitiesToPropagateMaterialDecalsTo": 3008,
+          "m_Glow": 2856,
+          "m_bAllowFadeInView": 2562,
+          "m_bInitModelEffects": 2544,
+          "m_bIsStaticProp": 2545,
+          "m_bRenderToCubemaps": 2672,
+          "m_bUseClientOverrideTint": 3092,
+          "m_clrRender": 2563,
+          "m_fadeMaxDist": 2952,
+          "m_fadeMinDist": 2948,
+          "m_flDecalHealBloodRate": 2996,
+          "m_flDecalHealHeightRate": 3000,
+          "m_flFadeScale": 2956,
+          "m_flGlowBackfaceMult": 2944,
+          "m_flShadowStrength": 2960,
+          "m_iOldHealth": 2556,
+          "m_nAddDecal": 2968,
+          "m_nDecalsAdded": 2552,
+          "m_nLastAddDecal": 2548,
+          "m_nObjectCulling": 2964,
+          "m_nRenderFX": 2561,
+          "m_nRenderMode": 2560,
+          "m_pClientAlphaProperty": 3080,
+          "m_vDecalForwardAxis": 2984,
+          "m_vDecalPosition": 2972,
+          "m_vecRenderAttributes": 2568,
+          "m_vecViewOffset": 3032
+        },
+        "metadata": [
+          {
+            "name": "m_CRenderComponent",
+            "type": "NetworkVarNames",
+            "type_name": "CRenderComponent::Storage_t"
+          },
+          {
+            "name": "m_CHitboxComponent",
+            "type": "NetworkVarNames",
+            "type_name": "CHitboxComponent::Storage_t"
+          },
+          {
+            "name": "m_nRenderMode",
+            "type": "NetworkVarNames",
+            "type_name": "RenderMode_t"
+          },
+          {
+            "name": "m_nRenderFX",
+            "type": "NetworkVarNames",
+            "type_name": "RenderFx_t"
+          },
+          {
+            "name": "m_clrRender",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_vecRenderAttributes",
+            "type": "NetworkVarNames",
+            "type_name": "EntityRenderAttribute_t"
+          },
+          {
+            "name": "m_bRenderToCubemaps",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_Collision",
+            "type": "NetworkVarNames",
+            "type_name": "CCollisionProperty"
+          },
+          {
+            "name": "m_Glow",
+            "type": "NetworkVarNames",
+            "type_name": "CGlowProperty"
+          },
+          {
+            "name": "m_flGlowBackfaceMult",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_fadeMinDist",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_fadeMaxDist",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flFadeScale",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flShadowStrength",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_nObjectCulling",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nAddDecal",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vDecalPosition",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vDecalForwardAxis",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_flDecalHealBloodRate",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDecalHealHeightRate",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_ConfigEntitiesToPropagateMaterialDecalsTo",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseModelEntity>"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_BasePlayerWeapon": {
+        "fields": {
+          "m_flNextPrimaryAttackTickRatio": 9316,
+          "m_flNextSecondaryAttackTickRatio": 9324,
+          "m_iClip1": 9328,
+          "m_iClip2": 9332,
+          "m_nNextPrimaryAttackTick": 9312,
+          "m_nNextSecondaryAttackTick": 9320,
+          "m_pReserveAmmo": 9336
+        },
+        "metadata": [
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkUserGroupProxy",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_nNextPrimaryAttackTick",
+            "type": "NetworkVarNames",
+            "type_name": "GameTick_t"
+          },
+          {
+            "name": "m_flNextPrimaryAttackTickRatio",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_nNextSecondaryAttackTick",
+            "type": "NetworkVarNames",
+            "type_name": "GameTick_t"
+          },
+          {
+            "name": "m_flNextSecondaryAttackTickRatio",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_iClip1",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_iClip2",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_pReserveAmmo",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          }
+        ],
+        "parent": "C_EconEntity"
+      },
+      "C_BaseToggle": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_BaseTrigger": {
+        "fields": {
+          "m_bClientSidePredicted": 3153,
+          "m_bDisabled": 3152
+        },
+        "metadata": [
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_bDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bClientSidePredicted",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseToggle"
+      },
+      "C_CSGO_CounterTerroristTeamIntroCamera": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSGO_TeamPreviewCamera"
+      },
+      "C_CSGO_CounterTerroristWingmanIntroCamera": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSGO_TeamPreviewCamera"
+      },
+      "C_CSGO_EndOfMatchCamera": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSGO_TeamPreviewCamera"
+      },
+      "C_CSGO_EndOfMatchLineupEndpoint": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseEntity"
+      },
+      "C_CSGO_EndOfMatchLineupStart": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSGO_EndOfMatchLineupEndpoint"
+      },
+      "C_CSGO_MapPreviewCameraPath": {
+        "fields": {
+          "m_bConstantSpeed": 1754,
+          "m_bLoop": 1752,
+          "m_bVerticalFOV": 1753,
+          "m_flDuration": 1756,
+          "m_flPathDuration": 1828,
+          "m_flPathLength": 1824,
+          "m_flZFar": 1744,
+          "m_flZNear": 1748
+        },
+        "metadata": [],
+        "parent": "C_BaseEntity"
+      },
+      "C_CSGO_PreviewModel": {
+        "fields": {
+          "m_animgraph": 4112,
+          "m_animgraphCharacterModeString": 4120,
+          "m_defaultAnim": 4128,
+          "m_flInitialModelScale": 4140,
+          "m_nDefaultAnimLoopMode": 4136,
+          "m_sInitialWeaponState": 4144
+        },
+        "metadata": [],
+        "parent": "C_BaseFlex"
+      },
+      "C_CSGO_PreviewPlayer": {
+        "fields": {
+          "m_animgraph": 12992,
+          "m_animgraphCharacterModeString": 13000,
+          "m_flInitialModelScale": 13008
+        },
+        "metadata": [],
+        "parent": "C_CSPlayerPawn"
+      },
+      "C_CSGO_TeamIntroTerroristPosition": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSGO_TeamIntroCharacterPosition"
+      },
+      "C_CSPlayerPawn": {
+        "fields": {
+          "m_EconGloves": 6336,
+          "m_RetakesMVPBoostExtraUtility": 6296,
+          "m_aimPunchAngle": 5916,
+          "m_aimPunchAngleVel": 5928,
+          "m_aimPunchCache": 5952,
+          "m_aimPunchTickBase": 5940,
+          "m_aimPunchTickFraction": 5944,
+          "m_bHasFemaleVoice": 5864,
+          "m_bInBombZone": 5993,
+          "m_bInBuyZone": 5912,
+          "m_bInHostageRescueZone": 5992,
+          "m_bInLanding": 5984,
+          "m_bIsBuyMenuOpen": 5994,
+          "m_bLastHeadBoneTransformIsValid": 12936,
+          "m_bMustSyncRagdollState": 11281,
+          "m_bNeedToReApplyGloves": 6328,
+          "m_bOnGroundLastTick": 12944,
+          "m_bPrevDefuser": 5894,
+          "m_bPrevHelmet": 5895,
+          "m_bPreviouslyInBuyZone": 5913,
+          "m_bRagdollDamageHeadshot": 11376,
+          "m_bRetakesHasDefuseKit": 6288,
+          "m_bRetakesMVPLastRound": 6289,
+          "m_bSkipOneHeadConstraintUpdate": 12984,
+          "m_flHealthShotBoostExpirationTime": 5856,
+          "m_flLandingTime": 5988,
+          "m_flLandseconds": 5868,
+          "m_flLastFiredWeaponTime": 5860,
+          "m_flNextSprayDecalTime": 6000,
+          "m_flOldFallVelocity": 5872,
+          "m_flTimeOfLastInjury": 5996,
+          "m_iRetakesMVPBoostItem": 6292,
+          "m_iRetakesOffering": 6280,
+          "m_iRetakesOfferingCard": 6284,
+          "m_lastLandTime": 12940,
+          "m_nEconGlovesChanged": 11280,
+          "m_nPrevArmorVal": 5896,
+          "m_nPrevGrenadeAmmoCount": 5900,
+          "m_nRagdollDamageBone": 11284,
+          "m_pActionTrackingServices": 5848,
+          "m_pBulletServices": 5816,
+          "m_pBuyServices": 5832,
+          "m_pGlowServices": 5840,
+          "m_pHostageServices": 5824,
+          "m_qDeathEyeAngles": 12972,
+          "m_szLastPlaceName": 5876,
+          "m_szRagdollDamageWeaponName": 11312,
+          "m_unPreviousWeaponHash": 5904,
+          "m_unWeaponHash": 5908,
+          "m_vRagdollDamageForce": 11288,
+          "m_vRagdollDamagePosition": 11300,
+          "m_vRagdollServerOrigin": 11380
+        },
+        "metadata": [
+          {
+            "name": "m_pBulletServices",
+            "type": "NetworkVarNames",
+            "type_name": "CCSPlayer_BulletServices*"
+          },
+          {
+            "name": "m_pHostageServices",
+            "type": "NetworkVarNames",
+            "type_name": "CCSPlayer_HostageServices*"
+          },
+          {
+            "name": "m_pBuyServices",
+            "type": "NetworkVarNames",
+            "type_name": "CCSPlayer_BuyServices*"
+          },
+          {
+            "name": "m_pGlowServices",
+            "type": "NetworkVarNames",
+            "type_name": "CCSPlayer_GlowServices*"
+          },
+          {
+            "name": "m_pActionTrackingServices",
+            "type": "NetworkVarNames",
+            "type_name": "CCSPlayer_ActionTrackingServices*"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkVarTypeOverride",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_flHealthShotBoostExpirationTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_bHasFemaleVoice",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_szLastPlaceName",
+            "type": "NetworkVarNames",
+            "type_name": "char"
+          },
+          {
+            "name": "m_bInBuyZone",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_aimPunchAngle",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
+          },
+          {
+            "name": "m_aimPunchAngleVel",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
+          },
+          {
+            "name": "m_aimPunchTickBase",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_aimPunchTickFraction",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bInHostageRescueZone",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bInBombZone",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIsBuyMenuOpen",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flTimeOfLastInjury",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flNextSprayDecalTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_iRetakesOffering",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iRetakesOfferingCard",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bRetakesHasDefuseKit",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bRetakesMVPLastRound",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iRetakesMVPBoostItem",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_RetakesMVPBoostExtraUtility",
+            "type": "NetworkVarNames",
+            "type_name": "loadout_slot_t"
+          },
+          {
+            "name": "m_EconGloves",
+            "type": "NetworkVarNames",
+            "type_name": "CEconItemView"
+          },
+          {
+            "name": "m_nEconGlovesChanged",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nRagdollDamageBone",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vRagdollDamageForce",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vRagdollDamagePosition",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_szRagdollDamageWeaponName",
+            "type": "NetworkVarNames",
+            "type_name": "char"
+          },
+          {
+            "name": "m_bRagdollDamageHeadshot",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_vRagdollServerOrigin",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_qDeathEyeAngles",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
+          }
+        ],
+        "parent": "C_CSPlayerPawnBase"
+      },
+      "C_CSPlayerPawnBase": {
+        "fields": {
+          "m_ArmorValue": 5392,
+          "m_GunGameImmunityColor": 5053,
+          "m_angEyeAngles": 5400,
+          "m_angLastMuzzleFlashAngle": 5256,
+          "m_angShootAngleHistory": 4868,
+          "m_angStashedShootAngles": 4832,
+          "m_bCachedPlaneIsValid": 4773,
+          "m_bCanMoveDuringFreezePeriod": 5104,
+          "m_bClipHitStaticWorld": 4772,
+          "m_bDeferStartMusicOnWarmup": 5516,
+          "m_bFlashBuildUp": 5220,
+          "m_bFlashDspHasBeenCleared": 5221,
+          "m_bFlashScreenshotHasBeenGrabbed": 5222,
+          "m_bGrenadeParametersStashed": 4828,
+          "m_bGuardianShouldSprayCustomXMark": 5716,
+          "m_bGunGameImmunity": 5052,
+          "m_bHasDeathInfo": 5717,
+          "m_bHasMovedSinceSpawn": 5057,
+          "m_bHasNightVision": 5153,
+          "m_bHideTargetID": 5556,
+          "m_bHud_MiniScoreHidden": 5430,
+          "m_bHud_RadarHidden": 5431,
+          "m_bInNoDefuseArea": 5072,
+          "m_bIsDefusing": 5032,
+          "m_bIsGrabbingHostage": 5033,
+          "m_bIsRescuing": 5040,
+          "m_bIsScoped": 5024,
+          "m_bIsWalking": 5025,
+          "m_bKilledByHeadshot": 5736,
+          "m_bKilledByTaser": 5097,
+          "m_bNightVisionOn": 5152,
+          "m_bOldIsScoped": 5356,
+          "m_bResumeZoom": 5026,
+          "m_bScreenTearFrameCaptured": 5204,
+          "m_bShouldAutobuyDMWeapons": 5428,
+          "m_bShouldAutobuyNow": 5429,
+          "m_bStrafing": 5112,
+          "m_bSuppressGuardianTooFarWarningAudio": 5096,
+          "m_bWaitForNoAttack": 5080,
+          "m_cycleLatch": 5520,
+          "m_delayTargetIDTimer": 5448,
+          "m_entitySpottedState": 5688,
+          "m_fImmuneToGunGameDamageTime": 5044,
+          "m_fImmuneToGunGameDamageTimeLast": 5048,
+          "m_fMolotovDamageTime": 5064,
+          "m_fMolotovUseTime": 5060,
+          "m_fNextThinkPushAway": 5424,
+          "m_fRenderingClipPlane": 4728,
+          "m_flClientDeathTime": 5196,
+          "m_flCurrentMusicStartTime": 5508,
+          "m_flDeathCCWeight": 5352,
+          "m_flDeathInfoTime": 5720,
+          "m_flDetectedByEnemySensorTime": 5088,
+          "m_flEmitSoundTime": 5120,
+          "m_flFlashBangTime": 5208,
+          "m_flFlashDuration": 5228,
+          "m_flFlashMaxAlpha": 5224,
+          "m_flFlashOverlayAlpha": 5216,
+          "m_flFlashScreenshotAlpha": 5212,
+          "m_flGuardianTooFarDistFrac": 5084,
+          "m_flHealthFadeAlpha": 5280,
+          "m_flHealthFadeValue": 5276,
+          "m_flHitHeading": 5160,
+          "m_flLastCollisionCeiling": 4788,
+          "m_flLastCollisionCeilingChangeTime": 4792,
+          "m_flLastSmokeAge": 5564,
+          "m_flLastSmokeOverlayAlpha": 5560,
+          "m_flLastSpawnTimeIndex": 5116,
+          "m_flLowerBodyYawTarget": 5108,
+          "m_flMusicRoundStartTime": 5512,
+          "m_flNextGuardianTooFarWarning": 5092,
+          "m_flNextMagDropTime": 5592,
+          "m_flNightVisionAlpha": 5200,
+          "m_flPrevMatchEndTime": 5364,
+          "m_flPrevRoundEndTime": 5360,
+          "m_flProgressBarStartTime": 5140,
+          "m_flSlopeDropHeight": 4984,
+          "m_flSlopeDropOffset": 4968,
+          "m_flVelocityModifier": 5156,
+          "m_grenadeParameterStashTime": 4824,
+          "m_hMuzzleFlashShape": 5268,
+          "m_hOriginalController": 5740,
+          "m_holdTargetIDTimer": 5480,
+          "m_iAddonBits": 5124,
+          "m_iBlockingUseActionInProgress": 5036,
+          "m_iDirection": 5144,
+          "m_iHealthBarRenderMaskIndex": 5272,
+          "m_iIDEntIndex": 5444,
+          "m_iMoveState": 5100,
+          "m_iOldIDEntIndex": 5476,
+          "m_iPlayerState": 5028,
+          "m_iPrimaryAddon": 5128,
+          "m_iProgressBarDuration": 5136,
+          "m_iSecondaryAddon": 5132,
+          "m_iShotsFired": 5148,
+          "m_iStartAccount": 5168,
+          "m_iTargetedWeaponEntIndex": 5472,
+          "m_iThrowGrenadeCounter": 5076,
+          "m_ignoreLadderJumpTime": 5288,
+          "m_ladderSurpressionTimer": 5296,
+          "m_lastLadderNormal": 5320,
+          "m_lastLadderPos": 5332,
+          "m_lastStandingPos": 5232,
+          "m_nDeathCamMusic": 5440,
+          "m_nHeavyAssaultSuitCooldownRemaining": 5388,
+          "m_nHitBodyPart": 5164,
+          "m_nLastClipPlaneSetupFrame": 4744,
+          "m_nLastConcurrentKilled": 5436,
+          "m_nLastKillerIndex": 5432,
+          "m_nLastMagDropAttachmentIndex": 5596,
+          "m_nMyCollisionGroup": 5284,
+          "m_nPlayerInfernoBodyFx": 5584,
+          "m_nPlayerInfernoFootFx": 5588,
+          "m_nPlayerSmokedFx": 5580,
+          "m_nSurvivalTeamNumber": 5712,
+          "m_nWhichBombZone": 5068,
+          "m_pClippingWeapon": 4776,
+          "m_pPingServices": 4704,
+          "m_pViewModelServices": 4712,
+          "m_previousPlayerState": 4784,
+          "m_serverIntendedCycle": 5524,
+          "m_thirdPersonHeading": 4944,
+          "m_unCurrentEquipmentValue": 5368,
+          "m_unFreezetimeEndEquipmentValue": 5372,
+          "m_unRoundStartEquipmentValue": 5370,
+          "m_vHeadConstraintOffset": 5000,
+          "m_vLastSmokeOverlayColor": 5568,
+          "m_vecBulletHitModels": 5600,
+          "m_vecDeathInfoOrigin": 5724,
+          "m_vecIntroStartEyePosition": 5172,
+          "m_vecIntroStartPlayerForward": 5184,
+          "m_vecLastAliveLocalVelocity": 5648,
+          "m_vecLastClipCameraForward": 4760,
+          "m_vecLastClipCameraPos": 4748,
+          "m_vecLastMuzzleFlashPos": 5244,
+          "m_vecPickupModelSlerpers": 5624,
+          "m_vecPlayerPatchEconIndices": 5528,
+          "m_vecStashedGrenadeThrowPosition": 4844,
+          "m_vecStashedVelocity": 4856,
+          "m_vecThirdPersonViewPositionOverride": 5376,
+          "m_vecThrowPositionHistory": 4892,
+          "m_vecVelocityHistory": 4916
+        },
+        "metadata": [
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_pPingServices",
+            "type": "NetworkVarNames",
+            "type_name": "CCSPlayer_PingServices*"
+          },
+          {
+            "name": "m_pViewModelServices",
+            "type": "NetworkVarNames",
+            "type_name": "CPlayer_ViewModelServices*"
+          },
+          {
+            "name": "m_bIsScoped",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIsWalking",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bResumeZoom",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iPlayerState",
+            "type": "NetworkVarNames",
+            "type_name": "CSPlayerState"
+          },
+          {
+            "name": "m_bIsDefusing",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIsGrabbingHostage",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iBlockingUseActionInProgress",
+            "type": "NetworkVarNames",
+            "type_name": "CSPlayerBlockingUseAction_t"
+          },
+          {
+            "name": "m_bIsRescuing",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_fImmuneToGunGameDamageTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_bGunGameImmunity",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_GunGameImmunityColor",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_bHasMovedSinceSpawn",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_fMolotovUseTime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_fMolotovDamageTime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nWhichBombZone",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bInNoDefuseArea",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iThrowGrenadeCounter",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bWaitForNoAttack",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flGuardianTooFarDistFrac",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDetectedByEnemySensorTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_bKilledByTaser",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iMoveState",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bCanMoveDuringFreezePeriod",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flLowerBodyYawTarget",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bStrafing",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flEmitSoundTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_iAddonBits",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iPrimaryAddon",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iSecondaryAddon",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iProgressBarDuration",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flProgressBarStartTime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_iDirection",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iShotsFired",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bNightVisionOn",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bHasNightVision",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flVelocityModifier",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flHitHeading",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nHitBodyPart",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iStartAccount",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flFlashMaxAlpha",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFlashDuration",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_unCurrentEquipmentValue",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_unRoundStartEquipmentValue",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_unFreezetimeEndEquipmentValue",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_nHeavyAssaultSuitCooldownRemaining",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_ArmorValue",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_bHud_MiniScoreHidden",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bHud_RadarHidden",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nLastKillerIndex",
+            "type": "NetworkVarNames",
+            "type_name": "CEntityIndex"
+          },
+          {
+            "name": "m_nLastConcurrentKilled",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nDeathCamMusic",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_cycleLatch",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vecPlayerPatchEconIndices",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_bHideTargetID",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_entitySpottedState",
+            "type": "NetworkVarNames",
+            "type_name": "EntitySpottedState_t"
+          },
+          {
+            "name": "m_nSurvivalTeamNumber",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bKilledByHeadshot",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_hOriginalController",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CCSPlayerController>"
+          }
+        ],
+        "parent": "C_BasePlayerPawn"
+      },
+      "C_CSPlayerResource": {
+        "fields": {
+          "m_bEndMatchNextMapAllVoted": 1888,
+          "m_bHostageAlive": 1744,
+          "m_bombsiteCenterA": 1816,
+          "m_bombsiteCenterB": 1828,
+          "m_foundGoalPositions": 1889,
+          "m_hostageRescueX": 1840,
+          "m_hostageRescueY": 1856,
+          "m_hostageRescueZ": 1872,
+          "m_iHostageEntityIDs": 1768,
+          "m_isHostageFollowingSomeone": 1756
+        },
+        "metadata": [
+          {
+            "name": "m_bHostageAlive",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_isHostageFollowingSomeone",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iHostageEntityIDs",
+            "type": "NetworkVarNames",
+            "type_name": "CEntityIndex"
+          },
+          {
+            "name": "m_bombsiteCenterA",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_bombsiteCenterB",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_hostageRescueX",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_hostageRescueY",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_hostageRescueZ",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bEndMatchNextMapAllVoted",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_ClientRagdoll": {
+        "fields": {
+          "m_bFadeOut": 3704,
+          "m_bFadingOut": 3734,
+          "m_bImportant": 3705,
+          "m_bReleaseRagdoll": 3732,
+          "m_flEffectTime": 3708,
+          "m_flScaleEnd": 3736,
+          "m_flScaleTimeEnd": 3816,
+          "m_flScaleTimeStart": 3776,
+          "m_gibDespawnTime": 3712,
+          "m_iCurrentFriction": 3716,
+          "m_iEyeAttachment": 3733,
+          "m_iFrictionAnimState": 3728,
+          "m_iMaxFriction": 3724,
+          "m_iMinFriction": 3720
+        },
+        "metadata": [],
+        "parent": "CBaseAnimGraph"
+      },
+      "C_ColorCorrection": {
+        "fields": {
+          "m_MaxFalloff": 1760,
+          "m_MinFalloff": 1756,
+          "m_bClientSide": 2294,
+          "m_bEnabled": 2292,
+          "m_bEnabledOnClient": 2296,
+          "m_bExclusive": 2295,
+          "m_bFadingIn": 2304,
+          "m_bMaster": 2293,
+          "m_flCurWeight": 1776,
+          "m_flCurWeightOnClient": 2300,
+          "m_flFadeDuration": 2316,
+          "m_flFadeInDuration": 1764,
+          "m_flFadeOutDuration": 1768,
+          "m_flFadeStartTime": 2312,
+          "m_flFadeStartWeight": 2308,
+          "m_flMaxWeight": 1772,
+          "m_netlookupFilename": 1780,
+          "m_vecOrigin": 1744
+        },
+        "metadata": [
+          {
+            "name": "MNetworkIncludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_MinFalloff",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_MaxFalloff",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flFadeInDuration",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flFadeOutDuration",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flMaxWeight",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flCurWeight",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_netlookupFilename",
+            "type": "NetworkVarNames",
+            "type_name": "char"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bMaster",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bClientSide",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bExclusive",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_ColorCorrectionVolume": {
+        "fields": {
+          "m_FadeDuration": 3180,
+          "m_LastEnterTime": 3160,
+          "m_LastEnterWeight": 3156,
+          "m_LastExitTime": 3168,
+          "m_LastExitWeight": 3164,
+          "m_MaxWeight": 3176,
+          "m_Weight": 3184,
+          "m_bEnabled": 3172,
+          "m_lookupFilename": 3188
+        },
+        "metadata": [
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_MaxWeight",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_FadeDuration",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_Weight",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_lookupFilename",
+            "type": "NetworkVarNames",
+            "type_name": "char"
+          }
+        ],
+        "parent": "C_BaseTrigger"
+      },
+      "C_DecoyProjectile": {
+        "fields": {
+          "m_flTimeParticleEffectSpawn": 4376,
+          "m_nClientLastKnownDecoyShotTick": 4336,
+          "m_nDecoyShotTick": 4332
+        },
+        "metadata": [
+          {
+            "name": "m_nDecoyShotTick",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          }
+        ],
+        "parent": "C_BaseCSGrenadeProjectile"
+      },
+      "C_DynamicPropAlias_cable_dynamic": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_DynamicProp"
+      },
+      "C_EconWearable": {
+        "fields": {
+          "m_bAlwaysAllow": 9316,
+          "m_nForceSkin": 9312
+        },
+        "metadata": [],
+        "parent": "C_EconEntity"
+      },
+      "C_EnvCombinedLightProbeVolume": {
+        "fields": {
+          "m_Color": 5928,
+          "m_bCustomCubemapTexture": 5944,
+          "m_bEnabled": 6089,
+          "m_bMoveable": 6008,
+          "m_bStartDisabled": 6024,
+          "m_flBrightness": 5932,
+          "m_flEdgeFadeDist": 6028,
+          "m_hCubemapTexture": 5936,
+          "m_hLightProbeDirectLightIndicesTexture": 5960,
+          "m_hLightProbeDirectLightScalarsTexture": 5968,
+          "m_hLightProbeDirectLightShadowsTexture": 5976,
+          "m_hLightProbeTexture": 5952,
+          "m_nEnvCubeMapArrayIndex": 6016,
+          "m_nHandshake": 6012,
+          "m_nLightProbeAtlasX": 6056,
+          "m_nLightProbeAtlasY": 6060,
+          "m_nLightProbeAtlasZ": 6064,
+          "m_nLightProbeSizeX": 6044,
+          "m_nLightProbeSizeY": 6048,
+          "m_nLightProbeSizeZ": 6052,
+          "m_nPriority": 6020,
+          "m_vBoxMaxs": 5996,
+          "m_vBoxMins": 5984,
+          "m_vEdgeFadeDists": 6032
+        },
+        "metadata": [
+          {
+            "name": "m_Color",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flBrightness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_hCubemapTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_bCustomCubemapTexture",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_hLightProbeTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_hLightProbeDirectLightIndicesTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_hLightProbeDirectLightScalarsTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_hLightProbeDirectLightShadowsTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_vBoxMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vBoxMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_bMoveable",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nHandshake",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nEnvCubeMapArrayIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nPriority",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bStartDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flEdgeFadeDist",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vEdgeFadeDists",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_nLightProbeSizeX",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeSizeY",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeSizeZ",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeAtlasX",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeAtlasY",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeAtlasZ",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_EnvCubemap": {
+        "fields": {
+          "m_bCopyDiffuseFromDefaultCubemap": 1952,
+          "m_bCustomCubemapTexture": 1880,
+          "m_bDefaultEnvMap": 1949,
+          "m_bDefaultSpecEnvMap": 1950,
+          "m_bEnabled": 1968,
+          "m_bIndoorCubeMap": 1951,
+          "m_bMoveable": 1912,
+          "m_bStartDisabled": 1948,
+          "m_flDiffuseScale": 1944,
+          "m_flEdgeFadeDist": 1928,
+          "m_flInfluenceRadius": 1884,
+          "m_hCubemapTexture": 1872,
+          "m_nEnvCubeMapArrayIndex": 1920,
+          "m_nHandshake": 1916,
+          "m_nPriority": 1924,
+          "m_vBoxProjectMaxs": 1900,
+          "m_vBoxProjectMins": 1888,
+          "m_vEdgeFadeDists": 1932
+        },
+        "metadata": [
+          {
+            "name": "m_hCubemapTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_bCustomCubemapTexture",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flInfluenceRadius",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vBoxProjectMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vBoxProjectMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_bMoveable",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nHandshake",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nEnvCubeMapArrayIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nPriority",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flEdgeFadeDist",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_vEdgeFadeDists",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_flDiffuseScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bStartDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bDefaultEnvMap",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bDefaultSpecEnvMap",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIndoorCubeMap",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bCopyDiffuseFromDefaultCubemap",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_EnvCubemapBox": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_EnvCubemap"
+      },
+      "C_EnvDecal": {
+        "fields": {
+          "m_bProjectOnCharacters": 3177,
+          "m_bProjectOnWater": 3178,
+          "m_bProjectOnWorld": 3176,
+          "m_flDepth": 3168,
+          "m_flDepthSortBias": 3180,
+          "m_flHeight": 3164,
+          "m_flWidth": 3160,
+          "m_hDecalMaterial": 3152,
+          "m_nRenderOrder": 3172
+        },
+        "metadata": [
+          {
+            "name": "m_hDecalMaterial",
+            "type": "NetworkVarNames",
+            "type_name": "HMaterialStrong"
+          },
+          {
+            "name": "m_flWidth",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flHeight",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDepth",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nRenderOrder",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_bProjectOnWorld",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bProjectOnCharacters",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bProjectOnWater",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flDepthSortBias",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_EnvLightProbeVolume": {
+        "fields": {
+          "m_bEnabled": 5905,
+          "m_bMoveable": 5856,
+          "m_bStartDisabled": 5868,
+          "m_hLightProbeDirectLightIndicesTexture": 5808,
+          "m_hLightProbeDirectLightScalarsTexture": 5816,
+          "m_hLightProbeDirectLightShadowsTexture": 5824,
+          "m_hLightProbeTexture": 5800,
+          "m_nHandshake": 5860,
+          "m_nLightProbeAtlasX": 5884,
+          "m_nLightProbeAtlasY": 5888,
+          "m_nLightProbeAtlasZ": 5892,
+          "m_nLightProbeSizeX": 5872,
+          "m_nLightProbeSizeY": 5876,
+          "m_nLightProbeSizeZ": 5880,
+          "m_nPriority": 5864,
+          "m_vBoxMaxs": 5844,
+          "m_vBoxMins": 5832
+        },
+        "metadata": [
+          {
+            "name": "m_hLightProbeTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_hLightProbeDirectLightIndicesTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_hLightProbeDirectLightScalarsTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_hLightProbeDirectLightShadowsTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_vBoxMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vBoxMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_bMoveable",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nHandshake",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nPriority",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bStartDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nLightProbeSizeX",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeSizeY",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeSizeZ",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeAtlasX",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeAtlasY",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nLightProbeAtlasZ",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_EnvParticleGlow": {
+        "fields": {
+          "m_ColorTint": 4620,
+          "m_flAlphaScale": 4608,
+          "m_flRadiusScale": 4612,
+          "m_flSelfIllumScale": 4616,
+          "m_hTextureOverride": 4624
+        },
+        "metadata": [
+          {
+            "name": "m_flAlphaScale",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flRadiusScale",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flSelfIllumScale",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_ColorTint",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_hTextureOverride",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          }
+        ],
+        "parent": "C_ParticleSystem"
+      },
+      "C_EnvProjectedTexture": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_ModelPointEntity"
+      },
+      "C_EnvSky": {
+        "fields": {
+          "m_bEnabled": 3204,
+          "m_bStartDisabled": 3168,
+          "m_flBrightnessScale": 3180,
+          "m_flFogMaxEnd": 3200,
+          "m_flFogMaxStart": 3196,
+          "m_flFogMinEnd": 3192,
+          "m_flFogMinStart": 3188,
+          "m_hSkyMaterial": 3152,
+          "m_hSkyMaterialLightingOnly": 3160,
+          "m_nFogType": 3184,
+          "m_vTintColor": 3169,
+          "m_vTintColorLightingOnly": 3173
+        },
+        "metadata": [
+          {
+            "name": "m_hSkyMaterial",
+            "type": "NetworkVarNames",
+            "type_name": "HMaterialStrong"
+          },
+          {
+            "name": "m_hSkyMaterialLightingOnly",
+            "type": "NetworkVarNames",
+            "type_name": "HMaterialStrong"
+          },
+          {
+            "name": "m_bStartDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_vTintColor",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_vTintColorLightingOnly",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flBrightnessScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nFogType",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_flFogMinStart",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogMinEnd",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogMaxStart",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogMaxEnd",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_EnvVolumetricFogController": {
+        "fields": {
+          "m_bActive": 1808,
+          "m_bEnableIndirect": 1849,
+          "m_bFirstTime": 1868,
+          "m_bIsMaster": 1850,
+          "m_bStartDisabled": 1848,
+          "m_flAnisotropy": 1748,
+          "m_flDefaultAnisotropy": 1836,
+          "m_flDefaultDrawDistance": 1844,
+          "m_flDefaultScattering": 1840,
+          "m_flDrawDistance": 1756,
+          "m_flFadeInEnd": 1764,
+          "m_flFadeInStart": 1760,
+          "m_flFadeSpeed": 1752,
+          "m_flIndirectStrength": 1768,
+          "m_flScattering": 1744,
+          "m_flStartAnisoTime": 1812,
+          "m_flStartAnisotropy": 1824,
+          "m_flStartDrawDistance": 1832,
+          "m_flStartDrawDistanceTime": 1820,
+          "m_flStartScatterTime": 1816,
+          "m_flStartScattering": 1828,
+          "m_hFogIndirectTexture": 1856,
+          "m_nForceRefreshCount": 1864,
+          "m_nIndirectTextureDimX": 1772,
+          "m_nIndirectTextureDimY": 1776,
+          "m_nIndirectTextureDimZ": 1780,
+          "m_vBoxMaxs": 1796,
+          "m_vBoxMins": 1784
+        },
+        "metadata": [
+          {
+            "name": "m_flScattering",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flAnisotropy",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeSpeed",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDrawDistance",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeInStart",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeInEnd",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flIndirectStrength",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_nIndirectTextureDimX",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nIndirectTextureDimY",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nIndirectTextureDimZ",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vBoxMins",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vBoxMaxs",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_bActive",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flStartAnisoTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flStartScatterTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flStartDrawDistanceTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_flStartAnisotropy",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flStartScattering",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flStartDrawDistance",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDefaultAnisotropy",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDefaultScattering",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flDefaultDrawDistance",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bStartDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bEnableIndirect",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIsMaster",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_hFogIndirectTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_nForceRefreshCount",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_EnvWind": {
+        "fields": {
+          "m_EnvWindShared": 1744
+        },
+        "metadata": [
+          {
+            "name": "m_EnvWindShared",
+            "type": "NetworkVarNames",
+            "type_name": "CEnvWindShared"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_EnvWindShared": {
+        "fields": {
+          "m_CurrentSwayVector": 80,
+          "m_PrevSwayVector": 92,
+          "m_bGusting": 132,
+          "m_currentWindVector": 68,
+          "m_flAveWindSpeed": 128,
+          "m_flGustDuration": 36,
+          "m_flInitialWindSpeed": 108,
+          "m_flMaxGustDelay": 32,
+          "m_flMinGustDelay": 28,
+          "m_flSimTime": 120,
+          "m_flStartTime": 8,
+          "m_flSwayTime": 116,
+          "m_flSwitchTime": 124,
+          "m_flVariationTime": 112,
+          "m_flWindAngleVariation": 136,
+          "m_flWindSpeed": 64,
+          "m_flWindSpeedVariation": 140,
+          "m_iEntIndex": 144,
+          "m_iGustDirChange": 40,
+          "m_iInitialWindDir": 104,
+          "m_iMaxGust": 26,
+          "m_iMaxWind": 18,
+          "m_iMinGust": 24,
+          "m_iMinWind": 16,
+          "m_iWindDir": 60,
+          "m_iWindSeed": 12,
+          "m_iszGustSound": 56,
+          "m_location": 44,
+          "m_windRadius": 20
+        },
+        "metadata": [
+          {
+            "name": "m_flStartTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_iWindSeed",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_iMinWind",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_iMaxWind",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_windRadius",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_iMinGust",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_iMaxGust",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_flMinGustDelay",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flMaxGustDelay",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_flGustDuration",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_iGustDirChange",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_location",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_iInitialWindDir",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_flInitialWindSpeed",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          }
+        ],
+        "parent": null
+      },
+      "C_FireFromAboveSprite": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_Sprite"
+      },
+      "C_Fists": {
+        "fields": {
+          "m_bPlayingUninterruptableAct": 10504,
+          "m_nUninterruptableActivity": 10508
+        },
+        "metadata": [
+          {
+            "name": "m_bPlayingUninterruptableAct",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nUninterruptableActivity",
+            "type": "NetworkVarNames",
+            "type_name": "PlayerAnimEvent_t"
+          }
+        ],
+        "parent": "C_CSWeaponBase"
+      },
+      "C_FuncMonitor": {
+        "fields": {
+          "m_bDraw3DSkybox": 3181,
+          "m_bEnabled": 3180,
+          "m_bRenderShadows": 3164,
+          "m_bUseUniqueColorTarget": 3165,
+          "m_brushModelName": 3168,
+          "m_hTargetCamera": 3176,
+          "m_nResolutionEnum": 3160,
+          "m_targetCamera": 3152
+        },
+        "metadata": [
+          {
+            "name": "m_targetCamera",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlString"
+          },
+          {
+            "name": "m_nResolutionEnum",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bRenderShadows",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bUseUniqueColorTarget",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_brushModelName",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlString"
+          },
+          {
+            "name": "m_hTargetCamera",
+            "type": "NetworkVarNames",
+            "type_name": "EHANDLE"
+          },
+          {
+            "name": "m_bEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bDraw3DSkybox",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_FuncBrush"
+      },
+      "C_FuncTrackTrain": {
+        "fields": {
+          "m_flLineLength": 3160,
+          "m_flRadius": 3156,
+          "m_nLongAxis": 3152
+        },
+        "metadata": [],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_GlobalLight": {
+        "fields": {
+          "m_WindClothForceHandle": 2960
+        },
+        "metadata": [],
+        "parent": "C_BaseEntity"
+      },
+      "C_GradientFog": {
+        "fields": {
+          "m_bGradientFogNeedsTextures": 1802,
+          "m_bHeightFogEnabled": 1760,
+          "m_bIsEnabled": 1801,
+          "m_bStartDisabled": 1800,
+          "m_flFadeTime": 1796,
+          "m_flFarZ": 1772,
+          "m_flFogEndDistance": 1756,
+          "m_flFogEndHeight": 1768,
+          "m_flFogFalloffExponent": 1780,
+          "m_flFogMaxOpacity": 1776,
+          "m_flFogStartDistance": 1752,
+          "m_flFogStartHeight": 1764,
+          "m_flFogStrength": 1792,
+          "m_flFogVerticalExponent": 1784,
+          "m_fogColor": 1788,
+          "m_hGradientFogTexture": 1744
+        },
+        "metadata": [
+          {
+            "name": "m_hGradientFogTexture",
+            "type": "NetworkVarNames",
+            "type_name": "HRenderTextureStrong"
+          },
+          {
+            "name": "m_flFogStartDistance",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogEndDistance",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bHeightFogEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flFogStartHeight",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogEndHeight",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFarZ",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogMaxOpacity",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogFalloffExponent",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFogVerticalExponent",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_fogColor",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_flFogStrength",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flFadeTime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bStartDisabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bIsEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_HEGrenade": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseCSGrenade"
+      },
+      "C_Inferno": {
+        "fields": {
+          "m_BurnNormal": 4820,
+          "m_bFireIsBurning": 4756,
+          "m_bInPostEffectTime": 5600,
+          "m_blosCheck": 33268,
+          "m_drawableCount": 33264,
+          "m_fireCount": 5588,
+          "m_fireParentPositions": 3988,
+          "m_firePositions": 3220,
+          "m_flLastGrassBurnThink": 33308,
+          "m_lastFireCount": 5604,
+          "m_maxBounds": 33296,
+          "m_maxFireHalfWidth": 33276,
+          "m_maxFireHeight": 33280,
+          "m_minBounds": 33284,
+          "m_nFireEffectTickBegin": 5608,
+          "m_nFireLifetime": 5596,
+          "m_nInfernoType": 5592,
+          "m_nfxFireDamageEffect": 3216,
+          "m_nlosperiod": 33272
+        },
+        "metadata": [
+          {
+            "name": "m_firePositions",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_fireParentPositions",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_bFireIsBurning",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_BurnNormal",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_fireCount",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nInfernoType",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nFireLifetime",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bInPostEffectTime",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nFireEffectTickBegin",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_InfoInstructorHintHostageRescueZone": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_PointEntity"
+      },
+      "C_ItemDogtags": {
+        "fields": {
+          "m_KillingPlayer": 9576,
+          "m_OwningPlayer": 9572
+        },
+        "metadata": [
+          {
+            "name": "m_OwningPlayer",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CCSPlayerPawn>"
+          },
+          {
+            "name": "m_KillingPlayer",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CCSPlayerPawn>"
+          }
+        ],
+        "parent": "C_Item"
+      },
+      "C_Item_Healthshot": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_WeaponBaseItem"
+      },
+      "C_Knife": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBase"
+      },
+      "C_LightDirectionalEntity": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_LightEntity"
+      },
+      "C_LightEntity": {
+        "fields": {
+          "m_CLightComponent": 3152
+        },
+        "metadata": [
+          {
+            "name": "m_CLightComponent",
+            "type": "NetworkVarNames",
+            "type_name": "CLightComponent::Storage_t"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_LightSpotEntity": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_LightEntity"
+      },
+      "C_MolotovGrenade": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseCSGrenade"
+      },
+      "C_PathParticleRope": {
+        "fields": {
+          "m_ColorTint": 1796,
+          "m_PathNodes_Color": 1888,
+          "m_PathNodes_Name": 1760,
+          "m_PathNodes_PinEnabled": 1912,
+          "m_PathNodes_Position": 1816,
+          "m_PathNodes_RadiusScale": 1936,
+          "m_PathNodes_TangentIn": 1840,
+          "m_PathNodes_TangentOut": 1864,
+          "m_bStartActive": 1744,
+          "m_flMaxSimulationTime": 1748,
+          "m_flParticleSpacing": 1784,
+          "m_flRadius": 1792,
+          "m_flSlack": 1788,
+          "m_iEffectIndex": 1808,
+          "m_iszEffectName": 1752,
+          "m_nEffectState": 1800
+        },
+        "metadata": [
+          {
+            "name": "m_flParticleSpacing",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flSlack",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flRadius",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_ColorTint",
+            "type": "NetworkVarNames",
+            "type_name": "Color"
+          },
+          {
+            "name": "m_nEffectState",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iEffectIndex",
+            "type": "NetworkVarNames",
+            "type_name": "HParticleSystemDefinitionStrong"
+          },
+          {
+            "name": "m_PathNodes_Position",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_PathNodes_TangentIn",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_PathNodes_TangentOut",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_PathNodes_Color",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_PathNodes_PinEnabled",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_PathNodes_RadiusScale",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_PhysicsPropMultiplayer": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_PhysicsProp"
+      },
+      "C_PickUpModelSlerper": {
+        "fields": {
+          "m_angOriginal": 3716,
+          "m_angRandom": 3744,
+          "m_flTimePickedUp": 3712,
+          "m_hItem": 3708,
+          "m_hPlayerParent": 3704,
+          "m_vecPosOriginal": 3728
+        },
+        "metadata": [],
+        "parent": "CBaseAnimGraph"
+      },
+      "C_PointCameraVFOV": {
+        "fields": {
+          "m_flVerticalFOV": 1840
+        },
+        "metadata": [],
+        "parent": "C_PointCamera"
+      },
+      "C_PostProcessingVolume": {
+        "fields": {
+          "m_bExposureControl": 3221,
+          "m_bMaster": 3220,
+          "m_flExposureCompensation": 3204,
+          "m_flExposureFadeSpeedDown": 3212,
+          "m_flExposureFadeSpeedUp": 3208,
+          "m_flFadeDuration": 3184,
+          "m_flMaxExposure": 3200,
+          "m_flMaxLogExposure": 3192,
+          "m_flMinExposure": 3196,
+          "m_flMinLogExposure": 3188,
+          "m_flRate": 3224,
+          "m_flTonemapEVSmoothingRange": 3216,
+          "m_flTonemapMinAvgLum": 3236,
+          "m_flTonemapPercentBrightPixels": 3232,
+          "m_flTonemapPercentTarget": 3228,
+          "m_hPostSettings": 3176
+        },
+        "metadata": [
+          {
+            "name": "m_hPostSettings",
+            "type": "NetworkVarNames",
+            "type_name": "HPostProcessingStrong"
+          },
+          {
+            "name": "m_flFadeDuration",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flMinLogExposure",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flMaxLogExposure",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flMinExposure",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flMaxExposure",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flExposureCompensation",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flExposureFadeSpeedUp",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flExposureFadeSpeedDown",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapEVSmoothingRange",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bMaster",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bExposureControl",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flRate",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapPercentTarget",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapPercentBrightPixels",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapMinAvgLum",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "C_BaseTrigger"
+      },
+      "C_Precipitation": {
+        "fields": {
+          "m_bActiveParticlePrecipEmitter": 3224,
+          "m_bHasSimulatedSinceLastSceneObjectUpdate": 3226,
+          "m_bParticlePrecipInitialized": 3225,
+          "m_flDensity": 3156,
+          "m_flParticleInnerDist": 3168,
+          "m_nAvailableSheetSequencesMaxIndex": 3228,
+          "m_pParticleDef": 3176,
+          "m_tParticlePrecipTraceTimer": 3216
+        },
+        "metadata": [],
+        "parent": "C_BaseTrigger"
+      },
+      "C_PrecipitationBlocker": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_PredictedViewModel": {
+        "fields": {
+          "m_currentSpeed": 3832,
+          "m_targetSpeed": 3820,
+          "m_vPredictedLagOffset": 3808
+        },
+        "metadata": [],
+        "parent": "C_BaseViewModel"
+      },
+      "C_PropDoorRotating": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BasePropDoor"
+      },
+      "C_RagdollManager": {
+        "fields": {
+          "m_iCurrentMaxRagdollCount": 1744
+        },
+        "metadata": [
+          {
+            "name": "m_iCurrentMaxRagdollCount",
+            "type": "NetworkVarNames",
+            "type_name": "int8"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_RagdollPropAttached": {
+        "fields": {
+          "m_attachmentPointBoneSpace": 3832,
+          "m_attachmentPointRagdollSpace": 3844,
+          "m_bHasParent": 3872,
+          "m_boneIndexAttached": 3824,
+          "m_parentTime": 3868,
+          "m_ragdollAttachedObjectIndex": 3828,
+          "m_vecOffset": 3856
+        },
+        "metadata": [
+          {
+            "name": "m_boneIndexAttached",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_ragdollAttachedObjectIndex",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_attachmentPointBoneSpace",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_attachmentPointRagdollSpace",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          }
+        ],
+        "parent": "C_RagdollProp"
+      },
+      "C_RectLight": {
+        "fields": {
+          "m_bShowLight": 3736
+        },
+        "metadata": [
+          {
+            "name": "m_bShowLight",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BarnLight"
+      },
+      "C_RetakeGameRules": {
+        "fields": {
+          "m_bBlockersPresent": 252,
+          "m_bRoundInProgress": 253,
+          "m_iBombSite": 260,
+          "m_iFirstSecondHalfRound": 256,
+          "m_nMatchSeed": 248
+        },
+        "metadata": [
+          {
+            "name": "m_nMatchSeed",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bBlockersPresent",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bRoundInProgress",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_iFirstSecondHalfRound",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_iBombSite",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          }
+        ],
+        "parent": null
+      },
+      "C_RopeKeyframe": {
+        "fields": {
+          "m_LightValues": 3856,
+          "m_LinksTouchingSomething": 3160,
+          "m_PhysicsDelegate": 4008,
+          "m_RopeFlags": 3216,
+          "m_RopeLength": 3992,
+          "m_Slack": 3994,
+          "m_Subdiv": 3990,
+          "m_TextureHeight": 4032,
+          "m_TextureScale": 3996,
+          "m_Width": 4004,
+          "m_bApplyWind": 3168,
+          "m_bConstrainBetweenEndpoints": 4144,
+          "m_bEndPointAttachmentAnglesDirty": 0,
+          "m_bEndPointAttachmentPositionsDirty": 0,
+          "m_bNewDataThisFrame": 0,
+          "m_bPhysicsInitted": 0,
+          "m_bPrevEndPointPos": 3180,
+          "m_fLockedPoints": 4000,
+          "m_fPrevLockedPoints": 3172,
+          "m_flCurScroll": 3208,
+          "m_flCurrentGustLifetime": 4064,
+          "m_flCurrentGustTimer": 4060,
+          "m_flScrollSpeed": 3212,
+          "m_flTimeToNextGust": 4068,
+          "m_hEndPoint": 3984,
+          "m_hMaterial": 4024,
+          "m_hStartPoint": 3980,
+          "m_iEndAttachment": 3989,
+          "m_iForcePointMoveCounter": 3176,
+          "m_iRopeMaterialModelIndex": 3224,
+          "m_iStartAttachment": 3988,
+          "m_nChangeCount": 4001,
+          "m_nLinksTouchingSomething": 3164,
+          "m_nSegments": 3976,
+          "m_vCachedEndPointAttachmentAngle": 4120,
+          "m_vCachedEndPointAttachmentPos": 4096,
+          "m_vColorMod": 4084,
+          "m_vPrevEndPointPos": 3184,
+          "m_vWindDir": 4072,
+          "m_vecImpulse": 4036,
+          "m_vecPreviousImpulse": 4048
+        },
+        "metadata": [
+          {
+            "name": "MNetworkIncludeByUserGroup",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_flScrollSpeed",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_RopeFlags",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_iRopeMaterialModelIndex",
+            "type": "NetworkVarNames",
+            "type_name": "HMaterialStrong"
+          },
+          {
+            "name": "m_nSegments",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_hStartPoint",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseEntity>"
+          },
+          {
+            "name": "m_hEndPoint",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseEntity>"
+          },
+          {
+            "name": "m_iStartAttachment",
+            "type": "NetworkVarNames",
+            "type_name": "AttachmentHandle_t"
+          },
+          {
+            "name": "m_iEndAttachment",
+            "type": "NetworkVarNames",
+            "type_name": "AttachmentHandle_t"
+          },
+          {
+            "name": "m_Subdiv",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_RopeLength",
+            "type": "NetworkVarNames",
+            "type_name": "int16"
+          },
+          {
+            "name": "m_Slack",
+            "type": "NetworkVarNames",
+            "type_name": "int16"
+          },
+          {
+            "name": "m_TextureScale",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_fLockedPoints",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nChangeCount",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_Width",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_bConstrainBetweenEndpoints",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseModelEntity"
+      },
+      "C_RopeKeyframe__CPhysicsDelegate": {
+        "fields": {
+          "m_pKeyframe": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "C_SceneEntity": {
+        "fields": {
+          "m_QueuedEvents": 1808,
+          "m_bAutogenerated": 1755,
+          "m_bClientOnly": 1762,
+          "m_bIsPlayingBack": 1752,
+          "m_bMultiplayer": 1754,
+          "m_bPaused": 1753,
+          "m_bWasPlaying": 1792,
+          "m_flCurrentTime": 1832,
+          "m_flForceClientTime": 1756,
+          "m_hActorList": 1768,
+          "m_hOwner": 1764,
+          "m_nSceneStringIndex": 1760
+        },
+        "metadata": [
+          {
+            "name": "m_bIsPlayingBack",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bPaused",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bMultiplayer",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bAutogenerated",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_flForceClientTime",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "m_nSceneStringIndex",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_hActorList",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BaseFlex>"
+          }
+        ],
+        "parent": "C_PointEntity"
+      },
+      "C_SceneEntity__QueuedEvents_t": {
+        "fields": {
+          "starttime": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "C_SensorGrenade": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseCSGrenade"
+      },
+      "C_ShatterGlassShardPhysics": {
+        "fields": {
+          "m_ShardDesc": 4048
+        },
+        "metadata": [
+          {
+            "name": "MNetworkExcludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_ShardDesc",
+            "type": "NetworkVarNames",
+            "type_name": "shard_model_desc_t"
+          }
+        ],
+        "parent": "C_PhysicsProp"
+      },
+      "C_SmokeGrenade": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseCSGrenade"
+      },
+      "C_SmokeGrenadeProjectile": {
+        "fields": {
+          "m_VoxelFrameData": 4384,
+          "m_bDidSmokeEffect": 4348,
+          "m_bSmokeEffectSpawned": 4409,
+          "m_bSmokeVolumeDataReceived": 4408,
+          "m_nRandomSeed": 4352,
+          "m_nSmokeEffectTickBegin": 4344,
+          "m_vSmokeColor": 4356,
+          "m_vSmokeDetonationPos": 4368
+        },
+        "metadata": [
+          {
+            "name": "m_nSmokeEffectTickBegin",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bDidSmokeEffect",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_nRandomSeed",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_vSmokeColor",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vSmokeDetonationPos",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_VoxelFrameData",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlVector<uint8>"
+          }
+        ],
+        "parent": "C_BaseCSGrenadeProjectile"
+      },
+      "C_SoundAreaEntityOrientedBox": {
+        "fields": {
+          "m_vMax": 1792,
+          "m_vMin": 1780
+        },
+        "metadata": [
+          {
+            "name": "m_vMin",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "m_vMax",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          }
+        ],
+        "parent": "C_SoundAreaEntityBase"
+      },
+      "C_SoundOpvarSetOBBWindEntity": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_SoundOpvarSetPointBase"
+      },
+      "C_SoundOpvarSetPointBase": {
+        "fields": {
+          "m_bUseAutoCompare": 1772,
+          "m_iOpvarIndex": 1768,
+          "m_iszOperatorName": 1752,
+          "m_iszOpvarName": 1760,
+          "m_iszStackName": 1744
+        },
+        "metadata": [
+          {
+            "name": "m_iszStackName",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          },
+          {
+            "name": "m_iszOperatorName",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          },
+          {
+            "name": "m_iszOpvarName",
+            "type": "NetworkVarNames",
+            "type_name": "string_t"
+          },
+          {
+            "name": "m_iOpvarIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_bUseAutoCompare",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_Team": {
+        "fields": {
+          "m_aPlayerControllers": 1744,
+          "m_aPlayers": 1768,
+          "m_iScore": 1792,
+          "m_szTeamname": 1796
+        },
+        "metadata": [
+          {
+            "name": "MNetworkIncludeByName",
+            "type": "Unknown"
+          },
+          {
+            "name": "m_aPlayerControllers",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<CBasePlayerController>"
+          },
+          {
+            "name": "m_aPlayers",
+            "type": "NetworkVarNames",
+            "type_name": "CHandle<C_BasePlayerPawn>"
+          },
+          {
+            "name": "m_iScore",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_szTeamname",
+            "type": "NetworkVarNames",
+            "type_name": "char"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_TonemapController2": {
+        "fields": {
+          "m_flAutoExposureMax": 1748,
+          "m_flAutoExposureMin": 1744,
+          "m_flExposureAdaptationSpeedDown": 1768,
+          "m_flExposureAdaptationSpeedUp": 1764,
+          "m_flTonemapEVSmoothingRange": 1772,
+          "m_flTonemapMinAvgLum": 1760,
+          "m_flTonemapPercentBrightPixels": 1756,
+          "m_flTonemapPercentTarget": 1752
+        },
+        "metadata": [
+          {
+            "name": "m_flAutoExposureMin",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flAutoExposureMax",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapPercentTarget",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapPercentBrightPixels",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapMinAvgLum",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flExposureAdaptationSpeedUp",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flExposureAdaptationSpeedDown",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_flTonemapEVSmoothingRange",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "C_BaseEntity"
+      },
+      "C_TonemapController2Alias_env_tonemap_controller2": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_TonemapController2"
+      },
+      "C_TriggerBuoyancy": {
+        "fields": {
+          "m_BuoyancyHelper": 3160,
+          "m_flFluidDensity": 3192
+        },
+        "metadata": [
+          {
+            "name": "m_flFluidDensity",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          }
+        ],
+        "parent": "C_BaseTrigger"
+      },
+      "C_TriggerLerpObject": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseTrigger"
+      },
+      "C_TriggerMultiple": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_BaseTrigger"
+      },
+      "C_ViewmodelAttachmentModel": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CBaseAnimGraph"
+      },
+      "C_WaterBullet": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CBaseAnimGraph"
+      },
+      "C_WeaponCZ75a": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponElite": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponFamas": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponGalilAR": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponHKP2000": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponM4A1": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponMP5SD": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponRevolver": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponSCAR20": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponSG556": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponSawedoff": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBase"
+      },
+      "C_WeaponTaser": {
+        "fields": {
+          "m_fFireTime": 10536
+        },
+        "metadata": [
+          {
+            "name": "m_fFireTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          }
+        ],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WeaponUSPSilencer": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBaseGun"
+      },
+      "C_WorldModelGloves": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CBaseAnimGraph"
+      },
+      "C_WorldModelNametag": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CBaseAnimGraph"
+      },
+      "EntitySpottedState_t": {
+        "fields": {
+          "m_bSpotted": 8,
+          "m_bSpottedByMask": 12
+        },
+        "metadata": [
+          {
+            "name": "m_bSpotted",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bSpottedByMask",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          }
+        ],
+        "parent": null
+      },
+      "IntervalTimer": {
+        "fields": {
+          "m_nWorldGroupId": 12,
+          "m_timestamp": 8
+        },
+        "metadata": [
+          {
+            "name": "m_timestamp",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_nWorldGroupId",
+            "type": "NetworkVarNames",
+            "type_name": "WorldGroupId_t"
+          }
+        ],
+        "parent": null
+      },
+      "VPhysicsCollisionAttribute_t": {
+        "fields": {
+          "m_nCollisionFunctionMask": 43,
+          "m_nCollisionGroup": 42,
+          "m_nEntityId": 32,
+          "m_nHierarchyId": 40,
+          "m_nInteractsAs": 8,
+          "m_nInteractsExclude": 24,
+          "m_nInteractsWith": 16,
+          "m_nOwnerId": 36
+        },
+        "metadata": [
+          {
+            "name": "m_nInteractsAs",
+            "type": "NetworkVarNames",
+            "type_name": "uint64"
+          },
+          {
+            "name": "m_nInteractsWith",
+            "type": "NetworkVarNames",
+            "type_name": "uint64"
+          },
+          {
+            "name": "m_nInteractsExclude",
+            "type": "NetworkVarNames",
+            "type_name": "uint64"
+          },
+          {
+            "name": "m_nEntityId",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_nOwnerId",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          },
+          {
+            "name": "m_nHierarchyId",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_nCollisionGroup",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nCollisionFunctionMask",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          }
+        ],
+        "parent": null
+      },
+      "WeaponPurchaseCount_t": {
+        "fields": {
+          "m_nCount": 50,
+          "m_nItemDefIndex": 48
+        },
+        "metadata": [
+          {
+            "name": "m_nItemDefIndex",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          },
+          {
+            "name": "m_nCount",
+            "type": "NetworkVarNames",
+            "type_name": "uint16"
+          }
+        ],
+        "parent": null
+      },
+      "WeaponPurchaseTracker_t": {
+        "fields": {
+          "m_weaponPurchases": 8
+        },
+        "metadata": [
+          {
+            "name": "m_weaponPurchases",
+            "type": "NetworkVarNames",
+            "type_name": "WeaponPurchaseCount_t"
+          }
+        ],
+        "parent": null
+      },
+      "audioparams_t": {
+        "fields": {
+          "localBits": 108,
+          "localSound": 8,
+          "soundEventHash": 116,
+          "soundscapeEntityListIndex": 112,
+          "soundscapeIndex": 104
+        },
+        "metadata": [
+          {
+            "name": "localSound",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "soundscapeIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "localBits",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "soundscapeEntityListIndex",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "soundEventHash",
+            "type": "NetworkVarNames",
+            "type_name": "uint32"
+          }
+        ],
+        "parent": null
+      },
+      "shard_model_desc_t": {
+        "fields": {
+          "m_ShatterPanelMode": 25,
+          "m_SurfacePropStringToken": 88,
+          "m_bHasParent": 84,
+          "m_bParentFrozen": 85,
+          "m_flGlassHalfThickness": 80,
+          "m_hMaterial": 16,
+          "m_nModelID": 8,
+          "m_solid": 24,
+          "m_vecPanelSize": 28,
+          "m_vecPanelVertices": 56,
+          "m_vecStressPositionA": 36,
+          "m_vecStressPositionB": 44
+        },
+        "metadata": [
+          {
+            "name": "m_nModelID",
+            "type": "NetworkVarNames",
+            "type_name": "int32"
+          },
+          {
+            "name": "m_hMaterial",
+            "type": "NetworkVarNames",
+            "type_name": "HMaterialStrong"
+          },
+          {
+            "name": "m_solid",
+            "type": "NetworkVarNames",
+            "type_name": "ShardSolid_t"
+          },
+          {
+            "name": "m_ShatterPanelMode",
+            "type": "NetworkVarNames",
+            "type_name": "ShatterPanelMode"
+          },
+          {
+            "name": "m_vecPanelSize",
+            "type": "NetworkVarNames",
+            "type_name": "Vector2D"
+          },
+          {
+            "name": "m_vecStressPositionA",
+            "type": "NetworkVarNames",
+            "type_name": "Vector2D"
+          },
+          {
+            "name": "m_vecStressPositionB",
+            "type": "NetworkVarNames",
+            "type_name": "Vector2D"
+          },
+          {
+            "name": "m_vecPanelVertices",
+            "type": "NetworkVarNames",
+            "type_name": "Vector2D"
+          },
+          {
+            "name": "m_flGlassHalfThickness",
+            "type": "NetworkVarNames",
+            "type_name": "float"
+          },
+          {
+            "name": "m_bHasParent",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bParentFrozen",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_SurfacePropStringToken",
+            "type": "NetworkVarNames",
+            "type_name": "CUtlStringToken"
+          }
+        ],
+        "parent": null
+      },
+      "sky3dparams_t": {
+        "fields": {
+          "bClip3DSkyBoxNearToWorldFar": 24,
+          "flClip3DSkyBoxNearToWorldFarOffset": 28,
+          "fog": 32,
+          "m_nWorldGroupID": 136,
+          "origin": 12,
+          "scale": 8
+        },
+        "metadata": [
+          {
+            "name": "scale",
+            "type": "NetworkVarNames",
+            "type_name": "int16"
+          },
+          {
+            "name": "origin",
+            "type": "NetworkVarNames",
+            "type_name": "Vector"
+          },
+          {
+            "name": "bClip3DSkyBoxNearToWorldFar",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "flClip3DSkyBoxNearToWorldFarOffset",
+            "type": "NetworkVarNames",
+            "type_name": "float32"
+          },
+          {
+            "name": "fog",
+            "type": "NetworkVarNames",
+            "type_name": "fogparams_t"
+          },
+          {
+            "name": "m_nWorldGroupID",
+            "type": "NetworkVarNames",
+            "type_name": "WorldGroupId_t"
+          }
+        ],
+        "parent": null
+      }
+    },
+    "enums": {
+      "CBumpMineProjectile": {
+        "alignment": 16,
+        "members": {},
+        "type": "unknown"
+      },
+      "CCSWeaponBaseVData": {
+        "alignment": 13,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CHostageRescueZone": {
+        "alignment": 12,
+        "members": {},
+        "type": "unknown"
+      },
+      "CTripWireFireProjectile": {
+        "alignment": 16,
+        "members": {},
+        "type": "unknown"
+      },
+      "C_CSGO_TeamSelectTerroristPosition": {
+        "alignment": 65,
+        "members": {},
+        "type": "unknown"
+      },
+      "C_CSWeaponBase": {
+        "alignment": 41,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "C_Chicken": {
+        "alignment": 36,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "C_FuncBrush": {
+        "alignment": 12,
+        "members": {},
+        "type": "unknown"
+      },
+      "C_FuncMoveLinear": {
+        "alignment": 12,
+        "members": {},
+        "type": "unknown"
+      },
+      "C_Hostage": {
+        "alignment": 17,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "C_NetTestBaseCombatCharacter": {
+        "alignment": 16,
+        "members": {},
+        "type": "unknown"
+      },
+      "C_PhysPropClientside": {
+        "alignment": 16,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "C_WeaponNegev": {
+        "alignment": 41,
+        "members": {},
+        "type": "unknown"
+      }
+    }
+  }
+}

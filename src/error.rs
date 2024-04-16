@@ -1,5 +1,7 @@
 use thiserror::Error;
 
+pub type Result<T> = std::result::Result<T, Error>;
+
 #[derive(Debug, Error)]
 pub enum Error {
     #[error(transparent)]
@@ -12,13 +14,13 @@ pub enum Error {
     Memflow(#[from] memflow::error::Error),
 
     #[error(transparent)]
-    Pelite(#[from] pelite::Error),
-
-    #[error(transparent)]
     Serde(#[from] serde_json::Error),
 
-    #[error("index {idx} is out of bounds for array with length {len}")]
-    OutOfBounds { idx: usize, len: usize },
+    #[error("unable to parse signature")]
+    SignatureInvalid,
+
+    #[error("unable to find signature for: {0}")]
+    SignatureNotFound(String),
 
     #[error("{0}")]
     Other(&'static str),
@@ -31,4 +33,9 @@ impl<T> From<memflow::error::PartialError<T>> for Error {
     }
 }
 
-pub type Result<T> = std::result::Result<T, Error>;
+impl From<skidscan::SignatureParseError> for Error {
+    #[inline]
+    fn from(_err: skidscan::SignatureParseError) -> Self {
+        Error::SignatureInvalid
+    }
+}

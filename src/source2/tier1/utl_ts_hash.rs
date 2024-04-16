@@ -1,102 +1,116 @@
 use memflow::prelude::v1::*;
 
+use super::UtlMemoryPoolBase;
+
 use crate::error::Result;
-
-pub trait HashData: Copy + Sized + Pod {}
-
-impl<T: Copy + Sized + Pod> HashData for T {}
-
-pub trait HashKey: Copy + Sized + Pod {}
-
-impl<K: Copy + Sized + Pod> HashKey for K {}
+use crate::mem::PointerExt;
 
 #[repr(C)]
-struct HashFixedDataInternal<T: HashData, K: HashKey> {
-    ui_key: K,
-    next: Pointer64<HashFixedDataInternal<T, K>>,
-    data: T,
+pub struct HashAllocatedBlob<D> {
+    pub next: Pointer64<HashAllocatedBlob<D>>, // 0x0000
+    pad_0008: [u8; 0x8],                       // 0x0008
+    pub data: D,                               // 0x0010
+    pad_0018: [u8; 0x8],                       // 0x0018
 }
 
-unsafe impl<T: HashData, K: HashKey> Pod for HashFixedDataInternal<T, K> {}
+unsafe impl<D: 'static> Pod for HashAllocatedBlob<D> {}
 
 #[repr(C)]
-struct HashBucketDataInternal<T: HashData, K: HashKey> {
-    data: T,
-    next: Pointer64<HashFixedDataInternal<T, K>>,
-    ui_key: K,
-}
-
-unsafe impl<T: HashData, K: HashKey> Pod for HashBucketDataInternal<T, K> {}
-
-#[repr(C)]
-struct HashAllocatedData<T: HashData, K: HashKey> {
-    pad_0000: [u8; 0x18],
-    list: [HashFixedDataInternal<T, K>; 128],
-}
-
-unsafe impl<T: HashData, K: HashKey> Pod for HashAllocatedData<T, K> {}
-
-#[repr(C)]
-struct HashUnallocatedData<T: HashData, K: HashKey> {
-    next: Pointer64<HashUnallocatedData<T, K>>,
-    unk_1: K,
-    ui_key: K,
-    unk_2: K,
-    block_list: [HashBucketDataInternal<T, K>; 256],
-}
-
-unsafe impl<T: HashData, K: HashKey> Pod for HashUnallocatedData<T, K> {}
-
-#[repr(C)]
-struct HashBucket<T: HashData, K: HashKey> {
-    pad_0000: [u8; 0x10],
-    allocated_data: Pointer64<HashAllocatedData<T, K>>,
-    unallocated_data: Pointer64<HashUnallocatedData<T, K>>,
-}
-
-unsafe impl<T: HashData, K: HashKey> Pod for HashBucket<T, K> {}
-
-#[repr(C)]
-struct UtlMemoryPool {
-    block_size: u32,
-    blocks_per_blob: u32,
-    grow_mode: u32,
-    blocks_alloc: u32,
-    block_alloc_size: u32,
-    peak_alloc: u32,
+pub struct HashBucket<D, K> {
+    pad_0000: [u8; 0x18],                                          // 0x0000
+    pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0018
+    pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0020
 }
 
 #[repr(C)]
-pub struct UtlTsHash<T: HashData, K: HashKey = u64> {
-    entry: UtlMemoryPool,
-    buckets: HashBucket<T, K>,
+pub struct HashFixedDataInternal<D, K> {
+    pub ui_key: K,                                    // 0x0000
+    pub next: Pointer64<HashFixedDataInternal<D, K>>, // 0x0008
+    pub data: D,                                      // 0x0010
 }
 
-impl<T: HashData, K: HashKey> UtlTsHash<T, K> {
-    pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<T>> {
-        let mut element_ptr = self.buckets.unallocated_data;
+unsafe impl<D: 'static, K: 'static> Pod for HashFixedDataInternal<D, K> {}
 
-        let min_size =
-            (self.entry.blocks_per_blob as usize).min(self.entry.block_alloc_size as usize);
+#[repr(C)]
+pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
+    pub entry_mem: UtlMemoryPoolBase,   // 0x0000
+    pub buckets: [HashBucket<D, K>; C], // 0x0080
+    pub needs_commit: bool,             // 0x2880
+    pad_2881: [u8; 0xF],                // 0x2881
+}
 
-        let mut list = Vec::with_capacity(min_size);
+impl<D, const C: usize, K> UtlTsHash<D, C, K>
+where
+    D: Pod + PointerExt,
+    K: Pod,
+{
+    /// Returns the number of allocated blocks.
+    #[inline]
+    pub fn blocks_alloc(&self) -> i32 {
+        self.entry_mem.blocks_alloc
+    }
 
-        while !element_ptr.is_null() {
-            let element = element_ptr.read(process)?;
+    /// Returns the size of a block.
+    #[inline]
+    pub fn block_size(&self) -> i32 {
+        self.entry_mem.block_size
+    }
 
-            for i in 0..min_size {
-                if list.len() >= self.entry.block_alloc_size as usize {
-                    return Ok(list);
+    /// Returns the maximum number of allocated blocks.
+    #[inline]
+    pub fn peak_count(&self) -> i32 {
+        self.entry_mem.peak_alloc
+    }
+
+    /// Returns a list of allocated or unallocated elements.
+    pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
+        let blocks_alloc = self.blocks_alloc() as usize;
+        let peak_alloc = self.peak_count() as usize;
+
+        let mut allocated_list = Vec::with_capacity(peak_alloc);
+        let mut unallocated_list = Vec::with_capacity(blocks_alloc);
+
+        for bucket in &self.buckets {
+            let mut cur_element = bucket.first_uncommitted;
+
+            while !cur_element.is_null() {
+                let element = cur_element.read(process)?;
+
+                if !element.data.is_null() {
+                    unallocated_list.push(element.data);
                 }
 
-                list.push(element.block_list[i].data);
-            }
+                if unallocated_list.len() >= blocks_alloc {
+                    break;
+                }
 
-            element_ptr = element.next;
+                cur_element = element.next;
+            }
         }
 
-        Ok(list)
+        let mut cur_blob =
+            Pointer64::<HashAllocatedBlob<D>>::from(self.entry_mem.free_list_head.address());
+
+        while !cur_blob.is_null() {
+            let blob = cur_blob.read(process)?;
+
+            if !blob.data.is_null() {
+                allocated_list.push(blob.data);
+            }
+
+            if allocated_list.len() >= peak_alloc {
+                break;
+            }
+
+            cur_blob = blob.next;
+        }
+
+        Ok(if unallocated_list.len() > allocated_list.len() {
+            unallocated_list
+        } else {
+            allocated_list
+        })
     }
 }
 
-unsafe impl<T: HashData, K: HashKey> Pod for UtlTsHash<T, K> {}
+unsafe impl<D: 'static, const C: usize, K: 'static> Pod for UtlTsHash<D, C, K> {}

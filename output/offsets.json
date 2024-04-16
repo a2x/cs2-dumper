@@ -1,37 +1,118 @@
 {
-  "client.dll": {
-    "dwCSGOInput": 26392096,
-    "dwEntityList": 25963864,
-    "dwGameEntitySystem": 27133840,
-    "dwGameEntitySystem_getHighestEntityIndex": 5392,
-    "dwGameRules": 26344608,
-    "dwGlobalVars": 24292256,
-    "dwGlowManager": 26345664,
-    "dwLocalPlayerController": 26289528,
-    "dwLocalPlayerPawn": 24342952,
-    "dwPlantedC4": 26381016,
-    "dwPrediction": 24342640,
-    "dwSensitivity": 26348008,
-    "dwSensitivity_sensitivity": 64,
-    "dwViewAngles": 26413488,
-    "dwViewMatrix": 26362272,
-    "dwViewRender": 26364448
-  },
-  "engine2.dll": {
-    "dwBuildNumber": 5326196,
-    "dwNetworkGameClient": 5323464,
-    "dwNetworkGameClient_deltaTick": 600,
-    "dwNetworkGameClient_getLocalPlayer": 240,
-    "dwNetworkGameClient_getMaxClients": 592,
-    "dwNetworkGameClient_signOnState": 576,
-    "dwWindowHeight": 6081756,
-    "dwWindowWidth": 6081752
-  },
-  "inputsystem.dll": {
-    "dwInputSystem": 223136
-  },
-  "matchmaking.dll": {
-    "dwGameTypes": 1909216,
-    "dwGameTypes_mapName": 1909504
-  }
+  "libclient.so": [
+    {
+      "name": "dwCSGOInput",
+      "value": 57947872
+    },
+    {
+      "name": "dwEntityList",
+      "value": 56273096
+    },
+    {
+      "name": "dwGameEntitySystem",
+      "value": 59116032
+    },
+    {
+      "name": "dwGameEntitySystem_getHighestEntityIndex",
+      "value": 5440
+    },
+    {
+      "name": "dwGameRules",
+      "value": 57893960
+    },
+    {
+      "name": "dwGlobalVars",
+      "value": 56015312
+    },
+    {
+      "name": "dwGlowManager",
+      "value": 57912752
+    },
+    {
+      "name": "dwLocalPlayerController",
+      "value": 57784696
+    },
+    {
+      "name": "dwLocalPlayerPawn",
+      "value": 57916824
+    },
+    {
+      "name": "dwPlantedC4",
+      "value": 58000792
+    },
+    {
+      "name": "dwPrediction",
+      "value": 57916512
+    },
+    {
+      "name": "dwSensitivity",
+      "value": 57909960
+    },
+    {
+      "name": "dwSensitivity_sensitivity",
+      "value": 64
+    },
+    {
+      "name": "dwViewAngles",
+      "value": 57969280
+    },
+    {
+      "name": "dwViewMatrix",
+      "value": 57919680
+    },
+    {
+      "name": "dwViewRender",
+      "value": 57920112
+    }
+  ],
+  "libengine2.so": [
+    {
+      "name": "dwBuildNumber",
+      "value": 7157236
+    },
+    {
+      "name": "dwNetworkGameClient",
+      "value": 7159688
+    },
+    {
+      "name": "dwNetworkGameClient_deltaTick",
+      "value": 632
+    },
+    {
+      "name": "dwNetworkGameClient_getLocalPlayer",
+      "value": 5056
+    },
+    {
+      "name": "dwNetworkGameClient_getMaxClients",
+      "value": 592
+    },
+    {
+      "name": "dwNetworkGameClient_signOnState",
+      "value": 608
+    },
+    {
+      "name": "dwWindowHeight",
+      "value": 7196100
+    },
+    {
+      "name": "dwWindowWidth",
+      "value": 7196096
+    }
+  ],
+  "libinputsystem.so": [
+    {
+      "name": "dwInputSystem",
+      "value": 262496
+    }
+  ],
+  "libmatchmaking.so": [
+    {
+      "name": "dwGameTypes",
+      "value": 3656096
+    },
+    {
+      "name": "dwGameTypes_mapName",
+      "value": 3656384
+    }
+  ]
 }

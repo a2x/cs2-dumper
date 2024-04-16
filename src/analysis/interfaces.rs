@@ -4,17 +4,15 @@ use log::debug;
 
 use memflow::prelude::v1::*;
 
-use pelite::pattern;
-use pelite::pe64::{Pe, PeView};
-
 use serde::{Deserialize, Serialize};
+
+use skidscan_macros::signature;
 
 use crate::error::Result;
 use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, Vec<Interface>>;
 
-/// Represents an exposed interface.
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Interface {
     pub name: String,
@@ -28,18 +26,11 @@ pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Interfa
         .filter_map(|module| {
             let buf = process.read_raw(module.base, module.size as _).ok()?;
 
-            let view = PeView::from_bytes(&buf).ok()?;
+            let list_addr = signature!("48 8B 1D ? ? ? ? 48 85 DB 74 ? 49 89 FC")
+                .scan(&buf)
+                .and_then(|result| process.read_addr64_rip(module.base + result).ok())?;
 
-            let mut save = [0; 2];
-
-            if !view
-                .scanner()
-                .finds_code(pattern!("4c8b0d${'} 4c8bd2 4c8bd9"), &mut save)
-            {
-                return None;
-            }
-
-            read_interfaces(process, module, module.base + save[1])
+            read_interfaces(process, module, list_addr)
                 .ok()
                 .filter(|ifaces| !ifaces.is_empty())
                 .map(|ifaces| Ok((module.name.to_string(), ifaces)))
@@ -54,13 +45,12 @@ fn read_interfaces(
 ) -> Result<Vec<Interface>> {
     let mut ifaces = Vec::new();
 
-    let mut reg_ptr = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
+    let mut cur_reg = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
 
-    while !reg_ptr.is_null() {
-        let reg = reg_ptr.read(process)?;
+    while !cur_reg.is_null() {
+        let reg = cur_reg.read(process)?;
         let name = reg.name.read_string(process)?.to_string();
-
-        let value = (reg.create_fn - module.base) as u32;
+        let value = (reg.create_fn.address() - module.base) as u32;
 
         debug!(
             "found interface: {} at {:#X} ({} + {:#X})",
@@ -72,7 +62,7 @@ fn read_interfaces(
 
         ifaces.push(Interface { name, value });
 
-        reg_ptr = reg.next;
+        cur_reg = reg.next;
     }
 
     // Sort interfaces by name.
