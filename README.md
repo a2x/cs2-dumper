@@ -15,11 +15,9 @@ toolchain must be installed.
 
 ### Available Arguments
 
-- `-c, --connector <connector>`: The name of the memflow connector to use.
-- `-a, --connector-args <connector-args>`: Additional arguments to pass to the connector.
 - `-f, --file-types <file-types>`: The types of files to generate. Default: `cs`, `hpp`,  `json`, `rs`.
-- `-o, --output <output>`: The output directory to write the generated files to. Default: `output`.
 - `-i, --indent-size <indent-size>`: The number of spaces to use per indentation level. Default: `4`.
+- `-o, --output <output>`: The output directory to write the generated files to. Default: `output`.
 - `-v...`: Increase logging verbosity. Can be specified multiple times.
 - `-h, --help`: Print help.
 - `-V, --version`: Print version.
