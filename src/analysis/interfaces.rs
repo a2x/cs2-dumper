@@ -58,10 +58,11 @@ fn read_interfaces(
     while !cur_reg.is_null() {
         let reg = cur_reg.read(process)?;
         let name = reg.name.read_string(process)?.to_string();
+
         let value = (reg.create_fn.address() - module.base) as u32;
 
         debug!(
-            "found interface: {} at {:#X} ({} + {:#X})",
+            "found interface: {} @ {:#X} ({} + {:#X})",
             name,
             value as u64 + module.base.to_umem(),
             module.name,
@@ -73,7 +74,6 @@ fn read_interfaces(
         cur_reg = reg.next;
     }
 
-    // Sort interfaces by name.
     ifaces.sort_unstable_by(|a, b| a.name.cmp(&b.name));
 
     Ok(ifaces)

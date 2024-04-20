@@ -30,7 +30,7 @@ pub struct UtlMemoryPoolBase {
     pub blocks_alloc: i32,                              // 0x000C
     pub peak_alloc: i32,                                // 0x0010
     pub alignment: u16,                                 // 0x0014
-    pub num_blobs: u16,                                 // 0x0016
+    pub blob_count: u16,                                // 0x0016
     pub free_list_tail: Pointer64<Pointer64<FreeList>>, // 0x0018
     pub free_list_head: Pointer64<FreeList>,            // 0x0020
     pad_0028: [u8; 0x44],                               // 0x0028
@@ -40,7 +40,6 @@ pub struct UtlMemoryPoolBase {
 }
 
 impl UtlMemoryPoolBase {
-    /// Returns the total size of the memory pool.
     #[inline]
     pub fn size(&self) -> i32 {
         self.total_size

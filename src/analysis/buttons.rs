@@ -51,7 +51,7 @@ fn read_buttons(
             ((cur_button.address() - module.base) + offset_of!(KeyButton.state) as i64) as u32;
 
         debug!(
-            "found button: {} at {:#X} ({} + {:#X})",
+            "found button: {} @ {:#X} ({} + {:#X})",
             name,
             value as u64 + module.base.to_umem(),
             module.name,
@@ -63,7 +63,6 @@ fn read_buttons(
         cur_button = button.next;
     }
 
-    // Sort buttons by name.
     buttons.sort_unstable_by(|a, b| a.name.cmp(&b.name));
 
     Ok(buttons)

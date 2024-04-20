@@ -53,7 +53,7 @@ macro_rules! pattern_map {
 
                     for (name, value) in &map {
                         debug!(
-                            "found offset: {} at {:#X} ({}.dll + {:#X})",
+                            "found offset: {} @ {:#X} ({}.dll + {:#X})",
                             name,
                             *value as u64 + view.optional_header().ImageBase,
                             stringify!($module),
