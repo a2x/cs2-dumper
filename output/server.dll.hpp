@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-17 08:47:21.349682 UTC
+// 2024-04-23 10:42:31.964705500 UTC
 
 #pragma once
 
@@ -5978,7 +5978,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iCashSpentThisRound (int)
             namespace CCSPlayerController_InGameMoneyServices {
                 constexpr std::ptrdiff_t m_bReceivesMoneyNextRound = 0x40; // bool
-                constexpr std::ptrdiff_t m_iAccountMoneyEarnedForNextRound = 0x44; // int32
+                constexpr std::ptrdiff_t m_iMoneyEarnedForNextRound = 0x44; // int32
                 constexpr std::ptrdiff_t m_iAccount = 0x48; // int32
                 constexpr std::ptrdiff_t m_iStartAccount = 0x4C; // int32
                 constexpr std::ptrdiff_t m_iTotalCashSpent = 0x50; // int32
@@ -7054,7 +7054,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_state = 0x718; // int32
             }
             // Parent: CTeamplayRules
-            // Fields count: 215
+            // Fields count: 216
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7278,6 +7278,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDF8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_bNeedToAskPlayersForContinueVote = 0xE14; // bool
                 constexpr std::ptrdiff_t m_numQueuedMatchmakingAccounts = 0xE18; // uint32
+                constexpr std::ptrdiff_t m_fAvgPlayerRank = 0xE1C; // float32
                 constexpr std::ptrdiff_t m_pQueuedMatchmakingReservationString = 0xE20; // char*
                 constexpr std::ptrdiff_t m_numTotalTournamentDrops = 0xE28; // uint32
                 constexpr std::ptrdiff_t m_numSpectatorsCountMax = 0xE2C; // uint32

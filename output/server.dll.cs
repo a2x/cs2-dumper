@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-17 08:47:21.349682 UTC
+// 2024-04-23 10:42:31.964705500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -5973,7 +5973,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iCashSpentThisRound (int)
         public static class CCSPlayerController_InGameMoneyServices {
             public const nint m_bReceivesMoneyNextRound = 0x40; // bool
-            public const nint m_iAccountMoneyEarnedForNextRound = 0x44; // int32
+            public const nint m_iMoneyEarnedForNextRound = 0x44; // int32
             public const nint m_iAccount = 0x48; // int32
             public const nint m_iStartAccount = 0x4C; // int32
             public const nint m_iTotalCashSpent = 0x50; // int32
@@ -7049,7 +7049,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_state = 0x718; // int32
         }
         // Parent: CTeamplayRules
-        // Fields count: 215
+        // Fields count: 216
         //
         // Metadata:
         // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7273,6 +7273,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nEndMatchTiedVotes = 0xDF8; // CUtlVector<int32>
             public const nint m_bNeedToAskPlayersForContinueVote = 0xE14; // bool
             public const nint m_numQueuedMatchmakingAccounts = 0xE18; // uint32
+            public const nint m_fAvgPlayerRank = 0xE1C; // float32
             public const nint m_pQueuedMatchmakingReservationString = 0xE20; // char*
             public const nint m_numTotalTournamentDrops = 0xE28; // uint32
             public const nint m_numSpectatorsCountMax = 0xE2C; // uint32

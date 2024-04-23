@@ -3299,6 +3299,7 @@
           "m_endMatchOnThink": 3513,
           "m_fAccumulatedRoundOffDamage": 4704,
           "m_fAutobalanceDisplayTime": 4068,
+          "m_fAvgPlayerRank": 3612,
           "m_fMatchStartTime": 244,
           "m_fNextUpdateTeamClanNamesTime": 4696,
           "m_fRoundStartTime": 248,
@@ -4530,8 +4531,8 @@
         "fields": {
           "m_bReceivesMoneyNextRound": 64,
           "m_iAccount": 72,
-          "m_iAccountMoneyEarnedForNextRound": 68,
           "m_iCashSpentThisRound": 84,
+          "m_iMoneyEarnedForNextRound": 68,
           "m_iStartAccount": 76,
           "m_iTotalCashSpent": 80
         },

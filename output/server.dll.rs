@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-17 08:47:21.349682 UTC
+// 2024-04-23 10:42:31.964705500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -6102,7 +6102,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_iCashSpentThisRound (int)
             pub mod CCSPlayerController_InGameMoneyServices {
                 pub const m_bReceivesMoneyNextRound: usize = 0x40; // bool
-                pub const m_iAccountMoneyEarnedForNextRound: usize = 0x44; // int32
+                pub const m_iMoneyEarnedForNextRound: usize = 0x44; // int32
                 pub const m_iAccount: usize = 0x48; // int32
                 pub const m_iStartAccount: usize = 0x4C; // int32
                 pub const m_iTotalCashSpent: usize = 0x50; // int32
@@ -7178,7 +7178,7 @@ pub mod cs2_dumper {
                 pub const m_state: usize = 0x718; // int32
             }
             // Parent: CTeamplayRules
-            // Fields count: 215
+            // Fields count: 216
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7402,6 +7402,7 @@ pub mod cs2_dumper {
                 pub const m_nEndMatchTiedVotes: usize = 0xDF8; // CUtlVector<int32>
                 pub const m_bNeedToAskPlayersForContinueVote: usize = 0xE14; // bool
                 pub const m_numQueuedMatchmakingAccounts: usize = 0xE18; // uint32
+                pub const m_fAvgPlayerRank: usize = 0xE1C; // float32
                 pub const m_pQueuedMatchmakingReservationString: usize = 0xE20; // char*
                 pub const m_numTotalTournamentDrops: usize = 0xE28; // uint32
                 pub const m_numSpectatorsCountMax: usize = 0xE2C; // uint32

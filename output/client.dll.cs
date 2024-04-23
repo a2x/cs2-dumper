@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-17 08:47:21.349682 UTC
+// 2024-04-23 10:42:31.964705500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -1156,58 +1156,58 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_vRagdollServerOrigin (Vector)
         // NetworkVarNames: m_qDeathEyeAngles (QAngle)
         public static class C_CSPlayerPawn {
-            public const nint m_pBulletServices = 0x1718; // CCSPlayer_BulletServices*
-            public const nint m_pHostageServices = 0x1720; // CCSPlayer_HostageServices*
-            public const nint m_pBuyServices = 0x1728; // CCSPlayer_BuyServices*
-            public const nint m_pGlowServices = 0x1730; // CCSPlayer_GlowServices*
-            public const nint m_pActionTrackingServices = 0x1738; // CCSPlayer_ActionTrackingServices*
-            public const nint m_flHealthShotBoostExpirationTime = 0x1740; // GameTime_t
-            public const nint m_flLastFiredWeaponTime = 0x1744; // GameTime_t
-            public const nint m_bHasFemaleVoice = 0x1748; // bool
-            public const nint m_flLandseconds = 0x174C; // float32
-            public const nint m_flOldFallVelocity = 0x1750; // float32
-            public const nint m_szLastPlaceName = 0x1754; // char[18]
-            public const nint m_bPrevDefuser = 0x1766; // bool
-            public const nint m_bPrevHelmet = 0x1767; // bool
-            public const nint m_nPrevArmorVal = 0x1768; // int32
-            public const nint m_nPrevGrenadeAmmoCount = 0x176C; // int32
-            public const nint m_unPreviousWeaponHash = 0x1770; // uint32
-            public const nint m_unWeaponHash = 0x1774; // uint32
-            public const nint m_bInBuyZone = 0x1778; // bool
-            public const nint m_bPreviouslyInBuyZone = 0x1779; // bool
-            public const nint m_aimPunchAngle = 0x177C; // QAngle
-            public const nint m_aimPunchAngleVel = 0x1788; // QAngle
-            public const nint m_aimPunchTickBase = 0x1794; // int32
-            public const nint m_aimPunchTickFraction = 0x1798; // float32
-            public const nint m_aimPunchCache = 0x17A0; // CUtlVector<QAngle>
-            public const nint m_bInLanding = 0x17C0; // bool
-            public const nint m_flLandingTime = 0x17C4; // float32
-            public const nint m_bInHostageRescueZone = 0x17C8; // bool
-            public const nint m_bInBombZone = 0x17C9; // bool
-            public const nint m_bIsBuyMenuOpen = 0x17CA; // bool
-            public const nint m_flTimeOfLastInjury = 0x17CC; // GameTime_t
-            public const nint m_flNextSprayDecalTime = 0x17D0; // GameTime_t
-            public const nint m_iRetakesOffering = 0x18E8; // int32
-            public const nint m_iRetakesOfferingCard = 0x18EC; // int32
-            public const nint m_bRetakesHasDefuseKit = 0x18F0; // bool
-            public const nint m_bRetakesMVPLastRound = 0x18F1; // bool
-            public const nint m_iRetakesMVPBoostItem = 0x18F4; // int32
-            public const nint m_RetakesMVPBoostExtraUtility = 0x18F8; // loadout_slot_t
-            public const nint m_bNeedToReApplyGloves = 0x1918; // bool
-            public const nint m_EconGloves = 0x1920; // C_EconItemView
-            public const nint m_nEconGlovesChanged = 0x1D68; // uint8
-            public const nint m_bMustSyncRagdollState = 0x1D69; // bool
-            public const nint m_nRagdollDamageBone = 0x1D6C; // int32
-            public const nint m_vRagdollDamageForce = 0x1D70; // Vector
-            public const nint m_vRagdollDamagePosition = 0x1D7C; // Vector
-            public const nint m_szRagdollDamageWeaponName = 0x1D88; // char[64]
-            public const nint m_bRagdollDamageHeadshot = 0x1DC8; // bool
-            public const nint m_vRagdollServerOrigin = 0x1DCC; // Vector
-            public const nint m_bLastHeadBoneTransformIsValid = 0x23E0; // bool
-            public const nint m_lastLandTime = 0x23E4; // GameTime_t
-            public const nint m_bOnGroundLastTick = 0x23E8; // bool
-            public const nint m_qDeathEyeAngles = 0x2404; // QAngle
-            public const nint m_bSkipOneHeadConstraintUpdate = 0x2410; // bool
+            public const nint m_pBulletServices = 0x1710; // CCSPlayer_BulletServices*
+            public const nint m_pHostageServices = 0x1718; // CCSPlayer_HostageServices*
+            public const nint m_pBuyServices = 0x1720; // CCSPlayer_BuyServices*
+            public const nint m_pGlowServices = 0x1728; // CCSPlayer_GlowServices*
+            public const nint m_pActionTrackingServices = 0x1730; // CCSPlayer_ActionTrackingServices*
+            public const nint m_flHealthShotBoostExpirationTime = 0x1738; // GameTime_t
+            public const nint m_flLastFiredWeaponTime = 0x173C; // GameTime_t
+            public const nint m_bHasFemaleVoice = 0x1740; // bool
+            public const nint m_flLandseconds = 0x1744; // float32
+            public const nint m_flOldFallVelocity = 0x1748; // float32
+            public const nint m_szLastPlaceName = 0x174C; // char[18]
+            public const nint m_bPrevDefuser = 0x175E; // bool
+            public const nint m_bPrevHelmet = 0x175F; // bool
+            public const nint m_nPrevArmorVal = 0x1760; // int32
+            public const nint m_nPrevGrenadeAmmoCount = 0x1764; // int32
+            public const nint m_unPreviousWeaponHash = 0x1768; // uint32
+            public const nint m_unWeaponHash = 0x176C; // uint32
+            public const nint m_bInBuyZone = 0x1770; // bool
+            public const nint m_bPreviouslyInBuyZone = 0x1771; // bool
+            public const nint m_aimPunchAngle = 0x1774; // QAngle
+            public const nint m_aimPunchAngleVel = 0x1780; // QAngle
+            public const nint m_aimPunchTickBase = 0x178C; // int32
+            public const nint m_aimPunchTickFraction = 0x1790; // float32
+            public const nint m_aimPunchCache = 0x1798; // CUtlVector<QAngle>
+            public const nint m_bInLanding = 0x17B8; // bool
+            public const nint m_flLandingTime = 0x17BC; // float32
+            public const nint m_bInHostageRescueZone = 0x17C0; // bool
+            public const nint m_bInBombZone = 0x17C1; // bool
+            public const nint m_bIsBuyMenuOpen = 0x17C2; // bool
+            public const nint m_flTimeOfLastInjury = 0x17C4; // GameTime_t
+            public const nint m_flNextSprayDecalTime = 0x17C8; // GameTime_t
+            public const nint m_iRetakesOffering = 0x18E0; // int32
+            public const nint m_iRetakesOfferingCard = 0x18E4; // int32
+            public const nint m_bRetakesHasDefuseKit = 0x18E8; // bool
+            public const nint m_bRetakesMVPLastRound = 0x18E9; // bool
+            public const nint m_iRetakesMVPBoostItem = 0x18EC; // int32
+            public const nint m_RetakesMVPBoostExtraUtility = 0x18F0; // loadout_slot_t
+            public const nint m_bNeedToReApplyGloves = 0x1910; // bool
+            public const nint m_EconGloves = 0x1918; // C_EconItemView
+            public const nint m_nEconGlovesChanged = 0x1D60; // uint8
+            public const nint m_bMustSyncRagdollState = 0x1D61; // bool
+            public const nint m_nRagdollDamageBone = 0x1D64; // int32
+            public const nint m_vRagdollDamageForce = 0x1D68; // Vector
+            public const nint m_vRagdollDamagePosition = 0x1D74; // Vector
+            public const nint m_szRagdollDamageWeaponName = 0x1D80; // char[64]
+            public const nint m_bRagdollDamageHeadshot = 0x1DC0; // bool
+            public const nint m_vRagdollServerOrigin = 0x1DC4; // Vector
+            public const nint m_bLastHeadBoneTransformIsValid = 0x23D8; // bool
+            public const nint m_lastLandTime = 0x23DC; // GameTime_t
+            public const nint m_bOnGroundLastTick = 0x23E0; // bool
+            public const nint m_qDeathEyeAngles = 0x23FC; // QAngle
+            public const nint m_bSkipOneHeadConstraintUpdate = 0x2408; // bool
         }
         // Parent: C_RagdollProp
         // Fields count: 7
@@ -1952,7 +1952,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flNewFarZ = 0x3C; // float32
         }
         // Parent: C_BasePlayerPawn
-        // Fields count: 142
+        // Fields count: 141
         //
         // Metadata:
         // MNetworkExcludeByName
@@ -2001,7 +2001,6 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flVelocityModifier (float)
         // NetworkVarNames: m_flHitHeading (float)
         // NetworkVarNames: m_nHitBodyPart (int)
-        // NetworkVarNames: m_iStartAccount (int)
         // NetworkVarNames: m_flFlashMaxAlpha (float)
         // NetworkVarNames: m_flFlashDuration (float)
         // NetworkVarNames: m_unCurrentEquipmentValue (uint16)
@@ -2088,82 +2087,81 @@ namespace CS2Dumper.Schemas {
             public const nint m_flVelocityModifier = 0x1484; // float32
             public const nint m_flHitHeading = 0x1488; // float32
             public const nint m_nHitBodyPart = 0x148C; // int32
-            public const nint m_iStartAccount = 0x1490; // int32
-            public const nint m_vecIntroStartEyePosition = 0x1494; // Vector
-            public const nint m_vecIntroStartPlayerForward = 0x14A0; // Vector
-            public const nint m_flClientDeathTime = 0x14AC; // GameTime_t
-            public const nint m_flNightVisionAlpha = 0x14B0; // float32
-            public const nint m_bScreenTearFrameCaptured = 0x14B4; // bool
-            public const nint m_flFlashBangTime = 0x14B8; // float32
-            public const nint m_flFlashScreenshotAlpha = 0x14BC; // float32
-            public const nint m_flFlashOverlayAlpha = 0x14C0; // float32
-            public const nint m_bFlashBuildUp = 0x14C4; // bool
-            public const nint m_bFlashDspHasBeenCleared = 0x14C5; // bool
-            public const nint m_bFlashScreenshotHasBeenGrabbed = 0x14C6; // bool
-            public const nint m_flFlashMaxAlpha = 0x14C8; // float32
-            public const nint m_flFlashDuration = 0x14CC; // float32
-            public const nint m_lastStandingPos = 0x14D0; // Vector
-            public const nint m_vecLastMuzzleFlashPos = 0x14DC; // Vector
-            public const nint m_angLastMuzzleFlashAngle = 0x14E8; // QAngle
-            public const nint m_hMuzzleFlashShape = 0x14F4; // CHandle<C_BaseEntity>
-            public const nint m_iHealthBarRenderMaskIndex = 0x14F8; // int32
-            public const nint m_flHealthFadeValue = 0x14FC; // float32
-            public const nint m_flHealthFadeAlpha = 0x1500; // float32
-            public const nint m_nMyCollisionGroup = 0x1504; // int32
-            public const nint m_ignoreLadderJumpTime = 0x1508; // float32
-            public const nint m_ladderSurpressionTimer = 0x1510; // CountdownTimer
-            public const nint m_lastLadderNormal = 0x1528; // Vector
-            public const nint m_lastLadderPos = 0x1534; // Vector
-            public const nint m_flDeathCCWeight = 0x1548; // float32
-            public const nint m_bOldIsScoped = 0x154C; // bool
-            public const nint m_flPrevRoundEndTime = 0x1550; // float32
-            public const nint m_flPrevMatchEndTime = 0x1554; // float32
-            public const nint m_unCurrentEquipmentValue = 0x1558; // uint16
-            public const nint m_unRoundStartEquipmentValue = 0x155A; // uint16
-            public const nint m_unFreezetimeEndEquipmentValue = 0x155C; // uint16
-            public const nint m_vecThirdPersonViewPositionOverride = 0x1560; // Vector
-            public const nint m_nHeavyAssaultSuitCooldownRemaining = 0x156C; // int32
-            public const nint m_ArmorValue = 0x1570; // int32
-            public const nint m_angEyeAngles = 0x1578; // QAngle
-            public const nint m_fNextThinkPushAway = 0x1590; // float32
-            public const nint m_bShouldAutobuyDMWeapons = 0x1594; // bool
-            public const nint m_bShouldAutobuyNow = 0x1595; // bool
-            public const nint m_bHud_MiniScoreHidden = 0x1596; // bool
-            public const nint m_bHud_RadarHidden = 0x1597; // bool
-            public const nint m_nLastKillerIndex = 0x1598; // CEntityIndex
-            public const nint m_nLastConcurrentKilled = 0x159C; // int32
-            public const nint m_nDeathCamMusic = 0x15A0; // int32
-            public const nint m_iIDEntIndex = 0x15A4; // CEntityIndex
-            public const nint m_delayTargetIDTimer = 0x15A8; // CountdownTimer
-            public const nint m_iTargetedWeaponEntIndex = 0x15C0; // CEntityIndex
-            public const nint m_iOldIDEntIndex = 0x15C4; // CEntityIndex
-            public const nint m_holdTargetIDTimer = 0x15C8; // CountdownTimer
-            public const nint m_flCurrentMusicStartTime = 0x15E4; // float32
-            public const nint m_flMusicRoundStartTime = 0x15E8; // float32
-            public const nint m_bDeferStartMusicOnWarmup = 0x15EC; // bool
-            public const nint m_cycleLatch = 0x15F0; // int32
-            public const nint m_serverIntendedCycle = 0x15F4; // float32
-            public const nint m_vecPlayerPatchEconIndices = 0x15F8; // uint32[5]
-            public const nint m_bHideTargetID = 0x1614; // bool
-            public const nint m_flLastSmokeOverlayAlpha = 0x1618; // float32
-            public const nint m_flLastSmokeAge = 0x161C; // float32
-            public const nint m_vLastSmokeOverlayColor = 0x1620; // Vector
-            public const nint m_nPlayerSmokedFx = 0x162C; // ParticleIndex_t
-            public const nint m_nPlayerInfernoBodyFx = 0x1630; // ParticleIndex_t
-            public const nint m_nPlayerInfernoFootFx = 0x1634; // ParticleIndex_t
-            public const nint m_flNextMagDropTime = 0x1638; // float32
-            public const nint m_nLastMagDropAttachmentIndex = 0x163C; // int32
-            public const nint m_vecBulletHitModels = 0x1640; // CUtlVector<C_BulletHitModel*>
-            public const nint m_vecPickupModelSlerpers = 0x1658; // CUtlVector<C_PickUpModelSlerper*>
-            public const nint m_vecLastAliveLocalVelocity = 0x1670; // Vector
-            public const nint m_entitySpottedState = 0x1698; // EntitySpottedState_t
-            public const nint m_nSurvivalTeamNumber = 0x16B0; // int32
-            public const nint m_bGuardianShouldSprayCustomXMark = 0x16B4; // bool
-            public const nint m_bHasDeathInfo = 0x16B5; // bool
-            public const nint m_flDeathInfoTime = 0x16B8; // float32
-            public const nint m_vecDeathInfoOrigin = 0x16BC; // Vector
-            public const nint m_bKilledByHeadshot = 0x16C8; // bool
-            public const nint m_hOriginalController = 0x16CC; // CHandle<CCSPlayerController>
+            public const nint m_vecIntroStartEyePosition = 0x1490; // Vector
+            public const nint m_vecIntroStartPlayerForward = 0x149C; // Vector
+            public const nint m_flClientDeathTime = 0x14A8; // GameTime_t
+            public const nint m_flNightVisionAlpha = 0x14AC; // float32
+            public const nint m_bScreenTearFrameCaptured = 0x14B0; // bool
+            public const nint m_flFlashBangTime = 0x14B4; // float32
+            public const nint m_flFlashScreenshotAlpha = 0x14B8; // float32
+            public const nint m_flFlashOverlayAlpha = 0x14BC; // float32
+            public const nint m_bFlashBuildUp = 0x14C0; // bool
+            public const nint m_bFlashDspHasBeenCleared = 0x14C1; // bool
+            public const nint m_bFlashScreenshotHasBeenGrabbed = 0x14C2; // bool
+            public const nint m_flFlashMaxAlpha = 0x14C4; // float32
+            public const nint m_flFlashDuration = 0x14C8; // float32
+            public const nint m_lastStandingPos = 0x14CC; // Vector
+            public const nint m_vecLastMuzzleFlashPos = 0x14D8; // Vector
+            public const nint m_angLastMuzzleFlashAngle = 0x14E4; // QAngle
+            public const nint m_hMuzzleFlashShape = 0x14F0; // CHandle<C_BaseEntity>
+            public const nint m_iHealthBarRenderMaskIndex = 0x14F4; // int32
+            public const nint m_flHealthFadeValue = 0x14F8; // float32
+            public const nint m_flHealthFadeAlpha = 0x14FC; // float32
+            public const nint m_nMyCollisionGroup = 0x1500; // int32
+            public const nint m_ignoreLadderJumpTime = 0x1504; // float32
+            public const nint m_ladderSurpressionTimer = 0x1508; // CountdownTimer
+            public const nint m_lastLadderNormal = 0x1520; // Vector
+            public const nint m_lastLadderPos = 0x152C; // Vector
+            public const nint m_flDeathCCWeight = 0x1540; // float32
+            public const nint m_bOldIsScoped = 0x1544; // bool
+            public const nint m_flPrevRoundEndTime = 0x1548; // float32
+            public const nint m_flPrevMatchEndTime = 0x154C; // float32
+            public const nint m_unCurrentEquipmentValue = 0x1550; // uint16
+            public const nint m_unRoundStartEquipmentValue = 0x1552; // uint16
+            public const nint m_unFreezetimeEndEquipmentValue = 0x1554; // uint16
+            public const nint m_vecThirdPersonViewPositionOverride = 0x1558; // Vector
+            public const nint m_nHeavyAssaultSuitCooldownRemaining = 0x1564; // int32
+            public const nint m_ArmorValue = 0x1568; // int32
+            public const nint m_angEyeAngles = 0x1570; // QAngle
+            public const nint m_fNextThinkPushAway = 0x1588; // float32
+            public const nint m_bShouldAutobuyDMWeapons = 0x158C; // bool
+            public const nint m_bShouldAutobuyNow = 0x158D; // bool
+            public const nint m_bHud_MiniScoreHidden = 0x158E; // bool
+            public const nint m_bHud_RadarHidden = 0x158F; // bool
+            public const nint m_nLastKillerIndex = 0x1590; // CEntityIndex
+            public const nint m_nLastConcurrentKilled = 0x1594; // int32
+            public const nint m_nDeathCamMusic = 0x1598; // int32
+            public const nint m_iIDEntIndex = 0x159C; // CEntityIndex
+            public const nint m_delayTargetIDTimer = 0x15A0; // CountdownTimer
+            public const nint m_iTargetedWeaponEntIndex = 0x15B8; // CEntityIndex
+            public const nint m_iOldIDEntIndex = 0x15BC; // CEntityIndex
+            public const nint m_holdTargetIDTimer = 0x15C0; // CountdownTimer
+            public const nint m_flCurrentMusicStartTime = 0x15DC; // float32
+            public const nint m_flMusicRoundStartTime = 0x15E0; // float32
+            public const nint m_bDeferStartMusicOnWarmup = 0x15E4; // bool
+            public const nint m_cycleLatch = 0x15E8; // int32
+            public const nint m_serverIntendedCycle = 0x15EC; // float32
+            public const nint m_vecPlayerPatchEconIndices = 0x15F0; // uint32[5]
+            public const nint m_bHideTargetID = 0x160C; // bool
+            public const nint m_flLastSmokeOverlayAlpha = 0x1610; // float32
+            public const nint m_flLastSmokeAge = 0x1614; // float32
+            public const nint m_vLastSmokeOverlayColor = 0x1618; // Vector
+            public const nint m_nPlayerSmokedFx = 0x1624; // ParticleIndex_t
+            public const nint m_nPlayerInfernoBodyFx = 0x1628; // ParticleIndex_t
+            public const nint m_nPlayerInfernoFootFx = 0x162C; // ParticleIndex_t
+            public const nint m_flNextMagDropTime = 0x1630; // float32
+            public const nint m_nLastMagDropAttachmentIndex = 0x1634; // int32
+            public const nint m_vecBulletHitModels = 0x1638; // CUtlVector<C_BulletHitModel*>
+            public const nint m_vecPickupModelSlerpers = 0x1650; // CUtlVector<C_PickUpModelSlerper*>
+            public const nint m_vecLastAliveLocalVelocity = 0x1668; // Vector
+            public const nint m_entitySpottedState = 0x1690; // EntitySpottedState_t
+            public const nint m_nSurvivalTeamNumber = 0x16A8; // int32
+            public const nint m_bGuardianShouldSprayCustomXMark = 0x16AC; // bool
+            public const nint m_bHasDeathInfo = 0x16AD; // bool
+            public const nint m_flDeathInfoTime = 0x16B0; // float32
+            public const nint m_vecDeathInfoOrigin = 0x16B4; // Vector
+            public const nint m_bKilledByHeadshot = 0x16C0; // bool
+            public const nint m_hOriginalController = 0x16C4; // CHandle<CCSPlayerController>
         }
         // Parent: C_WeaponBaseItem
         // Fields count: 0
@@ -2362,9 +2360,9 @@ namespace CS2Dumper.Schemas {
         // Parent: C_CSPlayerPawn
         // Fields count: 3
         public static class C_CSGO_PreviewPlayer {
-            public const nint m_animgraph = 0x2418; // CUtlString
-            public const nint m_animgraphCharacterModeString = 0x2420; // CGlobalSymbol
-            public const nint m_flInitialModelScale = 0x2428; // float32
+            public const nint m_animgraph = 0x2410; // CUtlString
+            public const nint m_animgraphCharacterModeString = 0x2418; // CGlobalSymbol
+            public const nint m_flInitialModelScale = 0x2420; // float32
         }
         // Parent: CSkeletonAnimationController
         // Fields count: 13
@@ -3920,7 +3918,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flCrouchTime = 0x174; // float32
         }
         // Parent: CPlayerControllerComponent
-        // Fields count: 5
+        // Fields count: 4
         //
         // Metadata:
         // NetworkVarNames: m_iAccount (int)
@@ -3932,7 +3930,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_iStartAccount = 0x44; // int32
             public const nint m_iTotalCashSpent = 0x48; // int32
             public const nint m_iCashSpentThisRound = 0x4C; // int32
-            public const nint m_nPreviousAccount = 0x50; // int32
         }
         // Parent: None
         // Fields count: 2
@@ -6399,7 +6396,7 @@ namespace CS2Dumper.Schemas {
         // MNetworkVarTypeOverride
         // MNetworkIncludeByName
         public static class C_CSObserverPawn {
-            public const nint m_hDetectParentChange = 0x1718; // CEntityHandle
+            public const nint m_hDetectParentChange = 0x1710; // CEntityHandle
         }
         // Parent: C_BaseEntity
         // Fields count: 3
