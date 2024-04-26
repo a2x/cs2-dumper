@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-23 10:42:31.964705500 UTC
+// 2024-04-26 04:15:57.943456300 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: client.dll
-        // Classes count: 402
+        // Classes count: 401
         // Enums count: 7
         namespace client_dll {
             // Alignment: 4
@@ -747,7 +747,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_angDemoViewAngles = 0x1F8; // QAngle
             }
             // Parent: C_CSWeaponBase
-            // Fields count: 14
+            // Fields count: 15
             //
             // Metadata:
             // NetworkVarNames: m_bRedraw (bool)
@@ -759,25 +759,27 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flThrowStrength (float)
             // NetworkVarNames: m_flThrowStrengthApproach (float)
             // NetworkVarNames: m_fDropTime (GameTime_t)
+            // NetworkVarNames: m_fPinPullTime (GameTime_t)
             // NetworkVarNames: m_bJustPulledPin (bool)
             // NetworkVarNames: m_nNextHoldTick (GameTick_t)
             // NetworkVarNames: m_flNextHoldFrac (float)
             // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
             namespace C_BaseCSGrenade {
-                constexpr std::ptrdiff_t m_bClientPredictDelete = 0x1A70; // bool
-                constexpr std::ptrdiff_t m_bRedraw = 0x1A71; // bool
-                constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x1A72; // bool
-                constexpr std::ptrdiff_t m_bPinPulled = 0x1A73; // bool
-                constexpr std::ptrdiff_t m_bJumpThrow = 0x1A74; // bool
-                constexpr std::ptrdiff_t m_bThrowAnimating = 0x1A75; // bool
-                constexpr std::ptrdiff_t m_fThrowTime = 0x1A78; // GameTime_t
-                constexpr std::ptrdiff_t m_flThrowStrength = 0x1A7C; // float32
-                constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0x1A80; // float32
-                constexpr std::ptrdiff_t m_fDropTime = 0x1A84; // GameTime_t
-                constexpr std::ptrdiff_t m_bJustPulledPin = 0x1A88; // bool
-                constexpr std::ptrdiff_t m_nNextHoldTick = 0x1A8C; // GameTick_t
-                constexpr std::ptrdiff_t m_flNextHoldFrac = 0x1A90; // float32
-                constexpr std::ptrdiff_t m_hSwitchToWeaponAfterThrow = 0x1A94; // CHandle<C_CSWeaponBase>
+                constexpr std::ptrdiff_t m_bClientPredictDelete = 0x1A80; // bool
+                constexpr std::ptrdiff_t m_bRedraw = 0x1A81; // bool
+                constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x1A82; // bool
+                constexpr std::ptrdiff_t m_bPinPulled = 0x1A83; // bool
+                constexpr std::ptrdiff_t m_bJumpThrow = 0x1A84; // bool
+                constexpr std::ptrdiff_t m_bThrowAnimating = 0x1A85; // bool
+                constexpr std::ptrdiff_t m_fThrowTime = 0x1A88; // GameTime_t
+                constexpr std::ptrdiff_t m_flThrowStrength = 0x1A8C; // float32
+                constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0x1A90; // float32
+                constexpr std::ptrdiff_t m_fDropTime = 0x1A94; // GameTime_t
+                constexpr std::ptrdiff_t m_fPinPullTime = 0x1A98; // GameTime_t
+                constexpr std::ptrdiff_t m_bJustPulledPin = 0x1A9C; // bool
+                constexpr std::ptrdiff_t m_nNextHoldTick = 0x1AA0; // GameTick_t
+                constexpr std::ptrdiff_t m_flNextHoldFrac = 0x1AA4; // float32
+                constexpr std::ptrdiff_t m_hSwitchToWeaponAfterThrow = 0x1AA8; // CHandle<C_CSWeaponBase>
             }
             // Parent: C_FuncBrush
             // Fields count: 8
@@ -1110,7 +1112,7 @@ namespace cs2_dumper {
             namespace C_DEagle {
             }
             // Parent: C_CSPlayerPawnBase
-            // Fields count: 52
+            // Fields count: 99
             //
             // Metadata:
             // NetworkVarNames: m_pBulletServices (CCSPlayer_BulletServices*)
@@ -1131,6 +1133,7 @@ namespace cs2_dumper {
             // MNetworkVarTypeOverride
             // MNetworkIncludeByName
             // MNetworkVarTypeOverride
+            // MNetworkIncludeByName
             // MNetworkIncludeByName
             // NetworkVarNames: m_flHealthShotBoostExpirationTime (GameTime_t)
             // NetworkVarNames: m_bHasFemaleVoice (bool)
@@ -1160,59 +1163,135 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bRagdollDamageHeadshot (bool)
             // NetworkVarNames: m_vRagdollServerOrigin (Vector)
             // NetworkVarNames: m_qDeathEyeAngles (QAngle)
+            // NetworkVarNames: m_bLeftHanded (bool)
+            // NetworkVarNames: m_fSwitchedHandednessTime (GameTime_t)
+            // NetworkVarNames: m_flViewmodelOffsetX (float)
+            // NetworkVarNames: m_flViewmodelOffsetY (float)
+            // NetworkVarNames: m_flViewmodelOffsetZ (float)
+            // NetworkVarNames: m_flViewmodelFOV (float)
+            // NetworkVarNames: m_vecPlayerPatchEconIndices (uint32)
+            // NetworkVarNames: m_GunGameImmunityColor (Color)
+            // NetworkVarNames: m_bIsWalking (bool)
+            // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
+            // NetworkVarNames: m_bIsScoped (bool)
+            // NetworkVarNames: m_bResumeZoom (bool)
+            // NetworkVarNames: m_bIsDefusing (bool)
+            // NetworkVarNames: m_bIsGrabbingHostage (bool)
+            // NetworkVarNames: m_iBlockingUseActionInProgress (CSPlayerBlockingUseAction_t)
+            // NetworkVarNames: m_flEmitSoundTime (GameTime_t)
+            // NetworkVarNames: m_bInNoDefuseArea (bool)
+            // NetworkVarNames: m_nWhichBombZone (int)
+            // NetworkVarNames: m_iShotsFired (int)
+            // NetworkVarNames: m_flVelocityModifier (float)
+            // NetworkVarNames: m_flHitHeading (float)
+            // NetworkVarNames: m_nHitBodyPart (int)
+            // NetworkVarNames: m_bWaitForNoAttack (bool)
+            // NetworkVarNames: m_bKilledByHeadshot (bool)
+            // NetworkVarNames: m_ArmorValue (int32)
+            // NetworkVarNames: m_unCurrentEquipmentValue (uint16)
+            // NetworkVarNames: m_unRoundStartEquipmentValue (uint16)
+            // NetworkVarNames: m_unFreezetimeEndEquipmentValue (uint16)
+            // NetworkVarNames: m_nLastKillerIndex (CEntityIndex)
             namespace C_CSPlayerPawn {
-                constexpr std::ptrdiff_t m_pBulletServices = 0x1710; // CCSPlayer_BulletServices*
-                constexpr std::ptrdiff_t m_pHostageServices = 0x1718; // CCSPlayer_HostageServices*
-                constexpr std::ptrdiff_t m_pBuyServices = 0x1720; // CCSPlayer_BuyServices*
-                constexpr std::ptrdiff_t m_pGlowServices = 0x1728; // CCSPlayer_GlowServices*
-                constexpr std::ptrdiff_t m_pActionTrackingServices = 0x1730; // CCSPlayer_ActionTrackingServices*
-                constexpr std::ptrdiff_t m_flHealthShotBoostExpirationTime = 0x1738; // GameTime_t
-                constexpr std::ptrdiff_t m_flLastFiredWeaponTime = 0x173C; // GameTime_t
-                constexpr std::ptrdiff_t m_bHasFemaleVoice = 0x1740; // bool
-                constexpr std::ptrdiff_t m_flLandseconds = 0x1744; // float32
-                constexpr std::ptrdiff_t m_flOldFallVelocity = 0x1748; // float32
-                constexpr std::ptrdiff_t m_szLastPlaceName = 0x174C; // char[18]
-                constexpr std::ptrdiff_t m_bPrevDefuser = 0x175E; // bool
-                constexpr std::ptrdiff_t m_bPrevHelmet = 0x175F; // bool
-                constexpr std::ptrdiff_t m_nPrevArmorVal = 0x1760; // int32
-                constexpr std::ptrdiff_t m_nPrevGrenadeAmmoCount = 0x1764; // int32
-                constexpr std::ptrdiff_t m_unPreviousWeaponHash = 0x1768; // uint32
-                constexpr std::ptrdiff_t m_unWeaponHash = 0x176C; // uint32
-                constexpr std::ptrdiff_t m_bInBuyZone = 0x1770; // bool
-                constexpr std::ptrdiff_t m_bPreviouslyInBuyZone = 0x1771; // bool
-                constexpr std::ptrdiff_t m_aimPunchAngle = 0x1774; // QAngle
-                constexpr std::ptrdiff_t m_aimPunchAngleVel = 0x1780; // QAngle
-                constexpr std::ptrdiff_t m_aimPunchTickBase = 0x178C; // int32
-                constexpr std::ptrdiff_t m_aimPunchTickFraction = 0x1790; // float32
-                constexpr std::ptrdiff_t m_aimPunchCache = 0x1798; // CUtlVector<QAngle>
-                constexpr std::ptrdiff_t m_bInLanding = 0x17B8; // bool
-                constexpr std::ptrdiff_t m_flLandingTime = 0x17BC; // float32
-                constexpr std::ptrdiff_t m_bInHostageRescueZone = 0x17C0; // bool
-                constexpr std::ptrdiff_t m_bInBombZone = 0x17C1; // bool
-                constexpr std::ptrdiff_t m_bIsBuyMenuOpen = 0x17C2; // bool
-                constexpr std::ptrdiff_t m_flTimeOfLastInjury = 0x17C4; // GameTime_t
-                constexpr std::ptrdiff_t m_flNextSprayDecalTime = 0x17C8; // GameTime_t
-                constexpr std::ptrdiff_t m_iRetakesOffering = 0x18E0; // int32
-                constexpr std::ptrdiff_t m_iRetakesOfferingCard = 0x18E4; // int32
-                constexpr std::ptrdiff_t m_bRetakesHasDefuseKit = 0x18E8; // bool
-                constexpr std::ptrdiff_t m_bRetakesMVPLastRound = 0x18E9; // bool
-                constexpr std::ptrdiff_t m_iRetakesMVPBoostItem = 0x18EC; // int32
-                constexpr std::ptrdiff_t m_RetakesMVPBoostExtraUtility = 0x18F0; // loadout_slot_t
-                constexpr std::ptrdiff_t m_bNeedToReApplyGloves = 0x1910; // bool
-                constexpr std::ptrdiff_t m_EconGloves = 0x1918; // C_EconItemView
-                constexpr std::ptrdiff_t m_nEconGlovesChanged = 0x1D60; // uint8
-                constexpr std::ptrdiff_t m_bMustSyncRagdollState = 0x1D61; // bool
-                constexpr std::ptrdiff_t m_nRagdollDamageBone = 0x1D64; // int32
-                constexpr std::ptrdiff_t m_vRagdollDamageForce = 0x1D68; // Vector
-                constexpr std::ptrdiff_t m_vRagdollDamagePosition = 0x1D74; // Vector
-                constexpr std::ptrdiff_t m_szRagdollDamageWeaponName = 0x1D80; // char[64]
-                constexpr std::ptrdiff_t m_bRagdollDamageHeadshot = 0x1DC0; // bool
-                constexpr std::ptrdiff_t m_vRagdollServerOrigin = 0x1DC4; // Vector
-                constexpr std::ptrdiff_t m_bLastHeadBoneTransformIsValid = 0x23D8; // bool
-                constexpr std::ptrdiff_t m_lastLandTime = 0x23DC; // GameTime_t
-                constexpr std::ptrdiff_t m_bOnGroundLastTick = 0x23E0; // bool
-                constexpr std::ptrdiff_t m_qDeathEyeAngles = 0x23FC; // QAngle
-                constexpr std::ptrdiff_t m_bSkipOneHeadConstraintUpdate = 0x2408; // bool
+                constexpr std::ptrdiff_t m_pBulletServices = 0x1470; // CCSPlayer_BulletServices*
+                constexpr std::ptrdiff_t m_pHostageServices = 0x1478; // CCSPlayer_HostageServices*
+                constexpr std::ptrdiff_t m_pBuyServices = 0x1480; // CCSPlayer_BuyServices*
+                constexpr std::ptrdiff_t m_pGlowServices = 0x1488; // CCSPlayer_GlowServices*
+                constexpr std::ptrdiff_t m_pActionTrackingServices = 0x1490; // CCSPlayer_ActionTrackingServices*
+                constexpr std::ptrdiff_t m_flHealthShotBoostExpirationTime = 0x1498; // GameTime_t
+                constexpr std::ptrdiff_t m_flLastFiredWeaponTime = 0x149C; // GameTime_t
+                constexpr std::ptrdiff_t m_bHasFemaleVoice = 0x14A0; // bool
+                constexpr std::ptrdiff_t m_flLandingTimeSeconds = 0x14A4; // float32
+                constexpr std::ptrdiff_t m_flOldFallVelocity = 0x14A8; // float32
+                constexpr std::ptrdiff_t m_szLastPlaceName = 0x14AC; // char[18]
+                constexpr std::ptrdiff_t m_bPrevDefuser = 0x14BE; // bool
+                constexpr std::ptrdiff_t m_bPrevHelmet = 0x14BF; // bool
+                constexpr std::ptrdiff_t m_nPrevArmorVal = 0x14C0; // int32
+                constexpr std::ptrdiff_t m_nPrevGrenadeAmmoCount = 0x14C4; // int32
+                constexpr std::ptrdiff_t m_unPreviousWeaponHash = 0x14C8; // uint32
+                constexpr std::ptrdiff_t m_unWeaponHash = 0x14CC; // uint32
+                constexpr std::ptrdiff_t m_bInBuyZone = 0x14D0; // bool
+                constexpr std::ptrdiff_t m_bPreviouslyInBuyZone = 0x14D1; // bool
+                constexpr std::ptrdiff_t m_aimPunchAngle = 0x14D4; // QAngle
+                constexpr std::ptrdiff_t m_aimPunchAngleVel = 0x14E0; // QAngle
+                constexpr std::ptrdiff_t m_aimPunchTickBase = 0x14EC; // int32
+                constexpr std::ptrdiff_t m_aimPunchTickFraction = 0x14F0; // float32
+                constexpr std::ptrdiff_t m_aimPunchCache = 0x14F8; // CUtlVector<QAngle>
+                constexpr std::ptrdiff_t m_bInLanding = 0x1518; // bool
+                constexpr std::ptrdiff_t m_flLandingStartTime = 0x151C; // float32
+                constexpr std::ptrdiff_t m_bInHostageRescueZone = 0x1520; // bool
+                constexpr std::ptrdiff_t m_bInBombZone = 0x1521; // bool
+                constexpr std::ptrdiff_t m_bIsBuyMenuOpen = 0x1522; // bool
+                constexpr std::ptrdiff_t m_flTimeOfLastInjury = 0x1524; // GameTime_t
+                constexpr std::ptrdiff_t m_flNextSprayDecalTime = 0x1528; // GameTime_t
+                constexpr std::ptrdiff_t m_iRetakesOffering = 0x1640; // int32
+                constexpr std::ptrdiff_t m_iRetakesOfferingCard = 0x1644; // int32
+                constexpr std::ptrdiff_t m_bRetakesHasDefuseKit = 0x1648; // bool
+                constexpr std::ptrdiff_t m_bRetakesMVPLastRound = 0x1649; // bool
+                constexpr std::ptrdiff_t m_iRetakesMVPBoostItem = 0x164C; // int32
+                constexpr std::ptrdiff_t m_RetakesMVPBoostExtraUtility = 0x1650; // loadout_slot_t
+                constexpr std::ptrdiff_t m_bNeedToReApplyGloves = 0x1670; // bool
+                constexpr std::ptrdiff_t m_EconGloves = 0x1678; // C_EconItemView
+                constexpr std::ptrdiff_t m_nEconGlovesChanged = 0x1AC0; // uint8
+                constexpr std::ptrdiff_t m_bMustSyncRagdollState = 0x1AC1; // bool
+                constexpr std::ptrdiff_t m_nRagdollDamageBone = 0x1AC4; // int32
+                constexpr std::ptrdiff_t m_vRagdollDamageForce = 0x1AC8; // Vector
+                constexpr std::ptrdiff_t m_vRagdollDamagePosition = 0x1AD4; // Vector
+                constexpr std::ptrdiff_t m_szRagdollDamageWeaponName = 0x1AE0; // char[64]
+                constexpr std::ptrdiff_t m_bRagdollDamageHeadshot = 0x1B20; // bool
+                constexpr std::ptrdiff_t m_vRagdollServerOrigin = 0x1B24; // Vector
+                constexpr std::ptrdiff_t m_bLastHeadBoneTransformIsValid = 0x2138; // bool
+                constexpr std::ptrdiff_t m_lastLandTime = 0x213C; // GameTime_t
+                constexpr std::ptrdiff_t m_bOnGroundLastTick = 0x2140; // bool
+                constexpr std::ptrdiff_t m_qDeathEyeAngles = 0x215C; // QAngle
+                constexpr std::ptrdiff_t m_bSkipOneHeadConstraintUpdate = 0x2168; // bool
+                constexpr std::ptrdiff_t m_bLeftHanded = 0x2169; // bool
+                constexpr std::ptrdiff_t m_fSwitchedHandednessTime = 0x216C; // GameTime_t
+                constexpr std::ptrdiff_t m_flViewmodelOffsetX = 0x2170; // float32
+                constexpr std::ptrdiff_t m_flViewmodelOffsetY = 0x2174; // float32
+                constexpr std::ptrdiff_t m_flViewmodelOffsetZ = 0x2178; // float32
+                constexpr std::ptrdiff_t m_flViewmodelFOV = 0x217C; // float32
+                constexpr std::ptrdiff_t m_vecPlayerPatchEconIndices = 0x2180; // uint32[5]
+                constexpr std::ptrdiff_t m_GunGameImmunityColor = 0x21B8; // Color
+                constexpr std::ptrdiff_t m_vecBulletHitModels = 0x2208; // CUtlVector<C_BulletHitModel*>
+                constexpr std::ptrdiff_t m_bIsWalking = 0x2220; // bool
+                constexpr std::ptrdiff_t m_thirdPersonHeading = 0x2228; // QAngle
+                constexpr std::ptrdiff_t m_flSlopeDropOffset = 0x2240; // float32
+                constexpr std::ptrdiff_t m_flSlopeDropHeight = 0x2250; // float32
+                constexpr std::ptrdiff_t m_vHeadConstraintOffset = 0x2260; // Vector
+                constexpr std::ptrdiff_t m_entitySpottedState = 0x2278; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_bIsScoped = 0x2290; // bool
+                constexpr std::ptrdiff_t m_bResumeZoom = 0x2291; // bool
+                constexpr std::ptrdiff_t m_bIsDefusing = 0x2292; // bool
+                constexpr std::ptrdiff_t m_bIsGrabbingHostage = 0x2293; // bool
+                constexpr std::ptrdiff_t m_iBlockingUseActionInProgress = 0x2294; // CSPlayerBlockingUseAction_t
+                constexpr std::ptrdiff_t m_flEmitSoundTime = 0x2298; // GameTime_t
+                constexpr std::ptrdiff_t m_bInNoDefuseArea = 0x229C; // bool
+                constexpr std::ptrdiff_t m_nWhichBombZone = 0x22A0; // int32
+                constexpr std::ptrdiff_t m_iShotsFired = 0x22A4; // int32
+                constexpr std::ptrdiff_t m_flVelocityModifier = 0x22A8; // float32
+                constexpr std::ptrdiff_t m_flHitHeading = 0x22AC; // float32
+                constexpr std::ptrdiff_t m_nHitBodyPart = 0x22B0; // int32
+                constexpr std::ptrdiff_t m_bWaitForNoAttack = 0x22B4; // bool
+                constexpr std::ptrdiff_t m_ignoreLadderJumpTime = 0x22B8; // float32
+                constexpr std::ptrdiff_t m_bKilledByHeadshot = 0x22BD; // bool
+                constexpr std::ptrdiff_t m_ArmorValue = 0x22C0; // int32
+                constexpr std::ptrdiff_t m_unCurrentEquipmentValue = 0x22C4; // uint16
+                constexpr std::ptrdiff_t m_unRoundStartEquipmentValue = 0x22C6; // uint16
+                constexpr std::ptrdiff_t m_unFreezetimeEndEquipmentValue = 0x22C8; // uint16
+                constexpr std::ptrdiff_t m_nLastKillerIndex = 0x22CC; // CEntityIndex
+                constexpr std::ptrdiff_t m_bOldIsScoped = 0x22D0; // bool
+                constexpr std::ptrdiff_t m_bHasDeathInfo = 0x22D1; // bool
+                constexpr std::ptrdiff_t m_flDeathInfoTime = 0x22D4; // float32
+                constexpr std::ptrdiff_t m_vecDeathInfoOrigin = 0x22D8; // Vector
+                constexpr std::ptrdiff_t m_grenadeParameterStashTime = 0x22E4; // GameTime_t
+                constexpr std::ptrdiff_t m_bGrenadeParametersStashed = 0x22E8; // bool
+                constexpr std::ptrdiff_t m_angStashedShootAngles = 0x22EC; // QAngle
+                constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x22F8; // Vector
+                constexpr std::ptrdiff_t m_vecStashedVelocity = 0x2304; // Vector
+                constexpr std::ptrdiff_t m_angShootAngleHistory = 0x2310; // QAngle[2]
+                constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x2328; // Vector[2]
+                constexpr std::ptrdiff_t m_vecVelocityHistory = 0x2340; // Vector[2]
             }
             // Parent: C_RagdollProp
             // Fields count: 7
@@ -1277,8 +1356,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_SequenceCompleteTimer (CountdownTimer)
             // NetworkVarNames: m_bRedraw (bool)
             namespace C_WeaponBaseItem {
-                constexpr std::ptrdiff_t m_SequenceCompleteTimer = 0x1A70; // CountdownTimer
-                constexpr std::ptrdiff_t m_bRedraw = 0x1A88; // bool
+                constexpr std::ptrdiff_t m_SequenceCompleteTimer = 0x1A80; // CountdownTimer
+                constexpr std::ptrdiff_t m_bRedraw = 0x1A98; // bool
             }
             // Parent: None
             // Fields count: 21
@@ -1658,27 +1737,17 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bShouldIgnoreOffsetAndAccuracy (bool)
             // NetworkVarNames: m_nWeaponParity (uint32)
             namespace C_CSGOViewModel {
-                constexpr std::ptrdiff_t m_bShouldIgnoreOffsetAndAccuracy = 0xF68; // bool
-                constexpr std::ptrdiff_t m_nWeaponParity = 0xF6C; // uint32
-                constexpr std::ptrdiff_t m_nOldWeaponParity = 0xF70; // uint32
-                constexpr std::ptrdiff_t m_nLastKnownAssociatedWeaponEntIndex = 0xF74; // CEntityIndex
-                constexpr std::ptrdiff_t m_bNeedToQueueHighResComposite = 0xF78; // bool
-                constexpr std::ptrdiff_t m_vLoweredWeaponOffset = 0xFDC; // QAngle
+                constexpr std::ptrdiff_t m_bShouldIgnoreOffsetAndAccuracy = 0xF70; // bool
+                constexpr std::ptrdiff_t m_nWeaponParity = 0xF74; // uint32
+                constexpr std::ptrdiff_t m_nOldWeaponParity = 0xF78; // uint32
+                constexpr std::ptrdiff_t m_nLastKnownAssociatedWeaponEntIndex = 0xF7C; // CEntityIndex
+                constexpr std::ptrdiff_t m_bNeedToQueueHighResComposite = 0xF80; // bool
+                constexpr std::ptrdiff_t m_vLoweredWeaponOffset = 0xFD0; // QAngle
             }
             // Parent: CEntityComponent
             // Fields count: 1
             namespace CScriptComponent {
                 constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
-            }
-            // Parent: CBaseAnimGraph
-            // Fields count: 6
-            namespace C_PickUpModelSlerper {
-                constexpr std::ptrdiff_t m_hPlayerParent = 0xED8; // CHandle<C_BaseEntity>
-                constexpr std::ptrdiff_t m_hItem = 0xEDC; // CHandle<C_BaseEntity>
-                constexpr std::ptrdiff_t m_flTimePickedUp = 0xEE0; // float32
-                constexpr std::ptrdiff_t m_angOriginal = 0xEE4; // QAngle
-                constexpr std::ptrdiff_t m_vecPosOriginal = 0xEF0; // Vector
-                constexpr std::ptrdiff_t m_angRandom = 0xF00; // QAngle
             }
             // Parent: C_BaseEntity
             // Fields count: 17
@@ -1721,8 +1790,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bEnabled = 0x1591; // bool
             }
             // Parent: CBaseAnimGraph
-            // Fields count: 0
+            // Fields count: 1
             namespace C_ViewmodelAttachmentModel {
+                constexpr std::ptrdiff_t m_bShouldFrontFaceCullLeftHanded = 0xED8; // bool
             }
             // Parent: C_BaseCSGrenade
             // Fields count: 0
@@ -1879,12 +1949,12 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iBurstShotsRemaining (int)
             // NetworkVarNames: m_bNeedsBoltAction (bool)
             namespace C_CSWeaponBaseGun {
-                constexpr std::ptrdiff_t m_zoomLevel = 0x1A70; // int32
-                constexpr std::ptrdiff_t m_iBurstShotsRemaining = 0x1A74; // int32
-                constexpr std::ptrdiff_t m_iSilencerBodygroup = 0x1A78; // int32
-                constexpr std::ptrdiff_t m_silencedModelIndex = 0x1A88; // int32
-                constexpr std::ptrdiff_t m_inPrecache = 0x1A8C; // bool
-                constexpr std::ptrdiff_t m_bNeedsBoltAction = 0x1A8D; // bool
+                constexpr std::ptrdiff_t m_zoomLevel = 0x1A80; // int32
+                constexpr std::ptrdiff_t m_iBurstShotsRemaining = 0x1A84; // int32
+                constexpr std::ptrdiff_t m_iSilencerBodygroup = 0x1A88; // int32
+                constexpr std::ptrdiff_t m_silencedModelIndex = 0x1A98; // int32
+                constexpr std::ptrdiff_t m_inPrecache = 0x1A9C; // bool
+                constexpr std::ptrdiff_t m_bNeedsBoltAction = 0x1A9D; // bool
             }
             // Parent: C_BaseEntity
             // Fields count: 4
@@ -1957,7 +2027,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flNewFarZ = 0x3C; // float32
             }
             // Parent: C_BasePlayerPawn
-            // Fields count: 141
+            // Fields count: 67
             //
             // Metadata:
             // MNetworkExcludeByName
@@ -1965,208 +2035,92 @@ namespace cs2_dumper {
             // MNetworkExcludeByUserGroup
             // MNetworkExcludeByName
             // MNetworkExcludeByName
-            // MNetworkIncludeByName
             // NetworkVarNames: m_pPingServices (CCSPlayer_PingServices*)
             // NetworkVarNames: m_pViewModelServices (CPlayer_ViewModelServices*)
-            // NetworkVarNames: m_bIsScoped (bool)
-            // NetworkVarNames: m_bIsWalking (bool)
-            // NetworkVarNames: m_bResumeZoom (bool)
             // NetworkVarNames: m_iPlayerState (CSPlayerState)
-            // NetworkVarNames: m_bIsDefusing (bool)
-            // NetworkVarNames: m_bIsGrabbingHostage (bool)
-            // NetworkVarNames: m_iBlockingUseActionInProgress (CSPlayerBlockingUseAction_t)
             // NetworkVarNames: m_bIsRescuing (bool)
             // NetworkVarNames: m_fImmuneToGunGameDamageTime (GameTime_t)
             // NetworkVarNames: m_bGunGameImmunity (bool)
-            // NetworkVarNames: m_GunGameImmunityColor (Color)
             // NetworkVarNames: m_bHasMovedSinceSpawn (bool)
             // NetworkVarNames: m_fMolotovUseTime (float)
             // NetworkVarNames: m_fMolotovDamageTime (float)
-            // NetworkVarNames: m_nWhichBombZone (int)
-            // NetworkVarNames: m_bInNoDefuseArea (bool)
             // NetworkVarNames: m_iThrowGrenadeCounter (int)
-            // NetworkVarNames: m_bWaitForNoAttack (bool)
-            // NetworkVarNames: m_flGuardianTooFarDistFrac (float)
-            // NetworkVarNames: m_flDetectedByEnemySensorTime (GameTime_t)
-            // NetworkVarNames: m_bKilledByTaser (bool)
-            // NetworkVarNames: m_iMoveState (int)
-            // NetworkVarNames: m_bCanMoveDuringFreezePeriod (bool)
-            // NetworkVarNames: m_flLowerBodyYawTarget (float)
-            // NetworkVarNames: m_bStrafing (bool)
-            // NetworkVarNames: m_flEmitSoundTime (GameTime_t)
-            // NetworkVarNames: m_iAddonBits (int)
-            // NetworkVarNames: m_iPrimaryAddon (int)
-            // NetworkVarNames: m_iSecondaryAddon (int)
             // NetworkVarNames: m_iProgressBarDuration (int)
             // NetworkVarNames: m_flProgressBarStartTime (float)
-            // NetworkVarNames: m_iDirection (int)
-            // NetworkVarNames: m_iShotsFired (int)
-            // NetworkVarNames: m_bNightVisionOn (bool)
-            // NetworkVarNames: m_bHasNightVision (bool)
-            // NetworkVarNames: m_flVelocityModifier (float)
-            // NetworkVarNames: m_flHitHeading (float)
-            // NetworkVarNames: m_nHitBodyPart (int)
             // NetworkVarNames: m_flFlashMaxAlpha (float)
             // NetworkVarNames: m_flFlashDuration (float)
-            // NetworkVarNames: m_unCurrentEquipmentValue (uint16)
-            // NetworkVarNames: m_unRoundStartEquipmentValue (uint16)
-            // NetworkVarNames: m_unFreezetimeEndEquipmentValue (uint16)
-            // NetworkVarNames: m_nHeavyAssaultSuitCooldownRemaining (int)
-            // NetworkVarNames: m_ArmorValue (int32)
             // NetworkVarNames: m_bHud_MiniScoreHidden (bool)
             // NetworkVarNames: m_bHud_RadarHidden (bool)
-            // NetworkVarNames: m_nLastKillerIndex (CEntityIndex)
-            // NetworkVarNames: m_nLastConcurrentKilled (int)
-            // NetworkVarNames: m_nDeathCamMusic (int)
             // NetworkVarNames: m_cycleLatch (int)
-            // NetworkVarNames: m_vecPlayerPatchEconIndices (uint32)
-            // NetworkVarNames: m_bHideTargetID (bool)
-            // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
-            // NetworkVarNames: m_nSurvivalTeamNumber (int)
-            // NetworkVarNames: m_bKilledByHeadshot (bool)
             // NetworkVarNames: m_hOriginalController (CHandle<CCSPlayerController>)
             namespace C_CSPlayerPawnBase {
-                constexpr std::ptrdiff_t m_pPingServices = 0x12C0; // CCSPlayer_PingServices*
-                constexpr std::ptrdiff_t m_pViewModelServices = 0x12C8; // CPlayer_ViewModelServices*
-                constexpr std::ptrdiff_t m_fRenderingClipPlane = 0x12D8; // float32[4]
-                constexpr std::ptrdiff_t m_nLastClipPlaneSetupFrame = 0x12E8; // int32
-                constexpr std::ptrdiff_t m_vecLastClipCameraPos = 0x12EC; // Vector
-                constexpr std::ptrdiff_t m_vecLastClipCameraForward = 0x12F8; // Vector
-                constexpr std::ptrdiff_t m_bClipHitStaticWorld = 0x1304; // bool
-                constexpr std::ptrdiff_t m_bCachedPlaneIsValid = 0x1305; // bool
-                constexpr std::ptrdiff_t m_pClippingWeapon = 0x1308; // C_CSWeaponBase*
-                constexpr std::ptrdiff_t m_previousPlayerState = 0x1310; // CSPlayerState
-                constexpr std::ptrdiff_t m_flLastCollisionCeiling = 0x1314; // float32
-                constexpr std::ptrdiff_t m_flLastCollisionCeilingChangeTime = 0x1318; // float32
-                constexpr std::ptrdiff_t m_grenadeParameterStashTime = 0x1338; // GameTime_t
-                constexpr std::ptrdiff_t m_bGrenadeParametersStashed = 0x133C; // bool
-                constexpr std::ptrdiff_t m_angStashedShootAngles = 0x1340; // QAngle
-                constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x134C; // Vector
-                constexpr std::ptrdiff_t m_vecStashedVelocity = 0x1358; // Vector
-                constexpr std::ptrdiff_t m_angShootAngleHistory = 0x1364; // QAngle[2]
-                constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x137C; // Vector[2]
-                constexpr std::ptrdiff_t m_vecVelocityHistory = 0x1394; // Vector[2]
-                constexpr std::ptrdiff_t m_thirdPersonHeading = 0x13B0; // QAngle
-                constexpr std::ptrdiff_t m_flSlopeDropOffset = 0x13C8; // float32
-                constexpr std::ptrdiff_t m_flSlopeDropHeight = 0x13D8; // float32
-                constexpr std::ptrdiff_t m_vHeadConstraintOffset = 0x13E8; // Vector
-                constexpr std::ptrdiff_t m_bIsScoped = 0x1400; // bool
-                constexpr std::ptrdiff_t m_bIsWalking = 0x1401; // bool
-                constexpr std::ptrdiff_t m_bResumeZoom = 0x1402; // bool
-                constexpr std::ptrdiff_t m_iPlayerState = 0x1404; // CSPlayerState
-                constexpr std::ptrdiff_t m_bIsDefusing = 0x1408; // bool
-                constexpr std::ptrdiff_t m_bIsGrabbingHostage = 0x1409; // bool
-                constexpr std::ptrdiff_t m_iBlockingUseActionInProgress = 0x140C; // CSPlayerBlockingUseAction_t
-                constexpr std::ptrdiff_t m_bIsRescuing = 0x1410; // bool
-                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x1414; // GameTime_t
-                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTimeLast = 0x1418; // GameTime_t
-                constexpr std::ptrdiff_t m_bGunGameImmunity = 0x141C; // bool
-                constexpr std::ptrdiff_t m_GunGameImmunityColor = 0x141D; // Color
-                constexpr std::ptrdiff_t m_bHasMovedSinceSpawn = 0x1421; // bool
-                constexpr std::ptrdiff_t m_fMolotovUseTime = 0x1424; // float32
-                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x1428; // float32
-                constexpr std::ptrdiff_t m_nWhichBombZone = 0x142C; // int32
-                constexpr std::ptrdiff_t m_bInNoDefuseArea = 0x1430; // bool
-                constexpr std::ptrdiff_t m_iThrowGrenadeCounter = 0x1434; // int32
-                constexpr std::ptrdiff_t m_bWaitForNoAttack = 0x1438; // bool
-                constexpr std::ptrdiff_t m_flGuardianTooFarDistFrac = 0x143C; // float32
-                constexpr std::ptrdiff_t m_flDetectedByEnemySensorTime = 0x1440; // GameTime_t
-                constexpr std::ptrdiff_t m_flNextGuardianTooFarWarning = 0x1444; // float32
-                constexpr std::ptrdiff_t m_bSuppressGuardianTooFarWarningAudio = 0x1448; // bool
-                constexpr std::ptrdiff_t m_bKilledByTaser = 0x1449; // bool
-                constexpr std::ptrdiff_t m_iMoveState = 0x144C; // int32
-                constexpr std::ptrdiff_t m_bCanMoveDuringFreezePeriod = 0x1450; // bool
-                constexpr std::ptrdiff_t m_flLowerBodyYawTarget = 0x1454; // float32
-                constexpr std::ptrdiff_t m_bStrafing = 0x1458; // bool
-                constexpr std::ptrdiff_t m_flLastSpawnTimeIndex = 0x145C; // GameTime_t
-                constexpr std::ptrdiff_t m_flEmitSoundTime = 0x1460; // GameTime_t
-                constexpr std::ptrdiff_t m_iAddonBits = 0x1464; // int32
-                constexpr std::ptrdiff_t m_iPrimaryAddon = 0x1468; // int32
-                constexpr std::ptrdiff_t m_iSecondaryAddon = 0x146C; // int32
-                constexpr std::ptrdiff_t m_iProgressBarDuration = 0x1470; // int32
-                constexpr std::ptrdiff_t m_flProgressBarStartTime = 0x1474; // float32
-                constexpr std::ptrdiff_t m_iDirection = 0x1478; // int32
-                constexpr std::ptrdiff_t m_iShotsFired = 0x147C; // int32
-                constexpr std::ptrdiff_t m_bNightVisionOn = 0x1480; // bool
-                constexpr std::ptrdiff_t m_bHasNightVision = 0x1481; // bool
-                constexpr std::ptrdiff_t m_flVelocityModifier = 0x1484; // float32
-                constexpr std::ptrdiff_t m_flHitHeading = 0x1488; // float32
-                constexpr std::ptrdiff_t m_nHitBodyPart = 0x148C; // int32
-                constexpr std::ptrdiff_t m_vecIntroStartEyePosition = 0x1490; // Vector
-                constexpr std::ptrdiff_t m_vecIntroStartPlayerForward = 0x149C; // Vector
-                constexpr std::ptrdiff_t m_flClientDeathTime = 0x14A8; // GameTime_t
-                constexpr std::ptrdiff_t m_flNightVisionAlpha = 0x14AC; // float32
-                constexpr std::ptrdiff_t m_bScreenTearFrameCaptured = 0x14B0; // bool
-                constexpr std::ptrdiff_t m_flFlashBangTime = 0x14B4; // float32
-                constexpr std::ptrdiff_t m_flFlashScreenshotAlpha = 0x14B8; // float32
-                constexpr std::ptrdiff_t m_flFlashOverlayAlpha = 0x14BC; // float32
-                constexpr std::ptrdiff_t m_bFlashBuildUp = 0x14C0; // bool
-                constexpr std::ptrdiff_t m_bFlashDspHasBeenCleared = 0x14C1; // bool
-                constexpr std::ptrdiff_t m_bFlashScreenshotHasBeenGrabbed = 0x14C2; // bool
-                constexpr std::ptrdiff_t m_flFlashMaxAlpha = 0x14C4; // float32
-                constexpr std::ptrdiff_t m_flFlashDuration = 0x14C8; // float32
-                constexpr std::ptrdiff_t m_lastStandingPos = 0x14CC; // Vector
-                constexpr std::ptrdiff_t m_vecLastMuzzleFlashPos = 0x14D8; // Vector
-                constexpr std::ptrdiff_t m_angLastMuzzleFlashAngle = 0x14E4; // QAngle
-                constexpr std::ptrdiff_t m_hMuzzleFlashShape = 0x14F0; // CHandle<C_BaseEntity>
-                constexpr std::ptrdiff_t m_iHealthBarRenderMaskIndex = 0x14F4; // int32
-                constexpr std::ptrdiff_t m_flHealthFadeValue = 0x14F8; // float32
-                constexpr std::ptrdiff_t m_flHealthFadeAlpha = 0x14FC; // float32
-                constexpr std::ptrdiff_t m_nMyCollisionGroup = 0x1500; // int32
-                constexpr std::ptrdiff_t m_ignoreLadderJumpTime = 0x1504; // float32
-                constexpr std::ptrdiff_t m_ladderSurpressionTimer = 0x1508; // CountdownTimer
-                constexpr std::ptrdiff_t m_lastLadderNormal = 0x1520; // Vector
-                constexpr std::ptrdiff_t m_lastLadderPos = 0x152C; // Vector
-                constexpr std::ptrdiff_t m_flDeathCCWeight = 0x1540; // float32
-                constexpr std::ptrdiff_t m_bOldIsScoped = 0x1544; // bool
-                constexpr std::ptrdiff_t m_flPrevRoundEndTime = 0x1548; // float32
-                constexpr std::ptrdiff_t m_flPrevMatchEndTime = 0x154C; // float32
-                constexpr std::ptrdiff_t m_unCurrentEquipmentValue = 0x1550; // uint16
-                constexpr std::ptrdiff_t m_unRoundStartEquipmentValue = 0x1552; // uint16
-                constexpr std::ptrdiff_t m_unFreezetimeEndEquipmentValue = 0x1554; // uint16
-                constexpr std::ptrdiff_t m_vecThirdPersonViewPositionOverride = 0x1558; // Vector
-                constexpr std::ptrdiff_t m_nHeavyAssaultSuitCooldownRemaining = 0x1564; // int32
-                constexpr std::ptrdiff_t m_ArmorValue = 0x1568; // int32
-                constexpr std::ptrdiff_t m_angEyeAngles = 0x1570; // QAngle
-                constexpr std::ptrdiff_t m_fNextThinkPushAway = 0x1588; // float32
-                constexpr std::ptrdiff_t m_bShouldAutobuyDMWeapons = 0x158C; // bool
-                constexpr std::ptrdiff_t m_bShouldAutobuyNow = 0x158D; // bool
-                constexpr std::ptrdiff_t m_bHud_MiniScoreHidden = 0x158E; // bool
-                constexpr std::ptrdiff_t m_bHud_RadarHidden = 0x158F; // bool
-                constexpr std::ptrdiff_t m_nLastKillerIndex = 0x1590; // CEntityIndex
-                constexpr std::ptrdiff_t m_nLastConcurrentKilled = 0x1594; // int32
-                constexpr std::ptrdiff_t m_nDeathCamMusic = 0x1598; // int32
-                constexpr std::ptrdiff_t m_iIDEntIndex = 0x159C; // CEntityIndex
-                constexpr std::ptrdiff_t m_delayTargetIDTimer = 0x15A0; // CountdownTimer
-                constexpr std::ptrdiff_t m_iTargetedWeaponEntIndex = 0x15B8; // CEntityIndex
-                constexpr std::ptrdiff_t m_iOldIDEntIndex = 0x15BC; // CEntityIndex
-                constexpr std::ptrdiff_t m_holdTargetIDTimer = 0x15C0; // CountdownTimer
-                constexpr std::ptrdiff_t m_flCurrentMusicStartTime = 0x15DC; // float32
-                constexpr std::ptrdiff_t m_flMusicRoundStartTime = 0x15E0; // float32
-                constexpr std::ptrdiff_t m_bDeferStartMusicOnWarmup = 0x15E4; // bool
-                constexpr std::ptrdiff_t m_cycleLatch = 0x15E8; // int32
-                constexpr std::ptrdiff_t m_serverIntendedCycle = 0x15EC; // float32
-                constexpr std::ptrdiff_t m_vecPlayerPatchEconIndices = 0x15F0; // uint32[5]
-                constexpr std::ptrdiff_t m_bHideTargetID = 0x160C; // bool
-                constexpr std::ptrdiff_t m_flLastSmokeOverlayAlpha = 0x1610; // float32
-                constexpr std::ptrdiff_t m_flLastSmokeAge = 0x1614; // float32
-                constexpr std::ptrdiff_t m_vLastSmokeOverlayColor = 0x1618; // Vector
-                constexpr std::ptrdiff_t m_nPlayerSmokedFx = 0x1624; // ParticleIndex_t
-                constexpr std::ptrdiff_t m_nPlayerInfernoBodyFx = 0x1628; // ParticleIndex_t
-                constexpr std::ptrdiff_t m_nPlayerInfernoFootFx = 0x162C; // ParticleIndex_t
-                constexpr std::ptrdiff_t m_flNextMagDropTime = 0x1630; // float32
-                constexpr std::ptrdiff_t m_nLastMagDropAttachmentIndex = 0x1634; // int32
-                constexpr std::ptrdiff_t m_vecBulletHitModels = 0x1638; // CUtlVector<C_BulletHitModel*>
-                constexpr std::ptrdiff_t m_vecPickupModelSlerpers = 0x1650; // CUtlVector<C_PickUpModelSlerper*>
-                constexpr std::ptrdiff_t m_vecLastAliveLocalVelocity = 0x1668; // Vector
-                constexpr std::ptrdiff_t m_entitySpottedState = 0x1690; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSurvivalTeamNumber = 0x16A8; // int32
-                constexpr std::ptrdiff_t m_bGuardianShouldSprayCustomXMark = 0x16AC; // bool
-                constexpr std::ptrdiff_t m_bHasDeathInfo = 0x16AD; // bool
-                constexpr std::ptrdiff_t m_flDeathInfoTime = 0x16B0; // float32
-                constexpr std::ptrdiff_t m_vecDeathInfoOrigin = 0x16B4; // Vector
-                constexpr std::ptrdiff_t m_bKilledByHeadshot = 0x16C0; // bool
-                constexpr std::ptrdiff_t m_hOriginalController = 0x16C4; // CHandle<CCSPlayerController>
+                constexpr std::ptrdiff_t m_pPingServices = 0x12B8; // CCSPlayer_PingServices*
+                constexpr std::ptrdiff_t m_pViewModelServices = 0x12C0; // CPlayer_ViewModelServices*
+                constexpr std::ptrdiff_t m_fRenderingClipPlane = 0x12C8; // float32[4]
+                constexpr std::ptrdiff_t m_nLastClipPlaneSetupFrame = 0x12D8; // int32
+                constexpr std::ptrdiff_t m_vecLastClipCameraPos = 0x12DC; // Vector
+                constexpr std::ptrdiff_t m_vecLastClipCameraForward = 0x12E8; // Vector
+                constexpr std::ptrdiff_t m_bClipHitStaticWorld = 0x12F4; // bool
+                constexpr std::ptrdiff_t m_bCachedPlaneIsValid = 0x12F5; // bool
+                constexpr std::ptrdiff_t m_pClippingWeapon = 0x12F8; // C_CSWeaponBase*
+                constexpr std::ptrdiff_t m_previousPlayerState = 0x1300; // CSPlayerState
+                constexpr std::ptrdiff_t m_iPlayerState = 0x1304; // CSPlayerState
+                constexpr std::ptrdiff_t m_bIsRescuing = 0x1308; // bool
+                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x130C; // GameTime_t
+                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTimeLast = 0x1310; // GameTime_t
+                constexpr std::ptrdiff_t m_bGunGameImmunity = 0x1314; // bool
+                constexpr std::ptrdiff_t m_bHasMovedSinceSpawn = 0x1315; // bool
+                constexpr std::ptrdiff_t m_fMolotovUseTime = 0x1318; // float32
+                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x131C; // float32
+                constexpr std::ptrdiff_t m_iThrowGrenadeCounter = 0x1320; // int32
+                constexpr std::ptrdiff_t m_flLastSpawnTimeIndex = 0x1324; // GameTime_t
+                constexpr std::ptrdiff_t m_iProgressBarDuration = 0x1328; // int32
+                constexpr std::ptrdiff_t m_flProgressBarStartTime = 0x132C; // float32
+                constexpr std::ptrdiff_t m_vecIntroStartEyePosition = 0x1330; // Vector
+                constexpr std::ptrdiff_t m_vecIntroStartPlayerForward = 0x133C; // Vector
+                constexpr std::ptrdiff_t m_flClientDeathTime = 0x1348; // GameTime_t
+                constexpr std::ptrdiff_t m_bScreenTearFrameCaptured = 0x134C; // bool
+                constexpr std::ptrdiff_t m_flFlashBangTime = 0x1350; // float32
+                constexpr std::ptrdiff_t m_flFlashScreenshotAlpha = 0x1354; // float32
+                constexpr std::ptrdiff_t m_flFlashOverlayAlpha = 0x1358; // float32
+                constexpr std::ptrdiff_t m_bFlashBuildUp = 0x135C; // bool
+                constexpr std::ptrdiff_t m_bFlashDspHasBeenCleared = 0x135D; // bool
+                constexpr std::ptrdiff_t m_bFlashScreenshotHasBeenGrabbed = 0x135E; // bool
+                constexpr std::ptrdiff_t m_flFlashMaxAlpha = 0x1360; // float32
+                constexpr std::ptrdiff_t m_flFlashDuration = 0x1364; // float32
+                constexpr std::ptrdiff_t m_iHealthBarRenderMaskIndex = 0x1368; // int32
+                constexpr std::ptrdiff_t m_flHealthFadeValue = 0x136C; // float32
+                constexpr std::ptrdiff_t m_flHealthFadeAlpha = 0x1370; // float32
+                constexpr std::ptrdiff_t m_flDeathCCWeight = 0x1380; // float32
+                constexpr std::ptrdiff_t m_flPrevRoundEndTime = 0x1384; // float32
+                constexpr std::ptrdiff_t m_flPrevMatchEndTime = 0x1388; // float32
+                constexpr std::ptrdiff_t m_angEyeAngles = 0x1390; // QAngle
+                constexpr std::ptrdiff_t m_fNextThinkPushAway = 0x13A8; // float32
+                constexpr std::ptrdiff_t m_bShouldAutobuyDMWeapons = 0x13AC; // bool
+                constexpr std::ptrdiff_t m_bShouldAutobuyNow = 0x13AD; // bool
+                constexpr std::ptrdiff_t m_bHud_MiniScoreHidden = 0x13AE; // bool
+                constexpr std::ptrdiff_t m_bHud_RadarHidden = 0x13AF; // bool
+                constexpr std::ptrdiff_t m_iIDEntIndex = 0x13B0; // CEntityIndex
+                constexpr std::ptrdiff_t m_delayTargetIDTimer = 0x13B8; // CountdownTimer
+                constexpr std::ptrdiff_t m_iTargetedWeaponEntIndex = 0x13D0; // CEntityIndex
+                constexpr std::ptrdiff_t m_iOldIDEntIndex = 0x13D4; // CEntityIndex
+                constexpr std::ptrdiff_t m_holdTargetIDTimer = 0x13D8; // CountdownTimer
+                constexpr std::ptrdiff_t m_flCurrentMusicStartTime = 0x13F4; // float32
+                constexpr std::ptrdiff_t m_flMusicRoundStartTime = 0x13F8; // float32
+                constexpr std::ptrdiff_t m_bDeferStartMusicOnWarmup = 0x13FC; // bool
+                constexpr std::ptrdiff_t m_cycleLatch = 0x1400; // int32
+                constexpr std::ptrdiff_t m_serverIntendedCycle = 0x1404; // float32
+                constexpr std::ptrdiff_t m_flLastSmokeOverlayAlpha = 0x1408; // float32
+                constexpr std::ptrdiff_t m_flLastSmokeAge = 0x140C; // float32
+                constexpr std::ptrdiff_t m_vLastSmokeOverlayColor = 0x1410; // Vector
+                constexpr std::ptrdiff_t m_nPlayerSmokedFx = 0x141C; // ParticleIndex_t
+                constexpr std::ptrdiff_t m_nPlayerInfernoBodyFx = 0x1420; // ParticleIndex_t
+                constexpr std::ptrdiff_t m_nPlayerInfernoFootFx = 0x1424; // ParticleIndex_t
+                constexpr std::ptrdiff_t m_flNextMagDropTime = 0x1428; // float32
+                constexpr std::ptrdiff_t m_nLastMagDropAttachmentIndex = 0x142C; // int32
+                constexpr std::ptrdiff_t m_vecLastAliveLocalVelocity = 0x1430; // Vector
+                constexpr std::ptrdiff_t m_bGuardianShouldSprayCustomXMark = 0x1458; // bool
+                constexpr std::ptrdiff_t m_hOriginalController = 0x1460; // CHandle<CCSPlayerController>
             }
             // Parent: C_WeaponBaseItem
             // Fields count: 0
@@ -2365,9 +2319,9 @@ namespace cs2_dumper {
             // Parent: C_CSPlayerPawn
             // Fields count: 3
             namespace C_CSGO_PreviewPlayer {
-                constexpr std::ptrdiff_t m_animgraph = 0x2410; // CUtlString
-                constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x2418; // CGlobalSymbol
-                constexpr std::ptrdiff_t m_flInitialModelScale = 0x2420; // float32
+                constexpr std::ptrdiff_t m_animgraph = 0x2358; // CUtlString
+                constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x2360; // CGlobalSymbol
+                constexpr std::ptrdiff_t m_flInitialModelScale = 0x2368; // float32
             }
             // Parent: CSkeletonAnimationController
             // Fields count: 13
@@ -2403,17 +2357,17 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bIsPlantingViaUse (bool)
             // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
             namespace C_C4 {
-                constexpr std::ptrdiff_t m_szScreenText = 0x1A70; // char[32]
-                constexpr std::ptrdiff_t m_activeLightParticleIndex = 0x1A90; // ParticleIndex_t
-                constexpr std::ptrdiff_t m_eActiveLightEffect = 0x1A94; // C4LightEffect_t
-                constexpr std::ptrdiff_t m_bStartedArming = 0x1A98; // bool
-                constexpr std::ptrdiff_t m_fArmedTime = 0x1A9C; // GameTime_t
-                constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0x1AA0; // bool
-                constexpr std::ptrdiff_t m_bIsPlantingViaUse = 0x1AA1; // bool
-                constexpr std::ptrdiff_t m_entitySpottedState = 0x1AA8; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSpotRules = 0x1AC0; // int32
-                constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0x1AC4; // bool[7]
-                constexpr std::ptrdiff_t m_bBombPlanted = 0x1ACB; // bool
+                constexpr std::ptrdiff_t m_szScreenText = 0x1A80; // char[32]
+                constexpr std::ptrdiff_t m_activeLightParticleIndex = 0x1AA0; // ParticleIndex_t
+                constexpr std::ptrdiff_t m_eActiveLightEffect = 0x1AA4; // C4LightEffect_t
+                constexpr std::ptrdiff_t m_bStartedArming = 0x1AA8; // bool
+                constexpr std::ptrdiff_t m_fArmedTime = 0x1AAC; // GameTime_t
+                constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0x1AB0; // bool
+                constexpr std::ptrdiff_t m_bIsPlantingViaUse = 0x1AB1; // bool
+                constexpr std::ptrdiff_t m_entitySpottedState = 0x1AB8; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_nSpotRules = 0x1AD0; // int32
+                constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0x1AD4; // bool[7]
+                constexpr std::ptrdiff_t m_bBombPlanted = 0x1ADB; // bool
             }
             // Parent: C_BaseModelEntity
             // Fields count: 13
@@ -3584,8 +3538,8 @@ namespace cs2_dumper {
             // Fields count: 14
             //
             // Metadata:
-            // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawnBase>)
-            // NetworkVarNames: m_PlayerRecipient (CHandle<CCSPlayerPawnBase>)
+            // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawn>)
+            // NetworkVarNames: m_PlayerRecipient (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_hPlayerControllerDamager (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_hPlayerControllerRecipient (CHandle<CCSPlayerController>)
             // NetworkVarNames: m_szPlayerDamagerName (CUtlString)
@@ -3599,8 +3553,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bIsOtherEnemy (bool)
             // NetworkVarNames: m_killType (EKillTypes_t)
             namespace CDamageRecord {
-                constexpr std::ptrdiff_t m_PlayerDamager = 0x28; // CHandle<C_CSPlayerPawnBase>
-                constexpr std::ptrdiff_t m_PlayerRecipient = 0x2C; // CHandle<C_CSPlayerPawnBase>
+                constexpr std::ptrdiff_t m_PlayerDamager = 0x28; // CHandle<C_CSPlayerPawn>
+                constexpr std::ptrdiff_t m_PlayerRecipient = 0x2C; // CHandle<C_CSPlayerPawn>
                 constexpr std::ptrdiff_t m_hPlayerControllerDamager = 0x30; // CHandle<CCSPlayerController>
                 constexpr std::ptrdiff_t m_hPlayerControllerRecipient = 0x34; // CHandle<CCSPlayerController>
                 constexpr std::ptrdiff_t m_szPlayerDamagerName = 0x38; // CUtlString
@@ -3855,7 +3809,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_flDisplayHealth (float)
             namespace C_WeaponShield {
-                constexpr std::ptrdiff_t m_flDisplayHealth = 0x1A90; // float32
+                constexpr std::ptrdiff_t m_flDisplayHealth = 0x1AA0; // float32
             }
             // Parent: C_PointClientUIWorldPanel
             // Fields count: 1
@@ -4883,12 +4837,13 @@ namespace cs2_dumper {
             namespace C_SensorGrenade {
             }
             // Parent: C_CSWeaponBaseGun
-            // Fields count: 1
+            // Fields count: 2
             //
             // Metadata:
             // NetworkVarNames: m_fFireTime (GameTime_t)
             namespace C_WeaponTaser {
-                constexpr std::ptrdiff_t m_fFireTime = 0x1A90; // GameTime_t
+                constexpr std::ptrdiff_t m_fFireTime = 0x1AA0; // GameTime_t
+                constexpr std::ptrdiff_t m_nLastAttackTick = 0x1AA4; // int32
             }
             // Parent: C_CSWeaponBase
             // Fields count: 2
@@ -4897,8 +4852,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bPlayingUninterruptableAct (bool)
             // NetworkVarNames: m_nUninterruptableActivity (PlayerAnimEvent_t)
             namespace C_Fists {
-                constexpr std::ptrdiff_t m_bPlayingUninterruptableAct = 0x1A70; // bool
-                constexpr std::ptrdiff_t m_nUninterruptableActivity = 0x1A74; // PlayerAnimEvent_t
+                constexpr std::ptrdiff_t m_bPlayingUninterruptableAct = 0x1A80; // bool
+                constexpr std::ptrdiff_t m_nUninterruptableActivity = 0x1A84; // PlayerAnimEvent_t
             }
             // Parent: C_PhysicsProp
             // Fields count: 0
@@ -5401,7 +5356,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_SpotRadius = 0xCE4; // float32
             }
             // Parent: C_BasePlayerWeapon
-            // Fields count: 71
+            // Fields count: 73
             //
             // Metadata:
             // MNetworkExcludeByName
@@ -5426,6 +5381,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bSilencerOn (bool)
             // NetworkVarNames: m_flTimeSilencerSwitchComplete (GameTime_t)
             // NetworkVarNames: m_iOriginalTeamNumber (int)
+            // NetworkVarNames: m_iMostRecentTeamNumber (int)
+            // NetworkVarNames: m_bDroppedNearBuyZone (bool)
             // NetworkVarNames: m_hPrevOwner (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_nDropTick (GameTick_t)
             // NetworkVarNames: m_fLastShotTime (GameTime_t)
@@ -5478,31 +5435,33 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bSilencerOn = 0x174D; // bool
                 constexpr std::ptrdiff_t m_flTimeSilencerSwitchComplete = 0x1750; // GameTime_t
                 constexpr std::ptrdiff_t m_iOriginalTeamNumber = 0x1754; // int32
-                constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0x1758; // float32
-                constexpr std::ptrdiff_t m_bVisualsDataSet = 0x17E0; // bool
-                constexpr std::ptrdiff_t m_bOldFirstPersonSpectatedState = 0x17E1; // bool
-                constexpr std::ptrdiff_t m_hOurPing = 0x17E4; // CHandle<C_BaseEntity>
-                constexpr std::ptrdiff_t m_nOurPingIndex = 0x17E8; // CEntityIndex
-                constexpr std::ptrdiff_t m_vecOurPingPos = 0x17EC; // Vector
-                constexpr std::ptrdiff_t m_bGlowForPing = 0x17F8; // bool
-                constexpr std::ptrdiff_t m_bUIWeapon = 0x17F9; // bool
-                constexpr std::ptrdiff_t m_hPrevOwner = 0x1808; // CHandle<C_CSPlayerPawn>
-                constexpr std::ptrdiff_t m_nDropTick = 0x180C; // GameTick_t
-                constexpr std::ptrdiff_t m_donated = 0x182C; // bool
-                constexpr std::ptrdiff_t m_fLastShotTime = 0x1830; // GameTime_t
-                constexpr std::ptrdiff_t m_bWasOwnedByCT = 0x1834; // bool
-                constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0x1835; // bool
-                constexpr std::ptrdiff_t m_gunHeat = 0x1838; // float32
-                constexpr std::ptrdiff_t m_smokeAttachments = 0x183C; // uint32
-                constexpr std::ptrdiff_t m_lastSmokeTime = 0x1840; // GameTime_t
-                constexpr std::ptrdiff_t m_flNextClientFireBulletTime = 0x1844; // float32
-                constexpr std::ptrdiff_t m_flNextClientFireBulletTime_Repredict = 0x1848; // float32
-                constexpr std::ptrdiff_t m_IronSightController = 0x1920; // C_IronSightController
-                constexpr std::ptrdiff_t m_iIronSightMode = 0x19D0; // int32
-                constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0x19E0; // GameTime_t
-                constexpr std::ptrdiff_t m_iNumEmptyAttacks = 0x19E4; // int32
-                constexpr std::ptrdiff_t m_flLastMagDropRequestTime = 0x1A60; // GameTime_t
-                constexpr std::ptrdiff_t m_flWatTickOffset = 0x1A64; // float32
+                constexpr std::ptrdiff_t m_iMostRecentTeamNumber = 0x1758; // int32
+                constexpr std::ptrdiff_t m_bDroppedNearBuyZone = 0x175C; // bool
+                constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0x1760; // float32
+                constexpr std::ptrdiff_t m_bVisualsDataSet = 0x17E8; // bool
+                constexpr std::ptrdiff_t m_bOldFirstPersonSpectatedState = 0x17E9; // bool
+                constexpr std::ptrdiff_t m_hOurPing = 0x17EC; // CHandle<C_BaseEntity>
+                constexpr std::ptrdiff_t m_nOurPingIndex = 0x17F0; // CEntityIndex
+                constexpr std::ptrdiff_t m_vecOurPingPos = 0x17F4; // Vector
+                constexpr std::ptrdiff_t m_bGlowForPing = 0x1800; // bool
+                constexpr std::ptrdiff_t m_bUIWeapon = 0x1801; // bool
+                constexpr std::ptrdiff_t m_hPrevOwner = 0x1810; // CHandle<C_CSPlayerPawn>
+                constexpr std::ptrdiff_t m_nDropTick = 0x1814; // GameTick_t
+                constexpr std::ptrdiff_t m_donated = 0x1834; // bool
+                constexpr std::ptrdiff_t m_fLastShotTime = 0x1838; // GameTime_t
+                constexpr std::ptrdiff_t m_bWasOwnedByCT = 0x183C; // bool
+                constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0x183D; // bool
+                constexpr std::ptrdiff_t m_gunHeat = 0x1840; // float32
+                constexpr std::ptrdiff_t m_smokeAttachments = 0x1844; // uint32
+                constexpr std::ptrdiff_t m_lastSmokeTime = 0x1848; // GameTime_t
+                constexpr std::ptrdiff_t m_flNextClientFireBulletTime = 0x184C; // float32
+                constexpr std::ptrdiff_t m_flNextClientFireBulletTime_Repredict = 0x1850; // float32
+                constexpr std::ptrdiff_t m_IronSightController = 0x1930; // C_IronSightController
+                constexpr std::ptrdiff_t m_iIronSightMode = 0x19E0; // int32
+                constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0x19F0; // GameTime_t
+                constexpr std::ptrdiff_t m_iNumEmptyAttacks = 0x19F4; // int32
+                constexpr std::ptrdiff_t m_flLastMagDropRequestTime = 0x1A70; // GameTime_t
+                constexpr std::ptrdiff_t m_flWatTickOffset = 0x1A74; // float32
             }
             // Parent: C_BaseModelEntity
             // Fields count: 0
@@ -6401,7 +6360,7 @@ namespace cs2_dumper {
             // MNetworkVarTypeOverride
             // MNetworkIncludeByName
             namespace C_CSObserverPawn {
-                constexpr std::ptrdiff_t m_hDetectParentChange = 0x1710; // CEntityHandle
+                constexpr std::ptrdiff_t m_hDetectParentChange = 0x1468; // CEntityHandle
             }
             // Parent: C_BaseEntity
             // Fields count: 3

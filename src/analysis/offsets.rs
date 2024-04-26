@@ -95,7 +95,7 @@ pattern_map! {
         "dwWeaponC4" => pattern!("488b15${'} ffc0 8905${} 488bc7") => None,
     },
     engine2 => {
-        "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} e9") => None,
+        "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${}") => None,
         "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("8983u4 40b7") => None,
         "dwNetworkGameClient_getLocalPlayer" => pattern!("4883c0u1 488d0440 458b04c7") => Some(|_view, map, rva| {
