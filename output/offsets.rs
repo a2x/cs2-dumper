@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-26 04:15:57.943456300 UTC
+// 2024-04-27 00:03:34.843899 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,22 +7,22 @@ pub mod cs2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwCSGOInput: usize = 0x192EF60;
+            pub const dwCSGOInput: usize = 0x192EF50;
             pub const dwEntityList: usize = 0x18C6268;
-            pub const dwGameEntitySystem: usize = 0x19E3B70;
+            pub const dwGameEntitySystem: usize = 0x19E3B60;
             pub const dwGameEntitySystem_getHighestEntityIndex: usize = 0x1510;
-            pub const dwGameRules: usize = 0x1923370;
-            pub const dwGlobalVars: usize = 0x172DD60;
-            pub const dwGlowManager: usize = 0x1923788;
-            pub const dwLocalPlayerController: usize = 0x1915C18;
-            pub const dwLocalPlayerPawn: usize = 0x173A3C8;
-            pub const dwPlantedC4: usize = 0x192C408;
-            pub const dwPrediction: usize = 0x173A290;
-            pub const dwSensitivity: usize = 0x19240B8;
+            pub const dwGameRules: usize = 0x1923360;
+            pub const dwGlobalVars: usize = 0x172DD50;
+            pub const dwGlowManager: usize = 0x1923778;
+            pub const dwLocalPlayerController: usize = 0x1915C08;
+            pub const dwLocalPlayerPawn: usize = 0x173A3B8;
+            pub const dwPlantedC4: usize = 0x192C3F8;
+            pub const dwPrediction: usize = 0x173A280;
+            pub const dwSensitivity: usize = 0x19240A8;
             pub const dwSensitivity_sensitivity: usize = 0x40;
-            pub const dwViewAngles: usize = 0x19342F0;
-            pub const dwViewMatrix: usize = 0x19278B0;
-            pub const dwViewRender: usize = 0x19280B0;
+            pub const dwViewAngles: usize = 0x19342E0;
+            pub const dwViewMatrix: usize = 0x19278A0;
+            pub const dwViewRender: usize = 0x19280A0;
             pub const dwWeaponC4: usize = 0x18C9830;
         }
         // Module: engine2.dll
