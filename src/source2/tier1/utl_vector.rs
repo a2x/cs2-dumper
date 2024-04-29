@@ -9,13 +9,11 @@ pub struct UtlVector<T> {
 }
 
 impl<T: Pod> UtlVector<T> {
-    /// Returns the number of elements in the vector.
     #[inline]
     pub fn count(&self) -> i32 {
         self.size
     }
 
-    /// Returns the element at the specified index.
     pub fn element(&self, process: &mut IntoProcessInstanceArcBox<'_>, idx: usize) -> Result<T> {
         if idx >= self.count() as usize {
             return Err(Error::Other("index out of bounds"));

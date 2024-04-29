@@ -1,6 +1,11 @@
 {
   "libworldrenderer.so": {
     "classes": {
+      "": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "AggregateLODSetup_t": {
         "fields": {
           "m_fMaxObjectScale": 12,

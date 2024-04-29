@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:45:41.243985329 UTC
+// 2024-04-29 23:05:53.220233445 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libworldrenderer.so
-    // Classes count: 23
+    // Classes count: 27
     // Enums count: 1
     public static class LibworldrendererSo {
         // Alignment: 4
@@ -309,6 +309,22 @@ namespace CS2Dumper.Schemas {
             public const nint m_EnclosedClustersBlock = 0x84; // VoxelVisBlockOffset_t
             public const nint m_MasksBlock = 0x8C; // VoxelVisBlockOffset_t
             public const nint m_nVisBlocks = 0x94; // VoxelVisBlockOffset_t
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
         }
     }
 }

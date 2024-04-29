@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:45:41.243985329 UTC
+// 2024-04-29 23:05:53.220233445 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: libserver.so
         // Classes count: 218
-        // Enums count: 126
+        // Enums count: 128
         namespace libserver_so {
             // Alignment: 4
             // Members count: 3
@@ -1035,11 +1035,12 @@ namespace cs2_dumper {
                 TrackOrientation_FacePathAngles = 0x2
             };
             // Alignment: 4
-            // Members count: 3
+            // Members count: 4
             enum class WeaponSwitchReason_t : uint32_t {
                 eDrawn = 0x0,
                 eEquipped = 0x1,
-                eUserInitiatedSwitchToLast = 0x2
+                eUserInitiatedSwitchToLast = 0x2,
+                eUserInitiatedSwitchHands = 0x3
             };
             // Alignment: 4
             // Members count: 2
@@ -1642,13 +1643,13 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bPlayingUninterruptableAct (bool)
             // NetworkVarNames: m_nUninterruptableActivity (PlayerAnimEvent_t)
             namespace CFists {
-                constexpr std::ptrdiff_t m_bPlayingUninterruptableAct = 0x1198; // bool
-                constexpr std::ptrdiff_t m_nUninterruptableActivity = 0x119C; // PlayerAnimEvent_t
-                constexpr std::ptrdiff_t m_bRestorePrevWep = 0x11A0; // bool
-                constexpr std::ptrdiff_t m_hWeaponBeforePrevious = 0x11A4; // CHandle<CBasePlayerWeapon>
-                constexpr std::ptrdiff_t m_hWeaponPrevious = 0x11A8; // CHandle<CBasePlayerWeapon>
-                constexpr std::ptrdiff_t m_bDelayedHardPunchIncoming = 0x11AC; // bool
-                constexpr std::ptrdiff_t m_bDestroyAfterTaunt = 0x11AD; // bool
+                constexpr std::ptrdiff_t m_bPlayingUninterruptableAct = 0x11A0; // bool
+                constexpr std::ptrdiff_t m_nUninterruptableActivity = 0x11A4; // PlayerAnimEvent_t
+                constexpr std::ptrdiff_t m_bRestorePrevWep = 0x11A8; // bool
+                constexpr std::ptrdiff_t m_hWeaponBeforePrevious = 0x11AC; // CHandle<CBasePlayerWeapon>
+                constexpr std::ptrdiff_t m_hWeaponPrevious = 0x11B0; // CHandle<CBasePlayerWeapon>
+                constexpr std::ptrdiff_t m_bDelayedHardPunchIncoming = 0x11B4; // bool
+                constexpr std::ptrdiff_t m_bDestroyAfterTaunt = 0x11B5; // bool
             }
             // Parent: CBaseTrigger
             // Fields count: 1
@@ -1808,7 +1809,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAveWindSpeed = 0x4; // float32
             }
             // Parent: CCSWeaponBase
-            // Fields count: 13
+            // Fields count: 14
             //
             // Metadata:
             // NetworkVarNames: m_bRedraw (bool)
@@ -1820,24 +1821,26 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flThrowStrength (float)
             // NetworkVarNames: m_flThrowStrengthApproach (float)
             // NetworkVarNames: m_fDropTime (GameTime_t)
+            // NetworkVarNames: m_fPinPullTime (GameTime_t)
             // NetworkVarNames: m_bJustPulledPin (bool)
             // NetworkVarNames: m_nNextHoldTick (GameTick_t)
             // NetworkVarNames: m_flNextHoldFrac (float)
             // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
             namespace CBaseCSGrenade {
-                constexpr std::ptrdiff_t m_bRedraw = 0x1198; // bool
-                constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x1199; // bool
-                constexpr std::ptrdiff_t m_bPinPulled = 0x119A; // bool
-                constexpr std::ptrdiff_t m_bJumpThrow = 0x119B; // bool
-                constexpr std::ptrdiff_t m_bThrowAnimating = 0x119C; // bool
-                constexpr std::ptrdiff_t m_fThrowTime = 0x11A0; // GameTime_t
-                constexpr std::ptrdiff_t m_flThrowStrength = 0x11A4; // float32
-                constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0x11A8; // float32
-                constexpr std::ptrdiff_t m_fDropTime = 0x11AC; // GameTime_t
-                constexpr std::ptrdiff_t m_bJustPulledPin = 0x11B0; // bool
-                constexpr std::ptrdiff_t m_nNextHoldTick = 0x11B4; // GameTick_t
-                constexpr std::ptrdiff_t m_flNextHoldFrac = 0x11B8; // float32
-                constexpr std::ptrdiff_t m_hSwitchToWeaponAfterThrow = 0x11BC; // CHandle<CCSWeaponBase>
+                constexpr std::ptrdiff_t m_bRedraw = 0x11A0; // bool
+                constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0x11A1; // bool
+                constexpr std::ptrdiff_t m_bPinPulled = 0x11A2; // bool
+                constexpr std::ptrdiff_t m_bJumpThrow = 0x11A3; // bool
+                constexpr std::ptrdiff_t m_bThrowAnimating = 0x11A4; // bool
+                constexpr std::ptrdiff_t m_fThrowTime = 0x11A8; // GameTime_t
+                constexpr std::ptrdiff_t m_flThrowStrength = 0x11AC; // float32
+                constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0x11B0; // float32
+                constexpr std::ptrdiff_t m_fDropTime = 0x11B4; // GameTime_t
+                constexpr std::ptrdiff_t m_fPinPullTime = 0x11B8; // GameTime_t
+                constexpr std::ptrdiff_t m_bJustPulledPin = 0x11BC; // bool
+                constexpr std::ptrdiff_t m_nNextHoldTick = 0x11C0; // GameTick_t
+                constexpr std::ptrdiff_t m_flNextHoldFrac = 0x11C4; // float32
+                constexpr std::ptrdiff_t m_hSwitchToWeaponAfterThrow = 0x11C8; // CHandle<CCSWeaponBase>
             }
             // Parent: CBaseModelEntity
             // Fields count: 1
@@ -2335,7 +2338,7 @@ namespace cs2_dumper {
             // Parent: CCSWeaponBase
             // Fields count: 1
             namespace CKnife {
-                constexpr std::ptrdiff_t m_bFirstAttack = 0x1198; // bool
+                constexpr std::ptrdiff_t m_bFirstAttack = 0x11A0; // bool
             }
             // Parent: CBaseModelEntity
             // Fields count: 38
@@ -3784,7 +3787,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_state = 0xA00; // int32
             }
             // Parent: CTeamplayRules
-            // Fields count: 215
+            // Fields count: 216
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -4008,6 +4011,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDF8; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_bNeedToAskPlayersForContinueVote = 0xE14; // bool
                 constexpr std::ptrdiff_t m_numQueuedMatchmakingAccounts = 0xE18; // uint32
+                constexpr std::ptrdiff_t m_fAvgPlayerRank = 0xE1C; // float32
                 constexpr std::ptrdiff_t m_pQueuedMatchmakingReservationString = 0xE20; // char*
                 constexpr std::ptrdiff_t m_numTotalTournamentDrops = 0xE28; // uint32
                 constexpr std::ptrdiff_t m_numSpectatorsCountMax = 0xE2C; // uint32
@@ -4617,12 +4621,13 @@ namespace cs2_dumper {
             namespace CRotButton {
             }
             // Parent: CCSWeaponBaseGun
-            // Fields count: 1
+            // Fields count: 2
             //
             // Metadata:
             // NetworkVarNames: m_fFireTime (GameTime_t)
             namespace CWeaponTaser {
-                constexpr std::ptrdiff_t m_fFireTime = 0x11B4; // GameTime_t
+                constexpr std::ptrdiff_t m_fFireTime = 0x11BC; // GameTime_t
+                constexpr std::ptrdiff_t m_nLastAttackTick = 0x11C0; // int32
             }
             // Parent: CBaseAnimGraph
             // Fields count: 0

@@ -460,19 +460,20 @@
       },
       "CBaseCSGrenade": {
         "fields": {
-          "m_bIsHeldByPlayer": 4505,
-          "m_bJumpThrow": 4507,
-          "m_bJustPulledPin": 4528,
-          "m_bPinPulled": 4506,
-          "m_bRedraw": 4504,
-          "m_bThrowAnimating": 4508,
-          "m_fDropTime": 4524,
-          "m_fThrowTime": 4512,
-          "m_flNextHoldFrac": 4536,
-          "m_flThrowStrength": 4516,
-          "m_flThrowStrengthApproach": 4520,
-          "m_hSwitchToWeaponAfterThrow": 4540,
-          "m_nNextHoldTick": 4532
+          "m_bIsHeldByPlayer": 4513,
+          "m_bJumpThrow": 4515,
+          "m_bJustPulledPin": 4540,
+          "m_bPinPulled": 4514,
+          "m_bRedraw": 4512,
+          "m_bThrowAnimating": 4516,
+          "m_fDropTime": 4532,
+          "m_fPinPullTime": 4536,
+          "m_fThrowTime": 4520,
+          "m_flNextHoldFrac": 4548,
+          "m_flThrowStrength": 4524,
+          "m_flThrowStrengthApproach": 4528,
+          "m_hSwitchToWeaponAfterThrow": 4552,
+          "m_nNextHoldTick": 4544
         },
         "metadata": [
           {
@@ -517,6 +518,11 @@
           },
           {
             "name": "m_fDropTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
+            "name": "m_fPinPullTime",
             "type": "NetworkVarNames",
             "type_name": "GameTime_t"
           },
@@ -1073,6 +1079,7 @@
           "m_endMatchOnThink": 3513,
           "m_fAccumulatedRoundOffDamage": 4704,
           "m_fAutobalanceDisplayTime": 4068,
+          "m_fAvgPlayerRank": 3612,
           "m_fMatchStartTime": 244,
           "m_fNextUpdateTeamClanNamesTime": 4696,
           "m_fRoundStartTime": 248,
@@ -3007,13 +3014,13 @@
       },
       "CFists": {
         "fields": {
-          "m_bDelayedHardPunchIncoming": 4524,
-          "m_bDestroyAfterTaunt": 4525,
-          "m_bPlayingUninterruptableAct": 4504,
-          "m_bRestorePrevWep": 4512,
-          "m_hWeaponBeforePrevious": 4516,
-          "m_hWeaponPrevious": 4520,
-          "m_nUninterruptableActivity": 4508
+          "m_bDelayedHardPunchIncoming": 4532,
+          "m_bDestroyAfterTaunt": 4533,
+          "m_bPlayingUninterruptableAct": 4512,
+          "m_bRestorePrevWep": 4520,
+          "m_hWeaponBeforePrevious": 4524,
+          "m_hWeaponPrevious": 4528,
+          "m_nUninterruptableActivity": 4516
         },
         "metadata": [
           {
@@ -3474,7 +3481,7 @@
       },
       "CKnife": {
         "fields": {
-          "m_bFirstAttack": 4504
+          "m_bFirstAttack": 4512
         },
         "metadata": [],
         "parent": "CCSWeaponBase"
@@ -5632,7 +5639,8 @@
       },
       "CWeaponTaser": {
         "fields": {
-          "m_fFireTime": 4532
+          "m_fFireTime": 4540,
+          "m_nLastAttackTick": 4544
         },
         "metadata": [
           {
@@ -5975,6 +5983,11 @@
       }
     },
     "enums": {
+      "": {
+        "alignment": 0,
+        "members": {},
+        "type": "unknown"
+      },
       "AmmoFlags_t": {
         "alignment": 4,
         "members": {
@@ -7528,6 +7541,7 @@
         "members": {
           "eDrawn": 0,
           "eEquipped": 1,
+          "eUserInitiatedSwitchHands": 3,
           "eUserInitiatedSwitchToLast": 2
         },
         "type": "uint32"

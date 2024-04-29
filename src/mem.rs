@@ -1,7 +1,6 @@
 use memflow::types::{Pointer, PrimitiveAddress};
 
 pub trait PointerExt {
-    /// Returns `true` if the pointer is null.
     fn is_null(&self) -> bool;
 }
 

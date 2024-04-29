@@ -44,25 +44,21 @@ where
     D: Pod + PointerExt,
     K: Pod,
 {
-    /// Returns the number of allocated blocks.
     #[inline]
     pub fn blocks_alloc(&self) -> i32 {
         self.entry_mem.blocks_alloc
     }
 
-    /// Returns the size of a block.
     #[inline]
     pub fn block_size(&self) -> i32 {
         self.entry_mem.block_size
     }
 
-    /// Returns the maximum number of allocated blocks.
     #[inline]
     pub fn peak_count(&self) -> i32 {
         self.entry_mem.peak_alloc
     }
 
-    /// Returns a list of allocated or unallocated elements.
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
         let blocks_alloc = self.blocks_alloc() as usize;
         let peak_alloc = self.peak_count() as usize;

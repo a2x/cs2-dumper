@@ -14,14 +14,14 @@ use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub enum ClassMetadata {
     Unknown { name: String },
     NetworkChangeCallback { name: String },
     NetworkVarNames { name: String, type_name: String },
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Class {
     pub name: String,
     pub module_name: String,
@@ -30,14 +30,14 @@ pub struct Class {
     pub fields: Vec<ClassField>,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct ClassField {
     pub name: String,
     pub type_name: String,
     pub offset: i32,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Enum {
     pub name: String,
     pub alignment: u8,
@@ -45,13 +45,13 @@ pub struct Enum {
     pub members: Vec<EnumMember>,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct EnumMember {
     pub name: String,
     pub value: i64,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct TypeScope {
     pub module_name: String,
     pub classes: Vec<Class>,

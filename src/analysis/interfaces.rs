@@ -13,7 +13,7 @@ use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, Vec<Interface>>;
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Deserialize, Serialize)]
 pub struct Interface {
     pub name: String,
     pub value: u32,
@@ -50,6 +50,7 @@ fn read_interfaces(
     while !cur_reg.is_null() {
         let reg = cur_reg.read(process)?;
         let name = reg.name.read_string(process)?.to_string();
+
         let value = (reg.create_fn.address() - module.base) as u32;
 
         debug!(
@@ -65,7 +66,6 @@ fn read_interfaces(
         cur_reg = reg.next;
     }
 
-    // Sort interfaces by name.
     ifaces.sort_unstable_by(|a, b| a.name.cmp(&b.name));
 
     Ok(ifaces)

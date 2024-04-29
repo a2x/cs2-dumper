@@ -13,7 +13,7 @@ use crate::error::{Error, Result};
 
 pub type OffsetMap = BTreeMap<String, Vec<Offset>>;
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Deserialize, Serialize)]
 pub struct Offset {
     pub name: String,
     pub value: u32,

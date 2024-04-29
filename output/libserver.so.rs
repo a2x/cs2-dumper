@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:45:41.243985329 UTC
+// 2024-04-29 23:05:53.220233445 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: libserver.so
         // Classes count: 218
-        // Enums count: 126
+        // Enums count: 128
         pub mod libserver_so {
             // Alignment: 4
             // Members count: 3
@@ -1117,12 +1117,13 @@ pub mod cs2_dumper {
                 TrackOrientation_FacePathAngles = 0x2
             }
             // Alignment: 4
-            // Members count: 3
+            // Members count: 4
             #[repr(u32)]
             pub enum WeaponSwitchReason_t {
                 eDrawn = 0x0,
                 eEquipped = 0x1,
-                eUserInitiatedSwitchToLast = 0x2
+                eUserInitiatedSwitchToLast = 0x2,
+                eUserInitiatedSwitchHands = 0x3
             }
             // Alignment: 4
             // Members count: 2
@@ -1766,13 +1767,13 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_bPlayingUninterruptableAct (bool)
             // NetworkVarNames: m_nUninterruptableActivity (PlayerAnimEvent_t)
             pub mod CFists {
-                pub const m_bPlayingUninterruptableAct: usize = 0x1198; // bool
-                pub const m_nUninterruptableActivity: usize = 0x119C; // PlayerAnimEvent_t
-                pub const m_bRestorePrevWep: usize = 0x11A0; // bool
-                pub const m_hWeaponBeforePrevious: usize = 0x11A4; // CHandle<CBasePlayerWeapon>
-                pub const m_hWeaponPrevious: usize = 0x11A8; // CHandle<CBasePlayerWeapon>
-                pub const m_bDelayedHardPunchIncoming: usize = 0x11AC; // bool
-                pub const m_bDestroyAfterTaunt: usize = 0x11AD; // bool
+                pub const m_bPlayingUninterruptableAct: usize = 0x11A0; // bool
+                pub const m_nUninterruptableActivity: usize = 0x11A4; // PlayerAnimEvent_t
+                pub const m_bRestorePrevWep: usize = 0x11A8; // bool
+                pub const m_hWeaponBeforePrevious: usize = 0x11AC; // CHandle<CBasePlayerWeapon>
+                pub const m_hWeaponPrevious: usize = 0x11B0; // CHandle<CBasePlayerWeapon>
+                pub const m_bDelayedHardPunchIncoming: usize = 0x11B4; // bool
+                pub const m_bDestroyAfterTaunt: usize = 0x11B5; // bool
             }
             // Parent: CBaseTrigger
             // Fields count: 1
@@ -1932,7 +1933,7 @@ pub mod cs2_dumper {
                 pub const m_flAveWindSpeed: usize = 0x4; // float32
             }
             // Parent: CCSWeaponBase
-            // Fields count: 13
+            // Fields count: 14
             //
             // Metadata:
             // NetworkVarNames: m_bRedraw (bool)
@@ -1944,24 +1945,26 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flThrowStrength (float)
             // NetworkVarNames: m_flThrowStrengthApproach (float)
             // NetworkVarNames: m_fDropTime (GameTime_t)
+            // NetworkVarNames: m_fPinPullTime (GameTime_t)
             // NetworkVarNames: m_bJustPulledPin (bool)
             // NetworkVarNames: m_nNextHoldTick (GameTick_t)
             // NetworkVarNames: m_flNextHoldFrac (float)
             // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
             pub mod CBaseCSGrenade {
-                pub const m_bRedraw: usize = 0x1198; // bool
-                pub const m_bIsHeldByPlayer: usize = 0x1199; // bool
-                pub const m_bPinPulled: usize = 0x119A; // bool
-                pub const m_bJumpThrow: usize = 0x119B; // bool
-                pub const m_bThrowAnimating: usize = 0x119C; // bool
-                pub const m_fThrowTime: usize = 0x11A0; // GameTime_t
-                pub const m_flThrowStrength: usize = 0x11A4; // float32
-                pub const m_flThrowStrengthApproach: usize = 0x11A8; // float32
-                pub const m_fDropTime: usize = 0x11AC; // GameTime_t
-                pub const m_bJustPulledPin: usize = 0x11B0; // bool
-                pub const m_nNextHoldTick: usize = 0x11B4; // GameTick_t
-                pub const m_flNextHoldFrac: usize = 0x11B8; // float32
-                pub const m_hSwitchToWeaponAfterThrow: usize = 0x11BC; // CHandle<CCSWeaponBase>
+                pub const m_bRedraw: usize = 0x11A0; // bool
+                pub const m_bIsHeldByPlayer: usize = 0x11A1; // bool
+                pub const m_bPinPulled: usize = 0x11A2; // bool
+                pub const m_bJumpThrow: usize = 0x11A3; // bool
+                pub const m_bThrowAnimating: usize = 0x11A4; // bool
+                pub const m_fThrowTime: usize = 0x11A8; // GameTime_t
+                pub const m_flThrowStrength: usize = 0x11AC; // float32
+                pub const m_flThrowStrengthApproach: usize = 0x11B0; // float32
+                pub const m_fDropTime: usize = 0x11B4; // GameTime_t
+                pub const m_fPinPullTime: usize = 0x11B8; // GameTime_t
+                pub const m_bJustPulledPin: usize = 0x11BC; // bool
+                pub const m_nNextHoldTick: usize = 0x11C0; // GameTick_t
+                pub const m_flNextHoldFrac: usize = 0x11C4; // float32
+                pub const m_hSwitchToWeaponAfterThrow: usize = 0x11C8; // CHandle<CCSWeaponBase>
             }
             // Parent: CBaseModelEntity
             // Fields count: 1
@@ -2459,7 +2462,7 @@ pub mod cs2_dumper {
             // Parent: CCSWeaponBase
             // Fields count: 1
             pub mod CKnife {
-                pub const m_bFirstAttack: usize = 0x1198; // bool
+                pub const m_bFirstAttack: usize = 0x11A0; // bool
             }
             // Parent: CBaseModelEntity
             // Fields count: 38
@@ -3908,7 +3911,7 @@ pub mod cs2_dumper {
                 pub const m_state: usize = 0xA00; // int32
             }
             // Parent: CTeamplayRules
-            // Fields count: 215
+            // Fields count: 216
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -4132,6 +4135,7 @@ pub mod cs2_dumper {
                 pub const m_nEndMatchTiedVotes: usize = 0xDF8; // CUtlVector<int32>
                 pub const m_bNeedToAskPlayersForContinueVote: usize = 0xE14; // bool
                 pub const m_numQueuedMatchmakingAccounts: usize = 0xE18; // uint32
+                pub const m_fAvgPlayerRank: usize = 0xE1C; // float32
                 pub const m_pQueuedMatchmakingReservationString: usize = 0xE20; // char*
                 pub const m_numTotalTournamentDrops: usize = 0xE28; // uint32
                 pub const m_numSpectatorsCountMax: usize = 0xE2C; // uint32
@@ -4741,12 +4745,13 @@ pub mod cs2_dumper {
             pub mod CRotButton {
             }
             // Parent: CCSWeaponBaseGun
-            // Fields count: 1
+            // Fields count: 2
             //
             // Metadata:
             // NetworkVarNames: m_fFireTime (GameTime_t)
             pub mod CWeaponTaser {
-                pub const m_fFireTime: usize = 0x11B4; // GameTime_t
+                pub const m_fFireTime: usize = 0x11BC; // GameTime_t
+                pub const m_nLastAttackTick: usize = 0x11C0; // int32
             }
             // Parent: CBaseAnimGraph
             // Fields count: 0

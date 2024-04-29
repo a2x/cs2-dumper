@@ -2,15 +2,15 @@
   "libclient.so": [
     {
       "name": "dwCSGOInput",
-      "value": 57947872
+      "value": 57948032
     },
     {
       "name": "dwEntityList",
-      "value": 56273096
+      "value": 56272520
     },
     {
       "name": "dwGameEntitySystem",
-      "value": 59116032
+      "value": 59115328
     },
     {
       "name": "dwGameEntitySystem_getHighestEntityIndex",
@@ -18,35 +18,35 @@
     },
     {
       "name": "dwGameRules",
-      "value": 57893960
+      "value": 57894216
     },
     {
       "name": "dwGlobalVars",
-      "value": 56015312
+      "value": 56015568
     },
     {
       "name": "dwGlowManager",
-      "value": 57912752
+      "value": 57913008
     },
     {
       "name": "dwLocalPlayerController",
-      "value": 57784696
+      "value": 57784856
     },
     {
       "name": "dwLocalPlayerPawn",
-      "value": 57916824
+      "value": 57917080
     },
     {
       "name": "dwPlantedC4",
-      "value": 58000792
+      "value": 58000984
     },
     {
       "name": "dwPrediction",
-      "value": 57916512
+      "value": 57916768
     },
     {
       "name": "dwSensitivity",
-      "value": 57909960
+      "value": 57910216
     },
     {
       "name": "dwSensitivity_sensitivity",
@@ -54,25 +54,25 @@
     },
     {
       "name": "dwViewAngles",
-      "value": 57969280
+      "value": 57969440
     },
     {
       "name": "dwViewMatrix",
-      "value": 57919680
+      "value": 57919936
     },
     {
       "name": "dwViewRender",
-      "value": 57920112
+      "value": 57920368
     }
   ],
   "libengine2.so": [
     {
       "name": "dwBuildNumber",
-      "value": 7157236
+      "value": 7169588
     },
     {
       "name": "dwNetworkGameClient",
-      "value": 7159688
+      "value": 7172040
     },
     {
       "name": "dwNetworkGameClient_deltaTick",
@@ -92,11 +92,11 @@
     },
     {
       "name": "dwWindowHeight",
-      "value": 7196100
+      "value": 7208484
     },
     {
       "name": "dwWindowWidth",
-      "value": 7196096
+      "value": 7208480
     }
   ],
   "libinputsystem.so": [

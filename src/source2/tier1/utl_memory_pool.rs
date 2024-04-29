@@ -40,7 +40,6 @@ pub struct UtlMemoryPoolBase {
 }
 
 impl UtlMemoryPoolBase {
-    /// Returns the total size of the memory pool.
     #[inline]
     pub fn size(&self) -> i32 {
         self.total_size

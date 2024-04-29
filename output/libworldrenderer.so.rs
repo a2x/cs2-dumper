@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:45:41.243985329 UTC
+// 2024-04-29 23:05:53.220233445 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: libworldrenderer.so
-        // Classes count: 23
+        // Classes count: 27
         // Enums count: 1
         pub mod libworldrenderer_so {
             // Alignment: 4
@@ -313,6 +313,22 @@ pub mod cs2_dumper {
                 pub const m_EnclosedClustersBlock: usize = 0x84; // VoxelVisBlockOffset_t
                 pub const m_MasksBlock: usize = 0x8C; // VoxelVisBlockOffset_t
                 pub const m_nVisBlocks: usize = 0x94; // VoxelVisBlockOffset_t
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod  {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod  {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod  {
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod  {
             }
         }
     }

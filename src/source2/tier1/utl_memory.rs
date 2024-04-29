@@ -10,13 +10,11 @@ pub struct UtlMemory<T> {
 }
 
 impl<T: Pod> UtlMemory<T> {
-    /// Returns the number of allocated elements.
     #[inline]
     pub fn count(&self) -> i32 {
         self.alloc_count
     }
 
-    /// Returns the element at the specified index.
     pub fn element(&self, process: &mut IntoProcessInstanceArcBox<'_>, idx: usize) -> Result<T> {
         if idx >= self.count() as usize {
             return Err(Error::Other("index out of bounds"));
@@ -25,7 +23,6 @@ impl<T: Pod> UtlMemory<T> {
         self.mem.at(idx as _).read(process).map_err(Into::into)
     }
 
-    /// Returns `true` if the memory was externally allocated.
     #[inline]
     pub fn is_externally_allocated(&self) -> bool {
         self.grow_size < 0

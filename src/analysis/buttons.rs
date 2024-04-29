@@ -9,7 +9,7 @@ use skidscan_macros::signature;
 use crate::error::{Error, Result};
 use crate::source2::KeyButton;
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Deserialize, Serialize)]
 pub struct Button {
     pub name: String,
     pub value: u32,
@@ -56,7 +56,6 @@ fn read_buttons(
         cur_button = button.next;
     }
 
-    // Sort buttons by name.
     buttons.sort_unstable_by(|a, b| a.name.cmp(&b.name));
 
     Ok(buttons)

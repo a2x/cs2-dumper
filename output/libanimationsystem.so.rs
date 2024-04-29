@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:45:41.243985329 UTC
+// 2024-04-29 23:05:53.220233445 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1532,27 +1532,26 @@ pub mod cs2_dumper {
                 pub const m_embeddedKeyvalues: usize = 0x130; // CUtlString
             }
             // Parent: None
-            // Fields count: 16
+            // Fields count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CAnimDemoCaptureSettings {
-                pub const m_rangeBoneChainLength: usize = 0x0; // Vector2D
-                pub const m_rangeMaxSplineErrorRotation: usize = 0x8; // Vector2D
-                pub const m_flMaxSplineErrorTranslation: usize = 0x10; // float32
-                pub const m_flMaxSplineErrorScale: usize = 0x14; // float32
+                pub const m_vecErrorRangeSplineRotation: usize = 0x0; // Vector2D
+                pub const m_vecErrorRangeSplineTranslation: usize = 0x8; // Vector2D
+                pub const m_vecErrorRangeSplineScale: usize = 0x10; // Vector2D
                 pub const m_flIkRotation_MaxSplineError: usize = 0x18; // float32
                 pub const m_flIkTranslation_MaxSplineError: usize = 0x1C; // float32
-                pub const m_flMaxQuantizationErrorRotation: usize = 0x20; // float32
-                pub const m_flMaxQuantizationErrorTranslation: usize = 0x24; // float32
-                pub const m_flMaxQuantizationErrorScale: usize = 0x28; // float32
-                pub const m_flIkRotation_MaxQuantizationError: usize = 0x2C; // float32
-                pub const m_flIkTranslation_MaxQuantizationError: usize = 0x30; // float32
-                pub const m_baseSequence: usize = 0x38; // CUtlString
-                pub const m_nBaseSequenceFrame: usize = 0x40; // int32
-                pub const m_boneSelectionMode: usize = 0x44; // EDemoBoneSelectionMode
-                pub const m_bones: usize = 0x48; // CUtlVector<BoneDemoCaptureSettings_t>
-                pub const m_ikChains: usize = 0x60; // CUtlVector<IKDemoCaptureSettings_t>
+                pub const m_vecErrorRangeQuantizationRotation: usize = 0x20; // Vector2D
+                pub const m_vecErrorRangeQuantizationTranslation: usize = 0x28; // Vector2D
+                pub const m_vecErrorRangeQuantizationScale: usize = 0x30; // Vector2D
+                pub const m_flIkRotation_MaxQuantizationError: usize = 0x38; // float32
+                pub const m_flIkTranslation_MaxQuantizationError: usize = 0x3C; // float32
+                pub const m_baseSequence: usize = 0x40; // CUtlString
+                pub const m_nBaseSequenceFrame: usize = 0x48; // int32
+                pub const m_boneSelectionMode: usize = 0x4C; // EDemoBoneSelectionMode
+                pub const m_bones: usize = 0x50; // CUtlVector<BoneDemoCaptureSettings_t>
+                pub const m_ikChains: usize = 0x68; // CUtlVector<IKDemoCaptureSettings_t>
             }
             // Parent: None
             // Fields count: 5
@@ -2927,13 +2926,18 @@ pub mod cs2_dumper {
                 pub const m_autoResetMap: usize = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
             }
             // Parent: None
-            // Fields count: 2
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod BoneDemoCaptureSettings_t {
                 pub const m_boneName: usize = 0x0; // CUtlString
-                pub const m_flChainLength: usize = 0x8; // float32
+                pub const m_flErrorSplineRotationMax: usize = 0x8; // float32
+                pub const m_flErrorSplineTranslationMax: usize = 0xC; // float32
+                pub const m_flErrorSplineScaleMax: usize = 0x10; // float32
+                pub const m_flErrorQuantizationRotationMax: usize = 0x14; // float32
+                pub const m_flErrorQuantizationTranslationMax: usize = 0x18; // float32
+                pub const m_flErrorQuantizationScaleMax: usize = 0x1C; // float32
             }
             // Parent: None
             // Fields count: 2

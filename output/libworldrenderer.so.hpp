@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-16 02:45:41.243985329 UTC
+// 2024-04-29 23:05:53.220233445 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: libworldrenderer.so
-        // Classes count: 23
+        // Classes count: 27
         // Enums count: 1
         namespace libworldrenderer_so {
             // Alignment: 4
@@ -314,6 +314,22 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_EnclosedClustersBlock = 0x84; // VoxelVisBlockOffset_t
                 constexpr std::ptrdiff_t m_MasksBlock = 0x8C; // VoxelVisBlockOffset_t
                 constexpr std::ptrdiff_t m_nVisBlocks = 0x94; // VoxelVisBlockOffset_t
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
             }
         }
     }

@@ -12,7 +12,6 @@ mod interfaces;
 mod offsets;
 mod schemas;
 
-#[derive(Debug)]
 pub struct AnalysisResult {
     pub buttons: Vec<Button>,
     pub interfaces: InterfaceMap,

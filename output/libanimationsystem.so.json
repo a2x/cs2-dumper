@@ -222,7 +222,12 @@
       "BoneDemoCaptureSettings_t": {
         "fields": {
           "m_boneName": 0,
-          "m_flChainLength": 8
+          "m_flErrorQuantizationRotationMax": 20,
+          "m_flErrorQuantizationScaleMax": 28,
+          "m_flErrorQuantizationTranslationMax": 24,
+          "m_flErrorSplineRotationMax": 8,
+          "m_flErrorSplineScaleMax": 16,
+          "m_flErrorSplineTranslationMax": 12
         },
         "metadata": [
           {
@@ -441,22 +446,21 @@
       },
       "CAnimDemoCaptureSettings": {
         "fields": {
-          "m_baseSequence": 56,
-          "m_boneSelectionMode": 68,
-          "m_bones": 72,
-          "m_flIkRotation_MaxQuantizationError": 44,
+          "m_baseSequence": 64,
+          "m_boneSelectionMode": 76,
+          "m_bones": 80,
+          "m_flIkRotation_MaxQuantizationError": 56,
           "m_flIkRotation_MaxSplineError": 24,
-          "m_flIkTranslation_MaxQuantizationError": 48,
+          "m_flIkTranslation_MaxQuantizationError": 60,
           "m_flIkTranslation_MaxSplineError": 28,
-          "m_flMaxQuantizationErrorRotation": 32,
-          "m_flMaxQuantizationErrorScale": 40,
-          "m_flMaxQuantizationErrorTranslation": 36,
-          "m_flMaxSplineErrorScale": 20,
-          "m_flMaxSplineErrorTranslation": 16,
-          "m_ikChains": 96,
-          "m_nBaseSequenceFrame": 64,
-          "m_rangeBoneChainLength": 0,
-          "m_rangeMaxSplineErrorRotation": 8
+          "m_ikChains": 104,
+          "m_nBaseSequenceFrame": 72,
+          "m_vecErrorRangeQuantizationRotation": 32,
+          "m_vecErrorRangeQuantizationScale": 48,
+          "m_vecErrorRangeQuantizationTranslation": 40,
+          "m_vecErrorRangeSplineRotation": 0,
+          "m_vecErrorRangeSplineScale": 16,
+          "m_vecErrorRangeSplineTranslation": 8
         },
         "metadata": [
           {

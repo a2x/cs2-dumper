@@ -22,7 +22,10 @@ pub enum Operation {
 
     /// Resolves the absolute address of a RIP-relative address.
     Rip {
+        /// The offset of the displacement value.
         offset: Option<usize>,
+
+        /// The total length of the instruction.
         len: Option<usize>,
     },
 
@@ -38,21 +41,13 @@ pub enum Operation {
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Config {
-    /// Name of the process.
     pub executable: String,
-
-    /// List of signatures to search for.
     pub signatures: Vec<HashMap<String, Vec<Signature>>>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Signature {
-    /// Name of the signature.
     pub name: String,
-
-    /// An IDA-style pattern containing the bytes to search for.
     pub pattern: String,
-
-    /// List of operations to perform on the matched address.
     pub operations: Vec<Operation>,
 }

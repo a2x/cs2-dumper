@@ -135,7 +135,11 @@ impl<'a> Output<'a> {
             .iter()
             .find_map(|(module_name, offsets)| {
                 let module = process.module_by_name(module_name).ok()?;
-                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?.1;
+
+                let offset = offsets
+                    .iter()
+                    .find(|offset| offset.name == "dwBuildNumber")?
+                    .value;
 
                 process.read::<u32>(module.base + offset).ok()
             })
