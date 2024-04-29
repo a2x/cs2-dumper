@@ -6,7 +6,6 @@ use chrono::{DateTime, Utc};
 
 use memflow::prelude::v1::*;
 
-use serde::Serialize;
 use serde_json::json;
 
 use formatter::Formatter;
@@ -20,8 +19,6 @@ mod interfaces;
 mod offsets;
 mod schemas;
 
-#[derive(Serialize)]
-#[serde(rename_all = "snake_case")]
 enum Item<'a> {
     Buttons(&'a Vec<Button>),
     Interfaces(&'a InterfaceMap),
@@ -30,8 +27,8 @@ enum Item<'a> {
 }
 
 impl<'a> Item<'a> {
-    fn write(&self, fmt: &mut Formatter<'a>, file_ext: &str) -> fmt::Result {
-        match file_ext {
+    fn write(&self, fmt: &mut Formatter<'a>, file_type: &str) -> fmt::Result {
+        match file_type {
             "cs" => self.write_cs(fmt),
             "hpp" => self.write_hpp(fmt),
             "json" => self.write_json(fmt),
@@ -43,11 +40,8 @@ impl<'a> Item<'a> {
 
 trait CodeWriter {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
-
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
-
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
-
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
 }
 
@@ -141,11 +135,7 @@ impl<'a> Output<'a> {
             .iter()
             .find_map(|(module_name, offsets)| {
                 let module = process.module_by_name(module_name).ok()?;
-
-                let offset = offsets
-                    .iter()
-                    .find(|offset| offset.name == "dwBuildNumber")?
-                    .value;
+                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?.1;
 
                 process.read::<u32>(module.base + offset).ok()
             })
