@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-27 00:03:34.843899 UTC
+// 2024-05-01 00:25:27.858971200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7184,7 +7184,7 @@ pub mod cs2_dumper {
                 pub const m_state: usize = 0x718; // int32
             }
             // Parent: CTeamplayRules
-            // Fields count: 216
+            // Fields count: 215
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7510,7 +7510,6 @@ pub mod cs2_dumper {
                 pub const m_iRoundStartRoundNumber: usize = 0x1848; // int32
                 pub const m_nRoundStartCount: usize = 0x184C; // uint8
                 pub const m_flLastPerfSampleTime: usize = 0x5858; // float64
-                pub const m_bSkipNextServerPerfSample: usize = 0x5860; // bool
             }
             // Parent: CPhysicsProp
             // Fields count: 0

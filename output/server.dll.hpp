@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-27 00:03:34.843899 UTC
+// 2024-05-01 00:25:27.858971200 UTC
 
 #pragma once
 
@@ -7060,7 +7060,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_state = 0x718; // int32
             }
             // Parent: CTeamplayRules
-            // Fields count: 216
+            // Fields count: 215
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7386,7 +7386,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iRoundStartRoundNumber = 0x1848; // int32
                 constexpr std::ptrdiff_t m_nRoundStartCount = 0x184C; // uint8
                 constexpr std::ptrdiff_t m_flLastPerfSampleTime = 0x5858; // float64
-                constexpr std::ptrdiff_t m_bSkipNextServerPerfSample = 0x5860; // bool
             }
             // Parent: CPhysicsProp
             // Fields count: 0

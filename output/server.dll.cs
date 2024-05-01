@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-27 00:03:34.843899 UTC
+// 2024-05-01 00:25:27.858971200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -7055,7 +7055,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_state = 0x718; // int32
         }
         // Parent: CTeamplayRules
-        // Fields count: 216
+        // Fields count: 215
         //
         // Metadata:
         // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7381,7 +7381,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_iRoundStartRoundNumber = 0x1848; // int32
             public const nint m_nRoundStartCount = 0x184C; // uint8
             public const nint m_flLastPerfSampleTime = 0x5858; // float64
-            public const nint m_bSkipNextServerPerfSample = 0x5860; // bool
         }
         // Parent: CPhysicsProp
         // Fields count: 0
