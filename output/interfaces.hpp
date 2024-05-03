@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-02 01:10:14.014242300 UTC
+// 2024-05-03 00:11:19.220511700 UTC
 
 #pragma once
 
@@ -17,11 +17,11 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x735970;
             constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x482B50;
             constexpr std::ptrdiff_t GameClientExports001 = 0x735980;
-            constexpr std::ptrdiff_t LegacyGameUI001 = 0x8B3920;
+            constexpr std::ptrdiff_t LegacyGameUI001 = 0x8B3950;
             constexpr std::ptrdiff_t Source2Client002 = 0x735990;
             constexpr std::ptrdiff_t Source2ClientConfig001 = 0x46DED0;
             constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x7B2410;
-            constexpr std::ptrdiff_t Source2ClientUI001 = 0x8A2E60;
+            constexpr std::ptrdiff_t Source2ClientUI001 = 0x8A2E90;
         }
         // Module: engine2.dll
         namespace engine2_dll {

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-02 01:10:14.014242300 UTC
+// 2024-05-03 00:11:19.220511700 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -12,11 +12,11 @@ namespace CS2Dumper.Interfaces {
         public const nint ClientToolsInfo_001 = 0x735970;
         public const nint EmptyWorldService001_Client = 0x482B50;
         public const nint GameClientExports001 = 0x735980;
-        public const nint LegacyGameUI001 = 0x8B3920;
+        public const nint LegacyGameUI001 = 0x8B3950;
         public const nint Source2Client002 = 0x735990;
         public const nint Source2ClientConfig001 = 0x46DED0;
         public const nint Source2ClientPrediction001 = 0x7B2410;
-        public const nint Source2ClientUI001 = 0x8A2E60;
+        public const nint Source2ClientUI001 = 0x8A2E90;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
