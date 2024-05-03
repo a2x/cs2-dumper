@@ -108,6 +108,9 @@ pattern_map! {
         "dwNetworkGameClient_signOnState" => pattern!("448b81u2?? 488d0d") => None,
         "dwWindowHeight" => pattern!("8b05${'} 8903") => None,
         "dwWindowWidth" => pattern!("8b05${'} 8907") => None,
+        "dwSoundService" => pattern!("488905${'} 4c8d4424? 488d05") => Some(|_view, map, rva| {
+            map.insert("dwEngineViewData".to_string(), rva + 0x9C);
+        }),
     },
     input_system => {
         "dwInputSystem" => pattern!("488905${'} 488d05") => None,
