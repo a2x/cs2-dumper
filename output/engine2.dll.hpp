@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-03 00:11:19.220511700 UTC
+// 2024-05-08 03:42:33.508076800 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: engine2.dll
-        // Classes count: 44
+        // Classes count: 43
         // Enums count: 4
         namespace engine2_dll {
             // Alignment: 4
@@ -128,10 +128,6 @@ namespace cs2_dumper {
             // Fields count: 1
             namespace EventPreDataUpdate_t {
                 constexpr std::ptrdiff_t m_nCount = 0x0; // int32
-            }
-            // Parent: None
-            // Fields count: 0
-            namespace EventClientPredictionPostNetupdate_t {
             }
             // Parent: None
             // Fields count: 3

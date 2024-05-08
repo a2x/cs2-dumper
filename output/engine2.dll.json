@@ -169,11 +169,6 @@
         "metadata": [],
         "parent": "EventSimulate_t"
       },
-      "EventClientPredictionPostNetupdate_t": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
       "EventClientProcessGameInput_t": {
         "fields": {
           "m_LoopState": 0,
