@@ -1,6 +1,6 @@
 use std::collections::BTreeMap;
 
-use log::debug;
+use log::{debug, error};
 
 use memflow::prelude::v1::*;
 
@@ -39,6 +39,8 @@ macro_rules! pattern_map {
                         let mut save = vec![0; save_len(pat)];
 
                         if !view.scanner().finds_code(pat, &mut save) {
+                            error!("unable to find pattern: {}", name);
+
                             continue;
                         }
 
