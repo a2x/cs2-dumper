@@ -262,10 +262,10 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
 
     let mut save = [0; 2];
 
-    if !view
-        .scanner()
-        .finds_code(pattern!("488905${'} 4c8d45"), &mut save)
-    {
+    if !view.scanner().finds_code(
+        pattern!("488905${'} 4c8d0d${} 0fb645? 4c8d45? 33f6"),
+        &mut save,
+    ) {
         return Err(Error::Other("unable to find schema system pattern"));
     }
 
