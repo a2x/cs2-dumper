@@ -15,6 +15,7 @@ impl<'a> Formatter<'a> {
         }
     }
 
+    // TODO: Refactor this.
     pub fn block<F>(&mut self, heading: &str, semicolon: bool, f: F) -> fmt::Result
     where
         F: FnOnce(&mut Self) -> fmt::Result,

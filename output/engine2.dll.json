@@ -1,11 +1,6 @@
 {
   "engine2.dll": {
     "classes": {
-      "": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
       "CEmptyEntityInstance": {
         "fields": {},
         "metadata": [],

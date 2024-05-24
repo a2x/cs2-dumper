@@ -53,7 +53,7 @@ impl CodeWriter for Vec<Button> {
             BTreeMap::from_iter([("client.dll", buttons)])
         };
 
-        fmt.write_str(&serde_json::to_string_pretty(&content).expect("failed to serialize"))
+        fmt.write_str(&serde_json::to_string_pretty(&content).expect("unable to serialize json"))
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {

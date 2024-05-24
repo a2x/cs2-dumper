@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-24 01:30:25.777667800 UTC
+// 2024-05-24 10:58:30.509826500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -243,8 +243,7 @@ pub mod cs2_dumper {
             #[repr(u32)]
             pub enum ParticleParentSetMode_t {
                 PARTICLE_SET_PARENT_NO = 0x0,
-                PARTICLE_SET_PARENT_IMMEDIATE = 0x1,
-                PARTICLE_SET_PARENT_ROOT = 0x1
+                PARTICLE_SET_PARENT_IMMEDIATE = 0x1
             }
             // Alignment: 4
             // Members count: 5

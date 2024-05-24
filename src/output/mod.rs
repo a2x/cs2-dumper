@@ -40,11 +40,8 @@ impl<'a> Item<'a> {
 
 trait CodeWriter {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
-
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
-
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
-
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
 }
 

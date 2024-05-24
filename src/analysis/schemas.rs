@@ -89,6 +89,10 @@ fn read_class_binding(
 
     let name = binding.name.read_string(process)?.to_string();
 
+    if name.is_empty() {
+        return Err(Error::Other("empty class name"));
+    }
+
     let parent = binding.base_classes.non_null().and_then(|ptr| {
         let base_class = ptr.read(process).ok()?;
         let parent_class = base_class.prev.read(process).ok()?;
@@ -214,6 +218,10 @@ fn read_enum_binding(
 ) -> Result<Enum> {
     let binding = binding_ptr.read(process)?;
     let name = binding.name.read_string(process)?.to_string();
+
+    if name.is_empty() {
+        return Err(Error::Other("empty enum name"));
+    }
 
     let members = read_enum_binding_members(process, &binding)?;
 
