@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 23:09:24.161043 UTC
+// 2024-05-24 00:18:41.177102700 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -30,9 +30,12 @@ pub mod cs2_dumper {
             pub const dwBuildNumber: usize = 0x51E784;
             pub const dwEngineViewData: usize = 0x5DA9DC;
             pub const dwNetworkGameClient: usize = 0x51DB58;
+            pub const dwNetworkGameClient_clientTickCount: usize = 0x178;
             pub const dwNetworkGameClient_deltaTick: usize = 0x278;
-            pub const dwNetworkGameClient_getLocalPlayer: usize = 0xF0;
-            pub const dwNetworkGameClient_getMaxClients: usize = 0x270;
+            pub const dwNetworkGameClient_isBackgroundMap: usize = 0x28145F;
+            pub const dwNetworkGameClient_localPlayer: usize = 0xF0;
+            pub const dwNetworkGameClient_maxClients: usize = 0x270;
+            pub const dwNetworkGameClient_serverTickCount: usize = 0x174;
             pub const dwNetworkGameClient_signOnState: usize = 0x260;
             pub const dwSoundService: usize = 0x5DA940;
             pub const dwWindowHeight: usize = 0x5DE2B4;

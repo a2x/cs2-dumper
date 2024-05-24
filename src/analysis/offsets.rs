@@ -76,7 +76,7 @@ pattern_map! {
             let mut save = [0; 2];
 
             if view.scanner().finds_code(pattern!("f2410f108430u4"), &mut save) {
-                map.insert("dwViewAngles".to_string(), rva + save[1]); // 0x5418);
+                map.insert("dwViewAngles".to_string(), rva + save[1]);
             }
         }),
         "dwEntityList" => pattern!("488935${'} 4885f6") => None,
@@ -99,20 +99,23 @@ pattern_map! {
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${}") => None,
         "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
+        "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("8983u4 40b7") => None,
-        "dwNetworkGameClient_getLocalPlayer" => pattern!("4883c0u1 488d0440 8b0cc1") => Some(|_view, map, rva| {
+        "dwNetworkGameClient_isBackgroundMap" => pattern!("0fb681u4 c3 cccccccccccccccc 0fb681${} c3 cccccccccccccccc 48895c24") => None,
+        "dwNetworkGameClient_localPlayer" => pattern!("4883c0u1 488d0440 8b0cc1") => Some(|_view, map, rva| {
             // .text 48 83 C0 0A | add rax, 0Ah
             // .text 48 8D 04 40 | lea rax, [rax + rax * 2]
-            // .text 45 8B 04 C7 | mov r8d, [r15 + rax * 8]
-            map.insert("dwNetworkGameClient_getLocalPlayer".to_string(), (rva + (rva * 2)) * 8);
+            // .text 8B 0C C1    | mov ecx, [rcx + rax * 8]
+            map.insert("dwNetworkGameClient_localPlayer".to_string(), (rva + (rva * 2)) * 8);
         }),
-        "dwNetworkGameClient_getMaxClients" => pattern!("8b81u2?? c3cccccccccccccccccc 8b81${} ffc0") => None,
-        "dwNetworkGameClient_signOnState" => pattern!("448b81u2?? 488d0d") => None,
-        "dwWindowHeight" => pattern!("8b05${'} 8903") => None,
-        "dwWindowWidth" => pattern!("8b05${'} 8907") => None,
+        "dwNetworkGameClient_maxClients" => pattern!("8b81u4 c3cccccccccccccccccc 8b81${} ffc0") => None,
+        "dwNetworkGameClient_serverTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 83b9") => None,
+        "dwNetworkGameClient_signOnState" => pattern!("448b81u4 488d0d") => None,
         "dwSoundService" => pattern!("488905${'} 4c8d4424? 488d05") => Some(|_view, map, rva| {
             map.insert("dwEngineViewData".to_string(), rva + 0x9C);
         }),
+        "dwWindowHeight" => pattern!("8b05${'} 8903") => None,
+        "dwWindowWidth" => pattern!("8b05${'} 8907") => None,
     },
     input_system => {
         "dwInputSystem" => pattern!("488905${'} 488d05") => None,
