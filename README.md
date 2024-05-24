@@ -2,6 +2,8 @@
 
 An external Counter-Strike 2 offset/interface dumper for Linux.
 
+**Note:** This branch will likely not be kept up-to-date by myself. Pull requests are welcome!
+
 ## Getting Started
 
 You can download the latest release from [Releases](https://github.com/a2x/cs2-dumper/releases) or compile it yourself.
