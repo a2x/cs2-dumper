@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: resourcesystem.dll
-        // Classes count: 59
+        // Classes count: 58
         // Enums count: 2
         namespace resourcesystem_dll {
             // Alignment: 1
@@ -279,20 +279,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCNmGraph {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCDACGameDefsData {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
             namespace InfoForResourceTypeCPanoramaStyle {
             }
             // Parent: None
@@ -307,7 +293,21 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCNmGraphVariation {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
             namespace InfoForResourceTypeCCSGOEconItem {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCNmGraphDefinition {
             }
             // Parent: None
             // Fields count: 0
@@ -420,13 +420,6 @@ namespace cs2_dumper {
             // Fields count: 1
             namespace FuseVariableIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint16
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCNmGraphDataSet {
             }
             // Parent: None
             // Fields count: 0

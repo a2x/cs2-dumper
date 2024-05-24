@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 #pragma once
 
@@ -8,9 +8,24 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
-        // Classes count: 51
-        // Enums count: 13
+        // Classes count: 63
+        // Enums count: 18
         namespace soundsystem_dll {
+            // Alignment: 4
+            // Members count: 2
+            enum class EMode_t : uint32_t {
+                Peak = 0x0,
+                RMS = 0x1
+            };
+            // Alignment: 1
+            // Members count: 5
+            enum class EWaveform : uint8_t {
+                Sine = 0x0,
+                Square = 0x1,
+                Saw = 0x2,
+                Triangle = 0x3,
+                Noise = 0x4
+            };
             // Alignment: 4
             // Members count: 5
             enum class VMixLFOShape_t : uint32_t {
@@ -57,39 +72,47 @@ namespace cs2_dumper {
                 SOS_SORTTYPE_HIGHEST = 0x0,
                 SOS_SORTTYPE_LOWEST = 0x1
             };
+            // Alignment: 4
+            // Members count: 4
+            enum class PlayBackMode_t : uint32_t {
+                Random = 0x0,
+                RandomNoRepeats = 0x1,
+                RandomAvoidLast = 0x2,
+                Sequential = 0x3
+            };
             // Alignment: 2
             // Members count: 30
             enum class VMixProcessorType_t : uint16_t {
                 VPROCESSOR_UNKNOWN = 0x0,
-                VPROCESSOR_STEAMAUDIO_REVERB = 0x1,
-                VPROCESSOR_RT_PITCH = 0x2,
-                VPROCESSOR_STEAMAUDIO_HRTF = 0x3,
-                VPROCESSOR_DYNAMICS = 0x4,
-                VPROCESSOR_PRESETDSP = 0x5,
-                VPROCESSOR_DELAY = 0x6,
-                VPROCESSOR_MOD_DELAY = 0x7,
-                VPROCESSOR_DIFFUSOR = 0x8,
-                VPROCESSOR_BOXVERB = 0x9,
-                VPROCESSOR_FREEVERB = 0xA,
-                VPROCESSOR_PLATEVERB = 0xB,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
-                VPROCESSOR_FILTER = 0xD,
-                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
-                VPROCESSOR_EQ8 = 0xF,
-                VPROCESSOR_ENVELOPE = 0x10,
-                VPROCESSOR_VOCODER = 0x11,
-                VPROCESSOR_CONVOLUTION = 0x12,
-                VPROCESSOR_DYNAMICS_3BAND = 0x13,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x14,
-                VPROCESSOR_SHAPER = 0x15,
-                VPROCESSOR_PANNER = 0x16,
-                VPROCESSOR_UTILITY = 0x17,
-                VPROCESSOR_AUTOFILTER = 0x18,
-                VPROCESSOR_OSC = 0x19,
-                VPROCESSOR_STEREODELAY = 0x1A,
-                VPROCESSOR_EFFECT_CHAIN = 0x1B,
-                VPROCESSOR_SUBGRAPH_SWITCH = 0x1C,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1D
+                VPROCESSOR_RT_PITCH = 0x1,
+                VPROCESSOR_STEAMAUDIO_HRTF = 0x2,
+                VPROCESSOR_DYNAMICS = 0x3,
+                VPROCESSOR_PRESETDSP = 0x4,
+                VPROCESSOR_DELAY = 0x5,
+                VPROCESSOR_MOD_DELAY = 0x6,
+                VPROCESSOR_DIFFUSOR = 0x7,
+                VPROCESSOR_BOXVERB = 0x8,
+                VPROCESSOR_FREEVERB = 0x9,
+                VPROCESSOR_PLATEVERB = 0xA,
+                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xB,
+                VPROCESSOR_FILTER = 0xC,
+                VPROCESSOR_STEAMAUDIO_PATHING = 0xD,
+                VPROCESSOR_EQ8 = 0xE,
+                VPROCESSOR_ENVELOPE = 0xF,
+                VPROCESSOR_VOCODER = 0x10,
+                VPROCESSOR_CONVOLUTION = 0x11,
+                VPROCESSOR_DYNAMICS_3BAND = 0x12,
+                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x13,
+                VPROCESSOR_SHAPER = 0x14,
+                VPROCESSOR_PANNER = 0x15,
+                VPROCESSOR_UTILITY = 0x16,
+                VPROCESSOR_AUTOFILTER = 0x17,
+                VPROCESSOR_OSC = 0x18,
+                VPROCESSOR_STEREODELAY = 0x19,
+                VPROCESSOR_EFFECT_CHAIN = 0x1A,
+                VPROCESSOR_SUBGRAPH_SWITCH = 0x1B,
+                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1C,
+                VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1D
             };
             // Alignment: 4
             // Members count: 30
@@ -142,6 +165,31 @@ namespace cs2_dumper {
                 VMIX_CHAN_MID_SIDE = 0x5
             };
             // Alignment: 1
+            // Members count: 13
+            enum class EMidiNote : uint8_t {
+                C = 0x0,
+                C_Sharp = 0x1,
+                D = 0x2,
+                D_Sharp = 0x3,
+                E = 0x4,
+                F = 0x5,
+                F_Sharp = 0x6,
+                G = 0x7,
+                G_Sharp = 0x8,
+                A = 0x9,
+                A_Sharp = 0xA,
+                B = 0xB,
+                Count = 0xC
+            };
+            // Alignment: 1
+            // Members count: 4
+            enum class CVSoundFormat_t : uint8_t {
+                PCM16 = 0x0,
+                PCM8 = 0x1,
+                MP3 = 0x2,
+                ADPCM = 0x3
+            };
+            // Alignment: 1
             // Members count: 9
             enum class VMixFilterSlope_t : uint8_t {
                 FILTER_SLOPE_1POLE_6dB = 0x0,
@@ -155,14 +203,16 @@ namespace cs2_dumper {
                 FILTER_SLOPE_MAX = 0x7
             };
             // Alignment: 4
-            // Members count: 6
+            // Members count: 8
             enum class ActionType_t : uint32_t {
                 SOS_ACTION_NONE = 0x0,
                 SOS_ACTION_LIMITER = 0x1,
                 SOS_ACTION_TIME_LIMIT = 0x2,
                 SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
                 SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5
+                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5,
+                SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
+                SOS_ACTION_COUNT_ENVELOPE = 0x7
             };
             // Alignment: 4
             // Members count: 3
@@ -177,6 +227,18 @@ namespace cs2_dumper {
                 SOS_GROUPTYPE_DYNAMIC = 0x0,
                 SOS_GROUPTYPE_STATIC = 0x1
             };
+            // Parent: CVoiceContainerBase
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerBlender {
+                constexpr std::ptrdiff_t m_firstSound = 0xF0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_secondSound = 0xF8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_flBlendFactor = 0x100; // float32
+            }
             // Parent: None
             // Fields count: 4
             //
@@ -188,26 +250,72 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flWidth = 0x8; // float32
                 constexpr std::ptrdiff_t m_flLateReflections = 0xC; // float32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CVoiceContainerRandomSampler {
-                constexpr std::ptrdiff_t m_flLoudAmplitude = 0x60; // float32
-                constexpr std::ptrdiff_t m_flLoudAmplitudeJitter = 0x64; // float32
-                constexpr std::ptrdiff_t m_flSoftAmplitude = 0x68; // float32
-                constexpr std::ptrdiff_t m_flSoftAmplitudeJitter = 0x6C; // float32
-                constexpr std::ptrdiff_t m_flLoudTimeJitter = 0x70; // float32
-                constexpr std::ptrdiff_t m_flSoftTimeJitter = 0x74; // float32
-                constexpr std::ptrdiff_t m_grainResources = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+            namespace CVoiceContainerStaticAdditiveSynth__CHarmonic {
+                constexpr std::ptrdiff_t m_nWaveform = 0x0; // EWaveform
+                constexpr std::ptrdiff_t m_nFundamental = 0x1; // EMidiNote
+                constexpr std::ptrdiff_t m_nOctave = 0x4; // int32
+                constexpr std::ptrdiff_t m_flCents = 0x8; // float32
+                constexpr std::ptrdiff_t m_flPhase = 0xC; // float32
+                constexpr std::ptrdiff_t m_curve = 0x10; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_volumeScaling = 0x50; // CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance
             }
-            // Parent: CVoiceContainerBase
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            namespace CVoiceContainerStaticAdditiveSynth__CTone {
+                constexpr std::ptrdiff_t m_harmonics = 0x0; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CHarmonic>
+                constexpr std::ptrdiff_t m_curve = 0x18; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bSyncInstances = 0x58; // bool
+            }
+            // Parent: CVoiceContainerBase
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerRandomSampler {
+                constexpr std::ptrdiff_t m_flAmplitude = 0xF0; // float32
+                constexpr std::ptrdiff_t m_flAmplitudeJitter = 0xF4; // float32
+                constexpr std::ptrdiff_t m_flTimeJitter = 0xF8; // float32
+                constexpr std::ptrdiff_t m_flMaxLength = 0xFC; // float32
+                constexpr std::ptrdiff_t m_nNumDelayVariations = 0x100; // int32
+                constexpr std::ptrdiff_t m_grainResources = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+            }
+            // Parent: CVoiceContainerBase
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
             namespace CVoiceContainerDefault {
+                constexpr std::ptrdiff_t m_vsndReference = 0xF0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+            }
+            // Parent: None
+            // Fields count: 11
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CVSound {
+                constexpr std::ptrdiff_t m_nRate = 0x0; // int32
+                constexpr std::ptrdiff_t m_nFormat = 0x4; // CVSoundFormat_t
+                constexpr std::ptrdiff_t m_nChannels = 0x8; // uint32
+                constexpr std::ptrdiff_t m_nLoopStart = 0xC; // int32
+                constexpr std::ptrdiff_t m_nSampleCount = 0x10; // uint32
+                constexpr std::ptrdiff_t m_flDuration = 0x14; // float32
+                constexpr std::ptrdiff_t m_Sentences = 0x18; // CUtlVector<CAudioSentence>
+                constexpr std::ptrdiff_t m_nStreamingSize = 0x30; // uint32
+                constexpr std::ptrdiff_t m_nSeekTable = 0x38; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_nLoopEnd = 0x50; // int32
+                constexpr std::ptrdiff_t m_encodedHeader = 0x58; // CUtlBinaryBlock
             }
             // Parent: None
             // Fields count: 1
@@ -244,6 +352,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_opvarName = 0x28; // CUtlString
                 constexpr std::ptrdiff_t m_nSortType = 0x30; // SosActionSortType_t
             }
+            // Parent: CVoiceContainerBase
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerNull {
+            }
             // Parent: None
             // Fields count: 3
             //
@@ -259,19 +376,44 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MVDataNodeType
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerAnalysisBase {
+                constexpr std::ptrdiff_t m_bRegenerateCurveOnCompile = 0x8; // bool
+                constexpr std::ptrdiff_t m_curve = 0x10; // CPiecewiseCurve
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             namespace VMixPannerDesc_t {
                 constexpr std::ptrdiff_t m_type = 0x0; // VMixPannerType_t
                 constexpr std::ptrdiff_t m_flStrength = 0x4; // float32
+            }
+            // Parent: CSosGroupActionSchema
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSosGroupActionSoundeventPrioritySchema {
+                constexpr std::ptrdiff_t m_priorityValue = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_priorityVolumeScalar = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_priorityContributeButDontRead = 0x28; // CUtlString
+                constexpr std::ptrdiff_t m_bPriorityReadButDontContribute = 0x30; // CUtlString
             }
             // Parent: CVoiceContainerBase
             // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
             namespace CVoiceContainerRealtimeFMSineWave {
-                constexpr std::ptrdiff_t m_flCarrierFrequency = 0x60; // float32
-                constexpr std::ptrdiff_t m_flModulatorFrequency = 0x64; // float32
-                constexpr std::ptrdiff_t m_flModulatorAmount = 0x68; // float32
+                constexpr std::ptrdiff_t m_flCarrierFrequency = 0xF0; // float32
+                constexpr std::ptrdiff_t m_flModulatorFrequency = 0xF4; // float32
+                constexpr std::ptrdiff_t m_flModulatorAmount = 0xF8; // float32
             }
             // Parent: None
             // Fields count: 1
@@ -333,7 +475,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_actionInstanceType = 0x14; // ActionType_t
             }
             // Parent: None
-            // Fields count: 8
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -345,11 +487,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nBlockMaxCount = 0x10; // int32
                 constexpr std::ptrdiff_t m_bInvertMatch = 0x14; // bool
                 constexpr std::ptrdiff_t m_matchPattern = 0x18; // CSosGroupMatchPattern
-                constexpr std::ptrdiff_t m_branchPattern = 0x40; // CSosGroupBranchPattern
-                constexpr std::ptrdiff_t m_vActions = 0xB0; // CSosGroupActionSchema*[4]
+                constexpr std::ptrdiff_t m_branchPattern = 0x48; // CSosGroupBranchPattern
+                constexpr std::ptrdiff_t m_flLifeSpanTime = 0x58; // float32
+                constexpr std::ptrdiff_t m_vActions = 0xC0; // CSosGroupActionSchema*[4]
             }
             // Parent: None
-            // Fields count: 4
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -358,6 +501,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bMatchEventSubString = 0x9; // bool
                 constexpr std::ptrdiff_t m_bMatchEntIndex = 0xA; // bool
                 constexpr std::ptrdiff_t m_bMatchOpvar = 0xB; // bool
+                constexpr std::ptrdiff_t m_bMatchString = 0xC; // bool
             }
             // Parent: None
             // Fields count: 10
@@ -390,6 +534,29 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flListenerReverbModifierWhenSourceReverbIsActive = 0x18; // float32
             }
             // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CAudioMorphData {
+                constexpr std::ptrdiff_t m_times = 0x0; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_nameHashCodes = 0x18; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_nameStrings = 0x30; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_samples = 0x48; // CUtlVector<CUtlVector<float32>>
+                constexpr std::ptrdiff_t m_flEaseIn = 0x60; // float32
+                constexpr std::ptrdiff_t m_flEaseOut = 0x64; // float32
+            }
+            // Parent: CVoiceContainerBase
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerStaticAdditiveSynth {
+                constexpr std::ptrdiff_t m_tones = 0xF0; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -398,23 +565,19 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_dspName = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CVoiceContainerBlend {
-                constexpr std::ptrdiff_t m_hSoundOne = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_hSoundTwo = 0x68; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_flBlendAmount = 0x70; // float32
-            }
-            // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
+            // MVDataNodeType
+            // MVDataFileExtension
+            // MPropertyFriendlyName
+            // MPropertyDescription
             namespace CVoiceContainerBase {
-                constexpr std::ptrdiff_t m_curves = 0x20; // CUtlDict<CPiecewiseCurve,F(size=1)>
+                constexpr std::ptrdiff_t m_vSound = 0x20; // CVSound
+                constexpr std::ptrdiff_t m_bHideAnalyzers = 0xD0; // bool
+                constexpr std::ptrdiff_t m_analysisContainers = 0xD8; // CUtlVector<CVoiceContainerAnalysisBase*>
             }
             // Parent: None
             // Fields count: 7
@@ -438,24 +601,27 @@ namespace cs2_dumper {
             namespace VMixEQ8Desc_t {
                 constexpr std::ptrdiff_t m_stages = 0x0; // VMixFilterDesc_t[8]
             }
-            // Parent: CVoiceContainerWavFileReader
-            // Fields count: 1
+            // Parent: None
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CVoiceContainerEnvelopeAnalyzer {
-                constexpr std::ptrdiff_t m_envBuffer = 0x68; // CUtlVector<float32>
+            namespace CAudioPhonemeTag {
+                constexpr std::ptrdiff_t m_flStartTime = 0x0; // float32
+                constexpr std::ptrdiff_t m_flEndTime = 0x4; // float32
+                constexpr std::ptrdiff_t m_nPhonemeCode = 0x8; // int32
             }
-            // Parent: CVoiceContainerBase
-            // Fields count: 4
+            // Parent: CVoiceContainerAnalysisBase
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            namespace CVoiceContainerEngineSound {
-                constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // float32
-                constexpr std::ptrdiff_t m_flTestSoundEventBoundParam = 0x6C; // float32
-                constexpr std::ptrdiff_t m_flEngineRPM = 0x70; // float32
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerEnvelopeAnalyzer {
+                constexpr std::ptrdiff_t m_mode = 0x50; // EMode_t
+                constexpr std::ptrdiff_t m_nSamples = 0x54; // int32
+                constexpr std::ptrdiff_t m_flThreshold = 0x58; // float32
             }
             // Parent: None
             // Fields count: 1
@@ -477,6 +643,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nProcType = 0xC; // int32
             }
             // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CAudioEmphasisSample {
+                constexpr std::ptrdiff_t m_flTime = 0x0; // float32
+                constexpr std::ptrdiff_t m_flValue = 0x4; // float32
+            }
+            // Parent: None
             // Fields count: 8
             //
             // Metadata:
@@ -492,6 +667,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flHighCutoffFreq = 0x1C; // float32
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSoundInfoHeader {
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
@@ -500,7 +682,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
             }
             // Parent: CSosGroupBranchPattern
-            // Fields count: 4
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -509,6 +691,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_matchSoundEventSubString = 0x18; // CUtlString
                 constexpr std::ptrdiff_t m_flEntIndex = 0x20; // float32
                 constexpr std::ptrdiff_t m_flOpvar = 0x24; // float32
+                constexpr std::ptrdiff_t m_opvarString = 0x28; // CUtlString
             }
             // Parent: None
             // Fields count: 5
@@ -521,23 +704,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t itemTypeName = 0x10; // CUtlString
                 constexpr std::ptrdiff_t itemKVString = 0x20; // CUtlString
                 constexpr std::ptrdiff_t itemPos = 0x28; // Vector2D
-            }
-            // Parent: CVoiceContainerWavFileReader
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CVoiceContainerTestConstant {
-                constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // bool
-            }
-            // Parent: CVoiceContainerBase
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CVoiceContainerTestNestedDynamic {
-                constexpr std::ptrdiff_t m_SoundToPlay = 0x60; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_flTestConstantParam = 0x68; // float32
             }
             // Parent: None
             // Fields count: 7
@@ -552,14 +718,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDamp = 0x10; // float32
                 constexpr std::ptrdiff_t m_flFeedbackDiffusion1 = 0x14; // float32
                 constexpr std::ptrdiff_t m_flFeedbackDiffusion2 = 0x18; // float32
-            }
-            // Parent: CVoiceContainerBase
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CVoiceContainerWavFileReader {
-                constexpr std::ptrdiff_t m_wavFilePath = 0x60; // CUtlString
             }
             // Parent: None
             // Fields count: 4
@@ -610,6 +768,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flHoldTimeMS = 0x4; // float32
                 constexpr std::ptrdiff_t m_flReleaseTimeMS = 0x8; // float32
             }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CAudioSentence {
+                constexpr std::ptrdiff_t m_bShouldVoiceDuck = 0x0; // bool
+                constexpr std::ptrdiff_t m_RunTimePhonemes = 0x8; // CUtlVector<CAudioPhonemeTag>
+                constexpr std::ptrdiff_t m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
+                constexpr std::ptrdiff_t m_morphData = 0x38; // CAudioMorphData
+            }
             // Parent: CSosGroupActionSchema
             // Fields count: 3
             //
@@ -625,8 +794,10 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
             namespace CVoiceContainerAmpedDecayingSineWave {
-                constexpr std::ptrdiff_t m_flGainAmount = 0x68; // float32
+                constexpr std::ptrdiff_t m_flGainAmount = 0xF8; // float32
             }
             // Parent: None
             // Fields count: 8
@@ -668,6 +839,29 @@ namespace cs2_dumper {
             namespace VMixEffectChainDesc_t {
                 constexpr std::ptrdiff_t m_flCrossfadeTime = 0x0; // float32
             }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CVoiceContainerStaticAdditiveSynth__CGainScalePerInstance {
+                constexpr std::ptrdiff_t m_flMinVolume = 0x0; // float32
+                constexpr std::ptrdiff_t m_nInstancesAtMinVolume = 0x4; // int32
+                constexpr std::ptrdiff_t m_flMaxVolume = 0x8; // float32
+                constexpr std::ptrdiff_t m_nInstancesAtMaxVolume = 0xC; // int32
+            }
+            // Parent: CVoiceContainerBase
+            // Fields count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerSelector {
+                constexpr std::ptrdiff_t m_mode = 0xF0; // PlayBackMode_t
+                constexpr std::ptrdiff_t m_bRetrigger = 0xF4; // bool
+                constexpr std::ptrdiff_t m_soundsToPlay = 0xF8; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+            }
             // Parent: CSosGroupActionSchema
             // Fields count: 2
             //
@@ -676,6 +870,31 @@ namespace cs2_dumper {
             namespace CSosGroupActionTimeBlockLimitSchema {
                 constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
                 constexpr std::ptrdiff_t m_flMaxDuration = 0x1C; // float32
+            }
+            // Parent: CSosGroupActionSchema
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CSosGroupActionMemberCountEnvelopeSchema {
+                constexpr std::ptrdiff_t m_nBaseCount = 0x18; // int32
+                constexpr std::ptrdiff_t m_nTargetCount = 0x1C; // int32
+                constexpr std::ptrdiff_t m_flBaseValue = 0x20; // float32
+                constexpr std::ptrdiff_t m_flTargetValue = 0x24; // float32
+                constexpr std::ptrdiff_t m_flAttack = 0x28; // float32
+                constexpr std::ptrdiff_t m_flDecay = 0x2C; // float32
+                constexpr std::ptrdiff_t m_resultVarName = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_bSaveToGroup = 0x38; // bool
+            }
+            // Parent: CVoiceContainerBase
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            namespace CVoiceContainerSwitch {
+                constexpr std::ptrdiff_t m_soundsToPlay = 0xF0; // CUtlVector<CVoiceContainerBase*>
             }
             // Parent: CSosGroupActionSchema
             // Fields count: 1
@@ -720,9 +939,11 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
             namespace CVoiceContainerDecayingSineWave {
-                constexpr std::ptrdiff_t m_flFrequency = 0x60; // float32
-                constexpr std::ptrdiff_t m_flDecayTime = 0x64; // float32
+                constexpr std::ptrdiff_t m_flFrequency = 0xF0; // float32
+                constexpr std::ptrdiff_t m_flDecayTime = 0xF4; // float32
             }
             // Parent: None
             // Fields count: 6

@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: engine2.dll
-    // Classes count: 43
+    // Classes count: 48
     // Enums count: 4
     public static class Engine2Dll {
         // Alignment: 4
@@ -240,6 +240,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_bFirstTick = 0x28; // bool
             public const nint m_bLastTick = 0x29; // bool
         }
+        // Parent: None
+        // Fields count: 0
+        public static class EventClientAdvanceNonRenderedFrame_t {
+        }
         // Parent: EventSimulate_t
         // Fields count: 0
         public static class EventServerProcessNetworking_t {
@@ -283,6 +287,22 @@ namespace CS2Dumper.Schemas {
         // Parent: EventSimulate_t
         // Fields count: 0
         public static class EventServerPollNetworking_t {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class  {
         }
     }
 }

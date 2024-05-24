@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 #pragma once
 
@@ -29,7 +29,7 @@ namespace cs2_dumper {
                 RENDER_PRIM_TYPE_COUNT = 0xC
             };
             // Alignment: 4
-            // Members count: 12
+            // Members count: 13
             enum class RenderBufferFlags_t : uint32_t {
                 RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
                 RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
@@ -42,7 +42,8 @@ namespace cs2_dumper {
                 RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
                 RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
                 RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
-                RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800
+                RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
+                RENDER_BUFFER_POOL_ALLOCATED = 0x1000
             };
             // Alignment: 1
             // Members count: 8

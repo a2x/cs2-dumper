@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: engine2.dll
-        // Classes count: 43
+        // Classes count: 48
         // Enums count: 4
         namespace engine2_dll {
             // Alignment: 4
@@ -245,6 +245,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bFirstTick = 0x28; // bool
                 constexpr std::ptrdiff_t m_bLastTick = 0x29; // bool
             }
+            // Parent: None
+            // Fields count: 0
+            namespace EventClientAdvanceNonRenderedFrame_t {
+            }
             // Parent: EventSimulate_t
             // Fields count: 0
             namespace EventServerProcessNetworking_t {
@@ -288,6 +292,22 @@ namespace cs2_dumper {
             // Parent: EventSimulate_t
             // Fields count: 0
             namespace EventServerPollNetworking_t {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace  {
             }
         }
     }

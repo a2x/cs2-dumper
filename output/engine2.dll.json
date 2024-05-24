@@ -1,6 +1,11 @@
 {
   "engine2.dll": {
     "classes": {
+      "": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "CEmptyEntityInstance": {
         "fields": {},
         "metadata": [],
@@ -82,6 +87,11 @@
         "fields": {
           "m_nDummy0": 0
         },
+        "metadata": [],
+        "parent": null
+      },
+      "EventClientAdvanceNonRenderedFrame_t": {
+        "fields": {},
         "metadata": [],
         "parent": null
       },

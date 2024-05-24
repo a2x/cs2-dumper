@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -86,7 +86,7 @@ pub mod cs2_dumper {
                 pub const m_Mesh: usize = 0x10; // RnMesh_t
             }
             // Parent: None
-            // Fields count: 100
+            // Fields count: 101
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -189,8 +189,9 @@ pub mod cs2_dumper {
                 pub const m_flQuadVelocitySmoothRate: usize = 0x608; // float32
                 pub const m_flAddWorldCollisionRadius: usize = 0x60C; // float32
                 pub const m_flDefaultVolumetricSolveAmount: usize = 0x610; // float32
-                pub const m_nRodVelocitySmoothIterations: usize = 0x614; // uint16
-                pub const m_nQuadVelocitySmoothIterations: usize = 0x616; // uint16
+                pub const m_flMotionSmoothCDT: usize = 0x614; // float32
+                pub const m_nRodVelocitySmoothIterations: usize = 0x618; // uint16
+                pub const m_nQuadVelocitySmoothIterations: usize = 0x61A; // uint16
             }
             // Parent: RnBodyDesc_t
             // Fields count: 1

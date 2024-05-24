@@ -56,10 +56,14 @@
       },
       "BakedLightingInfo_t": {
         "fields": {
+          "m_bBakedShadowsGamma20": 17,
+          "m_bCompressionEnabled": 18,
           "m_bHasLightmaps": 16,
           "m_lightMaps": 24,
+          "m_nChartPackIterations": 19,
           "m_nLightmapGameVersionNumber": 4,
           "m_nLightmapVersionNumber": 0,
+          "m_nVradQuality": 20,
           "m_vLightmapUvScale": 8
         },
         "metadata": [
@@ -250,9 +254,8 @@
       },
       "PermEntityLumpData_t": {
         "fields": {
-          "m_childLumps": 24,
-          "m_entityKeyValues": 48,
-          "m_hammerUniqueId": 16,
+          "m_childLumps": 16,
+          "m_entityKeyValues": 40,
           "m_name": 8
         },
         "metadata": [
@@ -309,10 +312,10 @@
       "WorldBuilderParams_t": {
         "fields": {
           "m_bBuildBakedLighting": 4,
+          "m_bakedLightingInfo": 8,
           "m_flMinDrawVolumeSize": 0,
-          "m_nCompileFingerprint": 24,
-          "m_nCompileTimestamp": 16,
-          "m_vLightmapUvScale": 8
+          "m_nCompileFingerprint": 64,
+          "m_nCompileTimestamp": 56
         },
         "metadata": [
           {
@@ -364,9 +367,9 @@
       "World_t": {
         "fields": {
           "m_builderParams": 0,
-          "m_entityLumps": 104,
-          "m_worldLightingInfo": 56,
-          "m_worldNodes": 32
+          "m_entityLumps": 144,
+          "m_worldLightingInfo": 96,
+          "m_worldNodes": 72
         },
         "metadata": [
           {

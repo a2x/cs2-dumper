@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-23 01:29:07.135665300 UTC
+// 2024-05-24 01:30:25.777667800 UTC
 
 #pragma once
 
@@ -86,7 +86,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Mesh = 0x10; // RnMesh_t
             }
             // Parent: None
-            // Fields count: 100
+            // Fields count: 101
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -189,8 +189,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flQuadVelocitySmoothRate = 0x608; // float32
                 constexpr std::ptrdiff_t m_flAddWorldCollisionRadius = 0x60C; // float32
                 constexpr std::ptrdiff_t m_flDefaultVolumetricSolveAmount = 0x610; // float32
-                constexpr std::ptrdiff_t m_nRodVelocitySmoothIterations = 0x614; // uint16
-                constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x616; // uint16
+                constexpr std::ptrdiff_t m_flMotionSmoothCDT = 0x614; // float32
+                constexpr std::ptrdiff_t m_nRodVelocitySmoothIterations = 0x618; // uint16
+                constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x61A; // uint16
             }
             // Parent: RnBodyDesc_t
             // Fields count: 1
