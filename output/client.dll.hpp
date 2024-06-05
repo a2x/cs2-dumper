@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-31 11:14:33.690971400 UTC
+// 2024-06-05 00:45:27.941820300 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: client.dll
-        // Classes count: 423
+        // Classes count: 414
         // Enums count: 7
         namespace client_dll {
             // Alignment: 4
@@ -88,14 +88,6 @@ namespace cs2_dumper {
                 COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS = 0x1,
                 COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS = 0x2
             };
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSPlayerControllerAPI {
-            }
             // Parent: C_CSGO_TeamPreviewCharacterPosition
             // Fields count: 0
             namespace C_CSGO_TeamSelectCharacterPosition {
@@ -603,14 +595,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_DegreesPerSecond = 0x598; // float32
                 constexpr std::ptrdiff_t m_bIsOn = 0x59C; // bool
                 constexpr std::ptrdiff_t m_pNext = 0x5A0; // C_PointCamera*
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace C_CSPlayerPawnAPI {
             }
             // Parent: None
             // Fields count: 0
@@ -1539,9 +1523,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flDMBonusTimeLength (float)
             // NetworkVarNames: m_sDMBonusWeapon (CUtlString)
             namespace CCSGameModeRules_Deathmatch {
-                constexpr std::ptrdiff_t m_flDMBonusStartTime = 0x38; // GameTime_t
-                constexpr std::ptrdiff_t m_flDMBonusTimeLength = 0x3C; // float32
-                constexpr std::ptrdiff_t m_sDMBonusWeapon = 0x40; // CUtlString
+                constexpr std::ptrdiff_t m_flDMBonusStartTime = 0x30; // GameTime_t
+                constexpr std::ptrdiff_t m_flDMBonusTimeLength = 0x34; // float32
+                constexpr std::ptrdiff_t m_sDMBonusWeapon = 0x38; // CUtlString
             }
             // Parent: C_CSGO_TeamPreviewCharacterPosition
             // Fields count: 0
@@ -2520,16 +2504,6 @@ namespace cs2_dumper {
             // Parent: C_CSWeaponBaseGun
             // Fields count: 0
             namespace C_WeaponP90 {
-            }
-            // Parent: CBasePulseGraphInstance
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            namespace CCSGameModeScript {
             }
             // Parent: C_EconEntity
             // Fields count: 7
@@ -3552,14 +3526,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iModelDisplayFlags = 0x0; // int32
             }
             // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSWeaponBaseAPI {
-            }
-            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -3621,7 +3587,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_WeaponSequence (CUtlString)
             namespace CCSGameModeRules_ArmsRace {
-                constexpr std::ptrdiff_t m_WeaponSequence = 0x38; // C_NetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_WeaponSequence = 0x30; // C_NetworkUtlVectorBase<CUtlString>
             }
             // Parent: None
             // Fields count: 14
@@ -3917,14 +3883,6 @@ namespace cs2_dumper {
             // NetworkVarNames: m_messageText (char)
             namespace C_PointClientUIWorldTextPanel {
                 constexpr std::ptrdiff_t m_messageText = 0xF30; // char[512]
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace C_CSObserverPawnAPI {
             }
             // Parent: CPlayer_UseServices
             // Fields count: 0
@@ -4245,14 +4203,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_duration = 0x8; // float32
                 constexpr std::ptrdiff_t m_timestamp = 0xC; // float32
                 constexpr std::ptrdiff_t m_timescale = 0x10; // float32
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSWeaponBaseVDataAPI {
             }
             // Parent: CPlayerPawnComponent
             // Fields count: 0
@@ -5296,17 +5246,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFogMaxEnd = 0xCF8; // float32
                 constexpr std::ptrdiff_t m_bEnabled = 0xCFC; // bool
             }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            namespace CCSDeathmatchScript {
-                constexpr std::ptrdiff_t m_pOuter = 0xF8; // CCSGameModeRules_Deathmatch*
-            }
             // Parent: C_PointEntity
             // Fields count: 0
             namespace CInfoTarget {
@@ -5856,17 +5795,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hLastAttacker = 0x1034; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_hFlareEnt = 0x1038; // CHandle<C_BaseEntity>
                 constexpr std::ptrdiff_t m_noGhostCollision = 0x103C; // bool
-            }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            namespace CCSArmsRaceScript {
-                constexpr std::ptrdiff_t m_pOuter = 0xF8; // CCSGameModeRules_ArmsRace*
             }
             // Parent: C_BaseToggle
             // Fields count: 0
@@ -6438,14 +6366,6 @@ namespace cs2_dumper {
             // Parent: C_CSWeaponBaseGun
             // Fields count: 0
             namespace C_WeaponNegev {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSTakeDamageInfoAPI {
             }
             // Parent: None
             // Fields count: 33

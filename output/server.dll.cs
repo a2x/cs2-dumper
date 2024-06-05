@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-31 11:14:33.690971400 UTC
+// 2024-06-05 00:45:27.941820300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
-    // Classes count: 659
+    // Classes count: 650
     // Enums count: 131
     public static class ServerDll {
         // Alignment: 4
@@ -265,23 +265,17 @@ namespace CS2Dumper.Schemas {
             matLastMaterial = 0xB
         }
         // Alignment: 4
-        // Members count: 15
+        // Members count: 9
         public enum BloodType : uint {
             None = 0xFFFFFFFFFFFFFFFF,
             ColorRed = 0x0,
             ColorYellow = 0x1,
             ColorGreen = 0x2,
-            ColorBrightGreen = 0x3,
-            EntityMech = 0x4,
-            EntityAntlion = 0x5,
-            EntityZombie = 0x6,
-            EntityBlob = 0x7,
-            EntityBlobFrozen = 0x8,
-            ColorRedLVL2 = 0x9,
-            ColorRedLVL3 = 0xA,
-            ColorRedLVL4 = 0xB,
-            ColorRedLVL5 = 0xC,
-            ColorRedLVL6 = 0xD
+            ColorRedLVL2 = 0x3,
+            ColorRedLVL3 = 0x4,
+            ColorRedLVL4 = 0x5,
+            ColorRedLVL5 = 0x6,
+            ColorRedLVL6 = 0x7
         }
         // Alignment: 4
         // Members count: 6
@@ -1575,14 +1569,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_SoundscapeName = 0x8E8; // CUtlSymbolLarge
             public const nint m_spectators = 0x8F0; // CUtlVector<CHandle<CBasePlayerPawn>>
         }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSPlayerControllerAPI {
-        }
         // Parent: CBreakableProp
         // Fields count: 21
         //
@@ -2545,9 +2531,9 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flDMBonusTimeLength (float)
         // NetworkVarNames: m_sDMBonusWeapon (CUtlString)
         public static class CCSGameModeRules_Deathmatch {
-            public const nint m_flDMBonusStartTime = 0x38; // GameTime_t
-            public const nint m_flDMBonusTimeLength = 0x3C; // float32
-            public const nint m_sDMBonusWeapon = 0x40; // CUtlString
+            public const nint m_flDMBonusStartTime = 0x30; // GameTime_t
+            public const nint m_flDMBonusTimeLength = 0x34; // float32
+            public const nint m_sDMBonusWeapon = 0x38; // CUtlString
         }
         // Parent: CItemAssaultSuit
         // Fields count: 0
@@ -3672,14 +3658,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_bLastUpdateSkipped = 0x24C; // bool
             public const nint m_flPrevAnimUpdateTime = 0x250; // GameTime_t
         }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSObserverPawnAPI {
-        }
         // Parent: CBaseEntity
         // Fields count: 0
         public static class CCSPointScriptEntity {
@@ -3955,16 +3933,6 @@ namespace CS2Dumper.Schemas {
         public static class CTriggerVolume {
             public const nint m_iFilterName = 0x710; // CUtlSymbolLarge
             public const nint m_hFilter = 0x718; // CHandle<CBaseFilter>
-        }
-        // Parent: CBasePulseGraphInstance
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSGameModeScript {
         }
         // Parent: CPointEntity
         // Fields count: 0
@@ -5308,14 +5276,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_iszInteractsWith = 0x720; // CUtlSymbolLarge
         }
         // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSWeaponBaseAPI {
-        }
-        // Parent: None
         // Fields count: 2
         //
         // Metadata:
@@ -5458,7 +5418,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_WeaponSequence (CUtlString)
         public static class CCSGameModeRules_ArmsRace {
-            public const nint m_WeaponSequence = 0x38; // CNetworkUtlVectorBase<CUtlString>
+            public const nint m_WeaponSequence = 0x30; // CNetworkUtlVectorBase<CUtlString>
         }
         // Parent: CTriggerPush
         // Fields count: 1
@@ -6692,14 +6652,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnPlayerUse = 0x888; // CEntityIOOutput
             public const nint m_OnStartTouch = 0x8B0; // CEntityIOOutput
             public const nint m_hCarryingPlayer = 0x8D8; // CHandle<CBasePlayerPawn>
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSWeaponBaseVDataAPI {
         }
         // Parent: CBaseFlex
         // Fields count: 14
@@ -7981,14 +7933,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_nLightChoice = 0x4CC; // int32
             public const nint m_hLight = 0x4D0; // CHandle<CBaseEntity>
         }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSPlayerPawnAPI {
-        }
         // Parent: CSoundOpvarSetPointEntity
         // Fields count: 9
         public static class CSoundOpvarSetAABBEntity {
@@ -8951,17 +8895,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_hPhysicsAttacker = 0x7DC; // CHandle<CBasePlayerPawn>
             public const nint m_flLastPhysicsInfluenceTime = 0x7E0; // GameTime_t
         }
-        // Parent: CCSGameModeScript
-        // Fields count: 1
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSDeathmatchScript {
-            public const nint m_pOuter = 0xF8; // CCSGameModeRules_Deathmatch*
-        }
         // Parent: CBaseModelEntity
         // Fields count: 16
         public static class CBaseToggle {
@@ -9372,17 +9305,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_iszParamName = 0x4C8; // CUtlSymbolLarge
             public const nint m_flFloatValue = 0x4D0; // float32
         }
-        // Parent: CCSGameModeScript
-        // Fields count: 1
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSArmsRaceScript {
-            public const nint m_pOuter = 0xF8; // CCSGameModeRules_ArmsRace*
-        }
         // Parent: CPulseGraphInstance_ServerEntity
         // Fields count: 0
         //
@@ -9711,7 +9633,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bIsActive = 0x540; // bool
         }
         // Parent: CCSPlayerPawnBase
-        // Fields count: 118
+        // Fields count: 117
         //
         // Metadata:
         // MNetworkVarTypeOverride
@@ -9879,10 +9801,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecTotalBulletForce = 0x18A4; // Vector
             public const nint m_bWaitForNoAttack = 0x18B0; // bool
             public const nint m_ignoreLadderJumpTime = 0x18B4; // float32
-            public const nint m_NumEnemiesKilledThisRound = 0x18B8; // int32
-            public const nint m_bKilledByHeadshot = 0x18BC; // bool
-            public const nint m_LastHitBox = 0x18C0; // int32
-            public const nint m_LastHealth = 0x18C4; // int32
+            public const nint m_bKilledByHeadshot = 0x18B8; // bool
+            public const nint m_LastHitBox = 0x18BC; // int32
+            public const nint m_LastHealth = 0x18C0; // int32
             public const nint m_pBot = 0x18C8; // CCSBot*
             public const nint m_bBotAllowActive = 0x18D0; // bool
             public const nint m_thirdPersonHeading = 0x18D4; // QAngle
@@ -10555,14 +10476,6 @@ namespace CS2Dumper.Schemas {
         // Parent: CHostageRescueZoneShim
         // Fields count: 0
         public static class CHostageRescueZone {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSTakeDamageInfoAPI {
         }
         // Parent: CServerOnlyPointEntity
         // Fields count: 6

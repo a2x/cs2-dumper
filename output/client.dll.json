@@ -604,58 +604,10 @@
         "metadata": [],
         "parent": null
       },
-      "CCSArmsRaceScript": {
-        "fields": {
-          "m_pOuter": 248
-        },
-        "metadata": [
-          {
-            "name": "MPulseInstanceDomainInfo",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseDomainHookInfo",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseDomainOptInFeatureTag",
-            "type": "Unknown"
-          }
-        ],
-        "parent": "CCSGameModeScript"
-      },
       "CCSClientPointScriptEntity": {
         "fields": {},
         "metadata": [],
         "parent": "CCSPointScriptEntity"
-      },
-      "CCSDeathmatchScript": {
-        "fields": {
-          "m_pOuter": 248
-        },
-        "metadata": [
-          {
-            "name": "MPulseInstanceDomainInfo",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseDomainHookInfo",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseDomainOptInFeatureTag",
-            "type": "Unknown"
-          }
-        ],
-        "parent": "CCSGameModeScript"
       },
       "CCSGO_WingmanIntroCharacterPosition": {
         "fields": {},
@@ -681,7 +633,7 @@
       },
       "CCSGameModeRules_ArmsRace": {
         "fields": {
-          "m_WeaponSequence": 56
+          "m_WeaponSequence": 48
         },
         "metadata": [
           {
@@ -694,9 +646,9 @@
       },
       "CCSGameModeRules_Deathmatch": {
         "fields": {
-          "m_flDMBonusStartTime": 56,
-          "m_flDMBonusTimeLength": 60,
-          "m_sDMBonusWeapon": 64
+          "m_flDMBonusStartTime": 48,
+          "m_flDMBonusTimeLength": 52,
+          "m_sDMBonusWeapon": 56
         },
         "metadata": [
           {
@@ -721,28 +673,6 @@
         "fields": {},
         "metadata": [],
         "parent": "CCSGameModeRules"
-      },
-      "CCSGameModeScript": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseInstanceDomainInfo",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseDomainHookInfo",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseDomainOptInFeatureTag",
-            "type": "Unknown"
-          }
-        ],
-        "parent": "CBasePulseGraphInstance"
       },
       "CCSObserver_CameraServices": {
         "fields": {},
@@ -1136,20 +1066,6 @@
           }
         ],
         "parent": "CBasePlayerController"
-      },
-      "CCSPlayerControllerAPI": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseProvideFeatureTag",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
       },
       "CCSPlayerController_ActionTrackingServices": {
         "fields": {
@@ -1725,34 +1641,6 @@
         ],
         "parent": null
       },
-      "CCSTakeDamageInfoAPI": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseProvideFeatureTag",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CCSWeaponBaseAPI": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseProvideFeatureTag",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CCSWeaponBaseVData": {
         "fields": {
           "m_DefaultLoadoutSlot": 3072,
@@ -1863,20 +1751,6 @@
           }
         ],
         "parent": "CBasePlayerWeaponVData"
-      },
-      "CCSWeaponBaseVDataAPI": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseProvideFeatureTag",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
       },
       "CCitadelSoundOpvarSetOBB": {
         "fields": {
@@ -6757,20 +6631,6 @@
         ],
         "parent": "C_CSPlayerPawnBase"
       },
-      "C_CSObserverPawnAPI": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseProvideFeatureTag",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "C_CSPlayerPawn": {
         "fields": {
           "m_ArmorValue": 8896,
@@ -7250,20 +7110,6 @@
           }
         ],
         "parent": "C_CSPlayerPawnBase"
-      },
-      "C_CSPlayerPawnAPI": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseProvideFeatureTag",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
       },
       "C_CSPlayerPawnBase": {
         "fields": {

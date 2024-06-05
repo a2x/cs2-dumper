@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-31 11:14:33.690971400 UTC
+// 2024-06-05 00:45:27.941820300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
-    // Classes count: 423
+    // Classes count: 414
     // Enums count: 7
     public static class ClientDll {
         // Alignment: 4
@@ -82,14 +82,6 @@ namespace CS2Dumper.Schemas {
             COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_EXISTS = 0x0,
             COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS = 0x1,
             COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS = 0x2
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSPlayerControllerAPI {
         }
         // Parent: C_CSGO_TeamPreviewCharacterPosition
         // Fields count: 0
@@ -598,14 +590,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_DegreesPerSecond = 0x598; // float32
             public const nint m_bIsOn = 0x59C; // bool
             public const nint m_pNext = 0x5A0; // C_PointCamera*
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class C_CSPlayerPawnAPI {
         }
         // Parent: None
         // Fields count: 0
@@ -1534,9 +1518,9 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flDMBonusTimeLength (float)
         // NetworkVarNames: m_sDMBonusWeapon (CUtlString)
         public static class CCSGameModeRules_Deathmatch {
-            public const nint m_flDMBonusStartTime = 0x38; // GameTime_t
-            public const nint m_flDMBonusTimeLength = 0x3C; // float32
-            public const nint m_sDMBonusWeapon = 0x40; // CUtlString
+            public const nint m_flDMBonusStartTime = 0x30; // GameTime_t
+            public const nint m_flDMBonusTimeLength = 0x34; // float32
+            public const nint m_sDMBonusWeapon = 0x38; // CUtlString
         }
         // Parent: C_CSGO_TeamPreviewCharacterPosition
         // Fields count: 0
@@ -2515,16 +2499,6 @@ namespace CS2Dumper.Schemas {
         // Parent: C_CSWeaponBaseGun
         // Fields count: 0
         public static class C_WeaponP90 {
-        }
-        // Parent: CBasePulseGraphInstance
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSGameModeScript {
         }
         // Parent: C_EconEntity
         // Fields count: 7
@@ -3547,14 +3521,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_iModelDisplayFlags = 0x0; // int32
         }
         // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSWeaponBaseAPI {
-        }
-        // Parent: None
         // Fields count: 2
         //
         // Metadata:
@@ -3616,7 +3582,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_WeaponSequence (CUtlString)
         public static class CCSGameModeRules_ArmsRace {
-            public const nint m_WeaponSequence = 0x38; // C_NetworkUtlVectorBase<CUtlString>
+            public const nint m_WeaponSequence = 0x30; // C_NetworkUtlVectorBase<CUtlString>
         }
         // Parent: None
         // Fields count: 14
@@ -3912,14 +3878,6 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_messageText (char)
         public static class C_PointClientUIWorldTextPanel {
             public const nint m_messageText = 0xF30; // char[512]
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class C_CSObserverPawnAPI {
         }
         // Parent: CPlayer_UseServices
         // Fields count: 0
@@ -4240,14 +4198,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_duration = 0x8; // float32
             public const nint m_timestamp = 0xC; // float32
             public const nint m_timescale = 0x10; // float32
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSWeaponBaseVDataAPI {
         }
         // Parent: CPlayerPawnComponent
         // Fields count: 0
@@ -5291,17 +5241,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFogMaxEnd = 0xCF8; // float32
             public const nint m_bEnabled = 0xCFC; // bool
         }
-        // Parent: CCSGameModeScript
-        // Fields count: 1
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSDeathmatchScript {
-            public const nint m_pOuter = 0xF8; // CCSGameModeRules_Deathmatch*
-        }
         // Parent: C_PointEntity
         // Fields count: 0
         public static class CInfoTarget {
@@ -5851,17 +5790,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_hLastAttacker = 0x1034; // CHandle<C_BaseEntity>
             public const nint m_hFlareEnt = 0x1038; // CHandle<C_BaseEntity>
             public const nint m_noGhostCollision = 0x103C; // bool
-        }
-        // Parent: CCSGameModeScript
-        // Fields count: 1
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSArmsRaceScript {
-            public const nint m_pOuter = 0xF8; // CCSGameModeRules_ArmsRace*
         }
         // Parent: C_BaseToggle
         // Fields count: 0
@@ -6433,14 +6361,6 @@ namespace CS2Dumper.Schemas {
         // Parent: C_CSWeaponBaseGun
         // Fields count: 0
         public static class C_WeaponNegev {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MPulseProvideFeatureTag
-        // MPulseLibraryBindings
-        public static class CCSTakeDamageInfoAPI {
         }
         // Parent: None
         // Fields count: 33

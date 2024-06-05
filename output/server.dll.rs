@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-31 11:14:33.690971400 UTC
+// 2024-06-05 00:45:27.941820300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: server.dll
-        // Classes count: 659
+        // Classes count: 650
         // Enums count: 131
         pub mod server_dll {
             // Alignment: 4
@@ -294,24 +294,18 @@ pub mod cs2_dumper {
                 matLastMaterial = 0xB
             }
             // Alignment: 4
-            // Members count: 15
+            // Members count: 9
             #[repr(u32)]
             pub enum BloodType {
                 None = u32::MAX,
                 ColorRed = 0x0,
                 ColorYellow = 0x1,
                 ColorGreen = 0x2,
-                ColorBrightGreen = 0x3,
-                EntityMech = 0x4,
-                EntityAntlion = 0x5,
-                EntityZombie = 0x6,
-                EntityBlob = 0x7,
-                EntityBlobFrozen = 0x8,
-                ColorRedLVL2 = 0x9,
-                ColorRedLVL3 = 0xA,
-                ColorRedLVL4 = 0xB,
-                ColorRedLVL5 = 0xC,
-                ColorRedLVL6 = 0xD
+                ColorRedLVL2 = 0x3,
+                ColorRedLVL3 = 0x4,
+                ColorRedLVL4 = 0x5,
+                ColorRedLVL5 = 0x6,
+                ColorRedLVL6 = 0x7
             }
             // Alignment: 4
             // Members count: 6
@@ -1674,14 +1668,6 @@ pub mod cs2_dumper {
                 pub const m_SoundscapeName: usize = 0x8E8; // CUtlSymbolLarge
                 pub const m_spectators: usize = 0x8F0; // CUtlVector<CHandle<CBasePlayerPawn>>
             }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSPlayerControllerAPI {
-            }
             // Parent: CBreakableProp
             // Fields count: 21
             //
@@ -2644,9 +2630,9 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flDMBonusTimeLength (float)
             // NetworkVarNames: m_sDMBonusWeapon (CUtlString)
             pub mod CCSGameModeRules_Deathmatch {
-                pub const m_flDMBonusStartTime: usize = 0x38; // GameTime_t
-                pub const m_flDMBonusTimeLength: usize = 0x3C; // float32
-                pub const m_sDMBonusWeapon: usize = 0x40; // CUtlString
+                pub const m_flDMBonusStartTime: usize = 0x30; // GameTime_t
+                pub const m_flDMBonusTimeLength: usize = 0x34; // float32
+                pub const m_sDMBonusWeapon: usize = 0x38; // CUtlString
             }
             // Parent: CItemAssaultSuit
             // Fields count: 0
@@ -3771,14 +3757,6 @@ pub mod cs2_dumper {
                 pub const m_bLastUpdateSkipped: usize = 0x24C; // bool
                 pub const m_flPrevAnimUpdateTime: usize = 0x250; // GameTime_t
             }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSObserverPawnAPI {
-            }
             // Parent: CBaseEntity
             // Fields count: 0
             pub mod CCSPointScriptEntity {
@@ -4054,16 +4032,6 @@ pub mod cs2_dumper {
             pub mod CTriggerVolume {
                 pub const m_iFilterName: usize = 0x710; // CUtlSymbolLarge
                 pub const m_hFilter: usize = 0x718; // CHandle<CBaseFilter>
-            }
-            // Parent: CBasePulseGraphInstance
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            pub mod CCSGameModeScript {
             }
             // Parent: CPointEntity
             // Fields count: 0
@@ -5407,14 +5375,6 @@ pub mod cs2_dumper {
                 pub const m_iszInteractsWith: usize = 0x720; // CUtlSymbolLarge
             }
             // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSWeaponBaseAPI {
-            }
-            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -5557,7 +5517,7 @@ pub mod cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_WeaponSequence (CUtlString)
             pub mod CCSGameModeRules_ArmsRace {
-                pub const m_WeaponSequence: usize = 0x38; // CNetworkUtlVectorBase<CUtlString>
+                pub const m_WeaponSequence: usize = 0x30; // CNetworkUtlVectorBase<CUtlString>
             }
             // Parent: CTriggerPush
             // Fields count: 1
@@ -6791,14 +6751,6 @@ pub mod cs2_dumper {
                 pub const m_OnPlayerUse: usize = 0x888; // CEntityIOOutput
                 pub const m_OnStartTouch: usize = 0x8B0; // CEntityIOOutput
                 pub const m_hCarryingPlayer: usize = 0x8D8; // CHandle<CBasePlayerPawn>
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSWeaponBaseVDataAPI {
             }
             // Parent: CBaseFlex
             // Fields count: 14
@@ -8080,14 +8032,6 @@ pub mod cs2_dumper {
                 pub const m_nLightChoice: usize = 0x4CC; // int32
                 pub const m_hLight: usize = 0x4D0; // CHandle<CBaseEntity>
             }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSPlayerPawnAPI {
-            }
             // Parent: CSoundOpvarSetPointEntity
             // Fields count: 9
             pub mod CSoundOpvarSetAABBEntity {
@@ -9050,17 +8994,6 @@ pub mod cs2_dumper {
                 pub const m_hPhysicsAttacker: usize = 0x7DC; // CHandle<CBasePlayerPawn>
                 pub const m_flLastPhysicsInfluenceTime: usize = 0x7E0; // GameTime_t
             }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            pub mod CCSDeathmatchScript {
-                pub const m_pOuter: usize = 0xF8; // CCSGameModeRules_Deathmatch*
-            }
             // Parent: CBaseModelEntity
             // Fields count: 16
             pub mod CBaseToggle {
@@ -9471,17 +9404,6 @@ pub mod cs2_dumper {
                 pub const m_iszParamName: usize = 0x4C8; // CUtlSymbolLarge
                 pub const m_flFloatValue: usize = 0x4D0; // float32
             }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            pub mod CCSArmsRaceScript {
-                pub const m_pOuter: usize = 0xF8; // CCSGameModeRules_ArmsRace*
-            }
             // Parent: CPulseGraphInstance_ServerEntity
             // Fields count: 0
             //
@@ -9810,7 +9732,7 @@ pub mod cs2_dumper {
                 pub const m_bIsActive: usize = 0x540; // bool
             }
             // Parent: CCSPlayerPawnBase
-            // Fields count: 118
+            // Fields count: 117
             //
             // Metadata:
             // MNetworkVarTypeOverride
@@ -9978,10 +9900,9 @@ pub mod cs2_dumper {
                 pub const m_vecTotalBulletForce: usize = 0x18A4; // Vector
                 pub const m_bWaitForNoAttack: usize = 0x18B0; // bool
                 pub const m_ignoreLadderJumpTime: usize = 0x18B4; // float32
-                pub const m_NumEnemiesKilledThisRound: usize = 0x18B8; // int32
-                pub const m_bKilledByHeadshot: usize = 0x18BC; // bool
-                pub const m_LastHitBox: usize = 0x18C0; // int32
-                pub const m_LastHealth: usize = 0x18C4; // int32
+                pub const m_bKilledByHeadshot: usize = 0x18B8; // bool
+                pub const m_LastHitBox: usize = 0x18BC; // int32
+                pub const m_LastHealth: usize = 0x18C0; // int32
                 pub const m_pBot: usize = 0x18C8; // CCSBot*
                 pub const m_bBotAllowActive: usize = 0x18D0; // bool
                 pub const m_thirdPersonHeading: usize = 0x18D4; // QAngle
@@ -10654,14 +10575,6 @@ pub mod cs2_dumper {
             // Parent: CHostageRescueZoneShim
             // Fields count: 0
             pub mod CHostageRescueZone {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSTakeDamageInfoAPI {
             }
             // Parent: CServerOnlyPointEntity
             // Fields count: 6

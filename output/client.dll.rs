@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-31 11:14:33.690971400 UTC
+// 2024-06-05 00:45:27.941820300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: client.dll
-        // Classes count: 423
+        // Classes count: 414
         // Enums count: 7
         pub mod client_dll {
             // Alignment: 4
@@ -92,14 +92,6 @@ pub mod cs2_dumper {
                 COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_EXISTS = 0x0,
                 COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS = 0x1,
                 COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS = 0x2
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSPlayerControllerAPI {
             }
             // Parent: C_CSGO_TeamPreviewCharacterPosition
             // Fields count: 0
@@ -608,14 +600,6 @@ pub mod cs2_dumper {
                 pub const m_DegreesPerSecond: usize = 0x598; // float32
                 pub const m_bIsOn: usize = 0x59C; // bool
                 pub const m_pNext: usize = 0x5A0; // C_PointCamera*
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod C_CSPlayerPawnAPI {
             }
             // Parent: None
             // Fields count: 0
@@ -1544,9 +1528,9 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flDMBonusTimeLength (float)
             // NetworkVarNames: m_sDMBonusWeapon (CUtlString)
             pub mod CCSGameModeRules_Deathmatch {
-                pub const m_flDMBonusStartTime: usize = 0x38; // GameTime_t
-                pub const m_flDMBonusTimeLength: usize = 0x3C; // float32
-                pub const m_sDMBonusWeapon: usize = 0x40; // CUtlString
+                pub const m_flDMBonusStartTime: usize = 0x30; // GameTime_t
+                pub const m_flDMBonusTimeLength: usize = 0x34; // float32
+                pub const m_sDMBonusWeapon: usize = 0x38; // CUtlString
             }
             // Parent: C_CSGO_TeamPreviewCharacterPosition
             // Fields count: 0
@@ -2525,16 +2509,6 @@ pub mod cs2_dumper {
             // Parent: C_CSWeaponBaseGun
             // Fields count: 0
             pub mod C_WeaponP90 {
-            }
-            // Parent: CBasePulseGraphInstance
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            pub mod CCSGameModeScript {
             }
             // Parent: C_EconEntity
             // Fields count: 7
@@ -3557,14 +3531,6 @@ pub mod cs2_dumper {
                 pub const m_iModelDisplayFlags: usize = 0x0; // int32
             }
             // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSWeaponBaseAPI {
-            }
-            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -3626,7 +3592,7 @@ pub mod cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_WeaponSequence (CUtlString)
             pub mod CCSGameModeRules_ArmsRace {
-                pub const m_WeaponSequence: usize = 0x38; // C_NetworkUtlVectorBase<CUtlString>
+                pub const m_WeaponSequence: usize = 0x30; // C_NetworkUtlVectorBase<CUtlString>
             }
             // Parent: None
             // Fields count: 14
@@ -3922,14 +3888,6 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_messageText (char)
             pub mod C_PointClientUIWorldTextPanel {
                 pub const m_messageText: usize = 0xF30; // char[512]
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod C_CSObserverPawnAPI {
             }
             // Parent: CPlayer_UseServices
             // Fields count: 0
@@ -4250,14 +4208,6 @@ pub mod cs2_dumper {
                 pub const m_duration: usize = 0x8; // float32
                 pub const m_timestamp: usize = 0xC; // float32
                 pub const m_timescale: usize = 0x10; // float32
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSWeaponBaseVDataAPI {
             }
             // Parent: CPlayerPawnComponent
             // Fields count: 0
@@ -5301,17 +5251,6 @@ pub mod cs2_dumper {
                 pub const m_flFogMaxEnd: usize = 0xCF8; // float32
                 pub const m_bEnabled: usize = 0xCFC; // bool
             }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            pub mod CCSDeathmatchScript {
-                pub const m_pOuter: usize = 0xF8; // CCSGameModeRules_Deathmatch*
-            }
             // Parent: C_PointEntity
             // Fields count: 0
             pub mod CInfoTarget {
@@ -5861,17 +5800,6 @@ pub mod cs2_dumper {
                 pub const m_hLastAttacker: usize = 0x1034; // CHandle<C_BaseEntity>
                 pub const m_hFlareEnt: usize = 0x1038; // CHandle<C_BaseEntity>
                 pub const m_noGhostCollision: usize = 0x103C; // bool
-            }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            pub mod CCSArmsRaceScript {
-                pub const m_pOuter: usize = 0xF8; // CCSGameModeRules_ArmsRace*
             }
             // Parent: C_BaseToggle
             // Fields count: 0
@@ -6443,14 +6371,6 @@ pub mod cs2_dumper {
             // Parent: C_CSWeaponBaseGun
             // Fields count: 0
             pub mod C_WeaponNegev {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            pub mod CCSTakeDamageInfoAPI {
             }
             // Parent: None
             // Fields count: 33

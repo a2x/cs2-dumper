@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-05-31 11:14:33.690971400 UTC
+// 2024-06-05 00:45:27.941820300 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: server.dll
-        // Classes count: 659
+        // Classes count: 650
         // Enums count: 131
         namespace server_dll {
             // Alignment: 4
@@ -270,23 +270,17 @@ namespace cs2_dumper {
                 matLastMaterial = 0xB
             };
             // Alignment: 4
-            // Members count: 15
+            // Members count: 9
             enum class BloodType : uint32_t {
                 None = 0xFFFFFFFFFFFFFFFF,
                 ColorRed = 0x0,
                 ColorYellow = 0x1,
                 ColorGreen = 0x2,
-                ColorBrightGreen = 0x3,
-                EntityMech = 0x4,
-                EntityAntlion = 0x5,
-                EntityZombie = 0x6,
-                EntityBlob = 0x7,
-                EntityBlobFrozen = 0x8,
-                ColorRedLVL2 = 0x9,
-                ColorRedLVL3 = 0xA,
-                ColorRedLVL4 = 0xB,
-                ColorRedLVL5 = 0xC,
-                ColorRedLVL6 = 0xD
+                ColorRedLVL2 = 0x3,
+                ColorRedLVL3 = 0x4,
+                ColorRedLVL4 = 0x5,
+                ColorRedLVL5 = 0x6,
+                ColorRedLVL6 = 0x7
             };
             // Alignment: 4
             // Members count: 6
@@ -1580,14 +1574,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_SoundscapeName = 0x8E8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_spectators = 0x8F0; // CUtlVector<CHandle<CBasePlayerPawn>>
             }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSPlayerControllerAPI {
-            }
             // Parent: CBreakableProp
             // Fields count: 21
             //
@@ -2550,9 +2536,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flDMBonusTimeLength (float)
             // NetworkVarNames: m_sDMBonusWeapon (CUtlString)
             namespace CCSGameModeRules_Deathmatch {
-                constexpr std::ptrdiff_t m_flDMBonusStartTime = 0x38; // GameTime_t
-                constexpr std::ptrdiff_t m_flDMBonusTimeLength = 0x3C; // float32
-                constexpr std::ptrdiff_t m_sDMBonusWeapon = 0x40; // CUtlString
+                constexpr std::ptrdiff_t m_flDMBonusStartTime = 0x30; // GameTime_t
+                constexpr std::ptrdiff_t m_flDMBonusTimeLength = 0x34; // float32
+                constexpr std::ptrdiff_t m_sDMBonusWeapon = 0x38; // CUtlString
             }
             // Parent: CItemAssaultSuit
             // Fields count: 0
@@ -3677,14 +3663,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bLastUpdateSkipped = 0x24C; // bool
                 constexpr std::ptrdiff_t m_flPrevAnimUpdateTime = 0x250; // GameTime_t
             }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSObserverPawnAPI {
-            }
             // Parent: CBaseEntity
             // Fields count: 0
             namespace CCSPointScriptEntity {
@@ -3960,16 +3938,6 @@ namespace cs2_dumper {
             namespace CTriggerVolume {
                 constexpr std::ptrdiff_t m_iFilterName = 0x710; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_hFilter = 0x718; // CHandle<CBaseFilter>
-            }
-            // Parent: CBasePulseGraphInstance
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            namespace CCSGameModeScript {
             }
             // Parent: CPointEntity
             // Fields count: 0
@@ -5313,14 +5281,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iszInteractsWith = 0x720; // CUtlSymbolLarge
             }
             // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSWeaponBaseAPI {
-            }
-            // Parent: None
             // Fields count: 2
             //
             // Metadata:
@@ -5463,7 +5423,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_WeaponSequence (CUtlString)
             namespace CCSGameModeRules_ArmsRace {
-                constexpr std::ptrdiff_t m_WeaponSequence = 0x38; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_WeaponSequence = 0x30; // CNetworkUtlVectorBase<CUtlString>
             }
             // Parent: CTriggerPush
             // Fields count: 1
@@ -6697,14 +6657,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OnPlayerUse = 0x888; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnStartTouch = 0x8B0; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_hCarryingPlayer = 0x8D8; // CHandle<CBasePlayerPawn>
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSWeaponBaseVDataAPI {
             }
             // Parent: CBaseFlex
             // Fields count: 14
@@ -7986,14 +7938,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLightChoice = 0x4CC; // int32
                 constexpr std::ptrdiff_t m_hLight = 0x4D0; // CHandle<CBaseEntity>
             }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSPlayerPawnAPI {
-            }
             // Parent: CSoundOpvarSetPointEntity
             // Fields count: 9
             namespace CSoundOpvarSetAABBEntity {
@@ -8956,17 +8900,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hPhysicsAttacker = 0x7DC; // CHandle<CBasePlayerPawn>
                 constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0x7E0; // GameTime_t
             }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            namespace CCSDeathmatchScript {
-                constexpr std::ptrdiff_t m_pOuter = 0xF8; // CCSGameModeRules_Deathmatch*
-            }
             // Parent: CBaseModelEntity
             // Fields count: 16
             namespace CBaseToggle {
@@ -9377,17 +9310,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iszParamName = 0x4C8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_flFloatValue = 0x4D0; // float32
             }
-            // Parent: CCSGameModeScript
-            // Fields count: 1
-            //
-            // Metadata:
-            // MPulseInstanceDomainInfo
-            // MPulseDomainHookInfo
-            // MPulseLibraryBindings
-            // MPulseDomainOptInFeatureTag
-            namespace CCSArmsRaceScript {
-                constexpr std::ptrdiff_t m_pOuter = 0xF8; // CCSGameModeRules_ArmsRace*
-            }
             // Parent: CPulseGraphInstance_ServerEntity
             // Fields count: 0
             //
@@ -9716,7 +9638,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bIsActive = 0x540; // bool
             }
             // Parent: CCSPlayerPawnBase
-            // Fields count: 118
+            // Fields count: 117
             //
             // Metadata:
             // MNetworkVarTypeOverride
@@ -9884,10 +9806,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecTotalBulletForce = 0x18A4; // Vector
                 constexpr std::ptrdiff_t m_bWaitForNoAttack = 0x18B0; // bool
                 constexpr std::ptrdiff_t m_ignoreLadderJumpTime = 0x18B4; // float32
-                constexpr std::ptrdiff_t m_NumEnemiesKilledThisRound = 0x18B8; // int32
-                constexpr std::ptrdiff_t m_bKilledByHeadshot = 0x18BC; // bool
-                constexpr std::ptrdiff_t m_LastHitBox = 0x18C0; // int32
-                constexpr std::ptrdiff_t m_LastHealth = 0x18C4; // int32
+                constexpr std::ptrdiff_t m_bKilledByHeadshot = 0x18B8; // bool
+                constexpr std::ptrdiff_t m_LastHitBox = 0x18BC; // int32
+                constexpr std::ptrdiff_t m_LastHealth = 0x18C0; // int32
                 constexpr std::ptrdiff_t m_pBot = 0x18C8; // CCSBot*
                 constexpr std::ptrdiff_t m_bBotAllowActive = 0x18D0; // bool
                 constexpr std::ptrdiff_t m_thirdPersonHeading = 0x18D4; // QAngle
@@ -10560,14 +10481,6 @@ namespace cs2_dumper {
             // Parent: CHostageRescueZoneShim
             // Fields count: 0
             namespace CHostageRescueZone {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MPulseProvideFeatureTag
-            // MPulseLibraryBindings
-            namespace CCSTakeDamageInfoAPI {
             }
             // Parent: CServerOnlyPointEntity
             // Fields count: 6
