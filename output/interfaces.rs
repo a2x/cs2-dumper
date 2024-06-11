@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-05 00:45:27.941820300 UTC
+// 2024-06-11 01:24:17.538973200 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,49 +12,49 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x726C40;
-            pub const EmptyWorldService001_Client: usize = 0x4734D0;
-            pub const GameClientExports001: usize = 0x726C50;
-            pub const LegacyGameUI001: usize = 0x8AFB80;
-            pub const Source2Client002: usize = 0x726C60;
-            pub const Source2ClientConfig001: usize = 0x4568D0;
-            pub const Source2ClientPrediction001: usize = 0x7A6ED0;
-            pub const Source2ClientUI001: usize = 0x896440;
+            pub const ClientToolsInfo_001: usize = 0x726DA0;
+            pub const EmptyWorldService001_Client: usize = 0x473550;
+            pub const GameClientExports001: usize = 0x726DB0;
+            pub const LegacyGameUI001: usize = 0x8B0420;
+            pub const Source2Client002: usize = 0x726DC0;
+            pub const Source2ClientConfig001: usize = 0x456950;
+            pub const Source2ClientPrediction001: usize = 0x7A7030;
+            pub const Source2ClientUI001: usize = 0x896CF0;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
-            pub const BenchmarkService001: usize = 0x17DAA0;
-            pub const BugService001: usize = 0x17EBF0;
-            pub const ClientServerEngineLoopService_001: usize = 0x1F2CF0;
-            pub const EngineGameUI001: usize = 0x1279C0;
-            pub const EngineServiceMgr001: usize = 0x1E1F70;
-            pub const GameEventSystemClientV001: usize = 0x1E70E0;
-            pub const GameEventSystemServerV001: usize = 0x1E70F0;
-            pub const GameResourceServiceClientV001: usize = 0x186270;
-            pub const GameResourceServiceServerV001: usize = 0x186280;
-            pub const GameUIService_001: usize = 0x188C20;
-            pub const HostStateMgr001: usize = 0x1EB8A0;
-            pub const INETSUPPORT_001: usize = 0xF6830;
-            pub const InputService_001: usize = 0x18E7A0;
-            pub const KeyValueCache001: usize = 0x1EE0C0;
-            pub const MapListService_001: usize = 0x1A1950;
-            pub const NetworkClientService_001: usize = 0x1A8BA0;
-            pub const NetworkP2PService_001: usize = 0x1AF3F0;
-            pub const NetworkServerService_001: usize = 0x1B3920;
-            pub const NetworkService_001: usize = 0x1B8BB0;
-            pub const RenderService_001: usize = 0x1B90A0;
-            pub const ScreenshotService001: usize = 0x1BBA50;
-            pub const SimpleEngineLoopService_001: usize = 0x1FF840;
-            pub const SoundService_001: usize = 0x1BFC90;
+            pub const BenchmarkService001: usize = 0x17DAE0;
+            pub const BugService001: usize = 0x17EC30;
+            pub const ClientServerEngineLoopService_001: usize = 0x1F2D30;
+            pub const EngineGameUI001: usize = 0x127A00;
+            pub const EngineServiceMgr001: usize = 0x1E1FB0;
+            pub const GameEventSystemClientV001: usize = 0x1E7120;
+            pub const GameEventSystemServerV001: usize = 0x1E7130;
+            pub const GameResourceServiceClientV001: usize = 0x1862B0;
+            pub const GameResourceServiceServerV001: usize = 0x1862C0;
+            pub const GameUIService_001: usize = 0x188C60;
+            pub const HostStateMgr001: usize = 0x1EB8E0;
+            pub const INETSUPPORT_001: usize = 0xF6870;
+            pub const InputService_001: usize = 0x18E7E0;
+            pub const KeyValueCache001: usize = 0x1EE100;
+            pub const MapListService_001: usize = 0x1A1990;
+            pub const NetworkClientService_001: usize = 0x1A8BE0;
+            pub const NetworkP2PService_001: usize = 0x1AF430;
+            pub const NetworkServerService_001: usize = 0x1B3960;
+            pub const NetworkService_001: usize = 0x1B8BF0;
+            pub const RenderService_001: usize = 0x1B90E0;
+            pub const ScreenshotService001: usize = 0x1BBA90;
+            pub const SimpleEngineLoopService_001: usize = 0x1FF880;
+            pub const SoundService_001: usize = 0x1BFCD0;
             pub const Source2EngineToClient001: usize = 0x66DC0;
             pub const Source2EngineToClientStringTable001: usize = 0x905D0;
             pub const Source2EngineToServer001: usize = 0x97C60;
             pub const Source2EngineToServerStringTable001: usize = 0xAF2C0;
-            pub const SplitScreenService_001: usize = 0x1C66A0;
-            pub const StatsService_001: usize = 0x1C93F0;
-            pub const ToolService_001: usize = 0x1CDE70;
-            pub const VENGINE_GAMEUIFUNCS_VERSION005: usize = 0x128640;
-            pub const VProfService_001: usize = 0x1CF2B0;
+            pub const SplitScreenService_001: usize = 0x1C66E0;
+            pub const StatsService_001: usize = 0x1C9430;
+            pub const ToolService_001: usize = 0x1CDEB0;
+            pub const VENGINE_GAMEUIFUNCS_VERSION005: usize = 0x128680;
+            pub const VProfService_001: usize = 0x1CF2F0;
         }
         // Module: filesystem_stdio.dll
         pub mod filesystem_stdio_dll {
@@ -162,7 +162,7 @@ pub mod cs2_dumper {
         pub mod server_dll {
             pub const EmptyWorldService001_Server: usize = 0x5540D0;
             pub const EntitySubclassUtilsV001: usize = 0x2B4240;
-            pub const NavGameTest001: usize = 0xA32BD0;
+            pub const NavGameTest001: usize = 0xA32C80;
             pub const ServerToolsInfo_001: usize = 0x824F80;
             pub const Source2GameClients001: usize = 0x824F90;
             pub const Source2GameDirector001: usize = 0x120AD0;
