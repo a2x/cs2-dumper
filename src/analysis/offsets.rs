@@ -81,7 +81,7 @@ pattern_map! {
         }),
         "dwEntityList" => pattern!("488935${'} 4885f6") => None,
         "dwGameEntitySystem" => pattern!("488b1d${'} 48891d") => None,
-        "dwGameEntitySystem_getHighestEntityIndex" => pattern!("8b81u2?? 8902 488bc2 c3 cccccccc 48895c24? 48896c24") => None,
+        "dwGameEntitySystem_highestEntityIndex" => pattern!("8b81u2?? 8902 488bc2 c3 cccccccc 48895c24? 48896c24") => None,
         "dwGameRules" => pattern!("48891d${'} ff15${} 84c0") => None,
         "dwGlobalVars" => pattern!("48890d${'} 488941") => None,
         "dwGlowManager" => pattern!("488b05${'} c3 cccccccccccccccc 8b41") => None,

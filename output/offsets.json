@@ -3,7 +3,7 @@
     "dwCSGOInput": 27386256,
     "dwEntityList": 26954136,
     "dwGameEntitySystem": 28129464,
-    "dwGameEntitySystem_getHighestEntityIndex": 5392,
+    "dwGameEntitySystem_highestEntityIndex": 5392,
     "dwGameRules": 27337720,
     "dwGlobalVars": 25224416,
     "dwGlowManager": 27335440,
