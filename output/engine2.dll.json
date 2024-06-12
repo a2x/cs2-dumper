@@ -98,9 +98,9 @@
       "EventClientFrameSimulate_t": {
         "fields": {
           "m_LoopState": 0,
+          "m_bScheduleSendTickPacket": 48,
           "m_flFrameTime": 44,
-          "m_flRealTime": 40,
-          "m_flWhenScheduleSendTickPacket": 48
+          "m_flRealTime": 40
         },
         "metadata": [],
         "parent": null

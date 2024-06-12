@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-11 03:50:46.229934900 UTC
+// 2024-06-12 06:08:34.023761 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -218,7 +218,7 @@ pub mod cs2_dumper {
                 pub const m_LoopState: usize = 0x0; // EngineLoopState_t
                 pub const m_flRealTime: usize = 0x28; // float32
                 pub const m_flFrameTime: usize = 0x2C; // float32
-                pub const m_flWhenScheduleSendTickPacket: usize = 0x30; // float64
+                pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
             }
             // Parent: EventAdvanceTick_t
             // Fields count: 0

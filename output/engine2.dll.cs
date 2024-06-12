@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-11 03:50:46.229934900 UTC
+// 2024-06-12 06:08:34.023761 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: engine2.dll
@@ -211,7 +211,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_LoopState = 0x0; // EngineLoopState_t
             public const nint m_flRealTime = 0x28; // float32
             public const nint m_flFrameTime = 0x2C; // float32
-            public const nint m_flWhenScheduleSendTickPacket = 0x30; // float64
+            public const nint m_bScheduleSendTickPacket = 0x30; // bool
         }
         // Parent: EventAdvanceTick_t
         // Fields count: 0
