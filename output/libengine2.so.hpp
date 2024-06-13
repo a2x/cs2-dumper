@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 #pragma once
 
@@ -130,10 +130,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCount = 0x0; // int32
             }
             // Parent: None
-            // Fields count: 0
-            namespace EventClientPredictionPostNetupdate_t {
-            }
-            // Parent: None
             // Fields count: 3
             namespace EventClientProcessGameInput_t {
                 constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
@@ -220,7 +216,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
                 constexpr std::ptrdiff_t m_flRealTime = 0x28; // float32
                 constexpr std::ptrdiff_t m_flFrameTime = 0x2C; // float32
-                constexpr std::ptrdiff_t m_flWhenScheduleSendTickPacket = 0x30; // float64
+                constexpr std::ptrdiff_t m_bScheduleSendTickPacket = 0x30; // bool
             }
             // Parent: EventAdvanceTick_t
             // Fields count: 0
@@ -248,6 +244,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
                 constexpr std::ptrdiff_t m_bFirstTick = 0x28; // bool
                 constexpr std::ptrdiff_t m_bLastTick = 0x29; // bool
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace EventClientAdvanceNonRenderedFrame_t {
             }
             // Parent: EventSimulate_t
             // Fields count: 0

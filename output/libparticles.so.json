@@ -3,68 +3,68 @@
     "classes": {
       "CBaseRendererSource2": {
         "fields": {
-          "m_bAnimateInFPS": 3832,
-          "m_bBlendFramesSeq0": 9212,
-          "m_bDisableZBuffering": 7856,
-          "m_bGammaCorrectVertexColors": 4860,
-          "m_bMaxLuminanceBlendingSequence0": 9213,
-          "m_bOnlyRenderInEffecsGameOverlay": 7595,
-          "m_bOnlyRenderInEffectsBloomPass": 7592,
-          "m_bOnlyRenderInEffectsWaterPass": 7593,
-          "m_bRefract": 7240,
-          "m_bRefractSolid": 7241,
-          "m_bReverseZBuffering": 7855,
-          "m_bSaturateColorPreAlphaBlend": 4861,
-          "m_bStencilTestExclude": 7724,
-          "m_bTintByFOW": 6216,
-          "m_bTintByGlobalLight": 6217,
-          "m_bUseMixedResolutionRendering": 7594,
-          "m_bWriteStencilOnDepthFail": 7854,
-          "m_bWriteStencilOnDepthPass": 7853,
-          "m_flAddSelfAmount": 4864,
-          "m_flAlphaReferenceSoftness": 6232,
-          "m_flAlphaScale": 840,
-          "m_flAnimationRate": 3824,
-          "m_flBumpStrength": 3792,
-          "m_flCenterXOffset": 3120,
-          "m_flCenterYOffset": 3456,
-          "m_flDepthBias": 8872,
-          "m_flDesaturation": 5200,
-          "m_flDiffuseAmount": 4176,
-          "m_flDiffuseClamp": 4512,
-          "m_flFeatheringFilter": 8536,
-          "m_flFeatheringMaxDist": 8200,
-          "m_flFeatheringMinDist": 7864,
-          "m_flFogAmount": 5880,
-          "m_flOverbrightFactor": 5536,
-          "m_flRadiusScale": 504,
-          "m_flRefractAmount": 7248,
-          "m_flRollScale": 1176,
-          "m_flSelfIllumAmount": 3840,
-          "m_flSourceAlphaValueToMapToOne": 6904,
-          "m_flSourceAlphaValueToMapToZero": 6568,
-          "m_nAlpha2Field": 1512,
-          "m_nAlphaReferenceType": 6228,
-          "m_nAnimationType": 3828,
-          "m_nColorBlendType": 3104,
-          "m_nCropTextureOverride": 3796,
-          "m_nFeatheringMode": 7860,
-          "m_nFogType": 5876,
-          "m_nHSVShiftControlPoint": 5872,
-          "m_nLightingControlPoint": 4848,
-          "m_nOutputBlendMode": 4856,
-          "m_nPerParticleAlphaRefWindow": 6224,
-          "m_nPerParticleAlphaReference": 6220,
-          "m_nRefractBlurRadius": 7584,
-          "m_nRefractBlurType": 7588,
-          "m_nSelfIllumPerParticle": 4852,
-          "m_nShaderType": 3108,
-          "m_nSortMethod": 9208,
-          "m_stencilTestID": 7596,
-          "m_stencilWriteID": 7725,
-          "m_strShaderOverride": 3112,
-          "m_vecColorScale": 1520,
-          "m_vecTexturesInput": 3800
+          "m_bAnimateInFPS": 3840,
+          "m_bBlendFramesSeq0": 9220,
+          "m_bDisableZBuffering": 7864,
+          "m_bGammaCorrectVertexColors": 4868,
+          "m_bMaxLuminanceBlendingSequence0": 9221,
+          "m_bOnlyRenderInEffecsGameOverlay": 7603,
+          "m_bOnlyRenderInEffectsBloomPass": 7600,
+          "m_bOnlyRenderInEffectsWaterPass": 7601,
+          "m_bRefract": 7248,
+          "m_bRefractSolid": 7249,
+          "m_bReverseZBuffering": 7863,
+          "m_bSaturateColorPreAlphaBlend": 4869,
+          "m_bStencilTestExclude": 7732,
+          "m_bTintByFOW": 6224,
+          "m_bTintByGlobalLight": 6225,
+          "m_bUseMixedResolutionRendering": 7602,
+          "m_bWriteStencilOnDepthFail": 7862,
+          "m_bWriteStencilOnDepthPass": 7861,
+          "m_flAddSelfAmount": 4872,
+          "m_flAlphaReferenceSoftness": 6240,
+          "m_flAlphaScale": 848,
+          "m_flAnimationRate": 3832,
+          "m_flBumpStrength": 3800,
+          "m_flCenterXOffset": 3128,
+          "m_flCenterYOffset": 3464,
+          "m_flDepthBias": 8880,
+          "m_flDesaturation": 5208,
+          "m_flDiffuseAmount": 4184,
+          "m_flDiffuseClamp": 4520,
+          "m_flFeatheringFilter": 8544,
+          "m_flFeatheringMaxDist": 8208,
+          "m_flFeatheringMinDist": 7872,
+          "m_flFogAmount": 5888,
+          "m_flOverbrightFactor": 5544,
+          "m_flRadiusScale": 512,
+          "m_flRefractAmount": 7256,
+          "m_flRollScale": 1184,
+          "m_flSelfIllumAmount": 3848,
+          "m_flSourceAlphaValueToMapToOne": 6912,
+          "m_flSourceAlphaValueToMapToZero": 6576,
+          "m_nAlpha2Field": 1520,
+          "m_nAlphaReferenceType": 6236,
+          "m_nAnimationType": 3836,
+          "m_nColorBlendType": 3112,
+          "m_nCropTextureOverride": 3804,
+          "m_nFeatheringMode": 7868,
+          "m_nFogType": 5884,
+          "m_nHSVShiftControlPoint": 5880,
+          "m_nLightingControlPoint": 4856,
+          "m_nOutputBlendMode": 4864,
+          "m_nPerParticleAlphaRefWindow": 6232,
+          "m_nPerParticleAlphaReference": 6228,
+          "m_nRefractBlurRadius": 7592,
+          "m_nRefractBlurType": 7596,
+          "m_nSelfIllumPerParticle": 4860,
+          "m_nShaderType": 3116,
+          "m_nSortMethod": 9216,
+          "m_stencilTestID": 7604,
+          "m_stencilWriteID": 7733,
+          "m_strShaderOverride": 3120,
+          "m_vecColorScale": 1528,
+          "m_vecTexturesInput": 3808
         },
         "metadata": [
           {
@@ -76,13 +76,13 @@
       },
       "CBaseTrailRenderer": {
         "fields": {
-          "m_bClampV": 10472,
-          "m_flEndFadeSize": 10136,
-          "m_flMaxSize": 9796,
-          "m_flMinSize": 9792,
-          "m_flStartFadeSize": 9800,
-          "m_nOrientationControlPoint": 9788,
-          "m_nOrientationType": 9784
+          "m_bClampV": 10480,
+          "m_flEndFadeSize": 10144,
+          "m_flMaxSize": 9804,
+          "m_flMinSize": 9800,
+          "m_flStartFadeSize": 9808,
+          "m_nOrientationControlPoint": 9796,
+          "m_nOrientationType": 9792
         },
         "metadata": [
           {
@@ -166,6 +166,10 @@
         "metadata": [
           {
             "name": "MPulseInstanceDomainInfo",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseDomainHookInfo",
             "type": "Unknown"
           },
           {
@@ -396,8 +400,8 @@
       "CParticleFunctionRenderer": {
         "fields": {
           "VisibilityInputs": 432,
-          "m_bCannotBeRefracted": 500,
-          "m_bSkipRenderingOnMobile": 501
+          "m_bCannotBeRefracted": 504,
+          "m_bSkipRenderingOnMobile": 505
         },
         "metadata": [
           {
@@ -409,6 +413,21 @@
       },
       "CParticleInput": {
         "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CParticleMassCalculationParameters": {
+        "fields": {
+          "m_flNominalRadius": 344,
+          "m_flRadius": 8,
+          "m_flScale": 680,
+          "m_nMassMode": 0
+        },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
@@ -478,6 +497,7 @@
           "m_bInfiniteBounds": 572,
           "m_bScreenSpaceEffect": 788,
           "m_bShouldBatch": 780,
+          "m_bShouldHitboxesFallbackToCollisionHulls": 783,
           "m_bShouldHitboxesFallbackToRenderBounds": 781,
           "m_bShouldHitboxesFallbackToSnapshot": 782,
           "m_bShouldSort": 808,
@@ -617,23 +637,24 @@
       },
       "CParticleVisibilityInputs": {
         "fields": {
-          "m_bDotCPAngles": 40,
-          "m_bDotCameraAngles": 41,
-          "m_bRightEye": 64,
-          "m_flAlphaScaleMax": 48,
-          "m_flAlphaScaleMin": 44,
+          "m_bDotCPAngles": 44,
+          "m_bDotCameraAngles": 45,
+          "m_bRightEye": 68,
+          "m_flAlphaScaleMax": 52,
+          "m_flAlphaScaleMin": 48,
           "m_flCameraBias": 0,
-          "m_flDistanceInputMax": 28,
-          "m_flDistanceInputMin": 24,
-          "m_flDotInputMax": 36,
-          "m_flDotInputMin": 32,
+          "m_flDistanceInputMax": 32,
+          "m_flDistanceInputMin": 28,
+          "m_flDotInputMax": 40,
+          "m_flDotInputMin": 36,
           "m_flInputMax": 16,
           "m_flInputMin": 12,
-          "m_flNoPixelVisibilityFallback": 20,
+          "m_flInputPixelVisFade": 20,
+          "m_flNoPixelVisibilityFallback": 24,
           "m_flProxyRadius": 8,
-          "m_flRadiusScaleFOVBase": 60,
-          "m_flRadiusScaleMax": 56,
-          "m_flRadiusScaleMin": 52,
+          "m_flRadiusScaleFOVBase": 64,
+          "m_flRadiusScaleMax": 60,
+          "m_flRadiusScaleMin": 56,
           "m_nCPin": 4
         },
         "metadata": [
@@ -695,6 +716,24 @@
         "fields": {
           "m_bDistributeEvenly": 0,
           "m_nSeed": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CReplicationParameters": {
+        "fields": {
+          "m_bScaleChildParticleRadii": 4,
+          "m_flMaxRandomRadiusScale": 344,
+          "m_flMinRandomRadiusScale": 8,
+          "m_flModellingScale": 3848,
+          "m_nReplicationMode": 0,
+          "m_vMaxRandomDisplacement": 2264,
+          "m_vMinRandomDisplacement": 680
         },
         "metadata": [
           {
@@ -893,20 +932,22 @@
       },
       "C_INIT_CreateOnModel": {
         "fields": {
-          "m_HitboxSetName": 3816,
-          "m_bLocalCoords": 3944,
-          "m_bUseBones": 3945,
-          "m_bUseMesh": 3946,
-          "m_flBoneVelocity": 2224,
-          "m_flMaxBoneVelocity": 2228,
-          "m_flShellSize": 3952,
+          "m_HitboxSetName": 4152,
+          "m_bEvenDistribution": 629,
+          "m_bLocalCoords": 4280,
+          "m_bScaleToVolume": 628,
+          "m_bUseBones": 4281,
+          "m_bUseMesh": 4282,
+          "m_flBoneVelocity": 2560,
+          "m_flMaxBoneVelocity": 2564,
+          "m_flShellSize": 4288,
           "m_modelInput": 440,
-          "m_nDesiredHitbox": 628,
+          "m_nDesiredHitbox": 632,
           "m_nForceInModel": 624,
-          "m_nHitboxValueFromControlPointIndex": 632,
+          "m_nHitboxValueFromControlPointIndex": 968,
           "m_transformInput": 528,
-          "m_vecDirectionBias": 2232,
-          "m_vecHitBoxScale": 640
+          "m_vecDirectionBias": 2568,
+          "m_vecHitBoxScale": 976
         },
         "metadata": [
           {
@@ -1257,7 +1298,8 @@
       },
       "C_INIT_InitFromParentKilled": {
         "fields": {
-          "m_nAttributeToCopy": 436
+          "m_nAttributeToCopy": 436,
+          "m_nEventType": 440
         },
         "metadata": [
           {
@@ -2373,15 +2415,16 @@
       },
       "C_INIT_SetHitboxToModel": {
         "fields": {
-          "m_HitboxSetName": 2046,
-          "m_bMaintainHitbox": 2044,
-          "m_bUseBones": 2045,
-          "m_flShellSize": 2176,
+          "m_HitboxSetName": 2054,
+          "m_bEvenDistribution": 444,
+          "m_bMaintainHitbox": 2052,
+          "m_bUseBones": 2053,
+          "m_flShellSize": 2184,
           "m_nControlPointNumber": 436,
-          "m_nDesiredHitbox": 444,
+          "m_nDesiredHitbox": 448,
           "m_nForceInModel": 440,
-          "m_vecDirectionBias": 2032,
-          "m_vecHitBoxScale": 448
+          "m_vecDirectionBias": 2040,
+          "m_vecHitBoxScale": 456
         },
         "metadata": [
           {
@@ -2577,8 +2620,10 @@
       "C_OP_BasicMovement": {
         "fields": {
           "m_Gravity": 432,
+          "m_bUseNewCode": 3372,
           "m_fDrag": 2016,
-          "m_nMaxConstraintPasses": 2352
+          "m_massControls": 2352,
+          "m_nMaxConstraintPasses": 3368
         },
         "metadata": [
           {
@@ -2733,6 +2778,22 @@
         ],
         "parent": "CParticleFunctionOperator"
       },
+      "C_OP_ClientPhysics": {
+        "fields": {
+          "m_bDeleteSim": 521,
+          "m_bKillParticles": 520,
+          "m_nColorBlendType": 528,
+          "m_nControlPoint": 524,
+          "m_strPhysicsType": 512
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionRenderer"
+      },
       "C_OP_CollideWithParentParticles": {
         "fields": {
           "m_flParentRadiusScale": 432,
@@ -2777,7 +2838,6 @@
         "fields": {
           "m_ColorFade": 432,
           "m_bEaseInOut": 460,
-          "m_bUseNewCode": 461,
           "m_flFadeEndTime": 452,
           "m_flFadeStartTime": 448,
           "m_nFieldOutput": 456
@@ -2889,16 +2949,17 @@
       },
       "C_OP_ContinuousEmitter": {
         "fields": {
-          "m_bForceEmitOnFirstUpdate": 1468,
-          "m_bForceEmitOnLastUpdate": 1469,
+          "m_bForceEmitOnFirstUpdate": 1472,
+          "m_bForceEmitOnLastUpdate": 1473,
           "m_bInitFromKilledParentParticles": 1456,
           "m_flEmissionDuration": 440,
           "m_flEmissionScale": 1448,
           "m_flEmitRate": 1112,
           "m_flScalePerParentParticle": 1452,
           "m_flStartTime": 776,
-          "m_nLimitPerUpdate": 1464,
-          "m_nSnapshotControlPoint": 1460
+          "m_nEventType": 1460,
+          "m_nLimitPerUpdate": 1468,
+          "m_nSnapshotControlPoint": 1464
         },
         "metadata": [
           {
@@ -3625,6 +3686,7 @@
           "m_flInitFromKilledParentParticles": 1112,
           "m_flParentParticleScale": 1120,
           "m_flStartTime": 776,
+          "m_nEventType": 1116,
           "m_nMaxEmittedPerFrame": 1456,
           "m_nParticlesToEmit": 440,
           "m_nSnapshotControlPoint": 1460
@@ -3653,6 +3715,25 @@
           }
         ],
         "parent": "CParticleFunctionOperator"
+      },
+      "C_OP_IntraParticleForce": {
+        "fields": {
+          "m_bThreadIt": 469,
+          "m_bUseAABB": 468,
+          "m_flAttractionMaxDistance": 448,
+          "m_flAttractionMaxStrength": 452,
+          "m_flAttractionMinDistance": 444,
+          "m_flRepulsionMaxDistance": 460,
+          "m_flRepulsionMaxStrength": 464,
+          "m_flRepulsionMinDistance": 456
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionForce"
       },
       "C_OP_LagCompensation": {
         "fields": {
@@ -4328,20 +4409,6 @@
           }
         ],
         "parent": "CParticleFunctionForce"
-      },
-      "C_OP_ParticlePhysics": {
-        "fields": {
-          "m_Gravity": 432,
-          "m_fDrag": 2016,
-          "m_nMaxConstraintPasses": 2352
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": "CParticleFunctionOperator"
       },
       "C_OP_PerParticleForce": {
         "fields": {
@@ -5033,6 +5100,21 @@
         ],
         "parent": "CParticleFunctionPreEmission"
       },
+      "C_OP_RemapGravityToVector": {
+        "fields": {
+          "m_bNormalizedOutput": 2024,
+          "m_nOutputField": 2016,
+          "m_nSetMethod": 2020,
+          "m_vInput1": 432
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionOperator"
+      },
       "C_OP_RemapModelVolumetoCP": {
         "fields": {
           "m_flInputMax": 460,
@@ -5470,14 +5552,14 @@
       },
       "C_OP_RenderAsModels": {
         "fields": {
-          "m_ModelList": 504,
-          "m_bFitToModelSize": 536,
-          "m_bNonUniformScaling": 537,
-          "m_flModelScale": 532,
-          "m_nSizeCullBloat": 552,
-          "m_nXAxisScalingAttribute": 540,
-          "m_nYAxisScalingAttribute": 544,
-          "m_nZAxisScalingAttribute": 548
+          "m_ModelList": 512,
+          "m_bFitToModelSize": 544,
+          "m_bNonUniformScaling": 545,
+          "m_flModelScale": 540,
+          "m_nSizeCullBloat": 560,
+          "m_nXAxisScalingAttribute": 548,
+          "m_nYAxisScalingAttribute": 552,
+          "m_nZAxisScalingAttribute": 556
         },
         "metadata": [
           {
@@ -5489,12 +5571,14 @@
       },
       "C_OP_RenderBlobs": {
         "fields": {
-          "m_MaterialVars": 1520,
-          "m_cubeWidth": 504,
-          "m_cutoffRadius": 840,
-          "m_hMaterial": 1568,
-          "m_nScaleCP": 1512,
-          "m_renderRadius": 1176
+          "m_MaterialVars": 1536,
+          "m_cubeWidth": 512,
+          "m_cutoffRadius": 848,
+          "m_hMaterial": 1584,
+          "m_nIndexCountKb": 1524,
+          "m_nScaleCP": 1528,
+          "m_nVertexCountKb": 1520,
+          "m_renderRadius": 1184
         },
         "metadata": [
           {
@@ -5506,28 +5590,28 @@
       },
       "C_OP_RenderCables": {
         "fields": {
-          "m_LightingTransform": 4832,
-          "m_MaterialFloatVars": 4928,
-          "m_MaterialVecVars": 4976,
-          "m_bDrawCableCaps": 4800,
-          "m_flAlphaScale": 840,
-          "m_flCapOffsetAmount": 4808,
-          "m_flCapRoundness": 4804,
-          "m_flColorMapOffsetU": 3792,
-          "m_flColorMapOffsetV": 3456,
-          "m_flNormalMapOffsetU": 4464,
-          "m_flNormalMapOffsetV": 4128,
-          "m_flRadiusScale": 504,
-          "m_flTessScale": 4812,
-          "m_flTextureRepeatsCircumference": 3120,
-          "m_flTextureRepeatsPerSegment": 2784,
-          "m_hMaterial": 2768,
-          "m_nColorBlendType": 2760,
-          "m_nMaxTesselation": 4820,
-          "m_nMinTesselation": 4816,
-          "m_nRoundness": 4824,
-          "m_nTextureRepetitionMode": 2776,
-          "m_vecColorScale": 1176
+          "m_LightingTransform": 4840,
+          "m_MaterialFloatVars": 4936,
+          "m_MaterialVecVars": 4984,
+          "m_bDrawCableCaps": 4808,
+          "m_flAlphaScale": 848,
+          "m_flCapOffsetAmount": 4816,
+          "m_flCapRoundness": 4812,
+          "m_flColorMapOffsetU": 3800,
+          "m_flColorMapOffsetV": 3464,
+          "m_flNormalMapOffsetU": 4472,
+          "m_flNormalMapOffsetV": 4136,
+          "m_flRadiusScale": 512,
+          "m_flTessScale": 4820,
+          "m_flTextureRepeatsCircumference": 3128,
+          "m_flTextureRepeatsPerSegment": 2792,
+          "m_hMaterial": 2776,
+          "m_nColorBlendType": 2768,
+          "m_nMaxTesselation": 4828,
+          "m_nMinTesselation": 4824,
+          "m_nRoundness": 4832,
+          "m_nTextureRepetitionMode": 2784,
+          "m_vecColorScale": 1184
         },
         "metadata": [
           {
@@ -5549,16 +5633,16 @@
       },
       "C_OP_RenderDeferredLight": {
         "fields": {
-          "m_bUseAlphaTestWindow": 502,
-          "m_bUseTexture": 503,
-          "m_flAlphaScale": 508,
+          "m_bUseAlphaTestWindow": 506,
+          "m_bUseTexture": 507,
+          "m_flAlphaScale": 512,
           "m_flDistanceFalloff": 2116,
           "m_flLightDistance": 2108,
-          "m_flRadiusScale": 504,
+          "m_flRadiusScale": 508,
           "m_flSpotFoV": 2120,
           "m_flStartFalloff": 2112,
           "m_hTexture": 2136,
-          "m_nAlpha2Field": 512,
+          "m_nAlpha2Field": 516,
           "m_nAlphaTestPointField": 2124,
           "m_nAlphaTestRangeField": 2128,
           "m_nAlphaTestSharpnessField": 2132,
@@ -5576,9 +5660,9 @@
       },
       "C_OP_RenderFlattenGrass": {
         "fields": {
-          "m_flFlattenStrength": 504,
-          "m_flRadiusScale": 512,
-          "m_nStrengthFieldOverride": 508
+          "m_flFlattenStrength": 508,
+          "m_flRadiusScale": 516,
+          "m_nStrengthFieldOverride": 512
         },
         "metadata": [
           {
@@ -5590,12 +5674,14 @@
       },
       "C_OP_RenderGpuImplicit": {
         "fields": {
-          "m_bUsePerParticleRadius": 502,
-          "m_fGridSize": 504,
-          "m_fIsosurfaceThreshold": 1176,
-          "m_fRadiusScale": 840,
-          "m_hMaterial": 1520,
-          "m_nScaleCP": 1512
+          "m_bUsePerParticleRadius": 506,
+          "m_fGridSize": 520,
+          "m_fIsosurfaceThreshold": 1192,
+          "m_fRadiusScale": 856,
+          "m_hMaterial": 1536,
+          "m_nIndexCountKb": 512,
+          "m_nScaleCP": 1528,
+          "m_nVertexCountKb": 508
         },
         "metadata": [
           {
@@ -5607,13 +5693,13 @@
       },
       "C_OP_RenderLightBeam": {
         "fields": {
-          "m_bCastShadows": 2432,
-          "m_flBrightnessLumensPerMeter": 2096,
-          "m_flRange": 2776,
-          "m_flSkirt": 2440,
-          "m_flThickness": 3112,
-          "m_nColorBlendType": 2088,
-          "m_vColorBlend": 504
+          "m_bCastShadows": 2440,
+          "m_flBrightnessLumensPerMeter": 2104,
+          "m_flRange": 2784,
+          "m_flSkirt": 2448,
+          "m_flThickness": 3120,
+          "m_nColorBlendType": 2096,
+          "m_vColorBlend": 512
         },
         "metadata": [
           {
@@ -5625,13 +5711,13 @@
       },
       "C_OP_RenderLights": {
         "fields": {
-          "m_bAnimateInFPS": 520,
-          "m_flAnimationRate": 512,
-          "m_flEndFadeSize": 536,
-          "m_flMaxSize": 528,
-          "m_flMinSize": 524,
-          "m_flStartFadeSize": 532,
-          "m_nAnimationType": 516
+          "m_bAnimateInFPS": 528,
+          "m_flAnimationRate": 520,
+          "m_flEndFadeSize": 544,
+          "m_flMaxSize": 536,
+          "m_flMinSize": 532,
+          "m_flStartFadeSize": 540,
+          "m_nAnimationType": 524
         },
         "metadata": [
           {
@@ -5643,14 +5729,14 @@
       },
       "C_OP_RenderMaterialProxy": {
         "fields": {
-          "m_MaterialVars": 512,
-          "m_flAlpha": 2464,
-          "m_flMaterialOverrideEnabled": 544,
-          "m_hOverrideMaterial": 536,
-          "m_nColorBlendType": 2800,
-          "m_nMaterialControlPoint": 504,
-          "m_nProxyType": 508,
-          "m_vecColorScale": 880
+          "m_MaterialVars": 520,
+          "m_flAlpha": 2472,
+          "m_flMaterialOverrideEnabled": 552,
+          "m_hOverrideMaterial": 544,
+          "m_nColorBlendType": 2808,
+          "m_nMaterialControlPoint": 508,
+          "m_nProxyType": 512,
+          "m_vecColorScale": 888
         },
         "metadata": [
           {
@@ -5663,56 +5749,56 @@
       "C_OP_RenderModels": {
         "fields": {
           "m_ActivityName": 5680,
-          "m_EconSlotName": 7004,
-          "m_MaterialVars": 6552,
+          "m_ClothEffectName": 6193,
+          "m_EconSlotName": 7068,
+          "m_MaterialVars": 6616,
           "m_ModelList": 512,
           "m_SequenceName": 5936,
-          "m_bAcceptsDecals": 7265,
-          "m_bAllowApproximateTransforms": 7269,
+          "m_bAcceptsDecals": 7334,
+          "m_bAllowApproximateTransforms": 7337,
           "m_bAnimated": 5320,
-          "m_bCenterOffset": 550,
-          "m_bDisableDepthPrepass": 7264,
-          "m_bDisableShadows": 7263,
-          "m_bDoNotDrawInParticlePass": 7267,
+          "m_bCenterOffset": 546,
+          "m_bDisableDepthPrepass": 7333,
+          "m_bDisableShadows": 7332,
+          "m_bDoNotDrawInParticlePass": 7336,
           "m_bEnableClothSimulation": 6192,
-          "m_bForceDrawInterlevedWithSiblings": 7266,
+          "m_bForceDrawInterlevedWithSiblings": 7335,
           "m_bForceLoopingAnimation": 5665,
-          "m_bIgnoreNormal": 548,
+          "m_bIgnoreNormal": 544,
           "m_bIgnoreRadius": 3720,
           "m_bLocalScale": 5312,
           "m_bManualAnimFrame": 5667,
-          "m_bOnlyRenderInEffecsGameOverlay": 505,
-          "m_bOnlyRenderInEffectsBloomPass": 502,
-          "m_bOnlyRenderInEffectsWaterPass": 503,
-          "m_bOrientZ": 549,
-          "m_bOriginalModel": 7260,
-          "m_bOverrideTranslucentMaterials": 6208,
+          "m_bOnlyRenderInEffecsGameOverlay": 509,
+          "m_bOnlyRenderInEffectsBloomPass": 506,
+          "m_bOnlyRenderInEffectsWaterPass": 507,
+          "m_bOrientZ": 545,
+          "m_bOriginalModel": 7324,
+          "m_bOverrideTranslucentMaterials": 6272,
           "m_bResetAnimOnStop": 5666,
           "m_bScaleAnimationRate": 5664,
-          "m_bSuppressTint": 7261,
-          "m_bUseFastModelCollectionRenderPath": 7268,
-          "m_bUseMixedResolutionRendering": 504,
-          "m_bUseRawMeshGroup": 7262,
-          "m_flAlphaScale": 11704,
+          "m_bSuppressTint": 7325,
+          "m_bUseMixedResolutionRendering": 508,
+          "m_flAlphaScale": 11776,
           "m_flAnimationRate": 5328,
-          "m_flManualModelSelection": 6576,
-          "m_flRadiusScale": 11368,
-          "m_flRollScale": 12040,
-          "m_hOverrideMaterial": 6200,
-          "m_modelInput": 6912,
-          "m_nAlpha2Field": 12376,
+          "m_flManualModelSelection": 6640,
+          "m_flRadiusScale": 11440,
+          "m_flRollScale": 12112,
+          "m_hOverrideMaterial": 6264,
+          "m_modelInput": 6976,
+          "m_nAlpha2Field": 12448,
           "m_nAnimationField": 5672,
           "m_nAnimationScaleField": 5668,
-          "m_nBodyGroupField": 540,
-          "m_nColorBlendType": 13968,
-          "m_nLOD": 7000,
+          "m_nBodyGroupField": 536,
+          "m_nColorBlendType": 14040,
+          "m_nLOD": 7064,
           "m_nManualFrameField": 5676,
           "m_nModelScaleCP": 3724,
           "m_nSizeCullBloat": 5316,
-          "m_nSkin": 6216,
-          "m_nSubModelField": 544,
-          "m_szRenderAttribute": 7270,
-          "m_vecColorScale": 12384,
+          "m_nSkin": 6280,
+          "m_nSubModelField": 540,
+          "m_nSubModelFieldType": 7328,
+          "m_szRenderAttribute": 7338,
+          "m_vecColorScale": 12456,
           "m_vecComponentScale": 3728,
           "m_vecLocalOffset": 552,
           "m_vecLocalRotation": 2136
@@ -5739,7 +5825,7 @@
           "m_hLightCookie": 4464,
           "m_nBrightnessUnit": 2100,
           "m_nColorBlendType": 2096,
-          "m_nLightType": 504,
+          "m_nLightType": 508,
           "m_vColorBlend": 512
         },
         "metadata": [
@@ -5752,7 +5838,7 @@
       },
       "C_OP_RenderPoints": {
         "fields": {
-          "m_hMaterial": 504
+          "m_hMaterial": 512
         },
         "metadata": [
           {
@@ -5764,9 +5850,9 @@
       },
       "C_OP_RenderPostProcessing": {
         "fields": {
-          "m_flPostProcessStrength": 504,
-          "m_hPostTexture": 840,
-          "m_nPriority": 848
+          "m_flPostProcessStrength": 512,
+          "m_hPostTexture": 848,
+          "m_nPriority": 856
         },
         "metadata": [
           {
@@ -5779,16 +5865,22 @@
       "C_OP_RenderProjected": {
         "fields": {
           "m_MaterialVars": 888,
-          "m_bEnableProjectedDepthControls": 506,
-          "m_bFlipHorizontal": 505,
+          "m_bEnableProjectedDepthControls": 510,
+          "m_bFlipHorizontal": 509,
           "m_bOrientToNormal": 884,
-          "m_bProjectCharacter": 502,
-          "m_bProjectWater": 504,
-          "m_bProjectWorld": 503,
+          "m_bProjectCharacter": 506,
+          "m_bProjectWater": 508,
+          "m_bProjectWorld": 507,
+          "m_flAlphaScale": 1248,
           "m_flAnimationTimeScale": 880,
           "m_flMaterialSelection": 544,
-          "m_flMaxProjectionDepth": 512,
-          "m_flMinProjectionDepth": 508,
+          "m_flMaxProjectionDepth": 516,
+          "m_flMinProjectionDepth": 512,
+          "m_flRadiusScale": 912,
+          "m_flRollScale": 1584,
+          "m_nAlpha2Field": 1920,
+          "m_nColorBlendType": 3512,
+          "m_vecColorScale": 1928,
           "m_vecProjectedMaterials": 520
         },
         "metadata": [
@@ -5801,36 +5893,36 @@
       },
       "C_OP_RenderRopes": {
         "fields": {
-          "m_bClampV": 10844,
-          "m_bClosedLoop": 10881,
-          "m_bDrawAsOpaque": 10892,
-          "m_bEnableFadingAndClamping": 9784,
-          "m_bGenerateNormals": 10893,
-          "m_bReverseOrder": 10880,
-          "m_bUseScalarForTextureCoordinate": 10869,
-          "m_flEndFadeDot": 9808,
-          "m_flEndFadeSize": 9800,
-          "m_flMaxSize": 9792,
-          "m_flMinSize": 9788,
-          "m_flRadiusTaper": 9812,
-          "m_flScalarAttributeTextureCoordScale": 10876,
-          "m_flScaleVOffsetByControlPointDistance": 10864,
-          "m_flScaleVScrollByControlPointDistance": 10860,
-          "m_flScaleVSizeByControlPointDistance": 10856,
-          "m_flStartFadeDot": 9804,
-          "m_flStartFadeSize": 9796,
-          "m_flTessScale": 9824,
-          "m_flTextureVOffset": 10504,
-          "m_flTextureVScrollRate": 10168,
-          "m_flTextureVWorldSize": 9832,
-          "m_nMaxTesselation": 9820,
-          "m_nMinTesselation": 9816,
-          "m_nOrientationType": 10884,
-          "m_nScalarFieldForTextureCoordinate": 10872,
-          "m_nScaleCP1": 10848,
-          "m_nScaleCP2": 10852,
-          "m_nTextureVParamsCP": 10840,
-          "m_nVectorFieldForOrientation": 10888
+          "m_bClampV": 10852,
+          "m_bClosedLoop": 10889,
+          "m_bDrawAsOpaque": 10900,
+          "m_bEnableFadingAndClamping": 9792,
+          "m_bGenerateNormals": 10901,
+          "m_bReverseOrder": 10888,
+          "m_bUseScalarForTextureCoordinate": 10877,
+          "m_flEndFadeDot": 9816,
+          "m_flEndFadeSize": 9808,
+          "m_flMaxSize": 9800,
+          "m_flMinSize": 9796,
+          "m_flRadiusTaper": 9820,
+          "m_flScalarAttributeTextureCoordScale": 10884,
+          "m_flScaleVOffsetByControlPointDistance": 10872,
+          "m_flScaleVScrollByControlPointDistance": 10868,
+          "m_flScaleVSizeByControlPointDistance": 10864,
+          "m_flStartFadeDot": 9812,
+          "m_flStartFadeSize": 9804,
+          "m_flTessScale": 9832,
+          "m_flTextureVOffset": 10512,
+          "m_flTextureVScrollRate": 10176,
+          "m_flTextureVWorldSize": 9840,
+          "m_nMaxTesselation": 9828,
+          "m_nMinTesselation": 9824,
+          "m_nOrientationType": 10892,
+          "m_nScalarFieldForTextureCoordinate": 10880,
+          "m_nScaleCP1": 10856,
+          "m_nScaleCP2": 10860,
+          "m_nTextureVParamsCP": 10848,
+          "m_nVectorFieldForOrientation": 10896
         },
         "metadata": [
           {
@@ -5842,15 +5934,15 @@
       },
       "C_OP_RenderScreenShake": {
         "fields": {
-          "m_flAmplitudeScale": 516,
-          "m_flDurationScale": 504,
-          "m_flFrequencyScale": 512,
-          "m_flRadiusScale": 508,
-          "m_nAmplitudeField": 532,
-          "m_nDurationField": 524,
-          "m_nFilterCP": 536,
-          "m_nFrequencyField": 528,
-          "m_nRadiusField": 520
+          "m_flAmplitudeScale": 520,
+          "m_flDurationScale": 508,
+          "m_flFrequencyScale": 516,
+          "m_flRadiusScale": 512,
+          "m_nAmplitudeField": 536,
+          "m_nDurationField": 528,
+          "m_nFilterCP": 540,
+          "m_nFrequencyField": 532,
+          "m_nRadiusField": 524
         },
         "metadata": [
           {
@@ -5862,8 +5954,8 @@
       },
       "C_OP_RenderScreenVelocityRotate": {
         "fields": {
-          "m_flForwardDegrees": 508,
-          "m_flRotateRateDegrees": 504
+          "m_flForwardDegrees": 512,
+          "m_flRotateRateDegrees": 508
         },
         "metadata": [
           {
@@ -5875,11 +5967,14 @@
       },
       "C_OP_RenderSimpleModelCollection": {
         "fields": {
-          "m_bAcceptsDecals": 597,
-          "m_bCenterOffset": 502,
-          "m_bDisableShadows": 596,
-          "m_modelInput": 504,
-          "m_nLOD": 592
+          "m_bAcceptsDecals": 614,
+          "m_bCenterOffset": 506,
+          "m_bDisableMotionBlur": 613,
+          "m_bDisableShadows": 612,
+          "m_hModel": 512,
+          "m_modelInput": 520,
+          "m_nAngularVelocityField": 616,
+          "m_nLOD": 608
         },
         "metadata": [
           {
@@ -5891,18 +5986,18 @@
       },
       "C_OP_RenderSound": {
         "fields": {
-          "m_bSuppressStopSoundEvent": 800,
-          "m_flDurationScale": 504,
-          "m_flPitchScale": 512,
-          "m_flSndLvlScale": 508,
-          "m_flVolumeScale": 516,
-          "m_nCPReference": 540,
-          "m_nChannel": 536,
-          "m_nDurationField": 524,
-          "m_nPitchField": 528,
-          "m_nSndLvlField": 520,
-          "m_nVolumeField": 532,
-          "m_pszSoundName": 544
+          "m_bSuppressStopSoundEvent": 804,
+          "m_flDurationScale": 508,
+          "m_flPitchScale": 516,
+          "m_flSndLvlScale": 512,
+          "m_flVolumeScale": 520,
+          "m_nCPReference": 544,
+          "m_nChannel": 540,
+          "m_nDurationField": 528,
+          "m_nPitchField": 532,
+          "m_nSndLvlField": 524,
+          "m_nVolumeField": 536,
+          "m_pszSoundName": 548
         },
         "metadata": [
           {
@@ -5914,33 +6009,34 @@
       },
       "C_OP_RenderSprites": {
         "fields": {
-          "m_OutlineColor": 11837,
-          "m_bDistanceAlpha": 11824,
-          "m_bOutline": 11836,
-          "m_bParticleShadows": 12544,
-          "m_bSoftEdges": 11825,
-          "m_bUseYawWithNormalAligned": 10128,
-          "m_flAlphaAdjustWithSizeAdjust": 10808,
-          "m_flEdgeSoftnessEnd": 11832,
-          "m_flEdgeSoftnessStart": 11828,
-          "m_flEndFadeDot": 11820,
-          "m_flEndFadeSize": 11480,
-          "m_flLightingDirectionality": 12208,
-          "m_flLightingTessellation": 11872,
-          "m_flMaxSize": 10472,
-          "m_flMinSize": 10136,
-          "m_flOutlineEnd0": 11856,
-          "m_flOutlineEnd1": 11860,
-          "m_flOutlineStart0": 11848,
-          "m_flOutlineStart1": 11852,
-          "m_flShadowDensity": 12548,
-          "m_flStartFadeDot": 11816,
-          "m_flStartFadeSize": 11144,
-          "m_nLightingMode": 11864,
-          "m_nOrientationControlPoint": 10124,
-          "m_nOrientationType": 10120,
-          "m_nOutlineAlpha": 11844,
-          "m_nSequenceOverride": 9784
+          "m_OutlineColor": 11845,
+          "m_bDistanceAlpha": 11832,
+          "m_bOutline": 11844,
+          "m_bParticleShadows": 12552,
+          "m_bSoftEdges": 11833,
+          "m_bUseYawWithNormalAligned": 10136,
+          "m_flAlphaAdjustWithSizeAdjust": 10816,
+          "m_flEdgeSoftnessEnd": 11840,
+          "m_flEdgeSoftnessStart": 11836,
+          "m_flEndFadeDot": 11828,
+          "m_flEndFadeSize": 11488,
+          "m_flLightingDirectionality": 12216,
+          "m_flLightingTessellation": 11880,
+          "m_flMaxSize": 10480,
+          "m_flMinSize": 10144,
+          "m_flOutlineEnd0": 11864,
+          "m_flOutlineEnd1": 11868,
+          "m_flOutlineStart0": 11856,
+          "m_flOutlineStart1": 11860,
+          "m_flShadowDensity": 12556,
+          "m_flStartFadeDot": 11824,
+          "m_flStartFadeSize": 11152,
+          "m_nLightingMode": 11872,
+          "m_nOrientationControlPoint": 10132,
+          "m_nOrientationType": 10128,
+          "m_nOutlineAlpha": 11852,
+          "m_nSequenceOverride": 9792,
+          "m_replicationParameters": 12560
         },
         "metadata": [
           {
@@ -5977,7 +6073,7 @@
           "m_nCapsuleLightBehavior": 4832,
           "m_nColorBlendType": 2096,
           "m_nFogLightingMode": 4492,
-          "m_nLightType": 504,
+          "m_nLightType": 508,
           "m_nPrevPntSource": 4844,
           "m_nPriority": 4488,
           "m_vecColorScale": 512
@@ -5992,13 +6088,13 @@
       },
       "C_OP_RenderStatusEffect": {
         "fields": {
-          "m_pTextureColorWarp": 504,
-          "m_pTextureDetail2": 512,
-          "m_pTextureDiffuseWarp": 520,
-          "m_pTextureEnvMap": 552,
-          "m_pTextureFresnelColorWarp": 528,
-          "m_pTextureFresnelWarp": 536,
-          "m_pTextureSpecularWarp": 544
+          "m_pTextureColorWarp": 512,
+          "m_pTextureDetail2": 520,
+          "m_pTextureDiffuseWarp": 528,
+          "m_pTextureEnvMap": 560,
+          "m_pTextureFresnelColorWarp": 536,
+          "m_pTextureFresnelWarp": 544,
+          "m_pTextureSpecularWarp": 552
         },
         "metadata": [
           {
@@ -6010,12 +6106,12 @@
       },
       "C_OP_RenderStatusEffectCitadel": {
         "fields": {
-          "m_pTextureColorWarp": 504,
-          "m_pTextureDetail": 544,
-          "m_pTextureMetalness": 520,
-          "m_pTextureNormal": 512,
-          "m_pTextureRoughness": 528,
-          "m_pTextureSelfIllum": 536
+          "m_pTextureColorWarp": 512,
+          "m_pTextureDetail": 552,
+          "m_pTextureMetalness": 528,
+          "m_pTextureNormal": 520,
+          "m_pTextureRoughness": 536,
+          "m_pTextureSelfIllum": 544
         },
         "metadata": [
           {
@@ -6028,7 +6124,7 @@
       "C_OP_RenderText": {
         "fields": {
           "m_DefaultText": 512,
-          "m_OutlineColor": 502
+          "m_OutlineColor": 506
         },
         "metadata": [
           {
@@ -6040,10 +6136,10 @@
       },
       "C_OP_RenderTonemapController": {
         "fields": {
-          "m_flTonemapLevel": 504,
-          "m_flTonemapWeight": 508,
-          "m_nTonemapLevelField": 512,
-          "m_nTonemapWeightField": 516
+          "m_flTonemapLevel": 508,
+          "m_flTonemapWeight": 512,
+          "m_nTonemapLevelField": 516,
+          "m_nTonemapWeightField": 520
         },
         "metadata": [
           {
@@ -6055,26 +6151,26 @@
       },
       "C_OP_RenderTrails": {
         "fields": {
-          "m_bEnableFadingAndClamping": 10473,
-          "m_bFlipUVBasedOnPitchYaw": 15036,
-          "m_bIgnoreDT": 10496,
-          "m_flConstrainRadiusToLengthRatio": 10500,
-          "m_flEndFadeDot": 10480,
-          "m_flForwardShift": 15032,
-          "m_flHeadAlphaScale": 12432,
-          "m_flLengthFadeInTime": 10508,
-          "m_flLengthScale": 10504,
-          "m_flMaxLength": 10488,
-          "m_flMinLength": 10492,
-          "m_flRadiusHeadTaper": 10512,
-          "m_flRadiusTaper": 12768,
-          "m_flStartFadeDot": 10476,
-          "m_flTailAlphaScale": 14688,
-          "m_nHorizCropField": 15024,
-          "m_nPrevPntSource": 10484,
-          "m_nVertCropField": 15028,
-          "m_vecHeadColorScale": 10848,
-          "m_vecTailColorScale": 13104
+          "m_bEnableFadingAndClamping": 10481,
+          "m_bFlipUVBasedOnPitchYaw": 15044,
+          "m_bIgnoreDT": 10504,
+          "m_flConstrainRadiusToLengthRatio": 10508,
+          "m_flEndFadeDot": 10488,
+          "m_flForwardShift": 15040,
+          "m_flHeadAlphaScale": 12440,
+          "m_flLengthFadeInTime": 10516,
+          "m_flLengthScale": 10512,
+          "m_flMaxLength": 10496,
+          "m_flMinLength": 10500,
+          "m_flRadiusHeadTaper": 10520,
+          "m_flRadiusTaper": 12776,
+          "m_flStartFadeDot": 10484,
+          "m_flTailAlphaScale": 14696,
+          "m_nHorizCropField": 15032,
+          "m_nPrevPntSource": 10492,
+          "m_nVertCropField": 15036,
+          "m_vecHeadColorScale": 10856,
+          "m_vecTailColorScale": 13112
         },
         "metadata": [
           {
@@ -6086,16 +6182,16 @@
       },
       "C_OP_RenderTreeShake": {
         "fields": {
-          "m_flControlPointOrientationAmount": 536,
-          "m_flPeakStrength": 504,
-          "m_flRadialAmount": 532,
-          "m_flRadius": 512,
-          "m_flShakeDuration": 520,
-          "m_flTransitionTime": 524,
-          "m_flTwistAmount": 528,
-          "m_nControlPointForLinearDirection": 540,
-          "m_nPeakStrengthFieldOverride": 508,
-          "m_nRadiusFieldOverride": 516
+          "m_flControlPointOrientationAmount": 540,
+          "m_flPeakStrength": 508,
+          "m_flRadialAmount": 536,
+          "m_flRadius": 516,
+          "m_flShakeDuration": 524,
+          "m_flTransitionTime": 528,
+          "m_flTwistAmount": 532,
+          "m_nControlPointForLinearDirection": 544,
+          "m_nPeakStrengthFieldOverride": 512,
+          "m_nRadiusFieldOverride": 520
         },
         "metadata": [
           {
@@ -6108,9 +6204,9 @@
       "C_OP_RenderVRHapticEvent": {
         "fields": {
           "m_flAmplitude": 520,
-          "m_nHand": 504,
-          "m_nOutputField": 512,
-          "m_nOutputHandCP": 508
+          "m_nHand": 508,
+          "m_nOutputField": 516,
+          "m_nOutputHandCP": 512
         },
         "metadata": [
           {
@@ -6708,7 +6804,6 @@
         "fields": {
           "m_InputValue": 432,
           "m_Lerp": 776,
-          "m_bUseNewCode": 1112,
           "m_nOutputField": 768,
           "m_nSetMethod": 772
         },
@@ -6896,6 +6991,22 @@
           "m_bOffsetLocal": 448,
           "m_nControlPointNumber": 432,
           "m_vecOffset": 436
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CParticleFunctionOperator"
+      },
+      "C_OP_SetUserEvent": {
+        "fields": {
+          "m_flFallingEdge": 1112,
+          "m_flInput": 432,
+          "m_flRisingEdge": 768,
+          "m_nFallingEventType": 1448,
+          "m_nRisingEventType": 1104
         },
         "metadata": [
           {
@@ -7310,11 +7421,6 @@
         ],
         "parent": null
       },
-      "IControlPointEditorData": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
       "IParticleCollection": {
         "fields": {},
         "metadata": [],
@@ -7674,6 +7780,23 @@
         },
         "type": "uint32"
       },
+      "EventTypeSelection_t": {
+        "alignment": 4,
+        "members": {
+          "PARTICLE_EVENT_TYPE_MASK_COLLISION": 4,
+          "PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED": 16,
+          "PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION": 8,
+          "PARTICLE_EVENT_TYPE_MASK_KILLED": 2,
+          "PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION": 32,
+          "PARTICLE_EVENT_TYPE_MASK_NONE": 0,
+          "PARTICLE_EVENT_TYPE_MASK_SPAWNED": 1,
+          "PARTICLE_EVENT_TYPE_MASK_USER_1": 64,
+          "PARTICLE_EVENT_TYPE_MASK_USER_2": 128,
+          "PARTICLE_EVENT_TYPE_MASK_USER_3": 256,
+          "PARTICLE_EVENT_TYPE_MASK_USER_4": 512
+        },
+        "type": "uint32"
+      },
       "HitboxLerpType_t": {
         "alignment": 4,
         "members": {
@@ -7706,6 +7829,16 @@
           "MISSING_PARENT_FIND_NEW": 1,
           "MISSING_PARENT_KILL": 0,
           "MISSING_PARENT_SAME_INDEX": 2
+        },
+        "type": "uint32"
+      },
+      "ModelHitboxType_t": {
+        "alignment": 4,
+        "members": {
+          "MODEL_HITBOX_TYPE_RAW_BONES": 1,
+          "MODEL_HITBOX_TYPE_RENDERBOUNDS": 2,
+          "MODEL_HITBOX_TYPE_SNAPSHOT": 3,
+          "MODEL_HITBOX_TYPE_STANDARD": 0
         },
         "type": "uint32"
       },
@@ -8036,6 +8169,14 @@
         },
         "type": "uint32"
       },
+      "ParticleMassMode_t": {
+        "alignment": 4,
+        "members": {
+          "PARTICLE_MASSMODE_RADIUS_CUBED": 0,
+          "PARTICLE_MASSMODE_RADIUS_SQUARED": 2
+        },
+        "type": "uint32"
+      },
       "ParticleModelType_t": {
         "alignment": 4,
         "members": {
@@ -8124,6 +8265,14 @@
           "PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI": 5,
           "PARTICLE_POST_PROCESS_PRIORITY_LEVEL_OVERRIDE": 1,
           "PARTICLE_POST_PROCESS_PRIORITY_LEVEL_VOLUME": 0
+        },
+        "type": "uint32"
+      },
+      "ParticleReplicationMode_t": {
+        "alignment": 4,
+        "members": {
+          "PARTICLE_REPLICATIONMODE_NONE": 0,
+          "PARTICLE_REPLICATIONMODE_REPLICATE_FOR_EACH_PARENT_PARTICLE": 1
         },
         "type": "uint32"
       },
@@ -8269,6 +8418,16 @@
           "PET_GROUND_GRID": 1,
           "PET_GROUND_NONE": 0,
           "PET_GROUND_PLANE": 2
+        },
+        "type": "uint32"
+      },
+      "RenderModelSubModelFieldType_t": {
+        "alignment": 4,
+        "members": {
+          "SUBMODEL_AS_BODYGROUP_SUBMODEL": 0,
+          "SUBMODEL_AS_MESHGROUP_INDEX": 1,
+          "SUBMODEL_AS_MESHGROUP_MASK": 2,
+          "SUBMODEL_IGNORED_USE_MODEL_DEFAULT_MESHGROUP_MASK": 3
         },
         "type": "uint32"
       },

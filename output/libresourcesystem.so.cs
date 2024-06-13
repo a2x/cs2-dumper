@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libresourcesystem.so
-    // Classes count: 59
+    // Classes count: 58
     // Enums count: 2
     public static class LibresourcesystemSo {
         // Alignment: 1
@@ -274,20 +274,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCNmGraph {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCDACGameDefsData {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
         public static class InfoForResourceTypeCPanoramaStyle {
         }
         // Parent: None
@@ -302,7 +288,21 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCNmGraphVariation {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
         public static class InfoForResourceTypeCCSGOEconItem {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCNmGraphDefinition {
         }
         // Parent: None
         // Fields count: 0
@@ -415,13 +415,6 @@ namespace CS2Dumper.Schemas {
         // Fields count: 1
         public static class FuseVariableIndex_t {
             public const nint m_Value = 0x0; // uint16
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCNmGraphDataSet {
         }
         // Parent: None
         // Fields count: 0

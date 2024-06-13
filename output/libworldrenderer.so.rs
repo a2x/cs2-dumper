@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: libworldrenderer.so
-        // Classes count: 27
+        // Classes count: 23
         // Enums count: 1
         pub mod libworldrenderer_so {
             // Alignment: 4
@@ -56,7 +56,7 @@ pub mod cs2_dumper {
             pub mod AggregateLODSetup_t {
                 pub const m_vLODOrigin: usize = 0x0; // Vector
                 pub const m_fMaxObjectScale: usize = 0xC; // float32
-                pub const m_fSwitchDistances: usize = 0x10; // CUtlVectorFixedGrowable<float32>
+                pub const m_fSwitchDistances: usize = 0x10; // CUtlVector<float32>
             }
             // Parent: BaseSceneObjectOverride_t
             // Fields count: 4
@@ -135,20 +135,19 @@ pub mod cs2_dumper {
             pub mod WorldBuilderParams_t {
                 pub const m_flMinDrawVolumeSize: usize = 0x0; // float32
                 pub const m_bBuildBakedLighting: usize = 0x4; // bool
-                pub const m_vLightmapUvScale: usize = 0x8; // Vector2D
-                pub const m_nCompileTimestamp: usize = 0x10; // uint64
-                pub const m_nCompileFingerprint: usize = 0x18; // uint64
+                pub const m_bakedLightingInfo: usize = 0x8; // BakedLightingInfo_t
+                pub const m_nCompileTimestamp: usize = 0x38; // uint64
+                pub const m_nCompileFingerprint: usize = 0x40; // uint64
             }
             // Parent: None
-            // Fields count: 4
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod PermEntityLumpData_t {
                 pub const m_name: usize = 0x8; // CUtlString
-                pub const m_hammerUniqueId: usize = 0x10; // CUtlString
-                pub const m_childLumps: usize = 0x18; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-                pub const m_entityKeyValues: usize = 0x30; // CUtlLeanVector<EntityKeyValueData_t>
+                pub const m_childLumps: usize = 0x10; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+                pub const m_entityKeyValues: usize = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
             // Fields count: 13
@@ -193,7 +192,7 @@ pub mod cs2_dumper {
                 pub const m_nTimesToFire: usize = 0x2C; // int32
             }
             // Parent: None
-            // Fields count: 5
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -202,6 +201,10 @@ pub mod cs2_dumper {
                 pub const m_nLightmapGameVersionNumber: usize = 0x4; // uint32
                 pub const m_vLightmapUvScale: usize = 0x8; // Vector2D
                 pub const m_bHasLightmaps: usize = 0x10; // bool
+                pub const m_bBakedShadowsGamma20: usize = 0x11; // bool
+                pub const m_bCompressionEnabled: usize = 0x12; // bool
+                pub const m_nChartPackIterations: usize = 0x13; // uint8
+                pub const m_nVradQuality: usize = 0x14; // uint8
                 pub const m_lightMaps: usize = 0x18; // CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
             }
             // Parent: None
@@ -254,9 +257,9 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod World_t {
                 pub const m_builderParams: usize = 0x0; // WorldBuilderParams_t
-                pub const m_worldNodes: usize = 0x20; // CUtlVector<NodeData_t>
-                pub const m_worldLightingInfo: usize = 0x38; // BakedLightingInfo_t
-                pub const m_entityLumps: usize = 0x68; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+                pub const m_worldNodes: usize = 0x48; // CUtlVector<NodeData_t>
+                pub const m_worldLightingInfo: usize = 0x60; // BakedLightingInfo_t
+                pub const m_entityLumps: usize = 0x90; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
             }
             // Parent: None
             // Fields count: 10
@@ -313,22 +316,6 @@ pub mod cs2_dumper {
                 pub const m_EnclosedClustersBlock: usize = 0x84; // VoxelVisBlockOffset_t
                 pub const m_MasksBlock: usize = 0x8C; // VoxelVisBlockOffset_t
                 pub const m_nVisBlocks: usize = 0x94; // VoxelVisBlockOffset_t
-            }
-            // Parent: None
-            // Fields count: 0
-            pub mod  {
-            }
-            // Parent: None
-            // Fields count: 0
-            pub mod  {
-            }
-            // Parent: None
-            // Fields count: 0
-            pub mod  {
-            }
-            // Parent: None
-            // Fields count: 0
-            pub mod  {
             }
         }
     }

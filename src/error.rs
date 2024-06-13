@@ -17,7 +17,7 @@ pub enum Error {
     Serde(#[from] serde_json::Error),
 
     #[error("unable to parse signature")]
-    SignatureInvalid,
+    SignatureParseError,
 
     #[error("unable to find signature for: {0}")]
     SignatureNotFound(String),
@@ -27,15 +27,13 @@ pub enum Error {
 }
 
 impl<T> From<memflow::error::PartialError<T>> for Error {
-    #[inline]
-    fn from(err: memflow::error::PartialError<T>) -> Self {
-        Error::Memflow(err.into())
+    fn from(e: memflow::error::PartialError<T>) -> Self {
+        Error::Memflow(e.into())
     }
 }
 
 impl From<skidscan::SignatureParseError> for Error {
-    #[inline]
-    fn from(_err: skidscan::SignatureParseError) -> Self {
-        Error::SignatureInvalid
+    fn from(_e: skidscan::SignatureParseError) -> Self {
+        Error::SignatureParseError
     }
 }

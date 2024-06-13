@@ -41,7 +41,6 @@ impl<'a> Formatter<'a> {
         Ok(())
     }
 
-    #[inline]
     fn push_indentation(&mut self) {
         if self.indent_level > 0 {
             let indentation = " ".repeat(self.indent_level * self.indent_size);

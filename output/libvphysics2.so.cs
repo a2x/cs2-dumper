@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libvphysics2.so
@@ -81,7 +81,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Mesh = 0x10; // RnMesh_t
         }
         // Parent: None
-        // Fields count: 100
+        // Fields count: 101
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -184,8 +184,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_flQuadVelocitySmoothRate = 0x608; // float32
             public const nint m_flAddWorldCollisionRadius = 0x60C; // float32
             public const nint m_flDefaultVolumetricSolveAmount = 0x610; // float32
-            public const nint m_nRodVelocitySmoothIterations = 0x614; // uint16
-            public const nint m_nQuadVelocitySmoothIterations = 0x616; // uint16
+            public const nint m_flMotionSmoothCDT = 0x614; // float32
+            public const nint m_nRodVelocitySmoothIterations = 0x618; // uint16
+            public const nint m_nQuadVelocitySmoothIterations = 0x61A; // uint16
         }
         // Parent: RnBodyDesc_t
         // Fields count: 1

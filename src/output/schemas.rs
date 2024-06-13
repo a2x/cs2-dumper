@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashSet};
 use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
@@ -37,8 +37,6 @@ impl CodeWriter for SchemaMap {
                                 &format!("public enum {} : {}", slugify(&enum_.name), type_name),
                                 false,
                                 |fmt| {
-                                    // TODO: Handle the case where multiple members share
-                                    // the same value.
                                     let members = enum_
                                         .members
                                         .iter()
@@ -58,7 +56,7 @@ impl CodeWriter for SchemaMap {
                                 .parent
                                 .as_ref()
                                 .map(|parent| slugify(&parent.name))
-                                .unwrap_or_else(|| "None".to_string());
+                                .unwrap_or_else(|| String::from("None"));
 
                             writeln!(fmt, "// Parent: {}", parent_name)?;
                             writeln!(fmt, "// Fields count: {}", class.fields.len())?;
@@ -122,8 +120,6 @@ impl CodeWriter for SchemaMap {
                                     &format!("enum class {} : {}", slugify(&enum_.name), type_name),
                                     true,
                                     |fmt| {
-                                        // TODO: Handle the case where multiple members share
-                                        // the same value.
                                         let members = enum_
                                             .members
                                             .iter()
@@ -143,7 +139,7 @@ impl CodeWriter for SchemaMap {
                                     .parent
                                     .as_ref()
                                     .map(|parent| slugify(&parent.name))
-                                    .unwrap_or_else(|| "None".to_string());
+                                    .unwrap_or_else(|| String::from("None"));
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Fields count: {}", class.fields.len())?;
@@ -259,7 +255,7 @@ impl CodeWriter for SchemaMap {
             })
             .collect();
 
-        fmt.write_str(&serde_json::to_string_pretty(&content).expect("failed to serialize"))
+        fmt.write_str(&serde_json::to_string_pretty(&content).expect("unable to serialize json"))
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -299,21 +295,24 @@ impl CodeWriter for SchemaMap {
                                     ),
                                     false,
                                     |fmt| {
-                                        // TODO: Handle the case where multiple members share
-                                        // the same value.
+                                        let mut used_values = HashSet::new();
+
                                         let members = enum_
                                             .members
                                             .iter()
-                                            .map(|member| {
-                                                format!(
-                                                    "{} = {}",
-                                                    member.name,
-                                                    if member.value == -1 {
+                                            .filter_map(|member| {
+                                                // Filter out duplicate values.
+                                                if used_values.insert(member.value) {
+                                                    let value = if member.value == -1 {
                                                         format!("{}::MAX", type_name)
                                                     } else {
                                                         format!("{:#X}", member.value)
-                                                    }
-                                                )
+                                                    };
+
+                                                    Some(format!("{} = {}", member.name, value))
+                                                } else {
+                                                    None
+                                                }
                                             })
                                             .collect::<Vec<_>>()
                                             .join(",\n");
@@ -328,7 +327,7 @@ impl CodeWriter for SchemaMap {
                                     .parent
                                     .as_ref()
                                     .map(|parent| slugify(&parent.name))
-                                    .unwrap_or_else(|| "None".to_string());
+                                    .unwrap_or_else(|| String::from("None"));
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Fields count: {}", class.fields.len())?;

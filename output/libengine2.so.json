@@ -85,6 +85,11 @@
         "metadata": [],
         "parent": null
       },
+      "EventClientAdvanceNonRenderedFrame_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "EventClientAdvanceTick_t": {
         "fields": {},
         "metadata": [],
@@ -93,9 +98,9 @@
       "EventClientFrameSimulate_t": {
         "fields": {
           "m_LoopState": 0,
+          "m_bScheduleSendTickPacket": 48,
           "m_flFrameTime": 44,
-          "m_flRealTime": 40,
-          "m_flWhenScheduleSendTickPacket": 48
+          "m_flRealTime": 40
         },
         "metadata": [],
         "parent": null
@@ -168,11 +173,6 @@
         "fields": {},
         "metadata": [],
         "parent": "EventSimulate_t"
-      },
-      "EventClientPredictionPostNetupdate_t": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
       },
       "EventClientProcessGameInput_t": {
         "fields": {

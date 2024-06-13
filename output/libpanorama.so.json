@@ -24,6 +24,7 @@
       "EStyleNodeType": {
         "alignment": 4,
         "members": {
+          "COMPILER_CONDITIONAL": 15,
           "DEFINE": 3,
           "EXPRESSION": 1,
           "EXPRESSION_CONCAT": 11,

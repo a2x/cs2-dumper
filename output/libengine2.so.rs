@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -132,10 +132,6 @@ pub mod cs2_dumper {
                 pub const m_nCount: usize = 0x0; // int32
             }
             // Parent: None
-            // Fields count: 0
-            pub mod EventClientPredictionPostNetupdate_t {
-            }
-            // Parent: None
             // Fields count: 3
             pub mod EventClientProcessGameInput_t {
                 pub const m_LoopState: usize = 0x0; // EngineLoopState_t
@@ -222,7 +218,7 @@ pub mod cs2_dumper {
                 pub const m_LoopState: usize = 0x0; // EngineLoopState_t
                 pub const m_flRealTime: usize = 0x28; // float32
                 pub const m_flFrameTime: usize = 0x2C; // float32
-                pub const m_flWhenScheduleSendTickPacket: usize = 0x30; // float64
+                pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
             }
             // Parent: EventAdvanceTick_t
             // Fields count: 0
@@ -250,6 +246,10 @@ pub mod cs2_dumper {
                 pub const m_LoopState: usize = 0x0; // EngineLoopState_t
                 pub const m_bFirstTick: usize = 0x28; // bool
                 pub const m_bLastTick: usize = 0x29; // bool
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod EventClientAdvanceNonRenderedFrame_t {
             }
             // Parent: EventSimulate_t
             // Fields count: 0

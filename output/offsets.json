@@ -2,51 +2,51 @@
   "libclient.so": [
     {
       "name": "dwCSGOInput",
-      "value": 57948032
+      "value": 59733504
     },
     {
       "name": "dwEntityList",
-      "value": 56272520
+      "value": 58040584
     },
     {
       "name": "dwGameEntitySystem",
-      "value": 59115328
+      "value": 60958368
     },
     {
-      "name": "dwGameEntitySystem_getHighestEntityIndex",
+      "name": "dwGameEntitySystem_highestEntityIndex",
       "value": 5440
     },
     {
       "name": "dwGameRules",
-      "value": 57894216
+      "value": 59680640
     },
     {
       "name": "dwGlobalVars",
-      "value": 56015568
+      "value": 57774256
     },
     {
       "name": "dwGlowManager",
-      "value": 57913008
+      "value": 59680400
     },
     {
       "name": "dwLocalPlayerController",
-      "value": 57784856
+      "value": 59570104
     },
     {
       "name": "dwLocalPlayerPawn",
-      "value": 57917080
+      "value": 59704392
     },
     {
       "name": "dwPlantedC4",
-      "value": 58000984
+      "value": 59786904
     },
     {
       "name": "dwPrediction",
-      "value": 57916768
+      "value": 59704064
     },
     {
       "name": "dwSensitivity",
-      "value": 57910216
+      "value": 59697096
     },
     {
       "name": "dwSensitivity_sensitivity",
@@ -54,65 +54,77 @@
     },
     {
       "name": "dwViewAngles",
-      "value": 57969440
+      "value": 59755048
     },
     {
       "name": "dwViewMatrix",
-      "value": 57919936
+      "value": 59706528
     },
     {
       "name": "dwViewRender",
-      "value": 57920368
+      "value": 59706960
     }
   ],
   "libengine2.so": [
     {
       "name": "dwBuildNumber",
-      "value": 7169588
+      "value": 7944468
     },
     {
       "name": "dwNetworkGameClient",
-      "value": 7172040
+      "value": 7946984
+    },
+    {
+      "name": "dwNetworkGameClient_clientTickCount",
+      "value": 392
     },
     {
       "name": "dwNetworkGameClient_deltaTick",
-      "value": 632
+      "value": 664
     },
     {
-      "name": "dwNetworkGameClient_getLocalPlayer",
-      "value": 5056
+      "name": "dwNetworkGameClient_isBackgroundMap",
+      "value": 2626727
     },
     {
-      "name": "dwNetworkGameClient_getMaxClients",
-      "value": 592
+      "name": "dwNetworkGameClient_localPlayer",
+      "value": 264
+    },
+    {
+      "name": "dwNetworkGameClient_maxClients",
+      "value": 656
+    },
+    {
+      "name": "dwNetworkGameClient_serverTickCount",
+      "value": 388
     },
     {
       "name": "dwNetworkGameClient_signOnState",
-      "value": 608
+      "value": 640
     },
     {
       "name": "dwWindowHeight",
-      "value": 7208484
+      "value": 7984324
     },
     {
       "name": "dwWindowWidth",
-      "value": 7208480
+      "value": 7984320
     }
   ],
   "libinputsystem.so": [
     {
       "name": "dwInputSystem",
-      "value": 262496
+      "value": 266592
     }
   ],
   "libmatchmaking.so": [
     {
       "name": "dwGameTypes",
-      "value": 3656096
+      "value": 3367072
     },
     {
       "name": "dwGameTypes_mapName",
-      "value": 3656384
+      "value": 3367360
     }
   ]
 }

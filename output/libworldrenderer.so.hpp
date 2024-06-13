@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: libworldrenderer.so
-        // Classes count: 27
+        // Classes count: 23
         // Enums count: 1
         namespace libworldrenderer_so {
             // Alignment: 4
@@ -57,7 +57,7 @@ namespace cs2_dumper {
             namespace AggregateLODSetup_t {
                 constexpr std::ptrdiff_t m_vLODOrigin = 0x0; // Vector
                 constexpr std::ptrdiff_t m_fMaxObjectScale = 0xC; // float32
-                constexpr std::ptrdiff_t m_fSwitchDistances = 0x10; // CUtlVectorFixedGrowable<float32>
+                constexpr std::ptrdiff_t m_fSwitchDistances = 0x10; // CUtlVector<float32>
             }
             // Parent: BaseSceneObjectOverride_t
             // Fields count: 4
@@ -136,20 +136,19 @@ namespace cs2_dumper {
             namespace WorldBuilderParams_t {
                 constexpr std::ptrdiff_t m_flMinDrawVolumeSize = 0x0; // float32
                 constexpr std::ptrdiff_t m_bBuildBakedLighting = 0x4; // bool
-                constexpr std::ptrdiff_t m_vLightmapUvScale = 0x8; // Vector2D
-                constexpr std::ptrdiff_t m_nCompileTimestamp = 0x10; // uint64
-                constexpr std::ptrdiff_t m_nCompileFingerprint = 0x18; // uint64
+                constexpr std::ptrdiff_t m_bakedLightingInfo = 0x8; // BakedLightingInfo_t
+                constexpr std::ptrdiff_t m_nCompileTimestamp = 0x38; // uint64
+                constexpr std::ptrdiff_t m_nCompileFingerprint = 0x40; // uint64
             }
             // Parent: None
-            // Fields count: 4
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace PermEntityLumpData_t {
                 constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_hammerUniqueId = 0x10; // CUtlString
-                constexpr std::ptrdiff_t m_childLumps = 0x18; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-                constexpr std::ptrdiff_t m_entityKeyValues = 0x30; // CUtlLeanVector<EntityKeyValueData_t>
+                constexpr std::ptrdiff_t m_childLumps = 0x10; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+                constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
             // Fields count: 13
@@ -194,7 +193,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTimesToFire = 0x2C; // int32
             }
             // Parent: None
-            // Fields count: 5
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -203,6 +202,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLightmapGameVersionNumber = 0x4; // uint32
                 constexpr std::ptrdiff_t m_vLightmapUvScale = 0x8; // Vector2D
                 constexpr std::ptrdiff_t m_bHasLightmaps = 0x10; // bool
+                constexpr std::ptrdiff_t m_bBakedShadowsGamma20 = 0x11; // bool
+                constexpr std::ptrdiff_t m_bCompressionEnabled = 0x12; // bool
+                constexpr std::ptrdiff_t m_nChartPackIterations = 0x13; // uint8
+                constexpr std::ptrdiff_t m_nVradQuality = 0x14; // uint8
                 constexpr std::ptrdiff_t m_lightMaps = 0x18; // CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
             }
             // Parent: None
@@ -255,9 +258,9 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace World_t {
                 constexpr std::ptrdiff_t m_builderParams = 0x0; // WorldBuilderParams_t
-                constexpr std::ptrdiff_t m_worldNodes = 0x20; // CUtlVector<NodeData_t>
-                constexpr std::ptrdiff_t m_worldLightingInfo = 0x38; // BakedLightingInfo_t
-                constexpr std::ptrdiff_t m_entityLumps = 0x68; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
+                constexpr std::ptrdiff_t m_worldNodes = 0x48; // CUtlVector<NodeData_t>
+                constexpr std::ptrdiff_t m_worldLightingInfo = 0x60; // BakedLightingInfo_t
+                constexpr std::ptrdiff_t m_entityLumps = 0x90; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
             }
             // Parent: None
             // Fields count: 10
@@ -314,22 +317,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_EnclosedClustersBlock = 0x84; // VoxelVisBlockOffset_t
                 constexpr std::ptrdiff_t m_MasksBlock = 0x8C; // VoxelVisBlockOffset_t
                 constexpr std::ptrdiff_t m_nVisBlocks = 0x94; // VoxelVisBlockOffset_t
-            }
-            // Parent: None
-            // Fields count: 0
-            namespace  {
-            }
-            // Parent: None
-            // Fields count: 0
-            namespace  {
-            }
-            // Parent: None
-            // Fields count: 0
-            namespace  {
-            }
-            // Parent: None
-            // Fields count: 0
-            namespace  {
             }
         }
     }

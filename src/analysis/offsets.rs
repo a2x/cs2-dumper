@@ -64,7 +64,7 @@ fn read_offset(
         result = match op {
             Operation::Add { value } => result + *value,
             Operation::Rip { offset, len } => {
-                let offset: i32 = process.read(result + offset.unwrap_or(3))?;
+                let offset: i32 = process.read(result + offset.unwrap_or(0x3))?;
 
                 (result + offset) + len.unwrap_or(7)
             }

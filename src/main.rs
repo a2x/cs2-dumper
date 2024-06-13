@@ -1,15 +1,13 @@
-#![feature(lazy_cell)]
-
 use std::path::PathBuf;
 use std::time::Instant;
 
-use clap::*;
+use clap::{ArgAction, Parser};
 
 use log::{info, Level};
 
 use memflow::prelude::v1::*;
 
-use simplelog::{ColorChoice, TermLogger};
+use simplelog::{ColorChoice, Config, TermLogger, TerminalMode};
 
 use config::CONFIG;
 use error::Result;
@@ -56,17 +54,18 @@ fn main() -> Result<()> {
 
     TermLogger::init(
         log_level.to_level_filter(),
-        Default::default(),
-        Default::default(),
+        Config::default(),
+        TerminalMode::Mixed,
         ColorChoice::Auto,
     )
     .unwrap();
 
-    let os = memflow_native::create_os(&Default::default(), Default::default())?;
+    let os = memflow_native::create_os(&OsArgs::default(), LibArc::default())?;
 
     let mut process = os.into_process_by_name(&CONFIG.executable)?;
 
     let result = analysis::analyze_all(&mut process)?;
+
     let output = Output::new(&args.file_types, args.indent_size, &args.output, &result)?;
 
     output.dump_all(&mut process)?;

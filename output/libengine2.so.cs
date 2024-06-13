@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libengine2.so
@@ -125,10 +125,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCount = 0x0; // int32
         }
         // Parent: None
-        // Fields count: 0
-        public static class EventClientPredictionPostNetupdate_t {
-        }
-        // Parent: None
         // Fields count: 3
         public static class EventClientProcessGameInput_t {
             public const nint m_LoopState = 0x0; // EngineLoopState_t
@@ -215,7 +211,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_LoopState = 0x0; // EngineLoopState_t
             public const nint m_flRealTime = 0x28; // float32
             public const nint m_flFrameTime = 0x2C; // float32
-            public const nint m_flWhenScheduleSendTickPacket = 0x30; // float64
+            public const nint m_bScheduleSendTickPacket = 0x30; // bool
         }
         // Parent: EventAdvanceTick_t
         // Fields count: 0
@@ -243,6 +239,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_LoopState = 0x0; // EngineLoopState_t
             public const nint m_bFirstTick = 0x28; // bool
             public const nint m_bLastTick = 0x29; // bool
+        }
+        // Parent: None
+        // Fields count: 0
+        public static class EventClientAdvanceNonRenderedFrame_t {
         }
         // Parent: EventSimulate_t
         // Fields count: 0

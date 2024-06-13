@@ -5,6 +5,7 @@ use crate::error::{Error, Result};
 #[repr(C)]
 pub struct UtlVector<T> {
     pub size: i32,           // 0x0000
+    pad_0004: [u8; 0x4],     // 0x0004
     pub mem: Pointer64<[T]>, // 0x0008
 }
 

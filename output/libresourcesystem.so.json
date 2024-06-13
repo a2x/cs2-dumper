@@ -145,16 +145,6 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCDACGameDefsData": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "InfoForResourceTypeCDOTANovelsList": {
         "fields": {},
         "metadata": [
@@ -245,7 +235,7 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCNmGraph": {
+      "InfoForResourceTypeCNmGraphDefinition": {
         "fields": {},
         "metadata": [
           {
@@ -255,7 +245,7 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCNmGraphDataSet": {
+      "InfoForResourceTypeCNmGraphVariation": {
         "fields": {},
         "metadata": [
           {

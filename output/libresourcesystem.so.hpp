@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: libresourcesystem.so
-        // Classes count: 59
+        // Classes count: 58
         // Enums count: 2
         namespace libresourcesystem_so {
             // Alignment: 1
@@ -279,20 +279,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCNmGraph {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCDACGameDefsData {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
             namespace InfoForResourceTypeCPanoramaStyle {
             }
             // Parent: None
@@ -307,7 +293,21 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCNmGraphVariation {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
             namespace InfoForResourceTypeCCSGOEconItem {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCNmGraphDefinition {
             }
             // Parent: None
             // Fields count: 0
@@ -420,13 +420,6 @@ namespace cs2_dumper {
             // Fields count: 1
             namespace FuseVariableIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint16
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCNmGraphDataSet {
             }
             // Parent: None
             // Fields count: 0

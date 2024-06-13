@@ -5,13 +5,9 @@ use std::sync::LazyLock;
 use serde::{Deserialize, Serialize};
 
 pub static CONFIG: LazyLock<Config> = LazyLock::new(|| {
-    let content = fs::read_to_string("config.json").unwrap_or_else(|_| {
-        panic!(
-            "unable to read config.json file!\nmake sure the file is placed in the same directory as the cs2-dumper executable"
-        )
-    });
+    let content = fs::read_to_string("config.json").unwrap();
 
-    serde_json::from_str(&content).expect("unable to parse config.json file")
+    serde_json::from_str(&content).unwrap()
 });
 
 #[derive(Debug, Deserialize, Serialize)]

@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: libparticles.so
-        // Classes count: 441
-        // Enums count: 71
+        // Classes count: 445
+        // Enums count: 76
         pub mod libparticles_so {
             // Alignment: 4
             // Members count: 6
@@ -79,6 +79,13 @@ pub mod cs2_dumper {
                 PARTICLE_VRHAND_RIGHT = 0x1,
                 PARTICLE_VRHAND_CP = 0x2,
                 PARTICLE_VRHAND_CP_OBJECT = 0x3
+            }
+            // Alignment: 4
+            // Members count: 2
+            #[repr(u32)]
+            pub enum ParticleReplicationMode_t {
+                PARTICLE_REPLICATIONMODE_NONE = 0x0,
+                PARTICLE_REPLICATIONMODE_REPLICATE_FOR_EACH_PARENT_PARTICLE = 0x1
             }
             // Alignment: 4
             // Members count: 3
@@ -236,8 +243,7 @@ pub mod cs2_dumper {
             #[repr(u32)]
             pub enum ParticleParentSetMode_t {
                 PARTICLE_SET_PARENT_NO = 0x0,
-                PARTICLE_SET_PARENT_IMMEDIATE = 0x1,
-                PARTICLE_SET_PARENT_ROOT = 0x1
+                PARTICLE_SET_PARENT_IMMEDIATE = 0x1
             }
             // Alignment: 4
             // Members count: 5
@@ -265,6 +271,29 @@ pub mod cs2_dumper {
                 PF_NOISE_TYPE_SIMPLEX = 0x1,
                 PF_NOISE_TYPE_WORLEY = 0x2,
                 PF_NOISE_TYPE_CURL = 0x3
+            }
+            // Alignment: 4
+            // Members count: 11
+            #[repr(u32)]
+            pub enum EventTypeSelection_t {
+                PARTICLE_EVENT_TYPE_MASK_NONE = 0x0,
+                PARTICLE_EVENT_TYPE_MASK_SPAWNED = 0x1,
+                PARTICLE_EVENT_TYPE_MASK_KILLED = 0x2,
+                PARTICLE_EVENT_TYPE_MASK_COLLISION = 0x4,
+                PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION = 0x8,
+                PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED = 0x10,
+                PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION = 0x20,
+                PARTICLE_EVENT_TYPE_MASK_USER_1 = 0x40,
+                PARTICLE_EVENT_TYPE_MASK_USER_2 = 0x80,
+                PARTICLE_EVENT_TYPE_MASK_USER_3 = 0x100,
+                PARTICLE_EVENT_TYPE_MASK_USER_4 = 0x200
+            }
+            // Alignment: 4
+            // Members count: 2
+            #[repr(u32)]
+            pub enum ParticleMassMode_t {
+                PARTICLE_MASSMODE_RADIUS_CUBED = 0x0,
+                PARTICLE_MASSMODE_RADIUS_SQUARED = 0x2
             }
             // Alignment: 4
             // Members count: 3
@@ -390,6 +419,15 @@ pub mod cs2_dumper {
                 PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0x0,
                 PARTICLE_LIGHT_BEHAVIOR_ROPE = 0x1,
                 PARTICLE_LIGHT_BEHAVIOR_TRAILS = 0x2
+            }
+            // Alignment: 4
+            // Members count: 4
+            #[repr(u32)]
+            pub enum ModelHitboxType_t {
+                MODEL_HITBOX_TYPE_STANDARD = 0x0,
+                MODEL_HITBOX_TYPE_RAW_BONES = 0x1,
+                MODEL_HITBOX_TYPE_RENDERBOUNDS = 0x2,
+                MODEL_HITBOX_TYPE_SNAPSHOT = 0x3
             }
             // Alignment: 4
             // Members count: 8
@@ -620,6 +658,15 @@ pub mod cs2_dumper {
                 PT_TYPE_COUNT = 0x4
             }
             // Alignment: 4
+            // Members count: 4
+            #[repr(u32)]
+            pub enum RenderModelSubModelFieldType_t {
+                SUBMODEL_AS_BODYGROUP_SUBMODEL = 0x0,
+                SUBMODEL_AS_MESHGROUP_INDEX = 0x1,
+                SUBMODEL_AS_MESHGROUP_MASK = 0x2,
+                SUBMODEL_IGNORED_USE_MODEL_DEFAULT_MESHGROUP_MASK = 0x3
+            }
+            // Alignment: 4
             // Members count: 2
             #[repr(u32)]
             pub enum ParticleHitboxDataSelection_t {
@@ -727,6 +774,17 @@ pub mod cs2_dumper {
                 TEXTURE_REPETITION_PATH = 0x1
             }
             // Parent: CParticleFunctionOperator
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_RemapGravityToVector {
+                pub const m_vInput1: usize = 0x1B0; // CPerParticleVecInput
+                pub const m_nOutputField: usize = 0x7E0; // ParticleAttributeIndex_t
+                pub const m_nSetMethod: usize = 0x7E4; // ParticleSetMethod_t
+                pub const m_bNormalizedOutput: usize = 0x7E8; // bool
+            }
+            // Parent: CParticleFunctionOperator
             // Fields count: 2
             //
             // Metadata:
@@ -741,11 +799,11 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderDeferredLight {
-                pub const m_bUseAlphaTestWindow: usize = 0x1F6; // bool
-                pub const m_bUseTexture: usize = 0x1F7; // bool
-                pub const m_flRadiusScale: usize = 0x1F8; // float32
-                pub const m_flAlphaScale: usize = 0x1FC; // float32
-                pub const m_nAlpha2Field: usize = 0x200; // ParticleAttributeIndex_t
+                pub const m_bUseAlphaTestWindow: usize = 0x1FA; // bool
+                pub const m_bUseTexture: usize = 0x1FB; // bool
+                pub const m_flRadiusScale: usize = 0x1FC; // float32
+                pub const m_flAlphaScale: usize = 0x200; // float32
+                pub const m_nAlpha2Field: usize = 0x204; // ParticleAttributeIndex_t
                 pub const m_vecColorScale: usize = 0x208; // CParticleCollectionVecInput
                 pub const m_nColorBlendType: usize = 0x838; // ParticleColorBlendType_t
                 pub const m_flLightDistance: usize = 0x83C; // float32
@@ -836,36 +894,36 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderRopes {
-                pub const m_bEnableFadingAndClamping: usize = 0x2638; // bool
-                pub const m_flMinSize: usize = 0x263C; // float32
-                pub const m_flMaxSize: usize = 0x2640; // float32
-                pub const m_flStartFadeSize: usize = 0x2644; // float32
-                pub const m_flEndFadeSize: usize = 0x2648; // float32
-                pub const m_flStartFadeDot: usize = 0x264C; // float32
-                pub const m_flEndFadeDot: usize = 0x2650; // float32
-                pub const m_flRadiusTaper: usize = 0x2654; // float32
-                pub const m_nMinTesselation: usize = 0x2658; // int32
-                pub const m_nMaxTesselation: usize = 0x265C; // int32
-                pub const m_flTessScale: usize = 0x2660; // float32
-                pub const m_flTextureVWorldSize: usize = 0x2668; // CParticleCollectionRendererFloatInput
-                pub const m_flTextureVScrollRate: usize = 0x27B8; // CParticleCollectionRendererFloatInput
-                pub const m_flTextureVOffset: usize = 0x2908; // CParticleCollectionRendererFloatInput
-                pub const m_nTextureVParamsCP: usize = 0x2A58; // int32
-                pub const m_bClampV: usize = 0x2A5C; // bool
-                pub const m_nScaleCP1: usize = 0x2A60; // int32
-                pub const m_nScaleCP2: usize = 0x2A64; // int32
-                pub const m_flScaleVSizeByControlPointDistance: usize = 0x2A68; // float32
-                pub const m_flScaleVScrollByControlPointDistance: usize = 0x2A6C; // float32
-                pub const m_flScaleVOffsetByControlPointDistance: usize = 0x2A70; // float32
-                pub const m_bUseScalarForTextureCoordinate: usize = 0x2A75; // bool
-                pub const m_nScalarFieldForTextureCoordinate: usize = 0x2A78; // ParticleAttributeIndex_t
-                pub const m_flScalarAttributeTextureCoordScale: usize = 0x2A7C; // float32
-                pub const m_bReverseOrder: usize = 0x2A80; // bool
-                pub const m_bClosedLoop: usize = 0x2A81; // bool
-                pub const m_nOrientationType: usize = 0x2A84; // ParticleOrientationChoiceList_t
-                pub const m_nVectorFieldForOrientation: usize = 0x2A88; // ParticleAttributeIndex_t
-                pub const m_bDrawAsOpaque: usize = 0x2A8C; // bool
-                pub const m_bGenerateNormals: usize = 0x2A8D; // bool
+                pub const m_bEnableFadingAndClamping: usize = 0x2640; // bool
+                pub const m_flMinSize: usize = 0x2644; // float32
+                pub const m_flMaxSize: usize = 0x2648; // float32
+                pub const m_flStartFadeSize: usize = 0x264C; // float32
+                pub const m_flEndFadeSize: usize = 0x2650; // float32
+                pub const m_flStartFadeDot: usize = 0x2654; // float32
+                pub const m_flEndFadeDot: usize = 0x2658; // float32
+                pub const m_flRadiusTaper: usize = 0x265C; // float32
+                pub const m_nMinTesselation: usize = 0x2660; // int32
+                pub const m_nMaxTesselation: usize = 0x2664; // int32
+                pub const m_flTessScale: usize = 0x2668; // float32
+                pub const m_flTextureVWorldSize: usize = 0x2670; // CParticleCollectionRendererFloatInput
+                pub const m_flTextureVScrollRate: usize = 0x27C0; // CParticleCollectionRendererFloatInput
+                pub const m_flTextureVOffset: usize = 0x2910; // CParticleCollectionRendererFloatInput
+                pub const m_nTextureVParamsCP: usize = 0x2A60; // int32
+                pub const m_bClampV: usize = 0x2A64; // bool
+                pub const m_nScaleCP1: usize = 0x2A68; // int32
+                pub const m_nScaleCP2: usize = 0x2A6C; // int32
+                pub const m_flScaleVSizeByControlPointDistance: usize = 0x2A70; // float32
+                pub const m_flScaleVScrollByControlPointDistance: usize = 0x2A74; // float32
+                pub const m_flScaleVOffsetByControlPointDistance: usize = 0x2A78; // float32
+                pub const m_bUseScalarForTextureCoordinate: usize = 0x2A7D; // bool
+                pub const m_nScalarFieldForTextureCoordinate: usize = 0x2A80; // ParticleAttributeIndex_t
+                pub const m_flScalarAttributeTextureCoordScale: usize = 0x2A84; // float32
+                pub const m_bReverseOrder: usize = 0x2A88; // bool
+                pub const m_bClosedLoop: usize = 0x2A89; // bool
+                pub const m_nOrientationType: usize = 0x2A8C; // ParticleOrientationChoiceList_t
+                pub const m_nVectorFieldForOrientation: usize = 0x2A90; // ParticleAttributeIndex_t
+                pub const m_bDrawAsOpaque: usize = 0x2A94; // bool
+                pub const m_bGenerateNormals: usize = 0x2A95; // bool
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 19
@@ -899,21 +957,21 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderSound {
-                pub const m_flDurationScale: usize = 0x1F8; // float32
-                pub const m_flSndLvlScale: usize = 0x1FC; // float32
-                pub const m_flPitchScale: usize = 0x200; // float32
-                pub const m_flVolumeScale: usize = 0x204; // float32
-                pub const m_nSndLvlField: usize = 0x208; // ParticleAttributeIndex_t
-                pub const m_nDurationField: usize = 0x20C; // ParticleAttributeIndex_t
-                pub const m_nPitchField: usize = 0x210; // ParticleAttributeIndex_t
-                pub const m_nVolumeField: usize = 0x214; // ParticleAttributeIndex_t
-                pub const m_nChannel: usize = 0x218; // int32
-                pub const m_nCPReference: usize = 0x21C; // int32
-                pub const m_pszSoundName: usize = 0x220; // char[256]
-                pub const m_bSuppressStopSoundEvent: usize = 0x320; // bool
+                pub const m_flDurationScale: usize = 0x1FC; // float32
+                pub const m_flSndLvlScale: usize = 0x200; // float32
+                pub const m_flPitchScale: usize = 0x204; // float32
+                pub const m_flVolumeScale: usize = 0x208; // float32
+                pub const m_nSndLvlField: usize = 0x20C; // ParticleAttributeIndex_t
+                pub const m_nDurationField: usize = 0x210; // ParticleAttributeIndex_t
+                pub const m_nPitchField: usize = 0x214; // ParticleAttributeIndex_t
+                pub const m_nVolumeField: usize = 0x218; // ParticleAttributeIndex_t
+                pub const m_nChannel: usize = 0x21C; // int32
+                pub const m_nCPReference: usize = 0x220; // int32
+                pub const m_pszSoundName: usize = 0x224; // char[256]
+                pub const m_bSuppressStopSoundEvent: usize = 0x324; // bool
             }
             // Parent: None
-            // Fields count: 18
+            // Fields count: 19
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -923,19 +981,20 @@ pub mod cs2_dumper {
                 pub const m_flProxyRadius: usize = 0x8; // float32
                 pub const m_flInputMin: usize = 0xC; // float32
                 pub const m_flInputMax: usize = 0x10; // float32
-                pub const m_flNoPixelVisibilityFallback: usize = 0x14; // float32
-                pub const m_flDistanceInputMin: usize = 0x18; // float32
-                pub const m_flDistanceInputMax: usize = 0x1C; // float32
-                pub const m_flDotInputMin: usize = 0x20; // float32
-                pub const m_flDotInputMax: usize = 0x24; // float32
-                pub const m_bDotCPAngles: usize = 0x28; // bool
-                pub const m_bDotCameraAngles: usize = 0x29; // bool
-                pub const m_flAlphaScaleMin: usize = 0x2C; // float32
-                pub const m_flAlphaScaleMax: usize = 0x30; // float32
-                pub const m_flRadiusScaleMin: usize = 0x34; // float32
-                pub const m_flRadiusScaleMax: usize = 0x38; // float32
-                pub const m_flRadiusScaleFOVBase: usize = 0x3C; // float32
-                pub const m_bRightEye: usize = 0x40; // bool
+                pub const m_flInputPixelVisFade: usize = 0x14; // float32
+                pub const m_flNoPixelVisibilityFallback: usize = 0x18; // float32
+                pub const m_flDistanceInputMin: usize = 0x1C; // float32
+                pub const m_flDistanceInputMax: usize = 0x20; // float32
+                pub const m_flDotInputMin: usize = 0x24; // float32
+                pub const m_flDotInputMax: usize = 0x28; // float32
+                pub const m_bDotCPAngles: usize = 0x2C; // bool
+                pub const m_bDotCameraAngles: usize = 0x2D; // bool
+                pub const m_flAlphaScaleMin: usize = 0x30; // float32
+                pub const m_flAlphaScaleMax: usize = 0x34; // float32
+                pub const m_flRadiusScaleMin: usize = 0x38; // float32
+                pub const m_flRadiusScaleMax: usize = 0x3C; // float32
+                pub const m_flRadiusScaleFOVBase: usize = 0x40; // float32
+                pub const m_bRightEye: usize = 0x44; // bool
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 7
@@ -1207,68 +1266,68 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CBaseRendererSource2 {
-                pub const m_flRadiusScale: usize = 0x1F8; // CParticleCollectionRendererFloatInput
-                pub const m_flAlphaScale: usize = 0x348; // CParticleCollectionRendererFloatInput
-                pub const m_flRollScale: usize = 0x498; // CParticleCollectionRendererFloatInput
-                pub const m_nAlpha2Field: usize = 0x5E8; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x5F0; // CParticleCollectionRendererVecInput
-                pub const m_nColorBlendType: usize = 0xC20; // ParticleColorBlendType_t
-                pub const m_nShaderType: usize = 0xC24; // SpriteCardShaderType_t
-                pub const m_strShaderOverride: usize = 0xC28; // CUtlString
-                pub const m_flCenterXOffset: usize = 0xC30; // CParticleCollectionRendererFloatInput
-                pub const m_flCenterYOffset: usize = 0xD80; // CParticleCollectionRendererFloatInput
-                pub const m_flBumpStrength: usize = 0xED0; // float32
-                pub const m_nCropTextureOverride: usize = 0xED4; // ParticleSequenceCropOverride_t
-                pub const m_vecTexturesInput: usize = 0xED8; // CUtlVector<TextureGroup_t>
-                pub const m_flAnimationRate: usize = 0xEF0; // float32
-                pub const m_nAnimationType: usize = 0xEF4; // AnimationType_t
-                pub const m_bAnimateInFPS: usize = 0xEF8; // bool
-                pub const m_flSelfIllumAmount: usize = 0xF00; // CParticleCollectionRendererFloatInput
-                pub const m_flDiffuseAmount: usize = 0x1050; // CParticleCollectionRendererFloatInput
-                pub const m_flDiffuseClamp: usize = 0x11A0; // CParticleCollectionRendererFloatInput
-                pub const m_nLightingControlPoint: usize = 0x12F0; // int32
-                pub const m_nSelfIllumPerParticle: usize = 0x12F4; // ParticleAttributeIndex_t
-                pub const m_nOutputBlendMode: usize = 0x12F8; // ParticleOutputBlendMode_t
-                pub const m_bGammaCorrectVertexColors: usize = 0x12FC; // bool
-                pub const m_bSaturateColorPreAlphaBlend: usize = 0x12FD; // bool
-                pub const m_flAddSelfAmount: usize = 0x1300; // CParticleCollectionRendererFloatInput
-                pub const m_flDesaturation: usize = 0x1450; // CParticleCollectionRendererFloatInput
-                pub const m_flOverbrightFactor: usize = 0x15A0; // CParticleCollectionRendererFloatInput
-                pub const m_nHSVShiftControlPoint: usize = 0x16F0; // int32
-                pub const m_nFogType: usize = 0x16F4; // ParticleFogType_t
-                pub const m_flFogAmount: usize = 0x16F8; // CParticleCollectionRendererFloatInput
-                pub const m_bTintByFOW: usize = 0x1848; // bool
-                pub const m_bTintByGlobalLight: usize = 0x1849; // bool
-                pub const m_nPerParticleAlphaReference: usize = 0x184C; // SpriteCardPerParticleScale_t
-                pub const m_nPerParticleAlphaRefWindow: usize = 0x1850; // SpriteCardPerParticleScale_t
-                pub const m_nAlphaReferenceType: usize = 0x1854; // ParticleAlphaReferenceType_t
-                pub const m_flAlphaReferenceSoftness: usize = 0x1858; // CParticleCollectionRendererFloatInput
-                pub const m_flSourceAlphaValueToMapToZero: usize = 0x19A8; // CParticleCollectionRendererFloatInput
-                pub const m_flSourceAlphaValueToMapToOne: usize = 0x1AF8; // CParticleCollectionRendererFloatInput
-                pub const m_bRefract: usize = 0x1C48; // bool
-                pub const m_bRefractSolid: usize = 0x1C49; // bool
-                pub const m_flRefractAmount: usize = 0x1C50; // CParticleCollectionRendererFloatInput
-                pub const m_nRefractBlurRadius: usize = 0x1DA0; // int32
-                pub const m_nRefractBlurType: usize = 0x1DA4; // BlurFilterType_t
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x1DA8; // bool
-                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x1DA9; // bool
-                pub const m_bUseMixedResolutionRendering: usize = 0x1DAA; // bool
-                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x1DAB; // bool
-                pub const m_stencilTestID: usize = 0x1DAC; // char[128]
-                pub const m_bStencilTestExclude: usize = 0x1E2C; // bool
-                pub const m_stencilWriteID: usize = 0x1E2D; // char[128]
-                pub const m_bWriteStencilOnDepthPass: usize = 0x1EAD; // bool
-                pub const m_bWriteStencilOnDepthFail: usize = 0x1EAE; // bool
-                pub const m_bReverseZBuffering: usize = 0x1EAF; // bool
-                pub const m_bDisableZBuffering: usize = 0x1EB0; // bool
-                pub const m_nFeatheringMode: usize = 0x1EB4; // ParticleDepthFeatheringMode_t
-                pub const m_flFeatheringMinDist: usize = 0x1EB8; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringMaxDist: usize = 0x2008; // CParticleCollectionRendererFloatInput
-                pub const m_flFeatheringFilter: usize = 0x2158; // CParticleCollectionRendererFloatInput
-                pub const m_flDepthBias: usize = 0x22A8; // CParticleCollectionRendererFloatInput
-                pub const m_nSortMethod: usize = 0x23F8; // ParticleSortingChoiceList_t
-                pub const m_bBlendFramesSeq0: usize = 0x23FC; // bool
-                pub const m_bMaxLuminanceBlendingSequence0: usize = 0x23FD; // bool
+                pub const m_flRadiusScale: usize = 0x200; // CParticleCollectionRendererFloatInput
+                pub const m_flAlphaScale: usize = 0x350; // CParticleCollectionRendererFloatInput
+                pub const m_flRollScale: usize = 0x4A0; // CParticleCollectionRendererFloatInput
+                pub const m_nAlpha2Field: usize = 0x5F0; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x5F8; // CParticleCollectionRendererVecInput
+                pub const m_nColorBlendType: usize = 0xC28; // ParticleColorBlendType_t
+                pub const m_nShaderType: usize = 0xC2C; // SpriteCardShaderType_t
+                pub const m_strShaderOverride: usize = 0xC30; // CUtlString
+                pub const m_flCenterXOffset: usize = 0xC38; // CParticleCollectionRendererFloatInput
+                pub const m_flCenterYOffset: usize = 0xD88; // CParticleCollectionRendererFloatInput
+                pub const m_flBumpStrength: usize = 0xED8; // float32
+                pub const m_nCropTextureOverride: usize = 0xEDC; // ParticleSequenceCropOverride_t
+                pub const m_vecTexturesInput: usize = 0xEE0; // CUtlVector<TextureGroup_t>
+                pub const m_flAnimationRate: usize = 0xEF8; // float32
+                pub const m_nAnimationType: usize = 0xEFC; // AnimationType_t
+                pub const m_bAnimateInFPS: usize = 0xF00; // bool
+                pub const m_flSelfIllumAmount: usize = 0xF08; // CParticleCollectionRendererFloatInput
+                pub const m_flDiffuseAmount: usize = 0x1058; // CParticleCollectionRendererFloatInput
+                pub const m_flDiffuseClamp: usize = 0x11A8; // CParticleCollectionRendererFloatInput
+                pub const m_nLightingControlPoint: usize = 0x12F8; // int32
+                pub const m_nSelfIllumPerParticle: usize = 0x12FC; // ParticleAttributeIndex_t
+                pub const m_nOutputBlendMode: usize = 0x1300; // ParticleOutputBlendMode_t
+                pub const m_bGammaCorrectVertexColors: usize = 0x1304; // bool
+                pub const m_bSaturateColorPreAlphaBlend: usize = 0x1305; // bool
+                pub const m_flAddSelfAmount: usize = 0x1308; // CParticleCollectionRendererFloatInput
+                pub const m_flDesaturation: usize = 0x1458; // CParticleCollectionRendererFloatInput
+                pub const m_flOverbrightFactor: usize = 0x15A8; // CParticleCollectionRendererFloatInput
+                pub const m_nHSVShiftControlPoint: usize = 0x16F8; // int32
+                pub const m_nFogType: usize = 0x16FC; // ParticleFogType_t
+                pub const m_flFogAmount: usize = 0x1700; // CParticleCollectionRendererFloatInput
+                pub const m_bTintByFOW: usize = 0x1850; // bool
+                pub const m_bTintByGlobalLight: usize = 0x1851; // bool
+                pub const m_nPerParticleAlphaReference: usize = 0x1854; // SpriteCardPerParticleScale_t
+                pub const m_nPerParticleAlphaRefWindow: usize = 0x1858; // SpriteCardPerParticleScale_t
+                pub const m_nAlphaReferenceType: usize = 0x185C; // ParticleAlphaReferenceType_t
+                pub const m_flAlphaReferenceSoftness: usize = 0x1860; // CParticleCollectionRendererFloatInput
+                pub const m_flSourceAlphaValueToMapToZero: usize = 0x19B0; // CParticleCollectionRendererFloatInput
+                pub const m_flSourceAlphaValueToMapToOne: usize = 0x1B00; // CParticleCollectionRendererFloatInput
+                pub const m_bRefract: usize = 0x1C50; // bool
+                pub const m_bRefractSolid: usize = 0x1C51; // bool
+                pub const m_flRefractAmount: usize = 0x1C58; // CParticleCollectionRendererFloatInput
+                pub const m_nRefractBlurRadius: usize = 0x1DA8; // int32
+                pub const m_nRefractBlurType: usize = 0x1DAC; // BlurFilterType_t
+                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x1DB0; // bool
+                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x1DB1; // bool
+                pub const m_bUseMixedResolutionRendering: usize = 0x1DB2; // bool
+                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x1DB3; // bool
+                pub const m_stencilTestID: usize = 0x1DB4; // char[128]
+                pub const m_bStencilTestExclude: usize = 0x1E34; // bool
+                pub const m_stencilWriteID: usize = 0x1E35; // char[128]
+                pub const m_bWriteStencilOnDepthPass: usize = 0x1EB5; // bool
+                pub const m_bWriteStencilOnDepthFail: usize = 0x1EB6; // bool
+                pub const m_bReverseZBuffering: usize = 0x1EB7; // bool
+                pub const m_bDisableZBuffering: usize = 0x1EB8; // bool
+                pub const m_nFeatheringMode: usize = 0x1EBC; // ParticleDepthFeatheringMode_t
+                pub const m_flFeatheringMinDist: usize = 0x1EC0; // CParticleCollectionRendererFloatInput
+                pub const m_flFeatheringMaxDist: usize = 0x2010; // CParticleCollectionRendererFloatInput
+                pub const m_flFeatheringFilter: usize = 0x2160; // CParticleCollectionRendererFloatInput
+                pub const m_flDepthBias: usize = 0x22B0; // CParticleCollectionRendererFloatInput
+                pub const m_nSortMethod: usize = 0x2400; // ParticleSortingChoiceList_t
+                pub const m_bBlendFramesSeq0: usize = 0x2404; // bool
+                pub const m_bMaxLuminanceBlendingSequence0: usize = 0x2405; // bool
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 0
@@ -1319,26 +1378,26 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderTrails {
-                pub const m_bEnableFadingAndClamping: usize = 0x28E9; // bool
-                pub const m_flStartFadeDot: usize = 0x28EC; // float32
-                pub const m_flEndFadeDot: usize = 0x28F0; // float32
-                pub const m_nPrevPntSource: usize = 0x28F4; // ParticleAttributeIndex_t
-                pub const m_flMaxLength: usize = 0x28F8; // float32
-                pub const m_flMinLength: usize = 0x28FC; // float32
-                pub const m_bIgnoreDT: usize = 0x2900; // bool
-                pub const m_flConstrainRadiusToLengthRatio: usize = 0x2904; // float32
-                pub const m_flLengthScale: usize = 0x2908; // float32
-                pub const m_flLengthFadeInTime: usize = 0x290C; // float32
-                pub const m_flRadiusHeadTaper: usize = 0x2910; // CPerParticleFloatInput
-                pub const m_vecHeadColorScale: usize = 0x2A60; // CParticleCollectionVecInput
-                pub const m_flHeadAlphaScale: usize = 0x3090; // CPerParticleFloatInput
-                pub const m_flRadiusTaper: usize = 0x31E0; // CPerParticleFloatInput
-                pub const m_vecTailColorScale: usize = 0x3330; // CParticleCollectionVecInput
-                pub const m_flTailAlphaScale: usize = 0x3960; // CPerParticleFloatInput
-                pub const m_nHorizCropField: usize = 0x3AB0; // ParticleAttributeIndex_t
-                pub const m_nVertCropField: usize = 0x3AB4; // ParticleAttributeIndex_t
-                pub const m_flForwardShift: usize = 0x3AB8; // float32
-                pub const m_bFlipUVBasedOnPitchYaw: usize = 0x3ABC; // bool
+                pub const m_bEnableFadingAndClamping: usize = 0x28F1; // bool
+                pub const m_flStartFadeDot: usize = 0x28F4; // float32
+                pub const m_flEndFadeDot: usize = 0x28F8; // float32
+                pub const m_nPrevPntSource: usize = 0x28FC; // ParticleAttributeIndex_t
+                pub const m_flMaxLength: usize = 0x2900; // float32
+                pub const m_flMinLength: usize = 0x2904; // float32
+                pub const m_bIgnoreDT: usize = 0x2908; // bool
+                pub const m_flConstrainRadiusToLengthRatio: usize = 0x290C; // float32
+                pub const m_flLengthScale: usize = 0x2910; // float32
+                pub const m_flLengthFadeInTime: usize = 0x2914; // float32
+                pub const m_flRadiusHeadTaper: usize = 0x2918; // CPerParticleFloatInput
+                pub const m_vecHeadColorScale: usize = 0x2A68; // CParticleCollectionVecInput
+                pub const m_flHeadAlphaScale: usize = 0x3098; // CPerParticleFloatInput
+                pub const m_flRadiusTaper: usize = 0x31E8; // CPerParticleFloatInput
+                pub const m_vecTailColorScale: usize = 0x3338; // CParticleCollectionVecInput
+                pub const m_flTailAlphaScale: usize = 0x3968; // CPerParticleFloatInput
+                pub const m_nHorizCropField: usize = 0x3AB8; // ParticleAttributeIndex_t
+                pub const m_nVertCropField: usize = 0x3ABC; // ParticleAttributeIndex_t
+                pub const m_flForwardShift: usize = 0x3AC0; // float32
+                pub const m_bFlipUVBasedOnPitchYaw: usize = 0x3AC4; // bool
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 3
@@ -1458,10 +1517,10 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderTonemapController {
-                pub const m_flTonemapLevel: usize = 0x1F8; // float32
-                pub const m_flTonemapWeight: usize = 0x1FC; // float32
-                pub const m_nTonemapLevelField: usize = 0x200; // ParticleAttributeIndex_t
-                pub const m_nTonemapWeightField: usize = 0x204; // ParticleAttributeIndex_t
+                pub const m_flTonemapLevel: usize = 0x1FC; // float32
+                pub const m_flTonemapWeight: usize = 0x200; // float32
+                pub const m_nTonemapLevelField: usize = 0x204; // ParticleAttributeIndex_t
+                pub const m_nTonemapWeightField: usize = 0x208; // ParticleAttributeIndex_t
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 3
@@ -1595,7 +1654,7 @@ pub mod cs2_dumper {
                 pub const m_bInfiniteLine: usize = 0x1C0; // bool
             }
             // Parent: CParticleFunctionEmitter
-            // Fields count: 10
+            // Fields count: 11
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1606,10 +1665,11 @@ pub mod cs2_dumper {
                 pub const m_flEmissionScale: usize = 0x5A8; // float32
                 pub const m_flScalePerParentParticle: usize = 0x5AC; // float32
                 pub const m_bInitFromKilledParentParticles: usize = 0x5B0; // bool
-                pub const m_nSnapshotControlPoint: usize = 0x5B4; // int32
-                pub const m_nLimitPerUpdate: usize = 0x5B8; // int32
-                pub const m_bForceEmitOnFirstUpdate: usize = 0x5BC; // bool
-                pub const m_bForceEmitOnLastUpdate: usize = 0x5BD; // bool
+                pub const m_nEventType: usize = 0x5B4; // EventTypeSelection_t
+                pub const m_nSnapshotControlPoint: usize = 0x5B8; // int32
+                pub const m_nLimitPerUpdate: usize = 0x5BC; // int32
+                pub const m_bForceEmitOnFirstUpdate: usize = 0x5C0; // bool
+                pub const m_bForceEmitOnLastUpdate: usize = 0x5C1; // bool
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -1665,6 +1725,18 @@ pub mod cs2_dumper {
                 pub const m_flRemapBias: usize = 0x1DC; // float32
             }
             // Parent: CParticleFunctionOperator
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_SetUserEvent {
+                pub const m_flInput: usize = 0x1B0; // CPerParticleFloatInput
+                pub const m_flRisingEdge: usize = 0x300; // CPerParticleFloatInput
+                pub const m_nRisingEventType: usize = 0x450; // EventTypeSelection_t
+                pub const m_flFallingEdge: usize = 0x458; // CPerParticleFloatInput
+                pub const m_nFallingEventType: usize = 0x5A8; // EventTypeSelection_t
+            }
+            // Parent: CParticleFunctionOperator
             // Fields count: 2
             //
             // Metadata:
@@ -1678,20 +1750,23 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MPulseInstanceDomainInfo
+            // MPulseDomainHookInfo
             // MPulseLibraryBindings
             // MPulseDomainOptInFeatureTag
             // MPulseDomainOptInFeatureTag
             pub mod CParticleCollectionBindingInstance {
             }
             // Parent: CParticleFunctionOperator
-            // Fields count: 3
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_BasicMovement {
                 pub const m_Gravity: usize = 0x1B0; // CParticleCollectionVecInput
                 pub const m_fDrag: usize = 0x7E0; // CParticleCollectionFloatInput
-                pub const m_nMaxConstraintPasses: usize = 0x930; // int32
+                pub const m_massControls: usize = 0x930; // CParticleMassCalculationParameters
+                pub const m_nMaxConstraintPasses: usize = 0xD28; // int32
+                pub const m_bUseNewCode: usize = 0xD2C; // bool
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 6
@@ -1707,12 +1782,13 @@ pub mod cs2_dumper {
                 pub const m_nFieldOutput: usize = 0x1DC; // ParticleAttributeIndex_t
             }
             // Parent: CParticleFunctionInitializer
-            // Fields count: 1
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_InitFromParentKilled {
                 pub const m_nAttributeToCopy: usize = 0x1B4; // ParticleAttributeIndex_t
+                pub const m_nEventType: usize = 0x1B8; // EventTypeSelection_t
             }
             // Parent: CParticleFunctionRenderer
             // Fields count: 0
@@ -2124,16 +2200,19 @@ pub mod cs2_dumper {
                 pub const m_nDistSqrAttr: usize = 0x938; // ParticleAttributeIndex_t
             }
             // Parent: CParticleFunctionRenderer
-            // Fields count: 5
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderSimpleModelCollection {
-                pub const m_bCenterOffset: usize = 0x1F6; // bool
-                pub const m_modelInput: usize = 0x1F8; // CParticleModelInput
-                pub const m_nLOD: usize = 0x250; // int32
-                pub const m_bDisableShadows: usize = 0x254; // bool
-                pub const m_bAcceptsDecals: usize = 0x255; // bool
+                pub const m_bCenterOffset: usize = 0x1FA; // bool
+                pub const m_hModel: usize = 0x200; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_modelInput: usize = 0x208; // CParticleModelInput
+                pub const m_nLOD: usize = 0x260; // int32
+                pub const m_bDisableShadows: usize = 0x264; // bool
+                pub const m_bDisableMotionBlur: usize = 0x265; // bool
+                pub const m_bAcceptsDecals: usize = 0x266; // bool
+                pub const m_nAngularVelocityField: usize = 0x268; // ParticleAttributeIndex_t
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 4
@@ -2249,14 +2328,14 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderAsModels {
-                pub const m_ModelList: usize = 0x1F8; // CUtlVector<ModelReference_t>
-                pub const m_flModelScale: usize = 0x214; // float32
-                pub const m_bFitToModelSize: usize = 0x218; // bool
-                pub const m_bNonUniformScaling: usize = 0x219; // bool
-                pub const m_nXAxisScalingAttribute: usize = 0x21C; // ParticleAttributeIndex_t
-                pub const m_nYAxisScalingAttribute: usize = 0x220; // ParticleAttributeIndex_t
-                pub const m_nZAxisScalingAttribute: usize = 0x224; // ParticleAttributeIndex_t
-                pub const m_nSizeCullBloat: usize = 0x228; // int32
+                pub const m_ModelList: usize = 0x200; // CUtlVector<ModelReference_t>
+                pub const m_flModelScale: usize = 0x21C; // float32
+                pub const m_bFitToModelSize: usize = 0x220; // bool
+                pub const m_bNonUniformScaling: usize = 0x221; // bool
+                pub const m_nXAxisScalingAttribute: usize = 0x224; // ParticleAttributeIndex_t
+                pub const m_nYAxisScalingAttribute: usize = 0x228; // ParticleAttributeIndex_t
+                pub const m_nZAxisScalingAttribute: usize = 0x22C; // ParticleAttributeIndex_t
+                pub const m_nSizeCullBloat: usize = 0x230; // int32
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 10
@@ -2327,7 +2406,7 @@ pub mod cs2_dumper {
                 pub const m_vRandomMax: usize = 0x624; // Vector
             }
             // Parent: CParticleFunctionEmitter
-            // Fields count: 6
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2335,6 +2414,7 @@ pub mod cs2_dumper {
                 pub const m_nParticlesToEmit: usize = 0x1B8; // CParticleCollectionFloatInput
                 pub const m_flStartTime: usize = 0x308; // CParticleCollectionFloatInput
                 pub const m_flInitFromKilledParentParticles: usize = 0x458; // float32
+                pub const m_nEventType: usize = 0x45C; // EventTypeSelection_t
                 pub const m_flParentParticleScale: usize = 0x460; // CParticleCollectionFloatInput
                 pub const m_nMaxEmittedPerFrame: usize = 0x5B0; // int32
                 pub const m_nSnapshotControlPoint: usize = 0x5B4; // int32
@@ -2369,13 +2449,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CBaseTrailRenderer {
-                pub const m_nOrientationType: usize = 0x2638; // ParticleOrientationChoiceList_t
-                pub const m_nOrientationControlPoint: usize = 0x263C; // int32
-                pub const m_flMinSize: usize = 0x2640; // float32
-                pub const m_flMaxSize: usize = 0x2644; // float32
-                pub const m_flStartFadeSize: usize = 0x2648; // CParticleCollectionRendererFloatInput
-                pub const m_flEndFadeSize: usize = 0x2798; // CParticleCollectionRendererFloatInput
-                pub const m_bClampV: usize = 0x28E8; // bool
+                pub const m_nOrientationType: usize = 0x2640; // ParticleOrientationChoiceList_t
+                pub const m_nOrientationControlPoint: usize = 0x2644; // int32
+                pub const m_flMinSize: usize = 0x2648; // float32
+                pub const m_flMaxSize: usize = 0x264C; // float32
+                pub const m_flStartFadeSize: usize = 0x2650; // CParticleCollectionRendererFloatInput
+                pub const m_flEndFadeSize: usize = 0x27A0; // CParticleCollectionRendererFloatInput
+                pub const m_bClampV: usize = 0x28F0; // bool
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 4
@@ -2472,9 +2552,9 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderVRHapticEvent {
-                pub const m_nHand: usize = 0x1F8; // ParticleVRHandChoiceList_t
-                pub const m_nOutputHandCP: usize = 0x1FC; // int32
-                pub const m_nOutputField: usize = 0x200; // int32
+                pub const m_nHand: usize = 0x1FC; // ParticleVRHandChoiceList_t
+                pub const m_nOutputHandCP: usize = 0x200; // int32
+                pub const m_nOutputField: usize = 0x204; // int32
                 pub const m_flAmplitude: usize = 0x208; // CPerParticleFloatInput
             }
             // Parent: CParticleFunctionPreEmission
@@ -2574,17 +2654,19 @@ pub mod cs2_dumper {
                 pub const m_flFreezeTime: usize = 0x1B0; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionRenderer
-            // Fields count: 6
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderGpuImplicit {
-                pub const m_bUsePerParticleRadius: usize = 0x1F6; // bool
-                pub const m_fGridSize: usize = 0x1F8; // CParticleCollectionRendererFloatInput
-                pub const m_fRadiusScale: usize = 0x348; // CParticleCollectionRendererFloatInput
-                pub const m_fIsosurfaceThreshold: usize = 0x498; // CParticleCollectionRendererFloatInput
-                pub const m_nScaleCP: usize = 0x5E8; // int32
-                pub const m_hMaterial: usize = 0x5F0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_bUsePerParticleRadius: usize = 0x1FA; // bool
+                pub const m_nVertexCountKb: usize = 0x1FC; // uint32
+                pub const m_nIndexCountKb: usize = 0x200; // uint32
+                pub const m_fGridSize: usize = 0x208; // CParticleCollectionRendererFloatInput
+                pub const m_fRadiusScale: usize = 0x358; // CParticleCollectionRendererFloatInput
+                pub const m_fIsosurfaceThreshold: usize = 0x4A8; // CParticleCollectionRendererFloatInput
+                pub const m_nScaleCP: usize = 0x5F8; // int32
+                pub const m_hMaterial: usize = 0x600; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: IParticleEffect
             // Fields count: 32
@@ -2763,11 +2845,11 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CParticleFunctionRenderer {
                 pub const VisibilityInputs: usize = 0x1B0; // CParticleVisibilityInputs
-                pub const m_bCannotBeRefracted: usize = 0x1F4; // bool
-                pub const m_bSkipRenderingOnMobile: usize = 0x1F5; // bool
+                pub const m_bCannotBeRefracted: usize = 0x1F8; // bool
+                pub const m_bSkipRenderingOnMobile: usize = 0x1F9; // bool
             }
             // Parent: IParticleSystemDefinition
-            // Fields count: 64
+            // Fields count: 65
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2829,6 +2911,7 @@ pub mod cs2_dumper {
                 pub const m_bShouldBatch: usize = 0x30C; // bool
                 pub const m_bShouldHitboxesFallbackToRenderBounds: usize = 0x30D; // bool
                 pub const m_bShouldHitboxesFallbackToSnapshot: usize = 0x30E; // bool
+                pub const m_bShouldHitboxesFallbackToCollisionHulls: usize = 0x30F; // bool
                 pub const m_nViewModelEffect: usize = 0x310; // InheritableBoolType_t
                 pub const m_bScreenSpaceEffect: usize = 0x314; // bool
                 pub const m_pszTargetLayerID: usize = 0x318; // CUtlSymbolLarge
@@ -2867,8 +2950,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderScreenVelocityRotate {
-                pub const m_flRotateRateDegrees: usize = 0x1F8; // float32
-                pub const m_flForwardDegrees: usize = 0x1FC; // float32
+                pub const m_flRotateRateDegrees: usize = 0x1FC; // float32
+                pub const m_flForwardDegrees: usize = 0x200; // float32
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -3015,9 +3098,9 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderPostProcessing {
-                pub const m_flPostProcessStrength: usize = 0x1F8; // CPerParticleFloatInput
-                pub const m_hPostTexture: usize = 0x348; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-                pub const m_nPriority: usize = 0x350; // ParticlePostProcessPriorityGroup_t
+                pub const m_flPostProcessStrength: usize = 0x200; // CPerParticleFloatInput
+                pub const m_hPostTexture: usize = 0x350; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
+                pub const m_nPriority: usize = 0x358; // ParticlePostProcessPriorityGroup_t
             }
             // Parent: CParticleFunctionConstraint
             // Fields count: 27
@@ -3062,17 +3145,19 @@ pub mod cs2_dumper {
             pub mod CParticleCollectionVecInput {
             }
             // Parent: CParticleFunctionRenderer
-            // Fields count: 6
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderBlobs {
-                pub const m_cubeWidth: usize = 0x1F8; // CParticleCollectionRendererFloatInput
-                pub const m_cutoffRadius: usize = 0x348; // CParticleCollectionRendererFloatInput
-                pub const m_renderRadius: usize = 0x498; // CParticleCollectionRendererFloatInput
-                pub const m_nScaleCP: usize = 0x5E8; // int32
-                pub const m_MaterialVars: usize = 0x5F0; // CUtlVector<MaterialVariable_t>
-                pub const m_hMaterial: usize = 0x620; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_cubeWidth: usize = 0x200; // CParticleCollectionRendererFloatInput
+                pub const m_cutoffRadius: usize = 0x350; // CParticleCollectionRendererFloatInput
+                pub const m_renderRadius: usize = 0x4A0; // CParticleCollectionRendererFloatInput
+                pub const m_nVertexCountKb: usize = 0x5F0; // uint32
+                pub const m_nIndexCountKb: usize = 0x5F4; // uint32
+                pub const m_nScaleCP: usize = 0x5F8; // int32
+                pub const m_MaterialVars: usize = 0x600; // CUtlVector<MaterialVariable_t>
+                pub const m_hMaterial: usize = 0x630; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 13
@@ -3175,16 +3260,6 @@ pub mod cs2_dumper {
                 pub const m_nSetMethod: usize = 0xE1C; // ParticleSetMethod_t
                 pub const m_bNormalizedOutput: usize = 0xE20; // bool
             }
-            // Parent: CParticleFunctionOperator
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod C_OP_ParticlePhysics {
-                pub const m_Gravity: usize = 0x1B0; // CParticleCollectionVecInput
-                pub const m_fDrag: usize = 0x7E0; // CParticleCollectionFloatInput
-                pub const m_nMaxConstraintPasses: usize = 0x930; // int32
-            }
             // Parent: CParticleFunctionInitializer
             // Fields count: 6
             //
@@ -3227,13 +3302,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffect {
-                pub const m_pTextureColorWarp: usize = 0x1F8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail2: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDiffuseWarp: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureFresnelColorWarp: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureFresnelWarp: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSpecularWarp: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureEnvMap: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail2: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDiffuseWarp: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureFresnelColorWarp: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureFresnelWarp: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSpecularWarp: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureEnvMap: usize = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CParticleFunctionForce
             // Fields count: 2
@@ -3304,7 +3379,7 @@ pub mod cs2_dumper {
                 pub const m_HitboxSetName: usize = 0x1B7; // char[128]
             }
             // Parent: CParticleFunctionOperator
-            // Fields count: 5
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3313,7 +3388,6 @@ pub mod cs2_dumper {
                 pub const m_nOutputField: usize = 0x300; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x304; // ParticleSetMethod_t
                 pub const m_Lerp: usize = 0x308; // CPerParticleFloatInput
-                pub const m_bUseNewCode: usize = 0x458; // bool
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 13
@@ -3518,13 +3592,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderLights {
-                pub const m_flAnimationRate: usize = 0x200; // float32
-                pub const m_nAnimationType: usize = 0x204; // AnimationType_t
-                pub const m_bAnimateInFPS: usize = 0x208; // bool
-                pub const m_flMinSize: usize = 0x20C; // float32
-                pub const m_flMaxSize: usize = 0x210; // float32
-                pub const m_flStartFadeSize: usize = 0x214; // float32
-                pub const m_flEndFadeSize: usize = 0x218; // float32
+                pub const m_flAnimationRate: usize = 0x208; // float32
+                pub const m_nAnimationType: usize = 0x20C; // AnimationType_t
+                pub const m_bAnimateInFPS: usize = 0x210; // bool
+                pub const m_flMinSize: usize = 0x214; // float32
+                pub const m_flMaxSize: usize = 0x218; // float32
+                pub const m_flStartFadeSize: usize = 0x21C; // float32
+                pub const m_flEndFadeSize: usize = 0x220; // float32
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 1
@@ -3563,7 +3637,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderPoints {
-                pub const m_hMaterial: usize = 0x1F8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_hMaterial: usize = 0x200; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 6
@@ -3811,7 +3885,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderText {
-                pub const m_OutlineColor: usize = 0x1F6; // Color
+                pub const m_OutlineColor: usize = 0x1FA; // Color
                 pub const m_DefaultText: usize = 0x200; // CUtlString
             }
             // Parent: CParticleFunctionOperator
@@ -4186,7 +4260,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderOmni2Light {
-                pub const m_nLightType: usize = 0x1F8; // ParticleOmni2LightTypeChoiceList_t
+                pub const m_nLightType: usize = 0x1FC; // ParticleOmni2LightTypeChoiceList_t
                 pub const m_vColorBlend: usize = 0x200; // CParticleCollectionVecInput
                 pub const m_nColorBlendType: usize = 0x830; // ParticleColorBlendType_t
                 pub const m_nBrightnessUnit: usize = 0x834; // ParticleLightUnitChoiceList_t
@@ -4310,6 +4384,17 @@ pub mod cs2_dumper {
                 pub const m_flSaturationAdjust: usize = 0x300; // CPerParticleFloatInput
                 pub const m_flLightnessAdjust: usize = 0x450; // CPerParticleFloatInput
             }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CParticleMassCalculationParameters {
+                pub const m_nMassMode: usize = 0x0; // ParticleMassMode_t
+                pub const m_flRadius: usize = 0x8; // CPerParticleFloatInput
+                pub const m_flNominalRadius: usize = 0x158; // CPerParticleFloatInput
+                pub const m_flScale: usize = 0x2A8; // CPerParticleFloatInput
+            }
             // Parent: CParticleFunctionOperator
             // Fields count: 8
             //
@@ -4355,20 +4440,21 @@ pub mod cs2_dumper {
                 pub const m_bWritePreviousPosition: usize = 0x7F1; // bool
             }
             // Parent: CParticleFunctionInitializer
-            // Fields count: 9
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_SetHitboxToModel {
                 pub const m_nControlPointNumber: usize = 0x1B4; // int32
                 pub const m_nForceInModel: usize = 0x1B8; // int32
-                pub const m_nDesiredHitbox: usize = 0x1BC; // int32
-                pub const m_vecHitBoxScale: usize = 0x1C0; // CParticleCollectionVecInput
-                pub const m_vecDirectionBias: usize = 0x7F0; // Vector
-                pub const m_bMaintainHitbox: usize = 0x7FC; // bool
-                pub const m_bUseBones: usize = 0x7FD; // bool
-                pub const m_HitboxSetName: usize = 0x7FE; // char[128]
-                pub const m_flShellSize: usize = 0x880; // CParticleCollectionFloatInput
+                pub const m_bEvenDistribution: usize = 0x1BC; // bool
+                pub const m_nDesiredHitbox: usize = 0x1C0; // int32
+                pub const m_vecHitBoxScale: usize = 0x1C8; // CParticleCollectionVecInput
+                pub const m_vecDirectionBias: usize = 0x7F8; // Vector
+                pub const m_bMaintainHitbox: usize = 0x804; // bool
+                pub const m_bUseBones: usize = 0x805; // bool
+                pub const m_HitboxSetName: usize = 0x806; // char[128]
+                pub const m_flShellSize: usize = 0x888; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 6
@@ -4528,28 +4614,28 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderCables {
-                pub const m_flRadiusScale: usize = 0x1F8; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x348; // CParticleCollectionFloatInput
-                pub const m_vecColorScale: usize = 0x498; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0xAC8; // ParticleColorBlendType_t
-                pub const m_hMaterial: usize = 0xAD0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_nTextureRepetitionMode: usize = 0xAD8; // TextureRepetitionMode_t
-                pub const m_flTextureRepeatsPerSegment: usize = 0xAE0; // CParticleCollectionFloatInput
-                pub const m_flTextureRepeatsCircumference: usize = 0xC30; // CParticleCollectionFloatInput
-                pub const m_flColorMapOffsetV: usize = 0xD80; // CParticleCollectionFloatInput
-                pub const m_flColorMapOffsetU: usize = 0xED0; // CParticleCollectionFloatInput
-                pub const m_flNormalMapOffsetV: usize = 0x1020; // CParticleCollectionFloatInput
-                pub const m_flNormalMapOffsetU: usize = 0x1170; // CParticleCollectionFloatInput
-                pub const m_bDrawCableCaps: usize = 0x12C0; // bool
-                pub const m_flCapRoundness: usize = 0x12C4; // float32
-                pub const m_flCapOffsetAmount: usize = 0x12C8; // float32
-                pub const m_flTessScale: usize = 0x12CC; // float32
-                pub const m_nMinTesselation: usize = 0x12D0; // int32
-                pub const m_nMaxTesselation: usize = 0x12D4; // int32
-                pub const m_nRoundness: usize = 0x12D8; // int32
-                pub const m_LightingTransform: usize = 0x12E0; // CParticleTransformInput
-                pub const m_MaterialFloatVars: usize = 0x1340; // CUtlVector<FloatInputMaterialVariable_t>
-                pub const m_MaterialVecVars: usize = 0x1370; // CUtlVector<VecInputMaterialVariable_t>
+                pub const m_flRadiusScale: usize = 0x200; // CParticleCollectionFloatInput
+                pub const m_flAlphaScale: usize = 0x350; // CParticleCollectionFloatInput
+                pub const m_vecColorScale: usize = 0x4A0; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0xAD0; // ParticleColorBlendType_t
+                pub const m_hMaterial: usize = 0xAD8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_nTextureRepetitionMode: usize = 0xAE0; // TextureRepetitionMode_t
+                pub const m_flTextureRepeatsPerSegment: usize = 0xAE8; // CParticleCollectionFloatInput
+                pub const m_flTextureRepeatsCircumference: usize = 0xC38; // CParticleCollectionFloatInput
+                pub const m_flColorMapOffsetV: usize = 0xD88; // CParticleCollectionFloatInput
+                pub const m_flColorMapOffsetU: usize = 0xED8; // CParticleCollectionFloatInput
+                pub const m_flNormalMapOffsetV: usize = 0x1028; // CParticleCollectionFloatInput
+                pub const m_flNormalMapOffsetU: usize = 0x1178; // CParticleCollectionFloatInput
+                pub const m_bDrawCableCaps: usize = 0x12C8; // bool
+                pub const m_flCapRoundness: usize = 0x12CC; // float32
+                pub const m_flCapOffsetAmount: usize = 0x12D0; // float32
+                pub const m_flTessScale: usize = 0x12D4; // float32
+                pub const m_nMinTesselation: usize = 0x12D8; // int32
+                pub const m_nMaxTesselation: usize = 0x12DC; // int32
+                pub const m_nRoundness: usize = 0x12E0; // int32
+                pub const m_LightingTransform: usize = 0x12E8; // CParticleTransformInput
+                pub const m_MaterialFloatVars: usize = 0x1348; // CUtlVector<FloatInputMaterialVariable_t>
+                pub const m_MaterialVecVars: usize = 0x1378; // CUtlVector<VecInputMaterialVariable_t>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 2
@@ -4812,6 +4898,21 @@ pub mod cs2_dumper {
                 pub const m_TransformInput: usize = 0x930; // CParticleTransformInput
                 pub const m_bLocalSpace: usize = 0x990; // bool
             }
+            // Parent: CParticleFunctionForce
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_IntraParticleForce {
+                pub const m_flAttractionMinDistance: usize = 0x1BC; // float32
+                pub const m_flAttractionMaxDistance: usize = 0x1C0; // float32
+                pub const m_flAttractionMaxStrength: usize = 0x1C4; // float32
+                pub const m_flRepulsionMinDistance: usize = 0x1C8; // float32
+                pub const m_flRepulsionMaxDistance: usize = 0x1CC; // float32
+                pub const m_flRepulsionMaxStrength: usize = 0x1D0; // float32
+                pub const m_bUseAABB: usize = 0x1D4; // bool
+                pub const m_bThreadIt: usize = 0x1D5; // bool
+            }
             // Parent: CParticleFunctionInitializer
             // Fields count: 4
             //
@@ -4824,7 +4925,7 @@ pub mod cs2_dumper {
                 pub const m_InputStrength: usize = 0x310; // CPerParticleFloatInput
             }
             // Parent: CParticleFunctionInitializer
-            // Fields count: 14
+            // Fields count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -4832,17 +4933,19 @@ pub mod cs2_dumper {
                 pub const m_modelInput: usize = 0x1B8; // CParticleModelInput
                 pub const m_transformInput: usize = 0x210; // CParticleTransformInput
                 pub const m_nForceInModel: usize = 0x270; // int32
-                pub const m_nDesiredHitbox: usize = 0x274; // int32
-                pub const m_nHitboxValueFromControlPointIndex: usize = 0x278; // int32
-                pub const m_vecHitBoxScale: usize = 0x280; // CParticleCollectionVecInput
-                pub const m_flBoneVelocity: usize = 0x8B0; // float32
-                pub const m_flMaxBoneVelocity: usize = 0x8B4; // float32
-                pub const m_vecDirectionBias: usize = 0x8B8; // CParticleCollectionVecInput
-                pub const m_HitboxSetName: usize = 0xEE8; // char[128]
-                pub const m_bLocalCoords: usize = 0xF68; // bool
-                pub const m_bUseBones: usize = 0xF69; // bool
-                pub const m_bUseMesh: usize = 0xF6A; // bool
-                pub const m_flShellSize: usize = 0xF70; // CParticleCollectionFloatInput
+                pub const m_bScaleToVolume: usize = 0x274; // bool
+                pub const m_bEvenDistribution: usize = 0x275; // bool
+                pub const m_nDesiredHitbox: usize = 0x278; // CParticleCollectionFloatInput
+                pub const m_nHitboxValueFromControlPointIndex: usize = 0x3C8; // int32
+                pub const m_vecHitBoxScale: usize = 0x3D0; // CParticleCollectionVecInput
+                pub const m_flBoneVelocity: usize = 0xA00; // float32
+                pub const m_flMaxBoneVelocity: usize = 0xA04; // float32
+                pub const m_vecDirectionBias: usize = 0xA08; // CParticleCollectionVecInput
+                pub const m_HitboxSetName: usize = 0x1038; // char[128]
+                pub const m_bLocalCoords: usize = 0x10B8; // bool
+                pub const m_bUseBones: usize = 0x10B9; // bool
+                pub const m_bUseMesh: usize = 0x10BA; // bool
+                pub const m_flShellSize: usize = 0x10C0; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 4
@@ -4873,23 +4976,29 @@ pub mod cs2_dumper {
             pub mod C_INIT_RandomNamedModelMeshGroup {
             }
             // Parent: CParticleFunctionRenderer
-            // Fields count: 12
+            // Fields count: 18
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderProjected {
-                pub const m_bProjectCharacter: usize = 0x1F6; // bool
-                pub const m_bProjectWorld: usize = 0x1F7; // bool
-                pub const m_bProjectWater: usize = 0x1F8; // bool
-                pub const m_bFlipHorizontal: usize = 0x1F9; // bool
-                pub const m_bEnableProjectedDepthControls: usize = 0x1FA; // bool
-                pub const m_flMinProjectionDepth: usize = 0x1FC; // float32
-                pub const m_flMaxProjectionDepth: usize = 0x200; // float32
+                pub const m_bProjectCharacter: usize = 0x1FA; // bool
+                pub const m_bProjectWorld: usize = 0x1FB; // bool
+                pub const m_bProjectWater: usize = 0x1FC; // bool
+                pub const m_bFlipHorizontal: usize = 0x1FD; // bool
+                pub const m_bEnableProjectedDepthControls: usize = 0x1FE; // bool
+                pub const m_flMinProjectionDepth: usize = 0x200; // float32
+                pub const m_flMaxProjectionDepth: usize = 0x204; // float32
                 pub const m_vecProjectedMaterials: usize = 0x208; // CUtlVector<RenderProjectedMaterial_t>
                 pub const m_flMaterialSelection: usize = 0x220; // CPerParticleFloatInput
                 pub const m_flAnimationTimeScale: usize = 0x370; // float32
                 pub const m_bOrientToNormal: usize = 0x374; // bool
                 pub const m_MaterialVars: usize = 0x378; // CUtlVector<MaterialVariable_t>
+                pub const m_flRadiusScale: usize = 0x390; // CParticleCollectionFloatInput
+                pub const m_flAlphaScale: usize = 0x4E0; // CParticleCollectionFloatInput
+                pub const m_flRollScale: usize = 0x630; // CParticleCollectionFloatInput
+                pub const m_nAlpha2Field: usize = 0x780; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x788; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0xDB8; // ParticleColorBlendType_t
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 4
@@ -4968,7 +5077,7 @@ pub mod cs2_dumper {
                 pub const unused: usize = 0x0; // int32
             }
             // Parent: CParticleFunctionOperator
-            // Fields count: 6
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -4978,7 +5087,6 @@ pub mod cs2_dumper {
                 pub const m_flFadeEndTime: usize = 0x1C4; // float32
                 pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
                 pub const m_bEaseInOut: usize = 0x1CC; // bool
-                pub const m_bUseNewCode: usize = 0x1CD; // bool
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 10
@@ -5097,12 +5205,12 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStatusEffectCitadel {
-                pub const m_pTextureColorWarp: usize = 0x1F8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureNormal: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureMetalness: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureRoughness: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureSelfIllum: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                pub const m_pTextureDetail: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureColorWarp: usize = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureNormal: usize = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureMetalness: usize = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureRoughness: usize = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureSelfIllum: usize = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                pub const m_pTextureDetail: usize = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CParticleFunctionInitializer
             // Fields count: 11
@@ -5164,7 +5272,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStandardLight {
-                pub const m_nLightType: usize = 0x1F8; // ParticleLightTypeChoiceList_t
+                pub const m_nLightType: usize = 0x1FC; // ParticleLightTypeChoiceList_t
                 pub const m_vecColorScale: usize = 0x200; // CParticleCollectionVecInput
                 pub const m_nColorBlendType: usize = 0x830; // ParticleColorBlendType_t
                 pub const m_flIntensity: usize = 0x838; // CParticleCollectionFloatInput
@@ -5297,10 +5405,6 @@ pub mod cs2_dumper {
                 pub const m_nCP: usize = 0x938; // int32
                 pub const m_nLocalCP: usize = 0x93C; // int32
             }
-            // Parent: None
-            // Fields count: 0
-            pub mod IControlPointEditorData {
-            }
             // Parent: CParticleFunctionForce
             // Fields count: 7
             //
@@ -5350,15 +5454,15 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderScreenShake {
-                pub const m_flDurationScale: usize = 0x1F8; // float32
-                pub const m_flRadiusScale: usize = 0x1FC; // float32
-                pub const m_flFrequencyScale: usize = 0x200; // float32
-                pub const m_flAmplitudeScale: usize = 0x204; // float32
-                pub const m_nRadiusField: usize = 0x208; // ParticleAttributeIndex_t
-                pub const m_nDurationField: usize = 0x20C; // ParticleAttributeIndex_t
-                pub const m_nFrequencyField: usize = 0x210; // ParticleAttributeIndex_t
-                pub const m_nAmplitudeField: usize = 0x214; // ParticleAttributeIndex_t
-                pub const m_nFilterCP: usize = 0x218; // int32
+                pub const m_flDurationScale: usize = 0x1FC; // float32
+                pub const m_flRadiusScale: usize = 0x200; // float32
+                pub const m_flFrequencyScale: usize = 0x204; // float32
+                pub const m_flAmplitudeScale: usize = 0x208; // float32
+                pub const m_nRadiusField: usize = 0x20C; // ParticleAttributeIndex_t
+                pub const m_nDurationField: usize = 0x210; // ParticleAttributeIndex_t
+                pub const m_nFrequencyField: usize = 0x214; // ParticleAttributeIndex_t
+                pub const m_nAmplitudeField: usize = 0x218; // ParticleAttributeIndex_t
+                pub const m_nFilterCP: usize = 0x21C; // int32
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 5
@@ -5899,9 +6003,9 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderFlattenGrass {
-                pub const m_flFlattenStrength: usize = 0x1F8; // float32
-                pub const m_nStrengthFieldOverride: usize = 0x1FC; // ParticleAttributeIndex_t
-                pub const m_flRadiusScale: usize = 0x200; // float32
+                pub const m_flFlattenStrength: usize = 0x1FC; // float32
+                pub const m_nStrengthFieldOverride: usize = 0x200; // ParticleAttributeIndex_t
+                pub const m_flRadiusScale: usize = 0x204; // float32
             }
             // Parent: CParticleFunctionRenderer
             // Fields count: 7
@@ -5909,13 +6013,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderLightBeam {
-                pub const m_vColorBlend: usize = 0x1F8; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x828; // ParticleColorBlendType_t
-                pub const m_flBrightnessLumensPerMeter: usize = 0x830; // CParticleCollectionFloatInput
-                pub const m_bCastShadows: usize = 0x980; // bool
-                pub const m_flSkirt: usize = 0x988; // CParticleCollectionFloatInput
-                pub const m_flRange: usize = 0xAD8; // CParticleCollectionFloatInput
-                pub const m_flThickness: usize = 0xC28; // CParticleCollectionFloatInput
+                pub const m_vColorBlend: usize = 0x200; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x830; // ParticleColorBlendType_t
+                pub const m_flBrightnessLumensPerMeter: usize = 0x838; // CParticleCollectionFloatInput
+                pub const m_bCastShadows: usize = 0x988; // bool
+                pub const m_flSkirt: usize = 0x990; // CParticleCollectionFloatInput
+                pub const m_flRange: usize = 0xAE0; // CParticleCollectionFloatInput
+                pub const m_flThickness: usize = 0xC30; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionPreEmission
             // Fields count: 6
@@ -5951,6 +6055,20 @@ pub mod cs2_dumper {
                 pub const m_bActiveRange: usize = 0x8E0; // bool
                 pub const m_vecDistanceScale: usize = 0x8E4; // Vector
                 pub const m_flRemapBias: usize = 0x8F0; // float32
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CReplicationParameters {
+                pub const m_nReplicationMode: usize = 0x0; // ParticleReplicationMode_t
+                pub const m_bScaleChildParticleRadii: usize = 0x4; // bool
+                pub const m_flMinRandomRadiusScale: usize = 0x8; // CParticleCollectionFloatInput
+                pub const m_flMaxRandomRadiusScale: usize = 0x158; // CParticleCollectionFloatInput
+                pub const m_vMinRandomDisplacement: usize = 0x2A8; // CParticleCollectionVecInput
+                pub const m_vMaxRandomDisplacement: usize = 0x8D8; // CParticleCollectionVecInput
+                pub const m_flModellingScale: usize = 0xF08; // CParticleCollectionFloatInput
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 0
@@ -6046,16 +6164,16 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderModels {
-                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x1F6; // bool
-                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x1F7; // bool
-                pub const m_bUseMixedResolutionRendering: usize = 0x1F8; // bool
-                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x1F9; // bool
+                pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x1FA; // bool
+                pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x1FB; // bool
+                pub const m_bUseMixedResolutionRendering: usize = 0x1FC; // bool
+                pub const m_bOnlyRenderInEffecsGameOverlay: usize = 0x1FD; // bool
                 pub const m_ModelList: usize = 0x200; // CUtlVector<ModelReference_t>
-                pub const m_nBodyGroupField: usize = 0x21C; // ParticleAttributeIndex_t
-                pub const m_nSubModelField: usize = 0x220; // ParticleAttributeIndex_t
-                pub const m_bIgnoreNormal: usize = 0x224; // bool
-                pub const m_bOrientZ: usize = 0x225; // bool
-                pub const m_bCenterOffset: usize = 0x226; // bool
+                pub const m_nBodyGroupField: usize = 0x218; // ParticleAttributeIndex_t
+                pub const m_nSubModelField: usize = 0x21C; // ParticleAttributeIndex_t
+                pub const m_bIgnoreNormal: usize = 0x220; // bool
+                pub const m_bOrientZ: usize = 0x221; // bool
+                pub const m_bCenterOffset: usize = 0x222; // bool
                 pub const m_vecLocalOffset: usize = 0x228; // CPerParticleVecInput
                 pub const m_vecLocalRotation: usize = 0x858; // CPerParticleVecInput
                 pub const m_bIgnoreRadius: usize = 0xE88; // bool
@@ -6075,31 +6193,31 @@ pub mod cs2_dumper {
                 pub const m_ActivityName: usize = 0x1630; // char[256]
                 pub const m_SequenceName: usize = 0x1730; // char[256]
                 pub const m_bEnableClothSimulation: usize = 0x1830; // bool
-                pub const m_hOverrideMaterial: usize = 0x1838; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_bOverrideTranslucentMaterials: usize = 0x1840; // bool
-                pub const m_nSkin: usize = 0x1848; // CPerParticleFloatInput
-                pub const m_MaterialVars: usize = 0x1998; // CUtlVector<MaterialVariable_t>
-                pub const m_flManualModelSelection: usize = 0x19B0; // CPerParticleFloatInput
-                pub const m_modelInput: usize = 0x1B00; // CParticleModelInput
-                pub const m_nLOD: usize = 0x1B58; // int32
-                pub const m_EconSlotName: usize = 0x1B5C; // char[256]
-                pub const m_bOriginalModel: usize = 0x1C5C; // bool
-                pub const m_bSuppressTint: usize = 0x1C5D; // bool
-                pub const m_bUseRawMeshGroup: usize = 0x1C5E; // bool
-                pub const m_bDisableShadows: usize = 0x1C5F; // bool
-                pub const m_bDisableDepthPrepass: usize = 0x1C60; // bool
-                pub const m_bAcceptsDecals: usize = 0x1C61; // bool
-                pub const m_bForceDrawInterlevedWithSiblings: usize = 0x1C62; // bool
-                pub const m_bDoNotDrawInParticlePass: usize = 0x1C63; // bool
-                pub const m_bUseFastModelCollectionRenderPath: usize = 0x1C64; // bool
-                pub const m_bAllowApproximateTransforms: usize = 0x1C65; // bool
-                pub const m_szRenderAttribute: usize = 0x1C66; // char[4096]
-                pub const m_flRadiusScale: usize = 0x2C68; // CParticleCollectionFloatInput
-                pub const m_flAlphaScale: usize = 0x2DB8; // CParticleCollectionFloatInput
-                pub const m_flRollScale: usize = 0x2F08; // CParticleCollectionFloatInput
-                pub const m_nAlpha2Field: usize = 0x3058; // ParticleAttributeIndex_t
-                pub const m_vecColorScale: usize = 0x3060; // CParticleCollectionVecInput
-                pub const m_nColorBlendType: usize = 0x3690; // ParticleColorBlendType_t
+                pub const m_ClothEffectName: usize = 0x1831; // char[64]
+                pub const m_hOverrideMaterial: usize = 0x1878; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_bOverrideTranslucentMaterials: usize = 0x1880; // bool
+                pub const m_nSkin: usize = 0x1888; // CPerParticleFloatInput
+                pub const m_MaterialVars: usize = 0x19D8; // CUtlVector<MaterialVariable_t>
+                pub const m_flManualModelSelection: usize = 0x19F0; // CPerParticleFloatInput
+                pub const m_modelInput: usize = 0x1B40; // CParticleModelInput
+                pub const m_nLOD: usize = 0x1B98; // int32
+                pub const m_EconSlotName: usize = 0x1B9C; // char[256]
+                pub const m_bOriginalModel: usize = 0x1C9C; // bool
+                pub const m_bSuppressTint: usize = 0x1C9D; // bool
+                pub const m_nSubModelFieldType: usize = 0x1CA0; // RenderModelSubModelFieldType_t
+                pub const m_bDisableShadows: usize = 0x1CA4; // bool
+                pub const m_bDisableDepthPrepass: usize = 0x1CA5; // bool
+                pub const m_bAcceptsDecals: usize = 0x1CA6; // bool
+                pub const m_bForceDrawInterlevedWithSiblings: usize = 0x1CA7; // bool
+                pub const m_bDoNotDrawInParticlePass: usize = 0x1CA8; // bool
+                pub const m_bAllowApproximateTransforms: usize = 0x1CA9; // bool
+                pub const m_szRenderAttribute: usize = 0x1CAA; // char[4096]
+                pub const m_flRadiusScale: usize = 0x2CB0; // CParticleCollectionFloatInput
+                pub const m_flAlphaScale: usize = 0x2E00; // CParticleCollectionFloatInput
+                pub const m_flRollScale: usize = 0x2F50; // CParticleCollectionFloatInput
+                pub const m_nAlpha2Field: usize = 0x30A0; // ParticleAttributeIndex_t
+                pub const m_vecColorScale: usize = 0x30A8; // CParticleCollectionVecInput
+                pub const m_nColorBlendType: usize = 0x36D8; // ParticleColorBlendType_t
             }
             // Parent: CParticleFunction
             // Fields count: 1
@@ -6261,6 +6379,18 @@ pub mod cs2_dumper {
                 pub const m_nCPField: usize = 0x1C4; // int32
                 pub const m_vecComparisonVelocity: usize = 0x1C8; // CParticleCollectionVecInput
             }
+            // Parent: CParticleFunctionRenderer
+            // Fields count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_ClientPhysics {
+                pub const m_strPhysicsType: usize = 0x200; // CUtlString
+                pub const m_bKillParticles: usize = 0x208; // bool
+                pub const m_bDeleteSim: usize = 0x209; // bool
+                pub const m_nControlPoint: usize = 0x20C; // int32
+                pub const m_nColorBlendType: usize = 0x210; // ParticleColorBlendType_t
+            }
             // Parent: CGeneralSpin
             // Fields count: 0
             //
@@ -6315,38 +6445,39 @@ pub mod cs2_dumper {
                 pub const m_HitboxSetName: usize = 0x1BB; // char[128]
             }
             // Parent: CBaseRendererSource2
-            // Fields count: 27
+            // Fields count: 28
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderSprites {
-                pub const m_nSequenceOverride: usize = 0x2638; // CParticleCollectionRendererFloatInput
-                pub const m_nOrientationType: usize = 0x2788; // ParticleOrientationChoiceList_t
-                pub const m_nOrientationControlPoint: usize = 0x278C; // int32
-                pub const m_bUseYawWithNormalAligned: usize = 0x2790; // bool
-                pub const m_flMinSize: usize = 0x2798; // CParticleCollectionRendererFloatInput
-                pub const m_flMaxSize: usize = 0x28E8; // CParticleCollectionRendererFloatInput
-                pub const m_flAlphaAdjustWithSizeAdjust: usize = 0x2A38; // CParticleCollectionRendererFloatInput
-                pub const m_flStartFadeSize: usize = 0x2B88; // CParticleCollectionRendererFloatInput
-                pub const m_flEndFadeSize: usize = 0x2CD8; // CParticleCollectionRendererFloatInput
-                pub const m_flStartFadeDot: usize = 0x2E28; // float32
-                pub const m_flEndFadeDot: usize = 0x2E2C; // float32
-                pub const m_bDistanceAlpha: usize = 0x2E30; // bool
-                pub const m_bSoftEdges: usize = 0x2E31; // bool
-                pub const m_flEdgeSoftnessStart: usize = 0x2E34; // float32
-                pub const m_flEdgeSoftnessEnd: usize = 0x2E38; // float32
-                pub const m_bOutline: usize = 0x2E3C; // bool
-                pub const m_OutlineColor: usize = 0x2E3D; // Color
-                pub const m_nOutlineAlpha: usize = 0x2E44; // int32
-                pub const m_flOutlineStart0: usize = 0x2E48; // float32
-                pub const m_flOutlineStart1: usize = 0x2E4C; // float32
-                pub const m_flOutlineEnd0: usize = 0x2E50; // float32
-                pub const m_flOutlineEnd1: usize = 0x2E54; // float32
-                pub const m_nLightingMode: usize = 0x2E58; // ParticleLightingQuality_t
-                pub const m_flLightingTessellation: usize = 0x2E60; // CParticleCollectionRendererFloatInput
-                pub const m_flLightingDirectionality: usize = 0x2FB0; // CParticleCollectionRendererFloatInput
-                pub const m_bParticleShadows: usize = 0x3100; // bool
-                pub const m_flShadowDensity: usize = 0x3104; // float32
+                pub const m_nSequenceOverride: usize = 0x2640; // CParticleCollectionRendererFloatInput
+                pub const m_nOrientationType: usize = 0x2790; // ParticleOrientationChoiceList_t
+                pub const m_nOrientationControlPoint: usize = 0x2794; // int32
+                pub const m_bUseYawWithNormalAligned: usize = 0x2798; // bool
+                pub const m_flMinSize: usize = 0x27A0; // CParticleCollectionRendererFloatInput
+                pub const m_flMaxSize: usize = 0x28F0; // CParticleCollectionRendererFloatInput
+                pub const m_flAlphaAdjustWithSizeAdjust: usize = 0x2A40; // CParticleCollectionRendererFloatInput
+                pub const m_flStartFadeSize: usize = 0x2B90; // CParticleCollectionRendererFloatInput
+                pub const m_flEndFadeSize: usize = 0x2CE0; // CParticleCollectionRendererFloatInput
+                pub const m_flStartFadeDot: usize = 0x2E30; // float32
+                pub const m_flEndFadeDot: usize = 0x2E34; // float32
+                pub const m_bDistanceAlpha: usize = 0x2E38; // bool
+                pub const m_bSoftEdges: usize = 0x2E39; // bool
+                pub const m_flEdgeSoftnessStart: usize = 0x2E3C; // float32
+                pub const m_flEdgeSoftnessEnd: usize = 0x2E40; // float32
+                pub const m_bOutline: usize = 0x2E44; // bool
+                pub const m_OutlineColor: usize = 0x2E45; // Color
+                pub const m_nOutlineAlpha: usize = 0x2E4C; // int32
+                pub const m_flOutlineStart0: usize = 0x2E50; // float32
+                pub const m_flOutlineStart1: usize = 0x2E54; // float32
+                pub const m_flOutlineEnd0: usize = 0x2E58; // float32
+                pub const m_flOutlineEnd1: usize = 0x2E5C; // float32
+                pub const m_nLightingMode: usize = 0x2E60; // ParticleLightingQuality_t
+                pub const m_flLightingTessellation: usize = 0x2E68; // CParticleCollectionRendererFloatInput
+                pub const m_flLightingDirectionality: usize = 0x2FB8; // CParticleCollectionRendererFloatInput
+                pub const m_bParticleShadows: usize = 0x3108; // bool
+                pub const m_flShadowDensity: usize = 0x310C; // float32
+                pub const m_replicationParameters: usize = 0x3110; // CReplicationParameters
             }
             // Parent: CParticleFunctionOperator
             // Fields count: 12
@@ -6388,16 +6519,16 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderTreeShake {
-                pub const m_flPeakStrength: usize = 0x1F8; // float32
-                pub const m_nPeakStrengthFieldOverride: usize = 0x1FC; // ParticleAttributeIndex_t
-                pub const m_flRadius: usize = 0x200; // float32
-                pub const m_nRadiusFieldOverride: usize = 0x204; // ParticleAttributeIndex_t
-                pub const m_flShakeDuration: usize = 0x208; // float32
-                pub const m_flTransitionTime: usize = 0x20C; // float32
-                pub const m_flTwistAmount: usize = 0x210; // float32
-                pub const m_flRadialAmount: usize = 0x214; // float32
-                pub const m_flControlPointOrientationAmount: usize = 0x218; // float32
-                pub const m_nControlPointForLinearDirection: usize = 0x21C; // int32
+                pub const m_flPeakStrength: usize = 0x1FC; // float32
+                pub const m_nPeakStrengthFieldOverride: usize = 0x200; // ParticleAttributeIndex_t
+                pub const m_flRadius: usize = 0x204; // float32
+                pub const m_nRadiusFieldOverride: usize = 0x208; // ParticleAttributeIndex_t
+                pub const m_flShakeDuration: usize = 0x20C; // float32
+                pub const m_flTransitionTime: usize = 0x210; // float32
+                pub const m_flTwistAmount: usize = 0x214; // float32
+                pub const m_flRadialAmount: usize = 0x218; // float32
+                pub const m_flControlPointOrientationAmount: usize = 0x21C; // float32
+                pub const m_nControlPointForLinearDirection: usize = 0x220; // int32
             }
             // Parent: CParticleFunctionConstraint
             // Fields count: 0
@@ -6442,14 +6573,14 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderMaterialProxy {
-                pub const m_nMaterialControlPoint: usize = 0x1F8; // int32
-                pub const m_nProxyType: usize = 0x1FC; // MaterialProxyType_t
-                pub const m_MaterialVars: usize = 0x200; // CUtlVector<MaterialVariable_t>
-                pub const m_hOverrideMaterial: usize = 0x218; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_flMaterialOverrideEnabled: usize = 0x220; // CParticleCollectionFloatInput
-                pub const m_vecColorScale: usize = 0x370; // CParticleCollectionVecInput
-                pub const m_flAlpha: usize = 0x9A0; // CPerParticleFloatInput
-                pub const m_nColorBlendType: usize = 0xAF0; // ParticleColorBlendType_t
+                pub const m_nMaterialControlPoint: usize = 0x1FC; // int32
+                pub const m_nProxyType: usize = 0x200; // MaterialProxyType_t
+                pub const m_MaterialVars: usize = 0x208; // CUtlVector<MaterialVariable_t>
+                pub const m_hOverrideMaterial: usize = 0x220; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_flMaterialOverrideEnabled: usize = 0x228; // CParticleCollectionFloatInput
+                pub const m_vecColorScale: usize = 0x378; // CParticleCollectionVecInput
+                pub const m_flAlpha: usize = 0x9A8; // CPerParticleFloatInput
+                pub const m_nColorBlendType: usize = 0xAF8; // ParticleColorBlendType_t
             }
             // Parent: None
             // Fields count: 2

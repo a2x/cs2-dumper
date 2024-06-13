@@ -31,7 +31,7 @@
           ]
         },
         {
-          "name": "dwGameEntitySystem_getHighestEntityIndex",
+          "name": "dwGameEntitySystem_highestEntityIndex",
           "pattern": "8B 87 ? ? ? ? C3 66 0F 1F 84 00 ? ? ? ? 8B 97",
           "operations": [
             {
@@ -43,7 +43,7 @@
         },
         {
           "name": "dwGameRules",
-          "pattern": "48 89 3D ? ? ? ? 8B 3B",
+          "pattern": "48 89 1D ? ? ? ? 48 8B 00",
           "operations": [
             {
               "type": "rip"
@@ -70,7 +70,7 @@
         },
         {
           "name": "dwLocalPlayerController",
-          "pattern": "48 8B 15 ? ? ? ? 31 C0 48 85 D2 74 ? 8B B2",
+          "pattern": "4C 89 2D ? ? ? ? E8 ? ? ? ? 48 8B 45",
           "operations": [
             {
               "type": "rip"
@@ -86,7 +86,7 @@
             },
             {
               "type": "add",
-              "value": 312
+              "value": 328
             }
           ]
         },
@@ -137,13 +137,13 @@
             },
             {
               "type": "add",
-              "value": 21408
+              "value": 21544
             }
           ]
         },
         {
           "name": "dwViewMatrix",
-          "pattern": "4C 8D 05 ? ? ? ? 48 8B 38 48 8D 0D",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 83 FF",
           "operations": [
             {
               "type": "rip"
@@ -182,6 +182,17 @@
           ]
         },
         {
+          "name": "dwNetworkGameClient_clientTickCount",
+          "pattern": "8B 87 ? ? ? ? C3 66 0F 1F 84 00 00 00 00 00 8B 87 ? ? ? ? C3 66 0F 1F 84 00 00 00 00 00 C3 66 2E 0F 1F 84 00 00 00 00 00 0F 1F 44 00 00 C3",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 4
+            }
+          ]
+        },
+        {
           "name": "dwNetworkGameClient_deltaTick",
           "pattern": "89 83 ? ? ? ? B8 ? ? ? ? 5B",
           "operations": [
@@ -193,28 +204,54 @@
           ]
         },
         {
-          "name": "dwNetworkGameClient_getLocalPlayer",
-          "pattern": "48 8B 87 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 55 48 89 E5",
+          "name": "dwNetworkGameClient_isBackgroundMap",
+          "pattern": "0F B6 87 ? ? ? ? C3 0F 1F 84 00 00 00 00 00 C3 66 2E 0F 1F 84 00 00 00 00 00 0F 1F 44 00 00 C3",
           "operations": [
             {
               "type": "slice",
               "start": 3,
-              "end": 4
-            },
-            {
-              "type": "add",
-              "value": 4856
+              "end": 7
             }
           ]
         },
         {
-          "name": "dwNetworkGameClient_getMaxClients",
-          "pattern": "48 8B 87 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 48 89 B7 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 8B 87",
+          "name": "dwNetworkGameClient_localPlayer",
+          "pattern": "8B 84 C7 ? ? ? ? C3 66 0F 1F 44 00",
           "operations": [
             {
               "type": "slice",
               "start": 3,
-              "end": 6
+              "end": 5
+            },
+            {
+              "type": "add",
+              "value": 8
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient_maxClients",
+          "pattern": "8B 87 ? ? ? ? C3 66 0F 1F 84 00 ? ? ? ? 8B 87 ? ? ? ? 83 C0",
+          "operations": [
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "name": "dwNetworkGameClient_serverTickCount",
+          "pattern": "8B 87 ? ? ? ? C3 66 0F 1F 84 00 00 00 00 00 8B 87 ? ? ? ? C3 66 0F 1F 84 00 00 00 00 00 C3 66 2E 0F 1F 84 00 00 00 00 00 0F 1F 44 00 00 C3",
+          "operations": [
+            {
+              "type": "add",
+              "value": 16
+            },
+            {
+              "type": "slice",
+              "start": 2,
+              "end": 4
             }
           ]
         },

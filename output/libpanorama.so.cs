@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libpanorama.so
@@ -24,7 +24,7 @@ namespace CS2Dumper.Schemas {
             REFERENCE_PASSTHROUGH = 0xC
         }
         // Alignment: 4
-        // Members count: 15
+        // Members count: 16
         public enum EStyleNodeType : uint {
             ROOT = 0x0,
             EXPRESSION = 0x1,
@@ -40,7 +40,8 @@ namespace CS2Dumper.Schemas {
             EXPRESSION_CONCAT = 0xB,
             REFERENCE_CONTENT = 0xC,
             REFERENCE_COMPILED = 0xD,
-            REFERENCE_PASSTHROUGH = 0xE
+            REFERENCE_PASSTHROUGH = 0xE,
+            COMPILER_CONDITIONAL = 0xF
         }
     }
 }

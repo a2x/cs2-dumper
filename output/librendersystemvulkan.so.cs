@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: librendersystemvulkan.so
@@ -24,7 +24,7 @@ namespace CS2Dumper.Schemas {
             RENDER_PRIM_TYPE_COUNT = 0xC
         }
         // Alignment: 4
-        // Members count: 12
+        // Members count: 13
         public enum RenderBufferFlags_t : uint {
             RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
             RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
@@ -37,7 +37,8 @@ namespace CS2Dumper.Schemas {
             RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
             RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
             RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
-            RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800
+            RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
+            RENDER_BUFFER_POOL_ALLOCATED = 0x1000
         }
         // Alignment: 1
         // Members count: 8

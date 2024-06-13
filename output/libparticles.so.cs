@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-04-29 23:05:53.220233445 UTC
+// 2024-06-13 12:45:29.262540675 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libparticles.so
-    // Classes count: 441
-    // Enums count: 71
+    // Classes count: 445
+    // Enums count: 76
     public static class LibparticlesSo {
         // Alignment: 4
         // Members count: 6
@@ -69,6 +69,12 @@ namespace CS2Dumper.Schemas {
             PARTICLE_VRHAND_RIGHT = 0x1,
             PARTICLE_VRHAND_CP = 0x2,
             PARTICLE_VRHAND_CP_OBJECT = 0x3
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleReplicationMode_t : uint {
+            PARTICLE_REPLICATIONMODE_NONE = 0x0,
+            PARTICLE_REPLICATIONMODE_REPLICATE_FOR_EACH_PARENT_PARTICLE = 0x1
         }
         // Alignment: 4
         // Members count: 3
@@ -241,6 +247,27 @@ namespace CS2Dumper.Schemas {
             PF_NOISE_TYPE_CURL = 0x3
         }
         // Alignment: 4
+        // Members count: 11
+        public enum EventTypeSelection_t : uint {
+            PARTICLE_EVENT_TYPE_MASK_NONE = 0x0,
+            PARTICLE_EVENT_TYPE_MASK_SPAWNED = 0x1,
+            PARTICLE_EVENT_TYPE_MASK_KILLED = 0x2,
+            PARTICLE_EVENT_TYPE_MASK_COLLISION = 0x4,
+            PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION = 0x8,
+            PARTICLE_EVENT_TYPE_MASK_COLLISION_STOPPED = 0x10,
+            PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION = 0x20,
+            PARTICLE_EVENT_TYPE_MASK_USER_1 = 0x40,
+            PARTICLE_EVENT_TYPE_MASK_USER_2 = 0x80,
+            PARTICLE_EVENT_TYPE_MASK_USER_3 = 0x100,
+            PARTICLE_EVENT_TYPE_MASK_USER_4 = 0x200
+        }
+        // Alignment: 4
+        // Members count: 2
+        public enum ParticleMassMode_t : uint {
+            PARTICLE_MASSMODE_RADIUS_CUBED = 0x0,
+            PARTICLE_MASSMODE_RADIUS_SQUARED = 0x2
+        }
+        // Alignment: 4
         // Members count: 3
         public enum ParticleDirectionNoiseType_t : uint {
             PARTICLE_DIR_NOISE_PERLIN = 0x0,
@@ -351,6 +378,14 @@ namespace CS2Dumper.Schemas {
             PARTICLE_LIGHT_BEHAVIOR_FOLLOW_DIRECTION = 0x0,
             PARTICLE_LIGHT_BEHAVIOR_ROPE = 0x1,
             PARTICLE_LIGHT_BEHAVIOR_TRAILS = 0x2
+        }
+        // Alignment: 4
+        // Members count: 4
+        public enum ModelHitboxType_t : uint {
+            MODEL_HITBOX_TYPE_STANDARD = 0x0,
+            MODEL_HITBOX_TYPE_RAW_BONES = 0x1,
+            MODEL_HITBOX_TYPE_RENDERBOUNDS = 0x2,
+            MODEL_HITBOX_TYPE_SNAPSHOT = 0x3
         }
         // Alignment: 4
         // Members count: 8
@@ -559,6 +594,14 @@ namespace CS2Dumper.Schemas {
             PT_TYPE_COUNT = 0x4
         }
         // Alignment: 4
+        // Members count: 4
+        public enum RenderModelSubModelFieldType_t : uint {
+            SUBMODEL_AS_BODYGROUP_SUBMODEL = 0x0,
+            SUBMODEL_AS_MESHGROUP_INDEX = 0x1,
+            SUBMODEL_AS_MESHGROUP_MASK = 0x2,
+            SUBMODEL_IGNORED_USE_MODEL_DEFAULT_MESHGROUP_MASK = 0x3
+        }
+        // Alignment: 4
         // Members count: 2
         public enum ParticleHitboxDataSelection_t : uint {
             PARTICLE_HITBOX_AVERAGE_SPEED = 0x0,
@@ -653,6 +696,17 @@ namespace CS2Dumper.Schemas {
             TEXTURE_REPETITION_PATH = 0x1
         }
         // Parent: CParticleFunctionOperator
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_RemapGravityToVector {
+            public const nint m_vInput1 = 0x1B0; // CPerParticleVecInput
+            public const nint m_nOutputField = 0x7E0; // ParticleAttributeIndex_t
+            public const nint m_nSetMethod = 0x7E4; // ParticleSetMethod_t
+            public const nint m_bNormalizedOutput = 0x7E8; // bool
+        }
+        // Parent: CParticleFunctionOperator
         // Fields count: 2
         //
         // Metadata:
@@ -667,11 +721,11 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderDeferredLight {
-            public const nint m_bUseAlphaTestWindow = 0x1F6; // bool
-            public const nint m_bUseTexture = 0x1F7; // bool
-            public const nint m_flRadiusScale = 0x1F8; // float32
-            public const nint m_flAlphaScale = 0x1FC; // float32
-            public const nint m_nAlpha2Field = 0x200; // ParticleAttributeIndex_t
+            public const nint m_bUseAlphaTestWindow = 0x1FA; // bool
+            public const nint m_bUseTexture = 0x1FB; // bool
+            public const nint m_flRadiusScale = 0x1FC; // float32
+            public const nint m_flAlphaScale = 0x200; // float32
+            public const nint m_nAlpha2Field = 0x204; // ParticleAttributeIndex_t
             public const nint m_vecColorScale = 0x208; // CParticleCollectionVecInput
             public const nint m_nColorBlendType = 0x838; // ParticleColorBlendType_t
             public const nint m_flLightDistance = 0x83C; // float32
@@ -762,36 +816,36 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderRopes {
-            public const nint m_bEnableFadingAndClamping = 0x2638; // bool
-            public const nint m_flMinSize = 0x263C; // float32
-            public const nint m_flMaxSize = 0x2640; // float32
-            public const nint m_flStartFadeSize = 0x2644; // float32
-            public const nint m_flEndFadeSize = 0x2648; // float32
-            public const nint m_flStartFadeDot = 0x264C; // float32
-            public const nint m_flEndFadeDot = 0x2650; // float32
-            public const nint m_flRadiusTaper = 0x2654; // float32
-            public const nint m_nMinTesselation = 0x2658; // int32
-            public const nint m_nMaxTesselation = 0x265C; // int32
-            public const nint m_flTessScale = 0x2660; // float32
-            public const nint m_flTextureVWorldSize = 0x2668; // CParticleCollectionRendererFloatInput
-            public const nint m_flTextureVScrollRate = 0x27B8; // CParticleCollectionRendererFloatInput
-            public const nint m_flTextureVOffset = 0x2908; // CParticleCollectionRendererFloatInput
-            public const nint m_nTextureVParamsCP = 0x2A58; // int32
-            public const nint m_bClampV = 0x2A5C; // bool
-            public const nint m_nScaleCP1 = 0x2A60; // int32
-            public const nint m_nScaleCP2 = 0x2A64; // int32
-            public const nint m_flScaleVSizeByControlPointDistance = 0x2A68; // float32
-            public const nint m_flScaleVScrollByControlPointDistance = 0x2A6C; // float32
-            public const nint m_flScaleVOffsetByControlPointDistance = 0x2A70; // float32
-            public const nint m_bUseScalarForTextureCoordinate = 0x2A75; // bool
-            public const nint m_nScalarFieldForTextureCoordinate = 0x2A78; // ParticleAttributeIndex_t
-            public const nint m_flScalarAttributeTextureCoordScale = 0x2A7C; // float32
-            public const nint m_bReverseOrder = 0x2A80; // bool
-            public const nint m_bClosedLoop = 0x2A81; // bool
-            public const nint m_nOrientationType = 0x2A84; // ParticleOrientationChoiceList_t
-            public const nint m_nVectorFieldForOrientation = 0x2A88; // ParticleAttributeIndex_t
-            public const nint m_bDrawAsOpaque = 0x2A8C; // bool
-            public const nint m_bGenerateNormals = 0x2A8D; // bool
+            public const nint m_bEnableFadingAndClamping = 0x2640; // bool
+            public const nint m_flMinSize = 0x2644; // float32
+            public const nint m_flMaxSize = 0x2648; // float32
+            public const nint m_flStartFadeSize = 0x264C; // float32
+            public const nint m_flEndFadeSize = 0x2650; // float32
+            public const nint m_flStartFadeDot = 0x2654; // float32
+            public const nint m_flEndFadeDot = 0x2658; // float32
+            public const nint m_flRadiusTaper = 0x265C; // float32
+            public const nint m_nMinTesselation = 0x2660; // int32
+            public const nint m_nMaxTesselation = 0x2664; // int32
+            public const nint m_flTessScale = 0x2668; // float32
+            public const nint m_flTextureVWorldSize = 0x2670; // CParticleCollectionRendererFloatInput
+            public const nint m_flTextureVScrollRate = 0x27C0; // CParticleCollectionRendererFloatInput
+            public const nint m_flTextureVOffset = 0x2910; // CParticleCollectionRendererFloatInput
+            public const nint m_nTextureVParamsCP = 0x2A60; // int32
+            public const nint m_bClampV = 0x2A64; // bool
+            public const nint m_nScaleCP1 = 0x2A68; // int32
+            public const nint m_nScaleCP2 = 0x2A6C; // int32
+            public const nint m_flScaleVSizeByControlPointDistance = 0x2A70; // float32
+            public const nint m_flScaleVScrollByControlPointDistance = 0x2A74; // float32
+            public const nint m_flScaleVOffsetByControlPointDistance = 0x2A78; // float32
+            public const nint m_bUseScalarForTextureCoordinate = 0x2A7D; // bool
+            public const nint m_nScalarFieldForTextureCoordinate = 0x2A80; // ParticleAttributeIndex_t
+            public const nint m_flScalarAttributeTextureCoordScale = 0x2A84; // float32
+            public const nint m_bReverseOrder = 0x2A88; // bool
+            public const nint m_bClosedLoop = 0x2A89; // bool
+            public const nint m_nOrientationType = 0x2A8C; // ParticleOrientationChoiceList_t
+            public const nint m_nVectorFieldForOrientation = 0x2A90; // ParticleAttributeIndex_t
+            public const nint m_bDrawAsOpaque = 0x2A94; // bool
+            public const nint m_bGenerateNormals = 0x2A95; // bool
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 19
@@ -825,21 +879,21 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderSound {
-            public const nint m_flDurationScale = 0x1F8; // float32
-            public const nint m_flSndLvlScale = 0x1FC; // float32
-            public const nint m_flPitchScale = 0x200; // float32
-            public const nint m_flVolumeScale = 0x204; // float32
-            public const nint m_nSndLvlField = 0x208; // ParticleAttributeIndex_t
-            public const nint m_nDurationField = 0x20C; // ParticleAttributeIndex_t
-            public const nint m_nPitchField = 0x210; // ParticleAttributeIndex_t
-            public const nint m_nVolumeField = 0x214; // ParticleAttributeIndex_t
-            public const nint m_nChannel = 0x218; // int32
-            public const nint m_nCPReference = 0x21C; // int32
-            public const nint m_pszSoundName = 0x220; // char[256]
-            public const nint m_bSuppressStopSoundEvent = 0x320; // bool
+            public const nint m_flDurationScale = 0x1FC; // float32
+            public const nint m_flSndLvlScale = 0x200; // float32
+            public const nint m_flPitchScale = 0x204; // float32
+            public const nint m_flVolumeScale = 0x208; // float32
+            public const nint m_nSndLvlField = 0x20C; // ParticleAttributeIndex_t
+            public const nint m_nDurationField = 0x210; // ParticleAttributeIndex_t
+            public const nint m_nPitchField = 0x214; // ParticleAttributeIndex_t
+            public const nint m_nVolumeField = 0x218; // ParticleAttributeIndex_t
+            public const nint m_nChannel = 0x21C; // int32
+            public const nint m_nCPReference = 0x220; // int32
+            public const nint m_pszSoundName = 0x224; // char[256]
+            public const nint m_bSuppressStopSoundEvent = 0x324; // bool
         }
         // Parent: None
-        // Fields count: 18
+        // Fields count: 19
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -849,19 +903,20 @@ namespace CS2Dumper.Schemas {
             public const nint m_flProxyRadius = 0x8; // float32
             public const nint m_flInputMin = 0xC; // float32
             public const nint m_flInputMax = 0x10; // float32
-            public const nint m_flNoPixelVisibilityFallback = 0x14; // float32
-            public const nint m_flDistanceInputMin = 0x18; // float32
-            public const nint m_flDistanceInputMax = 0x1C; // float32
-            public const nint m_flDotInputMin = 0x20; // float32
-            public const nint m_flDotInputMax = 0x24; // float32
-            public const nint m_bDotCPAngles = 0x28; // bool
-            public const nint m_bDotCameraAngles = 0x29; // bool
-            public const nint m_flAlphaScaleMin = 0x2C; // float32
-            public const nint m_flAlphaScaleMax = 0x30; // float32
-            public const nint m_flRadiusScaleMin = 0x34; // float32
-            public const nint m_flRadiusScaleMax = 0x38; // float32
-            public const nint m_flRadiusScaleFOVBase = 0x3C; // float32
-            public const nint m_bRightEye = 0x40; // bool
+            public const nint m_flInputPixelVisFade = 0x14; // float32
+            public const nint m_flNoPixelVisibilityFallback = 0x18; // float32
+            public const nint m_flDistanceInputMin = 0x1C; // float32
+            public const nint m_flDistanceInputMax = 0x20; // float32
+            public const nint m_flDotInputMin = 0x24; // float32
+            public const nint m_flDotInputMax = 0x28; // float32
+            public const nint m_bDotCPAngles = 0x2C; // bool
+            public const nint m_bDotCameraAngles = 0x2D; // bool
+            public const nint m_flAlphaScaleMin = 0x30; // float32
+            public const nint m_flAlphaScaleMax = 0x34; // float32
+            public const nint m_flRadiusScaleMin = 0x38; // float32
+            public const nint m_flRadiusScaleMax = 0x3C; // float32
+            public const nint m_flRadiusScaleFOVBase = 0x40; // float32
+            public const nint m_bRightEye = 0x44; // bool
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 7
@@ -1133,68 +1188,68 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CBaseRendererSource2 {
-            public const nint m_flRadiusScale = 0x1F8; // CParticleCollectionRendererFloatInput
-            public const nint m_flAlphaScale = 0x348; // CParticleCollectionRendererFloatInput
-            public const nint m_flRollScale = 0x498; // CParticleCollectionRendererFloatInput
-            public const nint m_nAlpha2Field = 0x5E8; // ParticleAttributeIndex_t
-            public const nint m_vecColorScale = 0x5F0; // CParticleCollectionRendererVecInput
-            public const nint m_nColorBlendType = 0xC20; // ParticleColorBlendType_t
-            public const nint m_nShaderType = 0xC24; // SpriteCardShaderType_t
-            public const nint m_strShaderOverride = 0xC28; // CUtlString
-            public const nint m_flCenterXOffset = 0xC30; // CParticleCollectionRendererFloatInput
-            public const nint m_flCenterYOffset = 0xD80; // CParticleCollectionRendererFloatInput
-            public const nint m_flBumpStrength = 0xED0; // float32
-            public const nint m_nCropTextureOverride = 0xED4; // ParticleSequenceCropOverride_t
-            public const nint m_vecTexturesInput = 0xED8; // CUtlVector<TextureGroup_t>
-            public const nint m_flAnimationRate = 0xEF0; // float32
-            public const nint m_nAnimationType = 0xEF4; // AnimationType_t
-            public const nint m_bAnimateInFPS = 0xEF8; // bool
-            public const nint m_flSelfIllumAmount = 0xF00; // CParticleCollectionRendererFloatInput
-            public const nint m_flDiffuseAmount = 0x1050; // CParticleCollectionRendererFloatInput
-            public const nint m_flDiffuseClamp = 0x11A0; // CParticleCollectionRendererFloatInput
-            public const nint m_nLightingControlPoint = 0x12F0; // int32
-            public const nint m_nSelfIllumPerParticle = 0x12F4; // ParticleAttributeIndex_t
-            public const nint m_nOutputBlendMode = 0x12F8; // ParticleOutputBlendMode_t
-            public const nint m_bGammaCorrectVertexColors = 0x12FC; // bool
-            public const nint m_bSaturateColorPreAlphaBlend = 0x12FD; // bool
-            public const nint m_flAddSelfAmount = 0x1300; // CParticleCollectionRendererFloatInput
-            public const nint m_flDesaturation = 0x1450; // CParticleCollectionRendererFloatInput
-            public const nint m_flOverbrightFactor = 0x15A0; // CParticleCollectionRendererFloatInput
-            public const nint m_nHSVShiftControlPoint = 0x16F0; // int32
-            public const nint m_nFogType = 0x16F4; // ParticleFogType_t
-            public const nint m_flFogAmount = 0x16F8; // CParticleCollectionRendererFloatInput
-            public const nint m_bTintByFOW = 0x1848; // bool
-            public const nint m_bTintByGlobalLight = 0x1849; // bool
-            public const nint m_nPerParticleAlphaReference = 0x184C; // SpriteCardPerParticleScale_t
-            public const nint m_nPerParticleAlphaRefWindow = 0x1850; // SpriteCardPerParticleScale_t
-            public const nint m_nAlphaReferenceType = 0x1854; // ParticleAlphaReferenceType_t
-            public const nint m_flAlphaReferenceSoftness = 0x1858; // CParticleCollectionRendererFloatInput
-            public const nint m_flSourceAlphaValueToMapToZero = 0x19A8; // CParticleCollectionRendererFloatInput
-            public const nint m_flSourceAlphaValueToMapToOne = 0x1AF8; // CParticleCollectionRendererFloatInput
-            public const nint m_bRefract = 0x1C48; // bool
-            public const nint m_bRefractSolid = 0x1C49; // bool
-            public const nint m_flRefractAmount = 0x1C50; // CParticleCollectionRendererFloatInput
-            public const nint m_nRefractBlurRadius = 0x1DA0; // int32
-            public const nint m_nRefractBlurType = 0x1DA4; // BlurFilterType_t
-            public const nint m_bOnlyRenderInEffectsBloomPass = 0x1DA8; // bool
-            public const nint m_bOnlyRenderInEffectsWaterPass = 0x1DA9; // bool
-            public const nint m_bUseMixedResolutionRendering = 0x1DAA; // bool
-            public const nint m_bOnlyRenderInEffecsGameOverlay = 0x1DAB; // bool
-            public const nint m_stencilTestID = 0x1DAC; // char[128]
-            public const nint m_bStencilTestExclude = 0x1E2C; // bool
-            public const nint m_stencilWriteID = 0x1E2D; // char[128]
-            public const nint m_bWriteStencilOnDepthPass = 0x1EAD; // bool
-            public const nint m_bWriteStencilOnDepthFail = 0x1EAE; // bool
-            public const nint m_bReverseZBuffering = 0x1EAF; // bool
-            public const nint m_bDisableZBuffering = 0x1EB0; // bool
-            public const nint m_nFeatheringMode = 0x1EB4; // ParticleDepthFeatheringMode_t
-            public const nint m_flFeatheringMinDist = 0x1EB8; // CParticleCollectionRendererFloatInput
-            public const nint m_flFeatheringMaxDist = 0x2008; // CParticleCollectionRendererFloatInput
-            public const nint m_flFeatheringFilter = 0x2158; // CParticleCollectionRendererFloatInput
-            public const nint m_flDepthBias = 0x22A8; // CParticleCollectionRendererFloatInput
-            public const nint m_nSortMethod = 0x23F8; // ParticleSortingChoiceList_t
-            public const nint m_bBlendFramesSeq0 = 0x23FC; // bool
-            public const nint m_bMaxLuminanceBlendingSequence0 = 0x23FD; // bool
+            public const nint m_flRadiusScale = 0x200; // CParticleCollectionRendererFloatInput
+            public const nint m_flAlphaScale = 0x350; // CParticleCollectionRendererFloatInput
+            public const nint m_flRollScale = 0x4A0; // CParticleCollectionRendererFloatInput
+            public const nint m_nAlpha2Field = 0x5F0; // ParticleAttributeIndex_t
+            public const nint m_vecColorScale = 0x5F8; // CParticleCollectionRendererVecInput
+            public const nint m_nColorBlendType = 0xC28; // ParticleColorBlendType_t
+            public const nint m_nShaderType = 0xC2C; // SpriteCardShaderType_t
+            public const nint m_strShaderOverride = 0xC30; // CUtlString
+            public const nint m_flCenterXOffset = 0xC38; // CParticleCollectionRendererFloatInput
+            public const nint m_flCenterYOffset = 0xD88; // CParticleCollectionRendererFloatInput
+            public const nint m_flBumpStrength = 0xED8; // float32
+            public const nint m_nCropTextureOverride = 0xEDC; // ParticleSequenceCropOverride_t
+            public const nint m_vecTexturesInput = 0xEE0; // CUtlVector<TextureGroup_t>
+            public const nint m_flAnimationRate = 0xEF8; // float32
+            public const nint m_nAnimationType = 0xEFC; // AnimationType_t
+            public const nint m_bAnimateInFPS = 0xF00; // bool
+            public const nint m_flSelfIllumAmount = 0xF08; // CParticleCollectionRendererFloatInput
+            public const nint m_flDiffuseAmount = 0x1058; // CParticleCollectionRendererFloatInput
+            public const nint m_flDiffuseClamp = 0x11A8; // CParticleCollectionRendererFloatInput
+            public const nint m_nLightingControlPoint = 0x12F8; // int32
+            public const nint m_nSelfIllumPerParticle = 0x12FC; // ParticleAttributeIndex_t
+            public const nint m_nOutputBlendMode = 0x1300; // ParticleOutputBlendMode_t
+            public const nint m_bGammaCorrectVertexColors = 0x1304; // bool
+            public const nint m_bSaturateColorPreAlphaBlend = 0x1305; // bool
+            public const nint m_flAddSelfAmount = 0x1308; // CParticleCollectionRendererFloatInput
+            public const nint m_flDesaturation = 0x1458; // CParticleCollectionRendererFloatInput
+            public const nint m_flOverbrightFactor = 0x15A8; // CParticleCollectionRendererFloatInput
+            public const nint m_nHSVShiftControlPoint = 0x16F8; // int32
+            public const nint m_nFogType = 0x16FC; // ParticleFogType_t
+            public const nint m_flFogAmount = 0x1700; // CParticleCollectionRendererFloatInput
+            public const nint m_bTintByFOW = 0x1850; // bool
+            public const nint m_bTintByGlobalLight = 0x1851; // bool
+            public const nint m_nPerParticleAlphaReference = 0x1854; // SpriteCardPerParticleScale_t
+            public const nint m_nPerParticleAlphaRefWindow = 0x1858; // SpriteCardPerParticleScale_t
+            public const nint m_nAlphaReferenceType = 0x185C; // ParticleAlphaReferenceType_t
+            public const nint m_flAlphaReferenceSoftness = 0x1860; // CParticleCollectionRendererFloatInput
+            public const nint m_flSourceAlphaValueToMapToZero = 0x19B0; // CParticleCollectionRendererFloatInput
+            public const nint m_flSourceAlphaValueToMapToOne = 0x1B00; // CParticleCollectionRendererFloatInput
+            public const nint m_bRefract = 0x1C50; // bool
+            public const nint m_bRefractSolid = 0x1C51; // bool
+            public const nint m_flRefractAmount = 0x1C58; // CParticleCollectionRendererFloatInput
+            public const nint m_nRefractBlurRadius = 0x1DA8; // int32
+            public const nint m_nRefractBlurType = 0x1DAC; // BlurFilterType_t
+            public const nint m_bOnlyRenderInEffectsBloomPass = 0x1DB0; // bool
+            public const nint m_bOnlyRenderInEffectsWaterPass = 0x1DB1; // bool
+            public const nint m_bUseMixedResolutionRendering = 0x1DB2; // bool
+            public const nint m_bOnlyRenderInEffecsGameOverlay = 0x1DB3; // bool
+            public const nint m_stencilTestID = 0x1DB4; // char[128]
+            public const nint m_bStencilTestExclude = 0x1E34; // bool
+            public const nint m_stencilWriteID = 0x1E35; // char[128]
+            public const nint m_bWriteStencilOnDepthPass = 0x1EB5; // bool
+            public const nint m_bWriteStencilOnDepthFail = 0x1EB6; // bool
+            public const nint m_bReverseZBuffering = 0x1EB7; // bool
+            public const nint m_bDisableZBuffering = 0x1EB8; // bool
+            public const nint m_nFeatheringMode = 0x1EBC; // ParticleDepthFeatheringMode_t
+            public const nint m_flFeatheringMinDist = 0x1EC0; // CParticleCollectionRendererFloatInput
+            public const nint m_flFeatheringMaxDist = 0x2010; // CParticleCollectionRendererFloatInput
+            public const nint m_flFeatheringFilter = 0x2160; // CParticleCollectionRendererFloatInput
+            public const nint m_flDepthBias = 0x22B0; // CParticleCollectionRendererFloatInput
+            public const nint m_nSortMethod = 0x2400; // ParticleSortingChoiceList_t
+            public const nint m_bBlendFramesSeq0 = 0x2404; // bool
+            public const nint m_bMaxLuminanceBlendingSequence0 = 0x2405; // bool
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 0
@@ -1245,26 +1300,26 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderTrails {
-            public const nint m_bEnableFadingAndClamping = 0x28E9; // bool
-            public const nint m_flStartFadeDot = 0x28EC; // float32
-            public const nint m_flEndFadeDot = 0x28F0; // float32
-            public const nint m_nPrevPntSource = 0x28F4; // ParticleAttributeIndex_t
-            public const nint m_flMaxLength = 0x28F8; // float32
-            public const nint m_flMinLength = 0x28FC; // float32
-            public const nint m_bIgnoreDT = 0x2900; // bool
-            public const nint m_flConstrainRadiusToLengthRatio = 0x2904; // float32
-            public const nint m_flLengthScale = 0x2908; // float32
-            public const nint m_flLengthFadeInTime = 0x290C; // float32
-            public const nint m_flRadiusHeadTaper = 0x2910; // CPerParticleFloatInput
-            public const nint m_vecHeadColorScale = 0x2A60; // CParticleCollectionVecInput
-            public const nint m_flHeadAlphaScale = 0x3090; // CPerParticleFloatInput
-            public const nint m_flRadiusTaper = 0x31E0; // CPerParticleFloatInput
-            public const nint m_vecTailColorScale = 0x3330; // CParticleCollectionVecInput
-            public const nint m_flTailAlphaScale = 0x3960; // CPerParticleFloatInput
-            public const nint m_nHorizCropField = 0x3AB0; // ParticleAttributeIndex_t
-            public const nint m_nVertCropField = 0x3AB4; // ParticleAttributeIndex_t
-            public const nint m_flForwardShift = 0x3AB8; // float32
-            public const nint m_bFlipUVBasedOnPitchYaw = 0x3ABC; // bool
+            public const nint m_bEnableFadingAndClamping = 0x28F1; // bool
+            public const nint m_flStartFadeDot = 0x28F4; // float32
+            public const nint m_flEndFadeDot = 0x28F8; // float32
+            public const nint m_nPrevPntSource = 0x28FC; // ParticleAttributeIndex_t
+            public const nint m_flMaxLength = 0x2900; // float32
+            public const nint m_flMinLength = 0x2904; // float32
+            public const nint m_bIgnoreDT = 0x2908; // bool
+            public const nint m_flConstrainRadiusToLengthRatio = 0x290C; // float32
+            public const nint m_flLengthScale = 0x2910; // float32
+            public const nint m_flLengthFadeInTime = 0x2914; // float32
+            public const nint m_flRadiusHeadTaper = 0x2918; // CPerParticleFloatInput
+            public const nint m_vecHeadColorScale = 0x2A68; // CParticleCollectionVecInput
+            public const nint m_flHeadAlphaScale = 0x3098; // CPerParticleFloatInput
+            public const nint m_flRadiusTaper = 0x31E8; // CPerParticleFloatInput
+            public const nint m_vecTailColorScale = 0x3338; // CParticleCollectionVecInput
+            public const nint m_flTailAlphaScale = 0x3968; // CPerParticleFloatInput
+            public const nint m_nHorizCropField = 0x3AB8; // ParticleAttributeIndex_t
+            public const nint m_nVertCropField = 0x3ABC; // ParticleAttributeIndex_t
+            public const nint m_flForwardShift = 0x3AC0; // float32
+            public const nint m_bFlipUVBasedOnPitchYaw = 0x3AC4; // bool
         }
         // Parent: CParticleFunctionPreEmission
         // Fields count: 3
@@ -1384,10 +1439,10 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderTonemapController {
-            public const nint m_flTonemapLevel = 0x1F8; // float32
-            public const nint m_flTonemapWeight = 0x1FC; // float32
-            public const nint m_nTonemapLevelField = 0x200; // ParticleAttributeIndex_t
-            public const nint m_nTonemapWeightField = 0x204; // ParticleAttributeIndex_t
+            public const nint m_flTonemapLevel = 0x1FC; // float32
+            public const nint m_flTonemapWeight = 0x200; // float32
+            public const nint m_nTonemapLevelField = 0x204; // ParticleAttributeIndex_t
+            public const nint m_nTonemapWeightField = 0x208; // ParticleAttributeIndex_t
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 3
@@ -1521,7 +1576,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bInfiniteLine = 0x1C0; // bool
         }
         // Parent: CParticleFunctionEmitter
-        // Fields count: 10
+        // Fields count: 11
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1532,10 +1587,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_flEmissionScale = 0x5A8; // float32
             public const nint m_flScalePerParentParticle = 0x5AC; // float32
             public const nint m_bInitFromKilledParentParticles = 0x5B0; // bool
-            public const nint m_nSnapshotControlPoint = 0x5B4; // int32
-            public const nint m_nLimitPerUpdate = 0x5B8; // int32
-            public const nint m_bForceEmitOnFirstUpdate = 0x5BC; // bool
-            public const nint m_bForceEmitOnLastUpdate = 0x5BD; // bool
+            public const nint m_nEventType = 0x5B4; // EventTypeSelection_t
+            public const nint m_nSnapshotControlPoint = 0x5B8; // int32
+            public const nint m_nLimitPerUpdate = 0x5BC; // int32
+            public const nint m_bForceEmitOnFirstUpdate = 0x5C0; // bool
+            public const nint m_bForceEmitOnLastUpdate = 0x5C1; // bool
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 6
@@ -1591,6 +1647,18 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRemapBias = 0x1DC; // float32
         }
         // Parent: CParticleFunctionOperator
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_SetUserEvent {
+            public const nint m_flInput = 0x1B0; // CPerParticleFloatInput
+            public const nint m_flRisingEdge = 0x300; // CPerParticleFloatInput
+            public const nint m_nRisingEventType = 0x450; // EventTypeSelection_t
+            public const nint m_flFallingEdge = 0x458; // CPerParticleFloatInput
+            public const nint m_nFallingEventType = 0x5A8; // EventTypeSelection_t
+        }
+        // Parent: CParticleFunctionOperator
         // Fields count: 2
         //
         // Metadata:
@@ -1604,20 +1672,23 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MPulseInstanceDomainInfo
+        // MPulseDomainHookInfo
         // MPulseLibraryBindings
         // MPulseDomainOptInFeatureTag
         // MPulseDomainOptInFeatureTag
         public static class CParticleCollectionBindingInstance {
         }
         // Parent: CParticleFunctionOperator
-        // Fields count: 3
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_BasicMovement {
             public const nint m_Gravity = 0x1B0; // CParticleCollectionVecInput
             public const nint m_fDrag = 0x7E0; // CParticleCollectionFloatInput
-            public const nint m_nMaxConstraintPasses = 0x930; // int32
+            public const nint m_massControls = 0x930; // CParticleMassCalculationParameters
+            public const nint m_nMaxConstraintPasses = 0xD28; // int32
+            public const nint m_bUseNewCode = 0xD2C; // bool
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 6
@@ -1633,12 +1704,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFieldOutput = 0x1DC; // ParticleAttributeIndex_t
         }
         // Parent: CParticleFunctionInitializer
-        // Fields count: 1
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_INIT_InitFromParentKilled {
             public const nint m_nAttributeToCopy = 0x1B4; // ParticleAttributeIndex_t
+            public const nint m_nEventType = 0x1B8; // EventTypeSelection_t
         }
         // Parent: CParticleFunctionRenderer
         // Fields count: 0
@@ -2050,16 +2122,19 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDistSqrAttr = 0x938; // ParticleAttributeIndex_t
         }
         // Parent: CParticleFunctionRenderer
-        // Fields count: 5
+        // Fields count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderSimpleModelCollection {
-            public const nint m_bCenterOffset = 0x1F6; // bool
-            public const nint m_modelInput = 0x1F8; // CParticleModelInput
-            public const nint m_nLOD = 0x250; // int32
-            public const nint m_bDisableShadows = 0x254; // bool
-            public const nint m_bAcceptsDecals = 0x255; // bool
+            public const nint m_bCenterOffset = 0x1FA; // bool
+            public const nint m_hModel = 0x200; // CStrongHandle<InfoForResourceTypeCModel>
+            public const nint m_modelInput = 0x208; // CParticleModelInput
+            public const nint m_nLOD = 0x260; // int32
+            public const nint m_bDisableShadows = 0x264; // bool
+            public const nint m_bDisableMotionBlur = 0x265; // bool
+            public const nint m_bAcceptsDecals = 0x266; // bool
+            public const nint m_nAngularVelocityField = 0x268; // ParticleAttributeIndex_t
         }
         // Parent: CParticleFunctionPreEmission
         // Fields count: 4
@@ -2175,14 +2250,14 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderAsModels {
-            public const nint m_ModelList = 0x1F8; // CUtlVector<ModelReference_t>
-            public const nint m_flModelScale = 0x214; // float32
-            public const nint m_bFitToModelSize = 0x218; // bool
-            public const nint m_bNonUniformScaling = 0x219; // bool
-            public const nint m_nXAxisScalingAttribute = 0x21C; // ParticleAttributeIndex_t
-            public const nint m_nYAxisScalingAttribute = 0x220; // ParticleAttributeIndex_t
-            public const nint m_nZAxisScalingAttribute = 0x224; // ParticleAttributeIndex_t
-            public const nint m_nSizeCullBloat = 0x228; // int32
+            public const nint m_ModelList = 0x200; // CUtlVector<ModelReference_t>
+            public const nint m_flModelScale = 0x21C; // float32
+            public const nint m_bFitToModelSize = 0x220; // bool
+            public const nint m_bNonUniformScaling = 0x221; // bool
+            public const nint m_nXAxisScalingAttribute = 0x224; // ParticleAttributeIndex_t
+            public const nint m_nYAxisScalingAttribute = 0x228; // ParticleAttributeIndex_t
+            public const nint m_nZAxisScalingAttribute = 0x22C; // ParticleAttributeIndex_t
+            public const nint m_nSizeCullBloat = 0x230; // int32
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 10
@@ -2253,7 +2328,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vRandomMax = 0x624; // Vector
         }
         // Parent: CParticleFunctionEmitter
-        // Fields count: 6
+        // Fields count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -2261,6 +2336,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nParticlesToEmit = 0x1B8; // CParticleCollectionFloatInput
             public const nint m_flStartTime = 0x308; // CParticleCollectionFloatInput
             public const nint m_flInitFromKilledParentParticles = 0x458; // float32
+            public const nint m_nEventType = 0x45C; // EventTypeSelection_t
             public const nint m_flParentParticleScale = 0x460; // CParticleCollectionFloatInput
             public const nint m_nMaxEmittedPerFrame = 0x5B0; // int32
             public const nint m_nSnapshotControlPoint = 0x5B4; // int32
@@ -2295,13 +2371,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CBaseTrailRenderer {
-            public const nint m_nOrientationType = 0x2638; // ParticleOrientationChoiceList_t
-            public const nint m_nOrientationControlPoint = 0x263C; // int32
-            public const nint m_flMinSize = 0x2640; // float32
-            public const nint m_flMaxSize = 0x2644; // float32
-            public const nint m_flStartFadeSize = 0x2648; // CParticleCollectionRendererFloatInput
-            public const nint m_flEndFadeSize = 0x2798; // CParticleCollectionRendererFloatInput
-            public const nint m_bClampV = 0x28E8; // bool
+            public const nint m_nOrientationType = 0x2640; // ParticleOrientationChoiceList_t
+            public const nint m_nOrientationControlPoint = 0x2644; // int32
+            public const nint m_flMinSize = 0x2648; // float32
+            public const nint m_flMaxSize = 0x264C; // float32
+            public const nint m_flStartFadeSize = 0x2650; // CParticleCollectionRendererFloatInput
+            public const nint m_flEndFadeSize = 0x27A0; // CParticleCollectionRendererFloatInput
+            public const nint m_bClampV = 0x28F0; // bool
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 4
@@ -2398,9 +2474,9 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderVRHapticEvent {
-            public const nint m_nHand = 0x1F8; // ParticleVRHandChoiceList_t
-            public const nint m_nOutputHandCP = 0x1FC; // int32
-            public const nint m_nOutputField = 0x200; // int32
+            public const nint m_nHand = 0x1FC; // ParticleVRHandChoiceList_t
+            public const nint m_nOutputHandCP = 0x200; // int32
+            public const nint m_nOutputField = 0x204; // int32
             public const nint m_flAmplitude = 0x208; // CPerParticleFloatInput
         }
         // Parent: CParticleFunctionPreEmission
@@ -2500,17 +2576,19 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFreezeTime = 0x1B0; // CParticleCollectionFloatInput
         }
         // Parent: CParticleFunctionRenderer
-        // Fields count: 6
+        // Fields count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderGpuImplicit {
-            public const nint m_bUsePerParticleRadius = 0x1F6; // bool
-            public const nint m_fGridSize = 0x1F8; // CParticleCollectionRendererFloatInput
-            public const nint m_fRadiusScale = 0x348; // CParticleCollectionRendererFloatInput
-            public const nint m_fIsosurfaceThreshold = 0x498; // CParticleCollectionRendererFloatInput
-            public const nint m_nScaleCP = 0x5E8; // int32
-            public const nint m_hMaterial = 0x5F0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_bUsePerParticleRadius = 0x1FA; // bool
+            public const nint m_nVertexCountKb = 0x1FC; // uint32
+            public const nint m_nIndexCountKb = 0x200; // uint32
+            public const nint m_fGridSize = 0x208; // CParticleCollectionRendererFloatInput
+            public const nint m_fRadiusScale = 0x358; // CParticleCollectionRendererFloatInput
+            public const nint m_fIsosurfaceThreshold = 0x4A8; // CParticleCollectionRendererFloatInput
+            public const nint m_nScaleCP = 0x5F8; // int32
+            public const nint m_hMaterial = 0x600; // CStrongHandle<InfoForResourceTypeIMaterial2>
         }
         // Parent: IParticleEffect
         // Fields count: 32
@@ -2689,11 +2767,11 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CParticleFunctionRenderer {
             public const nint VisibilityInputs = 0x1B0; // CParticleVisibilityInputs
-            public const nint m_bCannotBeRefracted = 0x1F4; // bool
-            public const nint m_bSkipRenderingOnMobile = 0x1F5; // bool
+            public const nint m_bCannotBeRefracted = 0x1F8; // bool
+            public const nint m_bSkipRenderingOnMobile = 0x1F9; // bool
         }
         // Parent: IParticleSystemDefinition
-        // Fields count: 64
+        // Fields count: 65
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -2755,6 +2833,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bShouldBatch = 0x30C; // bool
             public const nint m_bShouldHitboxesFallbackToRenderBounds = 0x30D; // bool
             public const nint m_bShouldHitboxesFallbackToSnapshot = 0x30E; // bool
+            public const nint m_bShouldHitboxesFallbackToCollisionHulls = 0x30F; // bool
             public const nint m_nViewModelEffect = 0x310; // InheritableBoolType_t
             public const nint m_bScreenSpaceEffect = 0x314; // bool
             public const nint m_pszTargetLayerID = 0x318; // CUtlSymbolLarge
@@ -2793,8 +2872,8 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderScreenVelocityRotate {
-            public const nint m_flRotateRateDegrees = 0x1F8; // float32
-            public const nint m_flForwardDegrees = 0x1FC; // float32
+            public const nint m_flRotateRateDegrees = 0x1FC; // float32
+            public const nint m_flForwardDegrees = 0x200; // float32
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 6
@@ -2941,9 +3020,9 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderPostProcessing {
-            public const nint m_flPostProcessStrength = 0x1F8; // CPerParticleFloatInput
-            public const nint m_hPostTexture = 0x348; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-            public const nint m_nPriority = 0x350; // ParticlePostProcessPriorityGroup_t
+            public const nint m_flPostProcessStrength = 0x200; // CPerParticleFloatInput
+            public const nint m_hPostTexture = 0x350; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
+            public const nint m_nPriority = 0x358; // ParticlePostProcessPriorityGroup_t
         }
         // Parent: CParticleFunctionConstraint
         // Fields count: 27
@@ -2988,17 +3067,19 @@ namespace CS2Dumper.Schemas {
         public static class CParticleCollectionVecInput {
         }
         // Parent: CParticleFunctionRenderer
-        // Fields count: 6
+        // Fields count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderBlobs {
-            public const nint m_cubeWidth = 0x1F8; // CParticleCollectionRendererFloatInput
-            public const nint m_cutoffRadius = 0x348; // CParticleCollectionRendererFloatInput
-            public const nint m_renderRadius = 0x498; // CParticleCollectionRendererFloatInput
-            public const nint m_nScaleCP = 0x5E8; // int32
-            public const nint m_MaterialVars = 0x5F0; // CUtlVector<MaterialVariable_t>
-            public const nint m_hMaterial = 0x620; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_cubeWidth = 0x200; // CParticleCollectionRendererFloatInput
+            public const nint m_cutoffRadius = 0x350; // CParticleCollectionRendererFloatInput
+            public const nint m_renderRadius = 0x4A0; // CParticleCollectionRendererFloatInput
+            public const nint m_nVertexCountKb = 0x5F0; // uint32
+            public const nint m_nIndexCountKb = 0x5F4; // uint32
+            public const nint m_nScaleCP = 0x5F8; // int32
+            public const nint m_MaterialVars = 0x600; // CUtlVector<MaterialVariable_t>
+            public const nint m_hMaterial = 0x630; // CStrongHandle<InfoForResourceTypeIMaterial2>
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 13
@@ -3101,16 +3182,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_nSetMethod = 0xE1C; // ParticleSetMethod_t
             public const nint m_bNormalizedOutput = 0xE20; // bool
         }
-        // Parent: CParticleFunctionOperator
-        // Fields count: 3
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class C_OP_ParticlePhysics {
-            public const nint m_Gravity = 0x1B0; // CParticleCollectionVecInput
-            public const nint m_fDrag = 0x7E0; // CParticleCollectionFloatInput
-            public const nint m_nMaxConstraintPasses = 0x930; // int32
-        }
         // Parent: CParticleFunctionInitializer
         // Fields count: 6
         //
@@ -3153,13 +3224,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderStatusEffect {
-            public const nint m_pTextureColorWarp = 0x1F8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureDetail2 = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureDiffuseWarp = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureFresnelColorWarp = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureFresnelWarp = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureSpecularWarp = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureEnvMap = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureDetail2 = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureDiffuseWarp = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureFresnelColorWarp = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureFresnelWarp = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureSpecularWarp = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureEnvMap = 0x230; // CStrongHandle<InfoForResourceTypeCTextureBase>
         }
         // Parent: CParticleFunctionForce
         // Fields count: 2
@@ -3230,7 +3301,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_HitboxSetName = 0x1B7; // char[128]
         }
         // Parent: CParticleFunctionOperator
-        // Fields count: 5
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -3239,7 +3310,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_nOutputField = 0x300; // ParticleAttributeIndex_t
             public const nint m_nSetMethod = 0x304; // ParticleSetMethod_t
             public const nint m_Lerp = 0x308; // CPerParticleFloatInput
-            public const nint m_bUseNewCode = 0x458; // bool
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 13
@@ -3444,13 +3514,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderLights {
-            public const nint m_flAnimationRate = 0x200; // float32
-            public const nint m_nAnimationType = 0x204; // AnimationType_t
-            public const nint m_bAnimateInFPS = 0x208; // bool
-            public const nint m_flMinSize = 0x20C; // float32
-            public const nint m_flMaxSize = 0x210; // float32
-            public const nint m_flStartFadeSize = 0x214; // float32
-            public const nint m_flEndFadeSize = 0x218; // float32
+            public const nint m_flAnimationRate = 0x208; // float32
+            public const nint m_nAnimationType = 0x20C; // AnimationType_t
+            public const nint m_bAnimateInFPS = 0x210; // bool
+            public const nint m_flMinSize = 0x214; // float32
+            public const nint m_flMaxSize = 0x218; // float32
+            public const nint m_flStartFadeSize = 0x21C; // float32
+            public const nint m_flEndFadeSize = 0x220; // float32
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 1
@@ -3489,7 +3559,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderPoints {
-            public const nint m_hMaterial = 0x1F8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_hMaterial = 0x200; // CStrongHandle<InfoForResourceTypeIMaterial2>
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 6
@@ -3737,7 +3807,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderText {
-            public const nint m_OutlineColor = 0x1F6; // Color
+            public const nint m_OutlineColor = 0x1FA; // Color
             public const nint m_DefaultText = 0x200; // CUtlString
         }
         // Parent: CParticleFunctionOperator
@@ -4112,7 +4182,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderOmni2Light {
-            public const nint m_nLightType = 0x1F8; // ParticleOmni2LightTypeChoiceList_t
+            public const nint m_nLightType = 0x1FC; // ParticleOmni2LightTypeChoiceList_t
             public const nint m_vColorBlend = 0x200; // CParticleCollectionVecInput
             public const nint m_nColorBlendType = 0x830; // ParticleColorBlendType_t
             public const nint m_nBrightnessUnit = 0x834; // ParticleLightUnitChoiceList_t
@@ -4236,6 +4306,17 @@ namespace CS2Dumper.Schemas {
             public const nint m_flSaturationAdjust = 0x300; // CPerParticleFloatInput
             public const nint m_flLightnessAdjust = 0x450; // CPerParticleFloatInput
         }
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CParticleMassCalculationParameters {
+            public const nint m_nMassMode = 0x0; // ParticleMassMode_t
+            public const nint m_flRadius = 0x8; // CPerParticleFloatInput
+            public const nint m_flNominalRadius = 0x158; // CPerParticleFloatInput
+            public const nint m_flScale = 0x2A8; // CPerParticleFloatInput
+        }
         // Parent: CParticleFunctionOperator
         // Fields count: 8
         //
@@ -4281,20 +4362,21 @@ namespace CS2Dumper.Schemas {
             public const nint m_bWritePreviousPosition = 0x7F1; // bool
         }
         // Parent: CParticleFunctionInitializer
-        // Fields count: 9
+        // Fields count: 10
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_INIT_SetHitboxToModel {
             public const nint m_nControlPointNumber = 0x1B4; // int32
             public const nint m_nForceInModel = 0x1B8; // int32
-            public const nint m_nDesiredHitbox = 0x1BC; // int32
-            public const nint m_vecHitBoxScale = 0x1C0; // CParticleCollectionVecInput
-            public const nint m_vecDirectionBias = 0x7F0; // Vector
-            public const nint m_bMaintainHitbox = 0x7FC; // bool
-            public const nint m_bUseBones = 0x7FD; // bool
-            public const nint m_HitboxSetName = 0x7FE; // char[128]
-            public const nint m_flShellSize = 0x880; // CParticleCollectionFloatInput
+            public const nint m_bEvenDistribution = 0x1BC; // bool
+            public const nint m_nDesiredHitbox = 0x1C0; // int32
+            public const nint m_vecHitBoxScale = 0x1C8; // CParticleCollectionVecInput
+            public const nint m_vecDirectionBias = 0x7F8; // Vector
+            public const nint m_bMaintainHitbox = 0x804; // bool
+            public const nint m_bUseBones = 0x805; // bool
+            public const nint m_HitboxSetName = 0x806; // char[128]
+            public const nint m_flShellSize = 0x888; // CParticleCollectionFloatInput
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 6
@@ -4454,28 +4536,28 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderCables {
-            public const nint m_flRadiusScale = 0x1F8; // CParticleCollectionFloatInput
-            public const nint m_flAlphaScale = 0x348; // CParticleCollectionFloatInput
-            public const nint m_vecColorScale = 0x498; // CParticleCollectionVecInput
-            public const nint m_nColorBlendType = 0xAC8; // ParticleColorBlendType_t
-            public const nint m_hMaterial = 0xAD0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_nTextureRepetitionMode = 0xAD8; // TextureRepetitionMode_t
-            public const nint m_flTextureRepeatsPerSegment = 0xAE0; // CParticleCollectionFloatInput
-            public const nint m_flTextureRepeatsCircumference = 0xC30; // CParticleCollectionFloatInput
-            public const nint m_flColorMapOffsetV = 0xD80; // CParticleCollectionFloatInput
-            public const nint m_flColorMapOffsetU = 0xED0; // CParticleCollectionFloatInput
-            public const nint m_flNormalMapOffsetV = 0x1020; // CParticleCollectionFloatInput
-            public const nint m_flNormalMapOffsetU = 0x1170; // CParticleCollectionFloatInput
-            public const nint m_bDrawCableCaps = 0x12C0; // bool
-            public const nint m_flCapRoundness = 0x12C4; // float32
-            public const nint m_flCapOffsetAmount = 0x12C8; // float32
-            public const nint m_flTessScale = 0x12CC; // float32
-            public const nint m_nMinTesselation = 0x12D0; // int32
-            public const nint m_nMaxTesselation = 0x12D4; // int32
-            public const nint m_nRoundness = 0x12D8; // int32
-            public const nint m_LightingTransform = 0x12E0; // CParticleTransformInput
-            public const nint m_MaterialFloatVars = 0x1340; // CUtlVector<FloatInputMaterialVariable_t>
-            public const nint m_MaterialVecVars = 0x1370; // CUtlVector<VecInputMaterialVariable_t>
+            public const nint m_flRadiusScale = 0x200; // CParticleCollectionFloatInput
+            public const nint m_flAlphaScale = 0x350; // CParticleCollectionFloatInput
+            public const nint m_vecColorScale = 0x4A0; // CParticleCollectionVecInput
+            public const nint m_nColorBlendType = 0xAD0; // ParticleColorBlendType_t
+            public const nint m_hMaterial = 0xAD8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_nTextureRepetitionMode = 0xAE0; // TextureRepetitionMode_t
+            public const nint m_flTextureRepeatsPerSegment = 0xAE8; // CParticleCollectionFloatInput
+            public const nint m_flTextureRepeatsCircumference = 0xC38; // CParticleCollectionFloatInput
+            public const nint m_flColorMapOffsetV = 0xD88; // CParticleCollectionFloatInput
+            public const nint m_flColorMapOffsetU = 0xED8; // CParticleCollectionFloatInput
+            public const nint m_flNormalMapOffsetV = 0x1028; // CParticleCollectionFloatInput
+            public const nint m_flNormalMapOffsetU = 0x1178; // CParticleCollectionFloatInput
+            public const nint m_bDrawCableCaps = 0x12C8; // bool
+            public const nint m_flCapRoundness = 0x12CC; // float32
+            public const nint m_flCapOffsetAmount = 0x12D0; // float32
+            public const nint m_flTessScale = 0x12D4; // float32
+            public const nint m_nMinTesselation = 0x12D8; // int32
+            public const nint m_nMaxTesselation = 0x12DC; // int32
+            public const nint m_nRoundness = 0x12E0; // int32
+            public const nint m_LightingTransform = 0x12E8; // CParticleTransformInput
+            public const nint m_MaterialFloatVars = 0x1348; // CUtlVector<FloatInputMaterialVariable_t>
+            public const nint m_MaterialVecVars = 0x1378; // CUtlVector<VecInputMaterialVariable_t>
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 2
@@ -4738,6 +4820,21 @@ namespace CS2Dumper.Schemas {
             public const nint m_TransformInput = 0x930; // CParticleTransformInput
             public const nint m_bLocalSpace = 0x990; // bool
         }
+        // Parent: CParticleFunctionForce
+        // Fields count: 8
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_IntraParticleForce {
+            public const nint m_flAttractionMinDistance = 0x1BC; // float32
+            public const nint m_flAttractionMaxDistance = 0x1C0; // float32
+            public const nint m_flAttractionMaxStrength = 0x1C4; // float32
+            public const nint m_flRepulsionMinDistance = 0x1C8; // float32
+            public const nint m_flRepulsionMaxDistance = 0x1CC; // float32
+            public const nint m_flRepulsionMaxStrength = 0x1D0; // float32
+            public const nint m_bUseAABB = 0x1D4; // bool
+            public const nint m_bThreadIt = 0x1D5; // bool
+        }
         // Parent: CParticleFunctionInitializer
         // Fields count: 4
         //
@@ -4750,7 +4847,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_InputStrength = 0x310; // CPerParticleFloatInput
         }
         // Parent: CParticleFunctionInitializer
-        // Fields count: 14
+        // Fields count: 16
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -4758,17 +4855,19 @@ namespace CS2Dumper.Schemas {
             public const nint m_modelInput = 0x1B8; // CParticleModelInput
             public const nint m_transformInput = 0x210; // CParticleTransformInput
             public const nint m_nForceInModel = 0x270; // int32
-            public const nint m_nDesiredHitbox = 0x274; // int32
-            public const nint m_nHitboxValueFromControlPointIndex = 0x278; // int32
-            public const nint m_vecHitBoxScale = 0x280; // CParticleCollectionVecInput
-            public const nint m_flBoneVelocity = 0x8B0; // float32
-            public const nint m_flMaxBoneVelocity = 0x8B4; // float32
-            public const nint m_vecDirectionBias = 0x8B8; // CParticleCollectionVecInput
-            public const nint m_HitboxSetName = 0xEE8; // char[128]
-            public const nint m_bLocalCoords = 0xF68; // bool
-            public const nint m_bUseBones = 0xF69; // bool
-            public const nint m_bUseMesh = 0xF6A; // bool
-            public const nint m_flShellSize = 0xF70; // CParticleCollectionFloatInput
+            public const nint m_bScaleToVolume = 0x274; // bool
+            public const nint m_bEvenDistribution = 0x275; // bool
+            public const nint m_nDesiredHitbox = 0x278; // CParticleCollectionFloatInput
+            public const nint m_nHitboxValueFromControlPointIndex = 0x3C8; // int32
+            public const nint m_vecHitBoxScale = 0x3D0; // CParticleCollectionVecInput
+            public const nint m_flBoneVelocity = 0xA00; // float32
+            public const nint m_flMaxBoneVelocity = 0xA04; // float32
+            public const nint m_vecDirectionBias = 0xA08; // CParticleCollectionVecInput
+            public const nint m_HitboxSetName = 0x1038; // char[128]
+            public const nint m_bLocalCoords = 0x10B8; // bool
+            public const nint m_bUseBones = 0x10B9; // bool
+            public const nint m_bUseMesh = 0x10BA; // bool
+            public const nint m_flShellSize = 0x10C0; // CParticleCollectionFloatInput
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 4
@@ -4799,23 +4898,29 @@ namespace CS2Dumper.Schemas {
         public static class C_INIT_RandomNamedModelMeshGroup {
         }
         // Parent: CParticleFunctionRenderer
-        // Fields count: 12
+        // Fields count: 18
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderProjected {
-            public const nint m_bProjectCharacter = 0x1F6; // bool
-            public const nint m_bProjectWorld = 0x1F7; // bool
-            public const nint m_bProjectWater = 0x1F8; // bool
-            public const nint m_bFlipHorizontal = 0x1F9; // bool
-            public const nint m_bEnableProjectedDepthControls = 0x1FA; // bool
-            public const nint m_flMinProjectionDepth = 0x1FC; // float32
-            public const nint m_flMaxProjectionDepth = 0x200; // float32
+            public const nint m_bProjectCharacter = 0x1FA; // bool
+            public const nint m_bProjectWorld = 0x1FB; // bool
+            public const nint m_bProjectWater = 0x1FC; // bool
+            public const nint m_bFlipHorizontal = 0x1FD; // bool
+            public const nint m_bEnableProjectedDepthControls = 0x1FE; // bool
+            public const nint m_flMinProjectionDepth = 0x200; // float32
+            public const nint m_flMaxProjectionDepth = 0x204; // float32
             public const nint m_vecProjectedMaterials = 0x208; // CUtlVector<RenderProjectedMaterial_t>
             public const nint m_flMaterialSelection = 0x220; // CPerParticleFloatInput
             public const nint m_flAnimationTimeScale = 0x370; // float32
             public const nint m_bOrientToNormal = 0x374; // bool
             public const nint m_MaterialVars = 0x378; // CUtlVector<MaterialVariable_t>
+            public const nint m_flRadiusScale = 0x390; // CParticleCollectionFloatInput
+            public const nint m_flAlphaScale = 0x4E0; // CParticleCollectionFloatInput
+            public const nint m_flRollScale = 0x630; // CParticleCollectionFloatInput
+            public const nint m_nAlpha2Field = 0x780; // ParticleAttributeIndex_t
+            public const nint m_vecColorScale = 0x788; // CParticleCollectionVecInput
+            public const nint m_nColorBlendType = 0xDB8; // ParticleColorBlendType_t
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 4
@@ -4894,7 +4999,7 @@ namespace CS2Dumper.Schemas {
             public const nint unused = 0x0; // int32
         }
         // Parent: CParticleFunctionOperator
-        // Fields count: 6
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -4904,7 +5009,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFadeEndTime = 0x1C4; // float32
             public const nint m_nFieldOutput = 0x1C8; // ParticleAttributeIndex_t
             public const nint m_bEaseInOut = 0x1CC; // bool
-            public const nint m_bUseNewCode = 0x1CD; // bool
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 10
@@ -5023,12 +5127,12 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderStatusEffectCitadel {
-            public const nint m_pTextureColorWarp = 0x1F8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureNormal = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureMetalness = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureRoughness = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureSelfIllum = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_pTextureDetail = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureColorWarp = 0x200; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureNormal = 0x208; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureMetalness = 0x210; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureRoughness = 0x218; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureSelfIllum = 0x220; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_pTextureDetail = 0x228; // CStrongHandle<InfoForResourceTypeCTextureBase>
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 11
@@ -5090,7 +5194,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderStandardLight {
-            public const nint m_nLightType = 0x1F8; // ParticleLightTypeChoiceList_t
+            public const nint m_nLightType = 0x1FC; // ParticleLightTypeChoiceList_t
             public const nint m_vecColorScale = 0x200; // CParticleCollectionVecInput
             public const nint m_nColorBlendType = 0x830; // ParticleColorBlendType_t
             public const nint m_flIntensity = 0x838; // CParticleCollectionFloatInput
@@ -5223,10 +5327,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCP = 0x938; // int32
             public const nint m_nLocalCP = 0x93C; // int32
         }
-        // Parent: None
-        // Fields count: 0
-        public static class IControlPointEditorData {
-        }
         // Parent: CParticleFunctionForce
         // Fields count: 7
         //
@@ -5276,15 +5376,15 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderScreenShake {
-            public const nint m_flDurationScale = 0x1F8; // float32
-            public const nint m_flRadiusScale = 0x1FC; // float32
-            public const nint m_flFrequencyScale = 0x200; // float32
-            public const nint m_flAmplitudeScale = 0x204; // float32
-            public const nint m_nRadiusField = 0x208; // ParticleAttributeIndex_t
-            public const nint m_nDurationField = 0x20C; // ParticleAttributeIndex_t
-            public const nint m_nFrequencyField = 0x210; // ParticleAttributeIndex_t
-            public const nint m_nAmplitudeField = 0x214; // ParticleAttributeIndex_t
-            public const nint m_nFilterCP = 0x218; // int32
+            public const nint m_flDurationScale = 0x1FC; // float32
+            public const nint m_flRadiusScale = 0x200; // float32
+            public const nint m_flFrequencyScale = 0x204; // float32
+            public const nint m_flAmplitudeScale = 0x208; // float32
+            public const nint m_nRadiusField = 0x20C; // ParticleAttributeIndex_t
+            public const nint m_nDurationField = 0x210; // ParticleAttributeIndex_t
+            public const nint m_nFrequencyField = 0x214; // ParticleAttributeIndex_t
+            public const nint m_nAmplitudeField = 0x218; // ParticleAttributeIndex_t
+            public const nint m_nFilterCP = 0x21C; // int32
         }
         // Parent: CParticleFunctionPreEmission
         // Fields count: 5
@@ -5825,9 +5925,9 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderFlattenGrass {
-            public const nint m_flFlattenStrength = 0x1F8; // float32
-            public const nint m_nStrengthFieldOverride = 0x1FC; // ParticleAttributeIndex_t
-            public const nint m_flRadiusScale = 0x200; // float32
+            public const nint m_flFlattenStrength = 0x1FC; // float32
+            public const nint m_nStrengthFieldOverride = 0x200; // ParticleAttributeIndex_t
+            public const nint m_flRadiusScale = 0x204; // float32
         }
         // Parent: CParticleFunctionRenderer
         // Fields count: 7
@@ -5835,13 +5935,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderLightBeam {
-            public const nint m_vColorBlend = 0x1F8; // CParticleCollectionVecInput
-            public const nint m_nColorBlendType = 0x828; // ParticleColorBlendType_t
-            public const nint m_flBrightnessLumensPerMeter = 0x830; // CParticleCollectionFloatInput
-            public const nint m_bCastShadows = 0x980; // bool
-            public const nint m_flSkirt = 0x988; // CParticleCollectionFloatInput
-            public const nint m_flRange = 0xAD8; // CParticleCollectionFloatInput
-            public const nint m_flThickness = 0xC28; // CParticleCollectionFloatInput
+            public const nint m_vColorBlend = 0x200; // CParticleCollectionVecInput
+            public const nint m_nColorBlendType = 0x830; // ParticleColorBlendType_t
+            public const nint m_flBrightnessLumensPerMeter = 0x838; // CParticleCollectionFloatInput
+            public const nint m_bCastShadows = 0x988; // bool
+            public const nint m_flSkirt = 0x990; // CParticleCollectionFloatInput
+            public const nint m_flRange = 0xAE0; // CParticleCollectionFloatInput
+            public const nint m_flThickness = 0xC30; // CParticleCollectionFloatInput
         }
         // Parent: CParticleFunctionPreEmission
         // Fields count: 6
@@ -5877,6 +5977,20 @@ namespace CS2Dumper.Schemas {
             public const nint m_bActiveRange = 0x8E0; // bool
             public const nint m_vecDistanceScale = 0x8E4; // Vector
             public const nint m_flRemapBias = 0x8F0; // float32
+        }
+        // Parent: None
+        // Fields count: 7
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CReplicationParameters {
+            public const nint m_nReplicationMode = 0x0; // ParticleReplicationMode_t
+            public const nint m_bScaleChildParticleRadii = 0x4; // bool
+            public const nint m_flMinRandomRadiusScale = 0x8; // CParticleCollectionFloatInput
+            public const nint m_flMaxRandomRadiusScale = 0x158; // CParticleCollectionFloatInput
+            public const nint m_vMinRandomDisplacement = 0x2A8; // CParticleCollectionVecInput
+            public const nint m_vMaxRandomDisplacement = 0x8D8; // CParticleCollectionVecInput
+            public const nint m_flModellingScale = 0xF08; // CParticleCollectionFloatInput
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 0
@@ -5972,16 +6086,16 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderModels {
-            public const nint m_bOnlyRenderInEffectsBloomPass = 0x1F6; // bool
-            public const nint m_bOnlyRenderInEffectsWaterPass = 0x1F7; // bool
-            public const nint m_bUseMixedResolutionRendering = 0x1F8; // bool
-            public const nint m_bOnlyRenderInEffecsGameOverlay = 0x1F9; // bool
+            public const nint m_bOnlyRenderInEffectsBloomPass = 0x1FA; // bool
+            public const nint m_bOnlyRenderInEffectsWaterPass = 0x1FB; // bool
+            public const nint m_bUseMixedResolutionRendering = 0x1FC; // bool
+            public const nint m_bOnlyRenderInEffecsGameOverlay = 0x1FD; // bool
             public const nint m_ModelList = 0x200; // CUtlVector<ModelReference_t>
-            public const nint m_nBodyGroupField = 0x21C; // ParticleAttributeIndex_t
-            public const nint m_nSubModelField = 0x220; // ParticleAttributeIndex_t
-            public const nint m_bIgnoreNormal = 0x224; // bool
-            public const nint m_bOrientZ = 0x225; // bool
-            public const nint m_bCenterOffset = 0x226; // bool
+            public const nint m_nBodyGroupField = 0x218; // ParticleAttributeIndex_t
+            public const nint m_nSubModelField = 0x21C; // ParticleAttributeIndex_t
+            public const nint m_bIgnoreNormal = 0x220; // bool
+            public const nint m_bOrientZ = 0x221; // bool
+            public const nint m_bCenterOffset = 0x222; // bool
             public const nint m_vecLocalOffset = 0x228; // CPerParticleVecInput
             public const nint m_vecLocalRotation = 0x858; // CPerParticleVecInput
             public const nint m_bIgnoreRadius = 0xE88; // bool
@@ -6001,31 +6115,31 @@ namespace CS2Dumper.Schemas {
             public const nint m_ActivityName = 0x1630; // char[256]
             public const nint m_SequenceName = 0x1730; // char[256]
             public const nint m_bEnableClothSimulation = 0x1830; // bool
-            public const nint m_hOverrideMaterial = 0x1838; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_bOverrideTranslucentMaterials = 0x1840; // bool
-            public const nint m_nSkin = 0x1848; // CPerParticleFloatInput
-            public const nint m_MaterialVars = 0x1998; // CUtlVector<MaterialVariable_t>
-            public const nint m_flManualModelSelection = 0x19B0; // CPerParticleFloatInput
-            public const nint m_modelInput = 0x1B00; // CParticleModelInput
-            public const nint m_nLOD = 0x1B58; // int32
-            public const nint m_EconSlotName = 0x1B5C; // char[256]
-            public const nint m_bOriginalModel = 0x1C5C; // bool
-            public const nint m_bSuppressTint = 0x1C5D; // bool
-            public const nint m_bUseRawMeshGroup = 0x1C5E; // bool
-            public const nint m_bDisableShadows = 0x1C5F; // bool
-            public const nint m_bDisableDepthPrepass = 0x1C60; // bool
-            public const nint m_bAcceptsDecals = 0x1C61; // bool
-            public const nint m_bForceDrawInterlevedWithSiblings = 0x1C62; // bool
-            public const nint m_bDoNotDrawInParticlePass = 0x1C63; // bool
-            public const nint m_bUseFastModelCollectionRenderPath = 0x1C64; // bool
-            public const nint m_bAllowApproximateTransforms = 0x1C65; // bool
-            public const nint m_szRenderAttribute = 0x1C66; // char[4096]
-            public const nint m_flRadiusScale = 0x2C68; // CParticleCollectionFloatInput
-            public const nint m_flAlphaScale = 0x2DB8; // CParticleCollectionFloatInput
-            public const nint m_flRollScale = 0x2F08; // CParticleCollectionFloatInput
-            public const nint m_nAlpha2Field = 0x3058; // ParticleAttributeIndex_t
-            public const nint m_vecColorScale = 0x3060; // CParticleCollectionVecInput
-            public const nint m_nColorBlendType = 0x3690; // ParticleColorBlendType_t
+            public const nint m_ClothEffectName = 0x1831; // char[64]
+            public const nint m_hOverrideMaterial = 0x1878; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_bOverrideTranslucentMaterials = 0x1880; // bool
+            public const nint m_nSkin = 0x1888; // CPerParticleFloatInput
+            public const nint m_MaterialVars = 0x19D8; // CUtlVector<MaterialVariable_t>
+            public const nint m_flManualModelSelection = 0x19F0; // CPerParticleFloatInput
+            public const nint m_modelInput = 0x1B40; // CParticleModelInput
+            public const nint m_nLOD = 0x1B98; // int32
+            public const nint m_EconSlotName = 0x1B9C; // char[256]
+            public const nint m_bOriginalModel = 0x1C9C; // bool
+            public const nint m_bSuppressTint = 0x1C9D; // bool
+            public const nint m_nSubModelFieldType = 0x1CA0; // RenderModelSubModelFieldType_t
+            public const nint m_bDisableShadows = 0x1CA4; // bool
+            public const nint m_bDisableDepthPrepass = 0x1CA5; // bool
+            public const nint m_bAcceptsDecals = 0x1CA6; // bool
+            public const nint m_bForceDrawInterlevedWithSiblings = 0x1CA7; // bool
+            public const nint m_bDoNotDrawInParticlePass = 0x1CA8; // bool
+            public const nint m_bAllowApproximateTransforms = 0x1CA9; // bool
+            public const nint m_szRenderAttribute = 0x1CAA; // char[4096]
+            public const nint m_flRadiusScale = 0x2CB0; // CParticleCollectionFloatInput
+            public const nint m_flAlphaScale = 0x2E00; // CParticleCollectionFloatInput
+            public const nint m_flRollScale = 0x2F50; // CParticleCollectionFloatInput
+            public const nint m_nAlpha2Field = 0x30A0; // ParticleAttributeIndex_t
+            public const nint m_vecColorScale = 0x30A8; // CParticleCollectionVecInput
+            public const nint m_nColorBlendType = 0x36D8; // ParticleColorBlendType_t
         }
         // Parent: CParticleFunction
         // Fields count: 1
@@ -6187,6 +6301,18 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCPField = 0x1C4; // int32
             public const nint m_vecComparisonVelocity = 0x1C8; // CParticleCollectionVecInput
         }
+        // Parent: CParticleFunctionRenderer
+        // Fields count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_ClientPhysics {
+            public const nint m_strPhysicsType = 0x200; // CUtlString
+            public const nint m_bKillParticles = 0x208; // bool
+            public const nint m_bDeleteSim = 0x209; // bool
+            public const nint m_nControlPoint = 0x20C; // int32
+            public const nint m_nColorBlendType = 0x210; // ParticleColorBlendType_t
+        }
         // Parent: CGeneralSpin
         // Fields count: 0
         //
@@ -6241,38 +6367,39 @@ namespace CS2Dumper.Schemas {
             public const nint m_HitboxSetName = 0x1BB; // char[128]
         }
         // Parent: CBaseRendererSource2
-        // Fields count: 27
+        // Fields count: 28
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderSprites {
-            public const nint m_nSequenceOverride = 0x2638; // CParticleCollectionRendererFloatInput
-            public const nint m_nOrientationType = 0x2788; // ParticleOrientationChoiceList_t
-            public const nint m_nOrientationControlPoint = 0x278C; // int32
-            public const nint m_bUseYawWithNormalAligned = 0x2790; // bool
-            public const nint m_flMinSize = 0x2798; // CParticleCollectionRendererFloatInput
-            public const nint m_flMaxSize = 0x28E8; // CParticleCollectionRendererFloatInput
-            public const nint m_flAlphaAdjustWithSizeAdjust = 0x2A38; // CParticleCollectionRendererFloatInput
-            public const nint m_flStartFadeSize = 0x2B88; // CParticleCollectionRendererFloatInput
-            public const nint m_flEndFadeSize = 0x2CD8; // CParticleCollectionRendererFloatInput
-            public const nint m_flStartFadeDot = 0x2E28; // float32
-            public const nint m_flEndFadeDot = 0x2E2C; // float32
-            public const nint m_bDistanceAlpha = 0x2E30; // bool
-            public const nint m_bSoftEdges = 0x2E31; // bool
-            public const nint m_flEdgeSoftnessStart = 0x2E34; // float32
-            public const nint m_flEdgeSoftnessEnd = 0x2E38; // float32
-            public const nint m_bOutline = 0x2E3C; // bool
-            public const nint m_OutlineColor = 0x2E3D; // Color
-            public const nint m_nOutlineAlpha = 0x2E44; // int32
-            public const nint m_flOutlineStart0 = 0x2E48; // float32
-            public const nint m_flOutlineStart1 = 0x2E4C; // float32
-            public const nint m_flOutlineEnd0 = 0x2E50; // float32
-            public const nint m_flOutlineEnd1 = 0x2E54; // float32
-            public const nint m_nLightingMode = 0x2E58; // ParticleLightingQuality_t
-            public const nint m_flLightingTessellation = 0x2E60; // CParticleCollectionRendererFloatInput
-            public const nint m_flLightingDirectionality = 0x2FB0; // CParticleCollectionRendererFloatInput
-            public const nint m_bParticleShadows = 0x3100; // bool
-            public const nint m_flShadowDensity = 0x3104; // float32
+            public const nint m_nSequenceOverride = 0x2640; // CParticleCollectionRendererFloatInput
+            public const nint m_nOrientationType = 0x2790; // ParticleOrientationChoiceList_t
+            public const nint m_nOrientationControlPoint = 0x2794; // int32
+            public const nint m_bUseYawWithNormalAligned = 0x2798; // bool
+            public const nint m_flMinSize = 0x27A0; // CParticleCollectionRendererFloatInput
+            public const nint m_flMaxSize = 0x28F0; // CParticleCollectionRendererFloatInput
+            public const nint m_flAlphaAdjustWithSizeAdjust = 0x2A40; // CParticleCollectionRendererFloatInput
+            public const nint m_flStartFadeSize = 0x2B90; // CParticleCollectionRendererFloatInput
+            public const nint m_flEndFadeSize = 0x2CE0; // CParticleCollectionRendererFloatInput
+            public const nint m_flStartFadeDot = 0x2E30; // float32
+            public const nint m_flEndFadeDot = 0x2E34; // float32
+            public const nint m_bDistanceAlpha = 0x2E38; // bool
+            public const nint m_bSoftEdges = 0x2E39; // bool
+            public const nint m_flEdgeSoftnessStart = 0x2E3C; // float32
+            public const nint m_flEdgeSoftnessEnd = 0x2E40; // float32
+            public const nint m_bOutline = 0x2E44; // bool
+            public const nint m_OutlineColor = 0x2E45; // Color
+            public const nint m_nOutlineAlpha = 0x2E4C; // int32
+            public const nint m_flOutlineStart0 = 0x2E50; // float32
+            public const nint m_flOutlineStart1 = 0x2E54; // float32
+            public const nint m_flOutlineEnd0 = 0x2E58; // float32
+            public const nint m_flOutlineEnd1 = 0x2E5C; // float32
+            public const nint m_nLightingMode = 0x2E60; // ParticleLightingQuality_t
+            public const nint m_flLightingTessellation = 0x2E68; // CParticleCollectionRendererFloatInput
+            public const nint m_flLightingDirectionality = 0x2FB8; // CParticleCollectionRendererFloatInput
+            public const nint m_bParticleShadows = 0x3108; // bool
+            public const nint m_flShadowDensity = 0x310C; // float32
+            public const nint m_replicationParameters = 0x3110; // CReplicationParameters
         }
         // Parent: CParticleFunctionOperator
         // Fields count: 12
@@ -6314,16 +6441,16 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderTreeShake {
-            public const nint m_flPeakStrength = 0x1F8; // float32
-            public const nint m_nPeakStrengthFieldOverride = 0x1FC; // ParticleAttributeIndex_t
-            public const nint m_flRadius = 0x200; // float32
-            public const nint m_nRadiusFieldOverride = 0x204; // ParticleAttributeIndex_t
-            public const nint m_flShakeDuration = 0x208; // float32
-            public const nint m_flTransitionTime = 0x20C; // float32
-            public const nint m_flTwistAmount = 0x210; // float32
-            public const nint m_flRadialAmount = 0x214; // float32
-            public const nint m_flControlPointOrientationAmount = 0x218; // float32
-            public const nint m_nControlPointForLinearDirection = 0x21C; // int32
+            public const nint m_flPeakStrength = 0x1FC; // float32
+            public const nint m_nPeakStrengthFieldOverride = 0x200; // ParticleAttributeIndex_t
+            public const nint m_flRadius = 0x204; // float32
+            public const nint m_nRadiusFieldOverride = 0x208; // ParticleAttributeIndex_t
+            public const nint m_flShakeDuration = 0x20C; // float32
+            public const nint m_flTransitionTime = 0x210; // float32
+            public const nint m_flTwistAmount = 0x214; // float32
+            public const nint m_flRadialAmount = 0x218; // float32
+            public const nint m_flControlPointOrientationAmount = 0x21C; // float32
+            public const nint m_nControlPointForLinearDirection = 0x220; // int32
         }
         // Parent: CParticleFunctionConstraint
         // Fields count: 0
@@ -6368,14 +6495,14 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderMaterialProxy {
-            public const nint m_nMaterialControlPoint = 0x1F8; // int32
-            public const nint m_nProxyType = 0x1FC; // MaterialProxyType_t
-            public const nint m_MaterialVars = 0x200; // CUtlVector<MaterialVariable_t>
-            public const nint m_hOverrideMaterial = 0x218; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_flMaterialOverrideEnabled = 0x220; // CParticleCollectionFloatInput
-            public const nint m_vecColorScale = 0x370; // CParticleCollectionVecInput
-            public const nint m_flAlpha = 0x9A0; // CPerParticleFloatInput
-            public const nint m_nColorBlendType = 0xAF0; // ParticleColorBlendType_t
+            public const nint m_nMaterialControlPoint = 0x1FC; // int32
+            public const nint m_nProxyType = 0x200; // MaterialProxyType_t
+            public const nint m_MaterialVars = 0x208; // CUtlVector<MaterialVariable_t>
+            public const nint m_hOverrideMaterial = 0x220; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_flMaterialOverrideEnabled = 0x228; // CParticleCollectionFloatInput
+            public const nint m_vecColorScale = 0x378; // CParticleCollectionVecInput
+            public const nint m_flAlpha = 0x9A8; // CPerParticleFloatInput
+            public const nint m_nColorBlendType = 0xAF8; // ParticleColorBlendType_t
         }
         // Parent: None
         // Fields count: 2

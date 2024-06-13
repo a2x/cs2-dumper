@@ -88,6 +88,10 @@ fn read_class_binding(
 
     let name = binding.name.read_string(process)?.to_string();
 
+    if name.is_empty() {
+        return Err(Error::Other("empty class name"));
+    }
+
     let parent = binding.base_classes.non_null().and_then(|ptr| {
         let base_class = ptr.read(process).ok()?;
         let parent_class = base_class.prev.read(process).ok()?;
@@ -139,7 +143,7 @@ fn read_class_binding_fields(
         return Ok(Vec::new());
     }
 
-    (0..binding.num_fields).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.fields_count).try_fold(Vec::new(), |mut acc, i| {
         let field = binding.fields.at(i as _).read(process)?;
 
         if field.schema_type.is_null() {
@@ -155,7 +159,7 @@ fn read_class_binding_fields(
         acc.push(ClassField {
             name,
             type_name,
-            offset: field.offset,
+            offset: field.single_inheritance_offset,
         });
 
         Ok(acc)
@@ -170,7 +174,7 @@ fn read_class_binding_metadata(
         return Ok(Vec::new());
     }
 
-    (0..binding.num_static_metadata).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.static_metadata_count).try_fold(Vec::new(), |mut acc, i| {
         let metadata = binding.static_metadata.at(i as _).read(process)?;
 
         if metadata.network_value.is_null() {
@@ -182,12 +186,16 @@ fn read_class_binding_metadata(
 
         let metadata = match name.as_str() {
             "MNetworkChangeCallback" => unsafe {
-                let name = network_value.u.name_ptr.read_string(process)?.to_string();
+                let name = network_value
+                    .value
+                    .name_ptr
+                    .read_string(process)?
+                    .to_string();
 
                 ClassMetadata::NetworkChangeCallback { name }
             },
             "MNetworkVarNames" => unsafe {
-                let var_value = network_value.u.var_value;
+                let var_value = network_value.value.var_value;
 
                 let name = var_value.name.read_string(process)?.to_string();
                 let type_name = var_value.type_name.read_string(process)?.replace(" ", "");
@@ -210,20 +218,24 @@ fn read_enum_binding(
     let binding = binding_ptr.read(process)?;
     let name = binding.name.read_string(process)?.to_string();
 
+    if name.is_empty() {
+        return Err(Error::Other("empty enum name"));
+    }
+
     let members = read_enum_binding_members(process, &binding)?;
 
     debug!(
         "found enum: {} at {:#X} (alignment: {}) (members count: {})",
         name,
         binding_ptr.to_umem(),
-        binding.alignment,
+        binding.align_of,
         binding.size,
     );
 
     Ok(Enum {
         name,
-        alignment: binding.alignment,
-        size: binding.num_enumerators,
+        alignment: binding.align_of,
+        size: binding.enumerators_count,
         members,
     })
 }
@@ -236,13 +248,13 @@ fn read_enum_binding_members(
         return Ok(Vec::new());
     }
 
-    (0..binding.num_enumerators).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.enumerators_count).try_fold(Vec::new(), |mut acc, i| {
         let enumerator = binding.enumerators.at(i as _).read(process)?;
         let name = enumerator.name.read_string(process)?.to_string();
 
         acc.push(EnumMember {
             name,
-            value: unsafe { enumerator.u.ulong } as i64,
+            value: unsafe { enumerator.value.ulong } as i64,
         });
 
         Ok(acc)
@@ -253,7 +265,7 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
     let module = process.module_by_name("libschemasystem.so")?;
     let buf = process.read_raw(module.base, module.size as _)?;
 
-    let schema_system_addr = signature!("48 8D 3D ? ? ? ? 48 8D 35 ? ? ? ? E9")
+    let schema_system_addr = signature!("48 8D 05 ? ? ? ? 49 89 04 24")
         .scan(&buf)
         .and_then(|result| process.read_addr64_rip(module.base + result).ok())
         .ok_or_else(|| Error::Other("unable to read schema system address"))?;
