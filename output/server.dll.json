@@ -15073,6 +15073,7 @@
         "fields": {
           "m_VoxelFrameData": 2768,
           "m_bDidSmokeEffect": 2732,
+          "m_bExplodeFromInferno": 11632,
           "m_flLastBounce": 2792,
           "m_fllastSimulationTime": 2796,
           "m_nRandomSeed": 2736,

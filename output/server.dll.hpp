@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-12 06:08:34.023761 UTC
+// 2024-06-14 04:06:49.525200800 UTC
 
 #pragma once
 
@@ -5656,7 +5656,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bPvsModifyEntity = 0x1B0; // bool
             }
             // Parent: CBaseCSGrenadeProjectile
-            // Fields count: 8
+            // Fields count: 9
             //
             // Metadata:
             // NetworkVarNames: m_nSmokeEffectTickBegin (int)
@@ -5674,6 +5674,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_VoxelFrameData = 0xAD0; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_flLastBounce = 0xAE8; // GameTime_t
                 constexpr std::ptrdiff_t m_fllastSimulationTime = 0xAEC; // GameTime_t
+                constexpr std::ptrdiff_t m_bExplodeFromInferno = 0x2D70; // bool
             }
             // Parent: CTriggerMultiple
             // Fields count: 1

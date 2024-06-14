@@ -97,7 +97,7 @@ pattern_map! {
         "dwWeaponC4" => pattern!("488b15${'} ffc0 8905${} 488bc6 488934ea 488b6c24? c686[5] 80be") => None,
     },
     engine2 => {
-        "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${}") => None,
+        "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
         "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
         "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("8983u4 40b7") => None,

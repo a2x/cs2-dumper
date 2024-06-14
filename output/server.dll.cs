@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-12 06:08:34.023761 UTC
+// 2024-06-14 04:06:49.525200800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -5651,7 +5651,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bPvsModifyEntity = 0x1B0; // bool
         }
         // Parent: CBaseCSGrenadeProjectile
-        // Fields count: 8
+        // Fields count: 9
         //
         // Metadata:
         // NetworkVarNames: m_nSmokeEffectTickBegin (int)
@@ -5669,6 +5669,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_VoxelFrameData = 0xAD0; // CUtlVector<uint8>
             public const nint m_flLastBounce = 0xAE8; // GameTime_t
             public const nint m_fllastSimulationTime = 0xAEC; // GameTime_t
+            public const nint m_bExplodeFromInferno = 0x2D70; // bool
         }
         // Parent: CTriggerMultiple
         // Fields count: 1
