@@ -2,15 +2,15 @@
   "libclient.so": [
     {
       "name": "dwCSGOInput",
-      "value": 59733504
+      "value": 59737600
     },
     {
       "name": "dwEntityList",
-      "value": 58040584
+      "value": 58044680
     },
     {
       "name": "dwGameEntitySystem",
-      "value": 60958368
+      "value": 60962464
     },
     {
       "name": "dwGameEntitySystem_highestEntityIndex",
@@ -18,35 +18,35 @@
     },
     {
       "name": "dwGameRules",
-      "value": 59680640
+      "value": 59684736
     },
     {
       "name": "dwGlobalVars",
-      "value": 57774256
+      "value": 57778352
     },
     {
       "name": "dwGlowManager",
-      "value": 59680400
+      "value": 59684496
     },
     {
       "name": "dwLocalPlayerController",
-      "value": 59570104
+      "value": 59574200
     },
     {
       "name": "dwLocalPlayerPawn",
-      "value": 59704392
+      "value": 59708488
     },
     {
       "name": "dwPlantedC4",
-      "value": 59786904
+      "value": 59791000
     },
     {
       "name": "dwPrediction",
-      "value": 59704064
+      "value": 59708160
     },
     {
       "name": "dwSensitivity",
-      "value": 59697096
+      "value": 59701192
     },
     {
       "name": "dwSensitivity_sensitivity",
@@ -54,15 +54,15 @@
     },
     {
       "name": "dwViewAngles",
-      "value": 59755048
+      "value": 59759144
     },
     {
       "name": "dwViewMatrix",
-      "value": 59706528
+      "value": 59710624
     },
     {
       "name": "dwViewRender",
-      "value": 59706960
+      "value": 59711056
     }
   ],
   "libengine2.so": [

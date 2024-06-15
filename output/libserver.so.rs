@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-13 12:45:29.262540675 UTC
+// 2024-06-15 01:33:56.502397707 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -5750,7 +5750,7 @@ pub mod cs2_dumper {
                 pub const m_bPvsModifyEntity: usize = 0x1C0; // bool
             }
             // Parent: CBaseCSGrenadeProjectile
-            // Fields count: 8
+            // Fields count: 9
             //
             // Metadata:
             // NetworkVarNames: m_nSmokeEffectTickBegin (int)
@@ -5768,6 +5768,7 @@ pub mod cs2_dumper {
                 pub const m_VoxelFrameData: usize = 0xDD0; // CUtlVector<uint8>
                 pub const m_flLastBounce: usize = 0xDE8; // GameTime_t
                 pub const m_fllastSimulationTime: usize = 0xDEC; // GameTime_t
+                pub const m_bExplodeFromInferno: usize = 0x3070; // bool
             }
             // Parent: CTriggerMultiple
             // Fields count: 1

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-13 12:45:29.262540675 UTC
+// 2024-06-15 01:33:56.502397707 UTC
 
 #pragma once
 
@@ -14,14 +14,14 @@ namespace cs2_dumper {
         }
         // Module: libclient.so
         namespace libclient_so {
-            constexpr std::ptrdiff_t ClientToolsInfo_001 = 0xDCB700;
+            constexpr std::ptrdiff_t ClientToolsInfo_001 = 0xDCB820;
             constexpr std::ptrdiff_t EmptyWorldService001_Client = 0xAA9D70;
-            constexpr std::ptrdiff_t GameClientExports001 = 0xDCB2E0;
-            constexpr std::ptrdiff_t LegacyGameUI001 = 0xFABEB0;
-            constexpr std::ptrdiff_t Source2Client002 = 0xDCB340;
+            constexpr std::ptrdiff_t GameClientExports001 = 0xDCB400;
+            constexpr std::ptrdiff_t LegacyGameUI001 = 0xFAC1B0;
+            constexpr std::ptrdiff_t Source2Client002 = 0xDCB460;
             constexpr std::ptrdiff_t Source2ClientConfig001 = 0xA94C50;
-            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0xE60E20;
-            constexpr std::ptrdiff_t Source2ClientUI001 = 0xF63DD0;
+            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0xE60F40;
+            constexpr std::ptrdiff_t Source2ClientUI001 = 0xF640D0;
         }
         // Module: libengine2.so
         namespace libengine2_so {
@@ -153,16 +153,16 @@ namespace cs2_dumper {
         }
         // Module: libserver.so
         namespace libserver_so {
-            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0xBCF830;
-            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x8DA220;
-            constexpr std::ptrdiff_t NavGameTest001 = 0x1117CF0;
-            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0xEE4D60;
-            constexpr std::ptrdiff_t Source2GameClients001 = 0xEE4D00;
+            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0xBCFAB0;
+            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x8DA4A0;
+            constexpr std::ptrdiff_t NavGameTest001 = 0x1118320;
+            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0xEE5390;
+            constexpr std::ptrdiff_t Source2GameClients001 = 0xEE5330;
             constexpr std::ptrdiff_t Source2GameDirector001 = 0x738950;
-            constexpr std::ptrdiff_t Source2GameEntities001 = 0xEE4CF0;
-            constexpr std::ptrdiff_t Source2Server001 = 0xEE4A00;
-            constexpr std::ptrdiff_t Source2ServerConfig001 = 0xB6CE80;
-            constexpr std::ptrdiff_t customnavsystem001 = 0x865F80;
+            constexpr std::ptrdiff_t Source2GameEntities001 = 0xEE5320;
+            constexpr std::ptrdiff_t Source2Server001 = 0xEE5030;
+            constexpr std::ptrdiff_t Source2ServerConfig001 = 0xB6D100;
+            constexpr std::ptrdiff_t customnavsystem001 = 0x866200;
         }
         // Module: libsoundsystem.so
         namespace libsoundsystem_so {
@@ -177,10 +177,10 @@ namespace cs2_dumper {
         }
         // Module: libtier0.so
         namespace libtier0_so {
-            constexpr std::ptrdiff_t TestScriptMgr001 = 0x1C88A0;
+            constexpr std::ptrdiff_t TestScriptMgr001 = 0x1C88B0;
             constexpr std::ptrdiff_t VEngineCvar007 = 0xF2080;
-            constexpr std::ptrdiff_t VProcessUtils002 = 0x1A5640;
-            constexpr std::ptrdiff_t VStringTokenSystem001 = 0x1F7BB0;
+            constexpr std::ptrdiff_t VProcessUtils002 = 0x1A5650;
+            constexpr std::ptrdiff_t VStringTokenSystem001 = 0x1F7BC0;
         }
         // Module: libv8system.so
         namespace libv8system_so {
@@ -201,26 +201,26 @@ namespace cs2_dumper {
         }
         // Module: steamclient.so
         namespace steamclient_so {
-            constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x1135D20;
-            constexpr std::ptrdiff_t IVALIDATE001 = 0x1132210;
-            constexpr std::ptrdiff_t SteamClient006 = 0xDE3190;
-            constexpr std::ptrdiff_t SteamClient007 = 0xDE31A0;
-            constexpr std::ptrdiff_t SteamClient008 = 0xDE31B0;
-            constexpr std::ptrdiff_t SteamClient009 = 0xDE31C0;
-            constexpr std::ptrdiff_t SteamClient010 = 0xDE31D0;
-            constexpr std::ptrdiff_t SteamClient011 = 0xDE31E0;
-            constexpr std::ptrdiff_t SteamClient012 = 0xDE31F0;
-            constexpr std::ptrdiff_t SteamClient013 = 0xDE3200;
-            constexpr std::ptrdiff_t SteamClient014 = 0xDE3210;
-            constexpr std::ptrdiff_t SteamClient015 = 0xDE3220;
-            constexpr std::ptrdiff_t SteamClient016 = 0xDE3250;
-            constexpr std::ptrdiff_t SteamClient017 = 0xDE3280;
-            constexpr std::ptrdiff_t SteamClient018 = 0xDE32B0;
-            constexpr std::ptrdiff_t SteamClient019 = 0xDE32E0;
-            constexpr std::ptrdiff_t SteamClient020 = 0xDE3310;
-            constexpr std::ptrdiff_t SteamClient021 = 0xDE3340;
-            constexpr std::ptrdiff_t p2pvoice002 = 0x1769460;
-            constexpr std::ptrdiff_t p2pvoicesingleton002 = 0x1762490;
+            constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0x11DC0E0;
+            constexpr std::ptrdiff_t IVALIDATE001 = 0x11D7BB0;
+            constexpr std::ptrdiff_t SteamClient006 = 0xE6BD40;
+            constexpr std::ptrdiff_t SteamClient007 = 0xE6BD50;
+            constexpr std::ptrdiff_t SteamClient008 = 0xE6BD60;
+            constexpr std::ptrdiff_t SteamClient009 = 0xE6BD70;
+            constexpr std::ptrdiff_t SteamClient010 = 0xE6BD80;
+            constexpr std::ptrdiff_t SteamClient011 = 0xE6BD90;
+            constexpr std::ptrdiff_t SteamClient012 = 0xE6BDA0;
+            constexpr std::ptrdiff_t SteamClient013 = 0xE6BDB0;
+            constexpr std::ptrdiff_t SteamClient014 = 0xE6BDC0;
+            constexpr std::ptrdiff_t SteamClient015 = 0xE6BDD0;
+            constexpr std::ptrdiff_t SteamClient016 = 0xE6BE00;
+            constexpr std::ptrdiff_t SteamClient017 = 0xE6BE30;
+            constexpr std::ptrdiff_t SteamClient018 = 0xE6BE60;
+            constexpr std::ptrdiff_t SteamClient019 = 0xE6BE90;
+            constexpr std::ptrdiff_t SteamClient020 = 0xE6BEC0;
+            constexpr std::ptrdiff_t SteamClient021 = 0xE6BEF0;
+            constexpr std::ptrdiff_t p2pvoice002 = 0x18306E0;
+            constexpr std::ptrdiff_t p2pvoicesingleton002 = 0x1828D70;
         }
     }
 }
