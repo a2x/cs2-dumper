@@ -24,6 +24,10 @@ toolchain must be installed.
 - `-h, --help`: Print help.
 - `-V, --version`: Print version.
 
+## Running Tests
+
+To run tests, use the following command: `cargo test -- --nocapture`.
+
 ## License
 
 Licensed under the MIT license ([LICENSE](./LICENSE)).
