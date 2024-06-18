@@ -1,6 +1,7 @@
 # cs2-dumper
 
-An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux. Powered by [memflow](https://github.com/memflow/memflow).
+An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux. Powered
+by [memflow](https://github.com/memflow/memflow).
 
 The native Linux version is available in the [linux](https://github.com/a2x/cs2-dumper/tree/linux) branch.
 
@@ -15,7 +16,10 @@ toolchain must be installed.
 1. Ensure the game process is running (Being in the main menu should suffice).
 2. Run the `cs2-dumper` executable (Note that some memflow connectors may require elevated privileges).
 
-When running the executable without providing an optional memflow connector name, it will default to using the [memflow-native](https://github.com/memflow/memflow-native) cross-platform OS layer to read the memory of the game process. If you wish to use an existing memflow connector instead, pass the `connector` and optional `connector-args` arguments to the program.
+_Note:_ If you run the executable without specifying an optional memflow connector name, it will automatically use the
+[memflow-native](https://github.com/memflow/memflow-native) OS layer to read the memory of the game process. If you
+wish to use an existing memflow connector instead, you can pass the `connector` and optional `connector-args` arguments
+to the program.
 
 E.g. `./cs2-dumper -c pcileech -a device=fpga -vvv`
 
@@ -30,6 +34,10 @@ E.g. `./cs2-dumper -c pcileech -a device=fpga -vvv`
 - `-v...`: Increase logging verbosity. Can be specified multiple times.
 - `-h, --help`: Print help.
 - `-V, --version`: Print version.
+
+## Running Tests
+
+To run tests, use the following command: `cargo test -- --nocapture`.
 
 ## License
 

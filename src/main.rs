@@ -8,7 +8,7 @@ use log::{info, Level};
 
 use memflow::prelude::v1::*;
 
-use simplelog::{ColorChoice, TermLogger};
+use simplelog::{ColorChoice, Config, TermLogger, TerminalMode};
 
 use error::Result;
 use output::Output;
@@ -65,8 +65,8 @@ fn main() -> Result<()> {
 
     TermLogger::init(
         log_level.to_level_filter(),
-        Default::default(),
-        Default::default(),
+        Config::default(),
+        TerminalMode::Mixed,
         ColorChoice::Auto,
     )
     .unwrap();
@@ -93,6 +93,7 @@ fn main() -> Result<()> {
     let mut process = os.into_process_by_name(&args.process_name)?;
 
     let result = analysis::analyze_all(&mut process)?;
+
     let output = Output::new(&args.file_types, args.indent_size, &args.output, &result)?;
 
     output.dump_all(&mut process)?;
