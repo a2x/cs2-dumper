@@ -87,7 +87,7 @@ fn main() -> Result<()> {
             .build()?
     } else {
         // Fallback to the native OS layer if no connector name was specified.
-        memflow_native::create_os(&Default::default(), Default::default())?
+        memflow_native::create_os(&OsArgs::default(), LibArc::default())?
     };
 
     let mut process = os.into_process_by_name(&args.process_name)?;

@@ -4,7 +4,7 @@ use log::debug;
 
 use memflow::prelude::v1::*;
 
-use pelite::pattern;
+use pelite::pe64::exports::Export;
 use pelite::pe64::{Pe, PeView};
 
 use serde::{Deserialize, Serialize};
@@ -29,19 +29,27 @@ pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Interfa
 
             let view = PeView::from_bytes(&buf).ok()?;
 
-            let mut save = [0; 2];
+            let ci_export = view
+                .exports()
+                .ok()?
+                .by()
+                .ok()?
+                .name("CreateInterface")
+                .ok()?;
 
-            if !view
-                .scanner()
-                .finds_code(pattern!("4c8b0d${'} 4c8bd2 4c8bd9"), &mut save)
-            {
-                return None;
+            if let Export::Symbol(symbol) = ci_export {
+                let list_addr = process
+                    .read_addr64_rip(module.base + symbol)
+                    .data_part()
+                    .ok()?;
+
+                return read_interfaces(process, module, list_addr)
+                    .ok()
+                    .filter(|ifaces| !ifaces.is_empty())
+                    .map(|ifaces| Ok((module.name.to_string(), ifaces)));
             }
 
-            read_interfaces(process, module, module.base + save[1])
-                .ok()
-                .filter(|ifaces| !ifaces.is_empty())
-                .map(|ifaces| Ok((module.name.to_string(), ifaces)))
+            None
         })
         .collect()
 }
@@ -58,8 +66,9 @@ fn read_interfaces(
     while !cur_reg.is_null() {
         let reg = cur_reg.read(process)?;
         let name = reg.name.read_string(process)?.to_string();
+        let instance = process.read_addr64_rip(reg.create_fn.address())?;
 
-        let value = (reg.create_fn.address() - module.base) as u32;
+        let value = (instance - module.base) as u32;
 
         debug!(
             "found interface: {} @ {:#X} ({} + {:#X})",
