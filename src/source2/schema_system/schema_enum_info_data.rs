@@ -12,9 +12,9 @@ pub struct SchemaEnumInfoData {
     pub name: Pointer64<ReprCString>,                        // 0x0008
     pub module_name: Pointer64<ReprCString>,                 // 0x0010
     pub size: u8,                                            // 0x0018
-    pub alignment: u8,                                       // 0x0019
-    pub flags: u16,                                          // 0x001A
-    pub enumerator_count: u16,                               // 0x001C
+    pub align_of: u8,                                        // 0x0019
+    pad_001a: [u8; 0x2],                                     // 0x001A
+    pub enumerators_count: u16,                              // 0x001C
     pub static_metadata_count: u16,                          // 0x001E
     pub enumerators: Pointer64<[SchemaEnumeratorInfoData]>,  // 0x0020
     pub static_metadata: Pointer64<SchemaMetadataEntryData>, // 0x0028

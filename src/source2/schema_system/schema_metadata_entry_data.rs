@@ -5,8 +5,8 @@ use memflow::prelude::v1::*;
 #[derive(Pod)]
 #[repr(C)]
 pub struct SchemaMetadataEntryData {
-    pub name: Pointer64<ReprCString>,        // 0x0000
-    pub data: Pointer64<SchemaNetworkValue>, // 0x0008
+    pub name: Pointer64<ReprCString>,                 // 0x0000
+    pub network_value: Pointer64<SchemaNetworkValue>, // 0x0008
 }
 
 #[derive(Pod)]

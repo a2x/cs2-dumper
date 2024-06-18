@@ -144,7 +144,7 @@ fn read_class_binding_fields(
         return Ok(Vec::new());
     }
 
-    (0..binding.field_count).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.fields_count).try_fold(Vec::new(), |mut acc, i| {
         let field = binding.fields.at(i as _).read(process)?;
 
         if field.schema_type.is_null() {
@@ -178,12 +178,12 @@ fn read_class_binding_metadata(
     (0..binding.static_metadata_count).try_fold(Vec::new(), |mut acc, i| {
         let metadata = binding.static_metadata.at(i as _).read(process)?;
 
-        if metadata.data.is_null() {
+        if metadata.network_value.is_null() {
             return Ok(acc);
         }
 
         let name = metadata.name.read_string(process)?.to_string();
-        let network_value = metadata.data.read(process)?;
+        let network_value = metadata.network_value.read(process)?;
 
         let metadata = match name.as_str() {
             "MNetworkChangeCallback" => unsafe {
@@ -229,14 +229,14 @@ fn read_enum_binding(
         "found enum: {} @ {:#X} (alignment: {}) (members count: {})",
         name,
         binding_ptr.to_umem(),
-        binding.alignment,
+        binding.align_of,
         binding.size,
     );
 
     Ok(Enum {
         name,
-        alignment: binding.alignment,
-        size: binding.enumerator_count,
+        alignment: binding.align_of,
+        size: binding.enumerators_count,
         members,
     })
 }
@@ -249,7 +249,7 @@ fn read_enum_binding_members(
         return Ok(Vec::new());
     }
 
-    (0..binding.enumerator_count).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.enumerators_count).try_fold(Vec::new(), |mut acc, i| {
         let enumerator = binding.enumerators.at(i as _).read(process)?;
         let name = enumerator.name.read_string(process)?.to_string();
 
@@ -270,10 +270,10 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
 
     let mut save = [0; 2];
 
-    if !view.scanner().finds_code(
-        pattern!("488905${'} 4c8d0d${} 0fb645? 4c8d45? 33f6"),
-        &mut save,
-    ) {
+    if !view
+        .scanner()
+        .finds_code(pattern!("4c8d35${'} 0f2845"), &mut save)
+    {
         return Err(Error::Other("unable to find schema system pattern"));
     }
 
