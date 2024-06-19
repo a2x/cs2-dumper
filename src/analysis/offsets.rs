@@ -164,8 +164,6 @@ mod tests {
 
         let global_vars: u64 = process.read(client_base + offset).data_part()?;
 
-        println!("global vars: {:#X}", global_vars);
-
         let cur_map_name = {
             let addr = process
                 .read_addr64((global_vars + 0x1C8).into())
