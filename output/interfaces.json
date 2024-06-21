@@ -4,14 +4,14 @@
     "AnimationSystem_001": 5799648
   },
   "client.dll": {
-    "ClientToolsInfo_001": 25241408,
+    "ClientToolsInfo_001": 25241392,
     "EmptyWorldService001_Client": 24966736,
-    "GameClientExports001": 25228296,
-    "LegacyGameUI001": 25358720,
+    "GameClientExports001": 25228280,
+    "LegacyGameUI001": 25358704,
     "Source2Client002": 27328688,
     "Source2ClientConfig001": 26938880,
-    "Source2ClientPrediction001": 25274496,
-    "Source2ClientUI001": 25353328
+    "Source2ClientPrediction001": 25274480,
+    "Source2ClientUI001": 25353312
   },
   "engine2.dll": {
     "BenchmarkService001": 5461696,
@@ -110,9 +110,9 @@
     "IPulseSystem_001": 1365040
   },
   "rendersystemdx11.dll": {
-    "RenderDeviceMgr001": 4112912,
-    "RenderUtils_001": 4115064,
-    "VRenderDeviceMgrBackdoor001": 4113064
+    "RenderDeviceMgr001": 4117008,
+    "RenderUtils_001": 4119160,
+    "VRenderDeviceMgrBackdoor001": 4117160
   },
   "resourcesystem.dll": {
     "ResourceSystem013": 438032
@@ -132,12 +132,12 @@
   "server.dll": {
     "EmptyWorldService001_Server": 20312352,
     "EntitySubclassUtilsV001": 19994128,
-    "NavGameTest001": 20961528,
-    "ServerToolsInfo_001": 20656168,
-    "Source2GameClients001": 20636816,
+    "NavGameTest001": 20961544,
+    "ServerToolsInfo_001": 20656184,
+    "Source2GameClients001": 20636832,
     "Source2GameDirector001": 21898512,
-    "Source2GameEntities001": 20656112,
-    "Source2Server001": 20655712,
+    "Source2GameEntities001": 20656128,
+    "Source2Server001": 20655728,
     "Source2ServerConfig001": 22664552,
     "customnavsystem001": 19885720
   },
@@ -151,7 +151,7 @@
     "SteamAudio001": 2447184
   },
   "steamclient64.dll": {
-    "CLIENTENGINE_INTERFACE_VERSION005": 2345857247,
+    "CLIENTENGINE_INTERFACE_VERSION005": 2345857279,
     "IVALIDATE001": 21838384,
     "SteamClient006": 21828208,
     "SteamClient007": 21828216,

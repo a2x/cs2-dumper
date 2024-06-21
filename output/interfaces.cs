@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-18 06:42:44.990022100 UTC
+// 2024-06-21 00:09:51.615729800 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x1812740;
+        public const nint ClientToolsInfo_001 = 0x1812730;
         public const nint EmptyWorldService001_Client = 0x17CF650;
-        public const nint GameClientExports001 = 0x180F408;
-        public const nint LegacyGameUI001 = 0x182F180;
+        public const nint GameClientExports001 = 0x180F3F8;
+        public const nint LegacyGameUI001 = 0x182F170;
         public const nint Source2Client002 = 0x1A100B0;
         public const nint Source2ClientConfig001 = 0x19B0E00;
-        public const nint Source2ClientPrediction001 = 0x181A880;
-        public const nint Source2ClientUI001 = 0x182DC70;
+        public const nint Source2ClientPrediction001 = 0x181A870;
+        public const nint Source2ClientUI001 = 0x182DC60;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -132,9 +132,9 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: rendersystemdx11.dll
     public static class Rendersystemdx11Dll {
-        public const nint RenderDeviceMgr001 = 0x3EC210;
-        public const nint RenderUtils_001 = 0x3ECA78;
-        public const nint VRenderDeviceMgrBackdoor001 = 0x3EC2A8;
+        public const nint RenderDeviceMgr001 = 0x3ED210;
+        public const nint RenderUtils_001 = 0x3EDA78;
+        public const nint VRenderDeviceMgrBackdoor001 = 0x3ED2A8;
     }
     // Module: resourcesystem.dll
     public static class ResourcesystemDll {
@@ -159,12 +159,12 @@ namespace CS2Dumper.Interfaces {
     public static class ServerDll {
         public const nint EmptyWorldService001_Server = 0x135F120;
         public const nint EntitySubclassUtilsV001 = 0x1311610;
-        public const nint NavGameTest001 = 0x13FD8F8;
-        public const nint ServerToolsInfo_001 = 0x13B3028;
-        public const nint Source2GameClients001 = 0x13AE490;
+        public const nint NavGameTest001 = 0x13FD908;
+        public const nint ServerToolsInfo_001 = 0x13B3038;
+        public const nint Source2GameClients001 = 0x13AE4A0;
         public const nint Source2GameDirector001 = 0x14E2510;
-        public const nint Source2GameEntities001 = 0x13B2FF0;
-        public const nint Source2Server001 = 0x13B2E60;
+        public const nint Source2GameEntities001 = 0x13B3000;
+        public const nint Source2Server001 = 0x13B2E70;
         public const nint Source2ServerConfig001 = 0x159D568;
         public const nint customnavsystem001 = 0x12F6E98;
     }
@@ -181,7 +181,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: steamclient64.dll
     public static class Steamclient64Dll {
-        public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0x8BD2F0DF;
+        public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0x8BD2F0FF;
         public const nint IVALIDATE001 = 0x14D3A30;
         public const nint SteamClient006 = 0x14D1270;
         public const nint SteamClient007 = 0x14D1278;

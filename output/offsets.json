@@ -5,12 +5,12 @@
     "dwGameEntitySystem": 28129416,
     "dwGameEntitySystem_highestEntityIndex": 5392,
     "dwGameRules": 27337736,
-    "dwGlobalVars": 25224464,
+    "dwGlobalVars": 25224448,
     "dwGlowManager": 27335456,
     "dwLocalPlayerController": 27281256,
-    "dwLocalPlayerPawn": 25274824,
+    "dwLocalPlayerPawn": 25274808,
     "dwPlantedC4": 27375528,
-    "dwPrediction": 25274496,
+    "dwPrediction": 25274480,
     "dwSensitivity": 27341384,
     "dwSensitivity_sensitivity": 64,
     "dwViewAngles": 27408456,
@@ -30,8 +30,8 @@
     "dwNetworkGameClient_serverTickCount": 372,
     "dwNetworkGameClient_signOnState": 608,
     "dwSoundService": 6212512,
-    "dwWindowHeight": 6227028,
-    "dwWindowWidth": 6227024
+    "dwWindowHeight": 6227012,
+    "dwWindowWidth": 6227008
   },
   "inputsystem.dll": {
     "dwInputSystem": 231408
