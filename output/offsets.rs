@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-18 02:29:36.184201900 UTC
+// 2024-06-21 00:09:51.615729800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,12 +12,12 @@ pub mod cs2_dumper {
             pub const dwGameEntitySystem: usize = 0x1AD3888;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x1510;
             pub const dwGameRules: usize = 0x1A12408;
-            pub const dwGlobalVars: usize = 0x180E510;
+            pub const dwGlobalVars: usize = 0x180E500;
             pub const dwGlowManager: usize = 0x1A11B20;
             pub const dwLocalPlayerController: usize = 0x1A04768;
-            pub const dwLocalPlayerPawn: usize = 0x181A9C8;
+            pub const dwLocalPlayerPawn: usize = 0x181A9B8;
             pub const dwPlantedC4: usize = 0x1A1B7A8;
-            pub const dwPrediction: usize = 0x181A880;
+            pub const dwPrediction: usize = 0x181A870;
             pub const dwSensitivity: usize = 0x1A13248;
             pub const dwSensitivity_sensitivity: usize = 0x40;
             pub const dwViewAngles: usize = 0x1A23848;
@@ -38,8 +38,8 @@ pub mod cs2_dumper {
             pub const dwNetworkGameClient_serverTickCount: usize = 0x174;
             pub const dwNetworkGameClient_signOnState: usize = 0x260;
             pub const dwSoundService: usize = 0x5ECBA0;
-            pub const dwWindowHeight: usize = 0x5F0454;
-            pub const dwWindowWidth: usize = 0x5F0450;
+            pub const dwWindowHeight: usize = 0x5F0444;
+            pub const dwWindowWidth: usize = 0x5F0440;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {
