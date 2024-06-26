@@ -1,17 +1,17 @@
 {
   "animationsystem.dll": {
-    "AnimationSystemUtils_001": 5832648,
-    "AnimationSystem_001": 5799664
+    "AnimationSystemUtils_001": 5832632,
+    "AnimationSystem_001": 5799648
   },
   "client.dll": {
-    "ClientToolsInfo_001": 25274208,
-    "EmptyWorldService001_Client": 24999552,
-    "GameClientExports001": 25261096,
-    "LegacyGameUI001": 25391824,
-    "Source2Client002": 27362496,
-    "Source2ClientConfig001": 26972672,
-    "Source2ClientPrediction001": 25307312,
-    "Source2ClientUI001": 25386272
+    "ClientToolsInfo_001": 25282416,
+    "EmptyWorldService001_Client": 25007712,
+    "GameClientExports001": 25269288,
+    "LegacyGameUI001": 25400032,
+    "Source2Client002": 27370864,
+    "Source2ClientConfig001": 26981024,
+    "Source2ClientPrediction001": 25315520,
+    "Source2ClientUI001": 25394480
   },
   "engine2.dll": {
     "BenchmarkService001": 5461712,
@@ -83,7 +83,7 @@
     "VMaterialSystem2_001": 1100080
   },
   "meshsystem.dll": {
-    "MeshSystem001": 1329728
+    "MeshSystem001": 1329712
   },
   "navsystem.dll": {
     "NavSystem001": 787680
@@ -107,7 +107,7 @@
     "ParticleSystemMgr003": 6014800
   },
   "pulse_system.dll": {
-    "IPulseSystem_001": 1365056
+    "IPulseSystem_001": 1365072
   },
   "rendersystemdx11.dll": {
     "RenderDeviceMgr001": 4117008,
@@ -132,12 +132,12 @@
   "server.dll": {
     "EmptyWorldService001_Server": 20320432,
     "EntitySubclassUtilsV001": 20002224,
-    "NavGameTest001": 20969672,
-    "ServerToolsInfo_001": 20664280,
-    "Source2GameClients001": 20644928,
+    "NavGameTest001": 20969656,
+    "ServerToolsInfo_001": 20664264,
+    "Source2GameClients001": 20644912,
     "Source2GameDirector001": 21907104,
-    "Source2GameEntities001": 20664224,
-    "Source2Server001": 20663824,
+    "Source2GameEntities001": 20664208,
+    "Source2Server001": 20663808,
     "Source2ServerConfig001": 22673112,
     "customnavsystem001": 19893816
   },
@@ -188,8 +188,8 @@
     "VMediaFoundation001": 129568
   },
   "vphysics2.dll": {
-    "VPhysics2_Handle_Interface_001": 3663120,
-    "VPhysics2_Interface_001": 3663184
+    "VPhysics2_Handle_Interface_001": 3663104,
+    "VPhysics2_Interface_001": 3663168
   },
   "vscript.dll": {
     "VScriptManager010": 1213952
