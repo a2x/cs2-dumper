@@ -111,9 +111,6 @@ pattern_map! {
         "dwNetworkGameClient_maxClients" => pattern!("8b81u4 c3cccccccccccccccccc 8b81${} ffc0") => None,
         "dwNetworkGameClient_serverTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_signOnState" => pattern!("448b81u4 488d0d") => None,
-        "dwSoundService" => pattern!("488905${'} 4c8d4424? 488d05") => Some(|_view, map, rva| {
-            map.insert("dwEngineViewData".to_string(), rva + 0x9C);
-        }),
         "dwWindowHeight" => pattern!("8b05${'} 8903") => None,
         "dwWindowWidth" => pattern!("8b05${'} 8907") => None,
     },
@@ -121,20 +118,24 @@ pattern_map! {
         "dwInputSystem" => pattern!("488905${'} 488d05") => None,
     },
     matchmaking => {
-        "dwGameTypes" => pattern!("488d0d${'} 33d2") => Some(|_view, map, rva| {
-            map.insert("dwGameTypes_mapName".to_string(), rva + 0x120);
-        }),
+        "dwGameTypes" => pattern!("488d0d${'} 33d2") => None,
+        "dwGameTypes_mapName" => pattern!("488b81u4 4885c074? 4883c0") => None,
+    },
+    soundsystem => {
+        "dwSoundSystem" => pattern!("488d05${'} c3 cccccccccccccccc 488915") => None,
+        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104b") => None,
     },
 }
 
 pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap> {
     let mut map = BTreeMap::new();
 
-    let modules: [(&str, fn(PeView) -> BTreeMap<String, u32>); 4] = [
+    let modules: [(&str, fn(PeView) -> BTreeMap<String, u32>); 5] = [
         ("client.dll", client::offsets),
         ("engine2.dll", engine2::offsets),
         ("inputsystem.dll", input_system::offsets),
         ("matchmaking.dll", matchmaking::offsets),
+        ("soundsystem.dll", soundsystem::offsets),
     ];
 
     for (module_name, offsets) in &modules {

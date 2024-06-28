@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-27 14:27:03.514757 UTC
+// 2024-06-28 23:53:41.889494600 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
@@ -25,7 +25,6 @@ namespace CS2Dumper.Offsets {
     // Module: engine2.dll
     public static class Engine2Dll {
         public const nint dwBuildNumber = 0x52F834;
-        public const nint dwEngineViewData = 0x5ECC0C;
         public const nint dwNetworkGameClient = 0x52EBA0;
         public const nint dwNetworkGameClient_clientTickCount = 0x178;
         public const nint dwNetworkGameClient_deltaTick = 0x278;
@@ -34,7 +33,6 @@ namespace CS2Dumper.Offsets {
         public const nint dwNetworkGameClient_maxClients = 0x270;
         public const nint dwNetworkGameClient_serverTickCount = 0x174;
         public const nint dwNetworkGameClient_signOnState = 0x260;
-        public const nint dwSoundService = 0x5ECB70;
         public const nint dwWindowHeight = 0x5F0424;
         public const nint dwWindowWidth = 0x5F0420;
     }
@@ -45,6 +43,11 @@ namespace CS2Dumper.Offsets {
     // Module: matchmaking.dll
     public static class MatchmakingDll {
         public const nint dwGameTypes = 0x1A41C0;
-        public const nint dwGameTypes_mapName = 0x1A42E0;
+        public const nint dwGameTypes_mapName = 0x120;
+    }
+    // Module: soundsystem.dll
+    public static class SoundsystemDll {
+        public const nint dwSoundSystem = 0x334E40;
+        public const nint dwSoundSystem_engineViewData = 0x7C;
     }
 }
