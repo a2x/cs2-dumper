@@ -1,26 +1,26 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-28 23:53:41.889494600 UTC
+// 2024-07-02 22:14:16.333089500 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
     public static class ClientDll {
-        public const nint dwCSGOInput = 0x1A27F10;
-        public const nint dwEntityList = 0x19BDE58;
-        public const nint dwGameEntitySystem = 0x1ADCCA8;
+        public const nint dwCSGOInput = 0x1A27E30;
+        public const nint dwEntityList = 0x19BDD78;
+        public const nint dwGameEntitySystem = 0x1ADCBC8;
         public const nint dwGameEntitySystem_highestEntityIndex = 0x1510;
-        public const nint dwGameRules = 0x1A1B748;
+        public const nint dwGameRules = 0x1A1B668;
         public const nint dwGlobalVars = 0x1817638;
-        public const nint dwGlowManager = 0x1A1AE30;
-        public const nint dwLocalPlayerController = 0x1A0DA88;
+        public const nint dwGlowManager = 0x1A1AD50;
+        public const nint dwLocalPlayerController = 0x1A0D9A8;
         public const nint dwLocalPlayerPawn = 0x1823A08;
-        public const nint dwPlantedC4 = 0x1A25288;
+        public const nint dwPlantedC4 = 0x1A251A8;
         public const nint dwPrediction = 0x18238C0;
-        public const nint dwSensitivity = 0x1A1C418;
+        public const nint dwSensitivity = 0x1A1C338;
         public const nint dwSensitivity_sensitivity = 0x40;
-        public const nint dwViewAngles = 0x1A2D328;
-        public const nint dwViewMatrix = 0x1A1FDB0;
-        public const nint dwViewRender = 0x1A20548;
-        public const nint dwWeaponC4 = 0x19C1A20;
+        public const nint dwViewAngles = 0x1A2D248;
+        public const nint dwViewMatrix = 0x1A1FCD0;
+        public const nint dwViewRender = 0x1A20468;
+        public const nint dwWeaponC4 = 0x19C1940;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
