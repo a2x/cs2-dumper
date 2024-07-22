@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-06-15 01:33:56.502397707 UTC
+// 2024-07-22 10:50:13.060719885 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libparticles.so
@@ -1869,10 +1869,10 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class C_INIT_VelocityRadialRandom {
             public const nint m_nControlPointNumber = 0x1B4; // int32
-            public const nint m_fSpeedMin = 0x1B8; // float32
-            public const nint m_fSpeedMax = 0x1BC; // float32
-            public const nint m_vecLocalCoordinateSystemSpeedScale = 0x1C0; // Vector
-            public const nint m_bIgnoreDelta = 0x1CD; // bool
+            public const nint m_fSpeedMin = 0x1B8; // CPerParticleFloatInput
+            public const nint m_fSpeedMax = 0x308; // CPerParticleFloatInput
+            public const nint m_vecLocalCoordinateSystemSpeedScale = 0x458; // Vector
+            public const nint m_bIgnoreDelta = 0x465; // bool
         }
         // Parent: CParticleFunctionInitializer
         // Fields count: 3

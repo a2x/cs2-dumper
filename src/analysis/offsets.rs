@@ -96,7 +96,6 @@ fn read_offset(
 
 #[cfg(test)]
 mod tests {
-    use std::ffi::c_char;
     use std::fs;
 
     use serde_json::Value;

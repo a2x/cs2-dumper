@@ -2556,11 +2556,11 @@
       },
       "C_INIT_VelocityRadialRandom": {
         "fields": {
-          "m_bIgnoreDelta": 461,
-          "m_fSpeedMax": 444,
+          "m_bIgnoreDelta": 1125,
+          "m_fSpeedMax": 776,
           "m_fSpeedMin": 440,
           "m_nControlPointNumber": 436,
-          "m_vecLocalCoordinateSystemSpeedScale": 448
+          "m_vecLocalCoordinateSystemSpeedScale": 1112
         },
         "metadata": [
           {
