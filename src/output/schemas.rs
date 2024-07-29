@@ -31,7 +31,7 @@ impl CodeWriter for SchemaMap {
                             };
 
                             writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
-                            writeln!(fmt, "// Members count: {}", enum_.size)?;
+                            writeln!(fmt, "// Member count: {}", enum_.size)?;
 
                             fmt.block(
                                 &format!("public enum {} : {}", slugify(&enum_.name), type_name),
@@ -59,7 +59,7 @@ impl CodeWriter for SchemaMap {
                                 .unwrap_or_else(|| String::from("None"));
 
                             writeln!(fmt, "// Parent: {}", parent_name)?;
-                            writeln!(fmt, "// Fields count: {}", class.fields.len())?;
+                            writeln!(fmt, "// Field count: {}", class.fields.len())?;
 
                             write_metadata(fmt, &class.metadata)?;
 
@@ -114,7 +114,7 @@ impl CodeWriter for SchemaMap {
                                 };
 
                                 writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
-                                writeln!(fmt, "// Members count: {}", enum_.size)?;
+                                writeln!(fmt, "// Member count: {}", enum_.size)?;
 
                                 fmt.block(
                                     &format!("enum class {} : {}", slugify(&enum_.name), type_name),
@@ -142,7 +142,7 @@ impl CodeWriter for SchemaMap {
                                     .unwrap_or_else(|| String::from("None"));
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
-                                writeln!(fmt, "// Fields count: {}", class.fields.len())?;
+                                writeln!(fmt, "// Field count: {}", class.fields.len())?;
 
                                 write_metadata(fmt, &class.metadata)?;
 
@@ -255,7 +255,7 @@ impl CodeWriter for SchemaMap {
             })
             .collect();
 
-        fmt.write_str(&serde_json::to_string_pretty(&content).expect("unable to serialize json"))
+        fmt.write_str(&serde_json::to_string_pretty(&content).unwrap())
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -285,7 +285,7 @@ impl CodeWriter for SchemaMap {
                                 };
 
                                 writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
-                                writeln!(fmt, "// Members count: {}", enum_.size)?;
+                                writeln!(fmt, "// Member count: {}", enum_.size)?;
 
                                 fmt.block(
                                     &format!(
@@ -330,7 +330,7 @@ impl CodeWriter for SchemaMap {
                                     .unwrap_or_else(|| String::from("None"));
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
-                                writeln!(fmt, "// Fields count: {}", class.fields.len())?;
+                                writeln!(fmt, "// Field count: {}", class.fields.len())?;
 
                                 write_metadata(fmt, &class.metadata)?;
 

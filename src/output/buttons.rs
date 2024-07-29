@@ -1,20 +1,16 @@
 use std::collections::BTreeMap;
 use std::fmt::{self, Write};
 
-use super::{Button, CodeWriter, Formatter};
+use super::{ButtonMap, CodeWriter, Formatter};
 
-impl CodeWriter for Vec<Button> {
+impl CodeWriter for ButtonMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         fmt.block("namespace CS2Dumper", false, |fmt| {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("public static class Buttons", false, |fmt| {
-                for button in self {
-                    writeln!(
-                        fmt,
-                        "public const nint {} = {:#X};",
-                        button.name, button.value
-                    )?;
+                for (name, value) in self {
+                    writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
                 }
 
                 Ok(())
@@ -30,12 +26,8 @@ impl CodeWriter for Vec<Button> {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("namespace buttons", false, |fmt| {
-                for button in self {
-                    writeln!(
-                        fmt,
-                        "constexpr std::ptrdiff_t {} = {:#X};",
-                        button.name, button.value
-                    )?;
+                for (name, value) in self {
+                    writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};", name, value)?;
                 }
 
                 Ok(())
@@ -45,15 +37,12 @@ impl CodeWriter for Vec<Button> {
 
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         let content = {
-            let buttons: BTreeMap<_, _> = self
-                .iter()
-                .map(|button| (button.name.as_str(), button.value))
-                .collect();
+            let buttons: BTreeMap<_, _> = self.iter().map(|(name, value)| (name, value)).collect();
 
             BTreeMap::from_iter([("client.dll", buttons)])
         };
 
-        fmt.write_str(&serde_json::to_string_pretty(&content).expect("unable to serialize json"))
+        fmt.write_str(&serde_json::to_string_pretty(&content).unwrap())
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -63,14 +52,14 @@ impl CodeWriter for Vec<Button> {
             writeln!(fmt, "// Module: client.dll")?;
 
             fmt.block("pub mod buttons", false, |fmt| {
-                for button in self {
-                    let mut name = button.name.clone();
+                for (name, value) in self {
+                    let mut name = name.clone();
 
                     if name == "use" {
                         name = format!("r#{}", name);
                     }
 
-                    writeln!(fmt, "pub const {}: usize = {:#X};", name, button.value)?;
+                    writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
                 }
 
                 Ok(())

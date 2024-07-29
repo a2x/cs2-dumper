@@ -1,20 +1,21 @@
+use std::fs::File;
 use std::path::PathBuf;
 use std::str::FromStr;
 use std::time::Instant;
 
+use anyhow::Result;
+
 use clap::*;
 
-use log::{info, Level};
+use log::{info, LevelFilter};
 
 use memflow::prelude::v1::*;
 
-use simplelog::{ColorChoice, Config, TermLogger, TerminalMode};
+use simplelog::{ColorChoice, CombinedLogger, Config, TermLogger, TerminalMode, WriteLogger};
 
-use error::Result;
 use output::Output;
 
 mod analysis;
-mod error;
 mod mem;
 mod output;
 mod source2;
@@ -53,22 +54,28 @@ struct Args {
 
 fn main() -> Result<()> {
     let args = Args::parse();
-    let now = Instant::now();
 
-    let log_level = match args.verbose {
-        0 => Level::Error,
-        1 => Level::Warn,
-        2 => Level::Info,
-        3 => Level::Debug,
-        _ => Level::Trace,
+    let level_filter = match args.verbose {
+        0 => LevelFilter::Error,
+        1 => LevelFilter::Warn,
+        2 => LevelFilter::Info,
+        3 => LevelFilter::Debug,
+        _ => LevelFilter::Trace,
     };
 
-    TermLogger::init(
-        log_level.to_level_filter(),
-        Config::default(),
-        TerminalMode::Mixed,
-        ColorChoice::Auto,
-    )
+    CombinedLogger::init(vec![
+        TermLogger::new(
+            level_filter,
+            Config::default(),
+            TerminalMode::Mixed,
+            ColorChoice::Auto,
+        ),
+        WriteLogger::new(
+            LevelFilter::Info,
+            Config::default(),
+            File::create("cs2-dumper.log").unwrap(),
+        ),
+    ])
     .unwrap();
 
     let conn_args = args
@@ -76,21 +83,32 @@ fn main() -> Result<()> {
         .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
         .unwrap_or_default();
 
-    let os = if let Some(conn) = args.connector {
-        let inventory = Inventory::scan();
+    let os = match args.connector {
+        Some(conn) => {
+            let inventory = Inventory::scan();
 
-        inventory
-            .builder()
-            .connector(&conn)
-            .args(conn_args)
-            .os("win32")
-            .build()?
-    } else {
-        // Fallback to the native OS layer if no connector name was specified.
-        memflow_native::create_os(&OsArgs::default(), LibArc::default())?
+            inventory
+                .builder()
+                .connector(&conn)
+                .args(conn_args)
+                .os("win32")
+                .build()?
+        }
+        None => {
+            #[cfg(windows)]
+            {
+                memflow_native::create_os(&OsArgs::default(), LibArc::default())?
+            }
+            #[cfg(not(windows))]
+            {
+                panic!("no connector specified")
+            }
+        }
     };
 
     let mut process = os.into_process_by_name(&args.process_name)?;
+
+    let now = Instant::now();
 
     let result = analysis::analyze_all(&mut process)?;
 
@@ -98,7 +116,10 @@ fn main() -> Result<()> {
 
     output.dump_all(&mut process)?;
 
-    info!("finished in {:?}", now.elapsed());
+    info!(
+        "analysis completed in {} seconds",
+        now.elapsed().as_secs_f64()
+    );
 
     Ok(())
 }

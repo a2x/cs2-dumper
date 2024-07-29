@@ -55,7 +55,7 @@ impl CodeWriter for OffsetMap {
     }
 
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.write_str(&serde_json::to_string_pretty(self).expect("unable to serialize json"))
+        fmt.write_str(&serde_json::to_string_pretty(self).unwrap())
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {

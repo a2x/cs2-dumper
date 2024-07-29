@@ -2,6 +2,8 @@ use std::fmt::{self, Write};
 use std::fs;
 use std::path::Path;
 
+use anyhow::{anyhow, Result};
+
 use chrono::{DateTime, Utc};
 
 use memflow::prelude::v1::*;
@@ -11,7 +13,6 @@ use serde_json::json;
 use formatter::Formatter;
 
 use crate::analysis::*;
-use crate::error::{Error, Result};
 
 mod buttons;
 mod formatter;
@@ -20,13 +21,14 @@ mod offsets;
 mod schemas;
 
 enum Item<'a> {
-    Buttons(&'a Vec<Button>),
+    Buttons(&'a ButtonMap),
     Interfaces(&'a InterfaceMap),
     Offsets(&'a OffsetMap),
     Schemas(&'a SchemaMap),
 }
 
 impl<'a> Item<'a> {
+    #[inline]
     fn write(&self, fmt: &mut Formatter<'a>, file_type: &str) -> fmt::Result {
         match file_type {
             "cs" => self.write_cs(fmt),
@@ -46,6 +48,7 @@ trait CodeWriter {
 }
 
 impl<'a> CodeWriter for Item<'a> {
+    #[inline]
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_cs(fmt),
@@ -55,6 +58,7 @@ impl<'a> CodeWriter for Item<'a> {
         }
     }
 
+    #[inline]
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_hpp(fmt),
@@ -64,6 +68,7 @@ impl<'a> CodeWriter for Item<'a> {
         }
     }
 
+    #[inline]
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_json(fmt),
@@ -73,6 +78,7 @@ impl<'a> CodeWriter for Item<'a> {
         }
     }
 
+    #[inline]
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_rs(fmt),
@@ -137,9 +143,9 @@ impl<'a> Output<'a> {
                 let module = process.module_by_name(module_name).ok()?;
                 let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?.1;
 
-                process.read::<u32>(module.base + offset).ok()
+                process.read::<u32>(module.base + offset).data_part().ok()
             })
-            .ok_or(Error::Other("unable to read build number"))?;
+            .ok_or(anyhow!("failed to read build number"))?;
 
         let content = serde_json::to_string_pretty(&json!({
             "timestamp": self.timestamp.to_rfc3339(),
@@ -174,7 +180,7 @@ impl<'a> Output<'a> {
         for (module_name, (classes, enums)) in &self.result.schemas {
             let map = SchemaMap::from([(module_name.clone(), (classes.clone(), enums.clone()))]);
 
-            self.dump_item(module_name, &Item::Schemas(&map))?;
+            self.dump_item(&slugify(&module_name), &Item::Schemas(&map))?;
         }
 
         Ok(())
@@ -188,6 +194,7 @@ impl<'a> Output<'a> {
     }
 }
 
+#[inline]
 fn slugify(input: &str) -> String {
     input.replace(|c: char| !c.is_alphanumeric(), "_")
 }

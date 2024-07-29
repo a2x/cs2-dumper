@@ -15,8 +15,8 @@ pub struct SchemaClassInfoData {
     pub name: Pointer64<ReprCString>,                          // 0x0008
     pub module_name: Pointer64<ReprCString>,                   // 0x0010
     pub size: i32,                                             // 0x0018
-    pub fields_count: i16,                                     // 0x001C
-    pub static_fields_count: i16,                              // 0x001E
+    pub field_count: i16,                                      // 0x001C
+    pub static_field_count: i16,                               // 0x001E
     pub static_metadata_count: i16,                            // 0x0020
     pub align_of: u8,                                          // 0x0022
     pub has_base_class: u8,                                    // 0x0023

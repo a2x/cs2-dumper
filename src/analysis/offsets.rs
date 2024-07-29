@@ -1,18 +1,18 @@
 use std::collections::BTreeMap;
 
+use anyhow::Result;
+
 use log::{debug, error};
 
 use memflow::prelude::v1::*;
 
 use pelite::pattern;
 use pelite::pattern::{save_len, Atom};
-use pelite::pe64::{Pe, PeView};
+use pelite::pe64::{Pe, PeView, Rva};
 
 use phf::{phf_map, Map};
 
-use crate::error::Result;
-
-pub type OffsetMap = BTreeMap<String, BTreeMap<String, u32>>;
+pub type OffsetMap = BTreeMap<String, BTreeMap<String, Rva>>;
 
 macro_rules! pattern_map {
     ($($module:ident => {
@@ -26,20 +26,20 @@ macro_rules! pattern_map {
                     &'static str,
                     (
                         &'static [Atom],
-                        Option<fn(&PeView, &mut BTreeMap<String, u32>, u32)>,
+                        Option<fn(&PeView, &mut BTreeMap<String, Rva>, Rva)>,
                     ),
                 > = phf_map! {
                     $($name => ($pattern, $($callback)?)),+
                 };
 
-                pub fn offsets(view: PeView<'_>) -> BTreeMap<String, u32> {
+                pub fn offsets(view: PeView<'_>) -> BTreeMap<String, Rva> {
                     let mut map = BTreeMap::new();
 
                     for (&name, (pat, callback)) in &PATTERNS {
                         let mut save = vec![0; save_len(pat)];
 
                         if !view.scanner().finds_code(pat, &mut save) {
-                            error!("unable to find pattern: {}", name);
+                            error!("outdated pattern: {}", name);
 
                             continue;
                         }
@@ -55,7 +55,7 @@ macro_rules! pattern_map {
 
                     for (name, value) in &map {
                         debug!(
-                            "found offset: {} @ {:#X} ({}.dll + {:#X})",
+                            "found offset: {} at {:#X} ({}.dll + {:#X})",
                             name,
                             *value as u64 + view.optional_header().ImageBase,
                             stringify!($module),
@@ -130,8 +130,11 @@ pattern_map! {
 pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap> {
     let mut map = BTreeMap::new();
 
-    let modules: [(&str, fn(PeView) -> BTreeMap<String, u32>); 5] = [
-        ("client.dll", client::offsets),
+    let modules = [
+        (
+            "client.dll",
+            client::offsets as fn(PeView) -> BTreeMap<String, u32>,
+        ),
         ("engine2.dll", engine2::offsets),
         ("inputsystem.dll", input_system::offsets),
         ("matchmaking.dll", matchmaking::offsets),
@@ -140,7 +143,10 @@ pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap>
 
     for (module_name, offsets) in &modules {
         let module = process.module_by_name(module_name)?;
-        let buf = process.read_raw(module.base, module.size as _)?;
+
+        let buf = process
+            .read_raw(module.base, module.size as _)
+            .data_part()?;
 
         let view = PeView::from_bytes(&buf)?;
 
@@ -218,7 +224,7 @@ mod tests {
                 .read_addr64((global_vars + 0x1B8).into())
                 .data_part()?;
 
-            process.read_char_string(addr).data_part()?
+            process.read_utf8(addr, 4096).data_part()?
         };
 
         println!("current map name: {}", cur_map_name);
@@ -244,7 +250,7 @@ mod tests {
             .data_part()?;
 
         let player_name = process
-            .read_char_string((local_player_controller + player_name_offset).into())
+            .read_utf8((local_player_controller + player_name_offset).into(), 4096)
             .data_part()?;
 
         println!("local player name: {}", player_name);

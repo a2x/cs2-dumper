@@ -1,6 +1,6 @@
-use memflow::prelude::v1::*;
+use anyhow::{bail, Result};
 
-use crate::error::{Error, Result};
+use memflow::prelude::v1::*;
 
 #[repr(C)]
 pub struct UtlVector<T> {
@@ -17,10 +17,13 @@ impl<T: Pod> UtlVector<T> {
 
     pub fn element(&self, process: &mut IntoProcessInstanceArcBox<'_>, idx: usize) -> Result<T> {
         if idx >= self.count() as usize {
-            return Err(Error::Other("index out of bounds"));
+            bail!("index out of bounds");
         }
 
-        self.mem.at(idx as _).read(process).map_err(Into::into)
+        process
+            .read_ptr(self.mem.at(idx as _))
+            .data_part()
+            .map_err(Into::into)
     }
 }
 

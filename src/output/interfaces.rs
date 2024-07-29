@@ -15,12 +15,8 @@ impl CodeWriter for InterfaceMap {
                     &format!("public static class {}", AsPascalCase(slugify(module_name))),
                     false,
                     |fmt| {
-                        for iface in ifaces {
-                            writeln!(
-                                fmt,
-                                "public const nint {} = {:#X};",
-                                iface.name, iface.value
-                            )?;
+                        for (name, value) in ifaces {
+                            writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
                         }
 
                         Ok(())
@@ -45,12 +41,8 @@ impl CodeWriter for InterfaceMap {
                         &format!("namespace {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
-                            for iface in ifaces {
-                                writeln!(
-                                    fmt,
-                                    "constexpr std::ptrdiff_t {} = {:#X};",
-                                    iface.name, iface.value
-                                )?;
+                            for (name, value) in ifaces {
+                                writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};", name, value)?;
                             }
 
                             Ok(())
@@ -67,16 +59,14 @@ impl CodeWriter for InterfaceMap {
         let content: BTreeMap<_, _> = self
             .iter()
             .map(|(module_name, ifaces)| {
-                let ifaces: BTreeMap<_, _> = ifaces
-                    .iter()
-                    .map(|iface| (&iface.name, iface.value))
-                    .collect();
+                let ifaces: BTreeMap<_, _> =
+                    ifaces.iter().map(|(name, value)| (name, value)).collect();
 
                 (module_name, ifaces)
             })
             .collect();
 
-        fmt.write_str(&serde_json::to_string_pretty(&content).expect("unable to serialize json"))
+        fmt.write_str(&serde_json::to_string_pretty(&content).unwrap())
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -91,12 +81,8 @@ impl CodeWriter for InterfaceMap {
                         &format!("pub mod {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
-                            for iface in ifaces {
-                                writeln!(
-                                    fmt,
-                                    "pub const {}: usize = {:#X};",
-                                    iface.name, iface.value
-                                )?;
+                            for (name, value) in ifaces {
+                                writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
                             }
 
                             Ok(())

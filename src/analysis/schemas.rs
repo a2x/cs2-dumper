@@ -1,6 +1,8 @@
 use std::collections::BTreeMap;
 use std::ffi::CStr;
 
+use anyhow::{bail, Result};
+
 use log::debug;
 
 use memflow::prelude::v1::*;
@@ -10,7 +12,6 @@ use pelite::pe64::{Pe, PeView};
 
 use serde::{Deserialize, Serialize};
 
-use crate::error::{Error, Result};
 use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
@@ -80,30 +81,34 @@ fn read_class_binding(
     process: &mut IntoProcessInstanceArcBox<'_>,
     binding_ptr: Pointer64<SchemaClassBinding>,
 ) -> Result<Class> {
-    let binding = binding_ptr.read(process)?;
+    let binding = process.read_ptr(binding_ptr).data_part()?;
 
-    let module_name = binding
-        .module_name
-        .read_string(process)
+    let module_name = process
+        .read_utf8(binding.module_name.address(), 4096)
+        .data_part()
         .map(|s| format!("{}.dll", s))?;
 
-    let name = binding.name.read_string(process)?.to_string();
+    let name = process
+        .read_utf8(binding.name.address(), 4096)
+        .data_part()?;
 
     if name.is_empty() {
-        return Err(Error::Other("empty class name"));
+        bail!("empty class name");
     }
 
     let parent = binding.base_classes.non_null().and_then(|ptr| {
-        let base_class = ptr.read(process).ok()?;
-        let parent_class = base_class.prev.read(process).ok()?;
+        let base_class = process.read_ptr(ptr).data_part().ok()?;
+        let parent_class = process.read_ptr(base_class.prev).data_part().ok()?;
 
-        let module_name = parent_class
-            .module_name
-            .read_string(process)
-            .ok()?
-            .to_string();
+        let module_name = process
+            .read_utf8(parent_class.module_name.address(), 4096)
+            .data_part()
+            .ok()?;
 
-        let name = parent_class.name.read_string(process).ok()?.to_string();
+        let name = process
+            .read_utf8(parent_class.name.address(), 4096)
+            .data_part()
+            .ok()?;
 
         Some(Box::new(Class {
             name,
@@ -118,11 +123,11 @@ fn read_class_binding(
     let metadata = read_class_binding_metadata(process, &binding)?;
 
     debug!(
-        "found class: {} @ {:#X} (module name: {}) (parent name: {:?}) (metadata count: {}) (fields count: {})",
+        "found class: {} at {:#X} (module name: {}) (parent name: {:?}) (metadata count: {}) (field count: {})",
         name,
         binding_ptr.to_umem(),
         module_name,
-        parent.as_ref().map(|parent| parent.name.clone()),
+        parent.as_ref().map(|p| p.name.clone()),
         metadata.len(),
         fields.len(),
     );
@@ -144,18 +149,21 @@ fn read_class_binding_fields(
         return Ok(Vec::new());
     }
 
-    (0..binding.fields_count).try_fold(Vec::new(), |mut acc, i| {
-        let field = binding.fields.at(i as _).read(process)?;
+    (0..binding.field_count).try_fold(Vec::new(), |mut acc, i| {
+        let field = process.read_ptr(binding.fields.at(i as _)).data_part()?;
 
         if field.schema_type.is_null() {
             return Ok(acc);
         }
 
-        let name = field.name.read_string(process)?.to_string();
-        let schema_type = field.schema_type.read(process)?;
+        let name = process.read_utf8(field.name.address(), 4096).data_part()?;
+        let schema_type = process.read_ptr(field.schema_type).data_part()?;
 
         // TODO: Parse this properly.
-        let type_name = schema_type.name.read_string(process)?.replace(" ", "");
+        let type_name = process
+            .read_utf8(schema_type.name.address(), 4096)
+            .data_part()?
+            .replace(" ", "");
 
         acc.push(ClassField {
             name,
@@ -176,30 +184,39 @@ fn read_class_binding_metadata(
     }
 
     (0..binding.static_metadata_count).try_fold(Vec::new(), |mut acc, i| {
-        let metadata = binding.static_metadata.at(i as _).read(process)?;
+        let metadata = process
+            .read_ptr(binding.static_metadata.at(i as _))
+            .data_part()?;
 
         if metadata.network_value.is_null() {
             return Ok(acc);
         }
 
-        let name = metadata.name.read_string(process)?.to_string();
-        let network_value = metadata.network_value.read(process)?;
+        let name = process
+            .read_utf8(metadata.name.address(), 4096)
+            .data_part()?;
+
+        let network_value = process.read_ptr(metadata.network_value).data_part()?;
 
         let metadata = match name.as_str() {
             "MNetworkChangeCallback" => unsafe {
-                let name = network_value
-                    .value
-                    .name_ptr
-                    .read_string(process)?
-                    .to_string();
+                let name = process
+                    .read_utf8(network_value.value.name_ptr.address(), 4096)
+                    .data_part()?;
 
                 ClassMetadata::NetworkChangeCallback { name }
             },
             "MNetworkVarNames" => unsafe {
                 let var_value = network_value.value.var_value;
 
-                let name = var_value.name.read_string(process)?.to_string();
-                let type_name = var_value.type_name.read_string(process)?.replace(" ", "");
+                let name = process
+                    .read_utf8(var_value.name.address(), 4096)
+                    .data_part()?;
+
+                let type_name = process
+                    .read_utf8(var_value.type_name.address(), 4096)
+                    .data_part()?
+                    .replace(" ", "");
 
                 ClassMetadata::NetworkVarNames { name, type_name }
             },
@@ -216,17 +233,20 @@ fn read_enum_binding(
     process: &mut IntoProcessInstanceArcBox<'_>,
     binding_ptr: Pointer64<SchemaEnumBinding>,
 ) -> Result<Enum> {
-    let binding = binding_ptr.read(process)?;
-    let name = binding.name.read_string(process)?.to_string();
+    let binding = process.read_ptr(binding_ptr).data_part()?;
+
+    let name = process
+        .read_utf8(binding.name.address(), 4096)
+        .data_part()?;
 
     if name.is_empty() {
-        return Err(Error::Other("empty enum name"));
+        bail!("empty enum name");
     }
 
     let members = read_enum_binding_members(process, &binding)?;
 
     debug!(
-        "found enum: {} @ {:#X} (alignment: {}) (members count: {})",
+        "found enum: {} at {:#X} (alignment: {}) (member count: {})",
         name,
         binding_ptr.to_umem(),
         binding.align_of,
@@ -236,7 +256,7 @@ fn read_enum_binding(
     Ok(Enum {
         name,
         alignment: binding.align_of,
-        size: binding.enumerators_count,
+        size: binding.enumerator_count,
         members,
     })
 }
@@ -249,9 +269,14 @@ fn read_enum_binding_members(
         return Ok(Vec::new());
     }
 
-    (0..binding.enumerators_count).try_fold(Vec::new(), |mut acc, i| {
-        let enumerator = binding.enumerators.at(i as _).read(process)?;
-        let name = enumerator.name.read_string(process)?.to_string();
+    (0..binding.enumerator_count).try_fold(Vec::new(), |mut acc, i| {
+        let enumerator = process
+            .read_ptr(binding.enumerators.at(i as _))
+            .data_part()?;
+
+        let name = process
+            .read_utf8(enumerator.name.address(), 4096)
+            .data_part()?;
 
         acc.push(EnumMember {
             name,
@@ -264,7 +289,10 @@ fn read_enum_binding_members(
 
 fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaSystem> {
     let module = process.module_by_name("schemasystem.dll")?;
-    let buf = process.read_raw(module.base, module.size as _)?;
+
+    let buf = process
+        .read_raw(module.base, module.size as _)
+        .data_part()?;
 
     let view = PeView::from_bytes(&buf)?;
 
@@ -274,13 +302,13 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
         .scanner()
         .finds_code(pattern!("4c8d35${'} 0f2845"), &mut save)
     {
-        return Err(Error::Other("unable to find schema system pattern"));
+        bail!("outdated schema system pattern");
     }
 
-    let schema_system: SchemaSystem = process.read(module.base + save[1])?;
+    let schema_system: SchemaSystem = process.read(module.base + save[1]).data_part()?;
 
     if schema_system.num_registrations == 0 {
-        return Err(Error::Other("no schema system registrations found"));
+        bail!("no schema system registrations found");
     }
 
     Ok(schema_system)
@@ -294,7 +322,7 @@ fn read_type_scopes(
 
     (0..type_scopes.size).try_fold(Vec::new(), |mut acc, i| {
         let type_scope_ptr = type_scopes.element(process, i as _)?;
-        let type_scope = type_scope_ptr.read(process)?;
+        let type_scope = process.read_ptr(type_scope_ptr).data_part()?;
 
         let module_name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
             .to_string_lossy()
@@ -319,7 +347,7 @@ fn read_type_scopes(
         }
 
         debug!(
-            "found type scope: {} @ {:#X} (classes count: {}) (enums count: {})",
+            "found type scope: {} at {:#X} (class count: {}) (enum count: {})",
             module_name,
             type_scope_ptr.to_umem(),
             classes.len(),

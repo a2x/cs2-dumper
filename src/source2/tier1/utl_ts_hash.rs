@@ -1,8 +1,9 @@
+use anyhow::Result;
+
 use memflow::prelude::v1::*;
 
 use super::UtlMemoryPoolBase;
 
-use crate::error::Result;
 use crate::mem::PointerExt;
 
 #[repr(C)]
@@ -70,13 +71,13 @@ where
             let mut cur_element = bucket.first_uncommitted;
 
             while !cur_element.is_null() {
-                let element = cur_element.read(process)?;
+                let element = process.read_ptr(cur_element).data_part()?;
 
                 if !element.data.is_null() {
-                    unallocated_list.push(element.data);
+                    allocated_list.push(element.data);
                 }
 
-                if unallocated_list.len() >= blocks_alloc {
+                if allocated_list.len() >= blocks_alloc {
                     break;
                 }
 
@@ -88,13 +89,13 @@ where
             Pointer64::<HashAllocatedBlob<D>>::from(self.entry_mem.free_list_head.address());
 
         while !cur_blob.is_null() {
-            let blob = cur_blob.read(process)?;
+            let blob = process.read_ptr(cur_blob).data_part()?;
 
             if !blob.data.is_null() {
-                allocated_list.push(blob.data);
+                unallocated_list.push(blob.data);
             }
 
-            if allocated_list.len() >= peak_alloc {
+            if unallocated_list.len() >= peak_alloc {
                 break;
             }
 

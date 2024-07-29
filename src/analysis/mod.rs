@@ -3,27 +3,69 @@ pub use interfaces::*;
 pub use offsets::*;
 pub use schemas::*;
 
-use memflow::prelude::v1::*;
+use std::any::type_name;
 
-use crate::error::Result;
+use anyhow::Result;
+
+use log::{error, info};
+
+use memflow::prelude::v1::*;
 
 mod buttons;
 mod interfaces;
 mod offsets;
 mod schemas;
 
+#[derive(Debug)]
 pub struct AnalysisResult {
-    pub buttons: Vec<Button>,
+    pub buttons: ButtonMap,
     pub interfaces: InterfaceMap,
     pub offsets: OffsetMap,
     pub schemas: SchemaMap,
 }
 
 pub fn analyze_all(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<AnalysisResult> {
-    let buttons = buttons(process)?;
-    let interfaces = interfaces(process)?;
-    let offsets = offsets(process)?;
-    let schemas = schemas(process)?;
+    let buttons = analyze(process, buttons);
+
+    info!("found {} buttons", buttons.len());
+
+    let interfaces = analyze(process, interfaces);
+
+    info!(
+        "found {} interfaces across {} modules",
+        interfaces
+            .iter()
+            .map(|(_, ifaces)| ifaces.len())
+            .sum::<usize>(),
+        interfaces.len()
+    );
+
+    let offsets = analyze(process, offsets);
+
+    info!(
+        "found {} offsets across {} modules",
+        offsets
+            .iter()
+            .map(|(_, offsets)| offsets.len())
+            .sum::<usize>(),
+        offsets.len()
+    );
+
+    let schemas = analyze(process, schemas);
+
+    let (class_count, enum_count) =
+        schemas
+            .values()
+            .fold((0, 0), |(classes, enums), (class_vec, enum_vec)| {
+                (classes + class_vec.len(), enums + enum_vec.len())
+            });
+
+    info!(
+        "found {} classes and {} enums across {} modules",
+        class_count,
+        enum_count,
+        schemas.len()
+    );
 
     Ok(AnalysisResult {
         buttons,
@@ -31,4 +73,22 @@ pub fn analyze_all(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Analys
         offsets,
         schemas,
     })
+}
+
+#[inline]
+fn analyze<F, T>(process: &mut IntoProcessInstanceArcBox<'_>, f: F) -> T
+where
+    F: FnOnce(&mut IntoProcessInstanceArcBox<'_>) -> Result<T>,
+    T: Default,
+{
+    let name = type_name::<F>();
+
+    match f(process) {
+        Ok(result) => result,
+        Err(err) => {
+            error!("failed to read {}: {}", name, err);
+
+            T::default()
+        }
+    }
 }
