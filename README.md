@@ -21,7 +21,7 @@ _Note:_ If you run the executable without specifying an optional memflow connect
 wish to use an existing memflow connector instead, you can pass the `connector` and optional `connector-args` arguments
 to the program.
 
-E.g. `./cs2-dumper -c pcileech -a device=fpga -vvv`
+E.g. `sudo ./cs2-dumper -c pcileech -a :device=FPGA -vvv`
 
 ### Available Arguments
 
