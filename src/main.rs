@@ -116,10 +116,7 @@ fn main() -> Result<()> {
 
     output.dump_all(&mut process)?;
 
-    info!(
-        "analysis completed in {} seconds",
-        now.elapsed().as_secs_f64()
-    );
+    info!("analysis completed in {:.2?}", now.elapsed());
 
     Ok(())
 }
