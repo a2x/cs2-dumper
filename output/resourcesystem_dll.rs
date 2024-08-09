@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-08 22:44:32.016601800 UTC
+// 2024-08-09 07:37:31.728976200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Classes count: 58
-        // Enums count: 2
+        // Class count: 58
+        // Enum count: 2
         pub mod resourcesystem_dll {
             // Alignment: 1
             // Member count: 9
@@ -68,8 +68,8 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 2
             pub mod PackedAABB_t {
-                pub const m_nPackedMin: usize = 0x0; // 
-                pub const m_nPackedMax: usize = 0x4; // 
+                pub const m_nPackedMin: usize = 0x0; // uint32
+                pub const m_nPackedMax: usize = 0x4; // uint32
             }
             // Parent: None
             // Field count: 0
@@ -91,14 +91,14 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod ConstantInfo_t {
-                pub const m_name: usize = 0x0; // 
-                pub const m_nameToken: usize = 0x8; // 
-                pub const m_flValue: usize = 0xC; // 
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_nameToken: usize = 0x8; // CUtlStringToken
+                pub const m_flValue: usize = 0xC; // float32
             }
             // Parent: None
             // Field count: 1
             pub mod FuseFunctionIndex_t {
-                pub const m_Value: usize = 0x0; // 
+                pub const m_Value: usize = 0x0; // uint16
             }
             // Parent: None
             // Field count: 0
@@ -127,9 +127,9 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CFuseSymbolTable {
-                pub const m_constants: usize = 0x0; // 
-                pub const m_variables: usize = 0x18; // 
-                pub const m_functions: usize = 0x30; // 
+                pub const m_constants: usize = 0x0; // CUtlVector<ConstantInfo_t>
+                pub const m_variables: usize = 0x18; // CUtlVector<VariableInfo_t>
+                pub const m_functions: usize = 0x30; // CUtlVector<FunctionInfo_t>
                 pub const m_constantMap: usize = 0x48; // CUtlHashtable<CUtlStringToken,int32>
                 pub const m_variableMap: usize = 0x68; // CUtlHashtable<CUtlStringToken,int32>
                 pub const m_functionMap: usize = 0x88; // CUtlHashtable<CUtlStringToken,int32>
@@ -154,7 +154,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod TestResource_t {
-                pub const m_name: usize = 0x0; // 
+                pub const m_name: usize = 0x0; // CUtlString
             }
             // Parent: None
             // Field count: 0
@@ -187,8 +187,8 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 2
             pub mod AABB_t {
-                pub const m_vMinBounds: usize = 0x0; // 
-                pub const m_vMaxBounds: usize = 0xC; // 
+                pub const m_vMinBounds: usize = 0x0; // Vector
+                pub const m_vMaxBounds: usize = 0xC; // Vector
             }
             // Parent: None
             // Field count: 0
@@ -203,12 +203,12 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod VariableInfo_t {
-                pub const m_name: usize = 0x0; // 
-                pub const m_nameToken: usize = 0x8; // 
-                pub const m_nIndex: usize = 0xC; // 
-                pub const m_nNumComponents: usize = 0xE; // 
-                pub const m_eVarType: usize = 0xF; // 
-                pub const m_eAccess: usize = 0x10; // 
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_nameToken: usize = 0x8; // CUtlStringToken
+                pub const m_nIndex: usize = 0xC; // FuseVariableIndex_t
+                pub const m_nNumComponents: usize = 0xE; // uint8
+                pub const m_eVarType: usize = 0xF; // FuseVariableType_t
+                pub const m_eAccess: usize = 0x10; // FuseVariableAccess_t
             }
             // Parent: None
             // Field count: 0
@@ -220,10 +220,10 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 4
             pub mod FourQuaternions {
-                pub const x: usize = 0x0; // 
-                pub const y: usize = 0x10; // 
-                pub const z: usize = 0x20; // 
-                pub const w: usize = 0x30; // 
+                pub const x: usize = 0x0; // fltx4
+                pub const y: usize = 0x10; // fltx4
+                pub const z: usize = 0x20; // fltx4
+                pub const w: usize = 0x30; // fltx4
             }
             // Parent: None
             // Field count: 0
@@ -322,10 +322,10 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CFuseProgram {
-                pub const m_programBuffer: usize = 0x0; // 
+                pub const m_programBuffer: usize = 0x0; // CUtlVector<uint8>
                 pub const m_variablesRead: usize = 0x18; // CUtlVector<FuseVariableIndex_t>
                 pub const m_variablesWritten: usize = 0x30; // CUtlVector<FuseVariableIndex_t>
-                pub const m_nMaxTempVarsUsed: usize = 0x48; // 
+                pub const m_nMaxTempVarsUsed: usize = 0x48; // int32
             }
             // Parent: None
             // Field count: 0
@@ -382,11 +382,11 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod FunctionInfo_t {
-                pub const m_name: usize = 0x8; // 
-                pub const m_nameToken: usize = 0x10; // 
-                pub const m_nParamCount: usize = 0x14; // 
-                pub const m_nIndex: usize = 0x18; // 
-                pub const m_bIsPure: usize = 0x1A; // 
+                pub const m_name: usize = 0x8; // CUtlString
+                pub const m_nameToken: usize = 0x10; // CUtlStringToken
+                pub const m_nParamCount: usize = 0x14; // int32
+                pub const m_nIndex: usize = 0x18; // FuseFunctionIndex_t
+                pub const m_bIsPure: usize = 0x1A; // bool
             }
             // Parent: None
             // Field count: 0
@@ -419,7 +419,7 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 1
             pub mod FuseVariableIndex_t {
-                pub const m_Value: usize = 0x0; // 
+                pub const m_Value: usize = 0x0; // uint16
             }
             // Parent: None
             // Field count: 0
@@ -441,8 +441,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod ManifestTestResource_t {
-                pub const m_name: usize = 0x0; // 
-                pub const m_child: usize = 0x8; // 
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_child: usize = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
             }
             // Parent: None
             // Field count: 0

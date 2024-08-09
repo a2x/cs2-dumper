@@ -28,8 +28,8 @@
     "dwNetworkGameClient_maxClients": 624,
     "dwNetworkGameClient_serverTickCount": 372,
     "dwNetworkGameClient_signOnState": 608,
-    "dwWindowHeight": 6221788,
-    "dwWindowWidth": 6221784
+    "dwWindowHeight": 6240948,
+    "dwWindowWidth": 6240944
   },
   "inputsystem.dll": {
     "dwInputSystem": 231408
@@ -39,7 +39,7 @@
     "dwGameTypes_mapName": 288
   },
   "soundsystem.dll": {
-    "dwSoundSystem": 3362352,
+    "dwSoundSystem": 3362368,
     "dwSoundSystem_engineViewData": 124
   }
 }

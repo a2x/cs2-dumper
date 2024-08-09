@@ -14,8 +14,8 @@ impl CodeWriter for SchemaMap {
         fmt.block("namespace CS2Dumper.Schemas", false, |fmt| {
             for (module_name, (classes, enums)) in self {
                 writeln!(fmt, "// Module: {}", module_name)?;
-                writeln!(fmt, "// Classes count: {}", classes.len())?;
-                writeln!(fmt, "// Enums count: {}", enums.len())?;
+                writeln!(fmt, "// Class count: {}", classes.len())?;
+                writeln!(fmt, "// Enum count: {}", enums.len())?;
 
                 fmt.block(
                     &format!("public static class {}", AsPascalCase(slugify(module_name))),
@@ -97,8 +97,8 @@ impl CodeWriter for SchemaMap {
             fmt.block("namespace schemas", false, |fmt| {
                 for (module_name, (classes, enums)) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
-                    writeln!(fmt, "// Classes count: {}", classes.len())?;
-                    writeln!(fmt, "// Enums count: {}", enums.len())?;
+                    writeln!(fmt, "// Class count: {}", classes.len())?;
+                    writeln!(fmt, "// Enum count: {}", enums.len())?;
 
                     fmt.block(
                         &format!("namespace {}", AsSnakeCase(slugify(module_name))),
@@ -268,8 +268,8 @@ impl CodeWriter for SchemaMap {
             fmt.block("pub mod schemas", false, |fmt| {
                 for (module_name, (classes, enums)) in self {
                     writeln!(fmt, "// Module: {}", module_name)?;
-                    writeln!(fmt, "// Classes count: {}", classes.len())?;
-                    writeln!(fmt, "// Enums count: {}", enums.len())?;
+                    writeln!(fmt, "// Class count: {}", classes.len())?;
+                    writeln!(fmt, "// Enum count: {}", enums.len())?;
 
                     fmt.block(
                         &format!("pub mod {}", AsSnakeCase(slugify(module_name))),

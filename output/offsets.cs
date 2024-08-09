@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-08 22:44:32.016601800 UTC
+// 2024-08-09 07:37:31.728976200 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
@@ -33,8 +33,8 @@ namespace CS2Dumper.Offsets {
         public const nint dwNetworkGameClient_maxClients = 0x270;
         public const nint dwNetworkGameClient_serverTickCount = 0x174;
         public const nint dwNetworkGameClient_signOnState = 0x260;
-        public const nint dwWindowHeight = 0x5EEFDC;
-        public const nint dwWindowWidth = 0x5EEFD8;
+        public const nint dwWindowHeight = 0x5F3AB4;
+        public const nint dwWindowWidth = 0x5F3AB0;
     }
     // Module: inputsystem.dll
     public static class InputsystemDll {
@@ -47,7 +47,7 @@ namespace CS2Dumper.Offsets {
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {
-        public const nint dwSoundSystem = 0x334E30;
+        public const nint dwSoundSystem = 0x334E40;
         public const nint dwSoundSystem_engineViewData = 0x7C;
     }
 }

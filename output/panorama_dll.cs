@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-08 22:44:32.016601800 UTC
+// 2024-08-09 07:37:31.728976200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: panorama.dll
-    // Classes count: 0
-    // Enums count: 2
+    // Class count: 0
+    // Enum count: 2
     public static class PanoramaDll {
         // Alignment: 4
         // Member count: 13
