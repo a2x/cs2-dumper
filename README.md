@@ -5,6 +5,8 @@ by [memflow](https://github.com/memflow/memflow).
 
 The native Linux version is available in the [linux](https://github.com/a2x/cs2-dumper/tree/linux) branch.
 
+For a work-in-progress offline version, please check out [cs2-analyzer](https://github.com/a2x/cs2-analyzer) and the web demo here: https://a2x.github.io/cs2-analyzer
+
 ## Getting Started
 
 You can download the latest release from [Releases](https://github.com/a2x/cs2-dumper/releases) or compile it yourself.
