@@ -88,7 +88,7 @@ pattern_map! {
         "dwLocalPlayerController" => pattern!("488905${'} 8b9e") => None,
         "dwPlantedC4" => pattern!("488b15${'} 41ffc0") => None,
         "dwPrediction" => pattern!("488d05${'} c3 cccccccccccccccc 4883ec? 8b0d") => Some(|_view, map, rva| {
-            map.insert("dwLocalPlayerPawn".to_string(), rva + 0x148);
+            map.insert("dwLocalPlayerPawn".to_string(), rva + 0x160);
         }),
         "dwSensitivity" => pattern!("488b05${'} 488b40? f3410f59f4") => None,
         "dwSensitivity_sensitivity" => pattern!("ff50u1 4c8bc6 488d55? 488bcf e8${} 84c0 0f85${} 4c8d45? 8bd3 488bcf e8${} e9${} f30f1006") => None,
