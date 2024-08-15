@@ -173,7 +173,9 @@ mod tests {
     }
 
     fn get_class_field_value(module_name: &str, class_name: &str, field_name: &str) -> Option<u64> {
-        let content = fs::read_to_string(format!("output/{}.json", module_name)).ok()?;
+        let content =
+            fs::read_to_string(format!("output/{}.json", module_name.replace(".", "_"))).ok()?;
+
         let value: Value = serde_json::from_str(&content).ok()?;
 
         value
