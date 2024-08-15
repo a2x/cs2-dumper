@@ -72,7 +72,7 @@ macro_rules! pattern_map {
 
 pattern_map! {
     client => {
-        "dwCSGOInput" => pattern!("488d0d${'} e8${} 8bbe8412") => Some(|view, map, rva| {
+        "dwCSGOInput" => pattern!("488b0d${'} e8${} 8bbe8412") => Some(|view, map, rva| {
             let mut save = [0; 2];
 
             if view.scanner().finds_code(pattern!("f2410f108430u4"), &mut save) {
