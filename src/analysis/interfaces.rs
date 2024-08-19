@@ -19,6 +19,10 @@ pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Interfa
         .module_list()?
         .iter()
         .filter_map(|module| {
+            if module.name.to_string() == "crashhandler64.dll" {
+                return None;
+            }
+
             let buf = process
                 .read_raw(module.base, module.size as _)
                 .data_part()
@@ -61,7 +65,7 @@ fn read_interfaces(
 
     while !cur_reg.is_null() {
         let reg = process.read_ptr(cur_reg).data_part()?;
-        let name = process.read_utf8(reg.name.address(), 4096).data_part()?;
+        let name = process.read_utf8(reg.name.address(), 128).data_part()?;
         let instance = read_addr64_rip(process, reg.create_fn.address())?;
         let value = instance - module.base;
 
