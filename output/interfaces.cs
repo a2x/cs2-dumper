@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-19 23:33:08.462588500 UTC
+// 2024-08-21 00:00:00.519767300 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x17CC650;
-        public const nint EmptyWorldService001_Client = 0x1789D80;
-        public const nint GameClientExports001 = 0x17C9308;
-        public const nint LegacyGameUI001 = 0x17E8E10;
-        public const nint Source2Client002 = 0x19C4E50;
-        public const nint Source2ClientConfig001 = 0x19657F0;
-        public const nint Source2ClientPrediction001 = 0x17D46B0;
-        public const nint Source2ClientUI001 = 0x17E7890;
+        public const nint ClientToolsInfo_001 = 0x17CB650;
+        public const nint EmptyWorldService001_Client = 0x1788D80;
+        public const nint GameClientExports001 = 0x17C8308;
+        public const nint LegacyGameUI001 = 0x17E7E10;
+        public const nint Source2Client002 = 0x19C3E50;
+        public const nint Source2ClientConfig001 = 0x19647F0;
+        public const nint Source2ClientPrediction001 = 0x17D36B0;
+        public const nint Source2ClientUI001 = 0x17E6890;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -170,10 +170,10 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {
-        public const nint SoundOpSystem001 = 0x3353A0;
-        public const nint SoundOpSystemEdit001 = 0x335270;
-        public const nint SoundSystem001 = 0x334E40;
-        public const nint VMixEditTool001 = 0x48288DEA;
+        public const nint SoundOpSystem001 = 0x335390;
+        public const nint SoundOpSystemEdit001 = 0x335260;
+        public const nint SoundSystem001 = 0x334E30;
+        public const nint VMixEditTool001 = 0x48288DBA;
     }
     // Module: steamaudio.dll
     public static class SteamaudioDll {

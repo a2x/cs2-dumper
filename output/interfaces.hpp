@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-19 23:33:08.462588500 UTC
+// 2024-08-21 00:00:00.519767300 UTC
 
 #pragma once
 
@@ -14,14 +14,14 @@ namespace cs2_dumper {
         }
         // Module: client.dll
         namespace client_dll {
-            constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x17CC650;
-            constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x1789D80;
-            constexpr std::ptrdiff_t GameClientExports001 = 0x17C9308;
-            constexpr std::ptrdiff_t LegacyGameUI001 = 0x17E8E10;
-            constexpr std::ptrdiff_t Source2Client002 = 0x19C4E50;
-            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x19657F0;
-            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x17D46B0;
-            constexpr std::ptrdiff_t Source2ClientUI001 = 0x17E7890;
+            constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x17CB650;
+            constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x1788D80;
+            constexpr std::ptrdiff_t GameClientExports001 = 0x17C8308;
+            constexpr std::ptrdiff_t LegacyGameUI001 = 0x17E7E10;
+            constexpr std::ptrdiff_t Source2Client002 = 0x19C3E50;
+            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x19647F0;
+            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x17D36B0;
+            constexpr std::ptrdiff_t Source2ClientUI001 = 0x17E6890;
         }
         // Module: engine2.dll
         namespace engine2_dll {
@@ -175,10 +175,10 @@ namespace cs2_dumper {
         }
         // Module: soundsystem.dll
         namespace soundsystem_dll {
-            constexpr std::ptrdiff_t SoundOpSystem001 = 0x3353A0;
-            constexpr std::ptrdiff_t SoundOpSystemEdit001 = 0x335270;
-            constexpr std::ptrdiff_t SoundSystem001 = 0x334E40;
-            constexpr std::ptrdiff_t VMixEditTool001 = 0x48288DEA;
+            constexpr std::ptrdiff_t SoundOpSystem001 = 0x335390;
+            constexpr std::ptrdiff_t SoundOpSystemEdit001 = 0x335260;
+            constexpr std::ptrdiff_t SoundSystem001 = 0x334E30;
+            constexpr std::ptrdiff_t VMixEditTool001 = 0x48288DBA;
         }
         // Module: steamaudio.dll
         namespace steamaudio_dll {

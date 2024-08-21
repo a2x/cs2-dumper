@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-19 23:33:08.462588500 UTC
+// 2024-08-21 00:00:00.519767300 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,14 +12,14 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x17CC650;
-            pub const EmptyWorldService001_Client: usize = 0x1789D80;
-            pub const GameClientExports001: usize = 0x17C9308;
-            pub const LegacyGameUI001: usize = 0x17E8E10;
-            pub const Source2Client002: usize = 0x19C4E50;
-            pub const Source2ClientConfig001: usize = 0x19657F0;
-            pub const Source2ClientPrediction001: usize = 0x17D46B0;
-            pub const Source2ClientUI001: usize = 0x17E7890;
+            pub const ClientToolsInfo_001: usize = 0x17CB650;
+            pub const EmptyWorldService001_Client: usize = 0x1788D80;
+            pub const GameClientExports001: usize = 0x17C8308;
+            pub const LegacyGameUI001: usize = 0x17E7E10;
+            pub const Source2Client002: usize = 0x19C3E50;
+            pub const Source2ClientConfig001: usize = 0x19647F0;
+            pub const Source2ClientPrediction001: usize = 0x17D36B0;
+            pub const Source2ClientUI001: usize = 0x17E6890;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -173,10 +173,10 @@ pub mod cs2_dumper {
         }
         // Module: soundsystem.dll
         pub mod soundsystem_dll {
-            pub const SoundOpSystem001: usize = 0x3353A0;
-            pub const SoundOpSystemEdit001: usize = 0x335270;
-            pub const SoundSystem001: usize = 0x334E40;
-            pub const VMixEditTool001: usize = 0x48288DEA;
+            pub const SoundOpSystem001: usize = 0x335390;
+            pub const SoundOpSystemEdit001: usize = 0x335260;
+            pub const SoundSystem001: usize = 0x334E30;
+            pub const VMixEditTool001: usize = 0x48288DBA;
         }
         // Module: steamaudio.dll
         pub mod steamaudio_dll {

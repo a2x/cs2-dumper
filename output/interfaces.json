@@ -4,14 +4,14 @@
     "AnimationSystem_001": 5799664
   },
   "client.dll": {
-    "ClientToolsInfo_001": 24954448,
-    "EmptyWorldService001_Client": 24681856,
-    "GameClientExports001": 24941320,
-    "LegacyGameUI001": 25071120,
-    "Source2Client002": 27020880,
-    "Source2ClientConfig001": 26630128,
-    "Source2ClientPrediction001": 24987312,
-    "Source2ClientUI001": 25065616
+    "ClientToolsInfo_001": 24950352,
+    "EmptyWorldService001_Client": 24677760,
+    "GameClientExports001": 24937224,
+    "LegacyGameUI001": 25067024,
+    "Source2Client002": 27016784,
+    "Source2ClientConfig001": 26626032,
+    "Source2ClientPrediction001": 24983216,
+    "Source2ClientUI001": 25061520
   },
   "engine2.dll": {
     "BenchmarkService001": 5461520,
@@ -142,10 +142,10 @@
     "customnavsystem001": 19593848
   },
   "soundsystem.dll": {
-    "SoundOpSystem001": 3363744,
-    "SoundOpSystemEdit001": 3363440,
-    "SoundSystem001": 3362368,
-    "VMixEditTool001": 1210617322
+    "SoundOpSystem001": 3363728,
+    "SoundOpSystemEdit001": 3363424,
+    "SoundSystem001": 3362352,
+    "VMixEditTool001": 1210617274
   },
   "steamaudio.dll": {
     "SteamAudio001": 2447184
