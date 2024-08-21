@@ -1,16 +1,16 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: worldrenderer.dll
-        // Class count: 23
-        // Enum count: 1
+        // Classes count: 23
+        // Enums count: 1
         pub mod worldrenderer_dll {
             // Alignment: 4
-            // Member count: 13
+            // Members count: 13
             #[repr(u32)]
             pub enum ObjectTypeFlags_t {
                 OBJECT_TYPE_NONE = 0x0,
@@ -28,7 +28,7 @@ pub mod cs2_dumper {
                 OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
             }
             // Parent: None
-            // Field count: 14
+            // Fields count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -49,7 +49,7 @@ pub mod cs2_dumper {
                 pub const m_renderable: usize = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -59,7 +59,7 @@ pub mod cs2_dumper {
                 pub const m_fSwitchDistances: usize = 0x10; // CUtlVector<float32>
             }
             // Parent: BaseSceneObjectOverride_t
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -70,7 +70,7 @@ pub mod cs2_dumper {
                 pub const m_extraBufferBinding: usize = 0x10; // CRenderBufferBinding
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -80,7 +80,7 @@ pub mod cs2_dumper {
                 pub const m_BoundsWs: usize = 0x8; // AABB_t
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -95,7 +95,7 @@ pub mod cs2_dumper {
                 pub const m_renderableModel: usize = 0x70; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -109,11 +109,11 @@ pub mod cs2_dumper {
                 pub const m_worldNodePrefix: usize = 0x48; // CUtlString
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             pub mod VMapResourceData_t {
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -128,7 +128,7 @@ pub mod cs2_dumper {
                 pub const m_renderableModel: usize = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -140,7 +140,7 @@ pub mod cs2_dumper {
                 pub const m_nCompileFingerprint: usize = 0x40; // uint64
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -150,7 +150,7 @@ pub mod cs2_dumper {
                 pub const m_entityKeyValues: usize = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 13
+            // Fields count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -170,7 +170,7 @@ pub mod cs2_dumper {
                 pub const m_nodeLightingInfo: usize = 0x110; // BakedLightingInfo_t
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -178,7 +178,7 @@ pub mod cs2_dumper {
                 pub const m_nSceneObjectIndex: usize = 0x0; // uint32
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -192,7 +192,7 @@ pub mod cs2_dumper {
                 pub const m_nTimesToFire: usize = 0x2C; // int32
             }
             // Parent: None
-            // Field count: 9
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -208,7 +208,7 @@ pub mod cs2_dumper {
                 pub const m_lightMaps: usize = 0x18; // CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -217,14 +217,14 @@ pub mod cs2_dumper {
                 pub const m_nElementCount: usize = 0x4; // uint32
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeVMapResourceData_t {
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -235,7 +235,7 @@ pub mod cs2_dumper {
                 pub const m_pData: usize = 0x20; // CUtlVector<uint8>
             }
             // Parent: None
-            // Field count: 9
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -251,7 +251,7 @@ pub mod cs2_dumper {
                 pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x14; // int32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -262,7 +262,7 @@ pub mod cs2_dumper {
                 pub const m_entityLumps: usize = 0x90; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
             }
             // Parent: None
-            // Field count: 10
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -279,7 +279,7 @@ pub mod cs2_dumper {
                 pub const m_nSequenceOverride: usize = 0x6C; // int32
             }
             // Parent: BaseSceneObjectOverride_t
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -289,7 +289,7 @@ pub mod cs2_dumper {
                 pub const m_pMaterial: usize = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -298,7 +298,7 @@ pub mod cs2_dumper {
                 pub const m_keyValuesData: usize = 0x20; // CUtlBinaryBlock
             }
             // Parent: None
-            // Field count: 13
+            // Fields count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults

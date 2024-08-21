@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #pragma once
 
@@ -8,11 +8,11 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: scenesystem.dll
-        // Class count: 9
-        // Enum count: 1
+        // Classes count: 9
+        // Enums count: 1
         namespace scenesystem_dll {
             // Alignment: 1
-            // Member count: 4
+            // Members count: 4
             enum class DisableShadows_t : uint8_t {
                 kDisableShadows_None = 0x0,
                 kDisableShadows_All = 0x1,
@@ -20,7 +20,7 @@ namespace cs2_dumper {
                 kDisableShadows_Realtime = 0x3
             };
             // Parent: None
-            // Field count: 10
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -37,7 +37,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFormat = 0x2C; // int32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -46,7 +46,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFrameCount = 0x8; // uint64
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -55,14 +55,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_ViewName = 0x8; // CUtlString
             }
             // Parent: CSSDSMsg_LayerBase
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_PostLayer {
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -75,14 +75,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_displayText = 0x30; // CUtlString
             }
             // Parent: CSSDSMsg_LayerBase
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_PreLayer {
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -92,7 +92,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Targets = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -101,7 +101,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults

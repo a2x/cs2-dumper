@@ -1,16 +1,16 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: vphysics2.dll
-        // Class count: 88
-        // Enum count: 2
+        // Classes count: 88
+        // Enums count: 2
         pub mod vphysics2_dll {
             // Alignment: 4
-            // Member count: 3
+            // Members count: 3
             #[repr(u32)]
             pub enum JointMotion_t {
                 JOINT_MOTION_FREE = 0x0,
@@ -18,7 +18,7 @@ pub mod cs2_dumper {
                 JOINT_MOTION_COUNT = 0x2
             }
             // Alignment: 4
-            // Member count: 4
+            // Members count: 4
             #[repr(u32)]
             pub enum JointAxis_t {
                 JOINT_AXIS_X = 0x0,
@@ -27,7 +27,7 @@ pub mod cs2_dumper {
                 JOINT_AXIS_COUNT = 0x3
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -36,7 +36,7 @@ pub mod cs2_dumper {
                 pub const m_flLength: usize = 0x4; // float32
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -44,7 +44,7 @@ pub mod cs2_dumper {
                 pub const m_flMassInv: usize = 0x0; // float32
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -52,7 +52,7 @@ pub mod cs2_dumper {
                 pub const m_Hull: usize = 0x10; // RnHull_t
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -62,7 +62,7 @@ pub mod cs2_dumper {
                 pub const m_nParticle: usize = 0x1C; // uint16[2]
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -70,7 +70,7 @@ pub mod cs2_dumper {
                 pub const m_Capsule: usize = 0x10; // RnCapsule_t
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -78,7 +78,7 @@ pub mod cs2_dumper {
                 pub const m_Sphere: usize = 0x10; // SphereBase_t<float32>
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -86,7 +86,7 @@ pub mod cs2_dumper {
                 pub const m_Mesh: usize = 0x10; // RnMesh_t
             }
             // Parent: None
-            // Field count: 101
+            // Fields count: 101
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -194,7 +194,7 @@ pub mod cs2_dumper {
                 pub const m_nQuadVelocitySmoothIterations: usize = 0x61A; // uint16
             }
             // Parent: RnBodyDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -202,7 +202,7 @@ pub mod cs2_dumper {
                 pub const m_nOldPointer: usize = 0xD0; // uint64
             }
             // Parent: FeBoxRigid_t
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -211,7 +211,7 @@ pub mod cs2_dumper {
                 pub const m_nVertexMapHash: usize = 0x44; // uint32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -221,7 +221,7 @@ pub mod cs2_dumper {
                 pub const m_jiggleBone: usize = 0x8; // CFeJiggleBone
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -231,7 +231,7 @@ pub mod cs2_dumper {
                 pub const nNode: usize = 0x8; // uint16[6]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -242,7 +242,7 @@ pub mod cs2_dumper {
                 pub const flRadius: usize = 0x8; // float32[2]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             pub mod constraint_axislimit_t {
                 pub const flMinRotation: usize = 0x0; // float32
                 pub const flMaxRotation: usize = 0x4; // float32
@@ -250,7 +250,7 @@ pub mod cs2_dumper {
                 pub const flMotorMaxTorque: usize = 0xC; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -260,7 +260,7 @@ pub mod cs2_dumper {
                 pub const f4RelaxationFactor: usize = 0x20; // fltx4
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -272,7 +272,7 @@ pub mod cs2_dumper {
                 pub const f4RelaxationFactor: usize = 0x40; // fltx4
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             pub mod constraint_hingeparams_t {
                 pub const worldPosition: usize = 0x0; // Vector
                 pub const worldAxisDirection: usize = 0xC; // Vector
@@ -280,7 +280,7 @@ pub mod cs2_dumper {
                 pub const constraint: usize = 0x28; // constraint_breakableparams_t
             }
             // Parent: FeSphereRigid_t
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -289,7 +289,7 @@ pub mod cs2_dumper {
                 pub const m_nVertexMapHash: usize = 0x24; // uint32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -299,7 +299,7 @@ pub mod cs2_dumper {
                 pub const flRelaxationFactor: usize = 0x20; // fltx4
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -307,7 +307,7 @@ pub mod cs2_dumper {
                 pub const m_nIndex: usize = 0x0; // int32[3]
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -316,7 +316,7 @@ pub mod cs2_dumper {
                 pub const m_flWeight: usize = 0x8; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -327,7 +327,7 @@ pub mod cs2_dumper {
                 pub const flGravity: usize = 0xC; // float32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -336,7 +336,7 @@ pub mod cs2_dumper {
                 pub const m_flRadius: usize = 0x18; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -347,7 +347,7 @@ pub mod cs2_dumper {
                 pub const m_jiggleBone: usize = 0x34; // CFeJiggleBone
             }
             // Parent: None
-            // Field count: 35
+            // Fields count: 35
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -389,7 +389,7 @@ pub mod cs2_dumper {
                 pub const m_bHasShadowController: usize = 0xCA; // bool
             }
             // Parent: None
-            // Field count: 12
+            // Fields count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -408,7 +408,7 @@ pub mod cs2_dumper {
                 pub const m_nNode: usize = 0x40; // uint16[4]
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -418,7 +418,7 @@ pub mod cs2_dumper {
                 pub const flWeight: usize = 0x4; // float32
             }
             // Parent: None
-            // Field count: 10
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -435,13 +435,13 @@ pub mod cs2_dumper {
                 pub const m_nDebugFlags: usize = 0xA0; // uint32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             pub mod VertexPositionNormal_t {
                 pub const m_vPosition: usize = 0x0; // Vector
                 pub const m_vNormal: usize = 0xC; // Vector
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -456,7 +456,7 @@ pub mod cs2_dumper {
                 pub const m_nTargetIndex: usize = 0xE; // uint16
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -470,7 +470,7 @@ pub mod cs2_dumper {
                 pub const m_GoalDamping: usize = 0x70; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -481,7 +481,7 @@ pub mod cs2_dumper {
                 pub const flAlpha: usize = 0x10; // float32
             }
             // Parent: None
-            // Field count: 12
+            // Fields count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -500,7 +500,7 @@ pub mod cs2_dumper {
                 pub const nNodeListCount: usize = 0x32; // uint16
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -512,7 +512,7 @@ pub mod cs2_dumper {
                 pub const nFlags: usize = 0x26; // uint16
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -522,7 +522,7 @@ pub mod cs2_dumper {
                 pub const flRelaxationFactor: usize = 0x8; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -532,7 +532,7 @@ pub mod cs2_dumper {
                 pub const nVirtElem: usize = 0xC; // uint16[2]
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -542,7 +542,7 @@ pub mod cs2_dumper {
                 pub const nTargetNode: usize = 0xE; // uint16
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -551,7 +551,7 @@ pub mod cs2_dumper {
                 pub const m_flOffset: usize = 0xC; // float32
             }
             // Parent: None
-            // Field count: 35
+            // Fields count: 35
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -593,7 +593,7 @@ pub mod cs2_dumper {
                 pub const m_nCollisionMask: usize = 0x98; // uint16
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -602,7 +602,7 @@ pub mod cs2_dumper {
                 pub const m_Nodes: usize = 0x18; // CUtlVector<uint32>
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -613,7 +613,7 @@ pub mod cs2_dumper {
                 pub const nListEnd: usize = 0xA; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -624,7 +624,7 @@ pub mod cs2_dumper {
                 pub const m_nTriangleOffset: usize = 0x1C; // uint32
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -636,7 +636,7 @@ pub mod cs2_dumper {
                 pub const nBeginDynamic: usize = 0x30; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -647,7 +647,7 @@ pub mod cs2_dumper {
                 pub const f4Weights: usize = 0xF0; // fltx4[4]
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -659,7 +659,7 @@ pub mod cs2_dumper {
                 pub const flNodeWeight0: usize = 0x40; // fltx4
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -673,7 +673,7 @@ pub mod cs2_dumper {
                 pub const qAdjust: usize = 0x30; // FourQuaternions
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -683,7 +683,7 @@ pub mod cs2_dumper {
                 pub const vShape: usize = 0xC; // Vector4D[4]
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -691,7 +691,7 @@ pub mod cs2_dumper {
                 pub const m_nIndex: usize = 0x0; // int32[3]
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -700,7 +700,7 @@ pub mod cs2_dumper {
                 pub const nWeight: usize = 0x2; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -711,7 +711,7 @@ pub mod cs2_dumper {
                 pub const m_Params: usize = 0x10; // KeyValues3
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -723,7 +723,7 @@ pub mod cs2_dumper {
                 pub const flNodeWeight0: usize = 0x10; // float32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -732,7 +732,7 @@ pub mod cs2_dumper {
                 pub const y: usize = 0x10; // fltx4
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -743,7 +743,7 @@ pub mod cs2_dumper {
                 pub const nReserved: usize = 0x16; // uint16
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -756,7 +756,7 @@ pub mod cs2_dumper {
                 pub const m_pHull: usize = 0x28; // RnHull_t*
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -767,7 +767,7 @@ pub mod cs2_dumper {
                 pub const m_nCollisionPlaneIndex: usize = 0x6; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -778,7 +778,7 @@ pub mod cs2_dumper {
                 pub const flStrength: usize = 0x14; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -789,7 +789,7 @@ pub mod cs2_dumper {
                 pub const nNode: usize = 0x14; // uint16[3]
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -802,7 +802,7 @@ pub mod cs2_dumper {
                 pub const nFlags: usize = 0x32; // uint16
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -817,7 +817,7 @@ pub mod cs2_dumper {
                 pub const m_nFlags: usize = 0x88; // uint32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -827,11 +827,11 @@ pub mod cs2_dumper {
                 pub const nCtrlChild: usize = 0xE; // uint16
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             pub mod IPhysicsPlayerController {
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -845,7 +845,7 @@ pub mod cs2_dumper {
                 pub const qAdjust: usize = 0x10; // QuaternionStorage
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -858,7 +858,7 @@ pub mod cs2_dumper {
                 pub const m_Weights: usize = 0x18; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -866,7 +866,7 @@ pub mod cs2_dumper {
                 pub const m_Array: usize = 0x0; // CUtlVector<FeVertexMapBuild_t*>
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -878,7 +878,7 @@ pub mod cs2_dumper {
                 pub const v2: usize = 0x14; // Vector2D
             }
             // Parent: None
-            // Field count: 14
+            // Fields count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -899,7 +899,7 @@ pub mod cs2_dumper {
                 pub const m_pRegionSVM: usize = 0xF0; // CRegionSVM*
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -910,7 +910,7 @@ pub mod cs2_dumper {
                 pub const m_flYZ: usize = 0x14; // float32
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -918,7 +918,7 @@ pub mod cs2_dumper {
                 pub const m_nEdge: usize = 0x0; // uint8
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -926,7 +926,7 @@ pub mod cs2_dumper {
                 pub const m_flSupport: usize = 0x0; // float32[26]
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -934,7 +934,7 @@ pub mod cs2_dumper {
                 pub const m_nEdge: usize = 0x0; // uint8
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -943,7 +943,7 @@ pub mod cs2_dumper {
                 pub const nCtrlChild: usize = 0x2; // uint16
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -951,7 +951,7 @@ pub mod cs2_dumper {
                 pub const nNode: usize = 0x0; // uint16[2]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -962,7 +962,7 @@ pub mod cs2_dumper {
                 pub const flSwingRelax: usize = 0x8; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -973,7 +973,7 @@ pub mod cs2_dumper {
                 pub const nNodeY1: usize = 0x6; // uint16
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -985,7 +985,7 @@ pub mod cs2_dumper {
                 pub const nNode: usize = 0x1C; // uint16[6]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -996,7 +996,7 @@ pub mod cs2_dumper {
                 pub const m_flYZ: usize = 0x50; // fltx4
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             pub mod constraint_breakableparams_t {
                 pub const strength: usize = 0x0; // float32
                 pub const forceLimit: usize = 0x4; // float32
@@ -1005,7 +1005,7 @@ pub mod cs2_dumper {
                 pub const isActive: usize = 0x14; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1017,7 +1017,7 @@ pub mod cs2_dumper {
                 pub const nFlags: usize = 0x16; // uint16
             }
             // Parent: FeTaperedCapsuleRigid_t
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1026,7 +1026,7 @@ pub mod cs2_dumper {
                 pub const m_nVertexMapHash: usize = 0x34; // uint32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1035,7 +1035,7 @@ pub mod cs2_dumper {
                 pub const flAlpha: usize = 0x4; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1045,7 +1045,7 @@ pub mod cs2_dumper {
                 pub const m_UserFriendlyName: usize = 0x8; // CUtlString
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1053,7 +1053,7 @@ pub mod cs2_dumper {
                 pub const nChild: usize = 0x0; // uint16[2]
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1065,7 +1065,7 @@ pub mod cs2_dumper {
                 pub const flRelaxationFactor: usize = 0x10; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1075,7 +1075,7 @@ pub mod cs2_dumper {
                 pub const nDummy: usize = 0x6; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1086,7 +1086,7 @@ pub mod cs2_dumper {
                 pub const m_nFace: usize = 0x3; // uint8
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1098,12 +1098,12 @@ pub mod cs2_dumper {
                 pub const v2: usize = 0x60; // FourVectors2D
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             pub mod VertexPositionColor_t {
                 pub const m_vPosition: usize = 0x0; // Vector
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults

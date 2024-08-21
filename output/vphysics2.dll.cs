@@ -1,20 +1,20 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
-    // Class count: 88
-    // Enum count: 2
+    // Classes count: 88
+    // Enums count: 2
     public static class Vphysics2Dll {
         // Alignment: 4
-        // Member count: 3
+        // Members count: 3
         public enum JointMotion_t : uint {
             JOINT_MOTION_FREE = 0x0,
             JOINT_MOTION_LOCKED = 0x1,
             JOINT_MOTION_COUNT = 0x2
         }
         // Alignment: 4
-        // Member count: 4
+        // Members count: 4
         public enum JointAxis_t : uint {
             JOINT_AXIS_X = 0x0,
             JOINT_AXIS_Y = 0x1,
@@ -22,7 +22,7 @@ namespace CS2Dumper.Schemas {
             JOINT_AXIS_COUNT = 0x3
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -31,7 +31,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLength = 0x4; // float32
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -39,7 +39,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMassInv = 0x0; // float32
         }
         // Parent: RnShapeDesc_t
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -47,7 +47,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Hull = 0x10; // RnHull_t
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -57,7 +57,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nParticle = 0x1C; // uint16[2]
         }
         // Parent: RnShapeDesc_t
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -65,7 +65,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Capsule = 0x10; // RnCapsule_t
         }
         // Parent: RnShapeDesc_t
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -73,7 +73,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Sphere = 0x10; // SphereBase_t<float32>
         }
         // Parent: RnShapeDesc_t
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -81,7 +81,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Mesh = 0x10; // RnMesh_t
         }
         // Parent: None
-        // Field count: 101
+        // Fields count: 101
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -189,7 +189,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nQuadVelocitySmoothIterations = 0x61A; // uint16
         }
         // Parent: RnBodyDesc_t
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -197,7 +197,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nOldPointer = 0xD0; // uint64
         }
         // Parent: FeBoxRigid_t
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -206,7 +206,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nVertexMapHash = 0x44; // uint32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -216,7 +216,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_jiggleBone = 0x8; // CFeJiggleBone
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -226,7 +226,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNode = 0x8; // uint16[6]
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -237,7 +237,7 @@ namespace CS2Dumper.Schemas {
             public const nint flRadius = 0x8; // float32[2]
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         public static class constraint_axislimit_t {
             public const nint flMinRotation = 0x0; // float32
             public const nint flMaxRotation = 0x4; // float32
@@ -245,7 +245,7 @@ namespace CS2Dumper.Schemas {
             public const nint flMotorMaxTorque = 0xC; // float32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -255,7 +255,7 @@ namespace CS2Dumper.Schemas {
             public const nint f4RelaxationFactor = 0x20; // fltx4
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -267,7 +267,7 @@ namespace CS2Dumper.Schemas {
             public const nint f4RelaxationFactor = 0x40; // fltx4
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         public static class constraint_hingeparams_t {
             public const nint worldPosition = 0x0; // Vector
             public const nint worldAxisDirection = 0xC; // Vector
@@ -275,7 +275,7 @@ namespace CS2Dumper.Schemas {
             public const nint constraint = 0x28; // constraint_breakableparams_t
         }
         // Parent: FeSphereRigid_t
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -284,7 +284,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nVertexMapHash = 0x24; // uint32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -294,7 +294,7 @@ namespace CS2Dumper.Schemas {
             public const nint flRelaxationFactor = 0x20; // fltx4
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -302,7 +302,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nIndex = 0x0; // int32[3]
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -311,7 +311,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flWeight = 0x8; // float32
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -322,7 +322,7 @@ namespace CS2Dumper.Schemas {
             public const nint flGravity = 0xC; // float32
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -331,7 +331,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRadius = 0x18; // float32
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -342,7 +342,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_jiggleBone = 0x34; // CFeJiggleBone
         }
         // Parent: None
-        // Field count: 35
+        // Fields count: 35
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -384,7 +384,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bHasShadowController = 0xCA; // bool
         }
         // Parent: None
-        // Field count: 12
+        // Fields count: 12
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -403,7 +403,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nNode = 0x40; // uint16[4]
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -413,7 +413,7 @@ namespace CS2Dumper.Schemas {
             public const nint flWeight = 0x4; // float32
         }
         // Parent: None
-        // Field count: 10
+        // Fields count: 10
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -430,13 +430,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDebugFlags = 0xA0; // uint32
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         public static class VertexPositionNormal_t {
             public const nint m_vPosition = 0x0; // Vector
             public const nint m_vNormal = 0xC; // Vector
         }
         // Parent: None
-        // Field count: 8
+        // Fields count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -451,7 +451,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nTargetIndex = 0xE; // uint16
         }
         // Parent: None
-        // Field count: 7
+        // Fields count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -465,7 +465,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_GoalDamping = 0x70; // CUtlVector<float32>
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -476,7 +476,7 @@ namespace CS2Dumper.Schemas {
             public const nint flAlpha = 0x10; // float32
         }
         // Parent: None
-        // Field count: 12
+        // Fields count: 12
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -495,7 +495,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNodeListCount = 0x32; // uint16
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -507,7 +507,7 @@ namespace CS2Dumper.Schemas {
             public const nint nFlags = 0x26; // uint16
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -517,7 +517,7 @@ namespace CS2Dumper.Schemas {
             public const nint flRelaxationFactor = 0x8; // float32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -527,7 +527,7 @@ namespace CS2Dumper.Schemas {
             public const nint nVirtElem = 0xC; // uint16[2]
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -537,7 +537,7 @@ namespace CS2Dumper.Schemas {
             public const nint nTargetNode = 0xE; // uint16
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -546,7 +546,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flOffset = 0xC; // float32
         }
         // Parent: None
-        // Field count: 35
+        // Fields count: 35
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -588,7 +588,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCollisionMask = 0x98; // uint16
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -597,7 +597,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Nodes = 0x18; // CUtlVector<uint32>
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -608,7 +608,7 @@ namespace CS2Dumper.Schemas {
             public const nint nListEnd = 0xA; // uint16
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -619,7 +619,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nTriangleOffset = 0x1C; // uint32
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -631,7 +631,7 @@ namespace CS2Dumper.Schemas {
             public const nint nBeginDynamic = 0x30; // uint16
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -642,7 +642,7 @@ namespace CS2Dumper.Schemas {
             public const nint f4Weights = 0xF0; // fltx4[4]
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -654,7 +654,7 @@ namespace CS2Dumper.Schemas {
             public const nint flNodeWeight0 = 0x40; // fltx4
         }
         // Parent: None
-        // Field count: 7
+        // Fields count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -668,7 +668,7 @@ namespace CS2Dumper.Schemas {
             public const nint qAdjust = 0x30; // FourQuaternions
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -678,7 +678,7 @@ namespace CS2Dumper.Schemas {
             public const nint vShape = 0xC; // Vector4D[4]
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -686,7 +686,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nIndex = 0x0; // int32[3]
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -695,7 +695,7 @@ namespace CS2Dumper.Schemas {
             public const nint nWeight = 0x2; // uint16
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -706,7 +706,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Params = 0x10; // KeyValues3
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -718,7 +718,7 @@ namespace CS2Dumper.Schemas {
             public const nint flNodeWeight0 = 0x10; // float32
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -727,7 +727,7 @@ namespace CS2Dumper.Schemas {
             public const nint y = 0x10; // fltx4
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -738,7 +738,7 @@ namespace CS2Dumper.Schemas {
             public const nint nReserved = 0x16; // uint16
         }
         // Parent: None
-        // Field count: 6
+        // Fields count: 6
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -751,7 +751,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_pHull = 0x28; // RnHull_t*
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -762,7 +762,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCollisionPlaneIndex = 0x6; // uint16
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -773,7 +773,7 @@ namespace CS2Dumper.Schemas {
             public const nint flStrength = 0x14; // float32
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -784,7 +784,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNode = 0x14; // uint16[3]
         }
         // Parent: None
-        // Field count: 6
+        // Fields count: 6
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -797,7 +797,7 @@ namespace CS2Dumper.Schemas {
             public const nint nFlags = 0x32; // uint16
         }
         // Parent: None
-        // Field count: 8
+        // Fields count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -812,7 +812,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFlags = 0x88; // uint32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -822,11 +822,11 @@ namespace CS2Dumper.Schemas {
             public const nint nCtrlChild = 0xE; // uint16
         }
         // Parent: None
-        // Field count: 0
+        // Fields count: 0
         public static class IPhysicsPlayerController {
         }
         // Parent: None
-        // Field count: 7
+        // Fields count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -840,7 +840,7 @@ namespace CS2Dumper.Schemas {
             public const nint qAdjust = 0x10; // QuaternionStorage
         }
         // Parent: None
-        // Field count: 6
+        // Fields count: 6
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -853,7 +853,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Weights = 0x18; // CUtlVector<float32>
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -861,7 +861,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Array = 0x0; // CUtlVector<FeVertexMapBuild_t*>
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -873,7 +873,7 @@ namespace CS2Dumper.Schemas {
             public const nint v2 = 0x14; // Vector2D
         }
         // Parent: None
-        // Field count: 14
+        // Fields count: 14
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -894,7 +894,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_pRegionSVM = 0xF0; // CRegionSVM*
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -905,7 +905,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flYZ = 0x14; // float32
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -913,7 +913,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nEdge = 0x0; // uint8
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -921,7 +921,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flSupport = 0x0; // float32[26]
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -929,7 +929,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nEdge = 0x0; // uint8
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -938,7 +938,7 @@ namespace CS2Dumper.Schemas {
             public const nint nCtrlChild = 0x2; // uint16
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -946,7 +946,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNode = 0x0; // uint16[2]
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -957,7 +957,7 @@ namespace CS2Dumper.Schemas {
             public const nint flSwingRelax = 0x8; // float32
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -968,7 +968,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNodeY1 = 0x6; // uint16
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -980,7 +980,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNode = 0x1C; // uint16[6]
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -991,7 +991,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flYZ = 0x50; // fltx4
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         public static class constraint_breakableparams_t {
             public const nint strength = 0x0; // float32
             public const nint forceLimit = 0x4; // float32
@@ -1000,7 +1000,7 @@ namespace CS2Dumper.Schemas {
             public const nint isActive = 0x14; // bool
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1012,7 +1012,7 @@ namespace CS2Dumper.Schemas {
             public const nint nFlags = 0x16; // uint16
         }
         // Parent: FeTaperedCapsuleRigid_t
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1021,7 +1021,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nVertexMapHash = 0x34; // uint32
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1030,7 +1030,7 @@ namespace CS2Dumper.Schemas {
             public const nint flAlpha = 0x4; // float32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1040,7 +1040,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_UserFriendlyName = 0x8; // CUtlString
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1048,7 +1048,7 @@ namespace CS2Dumper.Schemas {
             public const nint nChild = 0x0; // uint16[2]
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1060,7 +1060,7 @@ namespace CS2Dumper.Schemas {
             public const nint flRelaxationFactor = 0x10; // float32
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1070,7 +1070,7 @@ namespace CS2Dumper.Schemas {
             public const nint nDummy = 0x6; // uint16
         }
         // Parent: None
-        // Field count: 4
+        // Fields count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1081,7 +1081,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFace = 0x3; // uint8
         }
         // Parent: None
-        // Field count: 5
+        // Fields count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -1093,12 +1093,12 @@ namespace CS2Dumper.Schemas {
             public const nint v2 = 0x60; // FourVectors2D
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         public static class VertexPositionColor_t {
             public const nint m_vPosition = 0x0; // Vector
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults

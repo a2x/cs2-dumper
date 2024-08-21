@@ -1,16 +1,16 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: scenesystem.dll
-        // Class count: 9
-        // Enum count: 1
+        // Classes count: 9
+        // Enums count: 1
         pub mod scenesystem_dll {
             // Alignment: 1
-            // Member count: 4
+            // Members count: 4
             #[repr(u8)]
             pub enum DisableShadows_t {
                 kDisableShadows_None = 0x0,
@@ -19,7 +19,7 @@ pub mod cs2_dumper {
                 kDisableShadows_Realtime = 0x3
             }
             // Parent: None
-            // Field count: 10
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -36,7 +36,7 @@ pub mod cs2_dumper {
                 pub const m_nFormat: usize = 0x2C; // int32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -45,7 +45,7 @@ pub mod cs2_dumper {
                 pub const m_nFrameCount: usize = 0x8; // uint64
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -54,14 +54,14 @@ pub mod cs2_dumper {
                 pub const m_ViewName: usize = 0x8; // CUtlString
             }
             // Parent: CSSDSMsg_LayerBase
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSSDSMsg_PostLayer {
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -74,14 +74,14 @@ pub mod cs2_dumper {
                 pub const m_displayText: usize = 0x30; // CUtlString
             }
             // Parent: CSSDSMsg_LayerBase
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSSDSMsg_PreLayer {
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -91,7 +91,7 @@ pub mod cs2_dumper {
                 pub const m_Targets: usize = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -100,7 +100,7 @@ pub mod cs2_dumper {
                 pub const m_ViewName: usize = 0x10; // CUtlString
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults

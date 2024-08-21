@@ -1,16 +1,16 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: schemasystem.dll
-        // Class count: 7
-        // Enum count: 2
+        // Classes count: 7
+        // Enums count: 2
         pub mod schemasystem_dll {
             // Alignment: 1
-            // Member count: 81
+            // Members count: 81
             #[repr(u8)]
             pub enum fieldtype_t {
                 FIELD_VOID = 0x0,
@@ -96,7 +96,7 @@ pub mod cs2_dumper {
                 FIELD_TYPECOUNT = 0x50
             }
             // Alignment: 4
-            // Member count: 3
+            // Members count: 3
             #[repr(u32)]
             pub enum ThreeState_t {
                 TRS_FALSE = 0x0,
@@ -104,14 +104,14 @@ pub mod cs2_dumper {
                 TRS_NONE = 0x2
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCResourceManifestInternal {
             }
             // Parent: None
-            // Field count: 22
+            // Fields count: 22
             pub mod CSchemaSystemInternalRegistration {
                 pub const m_Vector2D: usize = 0x0; // Vector2D
                 pub const m_Vector: usize = 0x8; // Vector
@@ -137,7 +137,7 @@ pub mod cs2_dumper {
                 pub const m_KV3: usize = 0x170; // KeyValues3
             }
             // Parent: CExampleSchemaVData_PolymorphicBase
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -145,7 +145,7 @@ pub mod cs2_dumper {
                 pub const m_nDerivedA: usize = 0x10; // int32
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -153,7 +153,7 @@ pub mod cs2_dumper {
                 pub const m_nBase: usize = 0x8; // int32
             }
             // Parent: CExampleSchemaVData_PolymorphicBase
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -161,12 +161,12 @@ pub mod cs2_dumper {
                 pub const m_nDerivedB: usize = 0x10; // int32
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             pub mod ResourceId_t {
                 pub const m_Value: usize = 0x0; // uint64
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults

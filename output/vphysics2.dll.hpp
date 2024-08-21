@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #pragma once
 
@@ -8,18 +8,18 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: vphysics2.dll
-        // Class count: 88
-        // Enum count: 2
+        // Classes count: 88
+        // Enums count: 2
         namespace vphysics2_dll {
             // Alignment: 4
-            // Member count: 3
+            // Members count: 3
             enum class JointMotion_t : uint32_t {
                 JOINT_MOTION_FREE = 0x0,
                 JOINT_MOTION_LOCKED = 0x1,
                 JOINT_MOTION_COUNT = 0x2
             };
             // Alignment: 4
-            // Member count: 4
+            // Members count: 4
             enum class JointAxis_t : uint32_t {
                 JOINT_AXIS_X = 0x0,
                 JOINT_AXIS_Y = 0x1,
@@ -27,7 +27,7 @@ namespace cs2_dumper {
                 JOINT_AXIS_COUNT = 0x3
             };
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -36,7 +36,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flLength = 0x4; // float32
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -44,7 +44,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMassInv = 0x0; // float32
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -52,7 +52,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Hull = 0x10; // RnHull_t
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -62,7 +62,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nParticle = 0x1C; // uint16[2]
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -70,7 +70,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Capsule = 0x10; // RnCapsule_t
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -78,7 +78,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Sphere = 0x10; // SphereBase_t<float32>
             }
             // Parent: RnShapeDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -86,7 +86,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Mesh = 0x10; // RnMesh_t
             }
             // Parent: None
-            // Field count: 101
+            // Fields count: 101
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -194,7 +194,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nQuadVelocitySmoothIterations = 0x61A; // uint16
             }
             // Parent: RnBodyDesc_t
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -202,7 +202,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nOldPointer = 0xD0; // uint64
             }
             // Parent: FeBoxRigid_t
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -211,7 +211,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nVertexMapHash = 0x44; // uint32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -221,7 +221,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_jiggleBone = 0x8; // CFeJiggleBone
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -231,7 +231,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNode = 0x8; // uint16[6]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -242,7 +242,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flRadius = 0x8; // float32[2]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             namespace constraint_axislimit_t {
                 constexpr std::ptrdiff_t flMinRotation = 0x0; // float32
                 constexpr std::ptrdiff_t flMaxRotation = 0x4; // float32
@@ -250,7 +250,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flMotorMaxTorque = 0xC; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -260,7 +260,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t f4RelaxationFactor = 0x20; // fltx4
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -272,7 +272,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t f4RelaxationFactor = 0x40; // fltx4
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             namespace constraint_hingeparams_t {
                 constexpr std::ptrdiff_t worldPosition = 0x0; // Vector
                 constexpr std::ptrdiff_t worldAxisDirection = 0xC; // Vector
@@ -280,7 +280,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t constraint = 0x28; // constraint_breakableparams_t
             }
             // Parent: FeSphereRigid_t
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -289,7 +289,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nVertexMapHash = 0x24; // uint32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -299,7 +299,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flRelaxationFactor = 0x20; // fltx4
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -307,7 +307,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nIndex = 0x0; // int32[3]
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -316,7 +316,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flWeight = 0x8; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -327,7 +327,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flGravity = 0xC; // float32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -336,7 +336,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRadius = 0x18; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -347,7 +347,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_jiggleBone = 0x34; // CFeJiggleBone
             }
             // Parent: None
-            // Field count: 35
+            // Fields count: 35
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -389,7 +389,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasShadowController = 0xCA; // bool
             }
             // Parent: None
-            // Field count: 12
+            // Fields count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -408,7 +408,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nNode = 0x40; // uint16[4]
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -418,7 +418,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flWeight = 0x4; // float32
             }
             // Parent: None
-            // Field count: 10
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -435,13 +435,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nDebugFlags = 0xA0; // uint32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             namespace VertexPositionNormal_t {
                 constexpr std::ptrdiff_t m_vPosition = 0x0; // Vector
                 constexpr std::ptrdiff_t m_vNormal = 0xC; // Vector
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -456,7 +456,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTargetIndex = 0xE; // uint16
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -470,7 +470,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_GoalDamping = 0x70; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -481,7 +481,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flAlpha = 0x10; // float32
             }
             // Parent: None
-            // Field count: 12
+            // Fields count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -500,7 +500,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNodeListCount = 0x32; // uint16
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -512,7 +512,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nFlags = 0x26; // uint16
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -522,7 +522,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flRelaxationFactor = 0x8; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -532,7 +532,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nVirtElem = 0xC; // uint16[2]
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -542,7 +542,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nTargetNode = 0xE; // uint16
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -551,7 +551,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flOffset = 0xC; // float32
             }
             // Parent: None
-            // Field count: 35
+            // Fields count: 35
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -593,7 +593,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCollisionMask = 0x98; // uint16
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -602,7 +602,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector<uint32>
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -613,7 +613,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nListEnd = 0xA; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -624,7 +624,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTriangleOffset = 0x1C; // uint32
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -636,7 +636,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nBeginDynamic = 0x30; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -647,7 +647,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t f4Weights = 0xF0; // fltx4[4]
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -659,7 +659,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flNodeWeight0 = 0x40; // fltx4
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -673,7 +673,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t qAdjust = 0x30; // FourQuaternions
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -683,7 +683,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t vShape = 0xC; // Vector4D[4]
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -691,7 +691,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nIndex = 0x0; // int32[3]
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -700,7 +700,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nWeight = 0x2; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -711,7 +711,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Params = 0x10; // KeyValues3
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -723,7 +723,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flNodeWeight0 = 0x10; // float32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -732,7 +732,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t y = 0x10; // fltx4
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -743,7 +743,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nReserved = 0x16; // uint16
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -756,7 +756,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pHull = 0x28; // RnHull_t*
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -767,7 +767,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCollisionPlaneIndex = 0x6; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -778,7 +778,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flStrength = 0x14; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -789,7 +789,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNode = 0x14; // uint16[3]
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -802,7 +802,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nFlags = 0x32; // uint16
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -817,7 +817,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFlags = 0x88; // uint32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -827,11 +827,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nCtrlChild = 0xE; // uint16
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             namespace IPhysicsPlayerController {
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -845,7 +845,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t qAdjust = 0x10; // QuaternionStorage
             }
             // Parent: None
-            // Field count: 6
+            // Fields count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -858,7 +858,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Weights = 0x18; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -866,7 +866,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Array = 0x0; // CUtlVector<FeVertexMapBuild_t*>
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -878,7 +878,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t v2 = 0x14; // Vector2D
             }
             // Parent: None
-            // Field count: 14
+            // Fields count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -899,7 +899,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // CRegionSVM*
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -910,7 +910,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flYZ = 0x14; // float32
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -918,7 +918,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nEdge = 0x0; // uint8
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -926,7 +926,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flSupport = 0x0; // float32[26]
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -934,7 +934,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nEdge = 0x0; // uint8
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -943,7 +943,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nCtrlChild = 0x2; // uint16
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -951,7 +951,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNode = 0x0; // uint16[2]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -962,7 +962,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flSwingRelax = 0x8; // float32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -973,7 +973,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNodeY1 = 0x6; // uint16
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -985,7 +985,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNode = 0x1C; // uint16[6]
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -996,7 +996,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flYZ = 0x50; // fltx4
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             namespace constraint_breakableparams_t {
                 constexpr std::ptrdiff_t strength = 0x0; // float32
                 constexpr std::ptrdiff_t forceLimit = 0x4; // float32
@@ -1005,7 +1005,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t isActive = 0x14; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1017,7 +1017,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nFlags = 0x16; // uint16
             }
             // Parent: FeTaperedCapsuleRigid_t
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1026,7 +1026,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nVertexMapHash = 0x34; // uint32
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1035,7 +1035,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flAlpha = 0x4; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1045,7 +1045,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_UserFriendlyName = 0x8; // CUtlString
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1053,7 +1053,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nChild = 0x0; // uint16[2]
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1065,7 +1065,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flRelaxationFactor = 0x10; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1075,7 +1075,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nDummy = 0x6; // uint16
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1086,7 +1086,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFace = 0x3; // uint8
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1098,12 +1098,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t v2 = 0x60; // FourVectors2D
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             namespace VertexPositionColor_t {
                 constexpr std::ptrdiff_t m_vPosition = 0x0; // Vector
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults

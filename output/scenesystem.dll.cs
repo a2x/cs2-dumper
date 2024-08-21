@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
-    // Class count: 9
-    // Enum count: 1
+    // Classes count: 9
+    // Enums count: 1
     public static class ScenesystemDll {
         // Alignment: 1
-        // Member count: 4
+        // Members count: 4
         public enum DisableShadows_t : byte {
             kDisableShadows_None = 0x0,
             kDisableShadows_All = 0x1,
@@ -15,7 +15,7 @@ namespace CS2Dumper.Schemas {
             kDisableShadows_Realtime = 0x3
         }
         // Parent: None
-        // Field count: 10
+        // Fields count: 10
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -32,7 +32,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFormat = 0x2C; // int32
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -41,7 +41,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFrameCount = 0x8; // uint64
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -50,14 +50,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_ViewName = 0x8; // CUtlString
         }
         // Parent: CSSDSMsg_LayerBase
-        // Field count: 0
+        // Fields count: 0
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSSDSMsg_PostLayer {
         }
         // Parent: None
-        // Field count: 6
+        // Fields count: 6
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -70,14 +70,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_displayText = 0x30; // CUtlString
         }
         // Parent: CSSDSMsg_LayerBase
-        // Field count: 0
+        // Fields count: 0
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSSDSMsg_PreLayer {
         }
         // Parent: None
-        // Field count: 3
+        // Fields count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -87,7 +87,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Targets = 0x18; // CUtlVector<CSSDSMsg_ViewTarget>
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -96,7 +96,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_ViewName = 0x10; // CUtlString
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults

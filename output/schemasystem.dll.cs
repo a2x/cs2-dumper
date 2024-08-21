@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: schemasystem.dll
-    // Class count: 7
-    // Enum count: 2
+    // Classes count: 7
+    // Enums count: 2
     public static class SchemasystemDll {
         // Alignment: 1
-        // Member count: 81
+        // Members count: 81
         public enum fieldtype_t : byte {
             FIELD_VOID = 0x0,
             FIELD_FLOAT32 = 0x1,
@@ -92,21 +92,21 @@ namespace CS2Dumper.Schemas {
             FIELD_TYPECOUNT = 0x50
         }
         // Alignment: 4
-        // Member count: 3
+        // Members count: 3
         public enum ThreeState_t : uint {
             TRS_FALSE = 0x0,
             TRS_TRUE = 0x1,
             TRS_NONE = 0x2
         }
         // Parent: None
-        // Field count: 0
+        // Fields count: 0
         //
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCResourceManifestInternal {
         }
         // Parent: None
-        // Field count: 22
+        // Fields count: 22
         public static class CSchemaSystemInternalRegistration {
             public const nint m_Vector2D = 0x0; // Vector2D
             public const nint m_Vector = 0x8; // Vector
@@ -132,7 +132,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_KV3 = 0x170; // KeyValues3
         }
         // Parent: CExampleSchemaVData_PolymorphicBase
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -140,7 +140,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDerivedA = 0x10; // int32
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -148,7 +148,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nBase = 0x8; // int32
         }
         // Parent: CExampleSchemaVData_PolymorphicBase
-        // Field count: 1
+        // Fields count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -156,12 +156,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDerivedB = 0x10; // int32
         }
         // Parent: None
-        // Field count: 1
+        // Fields count: 1
         public static class ResourceId_t {
             public const nint m_Value = 0x0; // uint64
         }
         // Parent: None
-        // Field count: 2
+        // Fields count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults

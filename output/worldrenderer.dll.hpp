@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-14 22:21:27.556884700 UTC
 
 #pragma once
 
@@ -8,11 +8,11 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: worldrenderer.dll
-        // Class count: 23
-        // Enum count: 1
+        // Classes count: 23
+        // Enums count: 1
         namespace worldrenderer_dll {
             // Alignment: 4
-            // Member count: 13
+            // Members count: 13
             enum class ObjectTypeFlags_t : uint32_t {
                 OBJECT_TYPE_NONE = 0x0,
                 OBJECT_TYPE_MODEL = 0x8,
@@ -29,7 +29,7 @@ namespace cs2_dumper {
                 OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
             };
             // Parent: None
-            // Field count: 14
+            // Fields count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -50,7 +50,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_renderable = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -60,7 +60,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fSwitchDistances = 0x10; // CUtlVector<float32>
             }
             // Parent: BaseSceneObjectOverride_t
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -71,7 +71,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // CRenderBufferBinding
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -81,7 +81,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_BoundsWs = 0x8; // AABB_t
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -96,7 +96,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_renderableModel = 0x70; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -110,11 +110,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_worldNodePrefix = 0x48; // CUtlString
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             namespace VMapResourceData_t {
             }
             // Parent: None
-            // Field count: 8
+            // Fields count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -129,7 +129,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_renderableModel = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
-            // Field count: 5
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -141,7 +141,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCompileFingerprint = 0x40; // uint64
             }
             // Parent: None
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -151,7 +151,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 13
+            // Fields count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -171,7 +171,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nodeLightingInfo = 0x110; // BakedLightingInfo_t
             }
             // Parent: None
-            // Field count: 1
+            // Fields count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -179,7 +179,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSceneObjectIndex = 0x0; // uint32
             }
             // Parent: None
-            // Field count: 7
+            // Fields count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -193,7 +193,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTimesToFire = 0x2C; // int32
             }
             // Parent: None
-            // Field count: 9
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -209,7 +209,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_lightMaps = 0x18; // CUtlVector<CStrongHandle<InfoForResourceTypeCTextureBase>>
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -218,14 +218,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nElementCount = 0x4; // uint32
             }
             // Parent: None
-            // Field count: 0
+            // Fields count: 0
             //
             // Metadata:
             // MResourceTypeForInfoType
             namespace InfoForResourceTypeVMapResourceData_t {
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -236,7 +236,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pData = 0x20; // CUtlVector<uint8>
             }
             // Parent: None
-            // Field count: 9
+            // Fields count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -252,7 +252,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x14; // int32
             }
             // Parent: None
-            // Field count: 4
+            // Fields count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -263,7 +263,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_entityLumps = 0x90; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
             }
             // Parent: None
-            // Field count: 10
+            // Fields count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -280,7 +280,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSequenceOverride = 0x6C; // int32
             }
             // Parent: BaseSceneObjectOverride_t
-            // Field count: 3
+            // Fields count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -290,7 +290,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pMaterial = 0x10; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
-            // Field count: 2
+            // Fields count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -299,7 +299,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_keyValuesData = 0x20; // CUtlBinaryBlock
             }
             // Parent: None
-            // Field count: 13
+            // Fields count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
