@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-21 00:00:00.519767300 UTC
+// 2024-08-22 00:13:39.639692900 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,14 +12,14 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x17CB650;
-            pub const EmptyWorldService001_Client: usize = 0x1788D80;
-            pub const GameClientExports001: usize = 0x17C8308;
-            pub const LegacyGameUI001: usize = 0x17E7E10;
-            pub const Source2Client002: usize = 0x19C3E50;
-            pub const Source2ClientConfig001: usize = 0x19647F0;
-            pub const Source2ClientPrediction001: usize = 0x17D36B0;
-            pub const Source2ClientUI001: usize = 0x17E6890;
+            pub const ClientToolsInfo_001: usize = 0x17CB630;
+            pub const EmptyWorldService001_Client: usize = 0x1788D70;
+            pub const GameClientExports001: usize = 0x17C82E8;
+            pub const LegacyGameUI001: usize = 0x17E7DF0;
+            pub const Source2Client002: usize = 0x19C3E30;
+            pub const Source2ClientConfig001: usize = 0x19647D0;
+            pub const Source2ClientPrediction001: usize = 0x17D3690;
+            pub const Source2ClientUI001: usize = 0x17E6870;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -92,11 +92,11 @@ pub mod cs2_dumper {
         }
         // Module: materialsystem2.dll
         pub mod materialsystem2_dll {
-            pub const FontManager_001: usize = 0x10D320;
-            pub const MaterialUtils_001: usize = 0x1084F0;
-            pub const PostProcessingSystem_001: usize = 0x108400;
-            pub const TextLayout_001: usize = 0x108480;
-            pub const VMaterialSystem2_001: usize = 0x10C930;
+            pub const FontManager_001: usize = 0x10E320;
+            pub const MaterialUtils_001: usize = 0x1094F0;
+            pub const PostProcessingSystem_001: usize = 0x109400;
+            pub const TextLayout_001: usize = 0x109480;
+            pub const VMaterialSystem2_001: usize = 0x10D930;
         }
         // Module: meshsystem.dll
         pub mod meshsystem_dll {
@@ -160,15 +160,15 @@ pub mod cs2_dumper {
         }
         // Module: server.dll
         pub mod server_dll {
-            pub const EmptyWorldService001_Server: usize = 0x13176D0;
-            pub const EntitySubclassUtilsV001: usize = 0x12CA200;
+            pub const EmptyWorldService001_Server: usize = 0x13176C0;
+            pub const EntitySubclassUtilsV001: usize = 0x12CA1F0;
             pub const NavGameTest001: usize = 0x13B5768;
             pub const ServerToolsInfo_001: usize = 0x136AEE8;
             pub const Source2GameClients001: usize = 0x13662C0;
-            pub const Source2GameDirector001: usize = 0x1494B70;
+            pub const Source2GameDirector001: usize = 0x1494B30;
             pub const Source2GameEntities001: usize = 0x136AE10;
             pub const Source2Server001: usize = 0x136AC80;
-            pub const Source2ServerConfig001: usize = 0x154F988;
+            pub const Source2ServerConfig001: usize = 0x154F958;
             pub const customnavsystem001: usize = 0x12AFA78;
         }
         // Module: soundsystem.dll

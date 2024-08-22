@@ -4,14 +4,14 @@
     "AnimationSystem_001": 5799664
   },
   "client.dll": {
-    "ClientToolsInfo_001": 24950352,
-    "EmptyWorldService001_Client": 24677760,
-    "GameClientExports001": 24937224,
-    "LegacyGameUI001": 25067024,
-    "Source2Client002": 27016784,
-    "Source2ClientConfig001": 26626032,
-    "Source2ClientPrediction001": 24983216,
-    "Source2ClientUI001": 25061520
+    "ClientToolsInfo_001": 24950320,
+    "EmptyWorldService001_Client": 24677744,
+    "GameClientExports001": 24937192,
+    "LegacyGameUI001": 25066992,
+    "Source2Client002": 27016752,
+    "Source2ClientConfig001": 26626000,
+    "Source2ClientPrediction001": 24983184,
+    "Source2ClientUI001": 25061488
   },
   "engine2.dll": {
     "BenchmarkService001": 5461520,
@@ -76,11 +76,11 @@
     "MATCHFRAMEWORK_001": 1754000
   },
   "materialsystem2.dll": {
-    "FontManager_001": 1102624,
-    "MaterialUtils_001": 1082608,
-    "PostProcessingSystem_001": 1082368,
-    "TextLayout_001": 1082496,
-    "VMaterialSystem2_001": 1100080
+    "FontManager_001": 1106720,
+    "MaterialUtils_001": 1086704,
+    "PostProcessingSystem_001": 1086464,
+    "TextLayout_001": 1086592,
+    "VMaterialSystem2_001": 1104176
   },
   "meshsystem.dll": {
     "MeshSystem001": 1329712
@@ -130,15 +130,15 @@
     "SchemaSystem_001": 378640
   },
   "server.dll": {
-    "EmptyWorldService001_Server": 20018896,
-    "EntitySubclassUtilsV001": 19702272,
+    "EmptyWorldService001_Server": 20018880,
+    "EntitySubclassUtilsV001": 19702256,
     "NavGameTest001": 20666216,
     "ServerToolsInfo_001": 20360936,
     "Source2GameClients001": 20341440,
-    "Source2GameDirector001": 21580656,
+    "Source2GameDirector001": 21580592,
     "Source2GameEntities001": 20360720,
     "Source2Server001": 20360320,
-    "Source2ServerConfig001": 22346120,
+    "Source2ServerConfig001": 22346072,
     "customnavsystem001": 19593848
   },
   "soundsystem.dll": {
