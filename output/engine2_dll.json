@@ -194,7 +194,9 @@
         "parent": null
       },
       "EventClientProcessNetworking_t": {
-        "fields": {},
+        "fields": {
+          "m_nTickCount": 0
+        },
         "metadata": [],
         "parent": null
       },
@@ -258,6 +260,16 @@
         "metadata": [],
         "parent": "EventAdvanceTick_t"
       },
+      "EventServerBeginAsyncPostTickWork_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": "EventPostAdvanceTick_t"
+      },
+      "EventServerEndAsyncPostTickWork_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "EventServerPollNetworking_t": {
         "fields": {},
         "metadata": [],
@@ -317,6 +329,20 @@
       },
       "EventSplitScreenStateChanged_t": {
         "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "GameTick_t": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "GameTime_t": {
+        "fields": {
+          "m_Value": 0
+        },
         "metadata": [],
         "parent": null
       }

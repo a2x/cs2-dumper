@@ -255,6 +255,16 @@
         ],
         "parent": null
       },
+      "InfoForResourceTypeCNmIKRig": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "InfoForResourceTypeCNmSkeleton": {
         "fields": {},
         "metadata": [

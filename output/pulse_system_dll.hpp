@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: pulse_system.dll
-        // Class count: 108
+        // Class count: 112
         // Enum count: 9
         namespace pulse_system_dll {
             // Alignment: 4
@@ -43,7 +43,7 @@ namespace cs2_dumper {
                 OngoingNotify = 0x3
             };
             // Alignment: 4
-            // Member count: 20
+            // Member count: 21
             enum class PulseValueType_t : uint32_t {
                 PVAL_INVALID = 0xFFFFFFFFFFFFFFFF,
                 PVAL_BOOL = 0x0,
@@ -56,18 +56,19 @@ namespace cs2_dumper {
                 PVAL_EHANDLE = 0x7,
                 PVAL_RESOURCE = 0x8,
                 PVAL_SNDEVT_GUID = 0x9,
-                PVAL_ENTITY_NAME = 0xA,
-                PVAL_OPAQUE_HANDLE = 0xB,
-                PVAL_TYPESAFE_INT = 0xC,
-                PVAL_CURSOR_FLOW = 0xD,
-                PVAL_ANY = 0xE,
-                PVAL_SCHEMA_ENUM = 0xF,
-                PVAL_PANORAMA_PANEL_HANDLE = 0x10,
-                PVAL_TEST_HANDLE = 0x11,
-                PVAL_COUNT = 0x12
+                PVAL_SNDEVT_NAME = 0xA,
+                PVAL_ENTITY_NAME = 0xB,
+                PVAL_OPAQUE_HANDLE = 0xC,
+                PVAL_TYPESAFE_INT = 0xD,
+                PVAL_CURSOR_FLOW = 0xE,
+                PVAL_ANY = 0xF,
+                PVAL_SCHEMA_ENUM = 0x10,
+                PVAL_PANORAMA_PANEL_HANDLE = 0x11,
+                PVAL_TEST_HANDLE = 0x12,
+                PVAL_COUNT = 0x13
             };
             // Alignment: 2
-            // Member count: 73
+            // Member count: 75
             enum class PulseInstructionCode_t : uint16_t {
                 INVALID = 0x0,
                 IMMEDIATE_HALT = 0x1,
@@ -128,20 +129,22 @@ namespace cs2_dumper {
                 EQ_FLOAT = 0x38,
                 EQ_STRING = 0x39,
                 EQ_ENTITY_NAME = 0x3A,
-                EQ_EHANDLE = 0x3B,
-                EQ_PANEL_HANDLE = 0x3C,
-                EQ_OPAQUE_HANDLE = 0x3D,
-                EQ_TEST_HANDLE = 0x3E,
-                NE_BOOL = 0x3F,
-                NE_INT = 0x40,
-                NE_FLOAT = 0x41,
-                NE_STRING = 0x42,
-                NE_ENTITY_NAME = 0x43,
-                NE_EHANDLE = 0x44,
-                NE_PANEL_HANDLE = 0x45,
-                NE_OPAQUE_HANDLE = 0x46,
-                NE_TEST_HANDLE = 0x47,
-                GET_CONST_INLINE_STORAGE = 0x48
+                EQ_SCHEMA_ENUM = 0x3B,
+                EQ_EHANDLE = 0x3C,
+                EQ_PANEL_HANDLE = 0x3D,
+                EQ_OPAQUE_HANDLE = 0x3E,
+                EQ_TEST_HANDLE = 0x3F,
+                NE_BOOL = 0x40,
+                NE_INT = 0x41,
+                NE_FLOAT = 0x42,
+                NE_STRING = 0x43,
+                NE_ENTITY_NAME = 0x44,
+                NE_SCHEMA_ENUM = 0x45,
+                NE_EHANDLE = 0x46,
+                NE_PANEL_HANDLE = 0x47,
+                NE_OPAQUE_HANDLE = 0x48,
+                NE_TEST_HANDLE = 0x49,
+                GET_CONST_INLINE_STORAGE = 0x4A
             };
             // Alignment: 4
             // Member count: 5
@@ -329,14 +332,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nTestStep = 0x0; // int32
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPulseLibraryBindings
-            // MPropertyDescription
-            namespace CPulseTestFuncs_DerivedDomain {
-            }
-            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -390,8 +385,8 @@ namespace cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             namespace CTestDomainDerived_Cursor {
-                constexpr std::ptrdiff_t m_nCursorValueA = 0xA0; // int32
-                constexpr std::ptrdiff_t m_nCursorValueB = 0xA4; // int32
+                constexpr std::ptrdiff_t m_nCursorValueA = 0xA8; // int32
+                constexpr std::ptrdiff_t m_nCursorValueB = 0xAC; // int32
             }
             // Parent: None
             // Field count: 2
@@ -455,10 +450,19 @@ namespace cs2_dumper {
             }
             // Parent: None
             // Field count: 0
+            namespace IGapHost_ExecLog {
+            }
+            // Parent: None
+            // Field count: 0
             //
             // Metadata:
             // MGapTypeQueriesForScopeSingleton
             namespace CPulseTestGapTypeQueryRegistration {
+            }
+            // Parent: CPulseCell_Base
+            // Field count: 1
+            namespace CPulseCell_Unknown {
+                constexpr std::ptrdiff_t m_UnknownKeys = 0x48; // KeyValues3
             }
             // Parent: CPulseCell_BaseFlow
             // Field count: 2
@@ -502,7 +506,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_Outflow_CycleShuffled__InstanceState_t {
-                constexpr std::ptrdiff_t m_Shuffle = 0x0; // CUtlVectorFixedGrowable<uint8>
+                constexpr std::ptrdiff_t m_Shuffle = 0x0; // CUtlVectorFixedGrowable<uint8,8>
                 constexpr std::ptrdiff_t m_nNextShuffle = 0x20; // int32
             }
             // Parent: CPulseCell_Base
@@ -546,6 +550,10 @@ namespace cs2_dumper {
             namespace CPulseCell_BaseLerp__CursorState_t {
                 constexpr std::ptrdiff_t m_StartTime = 0x0; // GameTime_t
                 constexpr std::ptrdiff_t m_EndTime = 0x4; // GameTime_t
+            }
+            // Parent: IGapHost_ExecLog
+            // Field count: 0
+            namespace IGapHost_Cursor {
             }
             // Parent: None
             // Field count: 3
@@ -601,6 +609,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseRequirementPass
+            // MPulseRequirementSummaryExpr
             namespace CPulseCell_LimitCount {
                 constexpr std::ptrdiff_t m_nLimitCount = 0x48; // int32
             }
@@ -699,7 +708,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_WakeFail = 0xA8; // CPulse_ResumePoint
             }
             // Parent: CPulseCell_Inflow_BaseEntrypoint
-            // Field count: 1
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -708,6 +717,7 @@ namespace cs2_dumper {
             // MPulseCellOutflowHookInfo
             namespace CPulseCell_Inflow_ObservableVariableListener {
                 constexpr std::ptrdiff_t m_BlackboardReference = 0x70; // CPulse_BlackboardReference
+                constexpr std::ptrdiff_t m_bSelfReference = 0x168; // bool
             }
             // Parent: CPulseCell_BaseFlow
             // Field count: 0
@@ -886,6 +896,10 @@ namespace cs2_dumper {
             namespace PulseRuntimeBlackboardReferenceIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int16
             }
+            // Parent: IGapHost_Cursor
+            // Field count: 0
+            namespace IGapHost_YieldingCursor {
+            }
             // Parent: CPulse_OutflowConnection
             // Field count: 0
             namespace SignatureOutflow_Continue {
@@ -1013,12 +1027,25 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nWrittenByInstruction = 0x50; // int32
                 constexpr std::ptrdiff_t m_nLastReadByInstruction = 0x54; // int32
             }
+            // Parent: CPulseCell_BaseValue
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MCellForDomain
+            // MPulseCellMethodBindings
+            // MPulseCellOutflowHookInfo
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            // MPulseEditorHeaderIcon
+            namespace CPulseCell_Value_RandomFloat {
+            }
             // Parent: None
             // Field count: 1
             namespace PulseRuntimeCellIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
-            // Parent: None
+            // Parent: IGapHost_YieldingCursor
             // Field count: 0
             namespace CPulseExecCursor {
             }
@@ -1204,10 +1231,10 @@ namespace cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             namespace CPulseTurtleGraphicsCursor {
-                constexpr std::ptrdiff_t m_Color = 0xA0; // Color
-                constexpr std::ptrdiff_t m_vPos = 0xA4; // Vector2D
-                constexpr std::ptrdiff_t m_flHeadingDeg = 0xAC; // float32
-                constexpr std::ptrdiff_t m_bPenUp = 0xB0; // bool
+                constexpr std::ptrdiff_t m_Color = 0xA8; // Color
+                constexpr std::ptrdiff_t m_vPos = 0xAC; // Vector2D
+                constexpr std::ptrdiff_t m_flHeadingDeg = 0xB4; // float32
+                constexpr std::ptrdiff_t m_bPenUp = 0xB8; // bool
             }
         }
     }

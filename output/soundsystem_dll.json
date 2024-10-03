@@ -191,6 +191,40 @@
         ],
         "parent": "CSosGroupActionSchema"
       },
+      "CSosGroupActionSoundeventCountSchema": {
+        "fields": {
+          "m_bExcludeStoppedSounds": 24,
+          "m_strCountKeyName": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CSosGroupActionSchema"
+      },
+      "CSosGroupActionSoundeventMinMaxValuesSchema": {
+        "fields": {
+          "m_bExcludSoundsAboveThreshold": 48,
+          "m_bExcludeDelayedSounds": 41,
+          "m_bExcludeSoundsBelowThreshold": 42,
+          "m_bExcludeStoppedSounds": 40,
+          "m_flExcludeSoundsMaxThresholdValue": 52,
+          "m_flExcludeSoundsMinThresholdValue": 44,
+          "m_strDelayPublicFieldName": 32,
+          "m_strMaxValueName": 64,
+          "m_strMinValueName": 56,
+          "m_strQueryPublicFieldName": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CSosGroupActionSchema"
+      },
       "CSosGroupActionSoundeventPrioritySchema": {
         "fields": {
           "m_bPriorityReadButDontContribute": 48,
@@ -299,6 +333,50 @@
         ],
         "parent": null
       },
+      "CSoundContainerReference": {
+        "fields": {
+          "m_bUseReference": 0,
+          "m_pSound": 16,
+          "m_sound": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSoundContainerReferenceArray": {
+        "fields": {
+          "m_bUseReference": 0,
+          "m_pSounds": 32,
+          "m_sounds": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CSoundEventMetaData": {
         "fields": {
           "m_soundEventVMix": 0
@@ -320,6 +398,27 @@
           }
         ],
         "parent": null
+      },
+      "CTestBlendContainer": {
+        "fields": {
+          "m_firstSound": 192,
+          "m_secondSound": 200
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
       },
       "CVSound": {
         "fields": {
@@ -345,7 +444,7 @@
       },
       "CVoiceContainerAmpedDecayingSineWave": {
         "fields": {
-          "m_flGainAmount": 248
+          "m_flGainAmount": 200
         },
         "metadata": [
           {
@@ -390,9 +489,8 @@
       },
       "CVoiceContainerBase": {
         "fields": {
-          "m_analysisContainers": 216,
-          "m_bHideAnalyzers": 208,
-          "m_vSound": 32
+          "m_pEnvelopeAnalyzer": 184,
+          "m_vSound": 56
         },
         "metadata": [
           {
@@ -420,9 +518,9 @@
       },
       "CVoiceContainerBlender": {
         "fields": {
-          "m_firstSound": 240,
-          "m_flBlendFactor": 256,
-          "m_secondSound": 248
+          "m_firstSound": 192,
+          "m_flBlendFactor": 240,
+          "m_secondSound": 216
         },
         "metadata": [
           {
@@ -442,8 +540,8 @@
       },
       "CVoiceContainerDecayingSineWave": {
         "fields": {
-          "m_flDecayTime": 244,
-          "m_flFrequency": 240
+          "m_flDecayTime": 196,
+          "m_flFrequency": 192
         },
         "metadata": [
           {
@@ -462,8 +560,27 @@
         "parent": "CVoiceContainerBase"
       },
       "CVoiceContainerDefault": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
+      "CVoiceContainerEnvelope": {
         "fields": {
-          "m_vsndReference": 240
+          "m_analysisContainer": 200,
+          "m_sound": 192
         },
         "metadata": [
           {
@@ -503,6 +620,50 @@
         ],
         "parent": "CVoiceContainerAnalysisBase"
       },
+      "CVoiceContainerGranulator": {
+        "fields": {
+          "m_flGrainCrossfadeAmount": 196,
+          "m_flGrainLength": 192,
+          "m_flPlaybackJitter": 204,
+          "m_flStartJitter": 200,
+          "m_sourceAudio": 208
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
+      "CVoiceContainerLoopTrigger": {
+        "fields": {
+          "m_bCrossFade": 228,
+          "m_flFadeTime": 224,
+          "m_flRetriggerTimeMax": 220,
+          "m_flRetriggerTimeMin": 216,
+          "m_sound": 192
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
       "CVoiceContainerNull": {
         "fields": {},
         "metadata": [
@@ -523,12 +684,12 @@
       },
       "CVoiceContainerRandomSampler": {
         "fields": {
-          "m_flAmplitude": 240,
-          "m_flAmplitudeJitter": 244,
-          "m_flMaxLength": 252,
-          "m_flTimeJitter": 248,
-          "m_grainResources": 264,
-          "m_nNumDelayVariations": 256
+          "m_flAmplitude": 192,
+          "m_flAmplitudeJitter": 196,
+          "m_flMaxLength": 204,
+          "m_flTimeJitter": 200,
+          "m_grainResources": 216,
+          "m_nNumDelayVariations": 208
         },
         "metadata": [
           {
@@ -548,9 +709,9 @@
       },
       "CVoiceContainerRealtimeFMSineWave": {
         "fields": {
-          "m_flCarrierFrequency": 240,
-          "m_flModulatorAmount": 248,
-          "m_flModulatorFrequency": 244
+          "m_flCarrierFrequency": 192,
+          "m_flModulatorAmount": 200,
+          "m_flModulatorFrequency": 196
         },
         "metadata": [
           {
@@ -570,9 +731,70 @@
       },
       "CVoiceContainerSelector": {
         "fields": {
-          "m_bRetrigger": 244,
-          "m_mode": 240,
-          "m_soundsToPlay": 248
+          "m_fProbabilityWeights": 256,
+          "m_mode": 192,
+          "m_soundsToPlay": 200
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
+      "CVoiceContainerSet": {
+        "fields": {
+          "m_soundsToPlay": 192
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CVoiceContainerBase"
+      },
+      "CVoiceContainerSetElement": {
+        "fields": {
+          "m_flVolumeDB": 24,
+          "m_sound": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoiceContainerShapedNoise": {
+        "fields": {
+          "m_bUseCurveForAmplitude": 336,
+          "m_bUseCurveForFrequency": 192,
+          "m_bUseCurveForResonance": 264,
+          "m_flFrequency": 196,
+          "m_flGainInDecibels": 340,
+          "m_flResonance": 268,
+          "m_frequencySweep": 200,
+          "m_gainSweep": 344,
+          "m_resonanceSweep": 272
         },
         "metadata": [
           {
@@ -592,7 +814,7 @@
       },
       "CVoiceContainerStaticAdditiveSynth": {
         "fields": {
-          "m_tones": 240
+          "m_tones": 192
         },
         "metadata": [
           {
@@ -659,7 +881,7 @@
       },
       "CVoiceContainerSwitch": {
         "fields": {
-          "m_soundsToPlay": 240
+          "m_soundsToPlay": 192
         },
         "metadata": [
           {
@@ -1117,6 +1339,8 @@
           "SOS_ACTION_NONE": 0,
           "SOS_ACTION_SET_SOUNDEVENT_PARAM": 4,
           "SOS_ACTION_SOUNDEVENT_CLUSTER": 5,
+          "SOS_ACTION_SOUNDEVENT_COUNT": 8,
+          "SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES": 9,
           "SOS_ACTION_SOUNDEVENT_PRIORITY": 6,
           "SOS_ACTION_TIME_BLOCK_LIMITER": 3,
           "SOS_ACTION_TIME_LIMIT": 2
@@ -1177,6 +1401,7 @@
           "Random": 0,
           "RandomAvoidLast": 2,
           "RandomNoRepeats": 1,
+          "RandomWeights": 4,
           "Sequential": 3
         },
         "type": "uint32"

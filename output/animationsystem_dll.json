@@ -290,14 +290,16 @@
       },
       "CAimCameraUpdateNode": {
         "fields": {
-          "m_hParameterCameraClearanceDistance": 116,
+          "m_hParameterCameraClearanceDistance": 120,
+          "m_hParameterCameraOnly": 114,
           "m_hParameterOrientation": 106,
           "m_hParameterPelvisOffset": 110,
           "m_hParameterPosition": 104,
           "m_hParameterSpineRotationWeight": 108,
           "m_hParameterUseIK": 112,
-          "m_hParameterWeaponDepenetrationDistance": 114,
-          "m_opFixedSettings": 120
+          "m_hParameterWeaponDepenetrationDelta": 118,
+          "m_hParameterWeaponDepenetrationDistance": 116,
+          "m_opFixedSettings": 128
         },
         "metadata": [
           {
@@ -516,19 +518,20 @@
       "CAnimDesc": {
         "fields": {
           "fps": 24,
-          "framestalltime": 344,
+          "framestalltime": 376,
           "m_Data": 32,
-          "m_activityArray": 296,
-          "m_eventArray": 272,
+          "m_activityArray": 328,
+          "m_eventArray": 304,
           "m_flags": 16,
-          "m_hierarchyArray": 320,
+          "m_hierarchyArray": 352,
           "m_movementArray": 248,
           "m_name": 0,
-          "m_sequenceParams": 424,
-          "m_vecBoneWorldMax": 400,
-          "m_vecBoneWorldMin": 376,
-          "m_vecRootMax": 360,
-          "m_vecRootMin": 348
+          "m_sequenceParams": 456,
+          "m_vecBoneWorldMax": 432,
+          "m_vecBoneWorldMin": 408,
+          "m_vecRootMax": 392,
+          "m_vecRootMin": 380,
+          "m_xInitialOffset": 272
         },
         "metadata": [
           {
@@ -1004,7 +1007,7 @@
       },
       "CAnimTagManagerUpdater": {
         "fields": {
-          "m_tags": 24
+          "m_tags": 56
         },
         "metadata": [
           {
@@ -1173,6 +1176,7 @@
       },
       "CAnimationGroup": {
         "fields": {
+          "m_AdditionalExtRefs": 296,
           "m_decodeKey": 152,
           "m_directHSeqGroup_Handle": 144,
           "m_includedGroupArray_Handle": 120,
@@ -1234,7 +1238,7 @@
         "fields": {
           "m_name": 40,
           "m_slaves": 64,
-          "m_targets": 88,
+          "m_targets": 80,
           "m_vUpVector": 48
         },
         "metadata": [
@@ -1408,7 +1412,7 @@
       },
       "CBoneConstraintPoseSpaceBone": {
         "fields": {
-          "m_inputList": 112
+          "m_inputList": 104
         },
         "metadata": [
           {
@@ -2543,12 +2547,12 @@
         "fields": {
           "m_flAlpha": 16,
           "m_flUvDensity": 0,
-          "m_indexBuffer": 184,
-          "m_material": 216,
+          "m_indexBuffer": 152,
+          "m_material": 200,
           "m_nBaseVertex": 36,
-          "m_nFirstMeshlet": 24,
+          "m_nFirstMeshlet": 28,
           "m_nIndexCount": 48,
-          "m_nNumMeshlets": 28,
+          "m_nNumMeshlets": 22,
           "m_nPrimitiveType": 32,
           "m_nStartIndex": 44,
           "m_nVertexCount": 40,
@@ -2788,10 +2792,10 @@
       },
       "CMorphConstraint": {
         "fields": {
-          "m_flMax": 128,
-          "m_flMin": 124,
-          "m_nSlaveChannel": 120,
-          "m_sTargetMorph": 112
+          "m_flMax": 120,
+          "m_flMin": 116,
+          "m_nSlaveChannel": 112,
+          "m_sTargetMorph": 104
         },
         "metadata": [
           {
@@ -3099,6 +3103,91 @@
         ],
         "parent": "CUnaryUpdateNode"
       },
+      "CNmAdditiveBlendTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmBlendTaskBase"
+      },
+      "CNmAndNode__CDefinition": {
+        "fields": {
+          "m_conditionNodeIndices": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmAnimationPoseNode__CDefinition": {
+        "fields": {
+          "m_bUseFramesAsInput": 32,
+          "m_flUserSpecifiedTime": 28,
+          "m_inputTimeRemapRange": 20,
+          "m_nDataSlotIdx": 18,
+          "m_nPoseTimeValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmBitFlags": {
+        "fields": {
+          "m_flags": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmBlend1DNode__CDefinition": {
+        "fields": {
+          "m_parameterization": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmParameterizedBlendNode::CDefinition"
+      },
+      "CNmBlend2DNode__CDefinition": {
+        "fields": {
+          "m_bAllowLooping": 264,
+          "m_hullIndices": 224,
+          "m_indices": 168,
+          "m_nInputParameterNodeIdx0": 56,
+          "m_nInputParameterNodeIdx1": 58,
+          "m_sourceNodeIndices": 16,
+          "m_values": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmBlendTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmBlendTaskBase"
+      },
+      "CNmBlendTaskBase": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmTask"
+      },
       "CNmBoneMask": {
         "fields": {
           "m_ID": 0,
@@ -3113,6 +3202,49 @@
         ],
         "parent": null
       },
+      "CNmBoneMaskBlendNode__CDefinition": {
+        "fields": {
+          "m_nBlendWeightValueNodeIdx": 20,
+          "m_nSourceMaskNodeIdx": 16,
+          "m_nTargetMaskNodeIdx": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoneMaskValueNode::CDefinition"
+      },
+      "CNmBoneMaskNode__CDefinition": {
+        "fields": {
+          "m_boneMaskID": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoneMaskValueNode::CDefinition"
+      },
+      "CNmBoneMaskSelectorNode__CDefinition": {
+        "fields": {
+          "m_defaultMaskNodeIdx": 16,
+          "m_flBlendTimeSeconds": 144,
+          "m_maskNodeIndices": 24,
+          "m_parameterValueNodeIdx": 18,
+          "m_parameterValues": 64,
+          "m_switchDynamically": 20
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoneMaskValueNode::CDefinition"
+      },
       "CNmBoneMaskValueNode__CDefinition": {
         "fields": {},
         "metadata": [],
@@ -3122,6 +3254,81 @@
         "fields": {},
         "metadata": [],
         "parent": "CNmValueNode::CDefinition"
+      },
+      "CNmCachedBoolNode__CDefinition": {
+        "fields": {
+          "m_mode": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmCachedFloatNode__CDefinition": {
+        "fields": {
+          "m_mode": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmCachedIDNode__CDefinition": {
+        "fields": {
+          "m_mode": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmIDValueNode::CDefinition"
+      },
+      "CNmCachedPoseReadTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmTask"
+      },
+      "CNmCachedPoseWriteTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmTask"
+      },
+      "CNmCachedTargetNode__CDefinition": {
+        "fields": {
+          "m_mode": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmTargetValueNode::CDefinition"
+      },
+      "CNmCachedVectorNode__CDefinition": {
+        "fields": {
+          "m_mode": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmVectorValueNode::CDefinition"
       },
       "CNmChildGraphNode__CDefinition": {
         "fields": {
@@ -3170,6 +3377,79 @@
           }
         ],
         "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmClipSelectorNode__CDefinition": {
+        "fields": {
+          "m_conditionNodeIndices": 40,
+          "m_optionNodeIndices": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmConstBoolNode__CDefinition": {
+        "fields": {
+          "m_bValue": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmConstFloatNode__CDefinition": {
+        "fields": {
+          "m_flValue": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmConstIDNode__CDefinition": {
+        "fields": {
+          "m_value": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmIDValueNode::CDefinition"
+      },
+      "CNmConstTargetNode__CDefinition": {
+        "fields": {
+          "m_value": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmTargetValueNode::CDefinition"
+      },
+      "CNmConstVectorNode__CDefinition": {
+        "fields": {
+          "m_value": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmVectorValueNode::CDefinition"
       },
       "CNmControlParameterBoolNode__CDefinition": {
         "fields": {},
@@ -3221,10 +3501,57 @@
         ],
         "parent": "CNmVectorValueNode::CDefinition"
       },
+      "CNmCurrentSyncEventIDNode__CDefinition": {
+        "fields": {
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmIDValueNode::CDefinition"
+      },
+      "CNmCurrentSyncEventIndexNode__CDefinition": {
+        "fields": {
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmCurrentSyncEventPercentageThroughNode__CDefinition": {
+        "fields": {
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmDurationScaleNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmSpeedScaleBaseNode::CDefinition"
+      },
       "CNmEvent": {
         "fields": {
-          "m_flDuration": 12,
-          "m_flStartTime": 8
+          "m_flDurationSeconds": 12,
+          "m_flStartTimeSeconds": 8,
+          "m_syncID": 16
         },
         "metadata": [
           {
@@ -3244,6 +3571,188 @@
         ],
         "parent": "CNmPoseNode::CDefinition"
       },
+      "CNmFixedWeightBoneMaskNode__CDefinition": {
+        "fields": {
+          "m_flBoneWeight": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoneMaskValueNode::CDefinition"
+      },
+      "CNmFloatAbsNode__CDefinition": {
+        "fields": {
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatAngleMathNode__CDefinition": {
+        "fields": {
+          "m_nInputValueNodeIdx": 16,
+          "m_operation": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatClampNode__CDefinition": {
+        "fields": {
+          "m_clampRange": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatComparisonNode__CDefinition": {
+        "fields": {
+          "m_comparison": 20,
+          "m_flComparisonValue": 28,
+          "m_flEpsilon": 24,
+          "m_nComparandValueNodeIdx": 18,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmFloatCurveNode__CDefinition": {
+        "fields": {
+          "m_curve": 24,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatEaseNode__CDefinition": {
+        "fields": {
+          "m_bUseStartValue": 27,
+          "m_easingOp": 26,
+          "m_flEaseTime": 16,
+          "m_flStartValue": 20,
+          "m_nInputValueNodeIdx": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatMathNode__CDefinition": {
+        "fields": {
+          "m_bReturnAbsoluteResult": 20,
+          "m_flValueB": 24,
+          "m_nInputValueNodeIdxA": 16,
+          "m_nInputValueNodeIdxB": 18,
+          "m_operator": 21
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatRangeComparisonNode__CDefinition": {
+        "fields": {
+          "m_bIsInclusiveCheck": 26,
+          "m_nInputValueNodeIdx": 24,
+          "m_range": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmFloatRemapNode__CDefinition": {
+        "fields": {
+          "m_inputRange": 20,
+          "m_nInputValueNodeIdx": 16,
+          "m_outputRange": 28
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatRemapNode__RemapRange_t": {
+        "fields": {
+          "m_flBegin": 0,
+          "m_flEnd": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmFloatSelectorNode__CDefinition": {
+        "fields": {
+          "m_conditionNodeIndices": 16,
+          "m_easingOp": 112,
+          "m_flDefaultValue": 104,
+          "m_flEaseTime": 108,
+          "m_values": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmFloatSwitchNode__CDefinition": {
+        "fields": {
+          "m_nFalseValueNodeIdx": 20,
+          "m_nSwitchValueNodeIdx": 16,
+          "m_nTrueValueNodeIdx": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
       "CNmFloatValueNode__CDefinition": {
         "fields": {},
         "metadata": [],
@@ -3251,7 +3760,7 @@
       },
       "CNmFootEvent": {
         "fields": {
-          "m_phase": 16
+          "m_phase": 24
         },
         "metadata": [
           {
@@ -3261,9 +3770,50 @@
         ],
         "parent": "CNmEvent"
       },
+      "CNmFootEventConditionNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 20,
+          "m_nSourceStateNodeIdx": 16,
+          "m_phaseCondition": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmFootstepEventIDNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 20,
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmIDValueNode::CDefinition"
+      },
+      "CNmFootstepEventPercentageThroughNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 20,
+          "m_nSourceStateNodeIdx": 16,
+          "m_phaseCondition": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
       "CNmFrameSnapEvent": {
         "fields": {
-          "m_frameSnapMode": 16
+          "m_frameSnapMode": 24
         },
         "metadata": [
           {
@@ -3293,7 +3843,9 @@
           "m_controlParameterIDs": 32,
           "m_externalGraphSlots": 128,
           "m_nRootNodeIdx": 24,
+          "m_nodePaths": 264,
           "m_persistentNodeIndices": 0,
+          "m_runtimeVersionID": 288,
           "m_virtualParameterIDs": 56,
           "m_virtualParameterNodeIndices": 80
         },
@@ -3356,9 +3908,23 @@
         ],
         "parent": null
       },
+      "CNmIDComparisonNode__CDefinition": {
+        "fields": {
+          "m_comparisionIDs": 24,
+          "m_comparison": 18,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
       "CNmIDEvent": {
         "fields": {
-          "m_ID": 16
+          "m_ID": 24
         },
         "metadata": [
           {
@@ -3368,10 +3934,91 @@
         ],
         "parent": "CNmEvent"
       },
+      "CNmIDEventConditionNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 20,
+          "m_eventIDs": 24,
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmIDEventNode__CDefinition": {
+        "fields": {
+          "m_defaultValue": 24,
+          "m_eventConditionRules": 20,
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmIDValueNode::CDefinition"
+      },
+      "CNmIDEventPercentageThroughNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 20,
+          "m_eventID": 24,
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmIDToFloatNode__CDefinition": {
+        "fields": {
+          "m_IDs": 24,
+          "m_defaultValue": 20,
+          "m_nInputValueNodeIdx": 16,
+          "m_values": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
       "CNmIDValueNode__CDefinition": {
         "fields": {},
         "metadata": [],
         "parent": "CNmValueNode::CDefinition"
+      },
+      "CNmIKRig": {
+        "fields": {
+          "m_skeleton": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmIsTargetSetNode__CDefinition": {
+        "fields": {
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
       },
       "CNmLayerBlendNode__CDefinition": {
         "fields": {
@@ -3407,6 +4054,48 @@
         "parent": null
       },
       "CNmLegacyEvent": {
+        "fields": {
+          "m_KV": 32,
+          "m_animEventClassName": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmEvent"
+      },
+      "CNmModelSpaceBlendTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmBlendTaskBase"
+      },
+      "CNmNotNode__CDefinition": {
+        "fields": {
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmOrNode__CDefinition": {
+        "fields": {
+          "m_conditionNodeIndices": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmOrientationWarpEvent": {
         "fields": {},
         "metadata": [
           {
@@ -3415,6 +4104,94 @@
           }
         ],
         "parent": "CNmEvent"
+      },
+      "CNmOrientationWarpNode__CDefinition": {
+        "fields": {
+          "m_bIsOffsetNode": 20,
+          "m_bIsOffsetRelativeToCharacter": 21,
+          "m_nClipReferenceNodeIdx": 16,
+          "m_nTargetValueNodeIdx": 18,
+          "m_samplingMode": 22
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmOverlayBlendTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmBlendTaskBase"
+      },
+      "CNmParameterizedBlendNode__BlendRange_t": {
+        "fields": {
+          "m_nInputIdx0": 0,
+          "m_nInputIdx1": 2,
+          "m_parameterValueRange": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmParameterizedBlendNode__CDefinition": {
+        "fields": {
+          "m_bAllowLooping": 58,
+          "m_nInputParameterValueNodeIdx": 56,
+          "m_sourceNodeIndices": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmParameterizedBlendNode__Parameterization_t": {
+        "fields": {
+          "m_blendRanges": 0,
+          "m_parameterRange": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmParameterizedClipSelectorNode__CDefinition": {
+        "fields": {
+          "m_optionNodeIndices": 16,
+          "m_parameterNodeIdx": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmParameterizedSelectorNode__CDefinition": {
+        "fields": {
+          "m_optionNodeIndices": 16,
+          "m_parameterNodeIdx": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
       },
       "CNmPassthroughNode__CDefinition": {
         "fields": {
@@ -3433,6 +4210,21 @@
         "metadata": [],
         "parent": "CNmGraphNode::CDefinition"
       },
+      "CNmReferencePoseNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmReferencePoseTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmTask"
+      },
       "CNmRootMotionData": {
         "fields": {
           "m_flAverageAngularVelocityRadians": 32,
@@ -3448,6 +4240,54 @@
           }
         ],
         "parent": null
+      },
+      "CNmRootMotionEvent": {
+        "fields": {
+          "m_flBlendTimeSeconds": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmEvent"
+      },
+      "CNmRootMotionOverrideNode__CDefinition": {
+        "fields": {
+          "m_angularVelocityLimitNodeIdx": 30,
+          "m_desiredFacingDirectionNodeIdx": 26,
+          "m_desiredMovingVelocityNodeIdx": 24,
+          "m_linearVelocityLimitNodeIdx": 28,
+          "m_maxAngularVelocityRadians": 36,
+          "m_maxLinearVelocity": 32,
+          "m_overrideFlags": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPassthroughNode::CDefinition"
+      },
+      "CNmSampleTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmTask"
+      },
+      "CNmSelectorNode__CDefinition": {
+        "fields": {
+          "m_conditionNodeIndices": 40,
+          "m_optionNodeIndices": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
       },
       "CNmSkeleton": {
         "fields": {
@@ -3467,10 +4307,74 @@
         ],
         "parent": null
       },
+      "CNmSpeedScaleBaseNode__CDefinition": {
+        "fields": {
+          "m_flDefaultInputValue": 28,
+          "m_nInputValueNodeIdx": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPassthroughNode::CDefinition"
+      },
+      "CNmSpeedScaleNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmSpeedScaleBaseNode::CDefinition"
+      },
+      "CNmStateCompletedConditionNode__CDefinition": {
+        "fields": {
+          "m_flTransitionDurationSeconds": 20,
+          "m_nSourceStateNodeIdx": 16,
+          "m_nTransitionDurationOverrideNodeIdx": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmStateEventConditionNode__CDefinition": {
+        "fields": {
+          "m_conditions": 24,
+          "m_eventConditionRules": 20,
+          "m_nSourceStateNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmStateEventConditionNode__Condition_t": {
+        "fields": {
+          "m_eventID": 0,
+          "m_eventTypeCondition": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CNmStateMachineNode__CDefinition": {
         "fields": {
           "m_nDefaultStateIndex": 304,
-          "m_stateDefinition": 16
+          "m_stateDefinitions": 16
         },
         "metadata": [
           {
@@ -3482,9 +4386,9 @@
       },
       "CNmStateMachineNode__StateDefinition_t": {
         "fields": {
-          "m_entryConditionNodeIdx": 2,
+          "m_nEntryConditionNodeIdx": 2,
           "m_nStateNodeIdx": 0,
-          "m_transitionDefinition": 8
+          "m_transitionDefinitions": 8
         },
         "metadata": [
           {
@@ -3533,7 +4437,7 @@
       "CNmStateNode__TimedEvent_t": {
         "fields": {
           "m_ID": 0,
-          "m_timeValue": 8
+          "m_flTimeValueSeconds": 8
         },
         "metadata": [
           {
@@ -3542,6 +4446,20 @@
           }
         ],
         "parent": null
+      },
+      "CNmSyncEventIndexConditionNode__CDefinition": {
+        "fields": {
+          "m_nSourceStateNodeIdx": 16,
+          "m_syncEventIdx": 20,
+          "m_triggerMode": 18
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
       },
       "CNmSyncTrack": {
         "fields": {
@@ -3600,15 +4518,57 @@
         ],
         "parent": null
       },
+      "CNmTargetInfoNode__CDefinition": {
+        "fields": {
+          "m_bIsWorldSpaceTarget": 24,
+          "m_infoType": 20,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmTargetOffsetNode__CDefinition": {
+        "fields": {
+          "m_bIsBoneSpaceOffset": 18,
+          "m_nInputValueNodeIdx": 16,
+          "m_rotationOffset": 32,
+          "m_translationOffset": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmTargetValueNode::CDefinition"
+      },
+      "CNmTargetPointNode__CDefinition": {
+        "fields": {
+          "m_bIsWorldSpaceTarget": 18,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmVectorValueNode::CDefinition"
+      },
       "CNmTargetValueNode__CDefinition": {
         "fields": {},
         "metadata": [],
         "parent": "CNmValueNode::CDefinition"
       },
-      "CNmTransitionEvent": {
+      "CNmTargetWarpEvent": {
         "fields": {
-          "m_ID": 24,
-          "m_rule": 16
+          "m_algorithm": 25,
+          "m_rule": 24
         },
         "metadata": [
           {
@@ -3618,18 +4578,87 @@
         ],
         "parent": "CNmEvent"
       },
+      "CNmTargetWarpNode__CDefinition": {
+        "fields": {
+          "m_bAllowTargetUpdate": 21,
+          "m_flLerpFallbackDistanceThreshold": 32,
+          "m_flMaxTangentLength": 28,
+          "m_flSamplingPositionErrorThresholdSq": 24,
+          "m_flTargetUpdateAngleThresholdRadians": 40,
+          "m_flTargetUpdateDistanceThreshold": 36,
+          "m_nClipReferenceNodeIdx": 16,
+          "m_nTargetValueNodeIdx": 18,
+          "m_samplingMode": 20
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CNmTimeConditionNode__CDefinition": {
+        "fields": {
+          "m_flComparand": 20,
+          "m_nInputValueNodeIdx": 18,
+          "m_operator": 25,
+          "m_sourceStateNodeIdx": 16,
+          "m_type": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
+      "CNmTransitionEvent": {
+        "fields": {
+          "m_ID": 32,
+          "m_rule": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmEvent"
+      },
+      "CNmTransitionEventConditionNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 24,
+          "m_nSourceStateNodeIdx": 28,
+          "m_requireRuleID": 16,
+          "m_ruleCondition": 30
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmBoolValueNode::CDefinition"
+      },
       "CNmTransitionNode__CDefinition": {
         "fields": {
-          "m_blendWeightEasing": 40,
+          "m_blendWeightEasing": 42,
           "m_boneMaskBlendInTimePercentage": 28,
-          "m_durationOverrideNodeIdx": 18,
           "m_flDuration": 24,
-          "m_rootMotionBlend": 41,
+          "m_nDurationOverrideNodeIdx": 18,
+          "m_nTargetStateNodeIdx": 16,
+          "m_rootMotionBlend": 43,
           "m_startBoneMaskNodeIdx": 22,
           "m_syncEventOffset": 32,
           "m_syncEventOffsetOverrideNodeIdx": 20,
-          "m_targetCNmStateNodeIdx": 16,
-          "m_targetSyncIDNodeIdx": 38,
+          "m_targetSyncIDNodeIdx": 40,
           "m_transitionOptions": 36
         },
         "metadata": [
@@ -3645,10 +4674,70 @@
         "metadata": [],
         "parent": "CNmGraphNode::CDefinition"
       },
+      "CNmVectorCreateNode__CDefinition": {
+        "fields": {
+          "m_inputValueXNodeIdx": 18,
+          "m_inputValueYNodeIdx": 20,
+          "m_inputValueZNodeIdx": 22,
+          "m_inputVectorValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmVectorValueNode::CDefinition"
+      },
+      "CNmVectorInfoNode__CDefinition": {
+        "fields": {
+          "m_desiredInfo": 18,
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmFloatValueNode::CDefinition"
+      },
+      "CNmVectorNegateNode__CDefinition": {
+        "fields": {
+          "m_nInputValueNodeIdx": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmVectorValueNode::CDefinition"
+      },
       "CNmVectorValueNode__CDefinition": {
         "fields": {},
         "metadata": [],
         "parent": "CNmValueNode::CDefinition"
+      },
+      "CNmVelocityBasedSpeedScaleNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmSpeedScaleBaseNode::CDefinition"
+      },
+      "CNmVelocityBlendNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmParameterizedBlendNode::CDefinition"
       },
       "CNmVirtualParameterBoneMaskNode__CDefinition": {
         "fields": {
@@ -3722,6 +4811,21 @@
         ],
         "parent": "CNmVectorValueNode::CDefinition"
       },
+      "CNmZeroPoseNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CNmPoseNode::CDefinition"
+      },
+      "CNmZeroPoseTask": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CNmTask"
+      },
       "COrientConstraint": {
         "fields": {},
         "metadata": [
@@ -3731,6 +4835,41 @@
           }
         ],
         "parent": "CBaseConstraint"
+      },
+      "COrientationWarpUpdateNode": {
+        "fields": {
+          "m_hFacingPositionParameter": 108,
+          "m_turnDamping": 112
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CUnaryUpdateNode"
+      },
+      "CPairedSequenceComponentUpdater": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CAnimComponentUpdater"
+      },
+      "CPairedSequenceUpdateNode": {
+        "fields": {
+          "m_sPairedSequenceRole": 112
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CSequenceUpdateNodeBase"
       },
       "CParamSpanUpdater": {
         "fields": {
@@ -3831,8 +4970,8 @@
       },
       "CPhysSurfaceProperties": {
         "fields": {
-          "m_audioParams": 160,
-          "m_audioSounds": 72,
+          "m_audioParams": 168,
+          "m_audioSounds": 80,
           "m_bHidden": 24,
           "m_baseNameHash": 12,
           "m_description": 32,
@@ -3871,7 +5010,9 @@
         "fields": {
           "m_density": 8,
           "m_elasticity": 4,
+          "m_flashpoint": 32,
           "m_friction": 0,
+          "m_heatConductivity": 28,
           "m_softContactDampingRatio": 20,
           "m_softContactFrequency": 16,
           "m_thickness": 12,
@@ -4045,17 +5186,17 @@
       },
       "CRenderGroom": {
         "fields": {
-          "m_bEnableSimulation": 72,
-          "m_flSumOfAllHairLengths": 68,
-          "m_hSimParamsMat": 32,
+          "m_bEnableSimulation": 100,
+          "m_hSimParamsMat": 64,
+          "m_hairPositionOffsets": 24,
           "m_hairs": 0,
-          "m_nAttachBoneIdx": 56,
-          "m_nAttachMeshDrawCallIdx": 64,
-          "m_nAttachMeshIdx": 60,
-          "m_nGroomGroupID": 52,
-          "m_nGuideHairCount": 44,
-          "m_nHairCount": 48,
-          "m_nSegmentsPerHairStrand": 40
+          "m_nAttachBoneIdx": 88,
+          "m_nAttachMeshDrawCallIdx": 96,
+          "m_nAttachMeshIdx": 92,
+          "m_nGroomGroupID": 84,
+          "m_nGuideHairCount": 76,
+          "m_nHairCount": 80,
+          "m_nSegmentsPerHairStrand": 72
         },
         "metadata": [
           {
@@ -4067,11 +5208,11 @@
       },
       "CRenderMesh": {
         "fields": {
-          "m_constraints": 160,
-          "m_meshDeformParams": 480,
-          "m_pGroomData": 496,
+          "m_constraints": 120,
+          "m_meshDeformParams": 424,
+          "m_pGroomData": 440,
           "m_sceneObjects": 16,
-          "m_skeleton": 184
+          "m_skeleton": 136
         },
         "metadata": [
           {
@@ -4107,12 +5248,12 @@
       },
       "CSceneObjectData": {
         "fields": {
-          "m_drawBounds": 48,
+          "m_drawBounds": 40,
           "m_drawCalls": 24,
-          "m_meshlets": 72,
+          "m_meshlets": 56,
           "m_vMaxBounds": 12,
           "m_vMinBounds": 0,
-          "m_vTintColor": 96
+          "m_vTintColor": 72
         },
         "metadata": [
           {
@@ -4458,14 +5599,38 @@
         ],
         "parent": null
       },
+      "CSequenceTagSpans": {
+        "fields": {
+          "m_sSequenceName": 0,
+          "m_tags": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CSequenceUpdateNode": {
         "fields": {
-          "m_bLoop": 160,
-          "m_duration": 156,
-          "m_hSequence": 148,
-          "m_paramSpans": 96,
-          "m_playbackSpeed": 152,
-          "m_tags": 120
+          "m_duration": 116,
+          "m_hSequence": 112,
+          "m_paramSpans": 120,
+          "m_tags": 144
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CSequenceUpdateNodeBase"
+      },
+      "CSequenceUpdateNodeBase": {
+        "fields": {
+          "m_bLoop": 104,
+          "m_playbackSpeed": 100
         },
         "metadata": [
           {
@@ -4786,6 +5951,33 @@
         ],
         "parent": "CConcreteAnimParameter"
       },
+      "CTargetSelectorUpdateNode": {
+        "fields": {
+          "m_children": 88,
+          "m_hFacePositionParameter": 118,
+          "m_hPositionParameter": 116
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CAnimUpdateNodeBase"
+      },
+      "CTargetWarpUpdateNode": {
+        "fields": {
+          "m_hFacePositionParameter": 110,
+          "m_hPositionParameter": 108
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CUnaryUpdateNode"
+      },
       "CTaskHandshakeAnimTag": {
         "fields": {},
         "metadata": [
@@ -4816,8 +6008,8 @@
       },
       "CTiltTwistConstraint": {
         "fields": {
-          "m_nSlaveAxis": 116,
-          "m_nTargetAxis": 112
+          "m_nSlaveAxis": 108,
+          "m_nTargetAxis": 104
         },
         "metadata": [
           {
@@ -4889,9 +6081,9 @@
       },
       "CTwistConstraint": {
         "fields": {
-          "m_bInverse": 112,
-          "m_qChildBindRotation": 144,
-          "m_qParentBindRotation": 128
+          "m_bInverse": 104,
+          "m_qChildBindRotation": 128,
+          "m_qParentBindRotation": 112
         },
         "metadata": [
           {
@@ -5041,6 +6233,7 @@
         "fields": {
           "m_bComputeDynamicMeshTensionAfterAnimation": 9,
           "m_bRecomputeSmoothNormalsAfterAnimation": 8,
+          "m_bSmoothNormalsAcrossUvSeams": 10,
           "m_flTensionCompressScale": 0,
           "m_flTensionStretchScale": 4
         },
@@ -6079,11 +7272,14 @@
           "m_bEnableTwistLimit": 124,
           "m_flAngularDampingRatio": 168,
           "m_flAngularFrequency": 164,
+          "m_flElasticDamping": 180,
+          "m_flElasticity": 176,
           "m_flFriction": 172,
           "m_flLinearDampingRatio": 160,
           "m_flLinearFrequency": 156,
           "m_flMaxForce": 108,
           "m_flMaxTorque": 152,
+          "m_flPlasticity": 184,
           "m_nBody1": 2,
           "m_nBody2": 4,
           "m_nFlags": 6,
@@ -6268,7 +7464,7 @@
         "alignment": 4,
         "members": {
           "Acceleration": 5,
-          "FacingDirection": 1,
+          "FacingPosition": 1,
           "GoalPosition": 11,
           "LookDirection": 2,
           "LookTarget": 8,
@@ -6384,17 +7580,129 @@
         },
         "type": "uint8"
       },
+      "CNmFloatAngleMathNode__Operation_t": {
+        "alignment": 1,
+        "members": {
+          "ClampTo180": 0,
+          "ClampTo360": 1,
+          "FlipHemisphere": 2,
+          "FlipHemisphereNegate": 3
+        },
+        "type": "uint8"
+      },
+      "CNmFloatComparisonNode__Comparison_t": {
+        "alignment": 1,
+        "members": {
+          "GreaterThan": 3,
+          "GreaterThanEqual": 0,
+          "LessThan": 4,
+          "LessThanEqual": 1,
+          "NearEqual": 2
+        },
+        "type": "uint8"
+      },
+      "CNmFloatMathNode__Operator_t": {
+        "alignment": 1,
+        "members": {
+          "Add": 0,
+          "Div": 3,
+          "Mul": 2,
+          "Sub": 1
+        },
+        "type": "uint8"
+      },
+      "CNmIDComparisonNode__Comparison_t": {
+        "alignment": 1,
+        "members": {
+          "DoesntMatch": 1,
+          "Matches": 0
+        },
+        "type": "uint8"
+      },
+      "CNmRootMotionData__SamplingMode_t": {
+        "alignment": 1,
+        "members": {
+          "Delta": 0,
+          "WorldSpace": 1
+        },
+        "type": "uint8"
+      },
+      "CNmRootMotionOverrideNode__OverrideFlags_t": {
+        "alignment": 1,
+        "members": {
+          "AllowFacingPitch": 3,
+          "AllowMoveX": 0,
+          "AllowMoveY": 1,
+          "AllowMoveZ": 2,
+          "ListenForEvents": 4
+        },
+        "type": "uint8"
+      },
+      "CNmSyncEventIndexConditionNode__TriggerMode_t": {
+        "alignment": 1,
+        "members": {
+          "ExactlyAtEventIndex": 0,
+          "GreaterThanEqualToEventIndex": 1
+        },
+        "type": "uint8"
+      },
+      "CNmTargetInfoNode__Info_t": {
+        "alignment": 4,
+        "members": {
+          "AngleHorizontal": 0,
+          "AngleVertical": 1,
+          "DeltaOrientationX": 5,
+          "DeltaOrientationY": 6,
+          "DeltaOrientationZ": 7,
+          "Distance": 2,
+          "DistanceHorizontalOnly": 3,
+          "DistanceVerticalOnly": 4
+        },
+        "type": "uint32"
+      },
+      "CNmTimeConditionNode__ComparisonType_t": {
+        "alignment": 1,
+        "members": {
+          "ElapsedTime": 2,
+          "LoopCount": 3,
+          "PercentageThroughState": 0,
+          "PercentageThroughSyncEvent": 1
+        },
+        "type": "uint8"
+      },
+      "CNmTimeConditionNode__Operator_t": {
+        "alignment": 1,
+        "members": {
+          "GreaterThan": 2,
+          "GreaterThanEqual": 3,
+          "LessThan": 0,
+          "LessThanEqual": 1
+        },
+        "type": "uint8"
+      },
       "CNmTransitionNode__TransitionOptions_t": {
         "alignment": 1,
         "members": {
           "ClampDuration": 1,
-          "MatchSourceTime": 4,
-          "MatchSyncEventID": 16,
-          "MatchSyncEventIndex": 8,
-          "MatchSyncEventPercentage": 32,
+          "MatchSourceTime": 3,
+          "MatchSyncEventID": 5,
+          "MatchSyncEventIndex": 4,
+          "MatchSyncEventPercentage": 6,
           "None": 0,
-          "PreferClosestSyncEventID": 64,
+          "PreferClosestSyncEventID": 7,
           "Synchronized": 2
+        },
+        "type": "uint8"
+      },
+      "CNmVectorInfoNode__Info_t": {
+        "alignment": 1,
+        "members": {
+          "AngleHorizontal": 4,
+          "AngleVertical": 5,
+          "Length": 3,
+          "X": 0,
+          "Y": 1,
+          "Z": 2
         },
         "type": "uint8"
       },
@@ -6730,6 +8038,14 @@
         },
         "type": "uint8"
       },
+      "NmCachedValueMode_t": {
+        "alignment": 4,
+        "members": {
+          "OnEntry": 0,
+          "OnExit": 1
+        },
+        "type": "uint32"
+      },
       "NmEasingFunction_t": {
         "alignment": 1,
         "members": {
@@ -6771,6 +8087,21 @@
           "OutQuart": 8,
           "OutQuint": 11,
           "OutSine": 14
+        },
+        "type": "uint8"
+      },
+      "NmEventConditionRules_t": {
+        "alignment": 1,
+        "members": {
+          "IgnoreInactiveEvents": 1,
+          "LimitSearchToSourceState": 0,
+          "OperatorAnd": 5,
+          "OperatorOr": 4,
+          "PreferHighestProgress": 3,
+          "PreferHighestWeight": 2,
+          "SearchBothStateAndAnimEvents": 8,
+          "SearchOnlyAnimEvents": 7,
+          "SearchOnlyStateEvents": 6
         },
         "type": "uint8"
       },
@@ -6823,7 +8154,7 @@
         "alignment": 1,
         "members": {
           "Additive": 1,
-          "GlobalSpace": 2,
+          "ModelSpace": 2,
           "Overlay": 0
         },
         "type": "uint8"
@@ -6835,6 +8166,37 @@
           "Blend": 0,
           "IgnoreSource": 2,
           "IgnoreTarget": 3
+        },
+        "type": "uint8"
+      },
+      "NmStateEventTypeCondition_t": {
+        "alignment": 1,
+        "members": {
+          "Any": 4,
+          "Entry": 0,
+          "Exit": 2,
+          "FullyInState": 1,
+          "Timed": 3
+        },
+        "type": "uint8"
+      },
+      "NmTargetWarpAlgorithm_t": {
+        "alignment": 1,
+        "members": {
+          "Bezier": 3,
+          "Hermite": 1,
+          "HermiteFeaturePreserving": 2,
+          "Lerp": 0
+        },
+        "type": "uint8"
+      },
+      "NmTargetWarpRule_t": {
+        "alignment": 1,
+        "members": {
+          "RotationOnly": 3,
+          "WarpXY": 0,
+          "WarpXYZ": 2,
+          "WarpZ": 1
         },
         "type": "uint8"
       },

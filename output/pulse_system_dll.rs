@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: pulse_system.dll
-        // Class count: 108
+        // Class count: 112
         // Enum count: 9
         pub mod pulse_system_dll {
             // Alignment: 4
@@ -45,7 +45,7 @@ pub mod cs2_dumper {
                 OngoingNotify = 0x3
             }
             // Alignment: 4
-            // Member count: 20
+            // Member count: 21
             #[repr(u32)]
             pub enum PulseValueType_t {
                 PVAL_INVALID = u32::MAX,
@@ -59,18 +59,19 @@ pub mod cs2_dumper {
                 PVAL_EHANDLE = 0x7,
                 PVAL_RESOURCE = 0x8,
                 PVAL_SNDEVT_GUID = 0x9,
-                PVAL_ENTITY_NAME = 0xA,
-                PVAL_OPAQUE_HANDLE = 0xB,
-                PVAL_TYPESAFE_INT = 0xC,
-                PVAL_CURSOR_FLOW = 0xD,
-                PVAL_ANY = 0xE,
-                PVAL_SCHEMA_ENUM = 0xF,
-                PVAL_PANORAMA_PANEL_HANDLE = 0x10,
-                PVAL_TEST_HANDLE = 0x11,
-                PVAL_COUNT = 0x12
+                PVAL_SNDEVT_NAME = 0xA,
+                PVAL_ENTITY_NAME = 0xB,
+                PVAL_OPAQUE_HANDLE = 0xC,
+                PVAL_TYPESAFE_INT = 0xD,
+                PVAL_CURSOR_FLOW = 0xE,
+                PVAL_ANY = 0xF,
+                PVAL_SCHEMA_ENUM = 0x10,
+                PVAL_PANORAMA_PANEL_HANDLE = 0x11,
+                PVAL_TEST_HANDLE = 0x12,
+                PVAL_COUNT = 0x13
             }
             // Alignment: 2
-            // Member count: 73
+            // Member count: 75
             #[repr(u16)]
             pub enum PulseInstructionCode_t {
                 INVALID = 0x0,
@@ -132,20 +133,22 @@ pub mod cs2_dumper {
                 EQ_FLOAT = 0x38,
                 EQ_STRING = 0x39,
                 EQ_ENTITY_NAME = 0x3A,
-                EQ_EHANDLE = 0x3B,
-                EQ_PANEL_HANDLE = 0x3C,
-                EQ_OPAQUE_HANDLE = 0x3D,
-                EQ_TEST_HANDLE = 0x3E,
-                NE_BOOL = 0x3F,
-                NE_INT = 0x40,
-                NE_FLOAT = 0x41,
-                NE_STRING = 0x42,
-                NE_ENTITY_NAME = 0x43,
-                NE_EHANDLE = 0x44,
-                NE_PANEL_HANDLE = 0x45,
-                NE_OPAQUE_HANDLE = 0x46,
-                NE_TEST_HANDLE = 0x47,
-                GET_CONST_INLINE_STORAGE = 0x48
+                EQ_SCHEMA_ENUM = 0x3B,
+                EQ_EHANDLE = 0x3C,
+                EQ_PANEL_HANDLE = 0x3D,
+                EQ_OPAQUE_HANDLE = 0x3E,
+                EQ_TEST_HANDLE = 0x3F,
+                NE_BOOL = 0x40,
+                NE_INT = 0x41,
+                NE_FLOAT = 0x42,
+                NE_STRING = 0x43,
+                NE_ENTITY_NAME = 0x44,
+                NE_SCHEMA_ENUM = 0x45,
+                NE_EHANDLE = 0x46,
+                NE_PANEL_HANDLE = 0x47,
+                NE_OPAQUE_HANDLE = 0x48,
+                NE_TEST_HANDLE = 0x49,
+                GET_CONST_INLINE_STORAGE = 0x4A
             }
             // Alignment: 4
             // Member count: 5
@@ -336,14 +339,6 @@ pub mod cs2_dumper {
                 pub const nTestStep: usize = 0x0; // int32
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPulseLibraryBindings
-            // MPropertyDescription
-            pub mod CPulseTestFuncs_DerivedDomain {
-            }
-            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -397,8 +392,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             pub mod CTestDomainDerived_Cursor {
-                pub const m_nCursorValueA: usize = 0xA0; // int32
-                pub const m_nCursorValueB: usize = 0xA4; // int32
+                pub const m_nCursorValueA: usize = 0xA8; // int32
+                pub const m_nCursorValueB: usize = 0xAC; // int32
             }
             // Parent: None
             // Field count: 2
@@ -462,10 +457,19 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Field count: 0
+            pub mod IGapHost_ExecLog {
+            }
+            // Parent: None
+            // Field count: 0
             //
             // Metadata:
             // MGapTypeQueriesForScopeSingleton
             pub mod CPulseTestGapTypeQueryRegistration {
+            }
+            // Parent: CPulseCell_Base
+            // Field count: 1
+            pub mod CPulseCell_Unknown {
+                pub const m_UnknownKeys: usize = 0x48; // KeyValues3
             }
             // Parent: CPulseCell_BaseFlow
             // Field count: 2
@@ -509,7 +513,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_Outflow_CycleShuffled__InstanceState_t {
-                pub const m_Shuffle: usize = 0x0; // CUtlVectorFixedGrowable<uint8>
+                pub const m_Shuffle: usize = 0x0; // CUtlVectorFixedGrowable<uint8,8>
                 pub const m_nNextShuffle: usize = 0x20; // int32
             }
             // Parent: CPulseCell_Base
@@ -553,6 +557,10 @@ pub mod cs2_dumper {
             pub mod CPulseCell_BaseLerp__CursorState_t {
                 pub const m_StartTime: usize = 0x0; // GameTime_t
                 pub const m_EndTime: usize = 0x4; // GameTime_t
+            }
+            // Parent: IGapHost_ExecLog
+            // Field count: 0
+            pub mod IGapHost_Cursor {
             }
             // Parent: None
             // Field count: 3
@@ -608,6 +616,7 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseRequirementPass
+            // MPulseRequirementSummaryExpr
             pub mod CPulseCell_LimitCount {
                 pub const m_nLimitCount: usize = 0x48; // int32
             }
@@ -706,7 +715,7 @@ pub mod cs2_dumper {
                 pub const m_WakeFail: usize = 0xA8; // CPulse_ResumePoint
             }
             // Parent: CPulseCell_Inflow_BaseEntrypoint
-            // Field count: 1
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -715,6 +724,7 @@ pub mod cs2_dumper {
             // MPulseCellOutflowHookInfo
             pub mod CPulseCell_Inflow_ObservableVariableListener {
                 pub const m_BlackboardReference: usize = 0x70; // CPulse_BlackboardReference
+                pub const m_bSelfReference: usize = 0x168; // bool
             }
             // Parent: CPulseCell_BaseFlow
             // Field count: 0
@@ -893,6 +903,10 @@ pub mod cs2_dumper {
             pub mod PulseRuntimeBlackboardReferenceIndex_t {
                 pub const m_Value: usize = 0x0; // int16
             }
+            // Parent: IGapHost_Cursor
+            // Field count: 0
+            pub mod IGapHost_YieldingCursor {
+            }
             // Parent: CPulse_OutflowConnection
             // Field count: 0
             pub mod SignatureOutflow_Continue {
@@ -1020,12 +1034,25 @@ pub mod cs2_dumper {
                 pub const m_nWrittenByInstruction: usize = 0x50; // int32
                 pub const m_nLastReadByInstruction: usize = 0x54; // int32
             }
+            // Parent: CPulseCell_BaseValue
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MCellForDomain
+            // MPulseCellMethodBindings
+            // MPulseCellOutflowHookInfo
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            // MPulseEditorHeaderIcon
+            pub mod CPulseCell_Value_RandomFloat {
+            }
             // Parent: None
             // Field count: 1
             pub mod PulseRuntimeCellIndex_t {
                 pub const m_Value: usize = 0x0; // int32
             }
-            // Parent: None
+            // Parent: IGapHost_YieldingCursor
             // Field count: 0
             pub mod CPulseExecCursor {
             }
@@ -1211,10 +1238,10 @@ pub mod cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             pub mod CPulseTurtleGraphicsCursor {
-                pub const m_Color: usize = 0xA0; // Color
-                pub const m_vPos: usize = 0xA4; // Vector2D
-                pub const m_flHeadingDeg: usize = 0xAC; // float32
-                pub const m_bPenUp: usize = 0xB0; // bool
+                pub const m_Color: usize = 0xA8; // Color
+                pub const m_vPos: usize = 0xAC; // Vector2D
+                pub const m_flHeadingDeg: usize = 0xB4; // float32
+                pub const m_bPenUp: usize = 0xB8; // bool
             }
         }
     }

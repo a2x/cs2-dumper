@@ -343,6 +343,7 @@
       "WorldNode_t": {
         "fields": {
           "m_aggregateSceneObjects": 72,
+          "m_bHasBakedGeometryFlag": 320,
           "m_clutterSceneObjects": 96,
           "m_extraVertexStreamOverrides": 120,
           "m_extraVertexStreams": 168,
@@ -384,8 +385,10 @@
       "ObjectTypeFlags_t": {
         "alignment": 4,
         "members": {
+          "OBJECT_TYPE_BAKED_GEOMETRY": 131072,
           "OBJECT_TYPE_BLOCK_LIGHT": 16,
           "OBJECT_TYPE_DISABLED_IN_LOW_QUALITY": 128,
+          "OBJECT_TYPE_DISABLE_VIS_CULLING": 65536,
           "OBJECT_TYPE_MODEL": 8,
           "OBJECT_TYPE_MODEL_HAS_LODS": 2048,
           "OBJECT_TYPE_NONE": 0,

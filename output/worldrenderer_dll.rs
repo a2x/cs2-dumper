@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -10,7 +10,7 @@ pub mod cs2_dumper {
         // Enum count: 1
         pub mod worldrenderer_dll {
             // Alignment: 4
-            // Member count: 13
+            // Member count: 15
             #[repr(u32)]
             pub enum ObjectTypeFlags_t {
                 OBJECT_TYPE_NONE = 0x0,
@@ -25,7 +25,9 @@ pub mod cs2_dumper {
                 OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
                 OBJECT_TYPE_OVERLAY = 0x2000,
                 OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
+                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
+                OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
+                OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
             }
             // Parent: None
             // Field count: 14
@@ -150,7 +152,7 @@ pub mod cs2_dumper {
                 pub const m_entityKeyValues: usize = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 13
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -168,6 +170,7 @@ pub mod cs2_dumper {
                 pub const m_overlayLayerIndices: usize = 0xF0; // CUtlVector<uint8>
                 pub const m_grassFileName: usize = 0x108; // CUtlString
                 pub const m_nodeLightingInfo: usize = 0x110; // BakedLightingInfo_t
+                pub const m_bHasBakedGeometryFlag: usize = 0x140; // bool
             }
             // Parent: None
             // Field count: 1

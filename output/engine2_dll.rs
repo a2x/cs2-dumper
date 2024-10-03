@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: engine2.dll
-        // Class count: 44
+        // Class count: 48
         // Enum count: 4
         pub mod engine2_dll {
             // Alignment: 4
@@ -94,6 +94,15 @@ pub mod cs2_dumper {
                 pub const m_nPriority: usize = 0x18; // int32
                 pub const m_pNext: usize = 0x20; // CEntityComponentHelper*
             }
+            // Parent: None
+            // Field count: 1
+            pub mod GameTime_t {
+                pub const m_Value: usize = 0x0; // float32
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod EventServerEndAsyncPostTickWork_t {
+            }
             // Parent: EventAdvanceTick_t
             // Field count: 0
             pub mod EventClientAdvanceTick_t {
@@ -119,6 +128,11 @@ pub mod cs2_dumper {
                 pub const m_flRenderFrameTime: usize = 0x30; // float32
                 pub const m_flRenderFrameTimeUnbounded: usize = 0x34; // float32
                 pub const m_bRenderOnly: usize = 0x38; // bool
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod GameTick_t {
+                pub const m_Value: usize = 0x0; // int32
             }
             // Parent: None
             // Field count: 2
@@ -175,8 +189,9 @@ pub mod cs2_dumper {
             pub mod EventClientPauseSimulate_t {
             }
             // Parent: None
-            // Field count: 0
+            // Field count: 1
             pub mod EventClientProcessNetworking_t {
+                pub const m_nTickCount: usize = 0x0; // int32
             }
             // Parent: EventSimulate_t
             // Field count: 4
@@ -282,6 +297,10 @@ pub mod cs2_dumper {
             // Field count: 1
             pub mod EventClientPollNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
+            }
+            // Parent: EventPostAdvanceTick_t
+            // Field count: 0
+            pub mod EventServerBeginAsyncPostTickWork_t {
             }
             // Parent: None
             // Field count: 4

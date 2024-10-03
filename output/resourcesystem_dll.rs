@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Class count: 58
+        // Class count: 59
         // Enum count: 2
         pub mod resourcesystem_dll {
             // Alignment: 1
@@ -29,6 +29,13 @@ pub mod cs2_dumper {
             pub enum FuseVariableAccess_t {
                 WRITABLE = 0x0,
                 READ_ONLY = 0x1
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCNmIKRig {
             }
             // Parent: None
             // Field count: 0

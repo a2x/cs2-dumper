@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #pragma once
 
@@ -12,7 +12,7 @@ namespace cs2_dumper {
         // Enum count: 1
         namespace worldrenderer_dll {
             // Alignment: 4
-            // Member count: 13
+            // Member count: 15
             enum class ObjectTypeFlags_t : uint32_t {
                 OBJECT_TYPE_NONE = 0x0,
                 OBJECT_TYPE_MODEL = 0x8,
@@ -26,7 +26,9 @@ namespace cs2_dumper {
                 OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
                 OBJECT_TYPE_OVERLAY = 0x2000,
                 OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
+                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
+                OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
+                OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
             };
             // Parent: None
             // Field count: 14
@@ -151,7 +153,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 13
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -169,6 +171,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_overlayLayerIndices = 0xF0; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_grassFileName = 0x108; // CUtlString
                 constexpr std::ptrdiff_t m_nodeLightingInfo = 0x110; // BakedLightingInfo_t
+                constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x140; // bool
             }
             // Parent: None
             // Field count: 1

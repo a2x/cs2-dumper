@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: engine2.dll
-        // Class count: 44
+        // Class count: 48
         // Enum count: 4
         namespace engine2_dll {
             // Alignment: 4
@@ -92,6 +92,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nPriority = 0x18; // int32
                 constexpr std::ptrdiff_t m_pNext = 0x20; // CEntityComponentHelper*
             }
+            // Parent: None
+            // Field count: 1
+            namespace GameTime_t {
+                constexpr std::ptrdiff_t m_Value = 0x0; // float32
+            }
+            // Parent: None
+            // Field count: 0
+            namespace EventServerEndAsyncPostTickWork_t {
+            }
             // Parent: EventAdvanceTick_t
             // Field count: 0
             namespace EventClientAdvanceTick_t {
@@ -117,6 +126,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRenderFrameTime = 0x30; // float32
                 constexpr std::ptrdiff_t m_flRenderFrameTimeUnbounded = 0x34; // float32
                 constexpr std::ptrdiff_t m_bRenderOnly = 0x38; // bool
+            }
+            // Parent: None
+            // Field count: 1
+            namespace GameTick_t {
+                constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
             // Parent: None
             // Field count: 2
@@ -173,8 +187,9 @@ namespace cs2_dumper {
             namespace EventClientPauseSimulate_t {
             }
             // Parent: None
-            // Field count: 0
+            // Field count: 1
             namespace EventClientProcessNetworking_t {
+                constexpr std::ptrdiff_t m_nTickCount = 0x0; // int32
             }
             // Parent: EventSimulate_t
             // Field count: 4
@@ -280,6 +295,10 @@ namespace cs2_dumper {
             // Field count: 1
             namespace EventClientPollNetworking_t {
                 constexpr std::ptrdiff_t m_nTickCount = 0x0; // int32
+            }
+            // Parent: EventPostAdvanceTick_t
+            // Field count: 0
+            namespace EventServerBeginAsyncPostTickWork_t {
             }
             // Parent: None
             // Field count: 4

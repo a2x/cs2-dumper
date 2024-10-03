@@ -26,7 +26,7 @@ pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<ButtonMap>
 
     if !view
         .scanner()
-        .finds_code(pattern!("488b15${'} 4885d2 74? 0f1f40"), &mut save)
+        .finds_code(pattern!("488b15${'} 4885d2 74? 488b02 4885c0"), &mut save)
     {
         bail!("outdated button list pattern");
     }

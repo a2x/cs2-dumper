@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: resourcesystem.dll
-        // Class count: 58
+        // Class count: 59
         // Enum count: 2
         namespace resourcesystem_dll {
             // Alignment: 1
@@ -30,6 +30,13 @@ namespace cs2_dumper {
                 WRITABLE = 0x0,
                 READ_ONLY = 0x1
             };
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCNmIKRig {
+            }
             // Parent: None
             // Field count: 0
             //

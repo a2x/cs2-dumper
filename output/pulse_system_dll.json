@@ -269,7 +269,8 @@
       },
       "CPulseCell_Inflow_ObservableVariableListener": {
         "fields": {
-          "m_BlackboardReference": 112
+          "m_BlackboardReference": 112,
+          "m_bSelfReference": 360
         },
         "metadata": [
           {
@@ -382,6 +383,10 @@
           },
           {
             "name": "MPulseRequirementPass",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseRequirementSummaryExpr",
             "type": "Unknown"
           }
         ],
@@ -1008,6 +1013,13 @@
         ],
         "parent": null
       },
+      "CPulseCell_Unknown": {
+        "fields": {
+          "m_UnknownKeys": 72
+        },
+        "metadata": [],
+        "parent": "CPulseCell_Base"
+      },
       "CPulseCell_Val_TestDomainFindEntityByName": {
         "fields": {},
         "metadata": [
@@ -1055,6 +1067,40 @@
           },
           {
             "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CPulseCell_BaseValue"
+      },
+      "CPulseCell_Value_RandomFloat": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MCellForDomain",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseCellMethodBindings",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseCellOutflowHookInfo",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
             "type": "Unknown"
           }
         ],
@@ -1198,7 +1244,7 @@
       "CPulseExecCursor": {
         "fields": {},
         "metadata": [],
-        "parent": null
+        "parent": "IGapHost_YieldingCursor"
       },
       "CPulseGraphDef": {
         "fields": {
@@ -1336,20 +1382,6 @@
         ],
         "parent": null
       },
-      "CPulseTestFuncs_DerivedDomain": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseLibraryBindings",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseTestFuncs_LibraryA": {
         "fields": {},
         "metadata": [
@@ -1390,10 +1422,10 @@
       },
       "CPulseTurtleGraphicsCursor": {
         "fields": {
-          "m_Color": 160,
-          "m_bPenUp": 176,
-          "m_flHeadingDeg": 172,
-          "m_vPos": 164
+          "m_Color": 168,
+          "m_bPenUp": 184,
+          "m_flHeadingDeg": 180,
+          "m_vPos": 172
         },
         "metadata": [
           {
@@ -1572,8 +1604,8 @@
       },
       "CTestDomainDerived_Cursor": {
         "fields": {
-          "m_nCursorValueA": 160,
-          "m_nCursorValueB": 164
+          "m_nCursorValueA": 168,
+          "m_nCursorValueB": 172
         },
         "metadata": [
           {
@@ -1624,6 +1656,21 @@
           }
         ],
         "parent": null
+      },
+      "IGapHost_Cursor": {
+        "fields": {},
+        "metadata": [],
+        "parent": "IGapHost_ExecLog"
+      },
+      "IGapHost_ExecLog": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "IGapHost_YieldingCursor": {
+        "fields": {},
+        "metadata": [],
+        "parent": "IGapHost_Cursor"
       },
       "PGDInstruction_t": {
         "fields": {
@@ -1915,17 +1962,18 @@
           "DIV_INT": 46,
           "EQ": 27,
           "EQ_BOOL": 54,
-          "EQ_EHANDLE": 59,
+          "EQ_EHANDLE": 60,
           "EQ_ENTITY_NAME": 58,
           "EQ_FLOAT": 56,
           "EQ_INT": 55,
-          "EQ_OPAQUE_HANDLE": 61,
-          "EQ_PANEL_HANDLE": 60,
+          "EQ_OPAQUE_HANDLE": 62,
+          "EQ_PANEL_HANDLE": 61,
+          "EQ_SCHEMA_ENUM": 59,
           "EQ_STRING": 57,
-          "EQ_TEST_HANDLE": 62,
+          "EQ_TEST_HANDLE": 63,
           "GET_BLACKBOARD_REFERENCE": 33,
           "GET_CONST": 15,
-          "GET_CONST_INLINE_STORAGE": 72,
+          "GET_CONST_INLINE_STORAGE": 74,
           "GET_DOMAIN_VALUE": 16,
           "GET_VAR": 14,
           "IMMEDIATE_HALT": 1,
@@ -1950,15 +1998,16 @@
           "NEGATE": 19,
           "NEGATE_FLOAT": 38,
           "NEGATE_INT": 37,
-          "NE_BOOL": 63,
-          "NE_EHANDLE": 68,
-          "NE_ENTITY_NAME": 67,
-          "NE_FLOAT": 65,
-          "NE_INT": 64,
-          "NE_OPAQUE_HANDLE": 70,
-          "NE_PANEL_HANDLE": 69,
-          "NE_STRING": 66,
-          "NE_TEST_HANDLE": 71,
+          "NE_BOOL": 64,
+          "NE_EHANDLE": 70,
+          "NE_ENTITY_NAME": 68,
+          "NE_FLOAT": 66,
+          "NE_INT": 65,
+          "NE_OPAQUE_HANDLE": 72,
+          "NE_PANEL_HANDLE": 71,
+          "NE_SCHEMA_ENUM": 69,
+          "NE_STRING": 67,
+          "NE_TEST_HANDLE": 73,
           "NOP": 4,
           "NOT": 18,
           "OR": 30,
@@ -2007,25 +2056,26 @@
       "PulseValueType_t": {
         "alignment": 4,
         "members": {
-          "PVAL_ANY": 14,
+          "PVAL_ANY": 15,
           "PVAL_BOOL": 0,
           "PVAL_COLOR_RGB": 6,
-          "PVAL_COUNT": 18,
-          "PVAL_CURSOR_FLOW": 13,
+          "PVAL_COUNT": 19,
+          "PVAL_CURSOR_FLOW": 14,
           "PVAL_EHANDLE": 7,
-          "PVAL_ENTITY_NAME": 10,
+          "PVAL_ENTITY_NAME": 11,
           "PVAL_FLOAT": 2,
           "PVAL_INT": 1,
           "PVAL_INVALID": -1,
-          "PVAL_OPAQUE_HANDLE": 11,
-          "PVAL_PANORAMA_PANEL_HANDLE": 16,
+          "PVAL_OPAQUE_HANDLE": 12,
+          "PVAL_PANORAMA_PANEL_HANDLE": 17,
           "PVAL_RESOURCE": 8,
-          "PVAL_SCHEMA_ENUM": 15,
+          "PVAL_SCHEMA_ENUM": 16,
           "PVAL_SNDEVT_GUID": 9,
+          "PVAL_SNDEVT_NAME": 10,
           "PVAL_STRING": 3,
-          "PVAL_TEST_HANDLE": 17,
+          "PVAL_TEST_HANDLE": 18,
           "PVAL_TRANSFORM": 5,
-          "PVAL_TYPESAFE_INT": 12,
+          "PVAL_TYPESAFE_INT": 13,
           "PVAL_VEC3": 4
         },
         "type": "uint32"

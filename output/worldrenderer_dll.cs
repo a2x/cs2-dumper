@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
@@ -7,7 +7,7 @@ namespace CS2Dumper.Schemas {
     // Enum count: 1
     public static class WorldrendererDll {
         // Alignment: 4
-        // Member count: 13
+        // Member count: 15
         public enum ObjectTypeFlags_t : uint {
             OBJECT_TYPE_NONE = 0x0,
             OBJECT_TYPE_MODEL = 0x8,
@@ -21,7 +21,9 @@ namespace CS2Dumper.Schemas {
             OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
             OBJECT_TYPE_OVERLAY = 0x2000,
             OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-            OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000
+            OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
+            OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
+            OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
         }
         // Parent: None
         // Field count: 14
@@ -146,7 +148,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
         }
         // Parent: None
-        // Field count: 13
+        // Field count: 14
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -164,6 +166,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_overlayLayerIndices = 0xF0; // CUtlVector<uint8>
             public const nint m_grassFileName = 0x108; // CUtlString
             public const nint m_nodeLightingInfo = 0x110; // BakedLightingInfo_t
+            public const nint m_bHasBakedGeometryFlag = 0x140; // bool
         }
         // Parent: None
         // Field count: 1

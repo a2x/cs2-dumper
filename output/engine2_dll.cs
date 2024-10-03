@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-09-09 23:55:40.648124500 UTC
+// 2024-10-03 03:30:01.044566 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: engine2.dll
-    // Class count: 44
+    // Class count: 48
     // Enum count: 4
     public static class Engine2Dll {
         // Alignment: 4
@@ -87,6 +87,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPriority = 0x18; // int32
             public const nint m_pNext = 0x20; // CEntityComponentHelper*
         }
+        // Parent: None
+        // Field count: 1
+        public static class GameTime_t {
+            public const nint m_Value = 0x0; // float32
+        }
+        // Parent: None
+        // Field count: 0
+        public static class EventServerEndAsyncPostTickWork_t {
+        }
         // Parent: EventAdvanceTick_t
         // Field count: 0
         public static class EventClientAdvanceTick_t {
@@ -112,6 +121,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRenderFrameTime = 0x30; // float32
             public const nint m_flRenderFrameTimeUnbounded = 0x34; // float32
             public const nint m_bRenderOnly = 0x38; // bool
+        }
+        // Parent: None
+        // Field count: 1
+        public static class GameTick_t {
+            public const nint m_Value = 0x0; // int32
         }
         // Parent: None
         // Field count: 2
@@ -168,8 +182,9 @@ namespace CS2Dumper.Schemas {
         public static class EventClientPauseSimulate_t {
         }
         // Parent: None
-        // Field count: 0
+        // Field count: 1
         public static class EventClientProcessNetworking_t {
+            public const nint m_nTickCount = 0x0; // int32
         }
         // Parent: EventSimulate_t
         // Field count: 4
@@ -275,6 +290,10 @@ namespace CS2Dumper.Schemas {
         // Field count: 1
         public static class EventClientPollNetworking_t {
             public const nint m_nTickCount = 0x0; // int32
+        }
+        // Parent: EventPostAdvanceTick_t
+        // Field count: 0
+        public static class EventServerBeginAsyncPostTickWork_t {
         }
         // Parent: None
         // Field count: 4

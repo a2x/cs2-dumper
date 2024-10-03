@@ -83,18 +83,18 @@ pattern_map! {
         "dwGameEntitySystem" => pattern!("488b1d${'} 48891d") => None,
         "dwGameEntitySystem_highestEntityIndex" => pattern!("8b81u2?? 8902 488bc2 c3 cccccccc 48895c24? 48896c24") => None,
         "dwGameRules" => pattern!("48891d${'} ff15${} 84c0") => None,
-        "dwGlobalVars" => pattern!("48890d${'} 488941") => None,
+        "dwGlobalVars" => pattern!("488915${'} 488942") => None,
         "dwGlowManager" => pattern!("488b05${'} c3 cccccccccccccccc 8b41") => None,
         "dwLocalPlayerController" => pattern!("488905${'} 8b9e") => None,
         "dwPlantedC4" => pattern!("488b15${'} 41ffc0") => None,
         "dwPrediction" => pattern!("488d05${'} c3 cccccccccccccccc 4883ec? 8b0d") => Some(|_view, map, rva| {
-            map.insert("dwLocalPlayerPawn".to_string(), rva + 0x160);
+            map.insert("dwLocalPlayerPawn".to_string(), rva + 0x168);
         }),
-        "dwSensitivity" => pattern!("488b05${'} 488b40? f3410f59f4") => None,
+        "dwSensitivity" => pattern!("488d0d${[8]'} 440f28c1 0f28f3 0f28fa e8") => None,
         "dwSensitivity_sensitivity" => pattern!("ff50u1 4c8bc6 488d55? 488bcf e8${} 84c0 0f85${} 4c8d45? 8bd3 488bcf e8${} e9${} f30f1006") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
-        "dwWeaponC4" => pattern!("488b15${'} ffc0 8905${} 488bc6 488934ea 488b6c24? c686[5] 80be") => None,
+        "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905[4] 488bc6 488934ea 488b6c24? c686[5] 80be") => None,
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
@@ -130,11 +130,8 @@ pattern_map! {
 pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap> {
     let mut map = BTreeMap::new();
 
-    let modules = [
-        (
-            "client.dll",
-            client::offsets as fn(PeView) -> BTreeMap<String, u32>,
-        ),
+    let modules: [(&str, fn(PeView) -> BTreeMap<String, u32>); 5] = [
+        ("client.dll", client::offsets),
         ("engine2.dll", engine2::offsets),
         ("inputsystem.dll", input_system::offsets),
         ("matchmaking.dll", matchmaking::offsets),
@@ -223,10 +220,10 @@ mod tests {
 
         let cur_map_name = {
             let addr = process
-                .read_addr64((global_vars + 0x1B8).into())
+                .read_addr64((global_vars + 0x180).into())
                 .data_part()?;
 
-            process.read_utf8(addr, 4096).data_part()?
+            process.read_utf8(addr, 128).data_part()?
         };
 
         println!("current map name: {}", cur_map_name);
