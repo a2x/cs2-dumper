@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-03 03:30:01.044566 UTC
+// 2024-10-05 04:26:11.464349700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -3664,7 +3664,7 @@ pub mod cs2_dumper {
                 pub const m_bOrphanInsteadOfDeletingChildrenOnRemove: usize = 0x568; // bool
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawn>)
@@ -3690,12 +3690,13 @@ pub mod cs2_dumper {
                 pub const m_szPlayerRecipientName: usize = 0x40; // CUtlString
                 pub const m_DamagerXuid: usize = 0x48; // uint64
                 pub const m_RecipientXuid: usize = 0x50; // uint64
-                pub const m_iDamage: usize = 0x58; // int32
-                pub const m_iActualHealthRemoved: usize = 0x5C; // int32
-                pub const m_iNumHits: usize = 0x60; // int32
-                pub const m_iLastBulletUpdate: usize = 0x64; // int32
-                pub const m_bIsOtherEnemy: usize = 0x68; // bool
-                pub const m_killType: usize = 0x69; // EKillTypes_t
+                pub const m_iBulletsDamage: usize = 0x58; // int32
+                pub const m_iDamage: usize = 0x5C; // int32
+                pub const m_iActualHealthRemoved: usize = 0x60; // int32
+                pub const m_iNumHits: usize = 0x64; // int32
+                pub const m_iLastBulletUpdate: usize = 0x68; // int32
+                pub const m_bIsOtherEnemy: usize = 0x6C; // bool
+                pub const m_killType: usize = 0x6D; // EKillTypes_t
             }
             // Parent: C_BaseEntity
             // Field count: 0

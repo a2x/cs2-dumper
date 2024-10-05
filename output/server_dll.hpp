@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-03 03:30:01.044566 UTC
+// 2024-10-05 04:26:11.464349700 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: server.dll
         // Class count: 653
-        // Enum count: 137
+        // Enum count: 138
         namespace server_dll {
             // Alignment: 4
             // Member count: 3
@@ -1381,6 +1381,13 @@ namespace cs2_dumper {
                 INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP = 0x0,
                 INSERT_INTO_CURRENTLY_ACTIVE_SPAWN_GROUP = 0x1,
                 INSERT_INTO_NEWLY_CREATED_SPAWN_GROUP = 0x2
+            };
+            // Alignment: 1
+            // Member count: 3
+            enum class EContributionScoreFlag_t : uint8_t {
+                k_EContributionScoreFlag_Default = 0x0,
+                k_EContributionScoreFlag_Objective = 0x1,
+                k_EContributionScoreFlag_Bullets = 0x2
             };
             // Alignment: 4
             // Member count: 3
@@ -5587,7 +5594,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bOrphanInsteadOfDeletingChildrenOnRemove = 0x4E0; // bool
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawn>)
@@ -5613,12 +5620,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_szPlayerRecipientName = 0x40; // CUtlString
                 constexpr std::ptrdiff_t m_DamagerXuid = 0x48; // uint64
                 constexpr std::ptrdiff_t m_RecipientXuid = 0x50; // uint64
-                constexpr std::ptrdiff_t m_iDamage = 0x58; // int32
-                constexpr std::ptrdiff_t m_iActualHealthRemoved = 0x5C; // int32
-                constexpr std::ptrdiff_t m_iNumHits = 0x60; // int32
-                constexpr std::ptrdiff_t m_iLastBulletUpdate = 0x64; // int32
-                constexpr std::ptrdiff_t m_bIsOtherEnemy = 0x68; // bool
-                constexpr std::ptrdiff_t m_killType = 0x69; // EKillTypes_t
+                constexpr std::ptrdiff_t m_iBulletsDamage = 0x58; // int32
+                constexpr std::ptrdiff_t m_iDamage = 0x5C; // int32
+                constexpr std::ptrdiff_t m_iActualHealthRemoved = 0x60; // int32
+                constexpr std::ptrdiff_t m_iNumHits = 0x64; // int32
+                constexpr std::ptrdiff_t m_iLastBulletUpdate = 0x68; // int32
+                constexpr std::ptrdiff_t m_bIsOtherEnemy = 0x6C; // bool
+                constexpr std::ptrdiff_t m_killType = 0x6D; // EKillTypes_t
             }
             // Parent: CLogicalEntity
             // Field count: 3
