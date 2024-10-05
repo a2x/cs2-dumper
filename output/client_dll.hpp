@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-03 03:30:01.044566 UTC
+// 2024-10-05 04:26:11.464349700 UTC
 
 #pragma once
 
@@ -3659,7 +3659,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bOrphanInsteadOfDeletingChildrenOnRemove = 0x568; // bool
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawn>)
@@ -3685,12 +3685,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_szPlayerRecipientName = 0x40; // CUtlString
                 constexpr std::ptrdiff_t m_DamagerXuid = 0x48; // uint64
                 constexpr std::ptrdiff_t m_RecipientXuid = 0x50; // uint64
-                constexpr std::ptrdiff_t m_iDamage = 0x58; // int32
-                constexpr std::ptrdiff_t m_iActualHealthRemoved = 0x5C; // int32
-                constexpr std::ptrdiff_t m_iNumHits = 0x60; // int32
-                constexpr std::ptrdiff_t m_iLastBulletUpdate = 0x64; // int32
-                constexpr std::ptrdiff_t m_bIsOtherEnemy = 0x68; // bool
-                constexpr std::ptrdiff_t m_killType = 0x69; // EKillTypes_t
+                constexpr std::ptrdiff_t m_iBulletsDamage = 0x58; // int32
+                constexpr std::ptrdiff_t m_iDamage = 0x5C; // int32
+                constexpr std::ptrdiff_t m_iActualHealthRemoved = 0x60; // int32
+                constexpr std::ptrdiff_t m_iNumHits = 0x64; // int32
+                constexpr std::ptrdiff_t m_iLastBulletUpdate = 0x68; // int32
+                constexpr std::ptrdiff_t m_bIsOtherEnemy = 0x6C; // bool
+                constexpr std::ptrdiff_t m_killType = 0x6D; // EKillTypes_t
             }
             // Parent: C_BaseEntity
             // Field count: 0

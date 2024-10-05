@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-03 03:30:01.044566 UTC
+// 2024-10-05 04:26:11.464349700 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x181A1B0;
-        public const nint EmptyWorldService001_Client = 0x17D5A30;
-        public const nint GameClientExports001 = 0x1816E68;
-        public const nint LegacyGameUI001 = 0x1836F10;
-        public const nint Source2Client002 = 0x1A16380;
-        public const nint Source2ClientConfig001 = 0x19B64E0;
-        public const nint Source2ClientPrediction001 = 0x1821F60;
-        public const nint Source2ClientUI001 = 0x18358B0;
+        public const nint ClientToolsInfo_001 = 0x181B210;
+        public const nint EmptyWorldService001_Client = 0x17D6A70;
+        public const nint GameClientExports001 = 0x1817EC8;
+        public const nint LegacyGameUI001 = 0x1837F60;
+        public const nint Source2Client002 = 0x1A17420;
+        public const nint Source2ClientConfig001 = 0x19B7550;
+        public const nint Source2ClientPrediction001 = 0x1822FC0;
+        public const nint Source2ClientUI001 = 0x1836900;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -124,7 +124,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: particles.dll
     public static class ParticlesDll {
-        public const nint ParticleSystemMgr003 = 0x5E23F0;
+        public const nint ParticleSystemMgr003 = 0x5E2390;
     }
     // Module: pulse_system.dll
     public static class PulseSystemDll {
@@ -157,16 +157,16 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: server.dll
     public static class ServerDll {
-        public const nint EmptyWorldService001_Server = 0x1359620;
-        public const nint EntitySubclassUtilsV001 = 0x130B050;
-        public const nint NavGameTest001 = 0x13F9988;
-        public const nint ServerToolsInfo_001 = 0x13AE998;
-        public const nint Source2GameClients001 = 0x13A9340;
-        public const nint Source2GameDirector001 = 0x14DCDF0;
-        public const nint Source2GameEntities001 = 0x13AE8C0;
-        public const nint Source2Server001 = 0x13AE730;
-        public const nint Source2ServerConfig001 = 0x1596AC8;
-        public const nint customnavsystem001 = 0x12EFBA8;
+        public const nint EmptyWorldService001_Server = 0x135A690;
+        public const nint EntitySubclassUtilsV001 = 0x130C050;
+        public const nint NavGameTest001 = 0x13FAA38;
+        public const nint ServerToolsInfo_001 = 0x13AFA28;
+        public const nint Source2GameClients001 = 0x13AA3D0;
+        public const nint Source2GameDirector001 = 0x14DDEB0;
+        public const nint Source2GameEntities001 = 0x13AF950;
+        public const nint Source2Server001 = 0x13AF7C0;
+        public const nint Source2ServerConfig001 = 0x1597B88;
+        public const nint customnavsystem001 = 0x12F0BA8;
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {

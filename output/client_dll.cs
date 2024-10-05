@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-03 03:30:01.044566 UTC
+// 2024-10-05 04:26:11.464349700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -3654,7 +3654,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bOrphanInsteadOfDeletingChildrenOnRemove = 0x568; // bool
         }
         // Parent: None
-        // Field count: 14
+        // Field count: 15
         //
         // Metadata:
         // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawn>)
@@ -3680,12 +3680,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_szPlayerRecipientName = 0x40; // CUtlString
             public const nint m_DamagerXuid = 0x48; // uint64
             public const nint m_RecipientXuid = 0x50; // uint64
-            public const nint m_iDamage = 0x58; // int32
-            public const nint m_iActualHealthRemoved = 0x5C; // int32
-            public const nint m_iNumHits = 0x60; // int32
-            public const nint m_iLastBulletUpdate = 0x64; // int32
-            public const nint m_bIsOtherEnemy = 0x68; // bool
-            public const nint m_killType = 0x69; // EKillTypes_t
+            public const nint m_iBulletsDamage = 0x58; // int32
+            public const nint m_iDamage = 0x5C; // int32
+            public const nint m_iActualHealthRemoved = 0x60; // int32
+            public const nint m_iNumHits = 0x64; // int32
+            public const nint m_iLastBulletUpdate = 0x68; // int32
+            public const nint m_bIsOtherEnemy = 0x6C; // bool
+            public const nint m_killType = 0x6D; // EKillTypes_t
         }
         // Parent: C_BaseEntity
         // Field count: 0

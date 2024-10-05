@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-03 03:30:01.044566 UTC
+// 2024-10-05 04:26:11.464349700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: server.dll
         // Class count: 653
-        // Enum count: 137
+        // Enum count: 138
         pub mod server_dll {
             // Alignment: 4
             // Member count: 3
@@ -1466,6 +1466,14 @@ pub mod cs2_dumper {
                 INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP = 0x0,
                 INSERT_INTO_CURRENTLY_ACTIVE_SPAWN_GROUP = 0x1,
                 INSERT_INTO_NEWLY_CREATED_SPAWN_GROUP = 0x2
+            }
+            // Alignment: 1
+            // Member count: 3
+            #[repr(u8)]
+            pub enum EContributionScoreFlag_t {
+                k_EContributionScoreFlag_Default = 0x0,
+                k_EContributionScoreFlag_Objective = 0x1,
+                k_EContributionScoreFlag_Bullets = 0x2
             }
             // Alignment: 4
             // Member count: 3
@@ -5687,7 +5695,7 @@ pub mod cs2_dumper {
                 pub const m_bOrphanInsteadOfDeletingChildrenOnRemove: usize = 0x4E0; // bool
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // NetworkVarNames: m_PlayerDamager (CHandle<CCSPlayerPawn>)
@@ -5713,12 +5721,13 @@ pub mod cs2_dumper {
                 pub const m_szPlayerRecipientName: usize = 0x40; // CUtlString
                 pub const m_DamagerXuid: usize = 0x48; // uint64
                 pub const m_RecipientXuid: usize = 0x50; // uint64
-                pub const m_iDamage: usize = 0x58; // int32
-                pub const m_iActualHealthRemoved: usize = 0x5C; // int32
-                pub const m_iNumHits: usize = 0x60; // int32
-                pub const m_iLastBulletUpdate: usize = 0x64; // int32
-                pub const m_bIsOtherEnemy: usize = 0x68; // bool
-                pub const m_killType: usize = 0x69; // EKillTypes_t
+                pub const m_iBulletsDamage: usize = 0x58; // int32
+                pub const m_iDamage: usize = 0x5C; // int32
+                pub const m_iActualHealthRemoved: usize = 0x60; // int32
+                pub const m_iNumHits: usize = 0x64; // int32
+                pub const m_iLastBulletUpdate: usize = 0x68; // int32
+                pub const m_bIsOtherEnemy: usize = 0x6C; // bool
+                pub const m_killType: usize = 0x6D; // EKillTypes_t
             }
             // Parent: CLogicalEntity
             // Field count: 3
