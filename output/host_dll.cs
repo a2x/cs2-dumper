@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-05 04:26:11.464349700 UTC
+// 2024-10-09 00:40:16.266688100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: host.dll
@@ -9,12 +9,12 @@ namespace CS2Dumper.Schemas {
         // Parent: CAnimScriptBase
         // Field count: 1
         public static class EmptyTestScript {
-            public const nint m_hTest = 0x10; // CAnimScriptParam<float32>
+            public const nint m_hTest = 0x10; // 
         }
         // Parent: None
         // Field count: 1
         public static class CAnimScriptBase {
-            public const nint m_bIsValid = 0x8; // bool
+            public const nint m_bIsValid = 0x8; // 
         }
     }
 }
