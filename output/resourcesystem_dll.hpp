@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-05 04:26:11.464349700 UTC
+// 2024-10-09 00:40:16.266688100 UTC
 
 #pragma once
 
@@ -75,8 +75,8 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 2
             namespace PackedAABB_t {
-                constexpr std::ptrdiff_t m_nPackedMin = 0x0; // uint32
-                constexpr std::ptrdiff_t m_nPackedMax = 0x4; // uint32
+                constexpr std::ptrdiff_t m_nPackedMin = 0x0; // 
+                constexpr std::ptrdiff_t m_nPackedMax = 0x4; // 
             }
             // Parent: None
             // Field count: 0
@@ -98,14 +98,14 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace ConstantInfo_t {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_nameToken = 0x8; // CUtlStringToken
-                constexpr std::ptrdiff_t m_flValue = 0xC; // float32
+                constexpr std::ptrdiff_t m_name = 0x0; // 
+                constexpr std::ptrdiff_t m_nameToken = 0x8; // 
+                constexpr std::ptrdiff_t m_flValue = 0xC; // 
             }
             // Parent: None
             // Field count: 1
             namespace FuseFunctionIndex_t {
-                constexpr std::ptrdiff_t m_Value = 0x0; // uint16
+                constexpr std::ptrdiff_t m_Value = 0x0; // 
             }
             // Parent: None
             // Field count: 0
@@ -134,9 +134,9 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFuseSymbolTable {
-                constexpr std::ptrdiff_t m_constants = 0x0; // CUtlVector<ConstantInfo_t>
-                constexpr std::ptrdiff_t m_variables = 0x18; // CUtlVector<VariableInfo_t>
-                constexpr std::ptrdiff_t m_functions = 0x30; // CUtlVector<FunctionInfo_t>
+                constexpr std::ptrdiff_t m_constants = 0x0; // 
+                constexpr std::ptrdiff_t m_variables = 0x18; // 
+                constexpr std::ptrdiff_t m_functions = 0x30; // 
                 constexpr std::ptrdiff_t m_constantMap = 0x48; // CUtlHashtable<CUtlStringToken,int32>
                 constexpr std::ptrdiff_t m_variableMap = 0x68; // CUtlHashtable<CUtlStringToken,int32>
                 constexpr std::ptrdiff_t m_functionMap = 0x88; // CUtlHashtable<CUtlStringToken,int32>
@@ -161,7 +161,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace TestResource_t {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
+                constexpr std::ptrdiff_t m_name = 0x0; // 
             }
             // Parent: None
             // Field count: 0
@@ -194,8 +194,8 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 2
             namespace AABB_t {
-                constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
-                constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // Vector
+                constexpr std::ptrdiff_t m_vMinBounds = 0x0; // 
+                constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // 
             }
             // Parent: None
             // Field count: 0
@@ -210,12 +210,12 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace VariableInfo_t {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_nameToken = 0x8; // CUtlStringToken
-                constexpr std::ptrdiff_t m_nIndex = 0xC; // FuseVariableIndex_t
-                constexpr std::ptrdiff_t m_nNumComponents = 0xE; // uint8
-                constexpr std::ptrdiff_t m_eVarType = 0xF; // FuseVariableType_t
-                constexpr std::ptrdiff_t m_eAccess = 0x10; // FuseVariableAccess_t
+                constexpr std::ptrdiff_t m_name = 0x0; // 
+                constexpr std::ptrdiff_t m_nameToken = 0x8; // 
+                constexpr std::ptrdiff_t m_nIndex = 0xC; // 
+                constexpr std::ptrdiff_t m_nNumComponents = 0xE; // 
+                constexpr std::ptrdiff_t m_eVarType = 0xF; // 
+                constexpr std::ptrdiff_t m_eAccess = 0x10; // 
             }
             // Parent: None
             // Field count: 0
@@ -227,10 +227,10 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 4
             namespace FourQuaternions {
-                constexpr std::ptrdiff_t x = 0x0; // fltx4
-                constexpr std::ptrdiff_t y = 0x10; // fltx4
-                constexpr std::ptrdiff_t z = 0x20; // fltx4
-                constexpr std::ptrdiff_t w = 0x30; // fltx4
+                constexpr std::ptrdiff_t x = 0x0; // 
+                constexpr std::ptrdiff_t y = 0x10; // 
+                constexpr std::ptrdiff_t z = 0x20; // 
+                constexpr std::ptrdiff_t w = 0x30; // 
             }
             // Parent: None
             // Field count: 0
@@ -329,10 +329,10 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CFuseProgram {
-                constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_programBuffer = 0x0; // 
                 constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector<FuseVariableIndex_t>
                 constexpr std::ptrdiff_t m_variablesWritten = 0x30; // CUtlVector<FuseVariableIndex_t>
-                constexpr std::ptrdiff_t m_nMaxTempVarsUsed = 0x48; // int32
+                constexpr std::ptrdiff_t m_nMaxTempVarsUsed = 0x48; // 
             }
             // Parent: None
             // Field count: 0
@@ -389,11 +389,11 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace FunctionInfo_t {
-                constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_nameToken = 0x10; // CUtlStringToken
-                constexpr std::ptrdiff_t m_nParamCount = 0x14; // int32
-                constexpr std::ptrdiff_t m_nIndex = 0x18; // FuseFunctionIndex_t
-                constexpr std::ptrdiff_t m_bIsPure = 0x1A; // bool
+                constexpr std::ptrdiff_t m_name = 0x8; // 
+                constexpr std::ptrdiff_t m_nameToken = 0x10; // 
+                constexpr std::ptrdiff_t m_nParamCount = 0x14; // 
+                constexpr std::ptrdiff_t m_nIndex = 0x18; // 
+                constexpr std::ptrdiff_t m_bIsPure = 0x1A; // 
             }
             // Parent: None
             // Field count: 0
@@ -426,7 +426,7 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 1
             namespace FuseVariableIndex_t {
-                constexpr std::ptrdiff_t m_Value = 0x0; // uint16
+                constexpr std::ptrdiff_t m_Value = 0x0; // 
             }
             // Parent: None
             // Field count: 0
@@ -448,8 +448,8 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace ManifestTestResource_t {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_child = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
+                constexpr std::ptrdiff_t m_name = 0x0; // 
+                constexpr std::ptrdiff_t m_child = 0x8; // 
             }
             // Parent: None
             // Field count: 0
