@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #pragma once
 
@@ -1247,7 +1247,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bRefractSolid = 0x2059; // 
                 constexpr std::ptrdiff_t m_flRefractAmount = 0x2060; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_nRefractBlurRadius = 0x21C0; // 
-                constexpr std::ptrdiff_t m_nRefractBlurType = 0x21C4; // BlurFilterType_t
+                constexpr std::ptrdiff_t m_nRefractBlurType = 0x21C4; // 
                 constexpr std::ptrdiff_t m_bOnlyRenderInEffectsBloomPass = 0x21C8; // 
                 constexpr std::ptrdiff_t m_bOnlyRenderInEffectsWaterPass = 0x21C9; // 
                 constexpr std::ptrdiff_t m_bUseMixedResolutionRendering = 0x21CA; // 
@@ -5217,7 +5217,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderStandardLight {
-                constexpr std::ptrdiff_t m_nLightType = 0x210; // 
+                constexpr std::ptrdiff_t m_nLightType = 0x210; // ParticleLightTypeChoiceList_t
                 constexpr std::ptrdiff_t m_vecColorScale = 0x218; // 
                 constexpr std::ptrdiff_t m_nColorBlendType = 0x890; // 
                 constexpr std::ptrdiff_t m_flIntensity = 0x898; // 

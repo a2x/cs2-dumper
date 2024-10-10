@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #pragma once
 
@@ -3434,7 +3434,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CNmBoneMask {
                 constexpr std::ptrdiff_t m_ID = 0x0; // 
-                constexpr std::ptrdiff_t m_weightInfo = 0x8; // 
+                constexpr std::ptrdiff_t m_weightInfo = 0x8; // CNmBoneMask::WeightInfo_t
                 constexpr std::ptrdiff_t m_weights = 0x18; // 
             }
             // Parent: CBaseConstraint

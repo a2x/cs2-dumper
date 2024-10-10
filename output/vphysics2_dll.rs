@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -177,7 +177,7 @@ pub mod cs2_dumper {
                 pub const m_LockToParent: usize = 0x5D8; // 
                 pub const m_LockToGoal: usize = 0x5F0; // 
                 pub const m_SkelParents: usize = 0x608; // 
-                pub const m_DynNodeWindBases: usize = 0x620; // 
+                pub const m_DynNodeWindBases: usize = 0x620; // CUtlVector<FeNodeWindBase_t>
                 pub const m_flInternalPressure: usize = 0x638; // 
                 pub const m_flDefaultTimeDilation: usize = 0x63C; // 
                 pub const m_flWindage: usize = 0x640; // 

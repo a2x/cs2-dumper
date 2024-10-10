@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #pragma once
 
@@ -177,7 +177,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_LockToParent = 0x5D8; // 
                 constexpr std::ptrdiff_t m_LockToGoal = 0x5F0; // 
                 constexpr std::ptrdiff_t m_SkelParents = 0x608; // 
-                constexpr std::ptrdiff_t m_DynNodeWindBases = 0x620; // 
+                constexpr std::ptrdiff_t m_DynNodeWindBases = 0x620; // CUtlVector<FeNodeWindBase_t>
                 constexpr std::ptrdiff_t m_flInternalPressure = 0x638; // 
                 constexpr std::ptrdiff_t m_flDefaultTimeDilation = 0x63C; // 
                 constexpr std::ptrdiff_t m_flWindage = 0x640; // 
