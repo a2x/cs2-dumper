@@ -11,7 +11,9 @@ use log::{info, LevelFilter};
 
 use memflow::prelude::v1::*;
 
-use simplelog::{ColorChoice, CombinedLogger, Config, TermLogger, TerminalMode, WriteLogger};
+use simplelog::{
+    ColorChoice, CombinedLogger, Config, SharedLogger, TermLogger, TerminalMode, WriteLogger,
+};
 
 use output::Output;
 
@@ -48,8 +50,12 @@ struct Args {
     process_name: String,
 
     /// Increase logging verbosity. Can be specified multiple times.
-    #[arg(short, action = ArgAction::Count)]
+    #[arg(short, long, action = ArgAction::Count)]
     verbose: u8,
+
+    /// Prevent creation of the cs2-dumper.log file.
+    #[arg(short, long)]
+    no_log_file: bool,
 }
 
 fn main() -> Result<()> {
@@ -63,20 +69,23 @@ fn main() -> Result<()> {
         _ => LevelFilter::Trace,
     };
 
-    CombinedLogger::init(vec![
-        TermLogger::new(
-            level_filter,
-            Config::default(),
-            TerminalMode::Mixed,
-            ColorChoice::Auto,
-        ),
-        WriteLogger::new(
+    let mut loggers: Vec<Box<dyn SharedLogger>> = vec![TermLogger::new(
+        level_filter,
+        Config::default(),
+        TerminalMode::Mixed,
+        ColorChoice::Auto,
+    )];
+
+    // Create the log file by default.
+    if !args.no_log_file {
+        loggers.push(WriteLogger::new(
             LevelFilter::Info,
             Config::default(),
-            File::create("cs2-dumper.log").unwrap(),
-        ),
-    ])
-    .unwrap();
+            File::create("cs2-dumper.log")?,
+        ));
+    }
+
+    CombinedLogger::init(loggers)?;
 
     let conn_args = args
         .connector_args
