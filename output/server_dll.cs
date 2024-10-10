@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -3787,7 +3787,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flSeqFixedCycle (float)
         // NetworkVarNames: m_nAnimLoopMode (AnimLoopMode_t)
         public static class CBaseAnimGraphController {
-            public const nint m_animGraphNetworkedVars = 0x18; // 
+            public const nint m_animGraphNetworkedVars = 0x18; // CAnimGraphNetworkedVariables
             public const nint m_bSequenceFinished = 0x220; // 
             public const nint m_flSoundSyncTime = 0x224; // 
             public const nint m_nActiveIKChainMask = 0x228; // 
@@ -4194,8 +4194,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_szMuzzleFlashParticle = 0x210; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
             public const nint m_bLinkedCooldowns = 0x2F0; // 
             public const nint m_iFlags = 0x2F1; // 
-            public const nint m_nPrimaryAmmoType = 0x2F2; // AmmoIndex_t
-            public const nint m_nSecondaryAmmoType = 0x2F3; // AmmoIndex_t
+            public const nint m_nPrimaryAmmoType = 0x2F2; // 
+            public const nint m_nSecondaryAmmoType = 0x2F3; // 
             public const nint m_iMaxClip1 = 0x2F4; // 
             public const nint m_iMaxClip2 = 0x2F8; // 
             public const nint m_iDefaultClip1 = 0x2FC; // 
@@ -4981,7 +4981,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMomentumModifier = 0x558; // 
             public const nint m_flSnapValue = 0x55C; // 
             public const nint m_flCurrentMomentum = 0x560; // 
-            public const nint m_nRatchetType = 0x564; // 
+            public const nint m_nRatchetType = 0x564; // ValueRemapperRatchetType_t
             public const nint m_flRatchetOffset = 0x568; // 
             public const nint m_flInputOffset = 0x56C; // 
             public const nint m_bEngaged = 0x570; // 
@@ -7234,7 +7234,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_iEffectIndex = 0x528; // 
             public const nint m_PathNodes_Position = 0x530; // 
             public const nint m_PathNodes_TangentIn = 0x548; // 
-            public const nint m_PathNodes_TangentOut = 0x560; // CNetworkUtlVectorBase<Vector>
+            public const nint m_PathNodes_TangentOut = 0x560; // 
             public const nint m_PathNodes_Color = 0x578; // 
             public const nint m_PathNodes_PinEnabled = 0x590; // 
             public const nint m_PathNodes_RadiusScale = 0x5A8; // 
@@ -11017,7 +11017,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabledContextThinks = 0x260; // 
             public const nint m_isSteadyState = 0x270; // 
             public const nint m_lastNetworkChange = 0x278; // 
-            public const nint m_ResponseContexts = 0x288; // 
+            public const nint m_ResponseContexts = 0x288; // CUtlVector<ResponseContext_t>
             public const nint m_iszResponseContext = 0x2A0; // 
             public const nint m_iHealth = 0x2C8; // 
             public const nint m_iMaxHealth = 0x2CC; // 

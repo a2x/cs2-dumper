@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1321,7 +1321,7 @@ pub mod cs2_dumper {
                 pub const m_bRefractSolid: usize = 0x2059; // 
                 pub const m_flRefractAmount: usize = 0x2060; // CParticleCollectionRendererFloatInput
                 pub const m_nRefractBlurRadius: usize = 0x21C0; // 
-                pub const m_nRefractBlurType: usize = 0x21C4; // BlurFilterType_t
+                pub const m_nRefractBlurType: usize = 0x21C4; // 
                 pub const m_bOnlyRenderInEffectsBloomPass: usize = 0x21C8; // 
                 pub const m_bOnlyRenderInEffectsWaterPass: usize = 0x21C9; // 
                 pub const m_bUseMixedResolutionRendering: usize = 0x21CA; // 
@@ -5291,7 +5291,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderStandardLight {
-                pub const m_nLightType: usize = 0x210; // 
+                pub const m_nLightType: usize = 0x210; // ParticleLightTypeChoiceList_t
                 pub const m_vecColorScale: usize = 0x218; // 
                 pub const m_nColorBlendType: usize = 0x890; // 
                 pub const m_flIntensity: usize = 0x898; // 

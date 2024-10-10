@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -1242,7 +1242,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bRefractSolid = 0x2059; // 
             public const nint m_flRefractAmount = 0x2060; // CParticleCollectionRendererFloatInput
             public const nint m_nRefractBlurRadius = 0x21C0; // 
-            public const nint m_nRefractBlurType = 0x21C4; // BlurFilterType_t
+            public const nint m_nRefractBlurType = 0x21C4; // 
             public const nint m_bOnlyRenderInEffectsBloomPass = 0x21C8; // 
             public const nint m_bOnlyRenderInEffectsWaterPass = 0x21C9; // 
             public const nint m_bUseMixedResolutionRendering = 0x21CA; // 
@@ -5212,7 +5212,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderStandardLight {
-            public const nint m_nLightType = 0x210; // 
+            public const nint m_nLightType = 0x210; // ParticleLightTypeChoiceList_t
             public const nint m_vecColorScale = 0x218; // 
             public const nint m_nColorBlendType = 0x890; // 
             public const nint m_flIntensity = 0x898; // 

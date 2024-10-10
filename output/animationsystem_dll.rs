@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -3525,7 +3525,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CNmBoneMask {
                 pub const m_ID: usize = 0x0; // 
-                pub const m_weightInfo: usize = 0x8; // 
+                pub const m_weightInfo: usize = 0x8; // CNmBoneMask::WeightInfo_t
                 pub const m_weights: usize = 0x18; // 
             }
             // Parent: CBaseConstraint

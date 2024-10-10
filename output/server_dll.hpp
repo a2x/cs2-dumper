@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #pragma once
 
@@ -3792,7 +3792,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flSeqFixedCycle (float)
             // NetworkVarNames: m_nAnimLoopMode (AnimLoopMode_t)
             namespace CBaseAnimGraphController {
-                constexpr std::ptrdiff_t m_animGraphNetworkedVars = 0x18; // 
+                constexpr std::ptrdiff_t m_animGraphNetworkedVars = 0x18; // CAnimGraphNetworkedVariables
                 constexpr std::ptrdiff_t m_bSequenceFinished = 0x220; // 
                 constexpr std::ptrdiff_t m_flSoundSyncTime = 0x224; // 
                 constexpr std::ptrdiff_t m_nActiveIKChainMask = 0x228; // 
@@ -4199,8 +4199,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_szMuzzleFlashParticle = 0x210; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 constexpr std::ptrdiff_t m_bLinkedCooldowns = 0x2F0; // 
                 constexpr std::ptrdiff_t m_iFlags = 0x2F1; // 
-                constexpr std::ptrdiff_t m_nPrimaryAmmoType = 0x2F2; // AmmoIndex_t
-                constexpr std::ptrdiff_t m_nSecondaryAmmoType = 0x2F3; // AmmoIndex_t
+                constexpr std::ptrdiff_t m_nPrimaryAmmoType = 0x2F2; // 
+                constexpr std::ptrdiff_t m_nSecondaryAmmoType = 0x2F3; // 
                 constexpr std::ptrdiff_t m_iMaxClip1 = 0x2F4; // 
                 constexpr std::ptrdiff_t m_iMaxClip2 = 0x2F8; // 
                 constexpr std::ptrdiff_t m_iDefaultClip1 = 0x2FC; // 
@@ -4986,7 +4986,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMomentumModifier = 0x558; // 
                 constexpr std::ptrdiff_t m_flSnapValue = 0x55C; // 
                 constexpr std::ptrdiff_t m_flCurrentMomentum = 0x560; // 
-                constexpr std::ptrdiff_t m_nRatchetType = 0x564; // 
+                constexpr std::ptrdiff_t m_nRatchetType = 0x564; // ValueRemapperRatchetType_t
                 constexpr std::ptrdiff_t m_flRatchetOffset = 0x568; // 
                 constexpr std::ptrdiff_t m_flInputOffset = 0x56C; // 
                 constexpr std::ptrdiff_t m_bEngaged = 0x570; // 
@@ -7239,7 +7239,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iEffectIndex = 0x528; // 
                 constexpr std::ptrdiff_t m_PathNodes_Position = 0x530; // 
                 constexpr std::ptrdiff_t m_PathNodes_TangentIn = 0x548; // 
-                constexpr std::ptrdiff_t m_PathNodes_TangentOut = 0x560; // CNetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_PathNodes_TangentOut = 0x560; // 
                 constexpr std::ptrdiff_t m_PathNodes_Color = 0x578; // 
                 constexpr std::ptrdiff_t m_PathNodes_PinEnabled = 0x590; // 
                 constexpr std::ptrdiff_t m_PathNodes_RadiusScale = 0x5A8; // 
@@ -11022,7 +11022,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bDisabledContextThinks = 0x260; // 
                 constexpr std::ptrdiff_t m_isSteadyState = 0x270; // 
                 constexpr std::ptrdiff_t m_lastNetworkChange = 0x278; // 
-                constexpr std::ptrdiff_t m_ResponseContexts = 0x288; // 
+                constexpr std::ptrdiff_t m_ResponseContexts = 0x288; // CUtlVector<ResponseContext_t>
                 constexpr std::ptrdiff_t m_iszResponseContext = 0x2A0; // 
                 constexpr std::ptrdiff_t m_iHealth = 0x2C8; // 
                 constexpr std::ptrdiff_t m_iMaxHealth = 0x2CC; // 

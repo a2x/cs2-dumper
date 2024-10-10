@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-09 00:40:16.266688100 UTC
+// 2024-10-10 00:00:51.448403700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -3893,7 +3893,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flSeqFixedCycle (float)
             // NetworkVarNames: m_nAnimLoopMode (AnimLoopMode_t)
             pub mod CBaseAnimGraphController {
-                pub const m_animGraphNetworkedVars: usize = 0x18; // 
+                pub const m_animGraphNetworkedVars: usize = 0x18; // CAnimGraphNetworkedVariables
                 pub const m_bSequenceFinished: usize = 0x220; // 
                 pub const m_flSoundSyncTime: usize = 0x224; // 
                 pub const m_nActiveIKChainMask: usize = 0x228; // 
@@ -4300,8 +4300,8 @@ pub mod cs2_dumper {
                 pub const m_szMuzzleFlashParticle: usize = 0x210; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>
                 pub const m_bLinkedCooldowns: usize = 0x2F0; // 
                 pub const m_iFlags: usize = 0x2F1; // 
-                pub const m_nPrimaryAmmoType: usize = 0x2F2; // AmmoIndex_t
-                pub const m_nSecondaryAmmoType: usize = 0x2F3; // AmmoIndex_t
+                pub const m_nPrimaryAmmoType: usize = 0x2F2; // 
+                pub const m_nSecondaryAmmoType: usize = 0x2F3; // 
                 pub const m_iMaxClip1: usize = 0x2F4; // 
                 pub const m_iMaxClip2: usize = 0x2F8; // 
                 pub const m_iDefaultClip1: usize = 0x2FC; // 
@@ -5087,7 +5087,7 @@ pub mod cs2_dumper {
                 pub const m_flMomentumModifier: usize = 0x558; // 
                 pub const m_flSnapValue: usize = 0x55C; // 
                 pub const m_flCurrentMomentum: usize = 0x560; // 
-                pub const m_nRatchetType: usize = 0x564; // 
+                pub const m_nRatchetType: usize = 0x564; // ValueRemapperRatchetType_t
                 pub const m_flRatchetOffset: usize = 0x568; // 
                 pub const m_flInputOffset: usize = 0x56C; // 
                 pub const m_bEngaged: usize = 0x570; // 
@@ -7340,7 +7340,7 @@ pub mod cs2_dumper {
                 pub const m_iEffectIndex: usize = 0x528; // 
                 pub const m_PathNodes_Position: usize = 0x530; // 
                 pub const m_PathNodes_TangentIn: usize = 0x548; // 
-                pub const m_PathNodes_TangentOut: usize = 0x560; // CNetworkUtlVectorBase<Vector>
+                pub const m_PathNodes_TangentOut: usize = 0x560; // 
                 pub const m_PathNodes_Color: usize = 0x578; // 
                 pub const m_PathNodes_PinEnabled: usize = 0x590; // 
                 pub const m_PathNodes_RadiusScale: usize = 0x5A8; // 
@@ -11123,7 +11123,7 @@ pub mod cs2_dumper {
                 pub const m_bDisabledContextThinks: usize = 0x260; // 
                 pub const m_isSteadyState: usize = 0x270; // 
                 pub const m_lastNetworkChange: usize = 0x278; // 
-                pub const m_ResponseContexts: usize = 0x288; // 
+                pub const m_ResponseContexts: usize = 0x288; // CUtlVector<ResponseContext_t>
                 pub const m_iszResponseContext: usize = 0x2A0; // 
                 pub const m_iHealth: usize = 0x2C8; // 
                 pub const m_iMaxHealth: usize = 0x2CC; // 
