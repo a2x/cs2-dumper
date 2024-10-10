@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-10 00:00:51.448403700 UTC
+// 2024-10-10 01:40:20.894068600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -12,7 +12,7 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 1
             pub mod ChangeAccessorFieldPathIndex_t {
-                pub const m_Value: usize = 0x0; // 
+                pub const m_Value: usize = 0x0; // int32
             }
         }
     }
