@@ -236,19 +236,19 @@
       },
       "CBaseAnimGraph": {
         "fields": {
-          "m_RagdollPose": 3568,
-          "m_bAnimGraphUpdateEnabled": 3496,
-          "m_bAnimationUpdateScheduled": 3516,
-          "m_bBuiltRagdoll": 3544,
-          "m_bHasAnimatedMaterialAttributes": 3656,
-          "m_bInitiallyPopulateInterpHistory": 3480,
-          "m_bRagdollClientSide": 3640,
-          "m_bSuppressAnimEventSounds": 3482,
-          "m_flMaxSlopeDistance": 3500,
-          "m_nForceBone": 3532,
-          "m_pClientsideRagdoll": 3536,
-          "m_vLastSlopeCheckPos": 3504,
-          "m_vecForce": 3520
+          "m_RagdollPose": 3576,
+          "m_bAnimGraphUpdateEnabled": 3504,
+          "m_bAnimationUpdateScheduled": 3524,
+          "m_bBuiltRagdoll": 3552,
+          "m_bHasAnimatedMaterialAttributes": 3664,
+          "m_bInitiallyPopulateInterpHistory": 3488,
+          "m_bRagdollClientSide": 3648,
+          "m_bSuppressAnimEventSounds": 3490,
+          "m_flMaxSlopeDistance": 3508,
+          "m_nForceBone": 3540,
+          "m_pClientsideRagdoll": 3544,
+          "m_vLastSlopeCheckPos": 3512,
+          "m_vecForce": 3528
         },
         "metadata": [
           {
@@ -506,10 +506,10 @@
       },
       "CBaseProp": {
         "fields": {
-          "m_bConformToCollisionBounds": 3976,
-          "m_bModelOverrodeBlockLOS": 3968,
-          "m_iShapeType": 3972,
-          "m_mPreferredCatchTransform": 3980
+          "m_bConformToCollisionBounds": 3984,
+          "m_bModelOverrodeBlockLOS": 3976,
+          "m_iShapeType": 3980,
+          "m_mPreferredCatchTransform": 3988
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
@@ -568,7 +568,7 @@
       },
       "CBombTarget": {
         "fields": {
-          "m_bBombPlantedHere": 3368
+          "m_bBombPlantedHere": 3376
         },
         "metadata": [
           {
@@ -1275,6 +1275,11 @@
         },
         "metadata": [],
         "parent": "CCSPlayerBase_CameraServices"
+      },
+      "CCSPlayer_DamageReactServices": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CPlayerPawnComponent"
       },
       "CCSPlayer_GlowServices": {
         "fields": {},
@@ -2224,7 +2229,7 @@
       },
       "CFuncWater": {
         "fields": {
-          "m_BuoyancyHelper": 3360
+          "m_BuoyancyHelper": 3368
         },
         "metadata": [],
         "parent": "C_BaseModelEntity"
@@ -2383,8 +2388,8 @@
       },
       "CGrenadeTracer": {
         "fields": {
-          "m_flTracerDuration": 3384,
-          "m_nType": 3388
+          "m_flTracerDuration": 3392,
+          "m_nType": 3396
         },
         "metadata": [],
         "parent": "C_BaseModelEntity"
@@ -3295,10 +3300,10 @@
       },
       "CPointOffScreenIndicatorUi": {
         "fields": {
-          "m_bBeenEnabled": 3968,
-          "m_bHide": 3969,
-          "m_flSeenTargetTime": 3972,
-          "m_pTargetPanel": 3976
+          "m_bBeenEnabled": 3984,
+          "m_bHide": 3985,
+          "m_flSeenTargetTime": 3988,
+          "m_pTargetPanel": 3992
         },
         "metadata": [],
         "parent": "C_PointClientUIWorldPanel"
@@ -3555,6 +3560,19 @@
         },
         "metadata": [],
         "parent": "CEntityComponent"
+      },
+      "CRagdollManager": {
+        "fields": {
+          "m_iCurrentMaxRagdollCount": 1384
+        },
+        "metadata": [
+          {
+            "name": "m_iCurrentMaxRagdollCount",
+            "type": "NetworkVarNames",
+            "type_name": "int8"
+          }
+        ],
+        "parent": "C_BaseEntity"
       },
       "CRenderComponent": {
         "fields": {
@@ -3890,79 +3908,79 @@
       },
       "C_BarnLight": {
         "fields": {
-          "m_Color": 3368,
-          "m_LightStyleEvents": 3448,
-          "m_LightStyleString": 3408,
-          "m_LightStyleTargets": 3472,
-          "m_QueuedLightStyleStrings": 3424,
-          "m_StyleEvent": 3496,
-          "m_VisClusters": 4168,
-          "m_bContactShadow": 3740,
-          "m_bEnabled": 3360,
-          "m_bFogMixedShadows": 3788,
-          "m_bInitialBoneSetup": 4160,
-          "m_bPrecomputedFieldsValid": 3808,
-          "m_fAlternateColorBrightness": 3768,
-          "m_flBounceScale": 3748,
-          "m_flBrightness": 3376,
-          "m_flBrightnessScale": 3380,
-          "m_flColorTemperature": 3372,
-          "m_flFadeSizeEnd": 3796,
-          "m_flFadeSizeStart": 3792,
-          "m_flFogScale": 3784,
-          "m_flFogStrength": 3776,
-          "m_flLightStyleStartTime": 3416,
-          "m_flLuminaireAnisotropy": 3400,
-          "m_flLuminaireSize": 3396,
-          "m_flMinRoughness": 3752,
-          "m_flRange": 3696,
-          "m_flShadowFadeSizeEnd": 3804,
-          "m_flShadowFadeSizeStart": 3800,
-          "m_flShape": 3664,
-          "m_flSkirt": 3676,
-          "m_flSkirtNear": 3680,
-          "m_flSoftX": 3668,
-          "m_flSoftY": 3672,
-          "m_hLightCookie": 3656,
-          "m_nBakeSpecularToCubemaps": 3712,
-          "m_nBakedShadowIndex": 3388,
-          "m_nBounceLight": 3744,
-          "m_nCastShadows": 3728,
-          "m_nColorMode": 3364,
-          "m_nDirectLight": 3384,
-          "m_nFog": 3772,
-          "m_nFogShadows": 3780,
-          "m_nLuminaireShape": 3392,
-          "m_nPrecomputedSubFrusta": 3872,
-          "m_nShadowMapSize": 3732,
-          "m_nShadowPriority": 3736,
-          "m_vAlternateColor": 3756,
-          "m_vBakeSpecularToCubemapsSize": 3716,
-          "m_vPrecomputedBoundsMaxs": 3824,
-          "m_vPrecomputedBoundsMins": 3812,
-          "m_vPrecomputedOBBAngles": 3848,
-          "m_vPrecomputedOBBAngles0": 3888,
-          "m_vPrecomputedOBBAngles1": 3924,
-          "m_vPrecomputedOBBAngles2": 3960,
-          "m_vPrecomputedOBBAngles3": 3996,
-          "m_vPrecomputedOBBAngles4": 4032,
-          "m_vPrecomputedOBBAngles5": 4068,
-          "m_vPrecomputedOBBExtent": 3860,
-          "m_vPrecomputedOBBExtent0": 3900,
-          "m_vPrecomputedOBBExtent1": 3936,
-          "m_vPrecomputedOBBExtent2": 3972,
-          "m_vPrecomputedOBBExtent3": 4008,
-          "m_vPrecomputedOBBExtent4": 4044,
-          "m_vPrecomputedOBBExtent5": 4080,
-          "m_vPrecomputedOBBOrigin": 3836,
-          "m_vPrecomputedOBBOrigin0": 3876,
-          "m_vPrecomputedOBBOrigin1": 3912,
-          "m_vPrecomputedOBBOrigin2": 3948,
-          "m_vPrecomputedOBBOrigin3": 3984,
-          "m_vPrecomputedOBBOrigin4": 4020,
-          "m_vPrecomputedOBBOrigin5": 4056,
-          "m_vShear": 3700,
-          "m_vSizeParams": 3684
+          "m_Color": 3376,
+          "m_LightStyleEvents": 3456,
+          "m_LightStyleString": 3416,
+          "m_LightStyleTargets": 3480,
+          "m_QueuedLightStyleStrings": 3432,
+          "m_StyleEvent": 3504,
+          "m_VisClusters": 4176,
+          "m_bContactShadow": 3748,
+          "m_bEnabled": 3368,
+          "m_bFogMixedShadows": 3796,
+          "m_bInitialBoneSetup": 4168,
+          "m_bPrecomputedFieldsValid": 3816,
+          "m_fAlternateColorBrightness": 3776,
+          "m_flBounceScale": 3756,
+          "m_flBrightness": 3384,
+          "m_flBrightnessScale": 3388,
+          "m_flColorTemperature": 3380,
+          "m_flFadeSizeEnd": 3804,
+          "m_flFadeSizeStart": 3800,
+          "m_flFogScale": 3792,
+          "m_flFogStrength": 3784,
+          "m_flLightStyleStartTime": 3424,
+          "m_flLuminaireAnisotropy": 3408,
+          "m_flLuminaireSize": 3404,
+          "m_flMinRoughness": 3760,
+          "m_flRange": 3704,
+          "m_flShadowFadeSizeEnd": 3812,
+          "m_flShadowFadeSizeStart": 3808,
+          "m_flShape": 3672,
+          "m_flSkirt": 3684,
+          "m_flSkirtNear": 3688,
+          "m_flSoftX": 3676,
+          "m_flSoftY": 3680,
+          "m_hLightCookie": 3664,
+          "m_nBakeSpecularToCubemaps": 3720,
+          "m_nBakedShadowIndex": 3396,
+          "m_nBounceLight": 3752,
+          "m_nCastShadows": 3736,
+          "m_nColorMode": 3372,
+          "m_nDirectLight": 3392,
+          "m_nFog": 3780,
+          "m_nFogShadows": 3788,
+          "m_nLuminaireShape": 3400,
+          "m_nPrecomputedSubFrusta": 3880,
+          "m_nShadowMapSize": 3740,
+          "m_nShadowPriority": 3744,
+          "m_vAlternateColor": 3764,
+          "m_vBakeSpecularToCubemapsSize": 3724,
+          "m_vPrecomputedBoundsMaxs": 3832,
+          "m_vPrecomputedBoundsMins": 3820,
+          "m_vPrecomputedOBBAngles": 3856,
+          "m_vPrecomputedOBBAngles0": 3896,
+          "m_vPrecomputedOBBAngles1": 3932,
+          "m_vPrecomputedOBBAngles2": 3968,
+          "m_vPrecomputedOBBAngles3": 4004,
+          "m_vPrecomputedOBBAngles4": 4040,
+          "m_vPrecomputedOBBAngles5": 4076,
+          "m_vPrecomputedOBBExtent": 3868,
+          "m_vPrecomputedOBBExtent0": 3908,
+          "m_vPrecomputedOBBExtent1": 3944,
+          "m_vPrecomputedOBBExtent2": 3980,
+          "m_vPrecomputedOBBExtent3": 4016,
+          "m_vPrecomputedOBBExtent4": 4052,
+          "m_vPrecomputedOBBExtent5": 4088,
+          "m_vPrecomputedOBBOrigin": 3844,
+          "m_vPrecomputedOBBOrigin0": 3884,
+          "m_vPrecomputedOBBOrigin1": 3920,
+          "m_vPrecomputedOBBOrigin2": 3956,
+          "m_vPrecomputedOBBOrigin3": 3992,
+          "m_vPrecomputedOBBOrigin4": 4028,
+          "m_vPrecomputedOBBOrigin5": 4064,
+          "m_vShear": 3708,
+          "m_vSizeParams": 3692
         },
         "metadata": [
           {
@@ -4325,9 +4343,9 @@
       },
       "C_BaseButton": {
         "fields": {
-          "m_glowEntity": 3360,
-          "m_szDisplayText": 3368,
-          "m_usable": 3364
+          "m_glowEntity": 3368,
+          "m_szDisplayText": 3376,
+          "m_usable": 3372
         },
         "metadata": [
           {
@@ -4350,21 +4368,21 @@
       },
       "C_BaseCSGrenade": {
         "fields": {
-          "m_bClientPredictDelete": 6912,
-          "m_bIsHeldByPlayer": 6914,
-          "m_bJumpThrow": 6916,
-          "m_bJustPulledPin": 6940,
-          "m_bPinPulled": 6915,
-          "m_bRedraw": 6913,
-          "m_bThrowAnimating": 6917,
-          "m_fDropTime": 6932,
-          "m_fPinPullTime": 6936,
-          "m_fThrowTime": 6920,
-          "m_flNextHoldFrac": 6948,
-          "m_flThrowStrength": 6924,
-          "m_flThrowStrengthApproach": 6928,
-          "m_hSwitchToWeaponAfterThrow": 6952,
-          "m_nNextHoldTick": 6944
+          "m_bClientPredictDelete": 6928,
+          "m_bIsHeldByPlayer": 6930,
+          "m_bJumpThrow": 6932,
+          "m_bJustPulledPin": 6956,
+          "m_bPinPulled": 6931,
+          "m_bRedraw": 6929,
+          "m_bThrowAnimating": 6933,
+          "m_fDropTime": 6948,
+          "m_fPinPullTime": 6952,
+          "m_fThrowTime": 6936,
+          "m_flNextHoldFrac": 6964,
+          "m_flThrowStrength": 6940,
+          "m_flThrowStrengthApproach": 6944,
+          "m_hSwitchToWeaponAfterThrow": 6968,
+          "m_nNextHoldTick": 6960
         },
         "metadata": [
           {
@@ -4442,22 +4460,22 @@
       },
       "C_BaseCSGrenadeProjectile": {
         "fields": {
-          "flNextTrailLineTime": 4528,
-          "m_arrTrajectoryTrailPointCreationTimes": 4576,
-          "m_arrTrajectoryTrailPoints": 4552,
-          "m_bCanCreateGrenadeTrail": 4533,
-          "m_bExplodeEffectBegan": 4532,
-          "m_flSpawnTime": 4512,
-          "m_flTrajectoryTrailEffectCreationTime": 4600,
-          "m_hSnapshotTrajectoryParticleSnapshot": 4544,
-          "m_nBounces": 4480,
-          "m_nExplodeEffectIndex": 4488,
-          "m_nExplodeEffectTickBegin": 4496,
-          "m_nSnapshotTrajectoryEffectIndex": 4536,
-          "m_vInitialPosition": 4456,
-          "m_vInitialVelocity": 4468,
-          "m_vecExplodeEffectOrigin": 4500,
-          "vecLastTrailLinePos": 4516
+          "flNextTrailLineTime": 4536,
+          "m_arrTrajectoryTrailPointCreationTimes": 4584,
+          "m_arrTrajectoryTrailPoints": 4560,
+          "m_bCanCreateGrenadeTrail": 4541,
+          "m_bExplodeEffectBegan": 4540,
+          "m_flSpawnTime": 4520,
+          "m_flTrajectoryTrailEffectCreationTime": 4608,
+          "m_hSnapshotTrajectoryParticleSnapshot": 4552,
+          "m_nBounces": 4488,
+          "m_nExplodeEffectIndex": 4496,
+          "m_nExplodeEffectTickBegin": 4504,
+          "m_nSnapshotTrajectoryEffectIndex": 4544,
+          "m_vInitialPosition": 4464,
+          "m_vInitialVelocity": 4476,
+          "m_vecExplodeEffectOrigin": 4508,
+          "vecLastTrailLinePos": 4524
         },
         "metadata": [
           {
@@ -4495,10 +4513,10 @@
       },
       "C_BaseClientUIEntity": {
         "fields": {
-          "m_DialogXMLName": 3376,
-          "m_PanelClassName": 3384,
-          "m_PanelID": 3392,
-          "m_bEnabled": 3368
+          "m_DialogXMLName": 3384,
+          "m_PanelClassName": 3392,
+          "m_PanelID": 3400,
+          "m_bEnabled": 3376
         },
         "metadata": [
           {
@@ -4526,12 +4544,12 @@
       },
       "C_BaseCombatCharacter": {
         "fields": {
-          "m_flWaterNextTraceTime": 4412,
-          "m_flWaterWorldZ": 4408,
-          "m_hMyWearables": 4376,
-          "m_leftFootAttachment": 4400,
-          "m_nWaterWakeMode": 4404,
-          "m_rightFootAttachment": 4401
+          "m_flWaterNextTraceTime": 4420,
+          "m_flWaterWorldZ": 4416,
+          "m_hMyWearables": 4384,
+          "m_leftFootAttachment": 4408,
+          "m_nWaterWakeMode": 4412,
+          "m_rightFootAttachment": 4409
         },
         "metadata": [
           {
@@ -4548,7 +4566,7 @@
       },
       "C_BaseDoor": {
         "fields": {
-          "m_bIsUsable": 3360
+          "m_bIsUsable": 3368
         },
         "metadata": [
           {
@@ -4905,25 +4923,25 @@
       },
       "C_BaseFlex": {
         "fields": {
-          "m_CachedViewTarget": 4132,
-          "m_PhonemeClasses": 4280,
-          "m_bResetFlexWeightsOnModelChange": 4174,
-          "m_blinktime": 4152,
-          "m_blinktoggle": 4032,
-          "m_flBlinkAmount": 4168,
-          "m_flJawOpenAmount": 4164,
-          "m_flexWeight": 3984,
-          "m_iBlink": 4148,
-          "m_iEyeAttachment": 4173,
-          "m_iJawOpen": 4160,
-          "m_iMouthAttachment": 4172,
-          "m_mEyeOcclusionRendererCameraToBoneTransform": 4204,
-          "m_nEyeOcclusionRendererBone": 4200,
-          "m_nLastFlexUpdateFrameCount": 4128,
-          "m_nNextSceneEventId": 4144,
-          "m_prevblinktoggle": 4156,
-          "m_vEyeOcclusionRendererHalfExtent": 4252,
-          "m_vLookTargetPosition": 4008
+          "m_CachedViewTarget": 4140,
+          "m_PhonemeClasses": 4288,
+          "m_bResetFlexWeightsOnModelChange": 4182,
+          "m_blinktime": 4160,
+          "m_blinktoggle": 4040,
+          "m_flBlinkAmount": 4176,
+          "m_flJawOpenAmount": 4172,
+          "m_flexWeight": 3992,
+          "m_iBlink": 4156,
+          "m_iEyeAttachment": 4181,
+          "m_iJawOpen": 4168,
+          "m_iMouthAttachment": 4180,
+          "m_mEyeOcclusionRendererCameraToBoneTransform": 4212,
+          "m_nEyeOcclusionRendererBone": 4208,
+          "m_nLastFlexUpdateFrameCount": 4136,
+          "m_nNextSceneEventId": 4152,
+          "m_prevblinktoggle": 4164,
+          "m_vEyeOcclusionRendererHalfExtent": 4260,
+          "m_vLookTargetPosition": 4016
         },
         "metadata": [
           {
@@ -4952,18 +4970,18 @@
       },
       "C_BaseGrenade": {
         "fields": {
-          "m_DmgRadius": 4380,
-          "m_ExplosionSound": 4408,
-          "m_bHasWarnedAI": 4376,
-          "m_bIsLive": 4378,
-          "m_bIsSmokeGrenade": 4377,
-          "m_flDamage": 4392,
-          "m_flDetonateTime": 4384,
-          "m_flNextAttack": 4444,
-          "m_flWarnAITime": 4388,
-          "m_hOriginalThrower": 4448,
-          "m_hThrower": 4420,
-          "m_iszBounceSound": 4400
+          "m_DmgRadius": 4388,
+          "m_ExplosionSound": 4416,
+          "m_bHasWarnedAI": 4384,
+          "m_bIsLive": 4386,
+          "m_bIsSmokeGrenade": 4385,
+          "m_flDamage": 4400,
+          "m_flDetonateTime": 4392,
+          "m_flNextAttack": 4452,
+          "m_flWarnAITime": 4396,
+          "m_hOriginalThrower": 4456,
+          "m_hThrower": 4428,
+          "m_iszBounceSound": 4408
         },
         "metadata": [
           {
@@ -5046,36 +5064,37 @@
         "fields": {
           "m_CHitboxComponent": 2648,
           "m_CRenderComponent": 2640,
-          "m_ClientOverrideTint": 3296,
-          "m_Collision": 2888,
-          "m_ConfigEntitiesToPropagateMaterialDecalsTo": 3216,
-          "m_Glow": 3064,
-          "m_bAllowFadeInView": 2738,
-          "m_bInitModelEffects": 2720,
-          "m_bIsStaticProp": 2721,
-          "m_bNoInterpolate": 2881,
-          "m_bRenderToCubemaps": 2880,
-          "m_bUseClientOverrideTint": 3300,
-          "m_clrRender": 2768,
-          "m_fadeMaxDist": 3160,
-          "m_fadeMinDist": 3156,
-          "m_flDecalHealBloodRate": 3204,
-          "m_flDecalHealHeightRate": 3208,
-          "m_flFadeScale": 3164,
-          "m_flGlowBackfaceMult": 3152,
-          "m_flShadowStrength": 3168,
-          "m_iOldHealth": 2732,
-          "m_nAddDecal": 3176,
-          "m_nDecalsAdded": 2728,
-          "m_nLastAddDecal": 2724,
-          "m_nObjectCulling": 3172,
-          "m_nRenderFX": 2737,
-          "m_nRenderMode": 2736,
-          "m_pClientAlphaProperty": 3288,
-          "m_vDecalForwardAxis": 3192,
-          "m_vDecalPosition": 3180,
-          "m_vecRenderAttributes": 2776,
-          "m_vecViewOffset": 3240
+          "m_ClientOverrideTint": 3304,
+          "m_Collision": 2896,
+          "m_ConfigEntitiesToPropagateMaterialDecalsTo": 3224,
+          "m_Glow": 3072,
+          "m_LastHitGroup": 2688,
+          "m_bAllowFadeInView": 2746,
+          "m_bInitModelEffects": 2728,
+          "m_bIsStaticProp": 2729,
+          "m_bNoInterpolate": 2889,
+          "m_bRenderToCubemaps": 2888,
+          "m_bUseClientOverrideTint": 3308,
+          "m_clrRender": 2776,
+          "m_fadeMaxDist": 3168,
+          "m_fadeMinDist": 3164,
+          "m_flDecalHealBloodRate": 3212,
+          "m_flDecalHealHeightRate": 3216,
+          "m_flFadeScale": 3172,
+          "m_flGlowBackfaceMult": 3160,
+          "m_flShadowStrength": 3176,
+          "m_iOldHealth": 2740,
+          "m_nAddDecal": 3184,
+          "m_nDecalsAdded": 2736,
+          "m_nLastAddDecal": 2732,
+          "m_nObjectCulling": 3180,
+          "m_nRenderFX": 2745,
+          "m_nRenderMode": 2744,
+          "m_pClientAlphaProperty": 3296,
+          "m_vDecalForwardAxis": 3200,
+          "m_vDecalPosition": 3188,
+          "m_vecRenderAttributes": 2784,
+          "m_vecViewOffset": 3248
         },
         "metadata": [
           {
@@ -5193,34 +5212,34 @@
       },
       "C_BasePlayerPawn": {
         "fields": {
-          "m_ServerViewAngleChanges": 4592,
-          "m_bIsSwappingToPredictableController": 4920,
-          "m_flDeathTime": 4848,
-          "m_flFOVSensitivityAdjust": 4884,
-          "m_flLastCameraSetupTime": 4880,
-          "m_flMouseSensitivity": 4888,
-          "m_flOldSimulationTime": 4904,
-          "m_flPredictionErrorTime": 4864,
-          "m_hController": 4916,
-          "m_iHideHUD": 4700,
-          "m_nHighestConsumedServerViewAngleChangeIndex": 4672,
-          "m_nLastExecutedCommandNumber": 4908,
-          "m_nLastExecutedCommandTick": 4912,
-          "m_pAutoaimServices": 4528,
-          "m_pCameraServices": 4568,
-          "m_pFlashlightServices": 4560,
-          "m_pItemServices": 4520,
-          "m_pMovementServices": 4576,
-          "m_pObserverServices": 4536,
-          "m_pUseServices": 4552,
-          "m_pWaterServices": 4544,
-          "m_pWeaponServices": 4512,
-          "m_skybox3d": 4704,
-          "m_vOldOrigin": 4892,
-          "m_vecLastCameraSetupLocalOrigin": 4868,
-          "m_vecPredictionError": 4852,
-          "v_angle": 4676,
-          "v_anglePrevious": 4688
+          "m_ServerViewAngleChanges": 4600,
+          "m_bIsSwappingToPredictableController": 4928,
+          "m_flDeathTime": 4856,
+          "m_flFOVSensitivityAdjust": 4892,
+          "m_flLastCameraSetupTime": 4888,
+          "m_flMouseSensitivity": 4896,
+          "m_flOldSimulationTime": 4912,
+          "m_flPredictionErrorTime": 4872,
+          "m_hController": 4924,
+          "m_iHideHUD": 4708,
+          "m_nHighestConsumedServerViewAngleChangeIndex": 4680,
+          "m_nLastExecutedCommandNumber": 4916,
+          "m_nLastExecutedCommandTick": 4920,
+          "m_pAutoaimServices": 4536,
+          "m_pCameraServices": 4576,
+          "m_pFlashlightServices": 4568,
+          "m_pItemServices": 4528,
+          "m_pMovementServices": 4584,
+          "m_pObserverServices": 4544,
+          "m_pUseServices": 4560,
+          "m_pWaterServices": 4552,
+          "m_pWeaponServices": 4520,
+          "m_skybox3d": 4712,
+          "m_vOldOrigin": 4900,
+          "m_vecLastCameraSetupLocalOrigin": 4876,
+          "m_vecPredictionError": 4860,
+          "v_angle": 4684,
+          "v_anglePrevious": 4696
         },
         "metadata": [
           {
@@ -5370,13 +5389,13 @@
       },
       "C_BasePlayerWeapon": {
         "fields": {
-          "m_flNextPrimaryAttackTickRatio": 5732,
-          "m_flNextSecondaryAttackTickRatio": 5740,
-          "m_iClip1": 5744,
-          "m_iClip2": 5748,
-          "m_nNextPrimaryAttackTick": 5728,
-          "m_nNextSecondaryAttackTick": 5736,
-          "m_pReserveAmmo": 5752
+          "m_flNextPrimaryAttackTickRatio": 5740,
+          "m_flNextSecondaryAttackTickRatio": 5748,
+          "m_iClip1": 5752,
+          "m_iClip2": 5756,
+          "m_nNextPrimaryAttackTick": 5736,
+          "m_nNextSecondaryAttackTick": 5744,
+          "m_pReserveAmmo": 5760
         },
         "metadata": [
           {
@@ -5447,13 +5466,13 @@
       },
       "C_BasePropDoor": {
         "fields": {
-          "m_bLocked": 4661,
-          "m_closedAngles": 4676,
-          "m_closedPosition": 4664,
-          "m_eDoorState": 4656,
-          "m_hMaster": 4688,
-          "m_modelChanged": 4660,
-          "m_vWhereToSetLightingOrigin": 4692
+          "m_bLocked": 4669,
+          "m_closedAngles": 4684,
+          "m_closedPosition": 4672,
+          "m_eDoorState": 4664,
+          "m_hMaster": 4696,
+          "m_modelChanged": 4668,
+          "m_vWhereToSetLightingOrigin": 4700
         },
         "metadata": [
           {
@@ -5519,8 +5538,8 @@
       },
       "C_BaseTrigger": {
         "fields": {
-          "m_bClientSidePredicted": 3361,
-          "m_bDisabled": 3360
+          "m_bClientSidePredicted": 3369,
+          "m_bDisabled": 3368
         },
         "metadata": [
           {
@@ -5542,22 +5561,22 @@
       },
       "C_BaseViewModel": {
         "fields": {
-          "m_flAnimationStartTime": 3996,
-          "m_hControlPanel": 4064,
-          "m_hOldLayerSequence": 4052,
-          "m_hWeapon": 4000,
-          "m_iCameraAttachment": 4024,
-          "m_nAnimationParity": 3992,
-          "m_nOldAnimationParity": 4048,
-          "m_nViewModelIndex": 3988,
-          "m_oldLayer": 4056,
-          "m_oldLayerStartTime": 4060,
-          "m_previousCycle": 4044,
-          "m_previousElapsedDuration": 4040,
-          "m_sAnimationPrefix": 4016,
-          "m_sVMName": 4008,
-          "m_vecLastCameraAngles": 4028,
-          "m_vecLastFacing": 3976
+          "m_flAnimationStartTime": 4004,
+          "m_hControlPanel": 4072,
+          "m_hOldLayerSequence": 4060,
+          "m_hWeapon": 4008,
+          "m_iCameraAttachment": 4032,
+          "m_nAnimationParity": 4000,
+          "m_nOldAnimationParity": 4056,
+          "m_nViewModelIndex": 3996,
+          "m_oldLayer": 4064,
+          "m_oldLayerStartTime": 4068,
+          "m_previousCycle": 4052,
+          "m_previousElapsedDuration": 4048,
+          "m_sAnimationPrefix": 4024,
+          "m_sVMName": 4016,
+          "m_vecLastCameraAngles": 4036,
+          "m_vecLastFacing": 3984
         },
         "metadata": [
           {
@@ -5646,30 +5665,30 @@
       },
       "C_Beam": {
         "fields": {
-          "m_bTurnedOff": 3528,
-          "m_fAmplitude": 3508,
-          "m_fEndWidth": 3496,
-          "m_fFadeLength": 3500,
-          "m_fHaloScale": 3504,
-          "m_fSpeed": 3516,
-          "m_fStartFrame": 3512,
-          "m_fWidth": 3492,
-          "m_flDamage": 3372,
-          "m_flFireTime": 3368,
-          "m_flFrame": 3520,
-          "m_flFrameRate": 3360,
-          "m_flHDRColorScale": 3364,
-          "m_hAttachEntity": 3440,
-          "m_hBaseMaterial": 3416,
-          "m_hEndEntity": 3544,
-          "m_nAttachIndex": 3480,
-          "m_nBeamFlags": 3436,
-          "m_nBeamType": 3432,
-          "m_nClipStyle": 3524,
-          "m_nHaloIndex": 3424,
-          "m_nNumBeamEnts": 3376,
-          "m_queryHandleHalo": 3380,
-          "m_vecEndPos": 3532
+          "m_bTurnedOff": 3536,
+          "m_fAmplitude": 3516,
+          "m_fEndWidth": 3504,
+          "m_fFadeLength": 3508,
+          "m_fHaloScale": 3512,
+          "m_fSpeed": 3524,
+          "m_fStartFrame": 3520,
+          "m_fWidth": 3500,
+          "m_flDamage": 3380,
+          "m_flFireTime": 3376,
+          "m_flFrame": 3528,
+          "m_flFrameRate": 3368,
+          "m_flHDRColorScale": 3372,
+          "m_hAttachEntity": 3448,
+          "m_hBaseMaterial": 3424,
+          "m_hEndEntity": 3552,
+          "m_nAttachIndex": 3488,
+          "m_nBeamFlags": 3444,
+          "m_nBeamType": 3440,
+          "m_nClipStyle": 3532,
+          "m_nHaloIndex": 3432,
+          "m_nNumBeamEnts": 3384,
+          "m_queryHandleHalo": 3388,
+          "m_vecEndPos": 3540
         },
         "metadata": [
           {
@@ -5810,35 +5829,35 @@
       },
       "C_BreakableProp": {
         "fields": {
-          "m_BreakableContentsType": 4256,
-          "m_CPropDataComponent": 4032,
-          "m_OnBreak": 4096,
-          "m_OnHealthChanged": 4136,
-          "m_OnTakeDamage": 4176,
-          "m_PerformanceMode": 4248,
-          "m_bHasBreakPiecesOrCommands": 4280,
-          "m_explodeDamage": 4284,
-          "m_explodeRadius": 4288,
-          "m_explosionBuildupSound": 4304,
-          "m_explosionCustomEffect": 4312,
-          "m_explosionCustomSound": 4320,
-          "m_explosionDelay": 4296,
-          "m_explosionModifier": 4328,
-          "m_flDefBurstScale": 4228,
-          "m_flDefaultFadeScale": 4344,
-          "m_flLastPhysicsInfluenceTime": 4340,
-          "m_flPressureDelay": 4224,
-          "m_flPreventDamageBeforeTime": 4252,
-          "m_hBreaker": 4244,
-          "m_hFlareEnt": 4352,
-          "m_hLastAttacker": 4348,
-          "m_hPhysicsAttacker": 4336,
-          "m_iMinHealthDmg": 4220,
-          "m_impactEnergyScale": 4216,
-          "m_noGhostCollision": 4356,
-          "m_strBreakableContentsParticleOverride": 4272,
-          "m_strBreakableContentsPropGroupOverride": 4264,
-          "m_vDefBurstOffset": 4232
+          "m_BreakableContentsType": 4264,
+          "m_CPropDataComponent": 4040,
+          "m_OnBreak": 4104,
+          "m_OnHealthChanged": 4144,
+          "m_OnTakeDamage": 4184,
+          "m_PerformanceMode": 4256,
+          "m_bHasBreakPiecesOrCommands": 4288,
+          "m_explodeDamage": 4292,
+          "m_explodeRadius": 4296,
+          "m_explosionBuildupSound": 4312,
+          "m_explosionCustomEffect": 4320,
+          "m_explosionCustomSound": 4328,
+          "m_explosionDelay": 4304,
+          "m_explosionModifier": 4336,
+          "m_flDefBurstScale": 4236,
+          "m_flDefaultFadeScale": 4352,
+          "m_flLastPhysicsInfluenceTime": 4348,
+          "m_flPressureDelay": 4232,
+          "m_flPreventDamageBeforeTime": 4260,
+          "m_hBreaker": 4252,
+          "m_hFlareEnt": 4360,
+          "m_hLastAttacker": 4356,
+          "m_hPhysicsAttacker": 4344,
+          "m_iMinHealthDmg": 4228,
+          "m_impactEnergyScale": 4224,
+          "m_noGhostCollision": 4364,
+          "m_strBreakableContentsParticleOverride": 4280,
+          "m_strBreakableContentsPropGroupOverride": 4272,
+          "m_vDefBurstOffset": 4240
         },
         "metadata": [
           {
@@ -5856,29 +5875,29 @@
       },
       "C_BulletHitModel": {
         "fields": {
-          "m_bIsHit": 4024,
-          "m_flTimeCreated": 4028,
-          "m_hPlayerParent": 4020,
-          "m_iBoneIndex": 4016,
-          "m_matLocal": 3968,
-          "m_vecStartPos": 4032
+          "m_bIsHit": 4032,
+          "m_flTimeCreated": 4036,
+          "m_hPlayerParent": 4028,
+          "m_iBoneIndex": 4024,
+          "m_matLocal": 3976,
+          "m_vecStartPos": 4040
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
       },
       "C_C4": {
         "fields": {
-          "m_activeLightParticleIndex": 6944,
-          "m_bBombPlacedAnimation": 6960,
-          "m_bBombPlanted": 7003,
-          "m_bIsPlantingViaUse": 6961,
-          "m_bPlayedArmingBeeps": 6996,
-          "m_bStartedArming": 6952,
-          "m_eActiveLightEffect": 6948,
-          "m_entitySpottedState": 6968,
-          "m_fArmedTime": 6956,
-          "m_nSpotRules": 6992,
-          "m_szScreenText": 6912
+          "m_activeLightParticleIndex": 6960,
+          "m_bBombPlacedAnimation": 6976,
+          "m_bBombPlanted": 7019,
+          "m_bIsPlantingViaUse": 6977,
+          "m_bPlayedArmingBeeps": 7012,
+          "m_bStartedArming": 6968,
+          "m_eActiveLightEffect": 6964,
+          "m_entitySpottedState": 6984,
+          "m_fArmedTime": 6972,
+          "m_nSpotRules": 7008,
+          "m_szScreenText": 6928
         },
         "metadata": [
           {
@@ -5916,10 +5935,10 @@
       },
       "C_CSGOViewModel": {
         "fields": {
-          "m_bNeedToQueueHighResComposite": 4128,
-          "m_bShouldIgnoreOffsetAndAccuracy": 4121,
-          "m_nLastKnownAssociatedWeaponEntIndex": 4124,
-          "m_vLoweredWeaponOffset": 4208
+          "m_bNeedToQueueHighResComposite": 4136,
+          "m_bShouldIgnoreOffsetAndAccuracy": 4129,
+          "m_nLastKnownAssociatedWeaponEntIndex": 4132,
+          "m_vLoweredWeaponOffset": 4216
         },
         "metadata": [
           {
@@ -5997,12 +6016,12 @@
       },
       "C_CSGO_PreviewModel": {
         "fields": {
-          "m_animgraph": 4376,
-          "m_animgraphCharacterModeString": 4384,
-          "m_defaultAnim": 4392,
-          "m_flInitialModelScale": 4404,
-          "m_nDefaultAnimLoopMode": 4400,
-          "m_sInitialWeaponState": 4408
+          "m_animgraph": 4384,
+          "m_animgraphCharacterModeString": 4392,
+          "m_defaultAnim": 4400,
+          "m_flInitialModelScale": 4412,
+          "m_nDefaultAnimLoopMode": 4408,
+          "m_sInitialWeaponState": 4416
         },
         "metadata": [],
         "parent": "C_BaseFlex"
@@ -6014,9 +6033,9 @@
       },
       "C_CSGO_PreviewPlayer": {
         "fields": {
-          "m_animgraph": 9448,
-          "m_animgraphCharacterModeString": 9456,
-          "m_flInitialModelScale": 9464
+          "m_animgraph": 9504,
+          "m_animgraphCharacterModeString": 9512,
+          "m_flInitialModelScale": 9520
         },
         "metadata": [],
         "parent": "C_CSPlayerPawn"
@@ -6746,7 +6765,7 @@
       },
       "C_CSObserverPawn": {
         "fields": {
-          "m_hDetectParentChange": 5384
+          "m_hDetectParentChange": 5392
         },
         "metadata": [
           {
@@ -6794,109 +6813,110 @@
       },
       "C_CSPlayerPawn": {
         "fields": {
-          "m_ArmorValue": 9204,
-          "m_EconGloves": 5944,
-          "m_GunGameImmunityColor": 8936,
-          "m_PredictedDamageTags": 9360,
-          "m_RetakesMVPBoostExtraUtility": 5904,
-          "m_aimPunchAngle": 5492,
-          "m_aimPunchAngleVel": 5504,
-          "m_aimPunchCache": 5528,
-          "m_aimPunchTickBase": 5516,
-          "m_aimPunchTickFraction": 5520,
-          "m_angShootAngleHistory": 9284,
-          "m_angStashedShootAngles": 9248,
-          "m_bGrenadeParametersStashed": 9244,
-          "m_bHasDeathInfo": 9221,
-          "m_bHasFemaleVoice": 5440,
-          "m_bInBombZone": 5569,
-          "m_bInBuyZone": 5488,
-          "m_bInHostageRescueZone": 5568,
-          "m_bInLanding": 5560,
-          "m_bInNoDefuseArea": 9164,
-          "m_bIsBuyMenuOpen": 5570,
-          "m_bIsDefusing": 9154,
-          "m_bIsGrabbingHostage": 9155,
-          "m_bIsScoped": 9152,
-          "m_bIsWalking": 9040,
-          "m_bKilledByHeadshot": 9201,
-          "m_bLastHeadBoneTransformIsValid": 8808,
-          "m_bLeftHanded": 8857,
-          "m_bMustSyncRagdollState": 7041,
-          "m_bNeedToReApplyGloves": 5936,
-          "m_bOldIsScoped": 9220,
-          "m_bOnGroundLastTick": 8816,
-          "m_bPrevDefuser": 5470,
-          "m_bPrevHelmet": 5471,
-          "m_bPreviouslyInBuyZone": 5489,
-          "m_bRagdollDamageHeadshot": 7136,
-          "m_bResumeZoom": 9153,
-          "m_bRetakesHasDefuseKit": 5896,
-          "m_bRetakesMVPLastRound": 5897,
-          "m_bSkipOneHeadConstraintUpdate": 8856,
-          "m_bWaitForNoAttack": 9192,
-          "m_entitySpottedState": 9128,
-          "m_fSwitchedHandednessTime": 8860,
-          "m_flDeathInfoTime": 9224,
-          "m_flEmitSoundTime": 9160,
-          "m_flFlinchStack": 9176,
-          "m_flHealthShotBoostExpirationTime": 5432,
-          "m_flHitHeading": 9184,
-          "m_flLandingStartTime": 5564,
-          "m_flLandingTimeSeconds": 5444,
-          "m_flLastFiredWeaponTime": 5436,
-          "m_flNextSprayDecalTime": 5576,
-          "m_flOldFallVelocity": 5448,
-          "m_flSlopeDropHeight": 9088,
-          "m_flSlopeDropOffset": 9072,
-          "m_flTimeOfLastInjury": 5572,
-          "m_flVelocityModifier": 9180,
-          "m_flViewmodelFOV": 8876,
-          "m_flViewmodelOffsetX": 8864,
-          "m_flViewmodelOffsetY": 8868,
-          "m_flViewmodelOffsetZ": 8872,
-          "m_grenadeParameterStashTime": 9240,
-          "m_iBlockingUseActionInProgress": 9156,
-          "m_iRetakesMVPBoostItem": 5900,
-          "m_iRetakesOffering": 5888,
-          "m_iRetakesOfferingCard": 5892,
-          "m_iShotsFired": 9172,
-          "m_ignoreLadderJumpTime": 9196,
-          "m_lastLandTime": 8812,
-          "m_nEconGlovesChanged": 7040,
-          "m_nHighestAppliedDamageTagTick": 9444,
-          "m_nHitBodyPart": 9188,
-          "m_nLastKillerIndex": 9216,
-          "m_nPrevArmorVal": 5472,
-          "m_nPrevGrenadeAmmoCount": 5476,
-          "m_nPrevHighestReceivedDamageTagTick": 9440,
-          "m_nRagdollDamageBone": 7044,
-          "m_nWhichBombZone": 9168,
-          "m_pActionTrackingServices": 5424,
-          "m_pBulletServices": 5392,
-          "m_pBuyServices": 5408,
-          "m_pGlowServices": 5416,
-          "m_pHostageServices": 5400,
-          "m_qDeathEyeAngles": 8844,
-          "m_szLastPlaceName": 5452,
-          "m_szRagdollDamageWeaponName": 7072,
-          "m_thirdPersonHeading": 9048,
-          "m_unCurrentEquipmentValue": 9208,
-          "m_unFreezetimeEndEquipmentValue": 9212,
-          "m_unPreviousWeaponHash": 5480,
-          "m_unRoundStartEquipmentValue": 9210,
-          "m_unWeaponHash": 5484,
-          "m_vHeadConstraintOffset": 9104,
-          "m_vRagdollDamageForce": 7048,
-          "m_vRagdollDamagePosition": 7060,
-          "m_vRagdollServerOrigin": 7140,
-          "m_vecBulletHitModels": 9016,
-          "m_vecDeathInfoOrigin": 9228,
-          "m_vecPlayerPatchEconIndices": 8880,
-          "m_vecStashedGrenadeThrowPosition": 9260,
-          "m_vecStashedVelocity": 9272,
-          "m_vecThrowPositionHistory": 9308,
-          "m_vecVelocityHistory": 9332
+          "m_ArmorValue": 9220,
+          "m_EconGloves": 5960,
+          "m_GunGameImmunityColor": 8952,
+          "m_PredictedDamageTags": 9376,
+          "m_RetakesMVPBoostExtraUtility": 5920,
+          "m_aimPunchAngle": 5508,
+          "m_aimPunchAngleVel": 5520,
+          "m_aimPunchCache": 5544,
+          "m_aimPunchTickBase": 5532,
+          "m_aimPunchTickFraction": 5536,
+          "m_angShootAngleHistory": 9300,
+          "m_angStashedShootAngles": 9264,
+          "m_bGrenadeParametersStashed": 9260,
+          "m_bHasDeathInfo": 9237,
+          "m_bHasFemaleVoice": 5456,
+          "m_bInBombZone": 5585,
+          "m_bInBuyZone": 5504,
+          "m_bInHostageRescueZone": 5584,
+          "m_bInLanding": 5576,
+          "m_bInNoDefuseArea": 9180,
+          "m_bIsBuyMenuOpen": 5586,
+          "m_bIsDefusing": 9170,
+          "m_bIsGrabbingHostage": 9171,
+          "m_bIsScoped": 9168,
+          "m_bIsWalking": 9056,
+          "m_bKilledByHeadshot": 9217,
+          "m_bLastHeadBoneTransformIsValid": 8824,
+          "m_bLeftHanded": 8873,
+          "m_bMustSyncRagdollState": 7057,
+          "m_bNeedToReApplyGloves": 5952,
+          "m_bOldIsScoped": 9236,
+          "m_bOnGroundLastTick": 8832,
+          "m_bPrevDefuser": 5486,
+          "m_bPrevHelmet": 5487,
+          "m_bPreviouslyInBuyZone": 5505,
+          "m_bRagdollDamageHeadshot": 7152,
+          "m_bResumeZoom": 9169,
+          "m_bRetakesHasDefuseKit": 5912,
+          "m_bRetakesMVPLastRound": 5913,
+          "m_bSkipOneHeadConstraintUpdate": 8872,
+          "m_bWaitForNoAttack": 9208,
+          "m_entitySpottedState": 9144,
+          "m_fSwitchedHandednessTime": 8876,
+          "m_flDeathInfoTime": 9240,
+          "m_flEmitSoundTime": 9176,
+          "m_flFlinchStack": 9192,
+          "m_flHealthShotBoostExpirationTime": 5448,
+          "m_flHitHeading": 9200,
+          "m_flLandingStartTime": 5580,
+          "m_flLandingTimeSeconds": 5460,
+          "m_flLastFiredWeaponTime": 5452,
+          "m_flNextSprayDecalTime": 5592,
+          "m_flOldFallVelocity": 5464,
+          "m_flSlopeDropHeight": 9104,
+          "m_flSlopeDropOffset": 9088,
+          "m_flTimeOfLastInjury": 5588,
+          "m_flVelocityModifier": 9196,
+          "m_flViewmodelFOV": 8892,
+          "m_flViewmodelOffsetX": 8880,
+          "m_flViewmodelOffsetY": 8884,
+          "m_flViewmodelOffsetZ": 8888,
+          "m_grenadeParameterStashTime": 9256,
+          "m_iBlockingUseActionInProgress": 9172,
+          "m_iRetakesMVPBoostItem": 5916,
+          "m_iRetakesOffering": 5904,
+          "m_iRetakesOfferingCard": 5908,
+          "m_iShotsFired": 9188,
+          "m_ignoreLadderJumpTime": 9212,
+          "m_lastLandTime": 8828,
+          "m_nEconGlovesChanged": 7056,
+          "m_nHighestAppliedDamageTagTick": 9460,
+          "m_nHitBodyPart": 9204,
+          "m_nLastKillerIndex": 9232,
+          "m_nPrevArmorVal": 5488,
+          "m_nPrevGrenadeAmmoCount": 5492,
+          "m_nPrevHighestReceivedDamageTagTick": 9456,
+          "m_nRagdollDamageBone": 7060,
+          "m_nWhichBombZone": 9184,
+          "m_pActionTrackingServices": 5432,
+          "m_pBulletServices": 5400,
+          "m_pBuyServices": 5416,
+          "m_pDamageReactServices": 5440,
+          "m_pGlowServices": 5424,
+          "m_pHostageServices": 5408,
+          "m_qDeathEyeAngles": 8860,
+          "m_szLastPlaceName": 5468,
+          "m_szRagdollDamageWeaponName": 7088,
+          "m_thirdPersonHeading": 9064,
+          "m_unCurrentEquipmentValue": 9224,
+          "m_unFreezetimeEndEquipmentValue": 9228,
+          "m_unPreviousWeaponHash": 5496,
+          "m_unRoundStartEquipmentValue": 9226,
+          "m_unWeaponHash": 5500,
+          "m_vHeadConstraintOffset": 9120,
+          "m_vRagdollDamageForce": 7064,
+          "m_vRagdollDamagePosition": 7076,
+          "m_vRagdollServerOrigin": 7156,
+          "m_vecBulletHitModels": 9032,
+          "m_vecDeathInfoOrigin": 9244,
+          "m_vecPlayerPatchEconIndices": 8896,
+          "m_vecStashedGrenadeThrowPosition": 9276,
+          "m_vecStashedVelocity": 9288,
+          "m_vecThrowPositionHistory": 9324,
+          "m_vecVelocityHistory": 9348
         },
         "metadata": [
           {
@@ -7288,71 +7308,71 @@
       },
       "C_CSPlayerPawnBase": {
         "fields": {
-          "m_angEyeAngles": 5168,
-          "m_bCachedPlaneIsValid": 5013,
-          "m_bClipHitStaticWorld": 5012,
-          "m_bDeferStartMusicOnWarmup": 5276,
-          "m_bFlashBuildUp": 5116,
-          "m_bFlashDspHasBeenCleared": 5117,
-          "m_bFlashScreenshotHasBeenGrabbed": 5118,
-          "m_bGuardianShouldSprayCustomXMark": 5368,
-          "m_bGunGameImmunity": 5044,
-          "m_bHasMovedSinceSpawn": 5045,
-          "m_bIsRescuing": 5032,
-          "m_bScreenTearFrameCaptured": 5100,
-          "m_bShouldAutobuyDMWeapons": 5196,
-          "m_bShouldAutobuyNow": 5197,
-          "m_cycleLatch": 5280,
-          "m_delayTargetIDTimer": 5208,
-          "m_fImmuneToGunGameDamageTime": 5036,
-          "m_fImmuneToGunGameDamageTimeLast": 5040,
-          "m_fMolotovDamageTime": 5052,
-          "m_fMolotovUseTime": 5048,
-          "m_fNextThinkPushAway": 5192,
-          "m_fRenderingClipPlane": 4968,
-          "m_flClientDeathTime": 5096,
-          "m_flCurrentMusicStartTime": 5268,
-          "m_flDeathCCWeight": 5152,
-          "m_flFlashBangTime": 5104,
-          "m_flFlashDuration": 5124,
-          "m_flFlashMaxAlpha": 5120,
-          "m_flFlashOverlayAlpha": 5112,
-          "m_flFlashScreenshotAlpha": 5108,
-          "m_flHealthFadeAlpha": 5136,
-          "m_flHealthFadeValue": 5132,
-          "m_flLastSmokeAge": 5292,
-          "m_flLastSmokeOverlayAlpha": 5288,
-          "m_flLastSpawnTimeIndex": 5060,
-          "m_flMusicRoundStartTime": 5272,
-          "m_flNextMagDropTime": 5320,
-          "m_flPrevMatchEndTime": 5160,
-          "m_flPrevRoundEndTime": 5156,
-          "m_flProgressBarStartTime": 5068,
-          "m_hOriginalController": 5376,
-          "m_holdTargetIDTimer": 5240,
-          "m_iHealthBarRenderMaskIndex": 5128,
-          "m_iIDEntIndex": 5200,
-          "m_iOldIDEntIndex": 5236,
-          "m_iPlayerState": 5028,
-          "m_iProgressBarDuration": 5064,
-          "m_iTargetItemEntIdx": 5232,
-          "m_iThrowGrenadeCounter": 5056,
-          "m_nLastClipPlaneSetupFrame": 4984,
-          "m_nLastMagDropAttachmentIndex": 5324,
-          "m_nPlayerInfernoBodyFx": 5312,
-          "m_nPlayerInfernoFootFx": 5316,
-          "m_nPlayerSmokedFx": 5308,
-          "m_pClippingWeapon": 5016,
-          "m_pPingServices": 4952,
-          "m_pViewModelServices": 4960,
-          "m_previousPlayerState": 5024,
-          "m_serverIntendedCycle": 5284,
-          "m_vLastSmokeOverlayColor": 5296,
-          "m_vecIntroStartEyePosition": 5072,
-          "m_vecIntroStartPlayerForward": 5084,
-          "m_vecLastAliveLocalVelocity": 5328,
-          "m_vecLastClipCameraForward": 5000,
-          "m_vecLastClipCameraPos": 4988
+          "m_angEyeAngles": 5176,
+          "m_bCachedPlaneIsValid": 5021,
+          "m_bClipHitStaticWorld": 5020,
+          "m_bDeferStartMusicOnWarmup": 5284,
+          "m_bFlashBuildUp": 5124,
+          "m_bFlashDspHasBeenCleared": 5125,
+          "m_bFlashScreenshotHasBeenGrabbed": 5126,
+          "m_bGuardianShouldSprayCustomXMark": 5376,
+          "m_bGunGameImmunity": 5052,
+          "m_bHasMovedSinceSpawn": 5053,
+          "m_bIsRescuing": 5040,
+          "m_bScreenTearFrameCaptured": 5108,
+          "m_bShouldAutobuyDMWeapons": 5204,
+          "m_bShouldAutobuyNow": 5205,
+          "m_cycleLatch": 5288,
+          "m_delayTargetIDTimer": 5216,
+          "m_fImmuneToGunGameDamageTime": 5044,
+          "m_fImmuneToGunGameDamageTimeLast": 5048,
+          "m_fMolotovDamageTime": 5060,
+          "m_fMolotovUseTime": 5056,
+          "m_fNextThinkPushAway": 5200,
+          "m_fRenderingClipPlane": 4976,
+          "m_flClientDeathTime": 5104,
+          "m_flCurrentMusicStartTime": 5276,
+          "m_flDeathCCWeight": 5160,
+          "m_flFlashBangTime": 5112,
+          "m_flFlashDuration": 5132,
+          "m_flFlashMaxAlpha": 5128,
+          "m_flFlashOverlayAlpha": 5120,
+          "m_flFlashScreenshotAlpha": 5116,
+          "m_flHealthFadeAlpha": 5144,
+          "m_flHealthFadeValue": 5140,
+          "m_flLastSmokeAge": 5300,
+          "m_flLastSmokeOverlayAlpha": 5296,
+          "m_flLastSpawnTimeIndex": 5068,
+          "m_flMusicRoundStartTime": 5280,
+          "m_flNextMagDropTime": 5328,
+          "m_flPrevMatchEndTime": 5168,
+          "m_flPrevRoundEndTime": 5164,
+          "m_flProgressBarStartTime": 5076,
+          "m_hOriginalController": 5384,
+          "m_holdTargetIDTimer": 5248,
+          "m_iHealthBarRenderMaskIndex": 5136,
+          "m_iIDEntIndex": 5208,
+          "m_iOldIDEntIndex": 5244,
+          "m_iPlayerState": 5036,
+          "m_iProgressBarDuration": 5072,
+          "m_iTargetItemEntIdx": 5240,
+          "m_iThrowGrenadeCounter": 5064,
+          "m_nLastClipPlaneSetupFrame": 4992,
+          "m_nLastMagDropAttachmentIndex": 5332,
+          "m_nPlayerInfernoBodyFx": 5320,
+          "m_nPlayerInfernoFootFx": 5324,
+          "m_nPlayerSmokedFx": 5316,
+          "m_pClippingWeapon": 5024,
+          "m_pPingServices": 4960,
+          "m_pViewModelServices": 4968,
+          "m_previousPlayerState": 5032,
+          "m_serverIntendedCycle": 5292,
+          "m_vLastSmokeOverlayColor": 5304,
+          "m_vecIntroStartEyePosition": 5080,
+          "m_vecIntroStartPlayerForward": 5092,
+          "m_vecLastAliveLocalVelocity": 5336,
+          "m_vecLastClipCameraForward": 5008,
+          "m_vecLastClipCameraPos": 4996
         },
         "metadata": [
           {
@@ -7589,78 +7609,78 @@
       },
       "C_CSWeaponBase": {
         "fields": {
-          "m_ClientPreviousWeaponState": 5968,
-          "m_IronSightController": 6608,
-          "m_OnPlayerPickup": 6024,
-          "m_bBurstMode": 6112,
-          "m_bClearWeaponIdentifyingUGC": 6312,
-          "m_bDroppedNearBuyZone": 6152,
-          "m_bFireOnEmpty": 6016,
-          "m_bInReload": 6128,
-          "m_bIsHauledBack": 6136,
-          "m_bOldFirstPersonSpectatedState": 6314,
-          "m_bReloadVisuallyComplete": 6129,
-          "m_bReloadsWithClips": 6008,
-          "m_bSilencerOn": 6137,
-          "m_bUIWeapon": 6315,
-          "m_bVisualsDataSet": 6313,
-          "m_bWasOwnedByCT": 6372,
-          "m_bWasOwnedByTerrorist": 6373,
-          "m_donated": 6364,
-          "m_ePlayerFireEvent": 5856,
-          "m_ePlayerFireEventAttackType": 5860,
-          "m_fAccuracyPenalty": 6088,
-          "m_fAccuracySmoothedForZoom": 6096,
-          "m_fLastShotTime": 6368,
-          "m_fScopeZoomEndTime": 6100,
-          "m_flCrosshairDistance": 5976,
-          "m_flDroppedAtTime": 6132,
-          "m_flFireSequenceStartTime": 5844,
-          "m_flGunAccuracyPositionDeprecated": 5996,
-          "m_flLastAccuracyUpdateTime": 6092,
-          "m_flLastBurstModeChangeTime": 6116,
-          "m_flLastLOSTraceFailureTime": 6800,
-          "m_flLastMagDropRequestTime": 6896,
-          "m_flNextAttackRenderTimeOffset": 6156,
-          "m_flNextClientFireBulletTime": 6388,
-          "m_flNextClientFireBulletTime_Repredict": 6392,
-          "m_flPostponeFireReadyFrac": 6124,
-          "m_flRecoilIndex": 6108,
-          "m_flTimeSilencerSwitchComplete": 6140,
-          "m_flTimeWeaponIdle": 6012,
-          "m_flTurningInaccuracy": 6084,
-          "m_flTurningInaccuracyDelta": 6068,
-          "m_flWatTickOffset": 6900,
-          "m_gunHeat": 6376,
-          "m_hCurrentThirdPersonSequence": 5904,
-          "m_hPrevOwner": 6328,
-          "m_iAlpha": 5984,
-          "m_iAmmoLastCheck": 5980,
-          "m_iCrosshairTextureID": 5992,
-          "m_iIronSightMode": 6784,
-          "m_iMostRecentTeamNumber": 6148,
-          "m_iNumEmptyAttacks": 6804,
-          "m_iOriginalTeamNumber": 6144,
-          "m_iRecoilIndex": 6104,
-          "m_iScopeTextureID": 5988,
-          "m_iState": 5972,
-          "m_lastSmokeTime": 6384,
-          "m_nCustomEconReloadEventId": 6316,
-          "m_nDropTick": 6332,
-          "m_nFireSequenceStartTimeAck": 5852,
-          "m_nFireSequenceStartTimeChange": 5848,
-          "m_nLastEmptySoundCmdNum": 6000,
-          "m_nPostponeFireReadyTicks": 6120,
-          "m_nSilencerBoneIndex": 5908,
-          "m_nViewModelIndex": 6004,
-          "m_seqFirePrimary": 5868,
-          "m_seqFireSecondary": 5872,
-          "m_seqIdle": 5864,
-          "m_smokeAttachments": 6380,
-          "m_thirdPersonFireSequences": 5880,
-          "m_thirdPersonSequences": 5912,
-          "m_vecTurningInaccuracyEyeDirLast": 6072,
-          "m_weaponMode": 6064
+          "m_ClientPreviousWeaponState": 5976,
+          "m_IronSightController": 6624,
+          "m_OnPlayerPickup": 6032,
+          "m_bBurstMode": 6120,
+          "m_bClearWeaponIdentifyingUGC": 6320,
+          "m_bDroppedNearBuyZone": 6160,
+          "m_bFireOnEmpty": 6024,
+          "m_bInReload": 6136,
+          "m_bIsHauledBack": 6144,
+          "m_bOldFirstPersonSpectatedState": 6322,
+          "m_bReloadVisuallyComplete": 6137,
+          "m_bReloadsWithClips": 6016,
+          "m_bSilencerOn": 6145,
+          "m_bUIWeapon": 6323,
+          "m_bVisualsDataSet": 6321,
+          "m_bWasOwnedByCT": 6380,
+          "m_bWasOwnedByTerrorist": 6381,
+          "m_donated": 6372,
+          "m_ePlayerFireEvent": 5864,
+          "m_ePlayerFireEventAttackType": 5868,
+          "m_fAccuracyPenalty": 6096,
+          "m_fAccuracySmoothedForZoom": 6104,
+          "m_fLastShotTime": 6376,
+          "m_fScopeZoomEndTime": 6108,
+          "m_flCrosshairDistance": 5984,
+          "m_flDroppedAtTime": 6140,
+          "m_flFireSequenceStartTime": 5852,
+          "m_flGunAccuracyPositionDeprecated": 6004,
+          "m_flLastAccuracyUpdateTime": 6100,
+          "m_flLastBurstModeChangeTime": 6124,
+          "m_flLastLOSTraceFailureTime": 6816,
+          "m_flLastMagDropRequestTime": 6912,
+          "m_flNextAttackRenderTimeOffset": 6164,
+          "m_flNextClientFireBulletTime": 6396,
+          "m_flNextClientFireBulletTime_Repredict": 6400,
+          "m_flPostponeFireReadyFrac": 6132,
+          "m_flRecoilIndex": 6116,
+          "m_flTimeSilencerSwitchComplete": 6148,
+          "m_flTimeWeaponIdle": 6020,
+          "m_flTurningInaccuracy": 6092,
+          "m_flTurningInaccuracyDelta": 6076,
+          "m_flWatTickOffset": 6916,
+          "m_gunHeat": 6384,
+          "m_hCurrentThirdPersonSequence": 5912,
+          "m_hPrevOwner": 6336,
+          "m_iAlpha": 5992,
+          "m_iAmmoLastCheck": 5988,
+          "m_iCrosshairTextureID": 6000,
+          "m_iIronSightMode": 6800,
+          "m_iMostRecentTeamNumber": 6156,
+          "m_iNumEmptyAttacks": 6820,
+          "m_iOriginalTeamNumber": 6152,
+          "m_iRecoilIndex": 6112,
+          "m_iScopeTextureID": 5996,
+          "m_iState": 5980,
+          "m_lastSmokeTime": 6392,
+          "m_nCustomEconReloadEventId": 6324,
+          "m_nDropTick": 6340,
+          "m_nFireSequenceStartTimeAck": 5860,
+          "m_nFireSequenceStartTimeChange": 5856,
+          "m_nLastEmptySoundCmdNum": 6008,
+          "m_nPostponeFireReadyTicks": 6128,
+          "m_nSilencerBoneIndex": 5916,
+          "m_nViewModelIndex": 6012,
+          "m_seqFirePrimary": 5876,
+          "m_seqFireSecondary": 5880,
+          "m_seqIdle": 5872,
+          "m_smokeAttachments": 6388,
+          "m_thirdPersonFireSequences": 5888,
+          "m_thirdPersonSequences": 5920,
+          "m_vecTurningInaccuracyEyeDirLast": 6080,
+          "m_weaponMode": 6072
         },
         "metadata": [
           {
@@ -7812,12 +7832,12 @@
       },
       "C_CSWeaponBaseGun": {
         "fields": {
-          "m_bNeedsBoltAction": 6941,
-          "m_iBurstShotsRemaining": 6916,
-          "m_iSilencerBodygroup": 6920,
-          "m_inPrecache": 6940,
-          "m_silencedModelIndex": 6936,
-          "m_zoomLevel": 6912
+          "m_bNeedsBoltAction": 6957,
+          "m_iBurstShotsRemaining": 6932,
+          "m_iSilencerBodygroup": 6936,
+          "m_inPrecache": 6956,
+          "m_silencedModelIndex": 6952,
+          "m_zoomLevel": 6928
         },
         "metadata": [
           {
@@ -7840,13 +7860,13 @@
       },
       "C_Chicken": {
         "fields": {
-          "m_AttributeManager": 4664,
-          "m_bAttributesInitialized": 5856,
-          "m_bIsPreviewModel": 5864,
-          "m_hHolidayHatAddon": 4648,
-          "m_hWaterWakeParticles": 5860,
-          "m_jumpedThisFrame": 4652,
-          "m_leader": 4656
+          "m_AttributeManager": 4672,
+          "m_bAttributesInitialized": 5864,
+          "m_bIsPreviewModel": 5872,
+          "m_hHolidayHatAddon": 4656,
+          "m_hWaterWakeParticles": 5868,
+          "m_jumpedThisFrame": 4660,
+          "m_leader": 4664
         },
         "metadata": [
           {
@@ -7869,20 +7889,20 @@
       },
       "C_ClientRagdoll": {
         "fields": {
-          "m_bFadeOut": 3968,
-          "m_bFadingOut": 3998,
-          "m_bImportant": 3969,
-          "m_bReleaseRagdoll": 3996,
-          "m_flEffectTime": 3972,
-          "m_flScaleEnd": 4000,
-          "m_flScaleTimeEnd": 4080,
-          "m_flScaleTimeStart": 4040,
-          "m_gibDespawnTime": 3976,
-          "m_iCurrentFriction": 3980,
-          "m_iEyeAttachment": 3997,
-          "m_iFrictionAnimState": 3992,
-          "m_iMaxFriction": 3988,
-          "m_iMinFriction": 3984
+          "m_bFadeOut": 3976,
+          "m_bFadingOut": 4006,
+          "m_bImportant": 3977,
+          "m_bReleaseRagdoll": 4004,
+          "m_flEffectTime": 3980,
+          "m_flScaleEnd": 4008,
+          "m_flScaleTimeEnd": 4088,
+          "m_flScaleTimeStart": 4048,
+          "m_gibDespawnTime": 3984,
+          "m_iCurrentFriction": 3988,
+          "m_iEyeAttachment": 4005,
+          "m_iFrictionAnimState": 4000,
+          "m_iMaxFriction": 3996,
+          "m_iMinFriction": 3992
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
@@ -7973,15 +7993,15 @@
       },
       "C_ColorCorrectionVolume": {
         "fields": {
-          "m_FadeDuration": 3392,
-          "m_LastEnterTime": 3372,
-          "m_LastEnterWeight": 3368,
-          "m_LastExitTime": 3380,
-          "m_LastExitWeight": 3376,
-          "m_MaxWeight": 3388,
-          "m_Weight": 3396,
-          "m_bEnabled": 3384,
-          "m_lookupFilename": 3400
+          "m_FadeDuration": 3400,
+          "m_LastEnterTime": 3380,
+          "m_LastEnterWeight": 3376,
+          "m_LastExitTime": 3388,
+          "m_LastExitWeight": 3384,
+          "m_MaxWeight": 3396,
+          "m_Weight": 3404,
+          "m_bEnabled": 3392,
+          "m_lookupFilename": 3408
         },
         "metadata": [
           {
@@ -8032,9 +8052,9 @@
       },
       "C_DecoyProjectile": {
         "fields": {
-          "m_flTimeParticleEffectSpawn": 4648,
-          "m_nClientLastKnownDecoyShotTick": 4612,
-          "m_nDecoyShotTick": 4608
+          "m_flTimeParticleEffectSpawn": 4656,
+          "m_nClientLastKnownDecoyShotTick": 4620,
+          "m_nDecoyShotTick": 4616
         },
         "metadata": [
           {
@@ -8047,13 +8067,13 @@
       },
       "C_DynamicLight": {
         "fields": {
-          "m_Exponent": 3368,
-          "m_Flags": 3360,
-          "m_InnerAngle": 3372,
-          "m_LightStyle": 3361,
-          "m_OuterAngle": 3376,
-          "m_Radius": 3364,
-          "m_SpotRadius": 3380
+          "m_Exponent": 3376,
+          "m_Flags": 3368,
+          "m_InnerAngle": 3380,
+          "m_LightStyle": 3369,
+          "m_OuterAngle": 3384,
+          "m_Radius": 3372,
+          "m_SpotRadius": 3388
         },
         "metadata": [
           {
@@ -8096,29 +8116,29 @@
       },
       "C_DynamicProp": {
         "fields": {
-          "m_OnAnimReachedEnd": 4528,
-          "m_OnAnimReachedStart": 4488,
-          "m_bCreateNonSolid": 4584,
-          "m_bFiredStartEndOutput": 4582,
-          "m_bForceNpcExclude": 4583,
-          "m_bIsOverrideProp": 4585,
-          "m_bRandomizeCycle": 4580,
-          "m_bStartDisabled": 4581,
-          "m_bUseAnimGraph": 4361,
-          "m_bUseHitboxesForRenderBox": 4360,
-          "m_glowColor": 4600,
-          "m_iCachedFrameCount": 4608,
-          "m_iInitialGlowState": 4588,
-          "m_iszIdleAnim": 4568,
-          "m_nGlowRange": 4592,
-          "m_nGlowRangeMin": 4596,
-          "m_nGlowTeam": 4604,
-          "m_nIdleAnimLoopMode": 4576,
-          "m_pOutputAnimBegun": 4368,
-          "m_pOutputAnimLoopCycleOver": 4448,
-          "m_pOutputAnimOver": 4408,
-          "m_vecCachedRenderMaxs": 4624,
-          "m_vecCachedRenderMins": 4612
+          "m_OnAnimReachedEnd": 4536,
+          "m_OnAnimReachedStart": 4496,
+          "m_bCreateNonSolid": 4592,
+          "m_bFiredStartEndOutput": 4590,
+          "m_bForceNpcExclude": 4591,
+          "m_bIsOverrideProp": 4593,
+          "m_bRandomizeCycle": 4588,
+          "m_bStartDisabled": 4589,
+          "m_bUseAnimGraph": 4369,
+          "m_bUseHitboxesForRenderBox": 4368,
+          "m_glowColor": 4608,
+          "m_iCachedFrameCount": 4616,
+          "m_iInitialGlowState": 4596,
+          "m_iszIdleAnim": 4576,
+          "m_nGlowRange": 4600,
+          "m_nGlowRangeMin": 4604,
+          "m_nGlowTeam": 4612,
+          "m_nIdleAnimLoopMode": 4584,
+          "m_pOutputAnimBegun": 4376,
+          "m_pOutputAnimLoopCycleOver": 4456,
+          "m_pOutputAnimOver": 4416,
+          "m_vecCachedRenderMaxs": 4632,
+          "m_vecCachedRenderMins": 4620
         },
         "metadata": [
           {
@@ -8151,26 +8171,26 @@
       },
       "C_EconEntity": {
         "fields": {
-          "m_AttributeManager": 4416,
-          "m_OriginalOwnerXuidHigh": 5612,
-          "m_OriginalOwnerXuidLow": 5608,
-          "m_bAttachmentDirty": 5672,
-          "m_bAttributesInitialized": 4408,
-          "m_bClientside": 5632,
-          "m_bParticleSystemsCreated": 5633,
-          "m_flFallbackWear": 5624,
-          "m_flFlexDelayTime": 4392,
-          "m_flFlexDelayedWeight": 4400,
-          "m_hOldProvidee": 5696,
-          "m_hViewmodelAttachment": 5664,
-          "m_iNumOwnerValidationRetries": 5680,
-          "m_iOldTeam": 5668,
-          "m_nFallbackPaintKit": 5616,
-          "m_nFallbackSeed": 5620,
-          "m_nFallbackStatTrak": 5628,
-          "m_nUnloadedModelIndex": 5676,
-          "m_vecAttachedModels": 5704,
-          "m_vecAttachedParticles": 5640
+          "m_AttributeManager": 4424,
+          "m_OriginalOwnerXuidHigh": 5620,
+          "m_OriginalOwnerXuidLow": 5616,
+          "m_bAttachmentDirty": 5680,
+          "m_bAttributesInitialized": 4416,
+          "m_bClientside": 5640,
+          "m_bParticleSystemsCreated": 5641,
+          "m_flFallbackWear": 5632,
+          "m_flFlexDelayTime": 4400,
+          "m_flFlexDelayedWeight": 4408,
+          "m_hOldProvidee": 5704,
+          "m_hViewmodelAttachment": 5672,
+          "m_iNumOwnerValidationRetries": 5688,
+          "m_iOldTeam": 5676,
+          "m_nFallbackPaintKit": 5624,
+          "m_nFallbackSeed": 5628,
+          "m_nFallbackStatTrak": 5636,
+          "m_nUnloadedModelIndex": 5684,
+          "m_vecAttachedModels": 5712,
+          "m_vecAttachedParticles": 5648
         },
         "metadata": [
           {
@@ -8311,27 +8331,27 @@
       },
       "C_EconWearable": {
         "fields": {
-          "m_bAlwaysAllow": 5732,
-          "m_nForceSkin": 5728
+          "m_bAlwaysAllow": 5740,
+          "m_nForceSkin": 5736
         },
         "metadata": [],
         "parent": "C_EconEntity"
       },
       "C_EntityDissolve": {
         "fields": {
-          "m_bCoreExplode": 3420,
-          "m_bLinkedToServerEnt": 3421,
-          "m_flFadeInLength": 3376,
-          "m_flFadeInStart": 3372,
-          "m_flFadeOutLength": 3392,
-          "m_flFadeOutModelLength": 3384,
-          "m_flFadeOutModelStart": 3380,
-          "m_flFadeOutStart": 3388,
-          "m_flNextSparkTime": 3396,
-          "m_flStartTime": 3368,
-          "m_nDissolveType": 3400,
-          "m_nMagnitude": 3416,
-          "m_vDissolverOrigin": 3404
+          "m_bCoreExplode": 3428,
+          "m_bLinkedToServerEnt": 3429,
+          "m_flFadeInLength": 3384,
+          "m_flFadeInStart": 3380,
+          "m_flFadeOutLength": 3400,
+          "m_flFadeOutModelLength": 3392,
+          "m_flFadeOutModelStart": 3388,
+          "m_flFadeOutStart": 3396,
+          "m_flNextSparkTime": 3404,
+          "m_flStartTime": 3376,
+          "m_nDissolveType": 3408,
+          "m_nMagnitude": 3424,
+          "m_vDissolverOrigin": 3412
         },
         "metadata": [
           {
@@ -8790,15 +8810,15 @@
       },
       "C_EnvDecal": {
         "fields": {
-          "m_bProjectOnCharacters": 3385,
-          "m_bProjectOnWater": 3386,
-          "m_bProjectOnWorld": 3384,
-          "m_flDepth": 3376,
-          "m_flDepthSortBias": 3388,
-          "m_flHeight": 3372,
-          "m_flWidth": 3368,
-          "m_hDecalMaterial": 3360,
-          "m_nRenderOrder": 3380
+          "m_bProjectOnCharacters": 3393,
+          "m_bProjectOnWater": 3394,
+          "m_bProjectOnWorld": 3392,
+          "m_flDepth": 3384,
+          "m_flDepthSortBias": 3396,
+          "m_flHeight": 3380,
+          "m_flWidth": 3376,
+          "m_hDecalMaterial": 3368,
+          "m_nRenderOrder": 3388
         },
         "metadata": [
           {
@@ -8979,11 +8999,11 @@
       },
       "C_EnvParticleGlow": {
         "fields": {
-          "m_ColorTint": 4828,
-          "m_flAlphaScale": 4816,
-          "m_flRadiusScale": 4820,
-          "m_flSelfIllumScale": 4824,
-          "m_hTextureOverride": 4832
+          "m_ColorTint": 4836,
+          "m_flAlphaScale": 4824,
+          "m_flRadiusScale": 4828,
+          "m_flSelfIllumScale": 4832,
+          "m_hTextureOverride": 4840
         },
         "metadata": [
           {
@@ -9062,18 +9082,18 @@
       },
       "C_EnvSky": {
         "fields": {
-          "m_bEnabled": 3412,
-          "m_bStartDisabled": 3376,
-          "m_flBrightnessScale": 3388,
-          "m_flFogMaxEnd": 3408,
-          "m_flFogMaxStart": 3404,
-          "m_flFogMinEnd": 3400,
-          "m_flFogMinStart": 3396,
-          "m_hSkyMaterial": 3360,
-          "m_hSkyMaterialLightingOnly": 3368,
-          "m_nFogType": 3392,
-          "m_vTintColor": 3377,
-          "m_vTintColorLightingOnly": 3381
+          "m_bEnabled": 3420,
+          "m_bStartDisabled": 3384,
+          "m_flBrightnessScale": 3396,
+          "m_flFogMaxEnd": 3416,
+          "m_flFogMaxStart": 3412,
+          "m_flFogMinEnd": 3408,
+          "m_flFogMinStart": 3404,
+          "m_hSkyMaterial": 3368,
+          "m_hSkyMaterialLightingOnly": 3376,
+          "m_nFogType": 3400,
+          "m_vTintColor": 3385,
+          "m_vTintColorLightingOnly": 3389
         },
         "metadata": [
           {
@@ -9646,37 +9666,37 @@
       },
       "C_FireSprite": {
         "fields": {
-          "m_bFadeFromAbove": 3644,
-          "m_vecMoveDir": 3632
+          "m_bFadeFromAbove": 3652,
+          "m_vecMoveDir": 3640
         },
         "metadata": [],
         "parent": "C_Sprite"
       },
       "C_Fish": {
         "fields": {
-          "m_actualAngles": 4068,
-          "m_actualPos": 4056,
-          "m_angle": 4112,
-          "m_angles": 3992,
-          "m_averageError": 4204,
-          "m_buoyancy": 4016,
-          "m_deathAngle": 4012,
-          "m_deathDepth": 4008,
-          "m_errorHistory": 4116,
-          "m_errorHistoryCount": 4200,
-          "m_errorHistoryIndex": 4196,
-          "m_gotUpdate": 4096,
-          "m_localLifeState": 4004,
-          "m_poolOrigin": 4080,
-          "m_pos": 3968,
-          "m_vel": 3980,
-          "m_waterLevel": 4092,
-          "m_wigglePhase": 4048,
-          "m_wiggleRate": 4052,
-          "m_wiggleTimer": 4024,
-          "m_x": 4100,
-          "m_y": 4104,
-          "m_z": 4108
+          "m_actualAngles": 4076,
+          "m_actualPos": 4064,
+          "m_angle": 4120,
+          "m_angles": 4000,
+          "m_averageError": 4212,
+          "m_buoyancy": 4024,
+          "m_deathAngle": 4020,
+          "m_deathDepth": 4016,
+          "m_errorHistory": 4124,
+          "m_errorHistoryCount": 4208,
+          "m_errorHistoryIndex": 4204,
+          "m_gotUpdate": 4104,
+          "m_localLifeState": 4012,
+          "m_poolOrigin": 4088,
+          "m_pos": 3976,
+          "m_vel": 3988,
+          "m_waterLevel": 4100,
+          "m_wigglePhase": 4056,
+          "m_wiggleRate": 4060,
+          "m_wiggleTimer": 4032,
+          "m_x": 4108,
+          "m_y": 4112,
+          "m_z": 4116
         },
         "metadata": [
           {
@@ -9722,8 +9742,8 @@
       },
       "C_Fists": {
         "fields": {
-          "m_bPlayingUninterruptableAct": 6912,
-          "m_nUninterruptableActivity": 6916
+          "m_bPlayingUninterruptableAct": 6928,
+          "m_nUninterruptableActivity": 6932
         },
         "metadata": [
           {
@@ -9766,8 +9786,8 @@
       },
       "C_FootstepControl": {
         "fields": {
-          "m_destination": 3376,
-          "m_source": 3368
+          "m_destination": 3384,
+          "m_source": 3376
         },
         "metadata": [
           {
@@ -9790,14 +9810,14 @@
       },
       "C_FuncConveyor": {
         "fields": {
-          "m_flCurrentConveyorOffset": 3424,
-          "m_flCurrentConveyorSpeed": 3428,
-          "m_flTargetSpeed": 3380,
-          "m_flTransitionStartSpeed": 3392,
-          "m_hConveyorModels": 3400,
-          "m_nTransitionDurationTicks": 3388,
-          "m_nTransitionStartTick": 3384,
-          "m_vecMoveDirEntitySpace": 3368
+          "m_flCurrentConveyorOffset": 3432,
+          "m_flCurrentConveyorSpeed": 3436,
+          "m_flTargetSpeed": 3388,
+          "m_flTransitionStartSpeed": 3400,
+          "m_hConveyorModels": 3408,
+          "m_nTransitionDurationTicks": 3396,
+          "m_nTransitionStartTick": 3392,
+          "m_vecMoveDirEntitySpace": 3376
         },
         "metadata": [
           {
@@ -9859,9 +9879,9 @@
       },
       "C_FuncElectrifiedVolume": {
         "fields": {
-          "m_EffectName": 3368,
-          "m_bState": 3376,
-          "m_nAmbientEffect": 3360
+          "m_EffectName": 3376,
+          "m_bState": 3384,
+          "m_nAmbientEffect": 3368
         },
         "metadata": [
           {
@@ -9879,15 +9899,15 @@
       },
       "C_FuncLadder": {
         "fields": {
-          "m_Dismounts": 3376,
-          "m_bDisabled": 3440,
-          "m_bFakeLadder": 3441,
-          "m_bHasSlack": 3442,
-          "m_flAutoRideSpeed": 3436,
-          "m_vecLadderDir": 3360,
-          "m_vecLocalTop": 3400,
-          "m_vecPlayerMountPositionBottom": 3424,
-          "m_vecPlayerMountPositionTop": 3412
+          "m_Dismounts": 3384,
+          "m_bDisabled": 3448,
+          "m_bFakeLadder": 3449,
+          "m_bHasSlack": 3450,
+          "m_flAutoRideSpeed": 3444,
+          "m_vecLadderDir": 3368,
+          "m_vecLocalTop": 3408,
+          "m_vecPlayerMountPositionBottom": 3432,
+          "m_vecPlayerMountPositionTop": 3420
         },
         "metadata": [
           {
@@ -9920,14 +9940,14 @@
       },
       "C_FuncMonitor": {
         "fields": {
-          "m_bDraw3DSkybox": 3389,
-          "m_bEnabled": 3388,
-          "m_bRenderShadows": 3372,
-          "m_bUseUniqueColorTarget": 3373,
-          "m_brushModelName": 3376,
-          "m_hTargetCamera": 3384,
-          "m_nResolutionEnum": 3368,
-          "m_targetCamera": 3360
+          "m_bDraw3DSkybox": 3397,
+          "m_bEnabled": 3396,
+          "m_bRenderShadows": 3380,
+          "m_bUseUniqueColorTarget": 3381,
+          "m_brushModelName": 3384,
+          "m_hTargetCamera": 3392,
+          "m_nResolutionEnum": 3376,
+          "m_targetCamera": 3368
         },
         "metadata": [
           {
@@ -10012,9 +10032,9 @@
       },
       "C_FuncTrackTrain": {
         "fields": {
-          "m_flLineLength": 3368,
-          "m_flRadius": 3364,
-          "m_nLongAxis": 3360
+          "m_flLineLength": 3376,
+          "m_flRadius": 3372,
+          "m_nLongAxis": 3368
         },
         "metadata": [],
         "parent": "C_BaseModelEntity"
@@ -10186,29 +10206,29 @@
       },
       "C_Hostage": {
         "fields": {
-          "m_bHandsHaveBeenCut": 4588,
-          "m_blinkTimer": 4632,
-          "m_chestAttachment": 4698,
-          "m_entitySpottedState": 4512,
-          "m_eyeAttachment": 4697,
-          "m_fLastGrabTime": 4596,
-          "m_fNewestAlphaThinkTime": 4712,
-          "m_flDeadOrRescuedTime": 4624,
-          "m_flDropStartTime": 4620,
-          "m_flGrabSuccessTime": 4616,
-          "m_flRescueStartTime": 4612,
-          "m_hHostageGrabber": 4592,
-          "m_isInit": 4696,
-          "m_isRescued": 4580,
-          "m_jumpedThisFrame": 4581,
-          "m_leader": 4536,
-          "m_lookAroundTimer": 4672,
-          "m_lookAt": 4656,
-          "m_nHostageState": 4584,
-          "m_pPredictionOwner": 4704,
-          "m_reuseTimer": 4544,
-          "m_vecGrabbedPos": 4600,
-          "m_vel": 4568
+          "m_bHandsHaveBeenCut": 4596,
+          "m_blinkTimer": 4640,
+          "m_chestAttachment": 4706,
+          "m_entitySpottedState": 4520,
+          "m_eyeAttachment": 4705,
+          "m_fLastGrabTime": 4604,
+          "m_fNewestAlphaThinkTime": 4720,
+          "m_flDeadOrRescuedTime": 4632,
+          "m_flDropStartTime": 4628,
+          "m_flGrabSuccessTime": 4624,
+          "m_flRescueStartTime": 4620,
+          "m_hHostageGrabber": 4600,
+          "m_isInit": 4704,
+          "m_isRescued": 4588,
+          "m_jumpedThisFrame": 4589,
+          "m_leader": 4544,
+          "m_lookAroundTimer": 4680,
+          "m_lookAt": 4664,
+          "m_nHostageState": 4592,
+          "m_pPredictionOwner": 4712,
+          "m_reuseTimer": 4552,
+          "m_vecGrabbedPos": 4608,
+          "m_vel": 4576
         },
         "metadata": [
           {
@@ -10310,29 +10330,29 @@
       },
       "C_Inferno": {
         "fields": {
-          "m_BurnNormal": 5072,
-          "m_bFireIsBurning": 5008,
-          "m_bInPostEffectTime": 5852,
+          "m_BurnNormal": 5080,
+          "m_bFireIsBurning": 5016,
+          "m_bInPostEffectTime": 5860,
           "m_blosCheck": 33524,
           "m_drawableCount": 33520,
-          "m_fireCount": 5840,
-          "m_fireParentPositions": 4240,
-          "m_firePositions": 3472,
+          "m_fireCount": 5848,
+          "m_fireParentPositions": 4248,
+          "m_firePositions": 3480,
           "m_flLastGrassBurnThink": 33564,
-          "m_hInfernoClimbingOutlinePointsSnapshot": 3456,
-          "m_hInfernoDecalsSnapshot": 3464,
-          "m_hInfernoFillerPointsSnapshot": 3440,
-          "m_hInfernoOutlinePointsSnapshot": 3448,
-          "m_hInfernoPointsSnapshot": 3432,
-          "m_lastFireCount": 5856,
+          "m_hInfernoClimbingOutlinePointsSnapshot": 3464,
+          "m_hInfernoDecalsSnapshot": 3472,
+          "m_hInfernoFillerPointsSnapshot": 3448,
+          "m_hInfernoOutlinePointsSnapshot": 3456,
+          "m_hInfernoPointsSnapshot": 3440,
+          "m_lastFireCount": 5864,
           "m_maxBounds": 33552,
           "m_maxFireHalfWidth": 33532,
           "m_maxFireHeight": 33536,
           "m_minBounds": 33540,
-          "m_nFireEffectTickBegin": 5860,
-          "m_nFireLifetime": 5848,
-          "m_nInfernoType": 5844,
-          "m_nfxFireDamageEffect": 3424,
+          "m_nFireEffectTickBegin": 5868,
+          "m_nFireLifetime": 5856,
+          "m_nInfernoType": 5852,
+          "m_nfxFireDamageEffect": 3432,
           "m_nlosperiod": 33528
         },
         "metadata": [
@@ -10421,15 +10441,15 @@
       },
       "C_Item": {
         "fields": {
-          "m_pReticleHintTextName": 5728
+          "m_pReticleHintTextName": 5736
         },
         "metadata": [],
         "parent": "C_EconEntity"
       },
       "C_ItemDogtags": {
         "fields": {
-          "m_KillingPlayer": 5988,
-          "m_OwningPlayer": 5984
+          "m_KillingPlayer": 5996,
+          "m_OwningPlayer": 5992
         },
         "metadata": [
           {
@@ -10452,8 +10472,8 @@
       },
       "C_KeychainModule": {
         "fields": {
-          "m_nKeychainDefID": 3976,
-          "m_nKeychainSeed": 3980
+          "m_nKeychainDefID": 3984,
+          "m_nKeychainSeed": 3988
         },
         "metadata": [],
         "parent": "C_CS2WeaponModuleBase"
@@ -10470,7 +10490,7 @@
       },
       "C_LightEntity": {
         "fields": {
-          "m_CLightComponent": 3360
+          "m_CLightComponent": 3368
         },
         "metadata": [
           {
@@ -10488,14 +10508,14 @@
       },
       "C_LightGlow": {
         "fields": {
-          "m_GlowOverlay": 3392,
-          "m_flGlowProxySize": 3380,
-          "m_flHDRColorScale": 3384,
-          "m_nHorizontalSize": 3360,
-          "m_nMaxDist": 3372,
-          "m_nMinDist": 3368,
-          "m_nOuterMaxDist": 3376,
-          "m_nVerticalSize": 3364
+          "m_GlowOverlay": 3400,
+          "m_flGlowProxySize": 3388,
+          "m_flHDRColorScale": 3392,
+          "m_nHorizontalSize": 3368,
+          "m_nMaxDist": 3380,
+          "m_nMinDist": 3376,
+          "m_nOuterMaxDist": 3384,
+          "m_nVerticalSize": 3372
         },
         "metadata": [
           {
@@ -10568,31 +10588,31 @@
       },
       "C_LocalTempEntity": {
         "fields": {
-          "bounceFactor": 3992,
-          "die": 3972,
-          "fadeSpeed": 3988,
-          "flags": 3968,
-          "hitSound": 3996,
-          "m_bParticleCollision": 4080,
-          "m_flFrame": 4056,
-          "m_flFrameMax": 3976,
-          "m_flFrameRate": 4052,
-          "m_flSpriteScale": 4044,
-          "m_iLastCollisionFrame": 4084,
-          "m_nFlickerFrame": 4048,
-          "m_pszImpactEffect": 4064,
-          "m_pszParticleEffect": 4072,
-          "m_vLastCollisionOrigin": 4088,
-          "m_vecNormal": 4032,
-          "m_vecPrevAbsOrigin": 4112,
-          "m_vecTempEntAcceleration": 4124,
-          "m_vecTempEntAngVelocity": 4016,
-          "m_vecTempEntVelocity": 4100,
-          "priority": 4000,
-          "tempent_renderamt": 4028,
-          "tentOffset": 4004,
-          "x": 3980,
-          "y": 3984
+          "bounceFactor": 4000,
+          "die": 3980,
+          "fadeSpeed": 3996,
+          "flags": 3976,
+          "hitSound": 4004,
+          "m_bParticleCollision": 4088,
+          "m_flFrame": 4064,
+          "m_flFrameMax": 3984,
+          "m_flFrameRate": 4060,
+          "m_flSpriteScale": 4052,
+          "m_iLastCollisionFrame": 4092,
+          "m_nFlickerFrame": 4056,
+          "m_pszImpactEffect": 4072,
+          "m_pszParticleEffect": 4080,
+          "m_vLastCollisionOrigin": 4096,
+          "m_vecNormal": 4040,
+          "m_vecPrevAbsOrigin": 4120,
+          "m_vecTempEntAcceleration": 4132,
+          "m_vecTempEntAngVelocity": 4024,
+          "m_vecTempEntVelocity": 4108,
+          "priority": 4008,
+          "tempent_renderamt": 4036,
+          "tentOffset": 4012,
+          "x": 3988,
+          "y": 3992
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
@@ -10718,7 +10738,7 @@
       },
       "C_MolotovProjectile": {
         "fields": {
-          "m_bIsIncGrenade": 4608
+          "m_bIsIncGrenade": 4616
         },
         "metadata": [
           {
@@ -10731,7 +10751,7 @@
       },
       "C_Multimeter": {
         "fields": {
-          "m_hTargetC4": 3976
+          "m_hTargetC4": 3984
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
@@ -10743,7 +10763,7 @@
       },
       "C_NametagModule": {
         "fields": {
-          "m_strNametagString": 3976
+          "m_strNametagString": 3984
         },
         "metadata": [],
         "parent": "C_CS2WeaponModuleBase"
@@ -10755,9 +10775,9 @@
       },
       "C_OmniLight": {
         "fields": {
-          "m_bShowLight": 4208,
-          "m_flInnerAngle": 4200,
-          "m_flOuterAngle": 4204
+          "m_bShowLight": 4216,
+          "m_flInnerAngle": 4208,
+          "m_flOuterAngle": 4212
         },
         "metadata": [
           {
@@ -10780,30 +10800,30 @@
       },
       "C_ParticleSystem": {
         "fields": {
-          "m_bActive": 3872,
-          "m_bAnimateDuringGameplayPause": 3884,
-          "m_bFrozen": 3873,
-          "m_bNoFreeze": 4213,
-          "m_bNoRamp": 4214,
-          "m_bNoSave": 4212,
-          "m_bOldActive": 4792,
-          "m_bOldFrozen": 4793,
-          "m_bStartActive": 4215,
-          "m_clrTint": 4756,
-          "m_flFreezeTransitionDuration": 3876,
-          "m_flPreSimTime": 3900,
-          "m_flStartTime": 3896,
-          "m_hControlPointEnts": 3956,
-          "m_iEffectIndex": 3888,
-          "m_iServerControlPointAssignments": 3952,
-          "m_iszControlPointNames": 4224,
-          "m_iszEffectName": 4216,
-          "m_nDataCP": 4736,
-          "m_nStopType": 3880,
-          "m_nTintCP": 4752,
-          "m_szSnapshotFileName": 3360,
-          "m_vServerControlPoints": 3904,
-          "m_vecDataCPValue": 4740
+          "m_bActive": 3880,
+          "m_bAnimateDuringGameplayPause": 3892,
+          "m_bFrozen": 3881,
+          "m_bNoFreeze": 4221,
+          "m_bNoRamp": 4222,
+          "m_bNoSave": 4220,
+          "m_bOldActive": 4800,
+          "m_bOldFrozen": 4801,
+          "m_bStartActive": 4223,
+          "m_clrTint": 4764,
+          "m_flFreezeTransitionDuration": 3884,
+          "m_flPreSimTime": 3908,
+          "m_flStartTime": 3904,
+          "m_hControlPointEnts": 3964,
+          "m_iEffectIndex": 3896,
+          "m_iServerControlPointAssignments": 3960,
+          "m_iszControlPointNames": 4232,
+          "m_iszEffectName": 4224,
+          "m_nDataCP": 4744,
+          "m_nStopType": 3888,
+          "m_nTintCP": 4760,
+          "m_szSnapshotFileName": 3368,
+          "m_vServerControlPoints": 3912,
+          "m_vecDataCPValue": 4748
         },
         "metadata": [
           {
@@ -11003,27 +11023,27 @@
       },
       "C_PhysMagnet": {
         "fields": {
-          "m_aAttachedObjects": 3992,
-          "m_aAttachedObjectsFromServer": 3968
+          "m_aAttachedObjects": 4000,
+          "m_aAttachedObjectsFromServer": 3976
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
       },
       "C_PhysPropClientside": {
         "fields": {
-          "m_fDeathTime": 4364,
-          "m_flTouchDelta": 4360,
-          "m_inertiaScale": 4368,
-          "m_nDamageType": 4396,
-          "m_vecDamageDirection": 4384,
-          "m_vecDamagePosition": 4372
+          "m_fDeathTime": 4372,
+          "m_flTouchDelta": 4368,
+          "m_inertiaScale": 4376,
+          "m_nDamageType": 4404,
+          "m_vecDamageDirection": 4392,
+          "m_vecDamagePosition": 4380
         },
         "metadata": [],
         "parent": "C_BreakableProp"
       },
       "C_PhysicsProp": {
         "fields": {
-          "m_bAwake": 4360
+          "m_bAwake": 4368
         },
         "metadata": [
           {
@@ -11069,36 +11089,36 @@
       },
       "C_PlantedC4": {
         "fields": {
-          "m_AttributeManager": 4072,
-          "m_bBeingDefused": 4036,
-          "m_bBombDefused": 4060,
-          "m_bBombTicking": 3976,
-          "m_bC4Activated": 4048,
-          "m_bCannotBeDefused": 4028,
-          "m_bExplodeWarning": 4044,
-          "m_bHasExploded": 4029,
-          "m_bRadarFlash": 5272,
-          "m_bTenSecWarning": 4049,
-          "m_bTriggerWarning": 4040,
-          "m_entitySpottedState": 3992,
-          "m_fLastDefuseTime": 5280,
-          "m_flC4Blow": 4024,
-          "m_flC4ExplodeSpectateDuration": 5320,
-          "m_flDefuseCountDown": 4056,
-          "m_flDefuseLength": 4052,
-          "m_flNextBeep": 4020,
-          "m_flNextGlow": 4016,
-          "m_flNextRadarFlashTime": 5268,
-          "m_flTimerLength": 4032,
-          "m_hBombDefuser": 4064,
-          "m_hControlPanel": 4068,
-          "m_hDefuserMultimeter": 5264,
-          "m_nBombSite": 3980,
-          "m_nSourceSoundscapeHash": 3984,
-          "m_pBombDefuser": 5276,
-          "m_pPredictionOwner": 5288,
-          "m_vecC4ExplodeSpectateAng": 5308,
-          "m_vecC4ExplodeSpectatePos": 5296
+          "m_AttributeManager": 4080,
+          "m_bBeingDefused": 4044,
+          "m_bBombDefused": 4068,
+          "m_bBombTicking": 3984,
+          "m_bC4Activated": 4056,
+          "m_bCannotBeDefused": 4036,
+          "m_bExplodeWarning": 4052,
+          "m_bHasExploded": 4037,
+          "m_bRadarFlash": 5280,
+          "m_bTenSecWarning": 4057,
+          "m_bTriggerWarning": 4048,
+          "m_entitySpottedState": 4000,
+          "m_fLastDefuseTime": 5288,
+          "m_flC4Blow": 4032,
+          "m_flC4ExplodeSpectateDuration": 5328,
+          "m_flDefuseCountDown": 4064,
+          "m_flDefuseLength": 4060,
+          "m_flNextBeep": 4028,
+          "m_flNextGlow": 4024,
+          "m_flNextRadarFlashTime": 5276,
+          "m_flTimerLength": 4040,
+          "m_hBombDefuser": 4072,
+          "m_hControlPanel": 4076,
+          "m_hDefuserMultimeter": 5272,
+          "m_nBombSite": 3988,
+          "m_nSourceSoundscapeHash": 3992,
+          "m_pBombDefuser": 5284,
+          "m_pPredictionOwner": 5296,
+          "m_vecC4ExplodeSpectateAng": 5316,
+          "m_vecC4ExplodeSpectatePos": 5304
         },
         "metadata": [
           {
@@ -11218,22 +11238,22 @@
       },
       "C_PlayerSprayDecal": {
         "fields": {
-          "m_SprayRenderHelper": 3584,
-          "m_flCreationTime": 3436,
-          "m_nEntity": 3428,
-          "m_nHitbox": 3432,
-          "m_nPlayer": 3424,
-          "m_nTintID": 3440,
-          "m_nUniqueID": 3360,
-          "m_nVersion": 3444,
-          "m_rtGcTime": 3372,
-          "m_ubSignature": 3445,
-          "m_unAccountID": 3364,
-          "m_unTraceID": 3368,
-          "m_vecEndPos": 3376,
-          "m_vecLeft": 3400,
-          "m_vecNormal": 3412,
-          "m_vecStart": 3388
+          "m_SprayRenderHelper": 3592,
+          "m_flCreationTime": 3444,
+          "m_nEntity": 3436,
+          "m_nHitbox": 3440,
+          "m_nPlayer": 3432,
+          "m_nTintID": 3448,
+          "m_nUniqueID": 3368,
+          "m_nVersion": 3452,
+          "m_rtGcTime": 3380,
+          "m_ubSignature": 3453,
+          "m_unAccountID": 3372,
+          "m_unTraceID": 3376,
+          "m_vecEndPos": 3384,
+          "m_vecLeft": 3408,
+          "m_vecNormal": 3420,
+          "m_vecStart": 3396
         },
         "metadata": [
           {
@@ -11509,8 +11529,8 @@
       },
       "C_PointClientUIDialog": {
         "fields": {
-          "m_bStartEnabled": 3412,
-          "m_hActivator": 3408
+          "m_bStartEnabled": 3420,
+          "m_hActivator": 3416
         },
         "metadata": [
           {
@@ -11523,19 +11543,19 @@
       },
       "C_PointClientUIHUD": {
         "fields": {
-          "m_bAllowInteractionFromAllSceneWorlds": 3840,
-          "m_bCheckCSSClasses": 3416,
-          "m_bIgnoreInput": 3800,
-          "m_flDPI": 3812,
-          "m_flDepthOffset": 3820,
-          "m_flHeight": 3808,
-          "m_flInteractDistance": 3816,
-          "m_flWidth": 3804,
-          "m_unHorizontalAlign": 3828,
-          "m_unOrientation": 3836,
-          "m_unOwnerContext": 3824,
-          "m_unVerticalAlign": 3832,
-          "m_vecCSSClasses": 3848
+          "m_bAllowInteractionFromAllSceneWorlds": 3848,
+          "m_bCheckCSSClasses": 3424,
+          "m_bIgnoreInput": 3808,
+          "m_flDPI": 3820,
+          "m_flDepthOffset": 3828,
+          "m_flHeight": 3816,
+          "m_flInteractDistance": 3824,
+          "m_flWidth": 3812,
+          "m_unHorizontalAlign": 3836,
+          "m_unOrientation": 3844,
+          "m_unOwnerContext": 3832,
+          "m_unVerticalAlign": 3840,
+          "m_vecCSSClasses": 3856
         },
         "metadata": [
           {
@@ -11603,34 +11623,34 @@
       },
       "C_PointClientUIWorldPanel": {
         "fields": {
-          "m_anchorDeltaTransform": 3424,
-          "m_bAllowInteractionFromAllSceneWorlds": 3912,
-          "m_bCheckCSSClasses": 3418,
-          "m_bDisableMipGen": 3951,
-          "m_bExcludeFromSaveGames": 3948,
-          "m_bFollowPlayerAcrossTeleport": 3874,
-          "m_bForceRecreateNextUpdate": 3416,
-          "m_bGrabbable": 3949,
-          "m_bIgnoreInput": 3872,
-          "m_bLit": 3873,
-          "m_bMoveViewToPlayerNextThink": 3417,
-          "m_bNoDepth": 3945,
-          "m_bOnlyRenderToTexture": 3950,
-          "m_bOpaque": 3944,
-          "m_bRenderBackface": 3946,
-          "m_bUseOffScreenIndicator": 3947,
-          "m_flDPI": 3884,
-          "m_flDepthOffset": 3892,
-          "m_flHeight": 3880,
-          "m_flInteractDistance": 3888,
-          "m_flWidth": 3876,
-          "m_nExplicitImageLayout": 3952,
-          "m_pOffScreenIndicator": 3832,
-          "m_unHorizontalAlign": 3900,
-          "m_unOrientation": 3908,
-          "m_unOwnerContext": 3896,
-          "m_unVerticalAlign": 3904,
-          "m_vecCSSClasses": 3920
+          "m_anchorDeltaTransform": 3440,
+          "m_bAllowInteractionFromAllSceneWorlds": 3928,
+          "m_bCheckCSSClasses": 3426,
+          "m_bDisableMipGen": 3967,
+          "m_bExcludeFromSaveGames": 3964,
+          "m_bFollowPlayerAcrossTeleport": 3890,
+          "m_bForceRecreateNextUpdate": 3424,
+          "m_bGrabbable": 3965,
+          "m_bIgnoreInput": 3888,
+          "m_bLit": 3889,
+          "m_bMoveViewToPlayerNextThink": 3425,
+          "m_bNoDepth": 3961,
+          "m_bOnlyRenderToTexture": 3966,
+          "m_bOpaque": 3960,
+          "m_bRenderBackface": 3962,
+          "m_bUseOffScreenIndicator": 3963,
+          "m_flDPI": 3900,
+          "m_flDepthOffset": 3908,
+          "m_flHeight": 3896,
+          "m_flInteractDistance": 3904,
+          "m_flWidth": 3892,
+          "m_nExplicitImageLayout": 3968,
+          "m_pOffScreenIndicator": 3848,
+          "m_unHorizontalAlign": 3916,
+          "m_unOrientation": 3924,
+          "m_unOwnerContext": 3912,
+          "m_unVerticalAlign": 3920,
+          "m_vecCSSClasses": 3936
         },
         "metadata": [
           {
@@ -11753,7 +11773,7 @@
       },
       "C_PointClientUIWorldTextPanel": {
         "fields": {
-          "m_messageText": 3968
+          "m_messageText": 3984
         },
         "metadata": [
           {
@@ -11766,19 +11786,19 @@
       },
       "C_PointCommentaryNode": {
         "fields": {
-          "m_bActive": 3976,
-          "m_bListenedTo": 4024,
-          "m_bRestartAfterRestore": 4044,
-          "m_bWasActive": 3977,
-          "m_flEndTime": 3980,
-          "m_flStartTime": 3984,
-          "m_flStartTimeInCommentary": 3988,
-          "m_hViewPosition": 4040,
-          "m_iNodeNumber": 4016,
-          "m_iNodeNumberMax": 4020,
-          "m_iszCommentaryFile": 3992,
-          "m_iszSpeakers": 4008,
-          "m_iszTitle": 4000
+          "m_bActive": 3984,
+          "m_bListenedTo": 4032,
+          "m_bRestartAfterRestore": 4052,
+          "m_bWasActive": 3985,
+          "m_flEndTime": 3988,
+          "m_flStartTime": 3992,
+          "m_flStartTimeInCommentary": 3996,
+          "m_hViewPosition": 4048,
+          "m_iNodeNumber": 4024,
+          "m_iNodeNumberMax": 4028,
+          "m_iszCommentaryFile": 4000,
+          "m_iszSpeakers": 4016,
+          "m_iszTitle": 4008
         },
         "metadata": [
           {
@@ -11958,18 +11978,18 @@
       },
       "C_PointWorldText": {
         "fields": {
-          "m_Color": 3976,
-          "m_FontName": 3896,
-          "m_bEnabled": 3960,
-          "m_bForceRecreateNextUpdate": 3368,
-          "m_bFullbright": 3961,
-          "m_flDepthOffset": 3972,
-          "m_flFontSize": 3968,
-          "m_flWorldUnitsPerPx": 3964,
-          "m_messageText": 3384,
-          "m_nJustifyHorizontal": 3980,
-          "m_nJustifyVertical": 3984,
-          "m_nReorientMode": 3988
+          "m_Color": 3984,
+          "m_FontName": 3904,
+          "m_bEnabled": 3968,
+          "m_bForceRecreateNextUpdate": 3376,
+          "m_bFullbright": 3969,
+          "m_flDepthOffset": 3980,
+          "m_flFontSize": 3976,
+          "m_flWorldUnitsPerPx": 3972,
+          "m_messageText": 3392,
+          "m_nJustifyHorizontal": 3988,
+          "m_nJustifyVertical": 3992,
+          "m_nReorientMode": 3996
         },
         "metadata": [
           {
@@ -12037,22 +12057,22 @@
       },
       "C_PostProcessingVolume": {
         "fields": {
-          "m_bExposureControl": 3429,
-          "m_bMaster": 3428,
-          "m_flExposureCompensation": 3412,
-          "m_flExposureFadeSpeedDown": 3420,
-          "m_flExposureFadeSpeedUp": 3416,
-          "m_flFadeDuration": 3392,
-          "m_flMaxExposure": 3408,
-          "m_flMaxLogExposure": 3400,
-          "m_flMinExposure": 3404,
-          "m_flMinLogExposure": 3396,
-          "m_flRate": 3432,
-          "m_flTonemapEVSmoothingRange": 3424,
-          "m_flTonemapMinAvgLum": 3444,
-          "m_flTonemapPercentBrightPixels": 3440,
-          "m_flTonemapPercentTarget": 3436,
-          "m_hPostSettings": 3384
+          "m_bExposureControl": 3437,
+          "m_bMaster": 3436,
+          "m_flExposureCompensation": 3420,
+          "m_flExposureFadeSpeedDown": 3428,
+          "m_flExposureFadeSpeedUp": 3424,
+          "m_flFadeDuration": 3400,
+          "m_flMaxExposure": 3416,
+          "m_flMaxLogExposure": 3408,
+          "m_flMinExposure": 3412,
+          "m_flMinLogExposure": 3404,
+          "m_flRate": 3440,
+          "m_flTonemapEVSmoothingRange": 3432,
+          "m_flTonemapMinAvgLum": 3452,
+          "m_flTonemapPercentBrightPixels": 3448,
+          "m_flTonemapPercentTarget": 3444,
+          "m_hPostSettings": 3392
         },
         "metadata": [
           {
@@ -12140,14 +12160,14 @@
       },
       "C_Precipitation": {
         "fields": {
-          "m_bActiveParticlePrecipEmitter": 3440,
-          "m_bHasSimulatedSinceLastSceneObjectUpdate": 3442,
-          "m_bParticlePrecipInitialized": 3441,
-          "m_flDensity": 3368,
-          "m_flParticleInnerDist": 3384,
-          "m_nAvailableSheetSequencesMaxIndex": 3444,
-          "m_pParticleDef": 3392,
-          "m_tParticlePrecipTraceTimer": 3432
+          "m_bActiveParticlePrecipEmitter": 3448,
+          "m_bHasSimulatedSinceLastSceneObjectUpdate": 3450,
+          "m_bParticlePrecipInitialized": 3449,
+          "m_flDensity": 3376,
+          "m_flParticleInnerDist": 3392,
+          "m_nAvailableSheetSequencesMaxIndex": 3452,
+          "m_pParticleDef": 3400,
+          "m_tParticlePrecipTraceTimer": 3440
         },
         "metadata": [],
         "parent": "C_BaseTrigger"
@@ -12159,9 +12179,9 @@
       },
       "C_PredictedViewModel": {
         "fields": {
-          "m_currentSpeed": 4096,
-          "m_targetSpeed": 4084,
-          "m_vPredictedLagOffset": 4072
+          "m_currentSpeed": 4104,
+          "m_targetSpeed": 4092,
+          "m_vPredictedLagOffset": 4080
         },
         "metadata": [],
         "parent": "C_BaseViewModel"
@@ -12171,29 +12191,16 @@
         "metadata": [],
         "parent": "C_BasePropDoor"
       },
-      "C_RagdollManager": {
-        "fields": {
-          "m_iCurrentMaxRagdollCount": 1384
-        },
-        "metadata": [
-          {
-            "name": "m_iCurrentMaxRagdollCount",
-            "type": "NetworkVarNames",
-            "type_name": "int8"
-          }
-        ],
-        "parent": "C_BaseEntity"
-      },
       "C_RagdollProp": {
         "fields": {
-          "m_flBlendWeight": 4024,
-          "m_flBlendWeightCurrent": 4036,
-          "m_hRagdollSource": 4028,
-          "m_iEyeAttachment": 4032,
-          "m_parentPhysicsBoneIndices": 4040,
-          "m_ragAngles": 4000,
-          "m_ragPos": 3976,
-          "m_worldSpaceBoneComputationOrder": 4064
+          "m_flBlendWeight": 4032,
+          "m_flBlendWeightCurrent": 4044,
+          "m_hRagdollSource": 4036,
+          "m_iEyeAttachment": 4040,
+          "m_parentPhysicsBoneIndices": 4048,
+          "m_ragAngles": 4008,
+          "m_ragPos": 3984,
+          "m_worldSpaceBoneComputationOrder": 4072
         },
         "metadata": [
           {
@@ -12221,13 +12228,13 @@
       },
       "C_RagdollPropAttached": {
         "fields": {
-          "m_attachmentPointBoneSpace": 4096,
-          "m_attachmentPointRagdollSpace": 4108,
-          "m_bHasParent": 4136,
-          "m_boneIndexAttached": 4088,
-          "m_parentTime": 4132,
-          "m_ragdollAttachedObjectIndex": 4092,
-          "m_vecOffset": 4120
+          "m_attachmentPointBoneSpace": 4104,
+          "m_attachmentPointRagdollSpace": 4116,
+          "m_bHasParent": 4144,
+          "m_boneIndexAttached": 4096,
+          "m_parentTime": 4140,
+          "m_ragdollAttachedObjectIndex": 4100,
+          "m_vecOffset": 4128
         },
         "metadata": [
           {
@@ -12255,7 +12262,7 @@
       },
       "C_RectLight": {
         "fields": {
-          "m_bShowLight": 4200
+          "m_bShowLight": 4208
         },
         "metadata": [
           {
@@ -12305,47 +12312,47 @@
       },
       "C_RopeKeyframe": {
         "fields": {
-          "m_LightValues": 4064,
-          "m_LinksTouchingSomething": 3368,
-          "m_PhysicsDelegate": 4216,
-          "m_RopeFlags": 3424,
-          "m_RopeLength": 4200,
-          "m_Slack": 4202,
-          "m_Subdiv": 4198,
-          "m_TextureHeight": 4240,
-          "m_TextureScale": 4204,
-          "m_Width": 4212,
-          "m_bApplyWind": 3376,
-          "m_bConstrainBetweenEndpoints": 4352,
+          "m_LightValues": 4072,
+          "m_LinksTouchingSomething": 3376,
+          "m_PhysicsDelegate": 4224,
+          "m_RopeFlags": 3432,
+          "m_RopeLength": 4208,
+          "m_Slack": 4210,
+          "m_Subdiv": 4206,
+          "m_TextureHeight": 4248,
+          "m_TextureScale": 4212,
+          "m_Width": 4220,
+          "m_bApplyWind": 3384,
+          "m_bConstrainBetweenEndpoints": 4360,
           "m_bEndPointAttachmentAnglesDirty": 0,
           "m_bEndPointAttachmentPositionsDirty": 0,
           "m_bNewDataThisFrame": 0,
           "m_bPhysicsInitted": 0,
-          "m_bPrevEndPointPos": 3388,
-          "m_fLockedPoints": 4208,
-          "m_fPrevLockedPoints": 3380,
-          "m_flCurScroll": 3416,
-          "m_flCurrentGustLifetime": 4272,
-          "m_flCurrentGustTimer": 4268,
-          "m_flScrollSpeed": 3420,
-          "m_flTimeToNextGust": 4276,
-          "m_hEndPoint": 4192,
-          "m_hMaterial": 4232,
-          "m_hStartPoint": 4188,
-          "m_iEndAttachment": 4197,
-          "m_iForcePointMoveCounter": 3384,
-          "m_iRopeMaterialModelIndex": 3432,
-          "m_iStartAttachment": 4196,
-          "m_nChangeCount": 4209,
-          "m_nLinksTouchingSomething": 3372,
-          "m_nSegments": 4184,
-          "m_vCachedEndPointAttachmentAngle": 4328,
-          "m_vCachedEndPointAttachmentPos": 4304,
-          "m_vColorMod": 4292,
-          "m_vPrevEndPointPos": 3392,
-          "m_vWindDir": 4280,
-          "m_vecImpulse": 4244,
-          "m_vecPreviousImpulse": 4256
+          "m_bPrevEndPointPos": 3396,
+          "m_fLockedPoints": 4216,
+          "m_fPrevLockedPoints": 3388,
+          "m_flCurScroll": 3424,
+          "m_flCurrentGustLifetime": 4280,
+          "m_flCurrentGustTimer": 4276,
+          "m_flScrollSpeed": 3428,
+          "m_flTimeToNextGust": 4284,
+          "m_hEndPoint": 4200,
+          "m_hMaterial": 4240,
+          "m_hStartPoint": 4196,
+          "m_iEndAttachment": 4205,
+          "m_iForcePointMoveCounter": 3392,
+          "m_iRopeMaterialModelIndex": 3440,
+          "m_iStartAttachment": 4204,
+          "m_nChangeCount": 4217,
+          "m_nLinksTouchingSomething": 3380,
+          "m_nSegments": 4192,
+          "m_vCachedEndPointAttachmentAngle": 4336,
+          "m_vCachedEndPointAttachmentPos": 4312,
+          "m_vColorMod": 4300,
+          "m_vPrevEndPointPos": 3400,
+          "m_vWindDir": 4288,
+          "m_vecImpulse": 4252,
+          "m_vecPreviousImpulse": 4264
         },
         "metadata": [
           {
@@ -12539,7 +12546,7 @@
       },
       "C_ShatterGlassShardPhysics": {
         "fields": {
-          "m_ShardDesc": 4376
+          "m_ShardDesc": 4384
         },
         "metadata": [
           {
@@ -12587,14 +12594,14 @@
       },
       "C_SmokeGrenadeProjectile": {
         "fields": {
-          "m_VoxelFrameData": 4656,
-          "m_bDidSmokeEffect": 4620,
-          "m_bSmokeEffectSpawned": 4681,
-          "m_bSmokeVolumeDataReceived": 4680,
-          "m_nRandomSeed": 4624,
-          "m_nSmokeEffectTickBegin": 4616,
-          "m_vSmokeColor": 4628,
-          "m_vSmokeDetonationPos": 4640
+          "m_VoxelFrameData": 4664,
+          "m_bDidSmokeEffect": 4628,
+          "m_bSmokeEffectSpawned": 4689,
+          "m_bSmokeVolumeDataReceived": 4688,
+          "m_nRandomSeed": 4632,
+          "m_nSmokeEffectTickBegin": 4624,
+          "m_vSmokeColor": 4636,
+          "m_vSmokeDetonationPos": 4648
         },
         "metadata": [
           {
@@ -12847,8 +12854,8 @@
       },
       "C_SpotlightEnd": {
         "fields": {
-          "m_Radius": 3364,
-          "m_flLightScale": 3360
+          "m_Radius": 3372,
+          "m_flLightScale": 3368
         },
         "metadata": [
           {
@@ -12866,30 +12873,30 @@
       },
       "C_Sprite": {
         "fields": {
-          "m_bWorldSpaceScale": 3416,
-          "m_flBrightnessDuration": 3404,
-          "m_flBrightnessTimeStart": 3456,
-          "m_flDestScale": 3440,
-          "m_flDieTime": 3384,
-          "m_flFrame": 3380,
-          "m_flGlowProxySize": 3420,
-          "m_flHDRColorScale": 3424,
-          "m_flLastTime": 3428,
-          "m_flMaxFrame": 3432,
-          "m_flScaleDuration": 3412,
-          "m_flScaleTimeStart": 3444,
-          "m_flSpriteFramerate": 3376,
-          "m_flSpriteScale": 3408,
-          "m_flStartScale": 3436,
-          "m_hAttachedToEntity": 3368,
-          "m_hOldSpriteMaterial": 3464,
-          "m_hSpriteMaterial": 3360,
-          "m_nAttachment": 3372,
-          "m_nBrightness": 3400,
-          "m_nDestBrightness": 3452,
-          "m_nSpriteHeight": 3628,
-          "m_nSpriteWidth": 3624,
-          "m_nStartBrightness": 3448
+          "m_bWorldSpaceScale": 3424,
+          "m_flBrightnessDuration": 3412,
+          "m_flBrightnessTimeStart": 3464,
+          "m_flDestScale": 3448,
+          "m_flDieTime": 3392,
+          "m_flFrame": 3388,
+          "m_flGlowProxySize": 3428,
+          "m_flHDRColorScale": 3432,
+          "m_flLastTime": 3436,
+          "m_flMaxFrame": 3440,
+          "m_flScaleDuration": 3420,
+          "m_flScaleTimeStart": 3452,
+          "m_flSpriteFramerate": 3384,
+          "m_flSpriteScale": 3416,
+          "m_flStartScale": 3444,
+          "m_hAttachedToEntity": 3376,
+          "m_hOldSpriteMaterial": 3472,
+          "m_hSpriteMaterial": 3368,
+          "m_nAttachment": 3380,
+          "m_nBrightness": 3408,
+          "m_nDestBrightness": 3460,
+          "m_nSpriteHeight": 3636,
+          "m_nSpriteWidth": 3632,
+          "m_nStartBrightness": 3456
         },
         "metadata": [
           {
@@ -12957,31 +12964,31 @@
       },
       "C_StattrakModule": {
         "fields": {
-          "m_bKnife": 3976
+          "m_bKnife": 3984
         },
         "metadata": [],
         "parent": "C_CS2WeaponModuleBase"
       },
       "C_Sun": {
         "fields": {
-          "m_bOn": 3420,
-          "m_bmaxColor": 3421,
-          "m_clrOverlay": 3416,
-          "m_fdistNormalize": 3368,
-          "m_flAlphaHaze": 3440,
-          "m_flAlphaHdr": 3448,
-          "m_flAlphaScale": 3444,
-          "m_flFarZScale": 3452,
-          "m_flHDRColorScale": 3436,
-          "m_flHazeScale": 3428,
-          "m_flRotation": 3432,
-          "m_flSize": 3424,
-          "m_fxSSSunFlareEffectIndex": 3360,
-          "m_fxSunFlareEffectIndex": 3364,
-          "m_iszEffectName": 3400,
-          "m_iszSSEffectName": 3408,
-          "m_vDirection": 3384,
-          "m_vSunPos": 3372
+          "m_bOn": 3428,
+          "m_bmaxColor": 3429,
+          "m_clrOverlay": 3424,
+          "m_fdistNormalize": 3376,
+          "m_flAlphaHaze": 3448,
+          "m_flAlphaHdr": 3456,
+          "m_flAlphaScale": 3452,
+          "m_flFarZScale": 3460,
+          "m_flHDRColorScale": 3444,
+          "m_flHazeScale": 3436,
+          "m_flRotation": 3440,
+          "m_flSize": 3432,
+          "m_fxSSSunFlareEffectIndex": 3368,
+          "m_fxSunFlareEffectIndex": 3372,
+          "m_iszEffectName": 3408,
+          "m_iszSSEffectName": 3416,
+          "m_vDirection": 3392,
+          "m_vSunPos": 3380
         },
         "metadata": [
           {
@@ -13235,14 +13242,14 @@
       },
       "C_TextureBasedAnimatable": {
         "fields": {
-          "m_bLoop": 3360,
-          "m_flFPS": 3364,
-          "m_flStartFrame": 3412,
-          "m_flStartTime": 3408,
-          "m_hPositionKeys": 3368,
-          "m_hRotationKeys": 3376,
-          "m_vAnimationBoundsMax": 3396,
-          "m_vAnimationBoundsMin": 3384
+          "m_bLoop": 3368,
+          "m_flFPS": 3372,
+          "m_flStartFrame": 3420,
+          "m_flStartTime": 3416,
+          "m_hPositionKeys": 3376,
+          "m_hRotationKeys": 3384,
+          "m_vAnimationBoundsMax": 3404,
+          "m_vAnimationBoundsMin": 3392
         },
         "metadata": [
           {
@@ -13355,8 +13362,8 @@
       },
       "C_TriggerBuoyancy": {
         "fields": {
-          "m_BuoyancyHelper": 3368,
-          "m_flFluidDensity": 3496
+          "m_BuoyancyHelper": 3376,
+          "m_flFluidDensity": 3504
         },
         "metadata": [
           {
@@ -13379,19 +13386,19 @@
       },
       "C_TriggerPhysics": {
         "fields": {
-          "m_angularDamping": 3384,
-          "m_angularLimit": 3380,
-          "m_bCollapseToForcePoint": 3412,
-          "m_bConvertToDebrisWhenPossible": 3440,
-          "m_flDampingRatio": 3396,
-          "m_flFrequency": 3392,
-          "m_gravityScale": 3368,
-          "m_linearDamping": 3376,
-          "m_linearForce": 3388,
-          "m_linearLimit": 3372,
-          "m_vecLinearForceDirection": 3428,
-          "m_vecLinearForcePointAt": 3400,
-          "m_vecLinearForcePointAtWorld": 3416
+          "m_angularDamping": 3392,
+          "m_angularLimit": 3388,
+          "m_bCollapseToForcePoint": 3420,
+          "m_bConvertToDebrisWhenPossible": 3448,
+          "m_flDampingRatio": 3404,
+          "m_flFrequency": 3400,
+          "m_gravityScale": 3376,
+          "m_linearDamping": 3384,
+          "m_linearForce": 3396,
+          "m_linearLimit": 3380,
+          "m_vecLinearForceDirection": 3436,
+          "m_vecLinearForcePointAt": 3408,
+          "m_vecLinearForcePointAtWorld": 3424
         },
         "metadata": [
           {
@@ -13469,8 +13476,8 @@
       },
       "C_ViewmodelAttachmentModel": {
         "fields": {
-          "m_bCreatedLeftHanded": 3977,
-          "m_bShouldFrontFaceCullLeftHanded": 3976
+          "m_bCreatedLeftHanded": 3985,
+          "m_bShouldFrontFaceCullLeftHanded": 3984
         },
         "metadata": [],
         "parent": "CBaseAnimGraph"
@@ -13531,8 +13538,8 @@
       },
       "C_WeaponBaseItem": {
         "fields": {
-          "m_SequenceCompleteTimer": 6912,
-          "m_bRedraw": 6936
+          "m_SequenceCompleteTimer": 6928,
+          "m_bRedraw": 6952
         },
         "metadata": [
           {
@@ -13680,7 +13687,7 @@
       },
       "C_WeaponShield": {
         "fields": {
-          "m_flDisplayHealth": 6944
+          "m_flDisplayHealth": 6960
         },
         "metadata": [
           {
@@ -13693,8 +13700,8 @@
       },
       "C_WeaponTaser": {
         "fields": {
-          "m_fFireTime": 6944,
-          "m_nLastAttackTick": 6948
+          "m_fFireTime": 6960,
+          "m_nLastAttackTick": 6964
         },
         "metadata": [
           {

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-11 03:33:19.009712100 UTC
+// 2024-10-16 01:30:18.306397700 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: server.dll
         // Class count: 653
-        // Enum count: 138
+        // Enum count: 139
         namespace server_dll {
             // Alignment: 4
             // Member count: 3
@@ -645,6 +645,12 @@ namespace cs2_dumper {
                 LOADOUT_SLOT_FIRST_ALL_CHARACTER = 0x36,
                 LOADOUT_SLOT_LAST_ALL_CHARACTER = 0x38,
                 LOADOUT_SLOT_COUNT = 0x39
+            };
+            // Alignment: 4
+            // Member count: 2
+            enum class EDestructiblePartDamagePassThroughType : uint32_t {
+                Normal = 0x0,
+                Absorb = 0x1
             };
             // Alignment: 4
             // Member count: 20
@@ -1632,14 +1638,14 @@ namespace cs2_dumper {
             // Parent: CBaseCombatCharacter
             // Field count: 1
             namespace CHostageExpresserShim {
-                constexpr std::ptrdiff_t m_pExpresser = 0xA80; // CAI_Expresser*
+                constexpr std::ptrdiff_t m_pExpresser = 0xAC0; // CAI_Expresser*
             }
             // Parent: CBaseTrigger
             // Field count: 3
             namespace CTriggerSoundscape {
-                constexpr std::ptrdiff_t m_hSoundscape = 0x920; // CHandle<CEnvSoundscapeTriggerable>
-                constexpr std::ptrdiff_t m_SoundscapeName = 0x928; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_spectators = 0x930; // CUtlVector<CHandle<CBasePlayerPawn>>
+                constexpr std::ptrdiff_t m_hSoundscape = 0x960; // CHandle<CEnvSoundscapeTriggerable>
+                constexpr std::ptrdiff_t m_SoundscapeName = 0x968; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_spectators = 0x970; // CUtlVector<CHandle<CBasePlayerPawn>>
             }
             // Parent: CBreakableProp
             // Field count: 22
@@ -1648,28 +1654,28 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bUseHitboxesForRenderBox (bool)
             // NetworkVarNames: m_bUseAnimGraph (bool)
             namespace CDynamicProp {
-                constexpr std::ptrdiff_t m_bCreateNavObstacle = 0xB18; // bool
-                constexpr std::ptrdiff_t m_bNavObstacleUpdatesOverridden = 0xB19; // bool
-                constexpr std::ptrdiff_t m_bUseHitboxesForRenderBox = 0xB1A; // bool
-                constexpr std::ptrdiff_t m_bUseAnimGraph = 0xB1B; // bool
-                constexpr std::ptrdiff_t m_pOutputAnimBegun = 0xB20; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_pOutputAnimOver = 0xB48; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_pOutputAnimLoopCycleOver = 0xB70; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAnimReachedStart = 0xB98; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAnimReachedEnd = 0xBC0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_iszIdleAnim = 0xBE8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_nIdleAnimLoopMode = 0xBF0; // AnimLoopMode_t
-                constexpr std::ptrdiff_t m_bRandomizeCycle = 0xBF4; // bool
-                constexpr std::ptrdiff_t m_bStartDisabled = 0xBF5; // bool
-                constexpr std::ptrdiff_t m_bFiredStartEndOutput = 0xBF6; // bool
-                constexpr std::ptrdiff_t m_bForceNpcExclude = 0xBF7; // bool
-                constexpr std::ptrdiff_t m_bCreateNonSolid = 0xBF8; // bool
-                constexpr std::ptrdiff_t m_bIsOverrideProp = 0xBF9; // bool
-                constexpr std::ptrdiff_t m_iInitialGlowState = 0xBFC; // int32
-                constexpr std::ptrdiff_t m_nGlowRange = 0xC00; // int32
-                constexpr std::ptrdiff_t m_nGlowRangeMin = 0xC04; // int32
-                constexpr std::ptrdiff_t m_glowColor = 0xC08; // Color
-                constexpr std::ptrdiff_t m_nGlowTeam = 0xC0C; // int32
+                constexpr std::ptrdiff_t m_bCreateNavObstacle = 0xB60; // bool
+                constexpr std::ptrdiff_t m_bNavObstacleUpdatesOverridden = 0xB61; // bool
+                constexpr std::ptrdiff_t m_bUseHitboxesForRenderBox = 0xB62; // bool
+                constexpr std::ptrdiff_t m_bUseAnimGraph = 0xB63; // bool
+                constexpr std::ptrdiff_t m_pOutputAnimBegun = 0xB68; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_pOutputAnimOver = 0xB90; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_pOutputAnimLoopCycleOver = 0xBB8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAnimReachedStart = 0xBE0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAnimReachedEnd = 0xC08; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_iszIdleAnim = 0xC30; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_nIdleAnimLoopMode = 0xC38; // AnimLoopMode_t
+                constexpr std::ptrdiff_t m_bRandomizeCycle = 0xC3C; // bool
+                constexpr std::ptrdiff_t m_bStartDisabled = 0xC3D; // bool
+                constexpr std::ptrdiff_t m_bFiredStartEndOutput = 0xC3E; // bool
+                constexpr std::ptrdiff_t m_bForceNpcExclude = 0xC3F; // bool
+                constexpr std::ptrdiff_t m_bCreateNonSolid = 0xC40; // bool
+                constexpr std::ptrdiff_t m_bIsOverrideProp = 0xC41; // bool
+                constexpr std::ptrdiff_t m_iInitialGlowState = 0xC44; // int32
+                constexpr std::ptrdiff_t m_nGlowRange = 0xC48; // int32
+                constexpr std::ptrdiff_t m_nGlowRangeMin = 0xC4C; // int32
+                constexpr std::ptrdiff_t m_glowColor = 0xC50; // Color
+                constexpr std::ptrdiff_t m_nGlowTeam = 0xC54; // int32
             }
             // Parent: CBaseModelEntity
             // Field count: 0
@@ -1767,18 +1773,18 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bPlayingUninterruptableAct (bool)
             // NetworkVarNames: m_nUninterruptableActivity (PlayerAnimEvent_t)
             namespace CFists {
-                constexpr std::ptrdiff_t m_bPlayingUninterruptableAct = 0xF10; // bool
-                constexpr std::ptrdiff_t m_nUninterruptableActivity = 0xF14; // PlayerAnimEvent_t
-                constexpr std::ptrdiff_t m_bRestorePrevWep = 0xF18; // bool
-                constexpr std::ptrdiff_t m_hWeaponBeforePrevious = 0xF1C; // CHandle<CBasePlayerWeapon>
-                constexpr std::ptrdiff_t m_hWeaponPrevious = 0xF20; // CHandle<CBasePlayerWeapon>
-                constexpr std::ptrdiff_t m_bDelayedHardPunchIncoming = 0xF24; // bool
-                constexpr std::ptrdiff_t m_bDestroyAfterTaunt = 0xF25; // bool
+                constexpr std::ptrdiff_t m_bPlayingUninterruptableAct = 0xF58; // bool
+                constexpr std::ptrdiff_t m_nUninterruptableActivity = 0xF5C; // PlayerAnimEvent_t
+                constexpr std::ptrdiff_t m_bRestorePrevWep = 0xF60; // bool
+                constexpr std::ptrdiff_t m_hWeaponBeforePrevious = 0xF64; // CHandle<CBasePlayerWeapon>
+                constexpr std::ptrdiff_t m_hWeaponPrevious = 0xF68; // CHandle<CBasePlayerWeapon>
+                constexpr std::ptrdiff_t m_bDelayedHardPunchIncoming = 0xF6C; // bool
+                constexpr std::ptrdiff_t m_bDestroyAfterTaunt = 0xF6D; // bool
             }
             // Parent: CBaseTrigger
             // Field count: 1
             namespace CTriggerRemove {
-                constexpr std::ptrdiff_t m_OnRemove = 0x920; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnRemove = 0x960; // CEntityIOOutput
             }
             // Parent: CBaseFilter
             // Field count: 1
@@ -1806,7 +1812,7 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 1
             namespace CTriggerMultiple {
-                constexpr std::ptrdiff_t m_OnTrigger = 0x920; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTrigger = 0x960; // CEntityIOOutput
             }
             // Parent: CBodyComponent
             // Field count: 1
@@ -1819,13 +1825,13 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 7
             namespace CTriggerPush {
-                constexpr std::ptrdiff_t m_angPushEntitySpace = 0x920; // QAngle
-                constexpr std::ptrdiff_t m_vecPushDirEntitySpace = 0x92C; // Vector
-                constexpr std::ptrdiff_t m_bTriggerOnStartTouch = 0x938; // bool
-                constexpr std::ptrdiff_t m_bUsePathSimple = 0x939; // bool
-                constexpr std::ptrdiff_t m_iszPathSimpleName = 0x940; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_PathSimple = 0x948; // CPathSimple*
-                constexpr std::ptrdiff_t m_splinePushType = 0x950; // uint32
+                constexpr std::ptrdiff_t m_angPushEntitySpace = 0x960; // QAngle
+                constexpr std::ptrdiff_t m_vecPushDirEntitySpace = 0x96C; // Vector
+                constexpr std::ptrdiff_t m_bTriggerOnStartTouch = 0x978; // bool
+                constexpr std::ptrdiff_t m_bUsePathSimple = 0x979; // bool
+                constexpr std::ptrdiff_t m_iszPathSimpleName = 0x980; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_PathSimple = 0x988; // CPathSimple*
+                constexpr std::ptrdiff_t m_splinePushType = 0x990; // uint32
             }
             // Parent: CBaseFilter
             // Field count: 3
@@ -1841,11 +1847,11 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 5
             namespace CTriggerProximity {
-                constexpr std::ptrdiff_t m_hMeasureTarget = 0x920; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iszMeasureTarget = 0x928; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_fRadius = 0x930; // float32
-                constexpr std::ptrdiff_t m_nTouchers = 0x934; // int32
-                constexpr std::ptrdiff_t m_NearestEntityDistance = 0x938; // CEntityOutputTemplate<float32>
+                constexpr std::ptrdiff_t m_hMeasureTarget = 0x960; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iszMeasureTarget = 0x968; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_fRadius = 0x970; // float32
+                constexpr std::ptrdiff_t m_nTouchers = 0x974; // int32
+                constexpr std::ptrdiff_t m_NearestEntityDistance = 0x978; // CEntityOutputTemplate<float32>
             }
             // Parent: CFuncBrush
             // Field count: 4
@@ -1853,10 +1859,10 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_EffectName (string_t)
             namespace CFuncElectrifiedVolume {
-                constexpr std::ptrdiff_t m_EffectName = 0x770; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_EffectInterpenetrateName = 0x778; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_EffectZapName = 0x780; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszEffectSource = 0x788; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_EffectName = 0x7B0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_EffectInterpenetrateName = 0x7B8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_EffectZapName = 0x7C0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszEffectSource = 0x7C8; // CUtlSymbolLarge
             }
             // Parent: CPointEntity
             // Field count: 1
@@ -1874,40 +1880,40 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 5
             namespace CTriggerBrush {
-                constexpr std::ptrdiff_t m_OnStartTouch = 0x750; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnEndTouch = 0x778; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnUse = 0x7A0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_iInputFilter = 0x7C8; // int32
-                constexpr std::ptrdiff_t m_iDontMessageParent = 0x7CC; // int32
+                constexpr std::ptrdiff_t m_OnStartTouch = 0x790; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnEndTouch = 0x7B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnUse = 0x7E0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_iInputFilter = 0x808; // int32
+                constexpr std::ptrdiff_t m_iDontMessageParent = 0x80C; // int32
             }
             // Parent: CBeam
             // Field count: 19
             namespace CEnvBeam {
-                constexpr std::ptrdiff_t m_active = 0x7F0; // int32
-                constexpr std::ptrdiff_t m_spriteTexture = 0x7F8; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_iszStartEntity = 0x800; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszEndEntity = 0x808; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_life = 0x810; // float32
-                constexpr std::ptrdiff_t m_boltWidth = 0x814; // float32
-                constexpr std::ptrdiff_t m_noiseAmplitude = 0x818; // float32
-                constexpr std::ptrdiff_t m_speed = 0x81C; // int32
-                constexpr std::ptrdiff_t m_restrike = 0x820; // float32
-                constexpr std::ptrdiff_t m_iszSpriteName = 0x828; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_frameStart = 0x830; // int32
-                constexpr std::ptrdiff_t m_vEndPointWorld = 0x834; // Vector
-                constexpr std::ptrdiff_t m_vEndPointRelative = 0x840; // Vector
-                constexpr std::ptrdiff_t m_radius = 0x84C; // float32
-                constexpr std::ptrdiff_t m_TouchType = 0x850; // Touch_t
-                constexpr std::ptrdiff_t m_iFilterName = 0x858; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hFilter = 0x860; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iszDecal = 0x868; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_OnTouchedByEntity = 0x870; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_active = 0x830; // int32
+                constexpr std::ptrdiff_t m_spriteTexture = 0x838; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_iszStartEntity = 0x840; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszEndEntity = 0x848; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_life = 0x850; // float32
+                constexpr std::ptrdiff_t m_boltWidth = 0x854; // float32
+                constexpr std::ptrdiff_t m_noiseAmplitude = 0x858; // float32
+                constexpr std::ptrdiff_t m_speed = 0x85C; // int32
+                constexpr std::ptrdiff_t m_restrike = 0x860; // float32
+                constexpr std::ptrdiff_t m_iszSpriteName = 0x868; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_frameStart = 0x870; // int32
+                constexpr std::ptrdiff_t m_vEndPointWorld = 0x874; // Vector
+                constexpr std::ptrdiff_t m_vEndPointRelative = 0x880; // Vector
+                constexpr std::ptrdiff_t m_radius = 0x88C; // float32
+                constexpr std::ptrdiff_t m_TouchType = 0x890; // Touch_t
+                constexpr std::ptrdiff_t m_iFilterName = 0x898; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hFilter = 0x8A0; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iszDecal = 0x8A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_OnTouchedByEntity = 0x8B0; // CEntityIOOutput
             }
             // Parent: CBaseTrigger
             // Field count: 2
             namespace CTonemapTrigger {
-                constexpr std::ptrdiff_t m_tonemapControllerName = 0x920; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hTonemapController = 0x928; // CEntityHandle
+                constexpr std::ptrdiff_t m_tonemapControllerName = 0x960; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hTonemapController = 0x968; // CEntityHandle
             }
             // Parent: None
             // Field count: 5
@@ -1932,7 +1938,7 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 1
             namespace CFogTrigger {
-                constexpr std::ptrdiff_t m_fog = 0x920; // fogparams_t
+                constexpr std::ptrdiff_t m_fog = 0x960; // fogparams_t
             }
             // Parent: CLogicalEntity
             // Field count: 5
@@ -1984,8 +1990,8 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_flFluidDensity (float)
             namespace CTriggerBuoyancy {
-                constexpr std::ptrdiff_t m_BuoyancyHelper = 0x920; // CBuoyancyHelper
-                constexpr std::ptrdiff_t m_flFluidDensity = 0x9A0; // float32
+                constexpr std::ptrdiff_t m_BuoyancyHelper = 0x960; // CBuoyancyHelper
+                constexpr std::ptrdiff_t m_flFluidDensity = 0x9E0; // float32
             }
             // Parent: CPointEntity
             // Field count: 7
@@ -2079,10 +2085,10 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_nDecoyShotTick (int)
             namespace CDecoyProjectile {
-                constexpr std::ptrdiff_t m_nDecoyShotTick = 0xB10; // int32
-                constexpr std::ptrdiff_t m_shotsRemaining = 0xB14; // int32
-                constexpr std::ptrdiff_t m_fExpireTime = 0xB18; // GameTime_t
-                constexpr std::ptrdiff_t m_decoyWeaponDefIndex = 0xB28; // uint16
+                constexpr std::ptrdiff_t m_nDecoyShotTick = 0xB58; // int32
+                constexpr std::ptrdiff_t m_shotsRemaining = 0xB5C; // int32
+                constexpr std::ptrdiff_t m_fExpireTime = 0xB60; // GameTime_t
+                constexpr std::ptrdiff_t m_decoyWeaponDefIndex = 0xB70; // uint16
             }
             // Parent: CBaseEntity
             // Field count: 0
@@ -2285,7 +2291,7 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CFuncNavObstruction {
-                constexpr std::ptrdiff_t m_bDisabled = 0x758; // bool
+                constexpr std::ptrdiff_t m_bDisabled = 0x798; // bool
             }
             // Parent: CPointEntity
             // Field count: 4
@@ -2314,25 +2320,25 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flNextHoldFrac (float)
             // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
             namespace CBaseCSGrenade {
-                constexpr std::ptrdiff_t m_bRedraw = 0xF10; // bool
-                constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0xF11; // bool
-                constexpr std::ptrdiff_t m_bPinPulled = 0xF12; // bool
-                constexpr std::ptrdiff_t m_bJumpThrow = 0xF13; // bool
-                constexpr std::ptrdiff_t m_bThrowAnimating = 0xF14; // bool
-                constexpr std::ptrdiff_t m_fThrowTime = 0xF18; // GameTime_t
-                constexpr std::ptrdiff_t m_flThrowStrength = 0xF1C; // float32
-                constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0xF20; // float32
-                constexpr std::ptrdiff_t m_fDropTime = 0xF24; // GameTime_t
-                constexpr std::ptrdiff_t m_fPinPullTime = 0xF28; // GameTime_t
-                constexpr std::ptrdiff_t m_bJustPulledPin = 0xF2C; // bool
-                constexpr std::ptrdiff_t m_nNextHoldTick = 0xF30; // GameTick_t
-                constexpr std::ptrdiff_t m_flNextHoldFrac = 0xF34; // float32
-                constexpr std::ptrdiff_t m_hSwitchToWeaponAfterThrow = 0xF38; // CHandle<CCSWeaponBase>
+                constexpr std::ptrdiff_t m_bRedraw = 0xF58; // bool
+                constexpr std::ptrdiff_t m_bIsHeldByPlayer = 0xF59; // bool
+                constexpr std::ptrdiff_t m_bPinPulled = 0xF5A; // bool
+                constexpr std::ptrdiff_t m_bJumpThrow = 0xF5B; // bool
+                constexpr std::ptrdiff_t m_bThrowAnimating = 0xF5C; // bool
+                constexpr std::ptrdiff_t m_fThrowTime = 0xF60; // GameTime_t
+                constexpr std::ptrdiff_t m_flThrowStrength = 0xF64; // float32
+                constexpr std::ptrdiff_t m_flThrowStrengthApproach = 0xF68; // float32
+                constexpr std::ptrdiff_t m_fDropTime = 0xF6C; // GameTime_t
+                constexpr std::ptrdiff_t m_fPinPullTime = 0xF70; // GameTime_t
+                constexpr std::ptrdiff_t m_bJustPulledPin = 0xF74; // bool
+                constexpr std::ptrdiff_t m_nNextHoldTick = 0xF78; // GameTick_t
+                constexpr std::ptrdiff_t m_flNextHoldFrac = 0xF7C; // float32
+                constexpr std::ptrdiff_t m_hSwitchToWeaponAfterThrow = 0xF80; // CHandle<CCSWeaponBase>
             }
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CItemGenericTriggerHelper {
-                constexpr std::ptrdiff_t m_hParentItem = 0x750; // CHandle<CItemGeneric>
+                constexpr std::ptrdiff_t m_hParentItem = 0x790; // CHandle<CItemGeneric>
             }
             // Parent: CLogicalEntity
             // Field count: 6
@@ -2372,9 +2378,9 @@ namespace cs2_dumper {
             // Parent: CModelPointEntity
             // Field count: 3
             namespace CRevertSaved {
-                constexpr std::ptrdiff_t m_loadTime = 0x750; // float32
-                constexpr std::ptrdiff_t m_Duration = 0x754; // float32
-                constexpr std::ptrdiff_t m_HoldTime = 0x758; // float32
+                constexpr std::ptrdiff_t m_loadTime = 0x790; // float32
+                constexpr std::ptrdiff_t m_Duration = 0x794; // float32
+                constexpr std::ptrdiff_t m_HoldTime = 0x798; // float32
             }
             // Parent: CLogicalEntity
             // Field count: 8
@@ -2453,8 +2459,8 @@ namespace cs2_dumper {
             // Parent: CItem
             // Field count: 2
             namespace CItemDefuser {
-                constexpr std::ptrdiff_t m_entitySpottedState = 0xA38; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSpotRules = 0xA50; // int32
+                constexpr std::ptrdiff_t m_entitySpottedState = 0xA80; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_nSpotRules = 0xA98; // int32
             }
             // Parent: CRuleEntity
             // Field count: 0
@@ -2497,8 +2503,8 @@ namespace cs2_dumper {
             // NetworkVarNames: m_SequenceCompleteTimer (CountdownTimer)
             // NetworkVarNames: m_bRedraw (bool)
             namespace CWeaponBaseItem {
-                constexpr std::ptrdiff_t m_SequenceCompleteTimer = 0xF10; // CountdownTimer
-                constexpr std::ptrdiff_t m_bRedraw = 0xF28; // bool
+                constexpr std::ptrdiff_t m_SequenceCompleteTimer = 0xF58; // CountdownTimer
+                constexpr std::ptrdiff_t m_bRedraw = 0xF70; // bool
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -2607,11 +2613,11 @@ namespace cs2_dumper {
             // Parent: CPhysicsProp
             // Field count: 5
             namespace CPhysicsPropRespawnable {
-                constexpr std::ptrdiff_t m_vOriginalSpawnOrigin = 0xCB8; // Vector
-                constexpr std::ptrdiff_t m_vOriginalSpawnAngles = 0xCC4; // QAngle
-                constexpr std::ptrdiff_t m_vOriginalMins = 0xCD0; // Vector
-                constexpr std::ptrdiff_t m_vOriginalMaxs = 0xCDC; // Vector
-                constexpr std::ptrdiff_t m_flRespawnDuration = 0xCE8; // float32
+                constexpr std::ptrdiff_t m_vOriginalSpawnOrigin = 0xD00; // Vector
+                constexpr std::ptrdiff_t m_vOriginalSpawnAngles = 0xD0C; // QAngle
+                constexpr std::ptrdiff_t m_vOriginalMins = 0xD18; // Vector
+                constexpr std::ptrdiff_t m_vOriginalMaxs = 0xD24; // Vector
+                constexpr std::ptrdiff_t m_flRespawnDuration = 0xD30; // float32
             }
             // Parent: CEnvSoundscapeProxy
             // Field count: 0
@@ -2671,12 +2677,12 @@ namespace cs2_dumper {
             // NetworkVarNames: m_attachmentPointBoneSpace (Vector)
             // NetworkVarNames: m_attachmentPointRagdollSpace (Vector)
             namespace CRagdollPropAttached {
-                constexpr std::ptrdiff_t m_boneIndexAttached = 0xB00; // uint32
-                constexpr std::ptrdiff_t m_ragdollAttachedObjectIndex = 0xB04; // uint32
-                constexpr std::ptrdiff_t m_attachmentPointBoneSpace = 0xB08; // Vector
-                constexpr std::ptrdiff_t m_attachmentPointRagdollSpace = 0xB14; // Vector
-                constexpr std::ptrdiff_t m_bShouldDetach = 0xB20; // bool
-                constexpr std::ptrdiff_t m_bShouldDeleteAttachedActivationRecord = 0xB30; // bool
+                constexpr std::ptrdiff_t m_boneIndexAttached = 0xB48; // uint32
+                constexpr std::ptrdiff_t m_ragdollAttachedObjectIndex = 0xB4C; // uint32
+                constexpr std::ptrdiff_t m_attachmentPointBoneSpace = 0xB50; // Vector
+                constexpr std::ptrdiff_t m_attachmentPointRagdollSpace = 0xB5C; // Vector
+                constexpr std::ptrdiff_t m_bShouldDetach = 0xB68; // bool
+                constexpr std::ptrdiff_t m_bShouldDeleteAttachedActivationRecord = 0xB78; // bool
             }
             // Parent: CItem
             // Field count: 2
@@ -2685,44 +2691,44 @@ namespace cs2_dumper {
             // NetworkVarNames: m_OwningPlayer (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_KillingPlayer (CHandle<CCSPlayerPawn>)
             namespace CItemDogtags {
-                constexpr std::ptrdiff_t m_OwningPlayer = 0xA38; // CHandle<CCSPlayerPawn>
-                constexpr std::ptrdiff_t m_KillingPlayer = 0xA3C; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_OwningPlayer = 0xA80; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_KillingPlayer = 0xA84; // CHandle<CCSPlayerPawn>
             }
             // Parent: CItem
             // Field count: 32
             namespace CItemGeneric {
-                constexpr std::ptrdiff_t m_bHasTriggerRadius = 0xA40; // bool
-                constexpr std::ptrdiff_t m_bHasPickupRadius = 0xA41; // bool
-                constexpr std::ptrdiff_t m_flPickupRadiusSqr = 0xA44; // float32
-                constexpr std::ptrdiff_t m_flTriggerRadiusSqr = 0xA48; // float32
-                constexpr std::ptrdiff_t m_flLastPickupCheck = 0xA4C; // GameTime_t
-                constexpr std::ptrdiff_t m_bPlayerCounterListenerAdded = 0xA50; // bool
-                constexpr std::ptrdiff_t m_bPlayerInTriggerRadius = 0xA51; // bool
-                constexpr std::ptrdiff_t m_hSpawnParticleEffect = 0xA58; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                constexpr std::ptrdiff_t m_pAmbientSoundEffect = 0xA60; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bAutoStartAmbientSound = 0xA68; // bool
-                constexpr std::ptrdiff_t m_pSpawnScriptFunction = 0xA70; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hPickupParticleEffect = 0xA78; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                constexpr std::ptrdiff_t m_pPickupSoundEffect = 0xA80; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_pPickupScriptFunction = 0xA88; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hTimeoutParticleEffect = 0xA90; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                constexpr std::ptrdiff_t m_pTimeoutSoundEffect = 0xA98; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_pTimeoutScriptFunction = 0xAA0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_pPickupFilterName = 0xAA8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hPickupFilter = 0xAB0; // CHandle<CBaseFilter>
-                constexpr std::ptrdiff_t m_OnPickup = 0xAB8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnTimeout = 0xAE0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnTriggerStartTouch = 0xB08; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnTriggerTouch = 0xB30; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnTriggerEndTouch = 0xB58; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_pAllowPickupScriptFunction = 0xB80; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_flPickupRadius = 0xB88; // float32
-                constexpr std::ptrdiff_t m_flTriggerRadius = 0xB8C; // float32
-                constexpr std::ptrdiff_t m_pTriggerSoundEffect = 0xB90; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bGlowWhenInTrigger = 0xB98; // bool
-                constexpr std::ptrdiff_t m_glowColor = 0xB99; // Color
-                constexpr std::ptrdiff_t m_bUseable = 0xB9D; // bool
-                constexpr std::ptrdiff_t m_hTriggerHelper = 0xBA0; // CHandle<CItemGenericTriggerHelper>
+                constexpr std::ptrdiff_t m_bHasTriggerRadius = 0xA88; // bool
+                constexpr std::ptrdiff_t m_bHasPickupRadius = 0xA89; // bool
+                constexpr std::ptrdiff_t m_flPickupRadiusSqr = 0xA8C; // float32
+                constexpr std::ptrdiff_t m_flTriggerRadiusSqr = 0xA90; // float32
+                constexpr std::ptrdiff_t m_flLastPickupCheck = 0xA94; // GameTime_t
+                constexpr std::ptrdiff_t m_bPlayerCounterListenerAdded = 0xA98; // bool
+                constexpr std::ptrdiff_t m_bPlayerInTriggerRadius = 0xA99; // bool
+                constexpr std::ptrdiff_t m_hSpawnParticleEffect = 0xAA0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_pAmbientSoundEffect = 0xAA8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bAutoStartAmbientSound = 0xAB0; // bool
+                constexpr std::ptrdiff_t m_pSpawnScriptFunction = 0xAB8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hPickupParticleEffect = 0xAC0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_pPickupSoundEffect = 0xAC8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_pPickupScriptFunction = 0xAD0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hTimeoutParticleEffect = 0xAD8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_pTimeoutSoundEffect = 0xAE0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_pTimeoutScriptFunction = 0xAE8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_pPickupFilterName = 0xAF0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hPickupFilter = 0xAF8; // CHandle<CBaseFilter>
+                constexpr std::ptrdiff_t m_OnPickup = 0xB00; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTimeout = 0xB28; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTriggerStartTouch = 0xB50; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTriggerTouch = 0xB78; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTriggerEndTouch = 0xBA0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_pAllowPickupScriptFunction = 0xBC8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_flPickupRadius = 0xBD0; // float32
+                constexpr std::ptrdiff_t m_flTriggerRadius = 0xBD4; // float32
+                constexpr std::ptrdiff_t m_pTriggerSoundEffect = 0xBD8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bGlowWhenInTrigger = 0xBE0; // bool
+                constexpr std::ptrdiff_t m_glowColor = 0xBE1; // Color
+                constexpr std::ptrdiff_t m_bUseable = 0xBE5; // bool
+                constexpr std::ptrdiff_t m_hTriggerHelper = 0xBE8; // CHandle<CItemGenericTriggerHelper>
             }
             // Parent: CLightEntity
             // Field count: 0
@@ -2747,23 +2753,23 @@ namespace cs2_dumper {
             // Parent: CBasePropDoor
             // Field count: 17
             namespace CPropDoorRotating {
-                constexpr std::ptrdiff_t m_vecAxis = 0xEA0; // Vector
-                constexpr std::ptrdiff_t m_flDistance = 0xEAC; // float32
-                constexpr std::ptrdiff_t m_eSpawnPosition = 0xEB0; // PropDoorRotatingSpawnPos_t
-                constexpr std::ptrdiff_t m_eOpenDirection = 0xEB4; // PropDoorRotatingOpenDirection_e
-                constexpr std::ptrdiff_t m_eCurrentOpenDirection = 0xEB8; // PropDoorRotatingOpenDirection_e
-                constexpr std::ptrdiff_t m_flAjarAngle = 0xEBC; // float32
-                constexpr std::ptrdiff_t m_angRotationAjarDeprecated = 0xEC0; // QAngle
-                constexpr std::ptrdiff_t m_angRotationClosed = 0xECC; // QAngle
-                constexpr std::ptrdiff_t m_angRotationOpenForward = 0xED8; // QAngle
-                constexpr std::ptrdiff_t m_angRotationOpenBack = 0xEE4; // QAngle
-                constexpr std::ptrdiff_t m_angGoal = 0xEF0; // QAngle
-                constexpr std::ptrdiff_t m_vecForwardBoundsMin = 0xEFC; // Vector
-                constexpr std::ptrdiff_t m_vecForwardBoundsMax = 0xF08; // Vector
-                constexpr std::ptrdiff_t m_vecBackBoundsMin = 0xF14; // Vector
-                constexpr std::ptrdiff_t m_vecBackBoundsMax = 0xF20; // Vector
-                constexpr std::ptrdiff_t m_bAjarDoorShouldntAlwaysOpen = 0xF2C; // bool
-                constexpr std::ptrdiff_t m_hEntityBlocker = 0xF30; // CHandle<CEntityBlocker>
+                constexpr std::ptrdiff_t m_vecAxis = 0xEE8; // Vector
+                constexpr std::ptrdiff_t m_flDistance = 0xEF4; // float32
+                constexpr std::ptrdiff_t m_eSpawnPosition = 0xEF8; // PropDoorRotatingSpawnPos_t
+                constexpr std::ptrdiff_t m_eOpenDirection = 0xEFC; // PropDoorRotatingOpenDirection_e
+                constexpr std::ptrdiff_t m_eCurrentOpenDirection = 0xF00; // PropDoorRotatingOpenDirection_e
+                constexpr std::ptrdiff_t m_flAjarAngle = 0xF04; // float32
+                constexpr std::ptrdiff_t m_angRotationAjarDeprecated = 0xF08; // QAngle
+                constexpr std::ptrdiff_t m_angRotationClosed = 0xF14; // QAngle
+                constexpr std::ptrdiff_t m_angRotationOpenForward = 0xF20; // QAngle
+                constexpr std::ptrdiff_t m_angRotationOpenBack = 0xF2C; // QAngle
+                constexpr std::ptrdiff_t m_angGoal = 0xF38; // QAngle
+                constexpr std::ptrdiff_t m_vecForwardBoundsMin = 0xF44; // Vector
+                constexpr std::ptrdiff_t m_vecForwardBoundsMax = 0xF50; // Vector
+                constexpr std::ptrdiff_t m_vecBackBoundsMin = 0xF5C; // Vector
+                constexpr std::ptrdiff_t m_vecBackBoundsMax = 0xF68; // Vector
+                constexpr std::ptrdiff_t m_bAjarDoorShouldntAlwaysOpen = 0xF74; // bool
+                constexpr std::ptrdiff_t m_hEntityBlocker = 0xF78; // CHandle<CEntityBlocker>
             }
             // Parent: CBaseModelEntity
             // Field count: 21
@@ -2793,27 +2799,27 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iStartAttachment (AttachmentHandle_t)
             // NetworkVarNames: m_iEndAttachment (AttachmentHandle_t)
             namespace CRopeKeyframe {
-                constexpr std::ptrdiff_t m_RopeFlags = 0x758; // uint16
-                constexpr std::ptrdiff_t m_iNextLinkName = 0x760; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_Slack = 0x768; // int16
-                constexpr std::ptrdiff_t m_Width = 0x76C; // float32
-                constexpr std::ptrdiff_t m_TextureScale = 0x770; // float32
-                constexpr std::ptrdiff_t m_nSegments = 0x774; // uint8
-                constexpr std::ptrdiff_t m_bConstrainBetweenEndpoints = 0x775; // bool
-                constexpr std::ptrdiff_t m_strRopeMaterialModel = 0x778; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iRopeMaterialModelIndex = 0x780; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_Subdiv = 0x788; // uint8
-                constexpr std::ptrdiff_t m_nChangeCount = 0x789; // uint8
-                constexpr std::ptrdiff_t m_RopeLength = 0x78A; // int16
-                constexpr std::ptrdiff_t m_fLockedPoints = 0x78C; // uint8
-                constexpr std::ptrdiff_t m_bCreatedFromMapFile = 0x78D; // bool
-                constexpr std::ptrdiff_t m_flScrollSpeed = 0x790; // float32
-                constexpr std::ptrdiff_t m_bStartPointValid = 0x794; // bool
-                constexpr std::ptrdiff_t m_bEndPointValid = 0x795; // bool
-                constexpr std::ptrdiff_t m_hStartPoint = 0x798; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_hEndPoint = 0x79C; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iStartAttachment = 0x7A0; // AttachmentHandle_t
-                constexpr std::ptrdiff_t m_iEndAttachment = 0x7A1; // AttachmentHandle_t
+                constexpr std::ptrdiff_t m_RopeFlags = 0x798; // uint16
+                constexpr std::ptrdiff_t m_iNextLinkName = 0x7A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_Slack = 0x7A8; // int16
+                constexpr std::ptrdiff_t m_Width = 0x7AC; // float32
+                constexpr std::ptrdiff_t m_TextureScale = 0x7B0; // float32
+                constexpr std::ptrdiff_t m_nSegments = 0x7B4; // uint8
+                constexpr std::ptrdiff_t m_bConstrainBetweenEndpoints = 0x7B5; // bool
+                constexpr std::ptrdiff_t m_strRopeMaterialModel = 0x7B8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iRopeMaterialModelIndex = 0x7C0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_Subdiv = 0x7C8; // uint8
+                constexpr std::ptrdiff_t m_nChangeCount = 0x7C9; // uint8
+                constexpr std::ptrdiff_t m_RopeLength = 0x7CA; // int16
+                constexpr std::ptrdiff_t m_fLockedPoints = 0x7CC; // uint8
+                constexpr std::ptrdiff_t m_bCreatedFromMapFile = 0x7CD; // bool
+                constexpr std::ptrdiff_t m_flScrollSpeed = 0x7D0; // float32
+                constexpr std::ptrdiff_t m_bStartPointValid = 0x7D4; // bool
+                constexpr std::ptrdiff_t m_bEndPointValid = 0x7D5; // bool
+                constexpr std::ptrdiff_t m_hStartPoint = 0x7D8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hEndPoint = 0x7DC; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iStartAttachment = 0x7E0; // AttachmentHandle_t
+                constexpr std::ptrdiff_t m_iEndAttachment = 0x7E1; // AttachmentHandle_t
             }
             // Parent: CBaseModelEntity
             // Field count: 73
@@ -2891,79 +2897,79 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vPrecomputedOBBExtent5 (Vector)
             // NetworkVarNames: m_VisClusters (uint16)
             namespace CBarnLight {
-                constexpr std::ptrdiff_t m_bEnabled = 0x750; // bool
-                constexpr std::ptrdiff_t m_nColorMode = 0x754; // int32
-                constexpr std::ptrdiff_t m_Color = 0x758; // Color
-                constexpr std::ptrdiff_t m_flColorTemperature = 0x75C; // float32
-                constexpr std::ptrdiff_t m_flBrightness = 0x760; // float32
-                constexpr std::ptrdiff_t m_flBrightnessScale = 0x764; // float32
-                constexpr std::ptrdiff_t m_nDirectLight = 0x768; // int32
-                constexpr std::ptrdiff_t m_nBakedShadowIndex = 0x76C; // int32
-                constexpr std::ptrdiff_t m_nLuminaireShape = 0x770; // int32
-                constexpr std::ptrdiff_t m_flLuminaireSize = 0x774; // float32
-                constexpr std::ptrdiff_t m_flLuminaireAnisotropy = 0x778; // float32
-                constexpr std::ptrdiff_t m_LightStyleString = 0x780; // CUtlString
-                constexpr std::ptrdiff_t m_flLightStyleStartTime = 0x788; // GameTime_t
-                constexpr std::ptrdiff_t m_QueuedLightStyleStrings = 0x790; // CNetworkUtlVectorBase<CUtlString>
-                constexpr std::ptrdiff_t m_LightStyleEvents = 0x7A8; // CNetworkUtlVectorBase<CUtlString>
-                constexpr std::ptrdiff_t m_LightStyleTargets = 0x7C0; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-                constexpr std::ptrdiff_t m_StyleEvent = 0x7D8; // CEntityIOOutput[4]
-                constexpr std::ptrdiff_t m_hLightCookie = 0x898; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                constexpr std::ptrdiff_t m_flShape = 0x8A0; // float32
-                constexpr std::ptrdiff_t m_flSoftX = 0x8A4; // float32
-                constexpr std::ptrdiff_t m_flSoftY = 0x8A8; // float32
-                constexpr std::ptrdiff_t m_flSkirt = 0x8AC; // float32
-                constexpr std::ptrdiff_t m_flSkirtNear = 0x8B0; // float32
-                constexpr std::ptrdiff_t m_vSizeParams = 0x8B4; // Vector
-                constexpr std::ptrdiff_t m_flRange = 0x8C0; // float32
-                constexpr std::ptrdiff_t m_vShear = 0x8C4; // Vector
-                constexpr std::ptrdiff_t m_nBakeSpecularToCubemaps = 0x8D0; // int32
-                constexpr std::ptrdiff_t m_vBakeSpecularToCubemapsSize = 0x8D4; // Vector
-                constexpr std::ptrdiff_t m_nCastShadows = 0x8E0; // int32
-                constexpr std::ptrdiff_t m_nShadowMapSize = 0x8E4; // int32
-                constexpr std::ptrdiff_t m_nShadowPriority = 0x8E8; // int32
-                constexpr std::ptrdiff_t m_bContactShadow = 0x8EC; // bool
-                constexpr std::ptrdiff_t m_nBounceLight = 0x8F0; // int32
-                constexpr std::ptrdiff_t m_flBounceScale = 0x8F4; // float32
-                constexpr std::ptrdiff_t m_flMinRoughness = 0x8F8; // float32
-                constexpr std::ptrdiff_t m_vAlternateColor = 0x8FC; // Vector
-                constexpr std::ptrdiff_t m_fAlternateColorBrightness = 0x908; // float32
-                constexpr std::ptrdiff_t m_nFog = 0x90C; // int32
-                constexpr std::ptrdiff_t m_flFogStrength = 0x910; // float32
-                constexpr std::ptrdiff_t m_nFogShadows = 0x914; // int32
-                constexpr std::ptrdiff_t m_flFogScale = 0x918; // float32
-                constexpr std::ptrdiff_t m_bFogMixedShadows = 0x91C; // bool
-                constexpr std::ptrdiff_t m_flFadeSizeStart = 0x920; // float32
-                constexpr std::ptrdiff_t m_flFadeSizeEnd = 0x924; // float32
-                constexpr std::ptrdiff_t m_flShadowFadeSizeStart = 0x928; // float32
-                constexpr std::ptrdiff_t m_flShadowFadeSizeEnd = 0x92C; // float32
-                constexpr std::ptrdiff_t m_bPrecomputedFieldsValid = 0x930; // bool
-                constexpr std::ptrdiff_t m_vPrecomputedBoundsMins = 0x934; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedBoundsMaxs = 0x940; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin = 0x94C; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles = 0x958; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent = 0x964; // Vector
-                constexpr std::ptrdiff_t m_nPrecomputedSubFrusta = 0x970; // int32
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin0 = 0x974; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles0 = 0x980; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent0 = 0x98C; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin1 = 0x998; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles1 = 0x9A4; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent1 = 0x9B0; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin2 = 0x9BC; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles2 = 0x9C8; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent2 = 0x9D4; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin3 = 0x9E0; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles3 = 0x9EC; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent3 = 0x9F8; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin4 = 0xA04; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles4 = 0xA10; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent4 = 0xA1C; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin5 = 0xA28; // Vector
-                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles5 = 0xA34; // QAngle
-                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent5 = 0xA40; // Vector
-                constexpr std::ptrdiff_t m_bPvsModifyEntity = 0xA4C; // bool
-                constexpr std::ptrdiff_t m_VisClusters = 0xA50; // CNetworkUtlVectorBase<uint16>
+                constexpr std::ptrdiff_t m_bEnabled = 0x790; // bool
+                constexpr std::ptrdiff_t m_nColorMode = 0x794; // int32
+                constexpr std::ptrdiff_t m_Color = 0x798; // Color
+                constexpr std::ptrdiff_t m_flColorTemperature = 0x79C; // float32
+                constexpr std::ptrdiff_t m_flBrightness = 0x7A0; // float32
+                constexpr std::ptrdiff_t m_flBrightnessScale = 0x7A4; // float32
+                constexpr std::ptrdiff_t m_nDirectLight = 0x7A8; // int32
+                constexpr std::ptrdiff_t m_nBakedShadowIndex = 0x7AC; // int32
+                constexpr std::ptrdiff_t m_nLuminaireShape = 0x7B0; // int32
+                constexpr std::ptrdiff_t m_flLuminaireSize = 0x7B4; // float32
+                constexpr std::ptrdiff_t m_flLuminaireAnisotropy = 0x7B8; // float32
+                constexpr std::ptrdiff_t m_LightStyleString = 0x7C0; // CUtlString
+                constexpr std::ptrdiff_t m_flLightStyleStartTime = 0x7C8; // GameTime_t
+                constexpr std::ptrdiff_t m_QueuedLightStyleStrings = 0x7D0; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_LightStyleEvents = 0x7E8; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_LightStyleTargets = 0x800; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
+                constexpr std::ptrdiff_t m_StyleEvent = 0x818; // CEntityIOOutput[4]
+                constexpr std::ptrdiff_t m_hLightCookie = 0x8D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_flShape = 0x8E0; // float32
+                constexpr std::ptrdiff_t m_flSoftX = 0x8E4; // float32
+                constexpr std::ptrdiff_t m_flSoftY = 0x8E8; // float32
+                constexpr std::ptrdiff_t m_flSkirt = 0x8EC; // float32
+                constexpr std::ptrdiff_t m_flSkirtNear = 0x8F0; // float32
+                constexpr std::ptrdiff_t m_vSizeParams = 0x8F4; // Vector
+                constexpr std::ptrdiff_t m_flRange = 0x900; // float32
+                constexpr std::ptrdiff_t m_vShear = 0x904; // Vector
+                constexpr std::ptrdiff_t m_nBakeSpecularToCubemaps = 0x910; // int32
+                constexpr std::ptrdiff_t m_vBakeSpecularToCubemapsSize = 0x914; // Vector
+                constexpr std::ptrdiff_t m_nCastShadows = 0x920; // int32
+                constexpr std::ptrdiff_t m_nShadowMapSize = 0x924; // int32
+                constexpr std::ptrdiff_t m_nShadowPriority = 0x928; // int32
+                constexpr std::ptrdiff_t m_bContactShadow = 0x92C; // bool
+                constexpr std::ptrdiff_t m_nBounceLight = 0x930; // int32
+                constexpr std::ptrdiff_t m_flBounceScale = 0x934; // float32
+                constexpr std::ptrdiff_t m_flMinRoughness = 0x938; // float32
+                constexpr std::ptrdiff_t m_vAlternateColor = 0x93C; // Vector
+                constexpr std::ptrdiff_t m_fAlternateColorBrightness = 0x948; // float32
+                constexpr std::ptrdiff_t m_nFog = 0x94C; // int32
+                constexpr std::ptrdiff_t m_flFogStrength = 0x950; // float32
+                constexpr std::ptrdiff_t m_nFogShadows = 0x954; // int32
+                constexpr std::ptrdiff_t m_flFogScale = 0x958; // float32
+                constexpr std::ptrdiff_t m_bFogMixedShadows = 0x95C; // bool
+                constexpr std::ptrdiff_t m_flFadeSizeStart = 0x960; // float32
+                constexpr std::ptrdiff_t m_flFadeSizeEnd = 0x964; // float32
+                constexpr std::ptrdiff_t m_flShadowFadeSizeStart = 0x968; // float32
+                constexpr std::ptrdiff_t m_flShadowFadeSizeEnd = 0x96C; // float32
+                constexpr std::ptrdiff_t m_bPrecomputedFieldsValid = 0x970; // bool
+                constexpr std::ptrdiff_t m_vPrecomputedBoundsMins = 0x974; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedBoundsMaxs = 0x980; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin = 0x98C; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles = 0x998; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent = 0x9A4; // Vector
+                constexpr std::ptrdiff_t m_nPrecomputedSubFrusta = 0x9B0; // int32
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin0 = 0x9B4; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles0 = 0x9C0; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent0 = 0x9CC; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin1 = 0x9D8; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles1 = 0x9E4; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent1 = 0x9F0; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin2 = 0x9FC; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles2 = 0xA08; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent2 = 0xA14; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin3 = 0xA20; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles3 = 0xA2C; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent3 = 0xA38; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin4 = 0xA44; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles4 = 0xA50; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent4 = 0xA5C; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBOrigin5 = 0xA68; // Vector
+                constexpr std::ptrdiff_t m_vPrecomputedOBBAngles5 = 0xA74; // QAngle
+                constexpr std::ptrdiff_t m_vPrecomputedOBBExtent5 = 0xA80; // Vector
+                constexpr std::ptrdiff_t m_bPvsModifyEntity = 0xA8C; // bool
+                constexpr std::ptrdiff_t m_VisClusters = 0xA90; // CNetworkUtlVectorBase<uint16>
             }
             // Parent: SpawnPoint
             // Field count: 0
@@ -3106,10 +3112,10 @@ namespace cs2_dumper {
             // Parent: CPropDoorRotating
             // Field count: 4
             namespace CPropDoorRotatingBreakable {
-                constexpr std::ptrdiff_t m_bBreakable = 0xF38; // bool
-                constexpr std::ptrdiff_t m_isAbleToCloseAreaPortals = 0xF39; // bool
-                constexpr std::ptrdiff_t m_currentDamageState = 0xF3C; // int32
-                constexpr std::ptrdiff_t m_damageStates = 0xF40; // CUtlVector<CUtlSymbolLarge>
+                constexpr std::ptrdiff_t m_bBreakable = 0xF80; // bool
+                constexpr std::ptrdiff_t m_isAbleToCloseAreaPortals = 0xF81; // bool
+                constexpr std::ptrdiff_t m_currentDamageState = 0xF84; // int32
+                constexpr std::ptrdiff_t m_damageStates = 0xF88; // CUtlVector<CUtlSymbolLarge>
             }
             // Parent: None
             // Field count: 0
@@ -3150,13 +3156,13 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flGlowProxySize (float32)
             // NetworkVarNames: m_flHDRColorScale (float32)
             namespace CLightGlow {
-                constexpr std::ptrdiff_t m_nHorizontalSize = 0x750; // uint32
-                constexpr std::ptrdiff_t m_nVerticalSize = 0x754; // uint32
-                constexpr std::ptrdiff_t m_nMinDist = 0x758; // uint32
-                constexpr std::ptrdiff_t m_nMaxDist = 0x75C; // uint32
-                constexpr std::ptrdiff_t m_nOuterMaxDist = 0x760; // uint32
-                constexpr std::ptrdiff_t m_flGlowProxySize = 0x764; // float32
-                constexpr std::ptrdiff_t m_flHDRColorScale = 0x768; // float32
+                constexpr std::ptrdiff_t m_nHorizontalSize = 0x790; // uint32
+                constexpr std::ptrdiff_t m_nVerticalSize = 0x794; // uint32
+                constexpr std::ptrdiff_t m_nMinDist = 0x798; // uint32
+                constexpr std::ptrdiff_t m_nMaxDist = 0x79C; // uint32
+                constexpr std::ptrdiff_t m_nOuterMaxDist = 0x7A0; // uint32
+                constexpr std::ptrdiff_t m_flGlowProxySize = 0x7A4; // float32
+                constexpr std::ptrdiff_t m_flHDRColorScale = 0x7A8; // float32
             }
             // Parent: None
             // Field count: 13
@@ -3207,46 +3213,46 @@ namespace cs2_dumper {
             // NetworkVarNames: m_closedAngles (QAngle)
             // NetworkVarNames: m_hMaster (CHandle<CBasePropDoor>)
             namespace CBasePropDoor {
-                constexpr std::ptrdiff_t m_flAutoReturnDelay = 0xC20; // float32
-                constexpr std::ptrdiff_t m_hDoorList = 0xC28; // CUtlVector<CHandle<CBasePropDoor>>
-                constexpr std::ptrdiff_t m_nHardwareType = 0xC40; // int32
-                constexpr std::ptrdiff_t m_bNeedsHardware = 0xC44; // bool
-                constexpr std::ptrdiff_t m_eDoorState = 0xC48; // DoorState_t
-                constexpr std::ptrdiff_t m_bLocked = 0xC4C; // bool
-                constexpr std::ptrdiff_t m_closedPosition = 0xC50; // Vector
-                constexpr std::ptrdiff_t m_closedAngles = 0xC5C; // QAngle
-                constexpr std::ptrdiff_t m_hBlocker = 0xC68; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_bFirstBlocked = 0xC6C; // bool
-                constexpr std::ptrdiff_t m_ls = 0xC70; // locksound_t
-                constexpr std::ptrdiff_t m_bForceClosed = 0xC90; // bool
-                constexpr std::ptrdiff_t m_vecLatchWorldPosition = 0xC94; // Vector
-                constexpr std::ptrdiff_t m_hActivator = 0xCA0; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_SoundMoving = 0xCB0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundOpen = 0xCB8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundClose = 0xCC0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundLock = 0xCC8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundUnlock = 0xCD0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundLatch = 0xCD8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundPound = 0xCE0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundJiggle = 0xCE8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_SoundLockedAnim = 0xCF0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_numCloseAttempts = 0xCF8; // int32
-                constexpr std::ptrdiff_t m_nPhysicsMaterial = 0xCFC; // CUtlStringToken
-                constexpr std::ptrdiff_t m_SlaveName = 0xD00; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hMaster = 0xD08; // CHandle<CBasePropDoor>
-                constexpr std::ptrdiff_t m_OnBlockedClosing = 0xD10; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnBlockedOpening = 0xD38; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnUnblockedClosing = 0xD60; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnUnblockedOpening = 0xD88; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyClosed = 0xDB0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyOpen = 0xDD8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnClose = 0xE00; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnOpen = 0xE28; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnLockedUse = 0xE50; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAjarOpen = 0xE78; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_flAutoReturnDelay = 0xC68; // float32
+                constexpr std::ptrdiff_t m_hDoorList = 0xC70; // CUtlVector<CHandle<CBasePropDoor>>
+                constexpr std::ptrdiff_t m_nHardwareType = 0xC88; // int32
+                constexpr std::ptrdiff_t m_bNeedsHardware = 0xC8C; // bool
+                constexpr std::ptrdiff_t m_eDoorState = 0xC90; // DoorState_t
+                constexpr std::ptrdiff_t m_bLocked = 0xC94; // bool
+                constexpr std::ptrdiff_t m_closedPosition = 0xC98; // Vector
+                constexpr std::ptrdiff_t m_closedAngles = 0xCA4; // QAngle
+                constexpr std::ptrdiff_t m_hBlocker = 0xCB0; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_bFirstBlocked = 0xCB4; // bool
+                constexpr std::ptrdiff_t m_ls = 0xCB8; // locksound_t
+                constexpr std::ptrdiff_t m_bForceClosed = 0xCD8; // bool
+                constexpr std::ptrdiff_t m_vecLatchWorldPosition = 0xCDC; // Vector
+                constexpr std::ptrdiff_t m_hActivator = 0xCE8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_SoundMoving = 0xCF8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundOpen = 0xD00; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundClose = 0xD08; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundLock = 0xD10; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundUnlock = 0xD18; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundLatch = 0xD20; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundPound = 0xD28; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundJiggle = 0xD30; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_SoundLockedAnim = 0xD38; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_numCloseAttempts = 0xD40; // int32
+                constexpr std::ptrdiff_t m_nPhysicsMaterial = 0xD44; // CUtlStringToken
+                constexpr std::ptrdiff_t m_SlaveName = 0xD48; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hMaster = 0xD50; // CHandle<CBasePropDoor>
+                constexpr std::ptrdiff_t m_OnBlockedClosing = 0xD58; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnBlockedOpening = 0xD80; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnUnblockedClosing = 0xDA8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnUnblockedOpening = 0xDD0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyClosed = 0xDF8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyOpen = 0xE20; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnClose = 0xE48; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnOpen = 0xE70; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnLockedUse = 0xE98; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAjarOpen = 0xEC0; // CEntityIOOutput
             }
             // Parent: CBaseEntity
-            // Field count: 3
+            // Field count: 4
             //
             // Metadata:
             // NetworkVarNames: m_iCurrentMaxRagdollCount (int8)
@@ -3254,22 +3260,23 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iCurrentMaxRagdollCount = 0x4E0; // int8
                 constexpr std::ptrdiff_t m_iMaxRagdollCount = 0x4E4; // int32
                 constexpr std::ptrdiff_t m_bSaveImportant = 0x4E8; // bool
+                constexpr std::ptrdiff_t m_bCanTakeDamage = 0x4E9; // bool
             }
             // Parent: CBaseTrigger
             // Field count: 12
             namespace CTriggerFan {
-                constexpr std::ptrdiff_t m_vFanOrigin = 0x920; // Vector
-                constexpr std::ptrdiff_t m_vFanEnd = 0x92C; // Vector
-                constexpr std::ptrdiff_t m_vNoise = 0x938; // Vector
-                constexpr std::ptrdiff_t m_flForce = 0x944; // float32
-                constexpr std::ptrdiff_t m_flRopeForceScale = 0x948; // float32
-                constexpr std::ptrdiff_t m_flPlayerForce = 0x94C; // float32
-                constexpr std::ptrdiff_t m_flRampTime = 0x950; // float32
-                constexpr std::ptrdiff_t m_bFalloff = 0x954; // bool
-                constexpr std::ptrdiff_t m_bPushPlayer = 0x955; // bool
-                constexpr std::ptrdiff_t m_bRampDown = 0x956; // bool
-                constexpr std::ptrdiff_t m_bAddNoise = 0x957; // bool
-                constexpr std::ptrdiff_t m_RampTimer = 0x958; // CountdownTimer
+                constexpr std::ptrdiff_t m_vFanOrigin = 0x960; // Vector
+                constexpr std::ptrdiff_t m_vFanEnd = 0x96C; // Vector
+                constexpr std::ptrdiff_t m_vNoise = 0x978; // Vector
+                constexpr std::ptrdiff_t m_flForce = 0x984; // float32
+                constexpr std::ptrdiff_t m_flRopeForceScale = 0x988; // float32
+                constexpr std::ptrdiff_t m_flPlayerForce = 0x98C; // float32
+                constexpr std::ptrdiff_t m_flRampTime = 0x990; // float32
+                constexpr std::ptrdiff_t m_bFalloff = 0x994; // bool
+                constexpr std::ptrdiff_t m_bPushPlayer = 0x995; // bool
+                constexpr std::ptrdiff_t m_bRampDown = 0x996; // bool
+                constexpr std::ptrdiff_t m_bAddNoise = 0x997; // bool
+                constexpr std::ptrdiff_t m_RampTimer = 0x998; // CountdownTimer
             }
             // Parent: CMolotovGrenade
             // Field count: 0
@@ -3361,14 +3368,14 @@ namespace cs2_dumper {
             // Parent: CBaseAnimGraph
             // Field count: 8
             namespace CItem {
-                constexpr std::ptrdiff_t m_OnPlayerTouch = 0x968; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPlayerPickup = 0x990; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bActivateWhenAtRest = 0x9B8; // bool
-                constexpr std::ptrdiff_t m_OnCacheInteraction = 0x9C0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnGlovePulled = 0x9E8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_vOriginalSpawnOrigin = 0xA10; // Vector
-                constexpr std::ptrdiff_t m_vOriginalSpawnAngles = 0xA1C; // QAngle
-                constexpr std::ptrdiff_t m_bPhysStartAsleep = 0xA28; // bool
+                constexpr std::ptrdiff_t m_OnPlayerTouch = 0x9B0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPlayerPickup = 0x9D8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bActivateWhenAtRest = 0xA00; // bool
+                constexpr std::ptrdiff_t m_OnCacheInteraction = 0xA08; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnGlovePulled = 0xA30; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_vOriginalSpawnOrigin = 0xA58; // Vector
+                constexpr std::ptrdiff_t m_vOriginalSpawnAngles = 0xA64; // QAngle
+                constexpr std::ptrdiff_t m_bPhysStartAsleep = 0xA70; // bool
             }
             // Parent: CBaseModelEntity
             // Field count: 14
@@ -3379,20 +3386,20 @@ namespace cs2_dumper {
             // NetworkVarNames: m_PanelClassName (string_t)
             // NetworkVarNames: m_PanelID (string_t)
             namespace CBaseClientUIEntity {
-                constexpr std::ptrdiff_t m_bEnabled = 0x750; // bool
-                constexpr std::ptrdiff_t m_DialogXMLName = 0x758; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_PanelClassName = 0x760; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_PanelID = 0x768; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_CustomOutput0 = 0x770; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput1 = 0x798; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput2 = 0x7C0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput3 = 0x7E8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput4 = 0x810; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput5 = 0x838; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput6 = 0x860; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput7 = 0x888; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput8 = 0x8B0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_CustomOutput9 = 0x8D8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bEnabled = 0x790; // bool
+                constexpr std::ptrdiff_t m_DialogXMLName = 0x798; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_PanelClassName = 0x7A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_PanelID = 0x7A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_CustomOutput0 = 0x7B0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput1 = 0x7D8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput2 = 0x800; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput3 = 0x828; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput4 = 0x850; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput5 = 0x878; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput6 = 0x8A0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput7 = 0x8C8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput8 = 0x8F0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_CustomOutput9 = 0x918; // CEntityIOOutput
             }
             // Parent: CBaseModelEntity
             // Field count: 9
@@ -3408,15 +3415,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bProjectOnWater (bool)
             // NetworkVarNames: m_flDepthSortBias (float)
             namespace CEnvDecal {
-                constexpr std::ptrdiff_t m_hDecalMaterial = 0x750; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_flWidth = 0x758; // float32
-                constexpr std::ptrdiff_t m_flHeight = 0x75C; // float32
-                constexpr std::ptrdiff_t m_flDepth = 0x760; // float32
-                constexpr std::ptrdiff_t m_nRenderOrder = 0x764; // uint32
-                constexpr std::ptrdiff_t m_bProjectOnWorld = 0x768; // bool
-                constexpr std::ptrdiff_t m_bProjectOnCharacters = 0x769; // bool
-                constexpr std::ptrdiff_t m_bProjectOnWater = 0x76A; // bool
-                constexpr std::ptrdiff_t m_flDepthSortBias = 0x76C; // float32
+                constexpr std::ptrdiff_t m_hDecalMaterial = 0x790; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_flWidth = 0x798; // float32
+                constexpr std::ptrdiff_t m_flHeight = 0x79C; // float32
+                constexpr std::ptrdiff_t m_flDepth = 0x7A0; // float32
+                constexpr std::ptrdiff_t m_nRenderOrder = 0x7A4; // uint32
+                constexpr std::ptrdiff_t m_bProjectOnWorld = 0x7A8; // bool
+                constexpr std::ptrdiff_t m_bProjectOnCharacters = 0x7A9; // bool
+                constexpr std::ptrdiff_t m_bProjectOnWater = 0x7AA; // bool
+                constexpr std::ptrdiff_t m_flDepthSortBias = 0x7AC; // float32
             }
             // Parent: None
             // Field count: 0
@@ -3480,28 +3487,28 @@ namespace cs2_dumper {
             // Parent: CFuncPlatRot
             // Field count: 9
             namespace CFuncTrackChange {
-                constexpr std::ptrdiff_t m_trackTop = 0x818; // CPathTrack*
-                constexpr std::ptrdiff_t m_trackBottom = 0x820; // CPathTrack*
-                constexpr std::ptrdiff_t m_train = 0x828; // CFuncTrackTrain*
-                constexpr std::ptrdiff_t m_trackTopName = 0x830; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_trackBottomName = 0x838; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_trainName = 0x840; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_code = 0x848; // TRAIN_CODE
-                constexpr std::ptrdiff_t m_targetState = 0x84C; // int32
-                constexpr std::ptrdiff_t m_use = 0x850; // int32
+                constexpr std::ptrdiff_t m_trackTop = 0x858; // CPathTrack*
+                constexpr std::ptrdiff_t m_trackBottom = 0x860; // CPathTrack*
+                constexpr std::ptrdiff_t m_train = 0x868; // CFuncTrackTrain*
+                constexpr std::ptrdiff_t m_trackTopName = 0x870; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_trackBottomName = 0x878; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_trainName = 0x880; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_code = 0x888; // TRAIN_CODE
+                constexpr std::ptrdiff_t m_targetState = 0x88C; // int32
+                constexpr std::ptrdiff_t m_use = 0x890; // int32
             }
             // Parent: CRuleBrushEntity
             // Field count: 4
             namespace CGamePlayerZone {
-                constexpr std::ptrdiff_t m_OnPlayerInZone = 0x758; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPlayerOutZone = 0x780; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_PlayersInCount = 0x7A8; // CEntityOutputTemplate<int32>
-                constexpr std::ptrdiff_t m_PlayersOutCount = 0x7D0; // CEntityOutputTemplate<int32>
+                constexpr std::ptrdiff_t m_OnPlayerInZone = 0x798; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPlayerOutZone = 0x7C0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_PlayersInCount = 0x7E8; // CEntityOutputTemplate<int32>
+                constexpr std::ptrdiff_t m_PlayersOutCount = 0x810; // CEntityOutputTemplate<int32>
             }
             // Parent: CRuleEntity
             // Field count: 1
             namespace CRulePointEntity {
-                constexpr std::ptrdiff_t m_Score = 0x758; // int32
+                constexpr std::ptrdiff_t m_Score = 0x798; // int32
             }
             // Parent: CPointEntity
             // Field count: 5
@@ -3540,17 +3547,17 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hWeapon (CHandle<CBasePlayerWeapon>)
             // NetworkVarNames: m_hControlPanel (CHandle<CBaseEntity>)
             namespace CBaseViewModel {
-                constexpr std::ptrdiff_t m_vecLastFacing = 0x968; // Vector
-                constexpr std::ptrdiff_t m_nViewModelIndex = 0x974; // uint32
-                constexpr std::ptrdiff_t m_nAnimationParity = 0x978; // uint32
-                constexpr std::ptrdiff_t m_flAnimationStartTime = 0x97C; // float32
-                constexpr std::ptrdiff_t m_hWeapon = 0x980; // CHandle<CBasePlayerWeapon>
-                constexpr std::ptrdiff_t m_sVMName = 0x988; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_sAnimationPrefix = 0x990; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hOldLayerSequence = 0x998; // HSequence
-                constexpr std::ptrdiff_t m_oldLayer = 0x99C; // int32
-                constexpr std::ptrdiff_t m_oldLayerStartTime = 0x9A0; // float32
-                constexpr std::ptrdiff_t m_hControlPanel = 0x9A4; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_vecLastFacing = 0x9B0; // Vector
+                constexpr std::ptrdiff_t m_nViewModelIndex = 0x9BC; // uint32
+                constexpr std::ptrdiff_t m_nAnimationParity = 0x9C0; // uint32
+                constexpr std::ptrdiff_t m_flAnimationStartTime = 0x9C4; // float32
+                constexpr std::ptrdiff_t m_hWeapon = 0x9C8; // CHandle<CBasePlayerWeapon>
+                constexpr std::ptrdiff_t m_sVMName = 0x9D0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_sAnimationPrefix = 0x9D8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hOldLayerSequence = 0x9E0; // HSequence
+                constexpr std::ptrdiff_t m_oldLayer = 0x9E4; // int32
+                constexpr std::ptrdiff_t m_oldLayerStartTime = 0x9E8; // float32
+                constexpr std::ptrdiff_t m_hControlPanel = 0x9EC; // CHandle<CBaseEntity>
             }
             // Parent: CPlayerPawnComponent
             // Field count: 2
@@ -3606,8 +3613,8 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 2
             namespace CTriggerActiveWeaponDetect {
-                constexpr std::ptrdiff_t m_OnTouchedActiveWeapon = 0x920; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_iszWeaponClassName = 0x948; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_OnTouchedActiveWeapon = 0x960; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_iszWeaponClassName = 0x988; // CUtlSymbolLarge
             }
             // Parent: CPointEntity
             // Field count: 18
@@ -3703,57 +3710,57 @@ namespace cs2_dumper {
             // Parent: CCSWeaponBase
             // Field count: 1
             namespace CKnife {
-                constexpr std::ptrdiff_t m_bFirstAttack = 0xF10; // bool
+                constexpr std::ptrdiff_t m_bFirstAttack = 0xF58; // bool
             }
             // Parent: CBaseModelEntity
             // Field count: 37
             namespace CFuncTrackTrain {
-                constexpr std::ptrdiff_t m_ppath = 0x750; // CHandle<CPathTrack>
-                constexpr std::ptrdiff_t m_length = 0x754; // float32
-                constexpr std::ptrdiff_t m_vPosPrev = 0x758; // Vector
-                constexpr std::ptrdiff_t m_angPrev = 0x764; // QAngle
-                constexpr std::ptrdiff_t m_controlMins = 0x770; // Vector
-                constexpr std::ptrdiff_t m_controlMaxs = 0x77C; // Vector
-                constexpr std::ptrdiff_t m_lastBlockPos = 0x788; // Vector
-                constexpr std::ptrdiff_t m_lastBlockTick = 0x794; // int32
-                constexpr std::ptrdiff_t m_flVolume = 0x798; // float32
-                constexpr std::ptrdiff_t m_flBank = 0x79C; // float32
-                constexpr std::ptrdiff_t m_oldSpeed = 0x7A0; // float32
-                constexpr std::ptrdiff_t m_flBlockDamage = 0x7A4; // float32
-                constexpr std::ptrdiff_t m_height = 0x7A8; // float32
-                constexpr std::ptrdiff_t m_maxSpeed = 0x7AC; // float32
-                constexpr std::ptrdiff_t m_dir = 0x7B0; // float32
-                constexpr std::ptrdiff_t m_iszSoundMove = 0x7B8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszSoundMovePing = 0x7C0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszSoundStart = 0x7C8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszSoundStop = 0x7D0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_strPathTarget = 0x7D8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_flMoveSoundMinDuration = 0x7E0; // float32
-                constexpr std::ptrdiff_t m_flMoveSoundMaxDuration = 0x7E4; // float32
-                constexpr std::ptrdiff_t m_flNextMoveSoundTime = 0x7E8; // GameTime_t
-                constexpr std::ptrdiff_t m_flMoveSoundMinPitch = 0x7EC; // float32
-                constexpr std::ptrdiff_t m_flMoveSoundMaxPitch = 0x7F0; // float32
-                constexpr std::ptrdiff_t m_eOrientationType = 0x7F4; // TrainOrientationType_t
-                constexpr std::ptrdiff_t m_eVelocityType = 0x7F8; // TrainVelocityType_t
-                constexpr std::ptrdiff_t m_OnStart = 0x808; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnNext = 0x830; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnArrivedAtDestinationNode = 0x858; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bManualSpeedChanges = 0x880; // bool
-                constexpr std::ptrdiff_t m_flDesiredSpeed = 0x884; // float32
-                constexpr std::ptrdiff_t m_flSpeedChangeTime = 0x888; // GameTime_t
-                constexpr std::ptrdiff_t m_flAccelSpeed = 0x88C; // float32
-                constexpr std::ptrdiff_t m_flDecelSpeed = 0x890; // float32
-                constexpr std::ptrdiff_t m_bAccelToSpeed = 0x894; // bool
-                constexpr std::ptrdiff_t m_flNextMPSoundTime = 0x898; // GameTime_t
+                constexpr std::ptrdiff_t m_ppath = 0x790; // CHandle<CPathTrack>
+                constexpr std::ptrdiff_t m_length = 0x794; // float32
+                constexpr std::ptrdiff_t m_vPosPrev = 0x798; // Vector
+                constexpr std::ptrdiff_t m_angPrev = 0x7A4; // QAngle
+                constexpr std::ptrdiff_t m_controlMins = 0x7B0; // Vector
+                constexpr std::ptrdiff_t m_controlMaxs = 0x7BC; // Vector
+                constexpr std::ptrdiff_t m_lastBlockPos = 0x7C8; // Vector
+                constexpr std::ptrdiff_t m_lastBlockTick = 0x7D4; // int32
+                constexpr std::ptrdiff_t m_flVolume = 0x7D8; // float32
+                constexpr std::ptrdiff_t m_flBank = 0x7DC; // float32
+                constexpr std::ptrdiff_t m_oldSpeed = 0x7E0; // float32
+                constexpr std::ptrdiff_t m_flBlockDamage = 0x7E4; // float32
+                constexpr std::ptrdiff_t m_height = 0x7E8; // float32
+                constexpr std::ptrdiff_t m_maxSpeed = 0x7EC; // float32
+                constexpr std::ptrdiff_t m_dir = 0x7F0; // float32
+                constexpr std::ptrdiff_t m_iszSoundMove = 0x7F8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszSoundMovePing = 0x800; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszSoundStart = 0x808; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszSoundStop = 0x810; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_strPathTarget = 0x818; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_flMoveSoundMinDuration = 0x820; // float32
+                constexpr std::ptrdiff_t m_flMoveSoundMaxDuration = 0x824; // float32
+                constexpr std::ptrdiff_t m_flNextMoveSoundTime = 0x828; // GameTime_t
+                constexpr std::ptrdiff_t m_flMoveSoundMinPitch = 0x82C; // float32
+                constexpr std::ptrdiff_t m_flMoveSoundMaxPitch = 0x830; // float32
+                constexpr std::ptrdiff_t m_eOrientationType = 0x834; // TrainOrientationType_t
+                constexpr std::ptrdiff_t m_eVelocityType = 0x838; // TrainVelocityType_t
+                constexpr std::ptrdiff_t m_OnStart = 0x848; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnNext = 0x870; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnArrivedAtDestinationNode = 0x898; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bManualSpeedChanges = 0x8C0; // bool
+                constexpr std::ptrdiff_t m_flDesiredSpeed = 0x8C4; // float32
+                constexpr std::ptrdiff_t m_flSpeedChangeTime = 0x8C8; // GameTime_t
+                constexpr std::ptrdiff_t m_flAccelSpeed = 0x8CC; // float32
+                constexpr std::ptrdiff_t m_flDecelSpeed = 0x8D0; // float32
+                constexpr std::ptrdiff_t m_bAccelToSpeed = 0x8D4; // bool
+                constexpr std::ptrdiff_t m_flNextMPSoundTime = 0x8D8; // GameTime_t
             }
             // Parent: CServerOnlyModelEntity
             // Field count: 5
             namespace CFogVolume {
-                constexpr std::ptrdiff_t m_fogName = 0x750; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_postProcessName = 0x758; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_colorCorrectionName = 0x760; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bDisabled = 0x770; // bool
-                constexpr std::ptrdiff_t m_bInFogVolumesList = 0x771; // bool
+                constexpr std::ptrdiff_t m_fogName = 0x790; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_postProcessName = 0x798; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_colorCorrectionName = 0x7A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bDisabled = 0x7B0; // bool
+                constexpr std::ptrdiff_t m_bInFogVolumesList = 0x7B1; // bool
             }
             // Parent: SpawnPoint
             // Field count: 0
@@ -3762,25 +3769,25 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 19
             namespace CFire {
-                constexpr std::ptrdiff_t m_hEffect = 0x750; // CHandle<CBaseFire>
-                constexpr std::ptrdiff_t m_hOwner = 0x754; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_nFireType = 0x758; // int32
-                constexpr std::ptrdiff_t m_flFuel = 0x75C; // float32
-                constexpr std::ptrdiff_t m_flDamageTime = 0x760; // GameTime_t
-                constexpr std::ptrdiff_t m_lastDamage = 0x764; // GameTime_t
-                constexpr std::ptrdiff_t m_flFireSize = 0x768; // float32
-                constexpr std::ptrdiff_t m_flLastNavUpdateTime = 0x76C; // GameTime_t
-                constexpr std::ptrdiff_t m_flHeatLevel = 0x770; // float32
-                constexpr std::ptrdiff_t m_flHeatAbsorb = 0x774; // float32
-                constexpr std::ptrdiff_t m_flDamageScale = 0x778; // float32
-                constexpr std::ptrdiff_t m_flMaxHeat = 0x77C; // float32
-                constexpr std::ptrdiff_t m_flLastHeatLevel = 0x780; // float32
-                constexpr std::ptrdiff_t m_flAttackTime = 0x784; // float32
-                constexpr std::ptrdiff_t m_bEnabled = 0x788; // bool
-                constexpr std::ptrdiff_t m_bStartDisabled = 0x789; // bool
-                constexpr std::ptrdiff_t m_bDidActivate = 0x78A; // bool
-                constexpr std::ptrdiff_t m_OnIgnited = 0x790; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnExtinguished = 0x7B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_hEffect = 0x790; // CHandle<CBaseFire>
+                constexpr std::ptrdiff_t m_hOwner = 0x794; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_nFireType = 0x798; // int32
+                constexpr std::ptrdiff_t m_flFuel = 0x79C; // float32
+                constexpr std::ptrdiff_t m_flDamageTime = 0x7A0; // GameTime_t
+                constexpr std::ptrdiff_t m_lastDamage = 0x7A4; // GameTime_t
+                constexpr std::ptrdiff_t m_flFireSize = 0x7A8; // float32
+                constexpr std::ptrdiff_t m_flLastNavUpdateTime = 0x7AC; // GameTime_t
+                constexpr std::ptrdiff_t m_flHeatLevel = 0x7B0; // float32
+                constexpr std::ptrdiff_t m_flHeatAbsorb = 0x7B4; // float32
+                constexpr std::ptrdiff_t m_flDamageScale = 0x7B8; // float32
+                constexpr std::ptrdiff_t m_flMaxHeat = 0x7BC; // float32
+                constexpr std::ptrdiff_t m_flLastHeatLevel = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_flAttackTime = 0x7C4; // float32
+                constexpr std::ptrdiff_t m_bEnabled = 0x7C8; // bool
+                constexpr std::ptrdiff_t m_bStartDisabled = 0x7C9; // bool
+                constexpr std::ptrdiff_t m_bDidActivate = 0x7CA; // bool
+                constexpr std::ptrdiff_t m_OnIgnited = 0x7D0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnExtinguished = 0x7F8; // CEntityIOOutput
             }
             // Parent: CSkeletonAnimationController
             // Field count: 14
@@ -3818,7 +3825,7 @@ namespace cs2_dumper {
             // Parent: CBasePlatTrain
             // Field count: 1
             namespace CFuncPlat {
-                constexpr std::ptrdiff_t m_sNoise = 0x7F8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_sNoise = 0x838; // CUtlSymbolLarge
             }
             // Parent: CPhysConstraint
             // Field count: 48
@@ -3881,7 +3888,7 @@ namespace cs2_dumper {
             namespace CWeaponG3SG1 {
             }
             // Parent: CBaseModelEntity
-            // Field count: 10
+            // Field count: 11
             //
             // Metadata:
             // MNetworkIncludeByName
@@ -3892,16 +3899,17 @@ namespace cs2_dumper {
             // NetworkVarNames: m_RagdollPose (PhysicsRagdollPose_t)
             // NetworkVarNames: m_bRagdollClientSide (bool)
             namespace CBaseAnimGraph {
-                constexpr std::ptrdiff_t m_bInitiallyPopulateInterpHistory = 0x7C8; // bool
-                constexpr std::ptrdiff_t m_pChoreoServices = 0x7D0; // IChoreoServices*
-                constexpr std::ptrdiff_t m_bAnimGraphUpdateEnabled = 0x7D8; // bool
-                constexpr std::ptrdiff_t m_flMaxSlopeDistance = 0x7DC; // float32
-                constexpr std::ptrdiff_t m_vLastSlopeCheckPos = 0x7E0; // Vector
-                constexpr std::ptrdiff_t m_bAnimationUpdateScheduled = 0x7EC; // bool
-                constexpr std::ptrdiff_t m_vecForce = 0x7F0; // Vector
-                constexpr std::ptrdiff_t m_nForceBone = 0x7FC; // int32
-                constexpr std::ptrdiff_t m_RagdollPose = 0x810; // PhysicsRagdollPose_t
-                constexpr std::ptrdiff_t m_bRagdollClientSide = 0x838; // bool
+                constexpr std::ptrdiff_t m_bInitiallyPopulateInterpHistory = 0x808; // bool
+                constexpr std::ptrdiff_t m_pChoreoServices = 0x810; // IChoreoServices*
+                constexpr std::ptrdiff_t m_bAnimGraphUpdateEnabled = 0x818; // bool
+                constexpr std::ptrdiff_t m_flMaxSlopeDistance = 0x81C; // float32
+                constexpr std::ptrdiff_t m_vLastSlopeCheckPos = 0x820; // Vector
+                constexpr std::ptrdiff_t m_bAnimationUpdateScheduled = 0x82C; // bool
+                constexpr std::ptrdiff_t m_vecForce = 0x830; // Vector
+                constexpr std::ptrdiff_t m_nForceBone = 0x83C; // int32
+                constexpr std::ptrdiff_t m_RagdollPose = 0x850; // PhysicsRagdollPose_t
+                constexpr std::ptrdiff_t m_bRagdollClientSide = 0x878; // bool
+                constexpr std::ptrdiff_t m_nLastDestructiblePartDestroyedAnimgraphSetTick = 0x9A0; // int32
             }
             // Parent: CPhysForce
             // Field count: 1
@@ -3921,33 +3929,33 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hRagdollSource (EHANDLE)
             // NetworkVarNames: m_flBlendWeight (float32)
             namespace CRagdollProp {
-                constexpr std::ptrdiff_t m_ragdoll = 0x968; // ragdoll_t
-                constexpr std::ptrdiff_t m_bStartDisabled = 0x9A0; // bool
-                constexpr std::ptrdiff_t m_ragPos = 0x9A8; // CNetworkUtlVectorBase<Vector>
-                constexpr std::ptrdiff_t m_ragAngles = 0x9C0; // CNetworkUtlVectorBase<QAngle>
-                constexpr std::ptrdiff_t m_hRagdollSource = 0x9D8; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_lastUpdateTickCount = 0x9DC; // uint32
-                constexpr std::ptrdiff_t m_allAsleep = 0x9E0; // bool
-                constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0x9E1; // bool
-                constexpr std::ptrdiff_t m_hDamageEntity = 0x9E4; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_hKiller = 0x9E8; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_hPhysicsAttacker = 0x9EC; // CHandle<CBasePlayerPawn>
-                constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0x9F0; // GameTime_t
-                constexpr std::ptrdiff_t m_flFadeOutStartTime = 0x9F4; // GameTime_t
-                constexpr std::ptrdiff_t m_flFadeTime = 0x9F8; // float32
-                constexpr std::ptrdiff_t m_vecLastOrigin = 0x9FC; // Vector
-                constexpr std::ptrdiff_t m_flAwakeTime = 0xA08; // GameTime_t
-                constexpr std::ptrdiff_t m_flLastOriginChangeTime = 0xA0C; // GameTime_t
-                constexpr std::ptrdiff_t m_strOriginClassName = 0xA10; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_strSourceClassName = 0xA18; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bHasBeenPhysgunned = 0xA20; // bool
-                constexpr std::ptrdiff_t m_bShouldTeleportPhysics = 0xA21; // bool
-                constexpr std::ptrdiff_t m_flBlendWeight = 0xA24; // float32
-                constexpr std::ptrdiff_t m_flDefaultFadeScale = 0xA28; // float32
-                constexpr std::ptrdiff_t m_ragdollMins = 0xA30; // CUtlVector<Vector>
-                constexpr std::ptrdiff_t m_ragdollMaxs = 0xA48; // CUtlVector<Vector>
-                constexpr std::ptrdiff_t m_bShouldDeleteActivationRecord = 0xA60; // bool
-                constexpr std::ptrdiff_t m_bValidatePoweredRagdollPose = 0xAC0; // bool
+                constexpr std::ptrdiff_t m_ragdoll = 0x9B0; // ragdoll_t
+                constexpr std::ptrdiff_t m_bStartDisabled = 0x9E8; // bool
+                constexpr std::ptrdiff_t m_ragPos = 0x9F0; // CNetworkUtlVectorBase<Vector>
+                constexpr std::ptrdiff_t m_ragAngles = 0xA08; // CNetworkUtlVectorBase<QAngle>
+                constexpr std::ptrdiff_t m_hRagdollSource = 0xA20; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_lastUpdateTickCount = 0xA24; // uint32
+                constexpr std::ptrdiff_t m_allAsleep = 0xA28; // bool
+                constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0xA29; // bool
+                constexpr std::ptrdiff_t m_hDamageEntity = 0xA2C; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hKiller = 0xA30; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hPhysicsAttacker = 0xA34; // CHandle<CBasePlayerPawn>
+                constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0xA38; // GameTime_t
+                constexpr std::ptrdiff_t m_flFadeOutStartTime = 0xA3C; // GameTime_t
+                constexpr std::ptrdiff_t m_flFadeTime = 0xA40; // float32
+                constexpr std::ptrdiff_t m_vecLastOrigin = 0xA44; // Vector
+                constexpr std::ptrdiff_t m_flAwakeTime = 0xA50; // GameTime_t
+                constexpr std::ptrdiff_t m_flLastOriginChangeTime = 0xA54; // GameTime_t
+                constexpr std::ptrdiff_t m_strOriginClassName = 0xA58; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_strSourceClassName = 0xA60; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bHasBeenPhysgunned = 0xA68; // bool
+                constexpr std::ptrdiff_t m_bShouldTeleportPhysics = 0xA69; // bool
+                constexpr std::ptrdiff_t m_flBlendWeight = 0xA6C; // float32
+                constexpr std::ptrdiff_t m_flDefaultFadeScale = 0xA70; // float32
+                constexpr std::ptrdiff_t m_ragdollMins = 0xA78; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_ragdollMaxs = 0xA90; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_bShouldDeleteActivationRecord = 0xAA8; // bool
+                constexpr std::ptrdiff_t m_bValidatePoweredRagdollPose = 0xB08; // bool
             }
             // Parent: CBaseAnimGraph
             // Field count: 0
@@ -3989,20 +3997,20 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_bTestOcclusion (bool)
             namespace CTriggerLook {
-                constexpr std::ptrdiff_t m_hLookTarget = 0x948; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_flFieldOfView = 0x94C; // float32
-                constexpr std::ptrdiff_t m_flLookTime = 0x950; // float32
-                constexpr std::ptrdiff_t m_flLookTimeTotal = 0x954; // float32
-                constexpr std::ptrdiff_t m_flLookTimeLast = 0x958; // GameTime_t
-                constexpr std::ptrdiff_t m_flTimeoutDuration = 0x95C; // float32
-                constexpr std::ptrdiff_t m_bTimeoutFired = 0x960; // bool
-                constexpr std::ptrdiff_t m_bIsLooking = 0x961; // bool
-                constexpr std::ptrdiff_t m_b2DFOV = 0x962; // bool
-                constexpr std::ptrdiff_t m_bUseVelocity = 0x963; // bool
-                constexpr std::ptrdiff_t m_bTestOcclusion = 0x964; // bool
-                constexpr std::ptrdiff_t m_OnTimeout = 0x968; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnStartLook = 0x990; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnEndLook = 0x9B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_hLookTarget = 0x988; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_flFieldOfView = 0x98C; // float32
+                constexpr std::ptrdiff_t m_flLookTime = 0x990; // float32
+                constexpr std::ptrdiff_t m_flLookTimeTotal = 0x994; // float32
+                constexpr std::ptrdiff_t m_flLookTimeLast = 0x998; // GameTime_t
+                constexpr std::ptrdiff_t m_flTimeoutDuration = 0x99C; // float32
+                constexpr std::ptrdiff_t m_bTimeoutFired = 0x9A0; // bool
+                constexpr std::ptrdiff_t m_bIsLooking = 0x9A1; // bool
+                constexpr std::ptrdiff_t m_b2DFOV = 0x9A2; // bool
+                constexpr std::ptrdiff_t m_bUseVelocity = 0x9A3; // bool
+                constexpr std::ptrdiff_t m_bTestOcclusion = 0x9A4; // bool
+                constexpr std::ptrdiff_t m_OnTimeout = 0x9A8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnStartLook = 0x9D0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnEndLook = 0x9F8; // CEntityIOOutput
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -4074,14 +4082,14 @@ namespace cs2_dumper {
             // NetworkVarNames: m_source (string_t)
             // NetworkVarNames: m_destination (string_t)
             namespace CFootstepControl {
-                constexpr std::ptrdiff_t m_source = 0x920; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_destination = 0x928; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_source = 0x960; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_destination = 0x968; // CUtlSymbolLarge
             }
             // Parent: CBaseModelEntity
             // Field count: 2
             namespace CTriggerVolume {
-                constexpr std::ptrdiff_t m_iFilterName = 0x750; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hFilter = 0x758; // CHandle<CBaseFilter>
+                constexpr std::ptrdiff_t m_iFilterName = 0x790; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hFilter = 0x798; // CHandle<CBaseFilter>
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -4109,7 +4117,7 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CFuncVPhysicsClip {
-                constexpr std::ptrdiff_t m_bDisabled = 0x750; // bool
+                constexpr std::ptrdiff_t m_bDisabled = 0x790; // bool
             }
             // Parent: CPlayerPawnComponent
             // Field count: 5
@@ -4162,28 +4170,28 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bNoFreeze (bool)
             // NetworkVarNames: m_bNoRamp (bool)
             namespace CParticleSystem {
-                constexpr std::ptrdiff_t m_szSnapshotFileName = 0x750; // char[512]
-                constexpr std::ptrdiff_t m_bActive = 0x950; // bool
-                constexpr std::ptrdiff_t m_bFrozen = 0x951; // bool
-                constexpr std::ptrdiff_t m_flFreezeTransitionDuration = 0x954; // float32
-                constexpr std::ptrdiff_t m_nStopType = 0x958; // int32
-                constexpr std::ptrdiff_t m_bAnimateDuringGameplayPause = 0x95C; // bool
-                constexpr std::ptrdiff_t m_iEffectIndex = 0x960; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                constexpr std::ptrdiff_t m_flStartTime = 0x968; // GameTime_t
-                constexpr std::ptrdiff_t m_flPreSimTime = 0x96C; // float32
-                constexpr std::ptrdiff_t m_vServerControlPoints = 0x970; // Vector[4]
-                constexpr std::ptrdiff_t m_iServerControlPointAssignments = 0x9A0; // uint8[4]
-                constexpr std::ptrdiff_t m_hControlPointEnts = 0x9A4; // CHandle<CBaseEntity>[64]
-                constexpr std::ptrdiff_t m_bNoSave = 0xAA4; // bool
-                constexpr std::ptrdiff_t m_bNoFreeze = 0xAA5; // bool
-                constexpr std::ptrdiff_t m_bNoRamp = 0xAA6; // bool
-                constexpr std::ptrdiff_t m_bStartActive = 0xAA7; // bool
-                constexpr std::ptrdiff_t m_iszEffectName = 0xAA8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszControlPointNames = 0xAB0; // CUtlSymbolLarge[64]
-                constexpr std::ptrdiff_t m_nDataCP = 0xCB0; // int32
-                constexpr std::ptrdiff_t m_vecDataCPValue = 0xCB4; // Vector
-                constexpr std::ptrdiff_t m_nTintCP = 0xCC0; // int32
-                constexpr std::ptrdiff_t m_clrTint = 0xCC4; // Color
+                constexpr std::ptrdiff_t m_szSnapshotFileName = 0x790; // char[512]
+                constexpr std::ptrdiff_t m_bActive = 0x990; // bool
+                constexpr std::ptrdiff_t m_bFrozen = 0x991; // bool
+                constexpr std::ptrdiff_t m_flFreezeTransitionDuration = 0x994; // float32
+                constexpr std::ptrdiff_t m_nStopType = 0x998; // int32
+                constexpr std::ptrdiff_t m_bAnimateDuringGameplayPause = 0x99C; // bool
+                constexpr std::ptrdiff_t m_iEffectIndex = 0x9A0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_flStartTime = 0x9A8; // GameTime_t
+                constexpr std::ptrdiff_t m_flPreSimTime = 0x9AC; // float32
+                constexpr std::ptrdiff_t m_vServerControlPoints = 0x9B0; // Vector[4]
+                constexpr std::ptrdiff_t m_iServerControlPointAssignments = 0x9E0; // uint8[4]
+                constexpr std::ptrdiff_t m_hControlPointEnts = 0x9E4; // CHandle<CBaseEntity>[64]
+                constexpr std::ptrdiff_t m_bNoSave = 0xAE4; // bool
+                constexpr std::ptrdiff_t m_bNoFreeze = 0xAE5; // bool
+                constexpr std::ptrdiff_t m_bNoRamp = 0xAE6; // bool
+                constexpr std::ptrdiff_t m_bStartActive = 0xAE7; // bool
+                constexpr std::ptrdiff_t m_iszEffectName = 0xAE8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszControlPointNames = 0xAF0; // CUtlSymbolLarge[64]
+                constexpr std::ptrdiff_t m_nDataCP = 0xCF0; // int32
+                constexpr std::ptrdiff_t m_vecDataCPValue = 0xCF4; // Vector
+                constexpr std::ptrdiff_t m_nTintCP = 0xD00; // int32
+                constexpr std::ptrdiff_t m_clrTint = 0xD04; // Color
             }
             // Parent: CEntitySubclassVDataBase
             // Field count: 22
@@ -4233,7 +4241,7 @@ namespace cs2_dumper {
             // Parent: CItem
             // Field count: 1
             namespace CScriptItem {
-                constexpr std::ptrdiff_t m_MoveTypeOverride = 0xA38; // MoveType_t
+                constexpr std::ptrdiff_t m_MoveTypeOverride = 0xA80; // MoveType_t
             }
             // Parent: IntervalTimer
             // Field count: 7
@@ -4285,15 +4293,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_OuterAngle (float32)
             // NetworkVarNames: m_SpotRadius (float32)
             namespace CDynamicLight {
-                constexpr std::ptrdiff_t m_ActualFlags = 0x750; // uint8
-                constexpr std::ptrdiff_t m_Flags = 0x751; // uint8
-                constexpr std::ptrdiff_t m_LightStyle = 0x752; // uint8
-                constexpr std::ptrdiff_t m_On = 0x753; // bool
-                constexpr std::ptrdiff_t m_Radius = 0x754; // float32
-                constexpr std::ptrdiff_t m_Exponent = 0x758; // int32
-                constexpr std::ptrdiff_t m_InnerAngle = 0x75C; // float32
-                constexpr std::ptrdiff_t m_OuterAngle = 0x760; // float32
-                constexpr std::ptrdiff_t m_SpotRadius = 0x764; // float32
+                constexpr std::ptrdiff_t m_ActualFlags = 0x790; // uint8
+                constexpr std::ptrdiff_t m_Flags = 0x791; // uint8
+                constexpr std::ptrdiff_t m_LightStyle = 0x792; // uint8
+                constexpr std::ptrdiff_t m_On = 0x793; // bool
+                constexpr std::ptrdiff_t m_Radius = 0x794; // float32
+                constexpr std::ptrdiff_t m_Exponent = 0x798; // int32
+                constexpr std::ptrdiff_t m_InnerAngle = 0x79C; // float32
+                constexpr std::ptrdiff_t m_OuterAngle = 0x7A0; // float32
+                constexpr std::ptrdiff_t m_SpotRadius = 0x7A4; // float32
             }
             // Parent: CCSWeaponBaseGun
             // Field count: 0
@@ -4397,43 +4405,43 @@ namespace cs2_dumper {
             // MNetworkIncludeByName
             // NetworkVarNames: m_bAwake (bool)
             namespace CPhysicsProp {
-                constexpr std::ptrdiff_t m_MotionEnabled = 0xB18; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAwakened = 0xB40; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAwake = 0xB68; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAsleep = 0xB90; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPlayerUse = 0xBB8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnOutOfWorld = 0xBE0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPlayerPickup = 0xC08; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bForceNavIgnore = 0xC30; // bool
-                constexpr std::ptrdiff_t m_bNoNavmeshBlocker = 0xC31; // bool
-                constexpr std::ptrdiff_t m_bForceNpcExclude = 0xC32; // bool
-                constexpr std::ptrdiff_t m_massScale = 0xC34; // float32
-                constexpr std::ptrdiff_t m_inertiaScale = 0xC38; // float32
-                constexpr std::ptrdiff_t m_buoyancyScale = 0xC3C; // float32
-                constexpr std::ptrdiff_t m_damageType = 0xC40; // int32
-                constexpr std::ptrdiff_t m_damageToEnableMotion = 0xC44; // int32
-                constexpr std::ptrdiff_t m_flForceToEnableMotion = 0xC48; // float32
-                constexpr std::ptrdiff_t m_bThrownByPlayer = 0xC4C; // bool
-                constexpr std::ptrdiff_t m_bDroppedByPlayer = 0xC4D; // bool
-                constexpr std::ptrdiff_t m_bTouchedByPlayer = 0xC4E; // bool
-                constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0xC4F; // bool
-                constexpr std::ptrdiff_t m_iExploitableByPlayer = 0xC50; // int32
-                constexpr std::ptrdiff_t m_bHasBeenAwakened = 0xC54; // bool
-                constexpr std::ptrdiff_t m_bIsOverrideProp = 0xC55; // bool
-                constexpr std::ptrdiff_t m_fNextCheckDisableMotionContactsTime = 0xC58; // GameTime_t
-                constexpr std::ptrdiff_t m_iInitialGlowState = 0xC5C; // int32
-                constexpr std::ptrdiff_t m_nGlowRange = 0xC60; // int32
-                constexpr std::ptrdiff_t m_nGlowRangeMin = 0xC64; // int32
-                constexpr std::ptrdiff_t m_glowColor = 0xC68; // Color
-                constexpr std::ptrdiff_t m_bShouldAutoConvertBackFromDebris = 0xC6C; // bool
-                constexpr std::ptrdiff_t m_bMuteImpactEffects = 0xC6D; // bool
-                constexpr std::ptrdiff_t m_bAcceptDamageFromHeldObjects = 0xC77; // bool
-                constexpr std::ptrdiff_t m_bEnableUseOutput = 0xC78; // bool
-                constexpr std::ptrdiff_t m_CrateType = 0xC7C; // CPhysicsProp::CrateType_t
-                constexpr std::ptrdiff_t m_strItemClass = 0xC80; // CUtlSymbolLarge[4]
-                constexpr std::ptrdiff_t m_nItemCount = 0xCA0; // int32[4]
-                constexpr std::ptrdiff_t m_bRemovableForAmmoBalancing = 0xCB0; // bool
-                constexpr std::ptrdiff_t m_bAwake = 0xCB1; // bool
+                constexpr std::ptrdiff_t m_MotionEnabled = 0xB60; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAwakened = 0xB88; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAwake = 0xBB0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAsleep = 0xBD8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPlayerUse = 0xC00; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnOutOfWorld = 0xC28; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPlayerPickup = 0xC50; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bForceNavIgnore = 0xC78; // bool
+                constexpr std::ptrdiff_t m_bNoNavmeshBlocker = 0xC79; // bool
+                constexpr std::ptrdiff_t m_bForceNpcExclude = 0xC7A; // bool
+                constexpr std::ptrdiff_t m_massScale = 0xC7C; // float32
+                constexpr std::ptrdiff_t m_inertiaScale = 0xC80; // float32
+                constexpr std::ptrdiff_t m_buoyancyScale = 0xC84; // float32
+                constexpr std::ptrdiff_t m_damageType = 0xC88; // int32
+                constexpr std::ptrdiff_t m_damageToEnableMotion = 0xC8C; // int32
+                constexpr std::ptrdiff_t m_flForceToEnableMotion = 0xC90; // float32
+                constexpr std::ptrdiff_t m_bThrownByPlayer = 0xC94; // bool
+                constexpr std::ptrdiff_t m_bDroppedByPlayer = 0xC95; // bool
+                constexpr std::ptrdiff_t m_bTouchedByPlayer = 0xC96; // bool
+                constexpr std::ptrdiff_t m_bFirstCollisionAfterLaunch = 0xC97; // bool
+                constexpr std::ptrdiff_t m_iExploitableByPlayer = 0xC98; // int32
+                constexpr std::ptrdiff_t m_bHasBeenAwakened = 0xC9C; // bool
+                constexpr std::ptrdiff_t m_bIsOverrideProp = 0xC9D; // bool
+                constexpr std::ptrdiff_t m_fNextCheckDisableMotionContactsTime = 0xCA0; // GameTime_t
+                constexpr std::ptrdiff_t m_iInitialGlowState = 0xCA4; // int32
+                constexpr std::ptrdiff_t m_nGlowRange = 0xCA8; // int32
+                constexpr std::ptrdiff_t m_nGlowRangeMin = 0xCAC; // int32
+                constexpr std::ptrdiff_t m_glowColor = 0xCB0; // Color
+                constexpr std::ptrdiff_t m_bShouldAutoConvertBackFromDebris = 0xCB4; // bool
+                constexpr std::ptrdiff_t m_bMuteImpactEffects = 0xCB5; // bool
+                constexpr std::ptrdiff_t m_bAcceptDamageFromHeldObjects = 0xCBF; // bool
+                constexpr std::ptrdiff_t m_bEnableUseOutput = 0xCC0; // bool
+                constexpr std::ptrdiff_t m_CrateType = 0xCC4; // CPhysicsProp::CrateType_t
+                constexpr std::ptrdiff_t m_strItemClass = 0xCC8; // CUtlSymbolLarge[4]
+                constexpr std::ptrdiff_t m_nItemCount = 0xCE8; // int32[4]
+                constexpr std::ptrdiff_t m_bRemovableForAmmoBalancing = 0xCF8; // bool
+                constexpr std::ptrdiff_t m_bAwake = 0xCF9; // bool
             }
             // Parent: CFuncWall
             // Field count: 0
@@ -4452,9 +4460,9 @@ namespace cs2_dumper {
             // Parent: CBaseCSGrenadeProjectile
             // Field count: 3
             namespace CSensorGrenadeProjectile {
-                constexpr std::ptrdiff_t m_fExpireTime = 0xB08; // GameTime_t
-                constexpr std::ptrdiff_t m_fNextDetectPlayerSound = 0xB0C; // GameTime_t
-                constexpr std::ptrdiff_t m_hDisplayGrenade = 0xB10; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_fExpireTime = 0xB50; // GameTime_t
+                constexpr std::ptrdiff_t m_fNextDetectPlayerSound = 0xB54; // GameTime_t
+                constexpr std::ptrdiff_t m_hDisplayGrenade = 0xB58; // CHandle<CBaseEntity>
             }
             // Parent: CCSPlayerBase_CameraServices
             // Field count: 0
@@ -4503,20 +4511,20 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 14
             namespace CTriggerSndSosOpvar {
-                constexpr std::ptrdiff_t m_hTouchingPlayers = 0x920; // CUtlVector<CHandle<CBaseEntity>>
-                constexpr std::ptrdiff_t m_flPosition = 0x938; // Vector
-                constexpr std::ptrdiff_t m_flCenterSize = 0x944; // float32
-                constexpr std::ptrdiff_t m_flMinVal = 0x948; // float32
-                constexpr std::ptrdiff_t m_flMaxVal = 0x94C; // float32
-                constexpr std::ptrdiff_t m_opvarName = 0x950; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_stackName = 0x958; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_operatorName = 0x960; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bVolIs2D = 0x968; // bool
-                constexpr std::ptrdiff_t m_opvarNameChar = 0x969; // char[256]
-                constexpr std::ptrdiff_t m_stackNameChar = 0xA69; // char[256]
-                constexpr std::ptrdiff_t m_operatorNameChar = 0xB69; // char[256]
-                constexpr std::ptrdiff_t m_VecNormPos = 0xC6C; // Vector
-                constexpr std::ptrdiff_t m_flNormCenterSize = 0xC78; // float32
+                constexpr std::ptrdiff_t m_hTouchingPlayers = 0x960; // CUtlVector<CHandle<CBaseEntity>>
+                constexpr std::ptrdiff_t m_flPosition = 0x978; // Vector
+                constexpr std::ptrdiff_t m_flCenterSize = 0x984; // float32
+                constexpr std::ptrdiff_t m_flMinVal = 0x988; // float32
+                constexpr std::ptrdiff_t m_flMaxVal = 0x98C; // float32
+                constexpr std::ptrdiff_t m_opvarName = 0x990; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_stackName = 0x998; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_operatorName = 0x9A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bVolIs2D = 0x9A8; // bool
+                constexpr std::ptrdiff_t m_opvarNameChar = 0x9A9; // char[256]
+                constexpr std::ptrdiff_t m_stackNameChar = 0xAA9; // char[256]
+                constexpr std::ptrdiff_t m_operatorNameChar = 0xBA9; // char[256]
+                constexpr std::ptrdiff_t m_VecNormPos = 0xCAC; // Vector
+                constexpr std::ptrdiff_t m_flNormCenterSize = 0xCB8; // float32
             }
             // Parent: CItem
             // Field count: 0
@@ -4641,36 +4649,36 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flRotation (float32)
             // NetworkVarNames: m_bFlipHorizontal (bool)
             namespace CEnvProjectedTexture {
-                constexpr std::ptrdiff_t m_hTargetEntity = 0x750; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_bState = 0x754; // bool
-                constexpr std::ptrdiff_t m_bAlwaysUpdate = 0x755; // bool
-                constexpr std::ptrdiff_t m_flLightFOV = 0x758; // float32
-                constexpr std::ptrdiff_t m_bEnableShadows = 0x75C; // bool
-                constexpr std::ptrdiff_t m_bSimpleProjection = 0x75D; // bool
-                constexpr std::ptrdiff_t m_bLightOnlyTarget = 0x75E; // bool
-                constexpr std::ptrdiff_t m_bLightWorld = 0x75F; // bool
-                constexpr std::ptrdiff_t m_bCameraSpace = 0x760; // bool
-                constexpr std::ptrdiff_t m_flBrightnessScale = 0x764; // float32
-                constexpr std::ptrdiff_t m_LightColor = 0x768; // Color
-                constexpr std::ptrdiff_t m_flIntensity = 0x76C; // float32
-                constexpr std::ptrdiff_t m_flLinearAttenuation = 0x770; // float32
-                constexpr std::ptrdiff_t m_flQuadraticAttenuation = 0x774; // float32
-                constexpr std::ptrdiff_t m_bVolumetric = 0x778; // bool
-                constexpr std::ptrdiff_t m_flNoiseStrength = 0x77C; // float32
-                constexpr std::ptrdiff_t m_flFlashlightTime = 0x780; // float32
-                constexpr std::ptrdiff_t m_nNumPlanes = 0x784; // uint32
-                constexpr std::ptrdiff_t m_flPlaneOffset = 0x788; // float32
-                constexpr std::ptrdiff_t m_flVolumetricIntensity = 0x78C; // float32
-                constexpr std::ptrdiff_t m_flColorTransitionTime = 0x790; // float32
-                constexpr std::ptrdiff_t m_flAmbient = 0x794; // float32
-                constexpr std::ptrdiff_t m_SpotlightTextureName = 0x798; // char[512]
-                constexpr std::ptrdiff_t m_nSpotlightTextureFrame = 0x998; // int32
-                constexpr std::ptrdiff_t m_nShadowQuality = 0x99C; // uint32
-                constexpr std::ptrdiff_t m_flNearZ = 0x9A0; // float32
-                constexpr std::ptrdiff_t m_flFarZ = 0x9A4; // float32
-                constexpr std::ptrdiff_t m_flProjectionSize = 0x9A8; // float32
-                constexpr std::ptrdiff_t m_flRotation = 0x9AC; // float32
-                constexpr std::ptrdiff_t m_bFlipHorizontal = 0x9B0; // bool
+                constexpr std::ptrdiff_t m_hTargetEntity = 0x790; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_bState = 0x794; // bool
+                constexpr std::ptrdiff_t m_bAlwaysUpdate = 0x795; // bool
+                constexpr std::ptrdiff_t m_flLightFOV = 0x798; // float32
+                constexpr std::ptrdiff_t m_bEnableShadows = 0x79C; // bool
+                constexpr std::ptrdiff_t m_bSimpleProjection = 0x79D; // bool
+                constexpr std::ptrdiff_t m_bLightOnlyTarget = 0x79E; // bool
+                constexpr std::ptrdiff_t m_bLightWorld = 0x79F; // bool
+                constexpr std::ptrdiff_t m_bCameraSpace = 0x7A0; // bool
+                constexpr std::ptrdiff_t m_flBrightnessScale = 0x7A4; // float32
+                constexpr std::ptrdiff_t m_LightColor = 0x7A8; // Color
+                constexpr std::ptrdiff_t m_flIntensity = 0x7AC; // float32
+                constexpr std::ptrdiff_t m_flLinearAttenuation = 0x7B0; // float32
+                constexpr std::ptrdiff_t m_flQuadraticAttenuation = 0x7B4; // float32
+                constexpr std::ptrdiff_t m_bVolumetric = 0x7B8; // bool
+                constexpr std::ptrdiff_t m_flNoiseStrength = 0x7BC; // float32
+                constexpr std::ptrdiff_t m_flFlashlightTime = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_nNumPlanes = 0x7C4; // uint32
+                constexpr std::ptrdiff_t m_flPlaneOffset = 0x7C8; // float32
+                constexpr std::ptrdiff_t m_flVolumetricIntensity = 0x7CC; // float32
+                constexpr std::ptrdiff_t m_flColorTransitionTime = 0x7D0; // float32
+                constexpr std::ptrdiff_t m_flAmbient = 0x7D4; // float32
+                constexpr std::ptrdiff_t m_SpotlightTextureName = 0x7D8; // char[512]
+                constexpr std::ptrdiff_t m_nSpotlightTextureFrame = 0x9D8; // int32
+                constexpr std::ptrdiff_t m_nShadowQuality = 0x9DC; // uint32
+                constexpr std::ptrdiff_t m_flNearZ = 0x9E0; // float32
+                constexpr std::ptrdiff_t m_flFarZ = 0x9E4; // float32
+                constexpr std::ptrdiff_t m_flProjectionSize = 0x9E8; // float32
+                constexpr std::ptrdiff_t m_flRotation = 0x9EC; // float32
+                constexpr std::ptrdiff_t m_bFlipHorizontal = 0x9F0; // bool
             }
             // Parent: CDynamicProp
             // Field count: 0
@@ -4717,11 +4725,11 @@ namespace cs2_dumper {
             // Parent: CBaseToggle
             // Field count: 5
             namespace CBasePlatTrain {
-                constexpr std::ptrdiff_t m_NoiseMoving = 0x7D0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_NoiseArrived = 0x7D8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_volume = 0x7E8; // float32
-                constexpr std::ptrdiff_t m_flTWidth = 0x7EC; // float32
-                constexpr std::ptrdiff_t m_flTLength = 0x7F0; // float32
+                constexpr std::ptrdiff_t m_NoiseMoving = 0x810; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_NoiseArrived = 0x818; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_volume = 0x828; // float32
+                constexpr std::ptrdiff_t m_flTWidth = 0x82C; // float32
+                constexpr std::ptrdiff_t m_flTLength = 0x830; // float32
             }
             // Parent: CMarkupVolumeTagged
             // Field count: 0
@@ -4800,7 +4808,7 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CFuncWater {
-                constexpr std::ptrdiff_t m_BuoyancyHelper = 0x750; // CBuoyancyHelper
+                constexpr std::ptrdiff_t m_BuoyancyHelper = 0x790; // CBuoyancyHelper
             }
             // Parent: CBaseEntity
             // Field count: 5
@@ -4875,7 +4883,7 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CPlatTrigger {
-                constexpr std::ptrdiff_t m_pPlatform = 0x750; // CHandle<CFuncPlat>
+                constexpr std::ptrdiff_t m_pPlatform = 0x790; // CHandle<CFuncPlat>
             }
             // Parent: None
             // Field count: 31
@@ -5068,10 +5076,10 @@ namespace cs2_dumper {
             // Parent: CRulePointEntity
             // Field count: 4
             namespace CGameMoney {
-                constexpr std::ptrdiff_t m_OnMoneySpent = 0x760; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnMoneySpentFail = 0x788; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_nMoney = 0x7B0; // int32
-                constexpr std::ptrdiff_t m_strAwardText = 0x7B8; // CUtlString
+                constexpr std::ptrdiff_t m_OnMoneySpent = 0x7A0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnMoneySpentFail = 0x7C8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_nMoney = 0x7F0; // int32
+                constexpr std::ptrdiff_t m_strAwardText = 0x7F8; // CUtlString
             }
             // Parent: CLogicalEntity
             // Field count: 5
@@ -5177,11 +5185,11 @@ namespace cs2_dumper {
             // NetworkVarNames: m_ColorTint (Color)
             // NetworkVarNames: m_hTextureOverride (HRenderTextureStrong)
             namespace CEnvParticleGlow {
-                constexpr std::ptrdiff_t m_flAlphaScale = 0xCC8; // float32
-                constexpr std::ptrdiff_t m_flRadiusScale = 0xCCC; // float32
-                constexpr std::ptrdiff_t m_flSelfIllumScale = 0xCD0; // float32
-                constexpr std::ptrdiff_t m_ColorTint = 0xCD4; // Color
-                constexpr std::ptrdiff_t m_hTextureOverride = 0xCD8; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_flAlphaScale = 0xD08; // float32
+                constexpr std::ptrdiff_t m_flRadiusScale = 0xD0C; // float32
+                constexpr std::ptrdiff_t m_flSelfIllumScale = 0xD10; // float32
+                constexpr std::ptrdiff_t m_ColorTint = 0xD14; // Color
+                constexpr std::ptrdiff_t m_hTextureOverride = 0xD18; // CStrongHandle<InfoForResourceTypeCTextureBase>
             }
             // Parent: CBaseModelEntity
             // Field count: 0
@@ -5208,15 +5216,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bEnabled (bool)
             // NetworkVarNames: m_bDraw3DSkybox (bool)
             namespace CFuncMonitor {
-                constexpr std::ptrdiff_t m_targetCamera = 0x770; // CUtlString
-                constexpr std::ptrdiff_t m_nResolutionEnum = 0x778; // int32
-                constexpr std::ptrdiff_t m_bRenderShadows = 0x77C; // bool
-                constexpr std::ptrdiff_t m_bUseUniqueColorTarget = 0x77D; // bool
-                constexpr std::ptrdiff_t m_brushModelName = 0x780; // CUtlString
-                constexpr std::ptrdiff_t m_hTargetCamera = 0x788; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_bEnabled = 0x78C; // bool
-                constexpr std::ptrdiff_t m_bDraw3DSkybox = 0x78D; // bool
-                constexpr std::ptrdiff_t m_bStartEnabled = 0x78E; // bool
+                constexpr std::ptrdiff_t m_targetCamera = 0x7B0; // CUtlString
+                constexpr std::ptrdiff_t m_nResolutionEnum = 0x7B8; // int32
+                constexpr std::ptrdiff_t m_bRenderShadows = 0x7BC; // bool
+                constexpr std::ptrdiff_t m_bUseUniqueColorTarget = 0x7BD; // bool
+                constexpr std::ptrdiff_t m_brushModelName = 0x7C0; // CUtlString
+                constexpr std::ptrdiff_t m_hTargetCamera = 0x7C8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_bEnabled = 0x7CC; // bool
+                constexpr std::ptrdiff_t m_bDraw3DSkybox = 0x7CD; // bool
+                constexpr std::ptrdiff_t m_bStartEnabled = 0x7CE; // bool
             }
             // Parent: CBaseEntity
             // Field count: 0
@@ -5262,10 +5270,10 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_bIsIncGrenade (bool)
             namespace CMolotovProjectile {
-                constexpr std::ptrdiff_t m_bIsIncGrenade = 0xB08; // bool
-                constexpr std::ptrdiff_t m_bDetonated = 0xB14; // bool
-                constexpr std::ptrdiff_t m_stillTimer = 0xB18; // IntervalTimer
-                constexpr std::ptrdiff_t m_bHasBouncedOffPlayer = 0xBF8; // bool
+                constexpr std::ptrdiff_t m_bIsIncGrenade = 0xB50; // bool
+                constexpr std::ptrdiff_t m_bDetonated = 0xB5C; // bool
+                constexpr std::ptrdiff_t m_stillTimer = 0xB60; // IntervalTimer
+                constexpr std::ptrdiff_t m_bHasBouncedOffPlayer = 0xC40; // bool
             }
             // Parent: CBaseTrigger
             // Field count: 0
@@ -5396,18 +5404,18 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flAutoRideSpeed (float)
             // NetworkVarNames: m_bFakeLadder (bool)
             namespace CFuncLadder {
-                constexpr std::ptrdiff_t m_vecLadderDir = 0x750; // Vector
-                constexpr std::ptrdiff_t m_Dismounts = 0x760; // CUtlVector<CHandle<CInfoLadderDismount>>
-                constexpr std::ptrdiff_t m_vecLocalTop = 0x778; // Vector
-                constexpr std::ptrdiff_t m_vecPlayerMountPositionTop = 0x784; // Vector
-                constexpr std::ptrdiff_t m_vecPlayerMountPositionBottom = 0x790; // Vector
-                constexpr std::ptrdiff_t m_flAutoRideSpeed = 0x79C; // float32
-                constexpr std::ptrdiff_t m_bDisabled = 0x7A0; // bool
-                constexpr std::ptrdiff_t m_bFakeLadder = 0x7A1; // bool
-                constexpr std::ptrdiff_t m_bHasSlack = 0x7A2; // bool
-                constexpr std::ptrdiff_t m_surfacePropName = 0x7A8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_OnPlayerGotOnLadder = 0x7B0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPlayerGotOffLadder = 0x7D8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_vecLadderDir = 0x790; // Vector
+                constexpr std::ptrdiff_t m_Dismounts = 0x7A0; // CUtlVector<CHandle<CInfoLadderDismount>>
+                constexpr std::ptrdiff_t m_vecLocalTop = 0x7B8; // Vector
+                constexpr std::ptrdiff_t m_vecPlayerMountPositionTop = 0x7C4; // Vector
+                constexpr std::ptrdiff_t m_vecPlayerMountPositionBottom = 0x7D0; // Vector
+                constexpr std::ptrdiff_t m_flAutoRideSpeed = 0x7DC; // float32
+                constexpr std::ptrdiff_t m_bDisabled = 0x7E0; // bool
+                constexpr std::ptrdiff_t m_bFakeLadder = 0x7E1; // bool
+                constexpr std::ptrdiff_t m_bHasSlack = 0x7E2; // bool
+                constexpr std::ptrdiff_t m_surfacePropName = 0x7E8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_OnPlayerGotOnLadder = 0x7F0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPlayerGotOffLadder = 0x818; // CEntityIOOutput
             }
             // Parent: CLogicalEntity
             // Field count: 8
@@ -5424,9 +5432,9 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 3
             namespace CFuncInteractionLayerClip {
-                constexpr std::ptrdiff_t m_bDisabled = 0x750; // bool
-                constexpr std::ptrdiff_t m_iszInteractsAs = 0x758; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszInteractsWith = 0x760; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bDisabled = 0x790; // bool
+                constexpr std::ptrdiff_t m_iszInteractsAs = 0x798; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszInteractsWith = 0x7A0; // CUtlSymbolLarge
             }
             // Parent: None
             // Field count: 2
@@ -5448,7 +5456,7 @@ namespace cs2_dumper {
             // Parent: CDynamicProp
             // Field count: 1
             namespace COrnamentProp {
-                constexpr std::ptrdiff_t m_initialOwner = 0xC10; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_initialOwner = 0xC58; // CUtlSymbolLarge
             }
             // Parent: CLogicalEntity
             // Field count: 1
@@ -5481,21 +5489,21 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nVersion (uint8)
             // NetworkVarNames: m_ubSignature (uint8)
             namespace CPlayerSprayDecal {
-                constexpr std::ptrdiff_t m_nUniqueID = 0x750; // int32
-                constexpr std::ptrdiff_t m_unAccountID = 0x754; // uint32
-                constexpr std::ptrdiff_t m_unTraceID = 0x758; // uint32
-                constexpr std::ptrdiff_t m_rtGcTime = 0x75C; // uint32
-                constexpr std::ptrdiff_t m_vecEndPos = 0x760; // Vector
-                constexpr std::ptrdiff_t m_vecStart = 0x76C; // Vector
-                constexpr std::ptrdiff_t m_vecLeft = 0x778; // Vector
-                constexpr std::ptrdiff_t m_vecNormal = 0x784; // Vector
-                constexpr std::ptrdiff_t m_nPlayer = 0x790; // int32
-                constexpr std::ptrdiff_t m_nEntity = 0x794; // int32
-                constexpr std::ptrdiff_t m_nHitbox = 0x798; // int32
-                constexpr std::ptrdiff_t m_flCreationTime = 0x79C; // float32
-                constexpr std::ptrdiff_t m_nTintID = 0x7A0; // int32
-                constexpr std::ptrdiff_t m_nVersion = 0x7A4; // uint8
-                constexpr std::ptrdiff_t m_ubSignature = 0x7A5; // uint8[128]
+                constexpr std::ptrdiff_t m_nUniqueID = 0x790; // int32
+                constexpr std::ptrdiff_t m_unAccountID = 0x794; // uint32
+                constexpr std::ptrdiff_t m_unTraceID = 0x798; // uint32
+                constexpr std::ptrdiff_t m_rtGcTime = 0x79C; // uint32
+                constexpr std::ptrdiff_t m_vecEndPos = 0x7A0; // Vector
+                constexpr std::ptrdiff_t m_vecStart = 0x7AC; // Vector
+                constexpr std::ptrdiff_t m_vecLeft = 0x7B8; // Vector
+                constexpr std::ptrdiff_t m_vecNormal = 0x7C4; // Vector
+                constexpr std::ptrdiff_t m_nPlayer = 0x7D0; // int32
+                constexpr std::ptrdiff_t m_nEntity = 0x7D4; // int32
+                constexpr std::ptrdiff_t m_nHitbox = 0x7D8; // int32
+                constexpr std::ptrdiff_t m_flCreationTime = 0x7DC; // float32
+                constexpr std::ptrdiff_t m_nTintID = 0x7E0; // int32
+                constexpr std::ptrdiff_t m_nVersion = 0x7E4; // uint8
+                constexpr std::ptrdiff_t m_ubSignature = 0x7E5; // uint8[128]
             }
             // Parent: CBaseTrigger
             // Field count: 9
@@ -5503,15 +5511,15 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_bBombPlantedHere (bool)
             namespace CBombTarget {
-                constexpr std::ptrdiff_t m_OnBombExplode = 0x920; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnBombPlanted = 0x948; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnBombDefused = 0x970; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bIsBombSiteB = 0x998; // bool
-                constexpr std::ptrdiff_t m_bIsHeistBombTarget = 0x999; // bool
-                constexpr std::ptrdiff_t m_bBombPlantedHere = 0x99A; // bool
-                constexpr std::ptrdiff_t m_szMountTarget = 0x9A0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hInstructorHint = 0x9A8; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_nBombSiteDesignation = 0x9AC; // int32
+                constexpr std::ptrdiff_t m_OnBombExplode = 0x960; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnBombPlanted = 0x988; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnBombDefused = 0x9B0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bIsBombSiteB = 0x9D8; // bool
+                constexpr std::ptrdiff_t m_bIsHeistBombTarget = 0x9D9; // bool
+                constexpr std::ptrdiff_t m_bBombPlantedHere = 0x9DA; // bool
+                constexpr std::ptrdiff_t m_szMountTarget = 0x9E0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hInstructorHint = 0x9E8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_nBombSiteDesignation = 0x9EC; // int32
             }
             // Parent: CBaseEntity
             // Field count: 8
@@ -5576,7 +5584,7 @@ namespace cs2_dumper {
             // Parent: CTriggerPush
             // Field count: 1
             namespace CScriptTriggerPush {
-                constexpr std::ptrdiff_t m_vExtent = 0x958; // Vector
+                constexpr std::ptrdiff_t m_vExtent = 0x998; // Vector
             }
             // Parent: CBaseEntity
             // Field count: 1
@@ -5586,7 +5594,7 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CFuncWall {
-                constexpr std::ptrdiff_t m_nState = 0x750; // int32
+                constexpr std::ptrdiff_t m_nState = 0x790; // int32
             }
             // Parent: CPointEntity
             // Field count: 1
@@ -5822,20 +5830,20 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vSmokeDetonationPos (Vector)
             // NetworkVarNames: m_VoxelFrameData (CUtlVector<uint8>)
             namespace CSmokeGrenadeProjectile {
-                constexpr std::ptrdiff_t m_nSmokeEffectTickBegin = 0xB20; // int32
-                constexpr std::ptrdiff_t m_bDidSmokeEffect = 0xB24; // bool
-                constexpr std::ptrdiff_t m_nRandomSeed = 0xB28; // int32
-                constexpr std::ptrdiff_t m_vSmokeColor = 0xB2C; // Vector
-                constexpr std::ptrdiff_t m_vSmokeDetonationPos = 0xB38; // Vector
-                constexpr std::ptrdiff_t m_VoxelFrameData = 0xB48; // CUtlVector<uint8>
-                constexpr std::ptrdiff_t m_flLastBounce = 0xB60; // GameTime_t
-                constexpr std::ptrdiff_t m_fllastSimulationTime = 0xB64; // GameTime_t
-                constexpr std::ptrdiff_t m_bExplodeFromInferno = 0x2DE8; // bool
+                constexpr std::ptrdiff_t m_nSmokeEffectTickBegin = 0xB68; // int32
+                constexpr std::ptrdiff_t m_bDidSmokeEffect = 0xB6C; // bool
+                constexpr std::ptrdiff_t m_nRandomSeed = 0xB70; // int32
+                constexpr std::ptrdiff_t m_vSmokeColor = 0xB74; // Vector
+                constexpr std::ptrdiff_t m_vSmokeDetonationPos = 0xB80; // Vector
+                constexpr std::ptrdiff_t m_VoxelFrameData = 0xB90; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_flLastBounce = 0xBA8; // GameTime_t
+                constexpr std::ptrdiff_t m_fllastSimulationTime = 0xBAC; // GameTime_t
+                constexpr std::ptrdiff_t m_bExplodeFromInferno = 0x2E30; // bool
             }
             // Parent: CTriggerMultiple
             // Field count: 1
             namespace CScriptTriggerMultiple {
-                constexpr std::ptrdiff_t m_vExtent = 0x948; // Vector
+                constexpr std::ptrdiff_t m_vExtent = 0x988; // Vector
             }
             // Parent: CSoundOpvarSetPointEntity
             // Field count: 5
@@ -6039,20 +6047,20 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 14
             namespace CTriggerHurt {
-                constexpr std::ptrdiff_t m_flOriginalDamage = 0x920; // float32
-                constexpr std::ptrdiff_t m_flDamage = 0x924; // float32
-                constexpr std::ptrdiff_t m_flDamageCap = 0x928; // float32
-                constexpr std::ptrdiff_t m_flLastDmgTime = 0x92C; // GameTime_t
-                constexpr std::ptrdiff_t m_flForgivenessDelay = 0x930; // float32
-                constexpr std::ptrdiff_t m_bitsDamageInflict = 0x934; // DamageTypes_t
-                constexpr std::ptrdiff_t m_damageModel = 0x938; // int32
-                constexpr std::ptrdiff_t m_bNoDmgForce = 0x93C; // bool
-                constexpr std::ptrdiff_t m_vDamageForce = 0x940; // Vector
-                constexpr std::ptrdiff_t m_thinkAlways = 0x94C; // bool
-                constexpr std::ptrdiff_t m_hurtThinkPeriod = 0x950; // float32
-                constexpr std::ptrdiff_t m_OnHurt = 0x958; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnHurtPlayer = 0x980; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_hurtEntities = 0x9A8; // CUtlVector<CHandle<CBaseEntity>>
+                constexpr std::ptrdiff_t m_flOriginalDamage = 0x960; // float32
+                constexpr std::ptrdiff_t m_flDamage = 0x964; // float32
+                constexpr std::ptrdiff_t m_flDamageCap = 0x968; // float32
+                constexpr std::ptrdiff_t m_flLastDmgTime = 0x96C; // GameTime_t
+                constexpr std::ptrdiff_t m_flForgivenessDelay = 0x970; // float32
+                constexpr std::ptrdiff_t m_bitsDamageInflict = 0x974; // DamageTypes_t
+                constexpr std::ptrdiff_t m_damageModel = 0x978; // int32
+                constexpr std::ptrdiff_t m_bNoDmgForce = 0x97C; // bool
+                constexpr std::ptrdiff_t m_vDamageForce = 0x980; // Vector
+                constexpr std::ptrdiff_t m_thinkAlways = 0x98C; // bool
+                constexpr std::ptrdiff_t m_hurtThinkPeriod = 0x990; // float32
+                constexpr std::ptrdiff_t m_OnHurt = 0x998; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnHurtPlayer = 0x9C0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_hurtEntities = 0x9E8; // CUtlVector<CHandle<CBaseEntity>>
             }
             // Parent: CLogicalEntity
             // Field count: 13
@@ -6159,9 +6167,9 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 3
             namespace CTriggerSave {
-                constexpr std::ptrdiff_t m_bForceNewLevelUnit = 0x920; // bool
-                constexpr std::ptrdiff_t m_fDangerousTimer = 0x924; // float32
-                constexpr std::ptrdiff_t m_minHitPoints = 0x928; // int32
+                constexpr std::ptrdiff_t m_bForceNewLevelUnit = 0x960; // bool
+                constexpr std::ptrdiff_t m_fDangerousTimer = 0x964; // float32
+                constexpr std::ptrdiff_t m_minHitPoints = 0x968; // int32
             }
             // Parent: CPhysConstraint
             // Field count: 11
@@ -6255,11 +6263,11 @@ namespace cs2_dumper {
             // Parent: CBeam
             // Field count: 5
             namespace CEnvLaser {
-                constexpr std::ptrdiff_t m_iszLaserTarget = 0x7F0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_pSprite = 0x7F8; // CSprite*
-                constexpr std::ptrdiff_t m_iszSpriteName = 0x800; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_firePosition = 0x808; // Vector
-                constexpr std::ptrdiff_t m_flStartFrame = 0x814; // float32
+                constexpr std::ptrdiff_t m_iszLaserTarget = 0x830; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_pSprite = 0x838; // CSprite*
+                constexpr std::ptrdiff_t m_iszSpriteName = 0x840; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_firePosition = 0x848; // Vector
+                constexpr std::ptrdiff_t m_flStartFrame = 0x854; // float32
             }
             // Parent: CSprite
             // Field count: 0
@@ -6300,14 +6308,14 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iClip2 (int32)
             // NetworkVarNames: m_pReserveAmmo (int)
             namespace CBasePlayerWeapon {
-                constexpr std::ptrdiff_t m_nNextPrimaryAttackTick = 0xCE8; // GameTick_t
-                constexpr std::ptrdiff_t m_flNextPrimaryAttackTickRatio = 0xCEC; // float32
-                constexpr std::ptrdiff_t m_nNextSecondaryAttackTick = 0xCF0; // GameTick_t
-                constexpr std::ptrdiff_t m_flNextSecondaryAttackTickRatio = 0xCF4; // float32
-                constexpr std::ptrdiff_t m_iClip1 = 0xCF8; // int32
-                constexpr std::ptrdiff_t m_iClip2 = 0xCFC; // int32
-                constexpr std::ptrdiff_t m_pReserveAmmo = 0xD00; // int32[2]
-                constexpr std::ptrdiff_t m_OnPlayerUse = 0xD08; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_nNextPrimaryAttackTick = 0xD30; // GameTick_t
+                constexpr std::ptrdiff_t m_flNextPrimaryAttackTickRatio = 0xD34; // float32
+                constexpr std::ptrdiff_t m_nNextSecondaryAttackTick = 0xD38; // GameTick_t
+                constexpr std::ptrdiff_t m_flNextSecondaryAttackTickRatio = 0xD3C; // float32
+                constexpr std::ptrdiff_t m_iClip1 = 0xD40; // int32
+                constexpr std::ptrdiff_t m_iClip2 = 0xD44; // int32
+                constexpr std::ptrdiff_t m_pReserveAmmo = 0xD48; // int32[2]
+                constexpr std::ptrdiff_t m_OnPlayerUse = 0xD50; // CEntityIOOutput
             }
             // Parent: CPlayerControllerComponent
             // Field count: 5
@@ -6350,30 +6358,30 @@ namespace cs2_dumper {
             // NetworkVarNames: m_poolOrigin (Vector)
             // NetworkVarNames: m_waterLevel (float32)
             namespace CFish {
-                constexpr std::ptrdiff_t m_pool = 0x960; // CHandle<CFishPool>
-                constexpr std::ptrdiff_t m_id = 0x964; // uint32
-                constexpr std::ptrdiff_t m_x = 0x968; // float32
-                constexpr std::ptrdiff_t m_y = 0x96C; // float32
-                constexpr std::ptrdiff_t m_z = 0x970; // float32
-                constexpr std::ptrdiff_t m_angle = 0x974; // float32
-                constexpr std::ptrdiff_t m_angleChange = 0x978; // float32
-                constexpr std::ptrdiff_t m_forward = 0x97C; // Vector
-                constexpr std::ptrdiff_t m_perp = 0x988; // Vector
-                constexpr std::ptrdiff_t m_poolOrigin = 0x994; // Vector
-                constexpr std::ptrdiff_t m_waterLevel = 0x9A0; // float32
-                constexpr std::ptrdiff_t m_speed = 0x9A4; // float32
-                constexpr std::ptrdiff_t m_desiredSpeed = 0x9A8; // float32
-                constexpr std::ptrdiff_t m_calmSpeed = 0x9AC; // float32
-                constexpr std::ptrdiff_t m_panicSpeed = 0x9B0; // float32
-                constexpr std::ptrdiff_t m_avoidRange = 0x9B4; // float32
-                constexpr std::ptrdiff_t m_turnTimer = 0x9B8; // CountdownTimer
-                constexpr std::ptrdiff_t m_turnClockwise = 0x9D0; // bool
-                constexpr std::ptrdiff_t m_goTimer = 0x9D8; // CountdownTimer
-                constexpr std::ptrdiff_t m_moveTimer = 0x9F0; // CountdownTimer
-                constexpr std::ptrdiff_t m_panicTimer = 0xA08; // CountdownTimer
-                constexpr std::ptrdiff_t m_disperseTimer = 0xA20; // CountdownTimer
-                constexpr std::ptrdiff_t m_proximityTimer = 0xA38; // CountdownTimer
-                constexpr std::ptrdiff_t m_visible = 0xA50; // CUtlVector<CFish*>
+                constexpr std::ptrdiff_t m_pool = 0x9A8; // CHandle<CFishPool>
+                constexpr std::ptrdiff_t m_id = 0x9AC; // uint32
+                constexpr std::ptrdiff_t m_x = 0x9B0; // float32
+                constexpr std::ptrdiff_t m_y = 0x9B4; // float32
+                constexpr std::ptrdiff_t m_z = 0x9B8; // float32
+                constexpr std::ptrdiff_t m_angle = 0x9BC; // float32
+                constexpr std::ptrdiff_t m_angleChange = 0x9C0; // float32
+                constexpr std::ptrdiff_t m_forward = 0x9C4; // Vector
+                constexpr std::ptrdiff_t m_perp = 0x9D0; // Vector
+                constexpr std::ptrdiff_t m_poolOrigin = 0x9DC; // Vector
+                constexpr std::ptrdiff_t m_waterLevel = 0x9E8; // float32
+                constexpr std::ptrdiff_t m_speed = 0x9EC; // float32
+                constexpr std::ptrdiff_t m_desiredSpeed = 0x9F0; // float32
+                constexpr std::ptrdiff_t m_calmSpeed = 0x9F4; // float32
+                constexpr std::ptrdiff_t m_panicSpeed = 0x9F8; // float32
+                constexpr std::ptrdiff_t m_avoidRange = 0x9FC; // float32
+                constexpr std::ptrdiff_t m_turnTimer = 0xA00; // CountdownTimer
+                constexpr std::ptrdiff_t m_turnClockwise = 0xA18; // bool
+                constexpr std::ptrdiff_t m_goTimer = 0xA20; // CountdownTimer
+                constexpr std::ptrdiff_t m_moveTimer = 0xA38; // CountdownTimer
+                constexpr std::ptrdiff_t m_panicTimer = 0xA50; // CountdownTimer
+                constexpr std::ptrdiff_t m_disperseTimer = 0xA68; // CountdownTimer
+                constexpr std::ptrdiff_t m_proximityTimer = 0xA80; // CountdownTimer
+                constexpr std::ptrdiff_t m_visible = 0xA98; // CUtlVector<CFish*>
             }
             // Parent: CBaseEntity
             // Field count: 3
@@ -6394,9 +6402,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_strEndTouchEventName (CUtlString)
             // NetworkVarNames: m_strTriggerID (CUtlString)
             namespace CTriggerGameEvent {
-                constexpr std::ptrdiff_t m_strStartTouchEventName = 0x920; // CUtlString
-                constexpr std::ptrdiff_t m_strEndTouchEventName = 0x928; // CUtlString
-                constexpr std::ptrdiff_t m_strTriggerID = 0x930; // CUtlString
+                constexpr std::ptrdiff_t m_strStartTouchEventName = 0x960; // CUtlString
+                constexpr std::ptrdiff_t m_strEndTouchEventName = 0x968; // CUtlString
+                constexpr std::ptrdiff_t m_strTriggerID = 0x970; // CUtlString
             }
             // Parent: CPhysConstraint
             // Field count: 10
@@ -6431,7 +6439,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_CLightComponent (CLightComponent::Storage_t)
             namespace CLightEntity {
-                constexpr std::ptrdiff_t m_CLightComponent = 0x750; // CLightComponent*
+                constexpr std::ptrdiff_t m_CLightComponent = 0x790; // CLightComponent*
             }
             // Parent: CBaseModelEntity
             // Field count: 18
@@ -6440,24 +6448,24 @@ namespace cs2_dumper {
             // MNetworkOverride
             // MNetworkOverride
             namespace CFuncRotating {
-                constexpr std::ptrdiff_t m_OnStopped = 0x750; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnStarted = 0x778; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnReachedStart = 0x7A0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_localRotationVector = 0x7C8; // RotationVector
-                constexpr std::ptrdiff_t m_flFanFriction = 0x7D4; // float32
-                constexpr std::ptrdiff_t m_flAttenuation = 0x7D8; // float32
-                constexpr std::ptrdiff_t m_flVolume = 0x7DC; // float32
-                constexpr std::ptrdiff_t m_flTargetSpeed = 0x7E0; // float32
-                constexpr std::ptrdiff_t m_flMaxSpeed = 0x7E4; // float32
-                constexpr std::ptrdiff_t m_flBlockDamage = 0x7E8; // float32
-                constexpr std::ptrdiff_t m_NoiseRunning = 0x7F0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bReversed = 0x7F8; // bool
-                constexpr std::ptrdiff_t m_bAccelDecel = 0x7F9; // bool
-                constexpr std::ptrdiff_t m_prevLocalAngles = 0x804; // QAngle
-                constexpr std::ptrdiff_t m_angStart = 0x810; // QAngle
-                constexpr std::ptrdiff_t m_bStopAtStartPos = 0x81C; // bool
-                constexpr std::ptrdiff_t m_vecClientOrigin = 0x820; // Vector
-                constexpr std::ptrdiff_t m_vecClientAngles = 0x82C; // QAngle
+                constexpr std::ptrdiff_t m_OnStopped = 0x790; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnStarted = 0x7B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnReachedStart = 0x7E0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_localRotationVector = 0x808; // RotationVector
+                constexpr std::ptrdiff_t m_flFanFriction = 0x814; // float32
+                constexpr std::ptrdiff_t m_flAttenuation = 0x818; // float32
+                constexpr std::ptrdiff_t m_flVolume = 0x81C; // float32
+                constexpr std::ptrdiff_t m_flTargetSpeed = 0x820; // float32
+                constexpr std::ptrdiff_t m_flMaxSpeed = 0x824; // float32
+                constexpr std::ptrdiff_t m_flBlockDamage = 0x828; // float32
+                constexpr std::ptrdiff_t m_NoiseRunning = 0x830; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bReversed = 0x838; // bool
+                constexpr std::ptrdiff_t m_bAccelDecel = 0x839; // bool
+                constexpr std::ptrdiff_t m_prevLocalAngles = 0x844; // QAngle
+                constexpr std::ptrdiff_t m_angStart = 0x850; // QAngle
+                constexpr std::ptrdiff_t m_bStopAtStartPos = 0x85C; // bool
+                constexpr std::ptrdiff_t m_vecClientOrigin = 0x860; // Vector
+                constexpr std::ptrdiff_t m_vecClientAngles = 0x86C; // QAngle
             }
             // Parent: CBaseGrenade
             // Field count: 17
@@ -6470,28 +6478,28 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nExplodeEffectTickBegin (int)
             // NetworkVarNames: m_vecExplodeEffectOrigin (Vector)
             namespace CBaseCSGrenadeProjectile {
-                constexpr std::ptrdiff_t m_vInitialPosition = 0xA98; // Vector
-                constexpr std::ptrdiff_t m_vInitialVelocity = 0xAA4; // Vector
-                constexpr std::ptrdiff_t m_nBounces = 0xAB0; // int32
-                constexpr std::ptrdiff_t m_nExplodeEffectIndex = 0xAB8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-                constexpr std::ptrdiff_t m_nExplodeEffectTickBegin = 0xAC0; // int32
-                constexpr std::ptrdiff_t m_vecExplodeEffectOrigin = 0xAC4; // Vector
-                constexpr std::ptrdiff_t m_flSpawnTime = 0xAD0; // GameTime_t
-                constexpr std::ptrdiff_t m_unOGSExtraFlags = 0xAD4; // uint8
-                constexpr std::ptrdiff_t m_bDetonationRecorded = 0xAD5; // bool
-                constexpr std::ptrdiff_t m_nItemIndex = 0xAD6; // uint16
-                constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0xAD8; // Vector
-                constexpr std::ptrdiff_t m_flLastBounceSoundTime = 0xAE4; // GameTime_t
-                constexpr std::ptrdiff_t m_vecGrenadeSpin = 0xAE8; // RotationVector
-                constexpr std::ptrdiff_t m_vecLastHitSurfaceNormal = 0xAF4; // Vector
-                constexpr std::ptrdiff_t m_nTicksAtZeroVelocity = 0xB00; // int32
-                constexpr std::ptrdiff_t m_bHasEverHitPlayer = 0xB04; // bool
-                constexpr std::ptrdiff_t m_bClearFromPlayers = 0xB05; // bool
+                constexpr std::ptrdiff_t m_vInitialPosition = 0xAE0; // Vector
+                constexpr std::ptrdiff_t m_vInitialVelocity = 0xAEC; // Vector
+                constexpr std::ptrdiff_t m_nBounces = 0xAF8; // int32
+                constexpr std::ptrdiff_t m_nExplodeEffectIndex = 0xB00; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_nExplodeEffectTickBegin = 0xB08; // int32
+                constexpr std::ptrdiff_t m_vecExplodeEffectOrigin = 0xB0C; // Vector
+                constexpr std::ptrdiff_t m_flSpawnTime = 0xB18; // GameTime_t
+                constexpr std::ptrdiff_t m_unOGSExtraFlags = 0xB1C; // uint8
+                constexpr std::ptrdiff_t m_bDetonationRecorded = 0xB1D; // bool
+                constexpr std::ptrdiff_t m_nItemIndex = 0xB1E; // uint16
+                constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0xB20; // Vector
+                constexpr std::ptrdiff_t m_flLastBounceSoundTime = 0xB2C; // GameTime_t
+                constexpr std::ptrdiff_t m_vecGrenadeSpin = 0xB30; // RotationVector
+                constexpr std::ptrdiff_t m_vecLastHitSurfaceNormal = 0xB3C; // Vector
+                constexpr std::ptrdiff_t m_nTicksAtZeroVelocity = 0xB48; // int32
+                constexpr std::ptrdiff_t m_bHasEverHitPlayer = 0xB4C; // bool
+                constexpr std::ptrdiff_t m_bClearFromPlayers = 0xB4D; // bool
             }
             // Parent: CServerOnlyModelEntity
             // Field count: 1
             namespace CCSPlace {
-                constexpr std::ptrdiff_t m_name = 0x758; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_name = 0x798; // CUtlSymbolLarge
             }
             // Parent: CBaseModelEntity
             // Field count: 0
@@ -6512,16 +6520,16 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vDissolverOrigin (Vector)
             // NetworkVarNames: m_nMagnitude (uint32)
             namespace CEntityDissolve {
-                constexpr std::ptrdiff_t m_flFadeInStart = 0x750; // float32
-                constexpr std::ptrdiff_t m_flFadeInLength = 0x754; // float32
-                constexpr std::ptrdiff_t m_flFadeOutModelStart = 0x758; // float32
-                constexpr std::ptrdiff_t m_flFadeOutModelLength = 0x75C; // float32
-                constexpr std::ptrdiff_t m_flFadeOutStart = 0x760; // float32
-                constexpr std::ptrdiff_t m_flFadeOutLength = 0x764; // float32
-                constexpr std::ptrdiff_t m_flStartTime = 0x768; // GameTime_t
-                constexpr std::ptrdiff_t m_nDissolveType = 0x76C; // EntityDisolveType_t
-                constexpr std::ptrdiff_t m_vDissolverOrigin = 0x770; // Vector
-                constexpr std::ptrdiff_t m_nMagnitude = 0x77C; // uint32
+                constexpr std::ptrdiff_t m_flFadeInStart = 0x790; // float32
+                constexpr std::ptrdiff_t m_flFadeInLength = 0x794; // float32
+                constexpr std::ptrdiff_t m_flFadeOutModelStart = 0x798; // float32
+                constexpr std::ptrdiff_t m_flFadeOutModelLength = 0x79C; // float32
+                constexpr std::ptrdiff_t m_flFadeOutStart = 0x7A0; // float32
+                constexpr std::ptrdiff_t m_flFadeOutLength = 0x7A4; // float32
+                constexpr std::ptrdiff_t m_flStartTime = 0x7A8; // GameTime_t
+                constexpr std::ptrdiff_t m_nDissolveType = 0x7AC; // EntityDisolveType_t
+                constexpr std::ptrdiff_t m_vDissolverOrigin = 0x7B0; // Vector
+                constexpr std::ptrdiff_t m_nMagnitude = 0x7BC; // uint32
             }
             // Parent: CPointEntity
             // Field count: 12
@@ -6631,33 +6639,33 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bTurnedOff (bool)
             // NetworkVarNames: m_vecEndPos (Vector)
             namespace CBeam {
-                constexpr std::ptrdiff_t m_flFrameRate = 0x750; // float32
-                constexpr std::ptrdiff_t m_flHDRColorScale = 0x754; // float32
-                constexpr std::ptrdiff_t m_flFireTime = 0x758; // GameTime_t
-                constexpr std::ptrdiff_t m_flDamage = 0x75C; // float32
-                constexpr std::ptrdiff_t m_nNumBeamEnts = 0x760; // uint8
-                constexpr std::ptrdiff_t m_hBaseMaterial = 0x768; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_nHaloIndex = 0x770; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_nBeamType = 0x778; // BeamType_t
-                constexpr std::ptrdiff_t m_nBeamFlags = 0x77C; // uint32
-                constexpr std::ptrdiff_t m_hAttachEntity = 0x780; // CHandle<CBaseEntity>[10]
-                constexpr std::ptrdiff_t m_nAttachIndex = 0x7A8; // AttachmentHandle_t[10]
-                constexpr std::ptrdiff_t m_fWidth = 0x7B4; // float32
-                constexpr std::ptrdiff_t m_fEndWidth = 0x7B8; // float32
-                constexpr std::ptrdiff_t m_fFadeLength = 0x7BC; // float32
-                constexpr std::ptrdiff_t m_fHaloScale = 0x7C0; // float32
-                constexpr std::ptrdiff_t m_fAmplitude = 0x7C4; // float32
-                constexpr std::ptrdiff_t m_fStartFrame = 0x7C8; // float32
-                constexpr std::ptrdiff_t m_fSpeed = 0x7CC; // float32
-                constexpr std::ptrdiff_t m_flFrame = 0x7D0; // float32
-                constexpr std::ptrdiff_t m_nClipStyle = 0x7D4; // BeamClipStyle_t
-                constexpr std::ptrdiff_t m_bTurnedOff = 0x7D8; // bool
-                constexpr std::ptrdiff_t m_vecEndPos = 0x7DC; // Vector
-                constexpr std::ptrdiff_t m_hEndEntity = 0x7E8; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_nDissolveType = 0x7EC; // int32
+                constexpr std::ptrdiff_t m_flFrameRate = 0x790; // float32
+                constexpr std::ptrdiff_t m_flHDRColorScale = 0x794; // float32
+                constexpr std::ptrdiff_t m_flFireTime = 0x798; // GameTime_t
+                constexpr std::ptrdiff_t m_flDamage = 0x79C; // float32
+                constexpr std::ptrdiff_t m_nNumBeamEnts = 0x7A0; // uint8
+                constexpr std::ptrdiff_t m_hBaseMaterial = 0x7A8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_nHaloIndex = 0x7B0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_nBeamType = 0x7B8; // BeamType_t
+                constexpr std::ptrdiff_t m_nBeamFlags = 0x7BC; // uint32
+                constexpr std::ptrdiff_t m_hAttachEntity = 0x7C0; // CHandle<CBaseEntity>[10]
+                constexpr std::ptrdiff_t m_nAttachIndex = 0x7E8; // AttachmentHandle_t[10]
+                constexpr std::ptrdiff_t m_fWidth = 0x7F4; // float32
+                constexpr std::ptrdiff_t m_fEndWidth = 0x7F8; // float32
+                constexpr std::ptrdiff_t m_fFadeLength = 0x7FC; // float32
+                constexpr std::ptrdiff_t m_fHaloScale = 0x800; // float32
+                constexpr std::ptrdiff_t m_fAmplitude = 0x804; // float32
+                constexpr std::ptrdiff_t m_fStartFrame = 0x808; // float32
+                constexpr std::ptrdiff_t m_fSpeed = 0x80C; // float32
+                constexpr std::ptrdiff_t m_flFrame = 0x810; // float32
+                constexpr std::ptrdiff_t m_nClipStyle = 0x814; // BeamClipStyle_t
+                constexpr std::ptrdiff_t m_bTurnedOff = 0x818; // bool
+                constexpr std::ptrdiff_t m_vecEndPos = 0x81C; // Vector
+                constexpr std::ptrdiff_t m_hEndEntity = 0x828; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_nDissolveType = 0x82C; // int32
             }
             // Parent: CBaseEntity
-            // Field count: 26
+            // Field count: 33
             //
             // Metadata:
             // NetworkVarNames: m_CRenderComponent (CRenderComponent::Storage_t)
@@ -6686,46 +6694,53 @@ namespace cs2_dumper {
             namespace CBaseModelEntity {
                 constexpr std::ptrdiff_t m_CRenderComponent = 0x4E0; // CRenderComponent*
                 constexpr std::ptrdiff_t m_CHitboxComponent = 0x4E8; // CHitboxComponent
-                constexpr std::ptrdiff_t m_flDissolveStartTime = 0x510; // GameTime_t
-                constexpr std::ptrdiff_t m_OnIgnite = 0x518; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_nRenderMode = 0x540; // RenderMode_t
-                constexpr std::ptrdiff_t m_nRenderFX = 0x541; // RenderFx_t
-                constexpr std::ptrdiff_t m_bAllowFadeInView = 0x542; // bool
-                constexpr std::ptrdiff_t m_clrRender = 0x560; // Color
-                constexpr std::ptrdiff_t m_vecRenderAttributes = 0x568; // CUtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
-                constexpr std::ptrdiff_t m_bRenderToCubemaps = 0x5B8; // bool
-                constexpr std::ptrdiff_t m_bNoInterpolate = 0x5B9; // bool
-                constexpr std::ptrdiff_t m_Collision = 0x5C0; // CCollisionProperty
-                constexpr std::ptrdiff_t m_Glow = 0x670; // CGlowProperty
-                constexpr std::ptrdiff_t m_flGlowBackfaceMult = 0x6C8; // float32
-                constexpr std::ptrdiff_t m_fadeMinDist = 0x6CC; // float32
-                constexpr std::ptrdiff_t m_fadeMaxDist = 0x6D0; // float32
-                constexpr std::ptrdiff_t m_flFadeScale = 0x6D4; // float32
-                constexpr std::ptrdiff_t m_flShadowStrength = 0x6D8; // float32
-                constexpr std::ptrdiff_t m_nObjectCulling = 0x6DC; // uint8
-                constexpr std::ptrdiff_t m_nAddDecal = 0x6E0; // int32
-                constexpr std::ptrdiff_t m_vDecalPosition = 0x6E4; // Vector
-                constexpr std::ptrdiff_t m_vDecalForwardAxis = 0x6F0; // Vector
-                constexpr std::ptrdiff_t m_flDecalHealBloodRate = 0x6FC; // float32
-                constexpr std::ptrdiff_t m_flDecalHealHeightRate = 0x700; // float32
-                constexpr std::ptrdiff_t m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x708; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-                constexpr std::ptrdiff_t m_vecViewOffset = 0x720; // CNetworkViewOffsetVector
+                constexpr std::ptrdiff_t m_nDestructiblePartInitialStateDestructed0 = 0x510; // HitGroup_t
+                constexpr std::ptrdiff_t m_nDestructiblePartInitialStateDestructed1 = 0x514; // HitGroup_t
+                constexpr std::ptrdiff_t m_nDestructiblePartInitialStateDestructed2 = 0x518; // HitGroup_t
+                constexpr std::ptrdiff_t m_nDestructiblePartInitialStateDestructed3 = 0x51C; // HitGroup_t
+                constexpr std::ptrdiff_t m_nDestructiblePartInitialStateDestructed4 = 0x520; // HitGroup_t
+                constexpr std::ptrdiff_t m_nLastHitDestructiblePartIndex = 0x524; // int32
+                constexpr std::ptrdiff_t m_LastHitGroup = 0x550; // HitGroup_t
+                constexpr std::ptrdiff_t m_flDissolveStartTime = 0x554; // GameTime_t
+                constexpr std::ptrdiff_t m_OnIgnite = 0x558; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_nRenderMode = 0x580; // RenderMode_t
+                constexpr std::ptrdiff_t m_nRenderFX = 0x581; // RenderFx_t
+                constexpr std::ptrdiff_t m_bAllowFadeInView = 0x582; // bool
+                constexpr std::ptrdiff_t m_clrRender = 0x5A0; // Color
+                constexpr std::ptrdiff_t m_vecRenderAttributes = 0x5A8; // CUtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
+                constexpr std::ptrdiff_t m_bRenderToCubemaps = 0x5F8; // bool
+                constexpr std::ptrdiff_t m_bNoInterpolate = 0x5F9; // bool
+                constexpr std::ptrdiff_t m_Collision = 0x600; // CCollisionProperty
+                constexpr std::ptrdiff_t m_Glow = 0x6B0; // CGlowProperty
+                constexpr std::ptrdiff_t m_flGlowBackfaceMult = 0x708; // float32
+                constexpr std::ptrdiff_t m_fadeMinDist = 0x70C; // float32
+                constexpr std::ptrdiff_t m_fadeMaxDist = 0x710; // float32
+                constexpr std::ptrdiff_t m_flFadeScale = 0x714; // float32
+                constexpr std::ptrdiff_t m_flShadowStrength = 0x718; // float32
+                constexpr std::ptrdiff_t m_nObjectCulling = 0x71C; // uint8
+                constexpr std::ptrdiff_t m_nAddDecal = 0x720; // int32
+                constexpr std::ptrdiff_t m_vDecalPosition = 0x724; // Vector
+                constexpr std::ptrdiff_t m_vDecalForwardAxis = 0x730; // Vector
+                constexpr std::ptrdiff_t m_flDecalHealBloodRate = 0x73C; // float32
+                constexpr std::ptrdiff_t m_flDecalHealHeightRate = 0x740; // float32
+                constexpr std::ptrdiff_t m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x748; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
+                constexpr std::ptrdiff_t m_vecViewOffset = 0x760; // CNetworkViewOffsetVector
             }
             // Parent: CBaseAnimGraph
             // Field count: 12
             namespace CPhysMagnet {
-                constexpr std::ptrdiff_t m_OnMagnetAttach = 0x960; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnMagnetDetach = 0x988; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_massScale = 0x9B0; // float32
-                constexpr std::ptrdiff_t m_forceLimit = 0x9B4; // float32
-                constexpr std::ptrdiff_t m_torqueLimit = 0x9B8; // float32
-                constexpr std::ptrdiff_t m_MagnettedEntities = 0x9C0; // CUtlVector<magnetted_objects_t>
-                constexpr std::ptrdiff_t m_bActive = 0x9D8; // bool
-                constexpr std::ptrdiff_t m_bHasHitSomething = 0x9D9; // bool
-                constexpr std::ptrdiff_t m_flTotalMass = 0x9DC; // float32
-                constexpr std::ptrdiff_t m_flRadius = 0x9E0; // float32
-                constexpr std::ptrdiff_t m_flNextSuckTime = 0x9E4; // GameTime_t
-                constexpr std::ptrdiff_t m_iMaxObjectsAttached = 0x9E8; // int32
+                constexpr std::ptrdiff_t m_OnMagnetAttach = 0x9A8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnMagnetDetach = 0x9D0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_massScale = 0x9F8; // float32
+                constexpr std::ptrdiff_t m_forceLimit = 0x9FC; // float32
+                constexpr std::ptrdiff_t m_torqueLimit = 0xA00; // float32
+                constexpr std::ptrdiff_t m_MagnettedEntities = 0xA08; // CUtlVector<magnetted_objects_t>
+                constexpr std::ptrdiff_t m_bActive = 0xA20; // bool
+                constexpr std::ptrdiff_t m_bHasHitSomething = 0xA21; // bool
+                constexpr std::ptrdiff_t m_flTotalMass = 0xA24; // float32
+                constexpr std::ptrdiff_t m_flRadius = 0xA28; // float32
+                constexpr std::ptrdiff_t m_flNextSuckTime = 0xA2C; // GameTime_t
+                constexpr std::ptrdiff_t m_iMaxObjectsAttached = 0xA30; // int32
             }
             // Parent: CSceneEntity
             // Field count: 0
@@ -6734,8 +6749,8 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 2
             namespace CFuncNavBlocker {
-                constexpr std::ptrdiff_t m_bDisabled = 0x750; // bool
-                constexpr std::ptrdiff_t m_nBlockedTeamNumber = 0x754; // int32
+                constexpr std::ptrdiff_t m_bDisabled = 0x790; // bool
+                constexpr std::ptrdiff_t m_nBlockedTeamNumber = 0x794; // int32
             }
             // Parent: CPointEntity
             // Field count: 4
@@ -6748,12 +6763,12 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 6
             namespace CFuncBrush {
-                constexpr std::ptrdiff_t m_iSolidity = 0x750; // BrushSolidities_e
-                constexpr std::ptrdiff_t m_iDisabled = 0x754; // int32
-                constexpr std::ptrdiff_t m_bSolidBsp = 0x758; // bool
-                constexpr std::ptrdiff_t m_iszExcludedClass = 0x760; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bInvertExclusion = 0x768; // bool
-                constexpr std::ptrdiff_t m_bScriptedMovement = 0x769; // bool
+                constexpr std::ptrdiff_t m_iSolidity = 0x790; // BrushSolidities_e
+                constexpr std::ptrdiff_t m_iDisabled = 0x794; // int32
+                constexpr std::ptrdiff_t m_bSolidBsp = 0x798; // bool
+                constexpr std::ptrdiff_t m_iszExcludedClass = 0x7A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bInvertExclusion = 0x7A8; // bool
+                constexpr std::ptrdiff_t m_bScriptedMovement = 0x7A9; // bool
             }
             // Parent: CPointEntity
             // Field count: 3
@@ -6802,20 +6817,20 @@ namespace cs2_dumper {
             // Parent: CBreakable
             // Field count: 14
             namespace CPhysBox {
-                constexpr std::ptrdiff_t m_damageType = 0x828; // int32
-                constexpr std::ptrdiff_t m_damageToEnableMotion = 0x82C; // int32
-                constexpr std::ptrdiff_t m_flForceToEnableMotion = 0x830; // float32
-                constexpr std::ptrdiff_t m_angPreferredCarryAngles = 0x834; // QAngle
-                constexpr std::ptrdiff_t m_bNotSolidToWorld = 0x840; // bool
-                constexpr std::ptrdiff_t m_bEnableUseOutput = 0x841; // bool
-                constexpr std::ptrdiff_t m_iExploitableByPlayer = 0x844; // int32
-                constexpr std::ptrdiff_t m_flTouchOutputPerEntityDelay = 0x848; // float32
-                constexpr std::ptrdiff_t m_OnDamaged = 0x850; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnAwakened = 0x878; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnMotionEnabled = 0x8A0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPlayerUse = 0x8C8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnStartTouch = 0x8F0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_hCarryingPlayer = 0x918; // CHandle<CBasePlayerPawn>
+                constexpr std::ptrdiff_t m_damageType = 0x868; // int32
+                constexpr std::ptrdiff_t m_damageToEnableMotion = 0x86C; // int32
+                constexpr std::ptrdiff_t m_flForceToEnableMotion = 0x870; // float32
+                constexpr std::ptrdiff_t m_angPreferredCarryAngles = 0x874; // QAngle
+                constexpr std::ptrdiff_t m_bNotSolidToWorld = 0x880; // bool
+                constexpr std::ptrdiff_t m_bEnableUseOutput = 0x881; // bool
+                constexpr std::ptrdiff_t m_iExploitableByPlayer = 0x884; // int32
+                constexpr std::ptrdiff_t m_flTouchOutputPerEntityDelay = 0x888; // float32
+                constexpr std::ptrdiff_t m_OnDamaged = 0x890; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnAwakened = 0x8B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnMotionEnabled = 0x8E0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPlayerUse = 0x908; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnStartTouch = 0x930; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_hCarryingPlayer = 0x958; // CHandle<CBasePlayerPawn>
             }
             // Parent: CBaseFlex
             // Field count: 14
@@ -6839,20 +6854,20 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flDamage (float32)
             // NetworkVarNames: m_hThrower (CHandle<CCSPlayerPawn>)
             namespace CBaseGrenade {
-                constexpr std::ptrdiff_t m_OnPlayerPickup = 0x9F8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnExplode = 0xA20; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bHasWarnedAI = 0xA48; // bool
-                constexpr std::ptrdiff_t m_bIsSmokeGrenade = 0xA49; // bool
-                constexpr std::ptrdiff_t m_bIsLive = 0xA4A; // bool
-                constexpr std::ptrdiff_t m_DmgRadius = 0xA4C; // float32
-                constexpr std::ptrdiff_t m_flDetonateTime = 0xA50; // GameTime_t
-                constexpr std::ptrdiff_t m_flWarnAITime = 0xA54; // float32
-                constexpr std::ptrdiff_t m_flDamage = 0xA58; // float32
-                constexpr std::ptrdiff_t m_iszBounceSound = 0xA60; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_ExplosionSound = 0xA68; // CUtlString
-                constexpr std::ptrdiff_t m_hThrower = 0xA74; // CHandle<CCSPlayerPawn>
-                constexpr std::ptrdiff_t m_flNextAttack = 0xA8C; // GameTime_t
-                constexpr std::ptrdiff_t m_hOriginalThrower = 0xA90; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_OnPlayerPickup = 0xA40; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnExplode = 0xA68; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bHasWarnedAI = 0xA90; // bool
+                constexpr std::ptrdiff_t m_bIsSmokeGrenade = 0xA91; // bool
+                constexpr std::ptrdiff_t m_bIsLive = 0xA92; // bool
+                constexpr std::ptrdiff_t m_DmgRadius = 0xA94; // float32
+                constexpr std::ptrdiff_t m_flDetonateTime = 0xA98; // GameTime_t
+                constexpr std::ptrdiff_t m_flWarnAITime = 0xA9C; // float32
+                constexpr std::ptrdiff_t m_flDamage = 0xAA0; // float32
+                constexpr std::ptrdiff_t m_iszBounceSound = 0xAA8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_ExplosionSound = 0xAB0; // CUtlString
+                constexpr std::ptrdiff_t m_hThrower = 0xABC; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_flNextAttack = 0xAD4; // GameTime_t
+                constexpr std::ptrdiff_t m_hOriginalThrower = 0xAD8; // CHandle<CCSPlayerPawn>
             }
             // Parent: CLogicalEntity
             // Field count: 13
@@ -6931,70 +6946,70 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iIronSightMode (int)
             // NetworkVarNames: m_iNumEmptyAttacks (int)
             namespace CCSWeaponBase {
-                constexpr std::ptrdiff_t m_bRemoveable = 0xD58; // bool
-                constexpr std::ptrdiff_t m_flFireSequenceStartTime = 0xD60; // float32
-                constexpr std::ptrdiff_t m_nFireSequenceStartTimeChange = 0xD64; // int32
-                constexpr std::ptrdiff_t m_nFireSequenceStartTimeAck = 0xD68; // int32
-                constexpr std::ptrdiff_t m_ePlayerFireEvent = 0xD6C; // PlayerAnimEvent_t
-                constexpr std::ptrdiff_t m_ePlayerFireEventAttackType = 0xD70; // WeaponAttackType_t
-                constexpr std::ptrdiff_t m_seqIdle = 0xD74; // HSequence
-                constexpr std::ptrdiff_t m_seqFirePrimary = 0xD78; // HSequence
-                constexpr std::ptrdiff_t m_seqFireSecondary = 0xD7C; // HSequence
-                constexpr std::ptrdiff_t m_thirdPersonFireSequences = 0xD80; // CUtlVector<HSequence>
-                constexpr std::ptrdiff_t m_hCurrentThirdPersonSequence = 0xD98; // HSequence
-                constexpr std::ptrdiff_t m_nSilencerBoneIndex = 0xD9C; // int32
-                constexpr std::ptrdiff_t m_thirdPersonSequences = 0xDA0; // HSequence[7]
-                constexpr std::ptrdiff_t m_bPlayerAmmoStockOnPickup = 0xDC8; // bool
-                constexpr std::ptrdiff_t m_bRequireUseToTouch = 0xDC9; // bool
-                constexpr std::ptrdiff_t m_iState = 0xDCC; // CSWeaponState_t
-                constexpr std::ptrdiff_t m_flLastTimeInAir = 0xDD0; // GameTime_t
-                constexpr std::ptrdiff_t m_flLastDeployTime = 0xDD4; // GameTime_t
-                constexpr std::ptrdiff_t m_nLastEmptySoundCmdNum = 0xDD8; // int32
-                constexpr std::ptrdiff_t m_nViewModelIndex = 0xDDC; // uint32
-                constexpr std::ptrdiff_t m_bReloadsWithClips = 0xDE0; // bool
-                constexpr std::ptrdiff_t m_flTimeWeaponIdle = 0xE00; // GameTime_t
-                constexpr std::ptrdiff_t m_bFireOnEmpty = 0xE04; // bool
-                constexpr std::ptrdiff_t m_OnPlayerPickup = 0xE08; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_weaponMode = 0xE30; // CSWeaponMode
-                constexpr std::ptrdiff_t m_flTurningInaccuracyDelta = 0xE34; // float32
-                constexpr std::ptrdiff_t m_vecTurningInaccuracyEyeDirLast = 0xE38; // Vector
-                constexpr std::ptrdiff_t m_flTurningInaccuracy = 0xE44; // float32
-                constexpr std::ptrdiff_t m_fAccuracyPenalty = 0xE48; // float32
-                constexpr std::ptrdiff_t m_flLastAccuracyUpdateTime = 0xE4C; // GameTime_t
-                constexpr std::ptrdiff_t m_fAccuracySmoothedForZoom = 0xE50; // float32
-                constexpr std::ptrdiff_t m_fScopeZoomEndTime = 0xE54; // GameTime_t
-                constexpr std::ptrdiff_t m_iRecoilIndex = 0xE58; // int32
-                constexpr std::ptrdiff_t m_flRecoilIndex = 0xE5C; // float32
-                constexpr std::ptrdiff_t m_bBurstMode = 0xE60; // bool
-                constexpr std::ptrdiff_t m_nPostponeFireReadyTicks = 0xE64; // GameTick_t
-                constexpr std::ptrdiff_t m_flPostponeFireReadyFrac = 0xE68; // float32
-                constexpr std::ptrdiff_t m_bInReload = 0xE6C; // bool
-                constexpr std::ptrdiff_t m_bReloadVisuallyComplete = 0xE6D; // bool
-                constexpr std::ptrdiff_t m_flDroppedAtTime = 0xE70; // GameTime_t
-                constexpr std::ptrdiff_t m_bIsHauledBack = 0xE74; // bool
-                constexpr std::ptrdiff_t m_bSilencerOn = 0xE75; // bool
-                constexpr std::ptrdiff_t m_flTimeSilencerSwitchComplete = 0xE78; // GameTime_t
-                constexpr std::ptrdiff_t m_iOriginalTeamNumber = 0xE7C; // int32
-                constexpr std::ptrdiff_t m_iMostRecentTeamNumber = 0xE80; // int32
-                constexpr std::ptrdiff_t m_bDroppedNearBuyZone = 0xE84; // bool
-                constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0xE88; // float32
-                constexpr std::ptrdiff_t m_bCanBePickedUp = 0xEA0; // bool
-                constexpr std::ptrdiff_t m_bUseCanOverrideNextOwnerTouchTime = 0xEA1; // bool
-                constexpr std::ptrdiff_t m_nextOwnerTouchTime = 0xEA4; // GameTime_t
-                constexpr std::ptrdiff_t m_nextPrevOwnerTouchTime = 0xEA8; // GameTime_t
-                constexpr std::ptrdiff_t m_hPrevOwner = 0xEB0; // CHandle<CCSPlayerPawn>
-                constexpr std::ptrdiff_t m_nDropTick = 0xEB4; // GameTick_t
-                constexpr std::ptrdiff_t m_donated = 0xED4; // bool
-                constexpr std::ptrdiff_t m_fLastShotTime = 0xED8; // GameTime_t
-                constexpr std::ptrdiff_t m_bWasOwnedByCT = 0xEDC; // bool
-                constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0xEDD; // bool
-                constexpr std::ptrdiff_t m_bFiredOutOfAmmoEvent = 0xEDE; // bool
-                constexpr std::ptrdiff_t m_numRemoveUnownedWeaponThink = 0xEE0; // int32
-                constexpr std::ptrdiff_t m_IronSightController = 0xEE8; // CIronSightController
-                constexpr std::ptrdiff_t m_iIronSightMode = 0xF00; // int32
-                constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0xF04; // GameTime_t
-                constexpr std::ptrdiff_t m_iNumEmptyAttacks = 0xF08; // int32
-                constexpr std::ptrdiff_t m_flWatTickOffset = 0xF0C; // float32
+                constexpr std::ptrdiff_t m_bRemoveable = 0xDA0; // bool
+                constexpr std::ptrdiff_t m_flFireSequenceStartTime = 0xDA8; // float32
+                constexpr std::ptrdiff_t m_nFireSequenceStartTimeChange = 0xDAC; // int32
+                constexpr std::ptrdiff_t m_nFireSequenceStartTimeAck = 0xDB0; // int32
+                constexpr std::ptrdiff_t m_ePlayerFireEvent = 0xDB4; // PlayerAnimEvent_t
+                constexpr std::ptrdiff_t m_ePlayerFireEventAttackType = 0xDB8; // WeaponAttackType_t
+                constexpr std::ptrdiff_t m_seqIdle = 0xDBC; // HSequence
+                constexpr std::ptrdiff_t m_seqFirePrimary = 0xDC0; // HSequence
+                constexpr std::ptrdiff_t m_seqFireSecondary = 0xDC4; // HSequence
+                constexpr std::ptrdiff_t m_thirdPersonFireSequences = 0xDC8; // CUtlVector<HSequence>
+                constexpr std::ptrdiff_t m_hCurrentThirdPersonSequence = 0xDE0; // HSequence
+                constexpr std::ptrdiff_t m_nSilencerBoneIndex = 0xDE4; // int32
+                constexpr std::ptrdiff_t m_thirdPersonSequences = 0xDE8; // HSequence[7]
+                constexpr std::ptrdiff_t m_bPlayerAmmoStockOnPickup = 0xE10; // bool
+                constexpr std::ptrdiff_t m_bRequireUseToTouch = 0xE11; // bool
+                constexpr std::ptrdiff_t m_iState = 0xE14; // CSWeaponState_t
+                constexpr std::ptrdiff_t m_flLastTimeInAir = 0xE18; // GameTime_t
+                constexpr std::ptrdiff_t m_flLastDeployTime = 0xE1C; // GameTime_t
+                constexpr std::ptrdiff_t m_nLastEmptySoundCmdNum = 0xE20; // int32
+                constexpr std::ptrdiff_t m_nViewModelIndex = 0xE24; // uint32
+                constexpr std::ptrdiff_t m_bReloadsWithClips = 0xE28; // bool
+                constexpr std::ptrdiff_t m_flTimeWeaponIdle = 0xE48; // GameTime_t
+                constexpr std::ptrdiff_t m_bFireOnEmpty = 0xE4C; // bool
+                constexpr std::ptrdiff_t m_OnPlayerPickup = 0xE50; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_weaponMode = 0xE78; // CSWeaponMode
+                constexpr std::ptrdiff_t m_flTurningInaccuracyDelta = 0xE7C; // float32
+                constexpr std::ptrdiff_t m_vecTurningInaccuracyEyeDirLast = 0xE80; // Vector
+                constexpr std::ptrdiff_t m_flTurningInaccuracy = 0xE8C; // float32
+                constexpr std::ptrdiff_t m_fAccuracyPenalty = 0xE90; // float32
+                constexpr std::ptrdiff_t m_flLastAccuracyUpdateTime = 0xE94; // GameTime_t
+                constexpr std::ptrdiff_t m_fAccuracySmoothedForZoom = 0xE98; // float32
+                constexpr std::ptrdiff_t m_fScopeZoomEndTime = 0xE9C; // GameTime_t
+                constexpr std::ptrdiff_t m_iRecoilIndex = 0xEA0; // int32
+                constexpr std::ptrdiff_t m_flRecoilIndex = 0xEA4; // float32
+                constexpr std::ptrdiff_t m_bBurstMode = 0xEA8; // bool
+                constexpr std::ptrdiff_t m_nPostponeFireReadyTicks = 0xEAC; // GameTick_t
+                constexpr std::ptrdiff_t m_flPostponeFireReadyFrac = 0xEB0; // float32
+                constexpr std::ptrdiff_t m_bInReload = 0xEB4; // bool
+                constexpr std::ptrdiff_t m_bReloadVisuallyComplete = 0xEB5; // bool
+                constexpr std::ptrdiff_t m_flDroppedAtTime = 0xEB8; // GameTime_t
+                constexpr std::ptrdiff_t m_bIsHauledBack = 0xEBC; // bool
+                constexpr std::ptrdiff_t m_bSilencerOn = 0xEBD; // bool
+                constexpr std::ptrdiff_t m_flTimeSilencerSwitchComplete = 0xEC0; // GameTime_t
+                constexpr std::ptrdiff_t m_iOriginalTeamNumber = 0xEC4; // int32
+                constexpr std::ptrdiff_t m_iMostRecentTeamNumber = 0xEC8; // int32
+                constexpr std::ptrdiff_t m_bDroppedNearBuyZone = 0xECC; // bool
+                constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0xED0; // float32
+                constexpr std::ptrdiff_t m_bCanBePickedUp = 0xEE8; // bool
+                constexpr std::ptrdiff_t m_bUseCanOverrideNextOwnerTouchTime = 0xEE9; // bool
+                constexpr std::ptrdiff_t m_nextOwnerTouchTime = 0xEEC; // GameTime_t
+                constexpr std::ptrdiff_t m_nextPrevOwnerTouchTime = 0xEF0; // GameTime_t
+                constexpr std::ptrdiff_t m_hPrevOwner = 0xEF8; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_nDropTick = 0xEFC; // GameTick_t
+                constexpr std::ptrdiff_t m_donated = 0xF1C; // bool
+                constexpr std::ptrdiff_t m_fLastShotTime = 0xF20; // GameTime_t
+                constexpr std::ptrdiff_t m_bWasOwnedByCT = 0xF24; // bool
+                constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0xF25; // bool
+                constexpr std::ptrdiff_t m_bFiredOutOfAmmoEvent = 0xF26; // bool
+                constexpr std::ptrdiff_t m_numRemoveUnownedWeaponThink = 0xF28; // int32
+                constexpr std::ptrdiff_t m_IronSightController = 0xF30; // CIronSightController
+                constexpr std::ptrdiff_t m_iIronSightMode = 0xF48; // int32
+                constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0xF4C; // GameTime_t
+                constexpr std::ptrdiff_t m_iNumEmptyAttacks = 0xF50; // int32
+                constexpr std::ptrdiff_t m_flWatTickOffset = 0xF54; // float32
             }
             // Parent: CBaseEntity
             // Field count: 0
@@ -7151,10 +7166,10 @@ namespace cs2_dumper {
             // Parent: CTriggerMultiple
             // Field count: 4
             namespace CTriggerImpact {
-                constexpr std::ptrdiff_t m_flMagnitude = 0x948; // float32
-                constexpr std::ptrdiff_t m_flNoise = 0x94C; // float32
-                constexpr std::ptrdiff_t m_flViewkick = 0x950; // float32
-                constexpr std::ptrdiff_t m_pOutputForce = 0x958; // CEntityOutputTemplate<Vector>
+                constexpr std::ptrdiff_t m_flMagnitude = 0x988; // float32
+                constexpr std::ptrdiff_t m_flNoise = 0x98C; // float32
+                constexpr std::ptrdiff_t m_flViewkick = 0x990; // float32
+                constexpr std::ptrdiff_t m_pOutputForce = 0x998; // CEntityOutputTemplate<Vector>
             }
             // Parent: CBaseModelEntity
             // Field count: 14
@@ -7176,26 +7191,26 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flHDRColorScale (float32)
             // NetworkVarNames: m_flFarZScale (float32)
             namespace CSun {
-                constexpr std::ptrdiff_t m_vDirection = 0x750; // Vector
-                constexpr std::ptrdiff_t m_clrOverlay = 0x75C; // Color
-                constexpr std::ptrdiff_t m_iszEffectName = 0x760; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszSSEffectName = 0x768; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bOn = 0x770; // bool
-                constexpr std::ptrdiff_t m_bmaxColor = 0x771; // bool
-                constexpr std::ptrdiff_t m_flSize = 0x774; // float32
-                constexpr std::ptrdiff_t m_flRotation = 0x778; // float32
-                constexpr std::ptrdiff_t m_flHazeScale = 0x77C; // float32
-                constexpr std::ptrdiff_t m_flAlphaHaze = 0x780; // float32
-                constexpr std::ptrdiff_t m_flAlphaHdr = 0x784; // float32
-                constexpr std::ptrdiff_t m_flAlphaScale = 0x788; // float32
-                constexpr std::ptrdiff_t m_flHDRColorScale = 0x78C; // float32
-                constexpr std::ptrdiff_t m_flFarZScale = 0x790; // float32
+                constexpr std::ptrdiff_t m_vDirection = 0x790; // Vector
+                constexpr std::ptrdiff_t m_clrOverlay = 0x79C; // Color
+                constexpr std::ptrdiff_t m_iszEffectName = 0x7A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszSSEffectName = 0x7A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bOn = 0x7B0; // bool
+                constexpr std::ptrdiff_t m_bmaxColor = 0x7B1; // bool
+                constexpr std::ptrdiff_t m_flSize = 0x7B4; // float32
+                constexpr std::ptrdiff_t m_flRotation = 0x7B8; // float32
+                constexpr std::ptrdiff_t m_flHazeScale = 0x7BC; // float32
+                constexpr std::ptrdiff_t m_flAlphaHaze = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_flAlphaHdr = 0x7C4; // float32
+                constexpr std::ptrdiff_t m_flAlphaScale = 0x7C8; // float32
+                constexpr std::ptrdiff_t m_flHDRColorScale = 0x7CC; // float32
+                constexpr std::ptrdiff_t m_flFarZScale = 0x7D0; // float32
             }
             // Parent: CBaseTrigger
             // Field count: 2
             namespace CTriggerDetectBulletFire {
-                constexpr std::ptrdiff_t m_bPlayerFireOnly = 0x920; // bool
-                constexpr std::ptrdiff_t m_OnDetectedBulletFire = 0x928; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bPlayerFireOnly = 0x960; // bool
+                constexpr std::ptrdiff_t m_OnDetectedBulletFire = 0x968; // CEntityIOOutput
             }
             // Parent: CBaseModelEntity
             // Field count: 0
@@ -7273,10 +7288,10 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 4
             namespace CTriggerTeleport {
-                constexpr std::ptrdiff_t m_iLandmark = 0x920; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bUseLandmarkAngles = 0x928; // bool
-                constexpr std::ptrdiff_t m_bMirrorPlayer = 0x929; // bool
-                constexpr std::ptrdiff_t m_bCheckDestIfClearForPlayer = 0x92A; // bool
+                constexpr std::ptrdiff_t m_iLandmark = 0x960; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bUseLandmarkAngles = 0x968; // bool
+                constexpr std::ptrdiff_t m_bMirrorPlayer = 0x969; // bool
+                constexpr std::ptrdiff_t m_bCheckDestIfClearForPlayer = 0x96A; // bool
             }
             // Parent: CCSPlayerBase_CameraServices
             // Field count: 0
@@ -7289,44 +7304,44 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 38
             namespace CFuncMover {
-                constexpr std::ptrdiff_t m_bCreateMovableNavMesh = 0x750; // bool
-                constexpr std::ptrdiff_t m_iszPathName = 0x758; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hPathMover = 0x760; // CHandle<CPathMover>
-                constexpr std::ptrdiff_t m_iszPathNodeStart = 0x768; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_eMoveType = 0x770; // CFuncMover::Move_t
-                constexpr std::ptrdiff_t m_bIsReversing = 0x774; // bool
-                constexpr std::ptrdiff_t m_vTarget = 0x778; // Vector
-                constexpr std::ptrdiff_t m_flStartSpeed = 0x784; // float32
-                constexpr std::ptrdiff_t m_flPathLocation = 0x788; // float32
-                constexpr std::ptrdiff_t m_flT = 0x78C; // float32
-                constexpr std::ptrdiff_t m_nCurrentNodeIndex = 0x790; // int32
-                constexpr std::ptrdiff_t m_nPreviousNodeIndex = 0x794; // int32
-                constexpr std::ptrdiff_t m_bFixedOrientation = 0x798; // bool
-                constexpr std::ptrdiff_t m_bFixedPitch = 0x799; // bool
-                constexpr std::ptrdiff_t m_eSolidType = 0x79A; // SolidType_t
-                constexpr std::ptrdiff_t m_bIsMoving = 0x79B; // bool
-                constexpr std::ptrdiff_t m_flTimeToReachMaxSpeed = 0x79C; // float32
-                constexpr std::ptrdiff_t m_flDistanceToReachMaxSpeed = 0x7A0; // float32
-                constexpr std::ptrdiff_t m_flTimeToReachZeroSpeed = 0x7A4; // float32
-                constexpr std::ptrdiff_t m_flDistanceToReachZeroSpeed = 0x7A8; // float32
-                constexpr std::ptrdiff_t m_flTimeMovementStart = 0x7AC; // GameTime_t
-                constexpr std::ptrdiff_t m_flTimeMovementStop = 0x7B0; // GameTime_t
-                constexpr std::ptrdiff_t m_hStopAtNode = 0x7B4; // CHandle<CMoverPathNode>
-                constexpr std::ptrdiff_t m_flPathLocationToBeginStop = 0x7B8; // float32
-                constexpr std::ptrdiff_t m_iszStartForwardSound = 0x7C0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszLoopForwardSound = 0x7C8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszStopForwardSound = 0x7D0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszStartReverseSound = 0x7D8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszLoopReverseSound = 0x7E0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszStopReverseSound = 0x7E8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszArriveAtDestinationSound = 0x7F0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_OnMovementEnd = 0x800; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bStartAtEnd = 0x828; // bool
-                constexpr std::ptrdiff_t m_eOrientationUpdate = 0x82C; // CFuncMover::OrientationUpdate_t
-                constexpr std::ptrdiff_t m_flTimeStartOrientationChange = 0x830; // GameTime_t
-                constexpr std::ptrdiff_t m_flTimeToBlendToNewOrientation = 0x834; // float32
-                constexpr std::ptrdiff_t m_flDurationBlendToNewOrientationRan = 0x838; // float32
-                constexpr std::ptrdiff_t m_qOriginalOrientation = 0x840; // Quaternion
+                constexpr std::ptrdiff_t m_bCreateMovableNavMesh = 0x790; // bool
+                constexpr std::ptrdiff_t m_iszPathName = 0x798; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hPathMover = 0x7A0; // CHandle<CPathMover>
+                constexpr std::ptrdiff_t m_iszPathNodeStart = 0x7A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_eMoveType = 0x7B0; // CFuncMover::Move_t
+                constexpr std::ptrdiff_t m_bIsReversing = 0x7B4; // bool
+                constexpr std::ptrdiff_t m_vTarget = 0x7B8; // Vector
+                constexpr std::ptrdiff_t m_flStartSpeed = 0x7C4; // float32
+                constexpr std::ptrdiff_t m_flPathLocation = 0x7C8; // float32
+                constexpr std::ptrdiff_t m_flT = 0x7CC; // float32
+                constexpr std::ptrdiff_t m_nCurrentNodeIndex = 0x7D0; // int32
+                constexpr std::ptrdiff_t m_nPreviousNodeIndex = 0x7D4; // int32
+                constexpr std::ptrdiff_t m_bFixedOrientation = 0x7D8; // bool
+                constexpr std::ptrdiff_t m_bFixedPitch = 0x7D9; // bool
+                constexpr std::ptrdiff_t m_eSolidType = 0x7DA; // SolidType_t
+                constexpr std::ptrdiff_t m_bIsMoving = 0x7DB; // bool
+                constexpr std::ptrdiff_t m_flTimeToReachMaxSpeed = 0x7DC; // float32
+                constexpr std::ptrdiff_t m_flDistanceToReachMaxSpeed = 0x7E0; // float32
+                constexpr std::ptrdiff_t m_flTimeToReachZeroSpeed = 0x7E4; // float32
+                constexpr std::ptrdiff_t m_flDistanceToReachZeroSpeed = 0x7E8; // float32
+                constexpr std::ptrdiff_t m_flTimeMovementStart = 0x7EC; // GameTime_t
+                constexpr std::ptrdiff_t m_flTimeMovementStop = 0x7F0; // GameTime_t
+                constexpr std::ptrdiff_t m_hStopAtNode = 0x7F4; // CHandle<CMoverPathNode>
+                constexpr std::ptrdiff_t m_flPathLocationToBeginStop = 0x7F8; // float32
+                constexpr std::ptrdiff_t m_iszStartForwardSound = 0x800; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszLoopForwardSound = 0x808; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszStopForwardSound = 0x810; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszStartReverseSound = 0x818; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszLoopReverseSound = 0x820; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszStopReverseSound = 0x828; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszArriveAtDestinationSound = 0x830; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_OnMovementEnd = 0x840; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bStartAtEnd = 0x868; // bool
+                constexpr std::ptrdiff_t m_eOrientationUpdate = 0x86C; // CFuncMover::OrientationUpdate_t
+                constexpr std::ptrdiff_t m_flTimeStartOrientationChange = 0x870; // GameTime_t
+                constexpr std::ptrdiff_t m_flTimeToBlendToNewOrientation = 0x874; // float32
+                constexpr std::ptrdiff_t m_flDurationBlendToNewOrientationRan = 0x878; // float32
+                constexpr std::ptrdiff_t m_qOriginalOrientation = 0x880; // Quaternion
             }
             // Parent: None
             // Field count: 5
@@ -7359,9 +7374,9 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 3
             namespace CBubbling {
-                constexpr std::ptrdiff_t m_density = 0x750; // int32
-                constexpr std::ptrdiff_t m_frequency = 0x754; // int32
-                constexpr std::ptrdiff_t m_state = 0x758; // int32
+                constexpr std::ptrdiff_t m_density = 0x790; // int32
+                constexpr std::ptrdiff_t m_frequency = 0x794; // int32
+                constexpr std::ptrdiff_t m_state = 0x798; // int32
             }
             // Parent: CTeamplayRules
             // Field count: 189
@@ -7675,16 +7690,16 @@ namespace cs2_dumper {
             // NetworkVarNames: m_Weight (float32)
             // NetworkVarNames: m_lookupFilename (char)
             namespace CColorCorrectionVolume {
-                constexpr std::ptrdiff_t m_bEnabled = 0x920; // bool
-                constexpr std::ptrdiff_t m_MaxWeight = 0x924; // float32
-                constexpr std::ptrdiff_t m_FadeDuration = 0x928; // float32
-                constexpr std::ptrdiff_t m_bStartDisabled = 0x92C; // bool
-                constexpr std::ptrdiff_t m_Weight = 0x930; // float32
-                constexpr std::ptrdiff_t m_lookupFilename = 0x934; // char[512]
-                constexpr std::ptrdiff_t m_LastEnterWeight = 0xB34; // float32
-                constexpr std::ptrdiff_t m_LastEnterTime = 0xB38; // GameTime_t
-                constexpr std::ptrdiff_t m_LastExitWeight = 0xB3C; // float32
-                constexpr std::ptrdiff_t m_LastExitTime = 0xB40; // GameTime_t
+                constexpr std::ptrdiff_t m_bEnabled = 0x960; // bool
+                constexpr std::ptrdiff_t m_MaxWeight = 0x964; // float32
+                constexpr std::ptrdiff_t m_FadeDuration = 0x968; // float32
+                constexpr std::ptrdiff_t m_bStartDisabled = 0x96C; // bool
+                constexpr std::ptrdiff_t m_Weight = 0x970; // float32
+                constexpr std::ptrdiff_t m_lookupFilename = 0x974; // char[512]
+                constexpr std::ptrdiff_t m_LastEnterWeight = 0xB74; // float32
+                constexpr std::ptrdiff_t m_LastEnterTime = 0xB78; // GameTime_t
+                constexpr std::ptrdiff_t m_LastExitWeight = 0xB7C; // float32
+                constexpr std::ptrdiff_t m_LastExitTime = 0xB80; // GameTime_t
             }
             // Parent: CBaseFilter
             // Field count: 5
@@ -7747,22 +7762,22 @@ namespace cs2_dumper {
             // Parent: CModelPointEntity
             // Field count: 16
             namespace CEnvExplosion {
-                constexpr std::ptrdiff_t m_iMagnitude = 0x750; // int32
-                constexpr std::ptrdiff_t m_flPlayerDamage = 0x754; // float32
-                constexpr std::ptrdiff_t m_iRadiusOverride = 0x758; // int32
-                constexpr std::ptrdiff_t m_flInnerRadius = 0x75C; // float32
-                constexpr std::ptrdiff_t m_spriteScale = 0x760; // int32
-                constexpr std::ptrdiff_t m_flDamageForce = 0x764; // float32
-                constexpr std::ptrdiff_t m_hInflictor = 0x768; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iCustomDamageType = 0x76C; // DamageTypes_t
-                constexpr std::ptrdiff_t m_bCreateDebris = 0x770; // bool
-                constexpr std::ptrdiff_t m_iszExplosionType = 0x778; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszCustomEffectName = 0x780; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszCustomSoundName = 0x788; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iClassIgnore = 0x790; // Class_T
-                constexpr std::ptrdiff_t m_iClassIgnore2 = 0x794; // Class_T
-                constexpr std::ptrdiff_t m_iszEntityIgnoreName = 0x798; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hEntityIgnore = 0x7A0; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iMagnitude = 0x790; // int32
+                constexpr std::ptrdiff_t m_flPlayerDamage = 0x794; // float32
+                constexpr std::ptrdiff_t m_iRadiusOverride = 0x798; // int32
+                constexpr std::ptrdiff_t m_flInnerRadius = 0x79C; // float32
+                constexpr std::ptrdiff_t m_spriteScale = 0x7A0; // int32
+                constexpr std::ptrdiff_t m_flDamageForce = 0x7A4; // float32
+                constexpr std::ptrdiff_t m_hInflictor = 0x7A8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iCustomDamageType = 0x7AC; // DamageTypes_t
+                constexpr std::ptrdiff_t m_bCreateDebris = 0x7B0; // bool
+                constexpr std::ptrdiff_t m_iszExplosionType = 0x7B8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszCustomEffectName = 0x7C0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszCustomSoundName = 0x7C8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iClassIgnore = 0x7D0; // Class_T
+                constexpr std::ptrdiff_t m_iClassIgnore2 = 0x7D4; // Class_T
+                constexpr std::ptrdiff_t m_iszEntityIgnoreName = 0x7D8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hEntityIgnore = 0x7E0; // CHandle<CBaseEntity>
             }
             // Parent: CSoundEventEntity
             // Field count: 2
@@ -7811,36 +7826,36 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iNodeNumberMax (int)
             // NetworkVarNames: m_bListenedTo (bool)
             namespace CPointCommentaryNode {
-                constexpr std::ptrdiff_t m_iszPreCommands = 0x960; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszPostCommands = 0x968; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszCommentaryFile = 0x970; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszViewTarget = 0x978; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hViewTarget = 0x980; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_hViewTargetAngles = 0x984; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iszViewPosition = 0x988; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hViewPosition = 0x990; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_hViewPositionMover = 0x994; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_bPreventMovement = 0x998; // bool
-                constexpr std::ptrdiff_t m_bUnderCrosshair = 0x999; // bool
-                constexpr std::ptrdiff_t m_bUnstoppable = 0x99A; // bool
-                constexpr std::ptrdiff_t m_flFinishedTime = 0x99C; // GameTime_t
-                constexpr std::ptrdiff_t m_vecFinishOrigin = 0x9A0; // Vector
-                constexpr std::ptrdiff_t m_vecOriginalAngles = 0x9AC; // QAngle
-                constexpr std::ptrdiff_t m_vecFinishAngles = 0x9B8; // QAngle
-                constexpr std::ptrdiff_t m_bPreventChangesWhileMoving = 0x9C4; // bool
-                constexpr std::ptrdiff_t m_bDisabled = 0x9C5; // bool
-                constexpr std::ptrdiff_t m_vecTeleportOrigin = 0x9C8; // Vector
-                constexpr std::ptrdiff_t m_flAbortedPlaybackAt = 0x9D4; // GameTime_t
-                constexpr std::ptrdiff_t m_pOnCommentaryStarted = 0x9D8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_pOnCommentaryStopped = 0xA00; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bActive = 0xA28; // bool
-                constexpr std::ptrdiff_t m_flStartTime = 0xA2C; // GameTime_t
-                constexpr std::ptrdiff_t m_flStartTimeInCommentary = 0xA30; // float32
-                constexpr std::ptrdiff_t m_iszTitle = 0xA38; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszSpeakers = 0xA40; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iNodeNumber = 0xA48; // int32
-                constexpr std::ptrdiff_t m_iNodeNumberMax = 0xA4C; // int32
-                constexpr std::ptrdiff_t m_bListenedTo = 0xA50; // bool
+                constexpr std::ptrdiff_t m_iszPreCommands = 0x9A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszPostCommands = 0x9B0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszCommentaryFile = 0x9B8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszViewTarget = 0x9C0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hViewTarget = 0x9C8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hViewTargetAngles = 0x9CC; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iszViewPosition = 0x9D0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hViewPosition = 0x9D8; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hViewPositionMover = 0x9DC; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_bPreventMovement = 0x9E0; // bool
+                constexpr std::ptrdiff_t m_bUnderCrosshair = 0x9E1; // bool
+                constexpr std::ptrdiff_t m_bUnstoppable = 0x9E2; // bool
+                constexpr std::ptrdiff_t m_flFinishedTime = 0x9E4; // GameTime_t
+                constexpr std::ptrdiff_t m_vecFinishOrigin = 0x9E8; // Vector
+                constexpr std::ptrdiff_t m_vecOriginalAngles = 0x9F4; // QAngle
+                constexpr std::ptrdiff_t m_vecFinishAngles = 0xA00; // QAngle
+                constexpr std::ptrdiff_t m_bPreventChangesWhileMoving = 0xA0C; // bool
+                constexpr std::ptrdiff_t m_bDisabled = 0xA0D; // bool
+                constexpr std::ptrdiff_t m_vecTeleportOrigin = 0xA10; // Vector
+                constexpr std::ptrdiff_t m_flAbortedPlaybackAt = 0xA1C; // GameTime_t
+                constexpr std::ptrdiff_t m_pOnCommentaryStarted = 0xA20; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_pOnCommentaryStopped = 0xA48; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bActive = 0xA70; // bool
+                constexpr std::ptrdiff_t m_flStartTime = 0xA74; // GameTime_t
+                constexpr std::ptrdiff_t m_flStartTimeInCommentary = 0xA78; // float32
+                constexpr std::ptrdiff_t m_iszTitle = 0xA80; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszSpeakers = 0xA88; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iNodeNumber = 0xA90; // int32
+                constexpr std::ptrdiff_t m_iNodeNumberMax = 0xA94; // int32
+                constexpr std::ptrdiff_t m_bListenedTo = 0xA98; // bool
             }
             // Parent: CBaseClientUIEntity
             // Field count: 23
@@ -7870,29 +7885,29 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bDisableMipGen (bool)
             // NetworkVarNames: m_nExplicitImageLayout (int32)
             namespace CPointClientUIWorldPanel {
-                constexpr std::ptrdiff_t m_bIgnoreInput = 0x900; // bool
-                constexpr std::ptrdiff_t m_bLit = 0x901; // bool
-                constexpr std::ptrdiff_t m_bFollowPlayerAcrossTeleport = 0x902; // bool
-                constexpr std::ptrdiff_t m_flWidth = 0x904; // float32
-                constexpr std::ptrdiff_t m_flHeight = 0x908; // float32
-                constexpr std::ptrdiff_t m_flDPI = 0x90C; // float32
-                constexpr std::ptrdiff_t m_flInteractDistance = 0x910; // float32
-                constexpr std::ptrdiff_t m_flDepthOffset = 0x914; // float32
-                constexpr std::ptrdiff_t m_unOwnerContext = 0x918; // uint32
-                constexpr std::ptrdiff_t m_unHorizontalAlign = 0x91C; // uint32
-                constexpr std::ptrdiff_t m_unVerticalAlign = 0x920; // uint32
-                constexpr std::ptrdiff_t m_unOrientation = 0x924; // uint32
-                constexpr std::ptrdiff_t m_bAllowInteractionFromAllSceneWorlds = 0x928; // bool
-                constexpr std::ptrdiff_t m_vecCSSClasses = 0x930; // CNetworkUtlVectorBase<CUtlSymbolLarge>
-                constexpr std::ptrdiff_t m_bOpaque = 0x948; // bool
-                constexpr std::ptrdiff_t m_bNoDepth = 0x949; // bool
-                constexpr std::ptrdiff_t m_bRenderBackface = 0x94A; // bool
-                constexpr std::ptrdiff_t m_bUseOffScreenIndicator = 0x94B; // bool
-                constexpr std::ptrdiff_t m_bExcludeFromSaveGames = 0x94C; // bool
-                constexpr std::ptrdiff_t m_bGrabbable = 0x94D; // bool
-                constexpr std::ptrdiff_t m_bOnlyRenderToTexture = 0x94E; // bool
-                constexpr std::ptrdiff_t m_bDisableMipGen = 0x94F; // bool
-                constexpr std::ptrdiff_t m_nExplicitImageLayout = 0x950; // int32
+                constexpr std::ptrdiff_t m_bIgnoreInput = 0x940; // bool
+                constexpr std::ptrdiff_t m_bLit = 0x941; // bool
+                constexpr std::ptrdiff_t m_bFollowPlayerAcrossTeleport = 0x942; // bool
+                constexpr std::ptrdiff_t m_flWidth = 0x944; // float32
+                constexpr std::ptrdiff_t m_flHeight = 0x948; // float32
+                constexpr std::ptrdiff_t m_flDPI = 0x94C; // float32
+                constexpr std::ptrdiff_t m_flInteractDistance = 0x950; // float32
+                constexpr std::ptrdiff_t m_flDepthOffset = 0x954; // float32
+                constexpr std::ptrdiff_t m_unOwnerContext = 0x958; // uint32
+                constexpr std::ptrdiff_t m_unHorizontalAlign = 0x95C; // uint32
+                constexpr std::ptrdiff_t m_unVerticalAlign = 0x960; // uint32
+                constexpr std::ptrdiff_t m_unOrientation = 0x964; // uint32
+                constexpr std::ptrdiff_t m_bAllowInteractionFromAllSceneWorlds = 0x968; // bool
+                constexpr std::ptrdiff_t m_vecCSSClasses = 0x970; // CNetworkUtlVectorBase<CUtlSymbolLarge>
+                constexpr std::ptrdiff_t m_bOpaque = 0x988; // bool
+                constexpr std::ptrdiff_t m_bNoDepth = 0x989; // bool
+                constexpr std::ptrdiff_t m_bRenderBackface = 0x98A; // bool
+                constexpr std::ptrdiff_t m_bUseOffScreenIndicator = 0x98B; // bool
+                constexpr std::ptrdiff_t m_bExcludeFromSaveGames = 0x98C; // bool
+                constexpr std::ptrdiff_t m_bGrabbable = 0x98D; // bool
+                constexpr std::ptrdiff_t m_bOnlyRenderToTexture = 0x98E; // bool
+                constexpr std::ptrdiff_t m_bDisableMipGen = 0x98F; // bool
+                constexpr std::ptrdiff_t m_nExplicitImageLayout = 0x990; // int32
             }
             // Parent: CBaseFilter
             // Field count: 1
@@ -7927,9 +7942,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_weaponPurchasesThisRound (WeaponPurchaseTracker_t)
             namespace CCSPlayer_ActionTrackingServices {
                 constexpr std::ptrdiff_t m_hLastWeaponBeforeC4AutoSwitch = 0x200; // CHandle<CBasePlayerWeapon>
-                constexpr std::ptrdiff_t m_bIsRescuing = 0x234; // bool
-                constexpr std::ptrdiff_t m_weaponPurchasesThisMatch = 0x238; // WeaponPurchaseTracker_t
-                constexpr std::ptrdiff_t m_weaponPurchasesThisRound = 0x290; // WeaponPurchaseTracker_t
+                constexpr std::ptrdiff_t m_bIsRescuing = 0x22C; // bool
+                constexpr std::ptrdiff_t m_weaponPurchasesThisMatch = 0x230; // WeaponPurchaseTracker_t
+                constexpr std::ptrdiff_t m_weaponPurchasesThisRound = 0x288; // WeaponPurchaseTracker_t
             }
             // Parent: CPointEntity
             // Field count: 6
@@ -7987,10 +8002,10 @@ namespace cs2_dumper {
             // Parent: CBaseAnimGraph
             // Field count: 4
             namespace CBaseProp {
-                constexpr std::ptrdiff_t m_bModelOverrodeBlockLOS = 0x960; // bool
-                constexpr std::ptrdiff_t m_iShapeType = 0x964; // int32
-                constexpr std::ptrdiff_t m_bConformToCollisionBounds = 0x968; // bool
-                constexpr std::ptrdiff_t m_mPreferredCatchTransform = 0x96C; // matrix3x4_t
+                constexpr std::ptrdiff_t m_bModelOverrodeBlockLOS = 0x9A8; // bool
+                constexpr std::ptrdiff_t m_iShapeType = 0x9AC; // int32
+                constexpr std::ptrdiff_t m_bConformToCollisionBounds = 0x9B0; // bool
+                constexpr std::ptrdiff_t m_mPreferredCatchTransform = 0x9B4; // matrix3x4_t
             }
             // Parent: CBaseModelEntity
             // Field count: 12
@@ -8009,18 +8024,18 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flFogMaxEnd (float)
             // NetworkVarNames: m_bEnabled (bool)
             namespace CEnvSky {
-                constexpr std::ptrdiff_t m_hSkyMaterial = 0x750; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_hSkyMaterialLightingOnly = 0x758; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_bStartDisabled = 0x760; // bool
-                constexpr std::ptrdiff_t m_vTintColor = 0x761; // Color
-                constexpr std::ptrdiff_t m_vTintColorLightingOnly = 0x765; // Color
-                constexpr std::ptrdiff_t m_flBrightnessScale = 0x76C; // float32
-                constexpr std::ptrdiff_t m_nFogType = 0x770; // int32
-                constexpr std::ptrdiff_t m_flFogMinStart = 0x774; // float32
-                constexpr std::ptrdiff_t m_flFogMinEnd = 0x778; // float32
-                constexpr std::ptrdiff_t m_flFogMaxStart = 0x77C; // float32
-                constexpr std::ptrdiff_t m_flFogMaxEnd = 0x780; // float32
-                constexpr std::ptrdiff_t m_bEnabled = 0x784; // bool
+                constexpr std::ptrdiff_t m_hSkyMaterial = 0x790; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_hSkyMaterialLightingOnly = 0x798; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_bStartDisabled = 0x7A0; // bool
+                constexpr std::ptrdiff_t m_vTintColor = 0x7A1; // Color
+                constexpr std::ptrdiff_t m_vTintColorLightingOnly = 0x7A5; // Color
+                constexpr std::ptrdiff_t m_flBrightnessScale = 0x7AC; // float32
+                constexpr std::ptrdiff_t m_nFogType = 0x7B0; // int32
+                constexpr std::ptrdiff_t m_flFogMinStart = 0x7B4; // float32
+                constexpr std::ptrdiff_t m_flFogMinEnd = 0x7B8; // float32
+                constexpr std::ptrdiff_t m_flFogMaxStart = 0x7BC; // float32
+                constexpr std::ptrdiff_t m_flFogMaxEnd = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_bEnabled = 0x7C4; // bool
             }
             // Parent: CPointEntity
             // Field count: 6
@@ -8045,7 +8060,7 @@ namespace cs2_dumper {
             // Parent: CFuncTrackTrain
             // Field count: 1
             namespace CFuncTankTrain {
-                constexpr std::ptrdiff_t m_OnDeath = 0x8A0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnDeath = 0x8E0; // CEntityIOOutput
             }
             // Parent: CBaseEntity
             // Field count: 0
@@ -8062,12 +8077,12 @@ namespace cs2_dumper {
             // Parent: CMarkupVolumeWithRef
             // Field count: 1
             namespace CMarkupVolumeTagged_NavGame {
-                constexpr std::ptrdiff_t m_bFloodFillAttribute = 0x7A8; // bool
+                constexpr std::ptrdiff_t m_bFloodFillAttribute = 0x7E8; // bool
             }
             // Parent: CBaseTrigger
             // Field count: 1
             namespace CBuyZone {
-                constexpr std::ptrdiff_t m_LegacyTeamNum = 0x920; // int32
+                constexpr std::ptrdiff_t m_LegacyTeamNum = 0x960; // int32
             }
             // Parent: CLogicalEntity
             // Field count: 12
@@ -8148,7 +8163,7 @@ namespace cs2_dumper {
             // Parent: CTriggerOnce
             // Field count: 1
             namespace CScriptTriggerOnce {
-                constexpr std::ptrdiff_t m_vExtent = 0x948; // Vector
+                constexpr std::ptrdiff_t m_vExtent = 0x988; // Vector
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -8183,9 +8198,9 @@ namespace cs2_dumper {
             // Parent: CBaseCSGrenadeProjectile
             // Field count: 3
             namespace CFlashbangProjectile {
-                constexpr std::ptrdiff_t m_flTimeToDetonate = 0xB08; // float32
-                constexpr std::ptrdiff_t m_numOpponentsHit = 0xB0C; // uint8
-                constexpr std::ptrdiff_t m_numTeammatesHit = 0xB0D; // uint8
+                constexpr std::ptrdiff_t m_flTimeToDetonate = 0xB50; // float32
+                constexpr std::ptrdiff_t m_numOpponentsHit = 0xB54; // uint8
+                constexpr std::ptrdiff_t m_numTeammatesHit = 0xB55; // uint8
             }
             // Parent: CPointClientUIWorldPanel
             // Field count: 1
@@ -8193,7 +8208,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_messageText (char)
             namespace CPointClientUIWorldTextPanel {
-                constexpr std::ptrdiff_t m_messageText = 0x958; // char[512]
+                constexpr std::ptrdiff_t m_messageText = 0x998; // char[512]
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -8241,31 +8256,31 @@ namespace cs2_dumper {
             // NetworkVarNames: m_usable (bool)
             // NetworkVarNames: m_szDisplayText (string_t)
             namespace CBaseButton {
-                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7D0; // QAngle
-                constexpr std::ptrdiff_t m_fStayPushed = 0x7DC; // bool
-                constexpr std::ptrdiff_t m_fRotating = 0x7DD; // bool
-                constexpr std::ptrdiff_t m_ls = 0x7E0; // locksound_t
-                constexpr std::ptrdiff_t m_sUseSound = 0x800; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_sLockedSound = 0x808; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_sUnlockedSound = 0x810; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_sOverrideAnticipationName = 0x818; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bLocked = 0x820; // bool
-                constexpr std::ptrdiff_t m_bDisabled = 0x821; // bool
-                constexpr std::ptrdiff_t m_flUseLockedTime = 0x824; // GameTime_t
-                constexpr std::ptrdiff_t m_bSolidBsp = 0x828; // bool
-                constexpr std::ptrdiff_t m_OnDamaged = 0x830; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnPressed = 0x858; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnUseLocked = 0x880; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnIn = 0x8A8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnOut = 0x8D0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_nState = 0x8F8; // int32
-                constexpr std::ptrdiff_t m_hConstraint = 0x8FC; // CEntityHandle
-                constexpr std::ptrdiff_t m_hConstraintParent = 0x900; // CEntityHandle
-                constexpr std::ptrdiff_t m_bForceNpcExclude = 0x904; // bool
-                constexpr std::ptrdiff_t m_sGlowEntity = 0x908; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_glowEntity = 0x910; // CHandle<CBaseModelEntity>
-                constexpr std::ptrdiff_t m_usable = 0x914; // bool
-                constexpr std::ptrdiff_t m_szDisplayText = 0x918; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x810; // QAngle
+                constexpr std::ptrdiff_t m_fStayPushed = 0x81C; // bool
+                constexpr std::ptrdiff_t m_fRotating = 0x81D; // bool
+                constexpr std::ptrdiff_t m_ls = 0x820; // locksound_t
+                constexpr std::ptrdiff_t m_sUseSound = 0x840; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_sLockedSound = 0x848; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_sUnlockedSound = 0x850; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_sOverrideAnticipationName = 0x858; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bLocked = 0x860; // bool
+                constexpr std::ptrdiff_t m_bDisabled = 0x861; // bool
+                constexpr std::ptrdiff_t m_flUseLockedTime = 0x864; // GameTime_t
+                constexpr std::ptrdiff_t m_bSolidBsp = 0x868; // bool
+                constexpr std::ptrdiff_t m_OnDamaged = 0x870; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnPressed = 0x898; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnUseLocked = 0x8C0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnIn = 0x8E8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnOut = 0x910; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_nState = 0x938; // int32
+                constexpr std::ptrdiff_t m_hConstraint = 0x93C; // CEntityHandle
+                constexpr std::ptrdiff_t m_hConstraintParent = 0x940; // CEntityHandle
+                constexpr std::ptrdiff_t m_bForceNpcExclude = 0x944; // bool
+                constexpr std::ptrdiff_t m_sGlowEntity = 0x948; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_glowEntity = 0x950; // CHandle<CBaseModelEntity>
+                constexpr std::ptrdiff_t m_usable = 0x954; // bool
+                constexpr std::ptrdiff_t m_szDisplayText = 0x958; // CUtlSymbolLarge
             }
             // Parent: CPhysConstraint
             // Field count: 6
@@ -8335,7 +8350,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_bShouldIgnoreOffsetAndAccuracy (bool)
             namespace CCSGOViewModel {
-                constexpr std::ptrdiff_t m_bShouldIgnoreOffsetAndAccuracy = 0x9A8; // bool
+                constexpr std::ptrdiff_t m_bShouldIgnoreOffsetAndAccuracy = 0x9F0; // bool
             }
             // Parent: CCSWeaponBaseGun
             // Field count: 3
@@ -8343,9 +8358,9 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_flDisplayHealth (float)
             namespace CWeaponShield {
-                constexpr std::ptrdiff_t m_flBulletDamageAbsorbed = 0xF30; // float32
-                constexpr std::ptrdiff_t m_flLastBulletHitSoundTime = 0xF34; // GameTime_t
-                constexpr std::ptrdiff_t m_flDisplayHealth = 0xF38; // float32
+                constexpr std::ptrdiff_t m_flBulletDamageAbsorbed = 0xF78; // float32
+                constexpr std::ptrdiff_t m_flLastBulletHitSoundTime = 0xF7C; // GameTime_t
+                constexpr std::ptrdiff_t m_flDisplayHealth = 0xF80; // float32
             }
             // Parent: CPointEntity
             // Field count: 4
@@ -8373,39 +8388,39 @@ namespace cs2_dumper {
             // NetworkVarNames: m_CPropDataComponent (CPropDataComponent::Storage_t)
             // NetworkVarNames: m_noGhostCollision (bool)
             namespace CBreakableProp {
-                constexpr std::ptrdiff_t m_CPropDataComponent = 0x9A8; // CPropDataComponent
-                constexpr std::ptrdiff_t m_OnBreak = 0x9E8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnHealthChanged = 0xA10; // CEntityOutputTemplate<float32>
-                constexpr std::ptrdiff_t m_OnTakeDamage = 0xA38; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_impactEnergyScale = 0xA60; // float32
-                constexpr std::ptrdiff_t m_iMinHealthDmg = 0xA64; // int32
-                constexpr std::ptrdiff_t m_preferredCarryAngles = 0xA68; // QAngle
-                constexpr std::ptrdiff_t m_flPressureDelay = 0xA74; // float32
-                constexpr std::ptrdiff_t m_flDefBurstScale = 0xA78; // float32
-                constexpr std::ptrdiff_t m_vDefBurstOffset = 0xA7C; // Vector
-                constexpr std::ptrdiff_t m_hBreaker = 0xA88; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_PerformanceMode = 0xA8C; // PerformanceMode_t
-                constexpr std::ptrdiff_t m_flPreventDamageBeforeTime = 0xA90; // GameTime_t
-                constexpr std::ptrdiff_t m_BreakableContentsType = 0xA94; // BreakableContentsType_t
-                constexpr std::ptrdiff_t m_strBreakableContentsPropGroupOverride = 0xA98; // CUtlString
-                constexpr std::ptrdiff_t m_strBreakableContentsParticleOverride = 0xAA0; // CUtlString
-                constexpr std::ptrdiff_t m_bHasBreakPiecesOrCommands = 0xAA8; // bool
-                constexpr std::ptrdiff_t m_explodeDamage = 0xAAC; // float32
-                constexpr std::ptrdiff_t m_explodeRadius = 0xAB0; // float32
-                constexpr std::ptrdiff_t m_explosionDelay = 0xAB8; // float32
-                constexpr std::ptrdiff_t m_explosionBuildupSound = 0xAC0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_explosionCustomEffect = 0xAC8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_explosionCustomSound = 0xAD0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_explosionModifier = 0xAD8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hPhysicsAttacker = 0xAE0; // CHandle<CBasePlayerPawn>
-                constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0xAE4; // GameTime_t
-                constexpr std::ptrdiff_t m_bOriginalBlockLOS = 0xAE8; // bool
-                constexpr std::ptrdiff_t m_flDefaultFadeScale = 0xAEC; // float32
-                constexpr std::ptrdiff_t m_hLastAttacker = 0xAF0; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_hFlareEnt = 0xAF4; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_bUsePuntSound = 0xAF8; // bool
-                constexpr std::ptrdiff_t m_iszPuntSound = 0xB00; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_noGhostCollision = 0xB08; // bool
+                constexpr std::ptrdiff_t m_CPropDataComponent = 0x9F0; // CPropDataComponent
+                constexpr std::ptrdiff_t m_OnBreak = 0xA30; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnHealthChanged = 0xA58; // CEntityOutputTemplate<float32>
+                constexpr std::ptrdiff_t m_OnTakeDamage = 0xA80; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_impactEnergyScale = 0xAA8; // float32
+                constexpr std::ptrdiff_t m_iMinHealthDmg = 0xAAC; // int32
+                constexpr std::ptrdiff_t m_preferredCarryAngles = 0xAB0; // QAngle
+                constexpr std::ptrdiff_t m_flPressureDelay = 0xABC; // float32
+                constexpr std::ptrdiff_t m_flDefBurstScale = 0xAC0; // float32
+                constexpr std::ptrdiff_t m_vDefBurstOffset = 0xAC4; // Vector
+                constexpr std::ptrdiff_t m_hBreaker = 0xAD0; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_PerformanceMode = 0xAD4; // PerformanceMode_t
+                constexpr std::ptrdiff_t m_flPreventDamageBeforeTime = 0xAD8; // GameTime_t
+                constexpr std::ptrdiff_t m_BreakableContentsType = 0xADC; // BreakableContentsType_t
+                constexpr std::ptrdiff_t m_strBreakableContentsPropGroupOverride = 0xAE0; // CUtlString
+                constexpr std::ptrdiff_t m_strBreakableContentsParticleOverride = 0xAE8; // CUtlString
+                constexpr std::ptrdiff_t m_bHasBreakPiecesOrCommands = 0xAF0; // bool
+                constexpr std::ptrdiff_t m_explodeDamage = 0xAF4; // float32
+                constexpr std::ptrdiff_t m_explodeRadius = 0xAF8; // float32
+                constexpr std::ptrdiff_t m_explosionDelay = 0xB00; // float32
+                constexpr std::ptrdiff_t m_explosionBuildupSound = 0xB08; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_explosionCustomEffect = 0xB10; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_explosionCustomSound = 0xB18; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_explosionModifier = 0xB20; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hPhysicsAttacker = 0xB28; // CHandle<CBasePlayerPawn>
+                constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0xB2C; // GameTime_t
+                constexpr std::ptrdiff_t m_bOriginalBlockLOS = 0xB30; // bool
+                constexpr std::ptrdiff_t m_flDefaultFadeScale = 0xB34; // float32
+                constexpr std::ptrdiff_t m_hLastAttacker = 0xB38; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_hFlareEnt = 0xB3C; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_bUsePuntSound = 0xB40; // bool
+                constexpr std::ptrdiff_t m_iszPuntSound = 0xB48; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_noGhostCollision = 0xB50; // bool
             }
             // Parent: CPlayerPawnComponent
             // Field count: 1
@@ -8424,22 +8439,21 @@ namespace cs2_dumper {
             namespace CPathSimpleAPI {
             }
             // Parent: CBaseFlex
-            // Field count: 10
+            // Field count: 9
             //
             // Metadata:
             // MNetworkExcludeByUserGroup
             // NetworkVarNames: m_hMyWearables (CHandle<CEconWearable>)
             namespace CBaseCombatCharacter {
-                constexpr std::ptrdiff_t m_bForceServerRagdoll = 0x9F0; // bool
-                constexpr std::ptrdiff_t m_hMyWearables = 0x9F8; // CNetworkUtlVectorBase<CHandle<CEconWearable>>
-                constexpr std::ptrdiff_t m_impactEnergyScale = 0xA10; // float32
-                constexpr std::ptrdiff_t m_LastHitGroup = 0xA14; // HitGroup_t
-                constexpr std::ptrdiff_t m_bApplyStressDamage = 0xA18; // bool
-                constexpr std::ptrdiff_t m_iDamageCount = 0xA60; // int32
-                constexpr std::ptrdiff_t m_pVecRelationships = 0xA68; // CUtlVector<RelationshipOverride_t>*
-                constexpr std::ptrdiff_t m_strRelationships = 0xA70; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_eHull = 0xA78; // Hull_t
-                constexpr std::ptrdiff_t m_nNavHullIdx = 0xA7C; // uint32
+                constexpr std::ptrdiff_t m_bForceServerRagdoll = 0xA38; // bool
+                constexpr std::ptrdiff_t m_hMyWearables = 0xA40; // CNetworkUtlVectorBase<CHandle<CEconWearable>>
+                constexpr std::ptrdiff_t m_impactEnergyScale = 0xA58; // float32
+                constexpr std::ptrdiff_t m_bApplyStressDamage = 0xA5C; // bool
+                constexpr std::ptrdiff_t m_iDamageCount = 0xAA0; // int32
+                constexpr std::ptrdiff_t m_pVecRelationships = 0xAA8; // CUtlVector<RelationshipOverride_t>*
+                constexpr std::ptrdiff_t m_strRelationships = 0xAB0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_eHull = 0xAB8; // Hull_t
+                constexpr std::ptrdiff_t m_nNavHullIdx = 0xABC; // uint32
             }
             // Parent: CBaseModelEntity
             // Field count: 25
@@ -8455,31 +8469,31 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nFireLifetime (float)
             // NetworkVarNames: m_bInPostEffectTime (bool)
             namespace CInferno {
-                constexpr std::ptrdiff_t m_firePositions = 0x760; // Vector[64]
-                constexpr std::ptrdiff_t m_fireParentPositions = 0xA60; // Vector[64]
-                constexpr std::ptrdiff_t m_bFireIsBurning = 0xD60; // bool[64]
-                constexpr std::ptrdiff_t m_BurnNormal = 0xDA0; // Vector[64]
-                constexpr std::ptrdiff_t m_fireCount = 0x10A0; // int32
-                constexpr std::ptrdiff_t m_nInfernoType = 0x10A4; // int32
-                constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x10A8; // int32
-                constexpr std::ptrdiff_t m_nFireLifetime = 0x10AC; // float32
-                constexpr std::ptrdiff_t m_bInPostEffectTime = 0x10B0; // bool
-                constexpr std::ptrdiff_t m_nFiresExtinguishCount = 0x10B4; // int32
-                constexpr std::ptrdiff_t m_bWasCreatedInSmoke = 0x10B8; // bool
-                constexpr std::ptrdiff_t m_extent = 0x12C0; // Extent
-                constexpr std::ptrdiff_t m_damageTimer = 0x12D8; // CountdownTimer
-                constexpr std::ptrdiff_t m_damageRampTimer = 0x12F0; // CountdownTimer
-                constexpr std::ptrdiff_t m_splashVelocity = 0x1308; // Vector
-                constexpr std::ptrdiff_t m_InitialSplashVelocity = 0x1314; // Vector
-                constexpr std::ptrdiff_t m_startPos = 0x1320; // Vector
-                constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0x132C; // Vector
-                constexpr std::ptrdiff_t m_activeTimer = 0x1338; // IntervalTimer
-                constexpr std::ptrdiff_t m_fireSpawnOffset = 0x1348; // int32
-                constexpr std::ptrdiff_t m_nMaxFlames = 0x134C; // int32
-                constexpr std::ptrdiff_t m_nSpreadCount = 0x1350; // int32
-                constexpr std::ptrdiff_t m_BookkeepingTimer = 0x1358; // CountdownTimer
-                constexpr std::ptrdiff_t m_NextSpreadTimer = 0x1370; // CountdownTimer
-                constexpr std::ptrdiff_t m_nSourceItemDefIndex = 0x1388; // uint16
+                constexpr std::ptrdiff_t m_firePositions = 0x7A0; // Vector[64]
+                constexpr std::ptrdiff_t m_fireParentPositions = 0xAA0; // Vector[64]
+                constexpr std::ptrdiff_t m_bFireIsBurning = 0xDA0; // bool[64]
+                constexpr std::ptrdiff_t m_BurnNormal = 0xDE0; // Vector[64]
+                constexpr std::ptrdiff_t m_fireCount = 0x10E0; // int32
+                constexpr std::ptrdiff_t m_nInfernoType = 0x10E4; // int32
+                constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x10E8; // int32
+                constexpr std::ptrdiff_t m_nFireLifetime = 0x10EC; // float32
+                constexpr std::ptrdiff_t m_bInPostEffectTime = 0x10F0; // bool
+                constexpr std::ptrdiff_t m_nFiresExtinguishCount = 0x10F4; // int32
+                constexpr std::ptrdiff_t m_bWasCreatedInSmoke = 0x10F8; // bool
+                constexpr std::ptrdiff_t m_extent = 0x1300; // Extent
+                constexpr std::ptrdiff_t m_damageTimer = 0x1318; // CountdownTimer
+                constexpr std::ptrdiff_t m_damageRampTimer = 0x1330; // CountdownTimer
+                constexpr std::ptrdiff_t m_splashVelocity = 0x1348; // Vector
+                constexpr std::ptrdiff_t m_InitialSplashVelocity = 0x1354; // Vector
+                constexpr std::ptrdiff_t m_startPos = 0x1360; // Vector
+                constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0x136C; // Vector
+                constexpr std::ptrdiff_t m_activeTimer = 0x1378; // IntervalTimer
+                constexpr std::ptrdiff_t m_fireSpawnOffset = 0x1388; // int32
+                constexpr std::ptrdiff_t m_nMaxFlames = 0x138C; // int32
+                constexpr std::ptrdiff_t m_nSpreadCount = 0x1390; // int32
+                constexpr std::ptrdiff_t m_BookkeepingTimer = 0x1398; // CountdownTimer
+                constexpr std::ptrdiff_t m_NextSpreadTimer = 0x13B0; // CountdownTimer
+                constexpr std::ptrdiff_t m_nSourceItemDefIndex = 0x13C8; // uint16
             }
             // Parent: CLogicalEntity
             // Field count: 5
@@ -8533,29 +8547,29 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flGlowProxySize (float32)
             // NetworkVarNames: m_flHDRColorScale (float32)
             namespace CSprite {
-                constexpr std::ptrdiff_t m_hSpriteMaterial = 0x750; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_hAttachedToEntity = 0x758; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_nAttachment = 0x75C; // AttachmentHandle_t
-                constexpr std::ptrdiff_t m_flSpriteFramerate = 0x760; // float32
-                constexpr std::ptrdiff_t m_flFrame = 0x764; // float32
-                constexpr std::ptrdiff_t m_flDieTime = 0x768; // GameTime_t
-                constexpr std::ptrdiff_t m_nBrightness = 0x778; // uint32
-                constexpr std::ptrdiff_t m_flBrightnessDuration = 0x77C; // float32
-                constexpr std::ptrdiff_t m_flSpriteScale = 0x780; // float32
-                constexpr std::ptrdiff_t m_flScaleDuration = 0x784; // float32
-                constexpr std::ptrdiff_t m_bWorldSpaceScale = 0x788; // bool
-                constexpr std::ptrdiff_t m_flGlowProxySize = 0x78C; // float32
-                constexpr std::ptrdiff_t m_flHDRColorScale = 0x790; // float32
-                constexpr std::ptrdiff_t m_flLastTime = 0x794; // GameTime_t
-                constexpr std::ptrdiff_t m_flMaxFrame = 0x798; // float32
-                constexpr std::ptrdiff_t m_flStartScale = 0x79C; // float32
-                constexpr std::ptrdiff_t m_flDestScale = 0x7A0; // float32
-                constexpr std::ptrdiff_t m_flScaleTimeStart = 0x7A4; // GameTime_t
-                constexpr std::ptrdiff_t m_nStartBrightness = 0x7A8; // int32
-                constexpr std::ptrdiff_t m_nDestBrightness = 0x7AC; // int32
-                constexpr std::ptrdiff_t m_flBrightnessTimeStart = 0x7B0; // GameTime_t
-                constexpr std::ptrdiff_t m_nSpriteWidth = 0x7B4; // int32
-                constexpr std::ptrdiff_t m_nSpriteHeight = 0x7B8; // int32
+                constexpr std::ptrdiff_t m_hSpriteMaterial = 0x790; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_hAttachedToEntity = 0x798; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_nAttachment = 0x79C; // AttachmentHandle_t
+                constexpr std::ptrdiff_t m_flSpriteFramerate = 0x7A0; // float32
+                constexpr std::ptrdiff_t m_flFrame = 0x7A4; // float32
+                constexpr std::ptrdiff_t m_flDieTime = 0x7A8; // GameTime_t
+                constexpr std::ptrdiff_t m_nBrightness = 0x7B8; // uint32
+                constexpr std::ptrdiff_t m_flBrightnessDuration = 0x7BC; // float32
+                constexpr std::ptrdiff_t m_flSpriteScale = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_flScaleDuration = 0x7C4; // float32
+                constexpr std::ptrdiff_t m_bWorldSpaceScale = 0x7C8; // bool
+                constexpr std::ptrdiff_t m_flGlowProxySize = 0x7CC; // float32
+                constexpr std::ptrdiff_t m_flHDRColorScale = 0x7D0; // float32
+                constexpr std::ptrdiff_t m_flLastTime = 0x7D4; // GameTime_t
+                constexpr std::ptrdiff_t m_flMaxFrame = 0x7D8; // float32
+                constexpr std::ptrdiff_t m_flStartScale = 0x7DC; // float32
+                constexpr std::ptrdiff_t m_flDestScale = 0x7E0; // float32
+                constexpr std::ptrdiff_t m_flScaleTimeStart = 0x7E4; // GameTime_t
+                constexpr std::ptrdiff_t m_nStartBrightness = 0x7E8; // int32
+                constexpr std::ptrdiff_t m_nDestBrightness = 0x7EC; // int32
+                constexpr std::ptrdiff_t m_flBrightnessTimeStart = 0x7F0; // GameTime_t
+                constexpr std::ptrdiff_t m_nSpriteWidth = 0x7F4; // int32
+                constexpr std::ptrdiff_t m_nSpriteHeight = 0x7F8; // int32
             }
             // Parent: CBaseTrigger
             // Field count: 0
@@ -8594,63 +8608,63 @@ namespace cs2_dumper {
             // NetworkVarNames: m_jumpedThisFrame (bool)
             // NetworkVarNames: m_leader (CHandle<CCSPlayerPawn>)
             namespace CChicken {
-                constexpr std::ptrdiff_t m_AttributeManager = 0xC30; // CAttributeContainer
-                constexpr std::ptrdiff_t m_updateTimer = 0xEF8; // CountdownTimer
-                constexpr std::ptrdiff_t m_stuckAnchor = 0xF10; // Vector
-                constexpr std::ptrdiff_t m_stuckTimer = 0xF20; // CountdownTimer
-                constexpr std::ptrdiff_t m_collisionStuckTimer = 0xF38; // CountdownTimer
-                constexpr std::ptrdiff_t m_isOnGround = 0xF50; // bool
-                constexpr std::ptrdiff_t m_vFallVelocity = 0xF54; // Vector
-                constexpr std::ptrdiff_t m_desiredActivity = 0xF60; // ChickenActivity
-                constexpr std::ptrdiff_t m_currentActivity = 0xF64; // ChickenActivity
-                constexpr std::ptrdiff_t m_activityTimer = 0xF68; // CountdownTimer
-                constexpr std::ptrdiff_t m_turnRate = 0xF80; // float32
-                constexpr std::ptrdiff_t m_fleeFrom = 0xF84; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_moveRateThrottleTimer = 0xF88; // CountdownTimer
-                constexpr std::ptrdiff_t m_startleTimer = 0xFA0; // CountdownTimer
-                constexpr std::ptrdiff_t m_vocalizeTimer = 0xFB8; // CountdownTimer
-                constexpr std::ptrdiff_t m_flWhenZombified = 0xFD0; // GameTime_t
-                constexpr std::ptrdiff_t m_jumpedThisFrame = 0xFD4; // bool
-                constexpr std::ptrdiff_t m_leader = 0xFD8; // CHandle<CCSPlayerPawn>
-                constexpr std::ptrdiff_t m_reuseTimer = 0xFF0; // CountdownTimer
-                constexpr std::ptrdiff_t m_hasBeenUsed = 0x1008; // bool
-                constexpr std::ptrdiff_t m_jumpTimer = 0x1010; // CountdownTimer
-                constexpr std::ptrdiff_t m_flLastJumpTime = 0x1028; // float32
-                constexpr std::ptrdiff_t m_bInJump = 0x102C; // bool
-                constexpr std::ptrdiff_t m_repathTimer = 0x3038; // CountdownTimer
-                constexpr std::ptrdiff_t m_vecPathGoal = 0x30D0; // Vector
-                constexpr std::ptrdiff_t m_flActiveFollowStartTime = 0x30DC; // GameTime_t
-                constexpr std::ptrdiff_t m_followMinuteTimer = 0x30E0; // CountdownTimer
-                constexpr std::ptrdiff_t m_BlockDirectionTimer = 0x3100; // CountdownTimer
+                constexpr std::ptrdiff_t m_AttributeManager = 0xC78; // CAttributeContainer
+                constexpr std::ptrdiff_t m_updateTimer = 0xF40; // CountdownTimer
+                constexpr std::ptrdiff_t m_stuckAnchor = 0xF58; // Vector
+                constexpr std::ptrdiff_t m_stuckTimer = 0xF68; // CountdownTimer
+                constexpr std::ptrdiff_t m_collisionStuckTimer = 0xF80; // CountdownTimer
+                constexpr std::ptrdiff_t m_isOnGround = 0xF98; // bool
+                constexpr std::ptrdiff_t m_vFallVelocity = 0xF9C; // Vector
+                constexpr std::ptrdiff_t m_desiredActivity = 0xFA8; // ChickenActivity
+                constexpr std::ptrdiff_t m_currentActivity = 0xFAC; // ChickenActivity
+                constexpr std::ptrdiff_t m_activityTimer = 0xFB0; // CountdownTimer
+                constexpr std::ptrdiff_t m_turnRate = 0xFC8; // float32
+                constexpr std::ptrdiff_t m_fleeFrom = 0xFCC; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_moveRateThrottleTimer = 0xFD0; // CountdownTimer
+                constexpr std::ptrdiff_t m_startleTimer = 0xFE8; // CountdownTimer
+                constexpr std::ptrdiff_t m_vocalizeTimer = 0x1000; // CountdownTimer
+                constexpr std::ptrdiff_t m_flWhenZombified = 0x1018; // GameTime_t
+                constexpr std::ptrdiff_t m_jumpedThisFrame = 0x101C; // bool
+                constexpr std::ptrdiff_t m_leader = 0x1020; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_reuseTimer = 0x1038; // CountdownTimer
+                constexpr std::ptrdiff_t m_hasBeenUsed = 0x1050; // bool
+                constexpr std::ptrdiff_t m_jumpTimer = 0x1058; // CountdownTimer
+                constexpr std::ptrdiff_t m_flLastJumpTime = 0x1070; // float32
+                constexpr std::ptrdiff_t m_bInJump = 0x1074; // bool
+                constexpr std::ptrdiff_t m_repathTimer = 0x3080; // CountdownTimer
+                constexpr std::ptrdiff_t m_vecPathGoal = 0x3118; // Vector
+                constexpr std::ptrdiff_t m_flActiveFollowStartTime = 0x3124; // GameTime_t
+                constexpr std::ptrdiff_t m_followMinuteTimer = 0x3128; // CountdownTimer
+                constexpr std::ptrdiff_t m_BlockDirectionTimer = 0x3148; // CountdownTimer
             }
             // Parent: CBaseTrigger
             // Field count: 7
             namespace CChangeLevel {
-                constexpr std::ptrdiff_t m_sMapName = 0x920; // CUtlString
-                constexpr std::ptrdiff_t m_sLandmarkName = 0x928; // CUtlString
-                constexpr std::ptrdiff_t m_OnChangeLevel = 0x930; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bTouched = 0x958; // bool
-                constexpr std::ptrdiff_t m_bNoTouch = 0x959; // bool
-                constexpr std::ptrdiff_t m_bNewChapter = 0x95A; // bool
-                constexpr std::ptrdiff_t m_bOnChangeLevelFired = 0x95B; // bool
+                constexpr std::ptrdiff_t m_sMapName = 0x960; // CUtlString
+                constexpr std::ptrdiff_t m_sLandmarkName = 0x968; // CUtlString
+                constexpr std::ptrdiff_t m_OnChangeLevel = 0x970; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bTouched = 0x998; // bool
+                constexpr std::ptrdiff_t m_bNoTouch = 0x999; // bool
+                constexpr std::ptrdiff_t m_bNewChapter = 0x99A; // bool
+                constexpr std::ptrdiff_t m_bOnChangeLevelFired = 0x99B; // bool
             }
             // Parent: CBaseTrigger
             // Field count: 14
             namespace CTriggerLerpObject {
-                constexpr std::ptrdiff_t m_iszLerpTarget = 0x920; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hLerpTarget = 0x928; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iszLerpTargetAttachment = 0x930; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hLerpTargetAttachment = 0x938; // AttachmentHandle_t
-                constexpr std::ptrdiff_t m_flLerpDuration = 0x93C; // float32
-                constexpr std::ptrdiff_t m_bLerpRestoreMoveType = 0x940; // bool
-                constexpr std::ptrdiff_t m_bSingleLerpObject = 0x941; // bool
-                constexpr std::ptrdiff_t m_vecLerpingObjects = 0x948; // CUtlVector<lerpdata_t>
-                constexpr std::ptrdiff_t m_iszLerpEffect = 0x960; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_iszLerpSound = 0x968; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bAttachTouchingObject = 0x970; // bool
-                constexpr std::ptrdiff_t m_hEntityToWaitForDisconnect = 0x974; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_OnLerpStarted = 0x978; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnLerpFinished = 0x9A0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_iszLerpTarget = 0x960; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hLerpTarget = 0x968; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iszLerpTargetAttachment = 0x970; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hLerpTargetAttachment = 0x978; // AttachmentHandle_t
+                constexpr std::ptrdiff_t m_flLerpDuration = 0x97C; // float32
+                constexpr std::ptrdiff_t m_bLerpRestoreMoveType = 0x980; // bool
+                constexpr std::ptrdiff_t m_bSingleLerpObject = 0x981; // bool
+                constexpr std::ptrdiff_t m_vecLerpingObjects = 0x988; // CUtlVector<lerpdata_t>
+                constexpr std::ptrdiff_t m_iszLerpEffect = 0x9A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszLerpSound = 0x9A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bAttachTouchingObject = 0x9B0; // bool
+                constexpr std::ptrdiff_t m_hEntityToWaitForDisconnect = 0x9B4; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_OnLerpStarted = 0x9B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnLerpFinished = 0x9E0; // CEntityIOOutput
             }
             // Parent: CBaseToggle
             // Field count: 12
@@ -8660,18 +8674,18 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bDisabled (bool)
             // NetworkVarNames: m_bClientSidePredicted (bool)
             namespace CBaseTrigger {
-                constexpr std::ptrdiff_t m_bDisabled = 0x7D0; // bool
-                constexpr std::ptrdiff_t m_iFilterName = 0x7D8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_hFilter = 0x7E0; // CHandle<CBaseFilter>
-                constexpr std::ptrdiff_t m_OnStartTouch = 0x7E8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnStartTouchAll = 0x810; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnEndTouch = 0x838; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnEndTouchAll = 0x860; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnTouching = 0x888; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnTouchingEachEntity = 0x8B0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnNotTouching = 0x8D8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_hTouchingEntities = 0x900; // CUtlVector<CHandle<CBaseEntity>>
-                constexpr std::ptrdiff_t m_bClientSidePredicted = 0x918; // bool
+                constexpr std::ptrdiff_t m_bDisabled = 0x810; // bool
+                constexpr std::ptrdiff_t m_iFilterName = 0x818; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hFilter = 0x820; // CHandle<CBaseFilter>
+                constexpr std::ptrdiff_t m_OnStartTouch = 0x828; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnStartTouchAll = 0x850; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnEndTouch = 0x878; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnEndTouchAll = 0x8A0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTouching = 0x8C8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnTouchingEachEntity = 0x8F0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnNotTouching = 0x918; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_hTouchingEntities = 0x940; // CUtlVector<CHandle<CBaseEntity>>
+                constexpr std::ptrdiff_t m_bClientSidePredicted = 0x958; // bool
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -8689,15 +8703,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flFallbackWear (float)
             // NetworkVarNames: m_nFallbackStatTrak (int)
             namespace CEconEntity {
-                constexpr std::ptrdiff_t m_AttributeManager = 0xA00; // CAttributeContainer
-                constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0xCC8; // uint32
-                constexpr std::ptrdiff_t m_OriginalOwnerXuidHigh = 0xCCC; // uint32
-                constexpr std::ptrdiff_t m_nFallbackPaintKit = 0xCD0; // int32
-                constexpr std::ptrdiff_t m_nFallbackSeed = 0xCD4; // int32
-                constexpr std::ptrdiff_t m_flFallbackWear = 0xCD8; // float32
-                constexpr std::ptrdiff_t m_nFallbackStatTrak = 0xCDC; // int32
-                constexpr std::ptrdiff_t m_hOldProvidee = 0xCE0; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iOldOwnerClass = 0xCE4; // int32
+                constexpr std::ptrdiff_t m_AttributeManager = 0xA48; // CAttributeContainer
+                constexpr std::ptrdiff_t m_OriginalOwnerXuidLow = 0xD10; // uint32
+                constexpr std::ptrdiff_t m_OriginalOwnerXuidHigh = 0xD14; // uint32
+                constexpr std::ptrdiff_t m_nFallbackPaintKit = 0xD18; // int32
+                constexpr std::ptrdiff_t m_nFallbackSeed = 0xD1C; // int32
+                constexpr std::ptrdiff_t m_flFallbackWear = 0xD20; // float32
+                constexpr std::ptrdiff_t m_nFallbackStatTrak = 0xD24; // int32
+                constexpr std::ptrdiff_t m_hOldProvidee = 0xD28; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iOldOwnerClass = 0xD2C; // int32
             }
             // Parent: None
             // Field count: 17
@@ -8773,17 +8787,17 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nJustifyVertical (PointWorldTextJustifyVertical_t)
             // NetworkVarNames: m_nReorientMode (PointWorldTextReorientMode_t)
             namespace CPointWorldText {
-                constexpr std::ptrdiff_t m_messageText = 0x750; // char[512]
-                constexpr std::ptrdiff_t m_FontName = 0x950; // char[64]
-                constexpr std::ptrdiff_t m_bEnabled = 0x990; // bool
-                constexpr std::ptrdiff_t m_bFullbright = 0x991; // bool
-                constexpr std::ptrdiff_t m_flWorldUnitsPerPx = 0x994; // float32
-                constexpr std::ptrdiff_t m_flFontSize = 0x998; // float32
-                constexpr std::ptrdiff_t m_flDepthOffset = 0x99C; // float32
-                constexpr std::ptrdiff_t m_Color = 0x9A0; // Color
-                constexpr std::ptrdiff_t m_nJustifyHorizontal = 0x9A4; // PointWorldTextJustifyHorizontal_t
-                constexpr std::ptrdiff_t m_nJustifyVertical = 0x9A8; // PointWorldTextJustifyVertical_t
-                constexpr std::ptrdiff_t m_nReorientMode = 0x9AC; // PointWorldTextReorientMode_t
+                constexpr std::ptrdiff_t m_messageText = 0x790; // char[512]
+                constexpr std::ptrdiff_t m_FontName = 0x990; // char[64]
+                constexpr std::ptrdiff_t m_bEnabled = 0x9D0; // bool
+                constexpr std::ptrdiff_t m_bFullbright = 0x9D1; // bool
+                constexpr std::ptrdiff_t m_flWorldUnitsPerPx = 0x9D4; // float32
+                constexpr std::ptrdiff_t m_flFontSize = 0x9D8; // float32
+                constexpr std::ptrdiff_t m_flDepthOffset = 0x9DC; // float32
+                constexpr std::ptrdiff_t m_Color = 0x9E0; // Color
+                constexpr std::ptrdiff_t m_nJustifyHorizontal = 0x9E4; // PointWorldTextJustifyHorizontal_t
+                constexpr std::ptrdiff_t m_nJustifyVertical = 0x9E8; // PointWorldTextJustifyVertical_t
+                constexpr std::ptrdiff_t m_nReorientMode = 0x9EC; // PointWorldTextReorientMode_t
             }
             // Parent: CSoundAreaEntityBase
             // Field count: 2
@@ -8813,19 +8827,19 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vecLinearForceDirection (Vector)
             // NetworkVarNames: m_bConvertToDebrisWhenPossible (bool)
             namespace CTriggerPhysics {
-                constexpr std::ptrdiff_t m_gravityScale = 0x930; // float32
-                constexpr std::ptrdiff_t m_linearLimit = 0x934; // float32
-                constexpr std::ptrdiff_t m_linearDamping = 0x938; // float32
-                constexpr std::ptrdiff_t m_angularLimit = 0x93C; // float32
-                constexpr std::ptrdiff_t m_angularDamping = 0x940; // float32
-                constexpr std::ptrdiff_t m_linearForce = 0x944; // float32
-                constexpr std::ptrdiff_t m_flFrequency = 0x948; // float32
-                constexpr std::ptrdiff_t m_flDampingRatio = 0x94C; // float32
-                constexpr std::ptrdiff_t m_vecLinearForcePointAt = 0x950; // Vector
-                constexpr std::ptrdiff_t m_bCollapseToForcePoint = 0x95C; // bool
-                constexpr std::ptrdiff_t m_vecLinearForcePointAtWorld = 0x960; // Vector
-                constexpr std::ptrdiff_t m_vecLinearForceDirection = 0x96C; // Vector
-                constexpr std::ptrdiff_t m_bConvertToDebrisWhenPossible = 0x978; // bool
+                constexpr std::ptrdiff_t m_gravityScale = 0x970; // float32
+                constexpr std::ptrdiff_t m_linearLimit = 0x974; // float32
+                constexpr std::ptrdiff_t m_linearDamping = 0x978; // float32
+                constexpr std::ptrdiff_t m_angularLimit = 0x97C; // float32
+                constexpr std::ptrdiff_t m_angularDamping = 0x980; // float32
+                constexpr std::ptrdiff_t m_linearForce = 0x984; // float32
+                constexpr std::ptrdiff_t m_flFrequency = 0x988; // float32
+                constexpr std::ptrdiff_t m_flDampingRatio = 0x98C; // float32
+                constexpr std::ptrdiff_t m_vecLinearForcePointAt = 0x990; // Vector
+                constexpr std::ptrdiff_t m_bCollapseToForcePoint = 0x99C; // bool
+                constexpr std::ptrdiff_t m_vecLinearForcePointAtWorld = 0x9A0; // Vector
+                constexpr std::ptrdiff_t m_vecLinearForceDirection = 0x9AC; // Vector
+                constexpr std::ptrdiff_t m_bConvertToDebrisWhenPossible = 0x9B8; // bool
             }
             // Parent: None
             // Field count: 2
@@ -8844,32 +8858,32 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 26
             namespace CFuncShatterglass {
-                constexpr std::ptrdiff_t m_matPanelTransform = 0x750; // matrix3x4_t
-                constexpr std::ptrdiff_t m_matPanelTransformWsTemp = 0x780; // matrix3x4_t
-                constexpr std::ptrdiff_t m_vecShatterGlassShards = 0x7B0; // CUtlVector<uint32>
-                constexpr std::ptrdiff_t m_PanelSize = 0x7C8; // Vector2D
-                constexpr std::ptrdiff_t m_flLastShatterSoundEmitTime = 0x7D0; // GameTime_t
-                constexpr std::ptrdiff_t m_flLastCleanupTime = 0x7D4; // GameTime_t
-                constexpr std::ptrdiff_t m_flInitAtTime = 0x7D8; // GameTime_t
-                constexpr std::ptrdiff_t m_flGlassThickness = 0x7DC; // float32
-                constexpr std::ptrdiff_t m_flSpawnInvulnerability = 0x7E0; // float32
-                constexpr std::ptrdiff_t m_bBreakSilent = 0x7E4; // bool
-                constexpr std::ptrdiff_t m_bBreakShardless = 0x7E5; // bool
-                constexpr std::ptrdiff_t m_bBroken = 0x7E6; // bool
-                constexpr std::ptrdiff_t m_bGlassNavIgnore = 0x7E7; // bool
-                constexpr std::ptrdiff_t m_bGlassInFrame = 0x7E8; // bool
-                constexpr std::ptrdiff_t m_bStartBroken = 0x7E9; // bool
-                constexpr std::ptrdiff_t m_iInitialDamageType = 0x7EA; // uint8
-                constexpr std::ptrdiff_t m_szDamagePositioningEntityName01 = 0x7F0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_szDamagePositioningEntityName02 = 0x7F8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_szDamagePositioningEntityName03 = 0x800; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_szDamagePositioningEntityName04 = 0x808; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_vInitialDamagePositions = 0x810; // CUtlVector<Vector>
-                constexpr std::ptrdiff_t m_vExtraDamagePositions = 0x828; // CUtlVector<Vector>
-                constexpr std::ptrdiff_t m_vInitialPanelVertices = 0x840; // CUtlVector<Vector4D>
-                constexpr std::ptrdiff_t m_OnBroken = 0x858; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_iSurfaceType = 0x880; // uint8
-                constexpr std::ptrdiff_t m_hMaterialDamageBase = 0x888; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                constexpr std::ptrdiff_t m_matPanelTransform = 0x790; // matrix3x4_t
+                constexpr std::ptrdiff_t m_matPanelTransformWsTemp = 0x7C0; // matrix3x4_t
+                constexpr std::ptrdiff_t m_vecShatterGlassShards = 0x7F0; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_PanelSize = 0x808; // Vector2D
+                constexpr std::ptrdiff_t m_flLastShatterSoundEmitTime = 0x810; // GameTime_t
+                constexpr std::ptrdiff_t m_flLastCleanupTime = 0x814; // GameTime_t
+                constexpr std::ptrdiff_t m_flInitAtTime = 0x818; // GameTime_t
+                constexpr std::ptrdiff_t m_flGlassThickness = 0x81C; // float32
+                constexpr std::ptrdiff_t m_flSpawnInvulnerability = 0x820; // float32
+                constexpr std::ptrdiff_t m_bBreakSilent = 0x824; // bool
+                constexpr std::ptrdiff_t m_bBreakShardless = 0x825; // bool
+                constexpr std::ptrdiff_t m_bBroken = 0x826; // bool
+                constexpr std::ptrdiff_t m_bGlassNavIgnore = 0x827; // bool
+                constexpr std::ptrdiff_t m_bGlassInFrame = 0x828; // bool
+                constexpr std::ptrdiff_t m_bStartBroken = 0x829; // bool
+                constexpr std::ptrdiff_t m_iInitialDamageType = 0x82A; // uint8
+                constexpr std::ptrdiff_t m_szDamagePositioningEntityName01 = 0x830; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_szDamagePositioningEntityName02 = 0x838; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_szDamagePositioningEntityName03 = 0x840; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_szDamagePositioningEntityName04 = 0x848; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_vInitialDamagePositions = 0x850; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_vExtraDamagePositions = 0x868; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_vInitialPanelVertices = 0x880; // CUtlVector<Vector4D>
+                constexpr std::ptrdiff_t m_OnBroken = 0x898; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_iSurfaceType = 0x8C0; // uint8
+                constexpr std::ptrdiff_t m_hMaterialDamageBase = 0x8C8; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: CBaseButton
             // Field count: 0
@@ -8907,33 +8921,33 @@ namespace cs2_dumper {
             // NetworkVarNames: m_hBombDefuser (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_hControlPanel (CHandle<CBaseEntity>)
             namespace CPlantedC4 {
-                constexpr std::ptrdiff_t m_bBombTicking = 0x968; // bool
-                constexpr std::ptrdiff_t m_flC4Blow = 0x96C; // GameTime_t
-                constexpr std::ptrdiff_t m_nBombSite = 0x970; // int32
-                constexpr std::ptrdiff_t m_nSourceSoundscapeHash = 0x974; // int32
-                constexpr std::ptrdiff_t m_AttributeManager = 0x978; // CAttributeContainer
-                constexpr std::ptrdiff_t m_OnBombDefused = 0xC40; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnBombBeginDefuse = 0xC68; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnBombDefuseAborted = 0xC90; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bCannotBeDefused = 0xCB8; // bool
-                constexpr std::ptrdiff_t m_entitySpottedState = 0xCC0; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSpotRules = 0xCD8; // int32
-                constexpr std::ptrdiff_t m_bTrainingPlacedByPlayer = 0xCDC; // bool
-                constexpr std::ptrdiff_t m_bHasExploded = 0xCDD; // bool
-                constexpr std::ptrdiff_t m_flTimerLength = 0xCE0; // float32
-                constexpr std::ptrdiff_t m_bBeingDefused = 0xCE4; // bool
-                constexpr std::ptrdiff_t m_fLastDefuseTime = 0xCEC; // GameTime_t
-                constexpr std::ptrdiff_t m_flDefuseLength = 0xCF4; // float32
-                constexpr std::ptrdiff_t m_flDefuseCountDown = 0xCF8; // GameTime_t
-                constexpr std::ptrdiff_t m_bBombDefused = 0xCFC; // bool
-                constexpr std::ptrdiff_t m_hBombDefuser = 0xD00; // CHandle<CCSPlayerPawn>
-                constexpr std::ptrdiff_t m_hControlPanel = 0xD04; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_iProgressBarTime = 0xD08; // int32
-                constexpr std::ptrdiff_t m_bVoiceAlertFired = 0xD0C; // bool
-                constexpr std::ptrdiff_t m_bVoiceAlertPlayed = 0xD0D; // bool[4]
-                constexpr std::ptrdiff_t m_flNextBotBeepTime = 0xD14; // GameTime_t
-                constexpr std::ptrdiff_t m_angCatchUpToPlayerEye = 0xD1C; // QAngle
-                constexpr std::ptrdiff_t m_flLastSpinDetectionTime = 0xD28; // GameTime_t
+                constexpr std::ptrdiff_t m_bBombTicking = 0x9B0; // bool
+                constexpr std::ptrdiff_t m_flC4Blow = 0x9B4; // GameTime_t
+                constexpr std::ptrdiff_t m_nBombSite = 0x9B8; // int32
+                constexpr std::ptrdiff_t m_nSourceSoundscapeHash = 0x9BC; // int32
+                constexpr std::ptrdiff_t m_AttributeManager = 0x9C0; // CAttributeContainer
+                constexpr std::ptrdiff_t m_OnBombDefused = 0xC88; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnBombBeginDefuse = 0xCB0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnBombDefuseAborted = 0xCD8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bCannotBeDefused = 0xD00; // bool
+                constexpr std::ptrdiff_t m_entitySpottedState = 0xD08; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_nSpotRules = 0xD20; // int32
+                constexpr std::ptrdiff_t m_bTrainingPlacedByPlayer = 0xD24; // bool
+                constexpr std::ptrdiff_t m_bHasExploded = 0xD25; // bool
+                constexpr std::ptrdiff_t m_flTimerLength = 0xD28; // float32
+                constexpr std::ptrdiff_t m_bBeingDefused = 0xD2C; // bool
+                constexpr std::ptrdiff_t m_fLastDefuseTime = 0xD34; // GameTime_t
+                constexpr std::ptrdiff_t m_flDefuseLength = 0xD3C; // float32
+                constexpr std::ptrdiff_t m_flDefuseCountDown = 0xD40; // GameTime_t
+                constexpr std::ptrdiff_t m_bBombDefused = 0xD44; // bool
+                constexpr std::ptrdiff_t m_hBombDefuser = 0xD48; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_hControlPanel = 0xD4C; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_iProgressBarTime = 0xD50; // int32
+                constexpr std::ptrdiff_t m_bVoiceAlertFired = 0xD54; // bool
+                constexpr std::ptrdiff_t m_bVoiceAlertPlayed = 0xD55; // bool[4]
+                constexpr std::ptrdiff_t m_flNextBotBeepTime = 0xD5C; // GameTime_t
+                constexpr std::ptrdiff_t m_angCatchUpToPlayerEye = 0xD64; // QAngle
+                constexpr std::ptrdiff_t m_flLastSpinDetectionTime = 0xD70; // GameTime_t
             }
             // Parent: CBaseClientUIEntity
             // Field count: 2
@@ -8941,8 +8955,8 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_hActivator (EHANDLE)
             namespace CPointClientUIDialog {
-                constexpr std::ptrdiff_t m_hActivator = 0x900; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_bStartEnabled = 0x904; // bool
+                constexpr std::ptrdiff_t m_hActivator = 0x940; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_bStartEnabled = 0x944; // bool
             }
             // Parent: CPointEntity
             // Field count: 1
@@ -9019,8 +9033,8 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_fFireTime (GameTime_t)
             namespace CWeaponTaser {
-                constexpr std::ptrdiff_t m_fFireTime = 0xF30; // GameTime_t
-                constexpr std::ptrdiff_t m_nLastAttackTick = 0xF34; // int32
+                constexpr std::ptrdiff_t m_fFireTime = 0xF78; // GameTime_t
+                constexpr std::ptrdiff_t m_nLastAttackTick = 0xF7C; // int32
             }
             // Parent: CBaseAnimGraph
             // Field count: 0
@@ -9029,7 +9043,7 @@ namespace cs2_dumper {
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CMarkupVolume {
-                constexpr std::ptrdiff_t m_bDisabled = 0x750; // bool
+                constexpr std::ptrdiff_t m_bDisabled = 0x790; // bool
             }
             // Parent: CPointEntity
             // Field count: 6
@@ -9059,41 +9073,41 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_CPropDataComponent (CPropDataComponent::Storage_t)
             namespace CBreakable {
-                constexpr std::ptrdiff_t m_CPropDataComponent = 0x758; // CPropDataComponent
-                constexpr std::ptrdiff_t m_Material = 0x798; // Materials
-                constexpr std::ptrdiff_t m_hBreaker = 0x79C; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_Explosion = 0x7A0; // Explosions
-                constexpr std::ptrdiff_t m_iszSpawnObject = 0x7A8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_flPressureDelay = 0x7B0; // float32
-                constexpr std::ptrdiff_t m_iMinHealthDmg = 0x7B4; // int32
-                constexpr std::ptrdiff_t m_iszPropData = 0x7B8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_impactEnergyScale = 0x7C0; // float32
-                constexpr std::ptrdiff_t m_nOverrideBlockLOS = 0x7C4; // EOverrideBlockLOS_t
-                constexpr std::ptrdiff_t m_OnBreak = 0x7C8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnHealthChanged = 0x7F0; // CEntityOutputTemplate<float32>
-                constexpr std::ptrdiff_t m_PerformanceMode = 0x818; // PerformanceMode_t
-                constexpr std::ptrdiff_t m_hPhysicsAttacker = 0x81C; // CHandle<CBasePlayerPawn>
-                constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0x820; // GameTime_t
+                constexpr std::ptrdiff_t m_CPropDataComponent = 0x798; // CPropDataComponent
+                constexpr std::ptrdiff_t m_Material = 0x7D8; // Materials
+                constexpr std::ptrdiff_t m_hBreaker = 0x7DC; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_Explosion = 0x7E0; // Explosions
+                constexpr std::ptrdiff_t m_iszSpawnObject = 0x7E8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_flPressureDelay = 0x7F0; // float32
+                constexpr std::ptrdiff_t m_iMinHealthDmg = 0x7F4; // int32
+                constexpr std::ptrdiff_t m_iszPropData = 0x7F8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_impactEnergyScale = 0x800; // float32
+                constexpr std::ptrdiff_t m_nOverrideBlockLOS = 0x804; // EOverrideBlockLOS_t
+                constexpr std::ptrdiff_t m_OnBreak = 0x808; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnHealthChanged = 0x830; // CEntityOutputTemplate<float32>
+                constexpr std::ptrdiff_t m_PerformanceMode = 0x858; // PerformanceMode_t
+                constexpr std::ptrdiff_t m_hPhysicsAttacker = 0x85C; // CHandle<CBasePlayerPawn>
+                constexpr std::ptrdiff_t m_flLastPhysicsInfluenceTime = 0x860; // GameTime_t
             }
             // Parent: CBaseModelEntity
             // Field count: 16
             namespace CBaseToggle {
-                constexpr std::ptrdiff_t m_toggle_state = 0x750; // TOGGLE_STATE
-                constexpr std::ptrdiff_t m_flMoveDistance = 0x754; // float32
-                constexpr std::ptrdiff_t m_flWait = 0x758; // float32
-                constexpr std::ptrdiff_t m_flLip = 0x75C; // float32
-                constexpr std::ptrdiff_t m_bAlwaysFireBlockedOutputs = 0x760; // bool
-                constexpr std::ptrdiff_t m_vecPosition1 = 0x764; // Vector
-                constexpr std::ptrdiff_t m_vecPosition2 = 0x770; // Vector
-                constexpr std::ptrdiff_t m_vecMoveAng = 0x77C; // QAngle
-                constexpr std::ptrdiff_t m_vecAngle1 = 0x788; // QAngle
-                constexpr std::ptrdiff_t m_vecAngle2 = 0x794; // QAngle
-                constexpr std::ptrdiff_t m_flHeight = 0x7A0; // float32
-                constexpr std::ptrdiff_t m_hActivator = 0x7A4; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_vecFinalDest = 0x7A8; // Vector
-                constexpr std::ptrdiff_t m_vecFinalAngle = 0x7B4; // QAngle
-                constexpr std::ptrdiff_t m_movementType = 0x7C0; // int32
-                constexpr std::ptrdiff_t m_sMaster = 0x7C8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_toggle_state = 0x790; // TOGGLE_STATE
+                constexpr std::ptrdiff_t m_flMoveDistance = 0x794; // float32
+                constexpr std::ptrdiff_t m_flWait = 0x798; // float32
+                constexpr std::ptrdiff_t m_flLip = 0x79C; // float32
+                constexpr std::ptrdiff_t m_bAlwaysFireBlockedOutputs = 0x7A0; // bool
+                constexpr std::ptrdiff_t m_vecPosition1 = 0x7A4; // Vector
+                constexpr std::ptrdiff_t m_vecPosition2 = 0x7B0; // Vector
+                constexpr std::ptrdiff_t m_vecMoveAng = 0x7BC; // QAngle
+                constexpr std::ptrdiff_t m_vecAngle1 = 0x7C8; // QAngle
+                constexpr std::ptrdiff_t m_vecAngle2 = 0x7D4; // QAngle
+                constexpr std::ptrdiff_t m_flHeight = 0x7E0; // float32
+                constexpr std::ptrdiff_t m_hActivator = 0x7E4; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_vecFinalDest = 0x7E8; // Vector
+                constexpr std::ptrdiff_t m_vecFinalAngle = 0x7F4; // QAngle
+                constexpr std::ptrdiff_t m_movementType = 0x800; // int32
+                constexpr std::ptrdiff_t m_sMaster = 0x808; // CUtlSymbolLarge
             }
             // Parent: CPointEntity
             // Field count: 0
@@ -9102,20 +9116,20 @@ namespace cs2_dumper {
             // Parent: CRotButton
             // Field count: 14
             namespace CMomentaryRotButton {
-                constexpr std::ptrdiff_t m_Position = 0x920; // CEntityOutputTemplate<float32>
-                constexpr std::ptrdiff_t m_OnUnpressed = 0x948; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyOpen = 0x970; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyClosed = 0x998; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnReachedPosition = 0x9C0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_lastUsed = 0x9E8; // int32
-                constexpr std::ptrdiff_t m_start = 0x9EC; // QAngle
-                constexpr std::ptrdiff_t m_end = 0x9F8; // QAngle
-                constexpr std::ptrdiff_t m_IdealYaw = 0xA04; // float32
-                constexpr std::ptrdiff_t m_sNoise = 0xA08; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bUpdateTarget = 0xA10; // bool
-                constexpr std::ptrdiff_t m_direction = 0xA14; // int32
-                constexpr std::ptrdiff_t m_returnSpeed = 0xA18; // float32
-                constexpr std::ptrdiff_t m_flStartPosition = 0xA1C; // float32
+                constexpr std::ptrdiff_t m_Position = 0x960; // CEntityOutputTemplate<float32>
+                constexpr std::ptrdiff_t m_OnUnpressed = 0x988; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyOpen = 0x9B0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyClosed = 0x9D8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnReachedPosition = 0xA00; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_lastUsed = 0xA28; // int32
+                constexpr std::ptrdiff_t m_start = 0xA2C; // QAngle
+                constexpr std::ptrdiff_t m_end = 0xA38; // QAngle
+                constexpr std::ptrdiff_t m_IdealYaw = 0xA44; // float32
+                constexpr std::ptrdiff_t m_sNoise = 0xA48; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bUpdateTarget = 0xA50; // bool
+                constexpr std::ptrdiff_t m_direction = 0xA54; // int32
+                constexpr std::ptrdiff_t m_returnSpeed = 0xA58; // float32
+                constexpr std::ptrdiff_t m_flStartPosition = 0xA5C; // float32
             }
             // Parent: CEntityComponent
             // Field count: 10
@@ -9134,8 +9148,8 @@ namespace cs2_dumper {
             // Parent: CRulePointEntity
             // Field count: 2
             namespace CGameText {
-                constexpr std::ptrdiff_t m_iszMessage = 0x760; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_textParms = 0x768; // hudtextparms_t
+                constexpr std::ptrdiff_t m_iszMessage = 0x7A0; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_textParms = 0x7A8; // hudtextparms_t
             }
             // Parent: CCSWeaponBaseGun
             // Field count: 0
@@ -9154,21 +9168,21 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flStartTime (float)
             // NetworkVarNames: m_flStartFrame (float)
             namespace CTextureBasedAnimatable {
-                constexpr std::ptrdiff_t m_bLoop = 0x750; // bool
-                constexpr std::ptrdiff_t m_flFPS = 0x754; // float32
-                constexpr std::ptrdiff_t m_hPositionKeys = 0x758; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                constexpr std::ptrdiff_t m_hRotationKeys = 0x760; // CStrongHandle<InfoForResourceTypeCTextureBase>
-                constexpr std::ptrdiff_t m_vAnimationBoundsMin = 0x768; // Vector
-                constexpr std::ptrdiff_t m_vAnimationBoundsMax = 0x774; // Vector
-                constexpr std::ptrdiff_t m_flStartTime = 0x780; // float32
-                constexpr std::ptrdiff_t m_flStartFrame = 0x784; // float32
+                constexpr std::ptrdiff_t m_bLoop = 0x790; // bool
+                constexpr std::ptrdiff_t m_flFPS = 0x794; // float32
+                constexpr std::ptrdiff_t m_hPositionKeys = 0x798; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_hRotationKeys = 0x7A0; // CStrongHandle<InfoForResourceTypeCTextureBase>
+                constexpr std::ptrdiff_t m_vAnimationBoundsMin = 0x7A8; // Vector
+                constexpr std::ptrdiff_t m_vAnimationBoundsMax = 0x7B4; // Vector
+                constexpr std::ptrdiff_t m_flStartTime = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_flStartFrame = 0x7C4; // float32
             }
             // Parent: CMarkupVolumeTagged
             // Field count: 3
             namespace CMarkupVolumeWithRef {
-                constexpr std::ptrdiff_t m_bUseRef = 0x790; // bool
-                constexpr std::ptrdiff_t m_vRefPos = 0x794; // Vector
-                constexpr std::ptrdiff_t m_flRefDot = 0x7A0; // float32
+                constexpr std::ptrdiff_t m_bUseRef = 0x7D0; // bool
+                constexpr std::ptrdiff_t m_vRefPos = 0x7D4; // Vector
+                constexpr std::ptrdiff_t m_flRefDot = 0x7E0; // float32
             }
             // Parent: CPhysForce
             // Field count: 1
@@ -9232,9 +9246,9 @@ namespace cs2_dumper {
             // MNetworkExcludeByName
             // NetworkVarNames: m_ShardDesc (shard_model_desc_t)
             namespace CShatterGlassShardPhysics {
-                constexpr std::ptrdiff_t m_bDebris = 0xCB8; // bool
-                constexpr std::ptrdiff_t m_hParentShard = 0xCBC; // uint32
-                constexpr std::ptrdiff_t m_ShardDesc = 0xCC0; // shard_model_desc_t
+                constexpr std::ptrdiff_t m_bDebris = 0xD00; // bool
+                constexpr std::ptrdiff_t m_hParentShard = 0xD04; // uint32
+                constexpr std::ptrdiff_t m_ShardDesc = 0xD08; // shard_model_desc_t
             }
             // Parent: CBaseFilter
             // Field count: 1
@@ -9265,28 +9279,28 @@ namespace cs2_dumper {
             // NetworkVarNames: m_angEyeAngles (QAngle)
             // NetworkVarNames: m_hOriginalController (CHandle<CCSPlayerController>)
             namespace CCSPlayerPawnBase {
-                constexpr std::ptrdiff_t m_CTouchExpansionComponent = 0xC28; // CTouchExpansionComponent
-                constexpr std::ptrdiff_t m_pPingServices = 0xC78; // CCSPlayer_PingServices*
-                constexpr std::ptrdiff_t m_pViewModelServices = 0xC80; // CPlayer_ViewModelServices*
-                constexpr std::ptrdiff_t m_blindUntilTime = 0xC88; // GameTime_t
-                constexpr std::ptrdiff_t m_blindStartTime = 0xC8C; // GameTime_t
-                constexpr std::ptrdiff_t m_iPlayerState = 0xC90; // CSPlayerState
-                constexpr std::ptrdiff_t m_bRespawning = 0xD40; // bool
-                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0xD44; // GameTime_t
-                constexpr std::ptrdiff_t m_bGunGameImmunity = 0xD48; // bool
-                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0xD4C; // float32
-                constexpr std::ptrdiff_t m_bHasMovedSinceSpawn = 0xD50; // bool
-                constexpr std::ptrdiff_t m_iNumSpawns = 0xD54; // int32
-                constexpr std::ptrdiff_t m_flIdleTimeSinceLastAction = 0xD5C; // float32
-                constexpr std::ptrdiff_t m_fNextRadarUpdateTime = 0xD60; // float32
-                constexpr std::ptrdiff_t m_flFlashDuration = 0xD64; // float32
-                constexpr std::ptrdiff_t m_flFlashMaxAlpha = 0xD68; // float32
-                constexpr std::ptrdiff_t m_flProgressBarStartTime = 0xD6C; // float32
-                constexpr std::ptrdiff_t m_iProgressBarDuration = 0xD70; // int32
-                constexpr std::ptrdiff_t m_angEyeAngles = 0xD74; // QAngle
-                constexpr std::ptrdiff_t m_wasNotKilledNaturally = 0xD80; // bool
-                constexpr std::ptrdiff_t m_bCommittingSuicideOnTeamChange = 0xD81; // bool
-                constexpr std::ptrdiff_t m_hOriginalController = 0xD84; // CHandle<CCSPlayerController>
+                constexpr std::ptrdiff_t m_CTouchExpansionComponent = 0xC68; // CTouchExpansionComponent
+                constexpr std::ptrdiff_t m_pPingServices = 0xCB8; // CCSPlayer_PingServices*
+                constexpr std::ptrdiff_t m_pViewModelServices = 0xCC0; // CPlayer_ViewModelServices*
+                constexpr std::ptrdiff_t m_blindUntilTime = 0xCC8; // GameTime_t
+                constexpr std::ptrdiff_t m_blindStartTime = 0xCCC; // GameTime_t
+                constexpr std::ptrdiff_t m_iPlayerState = 0xCD0; // CSPlayerState
+                constexpr std::ptrdiff_t m_bRespawning = 0xD80; // bool
+                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0xD84; // GameTime_t
+                constexpr std::ptrdiff_t m_bGunGameImmunity = 0xD88; // bool
+                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0xD8C; // float32
+                constexpr std::ptrdiff_t m_bHasMovedSinceSpawn = 0xD90; // bool
+                constexpr std::ptrdiff_t m_iNumSpawns = 0xD94; // int32
+                constexpr std::ptrdiff_t m_flIdleTimeSinceLastAction = 0xD9C; // float32
+                constexpr std::ptrdiff_t m_fNextRadarUpdateTime = 0xDA0; // float32
+                constexpr std::ptrdiff_t m_flFlashDuration = 0xDA4; // float32
+                constexpr std::ptrdiff_t m_flFlashMaxAlpha = 0xDA8; // float32
+                constexpr std::ptrdiff_t m_flProgressBarStartTime = 0xDAC; // float32
+                constexpr std::ptrdiff_t m_iProgressBarDuration = 0xDB0; // int32
+                constexpr std::ptrdiff_t m_angEyeAngles = 0xDB4; // QAngle
+                constexpr std::ptrdiff_t m_wasNotKilledNaturally = 0xDC0; // bool
+                constexpr std::ptrdiff_t m_bCommittingSuicideOnTeamChange = 0xDC1; // bool
+                constexpr std::ptrdiff_t m_hOriginalController = 0xDC4; // CHandle<CCSPlayerController>
             }
             // Parent: CPointEntity
             // Field count: 9
@@ -9320,9 +9334,9 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flOuterAngle (float)
             // NetworkVarNames: m_bShowLight (bool)
             namespace COmniLight {
-                constexpr std::ptrdiff_t m_flInnerAngle = 0xA70; // float32
-                constexpr std::ptrdiff_t m_flOuterAngle = 0xA74; // float32
-                constexpr std::ptrdiff_t m_bShowLight = 0xA78; // bool
+                constexpr std::ptrdiff_t m_flInnerAngle = 0xAB0; // float32
+                constexpr std::ptrdiff_t m_flOuterAngle = 0xAB4; // float32
+                constexpr std::ptrdiff_t m_bShowLight = 0xAB8; // bool
             }
             // Parent: CPointEntity
             // Field count: 10
@@ -9426,15 +9440,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iBurstShotsRemaining (int)
             // NetworkVarNames: m_bNeedsBoltAction (bool)
             namespace CCSWeaponBaseGun {
-                constexpr std::ptrdiff_t m_zoomLevel = 0xF10; // int32
-                constexpr std::ptrdiff_t m_iBurstShotsRemaining = 0xF14; // int32
-                constexpr std::ptrdiff_t m_silencedModelIndex = 0xF20; // int32
-                constexpr std::ptrdiff_t m_inPrecache = 0xF24; // bool
-                constexpr std::ptrdiff_t m_bNeedsBoltAction = 0xF25; // bool
-                constexpr std::ptrdiff_t m_bSkillReloadAvailable = 0xF26; // bool
-                constexpr std::ptrdiff_t m_bSkillReloadLiftedReloadKey = 0xF27; // bool
-                constexpr std::ptrdiff_t m_bSkillBoltInterruptAvailable = 0xF28; // bool
-                constexpr std::ptrdiff_t m_bSkillBoltLiftedFireKey = 0xF29; // bool
+                constexpr std::ptrdiff_t m_zoomLevel = 0xF58; // int32
+                constexpr std::ptrdiff_t m_iBurstShotsRemaining = 0xF5C; // int32
+                constexpr std::ptrdiff_t m_silencedModelIndex = 0xF68; // int32
+                constexpr std::ptrdiff_t m_inPrecache = 0xF6C; // bool
+                constexpr std::ptrdiff_t m_bNeedsBoltAction = 0xF6D; // bool
+                constexpr std::ptrdiff_t m_bSkillReloadAvailable = 0xF6E; // bool
+                constexpr std::ptrdiff_t m_bSkillReloadLiftedReloadKey = 0xF6F; // bool
+                constexpr std::ptrdiff_t m_bSkillBoltInterruptAvailable = 0xF70; // bool
+                constexpr std::ptrdiff_t m_bSkillBoltLiftedFireKey = 0xF71; // bool
             }
             // Parent: None
             // Field count: 13
@@ -9474,9 +9488,9 @@ namespace cs2_dumper {
             // Parent: CBaseToggle
             // Field count: 3
             namespace CGunTarget {
-                constexpr std::ptrdiff_t m_on = 0x7D0; // bool
-                constexpr std::ptrdiff_t m_hTargetEnt = 0x7D4; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_OnDeath = 0x7D8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_on = 0x810; // bool
+                constexpr std::ptrdiff_t m_hTargetEnt = 0x814; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_OnDeath = 0x818; // CEntityIOOutput
             }
             // Parent: CBaseEntity
             // Field count: 2
@@ -9497,11 +9511,11 @@ namespace cs2_dumper {
             // Parent: CMarkupVolume
             // Field count: 5
             namespace CMarkupVolumeTagged {
-                constexpr std::ptrdiff_t m_bIsGroup = 0x788; // bool
-                constexpr std::ptrdiff_t m_bGroupByPrefab = 0x789; // bool
-                constexpr std::ptrdiff_t m_bGroupByVolume = 0x78A; // bool
-                constexpr std::ptrdiff_t m_bGroupOtherGroups = 0x78B; // bool
-                constexpr std::ptrdiff_t m_bIsInGroup = 0x78C; // bool
+                constexpr std::ptrdiff_t m_bIsGroup = 0x7C8; // bool
+                constexpr std::ptrdiff_t m_bGroupByPrefab = 0x7C9; // bool
+                constexpr std::ptrdiff_t m_bGroupByVolume = 0x7CA; // bool
+                constexpr std::ptrdiff_t m_bGroupOtherGroups = 0x7CB; // bool
+                constexpr std::ptrdiff_t m_bIsInGroup = 0x7CC; // bool
             }
             // Parent: CBaseEntity
             // Field count: 5
@@ -9519,12 +9533,12 @@ namespace cs2_dumper {
             // Parent: CFuncNavBlocker
             // Field count: 1
             namespace CScriptNavBlocker {
-                constexpr std::ptrdiff_t m_vExtent = 0x760; // Vector
+                constexpr std::ptrdiff_t m_vExtent = 0x7A0; // Vector
             }
             // Parent: CBaseAnimGraph
             // Field count: 1
             namespace CConstraintAnchor {
-                constexpr std::ptrdiff_t m_massScale = 0x960; // float32
+                constexpr std::ptrdiff_t m_massScale = 0x9A8; // float32
             }
             // Parent: CCSWeaponBaseGun
             // Field count: 0
@@ -9672,18 +9686,18 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vLookTargetPosition (Vector)
             // NetworkVarNames: m_blinktoggle (bool)
             namespace CBaseFlex {
-                constexpr std::ptrdiff_t m_flexWeight = 0x960; // CNetworkUtlVectorBase<float32>
-                constexpr std::ptrdiff_t m_vLookTargetPosition = 0x978; // Vector
-                constexpr std::ptrdiff_t m_blinktoggle = 0x984; // bool
-                constexpr std::ptrdiff_t m_flAllowResponsesEndTime = 0x9D8; // GameTime_t
-                constexpr std::ptrdiff_t m_flLastFlexAnimationTime = 0x9DC; // GameTime_t
-                constexpr std::ptrdiff_t m_nNextSceneEventId = 0x9E0; // SceneEventId_t
-                constexpr std::ptrdiff_t m_bUpdateLayerPriorities = 0x9E4; // bool
+                constexpr std::ptrdiff_t m_flexWeight = 0x9A8; // CNetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_vLookTargetPosition = 0x9C0; // Vector
+                constexpr std::ptrdiff_t m_blinktoggle = 0x9CC; // bool
+                constexpr std::ptrdiff_t m_flAllowResponsesEndTime = 0xA20; // GameTime_t
+                constexpr std::ptrdiff_t m_flLastFlexAnimationTime = 0xA24; // GameTime_t
+                constexpr std::ptrdiff_t m_nNextSceneEventId = 0xA28; // SceneEventId_t
+                constexpr std::ptrdiff_t m_bUpdateLayerPriorities = 0xA2C; // bool
             }
             // Parent: CTriggerHurt
             // Field count: 1
             namespace CScriptTriggerHurt {
-                constexpr std::ptrdiff_t m_vExtent = 0x9C0; // Vector
+                constexpr std::ptrdiff_t m_vExtent = 0xA00; // Vector
             }
             // Parent: CBasePlayerWeaponVData
             // Field count: 92
@@ -9897,124 +9911,124 @@ namespace cs2_dumper {
             // NetworkVarNames: m_GunGameImmunityColor (Color)
             // NetworkVarNames: m_PredictedDamageTags (PredictedDamageTag_t)
             namespace CCSPlayerPawn {
-                constexpr std::ptrdiff_t m_pBulletServices = 0xD90; // CCSPlayer_BulletServices*
-                constexpr std::ptrdiff_t m_pHostageServices = 0xD98; // CCSPlayer_HostageServices*
-                constexpr std::ptrdiff_t m_pBuyServices = 0xDA0; // CCSPlayer_BuyServices*
-                constexpr std::ptrdiff_t m_pActionTrackingServices = 0xDA8; // CCSPlayer_ActionTrackingServices*
-                constexpr std::ptrdiff_t m_pRadioServices = 0xDB0; // CCSPlayer_RadioServices*
-                constexpr std::ptrdiff_t m_pDamageReactServices = 0xDB8; // CCSPlayer_DamageReactServices*
-                constexpr std::ptrdiff_t m_nCharacterDefIndex = 0xDC0; // uint16
-                constexpr std::ptrdiff_t m_bHasFemaleVoice = 0xDC2; // bool
-                constexpr std::ptrdiff_t m_strVOPrefix = 0xDC8; // CUtlString
-                constexpr std::ptrdiff_t m_szLastPlaceName = 0xDD0; // char[18]
-                constexpr std::ptrdiff_t m_bInHostageResetZone = 0xE90; // bool
-                constexpr std::ptrdiff_t m_bInBuyZone = 0xE91; // bool
-                constexpr std::ptrdiff_t m_TouchingBuyZones = 0xE98; // CUtlVector<CHandle<CBaseEntity>>
-                constexpr std::ptrdiff_t m_bWasInBuyZone = 0xEB0; // bool
-                constexpr std::ptrdiff_t m_bInHostageRescueZone = 0xEB1; // bool
-                constexpr std::ptrdiff_t m_bInBombZone = 0xEB2; // bool
-                constexpr std::ptrdiff_t m_bWasInHostageRescueZone = 0xEB3; // bool
-                constexpr std::ptrdiff_t m_iRetakesOffering = 0xEB4; // int32
-                constexpr std::ptrdiff_t m_iRetakesOfferingCard = 0xEB8; // int32
-                constexpr std::ptrdiff_t m_bRetakesHasDefuseKit = 0xEBC; // bool
-                constexpr std::ptrdiff_t m_bRetakesMVPLastRound = 0xEBD; // bool
-                constexpr std::ptrdiff_t m_iRetakesMVPBoostItem = 0xEC0; // int32
-                constexpr std::ptrdiff_t m_RetakesMVPBoostExtraUtility = 0xEC4; // loadout_slot_t
-                constexpr std::ptrdiff_t m_flHealthShotBoostExpirationTime = 0xEC8; // GameTime_t
-                constexpr std::ptrdiff_t m_flLandingTimeSeconds = 0xECC; // float32
-                constexpr std::ptrdiff_t m_aimPunchAngle = 0xED0; // QAngle
-                constexpr std::ptrdiff_t m_aimPunchAngleVel = 0xEDC; // QAngle
-                constexpr std::ptrdiff_t m_aimPunchTickBase = 0xEE8; // int32
-                constexpr std::ptrdiff_t m_aimPunchTickFraction = 0xEEC; // float32
-                constexpr std::ptrdiff_t m_aimPunchCache = 0xEF0; // CUtlVector<QAngle>
-                constexpr std::ptrdiff_t m_bIsBuyMenuOpen = 0xF08; // bool
-                constexpr std::ptrdiff_t m_xLastHeadBoneTransform = 0x15C0; // CTransform
-                constexpr std::ptrdiff_t m_bLastHeadBoneTransformIsValid = 0x15E0; // bool
-                constexpr std::ptrdiff_t m_lastLandTime = 0x15E4; // GameTime_t
-                constexpr std::ptrdiff_t m_bOnGroundLastTick = 0x15E8; // bool
-                constexpr std::ptrdiff_t m_iPlayerLocked = 0x15EC; // int32
-                constexpr std::ptrdiff_t m_flTimeOfLastInjury = 0x15F4; // GameTime_t
-                constexpr std::ptrdiff_t m_flNextSprayDecalTime = 0x15F8; // GameTime_t
-                constexpr std::ptrdiff_t m_bNextSprayDecalTimeExpedited = 0x15FC; // bool
-                constexpr std::ptrdiff_t m_nRagdollDamageBone = 0x1600; // int32
-                constexpr std::ptrdiff_t m_vRagdollDamageForce = 0x1604; // Vector
-                constexpr std::ptrdiff_t m_vRagdollDamagePosition = 0x1610; // Vector
-                constexpr std::ptrdiff_t m_szRagdollDamageWeaponName = 0x161C; // char[64]
-                constexpr std::ptrdiff_t m_bRagdollDamageHeadshot = 0x165C; // bool
-                constexpr std::ptrdiff_t m_vRagdollServerOrigin = 0x1660; // Vector
-                constexpr std::ptrdiff_t m_EconGloves = 0x1670; // CEconItemView
-                constexpr std::ptrdiff_t m_nEconGlovesChanged = 0x18E8; // uint8
-                constexpr std::ptrdiff_t m_qDeathEyeAngles = 0x18EC; // QAngle
-                constexpr std::ptrdiff_t m_bSkipOneHeadConstraintUpdate = 0x18F8; // bool
-                constexpr std::ptrdiff_t m_bLeftHanded = 0x18F9; // bool
-                constexpr std::ptrdiff_t m_fSwitchedHandednessTime = 0x18FC; // GameTime_t
-                constexpr std::ptrdiff_t m_flViewmodelOffsetX = 0x1900; // float32
-                constexpr std::ptrdiff_t m_flViewmodelOffsetY = 0x1904; // float32
-                constexpr std::ptrdiff_t m_flViewmodelOffsetZ = 0x1908; // float32
-                constexpr std::ptrdiff_t m_flViewmodelFOV = 0x190C; // float32
-                constexpr std::ptrdiff_t m_bIsWalking = 0x1910; // bool
-                constexpr std::ptrdiff_t m_fLastGivenDefuserTime = 0x1914; // float32
-                constexpr std::ptrdiff_t m_fLastGivenBombTime = 0x1918; // float32
-                constexpr std::ptrdiff_t m_flDealtDamageToEnemyMostRecentTimestamp = 0x191C; // float32
-                constexpr std::ptrdiff_t m_iDisplayHistoryBits = 0x1920; // uint32
-                constexpr std::ptrdiff_t m_flLastAttackedTeammate = 0x1924; // float32
-                constexpr std::ptrdiff_t m_allowAutoFollowTime = 0x1928; // GameTime_t
-                constexpr std::ptrdiff_t m_bResetArmorNextSpawn = 0x192C; // bool
-                constexpr std::ptrdiff_t m_nLastKillerIndex = 0x1930; // CEntityIndex
-                constexpr std::ptrdiff_t m_entitySpottedState = 0x1938; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSpotRules = 0x1950; // int32
-                constexpr std::ptrdiff_t m_bIsScoped = 0x1954; // bool
-                constexpr std::ptrdiff_t m_bResumeZoom = 0x1955; // bool
-                constexpr std::ptrdiff_t m_bIsDefusing = 0x1956; // bool
-                constexpr std::ptrdiff_t m_bIsGrabbingHostage = 0x1957; // bool
-                constexpr std::ptrdiff_t m_iBlockingUseActionInProgress = 0x1958; // CSPlayerBlockingUseAction_t
-                constexpr std::ptrdiff_t m_flEmitSoundTime = 0x195C; // GameTime_t
-                constexpr std::ptrdiff_t m_bInNoDefuseArea = 0x1960; // bool
-                constexpr std::ptrdiff_t m_iBombSiteIndex = 0x1964; // CEntityIndex
-                constexpr std::ptrdiff_t m_nWhichBombZone = 0x1968; // int32
-                constexpr std::ptrdiff_t m_bInBombZoneTrigger = 0x196C; // bool
-                constexpr std::ptrdiff_t m_bWasInBombZoneTrigger = 0x196D; // bool
-                constexpr std::ptrdiff_t m_iShotsFired = 0x1970; // int32
-                constexpr std::ptrdiff_t m_flFlinchStack = 0x1974; // float32
-                constexpr std::ptrdiff_t m_flVelocityModifier = 0x1978; // float32
-                constexpr std::ptrdiff_t m_flHitHeading = 0x197C; // float32
-                constexpr std::ptrdiff_t m_nHitBodyPart = 0x1980; // int32
-                constexpr std::ptrdiff_t m_vecTotalBulletForce = 0x1984; // Vector
-                constexpr std::ptrdiff_t m_bWaitForNoAttack = 0x1990; // bool
-                constexpr std::ptrdiff_t m_ignoreLadderJumpTime = 0x1994; // float32
-                constexpr std::ptrdiff_t m_bKilledByHeadshot = 0x1998; // bool
-                constexpr std::ptrdiff_t m_LastHitBox = 0x199C; // int32
-                constexpr std::ptrdiff_t m_LastHealth = 0x19A0; // int32
-                constexpr std::ptrdiff_t m_pBot = 0x19A8; // CCSBot*
-                constexpr std::ptrdiff_t m_bBotAllowActive = 0x19B0; // bool
-                constexpr std::ptrdiff_t m_thirdPersonHeading = 0x19B4; // QAngle
-                constexpr std::ptrdiff_t m_flSlopeDropOffset = 0x19C0; // float32
-                constexpr std::ptrdiff_t m_flSlopeDropHeight = 0x19C4; // float32
-                constexpr std::ptrdiff_t m_vHeadConstraintOffset = 0x19C8; // Vector
-                constexpr std::ptrdiff_t m_nLastPickupPriority = 0x19D4; // int32
-                constexpr std::ptrdiff_t m_flLastPickupPriorityTime = 0x19D8; // float32
-                constexpr std::ptrdiff_t m_ArmorValue = 0x19DC; // int32
-                constexpr std::ptrdiff_t m_unCurrentEquipmentValue = 0x19E0; // uint16
-                constexpr std::ptrdiff_t m_unRoundStartEquipmentValue = 0x19E2; // uint16
-                constexpr std::ptrdiff_t m_unFreezetimeEndEquipmentValue = 0x19E4; // uint16
-                constexpr std::ptrdiff_t m_iLastWeaponFireUsercmd = 0x19E8; // int32
-                constexpr std::ptrdiff_t m_bIsSpawning = 0x19EC; // bool
-                constexpr std::ptrdiff_t m_iDeathFlags = 0x19F8; // int32
-                constexpr std::ptrdiff_t m_bHasDeathInfo = 0x19FC; // bool
-                constexpr std::ptrdiff_t m_flDeathInfoTime = 0x1A00; // float32
-                constexpr std::ptrdiff_t m_vecDeathInfoOrigin = 0x1A04; // Vector
-                constexpr std::ptrdiff_t m_vecPlayerPatchEconIndices = 0x1A10; // uint32[5]
-                constexpr std::ptrdiff_t m_GunGameImmunityColor = 0x1A24; // Color
-                constexpr std::ptrdiff_t m_grenadeParameterStashTime = 0x1A28; // GameTime_t
-                constexpr std::ptrdiff_t m_bGrenadeParametersStashed = 0x1A2C; // bool
-                constexpr std::ptrdiff_t m_angStashedShootAngles = 0x1A30; // QAngle
-                constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x1A3C; // Vector
-                constexpr std::ptrdiff_t m_vecStashedVelocity = 0x1A48; // Vector
-                constexpr std::ptrdiff_t m_angShootAngleHistory = 0x1A54; // QAngle[2]
-                constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x1A6C; // Vector[2]
-                constexpr std::ptrdiff_t m_vecVelocityHistory = 0x1A84; // Vector[2]
-                constexpr std::ptrdiff_t m_PredictedDamageTags = 0x1AA0; // CUtlVectorEmbeddedNetworkVar<PredictedDamageTag_t>
-                constexpr std::ptrdiff_t m_nHighestAppliedDamageTagTick = 0x1AF0; // int32
+                constexpr std::ptrdiff_t m_pBulletServices = 0xDD0; // CCSPlayer_BulletServices*
+                constexpr std::ptrdiff_t m_pHostageServices = 0xDD8; // CCSPlayer_HostageServices*
+                constexpr std::ptrdiff_t m_pBuyServices = 0xDE0; // CCSPlayer_BuyServices*
+                constexpr std::ptrdiff_t m_pActionTrackingServices = 0xDE8; // CCSPlayer_ActionTrackingServices*
+                constexpr std::ptrdiff_t m_pRadioServices = 0xDF0; // CCSPlayer_RadioServices*
+                constexpr std::ptrdiff_t m_pDamageReactServices = 0xDF8; // CCSPlayer_DamageReactServices*
+                constexpr std::ptrdiff_t m_nCharacterDefIndex = 0xE00; // uint16
+                constexpr std::ptrdiff_t m_bHasFemaleVoice = 0xE02; // bool
+                constexpr std::ptrdiff_t m_strVOPrefix = 0xE08; // CUtlString
+                constexpr std::ptrdiff_t m_szLastPlaceName = 0xE10; // char[18]
+                constexpr std::ptrdiff_t m_bInHostageResetZone = 0xED0; // bool
+                constexpr std::ptrdiff_t m_bInBuyZone = 0xED1; // bool
+                constexpr std::ptrdiff_t m_TouchingBuyZones = 0xED8; // CUtlVector<CHandle<CBaseEntity>>
+                constexpr std::ptrdiff_t m_bWasInBuyZone = 0xEF0; // bool
+                constexpr std::ptrdiff_t m_bInHostageRescueZone = 0xEF1; // bool
+                constexpr std::ptrdiff_t m_bInBombZone = 0xEF2; // bool
+                constexpr std::ptrdiff_t m_bWasInHostageRescueZone = 0xEF3; // bool
+                constexpr std::ptrdiff_t m_iRetakesOffering = 0xEF4; // int32
+                constexpr std::ptrdiff_t m_iRetakesOfferingCard = 0xEF8; // int32
+                constexpr std::ptrdiff_t m_bRetakesHasDefuseKit = 0xEFC; // bool
+                constexpr std::ptrdiff_t m_bRetakesMVPLastRound = 0xEFD; // bool
+                constexpr std::ptrdiff_t m_iRetakesMVPBoostItem = 0xF00; // int32
+                constexpr std::ptrdiff_t m_RetakesMVPBoostExtraUtility = 0xF04; // loadout_slot_t
+                constexpr std::ptrdiff_t m_flHealthShotBoostExpirationTime = 0xF08; // GameTime_t
+                constexpr std::ptrdiff_t m_flLandingTimeSeconds = 0xF0C; // float32
+                constexpr std::ptrdiff_t m_aimPunchAngle = 0xF10; // QAngle
+                constexpr std::ptrdiff_t m_aimPunchAngleVel = 0xF1C; // QAngle
+                constexpr std::ptrdiff_t m_aimPunchTickBase = 0xF28; // int32
+                constexpr std::ptrdiff_t m_aimPunchTickFraction = 0xF2C; // float32
+                constexpr std::ptrdiff_t m_aimPunchCache = 0xF30; // CUtlVector<QAngle>
+                constexpr std::ptrdiff_t m_bIsBuyMenuOpen = 0xF48; // bool
+                constexpr std::ptrdiff_t m_xLastHeadBoneTransform = 0x1600; // CTransform
+                constexpr std::ptrdiff_t m_bLastHeadBoneTransformIsValid = 0x1620; // bool
+                constexpr std::ptrdiff_t m_lastLandTime = 0x1624; // GameTime_t
+                constexpr std::ptrdiff_t m_bOnGroundLastTick = 0x1628; // bool
+                constexpr std::ptrdiff_t m_iPlayerLocked = 0x162C; // int32
+                constexpr std::ptrdiff_t m_flTimeOfLastInjury = 0x1634; // GameTime_t
+                constexpr std::ptrdiff_t m_flNextSprayDecalTime = 0x1638; // GameTime_t
+                constexpr std::ptrdiff_t m_bNextSprayDecalTimeExpedited = 0x163C; // bool
+                constexpr std::ptrdiff_t m_nRagdollDamageBone = 0x1640; // int32
+                constexpr std::ptrdiff_t m_vRagdollDamageForce = 0x1644; // Vector
+                constexpr std::ptrdiff_t m_vRagdollDamagePosition = 0x1650; // Vector
+                constexpr std::ptrdiff_t m_szRagdollDamageWeaponName = 0x165C; // char[64]
+                constexpr std::ptrdiff_t m_bRagdollDamageHeadshot = 0x169C; // bool
+                constexpr std::ptrdiff_t m_vRagdollServerOrigin = 0x16A0; // Vector
+                constexpr std::ptrdiff_t m_EconGloves = 0x16B0; // CEconItemView
+                constexpr std::ptrdiff_t m_nEconGlovesChanged = 0x1928; // uint8
+                constexpr std::ptrdiff_t m_qDeathEyeAngles = 0x192C; // QAngle
+                constexpr std::ptrdiff_t m_bSkipOneHeadConstraintUpdate = 0x1938; // bool
+                constexpr std::ptrdiff_t m_bLeftHanded = 0x1939; // bool
+                constexpr std::ptrdiff_t m_fSwitchedHandednessTime = 0x193C; // GameTime_t
+                constexpr std::ptrdiff_t m_flViewmodelOffsetX = 0x1940; // float32
+                constexpr std::ptrdiff_t m_flViewmodelOffsetY = 0x1944; // float32
+                constexpr std::ptrdiff_t m_flViewmodelOffsetZ = 0x1948; // float32
+                constexpr std::ptrdiff_t m_flViewmodelFOV = 0x194C; // float32
+                constexpr std::ptrdiff_t m_bIsWalking = 0x1950; // bool
+                constexpr std::ptrdiff_t m_fLastGivenDefuserTime = 0x1954; // float32
+                constexpr std::ptrdiff_t m_fLastGivenBombTime = 0x1958; // float32
+                constexpr std::ptrdiff_t m_flDealtDamageToEnemyMostRecentTimestamp = 0x195C; // float32
+                constexpr std::ptrdiff_t m_iDisplayHistoryBits = 0x1960; // uint32
+                constexpr std::ptrdiff_t m_flLastAttackedTeammate = 0x1964; // float32
+                constexpr std::ptrdiff_t m_allowAutoFollowTime = 0x1968; // GameTime_t
+                constexpr std::ptrdiff_t m_bResetArmorNextSpawn = 0x196C; // bool
+                constexpr std::ptrdiff_t m_nLastKillerIndex = 0x1970; // CEntityIndex
+                constexpr std::ptrdiff_t m_entitySpottedState = 0x1978; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_nSpotRules = 0x1990; // int32
+                constexpr std::ptrdiff_t m_bIsScoped = 0x1994; // bool
+                constexpr std::ptrdiff_t m_bResumeZoom = 0x1995; // bool
+                constexpr std::ptrdiff_t m_bIsDefusing = 0x1996; // bool
+                constexpr std::ptrdiff_t m_bIsGrabbingHostage = 0x1997; // bool
+                constexpr std::ptrdiff_t m_iBlockingUseActionInProgress = 0x1998; // CSPlayerBlockingUseAction_t
+                constexpr std::ptrdiff_t m_flEmitSoundTime = 0x199C; // GameTime_t
+                constexpr std::ptrdiff_t m_bInNoDefuseArea = 0x19A0; // bool
+                constexpr std::ptrdiff_t m_iBombSiteIndex = 0x19A4; // CEntityIndex
+                constexpr std::ptrdiff_t m_nWhichBombZone = 0x19A8; // int32
+                constexpr std::ptrdiff_t m_bInBombZoneTrigger = 0x19AC; // bool
+                constexpr std::ptrdiff_t m_bWasInBombZoneTrigger = 0x19AD; // bool
+                constexpr std::ptrdiff_t m_iShotsFired = 0x19B0; // int32
+                constexpr std::ptrdiff_t m_flFlinchStack = 0x19B4; // float32
+                constexpr std::ptrdiff_t m_flVelocityModifier = 0x19B8; // float32
+                constexpr std::ptrdiff_t m_flHitHeading = 0x19BC; // float32
+                constexpr std::ptrdiff_t m_nHitBodyPart = 0x19C0; // int32
+                constexpr std::ptrdiff_t m_vecTotalBulletForce = 0x19C4; // Vector
+                constexpr std::ptrdiff_t m_bWaitForNoAttack = 0x19D0; // bool
+                constexpr std::ptrdiff_t m_ignoreLadderJumpTime = 0x19D4; // float32
+                constexpr std::ptrdiff_t m_bKilledByHeadshot = 0x19D8; // bool
+                constexpr std::ptrdiff_t m_LastHitBox = 0x19DC; // int32
+                constexpr std::ptrdiff_t m_LastHealth = 0x19E0; // int32
+                constexpr std::ptrdiff_t m_pBot = 0x19E8; // CCSBot*
+                constexpr std::ptrdiff_t m_bBotAllowActive = 0x19F0; // bool
+                constexpr std::ptrdiff_t m_thirdPersonHeading = 0x19F4; // QAngle
+                constexpr std::ptrdiff_t m_flSlopeDropOffset = 0x1A00; // float32
+                constexpr std::ptrdiff_t m_flSlopeDropHeight = 0x1A04; // float32
+                constexpr std::ptrdiff_t m_vHeadConstraintOffset = 0x1A08; // Vector
+                constexpr std::ptrdiff_t m_nLastPickupPriority = 0x1A14; // int32
+                constexpr std::ptrdiff_t m_flLastPickupPriorityTime = 0x1A18; // float32
+                constexpr std::ptrdiff_t m_ArmorValue = 0x1A1C; // int32
+                constexpr std::ptrdiff_t m_unCurrentEquipmentValue = 0x1A20; // uint16
+                constexpr std::ptrdiff_t m_unRoundStartEquipmentValue = 0x1A22; // uint16
+                constexpr std::ptrdiff_t m_unFreezetimeEndEquipmentValue = 0x1A24; // uint16
+                constexpr std::ptrdiff_t m_iLastWeaponFireUsercmd = 0x1A28; // int32
+                constexpr std::ptrdiff_t m_bIsSpawning = 0x1A2C; // bool
+                constexpr std::ptrdiff_t m_iDeathFlags = 0x1A38; // int32
+                constexpr std::ptrdiff_t m_bHasDeathInfo = 0x1A3C; // bool
+                constexpr std::ptrdiff_t m_flDeathInfoTime = 0x1A40; // float32
+                constexpr std::ptrdiff_t m_vecDeathInfoOrigin = 0x1A44; // Vector
+                constexpr std::ptrdiff_t m_vecPlayerPatchEconIndices = 0x1A50; // uint32[5]
+                constexpr std::ptrdiff_t m_GunGameImmunityColor = 0x1A64; // Color
+                constexpr std::ptrdiff_t m_grenadeParameterStashTime = 0x1A68; // GameTime_t
+                constexpr std::ptrdiff_t m_bGrenadeParametersStashed = 0x1A6C; // bool
+                constexpr std::ptrdiff_t m_angStashedShootAngles = 0x1A70; // QAngle
+                constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x1A7C; // Vector
+                constexpr std::ptrdiff_t m_vecStashedVelocity = 0x1A88; // Vector
+                constexpr std::ptrdiff_t m_angShootAngleHistory = 0x1A94; // QAngle[2]
+                constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x1AAC; // Vector[2]
+                constexpr std::ptrdiff_t m_vecVelocityHistory = 0x1AC4; // Vector[2]
+                constexpr std::ptrdiff_t m_PredictedDamageTags = 0x1AE0; // CUtlVectorEmbeddedNetworkVar<PredictedDamageTag_t>
+                constexpr std::ptrdiff_t m_nHighestAppliedDamageTagTick = 0x1B30; // int32
             }
             // Parent: CBaseGrenade
             // Field count: 0
@@ -10239,31 +10253,31 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flDeathTime (GameTime_t)
             // NetworkVarNames: m_hController (CHandle<CBasePlayerController>)
             namespace CBasePlayerPawn {
-                constexpr std::ptrdiff_t m_pWeaponServices = 0xA80; // CPlayer_WeaponServices*
-                constexpr std::ptrdiff_t m_pItemServices = 0xA88; // CPlayer_ItemServices*
-                constexpr std::ptrdiff_t m_pAutoaimServices = 0xA90; // CPlayer_AutoaimServices*
-                constexpr std::ptrdiff_t m_pObserverServices = 0xA98; // CPlayer_ObserverServices*
-                constexpr std::ptrdiff_t m_pWaterServices = 0xAA0; // CPlayer_WaterServices*
-                constexpr std::ptrdiff_t m_pUseServices = 0xAA8; // CPlayer_UseServices*
-                constexpr std::ptrdiff_t m_pFlashlightServices = 0xAB0; // CPlayer_FlashlightServices*
-                constexpr std::ptrdiff_t m_pCameraServices = 0xAB8; // CPlayer_CameraServices*
-                constexpr std::ptrdiff_t m_pMovementServices = 0xAC0; // CPlayer_MovementServices*
-                constexpr std::ptrdiff_t m_ServerViewAngleChanges = 0xAD0; // CUtlVectorEmbeddedNetworkVar<ViewAngleServerChange_t>
-                constexpr std::ptrdiff_t m_nHighestGeneratedServerViewAngleChangeIndex = 0xB20; // uint32
-                constexpr std::ptrdiff_t v_angle = 0xB24; // QAngle
-                constexpr std::ptrdiff_t v_anglePrevious = 0xB30; // QAngle
-                constexpr std::ptrdiff_t m_iHideHUD = 0xB3C; // uint32
-                constexpr std::ptrdiff_t m_skybox3d = 0xB40; // sky3dparams_t
-                constexpr std::ptrdiff_t m_fTimeLastHurt = 0xBD0; // GameTime_t
-                constexpr std::ptrdiff_t m_flDeathTime = 0xBD4; // GameTime_t
-                constexpr std::ptrdiff_t m_fNextSuicideTime = 0xBD8; // GameTime_t
-                constexpr std::ptrdiff_t m_fInitHUD = 0xBDC; // bool
-                constexpr std::ptrdiff_t m_pExpresser = 0xBE0; // CAI_Expresser*
-                constexpr std::ptrdiff_t m_hController = 0xBE8; // CHandle<CBasePlayerController>
-                constexpr std::ptrdiff_t m_fHltvReplayDelay = 0xBF0; // float32
-                constexpr std::ptrdiff_t m_fHltvReplayEnd = 0xBF4; // float32
-                constexpr std::ptrdiff_t m_iHltvReplayEntity = 0xBF8; // CEntityIndex
-                constexpr std::ptrdiff_t m_sndOpvarLatchData = 0xC00; // CUtlVector<sndopvarlatchdata_t>
+                constexpr std::ptrdiff_t m_pWeaponServices = 0xAC0; // CPlayer_WeaponServices*
+                constexpr std::ptrdiff_t m_pItemServices = 0xAC8; // CPlayer_ItemServices*
+                constexpr std::ptrdiff_t m_pAutoaimServices = 0xAD0; // CPlayer_AutoaimServices*
+                constexpr std::ptrdiff_t m_pObserverServices = 0xAD8; // CPlayer_ObserverServices*
+                constexpr std::ptrdiff_t m_pWaterServices = 0xAE0; // CPlayer_WaterServices*
+                constexpr std::ptrdiff_t m_pUseServices = 0xAE8; // CPlayer_UseServices*
+                constexpr std::ptrdiff_t m_pFlashlightServices = 0xAF0; // CPlayer_FlashlightServices*
+                constexpr std::ptrdiff_t m_pCameraServices = 0xAF8; // CPlayer_CameraServices*
+                constexpr std::ptrdiff_t m_pMovementServices = 0xB00; // CPlayer_MovementServices*
+                constexpr std::ptrdiff_t m_ServerViewAngleChanges = 0xB10; // CUtlVectorEmbeddedNetworkVar<ViewAngleServerChange_t>
+                constexpr std::ptrdiff_t m_nHighestGeneratedServerViewAngleChangeIndex = 0xB60; // uint32
+                constexpr std::ptrdiff_t v_angle = 0xB64; // QAngle
+                constexpr std::ptrdiff_t v_anglePrevious = 0xB70; // QAngle
+                constexpr std::ptrdiff_t m_iHideHUD = 0xB7C; // uint32
+                constexpr std::ptrdiff_t m_skybox3d = 0xB80; // sky3dparams_t
+                constexpr std::ptrdiff_t m_fTimeLastHurt = 0xC10; // GameTime_t
+                constexpr std::ptrdiff_t m_flDeathTime = 0xC14; // GameTime_t
+                constexpr std::ptrdiff_t m_fNextSuicideTime = 0xC18; // GameTime_t
+                constexpr std::ptrdiff_t m_fInitHUD = 0xC1C; // bool
+                constexpr std::ptrdiff_t m_pExpresser = 0xC20; // CAI_Expresser*
+                constexpr std::ptrdiff_t m_hController = 0xC28; // CHandle<CBasePlayerController>
+                constexpr std::ptrdiff_t m_fHltvReplayDelay = 0xC30; // float32
+                constexpr std::ptrdiff_t m_fHltvReplayEnd = 0xC34; // float32
+                constexpr std::ptrdiff_t m_iHltvReplayEntity = 0xC38; // CEntityIndex
+                constexpr std::ptrdiff_t m_sndOpvarLatchData = 0xC40; // CUtlVector<sndopvarlatchdata_t>
             }
             // Parent: CBaseTrigger
             // Field count: 16
@@ -10286,22 +10300,22 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flTonemapPercentBrightPixels (float)
             // NetworkVarNames: m_flTonemapMinAvgLum (float)
             namespace CPostProcessingVolume {
-                constexpr std::ptrdiff_t m_hPostSettings = 0x930; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-                constexpr std::ptrdiff_t m_flFadeDuration = 0x938; // float32
-                constexpr std::ptrdiff_t m_flMinLogExposure = 0x93C; // float32
-                constexpr std::ptrdiff_t m_flMaxLogExposure = 0x940; // float32
-                constexpr std::ptrdiff_t m_flMinExposure = 0x944; // float32
-                constexpr std::ptrdiff_t m_flMaxExposure = 0x948; // float32
-                constexpr std::ptrdiff_t m_flExposureCompensation = 0x94C; // float32
-                constexpr std::ptrdiff_t m_flExposureFadeSpeedUp = 0x950; // float32
-                constexpr std::ptrdiff_t m_flExposureFadeSpeedDown = 0x954; // float32
-                constexpr std::ptrdiff_t m_flTonemapEVSmoothingRange = 0x958; // float32
-                constexpr std::ptrdiff_t m_bMaster = 0x95C; // bool
-                constexpr std::ptrdiff_t m_bExposureControl = 0x95D; // bool
-                constexpr std::ptrdiff_t m_flRate = 0x960; // float32
-                constexpr std::ptrdiff_t m_flTonemapPercentTarget = 0x964; // float32
-                constexpr std::ptrdiff_t m_flTonemapPercentBrightPixels = 0x968; // float32
-                constexpr std::ptrdiff_t m_flTonemapMinAvgLum = 0x96C; // float32
+                constexpr std::ptrdiff_t m_hPostSettings = 0x970; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
+                constexpr std::ptrdiff_t m_flFadeDuration = 0x978; // float32
+                constexpr std::ptrdiff_t m_flMinLogExposure = 0x97C; // float32
+                constexpr std::ptrdiff_t m_flMaxLogExposure = 0x980; // float32
+                constexpr std::ptrdiff_t m_flMinExposure = 0x984; // float32
+                constexpr std::ptrdiff_t m_flMaxExposure = 0x988; // float32
+                constexpr std::ptrdiff_t m_flExposureCompensation = 0x98C; // float32
+                constexpr std::ptrdiff_t m_flExposureFadeSpeedUp = 0x990; // float32
+                constexpr std::ptrdiff_t m_flExposureFadeSpeedDown = 0x994; // float32
+                constexpr std::ptrdiff_t m_flTonemapEVSmoothingRange = 0x998; // float32
+                constexpr std::ptrdiff_t m_bMaster = 0x99C; // bool
+                constexpr std::ptrdiff_t m_bExposureControl = 0x99D; // bool
+                constexpr std::ptrdiff_t m_flRate = 0x9A0; // float32
+                constexpr std::ptrdiff_t m_flTonemapPercentTarget = 0x9A4; // float32
+                constexpr std::ptrdiff_t m_flTonemapPercentBrightPixels = 0x9A8; // float32
+                constexpr std::ptrdiff_t m_flTonemapMinAvgLum = 0x9AC; // float32
             }
             // Parent: CBaseModelEntity
             // Field count: 4
@@ -10310,15 +10324,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flLightScale (float32)
             // NetworkVarNames: m_Radius (float32)
             namespace CSpotlightEnd {
-                constexpr std::ptrdiff_t m_flLightScale = 0x750; // float32
-                constexpr std::ptrdiff_t m_Radius = 0x754; // float32
-                constexpr std::ptrdiff_t m_vSpotlightDir = 0x758; // Vector
-                constexpr std::ptrdiff_t m_vSpotlightOrg = 0x764; // Vector
+                constexpr std::ptrdiff_t m_flLightScale = 0x790; // float32
+                constexpr std::ptrdiff_t m_Radius = 0x794; // float32
+                constexpr std::ptrdiff_t m_vSpotlightDir = 0x798; // Vector
+                constexpr std::ptrdiff_t m_vSpotlightOrg = 0x7A4; // Vector
             }
             // Parent: CBaseModelEntity
             // Field count: 1
             namespace CRuleEntity {
-                constexpr std::ptrdiff_t m_iszMaster = 0x750; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_iszMaster = 0x790; // CUtlSymbolLarge
             }
             // Parent: CBaseCSGrenade
             // Field count: 0
@@ -10349,7 +10363,7 @@ namespace cs2_dumper {
             // Parent: CBaseTrigger
             // Field count: 1
             namespace CTriggerDetectExplosion {
-                constexpr std::ptrdiff_t m_OnDetectedExplosion = 0x948; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnDetectedExplosion = 0x988; // CEntityIOOutput
             }
             // Parent: CLogicalEntity
             // Field count: 1
@@ -10391,8 +10405,8 @@ namespace cs2_dumper {
             // Parent: CEconEntity
             // Field count: 2
             namespace CEconWearable {
-                constexpr std::ptrdiff_t m_nForceSkin = 0xCE8; // int32
-                constexpr std::ptrdiff_t m_bAlwaysAllow = 0xCEC; // bool
+                constexpr std::ptrdiff_t m_nForceSkin = 0xD30; // int32
+                constexpr std::ptrdiff_t m_bAlwaysAllow = 0xD34; // bool
             }
             // Parent: CPlayerPawnComponent
             // Field count: 0
@@ -10415,15 +10429,15 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flTransitionStartSpeed (float32)
             // NetworkVarNames: m_hConveyorModels (EHANDLE)
             namespace CFuncConveyor {
-                constexpr std::ptrdiff_t m_szConveyorModels = 0x750; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_flTransitionDurationSeconds = 0x758; // float32
-                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x75C; // QAngle
-                constexpr std::ptrdiff_t m_vecMoveDirEntitySpace = 0x768; // Vector
-                constexpr std::ptrdiff_t m_flTargetSpeed = 0x774; // float32
-                constexpr std::ptrdiff_t m_nTransitionStartTick = 0x778; // GameTick_t
-                constexpr std::ptrdiff_t m_nTransitionDurationTicks = 0x77C; // int32
-                constexpr std::ptrdiff_t m_flTransitionStartSpeed = 0x780; // float32
-                constexpr std::ptrdiff_t m_hConveyorModels = 0x788; // CNetworkUtlVectorBase<CHandle<CBaseEntity>>
+                constexpr std::ptrdiff_t m_szConveyorModels = 0x790; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_flTransitionDurationSeconds = 0x798; // float32
+                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x79C; // QAngle
+                constexpr std::ptrdiff_t m_vecMoveDirEntitySpace = 0x7A8; // Vector
+                constexpr std::ptrdiff_t m_flTargetSpeed = 0x7B4; // float32
+                constexpr std::ptrdiff_t m_nTransitionStartTick = 0x7B8; // GameTick_t
+                constexpr std::ptrdiff_t m_nTransitionDurationTicks = 0x7BC; // int32
+                constexpr std::ptrdiff_t m_flTransitionStartSpeed = 0x7C0; // float32
+                constexpr std::ptrdiff_t m_hConveyorModels = 0x7C8; // CNetworkUtlVectorBase<CHandle<CBaseEntity>>
             }
             // Parent: CCSWeaponBaseGun
             // Field count: 0
@@ -10467,7 +10481,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_bShowLight (bool)
             namespace CRectLight {
-                constexpr std::ptrdiff_t m_bShowLight = 0xA70; // bool
+                constexpr std::ptrdiff_t m_bShowLight = 0xAB0; // bool
             }
             // Parent: CCSGO_TeamSelectCharacterPosition
             // Field count: 0
@@ -10476,7 +10490,7 @@ namespace cs2_dumper {
             // Parent: CBaseDoor
             // Field count: 1
             namespace CRotDoor {
-                constexpr std::ptrdiff_t m_bSolidBsp = 0x9D8; // bool
+                constexpr std::ptrdiff_t m_bSolidBsp = 0xA18; // bool
             }
             // Parent: CLogicalEntity
             // Field count: 4
@@ -10555,16 +10569,16 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Entity_bCopyDiffuseFromDefaultCubemap = 0x5B0; // bool
                 constexpr std::ptrdiff_t m_Entity_bEnabled = 0x5C0; // bool
             }
-            // Parent: CPlayerPawnComponent
-            // Field count: 0
-            namespace CCSPlayer_DamageReactServices {
-            }
             // Parent: None
             // Field count: 3
             namespace ServerAuthoritativeWeaponSlot_t {
                 constexpr std::ptrdiff_t unClass = 0x28; // uint16
                 constexpr std::ptrdiff_t unSlot = 0x2A; // uint16
                 constexpr std::ptrdiff_t unItemDefIdx = 0x2C; // uint16
+            }
+            // Parent: CPlayerPawnComponent
+            // Field count: 0
+            namespace CCSPlayer_DamageReactServices {
             }
             // Parent: None
             // Field count: 5
@@ -10643,17 +10657,17 @@ namespace cs2_dumper {
             // NetworkVarNames: m_bIsPlantingViaUse (bool)
             // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
             namespace CC4 {
-                constexpr std::ptrdiff_t m_vecLastValidPlayerHeldPosition = 0xF40; // Vector
-                constexpr std::ptrdiff_t m_vecLastValidDroppedPosition = 0xF4C; // Vector
-                constexpr std::ptrdiff_t m_bDoValidDroppedPositionCheck = 0xF58; // bool
-                constexpr std::ptrdiff_t m_bStartedArming = 0xF59; // bool
-                constexpr std::ptrdiff_t m_fArmedTime = 0xF5C; // GameTime_t
-                constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0xF60; // bool
-                constexpr std::ptrdiff_t m_bIsPlantingViaUse = 0xF61; // bool
-                constexpr std::ptrdiff_t m_entitySpottedState = 0xF68; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSpotRules = 0xF80; // int32
-                constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0xF84; // bool[7]
-                constexpr std::ptrdiff_t m_bBombPlanted = 0xF8B; // bool
+                constexpr std::ptrdiff_t m_vecLastValidPlayerHeldPosition = 0xF88; // Vector
+                constexpr std::ptrdiff_t m_vecLastValidDroppedPosition = 0xF94; // Vector
+                constexpr std::ptrdiff_t m_bDoValidDroppedPositionCheck = 0xFA0; // bool
+                constexpr std::ptrdiff_t m_bStartedArming = 0xFA1; // bool
+                constexpr std::ptrdiff_t m_fArmedTime = 0xFA4; // GameTime_t
+                constexpr std::ptrdiff_t m_bBombPlacedAnimation = 0xFA8; // bool
+                constexpr std::ptrdiff_t m_bIsPlantingViaUse = 0xFA9; // bool
+                constexpr std::ptrdiff_t m_entitySpottedState = 0xFB0; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_nSpotRules = 0xFC8; // int32
+                constexpr std::ptrdiff_t m_bPlayedArmingBeeps = 0xFCC; // bool[7]
+                constexpr std::ptrdiff_t m_bBombPlanted = 0xFD3; // bool
             }
             // Parent: CHostageRescueZoneShim
             // Field count: 0
@@ -10675,33 +10689,33 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_bIsUsable (bool)
             namespace CBaseDoor {
-                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7E0; // QAngle
-                constexpr std::ptrdiff_t m_vecMoveDirParentSpace = 0x7EC; // Vector
-                constexpr std::ptrdiff_t m_ls = 0x7F8; // locksound_t
-                constexpr std::ptrdiff_t m_bForceClosed = 0x818; // bool
-                constexpr std::ptrdiff_t m_bDoorGroup = 0x819; // bool
-                constexpr std::ptrdiff_t m_bLocked = 0x81A; // bool
-                constexpr std::ptrdiff_t m_bIgnoreDebris = 0x81B; // bool
-                constexpr std::ptrdiff_t m_eSpawnPosition = 0x81C; // FuncDoorSpawnPos_t
-                constexpr std::ptrdiff_t m_flBlockDamage = 0x820; // float32
-                constexpr std::ptrdiff_t m_NoiseMoving = 0x828; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_NoiseArrived = 0x830; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_NoiseMovingClosed = 0x838; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_NoiseArrivedClosed = 0x840; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_ChainTarget = 0x848; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_OnBlockedClosing = 0x850; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnBlockedOpening = 0x878; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnUnblockedClosing = 0x8A0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnUnblockedOpening = 0x8C8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyClosed = 0x8F0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyOpen = 0x918; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnClose = 0x940; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnOpen = 0x968; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnLockedUse = 0x990; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bLoopMoveSound = 0x9B8; // bool
-                constexpr std::ptrdiff_t m_bCreateNavObstacle = 0x9D0; // bool
-                constexpr std::ptrdiff_t m_isChaining = 0x9D1; // bool
-                constexpr std::ptrdiff_t m_bIsUsable = 0x9D2; // bool
+                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x820; // QAngle
+                constexpr std::ptrdiff_t m_vecMoveDirParentSpace = 0x82C; // Vector
+                constexpr std::ptrdiff_t m_ls = 0x838; // locksound_t
+                constexpr std::ptrdiff_t m_bForceClosed = 0x858; // bool
+                constexpr std::ptrdiff_t m_bDoorGroup = 0x859; // bool
+                constexpr std::ptrdiff_t m_bLocked = 0x85A; // bool
+                constexpr std::ptrdiff_t m_bIgnoreDebris = 0x85B; // bool
+                constexpr std::ptrdiff_t m_eSpawnPosition = 0x85C; // FuncDoorSpawnPos_t
+                constexpr std::ptrdiff_t m_flBlockDamage = 0x860; // float32
+                constexpr std::ptrdiff_t m_NoiseMoving = 0x868; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_NoiseArrived = 0x870; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_NoiseMovingClosed = 0x878; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_NoiseArrivedClosed = 0x880; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_ChainTarget = 0x888; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_OnBlockedClosing = 0x890; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnBlockedOpening = 0x8B8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnUnblockedClosing = 0x8E0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnUnblockedOpening = 0x908; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyClosed = 0x930; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyOpen = 0x958; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnClose = 0x980; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnOpen = 0x9A8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnLockedUse = 0x9D0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bLoopMoveSound = 0x9F8; // bool
+                constexpr std::ptrdiff_t m_bCreateNavObstacle = 0xA10; // bool
+                constexpr std::ptrdiff_t m_isChaining = 0xA11; // bool
+                constexpr std::ptrdiff_t m_bIsUsable = 0xA12; // bool
             }
             // Parent: None
             // Field count: 33
@@ -10812,8 +10826,8 @@ namespace cs2_dumper {
             // Parent: CFuncPlat
             // Field count: 2
             namespace CFuncPlatRot {
-                constexpr std::ptrdiff_t m_end = 0x800; // QAngle
-                constexpr std::ptrdiff_t m_start = 0x80C; // QAngle
+                constexpr std::ptrdiff_t m_end = 0x840; // QAngle
+                constexpr std::ptrdiff_t m_start = 0x84C; // QAngle
             }
             // Parent: CPointEntity
             // Field count: 5
@@ -10835,12 +10849,12 @@ namespace cs2_dumper {
             // Parent: CBasePlatTrain
             // Field count: 6
             namespace CFuncTrain {
-                constexpr std::ptrdiff_t m_hCurrentTarget = 0x7F8; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_activated = 0x7FC; // bool
-                constexpr std::ptrdiff_t m_hEnemy = 0x800; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_flBlockDamage = 0x804; // float32
-                constexpr std::ptrdiff_t m_flNextBlockTime = 0x808; // GameTime_t
-                constexpr std::ptrdiff_t m_iszLastTarget = 0x810; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hCurrentTarget = 0x838; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_activated = 0x83C; // bool
+                constexpr std::ptrdiff_t m_hEnemy = 0x840; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_flBlockDamage = 0x844; // float32
+                constexpr std::ptrdiff_t m_flNextBlockTime = 0x848; // GameTime_t
+                constexpr std::ptrdiff_t m_iszLastTarget = 0x850; // CUtlSymbolLarge
             }
             // Parent: CHostageExpresserShim
             // Field count: 39
@@ -10864,45 +10878,45 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flGrabSuccessTime (GameTime_t)
             // NetworkVarNames: m_flDropStartTime (GameTime_t)
             namespace CHostage {
-                constexpr std::ptrdiff_t m_OnHostageBeginGrab = 0xA98; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFirstPickedUp = 0xAC0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnDroppedNotRescued = 0xAE8; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnRescued = 0xB10; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_entitySpottedState = 0xB38; // EntitySpottedState_t
-                constexpr std::ptrdiff_t m_nSpotRules = 0xB50; // int32
-                constexpr std::ptrdiff_t m_uiHostageSpawnExclusionGroupMask = 0xB54; // uint32
-                constexpr std::ptrdiff_t m_nHostageSpawnRandomFactor = 0xB58; // uint32
-                constexpr std::ptrdiff_t m_bRemove = 0xB5C; // bool
-                constexpr std::ptrdiff_t m_vel = 0xB60; // Vector
-                constexpr std::ptrdiff_t m_isRescued = 0xB6C; // bool
-                constexpr std::ptrdiff_t m_jumpedThisFrame = 0xB6D; // bool
-                constexpr std::ptrdiff_t m_nHostageState = 0xB70; // int32
-                constexpr std::ptrdiff_t m_leader = 0xB74; // CHandle<CBaseEntity>
-                constexpr std::ptrdiff_t m_lastLeader = 0xB78; // CHandle<CCSPlayerPawnBase>
-                constexpr std::ptrdiff_t m_reuseTimer = 0xB80; // CountdownTimer
-                constexpr std::ptrdiff_t m_hasBeenUsed = 0xB98; // bool
-                constexpr std::ptrdiff_t m_accel = 0xB9C; // Vector
-                constexpr std::ptrdiff_t m_isRunning = 0xBA8; // bool
-                constexpr std::ptrdiff_t m_isCrouching = 0xBA9; // bool
-                constexpr std::ptrdiff_t m_jumpTimer = 0xBB0; // CountdownTimer
-                constexpr std::ptrdiff_t m_isWaitingForLeader = 0xBC8; // bool
-                constexpr std::ptrdiff_t m_repathTimer = 0x2BD8; // CountdownTimer
-                constexpr std::ptrdiff_t m_inhibitDoorTimer = 0x2BF0; // CountdownTimer
-                constexpr std::ptrdiff_t m_inhibitObstacleAvoidanceTimer = 0x2C80; // CountdownTimer
-                constexpr std::ptrdiff_t m_wiggleTimer = 0x2CA0; // CountdownTimer
-                constexpr std::ptrdiff_t m_isAdjusted = 0x2CBC; // bool
-                constexpr std::ptrdiff_t m_bHandsHaveBeenCut = 0x2CBD; // bool
-                constexpr std::ptrdiff_t m_hHostageGrabber = 0x2CC0; // CHandle<CCSPlayerPawn>
-                constexpr std::ptrdiff_t m_fLastGrabTime = 0x2CC4; // GameTime_t
-                constexpr std::ptrdiff_t m_vecPositionWhenStartedDroppingToGround = 0x2CC8; // Vector
-                constexpr std::ptrdiff_t m_vecGrabbedPos = 0x2CD4; // Vector
-                constexpr std::ptrdiff_t m_flRescueStartTime = 0x2CE0; // GameTime_t
-                constexpr std::ptrdiff_t m_flGrabSuccessTime = 0x2CE4; // GameTime_t
-                constexpr std::ptrdiff_t m_flDropStartTime = 0x2CE8; // GameTime_t
-                constexpr std::ptrdiff_t m_nApproachRewardPayouts = 0x2CEC; // int32
-                constexpr std::ptrdiff_t m_nPickupEventCount = 0x2CF0; // int32
-                constexpr std::ptrdiff_t m_vecSpawnGroundPos = 0x2CF4; // Vector
-                constexpr std::ptrdiff_t m_vecHostageResetPosition = 0x2D14; // Vector
+                constexpr std::ptrdiff_t m_OnHostageBeginGrab = 0xAD8; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFirstPickedUp = 0xB00; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnDroppedNotRescued = 0xB28; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnRescued = 0xB50; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_entitySpottedState = 0xB78; // EntitySpottedState_t
+                constexpr std::ptrdiff_t m_nSpotRules = 0xB90; // int32
+                constexpr std::ptrdiff_t m_uiHostageSpawnExclusionGroupMask = 0xB94; // uint32
+                constexpr std::ptrdiff_t m_nHostageSpawnRandomFactor = 0xB98; // uint32
+                constexpr std::ptrdiff_t m_bRemove = 0xB9C; // bool
+                constexpr std::ptrdiff_t m_vel = 0xBA0; // Vector
+                constexpr std::ptrdiff_t m_isRescued = 0xBAC; // bool
+                constexpr std::ptrdiff_t m_jumpedThisFrame = 0xBAD; // bool
+                constexpr std::ptrdiff_t m_nHostageState = 0xBB0; // int32
+                constexpr std::ptrdiff_t m_leader = 0xBB4; // CHandle<CBaseEntity>
+                constexpr std::ptrdiff_t m_lastLeader = 0xBB8; // CHandle<CCSPlayerPawnBase>
+                constexpr std::ptrdiff_t m_reuseTimer = 0xBC0; // CountdownTimer
+                constexpr std::ptrdiff_t m_hasBeenUsed = 0xBD8; // bool
+                constexpr std::ptrdiff_t m_accel = 0xBDC; // Vector
+                constexpr std::ptrdiff_t m_isRunning = 0xBE8; // bool
+                constexpr std::ptrdiff_t m_isCrouching = 0xBE9; // bool
+                constexpr std::ptrdiff_t m_jumpTimer = 0xBF0; // CountdownTimer
+                constexpr std::ptrdiff_t m_isWaitingForLeader = 0xC08; // bool
+                constexpr std::ptrdiff_t m_repathTimer = 0x2C18; // CountdownTimer
+                constexpr std::ptrdiff_t m_inhibitDoorTimer = 0x2C30; // CountdownTimer
+                constexpr std::ptrdiff_t m_inhibitObstacleAvoidanceTimer = 0x2CC0; // CountdownTimer
+                constexpr std::ptrdiff_t m_wiggleTimer = 0x2CE0; // CountdownTimer
+                constexpr std::ptrdiff_t m_isAdjusted = 0x2CFC; // bool
+                constexpr std::ptrdiff_t m_bHandsHaveBeenCut = 0x2CFD; // bool
+                constexpr std::ptrdiff_t m_hHostageGrabber = 0x2D00; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_fLastGrabTime = 0x2D04; // GameTime_t
+                constexpr std::ptrdiff_t m_vecPositionWhenStartedDroppingToGround = 0x2D08; // Vector
+                constexpr std::ptrdiff_t m_vecGrabbedPos = 0x2D14; // Vector
+                constexpr std::ptrdiff_t m_flRescueStartTime = 0x2D20; // GameTime_t
+                constexpr std::ptrdiff_t m_flGrabSuccessTime = 0x2D24; // GameTime_t
+                constexpr std::ptrdiff_t m_flDropStartTime = 0x2D28; // GameTime_t
+                constexpr std::ptrdiff_t m_nApproachRewardPayouts = 0x2D2C; // int32
+                constexpr std::ptrdiff_t m_nPickupEventCount = 0x2D30; // int32
+                constexpr std::ptrdiff_t m_vecSpawnGroundPos = 0x2D34; // Vector
+                constexpr std::ptrdiff_t m_vecHostageResetPosition = 0x2D54; // Vector
             }
             // Parent: CPointEntity
             // Field count: 13
@@ -10929,18 +10943,18 @@ namespace cs2_dumper {
             // MNetworkIncludeByName
             // MNetworkOverride
             namespace CFuncMoveLinear {
-                constexpr std::ptrdiff_t m_authoredPosition = 0x7D0; // MoveLinearAuthoredPos_t
-                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x7D4; // QAngle
-                constexpr std::ptrdiff_t m_vecMoveDirParentSpace = 0x7E0; // Vector
-                constexpr std::ptrdiff_t m_soundStart = 0x7F0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_soundStop = 0x7F8; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_currentSound = 0x800; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_flBlockDamage = 0x808; // float32
-                constexpr std::ptrdiff_t m_flStartPosition = 0x80C; // float32
-                constexpr std::ptrdiff_t m_OnFullyOpen = 0x818; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_OnFullyClosed = 0x840; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_bCreateMovableNavMesh = 0x868; // bool
-                constexpr std::ptrdiff_t m_bCreateNavObstacle = 0x869; // bool
+                constexpr std::ptrdiff_t m_authoredPosition = 0x810; // MoveLinearAuthoredPos_t
+                constexpr std::ptrdiff_t m_angMoveEntitySpace = 0x814; // QAngle
+                constexpr std::ptrdiff_t m_vecMoveDirParentSpace = 0x820; // Vector
+                constexpr std::ptrdiff_t m_soundStart = 0x830; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_soundStop = 0x838; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_currentSound = 0x840; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_flBlockDamage = 0x848; // float32
+                constexpr std::ptrdiff_t m_flStartPosition = 0x84C; // float32
+                constexpr std::ptrdiff_t m_OnFullyOpen = 0x858; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_OnFullyClosed = 0x880; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_bCreateMovableNavMesh = 0x8A8; // bool
+                constexpr std::ptrdiff_t m_bCreateNavObstacle = 0x8A9; // bool
             }
             // Parent: CBaseEntity
             // Field count: 3
