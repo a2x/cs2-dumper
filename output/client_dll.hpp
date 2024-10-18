@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-17 10:20:21.774422600 UTC
+// 2024-10-18 01:51:41.241413900 UTC
 
 #pragma once
 
@@ -2370,9 +2370,9 @@ namespace cs2_dumper {
             // Parent: C_CSPlayerPawn
             // Field count: 3
             namespace C_CSGO_PreviewPlayer {
-                constexpr std::ptrdiff_t m_animgraph = 0x2520; // CUtlString
-                constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x2528; // CGlobalSymbol
-                constexpr std::ptrdiff_t m_flInitialModelScale = 0x2530; // float32
+                constexpr std::ptrdiff_t m_animgraph = 0x3A30; // CUtlString
+                constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x3A38; // CGlobalSymbol
+                constexpr std::ptrdiff_t m_flInitialModelScale = 0x3A40; // float32
             }
             // Parent: CSkeletonAnimationController
             // Field count: 14

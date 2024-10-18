@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-17 10:20:21.774422600 UTC
+// 2024-10-18 01:51:41.241413900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2375,9 +2375,9 @@ pub mod cs2_dumper {
             // Parent: C_CSPlayerPawn
             // Field count: 3
             pub mod C_CSGO_PreviewPlayer {
-                pub const m_animgraph: usize = 0x2520; // CUtlString
-                pub const m_animgraphCharacterModeString: usize = 0x2528; // CGlobalSymbol
-                pub const m_flInitialModelScale: usize = 0x2530; // float32
+                pub const m_animgraph: usize = 0x3A30; // CUtlString
+                pub const m_animgraphCharacterModeString: usize = 0x3A38; // CGlobalSymbol
+                pub const m_flInitialModelScale: usize = 0x3A40; // float32
             }
             // Parent: CSkeletonAnimationController
             // Field count: 14

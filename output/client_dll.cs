@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-17 10:20:21.774422600 UTC
+// 2024-10-18 01:51:41.241413900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -2365,9 +2365,9 @@ namespace CS2Dumper.Schemas {
         // Parent: C_CSPlayerPawn
         // Field count: 3
         public static class C_CSGO_PreviewPlayer {
-            public const nint m_animgraph = 0x2520; // CUtlString
-            public const nint m_animgraphCharacterModeString = 0x2528; // CGlobalSymbol
-            public const nint m_flInitialModelScale = 0x2530; // float32
+            public const nint m_animgraph = 0x3A30; // CUtlString
+            public const nint m_animgraphCharacterModeString = 0x3A38; // CGlobalSymbol
+            public const nint m_flInitialModelScale = 0x3A40; // float32
         }
         // Parent: CSkeletonAnimationController
         // Field count: 14

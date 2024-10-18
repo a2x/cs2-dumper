@@ -6033,9 +6033,9 @@
       },
       "C_CSGO_PreviewPlayer": {
         "fields": {
-          "m_animgraph": 9504,
-          "m_animgraphCharacterModeString": 9512,
-          "m_flInitialModelScale": 9520
+          "m_animgraph": 14896,
+          "m_animgraphCharacterModeString": 14904,
+          "m_flInitialModelScale": 14912
         },
         "metadata": [],
         "parent": "C_CSPlayerPawn"
