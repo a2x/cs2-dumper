@@ -4368,21 +4368,21 @@
       },
       "C_BaseCSGrenade": {
         "fields": {
-          "m_bClientPredictDelete": 6928,
-          "m_bIsHeldByPlayer": 6930,
-          "m_bJumpThrow": 6932,
-          "m_bJustPulledPin": 6956,
-          "m_bPinPulled": 6931,
-          "m_bRedraw": 6929,
-          "m_bThrowAnimating": 6933,
-          "m_fDropTime": 6948,
-          "m_fPinPullTime": 6952,
-          "m_fThrowTime": 6936,
-          "m_flNextHoldFrac": 6964,
-          "m_flThrowStrength": 6940,
-          "m_flThrowStrengthApproach": 6944,
-          "m_hSwitchToWeaponAfterThrow": 6968,
-          "m_nNextHoldTick": 6960
+          "m_bClientPredictDelete": 6944,
+          "m_bIsHeldByPlayer": 6946,
+          "m_bJumpThrow": 6948,
+          "m_bJustPulledPin": 6972,
+          "m_bPinPulled": 6947,
+          "m_bRedraw": 6945,
+          "m_bThrowAnimating": 6949,
+          "m_fDropTime": 6964,
+          "m_fPinPullTime": 6968,
+          "m_fThrowTime": 6952,
+          "m_flNextHoldFrac": 6980,
+          "m_flThrowStrength": 6956,
+          "m_flThrowStrengthApproach": 6960,
+          "m_hSwitchToWeaponAfterThrow": 6984,
+          "m_nNextHoldTick": 6976
         },
         "metadata": [
           {
@@ -5887,17 +5887,17 @@
       },
       "C_C4": {
         "fields": {
-          "m_activeLightParticleIndex": 6960,
-          "m_bBombPlacedAnimation": 6976,
-          "m_bBombPlanted": 7019,
-          "m_bIsPlantingViaUse": 6977,
-          "m_bPlayedArmingBeeps": 7012,
-          "m_bStartedArming": 6968,
-          "m_eActiveLightEffect": 6964,
-          "m_entitySpottedState": 6984,
-          "m_fArmedTime": 6972,
-          "m_nSpotRules": 7008,
-          "m_szScreenText": 6928
+          "m_activeLightParticleIndex": 6976,
+          "m_bBombPlacedAnimation": 6992,
+          "m_bBombPlanted": 7035,
+          "m_bIsPlantingViaUse": 6993,
+          "m_bPlayedArmingBeeps": 7028,
+          "m_bStartedArming": 6984,
+          "m_eActiveLightEffect": 6980,
+          "m_entitySpottedState": 7000,
+          "m_fArmedTime": 6988,
+          "m_nSpotRules": 7024,
+          "m_szScreenText": 6944
         },
         "metadata": [
           {
@@ -7832,12 +7832,12 @@
       },
       "C_CSWeaponBaseGun": {
         "fields": {
-          "m_bNeedsBoltAction": 6957,
-          "m_iBurstShotsRemaining": 6932,
-          "m_iSilencerBodygroup": 6936,
-          "m_inPrecache": 6956,
-          "m_silencedModelIndex": 6952,
-          "m_zoomLevel": 6928
+          "m_bNeedsBoltAction": 6973,
+          "m_iBurstShotsRemaining": 6948,
+          "m_iSilencerBodygroup": 6952,
+          "m_inPrecache": 6972,
+          "m_silencedModelIndex": 6968,
+          "m_zoomLevel": 6944
         },
         "metadata": [
           {
@@ -9742,8 +9742,8 @@
       },
       "C_Fists": {
         "fields": {
-          "m_bPlayingUninterruptableAct": 6928,
-          "m_nUninterruptableActivity": 6932
+          "m_bPlayingUninterruptableAct": 6944,
+          "m_nUninterruptableActivity": 6948
         },
         "metadata": [
           {
@@ -10479,8 +10479,16 @@
         "parent": "C_CS2WeaponModuleBase"
       },
       "C_Knife": {
-        "fields": {},
-        "metadata": [],
+        "fields": {
+          "m_bFirstAttack": 6944
+        },
+        "metadata": [
+          {
+            "name": "m_bFirstAttack",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          }
+        ],
         "parent": "C_CSWeaponBase"
       },
       "C_LightDirectionalEntity": {
@@ -13538,8 +13546,8 @@
       },
       "C_WeaponBaseItem": {
         "fields": {
-          "m_SequenceCompleteTimer": 6928,
-          "m_bRedraw": 6952
+          "m_SequenceCompleteTimer": 6944,
+          "m_bRedraw": 6968
         },
         "metadata": [
           {
@@ -13687,7 +13695,7 @@
       },
       "C_WeaponShield": {
         "fields": {
-          "m_flDisplayHealth": 6960
+          "m_flDisplayHealth": 6976
         },
         "metadata": [
           {
@@ -13700,8 +13708,8 @@
       },
       "C_WeaponTaser": {
         "fields": {
-          "m_fFireTime": 6960,
-          "m_nLastAttackTick": 6964
+          "m_fFireTime": 6976,
+          "m_nLastAttackTick": 6980
         },
         "metadata": [
           {
