@@ -84,12 +84,12 @@ fn read_class_binding(
     let binding = process.read_ptr(binding_ptr).data_part()?;
 
     let module_name = process
-        .read_utf8(binding.module_name.address(), 4096)
+        .read_utf8_lossy(binding.module_name.address(), 128)
         .data_part()
         .map(|s| format!("{}.dll", s))?;
 
     let name = process
-        .read_utf8(binding.name.address(), 4096)
+        .read_utf8_lossy(binding.name.address(), 4096)
         .data_part()?;
 
     if name.is_empty() {
@@ -101,12 +101,12 @@ fn read_class_binding(
         let parent_class = process.read_ptr(base_class.prev).data_part().ok()?;
 
         let module_name = process
-            .read_utf8(parent_class.module_name.address(), 4096)
+            .read_utf8_lossy(parent_class.module_name.address(), 128)
             .data_part()
             .ok()?;
 
         let name = process
-            .read_utf8(parent_class.name.address(), 4096)
+            .read_utf8_lossy(parent_class.name.address(), 4096)
             .data_part()
             .ok()?;
 
@@ -156,12 +156,15 @@ fn read_class_binding_fields(
             return Ok(acc);
         }
 
-        let name = process.read_utf8(field.name.address(), 4096).data_part()?;
+        let name = process
+            .read_utf8_lossy(field.name.address(), 4096)
+            .data_part()?;
+
         let schema_type = process.read_ptr(field.schema_type).data_part()?;
 
         // TODO: Parse this properly.
         let type_name = process
-            .read_utf8(schema_type.name.address(), 4096)
+            .read_utf8_lossy(schema_type.name.address(), 128)
             .data_part()?
             .replace(" ", "");
 
@@ -193,7 +196,7 @@ fn read_class_binding_metadata(
         }
 
         let name = process
-            .read_utf8(metadata.name.address(), 4096)
+            .read_utf8_lossy(metadata.name.address(), 4096)
             .data_part()?;
 
         let network_value = process.read_ptr(metadata.network_value).data_part()?;
@@ -201,7 +204,7 @@ fn read_class_binding_metadata(
         let metadata = match name.as_str() {
             "MNetworkChangeCallback" => unsafe {
                 let name = process
-                    .read_utf8(network_value.value.name_ptr.address(), 4096)
+                    .read_utf8_lossy(network_value.value.name_ptr.address(), 4096)
                     .data_part()?;
 
                 ClassMetadata::NetworkChangeCallback { name }
@@ -210,11 +213,11 @@ fn read_class_binding_metadata(
                 let var_value = network_value.value.var_value;
 
                 let name = process
-                    .read_utf8(var_value.name.address(), 4096)
+                    .read_utf8_lossy(var_value.name.address(), 4096)
                     .data_part()?;
 
                 let type_name = process
-                    .read_utf8(var_value.type_name.address(), 4096)
+                    .read_utf8_lossy(var_value.type_name.address(), 128)
                     .data_part()?
                     .replace(" ", "");
 
@@ -236,7 +239,7 @@ fn read_enum_binding(
     let binding = process.read_ptr(binding_ptr).data_part()?;
 
     let name = process
-        .read_utf8(binding.name.address(), 4096)
+        .read_utf8_lossy(binding.name.address(), 4096)
         .data_part()?;
 
     if name.is_empty() {
@@ -275,7 +278,7 @@ fn read_enum_binding_members(
             .data_part()?;
 
         let name = process
-            .read_utf8(enumerator.name.address(), 4096)
+            .read_utf8_lossy(enumerator.name.address(), 4096)
             .data_part()?;
 
         acc.push(EnumMember {

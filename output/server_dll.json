@@ -888,20 +888,20 @@
       },
       "CBaseCSGrenade": {
         "fields": {
-          "m_bIsHeldByPlayer": 3945,
-          "m_bJumpThrow": 3947,
-          "m_bJustPulledPin": 3972,
-          "m_bPinPulled": 3946,
-          "m_bRedraw": 3944,
-          "m_bThrowAnimating": 3948,
-          "m_fDropTime": 3964,
-          "m_fPinPullTime": 3968,
-          "m_fThrowTime": 3952,
-          "m_flNextHoldFrac": 3980,
-          "m_flThrowStrength": 3956,
-          "m_flThrowStrengthApproach": 3960,
-          "m_hSwitchToWeaponAfterThrow": 3984,
-          "m_nNextHoldTick": 3976
+          "m_bIsHeldByPlayer": 3953,
+          "m_bJumpThrow": 3955,
+          "m_bJustPulledPin": 3980,
+          "m_bPinPulled": 3954,
+          "m_bRedraw": 3952,
+          "m_bThrowAnimating": 3956,
+          "m_fDropTime": 3972,
+          "m_fPinPullTime": 3976,
+          "m_fThrowTime": 3960,
+          "m_flNextHoldFrac": 3988,
+          "m_flThrowStrength": 3964,
+          "m_flThrowStrengthApproach": 3968,
+          "m_hSwitchToWeaponAfterThrow": 3992,
+          "m_nNextHoldTick": 3984
         },
         "metadata": [
           {
@@ -2953,17 +2953,17 @@
       },
       "CC4": {
         "fields": {
-          "m_bBombPlacedAnimation": 4024,
-          "m_bBombPlanted": 4067,
-          "m_bDoValidDroppedPositionCheck": 4016,
-          "m_bIsPlantingViaUse": 4025,
-          "m_bPlayedArmingBeeps": 4060,
-          "m_bStartedArming": 4017,
-          "m_entitySpottedState": 4032,
-          "m_fArmedTime": 4020,
-          "m_nSpotRules": 4056,
-          "m_vecLastValidDroppedPosition": 4004,
-          "m_vecLastValidPlayerHeldPosition": 3992
+          "m_bBombPlacedAnimation": 4032,
+          "m_bBombPlanted": 4075,
+          "m_bDoValidDroppedPositionCheck": 4024,
+          "m_bIsPlantingViaUse": 4033,
+          "m_bPlayedArmingBeeps": 4068,
+          "m_bStartedArming": 4025,
+          "m_entitySpottedState": 4040,
+          "m_fArmedTime": 4028,
+          "m_nSpotRules": 4064,
+          "m_vecLastValidDroppedPosition": 4012,
+          "m_vecLastValidPlayerHeldPosition": 4000
         },
         "metadata": [
           {
@@ -4111,8 +4111,8 @@
       "CCSPlayerController": {
         "fields": {
           "m_DesiredObserverMode": 2204,
-          "m_LastTeamDamageWarningTime": 63960,
-          "m_LastTimePlayerWasDisconnectedForPawnsRemove": 63964,
+          "m_LastTeamDamageWarningTime": 63944,
+          "m_LastTimePlayerWasDisconnectedForPawnsRemove": 63948,
           "m_bAbandonAllowsSurrender": 2166,
           "m_bAbandonOffersInstantSurrender": 2167,
           "m_bAttemptedToGetColor": 1989,
@@ -4122,29 +4122,29 @@
           "m_bDisconnection1MinWarningPrinted": 2168,
           "m_bEverFullyConnected": 2165,
           "m_bEverPlayedOnTeam": 1988,
-          "m_bGaveTeamDamageWarning": 63946,
-          "m_bGaveTeamDamageWarningThisRound": 63947,
+          "m_bGaveTeamDamageWarning": 63930,
+          "m_bGaveTeamDamageWarningThisRound": 63931,
           "m_bHasBeenControlledByPlayerThisRound": 2186,
           "m_bHasCommunicationAbuseMute": 1964,
           "m_bHasControlledBotThisRound": 2185,
           "m_bHasSeenJoinGame": 1998,
           "m_bInSwitchTeam": 1997,
           "m_bJustBecameSpectator": 1999,
-          "m_bJustDidTeamKill": 63944,
-          "m_bMvpNoMusic": 2280,
+          "m_bJustDidTeamKill": 63928,
+          "m_bMvpNoMusic": 2266,
           "m_bPawnHasDefuser": 2224,
           "m_bPawnHasHelmet": 2225,
           "m_bPawnIsAlive": 2212,
-          "m_bPunishForTeamKill": 63945,
+          "m_bPunishForTeamKill": 63929,
           "m_bRemoveAllItemsOnNextRoundReset": 2001,
           "m_bScoreReported": 2169,
-          "m_bShowHints": 63936,
+          "m_bShowHints": 63920,
           "m_bSwitchTeamsOnNextRoundReset": 2000,
           "m_bTeamChanged": 1996,
-          "m_dblLastReceivedPacketPlatFloatTime": 63952,
-          "m_eMvpReason": 2284,
+          "m_dblLastReceivedPacketPlatFloatTime": 63936,
+          "m_eMvpReason": 2268,
           "m_flForceTeamTime": 1980,
-          "m_flSmoothedPing": 2304,
+          "m_flSmoothedPing": 2288,
           "m_hDesiredObserverTarget": 2208,
           "m_hObserverPawn": 2200,
           "m_hOriginalControllerOfCurrentPawn": 2240,
@@ -4158,10 +4158,10 @@
           "m_iCompetitiveRankingPredicted_Win": 2084,
           "m_iCompetitiveWins": 2076,
           "m_iDraftIndex": 2152,
-          "m_iMVPs": 2296,
-          "m_iMusicKitID": 2288,
-          "m_iMusicKitMVPs": 2292,
-          "m_iNextTimeCheck": 63940,
+          "m_iMVPs": 2280,
+          "m_iMusicKitID": 2272,
+          "m_iMusicKitMVPs": 2276,
+          "m_iNextTimeCheck": 63924,
           "m_iPawnArmor": 2220,
           "m_iPawnBotDifficulty": 2236,
           "m_iPawnHealth": 2216,
@@ -4173,29 +4173,31 @@
           "m_iRoundsWon": 2252,
           "m_iScore": 2244,
           "m_iTeammatePreferredColor": 1992,
-          "m_lastHeldVoteTimer": 63912,
+          "m_lastHeldVoteTimer": 63896,
           "m_msQueuedModeDisconnectionTimestamp": 2156,
           "m_nBotsControlledThisRound": 2188,
           "m_nDisconnectionTick": 2172,
           "m_nEndMatchNextMapVote": 2096,
-          "m_nNonSuspiciousHitStreak": 63972,
+          "m_nFirstKill": 2264,
+          "m_nKillCount": 2265,
+          "m_nNonSuspiciousHitStreak": 63956,
           "m_nPawnCharacterDefIndex": 2226,
           "m_nPlayerDominated": 2056,
           "m_nPlayerDominatingMe": 2064,
           "m_nQuestProgressReason": 2104,
-          "m_nSuspiciousHitCount": 63968,
-          "m_nUpdateCounter": 2300,
+          "m_nSuspiciousHitCount": 63952,
+          "m_nUpdateCounter": 2284,
           "m_pActionTrackingServices": 1944,
           "m_pDamageServices": 1952,
           "m_pInGameMoneyServices": 1928,
           "m_pInventoryServices": 1936,
+          "m_recentKillQueue": 2256,
           "m_szClan": 2008,
           "m_szClanName": 2016,
           "m_szCrosshairCodes": 1968,
           "m_uiAbandonRecordedReason": 2160,
           "m_unActiveQuestId": 2100,
-          "m_unPlayerTvControlFlags": 2108,
-          "m_vecKills": 2256
+          "m_unPlayerTvControlFlags": 2108
         },
         "metadata": [
           {
@@ -4421,9 +4423,19 @@
             "type_name": "int32"
           },
           {
-            "name": "m_vecKills",
+            "name": "m_recentKillQueue",
             "type": "NetworkVarNames",
-            "type_name": "EKillTypes_t"
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nFirstKill",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nKillCount",
+            "type": "NetworkVarNames",
+            "type_name": "uint8"
           },
           {
             "name": "m_bMvpNoMusic",
@@ -4492,8 +4504,9 @@
       },
       "CCSPlayerController_DamageServices": {
         "fields": {
-          "m_DamageList": 72,
-          "m_nSendUpdate": 64
+          "m_DamageList": 96,
+          "m_DamageListServer": 64,
+          "m_nSendUpdate": 88
         },
         "metadata": [
           {
@@ -5403,54 +5416,48 @@
       },
       "CCSPlayer_MovementServices": {
         "fields": {
-          "m_StuckLast": 1156,
-          "m_bDesiresDuck": 581,
-          "m_bDuckOverride": 580,
-          "m_bHasWalkMovedSinceLastJump": 625,
-          "m_bInStuckTest": 626,
-          "m_bMadeFootstepNoise": 1216,
-          "m_bOldJumpPressed": 1224,
-          "m_bSpeedCropped": 1160,
-          "m_duckUntilOnGround": 624,
-          "m_fStashGrenadeParameterWhen": 1240,
-          "m_flDuckAmount": 572,
-          "m_flDuckOffset": 584,
-          "m_flDuckSpeed": 576,
-          "m_flGroundMoveEfficiency": 1164,
-          "m_flHeightAtJumpStart": 1268,
-          "m_flJumpPressedTime": 1228,
-          "m_flJumpUntil": 1232,
-          "m_flJumpVel": 1236,
-          "m_flLastDuckTime": 600,
-          "m_flMaxFallVelocity": 552,
-          "m_flMaxJumpHeightLastJump": 1276,
-          "m_flMaxJumpHeightThisJump": 1272,
-          "m_flOffsetTickCompleteTime": 1256,
-          "m_flOffsetTickStashedSpeed": 1260,
-          "m_flStamina": 1264,
-          "m_flStuckCheckTime": 640,
-          "m_flWaterEntryTime": 1172,
-          "m_iFootsteps": 1220,
-          "m_nButtonDownMaskPrev": 1248,
-          "m_nDuckJumpTimeMsecs": 592,
-          "m_nDuckTimeMsecs": 588,
-          "m_nGameCodeHasMovedPlayerAfterCommand": 1212,
-          "m_nJumpTimeMsecs": 596,
-          "m_nLadderSurfacePropIndex": 568,
-          "m_nOldWaterLevel": 1168,
-          "m_nTraceCount": 1152,
-          "m_vecForward": 1176,
-          "m_vecLadderNormal": 556,
-          "m_vecLastPositionAtFullCrouchSpeed": 616,
-          "m_vecLeft": 1188,
-          "m_vecUp": 1200
+          "m_StuckLast": 1148,
+          "m_bDesiresDuck": 577,
+          "m_bDuckOverride": 576,
+          "m_bHasWalkMovedSinceLastJump": 617,
+          "m_bInStuckTest": 618,
+          "m_bMadeFootstepNoise": 1208,
+          "m_bOldJumpPressed": 1216,
+          "m_bSpeedCropped": 1152,
+          "m_duckUntilOnGround": 616,
+          "m_fStashGrenadeParameterWhen": 1224,
+          "m_flAccumulatedJumpError": 1268,
+          "m_flDuckAmount": 568,
+          "m_flDuckOffset": 580,
+          "m_flDuckSpeed": 572,
+          "m_flGroundMoveEfficiency": 1156,
+          "m_flHeightAtJumpStart": 1252,
+          "m_flJumpPressedTime": 1220,
+          "m_flLastDuckTime": 596,
+          "m_flMaxJumpHeightLastJump": 1260,
+          "m_flMaxJumpHeightThisJump": 1256,
+          "m_flOffsetTickCompleteTime": 1240,
+          "m_flOffsetTickStashedSpeed": 1244,
+          "m_flStamina": 1248,
+          "m_flStaminaAtJumpStart": 1264,
+          "m_flStuckCheckTime": 632,
+          "m_flWaterEntryTime": 1164,
+          "m_iFootsteps": 1212,
+          "m_nButtonDownMaskPrev": 1232,
+          "m_nDuckJumpTimeMsecs": 588,
+          "m_nDuckTimeMsecs": 584,
+          "m_nGameCodeHasMovedPlayerAfterCommand": 1204,
+          "m_nJumpTimeMsecs": 592,
+          "m_nLadderSurfacePropIndex": 564,
+          "m_nOldWaterLevel": 1160,
+          "m_nTraceCount": 1144,
+          "m_vecForward": 1168,
+          "m_vecLadderNormal": 552,
+          "m_vecLastPositionAtFullCrouchSpeed": 608,
+          "m_vecLeft": 1180,
+          "m_vecUp": 1192
         },
         "metadata": [
-          {
-            "name": "m_flMaxFallVelocity",
-            "type": "NetworkVarNames",
-            "type_name": "float"
-          },
           {
             "name": "m_vecLadderNormal",
             "type": "NetworkVarNames",
@@ -5510,16 +5517,6 @@
             "name": "m_bOldJumpPressed",
             "type": "NetworkVarNames",
             "type_name": "bool"
-          },
-          {
-            "name": "m_flJumpUntil",
-            "type": "NetworkVarNames",
-            "type_name": "float"
-          },
-          {
-            "name": "m_flJumpVel",
-            "type": "NetworkVarNames",
-            "type_name": "float"
           },
           {
             "name": "m_fStashGrenadeParameterWhen",
@@ -5841,13 +5838,13 @@
       },
       "CCSWeaponBase": {
         "fields": {
-          "m_IronSightController": 3888,
+          "m_IronSightController": 3896,
           "m_OnPlayerPickup": 3664,
           "m_bBurstMode": 3752,
           "m_bCanBePickedUp": 3816,
           "m_bDroppedNearBuyZone": 3788,
           "m_bFireOnEmpty": 3660,
-          "m_bFiredOutOfAmmoEvent": 3878,
+          "m_bFiredOutOfAmmoEvent": 3886,
           "m_bInReload": 3764,
           "m_bIsHauledBack": 3772,
           "m_bPlayerAmmoStockOnPickup": 3600,
@@ -5857,20 +5854,20 @@
           "m_bRequireUseToTouch": 3601,
           "m_bSilencerOn": 3773,
           "m_bUseCanOverrideNextOwnerTouchTime": 3817,
-          "m_bWasOwnedByCT": 3876,
-          "m_bWasOwnedByTerrorist": 3877,
-          "m_donated": 3868,
+          "m_bWasOwnedByCT": 3884,
+          "m_bWasOwnedByTerrorist": 3885,
+          "m_donated": 3876,
           "m_ePlayerFireEvent": 3508,
           "m_ePlayerFireEventAttackType": 3512,
           "m_fAccuracyPenalty": 3728,
           "m_fAccuracySmoothedForZoom": 3736,
-          "m_fLastShotTime": 3872,
+          "m_fLastShotTime": 3880,
           "m_fScopeZoomEndTime": 3740,
           "m_flDroppedAtTime": 3768,
           "m_flFireSequenceStartTime": 3496,
           "m_flLastAccuracyUpdateTime": 3732,
           "m_flLastDeployTime": 3612,
-          "m_flLastLOSTraceFailureTime": 3916,
+          "m_flLastLOSTraceFailureTime": 3924,
           "m_flLastTimeInAir": 3608,
           "m_flNextAttackRenderTimeOffset": 3792,
           "m_flPostponeFireReadyFrac": 3760,
@@ -5879,16 +5876,16 @@
           "m_flTimeWeaponIdle": 3656,
           "m_flTurningInaccuracy": 3724,
           "m_flTurningInaccuracyDelta": 3708,
-          "m_flWatTickOffset": 3924,
+          "m_flWatTickOffset": 3932,
           "m_hCurrentThirdPersonSequence": 3552,
-          "m_hPrevOwner": 3832,
-          "m_iIronSightMode": 3912,
+          "m_hPrevOwner": 3836,
+          "m_iIronSightMode": 3920,
           "m_iMostRecentTeamNumber": 3784,
-          "m_iNumEmptyAttacks": 3920,
+          "m_iNumEmptyAttacks": 3928,
           "m_iOriginalTeamNumber": 3780,
           "m_iRecoilIndex": 3744,
           "m_iState": 3604,
-          "m_nDropTick": 3836,
+          "m_nDropTick": 3840,
           "m_nFireSequenceStartTimeAck": 3504,
           "m_nFireSequenceStartTimeChange": 3500,
           "m_nLastEmptySoundCmdNum": 3616,
@@ -5897,7 +5894,8 @@
           "m_nViewModelIndex": 3620,
           "m_nextOwnerTouchTime": 3820,
           "m_nextPrevOwnerTouchTime": 3824,
-          "m_numRemoveUnownedWeaponThink": 3880,
+          "m_nextPrevOwnerUseTime": 3832,
+          "m_numRemoveUnownedWeaponThink": 3888,
           "m_seqFirePrimary": 3520,
           "m_seqFireSecondary": 3524,
           "m_seqIdle": 3516,
@@ -6027,6 +6025,11 @@
             "type_name": "bool"
           },
           {
+            "name": "m_nextPrevOwnerUseTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
+          },
+          {
             "name": "m_hPrevOwner",
             "type": "NetworkVarNames",
             "type_name": "CHandle<CCSPlayerPawn>"
@@ -6056,15 +6059,15 @@
       },
       "CCSWeaponBaseGun": {
         "fields": {
-          "m_bNeedsBoltAction": 3965,
-          "m_bSkillBoltInterruptAvailable": 3968,
-          "m_bSkillBoltLiftedFireKey": 3969,
-          "m_bSkillReloadAvailable": 3966,
-          "m_bSkillReloadLiftedReloadKey": 3967,
-          "m_iBurstShotsRemaining": 3948,
-          "m_inPrecache": 3964,
-          "m_silencedModelIndex": 3960,
-          "m_zoomLevel": 3944
+          "m_bNeedsBoltAction": 3973,
+          "m_bSkillBoltInterruptAvailable": 3976,
+          "m_bSkillBoltLiftedFireKey": 3977,
+          "m_bSkillReloadAvailable": 3974,
+          "m_bSkillReloadLiftedReloadKey": 3975,
+          "m_iBurstShotsRemaining": 3956,
+          "m_inPrecache": 3972,
+          "m_silencedModelIndex": 3968,
+          "m_zoomLevel": 3952
         },
         "metadata": [
           {
@@ -9149,13 +9152,13 @@
       },
       "CFists": {
         "fields": {
-          "m_bDelayedHardPunchIncoming": 3964,
-          "m_bDestroyAfterTaunt": 3965,
-          "m_bPlayingUninterruptableAct": 3944,
-          "m_bRestorePrevWep": 3952,
-          "m_hWeaponBeforePrevious": 3956,
-          "m_hWeaponPrevious": 3960,
-          "m_nUninterruptableActivity": 3948
+          "m_bDelayedHardPunchIncoming": 3972,
+          "m_bDestroyAfterTaunt": 3973,
+          "m_bPlayingUninterruptableAct": 3952,
+          "m_bRestorePrevWep": 3960,
+          "m_hWeaponBeforePrevious": 3964,
+          "m_hWeaponPrevious": 3968,
+          "m_nUninterruptableActivity": 3956
         },
         "metadata": [
           {
@@ -10850,7 +10853,7 @@
       },
       "CKnife": {
         "fields": {
-          "m_bFirstAttack": 3944
+          "m_bFirstAttack": 3952
         },
         "metadata": [
           {
@@ -15297,11 +15300,13 @@
         "fields": {
           "m_VoxelFrameData": 2960,
           "m_bDidSmokeEffect": 2924,
-          "m_bExplodeFromInferno": 11824,
-          "m_flLastBounce": 2984,
-          "m_fllastSimulationTime": 2988,
+          "m_bExplodeFromInferno": 11832,
+          "m_flLastBounce": 2992,
+          "m_fllastSimulationTime": 2996,
           "m_nRandomSeed": 2928,
           "m_nSmokeEffectTickBegin": 2920,
+          "m_nVoxelFrameDataSize": 2984,
+          "m_nVoxelUpdate": 2988,
           "m_vSmokeColor": 2932,
           "m_vSmokeDetonationPos": 2944
         },
@@ -15334,7 +15339,17 @@
           {
             "name": "m_VoxelFrameData",
             "type": "NetworkVarNames",
-            "type_name": "CUtlVector<uint8>"
+            "type_name": "uint8"
+          },
+          {
+            "name": "m_nVoxelFrameDataSize",
+            "type": "NetworkVarNames",
+            "type_name": "int"
+          },
+          {
+            "name": "m_nVoxelUpdate",
+            "type": "NetworkVarNames",
+            "type_name": "int"
           }
         ],
         "parent": "CBaseCSGrenadeProjectile"
@@ -16619,8 +16634,8 @@
       },
       "CWeaponBaseItem": {
         "fields": {
-          "m_SequenceCompleteTimer": 3944,
-          "m_bRedraw": 3968
+          "m_SequenceCompleteTimer": 3952,
+          "m_bRedraw": 3976
         },
         "metadata": [
           {
@@ -16768,9 +16783,9 @@
       },
       "CWeaponShield": {
         "fields": {
-          "m_flBulletDamageAbsorbed": 3976,
-          "m_flDisplayHealth": 3984,
-          "m_flLastBulletHitSoundTime": 3980
+          "m_flBulletDamageAbsorbed": 3984,
+          "m_flDisplayHealth": 3992,
+          "m_flLastBulletHitSoundTime": 3988
         },
         "metadata": [
           {
@@ -16783,8 +16798,8 @@
       },
       "CWeaponTaser": {
         "fields": {
-          "m_fFireTime": 3976,
-          "m_nLastAttackTick": 3980
+          "m_fFireTime": 3984,
+          "m_nLastAttackTick": 3988
         },
         "metadata": [
           {
@@ -17535,6 +17550,13 @@
       }
     },
     "enums": {
+      "0_____": {
+        "alignment": 15,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
       "AmmoFlags_t": {
         "alignment": 4,
         "members": {
@@ -19251,6 +19273,11 @@
           "WORLDTEXT_VERTICAL_ALIGN_TOP": 0
         },
         "type": "uint32"
+      },
+      "_A____": {
+        "alignment": 0,
+        "members": {},
+        "type": "unknown"
       },
       "attributeprovidertypes_t": {
         "alignment": 4,
