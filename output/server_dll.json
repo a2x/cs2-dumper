@@ -4504,9 +4504,8 @@
       },
       "CCSPlayerController_DamageServices": {
         "fields": {
-          "m_DamageList": 96,
-          "m_DamageListServer": 64,
-          "m_nSendUpdate": 88
+          "m_DamageList": 72,
+          "m_nSendUpdate": 64
         },
         "metadata": [
           {
@@ -17550,13 +17549,6 @@
       }
     },
     "enums": {
-      "0_____": {
-        "alignment": 15,
-        "members": {
-          "": 0
-        },
-        "type": "unknown"
-      },
       "AmmoFlags_t": {
         "alignment": 4,
         "members": {
@@ -19273,11 +19265,6 @@
           "WORLDTEXT_VERTICAL_ALIGN_TOP": 0
         },
         "type": "uint32"
-      },
-      "_A____": {
-        "alignment": 0,
-        "members": {},
-        "type": "unknown"
       },
       "attributeprovidertypes_t": {
         "alignment": 4,
