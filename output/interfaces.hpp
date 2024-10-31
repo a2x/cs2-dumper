@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-30 01:11:46.423839600 UTC
+// 2024-10-31 02:41:35.880004100 UTC
 
 #pragma once
 
@@ -170,7 +170,7 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t Source2GameDirector001 = 0x14F1C30;
             constexpr std::ptrdiff_t Source2GameEntities001 = 0x13C39A0;
             constexpr std::ptrdiff_t Source2Server001 = 0x13C3810;
-            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x15ADAE8;
+            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x15ADAF8;
             constexpr std::ptrdiff_t customnavsystem001 = 0x1303A98;
         }
         // Module: soundsystem.dll
