@@ -8412,19 +8412,19 @@
       "CEnvSoundscape": {
         "fields": {
           "m_OnPlay": 1248,
-          "m_bDisabled": 1396,
-          "m_bOverrideWithEvent": 1312,
+          "m_bDisabled": 1388,
+          "m_bOverrideWithEvent": 1304,
           "m_flRadius": 1288,
-          "m_hProxySoundscape": 1392,
-          "m_positionNames": 1328,
-          "m_soundEventHash": 1324,
-          "m_soundEventName": 1304,
-          "m_soundscapeEntityListId": 1320,
-          "m_soundscapeIndex": 1316,
-          "m_soundscapeName": 1296
+          "m_hProxySoundscape": 1384,
+          "m_positionNames": 1320,
+          "m_soundEventHash": 1400,
+          "m_soundEventName": 1296,
+          "m_soundscapeEntityListId": 1312,
+          "m_soundscapeIndex": 1308,
+          "m_soundscapeName": 1392
         },
         "metadata": [],
-        "parent": "CServerOnlyEntity"
+        "parent": "CBaseEntity"
       },
       "CEnvSoundscapeAlias_snd_soundscape": {
         "fields": {},
@@ -8433,7 +8433,7 @@
       },
       "CEnvSoundscapeProxy": {
         "fields": {
-          "m_MainSoundscapeName": 1400
+          "m_MainSoundscapeName": 1408
         },
         "metadata": [],
         "parent": "CEnvSoundscape"
