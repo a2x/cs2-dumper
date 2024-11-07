@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-31 02:41:35.880004100 UTC
+// 2024-11-07 04:25:21.795302200 UTC
 
 #pragma once
 
@@ -2000,6 +2000,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OnPassThroughReverse = 0x550; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_hMover = 0x578; // CHandle<CPathMover>
             }
+            // Parent: CEnvSoundscape
+            // Field count: 0
+            namespace CEnvSoundscapeTriggerable {
+            }
             // Parent: CBtNode
             // Field count: 12
             namespace CBtActionAim {
@@ -2023,10 +2027,6 @@ namespace cs2_dumper {
             // Parent: CCSGO_WingmanIntroCharacterPosition
             // Field count: 0
             namespace CCSGO_WingmanIntroCounterTerroristPosition {
-            }
-            // Parent: CEnvSoundscape
-            // Field count: 0
-            namespace CEnvSoundscapeTriggerable {
             }
             // Parent: CPlayerPawnComponent
             // Field count: 12
@@ -4090,13 +4090,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iFilterName = 0x790; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_hFilter = 0x798; // CHandle<CBaseFilter>
             }
-            // Parent: CPointEntity
-            // Field count: 0
-            namespace CInfoInstructorHintHostageRescueZone {
-            }
             // Parent: CEnvSoundscape
             // Field count: 0
             namespace CEnvSoundscapeAlias_snd_soundscape {
+            }
+            // Parent: CPointEntity
+            // Field count: 0
+            namespace CInfoInstructorHintHostageRescueZone {
             }
             // Parent: CBaseEntity
             // Field count: 7
@@ -5024,13 +5024,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vOuterMins = 0x838; // Vector
                 constexpr std::ptrdiff_t m_vOuterMaxs = 0x844; // Vector
             }
-            // Parent: CLightEntity
-            // Field count: 0
-            namespace CLightOrthoEntity {
-            }
             // Parent: CEnvSoundscapeTriggerable
             // Field count: 0
             namespace CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable {
+            }
+            // Parent: CLightEntity
+            // Field count: 0
+            namespace CLightOrthoEntity {
             }
             // Parent: CSoundOpvarSetPointBase
             // Field count: 24
@@ -5661,6 +5661,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bEnableRendering = 0x60; // bool
                 constexpr std::ptrdiff_t m_bInterpolationReadyToDraw = 0xB0; // bool
             }
+            // Parent: CEnvSoundscape
+            // Field count: 1
+            namespace CEnvSoundscapeProxy {
+                constexpr std::ptrdiff_t m_MainSoundscapeName = 0x580; // CUtlSymbolLarge
+            }
             // Parent: CSoundEventEntity
             // Field count: 7
             //
@@ -5674,11 +5679,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDotProductMax = 0x5AC; // float32
                 constexpr std::ptrdiff_t m_bPlaying = 0x5B0; // bool
                 constexpr std::ptrdiff_t m_vecCornerPairsNetworked = 0x5D8; // CNetworkUtlVectorBase<SoundeventPathCornerPairNetworked_t>
-            }
-            // Parent: CEnvSoundscape
-            // Field count: 1
-            namespace CEnvSoundscapeProxy {
-                constexpr std::ptrdiff_t m_MainSoundscapeName = 0x578; // CUtlSymbolLarge
             }
             // Parent: CEntityComponent
             // Field count: 67
@@ -6199,6 +6199,21 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bEnableLinearConstraint = 0x568; // bool
                 constexpr std::ptrdiff_t m_bEnableAngularConstraint = 0x569; // bool
             }
+            // Parent: CBaseEntity
+            // Field count: 11
+            namespace CEnvSoundscape {
+                constexpr std::ptrdiff_t m_OnPlay = 0x4E0; // CEntityIOOutput
+                constexpr std::ptrdiff_t m_flRadius = 0x508; // float32
+                constexpr std::ptrdiff_t m_soundEventName = 0x510; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_bOverrideWithEvent = 0x518; // bool
+                constexpr std::ptrdiff_t m_soundscapeIndex = 0x51C; // int32
+                constexpr std::ptrdiff_t m_soundscapeEntityListId = 0x520; // int32
+                constexpr std::ptrdiff_t m_positionNames = 0x528; // CUtlSymbolLarge[8]
+                constexpr std::ptrdiff_t m_hProxySoundscape = 0x568; // CHandle<CEnvSoundscape>
+                constexpr std::ptrdiff_t m_bDisabled = 0x56C; // bool
+                constexpr std::ptrdiff_t m_soundscapeName = 0x570; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_soundEventHash = 0x578; // uint32
+            }
             // Parent: CEntitySubclassVDataBase
             // Field count: 14
             //
@@ -6219,21 +6234,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flUseRange = 0x16C; // float32
                 constexpr std::ptrdiff_t m_flUseAngleTolerance = 0x170; // float32
                 constexpr std::ptrdiff_t m_flCrouchTime = 0x174; // float32
-            }
-            // Parent: CServerOnlyEntity
-            // Field count: 11
-            namespace CEnvSoundscape {
-                constexpr std::ptrdiff_t m_OnPlay = 0x4E0; // CEntityIOOutput
-                constexpr std::ptrdiff_t m_flRadius = 0x508; // float32
-                constexpr std::ptrdiff_t m_soundscapeName = 0x510; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_soundEventName = 0x518; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_bOverrideWithEvent = 0x520; // bool
-                constexpr std::ptrdiff_t m_soundscapeIndex = 0x524; // int32
-                constexpr std::ptrdiff_t m_soundscapeEntityListId = 0x528; // int32
-                constexpr std::ptrdiff_t m_soundEventHash = 0x52C; // uint32
-                constexpr std::ptrdiff_t m_positionNames = 0x530; // CUtlSymbolLarge[8]
-                constexpr std::ptrdiff_t m_hProxySoundscape = 0x570; // CHandle<CEnvSoundscape>
-                constexpr std::ptrdiff_t m_bDisabled = 0x574; // bool
             }
             // Parent: CPlayerControllerComponent
             // Field count: 6

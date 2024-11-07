@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-31 02:41:35.880004100 UTC
+// 2024-11-07 04:25:21.795302200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -1995,6 +1995,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnPassThroughReverse = 0x550; // CEntityIOOutput
             public const nint m_hMover = 0x578; // CHandle<CPathMover>
         }
+        // Parent: CEnvSoundscape
+        // Field count: 0
+        public static class CEnvSoundscapeTriggerable {
+        }
         // Parent: CBtNode
         // Field count: 12
         public static class CBtActionAim {
@@ -2018,10 +2022,6 @@ namespace CS2Dumper.Schemas {
         // Parent: CCSGO_WingmanIntroCharacterPosition
         // Field count: 0
         public static class CCSGO_WingmanIntroCounterTerroristPosition {
-        }
-        // Parent: CEnvSoundscape
-        // Field count: 0
-        public static class CEnvSoundscapeTriggerable {
         }
         // Parent: CPlayerPawnComponent
         // Field count: 12
@@ -4085,13 +4085,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_iFilterName = 0x790; // CUtlSymbolLarge
             public const nint m_hFilter = 0x798; // CHandle<CBaseFilter>
         }
-        // Parent: CPointEntity
-        // Field count: 0
-        public static class CInfoInstructorHintHostageRescueZone {
-        }
         // Parent: CEnvSoundscape
         // Field count: 0
         public static class CEnvSoundscapeAlias_snd_soundscape {
+        }
+        // Parent: CPointEntity
+        // Field count: 0
+        public static class CInfoInstructorHintHostageRescueZone {
         }
         // Parent: CBaseEntity
         // Field count: 7
@@ -5019,13 +5019,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_vOuterMins = 0x838; // Vector
             public const nint m_vOuterMaxs = 0x844; // Vector
         }
-        // Parent: CLightEntity
-        // Field count: 0
-        public static class CLightOrthoEntity {
-        }
         // Parent: CEnvSoundscapeTriggerable
         // Field count: 0
         public static class CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable {
+        }
+        // Parent: CLightEntity
+        // Field count: 0
+        public static class CLightOrthoEntity {
         }
         // Parent: CSoundOpvarSetPointBase
         // Field count: 24
@@ -5656,6 +5656,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_bEnableRendering = 0x60; // bool
             public const nint m_bInterpolationReadyToDraw = 0xB0; // bool
         }
+        // Parent: CEnvSoundscape
+        // Field count: 1
+        public static class CEnvSoundscapeProxy {
+            public const nint m_MainSoundscapeName = 0x580; // CUtlSymbolLarge
+        }
         // Parent: CSoundEventEntity
         // Field count: 7
         //
@@ -5669,11 +5674,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flDotProductMax = 0x5AC; // float32
             public const nint m_bPlaying = 0x5B0; // bool
             public const nint m_vecCornerPairsNetworked = 0x5D8; // CNetworkUtlVectorBase<SoundeventPathCornerPairNetworked_t>
-        }
-        // Parent: CEnvSoundscape
-        // Field count: 1
-        public static class CEnvSoundscapeProxy {
-            public const nint m_MainSoundscapeName = 0x578; // CUtlSymbolLarge
         }
         // Parent: CEntityComponent
         // Field count: 67
@@ -6194,6 +6194,21 @@ namespace CS2Dumper.Schemas {
             public const nint m_bEnableLinearConstraint = 0x568; // bool
             public const nint m_bEnableAngularConstraint = 0x569; // bool
         }
+        // Parent: CBaseEntity
+        // Field count: 11
+        public static class CEnvSoundscape {
+            public const nint m_OnPlay = 0x4E0; // CEntityIOOutput
+            public const nint m_flRadius = 0x508; // float32
+            public const nint m_soundEventName = 0x510; // CUtlSymbolLarge
+            public const nint m_bOverrideWithEvent = 0x518; // bool
+            public const nint m_soundscapeIndex = 0x51C; // int32
+            public const nint m_soundscapeEntityListId = 0x520; // int32
+            public const nint m_positionNames = 0x528; // CUtlSymbolLarge[8]
+            public const nint m_hProxySoundscape = 0x568; // CHandle<CEnvSoundscape>
+            public const nint m_bDisabled = 0x56C; // bool
+            public const nint m_soundscapeName = 0x570; // CUtlSymbolLarge
+            public const nint m_soundEventHash = 0x578; // uint32
+        }
         // Parent: CEntitySubclassVDataBase
         // Field count: 14
         //
@@ -6214,21 +6229,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flUseRange = 0x16C; // float32
             public const nint m_flUseAngleTolerance = 0x170; // float32
             public const nint m_flCrouchTime = 0x174; // float32
-        }
-        // Parent: CServerOnlyEntity
-        // Field count: 11
-        public static class CEnvSoundscape {
-            public const nint m_OnPlay = 0x4E0; // CEntityIOOutput
-            public const nint m_flRadius = 0x508; // float32
-            public const nint m_soundscapeName = 0x510; // CUtlSymbolLarge
-            public const nint m_soundEventName = 0x518; // CUtlSymbolLarge
-            public const nint m_bOverrideWithEvent = 0x520; // bool
-            public const nint m_soundscapeIndex = 0x524; // int32
-            public const nint m_soundscapeEntityListId = 0x528; // int32
-            public const nint m_soundEventHash = 0x52C; // uint32
-            public const nint m_positionNames = 0x530; // CUtlSymbolLarge[8]
-            public const nint m_hProxySoundscape = 0x570; // CHandle<CEnvSoundscape>
-            public const nint m_bDisabled = 0x574; // bool
         }
         // Parent: CPlayerControllerComponent
         // Field count: 6

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-10-31 02:41:35.880004100 UTC
+// 2024-11-07 04:25:21.795302200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2102,6 +2102,10 @@ pub mod cs2_dumper {
                 pub const m_OnPassThroughReverse: usize = 0x550; // CEntityIOOutput
                 pub const m_hMover: usize = 0x578; // CHandle<CPathMover>
             }
+            // Parent: CEnvSoundscape
+            // Field count: 0
+            pub mod CEnvSoundscapeTriggerable {
+            }
             // Parent: CBtNode
             // Field count: 12
             pub mod CBtActionAim {
@@ -2125,10 +2129,6 @@ pub mod cs2_dumper {
             // Parent: CCSGO_WingmanIntroCharacterPosition
             // Field count: 0
             pub mod CCSGO_WingmanIntroCounterTerroristPosition {
-            }
-            // Parent: CEnvSoundscape
-            // Field count: 0
-            pub mod CEnvSoundscapeTriggerable {
             }
             // Parent: CPlayerPawnComponent
             // Field count: 12
@@ -4192,13 +4192,13 @@ pub mod cs2_dumper {
                 pub const m_iFilterName: usize = 0x790; // CUtlSymbolLarge
                 pub const m_hFilter: usize = 0x798; // CHandle<CBaseFilter>
             }
-            // Parent: CPointEntity
-            // Field count: 0
-            pub mod CInfoInstructorHintHostageRescueZone {
-            }
             // Parent: CEnvSoundscape
             // Field count: 0
             pub mod CEnvSoundscapeAlias_snd_soundscape {
+            }
+            // Parent: CPointEntity
+            // Field count: 0
+            pub mod CInfoInstructorHintHostageRescueZone {
             }
             // Parent: CBaseEntity
             // Field count: 7
@@ -5126,13 +5126,13 @@ pub mod cs2_dumper {
                 pub const m_vOuterMins: usize = 0x838; // Vector
                 pub const m_vOuterMaxs: usize = 0x844; // Vector
             }
-            // Parent: CLightEntity
-            // Field count: 0
-            pub mod CLightOrthoEntity {
-            }
             // Parent: CEnvSoundscapeTriggerable
             // Field count: 0
             pub mod CEnvSoundscapeTriggerableAlias_snd_soundscape_triggerable {
+            }
+            // Parent: CLightEntity
+            // Field count: 0
+            pub mod CLightOrthoEntity {
             }
             // Parent: CSoundOpvarSetPointBase
             // Field count: 24
@@ -5763,6 +5763,11 @@ pub mod cs2_dumper {
                 pub const m_bEnableRendering: usize = 0x60; // bool
                 pub const m_bInterpolationReadyToDraw: usize = 0xB0; // bool
             }
+            // Parent: CEnvSoundscape
+            // Field count: 1
+            pub mod CEnvSoundscapeProxy {
+                pub const m_MainSoundscapeName: usize = 0x580; // CUtlSymbolLarge
+            }
             // Parent: CSoundEventEntity
             // Field count: 7
             //
@@ -5776,11 +5781,6 @@ pub mod cs2_dumper {
                 pub const m_flDotProductMax: usize = 0x5AC; // float32
                 pub const m_bPlaying: usize = 0x5B0; // bool
                 pub const m_vecCornerPairsNetworked: usize = 0x5D8; // CNetworkUtlVectorBase<SoundeventPathCornerPairNetworked_t>
-            }
-            // Parent: CEnvSoundscape
-            // Field count: 1
-            pub mod CEnvSoundscapeProxy {
-                pub const m_MainSoundscapeName: usize = 0x578; // CUtlSymbolLarge
             }
             // Parent: CEntityComponent
             // Field count: 67
@@ -6301,6 +6301,21 @@ pub mod cs2_dumper {
                 pub const m_bEnableLinearConstraint: usize = 0x568; // bool
                 pub const m_bEnableAngularConstraint: usize = 0x569; // bool
             }
+            // Parent: CBaseEntity
+            // Field count: 11
+            pub mod CEnvSoundscape {
+                pub const m_OnPlay: usize = 0x4E0; // CEntityIOOutput
+                pub const m_flRadius: usize = 0x508; // float32
+                pub const m_soundEventName: usize = 0x510; // CUtlSymbolLarge
+                pub const m_bOverrideWithEvent: usize = 0x518; // bool
+                pub const m_soundscapeIndex: usize = 0x51C; // int32
+                pub const m_soundscapeEntityListId: usize = 0x520; // int32
+                pub const m_positionNames: usize = 0x528; // CUtlSymbolLarge[8]
+                pub const m_hProxySoundscape: usize = 0x568; // CHandle<CEnvSoundscape>
+                pub const m_bDisabled: usize = 0x56C; // bool
+                pub const m_soundscapeName: usize = 0x570; // CUtlSymbolLarge
+                pub const m_soundEventHash: usize = 0x578; // uint32
+            }
             // Parent: CEntitySubclassVDataBase
             // Field count: 14
             //
@@ -6321,21 +6336,6 @@ pub mod cs2_dumper {
                 pub const m_flUseRange: usize = 0x16C; // float32
                 pub const m_flUseAngleTolerance: usize = 0x170; // float32
                 pub const m_flCrouchTime: usize = 0x174; // float32
-            }
-            // Parent: CServerOnlyEntity
-            // Field count: 11
-            pub mod CEnvSoundscape {
-                pub const m_OnPlay: usize = 0x4E0; // CEntityIOOutput
-                pub const m_flRadius: usize = 0x508; // float32
-                pub const m_soundscapeName: usize = 0x510; // CUtlSymbolLarge
-                pub const m_soundEventName: usize = 0x518; // CUtlSymbolLarge
-                pub const m_bOverrideWithEvent: usize = 0x520; // bool
-                pub const m_soundscapeIndex: usize = 0x524; // int32
-                pub const m_soundscapeEntityListId: usize = 0x528; // int32
-                pub const m_soundEventHash: usize = 0x52C; // uint32
-                pub const m_positionNames: usize = 0x530; // CUtlSymbolLarge[8]
-                pub const m_hProxySoundscape: usize = 0x570; // CHandle<CEnvSoundscape>
-                pub const m_bDisabled: usize = 0x574; // bool
             }
             // Parent: CPlayerControllerComponent
             // Field count: 6
