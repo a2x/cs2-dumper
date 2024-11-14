@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-11-13 04:17:13.134762200 UTC
+// 2024-11-13 23:51:03.891260400 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: animationsystem.dll
         // Class count: 497
-        // Enum count: 93
+        // Enum count: 94
         namespace animationsystem_dll {
             // Alignment: 4
             // Member count: 17
@@ -150,6 +150,15 @@ namespace cs2_dumper {
                 OutCirc = 0x14,
                 InOutCirc = 0x15,
                 None = 0x16
+            };
+            // Alignment: 4
+            // Member count: 5
+            enum class EIKEndEffectorRotationFixUpMode : uint32_t {
+                None = 0x0,
+                MatchTargetOrientation = 0x1,
+                LookAtTargetForward = 0x2,
+                MaintainParentOrientation = 0x3,
+                Count = 0x4
             };
             // Alignment: 4
             // Member count: 2
@@ -5496,13 +5505,12 @@ namespace cs2_dumper {
             namespace CLeafUpdateNode {
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace SolveIKChainPoseOpFixedSettings_t {
                 constexpr std::ptrdiff_t m_ChainsToSolveData = 0x0; // CUtlVector<ChainToSolveData_t>
-                constexpr std::ptrdiff_t m_bMatchTargetOrientation = 0x18; // bool
             }
             // Parent: None
             // Field count: 15
@@ -6090,10 +6098,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_segmentArray = 0x58; // CUtlVector<CAnimFrameSegment>
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 3
             namespace IKSolverSettings_t {
                 constexpr std::ptrdiff_t m_SolverType = 0x0; // IKSolverType
                 constexpr std::ptrdiff_t m_nNumIterations = 0x4; // int32
+                constexpr std::ptrdiff_t m_EndEffectorRotationFixUpMode = 0x8; // EIKEndEffectorRotationFixUpMode
             }
             // Parent: CAnimUpdateNodeBase
             // Field count: 6

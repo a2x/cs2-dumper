@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-11-13 04:17:13.134762200 UTC
+// 2024-11-13 23:51:03.891260400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: animationsystem.dll
         // Class count: 497
-        // Enum count: 93
+        // Enum count: 94
         pub mod animationsystem_dll {
             // Alignment: 4
             // Member count: 17
@@ -161,6 +161,16 @@ pub mod cs2_dumper {
                 OutCirc = 0x14,
                 InOutCirc = 0x15,
                 None = 0x16
+            }
+            // Alignment: 4
+            // Member count: 5
+            #[repr(u32)]
+            pub enum EIKEndEffectorRotationFixUpMode {
+                None = 0x0,
+                MatchTargetOrientation = 0x1,
+                LookAtTargetForward = 0x2,
+                MaintainParentOrientation = 0x3,
+                Count = 0x4
             }
             // Alignment: 4
             // Member count: 2
@@ -5587,13 +5597,12 @@ pub mod cs2_dumper {
             pub mod CLeafUpdateNode {
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod SolveIKChainPoseOpFixedSettings_t {
                 pub const m_ChainsToSolveData: usize = 0x0; // CUtlVector<ChainToSolveData_t>
-                pub const m_bMatchTargetOrientation: usize = 0x18; // bool
             }
             // Parent: None
             // Field count: 15
@@ -6181,10 +6190,11 @@ pub mod cs2_dumper {
                 pub const m_segmentArray: usize = 0x58; // CUtlVector<CAnimFrameSegment>
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 3
             pub mod IKSolverSettings_t {
                 pub const m_SolverType: usize = 0x0; // IKSolverType
                 pub const m_nNumIterations: usize = 0x4; // int32
+                pub const m_EndEffectorRotationFixUpMode: usize = 0x8; // EIKEndEffectorRotationFixUpMode
             }
             // Parent: CAnimUpdateNodeBase
             // Field count: 6

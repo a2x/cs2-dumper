@@ -1,20 +1,20 @@
 {
   "client.dll": {
-    "attack": 25408992,
-    "attack2": 25409136,
-    "back": 25409712,
-    "duck": 25410432,
-    "forward": 25409568,
-    "jump": 25410288,
-    "left": 25409856,
-    "lookatweapon": 27567312,
-    "reload": 25408848,
-    "right": 25410000,
-    "showscores": 27567024,
-    "sprint": 25408704,
-    "turnleft": 25409280,
-    "turnright": 25409424,
-    "use": 25410144,
-    "zoom": 27567168
+    "attack": 25478368,
+    "attack2": 25478512,
+    "back": 25479088,
+    "duck": 25479808,
+    "forward": 25478944,
+    "jump": 25479664,
+    "left": 25479232,
+    "lookatweapon": 27640160,
+    "reload": 25478224,
+    "right": 25479376,
+    "showscores": 27639872,
+    "sprint": 25478080,
+    "turnleft": 25478656,
+    "turnright": 25478800,
+    "use": 25479520,
+    "zoom": 27640016
   }
 }
