@@ -6440,6 +6440,7 @@
       },
       "IKSolverSettings_t": {
         "fields": {
+          "m_EndEffectorRotationFixUpMode": 8,
           "m_SolverType": 0,
           "m_nNumIterations": 4
         },
@@ -7041,8 +7042,7 @@
       },
       "SolveIKChainPoseOpFixedSettings_t": {
         "fields": {
-          "m_ChainsToSolveData": 0,
-          "m_bMatchTargetOrientation": 24
+          "m_ChainsToSolveData": 0
         },
         "metadata": [
           {
@@ -7747,6 +7747,17 @@
         "members": {
           "CaptureAllBones": 0,
           "CaptureSelectedBones": 1
+        },
+        "type": "uint32"
+      },
+      "EIKEndEffectorRotationFixUpMode": {
+        "alignment": 4,
+        "members": {
+          "Count": 4,
+          "LookAtTargetForward": 2,
+          "MaintainParentOrientation": 3,
+          "MatchTargetOrientation": 1,
+          "None": 0
         },
         "type": "uint32"
       },
