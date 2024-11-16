@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-11-13 23:51:03.891260400 UTC
+// 2024-11-16 00:04:35.779704300 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -36,8 +36,8 @@ pub mod cs2_dumper {
             pub const dwNetworkGameClient_maxClients: usize = 0x238;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x36C;
             pub const dwNetworkGameClient_signOnState: usize = 0x228;
-            pub const dwWindowHeight: usize = 0x612074;
-            pub const dwWindowWidth: usize = 0x612070;
+            pub const dwWindowHeight: usize = 0x61206C;
+            pub const dwWindowWidth: usize = 0x612068;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {
