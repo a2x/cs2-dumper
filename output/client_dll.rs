@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-03 22:08:25.239600100 UTC
+// 2024-12-19 01:46:52.610571900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2933,13 +2933,13 @@ pub mod cs2_dumper {
             // Parent: C_CSGO_MapPreviewCameraPath
             // Field count: 7
             pub mod C_CSGO_TeamPreviewCamera {
-                pub const m_nVariant: usize = 0x5D0; // int32
-                pub const m_bDofEnabled: usize = 0x5D4; // bool
-                pub const m_flDofNearBlurry: usize = 0x5D8; // float32
-                pub const m_flDofNearCrisp: usize = 0x5DC; // float32
-                pub const m_flDofFarCrisp: usize = 0x5E0; // float32
-                pub const m_flDofFarBlurry: usize = 0x5E4; // float32
-                pub const m_flDofTiltToGround: usize = 0x5E8; // float32
+                pub const m_nVariant: usize = 0x5D8; // int32
+                pub const m_bDofEnabled: usize = 0x5DC; // bool
+                pub const m_flDofNearBlurry: usize = 0x5E0; // float32
+                pub const m_flDofNearCrisp: usize = 0x5E4; // float32
+                pub const m_flDofFarCrisp: usize = 0x5E8; // float32
+                pub const m_flDofFarBlurry: usize = 0x5EC; // float32
+                pub const m_flDofTiltToGround: usize = 0x5F0; // float32
             }
             // Parent: CCSPlayerBase_CameraServices
             // Field count: 2

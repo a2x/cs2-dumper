@@ -979,9 +979,8 @@
       },
       "CBaseCSGrenadeProjectile": {
         "fields": {
-          "m_bClearFromPlayers": 2893,
           "m_bDetonationRecorded": 2845,
-          "m_bHasEverHitPlayer": 2892,
+          "m_bHasEverHitEnemy": 2892,
           "m_flLastBounceSoundTime": 2860,
           "m_flSpawnTime": 2840,
           "m_nBounces": 2808,
@@ -4145,6 +4144,7 @@
           "m_dblLastReceivedPacketPlatFloatTime": 63936,
           "m_eMvpReason": 2268,
           "m_flForceTeamTime": 1980,
+          "m_flLastJoinTeamTime": 2004,
           "m_flSmoothedPing": 2288,
           "m_hDesiredObserverTarget": 2208,
           "m_hObserverPawn": 2200,
