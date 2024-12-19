@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-03 22:08:25.239600100 UTC
+// 2024-12-19 01:46:52.610571900 UTC
 
 #pragma once
 
@@ -6471,7 +6471,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecClientAngles = 0x86C; // QAngle
             }
             // Parent: CBaseGrenade
-            // Field count: 17
+            // Field count: 16
             //
             // Metadata:
             // NetworkVarNames: m_vInitialPosition (Vector)
@@ -6496,8 +6496,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecGrenadeSpin = 0xB30; // RotationVector
                 constexpr std::ptrdiff_t m_vecLastHitSurfaceNormal = 0xB3C; // Vector
                 constexpr std::ptrdiff_t m_nTicksAtZeroVelocity = 0xB48; // int32
-                constexpr std::ptrdiff_t m_bHasEverHitPlayer = 0xB4C; // bool
-                constexpr std::ptrdiff_t m_bClearFromPlayers = 0xB4D; // bool
+                constexpr std::ptrdiff_t m_bHasEverHitEnemy = 0xB4C; // bool
             }
             // Parent: CServerOnlyModelEntity
             // Field count: 1
@@ -10050,7 +10049,7 @@ namespace cs2_dumper {
             namespace CBumpMineProjectile {
             }
             // Parent: CBasePlayerController
-            // Field count: 89
+            // Field count: 90
             //
             // Metadata:
             // MNetworkUserGroupProxy
@@ -10127,6 +10126,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bJustBecameSpectator = 0x7CF; // bool
                 constexpr std::ptrdiff_t m_bSwitchTeamsOnNextRoundReset = 0x7D0; // bool
                 constexpr std::ptrdiff_t m_bRemoveAllItemsOnNextRoundReset = 0x7D1; // bool
+                constexpr std::ptrdiff_t m_flLastJoinTeamTime = 0x7D4; // GameTime_t
                 constexpr std::ptrdiff_t m_szClan = 0x7D8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_szClanName = 0x7E0; // char[32]
                 constexpr std::ptrdiff_t m_iCoachingTeam = 0x800; // int32

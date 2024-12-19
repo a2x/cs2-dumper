@@ -6123,13 +6123,13 @@
       },
       "C_CSGO_TeamPreviewCamera": {
         "fields": {
-          "m_bDofEnabled": 1492,
-          "m_flDofFarBlurry": 1508,
-          "m_flDofFarCrisp": 1504,
-          "m_flDofNearBlurry": 1496,
-          "m_flDofNearCrisp": 1500,
-          "m_flDofTiltToGround": 1512,
-          "m_nVariant": 1488
+          "m_bDofEnabled": 1500,
+          "m_flDofFarBlurry": 1516,
+          "m_flDofFarCrisp": 1512,
+          "m_flDofNearBlurry": 1504,
+          "m_flDofNearCrisp": 1508,
+          "m_flDofTiltToGround": 1520,
+          "m_nVariant": 1496
         },
         "metadata": [],
         "parent": "C_CSGO_MapPreviewCameraPath"

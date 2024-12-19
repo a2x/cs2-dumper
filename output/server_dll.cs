@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-03 22:08:25.239600100 UTC
+// 2024-12-19 01:46:52.610571900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -6466,7 +6466,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecClientAngles = 0x86C; // QAngle
         }
         // Parent: CBaseGrenade
-        // Field count: 17
+        // Field count: 16
         //
         // Metadata:
         // NetworkVarNames: m_vInitialPosition (Vector)
@@ -6491,8 +6491,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecGrenadeSpin = 0xB30; // RotationVector
             public const nint m_vecLastHitSurfaceNormal = 0xB3C; // Vector
             public const nint m_nTicksAtZeroVelocity = 0xB48; // int32
-            public const nint m_bHasEverHitPlayer = 0xB4C; // bool
-            public const nint m_bClearFromPlayers = 0xB4D; // bool
+            public const nint m_bHasEverHitEnemy = 0xB4C; // bool
         }
         // Parent: CServerOnlyModelEntity
         // Field count: 1
@@ -10045,7 +10044,7 @@ namespace CS2Dumper.Schemas {
         public static class CBumpMineProjectile {
         }
         // Parent: CBasePlayerController
-        // Field count: 89
+        // Field count: 90
         //
         // Metadata:
         // MNetworkUserGroupProxy
@@ -10122,6 +10121,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bJustBecameSpectator = 0x7CF; // bool
             public const nint m_bSwitchTeamsOnNextRoundReset = 0x7D0; // bool
             public const nint m_bRemoveAllItemsOnNextRoundReset = 0x7D1; // bool
+            public const nint m_flLastJoinTeamTime = 0x7D4; // GameTime_t
             public const nint m_szClan = 0x7D8; // CUtlSymbolLarge
             public const nint m_szClanName = 0x7E0; // char[32]
             public const nint m_iCoachingTeam = 0x800; // int32

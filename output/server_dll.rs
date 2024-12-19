@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-03 22:08:25.239600100 UTC
+// 2024-12-19 01:46:52.610571900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -6573,7 +6573,7 @@ pub mod cs2_dumper {
                 pub const m_vecClientAngles: usize = 0x86C; // QAngle
             }
             // Parent: CBaseGrenade
-            // Field count: 17
+            // Field count: 16
             //
             // Metadata:
             // NetworkVarNames: m_vInitialPosition (Vector)
@@ -6598,8 +6598,7 @@ pub mod cs2_dumper {
                 pub const m_vecGrenadeSpin: usize = 0xB30; // RotationVector
                 pub const m_vecLastHitSurfaceNormal: usize = 0xB3C; // Vector
                 pub const m_nTicksAtZeroVelocity: usize = 0xB48; // int32
-                pub const m_bHasEverHitPlayer: usize = 0xB4C; // bool
-                pub const m_bClearFromPlayers: usize = 0xB4D; // bool
+                pub const m_bHasEverHitEnemy: usize = 0xB4C; // bool
             }
             // Parent: CServerOnlyModelEntity
             // Field count: 1
@@ -10152,7 +10151,7 @@ pub mod cs2_dumper {
             pub mod CBumpMineProjectile {
             }
             // Parent: CBasePlayerController
-            // Field count: 89
+            // Field count: 90
             //
             // Metadata:
             // MNetworkUserGroupProxy
@@ -10229,6 +10228,7 @@ pub mod cs2_dumper {
                 pub const m_bJustBecameSpectator: usize = 0x7CF; // bool
                 pub const m_bSwitchTeamsOnNextRoundReset: usize = 0x7D0; // bool
                 pub const m_bRemoveAllItemsOnNextRoundReset: usize = 0x7D1; // bool
+                pub const m_flLastJoinTeamTime: usize = 0x7D4; // GameTime_t
                 pub const m_szClan: usize = 0x7D8; // CUtlSymbolLarge
                 pub const m_szClanName: usize = 0x7E0; // char[32]
                 pub const m_iCoachingTeam: usize = 0x800; // int32
