@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-20 00:28:49.506012100 UTC
+// 2025-01-08 02:40:51.056645600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -1136,7 +1136,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CMotionSearchNode {
             public const nint m_children = 0x0; // CUtlVector<CMotionSearchNode*>
-            public const nint m_quantizer = 0x18; // CVectorQuantizer
+            public const nint m_quantizer = 0x18; // 
             public const nint m_sampleCodes = 0x38; // CUtlVector<CUtlVector<SampleCode>>
             public const nint m_sampleIndices = 0x50; // CUtlVector<CUtlVector<int32>>
             public const nint m_selectableSamples = 0x68; // CUtlVector<int32>
@@ -1725,7 +1725,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CFootPinningUpdateNode {
-            public const nint m_poseOpFixedData = 0x70; // FootPinningPoseOpFixedData_t
+            public const nint m_poseOpFixedData = 0x70; // 
             public const nint m_eTimingSource = 0xA0; // FootPinningTimingSource
             public const nint m_params = 0xA8; // CUtlVector<CAnimParamHandle>
             public const nint m_bResetChild = 0xC0; // bool
@@ -2451,7 +2451,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CProductQuantizer {
-            public const nint m_subQuantizers = 0x0; // CUtlVector<CVectorQuantizer>
+            public const nint m_subQuantizers = 0x0; // 
             public const nint m_nDimensions = 0x18; // int32
         }
         // Parent: CAnimUpdateNodeBase
@@ -2500,7 +2500,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nInputValueNodeIdxA = 0x10; // int16
             public const nint m_nInputValueNodeIdxB = 0x12; // int16
             public const nint m_bReturnAbsoluteResult = 0x14; // bool
-            public const nint m_operator = 0x15; // CNmFloatMathNode::Operator_t
+            public const nint m_operator = 0x15; // 
             public const nint m_flValueB = 0x18; // float32
         }
         // Parent: CAnimationGraphVisualizerPrimitiveBase
@@ -2859,7 +2859,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CHitBoxSetList {
-            public const nint m_HitBoxSets = 0x0; // CUtlVector<CHitBoxSet>
+            public const nint m_HitBoxSets = 0x0; // 
         }
         // Parent: None
         // Field count: 1
@@ -3096,7 +3096,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flBlendTime = 0x94; // CAnimValue<float32>
             public const nint m_hParameter = 0x9C; // CAnimParamHandle
             public const nint m_nTagIndex = 0xA0; // int32
-            public const nint m_eTagBehavior = 0xA4; // SelectorTagBehavior_t
+            public const nint m_eTagBehavior = 0xA4; // 
             public const nint m_bResetOnChange = 0xA8; // bool
             public const nint m_bLockWhenWaning = 0xA9; // bool
             public const nint m_bSyncCyclesOnChange = 0xAA; // bool
@@ -3223,7 +3223,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CFootLockUpdateNode {
-            public const nint m_opFixedSettings = 0x68; // FootLockPoseOpFixedSettings
+            public const nint m_opFixedSettings = 0x68; // 
             public const nint m_footSettings = 0xD0; // CUtlVector<FootFixedSettings>
             public const nint m_hipShiftDamping = 0xE8; // CAnimInputDamping
             public const nint m_rootHeightDamping = 0xF8; // CAnimInputDamping
@@ -3267,7 +3267,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flDamping = 0xC; // float32
             public const nint m_vBoundsMaxLS = 0x10; // Vector
             public const nint m_vBoundsMinLS = 0x1C; // Vector
-            public const nint m_eSimSpace = 0x28; // JiggleBoneSimSpace
+            public const nint m_eSimSpace = 0x28; // 
         }
         // Parent: CSequenceUpdateNode
         // Field count: 8
@@ -3297,7 +3297,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FootLockPoseOpFixedSettings {
-            public const nint m_footInfo = 0x0; // CUtlVector<FootFixedData_t>
+            public const nint m_footInfo = 0x0; // 
             public const nint m_hipDampingSettings = 0x18; // CAnimInputDamping
             public const nint m_nHipBoneIndex = 0x28; // int32
             public const nint m_ikSolverType = 0x2C; // IKSolverType
@@ -4127,7 +4127,7 @@ namespace CS2Dumper.Schemas {
         public static class CHitBoxSet {
             public const nint m_name = 0x0; // CUtlString
             public const nint m_nNameHash = 0x8; // uint32
-            public const nint m_HitBoxes = 0x10; // CUtlVector<CHitBox>
+            public const nint m_HitBoxes = 0x10; // 
             public const nint m_SourceFilename = 0x28; // CUtlString
         }
         // Parent: None
@@ -4744,7 +4744,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_sceneObjects = 0x10; // CUtlLeanVectorFixedGrowable<CSceneObjectData,1>
             public const nint m_constraints = 0x78; // CUtlLeanVector<CBaseConstraint*>
             public const nint m_skeleton = 0x88; // CRenderSkeleton
-            public const nint m_meshDeformParams = 0x1A8; // DynamicMeshDeformParams_t
+            public const nint m_meshDeformParams = 0x1A8; // 
             public const nint m_pGroomData = 0x1B8; // CRenderGroom*
         }
         // Parent: None
@@ -4836,7 +4836,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FootPinningPoseOpFixedData_t {
-            public const nint m_footInfo = 0x0; // CUtlVector<FootFixedData_t>
+            public const nint m_footInfo = 0x0; // 
             public const nint m_flBlendTime = 0x18; // float32
             public const nint m_flLockBreakDistance = 0x1C; // float32
             public const nint m_flMaxLegTwist = 0x20; // float32
@@ -5544,7 +5544,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
             public const nint m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
             public const nint m_pTagManagerUpdater = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
-            public const nint m_scriptManager = 0x70; // CSmartPtr<CAnimScriptManager>
+            public const nint m_scriptManager = 0x70; // 
             public const nint m_settings = 0x78; // CAnimGraphSettingsManager
             public const nint m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
             public const nint m_pSkeleton = 0xB0; // CSmartPtr<CAnimSkeleton>
@@ -5815,7 +5815,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CMotionSearchDB {
             public const nint m_rootNode = 0x0; // CMotionSearchNode
-            public const nint m_residualQuantizer = 0x80; // CProductQuantizer
+            public const nint m_residualQuantizer = 0x80; // 
             public const nint m_codeIndices = 0xA0; // CUtlVector<MotionDBIndex>
         }
         // Parent: CMotionNode

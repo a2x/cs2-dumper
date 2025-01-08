@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-20 00:28:49.506012100 UTC
+// 2025-01-08 02:40:51.056645600 UTC
 
 #pragma once
 
@@ -81,7 +81,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasTonemapParams = 0x0; // bool
                 constexpr std::ptrdiff_t m_toneMapParams = 0x4; // PostProcessingTonemapParameters_t
                 constexpr std::ptrdiff_t m_bHasBloomParams = 0x40; // bool
-                constexpr std::ptrdiff_t m_bloomParams = 0x44; // PostProcessingBloomParameters_t
+                constexpr std::ptrdiff_t m_bloomParams = 0x44; // 
                 constexpr std::ptrdiff_t m_bHasVignetteParams = 0xB4; // bool
                 constexpr std::ptrdiff_t m_vignetteParams = 0xB8; // PostProcessingVignetteParameters_t
                 constexpr std::ptrdiff_t m_bHasLocalContrastParams = 0xDC; // bool
@@ -172,7 +172,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vectorAttributes = 0xD0; // CUtlVector<MaterialParamVector_t>
                 constexpr std::ptrdiff_t m_textureAttributes = 0xE8; // CUtlVector<MaterialParamTexture_t>
                 constexpr std::ptrdiff_t m_stringAttributes = 0x100; // CUtlVector<MaterialParamString_t>
-                constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // 
             }
             // Parent: None
             // Field count: 10
