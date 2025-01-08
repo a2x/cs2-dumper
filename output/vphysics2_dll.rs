@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-20 00:28:49.506012100 UTC
+// 2025-01-08 02:40:51.056645600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1173,7 +1173,7 @@ pub mod cs2_dumper {
                 pub const w1: usize = 0x30; // fltx4
                 pub const w2: usize = 0x40; // fltx4
                 pub const v1x: usize = 0x50; // fltx4
-                pub const v2: usize = 0x60; // FourVectors2D
+                pub const v2: usize = 0x60; // 
             }
             // Parent: None
             // Field count: 1

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-20 00:28:49.506012100 UTC
+// 2025-01-08 02:40:51.056645600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -757,7 +757,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bJustPulledPin = 0x1B3C; // bool
             public const nint m_nNextHoldTick = 0x1B40; // GameTick_t
             public const nint m_flNextHoldFrac = 0x1B44; // float32
-            public const nint m_hSwitchToWeaponAfterThrow = 0x1B48; // CHandle<C_CSWeaponBase>
+            public const nint m_hSwitchToWeaponAfterThrow = 0x1B48; // 
         }
         // Parent: C_FuncBrush
         // Field count: 8
@@ -3378,7 +3378,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bClientside = 0x1608; // bool
             public const nint m_bParticleSystemsCreated = 0x1609; // bool
             public const nint m_vecAttachedParticles = 0x1610; // CUtlVector<int32>
-            public const nint m_hViewmodelAttachment = 0x1628; // CHandle<CBaseAnimGraph>
+            public const nint m_hViewmodelAttachment = 0x1628; // 
             public const nint m_iOldTeam = 0x162C; // int32
             public const nint m_bAttachmentDirty = 0x1630; // bool
             public const nint m_nUnloadedModelIndex = 0x1634; // int32
@@ -5079,7 +5079,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nUninterruptableActivity (PlayerAnimEvent_t)
         public static class C_Fists {
             public const nint m_bPlayingUninterruptableAct = 0x1B20; // bool
-            public const nint m_nUninterruptableActivity = 0x1B24; // PlayerAnimEvent_t
+            public const nint m_nUninterruptableActivity = 0x1B24; // 
         }
         // Parent: C_PhysicsProp
         // Field count: 0
@@ -5248,7 +5248,7 @@ namespace CS2Dumper.Schemas {
         // MNetworkExcludeByName
         // NetworkVarNames: m_ShardDesc (shard_model_desc_t)
         public static class C_ShatterGlassShardPhysics {
-            public const nint m_ShardDesc = 0x1120; // shard_model_desc_t
+            public const nint m_ShardDesc = 0x1120; // 
         }
         // Parent: C_CSWeaponBaseGun
         // Field count: 0
@@ -5347,7 +5347,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_blinktoggle = 0xFC8; // bool
             public const nint m_nLastFlexUpdateFrameCount = 0x1028; // int32
             public const nint m_CachedViewTarget = 0x102C; // Vector
-            public const nint m_nNextSceneEventId = 0x1038; // SceneEventId_t
+            public const nint m_nNextSceneEventId = 0x1038; // 
             public const nint m_iBlink = 0x103C; // int32
             public const nint m_blinktime = 0x1040; // float32
             public const nint m_prevblinktoggle = 0x1044; // bool
@@ -5641,7 +5641,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFireSequenceStartTime = 0x16DC; // float32
             public const nint m_nFireSequenceStartTimeChange = 0x16E0; // int32
             public const nint m_nFireSequenceStartTimeAck = 0x16E4; // int32
-            public const nint m_ePlayerFireEvent = 0x16E8; // PlayerAnimEvent_t
+            public const nint m_ePlayerFireEvent = 0x16E8; // 
             public const nint m_ePlayerFireEventAttackType = 0x16EC; // WeaponAttackType_t
             public const nint m_seqIdle = 0x16F0; // HSequence
             public const nint m_seqFirePrimary = 0x16F4; // HSequence
@@ -6079,7 +6079,7 @@ namespace CS2Dumper.Schemas {
         // MPropertySuppressBaseClassField
         public static class CCSWeaponBaseVData {
             public const nint m_WeaponType = 0x348; // CSWeaponType
-            public const nint m_WeaponCategory = 0x34C; // CSWeaponCategory
+            public const nint m_WeaponCategory = 0x34C; // 
             public const nint m_szViewModel = 0x350; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
             public const nint m_szPlayerModel = 0x430; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
             public const nint m_szWorldDroppedModel = 0x510; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
@@ -6889,7 +6889,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_leader (CHandle<CCSPlayerPawn>)
         // NetworkVarNames: m_AttributeManager (CAttributeContainer)
         public static class C_Chicken {
-            public const nint m_hHolidayHatAddon = 0x1230; // CHandle<CBaseAnimGraph>
+            public const nint m_hHolidayHatAddon = 0x1230; // 
             public const nint m_jumpedThisFrame = 0x1234; // bool
             public const nint m_leader = 0x1238; // CHandle<C_CSPlayerPawn>
             public const nint m_AttributeManager = 0x1240; // C_AttributeContainer

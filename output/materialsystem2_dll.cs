@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-20 00:28:49.506012100 UTC
+// 2025-01-08 02:40:51.056645600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: materialsystem2.dll
@@ -76,7 +76,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bHasTonemapParams = 0x0; // bool
             public const nint m_toneMapParams = 0x4; // PostProcessingTonemapParameters_t
             public const nint m_bHasBloomParams = 0x40; // bool
-            public const nint m_bloomParams = 0x44; // PostProcessingBloomParameters_t
+            public const nint m_bloomParams = 0x44; // 
             public const nint m_bHasVignetteParams = 0xB4; // bool
             public const nint m_vignetteParams = 0xB8; // PostProcessingVignetteParameters_t
             public const nint m_bHasLocalContrastParams = 0xDC; // bool
@@ -167,7 +167,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vectorAttributes = 0xD0; // CUtlVector<MaterialParamVector_t>
             public const nint m_textureAttributes = 0xE8; // CUtlVector<MaterialParamTexture_t>
             public const nint m_stringAttributes = 0x100; // CUtlVector<MaterialParamString_t>
-            public const nint m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
+            public const nint m_renderAttributesUsed = 0x118; // 
         }
         // Parent: None
         // Field count: 10

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-12-20 00:28:49.506012100 UTC
+// 2025-01-08 02:40:51.056645600 UTC
 
 #pragma once
 
@@ -1173,7 +1173,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t w1 = 0x30; // fltx4
                 constexpr std::ptrdiff_t w2 = 0x40; // fltx4
                 constexpr std::ptrdiff_t v1x = 0x50; // fltx4
-                constexpr std::ptrdiff_t v2 = 0x60; // FourVectors2D
+                constexpr std::ptrdiff_t v2 = 0x60; // 
             }
             // Parent: None
             // Field count: 1
