@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #pragma once
 
@@ -877,7 +877,7 @@ namespace cs2_dumper {
             namespace CAudioSentence {
                 constexpr std::ptrdiff_t m_bShouldVoiceDuck = 0x0; // bool
                 constexpr std::ptrdiff_t m_RunTimePhonemes = 0x8; // CUtlVector<CAudioPhonemeTag>
-                constexpr std::ptrdiff_t m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
+                constexpr std::ptrdiff_t m_EmphasisSamples = 0x20; // 
                 constexpr std::ptrdiff_t m_morphData = 0x38; // CAudioMorphData
             }
             // Parent: CSosGroupActionSchema

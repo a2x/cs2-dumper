@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
@@ -65,7 +65,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nSubSceneObject = 0x4; // uint32
             public const nint m_nDrawCallIndex = 0x8; // uint32
             public const nint m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
-            public const nint m_extraBufferBinding = 0x10; // CRenderBufferBinding
+            public const nint m_extraBufferBinding = 0x10; // 
         }
         // Parent: None
         // Field count: 3

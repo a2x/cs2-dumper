@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -5123,7 +5123,7 @@ namespace CS2Dumper.Schemas {
         public static class C_INIT_RemapNamedModelElementToScalar {
             public const nint m_hModel = 0x1C8; // CStrongHandle<InfoForResourceTypeCModel>
             public const nint m_names = 0x1D0; // CUtlVector<CUtlString>
-            public const nint m_values = 0x1E8; // CUtlVector<float32>
+            public const nint m_values = 0x1E8; // 
             public const nint m_nFieldInput = 0x200; // ParticleAttributeIndex_t
             public const nint m_nFieldOutput = 0x204; // ParticleAttributeIndex_t
             public const nint m_nSetMethod = 0x208; // ParticleSetMethod_t

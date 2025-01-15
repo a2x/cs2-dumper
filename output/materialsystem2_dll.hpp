@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #pragma once
 
@@ -81,7 +81,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasTonemapParams = 0x0; // bool
                 constexpr std::ptrdiff_t m_toneMapParams = 0x4; // PostProcessingTonemapParameters_t
                 constexpr std::ptrdiff_t m_bHasBloomParams = 0x40; // bool
-                constexpr std::ptrdiff_t m_bloomParams = 0x44; // 
+                constexpr std::ptrdiff_t m_bloomParams = 0x44; // PostProcessingBloomParameters_t
                 constexpr std::ptrdiff_t m_bHasVignetteParams = 0xB4; // bool
                 constexpr std::ptrdiff_t m_vignetteParams = 0xB8; // PostProcessingVignetteParameters_t
                 constexpr std::ptrdiff_t m_bHasLocalContrastParams = 0xDC; // bool

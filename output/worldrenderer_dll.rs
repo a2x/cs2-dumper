@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -69,7 +69,7 @@ pub mod cs2_dumper {
                 pub const m_nSubSceneObject: usize = 0x4; // uint32
                 pub const m_nDrawCallIndex: usize = 0x8; // uint32
                 pub const m_nAdditionalMeshDrawPrimitiveFlags: usize = 0xC; // MeshDrawPrimitiveFlags_t
-                pub const m_extraBufferBinding: usize = 0x10; // CRenderBufferBinding
+                pub const m_extraBufferBinding: usize = 0x10; // 
             }
             // Parent: None
             // Field count: 3

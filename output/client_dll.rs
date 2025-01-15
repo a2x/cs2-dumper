@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -464,7 +464,7 @@ pub mod cs2_dumper {
                 pub const m_vecRenderAttributes: usize = 0xAE0; // C_UtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
                 pub const m_bRenderToCubemaps: usize = 0xB48; // bool
                 pub const m_bNoInterpolate: usize = 0xB49; // bool
-                pub const m_Collision: usize = 0xB50; // CCollisionProperty
+                pub const m_Collision: usize = 0xB50; // 
                 pub const m_Glow: usize = 0xC00; // CGlowProperty
                 pub const m_flGlowBackfaceMult: usize = 0xC58; // float32
                 pub const m_fadeMinDist: usize = 0xC5C; // float32
@@ -924,9 +924,9 @@ pub mod cs2_dumper {
                 pub const m_iHostageEntityIDs: usize = 0x580; // CEntityIndex[12]
                 pub const m_bombsiteCenterA: usize = 0x5B0; // Vector
                 pub const m_bombsiteCenterB: usize = 0x5BC; // Vector
-                pub const m_hostageRescueX: usize = 0x5C8; // int32[4]
-                pub const m_hostageRescueY: usize = 0x5D8; // int32[4]
-                pub const m_hostageRescueZ: usize = 0x5E8; // int32[4]
+                pub const m_hostageRescueX: usize = 0x5C8; // 
+                pub const m_hostageRescueY: usize = 0x5D8; // 
+                pub const m_hostageRescueZ: usize = 0x5E8; // 
                 pub const m_bEndMatchNextMapAllVoted: usize = 0x5F8; // bool
                 pub const m_foundGoalPositions: usize = 0x5F9; // bool
             }
@@ -2342,7 +2342,7 @@ pub mod cs2_dumper {
             // MNetworkReplayCompatField
             pub mod CBasePlayerController {
                 pub const m_nFinalPredictedTick: usize = 0x570; // int32
-                pub const m_CommandContext: usize = 0x578; // C_CommandContext
+                pub const m_CommandContext: usize = 0x578; // 
                 pub const m_nInButtonsWhichAreToggles: usize = 0x620; // uint64
                 pub const m_nTickBase: usize = 0x628; // uint32
                 pub const m_hPawn: usize = 0x62C; // CHandle<C_BasePlayerPawn>
@@ -2706,9 +2706,9 @@ pub mod cs2_dumper {
                 pub const m_pItemServices: usize = 0x11B0; // CPlayer_ItemServices*
                 pub const m_pAutoaimServices: usize = 0x11B8; // CPlayer_AutoaimServices*
                 pub const m_pObserverServices: usize = 0x11C0; // CPlayer_ObserverServices*
-                pub const m_pWaterServices: usize = 0x11C8; // CPlayer_WaterServices*
-                pub const m_pUseServices: usize = 0x11D0; // CPlayer_UseServices*
-                pub const m_pFlashlightServices: usize = 0x11D8; // CPlayer_FlashlightServices*
+                pub const m_pWaterServices: usize = 0x11C8; // 
+                pub const m_pUseServices: usize = 0x11D0; // 
+                pub const m_pFlashlightServices: usize = 0x11D8; // 
                 pub const m_pCameraServices: usize = 0x11E0; // CPlayer_CameraServices*
                 pub const m_pMovementServices: usize = 0x11E8; // CPlayer_MovementServices*
                 pub const m_ServerViewAngleChanges: usize = 0x11F8; // C_UtlVectorEmbeddedNetworkVar<ViewAngleServerChange_t>
@@ -2785,7 +2785,7 @@ pub mod cs2_dumper {
                 pub const m_PredNetIntVariables: usize = 0x50; // C_NetworkUtlVectorBase<int32>
                 pub const m_PredNetUInt32Variables: usize = 0x68; // C_NetworkUtlVectorBase<uint32>
                 pub const m_PredNetUInt64Variables: usize = 0x80; // C_NetworkUtlVectorBase<uint64>
-                pub const m_PredNetFloatVariables: usize = 0x98; // C_NetworkUtlVectorBase<float32>
+                pub const m_PredNetFloatVariables: usize = 0x98; // 
                 pub const m_PredNetVectorVariables: usize = 0xB0; // C_NetworkUtlVectorBase<Vector>
                 pub const m_PredNetQuaternionVariables: usize = 0xC8; // C_NetworkUtlVectorBase<Quaternion>
                 pub const m_PredNetGlobalSymbolVariables: usize = 0xE0; // C_NetworkUtlVectorBase<CGlobalSymbol>
@@ -3387,8 +3387,8 @@ pub mod cs2_dumper {
                 pub const m_nFallbackStatTrak: usize = 0x1604; // int32
                 pub const m_bClientside: usize = 0x1608; // bool
                 pub const m_bParticleSystemsCreated: usize = 0x1609; // bool
-                pub const m_vecAttachedParticles: usize = 0x1610; // 
-                pub const m_hViewmodelAttachment: usize = 0x1628; // 
+                pub const m_vecAttachedParticles: usize = 0x1610; // CUtlVector<int32>
+                pub const m_hViewmodelAttachment: usize = 0x1628; // CHandle<CBaseAnimGraph>
                 pub const m_iOldTeam: usize = 0x162C; // int32
                 pub const m_bAttachmentDirty: usize = 0x1630; // bool
                 pub const m_nUnloadedModelIndex: usize = 0x1634; // int32
@@ -4983,7 +4983,7 @@ pub mod cs2_dumper {
                 pub const m_bDisabled: usize = 0x568; // bool
                 pub const m_bDisabledOld: usize = 0x569; // bool
                 pub const m_bUpdateOnClient: usize = 0x56A; // bool
-                pub const m_nInputType: usize = 0x56C; // 
+                pub const m_nInputType: usize = 0x56C; // ValueRemapperInputType_t
                 pub const m_hRemapLineStart: usize = 0x570; // CHandle<C_BaseEntity>
                 pub const m_hRemapLineEnd: usize = 0x574; // CHandle<C_BaseEntity>
                 pub const m_flMaximumChangePerSecond: usize = 0x578; // float32
@@ -5811,11 +5811,11 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_nBloodType (BloodType)
             pub mod C_BaseEntity {
                 pub const m_CBodyComponent: usize = 0x38; // CBodyComponent*
-                pub const m_NetworkTransmitComponent: usize = 0x40; // 
+                pub const m_NetworkTransmitComponent: usize = 0x40; // CNetworkTransmitComponent
                 pub const m_nLastThinkTick: usize = 0x320; // GameTick_t
                 pub const m_pGameSceneNode: usize = 0x328; // CGameSceneNode*
                 pub const m_pRenderComponent: usize = 0x330; // CRenderComponent*
-                pub const m_pCollision: usize = 0x338; // CCollisionProperty*
+                pub const m_pCollision: usize = 0x338; // 
                 pub const m_iMaxHealth: usize = 0x340; // int32
                 pub const m_iHealth: usize = 0x344; // int32
                 pub const m_lifeState: usize = 0x348; // uint8
@@ -5882,7 +5882,7 @@ pub mod cs2_dumper {
                 pub const m_hOldMoveParent: usize = 0x490; // CHandle<C_BaseEntity>
                 pub const m_Particles: usize = 0x498; // CParticleProperty
                 pub const m_vecPredictedScriptFloats: usize = 0x4C0; // CUtlVector<float32>
-                pub const m_vecPredictedScriptFloatIDs: usize = 0x4D8; // 
+                pub const m_vecPredictedScriptFloatIDs: usize = 0x4D8; // CUtlVector<int32>
                 pub const m_nNextScriptVarRecordID: usize = 0x508; // int32
                 pub const m_vecAngVelocity: usize = 0x518; // QAngle
                 pub const m_DataChangeEventRef: usize = 0x524; // int32
@@ -6457,7 +6457,7 @@ pub mod cs2_dumper {
             // Parent: CBaseAnimGraph
             // Field count: 2
             pub mod C_PhysMagnet {
-                pub const m_aAttachedObjectsFromServer: usize = 0xF88; // 
+                pub const m_aAttachedObjectsFromServer: usize = 0xF88; // CUtlVector<int32>
                 pub const m_aAttachedObjects: usize = 0xFA0; // CUtlVector<CHandle<C_BaseEntity>>
             }
             // Parent: C_BaseModelEntity
@@ -6574,7 +6574,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_hierarchyAttachName (CUtlStringToken)
             pub mod CGameSceneNode {
                 pub const m_nodeToWorld: usize = 0x10; // CTransform
-                pub const m_pOwner: usize = 0x30; // 
+                pub const m_pOwner: usize = 0x30; // CEntityInstance*
                 pub const m_pParent: usize = 0x38; // CGameSceneNode*
                 pub const m_pChild: usize = 0x40; // CGameSceneNode*
                 pub const m_pNextSibling: usize = 0x48; // CGameSceneNode*
@@ -6671,7 +6671,7 @@ pub mod cs2_dumper {
                 pub const m_flObsInterp_PathLength: usize = 0x74; // float32
                 pub const m_qObsInterp_OrientationStart: usize = 0x80; // Quaternion
                 pub const m_qObsInterp_OrientationTravelDir: usize = 0x90; // Quaternion
-                pub const m_obsInterpState: usize = 0xA0; // 
+                pub const m_obsInterpState: usize = 0xA0; // ObserverInterpState_t
                 pub const m_bObserverInterpolationNeedsDeferredSetup: usize = 0xA4; // bool
             }
             // Parent: C_BaseEntity
@@ -6854,8 +6854,8 @@ pub mod cs2_dumper {
                 pub const m_hRagdollSource: usize = 0xFC4; // CHandle<C_BaseEntity>
                 pub const m_iEyeAttachment: usize = 0xFC8; // AttachmentHandle_t
                 pub const m_flBlendWeightCurrent: usize = 0xFCC; // float32
-                pub const m_parentPhysicsBoneIndices: usize = 0xFD0; // 
-                pub const m_worldSpaceBoneComputationOrder: usize = 0xFE8; // 
+                pub const m_parentPhysicsBoneIndices: usize = 0xFD0; // CUtlVector<int32>
+                pub const m_worldSpaceBoneComputationOrder: usize = 0xFE8; // CUtlVector<int32>
             }
             // Parent: C_CSGO_TeamPreviewCamera
             // Field count: 0
@@ -6899,7 +6899,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_leader (CHandle<CCSPlayerPawn>)
             // NetworkVarNames: m_AttributeManager (CAttributeContainer)
             pub mod C_Chicken {
-                pub const m_hHolidayHatAddon: usize = 0x1230; // 
+                pub const m_hHolidayHatAddon: usize = 0x1230; // CHandle<CBaseAnimGraph>
                 pub const m_jumpedThisFrame: usize = 0x1234; // bool
                 pub const m_leader: usize = 0x1238; // CHandle<C_CSPlayerPawn>
                 pub const m_AttributeManager: usize = 0x1240; // C_AttributeContainer

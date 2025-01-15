@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #pragma once
 
@@ -70,7 +70,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32
                 constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32
                 constexpr std::ptrdiff_t m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
-                constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // CRenderBufferBinding
+                constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // 
             }
             // Parent: None
             // Field count: 3
