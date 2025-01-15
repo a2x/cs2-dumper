@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -888,7 +888,7 @@ pub mod cs2_dumper {
             pub mod CAudioSentence {
                 pub const m_bShouldVoiceDuck: usize = 0x0; // bool
                 pub const m_RunTimePhonemes: usize = 0x8; // CUtlVector<CAudioPhonemeTag>
-                pub const m_EmphasisSamples: usize = 0x20; // CUtlVector<CAudioEmphasisSample>
+                pub const m_EmphasisSamples: usize = 0x20; // 
                 pub const m_morphData: usize = 0x38; // CAudioMorphData
             }
             // Parent: CSosGroupActionSchema

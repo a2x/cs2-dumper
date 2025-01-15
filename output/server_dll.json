@@ -1804,11 +1804,10 @@
       },
       "CBasePlayerController": {
         "fields": {
-          "m_bAutoKickDisabled": 1502,
-          "m_bGamePaused": 1504,
+          "m_bGamePaused": 1509,
           "m_bHasAnySteadyStateEnts": 1840,
           "m_bIsHLTV": 1352,
-          "m_bIsLowViolence": 1503,
+          "m_bIsLowViolence": 1508,
           "m_bKnownTeamMismatch": 1316,
           "m_bLagCompensation": 1500,
           "m_bPredict": 1501,

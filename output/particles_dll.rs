@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -5202,7 +5202,7 @@ pub mod cs2_dumper {
             pub mod C_INIT_RemapNamedModelElementToScalar {
                 pub const m_hModel: usize = 0x1C8; // CStrongHandle<InfoForResourceTypeCModel>
                 pub const m_names: usize = 0x1D0; // CUtlVector<CUtlString>
-                pub const m_values: usize = 0x1E8; // CUtlVector<float32>
+                pub const m_values: usize = 0x1E8; // 
                 pub const m_nFieldInput: usize = 0x200; // ParticleAttributeIndex_t
                 pub const m_nFieldOutput: usize = 0x204; // ParticleAttributeIndex_t
                 pub const m_nSetMethod: usize = 0x208; // ParticleSetMethod_t

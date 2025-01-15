@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 #pragma once
 
@@ -5128,7 +5128,7 @@ namespace cs2_dumper {
             namespace C_INIT_RemapNamedModelElementToScalar {
                 constexpr std::ptrdiff_t m_hModel = 0x1C8; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_names = 0x1D0; // CUtlVector<CUtlString>
-                constexpr std::ptrdiff_t m_values = 0x1E8; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_values = 0x1E8; // 
                 constexpr std::ptrdiff_t m_nFieldInput = 0x200; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x204; // ParticleAttributeIndex_t
                 constexpr std::ptrdiff_t m_nSetMethod = 0x208; // ParticleSetMethod_t

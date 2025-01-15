@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-10 01:49:11.809410100 UTC
+// 2025-01-15 01:31:41.276127300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
@@ -872,7 +872,7 @@ namespace CS2Dumper.Schemas {
         public static class CAudioSentence {
             public const nint m_bShouldVoiceDuck = 0x0; // bool
             public const nint m_RunTimePhonemes = 0x8; // CUtlVector<CAudioPhonemeTag>
-            public const nint m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
+            public const nint m_EmphasisSamples = 0x20; // 
             public const nint m_morphData = 0x38; // CAudioMorphData
         }
         // Parent: CSosGroupActionSchema
