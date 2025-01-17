@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-15 01:31:41.276127300 UTC
+// 2025-01-17 13:01:20.327051300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -69,7 +69,7 @@ pub mod cs2_dumper {
                 pub const m_nSubSceneObject: usize = 0x4; // uint32
                 pub const m_nDrawCallIndex: usize = 0x8; // uint32
                 pub const m_nAdditionalMeshDrawPrimitiveFlags: usize = 0xC; // MeshDrawPrimitiveFlags_t
-                pub const m_extraBufferBinding: usize = 0x10; // 
+                pub const m_extraBufferBinding: usize = 0x10; // CRenderBufferBinding
             }
             // Parent: None
             // Field count: 3
@@ -123,10 +123,10 @@ pub mod cs2_dumper {
                 pub const m_Bounds: usize = 0x0; // AABB_t
                 pub const m_flags: usize = 0x18; // ObjectTypeFlags_t
                 pub const m_nLayer: usize = 0x1C; // int16
-                pub const m_instancePositions: usize = 0x20; // CUtlVector<Vector>
+                pub const m_instancePositions: usize = 0x20; // 
                 pub const m_instanceScales: usize = 0x50; // CUtlVector<float32>
-                pub const m_instanceTintSrgb: usize = 0x68; // CUtlVector<Color>
-                pub const m_tiles: usize = 0x80; // CUtlVector<ClutterTile_t>
+                pub const m_instanceTintSrgb: usize = 0x68; // 
+                pub const m_tiles: usize = 0x80; // 
                 pub const m_renderableModel: usize = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
@@ -149,7 +149,7 @@ pub mod cs2_dumper {
             pub mod PermEntityLumpData_t {
                 pub const m_name: usize = 0x8; // CUtlString
                 pub const m_childLumps: usize = 0x10; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-                pub const m_entityKeyValues: usize = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
+                pub const m_entityKeyValues: usize = 0x28; // 
             }
             // Parent: None
             // Field count: 14
