@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-15 01:31:41.276127300 UTC
+// 2025-01-17 13:01:20.327051300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
@@ -347,7 +347,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMinValue = 0x1C; // float32
             public const nint m_flMaxValue = 0x20; // float32
             public const nint m_opvarName = 0x28; // CUtlString
-            public const nint m_nSortType = 0x30; // SosActionSortType_t
+            public const nint m_nSortType = 0x30; // 
         }
         // Parent: None
         // Field count: 3
@@ -783,7 +783,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class SosEditItemInfo_t {
-            public const nint itemType = 0x0; // SosEditItemType_t
+            public const nint itemType = 0x0; // 
             public const nint itemName = 0x8; // CUtlString
             public const nint itemTypeName = 0x10; // CUtlString
             public const nint itemKVString = 0x20; // CUtlString
@@ -872,7 +872,7 @@ namespace CS2Dumper.Schemas {
         public static class CAudioSentence {
             public const nint m_bShouldVoiceDuck = 0x0; // bool
             public const nint m_RunTimePhonemes = 0x8; // CUtlVector<CAudioPhonemeTag>
-            public const nint m_EmphasisSamples = 0x20; // 
+            public const nint m_EmphasisSamples = 0x20; // CUtlVector<CAudioEmphasisSample>
             public const nint m_morphData = 0x38; // CAudioMorphData
         }
         // Parent: CSosGroupActionSchema
@@ -883,7 +883,7 @@ namespace CS2Dumper.Schemas {
         public static class CSosGroupActionLimitSchema {
             public const nint m_nMaxCount = 0x18; // int32
             public const nint m_nStopType = 0x1C; // SosActionStopType_t
-            public const nint m_nSortType = 0x20; // SosActionSortType_t
+            public const nint m_nSortType = 0x20; // 
         }
         // Parent: CVoiceContainerDecayingSineWave
         // Field count: 1
@@ -1083,7 +1083,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class VMixFilterDesc_t {
-            public const nint m_nFilterType = 0x0; // VMixFilterType_t
+            public const nint m_nFilterType = 0x0; // 
             public const nint m_nFilterSlope = 0x2; // VMixFilterSlope_t
             public const nint m_bEnabled = 0x3; // bool
             public const nint m_fldbGain = 0x4; // float32

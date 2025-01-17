@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-15 01:31:41.276127300 UTC
+// 2025-01-17 13:01:20.327051300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
@@ -1168,7 +1168,7 @@ namespace CS2Dumper.Schemas {
             public const nint w1 = 0x30; // fltx4
             public const nint w2 = 0x40; // fltx4
             public const nint v1x = 0x50; // fltx4
-            public const nint v2 = 0x60; // 
+            public const nint v2 = 0x60; // FourVectors2D
         }
         // Parent: None
         // Field count: 1

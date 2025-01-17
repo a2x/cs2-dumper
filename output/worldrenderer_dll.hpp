@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-15 01:31:41.276127300 UTC
+// 2025-01-17 13:01:20.327051300 UTC
 
 #pragma once
 
@@ -70,7 +70,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSubSceneObject = 0x4; // uint32
                 constexpr std::ptrdiff_t m_nDrawCallIndex = 0x8; // uint32
                 constexpr std::ptrdiff_t m_nAdditionalMeshDrawPrimitiveFlags = 0xC; // MeshDrawPrimitiveFlags_t
-                constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // 
+                constexpr std::ptrdiff_t m_extraBufferBinding = 0x10; // CRenderBufferBinding
             }
             // Parent: None
             // Field count: 3
@@ -124,10 +124,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Bounds = 0x0; // AABB_t
                 constexpr std::ptrdiff_t m_flags = 0x18; // ObjectTypeFlags_t
                 constexpr std::ptrdiff_t m_nLayer = 0x1C; // int16
-                constexpr std::ptrdiff_t m_instancePositions = 0x20; // CUtlVector<Vector>
+                constexpr std::ptrdiff_t m_instancePositions = 0x20; // 
                 constexpr std::ptrdiff_t m_instanceScales = 0x50; // CUtlVector<float32>
-                constexpr std::ptrdiff_t m_instanceTintSrgb = 0x68; // CUtlVector<Color>
-                constexpr std::ptrdiff_t m_tiles = 0x80; // CUtlVector<ClutterTile_t>
+                constexpr std::ptrdiff_t m_instanceTintSrgb = 0x68; // 
+                constexpr std::ptrdiff_t m_tiles = 0x80; // 
                 constexpr std::ptrdiff_t m_renderableModel = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
@@ -150,7 +150,7 @@ namespace cs2_dumper {
             namespace PermEntityLumpData_t {
                 constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_childLumps = 0x10; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-                constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
+                constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // 
             }
             // Parent: None
             // Field count: 14

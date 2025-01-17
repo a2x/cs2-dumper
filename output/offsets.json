@@ -19,7 +19,7 @@
     "dwWeaponC4": 27371856
   },
   "engine2.dll": {
-    "dwBuildNumber": 5483492,
+    "dwBuildNumber": 5483476,
     "dwNetworkGameClient": 5479648,
     "dwNetworkGameClient_clientTickCount": 872,
     "dwNetworkGameClient_deltaTick": 636,
@@ -28,8 +28,8 @@
     "dwNetworkGameClient_maxClients": 568,
     "dwNetworkGameClient_serverTickCount": 876,
     "dwNetworkGameClient_signOnState": 552,
-    "dwWindowHeight": 6411164,
-    "dwWindowWidth": 6411160
+    "dwWindowHeight": 6411140,
+    "dwWindowWidth": 6411136
   },
   "inputsystem.dll": {
     "dwInputSystem": 231392
