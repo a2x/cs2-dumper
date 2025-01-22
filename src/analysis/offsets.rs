@@ -94,7 +94,7 @@ pattern_map! {
         "dwSensitivity_sensitivity" => pattern!("ff50u1 4c8bc6 488d55? 488bcf e8${} 84c0 0f85${} 4c8d45? 8bd3 488bcf e8${} e9${} f30f1006") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
-        "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905[4] 488bc6 488934ea 488b6c24? c686[5] 80be") => None,
+        "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905[4] 488bc7") => None,
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,

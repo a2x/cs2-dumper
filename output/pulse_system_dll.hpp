@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:16:57.488530400 UTC
 
 #pragma once
 
@@ -692,7 +692,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_strFileName = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_vecHistory = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
                 constexpr std::ptrdiff_t m_mapCellDesc = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
-                constexpr std::ptrdiff_t m_mapCursorDesc = 0x50; // 
+                constexpr std::ptrdiff_t m_mapCursorDesc = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
             }
             // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 3

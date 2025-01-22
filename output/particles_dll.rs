@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:16:57.488530400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1019,7 +1019,7 @@ pub mod cs2_dumper {
                 pub const m_nFirstSourcePoint: usize = 0x1CC; // int32
                 pub const m_bSetOrientation: usize = 0x1D0; // bool
                 pub const m_nOrientationMode: usize = 0x1D4; // ParticleOrientationSetMode_t
-                pub const m_nSetParent: usize = 0x1D8; // 
+                pub const m_nSetParent: usize = 0x1D8; // ParticleParentSetMode_t
             }
             // Parent: CParticleFunctionOperator
             // Field count: 8
@@ -2025,7 +2025,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SetControlPointToVectorExpression {
-                pub const m_nExpression: usize = 0x1C8; // 
+                pub const m_nExpression: usize = 0x1C8; // VectorExpressionType_t
                 pub const m_nOutputCP: usize = 0x1CC; // int32
                 pub const m_vInput1: usize = 0x1D0; // CParticleCollectionVecInput
                 pub const m_vInput2: usize = 0x848; // CParticleCollectionVecInput
@@ -2125,7 +2125,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SetControlPointFieldToScalarExpression {
-                pub const m_nExpression: usize = 0x1C8; // 
+                pub const m_nExpression: usize = 0x1C8; // ScalarExpressionType_t
                 pub const m_flInput1: usize = 0x1D0; // CParticleCollectionFloatInput
                 pub const m_flInput2: usize = 0x330; // CParticleCollectionFloatInput
                 pub const m_flOutputRemap: usize = 0x490; // CParticleRemapFloatInput
@@ -2169,7 +2169,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_SetVectorAttributeToVectorExpression {
-                pub const m_nExpression: usize = 0x1C8; // 
+                pub const m_nExpression: usize = 0x1C8; // VectorExpressionType_t
                 pub const m_vInput1: usize = 0x1D0; // CPerParticleVecInput
                 pub const m_vInput2: usize = 0x848; // CPerParticleVecInput
                 pub const m_nOutputField: usize = 0xEC0; // ParticleAttributeIndex_t
@@ -2688,19 +2688,19 @@ pub mod cs2_dumper {
                 pub const m_pPrev: usize = 0x18; // CNewParticleEffect*
                 pub const m_pParticles: usize = 0x20; // IParticleCollection*
                 pub const m_pDebugName: usize = 0x28; // char*
-                pub const m_bDontRemove: usize = 0x0; // 
-                pub const m_bRemove: usize = 0x0; // 
-                pub const m_bNeedsBBoxUpdate: usize = 0x0; // 
-                pub const m_bIsFirstFrame: usize = 0x0; // 
-                pub const m_bAutoUpdateBBox: usize = 0x0; // 
-                pub const m_bAllocated: usize = 0x0; // 
-                pub const m_bSimulate: usize = 0x0; // 
-                pub const m_bShouldPerformCullCheck: usize = 0x0; // 
-                pub const m_bForceNoDraw: usize = 0x0; // 
-                pub const m_bShouldSave: usize = 0x0; // 
-                pub const m_bDisableAggregation: usize = 0x0; // 
-                pub const m_bShouldSimulateDuringGamePaused: usize = 0x0; // 
-                pub const m_bShouldCheckFoW: usize = 0x0; // 
+                pub const m_bDontRemove: usize = 0x0; // bitfield:1
+                pub const m_bRemove: usize = 0x0; // bitfield:1
+                pub const m_bNeedsBBoxUpdate: usize = 0x0; // bitfield:1
+                pub const m_bIsFirstFrame: usize = 0x0; // bitfield:1
+                pub const m_bAutoUpdateBBox: usize = 0x0; // bitfield:1
+                pub const m_bAllocated: usize = 0x0; // bitfield:1
+                pub const m_bSimulate: usize = 0x0; // bitfield:1
+                pub const m_bShouldPerformCullCheck: usize = 0x0; // bitfield:1
+                pub const m_bForceNoDraw: usize = 0x0; // bitfield:1
+                pub const m_bShouldSave: usize = 0x0; // bitfield:1
+                pub const m_bDisableAggregation: usize = 0x0; // bitfield:1
+                pub const m_bShouldSimulateDuringGamePaused: usize = 0x0; // bitfield:1
+                pub const m_bShouldCheckFoW: usize = 0x0; // bitfield:1
                 pub const m_vSortOrigin: usize = 0x40; // Vector
                 pub const m_flScale: usize = 0x4C; // float32
                 pub const m_hOwner: usize = 0x50; // PARTICLE_EHANDLE__*
@@ -3267,7 +3267,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SetVectorAttributeToVectorExpression {
-                pub const m_nExpression: usize = 0x1C0; // 
+                pub const m_nExpression: usize = 0x1C0; // VectorExpressionType_t
                 pub const m_vInput1: usize = 0x1C8; // CPerParticleVecInput
                 pub const m_vInput2: usize = 0x840; // CPerParticleVecInput
                 pub const m_nOutputField: usize = 0xEB8; // ParticleAttributeIndex_t
@@ -3500,7 +3500,7 @@ pub mod cs2_dumper {
                 pub const m_bLOS: usize = 0x1F4; // bool
                 pub const m_CollisionGroupName: usize = 0x1F5; // char[128]
                 pub const m_nTraceSet: usize = 0x278; // ParticleTraceSet_t
-                pub const m_nSetParent: usize = 0x27C; // 
+                pub const m_nSetParent: usize = 0x27C; // ParticleParentSetMode_t
             }
             // Parent: CParticleFunctionPreEmission
             // Field count: 4
@@ -3659,7 +3659,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_SetAttributeToScalarExpression {
-                pub const m_nExpression: usize = 0x1C8; // 
+                pub const m_nExpression: usize = 0x1C8; // ScalarExpressionType_t
                 pub const m_flInput1: usize = 0x1D0; // CPerParticleFloatInput
                 pub const m_flInput2: usize = 0x330; // CPerParticleFloatInput
                 pub const m_flOutputRemap: usize = 0x490; // CParticleRemapFloatInput
@@ -4561,7 +4561,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SetControlPointFieldFromVectorExpression {
-                pub const m_nExpression: usize = 0x1C8; // 
+                pub const m_nExpression: usize = 0x1C8; // VectorFloatExpressionType_t
                 pub const m_vecInput1: usize = 0x1D0; // CParticleCollectionVecInput
                 pub const m_vecInput2: usize = 0x848; // CParticleCollectionVecInput
                 pub const m_flOutputRemap: usize = 0xEC0; // CParticleRemapFloatInput
@@ -4899,7 +4899,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SetFloatAttributeToVectorExpression {
-                pub const m_nExpression: usize = 0x1C0; // 
+                pub const m_nExpression: usize = 0x1C0; // VectorFloatExpressionType_t
                 pub const m_vInput1: usize = 0x1C8; // CPerParticleVecInput
                 pub const m_vInput2: usize = 0x840; // CPerParticleVecInput
                 pub const m_flOutputRemap: usize = 0xEB8; // CParticleRemapFloatInput
@@ -5363,7 +5363,7 @@ pub mod cs2_dumper {
                 pub const m_nCP1: usize = 0x1C8; // int32
                 pub const m_vecCP1Pos: usize = 0x1CC; // Vector
                 pub const m_bUseAvgParticlePos: usize = 0x1D8; // bool
-                pub const m_nSetParent: usize = 0x1DC; // 
+                pub const m_nSetParent: usize = 0x1DC; // ParticleParentSetMode_t
             }
             // Parent: CParticleFunctionPreEmission
             // Field count: 7
@@ -6582,7 +6582,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_SetAttributeToScalarExpression {
-                pub const m_nExpression: usize = 0x1C0; // 
+                pub const m_nExpression: usize = 0x1C0; // ScalarExpressionType_t
                 pub const m_flInput1: usize = 0x1C8; // CPerParticleFloatInput
                 pub const m_flInput2: usize = 0x328; // CPerParticleFloatInput
                 pub const m_flOutputRemap: usize = 0x488; // CParticleRemapFloatInput
