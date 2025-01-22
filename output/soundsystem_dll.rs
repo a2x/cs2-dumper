@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -363,7 +363,7 @@ pub mod cs2_dumper {
                 pub const m_flMinValue: usize = 0x1C; // float32
                 pub const m_flMaxValue: usize = 0x20; // float32
                 pub const m_opvarName: usize = 0x28; // CUtlString
-                pub const m_nSortType: usize = 0x30; // 
+                pub const m_nSortType: usize = 0x30; // SosActionSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -799,7 +799,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod SosEditItemInfo_t {
-                pub const itemType: usize = 0x0; // 
+                pub const itemType: usize = 0x0; // SosEditItemType_t
                 pub const itemName: usize = 0x8; // CUtlString
                 pub const itemTypeName: usize = 0x10; // CUtlString
                 pub const itemKVString: usize = 0x20; // CUtlString
@@ -899,7 +899,7 @@ pub mod cs2_dumper {
             pub mod CSosGroupActionLimitSchema {
                 pub const m_nMaxCount: usize = 0x18; // int32
                 pub const m_nStopType: usize = 0x1C; // SosActionStopType_t
-                pub const m_nSortType: usize = 0x20; // 
+                pub const m_nSortType: usize = 0x20; // SosActionSortType_t
             }
             // Parent: CVoiceContainerDecayingSineWave
             // Field count: 1
@@ -1099,7 +1099,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod VMixFilterDesc_t {
-                pub const m_nFilterType: usize = 0x0; // 
+                pub const m_nFilterType: usize = 0x0; // VMixFilterType_t
                 pub const m_nFilterSlope: usize = 0x2; // VMixFilterSlope_t
                 pub const m_bEnabled: usize = 0x3; // bool
                 pub const m_fldbGain: usize = 0x4; // float32

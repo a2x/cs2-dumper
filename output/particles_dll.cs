@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -940,7 +940,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFirstSourcePoint = 0x1CC; // int32
             public const nint m_bSetOrientation = 0x1D0; // bool
             public const nint m_nOrientationMode = 0x1D4; // ParticleOrientationSetMode_t
-            public const nint m_nSetParent = 0x1D8; // 
+            public const nint m_nSetParent = 0x1D8; // ParticleParentSetMode_t
         }
         // Parent: CParticleFunctionOperator
         // Field count: 8
@@ -1946,7 +1946,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_SetControlPointToVectorExpression {
-            public const nint m_nExpression = 0x1C8; // 
+            public const nint m_nExpression = 0x1C8; // VectorExpressionType_t
             public const nint m_nOutputCP = 0x1CC; // int32
             public const nint m_vInput1 = 0x1D0; // CParticleCollectionVecInput
             public const nint m_vInput2 = 0x848; // CParticleCollectionVecInput
@@ -2046,7 +2046,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_SetControlPointFieldToScalarExpression {
-            public const nint m_nExpression = 0x1C8; // 
+            public const nint m_nExpression = 0x1C8; // ScalarExpressionType_t
             public const nint m_flInput1 = 0x1D0; // CParticleCollectionFloatInput
             public const nint m_flInput2 = 0x330; // CParticleCollectionFloatInput
             public const nint m_flOutputRemap = 0x490; // CParticleRemapFloatInput
@@ -2090,7 +2090,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_INIT_SetVectorAttributeToVectorExpression {
-            public const nint m_nExpression = 0x1C8; // 
+            public const nint m_nExpression = 0x1C8; // VectorExpressionType_t
             public const nint m_vInput1 = 0x1D0; // CPerParticleVecInput
             public const nint m_vInput2 = 0x848; // CPerParticleVecInput
             public const nint m_nOutputField = 0xEC0; // ParticleAttributeIndex_t
@@ -2609,19 +2609,19 @@ namespace CS2Dumper.Schemas {
             public const nint m_pPrev = 0x18; // CNewParticleEffect*
             public const nint m_pParticles = 0x20; // IParticleCollection*
             public const nint m_pDebugName = 0x28; // char*
-            public const nint m_bDontRemove = 0x0; // 
-            public const nint m_bRemove = 0x0; // 
-            public const nint m_bNeedsBBoxUpdate = 0x0; // 
-            public const nint m_bIsFirstFrame = 0x0; // 
-            public const nint m_bAutoUpdateBBox = 0x0; // 
-            public const nint m_bAllocated = 0x0; // 
-            public const nint m_bSimulate = 0x0; // 
-            public const nint m_bShouldPerformCullCheck = 0x0; // 
-            public const nint m_bForceNoDraw = 0x0; // 
-            public const nint m_bShouldSave = 0x0; // 
-            public const nint m_bDisableAggregation = 0x0; // 
-            public const nint m_bShouldSimulateDuringGamePaused = 0x0; // 
-            public const nint m_bShouldCheckFoW = 0x0; // 
+            public const nint m_bDontRemove = 0x0; // bitfield:1
+            public const nint m_bRemove = 0x0; // bitfield:1
+            public const nint m_bNeedsBBoxUpdate = 0x0; // bitfield:1
+            public const nint m_bIsFirstFrame = 0x0; // bitfield:1
+            public const nint m_bAutoUpdateBBox = 0x0; // bitfield:1
+            public const nint m_bAllocated = 0x0; // bitfield:1
+            public const nint m_bSimulate = 0x0; // bitfield:1
+            public const nint m_bShouldPerformCullCheck = 0x0; // bitfield:1
+            public const nint m_bForceNoDraw = 0x0; // bitfield:1
+            public const nint m_bShouldSave = 0x0; // bitfield:1
+            public const nint m_bDisableAggregation = 0x0; // bitfield:1
+            public const nint m_bShouldSimulateDuringGamePaused = 0x0; // bitfield:1
+            public const nint m_bShouldCheckFoW = 0x0; // bitfield:1
             public const nint m_vSortOrigin = 0x40; // Vector
             public const nint m_flScale = 0x4C; // float32
             public const nint m_hOwner = 0x50; // PARTICLE_EHANDLE__*
@@ -3035,7 +3035,7 @@ namespace CS2Dumper.Schemas {
         public static class C_OP_RenderPostProcessing {
             public const nint m_flPostProcessStrength = 0x210; // CPerParticleFloatInput
             public const nint m_hPostTexture = 0x370; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-            public const nint m_nPriority = 0x378; // ParticlePostProcessPriorityGroup_t
+            public const nint m_nPriority = 0x378; // 
         }
         // Parent: CParticleFunctionConstraint
         // Field count: 27
@@ -3188,7 +3188,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_SetVectorAttributeToVectorExpression {
-            public const nint m_nExpression = 0x1C0; // 
+            public const nint m_nExpression = 0x1C0; // VectorExpressionType_t
             public const nint m_vInput1 = 0x1C8; // CPerParticleVecInput
             public const nint m_vInput2 = 0x840; // CPerParticleVecInput
             public const nint m_nOutputField = 0xEB8; // ParticleAttributeIndex_t
@@ -3421,7 +3421,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bLOS = 0x1F4; // bool
             public const nint m_CollisionGroupName = 0x1F5; // char[128]
             public const nint m_nTraceSet = 0x278; // ParticleTraceSet_t
-            public const nint m_nSetParent = 0x27C; // 
+            public const nint m_nSetParent = 0x27C; // ParticleParentSetMode_t
         }
         // Parent: CParticleFunctionPreEmission
         // Field count: 4
@@ -3580,7 +3580,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_INIT_SetAttributeToScalarExpression {
-            public const nint m_nExpression = 0x1C8; // 
+            public const nint m_nExpression = 0x1C8; // ScalarExpressionType_t
             public const nint m_flInput1 = 0x1D0; // CPerParticleFloatInput
             public const nint m_flInput2 = 0x330; // CPerParticleFloatInput
             public const nint m_flOutputRemap = 0x490; // CParticleRemapFloatInput
@@ -4482,7 +4482,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_SetControlPointFieldFromVectorExpression {
-            public const nint m_nExpression = 0x1C8; // 
+            public const nint m_nExpression = 0x1C8; // VectorFloatExpressionType_t
             public const nint m_vecInput1 = 0x1D0; // CParticleCollectionVecInput
             public const nint m_vecInput2 = 0x848; // CParticleCollectionVecInput
             public const nint m_flOutputRemap = 0xEC0; // CParticleRemapFloatInput
@@ -4820,7 +4820,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_SetFloatAttributeToVectorExpression {
-            public const nint m_nExpression = 0x1C0; // 
+            public const nint m_nExpression = 0x1C0; // VectorFloatExpressionType_t
             public const nint m_vInput1 = 0x1C8; // CPerParticleVecInput
             public const nint m_vInput2 = 0x840; // CPerParticleVecInput
             public const nint m_flOutputRemap = 0xEB8; // CParticleRemapFloatInput
@@ -5284,7 +5284,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCP1 = 0x1C8; // int32
             public const nint m_vecCP1Pos = 0x1CC; // Vector
             public const nint m_bUseAvgParticlePos = 0x1D8; // bool
-            public const nint m_nSetParent = 0x1DC; // 
+            public const nint m_nSetParent = 0x1DC; // ParticleParentSetMode_t
         }
         // Parent: CParticleFunctionPreEmission
         // Field count: 7
@@ -6503,7 +6503,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_SetAttributeToScalarExpression {
-            public const nint m_nExpression = 0x1C0; // 
+            public const nint m_nExpression = 0x1C0; // ScalarExpressionType_t
             public const nint m_flInput1 = 0x1C8; // CPerParticleFloatInput
             public const nint m_flInput2 = 0x328; // CPerParticleFloatInput
             public const nint m_flOutputRemap = 0x488; // CParticleRemapFloatInput

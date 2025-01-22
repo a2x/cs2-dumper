@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1065,7 +1065,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod FourCovMatrices3 {
-                pub const m_vDiag: usize = 0x0; // FourVectors
+                pub const m_vDiag: usize = 0x0; // 
                 pub const m_flXY: usize = 0x30; // fltx4
                 pub const m_flXZ: usize = 0x40; // fltx4
                 pub const m_flYZ: usize = 0x50; // fltx4

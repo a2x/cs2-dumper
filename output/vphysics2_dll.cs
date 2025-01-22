@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
@@ -1060,7 +1060,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FourCovMatrices3 {
-            public const nint m_vDiag = 0x0; // FourVectors
+            public const nint m_vDiag = 0x0; // 
             public const nint m_flXY = 0x30; // fltx4
             public const nint m_flXZ = 0x40; // fltx4
             public const nint m_flYZ = 0x50; // fltx4

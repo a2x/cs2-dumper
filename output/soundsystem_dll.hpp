@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 #pragma once
 
@@ -352,7 +352,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMinValue = 0x1C; // float32
                 constexpr std::ptrdiff_t m_flMaxValue = 0x20; // float32
                 constexpr std::ptrdiff_t m_opvarName = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_nSortType = 0x30; // 
+                constexpr std::ptrdiff_t m_nSortType = 0x30; // SosActionSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -788,7 +788,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace SosEditItemInfo_t {
-                constexpr std::ptrdiff_t itemType = 0x0; // 
+                constexpr std::ptrdiff_t itemType = 0x0; // SosEditItemType_t
                 constexpr std::ptrdiff_t itemName = 0x8; // CUtlString
                 constexpr std::ptrdiff_t itemTypeName = 0x10; // CUtlString
                 constexpr std::ptrdiff_t itemKVString = 0x20; // CUtlString
@@ -888,7 +888,7 @@ namespace cs2_dumper {
             namespace CSosGroupActionLimitSchema {
                 constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
                 constexpr std::ptrdiff_t m_nStopType = 0x1C; // SosActionStopType_t
-                constexpr std::ptrdiff_t m_nSortType = 0x20; // 
+                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSortType_t
             }
             // Parent: CVoiceContainerDecayingSineWave
             // Field count: 1
@@ -1088,7 +1088,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace VMixFilterDesc_t {
-                constexpr std::ptrdiff_t m_nFilterType = 0x0; // 
+                constexpr std::ptrdiff_t m_nFilterType = 0x0; // VMixFilterType_t
                 constexpr std::ptrdiff_t m_nFilterSlope = 0x2; // VMixFilterSlope_t
                 constexpr std::ptrdiff_t m_bEnabled = 0x3; // bool
                 constexpr std::ptrdiff_t m_fldbGain = 0x4; // float32

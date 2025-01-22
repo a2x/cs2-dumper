@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 #pragma once
 
@@ -1065,7 +1065,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace FourCovMatrices3 {
-                constexpr std::ptrdiff_t m_vDiag = 0x0; // FourVectors
+                constexpr std::ptrdiff_t m_vDiag = 0x0; // 
                 constexpr std::ptrdiff_t m_flXY = 0x30; // fltx4
                 constexpr std::ptrdiff_t m_flXZ = 0x40; // fltx4
                 constexpr std::ptrdiff_t m_flYZ = 0x50; // fltx4

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:07:47.549798200 UTC
 
 #pragma once
 
@@ -90,7 +90,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flags = 0x8; // uint32
                 constexpr std::ptrdiff_t m_pInfo = 0x10; // EntComponentInfo_t*
                 constexpr std::ptrdiff_t m_nPriority = 0x18; // int32
-                constexpr std::ptrdiff_t m_pNext = 0x20; // 
+                constexpr std::ptrdiff_t m_pNext = 0x20; // CEntityComponentHelper*
             }
             // Parent: None
             // Field count: 1
@@ -281,7 +281,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pNetworkDataReferencedPtrPropDescription = 0x18; // char*
                 constexpr std::ptrdiff_t m_nRuntimeIndex = 0x20; // int32
                 constexpr std::ptrdiff_t m_nFlags = 0x24; // uint32
-                constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x60; // 
+                constexpr std::ptrdiff_t m_pBaseClassComponentHelper = 0x60; // CEntityComponentHelper*
             }
             // Parent: None
             // Field count: 4
