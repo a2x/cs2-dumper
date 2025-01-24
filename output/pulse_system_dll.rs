@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:16:57.488530400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -699,7 +699,7 @@ pub mod cs2_dumper {
                 pub const m_strFileName: usize = 0x8; // CUtlString
                 pub const m_vecHistory: usize = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
                 pub const m_mapCellDesc: usize = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
-                pub const m_mapCursorDesc: usize = 0x50; // 
+                pub const m_mapCursorDesc: usize = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
             }
             // Parent: CPulseCell_BaseYieldingInflow
             // Field count: 3

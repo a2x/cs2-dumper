@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-17 13:01:20.327051300 UTC
+// 2025-01-22 02:16:57.488530400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
@@ -119,10 +119,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_Bounds = 0x0; // AABB_t
             public const nint m_flags = 0x18; // ObjectTypeFlags_t
             public const nint m_nLayer = 0x1C; // int16
-            public const nint m_instancePositions = 0x20; // 
+            public const nint m_instancePositions = 0x20; // CUtlVector<Vector>
             public const nint m_instanceScales = 0x50; // CUtlVector<float32>
-            public const nint m_instanceTintSrgb = 0x68; // 
-            public const nint m_tiles = 0x80; // 
+            public const nint m_instanceTintSrgb = 0x68; // CUtlVector<Color>
+            public const nint m_tiles = 0x80; // CUtlVector<ClutterTile_t>
             public const nint m_renderableModel = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
         }
         // Parent: None
@@ -145,7 +145,7 @@ namespace CS2Dumper.Schemas {
         public static class PermEntityLumpData_t {
             public const nint m_name = 0x8; // CUtlString
             public const nint m_childLumps = 0x10; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-            public const nint m_entityKeyValues = 0x28; // 
+            public const nint m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
         }
         // Parent: None
         // Field count: 14
