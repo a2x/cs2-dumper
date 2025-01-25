@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-25 11:40:13.476421 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
@@ -70,7 +70,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class RnSphereDesc_t {
-            public const nint m_Sphere = 0x18; // SphereBase_t<float32>
+            public const nint m_Sphere = 0x18; // 
         }
         // Parent: RnShapeDesc_t
         // Field count: 1
@@ -441,8 +441,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_vMax = 0xC; // Vector
             public const nint m_Nodes = 0x18; // CUtlVector<RnNode_t>
             public const nint m_Vertices = 0x30; // CUtlVectorSIMDPaddedVector
-            public const nint m_Triangles = 0x48; // CUtlVector<RnTriangle_t>
-            public const nint m_Wings = 0x60; // CUtlVector<RnWing_t>
+            public const nint m_Triangles = 0x48; // 
+            public const nint m_Wings = 0x60; // 
             public const nint m_Materials = 0x78; // CUtlVector<uint8>
             public const nint m_vOrthographicAreas = 0x90; // Vector
             public const nint m_nFlags = 0x9C; // uint32

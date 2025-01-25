@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-25 11:40:13.476421 UTC
 
 #pragma once
 
@@ -75,7 +75,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnSphereDesc_t {
-                constexpr std::ptrdiff_t m_Sphere = 0x18; // SphereBase_t<float32>
+                constexpr std::ptrdiff_t m_Sphere = 0x18; // 
             }
             // Parent: RnShapeDesc_t
             // Field count: 1
@@ -446,8 +446,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vMax = 0xC; // Vector
                 constexpr std::ptrdiff_t m_Nodes = 0x18; // CUtlVector<RnNode_t>
                 constexpr std::ptrdiff_t m_Vertices = 0x30; // CUtlVectorSIMDPaddedVector
-                constexpr std::ptrdiff_t m_Triangles = 0x48; // CUtlVector<RnTriangle_t>
-                constexpr std::ptrdiff_t m_Wings = 0x60; // CUtlVector<RnWing_t>
+                constexpr std::ptrdiff_t m_Triangles = 0x48; // 
+                constexpr std::ptrdiff_t m_Wings = 0x60; // 
                 constexpr std::ptrdiff_t m_Materials = 0x78; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_vOrthographicAreas = 0x90; // Vector
                 constexpr std::ptrdiff_t m_nFlags = 0x9C; // uint32

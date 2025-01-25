@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-25 11:40:13.476421 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -1516,8 +1516,8 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CAnimEncodeDifference {
             public const nint m_boneArray = 0x0; // CUtlVector<CAnimBoneDifference>
-            public const nint m_morphArray = 0x18; // CUtlVector<CAnimMorphDifference>
-            public const nint m_userArray = 0x30; // CUtlVector<CAnimUserDifference>
+            public const nint m_morphArray = 0x18; // 
+            public const nint m_userArray = 0x30; // 
             public const nint m_bHasRotationBitArray = 0x48; // CUtlVector<uint8>
             public const nint m_bHasMovementBitArray = 0x60; // CUtlVector<uint8>
             public const nint m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
@@ -3079,7 +3079,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
             public const nint m_quaternionCompressor = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
             public const nint m_intCompressor = 0x128; // CUtlVector<CCompressor<int32>*>
-            public const nint m_boolCompressor = 0x140; // CUtlVector<CCompressor<bool>*>
+            public const nint m_boolCompressor = 0x140; // 
             public const nint m_colorCompressor = 0x158; // CUtlVector<CCompressor<Color>*>
             public const nint m_vector2DCompressor = 0x170; // CUtlVector<CCompressor<Vector2D>*>
             public const nint m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
@@ -3300,7 +3300,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_footInfo = 0x0; // CUtlVector<FootFixedData_t>
             public const nint m_hipDampingSettings = 0x18; // CAnimInputDamping
             public const nint m_nHipBoneIndex = 0x28; // int32
-            public const nint m_ikSolverType = 0x2C; // IKSolverType
+            public const nint m_ikSolverType = 0x2C; // 
             public const nint m_bApplyTilt = 0x30; // bool
             public const nint m_bApplyHipDrop = 0x31; // bool
             public const nint m_bAlwaysUseFallbackHinge = 0x32; // bool
@@ -3773,12 +3773,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_bActiveListening = 0x8; // bool
             public const nint m_bActiveTalking = 0x9; // bool
             public const nint m_layerAnimations = 0x10; // CUtlVector<MoodAnimation_t>
-            public const nint m_flIntensity = 0x28; // CRangeFloat
-            public const nint m_flDurationScale = 0x30; // CRangeFloat
+            public const nint m_flIntensity = 0x28; // 
+            public const nint m_flDurationScale = 0x30; // 
             public const nint m_bScaleWithInts = 0x38; // bool
-            public const nint m_flNextStart = 0x3C; // CRangeFloat
-            public const nint m_flStartOffset = 0x44; // CRangeFloat
-            public const nint m_flEndOffset = 0x4C; // CRangeFloat
+            public const nint m_flNextStart = 0x3C; // 
+            public const nint m_flStartOffset = 0x44; // 
+            public const nint m_flEndOffset = 0x4C; // 
             public const nint m_flFadeIn = 0x54; // float32
             public const nint m_flFadeOut = 0x58; // float32
         }
@@ -4235,7 +4235,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CNmGraphVariation {
-            public const nint m_graphDefinition = 0x0; // CStrongHandle<InfoForResourceTypeCNmGraphDefinition>
+            public const nint m_graphDefinition = 0x0; // 
             public const nint m_dataSet = 0x8; // CNmGraphDataSet
         }
         // Parent: None
@@ -5476,7 +5476,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_cmdLayerArray = 0x30; // CUtlVector<CSeqCmdLayer>
             public const nint m_eventArray = 0x48; // CUtlVector<CAnimEventDefinition>
             public const nint m_activityArray = 0x60; // CUtlVector<CAnimActivity>
-            public const nint m_poseSettingArray = 0x78; // CUtlVector<CSeqPoseSetting>
+            public const nint m_poseSettingArray = 0x78; // 
         }
         // Parent: CBinaryUpdateNode
         // Field count: 7
@@ -5543,9 +5543,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32>
             public const nint m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
             public const nint m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
-            public const nint m_pTagManagerUpdater = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
-            public const nint m_scriptManager = 0x70; // CSmartPtr<CAnimScriptManager>
-            public const nint m_settings = 0x78; // CAnimGraphSettingsManager
+            public const nint m_pTagManagerUpdater = 0x68; // 
+            public const nint m_scriptManager = 0x70; // 
+            public const nint m_settings = 0x78; // 
             public const nint m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
             public const nint m_pSkeleton = 0xB0; // CSmartPtr<CAnimSkeleton>
             public const nint m_rootNodePath = 0xB8; // CAnimNodePath
@@ -5770,7 +5770,7 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 5
         public static class IKTargetSettings_t {
-            public const nint m_TargetSource = 0x0; // IKTargetSource
+            public const nint m_TargetSource = 0x0; // 
             public const nint m_Bone = 0x8; // IKBoneNameAndIndex_t
             public const nint m_AnimgraphParameterNamePosition = 0x18; // AnimParamID
             public const nint m_AnimgraphParameterNameOrientation = 0x1C; // AnimParamID
@@ -6095,9 +6095,9 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 3
         public static class IKSolverSettings_t {
-            public const nint m_SolverType = 0x0; // IKSolverType
+            public const nint m_SolverType = 0x0; // 
             public const nint m_nNumIterations = 0x4; // int32
-            public const nint m_EndEffectorRotationFixUpMode = 0x8; // EIKEndEffectorRotationFixUpMode
+            public const nint m_EndEffectorRotationFixUpMode = 0x8; // 
         }
         // Parent: CAnimUpdateNodeBase
         // Field count: 6
@@ -6130,7 +6130,7 @@ namespace CS2Dumper.Schemas {
         public static class CAnimKeyData {
             public const nint m_name = 0x0; // CBufferString
             public const nint m_boneArray = 0x10; // CUtlVector<CAnimBone>
-            public const nint m_userArray = 0x28; // CUtlVector<CAnimUser>
+            public const nint m_userArray = 0x28; // 
             public const nint m_morphArray = 0x40; // CUtlVector<CBufferString>
             public const nint m_nChannelElements = 0x58; // int32
             public const nint m_dataChannelArray = 0x60; // CUtlVector<CAnimDataChannelDesc>

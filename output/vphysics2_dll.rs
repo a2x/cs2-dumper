@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-25 11:40:13.476421 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -75,7 +75,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnSphereDesc_t {
-                pub const m_Sphere: usize = 0x18; // SphereBase_t<float32>
+                pub const m_Sphere: usize = 0x18; // 
             }
             // Parent: RnShapeDesc_t
             // Field count: 1
@@ -446,8 +446,8 @@ pub mod cs2_dumper {
                 pub const m_vMax: usize = 0xC; // Vector
                 pub const m_Nodes: usize = 0x18; // CUtlVector<RnNode_t>
                 pub const m_Vertices: usize = 0x30; // CUtlVectorSIMDPaddedVector
-                pub const m_Triangles: usize = 0x48; // CUtlVector<RnTriangle_t>
-                pub const m_Wings: usize = 0x60; // CUtlVector<RnWing_t>
+                pub const m_Triangles: usize = 0x48; // 
+                pub const m_Wings: usize = 0x60; // 
                 pub const m_Materials: usize = 0x78; // CUtlVector<uint8>
                 pub const m_vOrthographicAreas: usize = 0x90; // Vector
                 pub const m_nFlags: usize = 0x9C; // uint32

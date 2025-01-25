@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-25 11:40:13.476421 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1613,8 +1613,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CAnimEncodeDifference {
                 pub const m_boneArray: usize = 0x0; // CUtlVector<CAnimBoneDifference>
-                pub const m_morphArray: usize = 0x18; // CUtlVector<CAnimMorphDifference>
-                pub const m_userArray: usize = 0x30; // CUtlVector<CAnimUserDifference>
+                pub const m_morphArray: usize = 0x18; // 
+                pub const m_userArray: usize = 0x30; // 
                 pub const m_bHasRotationBitArray: usize = 0x48; // CUtlVector<uint8>
                 pub const m_bHasMovementBitArray: usize = 0x60; // CUtlVector<uint8>
                 pub const m_bHasMorphBitArray: usize = 0x78; // CUtlVector<uint8>
@@ -3176,7 +3176,7 @@ pub mod cs2_dumper {
                 pub const m_vectorCompressor: usize = 0xF8; // CUtlVector<CCompressor<Vector>*>
                 pub const m_quaternionCompressor: usize = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
                 pub const m_intCompressor: usize = 0x128; // CUtlVector<CCompressor<int32>*>
-                pub const m_boolCompressor: usize = 0x140; // CUtlVector<CCompressor<bool>*>
+                pub const m_boolCompressor: usize = 0x140; // 
                 pub const m_colorCompressor: usize = 0x158; // CUtlVector<CCompressor<Color>*>
                 pub const m_vector2DCompressor: usize = 0x170; // CUtlVector<CCompressor<Vector2D>*>
                 pub const m_vector4DCompressor: usize = 0x188; // CUtlVector<CCompressor<Vector4D>*>
@@ -3397,7 +3397,7 @@ pub mod cs2_dumper {
                 pub const m_footInfo: usize = 0x0; // CUtlVector<FootFixedData_t>
                 pub const m_hipDampingSettings: usize = 0x18; // CAnimInputDamping
                 pub const m_nHipBoneIndex: usize = 0x28; // int32
-                pub const m_ikSolverType: usize = 0x2C; // IKSolverType
+                pub const m_ikSolverType: usize = 0x2C; // 
                 pub const m_bApplyTilt: usize = 0x30; // bool
                 pub const m_bApplyHipDrop: usize = 0x31; // bool
                 pub const m_bAlwaysUseFallbackHinge: usize = 0x32; // bool
@@ -3870,12 +3870,12 @@ pub mod cs2_dumper {
                 pub const m_bActiveListening: usize = 0x8; // bool
                 pub const m_bActiveTalking: usize = 0x9; // bool
                 pub const m_layerAnimations: usize = 0x10; // CUtlVector<MoodAnimation_t>
-                pub const m_flIntensity: usize = 0x28; // CRangeFloat
-                pub const m_flDurationScale: usize = 0x30; // CRangeFloat
+                pub const m_flIntensity: usize = 0x28; // 
+                pub const m_flDurationScale: usize = 0x30; // 
                 pub const m_bScaleWithInts: usize = 0x38; // bool
-                pub const m_flNextStart: usize = 0x3C; // CRangeFloat
-                pub const m_flStartOffset: usize = 0x44; // CRangeFloat
-                pub const m_flEndOffset: usize = 0x4C; // CRangeFloat
+                pub const m_flNextStart: usize = 0x3C; // 
+                pub const m_flStartOffset: usize = 0x44; // 
+                pub const m_flEndOffset: usize = 0x4C; // 
                 pub const m_flFadeIn: usize = 0x54; // float32
                 pub const m_flFadeOut: usize = 0x58; // float32
             }
@@ -4332,7 +4332,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CNmGraphVariation {
-                pub const m_graphDefinition: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmGraphDefinition>
+                pub const m_graphDefinition: usize = 0x0; // 
                 pub const m_dataSet: usize = 0x8; // CNmGraphDataSet
             }
             // Parent: None
@@ -5573,7 +5573,7 @@ pub mod cs2_dumper {
                 pub const m_cmdLayerArray: usize = 0x30; // CUtlVector<CSeqCmdLayer>
                 pub const m_eventArray: usize = 0x48; // CUtlVector<CAnimEventDefinition>
                 pub const m_activityArray: usize = 0x60; // CUtlVector<CAnimActivity>
-                pub const m_poseSettingArray: usize = 0x78; // CUtlVector<CSeqPoseSetting>
+                pub const m_poseSettingArray: usize = 0x78; // 
             }
             // Parent: CBinaryUpdateNode
             // Field count: 7
@@ -5640,9 +5640,9 @@ pub mod cs2_dumper {
                 pub const m_nodeIndexMap: usize = 0x28; // CUtlHashtable<CAnimNodePath,int32>
                 pub const m_components: usize = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
                 pub const m_pParamListUpdater: usize = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
-                pub const m_pTagManagerUpdater: usize = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
-                pub const m_scriptManager: usize = 0x70; // CSmartPtr<CAnimScriptManager>
-                pub const m_settings: usize = 0x78; // CAnimGraphSettingsManager
+                pub const m_pTagManagerUpdater: usize = 0x68; // 
+                pub const m_scriptManager: usize = 0x70; // 
+                pub const m_settings: usize = 0x78; // 
                 pub const m_pStaticPoseCache: usize = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
                 pub const m_pSkeleton: usize = 0xB0; // CSmartPtr<CAnimSkeleton>
                 pub const m_rootNodePath: usize = 0xB8; // CAnimNodePath
@@ -5867,7 +5867,7 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 5
             pub mod IKTargetSettings_t {
-                pub const m_TargetSource: usize = 0x0; // IKTargetSource
+                pub const m_TargetSource: usize = 0x0; // 
                 pub const m_Bone: usize = 0x8; // IKBoneNameAndIndex_t
                 pub const m_AnimgraphParameterNamePosition: usize = 0x18; // AnimParamID
                 pub const m_AnimgraphParameterNameOrientation: usize = 0x1C; // AnimParamID
@@ -6192,9 +6192,9 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 3
             pub mod IKSolverSettings_t {
-                pub const m_SolverType: usize = 0x0; // IKSolverType
+                pub const m_SolverType: usize = 0x0; // 
                 pub const m_nNumIterations: usize = 0x4; // int32
-                pub const m_EndEffectorRotationFixUpMode: usize = 0x8; // EIKEndEffectorRotationFixUpMode
+                pub const m_EndEffectorRotationFixUpMode: usize = 0x8; // 
             }
             // Parent: CAnimUpdateNodeBase
             // Field count: 6
@@ -6227,7 +6227,7 @@ pub mod cs2_dumper {
             pub mod CAnimKeyData {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_boneArray: usize = 0x10; // CUtlVector<CAnimBone>
-                pub const m_userArray: usize = 0x28; // CUtlVector<CAnimUser>
+                pub const m_userArray: usize = 0x28; // 
                 pub const m_morphArray: usize = 0x40; // CUtlVector<CBufferString>
                 pub const m_nChannelElements: usize = 0x58; // int32
                 pub const m_dataChannelArray: usize = 0x60; // CUtlVector<CAnimDataChannelDesc>
