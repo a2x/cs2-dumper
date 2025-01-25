@@ -1,4 +1,4 @@
-## THis is a backup of the original repo and will be updated once a week
+## This is a backup of the original repo and will be updated once a week
 
 # cs2-dumper
 
