@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-28 02:21:32.067640100 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x1865C00;
-        public const nint EmptyWorldService001_Client = 0x1820F00;
-        public const nint GameClientExports001 = 0x18628B8;
-        public const nint LegacyGameUI001 = 0x1883430;
-        public const nint Source2Client002 = 0x1A7DEE0;
-        public const nint Source2ClientConfig001 = 0x1A14570;
-        public const nint Source2ClientPrediction001 = 0x186DC80;
-        public const nint Source2ClientUI001 = 0x1881800;
+        public const nint ClientToolsInfo_001 = 0x1866C00;
+        public const nint EmptyWorldService001_Client = 0x1821F00;
+        public const nint GameClientExports001 = 0x18638B8;
+        public const nint LegacyGameUI001 = 0x1884430;
+        public const nint Source2Client002 = 0x1A7EEE0;
+        public const nint Source2ClientConfig001 = 0x1A15570;
+        public const nint Source2ClientPrediction001 = 0x186EC80;
+        public const nint Source2ClientUI001 = 0x1882800;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -181,7 +181,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: steamclient64.dll
     public static class Steamclient64Dll {
-        public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0xFFFFFFFF8BAF705A;
+        public const nint CLIENTENGINE_INTERFACE_VERSION005 = 0xFFFFFFFF8BAF70BA;
         public const nint IVALIDATE001 = 0x14A3108;
         public const nint SteamClient006 = 0x14A0860;
         public const nint SteamClient007 = 0x14A0868;
