@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-01-28 02:21:32.067640100 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,14 +12,14 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x1865C00;
-            pub const EmptyWorldService001_Client: usize = 0x1820F00;
-            pub const GameClientExports001: usize = 0x18628B8;
-            pub const LegacyGameUI001: usize = 0x1883430;
-            pub const Source2Client002: usize = 0x1A7DEE0;
-            pub const Source2ClientConfig001: usize = 0x1A14570;
-            pub const Source2ClientPrediction001: usize = 0x186DC80;
-            pub const Source2ClientUI001: usize = 0x1881800;
+            pub const ClientToolsInfo_001: usize = 0x1866C00;
+            pub const EmptyWorldService001_Client: usize = 0x1821F00;
+            pub const GameClientExports001: usize = 0x18638B8;
+            pub const LegacyGameUI001: usize = 0x1884430;
+            pub const Source2Client002: usize = 0x1A7EEE0;
+            pub const Source2ClientConfig001: usize = 0x1A15570;
+            pub const Source2ClientPrediction001: usize = 0x186EC80;
+            pub const Source2ClientUI001: usize = 0x1882800;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -184,7 +184,7 @@ pub mod cs2_dumper {
         }
         // Module: steamclient64.dll
         pub mod steamclient64_dll {
-            pub const CLIENTENGINE_INTERFACE_VERSION005: usize = 0xFFFFFFFF8BAF705A;
+            pub const CLIENTENGINE_INTERFACE_VERSION005: usize = 0xFFFFFFFF8BAF70BA;
             pub const IVALIDATE001: usize = 0x14A3108;
             pub const SteamClient006: usize = 0x14A0860;
             pub const SteamClient007: usize = 0x14A0868;
