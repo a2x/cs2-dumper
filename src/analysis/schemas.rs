@@ -268,7 +268,7 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
     let schema_system_addr = signature!("48 8D 05 ? ? ? ? 49 89 04 24")
         .scan(&buf)
         .and_then(|result| process.read_addr64_rip(module.base + result).ok())
-        .ok_or_else(|| Error::Other("unable to read schema system address"))?;
+        .ok_or(Error::Other("unable to read schema system address"))?;
 
     let schema_system: SchemaSystem = process.read(schema_system_addr)?;
 
