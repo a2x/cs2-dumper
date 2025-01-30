@@ -19,10 +19,10 @@ pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<Button
     let module = process.module_by_name("libclient.so")?;
     let buf = process.read_raw(module.base, module.size as _)?;
 
-    let list_addr = signature!("48 8B 15 ? ? ? ? 48 89 83 ? ? ? ? 48 85 D2")
+    let list_addr = signature!("48 8D 15 ? ? ? ? 66 44 89 ? ? 48 8D 35")
         .scan(&buf)
         .and_then(|result| process.read_addr64_rip(module.base + result).ok())
-        .ok_or_else(|| Error::Other("unable to read button list address"))?;
+        .ok_or(Error::Other("unable to read button list address"))?;
 
     read_buttons(process, &module, list_addr)
 }

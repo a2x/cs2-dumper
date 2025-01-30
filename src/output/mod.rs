@@ -45,7 +45,7 @@ trait CodeWriter {
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
 }
 
-impl<'a> CodeWriter for Item<'a> {
+impl CodeWriter for Item<'_> {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_cs(fmt),
@@ -98,7 +98,7 @@ impl<'a> Output<'a> {
         out_dir: &'a Path,
         result: &'a AnalysisResult,
     ) -> Result<Self> {
-        fs::create_dir_all(&out_dir)?;
+        fs::create_dir_all(out_dir)?;
 
         Ok(Self {
             file_types,

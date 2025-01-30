@@ -50,7 +50,7 @@ impl<'a> Formatter<'a> {
     }
 }
 
-impl<'a> Write for Formatter<'a> {
+impl Write for Formatter<'_> {
     fn write_str(&mut self, s: &str) -> fmt::Result {
         let mut lines = s.lines().peekable();
 

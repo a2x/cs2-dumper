@@ -83,8 +83,7 @@ fn read_offset(
     }
 
     let value = (result - module.base)
-        .try_into()
-        .map_or_else(|_| result.to_umem() as u32, |v| v);
+        .try_into().unwrap_or_else(|_| result.to_umem() as u32);
 
     debug!("found offset: {} at {:#X}", signature.name, value);
 
