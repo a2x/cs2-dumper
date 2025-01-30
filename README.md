@@ -1,3 +1,5 @@
+## This is a backup of the original repo and will be updated once a week
+
 # cs2-dumper
 
 An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux. Powered
