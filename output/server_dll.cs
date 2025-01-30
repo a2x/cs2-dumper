@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2040,7 +2040,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecCsViewPunchAngle = 0x40; // QAngle
             public const nint m_nCsViewPunchAngleTick = 0x4C; // GameTick_t
             public const nint m_flCsViewPunchAngleTickRatio = 0x50; // float32
-            public const nint m_PlayerFog = 0x58; // 
+            public const nint m_PlayerFog = 0x58; // fogplayerparams_t
             public const nint m_hColorCorrectionCtrl = 0x98; // CHandle<CColorCorrection>
             public const nint m_hViewEntity = 0x9C; // CHandle<CBaseEntity>
             public const nint m_hTonemapController = 0xA0; // CHandle<CTonemapController2>
@@ -3208,7 +3208,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_hDoorList = 0xC70; // CUtlVector<CHandle<CBasePropDoor>>
             public const nint m_nHardwareType = 0xC88; // int32
             public const nint m_bNeedsHardware = 0xC8C; // bool
-            public const nint m_eDoorState = 0xC90; // DoorState_t
+            public const nint m_eDoorState = 0xC90; // 
             public const nint m_bLocked = 0xC94; // bool
             public const nint m_closedPosition = 0xC98; // Vector
             public const nint m_closedAngles = 0xCA4; // QAngle
@@ -3673,7 +3673,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_hSplitOwner = 0x52C; // CHandle<CBasePlayerController>
             public const nint m_hSplitScreenPlayers = 0x530; // CUtlVector<CHandle<CBasePlayerController>>
             public const nint m_bIsHLTV = 0x548; // bool
-            public const nint m_iConnected = 0x54C; // 
+            public const nint m_iConnected = 0x54C; // PlayerConnectedState
             public const nint m_iszPlayerName = 0x550; // char[128]
             public const nint m_szNetworkIDString = 0x5D0; // CUtlString
             public const nint m_fLerpTime = 0x5D8; // float32
@@ -4587,7 +4587,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bPreventUpdateYawOnFinish = 0x58A; // bool
             public const nint m_bEnsureOnNavmeshOnFinish = 0x58B; // bool
             public const nint m_onDeathBehavior = 0x58C; // ScriptedOnDeath_t
-            public const nint m_ConflictResponse = 0x590; // ScriptedConflictResponse_t
+            public const nint m_ConflictResponse = 0x590; // 
             public const nint m_OnBeginSequence = 0x598; // CEntityIOOutput
             public const nint m_OnActionStartOrLoop = 0x5C0; // CEntityIOOutput
             public const nint m_OnEndSequence = 0x5E8; // CEntityIOOutput
@@ -6720,7 +6720,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flDecalHealBloodRate = 0x73C; // float32
             public const nint m_flDecalHealHeightRate = 0x740; // float32
             public const nint m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x748; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-            public const nint m_vecViewOffset = 0x760; // 
+            public const nint m_vecViewOffset = 0x760; // CNetworkViewOffsetVector
         }
         // Parent: CBaseAnimGraph
         // Field count: 12
@@ -7562,14 +7562,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_iNumCT = 0xD7C; // int32
             public const nint m_iNumSpawnableTerrorist = 0xD80; // int32
             public const nint m_iNumSpawnableCT = 0xD84; // int32
-            public const nint m_arrSelectedHostageSpawnIndices = 0xD88; // 
+            public const nint m_arrSelectedHostageSpawnIndices = 0xD88; // CUtlVector<int32>
             public const nint m_nSpawnPointsRandomSeed = 0xDA0; // int32
             public const nint m_bFirstConnected = 0xDA4; // bool
             public const nint m_bCompleteReset = 0xDA5; // bool
             public const nint m_bPickNewTeamsOnReset = 0xDA6; // bool
             public const nint m_bScrambleTeamsOnRestart = 0xDA7; // bool
             public const nint m_bSwapTeamsOnRestart = 0xDA8; // bool
-            public const nint m_nEndMatchTiedVotes = 0xDB0; // 
+            public const nint m_nEndMatchTiedVotes = 0xDB0; // CUtlVector<int32>
             public const nint m_bNeedToAskPlayersForContinueVote = 0xDCC; // bool
             public const nint m_numQueuedMatchmakingAccounts = 0xDD0; // uint32
             public const nint m_fAvgPlayerRank = 0xDD4; // float32
@@ -8450,7 +8450,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_iDamageCount = 0xAA0; // int32
             public const nint m_pVecRelationships = 0xAA8; // CUtlVector<RelationshipOverride_t>*
             public const nint m_strRelationships = 0xAB0; // CUtlSymbolLarge
-            public const nint m_eHull = 0xAB8; // 
+            public const nint m_eHull = 0xAB8; // Hull_t
             public const nint m_nNavHullIdx = 0xABC; // uint32
         }
         // Parent: CBaseModelEntity
@@ -11143,7 +11143,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: qAngle (QAngle)
         // NetworkVarNames: nIndex (uint32)
         public static class ViewAngleServerChange_t {
-            public const nint nType = 0x30; // FixAngleSet_t
+            public const nint nType = 0x30; // 
             public const nint qAngle = 0x34; // QAngle
             public const nint nIndex = 0x40; // uint32
         }

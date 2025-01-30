@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -1516,8 +1516,8 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CAnimEncodeDifference {
             public const nint m_boneArray = 0x0; // CUtlVector<CAnimBoneDifference>
-            public const nint m_morphArray = 0x18; // 
-            public const nint m_userArray = 0x30; // 
+            public const nint m_morphArray = 0x18; // CUtlVector<CAnimMorphDifference>
+            public const nint m_userArray = 0x30; // CUtlVector<CAnimUserDifference>
             public const nint m_bHasRotationBitArray = 0x48; // CUtlVector<uint8>
             public const nint m_bHasMovementBitArray = 0x60; // CUtlVector<uint8>
             public const nint m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
@@ -3077,9 +3077,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
             public const nint m_nElementMask = 0xC8; // CUtlVector<uint32>
             public const nint m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
-            public const nint m_quaternionCompressor = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
+            public const nint m_quaternionCompressor = 0x110; // 
             public const nint m_intCompressor = 0x128; // CUtlVector<CCompressor<int32>*>
-            public const nint m_boolCompressor = 0x140; // 
+            public const nint m_boolCompressor = 0x140; // CUtlVector<CCompressor<bool>*>
             public const nint m_colorCompressor = 0x158; // CUtlVector<CCompressor<Color>*>
             public const nint m_vector2DCompressor = 0x170; // CUtlVector<CCompressor<Vector2D>*>
             public const nint m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
@@ -3547,7 +3547,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_lodGroupSwitchDistances = 0xD8; // CUtlVector<float32>
             public const nint m_refPhysicsData = 0xF0; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
             public const nint m_refPhysicsHitboxData = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
-            public const nint m_refAnimGroups = 0x120; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+            public const nint m_refAnimGroups = 0x120; // 
             public const nint m_refSequenceGroups = 0x138; // CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
             public const nint m_meshGroups = 0x150; // CUtlVector<CUtlString>
             public const nint m_materialGroups = 0x168; // CUtlVector<MaterialGroup_t>
@@ -4518,7 +4518,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFlags = 0x10; // uint32
             public const nint m_name = 0x18; // CBufferString
             public const nint m_localHAnimArray_Handle = 0x60; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimData>>
-            public const nint m_includedGroupArray_Handle = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+            public const nint m_includedGroupArray_Handle = 0x78; // 
             public const nint m_directHSeqGroup_Handle = 0x90; // CStrongHandle<InfoForResourceTypeCSequenceGroupData>
             public const nint m_decodeKey = 0x98; // CAnimKeyData
             public const nint m_szScripts = 0x110; // CUtlVector<CBufferString>
@@ -5540,10 +5540,10 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CAnimUpdateSharedData {
             public const nint m_nodes = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
-            public const nint m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32>
+            public const nint m_nodeIndexMap = 0x28; // 
             public const nint m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
             public const nint m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
-            public const nint m_pTagManagerUpdater = 0x68; // 
+            public const nint m_pTagManagerUpdater = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
             public const nint m_scriptManager = 0x70; // 
             public const nint m_settings = 0x78; // 
             public const nint m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>

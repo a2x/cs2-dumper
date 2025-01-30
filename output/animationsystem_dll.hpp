@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 #pragma once
 
@@ -1521,8 +1521,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimEncodeDifference {
                 constexpr std::ptrdiff_t m_boneArray = 0x0; // CUtlVector<CAnimBoneDifference>
-                constexpr std::ptrdiff_t m_morphArray = 0x18; // 
-                constexpr std::ptrdiff_t m_userArray = 0x30; // 
+                constexpr std::ptrdiff_t m_morphArray = 0x18; // CUtlVector<CAnimMorphDifference>
+                constexpr std::ptrdiff_t m_userArray = 0x30; // CUtlVector<CAnimUserDifference>
                 constexpr std::ptrdiff_t m_bHasRotationBitArray = 0x48; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_bHasMovementBitArray = 0x60; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_bHasMorphBitArray = 0x78; // CUtlVector<uint8>
@@ -3082,9 +3082,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
                 constexpr std::ptrdiff_t m_nElementMask = 0xC8; // CUtlVector<uint32>
                 constexpr std::ptrdiff_t m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
-                constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
+                constexpr std::ptrdiff_t m_quaternionCompressor = 0x110; // 
                 constexpr std::ptrdiff_t m_intCompressor = 0x128; // CUtlVector<CCompressor<int32>*>
-                constexpr std::ptrdiff_t m_boolCompressor = 0x140; // 
+                constexpr std::ptrdiff_t m_boolCompressor = 0x140; // CUtlVector<CCompressor<bool>*>
                 constexpr std::ptrdiff_t m_colorCompressor = 0x158; // CUtlVector<CCompressor<Color>*>
                 constexpr std::ptrdiff_t m_vector2DCompressor = 0x170; // CUtlVector<CCompressor<Vector2D>*>
                 constexpr std::ptrdiff_t m_vector4DCompressor = 0x188; // CUtlVector<CCompressor<Vector4D>*>
@@ -3552,7 +3552,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_lodGroupSwitchDistances = 0xD8; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_refPhysicsData = 0xF0; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
                 constexpr std::ptrdiff_t m_refPhysicsHitboxData = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
-                constexpr std::ptrdiff_t m_refAnimGroups = 0x120; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+                constexpr std::ptrdiff_t m_refAnimGroups = 0x120; // 
                 constexpr std::ptrdiff_t m_refSequenceGroups = 0x138; // CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
                 constexpr std::ptrdiff_t m_meshGroups = 0x150; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_materialGroups = 0x168; // CUtlVector<MaterialGroup_t>
@@ -4523,7 +4523,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFlags = 0x10; // uint32
                 constexpr std::ptrdiff_t m_name = 0x18; // CBufferString
                 constexpr std::ptrdiff_t m_localHAnimArray_Handle = 0x60; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimData>>
-                constexpr std::ptrdiff_t m_includedGroupArray_Handle = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+                constexpr std::ptrdiff_t m_includedGroupArray_Handle = 0x78; // 
                 constexpr std::ptrdiff_t m_directHSeqGroup_Handle = 0x90; // CStrongHandle<InfoForResourceTypeCSequenceGroupData>
                 constexpr std::ptrdiff_t m_decodeKey = 0x98; // CAnimKeyData
                 constexpr std::ptrdiff_t m_szScripts = 0x110; // CUtlVector<CBufferString>
@@ -5545,10 +5545,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CAnimUpdateSharedData {
                 constexpr std::ptrdiff_t m_nodes = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
-                constexpr std::ptrdiff_t m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32>
+                constexpr std::ptrdiff_t m_nodeIndexMap = 0x28; // 
                 constexpr std::ptrdiff_t m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
                 constexpr std::ptrdiff_t m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
-                constexpr std::ptrdiff_t m_pTagManagerUpdater = 0x68; // 
+                constexpr std::ptrdiff_t m_pTagManagerUpdater = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
                 constexpr std::ptrdiff_t m_scriptManager = 0x70; // 
                 constexpr std::ptrdiff_t m_settings = 0x78; // 
                 constexpr std::ptrdiff_t m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>

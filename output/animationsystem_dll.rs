@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1613,8 +1613,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CAnimEncodeDifference {
                 pub const m_boneArray: usize = 0x0; // CUtlVector<CAnimBoneDifference>
-                pub const m_morphArray: usize = 0x18; // 
-                pub const m_userArray: usize = 0x30; // 
+                pub const m_morphArray: usize = 0x18; // CUtlVector<CAnimMorphDifference>
+                pub const m_userArray: usize = 0x30; // CUtlVector<CAnimUserDifference>
                 pub const m_bHasRotationBitArray: usize = 0x48; // CUtlVector<uint8>
                 pub const m_bHasMovementBitArray: usize = 0x60; // CUtlVector<uint8>
                 pub const m_bHasMorphBitArray: usize = 0x78; // CUtlVector<uint8>
@@ -3174,9 +3174,9 @@ pub mod cs2_dumper {
                 pub const m_nElementUniqueID: usize = 0xB0; // CUtlVector<CUtlVector<int32>>
                 pub const m_nElementMask: usize = 0xC8; // CUtlVector<uint32>
                 pub const m_vectorCompressor: usize = 0xF8; // CUtlVector<CCompressor<Vector>*>
-                pub const m_quaternionCompressor: usize = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
+                pub const m_quaternionCompressor: usize = 0x110; // 
                 pub const m_intCompressor: usize = 0x128; // CUtlVector<CCompressor<int32>*>
-                pub const m_boolCompressor: usize = 0x140; // 
+                pub const m_boolCompressor: usize = 0x140; // CUtlVector<CCompressor<bool>*>
                 pub const m_colorCompressor: usize = 0x158; // CUtlVector<CCompressor<Color>*>
                 pub const m_vector2DCompressor: usize = 0x170; // CUtlVector<CCompressor<Vector2D>*>
                 pub const m_vector4DCompressor: usize = 0x188; // CUtlVector<CCompressor<Vector4D>*>
@@ -3644,7 +3644,7 @@ pub mod cs2_dumper {
                 pub const m_lodGroupSwitchDistances: usize = 0xD8; // CUtlVector<float32>
                 pub const m_refPhysicsData: usize = 0xF0; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
                 pub const m_refPhysicsHitboxData: usize = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
-                pub const m_refAnimGroups: usize = 0x120; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+                pub const m_refAnimGroups: usize = 0x120; // 
                 pub const m_refSequenceGroups: usize = 0x138; // CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
                 pub const m_meshGroups: usize = 0x150; // CUtlVector<CUtlString>
                 pub const m_materialGroups: usize = 0x168; // CUtlVector<MaterialGroup_t>
@@ -4615,7 +4615,7 @@ pub mod cs2_dumper {
                 pub const m_nFlags: usize = 0x10; // uint32
                 pub const m_name: usize = 0x18; // CBufferString
                 pub const m_localHAnimArray_Handle: usize = 0x60; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimData>>
-                pub const m_includedGroupArray_Handle: usize = 0x78; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
+                pub const m_includedGroupArray_Handle: usize = 0x78; // 
                 pub const m_directHSeqGroup_Handle: usize = 0x90; // CStrongHandle<InfoForResourceTypeCSequenceGroupData>
                 pub const m_decodeKey: usize = 0x98; // CAnimKeyData
                 pub const m_szScripts: usize = 0x110; // CUtlVector<CBufferString>
@@ -5637,10 +5637,10 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CAnimUpdateSharedData {
                 pub const m_nodes: usize = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
-                pub const m_nodeIndexMap: usize = 0x28; // CUtlHashtable<CAnimNodePath,int32>
+                pub const m_nodeIndexMap: usize = 0x28; // 
                 pub const m_components: usize = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
                 pub const m_pParamListUpdater: usize = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
-                pub const m_pTagManagerUpdater: usize = 0x68; // 
+                pub const m_pTagManagerUpdater: usize = 0x68; // CSmartPtr<CAnimTagManagerUpdater>
                 pub const m_scriptManager: usize = 0x70; // 
                 pub const m_settings: usize = 0x78; // 
                 pub const m_pStaticPoseCache: usize = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>

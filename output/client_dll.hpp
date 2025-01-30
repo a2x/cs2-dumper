@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 #pragma once
 
@@ -473,7 +473,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDecalHealBloodRate = 0xC8C; // float32
                 constexpr std::ptrdiff_t m_flDecalHealHeightRate = 0xC90; // float32
                 constexpr std::ptrdiff_t m_ConfigEntitiesToPropagateMaterialDecalsTo = 0xC98; // C_NetworkUtlVectorBase<CHandle<C_BaseModelEntity>>
-                constexpr std::ptrdiff_t m_vecViewOffset = 0xCB0; // 
+                constexpr std::ptrdiff_t m_vecViewOffset = 0xCB0; // CNetworkViewOffsetVector
                 constexpr std::ptrdiff_t m_pClientAlphaProperty = 0xCE0; // CClientAlphaProperty*
                 constexpr std::ptrdiff_t m_ClientOverrideTint = 0xCE8; // Color
                 constexpr std::ptrdiff_t m_bUseClientOverrideTint = 0xCEC; // bool
@@ -2347,7 +2347,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hSplitOwner = 0x63C; // CHandle<CBasePlayerController>
                 constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x640; // CUtlVector<CHandle<CBasePlayerController>>
                 constexpr std::ptrdiff_t m_bIsHLTV = 0x658; // bool
-                constexpr std::ptrdiff_t m_iConnected = 0x65C; // 
+                constexpr std::ptrdiff_t m_iConnected = 0x65C; // PlayerConnectedState
                 constexpr std::ptrdiff_t m_iszPlayerName = 0x660; // char[128]
                 constexpr std::ptrdiff_t m_steamID = 0x6E8; // uint64
                 constexpr std::ptrdiff_t m_bIsLocalPlayerController = 0x6F0; // bool
@@ -2514,7 +2514,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_PathNodes_TangentIn = 0x5D0; // C_NetworkUtlVectorBase<Vector>
                 constexpr std::ptrdiff_t m_PathNodes_TangentOut = 0x5E8; // C_NetworkUtlVectorBase<Vector>
                 constexpr std::ptrdiff_t m_PathNodes_Color = 0x600; // C_NetworkUtlVectorBase<Vector>
-                constexpr std::ptrdiff_t m_PathNodes_PinEnabled = 0x618; // 
+                constexpr std::ptrdiff_t m_PathNodes_PinEnabled = 0x618; // C_NetworkUtlVectorBase<bool>
                 constexpr std::ptrdiff_t m_PathNodes_RadiusScale = 0x630; // C_NetworkUtlVectorBase<float32>
             }
             // Parent: None
@@ -2790,7 +2790,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetIntVariables = 0x140; // C_NetworkUtlVectorBase<int32>
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt32Variables = 0x158; // C_NetworkUtlVectorBase<uint32>
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt64Variables = 0x170; // C_NetworkUtlVectorBase<uint64>
-                constexpr std::ptrdiff_t m_OwnerOnlyPredNetFloatVariables = 0x188; // C_NetworkUtlVectorBase<float32>
+                constexpr std::ptrdiff_t m_OwnerOnlyPredNetFloatVariables = 0x188; // 
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetVectorVariables = 0x1A0; // C_NetworkUtlVectorBase<Vector>
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetQuaternionVariables = 0x1B8; // C_NetworkUtlVectorBase<Quaternion>
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetGlobalSymbolVariables = 0x1D0; // C_NetworkUtlVectorBase<CGlobalSymbol>
@@ -3621,7 +3621,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_Attributes (CEconItemAttribute)
             namespace CAttributeList {
-                constexpr std::ptrdiff_t m_Attributes = 0x8; // 
+                constexpr std::ptrdiff_t m_Attributes = 0x8; // C_UtlVectorEmbeddedNetworkVar<CEconItemAttribute>
                 constexpr std::ptrdiff_t m_pManager = 0x58; // CAttributeManager*
             }
             // Parent: C_MultiplayRules
@@ -4024,7 +4024,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_soundscapeIndex = 0x5A4; // int32
                 constexpr std::ptrdiff_t m_soundscapeEntityListId = 0x5A8; // int32
                 constexpr std::ptrdiff_t m_positionNames = 0x5B0; // CUtlSymbolLarge[8]
-                constexpr std::ptrdiff_t m_hProxySoundscape = 0x5F0; // CHandle<CEnvSoundscape>
+                constexpr std::ptrdiff_t m_hProxySoundscape = 0x5F0; // 
                 constexpr std::ptrdiff_t m_bDisabled = 0x5F4; // bool
                 constexpr std::ptrdiff_t m_soundscapeName = 0x5F8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_soundEventHash = 0x600; // uint32
@@ -4306,7 +4306,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_weaponPurchases (WeaponPurchaseCount_t)
             namespace WeaponPurchaseTracker_t {
-                constexpr std::ptrdiff_t m_weaponPurchases = 0x8; // C_UtlVectorEmbeddedNetworkVar<WeaponPurchaseCount_t>
+                constexpr std::ptrdiff_t m_weaponPurchases = 0x8; // 
             }
             // Parent: None
             // Field count: 5
@@ -5053,7 +5053,7 @@ namespace cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_vecSellbackPurchaseEntries (SellbackPurchaseEntry_t)
             namespace CCSPlayer_BuyServices {
-                constexpr std::ptrdiff_t m_vecSellbackPurchaseEntries = 0x40; // 
+                constexpr std::ptrdiff_t m_vecSellbackPurchaseEntries = 0x40; // C_UtlVectorEmbeddedNetworkVar<SellbackPurchaseEntry_t>
             }
             // Parent: None
             // Field count: 0
@@ -5164,7 +5164,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_vCapsuleCenter2 (Vector)
             // NetworkVarNames: m_flCapsuleRadius (float)
             namespace CCollisionProperty {
-                constexpr std::ptrdiff_t m_collisionAttribute = 0x10; // VPhysicsCollisionAttribute_t
+                constexpr std::ptrdiff_t m_collisionAttribute = 0x10; // 
                 constexpr std::ptrdiff_t m_vecMins = 0x40; // Vector
                 constexpr std::ptrdiff_t m_vecMaxs = 0x4C; // Vector
                 constexpr std::ptrdiff_t m_usSolidFlags = 0x5A; // uint8
@@ -5253,7 +5253,7 @@ namespace cs2_dumper {
             // MNetworkExcludeByName
             // NetworkVarNames: m_ShardDesc (shard_model_desc_t)
             namespace C_ShatterGlassShardPhysics {
-                constexpr std::ptrdiff_t m_ShardDesc = 0x1120; // 
+                constexpr std::ptrdiff_t m_ShardDesc = 0x1120; // shard_model_desc_t
             }
             // Parent: C_CSWeaponBaseGun
             // Field count: 0
@@ -6365,7 +6365,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_closedAngles (QAngle)
             // NetworkVarNames: m_hMaster (CHandle<C_BasePropDoor>)
             namespace C_BasePropDoor {
-                constexpr std::ptrdiff_t m_eDoorState = 0x1238; // DoorState_t
+                constexpr std::ptrdiff_t m_eDoorState = 0x1238; // 
                 constexpr std::ptrdiff_t m_modelChanged = 0x123C; // bool
                 constexpr std::ptrdiff_t m_bLocked = 0x123D; // bool
                 constexpr std::ptrdiff_t m_closedPosition = 0x1240; // Vector
@@ -6882,7 +6882,7 @@ namespace cs2_dumper {
             // NetworkVarNames: qAngle (QAngle)
             // NetworkVarNames: nIndex (uint32)
             namespace ViewAngleServerChange_t {
-                constexpr std::ptrdiff_t nType = 0x30; // FixAngleSet_t
+                constexpr std::ptrdiff_t nType = 0x30; // 
                 constexpr std::ptrdiff_t qAngle = 0x34; // QAngle
                 constexpr std::ptrdiff_t nIndex = 0x40; // uint32
             }

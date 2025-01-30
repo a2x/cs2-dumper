@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -468,7 +468,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flDecalHealBloodRate = 0xC8C; // float32
             public const nint m_flDecalHealHeightRate = 0xC90; // float32
             public const nint m_ConfigEntitiesToPropagateMaterialDecalsTo = 0xC98; // C_NetworkUtlVectorBase<CHandle<C_BaseModelEntity>>
-            public const nint m_vecViewOffset = 0xCB0; // 
+            public const nint m_vecViewOffset = 0xCB0; // CNetworkViewOffsetVector
             public const nint m_pClientAlphaProperty = 0xCE0; // CClientAlphaProperty*
             public const nint m_ClientOverrideTint = 0xCE8; // Color
             public const nint m_bUseClientOverrideTint = 0xCEC; // bool
@@ -2342,7 +2342,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_hSplitOwner = 0x63C; // CHandle<CBasePlayerController>
             public const nint m_hSplitScreenPlayers = 0x640; // CUtlVector<CHandle<CBasePlayerController>>
             public const nint m_bIsHLTV = 0x658; // bool
-            public const nint m_iConnected = 0x65C; // 
+            public const nint m_iConnected = 0x65C; // PlayerConnectedState
             public const nint m_iszPlayerName = 0x660; // char[128]
             public const nint m_steamID = 0x6E8; // uint64
             public const nint m_bIsLocalPlayerController = 0x6F0; // bool
@@ -2509,7 +2509,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_PathNodes_TangentIn = 0x5D0; // C_NetworkUtlVectorBase<Vector>
             public const nint m_PathNodes_TangentOut = 0x5E8; // C_NetworkUtlVectorBase<Vector>
             public const nint m_PathNodes_Color = 0x600; // C_NetworkUtlVectorBase<Vector>
-            public const nint m_PathNodes_PinEnabled = 0x618; // 
+            public const nint m_PathNodes_PinEnabled = 0x618; // C_NetworkUtlVectorBase<bool>
             public const nint m_PathNodes_RadiusScale = 0x630; // C_NetworkUtlVectorBase<float32>
         }
         // Parent: None
@@ -2785,7 +2785,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_OwnerOnlyPredNetIntVariables = 0x140; // C_NetworkUtlVectorBase<int32>
             public const nint m_OwnerOnlyPredNetUInt32Variables = 0x158; // C_NetworkUtlVectorBase<uint32>
             public const nint m_OwnerOnlyPredNetUInt64Variables = 0x170; // C_NetworkUtlVectorBase<uint64>
-            public const nint m_OwnerOnlyPredNetFloatVariables = 0x188; // C_NetworkUtlVectorBase<float32>
+            public const nint m_OwnerOnlyPredNetFloatVariables = 0x188; // 
             public const nint m_OwnerOnlyPredNetVectorVariables = 0x1A0; // C_NetworkUtlVectorBase<Vector>
             public const nint m_OwnerOnlyPredNetQuaternionVariables = 0x1B8; // C_NetworkUtlVectorBase<Quaternion>
             public const nint m_OwnerOnlyPredNetGlobalSymbolVariables = 0x1D0; // C_NetworkUtlVectorBase<CGlobalSymbol>
@@ -3616,7 +3616,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_Attributes (CEconItemAttribute)
         public static class CAttributeList {
-            public const nint m_Attributes = 0x8; // 
+            public const nint m_Attributes = 0x8; // C_UtlVectorEmbeddedNetworkVar<CEconItemAttribute>
             public const nint m_pManager = 0x58; // CAttributeManager*
         }
         // Parent: C_MultiplayRules
@@ -4019,7 +4019,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_soundscapeIndex = 0x5A4; // int32
             public const nint m_soundscapeEntityListId = 0x5A8; // int32
             public const nint m_positionNames = 0x5B0; // CUtlSymbolLarge[8]
-            public const nint m_hProxySoundscape = 0x5F0; // CHandle<CEnvSoundscape>
+            public const nint m_hProxySoundscape = 0x5F0; // 
             public const nint m_bDisabled = 0x5F4; // bool
             public const nint m_soundscapeName = 0x5F8; // CUtlSymbolLarge
             public const nint m_soundEventHash = 0x600; // uint32
@@ -4301,7 +4301,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_weaponPurchases (WeaponPurchaseCount_t)
         public static class WeaponPurchaseTracker_t {
-            public const nint m_weaponPurchases = 0x8; // C_UtlVectorEmbeddedNetworkVar<WeaponPurchaseCount_t>
+            public const nint m_weaponPurchases = 0x8; // 
         }
         // Parent: None
         // Field count: 5
@@ -5048,7 +5048,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_vecSellbackPurchaseEntries (SellbackPurchaseEntry_t)
         public static class CCSPlayer_BuyServices {
-            public const nint m_vecSellbackPurchaseEntries = 0x40; // 
+            public const nint m_vecSellbackPurchaseEntries = 0x40; // C_UtlVectorEmbeddedNetworkVar<SellbackPurchaseEntry_t>
         }
         // Parent: None
         // Field count: 0
@@ -5159,7 +5159,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_vCapsuleCenter2 (Vector)
         // NetworkVarNames: m_flCapsuleRadius (float)
         public static class CCollisionProperty {
-            public const nint m_collisionAttribute = 0x10; // VPhysicsCollisionAttribute_t
+            public const nint m_collisionAttribute = 0x10; // 
             public const nint m_vecMins = 0x40; // Vector
             public const nint m_vecMaxs = 0x4C; // Vector
             public const nint m_usSolidFlags = 0x5A; // uint8
@@ -5248,7 +5248,7 @@ namespace CS2Dumper.Schemas {
         // MNetworkExcludeByName
         // NetworkVarNames: m_ShardDesc (shard_model_desc_t)
         public static class C_ShatterGlassShardPhysics {
-            public const nint m_ShardDesc = 0x1120; // 
+            public const nint m_ShardDesc = 0x1120; // shard_model_desc_t
         }
         // Parent: C_CSWeaponBaseGun
         // Field count: 0
@@ -6360,7 +6360,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_closedAngles (QAngle)
         // NetworkVarNames: m_hMaster (CHandle<C_BasePropDoor>)
         public static class C_BasePropDoor {
-            public const nint m_eDoorState = 0x1238; // DoorState_t
+            public const nint m_eDoorState = 0x1238; // 
             public const nint m_modelChanged = 0x123C; // bool
             public const nint m_bLocked = 0x123D; // bool
             public const nint m_closedPosition = 0x1240; // Vector
@@ -6877,7 +6877,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: qAngle (QAngle)
         // NetworkVarNames: nIndex (uint32)
         public static class ViewAngleServerChange_t {
-            public const nint nType = 0x30; // FixAngleSet_t
+            public const nint nType = 0x30; // 
             public const nint qAngle = 0x34; // QAngle
             public const nint nIndex = 0x40; // uint32
         }

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -478,7 +478,7 @@ pub mod cs2_dumper {
                 pub const m_flDecalHealBloodRate: usize = 0xC8C; // float32
                 pub const m_flDecalHealHeightRate: usize = 0xC90; // float32
                 pub const m_ConfigEntitiesToPropagateMaterialDecalsTo: usize = 0xC98; // C_NetworkUtlVectorBase<CHandle<C_BaseModelEntity>>
-                pub const m_vecViewOffset: usize = 0xCB0; // 
+                pub const m_vecViewOffset: usize = 0xCB0; // CNetworkViewOffsetVector
                 pub const m_pClientAlphaProperty: usize = 0xCE0; // CClientAlphaProperty*
                 pub const m_ClientOverrideTint: usize = 0xCE8; // Color
                 pub const m_bUseClientOverrideTint: usize = 0xCEC; // bool
@@ -2352,7 +2352,7 @@ pub mod cs2_dumper {
                 pub const m_hSplitOwner: usize = 0x63C; // CHandle<CBasePlayerController>
                 pub const m_hSplitScreenPlayers: usize = 0x640; // CUtlVector<CHandle<CBasePlayerController>>
                 pub const m_bIsHLTV: usize = 0x658; // bool
-                pub const m_iConnected: usize = 0x65C; // 
+                pub const m_iConnected: usize = 0x65C; // PlayerConnectedState
                 pub const m_iszPlayerName: usize = 0x660; // char[128]
                 pub const m_steamID: usize = 0x6E8; // uint64
                 pub const m_bIsLocalPlayerController: usize = 0x6F0; // bool
@@ -2519,7 +2519,7 @@ pub mod cs2_dumper {
                 pub const m_PathNodes_TangentIn: usize = 0x5D0; // C_NetworkUtlVectorBase<Vector>
                 pub const m_PathNodes_TangentOut: usize = 0x5E8; // C_NetworkUtlVectorBase<Vector>
                 pub const m_PathNodes_Color: usize = 0x600; // C_NetworkUtlVectorBase<Vector>
-                pub const m_PathNodes_PinEnabled: usize = 0x618; // 
+                pub const m_PathNodes_PinEnabled: usize = 0x618; // C_NetworkUtlVectorBase<bool>
                 pub const m_PathNodes_RadiusScale: usize = 0x630; // C_NetworkUtlVectorBase<float32>
             }
             // Parent: None
@@ -2795,7 +2795,7 @@ pub mod cs2_dumper {
                 pub const m_OwnerOnlyPredNetIntVariables: usize = 0x140; // C_NetworkUtlVectorBase<int32>
                 pub const m_OwnerOnlyPredNetUInt32Variables: usize = 0x158; // C_NetworkUtlVectorBase<uint32>
                 pub const m_OwnerOnlyPredNetUInt64Variables: usize = 0x170; // C_NetworkUtlVectorBase<uint64>
-                pub const m_OwnerOnlyPredNetFloatVariables: usize = 0x188; // C_NetworkUtlVectorBase<float32>
+                pub const m_OwnerOnlyPredNetFloatVariables: usize = 0x188; // 
                 pub const m_OwnerOnlyPredNetVectorVariables: usize = 0x1A0; // C_NetworkUtlVectorBase<Vector>
                 pub const m_OwnerOnlyPredNetQuaternionVariables: usize = 0x1B8; // C_NetworkUtlVectorBase<Quaternion>
                 pub const m_OwnerOnlyPredNetGlobalSymbolVariables: usize = 0x1D0; // C_NetworkUtlVectorBase<CGlobalSymbol>
@@ -3626,7 +3626,7 @@ pub mod cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_Attributes (CEconItemAttribute)
             pub mod CAttributeList {
-                pub const m_Attributes: usize = 0x8; // 
+                pub const m_Attributes: usize = 0x8; // C_UtlVectorEmbeddedNetworkVar<CEconItemAttribute>
                 pub const m_pManager: usize = 0x58; // CAttributeManager*
             }
             // Parent: C_MultiplayRules
@@ -4029,7 +4029,7 @@ pub mod cs2_dumper {
                 pub const m_soundscapeIndex: usize = 0x5A4; // int32
                 pub const m_soundscapeEntityListId: usize = 0x5A8; // int32
                 pub const m_positionNames: usize = 0x5B0; // CUtlSymbolLarge[8]
-                pub const m_hProxySoundscape: usize = 0x5F0; // CHandle<CEnvSoundscape>
+                pub const m_hProxySoundscape: usize = 0x5F0; // 
                 pub const m_bDisabled: usize = 0x5F4; // bool
                 pub const m_soundscapeName: usize = 0x5F8; // CUtlSymbolLarge
                 pub const m_soundEventHash: usize = 0x600; // uint32
@@ -4311,7 +4311,7 @@ pub mod cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_weaponPurchases (WeaponPurchaseCount_t)
             pub mod WeaponPurchaseTracker_t {
-                pub const m_weaponPurchases: usize = 0x8; // C_UtlVectorEmbeddedNetworkVar<WeaponPurchaseCount_t>
+                pub const m_weaponPurchases: usize = 0x8; // 
             }
             // Parent: None
             // Field count: 5
@@ -5058,7 +5058,7 @@ pub mod cs2_dumper {
             // Metadata:
             // NetworkVarNames: m_vecSellbackPurchaseEntries (SellbackPurchaseEntry_t)
             pub mod CCSPlayer_BuyServices {
-                pub const m_vecSellbackPurchaseEntries: usize = 0x40; // 
+                pub const m_vecSellbackPurchaseEntries: usize = 0x40; // C_UtlVectorEmbeddedNetworkVar<SellbackPurchaseEntry_t>
             }
             // Parent: None
             // Field count: 0
@@ -5169,7 +5169,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_vCapsuleCenter2 (Vector)
             // NetworkVarNames: m_flCapsuleRadius (float)
             pub mod CCollisionProperty {
-                pub const m_collisionAttribute: usize = 0x10; // VPhysicsCollisionAttribute_t
+                pub const m_collisionAttribute: usize = 0x10; // 
                 pub const m_vecMins: usize = 0x40; // Vector
                 pub const m_vecMaxs: usize = 0x4C; // Vector
                 pub const m_usSolidFlags: usize = 0x5A; // uint8
@@ -5258,7 +5258,7 @@ pub mod cs2_dumper {
             // MNetworkExcludeByName
             // NetworkVarNames: m_ShardDesc (shard_model_desc_t)
             pub mod C_ShatterGlassShardPhysics {
-                pub const m_ShardDesc: usize = 0x1120; // 
+                pub const m_ShardDesc: usize = 0x1120; // shard_model_desc_t
             }
             // Parent: C_CSWeaponBaseGun
             // Field count: 0
@@ -6370,7 +6370,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_closedAngles (QAngle)
             // NetworkVarNames: m_hMaster (CHandle<C_BasePropDoor>)
             pub mod C_BasePropDoor {
-                pub const m_eDoorState: usize = 0x1238; // DoorState_t
+                pub const m_eDoorState: usize = 0x1238; // 
                 pub const m_modelChanged: usize = 0x123C; // bool
                 pub const m_bLocked: usize = 0x123D; // bool
                 pub const m_closedPosition: usize = 0x1240; // Vector
@@ -6887,7 +6887,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: qAngle (QAngle)
             // NetworkVarNames: nIndex (uint32)
             pub mod ViewAngleServerChange_t {
-                pub const nType: usize = 0x30; // FixAngleSet_t
+                pub const nType: usize = 0x30; // 
                 pub const qAngle: usize = 0x34; // QAngle
                 pub const nIndex: usize = 0x40; // uint32
             }

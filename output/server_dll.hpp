@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 #pragma once
 
@@ -2045,7 +2045,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecCsViewPunchAngle = 0x40; // QAngle
                 constexpr std::ptrdiff_t m_nCsViewPunchAngleTick = 0x4C; // GameTick_t
                 constexpr std::ptrdiff_t m_flCsViewPunchAngleTickRatio = 0x50; // float32
-                constexpr std::ptrdiff_t m_PlayerFog = 0x58; // 
+                constexpr std::ptrdiff_t m_PlayerFog = 0x58; // fogplayerparams_t
                 constexpr std::ptrdiff_t m_hColorCorrectionCtrl = 0x98; // CHandle<CColorCorrection>
                 constexpr std::ptrdiff_t m_hViewEntity = 0x9C; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_hTonemapController = 0xA0; // CHandle<CTonemapController2>
@@ -3213,7 +3213,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hDoorList = 0xC70; // CUtlVector<CHandle<CBasePropDoor>>
                 constexpr std::ptrdiff_t m_nHardwareType = 0xC88; // int32
                 constexpr std::ptrdiff_t m_bNeedsHardware = 0xC8C; // bool
-                constexpr std::ptrdiff_t m_eDoorState = 0xC90; // DoorState_t
+                constexpr std::ptrdiff_t m_eDoorState = 0xC90; // 
                 constexpr std::ptrdiff_t m_bLocked = 0xC94; // bool
                 constexpr std::ptrdiff_t m_closedPosition = 0xC98; // Vector
                 constexpr std::ptrdiff_t m_closedAngles = 0xCA4; // QAngle
@@ -3678,7 +3678,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hSplitOwner = 0x52C; // CHandle<CBasePlayerController>
                 constexpr std::ptrdiff_t m_hSplitScreenPlayers = 0x530; // CUtlVector<CHandle<CBasePlayerController>>
                 constexpr std::ptrdiff_t m_bIsHLTV = 0x548; // bool
-                constexpr std::ptrdiff_t m_iConnected = 0x54C; // 
+                constexpr std::ptrdiff_t m_iConnected = 0x54C; // PlayerConnectedState
                 constexpr std::ptrdiff_t m_iszPlayerName = 0x550; // char[128]
                 constexpr std::ptrdiff_t m_szNetworkIDString = 0x5D0; // CUtlString
                 constexpr std::ptrdiff_t m_fLerpTime = 0x5D8; // float32
@@ -4592,7 +4592,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bPreventUpdateYawOnFinish = 0x58A; // bool
                 constexpr std::ptrdiff_t m_bEnsureOnNavmeshOnFinish = 0x58B; // bool
                 constexpr std::ptrdiff_t m_onDeathBehavior = 0x58C; // ScriptedOnDeath_t
-                constexpr std::ptrdiff_t m_ConflictResponse = 0x590; // ScriptedConflictResponse_t
+                constexpr std::ptrdiff_t m_ConflictResponse = 0x590; // 
                 constexpr std::ptrdiff_t m_OnBeginSequence = 0x598; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnActionStartOrLoop = 0x5C0; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnEndSequence = 0x5E8; // CEntityIOOutput
@@ -6725,7 +6725,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDecalHealBloodRate = 0x73C; // float32
                 constexpr std::ptrdiff_t m_flDecalHealHeightRate = 0x740; // float32
                 constexpr std::ptrdiff_t m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x748; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-                constexpr std::ptrdiff_t m_vecViewOffset = 0x760; // 
+                constexpr std::ptrdiff_t m_vecViewOffset = 0x760; // CNetworkViewOffsetVector
             }
             // Parent: CBaseAnimGraph
             // Field count: 12
@@ -7567,14 +7567,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iNumCT = 0xD7C; // int32
                 constexpr std::ptrdiff_t m_iNumSpawnableTerrorist = 0xD80; // int32
                 constexpr std::ptrdiff_t m_iNumSpawnableCT = 0xD84; // int32
-                constexpr std::ptrdiff_t m_arrSelectedHostageSpawnIndices = 0xD88; // 
+                constexpr std::ptrdiff_t m_arrSelectedHostageSpawnIndices = 0xD88; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_nSpawnPointsRandomSeed = 0xDA0; // int32
                 constexpr std::ptrdiff_t m_bFirstConnected = 0xDA4; // bool
                 constexpr std::ptrdiff_t m_bCompleteReset = 0xDA5; // bool
                 constexpr std::ptrdiff_t m_bPickNewTeamsOnReset = 0xDA6; // bool
                 constexpr std::ptrdiff_t m_bScrambleTeamsOnRestart = 0xDA7; // bool
                 constexpr std::ptrdiff_t m_bSwapTeamsOnRestart = 0xDA8; // bool
-                constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDB0; // 
+                constexpr std::ptrdiff_t m_nEndMatchTiedVotes = 0xDB0; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_bNeedToAskPlayersForContinueVote = 0xDCC; // bool
                 constexpr std::ptrdiff_t m_numQueuedMatchmakingAccounts = 0xDD0; // uint32
                 constexpr std::ptrdiff_t m_fAvgPlayerRank = 0xDD4; // float32
@@ -8455,7 +8455,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iDamageCount = 0xAA0; // int32
                 constexpr std::ptrdiff_t m_pVecRelationships = 0xAA8; // CUtlVector<RelationshipOverride_t>*
                 constexpr std::ptrdiff_t m_strRelationships = 0xAB0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_eHull = 0xAB8; // 
+                constexpr std::ptrdiff_t m_eHull = 0xAB8; // Hull_t
                 constexpr std::ptrdiff_t m_nNavHullIdx = 0xABC; // uint32
             }
             // Parent: CBaseModelEntity
@@ -11148,7 +11148,7 @@ namespace cs2_dumper {
             // NetworkVarNames: qAngle (QAngle)
             // NetworkVarNames: nIndex (uint32)
             namespace ViewAngleServerChange_t {
-                constexpr std::ptrdiff_t nType = 0x30; // FixAngleSet_t
+                constexpr std::ptrdiff_t nType = 0x30; // 
                 constexpr std::ptrdiff_t qAngle = 0x34; // QAngle
                 constexpr std::ptrdiff_t nIndex = 0x40; // uint32
             }

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-25 11:40:13.476421 UTC
+// 2025-01-30 15:41:34.124155800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2147,7 +2147,7 @@ pub mod cs2_dumper {
                 pub const m_vecCsViewPunchAngle: usize = 0x40; // QAngle
                 pub const m_nCsViewPunchAngleTick: usize = 0x4C; // GameTick_t
                 pub const m_flCsViewPunchAngleTickRatio: usize = 0x50; // float32
-                pub const m_PlayerFog: usize = 0x58; // 
+                pub const m_PlayerFog: usize = 0x58; // fogplayerparams_t
                 pub const m_hColorCorrectionCtrl: usize = 0x98; // CHandle<CColorCorrection>
                 pub const m_hViewEntity: usize = 0x9C; // CHandle<CBaseEntity>
                 pub const m_hTonemapController: usize = 0xA0; // CHandle<CTonemapController2>
@@ -3315,7 +3315,7 @@ pub mod cs2_dumper {
                 pub const m_hDoorList: usize = 0xC70; // CUtlVector<CHandle<CBasePropDoor>>
                 pub const m_nHardwareType: usize = 0xC88; // int32
                 pub const m_bNeedsHardware: usize = 0xC8C; // bool
-                pub const m_eDoorState: usize = 0xC90; // DoorState_t
+                pub const m_eDoorState: usize = 0xC90; // 
                 pub const m_bLocked: usize = 0xC94; // bool
                 pub const m_closedPosition: usize = 0xC98; // Vector
                 pub const m_closedAngles: usize = 0xCA4; // QAngle
@@ -3780,7 +3780,7 @@ pub mod cs2_dumper {
                 pub const m_hSplitOwner: usize = 0x52C; // CHandle<CBasePlayerController>
                 pub const m_hSplitScreenPlayers: usize = 0x530; // CUtlVector<CHandle<CBasePlayerController>>
                 pub const m_bIsHLTV: usize = 0x548; // bool
-                pub const m_iConnected: usize = 0x54C; // 
+                pub const m_iConnected: usize = 0x54C; // PlayerConnectedState
                 pub const m_iszPlayerName: usize = 0x550; // char[128]
                 pub const m_szNetworkIDString: usize = 0x5D0; // CUtlString
                 pub const m_fLerpTime: usize = 0x5D8; // float32
@@ -4694,7 +4694,7 @@ pub mod cs2_dumper {
                 pub const m_bPreventUpdateYawOnFinish: usize = 0x58A; // bool
                 pub const m_bEnsureOnNavmeshOnFinish: usize = 0x58B; // bool
                 pub const m_onDeathBehavior: usize = 0x58C; // ScriptedOnDeath_t
-                pub const m_ConflictResponse: usize = 0x590; // ScriptedConflictResponse_t
+                pub const m_ConflictResponse: usize = 0x590; // 
                 pub const m_OnBeginSequence: usize = 0x598; // CEntityIOOutput
                 pub const m_OnActionStartOrLoop: usize = 0x5C0; // CEntityIOOutput
                 pub const m_OnEndSequence: usize = 0x5E8; // CEntityIOOutput
@@ -6827,7 +6827,7 @@ pub mod cs2_dumper {
                 pub const m_flDecalHealBloodRate: usize = 0x73C; // float32
                 pub const m_flDecalHealHeightRate: usize = 0x740; // float32
                 pub const m_ConfigEntitiesToPropagateMaterialDecalsTo: usize = 0x748; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-                pub const m_vecViewOffset: usize = 0x760; // 
+                pub const m_vecViewOffset: usize = 0x760; // CNetworkViewOffsetVector
             }
             // Parent: CBaseAnimGraph
             // Field count: 12
@@ -7669,14 +7669,14 @@ pub mod cs2_dumper {
                 pub const m_iNumCT: usize = 0xD7C; // int32
                 pub const m_iNumSpawnableTerrorist: usize = 0xD80; // int32
                 pub const m_iNumSpawnableCT: usize = 0xD84; // int32
-                pub const m_arrSelectedHostageSpawnIndices: usize = 0xD88; // 
+                pub const m_arrSelectedHostageSpawnIndices: usize = 0xD88; // CUtlVector<int32>
                 pub const m_nSpawnPointsRandomSeed: usize = 0xDA0; // int32
                 pub const m_bFirstConnected: usize = 0xDA4; // bool
                 pub const m_bCompleteReset: usize = 0xDA5; // bool
                 pub const m_bPickNewTeamsOnReset: usize = 0xDA6; // bool
                 pub const m_bScrambleTeamsOnRestart: usize = 0xDA7; // bool
                 pub const m_bSwapTeamsOnRestart: usize = 0xDA8; // bool
-                pub const m_nEndMatchTiedVotes: usize = 0xDB0; // 
+                pub const m_nEndMatchTiedVotes: usize = 0xDB0; // CUtlVector<int32>
                 pub const m_bNeedToAskPlayersForContinueVote: usize = 0xDCC; // bool
                 pub const m_numQueuedMatchmakingAccounts: usize = 0xDD0; // uint32
                 pub const m_fAvgPlayerRank: usize = 0xDD4; // float32
@@ -8557,7 +8557,7 @@ pub mod cs2_dumper {
                 pub const m_iDamageCount: usize = 0xAA0; // int32
                 pub const m_pVecRelationships: usize = 0xAA8; // CUtlVector<RelationshipOverride_t>*
                 pub const m_strRelationships: usize = 0xAB0; // CUtlSymbolLarge
-                pub const m_eHull: usize = 0xAB8; // 
+                pub const m_eHull: usize = 0xAB8; // Hull_t
                 pub const m_nNavHullIdx: usize = 0xABC; // uint32
             }
             // Parent: CBaseModelEntity
@@ -11250,7 +11250,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: qAngle (QAngle)
             // NetworkVarNames: nIndex (uint32)
             pub mod ViewAngleServerChange_t {
-                pub const nType: usize = 0x30; // FixAngleSet_t
+                pub const nType: usize = 0x30; // 
                 pub const qAngle: usize = 0x34; // QAngle
                 pub const nIndex: usize = 0x40; // uint32
             }
