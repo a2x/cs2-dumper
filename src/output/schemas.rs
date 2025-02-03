@@ -41,13 +41,12 @@ impl CodeWriter for SchemaMap {
                                         .members
                                         .iter()
                                         .map(|member| {
-                                            let hex = format!("{:#X}", member.value);
-                                            let cast = if member.value == -1 {
-                                                format!("unchecked(({})-1)", type_name)
+                                            let hex = if member.value < 0 || member.value > i32::MAX as i64 {
+                                                format!("unchecked(({}){})", type_name, member.value)
                                             } else {
-                                                format!("{}", hex)
+                                                format!("{:#X}", member.value)
                                             };
-                                            format!("{} = {}", member.name, cast)
+                                            format!("{} = {}", member.name, hex)
                                         })
                                         .collect::<Vec<_>>()
                                         .join(",\n");
