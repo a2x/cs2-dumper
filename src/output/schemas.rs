@@ -42,8 +42,8 @@ impl CodeWriter for SchemaMap {
                                         .iter()
                                         .map(|member| {
                                             let hex = format!("{:#X}", member.value);
-                                            let cast = if member.value == -1 {
-                                                format!("unchecked(({})-1)", type_name)
+                                            let cast = if member.value < 0 {
+                                                format!("unchecked(({}){})", type_name, member.value)
                                             } else {
                                                 format!("{}", hex)
                                             };
