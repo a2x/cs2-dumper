@@ -16,7 +16,11 @@ impl CodeWriter for InterfaceMap {
                     false,
                     |fmt| {
                         for (name, value) in ifaces {
-                            writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
+                            if *value > i32::MAX as u64 {
+                                writeln!(fmt, "public static readonly nint {} = unchecked((nint){:#X});", name, value)?;
+                            } else {
+                                writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
+                            };
                         }
 
                         Ok(())
