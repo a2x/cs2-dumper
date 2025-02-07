@@ -130,16 +130,16 @@
     "SchemaSystem_001": 399072
   },
   "server.dll": {
-    "EmptyWorldService001_Server": 20438256,
-    "EntitySubclassUtilsV001": 20112336,
-    "NavGameTest001": 21093704,
-    "ServerToolsInfo_001": 20788904,
-    "Source2GameClients001": 20764016,
-    "Source2GameDirector001": 22025216,
-    "Source2GameEntities001": 20788688,
-    "Source2Server001": 20788288,
-    "Source2ServerConfig001": 22855048,
-    "customnavsystem001": 19999544
+    "EmptyWorldService001_Server": 20438288,
+    "EntitySubclassUtilsV001": 20112368,
+    "NavGameTest001": 21093736,
+    "ServerToolsInfo_001": 20788936,
+    "Source2GameClients001": 20764048,
+    "Source2GameDirector001": 22025248,
+    "Source2GameEntities001": 20788720,
+    "Source2Server001": 20788320,
+    "Source2ServerConfig001": 22855064,
+    "customnavsystem001": 19999576
   },
   "soundsystem.dll": {
     "SoundOpSystem001": 3796032,

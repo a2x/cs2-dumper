@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-04 01:41:17.126927400 UTC
+// 2025-02-07 03:30:27.112539300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -52,7 +52,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 5
         public enum StanceType_t : uint {
-            STANCE_CURRENT = 0xFFFFFFFFFFFFFFFF,
+            STANCE_CURRENT = unchecked((uint)-1),
             STANCE_DEFAULT = 0x0,
             STANCE_CROUCHING = 0x1,
             STANCE_PRONE = 0x2,
@@ -225,7 +225,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 5
         public enum NPCFollowFormation_t : uint {
-            Default = 0xFFFFFFFFFFFFFFFF,
+            Default = unchecked((uint)-1),
             CloseCircle = 0x0,
             WideCircle = 0x1,
             MediumCircle = 0x5,
@@ -264,7 +264,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 9
         public enum BloodType : uint {
-            None = 0xFFFFFFFFFFFFFFFF,
+            None = unchecked((uint)-1),
             ColorRed = 0x0,
             ColorYellow = 0x1,
             ColorGreen = 0x2,
@@ -295,7 +295,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 5
         public enum AnimLoopMode_t : uint {
-            ANIM_LOOP_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            ANIM_LOOP_MODE_INVALID = unchecked((uint)-1),
             ANIM_LOOP_MODE_NOT_LOOPING = 0x0,
             ANIM_LOOP_MODE_LOOPING = 0x1,
             ANIM_LOOP_MODE_USE_SEQUENCE_SETTINGS = 0x2,
@@ -566,8 +566,8 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 74
         public enum loadout_slot_t : uint {
-            LOADOUT_SLOT_PROMOTED = 0xFFFFFFFFFFFFFFFE,
-            LOADOUT_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+            LOADOUT_SLOT_PROMOTED = unchecked((uint)-2),
+            LOADOUT_SLOT_INVALID = unchecked((uint)-1),
             LOADOUT_SLOT_MELEE = 0x0,
             LOADOUT_SLOT_C4 = 0x1,
             LOADOUT_SLOT_FIRST_AUTO_BUY_WEAPON = 0x0,
@@ -736,7 +736,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum WeaponAttackType_t : uint {
-            eInvalid = 0xFFFFFFFFFFFFFFFF,
+            eInvalid = unchecked((uint)-1),
             ePrimary = 0x0,
             eSecondary = 0x1,
             eCount = 0x2
@@ -790,7 +790,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum ScriptedOnDeath_t : uint {
-            SS_ONDEATH_NOT_APPLICABLE = 0xFFFFFFFFFFFFFFFF,
+            SS_ONDEATH_NOT_APPLICABLE = unchecked((uint)-1),
             SS_ONDEATH_UNDEFINED = 0x0,
             SS_ONDEATH_RAGDOLL = 0x1,
             SS_ONDEATH_ANIMATED_DEATH = 0x2
@@ -798,7 +798,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum ChoreoLookAtSpeed_t : uint {
-            eInvalid = 0xFFFFFFFFFFFFFFFF,
+            eInvalid = unchecked((uint)-1),
             eSlow = 0x0,
             eMedium = 0x1,
             eFast = 0x2
@@ -814,7 +814,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 17
         public enum gear_slot_t : uint {
-            GEAR_SLOT_INVALID = 0xFFFFFFFFFFFFFFFF,
+            GEAR_SLOT_INVALID = unchecked((uint)-1),
             GEAR_SLOT_RIFLE = 0x0,
             GEAR_SLOT_PISTOL = 0x1,
             GEAR_SLOT_KNIFE = 0x2,
@@ -873,7 +873,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum AmmoPosition_t : uint {
-            AMMO_POSITION_INVALID = 0xFFFFFFFFFFFFFFFF,
+            AMMO_POSITION_INVALID = unchecked((uint)-1),
             AMMO_POSITION_PRIMARY = 0x0,
             AMMO_POSITION_SECONDARY = 0x1,
             AMMO_POSITION_COUNT = 0x2
@@ -890,7 +890,7 @@ namespace CS2Dumper.Schemas {
             AI_TASK = 0x6,
             AI_EVENT = 0x7,
             END_SIM_HISTORY_TYPES = 0x8,
-            COMBINED = 0xFFFFFFFFFFFFFFFF
+            COMBINED = unchecked((uint)-1)
         }
         // Alignment: 4
         // Member count: 23
@@ -922,7 +922,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 5
         public enum EntityDisolveType_t : uint {
-            ENTITY_DISSOLVE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            ENTITY_DISSOLVE_INVALID = unchecked((uint)-1),
             ENTITY_DISSOLVE_NORMAL = 0x0,
             ENTITY_DISSOLVE_ELECTRICAL = 0x1,
             ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 0x2,
@@ -932,7 +932,7 @@ namespace CS2Dumper.Schemas {
         // Member count: 21
         public enum InputBitMask_t : ulong {
             IN_NONE = 0x0,
-            IN_ALL = 0xFFFFFFFFFFFFFFFF,
+            IN_ALL = unchecked((ulong)-1),
             IN_ATTACK = 0x1,
             IN_JUMP = 0x2,
             IN_DUCK = 0x4,
@@ -947,16 +947,16 @@ namespace CS2Dumper.Schemas {
             IN_RELOAD = 0x2000,
             IN_SPEED = 0x10000,
             IN_JOYAUTOSPRINT = 0x20000,
-            IN_FIRST_MOD_SPECIFIC_BIT = 0x100000000,
-            IN_USEORRELOAD = 0x100000000,
-            IN_SCORE = 0x200000000,
-            IN_ZOOM = 0x400000000,
-            IN_LOOK_AT_WEAPON = 0x800000000
+            IN_FIRST_MOD_SPECIFIC_BIT = unchecked((ulong)4294967296),
+            IN_USEORRELOAD = unchecked((ulong)4294967296),
+            IN_SCORE = unchecked((ulong)8589934592),
+            IN_ZOOM = unchecked((ulong)17179869184),
+            IN_LOOK_AT_WEAPON = unchecked((ulong)34359738368)
         }
         // Alignment: 4
         // Member count: 14
         public enum HitGroup_t : uint {
-            HITGROUP_INVALID = 0xFFFFFFFFFFFFFFFF,
+            HITGROUP_INVALID = unchecked((uint)-1),
             HITGROUP_GENERIC = 0x0,
             HITGROUP_HEAD = 0x1,
             HITGROUP_CHEST = 0x2,
@@ -1023,16 +1023,16 @@ namespace CS2Dumper.Schemas {
             OVERLAY_NPC_KILL_BIT = 0x10000000,
             OVERLAY_WC_CHANGE_ENTITY = 0x20000000,
             OVERLAY_BUDDHA_MODE = 0x40000000,
-            OVERLAY_NPC_STEERING_REGULATIONS = 0x80000000,
-            OVERLAY_NPC_TASK_TEXT_BIT = 0x100000000,
-            OVERLAY_PROP_DEBUG = 0x200000000,
-            OVERLAY_NPC_RELATION_BIT = 0x400000000,
-            OVERLAY_VIEWOFFSET = 0x800000000,
-            OVERLAY_VCOLLIDE_WIREFRAME_BIT = 0x1000000000,
-            OVERLAY_NPC_SCRIPTED_COMMANDS_BIT = 0x2000000000,
-            OVERLAY_ACTORNAME_BIT = 0x4000000000,
-            OVERLAY_NPC_CONDITIONS_TEXT_BIT = 0x8000000000,
-            OVERLAY_NPC_ABILITY_RANGE_DEBUG_BIT = 0x10000000000
+            OVERLAY_NPC_STEERING_REGULATIONS = unchecked((ulong)2147483648),
+            OVERLAY_NPC_TASK_TEXT_BIT = unchecked((ulong)4294967296),
+            OVERLAY_PROP_DEBUG = unchecked((ulong)8589934592),
+            OVERLAY_NPC_RELATION_BIT = unchecked((ulong)17179869184),
+            OVERLAY_VIEWOFFSET = unchecked((ulong)34359738368),
+            OVERLAY_VCOLLIDE_WIREFRAME_BIT = unchecked((ulong)68719476736),
+            OVERLAY_NPC_SCRIPTED_COMMANDS_BIT = unchecked((ulong)137438953472),
+            OVERLAY_ACTORNAME_BIT = unchecked((ulong)274877906944),
+            OVERLAY_NPC_CONDITIONS_TEXT_BIT = unchecked((ulong)549755813888),
+            OVERLAY_NPC_ABILITY_RANGE_DEBUG_BIT = unchecked((ulong)1099511627776)
         }
         // Alignment: 4
         // Member count: 3
@@ -1072,7 +1072,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum EntitySubclassScope_t : uint {
-            SUBCLASS_SCOPE_NONE = 0xFFFFFFFFFFFFFFFF,
+            SUBCLASS_SCOPE_NONE = unchecked((uint)-1),
             SUBCLASS_SCOPE_PRECIPITATION = 0x0,
             SUBCLASS_SCOPE_PLAYER_WEAPONS = 0x1,
             SUBCLASS_SCOPE_COUNT = 0x2
@@ -1208,7 +1208,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 27
         public enum RumbleEffect_t : uint {
-            RUMBLE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            RUMBLE_INVALID = unchecked((uint)-1),
             RUMBLE_STOP_ALL = 0x0,
             RUMBLE_PISTOL = 0x1,
             RUMBLE_357 = 0x2,
@@ -1258,7 +1258,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum ChoreoLookAtMode_t : uint {
-            eInvalid = 0xFFFFFFFFFFFFFFFF,
+            eInvalid = unchecked((uint)-1),
             eChest = 0x0,
             eHead = 0x1,
             eEyesOnly = 0x2
@@ -1273,7 +1273,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 7
         public enum PlayerConnectedState : uint {
-            PlayerNeverConnected = 0xFFFFFFFFFFFFFFFF,
+            PlayerNeverConnected = unchecked((uint)-1),
             PlayerConnected = 0x0,
             PlayerConnecting = 0x1,
             PlayerReconnecting = 0x2,
@@ -1467,7 +1467,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum ScriptedHeldWeaponBehavior_t : uint {
-            eInvalid = 0xFFFFFFFFFFFFFFFF,
+            eInvalid = unchecked((uint)-1),
             eHolster = 0x0,
             eDeploy = 0x1,
             eDrop = 0x2
