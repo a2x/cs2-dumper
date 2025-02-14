@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-07 03:30:27.112539300 UTC
+// 2025-02-14 02:06:52.740149800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,14 +12,14 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x1881D20;
+            pub const ClientToolsInfo_001: usize = 0x1881D10;
             pub const EmptyWorldService001_Client: usize = 0x183D030;
-            pub const GameClientExports001: usize = 0x187E9D8;
-            pub const LegacyGameUI001: usize = 0x189F580;
-            pub const Source2Client002: usize = 0x1A9AE30;
-            pub const Source2ClientConfig001: usize = 0x1A315C0;
-            pub const Source2ClientPrediction001: usize = 0x1889DB0;
-            pub const Source2ClientUI001: usize = 0x189D950;
+            pub const GameClientExports001: usize = 0x187E9C8;
+            pub const LegacyGameUI001: usize = 0x189F570;
+            pub const Source2Client002: usize = 0x1A9AE20;
+            pub const Source2ClientConfig001: usize = 0x1A315B0;
+            pub const Source2ClientPrediction001: usize = 0x1889DA0;
+            pub const Source2ClientUI001: usize = 0x189D940;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -160,8 +160,8 @@ pub mod cs2_dumper {
         }
         // Module: server.dll
         pub mod server_dll {
-            pub const EmptyWorldService001_Server: usize = 0x137DD10;
-            pub const EntitySubclassUtilsV001: usize = 0x132E3F0;
+            pub const EmptyWorldService001_Server: usize = 0x137DD20;
+            pub const EntitySubclassUtilsV001: usize = 0x132E400;
             pub const NavGameTest001: usize = 0x141DD68;
             pub const ServerToolsInfo_001: usize = 0x13D36C8;
             pub const Source2GameClients001: usize = 0x13CD590;
