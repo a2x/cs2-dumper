@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-14 02:06:52.740149800 UTC
+// 2025-02-22 11:14:11.118449200 UTC
 
 #pragma once
 
@@ -47,7 +47,7 @@ namespace cs2_dumper {
         }
         // Module: matchmaking.dll
         namespace matchmaking_dll {
-            constexpr std::ptrdiff_t dwGameTypes = 0x1A41B0;
+            constexpr std::ptrdiff_t dwGameTypes = 0x1A3190;
             constexpr std::ptrdiff_t dwGameTypes_mapName = 0x120;
         }
         // Module: soundsystem.dll
