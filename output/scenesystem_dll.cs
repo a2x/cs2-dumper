@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-22 11:14:11.118449200 UTC
+// 2025-02-28 00:46:50.110041 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
