@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -228,8 +228,8 @@ pub mod cs2_dumper {
             // MPulseCellMethodBindings
             // MPulseCellOutflowHookInfo
             pub mod CPulseCell_Test_MultiOutflow_WithParams {
-                pub const m_Out1: usize = 0x48; // SignatureOutflow_Continue
-                pub const m_Out2: usize = 0x78; // SignatureOutflow_Continue
+                pub const m_Out1: usize = 0x48; // 
+                pub const m_Out2: usize = 0x78; // 
             }
             // Parent: None
             // Field count: 1
@@ -920,11 +920,11 @@ pub mod cs2_dumper {
             // MPulseCellMethodBindings
             // MPulseCellOutflowHookInfo
             pub mod CPulseCell_Test_MultiOutflow_WithParams_Yielding {
-                pub const m_Out1: usize = 0x48; // SignatureOutflow_Continue
-                pub const m_AsyncChild1: usize = 0x78; // SignatureOutflow_Continue
-                pub const m_AsyncChild2: usize = 0xA8; // SignatureOutflow_Continue
-                pub const m_YieldResume1: usize = 0xD8; // SignatureOutflow_Resume
-                pub const m_YieldResume2: usize = 0x108; // SignatureOutflow_Resume
+                pub const m_Out1: usize = 0x48; // 
+                pub const m_AsyncChild1: usize = 0x78; // 
+                pub const m_AsyncChild2: usize = 0xA8; // 
+                pub const m_YieldResume1: usize = 0xD8; // 
+                pub const m_YieldResume2: usize = 0x108; // 
             }
             // Parent: CPulseGraphInstance_TestDomain
             // Field count: 1

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 #pragma once
 
@@ -221,8 +221,8 @@ namespace cs2_dumper {
             // MPulseCellMethodBindings
             // MPulseCellOutflowHookInfo
             namespace CPulseCell_Test_MultiOutflow_WithParams {
-                constexpr std::ptrdiff_t m_Out1 = 0x48; // SignatureOutflow_Continue
-                constexpr std::ptrdiff_t m_Out2 = 0x78; // SignatureOutflow_Continue
+                constexpr std::ptrdiff_t m_Out1 = 0x48; // 
+                constexpr std::ptrdiff_t m_Out2 = 0x78; // 
             }
             // Parent: None
             // Field count: 1
@@ -913,11 +913,11 @@ namespace cs2_dumper {
             // MPulseCellMethodBindings
             // MPulseCellOutflowHookInfo
             namespace CPulseCell_Test_MultiOutflow_WithParams_Yielding {
-                constexpr std::ptrdiff_t m_Out1 = 0x48; // SignatureOutflow_Continue
-                constexpr std::ptrdiff_t m_AsyncChild1 = 0x78; // SignatureOutflow_Continue
-                constexpr std::ptrdiff_t m_AsyncChild2 = 0xA8; // SignatureOutflow_Continue
-                constexpr std::ptrdiff_t m_YieldResume1 = 0xD8; // SignatureOutflow_Resume
-                constexpr std::ptrdiff_t m_YieldResume2 = 0x108; // SignatureOutflow_Resume
+                constexpr std::ptrdiff_t m_Out1 = 0x48; // 
+                constexpr std::ptrdiff_t m_AsyncChild1 = 0x78; // 
+                constexpr std::ptrdiff_t m_AsyncChild2 = 0xA8; // 
+                constexpr std::ptrdiff_t m_YieldResume1 = 0xD8; // 
+                constexpr std::ptrdiff_t m_YieldResume2 = 0x108; // 
             }
             // Parent: CPulseGraphInstance_TestDomain
             // Field count: 1

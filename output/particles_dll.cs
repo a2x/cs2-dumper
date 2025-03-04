@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -3883,7 +3883,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class C_OP_LockToPointList {
             public const nint m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-            public const nint m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
+            public const nint m_pointList = 0x1C8; // 
             public const nint m_bPlaceAlongPath = 0x1E0; // bool
             public const nint m_bClosedLoop = 0x1E1; // bool
             public const nint m_nNumPointsAlongPath = 0x1E4; // int32
@@ -5823,7 +5823,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class C_INIT_PointList {
             public const nint m_nFieldOutput = 0x1C8; // ParticleAttributeIndex_t
-            public const nint m_pointList = 0x1D0; // CUtlVector<PointDefinition_t>
+            public const nint m_pointList = 0x1D0; // 
             public const nint m_bPlaceAlongPath = 0x1E8; // bool
             public const nint m_bClosedLoop = 0x1E9; // bool
             public const nint m_nNumPointsAlongPath = 0x1EC; // int32

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: pulse_system.dll
@@ -216,8 +216,8 @@ namespace CS2Dumper.Schemas {
         // MPulseCellMethodBindings
         // MPulseCellOutflowHookInfo
         public static class CPulseCell_Test_MultiOutflow_WithParams {
-            public const nint m_Out1 = 0x48; // SignatureOutflow_Continue
-            public const nint m_Out2 = 0x78; // SignatureOutflow_Continue
+            public const nint m_Out1 = 0x48; // 
+            public const nint m_Out2 = 0x78; // 
         }
         // Parent: None
         // Field count: 1
@@ -908,11 +908,11 @@ namespace CS2Dumper.Schemas {
         // MPulseCellMethodBindings
         // MPulseCellOutflowHookInfo
         public static class CPulseCell_Test_MultiOutflow_WithParams_Yielding {
-            public const nint m_Out1 = 0x48; // SignatureOutflow_Continue
-            public const nint m_AsyncChild1 = 0x78; // SignatureOutflow_Continue
-            public const nint m_AsyncChild2 = 0xA8; // SignatureOutflow_Continue
-            public const nint m_YieldResume1 = 0xD8; // SignatureOutflow_Resume
-            public const nint m_YieldResume2 = 0x108; // SignatureOutflow_Resume
+            public const nint m_Out1 = 0x48; // 
+            public const nint m_AsyncChild1 = 0x78; // 
+            public const nint m_AsyncChild2 = 0xA8; // 
+            public const nint m_YieldResume1 = 0xD8; // 
+            public const nint m_YieldResume2 = 0x108; // 
         }
         // Parent: CPulseGraphInstance_TestDomain
         // Field count: 1
