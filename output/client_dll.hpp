@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 #pragma once
 
@@ -1024,10 +1024,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hInfernoOutlinePointsSnapshot = 0xD80; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
                 constexpr std::ptrdiff_t m_hInfernoClimbingOutlinePointsSnapshot = 0xD88; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
                 constexpr std::ptrdiff_t m_hInfernoDecalsSnapshot = 0xD90; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
-                constexpr std::ptrdiff_t m_firePositions = 0xD98; // Vector[64]
-                constexpr std::ptrdiff_t m_fireParentPositions = 0x1098; // Vector[64]
+                constexpr std::ptrdiff_t m_firePositions = 0xD98; // 
+                constexpr std::ptrdiff_t m_fireParentPositions = 0x1098; // 
                 constexpr std::ptrdiff_t m_bFireIsBurning = 0x1398; // bool[64]
-                constexpr std::ptrdiff_t m_BurnNormal = 0x13D8; // Vector[64]
+                constexpr std::ptrdiff_t m_BurnNormal = 0x13D8; // 
                 constexpr std::ptrdiff_t m_fireCount = 0x16D8; // int32
                 constexpr std::ptrdiff_t m_nInfernoType = 0x16DC; // int32
                 constexpr std::ptrdiff_t m_nFireLifetime = 0x16E0; // float32
@@ -1209,7 +1209,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pBuyServices = 0x1528; // CCSPlayer_BuyServices*
                 constexpr std::ptrdiff_t m_pGlowServices = 0x1530; // CCSPlayer_GlowServices*
                 constexpr std::ptrdiff_t m_pActionTrackingServices = 0x1538; // CCSPlayer_ActionTrackingServices*
-                constexpr std::ptrdiff_t m_pDamageReactServices = 0x1540; // CCSPlayer_DamageReactServices*
+                constexpr std::ptrdiff_t m_pDamageReactServices = 0x1540; // 
                 constexpr std::ptrdiff_t m_flHealthShotBoostExpirationTime = 0x1548; // GameTime_t
                 constexpr std::ptrdiff_t m_flLastFiredWeaponTime = 0x154C; // GameTime_t
                 constexpr std::ptrdiff_t m_bHasFemaleVoice = 0x1550; // bool
@@ -1228,7 +1228,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_aimPunchAngleVel = 0x1590; // QAngle
                 constexpr std::ptrdiff_t m_aimPunchTickBase = 0x159C; // int32
                 constexpr std::ptrdiff_t m_aimPunchTickFraction = 0x15A0; // float32
-                constexpr std::ptrdiff_t m_aimPunchCache = 0x15A8; // CUtlVector<QAngle>
+                constexpr std::ptrdiff_t m_aimPunchCache = 0x15A8; // 
                 constexpr std::ptrdiff_t m_bInLanding = 0x15C8; // bool
                 constexpr std::ptrdiff_t m_flLandingStartTime = 0x15CC; // float32
                 constexpr std::ptrdiff_t m_bInHostageRescueZone = 0x15D0; // bool
@@ -2503,7 +2503,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bStartActive = 0x570; // bool
                 constexpr std::ptrdiff_t m_flMaxSimulationTime = 0x574; // float32
                 constexpr std::ptrdiff_t m_iszEffectName = 0x578; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_PathNodes_Name = 0x580; // CUtlVector<CUtlSymbolLarge>
+                constexpr std::ptrdiff_t m_PathNodes_Name = 0x580; // 
                 constexpr std::ptrdiff_t m_flParticleSpacing = 0x598; // float32
                 constexpr std::ptrdiff_t m_flSlack = 0x59C; // float32
                 constexpr std::ptrdiff_t m_flRadius = 0x5A0; // float32
@@ -2783,7 +2783,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_PredNetFloatVariables = 0x98; // C_NetworkUtlVectorBase<float32>
                 constexpr std::ptrdiff_t m_PredNetVectorVariables = 0xB0; // C_NetworkUtlVectorBase<Vector>
                 constexpr std::ptrdiff_t m_PredNetQuaternionVariables = 0xC8; // C_NetworkUtlVectorBase<Quaternion>
-                constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // C_NetworkUtlVectorBase<CGlobalSymbol>
+                constexpr std::ptrdiff_t m_PredNetGlobalSymbolVariables = 0xE0; // 
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetBoolVariables = 0xF8; // C_NetworkUtlVectorBase<uint32>
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetByteVariables = 0x110; // C_NetworkUtlVectorBase<uint8>
                 constexpr std::ptrdiff_t m_OwnerOnlyPredNetUInt16Variables = 0x128; // C_NetworkUtlVectorBase<uint16>

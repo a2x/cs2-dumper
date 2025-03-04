@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -1019,10 +1019,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_hInfernoOutlinePointsSnapshot = 0xD80; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
             public const nint m_hInfernoClimbingOutlinePointsSnapshot = 0xD88; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
             public const nint m_hInfernoDecalsSnapshot = 0xD90; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
-            public const nint m_firePositions = 0xD98; // Vector[64]
-            public const nint m_fireParentPositions = 0x1098; // Vector[64]
+            public const nint m_firePositions = 0xD98; // 
+            public const nint m_fireParentPositions = 0x1098; // 
             public const nint m_bFireIsBurning = 0x1398; // bool[64]
-            public const nint m_BurnNormal = 0x13D8; // Vector[64]
+            public const nint m_BurnNormal = 0x13D8; // 
             public const nint m_fireCount = 0x16D8; // int32
             public const nint m_nInfernoType = 0x16DC; // int32
             public const nint m_nFireLifetime = 0x16E0; // float32
@@ -1204,7 +1204,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_pBuyServices = 0x1528; // CCSPlayer_BuyServices*
             public const nint m_pGlowServices = 0x1530; // CCSPlayer_GlowServices*
             public const nint m_pActionTrackingServices = 0x1538; // CCSPlayer_ActionTrackingServices*
-            public const nint m_pDamageReactServices = 0x1540; // CCSPlayer_DamageReactServices*
+            public const nint m_pDamageReactServices = 0x1540; // 
             public const nint m_flHealthShotBoostExpirationTime = 0x1548; // GameTime_t
             public const nint m_flLastFiredWeaponTime = 0x154C; // GameTime_t
             public const nint m_bHasFemaleVoice = 0x1550; // bool
@@ -1223,7 +1223,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_aimPunchAngleVel = 0x1590; // QAngle
             public const nint m_aimPunchTickBase = 0x159C; // int32
             public const nint m_aimPunchTickFraction = 0x15A0; // float32
-            public const nint m_aimPunchCache = 0x15A8; // CUtlVector<QAngle>
+            public const nint m_aimPunchCache = 0x15A8; // 
             public const nint m_bInLanding = 0x15C8; // bool
             public const nint m_flLandingStartTime = 0x15CC; // float32
             public const nint m_bInHostageRescueZone = 0x15D0; // bool
@@ -2498,7 +2498,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bStartActive = 0x570; // bool
             public const nint m_flMaxSimulationTime = 0x574; // float32
             public const nint m_iszEffectName = 0x578; // CUtlSymbolLarge
-            public const nint m_PathNodes_Name = 0x580; // CUtlVector<CUtlSymbolLarge>
+            public const nint m_PathNodes_Name = 0x580; // 
             public const nint m_flParticleSpacing = 0x598; // float32
             public const nint m_flSlack = 0x59C; // float32
             public const nint m_flRadius = 0x5A0; // float32
@@ -2778,7 +2778,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_PredNetFloatVariables = 0x98; // C_NetworkUtlVectorBase<float32>
             public const nint m_PredNetVectorVariables = 0xB0; // C_NetworkUtlVectorBase<Vector>
             public const nint m_PredNetQuaternionVariables = 0xC8; // C_NetworkUtlVectorBase<Quaternion>
-            public const nint m_PredNetGlobalSymbolVariables = 0xE0; // C_NetworkUtlVectorBase<CGlobalSymbol>
+            public const nint m_PredNetGlobalSymbolVariables = 0xE0; // 
             public const nint m_OwnerOnlyPredNetBoolVariables = 0xF8; // C_NetworkUtlVectorBase<uint32>
             public const nint m_OwnerOnlyPredNetByteVariables = 0x110; // C_NetworkUtlVectorBase<uint8>
             public const nint m_OwnerOnlyPredNetUInt16Variables = 0x128; // C_NetworkUtlVectorBase<uint16>

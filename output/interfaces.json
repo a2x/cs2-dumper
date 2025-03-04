@@ -4,37 +4,37 @@
     "AnimationSystem_001": 6323504
   },
   "client.dll": {
-    "ClientToolsInfo_001": 25701632,
-    "EmptyWorldService001_Client": 25419808,
-    "GameClientExports001": 25688504,
-    "LegacyGameUI001": 25822560,
-    "Source2Client002": 27901504,
-    "Source2ClientConfig001": 27469296,
-    "Source2ClientPrediction001": 25734544,
-    "Source2ClientUI001": 25815344
+    "ClientToolsInfo_001": 25701648,
+    "EmptyWorldService001_Client": 25419824,
+    "GameClientExports001": 25688520,
+    "LegacyGameUI001": 25822576,
+    "Source2Client002": 27901536,
+    "Source2ClientConfig001": 27469328,
+    "Source2ClientPrediction001": 25734560,
+    "Source2ClientUI001": 25815360
   },
   "engine2.dll": {
     "BenchmarkService001": 5532976,
-    "BugService001": 6159568,
+    "BugService001": 6159584,
     "ClientServerEngineLoopService_001": 5536336,
     "EngineGameUI001": 5524368,
-    "EngineServiceMgr001": 6425440,
-    "GameEventSystemClientV001": 6426240,
-    "GameEventSystemServerV001": 6426560,
+    "EngineServiceMgr001": 6425456,
+    "GameEventSystemClientV001": 6426256,
+    "GameEventSystemServerV001": 6426576,
     "GameResourceServiceClientV001": 5533232,
     "GameResourceServiceServerV001": 5533328,
-    "GameUIService_001": 6160336,
+    "GameUIService_001": 6160352,
     "HostStateMgr001": 5536064,
     "INETSUPPORT_001": 5505120,
-    "InputService_001": 6161120,
+    "InputService_001": 6161136,
     "KeyValueCache001": 5536240,
-    "MapListService_001": 6419168,
-    "NetworkClientService_001": 6419568,
+    "MapListService_001": 6419184,
+    "NetworkClientService_001": 6419584,
     "NetworkP2PService_001": 5534016,
-    "NetworkServerService_001": 6420480,
+    "NetworkServerService_001": 6420496,
     "NetworkService_001": 5534352,
-    "RenderService_001": 6421088,
-    "ScreenshotService001": 6421760,
+    "RenderService_001": 6421104,
+    "ScreenshotService001": 6421776,
     "SimpleEngineLoopService_001": 5536608,
     "SoundService_001": 5534416,
     "Source2EngineToClient001": 5521936,
@@ -42,7 +42,7 @@
     "Source2EngineToServer001": 5522184,
     "Source2EngineToServerStringTable001": 5522224,
     "SplitScreenService_001": 5535152,
-    "StatsService_001": 6422832,
+    "StatsService_001": 6422848,
     "ToolService_001": 5535600,
     "VENGINE_GAMEUIFUNCS_VERSION005": 5524512,
     "VProfService_001": 5535664
@@ -101,7 +101,7 @@
     "PanoramaTextServices001": 2832608
   },
   "panoramauiclient.dll": {
-    "PanoramaUIClient001": 2676800
+    "PanoramaUIClient001": 2680896
   },
   "particles.dll": {
     "ParticleSystemMgr003": 6462576

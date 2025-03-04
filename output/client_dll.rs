@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1029,10 +1029,10 @@ pub mod cs2_dumper {
                 pub const m_hInfernoOutlinePointsSnapshot: usize = 0xD80; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
                 pub const m_hInfernoClimbingOutlinePointsSnapshot: usize = 0xD88; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
                 pub const m_hInfernoDecalsSnapshot: usize = 0xD90; // CStrongHandle<InfoForResourceTypeIParticleSnapshot>
-                pub const m_firePositions: usize = 0xD98; // Vector[64]
-                pub const m_fireParentPositions: usize = 0x1098; // Vector[64]
+                pub const m_firePositions: usize = 0xD98; // 
+                pub const m_fireParentPositions: usize = 0x1098; // 
                 pub const m_bFireIsBurning: usize = 0x1398; // bool[64]
-                pub const m_BurnNormal: usize = 0x13D8; // Vector[64]
+                pub const m_BurnNormal: usize = 0x13D8; // 
                 pub const m_fireCount: usize = 0x16D8; // int32
                 pub const m_nInfernoType: usize = 0x16DC; // int32
                 pub const m_nFireLifetime: usize = 0x16E0; // float32
@@ -1214,7 +1214,7 @@ pub mod cs2_dumper {
                 pub const m_pBuyServices: usize = 0x1528; // CCSPlayer_BuyServices*
                 pub const m_pGlowServices: usize = 0x1530; // CCSPlayer_GlowServices*
                 pub const m_pActionTrackingServices: usize = 0x1538; // CCSPlayer_ActionTrackingServices*
-                pub const m_pDamageReactServices: usize = 0x1540; // CCSPlayer_DamageReactServices*
+                pub const m_pDamageReactServices: usize = 0x1540; // 
                 pub const m_flHealthShotBoostExpirationTime: usize = 0x1548; // GameTime_t
                 pub const m_flLastFiredWeaponTime: usize = 0x154C; // GameTime_t
                 pub const m_bHasFemaleVoice: usize = 0x1550; // bool
@@ -1233,7 +1233,7 @@ pub mod cs2_dumper {
                 pub const m_aimPunchAngleVel: usize = 0x1590; // QAngle
                 pub const m_aimPunchTickBase: usize = 0x159C; // int32
                 pub const m_aimPunchTickFraction: usize = 0x15A0; // float32
-                pub const m_aimPunchCache: usize = 0x15A8; // CUtlVector<QAngle>
+                pub const m_aimPunchCache: usize = 0x15A8; // 
                 pub const m_bInLanding: usize = 0x15C8; // bool
                 pub const m_flLandingStartTime: usize = 0x15CC; // float32
                 pub const m_bInHostageRescueZone: usize = 0x15D0; // bool
@@ -2508,7 +2508,7 @@ pub mod cs2_dumper {
                 pub const m_bStartActive: usize = 0x570; // bool
                 pub const m_flMaxSimulationTime: usize = 0x574; // float32
                 pub const m_iszEffectName: usize = 0x578; // CUtlSymbolLarge
-                pub const m_PathNodes_Name: usize = 0x580; // CUtlVector<CUtlSymbolLarge>
+                pub const m_PathNodes_Name: usize = 0x580; // 
                 pub const m_flParticleSpacing: usize = 0x598; // float32
                 pub const m_flSlack: usize = 0x59C; // float32
                 pub const m_flRadius: usize = 0x5A0; // float32
@@ -2788,7 +2788,7 @@ pub mod cs2_dumper {
                 pub const m_PredNetFloatVariables: usize = 0x98; // C_NetworkUtlVectorBase<float32>
                 pub const m_PredNetVectorVariables: usize = 0xB0; // C_NetworkUtlVectorBase<Vector>
                 pub const m_PredNetQuaternionVariables: usize = 0xC8; // C_NetworkUtlVectorBase<Quaternion>
-                pub const m_PredNetGlobalSymbolVariables: usize = 0xE0; // C_NetworkUtlVectorBase<CGlobalSymbol>
+                pub const m_PredNetGlobalSymbolVariables: usize = 0xE0; // 
                 pub const m_OwnerOnlyPredNetBoolVariables: usize = 0xF8; // C_NetworkUtlVectorBase<uint32>
                 pub const m_OwnerOnlyPredNetByteVariables: usize = 0x110; // C_NetworkUtlVectorBase<uint8>
                 pub const m_OwnerOnlyPredNetUInt16Variables: usize = 0x128; // C_NetworkUtlVectorBase<uint16>

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-02-28 00:46:50.110041 UTC
+// 2025-03-04 01:32:08.247443600 UTC
 
 #pragma once
 
@@ -3888,7 +3888,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_LockToPointList {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
+                constexpr std::ptrdiff_t m_pointList = 0x1C8; // 
                 constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_bClosedLoop = 0x1E1; // bool
                 constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1E4; // int32
@@ -5828,7 +5828,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_INIT_PointList {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C8; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector<PointDefinition_t>
+                constexpr std::ptrdiff_t m_pointList = 0x1D0; // 
                 constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E8; // bool
                 constexpr std::ptrdiff_t m_bClosedLoop = 0x1E9; // bool
                 constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1EC; // int32
