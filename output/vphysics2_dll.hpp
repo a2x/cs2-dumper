@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 #pragma once
 
@@ -157,14 +157,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_JiggleBones = 0x480; // CUtlVector<CFeIndexedJiggleBone>
                 constexpr std::ptrdiff_t m_SourceElems = 0x498; // CUtlVector<uint16>
                 constexpr std::ptrdiff_t m_GoalDampedSpringIntegrators = 0x4B0; // CUtlVector<uint32>
-                constexpr std::ptrdiff_t m_Tris = 0x4C8; // CUtlVector<FeTri_t>
+                constexpr std::ptrdiff_t m_Tris = 0x4C8; // 
                 constexpr std::ptrdiff_t m_nTriCount1 = 0x4E0; // uint16
                 constexpr std::ptrdiff_t m_nTriCount2 = 0x4E2; // uint16
                 constexpr std::ptrdiff_t m_nReservedUint8 = 0x4E4; // uint8
                 constexpr std::ptrdiff_t m_nExtraPressureIterations = 0x4E5; // uint8
                 constexpr std::ptrdiff_t m_nExtraGoalIterations = 0x4E6; // uint8
                 constexpr std::ptrdiff_t m_nExtraIterations = 0x4E7; // uint8
-                constexpr std::ptrdiff_t m_SDFRigids = 0x4E8; // CUtlVector<FeSDFRigid_t>
+                constexpr std::ptrdiff_t m_SDFRigids = 0x4E8; // 
                 constexpr std::ptrdiff_t m_BoxRigids = 0x500; // CUtlVector<FeBoxRigid_t>
                 constexpr std::ptrdiff_t m_DynNodeVertexSet = 0x518; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_VertexSetNames = 0x530; // CUtlVector<uint32>
@@ -244,7 +244,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNode = 0x0; // uint16[2]
                 constexpr std::ptrdiff_t nCollisionMask = 0x4; // uint16
                 constexpr std::ptrdiff_t nDummy = 0x6; // uint16
-                constexpr std::ptrdiff_t flRadius = 0x8; // float32[2]
+                constexpr std::ptrdiff_t flRadius = 0x8; // 
             }
             // Parent: None
             // Field count: 4
@@ -1076,7 +1076,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t strength = 0x0; // float32
                 constexpr std::ptrdiff_t forceLimit = 0x4; // float32
                 constexpr std::ptrdiff_t torqueLimit = 0x8; // float32
-                constexpr std::ptrdiff_t bodyMassScale = 0xC; // float32[2]
+                constexpr std::ptrdiff_t bodyMassScale = 0xC; // 
                 constexpr std::ptrdiff_t isActive = 0x14; // bool
             }
             // Parent: None

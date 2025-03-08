@@ -22,7 +22,7 @@
     "dwBuildNumber": 5508068,
     "dwNetworkGameClient": 5504224,
     "dwNetworkGameClient_clientTickCount": 872,
-    "dwNetworkGameClient_deltaTick": 636,
+    "dwNetworkGameClient_deltaTick": 580,
     "dwNetworkGameClient_isBackgroundMap": 2626631,
     "dwNetworkGameClient_localPlayer": 240,
     "dwNetworkGameClient_maxClients": 568,

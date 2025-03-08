@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -940,7 +940,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFirstSourcePoint = 0x1CC; // int32
             public const nint m_bSetOrientation = 0x1D0; // bool
             public const nint m_nOrientationMode = 0x1D4; // ParticleOrientationSetMode_t
-            public const nint m_nSetParent = 0x1D8; // ParticleParentSetMode_t
+            public const nint m_nSetParent = 0x1D8; // 
         }
         // Parent: CParticleFunctionOperator
         // Field count: 8
@@ -1209,7 +1209,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flCenterXOffset = 0xCC0; // CParticleCollectionRendererFloatInput
             public const nint m_flCenterYOffset = 0xE20; // CParticleCollectionRendererFloatInput
             public const nint m_flBumpStrength = 0xF80; // float32
-            public const nint m_nCropTextureOverride = 0xF84; // ParticleSequenceCropOverride_t
+            public const nint m_nCropTextureOverride = 0xF84; // 
             public const nint m_vecTexturesInput = 0xF88; // CUtlVector<TextureGroup_t>
             public const nint m_flAnimationRate = 0xFA0; // float32
             public const nint m_nAnimationType = 0xFA4; // AnimationType_t
@@ -3421,7 +3421,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bLOS = 0x1F4; // bool
             public const nint m_CollisionGroupName = 0x1F5; // char[128]
             public const nint m_nTraceSet = 0x278; // ParticleTraceSet_t
-            public const nint m_nSetParent = 0x27C; // ParticleParentSetMode_t
+            public const nint m_nSetParent = 0x27C; // 
         }
         // Parent: CParticleFunctionPreEmission
         // Field count: 4
@@ -3883,7 +3883,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class C_OP_LockToPointList {
             public const nint m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-            public const nint m_pointList = 0x1C8; // 
+            public const nint m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
             public const nint m_bPlaceAlongPath = 0x1E0; // bool
             public const nint m_bClosedLoop = 0x1E1; // bool
             public const nint m_nNumPointsAlongPath = 0x1E4; // int32
@@ -5228,7 +5228,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bRenderSpecular = 0x1249; // bool
             public const nint m_lightCookie = 0x1250; // CUtlString
             public const nint m_nPriority = 0x1258; // int32
-            public const nint m_nFogLightingMode = 0x125C; // ParticleLightFogLightingMode_t
+            public const nint m_nFogLightingMode = 0x125C; // 
             public const nint m_flFogContribution = 0x1260; // CParticleCollectionRendererFloatInput
             public const nint m_nCapsuleLightBehavior = 0x13C0; // ParticleLightBehaviorChoiceList_t
             public const nint m_flCapsuleLength = 0x13C4; // float32
@@ -5284,7 +5284,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCP1 = 0x1C8; // int32
             public const nint m_vecCP1Pos = 0x1CC; // Vector
             public const nint m_bUseAvgParticlePos = 0x1D8; // bool
-            public const nint m_nSetParent = 0x1DC; // ParticleParentSetMode_t
+            public const nint m_nSetParent = 0x1DC; // 
         }
         // Parent: CParticleFunctionPreEmission
         // Field count: 7
@@ -5823,7 +5823,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class C_INIT_PointList {
             public const nint m_nFieldOutput = 0x1C8; // ParticleAttributeIndex_t
-            public const nint m_pointList = 0x1D0; // 
+            public const nint m_pointList = 0x1D0; // CUtlVector<PointDefinition_t>
             public const nint m_bPlaceAlongPath = 0x1E8; // bool
             public const nint m_bClosedLoop = 0x1E9; // bool
             public const nint m_nNumPointsAlongPath = 0x1EC; // int32

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1019,7 +1019,7 @@ pub mod cs2_dumper {
                 pub const m_nFirstSourcePoint: usize = 0x1CC; // int32
                 pub const m_bSetOrientation: usize = 0x1D0; // bool
                 pub const m_nOrientationMode: usize = 0x1D4; // ParticleOrientationSetMode_t
-                pub const m_nSetParent: usize = 0x1D8; // ParticleParentSetMode_t
+                pub const m_nSetParent: usize = 0x1D8; // 
             }
             // Parent: CParticleFunctionOperator
             // Field count: 8
@@ -1288,7 +1288,7 @@ pub mod cs2_dumper {
                 pub const m_flCenterXOffset: usize = 0xCC0; // CParticleCollectionRendererFloatInput
                 pub const m_flCenterYOffset: usize = 0xE20; // CParticleCollectionRendererFloatInput
                 pub const m_flBumpStrength: usize = 0xF80; // float32
-                pub const m_nCropTextureOverride: usize = 0xF84; // ParticleSequenceCropOverride_t
+                pub const m_nCropTextureOverride: usize = 0xF84; // 
                 pub const m_vecTexturesInput: usize = 0xF88; // CUtlVector<TextureGroup_t>
                 pub const m_flAnimationRate: usize = 0xFA0; // float32
                 pub const m_nAnimationType: usize = 0xFA4; // AnimationType_t
@@ -3500,7 +3500,7 @@ pub mod cs2_dumper {
                 pub const m_bLOS: usize = 0x1F4; // bool
                 pub const m_CollisionGroupName: usize = 0x1F5; // char[128]
                 pub const m_nTraceSet: usize = 0x278; // ParticleTraceSet_t
-                pub const m_nSetParent: usize = 0x27C; // ParticleParentSetMode_t
+                pub const m_nSetParent: usize = 0x27C; // 
             }
             // Parent: CParticleFunctionPreEmission
             // Field count: 4
@@ -3962,7 +3962,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_LockToPointList {
                 pub const m_nFieldOutput: usize = 0x1C0; // ParticleAttributeIndex_t
-                pub const m_pointList: usize = 0x1C8; // 
+                pub const m_pointList: usize = 0x1C8; // CUtlVector<PointDefinition_t>
                 pub const m_bPlaceAlongPath: usize = 0x1E0; // bool
                 pub const m_bClosedLoop: usize = 0x1E1; // bool
                 pub const m_nNumPointsAlongPath: usize = 0x1E4; // int32
@@ -5307,7 +5307,7 @@ pub mod cs2_dumper {
                 pub const m_bRenderSpecular: usize = 0x1249; // bool
                 pub const m_lightCookie: usize = 0x1250; // CUtlString
                 pub const m_nPriority: usize = 0x1258; // int32
-                pub const m_nFogLightingMode: usize = 0x125C; // ParticleLightFogLightingMode_t
+                pub const m_nFogLightingMode: usize = 0x125C; // 
                 pub const m_flFogContribution: usize = 0x1260; // CParticleCollectionRendererFloatInput
                 pub const m_nCapsuleLightBehavior: usize = 0x13C0; // ParticleLightBehaviorChoiceList_t
                 pub const m_flCapsuleLength: usize = 0x13C4; // float32
@@ -5363,7 +5363,7 @@ pub mod cs2_dumper {
                 pub const m_nCP1: usize = 0x1C8; // int32
                 pub const m_vecCP1Pos: usize = 0x1CC; // Vector
                 pub const m_bUseAvgParticlePos: usize = 0x1D8; // bool
-                pub const m_nSetParent: usize = 0x1DC; // ParticleParentSetMode_t
+                pub const m_nSetParent: usize = 0x1DC; // 
             }
             // Parent: CParticleFunctionPreEmission
             // Field count: 7
@@ -5902,7 +5902,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_INIT_PointList {
                 pub const m_nFieldOutput: usize = 0x1C8; // ParticleAttributeIndex_t
-                pub const m_pointList: usize = 0x1D0; // 
+                pub const m_pointList: usize = 0x1D0; // CUtlVector<PointDefinition_t>
                 pub const m_bPlaceAlongPath: usize = 0x1E8; // bool
                 pub const m_bClosedLoop: usize = 0x1E9; // bool
                 pub const m_nNumPointsAlongPath: usize = 0x1EC; // int32
