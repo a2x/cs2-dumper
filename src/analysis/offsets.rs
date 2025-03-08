@@ -100,7 +100,7 @@ pattern_map! {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
         "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
         "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
-        "dwNetworkGameClient_deltaTick" => pattern!("8983u4 8b41") => None,
+        "dwNetworkGameClient_deltaTick" => pattern!("89b3u4 8b45") => None,
         "dwNetworkGameClient_isBackgroundMap" => pattern!("0fb681u4 c3 cccccccccccccccc 0fb681${} c3 cccccccccccccccc 48895c24") => None,
         "dwNetworkGameClient_localPlayer" => pattern!("4883c0u1 488d0440 8b0cc1") => Some(|_view, map, rva| {
             // .text 48 83 C0 0A | add rax, 0Ah

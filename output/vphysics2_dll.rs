@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -157,14 +157,14 @@ pub mod cs2_dumper {
                 pub const m_JiggleBones: usize = 0x480; // CUtlVector<CFeIndexedJiggleBone>
                 pub const m_SourceElems: usize = 0x498; // CUtlVector<uint16>
                 pub const m_GoalDampedSpringIntegrators: usize = 0x4B0; // CUtlVector<uint32>
-                pub const m_Tris: usize = 0x4C8; // CUtlVector<FeTri_t>
+                pub const m_Tris: usize = 0x4C8; // 
                 pub const m_nTriCount1: usize = 0x4E0; // uint16
                 pub const m_nTriCount2: usize = 0x4E2; // uint16
                 pub const m_nReservedUint8: usize = 0x4E4; // uint8
                 pub const m_nExtraPressureIterations: usize = 0x4E5; // uint8
                 pub const m_nExtraGoalIterations: usize = 0x4E6; // uint8
                 pub const m_nExtraIterations: usize = 0x4E7; // uint8
-                pub const m_SDFRigids: usize = 0x4E8; // CUtlVector<FeSDFRigid_t>
+                pub const m_SDFRigids: usize = 0x4E8; // 
                 pub const m_BoxRigids: usize = 0x500; // CUtlVector<FeBoxRigid_t>
                 pub const m_DynNodeVertexSet: usize = 0x518; // CUtlVector<uint8>
                 pub const m_VertexSetNames: usize = 0x530; // CUtlVector<uint32>
@@ -244,7 +244,7 @@ pub mod cs2_dumper {
                 pub const nNode: usize = 0x0; // uint16[2]
                 pub const nCollisionMask: usize = 0x4; // uint16
                 pub const nDummy: usize = 0x6; // uint16
-                pub const flRadius: usize = 0x8; // float32[2]
+                pub const flRadius: usize = 0x8; // 
             }
             // Parent: None
             // Field count: 4
@@ -1076,7 +1076,7 @@ pub mod cs2_dumper {
                 pub const strength: usize = 0x0; // float32
                 pub const forceLimit: usize = 0x4; // float32
                 pub const torqueLimit: usize = 0x8; // float32
-                pub const bodyMassScale: usize = 0xC; // float32[2]
+                pub const bodyMassScale: usize = 0xC; // 
                 pub const isActive: usize = 0x14; // bool
             }
             // Parent: None

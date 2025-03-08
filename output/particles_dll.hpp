@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 #pragma once
 
@@ -945,7 +945,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFirstSourcePoint = 0x1CC; // int32
                 constexpr std::ptrdiff_t m_bSetOrientation = 0x1D0; // bool
                 constexpr std::ptrdiff_t m_nOrientationMode = 0x1D4; // ParticleOrientationSetMode_t
-                constexpr std::ptrdiff_t m_nSetParent = 0x1D8; // ParticleParentSetMode_t
+                constexpr std::ptrdiff_t m_nSetParent = 0x1D8; // 
             }
             // Parent: CParticleFunctionOperator
             // Field count: 8
@@ -1214,7 +1214,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flCenterXOffset = 0xCC0; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_flCenterYOffset = 0xE20; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_flBumpStrength = 0xF80; // float32
-                constexpr std::ptrdiff_t m_nCropTextureOverride = 0xF84; // ParticleSequenceCropOverride_t
+                constexpr std::ptrdiff_t m_nCropTextureOverride = 0xF84; // 
                 constexpr std::ptrdiff_t m_vecTexturesInput = 0xF88; // CUtlVector<TextureGroup_t>
                 constexpr std::ptrdiff_t m_flAnimationRate = 0xFA0; // float32
                 constexpr std::ptrdiff_t m_nAnimationType = 0xFA4; // AnimationType_t
@@ -3426,7 +3426,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bLOS = 0x1F4; // bool
                 constexpr std::ptrdiff_t m_CollisionGroupName = 0x1F5; // char[128]
                 constexpr std::ptrdiff_t m_nTraceSet = 0x278; // ParticleTraceSet_t
-                constexpr std::ptrdiff_t m_nSetParent = 0x27C; // ParticleParentSetMode_t
+                constexpr std::ptrdiff_t m_nSetParent = 0x27C; // 
             }
             // Parent: CParticleFunctionPreEmission
             // Field count: 4
@@ -3888,7 +3888,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_OP_LockToPointList {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_pointList = 0x1C8; // 
+                constexpr std::ptrdiff_t m_pointList = 0x1C8; // CUtlVector<PointDefinition_t>
                 constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E0; // bool
                 constexpr std::ptrdiff_t m_bClosedLoop = 0x1E1; // bool
                 constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1E4; // int32
@@ -5233,7 +5233,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bRenderSpecular = 0x1249; // bool
                 constexpr std::ptrdiff_t m_lightCookie = 0x1250; // CUtlString
                 constexpr std::ptrdiff_t m_nPriority = 0x1258; // int32
-                constexpr std::ptrdiff_t m_nFogLightingMode = 0x125C; // ParticleLightFogLightingMode_t
+                constexpr std::ptrdiff_t m_nFogLightingMode = 0x125C; // 
                 constexpr std::ptrdiff_t m_flFogContribution = 0x1260; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_nCapsuleLightBehavior = 0x13C0; // ParticleLightBehaviorChoiceList_t
                 constexpr std::ptrdiff_t m_flCapsuleLength = 0x13C4; // float32
@@ -5289,7 +5289,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nCP1 = 0x1C8; // int32
                 constexpr std::ptrdiff_t m_vecCP1Pos = 0x1CC; // Vector
                 constexpr std::ptrdiff_t m_bUseAvgParticlePos = 0x1D8; // bool
-                constexpr std::ptrdiff_t m_nSetParent = 0x1DC; // ParticleParentSetMode_t
+                constexpr std::ptrdiff_t m_nSetParent = 0x1DC; // 
             }
             // Parent: CParticleFunctionPreEmission
             // Field count: 7
@@ -5828,7 +5828,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace C_INIT_PointList {
                 constexpr std::ptrdiff_t m_nFieldOutput = 0x1C8; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_pointList = 0x1D0; // 
+                constexpr std::ptrdiff_t m_pointList = 0x1D0; // CUtlVector<PointDefinition_t>
                 constexpr std::ptrdiff_t m_bPlaceAlongPath = 0x1E8; // bool
                 constexpr std::ptrdiff_t m_bClosedLoop = 0x1E9; // bool
                 constexpr std::ptrdiff_t m_nNumPointsAlongPath = 0x1EC; // int32

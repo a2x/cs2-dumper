@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 #pragma once
 
@@ -520,7 +520,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_matchPattern = 0x18; // CSosGroupMatchPattern
                 constexpr std::ptrdiff_t m_branchPattern = 0x48; // CSosGroupBranchPattern
                 constexpr std::ptrdiff_t m_flLifeSpanTime = 0x58; // float32
-                constexpr std::ptrdiff_t m_vActions = 0xC0; // CSosGroupActionSchema*[4]
+                constexpr std::ptrdiff_t m_vActions = 0xC0; // 
             }
             // Parent: None
             // Field count: 5

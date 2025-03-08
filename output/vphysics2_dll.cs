@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-04 01:32:08.247443600 UTC
+// 2025-03-08 01:09:39.389363600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
@@ -152,14 +152,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_JiggleBones = 0x480; // CUtlVector<CFeIndexedJiggleBone>
             public const nint m_SourceElems = 0x498; // CUtlVector<uint16>
             public const nint m_GoalDampedSpringIntegrators = 0x4B0; // CUtlVector<uint32>
-            public const nint m_Tris = 0x4C8; // CUtlVector<FeTri_t>
+            public const nint m_Tris = 0x4C8; // 
             public const nint m_nTriCount1 = 0x4E0; // uint16
             public const nint m_nTriCount2 = 0x4E2; // uint16
             public const nint m_nReservedUint8 = 0x4E4; // uint8
             public const nint m_nExtraPressureIterations = 0x4E5; // uint8
             public const nint m_nExtraGoalIterations = 0x4E6; // uint8
             public const nint m_nExtraIterations = 0x4E7; // uint8
-            public const nint m_SDFRigids = 0x4E8; // CUtlVector<FeSDFRigid_t>
+            public const nint m_SDFRigids = 0x4E8; // 
             public const nint m_BoxRigids = 0x500; // CUtlVector<FeBoxRigid_t>
             public const nint m_DynNodeVertexSet = 0x518; // CUtlVector<uint8>
             public const nint m_VertexSetNames = 0x530; // CUtlVector<uint32>
@@ -239,7 +239,7 @@ namespace CS2Dumper.Schemas {
             public const nint nNode = 0x0; // uint16[2]
             public const nint nCollisionMask = 0x4; // uint16
             public const nint nDummy = 0x6; // uint16
-            public const nint flRadius = 0x8; // float32[2]
+            public const nint flRadius = 0x8; // 
         }
         // Parent: None
         // Field count: 4
@@ -1071,7 +1071,7 @@ namespace CS2Dumper.Schemas {
             public const nint strength = 0x0; // float32
             public const nint forceLimit = 0x4; // float32
             public const nint torqueLimit = 0x8; // float32
-            public const nint bodyMassScale = 0xC; // float32[2]
+            public const nint bodyMassScale = 0xC; // 
             public const nint isActive = 0x14; // bool
         }
         // Parent: None
