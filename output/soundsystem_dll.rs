@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-08 01:09:39.389363600 UTC
+// 2025-03-12 09:38:45.590431400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -531,7 +531,7 @@ pub mod cs2_dumper {
                 pub const m_matchPattern: usize = 0x18; // CSosGroupMatchPattern
                 pub const m_branchPattern: usize = 0x48; // CSosGroupBranchPattern
                 pub const m_flLifeSpanTime: usize = 0x58; // float32
-                pub const m_vActions: usize = 0xC0; // 
+                pub const m_vActions: usize = 0xC0; // CSosGroupActionSchema*[4]
             }
             // Parent: None
             // Field count: 5

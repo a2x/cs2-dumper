@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-08 01:09:39.389363600 UTC
+// 2025-03-12 09:38:45.590431400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1235,7 +1235,7 @@ pub mod cs2_dumper {
                 pub const m_children: usize = 0x0; // CUtlVector<CMotionSearchNode*>
                 pub const m_quantizer: usize = 0x18; // CVectorQuantizer
                 pub const m_sampleCodes: usize = 0x38; // CUtlVector<CUtlVector<SampleCode>>
-                pub const m_sampleIndices: usize = 0x50; // 
+                pub const m_sampleIndices: usize = 0x50; // CUtlVector<CUtlVector<int32>>
                 pub const m_selectableSamples: usize = 0x68; // CUtlVector<int32>
             }
             // Parent: None
@@ -1814,7 +1814,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CMorphData {
                 pub const m_name: usize = 0x0; // CUtlString
-                pub const m_morphRectDatas: usize = 0x8; // 
+                pub const m_morphRectDatas: usize = 0x8; // CUtlVector<CMorphRectData>
             }
             // Parent: CUnaryUpdateNode
             // Field count: 4
@@ -2810,8 +2810,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CSeqSynthAnimDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
-                pub const m_flags: usize = 0x10; // 
-                pub const m_transition: usize = 0x1C; // 
+                pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
+                pub const m_transition: usize = 0x1C; // CSeqTransition
                 pub const m_nLocalBaseReference: usize = 0x24; // int16
                 pub const m_nLocalBoneMask: usize = 0x26; // int16
                 pub const m_activityArray: usize = 0x28; // CUtlVector<CAnimActivity>
@@ -3171,7 +3171,7 @@ pub mod cs2_dumper {
                 pub const m_szGrouping: usize = 0x68; // CUtlVector<CUtlString>
                 pub const m_nCompressorIndex: usize = 0x80; // CUtlVector<int32>
                 pub const m_szElementNames: usize = 0x98; // CUtlVector<CUtlVector<char*>>
-                pub const m_nElementUniqueID: usize = 0xB0; // 
+                pub const m_nElementUniqueID: usize = 0xB0; // CUtlVector<CUtlVector<int32>>
                 pub const m_nElementMask: usize = 0xC8; // CUtlVector<uint32>
                 pub const m_vectorCompressor: usize = 0xF8; // CUtlVector<CCompressor<Vector>*>
                 pub const m_quaternionCompressor: usize = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
@@ -3514,7 +3514,7 @@ pub mod cs2_dumper {
                 pub const m_nYTopDst: usize = 0x2; // int16
                 pub const m_flUWidthSrc: usize = 0x4; // float32
                 pub const m_flVHeightSrc: usize = 0x8; // float32
-                pub const m_bundleDatas: usize = 0x10; // 
+                pub const m_bundleDatas: usize = 0x10; // CUtlVector<CMorphBundleData>
             }
             // Parent: None
             // Field count: 5
@@ -4408,7 +4408,7 @@ pub mod cs2_dumper {
             pub mod CMorphSetData {
                 pub const m_nWidth: usize = 0x10; // int32
                 pub const m_nHeight: usize = 0x14; // int32
-                pub const m_bundleTypes: usize = 0x18; // 
+                pub const m_bundleTypes: usize = 0x18; // CUtlVector<MorphBundleType_t>
                 pub const m_morphDatas: usize = 0x30; // CUtlVector<CMorphData>
                 pub const m_pTextureAtlas: usize = 0x48; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_FlexDesc: usize = 0x50; // CUtlVector<CFlexDesc>
@@ -4551,14 +4551,14 @@ pub mod cs2_dumper {
             pub mod CSeqMultiFetch {
                 pub const m_flags: usize = 0x0; // CSeqMultiFetchFlag
                 pub const m_localReferenceArray: usize = 0x8; // CUtlVector<int16>
-                pub const m_nGroupSize: usize = 0x20; // 
-                pub const m_nLocalPose: usize = 0x28; // 
+                pub const m_nGroupSize: usize = 0x20; // int32[2]
+                pub const m_nLocalPose: usize = 0x28; // int32[2]
                 pub const m_poseKeyArray0: usize = 0x30; // CUtlVector<float32>
                 pub const m_poseKeyArray1: usize = 0x48; // CUtlVector<float32>
                 pub const m_nLocalCyclePoseParameter: usize = 0x60; // int32
                 pub const m_bCalculatePoseParameters: usize = 0x64; // bool
                 pub const m_bFixedBlendWeight: usize = 0x65; // bool
-                pub const m_flFixedBlendWeightVals: usize = 0x68; // 
+                pub const m_flFixedBlendWeightVals: usize = 0x68; // float32[2]
             }
             // Parent: None
             // Field count: 11
@@ -4762,12 +4762,12 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CSeqS1SeqDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
-                pub const m_flags: usize = 0x10; // 
-                pub const m_fetch: usize = 0x20; // 
+                pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
+                pub const m_fetch: usize = 0x20; // CSeqMultiFetch
                 pub const m_nLocalWeightlist: usize = 0x90; // int32
                 pub const m_autoLayerArray: usize = 0x98; // CUtlVector<CSeqAutoLayer>
                 pub const m_IKLockArray: usize = 0xB0; // CUtlVector<CSeqIKLock>
-                pub const m_transition: usize = 0xC8; // 
+                pub const m_transition: usize = 0xC8; // CSeqTransition
                 pub const m_SequenceKeys: usize = 0xD0; // KeyValues3
                 pub const m_LegacyKeyValueText: usize = 0xE0; // CBufferString
                 pub const m_activityArray: usize = 0xF0; // CUtlVector<CAnimActivity>
@@ -4853,7 +4853,7 @@ pub mod cs2_dumper {
                 pub const m_localSpaceTransforms: usize = 0x10; // CUtlVector<CTransform>
                 pub const m_modelSpaceTransforms: usize = 0x28; // CUtlVector<CTransform>
                 pub const m_boneNames: usize = 0x40; // CUtlVector<CUtlString>
-                pub const m_children: usize = 0x58; // 
+                pub const m_children: usize = 0x58; // CUtlVector<CUtlVector<int32>>
                 pub const m_parents: usize = 0x70; // CUtlVector<int32>
                 pub const m_feet: usize = 0x88; // CUtlVector<CAnimFoot>
                 pub const m_morphNames: usize = 0xA0; // CUtlVector<CUtlString>
@@ -5563,8 +5563,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CSeqCmdSeqDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
-                pub const m_flags: usize = 0x10; // 
-                pub const m_transition: usize = 0x1C; // 
+                pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
+                pub const m_transition: usize = 0x1C; // CSeqTransition
                 pub const m_nFrameRangeSequence: usize = 0x24; // int16
                 pub const m_nFrameCount: usize = 0x26; // int16
                 pub const m_flFPS: usize = 0x28; // float32
@@ -5805,7 +5805,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod AnimationDecodeDebugDump_t {
-                pub const m_processingType: usize = 0x0; // 
+                pub const m_processingType: usize = 0x0; // AnimationProcessingType_t
                 pub const m_elems: usize = 0x8; // CUtlVector<AnimationDecodeDebugDumpElement_t>
             }
             // Parent: CNmIDValueNode__CDefinition
