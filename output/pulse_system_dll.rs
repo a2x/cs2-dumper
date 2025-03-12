@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-12 01:35:26.000578900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -698,7 +698,7 @@ pub mod cs2_dumper {
                 pub const m_nInstanceID: usize = 0x0; // PulseGraphInstanceID_t
                 pub const m_strFileName: usize = 0x8; // CUtlString
                 pub const m_vecHistory: usize = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
-                pub const m_mapCellDesc: usize = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
+                pub const m_mapCellDesc: usize = 0x28; // 
                 pub const m_mapCursorDesc: usize = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
             }
             // Parent: CPulseCell_BaseYieldingInflow
@@ -723,7 +723,7 @@ pub mod cs2_dumper {
             // MPulseCellMethodBindings
             // MPulseCellOutflowHookInfo
             pub mod CPulseCell_Inflow_ObservableVariableListener {
-                pub const m_BlackboardReference: usize = 0x70; // CPulse_BlackboardReference
+                pub const m_BlackboardReference: usize = 0x70; // 
                 pub const m_bSelfReference: usize = 0x168; // bool
             }
             // Parent: CPulseCell_BaseFlow

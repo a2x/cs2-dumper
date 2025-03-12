@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-12 01:35:26.000578900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2746,9 +2746,9 @@ namespace CS2Dumper.Schemas {
         public static class CPropDoorRotating {
             public const nint m_vecAxis = 0xEE8; // Vector
             public const nint m_flDistance = 0xEF4; // float32
-            public const nint m_eSpawnPosition = 0xEF8; // PropDoorRotatingSpawnPos_t
-            public const nint m_eOpenDirection = 0xEFC; // PropDoorRotatingOpenDirection_e
-            public const nint m_eCurrentOpenDirection = 0xF00; // PropDoorRotatingOpenDirection_e
+            public const nint m_eSpawnPosition = 0xEF8; // 
+            public const nint m_eOpenDirection = 0xEFC; // 
+            public const nint m_eCurrentOpenDirection = 0xF00; // 
             public const nint m_flAjarAngle = 0xF04; // float32
             public const nint m_angRotationAjarDeprecated = 0xF08; // QAngle
             public const nint m_angRotationClosed = 0xF14; // QAngle
@@ -2903,7 +2903,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLightStyleStartTime = 0x7C8; // GameTime_t
             public const nint m_QueuedLightStyleStrings = 0x7D0; // CNetworkUtlVectorBase<CUtlString>
             public const nint m_LightStyleEvents = 0x7E8; // CNetworkUtlVectorBase<CUtlString>
-            public const nint m_LightStyleTargets = 0x800; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
+            public const nint m_LightStyleTargets = 0x800; // 
             public const nint m_StyleEvent = 0x818; // CEntityIOOutput[4]
             public const nint m_hLightCookie = 0x8D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
             public const nint m_flShape = 0x8E0; // float32
@@ -3893,7 +3893,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bRagdollClientSide (bool)
         public static class CBaseAnimGraph {
             public const nint m_bInitiallyPopulateInterpHistory = 0x808; // bool
-            public const nint m_pChoreoServices = 0x810; // IChoreoServices*
+            public const nint m_pChoreoServices = 0x810; // 
             public const nint m_bAnimGraphUpdateEnabled = 0x818; // bool
             public const nint m_flMaxSlopeDistance = 0x81C; // float32
             public const nint m_vLastSlopeCheckPos = 0x820; // Vector
@@ -4234,7 +4234,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CItem
         // Field count: 1
         public static class CScriptItem {
-            public const nint m_MoveTypeOverride = 0xA80; // MoveType_t
+            public const nint m_MoveTypeOverride = 0xA80; // 
         }
         // Parent: IntervalTimer
         // Field count: 7
@@ -4360,8 +4360,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nRandomSeedOffset (int)
         // NetworkVarNames: m_flLastTeleportTime (float)
         public static class CAnimGraphNetworkedVariables {
-            public const nint m_PredNetBoolVariables = 0x8; // CNetworkUtlVectorBase<uint32>
-            public const nint m_PredNetByteVariables = 0x20; // CNetworkUtlVectorBase<uint8>
+            public const nint m_PredNetBoolVariables = 0x8; // 
+            public const nint m_PredNetByteVariables = 0x20; // 
             public const nint m_PredNetUInt16Variables = 0x38; // CNetworkUtlVectorBase<uint16>
             public const nint m_PredNetIntVariables = 0x50; // CNetworkUtlVectorBase<int32>
             public const nint m_PredNetUInt32Variables = 0x68; // CNetworkUtlVectorBase<uint32>
@@ -5379,7 +5379,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_MeshGroupMask (MeshGroupMask_t)
         // NetworkVarNames: m_nIdealMotionType (int8)
         public static class CModelState {
-            public const nint m_hModel = 0xA0; // CStrongHandle<InfoForResourceTypeCModel>
+            public const nint m_hModel = 0xA0; // 
             public const nint m_ModelName = 0xA8; // CUtlSymbolLarge
             public const nint m_bClientClothCreationSuppressed = 0xE8; // bool
             public const nint m_MeshGroupMask = 0x198; // uint64
@@ -5496,7 +5496,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flCreationTime = 0x7DC; // float32
             public const nint m_nTintID = 0x7E0; // int32
             public const nint m_nVersion = 0x7E4; // uint8
-            public const nint m_ubSignature = 0x7E5; // uint8[128]
+            public const nint m_ubSignature = 0x7E5; // 
         }
         // Parent: CBaseTrigger
         // Field count: 9
@@ -6699,8 +6699,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_LastHitGroup = 0x550; // HitGroup_t
             public const nint m_flDissolveStartTime = 0x554; // GameTime_t
             public const nint m_OnIgnite = 0x558; // CEntityIOOutput
-            public const nint m_nRenderMode = 0x580; // RenderMode_t
-            public const nint m_nRenderFX = 0x581; // RenderFx_t
+            public const nint m_nRenderMode = 0x580; // 
+            public const nint m_nRenderFX = 0x581; // 
             public const nint m_bAllowFadeInView = 0x582; // bool
             public const nint m_clrRender = 0x5A0; // Color
             public const nint m_vecRenderAttributes = 0x5A8; // CUtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
@@ -7316,7 +7316,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPreviousNodeIndex = 0x7D4; // int32
             public const nint m_bFixedOrientation = 0x7D8; // bool
             public const nint m_bFixedPitch = 0x7D9; // bool
-            public const nint m_eSolidType = 0x7DA; // SolidType_t
+            public const nint m_eSolidType = 0x7DA; // 
             public const nint m_bIsMoving = 0x7DB; // bool
             public const nint m_flTimeToReachMaxSpeed = 0x7DC; // float32
             public const nint m_flDistanceToReachMaxSpeed = 0x7E0; // float32
@@ -8730,11 +8730,11 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_vCapsuleCenter2 (Vector)
         // NetworkVarNames: m_flCapsuleRadius (float)
         public static class CCollisionProperty {
-            public const nint m_collisionAttribute = 0x10; // VPhysicsCollisionAttribute_t
+            public const nint m_collisionAttribute = 0x10; // 
             public const nint m_vecMins = 0x40; // Vector
             public const nint m_vecMaxs = 0x4C; // Vector
             public const nint m_usSolidFlags = 0x5A; // uint8
-            public const nint m_nSolidType = 0x5B; // SolidType_t
+            public const nint m_nSolidType = 0x5B; // 
             public const nint m_triggerBloat = 0x5C; // uint8
             public const nint m_nSurroundType = 0x5D; // SurroundingBoundsType_t
             public const nint m_CollisionGroup = 0x5E; // uint8
@@ -8804,7 +8804,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flBackgroundWorldToUV = 0xA2C; // float32
             public const nint m_Color = 0xA30; // Color
             public const nint m_nJustifyHorizontal = 0xA34; // PointWorldTextJustifyHorizontal_t
-            public const nint m_nJustifyVertical = 0xA38; // PointWorldTextJustifyVertical_t
+            public const nint m_nJustifyVertical = 0xA38; // 
             public const nint m_nReorientMode = 0xA3C; // PointWorldTextReorientMode_t
         }
         // Parent: CSoundAreaEntityBase
@@ -11061,9 +11061,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_bTakesDamage = 0x2D8; // bool
             public const nint m_nTakeDamageFlags = 0x2E0; // TakeDamageFlags_t
             public const nint m_nPlatformType = 0x2E8; // EntityPlatformTypes_t
-            public const nint m_MoveCollide = 0x2EA; // MoveCollide_t
-            public const nint m_MoveType = 0x2EB; // MoveType_t
-            public const nint m_nActualMoveType = 0x2EC; // MoveType_t
+            public const nint m_MoveCollide = 0x2EA; // 
+            public const nint m_MoveType = 0x2EB; // 
+            public const nint m_nActualMoveType = 0x2EC; // 
             public const nint m_nWaterTouch = 0x2ED; // uint8
             public const nint m_nSlimeTouch = 0x2EE; // uint8
             public const nint m_bRestoreInHierarchy = 0x2EF; // bool

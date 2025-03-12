@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-12 01:35:26.000578900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: pulse_system.dll
@@ -686,7 +686,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nInstanceID = 0x0; // PulseGraphInstanceID_t
             public const nint m_strFileName = 0x8; // CUtlString
             public const nint m_vecHistory = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
-            public const nint m_mapCellDesc = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
+            public const nint m_mapCellDesc = 0x28; // 
             public const nint m_mapCursorDesc = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
         }
         // Parent: CPulseCell_BaseYieldingInflow
@@ -711,7 +711,7 @@ namespace CS2Dumper.Schemas {
         // MPulseCellMethodBindings
         // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_ObservableVariableListener {
-            public const nint m_BlackboardReference = 0x70; // CPulse_BlackboardReference
+            public const nint m_BlackboardReference = 0x70; // 
             public const nint m_bSelfReference = 0x168; // bool
         }
         // Parent: CPulseCell_BaseFlow

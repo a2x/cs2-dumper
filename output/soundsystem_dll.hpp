@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-12 01:35:26.000578900 UTC
 
 #pragma once
 
@@ -238,8 +238,8 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerBlender {
-                constexpr std::ptrdiff_t m_firstSound = 0xC0; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_secondSound = 0xD8; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_firstSound = 0xC0; // 
+                constexpr std::ptrdiff_t m_secondSound = 0xD8; // 
                 constexpr std::ptrdiff_t m_flBlendFactor = 0xF0; // float32
             }
             // Parent: None
@@ -364,7 +364,7 @@ namespace cs2_dumper {
             namespace CSoundContainerReference {
                 constexpr std::ptrdiff_t m_bUseReference = 0x0; // bool
                 constexpr std::ptrdiff_t m_sound = 0x8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_pSound = 0x10; // CVoiceContainerBase*
+                constexpr std::ptrdiff_t m_pSound = 0x10; // 
             }
             // Parent: CVoiceContainerBase
             // Field count: 0
@@ -752,7 +752,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CVoiceContainerSetElement {
-                constexpr std::ptrdiff_t m_sound = 0x0; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_sound = 0x0; // 
                 constexpr std::ptrdiff_t m_flVolumeDB = 0x18; // float32
             }
             // Parent: None
@@ -1065,7 +1065,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopTrigger {
-                constexpr std::ptrdiff_t m_sound = 0xC0; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_sound = 0xC0; // 
                 constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0xD8; // float32
                 constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0xDC; // float32
                 constexpr std::ptrdiff_t m_flFadeTime = 0xE0; // float32

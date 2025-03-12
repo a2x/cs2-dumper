@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-12 01:35:26.000578900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1338,7 +1338,7 @@ pub mod cs2_dumper {
                 pub const m_flFeatheringMaxDist: usize = 0x2438; // CParticleCollectionRendererFloatInput
                 pub const m_flFeatheringFilter: usize = 0x2598; // CParticleCollectionRendererFloatInput
                 pub const m_flDepthBias: usize = 0x26F8; // CParticleCollectionRendererFloatInput
-                pub const m_nSortMethod: usize = 0x2858; // ParticleSortingChoiceList_t
+                pub const m_nSortMethod: usize = 0x2858; // 
                 pub const m_bBlendFramesSeq0: usize = 0x285C; // bool
                 pub const m_bMaxLuminanceBlendingSequence0: usize = 0x285D; // bool
             }
@@ -1380,7 +1380,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapParticleCountToNamedModelElementScalar {
-                pub const m_hModel: usize = 0x1F8; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x1F8; // 
                 pub const m_outputMinName: usize = 0x200; // CUtlString
                 pub const m_outputMaxName: usize = 0x208; // CUtlString
                 pub const m_bModelFromRenderer: usize = 0x210; // bool
@@ -1443,7 +1443,7 @@ pub mod cs2_dumper {
             pub mod C_INIT_RandomModelSequence {
                 pub const m_ActivityName: usize = 0x1C8; // char[256]
                 pub const m_SequenceName: usize = 0x2C8; // char[256]
-                pub const m_hModel: usize = 0x3C8; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x3C8; // 
             }
             // Parent: CParticleVecInput
             // Field count: 0
@@ -1787,7 +1787,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RandomNamedModelElement {
-                pub const m_hModel: usize = 0x1C8; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x1C8; // 
                 pub const m_names: usize = 0x1D0; // CUtlVector<CUtlString>
                 pub const m_bShuffle: usize = 0x1E8; // bool
                 pub const m_bLinear: usize = 0x1E9; // bool
@@ -2219,7 +2219,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderSimpleModelCollection {
                 pub const m_bCenterOffset: usize = 0x210; // bool
-                pub const m_hModel: usize = 0x218; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x218; // 
                 pub const m_modelInput: usize = 0x220; // CParticleModelInput
                 pub const m_fSizeCullScale: usize = 0x280; // CParticleCollectionFloatInput
                 pub const m_bDisableShadows: usize = 0x3E0; // bool
@@ -2565,7 +2565,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderVRHapticEvent {
-                pub const m_nHand: usize = 0x210; // ParticleVRHandChoiceList_t
+                pub const m_nHand: usize = 0x210; // 
                 pub const m_nOutputHandCP: usize = 0x214; // int32
                 pub const m_nOutputField: usize = 0x218; // int32
                 pub const m_flAmplitude: usize = 0x220; // CPerParticleFloatInput
@@ -2638,7 +2638,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelElementOnceTimed {
-                pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x1C0; // 
                 pub const m_inNames: usize = 0x1C8; // CUtlVector<CUtlString>
                 pub const m_outNames: usize = 0x1E0; // CUtlVector<CUtlString>
                 pub const m_fallbackNames: usize = 0x1F8; // CUtlVector<CUtlString>
@@ -2869,9 +2869,9 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CParticleSystemDefinition {
                 pub const m_nBehaviorVersion: usize = 0x8; // int32
-                pub const m_PreEmissionOperators: usize = 0x10; // CUtlVector<CParticleFunctionPreEmission*>
+                pub const m_PreEmissionOperators: usize = 0x10; // 
                 pub const m_Emitters: usize = 0x28; // CUtlVector<CParticleFunctionEmitter*>
-                pub const m_Initializers: usize = 0x40; // CUtlVector<CParticleFunctionInitializer*>
+                pub const m_Initializers: usize = 0x40; // 
                 pub const m_Operators: usize = 0x58; // CUtlVector<CParticleFunctionOperator*>
                 pub const m_ForceGenerators: usize = 0x70; // CUtlVector<CParticleFunctionForce*>
                 pub const m_Constraints: usize = 0x88; // CUtlVector<CParticleFunctionConstraint*>
@@ -5200,7 +5200,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_INIT_RemapNamedModelElementToScalar {
-                pub const m_hModel: usize = 0x1C8; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x1C8; // 
                 pub const m_names: usize = 0x1D0; // CUtlVector<CUtlString>
                 pub const m_values: usize = 0x1E8; // CUtlVector<float32>
                 pub const m_nFieldInput: usize = 0x200; // ParticleAttributeIndex_t
@@ -5572,7 +5572,7 @@ pub mod cs2_dumper {
                 pub const m_bReplaceTextureWithGradient: usize = 0x1; // bool
                 pub const m_hTexture: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_Gradient: usize = 0x10; // CColorGradient
-                pub const m_nTextureType: usize = 0x28; // SpriteCardTextureType_t
+                pub const m_nTextureType: usize = 0x28; // 
                 pub const m_nTextureChannels: usize = 0x2C; // SpriteCardTextureChannel_t
                 pub const m_nTextureBlendMode: usize = 0x30; // ParticleTextureLayerBlendType_t
                 pub const m_flTextureBlend: usize = 0x38; // CParticleCollectionRendererFloatInput
@@ -5737,7 +5737,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod ModelReference_t {
-                pub const m_model: usize = 0x0; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_model: usize = 0x0; // 
                 pub const m_flRelativeProbabilityOfSpawn: usize = 0x8; // float32
             }
             // Parent: CParticleFunctionConstraint
@@ -5808,7 +5808,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapNamedModelElementEndCap {
-                pub const m_hModel: usize = 0x1C0; // CStrongHandle<InfoForResourceTypeCModel>
+                pub const m_hModel: usize = 0x1C0; // 
                 pub const m_inNames: usize = 0x1C8; // CUtlVector<CUtlString>
                 pub const m_outNames: usize = 0x1E0; // CUtlVector<CUtlString>
                 pub const m_fallbackNames: usize = 0x1F8; // CUtlVector<CUtlString>
