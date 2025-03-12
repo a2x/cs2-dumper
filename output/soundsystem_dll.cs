@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-08 01:09:39.389363600 UTC
+// 2025-03-12 09:38:45.590431400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
@@ -515,7 +515,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_matchPattern = 0x18; // CSosGroupMatchPattern
             public const nint m_branchPattern = 0x48; // CSosGroupBranchPattern
             public const nint m_flLifeSpanTime = 0x58; // float32
-            public const nint m_vActions = 0xC0; // 
+            public const nint m_vActions = 0xC0; // CSosGroupActionSchema*[4]
         }
         // Parent: None
         // Field count: 5
