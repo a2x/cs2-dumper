@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 01:35:26.000578900 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
@@ -78,7 +78,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class RnMeshDesc_t {
-            public const nint m_Mesh = 0x18; // RnMesh_t
+            public const nint m_Mesh = 0x18; // 
         }
         // Parent: None
         // Field count: 106

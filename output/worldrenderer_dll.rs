@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 01:35:26.000578900 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -47,7 +47,7 @@ pub mod cs2_dumper {
                 pub const m_nLODOverride: usize = 0x6A; // int16
                 pub const m_nCubeMapPrecomputedHandshake: usize = 0x6C; // int32
                 pub const m_nLightProbeVolumePrecomputedHandshake: usize = 0x70; // int32
-                pub const m_renderableModel: usize = 0x78; // 
+                pub const m_renderableModel: usize = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
                 pub const m_renderable: usize = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
             }
             // Parent: None
@@ -94,7 +94,7 @@ pub mod cs2_dumper {
                 pub const m_lodSetups: usize = 0x28; // CUtlVector<AggregateLODSetup_t>
                 pub const m_visClusterMembership: usize = 0x40; // CUtlVector<uint16>
                 pub const m_fragmentTransforms: usize = 0x58; // CUtlVector<matrix3x4_t>
-                pub const m_renderableModel: usize = 0x70; // 
+                pub const m_renderableModel: usize = 0x70; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Field count: 7
@@ -127,7 +127,7 @@ pub mod cs2_dumper {
                 pub const m_instanceScales: usize = 0x50; // CUtlVector<float32>
                 pub const m_instanceTintSrgb: usize = 0x68; // CUtlVector<Color>
                 pub const m_tiles: usize = 0x80; // CUtlVector<ClutterTile_t>
-                pub const m_renderableModel: usize = 0x98; // 
+                pub const m_renderableModel: usize = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Field count: 5

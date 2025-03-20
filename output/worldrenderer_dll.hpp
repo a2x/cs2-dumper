@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 01:35:26.000578900 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #pragma once
 
@@ -48,7 +48,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLODOverride = 0x6A; // int16
                 constexpr std::ptrdiff_t m_nCubeMapPrecomputedHandshake = 0x6C; // int32
                 constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x70; // int32
-                constexpr std::ptrdiff_t m_renderableModel = 0x78; // 
+                constexpr std::ptrdiff_t m_renderableModel = 0x78; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_renderable = 0x80; // CStrongHandle<InfoForResourceTypeCRenderMesh>
             }
             // Parent: None
@@ -95,7 +95,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_lodSetups = 0x28; // CUtlVector<AggregateLODSetup_t>
                 constexpr std::ptrdiff_t m_visClusterMembership = 0x40; // CUtlVector<uint16>
                 constexpr std::ptrdiff_t m_fragmentTransforms = 0x58; // CUtlVector<matrix3x4_t>
-                constexpr std::ptrdiff_t m_renderableModel = 0x70; // 
+                constexpr std::ptrdiff_t m_renderableModel = 0x70; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Field count: 7
@@ -128,7 +128,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_instanceScales = 0x50; // CUtlVector<float32>
                 constexpr std::ptrdiff_t m_instanceTintSrgb = 0x68; // CUtlVector<Color>
                 constexpr std::ptrdiff_t m_tiles = 0x80; // CUtlVector<ClutterTile_t>
-                constexpr std::ptrdiff_t m_renderableModel = 0x98; // 
+                constexpr std::ptrdiff_t m_renderableModel = 0x98; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: None
             // Field count: 5

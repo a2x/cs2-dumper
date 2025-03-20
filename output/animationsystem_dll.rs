@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 01:35:26.000578900 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2880,7 +2880,7 @@ pub mod cs2_dumper {
                 pub const m_Transform: usize = 0x0; // CTransform
                 pub const m_Name: usize = 0x20; // CUtlString
                 pub const m_nParent: usize = 0x28; // int32
-                pub const m_refModel: usize = 0x30; // 
+                pub const m_refModel: usize = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: CNmIDValueNode__CDefinition
             // Field count: 2
@@ -3170,7 +3170,7 @@ pub mod cs2_dumper {
                 pub const m_nFlags: usize = 0x50; // CUtlVector<int32>
                 pub const m_szGrouping: usize = 0x68; // CUtlVector<CUtlString>
                 pub const m_nCompressorIndex: usize = 0x80; // CUtlVector<int32>
-                pub const m_szElementNames: usize = 0x98; // CUtlVector<CUtlVector<char*>>
+                pub const m_szElementNames: usize = 0x98; // 
                 pub const m_nElementUniqueID: usize = 0xB0; // CUtlVector<CUtlVector<int32>>
                 pub const m_nElementMask: usize = 0xC8; // CUtlVector<uint32>
                 pub const m_vectorCompressor: usize = 0xF8; // CUtlVector<CCompressor<Vector>*>
@@ -3834,10 +3834,10 @@ pub mod cs2_dumper {
             pub mod CAnimParameterManagerUpdater {
                 pub const m_parameters: usize = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
                 pub const m_idToIndexMap: usize = 0x30; // CUtlHashtable<AnimParamID,int32>
-                pub const m_nameToIndexMap: usize = 0x50; // CUtlHashtable<CUtlString,int32>
+                pub const m_nameToIndexMap: usize = 0x50; // 
                 pub const m_indexToHandle: usize = 0x70; // CUtlVector<CAnimParamHandle>
                 pub const m_autoResetParams: usize = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
-                pub const m_autoResetMap: usize = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
+                pub const m_autoResetMap: usize = 0xA0; // 
             }
             // Parent: None
             // Field count: 7
@@ -4305,7 +4305,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CAnimUpdateNodeBase {
-                pub const m_nodePath: usize = 0x18; // 
+                pub const m_nodePath: usize = 0x18; // CAnimNodePath
                 pub const m_networkMode: usize = 0x48; // AnimNodeNetworkMode
                 pub const m_name: usize = 0x50; // CUtlString
             }
@@ -5636,7 +5636,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CAnimUpdateSharedData {
-                pub const m_nodes: usize = 0x10; // 
+                pub const m_nodes: usize = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
                 pub const m_nodeIndexMap: usize = 0x28; // CUtlHashtable<CAnimNodePath,int32>
                 pub const m_components: usize = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
                 pub const m_pParamListUpdater: usize = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
@@ -5645,7 +5645,7 @@ pub mod cs2_dumper {
                 pub const m_settings: usize = 0x78; // CAnimGraphSettingsManager
                 pub const m_pStaticPoseCache: usize = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
                 pub const m_pSkeleton: usize = 0xB0; // CSmartPtr<CAnimSkeleton>
-                pub const m_rootNodePath: usize = 0xB8; // 
+                pub const m_rootNodePath: usize = 0xB8; // CAnimNodePath
             }
             // Parent: None
             // Field count: 5
@@ -6344,7 +6344,7 @@ pub mod cs2_dumper {
             pub mod CModelConfigElement_AttachedModel {
                 pub const m_InstanceName: usize = 0x48; // CUtlString
                 pub const m_EntityClass: usize = 0x50; // CUtlString
-                pub const m_hModel: usize = 0x58; // 
+                pub const m_hModel: usize = 0x58; // CStrongHandle<InfoForResourceTypeCModel>
                 pub const m_vOffset: usize = 0x60; // Vector
                 pub const m_aAngOffset: usize = 0x6C; // QAngle
                 pub const m_AttachmentName: usize = 0x78; // CUtlString

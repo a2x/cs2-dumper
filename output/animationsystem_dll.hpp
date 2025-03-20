@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 01:35:26.000578900 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #pragma once
 
@@ -2788,7 +2788,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Transform = 0x0; // CTransform
                 constexpr std::ptrdiff_t m_Name = 0x20; // CUtlString
                 constexpr std::ptrdiff_t m_nParent = 0x28; // int32
-                constexpr std::ptrdiff_t m_refModel = 0x30; // 
+                constexpr std::ptrdiff_t m_refModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
             }
             // Parent: CNmIDValueNode__CDefinition
             // Field count: 2
@@ -3078,7 +3078,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nFlags = 0x50; // CUtlVector<int32>
                 constexpr std::ptrdiff_t m_szGrouping = 0x68; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_nCompressorIndex = 0x80; // CUtlVector<int32>
-                constexpr std::ptrdiff_t m_szElementNames = 0x98; // CUtlVector<CUtlVector<char*>>
+                constexpr std::ptrdiff_t m_szElementNames = 0x98; // 
                 constexpr std::ptrdiff_t m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
                 constexpr std::ptrdiff_t m_nElementMask = 0xC8; // CUtlVector<uint32>
                 constexpr std::ptrdiff_t m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
@@ -3742,10 +3742,10 @@ namespace cs2_dumper {
             namespace CAnimParameterManagerUpdater {
                 constexpr std::ptrdiff_t m_parameters = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
                 constexpr std::ptrdiff_t m_idToIndexMap = 0x30; // CUtlHashtable<AnimParamID,int32>
-                constexpr std::ptrdiff_t m_nameToIndexMap = 0x50; // CUtlHashtable<CUtlString,int32>
+                constexpr std::ptrdiff_t m_nameToIndexMap = 0x50; // 
                 constexpr std::ptrdiff_t m_indexToHandle = 0x70; // CUtlVector<CAnimParamHandle>
                 constexpr std::ptrdiff_t m_autoResetParams = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
-                constexpr std::ptrdiff_t m_autoResetMap = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
+                constexpr std::ptrdiff_t m_autoResetMap = 0xA0; // 
             }
             // Parent: None
             // Field count: 7
@@ -4213,7 +4213,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimUpdateNodeBase {
-                constexpr std::ptrdiff_t m_nodePath = 0x18; // 
+                constexpr std::ptrdiff_t m_nodePath = 0x18; // CAnimNodePath
                 constexpr std::ptrdiff_t m_networkMode = 0x48; // AnimNodeNetworkMode
                 constexpr std::ptrdiff_t m_name = 0x50; // CUtlString
             }
@@ -5544,7 +5544,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CAnimUpdateSharedData {
-                constexpr std::ptrdiff_t m_nodes = 0x10; // 
+                constexpr std::ptrdiff_t m_nodes = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
                 constexpr std::ptrdiff_t m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32>
                 constexpr std::ptrdiff_t m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
                 constexpr std::ptrdiff_t m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
@@ -5553,7 +5553,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_settings = 0x78; // CAnimGraphSettingsManager
                 constexpr std::ptrdiff_t m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
                 constexpr std::ptrdiff_t m_pSkeleton = 0xB0; // CSmartPtr<CAnimSkeleton>
-                constexpr std::ptrdiff_t m_rootNodePath = 0xB8; // 
+                constexpr std::ptrdiff_t m_rootNodePath = 0xB8; // CAnimNodePath
             }
             // Parent: None
             // Field count: 5
@@ -6252,7 +6252,7 @@ namespace cs2_dumper {
             namespace CModelConfigElement_AttachedModel {
                 constexpr std::ptrdiff_t m_InstanceName = 0x48; // CUtlString
                 constexpr std::ptrdiff_t m_EntityClass = 0x50; // CUtlString
-                constexpr std::ptrdiff_t m_hModel = 0x58; // 
+                constexpr std::ptrdiff_t m_hModel = 0x58; // CStrongHandle<InfoForResourceTypeCModel>
                 constexpr std::ptrdiff_t m_vOffset = 0x60; // Vector
                 constexpr std::ptrdiff_t m_aAngOffset = 0x6C; // QAngle
                 constexpr std::ptrdiff_t m_AttachmentName = 0x78; // CUtlString

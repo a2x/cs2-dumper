@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 01:35:26.000578900 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -2783,7 +2783,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Transform = 0x0; // CTransform
             public const nint m_Name = 0x20; // CUtlString
             public const nint m_nParent = 0x28; // int32
-            public const nint m_refModel = 0x30; // 
+            public const nint m_refModel = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
         }
         // Parent: CNmIDValueNode__CDefinition
         // Field count: 2
@@ -3073,7 +3073,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFlags = 0x50; // CUtlVector<int32>
             public const nint m_szGrouping = 0x68; // CUtlVector<CUtlString>
             public const nint m_nCompressorIndex = 0x80; // CUtlVector<int32>
-            public const nint m_szElementNames = 0x98; // CUtlVector<CUtlVector<char*>>
+            public const nint m_szElementNames = 0x98; // 
             public const nint m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
             public const nint m_nElementMask = 0xC8; // CUtlVector<uint32>
             public const nint m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
@@ -3737,10 +3737,10 @@ namespace CS2Dumper.Schemas {
         public static class CAnimParameterManagerUpdater {
             public const nint m_parameters = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
             public const nint m_idToIndexMap = 0x30; // CUtlHashtable<AnimParamID,int32>
-            public const nint m_nameToIndexMap = 0x50; // CUtlHashtable<CUtlString,int32>
+            public const nint m_nameToIndexMap = 0x50; // 
             public const nint m_indexToHandle = 0x70; // CUtlVector<CAnimParamHandle>
             public const nint m_autoResetParams = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
-            public const nint m_autoResetMap = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
+            public const nint m_autoResetMap = 0xA0; // 
         }
         // Parent: None
         // Field count: 7
@@ -4208,7 +4208,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CAnimUpdateNodeBase {
-            public const nint m_nodePath = 0x18; // 
+            public const nint m_nodePath = 0x18; // CAnimNodePath
             public const nint m_networkMode = 0x48; // AnimNodeNetworkMode
             public const nint m_name = 0x50; // CUtlString
         }
@@ -5539,7 +5539,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CAnimUpdateSharedData {
-            public const nint m_nodes = 0x10; // 
+            public const nint m_nodes = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
             public const nint m_nodeIndexMap = 0x28; // CUtlHashtable<CAnimNodePath,int32>
             public const nint m_components = 0x48; // CUtlVector<CSmartPtr<CAnimComponentUpdater>>
             public const nint m_pParamListUpdater = 0x60; // CSmartPtr<CAnimParameterManagerUpdater>
@@ -5548,7 +5548,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_settings = 0x78; // CAnimGraphSettingsManager
             public const nint m_pStaticPoseCache = 0xA8; // CSmartPtr<CStaticPoseCacheBuilder>
             public const nint m_pSkeleton = 0xB0; // CSmartPtr<CAnimSkeleton>
-            public const nint m_rootNodePath = 0xB8; // 
+            public const nint m_rootNodePath = 0xB8; // CAnimNodePath
         }
         // Parent: None
         // Field count: 5
@@ -6247,7 +6247,7 @@ namespace CS2Dumper.Schemas {
         public static class CModelConfigElement_AttachedModel {
             public const nint m_InstanceName = 0x48; // CUtlString
             public const nint m_EntityClass = 0x50; // CUtlString
-            public const nint m_hModel = 0x58; // 
+            public const nint m_hModel = 0x58; // CStrongHandle<InfoForResourceTypeCModel>
             public const nint m_vOffset = 0x60; // Vector
             public const nint m_aAngOffset = 0x6C; // QAngle
             public const nint m_AttachmentName = 0x78; // CUtlString
