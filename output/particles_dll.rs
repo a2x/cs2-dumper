@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1338,7 +1338,7 @@ pub mod cs2_dumper {
                 pub const m_flFeatheringMaxDist: usize = 0x2438; // CParticleCollectionRendererFloatInput
                 pub const m_flFeatheringFilter: usize = 0x2598; // CParticleCollectionRendererFloatInput
                 pub const m_flDepthBias: usize = 0x26F8; // CParticleCollectionRendererFloatInput
-                pub const m_nSortMethod: usize = 0x2858; // ParticleSortingChoiceList_t
+                pub const m_nSortMethod: usize = 0x2858; // 
                 pub const m_bBlendFramesSeq0: usize = 0x285C; // bool
                 pub const m_bMaxLuminanceBlendingSequence0: usize = 0x285D; // bool
             }
@@ -2565,7 +2565,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderVRHapticEvent {
-                pub const m_nHand: usize = 0x210; // ParticleVRHandChoiceList_t
+                pub const m_nHand: usize = 0x210; // 
                 pub const m_nOutputHandCP: usize = 0x214; // int32
                 pub const m_nOutputField: usize = 0x218; // int32
                 pub const m_flAmplitude: usize = 0x220; // CPerParticleFloatInput
@@ -5572,7 +5572,7 @@ pub mod cs2_dumper {
                 pub const m_bReplaceTextureWithGradient: usize = 0x1; // bool
                 pub const m_hTexture: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_Gradient: usize = 0x10; // CColorGradient
-                pub const m_nTextureType: usize = 0x28; // SpriteCardTextureType_t
+                pub const m_nTextureType: usize = 0x28; // 
                 pub const m_nTextureChannels: usize = 0x2C; // SpriteCardTextureChannel_t
                 pub const m_nTextureBlendMode: usize = 0x30; // ParticleTextureLayerBlendType_t
                 pub const m_flTextureBlend: usize = 0x38; // CParticleCollectionRendererFloatInput

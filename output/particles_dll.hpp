@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #pragma once
 
@@ -1264,7 +1264,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFeatheringMaxDist = 0x2438; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_flFeatheringFilter = 0x2598; // CParticleCollectionRendererFloatInput
                 constexpr std::ptrdiff_t m_flDepthBias = 0x26F8; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_nSortMethod = 0x2858; // ParticleSortingChoiceList_t
+                constexpr std::ptrdiff_t m_nSortMethod = 0x2858; // 
                 constexpr std::ptrdiff_t m_bBlendFramesSeq0 = 0x285C; // bool
                 constexpr std::ptrdiff_t m_bMaxLuminanceBlendingSequence0 = 0x285D; // bool
             }
@@ -2491,7 +2491,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderVRHapticEvent {
-                constexpr std::ptrdiff_t m_nHand = 0x210; // ParticleVRHandChoiceList_t
+                constexpr std::ptrdiff_t m_nHand = 0x210; // 
                 constexpr std::ptrdiff_t m_nOutputHandCP = 0x214; // int32
                 constexpr std::ptrdiff_t m_nOutputField = 0x218; // int32
                 constexpr std::ptrdiff_t m_flAmplitude = 0x220; // CPerParticleFloatInput
@@ -5498,7 +5498,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bReplaceTextureWithGradient = 0x1; // bool
                 constexpr std::ptrdiff_t m_hTexture = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 constexpr std::ptrdiff_t m_Gradient = 0x10; // CColorGradient
-                constexpr std::ptrdiff_t m_nTextureType = 0x28; // SpriteCardTextureType_t
+                constexpr std::ptrdiff_t m_nTextureType = 0x28; // 
                 constexpr std::ptrdiff_t m_nTextureChannels = 0x2C; // SpriteCardTextureChannel_t
                 constexpr std::ptrdiff_t m_nTextureBlendMode = 0x30; // ParticleTextureLayerBlendType_t
                 constexpr std::ptrdiff_t m_flTextureBlend = 0x38; // CParticleCollectionRendererFloatInput

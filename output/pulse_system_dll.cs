@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: pulse_system.dll
@@ -240,7 +240,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CPulse_Chunk {
-            public const nint m_Instructions = 0x0; // CUtlLeanVector<PGDInstruction_t>
+            public const nint m_Instructions = 0x0; // 
             public const nint m_Registers = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
             public const nint m_InstructionEditorIDs = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
         }
@@ -316,7 +316,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CPulseCell_Base {
-            public const nint m_nEditorNodeID = 0x8; // PulseDocNodeID_t
+            public const nint m_nEditorNodeID = 0x8; // 
         }
         // Parent: None
         // Field count: 1
@@ -333,8 +333,8 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class PulseGraphExecutionHistoryCursorDesc_t {
             public const nint vecAncestorCursorIDs = 0x0; // CUtlVector<PulseCursorID_t>
-            public const nint nSpawnNodeID = 0x18; // PulseDocNodeID_t
-            public const nint nRetiredAtNodeID = 0x1C; // PulseDocNodeID_t
+            public const nint nSpawnNodeID = 0x18; // 
+            public const nint nRetiredAtNodeID = 0x1C; // 
             public const nint flLastReferenced = 0x20; // float32
             public const nint nLastValidEntryIdx = 0x24; // int32
         }
@@ -667,7 +667,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class PulseGraphExecutionHistoryEntry_t {
             public const nint nCursorID = 0x0; // PulseCursorID_t
-            public const nint nEditorID = 0x4; // PulseDocNodeID_t
+            public const nint nEditorID = 0x4; // 
             public const nint flExecTime = 0x8; // float32
             public const nint unFlags = 0xC; // uint32
             public const nint tagName = 0x10; // CUtlSymbolLarge
@@ -686,7 +686,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nInstanceID = 0x0; // PulseGraphInstanceID_t
             public const nint m_strFileName = 0x8; // CUtlString
             public const nint m_vecHistory = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
-            public const nint m_mapCellDesc = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
+            public const nint m_mapCellDesc = 0x28; // 
             public const nint m_mapCursorDesc = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
         }
         // Parent: CPulseCell_BaseYieldingInflow
@@ -764,7 +764,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_DefaultValue = 0x20; // KeyValues3
             public const nint m_bIsPublic = 0x32; // bool
             public const nint m_bIsObservable = 0x33; // bool
-            public const nint m_nEditorNodeID = 0x34; // PulseDocNodeID_t
+            public const nint m_nEditorNodeID = 0x34; // 
         }
         // Parent: CPulseCell_Inflow_BaseEntrypoint
         // Field count: 5
@@ -975,7 +975,7 @@ namespace CS2Dumper.Schemas {
         public static class CPulse_BlackboardReference {
             public const nint m_hBlackboardResource = 0x0; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIPulseGraphDef>>
             public const nint m_BlackboardResource = 0xE0; // CUtlSymbolLarge
-            public const nint m_nNodeID = 0xE8; // PulseDocNodeID_t
+            public const nint m_nNodeID = 0xE8; // 
             public const nint m_NodeName = 0xF0; // CGlobalSymbol
         }
         // Parent: None
@@ -1004,9 +1004,9 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CPulse_CallInfo {
             public const nint m_PortName = 0x0; // CUtlSymbolLarge
-            public const nint m_nEditorNodeID = 0x8; // PulseDocNodeID_t
+            public const nint m_nEditorNodeID = 0x8; // 
             public const nint m_RegisterMap = 0x10; // PulseRegisterMap_t
-            public const nint m_CallMethodID = 0x30; // PulseDocNodeID_t
+            public const nint m_CallMethodID = 0x30; // 
             public const nint m_nSrcChunk = 0x34; // PulseRuntimeChunkIndex_t
             public const nint m_nSrcInstruction = 0x38; // int32
         }

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -83,7 +83,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnMeshDesc_t {
-                pub const m_Mesh: usize = 0x18; // RnMesh_t
+                pub const m_Mesh: usize = 0x18; // 
             }
             // Parent: None
             // Field count: 106

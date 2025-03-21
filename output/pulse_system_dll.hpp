@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #pragma once
 
@@ -245,7 +245,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulse_Chunk {
-                constexpr std::ptrdiff_t m_Instructions = 0x0; // CUtlLeanVector<PGDInstruction_t>
+                constexpr std::ptrdiff_t m_Instructions = 0x0; // 
                 constexpr std::ptrdiff_t m_Registers = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
                 constexpr std::ptrdiff_t m_InstructionEditorIDs = 0x20; // CUtlLeanVector<PulseDocNodeID_t>
             }
@@ -321,7 +321,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CPulseCell_Base {
-                constexpr std::ptrdiff_t m_nEditorNodeID = 0x8; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t m_nEditorNodeID = 0x8; // 
             }
             // Parent: None
             // Field count: 1
@@ -338,8 +338,8 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace PulseGraphExecutionHistoryCursorDesc_t {
                 constexpr std::ptrdiff_t vecAncestorCursorIDs = 0x0; // CUtlVector<PulseCursorID_t>
-                constexpr std::ptrdiff_t nSpawnNodeID = 0x18; // PulseDocNodeID_t
-                constexpr std::ptrdiff_t nRetiredAtNodeID = 0x1C; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t nSpawnNodeID = 0x18; // 
+                constexpr std::ptrdiff_t nRetiredAtNodeID = 0x1C; // 
                 constexpr std::ptrdiff_t flLastReferenced = 0x20; // float32
                 constexpr std::ptrdiff_t nLastValidEntryIdx = 0x24; // int32
             }
@@ -672,7 +672,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace PulseGraphExecutionHistoryEntry_t {
                 constexpr std::ptrdiff_t nCursorID = 0x0; // PulseCursorID_t
-                constexpr std::ptrdiff_t nEditorID = 0x4; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t nEditorID = 0x4; // 
                 constexpr std::ptrdiff_t flExecTime = 0x8; // float32
                 constexpr std::ptrdiff_t unFlags = 0xC; // uint32
                 constexpr std::ptrdiff_t tagName = 0x10; // CUtlSymbolLarge
@@ -691,7 +691,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nInstanceID = 0x0; // PulseGraphInstanceID_t
                 constexpr std::ptrdiff_t m_strFileName = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_vecHistory = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
-                constexpr std::ptrdiff_t m_mapCellDesc = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
+                constexpr std::ptrdiff_t m_mapCellDesc = 0x28; // 
                 constexpr std::ptrdiff_t m_mapCursorDesc = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
             }
             // Parent: CPulseCell_BaseYieldingInflow
@@ -769,7 +769,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_DefaultValue = 0x20; // KeyValues3
                 constexpr std::ptrdiff_t m_bIsPublic = 0x32; // bool
                 constexpr std::ptrdiff_t m_bIsObservable = 0x33; // bool
-                constexpr std::ptrdiff_t m_nEditorNodeID = 0x34; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t m_nEditorNodeID = 0x34; // 
             }
             // Parent: CPulseCell_Inflow_BaseEntrypoint
             // Field count: 5
@@ -980,7 +980,7 @@ namespace cs2_dumper {
             namespace CPulse_BlackboardReference {
                 constexpr std::ptrdiff_t m_hBlackboardResource = 0x0; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeIPulseGraphDef>>
                 constexpr std::ptrdiff_t m_BlackboardResource = 0xE0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_nNodeID = 0xE8; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t m_nNodeID = 0xE8; // 
                 constexpr std::ptrdiff_t m_NodeName = 0xF0; // CGlobalSymbol
             }
             // Parent: None
@@ -1009,9 +1009,9 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CPulse_CallInfo {
                 constexpr std::ptrdiff_t m_PortName = 0x0; // CUtlSymbolLarge
-                constexpr std::ptrdiff_t m_nEditorNodeID = 0x8; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t m_nEditorNodeID = 0x8; // 
                 constexpr std::ptrdiff_t m_RegisterMap = 0x10; // PulseRegisterMap_t
-                constexpr std::ptrdiff_t m_CallMethodID = 0x30; // PulseDocNodeID_t
+                constexpr std::ptrdiff_t m_CallMethodID = 0x30; // 
                 constexpr std::ptrdiff_t m_nSrcChunk = 0x34; // PulseRuntimeChunkIndex_t
                 constexpr std::ptrdiff_t m_nSrcInstruction = 0x38; // int32
             }

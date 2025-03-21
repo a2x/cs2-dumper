@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-12 09:38:45.590431400 UTC
+// 2025-03-20 23:35:58.992097100 UTC
 
 #pragma once
 
@@ -83,7 +83,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnMeshDesc_t {
-                constexpr std::ptrdiff_t m_Mesh = 0x18; // RnMesh_t
+                constexpr std::ptrdiff_t m_Mesh = 0x18; // 
             }
             // Parent: None
             // Field count: 106
