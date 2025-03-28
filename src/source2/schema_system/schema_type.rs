@@ -85,7 +85,7 @@ pub struct SchemaType {
 unsafe impl Pod for SchemaType {}
 
 pub union SchemaTypeUnion {
-    pub schema_type: Pointer64<SchemaType>,
+    pub r#type: Pointer64<SchemaType>,
     pub class_binding: Pointer64<SchemaClassBinding>,
     pub enum_binding: Pointer64<SchemaEnumBinding>,
     pub array: SchemaArrayT,

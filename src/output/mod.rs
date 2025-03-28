@@ -2,7 +2,7 @@ use std::fmt::{self, Write};
 use std::fs;
 use std::path::Path;
 
-use anyhow::{anyhow, Result};
+use anyhow::{Result, anyhow};
 
 use chrono::{DateTime, Utc};
 
@@ -28,7 +28,6 @@ enum Item<'a> {
 }
 
 impl<'a> Item<'a> {
-    #[inline]
     fn write(&self, fmt: &mut Formatter<'a>, file_type: &str) -> fmt::Result {
         match file_type {
             "cs" => self.write_cs(fmt),
@@ -48,7 +47,6 @@ trait CodeWriter {
 }
 
 impl<'a> CodeWriter for Item<'a> {
-    #[inline]
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_cs(fmt),
@@ -58,7 +56,6 @@ impl<'a> CodeWriter for Item<'a> {
         }
     }
 
-    #[inline]
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_hpp(fmt),
@@ -68,7 +65,6 @@ impl<'a> CodeWriter for Item<'a> {
         }
     }
 
-    #[inline]
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_json(fmt),
@@ -78,7 +74,6 @@ impl<'a> CodeWriter for Item<'a> {
         }
     }
 
-    #[inline]
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_rs(fmt),
@@ -90,7 +85,7 @@ impl<'a> CodeWriter for Item<'a> {
 }
 
 pub struct Output<'a> {
-    file_types: &'a Vec<String>,
+    file_types: &'a [String],
     indent_size: usize,
     out_dir: &'a Path,
     result: &'a AnalysisResult,
@@ -99,7 +94,7 @@ pub struct Output<'a> {
 
 impl<'a> Output<'a> {
     pub fn new(
-        file_types: &'a Vec<String>,
+        file_types: &'a [String],
         indent_size: usize,
         out_dir: &'a Path,
         result: &'a AnalysisResult,
@@ -115,7 +110,7 @@ impl<'a> Output<'a> {
         })
     }
 
-    pub fn dump_all(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<()> {
+    pub fn dump_all<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
         let items = [
             ("buttons", Item::Buttons(&self.result.buttons)),
             ("interfaces", Item::Interfaces(&self.result.interfaces)),
@@ -132,7 +127,7 @@ impl<'a> Output<'a> {
         Ok(())
     }
 
-    fn dump_info(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<()> {
+    fn dump_info<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
         let file_path = self.out_dir.join("info.json");
 
         let build_number = self

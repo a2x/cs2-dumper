@@ -3,7 +3,7 @@ use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{slugify, CodeWriter, Formatter, InterfaceMap};
+use super::{CodeWriter, Formatter, InterfaceMap, slugify};
 
 impl CodeWriter for InterfaceMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -17,7 +17,11 @@ impl CodeWriter for InterfaceMap {
                     |fmt| {
                         for (name, value) in ifaces {
                             if *value > i32::MAX as u64 {
-                                writeln!(fmt, "public static readonly nint {} = unchecked((nint){:#X});", name, value)?;
+                                writeln!(
+                                    fmt,
+                                    "public static readonly nint {} = unchecked((nint){:#X});",
+                                    name, value
+                                )?;
                             } else {
                                 writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
                             };

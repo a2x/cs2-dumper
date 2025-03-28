@@ -1,9 +1,6 @@
 use memflow::prelude::v1::*;
 
-use super::{
-    SchemaBaseClassInfoData, SchemaClassFieldData, SchemaMetadataEntryData, SchemaStaticFieldData,
-    SchemaSystemTypeScope, SchemaType,
-};
+use super::*;
 
 pub type SchemaClassBinding = SchemaClassInfoData;
 
@@ -28,6 +25,6 @@ pub struct SchemaClassInfoData {
     pad_0040: [u8; 0x8],                                       // 0x0040
     pub static_metadata: Pointer64<[SchemaMetadataEntryData]>, // 0x0048
     pub type_scope: Pointer64<SchemaSystemTypeScope>,          // 0x0050
-    pub schema_type: Pointer64<SchemaType>,                    // 0x0058
+    pub r#type: Pointer64<SchemaType>,                         // 0x0058
     pad_0060: [u8; 0x10],                                      // 0x0060
 }

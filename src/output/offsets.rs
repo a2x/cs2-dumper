@@ -2,7 +2,7 @@ use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{slugify, CodeWriter, Formatter, OffsetMap};
+use super::{CodeWriter, Formatter, OffsetMap, slugify};
 
 impl CodeWriter for OffsetMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {

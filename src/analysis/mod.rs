@@ -24,7 +24,7 @@ pub struct AnalysisResult {
     pub schemas: SchemaMap,
 }
 
-pub fn analyze_all(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<AnalysisResult> {
+pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisResult> {
     let buttons = analyze(process, buttons);
 
     info!("found {} buttons", buttons.len());
@@ -75,10 +75,10 @@ pub fn analyze_all(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Analys
     })
 }
 
-#[inline]
-fn analyze<F, T>(process: &mut IntoProcessInstanceArcBox<'_>, f: F) -> T
+fn analyze<P, F, T>(process: &mut P, f: F) -> T
 where
-    F: FnOnce(&mut IntoProcessInstanceArcBox<'_>) -> Result<T>,
+    P: Process + MemoryView,
+    F: FnOnce(&mut P) -> Result<T>,
     T: Default,
 {
     let name = type_name::<F>();

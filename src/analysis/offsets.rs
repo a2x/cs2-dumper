@@ -7,10 +7,10 @@ use log::{debug, error};
 use memflow::prelude::v1::*;
 
 use pelite::pattern;
-use pelite::pattern::{save_len, Atom};
+use pelite::pattern::{Atom, save_len};
 use pelite::pe64::{Pe, PeView, Rva};
 
-use phf::{phf_map, Map};
+use phf::{Map, phf_map};
 
 pub type OffsetMap = BTreeMap<String, BTreeMap<String, Rva>>;
 
@@ -127,7 +127,7 @@ pattern_map! {
     },
 }
 
-pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap> {
+pub fn offsets<P: Process + MemoryView>(process: &mut P) -> Result<OffsetMap> {
     let mut map = BTreeMap::new();
 
     let modules: [(&str, fn(PeView) -> BTreeMap<String, u32>); 5] = [
