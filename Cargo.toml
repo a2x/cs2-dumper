@@ -2,7 +2,7 @@
 name = "cs2-dumper"
 version = "0.1.2"
 authors = ["a2x"]
-edition = "2021"
+edition = "2024"
 readme = "README.md"
 repository = "https://github.com/a2x/cs2-dumper"
 license = "MIT"
