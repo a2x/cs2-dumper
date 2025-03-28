@@ -3,27 +3,34 @@
 An external offset/interface dumper for Counter-Strike 2, with support for both Windows & Linux. Powered
 by [memflow](https://github.com/memflow/memflow).
 
-The native Linux version is available in the [linux](https://github.com/a2x/cs2-dumper/tree/linux) branch.
+The native Linux version is available in the [linux](https://github.com/a2x/cs2-dumper/tree/linux) branch (currently
+outdated).
 
-For a work-in-progress offline version, please check out [cs2-analyzer](https://github.com/a2x/cs2-analyzer) and the web demo here: https://a2x.github.io/cs2-analyzer
+For a work-in-progress offline version, check out the [cs2-analyzer](https://github.com/a2x/cs2-analyzer) repository or
+view its included web demo [here](https://a2x.github.io/cs2-analyzer).
 
 ## Getting Started
 
 You can download the latest release from [Releases](https://github.com/a2x/cs2-dumper/releases) or compile it yourself.
-Note that compiling it yourself requires your Rust compiler version to be at least 1.74.0 or newer, and the nightly
-toolchain must be installed.
+Note that compiling it yourself requires your Rust compiler version to be at least 1.74.0 or newer.
 
 ## Usage
 
-1. Ensure the game process is running (Being in the main menu should suffice).
-2. Run the `cs2-dumper` executable (Note that some memflow connectors may require elevated privileges).
+1. Ensure the game is running (Being in the main menu should suffice).
+2. Run the `cs2-dumper` executable.
 
 _Note:_ If you run the executable without specifying an optional memflow connector name, it will automatically use the
 [memflow-native](https://github.com/memflow/memflow-native) OS layer to read the memory of the game process. If you
-wish to use an existing memflow connector instead, you can pass the `connector` and optional `connector-args` arguments
-to the program.
+wish to use an existing memflow connector instead, such as **pcileech** or **kvm**, you can pass the `connector` and
+optional `connector-args` arguments to the program. These connectors can be installed and managed using
+the [memflowup](https://github.com/memflow/memflowup) tool.
 
-E.g. `sudo ./cs2-dumper -c pcileech -a :device=FPGA -vvv`
+E.g (for pcileech). `cs2-dumper -c pcileech -a :device=FPGA -vv`
+
+Certain connectors, such as the [kvm](https://github.com/memflow/memflow-kvm) connector on Linux or
+the [pcileech](https://github.com/memflow/memflow-pcileech) / [winio](https://github.com/a2x/memflow-winio)
+connectors on Windows, require elevated privileges to work. So either run the `cs2-dumper` executable with `sudo` on
+Linux or as an administrator on Windows.
 
 ### Available Arguments
 
@@ -39,7 +46,7 @@ E.g. `sudo ./cs2-dumper -c pcileech -a :device=FPGA -vvv`
 
 ## Running Tests
 
-To run tests, use the following command: `cargo test -- --nocapture`.
+To run the few basic provided tests, use the following command: `cargo test -- --nocapture`.
 
 ## License
 
