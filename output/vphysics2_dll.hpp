@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-20 23:35:58.992097100 UTC
+// 2025-04-01 00:10:44.822666300 UTC
 
 #pragma once
 
@@ -83,7 +83,7 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RnMeshDesc_t {
-                constexpr std::ptrdiff_t m_Mesh = 0x18; // 
+                constexpr std::ptrdiff_t m_Mesh = 0x18; // RnMesh_t
             }
             // Parent: None
             // Field count: 106
@@ -956,7 +956,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Faces = 0xB8; // CUtlVector<RnFace_t>
                 constexpr std::ptrdiff_t m_FacePlanes = 0xD0; // CUtlVector<RnPlane_t>
                 constexpr std::ptrdiff_t m_nFlags = 0xE8; // uint32
-                constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // CRegionSVM*
+                constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // 
             }
             // Parent: None
             // Field count: 4

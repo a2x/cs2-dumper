@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-20 23:35:58.992097100 UTC
+// 2025-04-01 00:10:44.822666300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -3665,7 +3665,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         // MPropertyCustomEditor
         public static class CParticleVariableRef {
-            public const nint m_variableName = 0x0; // CKV3MemberNameWithStorage
+            public const nint m_variableName = 0x0; // 
             public const nint m_variableType = 0x38; // PulseValueType_t
         }
         // Parent: CParticleFunctionOperator
@@ -4089,9 +4089,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_flInputScale1 = 0x1D0; // float32
             public const nint m_nFieldInput2 = 0x1D4; // ParticleAttributeIndex_t
             public const nint m_flInputScale2 = 0x1D8; // float32
-            public const nint m_nControlPointInput1 = 0x1DC; // ControlPointReference_t
+            public const nint m_nControlPointInput1 = 0x1DC; // 
             public const nint m_flControlPointScale1 = 0x1F0; // float32
-            public const nint m_nControlPointInput2 = 0x1F4; // ControlPointReference_t
+            public const nint m_nControlPointInput2 = 0x1F4; // 
             public const nint m_flControlPointScale2 = 0x208; // float32
             public const nint m_nFieldOutput = 0x20C; // ParticleAttributeIndex_t
             public const nint m_vFinalOutputScale = 0x210; // Vector

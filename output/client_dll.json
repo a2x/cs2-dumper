@@ -579,26 +579,6 @@
         ],
         "parent": "C_BaseTrigger"
       },
-      "CBreachCharge": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
-      },
-      "CBreachChargeProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseGrenade"
-      },
-      "CBumpMine": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
-      },
-      "CBumpMineProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseGrenade"
-      },
       "CBuoyancyHelper": {
         "fields": {
           "m_flFluidDensity": 28,
@@ -3844,11 +3824,6 @@
         "metadata": [],
         "parent": "C_Sprite"
       },
-      "CTablet": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
-      },
       "CTakeDamageInfoAPI": {
         "fields": {},
         "metadata": [
@@ -3912,25 +3887,10 @@
         ],
         "parent": "IntervalTimer"
       },
-      "CTripWireFire": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseCSGrenade"
-      },
-      "CTripWireFireProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseGrenade"
-      },
       "CWaterSplasher": {
         "fields": {},
         "metadata": [],
         "parent": "C_BaseModelEntity"
-      },
-      "CWeaponZoneRepulsor": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBaseGun"
       },
       "C_AK47": {
         "fields": {},
@@ -9809,25 +9769,6 @@
         ],
         "parent": "CBaseAnimGraph"
       },
-      "C_Fists": {
-        "fields": {
-          "m_bPlayingUninterruptableAct": 6944,
-          "m_nUninterruptableActivity": 6948
-        },
-        "metadata": [
-          {
-            "name": "m_bPlayingUninterruptableAct",
-            "type": "NetworkVarNames",
-            "type_name": "bool"
-          },
-          {
-            "name": "m_nUninterruptableActivity",
-            "type": "NetworkVarNames",
-            "type_name": "PlayerAnimEvent_t"
-          }
-        ],
-        "parent": "C_CSWeaponBase"
-      },
       "C_Flashbang": {
         "fields": {},
         "metadata": [],
@@ -10797,11 +10738,6 @@
           }
         ],
         "parent": "C_BaseEntity"
-      },
-      "C_Melee": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
       },
       "C_ModelPointEntity": {
         "fields": {},
@@ -12641,16 +12577,6 @@
         "metadata": [],
         "parent": null
       },
-      "C_SensorGrenade": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseCSGrenade"
-      },
-      "C_SensorGrenadeProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseCSGrenadeProjectile"
-      },
       "C_ShatterGlassShardPhysics": {
         "fields": {
           "m_ShardDesc": 4384
@@ -13803,19 +13729,6 @@
         "fields": {},
         "metadata": [],
         "parent": "C_CSWeaponBase"
-      },
-      "C_WeaponShield": {
-        "fields": {
-          "m_flDisplayHealth": 6976
-        },
-        "metadata": [
-          {
-            "name": "m_flDisplayHealth",
-            "type": "NetworkVarNames",
-            "type_name": "float"
-          }
-        ],
-        "parent": "C_CSWeaponBaseGun"
       },
       "C_WeaponTaser": {
         "fields": {
