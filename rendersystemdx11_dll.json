@@ -1,0 +1,109 @@
+{
+  "rendersystemdx11.dll": {
+    "classes": {
+      "RenderInputLayoutField_t": {
+        "fields": {
+          "m_Format": 36,
+          "m_nInstanceStepRate": 52,
+          "m_nOffset": 40,
+          "m_nSemanticIndex": 32,
+          "m_nSlot": 44,
+          "m_nSlotType": 48,
+          "m_pSemanticName": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "VsInputSignatureElement_t": {
+        "fields": {
+          "m_nD3DSemanticIndex": 192,
+          "m_pD3DSemanticName": 128,
+          "m_pName": 0,
+          "m_pSemantic": 64
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "VsInputSignature_t": {
+        "fields": {
+          "m_elems": 0
+        },
+        "metadata": [],
+        "parent": null
+      }
+    },
+    "enums": {
+      "InputLayoutVariation_t": {
+        "alignment": 4,
+        "members": {
+          "INPUT_LAYOUT_VARIATION_DEFAULT": 0,
+          "INPUT_LAYOUT_VARIATION_MAX": 3,
+          "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID": 1,
+          "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID": 2
+        },
+        "type": "uint32"
+      },
+      "RenderBufferFlags_t": {
+        "alignment": 4,
+        "members": {
+          "RENDER_BUFFER_ACCELERATION_STRUCTURE": 512,
+          "RENDER_BUFFER_APPEND_CONSUME_BUFFER": 64,
+          "RENDER_BUFFER_BYTEADDRESS_BUFFER": 16,
+          "RENDER_BUFFER_PER_FRAME_WRITE_ONCE": 2048,
+          "RENDER_BUFFER_POOL_ALLOCATED": 4096,
+          "RENDER_BUFFER_SHADER_BINDING_TABLE": 1024,
+          "RENDER_BUFFER_STRUCTURED_BUFFER": 32,
+          "RENDER_BUFFER_UAV_COUNTER": 128,
+          "RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS": 256,
+          "RENDER_BUFFER_USAGE_INDEX_BUFFER": 2,
+          "RENDER_BUFFER_USAGE_SHADER_RESOURCE": 4,
+          "RENDER_BUFFER_USAGE_UNORDERED_ACCESS": 8,
+          "RENDER_BUFFER_USAGE_VERTEX_BUFFER": 1
+        },
+        "type": "uint32"
+      },
+      "RenderMultisampleType_t": {
+        "alignment": 1,
+        "members": {
+          "RENDER_MULTISAMPLE_16X": 5,
+          "RENDER_MULTISAMPLE_2X": 1,
+          "RENDER_MULTISAMPLE_4X": 2,
+          "RENDER_MULTISAMPLE_6X": 3,
+          "RENDER_MULTISAMPLE_8X": 4,
+          "RENDER_MULTISAMPLE_INVALID": -1,
+          "RENDER_MULTISAMPLE_NONE": 0,
+          "RENDER_MULTISAMPLE_TYPE_COUNT": 6
+        },
+        "type": "uint8"
+      },
+      "RenderPrimitiveType_t": {
+        "alignment": 4,
+        "members": {
+          "RENDER_PRIM_COMPUTE_SHADER": 11,
+          "RENDER_PRIM_HETEROGENOUS": 10,
+          "RENDER_PRIM_INSTANCED_QUADS": 9,
+          "RENDER_PRIM_LINES": 1,
+          "RENDER_PRIM_LINES_WITH_ADJACENCY": 2,
+          "RENDER_PRIM_LINE_STRIP": 3,
+          "RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY": 4,
+          "RENDER_PRIM_POINTS": 0,
+          "RENDER_PRIM_TRIANGLES": 5,
+          "RENDER_PRIM_TRIANGLES_WITH_ADJACENCY": 6,
+          "RENDER_PRIM_TRIANGLE_STRIP": 7,
+          "RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY": 8,
+          "RENDER_PRIM_TYPE_COUNT": 12
+        },
+        "type": "uint32"
+      },
+      "RenderSlotType_t": {
+        "alignment": 4,
+        "members": {
+          "RENDER_SLOT_INVALID": -1,
+          "RENDER_SLOT_PER_INSTANCE": 1,
+          "RENDER_SLOT_PER_VERTEX": 0
+        },
+        "type": "uint32"
+      }
+    }
+  }
+}
