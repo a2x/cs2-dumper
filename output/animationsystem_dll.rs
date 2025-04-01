@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-20 23:35:58.992097100 UTC
+// 2025-04-01 00:10:44.822666300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -3170,7 +3170,7 @@ pub mod cs2_dumper {
                 pub const m_nFlags: usize = 0x50; // CUtlVector<int32>
                 pub const m_szGrouping: usize = 0x68; // CUtlVector<CUtlString>
                 pub const m_nCompressorIndex: usize = 0x80; // CUtlVector<int32>
-                pub const m_szElementNames: usize = 0x98; // 
+                pub const m_szElementNames: usize = 0x98; // CUtlVector<CUtlVector<char*>>
                 pub const m_nElementUniqueID: usize = 0xB0; // CUtlVector<CUtlVector<int32>>
                 pub const m_nElementMask: usize = 0xC8; // CUtlVector<uint32>
                 pub const m_vectorCompressor: usize = 0xF8; // CUtlVector<CCompressor<Vector>*>
@@ -3834,10 +3834,10 @@ pub mod cs2_dumper {
             pub mod CAnimParameterManagerUpdater {
                 pub const m_parameters: usize = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
                 pub const m_idToIndexMap: usize = 0x30; // CUtlHashtable<AnimParamID,int32>
-                pub const m_nameToIndexMap: usize = 0x50; // 
+                pub const m_nameToIndexMap: usize = 0x50; // CUtlHashtable<CUtlString,int32>
                 pub const m_indexToHandle: usize = 0x70; // CUtlVector<CAnimParamHandle>
                 pub const m_autoResetParams: usize = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
-                pub const m_autoResetMap: usize = 0xA0; // 
+                pub const m_autoResetMap: usize = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
             }
             // Parent: None
             // Field count: 7

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-03-20 23:35:58.992097100 UTC
+// 2025-04-01 00:10:44.822666300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -3073,7 +3073,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nFlags = 0x50; // CUtlVector<int32>
             public const nint m_szGrouping = 0x68; // CUtlVector<CUtlString>
             public const nint m_nCompressorIndex = 0x80; // CUtlVector<int32>
-            public const nint m_szElementNames = 0x98; // 
+            public const nint m_szElementNames = 0x98; // CUtlVector<CUtlVector<char*>>
             public const nint m_nElementUniqueID = 0xB0; // CUtlVector<CUtlVector<int32>>
             public const nint m_nElementMask = 0xC8; // CUtlVector<uint32>
             public const nint m_vectorCompressor = 0xF8; // CUtlVector<CCompressor<Vector>*>
@@ -3737,10 +3737,10 @@ namespace CS2Dumper.Schemas {
         public static class CAnimParameterManagerUpdater {
             public const nint m_parameters = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
             public const nint m_idToIndexMap = 0x30; // CUtlHashtable<AnimParamID,int32>
-            public const nint m_nameToIndexMap = 0x50; // 
+            public const nint m_nameToIndexMap = 0x50; // CUtlHashtable<CUtlString,int32>
             public const nint m_indexToHandle = 0x70; // CUtlVector<CAnimParamHandle>
             public const nint m_autoResetParams = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
-            public const nint m_autoResetMap = 0xA0; // 
+            public const nint m_autoResetMap = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
         }
         // Parent: None
         // Field count: 7
