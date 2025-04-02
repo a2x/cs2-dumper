@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -1259,7 +1259,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFeatheringMaxDist = 0x2438; // CParticleCollectionRendererFloatInput
             public const nint m_flFeatheringFilter = 0x2598; // CParticleCollectionRendererFloatInput
             public const nint m_flDepthBias = 0x26F8; // CParticleCollectionRendererFloatInput
-            public const nint m_nSortMethod = 0x2858; // 
+            public const nint m_nSortMethod = 0x2858; // ParticleSortingChoiceList_t
             public const nint m_bBlendFramesSeq0 = 0x285C; // bool
             public const nint m_bMaxLuminanceBlendingSequence0 = 0x285D; // bool
         }
@@ -2486,7 +2486,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_RenderVRHapticEvent {
-            public const nint m_nHand = 0x210; // 
+            public const nint m_nHand = 0x210; // ParticleVRHandChoiceList_t
             public const nint m_nOutputHandCP = 0x214; // int32
             public const nint m_nOutputField = 0x218; // int32
             public const nint m_flAmplitude = 0x220; // CPerParticleFloatInput
@@ -3665,7 +3665,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         // MPropertyCustomEditor
         public static class CParticleVariableRef {
-            public const nint m_variableName = 0x0; // 
+            public const nint m_variableName = 0x0; // CKV3MemberNameWithStorage
             public const nint m_variableType = 0x38; // PulseValueType_t
         }
         // Parent: CParticleFunctionOperator
@@ -4089,9 +4089,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_flInputScale1 = 0x1D0; // float32
             public const nint m_nFieldInput2 = 0x1D4; // ParticleAttributeIndex_t
             public const nint m_flInputScale2 = 0x1D8; // float32
-            public const nint m_nControlPointInput1 = 0x1DC; // 
+            public const nint m_nControlPointInput1 = 0x1DC; // ControlPointReference_t
             public const nint m_flControlPointScale1 = 0x1F0; // float32
-            public const nint m_nControlPointInput2 = 0x1F4; // 
+            public const nint m_nControlPointInput2 = 0x1F4; // ControlPointReference_t
             public const nint m_flControlPointScale2 = 0x208; // float32
             public const nint m_nFieldOutput = 0x20C; // ParticleAttributeIndex_t
             public const nint m_vFinalOutputScale = 0x210; // Vector
@@ -5493,7 +5493,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bReplaceTextureWithGradient = 0x1; // bool
             public const nint m_hTexture = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
             public const nint m_Gradient = 0x10; // CColorGradient
-            public const nint m_nTextureType = 0x28; // 
+            public const nint m_nTextureType = 0x28; // SpriteCardTextureType_t
             public const nint m_nTextureChannels = 0x2C; // SpriteCardTextureChannel_t
             public const nint m_nTextureBlendMode = 0x30; // ParticleTextureLayerBlendType_t
             public const nint m_flTextureBlend = 0x38; // CParticleCollectionRendererFloatInput

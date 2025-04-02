@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -249,8 +249,8 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerBlender {
-                pub const m_firstSound: usize = 0xC0; // 
-                pub const m_secondSound: usize = 0xD8; // 
+                pub const m_firstSound: usize = 0xC0; // CSoundContainerReference
+                pub const m_secondSound: usize = 0xD8; // CSoundContainerReference
                 pub const m_flBlendFactor: usize = 0xF0; // float32
             }
             // Parent: None
@@ -375,7 +375,7 @@ pub mod cs2_dumper {
             pub mod CSoundContainerReference {
                 pub const m_bUseReference: usize = 0x0; // bool
                 pub const m_sound: usize = 0x8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_pSound: usize = 0x10; // 
+                pub const m_pSound: usize = 0x10; // CVoiceContainerBase*
             }
             // Parent: CVoiceContainerBase
             // Field count: 0
@@ -763,7 +763,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CVoiceContainerSetElement {
-                pub const m_sound: usize = 0x0; // 
+                pub const m_sound: usize = 0x0; // CSoundContainerReference
                 pub const m_flVolumeDB: usize = 0x18; // float32
             }
             // Parent: None
@@ -1076,7 +1076,7 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerLoopTrigger {
-                pub const m_sound: usize = 0xC0; // 
+                pub const m_sound: usize = 0xC0; // CSoundContainerReference
                 pub const m_flRetriggerTimeMin: usize = 0xD8; // float32
                 pub const m_flRetriggerTimeMax: usize = 0xDC; // float32
                 pub const m_flFadeTime: usize = 0xE0; // float32

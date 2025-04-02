@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
@@ -951,7 +951,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_Faces = 0xB8; // CUtlVector<RnFace_t>
             public const nint m_FacePlanes = 0xD0; // CUtlVector<RnPlane_t>
             public const nint m_nFlags = 0xE8; // uint32
-            public const nint m_pRegionSVM = 0xF0; // 
+            public const nint m_pRegionSVM = 0xF0; // CRegionSVM*
         }
         // Parent: None
         // Field count: 4

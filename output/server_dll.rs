@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1965,7 +1965,7 @@ pub mod cs2_dumper {
                 pub const m_vEndPointWorld: usize = 0x874; // Vector
                 pub const m_vEndPointRelative: usize = 0x880; // Vector
                 pub const m_radius: usize = 0x88C; // float32
-                pub const m_TouchType: usize = 0x890; // 
+                pub const m_TouchType: usize = 0x890; // Touch_t
                 pub const m_iFilterName: usize = 0x898; // CUtlSymbolLarge
                 pub const m_hFilter: usize = 0x8A0; // CHandle<CBaseEntity>
                 pub const m_iszDecal: usize = 0x8A8; // CUtlSymbolLarge
@@ -2111,7 +2111,7 @@ pub mod cs2_dumper {
                 pub const m_vecCsViewPunchAngle: usize = 0x40; // QAngle
                 pub const m_nCsViewPunchAngleTick: usize = 0x4C; // GameTick_t
                 pub const m_flCsViewPunchAngleTickRatio: usize = 0x50; // float32
-                pub const m_PlayerFog: usize = 0x58; // 
+                pub const m_PlayerFog: usize = 0x58; // fogplayerparams_t
                 pub const m_hColorCorrectionCtrl: usize = 0x98; // CHandle<CColorCorrection>
                 pub const m_hViewEntity: usize = 0x9C; // CHandle<CBaseEntity>
                 pub const m_hTonemapController: usize = 0xA0; // CHandle<CTonemapController2>
@@ -2974,7 +2974,7 @@ pub mod cs2_dumper {
                 pub const m_flLightStyleStartTime: usize = 0x7C8; // GameTime_t
                 pub const m_QueuedLightStyleStrings: usize = 0x7D0; // CNetworkUtlVectorBase<CUtlString>
                 pub const m_LightStyleEvents: usize = 0x7E8; // CNetworkUtlVectorBase<CUtlString>
-                pub const m_LightStyleTargets: usize = 0x800; // 
+                pub const m_LightStyleTargets: usize = 0x800; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
                 pub const m_StyleEvent: usize = 0x818; // CEntityIOOutput[4]
                 pub const m_hLightCookie: usize = 0x8D8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_flShape: usize = 0x8E0; // float32
@@ -3106,7 +3106,7 @@ pub mod cs2_dumper {
             // Field count: 2
             pub mod CLogicNavigation {
                 pub const m_isOn: usize = 0x4E8; // bool
-                pub const m_navProperty: usize = 0x4EC; // 
+                pub const m_navProperty: usize = 0x4EC; // navproperties_t
             }
             // Parent: CPointEntity
             // Field count: 12
@@ -4428,12 +4428,12 @@ pub mod cs2_dumper {
                 pub const m_PredNetUInt16Variables: usize = 0x38; // CNetworkUtlVectorBase<uint16>
                 pub const m_PredNetIntVariables: usize = 0x50; // CNetworkUtlVectorBase<int32>
                 pub const m_PredNetUInt32Variables: usize = 0x68; // CNetworkUtlVectorBase<uint32>
-                pub const m_PredNetUInt64Variables: usize = 0x80; // 
+                pub const m_PredNetUInt64Variables: usize = 0x80; // CNetworkUtlVectorBase<uint64>
                 pub const m_PredNetFloatVariables: usize = 0x98; // CNetworkUtlVectorBase<float32>
-                pub const m_PredNetVectorVariables: usize = 0xB0; // 
+                pub const m_PredNetVectorVariables: usize = 0xB0; // CNetworkUtlVectorBase<Vector>
                 pub const m_PredNetQuaternionVariables: usize = 0xC8; // CNetworkUtlVectorBase<Quaternion>
                 pub const m_PredNetGlobalSymbolVariables: usize = 0xE0; // CNetworkUtlVectorBase<CGlobalSymbol>
-                pub const m_OwnerOnlyPredNetBoolVariables: usize = 0xF8; // 
+                pub const m_OwnerOnlyPredNetBoolVariables: usize = 0xF8; // CNetworkUtlVectorBase<uint32>
                 pub const m_OwnerOnlyPredNetByteVariables: usize = 0x110; // CNetworkUtlVectorBase<uint8>
                 pub const m_OwnerOnlyPredNetUInt16Variables: usize = 0x128; // CNetworkUtlVectorBase<uint16>
                 pub const m_OwnerOnlyPredNetIntVariables: usize = 0x140; // CNetworkUtlVectorBase<int32>
@@ -6254,7 +6254,7 @@ pub mod cs2_dumper {
                 pub const m_bOverrideWithEvent: usize = 0x518; // bool
                 pub const m_soundscapeIndex: usize = 0x51C; // int32
                 pub const m_soundscapeEntityListId: usize = 0x520; // int32
-                pub const m_positionNames: usize = 0x528; // 
+                pub const m_positionNames: usize = 0x528; // CUtlSymbolLarge[8]
                 pub const m_hProxySoundscape: usize = 0x568; // CHandle<CEnvSoundscape>
                 pub const m_bDisabled: usize = 0x56C; // bool
                 pub const m_soundscapeName: usize = 0x570; // CUtlSymbolLarge
@@ -6751,8 +6751,8 @@ pub mod cs2_dumper {
                 pub const m_LastHitGroup: usize = 0x550; // HitGroup_t
                 pub const m_flDissolveStartTime: usize = 0x554; // GameTime_t
                 pub const m_OnIgnite: usize = 0x558; // CEntityIOOutput
-                pub const m_nRenderMode: usize = 0x580; // 
-                pub const m_nRenderFX: usize = 0x581; // 
+                pub const m_nRenderMode: usize = 0x580; // RenderMode_t
+                pub const m_nRenderFX: usize = 0x581; // RenderFx_t
                 pub const m_bAllowFadeInView: usize = 0x582; // bool
                 pub const m_clrRender: usize = 0x5A0; // Color
                 pub const m_vecRenderAttributes: usize = 0x5A8; // CUtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
@@ -7301,7 +7301,7 @@ pub mod cs2_dumper {
                 pub const m_PathNodes_TangentIn: usize = 0x548; // CNetworkUtlVectorBase<Vector>
                 pub const m_PathNodes_TangentOut: usize = 0x560; // CNetworkUtlVectorBase<Vector>
                 pub const m_PathNodes_Color: usize = 0x578; // CNetworkUtlVectorBase<Vector>
-                pub const m_PathNodes_PinEnabled: usize = 0x590; // 
+                pub const m_PathNodes_PinEnabled: usize = 0x590; // CNetworkUtlVectorBase<bool>
                 pub const m_PathNodes_RadiusScale: usize = 0x5A8; // CNetworkUtlVectorBase<float32>
             }
             // Parent: CBaseEntity
@@ -7363,7 +7363,7 @@ pub mod cs2_dumper {
                 pub const m_nPreviousNodeIndex: usize = 0x7D4; // int32
                 pub const m_bFixedOrientation: usize = 0x7D8; // bool
                 pub const m_bFixedPitch: usize = 0x7D9; // bool
-                pub const m_eSolidType: usize = 0x7DA; // 
+                pub const m_eSolidType: usize = 0x7DA; // SolidType_t
                 pub const m_bIsMoving: usize = 0x7DB; // bool
                 pub const m_flTimeToReachMaxSpeed: usize = 0x7DC; // float32
                 pub const m_flDistanceToReachMaxSpeed: usize = 0x7E0; // float32
@@ -8764,7 +8764,7 @@ pub mod cs2_dumper {
                 pub const m_vecMins: usize = 0x40; // Vector
                 pub const m_vecMaxs: usize = 0x4C; // Vector
                 pub const m_usSolidFlags: usize = 0x5A; // uint8
-                pub const m_nSolidType: usize = 0x5B; // 
+                pub const m_nSolidType: usize = 0x5B; // SolidType_t
                 pub const m_triggerBloat: usize = 0x5C; // uint8
                 pub const m_nSurroundType: usize = 0x5D; // SurroundingBoundsType_t
                 pub const m_CollisionGroup: usize = 0x5E; // uint8
@@ -9561,7 +9561,7 @@ pub mod cs2_dumper {
                 pub const m_iLoop: usize = 0x4E0; // int32
                 pub const m_iBeam: usize = 0x4E4; // int32
                 pub const m_pBeam: usize = 0x4E8; // CBeam*[24]
-                pub const m_flBeamTime: usize = 0x5A8; // 
+                pub const m_flBeamTime: usize = 0x5A8; // GameTime_t[24]
                 pub const m_flStartTime: usize = 0x608; // GameTime_t
             }
             // Parent: CCSWeaponBaseGun
@@ -10475,7 +10475,7 @@ pub mod cs2_dumper {
                 pub const m_nTransitionStartTick: usize = 0x7B8; // GameTick_t
                 pub const m_nTransitionDurationTicks: usize = 0x7BC; // int32
                 pub const m_flTransitionStartSpeed: usize = 0x7C0; // float32
-                pub const m_hConveyorModels: usize = 0x7C8; // 
+                pub const m_hConveyorModels: usize = 0x7C8; // CNetworkUtlVectorBase<CHandle<CBaseEntity>>
             }
             // Parent: CCSWeaponBaseGun
             // Field count: 0
@@ -11076,7 +11076,7 @@ pub mod cs2_dumper {
                 pub const m_bTakesDamage: usize = 0x2D8; // bool
                 pub const m_nTakeDamageFlags: usize = 0x2E0; // TakeDamageFlags_t
                 pub const m_nPlatformType: usize = 0x2E8; // EntityPlatformTypes_t
-                pub const m_MoveCollide: usize = 0x2EA; // 
+                pub const m_MoveCollide: usize = 0x2EA; // MoveCollide_t
                 pub const m_MoveType: usize = 0x2EB; // MoveType_t
                 pub const m_nActualMoveType: usize = 0x2EC; // MoveType_t
                 pub const m_nWaterTouch: usize = 0x2ED; // uint8

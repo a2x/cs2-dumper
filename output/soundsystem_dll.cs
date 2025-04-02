@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
@@ -233,8 +233,8 @@ namespace CS2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerBlender {
-            public const nint m_firstSound = 0xC0; // 
-            public const nint m_secondSound = 0xD8; // 
+            public const nint m_firstSound = 0xC0; // CSoundContainerReference
+            public const nint m_secondSound = 0xD8; // CSoundContainerReference
             public const nint m_flBlendFactor = 0xF0; // float32
         }
         // Parent: None
@@ -359,7 +359,7 @@ namespace CS2Dumper.Schemas {
         public static class CSoundContainerReference {
             public const nint m_bUseReference = 0x0; // bool
             public const nint m_sound = 0x8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_pSound = 0x10; // 
+            public const nint m_pSound = 0x10; // CVoiceContainerBase*
         }
         // Parent: CVoiceContainerBase
         // Field count: 0
@@ -747,7 +747,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CVoiceContainerSetElement {
-            public const nint m_sound = 0x0; // 
+            public const nint m_sound = 0x0; // CSoundContainerReference
             public const nint m_flVolumeDB = 0x18; // float32
         }
         // Parent: None
@@ -1060,7 +1060,7 @@ namespace CS2Dumper.Schemas {
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CVoiceContainerLoopTrigger {
-            public const nint m_sound = 0xC0; // 
+            public const nint m_sound = 0xC0; // CSoundContainerReference
             public const nint m_flRetriggerTimeMin = 0xD8; // float32
             public const nint m_flRetriggerTimeMax = 0xDC; // float32
             public const nint m_flFadeTime = 0xE0; // float32

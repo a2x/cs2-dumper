@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1119,7 +1119,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CNmFrameSnapEvent {
-                pub const m_frameSnapMode: usize = 0x18; // 
+                pub const m_frameSnapMode: usize = 0x18; // NmFrameSnapEventMode_t
             }
             // Parent: None
             // Field count: 0
@@ -1464,7 +1464,7 @@ pub mod cs2_dumper {
             pub mod CMotionGraph {
                 pub const m_paramSpans: usize = 0x10; // CParamSpanUpdater
                 pub const m_tags: usize = 0x28; // CUtlVector<TagSpan_t>
-                pub const m_pRootNode: usize = 0x40; // 
+                pub const m_pRootNode: usize = 0x40; // CSmartPtr<CMotionNode>
                 pub const m_nParameterCount: usize = 0x48; // int32
                 pub const m_nConfigStartIndex: usize = 0x4C; // int32
                 pub const m_nConfigCount: usize = 0x50; // int32
@@ -1591,7 +1591,7 @@ pub mod cs2_dumper {
                 pub const m_syncEventOffset: usize = 0x20; // float32
                 pub const m_transitionOptions: usize = 0x24; // CNmBitFlags
                 pub const m_targetSyncIDNodeIdx: usize = 0x28; // int16
-                pub const m_blendWeightEasing: usize = 0x2A; // 
+                pub const m_blendWeightEasing: usize = 0x2A; // NmEasingOperation_t
                 pub const m_rootMotionBlend: usize = 0x2B; // NmRootMotionBlendMode_t
             }
             // Parent: CNmFloatValueNode__CDefinition
@@ -1603,7 +1603,7 @@ pub mod cs2_dumper {
                 pub const m_flEaseTime: usize = 0x10; // float32
                 pub const m_flStartValue: usize = 0x14; // float32
                 pub const m_nInputValueNodeIdx: usize = 0x18; // int16
-                pub const m_easingOp: usize = 0x1A; // 
+                pub const m_easingOp: usize = 0x1A; // NmEasingOperation_t
                 pub const m_bUseStartValue: usize = 0x1B; // bool
             }
             // Parent: None
@@ -2938,7 +2938,7 @@ pub mod cs2_dumper {
                 pub const m_values: usize = 0x38; // CUtlVectorFixedGrowable<float32,5>
                 pub const m_flDefaultValue: usize = 0x68; // float32
                 pub const m_flEaseTime: usize = 0x6C; // float32
-                pub const m_easingOp: usize = 0x70; // 
+                pub const m_easingOp: usize = 0x70; // NmEasingOperation_t
             }
             // Parent: CAnimUpdateNodeBase
             // Field count: 3
@@ -3397,7 +3397,7 @@ pub mod cs2_dumper {
                 pub const m_footInfo: usize = 0x0; // CUtlVector<FootFixedData_t>
                 pub const m_hipDampingSettings: usize = 0x18; // CAnimInputDamping
                 pub const m_nHipBoneIndex: usize = 0x28; // int32
-                pub const m_ikSolverType: usize = 0x2C; // 
+                pub const m_ikSolverType: usize = 0x2C; // IKSolverType
                 pub const m_bApplyTilt: usize = 0x30; // bool
                 pub const m_bApplyHipDrop: usize = 0x31; // bool
                 pub const m_bAlwaysUseFallbackHinge: usize = 0x32; // bool
@@ -3645,7 +3645,7 @@ pub mod cs2_dumper {
                 pub const m_refPhysicsData: usize = 0xF0; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
                 pub const m_refPhysicsHitboxData: usize = 0x108; // CUtlVector<CStrongHandle<InfoForResourceTypeCPhysAggregateData>>
                 pub const m_refAnimGroups: usize = 0x120; // CUtlVector<CStrongHandle<InfoForResourceTypeCAnimationGroup>>
-                pub const m_refSequenceGroups: usize = 0x138; // 
+                pub const m_refSequenceGroups: usize = 0x138; // CUtlVector<CStrongHandle<InfoForResourceTypeCSequenceGroupData>>
                 pub const m_meshGroups: usize = 0x150; // CUtlVector<CUtlString>
                 pub const m_materialGroups: usize = 0x168; // CUtlVector<MaterialGroup_t>
                 pub const m_nDefaultMeshGroupMask: usize = 0x180; // uint64
@@ -3870,12 +3870,12 @@ pub mod cs2_dumper {
                 pub const m_bActiveListening: usize = 0x8; // bool
                 pub const m_bActiveTalking: usize = 0x9; // bool
                 pub const m_layerAnimations: usize = 0x10; // CUtlVector<MoodAnimation_t>
-                pub const m_flIntensity: usize = 0x28; // 
-                pub const m_flDurationScale: usize = 0x30; // 
+                pub const m_flIntensity: usize = 0x28; // CRangeFloat
+                pub const m_flDurationScale: usize = 0x30; // CRangeFloat
                 pub const m_bScaleWithInts: usize = 0x38; // bool
-                pub const m_flNextStart: usize = 0x3C; // 
-                pub const m_flStartOffset: usize = 0x44; // 
-                pub const m_flEndOffset: usize = 0x4C; // 
+                pub const m_flNextStart: usize = 0x3C; // CRangeFloat
+                pub const m_flStartOffset: usize = 0x44; // CRangeFloat
+                pub const m_flEndOffset: usize = 0x4C; // CRangeFloat
                 pub const m_flFadeIn: usize = 0x54; // float32
                 pub const m_flFadeOut: usize = 0x58; // float32
             }
@@ -5014,7 +5014,7 @@ pub mod cs2_dumper {
             pub mod CRenderGroom {
                 pub const m_hairs: usize = 0x0; // CUtlVector<RenderHairStrandInfo_t>
                 pub const m_hairPositionOffsets: usize = 0x18; // CUtlVector<uint32>
-                pub const m_hSimParamsMat: usize = 0x40; // 
+                pub const m_hSimParamsMat: usize = 0x40; // CStrongHandleCopyable<InfoForResourceTypeIMaterial2>
                 pub const m_nSegmentsPerHairStrand: usize = 0x48; // int32
                 pub const m_nGuideHairCount: usize = 0x4C; // int32
                 pub const m_nHairCount: usize = 0x50; // int32
@@ -5154,7 +5154,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod MotionBlendItem {
-                pub const m_pChild: usize = 0x0; // 
+                pub const m_pChild: usize = 0x0; // CSmartPtr<CMotionNode>
                 pub const m_flKeyValue: usize = 0x8; // float32
             }
             // Parent: CBoneConstraintBase
@@ -5528,7 +5528,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CPoseHandle {
                 pub const m_nIndex: usize = 0x0; // uint16
-                pub const m_eType: usize = 0x2; // 
+                pub const m_eType: usize = 0x2; // PoseType_t
             }
             // Parent: CNmIDValueNode__CDefinition
             // Field count: 2
@@ -5867,7 +5867,7 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 5
             pub mod IKTargetSettings_t {
-                pub const m_TargetSource: usize = 0x0; // 
+                pub const m_TargetSource: usize = 0x0; // IKTargetSource
                 pub const m_Bone: usize = 0x8; // IKBoneNameAndIndex_t
                 pub const m_AnimgraphParameterNamePosition: usize = 0x18; // AnimParamID
                 pub const m_AnimgraphParameterNameOrientation: usize = 0x1C; // AnimParamID
@@ -6192,7 +6192,7 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 3
             pub mod IKSolverSettings_t {
-                pub const m_SolverType: usize = 0x0; // 
+                pub const m_SolverType: usize = 0x0; // IKSolverType
                 pub const m_nNumIterations: usize = 0x4; // int32
                 pub const m_EndEffectorRotationFixUpMode: usize = 0x8; // EIKEndEffectorRotationFixUpMode
             }
@@ -6349,7 +6349,7 @@ pub mod cs2_dumper {
                 pub const m_aAngOffset: usize = 0x6C; // QAngle
                 pub const m_AttachmentName: usize = 0x78; // CUtlString
                 pub const m_LocalAttachmentOffsetName: usize = 0x80; // CUtlString
-                pub const m_AttachmentType: usize = 0x88; // 
+                pub const m_AttachmentType: usize = 0x88; // ModelConfigAttachmentType_t
                 pub const m_bBoneMergeFlex: usize = 0x8C; // bool
                 pub const m_bUserSpecifiedColor: usize = 0x8D; // bool
                 pub const m_bUserSpecifiedMaterialGroup: usize = 0x8E; // bool

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -956,7 +956,7 @@ pub mod cs2_dumper {
                 pub const m_Faces: usize = 0xB8; // CUtlVector<RnFace_t>
                 pub const m_FacePlanes: usize = 0xD0; // CUtlVector<RnPlane_t>
                 pub const m_nFlags: usize = 0xE8; // uint32
-                pub const m_pRegionSVM: usize = 0xF0; // 
+                pub const m_pRegionSVM: usize = 0xF0; // CRegionSVM*
             }
             // Parent: None
             // Field count: 4

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 namespace CS2Dumper {
     // Module: client.dll
@@ -11,14 +11,14 @@ namespace CS2Dumper {
         public const nint forward = 0x186CA90;
         public const nint jump = 0x186CD60;
         public const nint left = 0x186CBB0;
-        public const nint lookatweapon = 0x1A92E30;
+        public const nint lookatweapon = 0x1A92F10;
         public const nint reload = 0x186C7C0;
         public const nint right = 0x186CC40;
-        public const nint showscores = 0x1A92D10;
+        public const nint showscores = 0x1A92DF0;
         public const nint sprint = 0x186C730;
         public const nint turnleft = 0x186C970;
         public const nint turnright = 0x186CA00;
         public const nint use = 0x186CCD0;
-        public const nint zoom = 0x1A92DA0;
+        public const nint zoom = 0x1A92E80;
     }
 }

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1338,7 +1338,7 @@ pub mod cs2_dumper {
                 pub const m_flFeatheringMaxDist: usize = 0x2438; // CParticleCollectionRendererFloatInput
                 pub const m_flFeatheringFilter: usize = 0x2598; // CParticleCollectionRendererFloatInput
                 pub const m_flDepthBias: usize = 0x26F8; // CParticleCollectionRendererFloatInput
-                pub const m_nSortMethod: usize = 0x2858; // 
+                pub const m_nSortMethod: usize = 0x2858; // ParticleSortingChoiceList_t
                 pub const m_bBlendFramesSeq0: usize = 0x285C; // bool
                 pub const m_bMaxLuminanceBlendingSequence0: usize = 0x285D; // bool
             }
@@ -2565,7 +2565,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RenderVRHapticEvent {
-                pub const m_nHand: usize = 0x210; // 
+                pub const m_nHand: usize = 0x210; // ParticleVRHandChoiceList_t
                 pub const m_nOutputHandCP: usize = 0x214; // int32
                 pub const m_nOutputField: usize = 0x218; // int32
                 pub const m_flAmplitude: usize = 0x220; // CPerParticleFloatInput
@@ -3744,7 +3744,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             // MPropertyCustomEditor
             pub mod CParticleVariableRef {
-                pub const m_variableName: usize = 0x0; // 
+                pub const m_variableName: usize = 0x0; // CKV3MemberNameWithStorage
                 pub const m_variableType: usize = 0x38; // PulseValueType_t
             }
             // Parent: CParticleFunctionOperator
@@ -4168,9 +4168,9 @@ pub mod cs2_dumper {
                 pub const m_flInputScale1: usize = 0x1D0; // float32
                 pub const m_nFieldInput2: usize = 0x1D4; // ParticleAttributeIndex_t
                 pub const m_flInputScale2: usize = 0x1D8; // float32
-                pub const m_nControlPointInput1: usize = 0x1DC; // 
+                pub const m_nControlPointInput1: usize = 0x1DC; // ControlPointReference_t
                 pub const m_flControlPointScale1: usize = 0x1F0; // float32
-                pub const m_nControlPointInput2: usize = 0x1F4; // 
+                pub const m_nControlPointInput2: usize = 0x1F4; // ControlPointReference_t
                 pub const m_flControlPointScale2: usize = 0x208; // float32
                 pub const m_nFieldOutput: usize = 0x20C; // ParticleAttributeIndex_t
                 pub const m_vFinalOutputScale: usize = 0x210; // Vector
@@ -5572,7 +5572,7 @@ pub mod cs2_dumper {
                 pub const m_bReplaceTextureWithGradient: usize = 0x1; // bool
                 pub const m_hTexture: usize = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
                 pub const m_Gradient: usize = 0x10; // CColorGradient
-                pub const m_nTextureType: usize = 0x28; // 
+                pub const m_nTextureType: usize = 0x28; // SpriteCardTextureType_t
                 pub const m_nTextureChannels: usize = 0x2C; // SpriteCardTextureChannel_t
                 pub const m_nTextureBlendMode: usize = 0x30; // ParticleTextureLayerBlendType_t
                 pub const m_flTextureBlend: usize = 0x38; // CParticleCollectionRendererFloatInput

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-04-01 00:10:44.822666300 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 #pragma once
 
@@ -956,7 +956,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Faces = 0xB8; // CUtlVector<RnFace_t>
                 constexpr std::ptrdiff_t m_FacePlanes = 0xD0; // CUtlVector<RnPlane_t>
                 constexpr std::ptrdiff_t m_nFlags = 0xE8; // uint32
-                constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // 
+                constexpr std::ptrdiff_t m_pRegionSVM = 0xF0; // CRegionSVM*
             }
             // Parent: None
             // Field count: 4
