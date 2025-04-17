@@ -2,43 +2,51 @@
   "libclient.so": [
     {
       "name": "dwCSGOInput",
-      "value": 60467776
+      "value": 60363264
     },
     {
       "name": "dwEntityList",
-      "value": 58638592
+      "value": 58544064
     },
     {
       "name": "dwGameEntitySystem",
-      "value": 61883000
+      "value": 61777784
     },
     {
       "name": "dwGameEntitySystem_highestEntityIndex",
       "value": 8464
     },
     {
+      "name": "dwGameRules",
+      "value": 57725112
+    },
+    {
+      "name": "dwGlobalVars",
+      "value": 58562904
+    },
+    {
       "name": "dwGlowManager",
-      "value": 60400880
+      "value": 60296368
     },
     {
       "name": "dwLocalPlayerController",
-      "value": 60294616
+      "value": 60190104
     },
     {
       "name": "dwLocalPlayerPawn",
-      "value": 60425128
+      "value": 60320616
     },
     {
       "name": "dwPlantedC4",
-      "value": 60450328
+      "value": 60345816
     },
     {
       "name": "dwPrediction",
-      "value": 60424800
+      "value": 60320288
     },
     {
       "name": "dwSensitivity",
-      "value": 60418088
+      "value": 60313576
     },
     {
       "name": "dwSensitivity_sensitivity",
@@ -46,11 +54,15 @@
     },
     {
       "name": "dwViewAngles",
-      "value": 60489320
+      "value": 60384808
+    },
+    {
+      "name": "dwViewMatrix",
+      "value": 51449892
     },
     {
       "name": "dwViewRender",
-      "value": 60427792
+      "value": 60323280
     }
   ],
   "libengine2.so": [
@@ -65,6 +77,10 @@
     {
       "name": "dwNetworkGameClient_clientTickCount",
       "value": 904
+    },
+    {
+      "name": "dwNetworkGameClient_deltaTick",
+      "value": 200
     },
     {
       "name": "dwNetworkGameClient_isBackgroundMap",
@@ -104,11 +120,11 @@
   "libmatchmaking.so": [
     {
       "name": "dwGameTypes",
-      "value": 3363008
+      "value": 3362976
     },
     {
       "name": "dwGameTypes_mapName",
-      "value": 3363296
+      "value": 3363264
     }
   ]
 }

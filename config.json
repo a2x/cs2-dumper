@@ -43,7 +43,7 @@
         },
         {
           "name": "dwGameRules",
-          "pattern": "48 89 1D ? ? ? ? 48 8B 00",
+          "pattern": "48 8B 05 ? ? ? ? 48 85 C0",
           "operations": [
             {
               "type": "rip"
@@ -52,7 +52,7 @@
         },
         {
           "name": "dwGlobalVars",
-          "pattern": "48 89 35 ? ? ? ? 48 89 46",
+          "pattern": "48 89 35 ? ? ? ? 48 89 05",
           "operations": [
             {
               "type": "rip"
@@ -143,7 +143,7 @@
         },
         {
           "name": "dwViewMatrix",
-          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ? 83 FF",
+          "pattern": "48 8D 05 ? ? ? ? C3 0F 1F 84 00 ? ? ? ?",
           "operations": [
             {
               "type": "rip"
@@ -194,7 +194,7 @@
         },
         {
           "name": "dwNetworkGameClient_deltaTick",
-          "pattern": "89 83 ? ? ? ? B8 ? ? ? ? 5B",
+          "pattern": "89 83 ? ? ? ? 48 8B 47",
           "operations": [
             {
               "type": "slice",
@@ -334,4 +334,4 @@
       ]
     }
   ]
-}
+} 

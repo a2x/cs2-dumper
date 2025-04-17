@@ -579,26 +579,6 @@
         ],
         "parent": "C_BaseTrigger"
       },
-      "CBreachCharge": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
-      },
-      "CBreachChargeProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseGrenade"
-      },
-      "CBumpMine": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
-      },
-      "CBumpMineProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseGrenade"
-      },
       "CBuoyancyHelper": {
         "fields": {
           "m_flFluidDensity": 28,
@@ -755,30 +735,31 @@
       },
       "CCSPlayerController": {
         "fields": {
-          "m_bAbandonAllowsSurrender": 2422,
-          "m_bAbandonOffersInstantSurrender": 2423,
-          "m_bCanControlObservedBot": 2448,
-          "m_bCannotBeKicked": 2420,
-          "m_bControllingBot": 2440,
-          "m_bDisconnection1MinWarningPrinted": 2424,
-          "m_bEverFullyConnected": 2421,
+          "m_bAbandonAllowsSurrender": 2426,
+          "m_bAbandonOffersInstantSurrender": 2427,
+          "m_bCanControlObservedBot": 2456,
+          "m_bCannotBeKicked": 2424,
+          "m_bControllingBot": 2448,
+          "m_bDisconnection1MinWarningPrinted": 2428,
+          "m_bEverFullyConnected": 2425,
           "m_bEverPlayedOnTeam": 2276,
-          "m_bFireBulletsSeedSynchronized": 2525,
-          "m_bHasBeenControlledByPlayerThisRound": 2442,
+          "m_bFireBulletsSeedSynchronized": 2533,
+          "m_bHasBeenControlledByPlayerThisRound": 2450,
           "m_bHasCommunicationAbuseMute": 2252,
-          "m_bHasControlledBotThisRound": 2441,
-          "m_bIsPlayerNameDirty": 2524,
-          "m_bMvpNoMusic": 2506,
-          "m_bPawnHasDefuser": 2472,
-          "m_bPawnHasHelmet": 2473,
-          "m_bPawnIsAlive": 2460,
-          "m_bScoreReported": 2425,
-          "m_eMvpReason": 2508,
+          "m_bHasControlledBotThisRound": 2449,
+          "m_bIsPlayerNameDirty": 2532,
+          "m_bMvpNoMusic": 2514,
+          "m_bPawnHasDefuser": 2480,
+          "m_bPawnHasHelmet": 2481,
+          "m_bPawnIsAlive": 2468,
+          "m_bScoreReported": 2429,
+          "m_eMvpReason": 2516,
+          "m_eNetworkDisconnectionReason": 2420,
           "m_flForceTeamTime": 2268,
           "m_flPreviousForceJoinTeamTime": 2280,
-          "m_hObserverPawn": 2456,
-          "m_hOriginalControllerOfCurrentPawn": 2488,
-          "m_hPlayerPawn": 2452,
+          "m_hObserverPawn": 2464,
+          "m_hOriginalControllerOfCurrentPawn": 2496,
+          "m_hPlayerPawn": 2460,
           "m_iCoachingTeam": 2304,
           "m_iCompTeammateColor": 2272,
           "m_iCompetitiveRankType": 2336,
@@ -788,24 +769,24 @@
           "m_iCompetitiveRankingPredicted_Win": 2340,
           "m_iCompetitiveWins": 2332,
           "m_iDraftIndex": 2408,
-          "m_iMVPs": 2520,
-          "m_iMusicKitID": 2512,
-          "m_iMusicKitMVPs": 2516,
-          "m_iPawnArmor": 2468,
-          "m_iPawnBotDifficulty": 2484,
-          "m_iPawnHealth": 2464,
-          "m_iPawnLifetimeEnd": 2480,
-          "m_iPawnLifetimeStart": 2476,
+          "m_iMVPs": 2528,
+          "m_iMusicKitID": 2520,
+          "m_iMusicKitMVPs": 2524,
+          "m_iPawnArmor": 2476,
+          "m_iPawnBotDifficulty": 2492,
+          "m_iPawnHealth": 2472,
+          "m_iPawnLifetimeEnd": 2488,
+          "m_iPawnLifetimeStart": 2484,
           "m_iPendingTeamNum": 2264,
           "m_iPing": 2248,
-          "m_iScore": 2492,
+          "m_iScore": 2500,
           "m_msQueuedModeDisconnectionTimestamp": 2412,
-          "m_nBotsControlledThisRound": 2444,
-          "m_nDisconnectionTick": 2428,
+          "m_nBotsControlledThisRound": 2452,
+          "m_nDisconnectionTick": 2432,
           "m_nEndMatchNextMapVote": 2352,
-          "m_nFirstKill": 2504,
-          "m_nKillCount": 2505,
-          "m_nPawnCharacterDefIndex": 2474,
+          "m_nFirstKill": 2512,
+          "m_nKillCount": 2513,
+          "m_nPawnCharacterDefIndex": 2482,
           "m_nPlayerDominated": 2312,
           "m_nPlayerDominatingMe": 2320,
           "m_nQuestProgressReason": 2360,
@@ -813,7 +794,7 @@
           "m_pDamageServices": 2240,
           "m_pInGameMoneyServices": 2216,
           "m_pInventoryServices": 2224,
-          "m_recentKillQueue": 2496,
+          "m_recentKillQueue": 2504,
           "m_sSanitizedPlayerName": 2296,
           "m_szClan": 2288,
           "m_szCrosshairCodes": 2256,
@@ -3843,11 +3824,6 @@
         "metadata": [],
         "parent": "C_Sprite"
       },
-      "CTablet": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
-      },
       "CTakeDamageInfoAPI": {
         "fields": {},
         "metadata": [
@@ -3911,25 +3887,10 @@
         ],
         "parent": "IntervalTimer"
       },
-      "CTripWireFire": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseCSGrenade"
-      },
-      "CTripWireFireProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseGrenade"
-      },
       "CWaterSplasher": {
         "fields": {},
         "metadata": [],
         "parent": "C_BaseModelEntity"
-      },
-      "CWeaponZoneRepulsor": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBaseGun"
       },
       "C_AK47": {
         "fields": {},
@@ -6228,7 +6189,7 @@
         "fields": {
           "m_MatchDevice": 160,
           "m_MinimapVerticalSectionHeights": 3120,
-          "m_RetakeRules": 3480,
+          "m_RetakeRules": 3496,
           "m_TeamRespawnWaveTimes": 2836,
           "m_arrProhibitedItemIndices": 2236,
           "m_arrTournamentActiveCasterAccounts": 2436,
@@ -6240,7 +6201,7 @@
           "m_bFreezePeriod": 57,
           "m_bGameRestart": 108,
           "m_bHasMatchStarted": 164,
-          "m_bHasTriggeredRoundStartMusic": 3444,
+          "m_bHasTriggeredRoundStartMusic": 3460,
           "m_bIsDroppingItems": 2232,
           "m_bIsHltvActive": 2234,
           "m_bIsQuestEligible": 2233,
@@ -6250,20 +6211,20 @@
           "m_bMapHasBombTarget": 141,
           "m_bMapHasBuyZone": 143,
           "m_bMapHasRescueZone": 142,
-          "m_bMarkClientStopRecordAtRoundEnd": 3272,
+          "m_bMarkClientStopRecordAtRoundEnd": 3288,
           "m_bMatchWaitingForResume": 89,
           "m_bPlayAllStepSoundsOnServer": 154,
-          "m_bRoundEndNoMusic": 3828,
-          "m_bRoundEndShowTimerDefend": 3784,
+          "m_bRoundEndNoMusic": 3844,
+          "m_bRoundEndShowTimerDefend": 3800,
           "m_bServerPaused": 68,
           "m_bSpawnedTerrorHuntHeavy": 3152,
-          "m_bSwitchingTeamsAtRoundReset": 3445,
+          "m_bSwitchingTeamsAtRoundReset": 3461,
           "m_bTCantBuy": 2472,
-          "m_bTeamIntroPeriod": 3772,
+          "m_bTeamIntroPeriod": 3788,
           "m_bTechnicalTimeOut": 88,
           "m_bTerroristTimeOutActive": 69,
           "m_bWarmupPeriod": 58,
-          "m_eRoundEndReason": 3780,
+          "m_eRoundEndReason": 3796,
           "m_eRoundWinReason": 2468,
           "m_fMatchStartTime": 96,
           "m_fRoundStartTime": 100,
@@ -6273,7 +6234,7 @@
           "m_flCMMItemDropRevealStartTime": 2224,
           "m_flCTTimeOutRemaining": 76,
           "m_flGameStartTime": 112,
-          "m_flLastPerfSampleTime": 20240,
+          "m_flLastPerfSampleTime": 20256,
           "m_flNextRespawnWave": 2964,
           "m_flRestartRoundTime": 104,
           "m_flTerroristTimeOutRemaining": 72,
@@ -6282,48 +6243,49 @@
           "m_iMatchStats_PlayersAlive_CT": 2596,
           "m_iMatchStats_PlayersAlive_T": 2716,
           "m_iMatchStats_RoundResults": 2476,
-          "m_iNumConsecutiveCTLoses": 3240,
-          "m_iNumConsecutiveTerroristLoses": 3244,
-          "m_iRoundEndFunFactData1": 3804,
-          "m_iRoundEndFunFactData2": 3808,
-          "m_iRoundEndFunFactData3": 3812,
-          "m_iRoundEndFunFactPlayerSlot": 3800,
-          "m_iRoundEndLegacy": 3832,
-          "m_iRoundEndPlayerCount": 3824,
-          "m_iRoundEndTimerTime": 3788,
-          "m_iRoundEndWinnerTeam": 3776,
-          "m_iRoundStartRoundNumber": 3840,
+          "m_iNumConsecutiveCTLoses": 3252,
+          "m_iNumConsecutiveTerroristLoses": 3256,
+          "m_iRoundEndFunFactData1": 3820,
+          "m_iRoundEndFunFactData2": 3824,
+          "m_iRoundEndFunFactData3": 3828,
+          "m_iRoundEndFunFactPlayerSlot": 3816,
+          "m_iRoundEndLegacy": 3848,
+          "m_iRoundEndPlayerCount": 3840,
+          "m_iRoundEndTimerTime": 3804,
+          "m_iRoundEndWinnerTeam": 3792,
+          "m_iRoundStartRoundNumber": 3856,
           "m_iRoundTime": 92,
           "m_iRoundWinStatus": 2464,
           "m_iSpectatorSlotCount": 156,
-          "m_nCTTeamIntroVariant": 3768,
+          "m_nCTTeamIntroVariant": 3784,
           "m_nCTTimeOuts": 84,
-          "m_nEndMatchMapGroupVoteOptions": 3196,
-          "m_nEndMatchMapGroupVoteTypes": 3156,
-          "m_nEndMatchMapVoteWinner": 3236,
+          "m_nEndMatchMapGroupVoteOptions": 3208,
+          "m_nEndMatchMapGroupVoteTypes": 3168,
+          "m_nEndMatchMapVoteWinner": 3248,
           "m_nHalloweenMaskListSeed": 2456,
-          "m_nMatchAbortedEarlyReason": 3440,
-          "m_nMatchEndCount": 3760,
+          "m_nMatchAbortedEarlyReason": 3456,
+          "m_nMatchEndCount": 3776,
           "m_nNextMapInMapgroup": 168,
           "m_nOvertimePlaying": 132,
           "m_nQueuedMatchmakingMode": 148,
-          "m_nRoundEndCount": 3836,
-          "m_nRoundStartCount": 3844,
+          "m_nRoundEndCount": 3852,
+          "m_nRoundStartCount": 3860,
           "m_nRoundsPlayedThisPhase": 128,
           "m_nServerQuestID": 3092,
-          "m_nTTeamIntroVariant": 3764,
+          "m_nTTeamIntroVariant": 3780,
           "m_nTerroristTimeOuts": 80,
           "m_nTournamentPredictionsPct": 2220,
           "m_numBestOfMaps": 2452,
-          "m_pGameModeRules": 3472,
-          "m_sRoundEndFunFactToken": 3792,
-          "m_sRoundEndMessage": 3816,
+          "m_pGameModeRules": 3488,
+          "m_sRoundEndFunFactToken": 3808,
+          "m_sRoundEndMessage": 3832,
           "m_szMatchStatTxt": 1196,
           "m_szTournamentEventName": 172,
           "m_szTournamentEventStage": 684,
           "m_szTournamentPredictionsTxt": 1708,
           "m_timeUntilNextPhaseStarts": 116,
           "m_totalRoundsPlayed": 124,
+          "m_ullLocalMatchID": 3160,
           "m_vMinimapMaxs": 3108,
           "m_vMinimapMins": 3096
         },
@@ -9807,25 +9769,6 @@
         ],
         "parent": "CBaseAnimGraph"
       },
-      "C_Fists": {
-        "fields": {
-          "m_bPlayingUninterruptableAct": 10695,
-          "m_nUninterruptableActivity": 10696
-        },
-        "metadata": [
-          {
-            "name": "m_bPlayingUninterruptableAct",
-            "type": "NetworkVarNames",
-            "type_name": "bool"
-          },
-          {
-            "name": "m_nUninterruptableActivity",
-            "type": "NetworkVarNames",
-            "type_name": "PlayerAnimEvent_t"
-          }
-        ],
-        "parent": "C_CSWeaponBase"
-      },
       "C_Flashbang": {
         "fields": {},
         "metadata": [],
@@ -10795,11 +10738,6 @@
           }
         ],
         "parent": "C_BaseEntity"
-      },
-      "C_Melee": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_CSWeaponBase"
       },
       "C_ModelPointEntity": {
         "fields": {},
@@ -12639,16 +12577,6 @@
         "metadata": [],
         "parent": null
       },
-      "C_SensorGrenade": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseCSGrenade"
-      },
-      "C_SensorGrenadeProjectile": {
-        "fields": {},
-        "metadata": [],
-        "parent": "C_BaseCSGrenadeProjectile"
-      },
       "C_ShatterGlassShardPhysics": {
         "fields": {
           "m_ShardDesc": 4288
@@ -13801,19 +13729,6 @@
         "fields": {},
         "metadata": [],
         "parent": "C_CSWeaponBase"
-      },
-      "C_WeaponShield": {
-        "fields": {
-          "m_flDisplayHealth": 10728
-        },
-        "metadata": [
-          {
-            "name": "m_flDisplayHealth",
-            "type": "NetworkVarNames",
-            "type_name": "float"
-          }
-        ],
-        "parent": "C_CSWeaponBaseGun"
       },
       "C_WeaponTaser": {
         "fields": {
