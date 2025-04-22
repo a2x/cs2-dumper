@@ -1,6 +1,6 @@
 use std::collections::BTreeMap;
 
-use anyhow::{bail, Result};
+use anyhow::{Result, bail};
 
 use log::debug;
 
@@ -13,7 +13,7 @@ use crate::source2::KeyButton;
 
 pub type ButtonMap = BTreeMap<String, imem>;
 
-pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<ButtonMap> {
+pub fn buttons<P: Process + MemoryView>(process: &mut P) -> Result<ButtonMap> {
     let module = process.module_by_name("client.dll")?;
 
     let buf = process
@@ -35,17 +35,17 @@ pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<ButtonMap>
 }
 
 fn read_buttons(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     module: &ModuleInfo,
     list_addr: Address,
 ) -> Result<ButtonMap> {
     let mut map = ButtonMap::new();
 
-    let mut cur_button = Pointer64::<KeyButton>::from(process.read_addr64(list_addr).data_part()?);
+    let mut cur_button = Pointer64::<KeyButton>::from(mem.read_addr64(list_addr).data_part()?);
 
     while !cur_button.is_null() {
-        let button = process.read_ptr(cur_button).data_part()?;
-        let name = process.read_utf8(button.name.address(), 32).data_part()?;
+        let button = mem.read_ptr(cur_button).data_part()?;
+        let name = mem.read_utf8(button.name.address(), 32).data_part()?;
         let rva = (cur_button.address() - module.base) + offset_of!(KeyButton.state) as imem;
 
         debug!(

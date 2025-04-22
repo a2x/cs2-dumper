@@ -1,16 +1,12 @@
-use anyhow::Result;
-
 use memflow::prelude::v1::*;
 
 use super::UtlMemoryPoolBase;
-
-use crate::mem::PointerExt;
 
 #[repr(C)]
 pub struct HashAllocatedBlob<D> {
     pub next: Pointer64<HashAllocatedBlob<D>>, // 0x0000
     pad_0008: [u8; 0x8],                       // 0x0008
-    pub data: D,                               // 0x0010
+    pub data: Pointer64<D>,                    // 0x0010
     pad_0018: [u8; 0x8],                       // 0x0018
 }
 
@@ -27,7 +23,7 @@ pub struct HashBucket<D, K> {
 pub struct HashFixedDataInternal<D, K> {
     pub ui_key: K,                                    // 0x0000
     pub next: Pointer64<HashFixedDataInternal<D, K>>, // 0x0008
-    pub data: D,                                      // 0x0010
+    pub data: Pointer64<D>,                           // 0x0010
 }
 
 unsafe impl<D: 'static, K: 'static> Pod for HashFixedDataInternal<D, K> {}
@@ -40,11 +36,7 @@ pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
     pad_2881: [u8; 0xF],                // 0x2881
 }
 
-impl<D, const C: usize, K> UtlTsHash<D, C, K>
-where
-    D: Pod + PointerExt,
-    K: Pod,
-{
+impl<D: Pod, const C: usize, K: Pod> UtlTsHash<D, C, K> {
     #[inline]
     pub fn blocks_alloc(&self) -> i32 {
         self.entry_mem.blocks_alloc
@@ -60,7 +52,7 @@ where
         self.entry_mem.peak_alloc
     }
 
-    pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
+    pub fn elements(&self, mem: &mut impl MemoryView) -> Result<Vec<Pointer64<D>>> {
         let blocks_alloc = self.blocks_alloc() as usize;
         let peak_alloc = self.peak_count() as usize;
 
@@ -71,7 +63,7 @@ where
             let mut cur_element = bucket.first_uncommitted;
 
             while !cur_element.is_null() {
-                let element = process.read_ptr(cur_element).data_part()?;
+                let element = mem.read_ptr(cur_element).data_part()?;
 
                 if !element.data.is_null() {
                     allocated_list.push(element.data);
@@ -89,7 +81,7 @@ where
             Pointer64::<HashAllocatedBlob<D>>::from(self.entry_mem.free_list_head.address());
 
         while !cur_blob.is_null() {
-            let blob = process.read_ptr(cur_blob).data_part()?;
+            let blob = mem.read_ptr(cur_blob).data_part()?;
 
             if !blob.data.is_null() {
                 unallocated_list.push(blob.data);

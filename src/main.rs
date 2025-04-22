@@ -5,20 +5,17 @@ use std::time::Instant;
 
 use anyhow::Result;
 
-use clap::*;
+use clap::{ArgAction, Parser};
 
-use log::{info, LevelFilter};
+use log::{LevelFilter, info};
 
 use memflow::prelude::v1::*;
 
-use simplelog::{
-    ColorChoice, CombinedLogger, Config, SharedLogger, TermLogger, TerminalMode, WriteLogger,
-};
+use simplelog::*;
 
 use output::Output;
 
 mod analysis;
-mod mem;
 mod output;
 mod source2;
 
@@ -92,7 +89,7 @@ fn main() -> Result<()> {
         .map(|s| ConnectorArgs::from_str(&s).expect("unable to parse connector arguments"))
         .unwrap_or_default();
 
-    let os = match args.connector {
+    let mut os = match args.connector {
         Some(conn) => {
             let inventory = Inventory::scan();
 
@@ -115,12 +112,11 @@ fn main() -> Result<()> {
         }
     };
 
-    let mut process = os.into_process_by_name(&args.process_name)?;
+    let mut process = os.process_by_name(&args.process_name)?;
 
     let now = Instant::now();
 
     let result = analysis::analyze_all(&mut process)?;
-
     let output = Output::new(&args.file_types, args.indent_size, &args.output, &result)?;
 
     output.dump_all(&mut process)?;

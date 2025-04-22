@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-22 02:16:57.488530400 UTC
+// 2025-04-02 01:38:06.172164600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -19,7 +19,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 7
         public enum Detail2Combo_t : uint {
-            DETAIL_2_COMBO_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            DETAIL_2_COMBO_UNINITIALIZED = unchecked((uint)-1),
             DETAIL_2_COMBO_OFF = 0x0,
             DETAIL_2_COMBO_ADD = 0x1,
             DETAIL_2_COMBO_ADD_SELF_ILLUM = 0x2,
@@ -30,7 +30,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum MissingParentInheritBehavior_t : uint {
-            MISSING_PARENT_DO_NOTHING = 0xFFFFFFFFFFFFFFFF,
+            MISSING_PARENT_DO_NOTHING = unchecked((uint)-1),
             MISSING_PARENT_KILL = 0x0,
             MISSING_PARENT_FIND_NEW = 0x1,
             MISSING_PARENT_SAME_INDEX = 0x2
@@ -38,7 +38,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 5
         public enum ParticleFloatBiasType_t : uint {
-            PF_BIAS_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_BIAS_TYPE_INVALID = unchecked((uint)-1),
             PF_BIAS_TYPE_STANDARD = 0x0,
             PF_BIAS_TYPE_GAIN = 0x1,
             PF_BIAS_TYPE_EXPONENTIAL = 0x2,
@@ -93,7 +93,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 24
         public enum ParticleFloatType_t : uint {
-            PF_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_TYPE_INVALID = unchecked((uint)-1),
             PF_TYPE_LITERAL = 0x0,
             PF_TYPE_NAMED_VALUE = 0x1,
             PF_TYPE_RANDOM_UNIFORM = 0x2,
@@ -175,7 +175,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 9
         public enum ScalarExpressionType_t : uint {
-            SCALAR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            SCALAR_EXPRESSION_UNINITIALIZED = unchecked((uint)-1),
             SCALAR_EXPRESSION_ADD = 0x0,
             SCALAR_EXPRESSION_SUBTRACT = 0x1,
             SCALAR_EXPRESSION_MUL = 0x2,
@@ -236,12 +236,12 @@ namespace CS2Dumper.Schemas {
         public enum ParticleLightingQuality_t : uint {
             PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
             PARTICLE_LIGHTING_PER_VERTEX = 0x1,
-            PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFFFFFFFFFF
+            PARTICLE_LIGHTING_PER_PIXEL = unchecked((uint)-1)
         }
         // Alignment: 4
         // Member count: 5
         public enum ParticleFloatRoundType_t : uint {
-            PF_ROUND_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_ROUND_TYPE_INVALID = unchecked((uint)-1),
             PF_ROUND_TYPE_NEAREST = 0x0,
             PF_ROUND_TYPE_FLOOR = 0x1,
             PF_ROUND_TYPE_CEIL = 0x2,
@@ -302,7 +302,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 12
         public enum ParticlePinDistance_t : uint {
-            PARTICLE_PIN_DISTANCE_NONE = 0xFFFFFFFFFFFFFFFF,
+            PARTICLE_PIN_DISTANCE_NONE = unchecked((uint)-1),
             PARTICLE_PIN_DISTANCE_NEIGHBOR = 0x0,
             PARTICLE_PIN_DISTANCE_FARTHEST = 0x1,
             PARTICLE_PIN_DISTANCE_FIRST = 0x2,
@@ -318,7 +318,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 7
         public enum VectorFloatExpressionType_t : uint {
-            VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            VECTOR_FLOAT_EXPRESSION_UNINITIALIZED = unchecked((uint)-1),
             VECTOR_FLOAT_EXPRESSION_DOTPRODUCT = 0x0,
             VECTOR_FLOAT_EXPRESSION_DISTANCE = 0x1,
             VECTOR_FLOAT_EXPRESSION_DISTANCESQR = 0x2,
@@ -336,7 +336,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 9
         public enum VectorExpressionType_t : uint {
-            VECTOR_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+            VECTOR_EXPRESSION_UNINITIALIZED = unchecked((uint)-1),
             VECTOR_EXPRESSION_ADD = 0x0,
             VECTOR_EXPRESSION_SUBTRACT = 0x1,
             VECTOR_EXPRESSION_MUL = 0x2,
@@ -399,7 +399,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 9
         public enum ParticleFloatMapType_t : uint {
-            PF_MAP_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_MAP_TYPE_INVALID = unchecked((uint)-1),
             PF_MAP_TYPE_DIRECT = 0x0,
             PF_MAP_TYPE_MULT = 0x1,
             PF_MAP_TYPE_REMAP = 0x2,
@@ -438,7 +438,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum ParticleFloatInputMode_t : uint {
-            PF_INPUT_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_INPUT_MODE_INVALID = unchecked((uint)-1),
             PF_INPUT_MODE_CLAMPED = 0x0,
             PF_INPUT_MODE_LOOPED = 0x1,
             PF_INPUT_MODE_COUNT = 0x2
@@ -482,7 +482,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 4
         public enum ParticleFloatRandomMode_t : uint {
-            PF_RANDOM_MODE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PF_RANDOM_MODE_INVALID = unchecked((uint)-1),
             PF_RANDOM_MODE_CONSTANT = 0x0,
             PF_RANDOM_MODE_VARYING = 0x1,
             PF_RANDOM_MODE_COUNT = 0x2
@@ -498,7 +498,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 19
         public enum ParticleVecType_t : uint {
-            PVEC_TYPE_INVALID = 0xFFFFFFFFFFFFFFFF,
+            PVEC_TYPE_INVALID = unchecked((uint)-1),
             PVEC_TYPE_LITERAL = 0x0,
             PVEC_TYPE_LITERAL_COLOR = 0x1,
             PVEC_TYPE_NAMED_VALUE = 0x2,
@@ -534,7 +534,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 3
         public enum ParticleSequenceCropOverride_t : uint {
-            PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = 0xFFFFFFFFFFFFFFFF,
+            PARTICLE_SEQUENCE_CROP_OVERRIDE_DEFAULT = unchecked((uint)-1),
             PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_OFF = 0x0,
             PARTICLE_SEQUENCE_CROP_OVERRIDE_FORCE_ON = 0x1
         }
@@ -634,7 +634,7 @@ namespace CS2Dumper.Schemas {
             COLLISION_MODE_USE_NEAREST_TRACE = 0x2,
             COLLISION_MODE_PER_FRAME_PLANESET = 0x1,
             COLLISION_MODE_INITIAL_TRACE_DOWN = 0x0,
-            COLLISION_MODE_DISABLED = 0xFFFFFFFFFFFFFFFF
+            COLLISION_MODE_DISABLED = unchecked((uint)-1)
         }
         // Alignment: 4
         // Member count: 2
@@ -645,7 +645,7 @@ namespace CS2Dumper.Schemas {
         // Alignment: 4
         // Member count: 3
         public enum ParticleEndcapMode_t : uint {
-            PARTICLE_ENDCAP_ALWAYS_ON = 0xFFFFFFFFFFFFFFFF,
+            PARTICLE_ENDCAP_ALWAYS_ON = unchecked((uint)-1),
             PARTICLE_ENDCAP_ENDCAP_OFF = 0x0,
             PARTICLE_ENDCAP_ENDCAP_ON = 0x1
         }

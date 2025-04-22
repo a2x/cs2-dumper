@@ -6,7 +6,7 @@ use super::{SchemaMetadataEntryData, SchemaType};
 #[repr(C)]
 pub struct SchemaStaticFieldData {
     pub name: Pointer64<ReprCString>,                 // 0x0000
-    pub type_: Pointer64<SchemaType>,                 // 0x0008
+    pub r#type: Pointer64<SchemaType>,                // 0x0008
     pub instance: Pointer64<()>,                      // 0x0010
     pub metadata_count: i32,                          // 0x0018
     pad_001c: [u8; 0x4],                              // 0x001C

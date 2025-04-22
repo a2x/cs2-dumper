@@ -5,7 +5,7 @@ use heck::{AsPascalCase, AsSnakeCase};
 
 use serde_json::json;
 
-use super::{slugify, CodeWriter, Formatter, SchemaMap};
+use super::{CodeWriter, Formatter, SchemaMap, slugify};
 
 use crate::analysis::ClassMetadata;
 
@@ -41,7 +41,17 @@ impl CodeWriter for SchemaMap {
                                         .members
                                         .iter()
                                         .map(|member| {
-                                            format!("{} = {:#X}", member.name, member.value)
+                                            let hex = if member.value < 0
+                                                || member.value > i32::MAX as i64
+                                            {
+                                                format!(
+                                                    "unchecked(({}){})",
+                                                    type_name, member.value
+                                                )
+                                            } else {
+                                                format!("{:#X}", member.value)
+                                            };
+                                            format!("{} = {}", member.name, hex)
                                         })
                                         .collect::<Vec<_>>()
                                         .join(",\n");

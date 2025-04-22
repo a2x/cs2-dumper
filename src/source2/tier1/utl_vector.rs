@@ -1,5 +1,3 @@
-use anyhow::{bail, Result};
-
 use memflow::prelude::v1::*;
 
 #[repr(C)]
@@ -10,20 +8,12 @@ pub struct UtlVector<T> {
 }
 
 impl<T: Pod> UtlVector<T> {
-    #[inline]
-    pub fn count(&self) -> i32 {
-        self.size
-    }
-
-    pub fn element(&self, process: &mut IntoProcessInstanceArcBox<'_>, idx: usize) -> Result<T> {
-        if idx >= self.count() as usize {
-            bail!("index out of bounds");
+    pub fn element(&self, mem: &mut impl MemoryView, index: usize) -> Result<T> {
+        if index >= self.size as usize {
+            return Err(ErrorKind::OutOfBounds.into());
         }
 
-        process
-            .read_ptr(self.mem.at(idx as _))
-            .data_part()
-            .map_err(Into::into)
+        mem.read_ptr(self.mem.at(index as _)).data_part()
     }
 }
 

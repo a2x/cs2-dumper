@@ -29,7 +29,7 @@ pub struct UtlMemoryPoolBase {
     pub grow_mode: MemoryPoolGrowType,                  // 0x0008
     pub blocks_alloc: i32,                              // 0x000C
     pub peak_alloc: i32,                                // 0x0010
-    pub alignment: u16,                                 // 0x0014
+    pub align_of: u16,                                  // 0x0014
     pub blob_count: u16,                                // 0x0016
     pub free_list_tail: Pointer64<Pointer64<FreeList>>, // 0x0018
     pub free_list_head: Pointer64<FreeList>,            // 0x0020
@@ -37,11 +37,4 @@ pub struct UtlMemoryPoolBase {
     pub blob_head: Pointer64<Blob>,                     // 0x0070
     pub total_size: i32,                                // 0x0078
     pad_007c: [u8; 0x4],                                // 0x007C
-}
-
-impl UtlMemoryPoolBase {
-    #[inline]
-    pub fn size(&self) -> i32 {
-        self.total_size
-    }
 }
