@@ -1,35 +1,35 @@
 {
   "client.dll": {
-    "dwCSGOInput": 27865072,
-    "dwEntityList": 27391792,
-    "dwGameEntitySystem": 28589912,
+    "dwCSGOInput": 27864880,
+    "dwEntityList": 27391600,
+    "dwGameEntitySystem": 28589752,
     "dwGameEntitySystem_highestEntityIndex": 8432,
-    "dwGameRules": 27804016,
-    "dwGlobalVars": 25591216,
-    "dwGlowManager": 27804048,
-    "dwLocalPlayerController": 27716032,
-    "dwLocalPlayerPawn": 25641040,
-    "dwPlantedC4": 27845792,
-    "dwPrediction": 25640656,
-    "dwSensitivity": 27809640,
+    "dwGameRules": 27803824,
+    "dwGlobalVars": 25591200,
+    "dwGlowManager": 27803856,
+    "dwLocalPlayerController": 27715840,
+    "dwLocalPlayerPawn": 25641024,
+    "dwPlantedC4": 27845600,
+    "dwPrediction": 25640640,
+    "dwSensitivity": 27809448,
     "dwSensitivity_sensitivity": 64,
-    "dwViewAngles": 27866048,
-    "dwViewMatrix": 27824432,
-    "dwViewRender": 27826496,
-    "dwWeaponC4": 27403824
+    "dwViewAngles": 27865856,
+    "dwViewMatrix": 27824240,
+    "dwViewRender": 27826304,
+    "dwWeaponC4": 27403632
   },
   "engine2.dll": {
     "dwBuildNumber": 5508068,
     "dwNetworkGameClient": 5504224,
     "dwNetworkGameClient_clientTickCount": 872,
-    "dwNetworkGameClient_deltaTick": 580,
+    "dwNetworkGameClient_deltaTick": 636,
     "dwNetworkGameClient_isBackgroundMap": 2626631,
     "dwNetworkGameClient_localPlayer": 240,
     "dwNetworkGameClient_maxClients": 568,
     "dwNetworkGameClient_serverTickCount": 876,
     "dwNetworkGameClient_signOnState": 552,
-    "dwWindowHeight": 6436172,
-    "dwWindowWidth": 6436168
+    "dwWindowHeight": 6436164,
+    "dwWindowWidth": 6436160
   },
   "inputsystem.dll": {
     "dwInputSystem": 231392
