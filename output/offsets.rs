@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-16 03:33:22.466198100 UTC
+// 2025-05-21 23:01:00.983039800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -27,17 +27,17 @@ pub mod cs2_dumper {
         }
         // Module: engine2.dll
         pub mod engine2_dll {
-            pub const dwBuildNumber: usize = 0x541BD4;
+            pub const dwBuildNumber: usize = 0x541BE4;
             pub const dwNetworkGameClient: usize = 0x540CE0;
             pub const dwNetworkGameClient_clientTickCount: usize = 0x368;
-            pub const dwNetworkGameClient_deltaTick: usize = 0x244;
+            pub const dwNetworkGameClient_deltaTick: usize = 0x27C;
             pub const dwNetworkGameClient_isBackgroundMap: usize = 0x281447;
             pub const dwNetworkGameClient_localPlayer: usize = 0xF0;
             pub const dwNetworkGameClient_maxClients: usize = 0x238;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x36C;
             pub const dwNetworkGameClient_signOnState: usize = 0x228;
-            pub const dwWindowHeight: usize = 0x62454C;
-            pub const dwWindowWidth: usize = 0x624548;
+            pub const dwWindowHeight: usize = 0x62457C;
+            pub const dwWindowWidth: usize = 0x624578;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {
@@ -45,7 +45,7 @@ pub mod cs2_dumper {
         }
         // Module: matchmaking.dll
         pub mod matchmaking_dll {
-            pub const dwGameTypes: usize = 0x1A3190;
+            pub const dwGameTypes: usize = 0x1A4190;
             pub const dwGameTypes_mapName: usize = 0x120;
         }
         // Module: soundsystem.dll
