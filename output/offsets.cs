@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-16 03:33:22.466198100 UTC
+// 2025-05-21 23:01:00.983039800 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
@@ -24,17 +24,17 @@ namespace CS2Dumper.Offsets {
     }
     // Module: engine2.dll
     public static class Engine2Dll {
-        public const nint dwBuildNumber = 0x541BD4;
+        public const nint dwBuildNumber = 0x541BE4;
         public const nint dwNetworkGameClient = 0x540CE0;
         public const nint dwNetworkGameClient_clientTickCount = 0x368;
-        public const nint dwNetworkGameClient_deltaTick = 0x244;
+        public const nint dwNetworkGameClient_deltaTick = 0x27C;
         public const nint dwNetworkGameClient_isBackgroundMap = 0x281447;
         public const nint dwNetworkGameClient_localPlayer = 0xF0;
         public const nint dwNetworkGameClient_maxClients = 0x238;
         public const nint dwNetworkGameClient_serverTickCount = 0x36C;
         public const nint dwNetworkGameClient_signOnState = 0x228;
-        public const nint dwWindowHeight = 0x62454C;
-        public const nint dwWindowWidth = 0x624548;
+        public const nint dwWindowHeight = 0x62457C;
+        public const nint dwWindowWidth = 0x624578;
     }
     // Module: inputsystem.dll
     public static class InputsystemDll {
@@ -42,7 +42,7 @@ namespace CS2Dumper.Offsets {
     }
     // Module: matchmaking.dll
     public static class MatchmakingDll {
-        public const nint dwGameTypes = 0x1A3190;
+        public const nint dwGameTypes = 0x1A4190;
         public const nint dwGameTypes_mapName = 0x120;
     }
     // Module: soundsystem.dll

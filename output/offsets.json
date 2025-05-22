@@ -19,23 +19,23 @@
     "dwWeaponC4": 27239008
   },
   "engine2.dll": {
-    "dwBuildNumber": 5512148,
+    "dwBuildNumber": 5512164,
     "dwNetworkGameClient": 5508320,
     "dwNetworkGameClient_clientTickCount": 872,
-    "dwNetworkGameClient_deltaTick": 580,
+    "dwNetworkGameClient_deltaTick": 636,
     "dwNetworkGameClient_isBackgroundMap": 2626631,
     "dwNetworkGameClient_localPlayer": 240,
     "dwNetworkGameClient_maxClients": 568,
     "dwNetworkGameClient_serverTickCount": 876,
     "dwNetworkGameClient_signOnState": 552,
-    "dwWindowHeight": 6440268,
-    "dwWindowWidth": 6440264
+    "dwWindowHeight": 6440316,
+    "dwWindowWidth": 6440312
   },
   "inputsystem.dll": {
     "dwInputSystem": 231392
   },
   "matchmaking.dll": {
-    "dwGameTypes": 1716624,
+    "dwGameTypes": 1720720,
     "dwGameTypes_mapName": 288
   },
   "soundsystem.dll": {

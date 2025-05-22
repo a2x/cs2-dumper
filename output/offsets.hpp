@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-16 03:33:22.466198100 UTC
+// 2025-05-21 23:01:00.983039800 UTC
 
 #pragma once
 
@@ -29,17 +29,17 @@ namespace cs2_dumper {
         }
         // Module: engine2.dll
         namespace engine2_dll {
-            constexpr std::ptrdiff_t dwBuildNumber = 0x541BD4;
+            constexpr std::ptrdiff_t dwBuildNumber = 0x541BE4;
             constexpr std::ptrdiff_t dwNetworkGameClient = 0x540CE0;
             constexpr std::ptrdiff_t dwNetworkGameClient_clientTickCount = 0x368;
-            constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x244;
+            constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x27C;
             constexpr std::ptrdiff_t dwNetworkGameClient_isBackgroundMap = 0x281447;
             constexpr std::ptrdiff_t dwNetworkGameClient_localPlayer = 0xF0;
             constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x238;
             constexpr std::ptrdiff_t dwNetworkGameClient_serverTickCount = 0x36C;
             constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x228;
-            constexpr std::ptrdiff_t dwWindowHeight = 0x62454C;
-            constexpr std::ptrdiff_t dwWindowWidth = 0x624548;
+            constexpr std::ptrdiff_t dwWindowHeight = 0x62457C;
+            constexpr std::ptrdiff_t dwWindowWidth = 0x624578;
         }
         // Module: inputsystem.dll
         namespace inputsystem_dll {
@@ -47,7 +47,7 @@ namespace cs2_dumper {
         }
         // Module: matchmaking.dll
         namespace matchmaking_dll {
-            constexpr std::ptrdiff_t dwGameTypes = 0x1A3190;
+            constexpr std::ptrdiff_t dwGameTypes = 0x1A4190;
             constexpr std::ptrdiff_t dwGameTypes_mapName = 0x120;
         }
         // Module: soundsystem.dll
