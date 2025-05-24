@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-23 00:22:21.575826800 UTC
+// 2025-05-24 00:43:57.788866800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: pulse_system.dll
