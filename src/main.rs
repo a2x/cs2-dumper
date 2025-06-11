@@ -1,3 +1,6 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
+
 use std::fs::File;
 use std::path::PathBuf;
 use std::str::FromStr;
