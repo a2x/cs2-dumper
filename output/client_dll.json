@@ -1319,7 +1319,6 @@
       "CCSPlayer_ItemServices": {
         "fields": {
           "m_bHasDefuser": 64,
-          "m_bHasHeavyArmor": 66,
           "m_bHasHelmet": 65
         },
         "metadata": [
@@ -1330,11 +1329,6 @@
           },
           {
             "name": "m_bHasHelmet",
-            "type": "NetworkVarNames",
-            "type_name": "bool"
-          },
-          {
-            "name": "m_bHasHeavyArmor",
             "type": "NetworkVarNames",
             "type_name": "bool"
           }
@@ -6234,7 +6228,6 @@
           "m_bRoundEndNoMusic": 3844,
           "m_bRoundEndShowTimerDefend": 3800,
           "m_bServerPaused": 76,
-          "m_bSpawnedTerrorHuntHeavy": 3156,
           "m_bSwitchingTeamsAtRoundReset": 3461,
           "m_bTCantBuy": 2480,
           "m_bTeamIntroPeriod": 3788,
@@ -8307,8 +8300,8 @@
           "m_szCurrentLoadCachedFileName": 136,
           "m_szCustomName": 720,
           "m_szCustomNameOverride": 881,
-          "m_unClientFlags": 508,
-          "m_unOverrideStyle": 509
+          "m_ubStyleOverride": 508,
+          "m_unClientFlags": 509
         },
         "metadata": [
           {

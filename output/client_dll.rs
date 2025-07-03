@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-06-11 04:15:50.467574200 UTC
+// 2025-07-03 04:46:07.725715 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -210,7 +210,7 @@ pub mod cs2_dumper {
             pub mod C_WeaponM249 {
             }
             // Parent: C_TeamplayRules
-            // Field count: 100
+            // Field count: 99
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -374,7 +374,6 @@ pub mod cs2_dumper {
                 pub const m_vMinimapMins: usize = 0xC1C; // Vector
                 pub const m_vMinimapMaxs: usize = 0xC28; // Vector
                 pub const m_MinimapVerticalSectionHeights: usize = 0xC34; // float32[8]
-                pub const m_bSpawnedTerrorHuntHeavy: usize = 0xC54; // bool
                 pub const m_ullLocalMatchID: usize = 0xC58; // uint64
                 pub const m_nEndMatchMapGroupVoteTypes: usize = 0xC60; // int32[10]
                 pub const m_nEndMatchMapGroupVoteOptions: usize = 0xC88; // int32[10]
@@ -3150,16 +3149,14 @@ pub mod cs2_dumper {
                 pub const m_flVerticalFOV: usize = 0x5C8; // float32
             }
             // Parent: CPlayer_ItemServices
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // NetworkVarNames: m_bHasDefuser (bool)
             // NetworkVarNames: m_bHasHelmet (bool)
-            // NetworkVarNames: m_bHasHeavyArmor (bool)
             pub mod CCSPlayer_ItemServices {
                 pub const m_bHasDefuser: usize = 0x40; // bool
                 pub const m_bHasHelmet: usize = 0x41; // bool
-                pub const m_bHasHeavyArmor: usize = 0x42; // bool
             }
             // Parent: C_BaseModelEntity
             // Field count: 73
@@ -3924,8 +3921,8 @@ pub mod cs2_dumper {
                 pub const m_iRarityOverride: usize = 0x1F0; // int32
                 pub const m_iQualityOverride: usize = 0x1F4; // int32
                 pub const m_iOriginOverride: usize = 0x1F8; // int32
-                pub const m_unClientFlags: usize = 0x1FC; // uint8
-                pub const m_unOverrideStyle: usize = 0x1FD; // uint8
+                pub const m_ubStyleOverride: usize = 0x1FC; // uint8
+                pub const m_unClientFlags: usize = 0x1FD; // uint8
                 pub const m_AttributeList: usize = 0x210; // CAttributeList
                 pub const m_NetworkedDynamicAttributes: usize = 0x270; // CAttributeList
                 pub const m_szCustomName: usize = 0x2D0; // char[161]

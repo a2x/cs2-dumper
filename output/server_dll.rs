@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-06-11 04:15:50.467574200 UTC
+// 2025-07-03 04:46:07.725715 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: server.dll
-        // Class count: 639
+        // Class count: 638
         // Enum count: 139
         pub mod server_dll {
             // Alignment: 4
@@ -779,7 +779,7 @@ pub mod cs2_dumper {
                 eCount = 0x2
             }
             // Alignment: 4
-            // Member count: 10
+            // Member count: 8
             #[repr(u32)]
             pub enum CSPlayerBlockingUseAction_t {
                 k_CSPlayerBlockingUseAction_None = 0x0,
@@ -787,11 +787,9 @@ pub mod cs2_dumper {
                 k_CSPlayerBlockingUseAction_DefusingWithKit = 0x2,
                 k_CSPlayerBlockingUseAction_HostageGrabbing = 0x3,
                 k_CSPlayerBlockingUseAction_HostageDropping = 0x4,
-                k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 0x5,
-                k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 0x6,
-                k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0x7,
-                k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x8,
-                k_CSPlayerBlockingUseAction_MaxCount = 0x9
+                k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0x5,
+                k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x6,
+                k_CSPlayerBlockingUseAction_MaxCount = 0x7
             }
             // Alignment: 4
             // Member count: 3
@@ -2706,10 +2704,6 @@ pub mod cs2_dumper {
                 pub const m_flDMBonusStartTime: usize = 0x30; // GameTime_t
                 pub const m_flDMBonusTimeLength: usize = 0x34; // float32
                 pub const m_sDMBonusWeapon: usize = 0x38; // CUtlString
-            }
-            // Parent: CItemAssaultSuit
-            // Field count: 0
-            pub mod CItemHeavyAssaultSuit {
             }
             // Parent: CPointEntity
             // Field count: 3
@@ -4828,16 +4822,14 @@ pub mod cs2_dumper {
                 pub const m_bPassthoughCaller: usize = 0x534; // bool
             }
             // Parent: CPlayer_ItemServices
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // NetworkVarNames: m_bHasDefuser (bool)
             // NetworkVarNames: m_bHasHelmet (bool)
-            // NetworkVarNames: m_bHasHeavyArmor (bool)
             pub mod CCSPlayer_ItemServices {
                 pub const m_bHasDefuser: usize = 0x40; // bool
                 pub const m_bHasHelmet: usize = 0x41; // bool
-                pub const m_bHasHeavyArmor: usize = 0x42; // bool
             }
             // Parent: CPointEntity
             // Field count: 7
@@ -7424,7 +7416,7 @@ pub mod cs2_dumper {
                 pub const m_state: usize = 0x798; // int32
             }
             // Parent: CTeamplayRules
-            // Field count: 189
+            // Field count: 188
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7588,7 +7580,6 @@ pub mod cs2_dumper {
                 pub const m_vMinimapMins: usize = 0xCA4; // Vector
                 pub const m_vMinimapMaxs: usize = 0xCB0; // Vector
                 pub const m_MinimapVerticalSectionHeights: usize = 0xCBC; // float32[8]
-                pub const m_bSpawnedTerrorHuntHeavy: usize = 0xCDC; // bool
                 pub const m_ullLocalMatchID: usize = 0xCE0; // uint64
                 pub const m_nEndMatchMapGroupVoteTypes: usize = 0xCE8; // int32[10]
                 pub const m_nEndMatchMapGroupVoteOptions: usize = 0xD10; // int32[10]

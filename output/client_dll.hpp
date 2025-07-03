@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-06-11 04:15:50.467574200 UTC
+// 2025-07-03 04:46:07.725715 UTC
 
 #pragma once
 
@@ -205,7 +205,7 @@ namespace cs2_dumper {
             namespace C_WeaponM249 {
             }
             // Parent: C_TeamplayRules
-            // Field count: 100
+            // Field count: 99
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -369,7 +369,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vMinimapMins = 0xC1C; // Vector
                 constexpr std::ptrdiff_t m_vMinimapMaxs = 0xC28; // Vector
                 constexpr std::ptrdiff_t m_MinimapVerticalSectionHeights = 0xC34; // float32[8]
-                constexpr std::ptrdiff_t m_bSpawnedTerrorHuntHeavy = 0xC54; // bool
                 constexpr std::ptrdiff_t m_ullLocalMatchID = 0xC58; // uint64
                 constexpr std::ptrdiff_t m_nEndMatchMapGroupVoteTypes = 0xC60; // int32[10]
                 constexpr std::ptrdiff_t m_nEndMatchMapGroupVoteOptions = 0xC88; // int32[10]
@@ -3145,16 +3144,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flVerticalFOV = 0x5C8; // float32
             }
             // Parent: CPlayer_ItemServices
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // NetworkVarNames: m_bHasDefuser (bool)
             // NetworkVarNames: m_bHasHelmet (bool)
-            // NetworkVarNames: m_bHasHeavyArmor (bool)
             namespace CCSPlayer_ItemServices {
                 constexpr std::ptrdiff_t m_bHasDefuser = 0x40; // bool
                 constexpr std::ptrdiff_t m_bHasHelmet = 0x41; // bool
-                constexpr std::ptrdiff_t m_bHasHeavyArmor = 0x42; // bool
             }
             // Parent: C_BaseModelEntity
             // Field count: 73
@@ -3919,8 +3916,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iRarityOverride = 0x1F0; // int32
                 constexpr std::ptrdiff_t m_iQualityOverride = 0x1F4; // int32
                 constexpr std::ptrdiff_t m_iOriginOverride = 0x1F8; // int32
-                constexpr std::ptrdiff_t m_unClientFlags = 0x1FC; // uint8
-                constexpr std::ptrdiff_t m_unOverrideStyle = 0x1FD; // uint8
+                constexpr std::ptrdiff_t m_ubStyleOverride = 0x1FC; // uint8
+                constexpr std::ptrdiff_t m_unClientFlags = 0x1FD; // uint8
                 constexpr std::ptrdiff_t m_AttributeList = 0x210; // CAttributeList
                 constexpr std::ptrdiff_t m_NetworkedDynamicAttributes = 0x270; // CAttributeList
                 constexpr std::ptrdiff_t m_szCustomName = 0x2D0; // char[161]
