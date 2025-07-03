@@ -3342,7 +3342,6 @@
           "m_bScrambleTeamsOnRestart": 3503,
           "m_bServerPaused": 212,
           "m_bServerVoteOnReset": 3801,
-          "m_bSpawnedTerrorHuntHeavy": 3292,
           "m_bSwapTeamsOnRestart": 3504,
           "m_bSwitchingTeamsAtRoundReset": 5317,
           "m_bTCantBuy": 2616,
@@ -5384,7 +5383,6 @@
       "CCSPlayer_ItemServices": {
         "fields": {
           "m_bHasDefuser": 64,
-          "m_bHasHeavyArmor": 66,
           "m_bHasHelmet": 65
         },
         "metadata": [
@@ -5395,11 +5393,6 @@
           },
           {
             "name": "m_bHasHelmet",
-            "type": "NetworkVarNames",
-            "type_name": "bool"
-          },
-          {
-            "name": "m_bHasHeavyArmor",
             "type": "NetworkVarNames",
             "type_name": "bool"
           }
@@ -10784,11 +10777,6 @@
         },
         "metadata": [],
         "parent": "CBaseModelEntity"
-      },
-      "CItemHeavyAssaultSuit": {
-        "fields": {},
-        "metadata": [],
-        "parent": "CItemAssaultSuit"
       },
       "CItemKevlar": {
         "fields": {},
@@ -17655,14 +17643,12 @@
         "members": {
           "k_CSPlayerBlockingUseAction_DefusingDefault": 1,
           "k_CSPlayerBlockingUseAction_DefusingWithKit": 2,
-          "k_CSPlayerBlockingUseAction_EquippingHeavyArmor": 5,
           "k_CSPlayerBlockingUseAction_HostageDropping": 4,
           "k_CSPlayerBlockingUseAction_HostageGrabbing": 3,
-          "k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup": 7,
-          "k_CSPlayerBlockingUseAction_MapLongUseEntity_Place": 8,
-          "k_CSPlayerBlockingUseAction_MaxCount": 9,
-          "k_CSPlayerBlockingUseAction_None": 0,
-          "k_CSPlayerBlockingUseAction_TakingOffHeavyArmor": 6
+          "k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup": 5,
+          "k_CSPlayerBlockingUseAction_MapLongUseEntity_Place": 6,
+          "k_CSPlayerBlockingUseAction_MaxCount": 7,
+          "k_CSPlayerBlockingUseAction_None": 0
         },
         "type": "uint32"
       },

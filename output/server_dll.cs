@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-06-11 04:15:50.467574200 UTC
+// 2025-07-03 04:46:07.725715 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
-    // Class count: 639
+    // Class count: 638
     // Enum count: 139
     public static class ServerDll {
         // Alignment: 4
@@ -735,18 +735,16 @@ namespace CS2Dumper.Schemas {
             eCount = 0x2
         }
         // Alignment: 4
-        // Member count: 10
+        // Member count: 8
         public enum CSPlayerBlockingUseAction_t : uint {
             k_CSPlayerBlockingUseAction_None = 0x0,
             k_CSPlayerBlockingUseAction_DefusingDefault = 0x1,
             k_CSPlayerBlockingUseAction_DefusingWithKit = 0x2,
             k_CSPlayerBlockingUseAction_HostageGrabbing = 0x3,
             k_CSPlayerBlockingUseAction_HostageDropping = 0x4,
-            k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 0x5,
-            k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 0x6,
-            k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0x7,
-            k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x8,
-            k_CSPlayerBlockingUseAction_MaxCount = 0x9
+            k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0x5,
+            k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x6,
+            k_CSPlayerBlockingUseAction_MaxCount = 0x7
         }
         // Alignment: 4
         // Member count: 3
@@ -2599,10 +2597,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flDMBonusStartTime = 0x30; // GameTime_t
             public const nint m_flDMBonusTimeLength = 0x34; // float32
             public const nint m_sDMBonusWeapon = 0x38; // CUtlString
-        }
-        // Parent: CItemAssaultSuit
-        // Field count: 0
-        public static class CItemHeavyAssaultSuit {
         }
         // Parent: CPointEntity
         // Field count: 3
@@ -4721,16 +4715,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_bPassthoughCaller = 0x534; // bool
         }
         // Parent: CPlayer_ItemServices
-        // Field count: 3
+        // Field count: 2
         //
         // Metadata:
         // NetworkVarNames: m_bHasDefuser (bool)
         // NetworkVarNames: m_bHasHelmet (bool)
-        // NetworkVarNames: m_bHasHeavyArmor (bool)
         public static class CCSPlayer_ItemServices {
             public const nint m_bHasDefuser = 0x40; // bool
             public const nint m_bHasHelmet = 0x41; // bool
-            public const nint m_bHasHeavyArmor = 0x42; // bool
         }
         // Parent: CPointEntity
         // Field count: 7
@@ -7317,7 +7309,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_state = 0x798; // int32
         }
         // Parent: CTeamplayRules
-        // Field count: 189
+        // Field count: 188
         //
         // Metadata:
         // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7481,7 +7473,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_vMinimapMins = 0xCA4; // Vector
             public const nint m_vMinimapMaxs = 0xCB0; // Vector
             public const nint m_MinimapVerticalSectionHeights = 0xCBC; // float32[8]
-            public const nint m_bSpawnedTerrorHuntHeavy = 0xCDC; // bool
             public const nint m_ullLocalMatchID = 0xCE0; // uint64
             public const nint m_nEndMatchMapGroupVoteTypes = 0xCE8; // int32[10]
             public const nint m_nEndMatchMapGroupVoteOptions = 0xD10; // int32[10]

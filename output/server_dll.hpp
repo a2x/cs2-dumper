@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-06-11 04:15:50.467574200 UTC
+// 2025-07-03 04:46:07.725715 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: server.dll
-        // Class count: 639
+        // Class count: 638
         // Enum count: 139
         namespace server_dll {
             // Alignment: 4
@@ -740,18 +740,16 @@ namespace cs2_dumper {
                 eCount = 0x2
             };
             // Alignment: 4
-            // Member count: 10
+            // Member count: 8
             enum class CSPlayerBlockingUseAction_t : uint32_t {
                 k_CSPlayerBlockingUseAction_None = 0x0,
                 k_CSPlayerBlockingUseAction_DefusingDefault = 0x1,
                 k_CSPlayerBlockingUseAction_DefusingWithKit = 0x2,
                 k_CSPlayerBlockingUseAction_HostageGrabbing = 0x3,
                 k_CSPlayerBlockingUseAction_HostageDropping = 0x4,
-                k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 0x5,
-                k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 0x6,
-                k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0x7,
-                k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x8,
-                k_CSPlayerBlockingUseAction_MaxCount = 0x9
+                k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0x5,
+                k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x6,
+                k_CSPlayerBlockingUseAction_MaxCount = 0x7
             };
             // Alignment: 4
             // Member count: 3
@@ -2604,10 +2602,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDMBonusStartTime = 0x30; // GameTime_t
                 constexpr std::ptrdiff_t m_flDMBonusTimeLength = 0x34; // float32
                 constexpr std::ptrdiff_t m_sDMBonusWeapon = 0x38; // CUtlString
-            }
-            // Parent: CItemAssaultSuit
-            // Field count: 0
-            namespace CItemHeavyAssaultSuit {
             }
             // Parent: CPointEntity
             // Field count: 3
@@ -4726,16 +4720,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bPassthoughCaller = 0x534; // bool
             }
             // Parent: CPlayer_ItemServices
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // NetworkVarNames: m_bHasDefuser (bool)
             // NetworkVarNames: m_bHasHelmet (bool)
-            // NetworkVarNames: m_bHasHeavyArmor (bool)
             namespace CCSPlayer_ItemServices {
                 constexpr std::ptrdiff_t m_bHasDefuser = 0x40; // bool
                 constexpr std::ptrdiff_t m_bHasHelmet = 0x41; // bool
-                constexpr std::ptrdiff_t m_bHasHeavyArmor = 0x42; // bool
             }
             // Parent: CPointEntity
             // Field count: 7
@@ -7322,7 +7314,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_state = 0x798; // int32
             }
             // Parent: CTeamplayRules
-            // Field count: 189
+            // Field count: 188
             //
             // Metadata:
             // NetworkVarNames: m_bFreezePeriod (bool)
@@ -7486,7 +7478,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vMinimapMins = 0xCA4; // Vector
                 constexpr std::ptrdiff_t m_vMinimapMaxs = 0xCB0; // Vector
                 constexpr std::ptrdiff_t m_MinimapVerticalSectionHeights = 0xCBC; // float32[8]
-                constexpr std::ptrdiff_t m_bSpawnedTerrorHuntHeavy = 0xCDC; // bool
                 constexpr std::ptrdiff_t m_ullLocalMatchID = 0xCE0; // uint64
                 constexpr std::ptrdiff_t m_nEndMatchMapGroupVoteTypes = 0xCE8; // int32[10]
                 constexpr std::ptrdiff_t m_nEndMatchMapGroupVoteOptions = 0xD10; // int32[10]
