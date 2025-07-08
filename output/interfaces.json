@@ -7,11 +7,11 @@
     "ClientToolsInfo_001": 25493200,
     "EmptyWorldService001_Client": 25215216,
     "GameClientExports001": 25480072,
-    "LegacyGameUI001": 25612768,
-    "Source2Client002": 27682944,
-    "Source2ClientConfig001": 27260016,
+    "LegacyGameUI001": 25612784,
+    "Source2Client002": 27682976,
+    "Source2ClientConfig001": 27260048,
     "Source2ClientPrediction001": 25526096,
-    "Source2ClientUI001": 25605904
+    "Source2ClientUI001": 25605920
   },
   "engine2.dll": {
     "BenchmarkService001": 5532976,
