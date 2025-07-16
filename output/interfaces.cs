@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-08 05:06:56.461788900 UTC
+// 2025-07-16 05:17:05.277202900 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x184FED0;
-        public const nint EmptyWorldService001_Client = 0x180C0F0;
-        public const nint GameClientExports001 = 0x184CB88;
-        public const nint LegacyGameUI001 = 0x186D1F0;
-        public const nint Source2Client002 = 0x1A668A0;
-        public const nint Source2ClientConfig001 = 0x19FF490;
-        public const nint Source2ClientPrediction001 = 0x1857F50;
-        public const nint Source2ClientUI001 = 0x186B720;
+        public const nint ClientToolsInfo_001 = 0x1850ED0;
+        public const nint EmptyWorldService001_Client = 0x180D0F0;
+        public const nint GameClientExports001 = 0x184DB88;
+        public const nint LegacyGameUI001 = 0x186E1F0;
+        public const nint Source2Client002 = 0x1A67A10;
+        public const nint Source2ClientConfig001 = 0x1A00610;
+        public const nint Source2ClientPrediction001 = 0x1858F50;
+        public const nint Source2ClientUI001 = 0x186C720;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -157,16 +157,16 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: server.dll
     public static class ServerDll {
-        public const nint EmptyWorldService001_Server = 0x136FB70;
-        public const nint EntitySubclassUtilsV001 = 0x1320190;
-        public const nint NavGameTest001 = 0x140EB98;
-        public const nint ServerToolsInfo_001 = 0x13C4538;
-        public const nint Source2GameClients001 = 0x13BE400;
-        public const nint Source2GameDirector001 = 0x14F2160;
-        public const nint Source2GameEntities001 = 0x13C4460;
-        public const nint Source2Server001 = 0x13C42D0;
-        public const nint Source2ServerConfig001 = 0x15BCBE8;
-        public const nint customnavsystem001 = 0x1304908;
+        public const nint EmptyWorldService001_Server = 0x1370BB0;
+        public const nint EntitySubclassUtilsV001 = 0x1321180;
+        public const nint NavGameTest001 = 0x140FBD8;
+        public const nint ServerToolsInfo_001 = 0x13C5578;
+        public const nint Source2GameClients001 = 0x13BF440;
+        public const nint Source2GameDirector001 = 0x14F31A0;
+        public const nint Source2GameEntities001 = 0x13C54A0;
+        public const nint Source2Server001 = 0x13C5310;
+        public const nint Source2ServerConfig001 = 0x15BDC68;
+        public const nint customnavsystem001 = 0x13058F8;
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {
