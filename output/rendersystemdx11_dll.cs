@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: rendersystemdx11.dll
@@ -7,7 +7,7 @@ namespace CS2Dumper.Schemas {
     // Enum count: 5
     public static class Rendersystemdx11Dll {
         // Alignment: 4
-        // Member count: 13
+        // Member count: 14
         public enum RenderPrimitiveType_t : uint {
             RENDER_PRIM_POINTS = 0x0,
             RENDER_PRIM_LINES = 0x1,
@@ -21,10 +21,11 @@ namespace CS2Dumper.Schemas {
             RENDER_PRIM_INSTANCED_QUADS = 0x9,
             RENDER_PRIM_HETEROGENOUS = 0xA,
             RENDER_PRIM_COMPUTE_SHADER = 0xB,
-            RENDER_PRIM_TYPE_COUNT = 0xC
+            RENDER_PRIM_MESH_SHADER = 0xC,
+            RENDER_PRIM_TYPE_COUNT = 0xD
         }
         // Alignment: 4
-        // Member count: 13
+        // Member count: 12
         public enum RenderBufferFlags_t : uint {
             RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
             RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
@@ -32,13 +33,12 @@ namespace CS2Dumper.Schemas {
             RENDER_BUFFER_USAGE_UNORDERED_ACCESS = 0x8,
             RENDER_BUFFER_BYTEADDRESS_BUFFER = 0x10,
             RENDER_BUFFER_STRUCTURED_BUFFER = 0x20,
-            RENDER_BUFFER_APPEND_CONSUME_BUFFER = 0x40,
-            RENDER_BUFFER_UAV_COUNTER = 0x80,
             RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
             RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
             RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
             RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
-            RENDER_BUFFER_POOL_ALLOCATED = 0x1000
+            RENDER_BUFFER_POOL_ALLOCATED = 0x1000,
+            RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x2000
         }
         // Alignment: 1
         // Member count: 8
@@ -60,10 +60,10 @@ namespace CS2Dumper.Schemas {
             INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
             INPUT_LAYOUT_VARIATION_MAX = 0x3
         }
-        // Alignment: 4
+        // Alignment: 1
         // Member count: 3
-        public enum RenderSlotType_t : uint {
-            RENDER_SLOT_INVALID = unchecked((uint)-1),
+        public enum RenderSlotType_t : byte {
+            RENDER_SLOT_INVALID = unchecked((byte)-1),
             RENDER_SLOT_PER_VERTEX = 0x0,
             RENDER_SLOT_PER_INSTANCE = 0x1
         }
@@ -76,20 +76,20 @@ namespace CS2Dumper.Schemas {
             public const nint m_nD3DSemanticIndex = 0xC0; // int32
         }
         // Parent: None
-        // Field count: 1
+        // Field count: 2
         public static class VsInputSignature_t {
             public const nint m_elems = 0x0; // CUtlVector<VsInputSignatureElement_t>
+            public const nint m_depth_elems = 0x18; // CUtlVector<VsInputSignatureElement_t>
         }
         // Parent: None
-        // Field count: 7
+        // Field count: 6
         public static class RenderInputLayoutField_t {
-            public const nint m_pSemanticName = 0x0; // uint8[32]
-            public const nint m_nSemanticIndex = 0x20; // int32
-            public const nint m_Format = 0x24; // uint32
-            public const nint m_nOffset = 0x28; // int32
-            public const nint m_nSlot = 0x2C; // int32
-            public const nint m_nSlotType = 0x30; // RenderSlotType_t
-            public const nint m_nInstanceStepRate = 0x34; // int32
+            public const nint m_pSemanticName = 0x0; // char[32]
+            public const nint m_nSemanticIndex = 0x20; // int8
+            public const nint m_nOffset = 0x28; // int16
+            public const nint m_nSlot = 0x2A; // int8
+            public const nint m_nSlotType = 0x2B; // RenderSlotType_t
+            public const nint m_szShaderSemantic = 0x2C; // char[32]
         }
     }
 }

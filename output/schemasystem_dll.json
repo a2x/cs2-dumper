@@ -36,7 +36,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "CExampleSchemaVData_PolymorphicBase"
+        "parent": null
       },
       "CExampleSchemaVData_PolymorphicDerivedB": {
         "fields": {
@@ -48,22 +48,22 @@
             "type": "Unknown"
           }
         ],
-        "parent": "CExampleSchemaVData_PolymorphicBase"
+        "parent": null
       },
       "CSchemaSystemInternalRegistration": {
         "fields": {
           "m_CTransform": 256,
           "m_CUtlBinaryBlock": 296,
-          "m_CUtlString": 320,
-          "m_CUtlSymbol": 328,
+          "m_CUtlString": 312,
+          "m_CUtlSymbol": 320,
           "m_Color": 224,
           "m_DegreeEuler": 100,
-          "m_KV3": 368,
+          "m_KV3": 360,
           "m_QAngle": 64,
           "m_Quaternion": 48,
           "m_QuaternionStorage": 112,
           "m_RadianEuler": 88,
-          "m_ResourceTypes": 360,
+          "m_ResourceTypes": 352,
           "m_RotationVector": 76,
           "m_Vector": 8,
           "m_Vector2D": 0,
@@ -72,8 +72,8 @@
           "m_matrix3x4_t": 128,
           "m_matrix3x4a_t": 176,
           "m_pKeyValues": 288,
-          "m_stringToken": 332,
-          "m_stringTokenWithStorage": 336
+          "m_stringToken": 324,
+          "m_stringTokenWithStorage": 328
         },
         "metadata": [],
         "parent": null
@@ -134,6 +134,7 @@
           "FIELD_GLOBALSYMBOL": 79,
           "FIELD_HMATERIAL": 41,
           "FIELD_HMODEL": 42,
+          "FIELD_HNMGRAPHDEFINITION": 80,
           "FIELD_HPARTICLESYSTEMDEFINITION": 56,
           "FIELD_HPOSTPROCESSING": 61,
           "FIELD_HRENDERTEXTURE": 55,
@@ -169,7 +170,7 @@
           "FIELD_STRING_AND_TOKEN": 75,
           "FIELD_TICK": 16,
           "FIELD_TIME": 15,
-          "FIELD_TYPECOUNT": 80,
+          "FIELD_TYPECOUNT": 81,
           "FIELD_TYPEUNKNOWN": 29,
           "FIELD_UINT16": 58,
           "FIELD_UINT32": 37,

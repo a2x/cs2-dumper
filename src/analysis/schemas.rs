@@ -100,11 +100,6 @@ fn read_class_binding(
         let base_class = mem.read_ptr(ptr).data_part().ok()?;
         let parent_class = mem.read_ptr(base_class.prev).data_part().ok()?;
 
-        let module_name = mem
-            .read_utf8_lossy(parent_class.module_name.address(), 128)
-            .data_part()
-            .ok()?;
-
         let name = mem
             .read_utf8_lossy(parent_class.name.address(), 4096)
             .data_part()
@@ -112,7 +107,7 @@ fn read_class_binding(
 
         Some(Box::new(Class {
             name,
-            module_name,
+            module_name: String::new(),
             parent: None,
             metadata: Vec::new(),
             fields: Vec::new(),
@@ -301,7 +296,7 @@ fn read_schema_system<P: Process + MemoryView>(process: &mut P) -> Result<Schema
 
     if !view
         .scanner()
-        .finds_code(pattern!("4c8d35${'} 0f2845"), &mut save)
+        .finds_code(pattern!("488905${'} 4c8d0d${} 0fb645? 4c8d45? 33f6"), &mut save)
     {
         bail!("outdated schema system pattern");
     }

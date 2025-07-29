@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: soundsystem.dll
-        // Class count: 74
-        // Enum count: 18
+        // Class count: 77
+        // Enum count: 19
         pub mod soundsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -15,6 +15,49 @@ pub mod cs2_dumper {
             pub enum EMode_t {
                 Peak = 0x0,
                 RMS = 0x1
+            }
+            // Alignment: 4
+            // Member count: 38
+            #[repr(u32)]
+            pub enum VMixGraphCommandID_t {
+                CMD_INVALID = u32::MAX,
+                CMD_CONTROL_INPUT_STORE = 0x1,
+                CMD_CONTROL_INPUT_STORE_DB = 0x2,
+                CMD_CONTROL_TRANSIENT_INPUT_STORE = 0x3,
+                CMD_CONTROL_TRANSIENT_INPUT_RESET = 0x4,
+                CMD_CONTROL_OUTPUT_STORE = 0x5,
+                CMD_CONTROL_EVALUATE_CURVE = 0x6,
+                CMD_CONTROL_COPY = 0x7,
+                CMD_CONTROL_REMAP_LINEAR = 0x8,
+                CMD_CONTROL_REMAP_SINE = 0x9,
+                CMD_CONTROL_REMAP_LOGLINEAR = 0xA,
+                CMD_CONTROL_MAX = 0xB,
+                CMD_CONTROL_RESET_TIMER = 0xC,
+                CMD_CONTROL_INCREMENT_TIMER = 0xD,
+                CMD_CONTROL_EVAL_ENVELOPE = 0xE,
+                CMD_CONTROL_SINE_BLEND = 0xF,
+                CMD_PROCESSOR_SET_CONTROL_VALUE = 0x10,
+                CMD_PROCESSOR_SET_NAME_INPUT = 0x11,
+                CMD_PROCESSOR_SET_CONTROL_ARRAYVALUE = 0x12,
+                CMD_PROCESSOR_STORE_CONTROL_VALUE = 0x13,
+                CMD_PROCESSOR_SET_VSND_VALUE = 0x14,
+                CMD_SUBMIX_PROCESS = 0x15,
+                CMD_SUBMIX_GENERATE = 0x16,
+                CMD_SUBMIX_GENERATE_SIDECHAIN = 0x17,
+                CMD_SUBMIX_DEBUG = 0x18,
+                CMD_SUBMIX_MIX2x1 = 0x19,
+                CMD_SUBMIX_OUTPUT = 0x1A,
+                CMD_SUBMIX_OUTPUTx2 = 0x1B,
+                CMD_SUBMIX_COPY = 0x1C,
+                CMD_SUBMIX_ACCUMULATE = 0x1D,
+                CMD_SUBMIX_METER = 0x1E,
+                CMD_SUBMIX_METER_SPECTRUM = 0x1F,
+                CMD_IMPULSERESPONSE_INPUT_STORE = 0x20,
+                CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x21,
+                CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x22,
+                CMD_IMPULSERESPONSE_RESET = 0x23,
+                CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x24,
+                CMD_IMPULSERESPONSE_DELAY = 0x25
             }
             // Alignment: 1
             // Member count: 5
@@ -88,7 +131,7 @@ pub mod cs2_dumper {
                 RandomWeights = 0x4
             }
             // Alignment: 2
-            // Member count: 30
+            // Member count: 32
             #[repr(u16)]
             pub enum VMixProcessorType_t {
                 VPROCESSOR_UNKNOWN = 0x0,
@@ -100,27 +143,29 @@ pub mod cs2_dumper {
                 VPROCESSOR_MOD_DELAY = 0x6,
                 VPROCESSOR_DIFFUSOR = 0x7,
                 VPROCESSOR_BOXVERB = 0x8,
-                VPROCESSOR_FREEVERB = 0x9,
-                VPROCESSOR_PLATEVERB = 0xA,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xB,
-                VPROCESSOR_FILTER = 0xC,
-                VPROCESSOR_STEAMAUDIO_PATHING = 0xD,
-                VPROCESSOR_EQ8 = 0xE,
-                VPROCESSOR_ENVELOPE = 0xF,
-                VPROCESSOR_VOCODER = 0x10,
-                VPROCESSOR_CONVOLUTION = 0x11,
-                VPROCESSOR_DYNAMICS_3BAND = 0x12,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x13,
-                VPROCESSOR_SHAPER = 0x14,
-                VPROCESSOR_PANNER = 0x15,
-                VPROCESSOR_UTILITY = 0x16,
-                VPROCESSOR_AUTOFILTER = 0x17,
-                VPROCESSOR_OSC = 0x18,
-                VPROCESSOR_STEREODELAY = 0x19,
-                VPROCESSOR_EFFECT_CHAIN = 0x1A,
-                VPROCESSOR_SUBGRAPH_SWITCH = 0x1B,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1C,
-                VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1D
+                VPROCESSOR_BOXVERB2 = 0x9,
+                VPROCESSOR_FREEVERB = 0xA,
+                VPROCESSOR_PLATEVERB = 0xB,
+                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
+                VPROCESSOR_FILTER = 0xD,
+                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
+                VPROCESSOR_EQ8 = 0xF,
+                VPROCESSOR_ENVELOPE = 0x10,
+                VPROCESSOR_VOCODER = 0x11,
+                VPROCESSOR_CONVOLUTION = 0x12,
+                VPROCESSOR_DUAL_COMPRESSOR = 0x13,
+                VPROCESSOR_DYNAMICS_3BAND = 0x14,
+                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x15,
+                VPROCESSOR_SHAPER = 0x16,
+                VPROCESSOR_PANNER = 0x17,
+                VPROCESSOR_UTILITY = 0x18,
+                VPROCESSOR_AUTOFILTER = 0x19,
+                VPROCESSOR_OSC = 0x1A,
+                VPROCESSOR_STEREODELAY = 0x1B,
+                VPROCESSOR_EFFECT_CHAIN = 0x1C,
+                VPROCESSOR_SUBGRAPH_SWITCH = 0x1D,
+                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1E,
+                VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1F
             }
             // Alignment: 4
             // Member count: 30
@@ -241,7 +286,7 @@ pub mod cs2_dumper {
                 SOS_GROUPTYPE_DYNAMIC = 0x0,
                 SOS_GROUPTYPE_STATIC = 0x1
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -249,9 +294,9 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerBlender {
-                pub const m_firstSound: usize = 0xC0; // CSoundContainerReference
-                pub const m_secondSound: usize = 0xD8; // CSoundContainerReference
-                pub const m_flBlendFactor: usize = 0xF0; // float32
+                pub const m_firstSound: usize = 0xB8; // CSoundContainerReference
+                pub const m_secondSound: usize = 0xD0; // CSoundContainerReference
+                pub const m_flBlendFactor: usize = 0xE8; // float32
             }
             // Parent: None
             // Field count: 4
@@ -288,7 +333,7 @@ pub mod cs2_dumper {
                 pub const m_curve: usize = 0x18; // CPiecewiseCurve
                 pub const m_bSyncInstances: usize = 0x58; // bool
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 6
             //
             // Metadata:
@@ -296,14 +341,14 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerRandomSampler {
-                pub const m_flAmplitude: usize = 0xC0; // float32
-                pub const m_flAmplitudeJitter: usize = 0xC4; // float32
-                pub const m_flTimeJitter: usize = 0xC8; // float32
-                pub const m_flMaxLength: usize = 0xCC; // float32
-                pub const m_nNumDelayVariations: usize = 0xD0; // int32
-                pub const m_grainResources: usize = 0xD8; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+                pub const m_flAmplitude: usize = 0xB8; // float32
+                pub const m_flAmplitudeJitter: usize = 0xBC; // float32
+                pub const m_flTimeJitter: usize = 0xC0; // float32
+                pub const m_flMaxLength: usize = 0xC4; // float32
+                pub const m_nNumDelayVariations: usize = 0xC8; // int32
+                pub const m_grainResources: usize = 0xD0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -339,7 +384,7 @@ pub mod cs2_dumper {
             pub mod CDSPPresetMixgroupModifierTable {
                 pub const m_table: usize = 0x0; // CUtlVector<CDspPresetModifierList>
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 7
             //
             // Metadata:
@@ -353,7 +398,7 @@ pub mod cs2_dumper {
                 pub const m_groupBoundingBoxMinsOpvar: usize = 0x38; // CUtlString
                 pub const m_groupBoundingBoxMaxsOpvar: usize = 0x40; // CUtlString
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -377,7 +422,31 @@ pub mod cs2_dumper {
                 pub const m_sound: usize = 0x8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
                 pub const m_pSound: usize = 0x10; // CVoiceContainerBase*
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
+            // Field count: 17
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod VMixBoxverb2Desc_t {
+                pub const m_flSizeMax: usize = 0x0; // float32
+                pub const m_flSizeMin: usize = 0x4; // float32
+                pub const m_flComplexity: usize = 0x8; // float32
+                pub const m_flDiffusion: usize = 0xC; // float32
+                pub const m_flModDepth: usize = 0x10; // float32
+                pub const m_flModRate: usize = 0x14; // float32
+                pub const m_bParallel: usize = 0x18; // bool
+                pub const m_filterType: usize = 0x1C; // VMixFilterDesc_t
+                pub const m_flWidth: usize = 0x2C; // float32
+                pub const m_flHeight: usize = 0x30; // float32
+                pub const m_flDepth: usize = 0x34; // float32
+                pub const m_flFeedbackScale: usize = 0x38; // float32
+                pub const m_flFeedbackWidth: usize = 0x3C; // float32
+                pub const m_flFeedbackHeight: usize = 0x40; // float32
+                pub const m_flFeedbackDepth: usize = 0x44; // float32
+                pub const m_flOutputGain: usize = 0x48; // float32
+                pub const m_flTaps: usize = 0x4C; // float32
+            }
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -408,7 +477,7 @@ pub mod cs2_dumper {
                 pub const m_bRegenerateCurveOnCompile: usize = 0x8; // bool
                 pub const m_curve: usize = 0x10; // CPiecewiseCurve
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 10
             //
             // Metadata:
@@ -434,7 +503,7 @@ pub mod cs2_dumper {
                 pub const m_type: usize = 0x0; // VMixPannerType_t
                 pub const m_flStrength: usize = 0x4; // float32
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 4
             //
             // Metadata:
@@ -445,7 +514,7 @@ pub mod cs2_dumper {
                 pub const m_priorityContributeButDontRead: usize = 0x28; // CUtlString
                 pub const m_bPriorityReadButDontContribute: usize = 0x30; // CUtlString
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -453,9 +522,9 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerRealtimeFMSineWave {
-                pub const m_flCarrierFrequency: usize = 0xC0; // float32
-                pub const m_flModulatorFrequency: usize = 0xC4; // float32
-                pub const m_flModulatorAmount: usize = 0xC8; // float32
+                pub const m_flCarrierFrequency: usize = 0xB8; // float32
+                pub const m_flModulatorFrequency: usize = 0xBC; // float32
+                pub const m_flModulatorAmount: usize = 0xC0; // float32
             }
             // Parent: None
             // Field count: 1
@@ -588,7 +657,19 @@ pub mod cs2_dumper {
                 pub const m_flEaseIn: usize = 0x60; // float32
                 pub const m_flEaseOut: usize = 0x64; // float32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod VMixDualCompressorDesc_t {
+                pub const m_flRMSTimeMS: usize = 0x0; // float32
+                pub const m_fldbKneeWidth: usize = 0x4; // float32
+                pub const m_flWetMix: usize = 0x8; // float32
+                pub const m_bPeakMode: usize = 0xC; // bool
+                pub const m_bandDesc: usize = 0x10; // VMixDynamicsBand_t
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -596,9 +677,9 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerStaticAdditiveSynth {
-                pub const m_tones: usize = 0xC0; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+                pub const m_tones: usize = 0xB8; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 9
             //
             // Metadata:
@@ -606,15 +687,15 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerShapedNoise {
-                pub const m_bUseCurveForFrequency: usize = 0xC0; // bool
-                pub const m_flFrequency: usize = 0xC4; // float32
-                pub const m_frequencySweep: usize = 0xC8; // CPiecewiseCurve
-                pub const m_bUseCurveForResonance: usize = 0x108; // bool
-                pub const m_flResonance: usize = 0x10C; // float32
-                pub const m_resonanceSweep: usize = 0x110; // CPiecewiseCurve
-                pub const m_bUseCurveForAmplitude: usize = 0x150; // bool
-                pub const m_flGainInDecibels: usize = 0x154; // float32
-                pub const m_gainSweep: usize = 0x158; // CPiecewiseCurve
+                pub const m_bUseCurveForFrequency: usize = 0xB8; // bool
+                pub const m_flFrequency: usize = 0xBC; // float32
+                pub const m_frequencySweep: usize = 0xC0; // CPiecewiseCurve
+                pub const m_bUseCurveForResonance: usize = 0x100; // bool
+                pub const m_flResonance: usize = 0x104; // float32
+                pub const m_resonanceSweep: usize = 0x108; // CPiecewiseCurve
+                pub const m_bUseCurveForAmplitude: usize = 0x148; // bool
+                pub const m_flGainInDecibels: usize = 0x14C; // float32
+                pub const m_gainSweep: usize = 0x150; // CPiecewiseCurve
             }
             // Parent: None
             // Field count: 2
@@ -636,19 +717,20 @@ pub mod cs2_dumper {
             // MPropertyDescription
             pub mod CVoiceContainerBase {
                 pub const m_vSound: usize = 0x38; // CVSound
-                pub const m_pEnvelopeAnalyzer: usize = 0xB8; // CVoiceContainerAnalysisBase*
+                pub const m_pEnvelopeAnalyzer: usize = 0xB0; // CVoiceContainerAnalysisBase*
             }
-            // Parent: CVoiceContainerBase
-            // Field count: 5
+            // Parent: None
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             pub mod CVoiceContainerGranulator {
-                pub const m_flGrainLength: usize = 0xC0; // float32
-                pub const m_flGrainCrossfadeAmount: usize = 0xC4; // float32
-                pub const m_flStartJitter: usize = 0xC8; // float32
-                pub const m_flPlaybackJitter: usize = 0xCC; // float32
+                pub const m_flGrainLength: usize = 0xB8; // float32
+                pub const m_flGrainCrossfadeAmount: usize = 0xBC; // float32
+                pub const m_flStartJitter: usize = 0xC0; // float32
+                pub const m_flPlaybackJitter: usize = 0xC4; // float32
+                pub const m_bShouldWraparound: usize = 0xC8; // bool
                 pub const m_sourceAudio: usize = 0xD0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
             }
             // Parent: None
@@ -683,7 +765,7 @@ pub mod cs2_dumper {
                 pub const m_flEndTime: usize = 0x4; // float32
                 pub const m_nPhonemeCode: usize = 0x8; // int32
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -692,7 +774,7 @@ pub mod cs2_dumper {
                 pub const m_bExcludeStoppedSounds: usize = 0x18; // bool
                 pub const m_strCountKeyName: usize = 0x20; // CUtlString
             }
-            // Parent: CVoiceContainerAnalysisBase
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -701,7 +783,7 @@ pub mod cs2_dumper {
             // MPropertyDescription
             pub mod CVoiceContainerEnvelopeAnalyzer {
                 pub const m_mode: usize = 0x50; // EMode_t
-                pub const m_nSamples: usize = 0x54; // int32
+                pub const m_fAnalysisWindowMs: usize = 0x54; // float32
                 pub const m_flThreshold: usize = 0x58; // float32
             }
             // Parent: None
@@ -732,7 +814,7 @@ pub mod cs2_dumper {
                 pub const m_flTime: usize = 0x0; // float32
                 pub const m_flValue: usize = 0x4; // float32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -740,7 +822,7 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerSet {
-                pub const m_soundsToPlay: usize = 0xC0; // CUtlVector<CVoiceContainerSetElement>
+                pub const m_soundsToPlay: usize = 0xB8; // CUtlVector<CVoiceContainerSetElement>
             }
             // Parent: None
             // Field count: 8
@@ -781,7 +863,7 @@ pub mod cs2_dumper {
             pub mod CSosSoundEventGroupListSchema {
                 pub const m_groupList: usize = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
             }
-            // Parent: CSosGroupBranchPattern
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -891,7 +973,24 @@ pub mod cs2_dumper {
                 pub const m_EmphasisSamples: usize = 0x20; // CUtlVector<CAudioEmphasisSample>
                 pub const m_morphData: usize = 0x38; // CAudioMorphData
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
+            // Field count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub mod CVoiceContainerParameterBlender {
+                pub const m_firstSound: usize = 0xB8; // CSoundContainerReference
+                pub const m_secondSound: usize = 0xD0; // CSoundContainerReference
+                pub const m_bEnableOcclusionBlend: usize = 0xE8; // bool
+                pub const m_curve1: usize = 0xF0; // CPiecewiseCurve
+                pub const m_curve2: usize = 0x130; // CPiecewiseCurve
+                pub const m_bEnableDistanceBlend: usize = 0x170; // bool
+                pub const m_curve3: usize = 0x178; // CPiecewiseCurve
+                pub const m_curve4: usize = 0x1B8; // CPiecewiseCurve
+            }
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -901,7 +1000,7 @@ pub mod cs2_dumper {
                 pub const m_nStopType: usize = 0x1C; // SosActionStopType_t
                 pub const m_nSortType: usize = 0x20; // SosActionSortType_t
             }
-            // Parent: CVoiceContainerDecayingSineWave
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -909,9 +1008,9 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerAmpedDecayingSineWave {
-                pub const m_flGainAmount: usize = 0xC8; // float32
+                pub const m_flGainAmount: usize = 0xC0; // float32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -919,8 +1018,8 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerEnvelope {
-                pub const m_sound: usize = 0xC0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_analysisContainer: usize = 0xC8; // CVoiceContainerAnalysisBase*
+                pub const m_sound: usize = 0xB8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_analysisContainer: usize = 0xC0; // CVoiceContainerAnalysisBase*
             }
             // Parent: None
             // Field count: 8
@@ -973,7 +1072,7 @@ pub mod cs2_dumper {
                 pub const m_flMaxVolume: usize = 0x8; // float32
                 pub const m_nInstancesAtMaxVolume: usize = 0xC; // int32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -981,11 +1080,11 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerSelector {
-                pub const m_mode: usize = 0xC0; // PlayBackMode_t
-                pub const m_soundsToPlay: usize = 0xC8; // CSoundContainerReferenceArray
-                pub const m_fProbabilityWeights: usize = 0x100; // CUtlVector<float32>
+                pub const m_mode: usize = 0xB8; // PlayBackMode_t
+                pub const m_soundsToPlay: usize = 0xC0; // CSoundContainerReferenceArray
+                pub const m_fProbabilityWeights: usize = 0xF8; // CUtlVector<float32>
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -994,7 +1093,7 @@ pub mod cs2_dumper {
                 pub const m_nMaxCount: usize = 0x18; // int32
                 pub const m_flMaxDuration: usize = 0x1C; // float32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -1002,10 +1101,10 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CTestBlendContainer {
-                pub const m_firstSound: usize = 0xC0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_secondSound: usize = 0xC8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_firstSound: usize = 0xB8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_secondSound: usize = 0xC0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -1020,7 +1119,7 @@ pub mod cs2_dumper {
                 pub const m_resultVarName: usize = 0x30; // CUtlString
                 pub const m_bSaveToGroup: usize = 0x38; // bool
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1028,9 +1127,9 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerSwitch {
-                pub const m_soundsToPlay: usize = 0xC0; // CUtlVector<CSoundContainerReference>
+                pub const m_soundsToPlay: usize = 0xB8; // CUtlVector<CSoundContainerReference>
             }
-            // Parent: CSosGroupActionSchema
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1068,7 +1167,7 @@ pub mod cs2_dumper {
                 pub const m_bBassMono: usize = 0x10; // bool
                 pub const m_flBassFreq: usize = 0x14; // float32
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -1076,13 +1175,13 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerLoopTrigger {
-                pub const m_sound: usize = 0xC0; // CSoundContainerReference
-                pub const m_flRetriggerTimeMin: usize = 0xD8; // float32
-                pub const m_flRetriggerTimeMax: usize = 0xDC; // float32
-                pub const m_flFadeTime: usize = 0xE0; // float32
-                pub const m_bCrossFade: usize = 0xE4; // bool
+                pub const m_sound: usize = 0xB8; // CSoundContainerReference
+                pub const m_flRetriggerTimeMin: usize = 0xD0; // float32
+                pub const m_flRetriggerTimeMax: usize = 0xD4; // float32
+                pub const m_flFadeTime: usize = 0xD8; // float32
+                pub const m_bCrossFade: usize = 0xDC; // bool
             }
-            // Parent: CVoiceContainerBase
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -1090,8 +1189,8 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CVoiceContainerDecayingSineWave {
-                pub const m_flFrequency: usize = 0xC0; // float32
-                pub const m_flDecayTime: usize = 0xC4; // float32
+                pub const m_flFrequency: usize = 0xB8; // float32
+                pub const m_flDecayTime: usize = 0xBC; // float32
             }
             // Parent: None
             // Field count: 6

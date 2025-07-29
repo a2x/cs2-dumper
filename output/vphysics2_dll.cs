@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
-    // Class count: 94
-    // Enum count: 2
+    // Class count: 97
+    // Enum count: 3
     public static class Vphysics2Dll {
         // Alignment: 4
         // Member count: 3
@@ -21,14 +21,20 @@ namespace CS2Dumper.Schemas {
             JOINT_AXIS_Z = 0x2,
             JOINT_AXIS_COUNT = 0x3
         }
+        // Alignment: 1
+        // Member count: 3
+        public enum DynamicContinuousContactBehavior_t : byte {
+            DYNAMIC_CONTINUOUS_ALLOW_IF_REQUESTED_BY_OTHER_BODY = 0x0,
+            DYNAMIC_CONTINUOUS_ALWAYS = 0x1,
+            DYNAMIC_CONTINUOUS_NEVER = 0x2
+        }
         // Parent: None
-        // Field count: 2
+        // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        public static class RnSoftbodySpring_t {
-            public const nint m_nParticle = 0x0; // uint16[2]
-            public const nint m_flLength = 0x4; // float32
+        public static class RnSphereDesc_t {
+            public const nint m_Sphere = 0x18; // SphereBase_t<float32>
         }
         // Parent: None
         // Field count: 1
@@ -38,7 +44,7 @@ namespace CS2Dumper.Schemas {
         public static class RnSoftbodyParticle_t {
             public const nint m_flMassInv = 0x0; // float32
         }
-        // Parent: RnShapeDesc_t
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -47,16 +53,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_Hull = 0x18; // RnHull_t
         }
         // Parent: None
-        // Field count: 3
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class RnSoftbodyCapsule_t {
-            public const nint m_vCenter = 0x0; // Vector[2]
-            public const nint m_flRadius = 0x18; // float32
-            public const nint m_nParticle = 0x1C; // uint16[2]
-        }
-        // Parent: RnShapeDesc_t
         // Field count: 1
         //
         // Metadata:
@@ -64,24 +60,8 @@ namespace CS2Dumper.Schemas {
         public static class RnCapsuleDesc_t {
             public const nint m_Capsule = 0x18; // RnCapsule_t
         }
-        // Parent: RnShapeDesc_t
-        // Field count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class RnSphereDesc_t {
-            public const nint m_Sphere = 0x18; // SphereBase_t<float32>
-        }
-        // Parent: RnShapeDesc_t
-        // Field count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class RnMeshDesc_t {
-            public const nint m_Mesh = 0x18; // RnMesh_t
-        }
         // Parent: None
-        // Field count: 106
+        // Field count: 108
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -117,98 +97,128 @@ namespace CS2Dumper.Schemas {
             public const nint m_Rods = 0x138; // CUtlVector<FeRodConstraint_t>
             public const nint m_Twists = 0x150; // CUtlVector<FeTwistConstraint_t>
             public const nint m_HingeLimits = 0x168; // CUtlVector<FeHingeLimit_t>
-            public const nint m_AntiTunnelProbes = 0x180; // CUtlVector<FeAntiTunnelProbe_t>
-            public const nint m_AntiTunnelTargetNodes = 0x198; // CUtlVector<uint16>
-            public const nint m_AxialEdges = 0x1B0; // CUtlVector<FeAxialEdgeBend_t>
-            public const nint m_NodeInvMasses = 0x1C8; // CUtlVector<float32>
-            public const nint m_CtrlOffsets = 0x1E0; // CUtlVector<FeCtrlOffset_t>
-            public const nint m_CtrlOsOffsets = 0x1F8; // CUtlVector<FeCtrlOsOffset_t>
-            public const nint m_FollowNodes = 0x210; // CUtlVector<FeFollowNode_t>
-            public const nint m_CollisionPlanes = 0x228; // CUtlVector<FeCollisionPlane_t>
-            public const nint m_NodeIntegrator = 0x240; // CUtlVector<FeNodeIntegrator_t>
-            public const nint m_SpringIntegrator = 0x258; // CUtlVector<FeSpringIntegrator_t>
-            public const nint m_SimdSpringIntegrator = 0x270; // CUtlVector<FeSimdSpringIntegrator_t>
-            public const nint m_WorldCollisionParams = 0x288; // CUtlVector<FeWorldCollisionParams_t>
-            public const nint m_LegacyStretchForce = 0x2A0; // CUtlVector<float32>
-            public const nint m_NodeCollisionRadii = 0x2B8; // CUtlVector<float32>
-            public const nint m_DynNodeFriction = 0x2D0; // CUtlVector<float32>
-            public const nint m_LocalRotation = 0x2E8; // CUtlVector<float32>
-            public const nint m_LocalForce = 0x300; // CUtlVector<float32>
-            public const nint m_TaperedCapsuleStretches = 0x318; // CUtlVector<FeTaperedCapsuleStretch_t>
-            public const nint m_TaperedCapsuleRigids = 0x330; // CUtlVector<FeTaperedCapsuleRigid_t>
-            public const nint m_SphereRigids = 0x348; // CUtlVector<FeSphereRigid_t>
-            public const nint m_WorldCollisionNodes = 0x360; // CUtlVector<uint16>
-            public const nint m_TreeParents = 0x378; // CUtlVector<uint16>
-            public const nint m_TreeCollisionMasks = 0x390; // CUtlVector<uint16>
-            public const nint m_TreeChildren = 0x3A8; // CUtlVector<FeTreeChildren_t>
-            public const nint m_FreeNodes = 0x3C0; // CUtlVector<uint16>
-            public const nint m_FitMatrices = 0x3D8; // CUtlVector<FeFitMatrix_t>
-            public const nint m_FitWeights = 0x3F0; // CUtlVector<FeFitWeight_t>
-            public const nint m_ReverseOffsets = 0x408; // CUtlVector<FeNodeReverseOffset_t>
-            public const nint m_AnimStrayRadii = 0x420; // CUtlVector<FeAnimStrayRadius_t>
-            public const nint m_SimdAnimStrayRadii = 0x438; // CUtlVector<FeSimdAnimStrayRadius_t>
-            public const nint m_KelagerBends = 0x450; // CUtlVector<FeKelagerBend2_t>
-            public const nint m_CtrlSoftOffsets = 0x468; // CUtlVector<FeCtrlSoftOffset_t>
-            public const nint m_JiggleBones = 0x480; // CUtlVector<CFeIndexedJiggleBone>
-            public const nint m_SourceElems = 0x498; // CUtlVector<uint16>
-            public const nint m_GoalDampedSpringIntegrators = 0x4B0; // CUtlVector<uint32>
-            public const nint m_Tris = 0x4C8; // CUtlVector<FeTri_t>
-            public const nint m_nTriCount1 = 0x4E0; // uint16
-            public const nint m_nTriCount2 = 0x4E2; // uint16
-            public const nint m_nReservedUint8 = 0x4E4; // uint8
-            public const nint m_nExtraPressureIterations = 0x4E5; // uint8
-            public const nint m_nExtraGoalIterations = 0x4E6; // uint8
-            public const nint m_nExtraIterations = 0x4E7; // uint8
-            public const nint m_SDFRigids = 0x4E8; // CUtlVector<FeSDFRigid_t>
-            public const nint m_BoxRigids = 0x500; // CUtlVector<FeBoxRigid_t>
-            public const nint m_DynNodeVertexSet = 0x518; // CUtlVector<uint8>
-            public const nint m_VertexSetNames = 0x530; // CUtlVector<uint32>
-            public const nint m_RigidColliderPriorities = 0x548; // CUtlVector<FeRigidColliderIndices_t>
-            public const nint m_MorphLayers = 0x560; // CUtlVector<FeMorphLayerDepr_t>
-            public const nint m_MorphSetData = 0x578; // CUtlVector<uint8>
-            public const nint m_VertexMaps = 0x590; // CUtlVector<FeVertexMapDesc_t>
-            public const nint m_VertexMapValues = 0x5A8; // CUtlVector<uint8>
-            public const nint m_Effects = 0x5C0; // CUtlVector<FeEffectDesc_t>
-            public const nint m_LockToParent = 0x5D8; // CUtlVector<FeCtrlOffset_t>
-            public const nint m_LockToGoal = 0x5F0; // CUtlVector<uint16>
-            public const nint m_SkelParents = 0x608; // CUtlVector<int16>
-            public const nint m_DynNodeWindBases = 0x620; // CUtlVector<FeNodeWindBase_t>
-            public const nint m_flInternalPressure = 0x638; // float32
-            public const nint m_flDefaultTimeDilation = 0x63C; // float32
-            public const nint m_flWindage = 0x640; // float32
-            public const nint m_flWindDrag = 0x644; // float32
-            public const nint m_flDefaultSurfaceStretch = 0x648; // float32
-            public const nint m_flDefaultThreadStretch = 0x64C; // float32
-            public const nint m_flDefaultGravityScale = 0x650; // float32
-            public const nint m_flDefaultVelAirDrag = 0x654; // float32
-            public const nint m_flDefaultExpAirDrag = 0x658; // float32
-            public const nint m_flDefaultVelQuadAirDrag = 0x65C; // float32
-            public const nint m_flDefaultExpQuadAirDrag = 0x660; // float32
-            public const nint m_flRodVelocitySmoothRate = 0x664; // float32
-            public const nint m_flQuadVelocitySmoothRate = 0x668; // float32
-            public const nint m_flAddWorldCollisionRadius = 0x66C; // float32
-            public const nint m_flDefaultVolumetricSolveAmount = 0x670; // float32
-            public const nint m_flMotionSmoothCDT = 0x674; // float32
-            public const nint m_flLocalDrag1 = 0x678; // float32
-            public const nint m_nRodVelocitySmoothIterations = 0x67C; // uint16
-            public const nint m_nQuadVelocitySmoothIterations = 0x67E; // uint16
+            public const nint m_AntiTunnelBytecode = 0x180; // CUtlVector<uint32>
+            public const nint m_DynKinLinks = 0x198; // CUtlVector<FeDynKinLink_t>
+            public const nint m_AntiTunnelProbes = 0x1B0; // CUtlVector<FeAntiTunnelProbe_t>
+            public const nint m_AntiTunnelTargetNodes = 0x1C8; // CUtlVector<uint16>
+            public const nint m_AxialEdges = 0x1E0; // CUtlVector<FeAxialEdgeBend_t>
+            public const nint m_NodeInvMasses = 0x1F8; // CUtlVector<float32>
+            public const nint m_CtrlOffsets = 0x210; // CUtlVector<FeCtrlOffset_t>
+            public const nint m_CtrlOsOffsets = 0x228; // CUtlVector<FeCtrlOsOffset_t>
+            public const nint m_FollowNodes = 0x240; // CUtlVector<FeFollowNode_t>
+            public const nint m_CollisionPlanes = 0x258; // CUtlVector<FeCollisionPlane_t>
+            public const nint m_NodeIntegrator = 0x270; // CUtlVector<FeNodeIntegrator_t>
+            public const nint m_SpringIntegrator = 0x288; // CUtlVector<FeSpringIntegrator_t>
+            public const nint m_SimdSpringIntegrator = 0x2A0; // CUtlVector<FeSimdSpringIntegrator_t>
+            public const nint m_WorldCollisionParams = 0x2B8; // CUtlVector<FeWorldCollisionParams_t>
+            public const nint m_LegacyStretchForce = 0x2D0; // CUtlVector<float32>
+            public const nint m_NodeCollisionRadii = 0x2E8; // CUtlVector<float32>
+            public const nint m_DynNodeFriction = 0x300; // CUtlVector<float32>
+            public const nint m_LocalRotation = 0x318; // CUtlVector<float32>
+            public const nint m_LocalForce = 0x330; // CUtlVector<float32>
+            public const nint m_TaperedCapsuleStretches = 0x348; // CUtlVector<FeTaperedCapsuleStretch_t>
+            public const nint m_TaperedCapsuleRigids = 0x360; // CUtlVector<FeTaperedCapsuleRigid_t>
+            public const nint m_SphereRigids = 0x378; // CUtlVector<FeSphereRigid_t>
+            public const nint m_WorldCollisionNodes = 0x390; // CUtlVector<uint16>
+            public const nint m_TreeParents = 0x3A8; // CUtlVector<uint16>
+            public const nint m_TreeCollisionMasks = 0x3C0; // CUtlVector<uint16>
+            public const nint m_TreeChildren = 0x3D8; // CUtlVector<FeTreeChildren_t>
+            public const nint m_FreeNodes = 0x3F0; // CUtlVector<uint16>
+            public const nint m_FitMatrices = 0x408; // CUtlVector<FeFitMatrix_t>
+            public const nint m_FitWeights = 0x420; // CUtlVector<FeFitWeight_t>
+            public const nint m_ReverseOffsets = 0x438; // CUtlVector<FeNodeReverseOffset_t>
+            public const nint m_AnimStrayRadii = 0x450; // CUtlVector<FeAnimStrayRadius_t>
+            public const nint m_SimdAnimStrayRadii = 0x468; // CUtlVector<FeSimdAnimStrayRadius_t>
+            public const nint m_KelagerBends = 0x480; // CUtlVector<FeKelagerBend2_t>
+            public const nint m_CtrlSoftOffsets = 0x498; // CUtlVector<FeCtrlSoftOffset_t>
+            public const nint m_JiggleBones = 0x4B0; // CUtlVector<CFeIndexedJiggleBone>
+            public const nint m_SourceElems = 0x4C8; // CUtlVector<uint16>
+            public const nint m_GoalDampedSpringIntegrators = 0x4E0; // CUtlVector<uint32>
+            public const nint m_Tris = 0x4F8; // CUtlVector<FeTri_t>
+            public const nint m_nTriCount1 = 0x510; // uint16
+            public const nint m_nTriCount2 = 0x512; // uint16
+            public const nint m_nReservedUint8 = 0x514; // uint8
+            public const nint m_nExtraPressureIterations = 0x515; // uint8
+            public const nint m_nExtraGoalIterations = 0x516; // uint8
+            public const nint m_nExtraIterations = 0x517; // uint8
+            public const nint m_SDFRigids = 0x518; // CUtlVector<FeSDFRigid_t>
+            public const nint m_BoxRigids = 0x530; // CUtlVector<FeBoxRigid_t>
+            public const nint m_DynNodeVertexSet = 0x548; // CUtlVector<uint8>
+            public const nint m_VertexSetNames = 0x560; // CUtlVector<uint32>
+            public const nint m_RigidColliderPriorities = 0x578; // CUtlVector<FeRigidColliderIndices_t>
+            public const nint m_MorphLayers = 0x590; // CUtlVector<FeMorphLayerDepr_t>
+            public const nint m_MorphSetData = 0x5A8; // CUtlVector<uint8>
+            public const nint m_VertexMaps = 0x5C0; // CUtlVector<FeVertexMapDesc_t>
+            public const nint m_VertexMapValues = 0x5D8; // CUtlVector<uint8>
+            public const nint m_Effects = 0x5F0; // CUtlVector<FeEffectDesc_t>
+            public const nint m_LockToParent = 0x608; // CUtlVector<FeCtrlOffset_t>
+            public const nint m_LockToGoal = 0x620; // CUtlVector<uint16>
+            public const nint m_SkelParents = 0x638; // CUtlVector<int16>
+            public const nint m_DynNodeWindBases = 0x650; // CUtlVector<FeNodeWindBase_t>
+            public const nint m_flInternalPressure = 0x668; // float32
+            public const nint m_flDefaultTimeDilation = 0x66C; // float32
+            public const nint m_flWindage = 0x670; // float32
+            public const nint m_flWindDrag = 0x674; // float32
+            public const nint m_flDefaultSurfaceStretch = 0x678; // float32
+            public const nint m_flDefaultThreadStretch = 0x67C; // float32
+            public const nint m_flDefaultGravityScale = 0x680; // float32
+            public const nint m_flDefaultVelAirDrag = 0x684; // float32
+            public const nint m_flDefaultExpAirDrag = 0x688; // float32
+            public const nint m_flDefaultVelQuadAirDrag = 0x68C; // float32
+            public const nint m_flDefaultExpQuadAirDrag = 0x690; // float32
+            public const nint m_flRodVelocitySmoothRate = 0x694; // float32
+            public const nint m_flQuadVelocitySmoothRate = 0x698; // float32
+            public const nint m_flAddWorldCollisionRadius = 0x69C; // float32
+            public const nint m_flDefaultVolumetricSolveAmount = 0x6A0; // float32
+            public const nint m_flMotionSmoothCDT = 0x6A4; // float32
+            public const nint m_flLocalDrag1 = 0x6A8; // float32
+            public const nint m_nRodVelocitySmoothIterations = 0x6AC; // uint16
+            public const nint m_nQuadVelocitySmoothIterations = 0x6AE; // uint16
         }
-        // Parent: RnBodyDesc_t
+        // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnMeshDesc_t {
+            public const nint m_Mesh = 0x18; // RnMesh_t
+        }
+        // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnSoftbodySpring_t {
+            public const nint m_nParticle = 0x0; // uint16[2]
+            public const nint m_flLength = 0x4; // float32
+        }
+        // Parent: None
+        // Field count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class RnSoftbodyCapsule_t {
+            public const nint m_vCenter = 0x0; // Vector[2]
+            public const nint m_flRadius = 0x18; // float32
+            public const nint m_nParticle = 0x1C; // uint16[2]
+        }
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class vphysics_save_cphysicsbody_t {
-            public const nint m_nOldPointer = 0xD0; // uint64
+            public const nint m_nOldPointer = 0xE0; // uint64
         }
-        // Parent: FeBoxRigid_t
-        // Field count: 2
+        // Parent: None
+        // Field count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FeBuildBoxRigid_t {
             public const nint m_nPriority = 0x40; // int32
             public const nint m_nVertexMapHash = 0x44; // uint32
+            public const nint m_nAntitunnelGroupBits = 0x48; // uint32
         }
         // Parent: None
         // Field count: 3
@@ -279,14 +289,15 @@ namespace CS2Dumper.Schemas {
             public const nint hingeAxis = 0x18; // constraint_axislimit_t
             public const nint constraint = 0x28; // constraint_breakableparams_t
         }
-        // Parent: FeSphereRigid_t
-        // Field count: 2
+        // Parent: None
+        // Field count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FeBuildSphereRigid_t {
             public const nint m_nPriority = 0x20; // int32
             public const nint m_nVertexMapHash = 0x24; // uint32
+            public const nint m_nAntitunnelGroupBits = 0x28; // uint32
         }
         // Parent: None
         // Field count: 3
@@ -361,7 +372,7 @@ namespace CS2Dumper.Schemas {
             public const nint targetNodes = 0x18; // CUtlVector<uint16>
         }
         // Parent: None
-        // Field count: 35
+        // Field count: 37
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -375,32 +386,34 @@ namespace CS2Dumper.Schemas {
             public const nint m_LocalInertiaInv = 0x48; // Vector[3]
             public const nint m_flMassInv = 0x6C; // float32
             public const nint m_flGameMass = 0x70; // float32
-            public const nint m_flInertiaScaleInv = 0x74; // float32
-            public const nint m_flLinearDamping = 0x78; // float32
-            public const nint m_flAngularDamping = 0x7C; // float32
-            public const nint m_flLinearDrag = 0x80; // float32
-            public const nint m_flAngularDrag = 0x84; // float32
-            public const nint m_flLinearBuoyancyDrag = 0x88; // float32
-            public const nint m_flAngularBuoyancyDrag = 0x8C; // float32
-            public const nint m_vLastAwakeForceAccum = 0x90; // Vector
-            public const nint m_vLastAwakeTorqueAccum = 0x9C; // Vector
-            public const nint m_flBuoyancyFactor = 0xA8; // float32
-            public const nint m_flGravityScale = 0xAC; // float32
-            public const nint m_flTimeScale = 0xB0; // float32
-            public const nint m_nBodyType = 0xB4; // int32
-            public const nint m_nGameIndex = 0xB8; // uint32
-            public const nint m_nGameFlags = 0xBC; // uint32
-            public const nint m_nMinVelocityIterations = 0xC0; // int8
-            public const nint m_nMinPositionIterations = 0xC1; // int8
-            public const nint m_nMassPriority = 0xC2; // int8
-            public const nint m_bEnabled = 0xC3; // bool
-            public const nint m_bSleeping = 0xC4; // bool
-            public const nint m_bIsContinuousEnabled = 0xC5; // bool
-            public const nint m_bDragEnabled = 0xC6; // bool
-            public const nint m_bBuoyancyDragEnabled = 0xC7; // bool
-            public const nint m_bGravityDisabled = 0xC8; // bool
-            public const nint m_bSpeculativeEnabled = 0xC9; // bool
-            public const nint m_bHasShadowController = 0xCA; // bool
+            public const nint m_flMassScaleInv = 0x74; // float32
+            public const nint m_flInertiaScaleInv = 0x78; // float32
+            public const nint m_flLinearDamping = 0x7C; // float32
+            public const nint m_flAngularDamping = 0x80; // float32
+            public const nint m_flLinearDrag = 0x84; // float32
+            public const nint m_flAngularDrag = 0x88; // float32
+            public const nint m_flLinearBuoyancyDrag = 0x8C; // float32
+            public const nint m_flAngularBuoyancyDrag = 0x90; // float32
+            public const nint m_vLastAwakeForceAccum = 0x94; // Vector
+            public const nint m_vLastAwakeTorqueAccum = 0xA0; // Vector
+            public const nint m_flBuoyancyFactor = 0xAC; // float32
+            public const nint m_flGravityScale = 0xB0; // float32
+            public const nint m_flTimeScale = 0xB4; // float32
+            public const nint m_nBodyType = 0xB8; // int32
+            public const nint m_nGameIndex = 0xBC; // uint32
+            public const nint m_nGameFlags = 0xC0; // uint32
+            public const nint m_nMinVelocityIterations = 0xC4; // int8
+            public const nint m_nMinPositionIterations = 0xC5; // int8
+            public const nint m_nMassPriority = 0xC6; // int8
+            public const nint m_bEnabled = 0xC7; // bool
+            public const nint m_bSleeping = 0xC8; // bool
+            public const nint m_bIsContinuousEnabled = 0xC9; // bool
+            public const nint m_bDragEnabled = 0xCA; // bool
+            public const nint m_bBuoyancyDragEnabled = 0xCB; // bool
+            public const nint m_vGravity = 0xCC; // Vector
+            public const nint m_bSpeculativeEnabled = 0xD8; // bool
+            public const nint m_bHasShadowController = 0xD9; // bool
+            public const nint m_nDynamicContinuousContactBehavior = 0xDA; // DynamicContinuousContactBehavior_t
         }
         // Parent: None
         // Field count: 12
@@ -432,7 +445,7 @@ namespace CS2Dumper.Schemas {
             public const nint flWeight = 0x4; // float32
         }
         // Parent: None
-        // Field count: 10
+        // Field count: 11
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -443,10 +456,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_Vertices = 0x30; // CUtlVectorSIMDPaddedVector
             public const nint m_Triangles = 0x48; // CUtlVector<RnTriangle_t>
             public const nint m_Wings = 0x60; // CUtlVector<RnWing_t>
-            public const nint m_Materials = 0x78; // CUtlVector<uint8>
-            public const nint m_vOrthographicAreas = 0x90; // Vector
-            public const nint m_nFlags = 0x9C; // uint32
-            public const nint m_nDebugFlags = 0xA0; // uint32
+            public const nint m_TriangleEdgeFlags = 0x78; // CUtlVector<uint8>
+            public const nint m_Materials = 0x90; // CUtlVector<uint8>
+            public const nint m_vOrthographicAreas = 0xA8; // Vector
+            public const nint m_nFlags = 0xB4; // uint32
+            public const nint m_nDebugFlags = 0xB8; // uint32
         }
         // Parent: None
         // Field count: 2
@@ -454,14 +468,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_vPosition = 0x0; // Vector
             public const nint m_vNormal = 0xC; // Vector
         }
-        // Parent: FeSDFRigid_t
-        // Field count: 2
+        // Parent: None
+        // Field count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FeBuildSDFRigid_t {
             public const nint m_nPriority = 0x50; // int32
             public const nint m_nVertexMapHash = 0x54; // uint32
+            public const nint m_nAntitunnelGroupBits = 0x58; // uint32
         }
         // Parent: None
         // Field count: 8
@@ -954,6 +969,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_pRegionSVM = 0xF0; // CRegionSVM*
         }
         // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeAntiTunnelGroupBuild_t {
+            public const nint m_nVertexMapHash = 0x0; // uint32
+            public const nint m_nCollisionMask = 0x4; // uint32
+        }
+        // Parent: None
         // Field count: 4
         //
         // Metadata:
@@ -963,6 +987,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_flXY = 0xC; // float32
             public const nint m_flXZ = 0x10; // float32
             public const nint m_flYZ = 0x14; // float32
+        }
+        // Parent: None
+        // Field count: 1
+        public static class PhysicsParticleId_t {
+            public const nint m_Value = 0x0; // uint32
         }
         // Parent: None
         // Field count: 1
@@ -979,6 +1008,15 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class Dop26_t {
             public const nint m_flSupport = 0x0; // float32[26]
+        }
+        // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class FeDynKinLink_t {
+            public const nint m_nParent = 0x0; // uint16
+            public const nint m_nChild = 0x2; // uint16
         }
         // Parent: None
         // Field count: 1
@@ -1086,14 +1124,15 @@ namespace CS2Dumper.Schemas {
             public const nint nVertexMapIndex = 0x14; // uint16
             public const nint nFlags = 0x16; // uint16
         }
-        // Parent: FeTaperedCapsuleRigid_t
-        // Field count: 2
+        // Parent: None
+        // Field count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class FeBuildTaperedCapsuleRigid_t {
             public const nint m_nPriority = 0x30; // int32
             public const nint m_nVertexMapHash = 0x34; // uint32
+            public const nint m_nAntitunnelGroupBits = 0x38; // uint32
         }
         // Parent: None
         // Field count: 2

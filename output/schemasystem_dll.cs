@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: schemasystem.dll
@@ -7,7 +7,7 @@ namespace CS2Dumper.Schemas {
     // Enum count: 2
     public static class SchemasystemDll {
         // Alignment: 1
-        // Member count: 81
+        // Member count: 82
         public enum fieldtype_t : byte {
             FIELD_VOID = 0x0,
             FIELD_FLOAT32 = 0x1,
@@ -89,7 +89,8 @@ namespace CS2Dumper.Schemas {
             FIELD_ENGINE_TICK = 0x4D,
             FIELD_WORLD_GROUP_ID = 0x4E,
             FIELD_GLOBALSYMBOL = 0x4F,
-            FIELD_TYPECOUNT = 0x50
+            FIELD_HNMGRAPHDEFINITION = 0x50,
+            FIELD_TYPECOUNT = 0x51
         }
         // Alignment: 4
         // Member count: 3
@@ -124,14 +125,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_CTransform = 0x100; // CTransform
             public const nint m_pKeyValues = 0x120; // KeyValues*
             public const nint m_CUtlBinaryBlock = 0x128; // CUtlBinaryBlock
-            public const nint m_CUtlString = 0x140; // CUtlString
-            public const nint m_CUtlSymbol = 0x148; // CUtlSymbol
-            public const nint m_stringToken = 0x14C; // CUtlStringToken
-            public const nint m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
-            public const nint m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
-            public const nint m_KV3 = 0x170; // KeyValues3
+            public const nint m_CUtlString = 0x138; // CUtlString
+            public const nint m_CUtlSymbol = 0x140; // CUtlSymbol
+            public const nint m_stringToken = 0x144; // CUtlStringToken
+            public const nint m_stringTokenWithStorage = 0x148; // CUtlStringTokenWithStorage
+            public const nint m_ResourceTypes = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
+            public const nint m_KV3 = 0x168; // KeyValues3
         }
-        // Parent: CExampleSchemaVData_PolymorphicBase
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -147,7 +148,7 @@ namespace CS2Dumper.Schemas {
         public static class CExampleSchemaVData_PolymorphicBase {
             public const nint m_nBase = 0x8; // int32
         }
-        // Parent: CExampleSchemaVData_PolymorphicBase
+        // Parent: None
         // Field count: 1
         //
         // Metadata:

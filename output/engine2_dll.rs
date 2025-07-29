@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -44,7 +44,7 @@ pub mod cs2_dumper {
                 SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
                 SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPostSimulate_t {
             }
@@ -55,7 +55,7 @@ pub mod cs2_dumper {
                 pub const m_flRealTime: usize = 0x28; // float32
                 pub const m_flFrameTime: usize = 0x2C; // float32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 4
             pub mod EventPostAdvanceTick_t {
                 pub const m_nCurrentTick: usize = 0x30; // int32
@@ -63,7 +63,7 @@ pub mod cs2_dumper {
                 pub const m_nTotalTicksThisFrame: usize = 0x38; // int32
                 pub const m_nTotalTicks: usize = 0x3C; // int32
             }
-            // Parent: None
+            // Parent: 
             // Field count: 1
             pub mod CEntityIOOutput {
                 pub const m_Value: usize = 0x18; // CVariantBase<CVariantDefaultAllocator>
@@ -82,7 +82,7 @@ pub mod cs2_dumper {
                 pub const m_flRenderFrameTimeUnbounded: usize = 0x30; // float32
                 pub const m_bRenderOnly: usize = 0x34; // bool
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerPostSimulate_t {
             }
@@ -103,7 +103,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod EventServerEndAsyncPostTickWork_t {
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientAdvanceTick_t {
             }
@@ -116,7 +116,7 @@ pub mod cs2_dumper {
             pub mod CNetworkVarChainer {
                 pub const m_PathIndex: usize = 0x20; // ChangeAccessorFieldPathIndex_t
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientSimulate_t {
             }
@@ -162,11 +162,11 @@ pub mod cs2_dumper {
             pub mod EventAppShutdown_t {
                 pub const m_nDummy0: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerSimulate_t {
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerPostAdvanceTick_t {
             }
@@ -180,11 +180,11 @@ pub mod cs2_dumper {
             pub mod EventPostDataUpdate_t {
                 pub const m_nCount: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPreSimulate_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPauseSimulate_t {
             }
@@ -193,7 +193,7 @@ pub mod cs2_dumper {
             pub mod EventClientProcessNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 4
             pub mod EventAdvanceTick_t {
                 pub const m_nCurrentTick: usize = 0x30; // int32
@@ -205,7 +205,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod EventSplitScreenStateChanged_t {
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPostAdvanceTick_t {
             }
@@ -235,7 +235,7 @@ pub mod cs2_dumper {
                 pub const m_flFrameTime: usize = 0x2C; // float32
                 pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerAdvanceTick_t {
             }
@@ -266,7 +266,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod EventClientAdvanceNonRenderedFrame_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerProcessNetworking_t {
             }
@@ -298,7 +298,7 @@ pub mod cs2_dumper {
             pub mod EventClientPollNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerBeginAsyncPostTickWork_t {
             }
@@ -310,7 +310,7 @@ pub mod cs2_dumper {
                 pub const m_flTickInterval: usize = 0x2C; // float32
                 pub const m_flTickStartTime: usize = 0x30; // float64
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerPollNetworking_t {
             }

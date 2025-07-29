@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -53,7 +53,7 @@ pub mod cs2_dumper {
                 pub const m_nViewId: usize = 0x0; // uint64
                 pub const m_ViewName: usize = 0x8; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -61,19 +61,18 @@ pub mod cs2_dumper {
             pub mod CSSDSMsg_PostLayer {
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSSDSMsg_LayerBase {
                 pub const m_viewId: usize = 0x0; // SceneViewId_t
                 pub const m_ViewName: usize = 0x10; // CUtlString
-                pub const m_nLayerIndex: usize = 0x18; // int32
-                pub const m_nLayerId: usize = 0x20; // uint64
-                pub const m_LayerName: usize = 0x28; // CUtlString
-                pub const m_displayText: usize = 0x30; // CUtlString
+                pub const m_nLayerId: usize = 0x18; // uint64
+                pub const m_LayerName: usize = 0x20; // CUtlString
+                pub const m_displayText: usize = 0x28; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Field count: 0
             //
             // Metadata:

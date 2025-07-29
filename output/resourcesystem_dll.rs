@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Class count: 59
+        // Class count: 58
         // Enum count: 2
         pub mod resourcesystem_dll {
             // Alignment: 1
@@ -156,14 +156,6 @@ pub mod cs2_dumper {
             pub mod InfoForResourceTypeCVoxelVisibility {
             }
             // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod TestResource_t {
-                pub const m_name: usize = 0x0; // CUtlString
-            }
-            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -258,7 +250,7 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeTestResource_t {
+            pub mod InfoForResourceTypeCTestResourceData {
             }
             // Parent: None
             // Field count: 0
@@ -300,7 +292,7 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCNmGraphVariation {
+            pub mod InfoForResourceTypeCSurfaceGraph {
             }
             // Parent: None
             // Field count: 0

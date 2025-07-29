@@ -15,7 +15,7 @@ heck = "0.5"
 log = "0.4"
 memflow = "0.2"
 pelite = "0.10"
-phf = { version = "0.11", features = ["macros"] }
+phf = { version = "0.12", features = ["macros"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 simplelog = "0.12"

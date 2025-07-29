@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-16 05:17:05.277202900 UTC
+// 2025-07-29 08:05:49.300075200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -10,7 +10,7 @@ pub mod cs2_dumper {
         // Enum count: 5
         pub mod rendersystemdx11_dll {
             // Alignment: 4
-            // Member count: 13
+            // Member count: 14
             #[repr(u32)]
             pub enum RenderPrimitiveType_t {
                 RENDER_PRIM_POINTS = 0x0,
@@ -25,10 +25,11 @@ pub mod cs2_dumper {
                 RENDER_PRIM_INSTANCED_QUADS = 0x9,
                 RENDER_PRIM_HETEROGENOUS = 0xA,
                 RENDER_PRIM_COMPUTE_SHADER = 0xB,
-                RENDER_PRIM_TYPE_COUNT = 0xC
+                RENDER_PRIM_MESH_SHADER = 0xC,
+                RENDER_PRIM_TYPE_COUNT = 0xD
             }
             // Alignment: 4
-            // Member count: 13
+            // Member count: 12
             #[repr(u32)]
             pub enum RenderBufferFlags_t {
                 RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
@@ -37,13 +38,12 @@ pub mod cs2_dumper {
                 RENDER_BUFFER_USAGE_UNORDERED_ACCESS = 0x8,
                 RENDER_BUFFER_BYTEADDRESS_BUFFER = 0x10,
                 RENDER_BUFFER_STRUCTURED_BUFFER = 0x20,
-                RENDER_BUFFER_APPEND_CONSUME_BUFFER = 0x40,
-                RENDER_BUFFER_UAV_COUNTER = 0x80,
                 RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
                 RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
                 RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
                 RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
-                RENDER_BUFFER_POOL_ALLOCATED = 0x1000
+                RENDER_BUFFER_POOL_ALLOCATED = 0x1000,
+                RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x2000
             }
             // Alignment: 1
             // Member count: 8
@@ -67,11 +67,11 @@ pub mod cs2_dumper {
                 INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
                 INPUT_LAYOUT_VARIATION_MAX = 0x3
             }
-            // Alignment: 4
+            // Alignment: 1
             // Member count: 3
-            #[repr(u32)]
+            #[repr(u8)]
             pub enum RenderSlotType_t {
-                RENDER_SLOT_INVALID = u32::MAX,
+                RENDER_SLOT_INVALID = u8::MAX,
                 RENDER_SLOT_PER_VERTEX = 0x0,
                 RENDER_SLOT_PER_INSTANCE = 0x1
             }
@@ -84,20 +84,20 @@ pub mod cs2_dumper {
                 pub const m_nD3DSemanticIndex: usize = 0xC0; // int32
             }
             // Parent: None
-            // Field count: 1
+            // Field count: 2
             pub mod VsInputSignature_t {
                 pub const m_elems: usize = 0x0; // CUtlVector<VsInputSignatureElement_t>
+                pub const m_depth_elems: usize = 0x18; // CUtlVector<VsInputSignatureElement_t>
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 6
             pub mod RenderInputLayoutField_t {
-                pub const m_pSemanticName: usize = 0x0; // uint8[32]
-                pub const m_nSemanticIndex: usize = 0x20; // int32
-                pub const m_Format: usize = 0x24; // uint32
-                pub const m_nOffset: usize = 0x28; // int32
-                pub const m_nSlot: usize = 0x2C; // int32
-                pub const m_nSlotType: usize = 0x30; // RenderSlotType_t
-                pub const m_nInstanceStepRate: usize = 0x34; // int32
+                pub const m_pSemanticName: usize = 0x0; // char[32]
+                pub const m_nSemanticIndex: usize = 0x20; // int8
+                pub const m_nOffset: usize = 0x28; // int16
+                pub const m_nSlot: usize = 0x2A; // int8
+                pub const m_nSlotType: usize = 0x2B; // RenderSlotType_t
+                pub const m_szShaderSemantic: usize = 0x2C; // char[32]
             }
         }
     }

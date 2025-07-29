@@ -75,39 +75,38 @@ pattern_map! {
         "dwCSGOInput" => pattern!("488905${'} 0f57c0 0f1105") => Some(|view, map, rva| {
             let mut save = [0; 2];
 
-            if view.scanner().finds_code(pattern!("f2410f108430u4"), &mut save) {
+            if view.scanner().finds_code(pattern!("f2420f108428u4"), &mut save) {
                 map.insert("dwViewAngles".to_string(), rva + save[1]);
             }
         }),
         "dwEntityList" => pattern!("488935${'} 4885f6") => None,
-        "dwGameEntitySystem" => pattern!("488b1d${'} 48891d") => None,
-        "dwGameEntitySystem_highestEntityIndex" => pattern!("8b81u2?? 8902 488bc2 c3 cccccccc 48895c24? 48896c24") => None,
+        "dwGameEntitySystem" => pattern!("488b3d${'} 48893d") => None,
+        "dwGameEntitySystem_highestEntityIndex" => pattern!("ff81u4 4885d2") => None,
         "dwGameRules" => pattern!("48891d${'} ff15${} 84c0") => None,
         "dwGlobalVars" => pattern!("488915${'} 488942") => None,
         "dwGlowManager" => pattern!("488b05${'} c3 cccccccccccccccc 8b41") => None,
-        "dwLocalPlayerController" => pattern!("488905${'} 8b9e") => None,
+        "dwLocalPlayerController" => pattern!("488b05${'} 4189be") => None,
         "dwPlantedC4" => pattern!("488b15${'} 41ffc0") => None,
-        "dwPrediction" => pattern!("488d05${'} c3 cccccccccccccccc 4883ec? 8b0d") => Some(|_view, map, rva| {
-            map.insert("dwLocalPlayerPawn".to_string(), rva + 0x180);
+        "dwPrediction" => pattern!("488d05${'} c3 cccccccccccccccc 405356 4154") => Some(|view, map, rva| {
+            let mut save = [0; 2];
+
+            if view.scanner().finds_code(pattern!("4c39b6u4 74? 4488be"), &mut save) {
+                map.insert("dwLocalPlayerPawn".to_string(), rva + save[1]);
+            }
         }),
-        "dwSensitivity" => pattern!("488d0d${[8]'} 440f28c1 0f28f3 0f28fa e8") => None,
-        "dwSensitivity_sensitivity" => pattern!("ff50u1 4c8bc6 488d55? 488bcf e8${} 84c0 0f85${} 4c8d45? 8bd3 488bcf e8${} e9${} f30f1006") => None,
+        "dwSensitivity" => pattern!("488d0d${[8]'} 660f6ecd") => None,
+        "dwSensitivity_sensitivity" => pattern!("488d7eu1 480fbae0? 72? 85d2 490f4fff") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
-        "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905[4] 488bc7") => None,
+        "dwWeaponC4" => pattern!("488905${'} f7c1[4] 74? 81e1[4] 890d${} 8b05${} 891d${} eb? 488b15${} 488b5c24? ffc0 8905${} 488bc6 488934ea 80be") => None,
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
         "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
         "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
-        "dwNetworkGameClient_deltaTick" => pattern!("89b3u4 8b45") => None,
-        "dwNetworkGameClient_isBackgroundMap" => pattern!("0fb681u4 c3 cccccccccccccccc 0fb681${} c3 cccccccccccccccc 48895c24") => None,
-        "dwNetworkGameClient_localPlayer" => pattern!("4883c0u1 488d0440 8b0cc1") => Some(|_view, map, rva| {
-            // .text 48 83 C0 0A | add rax, 0Ah
-            // .text 48 8D 04 40 | lea rax, [rax + rax * 2]
-            // .text 8B 0C C1    | mov ecx, [rcx + rax * 8]
-            map.insert("dwNetworkGameClient_localPlayer".to_string(), (rva + (rva * 2)) * 8);
-        }),
+        "dwNetworkGameClient_deltaTick" => pattern!("4c8db7u4 4c897c24") => None,
+        "dwNetworkGameClient_isBackgroundMap" => pattern!("0fb681u4 c3 cccccccccccccccc 0fb681${} c3 cccccccccccccccc 4053") => None,
+        "dwNetworkGameClient_localPlayer" => pattern!("428b94d3u4 5b 49ffe3 32c0 5b c3 cccccccccccccccc 4053") => None,
         "dwNetworkGameClient_maxClients" => pattern!("8b81u4 c3cccccccccccccccccc 8b81${} ffc0") => None,
         "dwNetworkGameClient_serverTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_signOnState" => pattern!("448b81u4 488d0d") => None,
@@ -115,15 +114,14 @@ pattern_map! {
         "dwWindowWidth" => pattern!("8b05${'} 8907") => None,
     },
     input_system => {
-        "dwInputSystem" => pattern!("488905${'} 488d05") => None,
+        "dwInputSystem" => pattern!("488905${'} 33c0") => None,
     },
     matchmaking => {
-        "dwGameTypes" => pattern!("488d0d${'} 33d2") => None,
-        "dwGameTypes_mapName" => pattern!("488b81u4 4885c074? 4883c0") => None,
+        "dwGameTypes" => pattern!("488d0d${'} ff90") => None,
     },
     soundsystem => {
         "dwSoundSystem" => pattern!("488d05${'} c3 cccccccccccccccc 488915") => None,
-        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104b") => None,
+        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104b? 0f118f") => None,
     },
 }
 
