@@ -306,7 +306,9 @@ fn read_schema_system<P: Process + MemoryView>(process: &mut P) -> Result<Schema
         bail!("outdated schema system pattern");
     }
 
-    let schema_system: SchemaSystem = process.read(module.base + save[1]).data_part()?;
+    // println!("SchemaSystem RVA captures: save[0] = {:#X}, save[1] = {:#X}", save[0], save[1]);
+    let schema_system_ptr: u64 = process.read(module.base + save[1]).data_part()?;
+    let schema_system: SchemaSystem = process.read(schema_system_ptr.into()).data_part()?;
 
     if schema_system.num_registrations == 0 {
         bail!("no schema system registrations found");
