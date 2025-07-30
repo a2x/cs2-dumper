@@ -30,7 +30,7 @@
             "type_name": "string_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAI_ChangeHintGroup": {
         "fields": {
@@ -212,7 +212,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeContainer": {
         "fields": {
@@ -255,7 +255,7 @@
             "type_name": "CEconItemAttribute"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager": {
         "fields": {
@@ -283,7 +283,7 @@
             "type_name": "attributeprovidertypes_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager__cached_attribute_float_t": {
         "fields": {
@@ -935,19 +935,19 @@
       },
       "CBaseCSGrenade": {
         "fields": {
-          "m_bIsHeldByPlayer": 4145,
-          "m_bJumpThrow": 4147,
-          "m_bJustPulledPin": 4168,
-          "m_bPinPulled": 4146,
-          "m_bRedraw": 4144,
-          "m_bThrowAnimating": 4148,
-          "m_fDropTime": 4160,
-          "m_fPinPullTime": 4164,
-          "m_fThrowTime": 4152,
-          "m_flNextHoldFrac": 4176,
-          "m_flThrowStrength": 4156,
-          "m_hSwitchToWeaponAfterThrow": 4180,
-          "m_nNextHoldTick": 4172
+          "m_bIsHeldByPlayer": 4153,
+          "m_bJumpThrow": 4155,
+          "m_bJustPulledPin": 4176,
+          "m_bPinPulled": 4154,
+          "m_bRedraw": 4152,
+          "m_bThrowAnimating": 4156,
+          "m_fDropTime": 4168,
+          "m_fPinPullTime": 4172,
+          "m_fThrowTime": 4160,
+          "m_flNextHoldFrac": 4184,
+          "m_flThrowStrength": 4164,
+          "m_hSwitchToWeaponAfterThrow": 4188,
+          "m_nNextHoldTick": 4180
         },
         "metadata": [
           {
@@ -1488,7 +1488,7 @@
             "type_name": "BloodType"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CBaseEntityAPI": {
         "fields": {},
@@ -2754,7 +2754,7 @@
           "m_viewForward": 220
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBreakable": {
         "fields": {
@@ -2912,7 +2912,7 @@
           "m_vecWheelFrictionScales": 72
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBuyZone": {
         "fields": {
@@ -2923,17 +2923,17 @@
       },
       "CC4": {
         "fields": {
-          "m_bBombPlacedAnimation": 4224,
-          "m_bBombPlanted": 4267,
-          "m_bDoValidDroppedPositionCheck": 4216,
-          "m_bIsPlantingViaUse": 4225,
-          "m_bPlayedArmingBeeps": 4260,
-          "m_bStartedArming": 4217,
-          "m_entitySpottedState": 4232,
-          "m_fArmedTime": 4220,
-          "m_nSpotRules": 4256,
-          "m_vecLastValidDroppedPosition": 4204,
-          "m_vecLastValidPlayerHeldPosition": 4192
+          "m_bBombPlacedAnimation": 4232,
+          "m_bBombPlanted": 4275,
+          "m_bDoValidDroppedPositionCheck": 4224,
+          "m_bIsPlantingViaUse": 4233,
+          "m_bPlayedArmingBeeps": 4268,
+          "m_bStartedArming": 4225,
+          "m_entitySpottedState": 4240,
+          "m_fArmedTime": 4228,
+          "m_nSpotRules": 4264,
+          "m_vecLastValidDroppedPosition": 4212,
+          "m_vecLastValidPlayerHeldPosition": 4200
         },
         "metadata": [
           {
@@ -5826,54 +5826,55 @@
       },
       "CCSWeaponBase": {
         "fields": {
-          "m_IronSightController": 4096,
+          "m_IronSightController": 4104,
           "m_OnPlayerPickup": 3872,
           "m_bBurstMode": 3956,
-          "m_bCanBePickedUp": 4016,
-          "m_bDroppedNearBuyZone": 3992,
+          "m_bCanBePickedUp": 4024,
+          "m_bDroppedNearBuyZone": 3996,
           "m_bFireOnEmpty": 3864,
           "m_bInReload": 3968,
           "m_bInspectPending": 3788,
           "m_bInspectShouldLoop": 3789,
-          "m_bIsHauledBack": 3976,
+          "m_bIsHauledBack": 3980,
           "m_bPlayerAmmoStockOnPickup": 3776,
           "m_bRemoveable": 3704,
           "m_bRequireUseToTouch": 3777,
-          "m_bSilencerOn": 3977,
-          "m_bUseCanOverrideNextOwnerTouchTime": 4017,
-          "m_bWasActiveWeaponWhenDropped": 4044,
-          "m_bWasOwnedByCT": 4084,
-          "m_bWasOwnedByTerrorist": 4085,
-          "m_donated": 4076,
+          "m_bSilencerOn": 3981,
+          "m_bUseCanOverrideNextOwnerTouchTime": 4025,
+          "m_bWasActiveWeaponWhenDropped": 4052,
+          "m_bWasOwnedByCT": 4092,
+          "m_bWasOwnedByTerrorist": 4093,
+          "m_donated": 4084,
           "m_fAccuracyPenalty": 3936,
           "m_fAccuracySmoothedForZoom": 3944,
-          "m_fLastShotTime": 4080,
-          "m_flDroppedAtTime": 3972,
+          "m_fLastShotTime": 4088,
+          "m_flDisallowAttackAfterReloadStartUntilTime": 3972,
+          "m_flDroppedAtTime": 3976,
           "m_flInspectCancelCompleteTime": 3784,
           "m_flLastAccuracyUpdateTime": 3940,
-          "m_flLastLOSTraceFailureTime": 4124,
-          "m_flNextAttackRenderTimeOffset": 3996,
+          "m_flLastLOSTraceFailureTime": 4132,
+          "m_flNextAttackRenderTimeOffset": 4000,
           "m_flPostponeFireReadyFrac": 3964,
           "m_flRecoilIndex": 3952,
-          "m_flTimeSilencerSwitchComplete": 3980,
+          "m_flTimeSilencerSwitchComplete": 3984,
           "m_flTurningInaccuracy": 3932,
           "m_flTurningInaccuracyDelta": 3916,
-          "m_flWatTickOffset": 4128,
+          "m_flWatTickOffset": 4136,
           "m_flWeaponGameplayAnimStateTimestamp": 3780,
           "m_hCurrentThirdPersonSequence": 3736,
-          "m_hPrevOwner": 4036,
-          "m_iIronSightMode": 4120,
-          "m_iMostRecentTeamNumber": 3988,
-          "m_iOriginalTeamNumber": 3984,
+          "m_hPrevOwner": 4044,
+          "m_iIronSightMode": 4128,
+          "m_iMostRecentTeamNumber": 3992,
+          "m_iOriginalTeamNumber": 3988,
           "m_iRecoilIndex": 3948,
           "m_iWeaponGameplayAnimState": 3778,
-          "m_nDropTick": 4040,
+          "m_nDropTick": 4048,
           "m_nLastEmptySoundCmdNum": 3832,
           "m_nPostponeFireReadyTicks": 3960,
-          "m_nextOwnerTouchTime": 4020,
-          "m_nextPrevOwnerTouchTime": 4024,
-          "m_nextPrevOwnerUseTime": 4032,
-          "m_numRemoveUnownedWeaponThink": 4088,
+          "m_nextOwnerTouchTime": 4028,
+          "m_nextPrevOwnerTouchTime": 4032,
+          "m_nextPrevOwnerUseTime": 4040,
+          "m_numRemoveUnownedWeaponThink": 4096,
           "m_thirdPersonFireSequences": 3712,
           "m_thirdPersonSequences": 3740,
           "m_vecTurningInaccuracyEyeDirLast": 3920,
@@ -5943,6 +5944,11 @@
             "name": "m_bInReload",
             "type": "NetworkVarNames",
             "type_name": "bool"
+          },
+          {
+            "name": "m_flDisallowAttackAfterReloadStartUntilTime",
+            "type": "NetworkVarNames",
+            "type_name": "GameTime_t"
           },
           {
             "name": "m_flDroppedAtTime",
@@ -6019,16 +6025,16 @@
       },
       "CCSWeaponBaseGun": {
         "fields": {
-          "m_bNeedsBoltAction": 4165,
-          "m_bSkillBoltInterruptAvailable": 4174,
-          "m_bSkillBoltLiftedFireKey": 4175,
-          "m_bSkillReloadAvailable": 4172,
-          "m_bSkillReloadLiftedReloadKey": 4173,
-          "m_iBurstShotsRemaining": 4148,
-          "m_inPrecache": 4164,
-          "m_nRevolverCylinderIdx": 4168,
-          "m_silencedModelIndex": 4160,
-          "m_zoomLevel": 4144
+          "m_bNeedsBoltAction": 4173,
+          "m_bSkillBoltInterruptAvailable": 4182,
+          "m_bSkillBoltLiftedFireKey": 4183,
+          "m_bSkillReloadAvailable": 4180,
+          "m_bSkillReloadLiftedReloadKey": 4181,
+          "m_iBurstShotsRemaining": 4156,
+          "m_inPrecache": 4172,
+          "m_nRevolverCylinderIdx": 4176,
+          "m_silencedModelIndex": 4168,
+          "m_zoomLevel": 4152
         },
         "metadata": [
           {
@@ -6364,7 +6370,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CColorCorrection": {
         "fields": {
@@ -6663,7 +6669,7 @@
             "type_name": "int"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CDynamicLight": {
         "fields": {
@@ -6944,7 +6950,7 @@
             "type_name": "char"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEconWearable": {
         "fields": {
@@ -7100,7 +7106,7 @@
       "CEntityComponent": {
         "fields": {},
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CEntityDissolve": {
         "fields": {
@@ -7217,7 +7223,7 @@
             "type_name": "int32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEntityInstance": {
         "fields": {
@@ -8956,7 +8962,7 @@
             "type_name": "Vector"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEnvWindVolume": {
         "fields": {
@@ -9987,7 +9993,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameSceneNodeHandle": {
         "fields": {
@@ -10006,7 +10012,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameText": {
         "fields": {
@@ -10131,7 +10137,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGradientFog": {
         "fields": {
@@ -10947,7 +10953,7 @@
       },
       "CKnife": {
         "fields": {
-          "m_bFirstAttack": 4144
+          "m_bFirstAttack": 4152
         },
         "metadata": [
           {
@@ -12011,7 +12017,7 @@
             "type_name": "int8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CMolotovGrenade": {
         "fields": {},
@@ -12158,7 +12164,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNullEntity": {
         "fields": {},
@@ -17910,7 +17916,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CTimerEntity": {
         "fields": {
@@ -18504,8 +18510,8 @@
       },
       "CWeaponBaseItem": {
         "fields": {
-          "m_SequenceCompleteTimer": 4144,
-          "m_bRedraw": 4168
+          "m_SequenceCompleteTimer": 4152,
+          "m_bRedraw": 4176
         },
         "metadata": [
           {
@@ -18528,7 +18534,7 @@
       },
       "CWeaponCZ75a": {
         "fields": {
-          "m_bMagazineRemoved": 4176
+          "m_bMagazineRemoved": 4184
         },
         "metadata": [
           {
@@ -18661,8 +18667,8 @@
       },
       "CWeaponTaser": {
         "fields": {
-          "m_fFireTime": 4176,
-          "m_nLastAttackTick": 4180
+          "m_fFireTime": 4184,
+          "m_nLastAttackTick": 4188
         },
         "metadata": [
           {
@@ -18727,7 +18733,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EngineCountdownTimer": {
         "fields": {
@@ -18752,7 +18758,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntityRenderAttribute_t": {
         "fields": {
@@ -18771,7 +18777,7 @@
             "type_name": "Vector4D"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntitySpottedState_t": {
         "fields": {
@@ -18825,7 +18831,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "OutflowWithRequirements_t": {
         "fields": {
@@ -18860,7 +18866,7 @@
             "type_name": "EHANDLE"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "PredictedDamageTag_t": {
         "fields": {
@@ -18979,7 +18985,7 @@
             "type_name": "CEntityHandle"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "SequenceHistory_t": {
         "fields": {
@@ -18991,7 +18997,7 @@
           "m_nSeqLoopMode": 12
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "SignatureOutflow_Continue": {
         "fields": {},
@@ -19065,7 +19071,7 @@
             "type_name": "uint8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "ViewAngleServerChange_t": {
         "fields": {
@@ -19109,7 +19115,7 @@
             "type_name": "uint16"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "WeaponPurchaseTracker_t": {
         "fields": {
@@ -19122,7 +19128,7 @@
             "type_name": "WeaponPurchaseCount_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "audioparams_t": {
         "fields": {
@@ -19159,7 +19165,7 @@
             "type_name": "uint32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogparams_t": {
         "fields": {
@@ -19306,7 +19312,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogplayerparams_t": {
         "fields": {
@@ -19332,7 +19338,7 @@
             "type_name": "CHandle<CFogController>"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "shard_model_desc_t": {
         "fields": {
@@ -19417,7 +19423,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "sky3dparams_t": {
         "fields": {
@@ -19460,7 +19466,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       }
     },
     "enums": {
@@ -21249,11 +21255,6 @@
           "WORLDTEXT_VERTICAL_ALIGN_TOP": 0
         },
         "type": "uint32"
-      },
-      "_steam": {
-        "alignment": 0,
-        "members": {},
-        "type": "unknown"
       },
       "attributeprovidertypes_t": {
         "alignment": 4,
