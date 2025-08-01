@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-31 03:03:49.823379600 UTC
+// 2025-08-01 22:47:35.099029800 UTC
 
 #pragma once
 
@@ -180,7 +180,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flFlinchModLarge = 0x38; // float32
                 constexpr std::ptrdiff_t flFriendlyFireDamageReductionRatio = 0x3C; // float32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 15
             //
             // Metadata:
@@ -1055,7 +1055,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bFastRetrigger = 0x5FB; // bool
                 constexpr std::ptrdiff_t m_bPassthoughCaller = 0x5FC; // bool
             }
-            // Parent: 
+            // Parent: None
             // Field count: 6
             namespace SequenceHistory_t {
                 constexpr std::ptrdiff_t m_hSequence = 0x0; // HSequence
@@ -1528,7 +1528,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFadeStartTime = 0x830; // float32[1]
                 constexpr std::ptrdiff_t m_flFadeDuration = 0x834; // float32[1]
             }
-            // Parent: 
+            // Parent: None
             // Field count: 10
             namespace CBuoyancyHelper {
                 constexpr std::ptrdiff_t m_nFluidType = 0x18; // CUtlStringToken
@@ -1692,7 +1692,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_WeaponM4A1Silencer {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 29
             //
             // Metadata:
@@ -1837,7 +1837,7 @@ namespace cs2_dumper {
             namespace CPulseCell_Value_Gradient {
                 constexpr std::ptrdiff_t m_Gradient = 0x48; // CColorGradient
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -1847,7 +1847,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_timestamp = 0x8; // GameTime_t
                 constexpr std::ptrdiff_t m_nWorldGroupId = 0xC; // WorldGroupId_t
             }
-            // Parent: 
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -2009,7 +2009,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0x1D78; // GameTime_t
                 constexpr std::ptrdiff_t m_flWatTickOffset = 0x1DD8; // float32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 7
             //
             // Metadata:
@@ -2053,7 +2053,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flExposureAdaptationSpeedDown = 0x604; // float32
                 constexpr std::ptrdiff_t m_flTonemapEVSmoothingRange = 0x608; // float32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 4
             //
             // Metadata:
@@ -2080,7 +2080,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_WeaponMag7 {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -2196,7 +2196,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace CSpriteOriented {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 13
             //
             // Metadata:
@@ -2631,7 +2631,7 @@ namespace cs2_dumper {
             // MPulseDomainHookInfo
             namespace CCSPointScriptExtensions_entity {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 14
             //
             // Metadata:
@@ -2652,7 +2652,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flNewHDRColorScale = 0x38; // float32
                 constexpr std::ptrdiff_t m_flNewFarZ = 0x3C; // float32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 33
             //
             // Metadata:
@@ -3145,7 +3145,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_hMaster = 0x1460; // CHandle<C_BasePropDoor>
                 constexpr std::ptrdiff_t m_vWhereToSetLightingOrigin = 0x1464; // Vector
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -3330,7 +3330,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_LightDirectionalEntity {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 82
             //
             // Metadata:
@@ -3463,7 +3463,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_sUniqueHammerID = 0x5E8; // CUtlString
                 constexpr std::ptrdiff_t m_nBloodType = 0x5F0; // BloodType
             }
-            // Parent: 
+            // Parent: None
             // Field count: 4
             //
             // Metadata:
@@ -3699,7 +3699,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_materialGroup = 0x474; // CUtlStringToken
                 constexpr std::ptrdiff_t m_nHitboxSet = 0x478; // uint8
             }
-            // Parent: 
+            // Parent: None
             // Field count: 0
             namespace CEntityComponent {
             }
@@ -3945,7 +3945,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vSmokeColor = 0x84C; // Vector
                 constexpr std::ptrdiff_t m_szAnimClass = 0x858; // CGlobalSymbol
             }
-            // Parent: 
+            // Parent: None
             // Field count: 6
             //
             // Metadata:
@@ -4316,7 +4316,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x548; // float32
                 constexpr std::ptrdiff_t m_bWasSurfing = 0x54C; // bool
             }
-            // Parent: 
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -4366,7 +4366,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
                 constexpr std::ptrdiff_t m_CaseOutflows = 0x90; // CUtlVector<CPulse_OutflowConnection>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -4427,7 +4427,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OuterAngle = 0xED0; // float32
                 constexpr std::ptrdiff_t m_SpotRadius = 0xED4; // float32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -4544,7 +4544,7 @@ namespace cs2_dumper {
             namespace CCSPointScript {
                 constexpr std::ptrdiff_t m_pParent = 0x110; // CCSPointScriptEntity*
             }
-            // Parent: 
+            // Parent: None
             // Field count: 6
             //
             // Metadata:
@@ -4715,7 +4715,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_iEnemyKnifeKills = 0x74; // int32
                 constexpr std::ptrdiff_t m_iEnemyTaserKills = 0x78; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -4750,7 +4750,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace CHostageRescueZone {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -4815,7 +4815,7 @@ namespace cs2_dumper {
             namespace C_CSGameRulesProxy {
                 constexpr std::ptrdiff_t m_pGameRules = 0x5F8; // C_CSGameRules*
             }
-            // Parent: 
+            // Parent: None
             // Field count: 17
             //
             // Metadata:
@@ -5242,7 +5242,7 @@ namespace cs2_dumper {
             namespace FilterDamageType {
                 constexpr std::ptrdiff_t m_iDamageType = 0x650; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -5661,7 +5661,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flWaterWorldZ = 0x1398; // float32
                 constexpr std::ptrdiff_t m_flWaterNextTraceTime = 0x139C; // float32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 11
             //
             // Metadata:
@@ -5799,7 +5799,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bIsOtherEnemy = 0x74; // bool
                 constexpr std::ptrdiff_t m_killType = 0x75; // EKillTypes_t
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -5975,7 +5975,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flPreviousUpdateTickTime = 0x660; // GameTime_t
                 constexpr std::ptrdiff_t m_vecPreviousTestPoint = 0x664; // Vector
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -6052,7 +6052,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_CS2HudModelBase {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 4
             //
             // Metadata:
@@ -6366,7 +6366,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_HEGrenadeProjectile {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 24
             //
             // Metadata:
@@ -6567,7 +6567,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bSpotted = 0x8; // bool
                 constexpr std::ptrdiff_t m_bSpottedByMask = 0xC; // uint32[2]
             }
-            // Parent: 
+            // Parent: None
             // Field count: 25
             //
             // Metadata:
@@ -7228,7 +7228,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OnPass = 0x600; // CEntityIOOutput
                 constexpr std::ptrdiff_t m_OnFail = 0x628; // CEntityIOOutput
             }
-            // Parent: 
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -7335,7 +7335,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_ubSignature = 0xF15; // uint8[128]
                 constexpr std::ptrdiff_t m_SprayRenderHelper = 0xFA0; // CPlayerSprayDecalRenderHelper
             }
-            // Parent: 
+            // Parent: None
             // Field count: 11
             //
             // Metadata:
