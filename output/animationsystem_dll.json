@@ -3169,7 +3169,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNewParticleEffect": {
         "fields": {
@@ -4680,7 +4680,9 @@
       "CNmSoundEvent": {
         "fields": {
           "m_attachmentName": 56,
+          "m_bContinuePlayingSoundAtDurationEnd": 73,
           "m_bIsServerOnly": 72,
+          "m_flDurationInterruptionThreshold": 76,
           "m_name": 40,
           "m_position": 48,
           "m_relevance": 32,
@@ -7119,7 +7121,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "DynamicMeshDeformParams_t": {
         "fields": {
@@ -7617,7 +7619,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "MovementGaitId_t": {
         "fields": {
@@ -7629,7 +7631,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "NmBoneMaskSetDefinition_t": {
         "fields": {

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-31 03:03:49.823379600 UTC
+// 2025-08-01 22:47:35.099029800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1786,7 +1786,7 @@ pub mod cs2_dumper {
                 pub const m_internalOps: usize = 0x40; // CUtlVector<CUtlString>
                 pub const m_decodedAnims: usize = 0x58; // CUtlVector<CUtlString>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1799,7 +1799,7 @@ pub mod cs2_dumper {
             pub mod PulseRuntimeVarIndex_t {
                 pub const m_Value: usize = 0x0; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -2266,7 +2266,7 @@ pub mod cs2_dumper {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_weights: usize = 0x8; // CUtlVector<float32>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -3695,7 +3695,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CNmVelocityBasedSpeedScaleNode__CDefinition {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -6236,7 +6236,7 @@ pub mod cs2_dumper {
                 pub const m_outputBones: usize = 0x40; // CUtlVector<std::pair<CUtlString,uint32>>
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -6248,6 +6248,8 @@ pub mod cs2_dumper {
                 pub const m_attachmentName: usize = 0x38; // CUtlString
                 pub const m_tags: usize = 0x40; // CUtlString
                 pub const m_bIsServerOnly: usize = 0x48; // bool
+                pub const m_bContinuePlayingSoundAtDurationEnd: usize = 0x49; // bool
+                pub const m_flDurationInterruptionThreshold: usize = 0x4C; // float32
             }
             // Parent: None
             // Field count: 14

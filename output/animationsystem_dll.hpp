@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-07-31 03:03:49.823379600 UTC
+// 2025-08-01 22:47:35.099029800 UTC
 
 #pragma once
 
@@ -1659,7 +1659,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_internalOps = 0x40; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_decodedAnims = 0x58; // CUtlVector<CUtlString>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1672,7 +1672,7 @@ namespace cs2_dumper {
             namespace PulseRuntimeVarIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -2139,7 +2139,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_weights = 0x8; // CUtlVector<float32>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -3568,7 +3568,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CNmVelocityBasedSpeedScaleNode__CDefinition {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
@@ -6109,7 +6109,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_outputBones = 0x40; // CUtlVector<std::pair<CUtlString,uint32>>
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -6121,6 +6121,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_attachmentName = 0x38; // CUtlString
                 constexpr std::ptrdiff_t m_tags = 0x40; // CUtlString
                 constexpr std::ptrdiff_t m_bIsServerOnly = 0x48; // bool
+                constexpr std::ptrdiff_t m_bContinuePlayingSoundAtDurationEnd = 0x49; // bool
+                constexpr std::ptrdiff_t m_flDurationInterruptionThreshold = 0x4C; // float32
             }
             // Parent: None
             // Field count: 14
