@@ -6,32 +6,25 @@ use log::debug;
 
 use memflow::prelude::v1::*;
 
-use pelite::pattern;
-use pelite::pe64::{Pe, PeView};
+use pelite::pe64::Pe;
 
+use super::offsets::OffsetMap;
 use crate::source2::KeyButton;
 
 pub type ButtonMap = BTreeMap<String, imem>;
 
-pub fn buttons<P: Process + MemoryView>(process: &mut P) -> Result<ButtonMap> {
+pub fn buttons<P: Process + MemoryView>(
+    process: &mut P,
+    offsets: &OffsetMap,
+) -> Result<ButtonMap> {
     let module = process.module_by_name("client.dll")?;
 
-    let buf = process
-        .read_raw(module.base, module.size as _)
-        .data_part()?;
+    let dw_button_system = offsets
+        .get("client.dll")
+        .and_then(|m| m.get("dwButtonSystem"))
+        .ok_or_else(|| anyhow::anyhow!("dwButtonSystem not found in offsets"))?;
 
-    let view = PeView::from_bytes(&buf)?;
-
-    let mut save = [0; 2];
-
-    if !view
-        .scanner()
-        .finds_code(pattern!("488b15${'} 4885d2 74? 488b02 4885c0"), &mut save)
-    {
-        bail!("outdated button list pattern");
-    }
-
-    read_buttons(process, &module, module.base + save[1])
+    read_buttons(process, &module, module.base + *dw_button_system)
 }
 
 fn read_buttons(

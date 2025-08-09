@@ -25,10 +25,6 @@ pub struct AnalysisResult {
 }
 
 pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisResult> {
-    let buttons = analyze(process, buttons);
-
-    info!("found {} buttons", buttons.len());
-
     let interfaces = analyze(process, interfaces);
 
     info!(
@@ -51,7 +47,23 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
         offsets.len()
     );
 
-    let schemas = analyze(process, schemas);
+    let buttons = match buttons(process, &offsets) {
+        Ok(result) => result,
+        Err(err) => {
+            error!("failed to read buttons: {}", err);
+            ButtonMap::default()
+        }
+    };
+
+    info!("found {} buttons", buttons.len());
+
+    let schemas = match schemas(process, &offsets) {
+        Ok(result) => result,
+        Err(err) => {
+            error!("failed to read schemas: {}", err);
+            SchemaMap::default()
+        }
+    };
 
     let (class_count, enum_count) =
         schemas

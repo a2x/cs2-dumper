@@ -7,11 +7,9 @@ use log::debug;
 
 use memflow::prelude::v1::*;
 
-use pelite::pattern;
-use pelite::pe64::{Pe, PeView};
-
 use serde::{Deserialize, Serialize};
 
+use super::offsets::OffsetMap;
 use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
@@ -60,8 +58,24 @@ pub struct TypeScope {
     pub enums: Vec<Enum>,
 }
 
-pub fn schemas<P: Process + MemoryView>(process: &mut P) -> Result<SchemaMap> {
-    let schema_system = read_schema_system(process)?;
+pub fn schemas<P: Process + MemoryView>(
+    process: &mut P,
+    offsets: &OffsetMap,
+) -> Result<SchemaMap> {
+    let client_module = process.module_by_name("schemasystem.dll")?;
+
+    let dw_schema_system_rva = offsets
+        .get("schemasystem.dll")
+        .and_then(|m| m.get("dwSchemaSystem"))
+        .ok_or_else(|| anyhow::anyhow!("dwSchemaSystem not found in offsets"))?;
+
+    let schema_system_addr = client_module.base + *dw_schema_system_rva;
+    let schema_system: SchemaSystem = process.read(schema_system_addr).data_part()?;
+
+    if schema_system.num_registrations == 0 {
+        bail!("no schema system registrations found");
+    }
+
     let type_scopes = read_type_scopes(process, &schema_system)?;
 
     let map = type_scopes
@@ -281,33 +295,6 @@ fn read_enum_binding_members(
 
         Ok(acc)
     })
-}
-
-fn read_schema_system<P: Process + MemoryView>(process: &mut P) -> Result<SchemaSystem> {
-    let module = process.module_by_name("schemasystem.dll")?;
-
-    let buf = process
-        .read_raw(module.base, module.size as _)
-        .data_part()?;
-
-    let view = PeView::from_bytes(&buf)?;
-
-    let mut save = [0; 2];
-
-    if !view
-        .scanner()
-        .finds_code(pattern!("488905${'} 4c8d0d${} 0fb645? 4c8d45? 33f6"), &mut save)
-    {
-        bail!("outdated schema system pattern");
-    }
-
-    let schema_system: SchemaSystem = process.read(module.base + save[1]).data_part()?;
-
-    if schema_system.num_registrations == 0 {
-        bail!("no schema system registrations found");
-    }
-
-    Ok(schema_system)
 }
 
 fn read_type_scopes(

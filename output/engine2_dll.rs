@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-09 08:20:26.116174600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -63,7 +63,7 @@ pub mod cs2_dumper {
                 pub const m_nTotalTicksThisFrame: usize = 0x38; // int32
                 pub const m_nTotalTicks: usize = 0x3C; // int32
             }
-            // Parent: None
+            // Parent: 
             // Field count: 1
             pub mod CEntityIOOutput {
                 pub const m_Value: usize = 0x18; // CVariantBase<CVariantDefaultAllocator>
