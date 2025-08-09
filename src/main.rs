@@ -19,6 +19,7 @@ use simplelog::*;
 use output::Output;
 
 mod analysis;
+mod config;
 mod output;
 mod source2;
 

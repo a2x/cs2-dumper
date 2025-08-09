@@ -1,9 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-09 08:20:26.116174600 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
     public static class ClientDll {
+        public const nint dwButtonSystem = 0x1D1B018;
         public const nint dwCSGOInput = 0x1D2C010;
         public const nint dwEntityList = 0x1CBE620;
         public const nint dwGameEntitySystem = 0x1E01BE0;
@@ -43,6 +44,10 @@ namespace CS2Dumper.Offsets {
     // Module: matchmaking.dll
     public static class MatchmakingDll {
         public const nint dwGameTypes = 0x1B3F10;
+    }
+    // Module: schemasystem.dll
+    public static class SchemasystemDll {
+        public const nint dwSchemaSystem = 0x786E0;
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {

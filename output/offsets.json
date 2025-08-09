@@ -1,5 +1,6 @@
 {
   "client.dll": {
+    "dwButtonSystem": 30519320,
     "dwCSGOInput": 30588944,
     "dwEntityList": 30139936,
     "dwGameEntitySystem": 31464416,
@@ -36,6 +37,9 @@
   },
   "matchmaking.dll": {
     "dwGameTypes": 1785616
+  },
+  "schemasystem.dll": {
+    "dwSchemaSystem": 493280
   },
   "soundsystem.dll": {
     "dwSoundSystem": 3995168,

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-09 08:20:26.116174600 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,6 +7,7 @@ pub mod cs2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
+            pub const dwButtonSystem: usize = 0x1D1B018;
             pub const dwCSGOInput: usize = 0x1D2C010;
             pub const dwEntityList: usize = 0x1CBE620;
             pub const dwGameEntitySystem: usize = 0x1E01BE0;
@@ -46,6 +47,10 @@ pub mod cs2_dumper {
         // Module: matchmaking.dll
         pub mod matchmaking_dll {
             pub const dwGameTypes: usize = 0x1B3F10;
+        }
+        // Module: schemasystem.dll
+        pub mod schemasystem_dll {
+            pub const dwSchemaSystem: usize = 0x786E0;
         }
         // Module: soundsystem.dll
         pub mod soundsystem_dll {
