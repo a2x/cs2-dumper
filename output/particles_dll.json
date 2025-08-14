@@ -79,13 +79,13 @@
       },
       "CBaseTrailRenderer": {
         "fields": {
-          "m_bClampV": 12000,
-          "m_flEndFadeSize": 11648,
-          "m_flMaxSize": 11292,
-          "m_flMinSize": 11288,
-          "m_flStartFadeSize": 11296,
-          "m_nOrientationControlPoint": 11284,
-          "m_nOrientationType": 11280
+          "m_bClampV": 12008,
+          "m_flEndFadeSize": 11656,
+          "m_flMaxSize": 11300,
+          "m_flMinSize": 11296,
+          "m_flStartFadeSize": 11304,
+          "m_nOrientationControlPoint": 11292,
+          "m_nOrientationType": 11288
         },
         "metadata": [
           {
@@ -3304,6 +3304,33 @@
         ],
         "parent": null
       },
+      "C_OP_GameDecalRenderer": {
+        "fields": {
+          "m_bNoDecalsOnOwner": 6939,
+          "m_bRandomDecalRotation": 6937,
+          "m_bRandomlySelectDecalInGroup": 6938,
+          "m_bUseGameDefaultDecalSize": 6936,
+          "m_bVisualizeTraces": 6940,
+          "m_flDecalRotation": 4928,
+          "m_flDecalSize": 4224,
+          "m_flTraceBloat": 3872,
+          "m_nCollisionGroup": 552,
+          "m_nDecalGroupIndex": 4576,
+          "m_nEventType": 536,
+          "m_nInteractionMask": 544,
+          "m_sDecalGroupName": 528,
+          "m_vModulationColor": 5280,
+          "m_vecEndPos": 2216,
+          "m_vecStartPos": 560
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "C_OP_GlobalLight": {
         "fields": {
           "m_bClampLowerRange": 452,
@@ -5640,36 +5667,36 @@
       },
       "C_OP_RenderRopes": {
         "fields": {
-          "m_bClampV": 12388,
-          "m_bClosedLoop": 12425,
-          "m_bDrawAsOpaque": 12436,
-          "m_bEnableFadingAndClamping": 11280,
-          "m_bGenerateNormals": 12437,
-          "m_bReverseOrder": 12424,
-          "m_bUseScalarForTextureCoordinate": 12413,
-          "m_flEndFadeDot": 11304,
-          "m_flEndFadeSize": 11296,
-          "m_flMaxSize": 11288,
-          "m_flMinSize": 11284,
-          "m_flRadiusTaper": 11308,
-          "m_flScalarAttributeTextureCoordScale": 12420,
-          "m_flScaleVOffsetByControlPointDistance": 12408,
-          "m_flScaleVScrollByControlPointDistance": 12404,
-          "m_flScaleVSizeByControlPointDistance": 12400,
-          "m_flStartFadeDot": 11300,
-          "m_flStartFadeSize": 11292,
-          "m_flTessScale": 11320,
-          "m_flTextureVOffset": 12032,
-          "m_flTextureVScrollRate": 11680,
-          "m_flTextureVWorldSize": 11328,
-          "m_nMaxTesselation": 11316,
-          "m_nMinTesselation": 11312,
-          "m_nOrientationType": 12428,
-          "m_nScalarFieldForTextureCoordinate": 12416,
-          "m_nScaleCP1": 12392,
-          "m_nScaleCP2": 12396,
-          "m_nTextureVParamsCP": 12384,
-          "m_nVectorFieldForOrientation": 12432
+          "m_bClampV": 12396,
+          "m_bClosedLoop": 12433,
+          "m_bDrawAsOpaque": 12444,
+          "m_bEnableFadingAndClamping": 11288,
+          "m_bGenerateNormals": 12445,
+          "m_bReverseOrder": 12432,
+          "m_bUseScalarForTextureCoordinate": 12421,
+          "m_flEndFadeDot": 11312,
+          "m_flEndFadeSize": 11304,
+          "m_flMaxSize": 11296,
+          "m_flMinSize": 11292,
+          "m_flRadiusTaper": 11316,
+          "m_flScalarAttributeTextureCoordScale": 12428,
+          "m_flScaleVOffsetByControlPointDistance": 12416,
+          "m_flScaleVScrollByControlPointDistance": 12412,
+          "m_flScaleVSizeByControlPointDistance": 12408,
+          "m_flStartFadeDot": 11308,
+          "m_flStartFadeSize": 11300,
+          "m_flTessScale": 11328,
+          "m_flTextureVOffset": 12040,
+          "m_flTextureVScrollRate": 11688,
+          "m_flTextureVWorldSize": 11336,
+          "m_nMaxTesselation": 11324,
+          "m_nMinTesselation": 11320,
+          "m_nOrientationType": 12436,
+          "m_nScalarFieldForTextureCoordinate": 12424,
+          "m_nScaleCP1": 12400,
+          "m_nScaleCP2": 12404,
+          "m_nTextureVParamsCP": 12392,
+          "m_nVectorFieldForOrientation": 12440
         },
         "metadata": [
           {
@@ -5757,34 +5784,35 @@
       },
       "C_OP_RenderSprites": {
         "fields": {
-          "m_OutlineColor": 13429,
-          "m_bDistanceAlpha": 13416,
-          "m_bOutline": 13428,
-          "m_bParticleShadows": 14168,
-          "m_bSoftEdges": 13417,
-          "m_bUseYawWithNormalAligned": 11640,
-          "m_flAlphaAdjustWithSizeAdjust": 12352,
-          "m_flEdgeSoftnessEnd": 13424,
-          "m_flEdgeSoftnessStart": 13420,
-          "m_flEndFadeDot": 13412,
-          "m_flEndFadeSize": 13056,
-          "m_flLightingDirectionality": 13816,
-          "m_flLightingTessellation": 13464,
-          "m_flMaxSize": 12000,
-          "m_flMinSize": 11648,
-          "m_flOutlineEnd0": 13448,
-          "m_flOutlineEnd1": 13452,
-          "m_flOutlineStart0": 13440,
-          "m_flOutlineStart1": 13444,
-          "m_flShadowDensity": 14172,
-          "m_flStartFadeDot": 13408,
-          "m_flStartFadeSize": 12704,
-          "m_nLightingMode": 13456,
-          "m_nOrientationControlPoint": 11636,
-          "m_nOrientationType": 11632,
-          "m_nOutlineAlpha": 13436,
-          "m_nSequenceOverride": 11280,
-          "m_replicationParameters": 14176
+          "m_OutlineColor": 13437,
+          "m_bDistanceAlpha": 13424,
+          "m_bOutline": 13436,
+          "m_bParticleShadows": 14176,
+          "m_bSequenceNumbersAreRawSequenceIndices": 11640,
+          "m_bSoftEdges": 13425,
+          "m_bUseYawWithNormalAligned": 11652,
+          "m_flAlphaAdjustWithSizeAdjust": 12360,
+          "m_flEdgeSoftnessEnd": 13432,
+          "m_flEdgeSoftnessStart": 13428,
+          "m_flEndFadeDot": 13420,
+          "m_flEndFadeSize": 13064,
+          "m_flLightingDirectionality": 13824,
+          "m_flLightingTessellation": 13472,
+          "m_flMaxSize": 12008,
+          "m_flMinSize": 11656,
+          "m_flOutlineEnd0": 13456,
+          "m_flOutlineEnd1": 13460,
+          "m_flOutlineStart0": 13448,
+          "m_flOutlineStart1": 13452,
+          "m_flShadowDensity": 14180,
+          "m_flStartFadeDot": 13416,
+          "m_flStartFadeSize": 12712,
+          "m_nLightingMode": 13464,
+          "m_nOrientationControlPoint": 11648,
+          "m_nOrientationType": 11644,
+          "m_nOutlineAlpha": 13444,
+          "m_nSequenceOverride": 11288,
+          "m_replicationParameters": 14184
         },
         "metadata": [
           {
@@ -5884,26 +5912,26 @@
       },
       "C_OP_RenderTrails": {
         "fields": {
-          "m_bEnableFadingAndClamping": 12008,
-          "m_bFlipUVBasedOnPitchYaw": 16780,
-          "m_bIgnoreDT": 12032,
-          "m_flConstrainRadiusToLengthRatio": 12036,
-          "m_flEndFadeDot": 12016,
-          "m_flForwardShift": 16776,
-          "m_flHeadAlphaScale": 14056,
-          "m_flLengthFadeInTime": 12044,
-          "m_flLengthScale": 12040,
-          "m_flMaxLength": 12024,
-          "m_flMinLength": 12028,
-          "m_flRadiusHeadTaper": 12048,
-          "m_flRadiusTaper": 14408,
-          "m_flStartFadeDot": 12012,
-          "m_flTailAlphaScale": 16416,
-          "m_nHorizCropField": 16768,
-          "m_nPrevPntSource": 12020,
-          "m_nVertCropField": 16772,
-          "m_vecHeadColorScale": 12400,
-          "m_vecTailColorScale": 14760
+          "m_bEnableFadingAndClamping": 12016,
+          "m_bFlipUVBasedOnPitchYaw": 16788,
+          "m_bIgnoreDT": 12040,
+          "m_flConstrainRadiusToLengthRatio": 12044,
+          "m_flEndFadeDot": 12024,
+          "m_flForwardShift": 16784,
+          "m_flHeadAlphaScale": 14064,
+          "m_flLengthFadeInTime": 12052,
+          "m_flLengthScale": 12048,
+          "m_flMaxLength": 12032,
+          "m_flMinLength": 12036,
+          "m_flRadiusHeadTaper": 12056,
+          "m_flRadiusTaper": 14416,
+          "m_flStartFadeDot": 12020,
+          "m_flTailAlphaScale": 16424,
+          "m_nHorizCropField": 16776,
+          "m_nPrevPntSource": 12028,
+          "m_nVertCropField": 16780,
+          "m_vecHeadColorScale": 12408,
+          "m_vecTailColorScale": 14768
         },
         "metadata": [
           {
@@ -7110,6 +7138,22 @@
         ],
         "parent": null
       },
+      "C_OP_WaterImpulseRenderer": {
+        "fields": {
+          "m_flMagnitude": 2536,
+          "m_flRadius": 2184,
+          "m_flShape": 2888,
+          "m_nEventType": 3240,
+          "m_vecPos": 528
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "C_OP_WindForce": {
         "fields": {
           "m_vForce": 464
@@ -7613,6 +7657,35 @@
           "PARTICLE_ATTR_BOX_FLAGS_WATER": 1
         },
         "type": "uint32"
+      },
+      "ParticleCollisionGroup_t": {
+        "alignment": 4,
+        "members": {
+          "PARTICLE_COLLISION_GROUP_DEBRIS": 5,
+          "PARTICLE_COLLISION_GROUP_DEFAULT": 4,
+          "PARTICLE_COLLISION_GROUP_INTERACTIVE": 7,
+          "PARTICLE_COLLISION_GROUP_NPC": 12,
+          "PARTICLE_COLLISION_GROUP_PLAYER": 8,
+          "PARTICLE_COLLISION_GROUP_PROPS": 24,
+          "PARTICLE_COLLISION_GROUP_VEHICLE": 10
+        },
+        "type": "uint32"
+      },
+      "ParticleCollisionMask_t": {
+        "alignment": 8,
+        "members": {
+          "PARTICLE_MASK_ALL": -1,
+          "PARTICLE_MASK_DEFAULTPLAYERSOLID": 798737,
+          "PARTICLE_MASK_NPCSOLID": 798753,
+          "PARTICLE_MASK_OPAQUE": 128,
+          "PARTICLE_MASK_SHOT": 1839107,
+          "PARTICLE_MASK_SHOT_BRUSHONLY": 1052673,
+          "PARTICLE_MASK_SHOT_HULL": 1847297,
+          "PARTICLE_MASK_SOLID": 798721,
+          "PARTICLE_MASK_SOLID_WATER": 897025,
+          "PARTICLE_MASK_WATER": 98304
+        },
+        "type": "uint64"
       },
       "ParticleCollisionMode_t": {
         "alignment": 4,

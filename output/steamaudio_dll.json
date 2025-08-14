@@ -62,7 +62,8 @@
       },
       "CSteamAudioBakedPathingData": {
         "fields": {
-          "m_probes": 0
+          "m_nBands": 0,
+          "m_probes": 8
         },
         "metadata": [
           {
@@ -74,21 +75,22 @@
       },
       "CSteamAudioBakedReverbData": {
         "fields": {
-          "m_clusteredProbes": 40,
-          "m_compressedClusteredData": 168,
-          "m_compressedData": 72,
-          "m_probes": 0,
-          "m_reverbClusteringSettings": 24,
-          "m_reverbCompressionSettings": 36,
-          "m_reverbSettings": 8,
-          "m_vecClusterForProbe": 48,
-          "m_vecMovableReverbAABBs": 312,
-          "m_vecMovableReverbInitialTransforms": 288,
-          "m_vecMovableReverbKeyTokens": 360,
-          "m_vecMovableReverbKeys": 336,
-          "m_vecMovableReverbOBBs": 408,
-          "m_vecMovableReverbTransforms": 384,
-          "m_vecMovableReverbs": 264
+          "m_clusteredProbes": 48,
+          "m_compressedClusteredData": 176,
+          "m_compressedData": 80,
+          "m_nBands": 0,
+          "m_probes": 8,
+          "m_reverbClusteringSettings": 32,
+          "m_reverbCompressionSettings": 44,
+          "m_reverbSettings": 16,
+          "m_vecClusterForProbe": 56,
+          "m_vecMovableReverbAABBs": 320,
+          "m_vecMovableReverbInitialTransforms": 296,
+          "m_vecMovableReverbKeyTokens": 368,
+          "m_vecMovableReverbKeys": 344,
+          "m_vecMovableReverbOBBs": 416,
+          "m_vecMovableReverbTransforms": 392,
+          "m_vecMovableReverbs": 272
         },
         "metadata": [
           {

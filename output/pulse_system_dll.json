@@ -1619,6 +1619,39 @@
         "metadata": [],
         "parent": null
       },
+      "CPulseCell_WaitForObservable": {
+        "fields": {
+          "m_Condition": 72,
+          "m_OnTrue": 192
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MCellForDomain",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseCellMethodBindings",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseCellOutflowHookInfo",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulseCursorFuncs": {
         "fields": {},
         "metadata": [
@@ -1789,16 +1822,6 @@
         ],
         "parent": null
       },
-      "CPulseRuntimeLibModuleLocalTypeQueryRegistration": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPulseTypeQueriesForScopeSingleton",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseTestFuncs_LibraryA": {
         "fields": {},
         "metadata": [
@@ -1829,10 +1852,10 @@
       },
       "CPulseTurtleGraphicsCursor": {
         "fields": {
-          "m_Color": 216,
-          "m_bPenUp": 232,
-          "m_flHeadingDeg": 228,
-          "m_vPos": 220
+          "m_Color": 208,
+          "m_bPenUp": 224,
+          "m_flHeadingDeg": 220,
+          "m_vPos": 212
         },
         "metadata": [
           {
@@ -1907,8 +1930,8 @@
       },
       "CTestDomainDerived_Cursor": {
         "fields": {
-          "m_nCursorValueA": 216,
-          "m_nCursorValueB": 220
+          "m_nCursorValueA": 208,
+          "m_nCursorValueB": 212
         },
         "metadata": [
           {
