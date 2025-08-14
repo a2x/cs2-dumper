@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -97,8 +97,8 @@ pub mod cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             pub mod CTestDomainDerived_Cursor {
-                pub const m_nCursorValueA: usize = 0xD8; // int32
-                pub const m_nCursorValueB: usize = 0xDC; // int32
+                pub const m_nCursorValueA: usize = 0xD0; // int32
+                pub const m_nCursorValueB: usize = 0xD4; // int32
             }
             // Parent: None
             // Field count: 2
@@ -125,6 +125,20 @@ pub mod cs2_dumper {
             // MPulseLibraryBindings
             // MPropertyDescription
             pub mod CPulseTestFuncs_LibraryA {
+            }
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MCellForDomain
+            // MPulseCellMethodBindings
+            // MPulseCellOutflowHookInfo
+            // MPulseEditorHeaderIcon
+            // MPropertyFriendlyName
+            pub mod CPulseCell_WaitForObservable {
+                pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
+                pub const m_OnTrue: usize = 0xC0; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -303,10 +317,10 @@ pub mod cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             pub mod CPulseTurtleGraphicsCursor {
-                pub const m_Color: usize = 0xD8; // Color
-                pub const m_vPos: usize = 0xDC; // Vector2D
-                pub const m_flHeadingDeg: usize = 0xE4; // float32
-                pub const m_bPenUp: usize = 0xE8; // bool
+                pub const m_Color: usize = 0xD0; // Color
+                pub const m_vPos: usize = 0xD4; // Vector2D
+                pub const m_flHeadingDeg: usize = 0xDC; // float32
+                pub const m_bPenUp: usize = 0xE0; // bool
             }
             // Parent: None
             // Field count: 2
@@ -685,13 +699,6 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod PulseSelectorOutflowList_t {
                 pub const m_Outflows: usize = 0x0; // CUtlVector<OutflowWithRequirements_t>
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPulseTypeQueriesForScopeSingleton
-            pub mod CPulseRuntimeLibModuleLocalTypeQueryRegistration {
             }
             // Parent: None
             // Field count: 0

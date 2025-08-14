@@ -24,7 +24,7 @@
       "EStyleNodeType": {
         "alignment": 4,
         "members": {
-          "COMPILER_CONDITIONAL": 15,
+          "COMPILER_CONDITIONAL": 16,
           "DEFINE": 3,
           "EXPRESSION": 1,
           "EXPRESSION_CONCAT": 11,
@@ -36,6 +36,7 @@
           "PROPERTY": 2,
           "REFERENCE_COMPILED": 13,
           "REFERENCE_CONTENT": 12,
+          "REFERENCE_PANEL": 15,
           "REFERENCE_PASSTHROUGH": 14,
           "ROOT": 0,
           "STYLE_SELECTOR": 7,

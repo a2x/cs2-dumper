@@ -311,8 +311,8 @@
       },
       "CAimConstraint": {
         "fields": {
-          "m_nUpType": 128,
-          "m_qAimOffset": 112
+          "m_nUpType": 112,
+          "m_qAimOffset": 96
         },
         "metadata": [
           {
@@ -1237,10 +1237,10 @@
       },
       "CBaseConstraint": {
         "fields": {
-          "m_name": 40,
-          "m_slaves": 64,
-          "m_targets": 80,
-          "m_vUpVector": 48
+          "m_name": 32,
+          "m_slaves": 56,
+          "m_targets": 72,
+          "m_vUpVector": 40
         },
         "metadata": [
           {
@@ -1400,10 +1400,10 @@
       },
       "CBoneConstraintDotToMorph": {
         "fields": {
-          "m_flRemap": 64,
-          "m_sBoneName": 40,
-          "m_sMorphChannelName": 56,
-          "m_sTargetBoneName": 48
+          "m_flRemap": 56,
+          "m_sBoneName": 32,
+          "m_sMorphChannelName": 48,
+          "m_sTargetBoneName": 40
         },
         "metadata": [
           {
@@ -1415,7 +1415,7 @@
       },
       "CBoneConstraintPoseSpaceBone": {
         "fields": {
-          "m_inputList": 104
+          "m_inputList": 96
         },
         "metadata": [
           {
@@ -1435,11 +1435,11 @@
       },
       "CBoneConstraintPoseSpaceMorph": {
         "fields": {
-          "m_bClamp": 104,
-          "m_inputList": 80,
-          "m_outputMorph": 56,
-          "m_sAttachmentName": 48,
-          "m_sBoneName": 40
+          "m_bClamp": 96,
+          "m_inputList": 72,
+          "m_outputMorph": 48,
+          "m_sAttachmentName": 40,
+          "m_sBoneName": 32
         },
         "metadata": [
           {
@@ -1459,8 +1459,8 @@
       },
       "CBoneConstraintRbf": {
         "fields": {
-          "m_inputBones": 40,
-          "m_outputBones": 64
+          "m_inputBones": 32,
+          "m_outputBones": 56
         },
         "metadata": [
           {
@@ -1712,6 +1712,7 @@
       },
       "CCycleControlClipUpdateNode": {
         "fields": {
+          "m_bLockWhenWaning": 138,
           "m_duration": 128,
           "m_hSequence": 124,
           "m_paramIndex": 136,
@@ -1728,6 +1729,7 @@
       },
       "CCycleControlUpdateNode": {
         "fields": {
+          "m_bLockWhenWaning": 118,
           "m_paramIndex": 116,
           "m_valueSource": 112
         },
@@ -2833,10 +2835,10 @@
       },
       "CMorphConstraint": {
         "fields": {
-          "m_flMax": 120,
-          "m_flMin": 116,
-          "m_nSlaveChannel": 112,
-          "m_sTargetMorph": 104
+          "m_flMax": 112,
+          "m_flMin": 108,
+          "m_nSlaveChannel": 104,
+          "m_sTargetMorph": 96
         },
         "metadata": [
           {
@@ -3689,9 +3691,9 @@
         ],
         "parent": null
       },
-      "CNmCurrentSyncEventIndexNode__CDefinition": {
+      "CNmCurrentSyncEventNode__CDefinition": {
         "fields": {
-          "m_bOnlyReturnPercentageThrough": 18,
+          "m_infoType": 18,
           "m_nSourceStateNodeIdx": 16
         },
         "metadata": [
@@ -3704,6 +3706,42 @@
       },
       "CNmDurationScaleNode__CDefinition": {
         "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmEntityAttributeEventBase": {
+        "fields": {
+          "m_attributeName": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmEntityAttributeFloatEvent": {
+        "fields": {
+          "m_FloatValue": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmEntityAttributeIntEvent": {
+        "fields": {
+          "m_nIntValue": 56
+        },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
@@ -3740,18 +3778,6 @@
       "CNmFixedWeightBoneMaskNode__CDefinition": {
         "fields": {
           "m_flBoneWeight": 16
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CNmFloatAbsNode__CDefinition": {
-        "fields": {
-          "m_nInputValueNodeIdx": 16
         },
         "metadata": [
           {
@@ -3803,6 +3829,34 @@
         ],
         "parent": null
       },
+      "CNmFloatCurveEvent": {
+        "fields": {
+          "m_ID": 32,
+          "m_curve": 40
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CNmFloatCurveEventNode__CDefinition": {
+        "fields": {
+          "m_eventConditionRules": 32,
+          "m_eventID": 16,
+          "m_flDefaultValue": 28,
+          "m_nDefaultNodeIdx": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CNmFloatCurveNode__CDefinition": {
         "fields": {
           "m_curve": 24,
@@ -3835,10 +3889,11 @@
       "CNmFloatMathNode__CDefinition": {
         "fields": {
           "m_bReturnAbsoluteResult": 20,
+          "m_bReturnNegatedResult": 21,
           "m_flValueB": 24,
           "m_nInputValueNodeIdxA": 16,
           "m_nInputValueNodeIdxB": 18,
-          "m_operator": 21
+          "m_operator": 22
         },
         "metadata": [
           {
@@ -5011,13 +5066,13 @@
           "m_blendWeightEasing": 42,
           "m_boneMaskBlendInTimePercentage": 28,
           "m_flDuration": 24,
+          "m_flTimeOffset": 32,
           "m_nDurationOverrideNodeIdx": 18,
           "m_nTargetStateNodeIdx": 16,
           "m_rootMotionBlend": 43,
           "m_startBoneMaskNodeIdx": 22,
-          "m_syncEventOffset": 32,
-          "m_syncEventOffsetOverrideNodeIdx": 20,
           "m_targetSyncIDNodeIdx": 40,
+          "m_timeOffsetOverrideNodeIdx": 20,
           "m_transitionOptions": 36
         },
         "metadata": [
@@ -6875,8 +6930,8 @@
       },
       "CTiltTwistConstraint": {
         "fields": {
-          "m_nSlaveAxis": 108,
-          "m_nTargetAxis": 104
+          "m_nSlaveAxis": 100,
+          "m_nTargetAxis": 96
         },
         "metadata": [
           {
@@ -6948,7 +7003,7 @@
       },
       "CTwistConstraint": {
         "fields": {
-          "m_bInverse": 104,
+          "m_bInverse": 96,
           "m_qChildBindRotation": 128,
           "m_qParentBindRotation": 112
         },
@@ -8794,6 +8849,15 @@
         },
         "type": "uint32"
       },
+      "CNmCurrentSyncEventNode__InfoType_t": {
+        "alignment": 1,
+        "members": {
+          "IndexAndPercentage": 0,
+          "IndexOnly": 1,
+          "PercentageOnly": 2
+        },
+        "type": "uint8"
+      },
       "CNmEventRelevance_t": {
         "alignment": 4,
         "members": {
@@ -8827,10 +8891,17 @@
       "CNmFloatMathNode__Operator_t": {
         "alignment": 1,
         "members": {
+          "Abs": 5,
           "Add": 0,
+          "Ceiling": 8,
           "Div": 3,
+          "Floor": 7,
+          "FractionalPart": 10,
+          "IntegerPart": 9,
+          "InverseFractionalPart": 11,
           "Mod": 4,
           "Mul": 2,
+          "Negate": 6,
           "Sub": 1
         },
         "type": "uint8"
@@ -8947,7 +9018,9 @@
           "MatchSyncEventID": 5,
           "MatchSyncEventIndex": 4,
           "MatchSyncEventPercentage": 6,
+          "MatchTimeInSeconds": 8,
           "None": 0,
+          "OffsetTimeInSeconds": 9,
           "PreferClosestSyncEventID": 7,
           "Synchronized": 2
         },
@@ -9678,28 +9751,29 @@
           "PF_TYPE_CONTROL_POINT_CHANGE_AGE": 7,
           "PF_TYPE_CONTROL_POINT_COMPONENT": 6,
           "PF_TYPE_CONTROL_POINT_SPEED": 8,
-          "PF_TYPE_COUNT": 26,
+          "PF_TYPE_COUNT": 27,
           "PF_TYPE_ENDCAP_AGE": 5,
           "PF_TYPE_INVALID": -1,
           "PF_TYPE_LITERAL": 0,
           "PF_TYPE_NAMED_VALUE": 1,
-          "PF_TYPE_PARTICLE_AGE": 15,
-          "PF_TYPE_PARTICLE_AGE_NORMALIZED": 16,
+          "PF_TYPE_PARTICLE_AGE": 16,
+          "PF_TYPE_PARTICLE_AGE_NORMALIZED": 17,
           "PF_TYPE_PARTICLE_DETAIL_LEVEL": 9,
-          "PF_TYPE_PARTICLE_FLOAT": 17,
-          "PF_TYPE_PARTICLE_INITIAL_FLOAT": 18,
-          "PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT": 20,
-          "PF_TYPE_PARTICLE_NOISE": 14,
-          "PF_TYPE_PARTICLE_NUMBER": 22,
-          "PF_TYPE_PARTICLE_NUMBER_NORMALIZED": 23,
-          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE": 24,
-          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT": 25,
-          "PF_TYPE_PARTICLE_SPEED": 21,
-          "PF_TYPE_PARTICLE_VECTOR_COMPONENT": 19,
+          "PF_TYPE_PARTICLE_FLOAT": 18,
+          "PF_TYPE_PARTICLE_INITIAL_FLOAT": 19,
+          "PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT": 21,
+          "PF_TYPE_PARTICLE_NOISE": 15,
+          "PF_TYPE_PARTICLE_NUMBER": 23,
+          "PF_TYPE_PARTICLE_NUMBER_NORMALIZED": 24,
+          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE": 25,
+          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT": 26,
+          "PF_TYPE_PARTICLE_SPEED": 22,
+          "PF_TYPE_PARTICLE_VECTOR_COMPONENT": 20,
           "PF_TYPE_RANDOM_BIASED": 3,
           "PF_TYPE_RANDOM_UNIFORM": 2,
-          "PF_TYPE_RENDERER_CAMERA_DISTANCE": 12,
-          "PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT": 13
+          "PF_TYPE_RENDERER_CAMERA_DISTANCE": 13,
+          "PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT": 14,
+          "PF_TYPE_SNAPSHOT_COUNT": 12
         },
         "type": "uint32"
       },
@@ -9806,11 +9880,15 @@
         "members": {
           "ADD": 25,
           "ADD_FLOAT": 50,
+          "ADD_FLOAT_GAMETIME": 58,
+          "ADD_GAMETIME_FLOAT": 57,
           "ADD_INT": 49,
           "ADD_STRING": 51,
           "ADD_VEC2": 52,
           "ADD_VEC3": 53,
-          "ADD_VEC4": 54,
+          "ADD_VEC3WS_VEC3": 54,
+          "ADD_VEC3_VEC3WS": 55,
+          "ADD_VEC4": 56,
           "AND": 34,
           "CELL_INVOKE": 11,
           "CHUNK_LEAP": 7,
@@ -9819,32 +9897,35 @@
           "COPY": 22,
           "DETACH_REGISTER": 16,
           "DIV": 28,
-          "DIV_FLOAT": 62,
+          "DIV_FLOAT": 70,
           "ELEMENT_ACCESS": 38,
-          "ELEMENT_ACCESS_COLOR_RGB": 108,
-          "ELEMENT_ACCESS_VEC2": 105,
-          "ELEMENT_ACCESS_VEC3": 106,
-          "ELEMENT_ACCESS_VEC4": 107,
+          "ELEMENT_ACCESS_COLOR_RGB": 123,
+          "ELEMENT_ACCESS_VEC2": 119,
+          "ELEMENT_ACCESS_VEC3": 120,
+          "ELEMENT_ACCESS_VEC3WS": 121,
+          "ELEMENT_ACCESS_VEC4": 122,
           "EQ": 32,
-          "EQ_ARRAY": 83,
-          "EQ_BOOL": 69,
-          "EQ_COLOR_RGB": 82,
-          "EQ_EHANDLE": 78,
-          "EQ_ENTITY_NAME": 76,
-          "EQ_FLOAT": 71,
-          "EQ_INT": 70,
-          "EQ_OPAQUE_HANDLE": 80,
-          "EQ_PANEL_HANDLE": 79,
-          "EQ_SCHEMA_ENUM": 77,
-          "EQ_STRING": 75,
-          "EQ_TEST_HANDLE": 81,
-          "EQ_VEC2": 72,
-          "EQ_VEC3": 73,
-          "EQ_VEC4": 74,
+          "EQ_ARRAY": 94,
+          "EQ_BOOL": 79,
+          "EQ_COLOR_RGB": 93,
+          "EQ_EHANDLE": 89,
+          "EQ_ENTITY_NAME": 87,
+          "EQ_FLOAT": 81,
+          "EQ_GAMETIME": 95,
+          "EQ_INT": 80,
+          "EQ_OPAQUE_HANDLE": 91,
+          "EQ_PANEL_HANDLE": 90,
+          "EQ_SCHEMA_ENUM": 88,
+          "EQ_STRING": 86,
+          "EQ_TEST_HANDLE": 92,
+          "EQ_VEC2": 82,
+          "EQ_VEC3": 83,
+          "EQ_VEC3WS": 84,
+          "EQ_VEC4": 85,
           "GET_ARRAY_ELEMENT": 20,
           "GET_BLACKBOARD_REFERENCE": 41,
           "GET_CONST": 19,
-          "GET_CONST_INLINE_STORAGE": 109,
+          "GET_CONST_INLINE_STORAGE": 124,
           "GET_DOMAIN_VALUE": 21,
           "GET_VAR": 14,
           "GET_VAR_DETACH": 15,
@@ -9856,16 +9937,18 @@
           "LIBRARY_INVOKE": 12,
           "LT": 30,
           "LTE": 31,
-          "LTE_FLOAT": 68,
-          "LTE_INT": 67,
-          "LT_FLOAT": 66,
-          "LT_INT": 65,
+          "LTE_FLOAT": 77,
+          "LTE_GAMETIME": 78,
+          "LTE_INT": 76,
+          "LT_FLOAT": 74,
+          "LT_GAMETIME": 75,
+          "LT_INT": 73,
           "MOD": 29,
-          "MOD_FLOAT": 64,
-          "MOD_INT": 63,
+          "MOD_FLOAT": 72,
+          "MOD_INT": 71,
           "MUL": 27,
-          "MUL_FLOAT": 61,
-          "MUL_INT": 60,
+          "MUL_FLOAT": 69,
+          "MUL_INT": 68,
           "NE": 33,
           "NEGATE": 24,
           "NEGATE_FLOAT": 45,
@@ -9873,21 +9956,23 @@
           "NEGATE_VEC2": 46,
           "NEGATE_VEC3": 47,
           "NEGATE_VEC4": 48,
-          "NE_ARRAY": 98,
-          "NE_BOOL": 84,
-          "NE_COLOR_RGB": 97,
-          "NE_EHANDLE": 93,
-          "NE_ENTITY_NAME": 91,
-          "NE_FLOAT": 86,
-          "NE_INT": 85,
-          "NE_OPAQUE_HANDLE": 95,
-          "NE_PANEL_HANDLE": 94,
-          "NE_SCHEMA_ENUM": 92,
-          "NE_STRING": 90,
-          "NE_TEST_HANDLE": 96,
-          "NE_VEC2": 87,
-          "NE_VEC3": 88,
-          "NE_VEC4": 89,
+          "NE_ARRAY": 111,
+          "NE_BOOL": 96,
+          "NE_COLOR_RGB": 110,
+          "NE_EHANDLE": 106,
+          "NE_ENTITY_NAME": 104,
+          "NE_FLOAT": 98,
+          "NE_GAMETIME": 112,
+          "NE_INT": 97,
+          "NE_OPAQUE_HANDLE": 108,
+          "NE_PANEL_HANDLE": 107,
+          "NE_SCHEMA_ENUM": 105,
+          "NE_STRING": 103,
+          "NE_TEST_HANDLE": 109,
+          "NE_VEC2": 99,
+          "NE_VEC3": 100,
+          "NE_VEC3WS": 101,
+          "NE_VEC4": 102,
           "NOP": 4,
           "NOT": 23,
           "OR": 35,
@@ -9898,22 +9983,26 @@
           "RETURN_VOID": 2,
           "SCALE": 36,
           "SCALE_INV": 37,
-          "SCALE_INV_VEC2": 103,
-          "SCALE_INV_VEC3": 102,
-          "SCALE_INV_VEC4": 104,
-          "SCALE_VEC2": 100,
-          "SCALE_VEC3": 99,
-          "SCALE_VEC4": 101,
+          "SCALE_INV_VEC2": 117,
+          "SCALE_INV_VEC3": 116,
+          "SCALE_INV_VEC4": 118,
+          "SCALE_VEC2": 114,
+          "SCALE_VEC3": 113,
+          "SCALE_VEC4": 115,
           "SET_BLACKBOARD_REFERENCE": 42,
           "SET_VAR": 13,
           "SET_VAR_ARRAY_ELEMENT_1D": 17,
           "SET_VAR_OBSERVABLE": 18,
           "SUB": 26,
-          "SUB_FLOAT": 56,
-          "SUB_INT": 55,
-          "SUB_VEC2": 57,
-          "SUB_VEC3": 58,
-          "SUB_VEC4": 59
+          "SUB_FLOAT": 60,
+          "SUB_GAMETIME": 67,
+          "SUB_GAMETIME_FLOAT": 66,
+          "SUB_INT": 59,
+          "SUB_VEC2": 61,
+          "SUB_VEC3": 62,
+          "SUB_VEC3WS_VEC3": 63,
+          "SUB_VEC3WS_VEC3WS": 64,
+          "SUB_VEC4": 65
         },
         "type": "uint16"
       },

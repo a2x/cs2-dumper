@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 #pragma once
 
@@ -96,8 +96,8 @@ namespace cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             namespace CTestDomainDerived_Cursor {
-                constexpr std::ptrdiff_t m_nCursorValueA = 0xD8; // int32
-                constexpr std::ptrdiff_t m_nCursorValueB = 0xDC; // int32
+                constexpr std::ptrdiff_t m_nCursorValueA = 0xD0; // int32
+                constexpr std::ptrdiff_t m_nCursorValueB = 0xD4; // int32
             }
             // Parent: None
             // Field count: 2
@@ -124,6 +124,20 @@ namespace cs2_dumper {
             // MPulseLibraryBindings
             // MPropertyDescription
             namespace CPulseTestFuncs_LibraryA {
+            }
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MCellForDomain
+            // MPulseCellMethodBindings
+            // MPulseCellOutflowHookInfo
+            // MPulseEditorHeaderIcon
+            // MPropertyFriendlyName
+            namespace CPulseCell_WaitForObservable {
+                constexpr std::ptrdiff_t m_Condition = 0x48; // PulseObservableBoolExpression_t
+                constexpr std::ptrdiff_t m_OnTrue = 0xC0; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -302,10 +316,10 @@ namespace cs2_dumper {
             // Metadata:
             // MPulseLibraryBindings
             namespace CPulseTurtleGraphicsCursor {
-                constexpr std::ptrdiff_t m_Color = 0xD8; // Color
-                constexpr std::ptrdiff_t m_vPos = 0xDC; // Vector2D
-                constexpr std::ptrdiff_t m_flHeadingDeg = 0xE4; // float32
-                constexpr std::ptrdiff_t m_bPenUp = 0xE8; // bool
+                constexpr std::ptrdiff_t m_Color = 0xD0; // Color
+                constexpr std::ptrdiff_t m_vPos = 0xD4; // Vector2D
+                constexpr std::ptrdiff_t m_flHeadingDeg = 0xDC; // float32
+                constexpr std::ptrdiff_t m_bPenUp = 0xE0; // bool
             }
             // Parent: None
             // Field count: 2
@@ -684,13 +698,6 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace PulseSelectorOutflowList_t {
                 constexpr std::ptrdiff_t m_Outflows = 0x0; // CUtlVector<OutflowWithRequirements_t>
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPulseTypeQueriesForScopeSingleton
-            namespace CPulseRuntimeLibModuleLocalTypeQueryRegistration {
             }
             // Parent: None
             // Field count: 0

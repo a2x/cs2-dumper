@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 #pragma once
 
@@ -53,12 +53,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_field = 0x0; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 1
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSteamAudioBakedPathingData {
-                constexpr std::ptrdiff_t m_probes = 0x0; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_nBands = 0x0; // int32
+                constexpr std::ptrdiff_t m_probes = 0x8; // CSteamAudioProbeData
             }
             // Parent: None
             // Field count: 4
@@ -110,26 +111,27 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecReflectionRatio = 0x48; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSteamAudioBakedReverbData {
-                constexpr std::ptrdiff_t m_probes = 0x0; // CSteamAudioProbeData
-                constexpr std::ptrdiff_t m_reverbSettings = 0x8; // SteamAudioReverbSettings_t
-                constexpr std::ptrdiff_t m_reverbClusteringSettings = 0x18; // SteamAudioReverbClusteringSettings_t
-                constexpr std::ptrdiff_t m_reverbCompressionSettings = 0x24; // SteamAudioReverbCompressionSettings_t
-                constexpr std::ptrdiff_t m_clusteredProbes = 0x28; // CSteamAudioProbeData
-                constexpr std::ptrdiff_t m_vecClusterForProbe = 0x30; // CUtlVector<int16>
-                constexpr std::ptrdiff_t m_compressedData = 0x48; // CSteamAudioCompressedReverb
-                constexpr std::ptrdiff_t m_compressedClusteredData = 0xA8; // CSteamAudioCompressedReverb
-                constexpr std::ptrdiff_t m_vecMovableReverbs = 0x108; // CUtlVector<CSteamAudioBakedReverbData>
-                constexpr std::ptrdiff_t m_vecMovableReverbInitialTransforms = 0x120; // CUtlVector<matrix3x4_t>
-                constexpr std::ptrdiff_t m_vecMovableReverbAABBs = 0x138; // CUtlVector<AABB_t>
-                constexpr std::ptrdiff_t m_vecMovableReverbKeys = 0x150; // CUtlVector<CUtlString>
-                constexpr std::ptrdiff_t m_vecMovableReverbKeyTokens = 0x168; // CUtlVector<CUtlStringToken>
-                constexpr std::ptrdiff_t m_vecMovableReverbTransforms = 0x180; // CUtlVector<matrix3x4_t>
-                constexpr std::ptrdiff_t m_vecMovableReverbOBBs = 0x198; // CUtlVector<OBB_t>
+                constexpr std::ptrdiff_t m_nBands = 0x0; // int32
+                constexpr std::ptrdiff_t m_probes = 0x8; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_reverbSettings = 0x10; // SteamAudioReverbSettings_t
+                constexpr std::ptrdiff_t m_reverbClusteringSettings = 0x20; // SteamAudioReverbClusteringSettings_t
+                constexpr std::ptrdiff_t m_reverbCompressionSettings = 0x2C; // SteamAudioReverbCompressionSettings_t
+                constexpr std::ptrdiff_t m_clusteredProbes = 0x30; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_vecClusterForProbe = 0x38; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_compressedData = 0x50; // CSteamAudioCompressedReverb
+                constexpr std::ptrdiff_t m_compressedClusteredData = 0xB0; // CSteamAudioCompressedReverb
+                constexpr std::ptrdiff_t m_vecMovableReverbs = 0x110; // CUtlVector<CSteamAudioBakedReverbData>
+                constexpr std::ptrdiff_t m_vecMovableReverbInitialTransforms = 0x128; // CUtlVector<matrix3x4_t>
+                constexpr std::ptrdiff_t m_vecMovableReverbAABBs = 0x140; // CUtlVector<AABB_t>
+                constexpr std::ptrdiff_t m_vecMovableReverbKeys = 0x158; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_vecMovableReverbKeyTokens = 0x170; // CUtlVector<CUtlStringToken>
+                constexpr std::ptrdiff_t m_vecMovableReverbTransforms = 0x188; // CUtlVector<matrix3x4_t>
+                constexpr std::ptrdiff_t m_vecMovableReverbOBBs = 0x1A0; // CUtlVector<OBB_t>
             }
             // Parent: None
             // Field count: 4

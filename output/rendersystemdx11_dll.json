@@ -13,6 +13,13 @@
         "metadata": [],
         "parent": null
       },
+      "SheetSequenceIntegerId_t": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "VsInputSignatureElement_t": {
         "fields": {
           "m_nD3DSemanticIndex": 192,
@@ -34,14 +41,14 @@
     },
     "enums": {
       "InputLayoutVariation_t": {
-        "alignment": 4,
+        "alignment": 1,
         "members": {
           "INPUT_LAYOUT_VARIATION_DEFAULT": 0,
           "INPUT_LAYOUT_VARIATION_MAX": 3,
           "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID": 1,
           "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID": 2
         },
-        "type": "uint32"
+        "type": "uint8"
       },
       "RenderBufferFlags_t": {
         "alignment": 4,
@@ -55,6 +62,7 @@
           "RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS": 256,
           "RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING": 8192,
           "RENDER_BUFFER_USAGE_INDEX_BUFFER": 2,
+          "RENDER_BUFFER_USAGE_NONE": 0,
           "RENDER_BUFFER_USAGE_SHADER_RESOURCE": 4,
           "RENDER_BUFFER_USAGE_UNORDERED_ACCESS": 8,
           "RENDER_BUFFER_USAGE_VERTEX_BUFFER": 1

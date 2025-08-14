@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: pulse_system.dll
@@ -91,8 +91,8 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MPulseLibraryBindings
         public static class CTestDomainDerived_Cursor {
-            public const nint m_nCursorValueA = 0xD8; // int32
-            public const nint m_nCursorValueB = 0xDC; // int32
+            public const nint m_nCursorValueA = 0xD0; // int32
+            public const nint m_nCursorValueB = 0xD4; // int32
         }
         // Parent: None
         // Field count: 2
@@ -119,6 +119,20 @@ namespace CS2Dumper.Schemas {
         // MPulseLibraryBindings
         // MPropertyDescription
         public static class CPulseTestFuncs_LibraryA {
+        }
+        // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MCellForDomain
+        // MPulseCellMethodBindings
+        // MPulseCellOutflowHookInfo
+        // MPulseEditorHeaderIcon
+        // MPropertyFriendlyName
+        public static class CPulseCell_WaitForObservable {
+            public const nint m_Condition = 0x48; // PulseObservableBoolExpression_t
+            public const nint m_OnTrue = 0xC0; // CPulse_ResumePoint
         }
         // Parent: None
         // Field count: 4
@@ -297,10 +311,10 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MPulseLibraryBindings
         public static class CPulseTurtleGraphicsCursor {
-            public const nint m_Color = 0xD8; // Color
-            public const nint m_vPos = 0xDC; // Vector2D
-            public const nint m_flHeadingDeg = 0xE4; // float32
-            public const nint m_bPenUp = 0xE8; // bool
+            public const nint m_Color = 0xD0; // Color
+            public const nint m_vPos = 0xD4; // Vector2D
+            public const nint m_flHeadingDeg = 0xDC; // float32
+            public const nint m_bPenUp = 0xE0; // bool
         }
         // Parent: None
         // Field count: 2
@@ -679,13 +693,6 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class PulseSelectorOutflowList_t {
             public const nint m_Outflows = 0x0; // CUtlVector<OutflowWithRequirements_t>
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseTypeQueriesForScopeSingleton
-        public static class CPulseRuntimeLibModuleLocalTypeQueryRegistration {
         }
         // Parent: None
         // Field count: 0

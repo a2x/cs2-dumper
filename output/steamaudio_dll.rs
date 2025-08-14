@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -51,12 +51,13 @@ pub mod cs2_dumper {
                 pub const m_field: usize = 0x0; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 1
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSteamAudioBakedPathingData {
-                pub const m_probes: usize = 0x0; // CSteamAudioProbeData
+                pub const m_nBands: usize = 0x0; // int32
+                pub const m_probes: usize = 0x8; // CSteamAudioProbeData
             }
             // Parent: None
             // Field count: 4
@@ -108,26 +109,27 @@ pub mod cs2_dumper {
                 pub const m_vecReflectionRatio: usize = 0x48; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSteamAudioBakedReverbData {
-                pub const m_probes: usize = 0x0; // CSteamAudioProbeData
-                pub const m_reverbSettings: usize = 0x8; // SteamAudioReverbSettings_t
-                pub const m_reverbClusteringSettings: usize = 0x18; // SteamAudioReverbClusteringSettings_t
-                pub const m_reverbCompressionSettings: usize = 0x24; // SteamAudioReverbCompressionSettings_t
-                pub const m_clusteredProbes: usize = 0x28; // CSteamAudioProbeData
-                pub const m_vecClusterForProbe: usize = 0x30; // CUtlVector<int16>
-                pub const m_compressedData: usize = 0x48; // CSteamAudioCompressedReverb
-                pub const m_compressedClusteredData: usize = 0xA8; // CSteamAudioCompressedReverb
-                pub const m_vecMovableReverbs: usize = 0x108; // CUtlVector<CSteamAudioBakedReverbData>
-                pub const m_vecMovableReverbInitialTransforms: usize = 0x120; // CUtlVector<matrix3x4_t>
-                pub const m_vecMovableReverbAABBs: usize = 0x138; // CUtlVector<AABB_t>
-                pub const m_vecMovableReverbKeys: usize = 0x150; // CUtlVector<CUtlString>
-                pub const m_vecMovableReverbKeyTokens: usize = 0x168; // CUtlVector<CUtlStringToken>
-                pub const m_vecMovableReverbTransforms: usize = 0x180; // CUtlVector<matrix3x4_t>
-                pub const m_vecMovableReverbOBBs: usize = 0x198; // CUtlVector<OBB_t>
+                pub const m_nBands: usize = 0x0; // int32
+                pub const m_probes: usize = 0x8; // CSteamAudioProbeData
+                pub const m_reverbSettings: usize = 0x10; // SteamAudioReverbSettings_t
+                pub const m_reverbClusteringSettings: usize = 0x20; // SteamAudioReverbClusteringSettings_t
+                pub const m_reverbCompressionSettings: usize = 0x2C; // SteamAudioReverbCompressionSettings_t
+                pub const m_clusteredProbes: usize = 0x30; // CSteamAudioProbeData
+                pub const m_vecClusterForProbe: usize = 0x38; // CUtlVector<int16>
+                pub const m_compressedData: usize = 0x50; // CSteamAudioCompressedReverb
+                pub const m_compressedClusteredData: usize = 0xB0; // CSteamAudioCompressedReverb
+                pub const m_vecMovableReverbs: usize = 0x110; // CUtlVector<CSteamAudioBakedReverbData>
+                pub const m_vecMovableReverbInitialTransforms: usize = 0x128; // CUtlVector<matrix3x4_t>
+                pub const m_vecMovableReverbAABBs: usize = 0x140; // CUtlVector<AABB_t>
+                pub const m_vecMovableReverbKeys: usize = 0x158; // CUtlVector<CUtlString>
+                pub const m_vecMovableReverbKeyTokens: usize = 0x170; // CUtlVector<CUtlStringToken>
+                pub const m_vecMovableReverbTransforms: usize = 0x188; // CUtlVector<matrix3x4_t>
+                pub const m_vecMovableReverbOBBs: usize = 0x1A0; // CUtlVector<OBB_t>
             }
             // Parent: None
             // Field count: 4

@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: engine2.dll
     // Class count: 48
-    // Enum count: 4
+    // Enum count: 2
     public static class Engine2Dll {
         // Alignment: 4
         // Member count: 3
@@ -20,22 +20,6 @@ namespace CS2Dumper.Schemas {
             ENTITY_IO_TARGET_ENTITYNAME = 0x2,
             ENTITY_IO_TARGET_EHANDLE = 0x6,
             ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
-        }
-        // Alignment: 4
-        // Member count: 3
-        public enum SpawnDebugOverrideState_t : uint {
-            SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
-            SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
-            SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
-        }
-        // Alignment: 4
-        // Member count: 5
-        public enum SpawnDebugRestrictionOverrideState_t : uint {
-            SPAWN_DEBUG_RESTRICT_NONE = 0x0,
-            SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
-            SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
-            SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
-            SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
         }
         // Parent: None
         // Field count: 0

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: rendersystemdx11.dll
-        // Class count: 3
+        // Class count: 4
         // Enum count: 5
         namespace rendersystemdx11_dll {
             // Alignment: 4
@@ -30,8 +30,9 @@ namespace cs2_dumper {
                 RENDER_PRIM_TYPE_COUNT = 0xD
             };
             // Alignment: 4
-            // Member count: 12
+            // Member count: 13
             enum class RenderBufferFlags_t : uint32_t {
+                RENDER_BUFFER_USAGE_NONE = 0x0,
                 RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
                 RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
                 RENDER_BUFFER_USAGE_SHADER_RESOURCE = 0x4,
@@ -57,9 +58,9 @@ namespace cs2_dumper {
                 RENDER_MULTISAMPLE_16X = 0x5,
                 RENDER_MULTISAMPLE_TYPE_COUNT = 0x6
             };
-            // Alignment: 4
+            // Alignment: 1
             // Member count: 4
-            enum class InputLayoutVariation_t : uint32_t {
+            enum class InputLayoutVariation_t : uint8_t {
                 INPUT_LAYOUT_VARIATION_DEFAULT = 0x0,
                 INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x1,
                 INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
@@ -72,6 +73,11 @@ namespace cs2_dumper {
                 RENDER_SLOT_PER_VERTEX = 0x0,
                 RENDER_SLOT_PER_INSTANCE = 0x1
             };
+            // Parent: None
+            // Field count: 1
+            namespace SheetSequenceIntegerId_t {
+                constexpr std::ptrdiff_t m_Value = 0x0; // uint32
+            }
             // Parent: None
             // Field count: 4
             namespace VsInputSignatureElement_t {

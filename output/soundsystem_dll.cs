@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
@@ -13,7 +13,7 @@ namespace CS2Dumper.Schemas {
             RMS = 0x1
         }
         // Alignment: 4
-        // Member count: 38
+        // Member count: 39
         public enum VMixGraphCommandID_t : uint {
             CMD_INVALID = unchecked((uint)-1),
             CMD_CONTROL_INPUT_STORE = 0x1,
@@ -23,36 +23,37 @@ namespace CS2Dumper.Schemas {
             CMD_CONTROL_OUTPUT_STORE = 0x5,
             CMD_CONTROL_EVALUATE_CURVE = 0x6,
             CMD_CONTROL_COPY = 0x7,
-            CMD_CONTROL_REMAP_LINEAR = 0x8,
-            CMD_CONTROL_REMAP_SINE = 0x9,
-            CMD_CONTROL_REMAP_LOGLINEAR = 0xA,
-            CMD_CONTROL_MAX = 0xB,
-            CMD_CONTROL_RESET_TIMER = 0xC,
-            CMD_CONTROL_INCREMENT_TIMER = 0xD,
-            CMD_CONTROL_EVAL_ENVELOPE = 0xE,
-            CMD_CONTROL_SINE_BLEND = 0xF,
-            CMD_PROCESSOR_SET_CONTROL_VALUE = 0x10,
-            CMD_PROCESSOR_SET_NAME_INPUT = 0x11,
-            CMD_PROCESSOR_SET_CONTROL_ARRAYVALUE = 0x12,
-            CMD_PROCESSOR_STORE_CONTROL_VALUE = 0x13,
-            CMD_PROCESSOR_SET_VSND_VALUE = 0x14,
-            CMD_SUBMIX_PROCESS = 0x15,
-            CMD_SUBMIX_GENERATE = 0x16,
-            CMD_SUBMIX_GENERATE_SIDECHAIN = 0x17,
-            CMD_SUBMIX_DEBUG = 0x18,
-            CMD_SUBMIX_MIX2x1 = 0x19,
-            CMD_SUBMIX_OUTPUT = 0x1A,
-            CMD_SUBMIX_OUTPUTx2 = 0x1B,
-            CMD_SUBMIX_COPY = 0x1C,
-            CMD_SUBMIX_ACCUMULATE = 0x1D,
-            CMD_SUBMIX_METER = 0x1E,
-            CMD_SUBMIX_METER_SPECTRUM = 0x1F,
-            CMD_IMPULSERESPONSE_INPUT_STORE = 0x20,
-            CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x21,
-            CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x22,
-            CMD_IMPULSERESPONSE_RESET = 0x23,
-            CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x24,
-            CMD_IMPULSERESPONSE_DELAY = 0x25
+            CMD_CONTROL_COND_COPY_IF_NEGATIVE = 0x8,
+            CMD_CONTROL_REMAP_LINEAR = 0x9,
+            CMD_CONTROL_REMAP_SINE = 0xA,
+            CMD_CONTROL_REMAP_LOGLINEAR = 0xB,
+            CMD_CONTROL_MAX = 0xC,
+            CMD_CONTROL_RESET_TIMER = 0xD,
+            CMD_CONTROL_INCREMENT_TIMER = 0xE,
+            CMD_CONTROL_EVAL_ENVELOPE = 0xF,
+            CMD_CONTROL_SINE_BLEND = 0x10,
+            CMD_PROCESSOR_SET_CONTROL_VALUE = 0x11,
+            CMD_PROCESSOR_SET_NAME_INPUT = 0x12,
+            CMD_PROCESSOR_SET_CONTROL_ARRAYVALUE = 0x13,
+            CMD_PROCESSOR_STORE_CONTROL_VALUE = 0x14,
+            CMD_PROCESSOR_SET_VSND_VALUE = 0x15,
+            CMD_SUBMIX_PROCESS = 0x16,
+            CMD_SUBMIX_GENERATE = 0x17,
+            CMD_SUBMIX_GENERATE_SIDECHAIN = 0x18,
+            CMD_SUBMIX_DEBUG = 0x19,
+            CMD_SUBMIX_MIX2x1 = 0x1A,
+            CMD_SUBMIX_OUTPUT = 0x1B,
+            CMD_SUBMIX_OUTPUTx2 = 0x1C,
+            CMD_SUBMIX_COPY = 0x1D,
+            CMD_SUBMIX_ACCUMULATE = 0x1E,
+            CMD_SUBMIX_METER = 0x1F,
+            CMD_SUBMIX_METER_SPECTRUM = 0x20,
+            CMD_IMPULSERESPONSE_INPUT_STORE = 0x21,
+            CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x22,
+            CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x23,
+            CMD_IMPULSERESPONSE_RESET = 0x24,
+            CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x25,
+            CMD_IMPULSERESPONSE_DELAY = 0x26
         }
         // Alignment: 1
         // Member count: 5

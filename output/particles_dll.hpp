@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:39:40.337154600 UTC
 
 #pragma once
 
@@ -8,8 +8,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: particles.dll
-        // Class count: 430
-        // Enum count: 66
+        // Class count: 432
+        // Enum count: 68
         namespace particles_dll {
             // Alignment: 4
             // Member count: 6
@@ -95,6 +95,17 @@ namespace cs2_dumper {
                 PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_LOW = 0x3,
                 PARTICLE_POST_PROCESS_PRIORITY_GAMEPLAY_STATE_HIGH = 0x4,
                 PARTICLE_POST_PROCESS_PRIORITY_GLOBAL_UI = 0x5
+            };
+            // Alignment: 4
+            // Member count: 7
+            enum class ParticleCollisionGroup_t : uint32_t {
+                PARTICLE_COLLISION_GROUP_DEFAULT = 0x4,
+                PARTICLE_COLLISION_GROUP_DEBRIS = 0x5,
+                PARTICLE_COLLISION_GROUP_INTERACTIVE = 0x7,
+                PARTICLE_COLLISION_GROUP_PLAYER = 0x8,
+                PARTICLE_COLLISION_GROUP_VEHICLE = 0xA,
+                PARTICLE_COLLISION_GROUP_NPC = 0xC,
+                PARTICLE_COLLISION_GROUP_PROPS = 0x18
             };
             // Alignment: 4
             // Member count: 5
@@ -581,6 +592,20 @@ namespace cs2_dumper {
                 PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
                 PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
             };
+            // Alignment: 8
+            // Member count: 10
+            enum class ParticleCollisionMask_t : uint64_t {
+                PARTICLE_MASK_ALL = 0xFFFFFFFFFFFFFFFF,
+                PARTICLE_MASK_SOLID = 0xC3001,
+                PARTICLE_MASK_WATER = 0x18000,
+                PARTICLE_MASK_SOLID_WATER = 0xDB001,
+                PARTICLE_MASK_SHOT = 0x1C1003,
+                PARTICLE_MASK_SHOT_BRUSHONLY = 0x101001,
+                PARTICLE_MASK_SHOT_HULL = 0x1C3001,
+                PARTICLE_MASK_OPAQUE = 0x80,
+                PARTICLE_MASK_DEFAULTPLAYERSOLID = 0xC3011,
+                PARTICLE_MASK_NPCSOLID = 0xC3021
+            };
             // Alignment: 4
             // Member count: 2
             enum class TextureRepetitionMode_t : uint32_t {
@@ -705,36 +730,36 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderRopes {
-                constexpr std::ptrdiff_t m_bEnableFadingAndClamping = 0x2C10; // bool
-                constexpr std::ptrdiff_t m_flMinSize = 0x2C14; // float32
-                constexpr std::ptrdiff_t m_flMaxSize = 0x2C18; // float32
-                constexpr std::ptrdiff_t m_flStartFadeSize = 0x2C1C; // float32
-                constexpr std::ptrdiff_t m_flEndFadeSize = 0x2C20; // float32
-                constexpr std::ptrdiff_t m_flStartFadeDot = 0x2C24; // float32
-                constexpr std::ptrdiff_t m_flEndFadeDot = 0x2C28; // float32
-                constexpr std::ptrdiff_t m_flRadiusTaper = 0x2C2C; // float32
-                constexpr std::ptrdiff_t m_nMinTesselation = 0x2C30; // int32
-                constexpr std::ptrdiff_t m_nMaxTesselation = 0x2C34; // int32
-                constexpr std::ptrdiff_t m_flTessScale = 0x2C38; // float32
-                constexpr std::ptrdiff_t m_flTextureVWorldSize = 0x2C40; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flTextureVScrollRate = 0x2DA0; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flTextureVOffset = 0x2F00; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_nTextureVParamsCP = 0x3060; // int32
-                constexpr std::ptrdiff_t m_bClampV = 0x3064; // bool
-                constexpr std::ptrdiff_t m_nScaleCP1 = 0x3068; // int32
-                constexpr std::ptrdiff_t m_nScaleCP2 = 0x306C; // int32
-                constexpr std::ptrdiff_t m_flScaleVSizeByControlPointDistance = 0x3070; // float32
-                constexpr std::ptrdiff_t m_flScaleVScrollByControlPointDistance = 0x3074; // float32
-                constexpr std::ptrdiff_t m_flScaleVOffsetByControlPointDistance = 0x3078; // float32
-                constexpr std::ptrdiff_t m_bUseScalarForTextureCoordinate = 0x307D; // bool
-                constexpr std::ptrdiff_t m_nScalarFieldForTextureCoordinate = 0x3080; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_flScalarAttributeTextureCoordScale = 0x3084; // float32
-                constexpr std::ptrdiff_t m_bReverseOrder = 0x3088; // bool
-                constexpr std::ptrdiff_t m_bClosedLoop = 0x3089; // bool
-                constexpr std::ptrdiff_t m_nOrientationType = 0x308C; // ParticleOrientationChoiceList_t
-                constexpr std::ptrdiff_t m_nVectorFieldForOrientation = 0x3090; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_bDrawAsOpaque = 0x3094; // bool
-                constexpr std::ptrdiff_t m_bGenerateNormals = 0x3095; // bool
+                constexpr std::ptrdiff_t m_bEnableFadingAndClamping = 0x2C18; // bool
+                constexpr std::ptrdiff_t m_flMinSize = 0x2C1C; // float32
+                constexpr std::ptrdiff_t m_flMaxSize = 0x2C20; // float32
+                constexpr std::ptrdiff_t m_flStartFadeSize = 0x2C24; // float32
+                constexpr std::ptrdiff_t m_flEndFadeSize = 0x2C28; // float32
+                constexpr std::ptrdiff_t m_flStartFadeDot = 0x2C2C; // float32
+                constexpr std::ptrdiff_t m_flEndFadeDot = 0x2C30; // float32
+                constexpr std::ptrdiff_t m_flRadiusTaper = 0x2C34; // float32
+                constexpr std::ptrdiff_t m_nMinTesselation = 0x2C38; // int32
+                constexpr std::ptrdiff_t m_nMaxTesselation = 0x2C3C; // int32
+                constexpr std::ptrdiff_t m_flTessScale = 0x2C40; // float32
+                constexpr std::ptrdiff_t m_flTextureVWorldSize = 0x2C48; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flTextureVScrollRate = 0x2DA8; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flTextureVOffset = 0x2F08; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_nTextureVParamsCP = 0x3068; // int32
+                constexpr std::ptrdiff_t m_bClampV = 0x306C; // bool
+                constexpr std::ptrdiff_t m_nScaleCP1 = 0x3070; // int32
+                constexpr std::ptrdiff_t m_nScaleCP2 = 0x3074; // int32
+                constexpr std::ptrdiff_t m_flScaleVSizeByControlPointDistance = 0x3078; // float32
+                constexpr std::ptrdiff_t m_flScaleVScrollByControlPointDistance = 0x307C; // float32
+                constexpr std::ptrdiff_t m_flScaleVOffsetByControlPointDistance = 0x3080; // float32
+                constexpr std::ptrdiff_t m_bUseScalarForTextureCoordinate = 0x3085; // bool
+                constexpr std::ptrdiff_t m_nScalarFieldForTextureCoordinate = 0x3088; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_flScalarAttributeTextureCoordScale = 0x308C; // float32
+                constexpr std::ptrdiff_t m_bReverseOrder = 0x3090; // bool
+                constexpr std::ptrdiff_t m_bClosedLoop = 0x3091; // bool
+                constexpr std::ptrdiff_t m_nOrientationType = 0x3094; // ParticleOrientationChoiceList_t
+                constexpr std::ptrdiff_t m_nVectorFieldForOrientation = 0x3098; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_bDrawAsOpaque = 0x309C; // bool
+                constexpr std::ptrdiff_t m_bGenerateNormals = 0x309D; // bool
             }
             // Parent: None
             // Field count: 19
@@ -1192,26 +1217,26 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderTrails {
-                constexpr std::ptrdiff_t m_bEnableFadingAndClamping = 0x2EE8; // bool
-                constexpr std::ptrdiff_t m_flStartFadeDot = 0x2EEC; // float32
-                constexpr std::ptrdiff_t m_flEndFadeDot = 0x2EF0; // float32
-                constexpr std::ptrdiff_t m_nPrevPntSource = 0x2EF4; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_flMaxLength = 0x2EF8; // float32
-                constexpr std::ptrdiff_t m_flMinLength = 0x2EFC; // float32
-                constexpr std::ptrdiff_t m_bIgnoreDT = 0x2F00; // bool
-                constexpr std::ptrdiff_t m_flConstrainRadiusToLengthRatio = 0x2F04; // float32
-                constexpr std::ptrdiff_t m_flLengthScale = 0x2F08; // float32
-                constexpr std::ptrdiff_t m_flLengthFadeInTime = 0x2F0C; // float32
-                constexpr std::ptrdiff_t m_flRadiusHeadTaper = 0x2F10; // CPerParticleFloatInput
-                constexpr std::ptrdiff_t m_vecHeadColorScale = 0x3070; // CParticleCollectionVecInput
-                constexpr std::ptrdiff_t m_flHeadAlphaScale = 0x36E8; // CPerParticleFloatInput
-                constexpr std::ptrdiff_t m_flRadiusTaper = 0x3848; // CPerParticleFloatInput
-                constexpr std::ptrdiff_t m_vecTailColorScale = 0x39A8; // CParticleCollectionVecInput
-                constexpr std::ptrdiff_t m_flTailAlphaScale = 0x4020; // CPerParticleFloatInput
-                constexpr std::ptrdiff_t m_nHorizCropField = 0x4180; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_nVertCropField = 0x4184; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_flForwardShift = 0x4188; // float32
-                constexpr std::ptrdiff_t m_bFlipUVBasedOnPitchYaw = 0x418C; // bool
+                constexpr std::ptrdiff_t m_bEnableFadingAndClamping = 0x2EF0; // bool
+                constexpr std::ptrdiff_t m_flStartFadeDot = 0x2EF4; // float32
+                constexpr std::ptrdiff_t m_flEndFadeDot = 0x2EF8; // float32
+                constexpr std::ptrdiff_t m_nPrevPntSource = 0x2EFC; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_flMaxLength = 0x2F00; // float32
+                constexpr std::ptrdiff_t m_flMinLength = 0x2F04; // float32
+                constexpr std::ptrdiff_t m_bIgnoreDT = 0x2F08; // bool
+                constexpr std::ptrdiff_t m_flConstrainRadiusToLengthRatio = 0x2F0C; // float32
+                constexpr std::ptrdiff_t m_flLengthScale = 0x2F10; // float32
+                constexpr std::ptrdiff_t m_flLengthFadeInTime = 0x2F14; // float32
+                constexpr std::ptrdiff_t m_flRadiusHeadTaper = 0x2F18; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_vecHeadColorScale = 0x3078; // CParticleCollectionVecInput
+                constexpr std::ptrdiff_t m_flHeadAlphaScale = 0x36F0; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flRadiusTaper = 0x3850; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_vecTailColorScale = 0x39B0; // CParticleCollectionVecInput
+                constexpr std::ptrdiff_t m_flTailAlphaScale = 0x4028; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_nHorizCropField = 0x4188; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_nVertCropField = 0x418C; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_flForwardShift = 0x4190; // float32
+                constexpr std::ptrdiff_t m_bFlipUVBasedOnPitchYaw = 0x4194; // bool
             }
             // Parent: None
             // Field count: 3
@@ -2197,13 +2222,13 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CBaseTrailRenderer {
-                constexpr std::ptrdiff_t m_nOrientationType = 0x2C10; // ParticleOrientationChoiceList_t
-                constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2C14; // int32
-                constexpr std::ptrdiff_t m_flMinSize = 0x2C18; // float32
-                constexpr std::ptrdiff_t m_flMaxSize = 0x2C1C; // float32
-                constexpr std::ptrdiff_t m_flStartFadeSize = 0x2C20; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flEndFadeSize = 0x2D80; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_bClampV = 0x2EE0; // bool
+                constexpr std::ptrdiff_t m_nOrientationType = 0x2C18; // ParticleOrientationChoiceList_t
+                constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2C1C; // int32
+                constexpr std::ptrdiff_t m_flMinSize = 0x2C20; // float32
+                constexpr std::ptrdiff_t m_flMaxSize = 0x2C24; // float32
+                constexpr std::ptrdiff_t m_flStartFadeSize = 0x2C28; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flEndFadeSize = 0x2D88; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_bClampV = 0x2EE8; // bool
             }
             // Parent: None
             // Field count: 4
@@ -2901,6 +2926,18 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            namespace C_OP_WaterImpulseRenderer {
+                constexpr std::ptrdiff_t m_vecPos = 0x210; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_flRadius = 0x888; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flMagnitude = 0x9E8; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flShape = 0xB48; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_nEventType = 0xCA8; // EventTypeSelection_t
+            }
+            // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             namespace C_INIT_RandomSequence {
                 constexpr std::ptrdiff_t m_nSequenceMin = 0x1C8; // int32
                 constexpr std::ptrdiff_t m_nSequenceMax = 0x1CC; // int32
@@ -3261,6 +3298,29 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bUseRandomCPs = 0x210; // bool
                 constexpr std::ptrdiff_t m_vEndOffset = 0x214; // Vector
                 constexpr std::ptrdiff_t m_bSaveOffset = 0x220; // bool
+            }
+            // Parent: None
+            // Field count: 16
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_GameDecalRenderer {
+                constexpr std::ptrdiff_t m_sDecalGroupName = 0x210; // CGlobalSymbol
+                constexpr std::ptrdiff_t m_nEventType = 0x218; // EventTypeSelection_t
+                constexpr std::ptrdiff_t m_nInteractionMask = 0x220; // ParticleCollisionMask_t
+                constexpr std::ptrdiff_t m_nCollisionGroup = 0x228; // ParticleCollisionGroup_t
+                constexpr std::ptrdiff_t m_vecStartPos = 0x230; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_vecEndPos = 0x8A8; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_flTraceBloat = 0xF20; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flDecalSize = 0x1080; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_nDecalGroupIndex = 0x11E0; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flDecalRotation = 0x1340; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_vModulationColor = 0x14A0; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_bUseGameDefaultDecalSize = 0x1B18; // bool
+                constexpr std::ptrdiff_t m_bRandomDecalRotation = 0x1B19; // bool
+                constexpr std::ptrdiff_t m_bRandomlySelectDecalInGroup = 0x1B1A; // bool
+                constexpr std::ptrdiff_t m_bNoDecalsOnOwner = 0x1B1B; // bool
+                constexpr std::ptrdiff_t m_bVisualizeTraces = 0x1B1C; // bool
             }
             // Parent: None
             // Field count: 7
@@ -6100,39 +6160,40 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_HitboxSetName = 0x1CF; // char[128]
             }
             // Parent: None
-            // Field count: 28
+            // Field count: 29
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RenderSprites {
-                constexpr std::ptrdiff_t m_nSequenceOverride = 0x2C10; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_nOrientationType = 0x2D70; // ParticleOrientationChoiceList_t
-                constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2D74; // int32
-                constexpr std::ptrdiff_t m_bUseYawWithNormalAligned = 0x2D78; // bool
-                constexpr std::ptrdiff_t m_flMinSize = 0x2D80; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flMaxSize = 0x2EE0; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flAlphaAdjustWithSizeAdjust = 0x3040; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flStartFadeSize = 0x31A0; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flEndFadeSize = 0x3300; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flStartFadeDot = 0x3460; // float32
-                constexpr std::ptrdiff_t m_flEndFadeDot = 0x3464; // float32
-                constexpr std::ptrdiff_t m_bDistanceAlpha = 0x3468; // bool
-                constexpr std::ptrdiff_t m_bSoftEdges = 0x3469; // bool
-                constexpr std::ptrdiff_t m_flEdgeSoftnessStart = 0x346C; // float32
-                constexpr std::ptrdiff_t m_flEdgeSoftnessEnd = 0x3470; // float32
-                constexpr std::ptrdiff_t m_bOutline = 0x3474; // bool
-                constexpr std::ptrdiff_t m_OutlineColor = 0x3475; // Color
-                constexpr std::ptrdiff_t m_nOutlineAlpha = 0x347C; // int32
-                constexpr std::ptrdiff_t m_flOutlineStart0 = 0x3480; // float32
-                constexpr std::ptrdiff_t m_flOutlineStart1 = 0x3484; // float32
-                constexpr std::ptrdiff_t m_flOutlineEnd0 = 0x3488; // float32
-                constexpr std::ptrdiff_t m_flOutlineEnd1 = 0x348C; // float32
-                constexpr std::ptrdiff_t m_nLightingMode = 0x3490; // ParticleLightingQuality_t
-                constexpr std::ptrdiff_t m_flLightingTessellation = 0x3498; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_flLightingDirectionality = 0x35F8; // CParticleCollectionRendererFloatInput
-                constexpr std::ptrdiff_t m_bParticleShadows = 0x3758; // bool
-                constexpr std::ptrdiff_t m_flShadowDensity = 0x375C; // float32
-                constexpr std::ptrdiff_t m_replicationParameters = 0x3760; // CReplicationParameters
+                constexpr std::ptrdiff_t m_nSequenceOverride = 0x2C18; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_bSequenceNumbersAreRawSequenceIndices = 0x2D78; // bool
+                constexpr std::ptrdiff_t m_nOrientationType = 0x2D7C; // ParticleOrientationChoiceList_t
+                constexpr std::ptrdiff_t m_nOrientationControlPoint = 0x2D80; // int32
+                constexpr std::ptrdiff_t m_bUseYawWithNormalAligned = 0x2D84; // bool
+                constexpr std::ptrdiff_t m_flMinSize = 0x2D88; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flMaxSize = 0x2EE8; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flAlphaAdjustWithSizeAdjust = 0x3048; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flStartFadeSize = 0x31A8; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flEndFadeSize = 0x3308; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flStartFadeDot = 0x3468; // float32
+                constexpr std::ptrdiff_t m_flEndFadeDot = 0x346C; // float32
+                constexpr std::ptrdiff_t m_bDistanceAlpha = 0x3470; // bool
+                constexpr std::ptrdiff_t m_bSoftEdges = 0x3471; // bool
+                constexpr std::ptrdiff_t m_flEdgeSoftnessStart = 0x3474; // float32
+                constexpr std::ptrdiff_t m_flEdgeSoftnessEnd = 0x3478; // float32
+                constexpr std::ptrdiff_t m_bOutline = 0x347C; // bool
+                constexpr std::ptrdiff_t m_OutlineColor = 0x347D; // Color
+                constexpr std::ptrdiff_t m_nOutlineAlpha = 0x3484; // int32
+                constexpr std::ptrdiff_t m_flOutlineStart0 = 0x3488; // float32
+                constexpr std::ptrdiff_t m_flOutlineStart1 = 0x348C; // float32
+                constexpr std::ptrdiff_t m_flOutlineEnd0 = 0x3490; // float32
+                constexpr std::ptrdiff_t m_flOutlineEnd1 = 0x3494; // float32
+                constexpr std::ptrdiff_t m_nLightingMode = 0x3498; // ParticleLightingQuality_t
+                constexpr std::ptrdiff_t m_flLightingTessellation = 0x34A0; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_flLightingDirectionality = 0x3600; // CParticleCollectionRendererFloatInput
+                constexpr std::ptrdiff_t m_bParticleShadows = 0x3760; // bool
+                constexpr std::ptrdiff_t m_flShadowDensity = 0x3764; // float32
+                constexpr std::ptrdiff_t m_replicationParameters = 0x3768; // CReplicationParameters
             }
             // Parent: None
             // Field count: 12
