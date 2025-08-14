@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:08:30.051873234 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: rendersystemdx11.dll
-    // Class count: 3
+    // Class count: 4
     // Enum count: 5
     public static class Rendersystemdx11Dll {
         // Alignment: 4
@@ -25,8 +25,9 @@ namespace CS2Dumper.Schemas {
             RENDER_PRIM_TYPE_COUNT = 0xD
         }
         // Alignment: 4
-        // Member count: 12
+        // Member count: 13
         public enum RenderBufferFlags_t : uint {
+            RENDER_BUFFER_USAGE_NONE = 0x0,
             RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
             RENDER_BUFFER_USAGE_INDEX_BUFFER = 0x2,
             RENDER_BUFFER_USAGE_SHADER_RESOURCE = 0x4,
@@ -52,9 +53,9 @@ namespace CS2Dumper.Schemas {
             RENDER_MULTISAMPLE_16X = 0x5,
             RENDER_MULTISAMPLE_TYPE_COUNT = 0x6
         }
-        // Alignment: 4
+        // Alignment: 1
         // Member count: 4
-        public enum InputLayoutVariation_t : uint {
+        public enum InputLayoutVariation_t : byte {
             INPUT_LAYOUT_VARIATION_DEFAULT = 0x0,
             INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID = 0x1,
             INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
@@ -66,6 +67,11 @@ namespace CS2Dumper.Schemas {
             RENDER_SLOT_INVALID = unchecked((byte)-1),
             RENDER_SLOT_PER_VERTEX = 0x0,
             RENDER_SLOT_PER_INSTANCE = 0x1
+        }
+        // Parent: None
+        // Field count: 1
+        public static class SheetSequenceIntegerId_t {
+            public const nint m_Value = 0x0; // uint32
         }
         // Parent: None
         // Field count: 4

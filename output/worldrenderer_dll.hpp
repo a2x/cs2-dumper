@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:08:30.051873234 UTC
 
 #pragma once
 
@@ -319,7 +319,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pMaterial = 0x50; // CStrongHandle<InfoForResourceTypeIMaterial2>
                 constexpr std::ptrdiff_t m_nRenderOrder = 0x58; // int32
                 constexpr std::ptrdiff_t m_vTintColor = 0x5C; // Vector4D
-                constexpr std::ptrdiff_t m_nSequenceOverride = 0x6C; // int32
+                constexpr std::ptrdiff_t m_sSequenceOverrideName = 0x6C; // CUtlStringToken
             }
             // Parent: None
             // Field count: 3

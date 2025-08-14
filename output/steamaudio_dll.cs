@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-01 22:47:35.099029800 UTC
+// 2025-08-14 21:08:30.051873234 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: steamaudio.dll
@@ -48,12 +48,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_field = 0x0; // CUtlVector<float32>
         }
         // Parent: None
-        // Field count: 1
+        // Field count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedPathingData {
-            public const nint m_probes = 0x0; // CSteamAudioProbeData
+            public const nint m_nBands = 0x0; // int32
+            public const nint m_probes = 0x8; // CSteamAudioProbeData
         }
         // Parent: None
         // Field count: 4
@@ -105,26 +106,27 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecReflectionRatio = 0x48; // CUtlVector<float32>
         }
         // Parent: None
-        // Field count: 15
+        // Field count: 16
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedReverbData {
-            public const nint m_probes = 0x0; // CSteamAudioProbeData
-            public const nint m_reverbSettings = 0x8; // SteamAudioReverbSettings_t
-            public const nint m_reverbClusteringSettings = 0x18; // SteamAudioReverbClusteringSettings_t
-            public const nint m_reverbCompressionSettings = 0x24; // SteamAudioReverbCompressionSettings_t
-            public const nint m_clusteredProbes = 0x28; // CSteamAudioProbeData
-            public const nint m_vecClusterForProbe = 0x30; // CUtlVector<int16>
-            public const nint m_compressedData = 0x48; // CSteamAudioCompressedReverb
-            public const nint m_compressedClusteredData = 0xA8; // CSteamAudioCompressedReverb
-            public const nint m_vecMovableReverbs = 0x108; // CUtlVector<CSteamAudioBakedReverbData>
-            public const nint m_vecMovableReverbInitialTransforms = 0x120; // CUtlVector<matrix3x4_t>
-            public const nint m_vecMovableReverbAABBs = 0x138; // CUtlVector<AABB_t>
-            public const nint m_vecMovableReverbKeys = 0x150; // CUtlVector<CUtlString>
-            public const nint m_vecMovableReverbKeyTokens = 0x168; // CUtlVector<CUtlStringToken>
-            public const nint m_vecMovableReverbTransforms = 0x180; // CUtlVector<matrix3x4_t>
-            public const nint m_vecMovableReverbOBBs = 0x198; // CUtlVector<OBB_t>
+            public const nint m_nBands = 0x0; // int32
+            public const nint m_probes = 0x8; // CSteamAudioProbeData
+            public const nint m_reverbSettings = 0x10; // SteamAudioReverbSettings_t
+            public const nint m_reverbClusteringSettings = 0x20; // SteamAudioReverbClusteringSettings_t
+            public const nint m_reverbCompressionSettings = 0x2C; // SteamAudioReverbCompressionSettings_t
+            public const nint m_clusteredProbes = 0x30; // CSteamAudioProbeData
+            public const nint m_vecClusterForProbe = 0x38; // CUtlVector<int16>
+            public const nint m_compressedData = 0x50; // CSteamAudioCompressedReverb
+            public const nint m_compressedClusteredData = 0xB0; // CSteamAudioCompressedReverb
+            public const nint m_vecMovableReverbs = 0x110; // CUtlVector<CSteamAudioBakedReverbData>
+            public const nint m_vecMovableReverbInitialTransforms = 0x128; // CUtlVector<matrix3x4_t>
+            public const nint m_vecMovableReverbAABBs = 0x140; // CUtlVector<AABB_t>
+            public const nint m_vecMovableReverbKeys = 0x158; // CUtlVector<CUtlString>
+            public const nint m_vecMovableReverbKeyTokens = 0x170; // CUtlVector<CUtlStringToken>
+            public const nint m_vecMovableReverbTransforms = 0x188; // CUtlVector<matrix3x4_t>
+            public const nint m_vecMovableReverbOBBs = 0x1A0; // CUtlVector<OBB_t>
         }
         // Parent: None
         // Field count: 4
