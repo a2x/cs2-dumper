@@ -3647,7 +3647,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_materialGroup (CUtlStringToken)
             // NetworkVarNames: m_nHitboxSet (uint8)
             namespace CSkeletonInstance {
-                constexpr std::ptrdiff_t m_modelState = 0x190; // CModelState
+                constexpr std::ptrdiff_t m_modelState = 0x210; // CModelState
                 constexpr std::ptrdiff_t m_bIsAnimationEnabled = 0x490; // bool
                 constexpr std::ptrdiff_t m_bUseParentRenderBounds = 0x491; // bool
                 constexpr std::ptrdiff_t m_bDisableSolidCollisionsForHierarchy = 0x492; // bool
