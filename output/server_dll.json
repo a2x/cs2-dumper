@@ -30,7 +30,7 @@
             "type_name": "string_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAI_ChangeHintGroup": {
         "fields": {
@@ -212,7 +212,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeContainer": {
         "fields": {
@@ -255,7 +255,7 @@
             "type_name": "CEconItemAttribute"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager": {
         "fields": {
@@ -283,7 +283,7 @@
             "type_name": "attributeprovidertypes_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager__cached_attribute_float_t": {
         "fields": {
@@ -1491,7 +1491,7 @@
             "type_name": "BloodType"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CBaseEntityAPI": {
         "fields": {},
@@ -2762,7 +2762,7 @@
           "m_viewForward": 220
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBreakable": {
         "fields": {
@@ -2920,7 +2920,7 @@
           "m_vecWheelFrictionScales": 72
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBuyZone": {
         "fields": {
@@ -4585,129 +4585,130 @@
       },
       "CCSPlayerPawn": {
         "fields": {
-          "m_ArmorValue": 6988,
-          "m_EconGloves": 6064,
-          "m_GunGameImmunityColor": 7060,
-          "m_LastHealth": 6928,
-          "m_LastHitBox": 6924,
-          "m_PredictedDamageTags": 7184,
-          "m_RetakesMVPBoostExtraUtility": 4108,
-          "m_TouchingBuyZones": 4064,
-          "m_aimPunchAngle": 4120,
-          "m_aimPunchAngleVel": 4132,
-          "m_aimPunchCache": 4152,
-          "m_aimPunchTickBase": 4144,
-          "m_aimPunchTickFraction": 4148,
-          "m_allowAutoFollowTime": 6808,
-          "m_angShootAngleHistory": 7108,
-          "m_angStashedShootAngles": 7072,
-          "m_bBotAllowActive": 6944,
-          "m_bCommittingSuicideOnTeamChange": 7292,
-          "m_bGrenadeParametersStashed": 7068,
-          "m_bGunGameImmunity": 7300,
-          "m_bHasDeathInfo": 7020,
-          "m_bHasFemaleVoice": 3850,
-          "m_bInBombZone": 4090,
-          "m_bInBombZoneTrigger": 6876,
-          "m_bInBuyZone": 4057,
-          "m_bInHostageRescueZone": 4089,
-          "m_bInHostageResetZone": 4056,
-          "m_bInNoDefuseArea": 6864,
-          "m_bIsBuyMenuOpen": 4176,
-          "m_bIsDefusing": 6854,
-          "m_bIsGrabbingHostage": 6855,
-          "m_bIsScoped": 6852,
-          "m_bIsSpawning": 7004,
-          "m_bIsWalking": 6784,
-          "m_bKilledByHeadshot": 6920,
-          "m_bLastHeadBoneTransformIsValid": 5920,
-          "m_bLeftHanded": 6761,
-          "m_bNextSprayDecalTimeExpedited": 5948,
-          "m_bOnGroundLastTick": 5928,
-          "m_bRagdollDamageHeadshot": 6044,
-          "m_bResetArmorNextSpawn": 6812,
-          "m_bResumeZoom": 6853,
-          "m_bRetakesHasDefuseKit": 4100,
-          "m_bRetakesMVPLastRound": 4101,
-          "m_bSkipOneHeadConstraintUpdate": 6760,
-          "m_bWaitForNoAttack": 6912,
-          "m_bWasInBombZoneTrigger": 6877,
-          "m_bWasInBuyZone": 4088,
-          "m_bWasInHostageRescueZone": 4091,
-          "m_entitySpottedState": 6824,
-          "m_fImmuneToGunGameDamageTime": 7296,
-          "m_fLastGivenBombTime": 6792,
-          "m_fLastGivenDefuserTime": 6788,
-          "m_fMolotovDamageTime": 7304,
-          "m_fSwitchedHandednessTime": 6764,
-          "m_flDealtDamageToEnemyMostRecentTimestamp": 6796,
-          "m_flDeathInfoTime": 7024,
-          "m_flEmitSoundTime": 6860,
-          "m_flFlinchStack": 6884,
-          "m_flHealthShotBoostExpirationTime": 4112,
-          "m_flHitHeading": 6892,
-          "m_flLandingTimeSeconds": 4116,
-          "m_flLastAttackedTeammate": 6804,
-          "m_flLastPickupPriorityTime": 6984,
-          "m_flNextSprayDecalTime": 5944,
-          "m_flSlopeDropHeight": 6964,
-          "m_flSlopeDropOffset": 6960,
-          "m_flTimeOfLastInjury": 5940,
-          "m_flVelocityModifier": 6888,
-          "m_flViewmodelFOV": 6780,
-          "m_flViewmodelOffsetX": 6768,
-          "m_flViewmodelOffsetY": 6772,
-          "m_flViewmodelOffsetZ": 6776,
-          "m_grenadeParameterStashTime": 7064,
-          "m_iBlockingUseActionInProgress": 6856,
-          "m_iBombSiteIndex": 6868,
-          "m_iDeathFlags": 7016,
-          "m_iDisplayHistoryBits": 6800,
-          "m_iLastWeaponFireUsercmd": 7000,
-          "m_iPlayerLocked": 5932,
-          "m_iRetakesMVPBoostItem": 4104,
-          "m_iRetakesOffering": 4092,
-          "m_iRetakesOfferingCard": 4096,
-          "m_iShotsFired": 6880,
-          "m_ignoreLadderJumpTime": 6916,
-          "m_lastLandTime": 5924,
-          "m_nCharacterDefIndex": 3848,
-          "m_nEconGlovesChanged": 6744,
-          "m_nHighestAppliedDamageTagTick": 7288,
-          "m_nHitBodyPart": 6896,
-          "m_nLastKillerIndex": 6816,
-          "m_nLastPickupPriority": 6980,
-          "m_nRagdollDamageBone": 5952,
-          "m_nSpotRules": 6848,
-          "m_nWhichBombZone": 6872,
-          "m_pActionTrackingServices": 3824,
-          "m_pBot": 6936,
-          "m_pBulletServices": 3800,
-          "m_pBuyServices": 3816,
-          "m_pDamageReactServices": 3840,
-          "m_pHostageServices": 3808,
-          "m_pRadioServices": 3832,
-          "m_qDeathEyeAngles": 6748,
-          "m_strVOPrefix": 3856,
-          "m_szLastPlaceName": 3864,
-          "m_szRagdollDamageWeaponName": 5980,
-          "m_thirdPersonHeading": 6948,
-          "m_unCurrentEquipmentValue": 6992,
-          "m_unFreezetimeEndEquipmentValue": 6996,
-          "m_unRoundStartEquipmentValue": 6994,
-          "m_vHeadConstraintOffset": 6968,
-          "m_vRagdollDamageForce": 5956,
-          "m_vRagdollDamagePosition": 5968,
-          "m_vRagdollServerOrigin": 6048,
-          "m_vecDeathInfoOrigin": 7028,
-          "m_vecPlayerPatchEconIndices": 7040,
-          "m_vecStashedGrenadeThrowPosition": 7084,
-          "m_vecStashedVelocity": 7096,
-          "m_vecThrowPositionHistory": 7132,
-          "m_vecTotalBulletForce": 6900,
-          "m_vecVelocityHistory": 7156,
-          "m_wasNotKilledNaturally": 7293,
-          "m_xLastHeadBoneTransform": 5888
+          "m_ArmorValue": 6972,
+          "m_EconGloves": 6048,
+          "m_GunGameImmunityColor": 7044,
+          "m_LastHealth": 6912,
+          "m_LastHitBox": 6908,
+          "m_PredictedDamageTags": 7168,
+          "m_RetakesMVPBoostExtraUtility": 4092,
+          "m_TouchingBuyZones": 4048,
+          "m_aimPunchAngle": 4104,
+          "m_aimPunchAngleVel": 4116,
+          "m_aimPunchCache": 4136,
+          "m_aimPunchTickBase": 4128,
+          "m_aimPunchTickFraction": 4132,
+          "m_allowAutoFollowTime": 6792,
+          "m_angEyeAngles": 7292,
+          "m_angShootAngleHistory": 7092,
+          "m_angStashedShootAngles": 7056,
+          "m_bBotAllowActive": 6928,
+          "m_bCommittingSuicideOnTeamChange": 7276,
+          "m_bGrenadeParametersStashed": 7052,
+          "m_bGunGameImmunity": 7284,
+          "m_bHasDeathInfo": 7004,
+          "m_bHasFemaleVoice": 3834,
+          "m_bInBombZone": 4074,
+          "m_bInBombZoneTrigger": 6860,
+          "m_bInBuyZone": 4041,
+          "m_bInHostageRescueZone": 4073,
+          "m_bInHostageResetZone": 4040,
+          "m_bInNoDefuseArea": 6848,
+          "m_bIsBuyMenuOpen": 4160,
+          "m_bIsDefusing": 6838,
+          "m_bIsGrabbingHostage": 6839,
+          "m_bIsScoped": 6836,
+          "m_bIsSpawning": 6988,
+          "m_bIsWalking": 6768,
+          "m_bKilledByHeadshot": 6904,
+          "m_bLastHeadBoneTransformIsValid": 5904,
+          "m_bLeftHanded": 6745,
+          "m_bNextSprayDecalTimeExpedited": 5932,
+          "m_bOnGroundLastTick": 5912,
+          "m_bRagdollDamageHeadshot": 6028,
+          "m_bResetArmorNextSpawn": 6796,
+          "m_bResumeZoom": 6837,
+          "m_bRetakesHasDefuseKit": 4084,
+          "m_bRetakesMVPLastRound": 4085,
+          "m_bSkipOneHeadConstraintUpdate": 6744,
+          "m_bWaitForNoAttack": 6896,
+          "m_bWasInBombZoneTrigger": 6861,
+          "m_bWasInBuyZone": 4072,
+          "m_bWasInHostageRescueZone": 4075,
+          "m_entitySpottedState": 6808,
+          "m_fImmuneToGunGameDamageTime": 7280,
+          "m_fLastGivenBombTime": 6776,
+          "m_fLastGivenDefuserTime": 6772,
+          "m_fMolotovDamageTime": 7288,
+          "m_fSwitchedHandednessTime": 6748,
+          "m_flDealtDamageToEnemyMostRecentTimestamp": 6780,
+          "m_flDeathInfoTime": 7008,
+          "m_flEmitSoundTime": 6844,
+          "m_flFlinchStack": 6868,
+          "m_flHealthShotBoostExpirationTime": 4096,
+          "m_flHitHeading": 6876,
+          "m_flLandingTimeSeconds": 4100,
+          "m_flLastAttackedTeammate": 6788,
+          "m_flLastPickupPriorityTime": 6968,
+          "m_flNextSprayDecalTime": 5928,
+          "m_flSlopeDropHeight": 6948,
+          "m_flSlopeDropOffset": 6944,
+          "m_flTimeOfLastInjury": 5924,
+          "m_flVelocityModifier": 6872,
+          "m_flViewmodelFOV": 6764,
+          "m_flViewmodelOffsetX": 6752,
+          "m_flViewmodelOffsetY": 6756,
+          "m_flViewmodelOffsetZ": 6760,
+          "m_grenadeParameterStashTime": 7048,
+          "m_iBlockingUseActionInProgress": 6840,
+          "m_iBombSiteIndex": 6852,
+          "m_iDeathFlags": 7000,
+          "m_iDisplayHistoryBits": 6784,
+          "m_iLastWeaponFireUsercmd": 6984,
+          "m_iPlayerLocked": 5916,
+          "m_iRetakesMVPBoostItem": 4088,
+          "m_iRetakesOffering": 4076,
+          "m_iRetakesOfferingCard": 4080,
+          "m_iShotsFired": 6864,
+          "m_ignoreLadderJumpTime": 6900,
+          "m_lastLandTime": 5908,
+          "m_nCharacterDefIndex": 3832,
+          "m_nEconGlovesChanged": 6728,
+          "m_nHighestAppliedDamageTagTick": 7272,
+          "m_nHitBodyPart": 6880,
+          "m_nLastKillerIndex": 6800,
+          "m_nLastPickupPriority": 6964,
+          "m_nRagdollDamageBone": 5936,
+          "m_nSpotRules": 6832,
+          "m_nWhichBombZone": 6856,
+          "m_pActionTrackingServices": 3808,
+          "m_pBot": 6920,
+          "m_pBulletServices": 3784,
+          "m_pBuyServices": 3800,
+          "m_pDamageReactServices": 3824,
+          "m_pHostageServices": 3792,
+          "m_pRadioServices": 3816,
+          "m_qDeathEyeAngles": 6732,
+          "m_strVOPrefix": 3840,
+          "m_szLastPlaceName": 3848,
+          "m_szRagdollDamageWeaponName": 5964,
+          "m_thirdPersonHeading": 6932,
+          "m_unCurrentEquipmentValue": 6976,
+          "m_unFreezetimeEndEquipmentValue": 6980,
+          "m_unRoundStartEquipmentValue": 6978,
+          "m_vHeadConstraintOffset": 6952,
+          "m_vRagdollDamageForce": 5940,
+          "m_vRagdollDamagePosition": 5952,
+          "m_vRagdollServerOrigin": 6032,
+          "m_vecDeathInfoOrigin": 7012,
+          "m_vecPlayerPatchEconIndices": 7024,
+          "m_vecStashedGrenadeThrowPosition": 7068,
+          "m_vecStashedVelocity": 7080,
+          "m_vecThrowPositionHistory": 7116,
+          "m_vecTotalBulletForce": 6884,
+          "m_vecVelocityHistory": 7140,
+          "m_wasNotKilledNaturally": 7277,
+          "m_xLastHeadBoneTransform": 5872
         },
         "metadata": [
           {
@@ -5111,6 +5112,11 @@
             "name": "m_fMolotovDamageTime",
             "type": "NetworkVarNames",
             "type_name": "float"
+          },
+          {
+            "name": "m_angEyeAngles",
+            "type": "NetworkVarNames",
+            "type_name": "QAngle"
           }
         ],
         "parent": "CCSPlayerPawnBase"
@@ -5118,7 +5124,6 @@
       "CCSPlayerPawnBase": {
         "fields": {
           "m_CTouchExpansionComponent": 3464,
-          "m_angEyeAngles": 3772,
           "m_bHasMovedSinceSpawn": 3737,
           "m_bRespawning": 3736,
           "m_blindStartTime": 3556,
@@ -5128,7 +5133,7 @@
           "m_flFlashMaxAlpha": 3760,
           "m_flIdleTimeSinceLastAction": 3748,
           "m_flProgressBarStartTime": 3764,
-          "m_hOriginalController": 3784,
+          "m_hOriginalController": 3772,
           "m_iNumSpawns": 3740,
           "m_iPlayerState": 3560,
           "m_iProgressBarDuration": 3768,
@@ -5190,11 +5195,6 @@
             "name": "m_iProgressBarDuration",
             "type": "NetworkVarNames",
             "type_name": "int"
-          },
-          {
-            "name": "m_angEyeAngles",
-            "type": "NetworkVarNames",
-            "type_name": "QAngle"
           },
           {
             "name": "m_hOriginalController",
@@ -6374,7 +6374,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CColorCorrection": {
         "fields": {
@@ -6673,7 +6673,7 @@
             "type_name": "int"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CDynamicLight": {
         "fields": {
@@ -6954,7 +6954,7 @@
             "type_name": "char"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEconWearable": {
         "fields": {
@@ -7110,7 +7110,7 @@
       "CEntityComponent": {
         "fields": {},
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CEntityDissolve": {
         "fields": {
@@ -7227,7 +7227,7 @@
             "type_name": "int32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEntityInstance": {
         "fields": {
@@ -8966,7 +8966,7 @@
             "type_name": "Vector"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEnvWindVolume": {
         "fields": {
@@ -10038,7 +10038,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameSceneNodeHandle": {
         "fields": {
@@ -10057,7 +10057,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameText": {
         "fields": {
@@ -10182,7 +10182,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGradientFog": {
         "fields": {
@@ -12077,7 +12077,7 @@
             "type_name": "int8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CMolotovGrenade": {
         "fields": {},
@@ -12224,7 +12224,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNullEntity": {
         "fields": {},
@@ -18002,7 +18002,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CTimerEntity": {
         "fields": {
@@ -18819,7 +18819,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EngineCountdownTimer": {
         "fields": {
@@ -18844,7 +18844,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntityRenderAttribute_t": {
         "fields": {
@@ -18863,7 +18863,7 @@
             "type_name": "Vector4D"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntitySpottedState_t": {
         "fields": {
@@ -18917,7 +18917,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "OutflowWithRequirements_t": {
         "fields": {
@@ -18952,7 +18952,7 @@
             "type_name": "EHANDLE"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "PredictedDamageTag_t": {
         "fields": {
@@ -19071,7 +19071,7 @@
             "type_name": "CEntityHandle"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "SequenceHistory_t": {
         "fields": {
@@ -19083,7 +19083,7 @@
           "m_nSeqLoopMode": 12
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "SignatureOutflow_Continue": {
         "fields": {},
@@ -19157,7 +19157,7 @@
             "type_name": "uint8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "ViewAngleServerChange_t": {
         "fields": {
@@ -19201,7 +19201,7 @@
             "type_name": "uint16"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "WeaponPurchaseTracker_t": {
         "fields": {
@@ -19214,7 +19214,7 @@
             "type_name": "WeaponPurchaseCount_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "audioparams_t": {
         "fields": {
@@ -19251,7 +19251,7 @@
             "type_name": "uint32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogparams_t": {
         "fields": {
@@ -19398,7 +19398,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogplayerparams_t": {
         "fields": {
@@ -19424,7 +19424,7 @@
             "type_name": "CHandle<CFogController>"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "shard_model_desc_t": {
         "fields": {
@@ -19509,7 +19509,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "sky3dparams_t": {
         "fields": {
@@ -19552,7 +19552,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       }
     },
     "enums": {
