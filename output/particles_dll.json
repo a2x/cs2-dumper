@@ -4546,13 +4546,12 @@
       },
       "C_OP_RemapAverageScalarValuetoCP": {
         "fields": {
-          "m_flInputMax": 472,
-          "m_flInputMin": 468,
-          "m_flOutputMax": 480,
-          "m_flOutputMin": 476,
-          "m_nField": 464,
-          "m_nOutControlPointNumber": 456,
-          "m_nOutVectorField": 460
+          "m_flDecimalPlaces": 464,
+          "m_flOutputRemap": 832,
+          "m_nExpression": 456,
+          "m_nField": 824,
+          "m_nOutControlPointNumber": 816,
+          "m_nOutVectorField": 820
         },
         "metadata": [
           {
@@ -8116,6 +8115,20 @@
           "SCALAR_EXPRESSION_MUL": 2,
           "SCALAR_EXPRESSION_SUBTRACT": 1,
           "SCALAR_EXPRESSION_UNINITIALIZED": -1
+        },
+        "type": "uint32"
+      },
+      "SetStatisticExpressionType_t": {
+        "alignment": 4,
+        "members": {
+          "SET_EXPRESSION_MAX": 6,
+          "SET_EXPRESSION_MEAN": 1,
+          "SET_EXPRESSION_MEDIAN": 2,
+          "SET_EXPRESSION_MIN": 5,
+          "SET_EXPRESSION_MODE": 3,
+          "SET_EXPRESSION_STANDARD_DEVIATION": 4,
+          "SET_EXPRESSION_SUM": 0,
+          "SET_EXPRESSION_UNINITIALIZED": -1
         },
         "type": "uint32"
       },

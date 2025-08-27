@@ -5915,6 +5915,11 @@
             "type_name": "bool"
           },
           {
+            "name": "m_bInspectShouldLoop",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
             "name": "m_weaponMode",
             "type": "NetworkVarNames",
             "type_name": "CSWeaponMode"
@@ -10498,31 +10503,30 @@
       },
       "CInferno": {
         "fields": {
-          "m_BookkeepingTimer": 5104,
-          "m_BurnNormal": 3640,
-          "m_InitialSplashVelocity": 5036,
-          "m_NextSpreadTimer": 5128,
-          "m_activeTimer": 5072,
-          "m_bFireIsBurning": 3576,
-          "m_bInPostEffectTime": 4424,
-          "m_bWasCreatedInSmoke": 4432,
-          "m_damageRampTimer": 5000,
-          "m_damageTimer": 4976,
-          "m_extent": 4952,
-          "m_fireCount": 4408,
-          "m_fireParentPositions": 2808,
-          "m_firePositions": 2040,
-          "m_fireSpawnOffset": 5088,
-          "m_nFireEffectTickBegin": 4416,
-          "m_nFireLifetime": 4420,
-          "m_nFiresExtinguishCount": 4428,
-          "m_nInfernoType": 4412,
-          "m_nMaxFlames": 5092,
-          "m_nSourceItemDefIndex": 5152,
-          "m_nSpreadCount": 5096,
-          "m_splashVelocity": 5024,
-          "m_startPos": 5048,
-          "m_vecOriginalSpawnLocation": 5060
+          "m_BookkeepingTimer": 5080,
+          "m_BurnNormal": 3624,
+          "m_InitialSplashVelocity": 5012,
+          "m_NextSpreadTimer": 5104,
+          "m_activeTimer": 5048,
+          "m_bFireIsBurning": 3560,
+          "m_bInPostEffectTime": 4408,
+          "m_bWasCreatedInSmoke": 4409,
+          "m_damageRampTimer": 4976,
+          "m_damageTimer": 4952,
+          "m_extent": 4928,
+          "m_fireCount": 4392,
+          "m_fireParentPositions": 2792,
+          "m_firePositions": 2024,
+          "m_fireSpawnOffset": 5064,
+          "m_nFireEffectTickBegin": 4400,
+          "m_nFireLifetime": 4404,
+          "m_nInfernoType": 4396,
+          "m_nMaxFlames": 5068,
+          "m_nSourceItemDefIndex": 5128,
+          "m_nSpreadCount": 5072,
+          "m_splashVelocity": 5000,
+          "m_startPos": 5024,
+          "m_vecOriginalSpawnLocation": 5036
         },
         "metadata": [
           {
@@ -18596,14 +18600,14 @@
       },
       "CWeaponBaseItem": {
         "fields": {
-          "m_SequenceCompleteTimer": 4144,
-          "m_bRedraw": 4168
+          "m_bRedraw": 4145,
+          "m_bSequenceInProgress": 4144
         },
         "metadata": [
           {
-            "name": "m_SequenceCompleteTimer",
+            "name": "m_bSequenceInProgress",
             "type": "NetworkVarNames",
-            "type_name": "CountdownTimer"
+            "type_name": "bool"
           },
           {
             "name": "m_bRedraw",

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-18 23:52:47.183323500 UTC
+// 2025-08-27 00:10:03.534453800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2361,7 +2361,7 @@ pub mod cs2_dumper {
                 pub const m_OnCanceled: usize = 0xB0; // CPulse_ResumePoint
             }
             // Parent: CBaseModelEntity
-            // Field count: 25
+            // Field count: 24
             //
             // Metadata:
             // NetworkVarNames: m_firePositions (Vector)
@@ -2374,31 +2374,30 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_nFireLifetime (float)
             // NetworkVarNames: m_bInPostEffectTime (bool)
             pub mod CInferno {
-                pub const m_firePositions: usize = 0x7F8; // Vector[64]
-                pub const m_fireParentPositions: usize = 0xAF8; // Vector[64]
-                pub const m_bFireIsBurning: usize = 0xDF8; // bool[64]
-                pub const m_BurnNormal: usize = 0xE38; // Vector[64]
-                pub const m_fireCount: usize = 0x1138; // int32
-                pub const m_nInfernoType: usize = 0x113C; // int32
-                pub const m_nFireEffectTickBegin: usize = 0x1140; // int32
-                pub const m_nFireLifetime: usize = 0x1144; // float32
-                pub const m_bInPostEffectTime: usize = 0x1148; // bool
-                pub const m_nFiresExtinguishCount: usize = 0x114C; // int32
-                pub const m_bWasCreatedInSmoke: usize = 0x1150; // bool
-                pub const m_extent: usize = 0x1358; // Extent
-                pub const m_damageTimer: usize = 0x1370; // CountdownTimer
-                pub const m_damageRampTimer: usize = 0x1388; // CountdownTimer
-                pub const m_splashVelocity: usize = 0x13A0; // Vector
-                pub const m_InitialSplashVelocity: usize = 0x13AC; // Vector
-                pub const m_startPos: usize = 0x13B8; // Vector
-                pub const m_vecOriginalSpawnLocation: usize = 0x13C4; // Vector
-                pub const m_activeTimer: usize = 0x13D0; // IntervalTimer
-                pub const m_fireSpawnOffset: usize = 0x13E0; // int32
-                pub const m_nMaxFlames: usize = 0x13E4; // int32
-                pub const m_nSpreadCount: usize = 0x13E8; // int32
-                pub const m_BookkeepingTimer: usize = 0x13F0; // CountdownTimer
-                pub const m_NextSpreadTimer: usize = 0x1408; // CountdownTimer
-                pub const m_nSourceItemDefIndex: usize = 0x1420; // uint16
+                pub const m_firePositions: usize = 0x7E8; // Vector[64]
+                pub const m_fireParentPositions: usize = 0xAE8; // Vector[64]
+                pub const m_bFireIsBurning: usize = 0xDE8; // bool[64]
+                pub const m_BurnNormal: usize = 0xE28; // Vector[64]
+                pub const m_fireCount: usize = 0x1128; // int32
+                pub const m_nInfernoType: usize = 0x112C; // int32
+                pub const m_nFireEffectTickBegin: usize = 0x1130; // int32
+                pub const m_nFireLifetime: usize = 0x1134; // float32
+                pub const m_bInPostEffectTime: usize = 0x1138; // bool
+                pub const m_bWasCreatedInSmoke: usize = 0x1139; // bool
+                pub const m_extent: usize = 0x1340; // Extent
+                pub const m_damageTimer: usize = 0x1358; // CountdownTimer
+                pub const m_damageRampTimer: usize = 0x1370; // CountdownTimer
+                pub const m_splashVelocity: usize = 0x1388; // Vector
+                pub const m_InitialSplashVelocity: usize = 0x1394; // Vector
+                pub const m_startPos: usize = 0x13A0; // Vector
+                pub const m_vecOriginalSpawnLocation: usize = 0x13AC; // Vector
+                pub const m_activeTimer: usize = 0x13B8; // IntervalTimer
+                pub const m_fireSpawnOffset: usize = 0x13C8; // int32
+                pub const m_nMaxFlames: usize = 0x13CC; // int32
+                pub const m_nSpreadCount: usize = 0x13D0; // int32
+                pub const m_BookkeepingTimer: usize = 0x13D8; // CountdownTimer
+                pub const m_NextSpreadTimer: usize = 0x13F0; // CountdownTimer
+                pub const m_nSourceItemDefIndex: usize = 0x1408; // uint16
             }
             // Parent: CEntityComponent
             // Field count: 0
@@ -5558,11 +5557,11 @@ pub mod cs2_dumper {
             // Field count: 2
             //
             // Metadata:
-            // NetworkVarNames: m_SequenceCompleteTimer (CountdownTimer)
+            // NetworkVarNames: m_bSequenceInProgress (bool)
             // NetworkVarNames: m_bRedraw (bool)
             pub mod CWeaponBaseItem {
-                pub const m_SequenceCompleteTimer: usize = 0x1030; // CountdownTimer
-                pub const m_bRedraw: usize = 0x1048; // bool
+                pub const m_bSequenceInProgress: usize = 0x1030; // bool
+                pub const m_bRedraw: usize = 0x1031; // bool
             }
             // Parent: CBaseEntity
             // Field count: 3
@@ -8930,6 +8929,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flWeaponGameplayAnimStateTimestamp (GameTime_t)
             // NetworkVarNames: m_flInspectCancelCompleteTime (GameTime_t)
             // NetworkVarNames: m_bInspectPending (bool)
+            // NetworkVarNames: m_bInspectShouldLoop (bool)
             // NetworkVarNames: m_weaponMode (CSWeaponMode)
             // NetworkVarNames: m_fAccuracyPenalty (float)
             // NetworkVarNames: m_iRecoilIndex (int)

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-18 23:52:47.183323500 UTC
+// 2025-08-27 00:10:03.534453800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2245,7 +2245,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnCanceled = 0xB0; // CPulse_ResumePoint
         }
         // Parent: CBaseModelEntity
-        // Field count: 25
+        // Field count: 24
         //
         // Metadata:
         // NetworkVarNames: m_firePositions (Vector)
@@ -2258,31 +2258,30 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nFireLifetime (float)
         // NetworkVarNames: m_bInPostEffectTime (bool)
         public static class CInferno {
-            public const nint m_firePositions = 0x7F8; // Vector[64]
-            public const nint m_fireParentPositions = 0xAF8; // Vector[64]
-            public const nint m_bFireIsBurning = 0xDF8; // bool[64]
-            public const nint m_BurnNormal = 0xE38; // Vector[64]
-            public const nint m_fireCount = 0x1138; // int32
-            public const nint m_nInfernoType = 0x113C; // int32
-            public const nint m_nFireEffectTickBegin = 0x1140; // int32
-            public const nint m_nFireLifetime = 0x1144; // float32
-            public const nint m_bInPostEffectTime = 0x1148; // bool
-            public const nint m_nFiresExtinguishCount = 0x114C; // int32
-            public const nint m_bWasCreatedInSmoke = 0x1150; // bool
-            public const nint m_extent = 0x1358; // Extent
-            public const nint m_damageTimer = 0x1370; // CountdownTimer
-            public const nint m_damageRampTimer = 0x1388; // CountdownTimer
-            public const nint m_splashVelocity = 0x13A0; // Vector
-            public const nint m_InitialSplashVelocity = 0x13AC; // Vector
-            public const nint m_startPos = 0x13B8; // Vector
-            public const nint m_vecOriginalSpawnLocation = 0x13C4; // Vector
-            public const nint m_activeTimer = 0x13D0; // IntervalTimer
-            public const nint m_fireSpawnOffset = 0x13E0; // int32
-            public const nint m_nMaxFlames = 0x13E4; // int32
-            public const nint m_nSpreadCount = 0x13E8; // int32
-            public const nint m_BookkeepingTimer = 0x13F0; // CountdownTimer
-            public const nint m_NextSpreadTimer = 0x1408; // CountdownTimer
-            public const nint m_nSourceItemDefIndex = 0x1420; // uint16
+            public const nint m_firePositions = 0x7E8; // Vector[64]
+            public const nint m_fireParentPositions = 0xAE8; // Vector[64]
+            public const nint m_bFireIsBurning = 0xDE8; // bool[64]
+            public const nint m_BurnNormal = 0xE28; // Vector[64]
+            public const nint m_fireCount = 0x1128; // int32
+            public const nint m_nInfernoType = 0x112C; // int32
+            public const nint m_nFireEffectTickBegin = 0x1130; // int32
+            public const nint m_nFireLifetime = 0x1134; // float32
+            public const nint m_bInPostEffectTime = 0x1138; // bool
+            public const nint m_bWasCreatedInSmoke = 0x1139; // bool
+            public const nint m_extent = 0x1340; // Extent
+            public const nint m_damageTimer = 0x1358; // CountdownTimer
+            public const nint m_damageRampTimer = 0x1370; // CountdownTimer
+            public const nint m_splashVelocity = 0x1388; // Vector
+            public const nint m_InitialSplashVelocity = 0x1394; // Vector
+            public const nint m_startPos = 0x13A0; // Vector
+            public const nint m_vecOriginalSpawnLocation = 0x13AC; // Vector
+            public const nint m_activeTimer = 0x13B8; // IntervalTimer
+            public const nint m_fireSpawnOffset = 0x13C8; // int32
+            public const nint m_nMaxFlames = 0x13CC; // int32
+            public const nint m_nSpreadCount = 0x13D0; // int32
+            public const nint m_BookkeepingTimer = 0x13D8; // CountdownTimer
+            public const nint m_NextSpreadTimer = 0x13F0; // CountdownTimer
+            public const nint m_nSourceItemDefIndex = 0x1408; // uint16
         }
         // Parent: CEntityComponent
         // Field count: 0
@@ -5442,11 +5441,11 @@ namespace CS2Dumper.Schemas {
         // Field count: 2
         //
         // Metadata:
-        // NetworkVarNames: m_SequenceCompleteTimer (CountdownTimer)
+        // NetworkVarNames: m_bSequenceInProgress (bool)
         // NetworkVarNames: m_bRedraw (bool)
         public static class CWeaponBaseItem {
-            public const nint m_SequenceCompleteTimer = 0x1030; // CountdownTimer
-            public const nint m_bRedraw = 0x1048; // bool
+            public const nint m_bSequenceInProgress = 0x1030; // bool
+            public const nint m_bRedraw = 0x1031; // bool
         }
         // Parent: CBaseEntity
         // Field count: 3
@@ -8814,6 +8813,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flWeaponGameplayAnimStateTimestamp (GameTime_t)
         // NetworkVarNames: m_flInspectCancelCompleteTime (GameTime_t)
         // NetworkVarNames: m_bInspectPending (bool)
+        // NetworkVarNames: m_bInspectShouldLoop (bool)
         // NetworkVarNames: m_weaponMode (CSWeaponMode)
         // NetworkVarNames: m_fAccuracyPenalty (float)
         // NetworkVarNames: m_iRecoilIndex (int)
