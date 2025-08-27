@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-18 23:52:47.183323500 UTC
+// 2025-08-27 00:14:42.751419600 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: particles.dll
         // Class count: 432
-        // Enum count: 68
+        // Enum count: 69
         namespace particles_dll {
             // Alignment: 4
             // Member count: 6
@@ -200,6 +200,18 @@ namespace cs2_dumper {
                 PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
                 PARTICLE_LIGHTING_PER_VERTEX = 0x1,
                 PARTICLE_LIGHTING_PER_PIXEL = 0xFFFFFFFFFFFFFFFF
+            };
+            // Alignment: 4
+            // Member count: 8
+            enum class SetStatisticExpressionType_t : uint32_t {
+                SET_EXPRESSION_UNINITIALIZED = 0xFFFFFFFFFFFFFFFF,
+                SET_EXPRESSION_SUM = 0x0,
+                SET_EXPRESSION_MEAN = 0x1,
+                SET_EXPRESSION_MEDIAN = 0x2,
+                SET_EXPRESSION_MODE = 0x3,
+                SET_EXPRESSION_STANDARD_DEVIATION = 0x4,
+                SET_EXPRESSION_MIN = 0x5,
+                SET_EXPRESSION_MAX = 0x6
             };
             // Alignment: 4
             // Member count: 11
@@ -5085,18 +5097,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nSetParent = 0x1DC; // ParticleParentSetMode_t
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_RemapAverageScalarValuetoCP {
-                constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x1C8; // int32
-                constexpr std::ptrdiff_t m_nOutVectorField = 0x1CC; // int32
-                constexpr std::ptrdiff_t m_nField = 0x1D0; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_flInputMin = 0x1D4; // float32
-                constexpr std::ptrdiff_t m_flInputMax = 0x1D8; // float32
-                constexpr std::ptrdiff_t m_flOutputMin = 0x1DC; // float32
-                constexpr std::ptrdiff_t m_flOutputMax = 0x1E0; // float32
+                constexpr std::ptrdiff_t m_nExpression = 0x1C8; // SetStatisticExpressionType_t
+                constexpr std::ptrdiff_t m_flDecimalPlaces = 0x1D0; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_nOutControlPointNumber = 0x330; // int32
+                constexpr std::ptrdiff_t m_nOutVectorField = 0x334; // int32
+                constexpr std::ptrdiff_t m_nField = 0x338; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_flOutputRemap = 0x340; // CParticleRemapFloatInput
             }
             // Parent: None
             // Field count: 11

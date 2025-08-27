@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-18 23:52:47.183323500 UTC
+// 2025-08-27 00:14:42.751419600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: particles.dll
         // Class count: 432
-        // Enum count: 68
+        // Enum count: 69
         pub mod particles_dll {
             // Alignment: 4
             // Member count: 6
@@ -217,6 +217,19 @@ pub mod cs2_dumper {
                 PARTICLE_LIGHTING_PER_PARTICLE = 0x0,
                 PARTICLE_LIGHTING_PER_VERTEX = 0x1,
                 PARTICLE_LIGHTING_PER_PIXEL = u32::MAX
+            }
+            // Alignment: 4
+            // Member count: 8
+            #[repr(u32)]
+            pub enum SetStatisticExpressionType_t {
+                SET_EXPRESSION_UNINITIALIZED = u32::MAX,
+                SET_EXPRESSION_SUM = 0x0,
+                SET_EXPRESSION_MEAN = 0x1,
+                SET_EXPRESSION_MEDIAN = 0x2,
+                SET_EXPRESSION_MODE = 0x3,
+                SET_EXPRESSION_STANDARD_DEVIATION = 0x4,
+                SET_EXPRESSION_MIN = 0x5,
+                SET_EXPRESSION_MAX = 0x6
             }
             // Alignment: 4
             // Member count: 11
@@ -5150,18 +5163,17 @@ pub mod cs2_dumper {
                 pub const m_nSetParent: usize = 0x1DC; // ParticleParentSetMode_t
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_RemapAverageScalarValuetoCP {
-                pub const m_nOutControlPointNumber: usize = 0x1C8; // int32
-                pub const m_nOutVectorField: usize = 0x1CC; // int32
-                pub const m_nField: usize = 0x1D0; // ParticleAttributeIndex_t
-                pub const m_flInputMin: usize = 0x1D4; // float32
-                pub const m_flInputMax: usize = 0x1D8; // float32
-                pub const m_flOutputMin: usize = 0x1DC; // float32
-                pub const m_flOutputMax: usize = 0x1E0; // float32
+                pub const m_nExpression: usize = 0x1C8; // SetStatisticExpressionType_t
+                pub const m_flDecimalPlaces: usize = 0x1D0; // CParticleCollectionFloatInput
+                pub const m_nOutControlPointNumber: usize = 0x330; // int32
+                pub const m_nOutVectorField: usize = 0x334; // int32
+                pub const m_nField: usize = 0x338; // ParticleAttributeIndex_t
+                pub const m_flOutputRemap: usize = 0x340; // CParticleRemapFloatInput
             }
             // Parent: None
             // Field count: 11
