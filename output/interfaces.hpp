@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-27 00:14:42.751419600 UTC
+// 2025-08-28 05:57:23.340171200 UTC
 
 #pragma once
 
@@ -164,12 +164,12 @@ namespace cs2_dumper {
         namespace server_dll {
             constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1706140;
             constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x16AEF90;
-            constexpr std::ptrdiff_t NavGameTest001 = 0x17AEB70;
-            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x175EE08;
-            constexpr std::ptrdiff_t Source2GameClients001 = 0x175A7C0;
+            constexpr std::ptrdiff_t NavGameTest001 = 0x17AEB80;
+            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x175EE18;
+            constexpr std::ptrdiff_t Source2GameClients001 = 0x175A7D0;
             constexpr std::ptrdiff_t Source2GameDirector001 = 0x18B8020;
-            constexpr std::ptrdiff_t Source2GameEntities001 = 0x175E510;
-            constexpr std::ptrdiff_t Source2Server001 = 0x175E380;
+            constexpr std::ptrdiff_t Source2GameEntities001 = 0x175E520;
+            constexpr std::ptrdiff_t Source2Server001 = 0x175E390;
             constexpr std::ptrdiff_t Source2ServerConfig001 = 0x198B588;
             constexpr std::ptrdiff_t customnavsystem001 = 0x168E918;
         }

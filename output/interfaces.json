@@ -132,12 +132,12 @@
   "server.dll": {
     "EmptyWorldService001_Server": 24142144,
     "EntitySubclassUtilsV001": 23785360,
-    "NavGameTest001": 24832880,
-    "ServerToolsInfo_001": 24505864,
-    "Source2GameClients001": 24487872,
+    "NavGameTest001": 24832896,
+    "ServerToolsInfo_001": 24505880,
+    "Source2GameClients001": 24487888,
     "Source2GameDirector001": 25919520,
-    "Source2GameEntities001": 24503568,
-    "Source2Server001": 24503168,
+    "Source2GameEntities001": 24503584,
+    "Source2Server001": 24503184,
     "Source2ServerConfig001": 26785160,
     "customnavsystem001": 23652632
   },
