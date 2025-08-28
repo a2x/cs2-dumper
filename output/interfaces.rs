@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-27 00:14:42.751419600 UTC
+// 2025-08-28 05:57:23.340171200 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -162,12 +162,12 @@ pub mod cs2_dumper {
         pub mod server_dll {
             pub const EmptyWorldService001_Server: usize = 0x1706140;
             pub const EntitySubclassUtilsV001: usize = 0x16AEF90;
-            pub const NavGameTest001: usize = 0x17AEB70;
-            pub const ServerToolsInfo_001: usize = 0x175EE08;
-            pub const Source2GameClients001: usize = 0x175A7C0;
+            pub const NavGameTest001: usize = 0x17AEB80;
+            pub const ServerToolsInfo_001: usize = 0x175EE18;
+            pub const Source2GameClients001: usize = 0x175A7D0;
             pub const Source2GameDirector001: usize = 0x18B8020;
-            pub const Source2GameEntities001: usize = 0x175E510;
-            pub const Source2Server001: usize = 0x175E380;
+            pub const Source2GameEntities001: usize = 0x175E520;
+            pub const Source2Server001: usize = 0x175E390;
             pub const Source2ServerConfig001: usize = 0x198B588;
             pub const customnavsystem001: usize = 0x168E918;
         }

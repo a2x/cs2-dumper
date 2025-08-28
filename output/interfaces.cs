@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-27 00:14:42.751419600 UTC
+// 2025-08-28 05:57:23.340171200 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -159,12 +159,12 @@ namespace CS2Dumper.Interfaces {
     public static class ServerDll {
         public const nint EmptyWorldService001_Server = 0x1706140;
         public const nint EntitySubclassUtilsV001 = 0x16AEF90;
-        public const nint NavGameTest001 = 0x17AEB70;
-        public const nint ServerToolsInfo_001 = 0x175EE08;
-        public const nint Source2GameClients001 = 0x175A7C0;
+        public const nint NavGameTest001 = 0x17AEB80;
+        public const nint ServerToolsInfo_001 = 0x175EE18;
+        public const nint Source2GameClients001 = 0x175A7D0;
         public const nint Source2GameDirector001 = 0x18B8020;
-        public const nint Source2GameEntities001 = 0x175E510;
-        public const nint Source2Server001 = 0x175E380;
+        public const nint Source2GameEntities001 = 0x175E520;
+        public const nint Source2Server001 = 0x175E390;
         public const nint Source2ServerConfig001 = 0x198B588;
         public const nint customnavsystem001 = 0x168E918;
     }
