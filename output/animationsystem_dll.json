@@ -3171,7 +3171,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNewParticleEffect": {
         "fields": {
@@ -7176,7 +7176,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "DynamicMeshDeformParams_t": {
         "fields": {
@@ -7674,7 +7674,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "MovementGaitId_t": {
         "fields": {
@@ -7686,7 +7686,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "NmBoneMaskSetDefinition_t": {
         "fields": {
