@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-08-28 05:57:23.340171200 UTC
+// 2025-09-03 23:44:00.118141200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2924,7 +2924,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bFastRetrigger = 0x4F3; // bool
             public const nint m_bPassthoughCaller = 0x4F4; // bool
         }
-        // Parent: 
+        // Parent: None
         // Field count: 6
         public static class SequenceHistory_t {
             public const nint m_hSequence = 0x0; // HSequence
@@ -3279,7 +3279,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nGraphCreationFlagsAG2 = 0x5B4; // uint8
             public const nint m_nServerGraphDefReloadCountAG2 = 0x5F8; // int32
         }
-        // Parent: 
+        // Parent: None
         // Field count: 10
         public static class CBuoyancyHelper {
             public const nint m_nFluidType = 0x18; // CUtlStringToken
@@ -3636,7 +3636,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_iInputFilter = 0x860; // int32
             public const nint m_iDontMessageParent = 0x864; // int32
         }
-        // Parent: 
+        // Parent: None
         // Field count: 2
         //
         // Metadata:
@@ -3646,7 +3646,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_timestamp = 0x8; // GameTime_t
             public const nint m_nWorldGroupId = 0xC; // WorldGroupId_t
         }
-        // Parent: 
+        // Parent: None
         // Field count: 5
         //
         // Metadata:
@@ -3678,7 +3678,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CWeaponM4A1Silencer {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 7
         //
         // Metadata:
@@ -3706,7 +3706,7 @@ namespace CS2Dumper.Schemas {
         // MPropertyDescription
         public static class CPulseCursorFuncs {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 4
         //
         // Metadata:
@@ -3878,7 +3878,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_iHltvReplayEntity = 0xD64; // CEntityIndex
             public const nint m_sndOpvarLatchData = 0xD68; // CUtlVector<sndopvarlatchdata_t>
         }
-        // Parent: 
+        // Parent: None
         // Field count: 2
         //
         // Metadata:
@@ -4054,7 +4054,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CPointServerCommand {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 13
         //
         // Metadata:
@@ -4741,7 +4741,7 @@ namespace CS2Dumper.Schemas {
         // MPulseDomainHookInfo
         public static class CFuncMoverAPI {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 33
         //
         // Metadata:
@@ -5126,7 +5126,7 @@ namespace CS2Dumper.Schemas {
         public static class CSingleplayRules {
             public const nint m_bSinglePlayerGameEnding = 0xC0; // bool
         }
-        // Parent: 
+        // Parent: None
         // Field count: 17
         //
         // Metadata:
@@ -5329,7 +5329,7 @@ namespace CS2Dumper.Schemas {
         public static class CMapSharedEnvironment {
             public const nint m_targetMapName = 0x4F0; // CUtlSymbolLarge
         }
-        // Parent: 
+        // Parent: None
         // Field count: 8
         //
         // Metadata:
@@ -5462,7 +5462,7 @@ namespace CS2Dumper.Schemas {
         public static class CPulseCell_Outflow_ListenForEntityOutput__CursorState_t {
             public const nint m_entity = 0x0; // CHandle<CBaseEntity>
         }
-        // Parent: 
+        // Parent: None
         // Field count: 4
         //
         // Metadata:
@@ -5711,7 +5711,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_materialGroup = 0x3F4; // CUtlStringToken
             public const nint m_nHitboxSet = 0x3F8; // uint8
         }
-        // Parent: 
+        // Parent: None
         // Field count: 0
         public static class CEntityComponent {
         }
@@ -6123,7 +6123,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_wasRestored = 0x50C; // bool
             public const nint m_integrator = 0x510; // CConstantForceController
         }
-        // Parent: 
+        // Parent: None
         // Field count: 6
         //
         // Metadata:
@@ -6316,7 +6316,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vWindDirection = 0x58C; // Vector
             public const nint m_bFirstTime = 0x598; // bool
         }
-        // Parent: 
+        // Parent: None
         // Field count: 13
         public static class CBot {
             public const nint m_pController = 0x10; // CCSPlayerController*
@@ -6707,7 +6707,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flTicksSinceLastSurfingDetected = 0x558; // float32
             public const nint m_bWasSurfing = 0x55C; // bool
         }
-        // Parent: 
+        // Parent: None
         // Field count: 5
         //
         // Metadata:
@@ -6875,7 +6875,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
             public const nint m_CaseOutflows = 0x90; // CUtlVector<CPulse_OutflowConnection>
         }
-        // Parent: 
+        // Parent: None
         // Field count: 3
         //
         // Metadata:
@@ -7009,7 +7009,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flAvgInterval = 0x508; // float32
             public const nint m_Velocity = 0x510; // CEntityOutputTemplate<float32>
         }
-        // Parent: 
+        // Parent: None
         // Field count: 3
         //
         // Metadata:
@@ -7147,7 +7147,7 @@ namespace CS2Dumper.Schemas {
         public static class CCSPointScript {
             public const nint m_pParent = 0x118; // CCSPointScriptEntity*
         }
-        // Parent: 
+        // Parent: None
         // Field count: 6
         //
         // Metadata:
@@ -7484,7 +7484,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_iEntryCount = 0xB4; // int32
             public const nint m_iEntryWins = 0xB8; // int32
         }
-        // Parent: 
+        // Parent: None
         // Field count: 2
         //
         // Metadata:
@@ -7595,7 +7595,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CWorld {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 8
         //
         // Metadata:
@@ -7647,7 +7647,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CTriggerGravity {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 17
         //
         // Metadata:
@@ -8207,7 +8207,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bIsOn = 0x544; // bool
             public const nint m_pNext = 0x548; // CPointCamera*
         }
-        // Parent: 
+        // Parent: None
         // Field count: 2
         //
         // Metadata:
@@ -9005,7 +9005,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CDecoyGrenade {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 13
         //
         // Metadata:
@@ -9118,7 +9118,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x778; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
             public const nint m_vecViewOffset = 0x7B8; // CNetworkViewOffsetVector
         }
-        // Parent: 
+        // Parent: None
         // Field count: 14
         //
         // Metadata:
@@ -9139,7 +9139,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flNewHDRColorScale = 0x38; // float32
             public const nint m_flNewFarZ = 0x3C; // float32
         }
-        // Parent: 
+        // Parent: None
         // Field count: 11
         //
         // Metadata:
@@ -9277,7 +9277,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bIsOtherEnemy = 0x74; // bool
             public const nint m_killType = 0x75; // EKillTypes_t
         }
-        // Parent: 
+        // Parent: None
         // Field count: 8
         //
         // Metadata:
@@ -9438,7 +9438,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_distance = 0x4F4; // float32
             public const nint m_directionEntityName = 0x4F8; // CUtlSymbolLarge
         }
-        // Parent: 
+        // Parent: None
         // Field count: 80
         //
         // Metadata:
@@ -9574,7 +9574,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CPlayer_UseServices {
         }
-        // Parent: 
+        // Parent: None
         // Field count: 2
         //
         // Metadata:
@@ -9866,7 +9866,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flSpeedWhenSpinUpOrSpinDownStarted = 0x524; // float32
             public const nint m_motor = 0x538; // CMotorController
         }
-        // Parent: 
+        // Parent: None
         // Field count: 4
         //
         // Metadata:
@@ -10074,7 +10074,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnNewPhaseStarted = 0xEC8; // CEntityOutputTemplate<int32>
             public const nint m_OnLevelTransition = 0xEF0; // CEntityOutputTemplate<int32>
         }
-        // Parent: 
+        // Parent: None
         // Field count: 24
         //
         // Metadata:
@@ -10422,7 +10422,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bSpotted = 0x8; // bool
             public const nint m_bSpottedByMask = 0xC; // uint32[2]
         }
-        // Parent: 
+        // Parent: None
         // Field count: 25
         //
         // Metadata:
@@ -11543,7 +11543,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnPass = 0x4F8; // CEntityIOOutput
             public const nint m_OnFail = 0x520; // CEntityIOOutput
         }
-        // Parent: 
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -11657,7 +11657,7 @@ namespace CS2Dumper.Schemas {
         public static class CPointClientUIWorldTextPanel {
             public const nint m_messageText = 0x9F0; // char[512]
         }
-        // Parent: 
+        // Parent: None
         // Field count: 11
         //
         // Metadata:
