@@ -13,9 +13,6 @@
     "Source2ClientPrediction001": 29303744,
     "Source2ClientUI001": 29379360
   },
-  "crashhandler64.dll": {
-    "": 18446603368221507591
-  },
   "engine2.dll": {
     "BenchmarkService001": 6193696,
     "BugService001": 9005360,
@@ -148,7 +145,7 @@
     "SoundOpSystem001": 4059472,
     "SoundOpSystemEdit001": 4059200,
     "SoundSystem001": 4057968,
-    "VMixEditTool001": 1214179179
+    "VMixEditTool001": 1214179227
   },
   "steamaudio.dll": {
     "SteamAudio001": 2429552
@@ -177,10 +174,10 @@
     "p2pvoicesingleton002": 22081776
   },
   "tier0.dll": {
-    "TestScriptMgr001": 3732960,
-    "VEngineCvar007": 3777408,
-    "VProcessUtils002": 3732768,
-    "VStringTokenSystem001": 3936752
+    "TestScriptMgr001": 3729040,
+    "VEngineCvar007": 3773568,
+    "VProcessUtils002": 3728672,
+    "VStringTokenSystem001": 3932736
   },
   "v8system.dll": {
     "Source2V8System001": 202160

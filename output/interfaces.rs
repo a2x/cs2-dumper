@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-03 23:44:00.118141200 UTC
+// 2025-09-06 00:45:00.389982800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -20,10 +20,6 @@ pub mod cs2_dumper {
             pub const Source2ClientConfig001: usize = 0x1DC89F0;
             pub const Source2ClientPrediction001: usize = 0x1BF23C0;
             pub const Source2ClientUI001: usize = 0x1C04B20;
-        }
-        // Module: crashhandler64.dll
-        pub mod crashhandler64_dll {
-            pub const : usize = 0xFFFF8007735E0007;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -180,7 +176,7 @@ pub mod cs2_dumper {
             pub const SoundOpSystem001: usize = 0x3DF150;
             pub const SoundOpSystemEdit001: usize = 0x3DF040;
             pub const SoundSystem001: usize = 0x3DEB70;
-            pub const VMixEditTool001: usize = 0x485EE76B;
+            pub const VMixEditTool001: usize = 0x485EE79B;
         }
         // Module: steamaudio.dll
         pub mod steamaudio_dll {
@@ -212,10 +208,10 @@ pub mod cs2_dumper {
         }
         // Module: tier0.dll
         pub mod tier0_dll {
-            pub const TestScriptMgr001: usize = 0x38F5E0;
-            pub const VEngineCvar007: usize = 0x39A380;
-            pub const VProcessUtils002: usize = 0x38F520;
-            pub const VStringTokenSystem001: usize = 0x3C11F0;
+            pub const TestScriptMgr001: usize = 0x38E690;
+            pub const VEngineCvar007: usize = 0x399480;
+            pub const VProcessUtils002: usize = 0x38E520;
+            pub const VStringTokenSystem001: usize = 0x3C0240;
         }
         // Module: v8system.dll
         pub mod v8system_dll {
