@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-03 23:44:00.118141200 UTC
+// 2025-09-06 00:45:00.389982800 UTC
 
 #pragma once
 
@@ -22,10 +22,6 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t Source2ClientConfig001 = 0x1DC89F0;
             constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x1BF23C0;
             constexpr std::ptrdiff_t Source2ClientUI001 = 0x1C04B20;
-        }
-        // Module: crashhandler64.dll
-        namespace crashhandler64_dll {
-            constexpr std::ptrdiff_t  = 0xFFFF8007735E0007;
         }
         // Module: engine2.dll
         namespace engine2_dll {
@@ -182,7 +178,7 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t SoundOpSystem001 = 0x3DF150;
             constexpr std::ptrdiff_t SoundOpSystemEdit001 = 0x3DF040;
             constexpr std::ptrdiff_t SoundSystem001 = 0x3DEB70;
-            constexpr std::ptrdiff_t VMixEditTool001 = 0x485EE76B;
+            constexpr std::ptrdiff_t VMixEditTool001 = 0x485EE79B;
         }
         // Module: steamaudio.dll
         namespace steamaudio_dll {
@@ -214,10 +210,10 @@ namespace cs2_dumper {
         }
         // Module: tier0.dll
         namespace tier0_dll {
-            constexpr std::ptrdiff_t TestScriptMgr001 = 0x38F5E0;
-            constexpr std::ptrdiff_t VEngineCvar007 = 0x39A380;
-            constexpr std::ptrdiff_t VProcessUtils002 = 0x38F520;
-            constexpr std::ptrdiff_t VStringTokenSystem001 = 0x3C11F0;
+            constexpr std::ptrdiff_t TestScriptMgr001 = 0x38E690;
+            constexpr std::ptrdiff_t VEngineCvar007 = 0x399480;
+            constexpr std::ptrdiff_t VProcessUtils002 = 0x38E520;
+            constexpr std::ptrdiff_t VStringTokenSystem001 = 0x3C0240;
         }
         // Module: v8system.dll
         namespace v8system_dll {
