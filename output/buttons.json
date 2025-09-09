@@ -7,14 +7,14 @@
     "forward": 29277008,
     "jump": 29277728,
     "left": 29277296,
-    "lookatweapon": 31707648,
+    "lookatweapon": 31708048,
     "reload": 29276288,
     "right": 29277440,
-    "showscores": 31707360,
+    "showscores": 31707760,
     "sprint": 29276144,
     "turnleft": 29276720,
     "turnright": 29276864,
     "use": 29277584,
-    "zoom": 31707504
+    "zoom": 31707904
   }
 }

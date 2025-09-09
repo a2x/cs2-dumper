@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-06 00:45:00.389982800 UTC
+// 2025-09-09 05:55:39.126756800 UTC
 
 #pragma once
 
@@ -17,11 +17,11 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x1BEB120;
             constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x1BA6230;
             constexpr std::ptrdiff_t GameClientExports001 = 0x1BE7F10;
-            constexpr std::ptrdiff_t LegacyGameUI001 = 0x1C06630;
-            constexpr std::ptrdiff_t Source2Client002 = 0x1E2D290;
-            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x1DC89F0;
+            constexpr std::ptrdiff_t LegacyGameUI001 = 0x1C066A0;
+            constexpr std::ptrdiff_t Source2Client002 = 0x1E2D410;
+            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x1DC8B70;
             constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x1BF23C0;
-            constexpr std::ptrdiff_t Source2ClientUI001 = 0x1C04B20;
+            constexpr std::ptrdiff_t Source2ClientUI001 = 0x1C04B90;
         }
         // Module: engine2.dll
         namespace engine2_dll {
@@ -129,7 +129,7 @@ namespace cs2_dumper {
         }
         // Module: particles.dll
         namespace particles_dll {
-            constexpr std::ptrdiff_t ParticleSystemMgr003 = 0x59DFF0;
+            constexpr std::ptrdiff_t ParticleSystemMgr003 = 0x59E050;
         }
         // Module: pulse_system.dll
         namespace pulse_system_dll {
@@ -162,8 +162,8 @@ namespace cs2_dumper {
         }
         // Module: server.dll
         namespace server_dll {
-            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1708130;
-            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x16B0FB0;
+            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1708120;
+            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x16B0FA0;
             constexpr std::ptrdiff_t NavGameTest001 = 0x17B0C50;
             constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x1760F18;
             constexpr std::ptrdiff_t Source2GameClients001 = 0x175C8D0;
@@ -171,7 +171,7 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t Source2GameEntities001 = 0x1760620;
             constexpr std::ptrdiff_t Source2Server001 = 0x1760490;
             constexpr std::ptrdiff_t Source2ServerConfig001 = 0x198D6C8;
-            constexpr std::ptrdiff_t customnavsystem001 = 0x1690928;
+            constexpr std::ptrdiff_t customnavsystem001 = 0x1690918;
         }
         // Module: soundsystem.dll
         namespace soundsystem_dll {
@@ -218,6 +218,10 @@ namespace cs2_dumper {
         // Module: v8system.dll
         namespace v8system_dll {
             constexpr std::ptrdiff_t Source2V8System001 = 0x315B0;
+        }
+        // Module: vconcomm.dll
+        namespace vconcomm_dll {
+            constexpr std::ptrdiff_t VConComm001 = 0x375C0;
         }
         // Module: vphysics2.dll
         namespace vphysics2_dll {
