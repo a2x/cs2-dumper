@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-06 00:45:00.389982800 UTC
+// 2025-09-09 05:55:39.126756800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,23 +7,23 @@ pub mod cs2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwCSGOInput: usize = 0x1E3D2E0;
-            pub const dwEntityList: usize = 0x1D15E08;
-            pub const dwGameEntitySystem: usize = 0x1FB5D18;
+            pub const dwCSGOInput: usize = 0x1E3D470;
+            pub const dwEntityList: usize = 0x1D15F88;
+            pub const dwGameEntitySystem: usize = 0x1FB5EA8;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x20F0;
-            pub const dwGameRules: usize = 0x1E2EF78;
+            pub const dwGameRules: usize = 0x1E2F0F8;
             pub const dwGlobalVars: usize = 0x1BE77F0;
-            pub const dwGlowManager: usize = 0x1E2EF88;
-            pub const dwLocalPlayerController: usize = 0x1E1F068;
+            pub const dwGlowManager: usize = 0x1E2F108;
+            pub const dwLocalPlayerController: usize = 0x1E1F1E8;
             pub const dwLocalPlayerPawn: usize = 0x1BF2490;
-            pub const dwPlantedC4: usize = 0x1E37FD0;
+            pub const dwPlantedC4: usize = 0x1E38160;
             pub const dwPrediction: usize = 0x1BF23C0;
-            pub const dwSensitivity: usize = 0x1E2FAA8;
+            pub const dwSensitivity: usize = 0x1E2FC28;
             pub const dwSensitivity_sensitivity: usize = 0x48;
-            pub const dwViewAngles: usize = 0x1E3DA90;
-            pub const dwViewMatrix: usize = 0x1E32F70;
-            pub const dwViewRender: usize = 0x1E33C00;
-            pub const dwWeaponC4: usize = 0x1DD06B8;
+            pub const dwViewAngles: usize = 0x1E3DC20;
+            pub const dwViewMatrix: usize = 0x1E330F0;
+            pub const dwViewRender: usize = 0x1E33D80;
+            pub const dwWeaponC4: usize = 0x1DD0838;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
