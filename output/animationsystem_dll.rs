@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-09-10 01:50:35.597385800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1819,7 +1819,7 @@ pub mod cs2_dumper {
                 pub const m_internalOps: usize = 0x40; // CUtlVector<CUtlString>
                 pub const m_decodedAnims: usize = 0x58; // CUtlVector<CUtlString>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1832,7 +1832,7 @@ pub mod cs2_dumper {
             pub mod PulseRuntimeVarIndex_t {
                 pub const m_Value: usize = 0x0; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -2299,7 +2299,7 @@ pub mod cs2_dumper {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_weights: usize = 0x8; // CUtlVector<float32>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -3738,7 +3738,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CNmVelocityBasedSpeedScaleNode__CDefinition {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:

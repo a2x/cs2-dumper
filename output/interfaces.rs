@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-09-10 01:50:35.597385800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -24,26 +24,26 @@ pub mod cs2_dumper {
         // Module: engine2.dll
         pub mod engine2_dll {
             pub const BenchmarkService001: usize = 0x5E8220;
-            pub const BugService001: usize = 0x896930;
-            pub const ClientServerEngineLoopService_001: usize = 0x8D8010;
+            pub const BugService001: usize = 0x896910;
+            pub const ClientServerEngineLoopService_001: usize = 0x8D7FF0;
             pub const EngineGameUI001: usize = 0x5E5FB0;
-            pub const EngineServiceMgr001: usize = 0x8D7950;
-            pub const GameEventSystemClientV001: usize = 0x8D7C20;
-            pub const GameEventSystemServerV001: usize = 0x8D7D40;
+            pub const EngineServiceMgr001: usize = 0x8D7930;
+            pub const GameEventSystemClientV001: usize = 0x8D7C00;
+            pub const GameEventSystemServerV001: usize = 0x8D7D20;
             pub const GameResourceServiceClientV001: usize = 0x5E8320;
             pub const GameResourceServiceServerV001: usize = 0x5E8380;
-            pub const GameUIService_001: usize = 0x896D60;
+            pub const GameUIService_001: usize = 0x896D40;
             pub const HostStateMgr001: usize = 0x5E8BC0;
             pub const INETSUPPORT_001: usize = 0x5E15C0;
-            pub const InputService_001: usize = 0x897050;
+            pub const InputService_001: usize = 0x897030;
             pub const KeyValueCache001: usize = 0x5E8C70;
-            pub const MapListService_001: usize = 0x8D5FD0;
-            pub const NetworkClientService_001: usize = 0x8D6160;
-            pub const NetworkP2PService_001: usize = 0x8D6480;
-            pub const NetworkServerService_001: usize = 0x8D6610;
+            pub const MapListService_001: usize = 0x8D5FB0;
+            pub const NetworkClientService_001: usize = 0x8D6140;
+            pub const NetworkP2PService_001: usize = 0x8D6460;
+            pub const NetworkServerService_001: usize = 0x8D65F0;
             pub const NetworkService_001: usize = 0x5E84F0;
-            pub const RenderService_001: usize = 0x8D6870;
-            pub const ScreenshotService001: usize = 0x8D6B20;
+            pub const RenderService_001: usize = 0x8D6850;
+            pub const ScreenshotService001: usize = 0x8D6B00;
             pub const SimpleEngineLoopService_001: usize = 0x5E8CD0;
             pub const SoundService_001: usize = 0x5E8530;
             pub const Source2EngineToClient001: usize = 0x5E56E0;
@@ -51,7 +51,7 @@ pub mod cs2_dumper {
             pub const Source2EngineToServer001: usize = 0x5E57B8;
             pub const Source2EngineToServerStringTable001: usize = 0x5E57E0;
             pub const SplitScreenService_001: usize = 0x5E8830;
-            pub const StatsService_001: usize = 0x8D6F20;
+            pub const StatsService_001: usize = 0x8D6F00;
             pub const ToolService_001: usize = 0x5E89F0;
             pub const VENGINE_GAMEUIFUNCS_VERSION005: usize = 0x5E6040;
             pub const VProfService_001: usize = 0x5E8A30;
@@ -160,8 +160,8 @@ pub mod cs2_dumper {
         }
         // Module: server.dll
         pub mod server_dll {
-            pub const EmptyWorldService001_Server: usize = 0x1708120;
-            pub const EntitySubclassUtilsV001: usize = 0x16B0FA0;
+            pub const EmptyWorldService001_Server: usize = 0x1708110;
+            pub const EntitySubclassUtilsV001: usize = 0x16B0F90;
             pub const NavGameTest001: usize = 0x17B0C50;
             pub const ServerToolsInfo_001: usize = 0x1760F18;
             pub const Source2GameClients001: usize = 0x175C8D0;
@@ -169,7 +169,7 @@ pub mod cs2_dumper {
             pub const Source2GameEntities001: usize = 0x1760620;
             pub const Source2Server001: usize = 0x1760490;
             pub const Source2ServerConfig001: usize = 0x198D6C8;
-            pub const customnavsystem001: usize = 0x1690918;
+            pub const customnavsystem001: usize = 0x1690908;
         }
         // Module: soundsystem.dll
         pub mod soundsystem_dll {

@@ -30,7 +30,7 @@
             "type_name": "string_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAI_ChangeHintGroup": {
         "fields": {
@@ -212,7 +212,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeContainer": {
         "fields": {
@@ -255,7 +255,7 @@
             "type_name": "CEconItemAttribute"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager": {
         "fields": {
@@ -283,7 +283,7 @@
             "type_name": "attributeprovidertypes_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager__cached_attribute_float_t": {
         "fields": {
@@ -1491,7 +1491,7 @@
             "type_name": "BloodType"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CBaseEntityAPI": {
         "fields": {},
@@ -2762,7 +2762,7 @@
           "m_viewForward": 220
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBreakable": {
         "fields": {
@@ -2920,7 +2920,7 @@
           "m_vecWheelFrictionScales": 72
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBuyZone": {
         "fields": {
@@ -4057,99 +4057,98 @@
       },
       "CCSPlayerController": {
         "fields": {
-          "m_DesiredObserverMode": 2348,
-          "m_LastTeamDamageWarningTime": 2488,
-          "m_LastTimePlayerWasDisconnectedForPawnsRemove": 2492,
-          "m_bAbandonAllowsSurrender": 2306,
-          "m_bAbandonOffersInstantSurrender": 2307,
+          "m_DesiredObserverMode": 2316,
+          "m_LastTeamDamageWarningTime": 2456,
+          "m_LastTimePlayerWasDisconnectedForPawnsRemove": 2460,
+          "m_bAbandonAllowsSurrender": 2274,
+          "m_bAbandonOffersInstantSurrender": 2275,
           "m_bAttemptedToGetColor": 2117,
-          "m_bCanControlObservedBot": 2336,
-          "m_bCannotBeKicked": 2304,
-          "m_bControllingBot": 2328,
-          "m_bDisconnection1MinWarningPrinted": 2308,
-          "m_bEverFullyConnected": 2305,
+          "m_bCanControlObservedBot": 2304,
+          "m_bCannotBeKicked": 2272,
+          "m_bControllingBot": 2296,
+          "m_bDisconnection1MinWarningPrinted": 2276,
+          "m_bEverFullyConnected": 2273,
           "m_bEverPlayedOnTeam": 2116,
-          "m_bFireBulletsSeedSynchronized": 2665,
-          "m_bGaveTeamDamageWarning": 2474,
-          "m_bGaveTeamDamageWarningThisRound": 2475,
-          "m_bHasBeenControlledByPlayerThisRound": 2330,
+          "m_bFireBulletsSeedSynchronized": 2633,
+          "m_bGaveTeamDamageWarning": 2442,
+          "m_bGaveTeamDamageWarningThisRound": 2443,
+          "m_bHasBeenControlledByPlayerThisRound": 2298,
           "m_bHasCommunicationAbuseMute": 2084,
-          "m_bHasControlledBotThisRound": 2329,
+          "m_bHasControlledBotThisRound": 2297,
           "m_bHasSeenJoinGame": 2126,
           "m_bInSwitchTeam": 2125,
           "m_bJustBecameSpectator": 2127,
-          "m_bJustDidTeamKill": 2472,
-          "m_bMvpNoMusic": 2410,
-          "m_bPawnHasDefuser": 2368,
-          "m_bPawnHasHelmet": 2369,
-          "m_bPawnIsAlive": 2356,
-          "m_bPunishForTeamKill": 2473,
+          "m_bJustDidTeamKill": 2440,
+          "m_bMvpNoMusic": 2378,
+          "m_bPawnHasDefuser": 2336,
+          "m_bPawnHasHelmet": 2337,
+          "m_bPawnIsAlive": 2324,
+          "m_bPunishForTeamKill": 2441,
           "m_bRemoveAllItemsOnNextRoundReset": 2129,
-          "m_bScoreReported": 2309,
-          "m_bShowHints": 2464,
+          "m_bScoreReported": 2277,
+          "m_bShowHints": 2432,
           "m_bSwitchTeamsOnNextRoundReset": 2128,
           "m_bTeamChanged": 2124,
-          "m_dblLastReceivedPacketPlatFloatTime": 2480,
-          "m_eMvpReason": 2412,
-          "m_eNetworkDisconnectionReason": 2300,
+          "m_dblLastReceivedPacketPlatFloatTime": 2448,
+          "m_eMvpReason": 2380,
+          "m_eNetworkDisconnectionReason": 2268,
           "m_flForceTeamTime": 2108,
           "m_flLastJoinTeamTime": 2132,
-          "m_flSmoothedPing": 2432,
-          "m_hDesiredObserverTarget": 2352,
-          "m_hObserverPawn": 2344,
-          "m_hOriginalControllerOfCurrentPawn": 2384,
-          "m_hPlayerPawn": 2340,
-          "m_iCoachingTeam": 2176,
+          "m_flSmoothedPing": 2400,
+          "m_hDesiredObserverTarget": 2320,
+          "m_hObserverPawn": 2312,
+          "m_hOriginalControllerOfCurrentPawn": 2352,
+          "m_hPlayerPawn": 2308,
+          "m_iCoachingTeam": 2144,
           "m_iCompTeammateColor": 2112,
-          "m_iCompetitiveRankType": 2208,
-          "m_iCompetitiveRanking": 2200,
-          "m_iCompetitiveRankingPredicted_Loss": 2216,
-          "m_iCompetitiveRankingPredicted_Tie": 2220,
-          "m_iCompetitiveRankingPredicted_Win": 2212,
-          "m_iCompetitiveWins": 2204,
-          "m_iDraftIndex": 2288,
-          "m_iMVPs": 2424,
-          "m_iMusicKitID": 2416,
-          "m_iMusicKitMVPs": 2420,
-          "m_iNextTimeCheck": 2468,
-          "m_iPawnArmor": 2364,
-          "m_iPawnBotDifficulty": 2380,
-          "m_iPawnHealth": 2360,
-          "m_iPawnLifetimeEnd": 2376,
-          "m_iPawnLifetimeStart": 2372,
+          "m_iCompetitiveRankType": 2176,
+          "m_iCompetitiveRanking": 2168,
+          "m_iCompetitiveRankingPredicted_Loss": 2184,
+          "m_iCompetitiveRankingPredicted_Tie": 2188,
+          "m_iCompetitiveRankingPredicted_Win": 2180,
+          "m_iCompetitiveWins": 2172,
+          "m_iDraftIndex": 2256,
+          "m_iMVPs": 2392,
+          "m_iMusicKitID": 2384,
+          "m_iMusicKitMVPs": 2388,
+          "m_iNextTimeCheck": 2436,
+          "m_iPawnArmor": 2332,
+          "m_iPawnBotDifficulty": 2348,
+          "m_iPawnHealth": 2328,
+          "m_iPawnLifetimeEnd": 2344,
+          "m_iPawnLifetimeStart": 2340,
           "m_iPendingTeamNum": 2104,
           "m_iPing": 2080,
-          "m_iRoundScore": 2392,
-          "m_iRoundsWon": 2396,
-          "m_iScore": 2388,
+          "m_iRoundScore": 2360,
+          "m_iRoundsWon": 2364,
+          "m_iScore": 2356,
           "m_iTeammatePreferredColor": 2120,
-          "m_lastHeldVoteTimer": 2440,
-          "m_msQueuedModeDisconnectionTimestamp": 2292,
-          "m_nBotsControlledThisRound": 2332,
-          "m_nDisconnectionTick": 2312,
-          "m_nEndMatchNextMapVote": 2224,
-          "m_nFirstKill": 2408,
-          "m_nKillCount": 2409,
-          "m_nNonSuspiciousHitStreak": 2500,
-          "m_nPawnCharacterDefIndex": 2370,
-          "m_nPlayerDominated": 2184,
-          "m_nPlayerDominatingMe": 2192,
-          "m_nQuestProgressReason": 2236,
-          "m_nSuspiciousHitCount": 2496,
-          "m_nUpdateCounter": 2428,
+          "m_lastHeldVoteTimer": 2408,
+          "m_msQueuedModeDisconnectionTimestamp": 2260,
+          "m_nBotsControlledThisRound": 2300,
+          "m_nDisconnectionTick": 2280,
+          "m_nEndMatchNextMapVote": 2192,
+          "m_nFirstKill": 2376,
+          "m_nKillCount": 2377,
+          "m_nNonSuspiciousHitStreak": 2468,
+          "m_nPawnCharacterDefIndex": 2338,
+          "m_nPlayerDominated": 2152,
+          "m_nPlayerDominatingMe": 2160,
+          "m_nQuestProgressReason": 2204,
+          "m_nSuspiciousHitCount": 2464,
+          "m_nUpdateCounter": 2396,
           "m_pActionTrackingServices": 2064,
           "m_pDamageServices": 2072,
           "m_pInGameMoneyServices": 2048,
           "m_pInventoryServices": 2056,
-          "m_recentKillQueue": 2400,
-          "m_rtActiveMissionPeriod": 2232,
+          "m_recentKillQueue": 2368,
+          "m_rtActiveMissionPeriod": 2200,
           "m_szClan": 2136,
-          "m_szClanName": 2144,
           "m_szCrosshairCodes": 2096,
-          "m_uiAbandonRecordedReason": 2296,
+          "m_uiAbandonRecordedReason": 2264,
           "m_uiCommunicationMuteFlags": 2088,
-          "m_unActiveQuestId": 2228,
-          "m_unPlayerTvControlFlags": 2240
+          "m_unActiveQuestId": 2196,
+          "m_unPlayerTvControlFlags": 2208
         },
         "metadata": [
           {
@@ -6379,7 +6378,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CColorCorrection": {
         "fields": {
@@ -6678,7 +6677,7 @@
             "type_name": "int"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CDynamicLight": {
         "fields": {
@@ -6959,7 +6958,7 @@
             "type_name": "char"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEconWearable": {
         "fields": {
@@ -7115,7 +7114,7 @@
       "CEntityComponent": {
         "fields": {},
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CEntityDissolve": {
         "fields": {
@@ -7232,7 +7231,7 @@
             "type_name": "int32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEntityInstance": {
         "fields": {
@@ -8971,7 +8970,7 @@
             "type_name": "Vector"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEnvWindVolume": {
         "fields": {
@@ -10043,7 +10042,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameSceneNodeHandle": {
         "fields": {
@@ -10062,7 +10061,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameText": {
         "fields": {
@@ -10187,7 +10186,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGradientFog": {
         "fields": {
@@ -12081,7 +12080,7 @@
             "type_name": "int8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CMolotovGrenade": {
         "fields": {},
@@ -12228,7 +12227,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNullEntity": {
         "fields": {},
@@ -18006,7 +18005,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CTimerEntity": {
         "fields": {
@@ -18823,7 +18822,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EngineCountdownTimer": {
         "fields": {
@@ -18848,7 +18847,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntityRenderAttribute_t": {
         "fields": {
@@ -18867,7 +18866,7 @@
             "type_name": "Vector4D"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntitySpottedState_t": {
         "fields": {
@@ -18921,7 +18920,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "OutflowWithRequirements_t": {
         "fields": {
@@ -18956,7 +18955,7 @@
             "type_name": "EHANDLE"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "PredictedDamageTag_t": {
         "fields": {
@@ -19075,7 +19074,7 @@
             "type_name": "CEntityHandle"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "SequenceHistory_t": {
         "fields": {
@@ -19087,7 +19086,7 @@
           "m_nSeqLoopMode": 12
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "SignatureOutflow_Continue": {
         "fields": {},
@@ -19161,7 +19160,7 @@
             "type_name": "uint8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "ViewAngleServerChange_t": {
         "fields": {
@@ -19205,7 +19204,7 @@
             "type_name": "uint16"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "WeaponPurchaseTracker_t": {
         "fields": {
@@ -19218,7 +19217,7 @@
             "type_name": "WeaponPurchaseCount_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "audioparams_t": {
         "fields": {
@@ -19255,7 +19254,7 @@
             "type_name": "uint32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogparams_t": {
         "fields": {
@@ -19402,7 +19401,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogplayerparams_t": {
         "fields": {
@@ -19428,7 +19427,7 @@
             "type_name": "CHandle<CFogController>"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "shard_model_desc_t": {
         "fields": {
@@ -19513,7 +19512,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "sky3dparams_t": {
         "fields": {
@@ -19556,7 +19555,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       }
     },
     "enums": {

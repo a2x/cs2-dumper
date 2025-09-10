@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-09-10 01:50:35.597385800 UTC
 
 #pragma once
 
@@ -1691,7 +1691,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_internalOps = 0x40; // CUtlVector<CUtlString>
                 constexpr std::ptrdiff_t m_decodedAnims = 0x58; // CUtlVector<CUtlString>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1704,7 +1704,7 @@ namespace cs2_dumper {
             namespace PulseRuntimeVarIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -2171,7 +2171,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_weights = 0x8; // CUtlVector<float32>
             }
-            // Parent: 
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -3610,7 +3610,7 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CNmVelocityBasedSpeedScaleNode__CDefinition {
             }
-            // Parent: 
+            // Parent: None
             // Field count: 8
             //
             // Metadata:
