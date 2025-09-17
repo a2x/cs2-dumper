@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 01:09:41.918835800 UTC
+// 2025-09-17 23:35:16.178232700 UTC
 
 #pragma once
 
@@ -6418,7 +6418,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_shakeCallback = 0x528; // CPhysicsShake
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 40
+            // Field count: 41
             //
             // Metadata:
             // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -6439,6 +6439,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flOffsetTickCompleteTime (float)
             // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
             // NetworkVarNames: m_flStamina (float)
+            // NetworkVarNames: m_vecInputRotated (Vector)
             // NetworkVarNames: m_bWasSurfing (bool)
             namespace CCSPlayer_MovementServices {
                 constexpr std::ptrdiff_t m_vecLadderNormal = 0x288; // Vector
@@ -6474,13 +6475,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flOffsetTickCompleteTime = 0x530; // float32
                 constexpr std::ptrdiff_t m_flOffsetTickStashedSpeed = 0x534; // float32
                 constexpr std::ptrdiff_t m_flStamina = 0x538; // float32
-                constexpr std::ptrdiff_t m_flHeightAtJumpStart = 0x53C; // float32
-                constexpr std::ptrdiff_t m_flMaxJumpHeightThisJump = 0x540; // float32
-                constexpr std::ptrdiff_t m_flMaxJumpHeightLastJump = 0x544; // float32
-                constexpr std::ptrdiff_t m_flStaminaAtJumpStart = 0x548; // float32
-                constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x54C; // float32
-                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x550; // float32
-                constexpr std::ptrdiff_t m_bWasSurfing = 0x554; // bool
+                constexpr std::ptrdiff_t m_vecInputRotated = 0x53C; // Vector
+                constexpr std::ptrdiff_t m_flHeightAtJumpStart = 0x548; // float32
+                constexpr std::ptrdiff_t m_flMaxJumpHeightThisJump = 0x54C; // float32
+                constexpr std::ptrdiff_t m_flMaxJumpHeightLastJump = 0x550; // float32
+                constexpr std::ptrdiff_t m_flStaminaAtJumpStart = 0x554; // float32
+                constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x558; // float32
+                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x55C; // float32
+                constexpr std::ptrdiff_t m_bWasSurfing = 0x560; // bool
             }
             // Parent: None
             // Field count: 5

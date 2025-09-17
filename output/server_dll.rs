@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 01:09:41.918835800 UTC
+// 2025-09-17 23:35:16.178232700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -6529,7 +6529,7 @@ pub mod cs2_dumper {
                 pub const m_shakeCallback: usize = 0x528; // CPhysicsShake
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 40
+            // Field count: 41
             //
             // Metadata:
             // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -6550,6 +6550,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flOffsetTickCompleteTime (float)
             // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
             // NetworkVarNames: m_flStamina (float)
+            // NetworkVarNames: m_vecInputRotated (Vector)
             // NetworkVarNames: m_bWasSurfing (bool)
             pub mod CCSPlayer_MovementServices {
                 pub const m_vecLadderNormal: usize = 0x288; // Vector
@@ -6585,13 +6586,14 @@ pub mod cs2_dumper {
                 pub const m_flOffsetTickCompleteTime: usize = 0x530; // float32
                 pub const m_flOffsetTickStashedSpeed: usize = 0x534; // float32
                 pub const m_flStamina: usize = 0x538; // float32
-                pub const m_flHeightAtJumpStart: usize = 0x53C; // float32
-                pub const m_flMaxJumpHeightThisJump: usize = 0x540; // float32
-                pub const m_flMaxJumpHeightLastJump: usize = 0x544; // float32
-                pub const m_flStaminaAtJumpStart: usize = 0x548; // float32
-                pub const m_flAccumulatedJumpError: usize = 0x54C; // float32
-                pub const m_flTicksSinceLastSurfingDetected: usize = 0x550; // float32
-                pub const m_bWasSurfing: usize = 0x554; // bool
+                pub const m_vecInputRotated: usize = 0x53C; // Vector
+                pub const m_flHeightAtJumpStart: usize = 0x548; // float32
+                pub const m_flMaxJumpHeightThisJump: usize = 0x54C; // float32
+                pub const m_flMaxJumpHeightLastJump: usize = 0x550; // float32
+                pub const m_flStaminaAtJumpStart: usize = 0x554; // float32
+                pub const m_flAccumulatedJumpError: usize = 0x558; // float32
+                pub const m_flTicksSinceLastSurfingDetected: usize = 0x55C; // float32
+                pub const m_bWasSurfing: usize = 0x560; // bool
             }
             // Parent: None
             // Field count: 5
