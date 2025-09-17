@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-13 02:49:22.782167100 UTC
+// 2025-09-17 01:09:41.918835800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -112,10 +112,11 @@ pub mod cs2_dumper {
             pub mod InfoForResourceTypeCResourceManifestInternal {
             }
             // Parent: None
-            // Field count: 22
+            // Field count: 23
             pub mod CSchemaSystemInternalRegistration {
                 pub const m_Vector2D: usize = 0x0; // Vector2D
                 pub const m_Vector: usize = 0x8; // Vector
+                pub const m_VectorWS: usize = 0x14; // VectorWS
                 pub const m_VectorAligned: usize = 0x20; // VectorAligned
                 pub const m_Quaternion: usize = 0x30; // Quaternion
                 pub const m_QAngle: usize = 0x40; // QAngle

@@ -108,13 +108,19 @@
       },
       "CSosGroupActionLimitSchema": {
         "fields": {
-          "m_nMaxCount": 24,
-          "m_nSortType": 32,
-          "m_nStopType": 28
+          "m_bCountStopped": 21,
+          "m_bStopImmediate": 20,
+          "m_nMaxCount": 8,
+          "m_nSortType": 16,
+          "m_nStopType": 12
         },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
             "type": "Unknown"
           }
         ],
@@ -122,28 +128,14 @@
       },
       "CSosGroupActionMemberCountEnvelopeSchema": {
         "fields": {
-          "m_bSaveToGroup": 56,
-          "m_flAttack": 40,
-          "m_flBaseValue": 32,
-          "m_flDecay": 44,
-          "m_flTargetValue": 36,
-          "m_nBaseCount": 24,
-          "m_nTargetCount": 28,
-          "m_resultVarName": 48
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionSchema": {
-        "fields": {
-          "m_actionInstanceType": 20,
-          "m_actionType": 16,
-          "m_name": 8
+          "m_bSaveToGroup": 40,
+          "m_flAttack": 24,
+          "m_flBaseValue": 16,
+          "m_flDecay": 28,
+          "m_flTargetValue": 20,
+          "m_nBaseCount": 8,
+          "m_nTargetCount": 12,
+          "m_resultVarName": 32
         },
         "metadata": [
           {
@@ -151,7 +143,17 @@
             "type": "Unknown"
           },
           {
-            "name": "MPropertyElementNameFn",
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSchema": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
@@ -159,167 +161,11 @@
       },
       "CSosGroupActionSetSoundeventParameterSchema": {
         "fields": {
-          "m_flMaxValue": 32,
-          "m_flMinValue": 28,
-          "m_nMaxCount": 24,
-          "m_nSortType": 48,
-          "m_opvarName": 40
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionSoundeventClusterSchema": {
-        "fields": {
-          "m_clusterSizeOpvar": 48,
-          "m_flClusterEpsilon": 28,
-          "m_groupBoundingBoxMaxsOpvar": 64,
-          "m_groupBoundingBoxMinsOpvar": 56,
-          "m_nMinNearby": 24,
-          "m_shouldPlayClusterChild": 40,
-          "m_shouldPlayOpvar": 32
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionSoundeventCountSchema": {
-        "fields": {
-          "m_bExcludeStoppedSounds": 24,
-          "m_strCountKeyName": 32
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionSoundeventMinMaxValuesSchema": {
-        "fields": {
-          "m_bExcludSoundsAboveThreshold": 48,
-          "m_bExcludeDelayedSounds": 41,
-          "m_bExcludeSoundsBelowThreshold": 42,
-          "m_bExcludeStoppedSounds": 40,
-          "m_flExcludeSoundsMaxThresholdValue": 52,
-          "m_flExcludeSoundsMinThresholdValue": 44,
-          "m_strDelayPublicFieldName": 32,
-          "m_strMaxValueName": 64,
-          "m_strMinValueName": 56,
-          "m_strQueryPublicFieldName": 24
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionSoundeventPrioritySchema": {
-        "fields": {
-          "m_bPriorityReadButDontContribute": 48,
-          "m_priorityContributeButDontRead": 40,
-          "m_priorityValue": 24,
-          "m_priorityVolumeScalar": 32
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionTimeBlockLimitSchema": {
-        "fields": {
-          "m_flMaxDuration": 28,
-          "m_nMaxCount": 24
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupActionTimeLimitSchema": {
-        "fields": {
-          "m_flMaxDuration": 24
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupBranchPattern": {
-        "fields": {
-          "m_bMatchEntIndex": 10,
-          "m_bMatchEventName": 8,
-          "m_bMatchEventSubString": 9,
-          "m_bMatchOpvar": 11,
-          "m_bMatchString": 12
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosGroupMatchPattern": {
-        "fields": {
-          "m_flEntIndex": 32,
-          "m_flOpvar": 36,
-          "m_matchSoundEventName": 16,
-          "m_matchSoundEventSubString": 24,
-          "m_opvarString": 40
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosSoundEventGroupListSchema": {
-        "fields": {
-          "m_groupList": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CSosSoundEventGroupSchema": {
-        "fields": {
-          "m_bInvertMatch": 20,
-          "m_bIsBlocking": 12,
-          "m_branchPattern": 72,
-          "m_flLifeSpanTime": 88,
-          "m_matchPattern": 24,
-          "m_nBlockMaxCount": 16,
-          "m_nType": 8,
-          "m_name": 0,
-          "m_vActions": 192
+          "m_flMaxValue": 16,
+          "m_flMinValue": 12,
+          "m_nMaxCount": 8,
+          "m_nSortType": 32,
+          "m_opvarName": 24
         },
         "metadata": [
           {
@@ -327,7 +173,150 @@
             "type": "Unknown"
           },
           {
-            "name": "MPropertyElementNameFn",
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventClusterSchema": {
+        "fields": {
+          "m_clusterSizeOpvar": 32,
+          "m_flClusterEpsilon": 12,
+          "m_groupBoundingBoxMaxsOpvar": 48,
+          "m_groupBoundingBoxMinsOpvar": 40,
+          "m_nMinNearby": 8,
+          "m_shouldPlayClusterChild": 24,
+          "m_shouldPlayOpvar": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventCountSchema": {
+        "fields": {
+          "m_bExcludeStoppedSounds": 8,
+          "m_strCountKeyName": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventMinMaxValuesSchema": {
+        "fields": {
+          "m_bExcludSoundsAboveThreshold": 32,
+          "m_bExcludeDelayedSounds": 25,
+          "m_bExcludeSoundsBelowThreshold": 26,
+          "m_bExcludeStoppedSounds": 24,
+          "m_flExcludeSoundsMaxThresholdValue": 36,
+          "m_flExcludeSoundsMinThresholdValue": 28,
+          "m_strDelayPublicFieldName": 16,
+          "m_strMaxValueName": 48,
+          "m_strMinValueName": 40,
+          "m_strQueryPublicFieldName": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionSoundeventPrioritySchema": {
+        "fields": {
+          "m_bPriorityReadButDontContribute": 32,
+          "m_priorityContributeButDontRead": 24,
+          "m_priorityValue": 8,
+          "m_priorityVolumeScalar": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionTimeBlockLimitSchema": {
+        "fields": {
+          "m_flMaxDuration": 12,
+          "m_nMaxCount": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosGroupActionTimeLimitSchema": {
+        "fields": {
+          "m_flMaxDuration": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSosSoundEventGroupSchema": {
+        "fields": {
+          "m_Behavior_EntIndex": 56,
+          "m_Behavior_EventName": 28,
+          "m_Behavior_Opvar": 64,
+          "m_Behavior_String": 72,
+          "m_bBlocksEvents": 12,
+          "m_bInvertMatch": 24,
+          "m_bMatchEventSubString": 40,
+          "m_flEntIndex": 60,
+          "m_flMemberLifespanTime": 20,
+          "m_flOpvar": 68,
+          "m_matchSoundEventName": 32,
+          "m_matchSoundEventSubString": 48,
+          "m_nBlockMaxCount": 16,
+          "m_nGroupType": 8,
+          "m_opvarString": 80,
+          "m_vActions": 88
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
           }
         ],
@@ -1403,22 +1392,6 @@
       }
     },
     "enums": {
-      "ActionType_t": {
-        "alignment": 4,
-        "members": {
-          "SOS_ACTION_COUNT_ENVELOPE": 7,
-          "SOS_ACTION_LIMITER": 1,
-          "SOS_ACTION_NONE": 0,
-          "SOS_ACTION_SET_SOUNDEVENT_PARAM": 4,
-          "SOS_ACTION_SOUNDEVENT_CLUSTER": 5,
-          "SOS_ACTION_SOUNDEVENT_COUNT": 8,
-          "SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES": 9,
-          "SOS_ACTION_SOUNDEVENT_PRIORITY": 6,
-          "SOS_ACTION_TIME_BLOCK_LIMITER": 3,
-          "SOS_ACTION_TIME_LIMIT": 2
-        },
-        "type": "uint32"
-      },
       "CVSoundFormat_t": {
         "alignment": 1,
         "members": {
@@ -1504,6 +1477,15 @@
           "SOS_EDIT_ITEM_TYPE_SOUNDEVENT": 1,
           "SOS_EDIT_ITEM_TYPE_SOUNDEVENTS": 0,
           "SOS_EDIT_ITEM_TYPE_STACK": 3
+        },
+        "type": "uint32"
+      },
+      "SosGroupFieldBehavior_t": {
+        "alignment": 4,
+        "members": {
+          "kBranch": 1,
+          "kIgnore": 0,
+          "kMatch": 2
         },
         "type": "uint32"
       },

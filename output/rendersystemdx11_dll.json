@@ -13,6 +13,63 @@
         "metadata": [],
         "parent": null
       },
+      "RsBlendStateDesc_t": {
+        "fields": {
+          "m_bAlphaToCoverageEnable": 0,
+          "m_bIndependentBlendEnable": 0,
+          "m_blendEnableBits": 28,
+          "m_blendOpAlphaBits": 24,
+          "m_blendOpBits": 0,
+          "m_destBlendAlphaBits": 12,
+          "m_destBlendBits": 4,
+          "m_renderTargetWriteMaskBits": 16,
+          "m_srcBlendAlphaBits": 8,
+          "m_srcBlendBits": 0,
+          "m_srgbWriteEnableBits": 29
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "RsDepthStencilStateDesc_t": {
+        "fields": {
+          "m_bDepthTestEnable": 0,
+          "m_bDepthWriteEnable": 0,
+          "m_depthFunc": 1,
+          "m_stencilState": 2
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "RsRasterizerStateDesc_t": {
+        "fields": {
+          "m_bDepthClipEnable": 2,
+          "m_bMultisampleEnable": 3,
+          "m_flDepthBiasClamp": 8,
+          "m_flSlopeScaledDepthBias": 12,
+          "m_nCullMode": 1,
+          "m_nDepthBias": 4,
+          "m_nFillMode": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "RsStencilStateDesc_t": {
+        "fields": {
+          "m_bStencilEnable": 0,
+          "m_backStencilDepthFailOp": 0,
+          "m_backStencilFailOp": 0,
+          "m_backStencilFunc": 0,
+          "m_backStencilPassOp": 0,
+          "m_frontStencilDepthFailOp": 0,
+          "m_frontStencilFailOp": 0,
+          "m_frontStencilFunc": 0,
+          "m_frontStencilPassOp": 0,
+          "m_nStencilReadMask": 4,
+          "m_nStencilWriteMask": 5
+        },
+        "metadata": [],
+        "parent": null
+      },
       "SheetSequenceIntegerId_t": {
         "fields": {
           "m_Value": 0
@@ -55,12 +112,11 @@
         "members": {
           "RENDER_BUFFER_ACCELERATION_STRUCTURE": 512,
           "RENDER_BUFFER_BYTEADDRESS_BUFFER": 16,
-          "RENDER_BUFFER_PER_FRAME_WRITE_ONCE": 2048,
-          "RENDER_BUFFER_POOL_ALLOCATED": 4096,
+          "RENDER_BUFFER_POOL_ALLOCATED": 2048,
           "RENDER_BUFFER_SHADER_BINDING_TABLE": 1024,
           "RENDER_BUFFER_STRUCTURED_BUFFER": 32,
           "RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS": 256,
-          "RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING": 8192,
+          "RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING": 4096,
           "RENDER_BUFFER_USAGE_INDEX_BUFFER": 2,
           "RENDER_BUFFER_USAGE_NONE": 0,
           "RENDER_BUFFER_USAGE_SHADER_RESOURCE": 4,
@@ -109,6 +165,37 @@
           "RENDER_SLOT_INVALID": -1,
           "RENDER_SLOT_PER_INSTANCE": 1,
           "RENDER_SLOT_PER_VERTEX": 0
+        },
+        "type": "uint8"
+      },
+      "RsComparison_t": {
+        "alignment": 1,
+        "members": {
+          "RS_CMP_ALWAYS": 7,
+          "RS_CMP_EQUAL": 2,
+          "RS_CMP_GREATER": 4,
+          "RS_CMP_GREATER_EQUAL": 6,
+          "RS_CMP_LESS": 1,
+          "RS_CMP_LESS_EQUAL": 3,
+          "RS_CMP_NEVER": 0,
+          "RS_CMP_NOT_EQUAL": 5
+        },
+        "type": "uint8"
+      },
+      "RsCullMode_t": {
+        "alignment": 1,
+        "members": {
+          "RS_CULL_BACK": 1,
+          "RS_CULL_FRONT": 2,
+          "RS_CULL_NONE": 0
+        },
+        "type": "uint8"
+      },
+      "RsFillMode_t": {
+        "alignment": 1,
+        "members": {
+          "RS_FILL_SOLID": 0,
+          "RS_FILL_WIREFRAME": 1
         },
         "type": "uint8"
       }
