@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-13 02:49:22.782167100 UTC
+// 2025-09-17 01:09:41.918835800 UTC
 
 #pragma once
 
@@ -8,8 +8,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: particles.dll
-        // Class count: 432
-        // Enum count: 69
+        // Class count: 438
+        // Enum count: 71
         namespace particles_dll {
             // Alignment: 4
             // Member count: 6
@@ -71,6 +71,13 @@ namespace cs2_dumper {
             enum class ParticleReplicationMode_t : uint32_t {
                 PARTICLE_REPLICATIONMODE_NONE = 0x0,
                 PARTICLE_REPLICATIONMODE_REPLICATE_FOR_EACH_PARENT_PARTICLE = 0x1
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class ParticleFanType_t : uint32_t {
+                PARTICLE_FAN_TYPE_FAN = 0x0,
+                PARTICLE_FAN_TYPE_ROTOR_WASH = 0x1,
+                PARTICLE_FAN_TYPE_RADIAL = 0x2
             };
             // Alignment: 4
             // Member count: 3
@@ -572,6 +579,13 @@ namespace cs2_dumper {
                 IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
             };
             // Alignment: 4
+            // Member count: 3
+            enum class ParticleLiquidContents_t : uint32_t {
+                PARTICLE_LIQUID_NONE = 0x0,
+                PARTICLE_LIQUID_OIL = 0x1,
+                PARTICLE_LIQUID_WATER = 0x2
+            };
+            // Alignment: 4
             // Member count: 2
             enum class SpriteCardShaderType_t : uint32_t {
                 SPRITECARD_SHADER_BASE = 0x0,
@@ -599,10 +613,12 @@ namespace cs2_dumper {
                 PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
             };
             // Alignment: 4
-            // Member count: 2
+            // Member count: 4
             enum class ParticleOrientationSetMode_t : uint32_t {
+                PARTICLE_ORIENTATION_SET_NONE = 0xFFFFFFFFFFFFFFFF,
                 PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
-                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
+                PARTICLE_ORIENTATION_SET_FROM_NORMAL = 0x1,
+                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x2
             };
             // Alignment: 8
             // Member count: 10
@@ -737,7 +753,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecAnchorVector = 0x740; // CPerParticleVecInput
             }
             // Parent: None
-            // Field count: 30
+            // Field count: 32
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -768,10 +784,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flScalarAttributeTextureCoordScale = 0x308C; // float32
                 constexpr std::ptrdiff_t m_bReverseOrder = 0x3090; // bool
                 constexpr std::ptrdiff_t m_bClosedLoop = 0x3091; // bool
-                constexpr std::ptrdiff_t m_nOrientationType = 0x3094; // ParticleOrientationChoiceList_t
-                constexpr std::ptrdiff_t m_nVectorFieldForOrientation = 0x3098; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_bDrawAsOpaque = 0x309C; // bool
-                constexpr std::ptrdiff_t m_bGenerateNormals = 0x309D; // bool
+                constexpr std::ptrdiff_t m_nSplitField = 0x3094; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_bSortBySegmentID = 0x3098; // bool
+                constexpr std::ptrdiff_t m_nOrientationType = 0x309C; // ParticleOrientationChoiceList_t
+                constexpr std::ptrdiff_t m_nVectorFieldForOrientation = 0x30A0; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_bDrawAsOpaque = 0x30A4; // bool
+                constexpr std::ptrdiff_t m_bGenerateNormals = 0x30A5; // bool
             }
             // Parent: None
             // Field count: 19
@@ -1936,6 +1954,18 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nOutVectorField = 0x5F4; // int32
             }
             // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_CreateParticleSystemRenderer {
+                constexpr std::ptrdiff_t m_hEffect = 0x210; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                constexpr std::ptrdiff_t m_nEventType = 0x218; // EventTypeSelection_t
+                constexpr std::ptrdiff_t m_vecCPs = 0x220; // CUtlLeanVector<CPAssignment_t>
+                constexpr std::ptrdiff_t m_szParticleConfig = 0x230; // CUtlString
+                constexpr std::ptrdiff_t m_AggregationPos = 0x238; // CPerParticleVecInput
+            }
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -2188,6 +2218,16 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_Spin {
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_GameLiquidSpill {
+                constexpr std::ptrdiff_t m_flLiquidContentsField = 0x210; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_flExpirationTime = 0x370; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_nAmountAttribute = 0x4D0; // ParticleAttributeIndex_t
             }
             // Parent: None
             // Field count: 8
@@ -2557,7 +2597,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_transformInput = 0x848; // CParticleTransformInput
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2565,6 +2605,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flDistance = 0x1C8; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_bIncludeRadii = 0x328; // bool
                 constexpr std::ptrdiff_t m_flLifespanOverlap = 0x330; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_nFieldModify = 0x490; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_flModify = 0x498; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_nSetMethod = 0x5F8; // ParticleSetMethod_t
+                constexpr std::ptrdiff_t m_bUseNeighbor = 0x5FC; // bool
             }
             // Parent: None
             // Field count: 11
@@ -2934,7 +2978,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bEaseInAndOut = 0x201; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2943,7 +2987,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRadius = 0x888; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_flMagnitude = 0x9E8; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_flShape = 0xB48; // CPerParticleFloatInput
-                constexpr std::ptrdiff_t m_nEventType = 0xCA8; // EventTypeSelection_t
+                constexpr std::ptrdiff_t m_flWindSpeed = 0xCA8; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flWobble = 0xE08; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_bIsRadialWind = 0xF68; // bool
+                constexpr std::ptrdiff_t m_nEventType = 0xF6C; // EventTypeSelection_t
             }
             // Parent: None
             // Field count: 5
@@ -3986,6 +4033,24 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bRadiusScale = 0x1D0; // bool
             }
             // Parent: None
+            // Field count: 11
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_INIT_CreateWithinCapsuleTransform {
+                constexpr std::ptrdiff_t m_fRadiusMin = 0x1C8; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_fRadiusMax = 0x328; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_fHeight = 0x488; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_TransformInput = 0x5E8; // CParticleTransformInput
+                constexpr std::ptrdiff_t m_fSpeedMin = 0x650; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_fSpeedMax = 0x7B0; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_fSpeedRandExp = 0x910; // float32
+                constexpr std::ptrdiff_t m_LocalCoordinateSystemSpeedMin = 0x918; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_LocalCoordinateSystemSpeedMax = 0xF90; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_nFieldOutput = 0x1608; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_nFieldVelocity = 0x160C; // ParticleAttributeIndex_t
+            }
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -3998,7 +4063,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bNormalizedOutput = 0x9A0; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -4008,6 +4073,18 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bRandomDistribution = 0x1D0; // bool
                 constexpr std::ptrdiff_t m_nRandomSeed = 0x1D4; // int32
                 constexpr std::ptrdiff_t m_bSubFrame = 0x1D8; // bool
+                constexpr std::ptrdiff_t m_bSetRopeSegmentID = 0x1D9; // bool
+            }
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_INIT_CheckParticleForWater {
+                constexpr std::ptrdiff_t m_flRadius = 0x1C8; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_nFieldOutput = 0x328; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_flOutputRemap = 0x330; // CParticleRemapFloatInput
+                constexpr std::ptrdiff_t m_nSetMethod = 0x490; // ParticleSetMethod_t
             }
             // Parent: None
             // Field count: 0
@@ -4050,6 +4127,16 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bUseRadius = 0x1C8; // bool
                 constexpr std::ptrdiff_t m_flRadiusScale = 0x1D0; // CParticleCollectionFloatInput
                 constexpr std::ptrdiff_t m_flParentRadiusScale = 0x330; // CParticleCollectionFloatInput
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPAssignment_t {
+                constexpr std::ptrdiff_t m_nCPNumber = 0x0; // int32
+                constexpr std::ptrdiff_t m_Pos = 0x8; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_nOrientationMode = 0x680; // ParticleOrientationSetMode_t
             }
             // Parent: None
             // Field count: 0
@@ -5350,7 +5437,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flPrevPosScale = 0x1D4; // float32
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -5364,11 +5451,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fSpeedMax = 0xCD8; // CPerParticleFloatInput
                 constexpr std::ptrdiff_t m_fSpeedRandExp = 0xE38; // float32
                 constexpr std::ptrdiff_t m_bLocalCoords = 0xE3C; // bool
-                constexpr std::ptrdiff_t m_flEndCPGrowthTime = 0xE40; // float32
-                constexpr std::ptrdiff_t m_LocalCoordinateSystemSpeedMin = 0xE48; // CPerParticleVecInput
-                constexpr std::ptrdiff_t m_LocalCoordinateSystemSpeedMax = 0x14C0; // CPerParticleVecInput
-                constexpr std::ptrdiff_t m_nFieldOutput = 0x1B38; // ParticleAttributeIndex_t
-                constexpr std::ptrdiff_t m_nFieldVelocity = 0x1B3C; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_LocalCoordinateSystemSpeedMin = 0xE40; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_LocalCoordinateSystemSpeedMax = 0x14B8; // CPerParticleVecInput
+                constexpr std::ptrdiff_t m_nFieldOutput = 0x1B30; // ParticleAttributeIndex_t
+                constexpr std::ptrdiff_t m_nFieldVelocity = 0x1B34; // ParticleAttributeIndex_t
             }
             // Parent: None
             // Field count: 1
@@ -5569,6 +5655,16 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bUseBones = 0x318; // bool
                 constexpr std::ptrdiff_t m_nLerpType = 0x31C; // HitboxLerpType_t
                 constexpr std::ptrdiff_t m_flInterpolation = 0x320; // CPerParticleFloatInput
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace C_OP_PinRopeSegmentParticleToParent {
+                constexpr std::ptrdiff_t m_nParticleSelection = 0x1C0; // ParticleSelection_t
+                constexpr std::ptrdiff_t m_nParticleNumber = 0x1C8; // CParticleCollectionFloatInput
+                constexpr std::ptrdiff_t m_flInterpolation = 0x328; // CPerParticleFloatInput
             }
             // Parent: None
             // Field count: 5

@@ -69,6 +69,7 @@
           "m_Vector2D": 0,
           "m_Vector4D": 228,
           "m_VectorAligned": 32,
+          "m_VectorWS": 20,
           "m_matrix3x4_t": 128,
           "m_matrix3x4a_t": 176,
           "m_pKeyValues": 288,

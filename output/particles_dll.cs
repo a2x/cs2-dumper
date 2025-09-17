@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-13 02:49:22.782167100 UTC
+// 2025-09-17 01:09:41.918835800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
-    // Class count: 432
-    // Enum count: 69
+    // Class count: 438
+    // Enum count: 71
     public static class ParticlesDll {
         // Alignment: 4
         // Member count: 6
@@ -66,6 +66,13 @@ namespace CS2Dumper.Schemas {
         public enum ParticleReplicationMode_t : uint {
             PARTICLE_REPLICATIONMODE_NONE = 0x0,
             PARTICLE_REPLICATIONMODE_REPLICATE_FOR_EACH_PARENT_PARTICLE = 0x1
+        }
+        // Alignment: 4
+        // Member count: 3
+        public enum ParticleFanType_t : uint {
+            PARTICLE_FAN_TYPE_FAN = 0x0,
+            PARTICLE_FAN_TYPE_ROTOR_WASH = 0x1,
+            PARTICLE_FAN_TYPE_RADIAL = 0x2
         }
         // Alignment: 4
         // Member count: 3
@@ -567,6 +574,13 @@ namespace CS2Dumper.Schemas {
             IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
         }
         // Alignment: 4
+        // Member count: 3
+        public enum ParticleLiquidContents_t : uint {
+            PARTICLE_LIQUID_NONE = 0x0,
+            PARTICLE_LIQUID_OIL = 0x1,
+            PARTICLE_LIQUID_WATER = 0x2
+        }
+        // Alignment: 4
         // Member count: 2
         public enum SpriteCardShaderType_t : uint {
             SPRITECARD_SHADER_BASE = 0x0,
@@ -594,10 +608,12 @@ namespace CS2Dumper.Schemas {
             PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
         }
         // Alignment: 4
-        // Member count: 2
+        // Member count: 4
         public enum ParticleOrientationSetMode_t : uint {
+            PARTICLE_ORIENTATION_SET_NONE = unchecked((uint)-1),
             PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
-            PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
+            PARTICLE_ORIENTATION_SET_FROM_NORMAL = 0x1,
+            PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x2
         }
         // Alignment: 8
         // Member count: 10
@@ -732,7 +748,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecAnchorVector = 0x740; // CPerParticleVecInput
         }
         // Parent: None
-        // Field count: 30
+        // Field count: 32
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -763,10 +779,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_flScalarAttributeTextureCoordScale = 0x308C; // float32
             public const nint m_bReverseOrder = 0x3090; // bool
             public const nint m_bClosedLoop = 0x3091; // bool
-            public const nint m_nOrientationType = 0x3094; // ParticleOrientationChoiceList_t
-            public const nint m_nVectorFieldForOrientation = 0x3098; // ParticleAttributeIndex_t
-            public const nint m_bDrawAsOpaque = 0x309C; // bool
-            public const nint m_bGenerateNormals = 0x309D; // bool
+            public const nint m_nSplitField = 0x3094; // ParticleAttributeIndex_t
+            public const nint m_bSortBySegmentID = 0x3098; // bool
+            public const nint m_nOrientationType = 0x309C; // ParticleOrientationChoiceList_t
+            public const nint m_nVectorFieldForOrientation = 0x30A0; // ParticleAttributeIndex_t
+            public const nint m_bDrawAsOpaque = 0x30A4; // bool
+            public const nint m_bGenerateNormals = 0x30A5; // bool
         }
         // Parent: None
         // Field count: 19
@@ -1931,6 +1949,18 @@ namespace CS2Dumper.Schemas {
             public const nint m_nOutVectorField = 0x5F4; // int32
         }
         // Parent: None
+        // Field count: 5
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_CreateParticleSystemRenderer {
+            public const nint m_hEffect = 0x210; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_nEventType = 0x218; // EventTypeSelection_t
+            public const nint m_vecCPs = 0x220; // CUtlLeanVector<CPAssignment_t>
+            public const nint m_szParticleConfig = 0x230; // CUtlString
+            public const nint m_AggregationPos = 0x238; // CPerParticleVecInput
+        }
+        // Parent: None
         // Field count: 0
         //
         // Metadata:
@@ -2183,6 +2213,16 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_Spin {
+        }
+        // Parent: None
+        // Field count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_GameLiquidSpill {
+            public const nint m_flLiquidContentsField = 0x210; // CParticleCollectionFloatInput
+            public const nint m_flExpirationTime = 0x370; // CParticleCollectionFloatInput
+            public const nint m_nAmountAttribute = 0x4D0; // ParticleAttributeIndex_t
         }
         // Parent: None
         // Field count: 8
@@ -2552,7 +2592,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_transformInput = 0x848; // CParticleTransformInput
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -2560,6 +2600,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_flDistance = 0x1C8; // CPerParticleFloatInput
             public const nint m_bIncludeRadii = 0x328; // bool
             public const nint m_flLifespanOverlap = 0x330; // CPerParticleFloatInput
+            public const nint m_nFieldModify = 0x490; // ParticleAttributeIndex_t
+            public const nint m_flModify = 0x498; // CPerParticleFloatInput
+            public const nint m_nSetMethod = 0x5F8; // ParticleSetMethod_t
+            public const nint m_bUseNeighbor = 0x5FC; // bool
         }
         // Parent: None
         // Field count: 11
@@ -2929,7 +2973,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bEaseInAndOut = 0x201; // bool
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -2938,7 +2982,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRadius = 0x888; // CPerParticleFloatInput
             public const nint m_flMagnitude = 0x9E8; // CPerParticleFloatInput
             public const nint m_flShape = 0xB48; // CPerParticleFloatInput
-            public const nint m_nEventType = 0xCA8; // EventTypeSelection_t
+            public const nint m_flWindSpeed = 0xCA8; // CPerParticleFloatInput
+            public const nint m_flWobble = 0xE08; // CPerParticleFloatInput
+            public const nint m_bIsRadialWind = 0xF68; // bool
+            public const nint m_nEventType = 0xF6C; // EventTypeSelection_t
         }
         // Parent: None
         // Field count: 5
@@ -3981,6 +4028,24 @@ namespace CS2Dumper.Schemas {
             public const nint m_bRadiusScale = 0x1D0; // bool
         }
         // Parent: None
+        // Field count: 11
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_INIT_CreateWithinCapsuleTransform {
+            public const nint m_fRadiusMin = 0x1C8; // CPerParticleFloatInput
+            public const nint m_fRadiusMax = 0x328; // CPerParticleFloatInput
+            public const nint m_fHeight = 0x488; // CPerParticleFloatInput
+            public const nint m_TransformInput = 0x5E8; // CParticleTransformInput
+            public const nint m_fSpeedMin = 0x650; // CPerParticleFloatInput
+            public const nint m_fSpeedMax = 0x7B0; // CPerParticleFloatInput
+            public const nint m_fSpeedRandExp = 0x910; // float32
+            public const nint m_LocalCoordinateSystemSpeedMin = 0x918; // CPerParticleVecInput
+            public const nint m_LocalCoordinateSystemSpeedMax = 0xF90; // CPerParticleVecInput
+            public const nint m_nFieldOutput = 0x1608; // ParticleAttributeIndex_t
+            public const nint m_nFieldVelocity = 0x160C; // ParticleAttributeIndex_t
+        }
+        // Parent: None
         // Field count: 5
         //
         // Metadata:
@@ -3993,7 +4058,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bNormalizedOutput = 0x9A0; // bool
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 6
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -4003,6 +4068,18 @@ namespace CS2Dumper.Schemas {
             public const nint m_bRandomDistribution = 0x1D0; // bool
             public const nint m_nRandomSeed = 0x1D4; // int32
             public const nint m_bSubFrame = 0x1D8; // bool
+            public const nint m_bSetRopeSegmentID = 0x1D9; // bool
+        }
+        // Parent: None
+        // Field count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_INIT_CheckParticleForWater {
+            public const nint m_flRadius = 0x1C8; // CPerParticleFloatInput
+            public const nint m_nFieldOutput = 0x328; // ParticleAttributeIndex_t
+            public const nint m_flOutputRemap = 0x330; // CParticleRemapFloatInput
+            public const nint m_nSetMethod = 0x490; // ParticleSetMethod_t
         }
         // Parent: None
         // Field count: 0
@@ -4045,6 +4122,16 @@ namespace CS2Dumper.Schemas {
             public const nint m_bUseRadius = 0x1C8; // bool
             public const nint m_flRadiusScale = 0x1D0; // CParticleCollectionFloatInput
             public const nint m_flParentRadiusScale = 0x330; // CParticleCollectionFloatInput
+        }
+        // Parent: None
+        // Field count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CPAssignment_t {
+            public const nint m_nCPNumber = 0x0; // int32
+            public const nint m_Pos = 0x8; // CPerParticleVecInput
+            public const nint m_nOrientationMode = 0x680; // ParticleOrientationSetMode_t
         }
         // Parent: None
         // Field count: 0
@@ -5345,7 +5432,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flPrevPosScale = 0x1D4; // float32
         }
         // Parent: None
-        // Field count: 14
+        // Field count: 13
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -5359,11 +5446,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_fSpeedMax = 0xCD8; // CPerParticleFloatInput
             public const nint m_fSpeedRandExp = 0xE38; // float32
             public const nint m_bLocalCoords = 0xE3C; // bool
-            public const nint m_flEndCPGrowthTime = 0xE40; // float32
-            public const nint m_LocalCoordinateSystemSpeedMin = 0xE48; // CPerParticleVecInput
-            public const nint m_LocalCoordinateSystemSpeedMax = 0x14C0; // CPerParticleVecInput
-            public const nint m_nFieldOutput = 0x1B38; // ParticleAttributeIndex_t
-            public const nint m_nFieldVelocity = 0x1B3C; // ParticleAttributeIndex_t
+            public const nint m_LocalCoordinateSystemSpeedMin = 0xE40; // CPerParticleVecInput
+            public const nint m_LocalCoordinateSystemSpeedMax = 0x14B8; // CPerParticleVecInput
+            public const nint m_nFieldOutput = 0x1B30; // ParticleAttributeIndex_t
+            public const nint m_nFieldVelocity = 0x1B34; // ParticleAttributeIndex_t
         }
         // Parent: None
         // Field count: 1
@@ -5564,6 +5650,16 @@ namespace CS2Dumper.Schemas {
             public const nint m_bUseBones = 0x318; // bool
             public const nint m_nLerpType = 0x31C; // HitboxLerpType_t
             public const nint m_flInterpolation = 0x320; // CPerParticleFloatInput
+        }
+        // Parent: None
+        // Field count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class C_OP_PinRopeSegmentParticleToParent {
+            public const nint m_nParticleSelection = 0x1C0; // ParticleSelection_t
+            public const nint m_nParticleNumber = 0x1C8; // CParticleCollectionFloatInput
+            public const nint m_flInterpolation = 0x328; // CPerParticleFloatInput
         }
         // Parent: None
         // Field count: 5

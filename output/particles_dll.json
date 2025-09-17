@@ -126,6 +126,20 @@
         ],
         "parent": null
       },
+      "CPAssignment_t": {
+        "fields": {
+          "m_Pos": 8,
+          "m_nCPNumber": 0,
+          "m_nOrientationMode": 1664
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CParticleFunction": {
         "fields": {
           "m_Notes": 416,
@@ -470,6 +484,21 @@
         ],
         "parent": null
       },
+      "C_INIT_CheckParticleForWater": {
+        "fields": {
+          "m_flOutputRemap": 816,
+          "m_flRadius": 456,
+          "m_nFieldOutput": 808,
+          "m_nSetMethod": 1168
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "C_INIT_ColorLitPerParticle": {
         "fields": {
           "m_ColorMax": 484,
@@ -522,6 +551,7 @@
       "C_INIT_CreateFromParentParticles": {
         "fields": {
           "m_bRandomDistribution": 464,
+          "m_bSetRopeSegmentID": 473,
           "m_bSubFrame": 472,
           "m_flIncrement": 460,
           "m_flVelocityScale": 456,
@@ -765,10 +795,32 @@
         ],
         "parent": null
       },
+      "C_INIT_CreateWithinCapsuleTransform": {
+        "fields": {
+          "m_LocalCoordinateSystemSpeedMax": 3984,
+          "m_LocalCoordinateSystemSpeedMin": 2328,
+          "m_TransformInput": 1512,
+          "m_fHeight": 1160,
+          "m_fRadiusMax": 808,
+          "m_fRadiusMin": 456,
+          "m_fSpeedMax": 1968,
+          "m_fSpeedMin": 1616,
+          "m_fSpeedRandExp": 2320,
+          "m_nFieldOutput": 5640,
+          "m_nFieldVelocity": 5644
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "C_INIT_CreateWithinSphereTransform": {
         "fields": {
-          "m_LocalCoordinateSystemSpeedMax": 5312,
-          "m_LocalCoordinateSystemSpeedMin": 3656,
+          "m_LocalCoordinateSystemSpeedMax": 5304,
+          "m_LocalCoordinateSystemSpeedMin": 3648,
           "m_TransformInput": 2832,
           "m_bLocalCoords": 3644,
           "m_fRadiusMax": 808,
@@ -776,9 +828,8 @@
           "m_fSpeedMax": 3288,
           "m_fSpeedMin": 2936,
           "m_fSpeedRandExp": 3640,
-          "m_flEndCPGrowthTime": 3648,
-          "m_nFieldOutput": 6968,
-          "m_nFieldVelocity": 6972,
+          "m_nFieldOutput": 6960,
+          "m_nFieldVelocity": 6964,
           "m_vecDistanceBias": 1160,
           "m_vecDistanceBiasAbs": 2816
         },
@@ -854,8 +905,12 @@
       "C_INIT_DistanceToNeighborCull": {
         "fields": {
           "m_bIncludeRadii": 808,
+          "m_bUseNeighbor": 1532,
           "m_flDistance": 456,
-          "m_flLifespanOverlap": 816
+          "m_flLifespanOverlap": 816,
+          "m_flModify": 1176,
+          "m_nFieldModify": 1168,
+          "m_nSetMethod": 1528
         },
         "metadata": [
           {
@@ -2738,6 +2793,22 @@
         ],
         "parent": null
       },
+      "C_OP_CreateParticleSystemRenderer": {
+        "fields": {
+          "m_AggregationPos": 568,
+          "m_hEffect": 528,
+          "m_nEventType": 536,
+          "m_szParticleConfig": 560,
+          "m_vecCPs": 544
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "C_OP_Cull": {
         "fields": {
           "m_flCullEnd": 456,
@@ -3322,6 +3393,20 @@
           "m_vModulationColor": 5280,
           "m_vecEndPos": 2216,
           "m_vecStartPos": 560
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "C_OP_GameLiquidSpill": {
+        "fields": {
+          "m_flExpirationTime": 880,
+          "m_flLiquidContentsField": 528,
+          "m_nAmountAttribute": 1232
         },
         "metadata": [
           {
@@ -4259,6 +4344,20 @@
           "m_nParticleSelection": 2116,
           "m_nPinBreakType": 2472,
           "m_vecOffset": 456
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "C_OP_PinRopeSegmentParticleToParent": {
+        "fields": {
+          "m_flInterpolation": 808,
+          "m_nParticleNumber": 456,
+          "m_nParticleSelection": 448
         },
         "metadata": [
           {
@@ -5668,10 +5767,11 @@
         "fields": {
           "m_bClampV": 12396,
           "m_bClosedLoop": 12433,
-          "m_bDrawAsOpaque": 12444,
+          "m_bDrawAsOpaque": 12452,
           "m_bEnableFadingAndClamping": 11288,
-          "m_bGenerateNormals": 12445,
+          "m_bGenerateNormals": 12453,
           "m_bReverseOrder": 12432,
+          "m_bSortBySegmentID": 12440,
           "m_bUseScalarForTextureCoordinate": 12421,
           "m_flEndFadeDot": 11312,
           "m_flEndFadeSize": 11304,
@@ -5690,12 +5790,13 @@
           "m_flTextureVWorldSize": 11336,
           "m_nMaxTesselation": 11324,
           "m_nMinTesselation": 11320,
-          "m_nOrientationType": 12436,
+          "m_nOrientationType": 12444,
           "m_nScalarFieldForTextureCoordinate": 12424,
           "m_nScaleCP1": 12400,
           "m_nScaleCP2": 12404,
+          "m_nSplitField": 12436,
           "m_nTextureVParamsCP": 12392,
-          "m_nVectorFieldForOrientation": 12440
+          "m_nVectorFieldForOrientation": 12448
         },
         "metadata": [
           {
@@ -7139,10 +7240,13 @@
       },
       "C_OP_WaterImpulseRenderer": {
         "fields": {
+          "m_bIsRadialWind": 3944,
           "m_flMagnitude": 2536,
           "m_flRadius": 2184,
           "m_flShape": 2888,
-          "m_nEventType": 3240,
+          "m_flWindSpeed": 3240,
+          "m_flWobble": 3592,
+          "m_nEventType": 3948,
           "m_vecPos": 528
         },
         "metadata": [
@@ -7785,6 +7889,15 @@
         },
         "type": "uint32"
       },
+      "ParticleFanType_t": {
+        "alignment": 4,
+        "members": {
+          "PARTICLE_FAN_TYPE_FAN": 0,
+          "PARTICLE_FAN_TYPE_RADIAL": 2,
+          "PARTICLE_FAN_TYPE_ROTOR_WASH": 1
+        },
+        "type": "uint32"
+      },
       "ParticleFogType_t": {
         "alignment": 4,
         "members": {
@@ -7875,6 +7988,15 @@
         },
         "type": "uint32"
       },
+      "ParticleLiquidContents_t": {
+        "alignment": 4,
+        "members": {
+          "PARTICLE_LIQUID_NONE": 0,
+          "PARTICLE_LIQUID_OIL": 1,
+          "PARTICLE_LIQUID_WATER": 2
+        },
+        "type": "uint32"
+      },
       "ParticleMassMode_t": {
         "alignment": 4,
         "members": {
@@ -7906,8 +8028,10 @@
       "ParticleOrientationSetMode_t": {
         "alignment": 4,
         "members": {
-          "PARTICLE_ORIENTATION_SET_FROM_ROTATIONS": 1,
-          "PARTICLE_ORIENTATION_SET_FROM_VELOCITY": 0
+          "PARTICLE_ORIENTATION_SET_FROM_NORMAL": 1,
+          "PARTICLE_ORIENTATION_SET_FROM_ROTATIONS": 2,
+          "PARTICLE_ORIENTATION_SET_FROM_VELOCITY": 0,
+          "PARTICLE_ORIENTATION_SET_NONE": -1
         },
         "type": "uint32"
       },

@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-13 02:49:22.782167100 UTC
+// 2025-09-17 01:09:41.918835800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: soundsystem.dll
-        // Class count: 77
+        // Class count: 74
         // Enum count: 19
         pub mod soundsystem_dll {
             // Alignment: 4
@@ -169,6 +169,14 @@ pub mod cs2_dumper {
                 VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1F
             }
             // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum SosGroupFieldBehavior_t {
+                kIgnore = 0x0,
+                kBranch = 0x1,
+                kMatch = 0x2
+            }
+            // Alignment: 4
             // Member count: 30
             #[repr(u32)]
             pub enum soundlevel_t {
@@ -256,21 +264,6 @@ pub mod cs2_dumper {
                 FILTER_SLOPE_24dB = 0x5,
                 FILTER_SLOPE_36dB = 0x6,
                 FILTER_SLOPE_48dB = 0x7
-            }
-            // Alignment: 4
-            // Member count: 10
-            #[repr(u32)]
-            pub enum ActionType_t {
-                SOS_ACTION_NONE = 0x0,
-                SOS_ACTION_LIMITER = 0x1,
-                SOS_ACTION_TIME_LIMIT = 0x2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5,
-                SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
-                SOS_ACTION_COUNT_ENVELOPE = 0x7,
-                SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
-                SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9
             }
             // Alignment: 4
             // Member count: 3
@@ -390,26 +383,28 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventClusterSchema {
-                pub const m_nMinNearby: usize = 0x18; // int32
-                pub const m_flClusterEpsilon: usize = 0x1C; // float32
-                pub const m_shouldPlayOpvar: usize = 0x20; // CUtlString
-                pub const m_shouldPlayClusterChild: usize = 0x28; // CUtlString
-                pub const m_clusterSizeOpvar: usize = 0x30; // CUtlString
-                pub const m_groupBoundingBoxMinsOpvar: usize = 0x38; // CUtlString
-                pub const m_groupBoundingBoxMaxsOpvar: usize = 0x40; // CUtlString
+                pub const m_nMinNearby: usize = 0x8; // int32
+                pub const m_flClusterEpsilon: usize = 0xC; // float32
+                pub const m_shouldPlayOpvar: usize = 0x10; // CUtlString
+                pub const m_shouldPlayClusterChild: usize = 0x18; // CUtlString
+                pub const m_clusterSizeOpvar: usize = 0x20; // CUtlString
+                pub const m_groupBoundingBoxMinsOpvar: usize = 0x28; // CUtlString
+                pub const m_groupBoundingBoxMaxsOpvar: usize = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSetSoundeventParameterSchema {
-                pub const m_nMaxCount: usize = 0x18; // int32
-                pub const m_flMinValue: usize = 0x1C; // float32
-                pub const m_flMaxValue: usize = 0x20; // float32
-                pub const m_opvarName: usize = 0x28; // CUtlString
-                pub const m_nSortType: usize = 0x30; // SosActionSortType_t
+                pub const m_nMaxCount: usize = 0x8; // int32
+                pub const m_flMinValue: usize = 0xC; // float32
+                pub const m_flMaxValue: usize = 0x10; // float32
+                pub const m_opvarName: usize = 0x18; // CUtlString
+                pub const m_nSortType: usize = 0x20; // SosActionSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -483,17 +478,18 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventMinMaxValuesSchema {
-                pub const m_strQueryPublicFieldName: usize = 0x18; // CUtlString
-                pub const m_strDelayPublicFieldName: usize = 0x20; // CUtlString
-                pub const m_bExcludeStoppedSounds: usize = 0x28; // bool
-                pub const m_bExcludeDelayedSounds: usize = 0x29; // bool
-                pub const m_bExcludeSoundsBelowThreshold: usize = 0x2A; // bool
-                pub const m_flExcludeSoundsMinThresholdValue: usize = 0x2C; // float32
-                pub const m_bExcludSoundsAboveThreshold: usize = 0x30; // bool
-                pub const m_flExcludeSoundsMaxThresholdValue: usize = 0x34; // float32
-                pub const m_strMinValueName: usize = 0x38; // CUtlString
-                pub const m_strMaxValueName: usize = 0x40; // CUtlString
+                pub const m_strQueryPublicFieldName: usize = 0x8; // CUtlString
+                pub const m_strDelayPublicFieldName: usize = 0x10; // CUtlString
+                pub const m_bExcludeStoppedSounds: usize = 0x18; // bool
+                pub const m_bExcludeDelayedSounds: usize = 0x19; // bool
+                pub const m_bExcludeSoundsBelowThreshold: usize = 0x1A; // bool
+                pub const m_flExcludeSoundsMinThresholdValue: usize = 0x1C; // float32
+                pub const m_bExcludSoundsAboveThreshold: usize = 0x20; // bool
+                pub const m_flExcludeSoundsMaxThresholdValue: usize = 0x24; // float32
+                pub const m_strMinValueName: usize = 0x28; // CUtlString
+                pub const m_strMaxValueName: usize = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 2
@@ -509,11 +505,12 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventPrioritySchema {
-                pub const m_priorityValue: usize = 0x18; // CUtlString
-                pub const m_priorityVolumeScalar: usize = 0x20; // CUtlString
-                pub const m_priorityContributeButDontRead: usize = 0x28; // CUtlString
-                pub const m_bPriorityReadButDontContribute: usize = 0x30; // CUtlString
+                pub const m_priorityValue: usize = 0x8; // CUtlString
+                pub const m_priorityVolumeScalar: usize = 0x10; // CUtlString
+                pub const m_priorityContributeButDontRead: usize = 0x18; // CUtlString
+                pub const m_bPriorityReadButDontContribute: usize = 0x20; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -576,44 +573,34 @@ pub mod cs2_dumper {
                 pub const m_flTaps: usize = 0x4C; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             pub mod CSosGroupActionSchema {
-                pub const m_name: usize = 0x8; // CUtlString
-                pub const m_actionType: usize = 0x10; // ActionType_t
-                pub const m_actionInstanceType: usize = 0x14; // ActionType_t
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             pub mod CSosSoundEventGroupSchema {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_nType: usize = 0x8; // SosGroupType_t
-                pub const m_bIsBlocking: usize = 0xC; // bool
+                pub const m_nGroupType: usize = 0x8; // SosGroupType_t
+                pub const m_bBlocksEvents: usize = 0xC; // bool
                 pub const m_nBlockMaxCount: usize = 0x10; // int32
-                pub const m_bInvertMatch: usize = 0x14; // bool
-                pub const m_matchPattern: usize = 0x18; // CSosGroupMatchPattern
-                pub const m_branchPattern: usize = 0x48; // CSosGroupBranchPattern
-                pub const m_flLifeSpanTime: usize = 0x58; // float32
-                pub const m_vActions: usize = 0xC0; // CSosGroupActionSchema*[4]
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSosGroupBranchPattern {
-                pub const m_bMatchEventName: usize = 0x8; // bool
-                pub const m_bMatchEventSubString: usize = 0x9; // bool
-                pub const m_bMatchEntIndex: usize = 0xA; // bool
-                pub const m_bMatchOpvar: usize = 0xB; // bool
-                pub const m_bMatchString: usize = 0xC; // bool
+                pub const m_flMemberLifespanTime: usize = 0x14; // float32
+                pub const m_bInvertMatch: usize = 0x18; // bool
+                pub const m_Behavior_EventName: usize = 0x1C; // SosGroupFieldBehavior_t
+                pub const m_matchSoundEventName: usize = 0x20; // CUtlString
+                pub const m_bMatchEventSubString: usize = 0x28; // bool
+                pub const m_matchSoundEventSubString: usize = 0x30; // CUtlString
+                pub const m_Behavior_EntIndex: usize = 0x38; // SosGroupFieldBehavior_t
+                pub const m_flEntIndex: usize = 0x3C; // float32
+                pub const m_Behavior_Opvar: usize = 0x40; // SosGroupFieldBehavior_t
+                pub const m_flOpvar: usize = 0x44; // float32
+                pub const m_Behavior_String: usize = 0x48; // SosGroupFieldBehavior_t
+                pub const m_opvarString: usize = 0x50; // CUtlString
+                pub const m_vActions: usize = 0x58; // CUtlVector<CSosGroupActionSchema*>
             }
             // Parent: None
             // Field count: 10
@@ -771,9 +758,10 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventCountSchema {
-                pub const m_bExcludeStoppedSounds: usize = 0x18; // bool
-                pub const m_strCountKeyName: usize = 0x20; // CUtlString
+                pub const m_bExcludeStoppedSounds: usize = 0x8; // bool
+                pub const m_strCountKeyName: usize = 0x10; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -855,26 +843,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSoundInfoHeader {
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSosSoundEventGroupListSchema {
-                pub const m_groupList: usize = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSosGroupMatchPattern {
-                pub const m_matchSoundEventName: usize = 0x10; // CUtlString
-                pub const m_matchSoundEventSubString: usize = 0x18; // CUtlString
-                pub const m_flEntIndex: usize = 0x20; // float32
-                pub const m_flOpvar: usize = 0x24; // float32
-                pub const m_opvarString: usize = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 5
@@ -992,14 +960,17 @@ pub mod cs2_dumper {
                 pub const m_curve4: usize = 0x1B8; // CPiecewiseCurve
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionLimitSchema {
-                pub const m_nMaxCount: usize = 0x18; // int32
-                pub const m_nStopType: usize = 0x1C; // SosActionStopType_t
-                pub const m_nSortType: usize = 0x20; // SosActionSortType_t
+                pub const m_nMaxCount: usize = 0x8; // int32
+                pub const m_nStopType: usize = 0xC; // SosActionStopType_t
+                pub const m_nSortType: usize = 0x10; // SosActionSortType_t
+                pub const m_bStopImmediate: usize = 0x14; // bool
+                pub const m_bCountStopped: usize = 0x15; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1090,9 +1061,10 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionTimeBlockLimitSchema {
-                pub const m_nMaxCount: usize = 0x18; // int32
-                pub const m_flMaxDuration: usize = 0x1C; // float32
+                pub const m_nMaxCount: usize = 0x8; // int32
+                pub const m_flMaxDuration: usize = 0xC; // float32
             }
             // Parent: None
             // Field count: 2
@@ -1110,15 +1082,16 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionMemberCountEnvelopeSchema {
-                pub const m_nBaseCount: usize = 0x18; // int32
-                pub const m_nTargetCount: usize = 0x1C; // int32
-                pub const m_flBaseValue: usize = 0x20; // float32
-                pub const m_flTargetValue: usize = 0x24; // float32
-                pub const m_flAttack: usize = 0x28; // float32
-                pub const m_flDecay: usize = 0x2C; // float32
-                pub const m_resultVarName: usize = 0x30; // CUtlString
-                pub const m_bSaveToGroup: usize = 0x38; // bool
+                pub const m_nBaseCount: usize = 0x8; // int32
+                pub const m_nTargetCount: usize = 0xC; // int32
+                pub const m_flBaseValue: usize = 0x10; // float32
+                pub const m_flTargetValue: usize = 0x14; // float32
+                pub const m_flAttack: usize = 0x18; // float32
+                pub const m_flDecay: usize = 0x1C; // float32
+                pub const m_resultVarName: usize = 0x20; // CUtlString
+                pub const m_bSaveToGroup: usize = 0x28; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1135,8 +1108,9 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionTimeLimitSchema {
-                pub const m_flMaxDuration: usize = 0x18; // float32
+                pub const m_flMaxDuration: usize = 0x8; // float32
             }
             // Parent: None
             // Field count: 10

@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-13 02:49:22.782167100 UTC
+// 2025-09-17 01:09:41.918835800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: particles.dll
-        // Class count: 432
-        // Enum count: 69
+        // Class count: 438
+        // Enum count: 71
         pub mod particles_dll {
             // Alignment: 4
             // Member count: 6
@@ -76,6 +76,14 @@ pub mod cs2_dumper {
             pub enum ParticleReplicationMode_t {
                 PARTICLE_REPLICATIONMODE_NONE = 0x0,
                 PARTICLE_REPLICATIONMODE_REPLICATE_FOR_EACH_PARENT_PARTICLE = 0x1
+            }
+            // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum ParticleFanType_t {
+                PARTICLE_FAN_TYPE_FAN = 0x0,
+                PARTICLE_FAN_TYPE_ROTOR_WASH = 0x1,
+                PARTICLE_FAN_TYPE_RADIAL = 0x2
             }
             // Alignment: 4
             // Member count: 3
@@ -631,6 +639,14 @@ pub mod cs2_dumper {
                 IMPULSE_TYPE_PARTICLE_SYSTEM = 0x10
             }
             // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum ParticleLiquidContents_t {
+                PARTICLE_LIQUID_NONE = 0x0,
+                PARTICLE_LIQUID_OIL = 0x1,
+                PARTICLE_LIQUID_WATER = 0x2
+            }
+            // Alignment: 4
             // Member count: 2
             #[repr(u32)]
             pub enum SpriteCardShaderType_t {
@@ -662,11 +678,13 @@ pub mod cs2_dumper {
                 PARTICLE_LIGHT_TYPE_CAPSULE = 0x3
             }
             // Alignment: 4
-            // Member count: 2
+            // Member count: 4
             #[repr(u32)]
             pub enum ParticleOrientationSetMode_t {
+                PARTICLE_ORIENTATION_SET_NONE = u32::MAX,
                 PARTICLE_ORIENTATION_SET_FROM_VELOCITY = 0x0,
-                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x1
+                PARTICLE_ORIENTATION_SET_FROM_NORMAL = 0x1,
+                PARTICLE_ORIENTATION_SET_FROM_ROTATIONS = 0x2
             }
             // Alignment: 8
             // Member count: 10
@@ -803,7 +821,7 @@ pub mod cs2_dumper {
                 pub const m_vecAnchorVector: usize = 0x740; // CPerParticleVecInput
             }
             // Parent: None
-            // Field count: 30
+            // Field count: 32
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -834,10 +852,12 @@ pub mod cs2_dumper {
                 pub const m_flScalarAttributeTextureCoordScale: usize = 0x308C; // float32
                 pub const m_bReverseOrder: usize = 0x3090; // bool
                 pub const m_bClosedLoop: usize = 0x3091; // bool
-                pub const m_nOrientationType: usize = 0x3094; // ParticleOrientationChoiceList_t
-                pub const m_nVectorFieldForOrientation: usize = 0x3098; // ParticleAttributeIndex_t
-                pub const m_bDrawAsOpaque: usize = 0x309C; // bool
-                pub const m_bGenerateNormals: usize = 0x309D; // bool
+                pub const m_nSplitField: usize = 0x3094; // ParticleAttributeIndex_t
+                pub const m_bSortBySegmentID: usize = 0x3098; // bool
+                pub const m_nOrientationType: usize = 0x309C; // ParticleOrientationChoiceList_t
+                pub const m_nVectorFieldForOrientation: usize = 0x30A0; // ParticleAttributeIndex_t
+                pub const m_bDrawAsOpaque: usize = 0x30A4; // bool
+                pub const m_bGenerateNormals: usize = 0x30A5; // bool
             }
             // Parent: None
             // Field count: 19
@@ -2002,6 +2022,18 @@ pub mod cs2_dumper {
                 pub const m_nOutVectorField: usize = 0x5F4; // int32
             }
             // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_CreateParticleSystemRenderer {
+                pub const m_hEffect: usize = 0x210; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                pub const m_nEventType: usize = 0x218; // EventTypeSelection_t
+                pub const m_vecCPs: usize = 0x220; // CUtlLeanVector<CPAssignment_t>
+                pub const m_szParticleConfig: usize = 0x230; // CUtlString
+                pub const m_AggregationPos: usize = 0x238; // CPerParticleVecInput
+            }
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -2254,6 +2286,16 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod C_OP_Spin {
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_GameLiquidSpill {
+                pub const m_flLiquidContentsField: usize = 0x210; // CParticleCollectionFloatInput
+                pub const m_flExpirationTime: usize = 0x370; // CParticleCollectionFloatInput
+                pub const m_nAmountAttribute: usize = 0x4D0; // ParticleAttributeIndex_t
             }
             // Parent: None
             // Field count: 8
@@ -2623,7 +2665,7 @@ pub mod cs2_dumper {
                 pub const m_transformInput: usize = 0x848; // CParticleTransformInput
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2631,6 +2673,10 @@ pub mod cs2_dumper {
                 pub const m_flDistance: usize = 0x1C8; // CPerParticleFloatInput
                 pub const m_bIncludeRadii: usize = 0x328; // bool
                 pub const m_flLifespanOverlap: usize = 0x330; // CPerParticleFloatInput
+                pub const m_nFieldModify: usize = 0x490; // ParticleAttributeIndex_t
+                pub const m_flModify: usize = 0x498; // CPerParticleFloatInput
+                pub const m_nSetMethod: usize = 0x5F8; // ParticleSetMethod_t
+                pub const m_bUseNeighbor: usize = 0x5FC; // bool
             }
             // Parent: None
             // Field count: 11
@@ -3000,7 +3046,7 @@ pub mod cs2_dumper {
                 pub const m_bEaseInAndOut: usize = 0x201; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -3009,7 +3055,10 @@ pub mod cs2_dumper {
                 pub const m_flRadius: usize = 0x888; // CPerParticleFloatInput
                 pub const m_flMagnitude: usize = 0x9E8; // CPerParticleFloatInput
                 pub const m_flShape: usize = 0xB48; // CPerParticleFloatInput
-                pub const m_nEventType: usize = 0xCA8; // EventTypeSelection_t
+                pub const m_flWindSpeed: usize = 0xCA8; // CPerParticleFloatInput
+                pub const m_flWobble: usize = 0xE08; // CPerParticleFloatInput
+                pub const m_bIsRadialWind: usize = 0xF68; // bool
+                pub const m_nEventType: usize = 0xF6C; // EventTypeSelection_t
             }
             // Parent: None
             // Field count: 5
@@ -4052,6 +4101,24 @@ pub mod cs2_dumper {
                 pub const m_bRadiusScale: usize = 0x1D0; // bool
             }
             // Parent: None
+            // Field count: 11
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_INIT_CreateWithinCapsuleTransform {
+                pub const m_fRadiusMin: usize = 0x1C8; // CPerParticleFloatInput
+                pub const m_fRadiusMax: usize = 0x328; // CPerParticleFloatInput
+                pub const m_fHeight: usize = 0x488; // CPerParticleFloatInput
+                pub const m_TransformInput: usize = 0x5E8; // CParticleTransformInput
+                pub const m_fSpeedMin: usize = 0x650; // CPerParticleFloatInput
+                pub const m_fSpeedMax: usize = 0x7B0; // CPerParticleFloatInput
+                pub const m_fSpeedRandExp: usize = 0x910; // float32
+                pub const m_LocalCoordinateSystemSpeedMin: usize = 0x918; // CPerParticleVecInput
+                pub const m_LocalCoordinateSystemSpeedMax: usize = 0xF90; // CPerParticleVecInput
+                pub const m_nFieldOutput: usize = 0x1608; // ParticleAttributeIndex_t
+                pub const m_nFieldVelocity: usize = 0x160C; // ParticleAttributeIndex_t
+            }
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -4064,7 +4131,7 @@ pub mod cs2_dumper {
                 pub const m_bNormalizedOutput: usize = 0x9A0; // bool
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -4074,6 +4141,18 @@ pub mod cs2_dumper {
                 pub const m_bRandomDistribution: usize = 0x1D0; // bool
                 pub const m_nRandomSeed: usize = 0x1D4; // int32
                 pub const m_bSubFrame: usize = 0x1D8; // bool
+                pub const m_bSetRopeSegmentID: usize = 0x1D9; // bool
+            }
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_INIT_CheckParticleForWater {
+                pub const m_flRadius: usize = 0x1C8; // CPerParticleFloatInput
+                pub const m_nFieldOutput: usize = 0x328; // ParticleAttributeIndex_t
+                pub const m_flOutputRemap: usize = 0x330; // CParticleRemapFloatInput
+                pub const m_nSetMethod: usize = 0x490; // ParticleSetMethod_t
             }
             // Parent: None
             // Field count: 0
@@ -4116,6 +4195,16 @@ pub mod cs2_dumper {
                 pub const m_bUseRadius: usize = 0x1C8; // bool
                 pub const m_flRadiusScale: usize = 0x1D0; // CParticleCollectionFloatInput
                 pub const m_flParentRadiusScale: usize = 0x330; // CParticleCollectionFloatInput
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPAssignment_t {
+                pub const m_nCPNumber: usize = 0x0; // int32
+                pub const m_Pos: usize = 0x8; // CPerParticleVecInput
+                pub const m_nOrientationMode: usize = 0x680; // ParticleOrientationSetMode_t
             }
             // Parent: None
             // Field count: 0
@@ -5416,7 +5505,7 @@ pub mod cs2_dumper {
                 pub const m_flPrevPosScale: usize = 0x1D4; // float32
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -5430,11 +5519,10 @@ pub mod cs2_dumper {
                 pub const m_fSpeedMax: usize = 0xCD8; // CPerParticleFloatInput
                 pub const m_fSpeedRandExp: usize = 0xE38; // float32
                 pub const m_bLocalCoords: usize = 0xE3C; // bool
-                pub const m_flEndCPGrowthTime: usize = 0xE40; // float32
-                pub const m_LocalCoordinateSystemSpeedMin: usize = 0xE48; // CPerParticleVecInput
-                pub const m_LocalCoordinateSystemSpeedMax: usize = 0x14C0; // CPerParticleVecInput
-                pub const m_nFieldOutput: usize = 0x1B38; // ParticleAttributeIndex_t
-                pub const m_nFieldVelocity: usize = 0x1B3C; // ParticleAttributeIndex_t
+                pub const m_LocalCoordinateSystemSpeedMin: usize = 0xE40; // CPerParticleVecInput
+                pub const m_LocalCoordinateSystemSpeedMax: usize = 0x14B8; // CPerParticleVecInput
+                pub const m_nFieldOutput: usize = 0x1B30; // ParticleAttributeIndex_t
+                pub const m_nFieldVelocity: usize = 0x1B34; // ParticleAttributeIndex_t
             }
             // Parent: None
             // Field count: 1
@@ -5635,6 +5723,16 @@ pub mod cs2_dumper {
                 pub const m_bUseBones: usize = 0x318; // bool
                 pub const m_nLerpType: usize = 0x31C; // HitboxLerpType_t
                 pub const m_flInterpolation: usize = 0x320; // CPerParticleFloatInput
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod C_OP_PinRopeSegmentParticleToParent {
+                pub const m_nParticleSelection: usize = 0x1C0; // ParticleSelection_t
+                pub const m_nParticleNumber: usize = 0x1C8; // CParticleCollectionFloatInput
+                pub const m_flInterpolation: usize = 0x328; // CPerParticleFloatInput
             }
             // Parent: None
             // Field count: 5
