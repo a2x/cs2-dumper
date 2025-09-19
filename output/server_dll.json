@@ -4491,10 +4491,10 @@
           "m_nPersonaDataPublicLevel": 92,
           "m_nPersonaDataXpTrailLevel": 108,
           "m_rank": 68,
+          "m_unCurrentLoadoutHash": 3920,
           "m_unEquippedPlayerSprayIDs": 3912,
           "m_unMusicID": 64,
-          "m_vecNetworkableLoadout": 4056,
-          "m_vecServerAuthoritativeWeaponSlots": 3920
+          "m_vecServerAuthoritativeWeaponSlots": 3928
         },
         "metadata": [
           {
@@ -4536,14 +4536,18 @@
             "name": "m_vecServerAuthoritativeWeaponSlots",
             "type": "NetworkVarNames",
             "type_name": "ServerAuthoritativeWeaponSlot_t"
-          },
-          {
-            "name": "m_vecNetworkableLoadout",
-            "type": "NetworkVarNames",
-            "type_name": "CSNetworkableLoadout_t"
           }
         ],
         "parent": "CPlayerControllerComponent"
+      },
+      "CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t": {
+        "fields": {
+          "pItem": 0,
+          "slot": 10,
+          "team": 8
+        },
+        "metadata": [],
+        "parent": null
       },
       "CCSPlayerPawn": {
         "fields": {
@@ -15877,15 +15881,6 @@
             "type_name": "int"
           }
         ],
-        "parent": null
-      },
-      "CSNetworkableLoadout_t": {
-        "fields": {
-          "m_ItemAttributeContainer": 48,
-          "m_unSlot": 810,
-          "m_unTeam": 808
-        },
-        "metadata": [],
         "parent": null
       },
       "CSPerRoundStats_t": {
