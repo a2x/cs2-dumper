@@ -1,0 +1,449 @@
+{
+  "worldrenderer.dll": {
+    "classes": {
+      "AggregateInstanceStreamOnDiskData_t": {
+        "fields": {
+          "m_BufferData": 8,
+          "m_DecodedSize": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateLODSetup_t": {
+        "fields": {
+          "m_fMaxObjectScale": 12,
+          "m_fSwitchDistances": 16,
+          "m_vLODOrigin": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateMeshInfo_t": {
+        "fields": {
+          "m_bHasTransform": 5,
+          "m_instanceStreams": 32,
+          "m_nDrawCallIndex": 8,
+          "m_nInstanceStreamOffset": 24,
+          "m_nLODGroupMask": 6,
+          "m_nLODSetupIndex": 10,
+          "m_nLightProbeVolumePrecomputedHandshake": 20,
+          "m_nVertexAlbedoStreamOffset": 28,
+          "m_nVisClusterMemberCount": 4,
+          "m_nVisClusterMemberOffset": 0,
+          "m_objectFlags": 16,
+          "m_vTintColor": 12
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateSceneObject_t": {
+        "fields": {
+          "m_aggregateMeshes": 16,
+          "m_allFlags": 0,
+          "m_anyFlags": 4,
+          "m_fragmentTransforms": 88,
+          "m_instanceStream": 10,
+          "m_lodSetups": 40,
+          "m_nLayer": 8,
+          "m_renderableModel": 112,
+          "m_vertexAlbedoStream": 12,
+          "m_visClusterMembership": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateVertexAlbedoStreamOnDiskData_t": {
+        "fields": {
+          "m_BufferData": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "BakedLightingInfo_t": {
+        "fields": {
+          "m_bBakedShadowsGamma20": 17,
+          "m_bCompressionEnabled": 18,
+          "m_bHasLightmaps": 16,
+          "m_bSHLightmaps": 19,
+          "m_bakedShadows": 48,
+          "m_lightMaps": 24,
+          "m_nChartPackIterations": 20,
+          "m_nLightmapGameVersionNumber": 4,
+          "m_nLightmapVersionNumber": 0,
+          "m_nVradQuality": 21,
+          "m_vLightmapUvScale": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "BakedLightingInfo_t__BakedShadowAssignment_t": {
+        "fields": {
+          "m_nLightHash": 0,
+          "m_nMapHash": 4,
+          "m_nShadowChannel": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "BaseSceneObjectOverride_t": {
+        "fields": {
+          "m_nSceneObjectIndex": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CVoxelVisibility": {
+        "fields": {
+          "m_EnclosedClusterListBlock": 124,
+          "m_EnclosedClustersBlock": 132,
+          "m_MasksBlock": 140,
+          "m_NodeBlock": 108,
+          "m_RegionBlock": 116,
+          "m_flGridSize": 96,
+          "m_nBaseClusterCount": 64,
+          "m_nPVSBytesPerCluster": 68,
+          "m_nSkyVisibilityCluster": 100,
+          "m_nSunVisibilityCluster": 104,
+          "m_nVisBlocks": 148,
+          "m_vMaxBounds": 84,
+          "m_vMinBounds": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ClutterSceneObject_t": {
+        "fields": {
+          "m_Bounds": 0,
+          "m_flBeginCullSize": 164,
+          "m_flEndCullSize": 168,
+          "m_flags": 24,
+          "m_instancePositions": 32,
+          "m_instanceScales": 80,
+          "m_instanceTintSrgb": 104,
+          "m_materialGroup": 160,
+          "m_nLayer": 28,
+          "m_renderableModel": 152,
+          "m_tiles": 128
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ClutterTile_t": {
+        "fields": {
+          "m_BoundsWs": 8,
+          "m_nFirstInstance": 0,
+          "m_nLastInstance": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "EntityIOConnectionData_t": {
+        "fields": {
+          "m_flDelay": 40,
+          "m_inputName": 24,
+          "m_nTimesToFire": 44,
+          "m_outputName": 0,
+          "m_overrideParam": 32,
+          "m_paramMap": 48,
+          "m_targetName": 16,
+          "m_targetType": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "EntityKeyValueData_t": {
+        "fields": {
+          "m_connections": 8,
+          "m_keyValuesData": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "ExtraVertexStreamOverride_t": {
+        "fields": {
+          "m_extraBufferBinding": 16,
+          "m_nAdditionalMeshDrawPrimitiveFlags": 12,
+          "m_nDrawCallIndex": 8,
+          "m_nSubSceneObject": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeVMapResourceData_t": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "MaterialOverride_t": {
+        "fields": {
+          "m_nDrawCallIndex": 8,
+          "m_nSubSceneObject": 4,
+          "m_pMaterial": 16,
+          "m_vLinearTintColor": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "NodeData_t": {
+        "fields": {
+          "m_ChildNodeIndices": 48,
+          "m_flMinimumDistance": 40,
+          "m_nParent": 0,
+          "m_vMaxBounds": 28,
+          "m_vMinBounds": 16,
+          "m_vOrigin": 4,
+          "m_worldNodePrefix": 72
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PermEntityLumpData_t": {
+        "fields": {
+          "m_childLumps": 16,
+          "m_entityKeyValues": 40,
+          "m_name": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "SceneObject_t": {
+        "fields": {
+          "m_flFadeEndDistance": 56,
+          "m_flFadeStartDistance": 52,
+          "m_nCubeMapPrecomputedHandshake": 108,
+          "m_nLODOverride": 106,
+          "m_nLightProbeVolumePrecomputedHandshake": 112,
+          "m_nObjectID": 0,
+          "m_nObjectTypeFlags": 88,
+          "m_nOverlayRenderOrder": 104,
+          "m_renderable": 128,
+          "m_renderableModel": 120,
+          "m_skin": 80,
+          "m_vLightingOrigin": 92,
+          "m_vTintColor": 60,
+          "m_vTransform": 4
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "VMapResourceData_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "VoxelVisBlockOffset_t": {
+        "fields": {
+          "m_nElementCount": 4,
+          "m_nOffset": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "WorldBuilderParams_t": {
+        "fields": {
+          "m_bAggregateInstanceStreams": 5,
+          "m_bBuildBakedLighting": 4,
+          "m_bakedLightingInfo": 8,
+          "m_flMinDrawVolumeSize": 0,
+          "m_nCompileFingerprint": 88,
+          "m_nCompileTimestamp": 80
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "WorldNodeOnDiskBufferData_t": {
+        "fields": {
+          "m_inputLayoutFields": 8,
+          "m_nElementCount": 0,
+          "m_nElementSizeInBytes": 4,
+          "m_pData": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "WorldNode_t": {
+        "fields": {
+          "m_aggregateInstanceStreams": 168,
+          "m_aggregateSceneObjects": 48,
+          "m_bHasBakedGeometryFlag": 344,
+          "m_clutterSceneObjects": 72,
+          "m_extraVertexStreamOverrides": 96,
+          "m_extraVertexStreams": 144,
+          "m_grassFileName": 264,
+          "m_layerNames": 216,
+          "m_materialOverrides": 120,
+          "m_nodeLightingInfo": 272,
+          "m_sceneObjectLayerIndices": 240,
+          "m_sceneObjects": 0,
+          "m_vertexAlbedoStreams": 192,
+          "m_visClusterMembership": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "World_t": {
+        "fields": {
+          "m_builderParams": 0,
+          "m_entityLumps": 192,
+          "m_worldLightingInfo": 120,
+          "m_worldNodes": 96
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      }
+    },
+    "enums": {
+      "AggregateInstanceStream_t": {
+        "alignment": 1,
+        "members": {
+          "AGGREGATE_INSTANCE_STREAM_LIGHTMAPUV_UNORM16": 1,
+          "AGGREGATE_INSTANCE_STREAM_NONE": 0,
+          "AGGREGATE_INSTANCE_STREAM_VERTEXBLEND_UNORM8": 4,
+          "AGGREGATE_INSTANCE_STREAM_VERTEXTINT_UNORM8": 2
+        },
+        "type": "uint8"
+      },
+      "ObjectTypeFlags_t": {
+        "alignment": 4,
+        "members": {
+          "OBJECT_TYPE_BAKED_GEOMETRY": 131072,
+          "OBJECT_TYPE_BLOCK_LIGHT": 16,
+          "OBJECT_TYPE_DISABLED_IN_LOW_QUALITY": 128,
+          "OBJECT_TYPE_DISABLE_VIS_CULLING": 65536,
+          "OBJECT_TYPE_MODEL": 8,
+          "OBJECT_TYPE_MODEL_HAS_LODS": 2048,
+          "OBJECT_TYPE_NONE": 0,
+          "OBJECT_TYPE_NO_SHADOWS": 32,
+          "OBJECT_TYPE_NO_SUN_SHADOWS": 256,
+          "OBJECT_TYPE_OVERLAY": 8192,
+          "OBJECT_TYPE_PRECOMPUTED_VISMEMBERS": 16384,
+          "OBJECT_TYPE_RENDER_TO_CUBEMAPS": 1024,
+          "OBJECT_TYPE_RENDER_WITH_DYNAMIC": 512,
+          "OBJECT_TYPE_STATIC_CUBE_MAP": 32768,
+          "OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND": 64
+        },
+        "type": "uint32"
+      }
+    }
+  }
+}
