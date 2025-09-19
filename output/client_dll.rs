@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 01:09:41.918835800 UTC
+// 2025-09-19 02:17:55.490307700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -345,17 +345,16 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_nPersonaDataPublicCommendsFriendly (int)
             // NetworkVarNames: m_nPersonaDataXpTrailLevel (int)
             // NetworkVarNames: m_vecServerAuthoritativeWeaponSlots (ServerAuthoritativeWeaponSlot_t)
-            // NetworkVarNames: m_vecNetworkableLoadout (CSNetworkableLoadout_t)
             pub mod CCSPlayerController_InventoryServices {
-                pub const m_unMusicID: usize = 0x40; // uint16
-                pub const m_rank: usize = 0x44; // MedalRank_t[6]
-                pub const m_nPersonaDataPublicLevel: usize = 0x5C; // int32
-                pub const m_nPersonaDataPublicCommendsLeader: usize = 0x60; // int32
-                pub const m_nPersonaDataPublicCommendsTeacher: usize = 0x64; // int32
-                pub const m_nPersonaDataPublicCommendsFriendly: usize = 0x68; // int32
-                pub const m_nPersonaDataXpTrailLevel: usize = 0x6C; // int32
-                pub const m_vecServerAuthoritativeWeaponSlots: usize = 0x70; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
-                pub const m_vecNetworkableLoadout: usize = 0xD8; // C_UtlVectorEmbeddedNetworkVar<CSNetworkableLoadout_t>
+                pub const m_vecNetworkableLoadout: usize = 0x40; // CUtlVector<CCSPlayerController_InventoryServices::NetworkedLoadoutSlot_t>
+                pub const m_unMusicID: usize = 0x58; // uint16
+                pub const m_rank: usize = 0x5C; // MedalRank_t[6]
+                pub const m_nPersonaDataPublicLevel: usize = 0x74; // int32
+                pub const m_nPersonaDataPublicCommendsLeader: usize = 0x78; // int32
+                pub const m_nPersonaDataPublicCommendsTeacher: usize = 0x7C; // int32
+                pub const m_nPersonaDataPublicCommendsFriendly: usize = 0x80; // int32
+                pub const m_nPersonaDataXpTrailLevel: usize = 0x84; // int32
+                pub const m_vecServerAuthoritativeWeaponSlots: usize = 0x88; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: None
             // Field count: 1
@@ -697,13 +696,6 @@ pub mod cs2_dumper {
                 pub const m_bHide: usize = 0x1131; // bool
                 pub const m_flSeenTargetTime: usize = 0x1134; // float32
                 pub const m_pTargetPanel: usize = 0x1138; // C_PointClientUIWorldPanel*
-            }
-            // Parent: None
-            // Field count: 3
-            pub mod CSNetworkableLoadout_t {
-                pub const m_ItemAttributeContainer: usize = 0x30; // C_AttributeContainer
-                pub const m_unTeam: usize = 0x508; // uint16
-                pub const m_unSlot: usize = 0x50A; // uint16
             }
             // Parent: CPlayer_UseServices
             // Field count: 0
@@ -4018,7 +4010,7 @@ pub mod cs2_dumper {
                 pub const m_vMaxs: usize = 0x6CC; // Vector
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 38
+            // Field count: 39
             //
             // Metadata:
             // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -4039,6 +4031,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flOffsetTickCompleteTime (float)
             // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
             // NetworkVarNames: m_flStamina (float)
+            // NetworkVarNames: m_vecInputRotated (Vector)
             // NetworkVarNames: m_bWasSurfing (bool)
             pub mod CCSPlayer_MovementServices {
                 pub const m_vecLadderNormal: usize = 0x280; // Vector
@@ -4072,13 +4065,14 @@ pub mod cs2_dumper {
                 pub const m_flOffsetTickCompleteTime: usize = 0x520; // float32
                 pub const m_flOffsetTickStashedSpeed: usize = 0x524; // float32
                 pub const m_flStamina: usize = 0x528; // float32
-                pub const m_flHeightAtJumpStart: usize = 0x52C; // float32
-                pub const m_flMaxJumpHeightThisJump: usize = 0x530; // float32
-                pub const m_flMaxJumpHeightLastJump: usize = 0x534; // float32
-                pub const m_flStaminaAtJumpStart: usize = 0x538; // float32
-                pub const m_flAccumulatedJumpError: usize = 0x53C; // float32
-                pub const m_flTicksSinceLastSurfingDetected: usize = 0x540; // float32
-                pub const m_bWasSurfing: usize = 0x544; // bool
+                pub const m_vecInputRotated: usize = 0x52C; // Vector
+                pub const m_flHeightAtJumpStart: usize = 0x538; // float32
+                pub const m_flMaxJumpHeightThisJump: usize = 0x53C; // float32
+                pub const m_flMaxJumpHeightLastJump: usize = 0x540; // float32
+                pub const m_flStaminaAtJumpStart: usize = 0x544; // float32
+                pub const m_flAccumulatedJumpError: usize = 0x548; // float32
+                pub const m_flTicksSinceLastSurfingDetected: usize = 0x54C; // float32
+                pub const m_bWasSurfing: usize = 0x550; // bool
             }
             // Parent: None
             // Field count: 5
@@ -5141,6 +5135,13 @@ pub mod cs2_dumper {
             // Parent: C_BaseToggle
             // Field count: 0
             pub mod C_FuncMover {
+            }
+            // Parent: None
+            // Field count: 3
+            pub mod CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t {
+                pub const pItem: usize = 0x0; // C_EconItemView*
+                pub const team: usize = 0x8; // uint16
+                pub const slot: usize = 0xA; // uint16
             }
             // Parent: CEntityComponent
             // Field count: 69

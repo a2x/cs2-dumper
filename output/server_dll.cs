@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 01:09:41.918835800 UTC
+// 2025-09-19 02:17:55.490307700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2070,7 +2070,6 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nPersonaDataPublicCommendsFriendly (int)
         // NetworkVarNames: m_nPersonaDataXpTrailLevel (int)
         // NetworkVarNames: m_vecServerAuthoritativeWeaponSlots (ServerAuthoritativeWeaponSlot_t)
-        // NetworkVarNames: m_vecNetworkableLoadout (CSNetworkableLoadout_t)
         public static class CCSPlayerController_InventoryServices {
             public const nint m_unMusicID = 0x40; // uint16
             public const nint m_rank = 0x44; // MedalRank_t[6]
@@ -2080,8 +2079,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPersonaDataPublicCommendsFriendly = 0x68; // int32
             public const nint m_nPersonaDataXpTrailLevel = 0x6C; // int32
             public const nint m_unEquippedPlayerSprayIDs = 0xF48; // uint32[1]
-            public const nint m_vecServerAuthoritativeWeaponSlots = 0xF50; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
-            public const nint m_vecNetworkableLoadout = 0xFD8; // CUtlVectorEmbeddedNetworkVar<CSNetworkableLoadout_t>
+            public const nint m_unCurrentLoadoutHash = 0xF50; // uint64
+            public const nint m_vecServerAuthoritativeWeaponSlots = 0xF58; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
         }
         // Parent: None
         // Field count: 0
@@ -2291,13 +2290,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabled = 0x7F0; // bool
             public const nint m_iszInteractsAs = 0x7F8; // CUtlSymbolLarge
             public const nint m_iszInteractsWith = 0x800; // CUtlSymbolLarge
-        }
-        // Parent: None
-        // Field count: 3
-        public static class CSNetworkableLoadout_t {
-            public const nint m_ItemAttributeContainer = 0x30; // CAttributeContainer
-            public const nint m_unTeam = 0x328; // uint16
-            public const nint m_unSlot = 0x32A; // uint16
         }
         // Parent: CPlayer_UseServices
         // Field count: 0
@@ -6413,7 +6405,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_shakeCallback = 0x528; // CPhysicsShake
         }
         // Parent: CPlayer_MovementServices_Humanoid
-        // Field count: 40
+        // Field count: 41
         //
         // Metadata:
         // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -6434,6 +6426,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flOffsetTickCompleteTime (float)
         // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
         // NetworkVarNames: m_flStamina (float)
+        // NetworkVarNames: m_vecInputRotated (Vector)
         // NetworkVarNames: m_bWasSurfing (bool)
         public static class CCSPlayer_MovementServices {
             public const nint m_vecLadderNormal = 0x288; // Vector
@@ -6469,13 +6462,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_flOffsetTickCompleteTime = 0x530; // float32
             public const nint m_flOffsetTickStashedSpeed = 0x534; // float32
             public const nint m_flStamina = 0x538; // float32
-            public const nint m_flHeightAtJumpStart = 0x53C; // float32
-            public const nint m_flMaxJumpHeightThisJump = 0x540; // float32
-            public const nint m_flMaxJumpHeightLastJump = 0x544; // float32
-            public const nint m_flStaminaAtJumpStart = 0x548; // float32
-            public const nint m_flAccumulatedJumpError = 0x54C; // float32
-            public const nint m_flTicksSinceLastSurfingDetected = 0x550; // float32
-            public const nint m_bWasSurfing = 0x554; // bool
+            public const nint m_vecInputRotated = 0x53C; // Vector
+            public const nint m_flHeightAtJumpStart = 0x548; // float32
+            public const nint m_flMaxJumpHeightThisJump = 0x54C; // float32
+            public const nint m_flMaxJumpHeightLastJump = 0x550; // float32
+            public const nint m_flStaminaAtJumpStart = 0x554; // float32
+            public const nint m_flAccumulatedJumpError = 0x558; // float32
+            public const nint m_flTicksSinceLastSurfingDetected = 0x55C; // float32
+            public const nint m_bWasSurfing = 0x560; // bool
         }
         // Parent: None
         // Field count: 5
@@ -8381,6 +8375,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabled = 0x4F0; // bool
             public const nint m_iszAchievementEventID = 0x4F8; // CUtlSymbolLarge
             public const nint m_OnFired = 0x500; // CEntityIOOutput
+        }
+        // Parent: None
+        // Field count: 3
+        public static class CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t {
+            public const nint pItem = 0x0; // CEconItemView*
+            public const nint team = 0x8; // uint16
+            public const nint slot = 0xA; // uint16
         }
         // Parent: CEntityComponent
         // Field count: 70

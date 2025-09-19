@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 01:09:41.918835800 UTC
+// 2025-09-19 02:17:55.490307700 UTC
 
 #pragma once
 
@@ -339,17 +339,16 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nPersonaDataPublicCommendsFriendly (int)
             // NetworkVarNames: m_nPersonaDataXpTrailLevel (int)
             // NetworkVarNames: m_vecServerAuthoritativeWeaponSlots (ServerAuthoritativeWeaponSlot_t)
-            // NetworkVarNames: m_vecNetworkableLoadout (CSNetworkableLoadout_t)
             namespace CCSPlayerController_InventoryServices {
-                constexpr std::ptrdiff_t m_unMusicID = 0x40; // uint16
-                constexpr std::ptrdiff_t m_rank = 0x44; // MedalRank_t[6]
-                constexpr std::ptrdiff_t m_nPersonaDataPublicLevel = 0x5C; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsLeader = 0x60; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsTeacher = 0x64; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsFriendly = 0x68; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataXpTrailLevel = 0x6C; // int32
-                constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x70; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
-                constexpr std::ptrdiff_t m_vecNetworkableLoadout = 0xD8; // C_UtlVectorEmbeddedNetworkVar<CSNetworkableLoadout_t>
+                constexpr std::ptrdiff_t m_vecNetworkableLoadout = 0x40; // CUtlVector<CCSPlayerController_InventoryServices::NetworkedLoadoutSlot_t>
+                constexpr std::ptrdiff_t m_unMusicID = 0x58; // uint16
+                constexpr std::ptrdiff_t m_rank = 0x5C; // MedalRank_t[6]
+                constexpr std::ptrdiff_t m_nPersonaDataPublicLevel = 0x74; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsLeader = 0x78; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsTeacher = 0x7C; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsFriendly = 0x80; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataXpTrailLevel = 0x84; // int32
+                constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x88; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: None
             // Field count: 1
@@ -691,13 +690,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHide = 0x1131; // bool
                 constexpr std::ptrdiff_t m_flSeenTargetTime = 0x1134; // float32
                 constexpr std::ptrdiff_t m_pTargetPanel = 0x1138; // C_PointClientUIWorldPanel*
-            }
-            // Parent: None
-            // Field count: 3
-            namespace CSNetworkableLoadout_t {
-                constexpr std::ptrdiff_t m_ItemAttributeContainer = 0x30; // C_AttributeContainer
-                constexpr std::ptrdiff_t m_unTeam = 0x508; // uint16
-                constexpr std::ptrdiff_t m_unSlot = 0x50A; // uint16
             }
             // Parent: CPlayer_UseServices
             // Field count: 0
@@ -4012,7 +4004,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vMaxs = 0x6CC; // Vector
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 38
+            // Field count: 39
             //
             // Metadata:
             // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -4033,6 +4025,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flOffsetTickCompleteTime (float)
             // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
             // NetworkVarNames: m_flStamina (float)
+            // NetworkVarNames: m_vecInputRotated (Vector)
             // NetworkVarNames: m_bWasSurfing (bool)
             namespace CCSPlayer_MovementServices {
                 constexpr std::ptrdiff_t m_vecLadderNormal = 0x280; // Vector
@@ -4066,13 +4059,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flOffsetTickCompleteTime = 0x520; // float32
                 constexpr std::ptrdiff_t m_flOffsetTickStashedSpeed = 0x524; // float32
                 constexpr std::ptrdiff_t m_flStamina = 0x528; // float32
-                constexpr std::ptrdiff_t m_flHeightAtJumpStart = 0x52C; // float32
-                constexpr std::ptrdiff_t m_flMaxJumpHeightThisJump = 0x530; // float32
-                constexpr std::ptrdiff_t m_flMaxJumpHeightLastJump = 0x534; // float32
-                constexpr std::ptrdiff_t m_flStaminaAtJumpStart = 0x538; // float32
-                constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x53C; // float32
-                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x540; // float32
-                constexpr std::ptrdiff_t m_bWasSurfing = 0x544; // bool
+                constexpr std::ptrdiff_t m_vecInputRotated = 0x52C; // Vector
+                constexpr std::ptrdiff_t m_flHeightAtJumpStart = 0x538; // float32
+                constexpr std::ptrdiff_t m_flMaxJumpHeightThisJump = 0x53C; // float32
+                constexpr std::ptrdiff_t m_flMaxJumpHeightLastJump = 0x540; // float32
+                constexpr std::ptrdiff_t m_flStaminaAtJumpStart = 0x544; // float32
+                constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x548; // float32
+                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x54C; // float32
+                constexpr std::ptrdiff_t m_bWasSurfing = 0x550; // bool
             }
             // Parent: None
             // Field count: 5
@@ -5135,6 +5129,13 @@ namespace cs2_dumper {
             // Parent: C_BaseToggle
             // Field count: 0
             namespace C_FuncMover {
+            }
+            // Parent: None
+            // Field count: 3
+            namespace CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t {
+                constexpr std::ptrdiff_t pItem = 0x0; // C_EconItemView*
+                constexpr std::ptrdiff_t team = 0x8; // uint16
+                constexpr std::ptrdiff_t slot = 0xA; // uint16
             }
             // Parent: CEntityComponent
             // Field count: 69
