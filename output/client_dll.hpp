@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 23:35:16.178232700 UTC
+// 2025-09-19 17:18:57.328261100 UTC
 
 #pragma once
 
@@ -339,17 +339,16 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nPersonaDataPublicCommendsFriendly (int)
             // NetworkVarNames: m_nPersonaDataXpTrailLevel (int)
             // NetworkVarNames: m_vecServerAuthoritativeWeaponSlots (ServerAuthoritativeWeaponSlot_t)
-            // NetworkVarNames: m_vecNetworkableLoadout (CSNetworkableLoadout_t)
             namespace CCSPlayerController_InventoryServices {
-                constexpr std::ptrdiff_t m_unMusicID = 0x40; // uint16
-                constexpr std::ptrdiff_t m_rank = 0x44; // MedalRank_t[6]
-                constexpr std::ptrdiff_t m_nPersonaDataPublicLevel = 0x5C; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsLeader = 0x60; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsTeacher = 0x64; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsFriendly = 0x68; // int32
-                constexpr std::ptrdiff_t m_nPersonaDataXpTrailLevel = 0x6C; // int32
-                constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x70; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
-                constexpr std::ptrdiff_t m_vecNetworkableLoadout = 0xD8; // C_UtlVectorEmbeddedNetworkVar<CSNetworkableLoadout_t>
+                constexpr std::ptrdiff_t m_vecNetworkableLoadout = 0x40; // CUtlVector<CCSPlayerController_InventoryServices::NetworkedLoadoutSlot_t>
+                constexpr std::ptrdiff_t m_unMusicID = 0x58; // uint16
+                constexpr std::ptrdiff_t m_rank = 0x5C; // MedalRank_t[6]
+                constexpr std::ptrdiff_t m_nPersonaDataPublicLevel = 0x74; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsLeader = 0x78; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsTeacher = 0x7C; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataPublicCommendsFriendly = 0x80; // int32
+                constexpr std::ptrdiff_t m_nPersonaDataXpTrailLevel = 0x84; // int32
+                constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x88; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: None
             // Field count: 1
@@ -691,13 +690,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHide = 0x1131; // bool
                 constexpr std::ptrdiff_t m_flSeenTargetTime = 0x1134; // float32
                 constexpr std::ptrdiff_t m_pTargetPanel = 0x1138; // C_PointClientUIWorldPanel*
-            }
-            // Parent: None
-            // Field count: 3
-            namespace CSNetworkableLoadout_t {
-                constexpr std::ptrdiff_t m_ItemAttributeContainer = 0x30; // C_AttributeContainer
-                constexpr std::ptrdiff_t m_unTeam = 0x508; // uint16
-                constexpr std::ptrdiff_t m_unSlot = 0x50A; // uint16
             }
             // Parent: CPlayer_UseServices
             // Field count: 0
@@ -5137,6 +5129,13 @@ namespace cs2_dumper {
             // Parent: C_BaseToggle
             // Field count: 0
             namespace C_FuncMover {
+            }
+            // Parent: None
+            // Field count: 3
+            namespace CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t {
+                constexpr std::ptrdiff_t pItem = 0x0; // C_EconItemView*
+                constexpr std::ptrdiff_t team = 0x8; // uint16
+                constexpr std::ptrdiff_t slot = 0xA; // uint16
             }
             // Parent: CEntityComponent
             // Field count: 69

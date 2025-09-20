@@ -1239,15 +1239,15 @@
       },
       "CCSPlayerController_InventoryServices": {
         "fields": {
-          "m_nPersonaDataPublicCommendsFriendly": 104,
-          "m_nPersonaDataPublicCommendsLeader": 96,
-          "m_nPersonaDataPublicCommendsTeacher": 100,
-          "m_nPersonaDataPublicLevel": 92,
-          "m_nPersonaDataXpTrailLevel": 108,
-          "m_rank": 68,
-          "m_unMusicID": 64,
-          "m_vecNetworkableLoadout": 216,
-          "m_vecServerAuthoritativeWeaponSlots": 112
+          "m_nPersonaDataPublicCommendsFriendly": 128,
+          "m_nPersonaDataPublicCommendsLeader": 120,
+          "m_nPersonaDataPublicCommendsTeacher": 124,
+          "m_nPersonaDataPublicLevel": 116,
+          "m_nPersonaDataXpTrailLevel": 132,
+          "m_rank": 92,
+          "m_unMusicID": 88,
+          "m_vecNetworkableLoadout": 64,
+          "m_vecServerAuthoritativeWeaponSlots": 136
         },
         "metadata": [
           {
@@ -1289,14 +1289,18 @@
             "name": "m_vecServerAuthoritativeWeaponSlots",
             "type": "NetworkVarNames",
             "type_name": "ServerAuthoritativeWeaponSlot_t"
-          },
-          {
-            "name": "m_vecNetworkableLoadout",
-            "type": "NetworkVarNames",
-            "type_name": "CSNetworkableLoadout_t"
           }
         ],
         "parent": "CPlayerControllerComponent"
+      },
+      "CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t": {
+        "fields": {
+          "pItem": 0,
+          "slot": 10,
+          "team": 8
+        },
+        "metadata": [],
+        "parent": null
       },
       "CCSPlayer_ActionTrackingServices": {
         "fields": {
@@ -4665,15 +4669,6 @@
             "type_name": "int"
           }
         ],
-        "parent": null
-      },
-      "CSNetworkableLoadout_t": {
-        "fields": {
-          "m_ItemAttributeContainer": 48,
-          "m_unSlot": 1290,
-          "m_unTeam": 1288
-        },
-        "metadata": [],
         "parent": null
       },
       "CSPerRoundStats_t": {

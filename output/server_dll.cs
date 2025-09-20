@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-17 23:35:16.178232700 UTC
+// 2025-09-19 17:18:57.328261100 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2070,7 +2070,6 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nPersonaDataPublicCommendsFriendly (int)
         // NetworkVarNames: m_nPersonaDataXpTrailLevel (int)
         // NetworkVarNames: m_vecServerAuthoritativeWeaponSlots (ServerAuthoritativeWeaponSlot_t)
-        // NetworkVarNames: m_vecNetworkableLoadout (CSNetworkableLoadout_t)
         public static class CCSPlayerController_InventoryServices {
             public const nint m_unMusicID = 0x40; // uint16
             public const nint m_rank = 0x44; // MedalRank_t[6]
@@ -2080,8 +2079,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPersonaDataPublicCommendsFriendly = 0x68; // int32
             public const nint m_nPersonaDataXpTrailLevel = 0x6C; // int32
             public const nint m_unEquippedPlayerSprayIDs = 0xF48; // uint32[1]
-            public const nint m_vecServerAuthoritativeWeaponSlots = 0xF50; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
-            public const nint m_vecNetworkableLoadout = 0xFD8; // CUtlVectorEmbeddedNetworkVar<CSNetworkableLoadout_t>
+            public const nint m_unCurrentLoadoutHash = 0xF50; // uint64
+            public const nint m_vecServerAuthoritativeWeaponSlots = 0xF58; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
         }
         // Parent: None
         // Field count: 0
@@ -2291,13 +2290,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabled = 0x7F0; // bool
             public const nint m_iszInteractsAs = 0x7F8; // CUtlSymbolLarge
             public const nint m_iszInteractsWith = 0x800; // CUtlSymbolLarge
-        }
-        // Parent: None
-        // Field count: 3
-        public static class CSNetworkableLoadout_t {
-            public const nint m_ItemAttributeContainer = 0x30; // CAttributeContainer
-            public const nint m_unTeam = 0x328; // uint16
-            public const nint m_unSlot = 0x32A; // uint16
         }
         // Parent: CPlayer_UseServices
         // Field count: 0
@@ -8383,6 +8375,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabled = 0x4F0; // bool
             public const nint m_iszAchievementEventID = 0x4F8; // CUtlSymbolLarge
             public const nint m_OnFired = 0x500; // CEntityIOOutput
+        }
+        // Parent: None
+        // Field count: 3
+        public static class CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t {
+            public const nint pItem = 0x0; // CEconItemView*
+            public const nint team = 0x8; // uint16
+            public const nint slot = 0xA; // uint16
         }
         // Parent: CEntityComponent
         // Field count: 70
