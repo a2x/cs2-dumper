@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-19 17:18:57.328261100 UTC
+// 2025-09-23 03:29:34.120750500 UTC
 
 #pragma once
 
@@ -18,7 +18,7 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x1B94EA0;
             constexpr std::ptrdiff_t GameClientExports001 = 0x1BD6800;
             constexpr std::ptrdiff_t LegacyGameUI001 = 0x1BF52C0;
-            constexpr std::ptrdiff_t Source2Client002 = 0x1E1C5F0;
+            constexpr std::ptrdiff_t Source2Client002 = 0x1E1C670;
             constexpr std::ptrdiff_t Source2ClientConfig001 = 0x1DB64C0;
             constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x1BE0DC0;
             constexpr std::ptrdiff_t Source2ClientUI001 = 0x1BF3750;
@@ -162,15 +162,15 @@ namespace cs2_dumper {
         }
         // Module: server.dll
         namespace server_dll {
-            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x16FE8A0;
+            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x16FE8B0;
             constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x16AAFA0;
             constexpr std::ptrdiff_t NavGameTest001 = 0x17A5E10;
             constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x1755D68;
             constexpr std::ptrdiff_t Source2GameClients001 = 0x1751720;
-            constexpr std::ptrdiff_t Source2GameDirector001 = 0x18AF510;
+            constexpr std::ptrdiff_t Source2GameDirector001 = 0x18AF520;
             constexpr std::ptrdiff_t Source2GameEntities001 = 0x1755470;
             constexpr std::ptrdiff_t Source2Server001 = 0x17552D0;
-            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x1980938;
+            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x1980948;
             constexpr std::ptrdiff_t customnavsystem001 = 0x168AAA8;
         }
         // Module: soundsystem.dll
@@ -218,10 +218,6 @@ namespace cs2_dumper {
         // Module: v8system.dll
         namespace v8system_dll {
             constexpr std::ptrdiff_t Source2V8System001 = 0x315B0;
-        }
-        // Module: vconcomm.dll
-        namespace vconcomm_dll {
-            constexpr std::ptrdiff_t VConComm001 = 0x375C0;
         }
         // Module: vphysics2.dll
         namespace vphysics2_dll {
