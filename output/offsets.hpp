@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-23 03:29:34.120750500 UTC
+// 2025-09-24 01:52:12.383893800 UTC
 
 #pragma once
 
@@ -9,23 +9,23 @@ namespace cs2_dumper {
     namespace offsets {
         // Module: client.dll
         namespace client_dll {
-            constexpr std::ptrdiff_t dwCSGOInput = 0x1E2C700;
+            constexpr std::ptrdiff_t dwCSGOInput = 0x1E2C710;
             constexpr std::ptrdiff_t dwEntityList = 0x1D05458;
-            constexpr std::ptrdiff_t dwGameEntitySystem = 0x1FA65D8;
+            constexpr std::ptrdiff_t dwGameEntitySystem = 0x1FA65E8;
             constexpr std::ptrdiff_t dwGameEntitySystem_highestEntityIndex = 0x20F0;
-            constexpr std::ptrdiff_t dwGameRules = 0x1E214D0;
+            constexpr std::ptrdiff_t dwGameRules = 0x1E21548;
             constexpr std::ptrdiff_t dwGlobalVars = 0x1BD6150;
-            constexpr std::ptrdiff_t dwGlowManager = 0x1E1E2A0;
-            constexpr std::ptrdiff_t dwLocalPlayerController = 0x1E0E5A8;
+            constexpr std::ptrdiff_t dwGlowManager = 0x1E1E3E8;
+            constexpr std::ptrdiff_t dwLocalPlayerController = 0x1E0E588;
             constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x1BE0E90;
-            constexpr std::ptrdiff_t dwPlantedC4 = 0x1E279A0;
+            constexpr std::ptrdiff_t dwPlantedC4 = 0x1E279B0;
             constexpr std::ptrdiff_t dwPrediction = 0x1BE0DC0;
-            constexpr std::ptrdiff_t dwSensitivity = 0x1E1EDC8;
+            constexpr std::ptrdiff_t dwSensitivity = 0x1E1EE48;
             constexpr std::ptrdiff_t dwSensitivity_sensitivity = 0x48;
-            constexpr std::ptrdiff_t dwViewAngles = 0x1E2CEB0;
-            constexpr std::ptrdiff_t dwViewMatrix = 0x1E222A0;
-            constexpr std::ptrdiff_t dwViewRender = 0x1E230C0;
-            constexpr std::ptrdiff_t dwWeaponC4 = 0x1DBFAE8;
+            constexpr std::ptrdiff_t dwViewAngles = 0x1E2CEC0;
+            constexpr std::ptrdiff_t dwViewMatrix = 0x1E222B0;
+            constexpr std::ptrdiff_t dwViewRender = 0x1E230D0;
+            constexpr std::ptrdiff_t dwWeaponC4 = 0x1DBF970;
         }
         // Module: engine2.dll
         namespace engine2_dll {
