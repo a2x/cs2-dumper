@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-23 03:29:34.120750500 UTC
+// 2025-09-24 01:52:12.383893800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -4020,7 +4020,6 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flOffsetTickCompleteTime (float)
         // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
         // NetworkVarNames: m_flStamina (float)
-        // NetworkVarNames: m_vecInputRotated (Vector)
         // NetworkVarNames: m_bWasSurfing (bool)
         public static class CCSPlayer_MovementServices {
             public const nint m_vecLadderNormal = 0x280; // Vector
@@ -4054,14 +4053,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_flOffsetTickCompleteTime = 0x520; // float32
             public const nint m_flOffsetTickStashedSpeed = 0x524; // float32
             public const nint m_flStamina = 0x528; // float32
-            public const nint m_vecInputRotated = 0x52C; // Vector
-            public const nint m_flHeightAtJumpStart = 0x538; // float32
-            public const nint m_flMaxJumpHeightThisJump = 0x53C; // float32
-            public const nint m_flMaxJumpHeightLastJump = 0x540; // float32
-            public const nint m_flStaminaAtJumpStart = 0x544; // float32
-            public const nint m_flAccumulatedJumpError = 0x548; // float32
-            public const nint m_flTicksSinceLastSurfingDetected = 0x54C; // float32
-            public const nint m_bWasSurfing = 0x550; // bool
+            public const nint m_flHeightAtJumpStart = 0x52C; // float32
+            public const nint m_flMaxJumpHeightThisJump = 0x530; // float32
+            public const nint m_flMaxJumpHeightLastJump = 0x534; // float32
+            public const nint m_flStaminaAtJumpStart = 0x538; // float32
+            public const nint m_flAccumulatedJumpError = 0x53C; // float32
+            public const nint m_flTicksSinceLastSurfingDetected = 0x540; // float32
+            public const nint m_bWasSurfing = 0x544; // bool
+            public const nint m_vecInputRotated = 0x5D4; // Vector
         }
         // Parent: 
         // Field count: 5
