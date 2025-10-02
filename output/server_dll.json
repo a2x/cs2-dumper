@@ -30,7 +30,7 @@
             "type_name": "string_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAI_ChangeHintGroup": {
         "fields": {
@@ -212,7 +212,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeContainer": {
         "fields": {
@@ -255,7 +255,7 @@
             "type_name": "CEconItemAttribute"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager": {
         "fields": {
@@ -283,7 +283,7 @@
             "type_name": "attributeprovidertypes_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CAttributeManager__cached_attribute_float_t": {
         "fields": {
@@ -1497,7 +1497,7 @@
             "type_name": "BloodType"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CBaseEntityAPI": {
         "fields": {},
@@ -2717,7 +2717,7 @@
           "m_viewForward": 220
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBreakable": {
         "fields": {
@@ -2875,7 +2875,7 @@
           "m_vecWheelFrictionScales": 72
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CBuyZone": {
         "fields": {
@@ -6207,7 +6207,7 @@
             "type_name": "float"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CColorCorrection": {
         "fields": {
@@ -6509,7 +6509,7 @@
             "type_name": "int"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CDynamicLight": {
         "fields": {
@@ -6790,7 +6790,7 @@
             "type_name": "char"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEconWearable": {
         "fields": {
@@ -6946,7 +6946,7 @@
       "CEntityComponent": {
         "fields": {},
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "CEntityDissolve": {
         "fields": {
@@ -7063,7 +7063,7 @@
             "type_name": "int32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEntityInstance": {
         "fields": {
@@ -8615,7 +8615,7 @@
             "type_name": "Vector"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CEnvWindVolume": {
         "fields": {
@@ -9662,7 +9662,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameSceneNodeHandle": {
         "fields": {
@@ -9681,7 +9681,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGameText": {
         "fields": {
@@ -9806,7 +9806,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CGradientFog": {
         "fields": {
@@ -11671,7 +11671,7 @@
             "type_name": "int8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CMolotovGrenade": {
         "fields": {},
@@ -11818,7 +11818,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CNullEntity": {
         "fields": {},
@@ -17048,7 +17048,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "CTimerEntity": {
         "fields": {
@@ -17866,7 +17866,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EngineCountdownTimer": {
         "fields": {
@@ -17891,7 +17891,7 @@
             "type_name": "float32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntityRenderAttribute_t": {
         "fields": {
@@ -17910,7 +17910,7 @@
             "type_name": "Vector4D"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "EntitySpottedState_t": {
         "fields": {
@@ -17964,7 +17964,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "OutflowWithRequirements_t": {
         "fields": {
@@ -17999,7 +17999,7 @@
             "type_name": "EHANDLE"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "PredictedDamageTag_t": {
         "fields": {
@@ -18118,7 +18118,7 @@
             "type_name": "CEntityHandle"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "SequenceHistory_t": {
         "fields": {
@@ -18130,7 +18130,7 @@
           "m_nSeqLoopMode": 12
         },
         "metadata": [],
-        "parent": ""
+        "parent": null
       },
       "SignatureOutflow_Continue": {
         "fields": {},
@@ -18204,7 +18204,7 @@
             "type_name": "uint8"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "ViewAngleServerChange_t": {
         "fields": {
@@ -18248,7 +18248,7 @@
             "type_name": "uint16"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "WeaponPurchaseTracker_t": {
         "fields": {
@@ -18261,7 +18261,7 @@
             "type_name": "WeaponPurchaseCount_t"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "audioparams_t": {
         "fields": {
@@ -18298,7 +18298,7 @@
             "type_name": "uint32"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogparams_t": {
         "fields": {
@@ -18445,7 +18445,7 @@
             "type_name": "bool"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "fogplayerparams_t": {
         "fields": {
@@ -18471,7 +18471,7 @@
             "type_name": "CHandle<CFogController>"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "shard_model_desc_t": {
         "fields": {
@@ -18556,7 +18556,7 @@
             "type_name": "CUtlStringToken"
           }
         ],
-        "parent": ""
+        "parent": null
       },
       "sky3dparams_t": {
         "fields": {
@@ -18599,7 +18599,7 @@
             "type_name": "WorldGroupId_t"
           }
         ],
-        "parent": ""
+        "parent": null
       }
     },
     "enums": {
