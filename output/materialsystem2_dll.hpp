@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: materialsystem2.dll
-        // Class count: 13
+        // Class count: 14
         // Enum count: 5
         namespace materialsystem2_dll {
             // Alignment: 4
@@ -56,7 +56,7 @@ namespace cs2_dumper {
             namespace MaterialParam_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -64,7 +64,7 @@ namespace cs2_dumper {
             namespace MaterialParamVector_t {
                 constexpr std::ptrdiff_t m_value = 0x8; // Vector4D
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -73,7 +73,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_value = 0x8; // CUtlString
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -82,15 +82,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_toneMapParams = 0x4; // PostProcessingTonemapParameters_t
                 constexpr std::ptrdiff_t m_bHasBloomParams = 0x40; // bool
                 constexpr std::ptrdiff_t m_bloomParams = 0x44; // PostProcessingBloomParameters_t
-                constexpr std::ptrdiff_t m_bHasVignetteParams = 0xB4; // bool
-                constexpr std::ptrdiff_t m_vignetteParams = 0xB8; // PostProcessingVignetteParameters_t
-                constexpr std::ptrdiff_t m_bHasLocalContrastParams = 0xDC; // bool
-                constexpr std::ptrdiff_t m_localConstrastParams = 0xE0; // PostProcessingLocalContrastParameters_t
-                constexpr std::ptrdiff_t m_nColorCorrectionVolumeDim = 0xF4; // int32
-                constexpr std::ptrdiff_t m_colorCorrectionVolumeData = 0xF8; // CUtlBinaryBlock
-                constexpr std::ptrdiff_t m_bHasColorCorrection = 0x110; // bool
+                constexpr std::ptrdiff_t m_bHasVignetteParams = 0xCC; // bool
+                constexpr std::ptrdiff_t m_vignetteParams = 0xD0; // PostProcessingVignetteParameters_t
+                constexpr std::ptrdiff_t m_bHasLocalContrastParams = 0xF4; // bool
+                constexpr std::ptrdiff_t m_localConstrastParams = 0xF8; // PostProcessingLocalContrastParameters_t
+                constexpr std::ptrdiff_t m_nColorCorrectionVolumeDim = 0x10C; // int32
+                constexpr std::ptrdiff_t m_colorCorrectionVolumeData = 0x110; // CUtlBinaryBlock
+                constexpr std::ptrdiff_t m_bHasColorCorrection = 0x120; // bool
+                constexpr std::ptrdiff_t m_bHasFogScatteringParams = 0x121; // bool
+                constexpr std::ptrdiff_t m_fogScatteringParams = 0x124; // PostProcessingFogScatteringParameters_t
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -145,7 +147,19 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMinHighlightLum = 0x34; // float32
                 constexpr std::ptrdiff_t m_flMaxHighlightLum = 0x38; // float32
             }
-            // Parent: MaterialParam_t
+            // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace PostProcessingFogScatteringParameters_t {
+                constexpr std::ptrdiff_t m_fRadius = 0x0; // float32
+                constexpr std::ptrdiff_t m_fScale = 0x4; // float32
+                constexpr std::ptrdiff_t m_fCubemapScale = 0x8; // float32
+                constexpr std::ptrdiff_t m_fVolumetricScale = 0xC; // float32
+                constexpr std::ptrdiff_t m_fGradientScale = 0x10; // float32
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -175,7 +189,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
             }
             // Parent: None
-            // Field count: 10
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -188,10 +202,16 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flBloomThresholdWidth = 0x14; // float32
                 constexpr std::ptrdiff_t m_flSkyboxBloomStrength = 0x18; // float32
                 constexpr std::ptrdiff_t m_flBloomStartValue = 0x1C; // float32
-                constexpr std::ptrdiff_t m_flBlurWeight = 0x20; // float32[5]
-                constexpr std::ptrdiff_t m_vBlurTint = 0x34; // Vector[5]
+                constexpr std::ptrdiff_t m_flComputeBloomStrength = 0x20; // float32
+                constexpr std::ptrdiff_t m_flComputeBloomThreshold = 0x24; // float32
+                constexpr std::ptrdiff_t m_flComputeBloomRadius = 0x28; // float32
+                constexpr std::ptrdiff_t m_flComputeBloomEffectsScale = 0x2C; // float32
+                constexpr std::ptrdiff_t m_flComputeBloomLensDirtStrength = 0x30; // float32
+                constexpr std::ptrdiff_t m_flComputeBloomLensDirtBlackLevel = 0x34; // float32
+                constexpr std::ptrdiff_t m_flBlurWeight = 0x38; // float32[5]
+                constexpr std::ptrdiff_t m_vBlurTint = 0x4C; // Vector[5]
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -199,7 +219,7 @@ namespace cs2_dumper {
             namespace MaterialParamFloat_t {
                 constexpr std::ptrdiff_t m_flValue = 0x8; // float32
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Field count: 1
             //
             // Metadata:

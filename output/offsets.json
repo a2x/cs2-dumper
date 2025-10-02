@@ -1,45 +1,44 @@
 {
   "client.dll": {
-    "dwCSGOInput": 27701008,
-    "dwEntityList": 27229984,
-    "dwGameEntitySystem": 28424008,
+    "dwCSGOInput": 31685424,
+    "dwEntityList": 30475864,
+    "dwGameEntitySystem": 33232968,
     "dwGameEntitySystem_highestEntityIndex": 8432,
-    "dwGameRules": 27641848,
-    "dwGlobalVars": 25428296,
-    "dwGlowManager": 27639616,
-    "dwLocalPlayerController": 27552256,
-    "dwLocalPlayerPawn": 25477328,
-    "dwPlantedC4": 27685080,
-    "dwPrediction": 25476944,
-    "dwSensitivity": 27645208,
-    "dwSensitivity_sensitivity": 64,
-    "dwViewAngles": 27701984,
-    "dwViewMatrix": 27660016,
-    "dwViewRender": 27662760,
-    "dwWeaponC4": 27239040
+    "dwGameRules": 31639928,
+    "dwGlobalVars": 29233440,
+    "dwGlowManager": 31627288,
+    "dwLocalPlayerController": 31562072,
+    "dwLocalPlayerPawn": 29277856,
+    "dwPlantedC4": 31662232,
+    "dwPrediction": 29277648,
+    "dwSensitivity": 31629944,
+    "dwSensitivity_sensitivity": 72,
+    "dwViewAngles": 31687136,
+    "dwViewMatrix": 31643344,
+    "dwViewRender": 31646960,
+    "dwWeaponC4": 31239656
   },
   "engine2.dll": {
-    "dwBuildNumber": 5512164,
-    "dwNetworkGameClient": 5508320,
-    "dwNetworkGameClient_clientTickCount": 872,
-    "dwNetworkGameClient_deltaTick": 636,
-    "dwNetworkGameClient_isBackgroundMap": 2626631,
-    "dwNetworkGameClient_localPlayer": 240,
-    "dwNetworkGameClient_maxClients": 568,
-    "dwNetworkGameClient_serverTickCount": 876,
-    "dwNetworkGameClient_signOnState": 552,
-    "dwWindowHeight": 6440300,
-    "dwWindowWidth": 6440296
+    "dwBuildNumber": 6206420,
+    "dwNetworkGameClient": 6202608,
+    "dwNetworkGameClient_clientTickCount": 856,
+    "dwNetworkGameClient_deltaTick": 572,
+    "dwNetworkGameClient_isBackgroundMap": 2888751,
+    "dwNetworkGameClient_localPlayer": 232,
+    "dwNetworkGameClient_maxClients": 560,
+    "dwNetworkGameClient_serverTickCount": 572,
+    "dwNetworkGameClient_signOnState": 544,
+    "dwWindowHeight": 9344612,
+    "dwWindowWidth": 9344608
   },
   "inputsystem.dll": {
-    "dwInputSystem": 231392
+    "dwInputSystem": 285216
   },
   "matchmaking.dll": {
-    "dwGameTypes": 1716624,
-    "dwGameTypes_mapName": 288
+    "dwGameTypes": 1793760
   },
   "soundsystem.dll": {
-    "dwSoundSystem": 3806704,
+    "dwSoundSystem": 4079152,
     "dwSoundSystem_engineViewData": 124
   }
 }

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -10,7 +10,7 @@ pub mod cs2_dumper {
         // Enum count: 2
         pub mod schemasystem_dll {
             // Alignment: 1
-            // Member count: 81
+            // Member count: 82
             #[repr(u8)]
             pub enum fieldtype_t {
                 FIELD_VOID = 0x0,
@@ -93,7 +93,8 @@ pub mod cs2_dumper {
                 FIELD_ENGINE_TICK = 0x4D,
                 FIELD_WORLD_GROUP_ID = 0x4E,
                 FIELD_GLOBALSYMBOL = 0x4F,
-                FIELD_TYPECOUNT = 0x50
+                FIELD_HNMGRAPHDEFINITION = 0x50,
+                FIELD_TYPECOUNT = 0x51
             }
             // Alignment: 4
             // Member count: 3
@@ -111,10 +112,11 @@ pub mod cs2_dumper {
             pub mod InfoForResourceTypeCResourceManifestInternal {
             }
             // Parent: None
-            // Field count: 22
+            // Field count: 23
             pub mod CSchemaSystemInternalRegistration {
                 pub const m_Vector2D: usize = 0x0; // Vector2D
                 pub const m_Vector: usize = 0x8; // Vector
+                pub const m_VectorWS: usize = 0x14; // VectorWS
                 pub const m_VectorAligned: usize = 0x20; // VectorAligned
                 pub const m_Quaternion: usize = 0x30; // Quaternion
                 pub const m_QAngle: usize = 0x40; // QAngle
@@ -129,14 +131,14 @@ pub mod cs2_dumper {
                 pub const m_CTransform: usize = 0x100; // CTransform
                 pub const m_pKeyValues: usize = 0x120; // KeyValues*
                 pub const m_CUtlBinaryBlock: usize = 0x128; // CUtlBinaryBlock
-                pub const m_CUtlString: usize = 0x140; // CUtlString
-                pub const m_CUtlSymbol: usize = 0x148; // CUtlSymbol
-                pub const m_stringToken: usize = 0x14C; // CUtlStringToken
-                pub const m_stringTokenWithStorage: usize = 0x150; // CUtlStringTokenWithStorage
-                pub const m_ResourceTypes: usize = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
-                pub const m_KV3: usize = 0x170; // KeyValues3
+                pub const m_CUtlString: usize = 0x138; // CUtlString
+                pub const m_CUtlSymbol: usize = 0x140; // CUtlSymbol
+                pub const m_stringToken: usize = 0x144; // CUtlStringToken
+                pub const m_stringTokenWithStorage: usize = 0x148; // CUtlStringTokenWithStorage
+                pub const m_ResourceTypes: usize = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
+                pub const m_KV3: usize = 0x168; // KeyValues3
             }
-            // Parent: CExampleSchemaVData_PolymorphicBase
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -152,7 +154,7 @@ pub mod cs2_dumper {
             pub mod CExampleSchemaVData_PolymorphicBase {
                 pub const m_nBase: usize = 0x8; // int32
             }
-            // Parent: CExampleSchemaVData_PolymorphicBase
+            // Parent: None
             // Field count: 1
             //
             // Metadata:

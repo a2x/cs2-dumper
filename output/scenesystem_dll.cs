@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
@@ -49,7 +49,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nViewId = 0x0; // uint64
             public const nint m_ViewName = 0x8; // CUtlString
         }
-        // Parent: CSSDSMsg_LayerBase
+        // Parent: None
         // Field count: 0
         //
         // Metadata:
@@ -57,19 +57,18 @@ namespace CS2Dumper.Schemas {
         public static class CSSDSMsg_PostLayer {
         }
         // Parent: None
-        // Field count: 6
+        // Field count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSSDSMsg_LayerBase {
             public const nint m_viewId = 0x0; // SceneViewId_t
             public const nint m_ViewName = 0x10; // CUtlString
-            public const nint m_nLayerIndex = 0x18; // int32
-            public const nint m_nLayerId = 0x20; // uint64
-            public const nint m_LayerName = 0x28; // CUtlString
-            public const nint m_displayText = 0x30; // CUtlString
+            public const nint m_nLayerId = 0x18; // uint64
+            public const nint m_LayerName = 0x20; // CUtlString
+            public const nint m_displayText = 0x28; // CUtlString
         }
-        // Parent: CSSDSMsg_LayerBase
+        // Parent: None
         // Field count: 0
         //
         // Metadata:

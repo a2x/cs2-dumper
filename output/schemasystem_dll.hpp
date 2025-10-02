@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 #pragma once
 
@@ -12,7 +12,7 @@ namespace cs2_dumper {
         // Enum count: 2
         namespace schemasystem_dll {
             // Alignment: 1
-            // Member count: 81
+            // Member count: 82
             enum class fieldtype_t : uint8_t {
                 FIELD_VOID = 0x0,
                 FIELD_FLOAT32 = 0x1,
@@ -94,7 +94,8 @@ namespace cs2_dumper {
                 FIELD_ENGINE_TICK = 0x4D,
                 FIELD_WORLD_GROUP_ID = 0x4E,
                 FIELD_GLOBALSYMBOL = 0x4F,
-                FIELD_TYPECOUNT = 0x50
+                FIELD_HNMGRAPHDEFINITION = 0x50,
+                FIELD_TYPECOUNT = 0x51
             };
             // Alignment: 4
             // Member count: 3
@@ -111,10 +112,11 @@ namespace cs2_dumper {
             namespace InfoForResourceTypeCResourceManifestInternal {
             }
             // Parent: None
-            // Field count: 22
+            // Field count: 23
             namespace CSchemaSystemInternalRegistration {
                 constexpr std::ptrdiff_t m_Vector2D = 0x0; // Vector2D
                 constexpr std::ptrdiff_t m_Vector = 0x8; // Vector
+                constexpr std::ptrdiff_t m_VectorWS = 0x14; // VectorWS
                 constexpr std::ptrdiff_t m_VectorAligned = 0x20; // VectorAligned
                 constexpr std::ptrdiff_t m_Quaternion = 0x30; // Quaternion
                 constexpr std::ptrdiff_t m_QAngle = 0x40; // QAngle
@@ -129,14 +131,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_CTransform = 0x100; // CTransform
                 constexpr std::ptrdiff_t m_pKeyValues = 0x120; // KeyValues*
                 constexpr std::ptrdiff_t m_CUtlBinaryBlock = 0x128; // CUtlBinaryBlock
-                constexpr std::ptrdiff_t m_CUtlString = 0x140; // CUtlString
-                constexpr std::ptrdiff_t m_CUtlSymbol = 0x148; // CUtlSymbol
-                constexpr std::ptrdiff_t m_stringToken = 0x14C; // CUtlStringToken
-                constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x150; // CUtlStringTokenWithStorage
-                constexpr std::ptrdiff_t m_ResourceTypes = 0x168; // CResourceArray<CResourcePointer<CResourceString>>
-                constexpr std::ptrdiff_t m_KV3 = 0x170; // KeyValues3
+                constexpr std::ptrdiff_t m_CUtlString = 0x138; // CUtlString
+                constexpr std::ptrdiff_t m_CUtlSymbol = 0x140; // CUtlSymbol
+                constexpr std::ptrdiff_t m_stringToken = 0x144; // CUtlStringToken
+                constexpr std::ptrdiff_t m_stringTokenWithStorage = 0x148; // CUtlStringTokenWithStorage
+                constexpr std::ptrdiff_t m_ResourceTypes = 0x160; // CResourceArray<CResourcePointer<CResourceString>>
+                constexpr std::ptrdiff_t m_KV3 = 0x168; // KeyValues3
             }
-            // Parent: CExampleSchemaVData_PolymorphicBase
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -152,7 +154,7 @@ namespace cs2_dumper {
             namespace CExampleSchemaVData_PolymorphicBase {
                 constexpr std::ptrdiff_t m_nBase = 0x8; // int32
             }
-            // Parent: CExampleSchemaVData_PolymorphicBase
+            // Parent: None
             // Field count: 1
             //
             // Metadata:

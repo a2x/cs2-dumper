@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -28,7 +28,7 @@ pub mod cs2_dumper {
                 REFERENCE_PASSTHROUGH = 0xC
             }
             // Alignment: 4
-            // Member count: 16
+            // Member count: 17
             #[repr(u32)]
             pub enum EStyleNodeType {
                 ROOT = 0x0,
@@ -46,7 +46,8 @@ pub mod cs2_dumper {
                 REFERENCE_CONTENT = 0xC,
                 REFERENCE_COMPILED = 0xD,
                 REFERENCE_PASSTHROUGH = 0xE,
-                COMPILER_CONDITIONAL = 0xF
+                REFERENCE_PANEL = 0xF,
+                COMPILER_CONDITIONAL = 0x10
             }
         }
     }

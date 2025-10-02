@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 #pragma once
 
@@ -54,7 +54,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nViewId = 0x0; // uint64
                 constexpr std::ptrdiff_t m_ViewName = 0x8; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -62,19 +62,18 @@ namespace cs2_dumper {
             namespace CSSDSMsg_PostLayer {
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSSDSMsg_LayerBase {
                 constexpr std::ptrdiff_t m_viewId = 0x0; // SceneViewId_t
                 constexpr std::ptrdiff_t m_ViewName = 0x10; // CUtlString
-                constexpr std::ptrdiff_t m_nLayerIndex = 0x18; // int32
-                constexpr std::ptrdiff_t m_nLayerId = 0x20; // uint64
-                constexpr std::ptrdiff_t m_LayerName = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_displayText = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_nLayerId = 0x18; // uint64
+                constexpr std::ptrdiff_t m_LayerName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_displayText = 0x28; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Field count: 0
             //
             // Metadata:

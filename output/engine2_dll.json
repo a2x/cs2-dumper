@@ -76,7 +76,7 @@
           "m_nTotalTicksThisFrame": 56
         },
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventAppShutdown_t": {
         "fields": {
@@ -93,7 +93,7 @@
       "EventClientAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventAdvanceTick_t"
+        "parent": null
       },
       "EventClientFrameSimulate_t": {
         "fields": {
@@ -119,7 +119,7 @@
       "EventClientPauseSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventClientPollInput_t": {
         "fields": {
@@ -139,7 +139,7 @@
       "EventClientPostAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventPostAdvanceTick_t"
+        "parent": null
       },
       "EventClientPostOutput_t": {
         "fields": {
@@ -155,7 +155,7 @@
       "EventClientPostSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventClientPreOutput_t": {
         "fields": {
@@ -172,7 +172,7 @@
       "EventClientPreSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventClientProcessGameInput_t": {
         "fields": {
@@ -210,7 +210,7 @@
       "EventClientSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventFrameBoundary_t": {
         "fields": {
@@ -232,7 +232,7 @@
           "m_nTotalTicksThisFrame": 56
         },
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventPostDataUpdate_t": {
         "fields": {
@@ -258,12 +258,12 @@
       "EventServerAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventAdvanceTick_t"
+        "parent": null
       },
       "EventServerBeginAsyncPostTickWork_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventPostAdvanceTick_t"
+        "parent": null
       },
       "EventServerEndAsyncPostTickWork_t": {
         "fields": {},
@@ -273,27 +273,27 @@
       "EventServerPollNetworking_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventServerPostAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventPostAdvanceTick_t"
+        "parent": null
       },
       "EventServerPostSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventServerProcessNetworking_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventServerSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventSetTime_t": {
         "fields": {
@@ -364,26 +364,6 @@
           "ENTITY_IO_TARGET_ENTITYNAME": 2,
           "ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME": 7,
           "ENTITY_IO_TARGET_INVALID": -1
-        },
-        "type": "uint32"
-      },
-      "SpawnDebugOverrideState_t": {
-        "alignment": 4,
-        "members": {
-          "SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED": 2,
-          "SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED": 1,
-          "SPAWN_DEBUG_OVERRIDE_NONE": 0
-        },
-        "type": "uint32"
-      },
-      "SpawnDebugRestrictionOverrideState_t": {
-        "alignment": 4,
-        "members": {
-          "SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS": 1,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS": 8,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS": 4,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS": 2,
-          "SPAWN_DEBUG_RESTRICT_NONE": 0
         },
         "type": "uint32"
       }

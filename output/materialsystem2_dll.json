@@ -11,7 +11,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamFloat_t": {
         "fields": {
@@ -23,7 +23,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamInt_t": {
         "fields": {
@@ -35,7 +35,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamString_t": {
         "fields": {
@@ -47,7 +47,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamTexture_t": {
         "fields": {
@@ -59,7 +59,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamVector_t": {
         "fields": {
@@ -71,7 +71,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParam_t": {
         "fields": {
@@ -118,10 +118,32 @@
           "m_flBloomThreshold": 16,
           "m_flBloomThresholdWidth": 20,
           "m_flBlurBloomStrength": 12,
-          "m_flBlurWeight": 32,
+          "m_flBlurWeight": 56,
+          "m_flComputeBloomEffectsScale": 44,
+          "m_flComputeBloomLensDirtBlackLevel": 52,
+          "m_flComputeBloomLensDirtStrength": 48,
+          "m_flComputeBloomRadius": 40,
+          "m_flComputeBloomStrength": 32,
+          "m_flComputeBloomThreshold": 36,
           "m_flScreenBloomStrength": 8,
           "m_flSkyboxBloomStrength": 24,
-          "m_vBlurTint": 52
+          "m_vBlurTint": 76
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PostProcessingFogScatteringParameters_t": {
+        "fields": {
+          "m_fCubemapScale": 8,
+          "m_fGradientScale": 16,
+          "m_fRadius": 0,
+          "m_fScale": 4,
+          "m_fVolumetricScale": 12
         },
         "metadata": [
           {
@@ -150,16 +172,18 @@
       "PostProcessingResource_t": {
         "fields": {
           "m_bHasBloomParams": 64,
-          "m_bHasColorCorrection": 272,
-          "m_bHasLocalContrastParams": 220,
+          "m_bHasColorCorrection": 288,
+          "m_bHasFogScatteringParams": 289,
+          "m_bHasLocalContrastParams": 244,
           "m_bHasTonemapParams": 0,
-          "m_bHasVignetteParams": 180,
+          "m_bHasVignetteParams": 204,
           "m_bloomParams": 68,
-          "m_colorCorrectionVolumeData": 248,
-          "m_localConstrastParams": 224,
-          "m_nColorCorrectionVolumeDim": 244,
+          "m_colorCorrectionVolumeData": 272,
+          "m_fogScatteringParams": 292,
+          "m_localConstrastParams": 248,
+          "m_nColorCorrectionVolumeDim": 268,
           "m_toneMapParams": 4,
-          "m_vignetteParams": 184
+          "m_vignetteParams": 208
         },
         "metadata": [
           {

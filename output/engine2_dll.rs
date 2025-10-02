@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-05-14 17:59:43.518112900 UTC
+// 2025-10-02 13:27:52.426659600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: engine2.dll
         // Class count: 48
-        // Enum count: 4
+        // Enum count: 2
         pub mod engine2_dll {
             // Alignment: 4
             // Member count: 3
@@ -26,25 +26,7 @@ pub mod cs2_dumper {
                 ENTITY_IO_TARGET_EHANDLE = 0x6,
                 ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
             }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum SpawnDebugOverrideState_t {
-                SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
-                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
-                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
-            }
-            // Alignment: 4
-            // Member count: 5
-            #[repr(u32)]
-            pub enum SpawnDebugRestrictionOverrideState_t {
-                SPAWN_DEBUG_RESTRICT_NONE = 0x0,
-                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
-            }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPostSimulate_t {
             }
@@ -55,7 +37,7 @@ pub mod cs2_dumper {
                 pub const m_flRealTime: usize = 0x28; // float32
                 pub const m_flFrameTime: usize = 0x2C; // float32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 4
             pub mod EventPostAdvanceTick_t {
                 pub const m_nCurrentTick: usize = 0x30; // int32
@@ -82,7 +64,7 @@ pub mod cs2_dumper {
                 pub const m_flRenderFrameTimeUnbounded: usize = 0x30; // float32
                 pub const m_bRenderOnly: usize = 0x34; // bool
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerPostSimulate_t {
             }
@@ -103,7 +85,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod EventServerEndAsyncPostTickWork_t {
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientAdvanceTick_t {
             }
@@ -116,7 +98,7 @@ pub mod cs2_dumper {
             pub mod CNetworkVarChainer {
                 pub const m_PathIndex: usize = 0x20; // ChangeAccessorFieldPathIndex_t
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientSimulate_t {
             }
@@ -162,11 +144,11 @@ pub mod cs2_dumper {
             pub mod EventAppShutdown_t {
                 pub const m_nDummy0: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerSimulate_t {
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerPostAdvanceTick_t {
             }
@@ -180,11 +162,11 @@ pub mod cs2_dumper {
             pub mod EventPostDataUpdate_t {
                 pub const m_nCount: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPreSimulate_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPauseSimulate_t {
             }
@@ -193,7 +175,7 @@ pub mod cs2_dumper {
             pub mod EventClientProcessNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 4
             pub mod EventAdvanceTick_t {
                 pub const m_nCurrentTick: usize = 0x30; // int32
@@ -205,7 +187,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod EventSplitScreenStateChanged_t {
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventClientPostAdvanceTick_t {
             }
@@ -235,7 +217,7 @@ pub mod cs2_dumper {
                 pub const m_flFrameTime: usize = 0x2C; // float32
                 pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerAdvanceTick_t {
             }
@@ -266,7 +248,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod EventClientAdvanceNonRenderedFrame_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerProcessNetworking_t {
             }
@@ -298,7 +280,7 @@ pub mod cs2_dumper {
             pub mod EventClientPollNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerBeginAsyncPostTickWork_t {
             }
@@ -310,7 +292,7 @@ pub mod cs2_dumper {
                 pub const m_flTickInterval: usize = 0x2C; // float32
                 pub const m_flTickStartTime: usize = 0x30; // float64
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Field count: 0
             pub mod EventServerPollNetworking_t {
             }
