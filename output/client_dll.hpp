@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-02 00:16:01.097387800 UTC
+// 2025-10-03 00:21:54.899122200 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: client.dll
-        // Class count: 489
+        // Class count: 490
         // Enum count: 8
         namespace client_dll {
             // Alignment: 4
@@ -1269,7 +1269,7 @@ namespace cs2_dumper {
             namespace CPointChildModifier {
                 constexpr std::ptrdiff_t m_bOrphanInsteadOfDeletingChildrenOnRemove = 0x5F8; // bool
             }
-            // Parent: C_CSWeaponBase
+            // Parent: C_CSWeaponBaseShotgun
             // Field count: 0
             namespace C_WeaponNOVA {
             }
@@ -2870,7 +2870,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Completed = 0x48; // CPulse_ResumePoint
                 constexpr std::ptrdiff_t m_OnInterval = 0x90; // SignatureOutflow_Continue
             }
-            // Parent: C_CSWeaponBase
+            // Parent: C_CSWeaponBaseShotgun
             // Field count: 0
             namespace C_WeaponXM1014 {
             }
@@ -6156,6 +6156,10 @@ namespace cs2_dumper {
             // MPulseEditorHeaderIcon
             namespace CPulseCell_Value_RandomInt {
             }
+            // Parent: C_CSWeaponBase
+            // Field count: 0
+            namespace C_CSWeaponBaseShotgun {
+            }
             // Parent: C_RagdollProp
             // Field count: 7
             //
@@ -6713,7 +6717,7 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_WeaponFiveSeven {
             }
-            // Parent: C_CSWeaponBase
+            // Parent: C_CSWeaponBaseShotgun
             // Field count: 0
             namespace C_WeaponSawedoff {
             }

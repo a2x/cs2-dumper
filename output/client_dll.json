@@ -8752,6 +8752,11 @@
         ],
         "parent": "C_CSWeaponBase"
       },
+      "C_CSWeaponBaseShotgun": {
+        "fields": {},
+        "metadata": [],
+        "parent": "C_CSWeaponBase"
+      },
       "C_Chicken": {
         "fields": {
           "m_AttributeManager": 5192,
@@ -14296,7 +14301,7 @@
       "C_WeaponNOVA": {
         "fields": {},
         "metadata": [],
-        "parent": "C_CSWeaponBase"
+        "parent": "C_CSWeaponBaseShotgun"
       },
       "C_WeaponNegev": {
         "fields": {},
@@ -14336,7 +14341,7 @@
       "C_WeaponSawedoff": {
         "fields": {},
         "metadata": [],
-        "parent": "C_CSWeaponBase"
+        "parent": "C_CSWeaponBaseShotgun"
       },
       "C_WeaponTaser": {
         "fields": {
@@ -14370,7 +14375,7 @@
       "C_WeaponXM1014": {
         "fields": {},
         "metadata": [],
-        "parent": "C_CSWeaponBase"
+        "parent": "C_CSWeaponBaseShotgun"
       },
       "C_World": {
         "fields": {},
