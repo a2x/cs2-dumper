@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-02 00:16:01.097387800 UTC
+// 2025-10-03 00:21:54.899122200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: client.dll
-        // Class count: 489
+        // Class count: 490
         // Enum count: 8
         pub mod client_dll {
             // Alignment: 4
@@ -1275,7 +1275,7 @@ pub mod cs2_dumper {
             pub mod CPointChildModifier {
                 pub const m_bOrphanInsteadOfDeletingChildrenOnRemove: usize = 0x5F8; // bool
             }
-            // Parent: C_CSWeaponBase
+            // Parent: C_CSWeaponBaseShotgun
             // Field count: 0
             pub mod C_WeaponNOVA {
             }
@@ -2876,7 +2876,7 @@ pub mod cs2_dumper {
                 pub const m_Completed: usize = 0x48; // CPulse_ResumePoint
                 pub const m_OnInterval: usize = 0x90; // SignatureOutflow_Continue
             }
-            // Parent: C_CSWeaponBase
+            // Parent: C_CSWeaponBaseShotgun
             // Field count: 0
             pub mod C_WeaponXM1014 {
             }
@@ -6162,6 +6162,10 @@ pub mod cs2_dumper {
             // MPulseEditorHeaderIcon
             pub mod CPulseCell_Value_RandomInt {
             }
+            // Parent: C_CSWeaponBase
+            // Field count: 0
+            pub mod C_CSWeaponBaseShotgun {
+            }
             // Parent: C_RagdollProp
             // Field count: 7
             //
@@ -6719,7 +6723,7 @@ pub mod cs2_dumper {
             // Field count: 0
             pub mod C_WeaponFiveSeven {
             }
-            // Parent: C_CSWeaponBase
+            // Parent: C_CSWeaponBaseShotgun
             // Field count: 0
             pub mod C_WeaponSawedoff {
             }

@@ -5897,6 +5897,11 @@
         ],
         "parent": "CCSWeaponBase"
       },
+      "CCSWeaponBaseShotgun": {
+        "fields": {},
+        "metadata": [],
+        "parent": "CCSWeaponBase"
+      },
       "CCSWeaponBaseVData": {
         "fields": {
           "m_DefaultLoadoutSlot": 1800,
@@ -17756,7 +17761,7 @@
       "CWeaponNOVA": {
         "fields": {},
         "metadata": [],
-        "parent": "CCSWeaponBase"
+        "parent": "CCSWeaponBaseShotgun"
       },
       "CWeaponNegev": {
         "fields": {},
@@ -17796,7 +17801,7 @@
       "CWeaponSawedoff": {
         "fields": {},
         "metadata": [],
-        "parent": "CCSWeaponBase"
+        "parent": "CCSWeaponBaseShotgun"
       },
       "CWeaponTaser": {
         "fields": {
@@ -17830,7 +17835,7 @@
       "CWeaponXM1014": {
         "fields": {},
         "metadata": [],
-        "parent": "CCSWeaponBase"
+        "parent": "CCSWeaponBaseShotgun"
       },
       "CWorld": {
         "fields": {},
