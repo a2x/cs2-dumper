@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-03 00:21:54.899122200 UTC
+// 2025-10-04 12:39:31.642108200 UTC
 
 #pragma once
 
@@ -29,8 +29,8 @@ namespace cs2_dumper {
         }
         // Module: engine2.dll
         namespace engine2_dll {
-            constexpr std::ptrdiff_t dwBuildNumber = 0x5EB3D4;
-            constexpr std::ptrdiff_t dwNetworkGameClient = 0x5EA4F0;
+            constexpr std::ptrdiff_t dwBuildNumber = 0x5EC3D4;
+            constexpr std::ptrdiff_t dwNetworkGameClient = 0x5EB4F0;
             constexpr std::ptrdiff_t dwNetworkGameClient_clientTickCount = 0x358;
             constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x23C;
             constexpr std::ptrdiff_t dwNetworkGameClient_isBackgroundMap = 0x2C142F;
@@ -38,8 +38,8 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x230;
             constexpr std::ptrdiff_t dwNetworkGameClient_serverTickCount = 0x23C;
             constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x220;
-            constexpr std::ptrdiff_t dwWindowHeight = 0x8E9664;
-            constexpr std::ptrdiff_t dwWindowWidth = 0x8E9660;
+            constexpr std::ptrdiff_t dwWindowHeight = 0x8EA624;
+            constexpr std::ptrdiff_t dwWindowWidth = 0x8EA620;
         }
         // Module: inputsystem.dll
         namespace inputsystem_dll {
