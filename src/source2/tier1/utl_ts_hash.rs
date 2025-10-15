@@ -13,10 +13,15 @@ pub struct HashAllocatedBlob<D> {
 unsafe impl<D: 'static> Pod for HashAllocatedBlob<D> {}
 
 #[repr(C)]
+pub struct RTL_SRWLOCK
+{
+}
+
+#[repr(C)]
 pub struct HashBucket<D, K> {
-    pad_0000: [u8; 0x18],                                          // 0x0000
-    pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0018
-    pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0020
+    pub lock: Pointer64<RTL_SRWLOCK>,                              // 0x0000
+    pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0008
+    pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0010
 }
 
 #[repr(C)]
@@ -32,8 +37,8 @@ unsafe impl<D: 'static, K: 'static> Pod for HashFixedDataInternal<D, K> {}
 pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
     pub entry_mem: UtlMemoryPoolBase,   // 0x0000
     pub buckets: [HashBucket<D, K>; C], // 0x0080
-    pub needs_commit: bool,             // 0x2880
-    pad_2881: [u8; 0xF],                // 0x2881
+    pub needs_commit: bool,             // 0x1880
+    pad_2881: [u8; 0xF],                // 0x1881
 }
 
 impl<D: Pod, const C: usize, K: Pod> UtlTsHash<D, C, K> {

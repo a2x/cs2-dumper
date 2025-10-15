@@ -125,6 +125,18 @@
       }
     },
     "enums": {
+      "DecalMode_t": {
+        "alignment": 1,
+        "members": {
+          "kDecalBlood": 0,
+          "kDecalCloak": 1,
+          "kDecalCloakDamage": 2,
+          "kDecalDefault": 0,
+          "kDecalInvalid": 255,
+          "kDecalMax": 3
+        },
+        "type": "uint8"
+      },
       "DisableShadows_t": {
         "alignment": 1,
         "members": {
@@ -134,6 +146,18 @@
           "kDisableShadows_Realtime": 3
         },
         "type": "uint8"
+      },
+      "ESceneObjectVisualization": {
+        "alignment": 4,
+        "members": {
+          "SCENEOBJECT_VIS_INSTANCING": 5,
+          "SCENEOBJECT_VIS_LOD": 4,
+          "SCENEOBJECT_VIS_MATERIAL": 2,
+          "SCENEOBJECT_VIS_NONE": 0,
+          "SCENEOBJECT_VIS_OBJECT": 1,
+          "SCENEOBJECT_VIS_TEXTURE_SIZE": 3
+        },
+        "type": "uint32"
       }
     }
   }

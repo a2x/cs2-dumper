@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-04 12:39:31.642108200 UTC
+// 2025-10-14 23:58:25.486779500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: soundsystem.dll
         // Class count: 74
-        // Enum count: 19
+        // Enum count: 20
         pub mod soundsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -113,13 +113,6 @@ pub mod cs2_dumper {
                 SOS_EDIT_ITEM_TYPE_STACK = 0x3,
                 SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
                 SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-            }
-            // Alignment: 4
-            // Member count: 2
-            #[repr(u32)]
-            pub enum SosActionSortType_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
             }
             // Alignment: 4
             // Member count: 5
@@ -266,6 +259,13 @@ pub mod cs2_dumper {
                 FILTER_SLOPE_48dB = 0x7
             }
             // Alignment: 4
+            // Member count: 2
+            #[repr(u32)]
+            pub enum SosActionLimitSortType_t {
+                SOS_LIMIT_SORTTYPE_HIGHEST = 0x0,
+                SOS_LIMIT_SORTTYPE_LOWEST = 0x1
+            }
+            // Alignment: 4
             // Member count: 3
             #[repr(u32)]
             pub enum VMixSubgraphSwitchInterpolationType_t {
@@ -279,6 +279,13 @@ pub mod cs2_dumper {
             pub enum SosGroupType_t {
                 SOS_GROUPTYPE_DYNAMIC = 0x0,
                 SOS_GROUPTYPE_STATIC = 0x1
+            }
+            // Alignment: 4
+            // Member count: 2
+            #[repr(u32)]
+            pub enum SosActionSetParamSortType_t {
+                SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
+                SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
             }
             // Parent: None
             // Field count: 3
@@ -404,7 +411,7 @@ pub mod cs2_dumper {
                 pub const m_flMinValue: usize = 0xC; // float32
                 pub const m_flMaxValue: usize = 0x10; // float32
                 pub const m_opvarName: usize = 0x18; // CUtlString
-                pub const m_nSortType: usize = 0x20; // SosActionSortType_t
+                pub const m_nSortType: usize = 0x20; // SosActionSetParamSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -968,7 +975,7 @@ pub mod cs2_dumper {
             pub mod CSosGroupActionLimitSchema {
                 pub const m_nMaxCount: usize = 0x8; // int32
                 pub const m_nStopType: usize = 0xC; // SosActionStopType_t
-                pub const m_nSortType: usize = 0x10; // SosActionSortType_t
+                pub const m_nSortType: usize = 0x10; // SosActionLimitSortType_t
                 pub const m_bStopImmediate: usize = 0x14; // bool
                 pub const m_bCountStopped: usize = 0x15; // bool
             }

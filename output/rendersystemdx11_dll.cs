@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-04 12:39:31.642108200 UTC
+// 2025-10-14 23:58:25.486779500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: rendersystemdx11.dll
@@ -25,7 +25,7 @@ namespace CS2Dumper.Schemas {
             RENDER_PRIM_TYPE_COUNT = 0xD
         }
         // Alignment: 4
-        // Member count: 12
+        // Member count: 13
         public enum RenderBufferFlags_t : uint {
             RENDER_BUFFER_USAGE_NONE = 0x0,
             RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
@@ -38,7 +38,8 @@ namespace CS2Dumper.Schemas {
             RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
             RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
             RENDER_BUFFER_POOL_ALLOCATED = 0x800,
-            RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000
+            RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000,
+            RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000
         }
         // Alignment: 1
         // Member count: 3

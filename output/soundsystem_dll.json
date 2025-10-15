@@ -1451,11 +1451,19 @@
         },
         "type": "uint32"
       },
-      "SosActionSortType_t": {
+      "SosActionLimitSortType_t": {
         "alignment": 4,
         "members": {
-          "SOS_SORTTYPE_HIGHEST": 0,
-          "SOS_SORTTYPE_LOWEST": 1
+          "SOS_LIMIT_SORTTYPE_HIGHEST": 0,
+          "SOS_LIMIT_SORTTYPE_LOWEST": 1
+        },
+        "type": "uint32"
+      },
+      "SosActionSetParamSortType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_SETPARAM_SORTTYPE_HIGHEST": 0,
+          "SOS_SETPARAM_SORTTYPE_LOWEST": 1
         },
         "type": "uint32"
       },
