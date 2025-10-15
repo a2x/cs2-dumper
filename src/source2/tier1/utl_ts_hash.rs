@@ -24,7 +24,6 @@ pub struct HashBucket<D, K> {
     pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0010
 }
 
-
 #[repr(C)]
 pub struct HashFixedDataInternal<D, K> {
     pub ui_key: K,                                    // 0x0000
