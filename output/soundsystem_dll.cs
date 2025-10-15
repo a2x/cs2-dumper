@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-04 12:39:31.642108200 UTC
+// 2025-10-14 23:58:25.486779500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
     // Class count: 74
-    // Enum count: 19
+    // Enum count: 20
     public static class SoundsystemDll {
         // Alignment: 4
         // Member count: 2
@@ -103,12 +103,6 @@ namespace CS2Dumper.Schemas {
             SOS_EDIT_ITEM_TYPE_STACK = 0x3,
             SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
             SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-        }
-        // Alignment: 4
-        // Member count: 2
-        public enum SosActionSortType_t : uint {
-            SOS_SORTTYPE_HIGHEST = 0x0,
-            SOS_SORTTYPE_LOWEST = 0x1
         }
         // Alignment: 4
         // Member count: 5
@@ -251,6 +245,12 @@ namespace CS2Dumper.Schemas {
             FILTER_SLOPE_MAX = 0x7
         }
         // Alignment: 4
+        // Member count: 2
+        public enum SosActionLimitSortType_t : uint {
+            SOS_LIMIT_SORTTYPE_HIGHEST = 0x0,
+            SOS_LIMIT_SORTTYPE_LOWEST = 0x1
+        }
+        // Alignment: 4
         // Member count: 3
         public enum VMixSubgraphSwitchInterpolationType_t : uint {
             SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
@@ -262,6 +262,12 @@ namespace CS2Dumper.Schemas {
         public enum SosGroupType_t : uint {
             SOS_GROUPTYPE_DYNAMIC = 0x0,
             SOS_GROUPTYPE_STATIC = 0x1
+        }
+        // Alignment: 4
+        // Member count: 2
+        public enum SosActionSetParamSortType_t : uint {
+            SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
+            SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
         }
         // Parent: None
         // Field count: 3
@@ -387,7 +393,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMinValue = 0xC; // float32
             public const nint m_flMaxValue = 0x10; // float32
             public const nint m_opvarName = 0x18; // CUtlString
-            public const nint m_nSortType = 0x20; // SosActionSortType_t
+            public const nint m_nSortType = 0x20; // SosActionSetParamSortType_t
         }
         // Parent: None
         // Field count: 3
@@ -951,7 +957,7 @@ namespace CS2Dumper.Schemas {
         public static class CSosGroupActionLimitSchema {
             public const nint m_nMaxCount = 0x8; // int32
             public const nint m_nStopType = 0xC; // SosActionStopType_t
-            public const nint m_nSortType = 0x10; // SosActionSortType_t
+            public const nint m_nSortType = 0x10; // SosActionLimitSortType_t
             public const nint m_bStopImmediate = 0x14; // bool
             public const nint m_bCountStopped = 0x15; // bool
         }

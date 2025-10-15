@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-04 12:39:31.642108200 UTC
+// 2025-10-14 23:58:25.486779500 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: pulse_system.dll
-        // Class count: 96
+        // Class count: 97
         // Enum count: 5
         namespace pulse_system_dll {
             // Alignment: 4
@@ -52,7 +52,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Step_TestDomainDestroyFakeEntity {
             }
@@ -61,7 +60,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -74,7 +72,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Test_NoInflow {
             }
             // Parent: None
@@ -104,7 +101,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -125,7 +121,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPulseEditorHeaderIcon
             // MPropertyFriendlyName
             namespace CPulseCell_WaitForObservable {
@@ -162,11 +157,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OutputConnections = 0x128; // CUtlVector<CPulse_OutputConnection*>
             }
             // Parent: None
+            // Field count: 0
+            namespace CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView {
+            }
+            // Parent: None
             // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_FireCursors {
                 constexpr std::ptrdiff_t m_Outflows = 0x48; // CUtlVector<CPulse_OutflowConnection>
                 constexpr std::ptrdiff_t m_bWaitForChildOutflows = 0x60; // bool
@@ -225,7 +223,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_IsRequirementValid {
             }
             // Parent: None
@@ -233,7 +230,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Value_Gradient {
                 constexpr std::ptrdiff_t m_Gradient = 0x48; // CColorGradient
@@ -259,7 +255,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Test_MultiOutflow_WithParams {
                 constexpr std::ptrdiff_t m_Out1 = 0x48; // SignatureOutflow_Continue
                 constexpr std::ptrdiff_t m_Out2 = 0x90; // SignatureOutflow_Continue
@@ -273,7 +268,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Inflow_GraphHook {
                 constexpr std::ptrdiff_t m_HookName = 0x80; // PulseSymbol_t
             }
@@ -320,7 +314,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Test_MultiInflow_NoDefault {
             }
             // Parent: None
@@ -350,7 +343,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -378,7 +370,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_Value_TestValue50 {
@@ -388,7 +379,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Test_MultiOutflow_WithParams_Yielding {
                 constexpr std::ptrdiff_t m_Out1 = 0x48; // SignatureOutflow_Continue
                 constexpr std::ptrdiff_t m_AsyncChild1 = 0x90; // SignatureOutflow_Continue
@@ -401,7 +391,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Value_Curve {
                 constexpr std::ptrdiff_t m_Curve = 0x48; // CPiecewiseCurve
@@ -411,7 +400,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Inflow_EventHandler {
                 constexpr std::ptrdiff_t m_EventName = 0x80; // PulseSymbol_t
             }
@@ -427,7 +415,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Step_TestDomainTracepoint {
             }
@@ -452,7 +439,7 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 1
             namespace CPulseGraphInstance_TestDomain_Derived {
-                constexpr std::ptrdiff_t m_nInstanceValueX = 0x148; // int32
+                constexpr std::ptrdiff_t m_nInstanceValueX = 0x160; // int32
             }
             // Parent: None
             // Field count: 1
@@ -469,15 +456,15 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 9
             namespace CPulseGraphInstance_TestDomain {
-                constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0x118; // bool
-                constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0x119; // bool
-                constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0x11A; // bool
-                constexpr std::ptrdiff_t m_bQuietTracepoints = 0x11B; // bool
-                constexpr std::ptrdiff_t m_bExpectingCursorTerminatedDueToMaxInstructions = 0x11C; // bool
-                constexpr std::ptrdiff_t m_nCursorsTerminatedDueToMaxInstructions = 0x120; // int32
-                constexpr std::ptrdiff_t m_nNextValidateIndex = 0x124; // int32
-                constexpr std::ptrdiff_t m_Tracepoints = 0x128; // CUtlVector<CUtlString>
-                constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0x140; // bool
+                constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0x130; // bool
+                constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0x131; // bool
+                constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0x132; // bool
+                constexpr std::ptrdiff_t m_bQuietTracepoints = 0x133; // bool
+                constexpr std::ptrdiff_t m_bExpectingCursorTerminatedDueToMaxInstructions = 0x134; // bool
+                constexpr std::ptrdiff_t m_nCursorsTerminatedDueToMaxInstructions = 0x138; // int32
+                constexpr std::ptrdiff_t m_nNextValidateIndex = 0x13C; // int32
+                constexpr std::ptrdiff_t m_Tracepoints = 0x140; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0x158; // bool
             }
             // Parent: None
             // Field count: 0
@@ -488,7 +475,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Timeline {
                 constexpr std::ptrdiff_t m_TimelineEvents = 0x48; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
                 constexpr std::ptrdiff_t m_bWaitForChildOutflows = 0x60; // bool
@@ -500,7 +486,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Inflow_EntOutputHandler {
                 constexpr std::ptrdiff_t m_SourceEntity = 0x80; // PulseSymbol_t
                 constexpr std::ptrdiff_t m_SourceOutput = 0x90; // PulseSymbol_t
@@ -511,7 +496,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_Outflow_TestExplicitYesNo {
@@ -523,7 +507,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_Outflow_TestRandomYesNo {
@@ -555,7 +538,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Test_MultiInflow_WithDefault {
             }
             // Parent: None
@@ -563,7 +545,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Step_DebugLog {
             }
             // Parent: None
@@ -591,7 +572,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Inflow_ObservableVariableListener {
                 constexpr std::ptrdiff_t m_nBlackboardReference = 0x80; // PulseRuntimeBlackboardReferenceIndex_t
                 constexpr std::ptrdiff_t m_bSelfReference = 0x82; // bool
@@ -601,7 +581,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Outflow_CycleOrdered {
                 constexpr std::ptrdiff_t m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
@@ -622,7 +601,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Val_TestDomainGetEntityName {
             }
@@ -631,7 +609,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -644,7 +621,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_TestWaitWithCursorState {
                 constexpr std::ptrdiff_t m_WakeResume = 0x48; // CPulse_ResumePoint
                 constexpr std::ptrdiff_t m_WakeCancel = 0x90; // CPulse_ResumePoint
@@ -655,7 +631,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Outflow_CycleShuffled {
                 constexpr std::ptrdiff_t m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
@@ -664,7 +639,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Inflow_Method {
                 constexpr std::ptrdiff_t m_MethodName = 0x80; // PulseSymbol_t
                 constexpr std::ptrdiff_t m_Description = 0x90; // CUtlString
@@ -684,7 +658,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorCanvasItemSpecKV3
@@ -703,7 +676,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Inflow_Yield {
                 constexpr std::ptrdiff_t m_UnyieldResume = 0x48; // CPulse_ResumePoint
             }
@@ -724,7 +696,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Outflow_CycleRandom {
                 constexpr std::ptrdiff_t m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
             }
@@ -733,7 +704,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Step_PublicOutput {
                 constexpr std::ptrdiff_t m_OutputIndex = 0x48; // PulseRuntimeOutputIndex_t
             }
@@ -742,7 +712,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Val_TestDomainFindEntityByName {
             }
@@ -762,7 +731,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -773,7 +741,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPulseEditorHeaderText
             namespace CPulseCell_Step_TestDomainEntFire {
@@ -788,7 +755,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -814,7 +780,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_InlineNodeSkipSelector {
                 constexpr std::ptrdiff_t m_nFlowNodeID = 0x48; // PulseDocNodeID_t
                 constexpr std::ptrdiff_t m_bAnd = 0x4C; // bool
@@ -833,7 +798,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_ExampleCriteria {
@@ -843,7 +807,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CPulseCell_LimitCount {
@@ -854,7 +817,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             namespace CPulseCell_Step_CallExternalMethod {
                 constexpr std::ptrdiff_t m_MethodName = 0x48; // PulseSymbol_t
                 constexpr std::ptrdiff_t m_GameBlackboard = 0x58; // PulseSymbol_t
@@ -882,7 +844,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             namespace CPulseCell_Step_TestDomainCreateFakeEntity {
             }
@@ -891,7 +852,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -903,7 +863,6 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPulseCellMethodBindings
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon

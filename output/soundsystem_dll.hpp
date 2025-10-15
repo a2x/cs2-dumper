@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-04 12:39:31.642108200 UTC
+// 2025-10-14 23:58:25.486779500 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
         // Class count: 74
-        // Enum count: 19
+        // Enum count: 20
         namespace soundsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -108,12 +108,6 @@ namespace cs2_dumper {
                 SOS_EDIT_ITEM_TYPE_STACK = 0x3,
                 SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
                 SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-            };
-            // Alignment: 4
-            // Member count: 2
-            enum class SosActionSortType_t : uint32_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
             };
             // Alignment: 4
             // Member count: 5
@@ -256,6 +250,12 @@ namespace cs2_dumper {
                 FILTER_SLOPE_MAX = 0x7
             };
             // Alignment: 4
+            // Member count: 2
+            enum class SosActionLimitSortType_t : uint32_t {
+                SOS_LIMIT_SORTTYPE_HIGHEST = 0x0,
+                SOS_LIMIT_SORTTYPE_LOWEST = 0x1
+            };
+            // Alignment: 4
             // Member count: 3
             enum class VMixSubgraphSwitchInterpolationType_t : uint32_t {
                 SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
@@ -267,6 +267,12 @@ namespace cs2_dumper {
             enum class SosGroupType_t : uint32_t {
                 SOS_GROUPTYPE_DYNAMIC = 0x0,
                 SOS_GROUPTYPE_STATIC = 0x1
+            };
+            // Alignment: 4
+            // Member count: 2
+            enum class SosActionSetParamSortType_t : uint32_t {
+                SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
+                SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
             };
             // Parent: None
             // Field count: 3
@@ -392,7 +398,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMinValue = 0xC; // float32
                 constexpr std::ptrdiff_t m_flMaxValue = 0x10; // float32
                 constexpr std::ptrdiff_t m_opvarName = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSortType_t
+                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSetParamSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -956,7 +962,7 @@ namespace cs2_dumper {
             namespace CSosGroupActionLimitSchema {
                 constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
                 constexpr std::ptrdiff_t m_nStopType = 0xC; // SosActionStopType_t
-                constexpr std::ptrdiff_t m_nSortType = 0x10; // SosActionSortType_t
+                constexpr std::ptrdiff_t m_nSortType = 0x10; // SosActionLimitSortType_t
                 constexpr std::ptrdiff_t m_bStopImmediate = 0x14; // bool
                 constexpr std::ptrdiff_t m_bCountStopped = 0x15; // bool
             }

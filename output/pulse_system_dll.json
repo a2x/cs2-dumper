@@ -120,10 +120,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -148,10 +144,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -171,10 +163,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -207,10 +195,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -240,10 +224,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -271,10 +251,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -287,10 +263,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -302,10 +274,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -323,10 +291,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -340,10 +304,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -355,10 +315,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -388,10 +344,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -407,10 +359,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -423,10 +371,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -466,10 +410,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -488,10 +428,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -532,10 +468,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -560,10 +492,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -575,10 +503,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -608,10 +532,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -633,10 +553,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -655,10 +571,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -692,10 +604,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -705,10 +613,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -722,10 +626,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -735,10 +635,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -756,10 +652,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           }
@@ -773,10 +665,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -798,10 +686,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           }
@@ -817,10 +701,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -845,10 +725,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -858,10 +734,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -875,10 +747,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -895,10 +763,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -922,10 +786,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -940,10 +800,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           }
         ],
@@ -977,10 +833,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           }
@@ -992,10 +844,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -1015,10 +863,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           }
@@ -1035,10 +879,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           }
@@ -1050,10 +890,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -1079,10 +915,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -1105,10 +937,6 @@
             "type": "Unknown"
           },
           {
-            "name": "MPulseCellMethodBindings",
-            "type": "Unknown"
-          },
-          {
             "name": "MPropertyFriendlyName",
             "type": "Unknown"
           },
@@ -1127,10 +955,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -1180,10 +1004,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPulseCellMethodBindings",
             "type": "Unknown"
           },
           {
@@ -1239,27 +1059,32 @@
       },
       "CPulseGraphInstance_TestDomain": {
         "fields": {
-          "m_Tracepoints": 296,
-          "m_bExpectingCursorTerminatedDueToMaxInstructions": 284,
-          "m_bExpectingToDestroyWithYieldedCursors": 282,
-          "m_bExplicitTimeStepping": 281,
-          "m_bIsRunningUnitTests": 280,
-          "m_bQuietTracepoints": 283,
-          "m_bTestYesOrNoPath": 320,
-          "m_nCursorsTerminatedDueToMaxInstructions": 288,
-          "m_nNextValidateIndex": 292
+          "m_Tracepoints": 320,
+          "m_bExpectingCursorTerminatedDueToMaxInstructions": 308,
+          "m_bExpectingToDestroyWithYieldedCursors": 306,
+          "m_bExplicitTimeStepping": 305,
+          "m_bIsRunningUnitTests": 304,
+          "m_bQuietTracepoints": 307,
+          "m_bTestYesOrNoPath": 344,
+          "m_nCursorsTerminatedDueToMaxInstructions": 312,
+          "m_nNextValidateIndex": 316
         },
         "metadata": [],
         "parent": null
       },
       "CPulseGraphInstance_TestDomain_Derived": {
         "fields": {
-          "m_nInstanceValueX": 328
+          "m_nInstanceValueX": 352
         },
         "metadata": [],
         "parent": null
       },
       "CPulseGraphInstance_TestDomain_FakeEntityOwner": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView": {
         "fields": {},
         "metadata": [],
         "parent": null
