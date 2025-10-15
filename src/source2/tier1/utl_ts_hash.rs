@@ -19,7 +19,7 @@ pub struct RTL_SRWLOCK
 
 #[repr(C)]
 pub struct HashBucket<D, K> {
-    pub lock: Pointer64<RTL_SRWLOCK>,                                         // 0x0000
+    pub lock: Pointer64<RTL_SRWLOCK>,                              // 0x0000
     pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0008
     pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0010
 }
