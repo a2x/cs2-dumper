@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-14 23:58:25.486779500 UTC
+// 2025-10-16 04:15:22.003365600 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -13,7 +13,7 @@ pub mod cs2_dumper {
         // Module: client.dll
         pub mod client_dll {
             pub const ClientToolsInfo_001: usize = 0x1BD47A0;
-            pub const EmptyWorldService001_Client: usize = 0x1B8FC10;
+            pub const EmptyWorldService001_Client: usize = 0x1B8FC30;
             pub const GameClientExports001: usize = 0x1BD1480;
             pub const LegacyGameUI001: usize = 0x1BEFD30;
             pub const Source2Client002: usize = 0x1E18D00;
@@ -168,8 +168,8 @@ pub mod cs2_dumper {
             pub const Source2GameDirector001: usize = 0x18D9AF0;
             pub const Source2GameEntities001: usize = 0x177E630;
             pub const Source2Server001: usize = 0x177E490;
-            pub const Source2ServerConfig001: usize = 0x19AD8E8;
-            pub const customnavsystem001: usize = 0x16B2D38;
+            pub const Source2ServerConfig001: usize = 0x19AD8D8;
+            pub const customnavsystem001: usize = 0x16B2D18;
         }
         // Module: soundsystem.dll
         pub mod soundsystem_dll {

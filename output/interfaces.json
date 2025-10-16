@@ -5,7 +5,7 @@
   },
   "client.dll": {
     "ClientToolsInfo_001": 29181856,
-    "EmptyWorldService001_Client": 28900368,
+    "EmptyWorldService001_Client": 28900400,
     "GameClientExports001": 29168768,
     "LegacyGameUI001": 29293872,
     "Source2Client002": 31558912,
@@ -138,8 +138,8 @@
     "Source2GameDirector001": 26057456,
     "Source2GameEntities001": 24634928,
     "Source2Server001": 24634512,
-    "Source2ServerConfig001": 26925288,
-    "customnavsystem001": 23801144
+    "Source2ServerConfig001": 26925272,
+    "customnavsystem001": 23801112
   },
   "soundsystem.dll": {
     "SoundOpSystem001": 4109456,

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-14 23:58:25.486779500 UTC
+// 2025-10-16 04:15:22.003365600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,25 +7,8 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: engine2.dll
         // Class count: 48
-        // Enum count: 2
+        // Enum count: 1
         pub mod engine2_dll {
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum EntityDormancyType_t {
-                ENTITY_NOT_DORMANT = 0x0,
-                ENTITY_DORMANT = 0x1,
-                ENTITY_SUSPENDED = 0x2
-            }
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum EntityIOTargetType_t {
-                ENTITY_IO_TARGET_INVALID = u32::MAX,
-                ENTITY_IO_TARGET_ENTITYNAME = 0x2,
-                ENTITY_IO_TARGET_EHANDLE = 0x6,
-                ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
-            }
             // Parent: None
             // Field count: 0
             pub mod EventClientPostSimulate_t {
@@ -45,7 +28,7 @@ pub mod cs2_dumper {
                 pub const m_nTotalTicksThisFrame: usize = 0x38; // int32
                 pub const m_nTotalTicks: usize = 0x3C; // int32
             }
-            // Parent: 
+            // Parent: None
             // Field count: 1
             pub mod CEntityIOOutput {
                 pub const m_Value: usize = 0x18; // CVariantBase<CVariantDefaultAllocator>
