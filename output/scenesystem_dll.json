@@ -125,26 +125,39 @@
       }
     },
     "enums": {
-      "CEntityIdentity": {
-        "alignment": 0,
+      "DecalMode_t": {
+        "alignment": 1,
         "members": {
-          "": 0
+          "kDecalBlood": 0,
+          "kDecalCloak": 1,
+          "kDecalCloakDamage": 2,
+          "kDecalDefault": 0,
+          "kDecalInvalid": 255,
+          "kDecalMax": 3
         },
-        "type": "unknown"
+        "type": "uint8"
       },
-      "CEntityInstance": {
-        "alignment": 0,
+      "DisableShadows_t": {
+        "alignment": 1,
         "members": {
-          "": 0
+          "kDisableShadows_All": 1,
+          "kDisableShadows_Baked": 2,
+          "kDisableShadows_None": 0,
+          "kDisableShadows_Realtime": 3
         },
-        "type": "unknown"
+        "type": "uint8"
       },
-      "CScriptComponent": {
-        "alignment": 0,
+      "ESceneObjectVisualization": {
+        "alignment": 4,
         "members": {
-          "": 0
+          "SCENEOBJECT_VIS_INSTANCING": 5,
+          "SCENEOBJECT_VIS_LOD": 4,
+          "SCENEOBJECT_VIS_MATERIAL": 2,
+          "SCENEOBJECT_VIS_NONE": 0,
+          "SCENEOBJECT_VIS_OBJECT": 1,
+          "SCENEOBJECT_VIS_TEXTURE_SIZE": 3
         },
-        "type": "unknown"
+        "type": "uint32"
       }
     }
   }

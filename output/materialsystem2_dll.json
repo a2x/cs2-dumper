@@ -237,6 +237,54 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "BloomBlendMode_t": {
+        "alignment": 4,
+        "members": {
+          "BLOOM_BLEND_ADD": 0,
+          "BLOOM_BLEND_BLUR": 2,
+          "BLOOM_BLEND_SCREEN": 1
+        },
+        "type": "uint32"
+      },
+      "HorizJustification_e": {
+        "alignment": 4,
+        "members": {
+          "HORIZ_JUSTIFICATION_CENTER": 1,
+          "HORIZ_JUSTIFICATION_LEFT": 0,
+          "HORIZ_JUSTIFICATION_NONE": 3,
+          "HORIZ_JUSTIFICATION_RIGHT": 2
+        },
+        "type": "uint32"
+      },
+      "LayoutPositionType_e": {
+        "alignment": 4,
+        "members": {
+          "LAYOUTPOSITIONTYPE_FRACTIONAL": 1,
+          "LAYOUTPOSITIONTYPE_NONE": 2,
+          "LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE": 0
+        },
+        "type": "uint32"
+      },
+      "VertJustification_e": {
+        "alignment": 4,
+        "members": {
+          "VERT_JUSTIFICATION_BOTTOM": 2,
+          "VERT_JUSTIFICATION_CENTER": 1,
+          "VERT_JUSTIFICATION_NONE": 3,
+          "VERT_JUSTIFICATION_TOP": 0
+        },
+        "type": "uint32"
+      },
+      "ViewFadeMode_t": {
+        "alignment": 4,
+        "members": {
+          "VIEW_FADE_CONSTANT_COLOR": 0,
+          "VIEW_FADE_MOD2X": 2,
+          "VIEW_FADE_MODULATE": 1
+        },
+        "type": "uint32"
+      }
+    }
   }
 }

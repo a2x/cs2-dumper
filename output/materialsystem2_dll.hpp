@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-16 04:15:22.003365600 UTC
+// 2025-10-16 05:43:35.292643700 UTC
 
 #pragma once
 
@@ -9,8 +9,45 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: materialsystem2.dll
         // Class count: 14
-        // Enum count: 0
+        // Enum count: 5
         namespace materialsystem2_dll {
+            // Alignment: 4
+            // Member count: 4
+            enum class VertJustification_e : uint32_t {
+                VERT_JUSTIFICATION_TOP = 0x0,
+                VERT_JUSTIFICATION_CENTER = 0x1,
+                VERT_JUSTIFICATION_BOTTOM = 0x2,
+                VERT_JUSTIFICATION_NONE = 0x3
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class LayoutPositionType_e : uint32_t {
+                LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
+                LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
+                LAYOUTPOSITIONTYPE_NONE = 0x2
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class ViewFadeMode_t : uint32_t {
+                VIEW_FADE_CONSTANT_COLOR = 0x0,
+                VIEW_FADE_MODULATE = 0x1,
+                VIEW_FADE_MOD2X = 0x2
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class BloomBlendMode_t : uint32_t {
+                BLOOM_BLEND_ADD = 0x0,
+                BLOOM_BLEND_SCREEN = 0x1,
+                BLOOM_BLEND_BLUR = 0x2
+            };
+            // Alignment: 4
+            // Member count: 4
+            enum class HorizJustification_e : uint32_t {
+                HORIZ_JUSTIFICATION_LEFT = 0x0,
+                HORIZ_JUSTIFICATION_CENTER = 0x1,
+                HORIZ_JUSTIFICATION_RIGHT = 0x2,
+                HORIZ_JUSTIFICATION_NONE = 0x3
+            };
             // Parent: None
             // Field count: 1
             //

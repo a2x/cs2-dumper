@@ -614,6 +614,30 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "FuseVariableAccess_t": {
+        "alignment": 1,
+        "members": {
+          "READ_ONLY": 1,
+          "WRITABLE": 0
+        },
+        "type": "uint8"
+      },
+      "FuseVariableType_t": {
+        "alignment": 1,
+        "members": {
+          "BOOL": 1,
+          "FLOAT32": 8,
+          "INT16": 3,
+          "INT32": 4,
+          "INT8": 2,
+          "INVALID": 0,
+          "UINT16": 6,
+          "UINT32": 7,
+          "UINT8": 5
+        },
+        "type": "uint8"
+      }
+    }
   }
 }

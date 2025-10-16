@@ -1391,6 +1391,310 @@
         "parent": null
       }
     },
-    "enums": {}
+    "enums": {
+      "CVSoundFormat_t": {
+        "alignment": 1,
+        "members": {
+          "ADPCM": 3,
+          "MP3": 2,
+          "PCM16": 0,
+          "PCM8": 1
+        },
+        "type": "uint8"
+      },
+      "EMidiNote": {
+        "alignment": 1,
+        "members": {
+          "A": 9,
+          "A_Sharp": 10,
+          "B": 11,
+          "C": 0,
+          "C_Sharp": 1,
+          "Count": 12,
+          "D": 2,
+          "D_Sharp": 3,
+          "E": 4,
+          "F": 5,
+          "F_Sharp": 6,
+          "G": 7,
+          "G_Sharp": 8
+        },
+        "type": "uint8"
+      },
+      "EMode_t": {
+        "alignment": 4,
+        "members": {
+          "Peak": 0,
+          "RMS": 1
+        },
+        "type": "uint32"
+      },
+      "EWaveform": {
+        "alignment": 1,
+        "members": {
+          "Noise": 4,
+          "Saw": 2,
+          "Sine": 0,
+          "Square": 1,
+          "Triangle": 3
+        },
+        "type": "uint8"
+      },
+      "PlayBackMode_t": {
+        "alignment": 4,
+        "members": {
+          "Random": 0,
+          "RandomAvoidLast": 2,
+          "RandomNoRepeats": 1,
+          "RandomWeights": 4,
+          "Sequential": 3
+        },
+        "type": "uint32"
+      },
+      "SosActionLimitSortType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_LIMIT_SORTTYPE_HIGHEST": 0,
+          "SOS_LIMIT_SORTTYPE_LOWEST": 1
+        },
+        "type": "uint32"
+      },
+      "SosActionSetParamSortType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_SETPARAM_SORTTYPE_HIGHEST": 0,
+          "SOS_SETPARAM_SORTTYPE_LOWEST": 1
+        },
+        "type": "uint32"
+      },
+      "SosActionStopType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_STOPTYPE_NONE": 0,
+          "SOS_STOPTYPE_OPVAR": 2,
+          "SOS_STOPTYPE_TIME": 1
+        },
+        "type": "uint32"
+      },
+      "SosEditItemType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_EDIT_ITEM_TYPE_FIELD": 5,
+          "SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS": 2,
+          "SOS_EDIT_ITEM_TYPE_OPERATOR": 4,
+          "SOS_EDIT_ITEM_TYPE_SOUNDEVENT": 1,
+          "SOS_EDIT_ITEM_TYPE_SOUNDEVENTS": 0,
+          "SOS_EDIT_ITEM_TYPE_STACK": 3
+        },
+        "type": "uint32"
+      },
+      "SosGroupFieldBehavior_t": {
+        "alignment": 4,
+        "members": {
+          "kBranch": 1,
+          "kIgnore": 0,
+          "kMatch": 2
+        },
+        "type": "uint32"
+      },
+      "SosGroupType_t": {
+        "alignment": 4,
+        "members": {
+          "SOS_GROUPTYPE_DYNAMIC": 0,
+          "SOS_GROUPTYPE_STATIC": 1
+        },
+        "type": "uint32"
+      },
+      "VMixChannelOperation_t": {
+        "alignment": 4,
+        "members": {
+          "VMIX_CHAN_LEFT": 1,
+          "VMIX_CHAN_MID_SIDE": 5,
+          "VMIX_CHAN_MONO": 4,
+          "VMIX_CHAN_RIGHT": 2,
+          "VMIX_CHAN_STEREO": 0,
+          "VMIX_CHAN_SWAP": 3
+        },
+        "type": "uint32"
+      },
+      "VMixFilterSlope_t": {
+        "alignment": 1,
+        "members": {
+          "FILTER_SLOPE_12dB": 4,
+          "FILTER_SLOPE_1POLE_12dB": 1,
+          "FILTER_SLOPE_1POLE_18dB": 2,
+          "FILTER_SLOPE_1POLE_24dB": 3,
+          "FILTER_SLOPE_1POLE_6dB": 0,
+          "FILTER_SLOPE_24dB": 5,
+          "FILTER_SLOPE_36dB": 6,
+          "FILTER_SLOPE_48dB": 7,
+          "FILTER_SLOPE_MAX": 7
+        },
+        "type": "uint8"
+      },
+      "VMixFilterType_t": {
+        "alignment": 2,
+        "members": {
+          "FILTER_ALLPASS": 7,
+          "FILTER_BANDPASS": 2,
+          "FILTER_HIGHPASS": 1,
+          "FILTER_HIGH_SHELF": 6,
+          "FILTER_LOWPASS": 0,
+          "FILTER_LOW_SHELF": 5,
+          "FILTER_NOTCH": 3,
+          "FILTER_PASSTHROUGH": 8,
+          "FILTER_PEAKING_EQ": 4,
+          "FILTER_UNKNOWN": -1
+        },
+        "type": "uint16"
+      },
+      "VMixGraphCommandID_t": {
+        "alignment": 4,
+        "members": {
+          "CMD_BLEND_VSNDS_TO_IMPULSERESPONSE": 37,
+          "CMD_CONTROL_COND_COPY_IF_NEGATIVE": 8,
+          "CMD_CONTROL_COPY": 7,
+          "CMD_CONTROL_EVALUATE_CURVE": 6,
+          "CMD_CONTROL_EVAL_ENVELOPE": 15,
+          "CMD_CONTROL_INCREMENT_TIMER": 14,
+          "CMD_CONTROL_INPUT_STORE": 1,
+          "CMD_CONTROL_INPUT_STORE_DB": 2,
+          "CMD_CONTROL_MAX": 12,
+          "CMD_CONTROL_OUTPUT_STORE": 5,
+          "CMD_CONTROL_REMAP_LINEAR": 9,
+          "CMD_CONTROL_REMAP_LOGLINEAR": 11,
+          "CMD_CONTROL_REMAP_SINE": 10,
+          "CMD_CONTROL_RESET_TIMER": 13,
+          "CMD_CONTROL_SINE_BLEND": 16,
+          "CMD_CONTROL_TRANSIENT_INPUT_RESET": 4,
+          "CMD_CONTROL_TRANSIENT_INPUT_STORE": 3,
+          "CMD_IMPULSERESPONSE_DELAY": 38,
+          "CMD_IMPULSERESPONSE_INPUT_STORE": 33,
+          "CMD_IMPULSERESPONSE_RESET": 36,
+          "CMD_INVALID": -1,
+          "CMD_PROCESSOR_SET_CONTROL_ARRAYVALUE": 19,
+          "CMD_PROCESSOR_SET_CONTROL_VALUE": 17,
+          "CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE": 34,
+          "CMD_PROCESSOR_SET_NAME_INPUT": 18,
+          "CMD_PROCESSOR_SET_VSND_VALUE": 21,
+          "CMD_PROCESSOR_STORE_CONTROL_VALUE": 20,
+          "CMD_REMAP_VSND_TO_IMPULSERESPONSE": 35,
+          "CMD_SUBMIX_ACCUMULATE": 30,
+          "CMD_SUBMIX_COPY": 29,
+          "CMD_SUBMIX_DEBUG": 25,
+          "CMD_SUBMIX_GENERATE": 23,
+          "CMD_SUBMIX_GENERATE_SIDECHAIN": 24,
+          "CMD_SUBMIX_METER": 31,
+          "CMD_SUBMIX_METER_SPECTRUM": 32,
+          "CMD_SUBMIX_MIX2x1": 26,
+          "CMD_SUBMIX_OUTPUT": 27,
+          "CMD_SUBMIX_OUTPUTx2": 28,
+          "CMD_SUBMIX_PROCESS": 22
+        },
+        "type": "uint32"
+      },
+      "VMixLFOShape_t": {
+        "alignment": 4,
+        "members": {
+          "LFO_SHAPE_NOISE": 4,
+          "LFO_SHAPE_SAW": 3,
+          "LFO_SHAPE_SINE": 0,
+          "LFO_SHAPE_SQUARE": 1,
+          "LFO_SHAPE_TRI": 2
+        },
+        "type": "uint32"
+      },
+      "VMixPannerType_t": {
+        "alignment": 4,
+        "members": {
+          "PANNER_TYPE_EQUAL_POWER": 1,
+          "PANNER_TYPE_LINEAR": 0
+        },
+        "type": "uint32"
+      },
+      "VMixProcessorType_t": {
+        "alignment": 2,
+        "members": {
+          "VPROCESSOR_AUTOFILTER": 25,
+          "VPROCESSOR_BOXVERB": 8,
+          "VPROCESSOR_BOXVERB2": 9,
+          "VPROCESSOR_CONVOLUTION": 18,
+          "VPROCESSOR_DELAY": 5,
+          "VPROCESSOR_DIFFUSOR": 7,
+          "VPROCESSOR_DUAL_COMPRESSOR": 19,
+          "VPROCESSOR_DYNAMICS": 3,
+          "VPROCESSOR_DYNAMICS_3BAND": 20,
+          "VPROCESSOR_DYNAMICS_COMPRESSOR": 21,
+          "VPROCESSOR_EFFECT_CHAIN": 28,
+          "VPROCESSOR_ENVELOPE": 16,
+          "VPROCESSOR_EQ8": 15,
+          "VPROCESSOR_FILTER": 13,
+          "VPROCESSOR_FREEVERB": 10,
+          "VPROCESSOR_FULLWAVE_INTEGRATOR": 12,
+          "VPROCESSOR_MOD_DELAY": 6,
+          "VPROCESSOR_OSC": 26,
+          "VPROCESSOR_PANNER": 23,
+          "VPROCESSOR_PLATEVERB": 11,
+          "VPROCESSOR_PRESETDSP": 4,
+          "VPROCESSOR_RT_PITCH": 1,
+          "VPROCESSOR_SHAPER": 22,
+          "VPROCESSOR_STEAMAUDIO_DIRECT": 30,
+          "VPROCESSOR_STEAMAUDIO_HRTF": 2,
+          "VPROCESSOR_STEAMAUDIO_HYBRIDREVERB": 31,
+          "VPROCESSOR_STEAMAUDIO_PATHING": 14,
+          "VPROCESSOR_STEREODELAY": 27,
+          "VPROCESSOR_SUBGRAPH_SWITCH": 29,
+          "VPROCESSOR_UNKNOWN": 0,
+          "VPROCESSOR_UTILITY": 24,
+          "VPROCESSOR_VOCODER": 17
+        },
+        "type": "uint16"
+      },
+      "VMixSubgraphSwitchInterpolationType_t": {
+        "alignment": 4,
+        "members": {
+          "SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING": 2,
+          "SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE": 0,
+          "SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT": 1
+        },
+        "type": "uint32"
+      },
+      "soundlevel_t": {
+        "alignment": 4,
+        "members": {
+          "SNDLVL_100dB": 100,
+          "SNDLVL_105dB": 105,
+          "SNDLVL_110dB": 110,
+          "SNDLVL_120dB": 120,
+          "SNDLVL_130dB": 130,
+          "SNDLVL_140dB": 140,
+          "SNDLVL_150dB": 150,
+          "SNDLVL_180dB": 180,
+          "SNDLVL_20dB": 20,
+          "SNDLVL_25dB": 25,
+          "SNDLVL_30dB": 30,
+          "SNDLVL_35dB": 35,
+          "SNDLVL_40dB": 40,
+          "SNDLVL_45dB": 45,
+          "SNDLVL_50dB": 50,
+          "SNDLVL_55dB": 55,
+          "SNDLVL_60dB": 60,
+          "SNDLVL_65dB": 65,
+          "SNDLVL_70dB": 70,
+          "SNDLVL_75dB": 75,
+          "SNDLVL_80dB": 80,
+          "SNDLVL_85dB": 85,
+          "SNDLVL_90dB": 90,
+          "SNDLVL_95dB": 95,
+          "SNDLVL_GUNFIRE": 140,
+          "SNDLVL_IDLE": 60,
+          "SNDLVL_NONE": 0,
+          "SNDLVL_NORM": 75,
+          "SNDLVL_STATIC": 66,
+          "SNDLVL_TALKING": 80
+        },
+        "type": "uint32"
+      }
+    }
   }
 }
