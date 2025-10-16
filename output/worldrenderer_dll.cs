@@ -1,20 +1,37 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-16 04:15:22.003365600 UTC
+// 2025-10-16 05:43:35.292643700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
     // Class count: 25
-    // Enum count: 15
+    // Enum count: 2
     public static class WorldrendererDll {
-        // Alignment: 1
-        // Member count: 0
-        public enum CParticleBindingRealPulse : byte {
-
+        // Alignment: 4
+        // Member count: 15
+        public enum ObjectTypeFlags_t : uint {
+            OBJECT_TYPE_NONE = 0x0,
+            OBJECT_TYPE_MODEL = 0x8,
+            OBJECT_TYPE_BLOCK_LIGHT = 0x10,
+            OBJECT_TYPE_NO_SHADOWS = 0x20,
+            OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
+            OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
+            OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
+            OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
+            OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
+            OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
+            OBJECT_TYPE_OVERLAY = 0x2000,
+            OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
+            OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
+            OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
+            OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
         }
         // Alignment: 1
-        // Member count: 0
-        public enum CParticleCollectionBindingInstance : byte {
-
+        // Member count: 4
+        public enum AggregateInstanceStream_t : byte {
+            AGGREGATE_INSTANCE_STREAM_NONE = 0x0,
+            AGGREGATE_INSTANCE_STREAM_LIGHTMAPUV_UNORM16 = 0x1,
+            AGGREGATE_INSTANCE_STREAM_VERTEXTINT_UNORM8 = 0x2,
+            AGGREGATE_INSTANCE_STREAM_VERTEXBLEND_UNORM8 = 0x4
         }
         // Parent: None
         // Field count: 1

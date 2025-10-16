@@ -97,26 +97,108 @@
       }
     },
     "enums": {
-      "CEntityIdentity": {
-        "alignment": 0,
+      "InputLayoutVariation_t": {
+        "alignment": 1,
         "members": {
-          "": 0
+          "INPUT_LAYOUT_VARIATION_DEFAULT": 0,
+          "INPUT_LAYOUT_VARIATION_MAX": 3,
+          "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID": 1,
+          "INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID": 2
         },
-        "type": "unknown"
+        "type": "uint8"
       },
-      "CEntityInstance": {
-        "alignment": 0,
+      "RenderBufferFlags_t": {
+        "alignment": 4,
         "members": {
-          "": 0
+          "RENDER_BUFFER_ACCELERATION_STRUCTURE": 512,
+          "RENDER_BUFFER_BYTEADDRESS_BUFFER": 16,
+          "RENDER_BUFFER_IMMOVABLE_ALLOCATION": 8192,
+          "RENDER_BUFFER_POOL_ALLOCATED": 2048,
+          "RENDER_BUFFER_SHADER_BINDING_TABLE": 1024,
+          "RENDER_BUFFER_STRUCTURED_BUFFER": 32,
+          "RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS": 256,
+          "RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING": 4096,
+          "RENDER_BUFFER_USAGE_INDEX_BUFFER": 2,
+          "RENDER_BUFFER_USAGE_NONE": 0,
+          "RENDER_BUFFER_USAGE_SHADER_RESOURCE": 4,
+          "RENDER_BUFFER_USAGE_UNORDERED_ACCESS": 8,
+          "RENDER_BUFFER_USAGE_VERTEX_BUFFER": 1
         },
-        "type": "unknown"
+        "type": "uint32"
       },
-      "CScriptComponent": {
-        "alignment": 0,
+      "RenderMultisampleType_t": {
+        "alignment": 1,
         "members": {
-          "": 0
+          "RENDER_MULTISAMPLE_16X": 5,
+          "RENDER_MULTISAMPLE_2X": 1,
+          "RENDER_MULTISAMPLE_4X": 2,
+          "RENDER_MULTISAMPLE_6X": 3,
+          "RENDER_MULTISAMPLE_8X": 4,
+          "RENDER_MULTISAMPLE_INVALID": -1,
+          "RENDER_MULTISAMPLE_NONE": 0,
+          "RENDER_MULTISAMPLE_TYPE_COUNT": 6
         },
-        "type": "unknown"
+        "type": "uint8"
+      },
+      "RenderPrimitiveType_t": {
+        "alignment": 4,
+        "members": {
+          "RENDER_PRIM_COMPUTE_SHADER": 11,
+          "RENDER_PRIM_HETEROGENOUS": 10,
+          "RENDER_PRIM_INSTANCED_QUADS": 9,
+          "RENDER_PRIM_LINES": 1,
+          "RENDER_PRIM_LINES_WITH_ADJACENCY": 2,
+          "RENDER_PRIM_LINE_STRIP": 3,
+          "RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY": 4,
+          "RENDER_PRIM_MESH_SHADER": 12,
+          "RENDER_PRIM_POINTS": 0,
+          "RENDER_PRIM_TRIANGLES": 5,
+          "RENDER_PRIM_TRIANGLES_WITH_ADJACENCY": 6,
+          "RENDER_PRIM_TRIANGLE_STRIP": 7,
+          "RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY": 8,
+          "RENDER_PRIM_TYPE_COUNT": 13
+        },
+        "type": "uint32"
+      },
+      "RenderSlotType_t": {
+        "alignment": 1,
+        "members": {
+          "RENDER_SLOT_INVALID": -1,
+          "RENDER_SLOT_PER_INSTANCE": 1,
+          "RENDER_SLOT_PER_VERTEX": 0
+        },
+        "type": "uint8"
+      },
+      "RsComparison_t": {
+        "alignment": 1,
+        "members": {
+          "RS_CMP_ALWAYS": 7,
+          "RS_CMP_EQUAL": 2,
+          "RS_CMP_GREATER": 4,
+          "RS_CMP_GREATER_EQUAL": 6,
+          "RS_CMP_LESS": 1,
+          "RS_CMP_LESS_EQUAL": 3,
+          "RS_CMP_NEVER": 0,
+          "RS_CMP_NOT_EQUAL": 5
+        },
+        "type": "uint8"
+      },
+      "RsCullMode_t": {
+        "alignment": 1,
+        "members": {
+          "RS_CULL_BACK": 1,
+          "RS_CULL_FRONT": 2,
+          "RS_CULL_NONE": 0
+        },
+        "type": "uint8"
+      },
+      "RsFillMode_t": {
+        "alignment": 1,
+        "members": {
+          "RS_FILL_SOLID": 0,
+          "RS_FILL_WIREFRAME": 1
+        },
+        "type": "uint8"
       }
     }
   }
