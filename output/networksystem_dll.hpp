@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-16 05:43:35.292643700 UTC
+// 2025-10-21 05:02:55.957173600 UTC
 
 #pragma once
 
@@ -9,20 +9,21 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: networksystem.dll
         // Class count: 1
-        // Enum count: 1
+        // Enum count: 15
         namespace networksystem_dll {
-            // Alignment: 4
-            // Member count: 4
-            enum class OutOfPVSUpdates_t : uint32_t {
-                OOPVSUpdates_OptOut = 0x0,
-                OOPVSUpdates_OptIn = 0x1,
-                OOPVSUpdates_Default = 0x2,
-                OOPVSUpdates_Count = 0x3
+            // Alignment: 1
+            // Member count: 0
+            enum class CParticleBindingRealPulse : uint8_t {
+
+            };
+            // Alignment: 1
+            // Member count: 0
+            enum class CParticleCollectionBindingInstance : uint8_t {
+
             };
             // Parent: None
-            // Field count: 1
-            namespace ChangeAccessorFieldPathIndex_t {
-                constexpr std::ptrdiff_t m_Value = 0x0; // int32
+            // Field count: 0
+            namespace OutOfPVSUpdates_t {
             }
         }
     }

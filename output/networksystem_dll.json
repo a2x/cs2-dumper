@@ -1,24 +1,107 @@
 {
   "networksystem.dll": {
     "classes": {
-      "ChangeAccessorFieldPathIndex_t": {
-        "fields": {
-          "m_Value": 0
-        },
+      "OutOfPVSUpdates_t": {
+        "fields": {},
         "metadata": [],
         "parent": null
       }
     },
     "enums": {
-      "OutOfPVSUpdates_t": {
-        "alignment": 4,
+      "CParticleBindingRealPulse": {
+        "alignment": 1,
+        "members": {},
+        "type": "uint8"
+      },
+      "CParticleCollectionBindingInstance": {
+        "alignment": 1,
+        "members": {},
+        "type": "uint8"
+      },
+      "CPulseCell_BaseState": {
+        "alignment": 0,
+        "members": {},
+        "type": "unknown"
+      },
+      "CPulseCell_BaseValue": {
+        "alignment": 0,
+        "members": {},
+        "type": "unknown"
+      },
+      "CPulseCell_CursorQueue": {
+        "alignment": 0,
         "members": {
-          "OOPVSUpdates_Count": 3,
-          "OOPVSUpdates_Default": 2,
-          "OOPVSUpdates_OptIn": 1,
-          "OOPVSUpdates_OptOut": 0
+          "": 0
         },
-        "type": "uint32"
+        "type": "unknown"
+      },
+      "CPulseCell_Inflow_EventHandler": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_LimitCount": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_LimitCount__Criteria_t": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_Outflow_CycleOrdered__InstanceState_t": {
+        "alignment": 0,
+        "members": {
+          "": 281474976710656
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_Outflow_CycleShuffled": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_Outflow_CycleShuffled__InstanceState_t": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_Timeline": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_Timeline__TimelineEvent_t": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseCell_Unknown": {
+        "alignment": 0,
+        "members": {
+          "": 0
+        },
+        "type": "unknown"
+      },
+      "CPulseTestScriptLib": {
+        "alignment": 0,
+        "members": {},
+        "type": "unknown"
       }
     }
   }
