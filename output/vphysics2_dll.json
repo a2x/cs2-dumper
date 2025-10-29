@@ -1582,35 +1582,6 @@
         "parent": null
       }
     },
-    "enums": {
-      "DynamicContinuousContactBehavior_t": {
-        "alignment": 1,
-        "members": {
-          "DYNAMIC_CONTINUOUS_ALLOW_IF_REQUESTED_BY_OTHER_BODY": 0,
-          "DYNAMIC_CONTINUOUS_ALWAYS": 1,
-          "DYNAMIC_CONTINUOUS_NEVER": 2
-        },
-        "type": "uint8"
-      },
-      "JointAxis_t": {
-        "alignment": 4,
-        "members": {
-          "JOINT_AXIS_COUNT": 3,
-          "JOINT_AXIS_X": 0,
-          "JOINT_AXIS_Y": 1,
-          "JOINT_AXIS_Z": 2
-        },
-        "type": "uint32"
-      },
-      "JointMotion_t": {
-        "alignment": 4,
-        "members": {
-          "JOINT_MOTION_COUNT": 2,
-          "JOINT_MOTION_FREE": 0,
-          "JOINT_MOTION_LOCKED": 1
-        },
-        "type": "uint32"
-      }
-    }
+    "enums": {}
   }
 }

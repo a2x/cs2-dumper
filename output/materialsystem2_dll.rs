@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-29 20:26:00.560999200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,50 +7,8 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: materialsystem2.dll
         // Class count: 14
-        // Enum count: 5
+        // Enum count: 0
         pub mod materialsystem2_dll {
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum VertJustification_e {
-                VERT_JUSTIFICATION_TOP = 0x0,
-                VERT_JUSTIFICATION_CENTER = 0x1,
-                VERT_JUSTIFICATION_BOTTOM = 0x2,
-                VERT_JUSTIFICATION_NONE = 0x3
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum LayoutPositionType_e {
-                LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
-                LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
-                LAYOUTPOSITIONTYPE_NONE = 0x2
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum ViewFadeMode_t {
-                VIEW_FADE_CONSTANT_COLOR = 0x0,
-                VIEW_FADE_MODULATE = 0x1,
-                VIEW_FADE_MOD2X = 0x2
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum BloomBlendMode_t {
-                BLOOM_BLEND_ADD = 0x0,
-                BLOOM_BLEND_SCREEN = 0x1,
-                BLOOM_BLEND_BLUR = 0x2
-            }
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum HorizJustification_e {
-                HORIZ_JUSTIFICATION_LEFT = 0x0,
-                HORIZ_JUSTIFICATION_CENTER = 0x1,
-                HORIZ_JUSTIFICATION_RIGHT = 0x2,
-                HORIZ_JUSTIFICATION_NONE = 0x3
-            }
             // Parent: None
             // Field count: 1
             //

@@ -1,39 +1,11 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-29 20:26:00.560999200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
     // Class count: 9
     // Enum count: 3
     public static class ScenesystemDll {
-        // Alignment: 1
-        // Member count: 6
-        public enum DecalMode_t : byte {
-            kDecalInvalid = 0xFF,
-            kDecalBlood = 0x0,
-            kDecalCloak = 0x1,
-            kDecalCloakDamage = 0x2,
-            kDecalMax = 0x3,
-            kDecalDefault = 0x0
-        }
-        // Alignment: 1
-        // Member count: 4
-        public enum DisableShadows_t : byte {
-            kDisableShadows_None = 0x0,
-            kDisableShadows_All = 0x1,
-            kDisableShadows_Baked = 0x2,
-            kDisableShadows_Realtime = 0x3
-        }
-        // Alignment: 4
-        // Member count: 6
-        public enum ESceneObjectVisualization : uint {
-            SCENEOBJECT_VIS_NONE = 0x0,
-            SCENEOBJECT_VIS_OBJECT = 0x1,
-            SCENEOBJECT_VIS_MATERIAL = 0x2,
-            SCENEOBJECT_VIS_TEXTURE_SIZE = 0x3,
-            SCENEOBJECT_VIS_LOD = 0x4,
-            SCENEOBJECT_VIS_INSTANCING = 0x5
-        }
         // Parent: None
         // Field count: 10
         //
