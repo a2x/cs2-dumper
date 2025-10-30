@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-30 00:26:21.405923900 UTC
 
 #pragma once
 
@@ -8275,31 +8275,31 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_BtGlobalBlackboard = 0x1090; // KeyValues3
                 constexpr std::ptrdiff_t m_hPlayerResource = 0x1128; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_RetakeRules = 0x1130; // CRetakeGameRules
-                constexpr std::ptrdiff_t m_arrTeamUniqueKillWeaponsMatch = 0x12E0; // CUtlVector<int32>[4]
-                constexpr std::ptrdiff_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x1340; // bool[4]
-                constexpr std::ptrdiff_t m_nMatchEndCount = 0x1368; // uint8
-                constexpr std::ptrdiff_t m_nTTeamIntroVariant = 0x136C; // int32
-                constexpr std::ptrdiff_t m_nCTTeamIntroVariant = 0x1370; // int32
-                constexpr std::ptrdiff_t m_bTeamIntroPeriod = 0x1374; // bool
-                constexpr std::ptrdiff_t m_fTeamIntroPeriodEnd = 0x1378; // GameTime_t
-                constexpr std::ptrdiff_t m_bPlayedTeamIntroVO = 0x137C; // bool
-                constexpr std::ptrdiff_t m_iRoundEndWinnerTeam = 0x1380; // int32
-                constexpr std::ptrdiff_t m_eRoundEndReason = 0x1384; // int32
-                constexpr std::ptrdiff_t m_bRoundEndShowTimerDefend = 0x1388; // bool
-                constexpr std::ptrdiff_t m_iRoundEndTimerTime = 0x138C; // int32
-                constexpr std::ptrdiff_t m_sRoundEndFunFactToken = 0x1390; // CUtlString
-                constexpr std::ptrdiff_t m_iRoundEndFunFactPlayerSlot = 0x1398; // CPlayerSlot
-                constexpr std::ptrdiff_t m_iRoundEndFunFactData1 = 0x139C; // int32
-                constexpr std::ptrdiff_t m_iRoundEndFunFactData2 = 0x13A0; // int32
-                constexpr std::ptrdiff_t m_iRoundEndFunFactData3 = 0x13A4; // int32
-                constexpr std::ptrdiff_t m_sRoundEndMessage = 0x13A8; // CUtlString
-                constexpr std::ptrdiff_t m_iRoundEndPlayerCount = 0x13B0; // int32
-                constexpr std::ptrdiff_t m_bRoundEndNoMusic = 0x13B4; // bool
-                constexpr std::ptrdiff_t m_iRoundEndLegacy = 0x13B8; // int32
-                constexpr std::ptrdiff_t m_nRoundEndCount = 0x13BC; // uint8
-                constexpr std::ptrdiff_t m_iRoundStartRoundNumber = 0x13C0; // int32
-                constexpr std::ptrdiff_t m_nRoundStartCount = 0x13C4; // uint8
-                constexpr std::ptrdiff_t m_flLastPerfSampleTime = 0x53D0; // float64
+                constexpr std::ptrdiff_t m_arrTeamUniqueKillWeaponsMatch = 0x1320; // CUtlVector<int32>[4]
+                constexpr std::ptrdiff_t m_bTeamLastKillUsedUniqueWeaponMatch = 0x1380; // bool[4]
+                constexpr std::ptrdiff_t m_nMatchEndCount = 0x13A8; // uint8
+                constexpr std::ptrdiff_t m_nTTeamIntroVariant = 0x13AC; // int32
+                constexpr std::ptrdiff_t m_nCTTeamIntroVariant = 0x13B0; // int32
+                constexpr std::ptrdiff_t m_bTeamIntroPeriod = 0x13B4; // bool
+                constexpr std::ptrdiff_t m_fTeamIntroPeriodEnd = 0x13B8; // GameTime_t
+                constexpr std::ptrdiff_t m_bPlayedTeamIntroVO = 0x13BC; // bool
+                constexpr std::ptrdiff_t m_iRoundEndWinnerTeam = 0x13C0; // int32
+                constexpr std::ptrdiff_t m_eRoundEndReason = 0x13C4; // int32
+                constexpr std::ptrdiff_t m_bRoundEndShowTimerDefend = 0x13C8; // bool
+                constexpr std::ptrdiff_t m_iRoundEndTimerTime = 0x13CC; // int32
+                constexpr std::ptrdiff_t m_sRoundEndFunFactToken = 0x13D0; // CUtlString
+                constexpr std::ptrdiff_t m_iRoundEndFunFactPlayerSlot = 0x13D8; // CPlayerSlot
+                constexpr std::ptrdiff_t m_iRoundEndFunFactData1 = 0x13DC; // int32
+                constexpr std::ptrdiff_t m_iRoundEndFunFactData2 = 0x13E0; // int32
+                constexpr std::ptrdiff_t m_iRoundEndFunFactData3 = 0x13E4; // int32
+                constexpr std::ptrdiff_t m_sRoundEndMessage = 0x13E8; // CUtlString
+                constexpr std::ptrdiff_t m_iRoundEndPlayerCount = 0x13F0; // int32
+                constexpr std::ptrdiff_t m_bRoundEndNoMusic = 0x13F4; // bool
+                constexpr std::ptrdiff_t m_iRoundEndLegacy = 0x13F8; // int32
+                constexpr std::ptrdiff_t m_nRoundEndCount = 0x13FC; // uint8
+                constexpr std::ptrdiff_t m_iRoundStartRoundNumber = 0x1400; // int32
+                constexpr std::ptrdiff_t m_nRoundStartCount = 0x1404; // uint8
+                constexpr std::ptrdiff_t m_flLastPerfSampleTime = 0x5410; // float64
             }
             // Parent: None
             // Field count: 1
@@ -10286,12 +10286,12 @@ namespace cs2_dumper {
             // NetworkVarNames: m_iBombSite (int)
             // NetworkVarNames: m_hBombPlanter (CHandle<CCSPlayerPawn>)
             namespace CRetakeGameRules {
-                constexpr std::ptrdiff_t m_nMatchSeed = 0xF8; // int32
-                constexpr std::ptrdiff_t m_bBlockersPresent = 0xFC; // bool
-                constexpr std::ptrdiff_t m_bRoundInProgress = 0xFD; // bool
-                constexpr std::ptrdiff_t m_iFirstSecondHalfRound = 0x100; // int32
-                constexpr std::ptrdiff_t m_iBombSite = 0x104; // int32
-                constexpr std::ptrdiff_t m_hBombPlanter = 0x108; // CHandle<CCSPlayerPawn>
+                constexpr std::ptrdiff_t m_nMatchSeed = 0x138; // int32
+                constexpr std::ptrdiff_t m_bBlockersPresent = 0x13C; // bool
+                constexpr std::ptrdiff_t m_bRoundInProgress = 0x13D; // bool
+                constexpr std::ptrdiff_t m_iFirstSecondHalfRound = 0x140; // int32
+                constexpr std::ptrdiff_t m_iBombSite = 0x144; // int32
+                constexpr std::ptrdiff_t m_hBombPlanter = 0x148; // CHandle<CCSPlayerPawn>
             }
             // Parent: CEnvSoundscapeTriggerable
             // Field count: 0

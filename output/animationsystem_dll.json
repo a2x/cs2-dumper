@@ -3438,17 +3438,17 @@
       },
       "CNmChainLookatTask": {
         "fields": {
-          "m_bIsRunningFromDeserializedData": 125,
-          "m_bIsTargetInWorldSpace": 124,
-          "m_chainForwardDir": 88,
-          "m_flBlendWeight": 100,
-          "m_flHorizontalAngleDegrees": 128,
-          "m_flHorizontalAngleLimitDegrees": 104,
-          "m_flVerticalAngleDegrees": 132,
-          "m_flVerticalAngleLimitDegrees": 108,
-          "m_lookatTarget": 112,
-          "m_nChainEndBoneIdx": 80,
-          "m_nNumBonesInChain": 84
+          "m_bIsRunningFromDeserializedData": 133,
+          "m_bIsTargetInWorldSpace": 132,
+          "m_chainForwardDir": 96,
+          "m_flBlendWeight": 108,
+          "m_flHorizontalAngleDegrees": 136,
+          "m_flHorizontalAngleLimitDegrees": 112,
+          "m_flVerticalAngleDegrees": 140,
+          "m_flVerticalAngleLimitDegrees": 116,
+          "m_lookatTarget": 120,
+          "m_nChainEndBoneIdx": 88,
+          "m_nNumBonesInChain": 92
         },
         "metadata": [],
         "parent": null
@@ -3464,8 +3464,8 @@
           "m_debugTotalChainLength": 288,
           "m_effectorTarget": 144,
           "m_flBlendWeight": 196,
-          "m_nEffectorBoneIdx": 80,
-          "m_nEffectorTargetBoneIdx": 84,
+          "m_nEffectorBoneIdx": 88,
+          "m_nEffectorTargetBoneIdx": 92,
           "m_nNumBonesInChain": 128,
           "m_targetTransform": 96
         },
