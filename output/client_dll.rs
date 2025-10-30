@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-30 00:26:21.405923900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -908,12 +908,12 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_iBombSite (int)
             // NetworkVarNames: m_hBombPlanter (CHandle<CCSPlayerPawn>)
             pub mod C_RetakeGameRules {
-                pub const m_nMatchSeed: usize = 0xF8; // int32
-                pub const m_bBlockersPresent: usize = 0xFC; // bool
-                pub const m_bRoundInProgress: usize = 0xFD; // bool
-                pub const m_iFirstSecondHalfRound: usize = 0x100; // int32
-                pub const m_iBombSite: usize = 0x104; // int32
-                pub const m_hBombPlanter: usize = 0x108; // CHandle<C_CSPlayerPawn>
+                pub const m_nMatchSeed: usize = 0x138; // int32
+                pub const m_bBlockersPresent: usize = 0x13C; // bool
+                pub const m_bRoundInProgress: usize = 0x13D; // bool
+                pub const m_iFirstSecondHalfRound: usize = 0x140; // int32
+                pub const m_iBombSite: usize = 0x144; // int32
+                pub const m_hBombPlanter: usize = 0x148; // CHandle<C_CSPlayerPawn>
             }
             // Parent: None
             // Field count: 2
@@ -5913,27 +5913,27 @@ pub mod cs2_dumper {
                 pub const m_bSwitchingTeamsAtRoundReset: usize = 0xD7D; // bool
                 pub const m_pGameModeRules: usize = 0xD98; // CCSGameModeRules*
                 pub const m_RetakeRules: usize = 0xDA0; // C_RetakeGameRules
-                pub const m_nMatchEndCount: usize = 0xEB8; // uint8
-                pub const m_nTTeamIntroVariant: usize = 0xEBC; // int32
-                pub const m_nCTTeamIntroVariant: usize = 0xEC0; // int32
-                pub const m_bTeamIntroPeriod: usize = 0xEC4; // bool
-                pub const m_iRoundEndWinnerTeam: usize = 0xEC8; // int32
-                pub const m_eRoundEndReason: usize = 0xECC; // int32
-                pub const m_bRoundEndShowTimerDefend: usize = 0xED0; // bool
-                pub const m_iRoundEndTimerTime: usize = 0xED4; // int32
-                pub const m_sRoundEndFunFactToken: usize = 0xED8; // CUtlString
-                pub const m_iRoundEndFunFactPlayerSlot: usize = 0xEE0; // CPlayerSlot
-                pub const m_iRoundEndFunFactData1: usize = 0xEE4; // int32
-                pub const m_iRoundEndFunFactData2: usize = 0xEE8; // int32
-                pub const m_iRoundEndFunFactData3: usize = 0xEEC; // int32
-                pub const m_sRoundEndMessage: usize = 0xEF0; // CUtlString
-                pub const m_iRoundEndPlayerCount: usize = 0xEF8; // int32
-                pub const m_bRoundEndNoMusic: usize = 0xEFC; // bool
-                pub const m_iRoundEndLegacy: usize = 0xF00; // int32
-                pub const m_nRoundEndCount: usize = 0xF04; // uint8
-                pub const m_iRoundStartRoundNumber: usize = 0xF08; // int32
-                pub const m_nRoundStartCount: usize = 0xF0C; // uint8
-                pub const m_flLastPerfSampleTime: usize = 0x4F18; // float64
+                pub const m_nMatchEndCount: usize = 0xEF8; // uint8
+                pub const m_nTTeamIntroVariant: usize = 0xEFC; // int32
+                pub const m_nCTTeamIntroVariant: usize = 0xF00; // int32
+                pub const m_bTeamIntroPeriod: usize = 0xF04; // bool
+                pub const m_iRoundEndWinnerTeam: usize = 0xF08; // int32
+                pub const m_eRoundEndReason: usize = 0xF0C; // int32
+                pub const m_bRoundEndShowTimerDefend: usize = 0xF10; // bool
+                pub const m_iRoundEndTimerTime: usize = 0xF14; // int32
+                pub const m_sRoundEndFunFactToken: usize = 0xF18; // CUtlString
+                pub const m_iRoundEndFunFactPlayerSlot: usize = 0xF20; // CPlayerSlot
+                pub const m_iRoundEndFunFactData1: usize = 0xF24; // int32
+                pub const m_iRoundEndFunFactData2: usize = 0xF28; // int32
+                pub const m_iRoundEndFunFactData3: usize = 0xF2C; // int32
+                pub const m_sRoundEndMessage: usize = 0xF30; // CUtlString
+                pub const m_iRoundEndPlayerCount: usize = 0xF38; // int32
+                pub const m_bRoundEndNoMusic: usize = 0xF3C; // bool
+                pub const m_iRoundEndLegacy: usize = 0xF40; // int32
+                pub const m_nRoundEndCount: usize = 0xF44; // uint8
+                pub const m_iRoundStartRoundNumber: usize = 0xF48; // int32
+                pub const m_nRoundStartCount: usize = 0xF4C; // uint8
+                pub const m_flLastPerfSampleTime: usize = 0x4F58; // float64
             }
             // Parent: C_BaseModelEntity
             // Field count: 2

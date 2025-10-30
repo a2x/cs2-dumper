@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-30 00:26:21.405923900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
@@ -4262,17 +4262,17 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 11
         public static class CNmChainLookatTask {
-            public const nint m_nChainEndBoneIdx = 0x50; // int32
-            public const nint m_nNumBonesInChain = 0x54; // int32
-            public const nint m_chainForwardDir = 0x58; // Vector
-            public const nint m_flBlendWeight = 0x64; // float32
-            public const nint m_flHorizontalAngleLimitDegrees = 0x68; // float32
-            public const nint m_flVerticalAngleLimitDegrees = 0x6C; // float32
-            public const nint m_lookatTarget = 0x70; // Vector
-            public const nint m_bIsTargetInWorldSpace = 0x7C; // bool
-            public const nint m_bIsRunningFromDeserializedData = 0x7D; // bool
-            public const nint m_flHorizontalAngleDegrees = 0x80; // float32
-            public const nint m_flVerticalAngleDegrees = 0x84; // float32
+            public const nint m_nChainEndBoneIdx = 0x58; // int32
+            public const nint m_nNumBonesInChain = 0x5C; // int32
+            public const nint m_chainForwardDir = 0x60; // Vector
+            public const nint m_flBlendWeight = 0x6C; // float32
+            public const nint m_flHorizontalAngleLimitDegrees = 0x70; // float32
+            public const nint m_flVerticalAngleLimitDegrees = 0x74; // float32
+            public const nint m_lookatTarget = 0x78; // Vector
+            public const nint m_bIsTargetInWorldSpace = 0x84; // bool
+            public const nint m_bIsRunningFromDeserializedData = 0x85; // bool
+            public const nint m_flHorizontalAngleDegrees = 0x88; // float32
+            public const nint m_flVerticalAngleDegrees = 0x8C; // float32
         }
         // Parent: None
         // Field count: 18
@@ -6665,8 +6665,8 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 13
         public static class CNmChainSolverTask {
-            public const nint m_nEffectorBoneIdx = 0x50; // int32
-            public const nint m_nEffectorTargetBoneIdx = 0x54; // int32
+            public const nint m_nEffectorBoneIdx = 0x58; // int32
+            public const nint m_nEffectorTargetBoneIdx = 0x5C; // int32
             public const nint m_targetTransform = 0x60; // CTransform
             public const nint m_nNumBonesInChain = 0x80; // int32
             public const nint m_effectorTarget = 0x90; // CNmTarget

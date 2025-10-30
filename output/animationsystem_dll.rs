@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-30 00:26:21.405923900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -4396,17 +4396,17 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 11
             pub mod CNmChainLookatTask {
-                pub const m_nChainEndBoneIdx: usize = 0x50; // int32
-                pub const m_nNumBonesInChain: usize = 0x54; // int32
-                pub const m_chainForwardDir: usize = 0x58; // Vector
-                pub const m_flBlendWeight: usize = 0x64; // float32
-                pub const m_flHorizontalAngleLimitDegrees: usize = 0x68; // float32
-                pub const m_flVerticalAngleLimitDegrees: usize = 0x6C; // float32
-                pub const m_lookatTarget: usize = 0x70; // Vector
-                pub const m_bIsTargetInWorldSpace: usize = 0x7C; // bool
-                pub const m_bIsRunningFromDeserializedData: usize = 0x7D; // bool
-                pub const m_flHorizontalAngleDegrees: usize = 0x80; // float32
-                pub const m_flVerticalAngleDegrees: usize = 0x84; // float32
+                pub const m_nChainEndBoneIdx: usize = 0x58; // int32
+                pub const m_nNumBonesInChain: usize = 0x5C; // int32
+                pub const m_chainForwardDir: usize = 0x60; // Vector
+                pub const m_flBlendWeight: usize = 0x6C; // float32
+                pub const m_flHorizontalAngleLimitDegrees: usize = 0x70; // float32
+                pub const m_flVerticalAngleLimitDegrees: usize = 0x74; // float32
+                pub const m_lookatTarget: usize = 0x78; // Vector
+                pub const m_bIsTargetInWorldSpace: usize = 0x84; // bool
+                pub const m_bIsRunningFromDeserializedData: usize = 0x85; // bool
+                pub const m_flHorizontalAngleDegrees: usize = 0x88; // float32
+                pub const m_flVerticalAngleDegrees: usize = 0x8C; // float32
             }
             // Parent: None
             // Field count: 18
@@ -6799,8 +6799,8 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 13
             pub mod CNmChainSolverTask {
-                pub const m_nEffectorBoneIdx: usize = 0x50; // int32
-                pub const m_nEffectorTargetBoneIdx: usize = 0x54; // int32
+                pub const m_nEffectorBoneIdx: usize = 0x58; // int32
+                pub const m_nEffectorTargetBoneIdx: usize = 0x5C; // int32
                 pub const m_targetTransform: usize = 0x60; // CTransform
                 pub const m_nNumBonesInChain: usize = 0x80; // int32
                 pub const m_effectorTarget: usize = 0x90; // CNmTarget

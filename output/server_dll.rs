@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-22 23:24:33.374715900 UTC
+// 2025-10-30 00:26:21.405923900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -8387,31 +8387,31 @@ pub mod cs2_dumper {
                 pub const m_BtGlobalBlackboard: usize = 0x1090; // KeyValues3
                 pub const m_hPlayerResource: usize = 0x1128; // CHandle<CBaseEntity>
                 pub const m_RetakeRules: usize = 0x1130; // CRetakeGameRules
-                pub const m_arrTeamUniqueKillWeaponsMatch: usize = 0x12E0; // CUtlVector<int32>[4]
-                pub const m_bTeamLastKillUsedUniqueWeaponMatch: usize = 0x1340; // bool[4]
-                pub const m_nMatchEndCount: usize = 0x1368; // uint8
-                pub const m_nTTeamIntroVariant: usize = 0x136C; // int32
-                pub const m_nCTTeamIntroVariant: usize = 0x1370; // int32
-                pub const m_bTeamIntroPeriod: usize = 0x1374; // bool
-                pub const m_fTeamIntroPeriodEnd: usize = 0x1378; // GameTime_t
-                pub const m_bPlayedTeamIntroVO: usize = 0x137C; // bool
-                pub const m_iRoundEndWinnerTeam: usize = 0x1380; // int32
-                pub const m_eRoundEndReason: usize = 0x1384; // int32
-                pub const m_bRoundEndShowTimerDefend: usize = 0x1388; // bool
-                pub const m_iRoundEndTimerTime: usize = 0x138C; // int32
-                pub const m_sRoundEndFunFactToken: usize = 0x1390; // CUtlString
-                pub const m_iRoundEndFunFactPlayerSlot: usize = 0x1398; // CPlayerSlot
-                pub const m_iRoundEndFunFactData1: usize = 0x139C; // int32
-                pub const m_iRoundEndFunFactData2: usize = 0x13A0; // int32
-                pub const m_iRoundEndFunFactData3: usize = 0x13A4; // int32
-                pub const m_sRoundEndMessage: usize = 0x13A8; // CUtlString
-                pub const m_iRoundEndPlayerCount: usize = 0x13B0; // int32
-                pub const m_bRoundEndNoMusic: usize = 0x13B4; // bool
-                pub const m_iRoundEndLegacy: usize = 0x13B8; // int32
-                pub const m_nRoundEndCount: usize = 0x13BC; // uint8
-                pub const m_iRoundStartRoundNumber: usize = 0x13C0; // int32
-                pub const m_nRoundStartCount: usize = 0x13C4; // uint8
-                pub const m_flLastPerfSampleTime: usize = 0x53D0; // float64
+                pub const m_arrTeamUniqueKillWeaponsMatch: usize = 0x1320; // CUtlVector<int32>[4]
+                pub const m_bTeamLastKillUsedUniqueWeaponMatch: usize = 0x1380; // bool[4]
+                pub const m_nMatchEndCount: usize = 0x13A8; // uint8
+                pub const m_nTTeamIntroVariant: usize = 0x13AC; // int32
+                pub const m_nCTTeamIntroVariant: usize = 0x13B0; // int32
+                pub const m_bTeamIntroPeriod: usize = 0x13B4; // bool
+                pub const m_fTeamIntroPeriodEnd: usize = 0x13B8; // GameTime_t
+                pub const m_bPlayedTeamIntroVO: usize = 0x13BC; // bool
+                pub const m_iRoundEndWinnerTeam: usize = 0x13C0; // int32
+                pub const m_eRoundEndReason: usize = 0x13C4; // int32
+                pub const m_bRoundEndShowTimerDefend: usize = 0x13C8; // bool
+                pub const m_iRoundEndTimerTime: usize = 0x13CC; // int32
+                pub const m_sRoundEndFunFactToken: usize = 0x13D0; // CUtlString
+                pub const m_iRoundEndFunFactPlayerSlot: usize = 0x13D8; // CPlayerSlot
+                pub const m_iRoundEndFunFactData1: usize = 0x13DC; // int32
+                pub const m_iRoundEndFunFactData2: usize = 0x13E0; // int32
+                pub const m_iRoundEndFunFactData3: usize = 0x13E4; // int32
+                pub const m_sRoundEndMessage: usize = 0x13E8; // CUtlString
+                pub const m_iRoundEndPlayerCount: usize = 0x13F0; // int32
+                pub const m_bRoundEndNoMusic: usize = 0x13F4; // bool
+                pub const m_iRoundEndLegacy: usize = 0x13F8; // int32
+                pub const m_nRoundEndCount: usize = 0x13FC; // uint8
+                pub const m_iRoundStartRoundNumber: usize = 0x1400; // int32
+                pub const m_nRoundStartCount: usize = 0x1404; // uint8
+                pub const m_flLastPerfSampleTime: usize = 0x5410; // float64
             }
             // Parent: None
             // Field count: 1
@@ -10398,12 +10398,12 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_iBombSite (int)
             // NetworkVarNames: m_hBombPlanter (CHandle<CCSPlayerPawn>)
             pub mod CRetakeGameRules {
-                pub const m_nMatchSeed: usize = 0xF8; // int32
-                pub const m_bBlockersPresent: usize = 0xFC; // bool
-                pub const m_bRoundInProgress: usize = 0xFD; // bool
-                pub const m_iFirstSecondHalfRound: usize = 0x100; // int32
-                pub const m_iBombSite: usize = 0x104; // int32
-                pub const m_hBombPlanter: usize = 0x108; // CHandle<CCSPlayerPawn>
+                pub const m_nMatchSeed: usize = 0x138; // int32
+                pub const m_bBlockersPresent: usize = 0x13C; // bool
+                pub const m_bRoundInProgress: usize = 0x13D; // bool
+                pub const m_iFirstSecondHalfRound: usize = 0x140; // int32
+                pub const m_iBombSite: usize = 0x144; // int32
+                pub const m_hBombPlanter: usize = 0x148; // CHandle<CCSPlayerPawn>
             }
             // Parent: CEnvSoundscapeTriggerable
             // Field count: 0
