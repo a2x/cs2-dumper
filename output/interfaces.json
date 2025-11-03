@@ -13,9 +13,6 @@
     "Source2ClientPrediction001": 29261008,
     "Source2ClientUI001": 29336656
   },
-  "crashhandler64.dll": {
-    "": 18446603358724620295
-  },
   "engine2.dll": {
     "BenchmarkService001": 6247904,
     "BugService001": 9083488,
@@ -185,9 +182,6 @@
   },
   "v8system.dll": {
     "Source2V8System001": 202224
-  },
-  "vconcomm.dll": {
-    "VConComm001": 226752
   },
   "vphysics2.dll": {
     "VPhysics2_Handle_Interface_001": 4079904,
