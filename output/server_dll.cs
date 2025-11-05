@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
-    // Class count: 726
-    // Enum count: 151
+    // Class count: 718
+    // Enum count: 150
     public static class ServerDll {
         // Alignment: 4
         // Member count: 3
@@ -71,8 +71,9 @@ namespace CS2Dumper.Schemas {
             expUsePrecise = 0x2
         }
         // Alignment: 4
-        // Member count: 10
+        // Member count: 11
         public enum PreviewCharacterMode : uint {
+            INVALID = unchecked((uint)-1),
             DIORAMA = 0x0,
             MAIN_MENU = 0x1,
             BUY_MENU = 0x2,
@@ -85,11 +86,12 @@ namespace CS2Dumper.Schemas {
             BANNER = 0x9
         }
         // Alignment: 4
-        // Member count: 3
+        // Member count: 4
         public enum ObserverInterpState_t : uint {
             OBSERVER_INTERP_NONE = 0x0,
-            OBSERVER_INTERP_TRAVELING = 0x1,
-            OBSERVER_INTERP_SETTLING = 0x2
+            OBSERVER_INTERP_STARTING = 0x1,
+            OBSERVER_INTERP_TRAVELING = 0x2,
+            OBSERVER_INTERP_SETTLING = 0x3
         }
         // Alignment: 4
         // Member count: 3
@@ -99,8 +101,9 @@ namespace CS2Dumper.Schemas {
             WORLDTEXT_ORIENTATION_FACEUSER_UPRIGHT = 0x2
         }
         // Alignment: 4
-        // Member count: 6
+        // Member count: 7
         public enum EDestructibleParts_DestroyParameterFlags : uint {
+            None = 0x0,
             GenerateBreakpieces = 0x1,
             EnableFlinches = 0x2,
             ForceDamageApply = 0x4,
@@ -128,6 +131,15 @@ namespace CS2Dumper.Schemas {
             SOUNDEVENT_START_PLAYER = 0x0,
             SOUNDEVENT_START_WORLD = 0x1,
             SOUNDEVENT_START_ENTITY = 0x2
+        }
+        // Alignment: 4
+        // Member count: 5
+        public enum AnimGraphDebugDrawType_t : uint {
+            None = 0x0,
+            WsPosition = 0x1,
+            MsPosition = 0x2,
+            WsDirection = 0x3,
+            MsDirection = 0x4
         }
         // Alignment: 4
         // Member count: 4
@@ -191,13 +203,14 @@ namespace CS2Dumper.Schemas {
             SURROUNDING_TYPE_BIT_COUNT = 0x3
         }
         // Alignment: 4
-        // Member count: 5
+        // Member count: 6
         public enum LifeState_t : uint {
             LIFE_ALIVE = 0x0,
             LIFE_DYING = 0x1,
             LIFE_DEAD = 0x2,
             LIFE_RESPAWNABLE = 0x3,
-            LIFE_RESPAWNING = 0x4
+            LIFE_RESPAWNING = 0x4,
+            NUM_LIFESTATES = 0x5
         }
         // Alignment: 4
         // Member count: 2
@@ -342,7 +355,7 @@ namespace CS2Dumper.Schemas {
             EXPLOSION_TYPE_COUNT = 0x10
         }
         // Alignment: 4
-        // Member count: 41
+        // Member count: 40
         public enum GameAnimEventIndex_t : uint {
             AE_EMPTY = 0x0,
             AE_CL_PLAYSOUND = 0x1,
@@ -371,20 +384,19 @@ namespace CS2Dumper.Schemas {
             AE_SV_IKLOCK = 0x18,
             AE_PULSE_GRAPH = 0x19,
             AE_PULSE_GRAPH_LOOKAT = 0x1A,
-            AE_PULSE_GRAPH_AIMAT = 0x1B,
-            AE_PULSE_GRAPH_IKLOCKLEFTARM = 0x1C,
-            AE_PULSE_GRAPH_IKLOCKRIGHTARM = 0x1D,
-            AE_DISABLE_PLATFORM = 0x1E,
-            AE_ENABLE_PLATFORM_PLAYER_FOLLOWS_YAW = 0x1F,
-            AE_ENABLE_PLATFORM_PLAYER_IGNORES_YAW = 0x20,
-            AE_DESTRUCTIBLE_PART_DESTROY = 0x21,
-            AE_CL_WEAPON_TRANSITION_INTO_HAND = 0x22,
-            AE_SV_ATTACH_SILENCER_COMPLETE = 0x23,
-            AE_SV_DETACH_SILENCER_COMPLETE = 0x24,
-            AE_CL_EJECT_MAG = 0x25,
-            AE_WPN_COMPLETE_RELOAD = 0x26,
-            AE_WPN_HEALTHSHOT_INJECT = 0x27,
-            AE_GRENADE_THROW_COMPLETE = 0x28
+            AE_PULSE_GRAPH_IKLOCKLEFTARM = 0x1B,
+            AE_PULSE_GRAPH_IKLOCKRIGHTARM = 0x1C,
+            AE_DISABLE_PLATFORM = 0x1D,
+            AE_ENABLE_PLATFORM_PLAYER_FOLLOWS_YAW = 0x1E,
+            AE_ENABLE_PLATFORM_PLAYER_IGNORES_YAW = 0x1F,
+            AE_DESTRUCTIBLE_PART_DESTROY = 0x20,
+            AE_CL_WEAPON_TRANSITION_INTO_HAND = 0x21,
+            AE_SV_ATTACH_SILENCER_COMPLETE = 0x22,
+            AE_SV_DETACH_SILENCER_COMPLETE = 0x23,
+            AE_CL_EJECT_MAG = 0x24,
+            AE_WPN_COMPLETE_RELOAD = 0x25,
+            AE_WPN_HEALTHSHOT_INJECT = 0x26,
+            AE_GRENADE_THROW_COMPLETE = 0x27
         }
         // Alignment: 1
         // Member count: 3
@@ -505,15 +517,6 @@ namespace CS2Dumper.Schemas {
             kRenderModeCount = 0xC
         }
         // Alignment: 4
-        // Member count: 5
-        public enum DecalVBType_t : uint {
-            eInvalid = unchecked((uint)-1),
-            eStatic = 0x0,
-            eDynamic = 0x1,
-            eCount = 0x2,
-            eFirst = 0x0
-        }
-        // Alignment: 4
         // Member count: 3
         public enum ForcedCrouchState_t : uint {
             FORCEDCROUCH_NONE = 0x0,
@@ -624,9 +627,9 @@ namespace CS2Dumper.Schemas {
             InvincibleAbsorb = 0x2,
             InvinciblePassthrough = 0x3
         }
-        // Alignment: 4
-        // Member count: 21
-        public enum NavAttributeEnum : uint {
+        // Alignment: 8
+        // Member count: 20
+        public enum NavAttributeEnum : ulong {
             NAV_MESH_AVOID = 0x80,
             NAV_MESH_STAIRS = 0x1000,
             NAV_MESH_NON_ZUP = 0x8000,
@@ -635,7 +638,6 @@ namespace CS2Dumper.Schemas {
             NAV_MESH_CRAWL_HEIGHT = 0x40000,
             NAV_MESH_CROUCH = 0x10000,
             NAV_MESH_JUMP = 0x2,
-            NAV_MESH_PRECISE = 0x4,
             NAV_MESH_NO_JUMP = 0x8,
             NAV_MESH_STOP = 0x10,
             NAV_MESH_RUN = 0x20,
@@ -647,7 +649,7 @@ namespace CS2Dumper.Schemas {
             NAV_MESH_NO_MERGE = 0x2000,
             NAV_MESH_OBSTACLE_TOP = 0x4000,
             NAV_ATTR_FIRST_GAME_INDEX = 0x13,
-            NAV_ATTR_LAST_INDEX = 0x1F
+            NAV_ATTR_LAST_INDEX = 0x3F
         }
         // Alignment: 4
         // Member count: 3
@@ -855,8 +857,9 @@ namespace CS2Dumper.Schemas {
             COMBINED = unchecked((uint)-1)
         }
         // Alignment: 4
-        // Member count: 23
+        // Member count: 24
         public enum PreviewEOMCelebration : uint {
+            INVALID = unchecked((uint)-1),
             WALKUP = 0x0,
             PUNCHING = 0x1,
             SWAGGER = 0x2,
@@ -889,14 +892,6 @@ namespace CS2Dumper.Schemas {
             ENTITY_DISSOLVE_ELECTRICAL = 0x1,
             ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 0x2,
             ENTITY_DISSOLVE_CORE = 0x3
-        }
-        // Alignment: 1
-        // Member count: 4
-        public enum DecalMode_t : byte {
-            kDecalBlood = 0x0,
-            kDecalCloak = 0x1,
-            kDecalMax = 0x2,
-            kDecalDefault = 0x0
         }
         // Alignment: 8
         // Member count: 21
@@ -1600,7 +1595,7 @@ namespace CS2Dumper.Schemas {
             WEAPON_SOUND_NUM_TYPES = 0x18
         }
         // Alignment: 8
-        // Member count: 18
+        // Member count: 20
         public enum TakeDamageFlags_t : ulong {
             DFLAG_NONE = 0x0,
             DFLAG_SUPPRESS_HEALTH_CHANGES = 0x1,
@@ -1617,9 +1612,11 @@ namespace CS2Dumper.Schemas {
             DFLAG_FORCEREDUCEARMOR_DMG = 0x800,
             DFLAG_SUPPRESS_INTERRUPT_FLINCH = 0x1000,
             DFLAG_IGNORE_DESTRUCTIBLE_PARTS = 0x2000,
-            DMG_LASTDFLAG = 0x2000,
-            DFLAG_IGNORE_ARMOR = 0x4000,
-            DFLAG_SUPPRESS_UTILREMOVE = 0x8000
+            DFLAG_SUPPRESS_BREAKABLES = 0x4000,
+            DFLAG_FORCE_PHYSICS_FORCE = 0x8000,
+            DMG_LASTDFLAG = 0x8000,
+            DFLAG_IGNORE_ARMOR = 0x10000,
+            DFLAG_SUPPRESS_UTILREMOVE = 0x20000
         }
         // Alignment: 4
         // Member count: 2
@@ -1712,7 +1709,7 @@ namespace CS2Dumper.Schemas {
             MOVETYPE_INVALID = 0xB,
             MOVETYPE_MAX_BITS = 0x5
         }
-        // Parent: CCSWeaponBase
+        // Parent: CCSWeaponBaseShotgun
         // Field count: 0
         public static class CWeaponNOVA {
         }
@@ -1737,22 +1734,22 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nJustifyVertical (PointWorldTextJustifyVertical_t)
         // NetworkVarNames: m_nReorientMode (PointWorldTextReorientMode_t)
         public static class CPointWorldText {
-            public const nint m_messageText = 0x7E8; // char[512]
-            public const nint m_FontName = 0x9E8; // char[64]
-            public const nint m_BackgroundMaterialName = 0xA28; // char[64]
-            public const nint m_bEnabled = 0xA68; // bool
-            public const nint m_bFullbright = 0xA69; // bool
-            public const nint m_flWorldUnitsPerPx = 0xA6C; // float32
-            public const nint m_flFontSize = 0xA70; // float32
-            public const nint m_flDepthOffset = 0xA74; // float32
-            public const nint m_bDrawBackground = 0xA78; // bool
-            public const nint m_flBackgroundBorderWidth = 0xA7C; // float32
-            public const nint m_flBackgroundBorderHeight = 0xA80; // float32
-            public const nint m_flBackgroundWorldToUV = 0xA84; // float32
-            public const nint m_Color = 0xA88; // Color
-            public const nint m_nJustifyHorizontal = 0xA8C; // PointWorldTextJustifyHorizontal_t
-            public const nint m_nJustifyVertical = 0xA90; // PointWorldTextJustifyVertical_t
-            public const nint m_nReorientMode = 0xA94; // PointWorldTextReorientMode_t
+            public const nint m_messageText = 0x7D8; // char[512]
+            public const nint m_FontName = 0x9D8; // char[64]
+            public const nint m_BackgroundMaterialName = 0xA18; // char[64]
+            public const nint m_bEnabled = 0xA58; // bool
+            public const nint m_bFullbright = 0xA59; // bool
+            public const nint m_flWorldUnitsPerPx = 0xA5C; // float32
+            public const nint m_flFontSize = 0xA60; // float32
+            public const nint m_flDepthOffset = 0xA64; // float32
+            public const nint m_bDrawBackground = 0xA68; // bool
+            public const nint m_flBackgroundBorderWidth = 0xA6C; // float32
+            public const nint m_flBackgroundBorderHeight = 0xA70; // float32
+            public const nint m_flBackgroundWorldToUV = 0xA74; // float32
+            public const nint m_Color = 0xA78; // Color
+            public const nint m_nJustifyHorizontal = 0xA7C; // PointWorldTextJustifyHorizontal_t
+            public const nint m_nJustifyVertical = 0xA80; // PointWorldTextJustifyVertical_t
+            public const nint m_nReorientMode = 0xA84; // PointWorldTextReorientMode_t
         }
         // Parent: CPointEntity
         // Field count: 10
@@ -1784,20 +1781,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_pOutputOnSpawned = 0x540; // CEntityIOOutput
             public const nint m_pOutputOnFailedSpawn = 0x568; // CEntityIOOutput
         }
+        // Parent: None
+        // Field count: 0
+        public static class CPulseGraphInstance_GameBlackboard {
+        }
         // Parent: CBaseEntity
         // Field count: 0
         public static class CPointEntity {
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseDomainScopeInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CPulseGraphInstance_GameBlackboard {
         }
         // Parent: CBaseFilter
         // Field count: 5
@@ -1817,9 +1807,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -1915,7 +1902,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 1
         public static class CFogTrigger {
-            public const nint m_fog = 0x9B8; // fogparams_t
+            public const nint m_fog = 0x9A8; // fogparams_t
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -1929,10 +1916,10 @@ namespace CS2Dumper.Schemas {
         // Field count: 2
         //
         // Metadata:
-        // NetworkVarNames: m_hPlayerPing (CHandle<CBaseEntity>)
+        // NetworkVarNames: m_hPlayerPing (CHandle<CPlayerPing>)
         public static class CCSPlayer_PingServices {
             public const nint m_flPlayerPingTokens = 0x40; // GameTime_t[5]
-            public const nint m_hPlayerPing = 0x54; // CHandle<CBaseEntity>
+            public const nint m_hPlayerPing = 0x54; // CHandle<CPlayerPing>
         }
         // Parent: CBaseCSGrenade
         // Field count: 0
@@ -1946,8 +1933,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_flRestLength = 0x500; // float32
             public const nint m_nameAttachStart = 0x508; // CUtlSymbolLarge
             public const nint m_nameAttachEnd = 0x510; // CUtlSymbolLarge
-            public const nint m_start = 0x518; // Vector
-            public const nint m_end = 0x524; // Vector
+            public const nint m_start = 0x518; // VectorWS
+            public const nint m_end = 0x524; // VectorWS
             public const nint m_teleportTick = 0x530; // uint32
         }
         // Parent: CPointEntity
@@ -1974,11 +1961,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CBaseTriggerAPI {
         }
         // Parent: CCSWeaponBaseGun
@@ -2011,14 +1993,18 @@ namespace CS2Dumper.Schemas {
             public const nint flFlinchModLarge = 0x38; // float32
             public const nint flFriendlyFireDamageReductionRatio = 0x3C; // float32
         }
+        // Parent: CDynamicProp
+        // Field count: 0
+        public static class CFuncRetakeBarrier {
+        }
         // Parent: CBaseTrigger
         // Field count: 2
         //
         // Metadata:
         // NetworkVarNames: m_flFluidDensity (float)
         public static class CTriggerBuoyancy {
-            public const nint m_BuoyancyHelper = 0x9B8; // CBuoyancyHelper
-            public const nint m_flFluidDensity = 0xAD0; // float32
+            public const nint m_BuoyancyHelper = 0x9A8; // CBuoyancyHelper
+            public const nint m_flFluidDensity = 0xAC0; // float32
         }
         // Parent: CTonemapController2
         // Field count: 0
@@ -2048,11 +2034,11 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 5
         public static class CTriggerProximity {
-            public const nint m_hMeasureTarget = 0x9B8; // CHandle<CBaseEntity>
-            public const nint m_iszMeasureTarget = 0x9C0; // CUtlSymbolLarge
-            public const nint m_fRadius = 0x9C8; // float32
-            public const nint m_nTouchers = 0x9CC; // int32
-            public const nint m_NearestEntityDistance = 0x9D0; // CEntityOutputTemplate<float32>
+            public const nint m_hMeasureTarget = 0x9A8; // CHandle<CBaseEntity>
+            public const nint m_iszMeasureTarget = 0x9B0; // CUtlSymbolLarge
+            public const nint m_fRadius = 0x9B8; // float32
+            public const nint m_nTouchers = 0x9BC; // int32
+            public const nint m_NearestEntityDistance = 0x9C0; // CEntityOutputTemplate<float32>
         }
         // Parent: CPointEntity
         // Field count: 7
@@ -2068,8 +2054,8 @@ namespace CS2Dumper.Schemas {
         // Parent: CRulePointEntity
         // Field count: 2
         public static class CGameText {
-            public const nint m_iszMessage = 0x7F8; // CUtlSymbolLarge
-            public const nint m_textParms = 0x800; // hudtextparms_t
+            public const nint m_iszMessage = 0x7E8; // CUtlSymbolLarge
+            public const nint m_textParms = 0x7F0; // hudtextparms_t
         }
         // Parent: CRulePointEntity
         // Field count: 0
@@ -2091,7 +2077,6 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nPersonaDataPublicCommendsFriendly (int)
         // NetworkVarNames: m_nPersonaDataXpTrailLevel (int)
         // NetworkVarNames: m_vecServerAuthoritativeWeaponSlots (ServerAuthoritativeWeaponSlot_t)
-        // NetworkVarNames: m_vecNetworkableLoadout (CSNetworkableLoadout_t)
         public static class CCSPlayerController_InventoryServices {
             public const nint m_unMusicID = 0x40; // uint16
             public const nint m_rank = 0x44; // MedalRank_t[6]
@@ -2101,8 +2086,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPersonaDataPublicCommendsFriendly = 0x68; // int32
             public const nint m_nPersonaDataXpTrailLevel = 0x6C; // int32
             public const nint m_unEquippedPlayerSprayIDs = 0xF48; // uint32[1]
-            public const nint m_vecServerAuthoritativeWeaponSlots = 0xF50; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
-            public const nint m_vecNetworkableLoadout = 0xFD8; // CUtlVectorEmbeddedNetworkVar<CSNetworkableLoadout_t>
+            public const nint m_unCurrentLoadoutHash = 0xF50; // uint64
+            public const nint m_vecServerAuthoritativeWeaponSlots = 0xF58; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
         }
         // Parent: None
         // Field count: 0
@@ -2113,25 +2098,22 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // NetworkVarNames: m_flexWeight (float32)
-        // NetworkVarNames: m_vLookTargetPosition (Vector)
+        // NetworkVarNames: m_vLookTargetPosition (VectorWS)
         // NetworkVarNames: m_blinktoggle (bool)
         public static class CBaseFlex {
-            public const nint m_flexWeight = 0xA78; // CNetworkUtlVectorBase<float32>
-            public const nint m_vLookTargetPosition = 0xA90; // Vector
-            public const nint m_blinktoggle = 0xA9C; // bool
-            public const nint m_flAllowResponsesEndTime = 0xAF0; // GameTime_t
-            public const nint m_flLastFlexAnimationTime = 0xAF4; // GameTime_t
-            public const nint m_nNextSceneEventId = 0xAF8; // SceneEventId_t
-            public const nint m_bUpdateLayerPriorities = 0xAFC; // bool
+            public const nint m_flexWeight = 0xA90; // CNetworkUtlVectorBase<float32>
+            public const nint m_vLookTargetPosition = 0xAA8; // VectorWS
+            public const nint m_blinktoggle = 0xAB4; // bool
+            public const nint m_flAllowResponsesEndTime = 0xB08; // GameTime_t
+            public const nint m_flLastFlexAnimationTime = 0xB0C; // GameTime_t
+            public const nint m_nNextSceneEventId = 0xB10; // SceneEventId_t
+            public const nint m_bUpdateLayerPriorities = 0xB14; // bool
         }
         // Parent: CBaseTrigger
-        // Field count: 24
+        // Field count: 25
         //
         // Metadata:
-        // NetworkVarNames: m_vFanOrigin (Vector)
         // NetworkVarNames: m_vFanOriginOffset (Vector)
-        // NetworkVarNames: m_vFanEnd (Vector)
-        // NetworkVarNames: m_vNoiseDirectionTarget (Vector)
         // NetworkVarNames: m_vDirection (Vector)
         // NetworkVarNames: m_bPushTowardsInfoTarget (bool)
         // NetworkVarNames: m_bPushAwayFromInfoTarget (bool)
@@ -2141,18 +2123,19 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bFalloff (bool)
         // NetworkVarNames: m_RampTimer (CountdownTimer)
         public static class CTriggerFan {
-            public const nint m_vFanOrigin = 0x9B8; // Vector
-            public const nint m_vFanOriginOffset = 0x9C4; // Vector
-            public const nint m_vFanEnd = 0x9D0; // Vector
-            public const nint m_vNoiseDirectionTarget = 0x9DC; // Vector
-            public const nint m_vDirection = 0x9E8; // Vector
-            public const nint m_bPushTowardsInfoTarget = 0x9F4; // bool
-            public const nint m_bPushAwayFromInfoTarget = 0x9F5; // bool
-            public const nint m_qNoiseDelta = 0xA00; // Quaternion
-            public const nint m_hInfoFan = 0xA10; // CHandle<CInfoFan>
-            public const nint m_flForce = 0xA14; // float32
-            public const nint m_bFalloff = 0xA18; // bool
-            public const nint m_RampTimer = 0xA20; // CountdownTimer
+            public const nint m_vFanOriginOffset = 0x9A8; // Vector
+            public const nint m_vDirection = 0x9B4; // Vector
+            public const nint m_bPushTowardsInfoTarget = 0x9C0; // bool
+            public const nint m_bPushAwayFromInfoTarget = 0x9C1; // bool
+            public const nint m_qNoiseDelta = 0x9D0; // Quaternion
+            public const nint m_hInfoFan = 0x9E0; // CHandle<CInfoFan>
+            public const nint m_flForce = 0x9E4; // float32
+            public const nint m_bFalloff = 0x9E8; // bool
+            public const nint m_RampTimer = 0x9F0; // CountdownTimer
+            public const nint m_vFanOriginWS = 0xA08; // VectorWS
+            public const nint m_vFanOriginLS = 0xA14; // Vector
+            public const nint m_vFanEndLS = 0xA20; // Vector
+            public const nint m_vNoiseDirectionTarget = 0xA2C; // Vector
             public const nint m_iszInfoFan = 0xA38; // CUtlSymbolLarge
             public const nint m_flRopeForceScale = 0xA40; // float32
             public const nint m_flParticleForceScale = 0xA44; // float32
@@ -2193,36 +2176,33 @@ namespace CS2Dumper.Schemas {
         // Parent: CRuleBrushEntity
         // Field count: 4
         public static class CGamePlayerZone {
-            public const nint m_OnPlayerInZone = 0x7F0; // CEntityIOOutput
-            public const nint m_OnPlayerOutZone = 0x818; // CEntityIOOutput
-            public const nint m_PlayersInCount = 0x840; // CEntityOutputTemplate<int32>
-            public const nint m_PlayersOutCount = 0x868; // CEntityOutputTemplate<int32>
+            public const nint m_OnPlayerInZone = 0x7E0; // CEntityIOOutput
+            public const nint m_OnPlayerOutZone = 0x808; // CEntityIOOutput
+            public const nint m_PlayersInCount = 0x830; // CEntityOutputTemplate<int32>
+            public const nint m_PlayersOutCount = 0x858; // CEntityOutputTemplate<int32>
         }
         // Parent: CBaseModelEntity
         // Field count: 16
         public static class CBaseToggle {
-            public const nint m_toggle_state = 0x7E8; // TOGGLE_STATE
-            public const nint m_flMoveDistance = 0x7EC; // float32
-            public const nint m_flWait = 0x7F0; // float32
-            public const nint m_flLip = 0x7F4; // float32
-            public const nint m_bAlwaysFireBlockedOutputs = 0x7F8; // bool
-            public const nint m_vecPosition1 = 0x7FC; // Vector
-            public const nint m_vecPosition2 = 0x808; // Vector
-            public const nint m_vecMoveAng = 0x814; // QAngle
-            public const nint m_vecAngle1 = 0x820; // QAngle
-            public const nint m_vecAngle2 = 0x82C; // QAngle
-            public const nint m_flHeight = 0x838; // float32
-            public const nint m_hActivator = 0x83C; // CHandle<CBaseEntity>
-            public const nint m_vecFinalDest = 0x840; // Vector
-            public const nint m_vecFinalAngle = 0x84C; // QAngle
-            public const nint m_movementType = 0x858; // int32
-            public const nint m_sMaster = 0x860; // CUtlSymbolLarge
+            public const nint m_toggle_state = 0x7D8; // TOGGLE_STATE
+            public const nint m_flMoveDistance = 0x7DC; // float32
+            public const nint m_flWait = 0x7E0; // float32
+            public const nint m_flLip = 0x7E4; // float32
+            public const nint m_bAlwaysFireBlockedOutputs = 0x7E8; // bool
+            public const nint m_vecPosition1 = 0x7EC; // Vector
+            public const nint m_vecPosition2 = 0x7F8; // Vector
+            public const nint m_vecMoveAng = 0x804; // QAngle
+            public const nint m_vecAngle1 = 0x810; // QAngle
+            public const nint m_vecAngle2 = 0x81C; // QAngle
+            public const nint m_flHeight = 0x828; // float32
+            public const nint m_hActivator = 0x82C; // CHandle<CBaseEntity>
+            public const nint m_vecFinalDest = 0x830; // Vector
+            public const nint m_vecFinalAngle = 0x83C; // QAngle
+            public const nint m_movementType = 0x848; // int32
+            public const nint m_sMaster = 0x850; // CUtlSymbolLarge
         }
         // Parent: None
         // Field count: 2
-        //
-        // Metadata:
-        // MPulseLibraryBindings
         public static class CPulseServerCursor {
             public const nint m_hActivator = 0xD8; // CHandle<CBaseEntity>
             public const nint m_hCaller = 0xDC; // CHandle<CBaseEntity>
@@ -2232,10 +2212,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
-        // MPulseProvideFeatureTag
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CPulseCell_PlaySequence {
@@ -2258,30 +2234,30 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nFireLifetime (float)
         // NetworkVarNames: m_bInPostEffectTime (bool)
         public static class CInferno {
-            public const nint m_firePositions = 0x7E8; // Vector[64]
-            public const nint m_fireParentPositions = 0xAE8; // Vector[64]
-            public const nint m_bFireIsBurning = 0xDE8; // bool[64]
-            public const nint m_BurnNormal = 0xE28; // Vector[64]
-            public const nint m_fireCount = 0x1128; // int32
-            public const nint m_nInfernoType = 0x112C; // int32
-            public const nint m_nFireEffectTickBegin = 0x1130; // int32
-            public const nint m_nFireLifetime = 0x1134; // float32
-            public const nint m_bInPostEffectTime = 0x1138; // bool
-            public const nint m_bWasCreatedInSmoke = 0x1139; // bool
-            public const nint m_extent = 0x1340; // Extent
-            public const nint m_damageTimer = 0x1358; // CountdownTimer
-            public const nint m_damageRampTimer = 0x1370; // CountdownTimer
-            public const nint m_splashVelocity = 0x1388; // Vector
-            public const nint m_InitialSplashVelocity = 0x1394; // Vector
-            public const nint m_startPos = 0x13A0; // Vector
-            public const nint m_vecOriginalSpawnLocation = 0x13AC; // Vector
-            public const nint m_activeTimer = 0x13B8; // IntervalTimer
-            public const nint m_fireSpawnOffset = 0x13C8; // int32
-            public const nint m_nMaxFlames = 0x13CC; // int32
-            public const nint m_nSpreadCount = 0x13D0; // int32
-            public const nint m_BookkeepingTimer = 0x13D8; // CountdownTimer
-            public const nint m_NextSpreadTimer = 0x13F0; // CountdownTimer
-            public const nint m_nSourceItemDefIndex = 0x1408; // uint16
+            public const nint m_firePositions = 0x7D8; // Vector[64]
+            public const nint m_fireParentPositions = 0xAD8; // Vector[64]
+            public const nint m_bFireIsBurning = 0xDD8; // bool[64]
+            public const nint m_BurnNormal = 0xE18; // Vector[64]
+            public const nint m_fireCount = 0x1118; // int32
+            public const nint m_nInfernoType = 0x111C; // int32
+            public const nint m_nFireEffectTickBegin = 0x1120; // int32
+            public const nint m_nFireLifetime = 0x1124; // float32
+            public const nint m_bInPostEffectTime = 0x1128; // bool
+            public const nint m_bWasCreatedInSmoke = 0x1129; // bool
+            public const nint m_extent = 0x1330; // Extent
+            public const nint m_damageTimer = 0x1348; // CountdownTimer
+            public const nint m_damageRampTimer = 0x1360; // CountdownTimer
+            public const nint m_splashVelocity = 0x1378; // Vector
+            public const nint m_InitialSplashVelocity = 0x1384; // Vector
+            public const nint m_startPos = 0x1390; // Vector
+            public const nint m_vecOriginalSpawnLocation = 0x139C; // Vector
+            public const nint m_activeTimer = 0x13A8; // IntervalTimer
+            public const nint m_fireSpawnOffset = 0x13B8; // int32
+            public const nint m_nMaxFlames = 0x13BC; // int32
+            public const nint m_nSpreadCount = 0x13C0; // int32
+            public const nint m_BookkeepingTimer = 0x13C8; // CountdownTimer
+            public const nint m_NextSpreadTimer = 0x13E0; // CountdownTimer
+            public const nint m_nSourceItemDefIndex = 0x13F8; // uint16
         }
         // Parent: CEntityComponent
         // Field count: 0
@@ -2302,9 +2278,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_LerpCameraSettings {
             public const nint m_flSeconds = 0x90; // float32
             public const nint m_Start = 0x94; // PointCameraSettings_t
@@ -2317,16 +2290,9 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 3
         public static class CFuncInteractionLayerClip {
-            public const nint m_bDisabled = 0x7E8; // bool
-            public const nint m_iszInteractsAs = 0x7F0; // CUtlSymbolLarge
-            public const nint m_iszInteractsWith = 0x7F8; // CUtlSymbolLarge
-        }
-        // Parent: None
-        // Field count: 3
-        public static class CSNetworkableLoadout_t {
-            public const nint m_Item = 0x30; // CEconItemView
-            public const nint m_unTeam = 0x2D8; // uint16
-            public const nint m_unSlot = 0x2DA; // uint16
+            public const nint m_bDisabled = 0x7D8; // bool
+            public const nint m_iszInteractsAs = 0x7E0; // CUtlSymbolLarge
+            public const nint m_iszInteractsWith = 0x7E8; // CUtlSymbolLarge
         }
         // Parent: CPlayer_UseServices
         // Field count: 0
@@ -2335,8 +2301,8 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 2
         public static class CTriggerDetectBulletFire {
-            public const nint m_bPlayerFireOnly = 0x9B8; // bool
-            public const nint m_OnDetectedBulletFire = 0x9C0; // CEntityIOOutput
+            public const nint m_bPlayerFireOnly = 0x9A8; // bool
+            public const nint m_OnDetectedBulletFire = 0x9B0; // CEntityIOOutput
         }
         // Parent: CPlayer_UseServices
         // Field count: 3
@@ -2354,15 +2320,10 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
         // MPulseEditorCanvasItemSpecKV3
-        // MPulseSelectorAllowRequirementCriteria
-        // MPulseSelectorAllowRequirementCriteria
         public static class CPulseCell_PickBestOutflowSelector {
             public const nint m_nCheckType = 0x48; // PulseBestOutflowRules_t
             public const nint m_OutflowList = 0x50; // PulseSelectorOutflowList_t
@@ -2409,35 +2370,35 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_poolOrigin (Vector)
         // NetworkVarNames: m_waterLevel (float32)
         public static class CFish {
-            public const nint m_pool = 0xA78; // CHandle<CFishPool>
-            public const nint m_id = 0xA7C; // uint32
-            public const nint m_x = 0xA80; // float32
-            public const nint m_y = 0xA84; // float32
-            public const nint m_z = 0xA88; // float32
-            public const nint m_angle = 0xA8C; // float32
-            public const nint m_angleChange = 0xA90; // float32
-            public const nint m_forward = 0xA94; // Vector
-            public const nint m_perp = 0xAA0; // Vector
-            public const nint m_poolOrigin = 0xAAC; // Vector
-            public const nint m_waterLevel = 0xAB8; // float32
-            public const nint m_speed = 0xABC; // float32
-            public const nint m_desiredSpeed = 0xAC0; // float32
-            public const nint m_calmSpeed = 0xAC4; // float32
-            public const nint m_panicSpeed = 0xAC8; // float32
-            public const nint m_avoidRange = 0xACC; // float32
-            public const nint m_turnTimer = 0xAD0; // CountdownTimer
-            public const nint m_turnClockwise = 0xAE8; // bool
-            public const nint m_goTimer = 0xAF0; // CountdownTimer
-            public const nint m_moveTimer = 0xB08; // CountdownTimer
-            public const nint m_panicTimer = 0xB20; // CountdownTimer
-            public const nint m_disperseTimer = 0xB38; // CountdownTimer
-            public const nint m_proximityTimer = 0xB50; // CountdownTimer
-            public const nint m_visible = 0xB68; // CUtlVector<CFish*>
+            public const nint m_pool = 0xA90; // CHandle<CFishPool>
+            public const nint m_id = 0xA94; // uint32
+            public const nint m_x = 0xA98; // float32
+            public const nint m_y = 0xA9C; // float32
+            public const nint m_z = 0xAA0; // float32
+            public const nint m_angle = 0xAA4; // float32
+            public const nint m_angleChange = 0xAA8; // float32
+            public const nint m_forward = 0xAAC; // Vector
+            public const nint m_perp = 0xAB8; // Vector
+            public const nint m_poolOrigin = 0xAC4; // Vector
+            public const nint m_waterLevel = 0xAD0; // float32
+            public const nint m_speed = 0xAD4; // float32
+            public const nint m_desiredSpeed = 0xAD8; // float32
+            public const nint m_calmSpeed = 0xADC; // float32
+            public const nint m_panicSpeed = 0xAE0; // float32
+            public const nint m_avoidRange = 0xAE4; // float32
+            public const nint m_turnTimer = 0xAE8; // CountdownTimer
+            public const nint m_turnClockwise = 0xB00; // bool
+            public const nint m_goTimer = 0xB08; // CountdownTimer
+            public const nint m_moveTimer = 0xB20; // CountdownTimer
+            public const nint m_panicTimer = 0xB38; // CountdownTimer
+            public const nint m_disperseTimer = 0xB50; // CountdownTimer
+            public const nint m_proximityTimer = 0xB68; // CountdownTimer
+            public const nint m_visible = 0xB80; // CUtlVector<CFish*>
         }
         // Parent: CBot
         // Field count: 139
         public static class CCSBot {
-            public const nint m_eyePosition = 0x108; // Vector
+            public const nint m_eyePosition = 0x108; // VectorWS
             public const nint m_name = 0x114; // char[64]
             public const nint m_combatRange = 0x154; // float32
             public const nint m_isRogue = 0x158; // bool
@@ -2460,7 +2421,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_isAttacking = 0x4D4; // bool
             public const nint m_isOpeningDoor = 0x4D5; // bool
             public const nint m_taskEntity = 0x4DC; // CHandle<CBaseEntity>
-            public const nint m_goalPosition = 0x4EC; // Vector
+            public const nint m_goalPosition = 0x4EC; // VectorWS
             public const nint m_goalEntity = 0x4F8; // CHandle<CBaseEntity>
             public const nint m_avoid = 0x4FC; // CHandle<CBaseEntity>
             public const nint m_avoidTimestamp = 0x500; // float32
@@ -2693,12 +2654,11 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CTestPulseIOAPI {
+        }
+        // Parent: CCSWeaponBase
+        // Field count: 0
+        public static class CCSWeaponBaseShotgun {
         }
         // Parent: None
         // Field count: 7
@@ -2722,27 +2682,22 @@ namespace CS2Dumper.Schemas {
         // MNetworkIncludeByName
         // MNetworkOverride
         public static class CFuncMoveLinear {
-            public const nint m_authoredPosition = 0x868; // MoveLinearAuthoredPos_t
-            public const nint m_angMoveEntitySpace = 0x86C; // QAngle
-            public const nint m_vecMoveDirParentSpace = 0x878; // Vector
-            public const nint m_soundStart = 0x888; // CUtlSymbolLarge
-            public const nint m_soundStop = 0x890; // CUtlSymbolLarge
-            public const nint m_currentSound = 0x898; // CUtlSymbolLarge
-            public const nint m_flBlockDamage = 0x8A0; // float32
-            public const nint m_flStartPosition = 0x8A4; // float32
-            public const nint m_OnFullyOpen = 0x8B0; // CEntityIOOutput
-            public const nint m_OnFullyClosed = 0x8D8; // CEntityIOOutput
-            public const nint m_bCreateMovableNavMesh = 0x900; // bool
-            public const nint m_bAllowMovableNavMeshDockingOnEntireEntity = 0x901; // bool
-            public const nint m_bCreateNavObstacle = 0x902; // bool
+            public const nint m_authoredPosition = 0x858; // MoveLinearAuthoredPos_t
+            public const nint m_angMoveEntitySpace = 0x85C; // QAngle
+            public const nint m_vecMoveDirParentSpace = 0x868; // Vector
+            public const nint m_soundStart = 0x878; // CUtlSymbolLarge
+            public const nint m_soundStop = 0x880; // CUtlSymbolLarge
+            public const nint m_currentSound = 0x888; // CUtlSymbolLarge
+            public const nint m_flBlockDamage = 0x890; // float32
+            public const nint m_flStartPosition = 0x894; // float32
+            public const nint m_OnFullyOpen = 0x8A0; // CEntityIOOutput
+            public const nint m_OnFullyClosed = 0x8C8; // CEntityIOOutput
+            public const nint m_bCreateMovableNavMesh = 0x8F0; // bool
+            public const nint m_bAllowMovableNavMeshDockingOnEntireEntity = 0x8F1; // bool
+            public const nint m_bCreateNavObstacle = 0x8F2; // bool
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CPhysMotorAPI {
         }
         // Parent: None
@@ -2750,9 +2705,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPulseEditorHeaderIcon
         // MPropertyFriendlyName
         public static class CPulseCell_WaitForObservable {
@@ -2762,7 +2714,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CItem
         // Field count: 1
         public static class CScriptItem {
-            public const nint m_MoveTypeOverride = 0xB50; // MoveType_t
+            public const nint m_MoveTypeOverride = 0xB70; // MoveType_t
         }
         // Parent: CDynamicProp
         // Field count: 0
@@ -2775,18 +2727,18 @@ namespace CS2Dumper.Schemas {
         // MNetworkIncludeByName
         // NetworkVarNames: m_bDisabled (bool)
         public static class CBaseTrigger {
-            public const nint m_OnStartTouch = 0x868; // CEntityIOOutput
-            public const nint m_OnStartTouchAll = 0x890; // CEntityIOOutput
-            public const nint m_OnEndTouch = 0x8B8; // CEntityIOOutput
-            public const nint m_OnEndTouchAll = 0x8E0; // CEntityIOOutput
-            public const nint m_OnTouching = 0x908; // CEntityIOOutput
-            public const nint m_OnTouchingEachEntity = 0x930; // CEntityIOOutput
-            public const nint m_OnNotTouching = 0x958; // CEntityIOOutput
-            public const nint m_hTouchingEntities = 0x980; // CUtlVector<CHandle<CBaseEntity>>
-            public const nint m_iFilterName = 0x998; // CUtlSymbolLarge
-            public const nint m_hFilter = 0x9A0; // CHandle<CBaseFilter>
-            public const nint m_bDisabled = 0x9A4; // bool
-            public const nint m_bUseAsyncQueries = 0x9B0; // bool
+            public const nint m_OnStartTouch = 0x858; // CEntityIOOutput
+            public const nint m_OnStartTouchAll = 0x880; // CEntityIOOutput
+            public const nint m_OnEndTouch = 0x8A8; // CEntityIOOutput
+            public const nint m_OnEndTouchAll = 0x8D0; // CEntityIOOutput
+            public const nint m_OnTouching = 0x8F8; // CEntityIOOutput
+            public const nint m_OnTouchingEachEntity = 0x920; // CEntityIOOutput
+            public const nint m_OnNotTouching = 0x948; // CEntityIOOutput
+            public const nint m_hTouchingEntities = 0x970; // CUtlVector<CHandle<CBaseEntity>>
+            public const nint m_iFilterName = 0x988; // CUtlSymbolLarge
+            public const nint m_hFilter = 0x990; // CHandle<CBaseFilter>
+            public const nint m_bDisabled = 0x994; // bool
+            public const nint m_bUseAsyncQueries = 0x9A0; // bool
         }
         // Parent: CPointEntity
         // Field count: 7
@@ -2804,9 +2756,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Step_EntFire {
             public const nint m_Input = 0x48; // CUtlString
         }
@@ -2832,11 +2781,8 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: CEntityComponent
         // Field count: 1
-        //
-        // Metadata:
-        // NetworkVarNames: m_bvDisabledHitGroups (uint32)
         public static class CHitboxComponent {
-            public const nint m_bvDisabledHitGroups = 0x24; // uint32[1]
+            public const nint m_flBoundsExpandRadius = 0x14; // float32
         }
         // Parent: CBaseModelEntity
         // Field count: 21
@@ -2866,50 +2812,49 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iStartAttachment (AttachmentHandle_t)
         // NetworkVarNames: m_iEndAttachment (AttachmentHandle_t)
         public static class CRopeKeyframe {
-            public const nint m_RopeFlags = 0x7F0; // uint16
-            public const nint m_iNextLinkName = 0x7F8; // CUtlSymbolLarge
-            public const nint m_Slack = 0x800; // int16
-            public const nint m_Width = 0x804; // float32
-            public const nint m_TextureScale = 0x808; // float32
-            public const nint m_nSegments = 0x80C; // uint8
-            public const nint m_bConstrainBetweenEndpoints = 0x80D; // bool
-            public const nint m_strRopeMaterialModel = 0x810; // CUtlSymbolLarge
-            public const nint m_iRopeMaterialModelIndex = 0x818; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_Subdiv = 0x820; // uint8
-            public const nint m_nChangeCount = 0x821; // uint8
-            public const nint m_RopeLength = 0x822; // int16
-            public const nint m_fLockedPoints = 0x824; // uint8
-            public const nint m_bCreatedFromMapFile = 0x825; // bool
-            public const nint m_flScrollSpeed = 0x828; // float32
-            public const nint m_bStartPointValid = 0x82C; // bool
-            public const nint m_bEndPointValid = 0x82D; // bool
-            public const nint m_hStartPoint = 0x830; // CHandle<CBaseEntity>
-            public const nint m_hEndPoint = 0x834; // CHandle<CBaseEntity>
-            public const nint m_iStartAttachment = 0x838; // AttachmentHandle_t
-            public const nint m_iEndAttachment = 0x839; // AttachmentHandle_t
+            public const nint m_RopeFlags = 0x7E0; // uint16
+            public const nint m_iNextLinkName = 0x7E8; // CUtlSymbolLarge
+            public const nint m_Slack = 0x7F0; // int16
+            public const nint m_Width = 0x7F4; // float32
+            public const nint m_TextureScale = 0x7F8; // float32
+            public const nint m_nSegments = 0x7FC; // uint8
+            public const nint m_bConstrainBetweenEndpoints = 0x7FD; // bool
+            public const nint m_strRopeMaterialModel = 0x800; // CUtlSymbolLarge
+            public const nint m_iRopeMaterialModelIndex = 0x808; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_Subdiv = 0x810; // uint8
+            public const nint m_nChangeCount = 0x811; // uint8
+            public const nint m_RopeLength = 0x812; // int16
+            public const nint m_fLockedPoints = 0x814; // uint8
+            public const nint m_bCreatedFromMapFile = 0x815; // bool
+            public const nint m_flScrollSpeed = 0x818; // float32
+            public const nint m_bStartPointValid = 0x81C; // bool
+            public const nint m_bEndPointValid = 0x81D; // bool
+            public const nint m_hStartPoint = 0x820; // CHandle<CBaseEntity>
+            public const nint m_hEndPoint = 0x824; // CHandle<CBaseEntity>
+            public const nint m_iStartAttachment = 0x828; // AttachmentHandle_t
+            public const nint m_iEndAttachment = 0x829; // AttachmentHandle_t
         }
         // Parent: CBaseCSGrenade
         // Field count: 0
         public static class CSmokeGrenade {
         }
         // Parent: CBaseFlex
-        // Field count: 11
+        // Field count: 10
         //
         // Metadata:
         // MNetworkExcludeByUserGroup
         // NetworkVarNames: m_hMyWearables (CHandle<CEconWearable>)
         public static class CBaseCombatCharacter {
-            public const nint m_bForceServerRagdoll = 0xB08; // bool
-            public const nint m_hMyWearables = 0xB10; // CNetworkUtlVectorBase<CHandle<CEconWearable>>
-            public const nint m_impactEnergyScale = 0xB28; // float32
-            public const nint m_nMinVehicleDamageToTempRagdoll = 0xB2C; // int32
-            public const nint m_bApplyStressDamage = 0xB30; // bool
-            public const nint m_bDeathEventsDispatched = 0xB31; // bool
-            public const nint m_pVecRelationships = 0xB78; // CUtlVector<RelationshipOverride_t>*
-            public const nint m_strRelationships = 0xB80; // CUtlSymbolLarge
-            public const nint m_eHull = 0xB88; // Hull_t
-            public const nint m_nNavHullIdx = 0xB8C; // uint32
-            public const nint m_movementStats = 0xB90; // CMovementStatsProperty
+            public const nint m_bForceServerRagdoll = 0xB20; // bool
+            public const nint m_hMyWearables = 0xB28; // CNetworkUtlVectorBase<CHandle<CEconWearable>>
+            public const nint m_impactEnergyScale = 0xB40; // float32
+            public const nint m_bApplyStressDamage = 0xB44; // bool
+            public const nint m_bDeathEventsDispatched = 0xB45; // bool
+            public const nint m_pVecRelationships = 0xB88; // CUtlVector<RelationshipOverride_t>*
+            public const nint m_strRelationships = 0xB90; // CUtlSymbolLarge
+            public const nint m_eHull = 0xB98; // Hull_t
+            public const nint m_nNavHullIdx = 0xB9C; // uint32
+            public const nint m_movementStats = 0xBA0; // CMovementStatsProperty
         }
         // Parent: CEntityComponent
         // Field count: 0
@@ -3004,7 +2949,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_bFirstAttack (bool)
         public static class CKnife {
-            public const nint m_bFirstAttack = 0x1030; // bool
+            public const nint m_bFirstAttack = 0x11D0; // bool
         }
         // Parent: CLogicalEntity
         // Field count: 5
@@ -3021,11 +2966,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CBasePlayerControllerAPI {
         }
         // Parent: CBaseTrigger
@@ -3066,23 +3006,18 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 3
         public static class CTriggerSoundscape {
-            public const nint m_hSoundscape = 0x9B8; // CHandle<CEnvSoundscapeTriggerable>
-            public const nint m_SoundscapeName = 0x9C0; // CUtlSymbolLarge
-            public const nint m_spectators = 0x9C8; // CUtlVector<CHandle<CBasePlayerPawn>>
+            public const nint m_hSoundscape = 0x9A8; // CHandle<CEnvSoundscapeTriggerable>
+            public const nint m_SoundscapeName = 0x9B0; // CUtlSymbolLarge
+            public const nint m_spectators = 0x9B8; // CUtlVector<CHandle<CBasePlayerPawn>>
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CPointTeleportAPI {
         }
         // Parent: CBaseCombatCharacter
         // Field count: 1
         public static class CHostageExpresserShim {
-            public const nint m_pExpresser = 0xBD0; // CAI_Expresser*
+            public const nint m_pExpresser = 0xBE0; // CAI_Expresser*
         }
         // Parent: CPointEntity
         // Field count: 1
@@ -3100,9 +3035,9 @@ namespace CS2Dumper.Schemas {
         // MNetworkExcludeByName
         // NetworkVarNames: m_ShardDesc (shard_model_desc_t)
         public static class CShatterGlassShardPhysics {
-            public const nint m_bDebris = 0xDF0; // bool
-            public const nint m_hParentShard = 0xDF4; // uint32
-            public const nint m_ShardDesc = 0xDF8; // shard_model_desc_t
+            public const nint m_bDebris = 0xE00; // bool
+            public const nint m_hParentShard = 0xE04; // uint32
+            public const nint m_ShardDesc = 0xE08; // shard_model_desc_t
         }
         // Parent: CBaseEntity
         // Field count: 16
@@ -3161,7 +3096,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_visTimer = 0x530; // CountdownTimer
         }
         // Parent: CPlayerPawnComponent
-        // Field count: 16
+        // Field count: 15
         //
         // Metadata:
         // NetworkVarNames: m_nToggleButtonDownMask (ButtonBitMask_t)
@@ -3182,8 +3117,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLeftMove = 0x1B0; // float32
             public const nint m_flUpMove = 0x1B4; // float32
             public const nint m_vecLastMovementImpulses = 0x1B8; // Vector
-            public const nint m_vecLastFinishTickViewAngles = 0x220; // QAngle
-            public const nint m_vecOldViewAngles = 0x22C; // QAngle
+            public const nint m_vecOldViewAngles = 0x220; // QAngle
         }
         // Parent: CRagdollProp
         // Field count: 0
@@ -3195,38 +3129,38 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_CPropDataComponent (CPropDataComponent::Storage_t)
         public static class CBreakableProp {
-            public const nint m_CPropDataComponent = 0xAB8; // CPropDataComponent
-            public const nint m_OnStartDeath = 0xAF8; // CEntityIOOutput
-            public const nint m_OnBreak = 0xB20; // CEntityIOOutput
-            public const nint m_OnHealthChanged = 0xB48; // CEntityOutputTemplate<float32>
-            public const nint m_OnTakeDamage = 0xB70; // CEntityIOOutput
-            public const nint m_impactEnergyScale = 0xB98; // float32
-            public const nint m_iMinHealthDmg = 0xB9C; // int32
-            public const nint m_preferredCarryAngles = 0xBA0; // QAngle
-            public const nint m_flPressureDelay = 0xBAC; // float32
-            public const nint m_flDefBurstScale = 0xBB0; // float32
-            public const nint m_vDefBurstOffset = 0xBB4; // Vector
-            public const nint m_hBreaker = 0xBC0; // CHandle<CBaseEntity>
-            public const nint m_PerformanceMode = 0xBC4; // PerformanceMode_t
-            public const nint m_flPreventDamageBeforeTime = 0xBC8; // GameTime_t
-            public const nint m_BreakableContentsType = 0xBCC; // BreakableContentsType_t
-            public const nint m_strBreakableContentsPropGroupOverride = 0xBD0; // CUtlString
-            public const nint m_strBreakableContentsParticleOverride = 0xBD8; // CUtlString
-            public const nint m_bHasBreakPiecesOrCommands = 0xBE0; // bool
-            public const nint m_explodeDamage = 0xBE4; // float32
-            public const nint m_explodeRadius = 0xBE8; // float32
-            public const nint m_explosionDelay = 0xBF0; // float32
-            public const nint m_explosionBuildupSound = 0xBF8; // CUtlSymbolLarge
-            public const nint m_explosionCustomEffect = 0xC00; // CUtlSymbolLarge
-            public const nint m_explosionCustomSound = 0xC08; // CUtlSymbolLarge
-            public const nint m_explosionModifier = 0xC10; // CUtlSymbolLarge
-            public const nint m_hPhysicsAttacker = 0xC18; // CHandle<CBasePlayerPawn>
-            public const nint m_flLastPhysicsInfluenceTime = 0xC1C; // GameTime_t
-            public const nint m_flDefaultFadeScale = 0xC20; // float32
-            public const nint m_hLastAttacker = 0xC24; // CHandle<CBaseEntity>
-            public const nint m_iszPuntSound = 0xC28; // CUtlSymbolLarge
-            public const nint m_bUsePuntSound = 0xC30; // bool
-            public const nint m_bOriginalBlockLOS = 0xC31; // bool
+            public const nint m_CPropDataComponent = 0xAC8; // CPropDataComponent
+            public const nint m_OnStartDeath = 0xB08; // CEntityIOOutput
+            public const nint m_OnBreak = 0xB30; // CEntityIOOutput
+            public const nint m_OnHealthChanged = 0xB58; // CEntityOutputTemplate<float32>
+            public const nint m_OnTakeDamage = 0xB80; // CEntityIOOutput
+            public const nint m_impactEnergyScale = 0xBA8; // float32
+            public const nint m_iMinHealthDmg = 0xBAC; // int32
+            public const nint m_preferredCarryAngles = 0xBB0; // QAngle
+            public const nint m_flPressureDelay = 0xBBC; // float32
+            public const nint m_flDefBurstScale = 0xBC0; // float32
+            public const nint m_vDefBurstOffset = 0xBC4; // Vector
+            public const nint m_hBreaker = 0xBD0; // CHandle<CBaseEntity>
+            public const nint m_PerformanceMode = 0xBD4; // PerformanceMode_t
+            public const nint m_flPreventDamageBeforeTime = 0xBD8; // GameTime_t
+            public const nint m_BreakableContentsType = 0xBDC; // BreakableContentsType_t
+            public const nint m_strBreakableContentsPropGroupOverride = 0xBE0; // CUtlString
+            public const nint m_strBreakableContentsParticleOverride = 0xBE8; // CUtlString
+            public const nint m_bHasBreakPiecesOrCommands = 0xBF0; // bool
+            public const nint m_explodeDamage = 0xBF4; // float32
+            public const nint m_explodeRadius = 0xBF8; // float32
+            public const nint m_explosionDelay = 0xC00; // float32
+            public const nint m_explosionBuildupSound = 0xC08; // CUtlSymbolLarge
+            public const nint m_explosionCustomEffect = 0xC10; // CUtlSymbolLarge
+            public const nint m_explosionCustomSound = 0xC18; // CUtlSymbolLarge
+            public const nint m_explosionModifier = 0xC20; // CUtlSymbolLarge
+            public const nint m_hPhysicsAttacker = 0xC28; // CHandle<CBasePlayerPawn>
+            public const nint m_flLastPhysicsInfluenceTime = 0xC2C; // GameTime_t
+            public const nint m_flDefaultFadeScale = 0xC30; // float32
+            public const nint m_hLastAttacker = 0xC34; // CHandle<CBaseEntity>
+            public const nint m_iszPuntSound = 0xC38; // CUtlSymbolLarge
+            public const nint m_bUsePuntSound = 0xC40; // bool
+            public const nint m_bOriginalBlockLOS = 0xC41; // bool
         }
         // Parent: CBaseModelEntity
         // Field count: 1
@@ -3234,7 +3168,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_CLightComponent (CLightComponent::Storage_t)
         public static class CLightEntity {
-            public const nint m_CLightComponent = 0x7E8; // CLightComponent*
+            public const nint m_CLightComponent = 0x7D8; // CLightComponent*
         }
         // Parent: CInfoDynamicShadowHint
         // Field count: 2
@@ -3243,7 +3177,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vBoxMaxs = 0x514; // Vector
         }
         // Parent: CSkeletonAnimationController
-        // Field count: 20
+        // Field count: 22
         //
         // Metadata:
         // NetworkVarNames: m_animGraphNetworkedVars (CAnimGraphNetworkedVariables)
@@ -3255,8 +3189,10 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bIsUsingAG2 (bool)
         // NetworkVarNames: m_serializedPoseRecipeAG2 (uint8)
         // NetworkVarNames: m_nSerializePoseRecipeSizeAG2 (int)
+        // NetworkVarNames: m_nSerializePoseRecipeVersionAG2 (int)
         // NetworkVarNames: m_nGraphCreationFlagsAG2 (uint8)
         // NetworkVarNames: m_nServerGraphDefReloadCountAG2 (int)
+        // NetworkVarNames: m_nServerSerializationContextIteration (int)
         public static class CBaseAnimGraphController {
             public const nint m_animGraphNetworkedVars = 0x18; // CAnimGraphNetworkedVariables
             public const nint m_bSequenceFinished = 0x220; // bool
@@ -3276,8 +3212,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_bIsUsingAG2 = 0x590; // bool
             public const nint m_serializedPoseRecipeAG2 = 0x598; // CNetworkUtlVectorBase<uint8>
             public const nint m_nSerializePoseRecipeSizeAG2 = 0x5B0; // int32
-            public const nint m_nGraphCreationFlagsAG2 = 0x5B4; // uint8
-            public const nint m_nServerGraphDefReloadCountAG2 = 0x5F8; // int32
+            public const nint m_nSerializePoseRecipeVersionAG2 = 0x5B4; // int32
+            public const nint m_nGraphCreationFlagsAG2 = 0x5B8; // uint8
+            public const nint m_nServerGraphDefReloadCountAG2 = 0x7A0; // int32
+            public const nint m_nServerSerializationContextIteration = 0x7A4; // int32
         }
         // Parent: 
         // Field count: 10
@@ -3296,7 +3234,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CDynamicProp
         // Field count: 1
         public static class COrnamentProp {
-            public const nint m_initialOwner = 0xD40; // CUtlSymbolLarge
+            public const nint m_initialOwner = 0xD50; // CUtlSymbolLarge
         }
         // Parent: CCSPlayerBase_CameraServices
         // Field count: 0
@@ -3312,7 +3250,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_bShowLight (bool)
         public static class CRectLight {
-            public const nint m_bShowLight = 0xB10; // bool
+            public const nint m_bShowLight = 0xB00; // bool
         }
         // Parent: CBaseFilter
         // Field count: 3
@@ -3351,9 +3289,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_FireCursors {
             public const nint m_Outflows = 0x48; // CUtlVector<CPulse_OutflowConnection>
             public const nint m_bWaitForChildOutflows = 0x60; // bool
@@ -3363,8 +3298,8 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 2
         public static class CFuncNavBlocker {
-            public const nint m_bDisabled = 0x7F0; // bool
-            public const nint m_nBlockedTeamNumber = 0x7F4; // int32
+            public const nint m_bDisabled = 0x7E0; // bool
+            public const nint m_nBlockedTeamNumber = 0x7E4; // int32
         }
         // Parent: CPointEntity
         // Field count: 11
@@ -3399,12 +3334,12 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 6
         public static class CFuncBrush {
-            public const nint m_iSolidity = 0x7E8; // BrushSolidities_e
-            public const nint m_iDisabled = 0x7EC; // int32
-            public const nint m_bSolidBsp = 0x7F0; // bool
-            public const nint m_iszExcludedClass = 0x7F8; // CUtlSymbolLarge
-            public const nint m_bInvertExclusion = 0x800; // bool
-            public const nint m_bScriptedMovement = 0x801; // bool
+            public const nint m_iSolidity = 0x7D8; // BrushSolidities_e
+            public const nint m_iDisabled = 0x7DC; // int32
+            public const nint m_bSolidBsp = 0x7E0; // bool
+            public const nint m_iszExcludedClass = 0x7E8; // CUtlSymbolLarge
+            public const nint m_bInvertExclusion = 0x7F0; // bool
+            public const nint m_bScriptedMovement = 0x7F1; // bool
         }
         // Parent: CBodyComponent
         // Field count: 1
@@ -3417,21 +3352,21 @@ namespace CS2Dumper.Schemas {
         // Parent: CBreakable
         // Field count: 15
         public static class CPhysBox {
-            public const nint m_damageType = 0x8C0; // int32
-            public const nint m_damageToEnableMotion = 0x8C4; // int32
-            public const nint m_flForceToEnableMotion = 0x8C8; // float32
-            public const nint m_vHoverPosePosition = 0x8CC; // Vector
-            public const nint m_angHoverPoseAngles = 0x8D8; // QAngle
-            public const nint m_bNotSolidToWorld = 0x8E4; // bool
-            public const nint m_bEnableUseOutput = 0x8E5; // bool
-            public const nint m_nHoverPoseFlags = 0x8E6; // HoverPoseFlags_t
-            public const nint m_flTouchOutputPerEntityDelay = 0x8E8; // float32
-            public const nint m_OnDamaged = 0x8F0; // CEntityIOOutput
-            public const nint m_OnAwakened = 0x918; // CEntityIOOutput
-            public const nint m_OnMotionEnabled = 0x940; // CEntityIOOutput
-            public const nint m_OnPlayerUse = 0x968; // CEntityIOOutput
-            public const nint m_OnStartTouch = 0x990; // CEntityIOOutput
-            public const nint m_hCarryingPlayer = 0x9B8; // CHandle<CBasePlayerPawn>
+            public const nint m_damageType = 0x8B0; // int32
+            public const nint m_damageToEnableMotion = 0x8B4; // int32
+            public const nint m_flForceToEnableMotion = 0x8B8; // float32
+            public const nint m_vHoverPosePosition = 0x8BC; // Vector
+            public const nint m_angHoverPoseAngles = 0x8C8; // QAngle
+            public const nint m_bNotSolidToWorld = 0x8D4; // bool
+            public const nint m_bEnableUseOutput = 0x8D5; // bool
+            public const nint m_nHoverPoseFlags = 0x8D6; // HoverPoseFlags_t
+            public const nint m_flTouchOutputPerEntityDelay = 0x8D8; // float32
+            public const nint m_OnDamaged = 0x8E0; // CEntityIOOutput
+            public const nint m_OnAwakened = 0x908; // CEntityIOOutput
+            public const nint m_OnMotionEnabled = 0x930; // CEntityIOOutput
+            public const nint m_OnPlayerUse = 0x958; // CEntityIOOutput
+            public const nint m_OnStartTouch = 0x980; // CEntityIOOutput
+            public const nint m_hCarryingPlayer = 0x9A8; // CHandle<CBasePlayerPawn>
         }
         // Parent: CSoundEventEntity
         // Field count: 2
@@ -3464,15 +3399,15 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flOuterAngle (float)
         // NetworkVarNames: m_bShowLight (bool)
         public static class COmniLight {
-            public const nint m_flInnerAngle = 0xB10; // float32
-            public const nint m_flOuterAngle = 0xB14; // float32
-            public const nint m_bShowLight = 0xB18; // bool
+            public const nint m_flInnerAngle = 0xB00; // float32
+            public const nint m_flOuterAngle = 0xB04; // float32
+            public const nint m_bShowLight = 0xB08; // bool
         }
         // Parent: CBaseModelEntity
         // Field count: 2
         public static class CTriggerVolume {
-            public const nint m_iFilterName = 0x7E8; // CUtlSymbolLarge
-            public const nint m_hFilter = 0x7F0; // CHandle<CBaseFilter>
+            public const nint m_iFilterName = 0x7D8; // CUtlSymbolLarge
+            public const nint m_hFilter = 0x7E0; // CHandle<CBaseFilter>
         }
         // Parent: None
         // Field count: 1
@@ -3501,21 +3436,21 @@ namespace CS2Dumper.Schemas {
         // Parent: CModelPointEntity
         // Field count: 15
         public static class CEnvExplosion {
-            public const nint m_iMagnitude = 0x7E8; // int32
-            public const nint m_flPlayerDamage = 0x7EC; // float32
-            public const nint m_iRadiusOverride = 0x7F0; // int32
-            public const nint m_flInnerRadius = 0x7F4; // float32
-            public const nint m_flDamageForce = 0x7F8; // float32
-            public const nint m_hInflictor = 0x7FC; // CHandle<CBaseEntity>
-            public const nint m_iCustomDamageType = 0x800; // DamageTypes_t
-            public const nint m_bCreateDebris = 0x804; // bool
-            public const nint m_iszCustomEffectName = 0x810; // CUtlSymbolLarge
-            public const nint m_iszCustomSoundName = 0x818; // CUtlSymbolLarge
-            public const nint m_bSuppressParticleImpulse = 0x820; // bool
-            public const nint m_iClassIgnore = 0x824; // Class_T
-            public const nint m_iClassIgnore2 = 0x828; // Class_T
-            public const nint m_iszEntityIgnoreName = 0x830; // CUtlSymbolLarge
-            public const nint m_hEntityIgnore = 0x838; // CHandle<CBaseEntity>
+            public const nint m_iMagnitude = 0x7D8; // int32
+            public const nint m_flPlayerDamage = 0x7DC; // float32
+            public const nint m_iRadiusOverride = 0x7E0; // int32
+            public const nint m_flInnerRadius = 0x7E4; // float32
+            public const nint m_flDamageForce = 0x7E8; // float32
+            public const nint m_hInflictor = 0x7EC; // CHandle<CBaseEntity>
+            public const nint m_iCustomDamageType = 0x7F0; // DamageTypes_t
+            public const nint m_bCreateDebris = 0x7F4; // bool
+            public const nint m_iszCustomEffectName = 0x800; // CUtlSymbolLarge
+            public const nint m_iszCustomSoundName = 0x808; // CUtlSymbolLarge
+            public const nint m_bSuppressParticleImpulse = 0x810; // bool
+            public const nint m_iClassIgnore = 0x814; // Class_T
+            public const nint m_iClassIgnore2 = 0x818; // Class_T
+            public const nint m_iszEntityIgnoreName = 0x820; // CUtlSymbolLarge
+            public const nint m_hEntityIgnore = 0x828; // CHandle<CBaseEntity>
         }
         // Parent: None
         // Field count: 0
@@ -3541,9 +3476,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_IsRequirementValid {
         }
         // Parent: CBaseTrigger
@@ -3553,8 +3485,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_source (string_t)
         // NetworkVarNames: m_destination (string_t)
         public static class CFootstepControl {
-            public const nint m_source = 0x9B8; // CUtlSymbolLarge
-            public const nint m_destination = 0x9C0; // CUtlSymbolLarge
+            public const nint m_source = 0x9A8; // CUtlSymbolLarge
+            public const nint m_destination = 0x9B0; // CUtlSymbolLarge
         }
         // Parent: CPlayer_ItemServices
         // Field count: 2
@@ -3571,9 +3503,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         public static class CPulseCell_Value_Gradient {
             public const nint m_Gradient = 0x48; // CColorGradient
@@ -3604,37 +3533,37 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bNoFreeze (bool)
         // NetworkVarNames: m_bNoRamp (bool)
         public static class CParticleSystem {
-            public const nint m_szSnapshotFileName = 0x7E8; // char[512]
-            public const nint m_bActive = 0x9E8; // bool
-            public const nint m_bFrozen = 0x9E9; // bool
-            public const nint m_flFreezeTransitionDuration = 0x9EC; // float32
-            public const nint m_nStopType = 0x9F0; // int32
-            public const nint m_bAnimateDuringGameplayPause = 0x9F4; // bool
-            public const nint m_iEffectIndex = 0x9F8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-            public const nint m_flStartTime = 0xA00; // GameTime_t
-            public const nint m_flPreSimTime = 0xA04; // float32
-            public const nint m_vServerControlPoints = 0xA08; // Vector[4]
-            public const nint m_iServerControlPointAssignments = 0xA38; // uint8[4]
-            public const nint m_hControlPointEnts = 0xA3C; // CHandle<CBaseEntity>[64]
-            public const nint m_bNoSave = 0xB3C; // bool
-            public const nint m_bNoFreeze = 0xB3D; // bool
-            public const nint m_bNoRamp = 0xB3E; // bool
-            public const nint m_bStartActive = 0xB3F; // bool
-            public const nint m_iszEffectName = 0xB40; // CUtlSymbolLarge
-            public const nint m_iszControlPointNames = 0xB48; // CUtlSymbolLarge[64]
-            public const nint m_nDataCP = 0xD48; // int32
-            public const nint m_vecDataCPValue = 0xD4C; // Vector
-            public const nint m_nTintCP = 0xD58; // int32
-            public const nint m_clrTint = 0xD5C; // Color
+            public const nint m_szSnapshotFileName = 0x7D8; // char[512]
+            public const nint m_bActive = 0x9D8; // bool
+            public const nint m_bFrozen = 0x9D9; // bool
+            public const nint m_flFreezeTransitionDuration = 0x9DC; // float32
+            public const nint m_nStopType = 0x9E0; // int32
+            public const nint m_bAnimateDuringGameplayPause = 0x9E4; // bool
+            public const nint m_iEffectIndex = 0x9E8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_flStartTime = 0x9F0; // GameTime_t
+            public const nint m_flPreSimTime = 0x9F4; // float32
+            public const nint m_vServerControlPoints = 0x9F8; // Vector[4]
+            public const nint m_iServerControlPointAssignments = 0xA28; // uint8[4]
+            public const nint m_hControlPointEnts = 0xA2C; // CHandle<CBaseEntity>[64]
+            public const nint m_bNoSave = 0xB2C; // bool
+            public const nint m_bNoFreeze = 0xB2D; // bool
+            public const nint m_bNoRamp = 0xB2E; // bool
+            public const nint m_bStartActive = 0xB2F; // bool
+            public const nint m_iszEffectName = 0xB30; // CUtlSymbolLarge
+            public const nint m_iszControlPointNames = 0xB38; // CUtlSymbolLarge[64]
+            public const nint m_nDataCP = 0xD38; // int32
+            public const nint m_vecDataCPValue = 0xD3C; // Vector
+            public const nint m_nTintCP = 0xD48; // int32
+            public const nint m_clrTint = 0xD4C; // Color
         }
         // Parent: CBaseModelEntity
         // Field count: 5
         public static class CTriggerBrush {
-            public const nint m_OnStartTouch = 0x7E8; // CEntityIOOutput
-            public const nint m_OnEndTouch = 0x810; // CEntityIOOutput
-            public const nint m_OnUse = 0x838; // CEntityIOOutput
-            public const nint m_iInputFilter = 0x860; // int32
-            public const nint m_iDontMessageParent = 0x864; // int32
+            public const nint m_OnStartTouch = 0x7D8; // CEntityIOOutput
+            public const nint m_OnEndTouch = 0x800; // CEntityIOOutput
+            public const nint m_OnUse = 0x828; // CEntityIOOutput
+            public const nint m_iInputFilter = 0x850; // int32
+            public const nint m_iDontMessageParent = 0x854; // int32
         }
         // Parent: 
         // Field count: 2
@@ -3702,7 +3631,6 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyDescription
         public static class CPulseCursorFuncs {
         }
@@ -3763,32 +3691,32 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flFrame (float32)
         // NetworkVarNames: m_nClipStyle (BeamClipStyle_t)
         // NetworkVarNames: m_bTurnedOff (bool)
-        // NetworkVarNames: m_vecEndPos (Vector)
+        // NetworkVarNames: m_vecEndPos (VectorWS)
         public static class CBeam {
-            public const nint m_flFrameRate = 0x7E8; // float32
-            public const nint m_flHDRColorScale = 0x7EC; // float32
-            public const nint m_flFireTime = 0x7F0; // GameTime_t
-            public const nint m_flDamage = 0x7F4; // float32
-            public const nint m_nNumBeamEnts = 0x7F8; // uint8
-            public const nint m_hBaseMaterial = 0x800; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_nHaloIndex = 0x808; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_nBeamType = 0x810; // BeamType_t
-            public const nint m_nBeamFlags = 0x814; // uint32
-            public const nint m_hAttachEntity = 0x818; // CHandle<CBaseEntity>[10]
-            public const nint m_nAttachIndex = 0x840; // AttachmentHandle_t[10]
-            public const nint m_fWidth = 0x84C; // float32
-            public const nint m_fEndWidth = 0x850; // float32
-            public const nint m_fFadeLength = 0x854; // float32
-            public const nint m_fHaloScale = 0x858; // float32
-            public const nint m_fAmplitude = 0x85C; // float32
-            public const nint m_fStartFrame = 0x860; // float32
-            public const nint m_fSpeed = 0x864; // float32
-            public const nint m_flFrame = 0x868; // float32
-            public const nint m_nClipStyle = 0x86C; // BeamClipStyle_t
-            public const nint m_bTurnedOff = 0x870; // bool
-            public const nint m_vecEndPos = 0x874; // Vector
-            public const nint m_hEndEntity = 0x880; // CHandle<CBaseEntity>
-            public const nint m_nDissolveType = 0x884; // int32
+            public const nint m_flFrameRate = 0x7D8; // float32
+            public const nint m_flHDRColorScale = 0x7DC; // float32
+            public const nint m_flFireTime = 0x7E0; // GameTime_t
+            public const nint m_flDamage = 0x7E4; // float32
+            public const nint m_nNumBeamEnts = 0x7E8; // uint8
+            public const nint m_hBaseMaterial = 0x7F0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_nHaloIndex = 0x7F8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_nBeamType = 0x800; // BeamType_t
+            public const nint m_nBeamFlags = 0x804; // uint32
+            public const nint m_hAttachEntity = 0x808; // CHandle<CBaseEntity>[10]
+            public const nint m_nAttachIndex = 0x830; // AttachmentHandle_t[10]
+            public const nint m_fWidth = 0x83C; // float32
+            public const nint m_fEndWidth = 0x840; // float32
+            public const nint m_fFadeLength = 0x844; // float32
+            public const nint m_fHaloScale = 0x848; // float32
+            public const nint m_fAmplitude = 0x84C; // float32
+            public const nint m_fStartFrame = 0x850; // float32
+            public const nint m_fSpeed = 0x854; // float32
+            public const nint m_flFrame = 0x858; // float32
+            public const nint m_nClipStyle = 0x85C; // BeamClipStyle_t
+            public const nint m_bTurnedOff = 0x860; // bool
+            public const nint m_vecEndPos = 0x864; // VectorWS
+            public const nint m_hEndEntity = 0x870; // CHandle<CBaseEntity>
+            public const nint m_nDissolveType = 0x874; // int32
         }
         // Parent: CLogicalEntity
         // Field count: 4
@@ -3852,31 +3780,31 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_hController (CHandle<CBasePlayerController>)
         // NetworkVarNames: m_hDefaultController (CHandle<CBasePlayerController>)
         public static class CBasePlayerPawn {
-            public const nint m_pWeaponServices = 0xBD0; // CPlayer_WeaponServices*
-            public const nint m_pItemServices = 0xBD8; // CPlayer_ItemServices*
-            public const nint m_pAutoaimServices = 0xBE0; // CPlayer_AutoaimServices*
-            public const nint m_pObserverServices = 0xBE8; // CPlayer_ObserverServices*
-            public const nint m_pWaterServices = 0xBF0; // CPlayer_WaterServices*
-            public const nint m_pUseServices = 0xBF8; // CPlayer_UseServices*
-            public const nint m_pFlashlightServices = 0xC00; // CPlayer_FlashlightServices*
-            public const nint m_pCameraServices = 0xC08; // CPlayer_CameraServices*
-            public const nint m_pMovementServices = 0xC10; // CPlayer_MovementServices*
-            public const nint m_ServerViewAngleChanges = 0xC20; // CUtlVectorEmbeddedNetworkVar<ViewAngleServerChange_t>
-            public const nint v_angle = 0xC88; // QAngle
-            public const nint v_anglePrevious = 0xC94; // QAngle
-            public const nint m_iHideHUD = 0xCA0; // uint32
-            public const nint m_skybox3d = 0xCA8; // sky3dparams_t
-            public const nint m_fTimeLastHurt = 0xD38; // GameTime_t
-            public const nint m_flDeathTime = 0xD3C; // GameTime_t
-            public const nint m_fNextSuicideTime = 0xD40; // GameTime_t
-            public const nint m_fInitHUD = 0xD44; // bool
-            public const nint m_pExpresser = 0xD48; // CAI_Expresser*
-            public const nint m_hController = 0xD50; // CHandle<CBasePlayerController>
-            public const nint m_hDefaultController = 0xD54; // CHandle<CBasePlayerController>
-            public const nint m_fHltvReplayDelay = 0xD5C; // float32
-            public const nint m_fHltvReplayEnd = 0xD60; // float32
-            public const nint m_iHltvReplayEntity = 0xD64; // CEntityIndex
-            public const nint m_sndOpvarLatchData = 0xD68; // CUtlVector<sndopvarlatchdata_t>
+            public const nint m_pWeaponServices = 0xBE0; // CPlayer_WeaponServices*
+            public const nint m_pItemServices = 0xBE8; // CPlayer_ItemServices*
+            public const nint m_pAutoaimServices = 0xBF0; // CPlayer_AutoaimServices*
+            public const nint m_pObserverServices = 0xBF8; // CPlayer_ObserverServices*
+            public const nint m_pWaterServices = 0xC00; // CPlayer_WaterServices*
+            public const nint m_pUseServices = 0xC08; // CPlayer_UseServices*
+            public const nint m_pFlashlightServices = 0xC10; // CPlayer_FlashlightServices*
+            public const nint m_pCameraServices = 0xC18; // CPlayer_CameraServices*
+            public const nint m_pMovementServices = 0xC20; // CPlayer_MovementServices*
+            public const nint m_ServerViewAngleChanges = 0xC30; // CUtlVectorEmbeddedNetworkVar<ViewAngleServerChange_t>
+            public const nint v_angle = 0xC98; // QAngle
+            public const nint v_anglePrevious = 0xCA4; // QAngle
+            public const nint m_iHideHUD = 0xCB0; // uint32
+            public const nint m_skybox3d = 0xCB8; // sky3dparams_t
+            public const nint m_fTimeLastHurt = 0xD48; // GameTime_t
+            public const nint m_flDeathTime = 0xD4C; // GameTime_t
+            public const nint m_fNextSuicideTime = 0xD50; // GameTime_t
+            public const nint m_fInitHUD = 0xD54; // bool
+            public const nint m_pExpresser = 0xD58; // CAI_Expresser*
+            public const nint m_hController = 0xD60; // CHandle<CBasePlayerController>
+            public const nint m_hDefaultController = 0xD64; // CHandle<CBasePlayerController>
+            public const nint m_fHltvReplayDelay = 0xD6C; // float32
+            public const nint m_fHltvReplayEnd = 0xD70; // float32
+            public const nint m_iHltvReplayEntity = 0xD74; // CEntityIndex
+            public const nint m_sndOpvarLatchData = 0xD78; // CUtlVector<sndopvarlatchdata_t>
         }
         // Parent: 
         // Field count: 2
@@ -3890,9 +3818,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
         public static class CBasePulseGraphInstance {
         }
         // Parent: CBaseFilter
@@ -3924,24 +3849,17 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_GraphHook {
             public const nint m_HookName = 0x80; // PulseSymbol_t
         }
         // Parent: CFuncNavBlocker
         // Field count: 1
         public static class CScriptNavBlocker {
-            public const nint m_vExtent = 0x800; // Vector
+            public const nint m_vExtent = 0x7F0; // Vector
         }
         // Parent: CBaseModelEntity
         // Field count: 0
         public static class CEntityBlocker {
-        }
-        // Parent: CCSPointScriptEntity
-        // Field count: 0
-        public static class CCSServerPointScriptEntity {
         }
         // Parent: None
         // Field count: 0
@@ -3949,11 +3867,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CPathSimpleAPI {
         }
         // Parent: CCSPlayerPawnBase
@@ -3973,8 +3886,8 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 2
         public static class CTriggerActiveWeaponDetect {
-            public const nint m_OnTouchedActiveWeapon = 0x9B8; // CEntityIOOutput
-            public const nint m_iszWeaponClassName = 0x9E0; // CUtlSymbolLarge
+            public const nint m_OnTouchedActiveWeapon = 0x9A8; // CEntityIOOutput
+            public const nint m_iszWeaponClassName = 0x9D0; // CUtlSymbolLarge
         }
         // Parent: CFuncLadder
         // Field count: 0
@@ -3983,72 +3896,6 @@ namespace CS2Dumper.Schemas {
         // Parent: CSprite
         // Field count: 0
         public static class CSpriteOriented {
-        }
-        // Parent: CModelPointEntity
-        // Field count: 30
-        //
-        // Metadata:
-        // NetworkVarNames: m_hTargetEntity (CHandle<CBaseEntity>)
-        // NetworkVarNames: m_bState (bool)
-        // NetworkVarNames: m_bAlwaysUpdate (bool)
-        // NetworkVarNames: m_flLightFOV (float32)
-        // NetworkVarNames: m_bEnableShadows (bool)
-        // NetworkVarNames: m_bSimpleProjection (bool)
-        // NetworkVarNames: m_bLightOnlyTarget (bool)
-        // NetworkVarNames: m_bLightWorld (bool)
-        // NetworkVarNames: m_bCameraSpace (bool)
-        // NetworkVarNames: m_flBrightnessScale (float32)
-        // NetworkVarNames: m_LightColor (Color)
-        // NetworkVarNames: m_flIntensity (float32)
-        // NetworkVarNames: m_flLinearAttenuation (float32)
-        // NetworkVarNames: m_flQuadraticAttenuation (float32)
-        // NetworkVarNames: m_bVolumetric (bool)
-        // NetworkVarNames: m_flNoiseStrength (float32)
-        // NetworkVarNames: m_flFlashlightTime (float32)
-        // NetworkVarNames: m_nNumPlanes (uint32)
-        // NetworkVarNames: m_flPlaneOffset (float32)
-        // NetworkVarNames: m_flVolumetricIntensity (float32)
-        // NetworkVarNames: m_flColorTransitionTime (float32)
-        // NetworkVarNames: m_flAmbient (float32)
-        // NetworkVarNames: m_SpotlightTextureName (char)
-        // NetworkVarNames: m_nSpotlightTextureFrame (int32)
-        // NetworkVarNames: m_nShadowQuality (uint32)
-        // NetworkVarNames: m_flNearZ (float32)
-        // NetworkVarNames: m_flFarZ (float32)
-        // NetworkVarNames: m_flProjectionSize (float32)
-        // NetworkVarNames: m_flRotation (float32)
-        // NetworkVarNames: m_bFlipHorizontal (bool)
-        public static class CEnvProjectedTexture {
-            public const nint m_hTargetEntity = 0x7E8; // CHandle<CBaseEntity>
-            public const nint m_bState = 0x7EC; // bool
-            public const nint m_bAlwaysUpdate = 0x7ED; // bool
-            public const nint m_flLightFOV = 0x7F0; // float32
-            public const nint m_bEnableShadows = 0x7F4; // bool
-            public const nint m_bSimpleProjection = 0x7F5; // bool
-            public const nint m_bLightOnlyTarget = 0x7F6; // bool
-            public const nint m_bLightWorld = 0x7F7; // bool
-            public const nint m_bCameraSpace = 0x7F8; // bool
-            public const nint m_flBrightnessScale = 0x7FC; // float32
-            public const nint m_LightColor = 0x800; // Color
-            public const nint m_flIntensity = 0x804; // float32
-            public const nint m_flLinearAttenuation = 0x808; // float32
-            public const nint m_flQuadraticAttenuation = 0x80C; // float32
-            public const nint m_bVolumetric = 0x810; // bool
-            public const nint m_flNoiseStrength = 0x814; // float32
-            public const nint m_flFlashlightTime = 0x818; // float32
-            public const nint m_nNumPlanes = 0x81C; // uint32
-            public const nint m_flPlaneOffset = 0x820; // float32
-            public const nint m_flVolumetricIntensity = 0x824; // float32
-            public const nint m_flColorTransitionTime = 0x828; // float32
-            public const nint m_flAmbient = 0x82C; // float32
-            public const nint m_SpotlightTextureName = 0x830; // char[512]
-            public const nint m_nSpotlightTextureFrame = 0xA30; // int32
-            public const nint m_nShadowQuality = 0xA34; // uint32
-            public const nint m_flNearZ = 0xA38; // float32
-            public const nint m_flFarZ = 0xA3C; // float32
-            public const nint m_flProjectionSize = 0xA40; // float32
-            public const nint m_flRotation = 0xA44; // float32
-            public const nint m_bFlipHorizontal = 0xA48; // bool
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -4106,26 +3953,26 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nVersion (uint8)
         // NetworkVarNames: m_ubSignature (uint8)
         public static class CPlayerSprayDecal {
-            public const nint m_nUniqueID = 0x7E8; // int32
-            public const nint m_unAccountID = 0x7EC; // uint32
-            public const nint m_unTraceID = 0x7F0; // uint32
-            public const nint m_rtGcTime = 0x7F4; // uint32
-            public const nint m_vecEndPos = 0x7F8; // Vector
-            public const nint m_vecStart = 0x804; // Vector
-            public const nint m_vecLeft = 0x810; // Vector
-            public const nint m_vecNormal = 0x81C; // Vector
-            public const nint m_nPlayer = 0x828; // int32
-            public const nint m_nEntity = 0x82C; // int32
-            public const nint m_nHitbox = 0x830; // int32
-            public const nint m_flCreationTime = 0x834; // float32
-            public const nint m_nTintID = 0x838; // int32
-            public const nint m_nVersion = 0x83C; // uint8
-            public const nint m_ubSignature = 0x83D; // uint8[128]
+            public const nint m_nUniqueID = 0x7D8; // int32
+            public const nint m_unAccountID = 0x7DC; // uint32
+            public const nint m_unTraceID = 0x7E0; // uint32
+            public const nint m_rtGcTime = 0x7E4; // uint32
+            public const nint m_vecEndPos = 0x7E8; // Vector
+            public const nint m_vecStart = 0x7F4; // Vector
+            public const nint m_vecLeft = 0x800; // Vector
+            public const nint m_vecNormal = 0x80C; // Vector
+            public const nint m_nPlayer = 0x818; // int32
+            public const nint m_nEntity = 0x81C; // int32
+            public const nint m_nHitbox = 0x820; // int32
+            public const nint m_flCreationTime = 0x824; // float32
+            public const nint m_nTintID = 0x828; // int32
+            public const nint m_nVersion = 0x82C; // uint8
+            public const nint m_ubSignature = 0x82D; // uint8[128]
         }
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CFuncWater {
-            public const nint m_BuoyancyHelper = 0x7E8; // CBuoyancyHelper
+            public const nint m_BuoyancyHelper = 0x7D8; // CBuoyancyHelper
         }
         // Parent: None
         // Field count: 1
@@ -4144,15 +3991,15 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flFallbackWear (float)
         // NetworkVarNames: m_nFallbackStatTrak (int)
         public static class CEconEntity {
-            public const nint m_AttributeManager = 0xB18; // CAttributeContainer
-            public const nint m_OriginalOwnerXuidLow = 0xE10; // uint32
-            public const nint m_OriginalOwnerXuidHigh = 0xE14; // uint32
-            public const nint m_nFallbackPaintKit = 0xE18; // int32
-            public const nint m_nFallbackSeed = 0xE1C; // int32
-            public const nint m_flFallbackWear = 0xE20; // float32
-            public const nint m_nFallbackStatTrak = 0xE24; // int32
-            public const nint m_hOldProvidee = 0xE28; // CHandle<CBaseEntity>
-            public const nint m_iOldOwnerClass = 0xE2C; // int32
+            public const nint m_AttributeManager = 0xB30; // CAttributeContainer
+            public const nint m_OriginalOwnerXuidLow = 0xE28; // uint32
+            public const nint m_OriginalOwnerXuidHigh = 0xE2C; // uint32
+            public const nint m_nFallbackPaintKit = 0xE30; // int32
+            public const nint m_nFallbackSeed = 0xE34; // int32
+            public const nint m_flFallbackWear = 0xE38; // float32
+            public const nint m_nFallbackStatTrak = 0xE3C; // int32
+            public const nint m_hOldProvidee = 0xE40; // CHandle<CBaseEntity>
+            public const nint m_iOldOwnerClass = 0xE44; // int32
         }
         // Parent: CPointEntity
         // Field count: 2
@@ -4280,9 +4127,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Outflow_ScriptedSequence {
             public const nint m_szSyncGroup = 0x48; // CUtlString
             public const nint m_nExpectedNumSequencesInSyncGroup = 0x50; // int32
@@ -4298,56 +4142,56 @@ namespace CS2Dumper.Schemas {
         // Parent: CFuncPlatRot
         // Field count: 9
         public static class CFuncTrackChange {
-            public const nint m_trackTop = 0x8B0; // CPathTrack*
-            public const nint m_trackBottom = 0x8B8; // CPathTrack*
-            public const nint m_train = 0x8C0; // CFuncTrackTrain*
-            public const nint m_trackTopName = 0x8C8; // CUtlSymbolLarge
-            public const nint m_trackBottomName = 0x8D0; // CUtlSymbolLarge
-            public const nint m_trainName = 0x8D8; // CUtlSymbolLarge
-            public const nint m_code = 0x8E0; // TRAIN_CODE
-            public const nint m_targetState = 0x8E4; // int32
-            public const nint m_use = 0x8E8; // int32
+            public const nint m_trackTop = 0x8A0; // CPathTrack*
+            public const nint m_trackBottom = 0x8A8; // CPathTrack*
+            public const nint m_train = 0x8B0; // CFuncTrackTrain*
+            public const nint m_trackTopName = 0x8B8; // CUtlSymbolLarge
+            public const nint m_trackBottomName = 0x8C0; // CUtlSymbolLarge
+            public const nint m_trainName = 0x8C8; // CUtlSymbolLarge
+            public const nint m_code = 0x8D0; // TRAIN_CODE
+            public const nint m_targetState = 0x8D4; // int32
+            public const nint m_use = 0x8D8; // int32
         }
         // Parent: CBaseModelEntity
         // Field count: 37
         public static class CFuncTrackTrain {
-            public const nint m_ppath = 0x7E8; // CHandle<CPathTrack>
-            public const nint m_length = 0x7EC; // float32
-            public const nint m_vPosPrev = 0x7F0; // Vector
-            public const nint m_angPrev = 0x7FC; // QAngle
-            public const nint m_controlMins = 0x808; // Vector
-            public const nint m_controlMaxs = 0x814; // Vector
-            public const nint m_lastBlockPos = 0x820; // Vector
-            public const nint m_lastBlockTick = 0x82C; // int32
-            public const nint m_flVolume = 0x830; // float32
-            public const nint m_flBank = 0x834; // float32
-            public const nint m_oldSpeed = 0x838; // float32
-            public const nint m_flBlockDamage = 0x83C; // float32
-            public const nint m_height = 0x840; // float32
-            public const nint m_maxSpeed = 0x844; // float32
-            public const nint m_dir = 0x848; // float32
-            public const nint m_iszSoundMove = 0x850; // CUtlSymbolLarge
-            public const nint m_iszSoundMovePing = 0x858; // CUtlSymbolLarge
-            public const nint m_iszSoundStart = 0x860; // CUtlSymbolLarge
-            public const nint m_iszSoundStop = 0x868; // CUtlSymbolLarge
-            public const nint m_strPathTarget = 0x870; // CUtlSymbolLarge
-            public const nint m_flMoveSoundMinDuration = 0x878; // float32
-            public const nint m_flMoveSoundMaxDuration = 0x87C; // float32
-            public const nint m_flNextMoveSoundTime = 0x880; // GameTime_t
-            public const nint m_flMoveSoundMinPitch = 0x884; // float32
-            public const nint m_flMoveSoundMaxPitch = 0x888; // float32
-            public const nint m_eOrientationType = 0x88C; // TrainOrientationType_t
-            public const nint m_eVelocityType = 0x890; // TrainVelocityType_t
-            public const nint m_OnStart = 0x8A8; // CEntityIOOutput
-            public const nint m_OnNext = 0x8D0; // CEntityIOOutput
-            public const nint m_OnArrivedAtDestinationNode = 0x8F8; // CEntityIOOutput
-            public const nint m_bManualSpeedChanges = 0x920; // bool
-            public const nint m_flDesiredSpeed = 0x924; // float32
-            public const nint m_flSpeedChangeTime = 0x928; // GameTime_t
-            public const nint m_flAccelSpeed = 0x92C; // float32
-            public const nint m_flDecelSpeed = 0x930; // float32
-            public const nint m_bAccelToSpeed = 0x934; // bool
-            public const nint m_flNextMPSoundTime = 0x938; // GameTime_t
+            public const nint m_ppath = 0x7D8; // CHandle<CPathTrack>
+            public const nint m_length = 0x7DC; // float32
+            public const nint m_vPosPrev = 0x7E0; // Vector
+            public const nint m_angPrev = 0x7EC; // QAngle
+            public const nint m_controlMins = 0x7F8; // Vector
+            public const nint m_controlMaxs = 0x804; // Vector
+            public const nint m_lastBlockPos = 0x810; // Vector
+            public const nint m_lastBlockTick = 0x81C; // int32
+            public const nint m_flVolume = 0x820; // float32
+            public const nint m_flBank = 0x824; // float32
+            public const nint m_oldSpeed = 0x828; // float32
+            public const nint m_flBlockDamage = 0x82C; // float32
+            public const nint m_height = 0x830; // float32
+            public const nint m_maxSpeed = 0x834; // float32
+            public const nint m_dir = 0x838; // float32
+            public const nint m_iszSoundMove = 0x840; // CUtlSymbolLarge
+            public const nint m_iszSoundMovePing = 0x848; // CUtlSymbolLarge
+            public const nint m_iszSoundStart = 0x850; // CUtlSymbolLarge
+            public const nint m_iszSoundStop = 0x858; // CUtlSymbolLarge
+            public const nint m_strPathTarget = 0x860; // CUtlSymbolLarge
+            public const nint m_flMoveSoundMinDuration = 0x868; // float32
+            public const nint m_flMoveSoundMaxDuration = 0x86C; // float32
+            public const nint m_flNextMoveSoundTime = 0x870; // GameTime_t
+            public const nint m_flMoveSoundMinPitch = 0x874; // float32
+            public const nint m_flMoveSoundMaxPitch = 0x878; // float32
+            public const nint m_eOrientationType = 0x87C; // TrainOrientationType_t
+            public const nint m_eVelocityType = 0x880; // TrainVelocityType_t
+            public const nint m_OnStart = 0x898; // CEntityIOOutput
+            public const nint m_OnNext = 0x8C0; // CEntityIOOutput
+            public const nint m_OnArrivedAtDestinationNode = 0x8E8; // CEntityIOOutput
+            public const nint m_bManualSpeedChanges = 0x910; // bool
+            public const nint m_flDesiredSpeed = 0x914; // float32
+            public const nint m_flSpeedChangeTime = 0x918; // GameTime_t
+            public const nint m_flAccelSpeed = 0x91C; // float32
+            public const nint m_flDecelSpeed = 0x920; // float32
+            public const nint m_bAccelToSpeed = 0x924; // bool
+            public const nint m_flNextMPSoundTime = 0x928; // GameTime_t
         }
         // Parent: CPointEntity
         // Field count: 24
@@ -4429,18 +4273,18 @@ namespace CS2Dumper.Schemas {
         // Parent: CTriggerMultiple
         // Field count: 7
         public static class CDynamicNavConnectionsVolume {
-            public const nint m_iszConnectionTarget = 0x9E0; // CUtlSymbolLarge
-            public const nint m_vecConnections = 0x9E8; // CUtlVector<DynamicVolumeDef_t>
-            public const nint m_sTransitionType = 0xA00; // CGlobalSymbol
-            public const nint m_bConnectionsEnabled = 0xA08; // bool
-            public const nint m_flTargetAreaSearchRadius = 0xA0C; // float32
-            public const nint m_flUpdateDistance = 0xA10; // float32
-            public const nint m_flMaxConnectionDistance = 0xA14; // float32
+            public const nint m_iszConnectionTarget = 0x9D0; // CUtlSymbolLarge
+            public const nint m_vecConnections = 0x9D8; // CUtlVector<DynamicVolumeDef_t>
+            public const nint m_sTransitionType = 0x9F0; // CGlobalSymbol
+            public const nint m_bConnectionsEnabled = 0x9F8; // bool
+            public const nint m_flTargetAreaSearchRadius = 0x9FC; // float32
+            public const nint m_flUpdateDistance = 0xA00; // float32
+            public const nint m_flMaxConnectionDistance = 0xA04; // float32
         }
         // Parent: CBaseAnimGraph
         // Field count: 1
         public static class CConstraintAnchor {
-            public const nint m_massScale = 0xA78; // float32
+            public const nint m_massScale = 0xA90; // float32
         }
         // Parent: None
         // Field count: 2
@@ -4453,7 +4297,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_WaitComplete = 0x50; // CPulse_ResumePoint
         }
         // Parent: CCSPlayerPawnBase
-        // Field count: 124
+        // Field count: 121
         //
         // Metadata:
         // MNetworkOutOfPVSUpdates
@@ -4487,7 +4331,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flHealthShotBoostExpirationTime (GameTime_t)
         // NetworkVarNames: m_aimPunchAngle (QAngle)
         // NetworkVarNames: m_aimPunchAngleVel (QAngle)
-        // NetworkVarNames: m_aimPunchTickBase (int)
+        // NetworkVarNames: m_aimPunchTickBase (GameTick_t)
         // NetworkVarNames: m_aimPunchTickFraction (float)
         // NetworkVarNames: m_bIsBuyMenuOpen (bool)
         // NetworkVarNames: m_flTimeOfLastInjury (GameTime_t)
@@ -4541,130 +4385,127 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_fMolotovDamageTime (float)
         // NetworkVarNames: m_angEyeAngles (QAngle)
         public static class CCSPlayerPawn {
-            public const nint m_pBulletServices = 0xEC8; // CCSPlayer_BulletServices*
-            public const nint m_pHostageServices = 0xED0; // CCSPlayer_HostageServices*
-            public const nint m_pBuyServices = 0xED8; // CCSPlayer_BuyServices*
-            public const nint m_pActionTrackingServices = 0xEE0; // CCSPlayer_ActionTrackingServices*
-            public const nint m_pRadioServices = 0xEE8; // CCSPlayer_RadioServices*
-            public const nint m_pDamageReactServices = 0xEF0; // CCSPlayer_DamageReactServices*
-            public const nint m_nCharacterDefIndex = 0xEF8; // uint16
-            public const nint m_bHasFemaleVoice = 0xEFA; // bool
-            public const nint m_strVOPrefix = 0xF00; // CUtlString
-            public const nint m_szLastPlaceName = 0xF08; // char[18]
-            public const nint m_bInHostageResetZone = 0xFC8; // bool
-            public const nint m_bInBuyZone = 0xFC9; // bool
-            public const nint m_TouchingBuyZones = 0xFD0; // CUtlVector<CHandle<CBaseEntity>>
-            public const nint m_bWasInBuyZone = 0xFE8; // bool
-            public const nint m_bInHostageRescueZone = 0xFE9; // bool
-            public const nint m_bInBombZone = 0xFEA; // bool
-            public const nint m_bWasInHostageRescueZone = 0xFEB; // bool
-            public const nint m_iRetakesOffering = 0xFEC; // int32
-            public const nint m_iRetakesOfferingCard = 0xFF0; // int32
-            public const nint m_bRetakesHasDefuseKit = 0xFF4; // bool
-            public const nint m_bRetakesMVPLastRound = 0xFF5; // bool
-            public const nint m_iRetakesMVPBoostItem = 0xFF8; // int32
-            public const nint m_RetakesMVPBoostExtraUtility = 0xFFC; // loadout_slot_t
-            public const nint m_flHealthShotBoostExpirationTime = 0x1000; // GameTime_t
-            public const nint m_flLandingTimeSeconds = 0x1004; // float32
-            public const nint m_aimPunchAngle = 0x1008; // QAngle
-            public const nint m_aimPunchAngleVel = 0x1014; // QAngle
-            public const nint m_aimPunchTickBase = 0x1020; // int32
-            public const nint m_aimPunchTickFraction = 0x1024; // float32
-            public const nint m_aimPunchCache = 0x1028; // CUtlVector<QAngle>
-            public const nint m_bIsBuyMenuOpen = 0x1040; // bool
-            public const nint m_xLastHeadBoneTransform = 0x16F0; // CTransform
-            public const nint m_bLastHeadBoneTransformIsValid = 0x1710; // bool
-            public const nint m_lastLandTime = 0x1714; // GameTime_t
-            public const nint m_bOnGroundLastTick = 0x1718; // bool
-            public const nint m_iPlayerLocked = 0x171C; // int32
-            public const nint m_flTimeOfLastInjury = 0x1724; // GameTime_t
-            public const nint m_flNextSprayDecalTime = 0x1728; // GameTime_t
-            public const nint m_bNextSprayDecalTimeExpedited = 0x172C; // bool
-            public const nint m_nRagdollDamageBone = 0x1730; // int32
-            public const nint m_vRagdollDamageForce = 0x1734; // Vector
-            public const nint m_vRagdollDamagePosition = 0x1740; // Vector
-            public const nint m_szRagdollDamageWeaponName = 0x174C; // char[64]
-            public const nint m_bRagdollDamageHeadshot = 0x178C; // bool
-            public const nint m_vRagdollServerOrigin = 0x1790; // Vector
-            public const nint m_EconGloves = 0x17A0; // CEconItemView
-            public const nint m_nEconGlovesChanged = 0x1A48; // uint8
-            public const nint m_qDeathEyeAngles = 0x1A4C; // QAngle
-            public const nint m_bSkipOneHeadConstraintUpdate = 0x1A58; // bool
-            public const nint m_bLeftHanded = 0x1A59; // bool
-            public const nint m_fSwitchedHandednessTime = 0x1A5C; // GameTime_t
-            public const nint m_flViewmodelOffsetX = 0x1A60; // float32
-            public const nint m_flViewmodelOffsetY = 0x1A64; // float32
-            public const nint m_flViewmodelOffsetZ = 0x1A68; // float32
-            public const nint m_flViewmodelFOV = 0x1A6C; // float32
-            public const nint m_bIsWalking = 0x1A70; // bool
-            public const nint m_fLastGivenDefuserTime = 0x1A74; // float32
-            public const nint m_fLastGivenBombTime = 0x1A78; // float32
-            public const nint m_flDealtDamageToEnemyMostRecentTimestamp = 0x1A7C; // float32
-            public const nint m_iDisplayHistoryBits = 0x1A80; // uint32
-            public const nint m_flLastAttackedTeammate = 0x1A84; // float32
-            public const nint m_allowAutoFollowTime = 0x1A88; // GameTime_t
-            public const nint m_bResetArmorNextSpawn = 0x1A8C; // bool
-            public const nint m_nLastKillerIndex = 0x1A90; // CEntityIndex
-            public const nint m_entitySpottedState = 0x1A98; // EntitySpottedState_t
-            public const nint m_nSpotRules = 0x1AB0; // int32
-            public const nint m_bIsScoped = 0x1AB4; // bool
-            public const nint m_bResumeZoom = 0x1AB5; // bool
-            public const nint m_bIsDefusing = 0x1AB6; // bool
-            public const nint m_bIsGrabbingHostage = 0x1AB7; // bool
-            public const nint m_iBlockingUseActionInProgress = 0x1AB8; // CSPlayerBlockingUseAction_t
-            public const nint m_flEmitSoundTime = 0x1ABC; // GameTime_t
-            public const nint m_bInNoDefuseArea = 0x1AC0; // bool
-            public const nint m_iBombSiteIndex = 0x1AC4; // CEntityIndex
-            public const nint m_nWhichBombZone = 0x1AC8; // int32
-            public const nint m_bInBombZoneTrigger = 0x1ACC; // bool
-            public const nint m_bWasInBombZoneTrigger = 0x1ACD; // bool
-            public const nint m_iShotsFired = 0x1AD0; // int32
-            public const nint m_flFlinchStack = 0x1AD4; // float32
-            public const nint m_flVelocityModifier = 0x1AD8; // float32
-            public const nint m_flHitHeading = 0x1ADC; // float32
-            public const nint m_nHitBodyPart = 0x1AE0; // int32
-            public const nint m_vecTotalBulletForce = 0x1AE4; // Vector
-            public const nint m_bWaitForNoAttack = 0x1AF0; // bool
-            public const nint m_ignoreLadderJumpTime = 0x1AF4; // float32
-            public const nint m_bKilledByHeadshot = 0x1AF8; // bool
-            public const nint m_LastHitBox = 0x1AFC; // int32
-            public const nint m_LastHealth = 0x1B00; // int32
-            public const nint m_pBot = 0x1B08; // CCSBot*
-            public const nint m_bBotAllowActive = 0x1B10; // bool
-            public const nint m_thirdPersonHeading = 0x1B14; // QAngle
-            public const nint m_flSlopeDropOffset = 0x1B20; // float32
-            public const nint m_flSlopeDropHeight = 0x1B24; // float32
-            public const nint m_vHeadConstraintOffset = 0x1B28; // Vector
-            public const nint m_nLastPickupPriority = 0x1B34; // int32
-            public const nint m_flLastPickupPriorityTime = 0x1B38; // float32
-            public const nint m_ArmorValue = 0x1B3C; // int32
-            public const nint m_unCurrentEquipmentValue = 0x1B40; // uint16
-            public const nint m_unRoundStartEquipmentValue = 0x1B42; // uint16
-            public const nint m_unFreezetimeEndEquipmentValue = 0x1B44; // uint16
-            public const nint m_iLastWeaponFireUsercmd = 0x1B48; // int32
-            public const nint m_bIsSpawning = 0x1B4C; // bool
-            public const nint m_iDeathFlags = 0x1B58; // int32
-            public const nint m_bHasDeathInfo = 0x1B5C; // bool
-            public const nint m_flDeathInfoTime = 0x1B60; // float32
-            public const nint m_vecDeathInfoOrigin = 0x1B64; // Vector
-            public const nint m_vecPlayerPatchEconIndices = 0x1B70; // uint32[5]
-            public const nint m_GunGameImmunityColor = 0x1B84; // Color
-            public const nint m_grenadeParameterStashTime = 0x1B88; // GameTime_t
-            public const nint m_bGrenadeParametersStashed = 0x1B8C; // bool
-            public const nint m_angStashedShootAngles = 0x1B90; // QAngle
-            public const nint m_vecStashedGrenadeThrowPosition = 0x1B9C; // Vector
-            public const nint m_vecStashedVelocity = 0x1BA8; // Vector
-            public const nint m_angShootAngleHistory = 0x1BB4; // QAngle[2]
-            public const nint m_vecThrowPositionHistory = 0x1BCC; // Vector[2]
-            public const nint m_vecVelocityHistory = 0x1BE4; // Vector[2]
-            public const nint m_PredictedDamageTags = 0x1C00; // CUtlVectorEmbeddedNetworkVar<PredictedDamageTag_t>
-            public const nint m_nHighestAppliedDamageTagTick = 0x1C68; // int32
-            public const nint m_bCommittingSuicideOnTeamChange = 0x1C6C; // bool
-            public const nint m_wasNotKilledNaturally = 0x1C6D; // bool
-            public const nint m_fImmuneToGunGameDamageTime = 0x1C70; // GameTime_t
-            public const nint m_bGunGameImmunity = 0x1C74; // bool
-            public const nint m_fMolotovDamageTime = 0x1C78; // float32
-            public const nint m_angEyeAngles = 0x1C7C; // QAngle
+            public const nint m_pBulletServices = 0xEE8; // CCSPlayer_BulletServices*
+            public const nint m_pHostageServices = 0xEF0; // CCSPlayer_HostageServices*
+            public const nint m_pBuyServices = 0xEF8; // CCSPlayer_BuyServices*
+            public const nint m_pActionTrackingServices = 0xF00; // CCSPlayer_ActionTrackingServices*
+            public const nint m_pRadioServices = 0xF08; // CCSPlayer_RadioServices*
+            public const nint m_pDamageReactServices = 0xF10; // CCSPlayer_DamageReactServices*
+            public const nint m_nCharacterDefIndex = 0xF18; // uint16
+            public const nint m_bHasFemaleVoice = 0xF1A; // bool
+            public const nint m_strVOPrefix = 0xF20; // CUtlString
+            public const nint m_szLastPlaceName = 0xF28; // char[18]
+            public const nint m_bInHostageResetZone = 0xFE8; // bool
+            public const nint m_bInBuyZone = 0xFE9; // bool
+            public const nint m_TouchingBuyZones = 0xFF0; // CUtlVector<CHandle<CBaseEntity>>
+            public const nint m_bWasInBuyZone = 0x1008; // bool
+            public const nint m_bInHostageRescueZone = 0x1009; // bool
+            public const nint m_bInBombZone = 0x100A; // bool
+            public const nint m_bWasInHostageRescueZone = 0x100B; // bool
+            public const nint m_iRetakesOffering = 0x100C; // int32
+            public const nint m_iRetakesOfferingCard = 0x1010; // int32
+            public const nint m_bRetakesHasDefuseKit = 0x1014; // bool
+            public const nint m_bRetakesMVPLastRound = 0x1015; // bool
+            public const nint m_iRetakesMVPBoostItem = 0x1018; // int32
+            public const nint m_RetakesMVPBoostExtraUtility = 0x101C; // loadout_slot_t
+            public const nint m_flHealthShotBoostExpirationTime = 0x1020; // GameTime_t
+            public const nint m_flLandingTimeSeconds = 0x1024; // float32
+            public const nint m_aimPunchAngle = 0x1028; // QAngle
+            public const nint m_aimPunchAngleVel = 0x1034; // QAngle
+            public const nint m_aimPunchTickBase = 0x1040; // GameTick_t
+            public const nint m_aimPunchTickFraction = 0x1044; // float32
+            public const nint m_aimPunchCache = 0x1048; // CUtlVector<QAngle>
+            public const nint m_bIsBuyMenuOpen = 0x1060; // bool
+            public const nint m_lastLandTime = 0x1708; // GameTime_t
+            public const nint m_bOnGroundLastTick = 0x170C; // bool
+            public const nint m_iPlayerLocked = 0x1710; // int32
+            public const nint m_flTimeOfLastInjury = 0x1718; // GameTime_t
+            public const nint m_flNextSprayDecalTime = 0x171C; // GameTime_t
+            public const nint m_bNextSprayDecalTimeExpedited = 0x1720; // bool
+            public const nint m_nRagdollDamageBone = 0x1724; // int32
+            public const nint m_vRagdollDamageForce = 0x1728; // Vector
+            public const nint m_vRagdollDamagePosition = 0x1734; // Vector
+            public const nint m_szRagdollDamageWeaponName = 0x1740; // char[64]
+            public const nint m_bRagdollDamageHeadshot = 0x1780; // bool
+            public const nint m_vRagdollServerOrigin = 0x1784; // Vector
+            public const nint m_EconGloves = 0x1790; // CEconItemView
+            public const nint m_nEconGlovesChanged = 0x1A38; // uint8
+            public const nint m_qDeathEyeAngles = 0x1A3C; // QAngle
+            public const nint m_bSkipOneHeadConstraintUpdate = 0x1A48; // bool
+            public const nint m_bLeftHanded = 0x1A49; // bool
+            public const nint m_fSwitchedHandednessTime = 0x1A4C; // GameTime_t
+            public const nint m_flViewmodelOffsetX = 0x1A50; // float32
+            public const nint m_flViewmodelOffsetY = 0x1A54; // float32
+            public const nint m_flViewmodelOffsetZ = 0x1A58; // float32
+            public const nint m_flViewmodelFOV = 0x1A5C; // float32
+            public const nint m_bIsWalking = 0x1A60; // bool
+            public const nint m_fLastGivenDefuserTime = 0x1A64; // float32
+            public const nint m_fLastGivenBombTime = 0x1A68; // float32
+            public const nint m_flDealtDamageToEnemyMostRecentTimestamp = 0x1A6C; // float32
+            public const nint m_iDisplayHistoryBits = 0x1A70; // uint32
+            public const nint m_flLastAttackedTeammate = 0x1A74; // float32
+            public const nint m_allowAutoFollowTime = 0x1A78; // GameTime_t
+            public const nint m_bResetArmorNextSpawn = 0x1A7C; // bool
+            public const nint m_nLastKillerIndex = 0x1A80; // CEntityIndex
+            public const nint m_entitySpottedState = 0x1A88; // EntitySpottedState_t
+            public const nint m_nSpotRules = 0x1AA0; // int32
+            public const nint m_bIsScoped = 0x1AA4; // bool
+            public const nint m_bResumeZoom = 0x1AA5; // bool
+            public const nint m_bIsDefusing = 0x1AA6; // bool
+            public const nint m_bIsGrabbingHostage = 0x1AA7; // bool
+            public const nint m_iBlockingUseActionInProgress = 0x1AA8; // CSPlayerBlockingUseAction_t
+            public const nint m_flEmitSoundTime = 0x1AAC; // GameTime_t
+            public const nint m_bInNoDefuseArea = 0x1AB0; // bool
+            public const nint m_iBombSiteIndex = 0x1AB4; // CEntityIndex
+            public const nint m_nWhichBombZone = 0x1AB8; // int32
+            public const nint m_bInBombZoneTrigger = 0x1ABC; // bool
+            public const nint m_bWasInBombZoneTrigger = 0x1ABD; // bool
+            public const nint m_iShotsFired = 0x1AC0; // int32
+            public const nint m_flFlinchStack = 0x1AC4; // float32
+            public const nint m_flVelocityModifier = 0x1AC8; // float32
+            public const nint m_flHitHeading = 0x1ACC; // float32
+            public const nint m_nHitBodyPart = 0x1AD0; // int32
+            public const nint m_vecTotalBulletForce = 0x1AD4; // Vector
+            public const nint m_bWaitForNoAttack = 0x1AE0; // bool
+            public const nint m_ignoreLadderJumpTime = 0x1AE4; // float32
+            public const nint m_bKilledByHeadshot = 0x1AE8; // bool
+            public const nint m_LastHitBox = 0x1AEC; // int32
+            public const nint m_pBot = 0x1AF0; // CCSBot*
+            public const nint m_bBotAllowActive = 0x1AF8; // bool
+            public const nint m_thirdPersonHeading = 0x1AFC; // QAngle
+            public const nint m_flSlopeDropOffset = 0x1B08; // float32
+            public const nint m_flSlopeDropHeight = 0x1B0C; // float32
+            public const nint m_vHeadConstraintOffset = 0x1B10; // Vector
+            public const nint m_nLastPickupPriority = 0x1B1C; // int32
+            public const nint m_flLastPickupPriorityTime = 0x1B20; // float32
+            public const nint m_ArmorValue = 0x1B24; // int32
+            public const nint m_unCurrentEquipmentValue = 0x1B28; // uint16
+            public const nint m_unRoundStartEquipmentValue = 0x1B2A; // uint16
+            public const nint m_unFreezetimeEndEquipmentValue = 0x1B2C; // uint16
+            public const nint m_iLastWeaponFireUsercmd = 0x1B30; // int32
+            public const nint m_bIsSpawning = 0x1B34; // bool
+            public const nint m_iDeathFlags = 0x1B40; // int32
+            public const nint m_bHasDeathInfo = 0x1B44; // bool
+            public const nint m_flDeathInfoTime = 0x1B48; // float32
+            public const nint m_vecDeathInfoOrigin = 0x1B4C; // Vector
+            public const nint m_vecPlayerPatchEconIndices = 0x1B58; // uint32[5]
+            public const nint m_GunGameImmunityColor = 0x1B6C; // Color
+            public const nint m_grenadeParameterStashTime = 0x1B70; // GameTime_t
+            public const nint m_bGrenadeParametersStashed = 0x1B74; // bool
+            public const nint m_angStashedShootAngles = 0x1B78; // QAngle
+            public const nint m_vecStashedGrenadeThrowPosition = 0x1B84; // Vector
+            public const nint m_vecStashedVelocity = 0x1B90; // Vector
+            public const nint m_angShootAngleHistory = 0x1B9C; // QAngle[2]
+            public const nint m_vecThrowPositionHistory = 0x1BB4; // Vector[2]
+            public const nint m_vecVelocityHistory = 0x1BCC; // Vector[2]
+            public const nint m_PredictedDamageTags = 0x1BE8; // CUtlVectorEmbeddedNetworkVar<PredictedDamageTag_t>
+            public const nint m_nHighestAppliedDamageTagTick = 0x1C50; // int32
+            public const nint m_bCommittingSuicideOnTeamChange = 0x1C54; // bool
+            public const nint m_wasNotKilledNaturally = 0x1C55; // bool
+            public const nint m_fImmuneToGunGameDamageTime = 0x1C58; // GameTime_t
+            public const nint m_bGunGameImmunity = 0x1C5C; // bool
+            public const nint m_fMolotovDamageTime = 0x1C60; // float32
+            public const nint m_angEyeAngles = 0x1C64; // QAngle
         }
         // Parent: CBaseEntity
         // Field count: 22
@@ -4716,15 +4557,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_Entity_nLightProbeAtlasZ = 0x156C; // int32
             public const nint m_Entity_bEnabled = 0x1579; // bool
         }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
-        public static class CCSPointScriptExtensions_entity {
-        }
         // Parent: CServerOnlyPointEntity
         // Field count: 3
         public static class SpawnPoint {
@@ -4734,11 +4566,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CFuncMoverAPI {
         }
         // Parent: 
@@ -4752,7 +4579,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_name (CUtlStringToken)
         // NetworkVarNames: m_hierarchyAttachName (CUtlStringToken)
         public static class CGameSceneNode {
-            public const nint m_nodeToWorld = 0x10; // CTransform
+            public const nint m_nodeToWorld = 0x10; // CTransformWS
             public const nint m_pOwner = 0x30; // CEntityInstance*
             public const nint m_pParent = 0x38; // CGameSceneNode*
             public const nint m_pChild = 0x40; // CGameSceneNode*
@@ -4761,7 +4588,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecOrigin = 0x88; // CNetworkOriginCellCoordQuantizedVector
             public const nint m_angRotation = 0xC0; // QAngle
             public const nint m_flScale = 0xCC; // float32
-            public const nint m_vecAbsOrigin = 0xD0; // Vector
+            public const nint m_vecAbsOrigin = 0xD0; // VectorWS
             public const nint m_angAbsRotation = 0xDC; // QAngle
             public const nint m_flAbsScale = 0xE8; // float32
             public const nint m_nParentAttachmentOrBone = 0xEC; // int16
@@ -4798,10 +4625,17 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CPulseServerFuncs_Sounds {
+        }
+        // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MPropertyFriendlyName
+        // MPropertyDescription
+        public static class CPulsePhysicsConstraintsFuncs {
         }
         // Parent: CPlayerPawnComponent
         // Field count: 4
@@ -4828,22 +4662,13 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 6
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseDomainScopeInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        // MPulseDomainOptInValueType
-        // MPulseDomainOptInGameBlackboard
         public static class CPulseGraphInstance_ServerEntity {
-            public const nint m_hOwner = 0x188; // CHandle<CBaseEntity>
-            public const nint m_bActivated = 0x18C; // bool
-            public const nint m_sNameFixupStaticPrefix = 0x190; // CUtlSymbolLarge
-            public const nint m_sNameFixupParent = 0x198; // CUtlSymbolLarge
-            public const nint m_sNameFixupLocal = 0x1A0; // CUtlSymbolLarge
-            public const nint m_sProceduralWorldNameForRelays = 0x1A8; // CUtlSymbolLarge
+            public const nint m_hOwner = 0x190; // CHandle<CBaseEntity>
+            public const nint m_bActivated = 0x194; // bool
+            public const nint m_sNameFixupStaticPrefix = 0x198; // CUtlSymbolLarge
+            public const nint m_sNameFixupParent = 0x1A0; // CUtlSymbolLarge
+            public const nint m_sNameFixupLocal = 0x1A8; // CUtlSymbolLarge
+            public const nint m_sProceduralWorldNameForRelays = 0x1B0; // CUtlSymbolLarge
         }
         // Parent: CSceneEntity
         // Field count: 0
@@ -4877,18 +4702,18 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bMaster (bool)
         // NetworkVarNames: m_bExposureControl (bool)
         public static class CPostProcessingVolume {
-            public const nint m_hPostSettings = 0x9C8; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
-            public const nint m_flFadeDuration = 0x9D0; // float32
-            public const nint m_flMinLogExposure = 0x9D4; // float32
-            public const nint m_flMaxLogExposure = 0x9D8; // float32
-            public const nint m_flMinExposure = 0x9DC; // float32
-            public const nint m_flMaxExposure = 0x9E0; // float32
-            public const nint m_flExposureCompensation = 0x9E4; // float32
-            public const nint m_flExposureFadeSpeedUp = 0x9E8; // float32
-            public const nint m_flExposureFadeSpeedDown = 0x9EC; // float32
-            public const nint m_flTonemapEVSmoothingRange = 0x9F0; // float32
-            public const nint m_bMaster = 0x9F4; // bool
-            public const nint m_bExposureControl = 0x9F5; // bool
+            public const nint m_hPostSettings = 0x9B8; // CStrongHandle<InfoForResourceTypeCPostProcessingResource>
+            public const nint m_flFadeDuration = 0x9C0; // float32
+            public const nint m_flMinLogExposure = 0x9C4; // float32
+            public const nint m_flMaxLogExposure = 0x9C8; // float32
+            public const nint m_flMinExposure = 0x9CC; // float32
+            public const nint m_flMaxExposure = 0x9D0; // float32
+            public const nint m_flExposureCompensation = 0x9D4; // float32
+            public const nint m_flExposureFadeSpeedUp = 0x9D8; // float32
+            public const nint m_flExposureFadeSpeedDown = 0x9DC; // float32
+            public const nint m_flTonemapEVSmoothingRange = 0x9E0; // float32
+            public const nint m_bMaster = 0x9E4; // bool
+            public const nint m_bExposureControl = 0x9E5; // bool
         }
         // Parent: CPointEntity
         // Field count: 3
@@ -4916,32 +4741,29 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bTestOcclusion (bool)
         // NetworkVarNames: m_bTestAllVisibleOcclusion (bool)
         public static class CTriggerLook {
-            public const nint m_hLookTarget = 0x9E0; // CHandle<CBaseEntity>
-            public const nint m_flFieldOfView = 0x9E4; // float32
-            public const nint m_flLookTime = 0x9E8; // float32
-            public const nint m_flLookTimeTotal = 0x9EC; // float32
-            public const nint m_flLookTimeLast = 0x9F0; // GameTime_t
-            public const nint m_flTimeoutDuration = 0x9F4; // float32
-            public const nint m_bTimeoutFired = 0x9F8; // bool
-            public const nint m_bIsLooking = 0x9F9; // bool
-            public const nint m_b2DFOV = 0x9FA; // bool
-            public const nint m_bUseVelocity = 0x9FB; // bool
-            public const nint m_bTestOcclusion = 0x9FC; // bool
-            public const nint m_bTestAllVisibleOcclusion = 0x9FD; // bool
-            public const nint m_OnTimeout = 0xA00; // CEntityIOOutput
-            public const nint m_OnStartLook = 0xA28; // CEntityIOOutput
-            public const nint m_OnEndLook = 0xA50; // CEntityIOOutput
+            public const nint m_hLookTarget = 0x9D0; // CHandle<CBaseEntity>
+            public const nint m_flFieldOfView = 0x9D4; // float32
+            public const nint m_flLookTime = 0x9D8; // float32
+            public const nint m_flLookTimeTotal = 0x9DC; // float32
+            public const nint m_flLookTimeLast = 0x9E0; // GameTime_t
+            public const nint m_flTimeoutDuration = 0x9E4; // float32
+            public const nint m_bTimeoutFired = 0x9E8; // bool
+            public const nint m_bIsLooking = 0x9E9; // bool
+            public const nint m_b2DFOV = 0x9EA; // bool
+            public const nint m_bUseVelocity = 0x9EB; // bool
+            public const nint m_bTestOcclusion = 0x9EC; // bool
+            public const nint m_bTestAllVisibleOcclusion = 0x9ED; // bool
+            public const nint m_OnTimeout = 0x9F0; // CEntityIOOutput
+            public const nint m_OnStartLook = 0xA18; // CEntityIOOutput
+            public const nint m_OnEndLook = 0xA40; // CEntityIOOutput
         }
         // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Outflow_PlayVCD {
-            public const nint m_vcdFilename = 0xF0; // CUtlString
+            public const nint m_hChoreoScene = 0xF0; // CStrongHandle<InfoForResourceTypeCChoreoSceneResource>
         }
         // Parent: None
         // Field count: 0
@@ -4954,7 +4776,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CPhysForce
         // Field count: 1
         public static class CPhysTorque {
-            public const nint m_axis = 0x550; // Vector
+            public const nint m_axis = 0x550; // VectorWS
         }
         // Parent: CLogicalEntity
         // Field count: 5
@@ -4983,19 +4805,19 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flNextHoldFrac (float)
         // NetworkVarNames: m_hSwitchToWeaponAfterThrow (CHandle<CCSWeaponBase>)
         public static class CBaseCSGrenade {
-            public const nint m_bRedraw = 0x1030; // bool
-            public const nint m_bIsHeldByPlayer = 0x1031; // bool
-            public const nint m_bPinPulled = 0x1032; // bool
-            public const nint m_bJumpThrow = 0x1033; // bool
-            public const nint m_bThrowAnimating = 0x1034; // bool
-            public const nint m_fThrowTime = 0x1038; // GameTime_t
-            public const nint m_flThrowStrength = 0x103C; // float32
-            public const nint m_fDropTime = 0x1040; // GameTime_t
-            public const nint m_fPinPullTime = 0x1044; // GameTime_t
-            public const nint m_bJustPulledPin = 0x1048; // bool
-            public const nint m_nNextHoldTick = 0x104C; // GameTick_t
-            public const nint m_flNextHoldFrac = 0x1050; // float32
-            public const nint m_hSwitchToWeaponAfterThrow = 0x1054; // CHandle<CCSWeaponBase>
+            public const nint m_bRedraw = 0x11D0; // bool
+            public const nint m_bIsHeldByPlayer = 0x11D1; // bool
+            public const nint m_bPinPulled = 0x11D2; // bool
+            public const nint m_bJumpThrow = 0x11D3; // bool
+            public const nint m_bThrowAnimating = 0x11D4; // bool
+            public const nint m_fThrowTime = 0x11D8; // GameTime_t
+            public const nint m_flThrowStrength = 0x11DC; // float32
+            public const nint m_fDropTime = 0x11E0; // GameTime_t
+            public const nint m_fPinPullTime = 0x11E4; // GameTime_t
+            public const nint m_bJustPulledPin = 0x11E8; // bool
+            public const nint m_nNextHoldTick = 0x11EC; // GameTick_t
+            public const nint m_flNextHoldFrac = 0x11F0; // float32
+            public const nint m_hSwitchToWeaponAfterThrow = 0x11F4; // CHandle<CCSWeaponBase>
         }
         // Parent: CBaseEntity
         // Field count: 11
@@ -5033,16 +4855,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CMarkupVolume {
-            public const nint m_bDisabled = 0x7E8; // bool
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
-        public static class CCSPointScriptExtensions_observer {
+            public const nint m_bDisabled = 0x7D8; // bool
         }
         // Parent: CCSGO_TeamSelectCharacterPosition
         // Field count: 0
@@ -5051,7 +4864,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 1
         public static class CTriggerRemove {
-            public const nint m_OnRemove = 0x9B8; // CEntityIOOutput
+            public const nint m_OnRemove = 0x9A8; // CEntityIOOutput
         }
         // Parent: CLogicalEntity
         // Field count: 5
@@ -5074,9 +4887,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -5087,7 +4897,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CMarkupVolumeTagged
         // Field count: 1
         public static class CMarkupVolumeTagged_Nav {
-            public const nint m_nScopes = 0x828; // NavScopeFlags_t
+            public const nint m_nScopes = 0x818; // NavScopeFlags_t
         }
         // Parent: SpawnPoint
         // Field count: 0
@@ -5108,18 +4918,8 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyDescription
         public static class CPulseTestScriptLib {
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
-        public static class CCSPointScriptExtensions_player_controller {
         }
         // Parent: None
         // Field count: 1
@@ -5226,7 +5026,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CPlatTrigger {
-            public const nint m_pPlatform = 0x7E8; // CHandle<CFuncPlat>
+            public const nint m_pPlatform = 0x7D8; // CHandle<CFuncPlat>
         }
         // Parent: CPointEntity
         // Field count: 67
@@ -5349,18 +5149,18 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseAnimGraph
         // Field count: 12
         public static class CPhysMagnet {
-            public const nint m_OnMagnetAttach = 0xA78; // CEntityIOOutput
-            public const nint m_OnMagnetDetach = 0xAA0; // CEntityIOOutput
-            public const nint m_massScale = 0xAC8; // float32
-            public const nint m_forceLimit = 0xACC; // float32
-            public const nint m_torqueLimit = 0xAD0; // float32
-            public const nint m_MagnettedEntities = 0xAD8; // CUtlVector<magnetted_objects_t>
-            public const nint m_bActive = 0xAF0; // bool
-            public const nint m_bHasHitSomething = 0xAF1; // bool
-            public const nint m_flTotalMass = 0xAF4; // float32
-            public const nint m_flRadius = 0xAF8; // float32
-            public const nint m_flNextSuckTime = 0xAFC; // GameTime_t
-            public const nint m_iMaxObjectsAttached = 0xB00; // int32
+            public const nint m_OnMagnetAttach = 0xA90; // CEntityIOOutput
+            public const nint m_OnMagnetDetach = 0xAB8; // CEntityIOOutput
+            public const nint m_massScale = 0xAE0; // float32
+            public const nint m_forceLimit = 0xAE4; // float32
+            public const nint m_torqueLimit = 0xAE8; // float32
+            public const nint m_MagnettedEntities = 0xAF0; // CUtlVector<magnetted_objects_t>
+            public const nint m_bActive = 0xB08; // bool
+            public const nint m_bHasHitSomething = 0xB09; // bool
+            public const nint m_flTotalMass = 0xB0C; // float32
+            public const nint m_flRadius = 0xB10; // float32
+            public const nint m_flNextSuckTime = 0xB14; // GameTime_t
+            public const nint m_iMaxObjectsAttached = 0xB18; // int32
         }
         // Parent: None
         // Field count: 3
@@ -5424,7 +5224,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CPhysConstraint
         // Field count: 4
         public static class CPhysPulley {
-            public const nint m_position2 = 0x560; // Vector
+            public const nint m_position2 = 0x560; // VectorWS
             public const nint m_offset = 0x56C; // Vector[2]
             public const nint m_addLength = 0x584; // float32
             public const nint m_gearRatio = 0x588; // float32
@@ -5444,8 +5244,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bSequenceInProgress (bool)
         // NetworkVarNames: m_bRedraw (bool)
         public static class CWeaponBaseItem {
-            public const nint m_bSequenceInProgress = 0x1030; // bool
-            public const nint m_bRedraw = 0x1031; // bool
+            public const nint m_bSequenceInProgress = 0x11D0; // bool
+            public const nint m_bRedraw = 0x11D1; // bool
         }
         // Parent: CBaseEntity
         // Field count: 3
@@ -5490,9 +5290,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         public static class CPulseCell_Value_Curve {
             public const nint m_Curve = 0x48; // CPiecewiseCurve
@@ -5524,17 +5321,17 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bIsPlantingViaUse (bool)
         // NetworkVarNames: m_entitySpottedState (EntitySpottedState_t)
         public static class CC4 {
-            public const nint m_vecLastValidPlayerHeldPosition = 0x1060; // Vector
-            public const nint m_vecLastValidDroppedPosition = 0x106C; // Vector
-            public const nint m_bDoValidDroppedPositionCheck = 0x1078; // bool
-            public const nint m_bStartedArming = 0x1079; // bool
-            public const nint m_fArmedTime = 0x107C; // GameTime_t
-            public const nint m_bBombPlacedAnimation = 0x1080; // bool
-            public const nint m_bIsPlantingViaUse = 0x1081; // bool
-            public const nint m_entitySpottedState = 0x1088; // EntitySpottedState_t
-            public const nint m_nSpotRules = 0x10A0; // int32
-            public const nint m_bPlayedArmingBeeps = 0x10A4; // bool[7]
-            public const nint m_bBombPlanted = 0x10AB; // bool
+            public const nint m_vecLastValidPlayerHeldPosition = 0x1200; // Vector
+            public const nint m_vecLastValidDroppedPosition = 0x120C; // Vector
+            public const nint m_bDoValidDroppedPositionCheck = 0x1218; // bool
+            public const nint m_bStartedArming = 0x1219; // bool
+            public const nint m_fArmedTime = 0x121C; // GameTime_t
+            public const nint m_bBombPlacedAnimation = 0x1220; // bool
+            public const nint m_bIsPlantingViaUse = 0x1221; // bool
+            public const nint m_entitySpottedState = 0x1228; // EntitySpottedState_t
+            public const nint m_nSpotRules = 0x1240; // int32
+            public const nint m_bPlayedArmingBeeps = 0x1244; // bool[7]
+            public const nint m_bBombPlanted = 0x124B; // bool
         }
         // Parent: CBaseAnimGraph
         // Field count: 0
@@ -5543,15 +5340,6 @@ namespace CS2Dumper.Schemas {
         // Parent: CDynamicProp
         // Field count: 0
         public static class CDynamicPropAlias_cable_dynamic {
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
-        public static class CCSPointScriptExtensions_weapon_cs_base {
         }
         // Parent: CBaseFlex
         // Field count: 0
@@ -5573,11 +5361,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CTakeDamageInfoAPI {
         }
         // Parent: CBasePlayerPawn
@@ -5598,21 +5381,21 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iProgressBarDuration (int)
         // NetworkVarNames: m_hOriginalController (CHandle<CCSPlayerController>)
         public static class CCSPlayerPawnBase {
-            public const nint m_CTouchExpansionComponent = 0xD88; // CTouchExpansionComponent
-            public const nint m_pPingServices = 0xDD8; // CCSPlayer_PingServices*
-            public const nint m_blindUntilTime = 0xDE0; // GameTime_t
-            public const nint m_blindStartTime = 0xDE4; // GameTime_t
-            public const nint m_iPlayerState = 0xDE8; // CSPlayerState
-            public const nint m_bRespawning = 0xE98; // bool
-            public const nint m_bHasMovedSinceSpawn = 0xE99; // bool
-            public const nint m_iNumSpawns = 0xE9C; // int32
-            public const nint m_flIdleTimeSinceLastAction = 0xEA4; // float32
-            public const nint m_fNextRadarUpdateTime = 0xEA8; // float32
-            public const nint m_flFlashDuration = 0xEAC; // float32
-            public const nint m_flFlashMaxAlpha = 0xEB0; // float32
-            public const nint m_flProgressBarStartTime = 0xEB4; // float32
-            public const nint m_iProgressBarDuration = 0xEB8; // int32
-            public const nint m_hOriginalController = 0xEBC; // CHandle<CCSPlayerController>
+            public const nint m_CTouchExpansionComponent = 0xDA0; // CTouchExpansionComponent
+            public const nint m_pPingServices = 0xDF0; // CCSPlayer_PingServices*
+            public const nint m_blindUntilTime = 0xDF8; // GameTime_t
+            public const nint m_blindStartTime = 0xDFC; // GameTime_t
+            public const nint m_iPlayerState = 0xE00; // CSPlayerState
+            public const nint m_bRespawning = 0xEB0; // bool
+            public const nint m_bHasMovedSinceSpawn = 0xEB1; // bool
+            public const nint m_iNumSpawns = 0xEB4; // int32
+            public const nint m_flIdleTimeSinceLastAction = 0xEBC; // float32
+            public const nint m_fNextRadarUpdateTime = 0xEC0; // float32
+            public const nint m_flFlashDuration = 0xEC4; // float32
+            public const nint m_flFlashMaxAlpha = 0xEC8; // float32
+            public const nint m_flProgressBarStartTime = 0xECC; // float32
+            public const nint m_iProgressBarDuration = 0xED0; // int32
+            public const nint m_hOriginalController = 0xED4; // CHandle<CCSPlayerController>
         }
         // Parent: CEnvSoundscape
         // Field count: 1
@@ -5624,9 +5407,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_EventHandler {
             public const nint m_EventName = 0x80; // PulseSymbol_t
         }
@@ -5647,20 +5427,20 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_bBombPlantedHere (bool)
         public static class CBombTarget {
-            public const nint m_OnBombExplode = 0x9B8; // CEntityIOOutput
-            public const nint m_OnBombPlanted = 0x9E0; // CEntityIOOutput
-            public const nint m_OnBombDefused = 0xA08; // CEntityIOOutput
-            public const nint m_bIsBombSiteB = 0xA30; // bool
-            public const nint m_bIsHeistBombTarget = 0xA31; // bool
-            public const nint m_bBombPlantedHere = 0xA32; // bool
-            public const nint m_szMountTarget = 0xA38; // CUtlSymbolLarge
-            public const nint m_hInstructorHint = 0xA40; // CHandle<CBaseEntity>
-            public const nint m_nBombSiteDesignation = 0xA44; // int32
+            public const nint m_OnBombExplode = 0x9A8; // CEntityIOOutput
+            public const nint m_OnBombPlanted = 0x9D0; // CEntityIOOutput
+            public const nint m_OnBombDefused = 0x9F8; // CEntityIOOutput
+            public const nint m_bIsBombSiteB = 0xA20; // bool
+            public const nint m_bIsHeistBombTarget = 0xA21; // bool
+            public const nint m_bBombPlantedHere = 0xA22; // bool
+            public const nint m_szMountTarget = 0xA28; // CUtlSymbolLarge
+            public const nint m_hInstructorHint = 0xA30; // CHandle<CBaseEntity>
+            public const nint m_nBombSiteDesignation = 0xA34; // int32
         }
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CRuleEntity {
-            public const nint m_iszMaster = 0x7E8; // CUtlSymbolLarge
+            public const nint m_iszMaster = 0x7D8; // CUtlSymbolLarge
         }
         // Parent: CPhysForce
         // Field count: 1
@@ -5718,11 +5498,11 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseToggle
         // Field count: 5
         public static class CBasePlatTrain {
-            public const nint m_NoiseMoving = 0x868; // CUtlSymbolLarge
-            public const nint m_NoiseArrived = 0x870; // CUtlSymbolLarge
-            public const nint m_volume = 0x880; // float32
-            public const nint m_flTWidth = 0x884; // float32
-            public const nint m_flTLength = 0x888; // float32
+            public const nint m_NoiseMoving = 0x858; // CUtlSymbolLarge
+            public const nint m_NoiseArrived = 0x860; // CUtlSymbolLarge
+            public const nint m_volume = 0x870; // float32
+            public const nint m_flTWidth = 0x874; // float32
+            public const nint m_flTLength = 0x878; // float32
         }
         // Parent: CServerOnlyPointEntity
         // Field count: 4
@@ -5740,9 +5520,9 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_strEndTouchEventName (CUtlString)
         // NetworkVarNames: m_strTriggerID (CUtlString)
         public static class CTriggerGameEvent {
-            public const nint m_strStartTouchEventName = 0x9B8; // CUtlString
-            public const nint m_strEndTouchEventName = 0x9C0; // CUtlString
-            public const nint m_strTriggerID = 0x9C8; // CUtlString
+            public const nint m_strStartTouchEventName = 0x9A8; // CUtlString
+            public const nint m_strEndTouchEventName = 0x9B0; // CUtlString
+            public const nint m_strTriggerID = 0x9B8; // CUtlString
         }
         // Parent: CPointEntity
         // Field count: 5
@@ -5757,15 +5537,6 @@ namespace CS2Dumper.Schemas {
         // Field count: 1
         public static class CEnvEntityIgniter {
             public const nint m_flLifetime = 0x4F0; // float32
-        }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
-        public static class CCSPointScriptExtensions_player {
         }
         // Parent: None
         // Field count: 2
@@ -5788,9 +5559,9 @@ namespace CS2Dumper.Schemas {
         // Parent: CMarkupVolumeWithRef
         // Field count: 3
         public static class CMarkupVolumeTagged_NavGame {
-            public const nint m_nScopes = 0x850; // NavScopeFlags_t
-            public const nint m_bFloodFillAttribute = 0x851; // bool
-            public const nint m_bSplitNavSpace = 0x852; // bool
+            public const nint m_nScopes = 0x840; // NavScopeFlags_t
+            public const nint m_bFloodFillAttribute = 0x841; // bool
+            public const nint m_bSplitNavSpace = 0x842; // bool
         }
         // Parent: CLogicalEntity
         // Field count: 8
@@ -5814,18 +5585,13 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CPulseAnimFuncs {
         }
         // Parent: CEconEntity
         // Field count: 2
         public static class CEconWearable {
-            public const nint m_nForceSkin = 0xE30; // int32
-            public const nint m_bAlwaysAllow = 0xE34; // bool
+            public const nint m_nForceSkin = 0xE50; // int32
+            public const nint m_bAlwaysAllow = 0xE54; // bool
         }
         // Parent: None
         // Field count: 1
@@ -5836,7 +5602,6 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyDescription
         public static class CPulseArraylib {
         }
@@ -5849,23 +5614,23 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // NetworkVarNames: m_vecLadderDir (Vector)
-        // NetworkVarNames: m_vecPlayerMountPositionTop (Vector)
-        // NetworkVarNames: m_vecPlayerMountPositionBottom (Vector)
+        // NetworkVarNames: m_vecPlayerMountPositionTop (VectorWS)
+        // NetworkVarNames: m_vecPlayerMountPositionBottom (VectorWS)
         // NetworkVarNames: m_flAutoRideSpeed (float)
         // NetworkVarNames: m_bFakeLadder (bool)
         public static class CFuncLadder {
-            public const nint m_vecLadderDir = 0x7E8; // Vector
-            public const nint m_Dismounts = 0x7F8; // CUtlVector<CHandle<CInfoLadderDismount>>
-            public const nint m_vecLocalTop = 0x810; // Vector
-            public const nint m_vecPlayerMountPositionTop = 0x81C; // Vector
-            public const nint m_vecPlayerMountPositionBottom = 0x828; // Vector
-            public const nint m_flAutoRideSpeed = 0x834; // float32
-            public const nint m_bDisabled = 0x838; // bool
-            public const nint m_bFakeLadder = 0x839; // bool
-            public const nint m_bHasSlack = 0x83A; // bool
-            public const nint m_surfacePropName = 0x840; // CUtlSymbolLarge
-            public const nint m_OnPlayerGotOnLadder = 0x848; // CEntityIOOutput
-            public const nint m_OnPlayerGotOffLadder = 0x870; // CEntityIOOutput
+            public const nint m_vecLadderDir = 0x7D8; // Vector
+            public const nint m_Dismounts = 0x7E8; // CUtlVector<CHandle<CInfoLadderDismount>>
+            public const nint m_vecLocalTop = 0x800; // Vector
+            public const nint m_vecPlayerMountPositionTop = 0x80C; // VectorWS
+            public const nint m_vecPlayerMountPositionBottom = 0x818; // VectorWS
+            public const nint m_flAutoRideSpeed = 0x824; // float32
+            public const nint m_bDisabled = 0x828; // bool
+            public const nint m_bFakeLadder = 0x829; // bool
+            public const nint m_bHasSlack = 0x82A; // bool
+            public const nint m_surfacePropName = 0x830; // CUtlSymbolLarge
+            public const nint m_OnPlayerGotOnLadder = 0x838; // CEntityIOOutput
+            public const nint m_OnPlayerGotOffLadder = 0x860; // CEntityIOOutput
         }
         // Parent: CBaseEntity
         // Field count: 3
@@ -5879,43 +5644,38 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CPointTemplateAPI {
         }
         // Parent: CBaseAnimGraph
         // Field count: 8
         public static class CItem {
-            public const nint m_OnPlayerTouch = 0xA80; // CEntityIOOutput
-            public const nint m_OnPlayerPickup = 0xAA8; // CEntityIOOutput
-            public const nint m_bActivateWhenAtRest = 0xAD0; // bool
-            public const nint m_OnCacheInteraction = 0xAD8; // CEntityIOOutput
-            public const nint m_OnGlovePulled = 0xB00; // CEntityIOOutput
-            public const nint m_vOriginalSpawnOrigin = 0xB28; // Vector
-            public const nint m_vOriginalSpawnAngles = 0xB34; // QAngle
-            public const nint m_bPhysStartAsleep = 0xB40; // bool
+            public const nint m_OnPlayerTouch = 0xA98; // CEntityIOOutput
+            public const nint m_OnPlayerPickup = 0xAC0; // CEntityIOOutput
+            public const nint m_bActivateWhenAtRest = 0xAE8; // bool
+            public const nint m_OnCacheInteraction = 0xAF0; // CEntityIOOutput
+            public const nint m_OnGlovePulled = 0xB18; // CEntityIOOutput
+            public const nint m_vOriginalSpawnOrigin = 0xB40; // VectorWS
+            public const nint m_vOriginalSpawnAngles = 0xB4C; // QAngle
+            public const nint m_bPhysStartAsleep = 0xB58; // bool
         }
         // Parent: CBaseTrigger
         // Field count: 7
         public static class CTriggerPush {
-            public const nint m_angPushEntitySpace = 0x9B8; // QAngle
-            public const nint m_vecPushDirEntitySpace = 0x9C4; // Vector
-            public const nint m_bTriggerOnStartTouch = 0x9D0; // bool
-            public const nint m_bUsePathSimple = 0x9D1; // bool
-            public const nint m_iszPathSimpleName = 0x9D8; // CUtlSymbolLarge
-            public const nint m_PathSimple = 0x9E0; // CPathSimple*
-            public const nint m_splinePushType = 0x9E8; // uint32
+            public const nint m_angPushEntitySpace = 0x9A8; // QAngle
+            public const nint m_vecPushDirEntitySpace = 0x9B4; // Vector
+            public const nint m_bTriggerOnStartTouch = 0x9C0; // bool
+            public const nint m_bUsePathSimple = 0x9C1; // bool
+            public const nint m_iszPathSimpleName = 0x9C8; // CUtlSymbolLarge
+            public const nint m_PathSimple = 0x9D0; // CPathSimple*
+            public const nint m_splinePushType = 0x9D8; // uint32
         }
         // Parent: CBaseAnimGraph
         // Field count: 4
         public static class CBaseProp {
-            public const nint m_bModelOverrodeBlockLOS = 0xA78; // bool
-            public const nint m_iShapeType = 0xA7C; // int32
-            public const nint m_bConformToCollisionBounds = 0xA80; // bool
-            public const nint m_mPreferredCatchTransform = 0xA90; // CTransform
+            public const nint m_bModelOverrodeBlockLOS = 0xA90; // bool
+            public const nint m_iShapeType = 0xA94; // int32
+            public const nint m_bConformToCollisionBounds = 0xA98; // bool
+            public const nint m_mPreferredCatchTransform = 0xAA0; // CTransform
         }
         // Parent: CPointEntity
         // Field count: 10
@@ -5952,7 +5712,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFireInterval = 0x504; // float32
             public const nint m_flLastAngVelocity = 0x508; // float32
             public const nint m_lastOrientation = 0x50C; // QAngle
-            public const nint m_vecAxis = 0x518; // Vector
+            public const nint m_vecAxis = 0x518; // VectorWS
             public const nint m_bUseHelper = 0x524; // bool
             public const nint m_AngularVelocity = 0x528; // CEntityOutputTemplate<float32>
             public const nint m_OnLessThan = 0x550; // CEntityIOOutput
@@ -5984,9 +5744,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Step_FollowEntity {
             public const nint m_ParamBoneOrAttachName = 0x48; // CUtlString
             public const nint m_ParamBoneOrAttachNameChild = 0x50; // CUtlString
@@ -6014,17 +5771,17 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iClip2 (int32)
         // NetworkVarNames: m_pReserveAmmo (int)
         public static class CBasePlayerWeapon {
-            public const nint m_nNextPrimaryAttackTick = 0xE30; // GameTick_t
-            public const nint m_flNextPrimaryAttackTickRatio = 0xE34; // float32
-            public const nint m_nNextSecondaryAttackTick = 0xE38; // GameTick_t
-            public const nint m_flNextSecondaryAttackTickRatio = 0xE3C; // float32
-            public const nint m_iClip1 = 0xE40; // int32
-            public const nint m_iClip2 = 0xE44; // int32
-            public const nint m_pReserveAmmo = 0xE48; // int32[2]
-            public const nint m_OnPlayerUse = 0xE50; // CEntityIOOutput
+            public const nint m_nNextPrimaryAttackTick = 0xE50; // GameTick_t
+            public const nint m_flNextPrimaryAttackTickRatio = 0xE54; // float32
+            public const nint m_nNextSecondaryAttackTick = 0xE58; // GameTick_t
+            public const nint m_flNextSecondaryAttackTickRatio = 0xE5C; // float32
+            public const nint m_iClip1 = 0xE60; // int32
+            public const nint m_iClip2 = 0xE64; // int32
+            public const nint m_pReserveAmmo = 0xE68; // int32[2]
+            public const nint m_OnPlayerUse = 0xE70; // CEntityIOOutput
         }
         // Parent: None
-        // Field count: 81
+        // Field count: 83
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -6076,42 +5833,44 @@ namespace CS2Dumper.Schemas {
             public const nint m_flInaccuracyReload = 0x7C0; // float32
             public const nint m_flDeployDuration = 0x7C4; // float32
             public const nint m_flDisallowAttackAfterReloadStartDuration = 0x7C8; // float32
-            public const nint m_nRecoilSeed = 0x7CC; // int32
-            public const nint m_nSpreadSeed = 0x7D0; // int32
-            public const nint m_flAttackMovespeedFactor = 0x7D4; // float32
-            public const nint m_flInaccuracyPitchShift = 0x7D8; // float32
-            public const nint m_flInaccuracyAltSoundThreshold = 0x7DC; // float32
-            public const nint m_szUseRadioSubtitle = 0x7E0; // CUtlString
-            public const nint m_bUnzoomsAfterShot = 0x7E8; // bool
-            public const nint m_bHideViewModelWhenZoomed = 0x7E9; // bool
-            public const nint m_nZoomLevels = 0x7EC; // int32
-            public const nint m_nZoomFOV1 = 0x7F0; // int32
-            public const nint m_nZoomFOV2 = 0x7F4; // int32
-            public const nint m_flZoomTime0 = 0x7F8; // float32
-            public const nint m_flZoomTime1 = 0x7FC; // float32
-            public const nint m_flZoomTime2 = 0x800; // float32
-            public const nint m_flIronSightPullUpSpeed = 0x804; // float32
-            public const nint m_flIronSightPutDownSpeed = 0x808; // float32
-            public const nint m_flIronSightFOV = 0x80C; // float32
-            public const nint m_flIronSightPivotForward = 0x810; // float32
-            public const nint m_flIronSightLooseness = 0x814; // float32
-            public const nint m_nDamage = 0x818; // int32
-            public const nint m_flHeadshotMultiplier = 0x81C; // float32
-            public const nint m_flArmorRatio = 0x820; // float32
-            public const nint m_flPenetration = 0x824; // float32
-            public const nint m_flRange = 0x828; // float32
-            public const nint m_flRangeModifier = 0x82C; // float32
-            public const nint m_flFlinchVelocityModifierLarge = 0x830; // float32
-            public const nint m_flFlinchVelocityModifierSmall = 0x834; // float32
-            public const nint m_flRecoveryTimeCrouch = 0x838; // float32
-            public const nint m_flRecoveryTimeStand = 0x83C; // float32
-            public const nint m_flRecoveryTimeCrouchFinal = 0x840; // float32
-            public const nint m_flRecoveryTimeStandFinal = 0x844; // float32
-            public const nint m_nRecoveryTransitionStartBullet = 0x848; // int32
-            public const nint m_nRecoveryTransitionEndBullet = 0x84C; // int32
-            public const nint m_flThrowVelocity = 0x850; // float32
-            public const nint m_vSmokeColor = 0x854; // Vector
-            public const nint m_szAnimClass = 0x860; // CGlobalSymbol
+            public const nint m_nBurstShotCount = 0x7CC; // int32
+            public const nint m_bAllowBurstHolster = 0x7D0; // bool
+            public const nint m_nRecoilSeed = 0x7D4; // int32
+            public const nint m_nSpreadSeed = 0x7D8; // int32
+            public const nint m_flAttackMovespeedFactor = 0x7DC; // float32
+            public const nint m_flInaccuracyPitchShift = 0x7E0; // float32
+            public const nint m_flInaccuracyAltSoundThreshold = 0x7E4; // float32
+            public const nint m_szUseRadioSubtitle = 0x7E8; // CUtlString
+            public const nint m_bUnzoomsAfterShot = 0x7F0; // bool
+            public const nint m_bHideViewModelWhenZoomed = 0x7F1; // bool
+            public const nint m_nZoomLevels = 0x7F4; // int32
+            public const nint m_nZoomFOV1 = 0x7F8; // int32
+            public const nint m_nZoomFOV2 = 0x7FC; // int32
+            public const nint m_flZoomTime0 = 0x800; // float32
+            public const nint m_flZoomTime1 = 0x804; // float32
+            public const nint m_flZoomTime2 = 0x808; // float32
+            public const nint m_flIronSightPullUpSpeed = 0x80C; // float32
+            public const nint m_flIronSightPutDownSpeed = 0x810; // float32
+            public const nint m_flIronSightFOV = 0x814; // float32
+            public const nint m_flIronSightPivotForward = 0x818; // float32
+            public const nint m_flIronSightLooseness = 0x81C; // float32
+            public const nint m_nDamage = 0x820; // int32
+            public const nint m_flHeadshotMultiplier = 0x824; // float32
+            public const nint m_flArmorRatio = 0x828; // float32
+            public const nint m_flPenetration = 0x82C; // float32
+            public const nint m_flRange = 0x830; // float32
+            public const nint m_flRangeModifier = 0x834; // float32
+            public const nint m_flFlinchVelocityModifierLarge = 0x838; // float32
+            public const nint m_flFlinchVelocityModifierSmall = 0x83C; // float32
+            public const nint m_flRecoveryTimeCrouch = 0x840; // float32
+            public const nint m_flRecoveryTimeStand = 0x844; // float32
+            public const nint m_flRecoveryTimeCrouchFinal = 0x848; // float32
+            public const nint m_flRecoveryTimeStandFinal = 0x84C; // float32
+            public const nint m_nRecoveryTransitionStartBullet = 0x850; // int32
+            public const nint m_nRecoveryTransitionEndBullet = 0x854; // int32
+            public const nint m_flThrowVelocity = 0x858; // float32
+            public const nint m_vSmokeColor = 0x85C; // Vector
+            public const nint m_szAnimClass = 0x868; // CGlobalSymbol
         }
         // Parent: CPointEntity
         // Field count: 6
@@ -6178,9 +5937,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Timeline {
             public const nint m_TimelineEvents = 0x48; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
             public const nint m_bWaitForChildOutflows = 0x60; // bool
@@ -6192,9 +5948,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_EntOutputHandler {
             public const nint m_SourceEntity = 0x80; // PulseSymbol_t
             public const nint m_SourceOutput = 0x90; // PulseSymbol_t
@@ -6204,7 +5957,6 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyFriendlyName
         public static class CPulseFuncs_GameParticleManager {
         }
@@ -6338,9 +6090,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Step_SetAnimGraphParam {
             public const nint m_ParamName = 0x48; // CUtlString
         }
@@ -6349,9 +6098,10 @@ namespace CS2Dumper.Schemas {
         public static class CPlayer_FlashlightServices {
         }
         // Parent: CBasePlayerController
-        // Field count: 93
+        // Field count: 92
         //
         // Metadata:
+        // MNetworkUserGroupProxy
         // MNetworkUserGroupProxy
         // MNetworkUserGroupProxy
         // MNetworkUserGroupProxy
@@ -6409,29 +6159,28 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iMVPs (int)
         // NetworkVarNames: m_bFireBulletsSeedSynchronized (bool)
         public static class CCSPlayerController {
-            public const nint m_pInGameMoneyServices = 0x800; // CCSPlayerController_InGameMoneyServices*
-            public const nint m_pInventoryServices = 0x808; // CCSPlayerController_InventoryServices*
-            public const nint m_pActionTrackingServices = 0x810; // CCSPlayerController_ActionTrackingServices*
-            public const nint m_pDamageServices = 0x818; // CCSPlayerController_DamageServices*
-            public const nint m_iPing = 0x820; // uint32
-            public const nint m_bHasCommunicationAbuseMute = 0x824; // bool
-            public const nint m_uiCommunicationMuteFlags = 0x828; // uint32
-            public const nint m_szCrosshairCodes = 0x830; // CUtlSymbolLarge
-            public const nint m_iPendingTeamNum = 0x838; // uint8
-            public const nint m_flForceTeamTime = 0x83C; // GameTime_t
-            public const nint m_iCompTeammateColor = 0x840; // int32
-            public const nint m_bEverPlayedOnTeam = 0x844; // bool
-            public const nint m_bAttemptedToGetColor = 0x845; // bool
-            public const nint m_iTeammatePreferredColor = 0x848; // int32
-            public const nint m_bTeamChanged = 0x84C; // bool
-            public const nint m_bInSwitchTeam = 0x84D; // bool
-            public const nint m_bHasSeenJoinGame = 0x84E; // bool
-            public const nint m_bJustBecameSpectator = 0x84F; // bool
-            public const nint m_bSwitchTeamsOnNextRoundReset = 0x850; // bool
-            public const nint m_bRemoveAllItemsOnNextRoundReset = 0x851; // bool
-            public const nint m_flLastJoinTeamTime = 0x854; // GameTime_t
-            public const nint m_szClan = 0x858; // CUtlSymbolLarge
-            public const nint m_szClanName = 0x860; // char[32]
+            public const nint m_pInGameMoneyServices = 0x820; // CCSPlayerController_InGameMoneyServices*
+            public const nint m_pInventoryServices = 0x828; // CCSPlayerController_InventoryServices*
+            public const nint m_pActionTrackingServices = 0x830; // CCSPlayerController_ActionTrackingServices*
+            public const nint m_pDamageServices = 0x838; // CCSPlayerController_DamageServices*
+            public const nint m_iPing = 0x840; // uint32
+            public const nint m_bHasCommunicationAbuseMute = 0x844; // bool
+            public const nint m_uiCommunicationMuteFlags = 0x848; // uint32
+            public const nint m_szCrosshairCodes = 0x850; // CUtlSymbolLarge
+            public const nint m_iPendingTeamNum = 0x858; // uint8
+            public const nint m_flForceTeamTime = 0x85C; // GameTime_t
+            public const nint m_iCompTeammateColor = 0x860; // int32
+            public const nint m_bEverPlayedOnTeam = 0x864; // bool
+            public const nint m_bAttemptedToGetColor = 0x865; // bool
+            public const nint m_iTeammatePreferredColor = 0x868; // int32
+            public const nint m_bTeamChanged = 0x86C; // bool
+            public const nint m_bInSwitchTeam = 0x86D; // bool
+            public const nint m_bHasSeenJoinGame = 0x86E; // bool
+            public const nint m_bJustBecameSpectator = 0x86F; // bool
+            public const nint m_bSwitchTeamsOnNextRoundReset = 0x870; // bool
+            public const nint m_bRemoveAllItemsOnNextRoundReset = 0x871; // bool
+            public const nint m_flLastJoinTeamTime = 0x874; // GameTime_t
+            public const nint m_szClan = 0x878; // CUtlSymbolLarge
             public const nint m_iCoachingTeam = 0x880; // int32
             public const nint m_nPlayerDominated = 0x888; // uint64
             public const nint m_nPlayerDominatingMe = 0x890; // uint64
@@ -6507,7 +6256,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 6
         public static class CPhysLength {
             public const nint m_offset = 0x560; // Vector[2]
-            public const nint m_vecAttach = 0x578; // Vector
+            public const nint m_vecAttach = 0x578; // VectorWS
             public const nint m_addLength = 0x584; // float32
             public const nint m_minLength = 0x588; // float32
             public const nint m_totalLength = 0x58C; // float32
@@ -6552,80 +6301,80 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_jumpedThisFrame (bool)
         // NetworkVarNames: m_leader (CHandle<CCSPlayerPawn>)
         public static class CChicken {
-            public const nint m_AttributeManager = 0xD60; // CAttributeContainer
-            public const nint m_updateTimer = 0x1058; // CountdownTimer
-            public const nint m_stuckAnchor = 0x1070; // Vector
-            public const nint m_stuckTimer = 0x1080; // CountdownTimer
-            public const nint m_collisionStuckTimer = 0x1098; // CountdownTimer
-            public const nint m_isOnGround = 0x10B0; // bool
-            public const nint m_vFallVelocity = 0x10B4; // Vector
-            public const nint m_desiredActivity = 0x10C0; // ChickenActivity
-            public const nint m_currentActivity = 0x10C4; // ChickenActivity
-            public const nint m_activityTimer = 0x10C8; // CountdownTimer
-            public const nint m_turnRate = 0x10E0; // float32
-            public const nint m_fleeFrom = 0x10E4; // CHandle<CBaseEntity>
-            public const nint m_moveRateThrottleTimer = 0x10E8; // CountdownTimer
-            public const nint m_startleTimer = 0x1100; // CountdownTimer
-            public const nint m_vocalizeTimer = 0x1118; // CountdownTimer
-            public const nint m_flWhenZombified = 0x1130; // GameTime_t
-            public const nint m_jumpedThisFrame = 0x1134; // bool
-            public const nint m_leader = 0x1138; // CHandle<CCSPlayerPawn>
-            public const nint m_reuseTimer = 0x1150; // CountdownTimer
-            public const nint m_hasBeenUsed = 0x1168; // bool
-            public const nint m_jumpTimer = 0x1170; // CountdownTimer
-            public const nint m_flLastJumpTime = 0x1188; // float32
-            public const nint m_bInJump = 0x118C; // bool
-            public const nint m_repathTimer = 0x3198; // CountdownTimer
-            public const nint m_vecPathGoal = 0x3230; // Vector
-            public const nint m_flActiveFollowStartTime = 0x323C; // GameTime_t
-            public const nint m_followMinuteTimer = 0x3240; // CountdownTimer
-            public const nint m_BlockDirectionTimer = 0x3260; // CountdownTimer
+            public const nint m_AttributeManager = 0xD70; // CAttributeContainer
+            public const nint m_updateTimer = 0x1068; // CountdownTimer
+            public const nint m_stuckAnchor = 0x1080; // Vector
+            public const nint m_stuckTimer = 0x1090; // CountdownTimer
+            public const nint m_collisionStuckTimer = 0x10A8; // CountdownTimer
+            public const nint m_isOnGround = 0x10C0; // bool
+            public const nint m_vFallVelocity = 0x10C4; // Vector
+            public const nint m_desiredActivity = 0x10D0; // ChickenActivity
+            public const nint m_currentActivity = 0x10D4; // ChickenActivity
+            public const nint m_activityTimer = 0x10D8; // CountdownTimer
+            public const nint m_turnRate = 0x10F0; // float32
+            public const nint m_fleeFrom = 0x10F4; // CHandle<CBaseEntity>
+            public const nint m_moveRateThrottleTimer = 0x10F8; // CountdownTimer
+            public const nint m_startleTimer = 0x1110; // CountdownTimer
+            public const nint m_vocalizeTimer = 0x1128; // CountdownTimer
+            public const nint m_flWhenZombified = 0x1140; // GameTime_t
+            public const nint m_jumpedThisFrame = 0x1144; // bool
+            public const nint m_leader = 0x1148; // CHandle<CCSPlayerPawn>
+            public const nint m_reuseTimer = 0x1160; // CountdownTimer
+            public const nint m_hasBeenUsed = 0x1178; // bool
+            public const nint m_jumpTimer = 0x1180; // CountdownTimer
+            public const nint m_flLastJumpTime = 0x1198; // float32
+            public const nint m_bInJump = 0x119C; // bool
+            public const nint m_repathTimer = 0x31A8; // CountdownTimer
+            public const nint m_vecPathGoal = 0x3240; // Vector
+            public const nint m_flActiveFollowStartTime = 0x324C; // GameTime_t
+            public const nint m_followMinuteTimer = 0x3250; // CountdownTimer
+            public const nint m_BlockDirectionTimer = 0x3270; // CountdownTimer
         }
         // Parent: CPhysicsProp
         // Field count: 5
         public static class CPhysicsPropRespawnable {
-            public const nint m_vOriginalSpawnOrigin = 0xDF0; // Vector
-            public const nint m_vOriginalSpawnAngles = 0xDFC; // QAngle
-            public const nint m_vOriginalMins = 0xE08; // Vector
-            public const nint m_vOriginalMaxs = 0xE14; // Vector
-            public const nint m_flRespawnDuration = 0xE20; // float32
+            public const nint m_vOriginalSpawnOrigin = 0xE00; // VectorWS
+            public const nint m_vOriginalSpawnAngles = 0xE0C; // QAngle
+            public const nint m_vOriginalMins = 0xE18; // Vector
+            public const nint m_vOriginalMaxs = 0xE24; // Vector
+            public const nint m_flRespawnDuration = 0xE30; // float32
         }
         // Parent: CBeam
         // Field count: 19
         public static class CEnvBeam {
-            public const nint m_active = 0x888; // int32
-            public const nint m_spriteTexture = 0x890; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_iszStartEntity = 0x898; // CUtlSymbolLarge
-            public const nint m_iszEndEntity = 0x8A0; // CUtlSymbolLarge
-            public const nint m_life = 0x8A8; // float32
-            public const nint m_boltWidth = 0x8AC; // float32
-            public const nint m_noiseAmplitude = 0x8B0; // float32
-            public const nint m_speed = 0x8B4; // int32
-            public const nint m_restrike = 0x8B8; // float32
-            public const nint m_iszSpriteName = 0x8C0; // CUtlSymbolLarge
-            public const nint m_frameStart = 0x8C8; // int32
-            public const nint m_vEndPointWorld = 0x8CC; // Vector
-            public const nint m_vEndPointRelative = 0x8D8; // Vector
-            public const nint m_radius = 0x8E4; // float32
-            public const nint m_TouchType = 0x8E8; // Touch_t
-            public const nint m_iFilterName = 0x8F0; // CUtlSymbolLarge
-            public const nint m_hFilter = 0x8F8; // CHandle<CBaseEntity>
-            public const nint m_iszDecal = 0x900; // CUtlSymbolLarge
-            public const nint m_OnTouchedByEntity = 0x908; // CEntityIOOutput
+            public const nint m_active = 0x878; // int32
+            public const nint m_spriteTexture = 0x880; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_iszStartEntity = 0x888; // CUtlSymbolLarge
+            public const nint m_iszEndEntity = 0x890; // CUtlSymbolLarge
+            public const nint m_life = 0x898; // float32
+            public const nint m_boltWidth = 0x89C; // float32
+            public const nint m_noiseAmplitude = 0x8A0; // float32
+            public const nint m_speed = 0x8A4; // int32
+            public const nint m_restrike = 0x8A8; // float32
+            public const nint m_iszSpriteName = 0x8B0; // CUtlSymbolLarge
+            public const nint m_frameStart = 0x8B8; // int32
+            public const nint m_vEndPointWorld = 0x8BC; // VectorWS
+            public const nint m_vEndPointRelative = 0x8C8; // Vector
+            public const nint m_radius = 0x8D4; // float32
+            public const nint m_TouchType = 0x8D8; // Touch_t
+            public const nint m_iFilterName = 0x8E0; // CUtlSymbolLarge
+            public const nint m_hFilter = 0x8E8; // CHandle<CBaseEntity>
+            public const nint m_iszDecal = 0x8F0; // CUtlSymbolLarge
+            public const nint m_OnTouchedByEntity = 0x8F8; // CEntityIOOutput
         }
         // Parent: CLightEntity
         // Field count: 0
         public static class CLightSpotEntity {
         }
-        // Parent: CCSWeaponBase
+        // Parent: CCSWeaponBaseShotgun
         // Field count: 0
         public static class CWeaponSawedoff {
         }
         // Parent: CBaseTrigger
         // Field count: 2
         public static class CTonemapTrigger {
-            public const nint m_tonemapControllerName = 0x9B8; // CUtlSymbolLarge
-            public const nint m_hTonemapController = 0x9C0; // CEntityHandle
+            public const nint m_tonemapControllerName = 0x9A8; // CUtlSymbolLarge
+            public const nint m_hTonemapController = 0x9B0; // CEntityHandle
         }
         // Parent: CPointEntity
         // Field count: 10
@@ -6642,7 +6391,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_shakeCallback = 0x528; // CPhysicsShake
         }
         // Parent: CPlayer_MovementServices_Humanoid
-        // Field count: 41
+        // Field count: 42
         //
         // Metadata:
         // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -6664,48 +6413,50 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
         // NetworkVarNames: m_flStamina (float)
         // NetworkVarNames: m_bWasSurfing (bool)
+        // NetworkVarNames: m_bJumpApexPending (bool)
         public static class CCSPlayer_MovementServices {
-            public const nint m_vecLadderNormal = 0x288; // Vector
-            public const nint m_nLadderSurfacePropIndex = 0x294; // int32
-            public const nint m_flDuckAmount = 0x298; // float32
-            public const nint m_flDuckSpeed = 0x29C; // float32
-            public const nint m_bDuckOverride = 0x2A0; // bool
-            public const nint m_bDesiresDuck = 0x2A1; // bool
-            public const nint m_flDuckOffset = 0x2A4; // float32
-            public const nint m_nDuckTimeMsecs = 0x2A8; // uint32
-            public const nint m_nDuckJumpTimeMsecs = 0x2AC; // uint32
-            public const nint m_nJumpTimeMsecs = 0x2B0; // uint32
-            public const nint m_flLastDuckTime = 0x2B4; // float32
-            public const nint m_vecLastPositionAtFullCrouchSpeed = 0x2C0; // Vector2D
-            public const nint m_duckUntilOnGround = 0x2C8; // bool
-            public const nint m_bHasWalkMovedSinceLastJump = 0x2C9; // bool
-            public const nint m_bInStuckTest = 0x2CA; // bool
-            public const nint m_nTraceCount = 0x4D8; // int32
-            public const nint m_StuckLast = 0x4DC; // int32
-            public const nint m_bSpeedCropped = 0x4E0; // bool
-            public const nint m_flGroundMoveEfficiency = 0x4E4; // float32
-            public const nint m_nOldWaterLevel = 0x4E8; // int32
-            public const nint m_flWaterEntryTime = 0x4EC; // float32
-            public const nint m_vecForward = 0x4F0; // Vector
-            public const nint m_vecLeft = 0x4FC; // Vector
-            public const nint m_vecUp = 0x508; // Vector
-            public const nint m_nGameCodeHasMovedPlayerAfterCommand = 0x514; // int32
-            public const nint m_bMadeFootstepNoise = 0x518; // bool
-            public const nint m_iFootsteps = 0x51C; // int32
-            public const nint m_bOldJumpPressed = 0x520; // bool
-            public const nint m_flJumpPressedTime = 0x524; // float32
-            public const nint m_fStashGrenadeParameterWhen = 0x528; // GameTime_t
-            public const nint m_nButtonDownMaskPrev = 0x530; // uint64
-            public const nint m_flOffsetTickCompleteTime = 0x538; // float32
-            public const nint m_flOffsetTickStashedSpeed = 0x53C; // float32
-            public const nint m_flStamina = 0x540; // float32
-            public const nint m_flHeightAtJumpStart = 0x544; // float32
-            public const nint m_flMaxJumpHeightThisJump = 0x548; // float32
-            public const nint m_flMaxJumpHeightLastJump = 0x54C; // float32
-            public const nint m_flStaminaAtJumpStart = 0x550; // float32
-            public const nint m_flAccumulatedJumpError = 0x554; // float32
-            public const nint m_flTicksSinceLastSurfingDetected = 0x558; // float32
-            public const nint m_bWasSurfing = 0x55C; // bool
+            public const nint m_vecLadderNormal = 0x280; // Vector
+            public const nint m_nLadderSurfacePropIndex = 0x28C; // int32
+            public const nint m_flDuckAmount = 0x290; // float32
+            public const nint m_flDuckSpeed = 0x294; // float32
+            public const nint m_bDuckOverride = 0x298; // bool
+            public const nint m_bDesiresDuck = 0x299; // bool
+            public const nint m_flDuckOffset = 0x29C; // float32
+            public const nint m_nDuckTimeMsecs = 0x2A0; // uint32
+            public const nint m_nDuckJumpTimeMsecs = 0x2A4; // uint32
+            public const nint m_nJumpTimeMsecs = 0x2A8; // uint32
+            public const nint m_flLastDuckTime = 0x2AC; // float32
+            public const nint m_vecLastPositionAtFullCrouchSpeed = 0x2B8; // Vector2D
+            public const nint m_duckUntilOnGround = 0x2C0; // bool
+            public const nint m_bHasWalkMovedSinceLastJump = 0x2C1; // bool
+            public const nint m_bInStuckTest = 0x2C2; // bool
+            public const nint m_nTraceCount = 0x4D0; // int32
+            public const nint m_StuckLast = 0x4D4; // int32
+            public const nint m_bSpeedCropped = 0x4D8; // bool
+            public const nint m_nOldWaterLevel = 0x4DC; // int32
+            public const nint m_flWaterEntryTime = 0x4E0; // float32
+            public const nint m_vecForward = 0x4E4; // Vector
+            public const nint m_vecLeft = 0x4F0; // Vector
+            public const nint m_vecUp = 0x4FC; // Vector
+            public const nint m_nGameCodeHasMovedPlayerAfterCommand = 0x508; // int32
+            public const nint m_bMadeFootstepNoise = 0x50C; // bool
+            public const nint m_iFootsteps = 0x510; // int32
+            public const nint m_bOldJumpPressed = 0x514; // bool
+            public const nint m_flJumpPressedTime = 0x518; // float32
+            public const nint m_fStashGrenadeParameterWhen = 0x51C; // GameTime_t
+            public const nint m_nButtonDownMaskPrev = 0x520; // uint64
+            public const nint m_flOffsetTickCompleteTime = 0x528; // float32
+            public const nint m_flOffsetTickStashedSpeed = 0x52C; // float32
+            public const nint m_flStamina = 0x530; // float32
+            public const nint m_flHeightAtJumpStart = 0x534; // float32
+            public const nint m_flMaxJumpHeightThisJump = 0x538; // float32
+            public const nint m_flMaxJumpHeightLastJump = 0x53C; // float32
+            public const nint m_flStaminaAtJumpStart = 0x540; // float32
+            public const nint m_flAccumulatedJumpError = 0x544; // float32
+            public const nint m_flTicksSinceLastSurfingDetected = 0x548; // float32
+            public const nint m_bWasSurfing = 0x54C; // bool
+            public const nint m_vecInputRotated = 0x5DC; // Vector
+            public const nint m_bJumpApexPending = 0xE08; // bool
         }
         // Parent: 
         // Field count: 5
@@ -6741,9 +6492,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorSubHeaderText
@@ -6774,13 +6522,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_cancelTime = 0x514; // GameTime_t
         }
         // Parent: CLogicalEntity
-        // Field count: 5
+        // Field count: 6
         public static class CLogicCollisionPair {
             public const nint m_nameAttach1 = 0x4F0; // CUtlSymbolLarge
             public const nint m_nameAttach2 = 0x4F8; // CUtlSymbolLarge
-            public const nint m_supportMultipleEntitiesWithSameName = 0x500; // bool
-            public const nint m_disabled = 0x501; // bool
-            public const nint m_succeeded = 0x502; // bool
+            public const nint m_includeHierarchy = 0x500; // bool
+            public const nint m_supportMultipleEntitiesWithSameName = 0x501; // bool
+            public const nint m_disabled = 0x502; // bool
+            public const nint m_succeeded = 0x503; // bool
         }
         // Parent: CBaseEntity
         // Field count: 5
@@ -6800,25 +6549,26 @@ namespace CS2Dumper.Schemas {
             public const nint m_scriptedSequence = 0x0; // CHandle<CBaseEntity>
         }
         // Parent: CBasePropDoor
-        // Field count: 17
+        // Field count: 18
         public static class CPropDoorRotating {
-            public const nint m_vecAxis = 0xFE0; // Vector
-            public const nint m_flDistance = 0xFEC; // float32
-            public const nint m_eSpawnPosition = 0xFF0; // PropDoorRotatingSpawnPos_t
-            public const nint m_eOpenDirection = 0xFF4; // PropDoorRotatingOpenDirection_e
-            public const nint m_eCurrentOpenDirection = 0xFF8; // PropDoorRotatingOpenDirection_e
-            public const nint m_flAjarAngle = 0xFFC; // float32
-            public const nint m_angRotationAjarDeprecated = 0x1000; // QAngle
-            public const nint m_angRotationClosed = 0x100C; // QAngle
-            public const nint m_angRotationOpenForward = 0x1018; // QAngle
-            public const nint m_angRotationOpenBack = 0x1024; // QAngle
-            public const nint m_angGoal = 0x1030; // QAngle
-            public const nint m_vecForwardBoundsMin = 0x103C; // Vector
-            public const nint m_vecForwardBoundsMax = 0x1048; // Vector
-            public const nint m_vecBackBoundsMin = 0x1054; // Vector
-            public const nint m_vecBackBoundsMax = 0x1060; // Vector
-            public const nint m_bAjarDoorShouldntAlwaysOpen = 0x106C; // bool
-            public const nint m_hEntityBlocker = 0x1070; // CHandle<CEntityBlocker>
+            public const nint m_vecAxis = 0xFF0; // Vector
+            public const nint m_flDistance = 0xFFC; // float32
+            public const nint m_eSpawnPosition = 0x1000; // PropDoorRotatingSpawnPos_t
+            public const nint m_eOpenDirection = 0x1004; // PropDoorRotatingOpenDirection_e
+            public const nint m_eCurrentOpenDirection = 0x1008; // PropDoorRotatingOpenDirection_e
+            public const nint m_eDefaultCheckDirection = 0x100C; // doorCheck_e
+            public const nint m_flAjarAngle = 0x1010; // float32
+            public const nint m_angRotationAjarDeprecated = 0x1014; // QAngle
+            public const nint m_angRotationClosed = 0x1020; // QAngle
+            public const nint m_angRotationOpenForward = 0x102C; // QAngle
+            public const nint m_angRotationOpenBack = 0x1038; // QAngle
+            public const nint m_angGoal = 0x1044; // QAngle
+            public const nint m_vecForwardBoundsMin = 0x1050; // Vector
+            public const nint m_vecForwardBoundsMax = 0x105C; // Vector
+            public const nint m_vecBackBoundsMin = 0x1068; // Vector
+            public const nint m_vecBackBoundsMax = 0x1074; // Vector
+            public const nint m_bAjarDoorShouldntAlwaysOpen = 0x1080; // bool
+            public const nint m_hEntityBlocker = 0x1084; // CHandle<CEntityBlocker>
         }
         // Parent: CParticleSystem
         // Field count: 5
@@ -6830,11 +6580,11 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_ColorTint (Color)
         // NetworkVarNames: m_hTextureOverride (HRenderTextureStrong)
         public static class CEnvParticleGlow {
-            public const nint m_flAlphaScale = 0xD60; // float32
-            public const nint m_flRadiusScale = 0xD64; // float32
-            public const nint m_flSelfIllumScale = 0xD68; // float32
-            public const nint m_ColorTint = 0xD6C; // Color
-            public const nint m_hTextureOverride = 0xD70; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_flAlphaScale = 0xD50; // float32
+            public const nint m_flRadiusScale = 0xD54; // float32
+            public const nint m_flSelfIllumScale = 0xD58; // float32
+            public const nint m_ColorTint = 0xD5C; // Color
+            public const nint m_hTextureOverride = 0xD60; // CStrongHandle<InfoForResourceTypeCTextureBase>
         }
         // Parent: CLogicalEntity
         // Field count: 11
@@ -6862,18 +6612,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flWindMax = 0x5CC; // float32
             public const nint m_flWindMapMin = 0x5D0; // float32
             public const nint m_flWindMapMax = 0x5D4; // float32
-        }
-        // Parent: None
-        // Field count: 2
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
-        public static class CPulseCell_Outflow_StringSwitch {
-            public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
-            public const nint m_CaseOutflows = 0x90; // CUtlVector<CPulse_OutflowConnection>
         }
         // Parent: 
         // Field count: 3
@@ -6903,7 +6641,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CTriggerOnce
         // Field count: 1
         public static class CScriptTriggerOnce {
-            public const nint m_vExtent = 0x9E0; // Vector
+            public const nint m_vExtent = 0x9D0; // Vector
         }
         // Parent: CLightEntity
         // Field count: 0
@@ -6924,15 +6662,15 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 4
         public static class CTriggerTeleport {
-            public const nint m_iLandmark = 0x9B8; // CUtlSymbolLarge
-            public const nint m_bUseLandmarkAngles = 0x9C0; // bool
-            public const nint m_bMirrorPlayer = 0x9C1; // bool
-            public const nint m_bCheckDestIfClearForPlayer = 0x9C2; // bool
+            public const nint m_iLandmark = 0x9A8; // CUtlSymbolLarge
+            public const nint m_bUseLandmarkAngles = 0x9B0; // bool
+            public const nint m_bMirrorPlayer = 0x9B1; // bool
+            public const nint m_bCheckDestIfClearForPlayer = 0x9B2; // bool
         }
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CFuncWall {
-            public const nint m_nState = 0x7E8; // int32
+            public const nint m_nState = 0x7D8; // int32
         }
         // Parent: None
         // Field count: 12
@@ -6984,7 +6722,6 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CPulseServerFuncs {
@@ -7023,11 +6760,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CBaseModelEntityAPI {
         }
         // Parent: CHostageExpresserShim
@@ -7052,50 +6784,50 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flGrabSuccessTime (GameTime_t)
         // NetworkVarNames: m_flDropStartTime (GameTime_t)
         public static class CHostage {
-            public const nint m_OnHostageBeginGrab = 0xBE8; // CEntityIOOutput
-            public const nint m_OnFirstPickedUp = 0xC10; // CEntityIOOutput
-            public const nint m_OnDroppedNotRescued = 0xC38; // CEntityIOOutput
-            public const nint m_OnRescued = 0xC60; // CEntityIOOutput
-            public const nint m_entitySpottedState = 0xC88; // EntitySpottedState_t
-            public const nint m_nSpotRules = 0xCA0; // int32
-            public const nint m_uiHostageSpawnExclusionGroupMask = 0xCA4; // uint32
-            public const nint m_nHostageSpawnRandomFactor = 0xCA8; // uint32
-            public const nint m_bRemove = 0xCAC; // bool
-            public const nint m_vel = 0xCB0; // Vector
-            public const nint m_isRescued = 0xCBC; // bool
-            public const nint m_jumpedThisFrame = 0xCBD; // bool
-            public const nint m_nHostageState = 0xCC0; // int32
-            public const nint m_leader = 0xCC4; // CHandle<CBaseEntity>
-            public const nint m_lastLeader = 0xCC8; // CHandle<CCSPlayerPawnBase>
-            public const nint m_reuseTimer = 0xCD0; // CountdownTimer
-            public const nint m_hasBeenUsed = 0xCE8; // bool
-            public const nint m_accel = 0xCEC; // Vector
-            public const nint m_isRunning = 0xCF8; // bool
-            public const nint m_isCrouching = 0xCF9; // bool
-            public const nint m_jumpTimer = 0xD00; // CountdownTimer
-            public const nint m_isWaitingForLeader = 0xD18; // bool
-            public const nint m_repathTimer = 0x2D28; // CountdownTimer
-            public const nint m_inhibitDoorTimer = 0x2D40; // CountdownTimer
-            public const nint m_inhibitObstacleAvoidanceTimer = 0x2DD0; // CountdownTimer
-            public const nint m_wiggleTimer = 0x2DF0; // CountdownTimer
-            public const nint m_isAdjusted = 0x2E0C; // bool
-            public const nint m_bHandsHaveBeenCut = 0x2E0D; // bool
-            public const nint m_hHostageGrabber = 0x2E10; // CHandle<CCSPlayerPawn>
-            public const nint m_fLastGrabTime = 0x2E14; // GameTime_t
-            public const nint m_vecPositionWhenStartedDroppingToGround = 0x2E18; // Vector
-            public const nint m_vecGrabbedPos = 0x2E24; // Vector
-            public const nint m_flRescueStartTime = 0x2E30; // GameTime_t
-            public const nint m_flGrabSuccessTime = 0x2E34; // GameTime_t
-            public const nint m_flDropStartTime = 0x2E38; // GameTime_t
-            public const nint m_nApproachRewardPayouts = 0x2E3C; // int32
-            public const nint m_nPickupEventCount = 0x2E40; // int32
-            public const nint m_vecSpawnGroundPos = 0x2E44; // Vector
-            public const nint m_vecHostageResetPosition = 0x2E7C; // Vector
+            public const nint m_OnHostageBeginGrab = 0xC08; // CEntityIOOutput
+            public const nint m_OnFirstPickedUp = 0xC30; // CEntityIOOutput
+            public const nint m_OnDroppedNotRescued = 0xC58; // CEntityIOOutput
+            public const nint m_OnRescued = 0xC80; // CEntityIOOutput
+            public const nint m_entitySpottedState = 0xCA8; // EntitySpottedState_t
+            public const nint m_nSpotRules = 0xCC0; // int32
+            public const nint m_uiHostageSpawnExclusionGroupMask = 0xCC4; // uint32
+            public const nint m_nHostageSpawnRandomFactor = 0xCC8; // uint32
+            public const nint m_bRemove = 0xCCC; // bool
+            public const nint m_vel = 0xCD0; // Vector
+            public const nint m_isRescued = 0xCDC; // bool
+            public const nint m_jumpedThisFrame = 0xCDD; // bool
+            public const nint m_nHostageState = 0xCE0; // int32
+            public const nint m_leader = 0xCE4; // CHandle<CBaseEntity>
+            public const nint m_lastLeader = 0xCE8; // CHandle<CCSPlayerPawnBase>
+            public const nint m_reuseTimer = 0xCF0; // CountdownTimer
+            public const nint m_hasBeenUsed = 0xD08; // bool
+            public const nint m_accel = 0xD0C; // Vector
+            public const nint m_isRunning = 0xD18; // bool
+            public const nint m_isCrouching = 0xD19; // bool
+            public const nint m_jumpTimer = 0xD20; // CountdownTimer
+            public const nint m_isWaitingForLeader = 0xD38; // bool
+            public const nint m_repathTimer = 0x2D48; // CountdownTimer
+            public const nint m_inhibitDoorTimer = 0x2D60; // CountdownTimer
+            public const nint m_inhibitObstacleAvoidanceTimer = 0x2DF0; // CountdownTimer
+            public const nint m_wiggleTimer = 0x2E10; // CountdownTimer
+            public const nint m_isAdjusted = 0x2E2C; // bool
+            public const nint m_bHandsHaveBeenCut = 0x2E2D; // bool
+            public const nint m_hHostageGrabber = 0x2E30; // CHandle<CCSPlayerPawn>
+            public const nint m_fLastGrabTime = 0x2E34; // GameTime_t
+            public const nint m_vecPositionWhenStartedDroppingToGround = 0x2E38; // Vector
+            public const nint m_vecGrabbedPos = 0x2E44; // Vector
+            public const nint m_flRescueStartTime = 0x2E50; // GameTime_t
+            public const nint m_flGrabSuccessTime = 0x2E54; // GameTime_t
+            public const nint m_flDropStartTime = 0x2E58; // GameTime_t
+            public const nint m_nApproachRewardPayouts = 0x2E5C; // int32
+            public const nint m_nPickupEventCount = 0x2E60; // int32
+            public const nint m_vecSpawnGroundPos = 0x2E64; // Vector
+            public const nint m_vecHostageResetPosition = 0x2E9C; // VectorWS
         }
         // Parent: CTriggerMultiple
         // Field count: 1
         public static class CScriptTriggerMultiple {
-            public const nint m_vExtent = 0x9E0; // Vector
+            public const nint m_vExtent = 0x9D0; // Vector
         }
         // Parent: CPointEntity
         // Field count: 5
@@ -7112,6 +6844,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_nSendUpdate (int)
         // NetworkVarNames: m_DamageList (CDamageRecord)
+        // MNetworkReplayCompatField
         public static class CCSPlayerController_DamageServices {
             public const nint m_nSendUpdate = 0x40; // int32
             public const nint m_DamageList = 0x48; // CUtlVectorEmbeddedNetworkVar<CDamageRecord>
@@ -7135,18 +6868,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMaxTurnRate = 0x508; // float32
             public const nint m_flLastGameTime = 0x50C; // GameTime_t
         }
-        // Parent: None
-        // Field count: 1
-        //
-        // Metadata:
-        // MPulseInstanceDomainInfo
-        // MPulseDomainHookInfo
-        // MPulseDomainScopeInfo
-        // MPulseLibraryBindings
-        // MPulseDomainOptInFeatureTag
-        public static class CCSPointScript {
-            public const nint m_pParent = 0x118; // CCSPointScriptEntity*
-        }
         // Parent: 
         // Field count: 6
         //
@@ -7169,16 +6890,28 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CWeaponP250 {
         }
+        // Parent: 
+        // Field count: 4
+        //
+        // Metadata:
+        // NetworkVarNames: m_hOwner (CHandle<CBaseModelEntity>)
+        // NetworkVarNames: m_nLastHitDamageLevel (int)
+        public static class CDestructiblePartsComponent {
+            public const nint __m_pChainEntity = 0x0; // CNetworkVarChainer
+            public const nint m_vecDamageTakenByHitGroup = 0x48; // CUtlVector<uint16>
+            public const nint m_hOwner = 0x60; // CHandle<CBaseModelEntity>
+            public const nint m_nLastHitDamageLevel = 0x64; // int32
+        }
         // Parent: CBaseTrigger
         // Field count: 7
         public static class CChangeLevel {
-            public const nint m_sMapName = 0x9B8; // CUtlString
-            public const nint m_sLandmarkName = 0x9C0; // CUtlString
-            public const nint m_OnChangeLevel = 0x9C8; // CEntityIOOutput
-            public const nint m_bTouched = 0x9F0; // bool
-            public const nint m_bNoTouch = 0x9F1; // bool
-            public const nint m_bNewChapter = 0x9F2; // bool
-            public const nint m_bOnChangeLevelFired = 0x9F3; // bool
+            public const nint m_sMapName = 0x9A8; // CUtlString
+            public const nint m_sLandmarkName = 0x9B0; // CUtlString
+            public const nint m_OnChangeLevel = 0x9B8; // CEntityIOOutput
+            public const nint m_bTouched = 0x9E0; // bool
+            public const nint m_bNoTouch = 0x9E1; // bool
+            public const nint m_bNewChapter = 0x9E2; // bool
+            public const nint m_bOnChangeLevelFired = 0x9E3; // bool
         }
         // Parent: CBaseToggle
         // Field count: 25
@@ -7188,40 +6921,37 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_usable (bool)
         // NetworkVarNames: m_szDisplayText (string_t)
         public static class CBaseButton {
-            public const nint m_angMoveEntitySpace = 0x868; // QAngle
-            public const nint m_fStayPushed = 0x874; // bool
-            public const nint m_fRotating = 0x875; // bool
-            public const nint m_ls = 0x878; // locksound_t
-            public const nint m_sUseSound = 0x898; // CUtlSymbolLarge
-            public const nint m_sLockedSound = 0x8A0; // CUtlSymbolLarge
-            public const nint m_sUnlockedSound = 0x8A8; // CUtlSymbolLarge
-            public const nint m_sOverrideAnticipationName = 0x8B0; // CUtlSymbolLarge
-            public const nint m_bLocked = 0x8B8; // bool
-            public const nint m_bDisabled = 0x8B9; // bool
-            public const nint m_flUseLockedTime = 0x8BC; // GameTime_t
-            public const nint m_bSolidBsp = 0x8C0; // bool
-            public const nint m_OnDamaged = 0x8C8; // CEntityIOOutput
-            public const nint m_OnPressed = 0x8F0; // CEntityIOOutput
-            public const nint m_OnUseLocked = 0x918; // CEntityIOOutput
-            public const nint m_OnIn = 0x940; // CEntityIOOutput
-            public const nint m_OnOut = 0x968; // CEntityIOOutput
-            public const nint m_nState = 0x990; // int32
-            public const nint m_hConstraint = 0x994; // CEntityHandle
-            public const nint m_hConstraintParent = 0x998; // CEntityHandle
-            public const nint m_bForceNpcExclude = 0x99C; // bool
-            public const nint m_sGlowEntity = 0x9A0; // CUtlSymbolLarge
-            public const nint m_glowEntity = 0x9A8; // CHandle<CBaseModelEntity>
-            public const nint m_usable = 0x9AC; // bool
-            public const nint m_szDisplayText = 0x9B0; // CUtlSymbolLarge
+            public const nint m_angMoveEntitySpace = 0x858; // QAngle
+            public const nint m_fStayPushed = 0x864; // bool
+            public const nint m_fRotating = 0x865; // bool
+            public const nint m_ls = 0x868; // locksound_t
+            public const nint m_sUseSound = 0x888; // CUtlSymbolLarge
+            public const nint m_sLockedSound = 0x890; // CUtlSymbolLarge
+            public const nint m_sUnlockedSound = 0x898; // CUtlSymbolLarge
+            public const nint m_sOverrideAnticipationName = 0x8A0; // CUtlSymbolLarge
+            public const nint m_bLocked = 0x8A8; // bool
+            public const nint m_bDisabled = 0x8A9; // bool
+            public const nint m_flUseLockedTime = 0x8AC; // GameTime_t
+            public const nint m_bSolidBsp = 0x8B0; // bool
+            public const nint m_OnDamaged = 0x8B8; // CEntityIOOutput
+            public const nint m_OnPressed = 0x8E0; // CEntityIOOutput
+            public const nint m_OnUseLocked = 0x908; // CEntityIOOutput
+            public const nint m_OnIn = 0x930; // CEntityIOOutput
+            public const nint m_OnOut = 0x958; // CEntityIOOutput
+            public const nint m_nState = 0x980; // int32
+            public const nint m_hConstraint = 0x984; // CEntityHandle
+            public const nint m_hConstraintParent = 0x988; // CEntityHandle
+            public const nint m_bForceNpcExclude = 0x98C; // bool
+            public const nint m_sGlowEntity = 0x990; // CUtlSymbolLarge
+            public const nint m_glowEntity = 0x998; // CHandle<CBaseModelEntity>
+            public const nint m_usable = 0x99C; // bool
+            public const nint m_szDisplayText = 0x9A0; // CUtlSymbolLarge
         }
         // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CPulseCell_SoundEventStart {
@@ -7232,9 +6962,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Step_DebugLog {
         }
         // Parent: CWeaponBaseItem
@@ -7262,20 +6989,20 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flDamage (float32)
         // NetworkVarNames: m_hThrower (CHandle<CCSPlayerPawn>)
         public static class CBaseGrenade {
-            public const nint m_OnPlayerPickup = 0xB10; // CEntityIOOutput
-            public const nint m_OnExplode = 0xB38; // CEntityIOOutput
-            public const nint m_bHasWarnedAI = 0xB60; // bool
-            public const nint m_bIsSmokeGrenade = 0xB61; // bool
-            public const nint m_bIsLive = 0xB62; // bool
-            public const nint m_DmgRadius = 0xB64; // float32
-            public const nint m_flDetonateTime = 0xB68; // GameTime_t
-            public const nint m_flWarnAITime = 0xB6C; // float32
-            public const nint m_flDamage = 0xB70; // float32
-            public const nint m_iszBounceSound = 0xB78; // CUtlSymbolLarge
-            public const nint m_ExplosionSound = 0xB80; // CUtlString
-            public const nint m_hThrower = 0xB8C; // CHandle<CCSPlayerPawn>
-            public const nint m_flNextAttack = 0xBA4; // GameTime_t
-            public const nint m_hOriginalThrower = 0xBA8; // CHandle<CCSPlayerPawn>
+            public const nint m_OnPlayerPickup = 0xB28; // CEntityIOOutput
+            public const nint m_OnExplode = 0xB50; // CEntityIOOutput
+            public const nint m_bHasWarnedAI = 0xB78; // bool
+            public const nint m_bIsSmokeGrenade = 0xB79; // bool
+            public const nint m_bIsLive = 0xB7A; // bool
+            public const nint m_DmgRadius = 0xB7C; // float32
+            public const nint m_flDetonateTime = 0xB80; // GameTime_t
+            public const nint m_flWarnAITime = 0xB84; // float32
+            public const nint m_flDamage = 0xB88; // float32
+            public const nint m_iszBounceSound = 0xB90; // CUtlSymbolLarge
+            public const nint m_ExplosionSound = 0xB98; // CUtlString
+            public const nint m_hThrower = 0xBA4; // CHandle<CCSPlayerPawn>
+            public const nint m_flNextAttack = 0xBBC; // GameTime_t
+            public const nint m_hOriginalThrower = 0xBC0; // CHandle<CCSPlayerPawn>
         }
         // Parent: CBaseTrigger
         // Field count: 8
@@ -7286,14 +7013,14 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_Weight (float32)
         // NetworkVarNames: m_lookupFilename (char)
         public static class CColorCorrectionVolume {
-            public const nint m_MaxWeight = 0x9B8; // float32
-            public const nint m_FadeDuration = 0x9BC; // float32
-            public const nint m_Weight = 0x9C0; // float32
-            public const nint m_lookupFilename = 0x9C4; // char[512]
-            public const nint m_LastEnterWeight = 0xBC4; // float32
-            public const nint m_LastEnterTime = 0xBC8; // GameTime_t
-            public const nint m_LastExitWeight = 0xBCC; // float32
-            public const nint m_LastExitTime = 0xBD0; // GameTime_t
+            public const nint m_MaxWeight = 0x9A8; // float32
+            public const nint m_FadeDuration = 0x9AC; // float32
+            public const nint m_Weight = 0x9B0; // float32
+            public const nint m_lookupFilename = 0x9B4; // char[512]
+            public const nint m_LastEnterWeight = 0xBB4; // float32
+            public const nint m_LastEnterTime = 0xBB8; // GameTime_t
+            public const nint m_LastExitWeight = 0xBBC; // float32
+            public const nint m_LastExitTime = 0xBC0; // GameTime_t
         }
         // Parent: CPlayerControllerComponent
         // Field count: 5
@@ -7303,13 +7030,13 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_matchStats (CSMatchStats_t)
         // NetworkVarNames: m_iNumRoundKills (int)
         // NetworkVarNames: m_iNumRoundKillsHeadshots (int)
-        // NetworkVarNames: m_unTotalRoundDamageDealt (uint32)
+        // NetworkVarNames: m_flTotalRoundDamageDealt (float)
         public static class CCSPlayerController_ActionTrackingServices {
             public const nint m_perRoundStats = 0x40; // CUtlVectorEmbeddedNetworkVar<CSPerRoundStats_t>
             public const nint m_matchStats = 0xC8; // CSMatchStats_t
             public const nint m_iNumRoundKills = 0x188; // int32
             public const nint m_iNumRoundKillsHeadshots = 0x18C; // int32
-            public const nint m_unTotalRoundDamageDealt = 0x190; // uint32
+            public const nint m_flTotalRoundDamageDealt = 0x190; // float32
         }
         // Parent: CBodyComponentSkeletonInstance
         // Field count: 1
@@ -7337,11 +7064,11 @@ namespace CS2Dumper.Schemas {
         // Parent: CServerOnlyModelEntity
         // Field count: 5
         public static class CFogVolume {
-            public const nint m_fogName = 0x7E8; // CUtlSymbolLarge
-            public const nint m_postProcessName = 0x7F0; // CUtlSymbolLarge
-            public const nint m_colorCorrectionName = 0x7F8; // CUtlSymbolLarge
-            public const nint m_bDisabled = 0x808; // bool
-            public const nint m_bInFogVolumesList = 0x809; // bool
+            public const nint m_fogName = 0x7D8; // CUtlSymbolLarge
+            public const nint m_postProcessName = 0x7E0; // CUtlSymbolLarge
+            public const nint m_colorCorrectionName = 0x7E8; // CUtlSymbolLarge
+            public const nint m_bDisabled = 0x7F8; // bool
+            public const nint m_bInFogVolumesList = 0x7F9; // bool
         }
         // Parent: CBaseModelEntity
         // Field count: 18
@@ -7350,24 +7077,24 @@ namespace CS2Dumper.Schemas {
         // MNetworkOverride
         // MNetworkOverride
         public static class CFuncRotating {
-            public const nint m_OnStopped = 0x7E8; // CEntityIOOutput
-            public const nint m_OnStarted = 0x810; // CEntityIOOutput
-            public const nint m_OnReachedStart = 0x838; // CEntityIOOutput
-            public const nint m_localRotationVector = 0x860; // RotationVector
-            public const nint m_flFanFriction = 0x86C; // float32
-            public const nint m_flAttenuation = 0x870; // float32
-            public const nint m_flVolume = 0x874; // float32
-            public const nint m_flTargetSpeed = 0x878; // float32
-            public const nint m_flMaxSpeed = 0x87C; // float32
-            public const nint m_flBlockDamage = 0x880; // float32
-            public const nint m_NoiseRunning = 0x888; // CUtlSymbolLarge
-            public const nint m_bReversed = 0x890; // bool
-            public const nint m_bAccelDecel = 0x891; // bool
-            public const nint m_prevLocalAngles = 0x8A8; // QAngle
-            public const nint m_angStart = 0x8B4; // QAngle
-            public const nint m_bStopAtStartPos = 0x8C0; // bool
-            public const nint m_vecClientOrigin = 0x8C4; // Vector
-            public const nint m_vecClientAngles = 0x8D0; // QAngle
+            public const nint m_OnStopped = 0x7D8; // CEntityIOOutput
+            public const nint m_OnStarted = 0x800; // CEntityIOOutput
+            public const nint m_OnReachedStart = 0x828; // CEntityIOOutput
+            public const nint m_localRotationVector = 0x850; // RotationVector
+            public const nint m_flFanFriction = 0x85C; // float32
+            public const nint m_flAttenuation = 0x860; // float32
+            public const nint m_flVolume = 0x864; // float32
+            public const nint m_flTargetSpeed = 0x868; // float32
+            public const nint m_flMaxSpeed = 0x86C; // float32
+            public const nint m_flBlockDamage = 0x870; // float32
+            public const nint m_NoiseRunning = 0x878; // CUtlSymbolLarge
+            public const nint m_bReversed = 0x880; // bool
+            public const nint m_bAccelDecel = 0x881; // bool
+            public const nint m_prevLocalAngles = 0x898; // QAngle
+            public const nint m_angStart = 0x8A4; // QAngle
+            public const nint m_bStopAtStartPos = 0x8B0; // bool
+            public const nint m_vecClientOrigin = 0x8B4; // Vector
+            public const nint m_vecClientAngles = 0x8C0; // QAngle
         }
         // Parent: CLogicalEntity
         // Field count: 13
@@ -7416,27 +7143,22 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bDucking (bool)
         // NetworkVarNames: m_bInDuckJump (bool)
         public static class CPlayer_MovementServices_Humanoid {
-            public const nint m_flStepSoundTime = 0x240; // float32
-            public const nint m_flFallVelocity = 0x244; // float32
-            public const nint m_bInCrouch = 0x248; // bool
-            public const nint m_nCrouchState = 0x24C; // uint32
-            public const nint m_flCrouchTransitionStartTime = 0x250; // GameTime_t
-            public const nint m_bDucked = 0x254; // bool
-            public const nint m_bDucking = 0x255; // bool
-            public const nint m_bInDuckJump = 0x256; // bool
-            public const nint m_groundNormal = 0x258; // Vector
-            public const nint m_flSurfaceFriction = 0x264; // float32
-            public const nint m_surfaceProps = 0x268; // CUtlStringToken
-            public const nint m_nStepside = 0x278; // int32
-            public const nint m_vecSmoothedVelocity = 0x27C; // Vector
+            public const nint m_flStepSoundTime = 0x238; // float32
+            public const nint m_flFallVelocity = 0x23C; // float32
+            public const nint m_bInCrouch = 0x240; // bool
+            public const nint m_nCrouchState = 0x244; // uint32
+            public const nint m_flCrouchTransitionStartTime = 0x248; // GameTime_t
+            public const nint m_bDucked = 0x24C; // bool
+            public const nint m_bDucking = 0x24D; // bool
+            public const nint m_bInDuckJump = 0x24E; // bool
+            public const nint m_groundNormal = 0x250; // Vector
+            public const nint m_flSurfaceFriction = 0x25C; // float32
+            public const nint m_surfaceProps = 0x260; // CUtlStringToken
+            public const nint m_nStepside = 0x270; // int32
+            public const nint m_vecSmoothedVelocity = 0x274; // Vector
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CBaseEntityAPI {
         }
         // Parent: None
@@ -7473,8 +7195,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_iUtility_Enemies = 0x88; // int32
             public const nint m_iFlash_Count = 0x8C; // int32
             public const nint m_iFlash_Successes = 0x90; // int32
-            public const nint m_nHealthPointsRemovedTotal = 0x94; // int32
-            public const nint m_nHealthPointsDealtTotal = 0x98; // int32
+            public const nint m_flHealthPointsRemovedTotal = 0x94; // float32
+            public const nint m_flHealthPointsDealtTotal = 0x98; // float32
             public const nint m_nShotsFiredTotal = 0x9C; // int32
             public const nint m_nShotsOnTargetTotal = 0xA0; // int32
             public const nint m_i1v1Count = 0xA4; // int32
@@ -7499,9 +7221,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_ObservableVariableListener {
             public const nint m_nBlackboardReference = 0x80; // PulseRuntimeBlackboardReferenceIndex_t
             public const nint m_bSelfReference = 0x82; // bool
@@ -7519,15 +7238,15 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bEnabled (bool)
         // NetworkVarNames: m_bDraw3DSkybox (bool)
         public static class CFuncMonitor {
-            public const nint m_targetCamera = 0x808; // CUtlString
-            public const nint m_nResolutionEnum = 0x810; // int32
-            public const nint m_bRenderShadows = 0x814; // bool
-            public const nint m_bUseUniqueColorTarget = 0x815; // bool
-            public const nint m_brushModelName = 0x818; // CUtlString
-            public const nint m_hTargetCamera = 0x820; // CHandle<CBaseEntity>
-            public const nint m_bEnabled = 0x824; // bool
-            public const nint m_bDraw3DSkybox = 0x825; // bool
-            public const nint m_bStartEnabled = 0x826; // bool
+            public const nint m_targetCamera = 0x7F8; // CUtlString
+            public const nint m_nResolutionEnum = 0x800; // int32
+            public const nint m_bRenderShadows = 0x804; // bool
+            public const nint m_bUseUniqueColorTarget = 0x805; // bool
+            public const nint m_brushModelName = 0x808; // CUtlString
+            public const nint m_hTargetCamera = 0x810; // CHandle<CBaseEntity>
+            public const nint m_bEnabled = 0x814; // bool
+            public const nint m_bDraw3DSkybox = 0x815; // bool
+            public const nint m_bStartEnabled = 0x816; // bool
         }
         // Parent: CBaseEntity
         // Field count: 3
@@ -7544,9 +7263,9 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseToggle
         // Field count: 3
         public static class CGunTarget {
-            public const nint m_on = 0x868; // bool
-            public const nint m_hTargetEnt = 0x86C; // CHandle<CBaseEntity>
-            public const nint m_OnDeath = 0x870; // CEntityIOOutput
+            public const nint m_on = 0x858; // bool
+            public const nint m_hTargetEnt = 0x85C; // CHandle<CBaseEntity>
+            public const nint m_OnDeath = 0x860; // CEntityIOOutput
         }
         // Parent: CSoundOpvarSetAABBEntity
         // Field count: 0
@@ -7554,11 +7273,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CFilterMultipleAPI {
         }
         // Parent: CBaseCSGrenadeProjectile
@@ -7567,10 +7281,10 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_nDecoyShotTick (int)
         public static class CDecoyProjectile {
-            public const nint m_nDecoyShotTick = 0xC38; // int32
-            public const nint m_shotsRemaining = 0xC3C; // int32
-            public const nint m_fExpireTime = 0xC40; // GameTime_t
-            public const nint m_decoyWeaponDefIndex = 0xC50; // uint16
+            public const nint m_nDecoyShotTick = 0xC58; // int32
+            public const nint m_shotsRemaining = 0xC5C; // int32
+            public const nint m_fExpireTime = 0xC60; // GameTime_t
+            public const nint m_decoyWeaponDefIndex = 0xC70; // uint16
         }
         // Parent: CBaseModelEntity
         // Field count: 0
@@ -7629,9 +7343,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Outflow_CycleOrdered {
             public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
         }
@@ -7706,16 +7417,16 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bNeedsBoltAction (bool)
         // NetworkVarNames: m_nRevolverCylinderIdx (int32)
         public static class CCSWeaponBaseGun {
-            public const nint m_zoomLevel = 0x1030; // int32
-            public const nint m_iBurstShotsRemaining = 0x1034; // int32
-            public const nint m_silencedModelIndex = 0x1040; // int32
-            public const nint m_inPrecache = 0x1044; // bool
-            public const nint m_bNeedsBoltAction = 0x1045; // bool
-            public const nint m_nRevolverCylinderIdx = 0x1048; // int32
-            public const nint m_bSkillReloadAvailable = 0x104C; // bool
-            public const nint m_bSkillReloadLiftedReloadKey = 0x104D; // bool
-            public const nint m_bSkillBoltInterruptAvailable = 0x104E; // bool
-            public const nint m_bSkillBoltLiftedFireKey = 0x104F; // bool
+            public const nint m_zoomLevel = 0x11D0; // int32
+            public const nint m_iBurstShotsRemaining = 0x11D4; // int32
+            public const nint m_silencedModelIndex = 0x11E0; // int32
+            public const nint m_inPrecache = 0x11E4; // bool
+            public const nint m_bNeedsBoltAction = 0x11E5; // bool
+            public const nint m_nRevolverCylinderIdx = 0x11E8; // int32
+            public const nint m_bSkillReloadAvailable = 0x11EC; // bool
+            public const nint m_bSkillReloadLiftedReloadKey = 0x11ED; // bool
+            public const nint m_bSkillBoltInterruptAvailable = 0x11EE; // bool
+            public const nint m_bSkillBoltLiftedFireKey = 0x11EF; // bool
         }
         // Parent: CBaseEntity
         // Field count: 0
@@ -7756,7 +7467,7 @@ namespace CS2Dumper.Schemas {
         // Field count: 13
         public static class CNavLinkAreaEntity {
             public const nint m_flWidth = 0x4F0; // float32
-            public const nint m_vLocatorOffset = 0x4F4; // Vector
+            public const nint m_vLocatorOffset = 0x4F4; // VectorWS
             public const nint m_qLocatorAnglesOffset = 0x500; // QAngle
             public const nint m_strMovementForward = 0x510; // CUtlSymbolLarge
             public const nint m_strMovementReverse = 0x518; // CUtlSymbolLarge
@@ -7784,7 +7495,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CServerOnlyModelEntity
         // Field count: 1
         public static class CCSPlace {
-            public const nint m_name = 0x800; // CUtlSymbolLarge
+            public const nint m_name = 0x7F0; // CUtlSymbolLarge
         }
         // Parent: None
         // Field count: 1
@@ -7817,15 +7528,15 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bProjectOnWater (bool)
         // NetworkVarNames: m_flDepthSortBias (float)
         public static class CEnvDecal {
-            public const nint m_hDecalMaterial = 0x7E8; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_flWidth = 0x7F0; // float32
-            public const nint m_flHeight = 0x7F4; // float32
-            public const nint m_flDepth = 0x7F8; // float32
-            public const nint m_nRenderOrder = 0x7FC; // uint32
-            public const nint m_bProjectOnWorld = 0x800; // bool
-            public const nint m_bProjectOnCharacters = 0x801; // bool
-            public const nint m_bProjectOnWater = 0x802; // bool
-            public const nint m_flDepthSortBias = 0x804; // float32
+            public const nint m_hDecalMaterial = 0x7D8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_flWidth = 0x7E0; // float32
+            public const nint m_flHeight = 0x7E4; // float32
+            public const nint m_flDepth = 0x7E8; // float32
+            public const nint m_nRenderOrder = 0x7EC; // uint32
+            public const nint m_bProjectOnWorld = 0x7F0; // bool
+            public const nint m_bProjectOnCharacters = 0x7F1; // bool
+            public const nint m_bProjectOnWater = 0x7F2; // bool
+            public const nint m_flDepthSortBias = 0x7F4; // float32
         }
         // Parent: CBaseEntity
         // Field count: 18
@@ -7892,38 +7603,38 @@ namespace CS2Dumper.Schemas {
         // Parent: CItem
         // Field count: 32
         public static class CItemGeneric {
-            public const nint m_bHasTriggerRadius = 0xB64; // bool
-            public const nint m_bHasPickupRadius = 0xB65; // bool
-            public const nint m_flPickupRadiusSqr = 0xB68; // float32
-            public const nint m_flTriggerRadiusSqr = 0xB6C; // float32
-            public const nint m_flLastPickupCheck = 0xB70; // GameTime_t
-            public const nint m_bPlayerCounterListenerAdded = 0xB74; // bool
-            public const nint m_bPlayerInTriggerRadius = 0xB75; // bool
-            public const nint m_hSpawnParticleEffect = 0xB78; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-            public const nint m_pAmbientSoundEffect = 0xB80; // CUtlSymbolLarge
-            public const nint m_bAutoStartAmbientSound = 0xB88; // bool
-            public const nint m_pSpawnScriptFunction = 0xB90; // CUtlSymbolLarge
-            public const nint m_hPickupParticleEffect = 0xB98; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-            public const nint m_pPickupSoundEffect = 0xBA0; // CUtlSymbolLarge
-            public const nint m_pPickupScriptFunction = 0xBA8; // CUtlSymbolLarge
-            public const nint m_hTimeoutParticleEffect = 0xBB0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-            public const nint m_pTimeoutSoundEffect = 0xBB8; // CUtlSymbolLarge
-            public const nint m_pTimeoutScriptFunction = 0xBC0; // CUtlSymbolLarge
-            public const nint m_pPickupFilterName = 0xBC8; // CUtlSymbolLarge
-            public const nint m_hPickupFilter = 0xBD0; // CHandle<CBaseFilter>
-            public const nint m_OnPickup = 0xBD8; // CEntityIOOutput
-            public const nint m_OnTimeout = 0xC00; // CEntityIOOutput
-            public const nint m_OnTriggerStartTouch = 0xC28; // CEntityIOOutput
-            public const nint m_OnTriggerTouch = 0xC50; // CEntityIOOutput
-            public const nint m_OnTriggerEndTouch = 0xC78; // CEntityIOOutput
-            public const nint m_pAllowPickupScriptFunction = 0xCA0; // CUtlSymbolLarge
-            public const nint m_flPickupRadius = 0xCA8; // float32
-            public const nint m_flTriggerRadius = 0xCAC; // float32
-            public const nint m_pTriggerSoundEffect = 0xCB0; // CUtlSymbolLarge
-            public const nint m_bGlowWhenInTrigger = 0xCB8; // bool
-            public const nint m_glowColor = 0xCB9; // Color
-            public const nint m_bUseable = 0xCBD; // bool
-            public const nint m_hTriggerHelper = 0xCC0; // CHandle<CItemGenericTriggerHelper>
+            public const nint m_bHasTriggerRadius = 0xB84; // bool
+            public const nint m_bHasPickupRadius = 0xB85; // bool
+            public const nint m_flPickupRadiusSqr = 0xB88; // float32
+            public const nint m_flTriggerRadiusSqr = 0xB8C; // float32
+            public const nint m_flLastPickupCheck = 0xB90; // GameTime_t
+            public const nint m_bPlayerCounterListenerAdded = 0xB94; // bool
+            public const nint m_bPlayerInTriggerRadius = 0xB95; // bool
+            public const nint m_hSpawnParticleEffect = 0xB98; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_pAmbientSoundEffect = 0xBA0; // CUtlSymbolLarge
+            public const nint m_bAutoStartAmbientSound = 0xBA8; // bool
+            public const nint m_pSpawnScriptFunction = 0xBB0; // CUtlSymbolLarge
+            public const nint m_hPickupParticleEffect = 0xBB8; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_pPickupSoundEffect = 0xBC0; // CUtlSymbolLarge
+            public const nint m_pPickupScriptFunction = 0xBC8; // CUtlSymbolLarge
+            public const nint m_hTimeoutParticleEffect = 0xBD0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_pTimeoutSoundEffect = 0xBD8; // CUtlSymbolLarge
+            public const nint m_pTimeoutScriptFunction = 0xBE0; // CUtlSymbolLarge
+            public const nint m_pPickupFilterName = 0xBE8; // CUtlSymbolLarge
+            public const nint m_hPickupFilter = 0xBF0; // CHandle<CBaseFilter>
+            public const nint m_OnPickup = 0xBF8; // CEntityIOOutput
+            public const nint m_OnTimeout = 0xC20; // CEntityIOOutput
+            public const nint m_OnTriggerStartTouch = 0xC48; // CEntityIOOutput
+            public const nint m_OnTriggerTouch = 0xC70; // CEntityIOOutput
+            public const nint m_OnTriggerEndTouch = 0xC98; // CEntityIOOutput
+            public const nint m_pAllowPickupScriptFunction = 0xCC0; // CUtlSymbolLarge
+            public const nint m_flPickupRadius = 0xCC8; // float32
+            public const nint m_flTriggerRadius = 0xCCC; // float32
+            public const nint m_pTriggerSoundEffect = 0xCD0; // CUtlSymbolLarge
+            public const nint m_bGlowWhenInTrigger = 0xCD8; // bool
+            public const nint m_glowColor = 0xCD9; // Color
+            public const nint m_bUseable = 0xCDD; // bool
+            public const nint m_hTriggerHelper = 0xCE0; // CHandle<CItemGenericTriggerHelper>
         }
         // Parent: CBaseEntity
         // Field count: 44
@@ -8004,44 +7715,40 @@ namespace CS2Dumper.Schemas {
         public static class CCSGO_TeamIntroCounterTerroristPosition {
         }
         // Parent: CBaseAnimGraph
-        // Field count: 29
+        // Field count: 26
         //
         // Metadata:
         // NetworkVarNames: m_ragEnabled (bool)
         // NetworkVarNames: m_ragPos (Vector)
         // NetworkVarNames: m_ragAngles (QAngle)
-        // NetworkVarNames: m_hRagdollSource (EHANDLE)
         // NetworkVarNames: m_flBlendWeight (float32)
         public static class CRagdollProp {
-            public const nint m_ragdoll = 0xA80; // ragdoll_t
-            public const nint m_bStartDisabled = 0xAD0; // bool
-            public const nint m_ragEnabled = 0xAD8; // CNetworkUtlVectorBase<bool>
-            public const nint m_ragPos = 0xAF0; // CNetworkUtlVectorBase<Vector>
-            public const nint m_ragAngles = 0xB08; // CNetworkUtlVectorBase<QAngle>
-            public const nint m_hRagdollSource = 0xB20; // CHandle<CBaseEntity>
-            public const nint m_lastUpdateTickCount = 0xB24; // uint32
-            public const nint m_allAsleep = 0xB28; // bool
-            public const nint m_bFirstCollisionAfterLaunch = 0xB29; // bool
-            public const nint m_hDamageEntity = 0xB2C; // CHandle<CBaseEntity>
-            public const nint m_hKiller = 0xB30; // CHandle<CBaseEntity>
-            public const nint m_hPhysicsAttacker = 0xB34; // CHandle<CBasePlayerPawn>
-            public const nint m_flLastPhysicsInfluenceTime = 0xB38; // GameTime_t
-            public const nint m_flFadeOutStartTime = 0xB3C; // GameTime_t
-            public const nint m_flFadeTime = 0xB40; // float32
-            public const nint m_vecLastOrigin = 0xB44; // Vector
-            public const nint m_flAwakeTime = 0xB50; // GameTime_t
-            public const nint m_flLastOriginChangeTime = 0xB54; // GameTime_t
-            public const nint m_strOriginClassName = 0xB58; // CUtlSymbolLarge
-            public const nint m_strSourceClassName = 0xB60; // CUtlSymbolLarge
-            public const nint m_bHasBeenPhysgunned = 0xB68; // bool
-            public const nint m_bShouldTeleportPhysics = 0xB69; // bool
-            public const nint m_bAllowStretch = 0xB6A; // bool
-            public const nint m_flBlendWeight = 0xB6C; // float32
-            public const nint m_flDefaultFadeScale = 0xB70; // float32
-            public const nint m_ragdollMins = 0xB78; // CUtlVector<Vector>
-            public const nint m_ragdollMaxs = 0xB90; // CUtlVector<Vector>
-            public const nint m_bShouldDeleteActivationRecord = 0xBA8; // bool
-            public const nint m_bValidatePoweredRagdollPose = 0xC08; // bool
+            public const nint m_ragdoll = 0xAA0; // ragdoll_t
+            public const nint m_bStartDisabled = 0xAF0; // bool
+            public const nint m_ragEnabled = 0xAF8; // CNetworkUtlVectorBase<bool>
+            public const nint m_ragPos = 0xB10; // CNetworkUtlVectorBase<Vector>
+            public const nint m_ragAngles = 0xB28; // CNetworkUtlVectorBase<QAngle>
+            public const nint m_lastUpdateTickCount = 0xB40; // uint32
+            public const nint m_allAsleep = 0xB44; // bool
+            public const nint m_bFirstCollisionAfterLaunch = 0xB45; // bool
+            public const nint m_hDamageEntity = 0xB48; // CHandle<CBaseEntity>
+            public const nint m_hKiller = 0xB4C; // CHandle<CBaseEntity>
+            public const nint m_hPhysicsAttacker = 0xB50; // CHandle<CBasePlayerPawn>
+            public const nint m_flLastPhysicsInfluenceTime = 0xB54; // GameTime_t
+            public const nint m_flFadeOutStartTime = 0xB58; // GameTime_t
+            public const nint m_flFadeTime = 0xB5C; // float32
+            public const nint m_vecLastOrigin = 0xB60; // VectorWS
+            public const nint m_flAwakeTime = 0xB6C; // GameTime_t
+            public const nint m_flLastOriginChangeTime = 0xB70; // GameTime_t
+            public const nint m_strOriginClassName = 0xB78; // CUtlSymbolLarge
+            public const nint m_strSourceClassName = 0xB80; // CUtlSymbolLarge
+            public const nint m_bHasBeenPhysgunned = 0xB88; // bool
+            public const nint m_bAllowStretch = 0xB89; // bool
+            public const nint m_flBlendWeight = 0xB8C; // float32
+            public const nint m_flDefaultFadeScale = 0xB90; // float32
+            public const nint m_ragdollMins = 0xB98; // CUtlVector<Vector>
+            public const nint m_ragdollMaxs = 0xBB0; // CUtlVector<Vector>
+            public const nint m_bShouldDeleteActivationRecord = 0xBC8; // bool
         }
         // Parent: CEntityComponent
         // Field count: 1
@@ -8051,12 +7758,12 @@ namespace CS2Dumper.Schemas {
         // Parent: CBasePlatTrain
         // Field count: 6
         public static class CFuncTrain {
-            public const nint m_hCurrentTarget = 0x890; // CHandle<CBaseEntity>
-            public const nint m_activated = 0x894; // bool
-            public const nint m_hEnemy = 0x898; // CHandle<CBaseEntity>
-            public const nint m_flBlockDamage = 0x89C; // float32
-            public const nint m_flNextBlockTime = 0x8A0; // GameTime_t
-            public const nint m_iszLastTarget = 0x8A8; // CUtlSymbolLarge
+            public const nint m_hCurrentTarget = 0x880; // CHandle<CBaseEntity>
+            public const nint m_activated = 0x884; // bool
+            public const nint m_hEnemy = 0x888; // CHandle<CBaseEntity>
+            public const nint m_flBlockDamage = 0x88C; // float32
+            public const nint m_flNextBlockTime = 0x890; // GameTime_t
+            public const nint m_iszLastTarget = 0x898; // CUtlSymbolLarge
         }
         // Parent: CBaseEntity
         // Field count: 4
@@ -8103,7 +7810,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 1
         public static class CBuyZone {
-            public const nint m_LegacyTeamNum = 0x9B8; // int32
+            public const nint m_LegacyTeamNum = 0x9A8; // int32
         }
         // Parent: CCSWeaponBaseGun
         // Field count: 0
@@ -8111,11 +7818,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
         public static class CLogicRelayAPI {
         }
         // Parent: CBaseEntity
@@ -8221,9 +7923,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -8240,8 +7939,8 @@ namespace CS2Dumper.Schemas {
         // Field count: 21
         //
         // Metadata:
-        // NetworkVarNames: m_vOrigin (Vector)
-        // NetworkVarNames: m_vStart (Vector)
+        // NetworkVarNames: m_vOrigin (VectorWS)
+        // NetworkVarNames: m_vStart (VectorWS)
         // NetworkVarNames: m_vNormal (Vector)
         // NetworkVarNames: m_vAngles (QAngle)
         // NetworkVarNames: m_hEntity (CEntityHandle)
@@ -8262,8 +7961,8 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iEffectName (uint16)
         // NetworkVarNames: m_nExplosionType (uint8)
         public static class CEffectData {
-            public const nint m_vOrigin = 0x8; // Vector
-            public const nint m_vStart = 0x14; // Vector
+            public const nint m_vOrigin = 0x8; // VectorWS
+            public const nint m_vStart = 0x14; // VectorWS
             public const nint m_vNormal = 0x20; // Vector
             public const nint m_vAngles = 0x2C; // QAngle
             public const nint m_hEntity = 0x38; // CEntityHandle
@@ -8299,16 +7998,16 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_vDissolverOrigin (Vector)
         // NetworkVarNames: m_nMagnitude (uint32)
         public static class CEntityDissolve {
-            public const nint m_flFadeInStart = 0x7E8; // float32
-            public const nint m_flFadeInLength = 0x7EC; // float32
-            public const nint m_flFadeOutModelStart = 0x7F0; // float32
-            public const nint m_flFadeOutModelLength = 0x7F4; // float32
-            public const nint m_flFadeOutStart = 0x7F8; // float32
-            public const nint m_flFadeOutLength = 0x7FC; // float32
-            public const nint m_flStartTime = 0x800; // GameTime_t
-            public const nint m_nDissolveType = 0x804; // EntityDisolveType_t
-            public const nint m_vDissolverOrigin = 0x808; // Vector
-            public const nint m_nMagnitude = 0x814; // uint32
+            public const nint m_flFadeInStart = 0x7D8; // float32
+            public const nint m_flFadeInLength = 0x7DC; // float32
+            public const nint m_flFadeOutModelStart = 0x7E0; // float32
+            public const nint m_flFadeOutModelLength = 0x7E4; // float32
+            public const nint m_flFadeOutStart = 0x7E8; // float32
+            public const nint m_flFadeOutLength = 0x7EC; // float32
+            public const nint m_flStartTime = 0x7F0; // GameTime_t
+            public const nint m_nDissolveType = 0x7F4; // EntityDisolveType_t
+            public const nint m_vDissolverOrigin = 0x7F8; // Vector
+            public const nint m_nMagnitude = 0x804; // uint32
         }
         // Parent: None
         // Field count: 189
@@ -8326,6 +8025,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nCTTimeOuts (int)
         // NetworkVarNames: m_bTechnicalTimeOut (bool)
         // NetworkVarNames: m_bMatchWaitingForResume (bool)
+        // NetworkVarNames: m_iFreezeTime (int)
         // NetworkVarNames: m_iRoundTime (int)
         // NetworkVarNames: m_fMatchStartTime (float)
         // NetworkVarNames: m_fRoundStartTime (GameTime_t)
@@ -8420,59 +8120,60 @@ namespace CS2Dumper.Schemas {
             public const nint m_nCTTimeOuts = 0xE4; // int32
             public const nint m_bTechnicalTimeOut = 0xE8; // bool
             public const nint m_bMatchWaitingForResume = 0xE9; // bool
-            public const nint m_iRoundTime = 0xEC; // int32
-            public const nint m_fMatchStartTime = 0xF0; // float32
-            public const nint m_fRoundStartTime = 0xF4; // GameTime_t
-            public const nint m_flRestartRoundTime = 0xF8; // GameTime_t
-            public const nint m_bGameRestart = 0xFC; // bool
-            public const nint m_flGameStartTime = 0x100; // float32
-            public const nint m_timeUntilNextPhaseStarts = 0x104; // float32
-            public const nint m_gamePhase = 0x108; // int32
-            public const nint m_totalRoundsPlayed = 0x10C; // int32
-            public const nint m_nRoundsPlayedThisPhase = 0x110; // int32
-            public const nint m_nOvertimePlaying = 0x114; // int32
-            public const nint m_iHostagesRemaining = 0x118; // int32
-            public const nint m_bAnyHostageReached = 0x11C; // bool
-            public const nint m_bMapHasBombTarget = 0x11D; // bool
-            public const nint m_bMapHasRescueZone = 0x11E; // bool
-            public const nint m_bMapHasBuyZone = 0x11F; // bool
-            public const nint m_bIsQueuedMatchmaking = 0x120; // bool
-            public const nint m_nQueuedMatchmakingMode = 0x124; // int32
-            public const nint m_bIsValveDS = 0x128; // bool
-            public const nint m_bLogoMap = 0x129; // bool
-            public const nint m_bPlayAllStepSoundsOnServer = 0x12A; // bool
-            public const nint m_iSpectatorSlotCount = 0x12C; // int32
-            public const nint m_MatchDevice = 0x130; // int32
-            public const nint m_bHasMatchStarted = 0x134; // bool
-            public const nint m_nNextMapInMapgroup = 0x138; // int32
-            public const nint m_szTournamentEventName = 0x13C; // char[512]
-            public const nint m_szTournamentEventStage = 0x33C; // char[512]
-            public const nint m_szMatchStatTxt = 0x53C; // char[512]
-            public const nint m_szTournamentPredictionsTxt = 0x73C; // char[512]
-            public const nint m_nTournamentPredictionsPct = 0x93C; // int32
-            public const nint m_flCMMItemDropRevealStartTime = 0x940; // GameTime_t
-            public const nint m_flCMMItemDropRevealEndTime = 0x944; // GameTime_t
-            public const nint m_bIsDroppingItems = 0x948; // bool
-            public const nint m_bIsQuestEligible = 0x949; // bool
-            public const nint m_bIsHltvActive = 0x94A; // bool
-            public const nint m_arrProhibitedItemIndices = 0x94C; // uint16[100]
-            public const nint m_arrTournamentActiveCasterAccounts = 0xA14; // uint32[4]
-            public const nint m_numBestOfMaps = 0xA24; // int32
-            public const nint m_nHalloweenMaskListSeed = 0xA28; // int32
-            public const nint m_bBombDropped = 0xA2C; // bool
-            public const nint m_bBombPlanted = 0xA2D; // bool
-            public const nint m_iRoundWinStatus = 0xA30; // int32
-            public const nint m_eRoundWinReason = 0xA34; // int32
-            public const nint m_bTCantBuy = 0xA38; // bool
-            public const nint m_bCTCantBuy = 0xA39; // bool
-            public const nint m_iMatchStats_RoundResults = 0xA3C; // int32[30]
-            public const nint m_iMatchStats_PlayersAlive_CT = 0xAB4; // int32[30]
-            public const nint m_iMatchStats_PlayersAlive_T = 0xB2C; // int32[30]
-            public const nint m_TeamRespawnWaveTimes = 0xBA4; // float32[32]
-            public const nint m_flNextRespawnWave = 0xC24; // GameTime_t[32]
-            public const nint m_vMinimapMins = 0xCA4; // Vector
-            public const nint m_vMinimapMaxs = 0xCB0; // Vector
-            public const nint m_MinimapVerticalSectionHeights = 0xCBC; // float32[8]
+            public const nint m_iFreezeTime = 0xEC; // int32
+            public const nint m_iRoundTime = 0xF0; // int32
+            public const nint m_fMatchStartTime = 0xF4; // float32
+            public const nint m_fRoundStartTime = 0xF8; // GameTime_t
+            public const nint m_flRestartRoundTime = 0xFC; // GameTime_t
+            public const nint m_bGameRestart = 0x100; // bool
+            public const nint m_flGameStartTime = 0x104; // float32
+            public const nint m_timeUntilNextPhaseStarts = 0x108; // float32
+            public const nint m_gamePhase = 0x10C; // int32
+            public const nint m_totalRoundsPlayed = 0x110; // int32
+            public const nint m_nRoundsPlayedThisPhase = 0x114; // int32
+            public const nint m_nOvertimePlaying = 0x118; // int32
+            public const nint m_iHostagesRemaining = 0x11C; // int32
+            public const nint m_bAnyHostageReached = 0x120; // bool
+            public const nint m_bMapHasBombTarget = 0x121; // bool
+            public const nint m_bMapHasRescueZone = 0x122; // bool
+            public const nint m_bMapHasBuyZone = 0x123; // bool
+            public const nint m_bIsQueuedMatchmaking = 0x124; // bool
+            public const nint m_nQueuedMatchmakingMode = 0x128; // int32
+            public const nint m_bIsValveDS = 0x12C; // bool
+            public const nint m_bLogoMap = 0x12D; // bool
+            public const nint m_bPlayAllStepSoundsOnServer = 0x12E; // bool
+            public const nint m_iSpectatorSlotCount = 0x130; // int32
+            public const nint m_MatchDevice = 0x134; // int32
+            public const nint m_bHasMatchStarted = 0x138; // bool
+            public const nint m_nNextMapInMapgroup = 0x13C; // int32
+            public const nint m_szTournamentEventName = 0x140; // char[512]
+            public const nint m_szTournamentEventStage = 0x340; // char[512]
+            public const nint m_szMatchStatTxt = 0x540; // char[512]
+            public const nint m_szTournamentPredictionsTxt = 0x740; // char[512]
+            public const nint m_nTournamentPredictionsPct = 0x940; // int32
+            public const nint m_flCMMItemDropRevealStartTime = 0x944; // GameTime_t
+            public const nint m_flCMMItemDropRevealEndTime = 0x948; // GameTime_t
+            public const nint m_bIsDroppingItems = 0x94C; // bool
+            public const nint m_bIsQuestEligible = 0x94D; // bool
+            public const nint m_bIsHltvActive = 0x94E; // bool
+            public const nint m_arrProhibitedItemIndices = 0x950; // uint16[100]
+            public const nint m_arrTournamentActiveCasterAccounts = 0xA18; // uint32[4]
+            public const nint m_numBestOfMaps = 0xA28; // int32
+            public const nint m_nHalloweenMaskListSeed = 0xA2C; // int32
+            public const nint m_bBombDropped = 0xA30; // bool
+            public const nint m_bBombPlanted = 0xA31; // bool
+            public const nint m_iRoundWinStatus = 0xA34; // int32
+            public const nint m_eRoundWinReason = 0xA38; // int32
+            public const nint m_bTCantBuy = 0xA3C; // bool
+            public const nint m_bCTCantBuy = 0xA3D; // bool
+            public const nint m_iMatchStats_RoundResults = 0xA40; // int32[30]
+            public const nint m_iMatchStats_PlayersAlive_CT = 0xAB8; // int32[30]
+            public const nint m_iMatchStats_PlayersAlive_T = 0xB30; // int32[30]
+            public const nint m_TeamRespawnWaveTimes = 0xBA8; // float32[32]
+            public const nint m_flNextRespawnWave = 0xC28; // GameTime_t[32]
+            public const nint m_vMinimapMins = 0xCA8; // Vector
+            public const nint m_vMinimapMaxs = 0xCB4; // Vector
+            public const nint m_MinimapVerticalSectionHeights = 0xCC0; // float32[8]
             public const nint m_ullLocalMatchID = 0xCE0; // uint64
             public const nint m_nEndMatchMapGroupVoteTypes = 0xCE8; // int32[10]
             public const nint m_nEndMatchMapGroupVoteOptions = 0xD10; // int32[10]
@@ -8487,11 +8188,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_iUnBalancedRounds = 0xD74; // int32
             public const nint m_endMatchOnRoundReset = 0xD78; // bool
             public const nint m_endMatchOnThink = 0xD79; // bool
-            public const nint m_iFreezeTime = 0xD7C; // int32
-            public const nint m_iNumTerrorist = 0xD80; // int32
-            public const nint m_iNumCT = 0xD84; // int32
-            public const nint m_iNumSpawnableTerrorist = 0xD88; // int32
-            public const nint m_iNumSpawnableCT = 0xD8C; // int32
+            public const nint m_iNumTerrorist = 0xD7C; // int32
+            public const nint m_iNumCT = 0xD80; // int32
+            public const nint m_iNumSpawnableTerrorist = 0xD84; // int32
+            public const nint m_iNumSpawnableCT = 0xD88; // int32
             public const nint m_arrSelectedHostageSpawnIndices = 0xD90; // CUtlVector<int32>
             public const nint m_nSpawnPointsRandomSeed = 0xDA8; // int32
             public const nint m_bFirstConnected = 0xDAC; // bool
@@ -8572,40 +8272,37 @@ namespace CS2Dumper.Schemas {
             public const nint m_BtGlobalBlackboard = 0x1090; // KeyValues3
             public const nint m_hPlayerResource = 0x1128; // CHandle<CBaseEntity>
             public const nint m_RetakeRules = 0x1130; // CRetakeGameRules
-            public const nint m_arrTeamUniqueKillWeaponsMatch = 0x12C8; // CUtlVector<int32>[4]
-            public const nint m_bTeamLastKillUsedUniqueWeaponMatch = 0x1328; // bool[4]
-            public const nint m_nMatchEndCount = 0x1350; // uint8
-            public const nint m_nTTeamIntroVariant = 0x1354; // int32
-            public const nint m_nCTTeamIntroVariant = 0x1358; // int32
-            public const nint m_bTeamIntroPeriod = 0x135C; // bool
-            public const nint m_fTeamIntroPeriodEnd = 0x1360; // GameTime_t
-            public const nint m_bPlayedTeamIntroVO = 0x1364; // bool
-            public const nint m_iRoundEndWinnerTeam = 0x1368; // int32
-            public const nint m_eRoundEndReason = 0x136C; // int32
-            public const nint m_bRoundEndShowTimerDefend = 0x1370; // bool
-            public const nint m_iRoundEndTimerTime = 0x1374; // int32
-            public const nint m_sRoundEndFunFactToken = 0x1378; // CUtlString
-            public const nint m_iRoundEndFunFactPlayerSlot = 0x1380; // CPlayerSlot
-            public const nint m_iRoundEndFunFactData1 = 0x1384; // int32
-            public const nint m_iRoundEndFunFactData2 = 0x1388; // int32
-            public const nint m_iRoundEndFunFactData3 = 0x138C; // int32
-            public const nint m_sRoundEndMessage = 0x1390; // CUtlString
-            public const nint m_iRoundEndPlayerCount = 0x1398; // int32
-            public const nint m_bRoundEndNoMusic = 0x139C; // bool
-            public const nint m_iRoundEndLegacy = 0x13A0; // int32
-            public const nint m_nRoundEndCount = 0x13A4; // uint8
-            public const nint m_iRoundStartRoundNumber = 0x13A8; // int32
-            public const nint m_nRoundStartCount = 0x13AC; // uint8
-            public const nint m_flLastPerfSampleTime = 0x53B8; // float64
+            public const nint m_arrTeamUniqueKillWeaponsMatch = 0x1320; // CUtlVector<int32>[4]
+            public const nint m_bTeamLastKillUsedUniqueWeaponMatch = 0x1380; // bool[4]
+            public const nint m_nMatchEndCount = 0x13A8; // uint8
+            public const nint m_nTTeamIntroVariant = 0x13AC; // int32
+            public const nint m_nCTTeamIntroVariant = 0x13B0; // int32
+            public const nint m_bTeamIntroPeriod = 0x13B4; // bool
+            public const nint m_fTeamIntroPeriodEnd = 0x13B8; // GameTime_t
+            public const nint m_bPlayedTeamIntroVO = 0x13BC; // bool
+            public const nint m_iRoundEndWinnerTeam = 0x13C0; // int32
+            public const nint m_eRoundEndReason = 0x13C4; // int32
+            public const nint m_bRoundEndShowTimerDefend = 0x13C8; // bool
+            public const nint m_iRoundEndTimerTime = 0x13CC; // int32
+            public const nint m_sRoundEndFunFactToken = 0x13D0; // CUtlString
+            public const nint m_iRoundEndFunFactPlayerSlot = 0x13D8; // CPlayerSlot
+            public const nint m_iRoundEndFunFactData1 = 0x13DC; // int32
+            public const nint m_iRoundEndFunFactData2 = 0x13E0; // int32
+            public const nint m_iRoundEndFunFactData3 = 0x13E4; // int32
+            public const nint m_sRoundEndMessage = 0x13E8; // CUtlString
+            public const nint m_iRoundEndPlayerCount = 0x13F0; // int32
+            public const nint m_bRoundEndNoMusic = 0x13F4; // bool
+            public const nint m_iRoundEndLegacy = 0x13F8; // int32
+            public const nint m_nRoundEndCount = 0x13FC; // uint8
+            public const nint m_iRoundStartRoundNumber = 0x1400; // int32
+            public const nint m_nRoundStartCount = 0x1404; // uint8
+            public const nint m_flLastPerfSampleTime = 0x5410; // float64
         }
         // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Outflow_CycleShuffled {
             public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
         }
@@ -8620,25 +8317,25 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nExplodeEffectTickBegin (int)
         // NetworkVarNames: m_vecExplodeEffectOrigin (Vector)
         public static class CBaseCSGrenadeProjectile {
-            public const nint m_vInitialPosition = 0xBB0; // Vector
-            public const nint m_vInitialVelocity = 0xBBC; // Vector
-            public const nint m_nBounces = 0xBC8; // int32
-            public const nint m_nExplodeEffectIndex = 0xBD0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
-            public const nint m_nExplodeEffectTickBegin = 0xBD8; // int32
-            public const nint m_vecExplodeEffectOrigin = 0xBDC; // Vector
-            public const nint m_flSpawnTime = 0xBE8; // GameTime_t
-            public const nint m_unOGSExtraFlags = 0xBEC; // uint8
-            public const nint m_bDetonationRecorded = 0xBED; // bool
-            public const nint m_nItemIndex = 0xBEE; // uint16
-            public const nint m_vecOriginalSpawnLocation = 0xBF0; // Vector
-            public const nint m_flLastBounceSoundTime = 0xBFC; // GameTime_t
-            public const nint m_vecGrenadeSpin = 0xC00; // RotationVector
-            public const nint m_vecLastHitSurfaceNormal = 0xC0C; // Vector
-            public const nint m_nTicksAtZeroVelocity = 0xC18; // int32
-            public const nint m_bHasEverHitEnemy = 0xC1C; // bool
+            public const nint m_vInitialPosition = 0xBD0; // Vector
+            public const nint m_vInitialVelocity = 0xBDC; // Vector
+            public const nint m_nBounces = 0xBE8; // int32
+            public const nint m_nExplodeEffectIndex = 0xBF0; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+            public const nint m_nExplodeEffectTickBegin = 0xBF8; // int32
+            public const nint m_vecExplodeEffectOrigin = 0xBFC; // Vector
+            public const nint m_flSpawnTime = 0xC08; // GameTime_t
+            public const nint m_unOGSExtraFlags = 0xC0C; // uint8
+            public const nint m_bDetonationRecorded = 0xC0D; // bool
+            public const nint m_nItemIndex = 0xC0E; // uint16
+            public const nint m_vecOriginalSpawnLocation = 0xC10; // Vector
+            public const nint m_flLastBounceSoundTime = 0xC1C; // GameTime_t
+            public const nint m_vecGrenadeSpin = 0xC20; // RotationVector
+            public const nint m_vecLastHitSurfaceNormal = 0xC2C; // Vector
+            public const nint m_nTicksAtZeroVelocity = 0xC38; // int32
+            public const nint m_bHasEverHitEnemy = 0xC3C; // bool
         }
         // Parent: CLogicalEntity
-        // Field count: 12
+        // Field count: 13
         public static class CPhysConstraint {
             public const nint m_nameAttach1 = 0x4F8; // CUtlSymbolLarge
             public const nint m_nameAttach2 = 0x500; // CUtlSymbolLarge
@@ -8651,6 +8348,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_torqueLimit = 0x52C; // float32
             public const nint m_minTeleportDistance = 0x530; // float32
             public const nint m_bSnapObjectPositions = 0x534; // bool
+            public const nint m_bTreatEntity1AsInfiniteMass = 0x535; // bool
             public const nint m_OnBreak = 0x538; // CEntityIOOutput
         }
         // Parent: CLogicalEntity
@@ -8659,6 +8357,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabled = 0x4F0; // bool
             public const nint m_iszAchievementEventID = 0x4F8; // CUtlSymbolLarge
             public const nint m_OnFired = 0x500; // CEntityIOOutput
+        }
+        // Parent: None
+        // Field count: 3
+        public static class CCSPlayerController_InventoryServices__NetworkedLoadoutSlot_t {
+            public const nint pItem = 0x0; // CEconItemView*
+            public const nint team = 0x8; // uint16
+            public const nint slot = 0xA; // uint16
         }
         // Parent: CEntityComponent
         // Field count: 70
@@ -8805,7 +8510,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bPvsModifyEntity = 0x1B0; // bool
         }
         // Parent: CBasePlayerWeapon
-        // Field count: 52
+        // Field count: 50
         //
         // Metadata:
         // MNetworkOutOfPVSUpdates
@@ -8836,59 +8541,58 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_fLastShotTime (GameTime_t)
         // NetworkVarNames: m_iIronSightMode (int)
         // NetworkVarNames: m_flWatTickOffset (float)
+        // NetworkVarNames: m_flLastShakeTime (GameTime_t)
         public static class CCSWeaponBase {
-            public const nint m_bRemoveable = 0xE78; // bool
-            public const nint m_thirdPersonFireSequences = 0xE80; // CUtlVector<HSequence>
-            public const nint m_hCurrentThirdPersonSequence = 0xE98; // HSequence
-            public const nint m_thirdPersonSequences = 0xE9C; // HSequence[7]
-            public const nint m_bPlayerAmmoStockOnPickup = 0xEC0; // bool
-            public const nint m_bRequireUseToTouch = 0xEC1; // bool
-            public const nint m_iWeaponGameplayAnimState = 0xEC2; // WeaponGameplayAnimState
-            public const nint m_flWeaponGameplayAnimStateTimestamp = 0xEC4; // GameTime_t
-            public const nint m_flInspectCancelCompleteTime = 0xEC8; // GameTime_t
-            public const nint m_bInspectPending = 0xECC; // bool
-            public const nint m_bInspectShouldLoop = 0xECD; // bool
-            public const nint m_nLastEmptySoundCmdNum = 0xEF8; // int32
-            public const nint m_bFireOnEmpty = 0xF18; // bool
-            public const nint m_OnPlayerPickup = 0xF20; // CEntityIOOutput
-            public const nint m_weaponMode = 0xF48; // CSWeaponMode
-            public const nint m_flTurningInaccuracyDelta = 0xF4C; // float32
-            public const nint m_vecTurningInaccuracyEyeDirLast = 0xF50; // Vector
-            public const nint m_flTurningInaccuracy = 0xF5C; // float32
-            public const nint m_fAccuracyPenalty = 0xF60; // float32
-            public const nint m_flLastAccuracyUpdateTime = 0xF64; // GameTime_t
-            public const nint m_fAccuracySmoothedForZoom = 0xF68; // float32
-            public const nint m_iRecoilIndex = 0xF6C; // int32
-            public const nint m_flRecoilIndex = 0xF70; // float32
-            public const nint m_bBurstMode = 0xF74; // bool
-            public const nint m_nPostponeFireReadyTicks = 0xF78; // GameTick_t
-            public const nint m_flPostponeFireReadyFrac = 0xF7C; // float32
-            public const nint m_bInReload = 0xF80; // bool
-            public const nint m_flDroppedAtTime = 0xF84; // GameTime_t
-            public const nint m_bIsHauledBack = 0xF88; // bool
-            public const nint m_bSilencerOn = 0xF89; // bool
-            public const nint m_flTimeSilencerSwitchComplete = 0xF8C; // GameTime_t
-            public const nint m_iOriginalTeamNumber = 0xF90; // int32
-            public const nint m_iMostRecentTeamNumber = 0xF94; // int32
-            public const nint m_bDroppedNearBuyZone = 0xF98; // bool
-            public const nint m_flNextAttackRenderTimeOffset = 0xF9C; // float32
-            public const nint m_bCanBePickedUp = 0xFB0; // bool
-            public const nint m_bUseCanOverrideNextOwnerTouchTime = 0xFB1; // bool
-            public const nint m_nextOwnerTouchTime = 0xFB4; // GameTime_t
-            public const nint m_nextPrevOwnerTouchTime = 0xFB8; // GameTime_t
-            public const nint m_nextPrevOwnerUseTime = 0xFC0; // GameTime_t
-            public const nint m_hPrevOwner = 0xFC4; // CHandle<CCSPlayerPawn>
-            public const nint m_nDropTick = 0xFC8; // GameTick_t
-            public const nint m_bWasActiveWeaponWhenDropped = 0xFCC; // bool
-            public const nint m_donated = 0xFEC; // bool
-            public const nint m_fLastShotTime = 0xFF0; // GameTime_t
-            public const nint m_bWasOwnedByCT = 0xFF4; // bool
-            public const nint m_bWasOwnedByTerrorist = 0xFF5; // bool
-            public const nint m_numRemoveUnownedWeaponThink = 0xFF8; // int32
-            public const nint m_IronSightController = 0x1000; // CIronSightController
-            public const nint m_iIronSightMode = 0x1018; // int32
-            public const nint m_flLastLOSTraceFailureTime = 0x101C; // GameTime_t
-            public const nint m_flWatTickOffset = 0x1020; // float32
+            public const nint m_bRemoveable = 0xEA0; // bool
+            public const nint m_bPlayerAmmoStockOnPickup = 0xEB0; // bool
+            public const nint m_bRequireUseToTouch = 0xEB1; // bool
+            public const nint m_iWeaponGameplayAnimState = 0xEB2; // WeaponGameplayAnimState
+            public const nint m_flWeaponGameplayAnimStateTimestamp = 0xEB4; // GameTime_t
+            public const nint m_flInspectCancelCompleteTime = 0xEB8; // GameTime_t
+            public const nint m_bInspectPending = 0xEBC; // bool
+            public const nint m_bInspectShouldLoop = 0xEBD; // bool
+            public const nint m_nLastEmptySoundCmdNum = 0xEE8; // int32
+            public const nint m_bFireOnEmpty = 0xF08; // bool
+            public const nint m_OnPlayerPickup = 0xF10; // CEntityIOOutput
+            public const nint m_weaponMode = 0xF38; // CSWeaponMode
+            public const nint m_flTurningInaccuracyDelta = 0xF3C; // float32
+            public const nint m_vecTurningInaccuracyEyeDirLast = 0xF40; // Vector
+            public const nint m_flTurningInaccuracy = 0xF4C; // float32
+            public const nint m_fAccuracyPenalty = 0xF50; // float32
+            public const nint m_flLastAccuracyUpdateTime = 0xF54; // GameTime_t
+            public const nint m_fAccuracySmoothedForZoom = 0xF58; // float32
+            public const nint m_iRecoilIndex = 0xF5C; // int32
+            public const nint m_flRecoilIndex = 0xF60; // float32
+            public const nint m_bBurstMode = 0xF64; // bool
+            public const nint m_nPostponeFireReadyTicks = 0xF68; // GameTick_t
+            public const nint m_flPostponeFireReadyFrac = 0xF6C; // float32
+            public const nint m_bInReload = 0xF70; // bool
+            public const nint m_flDroppedAtTime = 0xF74; // GameTime_t
+            public const nint m_bIsHauledBack = 0xF78; // bool
+            public const nint m_bSilencerOn = 0xF79; // bool
+            public const nint m_flTimeSilencerSwitchComplete = 0xF7C; // GameTime_t
+            public const nint m_iOriginalTeamNumber = 0xF80; // int32
+            public const nint m_iMostRecentTeamNumber = 0xF84; // int32
+            public const nint m_bDroppedNearBuyZone = 0xF88; // bool
+            public const nint m_flNextAttackRenderTimeOffset = 0xF8C; // float32
+            public const nint m_bCanBePickedUp = 0xFA0; // bool
+            public const nint m_bUseCanOverrideNextOwnerTouchTime = 0xFA1; // bool
+            public const nint m_nextOwnerTouchTime = 0xFA4; // GameTime_t
+            public const nint m_nextPrevOwnerTouchTime = 0xFA8; // GameTime_t
+            public const nint m_nextPrevOwnerUseTime = 0xFB0; // GameTime_t
+            public const nint m_hPrevOwner = 0xFB4; // CHandle<CCSPlayerPawn>
+            public const nint m_nDropTick = 0xFB8; // GameTick_t
+            public const nint m_bWasActiveWeaponWhenDropped = 0xFBC; // bool
+            public const nint m_donated = 0xFDC; // bool
+            public const nint m_fLastShotTime = 0xFE0; // GameTime_t
+            public const nint m_bWasOwnedByCT = 0xFE4; // bool
+            public const nint m_bWasOwnedByTerrorist = 0xFE5; // bool
+            public const nint m_numRemoveUnownedWeaponThink = 0xFE8; // int32
+            public const nint m_IronSightController = 0xFF0; // CIronSightController
+            public const nint m_iIronSightMode = 0x1008; // int32
+            public const nint m_flLastLOSTraceFailureTime = 0x100C; // GameTime_t
+            public const nint m_flWatTickOffset = 0x1010; // float32
+            public const nint m_flLastShakeTime = 0x1020; // GameTime_t
         }
         // Parent: CBaseClientUIEntity
         // Field count: 2
@@ -8896,8 +8600,8 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_hActivator (EHANDLE)
         public static class CPointClientUIDialog {
-            public const nint m_hActivator = 0x998; // CHandle<CBaseEntity>
-            public const nint m_bStartEnabled = 0x99C; // bool
+            public const nint m_hActivator = 0x988; // CHandle<CBaseEntity>
+            public const nint m_bStartEnabled = 0x98C; // bool
         }
         // Parent: CLogicalEntity
         // Field count: 4
@@ -8968,9 +8672,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorSubHeaderText
@@ -8991,9 +8692,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_Method {
             public const nint m_MethodName = 0x80; // PulseSymbol_t
             public const nint m_Description = 0x90; // CUtlString
@@ -9045,12 +8743,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_Master = 0x4F0; // CUtlSymbolLarge
         }
         // Parent: CBaseEntity
-        // Field count: 42
+        // Field count: 41
         //
         // Metadata:
         // NetworkVarNames: m_CRenderComponent (CRenderComponent::Storage_t)
         // NetworkVarNames: m_CHitboxComponent (CHitboxComponent::Storage_t)
-        // NetworkVarNames: m_pDestructiblePartsSystemComponent (CDestructiblePartsSystemComponent*)
+        // NetworkVarNames: m_pDestructiblePartsSystemComponent (CDestructiblePartsComponent*)
         // NetworkVarNames: m_nRenderMode (RenderMode_t)
         // NetworkVarNames: m_nRenderFX (RenderFx_t)
         // NetworkVarNames: m_clrRender (Color)
@@ -9068,55 +8766,53 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nAddDecal (int)
         // NetworkVarNames: m_vDecalPosition (Vector)
         // NetworkVarNames: m_vDecalForwardAxis (Vector)
-        // NetworkVarNames: m_flDecalHealBloodRate (float)
-        // NetworkVarNames: m_flDecalHealHeightRate (float)
         // NetworkVarNames: m_nDecalMode (DecalMode_t)
         // NetworkVarNames: m_nRequiredDecalMode (DecalMode_t)
         // NetworkVarNames: m_ConfigEntitiesToPropagateMaterialDecalsTo (CHandle<CBaseModelEntity>)
         // NetworkVarNames: m_vecViewOffset (CNetworkViewOffsetVector)
+        // NetworkVarNames: m_bvDisabledHitGroups (uint32)
         public static class CBaseModelEntity {
             public const nint m_CRenderComponent = 0x4F0; // CRenderComponent*
             public const nint m_CHitboxComponent = 0x4F8; // CHitboxComponent
-            public const nint m_nDestructiblePartInitialStateDestructed0 = 0x520; // HitGroup_t
-            public const nint m_nDestructiblePartInitialStateDestructed1 = 0x524; // HitGroup_t
-            public const nint m_nDestructiblePartInitialStateDestructed2 = 0x528; // HitGroup_t
-            public const nint m_nDestructiblePartInitialStateDestructed3 = 0x52C; // HitGroup_t
-            public const nint m_nDestructiblePartInitialStateDestructed4 = 0x530; // HitGroup_t
-            public const nint m_nDestructiblePartInitialStateDestructed0_PartIndex = 0x534; // int32
-            public const nint m_nDestructiblePartInitialStateDestructed1_PartIndex = 0x538; // int32
-            public const nint m_nDestructiblePartInitialStateDestructed2_PartIndex = 0x53C; // int32
-            public const nint m_nDestructiblePartInitialStateDestructed3_PartIndex = 0x540; // int32
-            public const nint m_nDestructiblePartInitialStateDestructed4_PartIndex = 0x544; // int32
-            public const nint m_pDestructiblePartsSystemComponent = 0x548; // CDestructiblePartsSystemComponent*
-            public const nint m_LastHitGroup = 0x550; // HitGroup_t
-            public const nint m_sLastDamageSourceName = 0x558; // CGlobalSymbol
-            public const nint m_vLastDamagePosition = 0x560; // Vector
-            public const nint m_flDissolveStartTime = 0x56C; // GameTime_t
-            public const nint m_OnIgnite = 0x570; // CEntityIOOutput
-            public const nint m_nRenderMode = 0x598; // RenderMode_t
-            public const nint m_nRenderFX = 0x599; // RenderFx_t
-            public const nint m_bAllowFadeInView = 0x59A; // bool
-            public const nint m_clrRender = 0x5B8; // Color
-            public const nint m_vecRenderAttributes = 0x5C0; // CUtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
-            public const nint m_bRenderToCubemaps = 0x628; // bool
-            public const nint m_bNoInterpolate = 0x629; // bool
-            public const nint m_Collision = 0x630; // CCollisionProperty
-            public const nint m_Glow = 0x6E0; // CGlowProperty
-            public const nint m_flGlowBackfaceMult = 0x738; // float32
-            public const nint m_fadeMinDist = 0x73C; // float32
-            public const nint m_fadeMaxDist = 0x740; // float32
-            public const nint m_flFadeScale = 0x744; // float32
-            public const nint m_flShadowStrength = 0x748; // float32
-            public const nint m_nObjectCulling = 0x74C; // uint8
-            public const nint m_nAddDecal = 0x750; // int32
-            public const nint m_vDecalPosition = 0x754; // Vector
-            public const nint m_vDecalForwardAxis = 0x760; // Vector
-            public const nint m_flDecalHealBloodRate = 0x76C; // float32
-            public const nint m_flDecalHealHeightRate = 0x770; // float32
-            public const nint m_nDecalMode = 0x774; // DecalMode_t
-            public const nint m_nRequiredDecalMode = 0x775; // DecalMode_t
-            public const nint m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x778; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-            public const nint m_vecViewOffset = 0x7B8; // CNetworkViewOffsetVector
+            public const nint m_nDestructiblePartInitialStateDestructed0 = 0x510; // HitGroup_t
+            public const nint m_nDestructiblePartInitialStateDestructed1 = 0x514; // HitGroup_t
+            public const nint m_nDestructiblePartInitialStateDestructed2 = 0x518; // HitGroup_t
+            public const nint m_nDestructiblePartInitialStateDestructed3 = 0x51C; // HitGroup_t
+            public const nint m_nDestructiblePartInitialStateDestructed4 = 0x520; // HitGroup_t
+            public const nint m_nDestructiblePartInitialStateDestructed0_PartIndex = 0x524; // int32
+            public const nint m_nDestructiblePartInitialStateDestructed1_PartIndex = 0x528; // int32
+            public const nint m_nDestructiblePartInitialStateDestructed2_PartIndex = 0x52C; // int32
+            public const nint m_nDestructiblePartInitialStateDestructed3_PartIndex = 0x530; // int32
+            public const nint m_nDestructiblePartInitialStateDestructed4_PartIndex = 0x534; // int32
+            public const nint m_pDestructiblePartsSystemComponent = 0x538; // CDestructiblePartsComponent*
+            public const nint m_LastHitGroup = 0x540; // HitGroup_t
+            public const nint m_sLastDamageSourceName = 0x548; // CGlobalSymbol
+            public const nint m_vLastDamagePosition = 0x550; // VectorWS
+            public const nint m_flDissolveStartTime = 0x55C; // GameTime_t
+            public const nint m_OnIgnite = 0x560; // CEntityIOOutput
+            public const nint m_nRenderMode = 0x588; // RenderMode_t
+            public const nint m_nRenderFX = 0x589; // RenderFx_t
+            public const nint m_bAllowFadeInView = 0x58A; // bool
+            public const nint m_clrRender = 0x5A8; // Color
+            public const nint m_vecRenderAttributes = 0x5B0; // CUtlVectorEmbeddedNetworkVar<EntityRenderAttribute_t>
+            public const nint m_bRenderToCubemaps = 0x618; // bool
+            public const nint m_bNoInterpolate = 0x619; // bool
+            public const nint m_Collision = 0x620; // CCollisionProperty
+            public const nint m_Glow = 0x6D0; // CGlowProperty
+            public const nint m_flGlowBackfaceMult = 0x728; // float32
+            public const nint m_fadeMinDist = 0x72C; // float32
+            public const nint m_fadeMaxDist = 0x730; // float32
+            public const nint m_flFadeScale = 0x734; // float32
+            public const nint m_flShadowStrength = 0x738; // float32
+            public const nint m_nObjectCulling = 0x73C; // uint8
+            public const nint m_nAddDecal = 0x740; // int32
+            public const nint m_vDecalPosition = 0x744; // Vector
+            public const nint m_vDecalForwardAxis = 0x750; // Vector
+            public const nint m_nDecalMode = 0x75C; // DecalMode_t
+            public const nint m_nRequiredDecalMode = 0x75D; // DecalMode_t
+            public const nint m_ConfigEntitiesToPropagateMaterialDecalsTo = 0x760; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
+            public const nint m_vecViewOffset = 0x7A0; // CNetworkViewOffsetVector
+            public const nint m_bvDisabledHitGroups = 0x7D0; // uint32[1]
         }
         // Parent: 
         // Field count: 14
@@ -9220,9 +8916,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorCanvasItemSpecKV3
@@ -9254,8 +8947,10 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_szPlayerRecipientName (CUtlString)
         // NetworkVarNames: m_DamagerXuid (uint64)
         // NetworkVarNames: m_RecipientXuid (uint64)
-        // NetworkVarNames: m_iDamage (int)
-        // NetworkVarNames: m_iActualHealthRemoved (int)
+        // MNetworkReplayCompatField
+        // NetworkVarNames: m_flDamage (float)
+        // MNetworkReplayCompatField
+        // NetworkVarNames: m_flActualHealthRemoved (float)
         // NetworkVarNames: m_iNumHits (int)
         // NetworkVarNames: m_iLastBulletUpdate (int)
         // NetworkVarNames: m_bIsOtherEnemy (bool)
@@ -9269,9 +8964,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_szPlayerRecipientName = 0x48; // CUtlString
             public const nint m_DamagerXuid = 0x50; // uint64
             public const nint m_RecipientXuid = 0x58; // uint64
-            public const nint m_iBulletsDamage = 0x60; // int32
-            public const nint m_iDamage = 0x64; // int32
-            public const nint m_iActualHealthRemoved = 0x68; // int32
+            public const nint m_flBulletsDamage = 0x60; // float32
+            public const nint m_flDamage = 0x64; // float32
+            public const nint m_flActualHealthRemoved = 0x68; // float32
             public const nint m_iNumHits = 0x6C; // int32
             public const nint m_iLastBulletUpdate = 0x70; // int32
             public const nint m_bIsOtherEnemy = 0x74; // bool
@@ -9306,39 +9001,39 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 26
         public static class CFuncShatterglass {
-            public const nint m_matPanelTransform = 0x7E8; // matrix3x4_t
-            public const nint m_matPanelTransformWsTemp = 0x818; // matrix3x4_t
-            public const nint m_vecShatterGlassShards = 0x848; // CUtlVector<uint32>
-            public const nint m_PanelSize = 0x860; // Vector2D
-            public const nint m_flLastShatterSoundEmitTime = 0x868; // GameTime_t
-            public const nint m_flLastCleanupTime = 0x86C; // GameTime_t
-            public const nint m_flInitAtTime = 0x870; // GameTime_t
-            public const nint m_flGlassThickness = 0x874; // float32
-            public const nint m_flSpawnInvulnerability = 0x878; // float32
-            public const nint m_bBreakSilent = 0x87C; // bool
-            public const nint m_bBreakShardless = 0x87D; // bool
-            public const nint m_bBroken = 0x87E; // bool
-            public const nint m_bGlassNavIgnore = 0x87F; // bool
-            public const nint m_bGlassInFrame = 0x880; // bool
-            public const nint m_bStartBroken = 0x881; // bool
-            public const nint m_iInitialDamageType = 0x882; // uint8
-            public const nint m_szDamagePositioningEntityName01 = 0x888; // CUtlSymbolLarge
-            public const nint m_szDamagePositioningEntityName02 = 0x890; // CUtlSymbolLarge
-            public const nint m_szDamagePositioningEntityName03 = 0x898; // CUtlSymbolLarge
-            public const nint m_szDamagePositioningEntityName04 = 0x8A0; // CUtlSymbolLarge
-            public const nint m_vInitialDamagePositions = 0x8A8; // CUtlVector<Vector>
-            public const nint m_vExtraDamagePositions = 0x8C0; // CUtlVector<Vector>
-            public const nint m_vInitialPanelVertices = 0x8D8; // CUtlVector<Vector4D>
-            public const nint m_OnBroken = 0x8F0; // CEntityIOOutput
-            public const nint m_iSurfaceType = 0x918; // uint8
-            public const nint m_hMaterialDamageBase = 0x920; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_matPanelTransform = 0x7D8; // matrix3x4_t
+            public const nint m_matPanelTransformWsTemp = 0x808; // matrix3x4_t
+            public const nint m_vecShatterGlassShards = 0x838; // CUtlVector<uint32>
+            public const nint m_PanelSize = 0x850; // Vector2D
+            public const nint m_flLastShatterSoundEmitTime = 0x858; // GameTime_t
+            public const nint m_flLastCleanupTime = 0x85C; // GameTime_t
+            public const nint m_flInitAtTime = 0x860; // GameTime_t
+            public const nint m_flGlassThickness = 0x864; // float32
+            public const nint m_flSpawnInvulnerability = 0x868; // float32
+            public const nint m_bBreakSilent = 0x86C; // bool
+            public const nint m_bBreakShardless = 0x86D; // bool
+            public const nint m_bBroken = 0x86E; // bool
+            public const nint m_bGlassNavIgnore = 0x86F; // bool
+            public const nint m_bGlassInFrame = 0x870; // bool
+            public const nint m_bStartBroken = 0x871; // bool
+            public const nint m_iInitialDamageType = 0x872; // uint8
+            public const nint m_szDamagePositioningEntityName01 = 0x878; // CUtlSymbolLarge
+            public const nint m_szDamagePositioningEntityName02 = 0x880; // CUtlSymbolLarge
+            public const nint m_szDamagePositioningEntityName03 = 0x888; // CUtlSymbolLarge
+            public const nint m_szDamagePositioningEntityName04 = 0x890; // CUtlSymbolLarge
+            public const nint m_vInitialDamagePositions = 0x898; // CUtlVector<Vector>
+            public const nint m_vExtraDamagePositions = 0x8B0; // CUtlVector<Vector>
+            public const nint m_vInitialPanelVertices = 0x8C8; // CUtlVector<Vector4D>
+            public const nint m_OnBroken = 0x8E0; // CEntityIOOutput
+            public const nint m_iSurfaceType = 0x908; // uint8
+            public const nint m_hMaterialDamageBase = 0x910; // CStrongHandle<InfoForResourceTypeIMaterial2>
         }
         // Parent: CPointEntity
         // Field count: 0
         public static class CNavWalkable {
         }
         // Parent: CBaseAnimGraph
-        // Field count: 26
+        // Field count: 27
         //
         // Metadata:
         // NetworkVarNames: m_bBombTicking (bool)
@@ -9356,32 +9051,33 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bBombDefused (bool)
         // NetworkVarNames: m_hBombDefuser (CHandle<CCSPlayerPawn>)
         public static class CPlantedC4 {
-            public const nint m_bBombTicking = 0xA80; // bool
-            public const nint m_flC4Blow = 0xA84; // GameTime_t
-            public const nint m_nBombSite = 0xA88; // int32
-            public const nint m_nSourceSoundscapeHash = 0xA8C; // int32
-            public const nint m_AttributeManager = 0xA90; // CAttributeContainer
-            public const nint m_OnBombDefused = 0xD88; // CEntityIOOutput
-            public const nint m_OnBombBeginDefuse = 0xDB0; // CEntityIOOutput
-            public const nint m_OnBombDefuseAborted = 0xDD8; // CEntityIOOutput
-            public const nint m_bCannotBeDefused = 0xE00; // bool
-            public const nint m_entitySpottedState = 0xE08; // EntitySpottedState_t
-            public const nint m_nSpotRules = 0xE20; // int32
-            public const nint m_bTrainingPlacedByPlayer = 0xE24; // bool
-            public const nint m_bHasExploded = 0xE25; // bool
-            public const nint m_flTimerLength = 0xE28; // float32
-            public const nint m_bBeingDefused = 0xE2C; // bool
-            public const nint m_fLastDefuseTime = 0xE34; // GameTime_t
-            public const nint m_flDefuseLength = 0xE3C; // float32
-            public const nint m_flDefuseCountDown = 0xE40; // GameTime_t
-            public const nint m_bBombDefused = 0xE44; // bool
-            public const nint m_hBombDefuser = 0xE48; // CHandle<CCSPlayerPawn>
-            public const nint m_iProgressBarTime = 0xE4C; // int32
-            public const nint m_bVoiceAlertFired = 0xE50; // bool
-            public const nint m_bVoiceAlertPlayed = 0xE51; // bool[4]
-            public const nint m_flNextBotBeepTime = 0xE58; // GameTime_t
-            public const nint m_angCatchUpToPlayerEye = 0xE60; // QAngle
-            public const nint m_flLastSpinDetectionTime = 0xE6C; // GameTime_t
+            public const nint m_bBombTicking = 0xA98; // bool
+            public const nint m_flC4Blow = 0xA9C; // GameTime_t
+            public const nint m_nBombSite = 0xAA0; // int32
+            public const nint m_nSourceSoundscapeHash = 0xAA4; // int32
+            public const nint m_bAbortDetonationBecauseWorldIsFrozen = 0xAA8; // bool
+            public const nint m_AttributeManager = 0xAB0; // CAttributeContainer
+            public const nint m_OnBombDefused = 0xDA8; // CEntityIOOutput
+            public const nint m_OnBombBeginDefuse = 0xDD0; // CEntityIOOutput
+            public const nint m_OnBombDefuseAborted = 0xDF8; // CEntityIOOutput
+            public const nint m_bCannotBeDefused = 0xE20; // bool
+            public const nint m_entitySpottedState = 0xE28; // EntitySpottedState_t
+            public const nint m_nSpotRules = 0xE40; // int32
+            public const nint m_bTrainingPlacedByPlayer = 0xE44; // bool
+            public const nint m_bHasExploded = 0xE45; // bool
+            public const nint m_flTimerLength = 0xE48; // float32
+            public const nint m_bBeingDefused = 0xE4C; // bool
+            public const nint m_fLastDefuseTime = 0xE54; // GameTime_t
+            public const nint m_flDefuseLength = 0xE5C; // float32
+            public const nint m_flDefuseCountDown = 0xE60; // GameTime_t
+            public const nint m_bBombDefused = 0xE64; // bool
+            public const nint m_hBombDefuser = 0xE68; // CHandle<CCSPlayerPawn>
+            public const nint m_iProgressBarTime = 0xE6C; // int32
+            public const nint m_bVoiceAlertFired = 0xE70; // bool
+            public const nint m_bVoiceAlertPlayed = 0xE71; // bool[4]
+            public const nint m_flNextBotBeepTime = 0xE78; // GameTime_t
+            public const nint m_angCatchUpToPlayerEye = 0xE80; // QAngle
+            public const nint m_flLastSpinDetectionTime = 0xE8C; // GameTime_t
         }
         // Parent: CEnvSoundscapeProxy
         // Field count: 0
@@ -9417,9 +9113,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Inflow_Yield {
             public const nint m_UnyieldResume = 0x48; // CPulse_ResumePoint
         }
@@ -9427,7 +9120,6 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         //
         // Metadata:
-        // MPulseLibraryBindings
         // MPropertyDescription
         public static class CPulseMathlib {
         }
@@ -9587,10 +9279,10 @@ namespace CS2Dumper.Schemas {
         // Parent: CMarkupVolumeTagged
         // Field count: 4
         public static class CMarkupVolumeWithRef {
-            public const nint m_bUseRef = 0x830; // bool
-            public const nint m_vRefPosEntitySpace = 0x834; // Vector
-            public const nint m_vRefPosWorldSpace = 0x840; // Vector
-            public const nint m_flRefDot = 0x84C; // float32
+            public const nint m_bUseRef = 0x820; // bool
+            public const nint m_vRefPosEntitySpace = 0x824; // Vector
+            public const nint m_vRefPosWorldSpace = 0x830; // VectorWS
+            public const nint m_flRefDot = 0x83C; // float32
         }
         // Parent: CCSGO_TeamPreviewCharacterPosition
         // Field count: 0
@@ -9604,8 +9296,8 @@ namespace CS2Dumper.Schemas {
         // Parent: CFuncPlat
         // Field count: 2
         public static class CFuncPlatRot {
-            public const nint m_end = 0x898; // QAngle
-            public const nint m_start = 0x8A4; // QAngle
+            public const nint m_end = 0x888; // QAngle
+            public const nint m_start = 0x894; // QAngle
         }
         // Parent: CPointEntity
         // Field count: 4
@@ -9613,7 +9305,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bDisabled = 0x4F0; // bool
             public const nint m_radius = 0x4F4; // float32
             public const nint m_force = 0x4F8; // float32
-            public const nint m_axis = 0x4FC; // Vector
+            public const nint m_axis = 0x4FC; // VectorWS
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -9634,10 +9326,10 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flLightScale (float32)
         // NetworkVarNames: m_Radius (float32)
         public static class CSpotlightEnd {
-            public const nint m_flLightScale = 0x7E8; // float32
-            public const nint m_Radius = 0x7EC; // float32
-            public const nint m_vSpotlightDir = 0x7F0; // Vector
-            public const nint m_vSpotlightOrg = 0x7FC; // Vector
+            public const nint m_flLightScale = 0x7D8; // float32
+            public const nint m_Radius = 0x7DC; // float32
+            public const nint m_vSpotlightDir = 0x7E0; // Vector
+            public const nint m_vSpotlightOrg = 0x7EC; // VectorWS
         }
         // Parent: CBaseModelEntity
         // Field count: 12
@@ -9656,18 +9348,18 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flFogMaxEnd (float)
         // NetworkVarNames: m_bEnabled (bool)
         public static class CEnvSky {
-            public const nint m_hSkyMaterial = 0x7E8; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_hSkyMaterialLightingOnly = 0x7F0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_bStartDisabled = 0x7F8; // bool
-            public const nint m_vTintColor = 0x7F9; // Color
-            public const nint m_vTintColorLightingOnly = 0x7FD; // Color
-            public const nint m_flBrightnessScale = 0x804; // float32
-            public const nint m_nFogType = 0x808; // int32
-            public const nint m_flFogMinStart = 0x80C; // float32
-            public const nint m_flFogMinEnd = 0x810; // float32
-            public const nint m_flFogMaxStart = 0x814; // float32
-            public const nint m_flFogMaxEnd = 0x818; // float32
-            public const nint m_bEnabled = 0x81C; // bool
+            public const nint m_hSkyMaterial = 0x7D8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_hSkyMaterialLightingOnly = 0x7E0; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_bStartDisabled = 0x7E8; // bool
+            public const nint m_vTintColor = 0x7E9; // Color
+            public const nint m_vTintColorLightingOnly = 0x7ED; // Color
+            public const nint m_flBrightnessScale = 0x7F4; // float32
+            public const nint m_nFogType = 0x7F8; // int32
+            public const nint m_flFogMinStart = 0x7FC; // float32
+            public const nint m_flFogMinEnd = 0x800; // float32
+            public const nint m_flFogMaxStart = 0x804; // float32
+            public const nint m_flFogMaxEnd = 0x808; // float32
+            public const nint m_bEnabled = 0x80C; // bool
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -9805,9 +9497,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Outflow_CycleRandom {
             public const nint m_Outputs = 0x48; // CUtlVector<CPulse_OutflowConnection>
         }
@@ -9816,20 +9505,17 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Step_PublicOutput {
             public const nint m_OutputIndex = 0x48; // PulseRuntimeOutputIndex_t
         }
         // Parent: CBeam
         // Field count: 5
         public static class CEnvLaser {
-            public const nint m_iszLaserTarget = 0x888; // CUtlSymbolLarge
-            public const nint m_pSprite = 0x890; // CSprite*
-            public const nint m_iszSpriteName = 0x898; // CUtlSymbolLarge
-            public const nint m_firePosition = 0x8A0; // Vector
-            public const nint m_flStartFrame = 0x8AC; // float32
+            public const nint m_iszLaserTarget = 0x878; // CUtlSymbolLarge
+            public const nint m_pSprite = 0x880; // CSprite*
+            public const nint m_iszSpriteName = 0x888; // CUtlSymbolLarge
+            public const nint m_firePosition = 0x890; // Vector
+            public const nint m_flStartFrame = 0x89C; // float32
         }
         // Parent: CBaseEntity
         // Field count: 8
@@ -9866,19 +9552,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_flSpeedWhenSpinUpOrSpinDownStarted = 0x524; // float32
             public const nint m_motor = 0x538; // CMotorController
         }
-        // Parent: 
-        // Field count: 4
-        //
-        // Metadata:
-        // NetworkVarNames: m_DamageLevelTakenByHitGroup (uint16_t)
-        // NetworkVarNames: m_hOwner (CHandle<CBaseModelEntity>)
-        // NetworkVarNames: m_nLastHitDamageLevel (int)
-        public static class CDestructiblePartsSystemComponent {
-            public const nint __m_pChainEntity = 0x0; // CNetworkVarChainer
-            public const nint m_DamageLevelTakenByHitGroup = 0x48; // CNetworkUtlVectorBase<uint16>
-            public const nint m_hOwner = 0x60; // CHandle<CBaseModelEntity>
-            public const nint m_nLastHitDamageLevel = 0x64; // int32
-        }
         // Parent: CLogicalEntity
         // Field count: 1
         public static class CLogicGameEvent {
@@ -9903,7 +9576,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_OnPushedPlayer = 0x518; // CEntityIOOutput
         }
         // Parent: CPhysConstraint
-        // Field count: 11
+        // Field count: 14
         public static class CSplineConstraint {
             public const nint m_vAnchorOffsetRestore = 0x5B0; // Vector
             public const nint m_hSplineEntity = 0x5BC; // CHandle<CBaseEntity>
@@ -9915,7 +9588,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLinearFrequency = 0x5D0; // float32
             public const nint m_flLinarDampingRatio = 0x5D4; // float32
             public const nint m_flJointFriction = 0x5D8; // float32
-            public const nint m_vPreSolveAnchorPos = 0x600; // Vector
+            public const nint m_flTransitionTime = 0x5DC; // float32
+            public const nint m_vPreSolveAnchorPos = 0x600; // VectorWS
+            public const nint m_StartTransitionTime = 0x60C; // GameTime_t
+            public const nint m_vTangentSpaceAnchorAtTransitionStart = 0x610; // Vector
         }
         // Parent: CLogicalEntity
         // Field count: 6
@@ -9945,7 +9621,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CFuncTrackTrain
         // Field count: 1
         public static class CFuncTankTrain {
-            public const nint m_OnDeath = 0x940; // CEntityIOOutput
+            public const nint m_OnDeath = 0x930; // CEntityIOOutput
         }
         // Parent: CBaseClientUIEntity
         // Field count: 24
@@ -9976,30 +9652,30 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bDisableMipGen (bool)
         // NetworkVarNames: m_nExplicitImageLayout (int32)
         public static class CPointClientUIWorldPanel {
-            public const nint m_bIgnoreInput = 0x998; // bool
-            public const nint m_bLit = 0x999; // bool
-            public const nint m_bFollowPlayerAcrossTeleport = 0x99A; // bool
-            public const nint m_flWidth = 0x99C; // float32
-            public const nint m_flHeight = 0x9A0; // float32
-            public const nint m_flDPI = 0x9A4; // float32
-            public const nint m_flInteractDistance = 0x9A8; // float32
-            public const nint m_flDepthOffset = 0x9AC; // float32
-            public const nint m_unOwnerContext = 0x9B0; // uint32
-            public const nint m_unHorizontalAlign = 0x9B4; // uint32
-            public const nint m_unVerticalAlign = 0x9B8; // uint32
-            public const nint m_unOrientation = 0x9BC; // uint32
-            public const nint m_bAllowInteractionFromAllSceneWorlds = 0x9C0; // bool
-            public const nint m_vecCSSClasses = 0x9C8; // CNetworkUtlVectorBase<CUtlSymbolLarge>
-            public const nint m_bOpaque = 0x9E0; // bool
-            public const nint m_bNoDepth = 0x9E1; // bool
-            public const nint m_bVisibleWhenParentNoDraw = 0x9E2; // bool
-            public const nint m_bRenderBackface = 0x9E3; // bool
-            public const nint m_bUseOffScreenIndicator = 0x9E4; // bool
-            public const nint m_bExcludeFromSaveGames = 0x9E5; // bool
-            public const nint m_bGrabbable = 0x9E6; // bool
-            public const nint m_bOnlyRenderToTexture = 0x9E7; // bool
-            public const nint m_bDisableMipGen = 0x9E8; // bool
-            public const nint m_nExplicitImageLayout = 0x9EC; // int32
+            public const nint m_bIgnoreInput = 0x988; // bool
+            public const nint m_bLit = 0x989; // bool
+            public const nint m_bFollowPlayerAcrossTeleport = 0x98A; // bool
+            public const nint m_flWidth = 0x98C; // float32
+            public const nint m_flHeight = 0x990; // float32
+            public const nint m_flDPI = 0x994; // float32
+            public const nint m_flInteractDistance = 0x998; // float32
+            public const nint m_flDepthOffset = 0x99C; // float32
+            public const nint m_unOwnerContext = 0x9A0; // uint32
+            public const nint m_unHorizontalAlign = 0x9A4; // uint32
+            public const nint m_unVerticalAlign = 0x9A8; // uint32
+            public const nint m_unOrientation = 0x9AC; // uint32
+            public const nint m_bAllowInteractionFromAllSceneWorlds = 0x9B0; // bool
+            public const nint m_vecCSSClasses = 0x9B8; // CNetworkUtlVectorBase<CUtlSymbolLarge>
+            public const nint m_bOpaque = 0x9D0; // bool
+            public const nint m_bNoDepth = 0x9D1; // bool
+            public const nint m_bVisibleWhenParentNoDraw = 0x9D2; // bool
+            public const nint m_bRenderBackface = 0x9D3; // bool
+            public const nint m_bUseOffScreenIndicator = 0x9D4; // bool
+            public const nint m_bExcludeFromSaveGames = 0x9D5; // bool
+            public const nint m_bGrabbable = 0x9D6; // bool
+            public const nint m_bOnlyRenderToTexture = 0x9D7; // bool
+            public const nint m_bDisableMipGen = 0x9D8; // bool
+            public const nint m_nExplicitImageLayout = 0x9DC; // int32
         }
         // Parent: CSoundEventEntity
         // Field count: 1
@@ -10148,7 +9824,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CPhysConstraint
         // Field count: 10
         public static class CPhysSlideConstraint {
-            public const nint m_axisEnd = 0x568; // Vector
+            public const nint m_axisEnd = 0x568; // VectorWS
             public const nint m_slideFriction = 0x574; // float32
             public const nint m_systemLoadScale = 0x578; // float32
             public const nint m_initialOffset = 0x57C; // float32
@@ -10159,6 +9835,16 @@ namespace CS2Dumper.Schemas {
             public const nint m_bUseEntityPivot = 0x58C; // bool
             public const nint m_soundInfo = 0x590; // ConstraintSoundInfo
         }
+        // Parent: CBaseEntity
+        // Field count: 2
+        //
+        // Metadata:
+        // NetworkVarNames: m_strGraphName (CUtlString)
+        // NetworkVarNames: m_strStateBlob (CUtlString)
+        public static class CPulseGameBlackboard {
+            public const nint m_strGraphName = 0x4F8; // CUtlString
+            public const nint m_strStateBlob = 0x500; // CUtlString
+        }
         // Parent: CSoundEventEntity
         // Field count: 0
         public static class CSoundEventEntityAlias_snd_event_point {
@@ -10168,9 +9854,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -10195,14 +9878,14 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flStartTime (float)
         // NetworkVarNames: m_flStartFrame (float)
         public static class CTextureBasedAnimatable {
-            public const nint m_bLoop = 0x7E8; // bool
-            public const nint m_flFPS = 0x7EC; // float32
-            public const nint m_hPositionKeys = 0x7F0; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_hRotationKeys = 0x7F8; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_vAnimationBoundsMin = 0x800; // Vector
-            public const nint m_vAnimationBoundsMax = 0x80C; // Vector
-            public const nint m_flStartTime = 0x818; // float32
-            public const nint m_flStartFrame = 0x81C; // float32
+            public const nint m_bLoop = 0x7D8; // bool
+            public const nint m_flFPS = 0x7DC; // float32
+            public const nint m_hPositionKeys = 0x7E0; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_hRotationKeys = 0x7E8; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_vAnimationBoundsMin = 0x7F0; // Vector
+            public const nint m_vAnimationBoundsMax = 0x7FC; // Vector
+            public const nint m_flStartTime = 0x808; // float32
+            public const nint m_flStartFrame = 0x80C; // float32
         }
         // Parent: CBaseModelEntity
         // Field count: 23
@@ -10221,29 +9904,29 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flGlowProxySize (float32)
         // NetworkVarNames: m_flHDRColorScale (float32)
         public static class CSprite {
-            public const nint m_hSpriteMaterial = 0x7E8; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_hAttachedToEntity = 0x7F0; // CHandle<CBaseEntity>
-            public const nint m_nAttachment = 0x7F4; // AttachmentHandle_t
-            public const nint m_flSpriteFramerate = 0x7F8; // float32
-            public const nint m_flFrame = 0x7FC; // float32
-            public const nint m_flDieTime = 0x800; // GameTime_t
-            public const nint m_nBrightness = 0x810; // uint32
-            public const nint m_flBrightnessDuration = 0x814; // float32
-            public const nint m_flSpriteScale = 0x818; // float32
-            public const nint m_flScaleDuration = 0x81C; // float32
-            public const nint m_bWorldSpaceScale = 0x820; // bool
-            public const nint m_flGlowProxySize = 0x824; // float32
-            public const nint m_flHDRColorScale = 0x828; // float32
-            public const nint m_flLastTime = 0x82C; // GameTime_t
-            public const nint m_flMaxFrame = 0x830; // float32
-            public const nint m_flStartScale = 0x834; // float32
-            public const nint m_flDestScale = 0x838; // float32
-            public const nint m_flScaleTimeStart = 0x83C; // GameTime_t
-            public const nint m_nStartBrightness = 0x840; // int32
-            public const nint m_nDestBrightness = 0x844; // int32
-            public const nint m_flBrightnessTimeStart = 0x848; // GameTime_t
-            public const nint m_nSpriteWidth = 0x84C; // int32
-            public const nint m_nSpriteHeight = 0x850; // int32
+            public const nint m_hSpriteMaterial = 0x7D8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+            public const nint m_hAttachedToEntity = 0x7E0; // CHandle<CBaseEntity>
+            public const nint m_nAttachment = 0x7E4; // AttachmentHandle_t
+            public const nint m_flSpriteFramerate = 0x7E8; // float32
+            public const nint m_flFrame = 0x7EC; // float32
+            public const nint m_flDieTime = 0x7F0; // GameTime_t
+            public const nint m_nBrightness = 0x800; // uint32
+            public const nint m_flBrightnessDuration = 0x804; // float32
+            public const nint m_flSpriteScale = 0x808; // float32
+            public const nint m_flScaleDuration = 0x80C; // float32
+            public const nint m_bWorldSpaceScale = 0x810; // bool
+            public const nint m_flGlowProxySize = 0x814; // float32
+            public const nint m_flHDRColorScale = 0x818; // float32
+            public const nint m_flLastTime = 0x81C; // GameTime_t
+            public const nint m_flMaxFrame = 0x820; // float32
+            public const nint m_flStartScale = 0x824; // float32
+            public const nint m_flDestScale = 0x828; // float32
+            public const nint m_flScaleTimeStart = 0x82C; // GameTime_t
+            public const nint m_nStartBrightness = 0x830; // int32
+            public const nint m_nDestBrightness = 0x834; // int32
+            public const nint m_flBrightnessTimeStart = 0x838; // GameTime_t
+            public const nint m_nSpriteWidth = 0x83C; // int32
+            public const nint m_nSpriteHeight = 0x840; // int32
         }
         // Parent: CPathKeyFrame
         // Field count: 11
@@ -10272,15 +9955,15 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_OuterAngle (float32)
         // NetworkVarNames: m_SpotRadius (float32)
         public static class CDynamicLight {
-            public const nint m_ActualFlags = 0x7E8; // uint8
-            public const nint m_Flags = 0x7E9; // uint8
-            public const nint m_LightStyle = 0x7EA; // uint8
-            public const nint m_On = 0x7EB; // bool
-            public const nint m_Radius = 0x7EC; // float32
-            public const nint m_Exponent = 0x7F0; // int32
-            public const nint m_InnerAngle = 0x7F4; // float32
-            public const nint m_OuterAngle = 0x7F8; // float32
-            public const nint m_SpotRadius = 0x7FC; // float32
+            public const nint m_ActualFlags = 0x7D8; // uint8
+            public const nint m_Flags = 0x7D9; // uint8
+            public const nint m_LightStyle = 0x7DA; // uint8
+            public const nint m_On = 0x7DB; // bool
+            public const nint m_Radius = 0x7DC; // float32
+            public const nint m_Exponent = 0x7E0; // int32
+            public const nint m_InnerAngle = 0x7E4; // float32
+            public const nint m_OuterAngle = 0x7E8; // float32
+            public const nint m_SpotRadius = 0x7EC; // float32
         }
         // Parent: CCSWeaponBaseGun
         // Field count: 2
@@ -10288,8 +9971,8 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_fFireTime (GameTime_t)
         public static class CWeaponTaser {
-            public const nint m_fFireTime = 0x1050; // GameTime_t
-            public const nint m_nLastAttackTick = 0x1054; // int32
+            public const nint m_fFireTime = 0x11F0; // GameTime_t
+            public const nint m_nLastAttackTick = 0x11F4; // int32
         }
         // Parent: CEnvCubemap
         // Field count: 0
@@ -10298,7 +9981,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseDoor
         // Field count: 1
         public static class CRotDoor {
-            public const nint m_bSolidBsp = 0xA78; // bool
+            public const nint m_bSolidBsp = 0xA68; // bool
         }
         // Parent: CPathSimple
         // Field count: 3
@@ -10310,7 +9993,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CFuncVPhysicsClip {
-            public const nint m_bDisabled = 0x7E8; // bool
+            public const nint m_bDisabled = 0x7D8; // bool
         }
         // Parent: CPhysConstraint
         // Field count: 8
@@ -10347,22 +10030,7 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
         public static class CCSPointPulseAPI {
-        }
-        // Parent: None
-        // Field count: 2
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
-        public static class CPulseCell_Outflow_IntSwitch {
-            public const nint m_DefaultCaseOutflow = 0x48; // CPulse_OutflowConnection
-            public const nint m_CaseOutflows = 0x90; // CUtlVector<CPulse_OutflowConnection>
         }
         // Parent: CBaseEntity
         // Field count: 9
@@ -10388,25 +10056,16 @@ namespace CS2Dumper.Schemas {
             public const nint m_fWindSpeedVariationMultiplier = 0x51C; // float32
             public const nint m_fWindDirectionVariationMultiplier = 0x520; // float32
         }
-        // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MPulseLibraryBindings
-        // MPulseProvideFeatureTag
-        // MPulseDomainHookInfo
-        public static class CCSPointScriptExtensions_CCSWeaponBaseVData {
-        }
         // Parent: CFuncBrush
         // Field count: 4
         //
         // Metadata:
         // NetworkVarNames: m_EffectName (string_t)
         public static class CFuncElectrifiedVolume {
-            public const nint m_EffectName = 0x808; // CUtlSymbolLarge
-            public const nint m_EffectInterpenetrateName = 0x810; // CUtlSymbolLarge
-            public const nint m_EffectZapName = 0x818; // CUtlSymbolLarge
-            public const nint m_iszEffectSource = 0x820; // CUtlSymbolLarge
+            public const nint m_EffectName = 0x7F8; // CUtlSymbolLarge
+            public const nint m_EffectInterpenetrateName = 0x800; // CUtlSymbolLarge
+            public const nint m_EffectZapName = 0x808; // CUtlSymbolLarge
+            public const nint m_iszEffectSource = 0x810; // CUtlSymbolLarge
         }
         // Parent: CBaseEntity
         // Field count: 0
@@ -10489,14 +10148,14 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseCSGrenadeProjectile
         // Field count: 3
         public static class CFlashbangProjectile {
-            public const nint m_flTimeToDetonate = 0xC20; // float32
-            public const nint m_numOpponentsHit = 0xC24; // uint8
-            public const nint m_numTeammatesHit = 0xC25; // uint8
+            public const nint m_flTimeToDetonate = 0xC40; // float32
+            public const nint m_numOpponentsHit = 0xC44; // uint8
+            public const nint m_numTeammatesHit = 0xC45; // uint8
         }
         // Parent: CBaseTrigger
         // Field count: 1
         public static class CTriggerMultiple {
-            public const nint m_OnTrigger = 0x9B8; // CEntityIOOutput
+            public const nint m_OnTrigger = 0x9A8; // CEntityIOOutput
         }
         // Parent: CPhysConstraint
         // Field count: 6
@@ -10551,19 +10210,19 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_bMagazineRemoved (bool)
         public static class CWeaponCZ75a {
-            public const nint m_bMagazineRemoved = 0x1050; // bool
+            public const nint m_bMagazineRemoved = 0x11F0; // bool
         }
         // Parent: CTriggerPush
         // Field count: 1
         public static class CScriptTriggerPush {
-            public const nint m_vExtent = 0x9F0; // Vector
+            public const nint m_vExtent = 0x9E0; // Vector
         }
         // Parent: CModelPointEntity
         // Field count: 3
         public static class CRevertSaved {
-            public const nint m_loadTime = 0x7E8; // float32
-            public const nint m_Duration = 0x7EC; // float32
-            public const nint m_HoldTime = 0x7F0; // float32
+            public const nint m_loadTime = 0x7D8; // float32
+            public const nint m_Duration = 0x7DC; // float32
+            public const nint m_HoldTime = 0x7E0; // float32
         }
         // Parent: CBaseTrigger
         // Field count: 0
@@ -10572,20 +10231,20 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 14
         public static class CTriggerHurt {
-            public const nint m_flOriginalDamage = 0x9B8; // float32
-            public const nint m_flDamage = 0x9BC; // float32
-            public const nint m_flDamageCap = 0x9C0; // float32
-            public const nint m_flLastDmgTime = 0x9C4; // GameTime_t
-            public const nint m_flForgivenessDelay = 0x9C8; // float32
-            public const nint m_bitsDamageInflict = 0x9CC; // DamageTypes_t
-            public const nint m_damageModel = 0x9D0; // int32
-            public const nint m_bNoDmgForce = 0x9D4; // bool
-            public const nint m_vDamageForce = 0x9D8; // Vector
-            public const nint m_thinkAlways = 0x9E4; // bool
-            public const nint m_hurtThinkPeriod = 0x9E8; // float32
-            public const nint m_OnHurt = 0x9F0; // CEntityIOOutput
-            public const nint m_OnHurtPlayer = 0xA18; // CEntityIOOutput
-            public const nint m_hurtEntities = 0xA40; // CUtlVector<CHandle<CBaseEntity>>
+            public const nint m_flOriginalDamage = 0x9A8; // float32
+            public const nint m_flDamage = 0x9AC; // float32
+            public const nint m_flDamageCap = 0x9B0; // float32
+            public const nint m_flLastDmgTime = 0x9B4; // GameTime_t
+            public const nint m_flForgivenessDelay = 0x9B8; // float32
+            public const nint m_bitsDamageInflict = 0x9BC; // DamageTypes_t
+            public const nint m_damageModel = 0x9C0; // int32
+            public const nint m_bNoDmgForce = 0x9C4; // bool
+            public const nint m_vDamageForce = 0x9C8; // Vector
+            public const nint m_thinkAlways = 0x9D4; // bool
+            public const nint m_hurtThinkPeriod = 0x9D8; // float32
+            public const nint m_OnHurt = 0x9E0; // CEntityIOOutput
+            public const nint m_OnHurtPlayer = 0xA08; // CEntityIOOutput
+            public const nint m_hurtEntities = 0xA30; // CUtlVector<CHandle<CBaseEntity>>
         }
         // Parent: CPlayer_WeaponServices
         // Field count: 15
@@ -10610,11 +10269,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_bPickedUpWeapon = 0xD6; // bool
             public const nint m_bDisableAutoDeploy = 0xD7; // bool
             public const nint m_bIsPickingUpGroundWeapon = 0xD8; // bool
-            public const nint m_networkAnimTiming = 0x1A40; // CNetworkUtlVectorBase<uint8>
-            public const nint m_bBlockInspectUntilNextGraphUpdate = 0x1A58; // bool
+            public const nint m_networkAnimTiming = 0x18C0; // CNetworkUtlVectorBase<uint8>
+            public const nint m_bBlockInspectUntilNextGraphUpdate = 0x18D8; // bool
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 6
         //
         // Metadata:
         // NetworkVarNames: m_nMatchSeed (int)
@@ -10622,12 +10281,14 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bRoundInProgress (bool)
         // NetworkVarNames: m_iFirstSecondHalfRound (int)
         // NetworkVarNames: m_iBombSite (int)
+        // NetworkVarNames: m_hBombPlanter (CHandle<CCSPlayerPawn>)
         public static class CRetakeGameRules {
-            public const nint m_nMatchSeed = 0xF8; // int32
-            public const nint m_bBlockersPresent = 0xFC; // bool
-            public const nint m_bRoundInProgress = 0xFD; // bool
-            public const nint m_iFirstSecondHalfRound = 0x100; // int32
-            public const nint m_iBombSite = 0x104; // int32
+            public const nint m_nMatchSeed = 0x138; // int32
+            public const nint m_bBlockersPresent = 0x13C; // bool
+            public const nint m_bRoundInProgress = 0x13D; // bool
+            public const nint m_iFirstSecondHalfRound = 0x140; // int32
+            public const nint m_iBombSite = 0x144; // int32
+            public const nint m_hBombPlanter = 0x148; // CHandle<CCSPlayerPawn>
         }
         // Parent: CEnvSoundscapeTriggerable
         // Field count: 0
@@ -10644,7 +10305,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CTriggerHurt
         // Field count: 1
         public static class CScriptTriggerHurt {
-            public const nint m_vExtent = 0xA58; // Vector
+            public const nint m_vExtent = 0xA48; // Vector
         }
         // Parent: CCSGO_TeamIntroCharacterPosition
         // Field count: 0
@@ -10657,7 +10318,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 1
         public static class CTriggerDetectExplosion {
-            public const nint m_OnDetectedExplosion = 0x9D8; // CEntityIOOutput
+            public const nint m_OnDetectedExplosion = 0x9C8; // CEntityIOOutput
         }
         // Parent: CBaseFilter
         // Field count: 1
@@ -10677,18 +10338,18 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nVoxelFrameDataSize (int)
         // NetworkVarNames: m_nVoxelUpdate (int)
         public static class CSmokeGrenadeProjectile {
-            public const nint m_nSmokeEffectTickBegin = 0xC48; // int32
-            public const nint m_bDidSmokeEffect = 0xC4C; // bool
-            public const nint m_nRandomSeed = 0xC50; // int32
-            public const nint m_vSmokeColor = 0xC54; // Vector
-            public const nint m_vSmokeDetonationPos = 0xC60; // Vector
-            public const nint m_VoxelFrameData = 0xC70; // CNetworkUtlVectorBase<uint8>
-            public const nint m_nVoxelFrameDataSize = 0xC88; // int32
-            public const nint m_nVoxelUpdate = 0xC8C; // int32
-            public const nint m_flLastBounce = 0xC90; // GameTime_t
-            public const nint m_fllastSimulationTime = 0xC94; // GameTime_t
-            public const nint m_bExplodeFromInferno = 0x2F18; // bool
-            public const nint m_bDidGroundScorch = 0x2F19; // bool
+            public const nint m_nSmokeEffectTickBegin = 0xC68; // int32
+            public const nint m_bDidSmokeEffect = 0xC6C; // bool
+            public const nint m_nRandomSeed = 0xC70; // int32
+            public const nint m_vSmokeColor = 0xC74; // Vector
+            public const nint m_vSmokeDetonationPos = 0xC80; // Vector
+            public const nint m_VoxelFrameData = 0xC90; // CNetworkUtlVectorBase<uint8>
+            public const nint m_nVoxelFrameDataSize = 0xCA8; // int32
+            public const nint m_nVoxelUpdate = 0xCAC; // int32
+            public const nint m_flLastBounce = 0xCB0; // GameTime_t
+            public const nint m_fllastSimulationTime = 0xCB4; // GameTime_t
+            public const nint m_bExplodeFromInferno = 0x2F38; // bool
+            public const nint m_bDidGroundScorch = 0x2F39; // bool
         }
         // Parent: CPointEntity
         // Field count: 4
@@ -10731,7 +10392,7 @@ namespace CS2Dumper.Schemas {
         // Parent: CRuleEntity
         // Field count: 1
         public static class CRulePointEntity {
-            public const nint m_Score = 0x7F0; // int32
+            public const nint m_Score = 0x7E0; // int32
         }
         // Parent: None
         // Field count: 6
@@ -10751,7 +10412,7 @@ namespace CS2Dumper.Schemas {
         public static class CFuncMoveLinearAlias_momentary_door {
         }
         // Parent: CBaseModelEntity
-        // Field count: 11
+        // Field count: 12
         //
         // Metadata:
         // MNetworkIncludeByName
@@ -10763,25 +10424,18 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bRagdollEnabled (bool)
         // NetworkVarNames: m_bRagdollClientSide (bool)
         public static class CBaseAnimGraph {
-            public const nint m_bInitiallyPopulateInterpHistory = 0x868; // bool
-            public const nint m_pChoreoServices = 0x870; // IChoreoServices*
-            public const nint m_bAnimGraphUpdateEnabled = 0x878; // bool
-            public const nint m_flMaxSlopeDistance = 0x87C; // float32
-            public const nint m_vLastSlopeCheckPos = 0x880; // Vector
-            public const nint m_bAnimationUpdateScheduled = 0x88C; // bool
-            public const nint m_vecForce = 0x890; // Vector
-            public const nint m_nForceBone = 0x89C; // int32
-            public const nint m_RagdollPose = 0x8B0; // PhysicsRagdollPose_t
-            public const nint m_bRagdollEnabled = 0x8D8; // bool
-            public const nint m_bRagdollClientSide = 0x8D9; // bool
-        }
-        // Parent: CPointEntity
-        // Field count: 4
-        public static class CInfoProjectedDecal {
-            public const nint m_hMaterial = 0x4F0; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_sSequenceName = 0x4F8; // CUtlStringToken
-            public const nint m_flDistance = 0x4FC; // float32
-            public const nint m_bNotInMultiplayer = 0x500; // bool
+            public const nint m_bInitiallyPopulateInterpHistory = 0x858; // bool
+            public const nint m_pChoreoServices = 0x860; // IChoreoServices*
+            public const nint m_bAnimGraphUpdateEnabled = 0x868; // bool
+            public const nint m_flMaxSlopeDistance = 0x86C; // float32
+            public const nint m_vLastSlopeCheckPos = 0x870; // VectorWS
+            public const nint m_bAnimationUpdateScheduled = 0x87C; // bool
+            public const nint m_vecForce = 0x880; // Vector
+            public const nint m_nForceBone = 0x88C; // int32
+            public const nint m_RagdollPose = 0x8A0; // PhysicsRagdollPose_t
+            public const nint m_bRagdollEnabled = 0x8C8; // bool
+            public const nint m_bRagdollClientSide = 0x8C9; // bool
+            public const nint m_xParentedRagdollRootInEntitySpace = 0x8D0; // CTransform
         }
         // Parent: CBaseEntity
         // Field count: 18
@@ -10829,11 +10483,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
-        // MPulseSelectorAllowRequirementCriteria
-        // MPulseSelectorAllowRequirementCriteria
         public static class CPulseCell_InlineNodeSkipSelector {
             public const nint m_nFlowNodeID = 0x48; // PulseDocNodeID_t
             public const nint m_bAnd = 0x4C; // bool
@@ -10846,34 +10495,34 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_bIsUsable (bool)
         public static class CBaseDoor {
-            public const nint m_angMoveEntitySpace = 0x878; // QAngle
-            public const nint m_vecMoveDirParentSpace = 0x884; // Vector
-            public const nint m_ls = 0x890; // locksound_t
-            public const nint m_bForceClosed = 0x8B0; // bool
-            public const nint m_bDoorGroup = 0x8B1; // bool
-            public const nint m_bLocked = 0x8B2; // bool
-            public const nint m_bIgnoreDebris = 0x8B3; // bool
-            public const nint m_bNoNPCs = 0x8B4; // bool
-            public const nint m_eSpawnPosition = 0x8B8; // FuncDoorSpawnPos_t
-            public const nint m_flBlockDamage = 0x8BC; // float32
-            public const nint m_NoiseMoving = 0x8C0; // CUtlSymbolLarge
-            public const nint m_NoiseArrived = 0x8C8; // CUtlSymbolLarge
-            public const nint m_NoiseMovingClosed = 0x8D0; // CUtlSymbolLarge
-            public const nint m_NoiseArrivedClosed = 0x8D8; // CUtlSymbolLarge
-            public const nint m_ChainTarget = 0x8E0; // CUtlSymbolLarge
-            public const nint m_OnBlockedClosing = 0x8E8; // CEntityIOOutput
-            public const nint m_OnBlockedOpening = 0x910; // CEntityIOOutput
-            public const nint m_OnUnblockedClosing = 0x938; // CEntityIOOutput
-            public const nint m_OnUnblockedOpening = 0x960; // CEntityIOOutput
-            public const nint m_OnFullyClosed = 0x988; // CEntityIOOutput
-            public const nint m_OnFullyOpen = 0x9B0; // CEntityIOOutput
-            public const nint m_OnClose = 0x9D8; // CEntityIOOutput
-            public const nint m_OnOpen = 0xA00; // CEntityIOOutput
-            public const nint m_OnLockedUse = 0xA28; // CEntityIOOutput
-            public const nint m_bLoopMoveSound = 0xA50; // bool
-            public const nint m_bCreateNavObstacle = 0xA70; // bool
-            public const nint m_isChaining = 0xA71; // bool
-            public const nint m_bIsUsable = 0xA72; // bool
+            public const nint m_angMoveEntitySpace = 0x868; // QAngle
+            public const nint m_vecMoveDirParentSpace = 0x874; // Vector
+            public const nint m_ls = 0x880; // locksound_t
+            public const nint m_bForceClosed = 0x8A0; // bool
+            public const nint m_bDoorGroup = 0x8A1; // bool
+            public const nint m_bLocked = 0x8A2; // bool
+            public const nint m_bIgnoreDebris = 0x8A3; // bool
+            public const nint m_bNoNPCs = 0x8A4; // bool
+            public const nint m_eSpawnPosition = 0x8A8; // FuncDoorSpawnPos_t
+            public const nint m_flBlockDamage = 0x8AC; // float32
+            public const nint m_NoiseMoving = 0x8B0; // CUtlSymbolLarge
+            public const nint m_NoiseArrived = 0x8B8; // CUtlSymbolLarge
+            public const nint m_NoiseMovingClosed = 0x8C0; // CUtlSymbolLarge
+            public const nint m_NoiseArrivedClosed = 0x8C8; // CUtlSymbolLarge
+            public const nint m_ChainTarget = 0x8D0; // CUtlSymbolLarge
+            public const nint m_OnBlockedClosing = 0x8D8; // CEntityIOOutput
+            public const nint m_OnBlockedOpening = 0x900; // CEntityIOOutput
+            public const nint m_OnUnblockedClosing = 0x928; // CEntityIOOutput
+            public const nint m_OnUnblockedOpening = 0x950; // CEntityIOOutput
+            public const nint m_OnFullyClosed = 0x978; // CEntityIOOutput
+            public const nint m_OnFullyOpen = 0x9A0; // CEntityIOOutput
+            public const nint m_OnClose = 0x9C8; // CEntityIOOutput
+            public const nint m_OnOpen = 0x9F0; // CEntityIOOutput
+            public const nint m_OnLockedUse = 0xA18; // CEntityIOOutput
+            public const nint m_bLoopMoveSound = 0xA40; // bool
+            public const nint m_bCreateNavObstacle = 0xA60; // bool
+            public const nint m_isChaining = 0xA61; // bool
+            public const nint m_bIsUsable = 0xA62; // bool
         }
         // Parent: CServerOnlyEntity
         // Field count: 0
@@ -10882,10 +10531,10 @@ namespace CS2Dumper.Schemas {
         // Parent: CRulePointEntity
         // Field count: 4
         public static class CGameMoney {
-            public const nint m_OnMoneySpent = 0x7F8; // CEntityIOOutput
-            public const nint m_OnMoneySpentFail = 0x820; // CEntityIOOutput
-            public const nint m_nMoney = 0x848; // int32
-            public const nint m_strAwardText = 0x850; // CUtlString
+            public const nint m_OnMoneySpent = 0x7E8; // CEntityIOOutput
+            public const nint m_OnMoneySpentFail = 0x810; // CEntityIOOutput
+            public const nint m_nMoney = 0x838; // int32
+            public const nint m_strAwardText = 0x840; // CUtlString
         }
         // Parent: CPointEntity
         // Field count: 1
@@ -10903,13 +10552,13 @@ namespace CS2Dumper.Schemas {
         // Parent: CItem
         // Field count: 2
         public static class CItemDefuser {
-            public const nint m_entitySpottedState = 0xB50; // EntitySpottedState_t
-            public const nint m_nSpotRules = 0xB68; // int32
+            public const nint m_entitySpottedState = 0xB70; // EntitySpottedState_t
+            public const nint m_nSpotRules = 0xB88; // int32
         }
         // Parent: CBaseModelEntity
         // Field count: 1
         public static class CItemGenericTriggerHelper {
-            public const nint m_hParentItem = 0x7E8; // CHandle<CItemGeneric>
+            public const nint m_hParentItem = 0x7D8; // CHandle<CItemGeneric>
         }
         // Parent: CPlayerPawnComponent
         // Field count: 5
@@ -10935,12 +10584,12 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_attachmentPointBoneSpace (Vector)
         // NetworkVarNames: m_attachmentPointRagdollSpace (Vector)
         public static class CRagdollPropAttached {
-            public const nint m_boneIndexAttached = 0xC48; // uint32
-            public const nint m_ragdollAttachedObjectIndex = 0xC4C; // uint32
-            public const nint m_attachmentPointBoneSpace = 0xC50; // Vector
-            public const nint m_attachmentPointRagdollSpace = 0xC5C; // Vector
-            public const nint m_bShouldDetach = 0xC68; // bool
-            public const nint m_bShouldDeleteAttachedActivationRecord = 0xC78; // bool
+            public const nint m_boneIndexAttached = 0xBE0; // uint32
+            public const nint m_ragdollAttachedObjectIndex = 0xBE4; // uint32
+            public const nint m_attachmentPointBoneSpace = 0xBE8; // Vector
+            public const nint m_attachmentPointRagdollSpace = 0xBF4; // Vector
+            public const nint m_bShouldDetach = 0xC00; // bool
+            public const nint m_bShouldDeleteAttachedActivationRecord = 0xC10; // bool
         }
         // Parent: CItem
         // Field count: 2
@@ -10949,13 +10598,13 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_OwningPlayer (CHandle<CCSPlayerPawn>)
         // NetworkVarNames: m_KillingPlayer (CHandle<CCSPlayerPawn>)
         public static class CItemDogtags {
-            public const nint m_OwningPlayer = 0xB50; // CHandle<CCSPlayerPawn>
-            public const nint m_KillingPlayer = 0xB54; // CHandle<CCSPlayerPawn>
+            public const nint m_OwningPlayer = 0xB70; // CHandle<CCSPlayerPawn>
+            public const nint m_KillingPlayer = 0xB74; // CHandle<CCSPlayerPawn>
         }
         // Parent: CBasePlatTrain
         // Field count: 1
         public static class CFuncPlat {
-            public const nint m_sNoise = 0x890; // CUtlSymbolLarge
+            public const nint m_sNoise = 0x880; // CUtlSymbolLarge
         }
         // Parent: CBaseModelEntity
         // Field count: 76
@@ -11036,82 +10685,82 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_vPrecomputedOBBExtent5 (Vector)
         // NetworkVarNames: m_VisClusters (uint16)
         public static class CBarnLight {
-            public const nint m_bEnabled = 0x7E8; // bool
-            public const nint m_nColorMode = 0x7EC; // int32
-            public const nint m_Color = 0x7F0; // Color
-            public const nint m_flColorTemperature = 0x7F4; // float32
-            public const nint m_flBrightness = 0x7F8; // float32
-            public const nint m_flBrightnessScale = 0x7FC; // float32
-            public const nint m_nDirectLight = 0x800; // int32
-            public const nint m_nBakedShadowIndex = 0x804; // int32
-            public const nint m_nLightPathUniqueId = 0x808; // int32
-            public const nint m_nLightMapUniqueId = 0x80C; // int32
-            public const nint m_nLuminaireShape = 0x810; // int32
-            public const nint m_flLuminaireSize = 0x814; // float32
-            public const nint m_flLuminaireAnisotropy = 0x818; // float32
-            public const nint m_LightStyleString = 0x820; // CUtlString
-            public const nint m_flLightStyleStartTime = 0x828; // GameTime_t
-            public const nint m_QueuedLightStyleStrings = 0x830; // CNetworkUtlVectorBase<CUtlString>
-            public const nint m_LightStyleEvents = 0x848; // CNetworkUtlVectorBase<CUtlString>
-            public const nint m_LightStyleTargets = 0x860; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
-            public const nint m_StyleEvent = 0x878; // CEntityIOOutput[4]
-            public const nint m_hLightCookie = 0x938; // CStrongHandle<InfoForResourceTypeCTextureBase>
-            public const nint m_flShape = 0x940; // float32
-            public const nint m_flSoftX = 0x944; // float32
-            public const nint m_flSoftY = 0x948; // float32
-            public const nint m_flSkirt = 0x94C; // float32
-            public const nint m_flSkirtNear = 0x950; // float32
-            public const nint m_vSizeParams = 0x954; // Vector
-            public const nint m_flRange = 0x960; // float32
-            public const nint m_vShear = 0x964; // Vector
-            public const nint m_nBakeSpecularToCubemaps = 0x970; // int32
-            public const nint m_vBakeSpecularToCubemapsSize = 0x974; // Vector
-            public const nint m_nCastShadows = 0x980; // int32
-            public const nint m_nShadowMapSize = 0x984; // int32
-            public const nint m_nShadowPriority = 0x988; // int32
-            public const nint m_bContactShadow = 0x98C; // bool
-            public const nint m_bForceShadowsEnabled = 0x98D; // bool
-            public const nint m_nBounceLight = 0x990; // int32
-            public const nint m_flBounceScale = 0x994; // float32
-            public const nint m_flMinRoughness = 0x998; // float32
-            public const nint m_vAlternateColor = 0x99C; // Vector
-            public const nint m_fAlternateColorBrightness = 0x9A8; // float32
-            public const nint m_nFog = 0x9AC; // int32
-            public const nint m_flFogStrength = 0x9B0; // float32
-            public const nint m_nFogShadows = 0x9B4; // int32
-            public const nint m_flFogScale = 0x9B8; // float32
-            public const nint m_bFogMixedShadows = 0x9BC; // bool
-            public const nint m_flFadeSizeStart = 0x9C0; // float32
-            public const nint m_flFadeSizeEnd = 0x9C4; // float32
-            public const nint m_flShadowFadeSizeStart = 0x9C8; // float32
-            public const nint m_flShadowFadeSizeEnd = 0x9CC; // float32
-            public const nint m_bPrecomputedFieldsValid = 0x9D0; // bool
-            public const nint m_vPrecomputedBoundsMins = 0x9D4; // Vector
-            public const nint m_vPrecomputedBoundsMaxs = 0x9E0; // Vector
-            public const nint m_vPrecomputedOBBOrigin = 0x9EC; // Vector
-            public const nint m_vPrecomputedOBBAngles = 0x9F8; // QAngle
-            public const nint m_vPrecomputedOBBExtent = 0xA04; // Vector
-            public const nint m_nPrecomputedSubFrusta = 0xA10; // int32
-            public const nint m_vPrecomputedOBBOrigin0 = 0xA14; // Vector
-            public const nint m_vPrecomputedOBBAngles0 = 0xA20; // QAngle
-            public const nint m_vPrecomputedOBBExtent0 = 0xA2C; // Vector
-            public const nint m_vPrecomputedOBBOrigin1 = 0xA38; // Vector
-            public const nint m_vPrecomputedOBBAngles1 = 0xA44; // QAngle
-            public const nint m_vPrecomputedOBBExtent1 = 0xA50; // Vector
-            public const nint m_vPrecomputedOBBOrigin2 = 0xA5C; // Vector
-            public const nint m_vPrecomputedOBBAngles2 = 0xA68; // QAngle
-            public const nint m_vPrecomputedOBBExtent2 = 0xA74; // Vector
-            public const nint m_vPrecomputedOBBOrigin3 = 0xA80; // Vector
-            public const nint m_vPrecomputedOBBAngles3 = 0xA8C; // QAngle
-            public const nint m_vPrecomputedOBBExtent3 = 0xA98; // Vector
-            public const nint m_vPrecomputedOBBOrigin4 = 0xAA4; // Vector
-            public const nint m_vPrecomputedOBBAngles4 = 0xAB0; // QAngle
-            public const nint m_vPrecomputedOBBExtent4 = 0xABC; // Vector
-            public const nint m_vPrecomputedOBBOrigin5 = 0xAC8; // Vector
-            public const nint m_vPrecomputedOBBAngles5 = 0xAD4; // QAngle
-            public const nint m_vPrecomputedOBBExtent5 = 0xAE0; // Vector
-            public const nint m_bPvsModifyEntity = 0xAEC; // bool
-            public const nint m_VisClusters = 0xAF0; // CNetworkUtlVectorBase<uint16>
+            public const nint m_bEnabled = 0x7D8; // bool
+            public const nint m_nColorMode = 0x7DC; // int32
+            public const nint m_Color = 0x7E0; // Color
+            public const nint m_flColorTemperature = 0x7E4; // float32
+            public const nint m_flBrightness = 0x7E8; // float32
+            public const nint m_flBrightnessScale = 0x7EC; // float32
+            public const nint m_nDirectLight = 0x7F0; // int32
+            public const nint m_nBakedShadowIndex = 0x7F4; // int32
+            public const nint m_nLightPathUniqueId = 0x7F8; // int32
+            public const nint m_nLightMapUniqueId = 0x7FC; // int32
+            public const nint m_nLuminaireShape = 0x800; // int32
+            public const nint m_flLuminaireSize = 0x804; // float32
+            public const nint m_flLuminaireAnisotropy = 0x808; // float32
+            public const nint m_LightStyleString = 0x810; // CUtlString
+            public const nint m_flLightStyleStartTime = 0x818; // GameTime_t
+            public const nint m_QueuedLightStyleStrings = 0x820; // CNetworkUtlVectorBase<CUtlString>
+            public const nint m_LightStyleEvents = 0x838; // CNetworkUtlVectorBase<CUtlString>
+            public const nint m_LightStyleTargets = 0x850; // CNetworkUtlVectorBase<CHandle<CBaseModelEntity>>
+            public const nint m_StyleEvent = 0x868; // CEntityIOOutput[4]
+            public const nint m_hLightCookie = 0x928; // CStrongHandle<InfoForResourceTypeCTextureBase>
+            public const nint m_flShape = 0x930; // float32
+            public const nint m_flSoftX = 0x934; // float32
+            public const nint m_flSoftY = 0x938; // float32
+            public const nint m_flSkirt = 0x93C; // float32
+            public const nint m_flSkirtNear = 0x940; // float32
+            public const nint m_vSizeParams = 0x944; // Vector
+            public const nint m_flRange = 0x950; // float32
+            public const nint m_vShear = 0x954; // Vector
+            public const nint m_nBakeSpecularToCubemaps = 0x960; // int32
+            public const nint m_vBakeSpecularToCubemapsSize = 0x964; // Vector
+            public const nint m_nCastShadows = 0x970; // int32
+            public const nint m_nShadowMapSize = 0x974; // int32
+            public const nint m_nShadowPriority = 0x978; // int32
+            public const nint m_bContactShadow = 0x97C; // bool
+            public const nint m_bForceShadowsEnabled = 0x97D; // bool
+            public const nint m_nBounceLight = 0x980; // int32
+            public const nint m_flBounceScale = 0x984; // float32
+            public const nint m_flMinRoughness = 0x988; // float32
+            public const nint m_vAlternateColor = 0x98C; // Vector
+            public const nint m_fAlternateColorBrightness = 0x998; // float32
+            public const nint m_nFog = 0x99C; // int32
+            public const nint m_flFogStrength = 0x9A0; // float32
+            public const nint m_nFogShadows = 0x9A4; // int32
+            public const nint m_flFogScale = 0x9A8; // float32
+            public const nint m_bFogMixedShadows = 0x9AC; // bool
+            public const nint m_flFadeSizeStart = 0x9B0; // float32
+            public const nint m_flFadeSizeEnd = 0x9B4; // float32
+            public const nint m_flShadowFadeSizeStart = 0x9B8; // float32
+            public const nint m_flShadowFadeSizeEnd = 0x9BC; // float32
+            public const nint m_bPrecomputedFieldsValid = 0x9C0; // bool
+            public const nint m_vPrecomputedBoundsMins = 0x9C4; // Vector
+            public const nint m_vPrecomputedBoundsMaxs = 0x9D0; // Vector
+            public const nint m_vPrecomputedOBBOrigin = 0x9DC; // Vector
+            public const nint m_vPrecomputedOBBAngles = 0x9E8; // QAngle
+            public const nint m_vPrecomputedOBBExtent = 0x9F4; // Vector
+            public const nint m_nPrecomputedSubFrusta = 0xA00; // int32
+            public const nint m_vPrecomputedOBBOrigin0 = 0xA04; // Vector
+            public const nint m_vPrecomputedOBBAngles0 = 0xA10; // QAngle
+            public const nint m_vPrecomputedOBBExtent0 = 0xA1C; // Vector
+            public const nint m_vPrecomputedOBBOrigin1 = 0xA28; // Vector
+            public const nint m_vPrecomputedOBBAngles1 = 0xA34; // QAngle
+            public const nint m_vPrecomputedOBBExtent1 = 0xA40; // Vector
+            public const nint m_vPrecomputedOBBOrigin2 = 0xA4C; // Vector
+            public const nint m_vPrecomputedOBBAngles2 = 0xA58; // QAngle
+            public const nint m_vPrecomputedOBBExtent2 = 0xA64; // Vector
+            public const nint m_vPrecomputedOBBOrigin3 = 0xA70; // Vector
+            public const nint m_vPrecomputedOBBAngles3 = 0xA7C; // QAngle
+            public const nint m_vPrecomputedOBBExtent3 = 0xA88; // Vector
+            public const nint m_vPrecomputedOBBOrigin4 = 0xA94; // Vector
+            public const nint m_vPrecomputedOBBAngles4 = 0xAA0; // QAngle
+            public const nint m_vPrecomputedOBBExtent4 = 0xAAC; // Vector
+            public const nint m_vPrecomputedOBBOrigin5 = 0xAB8; // Vector
+            public const nint m_vPrecomputedOBBAngles5 = 0xAC4; // QAngle
+            public const nint m_vPrecomputedOBBExtent5 = 0xAD0; // Vector
+            public const nint m_bPvsModifyEntity = 0xADC; // bool
+            public const nint m_VisClusters = 0xAE0; // CNetworkUtlVectorBase<uint16>
         }
         // Parent: CPointEntity
         // Field count: 3
@@ -11134,33 +10783,28 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 14
         public static class CTriggerSndSosOpvar {
-            public const nint m_hTouchingPlayers = 0x9B8; // CUtlVector<CHandle<CBaseEntity>>
-            public const nint m_flPosition = 0x9D0; // Vector
-            public const nint m_flCenterSize = 0x9DC; // float32
-            public const nint m_flMinVal = 0x9E0; // float32
-            public const nint m_flMaxVal = 0x9E4; // float32
-            public const nint m_opvarName = 0x9E8; // CUtlSymbolLarge
-            public const nint m_stackName = 0x9F0; // CUtlSymbolLarge
-            public const nint m_operatorName = 0x9F8; // CUtlSymbolLarge
-            public const nint m_bVolIs2D = 0xA00; // bool
-            public const nint m_opvarNameChar = 0xA01; // char[256]
-            public const nint m_stackNameChar = 0xB01; // char[256]
-            public const nint m_operatorNameChar = 0xC01; // char[256]
-            public const nint m_VecNormPos = 0xD04; // Vector
-            public const nint m_flNormCenterSize = 0xD10; // float32
+            public const nint m_hTouchingPlayers = 0x9A8; // CUtlVector<CHandle<CBaseEntity>>
+            public const nint m_flPosition = 0x9C0; // Vector
+            public const nint m_flCenterSize = 0x9CC; // float32
+            public const nint m_flMinVal = 0x9D0; // float32
+            public const nint m_flMaxVal = 0x9D4; // float32
+            public const nint m_opvarName = 0x9D8; // CUtlSymbolLarge
+            public const nint m_stackName = 0x9E0; // CUtlSymbolLarge
+            public const nint m_operatorName = 0x9E8; // CUtlSymbolLarge
+            public const nint m_bVolIs2D = 0x9F0; // bool
+            public const nint m_opvarNameChar = 0x9F1; // char[256]
+            public const nint m_stackNameChar = 0xAF1; // char[256]
+            public const nint m_operatorNameChar = 0xBF1; // char[256]
+            public const nint m_VecNormPos = 0xCF4; // Vector
+            public const nint m_flNormCenterSize = 0xD00; // float32
         }
         // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
-        // MPulseRequirementPass
-        // MPulseRequirementSummaryExpr
         public static class CPulseCell_LimitCount {
             public const nint m_nLimitCount = 0x48; // int32
         }
@@ -11169,9 +10813,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Step_CallExternalMethod {
             public const nint m_MethodName = 0x48; // PulseSymbol_t
             public const nint m_GameBlackboard = 0x58; // PulseSymbol_t
@@ -11194,54 +10835,54 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_iNodeNumberMax (int)
         // NetworkVarNames: m_bListenedTo (bool)
         public static class CPointCommentaryNode {
-            public const nint m_iszPreCommands = 0xA78; // CUtlSymbolLarge
-            public const nint m_iszPostCommands = 0xA80; // CUtlSymbolLarge
-            public const nint m_iszCommentaryFile = 0xA88; // CUtlSymbolLarge
-            public const nint m_iszViewTarget = 0xA90; // CUtlSymbolLarge
-            public const nint m_hViewTarget = 0xA98; // CHandle<CBaseEntity>
-            public const nint m_hViewTargetAngles = 0xA9C; // CHandle<CBaseEntity>
-            public const nint m_iszViewPosition = 0xAA0; // CUtlSymbolLarge
-            public const nint m_hViewPosition = 0xAA8; // CHandle<CBaseEntity>
-            public const nint m_hViewPositionMover = 0xAAC; // CHandle<CBaseEntity>
-            public const nint m_bPreventMovement = 0xAB0; // bool
-            public const nint m_bUnderCrosshair = 0xAB1; // bool
-            public const nint m_bUnstoppable = 0xAB2; // bool
-            public const nint m_flFinishedTime = 0xAB4; // GameTime_t
-            public const nint m_vecFinishOrigin = 0xAB8; // Vector
-            public const nint m_vecOriginalAngles = 0xAC4; // QAngle
-            public const nint m_vecFinishAngles = 0xAD0; // QAngle
-            public const nint m_bPreventChangesWhileMoving = 0xADC; // bool
-            public const nint m_bDisabled = 0xADD; // bool
-            public const nint m_vecTeleportOrigin = 0xAE0; // Vector
-            public const nint m_flAbortedPlaybackAt = 0xAEC; // GameTime_t
-            public const nint m_pOnCommentaryStarted = 0xAF0; // CEntityIOOutput
-            public const nint m_pOnCommentaryStopped = 0xB18; // CEntityIOOutput
-            public const nint m_bActive = 0xB40; // bool
-            public const nint m_flStartTime = 0xB44; // GameTime_t
-            public const nint m_flStartTimeInCommentary = 0xB48; // float32
-            public const nint m_iszTitle = 0xB50; // CUtlSymbolLarge
-            public const nint m_iszSpeakers = 0xB58; // CUtlSymbolLarge
-            public const nint m_iNodeNumber = 0xB60; // int32
-            public const nint m_iNodeNumberMax = 0xB64; // int32
-            public const nint m_bListenedTo = 0xB68; // bool
+            public const nint m_iszPreCommands = 0xA90; // CUtlSymbolLarge
+            public const nint m_iszPostCommands = 0xA98; // CUtlSymbolLarge
+            public const nint m_iszCommentaryFile = 0xAA0; // CUtlSymbolLarge
+            public const nint m_iszViewTarget = 0xAA8; // CUtlSymbolLarge
+            public const nint m_hViewTarget = 0xAB0; // CHandle<CBaseEntity>
+            public const nint m_hViewTargetAngles = 0xAB4; // CHandle<CBaseEntity>
+            public const nint m_iszViewPosition = 0xAB8; // CUtlSymbolLarge
+            public const nint m_hViewPosition = 0xAC0; // CHandle<CBaseEntity>
+            public const nint m_hViewPositionMover = 0xAC4; // CHandle<CBaseEntity>
+            public const nint m_bPreventMovement = 0xAC8; // bool
+            public const nint m_bUnderCrosshair = 0xAC9; // bool
+            public const nint m_bUnstoppable = 0xACA; // bool
+            public const nint m_flFinishedTime = 0xACC; // GameTime_t
+            public const nint m_vecFinishOrigin = 0xAD0; // Vector
+            public const nint m_vecOriginalAngles = 0xADC; // QAngle
+            public const nint m_vecFinishAngles = 0xAE8; // QAngle
+            public const nint m_bPreventChangesWhileMoving = 0xAF4; // bool
+            public const nint m_bDisabled = 0xAF5; // bool
+            public const nint m_vecTeleportOrigin = 0xAF8; // VectorWS
+            public const nint m_flAbortedPlaybackAt = 0xB04; // GameTime_t
+            public const nint m_pOnCommentaryStarted = 0xB08; // CEntityIOOutput
+            public const nint m_pOnCommentaryStopped = 0xB30; // CEntityIOOutput
+            public const nint m_bActive = 0xB58; // bool
+            public const nint m_flStartTime = 0xB5C; // GameTime_t
+            public const nint m_flStartTimeInCommentary = 0xB60; // float32
+            public const nint m_iszTitle = 0xB68; // CUtlSymbolLarge
+            public const nint m_iszSpeakers = 0xB70; // CUtlSymbolLarge
+            public const nint m_iNodeNumber = 0xB78; // int32
+            public const nint m_iNodeNumberMax = 0xB7C; // int32
+            public const nint m_bListenedTo = 0xB80; // bool
         }
         // Parent: CRotButton
         // Field count: 14
         public static class CMomentaryRotButton {
-            public const nint m_Position = 0x9B8; // CEntityOutputTemplate<float32>
-            public const nint m_OnUnpressed = 0x9E0; // CEntityIOOutput
-            public const nint m_OnFullyOpen = 0xA08; // CEntityIOOutput
-            public const nint m_OnFullyClosed = 0xA30; // CEntityIOOutput
-            public const nint m_OnReachedPosition = 0xA58; // CEntityIOOutput
-            public const nint m_lastUsed = 0xA80; // int32
-            public const nint m_start = 0xA84; // QAngle
-            public const nint m_end = 0xA90; // QAngle
-            public const nint m_IdealYaw = 0xA9C; // float32
-            public const nint m_sNoise = 0xAA0; // CUtlSymbolLarge
-            public const nint m_bUpdateTarget = 0xAA8; // bool
-            public const nint m_direction = 0xAAC; // int32
-            public const nint m_returnSpeed = 0xAB0; // float32
-            public const nint m_flStartPosition = 0xAB4; // float32
+            public const nint m_Position = 0x9A8; // CEntityOutputTemplate<float32>
+            public const nint m_OnUnpressed = 0x9D0; // CEntityIOOutput
+            public const nint m_OnFullyOpen = 0x9F8; // CEntityIOOutput
+            public const nint m_OnFullyClosed = 0xA20; // CEntityIOOutput
+            public const nint m_OnReachedPosition = 0xA48; // CEntityIOOutput
+            public const nint m_lastUsed = 0xA70; // int32
+            public const nint m_start = 0xA74; // QAngle
+            public const nint m_end = 0xA80; // QAngle
+            public const nint m_IdealYaw = 0xA8C; // float32
+            public const nint m_sNoise = 0xA90; // CUtlSymbolLarge
+            public const nint m_bUpdateTarget = 0xA98; // bool
+            public const nint m_direction = 0xA9C; // int32
+            public const nint m_returnSpeed = 0xAA0; // float32
+            public const nint m_flStartPosition = 0xAA4; // float32
         }
         // Parent: CLogicalEntity
         // Field count: 3
@@ -11263,75 +10904,76 @@ namespace CS2Dumper.Schemas {
         public static class CEnvSoundscapeTriggerable {
         }
         // Parent: CBaseModelEntity
-        // Field count: 67
+        // Field count: 68
         public static class CFuncMover {
-            public const nint m_iszPathName = 0x7E8; // CUtlSymbolLarge
-            public const nint m_hPathMover = 0x7F0; // CHandle<CPathMover>
-            public const nint m_iszPathNodeStart = 0x7F8; // CUtlSymbolLarge
-            public const nint m_iszPathNodeEnd = 0x800; // CUtlSymbolLarge
-            public const nint m_eMoveType = 0x808; // CFuncMover::Move_t
-            public const nint m_bIsReversing = 0x80C; // bool
-            public const nint m_vTarget = 0x810; // Vector
-            public const nint m_flStartSpeed = 0x81C; // float32
-            public const nint m_flPathLocation = 0x820; // float32
-            public const nint m_flT = 0x824; // float32
-            public const nint m_nCurrentNodeIndex = 0x828; // int32
-            public const nint m_nPreviousNodeIndex = 0x82C; // int32
-            public const nint m_eSolidType = 0x830; // SolidType_t
-            public const nint m_bIsMoving = 0x831; // bool
-            public const nint m_flTimeToReachMaxSpeed = 0x834; // float32
-            public const nint m_flDistanceToReachMaxSpeed = 0x838; // float32
-            public const nint m_flTimeToReachZeroSpeed = 0x83C; // float32
-            public const nint m_flDistanceToReachZeroSpeed = 0x840; // float32
-            public const nint m_flTimeMovementStart = 0x844; // GameTime_t
-            public const nint m_flTimeMovementStop = 0x848; // GameTime_t
-            public const nint m_hStopAtNode = 0x84C; // CHandle<CMoverPathNode>
-            public const nint m_flPathLocationToBeginStop = 0x850; // float32
-            public const nint m_iszStartForwardSound = 0x858; // CUtlSymbolLarge
-            public const nint m_iszLoopForwardSound = 0x860; // CUtlSymbolLarge
-            public const nint m_iszStopForwardSound = 0x868; // CUtlSymbolLarge
-            public const nint m_iszStartReverseSound = 0x870; // CUtlSymbolLarge
-            public const nint m_iszLoopReverseSound = 0x878; // CUtlSymbolLarge
-            public const nint m_iszStopReverseSound = 0x880; // CUtlSymbolLarge
-            public const nint m_iszArriveAtDestinationSound = 0x888; // CUtlSymbolLarge
-            public const nint m_OnMovementEnd = 0x8A8; // CEntityIOOutput
-            public const nint m_bStartAtClosestPoint = 0x8D0; // bool
-            public const nint m_bStartAtEnd = 0x8D1; // bool
-            public const nint m_eOrientationUpdate = 0x8D4; // CFuncMover::OrientationUpdate_t
-            public const nint m_flTimeStartOrientationChange = 0x8D8; // GameTime_t
-            public const nint m_flTimeToBlendToNewOrientation = 0x8DC; // float32
-            public const nint m_flDurationBlendToNewOrientationRan = 0x8E0; // float32
-            public const nint m_nOriginalOrientationIndex = 0x8E4; // int32
-            public const nint m_bCreateMovableNavMesh = 0x8E8; // bool
-            public const nint m_bAllowMovableNavMeshDockingOnEntireEntity = 0x8E9; // bool
-            public const nint m_OnNodePassed = 0x8F0; // CEntityIOOutput
-            public const nint m_iszOrientationMatchEntityName = 0x918; // CUtlSymbolLarge
-            public const nint m_hOrientationMatchEntity = 0x920; // CHandle<CBaseEntity>
-            public const nint m_flTimeToTraverseToNextNode = 0x924; // float32
-            public const nint m_vLerpToNewPosStartInPathEntitySpace = 0x928; // Vector
-            public const nint m_vLerpToNewPosEndInPathEntitySpace = 0x934; // Vector
-            public const nint m_flLerpToPositionT = 0x940; // float32
-            public const nint m_flLerpToPositionDeltaT = 0x944; // float32
-            public const nint m_OnLerpToPositionComplete = 0x948; // CEntityIOOutput
-            public const nint m_bIsPaused = 0x970; // bool
-            public const nint m_eTransitionedToPathNodeAction = 0x974; // CFuncMover::TransitionToPathNodeAction_t
-            public const nint m_nDelayedTeleportToNode = 0x978; // int32
-            public const nint m_bIsVerboseLogging = 0x97C; // bool
-            public const nint m_hFollowEntity = 0x980; // CHandle<CBaseEntity>
-            public const nint m_flFollowDistance = 0x984; // float32
-            public const nint m_flFollowMinimumSpeed = 0x988; // float32
-            public const nint m_flCurFollowEntityT = 0x98C; // float32
-            public const nint m_flCurFollowSpeed = 0x990; // float32
-            public const nint m_strOrientationFaceEntityName = 0x998; // CUtlSymbolLarge
-            public const nint m_hOrientationFaceEntity = 0x9A0; // CHandle<CBaseEntity>
-            public const nint m_OnStart = 0x9A8; // CEntityIOOutput
-            public const nint m_OnStartForward = 0x9D0; // CEntityIOOutput
-            public const nint m_OnStartReverse = 0x9F8; // CEntityIOOutput
-            public const nint m_OnStop = 0xA20; // CEntityIOOutput
-            public const nint m_OnStopped = 0xA48; // CEntityIOOutput
-            public const nint m_bNextNodeReturnsCurrent = 0xA70; // bool
-            public const nint m_bStartedMoving = 0xA71; // bool
-            public const nint m_eFollowEntityDirection = 0xA90; // CFuncMover::FollowEntityDirection_t
+            public const nint m_iszPathName = 0x7D8; // CUtlSymbolLarge
+            public const nint m_hPathMover = 0x7E0; // CHandle<CPathMover>
+            public const nint m_hPrevPathMover = 0x7E4; // CHandle<CPathMover>
+            public const nint m_iszPathNodeStart = 0x7E8; // CUtlSymbolLarge
+            public const nint m_iszPathNodeEnd = 0x7F0; // CUtlSymbolLarge
+            public const nint m_eMoveType = 0x7F8; // CFuncMover::Move_t
+            public const nint m_bIsReversing = 0x7FC; // bool
+            public const nint m_vTarget = 0x800; // Vector
+            public const nint m_flStartSpeed = 0x80C; // float32
+            public const nint m_flPathLocation = 0x810; // float32
+            public const nint m_flT = 0x814; // float32
+            public const nint m_nCurrentNodeIndex = 0x818; // int32
+            public const nint m_nPreviousNodeIndex = 0x81C; // int32
+            public const nint m_eSolidType = 0x820; // SolidType_t
+            public const nint m_bIsMoving = 0x821; // bool
+            public const nint m_flTimeToReachMaxSpeed = 0x824; // float32
+            public const nint m_flDistanceToReachMaxSpeed = 0x828; // float32
+            public const nint m_flTimeToReachZeroSpeed = 0x82C; // float32
+            public const nint m_flDistanceToReachZeroSpeed = 0x830; // float32
+            public const nint m_flTimeMovementStart = 0x834; // GameTime_t
+            public const nint m_flTimeMovementStop = 0x838; // GameTime_t
+            public const nint m_hStopAtNode = 0x83C; // CHandle<CMoverPathNode>
+            public const nint m_flPathLocationToBeginStop = 0x840; // float32
+            public const nint m_iszStartForwardSound = 0x848; // CUtlSymbolLarge
+            public const nint m_iszLoopForwardSound = 0x850; // CUtlSymbolLarge
+            public const nint m_iszStopForwardSound = 0x858; // CUtlSymbolLarge
+            public const nint m_iszStartReverseSound = 0x860; // CUtlSymbolLarge
+            public const nint m_iszLoopReverseSound = 0x868; // CUtlSymbolLarge
+            public const nint m_iszStopReverseSound = 0x870; // CUtlSymbolLarge
+            public const nint m_iszArriveAtDestinationSound = 0x878; // CUtlSymbolLarge
+            public const nint m_OnMovementEnd = 0x898; // CEntityIOOutput
+            public const nint m_bStartAtClosestPoint = 0x8C0; // bool
+            public const nint m_bStartAtEnd = 0x8C1; // bool
+            public const nint m_eOrientationUpdate = 0x8C4; // CFuncMover::OrientationUpdate_t
+            public const nint m_flTimeStartOrientationChange = 0x8C8; // GameTime_t
+            public const nint m_flTimeToBlendToNewOrientation = 0x8CC; // float32
+            public const nint m_flDurationBlendToNewOrientationRan = 0x8D0; // float32
+            public const nint m_nOriginalOrientationIndex = 0x8D4; // int32
+            public const nint m_bCreateMovableNavMesh = 0x8D8; // bool
+            public const nint m_bAllowMovableNavMeshDockingOnEntireEntity = 0x8D9; // bool
+            public const nint m_OnNodePassed = 0x8E0; // CEntityIOOutput
+            public const nint m_iszOrientationMatchEntityName = 0x908; // CUtlSymbolLarge
+            public const nint m_hOrientationMatchEntity = 0x910; // CHandle<CBaseEntity>
+            public const nint m_flTimeToTraverseToNextNode = 0x914; // float32
+            public const nint m_vLerpToNewPosStartInPathEntitySpace = 0x918; // Vector
+            public const nint m_vLerpToNewPosEndInPathEntitySpace = 0x924; // Vector
+            public const nint m_flLerpToPositionT = 0x930; // float32
+            public const nint m_flLerpToPositionDeltaT = 0x934; // float32
+            public const nint m_OnLerpToPositionComplete = 0x938; // CEntityIOOutput
+            public const nint m_bIsPaused = 0x960; // bool
+            public const nint m_eTransitionedToPathNodeAction = 0x964; // CFuncMover::TransitionToPathNodeAction_t
+            public const nint m_nDelayedTeleportToNode = 0x968; // int32
+            public const nint m_bIsVerboseLogging = 0x96C; // bool
+            public const nint m_hFollowEntity = 0x970; // CHandle<CBaseEntity>
+            public const nint m_flFollowDistance = 0x974; // float32
+            public const nint m_flFollowMinimumSpeed = 0x978; // float32
+            public const nint m_flCurFollowEntityT = 0x97C; // float32
+            public const nint m_flCurFollowSpeed = 0x980; // float32
+            public const nint m_strOrientationFaceEntityName = 0x988; // CUtlSymbolLarge
+            public const nint m_hOrientationFaceEntity = 0x990; // CHandle<CBaseEntity>
+            public const nint m_OnStart = 0x998; // CEntityIOOutput
+            public const nint m_OnStartForward = 0x9C0; // CEntityIOOutput
+            public const nint m_OnStartReverse = 0x9E8; // CEntityIOOutput
+            public const nint m_OnStop = 0xA10; // CEntityIOOutput
+            public const nint m_OnStopped = 0xA38; // CEntityIOOutput
+            public const nint m_bNextNodeReturnsCurrent = 0xA60; // bool
+            public const nint m_bStartedMoving = 0xA61; // bool
+            public const nint m_eFollowEntityDirection = 0xA80; // CFuncMover::FollowEntityDirection_t
         }
         // Parent: CBreakableProp
         // Field count: 38
@@ -11345,50 +10987,50 @@ namespace CS2Dumper.Schemas {
         // MNetworkIncludeByName
         // NetworkVarNames: m_bAwake (bool)
         public static class CPhysicsProp {
-            public const nint m_MotionEnabled = 0xC48; // CEntityIOOutput
-            public const nint m_OnAwakened = 0xC70; // CEntityIOOutput
-            public const nint m_OnAwake = 0xC98; // CEntityIOOutput
-            public const nint m_OnAsleep = 0xCC0; // CEntityIOOutput
-            public const nint m_OnPlayerUse = 0xCE8; // CEntityIOOutput
-            public const nint m_OnOutOfWorld = 0xD10; // CEntityIOOutput
-            public const nint m_OnPlayerPickup = 0xD38; // CEntityIOOutput
-            public const nint m_bForceNavIgnore = 0xD60; // bool
-            public const nint m_bNoNavmeshBlocker = 0xD61; // bool
-            public const nint m_bForceNpcExclude = 0xD62; // bool
-            public const nint m_massScale = 0xD64; // float32
-            public const nint m_buoyancyScale = 0xD68; // float32
-            public const nint m_damageType = 0xD6C; // int32
-            public const nint m_damageToEnableMotion = 0xD70; // int32
-            public const nint m_flForceToEnableMotion = 0xD74; // float32
-            public const nint m_bThrownByPlayer = 0xD78; // bool
-            public const nint m_bDroppedByPlayer = 0xD79; // bool
-            public const nint m_bTouchedByPlayer = 0xD7A; // bool
-            public const nint m_bFirstCollisionAfterLaunch = 0xD7B; // bool
-            public const nint m_bHasBeenAwakened = 0xD7C; // bool
-            public const nint m_bIsOverrideProp = 0xD7D; // bool
-            public const nint m_flLastBurn = 0xD80; // GameTime_t
-            public const nint m_nDynamicContinuousContactBehavior = 0xD84; // DynamicContinuousContactBehavior_t
-            public const nint m_fNextCheckDisableMotionContactsTime = 0xD88; // GameTime_t
-            public const nint m_iInitialGlowState = 0xD8C; // int32
-            public const nint m_nGlowRange = 0xD90; // int32
-            public const nint m_nGlowRangeMin = 0xD94; // int32
-            public const nint m_glowColor = 0xD98; // Color
-            public const nint m_bShouldAutoConvertBackFromDebris = 0xD9C; // bool
-            public const nint m_bMuteImpactEffects = 0xD9D; // bool
-            public const nint m_bAcceptDamageFromHeldObjects = 0xDA7; // bool
-            public const nint m_bEnableUseOutput = 0xDA8; // bool
-            public const nint m_CrateType = 0xDAC; // CPhysicsProp::CrateType_t
-            public const nint m_strItemClass = 0xDB0; // CUtlSymbolLarge[4]
-            public const nint m_nItemCount = 0xDD0; // int32[4]
-            public const nint m_bRemovableForAmmoBalancing = 0xDE0; // bool
-            public const nint m_bAwake = 0xDE1; // bool
-            public const nint m_bAttachedToReferenceFrame = 0xDE2; // bool
+            public const nint m_MotionEnabled = 0xC60; // CEntityIOOutput
+            public const nint m_OnAwakened = 0xC88; // CEntityIOOutput
+            public const nint m_OnAwake = 0xCB0; // CEntityIOOutput
+            public const nint m_OnAsleep = 0xCD8; // CEntityIOOutput
+            public const nint m_OnPlayerUse = 0xD00; // CEntityIOOutput
+            public const nint m_OnOutOfWorld = 0xD28; // CEntityIOOutput
+            public const nint m_OnPlayerPickup = 0xD50; // CEntityIOOutput
+            public const nint m_bForceNavIgnore = 0xD78; // bool
+            public const nint m_bNoNavmeshBlocker = 0xD79; // bool
+            public const nint m_bForceNpcExclude = 0xD7A; // bool
+            public const nint m_massScale = 0xD7C; // float32
+            public const nint m_buoyancyScale = 0xD80; // float32
+            public const nint m_damageType = 0xD84; // int32
+            public const nint m_damageToEnableMotion = 0xD88; // int32
+            public const nint m_flForceToEnableMotion = 0xD8C; // float32
+            public const nint m_bThrownByPlayer = 0xD90; // bool
+            public const nint m_bDroppedByPlayer = 0xD91; // bool
+            public const nint m_bTouchedByPlayer = 0xD92; // bool
+            public const nint m_bFirstCollisionAfterLaunch = 0xD93; // bool
+            public const nint m_bHasBeenAwakened = 0xD94; // bool
+            public const nint m_bIsOverrideProp = 0xD95; // bool
+            public const nint m_flLastBurn = 0xD98; // GameTime_t
+            public const nint m_nDynamicContinuousContactBehavior = 0xD9C; // DynamicContinuousContactBehavior_t
+            public const nint m_fNextCheckDisableMotionContactsTime = 0xDA0; // GameTime_t
+            public const nint m_iInitialGlowState = 0xDA4; // int32
+            public const nint m_nGlowRange = 0xDA8; // int32
+            public const nint m_nGlowRangeMin = 0xDAC; // int32
+            public const nint m_glowColor = 0xDB0; // Color
+            public const nint m_bShouldAutoConvertBackFromDebris = 0xDB4; // bool
+            public const nint m_bMuteImpactEffects = 0xDB5; // bool
+            public const nint m_bAcceptDamageFromHeldObjects = 0xDBF; // bool
+            public const nint m_bEnableUseOutput = 0xDC0; // bool
+            public const nint m_CrateType = 0xDC4; // CPhysicsProp::CrateType_t
+            public const nint m_strItemClass = 0xDC8; // CUtlSymbolLarge[4]
+            public const nint m_nItemCount = 0xDE8; // int32[4]
+            public const nint m_bRemovableForAmmoBalancing = 0xDF8; // bool
+            public const nint m_bAwake = 0xDF9; // bool
+            public const nint m_bAttachedToReferenceFrame = 0xDFA; // bool
         }
         // Parent: CBaseModelEntity
         // Field count: 2
         public static class CFuncNavObstruction {
-            public const nint m_bDisabled = 0x7F8; // bool
-            public const nint m_bUseAsyncObstacleUpdate = 0x7F9; // bool
+            public const nint m_bDisabled = 0x7F0; // bool
+            public const nint m_bUseAsyncObstacleUpdate = 0x7F1; // bool
         }
         // Parent: CPhysConstraint
         // Field count: 12
@@ -11414,9 +11056,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: CBaseEntity
         // Field count: 0
-        //
-        // Metadata:
-        // MPulseDomainOptInVariableKeysSource
         public static class CPointPulse {
         }
         // Parent: CBaseCSGrenadeProjectile
@@ -11425,10 +11064,10 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_bIsIncGrenade (bool)
         public static class CMolotovProjectile {
-            public const nint m_bIsIncGrenade = 0xC20; // bool
-            public const nint m_bDetonated = 0xC38; // bool
-            public const nint m_stillTimer = 0xC40; // IntervalTimer
-            public const nint m_bHasBouncedOffPlayer = 0xD20; // bool
+            public const nint m_bIsIncGrenade = 0xC40; // bool
+            public const nint m_bDetonated = 0xC58; // bool
+            public const nint m_stillTimer = 0xC60; // IntervalTimer
+            public const nint m_bHasBouncedOffPlayer = 0xD40; // bool
         }
         // Parent: CBaseFilter
         // Field count: 1
@@ -11477,10 +11116,10 @@ namespace CS2Dumper.Schemas {
         // Parent: CPropDoorRotating
         // Field count: 4
         public static class CPropDoorRotatingBreakable {
-            public const nint m_bBreakable = 0x1080; // bool
-            public const nint m_isAbleToCloseAreaPortals = 0x1081; // bool
-            public const nint m_currentDamageState = 0x1084; // int32
-            public const nint m_damageStates = 0x1088; // CUtlVector<CUtlSymbolLarge>
+            public const nint m_bBreakable = 0x1090; // bool
+            public const nint m_isAbleToCloseAreaPortals = 0x1091; // bool
+            public const nint m_currentDamageState = 0x1094; // int32
+            public const nint m_damageStates = 0x1098; // CUtlVector<CUtlSymbolLarge>
         }
         // Parent: CLightEntity
         // Field count: 0
@@ -11495,20 +11134,20 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_PanelClassName (string_t)
         // NetworkVarNames: m_PanelID (string_t)
         public static class CBaseClientUIEntity {
-            public const nint m_bEnabled = 0x7E8; // bool
-            public const nint m_DialogXMLName = 0x7F0; // CUtlSymbolLarge
-            public const nint m_PanelClassName = 0x7F8; // CUtlSymbolLarge
-            public const nint m_PanelID = 0x800; // CUtlSymbolLarge
-            public const nint m_CustomOutput0 = 0x808; // CEntityIOOutput
-            public const nint m_CustomOutput1 = 0x830; // CEntityIOOutput
-            public const nint m_CustomOutput2 = 0x858; // CEntityIOOutput
-            public const nint m_CustomOutput3 = 0x880; // CEntityIOOutput
-            public const nint m_CustomOutput4 = 0x8A8; // CEntityIOOutput
-            public const nint m_CustomOutput5 = 0x8D0; // CEntityIOOutput
-            public const nint m_CustomOutput6 = 0x8F8; // CEntityIOOutput
-            public const nint m_CustomOutput7 = 0x920; // CEntityIOOutput
-            public const nint m_CustomOutput8 = 0x948; // CEntityIOOutput
-            public const nint m_CustomOutput9 = 0x970; // CEntityIOOutput
+            public const nint m_bEnabled = 0x7D8; // bool
+            public const nint m_DialogXMLName = 0x7E0; // CUtlSymbolLarge
+            public const nint m_PanelClassName = 0x7E8; // CUtlSymbolLarge
+            public const nint m_PanelID = 0x7F0; // CUtlSymbolLarge
+            public const nint m_CustomOutput0 = 0x7F8; // CEntityIOOutput
+            public const nint m_CustomOutput1 = 0x820; // CEntityIOOutput
+            public const nint m_CustomOutput2 = 0x848; // CEntityIOOutput
+            public const nint m_CustomOutput3 = 0x870; // CEntityIOOutput
+            public const nint m_CustomOutput4 = 0x898; // CEntityIOOutput
+            public const nint m_CustomOutput5 = 0x8C0; // CEntityIOOutput
+            public const nint m_CustomOutput6 = 0x8E8; // CEntityIOOutput
+            public const nint m_CustomOutput7 = 0x910; // CEntityIOOutput
+            public const nint m_CustomOutput8 = 0x938; // CEntityIOOutput
+            public const nint m_CustomOutput9 = 0x960; // CEntityIOOutput
         }
         // Parent: CBaseModelEntity
         // Field count: 15
@@ -11516,21 +11155,21 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_CPropDataComponent (CPropDataComponent::Storage_t)
         public static class CBreakable {
-            public const nint m_CPropDataComponent = 0x7F0; // CPropDataComponent
-            public const nint m_Material = 0x830; // Materials
-            public const nint m_hBreaker = 0x834; // CHandle<CBaseEntity>
-            public const nint m_Explosion = 0x838; // Explosions
-            public const nint m_iszSpawnObject = 0x840; // CUtlSymbolLarge
-            public const nint m_flPressureDelay = 0x848; // float32
-            public const nint m_iMinHealthDmg = 0x84C; // int32
-            public const nint m_iszPropData = 0x850; // CUtlSymbolLarge
-            public const nint m_impactEnergyScale = 0x858; // float32
-            public const nint m_nOverrideBlockLOS = 0x85C; // EOverrideBlockLOS_t
-            public const nint m_OnBreak = 0x860; // CEntityIOOutput
-            public const nint m_OnHealthChanged = 0x888; // CEntityOutputTemplate<float32>
-            public const nint m_PerformanceMode = 0x8B0; // PerformanceMode_t
-            public const nint m_hPhysicsAttacker = 0x8B4; // CHandle<CBasePlayerPawn>
-            public const nint m_flLastPhysicsInfluenceTime = 0x8B8; // GameTime_t
+            public const nint m_CPropDataComponent = 0x7E0; // CPropDataComponent
+            public const nint m_Material = 0x820; // Materials
+            public const nint m_hBreaker = 0x824; // CHandle<CBaseEntity>
+            public const nint m_Explosion = 0x828; // Explosions
+            public const nint m_iszSpawnObject = 0x830; // CUtlSymbolLarge
+            public const nint m_flPressureDelay = 0x838; // float32
+            public const nint m_iMinHealthDmg = 0x83C; // int32
+            public const nint m_iszPropData = 0x840; // CUtlSymbolLarge
+            public const nint m_impactEnergyScale = 0x848; // float32
+            public const nint m_nOverrideBlockLOS = 0x84C; // EOverrideBlockLOS_t
+            public const nint m_OnBreak = 0x850; // CEntityIOOutput
+            public const nint m_OnHealthChanged = 0x878; // CEntityOutputTemplate<float32>
+            public const nint m_PerformanceMode = 0x8A0; // PerformanceMode_t
+            public const nint m_hPhysicsAttacker = 0x8A4; // CHandle<CBasePlayerPawn>
+            public const nint m_flLastPhysicsInfluenceTime = 0x8A8; // GameTime_t
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -11643,9 +11282,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         public static class CPulseCell_Outflow_PlaySequence {
             public const nint m_ParamSequenceName = 0xF0; // CUtlString
         }
@@ -11655,7 +11291,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // NetworkVarNames: m_messageText (char)
         public static class CPointClientUIWorldTextPanel {
-            public const nint m_messageText = 0x9F0; // char[512]
+            public const nint m_messageText = 0x9E0; // char[512]
         }
         // Parent: 
         // Field count: 11
@@ -11670,10 +11306,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_worldGroupId = 0x38; // WorldGroupId_t
             public const nint m_fDataObjectTypes = 0x3C; // uint32
             public const nint m_PathIndex = 0x40; // ChangeAccessorFieldPathIndex_t
-            public const nint m_pPrev = 0x58; // CEntityIdentity*
-            public const nint m_pNext = 0x60; // CEntityIdentity*
-            public const nint m_pPrevByClass = 0x68; // CEntityIdentity*
-            public const nint m_pNextByClass = 0x70; // CEntityIdentity*
+            public const nint m_pPrev = 0x50; // CEntityIdentity*
+            public const nint m_pNext = 0x58; // CEntityIdentity*
+            public const nint m_pPrevByClass = 0x60; // CEntityIdentity*
+            public const nint m_pNextByClass = 0x68; // CEntityIdentity*
         }
         // Parent: None
         // Field count: 1
@@ -11683,41 +11319,41 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseModelEntity
         // Field count: 35
         public static class CFuncRotator {
-            public const nint m_hRotatorTarget = 0x7E8; // CHandle<CBaseEntity>
-            public const nint m_bIsRotating = 0x7EC; // bool
-            public const nint m_bIsReversing = 0x7ED; // bool
-            public const nint m_flTimeToReachMaxSpeed = 0x7F0; // float32
-            public const nint m_flTimeToReachZeroSpeed = 0x7F4; // float32
-            public const nint m_flDistanceAlongArcTraveled = 0x7F8; // float32
-            public const nint m_flTimeToWaitOscillate = 0x7FC; // float32
-            public const nint m_flTimeRotationStart = 0x800; // GameTime_t
-            public const nint m_qLSPrevChange = 0x810; // Quaternion
-            public const nint m_qWSPrev = 0x820; // Quaternion
-            public const nint m_qWSInit = 0x830; // Quaternion
-            public const nint m_qLSInit = 0x840; // Quaternion
-            public const nint m_qLSOrientation = 0x850; // Quaternion
-            public const nint m_OnRotationStarted = 0x860; // CEntityIOOutput
-            public const nint m_OnRotationCompleted = 0x888; // CEntityIOOutput
-            public const nint m_OnOscillate = 0x8B0; // CEntityIOOutput
-            public const nint m_OnOscillateStartArrive = 0x8D8; // CEntityIOOutput
-            public const nint m_OnOscillateStartDepart = 0x900; // CEntityIOOutput
-            public const nint m_OnOscillateEndArrive = 0x928; // CEntityIOOutput
-            public const nint m_OnOscillateEndDepart = 0x950; // CEntityIOOutput
-            public const nint m_bOscillateDepart = 0x978; // bool
-            public const nint m_nOscillateCount = 0x97C; // int32
-            public const nint m_eRotateType = 0x980; // CFuncRotator::Rotate_t
-            public const nint m_ePrevRotateType = 0x984; // CFuncRotator::Rotate_t
-            public const nint m_bHasTargetOverride = 0x988; // bool
-            public const nint m_qOrientationOverride = 0x990; // Quaternion
-            public const nint m_eSpaceOverride = 0x9A0; // RotatorTargetSpace_t
-            public const nint m_qAngularVelocity = 0x9A4; // QAngle
-            public const nint m_vLookAtForcedUp = 0x9B0; // Vector
-            public const nint m_strRotatorTarget = 0x9C0; // CUtlSymbolLarge
-            public const nint m_bRecordHistory = 0x9C8; // bool
-            public const nint m_vecRotatorHistory = 0x9D0; // CUtlVector<RotatorHistoryEntry_t>
-            public const nint m_bReturningToPreviousOrientation = 0x9E8; // bool
-            public const nint m_vecRotatorQueue = 0x9F0; // CUtlVector<RotatorQueueEntry_t>
-            public const nint m_vecRotatorQueueHistory = 0xA08; // CUtlVector<RotatorHistoryEntry_t>
+            public const nint m_hRotatorTarget = 0x7D8; // CHandle<CBaseEntity>
+            public const nint m_bIsRotating = 0x7DC; // bool
+            public const nint m_bIsReversing = 0x7DD; // bool
+            public const nint m_flTimeToReachMaxSpeed = 0x7E0; // float32
+            public const nint m_flTimeToReachZeroSpeed = 0x7E4; // float32
+            public const nint m_flDistanceAlongArcTraveled = 0x7E8; // float32
+            public const nint m_flTimeToWaitOscillate = 0x7EC; // float32
+            public const nint m_flTimeRotationStart = 0x7F0; // GameTime_t
+            public const nint m_qLSPrevChange = 0x800; // Quaternion
+            public const nint m_qWSPrev = 0x810; // Quaternion
+            public const nint m_qWSInit = 0x820; // Quaternion
+            public const nint m_qLSInit = 0x830; // Quaternion
+            public const nint m_qLSOrientation = 0x840; // Quaternion
+            public const nint m_OnRotationStarted = 0x850; // CEntityIOOutput
+            public const nint m_OnRotationCompleted = 0x878; // CEntityIOOutput
+            public const nint m_OnOscillate = 0x8A0; // CEntityIOOutput
+            public const nint m_OnOscillateStartArrive = 0x8C8; // CEntityIOOutput
+            public const nint m_OnOscillateStartDepart = 0x8F0; // CEntityIOOutput
+            public const nint m_OnOscillateEndArrive = 0x918; // CEntityIOOutput
+            public const nint m_OnOscillateEndDepart = 0x940; // CEntityIOOutput
+            public const nint m_bOscillateDepart = 0x968; // bool
+            public const nint m_nOscillateCount = 0x96C; // int32
+            public const nint m_eRotateType = 0x970; // CFuncRotator::Rotate_t
+            public const nint m_ePrevRotateType = 0x974; // CFuncRotator::Rotate_t
+            public const nint m_bHasTargetOverride = 0x978; // bool
+            public const nint m_qOrientationOverride = 0x980; // Quaternion
+            public const nint m_eSpaceOverride = 0x990; // RotatorTargetSpace_t
+            public const nint m_qAngularVelocity = 0x994; // QAngle
+            public const nint m_vLookAtForcedUp = 0x9A0; // Vector
+            public const nint m_strRotatorTarget = 0x9B0; // CUtlSymbolLarge
+            public const nint m_bRecordHistory = 0x9B8; // bool
+            public const nint m_vecRotatorHistory = 0x9C0; // CUtlVector<RotatorHistoryEntry_t>
+            public const nint m_bReturningToPreviousOrientation = 0x9D8; // bool
+            public const nint m_vecRotatorQueue = 0x9E0; // CUtlVector<RotatorQueueEntry_t>
+            public const nint m_vecRotatorQueueHistory = 0x9F8; // CUtlVector<RotatorHistoryEntry_t>
         }
         // Parent: CBaseEntity
         // Field count: 14
@@ -11776,10 +11412,10 @@ namespace CS2Dumper.Schemas {
         // Parent: CTriggerMultiple
         // Field count: 4
         public static class CTriggerImpact {
-            public const nint m_flMagnitude = 0x9E0; // float32
-            public const nint m_flNoise = 0x9E4; // float32
-            public const nint m_flViewkick = 0x9E8; // float32
-            public const nint m_pOutputForce = 0x9F0; // CEntityOutputTemplate<Vector>
+            public const nint m_flMagnitude = 0x9D0; // float32
+            public const nint m_flNoise = 0x9D4; // float32
+            public const nint m_flViewkick = 0x9D8; // float32
+            public const nint m_pOutputForce = 0x9E0; // CEntityOutputTemplate<Vector>
         }
         // Parent: None
         // Field count: 3
@@ -11798,9 +11434,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -11812,9 +11445,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MCellForDomain
-        // MPulseCellMethodBindings
-        // MPulseCellOutflowHookInfo
         // MPropertyFriendlyName
         // MPropertyDescription
         // MPulseEditorHeaderIcon
@@ -11841,44 +11471,44 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_closedAngles (QAngle)
         // NetworkVarNames: m_hMaster (CHandle<CBasePropDoor>)
         public static class CBasePropDoor {
-            public const nint m_flAutoReturnDelay = 0xD50; // float32
-            public const nint m_hDoorList = 0xD58; // CUtlVector<CHandle<CBasePropDoor>>
-            public const nint m_nHardwareType = 0xD70; // int32
-            public const nint m_bNeedsHardware = 0xD74; // bool
-            public const nint m_eDoorState = 0xD78; // DoorState_t
-            public const nint m_bLocked = 0xD7C; // bool
-            public const nint m_bNoNPCs = 0xD7D; // bool
-            public const nint m_closedPosition = 0xD80; // Vector
-            public const nint m_closedAngles = 0xD8C; // QAngle
-            public const nint m_hBlocker = 0xD98; // CHandle<CBaseEntity>
-            public const nint m_bFirstBlocked = 0xD9C; // bool
-            public const nint m_ls = 0xDA0; // locksound_t
-            public const nint m_bForceClosed = 0xDC0; // bool
-            public const nint m_vecLatchWorldPosition = 0xDC4; // Vector
-            public const nint m_hActivator = 0xDD0; // CHandle<CBaseEntity>
-            public const nint m_SoundMoving = 0xDE8; // CUtlSymbolLarge
-            public const nint m_SoundOpen = 0xDF0; // CUtlSymbolLarge
-            public const nint m_SoundClose = 0xDF8; // CUtlSymbolLarge
-            public const nint m_SoundLock = 0xE00; // CUtlSymbolLarge
-            public const nint m_SoundUnlock = 0xE08; // CUtlSymbolLarge
-            public const nint m_SoundLatch = 0xE10; // CUtlSymbolLarge
-            public const nint m_SoundPound = 0xE18; // CUtlSymbolLarge
-            public const nint m_SoundJiggle = 0xE20; // CUtlSymbolLarge
-            public const nint m_SoundLockedAnim = 0xE28; // CUtlSymbolLarge
-            public const nint m_numCloseAttempts = 0xE30; // int32
-            public const nint m_nPhysicsMaterial = 0xE34; // CUtlStringToken
-            public const nint m_SlaveName = 0xE38; // CUtlSymbolLarge
-            public const nint m_hMaster = 0xE40; // CHandle<CBasePropDoor>
-            public const nint m_OnBlockedClosing = 0xE48; // CEntityIOOutput
-            public const nint m_OnBlockedOpening = 0xE70; // CEntityIOOutput
-            public const nint m_OnUnblockedClosing = 0xE98; // CEntityIOOutput
-            public const nint m_OnUnblockedOpening = 0xEC0; // CEntityIOOutput
-            public const nint m_OnFullyClosed = 0xEE8; // CEntityIOOutput
-            public const nint m_OnFullyOpen = 0xF10; // CEntityIOOutput
-            public const nint m_OnClose = 0xF38; // CEntityIOOutput
-            public const nint m_OnOpen = 0xF60; // CEntityIOOutput
-            public const nint m_OnLockedUse = 0xF88; // CEntityIOOutput
-            public const nint m_OnAjarOpen = 0xFB0; // CEntityIOOutput
+            public const nint m_flAutoReturnDelay = 0xD60; // float32
+            public const nint m_hDoorList = 0xD68; // CUtlVector<CHandle<CBasePropDoor>>
+            public const nint m_nHardwareType = 0xD80; // int32
+            public const nint m_bNeedsHardware = 0xD84; // bool
+            public const nint m_eDoorState = 0xD88; // DoorState_t
+            public const nint m_bLocked = 0xD8C; // bool
+            public const nint m_bNoNPCs = 0xD8D; // bool
+            public const nint m_closedPosition = 0xD90; // Vector
+            public const nint m_closedAngles = 0xD9C; // QAngle
+            public const nint m_hBlocker = 0xDA8; // CHandle<CBaseEntity>
+            public const nint m_bFirstBlocked = 0xDAC; // bool
+            public const nint m_ls = 0xDB0; // locksound_t
+            public const nint m_bForceClosed = 0xDD0; // bool
+            public const nint m_vecLatchWorldPosition = 0xDD4; // VectorWS
+            public const nint m_hActivator = 0xDE0; // CHandle<CBaseEntity>
+            public const nint m_SoundMoving = 0xDF8; // CUtlSymbolLarge
+            public const nint m_SoundOpen = 0xE00; // CUtlSymbolLarge
+            public const nint m_SoundClose = 0xE08; // CUtlSymbolLarge
+            public const nint m_SoundLock = 0xE10; // CUtlSymbolLarge
+            public const nint m_SoundUnlock = 0xE18; // CUtlSymbolLarge
+            public const nint m_SoundLatch = 0xE20; // CUtlSymbolLarge
+            public const nint m_SoundPound = 0xE28; // CUtlSymbolLarge
+            public const nint m_SoundJiggle = 0xE30; // CUtlSymbolLarge
+            public const nint m_SoundLockedAnim = 0xE38; // CUtlSymbolLarge
+            public const nint m_numCloseAttempts = 0xE40; // int32
+            public const nint m_nPhysicsMaterial = 0xE44; // CUtlStringToken
+            public const nint m_SlaveName = 0xE48; // CUtlSymbolLarge
+            public const nint m_hMaster = 0xE50; // CHandle<CBasePropDoor>
+            public const nint m_OnBlockedClosing = 0xE58; // CEntityIOOutput
+            public const nint m_OnBlockedOpening = 0xE80; // CEntityIOOutput
+            public const nint m_OnUnblockedClosing = 0xEA8; // CEntityIOOutput
+            public const nint m_OnUnblockedOpening = 0xED0; // CEntityIOOutput
+            public const nint m_OnFullyClosed = 0xEF8; // CEntityIOOutput
+            public const nint m_OnFullyOpen = 0xF20; // CEntityIOOutput
+            public const nint m_OnClose = 0xF48; // CEntityIOOutput
+            public const nint m_OnOpen = 0xF70; // CEntityIOOutput
+            public const nint m_OnLockedUse = 0xF98; // CEntityIOOutput
+            public const nint m_OnAjarOpen = 0xFC0; // CEntityIOOutput
         }
         // Parent: CLogicalEntity
         // Field count: 6
@@ -11906,28 +11536,28 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_bUseHitboxesForRenderBox (bool)
         // NetworkVarNames: m_bUseAnimGraph (bool)
         public static class CDynamicProp {
-            public const nint m_bCreateNavObstacle = 0xC48; // bool
-            public const nint m_bNavObstacleUpdatesOverridden = 0xC49; // bool
-            public const nint m_bUseHitboxesForRenderBox = 0xC4A; // bool
-            public const nint m_bUseAnimGraph = 0xC4B; // bool
-            public const nint m_pOutputAnimBegun = 0xC50; // CEntityIOOutput
-            public const nint m_pOutputAnimOver = 0xC78; // CEntityIOOutput
-            public const nint m_pOutputAnimLoopCycleOver = 0xCA0; // CEntityIOOutput
-            public const nint m_OnAnimReachedStart = 0xCC8; // CEntityIOOutput
-            public const nint m_OnAnimReachedEnd = 0xCF0; // CEntityIOOutput
-            public const nint m_iszIdleAnim = 0xD18; // CUtlSymbolLarge
-            public const nint m_nIdleAnimLoopMode = 0xD20; // AnimLoopMode_t
-            public const nint m_bRandomizeCycle = 0xD24; // bool
-            public const nint m_bStartDisabled = 0xD25; // bool
-            public const nint m_bFiredStartEndOutput = 0xD26; // bool
-            public const nint m_bForceNpcExclude = 0xD27; // bool
-            public const nint m_bCreateNonSolid = 0xD28; // bool
-            public const nint m_bIsOverrideProp = 0xD29; // bool
-            public const nint m_iInitialGlowState = 0xD2C; // int32
-            public const nint m_nGlowRange = 0xD30; // int32
-            public const nint m_nGlowRangeMin = 0xD34; // int32
-            public const nint m_glowColor = 0xD38; // Color
-            public const nint m_nGlowTeam = 0xD3C; // int32
+            public const nint m_bCreateNavObstacle = 0xC58; // bool
+            public const nint m_bNavObstacleUpdatesOverridden = 0xC59; // bool
+            public const nint m_bUseHitboxesForRenderBox = 0xC5A; // bool
+            public const nint m_bUseAnimGraph = 0xC5B; // bool
+            public const nint m_pOutputAnimBegun = 0xC60; // CEntityIOOutput
+            public const nint m_pOutputAnimOver = 0xC88; // CEntityIOOutput
+            public const nint m_pOutputAnimLoopCycleOver = 0xCB0; // CEntityIOOutput
+            public const nint m_OnAnimReachedStart = 0xCD8; // CEntityIOOutput
+            public const nint m_OnAnimReachedEnd = 0xD00; // CEntityIOOutput
+            public const nint m_iszIdleAnim = 0xD28; // CUtlSymbolLarge
+            public const nint m_nIdleAnimLoopMode = 0xD30; // AnimLoopMode_t
+            public const nint m_bRandomizeCycle = 0xD34; // bool
+            public const nint m_bStartDisabled = 0xD35; // bool
+            public const nint m_bFiredStartEndOutput = 0xD36; // bool
+            public const nint m_bForceNpcExclude = 0xD37; // bool
+            public const nint m_bCreateNonSolid = 0xD38; // bool
+            public const nint m_bIsOverrideProp = 0xD39; // bool
+            public const nint m_iInitialGlowState = 0xD3C; // int32
+            public const nint m_nGlowRange = 0xD40; // int32
+            public const nint m_nGlowRangeMin = 0xD44; // int32
+            public const nint m_glowColor = 0xD48; // Color
+            public const nint m_nGlowTeam = 0xD4C; // int32
         }
         // Parent: CHostage
         // Field count: 0
@@ -11955,15 +11585,15 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flTransitionStartSpeed (float32)
         // NetworkVarNames: m_hConveyorModels (EHANDLE)
         public static class CFuncConveyor {
-            public const nint m_szConveyorModels = 0x7E8; // CUtlSymbolLarge
-            public const nint m_flTransitionDurationSeconds = 0x7F0; // float32
-            public const nint m_angMoveEntitySpace = 0x7F4; // QAngle
-            public const nint m_vecMoveDirEntitySpace = 0x800; // Vector
-            public const nint m_flTargetSpeed = 0x80C; // float32
-            public const nint m_nTransitionStartTick = 0x810; // GameTick_t
-            public const nint m_nTransitionDurationTicks = 0x814; // int32
-            public const nint m_flTransitionStartSpeed = 0x818; // float32
-            public const nint m_hConveyorModels = 0x820; // CNetworkUtlVectorBase<CHandle<CBaseEntity>>
+            public const nint m_szConveyorModels = 0x7D8; // CUtlSymbolLarge
+            public const nint m_flTransitionDurationSeconds = 0x7E0; // float32
+            public const nint m_angMoveEntitySpace = 0x7E4; // QAngle
+            public const nint m_vecMoveDirEntitySpace = 0x7F0; // Vector
+            public const nint m_flTargetSpeed = 0x7FC; // float32
+            public const nint m_nTransitionStartTick = 0x800; // GameTick_t
+            public const nint m_nTransitionDurationTicks = 0x804; // int32
+            public const nint m_flTransitionStartSpeed = 0x808; // float32
+            public const nint m_hConveyorModels = 0x810; // CNetworkUtlVectorBase<CHandle<CBaseEntity>>
         }
         // Parent: CBaseTrigger
         // Field count: 13
@@ -11983,19 +11613,19 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_vecLinearForceDirection (Vector)
         // NetworkVarNames: m_bConvertToDebrisWhenPossible (bool)
         public static class CTriggerPhysics {
-            public const nint m_gravityScale = 0x9C8; // float32
-            public const nint m_linearLimit = 0x9CC; // float32
-            public const nint m_linearDamping = 0x9D0; // float32
-            public const nint m_angularLimit = 0x9D4; // float32
-            public const nint m_angularDamping = 0x9D8; // float32
-            public const nint m_linearForce = 0x9DC; // float32
-            public const nint m_flFrequency = 0x9E0; // float32
-            public const nint m_flDampingRatio = 0x9E4; // float32
-            public const nint m_vecLinearForcePointAt = 0x9E8; // Vector
-            public const nint m_bCollapseToForcePoint = 0x9F4; // bool
-            public const nint m_vecLinearForcePointAtWorld = 0x9F8; // Vector
-            public const nint m_vecLinearForceDirection = 0xA04; // Vector
-            public const nint m_bConvertToDebrisWhenPossible = 0xA10; // bool
+            public const nint m_gravityScale = 0x9B8; // float32
+            public const nint m_linearLimit = 0x9BC; // float32
+            public const nint m_linearDamping = 0x9C0; // float32
+            public const nint m_angularLimit = 0x9C4; // float32
+            public const nint m_angularDamping = 0x9C8; // float32
+            public const nint m_linearForce = 0x9CC; // float32
+            public const nint m_flFrequency = 0x9D0; // float32
+            public const nint m_flDampingRatio = 0x9D4; // float32
+            public const nint m_vecLinearForcePointAt = 0x9D8; // Vector
+            public const nint m_bCollapseToForcePoint = 0x9E4; // bool
+            public const nint m_vecLinearForcePointAtWorld = 0x9E8; // Vector
+            public const nint m_vecLinearForceDirection = 0x9F4; // Vector
+            public const nint m_bConvertToDebrisWhenPossible = 0xA00; // bool
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -12011,7 +11641,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_isStarted = 0x500; // bool
         }
         // Parent: None
-        // Field count: 29
+        // Field count: 30
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -12037,6 +11667,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_iDefaultClip2 = 0x3F4; // int32
             public const nint m_bReserveAmmoAsClips = 0x3F8; // bool
             public const nint m_bTreatAsSingleClip = 0x3F9; // bool
+            public const nint m_bKeepLoadedAmmo = 0x3FA; // bool
             public const nint m_iWeight = 0x3FC; // int32
             public const nint m_bAutoSwitchTo = 0x400; // bool
             public const nint m_bAutoSwitchFrom = 0x401; // bool
@@ -12089,13 +11720,13 @@ namespace CS2Dumper.Schemas {
         // Parent: CMarkupVolume
         // Field count: 7
         public static class CMarkupVolumeTagged {
-            public const nint m_GroupNames = 0x7F0; // CUtlVector<CGlobalSymbol>
-            public const nint m_Tags = 0x808; // CUtlVector<CGlobalSymbol>
-            public const nint m_bIsGroup = 0x820; // bool
-            public const nint m_bGroupByPrefab = 0x821; // bool
-            public const nint m_bGroupByVolume = 0x822; // bool
-            public const nint m_bGroupOtherGroups = 0x823; // bool
-            public const nint m_bIsInGroup = 0x824; // bool
+            public const nint m_GroupNames = 0x7E0; // CUtlVector<CGlobalSymbol>
+            public const nint m_Tags = 0x7F8; // CUtlVector<CGlobalSymbol>
+            public const nint m_bIsGroup = 0x810; // bool
+            public const nint m_bGroupByPrefab = 0x811; // bool
+            public const nint m_bGroupByVolume = 0x812; // bool
+            public const nint m_bGroupOtherGroups = 0x813; // bool
+            public const nint m_bIsInGroup = 0x814; // bool
         }
         // Parent: CPointEntity
         // Field count: 0
@@ -12147,27 +11778,28 @@ namespace CS2Dumper.Schemas {
         // Field count: 0
         public static class CCSPlayer_DamageReactServices {
         }
-        // Parent: CCSWeaponBase
+        // Parent: CCSWeaponBaseShotgun
         // Field count: 0
         public static class CWeaponXM1014 {
         }
         // Parent: CBaseTrigger
-        // Field count: 14
+        // Field count: 15
         public static class CTriggerLerpObject {
-            public const nint m_iszLerpTarget = 0x9B8; // CUtlSymbolLarge
-            public const nint m_hLerpTarget = 0x9C0; // CHandle<CBaseEntity>
-            public const nint m_iszLerpTargetAttachment = 0x9C8; // CUtlSymbolLarge
-            public const nint m_hLerpTargetAttachment = 0x9D0; // AttachmentHandle_t
-            public const nint m_flLerpDuration = 0x9D4; // float32
-            public const nint m_bLerpRestoreMoveType = 0x9D8; // bool
-            public const nint m_bSingleLerpObject = 0x9D9; // bool
-            public const nint m_vecLerpingObjects = 0x9E0; // CUtlVector<lerpdata_t>
-            public const nint m_iszLerpEffect = 0x9F8; // CUtlSymbolLarge
-            public const nint m_iszLerpSound = 0xA00; // CUtlSymbolLarge
-            public const nint m_bAttachTouchingObject = 0xA08; // bool
-            public const nint m_hEntityToWaitForDisconnect = 0xA0C; // CHandle<CBaseEntity>
-            public const nint m_OnLerpStarted = 0xA10; // CEntityIOOutput
-            public const nint m_OnLerpFinished = 0xA38; // CEntityIOOutput
+            public const nint m_iszLerpTarget = 0x9A8; // CUtlSymbolLarge
+            public const nint m_hLerpTarget = 0x9B0; // CHandle<CBaseEntity>
+            public const nint m_iszLerpTargetAttachment = 0x9B8; // CUtlSymbolLarge
+            public const nint m_hLerpTargetAttachment = 0x9C0; // AttachmentHandle_t
+            public const nint m_flLerpDuration = 0x9C4; // float32
+            public const nint m_bLerpRestoreMoveType = 0x9C8; // bool
+            public const nint m_bSingleLerpObject = 0x9C9; // bool
+            public const nint m_vecLerpingObjects = 0x9D0; // CUtlVector<lerpdata_t>
+            public const nint m_iszLerpEffect = 0x9E8; // CUtlSymbolLarge
+            public const nint m_iszLerpSound = 0x9F0; // CUtlSymbolLarge
+            public const nint m_bAttachTouchingObject = 0x9F8; // bool
+            public const nint m_hEntityToWaitForDisconnect = 0x9FC; // CHandle<CBaseEntity>
+            public const nint m_OnLerpStarted = 0xA00; // CEntityIOOutput
+            public const nint m_OnLerpFinished = 0xA28; // CEntityIOOutput
+            public const nint m_OnDetached = 0xA50; // CEntityIOOutput
         }
         // Parent: CPhysicsProp
         // Field count: 0
@@ -12176,9 +11808,9 @@ namespace CS2Dumper.Schemas {
         // Parent: CBaseTrigger
         // Field count: 3
         public static class CTriggerSave {
-            public const nint m_bForceNewLevelUnit = 0x9B8; // bool
-            public const nint m_fDangerousTimer = 0x9BC; // float32
-            public const nint m_minHitPoints = 0x9C0; // int32
+            public const nint m_bForceNewLevelUnit = 0x9A8; // bool
+            public const nint m_fDangerousTimer = 0x9AC; // float32
+            public const nint m_minHitPoints = 0x9B0; // int32
         }
         // Parent: CPointEntity
         // Field count: 6

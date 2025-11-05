@@ -75,22 +75,23 @@
       },
       "CSteamAudioBakedReverbData": {
         "fields": {
-          "m_clusteredProbes": 48,
-          "m_compressedClusteredData": 176,
-          "m_compressedData": 80,
+          "m_clusteredProbes": 136,
+          "m_compressedClusteredData": 264,
+          "m_compressedData": 168,
+          "m_grid": 16,
           "m_nBands": 0,
           "m_probes": 8,
-          "m_reverbClusteringSettings": 32,
-          "m_reverbCompressionSettings": 44,
-          "m_reverbSettings": 16,
-          "m_vecClusterForProbe": 56,
-          "m_vecMovableReverbAABBs": 320,
-          "m_vecMovableReverbInitialTransforms": 296,
-          "m_vecMovableReverbKeyTokens": 368,
-          "m_vecMovableReverbKeys": 344,
-          "m_vecMovableReverbOBBs": 416,
-          "m_vecMovableReverbTransforms": 392,
-          "m_vecMovableReverbs": 272
+          "m_reverbClusteringSettings": 120,
+          "m_reverbCompressionSettings": 132,
+          "m_reverbSettings": 104,
+          "m_vecClusterForProbe": 144,
+          "m_vecMovableReverbAABBs": 408,
+          "m_vecMovableReverbInitialTransforms": 384,
+          "m_vecMovableReverbKeyTokens": 456,
+          "m_vecMovableReverbKeys": 432,
+          "m_vecMovableReverbOBBs": 504,
+          "m_vecMovableReverbTransforms": 480,
+          "m_vecMovableReverbs": 360
         },
         "metadata": [
           {
@@ -122,6 +123,39 @@
       "CSteamAudioProbeData": {
         "fields": {
           "m_pProbeBatch": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSteamAudioProbeGrid": {
+        "fields": {
+          "m_aabb": 0,
+          "m_flSpacing": 24,
+          "m_nx": 28,
+          "m_ny": 32,
+          "m_nz": 36,
+          "m_vecLineSegments": 40,
+          "m_vecProbes": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSteamAudioProbeLineSegment": {
+        "fields": {
+          "m_vEnd": 12,
+          "m_vStart": 0,
+          "m_vecIntervals": 24,
+          "m_vecProbeIndices": 48
         },
         "metadata": [
           {

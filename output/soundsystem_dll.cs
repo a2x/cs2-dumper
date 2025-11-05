@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
-    // Class count: 77
-    // Enum count: 19
+    // Class count: 74
+    // Enum count: 20
     public static class SoundsystemDll {
         // Alignment: 4
         // Member count: 2
@@ -105,12 +105,6 @@ namespace CS2Dumper.Schemas {
             SOS_EDIT_ITEM_TYPE_FIELD = 0x5
         }
         // Alignment: 4
-        // Member count: 2
-        public enum SosActionSortType_t : uint {
-            SOS_SORTTYPE_HIGHEST = 0x0,
-            SOS_SORTTYPE_LOWEST = 0x1
-        }
-        // Alignment: 4
         // Member count: 5
         public enum PlayBackMode_t : uint {
             Random = 0x0,
@@ -154,6 +148,13 @@ namespace CS2Dumper.Schemas {
             VPROCESSOR_SUBGRAPH_SWITCH = 0x1D,
             VPROCESSOR_STEAMAUDIO_DIRECT = 0x1E,
             VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1F
+        }
+        // Alignment: 4
+        // Member count: 3
+        public enum SosGroupFieldBehavior_t : uint {
+            kIgnore = 0x0,
+            kBranch = 0x1,
+            kMatch = 0x2
         }
         // Alignment: 4
         // Member count: 30
@@ -244,18 +245,10 @@ namespace CS2Dumper.Schemas {
             FILTER_SLOPE_MAX = 0x7
         }
         // Alignment: 4
-        // Member count: 10
-        public enum ActionType_t : uint {
-            SOS_ACTION_NONE = 0x0,
-            SOS_ACTION_LIMITER = 0x1,
-            SOS_ACTION_TIME_LIMIT = 0x2,
-            SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-            SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-            SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5,
-            SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
-            SOS_ACTION_COUNT_ENVELOPE = 0x7,
-            SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
-            SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9
+        // Member count: 2
+        public enum SosActionLimitSortType_t : uint {
+            SOS_LIMIT_SORTTYPE_HIGHEST = 0x0,
+            SOS_LIMIT_SORTTYPE_LOWEST = 0x1
         }
         // Alignment: 4
         // Member count: 3
@@ -269,6 +262,12 @@ namespace CS2Dumper.Schemas {
         public enum SosGroupType_t : uint {
             SOS_GROUPTYPE_DYNAMIC = 0x0,
             SOS_GROUPTYPE_STATIC = 0x1
+        }
+        // Alignment: 4
+        // Member count: 2
+        public enum SosActionSetParamSortType_t : uint {
+            SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
+            SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
         }
         // Parent: None
         // Field count: 3
@@ -373,26 +372,28 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionSoundeventClusterSchema {
-            public const nint m_nMinNearby = 0x18; // int32
-            public const nint m_flClusterEpsilon = 0x1C; // float32
-            public const nint m_shouldPlayOpvar = 0x20; // CUtlString
-            public const nint m_shouldPlayClusterChild = 0x28; // CUtlString
-            public const nint m_clusterSizeOpvar = 0x30; // CUtlString
-            public const nint m_groupBoundingBoxMinsOpvar = 0x38; // CUtlString
-            public const nint m_groupBoundingBoxMaxsOpvar = 0x40; // CUtlString
+            public const nint m_nMinNearby = 0x8; // int32
+            public const nint m_flClusterEpsilon = 0xC; // float32
+            public const nint m_shouldPlayOpvar = 0x10; // CUtlString
+            public const nint m_shouldPlayClusterChild = 0x18; // CUtlString
+            public const nint m_clusterSizeOpvar = 0x20; // CUtlString
+            public const nint m_groupBoundingBoxMinsOpvar = 0x28; // CUtlString
+            public const nint m_groupBoundingBoxMaxsOpvar = 0x30; // CUtlString
         }
         // Parent: None
         // Field count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionSetSoundeventParameterSchema {
-            public const nint m_nMaxCount = 0x18; // int32
-            public const nint m_flMinValue = 0x1C; // float32
-            public const nint m_flMaxValue = 0x20; // float32
-            public const nint m_opvarName = 0x28; // CUtlString
-            public const nint m_nSortType = 0x30; // SosActionSortType_t
+            public const nint m_nMaxCount = 0x8; // int32
+            public const nint m_flMinValue = 0xC; // float32
+            public const nint m_flMaxValue = 0x10; // float32
+            public const nint m_opvarName = 0x18; // CUtlString
+            public const nint m_nSortType = 0x20; // SosActionSetParamSortType_t
         }
         // Parent: None
         // Field count: 3
@@ -466,17 +467,18 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionSoundeventMinMaxValuesSchema {
-            public const nint m_strQueryPublicFieldName = 0x18; // CUtlString
-            public const nint m_strDelayPublicFieldName = 0x20; // CUtlString
-            public const nint m_bExcludeStoppedSounds = 0x28; // bool
-            public const nint m_bExcludeDelayedSounds = 0x29; // bool
-            public const nint m_bExcludeSoundsBelowThreshold = 0x2A; // bool
-            public const nint m_flExcludeSoundsMinThresholdValue = 0x2C; // float32
-            public const nint m_bExcludSoundsAboveThreshold = 0x30; // bool
-            public const nint m_flExcludeSoundsMaxThresholdValue = 0x34; // float32
-            public const nint m_strMinValueName = 0x38; // CUtlString
-            public const nint m_strMaxValueName = 0x40; // CUtlString
+            public const nint m_strQueryPublicFieldName = 0x8; // CUtlString
+            public const nint m_strDelayPublicFieldName = 0x10; // CUtlString
+            public const nint m_bExcludeStoppedSounds = 0x18; // bool
+            public const nint m_bExcludeDelayedSounds = 0x19; // bool
+            public const nint m_bExcludeSoundsBelowThreshold = 0x1A; // bool
+            public const nint m_flExcludeSoundsMinThresholdValue = 0x1C; // float32
+            public const nint m_bExcludSoundsAboveThreshold = 0x20; // bool
+            public const nint m_flExcludeSoundsMaxThresholdValue = 0x24; // float32
+            public const nint m_strMinValueName = 0x28; // CUtlString
+            public const nint m_strMaxValueName = 0x30; // CUtlString
         }
         // Parent: None
         // Field count: 2
@@ -492,11 +494,12 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionSoundeventPrioritySchema {
-            public const nint m_priorityValue = 0x18; // CUtlString
-            public const nint m_priorityVolumeScalar = 0x20; // CUtlString
-            public const nint m_priorityContributeButDontRead = 0x28; // CUtlString
-            public const nint m_bPriorityReadButDontContribute = 0x30; // CUtlString
+            public const nint m_priorityValue = 0x8; // CUtlString
+            public const nint m_priorityVolumeScalar = 0x10; // CUtlString
+            public const nint m_priorityContributeButDontRead = 0x18; // CUtlString
+            public const nint m_bPriorityReadButDontContribute = 0x20; // CUtlString
         }
         // Parent: None
         // Field count: 3
@@ -559,44 +562,34 @@ namespace CS2Dumper.Schemas {
             public const nint m_flTaps = 0x4C; // float32
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 0
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyElementNameFn
         public static class CSosGroupActionSchema {
-            public const nint m_name = 0x8; // CUtlString
-            public const nint m_actionType = 0x10; // ActionType_t
-            public const nint m_actionInstanceType = 0x14; // ActionType_t
         }
         // Parent: None
-        // Field count: 9
+        // Field count: 16
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyElementNameFn
         public static class CSosSoundEventGroupSchema {
-            public const nint m_name = 0x0; // CUtlString
-            public const nint m_nType = 0x8; // SosGroupType_t
-            public const nint m_bIsBlocking = 0xC; // bool
+            public const nint m_nGroupType = 0x8; // SosGroupType_t
+            public const nint m_bBlocksEvents = 0xC; // bool
             public const nint m_nBlockMaxCount = 0x10; // int32
-            public const nint m_bInvertMatch = 0x14; // bool
-            public const nint m_matchPattern = 0x18; // CSosGroupMatchPattern
-            public const nint m_branchPattern = 0x48; // CSosGroupBranchPattern
-            public const nint m_flLifeSpanTime = 0x58; // float32
-            public const nint m_vActions = 0xC0; // CSosGroupActionSchema*[4]
-        }
-        // Parent: None
-        // Field count: 5
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CSosGroupBranchPattern {
-            public const nint m_bMatchEventName = 0x8; // bool
-            public const nint m_bMatchEventSubString = 0x9; // bool
-            public const nint m_bMatchEntIndex = 0xA; // bool
-            public const nint m_bMatchOpvar = 0xB; // bool
-            public const nint m_bMatchString = 0xC; // bool
+            public const nint m_flMemberLifespanTime = 0x14; // float32
+            public const nint m_bInvertMatch = 0x18; // bool
+            public const nint m_Behavior_EventName = 0x1C; // SosGroupFieldBehavior_t
+            public const nint m_matchSoundEventName = 0x20; // CUtlString
+            public const nint m_bMatchEventSubString = 0x28; // bool
+            public const nint m_matchSoundEventSubString = 0x30; // CUtlString
+            public const nint m_Behavior_EntIndex = 0x38; // SosGroupFieldBehavior_t
+            public const nint m_flEntIndex = 0x3C; // float32
+            public const nint m_Behavior_Opvar = 0x40; // SosGroupFieldBehavior_t
+            public const nint m_flOpvar = 0x44; // float32
+            public const nint m_Behavior_String = 0x48; // SosGroupFieldBehavior_t
+            public const nint m_opvarString = 0x50; // CUtlString
+            public const nint m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
         }
         // Parent: None
         // Field count: 10
@@ -754,9 +747,10 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionSoundeventCountSchema {
-            public const nint m_bExcludeStoppedSounds = 0x18; // bool
-            public const nint m_strCountKeyName = 0x20; // CUtlString
+            public const nint m_bExcludeStoppedSounds = 0x8; // bool
+            public const nint m_strCountKeyName = 0x10; // CUtlString
         }
         // Parent: None
         // Field count: 3
@@ -838,26 +832,6 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSoundInfoHeader {
-        }
-        // Parent: None
-        // Field count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CSosSoundEventGroupListSchema {
-            public const nint m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
-        }
-        // Parent: None
-        // Field count: 5
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class CSosGroupMatchPattern {
-            public const nint m_matchSoundEventName = 0x10; // CUtlString
-            public const nint m_matchSoundEventSubString = 0x18; // CUtlString
-            public const nint m_flEntIndex = 0x20; // float32
-            public const nint m_flOpvar = 0x24; // float32
-            public const nint m_opvarString = 0x28; // CUtlString
         }
         // Parent: None
         // Field count: 5
@@ -975,14 +949,17 @@ namespace CS2Dumper.Schemas {
             public const nint m_curve4 = 0x1B8; // CPiecewiseCurve
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionLimitSchema {
-            public const nint m_nMaxCount = 0x18; // int32
-            public const nint m_nStopType = 0x1C; // SosActionStopType_t
-            public const nint m_nSortType = 0x20; // SosActionSortType_t
+            public const nint m_nMaxCount = 0x8; // int32
+            public const nint m_nStopType = 0xC; // SosActionStopType_t
+            public const nint m_nSortType = 0x10; // SosActionLimitSortType_t
+            public const nint m_bStopImmediate = 0x14; // bool
+            public const nint m_bCountStopped = 0x15; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1073,9 +1050,10 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionTimeBlockLimitSchema {
-            public const nint m_nMaxCount = 0x18; // int32
-            public const nint m_flMaxDuration = 0x1C; // float32
+            public const nint m_nMaxCount = 0x8; // int32
+            public const nint m_flMaxDuration = 0xC; // float32
         }
         // Parent: None
         // Field count: 2
@@ -1093,15 +1071,16 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionMemberCountEnvelopeSchema {
-            public const nint m_nBaseCount = 0x18; // int32
-            public const nint m_nTargetCount = 0x1C; // int32
-            public const nint m_flBaseValue = 0x20; // float32
-            public const nint m_flTargetValue = 0x24; // float32
-            public const nint m_flAttack = 0x28; // float32
-            public const nint m_flDecay = 0x2C; // float32
-            public const nint m_resultVarName = 0x30; // CUtlString
-            public const nint m_bSaveToGroup = 0x38; // bool
+            public const nint m_nBaseCount = 0x8; // int32
+            public const nint m_nTargetCount = 0xC; // int32
+            public const nint m_flBaseValue = 0x10; // float32
+            public const nint m_flTargetValue = 0x14; // float32
+            public const nint m_flAttack = 0x18; // float32
+            public const nint m_flDecay = 0x1C; // float32
+            public const nint m_resultVarName = 0x20; // CUtlString
+            public const nint m_bSaveToGroup = 0x28; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1118,8 +1097,9 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
         public static class CSosGroupActionTimeLimitSchema {
-            public const nint m_flMaxDuration = 0x18; // float32
+            public const nint m_flMaxDuration = 0x8; // float32
         }
         // Parent: None
         // Field count: 10

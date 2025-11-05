@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: resourcesystem.dll
-        // Class count: 58
+        // Class count: 59
         // Enum count: 2
         pub mod resourcesystem_dll {
             // Alignment: 1
@@ -57,13 +57,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCMorphSetData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCChoreoSceneFileData {
             }
             // Parent: None
             // Field count: 0
@@ -184,6 +177,13 @@ pub mod cs2_dumper {
             pub mod InfoForResourceTypeProceduralTestResource_t {
             }
             // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCChoreoSceneFileList {
+            }
+            // Parent: None
             // Field count: 2
             pub mod AABB_t {
                 pub const m_vMinBounds: usize = 0x0; // Vector
@@ -237,6 +237,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCTypeScriptResource {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCChoreoSceneResource {
             }
             // Parent: None
             // Field count: 0

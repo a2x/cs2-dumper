@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,8 +7,18 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: scenesystem.dll
         // Class count: 9
-        // Enum count: 1
+        // Enum count: 3
         pub mod scenesystem_dll {
+            // Alignment: 1
+            // Member count: 6
+            #[repr(u8)]
+            pub enum DecalMode_t {
+                kDecalInvalid = 0xFF,
+                kDecalBlood = 0x0,
+                kDecalCloak = 0x1,
+                kDecalCloakDamage = 0x2,
+                kDecalMax = 0x3
+            }
             // Alignment: 1
             // Member count: 4
             #[repr(u8)]
@@ -17,6 +27,17 @@ pub mod cs2_dumper {
                 kDisableShadows_All = 0x1,
                 kDisableShadows_Baked = 0x2,
                 kDisableShadows_Realtime = 0x3
+            }
+            // Alignment: 4
+            // Member count: 6
+            #[repr(u32)]
+            pub enum ESceneObjectVisualization {
+                SCENEOBJECT_VIS_NONE = 0x0,
+                SCENEOBJECT_VIS_OBJECT = 0x1,
+                SCENEOBJECT_VIS_MATERIAL = 0x2,
+                SCENEOBJECT_VIS_TEXTURE_SIZE = 0x3,
+                SCENEOBJECT_VIS_LOD = 0x4,
+                SCENEOBJECT_VIS_INSTANCING = 0x5
             }
             // Parent: None
             // Field count: 10

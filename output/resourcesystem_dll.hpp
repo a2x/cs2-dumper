@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: resourcesystem.dll
-        // Class count: 58
+        // Class count: 59
         // Enum count: 2
         namespace resourcesystem_dll {
             // Alignment: 1
@@ -57,13 +57,6 @@ namespace cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             namespace InfoForResourceTypeCMorphSetData {
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCChoreoSceneFileData {
             }
             // Parent: None
             // Field count: 0
@@ -184,6 +177,13 @@ namespace cs2_dumper {
             namespace InfoForResourceTypeProceduralTestResource_t {
             }
             // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCChoreoSceneFileList {
+            }
+            // Parent: None
             // Field count: 2
             namespace AABB_t {
                 constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
@@ -237,6 +237,13 @@ namespace cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             namespace InfoForResourceTypeCTypeScriptResource {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            namespace InfoForResourceTypeCChoreoSceneResource {
             }
             // Parent: None
             // Field count: 0

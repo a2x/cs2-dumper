@@ -1,35 +1,34 @@
 {
   "client.dll": {
-    "dwCSGOInput": 31708272,
-    "dwEntityList": 30498696,
-    "dwGameEntitySystem": 33250984,
+    "dwCSGOInput": 31686592,
+    "dwEntityList": 30473192,
+    "dwGameEntitySystem": 33245216,
     "dwGameEntitySystem_highestEntityIndex": 8432,
-    "dwGameRules": 31650040,
-    "dwGlobalVars": 29259760,
-    "dwGlowManager": 31650056,
-    "dwLocalPlayerController": 31584744,
-    "dwLocalPlayerPawn": 29303952,
-    "dwPlantedC4": 31687008,
-    "dwPrediction": 29303744,
-    "dwSensitivity": 31652904,
-    "dwSensitivity_sensitivity": 72,
-    "dwViewAngles": 31710240,
-    "dwViewMatrix": 31666416,
-    "dwViewRender": 31669632,
-    "dwWeaponC4": 31262776
+    "dwGameRules": 31642256,
+    "dwGlobalVars": 29229432,
+    "dwGlowManager": 31629608,
+    "dwLocalPlayerController": 31562448,
+    "dwLocalPlayerPawn": 29273784,
+    "dwPlantedC4": 31667600,
+    "dwPrediction": 29273552,
+    "dwSensitivity": 31632264,
+    "dwSensitivity_sensitivity": 80,
+    "dwViewAngles": 31688304,
+    "dwViewMatrix": 31645936,
+    "dwViewRender": 31648872,
+    "dwWeaponC4": 31239856
   },
   "engine2.dll": {
-    "dwBuildNumber": 6168900,
-    "dwNetworkGameClient": 6165040,
-    "dwNetworkGameClient_clientTickCount": 856,
+    "dwBuildNumber": 6226916,
+    "dwNetworkGameClient_clientTickCount": 912,
     "dwNetworkGameClient_deltaTick": 572,
-    "dwNetworkGameClient_isBackgroundMap": 2888751,
+    "dwNetworkGameClient_isBackgroundMap": 2888807,
     "dwNetworkGameClient_localPlayer": 232,
     "dwNetworkGameClient_maxClients": 560,
     "dwNetworkGameClient_serverTickCount": 572,
     "dwNetworkGameClient_signOnState": 544,
-    "dwWindowHeight": 9282772,
-    "dwWindowWidth": 9282768
+    "dwWindowHeight": 9365532,
+    "dwWindowWidth": 9365528
   },
   "inputsystem.dll": {
     "dwInputSystem": 285216
@@ -38,7 +37,7 @@
     "dwGameTypes": 1793760
   },
   "soundsystem.dll": {
-    "dwSoundSystem": 4057968,
+    "dwSoundSystem": 4107856,
     "dwSoundSystem_engineViewData": 124
   }
 }

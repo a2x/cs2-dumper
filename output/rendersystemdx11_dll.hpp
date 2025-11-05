@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #pragma once
 
@@ -8,8 +8,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: rendersystemdx11.dll
-        // Class count: 4
-        // Enum count: 5
+        // Class count: 8
+        // Enum count: 8
         namespace rendersystemdx11_dll {
             // Alignment: 4
             // Member count: 14
@@ -42,9 +42,34 @@ namespace cs2_dumper {
                 RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
                 RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
                 RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
-                RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
-                RENDER_BUFFER_POOL_ALLOCATED = 0x1000,
-                RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x2000
+                RENDER_BUFFER_POOL_ALLOCATED = 0x800,
+                RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000,
+                RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000
+            };
+            // Alignment: 1
+            // Member count: 3
+            enum class RsCullMode_t : uint8_t {
+                RS_CULL_NONE = 0x0,
+                RS_CULL_BACK = 0x1,
+                RS_CULL_FRONT = 0x2
+            };
+            // Alignment: 1
+            // Member count: 8
+            enum class RsComparison_t : uint8_t {
+                RS_CMP_NEVER = 0x0,
+                RS_CMP_LESS = 0x1,
+                RS_CMP_EQUAL = 0x2,
+                RS_CMP_LESS_EQUAL = 0x3,
+                RS_CMP_GREATER = 0x4,
+                RS_CMP_NOT_EQUAL = 0x5,
+                RS_CMP_GREATER_EQUAL = 0x6,
+                RS_CMP_ALWAYS = 0x7
+            };
+            // Alignment: 1
+            // Member count: 2
+            enum class RsFillMode_t : uint8_t {
+                RS_FILL_SOLID = 0x0,
+                RS_FILL_WIREFRAME = 0x1
             };
             // Alignment: 1
             // Member count: 8
@@ -74,9 +99,32 @@ namespace cs2_dumper {
                 RENDER_SLOT_PER_INSTANCE = 0x1
             };
             // Parent: None
+            // Field count: 4
+            namespace RsDepthStencilStateDesc_t {
+                constexpr std::ptrdiff_t m_bDepthTestEnable = 0x0; // bitfield:1
+                constexpr std::ptrdiff_t m_bDepthWriteEnable = 0x0; // bitfield:1
+                constexpr std::ptrdiff_t m_depthFunc = 0x1; // RsComparison_t
+                constexpr std::ptrdiff_t m_stencilState = 0x2; // RsStencilStateDesc_t
+            }
+            // Parent: None
             // Field count: 1
             namespace SheetSequenceIntegerId_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint32
+            }
+            // Parent: None
+            // Field count: 11
+            namespace RsBlendStateDesc_t {
+                constexpr std::ptrdiff_t m_srcBlendBits = 0x0; // uint32
+                constexpr std::ptrdiff_t m_destBlendBits = 0x4; // uint32
+                constexpr std::ptrdiff_t m_srcBlendAlphaBits = 0x8; // uint32
+                constexpr std::ptrdiff_t m_destBlendAlphaBits = 0xC; // uint32
+                constexpr std::ptrdiff_t m_renderTargetWriteMaskBits = 0x10; // uint32
+                constexpr std::ptrdiff_t m_blendOpBits = 0x0; // bitfield:30
+                constexpr std::ptrdiff_t m_bAlphaToCoverageEnable = 0x0; // bitfield:1
+                constexpr std::ptrdiff_t m_bIndependentBlendEnable = 0x0; // bitfield:1
+                constexpr std::ptrdiff_t m_blendOpAlphaBits = 0x18; // uint32
+                constexpr std::ptrdiff_t m_blendEnableBits = 0x1C; // uint8
+                constexpr std::ptrdiff_t m_srgbWriteEnableBits = 0x1D; // uint8
             }
             // Parent: None
             // Field count: 4
@@ -85,6 +133,32 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pSemantic = 0x40; // char[64]
                 constexpr std::ptrdiff_t m_pD3DSemanticName = 0x80; // char[64]
                 constexpr std::ptrdiff_t m_nD3DSemanticIndex = 0xC0; // int32
+            }
+            // Parent: None
+            // Field count: 7
+            namespace RsRasterizerStateDesc_t {
+                constexpr std::ptrdiff_t m_nFillMode = 0x0; // RsFillMode_t
+                constexpr std::ptrdiff_t m_nCullMode = 0x1; // RsCullMode_t
+                constexpr std::ptrdiff_t m_bDepthClipEnable = 0x2; // bool
+                constexpr std::ptrdiff_t m_bMultisampleEnable = 0x3; // bool
+                constexpr std::ptrdiff_t m_nDepthBias = 0x4; // int32
+                constexpr std::ptrdiff_t m_flDepthBiasClamp = 0x8; // float32
+                constexpr std::ptrdiff_t m_flSlopeScaledDepthBias = 0xC; // float32
+            }
+            // Parent: None
+            // Field count: 11
+            namespace RsStencilStateDesc_t {
+                constexpr std::ptrdiff_t m_bStencilEnable = 0x0; // bitfield:1
+                constexpr std::ptrdiff_t m_frontStencilFailOp = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_frontStencilDepthFailOp = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_frontStencilPassOp = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_frontStencilFunc = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_backStencilFailOp = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_backStencilDepthFailOp = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_backStencilPassOp = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_backStencilFunc = 0x0; // bitfield:3
+                constexpr std::ptrdiff_t m_nStencilReadMask = 0x4; // uint8
+                constexpr std::ptrdiff_t m_nStencilWriteMask = 0x5; // uint8
             }
             // Parent: None
             // Field count: 2

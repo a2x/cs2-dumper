@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: rendersystemdx11.dll
-    // Class count: 4
-    // Enum count: 5
+    // Class count: 8
+    // Enum count: 8
     public static class Rendersystemdx11Dll {
         // Alignment: 4
         // Member count: 14
@@ -37,9 +37,34 @@ namespace CS2Dumper.Schemas {
             RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS = 0x100,
             RENDER_BUFFER_ACCELERATION_STRUCTURE = 0x200,
             RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
-            RENDER_BUFFER_PER_FRAME_WRITE_ONCE = 0x800,
-            RENDER_BUFFER_POOL_ALLOCATED = 0x1000,
-            RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x2000
+            RENDER_BUFFER_POOL_ALLOCATED = 0x800,
+            RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000,
+            RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000
+        }
+        // Alignment: 1
+        // Member count: 3
+        public enum RsCullMode_t : byte {
+            RS_CULL_NONE = 0x0,
+            RS_CULL_BACK = 0x1,
+            RS_CULL_FRONT = 0x2
+        }
+        // Alignment: 1
+        // Member count: 8
+        public enum RsComparison_t : byte {
+            RS_CMP_NEVER = 0x0,
+            RS_CMP_LESS = 0x1,
+            RS_CMP_EQUAL = 0x2,
+            RS_CMP_LESS_EQUAL = 0x3,
+            RS_CMP_GREATER = 0x4,
+            RS_CMP_NOT_EQUAL = 0x5,
+            RS_CMP_GREATER_EQUAL = 0x6,
+            RS_CMP_ALWAYS = 0x7
+        }
+        // Alignment: 1
+        // Member count: 2
+        public enum RsFillMode_t : byte {
+            RS_FILL_SOLID = 0x0,
+            RS_FILL_WIREFRAME = 0x1
         }
         // Alignment: 1
         // Member count: 8
@@ -69,9 +94,32 @@ namespace CS2Dumper.Schemas {
             RENDER_SLOT_PER_INSTANCE = 0x1
         }
         // Parent: None
+        // Field count: 4
+        public static class RsDepthStencilStateDesc_t {
+            public const nint m_bDepthTestEnable = 0x0; // bitfield:1
+            public const nint m_bDepthWriteEnable = 0x0; // bitfield:1
+            public const nint m_depthFunc = 0x1; // RsComparison_t
+            public const nint m_stencilState = 0x2; // RsStencilStateDesc_t
+        }
+        // Parent: None
         // Field count: 1
         public static class SheetSequenceIntegerId_t {
             public const nint m_Value = 0x0; // uint32
+        }
+        // Parent: None
+        // Field count: 11
+        public static class RsBlendStateDesc_t {
+            public const nint m_srcBlendBits = 0x0; // uint32
+            public const nint m_destBlendBits = 0x4; // uint32
+            public const nint m_srcBlendAlphaBits = 0x8; // uint32
+            public const nint m_destBlendAlphaBits = 0xC; // uint32
+            public const nint m_renderTargetWriteMaskBits = 0x10; // uint32
+            public const nint m_blendOpBits = 0x0; // bitfield:30
+            public const nint m_bAlphaToCoverageEnable = 0x0; // bitfield:1
+            public const nint m_bIndependentBlendEnable = 0x0; // bitfield:1
+            public const nint m_blendOpAlphaBits = 0x18; // uint32
+            public const nint m_blendEnableBits = 0x1C; // uint8
+            public const nint m_srgbWriteEnableBits = 0x1D; // uint8
         }
         // Parent: None
         // Field count: 4
@@ -80,6 +128,32 @@ namespace CS2Dumper.Schemas {
             public const nint m_pSemantic = 0x40; // char[64]
             public const nint m_pD3DSemanticName = 0x80; // char[64]
             public const nint m_nD3DSemanticIndex = 0xC0; // int32
+        }
+        // Parent: None
+        // Field count: 7
+        public static class RsRasterizerStateDesc_t {
+            public const nint m_nFillMode = 0x0; // RsFillMode_t
+            public const nint m_nCullMode = 0x1; // RsCullMode_t
+            public const nint m_bDepthClipEnable = 0x2; // bool
+            public const nint m_bMultisampleEnable = 0x3; // bool
+            public const nint m_nDepthBias = 0x4; // int32
+            public const nint m_flDepthBiasClamp = 0x8; // float32
+            public const nint m_flSlopeScaledDepthBias = 0xC; // float32
+        }
+        // Parent: None
+        // Field count: 11
+        public static class RsStencilStateDesc_t {
+            public const nint m_bStencilEnable = 0x0; // bitfield:1
+            public const nint m_frontStencilFailOp = 0x0; // bitfield:3
+            public const nint m_frontStencilDepthFailOp = 0x0; // bitfield:3
+            public const nint m_frontStencilPassOp = 0x0; // bitfield:3
+            public const nint m_frontStencilFunc = 0x0; // bitfield:3
+            public const nint m_backStencilFailOp = 0x0; // bitfield:3
+            public const nint m_backStencilDepthFailOp = 0x0; // bitfield:3
+            public const nint m_backStencilPassOp = 0x0; // bitfield:3
+            public const nint m_backStencilFunc = 0x0; // bitfield:3
+            public const nint m_nStencilReadMask = 0x4; // uint8
+            public const nint m_nStencilWriteMask = 0x5; // uint8
         }
         // Parent: None
         // Field count: 2

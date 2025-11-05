@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #pragma once
 
@@ -8,7 +8,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: worldrenderer.dll
-        // Class count: 26
+        // Class count: 25
         // Enum count: 2
         namespace worldrenderer_dll {
             // Alignment: 4
@@ -184,27 +184,25 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 16
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace WorldNode_t {
                 constexpr std::ptrdiff_t m_sceneObjects = 0x0; // CUtlVector<SceneObject_t>
-                constexpr std::ptrdiff_t m_infoOverlays = 0x18; // CUtlVector<InfoOverlayData_t>
-                constexpr std::ptrdiff_t m_visClusterMembership = 0x30; // CUtlVector<uint16>
-                constexpr std::ptrdiff_t m_aggregateSceneObjects = 0x48; // CUtlVector<AggregateSceneObject_t>
-                constexpr std::ptrdiff_t m_clutterSceneObjects = 0x60; // CUtlVector<ClutterSceneObject_t>
-                constexpr std::ptrdiff_t m_extraVertexStreamOverrides = 0x78; // CUtlVector<ExtraVertexStreamOverride_t>
-                constexpr std::ptrdiff_t m_materialOverrides = 0x90; // CUtlVector<MaterialOverride_t>
-                constexpr std::ptrdiff_t m_extraVertexStreams = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
-                constexpr std::ptrdiff_t m_aggregateInstanceStreams = 0xC0; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
-                constexpr std::ptrdiff_t m_vertexAlbedoStreams = 0xD8; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
-                constexpr std::ptrdiff_t m_layerNames = 0xF0; // CUtlVector<CUtlString>
-                constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0x108; // CUtlVector<uint8>
-                constexpr std::ptrdiff_t m_overlayLayerIndices = 0x120; // CUtlVector<uint8>
-                constexpr std::ptrdiff_t m_grassFileName = 0x138; // CUtlString
-                constexpr std::ptrdiff_t m_nodeLightingInfo = 0x140; // BakedLightingInfo_t
-                constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x188; // bool
+                constexpr std::ptrdiff_t m_visClusterMembership = 0x18; // CUtlVector<uint16>
+                constexpr std::ptrdiff_t m_aggregateSceneObjects = 0x30; // CUtlVector<AggregateSceneObject_t>
+                constexpr std::ptrdiff_t m_clutterSceneObjects = 0x48; // CUtlVector<ClutterSceneObject_t>
+                constexpr std::ptrdiff_t m_extraVertexStreamOverrides = 0x60; // CUtlVector<ExtraVertexStreamOverride_t>
+                constexpr std::ptrdiff_t m_materialOverrides = 0x78; // CUtlVector<MaterialOverride_t>
+                constexpr std::ptrdiff_t m_extraVertexStreams = 0x90; // CUtlVector<WorldNodeOnDiskBufferData_t>
+                constexpr std::ptrdiff_t m_aggregateInstanceStreams = 0xA8; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
+                constexpr std::ptrdiff_t m_vertexAlbedoStreams = 0xC0; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
+                constexpr std::ptrdiff_t m_layerNames = 0xD8; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0xF0; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_grassFileName = 0x108; // CUtlString
+                constexpr std::ptrdiff_t m_nodeLightingInfo = 0x110; // BakedLightingInfo_t
+                constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x158; // bool
             }
             // Parent: None
             // Field count: 1
@@ -303,23 +301,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_worldNodes = 0x60; // CUtlVector<NodeData_t>
                 constexpr std::ptrdiff_t m_worldLightingInfo = 0x78; // BakedLightingInfo_t
                 constexpr std::ptrdiff_t m_entityLumps = 0xC0; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-            }
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace InfoOverlayData_t {
-                constexpr std::ptrdiff_t m_transform = 0x0; // matrix3x4_t
-                constexpr std::ptrdiff_t m_flWidth = 0x30; // float32
-                constexpr std::ptrdiff_t m_flHeight = 0x34; // float32
-                constexpr std::ptrdiff_t m_flDepth = 0x38; // float32
-                constexpr std::ptrdiff_t m_vUVStart = 0x3C; // Vector2D
-                constexpr std::ptrdiff_t m_vUVEnd = 0x44; // Vector2D
-                constexpr std::ptrdiff_t m_pMaterial = 0x50; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                constexpr std::ptrdiff_t m_nRenderOrder = 0x58; // int32
-                constexpr std::ptrdiff_t m_vTintColor = 0x5C; // Vector4D
-                constexpr std::ptrdiff_t m_sSequenceOverrideName = 0x6C; // CUtlStringToken
             }
             // Parent: None
             // Field count: 3

@@ -51,10 +51,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -66,10 +62,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
             "type": "Unknown"
           }
         ],
@@ -83,10 +75,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -98,10 +86,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
             "type": "Unknown"
           }
         ],
@@ -115,10 +99,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -131,10 +111,6 @@
           {
             "name": "MGetKV3ClassDefaults",
             "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
-            "type": "Unknown"
           }
         ],
         "parent": null
@@ -146,10 +122,6 @@
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          },
-          {
-            "name": "MPropertyEditClassAsString",
             "type": "Unknown"
           }
         ],
@@ -598,12 +570,7 @@
         "fields": {
           "m_value": 0
         },
-        "metadata": [
-          {
-            "name": "MPropertyEditClassAsString",
-            "type": "Unknown"
-          }
-        ],
+        "metadata": [],
         "parent": null
       },
       "CAnimEventDefinition": {
@@ -1557,16 +1524,16 @@
       },
       "CChoiceUpdateNode": {
         "fields": {
-          "m_bCrossFade": 176,
-          "m_bDontResetSameSelection": 178,
-          "m_bResetChosen": 177,
-          "m_blendMethod": 168,
-          "m_blendTime": 172,
-          "m_blendTimes": 136,
-          "m_children": 88,
-          "m_choiceChangeMethod": 164,
-          "m_choiceMethod": 160,
-          "m_weights": 112
+          "m_bCrossFade": 184,
+          "m_bDontResetSameSelection": 186,
+          "m_bResetChosen": 185,
+          "m_blendMethod": 176,
+          "m_blendTime": 180,
+          "m_blendTimes": 144,
+          "m_children": 96,
+          "m_choiceChangeMethod": 172,
+          "m_choiceMethod": 168,
+          "m_weights": 120
         },
         "metadata": [
           {
@@ -3175,16 +3142,17 @@
       },
       "CNewParticleEffect": {
         "fields": {
-          "m_LastMax": 140,
-          "m_LastMin": 128,
+          "m_LastMax": 136,
+          "m_LastMin": 124,
           "m_RefCount": 208,
           "m_bAllocated": 0,
           "m_bAutoUpdateBBox": 0,
-          "m_bCanFreeze": 126,
+          "m_bCanFreeze": 0,
           "m_bDontRemove": 0,
           "m_bForceNoDraw": 0,
-          "m_bFreezeTargetState": 125,
-          "m_bFreezeTransitionActive": 124,
+          "m_bFreezeTargetState": 0,
+          "m_bFreezeTransitionActive": 0,
+          "m_bIsAsyncCreate": 0,
           "m_bIsFirstFrame": 0,
           "m_bNeedsBBoxUpdate": 0,
           "m_bRemove": 0,
@@ -3199,14 +3167,14 @@
           "m_flFreezeTransitionStart": 112,
           "m_flScale": 76,
           "m_hOwner": 80,
-          "m_nSplitScreenUser": 152,
+          "m_nSplitScreenUser": 148,
           "m_pDebugName": 40,
           "m_pNext": 16,
           "m_pOwningParticleProperty": 88,
           "m_pParticles": 32,
           "m_pPrev": 24,
           "m_vSortOrigin": 64,
-          "m_vecAggregationCenter": 156
+          "m_vecAggregationCenter": 152
         },
         "metadata": [],
         "parent": null
@@ -3294,6 +3262,18 @@
       "CNmBlendTaskBase": {
         "fields": {},
         "metadata": [],
+        "parent": null
+      },
+      "CNmBodyGroupEvent": {
+        "fields": {
+          "m_groupName": 32
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "CNmBoneMaskBlendNode__CDefinition": {
@@ -3458,17 +3438,17 @@
       },
       "CNmChainLookatTask": {
         "fields": {
-          "m_bIsRunningFromDeserializedData": 125,
-          "m_bIsTargetInWorldSpace": 124,
-          "m_chainForwardDir": 88,
-          "m_flBlendWeight": 100,
-          "m_flHorizontalAngleDegrees": 128,
-          "m_flHorizontalAngleLimitDegrees": 104,
-          "m_flVerticalAngleDegrees": 132,
-          "m_flVerticalAngleLimitDegrees": 108,
-          "m_lookatTarget": 112,
-          "m_nChainEndBoneIdx": 80,
-          "m_nNumBonesInChain": 84
+          "m_bIsRunningFromDeserializedData": 133,
+          "m_bIsTargetInWorldSpace": 132,
+          "m_chainForwardDir": 96,
+          "m_flBlendWeight": 108,
+          "m_flHorizontalAngleDegrees": 136,
+          "m_flHorizontalAngleLimitDegrees": 112,
+          "m_flVerticalAngleDegrees": 140,
+          "m_flVerticalAngleLimitDegrees": 116,
+          "m_lookatTarget": 120,
+          "m_nChainEndBoneIdx": 88,
+          "m_nNumBonesInChain": 92
         },
         "metadata": [],
         "parent": null
@@ -3484,7 +3464,8 @@
           "m_debugTotalChainLength": 288,
           "m_effectorTarget": 144,
           "m_flBlendWeight": 196,
-          "m_nEffectorBoneIdx": 80,
+          "m_nEffectorBoneIdx": 88,
+          "m_nEffectorTargetBoneIdx": 92,
           "m_nNumBonesInChain": 128,
           "m_targetTransform": 96
         },
@@ -3493,17 +3474,21 @@
       },
       "CNmClip": {
         "fields": {
-          "m_bIsAdditive": 416,
+          "m_bIsAdditive": 512,
+          "m_compressedFloatCurveData": 128,
+          "m_compressedFloatCurveOffsets": 152,
           "m_compressedPoseData": 16,
           "m_compressedPoseOffsets": 56,
           "m_flDuration": 12,
-          "m_modelSpaceBoneSamplingIndices": 448,
-          "m_modelSpaceSamplingChain": 424,
+          "m_floatCurveDefs": 104,
+          "m_floatCurveIDs": 80,
+          "m_modelSpaceBoneSamplingIndices": 544,
+          "m_modelSpaceSamplingChain": 520,
           "m_nNumFrames": 8,
-          "m_rootMotion": 336,
-          "m_secondaryAnimations": 120,
+          "m_rootMotion": 432,
+          "m_secondaryAnimations": 216,
           "m_skeleton": 0,
-          "m_syncTrack": 152,
+          "m_syncTrack": 248,
           "m_trackCompressionSettings": 32
         },
         "metadata": [
@@ -4335,6 +4320,16 @@
         ],
         "parent": null
       },
+      "CNmIsInactiveBranchConditionNode__CDefinition": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CNmIsTargetSetNode__CDefinition": {
         "fields": {
           "m_nInputValueNodeIdx": 16
@@ -4549,8 +4544,8 @@
           "m_attachmentPoint1": 80,
           "m_attachmentType0": 72,
           "m_attachmentType1": 88,
-          "m_bDetachFromOwner": 112,
-          "m_bPlayEndCap": 113,
+          "m_bDetachFromOwner": 57,
+          "m_bPlayEndCap": 58,
           "m_bStopImmediately": 56,
           "m_config": 96,
           "m_effectForConfig": 104,
@@ -4702,14 +4697,14 @@
       "CNmSkeleton": {
         "fields": {
           "m_ID": 0,
-          "m_bIsPropSkeleton": 152,
+          "m_bIsPropSkeleton": 184,
           "m_boneIDs": 8,
-          "m_maskDefinitions": 104,
+          "m_maskDefinitions": 136,
           "m_modelSpaceReferencePose": 72,
           "m_numBonesToSampleAtLowLOD": 96,
           "m_parentIndices": 24,
           "m_parentSpaceReferencePose": 48,
-          "m_secondarySkeletons": 136
+          "m_secondarySkeletons": 168
         },
         "metadata": [
           {
@@ -4735,14 +4730,12 @@
       "CNmSoundEvent": {
         "fields": {
           "m_attachmentName": 56,
-          "m_bContinuePlayingSoundAtDurationEnd": 73,
-          "m_bIsServerOnly": 72,
+          "m_bContinuePlayingSoundAtDurationEnd": 72,
           "m_flDurationInterruptionThreshold": 76,
           "m_name": 40,
           "m_position": 48,
           "m_relevance": 32,
-          "m_tags": 64,
-          "m_type": 36
+          "m_tags": 64
         },
         "metadata": [
           {
@@ -4834,6 +4827,7 @@
       "CNmStateNode__CDefinition": {
         "fields": {
           "m_bIsOffState": 174,
+          "m_bUseActualElapsedTimeInStateForTimedEvents": 175,
           "m_entryEvents": 24,
           "m_executeEvents": 56,
           "m_exitEvents": 88,
@@ -5419,53 +5413,55 @@
       },
       "CParticleFloatInput": {
         "fields": {
-          "m_Curve": 288,
+          "m_Curve": 304,
           "m_NamedValue": 32,
-          "m_bHasRandomSignFlip": 120,
-          "m_bNoiseImgPreviewLive": 212,
-          "m_bUseBoundsCenter": 228,
-          "m_flBiasParameter": 280,
-          "m_flInput0": 240,
-          "m_flInput1": 244,
-          "m_flLOD0": 136,
-          "m_flLOD1": 140,
-          "m_flLOD2": 144,
-          "m_flLOD3": 148,
+          "m_bHasRandomSignFlip": 124,
+          "m_bNoiseImgPreviewLive": 228,
+          "m_bReverseOrder": 112,
+          "m_bUseBoundsCenter": 244,
+          "m_flBiasParameter": 296,
+          "m_flInput0": 256,
+          "m_flInput1": 260,
+          "m_flLOD0": 152,
+          "m_flLOD1": 156,
+          "m_flLOD2": 160,
+          "m_flLOD3": 164,
           "m_flLiteralValue": 24,
-          "m_flMultFactor": 236,
-          "m_flNoCameraFallback": 224,
-          "m_flNoiseImgPreviewScale": 208,
-          "m_flNoiseOffset": 180,
-          "m_flNoiseOutputMax": 160,
-          "m_flNoiseOutputMin": 156,
-          "m_flNoiseScale": 164,
-          "m_flNoiseTurbulenceMix": 204,
-          "m_flNoiseTurbulenceScale": 200,
-          "m_flNotchedOutputInside": 268,
-          "m_flNotchedOutputOutside": 264,
-          "m_flNotchedRangeMax": 260,
-          "m_flNotchedRangeMin": 256,
-          "m_flOutput0": 248,
-          "m_flOutput1": 252,
-          "m_flRandomMax": 116,
-          "m_flRandomMin": 112,
-          "m_nBiasType": 276,
+          "m_flMultFactor": 252,
+          "m_flNoCameraFallback": 240,
+          "m_flNoiseImgPreviewScale": 224,
+          "m_flNoiseOffset": 196,
+          "m_flNoiseOutputMax": 176,
+          "m_flNoiseOutputMin": 172,
+          "m_flNoiseScale": 180,
+          "m_flNoiseTurbulenceMix": 220,
+          "m_flNoiseTurbulenceScale": 216,
+          "m_flNotchedOutputInside": 284,
+          "m_flNotchedOutputOutside": 280,
+          "m_flNotchedRangeMax": 276,
+          "m_flNotchedRangeMin": 272,
+          "m_flOutput0": 264,
+          "m_flOutput1": 268,
+          "m_flRandomMax": 120,
+          "m_flRandomMin": 116,
+          "m_nBiasType": 292,
           "m_nControlPoint": 96,
-          "m_nInputMode": 232,
+          "m_nInputMode": 248,
           "m_nMapType": 20,
-          "m_nNoiseInputVectorAttribute": 152,
-          "m_nNoiseModifier": 196,
-          "m_nNoiseOctaves": 184,
-          "m_nNoiseTurbulence": 188,
-          "m_nNoiseType": 192,
-          "m_nRandomMode": 128,
-          "m_nRandomSeed": 124,
-          "m_nRoundType": 272,
+          "m_nNoiseInputVectorAttribute": 168,
+          "m_nNoiseModifier": 212,
+          "m_nNoiseOctaves": 200,
+          "m_nNoiseTurbulence": 204,
+          "m_nNoiseType": 208,
+          "m_nRandomMode": 132,
+          "m_nRandomSeed": 128,
+          "m_nRoundType": 288,
           "m_nScalarAttribute": 100,
           "m_nType": 16,
           "m_nVectorAttribute": 104,
           "m_nVectorComponent": 108,
-          "m_vecNoiseOffsetRate": 168
+          "m_strSnapshotSubset": 144,
+          "m_vecNoiseOffsetRate": 184
         },
         "metadata": [
           {
@@ -5473,7 +5469,7 @@
             "type": "Unknown"
           },
           {
-            "name": "MParticleCustomFieldDefaultValue",
+            "name": "MCustomFGDMetadata",
             "type": "Unknown"
           }
         ],
@@ -5505,7 +5501,7 @@
             "type": "Unknown"
           },
           {
-            "name": "MParticleCustomFieldDefaultValue",
+            "name": "MCustomFGDMetadata",
             "type": "Unknown"
           }
         ],
@@ -5551,7 +5547,7 @@
             "type": "Unknown"
           },
           {
-            "name": "MParticleCustomFieldDefaultValue",
+            "name": "MCustomFGDMetadata",
             "type": "Unknown"
           }
         ],
@@ -5577,15 +5573,15 @@
       "CParticleVecInput": {
         "fields": {
           "m_FloatComponentX": 168,
-          "m_FloatComponentY": 520,
-          "m_FloatComponentZ": 872,
-          "m_FloatInterp": 1224,
-          "m_Gradient": 1608,
+          "m_FloatComponentY": 536,
+          "m_FloatComponentZ": 904,
+          "m_FloatInterp": 1272,
+          "m_Gradient": 1672,
           "m_LiteralColor": 32,
           "m_NamedValue": 40,
           "m_bFollowNamedValue": 104,
-          "m_flInterpInput0": 1576,
-          "m_flInterpInput1": 1580,
+          "m_flInterpInput0": 1640,
+          "m_flInterpInput1": 1644,
           "m_nControlPoint": 124,
           "m_nDeltaControlPoint": 128,
           "m_nType": 16,
@@ -5593,11 +5589,11 @@
           "m_vCPRelativeDir": 156,
           "m_vCPRelativePosition": 144,
           "m_vCPValueScale": 132,
-          "m_vInterpOutput0": 1584,
-          "m_vInterpOutput1": 1596,
+          "m_vInterpOutput0": 1648,
+          "m_vInterpOutput1": 1660,
           "m_vLiteralValue": 20,
-          "m_vRandomMax": 1644,
-          "m_vRandomMin": 1632,
+          "m_vRandomMax": 1708,
+          "m_vRandomMin": 1696,
           "m_vVectorAttributeScale": 112
         },
         "metadata": [
@@ -5606,7 +5602,7 @@
             "type": "Unknown"
           },
           {
-            "name": "MParticleCustomFieldDefaultValue",
+            "name": "MCustomFGDMetadata",
             "type": "Unknown"
           }
         ],
@@ -7054,7 +7050,8 @@
       "CVectorAnimParameter": {
         "fields": {
           "m_bInterpolate": 140,
-          "m_defaultValue": 128
+          "m_defaultValue": 128,
+          "m_vectorType": 144
         },
         "metadata": [
           {
@@ -7734,6 +7731,19 @@
         ],
         "parent": null
       },
+      "NmFloatCurveCompressionSettings_t": {
+        "fields": {
+          "m_bIsStatic": 8,
+          "m_range": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "NmPercent_t": {
         "fields": {
           "m_flValue": 0
@@ -7833,10 +7843,10 @@
       },
       "ParticleNamedValueConfiguration_t": {
         "fields": {
-          "m_BoundEntityPath": 32,
+          "m_BoundValuePath": 24,
           "m_ConfigName": 0,
           "m_ConfigValue": 8,
-          "m_iAttachType": 24,
+          "m_iAttachType": 32,
           "m_strAttachmentName": 48,
           "m_strEntityScope": 40
         },
@@ -7850,11 +7860,10 @@
       },
       "ParticleNamedValueSource_t": {
         "fields": {
-          "m_DefaultConfig": 16,
+          "m_DefaultConfig": 40,
           "m_IsPublic": 8,
           "m_Name": 0,
-          "m_NamedConfigs": 72,
-          "m_ValueType": 12
+          "m_ValueType": 16
         },
         "metadata": [
           {
@@ -8686,6 +8695,17 @@
         },
         "type": "uint8"
       },
+      "AnimParamVectorType_t": {
+        "alignment": 4,
+        "members": {
+          "ANIMPARAM_VECTOR_TYPE_DIRECTION_LS": 4,
+          "ANIMPARAM_VECTOR_TYPE_DIRECTION_WS": 3,
+          "ANIMPARAM_VECTOR_TYPE_NONE": 0,
+          "ANIMPARAM_VECTOR_TYPE_POSITION_LS": 2,
+          "ANIMPARAM_VECTOR_TYPE_POSITION_WS": 1
+        },
+        "type": "uint32"
+      },
       "AnimScriptType": {
         "alignment": 2,
         "members": {
@@ -8918,8 +8938,7 @@
         "alignment": 4,
         "members": {
           "Create": 0,
-          "Create_CFG": 1,
-          "Stop": 2
+          "Create_CFG": 1
         },
         "type": "uint32"
       },
@@ -8950,14 +8969,6 @@
           "EntityPos": 2,
           "None": 0,
           "World": 1
-        },
-        "type": "uint32"
-      },
-      "CNmSoundEvent__Type_t": {
-        "alignment": 4,
-        "members": {
-          "Play": 0,
-          "Stop": 1
         },
         "type": "uint32"
       },
@@ -9751,7 +9762,7 @@
           "PF_TYPE_CONTROL_POINT_CHANGE_AGE": 7,
           "PF_TYPE_CONTROL_POINT_COMPONENT": 6,
           "PF_TYPE_CONTROL_POINT_SPEED": 8,
-          "PF_TYPE_COUNT": 27,
+          "PF_TYPE_COUNT": 29,
           "PF_TYPE_ENDCAP_AGE": 5,
           "PF_TYPE_INVALID": -1,
           "PF_TYPE_LITERAL": 0,
@@ -9765,8 +9776,10 @@
           "PF_TYPE_PARTICLE_NOISE": 15,
           "PF_TYPE_PARTICLE_NUMBER": 23,
           "PF_TYPE_PARTICLE_NUMBER_NORMALIZED": 24,
-          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE": 25,
-          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT": 26,
+          "PF_TYPE_PARTICLE_ROPE_SEGMENT": 25,
+          "PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED": 26,
+          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE": 27,
+          "PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT": 28,
           "PF_TYPE_PARTICLE_SPEED": 22,
           "PF_TYPE_PARTICLE_VECTOR_COMPONENT": 20,
           "PF_TYPE_RANDOM_BIASED": 3,
@@ -9854,6 +9867,18 @@
           "POSETYPE_STATIC": 0
         },
         "type": "uint8"
+      },
+      "PulseApiFeature_t": {
+        "alignment": 4,
+        "members": {
+          "AF_ENTITIES": 1,
+          "AF_FAKE_ENTITIES": 16,
+          "AF_NONE": 0,
+          "AF_PANORAMA": 2,
+          "AF_PARTICLES": 8,
+          "AF_SELECTORS_WITHOUT_REQUIREMENTS": 32
+        },
+        "type": "uint32"
       },
       "PulseCursorExecResult_t": {
         "alignment": 4,
@@ -10012,7 +10037,7 @@
           "PVAL_ARRAY": 28,
           "PVAL_BOOL": 0,
           "PVAL_COLOR_RGB": 11,
-          "PVAL_COUNT": 30,
+          "PVAL_COUNT": 31,
           "PVAL_CURSOR_FLOW": 22,
           "PVAL_EHANDLE": 13,
           "PVAL_ENTITY_NAME": 18,
@@ -10022,6 +10047,7 @@
           "PVAL_MODEL_MATERIAL_GROUP": 21,
           "PVAL_OPAQUE_HANDLE": 19,
           "PVAL_PANORAMA_PANEL_HANDLE": 26,
+          "PVAL_PARTICLE_EHANDLE": 30,
           "PVAL_QANGLE": 6,
           "PVAL_RESOURCE": 14,
           "PVAL_RESOURCE_NAME": 15,

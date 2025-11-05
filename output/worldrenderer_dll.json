@@ -249,27 +249,6 @@
         ],
         "parent": null
       },
-      "InfoOverlayData_t": {
-        "fields": {
-          "m_flDepth": 56,
-          "m_flHeight": 52,
-          "m_flWidth": 48,
-          "m_nRenderOrder": 88,
-          "m_pMaterial": 80,
-          "m_sSequenceOverrideName": 108,
-          "m_transform": 0,
-          "m_vTintColor": 92,
-          "m_vUVEnd": 68,
-          "m_vUVStart": 60
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "MaterialOverride_t": {
         "fields": {
           "m_nDrawCallIndex": 8,
@@ -394,22 +373,20 @@
       },
       "WorldNode_t": {
         "fields": {
-          "m_aggregateInstanceStreams": 192,
-          "m_aggregateSceneObjects": 72,
-          "m_bHasBakedGeometryFlag": 392,
-          "m_clutterSceneObjects": 96,
-          "m_extraVertexStreamOverrides": 120,
-          "m_extraVertexStreams": 168,
-          "m_grassFileName": 312,
-          "m_infoOverlays": 24,
-          "m_layerNames": 240,
-          "m_materialOverrides": 144,
-          "m_nodeLightingInfo": 320,
-          "m_overlayLayerIndices": 288,
-          "m_sceneObjectLayerIndices": 264,
+          "m_aggregateInstanceStreams": 168,
+          "m_aggregateSceneObjects": 48,
+          "m_bHasBakedGeometryFlag": 344,
+          "m_clutterSceneObjects": 72,
+          "m_extraVertexStreamOverrides": 96,
+          "m_extraVertexStreams": 144,
+          "m_grassFileName": 264,
+          "m_layerNames": 216,
+          "m_materialOverrides": 120,
+          "m_nodeLightingInfo": 272,
+          "m_sceneObjectLayerIndices": 240,
           "m_sceneObjects": 0,
-          "m_vertexAlbedoStreams": 216,
-          "m_visClusterMembership": 48
+          "m_vertexAlbedoStreams": 192,
+          "m_visClusterMembership": 24
         },
         "metadata": [
           {

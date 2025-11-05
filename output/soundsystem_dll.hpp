@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #pragma once
 
@@ -8,8 +8,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
-        // Class count: 77
-        // Enum count: 19
+        // Class count: 74
+        // Enum count: 20
         namespace soundsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -110,12 +110,6 @@ namespace cs2_dumper {
                 SOS_EDIT_ITEM_TYPE_FIELD = 0x5
             };
             // Alignment: 4
-            // Member count: 2
-            enum class SosActionSortType_t : uint32_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
-            };
-            // Alignment: 4
             // Member count: 5
             enum class PlayBackMode_t : uint32_t {
                 Random = 0x0,
@@ -159,6 +153,13 @@ namespace cs2_dumper {
                 VPROCESSOR_SUBGRAPH_SWITCH = 0x1D,
                 VPROCESSOR_STEAMAUDIO_DIRECT = 0x1E,
                 VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1F
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class SosGroupFieldBehavior_t : uint32_t {
+                kIgnore = 0x0,
+                kBranch = 0x1,
+                kMatch = 0x2
             };
             // Alignment: 4
             // Member count: 30
@@ -249,18 +250,10 @@ namespace cs2_dumper {
                 FILTER_SLOPE_MAX = 0x7
             };
             // Alignment: 4
-            // Member count: 10
-            enum class ActionType_t : uint32_t {
-                SOS_ACTION_NONE = 0x0,
-                SOS_ACTION_LIMITER = 0x1,
-                SOS_ACTION_TIME_LIMIT = 0x2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5,
-                SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
-                SOS_ACTION_COUNT_ENVELOPE = 0x7,
-                SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
-                SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9
+            // Member count: 2
+            enum class SosActionLimitSortType_t : uint32_t {
+                SOS_LIMIT_SORTTYPE_HIGHEST = 0x0,
+                SOS_LIMIT_SORTTYPE_LOWEST = 0x1
             };
             // Alignment: 4
             // Member count: 3
@@ -274,6 +267,12 @@ namespace cs2_dumper {
             enum class SosGroupType_t : uint32_t {
                 SOS_GROUPTYPE_DYNAMIC = 0x0,
                 SOS_GROUPTYPE_STATIC = 0x1
+            };
+            // Alignment: 4
+            // Member count: 2
+            enum class SosActionSetParamSortType_t : uint32_t {
+                SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
+                SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
             };
             // Parent: None
             // Field count: 3
@@ -378,26 +377,28 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventClusterSchema {
-                constexpr std::ptrdiff_t m_nMinNearby = 0x18; // int32
-                constexpr std::ptrdiff_t m_flClusterEpsilon = 0x1C; // float32
-                constexpr std::ptrdiff_t m_shouldPlayOpvar = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_shouldPlayClusterChild = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_clusterSizeOpvar = 0x30; // CUtlString
-                constexpr std::ptrdiff_t m_groupBoundingBoxMinsOpvar = 0x38; // CUtlString
-                constexpr std::ptrdiff_t m_groupBoundingBoxMaxsOpvar = 0x40; // CUtlString
+                constexpr std::ptrdiff_t m_nMinNearby = 0x8; // int32
+                constexpr std::ptrdiff_t m_flClusterEpsilon = 0xC; // float32
+                constexpr std::ptrdiff_t m_shouldPlayOpvar = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_shouldPlayClusterChild = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_clusterSizeOpvar = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_groupBoundingBoxMinsOpvar = 0x28; // CUtlString
+                constexpr std::ptrdiff_t m_groupBoundingBoxMaxsOpvar = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSetSoundeventParameterSchema {
-                constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_flMinValue = 0x1C; // float32
-                constexpr std::ptrdiff_t m_flMaxValue = 0x20; // float32
-                constexpr std::ptrdiff_t m_opvarName = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_nSortType = 0x30; // SosActionSortType_t
+                constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_flMinValue = 0xC; // float32
+                constexpr std::ptrdiff_t m_flMaxValue = 0x10; // float32
+                constexpr std::ptrdiff_t m_opvarName = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSetParamSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -471,17 +472,18 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventMinMaxValuesSchema {
-                constexpr std::ptrdiff_t m_strQueryPublicFieldName = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_strDelayPublicFieldName = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x28; // bool
-                constexpr std::ptrdiff_t m_bExcludeDelayedSounds = 0x29; // bool
-                constexpr std::ptrdiff_t m_bExcludeSoundsBelowThreshold = 0x2A; // bool
-                constexpr std::ptrdiff_t m_flExcludeSoundsMinThresholdValue = 0x2C; // float32
-                constexpr std::ptrdiff_t m_bExcludSoundsAboveThreshold = 0x30; // bool
-                constexpr std::ptrdiff_t m_flExcludeSoundsMaxThresholdValue = 0x34; // float32
-                constexpr std::ptrdiff_t m_strMinValueName = 0x38; // CUtlString
-                constexpr std::ptrdiff_t m_strMaxValueName = 0x40; // CUtlString
+                constexpr std::ptrdiff_t m_strQueryPublicFieldName = 0x8; // CUtlString
+                constexpr std::ptrdiff_t m_strDelayPublicFieldName = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x18; // bool
+                constexpr std::ptrdiff_t m_bExcludeDelayedSounds = 0x19; // bool
+                constexpr std::ptrdiff_t m_bExcludeSoundsBelowThreshold = 0x1A; // bool
+                constexpr std::ptrdiff_t m_flExcludeSoundsMinThresholdValue = 0x1C; // float32
+                constexpr std::ptrdiff_t m_bExcludSoundsAboveThreshold = 0x20; // bool
+                constexpr std::ptrdiff_t m_flExcludeSoundsMaxThresholdValue = 0x24; // float32
+                constexpr std::ptrdiff_t m_strMinValueName = 0x28; // CUtlString
+                constexpr std::ptrdiff_t m_strMaxValueName = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 2
@@ -497,11 +499,12 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventPrioritySchema {
-                constexpr std::ptrdiff_t m_priorityValue = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_priorityVolumeScalar = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_priorityContributeButDontRead = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_bPriorityReadButDontContribute = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_priorityValue = 0x8; // CUtlString
+                constexpr std::ptrdiff_t m_priorityVolumeScalar = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_priorityContributeButDontRead = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_bPriorityReadButDontContribute = 0x20; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -564,44 +567,34 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTaps = 0x4C; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             namespace CSosGroupActionSchema {
-                constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_actionType = 0x10; // ActionType_t
-                constexpr std::ptrdiff_t m_actionInstanceType = 0x14; // ActionType_t
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             namespace CSosSoundEventGroupSchema {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_nType = 0x8; // SosGroupType_t
-                constexpr std::ptrdiff_t m_bIsBlocking = 0xC; // bool
+                constexpr std::ptrdiff_t m_nGroupType = 0x8; // SosGroupType_t
+                constexpr std::ptrdiff_t m_bBlocksEvents = 0xC; // bool
                 constexpr std::ptrdiff_t m_nBlockMaxCount = 0x10; // int32
-                constexpr std::ptrdiff_t m_bInvertMatch = 0x14; // bool
-                constexpr std::ptrdiff_t m_matchPattern = 0x18; // CSosGroupMatchPattern
-                constexpr std::ptrdiff_t m_branchPattern = 0x48; // CSosGroupBranchPattern
-                constexpr std::ptrdiff_t m_flLifeSpanTime = 0x58; // float32
-                constexpr std::ptrdiff_t m_vActions = 0xC0; // CSosGroupActionSchema*[4]
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CSosGroupBranchPattern {
-                constexpr std::ptrdiff_t m_bMatchEventName = 0x8; // bool
-                constexpr std::ptrdiff_t m_bMatchEventSubString = 0x9; // bool
-                constexpr std::ptrdiff_t m_bMatchEntIndex = 0xA; // bool
-                constexpr std::ptrdiff_t m_bMatchOpvar = 0xB; // bool
-                constexpr std::ptrdiff_t m_bMatchString = 0xC; // bool
+                constexpr std::ptrdiff_t m_flMemberLifespanTime = 0x14; // float32
+                constexpr std::ptrdiff_t m_bInvertMatch = 0x18; // bool
+                constexpr std::ptrdiff_t m_Behavior_EventName = 0x1C; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_matchSoundEventName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_bMatchEventSubString = 0x28; // bool
+                constexpr std::ptrdiff_t m_matchSoundEventSubString = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_Behavior_EntIndex = 0x38; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_flEntIndex = 0x3C; // float32
+                constexpr std::ptrdiff_t m_Behavior_Opvar = 0x40; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_flOpvar = 0x44; // float32
+                constexpr std::ptrdiff_t m_Behavior_String = 0x48; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_opvarString = 0x50; // CUtlString
+                constexpr std::ptrdiff_t m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
             }
             // Parent: None
             // Field count: 10
@@ -759,9 +752,10 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventCountSchema {
-                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x18; // bool
-                constexpr std::ptrdiff_t m_strCountKeyName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x8; // bool
+                constexpr std::ptrdiff_t m_strCountKeyName = 0x10; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -843,26 +837,6 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSoundInfoHeader {
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CSosSoundEventGroupListSchema {
-                constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CSosGroupMatchPattern {
-                constexpr std::ptrdiff_t m_matchSoundEventName = 0x10; // CUtlString
-                constexpr std::ptrdiff_t m_matchSoundEventSubString = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_flEntIndex = 0x20; // float32
-                constexpr std::ptrdiff_t m_flOpvar = 0x24; // float32
-                constexpr std::ptrdiff_t m_opvarString = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 5
@@ -980,14 +954,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_curve4 = 0x1B8; // CPiecewiseCurve
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionLimitSchema {
-                constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_nStopType = 0x1C; // SosActionStopType_t
-                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSortType_t
+                constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_nStopType = 0xC; // SosActionStopType_t
+                constexpr std::ptrdiff_t m_nSortType = 0x10; // SosActionLimitSortType_t
+                constexpr std::ptrdiff_t m_bStopImmediate = 0x14; // bool
+                constexpr std::ptrdiff_t m_bCountStopped = 0x15; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1078,9 +1055,10 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionTimeBlockLimitSchema {
-                constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_flMaxDuration = 0x1C; // float32
+                constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_flMaxDuration = 0xC; // float32
             }
             // Parent: None
             // Field count: 2
@@ -1098,15 +1076,16 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionMemberCountEnvelopeSchema {
-                constexpr std::ptrdiff_t m_nBaseCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_nTargetCount = 0x1C; // int32
-                constexpr std::ptrdiff_t m_flBaseValue = 0x20; // float32
-                constexpr std::ptrdiff_t m_flTargetValue = 0x24; // float32
-                constexpr std::ptrdiff_t m_flAttack = 0x28; // float32
-                constexpr std::ptrdiff_t m_flDecay = 0x2C; // float32
-                constexpr std::ptrdiff_t m_resultVarName = 0x30; // CUtlString
-                constexpr std::ptrdiff_t m_bSaveToGroup = 0x38; // bool
+                constexpr std::ptrdiff_t m_nBaseCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_nTargetCount = 0xC; // int32
+                constexpr std::ptrdiff_t m_flBaseValue = 0x10; // float32
+                constexpr std::ptrdiff_t m_flTargetValue = 0x14; // float32
+                constexpr std::ptrdiff_t m_flAttack = 0x18; // float32
+                constexpr std::ptrdiff_t m_flDecay = 0x1C; // float32
+                constexpr std::ptrdiff_t m_resultVarName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_bSaveToGroup = 0x28; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1123,8 +1102,9 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionTimeLimitSchema {
-                constexpr std::ptrdiff_t m_flMaxDuration = 0x18; // float32
+                constexpr std::ptrdiff_t m_flMaxDuration = 0x8; // float32
             }
             // Parent: None
             // Field count: 10

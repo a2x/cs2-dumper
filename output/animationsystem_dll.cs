@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-09 05:55:39.126756800 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: animationsystem.dll
-    // Class count: 580
-    // Enum count: 130
+    // Class count: 583
+    // Enum count: 131
     public static class AnimationsystemDll {
         // Alignment: 4
         // Member count: 17
@@ -84,11 +84,10 @@ namespace CS2Dumper.Schemas {
             SOLVEIKCHAINANIMNODEDEBUGSETTING_Left = 0x6
         }
         // Alignment: 4
-        // Member count: 3
+        // Member count: 2
         public enum CNmParticleEvent__Type_t : uint {
             Create = 0x0,
-            Create_CFG = 0x1,
-            Stop = 0x2
+            Create_CFG = 0x1
         }
         // Alignment: 4
         // Member count: 5
@@ -134,7 +133,7 @@ namespace CS2Dumper.Schemas {
             IKTARGETCOORDINATESYSTEM_COUNT = 0x2
         }
         // Alignment: 4
-        // Member count: 29
+        // Member count: 31
         public enum ParticleFloatType_t : uint {
             PF_TYPE_INVALID = unchecked((uint)-1),
             PF_TYPE_LITERAL = 0x0,
@@ -162,9 +161,11 @@ namespace CS2Dumper.Schemas {
             PF_TYPE_PARTICLE_SPEED = 0x16,
             PF_TYPE_PARTICLE_NUMBER = 0x17,
             PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x18,
-            PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x19,
-            PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1A,
-            PF_TYPE_COUNT = 0x1B
+            PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x19,
+            PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1A,
+            PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1B,
+            PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1C,
+            PF_TYPE_COUNT = 0x1D
         }
         // Alignment: 1
         // Member count: 4
@@ -658,6 +659,15 @@ namespace CS2Dumper.Schemas {
             PF_MAP_TYPE_ROUND = 0x6,
             PF_MAP_TYPE_COUNT = 0x7
         }
+        // Alignment: 4
+        // Member count: 5
+        public enum AnimParamVectorType_t : uint {
+            ANIMPARAM_VECTOR_TYPE_NONE = 0x0,
+            ANIMPARAM_VECTOR_TYPE_POSITION_WS = 0x1,
+            ANIMPARAM_VECTOR_TYPE_POSITION_LS = 0x2,
+            ANIMPARAM_VECTOR_TYPE_DIRECTION_WS = 0x3,
+            ANIMPARAM_VECTOR_TYPE_DIRECTION_LS = 0x4
+        }
         // Alignment: 1
         // Member count: 3
         public enum CNmCurrentSyncEventNode__InfoType_t : byte {
@@ -804,7 +814,7 @@ namespace CS2Dumper.Schemas {
             PF_RANDOM_MODE_COUNT = 0x2
         }
         // Alignment: 4
-        // Member count: 32
+        // Member count: 33
         public enum PulseValueType_t : uint {
             PVAL_VOID = unchecked((uint)-1),
             PVAL_BOOL = 0x0,
@@ -837,7 +847,8 @@ namespace CS2Dumper.Schemas {
             PVAL_TEST_HANDLE = 0x1B,
             PVAL_ARRAY = 0x1C,
             PVAL_TYPESAFE_INT64 = 0x1D,
-            PVAL_COUNT = 0x1E
+            PVAL_PARTICLE_EHANDLE = 0x1E,
+            PVAL_COUNT = 0x1F
         }
         // Alignment: 4
         // Member count: 4
@@ -915,12 +926,6 @@ namespace CS2Dumper.Schemas {
         }
         // Alignment: 4
         // Member count: 2
-        public enum CNmSoundEvent__Type_t : uint {
-            Play = 0x0,
-            Stop = 0x1
-        }
-        // Alignment: 4
-        // Member count: 2
         public enum NmFrameSnapEventMode_t : uint {
             Floor = 0x0,
             Round = 0x1
@@ -939,6 +944,16 @@ namespace CS2Dumper.Schemas {
             Constant = 0x1,
             Spring = 0x2,
             AsymmetricSpring = 0x3
+        }
+        // Alignment: 4
+        // Member count: 6
+        public enum PulseApiFeature_t : uint {
+            AF_NONE = 0x0,
+            AF_ENTITIES = 0x1,
+            AF_PANORAMA = 0x2,
+            AF_PARTICLES = 0x8,
+            AF_FAKE_ENTITIES = 0x10,
+            AF_SELECTORS_WITHOUT_REQUIREMENTS = 0x20
         }
         // Alignment: 4
         // Member count: 6
@@ -1495,7 +1510,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         // MPropertyCustomEditor
-        // MParticleCustomFieldDefaultValue
+        // MCustomFGDMetadata
         public static class CParticleModelInput {
             public const nint m_nType = 0x10; // ParticleModelType_t
             public const nint m_NamedValue = 0x18; // CParticleNamedValueRef
@@ -1555,7 +1570,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimNodeOutputID {
             public const nint m_id = 0x0; // uint32
         }
@@ -2006,7 +2020,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_frameCount = 0x68; // int32
         }
         // Parent: None
-        // Field count: 2
+        // Field count: 3
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -2014,6 +2028,7 @@ namespace CS2Dumper.Schemas {
         public static class CVectorAnimParameter {
             public const nint m_defaultValue = 0x80; // Vector
             public const nint m_bInterpolate = 0x8C; // bool
+            public const nint m_vectorType = 0x90; // AnimParamVectorType_t
         }
         // Parent: None
         // Field count: 0
@@ -2201,7 +2216,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimNodeID {
             public const nint m_id = 0x0; // uint32
         }
@@ -2320,7 +2334,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimStateID {
             public const nint m_id = 0x0; // uint32
         }
@@ -2548,7 +2561,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimComponentID {
             public const nint m_id = 0x0; // uint32
         }
@@ -2917,9 +2929,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_parentSpaceReferencePose = 0x30; // CUtlVector<CTransform>
             public const nint m_modelSpaceReferencePose = 0x48; // CUtlVector<CTransform>
             public const nint m_numBonesToSampleAtLowLOD = 0x60; // int32
-            public const nint m_maskDefinitions = 0x68; // CUtlLeanVector<NmBoneMaskSetDefinition_t>
-            public const nint m_secondarySkeletons = 0x88; // CUtlLeanVector<CNmSkeleton::SecondarySkeleton_t>
-            public const nint m_bIsPropSkeleton = 0x98; // bool
+            public const nint m_maskDefinitions = 0x88; // CUtlLeanVector<NmBoneMaskSetDefinition_t>
+            public const nint m_secondarySkeletons = 0xA8; // CUtlLeanVector<CNmSkeleton::SecondarySkeleton_t>
+            public const nint m_bIsPropSkeleton = 0xB8; // bool
         }
         // Parent: None
         // Field count: 2
@@ -2970,8 +2982,8 @@ namespace CS2Dumper.Schemas {
         public static class ParticleNamedValueConfiguration_t {
             public const nint m_ConfigName = 0x0; // CUtlString
             public const nint m_ConfigValue = 0x8; // KeyValues3
-            public const nint m_iAttachType = 0x18; // ParticleAttachment_t
-            public const nint m_BoundEntityPath = 0x20; // CUtlString
+            public const nint m_BoundValuePath = 0x18; // CUtlString
+            public const nint m_iAttachType = 0x20; // ParticleAttachment_t
             public const nint m_strEntityScope = 0x28; // CUtlString
             public const nint m_strAttachmentName = 0x30; // CUtlString
         }
@@ -2991,7 +3003,7 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MParticleCustomFieldDefaultValue
+        // MCustomFGDMetadata
         public static class CParticleVecInput {
             public const nint m_nType = 0x10; // ParticleVecType_t
             public const nint m_vLiteralValue = 0x14; // Vector
@@ -3006,19 +3018,19 @@ namespace CS2Dumper.Schemas {
             public const nint m_vCPRelativePosition = 0x90; // Vector
             public const nint m_vCPRelativeDir = 0x9C; // Vector
             public const nint m_FloatComponentX = 0xA8; // CParticleFloatInput
-            public const nint m_FloatComponentY = 0x208; // CParticleFloatInput
-            public const nint m_FloatComponentZ = 0x368; // CParticleFloatInput
-            public const nint m_FloatInterp = 0x4C8; // CParticleFloatInput
-            public const nint m_flInterpInput0 = 0x628; // float32
-            public const nint m_flInterpInput1 = 0x62C; // float32
-            public const nint m_vInterpOutput0 = 0x630; // Vector
-            public const nint m_vInterpOutput1 = 0x63C; // Vector
-            public const nint m_Gradient = 0x648; // CColorGradient
-            public const nint m_vRandomMin = 0x660; // Vector
-            public const nint m_vRandomMax = 0x66C; // Vector
+            public const nint m_FloatComponentY = 0x218; // CParticleFloatInput
+            public const nint m_FloatComponentZ = 0x388; // CParticleFloatInput
+            public const nint m_FloatInterp = 0x4F8; // CParticleFloatInput
+            public const nint m_flInterpInput0 = 0x668; // float32
+            public const nint m_flInterpInput1 = 0x66C; // float32
+            public const nint m_vInterpOutput0 = 0x670; // Vector
+            public const nint m_vInterpOutput1 = 0x67C; // Vector
+            public const nint m_Gradient = 0x688; // CColorGradient
+            public const nint m_vRandomMin = 0x6A0; // Vector
+            public const nint m_vRandomMax = 0x6AC; // Vector
         }
         // Parent: None
-        // Field count: 10
+        // Field count: 11
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -3033,6 +3045,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nLayerRootMotionWeightNodeIdx = 0xAA; // int16
             public const nint m_nLayerBoneMaskNodeIdx = 0xAC; // int16
             public const nint m_bIsOffState = 0xAE; // bool
+            public const nint m_bUseActualElapsedTimeInStateForTimedEvents = 0xAF; // bool
         }
         // Parent: None
         // Field count: 6
@@ -3205,16 +3218,16 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CChoiceUpdateNode {
-            public const nint m_children = 0x58; // CUtlVector<CAnimUpdateNodeRef>
-            public const nint m_weights = 0x70; // CUtlVector<float32>
-            public const nint m_blendTimes = 0x88; // CUtlVector<float32>
-            public const nint m_choiceMethod = 0xA0; // ChoiceMethod
-            public const nint m_choiceChangeMethod = 0xA4; // ChoiceChangeMethod
-            public const nint m_blendMethod = 0xA8; // ChoiceBlendMethod
-            public const nint m_blendTime = 0xAC; // float32
-            public const nint m_bCrossFade = 0xB0; // bool
-            public const nint m_bResetChosen = 0xB1; // bool
-            public const nint m_bDontResetSameSelection = 0xB2; // bool
+            public const nint m_children = 0x60; // CUtlVector<CAnimUpdateNodeRef>
+            public const nint m_weights = 0x78; // CUtlVector<float32>
+            public const nint m_blendTimes = 0x90; // CUtlVector<float32>
+            public const nint m_choiceMethod = 0xA8; // ChoiceMethod
+            public const nint m_choiceChangeMethod = 0xAC; // ChoiceChangeMethod
+            public const nint m_blendMethod = 0xB0; // ChoiceBlendMethod
+            public const nint m_blendTime = 0xB4; // float32
+            public const nint m_bCrossFade = 0xB8; // bool
+            public const nint m_bResetChosen = 0xB9; // bool
+            public const nint m_bDontResetSameSelection = 0xBA; // bool
         }
         // Parent: None
         // Field count: 3
@@ -3319,7 +3332,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_bUseCustomDuration = 0x38; // bool
         }
         // Parent: None
-        // Field count: 32
+        // Field count: 33
         public static class CNewParticleEffect {
             public const nint m_pNext = 0x10; // CNewParticleEffect*
             public const nint m_pPrev = 0x18; // CNewParticleEffect*
@@ -3338,6 +3351,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_bShouldSave = 0x0; // bitfield:1
             public const nint m_bShouldSimulateDuringGamePaused = 0x0; // bitfield:1
             public const nint m_bShouldCheckFoW = 0x0; // bitfield:1
+            public const nint m_bIsAsyncCreate = 0x0; // bitfield:1
+            public const nint m_bFreezeTransitionActive = 0x0; // bitfield:1
+            public const nint m_bFreezeTargetState = 0x0; // bitfield:1
+            public const nint m_bCanFreeze = 0x0; // bitfield:1
             public const nint m_vSortOrigin = 0x40; // Vector
             public const nint m_flScale = 0x4C; // float32
             public const nint m_hOwner = 0x50; // PARTICLE_EHANDLE__*
@@ -3345,13 +3362,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_flFreezeTransitionStart = 0x70; // float32
             public const nint m_flFreezeTransitionDuration = 0x74; // float32
             public const nint m_flFreezeTransitionOverride = 0x78; // float32
-            public const nint m_bFreezeTransitionActive = 0x7C; // bool
-            public const nint m_bFreezeTargetState = 0x7D; // bool
-            public const nint m_bCanFreeze = 0x7E; // bool
-            public const nint m_LastMin = 0x80; // Vector
-            public const nint m_LastMax = 0x8C; // Vector
-            public const nint m_nSplitScreenUser = 0x98; // CSplitScreenSlot
-            public const nint m_vecAggregationCenter = 0x9C; // Vector
+            public const nint m_LastMin = 0x7C; // Vector
+            public const nint m_LastMax = 0x88; // Vector
+            public const nint m_nSplitScreenUser = 0x94; // CSplitScreenSlot
+            public const nint m_vecAggregationCenter = 0x98; // Vector
             public const nint m_RefCount = 0xD0; // int32
         }
         // Parent: None
@@ -3510,16 +3524,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_bSolidCollisionAtZeroWeight = 0xCC; // bool
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class ParticleNamedValueSource_t {
             public const nint m_Name = 0x0; // CUtlString
             public const nint m_IsPublic = 0x8; // bool
-            public const nint m_ValueType = 0xC; // PulseValueType_t
-            public const nint m_DefaultConfig = 0x10; // ParticleNamedValueConfiguration_t
-            public const nint m_NamedConfigs = 0x48; // CUtlVector<ParticleNamedValueConfiguration_t>
+            public const nint m_ValueType = 0x10; // CPulseValueFullType
+            public const nint m_DefaultConfig = 0x28; // ParticleNamedValueConfiguration_t
         }
         // Parent: None
         // Field count: 9
@@ -3726,6 +3739,13 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CHitBoxSetList {
             public const nint m_HitBoxSets = 0x0; // CUtlVector<CHitBoxSet>
+        }
+        // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CNmIsInactiveBranchConditionNode__CDefinition {
         }
         // Parent: None
         // Field count: 1
@@ -4242,17 +4262,17 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 11
         public static class CNmChainLookatTask {
-            public const nint m_nChainEndBoneIdx = 0x50; // int32
-            public const nint m_nNumBonesInChain = 0x54; // int32
-            public const nint m_chainForwardDir = 0x58; // Vector
-            public const nint m_flBlendWeight = 0x64; // float32
-            public const nint m_flHorizontalAngleLimitDegrees = 0x68; // float32
-            public const nint m_flVerticalAngleLimitDegrees = 0x6C; // float32
-            public const nint m_lookatTarget = 0x70; // Vector
-            public const nint m_bIsTargetInWorldSpace = 0x7C; // bool
-            public const nint m_bIsRunningFromDeserializedData = 0x7D; // bool
-            public const nint m_flHorizontalAngleDegrees = 0x80; // float32
-            public const nint m_flVerticalAngleDegrees = 0x84; // float32
+            public const nint m_nChainEndBoneIdx = 0x58; // int32
+            public const nint m_nNumBonesInChain = 0x5C; // int32
+            public const nint m_chainForwardDir = 0x60; // Vector
+            public const nint m_flBlendWeight = 0x6C; // float32
+            public const nint m_flHorizontalAngleLimitDegrees = 0x70; // float32
+            public const nint m_flVerticalAngleLimitDegrees = 0x74; // float32
+            public const nint m_lookatTarget = 0x78; // Vector
+            public const nint m_bIsTargetInWorldSpace = 0x84; // bool
+            public const nint m_bIsRunningFromDeserializedData = 0x85; // bool
+            public const nint m_flHorizontalAngleDegrees = 0x88; // float32
+            public const nint m_flVerticalAngleDegrees = 0x8C; // float32
         }
         // Parent: None
         // Field count: 18
@@ -4400,14 +4420,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_hParticleSystem = 0x28; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
             public const nint m_tags = 0x30; // CUtlString
             public const nint m_bStopImmediately = 0x38; // bool
+            public const nint m_bDetachFromOwner = 0x39; // bool
+            public const nint m_bPlayEndCap = 0x3A; // bool
             public const nint m_attachmentPoint0 = 0x40; // CUtlString
             public const nint m_attachmentType0 = 0x48; // ParticleAttachment_t
             public const nint m_attachmentPoint1 = 0x50; // CUtlString
             public const nint m_attachmentType1 = 0x58; // ParticleAttachment_t
             public const nint m_config = 0x60; // CUtlString
             public const nint m_effectForConfig = 0x68; // CUtlString
-            public const nint m_bDetachFromOwner = 0x70; // bool
-            public const nint m_bPlayEndCap = 0x71; // bool
         }
         // Parent: None
         // Field count: 5
@@ -4476,7 +4496,7 @@ namespace CS2Dumper.Schemas {
         // MPropertyCustomEditor
         public static class CParticleVariableRef {
             public const nint m_variableName = 0x0; // CKV3MemberNameWithStorage
-            public const nint m_variableType = 0x38; // PulseValueType_t
+            public const nint m_variableType = 0x38; // CPulseValueFullType
         }
         // Parent: None
         // Field count: 1
@@ -4727,7 +4747,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimScriptHandle {
             public const nint m_id = 0x0; // uint32
         }
@@ -4918,7 +4937,7 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         // MPropertyCustomEditor
-        // MParticleCustomFieldDefaultValue
+        // MCustomFGDMetadata
         public static class CParticleTransformInput {
             public const nint m_nType = 0x10; // ParticleTransformType_t
             public const nint m_NamedValue = 0x18; // CParticleNamedValueRef
@@ -5106,9 +5125,6 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Field count: 1
-        //
-        // Metadata:
-        // MPropertyEditClassAsString
         public static class CAnimEnum {
             public const nint m_value = 0x0; // uint8
         }
@@ -5227,7 +5243,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimTagID {
             public const nint m_id = 0x0; // uint32
         }
@@ -5754,7 +5769,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_percentageThrough = 0x4; // NmPercent_t
         }
         // Parent: None
-        // Field count: 12
+        // Field count: 16
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -5765,12 +5780,16 @@ namespace CS2Dumper.Schemas {
             public const nint m_compressedPoseData = 0x10; // CUtlBinaryBlock
             public const nint m_trackCompressionSettings = 0x20; // CUtlVector<NmCompressionSettings_t>
             public const nint m_compressedPoseOffsets = 0x38; // CUtlVector<uint32>
-            public const nint m_secondaryAnimations = 0x78; // CUtlVectorFixedGrowable<CNmClip*,1>
-            public const nint m_syncTrack = 0x98; // CNmSyncTrack
-            public const nint m_rootMotion = 0x150; // CNmRootMotionData
-            public const nint m_bIsAdditive = 0x1A0; // bool
-            public const nint m_modelSpaceSamplingChain = 0x1A8; // CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
-            public const nint m_modelSpaceBoneSamplingIndices = 0x1C0; // CUtlVector<int32>
+            public const nint m_floatCurveIDs = 0x50; // CUtlVector<CGlobalSymbol>
+            public const nint m_floatCurveDefs = 0x68; // CUtlVector<NmFloatCurveCompressionSettings_t>
+            public const nint m_compressedFloatCurveData = 0x80; // CUtlVector<uint16>
+            public const nint m_compressedFloatCurveOffsets = 0x98; // CUtlVector<uint32>
+            public const nint m_secondaryAnimations = 0xD8; // CUtlVectorFixedGrowable<CNmClip*,1>
+            public const nint m_syncTrack = 0xF8; // CNmSyncTrack
+            public const nint m_rootMotion = 0x1B0; // CNmRootMotionData
+            public const nint m_bIsAdditive = 0x200; // bool
+            public const nint m_modelSpaceSamplingChain = 0x208; // CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
+            public const nint m_modelSpaceBoneSamplingIndices = 0x220; // CUtlVector<int32>
         }
         // Parent: None
         // Field count: 2
@@ -6166,19 +6185,17 @@ namespace CS2Dumper.Schemas {
             public const nint m_outputBones = 0x38; // CUtlVector<std::pair<CUtlString,uint32>>
         }
         // Parent: None
-        // Field count: 9
+        // Field count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CNmSoundEvent {
             public const nint m_relevance = 0x20; // CNmEventRelevance_t
-            public const nint m_type = 0x24; // CNmSoundEvent::Type_t
             public const nint m_name = 0x28; // CUtlString
             public const nint m_position = 0x30; // CNmSoundEvent::Position_t
             public const nint m_attachmentName = 0x38; // CUtlString
             public const nint m_tags = 0x40; // CUtlString
-            public const nint m_bIsServerOnly = 0x48; // bool
-            public const nint m_bContinuePlayingSoundAtDurationEnd = 0x49; // bool
+            public const nint m_bContinuePlayingSoundAtDurationEnd = 0x48; // bool
             public const nint m_flDurationInterruptionThreshold = 0x4C; // float32
         }
         // Parent: None
@@ -6525,6 +6542,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_Color = 0x70; // Color
         }
         // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class NmFloatCurveCompressionSettings_t {
+            public const nint m_range = 0x0; // NmCompressionSettings_t::QuantizationRange_t
+            public const nint m_bIsStatic = 0x8; // bool
+        }
+        // Parent: None
         // Field count: 4
         //
         // Metadata:
@@ -6637,9 +6663,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_flComparisonValue = 0x1C; // float32
         }
         // Parent: None
-        // Field count: 12
+        // Field count: 13
         public static class CNmChainSolverTask {
-            public const nint m_nEffectorBoneIdx = 0x50; // int32
+            public const nint m_nEffectorBoneIdx = 0x58; // int32
+            public const nint m_nEffectorTargetBoneIdx = 0x5C; // int32
             public const nint m_targetTransform = 0x60; // CTransform
             public const nint m_nNumBonesInChain = 0x80; // int32
             public const nint m_effectorTarget = 0x90; // CNmTarget
@@ -6837,11 +6864,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_Value = 0x18; // KeyValues3
         }
         // Parent: None
-        // Field count: 47
+        // Field count: 49
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MParticleCustomFieldDefaultValue
+        // MCustomFGDMetadata
         public static class CParticleFloatInput {
             public const nint m_nType = 0x10; // ParticleFloatType_t
             public const nint m_nMapType = 0x14; // ParticleFloatMapType_t
@@ -6851,45 +6878,47 @@ namespace CS2Dumper.Schemas {
             public const nint m_nScalarAttribute = 0x64; // ParticleAttributeIndex_t
             public const nint m_nVectorAttribute = 0x68; // ParticleAttributeIndex_t
             public const nint m_nVectorComponent = 0x6C; // int32
-            public const nint m_flRandomMin = 0x70; // float32
-            public const nint m_flRandomMax = 0x74; // float32
-            public const nint m_bHasRandomSignFlip = 0x78; // bool
-            public const nint m_nRandomSeed = 0x7C; // int32
-            public const nint m_nRandomMode = 0x80; // ParticleFloatRandomMode_t
-            public const nint m_flLOD0 = 0x88; // float32
-            public const nint m_flLOD1 = 0x8C; // float32
-            public const nint m_flLOD2 = 0x90; // float32
-            public const nint m_flLOD3 = 0x94; // float32
-            public const nint m_nNoiseInputVectorAttribute = 0x98; // ParticleAttributeIndex_t
-            public const nint m_flNoiseOutputMin = 0x9C; // float32
-            public const nint m_flNoiseOutputMax = 0xA0; // float32
-            public const nint m_flNoiseScale = 0xA4; // float32
-            public const nint m_vecNoiseOffsetRate = 0xA8; // Vector
-            public const nint m_flNoiseOffset = 0xB4; // float32
-            public const nint m_nNoiseOctaves = 0xB8; // int32
-            public const nint m_nNoiseTurbulence = 0xBC; // PFNoiseTurbulence_t
-            public const nint m_nNoiseType = 0xC0; // PFNoiseType_t
-            public const nint m_nNoiseModifier = 0xC4; // PFNoiseModifier_t
-            public const nint m_flNoiseTurbulenceScale = 0xC8; // float32
-            public const nint m_flNoiseTurbulenceMix = 0xCC; // float32
-            public const nint m_flNoiseImgPreviewScale = 0xD0; // float32
-            public const nint m_bNoiseImgPreviewLive = 0xD4; // bool
-            public const nint m_flNoCameraFallback = 0xE0; // float32
-            public const nint m_bUseBoundsCenter = 0xE4; // bool
-            public const nint m_nInputMode = 0xE8; // ParticleFloatInputMode_t
-            public const nint m_flMultFactor = 0xEC; // float32
-            public const nint m_flInput0 = 0xF0; // float32
-            public const nint m_flInput1 = 0xF4; // float32
-            public const nint m_flOutput0 = 0xF8; // float32
-            public const nint m_flOutput1 = 0xFC; // float32
-            public const nint m_flNotchedRangeMin = 0x100; // float32
-            public const nint m_flNotchedRangeMax = 0x104; // float32
-            public const nint m_flNotchedOutputOutside = 0x108; // float32
-            public const nint m_flNotchedOutputInside = 0x10C; // float32
-            public const nint m_nRoundType = 0x110; // ParticleFloatRoundType_t
-            public const nint m_nBiasType = 0x114; // ParticleFloatBiasType_t
-            public const nint m_flBiasParameter = 0x118; // float32
-            public const nint m_Curve = 0x120; // CPiecewiseCurve
+            public const nint m_bReverseOrder = 0x70; // bool
+            public const nint m_flRandomMin = 0x74; // float32
+            public const nint m_flRandomMax = 0x78; // float32
+            public const nint m_bHasRandomSignFlip = 0x7C; // bool
+            public const nint m_nRandomSeed = 0x80; // int32
+            public const nint m_nRandomMode = 0x84; // ParticleFloatRandomMode_t
+            public const nint m_strSnapshotSubset = 0x90; // CUtlString
+            public const nint m_flLOD0 = 0x98; // float32
+            public const nint m_flLOD1 = 0x9C; // float32
+            public const nint m_flLOD2 = 0xA0; // float32
+            public const nint m_flLOD3 = 0xA4; // float32
+            public const nint m_nNoiseInputVectorAttribute = 0xA8; // ParticleAttributeIndex_t
+            public const nint m_flNoiseOutputMin = 0xAC; // float32
+            public const nint m_flNoiseOutputMax = 0xB0; // float32
+            public const nint m_flNoiseScale = 0xB4; // float32
+            public const nint m_vecNoiseOffsetRate = 0xB8; // Vector
+            public const nint m_flNoiseOffset = 0xC4; // float32
+            public const nint m_nNoiseOctaves = 0xC8; // int32
+            public const nint m_nNoiseTurbulence = 0xCC; // PFNoiseTurbulence_t
+            public const nint m_nNoiseType = 0xD0; // PFNoiseType_t
+            public const nint m_nNoiseModifier = 0xD4; // PFNoiseModifier_t
+            public const nint m_flNoiseTurbulenceScale = 0xD8; // float32
+            public const nint m_flNoiseTurbulenceMix = 0xDC; // float32
+            public const nint m_flNoiseImgPreviewScale = 0xE0; // float32
+            public const nint m_bNoiseImgPreviewLive = 0xE4; // bool
+            public const nint m_flNoCameraFallback = 0xF0; // float32
+            public const nint m_bUseBoundsCenter = 0xF4; // bool
+            public const nint m_nInputMode = 0xF8; // ParticleFloatInputMode_t
+            public const nint m_flMultFactor = 0xFC; // float32
+            public const nint m_flInput0 = 0x100; // float32
+            public const nint m_flInput1 = 0x104; // float32
+            public const nint m_flOutput0 = 0x108; // float32
+            public const nint m_flOutput1 = 0x10C; // float32
+            public const nint m_flNotchedRangeMin = 0x110; // float32
+            public const nint m_flNotchedRangeMax = 0x114; // float32
+            public const nint m_flNotchedOutputOutside = 0x118; // float32
+            public const nint m_flNotchedOutputInside = 0x11C; // float32
+            public const nint m_nRoundType = 0x120; // ParticleFloatRoundType_t
+            public const nint m_nBiasType = 0x124; // ParticleFloatBiasType_t
+            public const nint m_flBiasParameter = 0x128; // float32
+            public const nint m_Curve = 0x130; // CPiecewiseCurve
         }
         // Parent: None
         // Field count: 1
@@ -7087,7 +7116,6 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MGetKV3ClassDefaults
-        // MPropertyEditClassAsString
         public static class AnimParamID {
             public const nint m_id = 0x0; // uint32
         }
@@ -7668,6 +7696,14 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CNmControlParameterIDNode__CDefinition {
+        }
+        // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CNmBodyGroupEvent {
+            public const nint m_groupName = 0x20; // CUtlString
         }
         // Parent: None
         // Field count: 5
