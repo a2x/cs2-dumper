@@ -94,7 +94,7 @@ fn main() -> Result<()> {
 
     let mut os = match args.connector {
         Some(conn) => {
-            let inventory = Inventory::scan();
+            let mut inventory = Inventory::scan();
 
             inventory
                 .builder()
