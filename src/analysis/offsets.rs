@@ -102,7 +102,7 @@ pattern_map! {
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
-        "dwNetworkGameClient" => pattern!("48893d${'} 488d15") => None,
+        "dwNetworkGameClient" => pattern!("48893d${'} ff8728020000") => None,
         "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("4c8db7u4 4c897c24") => None,
         "dwNetworkGameClient_isBackgroundMap" => pattern!("0fb681u4 c3 cccccccccccccccc 0fb681${} c3 cccccccccccccccc 4053") => None,
