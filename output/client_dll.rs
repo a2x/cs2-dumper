@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-30 00:26:21.405923900 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -3988,7 +3988,7 @@ pub mod cs2_dumper {
                 pub const m_vMaxs: usize = 0x6CC; // Vector
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 39
+            // Field count: 40
             //
             // Metadata:
             // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -4010,6 +4010,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
             // NetworkVarNames: m_flStamina (float)
             // NetworkVarNames: m_bWasSurfing (bool)
+            // NetworkVarNames: m_bJumpApexPending (bool)
             pub mod CCSPlayer_MovementServices {
                 pub const m_vecLadderNormal: usize = 0x278; // Vector
                 pub const m_nLadderSurfacePropIndex: usize = 0x284; // int32
@@ -4050,6 +4051,7 @@ pub mod cs2_dumper {
                 pub const m_flTicksSinceLastSurfingDetected: usize = 0x538; // float32
                 pub const m_bWasSurfing: usize = 0x53C; // bool
                 pub const m_vecInputRotated: usize = 0x5CC; // Vector
+                pub const m_bJumpApexPending: usize = 0xDF8; // bool
             }
             // Parent: 
             // Field count: 5

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-30 00:26:21.405923900 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -3977,7 +3977,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vMaxs = 0x6CC; // Vector
         }
         // Parent: CPlayer_MovementServices_Humanoid
-        // Field count: 39
+        // Field count: 40
         //
         // Metadata:
         // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -3999,6 +3999,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
         // NetworkVarNames: m_flStamina (float)
         // NetworkVarNames: m_bWasSurfing (bool)
+        // NetworkVarNames: m_bJumpApexPending (bool)
         public static class CCSPlayer_MovementServices {
             public const nint m_vecLadderNormal = 0x278; // Vector
             public const nint m_nLadderSurfacePropIndex = 0x284; // int32
@@ -4039,6 +4040,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flTicksSinceLastSurfingDetected = 0x538; // float32
             public const nint m_bWasSurfing = 0x53C; // bool
             public const nint m_vecInputRotated = 0x5CC; // Vector
+            public const nint m_bJumpApexPending = 0xDF8; // bool
         }
         // Parent: 
         // Field count: 5

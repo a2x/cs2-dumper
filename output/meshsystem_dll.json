@@ -41,7 +41,7 @@
       "CPulseCell_Outflow_CycleOrdered__InstanceState_t": {
         "alignment": 0,
         "members": {
-          "": 0
+          "": 281474976710656
         },
         "type": "unknown"
       },
