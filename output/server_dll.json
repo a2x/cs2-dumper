@@ -5336,6 +5336,7 @@
           "m_bDuckOverride": 664,
           "m_bHasWalkMovedSinceLastJump": 705,
           "m_bInStuckTest": 706,
+          "m_bJumpApexPending": 3592,
           "m_bMadeFootstepNoise": 1292,
           "m_bOldJumpPressed": 1300,
           "m_bSpeedCropped": 1240,
@@ -5466,6 +5467,11 @@
           },
           {
             "name": "m_bWasSurfing",
+            "type": "NetworkVarNames",
+            "type_name": "bool"
+          },
+          {
+            "name": "m_bJumpApexPending",
             "type": "NetworkVarNames",
             "type_name": "bool"
           }

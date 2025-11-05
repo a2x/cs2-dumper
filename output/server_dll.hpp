@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-10-30 00:26:21.405923900 UTC
+// 2025-11-05 06:01:01.132204 UTC
 
 #pragma once
 
@@ -6396,7 +6396,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_shakeCallback = 0x528; // CPhysicsShake
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 41
+            // Field count: 42
             //
             // Metadata:
             // NetworkVarNames: m_vecLadderNormal (Vector)
@@ -6418,6 +6418,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flOffsetTickStashedSpeed (float)
             // NetworkVarNames: m_flStamina (float)
             // NetworkVarNames: m_bWasSurfing (bool)
+            // NetworkVarNames: m_bJumpApexPending (bool)
             namespace CCSPlayer_MovementServices {
                 constexpr std::ptrdiff_t m_vecLadderNormal = 0x280; // Vector
                 constexpr std::ptrdiff_t m_nLadderSurfacePropIndex = 0x28C; // int32
@@ -6460,6 +6461,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x548; // float32
                 constexpr std::ptrdiff_t m_bWasSurfing = 0x54C; // bool
                 constexpr std::ptrdiff_t m_vecInputRotated = 0x5DC; // Vector
+                constexpr std::ptrdiff_t m_bJumpApexPending = 0xE08; // bool
             }
             // Parent: 
             // Field count: 5
