@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-05 06:01:01.132204 UTC
+// 2025-11-12 23:33:12.343646 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1488,7 +1488,7 @@ pub mod cs2_dumper {
                 k_eSplinePushTowards = 0x2
             }
             // Alignment: 2
-            // Member count: 28
+            // Member count: 30
             #[repr(u16)]
             pub enum WeaponGameplayAnimState {
                 WPN_ANIMSTATE_UNINITIALIZED = 0x0,
@@ -1517,8 +1517,10 @@ pub mod cs2_dumper {
                 WPN_ANIMSTATE_RELOAD_OUTRO = 0x321,
                 WPN_ANIMSTATE_INSPECT = 0x3E8,
                 WPN_ANIMSTATE_INSPECT_OUTRO = 0x3E9,
-                WPN_ANIMSTATE_END_VALID = 0x44C,
-                WEAPON_LEGACY_STATE_CLEAR_FIRING = 0x44D
+                WPN_ANIMSTATE_INVENTORY_UI_TUMBLE = 0x5DC,
+                WPN_ANIMSTATE_INVENTORY_UI_KEYCHAIN_APPLY = 0x5DD,
+                WPN_ANIMSTATE_END_VALID = 0x7D0,
+                WEAPON_LEGACY_STATE_CLEAR_FIRING = 0x7D1
             }
             // Alignment: 4
             // Member count: 2
@@ -10386,8 +10388,8 @@ pub mod cs2_dumper {
                 pub const m_bPickedUpWeapon: usize = 0xD6; // bool
                 pub const m_bDisableAutoDeploy: usize = 0xD7; // bool
                 pub const m_bIsPickingUpGroundWeapon: usize = 0xD8; // bool
-                pub const m_networkAnimTiming: usize = 0x18C0; // CNetworkUtlVectorBase<uint8>
-                pub const m_bBlockInspectUntilNextGraphUpdate: usize = 0x18D8; // bool
+                pub const m_networkAnimTiming: usize = 0x18D8; // CNetworkUtlVectorBase<uint8>
+                pub const m_bBlockInspectUntilNextGraphUpdate: usize = 0x18F0; // bool
             }
             // Parent: None
             // Field count: 6
