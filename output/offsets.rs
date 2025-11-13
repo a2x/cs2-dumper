@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-12 23:33:12.343646 UTC
+// 2025-11-13 07:10:33.379727500 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -14,7 +14,7 @@ pub mod cs2_dumper {
             pub const dwGameRules: usize = 0x1E2E410;
             pub const dwGlobalVars: usize = 0x1BE11C0;
             pub const dwGlowManager: usize = 0x1E2B2B8;
-            pub const dwLocalPlayerController: usize = 0x1E1ABE8;
+            pub const dwLocalPlayerController: usize = 0x1E1ABD8;
             pub const dwLocalPlayerPawn: usize = 0x1BEBF38;
             pub const dwPlantedC4: usize = 0x1E33BD8;
             pub const dwPrediction: usize = 0x1BEBE50;
