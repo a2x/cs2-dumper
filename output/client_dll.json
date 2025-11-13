@@ -1593,13 +1593,13 @@
       },
       "CCSPlayer_WeaponServices": {
         "fields": {
-          "m_bBlockInspectUntilNextGraphUpdate": 6368,
+          "m_bBlockInspectUntilNextGraphUpdate": 6392,
           "m_bIsHoldingLookAtWeapon": 205,
           "m_bIsLookingAtWeapon": 204,
           "m_flNextAttack": 200,
           "m_nOldTotalInputHistoryCount": 872,
           "m_nOldTotalShootPositionHistoryCount": 208,
-          "m_networkAnimTiming": 6344
+          "m_networkAnimTiming": 6368
         },
         "metadata": [
           {

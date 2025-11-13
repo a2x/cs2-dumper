@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-05 06:01:01.132204 UTC
+// 2025-11-12 23:33:12.343646 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -6446,8 +6446,8 @@ pub mod cs2_dumper {
                 pub const m_bIsHoldingLookAtWeapon: usize = 0xCD; // bool
                 pub const m_nOldTotalShootPositionHistoryCount: usize = 0xD0; // uint32
                 pub const m_nOldTotalInputHistoryCount: usize = 0x368; // uint32
-                pub const m_networkAnimTiming: usize = 0x18C8; // C_NetworkUtlVectorBase<uint8>
-                pub const m_bBlockInspectUntilNextGraphUpdate: usize = 0x18E0; // bool
+                pub const m_networkAnimTiming: usize = 0x18E0; // C_NetworkUtlVectorBase<uint8>
+                pub const m_bBlockInspectUntilNextGraphUpdate: usize = 0x18F8; // bool
             }
             // Parent: CBaseAnimGraph
             // Field count: 2

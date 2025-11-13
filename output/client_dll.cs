@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-05 06:01:01.132204 UTC
+// 2025-11-12 23:33:12.343646 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -6435,8 +6435,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_bIsHoldingLookAtWeapon = 0xCD; // bool
             public const nint m_nOldTotalShootPositionHistoryCount = 0xD0; // uint32
             public const nint m_nOldTotalInputHistoryCount = 0x368; // uint32
-            public const nint m_networkAnimTiming = 0x18C8; // C_NetworkUtlVectorBase<uint8>
-            public const nint m_bBlockInspectUntilNextGraphUpdate = 0x18E0; // bool
+            public const nint m_networkAnimTiming = 0x18E0; // C_NetworkUtlVectorBase<uint8>
+            public const nint m_bBlockInspectUntilNextGraphUpdate = 0x18F8; // bool
         }
         // Parent: CBaseAnimGraph
         // Field count: 2

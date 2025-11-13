@@ -5526,7 +5526,7 @@
       },
       "CCSPlayer_WeaponServices": {
         "fields": {
-          "m_bBlockInspectUntilNextGraphUpdate": 6360,
+          "m_bBlockInspectUntilNextGraphUpdate": 6384,
           "m_bDisableAutoDeploy": 215,
           "m_bIsBeingGivenItem": 212,
           "m_bIsHoldingLookAtWeapon": 189,
@@ -5540,7 +5540,7 @@
           "m_nTimeToPrimary": 204,
           "m_nTimeToSecondary": 200,
           "m_nTimeToSniperRifle": 208,
-          "m_networkAnimTiming": 6336
+          "m_networkAnimTiming": 6360
         },
         "metadata": [
           {
@@ -20168,12 +20168,12 @@
       "WeaponGameplayAnimState": {
         "alignment": 2,
         "members": {
-          "WEAPON_LEGACY_STATE_CLEAR_FIRING": 1101,
+          "WEAPON_LEGACY_STATE_CLEAR_FIRING": 2001,
           "WPN_ANIMSTATE_C4_PLANT": 300,
           "WPN_ANIMSTATE_CHARGE": 103,
           "WPN_ANIMSTATE_DEPLOY": 11,
           "WPN_ANIMSTATE_DROPPED": 1,
-          "WPN_ANIMSTATE_END_VALID": 1100,
+          "WPN_ANIMSTATE_END_VALID": 2000,
           "WPN_ANIMSTATE_GRENADE_PULL_PIN": 200,
           "WPN_ANIMSTATE_GRENADE_READY": 201,
           "WPN_ANIMSTATE_GRENADE_THROW": 202,
@@ -20182,6 +20182,8 @@
           "WPN_ANIMSTATE_IDLE": 50,
           "WPN_ANIMSTATE_INSPECT": 1000,
           "WPN_ANIMSTATE_INSPECT_OUTRO": 1001,
+          "WPN_ANIMSTATE_INVENTORY_UI_KEYCHAIN_APPLY": 1501,
+          "WPN_ANIMSTATE_INVENTORY_UI_TUMBLE": 1500,
           "WPN_ANIMSTATE_KNIFE_PRIMARY_HIT": 500,
           "WPN_ANIMSTATE_KNIFE_PRIMARY_MISS": 501,
           "WPN_ANIMSTATE_KNIFE_PRIMARY_STAB": 504,
