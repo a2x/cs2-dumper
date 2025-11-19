@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-14 01:17:01.152749900 UTC
+// 2025-11-19 09:40:45.247354700 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,20 +7,20 @@ pub mod cs2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwCSGOInput: usize = 0x1E3A150;
+            pub const dwCSGOInput: usize = 0x1E3A140;
             pub const dwEntityList: usize = 0x1D11CF8;
-            pub const dwGameEntitySystem: usize = 0x1FB69F0;
+            pub const dwGameEntitySystem: usize = 0x1FB69E0;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x20F0;
             pub const dwGameRules: usize = 0x1E2F410;
             pub const dwGlobalVars: usize = 0x1BE21C0;
             pub const dwGlowManager: usize = 0x1E2C2B8;
             pub const dwLocalPlayerController: usize = 0x1E1BBE8;
             pub const dwLocalPlayerPawn: usize = 0x1BECF38;
-            pub const dwPlantedC4: usize = 0x1E34BE8;
+            pub const dwPlantedC4: usize = 0x1E34BD8;
             pub const dwPrediction: usize = 0x1BECE50;
             pub const dwSensitivity: usize = 0x1E2CD08;
             pub const dwSensitivity_sensitivity: usize = 0x50;
-            pub const dwViewAngles: usize = 0x1E3A800;
+            pub const dwViewAngles: usize = 0x1E3A7F0;
             pub const dwViewMatrix: usize = 0x1E303D0;
             pub const dwViewRender: usize = 0x1E30F48;
             pub const dwWeaponC4: usize = 0x1DCD030;

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-14 01:17:01.152749900 UTC
+// 2025-11-19 09:40:45.247354700 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -165,7 +165,7 @@ pub mod cs2_dumper {
             pub const NavGameTest001: usize = 0x17DBD10;
             pub const ServerToolsInfo_001: usize = 0x178B1A8;
             pub const Source2GameClients001: usize = 0x1786AF0;
-            pub const Source2GameDirector001: usize = 0x18E6310;
+            pub const Source2GameDirector001: usize = 0x18E6350;
             pub const Source2GameEntities001: usize = 0x178A8B0;
             pub const Source2Server001: usize = 0x178A710;
             pub const Source2ServerConfig001: usize = 0x19B81A8;

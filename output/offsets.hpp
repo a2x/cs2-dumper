@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-14 01:17:01.152749900 UTC
+// 2025-11-19 09:40:45.247354700 UTC
 
 #pragma once
 
@@ -9,20 +9,20 @@ namespace cs2_dumper {
     namespace offsets {
         // Module: client.dll
         namespace client_dll {
-            constexpr std::ptrdiff_t dwCSGOInput = 0x1E3A150;
+            constexpr std::ptrdiff_t dwCSGOInput = 0x1E3A140;
             constexpr std::ptrdiff_t dwEntityList = 0x1D11CF8;
-            constexpr std::ptrdiff_t dwGameEntitySystem = 0x1FB69F0;
+            constexpr std::ptrdiff_t dwGameEntitySystem = 0x1FB69E0;
             constexpr std::ptrdiff_t dwGameEntitySystem_highestEntityIndex = 0x20F0;
             constexpr std::ptrdiff_t dwGameRules = 0x1E2F410;
             constexpr std::ptrdiff_t dwGlobalVars = 0x1BE21C0;
             constexpr std::ptrdiff_t dwGlowManager = 0x1E2C2B8;
             constexpr std::ptrdiff_t dwLocalPlayerController = 0x1E1BBE8;
             constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x1BECF38;
-            constexpr std::ptrdiff_t dwPlantedC4 = 0x1E34BE8;
+            constexpr std::ptrdiff_t dwPlantedC4 = 0x1E34BD8;
             constexpr std::ptrdiff_t dwPrediction = 0x1BECE50;
             constexpr std::ptrdiff_t dwSensitivity = 0x1E2CD08;
             constexpr std::ptrdiff_t dwSensitivity_sensitivity = 0x50;
-            constexpr std::ptrdiff_t dwViewAngles = 0x1E3A800;
+            constexpr std::ptrdiff_t dwViewAngles = 0x1E3A7F0;
             constexpr std::ptrdiff_t dwViewMatrix = 0x1E303D0;
             constexpr std::ptrdiff_t dwViewRender = 0x1E30F48;
             constexpr std::ptrdiff_t dwWeaponC4 = 0x1DCD030;

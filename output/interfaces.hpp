@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-14 01:17:01.152749900 UTC
+// 2025-11-19 09:40:45.247354700 UTC
 
 #pragma once
 
@@ -167,7 +167,7 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t NavGameTest001 = 0x17DBD10;
             constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x178B1A8;
             constexpr std::ptrdiff_t Source2GameClients001 = 0x1786AF0;
-            constexpr std::ptrdiff_t Source2GameDirector001 = 0x18E6310;
+            constexpr std::ptrdiff_t Source2GameDirector001 = 0x18E6350;
             constexpr std::ptrdiff_t Source2GameEntities001 = 0x178A8B0;
             constexpr std::ptrdiff_t Source2Server001 = 0x178A710;
             constexpr std::ptrdiff_t Source2ServerConfig001 = 0x19B81A8;
