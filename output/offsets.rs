@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-11-19 09:40:45.247354700 UTC
+// 2025-11-20 01:33:09.903018400 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -14,7 +14,7 @@ pub mod cs2_dumper {
             pub const dwGameRules: usize = 0x1E2F410;
             pub const dwGlobalVars: usize = 0x1BE21C0;
             pub const dwGlowManager: usize = 0x1E2C2B8;
-            pub const dwLocalPlayerController: usize = 0x1E1BBE8;
+            pub const dwLocalPlayerController: usize = 0x1E1BBD8;
             pub const dwLocalPlayerPawn: usize = 0x1BECF38;
             pub const dwPlantedC4: usize = 0x1E34BD8;
             pub const dwPrediction: usize = 0x1BECE50;
@@ -23,12 +23,12 @@ pub mod cs2_dumper {
             pub const dwViewAngles: usize = 0x1E3A7F0;
             pub const dwViewMatrix: usize = 0x1E303D0;
             pub const dwViewRender: usize = 0x1E30F48;
-            pub const dwWeaponC4: usize = 0x1DCD030;
+            pub const dwWeaponC4: usize = 0x1DCD150;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
-            pub const dwBuildNumber: usize = 0x5F03F4;
-            pub const dwNetworkGameClient: usize = 0x8EA518;
+            pub const dwBuildNumber: usize = 0x5F13E4;
+            pub const dwNetworkGameClient: usize = 0x8EB518;
             pub const dwNetworkGameClient_clientTickCount: usize = 0x390;
             pub const dwNetworkGameClient_deltaTick: usize = 0x23C;
             pub const dwNetworkGameClient_isBackgroundMap: usize = 0x2C1467;
@@ -36,8 +36,8 @@ pub mod cs2_dumper {
             pub const dwNetworkGameClient_maxClients: usize = 0x230;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x23C;
             pub const dwNetworkGameClient_signOnState: usize = 0x220;
-            pub const dwWindowHeight: usize = 0x8EE814;
-            pub const dwWindowWidth: usize = 0x8EE810;
+            pub const dwWindowHeight: usize = 0x8EF824;
+            pub const dwWindowWidth: usize = 0x8EF820;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {
