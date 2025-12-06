@@ -4,14 +4,14 @@
     "AnimationSystem_001": 8104592
   },
   "client.dll": {
-    "ClientToolsInfo_001": 29252528,
-    "EmptyWorldService001_Client": 28970912,
-    "GameClientExports001": 29239440,
-    "LegacyGameUI001": 29364528,
-    "Source2Client002": 31630832,
-    "Source2ClientConfig001": 31211088,
-    "Source2ClientPrediction001": 29281872,
-    "Source2ClientUI001": 29357680
+    "ClientToolsInfo_001": 29256624,
+    "EmptyWorldService001_Client": 28975040,
+    "GameClientExports001": 29243536,
+    "LegacyGameUI001": 29368624,
+    "Source2Client002": 31634800,
+    "Source2ClientConfig001": 31215056,
+    "Source2ClientPrediction001": 29285952,
+    "Source2ClientUI001": 29361776
   },
   "engine2.dll": {
     "BenchmarkService001": 6256176,
@@ -52,14 +52,14 @@
     "VFileSystem017": 2164416
   },
   "host.dll": {
-    "DebugDrawQueueManager001": 1281776,
-    "GameModelInfo001": 1281840,
-    "GameSystem2HostHook": 1281904,
-    "HostUtils001": 1337056,
-    "PredictionDiffManager001": 1282176,
-    "SaveRestoreDataVersion001": 1282480,
-    "SinglePlayerSharedMemory001": 1282528,
-    "Source2Host001": 1282640
+    "DebugDrawQueueManager001": 1281792,
+    "GameModelInfo001": 1281856,
+    "GameSystem2HostHook": 1281920,
+    "HostUtils001": 1337088,
+    "PredictionDiffManager001": 1282192,
+    "SaveRestoreDataVersion001": 1282496,
+    "SinglePlayerSharedMemory001": 1282544,
+    "Source2Host001": 1282656
   },
   "imemanager.dll": {
     "IMEManager001": 223904
@@ -131,14 +131,14 @@
   },
   "server.dll": {
     "EmptyWorldService001_Server": 24326048,
-    "EntitySubclassUtilsV001": 23982784,
-    "NavGameTest001": 25017616,
+    "EntitySubclassUtilsV001": 23982816,
+    "NavGameTest001": 25017632,
     "ServerToolsInfo_001": 24687016,
     "Source2GameClients001": 24668912,
-    "Source2GameDirector001": 26108752,
+    "Source2GameDirector001": 26108880,
     "Source2GameEntities001": 24684720,
     "Source2Server001": 24684304,
-    "Source2ServerConfig001": 26968488,
+    "Source2ServerConfig001": 26968600,
     "customnavsystem001": 23849992
   },
   "soundsystem.dll": {

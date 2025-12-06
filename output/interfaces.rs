@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-03 10:57:17.418985500 UTC
+// 2025-12-06 01:16:28.578653900 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,14 +12,14 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x1BE5BB0;
-            pub const EmptyWorldService001_Client: usize = 0x1BA0FA0;
-            pub const GameClientExports001: usize = 0x1BE2890;
-            pub const LegacyGameUI001: usize = 0x1C01130;
-            pub const Source2Client002: usize = 0x1E2A5F0;
-            pub const Source2ClientConfig001: usize = 0x1DC3E50;
-            pub const Source2ClientPrediction001: usize = 0x1BECE50;
-            pub const Source2ClientUI001: usize = 0x1BFF670;
+            pub const ClientToolsInfo_001: usize = 0x1BE6BB0;
+            pub const EmptyWorldService001_Client: usize = 0x1BA1FC0;
+            pub const GameClientExports001: usize = 0x1BE3890;
+            pub const LegacyGameUI001: usize = 0x1C02130;
+            pub const Source2Client002: usize = 0x1E2B570;
+            pub const Source2ClientConfig001: usize = 0x1DC4DD0;
+            pub const Source2ClientPrediction001: usize = 0x1BEDE40;
+            pub const Source2ClientUI001: usize = 0x1C00670;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -63,14 +63,14 @@ pub mod cs2_dumper {
         }
         // Module: host.dll
         pub mod host_dll {
-            pub const DebugDrawQueueManager001: usize = 0x138EF0;
-            pub const GameModelInfo001: usize = 0x138F30;
-            pub const GameSystem2HostHook: usize = 0x138F70;
-            pub const HostUtils001: usize = 0x1466E0;
-            pub const PredictionDiffManager001: usize = 0x139080;
-            pub const SaveRestoreDataVersion001: usize = 0x1391B0;
-            pub const SinglePlayerSharedMemory001: usize = 0x1391E0;
-            pub const Source2Host001: usize = 0x139250;
+            pub const DebugDrawQueueManager001: usize = 0x138F00;
+            pub const GameModelInfo001: usize = 0x138F40;
+            pub const GameSystem2HostHook: usize = 0x138F80;
+            pub const HostUtils001: usize = 0x146700;
+            pub const PredictionDiffManager001: usize = 0x139090;
+            pub const SaveRestoreDataVersion001: usize = 0x1391C0;
+            pub const SinglePlayerSharedMemory001: usize = 0x1391F0;
+            pub const Source2Host001: usize = 0x139260;
         }
         // Module: imemanager.dll
         pub mod imemanager_dll {
@@ -161,14 +161,14 @@ pub mod cs2_dumper {
         // Module: server.dll
         pub mod server_dll {
             pub const EmptyWorldService001_Server: usize = 0x1732FA0;
-            pub const EntitySubclassUtilsV001: usize = 0x16DF2C0;
-            pub const NavGameTest001: usize = 0x17DBD10;
+            pub const EntitySubclassUtilsV001: usize = 0x16DF2E0;
+            pub const NavGameTest001: usize = 0x17DBD20;
             pub const ServerToolsInfo_001: usize = 0x178B1A8;
             pub const Source2GameClients001: usize = 0x1786AF0;
-            pub const Source2GameDirector001: usize = 0x18E6350;
+            pub const Source2GameDirector001: usize = 0x18E63D0;
             pub const Source2GameEntities001: usize = 0x178A8B0;
             pub const Source2Server001: usize = 0x178A710;
-            pub const Source2ServerConfig001: usize = 0x19B81A8;
+            pub const Source2ServerConfig001: usize = 0x19B8218;
             pub const customnavsystem001: usize = 0x16BEC08;
         }
         // Module: soundsystem.dll
