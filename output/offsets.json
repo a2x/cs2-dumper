@@ -2,12 +2,12 @@
   "client.dll": {
     "dwCSGOInput": 31699280,
     "dwEntityList": 30485736,
-    "dwGameEntitySystem": 33257952,
+    "dwGameEntitySystem": 33257936,
     "dwGameEntitySystem_highestEntityIndex": 8432,
     "dwGameRules": 31654928,
     "dwGlobalVars": 29241792,
     "dwGlowManager": 31642296,
-    "dwLocalPlayerController": 31575048,
+    "dwLocalPlayerController": 31575064,
     "dwLocalPlayerPawn": 29286184,
     "dwPlantedC4": 31677416,
     "dwPrediction": 29285952,
@@ -20,7 +20,7 @@
   },
   "engine2.dll": {
     "dwBuildNumber": 6231012,
-    "dwNetworkGameClient": 9352472,
+    "dwNetworkGameClient": 9352504,
     "dwNetworkGameClient_clientTickCount": 912,
     "dwNetworkGameClient_deltaTick": 572,
     "dwNetworkGameClient_isBackgroundMap": 2888807,
@@ -28,8 +28,8 @@
     "dwNetworkGameClient_maxClients": 560,
     "dwNetworkGameClient_serverTickCount": 572,
     "dwNetworkGameClient_signOnState": 544,
-    "dwWindowHeight": 9369636,
-    "dwWindowWidth": 9369632
+    "dwWindowHeight": 9369668,
+    "dwWindowWidth": 9369664
   },
   "inputsystem.dll": {
     "dwInputSystem": 285216
