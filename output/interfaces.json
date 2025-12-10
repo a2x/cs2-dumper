@@ -4,14 +4,14 @@
     "AnimationSystem_001": 8104592
   },
   "client.dll": {
-    "ClientToolsInfo_001": 29256624,
-    "EmptyWorldService001_Client": 28975040,
-    "GameClientExports001": 29243536,
-    "LegacyGameUI001": 29368624,
-    "Source2Client002": 31634800,
-    "Source2ClientConfig001": 31215056,
-    "Source2ClientPrediction001": 29285952,
-    "Source2ClientUI001": 29361776
+    "ClientToolsInfo_001": 29260720,
+    "EmptyWorldService001_Client": 28979136,
+    "GameClientExports001": 29247632,
+    "LegacyGameUI001": 29372720,
+    "Source2Client002": 31638896,
+    "Source2ClientConfig001": 31219152,
+    "Source2ClientPrediction001": 29290048,
+    "Source2ClientUI001": 29365872
   },
   "engine2.dll": {
     "BenchmarkService001": 6256176,
