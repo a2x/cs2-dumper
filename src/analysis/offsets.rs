@@ -80,13 +80,13 @@ pattern_map! {
             }
         }),
         "dwEntityList" => pattern!("488935${'} 4885f6") => None,
-        "dwGameEntitySystem" => pattern!("488b3d${'} 48893d") => None,
+        "dwGameEntitySystem" => pattern!("488b1d${'} 48891d[4] 4c63b3") => None,
         "dwGameEntitySystem_highestEntityIndex" => pattern!("ff81u4 4885d2") => None,
         "dwGameRules" => pattern!("48891d${'} ff15${} 84c0") => None,
         "dwGlobalVars" => pattern!("488915${'} 488942") => None,
         "dwGlowManager" => pattern!("488b05${'} c3 cccccccccccccccc 8b41") => None,
         "dwLocalPlayerController" => pattern!("488b05${'} 4189be") => None,
-        "dwPlantedC4" => pattern!("488b15${'} 41ffc0") => None,
+        "dwPlantedC4" => pattern!("488b15${'} 41ffc0 488d4c24? 448905[4]") => None,
         "dwPrediction" => pattern!("488d05${'} c3 cccccccccccccccc 405356 4154") => Some(|view, map, rva| {
             let mut save = [0; 2];
 
@@ -102,12 +102,12 @@ pattern_map! {
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,
-        "dwNetworkGameClient" => pattern!("48893d${'} ff8728020000") => None,
+        "dwNetworkGameClient" => pattern!("48833d${'} ? 488bd9 8b0d[4] ba[4] 74") => None,
         "dwNetworkGameClient_clientTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 8b81${} c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_deltaTick" => pattern!("4c8db7u4 4c897c24") => None,
         "dwNetworkGameClient_isBackgroundMap" => pattern!("0fb681u4 c3 cccccccccccccccc 0fb681${} c3 cccccccccccccccc 4053") => None,
         "dwNetworkGameClient_localPlayer" => pattern!("428b94d3u4 5b 49ffe3 32c0 5b c3 cccccccccccccccc 4053") => None,
-        "dwNetworkGameClient_maxClients" => pattern!("8b81u4 c3cccccccccccccccccc 8b81${} ffc0") => None,
+        "dwNetworkGameClient_maxClients" => pattern!("8b81u4 c3????????? 8b81[4] c3????????? 8b81") => None,
         "dwNetworkGameClient_serverTickCount" => pattern!("8b81u4 c3 cccccccccccccccccc 83b9") => None,
         "dwNetworkGameClient_signOnState" => pattern!("448b81u4 488d0d") => None,
         "dwWindowHeight" => pattern!("8b05${'} 8903") => None,
@@ -121,7 +121,7 @@ pattern_map! {
     },
     soundsystem => {
         "dwSoundSystem" => pattern!("488d05${'} c3 cccccccccccccccc 488915") => None,
-        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104b? 0f118f") => None,
+        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104e? 0f118f") => None,
     },
 }
 
