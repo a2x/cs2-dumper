@@ -1297,53 +1297,6 @@
         "parent": null
       }
     },
-    "enums": {
-      "PulseBestOutflowRules_t": {
-        "alignment": 4,
-        "members": {
-          "SORT_BY_NUMBER_OF_VALID_CRITERIA": 0,
-          "SORT_BY_OUTFLOW_INDEX": 1
-        },
-        "type": "uint32"
-      },
-      "PulseCursorCancelPriority_t": {
-        "alignment": 4,
-        "members": {
-          "CancelOnSucceeded": 1,
-          "HardCancel": 3,
-          "None": 0,
-          "SoftCancel": 2
-        },
-        "type": "uint32"
-      },
-      "PulseMethodCallMode_t": {
-        "alignment": 4,
-        "members": {
-          "ASYNC_FIRE_AND_FORGET": 1,
-          "SYNC_WAIT_FOR_COMPLETION": 0
-        },
-        "type": "uint32"
-      },
-      "PulseTestEnumColor_t": {
-        "alignment": 4,
-        "members": {
-          "BLACK": 0,
-          "BLUE": 4,
-          "GREEN": 3,
-          "RED": 2,
-          "WHITE": 1
-        },
-        "type": "uint32"
-      },
-      "PulseTestEnumShape_t": {
-        "alignment": 4,
-        "members": {
-          "CIRCLE": 100,
-          "SQUARE": 200,
-          "TRIANGLE": 300
-        },
-        "type": "uint32"
-      }
-    }
+    "enums": {}
   }
 }
