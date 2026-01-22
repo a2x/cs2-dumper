@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 00:10:23.980960800 UTC
+// 2026-01-22 12:23:57.753951800 UTC
 
 #pragma once
 
@@ -30,7 +30,7 @@ namespace cs2_dumper {
         // Module: engine2.dll
         namespace engine2_dll {
             constexpr std::ptrdiff_t dwBuildNumber = 0x606504;
-            constexpr std::ptrdiff_t dwNetworkGameClient = 0x900FEF;
+            constexpr std::ptrdiff_t dwNetworkGameClient = 0x900FF0;
             constexpr std::ptrdiff_t dwNetworkGameClient_clientTickCount = 0x378;
             constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x24C;
             constexpr std::ptrdiff_t dwNetworkGameClient_isBackgroundMap = 0x2C141F;
