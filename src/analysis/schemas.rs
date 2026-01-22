@@ -296,7 +296,7 @@ fn read_schema_system<P: Process + MemoryView>(process: &mut P) -> Result<Schema
 
     if !view
         .scanner()
-        .finds_code(pattern!("488905${} 4c8d0d${} 33c0 48c705[8] 8905[4]"), &mut save)
+        .finds_code(pattern!("488905${'} 4c8d0d${} 33c0 48c705[8] 8905"), &mut save)
     {
         bail!("outdated schema system pattern");
     }
