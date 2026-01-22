@@ -14,5 +14,5 @@ pub struct SchemaSystemTypeScope {
     pub global_scope: Pointer64<SchemaSystemTypeScope>, // 0x0108
     pad_0110: [u8; 0x430],                              // 0x0110
     pub class_bindings: UtlTsHash<SchemaClassBinding>,  // 0x0540
-    pub enum_bindings: UtlTsHash<SchemaEnumBinding>,    // 0x1D90
+    pub enum_bindings: UtlTsHash<SchemaEnumBinding>,    // 0x1DD0
 }
