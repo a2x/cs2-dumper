@@ -79,7 +79,7 @@ pattern_map! {
                 map.insert("dwViewAngles".to_string(), rva + save[1]);
             }
         }),
-        "dwEntityList" => pattern!("488935${'} 4885f6") => None,
+        "dwEntityList" => pattern!("48890d${'} e9${} cc") => None,
         "dwGameEntitySystem" => pattern!("488b1d${'} 48891d[4] 4c63b3") => None,
         "dwGameEntitySystem_highestEntityIndex" => pattern!("ff81u4 4885d2") => None,
         "dwGameRules" => pattern!("48891d${'} ff15${} 84c0") => None,
@@ -98,7 +98,7 @@ pattern_map! {
         "dwSensitivity_sensitivity" => pattern!("488d7eu1 480fbae0? 72? 85d2 490f4fff") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
-        "dwWeaponC4" => pattern!("488905${'} f7c1[4] 74? 81e1[4] 890d${} 8b05${} 891d${} eb? 488b15${} 488b5c24? ffc0 8905${} 488bc6 488934ea 80be") => None,
+        "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905${} 488bc6 488934ea 80be") => None,
     },
     engine2 => {
         "dwBuildNumber" => pattern!("8905${'} 488d0d${} ff15${} 488b0d") => None,

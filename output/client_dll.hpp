@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 12:23:57.753951800 UTC
+// 2026-01-23 01:03:20.898173500 UTC
 
 #pragma once
 
@@ -356,7 +356,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0x88; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: 
-            // Field count: 8
+            // Field count: 9
             //
             // Metadata:
             // NetworkVarNames: m_nLastActualJumpPressTick (GameTick_t)
@@ -367,6 +367,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flLastLandedFrac (float)
             // NetworkVarNames: m_flLastLandedVelocityX (float)
             // NetworkVarNames: m_flLastLandedVelocityY (float)
+            // NetworkVarNames: m_flLastLandedVelocityZ (float)
             namespace CCSPlayerModernJump {
                 constexpr std::ptrdiff_t m_nLastActualJumpPressTick = 0x10; // GameTick_t
                 constexpr std::ptrdiff_t m_flLastActualJumpPressFrac = 0x14; // float32
@@ -376,6 +377,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flLastLandedFrac = 0x24; // float32
                 constexpr std::ptrdiff_t m_flLastLandedVelocityX = 0x28; // float32
                 constexpr std::ptrdiff_t m_flLastLandedVelocityY = 0x2C; // float32
+                constexpr std::ptrdiff_t m_flLastLandedVelocityZ = 0x30; // float32
             }
             // Parent: None
             // Field count: 1
@@ -4133,13 +4135,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x530; // float32
                 constexpr std::ptrdiff_t m_LegacyJump = 0x538; // CCSPlayerLegacyJump
                 constexpr std::ptrdiff_t m_ModernJump = 0x550; // CCSPlayerModernJump
-                constexpr std::ptrdiff_t m_nLastJumpTick = 0x580; // GameTick_t
-                constexpr std::ptrdiff_t m_flLastJumpFrac = 0x584; // float32
-                constexpr std::ptrdiff_t m_flLastJumpVelocityZ = 0x588; // float32
-                constexpr std::ptrdiff_t m_bJumpApexPending = 0x58C; // bool
-                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x590; // float32
-                constexpr std::ptrdiff_t m_bWasSurfing = 0x594; // bool
-                constexpr std::ptrdiff_t m_vecInputRotated = 0x624; // Vector
+                constexpr std::ptrdiff_t m_nLastJumpTick = 0x588; // GameTick_t
+                constexpr std::ptrdiff_t m_flLastJumpFrac = 0x58C; // float32
+                constexpr std::ptrdiff_t m_flLastJumpVelocityZ = 0x590; // float32
+                constexpr std::ptrdiff_t m_bJumpApexPending = 0x594; // bool
+                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x598; // float32
+                constexpr std::ptrdiff_t m_bWasSurfing = 0x59C; // bool
+                constexpr std::ptrdiff_t m_vecInputRotated = 0x62C; // Vector
             }
             // Parent: 
             // Field count: 5

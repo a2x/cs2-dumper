@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 12:23:57.753951800 UTC
+// 2026-01-23 01:03:20.898173500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -351,7 +351,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecServerAuthoritativeWeaponSlots = 0x88; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
         }
         // Parent: 
-        // Field count: 8
+        // Field count: 9
         //
         // Metadata:
         // NetworkVarNames: m_nLastActualJumpPressTick (GameTick_t)
@@ -362,6 +362,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flLastLandedFrac (float)
         // NetworkVarNames: m_flLastLandedVelocityX (float)
         // NetworkVarNames: m_flLastLandedVelocityY (float)
+        // NetworkVarNames: m_flLastLandedVelocityZ (float)
         public static class CCSPlayerModernJump {
             public const nint m_nLastActualJumpPressTick = 0x10; // GameTick_t
             public const nint m_flLastActualJumpPressFrac = 0x14; // float32
@@ -371,6 +372,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLastLandedFrac = 0x24; // float32
             public const nint m_flLastLandedVelocityX = 0x28; // float32
             public const nint m_flLastLandedVelocityY = 0x2C; // float32
+            public const nint m_flLastLandedVelocityZ = 0x30; // float32
         }
         // Parent: None
         // Field count: 1
@@ -4128,13 +4130,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_flAccumulatedJumpError = 0x530; // float32
             public const nint m_LegacyJump = 0x538; // CCSPlayerLegacyJump
             public const nint m_ModernJump = 0x550; // CCSPlayerModernJump
-            public const nint m_nLastJumpTick = 0x580; // GameTick_t
-            public const nint m_flLastJumpFrac = 0x584; // float32
-            public const nint m_flLastJumpVelocityZ = 0x588; // float32
-            public const nint m_bJumpApexPending = 0x58C; // bool
-            public const nint m_flTicksSinceLastSurfingDetected = 0x590; // float32
-            public const nint m_bWasSurfing = 0x594; // bool
-            public const nint m_vecInputRotated = 0x624; // Vector
+            public const nint m_nLastJumpTick = 0x588; // GameTick_t
+            public const nint m_flLastJumpFrac = 0x58C; // float32
+            public const nint m_flLastJumpVelocityZ = 0x590; // float32
+            public const nint m_bJumpApexPending = 0x594; // bool
+            public const nint m_flTicksSinceLastSurfingDetected = 0x598; // float32
+            public const nint m_bWasSurfing = 0x59C; // bool
+            public const nint m_vecInputRotated = 0x62C; // Vector
         }
         // Parent: 
         // Field count: 5

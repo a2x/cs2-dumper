@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 12:23:57.753951800 UTC
+// 2026-01-23 01:03:20.898173500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2175,7 +2175,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecServerAuthoritativeWeaponSlots = 0xF58; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
         }
         // Parent: 
-        // Field count: 8
+        // Field count: 9
         //
         // Metadata:
         // NetworkVarNames: m_nLastActualJumpPressTick (GameTick_t)
@@ -2186,6 +2186,7 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_flLastLandedFrac (float)
         // NetworkVarNames: m_flLastLandedVelocityX (float)
         // NetworkVarNames: m_flLastLandedVelocityY (float)
+        // NetworkVarNames: m_flLastLandedVelocityZ (float)
         public static class CCSPlayerModernJump {
             public const nint m_nLastActualJumpPressTick = 0x10; // GameTick_t
             public const nint m_flLastActualJumpPressFrac = 0x14; // float32
@@ -2195,6 +2196,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flLastLandedFrac = 0x24; // float32
             public const nint m_flLastLandedVelocityX = 0x28; // float32
             public const nint m_flLastLandedVelocityY = 0x2C; // float32
+            public const nint m_flLastLandedVelocityZ = 0x30; // float32
         }
         // Parent: None
         // Field count: 0
@@ -2339,30 +2341,30 @@ namespace CS2Dumper.Schemas {
         // NetworkVarNames: m_nFireLifetime (float)
         // NetworkVarNames: m_bInPostEffectTime (bool)
         public static class CInferno {
-            public const nint m_firePositions = 0x738; // Vector[64]
-            public const nint m_fireParentPositions = 0xA38; // Vector[64]
-            public const nint m_bFireIsBurning = 0xD38; // bool[64]
-            public const nint m_BurnNormal = 0xD78; // Vector[64]
-            public const nint m_fireCount = 0x1078; // int32
-            public const nint m_nInfernoType = 0x107C; // int32
-            public const nint m_nFireEffectTickBegin = 0x1080; // int32
-            public const nint m_nFireLifetime = 0x1084; // float32
-            public const nint m_bInPostEffectTime = 0x1088; // bool
-            public const nint m_bWasCreatedInSmoke = 0x1089; // bool
-            public const nint m_extent = 0x1290; // Extent
-            public const nint m_damageTimer = 0x12A8; // CountdownTimer
-            public const nint m_damageRampTimer = 0x12C0; // CountdownTimer
-            public const nint m_splashVelocity = 0x12D8; // Vector
-            public const nint m_InitialSplashVelocity = 0x12E4; // Vector
-            public const nint m_startPos = 0x12F0; // Vector
-            public const nint m_vecOriginalSpawnLocation = 0x12FC; // Vector
-            public const nint m_activeTimer = 0x1308; // IntervalTimer
-            public const nint m_fireSpawnOffset = 0x1318; // int32
-            public const nint m_nMaxFlames = 0x131C; // int32
-            public const nint m_nSpreadCount = 0x1320; // int32
-            public const nint m_BookkeepingTimer = 0x1328; // CountdownTimer
-            public const nint m_NextSpreadTimer = 0x1340; // CountdownTimer
-            public const nint m_nSourceItemDefIndex = 0x1358; // uint16
+            public const nint m_firePositions = 0x730; // Vector[64]
+            public const nint m_fireParentPositions = 0xA30; // Vector[64]
+            public const nint m_bFireIsBurning = 0xD30; // bool[64]
+            public const nint m_BurnNormal = 0xD70; // Vector[64]
+            public const nint m_fireCount = 0x1070; // int32
+            public const nint m_nInfernoType = 0x1074; // int32
+            public const nint m_nFireEffectTickBegin = 0x1078; // int32
+            public const nint m_nFireLifetime = 0x107C; // float32
+            public const nint m_bInPostEffectTime = 0x1080; // bool
+            public const nint m_bWasCreatedInSmoke = 0x1081; // bool
+            public const nint m_extent = 0x1288; // Extent
+            public const nint m_damageTimer = 0x12A0; // CountdownTimer
+            public const nint m_damageRampTimer = 0x12B8; // CountdownTimer
+            public const nint m_splashVelocity = 0x12D0; // Vector
+            public const nint m_InitialSplashVelocity = 0x12DC; // Vector
+            public const nint m_startPos = 0x12E8; // Vector
+            public const nint m_vecOriginalSpawnLocation = 0x12F4; // Vector
+            public const nint m_activeTimer = 0x1300; // IntervalTimer
+            public const nint m_fireSpawnOffset = 0x1310; // int32
+            public const nint m_nMaxFlames = 0x1314; // int32
+            public const nint m_nSpreadCount = 0x1318; // int32
+            public const nint m_BookkeepingTimer = 0x1320; // CountdownTimer
+            public const nint m_NextSpreadTimer = 0x1338; // CountdownTimer
+            public const nint m_nSourceItemDefIndex = 0x1350; // uint16
         }
         // Parent: CEntityComponent
         // Field count: 0
@@ -6624,13 +6626,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_flAccumulatedJumpError = 0x540; // float32
             public const nint m_LegacyJump = 0x548; // CCSPlayerLegacyJump
             public const nint m_ModernJump = 0x560; // CCSPlayerModernJump
-            public const nint m_nLastJumpTick = 0x590; // GameTick_t
-            public const nint m_flLastJumpFrac = 0x594; // float32
-            public const nint m_flLastJumpVelocityZ = 0x598; // float32
-            public const nint m_bJumpApexPending = 0x59C; // bool
-            public const nint m_flTicksSinceLastSurfingDetected = 0x5A0; // float32
-            public const nint m_bWasSurfing = 0x5A4; // bool
-            public const nint m_vecInputRotated = 0x634; // Vector
+            public const nint m_nLastJumpTick = 0x598; // GameTick_t
+            public const nint m_flLastJumpFrac = 0x59C; // float32
+            public const nint m_flLastJumpVelocityZ = 0x5A0; // float32
+            public const nint m_bJumpApexPending = 0x5A4; // bool
+            public const nint m_flTicksSinceLastSurfingDetected = 0x5A8; // float32
+            public const nint m_bWasSurfing = 0x5AC; // bool
+            public const nint m_vecInputRotated = 0x63C; // Vector
         }
         // Parent: 
         // Field count: 5
