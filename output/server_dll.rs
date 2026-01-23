@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 12:23:57.753951800 UTC
+// 2026-01-23 01:03:20.898173500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2296,7 +2296,7 @@ pub mod cs2_dumper {
                 pub const m_vecServerAuthoritativeWeaponSlots: usize = 0xF58; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: 
-            // Field count: 8
+            // Field count: 9
             //
             // Metadata:
             // NetworkVarNames: m_nLastActualJumpPressTick (GameTick_t)
@@ -2307,6 +2307,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flLastLandedFrac (float)
             // NetworkVarNames: m_flLastLandedVelocityX (float)
             // NetworkVarNames: m_flLastLandedVelocityY (float)
+            // NetworkVarNames: m_flLastLandedVelocityZ (float)
             pub mod CCSPlayerModernJump {
                 pub const m_nLastActualJumpPressTick: usize = 0x10; // GameTick_t
                 pub const m_flLastActualJumpPressFrac: usize = 0x14; // float32
@@ -2316,6 +2317,7 @@ pub mod cs2_dumper {
                 pub const m_flLastLandedFrac: usize = 0x24; // float32
                 pub const m_flLastLandedVelocityX: usize = 0x28; // float32
                 pub const m_flLastLandedVelocityY: usize = 0x2C; // float32
+                pub const m_flLastLandedVelocityZ: usize = 0x30; // float32
             }
             // Parent: None
             // Field count: 0
@@ -2460,30 +2462,30 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_nFireLifetime (float)
             // NetworkVarNames: m_bInPostEffectTime (bool)
             pub mod CInferno {
-                pub const m_firePositions: usize = 0x738; // Vector[64]
-                pub const m_fireParentPositions: usize = 0xA38; // Vector[64]
-                pub const m_bFireIsBurning: usize = 0xD38; // bool[64]
-                pub const m_BurnNormal: usize = 0xD78; // Vector[64]
-                pub const m_fireCount: usize = 0x1078; // int32
-                pub const m_nInfernoType: usize = 0x107C; // int32
-                pub const m_nFireEffectTickBegin: usize = 0x1080; // int32
-                pub const m_nFireLifetime: usize = 0x1084; // float32
-                pub const m_bInPostEffectTime: usize = 0x1088; // bool
-                pub const m_bWasCreatedInSmoke: usize = 0x1089; // bool
-                pub const m_extent: usize = 0x1290; // Extent
-                pub const m_damageTimer: usize = 0x12A8; // CountdownTimer
-                pub const m_damageRampTimer: usize = 0x12C0; // CountdownTimer
-                pub const m_splashVelocity: usize = 0x12D8; // Vector
-                pub const m_InitialSplashVelocity: usize = 0x12E4; // Vector
-                pub const m_startPos: usize = 0x12F0; // Vector
-                pub const m_vecOriginalSpawnLocation: usize = 0x12FC; // Vector
-                pub const m_activeTimer: usize = 0x1308; // IntervalTimer
-                pub const m_fireSpawnOffset: usize = 0x1318; // int32
-                pub const m_nMaxFlames: usize = 0x131C; // int32
-                pub const m_nSpreadCount: usize = 0x1320; // int32
-                pub const m_BookkeepingTimer: usize = 0x1328; // CountdownTimer
-                pub const m_NextSpreadTimer: usize = 0x1340; // CountdownTimer
-                pub const m_nSourceItemDefIndex: usize = 0x1358; // uint16
+                pub const m_firePositions: usize = 0x730; // Vector[64]
+                pub const m_fireParentPositions: usize = 0xA30; // Vector[64]
+                pub const m_bFireIsBurning: usize = 0xD30; // bool[64]
+                pub const m_BurnNormal: usize = 0xD70; // Vector[64]
+                pub const m_fireCount: usize = 0x1070; // int32
+                pub const m_nInfernoType: usize = 0x1074; // int32
+                pub const m_nFireEffectTickBegin: usize = 0x1078; // int32
+                pub const m_nFireLifetime: usize = 0x107C; // float32
+                pub const m_bInPostEffectTime: usize = 0x1080; // bool
+                pub const m_bWasCreatedInSmoke: usize = 0x1081; // bool
+                pub const m_extent: usize = 0x1288; // Extent
+                pub const m_damageTimer: usize = 0x12A0; // CountdownTimer
+                pub const m_damageRampTimer: usize = 0x12B8; // CountdownTimer
+                pub const m_splashVelocity: usize = 0x12D0; // Vector
+                pub const m_InitialSplashVelocity: usize = 0x12DC; // Vector
+                pub const m_startPos: usize = 0x12E8; // Vector
+                pub const m_vecOriginalSpawnLocation: usize = 0x12F4; // Vector
+                pub const m_activeTimer: usize = 0x1300; // IntervalTimer
+                pub const m_fireSpawnOffset: usize = 0x1310; // int32
+                pub const m_nMaxFlames: usize = 0x1314; // int32
+                pub const m_nSpreadCount: usize = 0x1318; // int32
+                pub const m_BookkeepingTimer: usize = 0x1320; // CountdownTimer
+                pub const m_NextSpreadTimer: usize = 0x1338; // CountdownTimer
+                pub const m_nSourceItemDefIndex: usize = 0x1350; // uint16
             }
             // Parent: CEntityComponent
             // Field count: 0
@@ -6745,13 +6747,13 @@ pub mod cs2_dumper {
                 pub const m_flAccumulatedJumpError: usize = 0x540; // float32
                 pub const m_LegacyJump: usize = 0x548; // CCSPlayerLegacyJump
                 pub const m_ModernJump: usize = 0x560; // CCSPlayerModernJump
-                pub const m_nLastJumpTick: usize = 0x590; // GameTick_t
-                pub const m_flLastJumpFrac: usize = 0x594; // float32
-                pub const m_flLastJumpVelocityZ: usize = 0x598; // float32
-                pub const m_bJumpApexPending: usize = 0x59C; // bool
-                pub const m_flTicksSinceLastSurfingDetected: usize = 0x5A0; // float32
-                pub const m_bWasSurfing: usize = 0x5A4; // bool
-                pub const m_vecInputRotated: usize = 0x634; // Vector
+                pub const m_nLastJumpTick: usize = 0x598; // GameTick_t
+                pub const m_flLastJumpFrac: usize = 0x59C; // float32
+                pub const m_flLastJumpVelocityZ: usize = 0x5A0; // float32
+                pub const m_bJumpApexPending: usize = 0x5A4; // bool
+                pub const m_flTicksSinceLastSurfingDetected: usize = 0x5A8; // float32
+                pub const m_bWasSurfing: usize = 0x5AC; // bool
+                pub const m_vecInputRotated: usize = 0x63C; // Vector
             }
             // Parent: 
             // Field count: 5

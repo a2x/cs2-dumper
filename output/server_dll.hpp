@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 12:23:57.753951800 UTC
+// 2026-01-23 01:03:20.898173500 UTC
 
 #pragma once
 
@@ -2180,7 +2180,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vecServerAuthoritativeWeaponSlots = 0xF58; // CUtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: 
-            // Field count: 8
+            // Field count: 9
             //
             // Metadata:
             // NetworkVarNames: m_nLastActualJumpPressTick (GameTick_t)
@@ -2191,6 +2191,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_flLastLandedFrac (float)
             // NetworkVarNames: m_flLastLandedVelocityX (float)
             // NetworkVarNames: m_flLastLandedVelocityY (float)
+            // NetworkVarNames: m_flLastLandedVelocityZ (float)
             namespace CCSPlayerModernJump {
                 constexpr std::ptrdiff_t m_nLastActualJumpPressTick = 0x10; // GameTick_t
                 constexpr std::ptrdiff_t m_flLastActualJumpPressFrac = 0x14; // float32
@@ -2200,6 +2201,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flLastLandedFrac = 0x24; // float32
                 constexpr std::ptrdiff_t m_flLastLandedVelocityX = 0x28; // float32
                 constexpr std::ptrdiff_t m_flLastLandedVelocityY = 0x2C; // float32
+                constexpr std::ptrdiff_t m_flLastLandedVelocityZ = 0x30; // float32
             }
             // Parent: None
             // Field count: 0
@@ -2344,30 +2346,30 @@ namespace cs2_dumper {
             // NetworkVarNames: m_nFireLifetime (float)
             // NetworkVarNames: m_bInPostEffectTime (bool)
             namespace CInferno {
-                constexpr std::ptrdiff_t m_firePositions = 0x738; // Vector[64]
-                constexpr std::ptrdiff_t m_fireParentPositions = 0xA38; // Vector[64]
-                constexpr std::ptrdiff_t m_bFireIsBurning = 0xD38; // bool[64]
-                constexpr std::ptrdiff_t m_BurnNormal = 0xD78; // Vector[64]
-                constexpr std::ptrdiff_t m_fireCount = 0x1078; // int32
-                constexpr std::ptrdiff_t m_nInfernoType = 0x107C; // int32
-                constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x1080; // int32
-                constexpr std::ptrdiff_t m_nFireLifetime = 0x1084; // float32
-                constexpr std::ptrdiff_t m_bInPostEffectTime = 0x1088; // bool
-                constexpr std::ptrdiff_t m_bWasCreatedInSmoke = 0x1089; // bool
-                constexpr std::ptrdiff_t m_extent = 0x1290; // Extent
-                constexpr std::ptrdiff_t m_damageTimer = 0x12A8; // CountdownTimer
-                constexpr std::ptrdiff_t m_damageRampTimer = 0x12C0; // CountdownTimer
-                constexpr std::ptrdiff_t m_splashVelocity = 0x12D8; // Vector
-                constexpr std::ptrdiff_t m_InitialSplashVelocity = 0x12E4; // Vector
-                constexpr std::ptrdiff_t m_startPos = 0x12F0; // Vector
-                constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0x12FC; // Vector
-                constexpr std::ptrdiff_t m_activeTimer = 0x1308; // IntervalTimer
-                constexpr std::ptrdiff_t m_fireSpawnOffset = 0x1318; // int32
-                constexpr std::ptrdiff_t m_nMaxFlames = 0x131C; // int32
-                constexpr std::ptrdiff_t m_nSpreadCount = 0x1320; // int32
-                constexpr std::ptrdiff_t m_BookkeepingTimer = 0x1328; // CountdownTimer
-                constexpr std::ptrdiff_t m_NextSpreadTimer = 0x1340; // CountdownTimer
-                constexpr std::ptrdiff_t m_nSourceItemDefIndex = 0x1358; // uint16
+                constexpr std::ptrdiff_t m_firePositions = 0x730; // Vector[64]
+                constexpr std::ptrdiff_t m_fireParentPositions = 0xA30; // Vector[64]
+                constexpr std::ptrdiff_t m_bFireIsBurning = 0xD30; // bool[64]
+                constexpr std::ptrdiff_t m_BurnNormal = 0xD70; // Vector[64]
+                constexpr std::ptrdiff_t m_fireCount = 0x1070; // int32
+                constexpr std::ptrdiff_t m_nInfernoType = 0x1074; // int32
+                constexpr std::ptrdiff_t m_nFireEffectTickBegin = 0x1078; // int32
+                constexpr std::ptrdiff_t m_nFireLifetime = 0x107C; // float32
+                constexpr std::ptrdiff_t m_bInPostEffectTime = 0x1080; // bool
+                constexpr std::ptrdiff_t m_bWasCreatedInSmoke = 0x1081; // bool
+                constexpr std::ptrdiff_t m_extent = 0x1288; // Extent
+                constexpr std::ptrdiff_t m_damageTimer = 0x12A0; // CountdownTimer
+                constexpr std::ptrdiff_t m_damageRampTimer = 0x12B8; // CountdownTimer
+                constexpr std::ptrdiff_t m_splashVelocity = 0x12D0; // Vector
+                constexpr std::ptrdiff_t m_InitialSplashVelocity = 0x12DC; // Vector
+                constexpr std::ptrdiff_t m_startPos = 0x12E8; // Vector
+                constexpr std::ptrdiff_t m_vecOriginalSpawnLocation = 0x12F4; // Vector
+                constexpr std::ptrdiff_t m_activeTimer = 0x1300; // IntervalTimer
+                constexpr std::ptrdiff_t m_fireSpawnOffset = 0x1310; // int32
+                constexpr std::ptrdiff_t m_nMaxFlames = 0x1314; // int32
+                constexpr std::ptrdiff_t m_nSpreadCount = 0x1318; // int32
+                constexpr std::ptrdiff_t m_BookkeepingTimer = 0x1320; // CountdownTimer
+                constexpr std::ptrdiff_t m_NextSpreadTimer = 0x1338; // CountdownTimer
+                constexpr std::ptrdiff_t m_nSourceItemDefIndex = 0x1350; // uint16
             }
             // Parent: CEntityComponent
             // Field count: 0
@@ -6629,13 +6631,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flAccumulatedJumpError = 0x540; // float32
                 constexpr std::ptrdiff_t m_LegacyJump = 0x548; // CCSPlayerLegacyJump
                 constexpr std::ptrdiff_t m_ModernJump = 0x560; // CCSPlayerModernJump
-                constexpr std::ptrdiff_t m_nLastJumpTick = 0x590; // GameTick_t
-                constexpr std::ptrdiff_t m_flLastJumpFrac = 0x594; // float32
-                constexpr std::ptrdiff_t m_flLastJumpVelocityZ = 0x598; // float32
-                constexpr std::ptrdiff_t m_bJumpApexPending = 0x59C; // bool
-                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x5A0; // float32
-                constexpr std::ptrdiff_t m_bWasSurfing = 0x5A4; // bool
-                constexpr std::ptrdiff_t m_vecInputRotated = 0x634; // Vector
+                constexpr std::ptrdiff_t m_nLastJumpTick = 0x598; // GameTick_t
+                constexpr std::ptrdiff_t m_flLastJumpFrac = 0x59C; // float32
+                constexpr std::ptrdiff_t m_flLastJumpVelocityZ = 0x5A0; // float32
+                constexpr std::ptrdiff_t m_bJumpApexPending = 0x5A4; // bool
+                constexpr std::ptrdiff_t m_flTicksSinceLastSurfingDetected = 0x5A8; // float32
+                constexpr std::ptrdiff_t m_bWasSurfing = 0x5AC; // bool
+                constexpr std::ptrdiff_t m_vecInputRotated = 0x63C; // Vector
             }
             // Parent: 
             // Field count: 5

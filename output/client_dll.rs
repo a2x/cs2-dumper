@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-22 12:23:57.753951800 UTC
+// 2026-01-23 01:03:20.898173500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -362,7 +362,7 @@ pub mod cs2_dumper {
                 pub const m_vecServerAuthoritativeWeaponSlots: usize = 0x88; // C_UtlVectorEmbeddedNetworkVar<ServerAuthoritativeWeaponSlot_t>
             }
             // Parent: 
-            // Field count: 8
+            // Field count: 9
             //
             // Metadata:
             // NetworkVarNames: m_nLastActualJumpPressTick (GameTick_t)
@@ -373,6 +373,7 @@ pub mod cs2_dumper {
             // NetworkVarNames: m_flLastLandedFrac (float)
             // NetworkVarNames: m_flLastLandedVelocityX (float)
             // NetworkVarNames: m_flLastLandedVelocityY (float)
+            // NetworkVarNames: m_flLastLandedVelocityZ (float)
             pub mod CCSPlayerModernJump {
                 pub const m_nLastActualJumpPressTick: usize = 0x10; // GameTick_t
                 pub const m_flLastActualJumpPressFrac: usize = 0x14; // float32
@@ -382,6 +383,7 @@ pub mod cs2_dumper {
                 pub const m_flLastLandedFrac: usize = 0x24; // float32
                 pub const m_flLastLandedVelocityX: usize = 0x28; // float32
                 pub const m_flLastLandedVelocityY: usize = 0x2C; // float32
+                pub const m_flLastLandedVelocityZ: usize = 0x30; // float32
             }
             // Parent: None
             // Field count: 1
@@ -4139,13 +4141,13 @@ pub mod cs2_dumper {
                 pub const m_flAccumulatedJumpError: usize = 0x530; // float32
                 pub const m_LegacyJump: usize = 0x538; // CCSPlayerLegacyJump
                 pub const m_ModernJump: usize = 0x550; // CCSPlayerModernJump
-                pub const m_nLastJumpTick: usize = 0x580; // GameTick_t
-                pub const m_flLastJumpFrac: usize = 0x584; // float32
-                pub const m_flLastJumpVelocityZ: usize = 0x588; // float32
-                pub const m_bJumpApexPending: usize = 0x58C; // bool
-                pub const m_flTicksSinceLastSurfingDetected: usize = 0x590; // float32
-                pub const m_bWasSurfing: usize = 0x594; // bool
-                pub const m_vecInputRotated: usize = 0x624; // Vector
+                pub const m_nLastJumpTick: usize = 0x588; // GameTick_t
+                pub const m_flLastJumpFrac: usize = 0x58C; // float32
+                pub const m_flLastJumpVelocityZ: usize = 0x590; // float32
+                pub const m_bJumpApexPending: usize = 0x594; // bool
+                pub const m_flTicksSinceLastSurfingDetected: usize = 0x598; // float32
+                pub const m_bWasSurfing: usize = 0x59C; // bool
+                pub const m_vecInputRotated: usize = 0x62C; // Vector
             }
             // Parent: 
             // Field count: 5
