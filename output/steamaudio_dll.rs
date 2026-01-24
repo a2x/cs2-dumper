@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-12-21 11:22:37.665735500 UTC
+// 2026-01-24 02:36:41.946615600 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -51,13 +51,14 @@ pub mod cs2_dumper {
                 pub const m_field: usize = 0x0; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSteamAudioBakedPathingData {
                 pub const m_nBands: usize = 0x0; // int32
                 pub const m_probes: usize = 0x8; // CSteamAudioProbeData
+                pub const m_movables: usize = 0x10; // CSteamAudioMovableBakedData<CSteamAudioBakedPathingData>
             }
             // Parent: None
             // Field count: 4
@@ -79,12 +80,13 @@ pub mod cs2_dumper {
                 pub const m_pProbeBatch: usize = 0x0; // IPLProbeBatch
             }
             // Parent: None
-            // Field count: 1
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod SteamAudioReverbCompressionSettings_t {
                 pub const m_bEnableCompression: usize = 0x0; // bool
+                pub const m_flQuality: usize = 0x4; // float32
             }
             // Parent: None
             // Field count: 3
@@ -109,7 +111,7 @@ pub mod cs2_dumper {
                 pub const m_vecReflectionRatio: usize = 0x48; // CUtlVector<float32>
             }
             // Parent: None
-            // Field count: 17
+            // Field count: 11
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -120,17 +122,11 @@ pub mod cs2_dumper {
                 pub const m_reverbSettings: usize = 0x68; // SteamAudioReverbSettings_t
                 pub const m_reverbClusteringSettings: usize = 0x78; // SteamAudioReverbClusteringSettings_t
                 pub const m_reverbCompressionSettings: usize = 0x84; // SteamAudioReverbCompressionSettings_t
-                pub const m_clusteredProbes: usize = 0x88; // CSteamAudioProbeData
-                pub const m_vecClusterForProbe: usize = 0x90; // CUtlVector<int16>
-                pub const m_compressedData: usize = 0xA8; // CSteamAudioCompressedReverb
-                pub const m_compressedClusteredData: usize = 0x108; // CSteamAudioCompressedReverb
-                pub const m_vecMovableReverbs: usize = 0x168; // CUtlVector<CSteamAudioBakedReverbData>
-                pub const m_vecMovableReverbInitialTransforms: usize = 0x180; // CUtlVector<matrix3x4_t>
-                pub const m_vecMovableReverbAABBs: usize = 0x198; // CUtlVector<AABB_t>
-                pub const m_vecMovableReverbKeys: usize = 0x1B0; // CUtlVector<CUtlString>
-                pub const m_vecMovableReverbKeyTokens: usize = 0x1C8; // CUtlVector<CUtlStringToken>
-                pub const m_vecMovableReverbTransforms: usize = 0x1E0; // CUtlVector<matrix3x4_t>
-                pub const m_vecMovableReverbOBBs: usize = 0x1F8; // CUtlVector<OBB_t>
+                pub const m_clusteredProbes: usize = 0x90; // CSteamAudioProbeData
+                pub const m_vecClusterForProbe: usize = 0x98; // CUtlVector<int16>
+                pub const m_compressedData: usize = 0xB0; // CSteamAudioCompressedReverb
+                pub const m_compressedClusteredData: usize = 0x110; // CSteamAudioCompressedReverb
+                pub const m_movables: usize = 0x170; // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>
             }
             // Parent: None
             // Field count: 4
@@ -155,7 +151,7 @@ pub mod cs2_dumper {
                 pub const m_nReflectionBounces: usize = 0x8; // int32
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -166,6 +162,7 @@ pub mod cs2_dumper {
                 pub const m_vecSize: usize = 0x38; // CUtlVector<float32>
                 pub const m_vecOutsideField: usize = 0x50; // CUtlVector<CSteamAudioAmbisonicsField>
                 pub const m_vecInsideSmallSizeField: usize = 0x68; // CUtlVector<CSteamAudioAmbisonicsField>
+                pub const m_movables: usize = 0x80; // CSteamAudioMovableBakedData<CSteamAudioBakedDimensionsData>
             }
             // Parent: None
             // Field count: 7

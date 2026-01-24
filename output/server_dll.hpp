@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-23 01:03:20.898173500 UTC
+// 2026-01-24 02:38:39.726673900 UTC
 
 #pragma once
 
@@ -8443,15 +8443,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bBombDefused = 0xEF1; // bool
                 constexpr std::ptrdiff_t m_bMapHasBombZone = 0xEF2; // bool
                 constexpr std::ptrdiff_t m_vecMainCTSpawnPos = 0xF40; // Vector
-                constexpr std::ptrdiff_t m_CTSpawnPointsMasterList = 0xF50; // CUtlVector<SpawnPoint*>
-                constexpr std::ptrdiff_t m_TerroristSpawnPointsMasterList = 0xF68; // CUtlVector<SpawnPoint*>
+                constexpr std::ptrdiff_t m_CTSpawnPointsMasterList = 0xF50; // CUtlVector<CHandle<SpawnPoint>>
+                constexpr std::ptrdiff_t m_TerroristSpawnPointsMasterList = 0xF68; // CUtlVector<CHandle<SpawnPoint>>
                 constexpr std::ptrdiff_t m_bRespawningAllRespawnablePlayers = 0xF80; // bool
                 constexpr std::ptrdiff_t m_iNextCTSpawnPoint = 0xF84; // int32
                 constexpr std::ptrdiff_t m_flCTSpawnPointUsedTime = 0xF88; // float32
                 constexpr std::ptrdiff_t m_iNextTerroristSpawnPoint = 0xF8C; // int32
                 constexpr std::ptrdiff_t m_flTerroristSpawnPointUsedTime = 0xF90; // float32
-                constexpr std::ptrdiff_t m_CTSpawnPoints = 0xF98; // CUtlVector<SpawnPoint*>
-                constexpr std::ptrdiff_t m_TerroristSpawnPoints = 0xFB0; // CUtlVector<SpawnPoint*>
+                constexpr std::ptrdiff_t m_CTSpawnPoints = 0xF98; // CUtlVector<CHandle<SpawnPoint>>
+                constexpr std::ptrdiff_t m_TerroristSpawnPoints = 0xFB0; // CUtlVector<CHandle<SpawnPoint>>
                 constexpr std::ptrdiff_t m_bIsUnreservedGameServer = 0xFC8; // bool
                 constexpr std::ptrdiff_t m_fAutobalanceDisplayTime = 0xFCC; // float32
                 constexpr std::ptrdiff_t m_bAllowWeaponSwitch = 0x1008; // bool
