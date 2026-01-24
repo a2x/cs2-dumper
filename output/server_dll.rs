@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-23 01:03:20.898173500 UTC
+// 2026-01-24 02:11:21.777258100 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -8559,15 +8559,15 @@ pub mod cs2_dumper {
                 pub const m_bBombDefused: usize = 0xEF1; // bool
                 pub const m_bMapHasBombZone: usize = 0xEF2; // bool
                 pub const m_vecMainCTSpawnPos: usize = 0xF40; // Vector
-                pub const m_CTSpawnPointsMasterList: usize = 0xF50; // CUtlVector<SpawnPoint*>
-                pub const m_TerroristSpawnPointsMasterList: usize = 0xF68; // CUtlVector<SpawnPoint*>
+                pub const m_CTSpawnPointsMasterList: usize = 0xF50; // CUtlVector<CHandle<SpawnPoint>>
+                pub const m_TerroristSpawnPointsMasterList: usize = 0xF68; // CUtlVector<CHandle<SpawnPoint>>
                 pub const m_bRespawningAllRespawnablePlayers: usize = 0xF80; // bool
                 pub const m_iNextCTSpawnPoint: usize = 0xF84; // int32
                 pub const m_flCTSpawnPointUsedTime: usize = 0xF88; // float32
                 pub const m_iNextTerroristSpawnPoint: usize = 0xF8C; // int32
                 pub const m_flTerroristSpawnPointUsedTime: usize = 0xF90; // float32
-                pub const m_CTSpawnPoints: usize = 0xF98; // CUtlVector<SpawnPoint*>
-                pub const m_TerroristSpawnPoints: usize = 0xFB0; // CUtlVector<SpawnPoint*>
+                pub const m_CTSpawnPoints: usize = 0xF98; // CUtlVector<CHandle<SpawnPoint>>
+                pub const m_TerroristSpawnPoints: usize = 0xFB0; // CUtlVector<CHandle<SpawnPoint>>
                 pub const m_bIsUnreservedGameServer: usize = 0xFC8; // bool
                 pub const m_fAutobalanceDisplayTime: usize = 0xFCC; // float32
                 pub const m_bAllowWeaponSwitch: usize = 0x1008; // bool
