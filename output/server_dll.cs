@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-23 01:03:20.898173500 UTC
+// 2026-01-24 02:38:39.726673900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -8438,15 +8438,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_bBombDefused = 0xEF1; // bool
             public const nint m_bMapHasBombZone = 0xEF2; // bool
             public const nint m_vecMainCTSpawnPos = 0xF40; // Vector
-            public const nint m_CTSpawnPointsMasterList = 0xF50; // CUtlVector<SpawnPoint*>
-            public const nint m_TerroristSpawnPointsMasterList = 0xF68; // CUtlVector<SpawnPoint*>
+            public const nint m_CTSpawnPointsMasterList = 0xF50; // CUtlVector<CHandle<SpawnPoint>>
+            public const nint m_TerroristSpawnPointsMasterList = 0xF68; // CUtlVector<CHandle<SpawnPoint>>
             public const nint m_bRespawningAllRespawnablePlayers = 0xF80; // bool
             public const nint m_iNextCTSpawnPoint = 0xF84; // int32
             public const nint m_flCTSpawnPointUsedTime = 0xF88; // float32
             public const nint m_iNextTerroristSpawnPoint = 0xF8C; // int32
             public const nint m_flTerroristSpawnPointUsedTime = 0xF90; // float32
-            public const nint m_CTSpawnPoints = 0xF98; // CUtlVector<SpawnPoint*>
-            public const nint m_TerroristSpawnPoints = 0xFB0; // CUtlVector<SpawnPoint*>
+            public const nint m_CTSpawnPoints = 0xF98; // CUtlVector<CHandle<SpawnPoint>>
+            public const nint m_TerroristSpawnPoints = 0xFB0; // CUtlVector<CHandle<SpawnPoint>>
             public const nint m_bIsUnreservedGameServer = 0xFC8; // bool
             public const nint m_fAutobalanceDisplayTime = 0xFCC; // float32
             public const nint m_bAllowWeaponSwitch = 0x1008; // bool
