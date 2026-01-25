@@ -1,109 +1,119 @@
+use std::collections::HashSet;
+
 use memflow::prelude::v1::*;
 
-use super::UtlMemoryPoolBase;
+use super::UtlMemoryPool;
 
 #[repr(C)]
-pub struct HashAllocatedBlob<D> {
-    pub next: Pointer64<HashAllocatedBlob<D>>, // 0x0000
-    pad_0008: [u8; 0x8],                       // 0x0008
-    pub data: Pointer64<D>,                    // 0x0010
-    pad_0018: [u8; 0x8],                       // 0x0018
+pub struct UtlTsHashAllocatedBlob<D> {
+    pub next: Pointer64<UtlTsHashAllocatedBlob<D>>, // 0x0000
+    pad_0: [u8; 0x8],                               // 0x0008
+    pub data: Pointer64<D>,                         // 0x0010
+    pad_1: [u8; 0x18],                              // 0x0018
 }
 
-unsafe impl<D: 'static> Pod for HashAllocatedBlob<D> {}
+unsafe impl<D: 'static> Pod for UtlTsHashAllocatedBlob<D> {}
 
 #[repr(C)]
-pub struct RTL_SRWLOCK
-{
+pub struct UtlTsHashFixedData<D, K> {
+    pub ui_key: K,                                 // 0x0000
+    pub next: Pointer64<UtlTsHashFixedData<D, K>>, // 0x0008
+    pub data: Pointer64<D>,                        // 0x0010
 }
+
+unsafe impl<D: 'static, K: 'static> Pod for UtlTsHashFixedData<D, K> {}
 
 #[repr(C)]
-pub struct HashBucket<D, K> {
-    pub lock: Pointer64<RTL_SRWLOCK>,                              // 0x0000
-    pub first: Pointer64<HashFixedDataInternal<D, K>>,             // 0x0008
-    pub first_uncommitted: Pointer64<HashFixedDataInternal<D, K>>, // 0x0010
+pub struct UtlTsHashBucket<D, K> {
+    pub add_lock: usize,                                        // 0x0000
+    pub first: Pointer64<UtlTsHashFixedData<D, K>>,             // 0x0008
+    pub first_uncommitted: Pointer64<UtlTsHashFixedData<D, K>>, // 0x0010
 }
-
-#[repr(C)]
-pub struct HashFixedDataInternal<D, K> {
-    pub ui_key: K,                                    // 0x0000
-    pub next: Pointer64<HashFixedDataInternal<D, K>>, // 0x0008
-    pub data: Pointer64<D>,                           // 0x0010
-}
-
-unsafe impl<D: 'static, K: 'static> Pod for HashFixedDataInternal<D, K> {}
 
 #[repr(C)]
 pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
-    pub entry_mem: UtlMemoryPoolBase,   // 0x0000
-    pub buckets: [HashBucket<D, K>; C], // 0x0080
-    pub needs_commit: bool,             // 0x1880
-    pad_2881: [u8; 0xF],                // 0x1881
+    pub entry_mem: UtlMemoryPool,            // 0x0000
+    pub buckets: [UtlTsHashBucket<D, K>; C], // 0x0060
+    pub needs_commit: bool,                  // 0x1860
+    pad_0: [u8; 0x3],                        // 0x1861
+    pub contention_check: i32,               // 0x1864
+    pad_1: [u8; 0x8],                        // 0x1868
 }
 
 impl<D: Pod, const C: usize, K: Pod> UtlTsHash<D, C, K> {
-    #[inline]
-    pub fn blocks_alloc(&self) -> i32 {
-        self.entry_mem.blocks_alloc
+    pub fn elements(&self, mem: &mut impl MemoryView) -> Vec<Pointer64<D>> {
+        let allocated = self.allocated_elements(mem);
+        let unallocated = self.unallocated_elements(mem);
+
+        let mut result = Vec::with_capacity(allocated.len() + unallocated.len());
+
+        result.extend(allocated);
+        result.extend(unallocated);
+
+        let mut seen = HashSet::with_capacity(result.capacity());
+
+        // Remove duplicate pointers that exist in both lists.
+        result.retain(|ptr| seen.insert(ptr.address().to_umem()));
+
+        result
     }
 
-    #[inline]
-    pub fn block_size(&self) -> i32 {
-        self.entry_mem.block_size
-    }
+    fn allocated_elements(&self, mem: &mut impl MemoryView) -> Vec<Pointer64<D>> {
+        let used_count = self.entry_mem.blocks_allocated as usize;
 
-    #[inline]
-    pub fn peak_count(&self) -> i32 {
-        self.entry_mem.peak_alloc
-    }
-
-    pub fn elements(&self, mem: &mut impl MemoryView) -> Result<Vec<Pointer64<D>>> {
-        let blocks_alloc = self.blocks_alloc() as usize;
-        let peak_alloc = self.peak_count() as usize;
-
-        let mut allocated_list = Vec::with_capacity(peak_alloc);
-        let mut unallocated_list = Vec::with_capacity(blocks_alloc);
+        let mut elements = Vec::with_capacity(used_count);
 
         for bucket in &self.buckets {
-            let mut cur_element = bucket.first_uncommitted;
+            let mut node_ptr = bucket.first_uncommitted;
 
-            while !cur_element.is_null() {
-                let element = mem.read_ptr(cur_element).data_part()?;
+            while !node_ptr.is_null() {
+                let node = match mem.read_ptr(node_ptr).data_part() {
+                    Ok(n) => n,
+                    Err(_) => break,
+                };
 
-                if !element.data.is_null() {
-                    allocated_list.push(element.data);
+                if !node.data.is_null() {
+                    elements.push(node.data);
                 }
 
-                if allocated_list.len() >= blocks_alloc {
+                if elements.len() >= used_count {
                     break;
                 }
 
-                cur_element = element.next;
+                node_ptr = node.next;
             }
         }
 
-        let mut cur_blob =
-            Pointer64::<HashAllocatedBlob<D>>::from(self.entry_mem.free_list_head.address());
+        elements
+    }
 
-        while !cur_blob.is_null() {
-            let blob = mem.read_ptr(cur_blob).data_part()?;
+    fn unallocated_elements(&self, mem: &mut impl MemoryView) -> Vec<Pointer64<D>> {
+        let free_count = self.entry_mem.peak_allocated as usize;
+
+        let mut elements = Vec::with_capacity(free_count);
+
+        let mut blob_ptr = Pointer64::<UtlTsHashAllocatedBlob<D>>::from(
+            self.entry_mem.free_blocks.head.next.address(),
+        );
+
+        while !blob_ptr.is_null() {
+            let blob = match mem.read_ptr(blob_ptr).data_part() {
+                Ok(b) => b,
+                Err(_) => break,
+            };
 
             if !blob.data.is_null() {
-                unallocated_list.push(blob.data);
+                elements.push(blob.data);
             }
 
-            if unallocated_list.len() >= peak_alloc {
+            if elements.len() >= free_count {
                 break;
             }
 
-            cur_blob = blob.next;
+            blob_ptr = blob.next;
         }
 
-        Ok(if unallocated_list.len() > allocated_list.len() {
-            unallocated_list
-        } else {
-            allocated_list
-        })
+        elements
     }
 }
 

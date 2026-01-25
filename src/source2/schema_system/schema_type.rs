@@ -30,36 +30,36 @@ pub enum SchemaTypeCategory {
 #[repr(C)]
 pub struct SchemaArrayT {
     pub array_size: u32,                // 0x0000
-    pad_0004: [u8; 0x4],                // 0x0004
+    pad_0: [u8; 0x4],                   // 0x0004
     pub element: Pointer64<SchemaType>, // 0x0008
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicI {
-    pad_0000: [u8; 0x10], // 0x0000
-    pub value: u64,       // 0x0010
+    pad_0: [u8; 0x10], // 0x0000
+    pub value: u64,    // 0x0010
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicT {
     pub element: Pointer64<SchemaType>,  // 0x0000
-    pad_0008: [u8; 0x8],                 // 0x0008
+    pad_0: [u8; 0x8],                    // 0x0008
     pub template: Pointer64<SchemaType>, // 0x0010
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicTT {
-    pad_0000: [u8; 0x10],                      // 0x0000
+    pad_0: [u8; 0x10],                         // 0x0000
     pub templates: [Pointer64<SchemaType>; 2], // 0x0010
 }
 
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicTF {
-    pad_0000: [u8; 0x10],                // 0x0000
+    pad_0: [u8; 0x10],                   // 0x0000
     pub template: Pointer64<SchemaType>, // 0x0010
     pub size: i32,                       // 0x0018
 }
@@ -67,14 +67,14 @@ pub struct SchemaAtomicTF {
 #[derive(Clone, Copy)]
 #[repr(C)]
 pub struct SchemaAtomicTTF {
-    pad_0000: [u8; 0x10],                      // 0x0000
+    pad_0: [u8; 0x10],                         // 0x0000
     pub templates: [Pointer64<SchemaType>; 2], // 0x0010
     pub size: i32,                             // 0x0020
 }
 
 #[repr(C)]
 pub struct SchemaType {
-    pad_0000: [u8; 0x8],                              // 0x0000
+    pad_0: [u8; 0x8],                                 // 0x0000
     pub name: Pointer64<ReprCString>,                 // 0x0008
     pub type_scope: Pointer64<SchemaSystemTypeScope>, // 0x0010
     pub type_category: SchemaTypeCategory,            // 0x0018

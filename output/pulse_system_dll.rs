@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-24 02:38:39.726673900 UTC
+// 2026-01-25 21:11:42.105397500 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,8 +7,49 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: pulse_system.dll
         // Class count: 97
-        // Enum count: 0
+        // Enum count: 5
         pub mod pulse_system_dll {
+            // Alignment: 4
+            // Member count: 2
+            #[repr(u32)]
+            pub enum PulseBestOutflowRules_t {
+                SORT_BY_NUMBER_OF_VALID_CRITERIA = 0x0,
+                SORT_BY_OUTFLOW_INDEX = 0x1
+            }
+            // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum PulseTestEnumShape_t {
+                CIRCLE = 0x64,
+                SQUARE = 0xC8,
+                TRIANGLE = 0x12C
+            }
+            // Alignment: 4
+            // Member count: 4
+            #[repr(u32)]
+            pub enum PulseCursorCancelPriority_t {
+                None = 0x0,
+                CancelOnSucceeded = 0x1,
+                SoftCancel = 0x2,
+                HardCancel = 0x3
+            }
+            // Alignment: 4
+            // Member count: 2
+            #[repr(u32)]
+            pub enum PulseMethodCallMode_t {
+                SYNC_WAIT_FOR_COMPLETION = 0x0,
+                ASYNC_FIRE_AND_FORGET = 0x1
+            }
+            // Alignment: 4
+            // Member count: 5
+            #[repr(u32)]
+            pub enum PulseTestEnumColor_t {
+                BLACK = 0x0,
+                WHITE = 0x1,
+                RED = 0x2,
+                GREEN = 0x3,
+                BLUE = 0x4
+            }
             // Parent: None
             // Field count: 0
             //

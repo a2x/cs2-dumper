@@ -20,7 +20,7 @@ pub union SchemaNetworkValueUnion {
     pub name_ptr: Pointer64<ReprCString>,
     pub int_value: i32,
     pub float_value: f32,
-    pub ptr: Pointer64<()>,
+    pub ptr_value: Pointer64<()>,
     pub var_value: SchemaVarName,
     pub name_value: [c_char; 32],
 }

@@ -20,7 +20,8 @@ impl CodeWriter for ButtonMap {
 
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#pragma once\n")?;
-        writeln!(fmt, "#include <cstddef>\n")?;
+        writeln!(fmt, "#include <cstddef>")?;
+        writeln!(fmt, "#include <cstdint>\n")?;
 
         fmt.block("namespace cs2_dumper", false, |fmt| {
             writeln!(fmt, "// Module: client.dll")?;

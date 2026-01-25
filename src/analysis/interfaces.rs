@@ -9,6 +9,7 @@ use memflow::prelude::v1::*;
 use pelite::pe64::exports::Export;
 use pelite::pe64::{Pe, PeView};
 
+use crate::memory::address;
 use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, BTreeMap<String, umem>>;
@@ -17,7 +18,6 @@ pub fn interfaces<P: Process + MemoryView>(process: &mut P) -> Result<InterfaceM
     process
         .module_list()?
         .iter()
-        .filter(|module| module.name.as_ref() != "crashandler64.dll")
         .filter_map(|module| {
             let buf = process
                 .read_raw(module.base, module.size as _)
@@ -34,16 +34,18 @@ pub fn interfaces<P: Process + MemoryView>(process: &mut P) -> Result<InterfaceM
                 .name("CreateInterface")
                 .ok()?;
 
-            if let Export::Symbol(symbol) = ci_export {
-                let list_addr = read_addr64_rip(process, module.base + symbol).ok()?;
+            match ci_export {
+                Export::Symbol(symbol) => {
+                    let list_ptr = address::resolve_rip(process, module.base + symbol).ok()?;
+                    let list_head = process.read_addr64(list_ptr).data_part().ok()?;
 
-                return read_interfaces(process, module, list_addr)
-                    .ok()
-                    .filter(|ifaces| !ifaces.is_empty())
-                    .map(|ifaces| Ok((module.name.to_string(), ifaces)));
+                    return read_interfaces(process, module, list_head)
+                        .ok()
+                        .filter(|ifaces| !ifaces.is_empty())
+                        .map(|ifaces| Ok((module.name.to_string(), ifaces)));
+                }
+                _ => None,
             }
-
-            None
         })
         .collect()
 }
@@ -51,36 +53,32 @@ pub fn interfaces<P: Process + MemoryView>(process: &mut P) -> Result<InterfaceM
 fn read_interfaces(
     mem: &mut impl MemoryView,
     module: &ModuleInfo,
-    list_addr: Address,
+    list_head: Address,
 ) -> Result<BTreeMap<String, umem>> {
-    let mut ifaces = BTreeMap::new();
+    let mut result = BTreeMap::new();
 
-    let mut cur_reg = Pointer64::<InterfaceReg>::from(mem.read_addr64(list_addr).data_part()?);
+    let mut reg_ptr = Pointer64::<InterfaceReg>::from(list_head);
 
-    while !cur_reg.is_null() {
-        let reg = mem.read_ptr(cur_reg).data_part()?;
-        let name = mem.read_utf8(reg.name.address(), 128).data_part()?;
-        let instance = read_addr64_rip(mem, reg.create_fn.address())?;
-        let value = instance.wrapping_sub(module.base).to_umem();
+    while !reg_ptr.is_null() {
+        let reg = mem.read_ptr(reg_ptr).data_part()?;
+        let name = mem.read_utf8_lossy(reg.name.address(), 128).data_part()?;
 
-        debug!(
-            "found interface: {} at {:#X} ({} + {:#X})",
-            name,
-            value.wrapping_add(module.base.to_umem()),
-            module.name,
-            value
-        );
+        let instance_addr = address::resolve_rip(mem, reg.create_fn.address())?;
 
-        ifaces.insert(name, value);
+        if let Some(instance_rva) = instance_addr.to_umem().checked_sub(module.base.to_umem()) {
+            debug!(
+                "found \"{}\" at {:#X} ({} + {:#X})",
+                name,
+                instance_addr.to_umem(),
+                module.name,
+                instance_rva
+            );
 
-        cur_reg = reg.next;
+            result.insert(name, instance_rva);
+        }
+
+        reg_ptr = reg.next;
     }
 
-    Ok(ifaces)
-}
-
-fn read_addr64_rip(mem: &mut impl MemoryView, addr: Address) -> Result<Address> {
-    let disp = mem.read::<i32>(addr + 0x3).data_part()?;
-
-    Ok(addr + 0x7 + disp)
+    Ok(result)
 }
