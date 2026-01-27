@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-25 21:11:42.105397500 UTC
+// 2026-01-27 02:36:48.265997500 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -14,7 +14,7 @@ pub mod cs2_dumper {
             pub const dwGameRules: usize = 0x23035F0;
             pub const dwGlobalVars: usize = 0x20572A8;
             pub const dwGlowManager: usize = 0x2303600;
-            pub const dwLocalPlayerController: usize = 0x22ECA28;
+            pub const dwLocalPlayerController: usize = 0x22ECA18;
             pub const dwLocalPlayerPawn: usize = 0x2062850;
             pub const dwPlantedC4: usize = 0x230FB80;
             pub const dwPrediction: usize = 0x2062760;
@@ -28,7 +28,7 @@ pub mod cs2_dumper {
         // Module: engine2.dll
         pub mod engine2_dll {
             pub const dwBuildNumber: usize = 0x606504;
-            pub const dwNetworkGameClient: usize = 0x900FF0;
+            pub const dwNetworkGameClient: usize = 0x900FB0;
             pub const dwNetworkGameClient_clientTickCount: usize = 0x378;
             pub const dwNetworkGameClient_deltaTick: usize = 0x24C;
             pub const dwNetworkGameClient_isBackgroundMap: usize = 0x2C141F;
@@ -36,8 +36,8 @@ pub mod cs2_dumper {
             pub const dwNetworkGameClient_maxClients: usize = 0x240;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x24C;
             pub const dwNetworkGameClient_signOnState: usize = 0x230;
-            pub const dwWindowHeight: usize = 0x9053B4;
-            pub const dwWindowWidth: usize = 0x9053B0;
+            pub const dwWindowHeight: usize = 0x905364;
+            pub const dwWindowWidth: usize = 0x905360;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {
@@ -49,7 +49,7 @@ pub mod cs2_dumper {
         }
         // Module: soundsystem.dll
         pub mod soundsystem_dll {
-            pub const dwSoundSystem: usize = 0x4F3470;
+            pub const dwSoundSystem: usize = 0x4F3490;
             pub const dwSoundSystem_engineViewData: usize = 0x7C;
         }
     }
