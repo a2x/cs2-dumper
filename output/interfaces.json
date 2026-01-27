@@ -15,26 +15,26 @@
   },
   "engine2.dll": {
     "BenchmarkService001": 6342160,
-    "BugService001": 9181232,
-    "ClientServerEngineLoopService_001": 9449168,
+    "BugService001": 9181168,
+    "ClientServerEngineLoopService_001": 9449104,
     "EngineGameUI001": 6333104,
-    "EngineServiceMgr001": 9447296,
-    "GameEventSystemClientV001": 9448032,
-    "GameEventSystemServerV001": 9448336,
+    "EngineServiceMgr001": 9447232,
+    "GameEventSystemClientV001": 9447968,
+    "GameEventSystemServerV001": 9448272,
     "GameResourceServiceClientV001": 6342416,
     "GameResourceServiceServerV001": 6342512,
-    "GameUIService_001": 9182304,
+    "GameUIService_001": 9182240,
     "HostStateMgr001": 6344592,
     "INETSUPPORT_001": 6314208,
-    "InputService_001": 9183056,
+    "InputService_001": 9182992,
     "KeyValueCache001": 6344768,
-    "MapListService_001": 9440704,
-    "NetworkClientService_001": 9441104,
-    "NetworkP2PService_001": 9441936,
-    "NetworkServerService_001": 9442368,
+    "MapListService_001": 9440640,
+    "NetworkClientService_001": 9441040,
+    "NetworkP2PService_001": 9441872,
+    "NetworkServerService_001": 9442304,
     "NetworkService_001": 6342880,
-    "RenderService_001": 9442992,
-    "ScreenshotService001": 9443696,
+    "RenderService_001": 9442928,
+    "ScreenshotService001": 9443632,
     "SimpleEngineLoopService_001": 6344864,
     "SoundService_001": 6342944,
     "Source2EngineToClient001": 6331344,
@@ -42,7 +42,7 @@
     "Source2EngineToServer001": 6331560,
     "Source2EngineToServerStringTable001": 6331600,
     "SplitScreenService_001": 6343680,
-    "StatsService_001": 9444656,
+    "StatsService_001": 9444592,
     "ToolService_001": 6344128,
     "VENGINE_GAMEUIFUNCS_VERSION005": 6333248,
     "VProfService_001": 6344192
@@ -83,7 +83,7 @@
     "VMaterialSystem2_001": 1461904
   },
   "meshsystem.dll": {
-    "MeshSystem001": 1373856
+    "MeshSystem001": 1377952
   },
   "navsystem.dll": {
     "NavSystem001": 1206752
@@ -104,7 +104,7 @@
     "PanoramaUIClient001": 2708352
   },
   "particles.dll": {
-    "ParticleSystemMgr003": 5377776
+    "ParticleSystemMgr003": 5377728
   },
   "pulse_system.dll": {
     "IPulseSystem_001": 2041456
@@ -122,9 +122,9 @@
     "SceneFileCache002": 897728
   },
   "scenesystem.dll": {
-    "RenderingPipelines_001": 6666944,
+    "RenderingPipelines_001": 6666928,
     "SceneSystem_002": 9240224,
-    "SceneUtils_001": 6670800
+    "SceneUtils_001": 6670784
   },
   "schemasystem.dll": {
     "SchemaSystem_001": 485168
@@ -132,20 +132,20 @@
   "server.dll": {
     "EmptyWorldService001_Server": 28743792,
     "EntitySubclassUtilsV001": 28397680,
-    "NavGameTest001": 29439240,
-    "ServerToolsInfo_001": 29116392,
-    "Source2GameClients001": 29104224,
-    "Source2GameDirector001": 30749952,
-    "Source2GameEntities001": 29114096,
-    "Source2Server001": 29113680,
-    "Source2ServerConfig001": 31752840,
+    "NavGameTest001": 29439128,
+    "ServerToolsInfo_001": 29116264,
+    "Source2GameClients001": 29104096,
+    "Source2GameDirector001": 30749824,
+    "Source2GameEntities001": 29113968,
+    "Source2Server001": 29113552,
+    "Source2ServerConfig001": 31752712,
     "customnavsystem001": 28262008
   },
   "soundsystem.dll": {
-    "SoundOpSystem001": 5192352,
-    "SoundOpSystemEdit001": 5192064,
-    "SoundSystem001": 5190768,
-    "VMixEditTool001": 93614815
+    "SoundOpSystem001": 5192384,
+    "SoundOpSystemEdit001": 5192096,
+    "SoundSystem001": 5190800,
+    "VMixEditTool001": 93614847
   },
   "steamaudio.dll": {
     "SteamAudio001": 2475072
@@ -182,12 +182,9 @@
   "v8system.dll": {
     "Source2V8System001": 202416
   },
-  "vconcomm.dll": {
-    "VConComm001": 234816
-  },
   "vphysics2.dll": {
-    "VPhysics2_Handle_Interface_001": 4186400,
-    "VPhysics2_Interface_001": 4186464
+    "VPhysics2_Handle_Interface_001": 4190496,
+    "VPhysics2_Interface_001": 4190560
   },
   "vscript.dll": {
     "VScriptManager010": 1291152
@@ -197,6 +194,6 @@
     "VEngineCvar002": 446576
   },
   "worldrenderer.dll": {
-    "WorldRendererMgr001": 2181568
+    "WorldRendererMgr001": 2181536
   }
 }

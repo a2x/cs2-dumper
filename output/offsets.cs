@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-25 21:11:42.105397500 UTC
+// 2026-01-27 02:36:48.265997500 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
@@ -11,7 +11,7 @@ namespace CS2Dumper.Offsets {
         public const nint dwGameRules = 0x23035F0;
         public const nint dwGlobalVars = 0x20572A8;
         public const nint dwGlowManager = 0x2303600;
-        public const nint dwLocalPlayerController = 0x22ECA28;
+        public const nint dwLocalPlayerController = 0x22ECA18;
         public const nint dwLocalPlayerPawn = 0x2062850;
         public const nint dwPlantedC4 = 0x230FB80;
         public const nint dwPrediction = 0x2062760;
@@ -25,7 +25,7 @@ namespace CS2Dumper.Offsets {
     // Module: engine2.dll
     public static class Engine2Dll {
         public const nint dwBuildNumber = 0x606504;
-        public const nint dwNetworkGameClient = 0x900FF0;
+        public const nint dwNetworkGameClient = 0x900FB0;
         public const nint dwNetworkGameClient_clientTickCount = 0x378;
         public const nint dwNetworkGameClient_deltaTick = 0x24C;
         public const nint dwNetworkGameClient_isBackgroundMap = 0x2C141F;
@@ -33,8 +33,8 @@ namespace CS2Dumper.Offsets {
         public const nint dwNetworkGameClient_maxClients = 0x240;
         public const nint dwNetworkGameClient_serverTickCount = 0x24C;
         public const nint dwNetworkGameClient_signOnState = 0x230;
-        public const nint dwWindowHeight = 0x9053B4;
-        public const nint dwWindowWidth = 0x9053B0;
+        public const nint dwWindowHeight = 0x905364;
+        public const nint dwWindowWidth = 0x905360;
     }
     // Module: inputsystem.dll
     public static class InputsystemDll {
@@ -46,7 +46,7 @@ namespace CS2Dumper.Offsets {
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {
-        public const nint dwSoundSystem = 0x4F3470;
+        public const nint dwSoundSystem = 0x4F3490;
         public const nint dwSoundSystem_engineViewData = 0x7C;
     }
 }

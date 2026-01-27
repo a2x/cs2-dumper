@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-25 21:11:42.105397500 UTC
+// 2026-01-27 02:36:48.265997500 UTC
 
 #pragma once
 
@@ -17,7 +17,7 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t dwGameRules = 0x23035F0;
             constexpr std::ptrdiff_t dwGlobalVars = 0x20572A8;
             constexpr std::ptrdiff_t dwGlowManager = 0x2303600;
-            constexpr std::ptrdiff_t dwLocalPlayerController = 0x22ECA28;
+            constexpr std::ptrdiff_t dwLocalPlayerController = 0x22ECA18;
             constexpr std::ptrdiff_t dwLocalPlayerPawn = 0x2062850;
             constexpr std::ptrdiff_t dwPlantedC4 = 0x230FB80;
             constexpr std::ptrdiff_t dwPrediction = 0x2062760;
@@ -31,7 +31,7 @@ namespace cs2_dumper {
         // Module: engine2.dll
         namespace engine2_dll {
             constexpr std::ptrdiff_t dwBuildNumber = 0x606504;
-            constexpr std::ptrdiff_t dwNetworkGameClient = 0x900FF0;
+            constexpr std::ptrdiff_t dwNetworkGameClient = 0x900FB0;
             constexpr std::ptrdiff_t dwNetworkGameClient_clientTickCount = 0x378;
             constexpr std::ptrdiff_t dwNetworkGameClient_deltaTick = 0x24C;
             constexpr std::ptrdiff_t dwNetworkGameClient_isBackgroundMap = 0x2C141F;
@@ -39,8 +39,8 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t dwNetworkGameClient_maxClients = 0x240;
             constexpr std::ptrdiff_t dwNetworkGameClient_serverTickCount = 0x24C;
             constexpr std::ptrdiff_t dwNetworkGameClient_signOnState = 0x230;
-            constexpr std::ptrdiff_t dwWindowHeight = 0x9053B4;
-            constexpr std::ptrdiff_t dwWindowWidth = 0x9053B0;
+            constexpr std::ptrdiff_t dwWindowHeight = 0x905364;
+            constexpr std::ptrdiff_t dwWindowWidth = 0x905360;
         }
         // Module: inputsystem.dll
         namespace inputsystem_dll {
@@ -52,7 +52,7 @@ namespace cs2_dumper {
         }
         // Module: soundsystem.dll
         namespace soundsystem_dll {
-            constexpr std::ptrdiff_t dwSoundSystem = 0x4F3470;
+            constexpr std::ptrdiff_t dwSoundSystem = 0x4F3490;
             constexpr std::ptrdiff_t dwSoundSystem_engineViewData = 0x7C;
         }
     }

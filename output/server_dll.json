@@ -12329,7 +12329,6 @@
       "CMolotovProjectile": {
         "fields": {
           "m_bDetonated": 3016,
-          "m_bHasBouncedOffPlayer": 3248,
           "m_bIsIncGrenade": 2992,
           "m_stillTimer": 3024
         },
