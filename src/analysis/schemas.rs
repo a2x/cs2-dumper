@@ -27,7 +27,7 @@ pub enum ClassMetadata {
 pub struct Class {
     pub name: String,
     pub module_name: String,
-    pub parent: Option<Box<Class>>,
+    pub parent_name: Option<String>,
     pub metadata: Vec<ClassMetadata>,
     pub fields: Vec<ClassField>,
 }
@@ -64,7 +64,7 @@ pub fn schemas<P: Process + MemoryView>(process: &mut P) -> Result<SchemaMap> {
     let schema_system = read_schema_system(process)?;
     let type_scopes = read_type_scopes(process, &schema_system)?;
 
-    let map = type_scopes
+    Ok(type_scopes
         .into_iter()
         .map(|type_scope| {
             (
@@ -72,9 +72,7 @@ pub fn schemas<P: Process + MemoryView>(process: &mut P) -> Result<SchemaMap> {
                 (type_scope.classes, type_scope.enums),
             )
         })
-        .collect();
-
-    Ok(map)
+        .collect())
 }
 
 fn read_class_binding(
@@ -86,51 +84,35 @@ fn read_class_binding(
     let module_name = mem
         .read_utf8_lossy(binding.module_name.address(), 128)
         .data_part()
-        .map(|s| format!("{}.dll", s))?;
+        .map(|m| format!("{}.dll", m))?;
 
     let name = mem
-        .read_utf8_lossy(binding.name.address(), 4096)
+        .read_utf8_lossy(binding.name.address(), 128)
         .data_part()?;
 
     if name.is_empty() {
-        bail!("empty class name");
+        bail!("invalid class name");
     }
 
-    let parent = binding.base_classes.non_null().and_then(|ptr| {
+    let parent_name = binding.base_classes.non_null().and_then(|ptr| {
         let base_class = mem.read_ptr(ptr).data_part().ok()?;
-        let parent_class = mem.read_ptr(base_class.prev).data_part().ok()?;
+        let parent_class = mem.read_ptr(base_class.class).data_part().ok()?;
 
-        let name = mem
-            .read_utf8_lossy(parent_class.name.address(), 4096)
+        let parent_name = mem
+            .read_utf8_lossy(parent_class.name.address(), 128)
             .data_part()
             .ok()?;
 
-        Some(Box::new(Class {
-            name,
-            module_name: String::new(),
-            parent: None,
-            metadata: Vec::new(),
-            fields: Vec::new(),
-        }))
+        (!parent_name.is_empty()).then_some(parent_name)
     });
 
     let fields = read_class_binding_fields(mem, &binding)?;
     let metadata = read_class_binding_metadata(mem, &binding)?;
 
-    debug!(
-        "found class: {} at {:#X} (module name: {}) (parent name: {:?}) (metadata count: {}) (field count: {})",
-        name,
-        binding_ptr.to_umem(),
-        module_name,
-        parent.as_ref().map(|p| p.name.clone()),
-        metadata.len(),
-        fields.len(),
-    );
-
     Ok(Class {
         name,
         module_name,
-        parent,
+        parent_name,
         metadata,
         fields,
     })
@@ -151,13 +133,9 @@ fn read_class_binding_fields(
             return Ok(acc);
         }
 
-        let name = mem
-            .read_utf8_lossy(field.name.address(), 4096)
-            .data_part()?;
-
+        let name = mem.read_utf8_lossy(field.name.address(), 128).data_part()?;
         let r#type = mem.read_ptr(field.r#type).data_part()?;
 
-        // TODO: Parse this properly.
         let type_name = mem
             .read_utf8_lossy(r#type.name.address(), 128)
             .data_part()?
@@ -191,7 +169,7 @@ fn read_class_binding_metadata(
         }
 
         let name = mem
-            .read_utf8_lossy(metadata.name.address(), 4096)
+            .read_utf8_lossy(metadata.name.address(), 128)
             .data_part()?;
 
         let network_value = mem.read_ptr(metadata.network_value).data_part()?;
@@ -199,7 +177,7 @@ fn read_class_binding_metadata(
         let metadata = match name.as_str() {
             "MNetworkChangeCallback" => unsafe {
                 let name = mem
-                    .read_utf8_lossy(network_value.value.name_ptr.address(), 4096)
+                    .read_utf8_lossy(network_value.value.name_ptr.address(), 128)
                     .data_part()?;
 
                 ClassMetadata::NetworkChangeCallback { name }
@@ -208,7 +186,7 @@ fn read_class_binding_metadata(
                 let var_value = network_value.value.var_value;
 
                 let name = mem
-                    .read_utf8_lossy(var_value.name.address(), 4096)
+                    .read_utf8_lossy(var_value.name.address(), 128)
                     .data_part()?;
 
                 let type_name = mem
@@ -234,27 +212,19 @@ fn read_enum_binding(
     let binding = mem.read_ptr(binding_ptr).data_part()?;
 
     let name = mem
-        .read_utf8_lossy(binding.name.address(), 4096)
+        .read_utf8_lossy(binding.name.address(), 128)
         .data_part()?;
 
     if name.is_empty() {
-        bail!("empty enum name");
+        bail!("invalid enum name");
     }
 
     let members = read_enum_binding_members(mem, &binding)?;
 
-    debug!(
-        "found enum: {} at {:#X} (alignment: {}) (member count: {})",
-        name,
-        binding_ptr.to_umem(),
-        binding.align_of,
-        binding.size,
-    );
-
     Ok(Enum {
         name,
-        alignment: binding.align_of,
-        size: binding.enum_count,
+        alignment: binding.alignment,
+        size: binding.enumerator_count,
         members,
     })
 }
@@ -263,15 +233,15 @@ fn read_enum_binding_members(
     mem: &mut impl MemoryView,
     binding: &SchemaEnumBinding,
 ) -> Result<Vec<EnumMember>> {
-    if binding.enums.is_null() {
+    if binding.enumerators.is_null() {
         return Ok(Vec::new());
     }
 
-    (0..binding.enum_count).try_fold(Vec::new(), |mut acc, i| {
-        let r#enum = mem.read_ptr(binding.enums.at(i as _)).data_part()?;
+    (0..binding.enumerator_count).try_fold(Vec::new(), |mut acc, i| {
+        let r#enum = mem.read_ptr(binding.enumerators.at(i as _)).data_part()?;
 
         let name = mem
-            .read_utf8_lossy(r#enum.name.address(), 4096)
+            .read_utf8_lossy(r#enum.name.address(), 128)
             .data_part()?;
 
         acc.push(EnumMember {
@@ -296,15 +266,15 @@ fn read_schema_system<P: Process + MemoryView>(process: &mut P) -> Result<Schema
 
     if !view
         .scanner()
-        .finds_code(pattern!("488905${'} 4c8d0d${} 33c0 48c705[8] 8905"), &mut save)
+        .finds_code(pattern!("4c8d35${'} 0f2845"), &mut save)
     {
         bail!("outdated schema system pattern");
     }
 
     let schema_system: SchemaSystem = process.read(module.base + save[1]).data_part()?;
 
-    if schema_system.num_registrations == 0 {
-        bail!("no schema system registrations found");
+    if schema_system.registration_count == 0 {
+        bail!("no schema registrations");
     }
 
     Ok(schema_system)
@@ -316,7 +286,7 @@ fn read_type_scopes(
 ) -> Result<Vec<TypeScope>> {
     let type_scopes = &schema_system.type_scopes;
 
-    (0..type_scopes.size).try_fold(Vec::new(), |mut acc, i| {
+    (0..type_scopes.count).try_fold(Vec::new(), |mut acc, i| {
         let type_scope_ptr = type_scopes.element(mem, i as _)?;
         let type_scope = mem.read_ptr(type_scope_ptr).data_part()?;
 
@@ -326,14 +296,14 @@ fn read_type_scopes(
 
         let classes: Vec<_> = type_scope
             .class_bindings
-            .elements(mem)?
+            .elements(mem)
             .iter()
             .filter_map(|ptr| read_class_binding(mem, *ptr).ok())
             .collect();
 
         let enums: Vec<_> = type_scope
             .enum_bindings
-            .elements(mem)?
+            .elements(mem)
             .iter()
             .filter_map(|ptr| read_enum_binding(mem, *ptr).ok())
             .collect();
@@ -343,9 +313,8 @@ fn read_type_scopes(
         }
 
         debug!(
-            "found type scope: {} at {:#X} (class count: {}) (enum count: {})",
+            "module \"{}\" contains {} class(es) and {} enum(s)",
             module_name,
-            type_scope_ptr.to_umem(),
             classes.len(),
             enums.len(),
         );

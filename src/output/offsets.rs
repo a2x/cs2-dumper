@@ -29,7 +29,8 @@ impl CodeWriter for OffsetMap {
 
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#pragma once\n")?;
-        writeln!(fmt, "#include <cstddef>\n")?;
+        writeln!(fmt, "#include <cstddef>")?;
+        writeln!(fmt, "#include <cstdint>\n")?;
 
         fmt.block("namespace cs2_dumper", false, |fmt| {
             fmt.block("namespace offsets", false, |fmt| {

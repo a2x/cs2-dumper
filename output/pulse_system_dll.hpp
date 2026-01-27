@@ -1,16 +1,53 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-01-24 02:38:39.726673900 UTC
+// 2026-01-27 02:36:48.265997500 UTC
 
 #pragma once
 
 #include <cstddef>
+#include <cstdint>
 
 namespace cs2_dumper {
     namespace schemas {
         // Module: pulse_system.dll
         // Class count: 97
-        // Enum count: 0
+        // Enum count: 5
         namespace pulse_system_dll {
+            // Alignment: 4
+            // Member count: 2
+            enum class PulseBestOutflowRules_t : uint32_t {
+                SORT_BY_NUMBER_OF_VALID_CRITERIA = 0x0,
+                SORT_BY_OUTFLOW_INDEX = 0x1
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class PulseTestEnumShape_t : uint32_t {
+                CIRCLE = 0x64,
+                SQUARE = 0xC8,
+                TRIANGLE = 0x12C
+            };
+            // Alignment: 4
+            // Member count: 4
+            enum class PulseCursorCancelPriority_t : uint32_t {
+                None = 0x0,
+                CancelOnSucceeded = 0x1,
+                SoftCancel = 0x2,
+                HardCancel = 0x3
+            };
+            // Alignment: 4
+            // Member count: 2
+            enum class PulseMethodCallMode_t : uint32_t {
+                SYNC_WAIT_FOR_COMPLETION = 0x0,
+                ASYNC_FIRE_AND_FORGET = 0x1
+            };
+            // Alignment: 4
+            // Member count: 5
+            enum class PulseTestEnumColor_t : uint32_t {
+                BLACK = 0x0,
+                WHITE = 0x1,
+                RED = 0x2,
+                GREEN = 0x3,
+                BLUE = 0x4
+            };
             // Parent: None
             // Field count: 0
             //

@@ -41,17 +41,17 @@ impl CodeWriter for SchemaMap {
                                         .members
                                         .iter()
                                         .map(|member| {
-                                            let hex = if member.value < 0
-                                                || member.value > i32::MAX as i64
-                                            {
-                                                format!(
-                                                    "unchecked(({}){})",
-                                                    type_name, member.value
-                                                )
-                                            } else {
-                                                format!("{:#X}", member.value)
-                                            };
-                                            format!("{} = {}", member.name, hex)
+                                            let formatted_value =
+                                                if (0..=i32::MAX as i64).contains(&member.value) {
+                                                    format!("{:#X}", member.value)
+                                                } else {
+                                                    format!(
+                                                        "unchecked(({}){})",
+                                                        type_name, member.value
+                                                    )
+                                                };
+
+                                            format!("{} = {}", member.name, formatted_value)
                                         })
                                         .collect::<Vec<_>>()
                                         .join(",\n");
@@ -63,10 +63,10 @@ impl CodeWriter for SchemaMap {
 
                         for class in classes {
                             let parent_name = class
-                                .parent
-                                .as_ref()
-                                .map(|parent| slugify(&parent.name))
-                                .unwrap_or_else(|| String::from("None"));
+                                .parent_name
+                                .as_deref()
+                                .map(slugify)
+                                .unwrap_or("None".to_string());
 
                             writeln!(fmt, "// Parent: {}", parent_name)?;
                             writeln!(fmt, "// Field count: {}", class.fields.len())?;
@@ -101,7 +101,8 @@ impl CodeWriter for SchemaMap {
 
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#pragma once\n")?;
-        writeln!(fmt, "#include <cstddef>\n")?;
+        writeln!(fmt, "#include <cstddef>")?;
+        writeln!(fmt, "#include <cstdint>\n")?;
 
         fmt.block("namespace cs2_dumper", false, |fmt| {
             fmt.block("namespace schemas", false, |fmt| {
@@ -134,7 +135,23 @@ impl CodeWriter for SchemaMap {
                                             .members
                                             .iter()
                                             .map(|member| {
-                                                format!("{} = {:#X}", member.name, member.value)
+                                                let formatted_value = if (0..=i32::MAX as i64)
+                                                    .contains(&member.value)
+                                                {
+                                                    format!("{:#X}", member.value)
+                                                } else {
+                                                    let max_value = match type_name {
+                                                        "uint8_t" => 0xFFu64,
+                                                        "uint16_t" => 0xFFFFu64,
+                                                        "uint32_t" => 0xFFFFFFFFu64,
+                                                        "uint64_t" => 0xFFFFFFFFFFFFFFFFu64,
+                                                        _ => 0,
+                                                    };
+
+                                                    format!("{:#X}", max_value)
+                                                };
+
+                                                format!("{} = {}", member.name, formatted_value)
                                             })
                                             .collect::<Vec<_>>()
                                             .join(",\n");
@@ -146,10 +163,10 @@ impl CodeWriter for SchemaMap {
 
                             for class in classes {
                                 let parent_name = class
-                                    .parent
-                                    .as_ref()
-                                    .map(|parent| slugify(&parent.name))
-                                    .unwrap_or_else(|| String::from("None"));
+                                    .parent_name
+                                    .as_deref()
+                                    .map(slugify)
+                                    .unwrap_or("None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Field count: {}", class.fields.len())?;
@@ -219,7 +236,7 @@ impl CodeWriter for SchemaMap {
                         (
                             slugify(&class.name),
                             json!({
-                                "parent": class.parent.as_ref().map(|parent| &parent.name),
+                                "parent": class.parent_name,
                                 "fields": fields,
                                 "metadata": metadata
                             }),
@@ -311,18 +328,21 @@ impl CodeWriter for SchemaMap {
                                             .members
                                             .iter()
                                             .filter_map(|member| {
-                                                // Filter out duplicate values.
-                                                if used_values.insert(member.value) {
-                                                    let value = if member.value == -1 {
-                                                        format!("{}::MAX", type_name)
-                                                    } else {
-                                                        format!("{:#X}", member.value)
-                                                    };
-
-                                                    Some(format!("{} = {}", member.name, value))
-                                                } else {
-                                                    None
+                                                // Skip duplicate values.
+                                                if !used_values.insert(member.value) {
+                                                    return None;
                                                 }
+
+                                                let formatted_value = if member.value == -1 {
+                                                    format!("{}::MAX", type_name)
+                                                } else {
+                                                    format!("{:#X}", member.value)
+                                                };
+
+                                                Some(format!(
+                                                    "{} = {}",
+                                                    member.name, formatted_value
+                                                ))
                                             })
                                             .collect::<Vec<_>>()
                                             .join(",\n");
@@ -334,10 +354,10 @@ impl CodeWriter for SchemaMap {
 
                             for class in classes {
                                 let parent_name = class
-                                    .parent
-                                    .as_ref()
-                                    .map(|parent| slugify(&parent.name))
-                                    .unwrap_or_else(|| String::from("None"));
+                                    .parent_name
+                                    .as_deref()
+                                    .map(slugify)
+                                    .unwrap_or("None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Field count: {}", class.fields.len())?;
