@@ -1,9 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-02-10 04:46:36.809795800 UTC
+// 2026-02-10 04:56:00.323541700 UTC
 
 #pragma once
 
 #include <cstddef>
+#include <cstdint>
 
 namespace cs2_dumper {
     namespace interfaces {
@@ -186,7 +187,6 @@ namespace cs2_dumper {
         }
         // Module: steamclient64.dll
         namespace steamclient64_dll {
-            constexpr std::ptrdiff_t CLIENTENGINE_INTERFACE_VERSION005 = 0xFFFFFFFF8BB5193A;
             constexpr std::ptrdiff_t IVALIDATE001 = 0x166F0A8;
             constexpr std::ptrdiff_t SteamClient006 = 0x166C5B0;
             constexpr std::ptrdiff_t SteamClient007 = 0x166C5B8;
