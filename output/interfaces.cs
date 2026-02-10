@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-02-05 03:37:03.980792600 UTC
+// 2026-02-10 22:35:02.976159900 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x205F0A0;
-        public const nint EmptyWorldService001_Client = 0x2018F10;
-        public const nint GameClientExports001 = 0x205BD80;
-        public const nint LegacyGameUI001 = 0x2079660;
-        public const nint Source2Client002 = 0x2305C20;
-        public const nint Source2ClientConfig001 = 0x2289B50;
-        public const nint Source2ClientPrediction001 = 0x20669F0;
-        public const nint Source2ClientUI001 = 0x2077E80;
+        public const nint ClientToolsInfo_001 = 0x205D090;
+        public const nint EmptyWorldService001_Client = 0x2016F10;
+        public const nint GameClientExports001 = 0x2059D70;
+        public const nint LegacyGameUI001 = 0x20775F0;
+        public const nint Source2Client002 = 0x2303D80;
+        public const nint Source2ClientConfig001 = 0x2287C40;
+        public const nint Source2ClientPrediction001 = 0x20649F0;
+        public const nint Source2ClientUI001 = 0x2075E70;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -80,7 +80,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: localize.dll
     public static class LocalizeDll {
-        public const nint Localize_001 = 0x55E20;
+        public const nint Localize_001 = 0x57E20;
     }
     // Module: matchmaking.dll
     public static class MatchmakingDll {
@@ -124,7 +124,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: particles.dll
     public static class ParticlesDll {
-        public const nint ParticleSystemMgr003 = 0x520E80;
+        public const nint ParticleSystemMgr003 = 0x520F50;
     }
     // Module: pulse_system.dll
     public static class PulseSystemDll {
@@ -147,9 +147,9 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: scenesystem.dll
     public static class ScenesystemDll {
-        public const nint RenderingPipelines_001 = 0x65BAB0;
-        public const nint SceneSystem_002 = 0x8CFEA0;
-        public const nint SceneUtils_001 = 0x65C9C0;
+        public const nint RenderingPipelines_001 = 0x65BAC0;
+        public const nint SceneSystem_002 = 0x8CFEE0;
+        public const nint SceneUtils_001 = 0x65C9D0;
     }
     // Module: schemasystem.dll
     public static class SchemasystemDll {
@@ -157,8 +157,8 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: server.dll
     public static class ServerDll {
-        public const nint EmptyWorldService001_Server = 0x1B6CB00;
-        public const nint EntitySubclassUtilsV001 = 0x1B18120;
+        public const nint EmptyWorldService001_Server = 0x1B6CB20;
+        public const nint EntitySubclassUtilsV001 = 0x1B18140;
         public const nint NavGameTest001 = 0x1C167A8;
         public const nint ServerToolsInfo_001 = 0x1BC7A78;
         public const nint Source2GameClients001 = 0x1BC4AF0;
@@ -166,7 +166,7 @@ namespace CS2Dumper.Interfaces {
         public const nint Source2GameEntities001 = 0x1BC7180;
         public const nint Source2Server001 = 0x1BC6FE0;
         public const nint Source2ServerConfig001 = 0x1E4B768;
-        public const nint customnavsystem001 = 0x1AF6F08;
+        public const nint customnavsystem001 = 0x1AF6F18;
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {
@@ -216,8 +216,8 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: vphysics2.dll
     public static class Vphysics2Dll {
-        public const nint VPhysics2_Handle_Interface_001 = 0x400120;
-        public const nint VPhysics2_Interface_001 = 0x400160;
+        public const nint VPhysics2_Handle_Interface_001 = 0x4000E0;
+        public const nint VPhysics2_Interface_001 = 0x400120;
     }
     // Module: vscript.dll
     public static class VscriptDll {
@@ -230,6 +230,6 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: worldrenderer.dll
     public static class WorldrendererDll {
-        public const nint WorldRendererMgr001 = 0x214A20;
+        public const nint WorldRendererMgr001 = 0x214A00;
     }
 }
