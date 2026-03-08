@@ -2,7 +2,7 @@ use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{CodeWriter, Formatter, OffsetMap, slugify};
+use super::{CodeWriter, Formatter, OffsetMap, slugify, zig_ident};
 
 impl CodeWriter for OffsetMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -73,6 +73,37 @@ impl CodeWriter for OffsetMap {
                         |fmt| {
                             for (name, value) in offsets {
                                 writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
+                            }
+
+                            Ok(())
+                        },
+                    )?;
+                }
+
+                Ok(())
+            })
+        })
+    }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+            fmt.block("pub const offsets = struct", true, |fmt| {
+                for (module_name, offsets) in self {
+                    writeln!(fmt, "// Module: {}", module_name)?;
+
+                    let module_name = zig_ident(&AsSnakeCase(slugify(module_name)).to_string());
+
+                    fmt.block(
+                        &format!("pub const {} = struct", module_name),
+                        true,
+                        |fmt| {
+                            for (name, value) in offsets {
+                                writeln!(
+                                    fmt,
+                                    "pub const {}: usize = {:#X};",
+                                    zig_ident(name),
+                                    value
+                                )?;
                             }
 
                             Ok(())

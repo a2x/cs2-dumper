@@ -36,7 +36,12 @@ struct Args {
     connector_args: Option<String>,
 
     /// The types of files to generate.
-    #[arg(short, long, value_delimiter = ',', default_values = ["cs", "hpp", "json", "rs"])]
+    #[arg(
+        short,
+        long,
+        value_delimiter = ',',
+        default_values = ["cs", "hpp", "json", "rs", "zig"]
+    )]
     file_types: Vec<String>,
 
     /// The number of spaces to use per indentation level.

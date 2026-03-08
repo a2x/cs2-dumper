@@ -34,6 +34,7 @@ impl<'a> Item<'a> {
             "hpp" => self.write_hpp(fmt),
             "json" => self.write_json(fmt),
             "rs" => self.write_rs(fmt),
+            "zig" => self.write_zig(fmt),
             _ => unimplemented!(),
         }
     }
@@ -44,6 +45,7 @@ trait CodeWriter {
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
 }
 
 impl<'a> CodeWriter for Item<'a> {
@@ -80,6 +82,15 @@ impl<'a> CodeWriter for Item<'a> {
             Item::Interfaces(ifaces) => ifaces.write_rs(fmt),
             Item::Offsets(offsets) => offsets.write_rs(fmt),
             Item::Schemas(schemas) => schemas.write_rs(fmt),
+        }
+    }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        match self {
+            Item::Buttons(buttons) => buttons.write_zig(fmt),
+            Item::Interfaces(ifaces) => ifaces.write_zig(fmt),
+            Item::Offsets(offsets) => offsets.write_zig(fmt),
+            Item::Schemas(schemas) => schemas.write_zig(fmt),
         }
     }
 }
@@ -192,4 +203,86 @@ impl<'a> Output<'a> {
 #[inline]
 fn slugify(input: &str) -> String {
     input.replace(|c: char| !c.is_alphanumeric(), "_")
+}
+
+#[inline]
+fn zig_ident(input: &str) -> String {
+    if is_zig_identifier(input) && !is_zig_keyword(input) {
+        input.to_string()
+    } else {
+        let escaped = input.replace('\\', "\\\\").replace('"', "\\\"");
+
+        format!("@\"{}\"", escaped)
+    }
+}
+
+#[inline]
+fn is_zig_identifier(input: &str) -> bool {
+    let mut chars = input.chars();
+
+    match chars.next() {
+        Some(c) if c == '_' || c.is_ascii_alphabetic() => {}
+        _ => return false,
+    }
+
+    chars.all(|c| c == '_' || c.is_ascii_alphanumeric())
+}
+
+#[inline]
+fn is_zig_keyword(input: &str) -> bool {
+    matches!(
+        input,
+        "addrspace"
+            | "align"
+            | "allowzero"
+            | "and"
+            | "anyframe"
+            | "anytype"
+            | "asm"
+            | "async"
+            | "await"
+            | "break"
+            | "callconv"
+            | "catch"
+            | "comptime"
+            | "const"
+            | "continue"
+            | "defer"
+            | "else"
+            | "enum"
+            | "errdefer"
+            | "error"
+            | "export"
+            | "extern"
+            | "false"
+            | "fn"
+            | "for"
+            | "if"
+            | "inline"
+            | "linksection"
+            | "noalias"
+            | "noinline"
+            | "nosuspend"
+            | "null"
+            | "opaque"
+            | "or"
+            | "orelse"
+            | "packed"
+            | "pub"
+            | "resume"
+            | "return"
+            | "struct"
+            | "suspend"
+            | "switch"
+            | "test"
+            | "threadlocal"
+            | "true"
+            | "try"
+            | "union"
+            | "unreachable"
+            | "usingnamespace"
+            | "var"
+            | "volatile"
+            | "while"
+    )
 }

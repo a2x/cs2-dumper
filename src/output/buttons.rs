@@ -1,7 +1,7 @@
 use std::collections::BTreeMap;
 use std::fmt::{self, Write};
 
-use super::{ButtonMap, CodeWriter, Formatter};
+use super::{ButtonMap, CodeWriter, Formatter, zig_ident};
 
 impl CodeWriter for ButtonMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -61,6 +61,20 @@ impl CodeWriter for ButtonMap {
                     }
 
                     writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
+                }
+
+                Ok(())
+            })
+        })
+    }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+            writeln!(fmt, "// Module: client.dll")?;
+
+            fmt.block("pub const buttons = struct", true, |fmt| {
+                for (name, value) in self {
+                    writeln!(fmt, "pub const {}: usize = {:#X};", zig_ident(name), value)?;
                 }
 
                 Ok(())

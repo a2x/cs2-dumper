@@ -36,7 +36,7 @@ Linux or as an administrator on Windows.
 
 - `-c, --connector <connector>`: The name of the memflow connector to use.
 - `-a, --connector-args <connector-args>`: Additional arguments to pass to the memflow connector.
-- `-f, --file-types <file-types>`: The types of files to generate. Default: `cs`, `hpp`,  `json`, `rs`.
+- `-f, --file-types <file-types>`: The types of files to generate. Default: `cs`, `hpp`,  `json`, `rs`, `zig`.
 - `-i, --indent-size <indent-size>`: The number of spaces to use per indentation level. Default: `4`.
 - `-o, --output <output>`: The output directory to write the generated files to. Default: `output`.
 - `-p, --process-name <process-name>`: The name of the game process. Default: `cs2.exe`.
