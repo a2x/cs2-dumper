@@ -5,7 +5,7 @@ use heck::{AsPascalCase, AsSnakeCase};
 
 use serde_json::json;
 
-use super::{CodeWriter, Formatter, SchemaMap, slugify};
+use super::{CodeWriter, Formatter, SchemaMap, slugify, zig_ident};
 
 use crate::analysis::ClassMetadata;
 
@@ -390,6 +390,111 @@ impl CodeWriter for SchemaMap {
             })
         })
     }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+            fmt.block("pub const schemas = struct", true, |fmt| {
+                for (module_name, (classes, enums)) in self {
+                    writeln!(fmt, "// Module: {}", module_name)?;
+                    writeln!(fmt, "// Class count: {}", classes.len())?;
+                    writeln!(fmt, "// Enum count: {}", enums.len())?;
+
+                    let module_name = zig_ident(&AsSnakeCase(slugify(module_name)).to_string());
+
+                    fmt.block(
+                        &format!("pub const {} = struct", module_name),
+                        true,
+                        |fmt| {
+                            for enum_ in enums {
+                                let type_name = match enum_.alignment {
+                                    1 => "u8",
+                                    2 => "u16",
+                                    4 => "u32",
+                                    8 => "u64",
+                                    _ => continue,
+                                };
+
+                                writeln!(fmt, "// Alignment: {}", enum_.alignment)?;
+                                writeln!(fmt, "// Member count: {}", enum_.size)?;
+
+                                let enum_name = zig_ident(&slugify(&enum_.name));
+
+                                fmt.block(
+                                    &format!("pub const {} = enum({})", enum_name, type_name),
+                                    true,
+                                    |fmt| {
+                                        let mut used_values = HashSet::new();
+
+                                        let members = enum_
+                                            .members
+                                            .iter()
+                                            .filter_map(|member| {
+                                                // Skip duplicate values.
+                                                if !used_values.insert(member.value) {
+                                                    return None;
+                                                }
+
+                                                let formatted_value = format_zig_enum_member_value(
+                                                    member.value,
+                                                    type_name,
+                                                );
+
+                                                Some(format!(
+                                                    "{} = {}",
+                                                    zig_ident(&member.name),
+                                                    formatted_value
+                                                ))
+                                            })
+                                            .collect::<Vec<_>>()
+                                            .join(",\n");
+
+                                        writeln!(fmt, "{}", members)
+                                    },
+                                )?;
+                            }
+
+                            for class in classes {
+                                let parent_name = class
+                                    .parent_name
+                                    .as_deref()
+                                    .map(slugify)
+                                    .unwrap_or("None".to_string());
+
+                                writeln!(fmt, "// Parent: {}", parent_name)?;
+                                writeln!(fmt, "// Field count: {}", class.fields.len())?;
+
+                                write_metadata(fmt, &class.metadata)?;
+
+                                let class_name = zig_ident(&slugify(&class.name));
+
+                                fmt.block(
+                                    &format!("pub const {} = struct", class_name),
+                                    true,
+                                    |fmt| {
+                                        for field in &class.fields {
+                                            writeln!(
+                                                fmt,
+                                                "pub const {}: usize = {:#X}; // {}",
+                                                zig_ident(&field.name),
+                                                field.offset,
+                                                field.type_name
+                                            )?;
+                                        }
+
+                                        Ok(())
+                                    },
+                                )?;
+                            }
+
+                            Ok(())
+                        },
+                    )?;
+                }
+
+                Ok(())
+            })
+        })
+    }
 }
 
 fn write_metadata(fmt: &mut Formatter<'_>, metadata: &[ClassMetadata]) -> fmt::Result {
@@ -415,4 +520,20 @@ fn write_metadata(fmt: &mut Formatter<'_>, metadata: &[ClassMetadata]) -> fmt::R
     }
 
     Ok(())
+}
+
+fn format_zig_enum_member_value(value: i64, type_name: &str) -> String {
+    if value >= 0 {
+        return format!("{:#X}", value);
+    }
+
+    let wrapped_value = match type_name {
+        "u8" => value as u8 as u64,
+        "u16" => value as u16 as u64,
+        "u32" => value as u32 as u64,
+        "u64" => value as u64,
+        _ => 0,
+    };
+
+    format!("{:#X}", wrapped_value)
 }
