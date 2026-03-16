@@ -1,0 +1,196 @@
+// Generated using https://github.com/a2x/cs2-dumper
+// 2026-03-16 07:21:21.899821400 UTC
+
+pub const cs2_dumper = struct {
+    pub const schemas = struct {
+        // Module: steamaudio.dll
+        // Class count: 16
+        // Enum count: 0
+        pub const steamaudio_dll = struct {
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SteamAudioReverbClusteringSettings_t = struct {
+                pub const m_bEnableClustering: usize = 0x0; // bool
+                pub const m_nCubeMapResolution: usize = 0x4; // int32
+                pub const m_flDepthThreshold: usize = 0x8; // float32
+            };
+            // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SteamAudioCustomDataDimensionsSettings_t = struct {
+                pub const m_nAmbisonicsOrderOutsideField: usize = 0x0; // int32
+                pub const m_nAmbisonicsOrderInsideSizeField: usize = 0x4; // int32
+                pub const m_flOutsideThreshold: usize = 0x8; // float32
+                pub const m_flSizeThreshold: usize = 0xC; // float32
+                pub const m_flInsideThreshold: usize = 0x10; // float32
+            };
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SteamAudioPathSettings_t = struct {
+                pub const m_nNumVisSamples: usize = 0x0; // int32
+                pub const m_flProbeVisRadius: usize = 0x4; // float32
+                pub const m_flProbeVisThreshold: usize = 0x8; // float32
+                pub const m_flProbePathRange: usize = 0xC; // float32
+            };
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioAmbisonicsField = struct {
+                pub const m_field: usize = 0x0; // CUtlVector<float32>
+            };
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioBakedPathingData = struct {
+                pub const m_nBands: usize = 0x0; // int32
+                pub const m_probes: usize = 0x8; // CSteamAudioProbeData
+                pub const m_movables: usize = 0x10; // CSteamAudioMovableBakedData<CSteamAudioBakedPathingData>
+            };
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SteamAudioReverbSettings_t = struct {
+                pub const m_nNumRays: usize = 0x0; // int32
+                pub const m_nNumBounces: usize = 0x4; // int32
+                pub const m_flIRDuration: usize = 0x8; // float32
+                pub const m_nAmbisonicsOrder: usize = 0xC; // int32
+            };
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioProbeData = struct {
+                pub const m_pProbeBatch: usize = 0x0; // IPLProbeBatch
+            };
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SteamAudioReverbCompressionSettings_t = struct {
+                pub const m_bEnableCompression: usize = 0x0; // bool
+                pub const m_flQuality: usize = 0x4; // float32
+            };
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioBakedMaterialsData = struct {
+                pub const m_probes: usize = 0x0; // CSteamAudioProbeData
+                pub const m_vecMaterialTokens: usize = 0x8; // CUtlVector<uint32>
+                pub const m_vecMaterialWeights: usize = 0x20; // CUtlVector<float32>
+            };
+            // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioBakedOcclusionData = struct {
+                pub const m_settings: usize = 0x0; // SteamAudioCustomDataOcclusionSettings_t
+                pub const m_probes: usize = 0x10; // CSteamAudioProbeData
+                pub const m_vecPathingRatio: usize = 0x18; // CUtlVector<float32>
+                pub const m_vecPathingDeviation: usize = 0x30; // CUtlVector<float32>
+                pub const m_vecReflectionRatio: usize = 0x48; // CUtlVector<float32>
+            };
+            // Parent: None
+            // Field count: 11
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioBakedReverbData = struct {
+                pub const m_nBands: usize = 0x0; // int32
+                pub const m_probes: usize = 0x8; // CSteamAudioProbeData
+                pub const m_grid: usize = 0x10; // CSteamAudioProbeGrid
+                pub const m_reverbSettings: usize = 0x68; // SteamAudioReverbSettings_t
+                pub const m_reverbClusteringSettings: usize = 0x78; // SteamAudioReverbClusteringSettings_t
+                pub const m_reverbCompressionSettings: usize = 0x84; // SteamAudioReverbCompressionSettings_t
+                pub const m_clusteredProbes: usize = 0x90; // CSteamAudioProbeData
+                pub const m_vecClusterForProbe: usize = 0x98; // CUtlVector<int16>
+                pub const m_compressedData: usize = 0xB0; // CSteamAudioCompressedReverb
+                pub const m_compressedClusteredData: usize = 0x110; // CSteamAudioCompressedReverb
+                pub const m_movables: usize = 0x170; // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>
+            };
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioProbeLineSegment = struct {
+                pub const m_vStart: usize = 0x0; // Vector
+                pub const m_vEnd: usize = 0xC; // Vector
+                pub const m_vecIntervals: usize = 0x18; // CUtlVector<float32>
+                pub const m_vecProbeIndices: usize = 0x30; // CUtlVector<int32>
+            };
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SteamAudioCustomDataOcclusionSettings_t = struct {
+                pub const m_bEnablePathing: usize = 0x0; // bool
+                pub const m_bEnableReflections: usize = 0x1; // bool
+                pub const m_nReflectionRays: usize = 0x4; // int32
+                pub const m_nReflectionBounces: usize = 0x8; // int32
+            };
+            // Parent: None
+            // Field count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioBakedDimensionsData = struct {
+                pub const m_settings: usize = 0x0; // SteamAudioCustomDataDimensionsSettings_t
+                pub const m_probes: usize = 0x18; // CSteamAudioProbeData
+                pub const m_vecInOut: usize = 0x20; // CUtlVector<float32>
+                pub const m_vecSize: usize = 0x38; // CUtlVector<float32>
+                pub const m_vecOutsideField: usize = 0x50; // CUtlVector<CSteamAudioAmbisonicsField>
+                pub const m_vecInsideSmallSizeField: usize = 0x68; // CUtlVector<CSteamAudioAmbisonicsField>
+                pub const m_movables: usize = 0x80; // CSteamAudioMovableBakedData<CSteamAudioBakedDimensionsData>
+            };
+            // Parent: None
+            // Field count: 7
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioProbeGrid = struct {
+                pub const m_aabb: usize = 0x0; // AABB_t
+                pub const m_flSpacing: usize = 0x18; // float32
+                pub const m_nx: usize = 0x1C; // int32
+                pub const m_ny: usize = 0x20; // int32
+                pub const m_nz: usize = 0x24; // int32
+                pub const m_vecLineSegments: usize = 0x28; // CUtlVector<CSteamAudioProbeLineSegment>
+                pub const m_vecProbes: usize = 0x40; // CUtlVector<Vector>
+            };
+            // Parent: None
+            // Field count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CSteamAudioCompressedReverb = struct {
+                pub const m_nChannels: usize = 0x0; // int32
+                pub const m_nBands: usize = 0x4; // int32
+                pub const m_nBins: usize = 0x8; // int32
+                pub const m_nProbes: usize = 0xC; // int32
+                pub const m_vecNumSingularValues: usize = 0x10; // CUtlVector<int32>
+                pub const m_vecDictionary: usize = 0x28; // CUtlVector<float32>
+                pub const m_vecCompressedData: usize = 0x40; // CUtlVector<float32>
+                pub const m_pCompressedData: usize = 0x58; // IPLCompressedEnergyFields
+            };
+        };
+    };
+};
