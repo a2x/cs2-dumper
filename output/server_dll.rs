@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-16 07:21:21.899821400 UTC
+// 2026-03-17 09:52:27.225884900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -2722,7 +2722,7 @@ pub mod cs2_dumper {
                 pub const m_visible: usize = 0xB10; // CUtlVector<CFish*>
             }
             // Parent: CBot
-            // Field count: 139
+            // Field count: 140
             pub mod CCSBot {
                 pub const m_eyePosition: usize = 0x108; // VectorWS
                 pub const m_name: usize = 0x114; // char[64]
@@ -2784,14 +2784,15 @@ pub mod cs2_dumper {
                 pub const m_bendNoisePositionValid: usize = 0x6334; // bool
                 pub const m_lookAroundStateTimestamp: usize = 0x6338; // float32
                 pub const m_lookAheadAngle: usize = 0x633C; // float32
-                pub const m_forwardAngle: usize = 0x6340; // float32
-                pub const m_inhibitLookAroundTimestamp: usize = 0x6344; // float32
-                pub const m_lookAtSpot: usize = 0x634C; // Vector
-                pub const m_lookAtSpotDuration: usize = 0x635C; // float32
-                pub const m_lookAtSpotTimestamp: usize = 0x6360; // float32
-                pub const m_lookAtSpotAngleTolerance: usize = 0x6364; // float32
-                pub const m_lookAtSpotClearIfClose: usize = 0x6368; // bool
-                pub const m_lookAtSpotAttack: usize = 0x6369; // bool
+                pub const m_lookUpAngle: usize = 0x6340; // float32
+                pub const m_forwardAngle: usize = 0x6344; // float32
+                pub const m_inhibitLookAroundTimestamp: usize = 0x6348; // float32
+                pub const m_lookAtSpot: usize = 0x6350; // Vector
+                pub const m_lookAtSpotDuration: usize = 0x6360; // float32
+                pub const m_lookAtSpotTimestamp: usize = 0x6364; // float32
+                pub const m_lookAtSpotAngleTolerance: usize = 0x6368; // float32
+                pub const m_lookAtSpotClearIfClose: usize = 0x636C; // bool
+                pub const m_lookAtSpotAttack: usize = 0x636D; // bool
                 pub const m_lookAtDesc: usize = 0x6370; // char*
                 pub const m_peripheralTimestamp: usize = 0x6378; // float32
                 pub const m_approachPointCount: usize = 0x6500; // uint8
