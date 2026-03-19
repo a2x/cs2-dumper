@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-16 07:21:21.899821400 UTC
+// 2026-03-19 05:31:53.011545300 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -2590,7 +2590,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_visible = 0xB10; // CUtlVector<CFish*>
         }
         // Parent: CBot
-        // Field count: 139
+        // Field count: 140
         public static class CCSBot {
             public const nint m_eyePosition = 0x108; // VectorWS
             public const nint m_name = 0x114; // char[64]
@@ -2652,14 +2652,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_bendNoisePositionValid = 0x6334; // bool
             public const nint m_lookAroundStateTimestamp = 0x6338; // float32
             public const nint m_lookAheadAngle = 0x633C; // float32
-            public const nint m_forwardAngle = 0x6340; // float32
-            public const nint m_inhibitLookAroundTimestamp = 0x6344; // float32
-            public const nint m_lookAtSpot = 0x634C; // Vector
-            public const nint m_lookAtSpotDuration = 0x635C; // float32
-            public const nint m_lookAtSpotTimestamp = 0x6360; // float32
-            public const nint m_lookAtSpotAngleTolerance = 0x6364; // float32
-            public const nint m_lookAtSpotClearIfClose = 0x6368; // bool
-            public const nint m_lookAtSpotAttack = 0x6369; // bool
+            public const nint m_lookUpAngle = 0x6340; // float32
+            public const nint m_forwardAngle = 0x6344; // float32
+            public const nint m_inhibitLookAroundTimestamp = 0x6348; // float32
+            public const nint m_lookAtSpot = 0x6350; // Vector
+            public const nint m_lookAtSpotDuration = 0x6360; // float32
+            public const nint m_lookAtSpotTimestamp = 0x6364; // float32
+            public const nint m_lookAtSpotAngleTolerance = 0x6368; // float32
+            public const nint m_lookAtSpotClearIfClose = 0x636C; // bool
+            public const nint m_lookAtSpotAttack = 0x636D; // bool
             public const nint m_lookAtDesc = 0x6370; // char*
             public const nint m_peripheralTimestamp = 0x6378; // float32
             public const nint m_approachPointCount = 0x6500; // uint8
@@ -13407,7 +13408,7 @@ namespace CS2Dumper.Schemas {
         public static class CBtNodeDecorator {
         }
         // Parent: None
-        // Field count: 11
+        // Field count: 12
         public static class CSAdditionalPerRoundStats_t {
             public const nint m_numChickensKilled = 0x0; // int32
             public const nint m_killsWhileBlind = 0x4; // int32
@@ -13420,6 +13421,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDefuseStarts = 0x1C; // int32
             public const nint m_nHostagePickUps = 0x20; // int32
             public const nint m_numTeammatesFlashed = 0x24; // int32
+            public const nint m_strAnnotationsWorkshopId = 0x28; // CUtlString
         }
         // Parent: None
         // Field count: 0
@@ -13461,18 +13463,18 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 12
         public static class CSAdditionalMatchStats_t {
-            public const nint m_numRoundsSurvivedStreak = 0xF0; // int32
-            public const nint m_maxNumRoundsSurvivedStreak = 0xF4; // int32
-            public const nint m_numRoundsSurvivedTotal = 0xF8; // int32
-            public const nint m_iRoundsWonWithoutPurchase = 0xFC; // int32
-            public const nint m_iRoundsWonWithoutPurchaseTotal = 0x100; // int32
-            public const nint m_numFirstKills = 0x104; // int32
-            public const nint m_numClutchKills = 0x108; // int32
-            public const nint m_numPistolKills = 0x10C; // int32
-            public const nint m_numSniperKills = 0x110; // int32
-            public const nint m_iNumSuicides = 0x114; // int32
-            public const nint m_iNumTeamKills = 0x118; // int32
-            public const nint m_flTeamDamage = 0x11C; // float32
+            public const nint m_numRoundsSurvivedStreak = 0xF8; // int32
+            public const nint m_maxNumRoundsSurvivedStreak = 0xFC; // int32
+            public const nint m_numRoundsSurvivedTotal = 0x100; // int32
+            public const nint m_iRoundsWonWithoutPurchase = 0x104; // int32
+            public const nint m_iRoundsWonWithoutPurchaseTotal = 0x108; // int32
+            public const nint m_numFirstKills = 0x10C; // int32
+            public const nint m_numClutchKills = 0x110; // int32
+            public const nint m_numPistolKills = 0x114; // int32
+            public const nint m_numSniperKills = 0x118; // int32
+            public const nint m_iNumSuicides = 0x11C; // int32
+            public const nint m_iNumTeamKills = 0x120; // int32
+            public const nint m_flTeamDamage = 0x124; // float32
         }
         // Parent: None
         // Field count: 0

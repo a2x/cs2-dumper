@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-16 07:21:21.899821400 UTC
+// 2026-03-19 05:31:53.011545300 UTC
 
 #pragma once
 
@@ -2596,7 +2596,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_visible = 0xB10; // CUtlVector<CFish*>
             }
             // Parent: CBot
-            // Field count: 139
+            // Field count: 140
             namespace CCSBot {
                 constexpr std::ptrdiff_t m_eyePosition = 0x108; // VectorWS
                 constexpr std::ptrdiff_t m_name = 0x114; // char[64]
@@ -2658,14 +2658,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bendNoisePositionValid = 0x6334; // bool
                 constexpr std::ptrdiff_t m_lookAroundStateTimestamp = 0x6338; // float32
                 constexpr std::ptrdiff_t m_lookAheadAngle = 0x633C; // float32
-                constexpr std::ptrdiff_t m_forwardAngle = 0x6340; // float32
-                constexpr std::ptrdiff_t m_inhibitLookAroundTimestamp = 0x6344; // float32
-                constexpr std::ptrdiff_t m_lookAtSpot = 0x634C; // Vector
-                constexpr std::ptrdiff_t m_lookAtSpotDuration = 0x635C; // float32
-                constexpr std::ptrdiff_t m_lookAtSpotTimestamp = 0x6360; // float32
-                constexpr std::ptrdiff_t m_lookAtSpotAngleTolerance = 0x6364; // float32
-                constexpr std::ptrdiff_t m_lookAtSpotClearIfClose = 0x6368; // bool
-                constexpr std::ptrdiff_t m_lookAtSpotAttack = 0x6369; // bool
+                constexpr std::ptrdiff_t m_lookUpAngle = 0x6340; // float32
+                constexpr std::ptrdiff_t m_forwardAngle = 0x6344; // float32
+                constexpr std::ptrdiff_t m_inhibitLookAroundTimestamp = 0x6348; // float32
+                constexpr std::ptrdiff_t m_lookAtSpot = 0x6350; // Vector
+                constexpr std::ptrdiff_t m_lookAtSpotDuration = 0x6360; // float32
+                constexpr std::ptrdiff_t m_lookAtSpotTimestamp = 0x6364; // float32
+                constexpr std::ptrdiff_t m_lookAtSpotAngleTolerance = 0x6368; // float32
+                constexpr std::ptrdiff_t m_lookAtSpotClearIfClose = 0x636C; // bool
+                constexpr std::ptrdiff_t m_lookAtSpotAttack = 0x636D; // bool
                 constexpr std::ptrdiff_t m_lookAtDesc = 0x6370; // char*
                 constexpr std::ptrdiff_t m_peripheralTimestamp = 0x6378; // float32
                 constexpr std::ptrdiff_t m_approachPointCount = 0x6500; // uint8
@@ -13413,7 +13414,7 @@ namespace cs2_dumper {
             namespace CBtNodeDecorator {
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             namespace CSAdditionalPerRoundStats_t {
                 constexpr std::ptrdiff_t m_numChickensKilled = 0x0; // int32
                 constexpr std::ptrdiff_t m_killsWhileBlind = 0x4; // int32
@@ -13426,6 +13427,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nDefuseStarts = 0x1C; // int32
                 constexpr std::ptrdiff_t m_nHostagePickUps = 0x20; // int32
                 constexpr std::ptrdiff_t m_numTeammatesFlashed = 0x24; // int32
+                constexpr std::ptrdiff_t m_strAnnotationsWorkshopId = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 0
@@ -13467,18 +13469,18 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 12
             namespace CSAdditionalMatchStats_t {
-                constexpr std::ptrdiff_t m_numRoundsSurvivedStreak = 0xF0; // int32
-                constexpr std::ptrdiff_t m_maxNumRoundsSurvivedStreak = 0xF4; // int32
-                constexpr std::ptrdiff_t m_numRoundsSurvivedTotal = 0xF8; // int32
-                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchase = 0xFC; // int32
-                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchaseTotal = 0x100; // int32
-                constexpr std::ptrdiff_t m_numFirstKills = 0x104; // int32
-                constexpr std::ptrdiff_t m_numClutchKills = 0x108; // int32
-                constexpr std::ptrdiff_t m_numPistolKills = 0x10C; // int32
-                constexpr std::ptrdiff_t m_numSniperKills = 0x110; // int32
-                constexpr std::ptrdiff_t m_iNumSuicides = 0x114; // int32
-                constexpr std::ptrdiff_t m_iNumTeamKills = 0x118; // int32
-                constexpr std::ptrdiff_t m_flTeamDamage = 0x11C; // float32
+                constexpr std::ptrdiff_t m_numRoundsSurvivedStreak = 0xF8; // int32
+                constexpr std::ptrdiff_t m_maxNumRoundsSurvivedStreak = 0xFC; // int32
+                constexpr std::ptrdiff_t m_numRoundsSurvivedTotal = 0x100; // int32
+                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchase = 0x104; // int32
+                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchaseTotal = 0x108; // int32
+                constexpr std::ptrdiff_t m_numFirstKills = 0x10C; // int32
+                constexpr std::ptrdiff_t m_numClutchKills = 0x110; // int32
+                constexpr std::ptrdiff_t m_numPistolKills = 0x114; // int32
+                constexpr std::ptrdiff_t m_numSniperKills = 0x118; // int32
+                constexpr std::ptrdiff_t m_iNumSuicides = 0x11C; // int32
+                constexpr std::ptrdiff_t m_iNumTeamKills = 0x120; // int32
+                constexpr std::ptrdiff_t m_flTeamDamage = 0x124; // float32
             }
             // Parent: None
             // Field count: 0
