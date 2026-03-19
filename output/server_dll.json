@@ -16755,18 +16755,18 @@
       },
       "CSAdditionalMatchStats_t": {
         "fields": {
-          "m_flTeamDamage": 284,
-          "m_iNumSuicides": 276,
-          "m_iNumTeamKills": 280,
-          "m_iRoundsWonWithoutPurchase": 252,
-          "m_iRoundsWonWithoutPurchaseTotal": 256,
-          "m_maxNumRoundsSurvivedStreak": 244,
-          "m_numClutchKills": 264,
-          "m_numFirstKills": 260,
-          "m_numPistolKills": 268,
-          "m_numRoundsSurvivedStreak": 240,
-          "m_numRoundsSurvivedTotal": 248,
-          "m_numSniperKills": 272
+          "m_flTeamDamage": 292,
+          "m_iNumSuicides": 284,
+          "m_iNumTeamKills": 288,
+          "m_iRoundsWonWithoutPurchase": 260,
+          "m_iRoundsWonWithoutPurchaseTotal": 264,
+          "m_maxNumRoundsSurvivedStreak": 252,
+          "m_numClutchKills": 272,
+          "m_numFirstKills": 268,
+          "m_numPistolKills": 276,
+          "m_numRoundsSurvivedStreak": 248,
+          "m_numRoundsSurvivedTotal": 256,
+          "m_numSniperKills": 280
         },
         "metadata": [],
         "parent": null
@@ -16783,7 +16783,8 @@
           "m_nDefuseStarts": 28,
           "m_nHostagePickUps": 32,
           "m_numChickensKilled": 0,
-          "m_numTeammatesFlashed": 36
+          "m_numTeammatesFlashed": 36,
+          "m_strAnnotationsWorkshopId": 40
         },
         "metadata": [],
         "parent": null

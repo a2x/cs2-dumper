@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-17 09:52:27.225884900 UTC
+// 2026-03-19 10:05:24.652271200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -13408,7 +13408,7 @@ namespace CS2Dumper.Schemas {
         public static class CBtNodeDecorator {
         }
         // Parent: None
-        // Field count: 11
+        // Field count: 12
         public static class CSAdditionalPerRoundStats_t {
             public const nint m_numChickensKilled = 0x0; // int32
             public const nint m_killsWhileBlind = 0x4; // int32
@@ -13421,6 +13421,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nDefuseStarts = 0x1C; // int32
             public const nint m_nHostagePickUps = 0x20; // int32
             public const nint m_numTeammatesFlashed = 0x24; // int32
+            public const nint m_strAnnotationsWorkshopId = 0x28; // CUtlString
         }
         // Parent: None
         // Field count: 0
@@ -13462,18 +13463,18 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 12
         public static class CSAdditionalMatchStats_t {
-            public const nint m_numRoundsSurvivedStreak = 0xF0; // int32
-            public const nint m_maxNumRoundsSurvivedStreak = 0xF4; // int32
-            public const nint m_numRoundsSurvivedTotal = 0xF8; // int32
-            public const nint m_iRoundsWonWithoutPurchase = 0xFC; // int32
-            public const nint m_iRoundsWonWithoutPurchaseTotal = 0x100; // int32
-            public const nint m_numFirstKills = 0x104; // int32
-            public const nint m_numClutchKills = 0x108; // int32
-            public const nint m_numPistolKills = 0x10C; // int32
-            public const nint m_numSniperKills = 0x110; // int32
-            public const nint m_iNumSuicides = 0x114; // int32
-            public const nint m_iNumTeamKills = 0x118; // int32
-            public const nint m_flTeamDamage = 0x11C; // float32
+            public const nint m_numRoundsSurvivedStreak = 0xF8; // int32
+            public const nint m_maxNumRoundsSurvivedStreak = 0xFC; // int32
+            public const nint m_numRoundsSurvivedTotal = 0x100; // int32
+            public const nint m_iRoundsWonWithoutPurchase = 0x104; // int32
+            public const nint m_iRoundsWonWithoutPurchaseTotal = 0x108; // int32
+            public const nint m_numFirstKills = 0x10C; // int32
+            public const nint m_numClutchKills = 0x110; // int32
+            public const nint m_numPistolKills = 0x114; // int32
+            public const nint m_numSniperKills = 0x118; // int32
+            public const nint m_iNumSuicides = 0x11C; // int32
+            public const nint m_iNumTeamKills = 0x120; // int32
+            public const nint m_flTeamDamage = 0x124; // float32
         }
         // Parent: None
         // Field count: 0

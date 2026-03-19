@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-17 09:52:27.225884900 UTC
+// 2026-03-19 10:05:24.652271200 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,38 +9,38 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x2061120;
-        public const nint EmptyWorldService001_Client = 0x201AF90;
-        public const nint GameClientExports001 = 0x205DE00;
-        public const nint LegacyGameUI001 = 0x207B660;
-        public const nint Source2Client002 = 0x2307DE0;
-        public const nint Source2ClientConfig001 = 0x228BED0;
-        public const nint Source2ClientPrediction001 = 0x2068A70;
-        public const nint Source2ClientUI001 = 0x2079EF0;
+        public const nint ClientToolsInfo_001 = 0x2062120;
+        public const nint EmptyWorldService001_Client = 0x201BF90;
+        public const nint GameClientExports001 = 0x205EE00;
+        public const nint LegacyGameUI001 = 0x207C650;
+        public const nint Source2Client002 = 0x2308DE0;
+        public const nint Source2ClientConfig001 = 0x228CEE0;
+        public const nint Source2ClientPrediction001 = 0x2069A60;
+        public const nint Source2ClientUI001 = 0x207AEE0;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
         public const nint BenchmarkService001 = 0x6138E0;
-        public const nint BugService001 = 0x8C8D60;
-        public const nint ClientServerEngineLoopService_001 = 0x90A400;
+        public const nint BugService001 = 0x8C8D70;
+        public const nint ClientServerEngineLoopService_001 = 0x90A410;
         public const nint EngineGameUI001 = 0x6112E0;
-        public const nint EngineServiceMgr001 = 0x909CB0;
-        public const nint GameEventSystemClientV001 = 0x909F90;
-        public const nint GameEventSystemServerV001 = 0x90A0C0;
+        public const nint EngineServiceMgr001 = 0x909CC0;
+        public const nint GameEventSystemClientV001 = 0x909FA0;
+        public const nint GameEventSystemServerV001 = 0x90A0D0;
         public const nint GameResourceServiceClientV001 = 0x6139E0;
         public const nint GameResourceServiceServerV001 = 0x613A40;
-        public const nint GameUIService_001 = 0x8C9190;
+        public const nint GameUIService_001 = 0x8C91A0;
         public const nint HostStateMgr001 = 0x614260;
         public const nint INETSUPPORT_001 = 0x60C8E0;
-        public const nint InputService_001 = 0x8C9480;
+        public const nint InputService_001 = 0x8C9490;
         public const nint KeyValueCache001 = 0x614310;
-        public const nint MapListService_001 = 0x9082F0;
-        public const nint NetworkClientService_001 = 0x908480;
-        public const nint NetworkP2PService_001 = 0x9087C0;
-        public const nint NetworkServerService_001 = 0x908970;
+        public const nint MapListService_001 = 0x908300;
+        public const nint NetworkClientService_001 = 0x908490;
+        public const nint NetworkP2PService_001 = 0x9087D0;
+        public const nint NetworkServerService_001 = 0x908980;
         public const nint NetworkService_001 = 0x613BB0;
-        public const nint RenderService_001 = 0x908BE0;
-        public const nint ScreenshotService001 = 0x908EA0;
+        public const nint RenderService_001 = 0x908BF0;
+        public const nint ScreenshotService001 = 0x908EB0;
         public const nint SimpleEngineLoopService_001 = 0x614370;
         public const nint SoundService_001 = 0x613BF0;
         public const nint Source2EngineToClient001 = 0x610BE0;
@@ -48,7 +48,7 @@ namespace CS2Dumper.Interfaces {
         public const nint Source2EngineToServer001 = 0x610CB8;
         public const nint Source2EngineToServerStringTable001 = 0x610CE0;
         public const nint SplitScreenService_001 = 0x613ED0;
-        public const nint StatsService_001 = 0x909260;
+        public const nint StatsService_001 = 0x909270;
         public const nint ToolService_001 = 0x614090;
         public const nint VENGINE_GAMEUIFUNCS_VERSION005 = 0x611370;
         public const nint VProfService_001 = 0x6140D0;
@@ -157,15 +157,15 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: server.dll
     public static class ServerDll {
-        public const nint EmptyWorldService001_Server = 0x1B76C00;
+        public const nint EmptyWorldService001_Server = 0x1B76C10;
         public const nint EntitySubclassUtilsV001 = 0x1B22160;
-        public const nint NavGameTest001 = 0x1C20878;
-        public const nint ServerToolsInfo_001 = 0x1BD1AF8;
-        public const nint Source2GameClients001 = 0x1BCEB70;
-        public const nint Source2GameDirector001 = 0x1D60AB0;
-        public const nint Source2GameEntities001 = 0x1BD1200;
-        public const nint Source2Server001 = 0x1BD1060;
-        public const nint Source2ServerConfig001 = 0x1E558F8;
+        public const nint NavGameTest001 = 0x1C208F8;
+        public const nint ServerToolsInfo_001 = 0x1BD1B88;
+        public const nint Source2GameClients001 = 0x1BCEC00;
+        public const nint Source2GameDirector001 = 0x1D60A90;
+        public const nint Source2GameEntities001 = 0x1BD1290;
+        public const nint Source2Server001 = 0x1BD10F0;
+        public const nint Source2ServerConfig001 = 0x1E55988;
         public const nint customnavsystem001 = 0x1B00F18;
     }
     // Module: soundsystem.dll

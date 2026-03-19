@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-17 09:52:27.225884900 UTC
+// 2026-03-19 10:05:24.652271200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -13540,7 +13540,7 @@ pub mod cs2_dumper {
             pub mod CBtNodeDecorator {
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             pub mod CSAdditionalPerRoundStats_t {
                 pub const m_numChickensKilled: usize = 0x0; // int32
                 pub const m_killsWhileBlind: usize = 0x4; // int32
@@ -13553,6 +13553,7 @@ pub mod cs2_dumper {
                 pub const m_nDefuseStarts: usize = 0x1C; // int32
                 pub const m_nHostagePickUps: usize = 0x20; // int32
                 pub const m_numTeammatesFlashed: usize = 0x24; // int32
+                pub const m_strAnnotationsWorkshopId: usize = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 0
@@ -13594,18 +13595,18 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 12
             pub mod CSAdditionalMatchStats_t {
-                pub const m_numRoundsSurvivedStreak: usize = 0xF0; // int32
-                pub const m_maxNumRoundsSurvivedStreak: usize = 0xF4; // int32
-                pub const m_numRoundsSurvivedTotal: usize = 0xF8; // int32
-                pub const m_iRoundsWonWithoutPurchase: usize = 0xFC; // int32
-                pub const m_iRoundsWonWithoutPurchaseTotal: usize = 0x100; // int32
-                pub const m_numFirstKills: usize = 0x104; // int32
-                pub const m_numClutchKills: usize = 0x108; // int32
-                pub const m_numPistolKills: usize = 0x10C; // int32
-                pub const m_numSniperKills: usize = 0x110; // int32
-                pub const m_iNumSuicides: usize = 0x114; // int32
-                pub const m_iNumTeamKills: usize = 0x118; // int32
-                pub const m_flTeamDamage: usize = 0x11C; // float32
+                pub const m_numRoundsSurvivedStreak: usize = 0xF8; // int32
+                pub const m_maxNumRoundsSurvivedStreak: usize = 0xFC; // int32
+                pub const m_numRoundsSurvivedTotal: usize = 0x100; // int32
+                pub const m_iRoundsWonWithoutPurchase: usize = 0x104; // int32
+                pub const m_iRoundsWonWithoutPurchaseTotal: usize = 0x108; // int32
+                pub const m_numFirstKills: usize = 0x10C; // int32
+                pub const m_numClutchKills: usize = 0x110; // int32
+                pub const m_numPistolKills: usize = 0x114; // int32
+                pub const m_numSniperKills: usize = 0x118; // int32
+                pub const m_iNumSuicides: usize = 0x11C; // int32
+                pub const m_iNumTeamKills: usize = 0x120; // int32
+                pub const m_flTeamDamage: usize = 0x124; // float32
             }
             // Parent: None
             // Field count: 0

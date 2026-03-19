@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-17 09:52:27.225884900 UTC
+// 2026-03-19 10:05:24.652271200 UTC
 
 #pragma once
 
@@ -13414,7 +13414,7 @@ namespace cs2_dumper {
             namespace CBtNodeDecorator {
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             namespace CSAdditionalPerRoundStats_t {
                 constexpr std::ptrdiff_t m_numChickensKilled = 0x0; // int32
                 constexpr std::ptrdiff_t m_killsWhileBlind = 0x4; // int32
@@ -13427,6 +13427,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nDefuseStarts = 0x1C; // int32
                 constexpr std::ptrdiff_t m_nHostagePickUps = 0x20; // int32
                 constexpr std::ptrdiff_t m_numTeammatesFlashed = 0x24; // int32
+                constexpr std::ptrdiff_t m_strAnnotationsWorkshopId = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 0
@@ -13468,18 +13469,18 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 12
             namespace CSAdditionalMatchStats_t {
-                constexpr std::ptrdiff_t m_numRoundsSurvivedStreak = 0xF0; // int32
-                constexpr std::ptrdiff_t m_maxNumRoundsSurvivedStreak = 0xF4; // int32
-                constexpr std::ptrdiff_t m_numRoundsSurvivedTotal = 0xF8; // int32
-                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchase = 0xFC; // int32
-                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchaseTotal = 0x100; // int32
-                constexpr std::ptrdiff_t m_numFirstKills = 0x104; // int32
-                constexpr std::ptrdiff_t m_numClutchKills = 0x108; // int32
-                constexpr std::ptrdiff_t m_numPistolKills = 0x10C; // int32
-                constexpr std::ptrdiff_t m_numSniperKills = 0x110; // int32
-                constexpr std::ptrdiff_t m_iNumSuicides = 0x114; // int32
-                constexpr std::ptrdiff_t m_iNumTeamKills = 0x118; // int32
-                constexpr std::ptrdiff_t m_flTeamDamage = 0x11C; // float32
+                constexpr std::ptrdiff_t m_numRoundsSurvivedStreak = 0xF8; // int32
+                constexpr std::ptrdiff_t m_maxNumRoundsSurvivedStreak = 0xFC; // int32
+                constexpr std::ptrdiff_t m_numRoundsSurvivedTotal = 0x100; // int32
+                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchase = 0x104; // int32
+                constexpr std::ptrdiff_t m_iRoundsWonWithoutPurchaseTotal = 0x108; // int32
+                constexpr std::ptrdiff_t m_numFirstKills = 0x10C; // int32
+                constexpr std::ptrdiff_t m_numClutchKills = 0x110; // int32
+                constexpr std::ptrdiff_t m_numPistolKills = 0x114; // int32
+                constexpr std::ptrdiff_t m_numSniperKills = 0x118; // int32
+                constexpr std::ptrdiff_t m_iNumSuicides = 0x11C; // int32
+                constexpr std::ptrdiff_t m_iNumTeamKills = 0x120; // int32
+                constexpr std::ptrdiff_t m_flTeamDamage = 0x124; // float32
             }
             // Parent: None
             // Field count: 0
