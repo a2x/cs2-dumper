@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-16 07:21:21.899821400 UTC
+// 2026-03-27 23:29:07.271766300 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
@@ -2555,7 +2555,7 @@ pub const cs2_dumper = struct {
                 pub const m_visible: usize = 0xB10; // CUtlVector<CFish*>
             };
             // Parent: CBot
-            // Field count: 139
+            // Field count: 140
             pub const CCSBot = struct {
                 pub const m_eyePosition: usize = 0x108; // VectorWS
                 pub const m_name: usize = 0x114; // char[64]
@@ -2617,14 +2617,15 @@ pub const cs2_dumper = struct {
                 pub const m_bendNoisePositionValid: usize = 0x6334; // bool
                 pub const m_lookAroundStateTimestamp: usize = 0x6338; // float32
                 pub const m_lookAheadAngle: usize = 0x633C; // float32
-                pub const m_forwardAngle: usize = 0x6340; // float32
-                pub const m_inhibitLookAroundTimestamp: usize = 0x6344; // float32
-                pub const m_lookAtSpot: usize = 0x634C; // Vector
-                pub const m_lookAtSpotDuration: usize = 0x635C; // float32
-                pub const m_lookAtSpotTimestamp: usize = 0x6360; // float32
-                pub const m_lookAtSpotAngleTolerance: usize = 0x6364; // float32
-                pub const m_lookAtSpotClearIfClose: usize = 0x6368; // bool
-                pub const m_lookAtSpotAttack: usize = 0x6369; // bool
+                pub const m_lookUpAngle: usize = 0x6340; // float32
+                pub const m_forwardAngle: usize = 0x6344; // float32
+                pub const m_inhibitLookAroundTimestamp: usize = 0x6348; // float32
+                pub const m_lookAtSpot: usize = 0x6350; // Vector
+                pub const m_lookAtSpotDuration: usize = 0x6360; // float32
+                pub const m_lookAtSpotTimestamp: usize = 0x6364; // float32
+                pub const m_lookAtSpotAngleTolerance: usize = 0x6368; // float32
+                pub const m_lookAtSpotClearIfClose: usize = 0x636C; // bool
+                pub const m_lookAtSpotAttack: usize = 0x636D; // bool
                 pub const m_lookAtDesc: usize = 0x6370; // char*
                 pub const m_peripheralTimestamp: usize = 0x6378; // float32
                 pub const m_approachPointCount: usize = 0x6500; // uint8
@@ -13372,7 +13373,7 @@ pub const cs2_dumper = struct {
             pub const CBtNodeDecorator = struct {
             };
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             pub const CSAdditionalPerRoundStats_t = struct {
                 pub const m_numChickensKilled: usize = 0x0; // int32
                 pub const m_killsWhileBlind: usize = 0x4; // int32
@@ -13385,6 +13386,7 @@ pub const cs2_dumper = struct {
                 pub const m_nDefuseStarts: usize = 0x1C; // int32
                 pub const m_nHostagePickUps: usize = 0x20; // int32
                 pub const m_numTeammatesFlashed: usize = 0x24; // int32
+                pub const m_strAnnotationsWorkshopId: usize = 0x28; // CUtlString
             };
             // Parent: None
             // Field count: 0
@@ -13426,18 +13428,18 @@ pub const cs2_dumper = struct {
             // Parent: None
             // Field count: 12
             pub const CSAdditionalMatchStats_t = struct {
-                pub const m_numRoundsSurvivedStreak: usize = 0xF0; // int32
-                pub const m_maxNumRoundsSurvivedStreak: usize = 0xF4; // int32
-                pub const m_numRoundsSurvivedTotal: usize = 0xF8; // int32
-                pub const m_iRoundsWonWithoutPurchase: usize = 0xFC; // int32
-                pub const m_iRoundsWonWithoutPurchaseTotal: usize = 0x100; // int32
-                pub const m_numFirstKills: usize = 0x104; // int32
-                pub const m_numClutchKills: usize = 0x108; // int32
-                pub const m_numPistolKills: usize = 0x10C; // int32
-                pub const m_numSniperKills: usize = 0x110; // int32
-                pub const m_iNumSuicides: usize = 0x114; // int32
-                pub const m_iNumTeamKills: usize = 0x118; // int32
-                pub const m_flTeamDamage: usize = 0x11C; // float32
+                pub const m_numRoundsSurvivedStreak: usize = 0xF8; // int32
+                pub const m_maxNumRoundsSurvivedStreak: usize = 0xFC; // int32
+                pub const m_numRoundsSurvivedTotal: usize = 0x100; // int32
+                pub const m_iRoundsWonWithoutPurchase: usize = 0x104; // int32
+                pub const m_iRoundsWonWithoutPurchaseTotal: usize = 0x108; // int32
+                pub const m_numFirstKills: usize = 0x10C; // int32
+                pub const m_numClutchKills: usize = 0x110; // int32
+                pub const m_numPistolKills: usize = 0x114; // int32
+                pub const m_numSniperKills: usize = 0x118; // int32
+                pub const m_iNumSuicides: usize = 0x11C; // int32
+                pub const m_iNumTeamKills: usize = 0x120; // int32
+                pub const m_flTeamDamage: usize = 0x124; // float32
             };
             // Parent: None
             // Field count: 0
