@@ -182,9 +182,6 @@
   "v8system.dll": {
     "Source2V8System001": 202416
   },
-  "vconcomm.dll": {
-    "VConComm001": 234816
-  },
   "vphysics2.dll": {
     "VPhysics2_Handle_Interface_001": 4194528,
     "VPhysics2_Interface_001": 4194592
