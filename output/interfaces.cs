@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-27 23:29:07.271766300 UTC
+// 2026-04-03 12:31:25.327747800 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -9,14 +9,14 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: client.dll
     public static class ClientDll {
-        public const nint ClientToolsInfo_001 = 0x2062F90;
-        public const nint EmptyWorldService001_Client = 0x201CE60;
-        public const nint GameClientExports001 = 0x205FC70;
-        public const nint LegacyGameUI001 = 0x207D4D0;
-        public const nint Source2Client002 = 0x2309DD0;
-        public const nint Source2ClientConfig001 = 0x228DF00;
-        public const nint Source2ClientPrediction001 = 0x206A8F0;
-        public const nint Source2ClientUI001 = 0x207BD60;
+        public const nint ClientToolsInfo_001 = 0x2065F90;
+        public const nint EmptyWorldService001_Client = 0x201FE50;
+        public const nint GameClientExports001 = 0x2062C70;
+        public const nint LegacyGameUI001 = 0x20804D0;
+        public const nint Source2Client002 = 0x230CDD0;
+        public const nint Source2ClientConfig001 = 0x2290F00;
+        public const nint Source2ClientPrediction001 = 0x206D8F0;
+        public const nint Source2ClientUI001 = 0x207ED60;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -213,10 +213,6 @@ namespace CS2Dumper.Interfaces {
     // Module: v8system.dll
     public static class V8systemDll {
         public const nint Source2V8System001 = 0x316B0;
-    }
-    // Module: vconcomm.dll
-    public static class VconcommDll {
-        public const nint VConComm001 = 0x39540;
     }
     // Module: vphysics2.dll
     public static class Vphysics2Dll {
