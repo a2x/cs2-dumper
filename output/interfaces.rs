@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-03-27 23:29:07.271766300 UTC
+// 2026-04-03 12:31:25.327747800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,14 +12,14 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientToolsInfo_001: usize = 0x2062F90;
-            pub const EmptyWorldService001_Client: usize = 0x201CE60;
-            pub const GameClientExports001: usize = 0x205FC70;
-            pub const LegacyGameUI001: usize = 0x207D4D0;
-            pub const Source2Client002: usize = 0x2309DD0;
-            pub const Source2ClientConfig001: usize = 0x228DF00;
-            pub const Source2ClientPrediction001: usize = 0x206A8F0;
-            pub const Source2ClientUI001: usize = 0x207BD60;
+            pub const ClientToolsInfo_001: usize = 0x2065F90;
+            pub const EmptyWorldService001_Client: usize = 0x201FE50;
+            pub const GameClientExports001: usize = 0x2062C70;
+            pub const LegacyGameUI001: usize = 0x20804D0;
+            pub const Source2Client002: usize = 0x230CDD0;
+            pub const Source2ClientConfig001: usize = 0x2290F00;
+            pub const Source2ClientPrediction001: usize = 0x206D8F0;
+            pub const Source2ClientUI001: usize = 0x207ED60;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -216,10 +216,6 @@ pub mod cs2_dumper {
         // Module: v8system.dll
         pub mod v8system_dll {
             pub const Source2V8System001: usize = 0x316B0;
-        }
-        // Module: vconcomm.dll
-        pub mod vconcomm_dll {
-            pub const VConComm001: usize = 0x39540;
         }
         // Module: vphysics2.dll
         pub mod vphysics2_dll {
