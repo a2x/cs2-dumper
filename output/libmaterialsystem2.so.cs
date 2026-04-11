@@ -1,95 +1,300 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-04-11 10:20:28.886370999 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libmaterialsystem2.so
-    // Classes count: 13
-    // Enums count: 5
+    // Classes count: 14
+    // Enums count: 0
     public static class Libmaterialsystem2So {
-        // Alignment: 4
-        // Members count: 4
-        public enum VertJustification_e : uint {
-            VERT_JUSTIFICATION_TOP = 0x0,
-            VERT_JUSTIFICATION_CENTER = 0x1,
-            VERT_JUSTIFICATION_BOTTOM = 0x2,
-            VERT_JUSTIFICATION_NONE = 0x3
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum LayoutPositionType_e : uint {
-            LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE = 0x0,
-            LAYOUTPOSITIONTYPE_FRACTIONAL = 0x1,
-            LAYOUTPOSITIONTYPE_NONE = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum ViewFadeMode_t : uint {
-            VIEW_FADE_CONSTANT_COLOR = 0x0,
-            VIEW_FADE_MODULATE = 0x1,
-            VIEW_FADE_MOD2X = 0x2
-        }
-        // Alignment: 4
-        // Members count: 3
-        public enum BloomBlendMode_t : uint {
-            BLOOM_BLEND_ADD = 0x0,
-            BLOOM_BLEND_SCREEN = 0x1,
-            BLOOM_BLEND_BLUR = 0x2
-        }
-        // Alignment: 4
-        // Members count: 4
-        public enum HorizJustification_e : uint {
-            HORIZ_JUSTIFICATION_LEFT = 0x0,
-            HORIZ_JUSTIFICATION_CENTER = 0x1,
-            HORIZ_JUSTIFICATION_RIGHT = 0x2,
-            HORIZ_JUSTIFICATION_NONE = 0x3
+        // Parent: None
+        // Fields count: 1
+        //
+        // Metadata:
+        // ���x.
+        public static class MaterialParam_t {
+            public const nint m_name = 0x0; // CUtlString
         }
         // Parent: None
         // Fields count: 1
         //
         // Metadata:
-        // MGetKV3ClassDefaults
-        public static class MaterialParam_t {
-            public const nint m_name = 0x0; // CUtlString
-        }
-        // Parent: MaterialParam_t
-        // Fields count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class MaterialParamVector_t {
             public const nint m_value = 0x8; // Vector4D
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class MaterialParamString_t {
             public const nint m_value = 0x8; // CUtlString
         }
         // Parent: None
-        // Fields count: 11
+        // Fields count: 13
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class PostProcessingResource_t {
             public const nint m_bHasTonemapParams = 0x0; // bool
             public const nint m_toneMapParams = 0x4; // PostProcessingTonemapParameters_t
             public const nint m_bHasBloomParams = 0x40; // bool
             public const nint m_bloomParams = 0x44; // PostProcessingBloomParameters_t
-            public const nint m_bHasVignetteParams = 0xB4; // bool
-            public const nint m_vignetteParams = 0xB8; // PostProcessingVignetteParameters_t
-            public const nint m_bHasLocalContrastParams = 0xDC; // bool
-            public const nint m_localConstrastParams = 0xE0; // PostProcessingLocalContrastParameters_t
-            public const nint m_nColorCorrectionVolumeDim = 0xF4; // int32
-            public const nint m_colorCorrectionVolumeData = 0xF8; // CUtlBinaryBlock
-            public const nint m_bHasColorCorrection = 0x110; // bool
+            public const nint m_bHasVignetteParams = 0xCC; // bool
+            public const nint m_vignetteParams = 0xD0; // PostProcessingVignetteParameters_t
+            public const nint m_bHasLocalContrastParams = 0xF4; // bool
+            public const nint m_localConstrastParams = 0xF8; // PostProcessingLocalContrastParameters_t
+            public const nint m_nColorCorrectionVolumeDim = 0x10C; // int32
+            public const nint m_colorCorrectionVolumeData = 0x110; // CUtlBinaryBlock
+            public const nint m_bHasColorCorrection = 0x120; // bool
+            public const nint m_bHasFogScatteringParams = 0x121; // bool
+            public const nint m_fogScatteringParams = 0x124; // PostProcessingFogScatteringParameters_t
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class MaterialParamInt_t {
             public const nint m_nValue = 0x8; // int32
         }
@@ -97,7 +302,7 @@ namespace CS2Dumper.Schemas {
         // Fields count: 6
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class PostProcessingVignetteParameters_t {
             public const nint m_flVignetteStrength = 0x0; // float32
             public const nint m_vCenter = 0x4; // Vector2D
@@ -110,7 +315,7 @@ namespace CS2Dumper.Schemas {
         // Fields count: 5
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class PostProcessingLocalContrastParameters_t {
             public const nint m_flLocalContrastStrength = 0x0; // float32
             public const nint m_flLocalContrastEdgeStrength = 0x4; // float32
@@ -122,7 +327,7 @@ namespace CS2Dumper.Schemas {
         // Fields count: 15
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class PostProcessingTonemapParameters_t {
             public const nint m_flExposureBias = 0x0; // float32
             public const nint m_flShoulderStrength = 0x4; // float32
@@ -140,11 +345,103 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMinHighlightLum = 0x34; // float32
             public const nint m_flMaxHighlightLum = 0x38; // float32
         }
-        // Parent: MaterialParam_t
+        // Parent: None
+        // Fields count: 5
+        //
+        // Metadata:
+        // ���x.
+        public static class PostProcessingFogScatteringParameters_t {
+            public const nint m_fRadius = 0x0; // float32
+            public const nint m_fScale = 0x4; // float32
+            public const nint m_fCubemapScale = 0x8; // float32
+            public const nint m_fVolumetricScale = 0xC; // float32
+            public const nint m_fGradientScale = 0x10; // float32
+        }
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class MaterialParamBuffer_t {
             public const nint m_value = 0x8; // CUtlBinaryBlock
         }
@@ -152,7 +449,7 @@ namespace CS2Dumper.Schemas {
         // Fields count: 14
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class MaterialResourceData_t {
             public const nint m_materialName = 0x0; // CUtlString
             public const nint m_shaderName = 0x8; // CUtlString
@@ -170,10 +467,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
         }
         // Parent: None
-        // Fields count: 10
+        // Fields count: 16
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class PostProcessingBloomParameters_t {
             public const nint m_blendMode = 0x0; // BloomBlendMode_t
             public const nint m_flBloomStrength = 0x4; // float32
@@ -183,22 +480,188 @@ namespace CS2Dumper.Schemas {
             public const nint m_flBloomThresholdWidth = 0x14; // float32
             public const nint m_flSkyboxBloomStrength = 0x18; // float32
             public const nint m_flBloomStartValue = 0x1C; // float32
-            public const nint m_flBlurWeight = 0x20; // float32[5]
-            public const nint m_vBlurTint = 0x34; // Vector[5]
+            public const nint m_flComputeBloomStrength = 0x20; // float32
+            public const nint m_flComputeBloomThreshold = 0x24; // float32
+            public const nint m_flComputeBloomRadius = 0x28; // float32
+            public const nint m_flComputeBloomEffectsScale = 0x2C; // float32
+            public const nint m_flComputeBloomLensDirtStrength = 0x30; // float32
+            public const nint m_flComputeBloomLensDirtBlackLevel = 0x34; // float32
+            public const nint m_flBlurWeight = 0x38; // float32[5]
+            public const nint m_vBlurTint = 0x4C; // Vector[5]
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class MaterialParamFloat_t {
             public const nint m_flValue = 0x8; // float32
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class MaterialParamTexture_t {
             public const nint m_pValue = 0x8; // CStrongHandle<InfoForResourceTypeCTextureBase>
         }

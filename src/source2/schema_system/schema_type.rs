@@ -3,6 +3,7 @@ use memflow::prelude::v1::*;
 use super::{SchemaClassBinding, SchemaEnumBinding, SchemaSystemTypeScope};
 
 #[repr(u8)]
+#[allow(dead_code)]
 pub enum SchemaAtomicCategory {
     Basic = 0,
     T,
@@ -15,6 +16,7 @@ pub enum SchemaAtomicCategory {
 }
 
 #[repr(u8)]
+#[allow(dead_code)]
 pub enum SchemaTypeCategory {
     BuiltIn = 0,
     Ptr,
@@ -84,6 +86,7 @@ pub struct SchemaType {
 
 unsafe impl Pod for SchemaType {}
 
+#[allow(dead_code)]
 pub union SchemaTypeUnion {
     pub schema_type: Pointer64<SchemaType>,
     pub class_binding: Pointer64<SchemaClassBinding>,

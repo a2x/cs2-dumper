@@ -1,74 +1,525 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-04-11 10:20:28.886370999 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libresourcesystem.so
-    // Classes count: 59
-    // Enums count: 2
+    // Classes count: 58
+    // Enums count: 0
     public static class LibresourcesystemSo {
-        // Alignment: 1
-        // Members count: 9
-        public enum FuseVariableType_t : byte {
-            INVALID = 0x0,
-            BOOL = 0x1,
-            INT8 = 0x2,
-            INT16 = 0x3,
-            INT32 = 0x4,
-            UINT8 = 0x5,
-            UINT16 = 0x6,
-            UINT32 = 0x7,
-            FLOAT32 = 0x8
-        }
-        // Alignment: 1
-        // Members count: 2
-        public enum FuseVariableAccess_t : byte {
-            WRITABLE = 0x0,
-            READ_ONLY = 0x1
-        }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCNmIKRig {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCResponseRulesList {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCDotaItemDefinitionResource {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCMorphSetData {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCChoreoSceneFileData {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVSoundStackScriptList {
         }
         // Parent: None
         // Fields count: 2
+        //
+        // Metadata:
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class PackedAABB_t {
             public const nint m_nPackedMin = 0x0; // uint32
             public const nint m_nPackedMax = 0x4; // uint32
@@ -77,21 +528,179 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVPhysXSurfacePropertiesList {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeManifestTestResource_t {
         }
         // Parent: None
         // Fields count: 3
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class ConstantInfo_t {
             public const nint m_name = 0x0; // CUtlString
             public const nint m_nameToken = 0x8; // CUtlStringToken
@@ -99,6 +708,88 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: None
         // Fields count: 1
+        //
+        // Metadata:
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class FuseFunctionIndex_t {
             public const nint m_Value = 0x0; // uint16
         }
@@ -106,28 +797,265 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCGcExportableExternalData {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeIAnimGraphModelBinding {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCJavaScriptResource {
         }
         // Parent: None
         // Fields count: 6
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class CFuseSymbolTable {
             public const nint m_constants = 0x0; // CUtlVector<ConstantInfo_t>
             public const nint m_variables = 0x18; // CUtlVector<VariableInfo_t>
@@ -140,54 +1068,602 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCRenderMesh {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVoxelVisibility {
-        }
-        // Parent: None
-        // Fields count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class TestResource_t {
-            public const nint m_name = 0x0; // CUtlString
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCPhysAggregateData {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCNmClip {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeWorld_t {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeProceduralTestResource_t {
         }
         // Parent: None
         // Fields count: 2
+        //
+        // Metadata:
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class AABB_t {
             public const nint m_vMinBounds = 0x0; // Vector
             public const nint m_vMaxBounds = 0xC; // Vector
@@ -196,14 +1672,93 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCPostProcessingResource {
         }
         // Parent: None
         // Fields count: 6
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class VariableInfo_t {
             public const nint m_name = 0x0; // CUtlString
             public const nint m_nameToken = 0x8; // CUtlStringToken
@@ -216,11 +1771,172 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeIParticleSnapshot {
         }
         // Parent: None
         // Fields count: 4
+        //
+        // Metadata:
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class FourQuaternions {
             public const nint x = 0x0; // fltx4
             public const nint y = 0x10; // fltx4
@@ -231,98 +1947,1211 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCPanoramaLayout {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCTypeScriptResource {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        public static class InfoForResourceTypeCChoreoSceneResource {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCNmSkeleton {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeTestResource_t {
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        public static class InfoForResourceTypeCTestResourceData {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCAnimationGroup {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVSoundEventScriptList {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVoiceContainerBase {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCPanoramaStyle {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCWorldNode {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCNmGraphVariation {
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        public static class InfoForResourceTypeCSurfaceGraph {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCCSGOEconItem {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCNmGraphDefinition {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCSmartProp {
         }
         // Parent: None
         // Fields count: 4
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class CFuseProgram {
             public const nint m_programBuffer = 0x0; // CUtlVector<uint8>
             public const nint m_variablesRead = 0x18; // CUtlVector<FuseVariableIndex_t>
@@ -333,56 +3162,609 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCCompositeMaterialKit {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVMixListResource {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCAnimData {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeIMaterial2 {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeIVectorGraphic {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCPanoramaDynamicImages {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeIPulseGraphDef {
         }
         // Parent: None
         // Fields count: 5
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class FunctionInfo_t {
             public const nint m_name = 0x8; // CUtlString
             public const nint m_nameToken = 0x10; // CUtlStringToken
@@ -394,32 +3776,430 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCVDataResource {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCModel {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCDOTANovelsList {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCTextureBase {
         }
         // Parent: None
         // Fields count: 1
+        //
+        // Metadata:
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class FuseVariableIndex_t {
             public const nint m_Value = 0x0; // uint16
         }
@@ -427,21 +4207,179 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeIParticleSystemDefinition {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCSequenceGroupData {
         }
         // Parent: None
         // Fields count: 2
         //
         // Metadata:
-        // MGetKV3ClassDefaults
+        // ���x.
         public static class ManifestTestResource_t {
             public const nint m_name = 0x0; // CUtlString
             public const nint m_child = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
@@ -450,14 +4388,172 @@ namespace CS2Dumper.Schemas {
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCEntityLump {
         }
         // Parent: None
         // Fields count: 0
         //
         // Metadata:
-        // MResourceTypeForInfoType
+        // ���x.
+        // 
+        // Invalid
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // char
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint8
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint16
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint32
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // uint64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // float64
+        // 
+        // p4�x.
+        // @��x.
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // P�k�+
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
         public static class InfoForResourceTypeCDOTAPatchNotesList {
         }
     }

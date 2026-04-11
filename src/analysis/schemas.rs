@@ -1,7 +1,7 @@
 use std::collections::BTreeMap;
 use std::ffi::CStr;
 
-use log::debug;
+use log::{debug, warn};
 
 use memflow::prelude::v1::*;
 
@@ -13,6 +13,16 @@ use crate::error::{Error, Result};
 use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
+pub struct SchemaScopeHeader {
+    pub address: u64,
+    pub module_name: String,
+    pub class_blocks_alloc: i32,
+    pub class_peak_alloc: i32,
+    pub enum_blocks_alloc: i32,
+    pub enum_peak_alloc: i32,
+}
 
 #[derive(Clone, Deserialize, Serialize)]
 pub enum ClassMetadata {
@@ -73,6 +83,33 @@ pub fn schemas(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaMap>
         .collect();
 
     Ok(map)
+}
+
+pub fn schema_scope_headers(
+    process: &mut IntoProcessInstanceArcBox<'_>,
+) -> Result<Vec<SchemaScopeHeader>> {
+    let schema_system = read_schema_system(process)?;
+    let type_scopes = &schema_system.type_scopes;
+
+    (0..type_scopes.size).try_fold(Vec::new(), |mut acc, i| {
+        let type_scope_ptr = type_scopes.element(process, i as _)?;
+        let type_scope = type_scope_ptr.read(process)?;
+
+        let module_name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
+            .to_string_lossy()
+            .to_string();
+
+        acc.push(SchemaScopeHeader {
+            address: type_scope_ptr.to_umem(),
+            module_name,
+            class_blocks_alloc: type_scope.class_bindings.blocks_alloc(),
+            class_peak_alloc: type_scope.class_bindings.peak_count(),
+            enum_blocks_alloc: type_scope.enum_bindings.blocks_alloc(),
+            enum_peak_alloc: type_scope.enum_bindings.peak_count(),
+        });
+
+        Ok(acc)
+    })
 }
 
 fn read_class_binding(
@@ -265,15 +302,39 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
     let module = process.module_by_name("libschemasystem.so")?;
     let buf = process.read_raw(module.base, module.size as _)?;
 
-    let schema_system_addr = signature!("48 8D 05 ? ? ? ? 49 89 04 24")
-        .scan(&buf)
-        .and_then(|result| process.read_addr64_rip(module.base + result).ok())
-        .ok_or(Error::Other("unable to read schema system address"))?;
+    let schema_system_addr =
+        signature!("48 8D 05 ? ? ? ? C3 CC CC CC CC CC CC CC CC 48 8D 05 ? ? ? ? C3")
+            .scan(&buf)
+            .and_then(|result| process.read_addr64_rip(module.base + result).ok())
+            .or_else(|| {
+                if let Some((_, interfaces)) =
+                    crate::analysis::interfaces_for_module(process, &module).ok()?
+                {
+                    if let Some(interface) = interfaces
+                        .iter()
+                        .find(|iface| iface.name == "SchemaSystem_001")
+                    {
+                        process
+                            .read_addr64_rip(module.base + interface.value as usize)
+                            .ok()
+                    } else {
+                        None
+                    }
+                } else {
+                    None
+                }
+            })
+            .or_else(|| {
+                signature!("48 8D 05 ? ? ? ? 49 89 04 24")
+                    .scan(&buf)
+                    .and_then(|result| process.read_addr64_rip(module.base + result).ok())
+            })
+            .ok_or(Error::Other("unable to read schema system address"))?;
 
     let schema_system: SchemaSystem = process.read(schema_system_addr)?;
 
-    if schema_system.num_registrations == 0 {
-        return Err(Error::Other("no schema system registrations found"));
+    if schema_system.type_scopes.mem.is_null() || schema_system.type_scopes.size == 0 {
+        return Err(Error::Other("no schema system type scopes found"));
     }
 
     Ok(schema_system)
@@ -293,19 +354,46 @@ fn read_type_scopes(
             .to_string_lossy()
             .to_string();
 
-        let classes: Vec<_> = type_scope
-            .class_bindings
-            .elements(process)?
-            .iter()
-            .filter_map(|ptr| read_class_binding(process, *ptr).ok())
-            .collect();
+        let classes: Vec<_> = match type_scope.class_bindings.elements(process) {
+            Ok(bindings) => bindings
+                .iter()
+                .filter_map(|ptr| read_class_binding(process, *ptr).ok())
+                .collect(),
+            Err(err) => {
+                warn!(
+                    "skipping class bindings for scope {} at {:#X}: {}",
+                    module_name,
+                    type_scope_ptr.to_umem(),
+                    err
+                );
+                Vec::new()
+            }
+        };
 
-        let enums: Vec<_> = type_scope
-            .enum_bindings
-            .elements(process)?
-            .iter()
-            .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
-            .collect();
+        let enums: Vec<_> = match type_scope.enum_bindings.elements(process) {
+            Ok(bindings) => bindings
+                .iter()
+                .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
+                .collect(),
+            Err(err) => {
+                if is_known_enum_binding_layout_drift(&err) {
+                    debug!(
+                        "skipping enum bindings for scope {} at {:#X} due to known layout drift: {}",
+                        module_name,
+                        type_scope_ptr.to_umem(),
+                        err
+                    );
+                } else {
+                    warn!(
+                        "skipping enum bindings for scope {} at {:#X}: {}",
+                        module_name,
+                        type_scope_ptr.to_umem(),
+                        err
+                    );
+                }
+                Vec::new()
+            }
+        };
 
         if classes.is_empty() && enums.is_empty() {
             return Ok(acc);
@@ -327,4 +415,12 @@ fn read_type_scopes(
 
         Ok(acc)
     })
+}
+
+fn is_known_enum_binding_layout_drift(err: &Error) -> bool {
+    let message = err.to_string();
+
+    message.contains("negative UtlTsHash::peak_alloc")
+        || message.contains("negative UtlTsHash::blocks_alloc")
+        || message.contains("unreasonable UtlTsHash allocation counters")
 }

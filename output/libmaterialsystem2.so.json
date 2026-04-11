@@ -7,11 +7,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamFloat_t": {
         "fields": {
@@ -19,11 +339,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamInt_t": {
         "fields": {
@@ -31,11 +671,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamString_t": {
         "fields": {
@@ -43,11 +1003,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamTexture_t": {
         "fields": {
@@ -55,11 +1335,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParamVector_t": {
         "fields": {
@@ -67,11 +1667,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "MaterialParam_t"
+        "parent": null
       },
       "MaterialParam_t": {
         "fields": {
@@ -79,7 +1999,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -104,7 +2024,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -118,14 +2038,36 @@
           "m_flBloomThreshold": 16,
           "m_flBloomThresholdWidth": 20,
           "m_flBlurBloomStrength": 12,
-          "m_flBlurWeight": 32,
+          "m_flBlurWeight": 56,
+          "m_flComputeBloomEffectsScale": 44,
+          "m_flComputeBloomLensDirtBlackLevel": 52,
+          "m_flComputeBloomLensDirtStrength": 48,
+          "m_flComputeBloomRadius": 40,
+          "m_flComputeBloomStrength": 32,
+          "m_flComputeBloomThreshold": 36,
           "m_flScreenBloomStrength": 8,
           "m_flSkyboxBloomStrength": 24,
-          "m_vBlurTint": 52
+          "m_vBlurTint": 76
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PostProcessingFogScatteringParameters_t": {
+        "fields": {
+          "m_fCubemapScale": 8,
+          "m_fGradientScale": 16,
+          "m_fRadius": 0,
+          "m_fScale": 4,
+          "m_fVolumetricScale": 12
+        },
+        "metadata": [
+          {
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -141,7 +2083,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -150,20 +2092,22 @@
       "PostProcessingResource_t": {
         "fields": {
           "m_bHasBloomParams": 64,
-          "m_bHasColorCorrection": 272,
-          "m_bHasLocalContrastParams": 220,
+          "m_bHasColorCorrection": 288,
+          "m_bHasFogScatteringParams": 289,
+          "m_bHasLocalContrastParams": 244,
           "m_bHasTonemapParams": 0,
-          "m_bHasVignetteParams": 180,
+          "m_bHasVignetteParams": 204,
           "m_bloomParams": 68,
-          "m_colorCorrectionVolumeData": 248,
-          "m_localConstrastParams": 224,
-          "m_nColorCorrectionVolumeDim": 244,
+          "m_colorCorrectionVolumeData": 272,
+          "m_fogScatteringParams": 292,
+          "m_localConstrastParams": 248,
+          "m_nColorCorrectionVolumeDim": 268,
           "m_toneMapParams": 4,
-          "m_vignetteParams": 184
+          "m_vignetteParams": 208
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -189,7 +2133,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -206,61 +2150,13 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
         "parent": null
       }
     },
-    "enums": {
-      "BloomBlendMode_t": {
-        "alignment": 4,
-        "members": {
-          "BLOOM_BLEND_ADD": 0,
-          "BLOOM_BLEND_BLUR": 2,
-          "BLOOM_BLEND_SCREEN": 1
-        },
-        "type": "uint32"
-      },
-      "HorizJustification_e": {
-        "alignment": 4,
-        "members": {
-          "HORIZ_JUSTIFICATION_CENTER": 1,
-          "HORIZ_JUSTIFICATION_LEFT": 0,
-          "HORIZ_JUSTIFICATION_NONE": 3,
-          "HORIZ_JUSTIFICATION_RIGHT": 2
-        },
-        "type": "uint32"
-      },
-      "LayoutPositionType_e": {
-        "alignment": 4,
-        "members": {
-          "LAYOUTPOSITIONTYPE_FRACTIONAL": 1,
-          "LAYOUTPOSITIONTYPE_NONE": 2,
-          "LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE": 0
-        },
-        "type": "uint32"
-      },
-      "VertJustification_e": {
-        "alignment": 4,
-        "members": {
-          "VERT_JUSTIFICATION_BOTTOM": 2,
-          "VERT_JUSTIFICATION_CENTER": 1,
-          "VERT_JUSTIFICATION_NONE": 3,
-          "VERT_JUSTIFICATION_TOP": 0
-        },
-        "type": "uint32"
-      },
-      "ViewFadeMode_t": {
-        "alignment": 4,
-        "members": {
-          "VIEW_FADE_CONSTANT_COLOR": 0,
-          "VIEW_FADE_MOD2X": 2,
-          "VIEW_FADE_MODULATE": 1
-        },
-        "type": "uint32"
-      }
-    }
+    "enums": {}
   }
 }

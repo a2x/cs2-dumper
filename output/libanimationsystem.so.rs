@@ -1,1052 +1,396 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-04-11 10:20:28.886370999 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: libanimationsystem.so
-        // Classes count: 497
-        // Enums count: 94
+        // Classes count: 594
+        // Enums count: 8
         pub mod libanimationsystem_so {
-            // Alignment: 4
-            // Members count: 17
-            #[repr(u32)]
-            pub enum SeqCmd_t {
-                SeqCmd_Nop = 0x0,
-                SeqCmd_LinearDelta = 0x1,
-                SeqCmd_FetchFrameRange = 0x2,
-                SeqCmd_Slerp = 0x3,
-                SeqCmd_Add = 0x4,
-                SeqCmd_Subtract = 0x5,
-                SeqCmd_Scale = 0x6,
-                SeqCmd_Copy = 0x7,
-                SeqCmd_Blend = 0x8,
-                SeqCmd_Worldspace = 0x9,
-                SeqCmd_Sequence = 0xA,
-                SeqCmd_FetchCycle = 0xB,
-                SeqCmd_FetchFrame = 0xC,
-                SeqCmd_IKLockInPlace = 0xD,
-                SeqCmd_IKRestoreAll = 0xE,
-                SeqCmd_ReverseSequence = 0xF,
-                SeqCmd_Transform = 0x10
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum BoneTransformSpace_t {
-                BoneTransformSpace_Invalid = u32::MAX,
-                BoneTransformSpace_Parent = 0x0,
-                BoneTransformSpace_Model = 0x1,
-                BoneTransformSpace_World = 0x2
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum CAnimationGraphVisualizerPrimitiveType {
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Text = 0x0,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Sphere = 0x1,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Line = 0x2,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Pie = 0x3,
-                ANIMATIONGRAPHVISUALIZERPRIMITIVETYPE_Axis = 0x4
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum NmTransitionRule_t {
-                AllowTransition = 0x0,
-                ConditionallyAllowTransition = 0x1,
-                BlockTransition = 0x2
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum BinaryNodeTiming {
-                UseChild1 = 0x0,
-                UseChild2 = 0x1,
-                SyncChildren = 0x2
-            }
-            // Alignment: 4
-            // Members count: 7
-            #[repr(u32)]
-            pub enum SolveIKChainAnimNodeDebugSetting {
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_None = 0x0,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_X_Axis_Circle = 0x1,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Y_Axis_Circle = 0x2,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Z_Axis_Circle = 0x3,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Forward = 0x4,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Up = 0x5,
-                SOLVEIKCHAINANIMNODEDEBUGSETTING_Left = 0x6
-            }
-            // Alignment: 1
-            // Members count: 6
-            #[repr(u8)]
-            pub enum MovementGait_t {
-                eInvalid = u8::MAX,
-                eSlow = 0x0,
-                eMedium = 0x1,
-                eFast = 0x2,
-                eVeryFast = 0x3,
-                eCount = 0x4
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum IKTargetCoordinateSystem {
-                IKTARGETCOORDINATESYSTEM_WorldSpace = 0x0,
-                IKTARGETCOORDINATESYSTEM_ModelSpace = 0x1,
-                IKTARGETCOORDINATESYSTEM_COUNT = 0x2
-            }
-            // Alignment: 1
-            // Members count: 5
-            #[repr(u8)]
-            pub enum NmStateEventTypeCondition_t {
-                Entry = 0x0,
-                FullyInState = 0x1,
-                Exit = 0x2,
-                Timed = 0x3,
-                Any = 0x4
-            }
             // Alignment: 1
             // Members count: 4
             #[repr(u8)]
-            pub enum CNmFloatAngleMathNode__Operation_t {
-                ClampTo180 = 0x0,
-                ClampTo360 = 0x1,
-                FlipHemisphere = 0x2,
-                FlipHemisphereNegate = 0x3
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum VPhysXAggregateData_t__VPhysXFlagEnum_t {
-                FLAG_IS_POLYSOUP_GEOMETRY = 0x1,
-                FLAG_LEVEL_COLLISION = 0x10,
-                FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE = 0x20
-            }
-            // Alignment: 1
-            // Members count: 5
-            #[repr(u8)]
-            pub enum CNmRootMotionOverrideNode__OverrideFlags_t {
-                AllowMoveX = 0x0,
-                AllowMoveY = 0x1,
-                AllowMoveZ = 0x2,
-                AllowFacingPitch = 0x3,
-                ListenForEvents = 0x4
-            }
-            // Alignment: 1
-            // Members count: 23
-            #[repr(u8)]
-            pub enum NmEasingOperation_t {
-                Linear = 0x0,
-                InQuad = 0x1,
-                OutQuad = 0x2,
-                InOutQuad = 0x3,
-                InCubic = 0x4,
-                OutCubic = 0x5,
-                InOutCubic = 0x6,
-                InQuart = 0x7,
-                OutQuart = 0x8,
-                InOutQuart = 0x9,
-                InQuint = 0xA,
-                OutQuint = 0xB,
-                InOutQuint = 0xC,
-                InSine = 0xD,
-                OutSine = 0xE,
-                InOutSine = 0xF,
-                InExpo = 0x10,
-                OutExpo = 0x11,
-                InOutExpo = 0x12,
-                InCirc = 0x13,
-                OutCirc = 0x14,
-                InOutCirc = 0x15,
-                None = 0x16
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum EIKEndEffectorRotationFixUpMode {
-                None = 0x0,
-                MatchTargetOrientation = 0x1,
-                LookAtTargetForward = 0x2,
-                MaintainParentOrientation = 0x3,
-                Count = 0x4
+            pub enum CPulseCell_BooleanSwitchState {
+                 = 0x0
             }
             // Alignment: 4
             // Members count: 2
             #[repr(u32)]
-            pub enum MatterialAttributeTagType_t {
-                MATERIAL_ATTRIBUTE_TAG_VALUE = 0x0,
-                MATERIAL_ATTRIBUTE_TAG_COLOR = 0x1
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmTargetWarpAlgorithm_t {
-                Lerp = 0x0,
-                Hermite = 0x1,
-                HermiteFeaturePreserving = 0x2,
-                Bezier = 0x3
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum AnimPoseControl {
-                NoPoseControl = 0x0,
-                AbsolutePoseControl = 0x1,
-                RelativePoseControl = 0x2
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmTransitionRuleCondition_t {
-                AnyAllowed = 0x0,
-                FullyAllowed = 0x1,
-                ConditionallyAllowed = 0x2,
-                Blocked = 0x3
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum EDemoBoneSelectionMode {
-                CaptureAllBones = 0x0,
-                CaptureSelectedBones = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum StepPhase {
-                StepPhase_OnGround = 0x0,
-                StepPhase_InAir = 0x1
-            }
-            // Alignment: 4
-            // Members count: 26
-            #[repr(u32)]
-            pub enum FlexOpCode_t {
-                FLEX_OP_CONST = 0x1,
-                FLEX_OP_FETCH1 = 0x2,
-                FLEX_OP_FETCH2 = 0x3,
-                FLEX_OP_ADD = 0x4,
-                FLEX_OP_SUB = 0x5,
-                FLEX_OP_MUL = 0x6,
-                FLEX_OP_DIV = 0x7,
-                FLEX_OP_NEG = 0x8,
-                FLEX_OP_EXP = 0x9,
-                FLEX_OP_OPEN = 0xA,
-                FLEX_OP_CLOSE = 0xB,
-                FLEX_OP_COMMA = 0xC,
-                FLEX_OP_MAX = 0xD,
-                FLEX_OP_MIN = 0xE,
-                FLEX_OP_2WAY_0 = 0xF,
-                FLEX_OP_2WAY_1 = 0x10,
-                FLEX_OP_NWAY = 0x11,
-                FLEX_OP_COMBO = 0x12,
-                FLEX_OP_DOMINATE = 0x13,
-                FLEX_OP_DME_LOWER_EYELID = 0x14,
-                FLEX_OP_DME_UPPER_EYELID = 0x15,
-                FLEX_OP_SQRT = 0x16,
-                FLEX_OP_REMAPVALCLAMPED = 0x17,
-                FLEX_OP_SIN = 0x18,
-                FLEX_OP_COS = 0x19,
-                FLEX_OP_ABS = 0x1A
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum NmCachedValueMode_t {
-                OnEntry = 0x0,
-                OnExit = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum AnimNodeNetworkMode {
-                ServerAuthoritative = 0x0,
-                ClientSimulate = 0x1
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum VPhysXBodyPart_t__VPhysXFlagEnum_t {
-                FLAG_STATIC = 0x1,
-                FLAG_KINEMATIC = 0x2,
-                FLAG_JOINT = 0x4,
-                FLAG_MASS = 0x8,
-                FLAG_ALWAYS_DYNAMIC_ON_CLIENT = 0x10
-            }
-            // Alignment: 1
-            // Members count: 9
-            #[repr(u8)]
-            pub enum AnimParamType_t {
-                ANIMPARAM_UNKNOWN = 0x0,
-                ANIMPARAM_BOOL = 0x1,
-                ANIMPARAM_ENUM = 0x2,
-                ANIMPARAM_INT = 0x3,
-                ANIMPARAM_FLOAT = 0x4,
-                ANIMPARAM_VECTOR = 0x5,
-                ANIMPARAM_QUATERNION = 0x6,
-                ANIMPARAM_GLOBALSYMBOL = 0x7,
-                ANIMPARAM_COUNT = 0x8
-            }
-            // Alignment: 1
-            // Members count: 9
-            #[repr(u8)]
-            pub enum NmEasingFunction_t {
-                Linear = 0x0,
-                Quad = 0x1,
-                Cubic = 0x2,
-                Quart = 0x3,
-                Quint = 0x4,
-                Sine = 0x5,
-                Expo = 0x6,
-                Circ = 0x7,
-                Back = 0x8
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum IKTargetSource {
-                IKTARGETSOURCE_Bone = 0x0,
-                IKTARGETSOURCE_AnimgraphParameter = 0x1,
-                IKTARGETSOURCE_COUNT = 0x2
-            }
-            // Alignment: 4
-            // Members count: 15
-            #[repr(u32)]
-            pub enum PermModelInfo_t__FlagEnum {
-                FLAG_TRANSLUCENT = 0x1,
-                FLAG_TRANSLUCENT_TWO_PASS = 0x2,
-                FLAG_MODEL_IS_RUNTIME_COMBINED = 0x4,
-                FLAG_SOURCE1_IMPORT = 0x8,
-                FLAG_MODEL_PART_CHILD = 0x10,
-                FLAG_NAV_GEN_NONE = 0x20,
-                FLAG_NAV_GEN_HULL = 0x40,
-                FLAG_NO_FORCED_FADE = 0x800,
-                FLAG_HAS_SKINNED_MESHES = 0x400,
-                FLAG_DO_NOT_CAST_SHADOWS = 0x20000,
-                FLAG_FORCE_PHONEME_CROSSFADE = 0x1000,
-                FLAG_NO_ANIM_EVENTS = 0x100000,
-                FLAG_ANIMATION_DRIVEN_FLEXES = 0x200000,
-                FLAG_IMPLICIT_BIND_POSE_SEQUENCE = 0x400000,
-                FLAG_MODEL_DOC = 0x800000
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum CNmFloatMathNode__Operator_t {
-                Add = 0x0,
-                Sub = 0x1,
-                Mul = 0x2,
-                Div = 0x3
-            }
-            // Alignment: 1
-            // Members count: 2
-            #[repr(u8)]
-            pub enum CNmSyncEventIndexConditionNode__TriggerMode_t {
-                ExactlyAtEventIndex = 0x0,
-                GreaterThanEqualToEventIndex = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum AnimParamNetworkSetting {
-                Auto = 0x0,
-                AlwaysNetwork = 0x1,
-                NeverNetwork = 0x2
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum MorphFlexControllerRemapType_t {
-                MORPH_FLEXCONTROLLER_REMAP_PASSTHRU = 0x0,
-                MORPH_FLEXCONTROLLER_REMAP_2WAY = 0x1,
-                MORPH_FLEXCONTROLLER_REMAP_NWAY = 0x2,
-                MORPH_FLEXCONTROLLER_REMAP_EYELID = 0x3
-            }
-            // Alignment: 4
-            // Members count: 8
-            #[repr(u32)]
-            pub enum MeshDrawPrimitiveFlags_t {
-                MESH_DRAW_FLAGS_NONE = 0x0,
-                MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH = 0x1,
-                MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT = 0x2,
-                MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL = 0x8,
-                MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING = 0x10,
-                MESH_DRAW_FLAGS_USE_UNCOMPRESSED_PER_VERTEX_LIGHTING = 0x20,
-                MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS = 0x40,
-                MESH_DRAW_FLAGS_DRAW_LAST = 0x80
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum ModelBoneFlexComponent_t {
-                MODEL_BONE_FLEX_INVALID = u32::MAX,
-                MODEL_BONE_FLEX_TX = 0x0,
-                MODEL_BONE_FLEX_TY = 0x1,
-                MODEL_BONE_FLEX_TZ = 0x2
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum PoseType_t {
-                POSETYPE_STATIC = 0x0,
-                POSETYPE_DYNAMIC = 0x1,
-                POSETYPE_INVALID = 0xFF
-            }
-            // Alignment: 1
-            // Members count: 2
-            #[repr(u8)]
-            pub enum CNmRootMotionData__SamplingMode_t {
-                Delta = 0x0,
-                WorldSpace = 0x1
-            }
-            // Alignment: 1
-            // Members count: 9
-            #[repr(u8)]
-            pub enum NmEventConditionRules_t {
-                LimitSearchToSourceState = 0x0,
-                IgnoreInactiveEvents = 0x1,
-                PreferHighestWeight = 0x2,
-                PreferHighestProgress = 0x3,
-                OperatorOr = 0x4,
-                OperatorAnd = 0x5,
-                SearchOnlyStateEvents = 0x6,
-                SearchOnlyAnimEvents = 0x7,
-                SearchBothStateAndAnimEvents = 0x8
-            }
-            // Alignment: 4
-            // Members count: 36
-            #[repr(u32)]
-            pub enum AnimValueSource {
-                MoveHeading = 0x0,
-                MoveSpeed = 0x1,
-                ForwardSpeed = 0x2,
-                StrafeSpeed = 0x3,
-                FacingHeading = 0x4,
-                LookHeading = 0x5,
-                LookPitch = 0x6,
-                LookDistance = 0x7,
-                Parameter = 0x8,
-                WayPointHeading = 0x9,
-                WayPointDistance = 0xA,
-                BoundaryRadius = 0xB,
-                TargetMoveHeading = 0xC,
-                TargetMoveSpeed = 0xD,
-                AccelerationHeading = 0xE,
-                AccelerationSpeed = 0xF,
-                SlopeHeading = 0x10,
-                SlopeAngle = 0x11,
-                SlopePitch = 0x12,
-                SlopeYaw = 0x13,
-                GoalDistance = 0x14,
-                AccelerationLeftRight = 0x15,
-                AccelerationFrontBack = 0x16,
-                RootMotionSpeed = 0x17,
-                RootMotionTurnSpeed = 0x18,
-                MoveHeadingRelativeToLookHeading = 0x19,
-                MaxMoveSpeed = 0x1A,
-                FingerCurl_Thumb = 0x1B,
-                FingerCurl_Index = 0x1C,
-                FingerCurl_Middle = 0x1D,
-                FingerCurl_Ring = 0x1E,
-                FingerCurl_Pinky = 0x1F,
-                FingerSplay_Thumb_Index = 0x20,
-                FingerSplay_Index_Middle = 0x21,
-                FingerSplay_Middle_Ring = 0x22,
-                FingerSplay_Ring_Pinky = 0x23
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum CNmTimeConditionNode__Operator_t {
-                LessThan = 0x0,
-                LessThanEqual = 0x1,
-                GreaterThan = 0x2,
-                GreaterThanEqual = 0x3
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum RagdollPoseControl {
-                Absolute = 0x0,
-                Relative = 0x1
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum IKSolverType {
-                IKSOLVER_Perlin = 0x0,
-                IKSOLVER_TwoBone = 0x1,
-                IKSOLVER_Fabrik = 0x2,
-                IKSOLVER_DogLeg3Bone = 0x3,
-                IKSOLVER_CCD = 0x4,
-                IKSOLVER_COUNT = 0x5
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum Blend2DMode {
-                Blend2DMode_General = 0x0,
-                Blend2DMode_Directional = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum ChoiceChangeMethod {
-                OnReset = 0x0,
-                OnCycleEnd = 0x1,
-                OnResetOrCycleEnd = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum ChoiceBlendMethod {
-                SingleBlendTime = 0x0,
-                PerChoiceBlendTimes = 0x1
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum VPhysXConstraintParams_t__EnumFlags0_t {
-                FLAG0_SHIFT_INTERPENETRATE = 0x0,
-                FLAG0_SHIFT_CONSTRAIN = 0x1,
-                FLAG0_SHIFT_BREAKABLE_FORCE = 0x2,
-                FLAG0_SHIFT_BREAKABLE_TORQUE = 0x3
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum BlendKeyType {
-                BlendKey_UserValue = 0x0,
-                BlendKey_Velocity = 0x1,
-                BlendKey_Distance = 0x2,
-                BlendKey_RemainingDistance = 0x3
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum StateActionBehavior {
-                STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT = 0x0,
-                STATETAGBEHAVIOR_FIRE_ON_ENTER = 0x1,
-                STATETAGBEHAVIOR_FIRE_ON_EXIT = 0x2,
-                STATETAGBEHAVIOR_FIRE_ON_ENTER_AND_EXIT = 0x3
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmRootMotionBlendMode_t {
-                Blend = 0x0,
-                Additive = 0x1,
-                IgnoreSource = 0x2,
-                IgnoreTarget = 0x3
-            }
-            // Alignment: 1
-            // Members count: 6
-            #[repr(u8)]
-            pub enum NmFootPhaseCondition_t {
-                LeftFootDown = 0x0,
-                LeftFootPassing = 0x1,
-                LeftPhase = 0x4,
-                RightFootDown = 0x2,
-                RightFootPassing = 0x3,
-                RightPhase = 0x5
-            }
-            // Alignment: 4
-            // Members count: 22
-            #[repr(u32)]
-            pub enum ModelSkeletonData_t__BoneFlags_t {
-                FLAG_NO_BONE_FLAGS = 0x0,
-                FLAG_BONEFLEXDRIVER = 0x4,
-                FLAG_CLOTH = 0x8,
-                FLAG_PHYSICS = 0x10,
-                FLAG_ATTACHMENT = 0x20,
-                FLAG_ANIMATION = 0x40,
-                FLAG_MESH = 0x80,
-                FLAG_HITBOX = 0x100,
-                FLAG_BONE_USED_BY_VERTEX_LOD0 = 0x400,
-                FLAG_BONE_USED_BY_VERTEX_LOD1 = 0x800,
-                FLAG_BONE_USED_BY_VERTEX_LOD2 = 0x1000,
-                FLAG_BONE_USED_BY_VERTEX_LOD3 = 0x2000,
-                FLAG_BONE_USED_BY_VERTEX_LOD4 = 0x4000,
-                FLAG_BONE_USED_BY_VERTEX_LOD5 = 0x8000,
-                FLAG_BONE_USED_BY_VERTEX_LOD6 = 0x10000,
-                FLAG_BONE_USED_BY_VERTEX_LOD7 = 0x20000,
-                FLAG_BONE_MERGE_READ = 0x40000,
-                FLAG_BONE_MERGE_WRITE = 0x80000,
-                FLAG_ALL_BONE_FLAGS = 0xFFFFF,
-                BLEND_PREALIGNED = 0x100000,
-                FLAG_RIGIDLENGTH = 0x200000,
-                FLAG_PROCEDURAL = 0x400000
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum MorphBundleType_t {
-                MORPH_BUNDLE_TYPE_NONE = 0x0,
-                MORPH_BUNDLE_TYPE_POSITION_SPEED = 0x1,
-                MORPH_BUNDLE_TYPE_NORMAL_WRINKLE = 0x2,
-                MORPH_BUNDLE_TYPE_COUNT = 0x3
-            }
-            // Alignment: 1
-            // Members count: 2
-            #[repr(u8)]
-            pub enum CNmIDComparisonNode__Comparison_t {
-                Matches = 0x0,
-                DoesntMatch = 0x1
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum NmPoseBlendMode_t {
-                Overlay = 0x0,
-                Additive = 0x1,
-                ModelSpace = 0x2
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum ResetCycleOption {
-                Beginning = 0x0,
-                SameCycleAsSource = 0x1,
-                InverseSourceCycle = 0x2,
-                FixedValue = 0x3,
-                SameTimeAsSource = 0x4
-            }
-            // Alignment: 1
-            // Members count: 6
-            #[repr(u8)]
-            pub enum CNmVectorInfoNode__Info_t {
-                X = 0x0,
-                Y = 0x1,
-                Z = 0x2,
-                Length = 0x3,
-                AngleHorizontal = 0x4,
-                AngleVertical = 0x5
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum IKChannelMode {
-                TwoBone = 0x0,
-                TwoBone_Translate = 0x1,
-                OneBone = 0x2,
-                OneBone_Translate = 0x3
-            }
-            // Alignment: 1
-            // Members count: 9
-            #[repr(u8)]
-            pub enum NmGraphValueType_t {
-                Unknown = 0x0,
-                Bool = 0x1,
-                ID = 0x2,
-                Float = 0x3,
-                Vector = 0x4,
-                Target = 0x5,
-                BoneMask = 0x6,
-                Pose = 0x7,
-                Special = 0x8
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmFootPhase_t {
-                LeftFootDown = 0x0,
-                RightFootPassing = 0x1,
-                RightFootDown = 0x2,
-                LeftFootPassing = 0x3
-            }
-            // Alignment: 4
-            // Members count: 8
-            #[repr(u32)]
-            pub enum CNmTargetInfoNode__Info_t {
-                AngleHorizontal = 0x0,
-                AngleVertical = 0x1,
-                Distance = 0x2,
-                DistanceHorizontalOnly = 0x3,
-                DistanceVerticalOnly = 0x4,
-                DeltaOrientationX = 0x5,
-                DeltaOrientationY = 0x6,
-                DeltaOrientationZ = 0x7
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FootstepLandedFootSoundType_t {
-                FOOTSOUND_Left = 0x0,
-                FOOTSOUND_Right = 0x1,
-                FOOTSOUND_UseOverrideSound = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum FootLockSubVisualization {
-                FOOTLOCKSUBVISUALIZATION_ReachabilityAnalysis = 0x0,
-                FOOTLOCKSUBVISUALIZATION_IKSolve = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum NmFrameSnapEventMode_t {
-                Floor = 0x0,
-                Round = 0x1
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FootPinningTimingSource {
-                FootMotion = 0x0,
-                Tag = 0x1,
-                Parameter = 0x2
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum DampingSpeedFunction {
-                NoDamping = 0x0,
-                Constant = 0x1,
-                Spring = 0x2
-            }
-            // Alignment: 4
-            // Members count: 6
-            #[repr(u32)]
-            pub enum AnimationProcessingType_t {
-                ANIMATION_PROCESSING_SERVER_SIMULATION = 0x0,
-                ANIMATION_PROCESSING_CLIENT_SIMULATION = 0x1,
-                ANIMATION_PROCESSING_CLIENT_PREDICTION = 0x2,
-                ANIMATION_PROCESSING_CLIENT_INTERPOLATION = 0x3,
-                ANIMATION_PROCESSING_CLIENT_RENDER = 0x4,
-                ANIMATION_PROCESSING_MAX = 0x5
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum JiggleBoneSimSpace {
-                SimSpace_Local = 0x0,
-                SimSpace_Model = 0x1,
-                SimSpace_World = 0x2
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum StanceOverrideMode {
-                Sequence = 0x0,
-                Node = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum IkEndEffectorType {
-                IkEndEffector_Attachment = 0x0,
-                IkEndEffector_Bone = 0x1
-            }
-            // Alignment: 2
-            // Members count: 3
-            #[repr(u16)]
-            pub enum AnimScriptType {
-                ANIMSCRIPT_TYPE_INVALID = u16::MAX,
-                ANIMSCRIPT_FUSE_GENERAL = 0x0,
-                ANIMSCRIPT_FUSE_STATEMACHINE = 0x1
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum CNmTimeConditionNode__ComparisonType_t {
-                PercentageThroughState = 0x0,
-                PercentageThroughSyncEvent = 0x1,
-                ElapsedTime = 0x2,
-                LoopCount = 0x3
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum SeqPoseSetting_t {
-                SEQ_POSE_SETTING_CONSTANT = 0x0,
-                SEQ_POSE_SETTING_ROTATION = 0x1,
-                SEQ_POSE_SETTING_POSITION = 0x2,
-                SEQ_POSE_SETTING_VELOCITY = 0x3
-            }
-            // Alignment: 4
-            // Members count: 13
-            #[repr(u32)]
-            pub enum AnimParamButton_t {
-                ANIMPARAM_BUTTON_NONE = 0x0,
-                ANIMPARAM_BUTTON_DPAD_UP = 0x1,
-                ANIMPARAM_BUTTON_DPAD_RIGHT = 0x2,
-                ANIMPARAM_BUTTON_DPAD_DOWN = 0x3,
-                ANIMPARAM_BUTTON_DPAD_LEFT = 0x4,
-                ANIMPARAM_BUTTON_A = 0x5,
-                ANIMPARAM_BUTTON_B = 0x6,
-                ANIMPARAM_BUTTON_X = 0x7,
-                ANIMPARAM_BUTTON_Y = 0x8,
-                ANIMPARAM_BUTTON_LEFT_SHOULDER = 0x9,
-                ANIMPARAM_BUTTON_RIGHT_SHOULDER = 0xA,
-                ANIMPARAM_BUTTON_LTRIGGER = 0xB,
-                ANIMPARAM_BUTTON_RTRIGGER = 0xC
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum SelectorTagBehavior_t {
-                SelectorTagBehavior_OnWhileCurrent = 0x0,
-                SelectorTagBehavior_OffWhenFinished = 0x1,
-                SelectorTagBehavior_OffBeforeFinished = 0x2
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum CNmBoneMask__WeightInfo_t {
-                Zero = 0x0,
-                Mixed = 0x1,
-                One = 0x2
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum HandshakeTagType_t {
-                eInvalid = u32::MAX,
-                eTask = 0x0,
-                eMovement = 0x1,
-                eCount = 0x2
-            }
-            // Alignment: 4
-            // Members count: 18
-            #[repr(u32)]
-            pub enum ParticleAttachment_t {
-                PATTACH_INVALID = u32::MAX,
-                PATTACH_ABSORIGIN = 0x0,
-                PATTACH_ABSORIGIN_FOLLOW = 0x1,
-                PATTACH_CUSTOMORIGIN = 0x2,
-                PATTACH_CUSTOMORIGIN_FOLLOW = 0x3,
-                PATTACH_POINT = 0x4,
-                PATTACH_POINT_FOLLOW = 0x5,
-                PATTACH_EYES_FOLLOW = 0x6,
-                PATTACH_OVERHEAD_FOLLOW = 0x7,
-                PATTACH_WORLDORIGIN = 0x8,
-                PATTACH_ROOTBONE_FOLLOW = 0x9,
-                PATTACH_RENDERORIGIN_FOLLOW = 0xA,
-                PATTACH_MAIN_VIEW = 0xB,
-                PATTACH_WATERWAKE = 0xC,
-                PATTACH_CENTER_FOLLOW = 0xD,
-                PATTACH_CUSTOM_GAME_STATE_1 = 0xE,
-                PATTACH_HEALTHBAR = 0xF,
-                MAX_PATTACH_TYPES = 0x10
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum FieldNetworkOption {
-                Auto = 0x0,
-                ForceEnable = 0x1,
-                ForceDisable = 0x2
-            }
-            // Alignment: 1
-            // Members count: 8
-            #[repr(u8)]
-            pub enum CNmTransitionNode__TransitionOptions_t {
-                None = 0x0,
-                ClampDuration = 0x1,
-                Synchronized = 0x2,
-                MatchSourceTime = 0x3,
-                MatchSyncEventIndex = 0x4,
-                MatchSyncEventID = 0x5,
-                MatchSyncEventPercentage = 0x6,
-                PreferClosestSyncEventID = 0x7
-            }
-            // Alignment: 1
-            // Members count: 5
-            #[repr(u8)]
-            pub enum CNmFloatComparisonNode__Comparison_t {
-                GreaterThanEqual = 0x0,
-                LessThanEqual = 0x1,
-                NearEqual = 0x2,
-                GreaterThan = 0x3,
-                LessThan = 0x4
-            }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum VPhysXJoint_t__Flags_t {
-                JOINT_FLAGS_NONE = 0x0,
-                JOINT_FLAGS_BODY1_FIXED = 0x1,
-                JOINT_FLAGS_USE_BLOCK_SOLVER = 0x2
-            }
-            // Alignment: 1
-            // Members count: 3
-            #[repr(u8)]
-            pub enum VelocityMetricMode {
-                DirectionOnly = 0x0,
-                MagnitudeOnly = 0x1,
-                DirectionAndMagnitude = 0x2
-            }
-            // Alignment: 1
-            // Members count: 5
-            #[repr(u8)]
-            pub enum FacingMode {
-                FacingMode_Invalid = 0x0,
-                FacingMode_Manual = 0x1,
-                FacingMode_Path = 0x2,
-                FacingMode_LookTarget = 0x3,
-                FacingMode_ManualPosition = 0x4
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum AimMatrixBlendMode {
-                AimMatrixBlendMode_None = 0x0,
-                AimMatrixBlendMode_Additive = 0x1,
-                AimMatrixBlendMode_ModelSpaceAdditive = 0x2,
-                AimMatrixBlendMode_BoneMask = 0x3
-            }
-            // Alignment: 4
-            // Members count: 7
-            #[repr(u32)]
-            pub enum AnimationSnapshotType_t {
-                ANIMATION_SNAPSHOT_SERVER_SIMULATION = 0x0,
-                ANIMATION_SNAPSHOT_CLIENT_SIMULATION = 0x1,
-                ANIMATION_SNAPSHOT_CLIENT_PREDICTION = 0x2,
-                ANIMATION_SNAPSHOT_CLIENT_INTERPOLATION = 0x3,
-                ANIMATION_SNAPSHOT_CLIENT_RENDER = 0x4,
-                ANIMATION_SNAPSHOT_FINAL_COMPOSITE = 0x5,
-                ANIMATION_SNAPSHOT_MAX = 0x6
-            }
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum NmTargetWarpRule_t {
-                WarpXY = 0x0,
-                WarpZ = 0x1,
-                WarpXYZ = 0x2,
-                RotationOnly = 0x3
-            }
-            // Alignment: 4
-            // Members count: 8
-            #[repr(u32)]
-            pub enum FootFallTagFoot_t {
-                FOOT1 = 0x0,
-                FOOT2 = 0x1,
-                FOOT3 = 0x2,
-                FOOT4 = 0x3,
-                FOOT5 = 0x4,
-                FOOT6 = 0x5,
-                FOOT7 = 0x6,
-                FOOT8 = 0x7
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum ChoiceMethod {
-                WeightedRandom = 0x0,
-                WeightedRandomNoRepeat = 0x1,
-                Iterate = 0x2,
-                IterateRandom = 0x3
-            }
-            // Alignment: 4
-            // Members count: 14
-            #[repr(u32)]
-            pub enum AnimVectorSource {
-                MoveDirection = 0x0,
-                FacingPosition = 0x1,
-                LookDirection = 0x2,
-                VectorParameter = 0x3,
-                WayPointDirection = 0x4,
-                Acceleration = 0x5,
-                SlopeNormal = 0x6,
-                SlopeNormal_WorldSpace = 0x7,
-                LookTarget = 0x8,
-                LookTarget_WorldSpace = 0x9,
-                WayPointPosition = 0xA,
-                GoalPosition = 0xB,
-                RootMotionVelocity = 0xC,
-                ManualTarget_WorldSpace = 0xD
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum IkTargetType {
-                IkTarget_Attachment = 0x0,
-                IkTarget_Bone = 0x1,
-                IkTarget_Parameter_ModelSpace = 0x2,
-                IkTarget_Parameter_WorldSpace = 0x3
-            }
-            // Alignment: 4
-            // Members count: 4
-            #[repr(u32)]
-            pub enum BoneMaskBlendSpace {
-                BlendSpace_Parent = 0x0,
-                BlendSpace_Model = 0x1,
-                BlendSpace_Model_RotationOnly = 0x2,
-                BlendSpace_Model_TranslationOnly = 0x3
-            }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum ModelConfigAttachmentType_t {
-                MODEL_CONFIG_ATTACHMENT_INVALID = u32::MAX,
-                MODEL_CONFIG_ATTACHMENT_BONE_OR_ATTACHMENT = 0x0,
-                MODEL_CONFIG_ATTACHMENT_ROOT_RELATIVE = 0x1,
-                MODEL_CONFIG_ATTACHMENT_BONEMERGE = 0x2,
-                MODEL_CONFIG_ATTACHMENT_COUNT = 0x3
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum BinaryNodeChildOption {
-                Child1 = 0x0,
-                Child2 = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum JumpCorrectionMethod {
-                ScaleMotion = 0x0,
-                AddCorrectionDelta = 0x1
-            }
-            // Alignment: 4
-            // Members count: 2
-            #[repr(u32)]
-            pub enum MoodType_t {
-                eMoodType_Head = 0x0,
-                eMoodType_Body = 0x1
+            pub enum PulseBestOutflowRules_t {
+                SORT_BY_NUMBER_OF_VALID_CRITERIA = 0x0,
+                SORT_BY_OUTFLOW_INDEX = 0x1
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimFrameBlockAnim {
                 pub const m_nStartFrame: usize = 0x0; // int32
                 pub const m_nEndFrame: usize = 0x4; // int32
                 pub const m_segmentIndexArray: usize = 0x8; // CUtlVector<int32>
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CZeroPoseUpdateNode {
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSlowDownOnSlopesUpdateNode {
-                pub const m_flSlowDownStrength: usize = 0x68; // float32
+                pub const m_flSlowDownStrength: usize = 0x70; // float32
             }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 2
+            // Parent: None
+            // Fields count: 13
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod COrientationWarpUpdateNode {
-                pub const m_hFacingPositionParameter: usize = 0x6C; // CAnimParamHandle
-                pub const m_turnDamping: usize = 0x70; // CAnimInputDamping
+                pub const m_eMode: usize = 0x74; // OrientationWarpMode_t
+                pub const m_hTargetParam: usize = 0x78; // CAnimParamHandle
+                pub const m_hTargetPositionParam: usize = 0x7A; // CAnimParamHandle
+                pub const m_hFallbackTargetPositionParam: usize = 0x7C; // CAnimParamHandle
+                pub const m_eTargetOffsetMode: usize = 0x80; // OrientationWarpTargetOffsetMode_t
+                pub const m_flTargetOffset: usize = 0x84; // float32
+                pub const m_hTargetOffsetParam: usize = 0x88; // CAnimParamHandle
+                pub const m_damping: usize = 0x90; // CAnimInputDamping
+                pub const m_eRootMotionSource: usize = 0xA8; // OrientationWarpRootMotionSource_t
+                pub const m_flMaxRootMotionScale: usize = 0xAC; // float32
+                pub const m_bEnablePreferredRotationDirection: usize = 0xB0; // bool
+                pub const m_ePreferredRotationDirection: usize = 0xB4; // AnimValueSource
+                pub const m_flPreferredRotationThreshold: usize = 0xB8; // float32
             }
             // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimParameterBase {
                 pub const m_name: usize = 0x18; // CGlobalSymbol
                 pub const m_sComment: usize = 0x20; // CUtlString
@@ -1056,80 +400,731 @@ pub mod cs2_dumper {
                 pub const m_bNetworkingRequested: usize = 0x68; // bool
                 pub const m_bIsReferenced: usize = 0x69; // bool
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSequenceFinishedAnimTag {
                 pub const m_sequenceName: usize = 0x58; // CUtlString
             }
             // Parent: None
-            // Fields count: 6
+            // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSceneObjectData {
                 pub const m_vMinBounds: usize = 0x0; // Vector
                 pub const m_vMaxBounds: usize = 0xC; // Vector
                 pub const m_drawCalls: usize = 0x18; // CUtlLeanVector<CMaterialDrawDescriptor>
                 pub const m_drawBounds: usize = 0x28; // CUtlLeanVector<AABB_t>
                 pub const m_meshlets: usize = 0x38; // CUtlLeanVector<CMeshletDescriptor>
-                pub const m_vTintColor: usize = 0x48; // Vector4D
+                pub const m_rtProxyDrawCalls: usize = 0x48; // CUtlLeanVector<CSceneObjectData::RTProxyDrawDescriptor_t>
+                pub const m_vTintColor: usize = 0x58; // Vector4D
             }
-            // Parent: CCycleBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootCycle {
             }
-            // Parent: CLeafUpdateNode
-            // Fields count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CInputStreamUpdateNode {
-            }
-            // Parent: CConcreteAnimParameter
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleModelInput {
+                pub const m_nType: usize = 0xC; // ParticleModelType_t
+                pub const m_NamedValue: usize = 0x10; // CParticleNamedValueRef
+                pub const m_nControlPoint: usize = 0x50; // int32
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CInputStreamUpdateNode {
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CIntAnimParameter {
                 pub const m_defaultValue: usize = 0x78; // int32
                 pub const m_minValue: usize = 0x7C; // int32
                 pub const m_maxValue: usize = 0x80; // int32
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmParameterizedBlendNode__CDefinition {
                 pub const m_sourceNodeIndices: usize = 0x10; // CUtlVectorFixedGrowable<int16,5>
                 pub const m_nInputParameterValueNodeIdx: usize = 0x38; // int16
                 pub const m_bAllowLooping: usize = 0x3A; // bool
             }
-            // Parent: CNmEvent
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmScaleTask {
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFrameSnapEvent {
-                pub const m_frameSnapMode: usize = 0x18; // NmFrameSnapEventMode_t
-            }
-            // Parent: None
-            // Fields count: 0
-            pub mod CNmTask {
+                pub const m_frameSnapMode: usize = 0x1C; // NmFrameSnapEventMode_t
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimNodePath {
                 pub const m_path: usize = 0x0; // AnimNodeID[11]
                 pub const m_nCount: usize = 0x2C; // int32
@@ -1138,8 +1133,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimNodeOutputID {
                 pub const m_id: usize = 0x0; // uint32
             }
@@ -1147,7 +1141,7 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmSyncTrack {
                 pub const m_syncEvents: usize = 0x0; // CUtlLeanVectorFixedGrowable<CNmSyncTrack::Event_t,10>
                 pub const m_nStartEventOffset: usize = 0xA8; // int32
@@ -1156,19 +1150,19 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqBoneMaskList {
                 pub const m_sName: usize = 0x0; // CBufferString
                 pub const m_nLocalBoneArray: usize = 0x10; // CUtlVector<int16>
                 pub const m_flBoneWeightArray: usize = 0x28; // CUtlVector<float32>
                 pub const m_flDefaultMorphCtrlWeight: usize = 0x40; // float32
-                pub const m_morphCtrlWeightArray: usize = 0x48; // CUtlVector<CUtlPair<CBufferString,float32>>
+                pub const m_morphCtrlWeightArray: usize = 0x48; // CUtlVector<std::pair<CBufferString,float32>>
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimEncodedFrames {
                 pub const m_fileName: usize = 0x0; // CBufferString
                 pub const m_nFrames: usize = 0x10; // int32
@@ -1180,7 +1174,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SampleCode {
                 pub const m_subCode: usize = 0x0; // uint8[8]
             }
@@ -1188,37 +1182,196 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CCachedPose {
                 pub const m_transforms: usize = 0x8; // CUtlVector<CTransform>
                 pub const m_morphWeights: usize = 0x20; // CUtlVector<float32>
                 pub const m_hSequence: usize = 0x38; // HSequence
                 pub const m_flCycle: usize = 0x3C; // float32
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTransitionEventConditionNode__CDefinition {
                 pub const m_requireRuleID: usize = 0x10; // CGlobalSymbol
                 pub const m_eventConditionRules: usize = 0x18; // CNmBitFlags
                 pub const m_nSourceStateNodeIdx: usize = 0x1C; // int16
                 pub const m_ruleCondition: usize = 0x1E; // NmTransitionRuleCondition_t
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTaskStatusAnimTag {
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMotionGraphConfig {
                 pub const m_paramValues: usize = 0x0; // float32[4]
                 pub const m_flDuration: usize = 0x10; // float32
@@ -1230,7 +1383,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMotionSearchNode {
                 pub const m_children: usize = 0x0; // CUtlVector<CMotionSearchNode*>
                 pub const m_quantizer: usize = 0x18; // CVectorQuantizer
@@ -1242,7 +1395,7 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimActivity {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_nActivity: usize = 0x10; // int32
@@ -1253,7 +1406,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimScriptManager {
                 pub const m_scriptInfo: usize = 0x10; // CUtlVector<ScriptInfo_t>
             }
@@ -1261,7 +1414,7 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod AnimationDecodeDebugDumpElement_t {
                 pub const m_nEntityIndex: usize = 0x0; // int32
                 pub const m_modelName: usize = 0x8; // CUtlString
@@ -1270,80 +1423,704 @@ pub mod cs2_dumper {
                 pub const m_internalOps: usize = 0x40; // CUtlVector<CUtlString>
                 pub const m_decodedAnims: usize = 0x58; // CUtlVector<CUtlString>
             }
+            // Parent: 
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            pub mod MovementGaitId_t {
+                pub const m_sId: usize = 0x0; // CGlobalSymbol
+            }
             // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeVarIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: 
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ConfigIndex {
                 pub const m_nGroup: usize = 0x0; // uint16
                 pub const m_nConfig: usize = 0x2; // uint16
             }
             // Parent: None
-            // Fields count: 8
+            // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXCollisionAttributes_t {
-                pub const m_CollisionGroup: usize = 0x0; // uint32
+                pub const m_nIncludeDetailLayerCount: usize = 0x0; // int32
+                pub const m_CollisionGroup: usize = 0x4; // uint32
                 pub const m_InteractAs: usize = 0x8; // CUtlVector<uint32>
                 pub const m_InteractWith: usize = 0x20; // CUtlVector<uint32>
                 pub const m_InteractExclude: usize = 0x38; // CUtlVector<uint32>
-                pub const m_CollisionGroupString: usize = 0x50; // CUtlString
-                pub const m_InteractAsStrings: usize = 0x58; // CUtlVector<CUtlString>
-                pub const m_InteractWithStrings: usize = 0x70; // CUtlVector<CUtlString>
-                pub const m_InteractExcludeStrings: usize = 0x88; // CUtlVector<CUtlString>
+                pub const m_DetailLayers: usize = 0x50; // CUtlVector<uint32>
+                pub const m_CollisionGroupString: usize = 0x68; // CUtlString
+                pub const m_InteractAsStrings: usize = 0x70; // CUtlVector<CUtlString>
+                pub const m_InteractWithStrings: usize = 0x88; // CUtlVector<CUtlString>
+                pub const m_InteractExcludeStrings: usize = 0xA0; // CUtlVector<CUtlString>
+                pub const m_DetailLayerStrings: usize = 0xB8; // CUtlVector<CUtlString>
             }
-            // Parent: CSequenceUpdateNodeBase
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSequenceUpdateNode {
-                pub const m_hSequence: usize = 0x6C; // HSequence
-                pub const m_duration: usize = 0x70; // float32
-                pub const m_paramSpans: usize = 0x78; // CParamSpanUpdater
-                pub const m_tags: usize = 0x90; // CUtlVector<TagSpan_t>
+                pub const m_hSequence: usize = 0x74; // HSequence
+                pub const m_duration: usize = 0x78; // float32
+                pub const m_paramSpans: usize = 0x80; // CParamSpanUpdater
+                pub const m_tags: usize = 0x98; // CUtlVector<TagSpan_t>
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmPassthroughNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmClipReferenceNode__CDefinition {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmGraphDefinition__ExternalGraphSlot_t {
                 pub const m_nNodeIdx: usize = 0x0; // int16
                 pub const m_slotID: usize = 0x8; // CGlobalSymbol
             }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 10
+            // Parent: None
+            // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeEntrypointIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAimCameraUpdateNode {
-                pub const m_hParameterPosition: usize = 0x68; // CAnimParamHandle
-                pub const m_hParameterOrientation: usize = 0x6A; // CAnimParamHandle
-                pub const m_hParameterSpineRotationWeight: usize = 0x6C; // CAnimParamHandle
-                pub const m_hParameterPelvisOffset: usize = 0x6E; // CAnimParamHandle
-                pub const m_hParameterUseIK: usize = 0x70; // CAnimParamHandle
-                pub const m_hParameterCameraOnly: usize = 0x72; // CAnimParamHandle
-                pub const m_hParameterWeaponDepenetrationDistance: usize = 0x74; // CAnimParamHandle
-                pub const m_hParameterWeaponDepenetrationDelta: usize = 0x76; // CAnimParamHandle
-                pub const m_hParameterCameraClearanceDistance: usize = 0x78; // CAnimParamHandle
+                pub const m_hParameterPosition: usize = 0x70; // CAnimParamHandle
+                pub const m_hParameterOrientation: usize = 0x72; // CAnimParamHandle
+                pub const m_hParameterPelvisOffset: usize = 0x74; // CAnimParamHandle
+                pub const m_hParameterCameraOnly: usize = 0x76; // CAnimParamHandle
+                pub const m_hParameterWeaponDepenetrationDistance: usize = 0x78; // CAnimParamHandle
+                pub const m_hParameterWeaponDepenetrationDelta: usize = 0x7A; // CAnimParamHandle
+                pub const m_hParameterCameraClearanceDistance: usize = 0x7C; // CAnimParamHandle
                 pub const m_opFixedSettings: usize = 0x80; // AimCameraOpFixedSettings_t
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeDomainValueIndex_t {
+                pub const m_Value: usize = 0x0; // int16
             }
             // Parent: None
             // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqSeqDescFlag {
                 pub const m_bLooping: usize = 0x0; // bool
                 pub const m_bSnap: usize = 0x1; // bool
@@ -1361,7 +2138,7 @@ pub mod cs2_dumper {
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod PermModelInfo_t {
                 pub const m_nFlags: usize = 0x0; // uint32
                 pub const m_vHullMin: usize = 0x4; // Vector
@@ -1378,39 +2155,458 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod StanceInfo_t {
                 pub const m_vPosition: usize = 0x0; // Vector
                 pub const m_flDirection: usize = 0xC; // float32
             }
             // Parent: None
             // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod IKBoneNameAndIndex_t {
                 pub const m_Name: usize = 0x0; // CUtlString
             }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CStanceScaleUpdateNode {
-                pub const m_hParam: usize = 0x68; // CAnimParamHandle
-            }
-            // Parent: CNmBoneMaskValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            pub mod CPulse_Chunk {
+                pub const m_Instructions: usize = 0x0; // CUtlLeanVector<PGDInstruction_t>
+                pub const m_Registers: usize = 0x10; // CUtlLeanVector<CPulse_RegisterInfo>
+                pub const m_InstructionDebugInfos: usize = 0x20; // CUtlLeanVector<CPulse_InstructionDebug>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CStanceScaleUpdateNode {
+                pub const m_hParam: usize = 0x70; // CAnimParamHandle
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeInvokeIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBoneMaskBlendNode__CDefinition {
                 pub const m_nSourceMaskNodeIdx: usize = 0xA; // int16
                 pub const m_nTargetMaskNodeIdx: usize = 0xC; // int16
                 pub const m_nBlendWeightValueNodeIdx: usize = 0xE; // int16
             }
-            // Parent: CNmIDValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIDEventNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_eventConditionRules: usize = 0xC; // CNmBitFlags
@@ -1420,7 +2616,7 @@ pub mod cs2_dumper {
             // Fields count: 17
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod HitReactFixedSettings_t {
                 pub const m_nWeightListIndex: usize = 0x0; // int32
                 pub const m_nEffectedBoneCount: usize = 0x4; // int32
@@ -1440,15 +2636,125 @@ pub mod cs2_dumper {
                 pub const m_flHipDipImpactScale: usize = 0x3C; // float32
                 pub const m_flHipDipDelay: usize = 0x40; // float32
             }
-            // Parent: CNmGraphNode__CDefinition
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmPoseNode__CDefinition {
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimTagBase {
                 pub const m_name: usize = 0x18; // CGlobalSymbol
                 pub const m_sComment: usize = 0x20; // CUtlString
@@ -1457,10 +2763,97 @@ pub mod cs2_dumper {
                 pub const m_bIsReferenced: usize = 0x48; // bool
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CPerParticleVecInput {
+            }
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMotionGraph {
                 pub const m_paramSpans: usize = 0x10; // CParamSpanUpdater
                 pub const m_tags: usize = 0x28; // CUtlVector<TagSpan_t>
@@ -1470,37 +2863,391 @@ pub mod cs2_dumper {
                 pub const m_nConfigCount: usize = 0x50; // int32
                 pub const m_bLoop: usize = 0x54; // bool
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVectorInfoNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_desiredInfo: usize = 0xC; // CNmVectorInfoNode::Info_t
             }
-            // Parent: AnimationSnapshotBase_t
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod AnimationSnapshot_t {
                 pub const m_nEntIndex: usize = 0x108; // int32
                 pub const m_modelName: usize = 0x110; // CUtlString
             }
-            // Parent: CNmBlendTaskBase
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBlendTask {
             }
-            // Parent: CNmValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVectorValueNode__CDefinition {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqTransition {
                 pub const m_flFadeInTime: usize = 0x0; // float32
                 pub const m_flFadeOutTime: usize = 0x4; // float32
@@ -1509,14 +3256,180 @@ pub mod cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmPoseTask {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
             pub mod CAnimGraphSettingsGroup {
             }
-            // Parent: CNmTargetValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVirtualParameterTargetNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
             }
@@ -1524,7 +3437,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimGraphDebugReplay {
                 pub const m_animGraphFileName: usize = 0x40; // CUtlString
                 pub const m_frameList: usize = 0x48; // CUtlVector<CSmartPtr<CAnimReplayFrame>>
@@ -1532,73 +3445,582 @@ pub mod cs2_dumper {
                 pub const m_writeIndex: usize = 0x64; // int32
                 pub const m_frameCount: usize = 0x68; // int32
             }
-            // Parent: CConcreteAnimParameter
-            // Fields count: 2
+            // Parent: None
+            // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CVectorAnimParameter {
                 pub const m_defaultValue: usize = 0x78; // Vector
                 pub const m_bInterpolate: usize = 0x84; // bool
+                pub const m_vectorType: usize = 0x88; // AnimParamVectorType_t
             }
-            // Parent: CNmTask
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedPoseReadTask {
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmStateMachineNode__StateDefinition_t {
                 pub const m_nStateNodeIdx: usize = 0x0; // int16
                 pub const m_nEntryConditionNodeIdx: usize = 0x2; // int16
                 pub const m_transitionDefinitions: usize = 0x8; // CUtlLeanVectorFixedGrowable<CNmStateMachineNode::TransitionDefinition_t,5>
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CStanceOverrideUpdateNode {
-                pub const m_footStanceInfo: usize = 0x68; // CUtlVector<StanceInfo_t>
-                pub const m_pStanceSourceNode: usize = 0x80; // CAnimUpdateNodeRef
-                pub const m_hParameter: usize = 0x90; // CAnimParamHandle
-                pub const m_eMode: usize = 0x94; // StanceOverrideMode
+                pub const m_footStanceInfo: usize = 0x70; // CUtlVector<StanceInfo_t>
+                pub const m_pStanceSourceNode: usize = 0x88; // CAnimUpdateNodeRef
+                pub const m_hParameter: usize = 0x98; // CAnimParamHandle
+                pub const m_eMode: usize = 0x9C; // StanceOverrideMode
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            pub mod CNmGraphDefinition__ExternalPoseSlot_t {
+                pub const m_nNodeIdx: usize = 0x0; // int16
+                pub const m_slotID: usize = 0x8; // CGlobalSymbol
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod PhysShapeMarkup_t {
+                pub const m_nBodyInAggregate: usize = 0x0; // int32
+                pub const m_nShapeInBody: usize = 0x4; // int32
+                pub const m_sHitGroup: usize = 0x8; // CGlobalSymbol
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
             pub mod LookAtBone_t {
                 pub const m_index: usize = 0x0; // int32
                 pub const m_weight: usize = 0x4; // float32
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTransitionNode__CDefinition {
                 pub const m_nTargetStateNodeIdx: usize = 0xA; // int16
                 pub const m_nDurationOverrideNodeIdx: usize = 0xC; // int16
-                pub const m_syncEventOffsetOverrideNodeIdx: usize = 0xE; // int16
+                pub const m_timeOffsetOverrideNodeIdx: usize = 0xE; // int16
                 pub const m_startBoneMaskNodeIdx: usize = 0x10; // int16
                 pub const m_flDuration: usize = 0x14; // float32
                 pub const m_boneMaskBlendInTimePercentage: usize = 0x18; // NmPercent_t
-                pub const m_syncEventOffset: usize = 0x1C; // float32
+                pub const m_flTimeOffset: usize = 0x1C; // float32
                 pub const m_transitionOptions: usize = 0x20; // CNmBitFlags
                 pub const m_targetSyncIDNodeIdx: usize = 0x24; // int16
                 pub const m_blendWeightEasing: usize = 0x26; // NmEasingOperation_t
                 pub const m_rootMotionBlend: usize = 0x27; // NmRootMotionBlendMode_t
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeRegisterIndex_t {
+                pub const m_Value: usize = 0x0; // int16
+            }
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatEaseNode__CDefinition {
                 pub const m_flEaseTime: usize = 0xC; // float32
                 pub const m_flStartValue: usize = 0x10; // float32
@@ -1610,7 +4032,7 @@ pub mod cs2_dumper {
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimEncodeDifference {
                 pub const m_boneArray: usize = 0x0; // CUtlVector<CAnimBoneDifference>
                 pub const m_morphArray: usize = 0x18; // CUtlVector<CAnimMorphDifference>
@@ -1620,46 +4042,454 @@ pub mod cs2_dumper {
                 pub const m_bHasMorphBitArray: usize = 0x78; // CUtlVector<uint8>
                 pub const m_bHasUserBitArray: usize = 0x90; // CUtlVector<uint8>
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CRootUpdateNode {
             }
-            // Parent: CNmTargetValueNode__CDefinition
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTargetOffsetNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_bIsBoneSpaceOffset: usize = 0xC; // bool
                 pub const m_rotationOffset: usize = 0x10; // Quaternion
                 pub const m_translationOffset: usize = 0x20; // Vector
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMotionGraphUpdateNode {
                 pub const m_pMotionGraph: usize = 0x58; // CSmartPtr<CMotionGraph>
-            }
-            // Parent: CNmFloatValueNode__CDefinition
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmFloatAngleMathNode__CDefinition {
-                pub const m_nInputValueNodeIdx: usize = 0xA; // int16
-                pub const m_operation: usize = 0xC; // CNmFloatAngleMathNode::Operation_t
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmFloatAngleMathNode__CDefinition {
+                pub const m_nInputValueNodeIdx: usize = 0xA; // int16
+                pub const m_operation: usize = 0xC; // CNmFloatAngleMathNode::Operation_t
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseCursorID_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
             pub mod CAnimParamHandle {
                 pub const m_type: usize = 0x0; // AnimParamType_t
                 pub const m_index: usize = 0x1; // uint8
@@ -1668,96 +4498,946 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod WeightList {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_weights: usize = 0x8; // CUtlVector<float32>
             }
-            // Parent: None
+            // Parent: 
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod MotionIndex {
                 pub const m_nGroup: usize = 0x0; // uint16
                 pub const m_nMotion: usize = 0x2; // uint16
             }
             // Parent: None
-            // Fields count: 4
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FollowAttachmentSettings_t {
                 pub const m_attachment: usize = 0x0; // CAnimAttachment
                 pub const m_boneIndex: usize = 0x80; // int32
-                pub const m_bMatchTranslation: usize = 0x84; // bool
-                pub const m_bMatchRotation: usize = 0x85; // bool
+                pub const m_attachmentHandle: usize = 0x84; // AttachmentHandle_t
+                pub const m_bMatchTranslation: usize = 0x85; // bool
+                pub const m_bMatchRotation: usize = 0x86; // bool
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmReferencedGraphNode__CDefinition {
+                pub const m_nReferencedGraphIdx: usize = 0xA; // int16
+                pub const m_nFallbackNodeIdx: usize = 0xC; // int16
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimNodeID {
                 pub const m_id: usize = 0x0; // uint32
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmClipSelectorNode__CDefinition {
                 pub const m_optionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,5>
                 pub const m_conditionNodeIndices: usize = 0x28; // CUtlLeanVectorFixedGrowable<int16,5>
             }
-            // Parent: CAnimComponentUpdater
-            // Fields count: 8
+            // Parent: None
+            // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CLookComponentUpdater {
                 pub const m_hLookHeading: usize = 0x34; // CAnimParamHandle
-                pub const m_hLookHeadingVelocity: usize = 0x36; // CAnimParamHandle
-                pub const m_hLookPitch: usize = 0x38; // CAnimParamHandle
-                pub const m_hLookDistance: usize = 0x3A; // CAnimParamHandle
-                pub const m_hLookDirection: usize = 0x3C; // CAnimParamHandle
-                pub const m_hLookTarget: usize = 0x3E; // CAnimParamHandle
-                pub const m_hLookTargetWorldSpace: usize = 0x40; // CAnimParamHandle
-                pub const m_bNetworkLookTarget: usize = 0x42; // bool
+                pub const m_hLookHeadingNormalized: usize = 0x36; // CAnimParamHandle
+                pub const m_hLookHeadingVelocity: usize = 0x38; // CAnimParamHandle
+                pub const m_hLookPitch: usize = 0x3A; // CAnimParamHandle
+                pub const m_hLookDistance: usize = 0x3C; // CAnimParamHandle
+                pub const m_hLookDirection: usize = 0x3E; // CAnimParamHandle
+                pub const m_hLookTarget: usize = 0x40; // CAnimParamHandle
+                pub const m_hLookTargetWorldSpace: usize = 0x42; // CAnimParamHandle
+                pub const m_bNetworkLookTarget: usize = 0x44; // bool
             }
-            // Parent: CAnimGraphSettingsGroup
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmIsExternalPoseSetNode__CDefinition {
+                pub const m_nExternalPoseNodeIdx: usize = 0xA; // int16
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimGraphNetworkSettings {
                 pub const m_bNetworkingEnabled: usize = 0x20; // bool
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSingleFrameUpdateNode {
                 pub const m_actions: usize = 0x58; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
                 pub const m_hPoseCacheHandle: usize = 0x70; // CPoseHandle
                 pub const m_hSequence: usize = 0x74; // HSequence
                 pub const m_flCycle: usize = 0x78; // float32
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmChainLookatNode__CDefinition {
+                pub const m_chainEndBoneID: usize = 0x10; // CGlobalSymbol
+                pub const m_nLookatTargetNodeIdx: usize = 0x18; // int16
+                pub const m_nEnabledNodeIdx: usize = 0x1A; // int16
+                pub const m_flBlendTimeSeconds: usize = 0x1C; // float32
+                pub const m_nChainLength: usize = 0x20; // uint8
+                pub const m_bIsTargetInWorldSpace: usize = 0x21; // bool
+                pub const m_chainForwardDir: usize = 0x24; // Vector
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmFollowBoneNode__CDefinition {
+                pub const m_bone: usize = 0x10; // CGlobalSymbol
+                pub const m_followTargetBone: usize = 0x18; // CGlobalSymbol
+                pub const m_nEnabledNodeIdx: usize = 0x20; // int16
+                pub const m_mode: usize = 0x22; // NmFollowBoneMode_t
+            }
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBlockSelectionMetricEvaluator {
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CRemapValueComponentUpdater {
+                pub const m_items: usize = 0x30; // CUtlVector<CRemapValueUpdateItem>
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CModelConfigList {
                 pub const m_bHideMaterialGroupInTools: usize = 0x0; // bool
                 pub const m_bHideRenderColorInTools: usize = 0x1; // bool
@@ -1767,7 +5447,7 @@ pub mod cs2_dumper {
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqAutoLayerFlag {
                 pub const m_bPost: usize = 0x0; // bool
                 pub const m_bSpline: usize = 0x1; // bool
@@ -1782,16 +5462,95 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimStateID {
                 pub const m_id: usize = 0x0; // uint32
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIDEventConditionNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_eventConditionRules: usize = 0xC; // CNmBitFlags
@@ -1801,7 +5560,7 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ModelBoneFlexDriver_t {
                 pub const m_boneName: usize = 0x0; // CUtlString
                 pub const m_boneNameToken: usize = 0x8; // uint32
@@ -1811,27 +5570,107 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMorphData {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_morphRectDatas: usize = 0x8; // CUtlVector<CMorphRectData>
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootPinningUpdateNode {
-                pub const m_poseOpFixedData: usize = 0x70; // FootPinningPoseOpFixedData_t
-                pub const m_eTimingSource: usize = 0xA0; // FootPinningTimingSource
-                pub const m_params: usize = 0xA8; // CUtlVector<CAnimParamHandle>
-                pub const m_bResetChild: usize = 0xC0; // bool
+                pub const m_poseOpFixedData: usize = 0x78; // FootPinningPoseOpFixedData_t
+                pub const m_eTimingSource: usize = 0xA8; // FootPinningTimingSource
+                pub const m_params: usize = 0xB0; // CUtlVector<CAnimParamHandle>
+                pub const m_bResetChild: usize = 0xC8; // bool
             }
             // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqPoseSetting {
                 pub const m_sPoseParameter: usize = 0x0; // CBufferString
                 pub const m_sAttachment: usize = 0x10; // CBufferString
@@ -1842,11 +5681,103 @@ pub mod cs2_dumper {
                 pub const m_bZ: usize = 0x36; // bool
                 pub const m_eType: usize = 0x38; // int32
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            pub mod PulseGraphExecutionHistoryCursorDesc_t {
+                pub const vecAncestorCursorIDs: usize = 0x0; // CUtlVector<PulseCursorID_t>
+                pub const nSpawnNodeID: usize = 0x18; // PulseDocNodeID_t
+                pub const nRetiredAtNodeID: usize = 0x1C; // PulseDocNodeID_t
+                pub const flLastReferenced: usize = 0x20; // float32
+                pub const nLastValidEntryIdx: usize = 0x24; // int32
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVirtualParameterFloatNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
             }
@@ -1854,7 +5785,7 @@ pub mod cs2_dumper {
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAttachment {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_influenceNames: usize = 0x8; // CUtlString[3]
@@ -1865,30 +5796,136 @@ pub mod cs2_dumper {
                 pub const m_nInfluences: usize = 0x83; // uint8
                 pub const m_bIgnoreRotation: usize = 0x84; // bool
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSequenceUpdateNodeBase {
-                pub const m_playbackSpeed: usize = 0x64; // float32
-                pub const m_bLoop: usize = 0x68; // bool
+                pub const m_playbackSpeed: usize = 0x6C; // float32
+                pub const m_bLoop: usize = 0x70; // bool
             }
             // Parent: None
-            // Fields count: 3
+            // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CDrawCullingData {
-                pub const m_vConeApex: usize = 0x0; // Vector
-                pub const m_ConeAxis: usize = 0xC; // int8[3]
-                pub const m_ConeCutoff: usize = 0xF; // int8
+                pub const m_ConeAxis: usize = 0x0; // int8[3]
+                pub const m_ConeCutoff: usize = 0x3; // int8
             }
             // Parent: None
-            // Fields count: 27
+            // Fields count: 30
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXJoint_t {
                 pub const m_nType: usize = 0x0; // uint16
                 pub const m_nBody1: usize = 0x2; // uint16
@@ -1897,7 +5934,9 @@ pub mod cs2_dumper {
                 pub const m_Frame1: usize = 0x10; // CTransform
                 pub const m_Frame2: usize = 0x30; // CTransform
                 pub const m_bEnableCollision: usize = 0x50; // bool
-                pub const m_bEnableLinearLimit: usize = 0x51; // bool
+                pub const m_bIsLinearConstraintDisabled: usize = 0x51; // bool
+                pub const m_bIsAngularConstraintDisabled: usize = 0x52; // bool
+                pub const m_bEnableLinearLimit: usize = 0x53; // bool
                 pub const m_LinearLimit: usize = 0x54; // VPhysXRange_t
                 pub const m_bEnableLinearMotor: usize = 0x5C; // bool
                 pub const m_vLinearTargetVelocity: usize = 0x60; // Vector
@@ -1917,12 +5956,13 @@ pub mod cs2_dumper {
                 pub const m_flElasticity: usize = 0xB0; // float32
                 pub const m_flElasticDamping: usize = 0xB4; // float32
                 pub const m_flPlasticity: usize = 0xB8; // float32
+                pub const m_Tag: usize = 0xC0; // CUtlString
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CStateNodeTransitionData {
                 pub const m_curve: usize = 0x0; // CBlendCurve
                 pub const m_blendDuration: usize = 0x8; // CAnimValue<float32>
@@ -1930,11 +5970,91 @@ pub mod cs2_dumper {
                 pub const m_bReset: usize = 0x0; // bitfield:1
                 pub const m_resetCycleOption: usize = 0x0; // bitfield:3
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTimeRemainingMetricEvaluator {
                 pub const m_bMatchByTimeRemaining: usize = 0x50; // bool
                 pub const m_flMaxTimeRemaining: usize = 0x54; // float32
@@ -1942,26 +6062,192 @@ pub mod cs2_dumper {
                 pub const m_flMinTimeRemaining: usize = 0x5C; // float32
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            pub mod CParticleInput {
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement {
                 pub const m_ElementName: usize = 0x8; // CUtlString
                 pub const m_NestedElements: usize = 0x10; // CUtlVector<CModelConfigElement*>
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmControlParameterVectorNode__CDefinition {
             }
             // Parent: None
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FootFixedSettings {
                 pub const m_traceSettings: usize = 0x0; // TraceSettings_t
                 pub const m_vFootBaseBindPosePositionMS: usize = 0x10; // VectorAligned
@@ -1975,29 +6261,121 @@ pub mod cs2_dumper {
                 pub const m_nFootIndex: usize = 0x3C; // int32
             }
             // Parent: None
-            // Fields count: 3
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmBoneMaskSwitchNode__CDefinition {
+                pub const m_nSwitchValueNodeIdx: usize = 0xA; // int16
+                pub const m_nTrueValueNodeIdx: usize = 0xC; // int16
+                pub const m_nFalseValueNodeIdx: usize = 0xE; // int16
+                pub const m_flBlendTimeSeconds: usize = 0x10; // float32
+                pub const m_bSwitchDynamically: usize = 0x14; // bool
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
             pub mod CModelConfig {
                 pub const m_ConfigName: usize = 0x0; // CUtlString
                 pub const m_Elements: usize = 0x8; // CUtlVector<CModelConfigElement*>
                 pub const m_bTopLevel: usize = 0x20; // bool
+                pub const m_bActiveInEditorByDefault: usize = 0x21; // bool
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimComponentID {
                 pub const m_id: usize = 0x0; // uint32
             }
             // Parent: None
-            // Fields count: 16
+            // Fields count: 17
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXAggregateData_t {
                 pub const m_nFlags: usize = 0x0; // uint16
                 pub const m_nRefCounter: usize = 0x2; // uint16
@@ -2007,36 +6385,121 @@ pub mod cs2_dumper {
                 pub const m_indexHash: usize = 0x50; // CUtlVector<uint16>
                 pub const m_bindPose: usize = 0x68; // CUtlVector<matrix3x4a_t>
                 pub const m_parts: usize = 0x80; // CUtlVector<VPhysXBodyPart_t>
-                pub const m_constraints2: usize = 0x98; // CUtlVector<VPhysXConstraint2_t>
-                pub const m_joints: usize = 0xB0; // CUtlVector<VPhysXJoint_t>
-                pub const m_pFeModel: usize = 0xC8; // PhysFeModelDesc_t*
-                pub const m_boneParents: usize = 0xD0; // CUtlVector<uint16>
-                pub const m_surfacePropertyHashes: usize = 0xE8; // CUtlVector<uint32>
-                pub const m_collisionAttributes: usize = 0x100; // CUtlVector<VPhysXCollisionAttributes_t>
-                pub const m_debugPartNames: usize = 0x118; // CUtlVector<CUtlString>
-                pub const m_embeddedKeyvalues: usize = 0x130; // CUtlString
+                pub const m_shapeMarkups: usize = 0x98; // CUtlVector<PhysShapeMarkup_t>
+                pub const m_constraints2: usize = 0xB0; // CUtlVector<VPhysXConstraint2_t>
+                pub const m_joints: usize = 0xC8; // CUtlVector<VPhysXJoint_t>
+                pub const m_pFeModel: usize = 0xE0; // PhysFeModelDesc_t*
+                pub const m_boneParents: usize = 0xE8; // CUtlVector<uint16>
+                pub const m_surfacePropertyHashes: usize = 0x100; // CUtlVector<uint32>
+                pub const m_collisionAttributes: usize = 0x118; // CUtlVector<VPhysXCollisionAttributes_t>
+                pub const m_debugPartNames: usize = 0x130; // CUtlVector<CUtlString>
+                pub const m_embeddedKeyvalues: usize = 0x148; // CUtlString
             }
             // Parent: None
-            // Fields count: 9
+            // Fields count: 13
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmGraphDefinition {
-                pub const m_persistentNodeIndices: usize = 0x0; // CUtlVector<int16>
-                pub const m_nRootNodeIdx: usize = 0x18; // int16
-                pub const m_controlParameterIDs: usize = 0x20; // CUtlVector<CGlobalSymbol>
-                pub const m_virtualParameterIDs: usize = 0x38; // CUtlVector<CGlobalSymbol>
-                pub const m_virtualParameterNodeIndices: usize = 0x50; // CUtlVector<int16>
-                pub const m_childGraphSlots: usize = 0x68; // CUtlVector<CNmGraphDefinition::ChildGraphSlot_t>
-                pub const m_externalGraphSlots: usize = 0x80; // CUtlVector<CNmGraphDefinition::ExternalGraphSlot_t>
-                pub const m_nodePaths: usize = 0x108; // CUtlVector<CUtlString>
-                pub const m_runtimeVersionID: usize = 0x120; // V_uuid_t
+                pub const m_variationID: usize = 0x0; // CGlobalSymbol
+                pub const m_skeleton: usize = 0x8; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+                pub const m_pUserData: usize = 0x10; // CNmGraphVariationUserData*
+                pub const m_persistentNodeIndices: usize = 0x18; // CUtlVector<int16>
+                pub const m_nRootNodeIdx: usize = 0x30; // int16
+                pub const m_controlParameterIDs: usize = 0x38; // CUtlVector<CGlobalSymbol>
+                pub const m_virtualParameterIDs: usize = 0x50; // CUtlVector<CGlobalSymbol>
+                pub const m_virtualParameterNodeIndices: usize = 0x68; // CUtlVector<int16>
+                pub const m_referencedGraphSlots: usize = 0x80; // CUtlVector<CNmGraphDefinition::ReferencedGraphSlot_t>
+                pub const m_externalGraphSlots: usize = 0x98; // CUtlVector<CNmGraphDefinition::ExternalGraphSlot_t>
+                pub const m_externalPoseSlots: usize = 0xB0; // CUtlVector<CNmGraphDefinition::ExternalPoseSlot_t>
+                pub const m_nodePaths: usize = 0x138; // CUtlVector<CUtlString>
+                pub const m_resources: usize = 0x150; // CUtlVector<CStrongHandleVoid>
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmSelectorNode__CDefinition {
                 pub const m_optionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,5>
                 pub const m_conditionNodeIndices: usize = 0x28; // CUtlLeanVectorFixedGrowable<int16,5>
@@ -2045,7 +6508,7 @@ pub mod cs2_dumper {
             // Fields count: 15
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimDemoCaptureSettings {
                 pub const m_vecErrorRangeSplineRotation: usize = 0x0; // Vector2D
                 pub const m_vecErrorRangeSplineTranslation: usize = 0x8; // Vector2D
@@ -2067,7 +6530,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod IKDemoCaptureSettings_t {
                 pub const m_parentBoneName: usize = 0x0; // CUtlString
                 pub const m_eMode: usize = 0x8; // IKChannelMode
@@ -2079,7 +6542,7 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqMultiFetchFlag {
                 pub const m_bRealtime: usize = 0x0; // bool
                 pub const m_bCylepose: usize = 0x1; // bool
@@ -2089,31 +6552,280 @@ pub mod cs2_dumper {
                 pub const m_b2D_TRI: usize = 0x5; // bool
             }
             // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRegisterMap_t {
+                pub const m_Inparams: usize = 0x0; // KeyValues3
+                pub const m_InparamsWhichCanBeMoved: usize = 0x10; // CKV3MemberNameSet
+                pub const m_Outparams: usize = 0x20; // KeyValues3
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXRange_t {
                 pub const m_flMin: usize = 0x0; // float32
                 pub const m_flMax: usize = 0x4; // float32
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CStopAtGoalUpdateNode {
-                pub const m_flOuterRadius: usize = 0x6C; // float32
-                pub const m_flInnerRadius: usize = 0x70; // float32
-                pub const m_flMaxScale: usize = 0x74; // float32
-                pub const m_flMinScale: usize = 0x78; // float32
-                pub const m_damping: usize = 0x80; // CAnimInputDamping
+                pub const m_flOuterRadius: usize = 0x74; // float32
+                pub const m_flInnerRadius: usize = 0x78; // float32
+                pub const m_flMaxScale: usize = 0x7C; // float32
+                pub const m_flMinScale: usize = 0x80; // float32
+                pub const m_damping: usize = 0x88; // CAnimInputDamping
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIDEventPercentageThroughNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_eventConditionRules: usize = 0xC; // CNmBitFlags
@@ -2123,7 +6835,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimBoneDifference {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_parent: usize = 0x10; // CBufferString
@@ -2131,45 +6843,354 @@ pub mod cs2_dumper {
                 pub const m_bHasRotation: usize = 0x2C; // bool
                 pub const m_bHasMovement: usize = 0x2D; // bool
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedBoolNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_mode: usize = 0xC; // NmCachedValueMode_t
             }
-            // Parent: CCycleBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimCycle {
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CActionComponentUpdater {
                 pub const m_actions: usize = 0x30; // CUtlVector<CSmartPtr<CAnimActionUpdater>>
             }
             // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmGraphDataSet {
-                pub const m_variationID: usize = 0x0; // CGlobalSymbol
-                pub const m_skeleton: usize = 0x8; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
-                pub const m_resources: usize = 0x10; // CUtlVector<CStrongHandleVoid>
-            }
-            // Parent: CPathAnimMotorUpdaterBase
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CDampedPathAnimMotorUpdater {
                 pub const m_flAnticipationTime: usize = 0x20; // float32
                 pub const m_flMinSpeedScale: usize = 0x24; // float32
@@ -2179,55 +7200,545 @@ pub mod cs2_dumper {
                 pub const m_flMinSpringTension: usize = 0x30; // float32
                 pub const m_flMaxSpringTension: usize = 0x34; // float32
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedFloatNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_mode: usize = 0xC; // NmCachedValueMode_t
             }
-            // Parent: CNmFloatValueNode__CDefinition
-            // Fields count: 3
+            // Parent: None
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatSwitchNode__CDefinition {
                 pub const m_nSwitchValueNodeIdx: usize = 0xA; // int16
                 pub const m_nTrueValueNodeIdx: usize = 0xC; // int16
                 pub const m_nFalseValueNodeIdx: usize = 0xE; // int16
+                pub const m_flFalseValue: usize = 0x10; // float32
+                pub const m_flTrueValue: usize = 0x14; // float32
             }
-            // Parent: CModelConfigElement
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_SetMaterialGroupOnAttachedModels {
                 pub const m_MaterialGroupName: usize = 0x48; // CUtlString
             }
-            // Parent: CNmBoneMaskValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmVirtualParameterBoneMaskNode__CDefinition {
-                pub const m_nChildNodeIdx: usize = 0xA; // int16
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmEntityAttributeEventBase {
+                pub const m_attributeName: usize = 0x20; // CUtlString
             }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 2
+            // Parent: None
+            // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CPathHelperUpdateNode {
-                pub const m_flStoppingRadius: usize = 0x68; // float32
-                pub const m_flStoppingSpeedScale: usize = 0x6C; // float32
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmVirtualParameterBoneMaskNode__CDefinition {
+                pub const m_nChildNodeIdx: usize = 0xA; // int16
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CPathHelperUpdateNode {
+                pub const m_flStoppingRadius: usize = 0x70; // float32
+                pub const m_flStoppingSpeedScale: usize = 0x74; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
             pub mod MaterialGroup_t {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_materials: usize = 0x8; // CUtlVector<CStrongHandle<InfoForResourceTypeIMaterial2>>
@@ -2236,18 +7747,98 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMorphBundleData {
                 pub const m_flULeftSrc: usize = 0x0; // float32
                 pub const m_flVTopSrc: usize = 0x4; // float32
                 pub const m_offsets: usize = 0x8; // CUtlVector<float32>
                 pub const m_ranges: usize = 0x20; // CUtlVector<float32>
             }
-            // Parent: CModelConfigElement
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_UserPick {
                 pub const m_Choices: usize = 0x48; // CUtlVector<CUtlString>
             }
@@ -2255,76 +7846,412 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSolveIKTargetHandle_t {
                 pub const m_positionHandle: usize = 0x0; // CAnimParamHandle
                 pub const m_orientationHandle: usize = 0x2; // CAnimParamHandle
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootAdjustmentUpdateNode {
-                pub const m_clips: usize = 0x70; // CUtlVector<HSequence>
-                pub const m_hBasePoseCacheHandle: usize = 0x88; // CPoseHandle
-                pub const m_facingTarget: usize = 0x8C; // CAnimParamHandle
-                pub const m_flTurnTimeMin: usize = 0x90; // float32
-                pub const m_flTurnTimeMax: usize = 0x94; // float32
-                pub const m_flStepHeightMax: usize = 0x98; // float32
-                pub const m_flStepHeightMaxAngle: usize = 0x9C; // float32
-                pub const m_bResetChild: usize = 0xA0; // bool
-                pub const m_bAnimationDriven: usize = 0xA1; // bool
+                pub const m_clips: usize = 0x78; // CUtlVector<HSequence>
+                pub const m_hBasePoseCacheHandle: usize = 0x90; // CPoseHandle
+                pub const m_facingTarget: usize = 0x94; // CAnimParamHandle
+                pub const m_flTurnTimeMin: usize = 0x98; // float32
+                pub const m_flTurnTimeMax: usize = 0x9C; // float32
+                pub const m_flStepHeightMax: usize = 0xA0; // float32
+                pub const m_flStepHeightMaxAngle: usize = 0xA4; // float32
+                pub const m_bResetChild: usize = 0xA8; // bool
+                pub const m_bAnimationDriven: usize = 0xA9; // bool
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CChoreoUpdateNode {
             }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAimConstraint {
-                pub const m_qAimOffset: usize = 0x70; // Quaternion
-                pub const m_nUpType: usize = 0x80; // uint32
+                pub const m_qAimOffset: usize = 0x60; // Quaternion
+                pub const m_nUpType: usize = 0x70; // uint32
             }
-            // Parent: CAnimTagBase
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            pub mod CMaterialDrawDescriptor__RigidMeshPart_t {
+                pub const m_nRigidBLASIndex: usize = 0x0; // uint16
+                pub const m_nBoneIndex: usize = 0x2; // int16
+                pub const m_nStartIndexOffset: usize = 0x4; // uint32
+                pub const m_nPrimitiveCount: usize = 0x8; // uint32
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootFallAnimTag {
                 pub const m_foot: usize = 0x58; // FootFallTagFoot_t
             }
             // Parent: None
-            // Fields count: 12
+            // Fields count: 17
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMaterialDrawDescriptor {
                 pub const m_flUvDensity: usize = 0x0; // float32
                 pub const m_vTintColor: usize = 0x4; // Vector
                 pub const m_flAlpha: usize = 0x10; // float32
                 pub const m_nNumMeshlets: usize = 0x16; // uint16
                 pub const m_nFirstMeshlet: usize = 0x1C; // uint32
-                pub const m_nPrimitiveType: usize = 0x20; // RenderPrimitiveType_t
-                pub const m_nBaseVertex: usize = 0x24; // int32
-                pub const m_nVertexCount: usize = 0x28; // int32
-                pub const m_nStartIndex: usize = 0x2C; // int32
-                pub const m_nIndexCount: usize = 0x30; // int32
-                pub const m_indexBuffer: usize = 0x98; // CRenderBufferBinding
-                pub const m_material: usize = 0xC8; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_nAppliedIndexOffset: usize = 0x20; // uint32
+                pub const m_nDepthVertexBufferIndex: usize = 0x24; // uint8
+                pub const m_nMeshletPackedIVBIndex: usize = 0x25; // uint8
+                pub const m_rigidMeshParts: usize = 0x28; // CUtlLeanVector<CMaterialDrawDescriptor::RigidMeshPart_t>
+                pub const m_nPrimitiveType: usize = 0x38; // RenderPrimitiveType_t
+                pub const m_nBaseVertex: usize = 0x3C; // int32
+                pub const m_nVertexCount: usize = 0x40; // int32
+                pub const m_nStartIndex: usize = 0x44; // int32
+                pub const m_nIndexCount: usize = 0x48; // int32
+                pub const m_indexBuffer: usize = 0xB0; // CRenderBufferBinding
+                pub const m_meshletPackedIVB: usize = 0xD0; // CRenderBufferBinding
+                pub const m_material: usize = 0x100; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
-            // Fields count: 7
+            // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmSkeleton {
                 pub const m_ID: usize = 0x0; // CGlobalSymbol
                 pub const m_boneIDs: usize = 0x8; // CUtlLeanVector<CGlobalSymbol>
@@ -2332,35 +8259,278 @@ pub mod cs2_dumper {
                 pub const m_parentSpaceReferencePose: usize = 0x30; // CUtlVector<CTransform>
                 pub const m_modelSpaceReferencePose: usize = 0x48; // CUtlVector<CTransform>
                 pub const m_numBonesToSampleAtLowLOD: usize = 0x60; // int32
-                pub const m_boneMasks: usize = 0x68; // CUtlLeanVector<CNmBoneMask>
+                pub const m_maskDefinitions: usize = 0x88; // CUtlLeanVector<NmBoneMaskSetDefinition_t>
+                pub const m_secondarySkeletons: usize = 0xA8; // CUtlLeanVector<CNmSkeleton::SecondarySkeleton_t>
+                pub const m_bIsPropSkeleton: usize = 0xB8; // bool
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CStepsRemainingMetricEvaluator {
                 pub const m_footIndices: usize = 0x50; // CUtlVector<int32>
                 pub const m_flMinStepsRemaining: usize = 0x68; // float32
             }
-            // Parent: CNmParameterizedBlendNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVelocityBlendNode__CDefinition {
             }
-            // Parent: CNmTask
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmZeroPoseTask {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyElementNameFn
+            // ���x.
             pub mod CBodyGroupSetting {
                 pub const m_BodyGroupName: usize = 0x0; // CUtlString
                 pub const m_nBodyGroupOption: usize = 0x8; // int32
@@ -2369,28 +8539,311 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CVectorQuantizer {
                 pub const m_centroidVectors: usize = 0x0; // CUtlVector<float32>
                 pub const m_nCentroids: usize = 0x18; // int32
                 pub const m_nDimensions: usize = 0x1C; // int32
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // ���x.
+            pub mod ParticleNamedValueConfiguration_t {
+                pub const m_ConfigName: usize = 0x0; // CUtlString
+                pub const m_ConfigValue: usize = 0x8; // KeyValues3
+                pub const m_BoundValuePath: usize = 0x18; // CUtlString
+                pub const m_iAttachType: usize = 0x20; // ParticleAttachment_t
+                pub const m_strEntityScope: usize = 0x28; // CUtlString
+                pub const m_strAttachmentName: usize = 0x30; // CUtlString
+            }
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVectorCreateNode__CDefinition {
                 pub const m_inputVectorValueNodeIdx: usize = 0xA; // int16
                 pub const m_inputValueXNodeIdx: usize = 0xC; // int16
                 pub const m_inputValueYNodeIdx: usize = 0xE; // int16
                 pub const m_inputValueZNodeIdx: usize = 0x10; // int16
             }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 10
+            // Parent: None
+            // Fields count: 23
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleVecInput {
+                pub const m_nType: usize = 0xC; // ParticleVecType_t
+                pub const m_vLiteralValue: usize = 0x10; // Vector
+                pub const m_LiteralColor: usize = 0x1C; // Color
+                pub const m_NamedValue: usize = 0x20; // CParticleNamedValueRef
+                pub const m_bFollowNamedValue: usize = 0x60; // bool
+                pub const m_nVectorAttribute: usize = 0x64; // ParticleAttributeIndex_t
+                pub const m_vVectorAttributeScale: usize = 0x68; // Vector
+                pub const m_nControlPoint: usize = 0x74; // int32
+                pub const m_nDeltaControlPoint: usize = 0x78; // int32
+                pub const m_vCPValueScale: usize = 0x7C; // Vector
+                pub const m_vCPRelativePosition: usize = 0x88; // Vector
+                pub const m_vCPRelativeDir: usize = 0x94; // Vector
+                pub const m_FloatComponentX: usize = 0xA0; // CParticleFloatInput
+                pub const m_FloatComponentY: usize = 0x208; // CParticleFloatInput
+                pub const m_FloatComponentZ: usize = 0x370; // CParticleFloatInput
+                pub const m_FloatInterp: usize = 0x4D8; // CParticleFloatInput
+                pub const m_flInterpInput0: usize = 0x640; // float32
+                pub const m_flInterpInput1: usize = 0x644; // float32
+                pub const m_vInterpOutput0: usize = 0x648; // Vector
+                pub const m_vInterpOutput1: usize = 0x654; // Vector
+                pub const m_Gradient: usize = 0x660; // CColorGradient
+                pub const m_vRandomMin: usize = 0x678; // Vector
+                pub const m_vRandomMax: usize = 0x684; // Vector
+            }
+            // Parent: None
+            // Fields count: 11
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmStateNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
                 pub const m_entryEvents: usize = 0x10; // CUtlLeanVectorFixedGrowable<CGlobalSymbol,3>
@@ -2402,41 +8855,362 @@ pub mod cs2_dumper {
                 pub const m_nLayerRootMotionWeightNodeIdx: usize = 0xA2; // int16
                 pub const m_nLayerBoneMaskNodeIdx: usize = 0xA4; // int16
                 pub const m_bIsOffState: usize = 0xA6; // bool
+                pub const m_bUseActualElapsedTimeInStateForTimedEvents: usize = 0xA7; // bool
             }
-            // Parent: CNmBoneMaskValueNode__CDefinition
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBoneMaskSelectorNode__CDefinition {
                 pub const m_defaultMaskNodeIdx: usize = 0xA; // int16
                 pub const m_parameterValueNodeIdx: usize = 0xC; // int16
-                pub const m_switchDynamically: usize = 0xE; // bool
+                pub const m_bSwitchDynamically: usize = 0xE; // bool
                 pub const m_maskNodeIndices: usize = 0x10; // CUtlVectorFixedGrowable<int16,7>
                 pub const m_parameterValues: usize = 0x38; // CUtlVectorFixedGrowable<CGlobalSymbol,7>
                 pub const m_flBlendTimeSeconds: usize = 0x88; // float32
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVirtualParameterVectorNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootCycleMetricEvaluator {
                 pub const m_footIndices: usize = 0x50; // CUtlVector<int32>
             }
-            // Parent: CNmIDValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmConstIDNode__CDefinition {
                 pub const m_value: usize = 0x10; // CGlobalSymbol
             }
@@ -2444,7 +9218,7 @@ pub mod cs2_dumper {
             // Fields count: 13
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CHitBox {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_sSurfaceProperty: usize = 0x8; // CUtlString
@@ -2460,20 +9234,103 @@ pub mod cs2_dumper {
                 pub const m_cRenderColor: usize = 0x44; // Color
                 pub const m_nHitBoxIndex: usize = 0x48; // uint16
             }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 2
+            // Parent: None
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmParameterizedSelectorNode__CDefinition {
                 pub const m_optionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,5>
-                pub const m_parameterNodeIdx: usize = 0x28; // int16
+                pub const m_optionWeights: usize = 0x28; // CUtlLeanVectorFixedGrowable<uint8,5>
+                pub const m_parameterNodeIdx: usize = 0x38; // int16
+                pub const m_bIgnoreInvalidOptions: usize = 0x3A; // bool
+                pub const m_bHasWeightsSet: usize = 0x3B; // bool
             }
             // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ModelSkeletonData_t {
                 pub const m_boneName: usize = 0x0; // CUtlVector<CUtlString>
                 pub const m_nParent: usize = 0x18; // CUtlVector<int16>
@@ -2484,51 +9341,335 @@ pub mod cs2_dumper {
                 pub const m_boneScaleParent: usize = 0x90; // CUtlVector<float32>
             }
             // Parent: None
-            // Fields count: 3
+            // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmEvent {
-                pub const m_flStartTimeSeconds: usize = 0x8; // float32
-                pub const m_flDurationSeconds: usize = 0xC; // float32
+                pub const m_flStartTime: usize = 0x8; // NmPercent_t
+                pub const m_flDuration: usize = 0xC; // NmPercent_t
                 pub const m_syncID: usize = 0x10; // CGlobalSymbol
+                pub const m_bClientOnly: usize = 0x18; // bool
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod NmCompressionSettings_t__QuantizationRange_t {
                 pub const m_flRangeStart: usize = 0x0; // float32
                 pub const m_flRangeLength: usize = 0x4; // float32
             }
-            // Parent: CNmTask
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBlendTaskBase {
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod TagSpan_t {
                 pub const m_tagIndex: usize = 0x0; // int32
                 pub const m_startCycle: usize = 0x4; // float32
                 pub const m_endCycle: usize = 0x8; // float32
             }
-            // Parent: CNmTargetValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmConstTargetNode__CDefinition {
                 pub const m_value: usize = 0x10; // CNmTarget
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // ���x.
+            pub mod CRemapValueUpdateItem {
+                pub const m_hParamIn: usize = 0x0; // CAnimParamHandle
+                pub const m_hParamOut: usize = 0x2; // CAnimParamHandle
+                pub const m_flMinInputValue: usize = 0x4; // float32
+                pub const m_flMaxInputValue: usize = 0x8; // float32
+                pub const m_flMinOutputValue: usize = 0xC; // float32
+                pub const m_flMaxOutputValue: usize = 0x10; // float32
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod PermModelDataAnimatedMaterialAttribute_t {
                 pub const m_AttributeName: usize = 0x0; // CUtlString
                 pub const m_nNumChannels: usize = 0x8; // int32
@@ -2537,7 +9678,7 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMotionDataSet {
                 pub const m_groups: usize = 0x0; // CUtlVector<CMotionGraphGroup>
                 pub const m_nDimensionCount: usize = 0x18; // int32
@@ -2546,120 +9687,870 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CProductQuantizer {
                 pub const m_subQuantizers: usize = 0x0; // CUtlVector<CVectorQuantizer>
                 pub const m_nDimensions: usize = 0x18; // int32
             }
-            // Parent: CAnimUpdateNodeBase
+            // Parent: None
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CChoiceUpdateNode {
-                pub const m_children: usize = 0x58; // CUtlVector<CAnimUpdateNodeRef>
-                pub const m_weights: usize = 0x70; // CUtlVector<float32>
-                pub const m_blendTimes: usize = 0x88; // CUtlVector<float32>
-                pub const m_choiceMethod: usize = 0xA0; // ChoiceMethod
-                pub const m_choiceChangeMethod: usize = 0xA4; // ChoiceChangeMethod
-                pub const m_blendMethod: usize = 0xA8; // ChoiceBlendMethod
-                pub const m_blendTime: usize = 0xAC; // float32
-                pub const m_bCrossFade: usize = 0xB0; // bool
-                pub const m_bResetChosen: usize = 0xB1; // bool
-                pub const m_bDontResetSameSelection: usize = 0xB2; // bool
+                pub const m_children: usize = 0x60; // CUtlVector<CAnimUpdateNodeRef>
+                pub const m_weights: usize = 0x78; // CUtlVector<float32>
+                pub const m_blendTimes: usize = 0x90; // CUtlVector<float32>
+                pub const m_choiceMethod: usize = 0xA8; // ChoiceMethod
+                pub const m_choiceChangeMethod: usize = 0xAC; // ChoiceChangeMethod
+                pub const m_blendMethod: usize = 0xB0; // ChoiceBlendMethod
+                pub const m_blendTime: usize = 0xB4; // float32
+                pub const m_bCrossFade: usize = 0xB8; // bool
+                pub const m_bResetChosen: usize = 0xB9; // bool
+                pub const m_bDontResetSameSelection: usize = 0xBA; // bool
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonAnimCapture_t__Bone_t {
                 pub const m_Name: usize = 0x0; // CUtlString
                 pub const m_BindPose: usize = 0x10; // CTransform
                 pub const m_nParent: usize = 0x30; // int32
             }
-            // Parent: CAnimActionUpdater
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CExpressionActionUpdater {
                 pub const m_hParam: usize = 0x18; // CAnimParamHandle
                 pub const m_eParamType: usize = 0x1A; // AnimParamType_t
                 pub const m_hScript: usize = 0x1C; // AnimScriptHandle
             }
-            // Parent: CNmFloatValueNode__CDefinition
-            // Fields count: 5
+            // Parent: None
+            // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatMathNode__CDefinition {
                 pub const m_nInputValueNodeIdxA: usize = 0xA; // int16
                 pub const m_nInputValueNodeIdxB: usize = 0xC; // int16
                 pub const m_bReturnAbsoluteResult: usize = 0xE; // bool
-                pub const m_operator: usize = 0xF; // CNmFloatMathNode::Operator_t
-                pub const m_flValueB: usize = 0x10; // float32
+                pub const m_bReturnNegatedResult: usize = 0xF; // bool
+                pub const m_operator: usize = 0x10; // CNmFloatMathNode::Operator_t
+                pub const m_flValueB: usize = 0x14; // float32
             }
-            // Parent: CAnimationGraphVisualizerPrimitiveBase
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimationGraphVisualizerLine {
                 pub const m_vWsPositionStart: usize = 0x40; // VectorAligned
                 pub const m_vWsPositionEnd: usize = 0x50; // VectorAligned
                 pub const m_Color: usize = 0x60; // Color
             }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CCycleControlUpdateNode {
-                pub const m_valueSource: usize = 0x68; // AnimValueSource
-                pub const m_paramIndex: usize = 0x6C; // CAnimParamHandle
-            }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CCycleControlUpdateNode {
+                pub const m_valueSource: usize = 0x70; // AnimValueSource
+                pub const m_paramIndex: usize = 0x74; // CAnimParamHandle
+                pub const m_bLockWhenWaning: usize = 0x76; // bool
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTargetInfoNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_infoType: usize = 0xC; // CNmTargetInfoNode::Info_t
                 pub const m_bIsWorldSpaceTarget: usize = 0x10; // bool
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CDampedValueComponentUpdater {
                 pub const m_items: usize = 0x30; // CUtlVector<CDampedValueUpdateItem>
             }
-            // Parent: CBoneConstraintBase
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBaseConstraint {
-                pub const m_name: usize = 0x28; // CUtlString
-                pub const m_vUpVector: usize = 0x30; // Vector
-                pub const m_slaves: usize = 0x40; // CUtlLeanVector<CConstraintSlave>
-                pub const m_targets: usize = 0x50; // CUtlVector<CConstraintTarget>
+                pub const m_name: usize = 0x20; // CUtlString
+                pub const m_vUpVector: usize = 0x28; // Vector
+                pub const m_slaves: usize = 0x38; // CUtlLeanVector<CConstraintSlave>
+                pub const m_targets: usize = 0x48; // CUtlVector<CConstraintTarget>
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmControlParameterFloatNode__CDefinition {
             }
             // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod BlendItem_t {
                 pub const m_tags: usize = 0x0; // CUtlVector<TagSpan_t>
                 pub const m_pChild: usize = 0x18; // CAnimUpdateNodeRef
@@ -2668,31 +10559,629 @@ pub mod cs2_dumper {
                 pub const m_flDuration: usize = 0x34; // float32
                 pub const m_bUseCustomDuration: usize = 0x38; // bool
             }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 5
+            // Parent: None
+            // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmIsExternalGraphSlotFilledNode__CDefinition {
+                pub const m_nExternalGraphNodeIdx: usize = 0xA; // int16
+            }
+            // Parent: None
+            // Fields count: 33
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNewParticleEffect {
+                pub const m_pNext: usize = 0x10; // CNewParticleEffect*
+                pub const m_pPrev: usize = 0x18; // CNewParticleEffect*
+                pub const m_pParticles: usize = 0x20; // IParticleCollection*
+                pub const m_pDebugName: usize = 0x28; // char*
+                pub const m_bDontRemove: usize = 0x0; // bitfield:1
+                pub const m_bRemove: usize = 0x0; // bitfield:1
+                pub const m_bNeedsBBoxUpdate: usize = 0x0; // bitfield:1
+                pub const m_bIsFirstFrame: usize = 0x0; // bitfield:1
+                pub const m_bAutoUpdateBBox: usize = 0x0; // bitfield:1
+                pub const m_bAllocated: usize = 0x0; // bitfield:1
+                pub const m_bSimulate: usize = 0x0; // bitfield:1
+                pub const m_bShouldPerformCullCheck: usize = 0x0; // bitfield:1
+                pub const m_bForceNoDraw: usize = 0x0; // bitfield:1
+                pub const m_bSuppressScreenSpaceEffect: usize = 0x0; // bitfield:1
+                pub const m_bShouldSave: usize = 0x0; // bitfield:1
+                pub const m_bShouldSimulateDuringGamePaused: usize = 0x0; // bitfield:1
+                pub const m_bShouldCheckFoW: usize = 0x0; // bitfield:1
+                pub const m_bIsAsyncCreate: usize = 0x0; // bitfield:1
+                pub const m_bFreezeTransitionActive: usize = 0x0; // bitfield:1
+                pub const m_bFreezeTargetState: usize = 0x0; // bitfield:1
+                pub const m_bCanFreeze: usize = 0x0; // bitfield:1
+                pub const m_vSortOrigin: usize = 0x40; // Vector
+                pub const m_flScale: usize = 0x4C; // float32
+                pub const m_hOwner: usize = 0x50; // PARTICLE_EHANDLE__*
+                pub const m_pOwningParticleProperty: usize = 0x58; // CParticleProperty*
+                pub const m_flFreezeTransitionStart: usize = 0x70; // float32
+                pub const m_flFreezeTransitionDuration: usize = 0x74; // float32
+                pub const m_flFreezeTransitionOverride: usize = 0x78; // float32
+                pub const m_LastMin: usize = 0x7C; // Vector
+                pub const m_LastMax: usize = 0x88; // Vector
+                pub const m_nSplitScreenUser: usize = 0x94; // CSplitScreenSlot
+                pub const m_vecAggregationCenter: usize = 0x98; // Vector
+                pub const m_RefCount: usize = 0xD0; // int32
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmClipNode__CDefinition {
                 pub const m_nPlayInReverseValueNodeIdx: usize = 0xA; // int16
                 pub const m_nResetTimeValueNodeIdx: usize = 0xC; // int16
                 pub const m_bSampleRootMotion: usize = 0xE; // bool
                 pub const m_bAllowLooping: usize = 0xF; // bool
                 pub const m_nDataSlotIdx: usize = 0x10; // int16
+                pub const m_graphEvents: usize = 0x18; // CUtlVectorFixedGrowable<CGlobalSymbol,2>
+                pub const m_flSpeedMultiplier: usize = 0x40; // float32
+                pub const m_nStartSyncEventOffset: usize = 0x44; // int32
             }
-            // Parent: CNmParameterizedBlendNode__CDefinition
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmBlend1DNode__CDefinition {
-                pub const m_parameterization: usize = 0x40; // CNmParameterizedBlendNode::Parameterization_t
-            }
-            // Parent: CAnimParameterBase
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmMaterialAttributeEvent {
+                pub const m_attributeName: usize = 0x20; // CUtlString
+                pub const m_attributeNameToken: usize = 0x28; // CUtlStringToken
+                pub const m_x: usize = 0x30; // CPiecewiseCurve
+                pub const m_y: usize = 0x70; // CPiecewiseCurve
+                pub const m_z: usize = 0xB0; // CPiecewiseCurve
+                pub const m_w: usize = 0xF0; // CPiecewiseCurve
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmBlend1DNode__CDefinition {
+                pub const m_parameterization: usize = 0x40; // CNmParameterizedBlendNode::Parameterization_t
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CConcreteAnimParameter {
                 pub const m_previewButton: usize = 0x6C; // AnimParamButton_t
                 pub const m_eNetworkSetting: usize = 0x70; // AnimParamNetworkSetting
@@ -2701,32 +11190,374 @@ pub mod cs2_dumper {
                 pub const m_bGameWritable: usize = 0x76; // bool
                 pub const m_bGraphWritable: usize = 0x77; // bool
             }
-            // Parent: CSequenceUpdateNodeBase
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmBoneWeightList {
+                pub const m_skeletonName: usize = 0x0; // CResourceName
+                pub const m_boneIDs: usize = 0xE0; // CUtlVector<CGlobalSymbol>
+                pub const m_weights: usize = 0xF8; // CUtlVector<float32>
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPairedSequenceUpdateNode {
-                pub const m_sPairedSequenceRole: usize = 0x70; // CGlobalSymbol
+                pub const m_sPairedSequenceRole: usize = 0x78; // CGlobalSymbol
             }
-            // Parent: CModelConfigElement
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_RandomPick {
                 pub const m_Choices: usize = 0x48; // CUtlVector<CUtlString>
                 pub const m_ChoiceWeights: usize = 0x60; // CUtlVector<float32>
             }
-            // Parent: CNmTask
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmReferencePoseTask {
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmScaleNode__CDefinition {
+                pub const m_nMaskNodeIdx: usize = 0xC; // int16
+                pub const m_nEnableNodeIdx: usize = 0xE; // int16
             }
             // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXConstraint2_t {
                 pub const m_nFlags: usize = 0x0; // uint32
                 pub const m_nParent: usize = 0x4; // uint16
@@ -2737,7 +11568,7 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CConstraintTarget {
                 pub const m_qOffset: usize = 0x20; // Quaternion
                 pub const m_vOffset: usize = 0x30; // Vector
@@ -2750,7 +11581,7 @@ pub mod cs2_dumper {
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonAnimCapture_t {
                 pub const m_nEntIndex: usize = 0x0; // CEntityIndex
                 pub const m_nEntParent: usize = 0x4; // CEntityIndex
@@ -2767,31 +11598,124 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimUser {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_nType: usize = 0x10; // int32
             }
-            // Parent: CAnimComponentUpdater
-            // Fields count: 8
+            // Parent: None
+            // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CRagdollComponentUpdater {
                 pub const m_ragdollNodePaths: usize = 0x30; // CUtlVector<CAnimNodePath>
-                pub const m_boneIndices: usize = 0x48; // CUtlVector<int32>
-                pub const m_boneNames: usize = 0x60; // CUtlVector<CUtlString>
-                pub const m_weightLists: usize = 0x78; // CUtlVector<WeightList>
-                pub const m_flSpringFrequencyMin: usize = 0x90; // float32
-                pub const m_flSpringFrequencyMax: usize = 0x94; // float32
-                pub const m_flMaxStretch: usize = 0x98; // float32
-                pub const m_bSolidCollisionAtZeroWeight: usize = 0x9C; // bool
+                pub const m_followAttachmentNodePaths: usize = 0x48; // CUtlVector<CAnimNodePath>
+                pub const m_boneIndices: usize = 0x60; // CUtlVector<int32>
+                pub const m_boneNames: usize = 0x78; // CUtlVector<CUtlString>
+                pub const m_weightLists: usize = 0x90; // CUtlVector<WeightList>
+                pub const m_boneToWeightIndices: usize = 0xA8; // CUtlVector<int32>
+                pub const m_flSpringFrequencyMin: usize = 0xC0; // float32
+                pub const m_flSpringFrequencyMax: usize = 0xC4; // float32
+                pub const m_flMaxStretch: usize = 0xC8; // float32
+                pub const m_bSolidCollisionAtZeroWeight: usize = 0xCC; // bool
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            pub mod ParticleNamedValueSource_t {
+                pub const m_Name: usize = 0x0; // CUtlString
+                pub const m_IsPublic: usize = 0x8; // bool
+                pub const m_ValueType: usize = 0x10; // CPulseValueFullType
+                pub const m_DefaultConfig: usize = 0x28; // ParticleNamedValueConfiguration_t
             }
             // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFootDefinition {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_ankleBoneName: usize = 0x8; // CUtlString
@@ -2807,7 +11731,7 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqSynthAnimDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
                 pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
@@ -2820,7 +11744,7 @@ pub mod cs2_dumper {
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmLayerBlendNode__LayerDefinition_t {
                 pub const m_nInputNodeIdx: usize = 0x0; // int16
                 pub const m_nWeightValueNodeIdx: usize = 0x2; // int16
@@ -2835,85 +11759,578 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimComponentUpdater {
                 pub const m_name: usize = 0x18; // CUtlString
                 pub const m_id: usize = 0x20; // AnimComponentID
                 pub const m_networkMode: usize = 0x24; // AnimNodeNetworkMode
                 pub const m_bStartEnabled: usize = 0x28; // bool
             }
-            // Parent: CAnimUpdateNodeBase
+            // Parent: None
             // Fields count: 15
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBlend2DUpdateNode {
                 pub const m_items: usize = 0x60; // CUtlVector<BlendItem_t>
                 pub const m_tags: usize = 0x78; // CUtlVector<TagSpan_t>
                 pub const m_paramSpans: usize = 0x90; // CParamSpanUpdater
                 pub const m_nodeItemIndices: usize = 0xA8; // CUtlVector<int32>
                 pub const m_damping: usize = 0xC0; // CAnimInputDamping
-                pub const m_blendSourceX: usize = 0xD0; // AnimValueSource
-                pub const m_paramX: usize = 0xD4; // CAnimParamHandle
-                pub const m_blendSourceY: usize = 0xD8; // AnimValueSource
-                pub const m_paramY: usize = 0xDC; // CAnimParamHandle
-                pub const m_eBlendMode: usize = 0xE0; // Blend2DMode
-                pub const m_playbackSpeed: usize = 0xE4; // float32
-                pub const m_bLoop: usize = 0xE8; // bool
-                pub const m_bLockBlendOnReset: usize = 0xE9; // bool
-                pub const m_bLockWhenWaning: usize = 0xEA; // bool
-                pub const m_bAnimEventsAndTagsOnMostWeightedOnly: usize = 0xEB; // bool
+                pub const m_blendSourceX: usize = 0xD8; // AnimValueSource
+                pub const m_paramX: usize = 0xDC; // CAnimParamHandle
+                pub const m_blendSourceY: usize = 0xE0; // AnimValueSource
+                pub const m_paramY: usize = 0xE4; // CAnimParamHandle
+                pub const m_eBlendMode: usize = 0xE8; // Blend2DMode
+                pub const m_playbackSpeed: usize = 0xEC; // float32
+                pub const m_bLoop: usize = 0xF0; // bool
+                pub const m_bLockBlendOnReset: usize = 0xF1; // bool
+                pub const m_bLockWhenWaning: usize = 0xF2; // bool
+                pub const m_bAnimEventsAndTagsOnMostWeightedOnly: usize = 0xF3; // bool
             }
-            // Parent: CNmSpeedScaleBaseNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVelocityBasedSpeedScaleNode__CDefinition {
+            }
+            // Parent: 
+            // Fields count: 8
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNPCPhysicsHull {
+                pub const m_sName: usize = 0x0; // CGlobalSymbol
+                pub const m_eType: usize = 0x8; // NPCPhysicsHullType_t
+                pub const m_flCapsuleHeight: usize = 0xC; // float32
+                pub const m_flCapsuleRadius: usize = 0x10; // float32
+                pub const m_vCapsuleCenter1: usize = 0x14; // Vector
+                pub const m_vCapsuleCenter2: usize = 0x20; // Vector
+                pub const m_flGroundBoxHeight: usize = 0x2C; // float32
+                pub const m_flGroundBoxWidth: usize = 0x30; // float32
             }
             // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod PermModelExtPart_t {
                 pub const m_Transform: usize = 0x0; // CTransform
                 pub const m_Name: usize = 0x20; // CUtlString
                 pub const m_nParent: usize = 0x28; // int32
                 pub const m_refModel: usize = 0x30; // CStrongHandle<InfoForResourceTypeCModel>
             }
-            // Parent: CNmIDValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedIDNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_mode: usize = 0xC; // NmCachedValueMode_t
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CLeanMatrixUpdateNode {
                 pub const m_frameCorners: usize = 0x5C; // int32[3][3]
                 pub const m_poses: usize = 0x80; // CPoseHandle[9]
                 pub const m_damping: usize = 0xA8; // CAnimInputDamping
-                pub const m_blendSource: usize = 0xB8; // AnimVectorSource
-                pub const m_paramIndex: usize = 0xBC; // CAnimParamHandle
-                pub const m_verticalAxis: usize = 0xC0; // Vector
-                pub const m_horizontalAxis: usize = 0xCC; // Vector
-                pub const m_hSequence: usize = 0xD8; // HSequence
-                pub const m_flMaxValue: usize = 0xDC; // float32
-                pub const m_nSequenceMaxFrame: usize = 0xE0; // int32
+                pub const m_blendSource: usize = 0xC0; // AnimVectorSource
+                pub const m_paramIndex: usize = 0xC4; // CAnimParamHandle
+                pub const m_verticalAxis: usize = 0xC8; // Vector
+                pub const m_horizontalAxis: usize = 0xD4; // Vector
+                pub const m_hSequence: usize = 0xE0; // HSequence
+                pub const m_flMaxValue: usize = 0xE4; // float32
+                pub const m_nSequenceMaxFrame: usize = 0xE8; // int32
             }
-            // Parent: CConcreteAnimParameter
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSymbolAnimParameter {
                 pub const m_defaultValue: usize = 0x78; // CGlobalSymbol
             }
@@ -2921,18 +12338,275 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmFloatCurveEventNode__CDefinition {
+                pub const m_eventID: usize = 0x10; // CGlobalSymbol
+                pub const m_nDefaultNodeIdx: usize = 0x18; // int16
+                pub const m_flDefaultValue: usize = 0x1C; // float32
+                pub const m_eventConditionRules: usize = 0x20; // CNmBitFlags
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod IAnimationGraphInstance {
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
             pub mod CNmStateMachineNode__TransitionDefinition_t {
                 pub const m_nTargetStateIdx: usize = 0x0; // int16
                 pub const m_nConditionNodeIdx: usize = 0x2; // int16
                 pub const m_nTransitionNodeIdx: usize = 0x4; // int16
                 pub const m_bCanBeForced: usize = 0x6; // bool
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatSelectorNode__CDefinition {
                 pub const m_conditionNodeIndices: usize = 0x10; // CUtlVectorFixedGrowable<int16,5>
                 pub const m_values: usize = 0x38; // CUtlVectorFixedGrowable<float32,5>
@@ -2940,29 +12614,203 @@ pub mod cs2_dumper {
                 pub const m_flEaseTime: usize = 0x6C; // float32
                 pub const m_easingOp: usize = 0x70; // NmEasingOperation_t
             }
-            // Parent: CAnimUpdateNodeBase
-            // Fields count: 3
+            // Parent: None
+            // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTargetSelectorUpdateNode {
-                pub const m_children: usize = 0x58; // CUtlVector<CAnimUpdateNodeRef>
-                pub const m_hPositionParameter: usize = 0x74; // CAnimParamHandle
-                pub const m_hFacePositionParameter: usize = 0x76; // CAnimParamHandle
+                pub const m_eAngleMode: usize = 0x60; // TargetSelectorAngleMode_t
+                pub const m_children: usize = 0x68; // CUtlVector<CAnimUpdateNodeRef>
+                pub const m_hTargetPosition: usize = 0x84; // CAnimParamHandle
+                pub const m_hTargetFacePositionParameter: usize = 0x86; // CAnimParamHandle
+                pub const m_hMoveHeadingParameter: usize = 0x88; // CAnimParamHandle
+                pub const m_hDesiredMoveHeadingParameter: usize = 0x8A; // CAnimParamHandle
+                pub const m_bTargetPositionIsWorldSpace: usize = 0x8C; // bool
+                pub const m_bTargetFacePositionIsWorldSpace: usize = 0x8D; // bool
+                pub const m_bEnablePhaseMatching: usize = 0x8E; // bool
+                pub const m_flPhaseMatchingMaxRootMotionSkip: usize = 0x90; // float32
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CHitBoxSetList {
                 pub const m_HitBoxSets: usize = 0x0; // CUtlVector<CHitBoxSet>
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmIsInactiveBranchConditionNode__CDefinition {
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod MotionDBIndex {
                 pub const m_nIndex: usize = 0x0; // uint32
             }
@@ -2970,52 +12818,388 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CDirectPlaybackTagData {
                 pub const m_sequenceName: usize = 0x0; // CUtlString
                 pub const m_tags: usize = 0x8; // CUtlVector<TagSpan_t>
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleCollectionVecInput {
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            pub mod CNmGraphEventConditionNode__Condition_t {
+                pub const m_eventID: usize = 0x0; // CGlobalSymbol
+                pub const m_eventTypeCondition: usize = 0x8; // NmGraphEventTypeCondition_t
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
             pub mod CNmFloatRemapNode__RemapRange_t {
                 pub const m_flBegin: usize = 0x0; // float32
                 pub const m_flEnd: usize = 0x4; // float32
-            }
-            // Parent: CNmIDValueNode__CDefinition
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmCurrentSyncEventIDNode__CDefinition {
-                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
-            }
-            // Parent: CNmBoolValueNode__CDefinition
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmStateCompletedConditionNode__CDefinition {
-                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
-                pub const m_nTransitionDurationOverrideNodeIdx: usize = 0xC; // int16
-                pub const m_flTransitionDurationSeconds: usize = 0x10; // float32
-            }
-            // Parent: CNmEvent
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmTargetWarpEvent {
-                pub const m_rule: usize = 0x18; // NmTargetWarpRule_t
-                pub const m_algorithm: usize = 0x19; // NmTargetWarpAlgorithm_t
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmCurrentSyncEventIDNode__CDefinition {
+                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmStateCompletedConditionNode__CDefinition {
+                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
+                pub const m_nTransitionDurationOverrideNodeIdx: usize = 0xC; // int16
+                pub const m_flTransitionDurationSeconds: usize = 0x10; // float32
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmTargetWarpEvent {
+                pub const m_rule: usize = 0x19; // NmTargetWarpRule_t
+                pub const m_algorithm: usize = 0x1A; // NmTargetWarpAlgorithm_t
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
             pub mod CParamSpanUpdater {
                 pub const m_spans: usize = 0x0; // CUtlVector<ParamSpan_t>
             }
@@ -3023,22 +13207,181 @@ pub mod cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimActionUpdater {
             }
-            // Parent: CAnimTagBase
-            // Fields count: 10
+            // Parent: None
+            // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CParticleAnimTag {
                 pub const m_hParticleSystem: usize = 0x58; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
                 pub const m_particleSystemName: usize = 0x60; // CUtlString
                 pub const m_configName: usize = 0x68; // CUtlString
                 pub const m_bDetachFromOwner: usize = 0x70; // bool
-                pub const m_bStopWhenTagEnds: usize = 0x71; // bool
-                pub const m_bTagEndStopIsInstant: usize = 0x72; // bool
+                pub const m_bAggregate: usize = 0x71; // bool
+                pub const m_bStopWhenTagEnds: usize = 0x72; // bool
+                pub const m_bTagEndStopIsInstant: usize = 0x73; // bool
                 pub const m_attachmentName: usize = 0x78; // CUtlString
                 pub const m_attachmentType: usize = 0x80; // ParticleAttachment_t
                 pub const m_attachmentCP1Name: usize = 0x88; // CUtlString
@@ -3048,7 +13391,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CCycleBase {
                 pub const m_flCycle: usize = 0x0; // float32
             }
@@ -3056,7 +13399,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FollowTargetOpFixedSettings_t {
                 pub const m_boneIndex: usize = 0x0; // int32
                 pub const m_bBoneTarget: usize = 0x4; // bool
@@ -3064,19 +13407,201 @@ pub mod cs2_dumper {
                 pub const m_bWorldCoodinateTarget: usize = 0xC; // bool
                 pub const m_bMatchTargetOrientation: usize = 0xD; // bool
             }
-            // Parent: CNmEvent
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmIDSwitchNode__CDefinition {
+                pub const m_nSwitchValueNodeIdx: usize = 0xA; // int16
+                pub const m_nTrueValueNodeIdx: usize = 0xC; // int16
+                pub const m_nFalseValueNodeIdx: usize = 0xE; // int16
+                pub const m_falseValue: usize = 0x10; // CGlobalSymbol
+                pub const m_trueValue: usize = 0x18; // CGlobalSymbol
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmRootMotionEvent {
-                pub const m_flBlendTimeSeconds: usize = 0x18; // float32
+                pub const m_flBlendTimeSeconds: usize = 0x1C; // float32
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulse_PublicOutput {
+                pub const m_Name: usize = 0x0; // PulseSymbol_t
+                pub const m_Description: usize = 0x10; // CUtlString
+                pub const m_Args: usize = 0x18; // CUtlLeanVector<CPulseRuntimeMethodArg>
             }
             // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod AnimationSnapshotBase_t {
                 pub const m_flRealTime: usize = 0x0; // float32
                 pub const m_rootToWorld: usize = 0x10; // matrix3x4a_t
@@ -3088,32 +13613,205 @@ pub mod cs2_dumper {
                 pub const m_bHasDecodeDump: usize = 0x94; // bool
                 pub const m_DecodeDump: usize = 0x98; // AnimationDecodeDebugDumpElement_t
             }
-            // Parent: CAnimActionUpdater
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmIKEffector {
+                pub const m_nBodyIndex: usize = 0x0; // int32
+                pub const m_bEnabled: usize = 0x4; // bool
+                pub const m_vTargetPosition: usize = 0x8; // Vector
+                pub const m_qTargetOrientation: usize = 0x20; // Quaternion
+                pub const m_flWeight: usize = 0x30; // float32
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CEmitTagActionUpdater {
                 pub const m_nTagIndex: usize = 0x18; // int32
                 pub const m_bIsZeroDuration: usize = 0x1C; // bool
             }
             // Parent: None
-            // Fields count: 5
+            // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod DynamicMeshDeformParams_t {
                 pub const m_flTensionCompressScale: usize = 0x0; // float32
                 pub const m_flTensionStretchScale: usize = 0x4; // float32
                 pub const m_bRecomputeSmoothNormalsAfterAnimation: usize = 0x8; // bool
                 pub const m_bComputeDynamicMeshTensionAfterAnimation: usize = 0x9; // bool
                 pub const m_bSmoothNormalsAcrossUvSeams: usize = 0xA; // bool
+                pub const m_bEnableEyeBulgeDeformation: usize = 0xB; // bool
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTimeConditionNode__CDefinition {
                 pub const m_sourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_nInputValueNodeIdx: usize = 0xC; // int16
@@ -3121,11 +13819,91 @@ pub mod cs2_dumper {
                 pub const m_type: usize = 0x14; // CNmTimeConditionNode::ComparisonType_t
                 pub const m_operator: usize = 0x15; // CNmTimeConditionNode::Operator_t
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmSyncEventIndexConditionNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_triggerMode: usize = 0xC; // CNmSyncEventIndexConditionNode::TriggerMode_t
@@ -3135,25 +13913,185 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimStateMachineUpdater {
                 pub const m_states: usize = 0x8; // CUtlVector<CStateUpdateData>
                 pub const m_transitions: usize = 0x20; // CUtlVector<CTransitionUpdateData>
                 pub const m_startStateIndex: usize = 0x50; // int32
             }
-            // Parent: CAnimUpdateNodeBase
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CUnaryUpdateNode {
-                pub const m_pChildNode: usize = 0x58; // CAnimUpdateNodeRef
+                pub const m_pChildNode: usize = 0x60; // CAnimUpdateNodeRef
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIDToFloatNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_defaultValue: usize = 0xC; // float32
@@ -3162,6 +14100,88 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 17
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CCompressorGroup {
                 pub const m_nTotalElementCount: usize = 0x0; // int32
                 pub const m_szChannelClass: usize = 0x8; // CUtlVector<char*>
@@ -3181,36 +14201,196 @@ pub mod cs2_dumper {
                 pub const m_vector2DCompressor: usize = 0x170; // CUtlVector<CCompressor<Vector2D>*>
                 pub const m_vector4DCompressor: usize = 0x188; // CUtlVector<CCompressor<Vector4D>*>
             }
-            // Parent: CAnimUpdateNodeBase
+            // Parent: None
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSelectorUpdateNode {
-                pub const m_children: usize = 0x58; // CUtlVector<CAnimUpdateNodeRef>
-                pub const m_tags: usize = 0x70; // CUtlVector<int8>
-                pub const m_blendCurve: usize = 0x8C; // CBlendCurve
-                pub const m_flBlendTime: usize = 0x94; // CAnimValue<float32>
-                pub const m_hParameter: usize = 0x9C; // CAnimParamHandle
-                pub const m_nTagIndex: usize = 0xA0; // int32
-                pub const m_eTagBehavior: usize = 0xA4; // SelectorTagBehavior_t
-                pub const m_bResetOnChange: usize = 0xA8; // bool
-                pub const m_bLockWhenWaning: usize = 0xA9; // bool
-                pub const m_bSyncCyclesOnChange: usize = 0xAA; // bool
+                pub const m_children: usize = 0x60; // CUtlVector<CAnimUpdateNodeRef>
+                pub const m_tags: usize = 0x78; // CUtlVector<int8>
+                pub const m_blendCurve: usize = 0x94; // CBlendCurve
+                pub const m_flBlendTime: usize = 0x9C; // CAnimValue<float32>
+                pub const m_hParameter: usize = 0xA4; // CAnimParamHandle
+                pub const m_nTagIndex: usize = 0xA8; // int32
+                pub const m_eTagBehavior: usize = 0xAC; // SelectorTagBehavior_t
+                pub const m_bResetOnChange: usize = 0xB0; // bool
+                pub const m_bLockWhenWaning: usize = 0xB1; // bool
+                pub const m_bSyncCyclesOnChange: usize = 0xB2; // bool
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod NmPercent_t {
                 pub const m_flValue: usize = 0x0; // float32
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CStateMachineComponentUpdater {
                 pub const m_stateMachine: usize = 0x30; // CAnimStateMachineUpdater
             }
@@ -3218,15 +14398,26 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimUpdateNodeRef {
                 pub const m_nodeIndex: usize = 0x8; // int32
             }
             // Parent: None
-            // Fields count: 8
+            // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            pub mod CPulse_OutputConnection {
+                pub const m_SourceOutput: usize = 0x0; // PulseSymbol_t
+                pub const m_TargetEntity: usize = 0x10; // PulseSymbol_t
+                pub const m_TargetInput: usize = 0x20; // PulseSymbol_t
+                pub const m_Param: usize = 0x30; // PulseSymbol_t
+            }
+            // Parent: None
+            // Fields count: 9
+            //
+            // Metadata:
+            // ���x.
             pub mod CPhysSurfaceProperties {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_nameHash: usize = 0x8; // uint32
@@ -3234,26 +14425,129 @@ pub mod cs2_dumper {
                 pub const m_bHidden: usize = 0x18; // bool
                 pub const m_description: usize = 0x20; // CUtlString
                 pub const m_physics: usize = 0x28; // CPhysSurfacePropertiesPhysics
-                pub const m_audioSounds: usize = 0x50; // CPhysSurfacePropertiesSoundNames
+                pub const m_vehicleParams: usize = 0x40; // CPhysSurfacePropertiesVehicle
+                pub const m_audioSounds: usize = 0x48; // CPhysSurfacePropertiesSoundNames
                 pub const m_audioParams: usize = 0xA8; // CPhysSurfacePropertiesAudio
             }
-            // Parent: CNmValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
-            pub mod CNmBoneMaskValueNode__CDefinition {
-            }
-            // Parent: CNmFloatValueNode__CDefinition
-            // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmFloatAbsNode__CDefinition {
-                pub const m_nInputValueNodeIdx: usize = 0xA; // int16
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmBoneMaskValueNode__CDefinition {
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqPoseParamDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
                 pub const m_flStart: usize = 0x10; // float32
@@ -3261,20 +14555,100 @@ pub mod cs2_dumper {
                 pub const m_flLoop: usize = 0x18; // float32
                 pub const m_bLooping: usize = 0x1C; // bool
             }
-            // Parent: CModelConfigElement
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_SetBodygroup {
-                pub const m_GroupName: usize = 0x48; // CUtlString
+                pub const m_GroupName: usize = 0x48; // CGlobalSymbol
                 pub const m_nChoice: usize = 0x50; // int32
             }
             // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimMovement {
                 pub const endframe: usize = 0x0; // int32
                 pub const motionflags: usize = 0x4; // int32
@@ -3285,10 +14659,106 @@ pub mod cs2_dumper {
                 pub const position: usize = 0x20; // Vector
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleRemapFloatInput {
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod FollowAttachmentData {
+                pub const m_boneIndex: usize = 0x0; // int32
+                pub const m_attachmentHandle: usize = 0x4; // AttachmentHandle_t
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FootStepTrigger {
                 pub const m_tags: usize = 0x0; // CUtlVector<int32>
                 pub const m_nFootIndex: usize = 0x18; // int32
@@ -3298,65 +14768,424 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmSyncTrack__EventMarker_t {
                 pub const m_startTime: usize = 0x0; // NmPercent_t
                 pub const m_ID: usize = 0x8; // CGlobalSymbol
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPathMetricEvaluator {
                 pub const m_pathTimeSamples: usize = 0x50; // CUtlVector<float32>
                 pub const m_flDistance: usize = 0x68; // float32
                 pub const m_bExtrapolateMovement: usize = 0x6C; // bool
                 pub const m_flMinExtrapolationSpeed: usize = 0x70; // float32
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 20
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootLockUpdateNode {
-                pub const m_opFixedSettings: usize = 0x68; // FootLockPoseOpFixedSettings
-                pub const m_footSettings: usize = 0xD0; // CUtlVector<FootFixedSettings>
-                pub const m_hipShiftDamping: usize = 0xE8; // CAnimInputDamping
-                pub const m_rootHeightDamping: usize = 0xF8; // CAnimInputDamping
-                pub const m_flStrideCurveScale: usize = 0x108; // float32
-                pub const m_flStrideCurveLimitScale: usize = 0x10C; // float32
-                pub const m_flStepHeightIncreaseScale: usize = 0x110; // float32
-                pub const m_flStepHeightDecreaseScale: usize = 0x114; // float32
-                pub const m_flHipShiftScale: usize = 0x118; // float32
-                pub const m_flBlendTime: usize = 0x11C; // float32
-                pub const m_flMaxRootHeightOffset: usize = 0x120; // float32
-                pub const m_flMinRootHeightOffset: usize = 0x124; // float32
-                pub const m_flTiltPlanePitchSpringStrength: usize = 0x128; // float32
-                pub const m_flTiltPlaneRollSpringStrength: usize = 0x12C; // float32
-                pub const m_bApplyFootRotationLimits: usize = 0x130; // bool
-                pub const m_bApplyHipShift: usize = 0x131; // bool
-                pub const m_bModulateStepHeight: usize = 0x132; // bool
-                pub const m_bResetChild: usize = 0x133; // bool
-                pub const m_bEnableVerticalCurvedPaths: usize = 0x134; // bool
-                pub const m_bEnableRootHeightDamping: usize = 0x135; // bool
+                pub const m_opFixedSettings: usize = 0x70; // FootLockPoseOpFixedSettings
+                pub const m_footSettings: usize = 0xE0; // CUtlVector<FootFixedSettings>
+                pub const m_hipShiftDamping: usize = 0xF8; // CAnimInputDamping
+                pub const m_rootHeightDamping: usize = 0x110; // CAnimInputDamping
+                pub const m_flStrideCurveScale: usize = 0x128; // float32
+                pub const m_flStrideCurveLimitScale: usize = 0x12C; // float32
+                pub const m_flStepHeightIncreaseScale: usize = 0x130; // float32
+                pub const m_flStepHeightDecreaseScale: usize = 0x134; // float32
+                pub const m_flHipShiftScale: usize = 0x138; // float32
+                pub const m_flBlendTime: usize = 0x13C; // float32
+                pub const m_flMaxRootHeightOffset: usize = 0x140; // float32
+                pub const m_flMinRootHeightOffset: usize = 0x144; // float32
+                pub const m_flTiltPlanePitchSpringStrength: usize = 0x148; // float32
+                pub const m_flTiltPlaneRollSpringStrength: usize = 0x14C; // float32
+                pub const m_bApplyFootRotationLimits: usize = 0x150; // bool
+                pub const m_bApplyHipShift: usize = 0x151; // bool
+                pub const m_bModulateStepHeight: usize = 0x152; // bool
+                pub const m_bResetChild: usize = 0x153; // bool
+                pub const m_bEnableVerticalCurvedPaths: usize = 0x154; // bool
+                pub const m_bEnableRootHeightDamping: usize = 0x155; // bool
             }
-            // Parent: CNmEvent
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmOrientationWarpEvent {
             }
-            // Parent: CNmValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIDValueNode__CDefinition {
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod PulseGraphExecutionHistoryNodeDesc_t {
+                pub const strCellDesc: usize = 0x0; // CBufferString
+                pub const strBindingName: usize = 0x10; // PulseSymbol_t
             }
             // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod JiggleBoneSettings_t {
                 pub const m_nBoneIndex: usize = 0x0; // int32
                 pub const m_flSpringStrength: usize = 0x4; // float32
@@ -3366,66 +15195,573 @@ pub mod cs2_dumper {
                 pub const m_vBoundsMinLS: usize = 0x1C; // Vector
                 pub const m_eSimSpace: usize = 0x28; // JiggleBoneSimSpace
             }
-            // Parent: CSequenceUpdateNode
+            // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CJumpHelperUpdateNode {
-                pub const m_hTargetParam: usize = 0xA8; // CAnimParamHandle
-                pub const m_flOriginalJumpMovement: usize = 0xAC; // Vector
-                pub const m_flOriginalJumpDuration: usize = 0xB8; // float32
-                pub const m_flJumpStartCycle: usize = 0xBC; // float32
-                pub const m_flJumpEndCycle: usize = 0xC0; // float32
-                pub const m_eCorrectionMethod: usize = 0xC4; // JumpCorrectionMethod
-                pub const m_bTranslationAxis: usize = 0xC8; // bool[3]
-                pub const m_bScaleSpeed: usize = 0xCB; // bool
+                pub const m_hTargetParam: usize = 0xB0; // CAnimParamHandle
+                pub const m_flOriginalJumpMovement: usize = 0xB4; // Vector
+                pub const m_flOriginalJumpDuration: usize = 0xC0; // float32
+                pub const m_flJumpStartCycle: usize = 0xC4; // float32
+                pub const m_flJumpEndCycle: usize = 0xC8; // float32
+                pub const m_eCorrectionMethod: usize = 0xCC; // JumpCorrectionMethod
+                pub const m_bTranslationAxis: usize = 0xD0; // bool[3]
+                pub const m_bScaleSpeed: usize = 0xD3; // bool
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmControlParameterBoolNode__CDefinition {
+            }
+            // Parent: None
+            // Fields count: 11
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmChainLookatTask {
+                pub const m_nChainEndBoneIdx: usize = 0x54; // int32
+                pub const m_nNumBonesInChain: usize = 0x58; // int32
+                pub const m_chainForwardDir: usize = 0x5C; // Vector
+                pub const m_flBlendWeight: usize = 0x68; // float32
+                pub const m_flHorizontalAngleLimitDegrees: usize = 0x6C; // float32
+                pub const m_flVerticalAngleLimitDegrees: usize = 0x70; // float32
+                pub const m_lookatTarget: usize = 0x74; // Vector
+                pub const m_bIsTargetInWorldSpace: usize = 0x80; // bool
+                pub const m_bIsRunningFromDeserializedData: usize = 0x81; // bool
+                pub const m_flHorizontalAngleDegrees: usize = 0x84; // float32
+                pub const m_flVerticalAngleDegrees: usize = 0x88; // float32
             }
             // Parent: None
             // Fields count: 18
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FootLockPoseOpFixedSettings {
                 pub const m_footInfo: usize = 0x0; // CUtlVector<FootFixedData_t>
                 pub const m_hipDampingSettings: usize = 0x18; // CAnimInputDamping
-                pub const m_nHipBoneIndex: usize = 0x28; // int32
-                pub const m_ikSolverType: usize = 0x2C; // IKSolverType
-                pub const m_bApplyTilt: usize = 0x30; // bool
-                pub const m_bApplyHipDrop: usize = 0x31; // bool
-                pub const m_bAlwaysUseFallbackHinge: usize = 0x32; // bool
-                pub const m_bApplyFootRotationLimits: usize = 0x33; // bool
-                pub const m_bApplyLegTwistLimits: usize = 0x34; // bool
-                pub const m_flMaxFootHeight: usize = 0x38; // float32
-                pub const m_flExtensionScale: usize = 0x3C; // float32
-                pub const m_flMaxLegTwist: usize = 0x40; // float32
-                pub const m_bEnableLockBreaking: usize = 0x44; // bool
-                pub const m_flLockBreakTolerance: usize = 0x48; // float32
-                pub const m_flLockBlendTime: usize = 0x4C; // float32
-                pub const m_bEnableStretching: usize = 0x50; // bool
-                pub const m_flMaxStretchAmount: usize = 0x54; // float32
-                pub const m_flStretchExtensionScale: usize = 0x58; // float32
+                pub const m_nHipBoneIndex: usize = 0x30; // int32
+                pub const m_ikSolverType: usize = 0x34; // IKSolverType
+                pub const m_bApplyTilt: usize = 0x38; // bool
+                pub const m_bApplyHipDrop: usize = 0x39; // bool
+                pub const m_bAlwaysUseFallbackHinge: usize = 0x3A; // bool
+                pub const m_bApplyFootRotationLimits: usize = 0x3B; // bool
+                pub const m_bApplyLegTwistLimits: usize = 0x3C; // bool
+                pub const m_flMaxFootHeight: usize = 0x40; // float32
+                pub const m_flExtensionScale: usize = 0x44; // float32
+                pub const m_flMaxLegTwist: usize = 0x48; // float32
+                pub const m_bEnableLockBreaking: usize = 0x4C; // bool
+                pub const m_flLockBreakTolerance: usize = 0x50; // float32
+                pub const m_flLockBlendTime: usize = 0x54; // float32
+                pub const m_bEnableStretching: usize = 0x58; // bool
+                pub const m_flMaxStretchAmount: usize = 0x5C; // float32
+                pub const m_flStretchExtensionScale: usize = 0x60; // float32
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneVelocityMetricEvaluator {
                 pub const m_nBoneIndex: usize = 0x50; // int32
             }
-            // Parent: CModelConfigElement
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CWarpSectionAnimTag {
+                pub const m_bWarpPosition: usize = 0x49; // bool
+                pub const m_bWarpOrientation: usize = 0x4A; // bool
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_RandomColor {
                 pub const m_Gradient: usize = 0x48; // CColorGradient
             }
@@ -3433,25 +15769,185 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFootMotion {
                 pub const m_strides: usize = 0x0; // CUtlVector<CFootStride>
                 pub const m_name: usize = 0x18; // CUtlString
                 pub const m_bAdditive: usize = 0x20; // bool
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CJiggleBoneUpdateNode {
-                pub const m_opFixedData: usize = 0x68; // JiggleBoneSettingsList_t
+                pub const m_opFixedData: usize = 0x70; // JiggleBoneSettingsList_t
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmConstVectorNode__CDefinition {
                 pub const m_value: usize = 0xC; // Vector
             }
@@ -3459,33 +15955,201 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyArrayElementNameKey
+            // ���x.
             pub mod MoodAnimation_t {
-                pub const m_sName: usize = 0x0; // CUtlString
+                pub const m_sName: usize = 0x0; // CModelAnimNameWithDeltas
                 pub const m_flWeight: usize = 0x8; // float32
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CLODComponentUpdater {
                 pub const m_nServerLOD: usize = 0x30; // int32
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIsTargetSetNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPhysSurfacePropertiesVehicle {
+                pub const m_wheelDrag: usize = 0x0; // float32
+                pub const m_wheelFrictionScale: usize = 0x4; // float32
             }
             // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimDataChannelDesc {
                 pub const m_szChannelClass: usize = 0x0; // CBufferString
                 pub const m_szVariableName: usize = 0x10; // CBufferString
@@ -3497,18 +16161,198 @@ pub mod cs2_dumper {
                 pub const m_nElementIndexArray: usize = 0x60; // CUtlVector<int32>
                 pub const m_nElementMaskArray: usize = 0x78; // CUtlVector<uint32>
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPairedSequenceComponentUpdater {
+            }
+            // Parent: None
+            // Fields count: 13
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmParticleEvent {
+                pub const m_relevance: usize = 0x1C; // CNmEventRelevance_t
+                pub const m_type: usize = 0x20; // CNmParticleEvent::Type_t
+                pub const m_hParticleSystem: usize = 0x28; // CStrongHandle<InfoForResourceTypeIParticleSystemDefinition>
+                pub const m_tags: usize = 0x30; // CUtlString
+                pub const m_bStopImmediately: usize = 0x38; // bool
+                pub const m_bDetachFromOwner: usize = 0x39; // bool
+                pub const m_bPlayEndCap: usize = 0x3A; // bool
+                pub const m_attachmentPoint0: usize = 0x40; // CUtlString
+                pub const m_attachmentType0: usize = 0x48; // ParticleAttachment_t
+                pub const m_attachmentPoint1: usize = 0x50; // CUtlString
+                pub const m_attachmentType1: usize = 0x58; // ParticleAttachment_t
+                pub const m_config: usize = 0x60; // CUtlString
+                pub const m_effectForConfig: usize = 0x68; // CUtlString
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMorphRectData {
                 pub const m_nXLeftDst: usize = 0x0; // int16
                 pub const m_nYTopDst: usize = 0x2; // int16
@@ -3520,7 +16364,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimFoot {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_vBallOffset: usize = 0x8; // Vector
@@ -3529,51 +16373,373 @@ pub mod cs2_dumper {
                 pub const m_toeBoneIndex: usize = 0x24; // int32
             }
             // Parent: None
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmBoneMask {
-                pub const m_ID: usize = 0x0; // CGlobalSymbol
-                pub const m_weightInfo: usize = 0x8; // CNmBoneMask::WeightInfo_t
-                pub const m_weights: usize = 0x18; // CUtlVector<float32>
-            }
-            // Parent: CBaseConstraint
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CParentConstraint {
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedVectorNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_mode: usize = 0xC; // NmCachedValueMode_t
             }
             // Parent: None
-            // Fields count: 2
+            // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmStateNode__TimedEvent_t {
                 pub const m_ID: usize = 0x0; // CGlobalSymbol
                 pub const m_flTimeValueSeconds: usize = 0x8; // float32
+                pub const m_comparisionOperator: usize = 0xC; // CNmStateNode::TimedEvent_t::Comparison_t
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootPositionMetricEvaluator {
                 pub const m_footIndices: usize = 0x50; // CUtlVector<int32>
                 pub const m_bIgnoreSlope: usize = 0x68; // bool
             }
             // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod CParticleVariableRef {
+                pub const m_variableName: usize = 0x0; // CKV3MemberNameWithStorage
+                pub const m_variableType: usize = 0x38; // CPulseValueFullType
+            }
+            // Parent: None
             // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod HSequence {
                 pub const m_Value: usize = 0x0; // int32
             }
@@ -3581,17 +16747,17 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CDampedValueUpdateItem {
                 pub const m_damping: usize = 0x0; // CAnimInputDamping
-                pub const m_hParamIn: usize = 0x18; // CAnimParamHandle
-                pub const m_hParamOut: usize = 0x1A; // CAnimParamHandle
+                pub const m_hParamIn: usize = 0x20; // CAnimParamHandle
+                pub const m_hParamOut: usize = 0x22; // CAnimParamHandle
             }
             // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimLocalHierarchy {
                 pub const m_sBone: usize = 0x0; // CBufferString
                 pub const m_sNewParent: usize = 0x10; // CBufferString
@@ -3600,39 +16766,213 @@ pub mod cs2_dumper {
                 pub const m_nTailFrame: usize = 0x28; // int32
                 pub const m_nEndFrame: usize = 0x2C; // int32
             }
-            // Parent: CAnimUpdateNodeBase
-            // Fields count: 11
+            // Parent: None
+            // Fields count: 13
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBlendUpdateNode {
                 pub const m_children: usize = 0x60; // CUtlVector<CAnimUpdateNodeRef>
                 pub const m_sortedOrder: usize = 0x78; // CUtlVector<uint8>
                 pub const m_targetValues: usize = 0x90; // CUtlVector<float32>
                 pub const m_blendValueSource: usize = 0xAC; // AnimValueSource
-                pub const m_paramIndex: usize = 0xB0; // CAnimParamHandle
+                pub const m_eLinearRootMotionBlendMode: usize = 0xB0; // LinearRootMotionBlendMode_t
+                pub const m_paramIndex: usize = 0xB4; // CAnimParamHandle
                 pub const m_damping: usize = 0xB8; // CAnimInputDamping
-                pub const m_blendKeyType: usize = 0xC8; // BlendKeyType
-                pub const m_bLockBlendOnReset: usize = 0xCC; // bool
-                pub const m_bSyncCycles: usize = 0xCD; // bool
-                pub const m_bLoop: usize = 0xCE; // bool
-                pub const m_bLockWhenWaning: usize = 0xCF; // bool
+                pub const m_blendKeyType: usize = 0xD0; // BlendKeyType
+                pub const m_bLockBlendOnReset: usize = 0xD4; // bool
+                pub const m_bSyncCycles: usize = 0xD5; // bool
+                pub const m_bLoop: usize = 0xD6; // bool
+                pub const m_bLockWhenWaning: usize = 0xD7; // bool
+                pub const m_bIsAngle: usize = 0xD8; // bool
             }
-            // Parent: CConcreteAnimParameter
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            pub mod PulseGraphExecutionHistoryEntry_t {
+                pub const nCursorID: usize = 0x0; // PulseCursorID_t
+                pub const nEditorID: usize = 0x4; // PulseDocNodeID_t
+                pub const flExecTime: usize = 0x8; // float32
+                pub const unFlags: usize = 0xC; // uint32
+                pub const tagName: usize = 0x10; // PulseSymbol_t
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CQuaternionAnimParameter {
                 pub const m_defaultValue: usize = 0x80; // Quaternion
                 pub const m_bInterpolate: usize = 0x90; // bool
             }
             // Parent: None
-            // Fields count: 23
+            // Fields count: 25
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod PermModelData_t {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_modelInfo: usize = 0x8; // PermModelInfo_t
@@ -3657,23 +16997,294 @@ pub mod cs2_dumper {
                 pub const m_BodyGroupsHiddenInTools: usize = 0x280; // CUtlVector<CUtlString>
                 pub const m_refAnimIncludeModels: usize = 0x298; // CUtlVector<CStrongHandle<InfoForResourceTypeCModel>>
                 pub const m_AnimatedMaterialAttributes: usize = 0x2B0; // CUtlVector<PermModelDataAnimatedMaterialAttribute_t>
+                pub const m_animGraph2Refs: usize = 0x2C8; // CUtlVector<ModelAnimGraph2Ref_t>
+                pub const m_vecNmSkeletonRefs: usize = 0x2E0; // CUtlVector<CStrongHandle<InfoForResourceTypeCNmSkeleton>>
             }
-            // Parent: CNmTask
-            // Fields count: 0
-            pub mod CNmSampleTask {
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseCursorYieldToken_t {
+                pub const m_Value: usize = 0x0; // int32
             }
-            // Parent: CStaticPoseCache
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmSampleTask {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CStaticPoseCacheBuilder {
+            }
+            // Parent: None
+            // Fields count: 12
+            //
+            // Metadata:
+            // ���x.
+            pub mod ModelMeshBufferData_t {
+                pub const m_nBlockIndex: usize = 0x0; // int32
+                pub const m_nElementCount: usize = 0x4; // uint32
+                pub const m_nElementSizeInBytes: usize = 0x8; // uint32
+                pub const m_bMeshoptCompressed: usize = 0xC; // bool
+                pub const m_bMeshoptIndexSequence: usize = 0xD; // bool
+                pub const m_bCompressedZSTD: usize = 0xE; // bool
+                pub const m_bCreateBufferSRV: usize = 0xF; // bool
+                pub const m_bCreateBufferUAV: usize = 0x10; // bool
+                pub const m_bCreateRawBuffer: usize = 0x11; // bool
+                pub const m_bCreatePooledBuffer: usize = 0x12; // bool
+                pub const m_nBufferUsage: usize = 0x13; // uint8
+                pub const m_inputLayoutFields: usize = 0x18; // CUtlVector<RenderInputLayoutField_t>
             }
             // Parent: None
             // Fields count: 14
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSequenceGroupData {
                 pub const m_sName: usize = 0x10; // CBufferString
                 pub const m_nFlags: usize = 0x20; // uint32
@@ -3690,36 +17301,198 @@ pub mod cs2_dumper {
                 pub const m_keyValues: usize = 0x110; // KeyValues3
                 pub const m_localIKAutoplayLockArray: usize = 0x120; // CUtlVector<CSeqIKLock>
             }
-            // Parent: CAnimUpdateNodeBase
-            // Fields count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CStateMachineUpdateNode {
-                pub const m_stateMachine: usize = 0x68; // CAnimStateMachineUpdater
-                pub const m_stateData: usize = 0xC0; // CUtlVector<CStateNodeStateData>
-                pub const m_transitionData: usize = 0xD8; // CUtlVector<CStateNodeTransitionData>
-                pub const m_bBlockWaningTags: usize = 0xF4; // bool
-                pub const m_bLockStateWhenWaning: usize = 0xF5; // bool
-            }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CStateMachineUpdateNode {
+                pub const m_stateMachine: usize = 0x70; // CAnimStateMachineUpdater
+                pub const m_stateData: usize = 0xC8; // CUtlVector<CStateNodeStateData>
+                pub const m_transitionData: usize = 0xE0; // CUtlVector<CStateNodeTransitionData>
+                pub const m_bBlockWaningTags: usize = 0xFC; // bool
+                pub const m_bLockStateWhenWaning: usize = 0xFD; // bool
+                pub const m_bResetWhenActivated: usize = 0xFE; // bool
+            }
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAimMatrixUpdateNode {
                 pub const m_opFixedSettings: usize = 0x70; // AimMatrixOpFixedSettings_t
-                pub const m_target: usize = 0x158; // AnimVectorSource
-                pub const m_paramIndex: usize = 0x15C; // CAnimParamHandle
-                pub const m_hSequence: usize = 0x160; // HSequence
-                pub const m_bResetChild: usize = 0x164; // bool
-                pub const m_bLockWhenWaning: usize = 0x165; // bool
+                pub const m_target: usize = 0x168; // AnimVectorSource
+                pub const m_paramIndex: usize = 0x16C; // CAnimParamHandle
+                pub const m_hSequence: usize = 0x170; // HSequence
+                pub const m_bResetChild: usize = 0x174; // bool
+                pub const m_bLockWhenWaning: usize = 0x175; // bool
             }
             // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonAnimCapture_t__Frame_t {
                 pub const m_flTime: usize = 0x0; // float32
                 pub const m_Stamp: usize = 0x4; // SkeletonAnimCapture_t::FrameStamp_t
@@ -3731,11 +17504,91 @@ pub mod cs2_dumper {
                 pub const m_FeModelPos: usize = 0x90; // CUtlVector<VectorAligned>
                 pub const m_FlexControllerWeights: usize = 0xA8; // CUtlVector<float32>
             }
-            // Parent: CModelConfigElement
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_Command {
                 pub const m_Command: usize = 0x48; // CUtlString
                 pub const m_Args: usize = 0x50; // KeyValues3
@@ -3744,7 +17597,7 @@ pub mod cs2_dumper {
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimEventDefinition {
                 pub const m_nFrame: usize = 0x8; // int32
                 pub const m_nEndFrame: usize = 0xC; // int32
@@ -3758,7 +17611,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmRootMotionData {
                 pub const m_transforms: usize = 0x0; // CUtlVector<CTransform>
                 pub const m_nNumFrames: usize = 0x18; // int32
@@ -3767,11 +17620,22 @@ pub mod cs2_dumper {
                 pub const m_totalDelta: usize = 0x30; // CTransform
             }
             // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulseGraphExecutionHistory {
+                pub const m_nInstanceID: usize = 0x0; // PulseGraphInstanceID_t
+                pub const m_strFileName: usize = 0x8; // CUtlString
+                pub const m_vecHistory: usize = 0x10; // CUtlVector<PulseGraphExecutionHistoryEntry_t*>
+                pub const m_mapCellDesc: usize = 0x28; // CUtlOrderedMap<PulseDocNodeID_t,PulseGraphExecutionHistoryNodeDesc_t*>
+                pub const m_mapCursorDesc: usize = 0x50; // CUtlOrderedMap<PulseCursorID_t,PulseGraphExecutionHistoryCursorDesc_t*>
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimScriptHandle {
                 pub const m_id: usize = 0x0; // uint32
             }
@@ -3779,44 +17643,205 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFlexOp {
                 pub const m_OpCode: usize = 0x0; // FlexOpCode_t
                 pub const m_Data: usize = 0x4; // int32
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CHitReactUpdateNode {
-                pub const m_opFixedSettings: usize = 0x68; // HitReactFixedSettings_t
-                pub const m_triggerParam: usize = 0xB4; // CAnimParamHandle
-                pub const m_hitBoneParam: usize = 0xB6; // CAnimParamHandle
-                pub const m_hitOffsetParam: usize = 0xB8; // CAnimParamHandle
-                pub const m_hitDirectionParam: usize = 0xBA; // CAnimParamHandle
-                pub const m_hitStrengthParam: usize = 0xBC; // CAnimParamHandle
-                pub const m_flMinDelayBetweenHits: usize = 0xC0; // float32
-                pub const m_bResetChild: usize = 0xC4; // bool
+                pub const m_opFixedSettings: usize = 0x70; // HitReactFixedSettings_t
+                pub const m_triggerParam: usize = 0xBC; // CAnimParamHandle
+                pub const m_hitBoneParam: usize = 0xBE; // CAnimParamHandle
+                pub const m_hitOffsetParam: usize = 0xC0; // CAnimParamHandle
+                pub const m_hitDirectionParam: usize = 0xC2; // CAnimParamHandle
+                pub const m_hitStrengthParam: usize = 0xC4; // CAnimParamHandle
+                pub const m_flMinDelayBetweenHits: usize = 0xC8; // float32
+                pub const m_bResetChild: usize = 0xCC; // bool
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CLookAtUpdateNode {
                 pub const m_opFixedSettings: usize = 0x70; // LookAtOpFixedSettings_t
-                pub const m_target: usize = 0x138; // AnimVectorSource
-                pub const m_paramIndex: usize = 0x13C; // CAnimParamHandle
-                pub const m_weightParamIndex: usize = 0x13E; // CAnimParamHandle
-                pub const m_bResetChild: usize = 0x140; // bool
-                pub const m_bLockWhenWaning: usize = 0x141; // bool
+                pub const m_target: usize = 0x148; // AnimVectorSource
+                pub const m_paramIndex: usize = 0x14C; // CAnimParamHandle
+                pub const m_weightParamIndex: usize = 0x14E; // CAnimParamHandle
+                pub const m_bResetChild: usize = 0x150; // bool
+                pub const m_bLockWhenWaning: usize = 0x151; // bool
             }
             // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimBone {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_parent: usize = 0x10; // int32
@@ -3830,20 +17855,20 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimParameterManagerUpdater {
                 pub const m_parameters: usize = 0x18; // CUtlVector<CSmartPtr<CAnimParameterBase>>
                 pub const m_idToIndexMap: usize = 0x30; // CUtlHashtable<AnimParamID,int32>
                 pub const m_nameToIndexMap: usize = 0x50; // CUtlHashtable<CUtlString,int32>
                 pub const m_indexToHandle: usize = 0x70; // CUtlVector<CAnimParamHandle>
-                pub const m_autoResetParams: usize = 0x88; // CUtlVector<CUtlPair<CAnimParamHandle,CAnimVariant>>
+                pub const m_autoResetParams: usize = 0x88; // CUtlVector<std::pair<CAnimParamHandle,CAnimVariant>>
                 pub const m_autoResetMap: usize = 0xA0; // CUtlHashtable<CAnimParamHandle,int16>
             }
             // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod BoneDemoCaptureSettings_t {
                 pub const m_boneName: usize = 0x0; // CUtlString
                 pub const m_flErrorSplineRotationMax: usize = 0x8; // float32
@@ -3855,6 +17880,88 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneConstraintPoseSpaceMorph__Input_t {
                 pub const m_inputValue: usize = 0x0; // Vector
                 pub const m_outputWeightList: usize = 0x10; // CUtlVector<float32>
@@ -3863,8 +17970,7 @@ pub mod cs2_dumper {
             // Fields count: 12
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyArrayElementNameKey
+            // ���x.
             pub mod MoodAnimationLayer_t {
                 pub const m_sName: usize = 0x0; // CUtlString
                 pub const m_bActiveListening: usize = 0x8; // bool
@@ -3879,19 +17985,99 @@ pub mod cs2_dumper {
                 pub const m_flFadeIn: usize = 0x54; // float32
                 pub const m_flFadeOut: usize = 0x58; // float32
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSpeedScaleUpdateNode {
-                pub const m_paramIndex: usize = 0x68; // CAnimParamHandle
+                pub const m_paramIndex: usize = 0x70; // CAnimParamHandle
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSequenceTagSpans {
                 pub const m_sSequenceName: usize = 0x0; // CGlobalSymbol
                 pub const m_tags: usize = 0x8; // CUtlVector<TagSpan_t>
@@ -3900,36 +18086,297 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmGraphDefinition__ChildGraphSlot_t {
-                pub const m_nNodeIdx: usize = 0x0; // int16
-                pub const m_dataSlotIdx: usize = 0x2; // int16
-            }
-            // Parent: CModelConfigElement
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_SetBodygroupOnAttachedModels {
                 pub const m_GroupName: usize = 0x48; // CUtlString
                 pub const m_nChoice: usize = 0x50; // int32
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CCurrentVelocityMetricEvaluator {
             }
-            // Parent: CNmValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBoolValueNode__CDefinition {
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimReplayFrame {
                 pub const m_inputDataBlocks: usize = 0x10; // CUtlVector<CUtlBinaryBlock>
                 pub const m_instanceData: usize = 0x28; // CUtlBinaryBlock
@@ -3937,36 +18384,508 @@ pub mod cs2_dumper {
                 pub const m_localToWorldTransform: usize = 0x60; // CTransform
                 pub const m_timeStamp: usize = 0x80; // float32
             }
-            // Parent: CNmEvent
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTransitionEvent {
-                pub const m_rule: usize = 0x18; // NmTransitionRule_t
+                pub const m_rule: usize = 0x19; // NmTransitionRule_t
                 pub const m_ID: usize = 0x20; // CGlobalSymbol
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmIKRig {
+                pub const m_skeleton: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+                pub const m_vecBodies: usize = 0x8; // CUtlVector<CNmIKBody>
+                pub const m_vecJoints: usize = 0x20; // CUtlVector<CNmIKJoint>
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmFloatCurveEvent {
+                pub const m_ID: usize = 0x20; // CGlobalSymbol
+                pub const m_curve: usize = 0x28; // CPiecewiseCurve
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleTransformInput {
+                pub const m_nType: usize = 0xC; // ParticleTransformType_t
+                pub const m_NamedValue: usize = 0x10; // CParticleNamedValueRef
+                pub const m_bFollowNamedValue: usize = 0x50; // bool
+                pub const m_bSupportsDisabled: usize = 0x51; // bool
+                pub const m_bUseOrientation: usize = 0x52; // bool
+                pub const m_nControlPoint: usize = 0x54; // int32
+                pub const m_nControlPointRangeMax: usize = 0x58; // int32
+                pub const m_flEndCPGrowthTime: usize = 0x5C; // float32
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmIKRig {
-                pub const m_skeleton: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
-            }
-            // Parent: CAnimMotorUpdaterBase
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPathAnimMotorUpdaterBase {
                 pub const m_bLockToPath: usize = 0x19; // bool
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
+            // Fields count: 12
+            //
+            // Metadata:
+            // ���x.
+            pub mod PGDInstruction_t {
+                pub const m_nCode: usize = 0x0; // PulseInstructionCode_t
+                pub const m_nVar: usize = 0x4; // PulseRuntimeVarIndex_t
+                pub const m_nReg0: usize = 0x8; // PulseRuntimeRegisterIndex_t
+                pub const m_nReg1: usize = 0xA; // PulseRuntimeRegisterIndex_t
+                pub const m_nReg2: usize = 0xC; // PulseRuntimeRegisterIndex_t
+                pub const m_nInvokeBindingIndex: usize = 0x10; // PulseRuntimeInvokeIndex_t
+                pub const m_nChunk: usize = 0x14; // PulseRuntimeChunkIndex_t
+                pub const m_nDestInstruction: usize = 0x18; // int32
+                pub const m_nCallInfoIndex: usize = 0x1C; // PulseRuntimeCallInfoIndex_t
+                pub const m_nConstIdx: usize = 0x20; // PulseRuntimeConstantIndex_t
+                pub const m_nDomainValueIdx: usize = 0x22; // PulseRuntimeDomainValueIndex_t
+                pub const m_nBlackboardReferenceIdx: usize = 0x24; // PulseRuntimeBlackboardReferenceIndex_t
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFootstepEventPercentageThroughNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_phaseCondition: usize = 0xC; // NmFootPhaseCondition_t
@@ -3976,7 +18895,7 @@ pub mod cs2_dumper {
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod AimCameraOpFixedSettings_t {
                 pub const m_nChainIndex: usize = 0x0; // int32
                 pub const m_nCameraJointIndex: usize = 0x4; // int32
@@ -3990,47 +18909,558 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonAnimCapture_t__Camera_t {
                 pub const m_tmCamera: usize = 0x0; // CTransform
                 pub const m_flTime: usize = 0x20; // float32
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmGraphEventConditionNode__CDefinition {
+                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
+                pub const m_eventConditionRules: usize = 0xC; // CNmBitFlags
+                pub const m_conditions: usize = 0x10; // CUtlVectorFixedGrowable<CNmGraphEventConditionNode::Condition_t,5>
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFollowAttachmentUpdateNode {
                 pub const m_opFixedData: usize = 0x70; // FollowAttachmentSettings_t
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMovementComponentUpdater {
                 pub const m_motors: usize = 0x30; // CUtlVector<CSmartPtr<CAnimMotorUpdaterBase>>
                 pub const m_facingDamping: usize = 0x48; // CAnimInputDamping
-                pub const m_nDefaultMotorIndex: usize = 0x60; // int32
-                pub const m_flDefaultRunSpeed: usize = 0x64; // float32
-                pub const m_bMoveVarsDisabled: usize = 0x68; // bool
-                pub const m_bNetworkPath: usize = 0x69; // bool
-                pub const m_bNetworkFacing: usize = 0x6A; // bool
-                pub const m_paramHandles: usize = 0x6B; // CAnimParamHandle[30]
+                pub const m_nDefaultMotorIndex: usize = 0x68; // int32
+                pub const m_flDefaultRunSpeed: usize = 0x6C; // float32
+                pub const m_bMoveVarsDisabled: usize = 0x70; // bool
+                pub const m_bNetworkPath: usize = 0x71; // bool
+                pub const m_bNetworkFacing: usize = 0x72; // bool
+                pub const m_paramHandles: usize = 0x73; // CAnimParamHandle[34]
             }
-            // Parent: CModelConfigElement
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_SetMaterialGroup {
                 pub const m_MaterialGroupName: usize = 0x48; // CUtlString
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod IParticleEffect {
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmIKJoint {
+                pub const m_nParentIndex: usize = 0x0; // int32
+                pub const m_nBodyIndex: usize = 0x4; // int32
+                pub const m_xLocalFrame: usize = 0x10; // CTransform
+                pub const m_flSwingLimit: usize = 0x30; // float32
+                pub const m_flMinTwistLimit: usize = 0x34; // float32
+                pub const m_flMaxTwistLimit: usize = 0x38; // float32
+                pub const m_flWeight: usize = 0x3C; // float32
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFutureFacingMetricEvaluator {
                 pub const m_flDistance: usize = 0x50; // float32
                 pub const m_flTime: usize = 0x54; // float32
@@ -4039,7 +19469,7 @@ pub mod cs2_dumper {
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod NmCompressionSettings_t {
                 pub const m_translationRangeX: usize = 0x0; // NmCompressionSettings_t::QuantizationRange_t
                 pub const m_translationRangeY: usize = 0x8; // NmCompressionSettings_t::QuantizationRange_t
@@ -4050,31 +19480,372 @@ pub mod cs2_dumper {
                 pub const m_bIsTranslationStatic: usize = 0x31; // bool
                 pub const m_bIsScaleStatic: usize = 0x32; // bool
             }
-            // Parent: CBinaryUpdateNode
-            // Fields count: 5
+            // Parent: None
+            // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CAddUpdateNode {
-                pub const m_footMotionTiming: usize = 0x88; // BinaryNodeChildOption
-                pub const m_bApplyToFootMotion: usize = 0x8C; // bool
-                pub const m_bApplyChannelsSeparately: usize = 0x8D; // bool
-                pub const m_bUseModelSpace: usize = 0x8E; // bool
-                pub const m_bApplyScale: usize = 0x8F; // bool
+            // ���x.
+            pub mod CPulse_Variable {
+                pub const m_Name: usize = 0x0; // PulseSymbol_t
+                pub const m_Description: usize = 0x10; // CUtlString
+                pub const m_Type: usize = 0x18; // CPulseValueFullType
+                pub const m_DefaultValue: usize = 0x30; // KeyValues3
+                pub const m_nKeysSource: usize = 0x44; // PulseVariableKeysSource_t
+                pub const m_bIsPublicBlackboardVariable: usize = 0x48; // bool
+                pub const m_bIsObservable: usize = 0x49; // bool
+                pub const m_nEditorNodeID: usize = 0x4C; // PulseDocNodeID_t
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MPropertyEditClassAsString
-            pub mod CAnimEnum {
-                pub const m_value: usize = 0x0; // uint8
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PARTICLE_EHANDLE__ {
+                pub const unused: usize = 0x0; // int32
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CAddUpdateNode {
+                pub const m_footMotionTiming: usize = 0x90; // BinaryNodeChildOption
+                pub const m_bApplyToFootMotion: usize = 0x94; // bool
+                pub const m_bApplyChannelsSeparately: usize = 0x95; // bool
+                pub const m_bUseModelSpace: usize = 0x96; // bool
+                pub const m_bApplyScale: usize = 0x97; // bool
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CAnimEnum {
+                pub const m_value: usize = 0x0; // uint8
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CDemoSettingsComponentUpdater {
                 pub const m_settings: usize = 0x30; // CAnimDemoCaptureSettings
             }
@@ -4082,26 +19853,273 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimDecoder {
                 pub const m_szName: usize = 0x0; // CBufferString
                 pub const m_nVersion: usize = 0x10; // int32
                 pub const m_nType: usize = 0x14; // int32
             }
-            // Parent: CNmTargetValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedTargetNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_mode: usize = 0xC; // NmCachedValueMode_t
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CPerParticleFloatInput {
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmConstBoolNode__CDefinition {
                 pub const m_bValue: usize = 0xA; // bool
             }
@@ -4109,7 +20127,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmBitFlags {
                 pub const m_flags: usize = 0x0; // uint32
             }
@@ -4117,58 +20135,390 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFootStride {
                 pub const m_definition: usize = 0x0; // CFootCycleDefinition
                 pub const m_trajectories: usize = 0x40; // CFootTrajectories
             }
-            // Parent: CNmEvent
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // ���x.
+            pub mod CSceneObjectData__RTProxyDrawDescriptor_t {
+                pub const m_drawDesc: usize = 0x0; // CMaterialDrawDescriptor
+                pub const m_mWorldFromLocal: usize = 0x108; // matrix3x4_t
+                pub const m_nVertexAlbedoFormat: usize = 0x138; // VertexAlbedoFormat_t
+                pub const m_nVertexAlbedoVB: usize = 0x139; // int8
+                pub const m_nVertexAlbedoOffset: usize = 0x13A; // uint16
+                pub const m_nVertexAlbedoStride: usize = 0x13C; // uint16
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmLegacyEvent {
-                pub const m_animEventClassName: usize = 0x18; // CUtlString
-                pub const m_KV: usize = 0x20; // KeyValues3
+                pub const m_animEventClassName: usize = 0x20; // CUtlString
+                pub const m_KV: usize = 0x28; // KeyValues3
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CStateNodeStateData {
                 pub const m_pChild: usize = 0x0; // CAnimUpdateNodeRef
                 pub const m_bExclusiveRootMotion: usize = 0x0; // bitfield:1
                 pub const m_bExclusiveRootMotionFirstFrame: usize = 0x0; // bitfield:1
             }
-            // Parent: CAnimTagBase
-            // Fields count: 4
+            // Parent: None
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootstepLandedAnimTag {
                 pub const m_FootstepType: usize = 0x58; // FootstepLandedFootSoundType_t
                 pub const m_OverrideSoundName: usize = 0x60; // CUtlString
                 pub const m_DebugAnimSourceString: usize = 0x68; // CUtlString
                 pub const m_BoneName: usize = 0x70; // CUtlString
+                pub const m_footstepJumpPhase: usize = 0x78; // FootstepJumpPhase_t
             }
-            // Parent: CConcreteAnimParameter
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CEnumAnimParameter {
                 pub const m_defaultValue: usize = 0x80; // uint8
                 pub const m_enumOptions: usize = 0x88; // CUtlVector<CUtlString>
                 pub const m_vecEnumReferenced: usize = 0xA0; // CUtlVector<uint64>
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CHandshakeAnimTagBase {
                 pub const m_bIsDisableTag: usize = 0x49; // bool
             }
@@ -4176,8 +20526,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimTagID {
                 pub const m_id: usize = 0x0; // uint32
             }
@@ -4185,18 +20534,98 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimFrameSegment {
                 pub const m_nUniqueFrameIndex: usize = 0x0; // int32
                 pub const m_nLocalElementMasks: usize = 0x4; // uint32
                 pub const m_nLocalChannel: usize = 0x8; // int32
                 pub const m_container: usize = 0x10; // CUtlBinaryBlock
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSlopeComponentUpdater {
                 pub const m_flTraceDistance: usize = 0x34; // float32
                 pub const m_hSlopeAngle: usize = 0x38; // CAnimParamHandle
@@ -4207,20 +20636,31 @@ pub mod cs2_dumper {
                 pub const m_hSlopeNormal_WorldSpace: usize = 0x42; // CAnimParamHandle
             }
             // Parent: None
-            // Fields count: 2
+            // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
             pub mod CAnimInputDamping {
                 pub const m_speedFunction: usize = 0x8; // DampingSpeedFunction
                 pub const m_fSpeedScale: usize = 0xC; // float32
+                pub const m_fFallingSpeedScale: usize = 0x10; // float32
             }
             // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            pub mod CNmIKBody {
+                pub const m_flMass: usize = 0x0; // float32
+                pub const m_vLocalMassCenter: usize = 0x4; // Vector
+                pub const m_vRadius: usize = 0x10; // Vector
+                pub const m_flResistance: usize = 0x1C; // float32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
             pub mod CHitBoxSet {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_nNameHash: usize = 0x8; // uint32
@@ -4231,7 +20671,7 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ChainToSolveData_t {
                 pub const m_nChainIndex: usize = 0x0; // int32
                 pub const m_SolverSettings: usize = 0x4; // IKSolverSettings_t
@@ -4244,7 +20684,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CConstraintSlave {
                 pub const m_qBaseOrientation: usize = 0x0; // Quaternion
                 pub const m_vBasePosition: usize = 0x10; // Vector
@@ -4253,10 +20693,97 @@ pub mod cs2_dumper {
                 pub const m_sName: usize = 0x28; // CUtlString
             }
             // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeOutputIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFootCycleDefinition {
                 pub const m_vStancePositionMS: usize = 0x0; // Vector
                 pub const m_vMidpointPositionMS: usize = 0xC; // Vector
@@ -4268,11 +20795,91 @@ pub mod cs2_dumper {
                 pub const m_footStrikeCycle: usize = 0x34; // CFootCycle
                 pub const m_footLandCycle: usize = 0x38; // CFootCycle
             }
-            // Parent: CAnimParameterBase
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CVirtualAnimParameter {
                 pub const m_expressionString: usize = 0x70; // CUtlString
                 pub const m_eParamType: usize = 0x78; // AnimParamType_t
@@ -4281,18 +20888,177 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMotionMetricEvaluator {
                 pub const m_means: usize = 0x18; // CUtlVector<float32>
                 pub const m_standardDeviations: usize = 0x30; // CUtlVector<float32>
                 pub const m_flWeight: usize = 0x48; // float32
                 pub const m_nDimensionStartIndex: usize = 0x4C; // int32
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFutureVelocityMetricEvaluator {
                 pub const m_flDistance: usize = 0x50; // float32
                 pub const m_flStoppingDistance: usize = 0x54; // float32
@@ -4300,46 +21066,285 @@ pub mod cs2_dumper {
                 pub const m_eMode: usize = 0x5C; // VelocityMetricMode
             }
             // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmSkeleton__SecondarySkeleton_t {
+                pub const m_attachToBoneID: usize = 0x0; // CGlobalSymbol
+                pub const m_skeleton: usize = 0x8; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimUpdateNodeBase {
                 pub const m_nodePath: usize = 0x14; // CAnimNodePath
                 pub const m_networkMode: usize = 0x44; // AnimNodeNetworkMode
                 pub const m_name: usize = 0x50; // CUtlString
             }
-            // Parent: CAnimActionUpdater
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSetParameterActionUpdater {
-                pub const m_hParam: usize = 0x18; // CAnimParamHandle
-                pub const m_value: usize = 0x1A; // CAnimVariant
-            }
-            // Parent: CNmBoneMaskValueNode__CDefinition
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmFixedWeightBoneMaskNode__CDefinition {
-                pub const m_flBoneWeight: usize = 0xC; // float32
-            }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmGraphVariation {
-                pub const m_graphDefinition: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmGraphDefinition>
-                pub const m_dataSet: usize = 0x8; // CNmGraphDataSet
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CSetParameterActionUpdater {
+                pub const m_hParam: usize = 0x18; // CAnimParamHandle
+                pub const m_value: usize = 0x1A; // CAnimVariant
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmFixedWeightBoneMaskNode__CDefinition {
+                pub const m_flBoneWeight: usize = 0xC; // float32
             }
             // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonAnimCapture_t__FrameStamp_t {
                 pub const m_flTime: usize = 0x0; // float32
                 pub const m_flEntitySimTime: usize = 0x4; // float32
@@ -4350,11 +21355,101 @@ pub mod cs2_dumper {
                 pub const m_nFrameCount: usize = 0x14; // int32
                 pub const m_nTickCount: usize = 0x18; // int32
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulse_DomainValue {
+                pub const m_nType: usize = 0x0; // PulseDomainValueType_t
+                pub const m_Value: usize = 0x8; // CGlobalSymbolCaseSensitive
+                pub const m_RequiredRuntimeType: usize = 0x10; // CPulseValueFullType
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBonePositionMetricEvaluator {
                 pub const m_nBoneIndex: usize = 0x50; // int32
             }
@@ -4362,49 +21457,301 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CRenderBufferBinding {
                 pub const m_hBuffer: usize = 0x0; // uint64
                 pub const m_nBindOffsetBytes: usize = 0x10; // uint32
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmExternalGraphNode__CDefinition {
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleCollectionRendererFloatInput {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmParameterizedBlendNode__Parameterization_t {
                 pub const m_blendRanges: usize = 0x0; // CUtlLeanVectorFixedGrowable<CNmParameterizedBlendNode::BlendRange_t,5>
                 pub const m_parameterRange: usize = 0x48; // Range_t
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmEntityAttributeIntEvent {
+                pub const m_nIntValue: usize = 0x38; // int32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmNotNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
             }
             // Parent: None
-            // Fields count: 2
+            // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMeshletDescriptor {
                 pub const m_PackedAABB: usize = 0x0; // PackedAABB_t
                 pub const m_CullingData: usize = 0x8; // CDrawCullingData
+                pub const m_nVertexOffset: usize = 0xC; // uint32
+                pub const m_nTriangleOffset: usize = 0x10; // uint32
+                pub const m_nVertexCount: usize = 0x14; // uint8
+                pub const m_nTriangleCount: usize = 0x15; // uint8
             }
             // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMorphSetData {
                 pub const m_nWidth: usize = 0xC; // int32
                 pub const m_nHeight: usize = 0x10; // int32
@@ -4415,31 +21762,270 @@ pub mod cs2_dumper {
                 pub const m_FlexControllers: usize = 0x68; // CUtlVector<CFlexController>
                 pub const m_FlexRules: usize = 0x80; // CUtlVector<CFlexRule>
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmAndNode__CDefinition {
                 pub const m_conditionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,4>
             }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMorphConstraint {
-                pub const m_sTargetMorph: usize = 0x68; // CUtlString
-                pub const m_nSlaveChannel: usize = 0x70; // int32
-                pub const m_flMin: usize = 0x74; // float32
-                pub const m_flMax: usize = 0x78; // float32
+                pub const m_sTargetMorph: usize = 0x60; // CUtlString
+                pub const m_nSlaveChannel: usize = 0x68; // int32
+                pub const m_flMin: usize = 0x6C; // float32
+                pub const m_flMax: usize = 0x70; // float32
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CClothSettingsAnimTag {
                 pub const m_flStiffness: usize = 0x58; // float32
                 pub const m_flEaseIn: usize = 0x5C; // float32
@@ -4450,7 +22036,7 @@ pub mod cs2_dumper {
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimDesc_Flag {
                 pub const m_bLooping: usize = 0x0; // bool
                 pub const m_bAllZeros: usize = 0x1; // bool
@@ -4461,11 +22047,91 @@ pub mod cs2_dumper {
                 pub const m_bImplicitSeqIgnoreDelta: usize = 0x6; // bool
                 pub const m_bAnimGraphAdditive: usize = 0x7; // bool
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBlend2DNode__CDefinition {
                 pub const m_sourceNodeIndices: usize = 0x10; // CUtlVectorFixedGrowable<int16,5>
                 pub const m_nInputParameterNodeIdx0: usize = 0x38; // int16
@@ -4479,7 +22145,7 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CBlendCurve {
                 pub const m_flControlPoint1: usize = 0x0; // float32
                 pub const m_flControlPoint2: usize = 0x4; // float32
@@ -4488,57 +22154,555 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmGraphNode__CDefinition {
                 pub const m_nNodeIdx: usize = 0x8; // int16
             }
-            // Parent: CAnimationGraphVisualizerPrimitiveBase
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimationGraphVisualizerSphere {
                 pub const m_vWsPosition: usize = 0x40; // VectorAligned
                 pub const m_flRadius: usize = 0x50; // float32
                 pub const m_Color: usize = 0x54; // Color
             }
             // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmClip__ModelSpaceSamplingChainLink_t {
+                pub const m_nBoneIdx: usize = 0x0; // int32
+                pub const m_nParentBoneIdx: usize = 0x4; // int32
+                pub const m_nParentChainLinkIdx: usize = 0x8; // int32
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimUserDifference {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_nType: usize = 0x10; // int32
             }
-            // Parent: CNmSpeedScaleBaseNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmDurationScaleNode__CDefinition {
             }
             // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CTransitionUpdateData {
                 pub const m_srcStateIndex: usize = 0x0; // uint8
                 pub const m_destStateIndex: usize = 0x1; // uint8
                 pub const m_nHandshakeMaskToDisableFirst: usize = 0x0; // bitfield:7
                 pub const m_bDisabled: usize = 0x0; // bitfield:1
             }
-            // Parent: CHandshakeAnimTagBase
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeBlackboardReferenceIndex_t {
+                pub const m_Value: usize = 0x0; // int16
+            }
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMovementHandshakeAnimTag {
             }
             // Parent: None
             // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneConstraintPoseSpaceBone__Input_t {
                 pub const m_inputValue: usize = 0x0; // Vector
                 pub const m_outputTransformList: usize = 0x10; // CUtlVector<CTransform>
@@ -4547,7 +22711,7 @@ pub mod cs2_dumper {
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqMultiFetch {
                 pub const m_flags: usize = 0x0; // CSeqMultiFetchFlag
                 pub const m_localReferenceArray: usize = 0x8; // CUtlVector<int16>
@@ -4561,10 +22725,10 @@ pub mod cs2_dumper {
                 pub const m_flFixedBlendWeightVals: usize = 0x68; // float32[2]
             }
             // Parent: None
-            // Fields count: 11
+            // Fields count: 12
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CPhysSurfacePropertiesSoundNames {
                 pub const m_impactSoft: usize = 0x0; // CUtlString
                 pub const m_impactHard: usize = 0x8; // CUtlString
@@ -4577,13 +22741,103 @@ pub mod cs2_dumper {
                 pub const m_meleeImpact: usize = 0x40; // CUtlString
                 pub const m_pushOff: usize = 0x48; // CUtlString
                 pub const m_skidStop: usize = 0x50; // CUtlString
+                pub const m_resonant: usize = 0x58; // CUtlString
             }
-            // Parent: CAnimTagBase
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod NmBoneMaskSetDefinition_t {
+                pub const m_ID: usize = 0x0; // CGlobalSymbol
+                pub const m_primaryWeightList: usize = 0x8; // CNmBoneWeightList
+                pub const m_secondaryWeightLists: usize = 0x118; // CUtlLeanVector<CNmBoneWeightList>
+            }
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAudioAnimTag {
                 pub const m_clipName: usize = 0x58; // CUtlString
                 pub const m_attachmentName: usize = 0x60; // CUtlString
@@ -4593,24 +22847,104 @@ pub mod cs2_dumper {
                 pub const m_bPlayOnServer: usize = 0x6E; // bool
                 pub const m_bPlayOnClient: usize = 0x6F; // bool
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTurnHelperUpdateNode {
-                pub const m_facingTarget: usize = 0x6C; // AnimValueSource
-                pub const m_turnStartTimeOffset: usize = 0x70; // float32
-                pub const m_turnDuration: usize = 0x74; // float32
-                pub const m_bMatchChildDuration: usize = 0x78; // bool
-                pub const m_manualTurnOffset: usize = 0x7C; // float32
-                pub const m_bUseManualTurnOffset: usize = 0x80; // bool
+                pub const m_facingTarget: usize = 0x74; // AnimValueSource
+                pub const m_turnStartTimeOffset: usize = 0x78; // float32
+                pub const m_turnDuration: usize = 0x7C; // float32
+                pub const m_bMatchChildDuration: usize = 0x80; // bool
+                pub const m_manualTurnOffset: usize = 0x84; // float32
+                pub const m_bUseManualTurnOffset: usize = 0x88; // bool
             }
             // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimationGroup {
                 pub const m_nFlags: usize = 0xC; // uint32
                 pub const m_name: usize = 0x10; // CBufferString
@@ -4625,84 +22959,605 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod NmSyncTrackTime_t {
                 pub const m_nEventIdx: usize = 0x0; // int32
                 pub const m_percentageThrough: usize = 0x4; // NmPercent_t
             }
             // Parent: None
-            // Fields count: 9
+            // Fields count: 16
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmClip {
                 pub const m_skeleton: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
                 pub const m_nNumFrames: usize = 0x8; // uint32
                 pub const m_flDuration: usize = 0xC; // float32
                 pub const m_compressedPoseData: usize = 0x10; // CUtlBinaryBlock
-                pub const m_trackCompressionSettings: usize = 0x28; // CUtlVector<NmCompressionSettings_t>
-                pub const m_compressedPoseOffsets: usize = 0x40; // CUtlVector<uint32>
-                pub const m_syncTrack: usize = 0xA0; // CNmSyncTrack
-                pub const m_rootMotion: usize = 0x150; // CNmRootMotionData
-                pub const m_bIsAdditive: usize = 0x1A0; // bool
+                pub const m_trackCompressionSettings: usize = 0x20; // CUtlVector<NmCompressionSettings_t>
+                pub const m_compressedPoseOffsets: usize = 0x38; // CUtlVector<uint32>
+                pub const m_floatCurveIDs: usize = 0x50; // CUtlVector<CGlobalSymbol>
+                pub const m_floatCurveDefs: usize = 0x68; // CUtlVector<NmFloatCurveCompressionSettings_t>
+                pub const m_compressedFloatCurveData: usize = 0x80; // CUtlVector<uint16>
+                pub const m_compressedFloatCurveOffsets: usize = 0x98; // CUtlVector<uint32>
+                pub const m_secondaryAnimations: usize = 0xD8; // CUtlVectorFixedGrowable<CNmClip*,1>
+                pub const m_syncTrack: usize = 0xF8; // CNmSyncTrack
+                pub const m_rootMotion: usize = 0x1B0; // CNmRootMotionData
+                pub const m_bIsAdditive: usize = 0x200; // bool
+                pub const m_modelSpaceSamplingChain: usize = 0x208; // CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
+                pub const m_modelSpaceBoneSamplingIndices: usize = 0x220; // CUtlVector<int32>
             }
-            // Parent: CAnimActionUpdater
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CToggleComponentActionUpdater {
                 pub const m_componentID: usize = 0x18; // AnimComponentID
                 pub const m_bSetEnabled: usize = 0x1C; // bool
             }
-            // Parent: CNmBlendTaskBase
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmOverlayBlendTask {
             }
-            // Parent: CNmPassthroughNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmSpeedScaleBaseNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xC; // int16
                 pub const m_flDefaultInputValue: usize = 0x10; // float32
             }
-            // Parent: CNmGraphNode__CDefinition
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmValueNode__CDefinition {
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimationGraphVisualizerPrimitiveBase {
                 pub const m_Type: usize = 0x8; // CAnimationGraphVisualizerPrimitiveType
                 pub const m_OwningAnimNodePaths: usize = 0xC; // AnimNodeID[11]
                 pub const m_nOwningAnimNodePathCount: usize = 0x38; // int32
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBindPoseUpdateNode {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod NmSyncTrackTimeRange_t {
                 pub const m_startTime: usize = 0x0; // NmSyncTrackTime_t
                 pub const m_endTime: usize = 0x8; // NmSyncTrackTime_t
             }
-            // Parent: CAnimationGraphVisualizerPrimitiveBase
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimationGraphVisualizerText {
                 pub const m_vWsPosition: usize = 0x40; // VectorAligned
                 pub const m_Color: usize = 0x50; // Color
@@ -4712,17 +23567,97 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFootTrajectory {
-                pub const m_vOffset: usize = 0x0; // Vector
-                pub const m_flRotationOffset: usize = 0xC; // float32
-                pub const m_flProgression: usize = 0x10; // float32
+                pub const m_vOffset: usize = 0x8; // Vector
+                pub const m_flRotationOffset: usize = 0x14; // float32
+                pub const m_flProgression: usize = 0x18; // float32
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
             // Fields count: 23
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMotionMatchingUpdateNode {
                 pub const m_dataSet: usize = 0x58; // CMotionDataSet
                 pub const m_metrics: usize = 0x78; // CUtlVector<CSmartPtr<CMotionMetricEvaluator>>
@@ -4742,24 +23677,104 @@ pub mod cs2_dumper {
                 pub const m_flGoalAssistDistance: usize = 0x10C; // float32
                 pub const m_flGoalAssistTolerance: usize = 0x110; // float32
                 pub const m_distanceScale_Damping: usize = 0x118; // CAnimInputDamping
-                pub const m_flDistanceScale_OuterRadius: usize = 0x128; // float32
-                pub const m_flDistanceScale_InnerRadius: usize = 0x12C; // float32
-                pub const m_flDistanceScale_MaxScale: usize = 0x130; // float32
-                pub const m_flDistanceScale_MinScale: usize = 0x134; // float32
-                pub const m_bEnableDistanceScaling: usize = 0x138; // bool
+                pub const m_flDistanceScale_OuterRadius: usize = 0x130; // float32
+                pub const m_flDistanceScale_InnerRadius: usize = 0x134; // float32
+                pub const m_flDistanceScale_MaxScale: usize = 0x138; // float32
+                pub const m_flDistanceScale_MinScale: usize = 0x13C; // float32
+                pub const m_bEnableDistanceScaling: usize = 0x140; // bool
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmReferencePoseNode__CDefinition {
             }
             // Parent: None
             // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqS1SeqDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
                 pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
@@ -4777,7 +23792,7 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFlexController {
                 pub const m_szName: usize = 0x0; // CUtlString
                 pub const m_szType: usize = 0x8; // CUtlString
@@ -4788,67 +23803,313 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonDemoDb_t {
                 pub const m_AnimCaptures: usize = 0x0; // CUtlVector<SkeletonAnimCapture_t*>
                 pub const m_CameraTrack: usize = 0x18; // CUtlVector<SkeletonAnimCapture_t::Camera_t>
                 pub const m_flRecordingTime: usize = 0x30; // float32
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmStateEventConditionNode__CDefinition {
-                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
-                pub const m_eventConditionRules: usize = 0xC; // CNmBitFlags
-                pub const m_conditions: usize = 0x10; // CUtlVectorFixedGrowable<CNmStateEventConditionNode::Condition_t,5>
-            }
-            // Parent: CNmBoolValueNode__CDefinition
-            // Fields count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatRangeComparisonNode__CDefinition {
                 pub const m_range: usize = 0xC; // Range_t
                 pub const m_nInputValueNodeIdx: usize = 0x14; // int16
                 pub const m_bIsInclusiveCheck: usize = 0x16; // bool
             }
-            // Parent: CMotionNode
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMotionNodeSequence {
                 pub const m_tags: usize = 0x28; // CUtlVector<TagSpan_t>
                 pub const m_hSequence: usize = 0x40; // HSequence
                 pub const m_flPlaybackSpeed: usize = 0x44; // float32
             }
             // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmTwoBoneIKNode__CDefinition {
+                pub const m_effectorBoneID: usize = 0x10; // CGlobalSymbol
+                pub const m_nEffectorTargetNodeIdx: usize = 0x18; // int16
+                pub const m_nEnabledNodeIdx: usize = 0x1A; // int16
+                pub const m_flBlendTimeSeconds: usize = 0x1C; // float32
+                pub const m_blendMode: usize = 0x20; // NmIKBlendMode_t
+                pub const m_bIsTargetInWorldSpace: usize = 0x21; // bool
+                pub const m_flReferencePoseTwistWeight: usize = 0x24; // float32
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFlexDesc {
                 pub const m_szFacs: usize = 0x0; // CUtlString
             }
             // Parent: None
-            // Fields count: 5
+            // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CRenderMesh {
                 pub const m_sceneObjects: usize = 0x10; // CUtlLeanVectorFixedGrowable<CSceneObjectData,1>
-                pub const m_constraints: usize = 0x78; // CUtlLeanVector<CBaseConstraint*>
-                pub const m_skeleton: usize = 0x88; // CRenderSkeleton
-                pub const m_meshDeformParams: usize = 0x1A8; // DynamicMeshDeformParams_t
-                pub const m_pGroomData: usize = 0x1B8; // CRenderGroom*
+                pub const m_constraints: usize = 0xB8; // CUtlLeanVector<CBaseConstraint*>
+                pub const m_skeleton: usize = 0xC8; // CRenderSkeleton
+                pub const m_bUseUV2ForCharting: usize = 0x1D4; // bool
+                pub const m_bEmbeddedMapMesh: usize = 0x1D5; // bool
+                pub const m_meshDeformParams: usize = 0x1F8; // DynamicMeshDeformParams_t
+                pub const m_pGroomData: usize = 0x208; // CRenderGroom*
             }
             // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimSkeleton {
                 pub const m_localSpaceTransforms: usize = 0x10; // CUtlVector<CTransform>
                 pub const m_modelSpaceTransforms: usize = 0x28; // CUtlVector<CTransform>
@@ -4860,10 +24121,97 @@ pub mod cs2_dumper {
                 pub const m_lodBoneCounts: usize = 0xB8; // CUtlVector<int32>
             }
             // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeConstantIndex_t {
+                pub const m_Value: usize = 0x0; // int16
+            }
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysics2ShapeDef_t {
                 pub const m_spheres: usize = 0x0; // CUtlVector<RnSphereDesc_t>
                 pub const m_capsules: usize = 0x18; // CUtlVector<RnCapsuleDesc_t>
@@ -4871,39 +24219,368 @@ pub mod cs2_dumper {
                 pub const m_meshes: usize = 0x48; // CUtlVector<RnMeshDesc_t>
                 pub const m_CollisionAttributeIndices: usize = 0x60; // CUtlVector<uint16>
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatCurveNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_curve: usize = 0x10; // CPiecewiseCurve
             }
-            // Parent: CAnimationGraphVisualizerPrimitiveBase
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimationGraphVisualizerAxis {
                 pub const m_xWsTransform: usize = 0x40; // CTransform
                 pub const m_flAxisSize: usize = 0x60; // float32
             }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTwistConstraint {
-                pub const m_bInverse: usize = 0x68; // bool
+                pub const m_bInverse: usize = 0x60; // bool
                 pub const m_qParentBindRotation: usize = 0x70; // Quaternion
                 pub const m_qChildBindRotation: usize = 0x80; // Quaternion
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseDocNodeID_t {
+                pub const m_Value: usize = 0x0; // int32
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ModelBoneFlexDriverControl_t {
                 pub const m_nBoneComponent: usize = 0x0; // ModelBoneFlexComponent_t
                 pub const m_flexController: usize = 0x8; // CUtlString
@@ -4912,10 +24589,97 @@ pub mod cs2_dumper {
                 pub const m_flMax: usize = 0x18; // float32
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleCollectionFloatInput {
+            }
+            // Parent: None
             // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqCmdLayer {
                 pub const m_cmd: usize = 0x0; // int16
                 pub const m_nLocalReference: usize = 0x2; // int16
@@ -4931,7 +24695,7 @@ pub mod cs2_dumper {
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FootPinningPoseOpFixedData_t {
                 pub const m_footInfo: usize = 0x0; // CUtlVector<FootFixedData_t>
                 pub const m_flBlendTime: usize = 0x18; // float32
@@ -4945,7 +24709,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod RenderSkeletonBone_t {
                 pub const m_boneName: usize = 0x0; // CUtlString
                 pub const m_parentName: usize = 0x8; // CUtlString
@@ -4953,11 +24717,91 @@ pub mod cs2_dumper {
                 pub const m_bbox: usize = 0x40; // SkeletonBoneBounds_t
                 pub const m_flSphereRadius: usize = 0x58; // float32
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CDistanceRemainingMetricEvaluator {
                 pub const m_flMaxDistance: usize = 0x50; // float32
                 pub const m_flMinDistance: usize = 0x54; // float32
@@ -4967,29 +24811,190 @@ pub mod cs2_dumper {
                 pub const m_bFilterGoalDistance: usize = 0x61; // bool
                 pub const m_bFilterGoalOvershoot: usize = 0x62; // bool
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CDirectPlaybackUpdateNode {
-                pub const m_bFinishEarly: usize = 0x6C; // bool
-                pub const m_bResetOnFinish: usize = 0x6D; // bool
-                pub const m_allTags: usize = 0x70; // CUtlVector<CDirectPlaybackTagData>
-            }
-            // Parent: CNmEvent
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmIDEvent {
-                pub const m_ID: usize = 0x18; // CGlobalSymbol
+                pub const m_bFinishEarly: usize = 0x74; // bool
+                pub const m_bResetOnFinish: usize = 0x75; // bool
+                pub const m_allTags: usize = 0x78; // CUtlVector<CDirectPlaybackTagData>
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmIDEvent {
+                pub const m_ID: usize = 0x20; // CGlobalSymbol
+                pub const m_secondaryID: usize = 0x28; // CGlobalSymbol
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
             pub mod CFlexRule {
                 pub const m_nFlex: usize = 0x0; // int32
                 pub const m_FlexOps: usize = 0x8; // CUtlVector<CFlexOp>
@@ -4998,7 +25003,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ScriptInfo_t {
                 pub const m_code: usize = 0x0; // CUtlString
                 pub const m_paramsModified: usize = 0x8; // CUtlVector<CAnimParamHandle>
@@ -5007,61 +25012,491 @@ pub mod cs2_dumper {
                 pub const m_eScriptType: usize = 0x50; // AnimScriptType
             }
             // Parent: None
-            // Fields count: 11
+            // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CBoneConstraintRbf {
+                pub const m_inputBones: usize = 0x20; // CUtlVector<std::pair<CUtlString,uint32>>
+                pub const m_outputBones: usize = 0x38; // CUtlVector<std::pair<CUtlString,uint32>>
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmSoundEvent {
+                pub const m_relevance: usize = 0x1C; // CNmEventRelevance_t
+                pub const m_name: usize = 0x20; // CUtlString
+                pub const m_position: usize = 0x28; // CNmSoundEvent::Position_t
+                pub const m_attachmentName: usize = 0x30; // CUtlString
+                pub const m_tags: usize = 0x38; // CUtlString
+                pub const m_bContinuePlayingSoundAtDurationEnd: usize = 0x40; // bool
+                pub const m_flDurationInterruptionThreshold: usize = 0x44; // float32
+            }
+            // Parent: None
+            // Fields count: 14
+            //
+            // Metadata:
+            // ���x.
             pub mod CRenderGroom {
                 pub const m_hairs: usize = 0x0; // CUtlVector<RenderHairStrandInfo_t>
                 pub const m_hairPositionOffsets: usize = 0x18; // CUtlVector<uint32>
                 pub const m_hSimParamsMat: usize = 0x40; // CStrongHandleCopyable<InfoForResourceTypeIMaterial2>
-                pub const m_nSegmentsPerHairStrand: usize = 0x48; // int32
-                pub const m_nGuideHairCount: usize = 0x4C; // int32
-                pub const m_nHairCount: usize = 0x50; // int32
-                pub const m_nGroomGroupID: usize = 0x54; // int32
-                pub const m_nAttachBoneIdx: usize = 0x58; // int32
-                pub const m_nAttachMeshIdx: usize = 0x5C; // int32
-                pub const m_nAttachMeshDrawCallIdx: usize = 0x60; // int32
-                pub const m_bEnableSimulation: usize = 0x64; // bool
+                pub const m_strandSegmentCountHist: usize = 0x48; // CUtlVector<int32>
+                pub const m_nMaxSegmentsPerHairStrand: usize = 0x78; // int32
+                pub const m_nGuideHairCount: usize = 0x7C; // int32
+                pub const m_nHairCount: usize = 0x80; // int32
+                pub const m_nTotalVertexCount: usize = 0x84; // int32
+                pub const m_nTotalSegmentCount: usize = 0x88; // int32
+                pub const m_nGroomGroupID: usize = 0x8C; // int32
+                pub const m_nAttachBoneIdx: usize = 0x90; // int32
+                pub const m_nAttachMeshIdx: usize = 0x94; // int32
+                pub const m_nAttachMeshDrawCallIdx: usize = 0x98; // int32
+                pub const m_bEnableSimulation: usize = 0x9C; // bool
             }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 2
+            // Parent: None
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmParameterizedClipSelectorNode__CDefinition {
                 pub const m_optionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,5>
-                pub const m_parameterNodeIdx: usize = 0x28; // int16
+                pub const m_optionWeights: usize = 0x28; // CUtlLeanVectorFixedGrowable<uint8,5>
+                pub const m_parameterNodeIdx: usize = 0x38; // int16
+                pub const m_bIgnoreInvalidOptions: usize = 0x3A; // bool
+                pub const m_bHasWeightsSet: usize = 0x3B; // bool
             }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTiltTwistConstraint {
-                pub const m_nTargetAxis: usize = 0x68; // int32
-                pub const m_nSlaveAxis: usize = 0x6C; // int32
+                pub const m_nTargetAxis: usize = 0x60; // int32
+                pub const m_nSlaveAxis: usize = 0x64; // int32
             }
-            // Parent: CNmSpeedScaleBaseNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmSpeedScaleNode__CDefinition {
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CVPhysXSurfacePropertiesList {
                 pub const m_surfacePropertiesList: usize = 0x0; // CUtlVector<CPhysSurfaceProperties*>
             }
             // Parent: None
-            // Fields count: 6
+            // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod RenderHairStrandInfo_t {
                 pub const m_nGuideHairIndices_nSurfaceTriIndex: usize = 0x0; // uint32[2]
                 pub const m_vGuideBary_vBaseBary: usize = 0x8; // uint16[4]
@@ -5069,37 +25504,508 @@ pub mod cs2_dumper {
                 pub const m_nPackedBaseUv: usize = 0x18; // uint16[2]
                 pub const m_nPackedSurfaceNormalOs: usize = 0x1C; // uint32
                 pub const m_nPackedSurfaceTangentOs: usize = 0x20; // uint32
+                pub const m_nDataOffset_Segments: usize = 0x24; // uint32
             }
-            // Parent: CLeafUpdateNode
-            // Fields count: 5
+            // Parent: None
+            // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CCycleControlClipUpdateNode {
                 pub const m_tags: usize = 0x60; // CUtlVector<TagSpan_t>
                 pub const m_hSequence: usize = 0x7C; // HSequence
                 pub const m_duration: usize = 0x80; // float32
                 pub const m_valueSource: usize = 0x84; // AnimValueSource
                 pub const m_paramIndex: usize = 0x88; // CAnimParamHandle
+                pub const m_bLockWhenWaning: usize = 0x8A; // bool
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTargetPointNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_bIsWorldSpaceTarget: usize = 0xC; // bool
             }
-            // Parent: CNmValueNode__CDefinition
+            // Parent: None
+            // Fields count: 6
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmTargetSelectorNode__CDefinition {
+                pub const m_optionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,5>
+                pub const m_flOrientationScoreWeight: usize = 0x28; // float32
+                pub const m_flPositionScoreWeight: usize = 0x2C; // float32
+                pub const m_parameterNodeIdx: usize = 0x30; // int16
+                pub const m_bIgnoreInvalidOptions: usize = 0x32; // bool
+                pub const m_bIsWorldSpaceTarget: usize = 0x33; // bool
+            }
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulse_RegisterInfo {
+                pub const m_nReg: usize = 0x0; // PulseRuntimeRegisterIndex_t
+                pub const m_Type: usize = 0x8; // CPulseValueFullType
+                pub const m_OriginName: usize = 0x20; // CKV3MemberNameWithStorage
+                pub const m_nWrittenByInstruction: usize = 0x58; // int32
+                pub const m_nLastReadByInstruction: usize = 0x5C; // int32
+            }
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatValueNode__CDefinition {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CWarpSectionAnimTagBase {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmGraphVariationUserData {
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CStaticPoseCache {
                 pub const m_poses: usize = 0x10; // CUtlVector<CCachedPose>
                 pub const m_nBoneCount: usize = 0x28; // int32
@@ -5109,25 +26015,25 @@ pub mod cs2_dumper {
             // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod LookAtOpFixedSettings_t {
                 pub const m_attachment: usize = 0x0; // CAnimAttachment
                 pub const m_damping: usize = 0x80; // CAnimInputDamping
-                pub const m_bones: usize = 0x90; // CUtlVector<LookAtBone_t>
-                pub const m_flYawLimit: usize = 0xA8; // float32
-                pub const m_flPitchLimit: usize = 0xAC; // float32
-                pub const m_flHysteresisInnerAngle: usize = 0xB0; // float32
-                pub const m_flHysteresisOuterAngle: usize = 0xB4; // float32
-                pub const m_bRotateYawForward: usize = 0xB8; // bool
-                pub const m_bMaintainUpDirection: usize = 0xB9; // bool
-                pub const m_bTargetIsPosition: usize = 0xBA; // bool
-                pub const m_bUseHysteresis: usize = 0xBB; // bool
+                pub const m_bones: usize = 0x98; // CUtlVector<LookAtBone_t>
+                pub const m_flYawLimit: usize = 0xB0; // float32
+                pub const m_flPitchLimit: usize = 0xB4; // float32
+                pub const m_flHysteresisInnerAngle: usize = 0xB8; // float32
+                pub const m_flHysteresisOuterAngle: usize = 0xBC; // float32
+                pub const m_bRotateYawForward: usize = 0xC0; // bool
+                pub const m_bMaintainUpDirection: usize = 0xC1; // bool
+                pub const m_bTargetIsPosition: usize = 0xC2; // bool
+                pub const m_bUseHysteresis: usize = 0xC3; // bool
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimGraphSettingsManager {
                 pub const m_settingsGroups: usize = 0x18; // CUtlVector<CSmartPtr<CAnimGraphSettingsGroup>>
             }
@@ -5135,46 +26041,383 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimGraphModelBinding {
                 pub const m_modelName: usize = 0x8; // CUtlString
                 pub const m_pSharedData: usize = 0x10; // CSmartPtr<CAnimUpdateSharedData>
             }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneConstraintPoseSpaceBone {
-                pub const m_inputList: usize = 0x68; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
+                pub const m_inputList: usize = 0x60; // CUtlVector<CBoneConstraintPoseSpaceBone::Input_t>
+            }
+            // Parent: None
+            // Fields count: 10
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmTwoBoneIKTask {
+                pub const m_nEffectorBoneIdx: usize = 0x54; // int32
+                pub const m_nEffectorTargetBoneIdx: usize = 0x58; // int32
+                pub const m_targetTransform: usize = 0x60; // CTransform
+                pub const m_effectorTarget: usize = 0x80; // CNmTarget
+                pub const m_blendMode: usize = 0xB0; // NmIKBlendMode_t
+                pub const m_flBlendWeight: usize = 0xB4; // float32
+                pub const m_bIsTargetInWorldSpace: usize = 0xB8; // bool
+                pub const m_bIsRunningFromDeserializedData: usize = 0xB9; // bool
+                pub const m_flReferencePoseTwistWeight: usize = 0xBC; // float32
+                pub const m_debugEffectorBoneID: usize = 0xC0; // CGlobalSymbol
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod MotionBlendItem {
                 pub const m_pChild: usize = 0x0; // CSmartPtr<CMotionNode>
                 pub const m_flKeyValue: usize = 0x8; // float32
             }
-            // Parent: CBoneConstraintBase
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneConstraintPoseSpaceMorph {
-                pub const m_sBoneName: usize = 0x28; // CUtlString
-                pub const m_sAttachmentName: usize = 0x30; // CUtlString
-                pub const m_outputMorph: usize = 0x38; // CUtlVector<CUtlString>
-                pub const m_inputList: usize = 0x50; // CUtlVector<CBoneConstraintPoseSpaceMorph::Input_t>
-                pub const m_bClamp: usize = 0x68; // bool
+                pub const m_sBoneName: usize = 0x20; // CUtlString
+                pub const m_sAttachmentName: usize = 0x28; // CUtlString
+                pub const m_outputMorph: usize = 0x30; // CUtlVector<CUtlString>
+                pub const m_inputList: usize = 0x48; // CUtlVector<CBoneConstraintPoseSpaceMorph::Input_t>
+                pub const m_bClamp: usize = 0x60; // bool
             }
-            // Parent: CConcreteAnimParameter
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFloatAnimParameter {
                 pub const m_fDefaultValue: usize = 0x78; // float32
                 pub const m_fMinValue: usize = 0x7C; // float32
@@ -5185,16 +26428,96 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CStateActionUpdater {
                 pub const m_pAction: usize = 0x0; // CSmartPtr<CAnimActionUpdater>
                 pub const m_eBehavior: usize = 0x8; // StateActionBehavior
             }
-            // Parent: CAnimMotorUpdaterBase
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPlayerInputAnimMotorUpdater {
                 pub const m_sampleTimes: usize = 0x20; // CUtlVector<float32>
                 pub const m_flSpringConstant: usize = 0x3C; // float32
@@ -5207,7 +26530,7 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CRenderSkeleton {
                 pub const m_bones: usize = 0x0; // CUtlVector<RenderSkeletonBone_t>
                 pub const m_boneParents: usize = 0x30; // CUtlVector<int32>
@@ -5217,7 +26540,7 @@ pub mod cs2_dumper {
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqIKLock {
                 pub const m_flPosWeight: usize = 0x0; // float32
                 pub const m_flAngleWeight: usize = 0x4; // float32
@@ -5228,24 +26551,279 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimParamHandleMap {
                 pub const m_list: usize = 0x0; // CUtlHashtable<uint16,int16>
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatClampNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_clampRange: usize = 0xC; // Range_t
             }
             // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeCellIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmExternalPoseNode__CDefinition {
+                pub const m_bShouldSampleRootMotion: usize = 0xA; // bool
+            }
+            // Parent: None
             // Fields count: 15
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimDesc {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_flags: usize = 0x10; // CAnimDesc_Flag
@@ -5263,11 +26841,91 @@ pub mod cs2_dumper {
                 pub const m_vecBoneWorldMax: usize = 0x1B0; // CUtlVector<Vector>
                 pub const m_sequenceParams: usize = 0x1C8; // CAnimSequenceParams
             }
-            // Parent: CNmPassthroughNode__CDefinition
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmRootMotionOverrideNode__CDefinition {
                 pub const m_desiredMovingVelocityNodeIdx: usize = 0xC; // int16
                 pub const m_desiredFacingDirectionNodeIdx: usize = 0xE; // int16
@@ -5277,27 +26935,108 @@ pub mod cs2_dumper {
                 pub const m_maxAngularVelocityRadians: usize = 0x18; // float32
                 pub const m_overrideFlags: usize = 0x1C; // CNmBitFlags
             }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 9
+            // Parent: None
+            // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmTargetWarpNode__CDefinition {
                 pub const m_nClipReferenceNodeIdx: usize = 0xA; // int16
                 pub const m_nTargetValueNodeIdx: usize = 0xC; // int16
                 pub const m_samplingMode: usize = 0xE; // CNmRootMotionData::SamplingMode_t
                 pub const m_bAllowTargetUpdate: usize = 0xF; // bool
-                pub const m_flSamplingPositionErrorThresholdSq: usize = 0x10; // float32
-                pub const m_flMaxTangentLength: usize = 0x14; // float32
-                pub const m_flLerpFallbackDistanceThreshold: usize = 0x18; // float32
-                pub const m_flTargetUpdateDistanceThreshold: usize = 0x1C; // float32
-                pub const m_flTargetUpdateAngleThresholdRadians: usize = 0x20; // float32
+                pub const m_bAlignWithTargetAtLastWarpEvent: usize = 0x10; // bool
+                pub const m_flSamplingPositionErrorThresholdSq: usize = 0x14; // float32
+                pub const m_flMaxTangentLength: usize = 0x18; // float32
+                pub const m_flLerpFallbackDistanceThreshold: usize = 0x1C; // float32
+                pub const m_flTargetUpdateDistanceThreshold: usize = 0x20; // float32
+                pub const m_flTargetUpdateAngleThresholdRadians: usize = 0x24; // float32
             }
             // Parent: None
-            // Fields count: 9
+            // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CPhysSurfacePropertiesPhysics {
                 pub const m_friction: usize = 0x0; // float32
                 pub const m_elasticity: usize = 0x4; // float32
@@ -5305,51 +27044,378 @@ pub mod cs2_dumper {
                 pub const m_thickness: usize = 0xC; // float32
                 pub const m_softContactFrequency: usize = 0x10; // float32
                 pub const m_softContactDampingRatio: usize = 0x14; // float32
-                pub const m_wheelDrag: usize = 0x18; // float32
-                pub const m_heatConductivity: usize = 0x1C; // float32
-                pub const m_flashpoint: usize = 0x20; // float32
             }
-            // Parent: CAnimationGraphVisualizerPrimitiveBase
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimationGraphVisualizerPie {
                 pub const m_vWsCenter: usize = 0x40; // VectorAligned
                 pub const m_vWsStart: usize = 0x50; // VectorAligned
                 pub const m_vWsEnd: usize = 0x60; // VectorAligned
                 pub const m_Color: usize = 0x70; // Color
             }
-            // Parent: CBoneConstraintBase
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod NmFloatCurveCompressionSettings_t {
+                pub const m_range: usize = 0x0; // NmCompressionSettings_t::QuantizationRange_t
+                pub const m_bIsStatic: usize = 0x8; // bool
+            }
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneConstraintDotToMorph {
-                pub const m_sBoneName: usize = 0x28; // CUtlString
-                pub const m_sTargetBoneName: usize = 0x30; // CUtlString
-                pub const m_sMorphChannelName: usize = 0x38; // CUtlString
-                pub const m_flRemap: usize = 0x40; // float32[4]
+                pub const m_sBoneName: usize = 0x20; // CUtlString
+                pub const m_sTargetBoneName: usize = 0x28; // CUtlString
+                pub const m_sMorphChannelName: usize = 0x30; // CUtlString
+                pub const m_flRemap: usize = 0x38; // float32[4]
             }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPointConstraint {
             }
-            // Parent: CMotionMetricEvaluator
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CCurrentRotationVelocityMetricEvaluator {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod TraceSettings_t {
                 pub const m_flTraceHeight: usize = 0x0; // float32
                 pub const m_flTraceRadius: usize = 0x4; // float32
@@ -5358,16 +27424,103 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ParamSpanSample_t {
                 pub const m_value: usize = 0x0; // CAnimVariant
                 pub const m_flCycle: usize = 0x14; // float32
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmFollowBoneTask {
+            }
+            // Parent: None
             // Fields count: 46
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXConstraintParams_t {
                 pub const m_nType: usize = 0x0; // int8
                 pub const m_nTranslateMotion: usize = 0x1; // int8
@@ -5416,11 +27569,91 @@ pub mod cs2_dumper {
                 pub const m_projectionLinearTolerance: usize = 0xF0; // float32
                 pub const m_projectionAngularTolerance: usize = 0xF4; // float32
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatComparisonNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_nComparandValueNodeIdx: usize = 0xC; // int16
@@ -5429,10 +27662,111 @@ pub mod cs2_dumper {
                 pub const m_flComparisonValue: usize = 0x14; // float32
             }
             // Parent: None
-            // Fields count: 8
+            // Fields count: 13
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmChainSolverTask {
+                pub const m_nEffectorBoneIdx: usize = 0x54; // int32
+                pub const m_nEffectorTargetBoneIdx: usize = 0x58; // int32
+                pub const m_targetTransform: usize = 0x60; // CTransform
+                pub const m_nNumBonesInChain: usize = 0x80; // int32
+                pub const m_effectorTarget: usize = 0x90; // CNmTarget
+                pub const m_blendMode: usize = 0xC0; // NmIKBlendMode_t
+                pub const m_flBlendWeight: usize = 0xC4; // float32
+                pub const m_bIsTargetInWorldSpace: usize = 0xC8; // bool
+                pub const m_bIsRunningFromDeserializedData: usize = 0xC9; // bool
+                pub const m_debugEffectorBoneID: usize = 0xD0; // CGlobalSymbol
+                pub const m_chainStartTransformMS: usize = 0xE0; // CTransform
+                pub const m_debugRequestedTargetTransformMS: usize = 0x100; // CTransform
+                pub const m_debugTotalChainLength: usize = 0x120; // float32
+            }
+            // Parent: None
+            // Fields count: 10
+            //
+            // Metadata:
+            // ���x.
             pub mod CStateUpdateData {
                 pub const m_name: usize = 0x0; // CUtlString
                 pub const m_hScript: usize = 0x8; // AnimScriptHandle
@@ -5442,42 +27776,394 @@ pub mod cs2_dumper {
                 pub const m_bIsStartState: usize = 0x0; // bitfield:1
                 pub const m_bIsEndState: usize = 0x0; // bitfield:1
                 pub const m_bIsPassthrough: usize = 0x0; // bitfield:1
+                pub const m_bIsPassthroughRootMotion: usize = 0x0; // bitfield:1
+                pub const m_bPreEvaluatePassthroughTransitionPath: usize = 0x0; // bitfield:1
             }
-            // Parent: CNmValueNode__CDefinition
-            // Fields count: 0
-            pub mod CNmTargetValueNode__CDefinition {
-            }
-            // Parent: CBaseConstraint
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmTargetValueNode__CDefinition {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod COrientConstraint {
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 12
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMoverUpdateNode {
-                pub const m_damping: usize = 0x70; // CAnimInputDamping
-                pub const m_facingTarget: usize = 0x80; // AnimValueSource
-                pub const m_hMoveVecParam: usize = 0x84; // CAnimParamHandle
-                pub const m_hMoveHeadingParam: usize = 0x86; // CAnimParamHandle
-                pub const m_hTurnToFaceParam: usize = 0x88; // CAnimParamHandle
-                pub const m_flTurnToFaceOffset: usize = 0x8C; // float32
-                pub const m_flTurnToFaceLimit: usize = 0x90; // float32
-                pub const m_bAdditive: usize = 0x94; // bool
-                pub const m_bApplyMovement: usize = 0x95; // bool
-                pub const m_bOrientMovement: usize = 0x96; // bool
-                pub const m_bApplyRotation: usize = 0x97; // bool
-                pub const m_bLimitOnly: usize = 0x98; // bool
+                pub const m_damping: usize = 0x78; // CAnimInputDamping
+                pub const m_facingTarget: usize = 0x90; // AnimValueSource
+                pub const m_hMoveVecParam: usize = 0x94; // CAnimParamHandle
+                pub const m_hMoveHeadingParam: usize = 0x96; // CAnimParamHandle
+                pub const m_hTurnToFaceParam: usize = 0x98; // CAnimParamHandle
+                pub const m_flTurnToFaceOffset: usize = 0x9C; // float32
+                pub const m_flTurnToFaceLimit: usize = 0xA0; // float32
+                pub const m_bAdditive: usize = 0xA4; // bool
+                pub const m_bApplyMovement: usize = 0xA5; // bool
+                pub const m_bOrientMovement: usize = 0xA6; // bool
+                pub const m_bApplyRotation: usize = 0xA7; // bool
+                pub const m_bLimitOnly: usize = 0xA8; // bool
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmLayerBlendNode__CDefinition {
                 pub const m_nBaseNodeIdx: usize = 0xA; // int16
                 pub const m_bOnlySampleBaseRootMotion: usize = 0xC; // bool
@@ -5487,7 +28173,86 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimMotorUpdaterBase {
                 pub const m_name: usize = 0x10; // CUtlString
                 pub const m_bDefault: usize = 0x18; // bool
@@ -5496,26 +28261,273 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod JiggleBoneSettingsList_t {
                 pub const m_boneSettings: usize = 0x0; // CUtlVector<JiggleBoneSettings_t>
             }
-            // Parent: CBinaryUpdateNode
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSubtractUpdateNode {
-                pub const m_footMotionTiming: usize = 0x88; // BinaryNodeChildOption
-                pub const m_bApplyToFootMotion: usize = 0x8C; // bool
-                pub const m_bApplyChannelsSeparately: usize = 0x8D; // bool
-                pub const m_bUseModelSpace: usize = 0x8E; // bool
+                pub const m_footMotionTiming: usize = 0x90; // BinaryNodeChildOption
+                pub const m_bApplyToFootMotion: usize = 0x94; // bool
+                pub const m_bApplyChannelsSeparately: usize = 0x95; // bool
+                pub const m_bUseModelSpace: usize = 0x96; // bool
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseGraphInstanceID_t {
+                pub const m_Value: usize = 0x0; // uint32
+            }
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFloatRemapNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_inputRange: usize = 0xC; // CNmFloatRemapNode::RemapRange_t
@@ -5525,34 +28537,274 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CPoseHandle {
                 pub const m_nIndex: usize = 0x0; // uint16
                 pub const m_eType: usize = 0x2; // PoseType_t
             }
-            // Parent: CNmIDValueNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFootstepEventIDNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_eventConditionRules: usize = 0xC; // CNmBitFlags
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSolveIKChainUpdateNode {
-                pub const m_targetHandles: usize = 0x68; // CUtlVector<CSolveIKTargetHandle_t>
-                pub const m_opFixedData: usize = 0x80; // SolveIKChainPoseOpFixedSettings_t
+                pub const m_targetHandles: usize = 0x70; // CUtlVector<CSolveIKTargetHandle_t>
+                pub const m_opFixedData: usize = 0x88; // SolveIKChainPoseOpFixedSettings_t
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmOrNode__CDefinition {
                 pub const m_conditionNodeIndices: usize = 0x10; // CUtlLeanVectorFixedGrowable<int16,4>
             }
@@ -5560,7 +28812,7 @@ pub mod cs2_dumper {
             // Fields count: 12
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqCmdSeqDesc {
                 pub const m_sName: usize = 0x0; // CBufferString
                 pub const m_flags: usize = 0x10; // CSeqSeqDescFlag
@@ -5575,40 +28827,550 @@ pub mod cs2_dumper {
                 pub const m_activityArray: usize = 0x60; // CUtlVector<CAnimActivity>
                 pub const m_poseSettingArray: usize = 0x78; // CUtlVector<CSeqPoseSetting>
             }
-            // Parent: CBinaryUpdateNode
+            // Parent: None
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneMaskUpdateNode {
-                pub const m_nWeightListIndex: usize = 0x88; // int32
-                pub const m_flRootMotionBlend: usize = 0x8C; // float32
-                pub const m_blendSpace: usize = 0x90; // BoneMaskBlendSpace
-                pub const m_footMotionTiming: usize = 0x94; // BinaryNodeChildOption
-                pub const m_bUseBlendScale: usize = 0x98; // bool
-                pub const m_blendValueSource: usize = 0x9C; // AnimValueSource
-                pub const m_hBlendParameter: usize = 0xA0; // CAnimParamHandle
+                pub const m_nWeightListIndex: usize = 0x90; // int32
+                pub const m_flRootMotionBlend: usize = 0x94; // float32
+                pub const m_blendSpace: usize = 0x98; // BoneMaskBlendSpace
+                pub const m_footMotionTiming: usize = 0x9C; // BinaryNodeChildOption
+                pub const m_bUseBlendScale: usize = 0xA0; // bool
+                pub const m_blendValueSource: usize = 0xA4; // AnimValueSource
+                pub const m_hBlendParameter: usize = 0xA8; // CAnimParamHandle
             }
-            // Parent: CAnimUpdateNodeBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CLeafUpdateNode {
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulse_Constant {
+                pub const m_Type: usize = 0x0; // CPulseValueFullType
+                pub const m_Value: usize = 0x18; // KeyValues3
+            }
+            // Parent: None
+            // Fields count: 49
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleFloatInput {
+                pub const m_nType: usize = 0xC; // ParticleFloatType_t
+                pub const m_nMapType: usize = 0x10; // ParticleFloatMapType_t
+                pub const m_flLiteralValue: usize = 0x14; // float32
+                pub const m_NamedValue: usize = 0x18; // CParticleNamedValueRef
+                pub const m_nControlPoint: usize = 0x58; // int32
+                pub const m_nScalarAttribute: usize = 0x5C; // ParticleAttributeIndex_t
+                pub const m_nVectorAttribute: usize = 0x60; // ParticleAttributeIndex_t
+                pub const m_nVectorComponent: usize = 0x64; // int32
+                pub const m_bReverseOrder: usize = 0x68; // bool
+                pub const m_flRandomMin: usize = 0x6C; // float32
+                pub const m_flRandomMax: usize = 0x70; // float32
+                pub const m_bHasRandomSignFlip: usize = 0x74; // bool
+                pub const m_nRandomSeed: usize = 0x78; // int32
+                pub const m_nRandomMode: usize = 0x7C; // ParticleFloatRandomMode_t
+                pub const m_strSnapshotSubset: usize = 0x88; // CUtlString
+                pub const m_flLOD0: usize = 0x90; // float32
+                pub const m_flLOD1: usize = 0x94; // float32
+                pub const m_flLOD2: usize = 0x98; // float32
+                pub const m_flLOD3: usize = 0x9C; // float32
+                pub const m_nNoiseInputVectorAttribute: usize = 0xA0; // ParticleAttributeIndex_t
+                pub const m_flNoiseOutputMin: usize = 0xA4; // float32
+                pub const m_flNoiseOutputMax: usize = 0xA8; // float32
+                pub const m_flNoiseScale: usize = 0xAC; // float32
+                pub const m_vecNoiseOffsetRate: usize = 0xB0; // Vector
+                pub const m_flNoiseOffset: usize = 0xBC; // float32
+                pub const m_nNoiseOctaves: usize = 0xC0; // int32
+                pub const m_nNoiseTurbulence: usize = 0xC4; // PFNoiseTurbulence_t
+                pub const m_nNoiseType: usize = 0xC8; // PFNoiseType_t
+                pub const m_nNoiseModifier: usize = 0xCC; // PFNoiseModifier_t
+                pub const m_flNoiseTurbulenceScale: usize = 0xD0; // float32
+                pub const m_flNoiseTurbulenceMix: usize = 0xD4; // float32
+                pub const m_flNoiseImgPreviewScale: usize = 0xD8; // float32
+                pub const m_bNoiseImgPreviewLive: usize = 0xDC; // bool
+                pub const m_flNoCameraFallback: usize = 0xE8; // float32
+                pub const m_bUseBoundsCenter: usize = 0xEC; // bool
+                pub const m_nInputMode: usize = 0xF0; // ParticleFloatInputMode_t
+                pub const m_flMultFactor: usize = 0xF4; // float32
+                pub const m_flInput0: usize = 0xF8; // float32
+                pub const m_flInput1: usize = 0xFC; // float32
+                pub const m_flOutput0: usize = 0x100; // float32
+                pub const m_flOutput1: usize = 0x104; // float32
+                pub const m_flNotchedRangeMin: usize = 0x108; // float32
+                pub const m_flNotchedRangeMax: usize = 0x10C; // float32
+                pub const m_flNotchedOutputOutside: usize = 0x110; // float32
+                pub const m_flNotchedOutputInside: usize = 0x114; // float32
+                pub const m_nRoundType: usize = 0x118; // ParticleFloatRoundType_t
+                pub const m_nBiasType: usize = 0x11C; // ParticleFloatBiasType_t
+                pub const m_flBiasParameter: usize = 0x120; // float32
+                pub const m_Curve: usize = 0x128; // CPiecewiseCurve
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SolveIKChainPoseOpFixedSettings_t {
                 pub const m_ChainsToSolveData: usize = 0x0; // CUtlVector<ChainToSolveData_t>
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmEntityAttributeFloatEvent {
+                pub const m_FloatValue: usize = 0x38; // CPiecewiseCurve
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmIDSelectorNode__CDefinition {
+                pub const m_conditionNodeIndices: usize = 0x10; // CUtlVectorFixedGrowable<int16,5>
+                pub const m_values: usize = 0x38; // CUtlVectorFixedGrowable<CGlobalSymbol,5>
+                pub const m_defaultValue: usize = 0x78; // CGlobalSymbol
             }
             // Parent: None
             // Fields count: 15
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod TwoBoneIKSettings_t {
                 pub const m_endEffectorType: usize = 0x0; // IkEndEffectorType
                 pub const m_endEffectorAttachment: usize = 0x10; // CAnimAttachment
@@ -5626,15 +29388,98 @@ pub mod cs2_dumper {
                 pub const m_bConstrainTwist: usize = 0x14D; // bool
                 pub const m_flMaxTwist: usize = 0x150; // float32
             }
-            // Parent: CNmTask
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmCachedPoseWriteTask {
             }
             // Parent: None
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimUpdateSharedData {
                 pub const m_nodes: usize = 0x10; // CUtlVector<CSmartPtr<CAnimUpdateNodeBase>>
                 pub const m_nodeIndexMap: usize = 0x28; // CUtlHashtable<CAnimNodePath,int32>
@@ -5651,7 +29496,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimAttachment {
                 pub const m_influenceRotations: usize = 0x0; // Quaternion[3]
                 pub const m_influenceOffsets: usize = 0x30; // VectorAligned[3]
@@ -5663,156 +29508,1270 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CFootTrajectories {
                 pub const m_trajectories: usize = 0x0; // CUtlVector<CFootTrajectory>
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmIDComparisonNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
                 pub const m_comparison: usize = 0xC; // CNmIDComparisonNode::Comparison_t
                 pub const m_comparisionIDs: usize = 0x10; // CUtlLeanVectorFixedGrowable<CGlobalSymbol,4>
             }
-            // Parent: CMotionGraph
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CEditableMotionGraph {
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmConstFloatNode__CDefinition {
                 pub const m_flValue: usize = 0xC; // float32
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CStringAnimTag {
             }
-            // Parent: CConcreteAnimParameter
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoolAnimParameter {
                 pub const m_bDefaultValue: usize = 0x78; // bool
             }
-            // Parent: CAnimTagBase
-            // Fields count: 6
+            // Parent: None
+            // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CRagdollAnimTag {
-                pub const m_nPoseControl: usize = 0x58; // AnimPoseControl
-                pub const m_flFrequency: usize = 0x5C; // float32
-                pub const m_flDampingRatio: usize = 0x60; // float32
-                pub const m_flDecayDuration: usize = 0x64; // float32
-                pub const m_flDecayBias: usize = 0x68; // float32
-                pub const m_bDestroy: usize = 0x6C; // bool
+                pub const m_profileName: usize = 0x58; // CGlobalSymbol
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMotionNode {
                 pub const m_name: usize = 0x18; // CUtlString
                 pub const m_id: usize = 0x20; // AnimNodeID
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmStateMachineNode__CDefinition {
                 pub const m_stateDefinitions: usize = 0x10; // CUtlLeanVectorFixedGrowable<CNmStateMachineNode::StateDefinition_t,5>
                 pub const m_nDefaultStateIndex: usize = 0x130; // int16
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBodyGroupAnimTag {
                 pub const m_nPriority: usize = 0x58; // int32
                 pub const m_bodyGroupSettings: usize = 0x60; // CUtlVector<CBodyGroupSetting>
             }
-            // Parent: CNmBlendTaskBase
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmModelSpaceBlendTask {
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmZeroPoseNode__CDefinition {
             }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 5
+            // Parent: None
+            // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmOrientationWarpNode__CDefinition {
                 pub const m_nClipReferenceNodeIdx: usize = 0xA; // int16
                 pub const m_nTargetValueNodeIdx: usize = 0xC; // int16
                 pub const m_bIsOffsetNode: usize = 0xE; // bool
                 pub const m_bIsOffsetRelativeToCharacter: usize = 0xF; // bool
-                pub const m_samplingMode: usize = 0x10; // CNmRootMotionData::SamplingMode_t
+                pub const m_bWarpTranslation: usize = 0x10; // bool
+                pub const m_samplingMode: usize = 0x11; // CNmRootMotionData::SamplingMode_t
             }
             // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyEditClassAsString
+            // ���x.
             pub mod AnimParamID {
                 pub const m_id: usize = 0x0; // uint32
             }
-            // Parent: CNmBoneMaskValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmBoneMaskNode__CDefinition {
                 pub const m_boneMaskID: usize = 0x10; // CGlobalSymbol
-            }
-            // Parent: CNmPoseNode__CDefinition
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmChildGraphNode__CDefinition {
-                pub const m_nChildGraphIdx: usize = 0xA; // int16
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            pub mod ModelAnimGraph2Ref_t {
+                pub const m_sIdentifier: usize = 0x0; // CUtlString
+                pub const m_hGraph: usize = 0x8; // CStrongHandle<InfoForResourceTypeCNmGraphDefinition>
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
             pub mod AnimationDecodeDebugDump_t {
                 pub const m_processingType: usize = 0x0; // AnimationProcessingType_t
                 pub const m_elems: usize = 0x8; // CUtlVector<AnimationDecodeDebugDumpElement_t>
             }
-            // Parent: CNmIDValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVirtualParameterIDNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
             }
@@ -5820,7 +30779,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqScaleSet {
                 pub const m_sName: usize = 0x0; // CBufferString
                 pub const m_bRootOffset: usize = 0x10; // bool
@@ -5828,26 +30787,202 @@ pub mod cs2_dumper {
                 pub const m_nLocalBoneArray: usize = 0x20; // CUtlVector<int16>
                 pub const m_flBoneScaleArray: usize = 0x38; // CUtlVector<float32>
             }
-            // Parent: CLeafUpdateNode
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeCallInfoIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CDirectionalBlendUpdateNode {
                 pub const m_hSequences: usize = 0x5C; // HSequence[8]
                 pub const m_damping: usize = 0x80; // CAnimInputDamping
-                pub const m_blendValueSource: usize = 0x90; // AnimValueSource
-                pub const m_paramIndex: usize = 0x94; // CAnimParamHandle
-                pub const m_playbackSpeed: usize = 0x98; // float32
-                pub const m_duration: usize = 0x9C; // float32
-                pub const m_bLoop: usize = 0xA0; // bool
-                pub const m_bLockBlendOnReset: usize = 0xA1; // bool
+                pub const m_blendValueSource: usize = 0x98; // AnimValueSource
+                pub const m_paramIndex: usize = 0x9C; // CAnimParamHandle
+                pub const m_playbackSpeed: usize = 0xA0; // float32
+                pub const m_duration: usize = 0xA4; // float32
+                pub const m_bLoop: usize = 0xA8; // bool
+                pub const m_bLockBlendOnReset: usize = 0xA9; // bool
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            pub mod CNmGraphDefinition__ReferencedGraphSlot_t {
+                pub const m_nNodeIdx: usize = 0x0; // int16
+                pub const m_dataSlotIdx: usize = 0x2; // int16
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod ParamSpan_t {
                 pub const m_samples: usize = 0x0; // CUtlVector<ParamSpanSample_t>
                 pub const m_hParam: usize = 0x18; // CAnimParamHandle
@@ -5855,17 +30990,179 @@ pub mod cs2_dumper {
                 pub const m_flStartCycle: usize = 0x1C; // float32
                 pub const m_flEndCycle: usize = 0x20; // float32
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFootStepTriggerUpdateNode {
-                pub const m_triggers: usize = 0x68; // CUtlVector<FootStepTrigger>
-                pub const m_flTolerance: usize = 0x84; // float32
+                pub const m_triggers: usize = 0x70; // CUtlVector<FootStepTrigger>
+                pub const m_flTolerance: usize = 0x8C; // float32
             }
             // Parent: None
             // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod IKTargetSettings_t {
                 pub const m_TargetSource: usize = 0x0; // IKTargetSource
                 pub const m_Bone: usize = 0x8; // IKBoneNameAndIndex_t
@@ -5873,31 +31170,266 @@ pub mod cs2_dumper {
                 pub const m_AnimgraphParameterNameOrientation: usize = 0x1C; // AnimParamID
                 pub const m_TargetCoordSystem: usize = 0x20; // IKTargetCoordinateSystem
             }
-            // Parent: CNmFloatValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmCurrentSyncEventIndexNode__CDefinition {
-                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
-            }
-            // Parent: CModelConfigElement
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_SetRenderColor {
                 pub const m_Color: usize = 0x48; // Color
             }
-            // Parent: CNmBlendTaskBase
+            // Parent: None
             // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmAdditiveBlendTask {
             }
-            // Parent: CNmPoseNode__CDefinition
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmAnimationPoseNode__CDefinition {
                 pub const m_nPoseTimeValueNodeIdx: usize = 0xA; // int16
                 pub const m_nDataSlotIdx: usize = 0xC; // int16
@@ -5909,50 +31441,380 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMotionSearchDB {
                 pub const m_rootNode: usize = 0x0; // CMotionSearchNode
                 pub const m_residualQuantizer: usize = 0x80; // CProductQuantizer
                 pub const m_codeIndices: usize = 0xA0; // CUtlVector<MotionDBIndex>
             }
-            // Parent: CMotionNode
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMotionNodeBlend1D {
                 pub const m_blendItems: usize = 0x28; // CUtlVector<MotionBlendItem>
                 pub const m_nParamIndex: usize = 0x40; // int32
             }
-            // Parent: CNmTargetValueNode__CDefinition
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmCurrentSyncEventNode__CDefinition {
+                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
+                pub const m_infoType: usize = 0xC; // CNmCurrentSyncEventNode::InfoType_t
+            }
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmControlParameterTargetNode__CDefinition {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SkeletonBoneBounds_t {
                 pub const m_vecCenter: usize = 0x0; // Vector
                 pub const m_vecSize: usize = 0xC; // Vector
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTwoBoneIKUpdateNode {
                 pub const m_opFixedData: usize = 0x70; // TwoBoneIKSettings_t
             }
             // Parent: None
-            // Fields count: 10
+            // Fields count: 12
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod VPhysXBodyPart_t {
                 pub const m_nFlags: usize = 0x0; // uint32
                 pub const m_flMass: usize = 0x4; // float32
@@ -5962,132 +31824,929 @@ pub mod cs2_dumper {
                 pub const m_flInertiaScale: usize = 0x84; // float32
                 pub const m_flLinearDamping: usize = 0x88; // float32
                 pub const m_flAngularDamping: usize = 0x8C; // float32
-                pub const m_bOverrideMassCenter: usize = 0x90; // bool
-                pub const m_vMassCenterOverride: usize = 0x94; // Vector
-            }
-            // Parent: CHandshakeAnimTagBase
-            // Fields count: 0
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            pub mod CTaskHandshakeAnimTag {
-            }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CFollowPathUpdateNode {
-                pub const m_flBlendOutTime: usize = 0x6C; // float32
-                pub const m_bBlockNonPathMovement: usize = 0x70; // bool
-                pub const m_bStopFeetAtGoal: usize = 0x71; // bool
-                pub const m_bScaleSpeed: usize = 0x72; // bool
-                pub const m_flScale: usize = 0x74; // float32
-                pub const m_flMinAngle: usize = 0x78; // float32
-                pub const m_flMaxAngle: usize = 0x7C; // float32
-                pub const m_flSpeedScaleBlending: usize = 0x80; // float32
-                pub const m_turnDamping: usize = 0x88; // CAnimInputDamping
-                pub const m_facingTarget: usize = 0x98; // AnimValueSource
-                pub const m_hParam: usize = 0x9C; // CAnimParamHandle
-                pub const m_flTurnToFaceOffset: usize = 0xA0; // float32
-                pub const m_bTurnToFace: usize = 0xA4; // bool
+                pub const m_flLinearDrag: usize = 0x90; // float32
+                pub const m_flAngularDrag: usize = 0x94; // float32
+                pub const m_bOverrideMassCenter: usize = 0x98; // bool
+                pub const m_vMassCenterOverride: usize = 0x9C; // Vector
             }
             // Parent: None
-            // Fields count: 13
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod AimMatrixOpFixedSettings_t {
-                pub const m_attachment: usize = 0x0; // CAnimAttachment
-                pub const m_damping: usize = 0x80; // CAnimInputDamping
-                pub const m_poseCacheHandles: usize = 0x90; // CPoseHandle[10]
-                pub const m_eBlendMode: usize = 0xB8; // AimMatrixBlendMode
-                pub const m_flMaxYawAngle: usize = 0xBC; // float32
-                pub const m_flMaxPitchAngle: usize = 0xC0; // float32
-                pub const m_nSequenceMaxFrame: usize = 0xC4; // int32
-                pub const m_nBoneMaskIndex: usize = 0xC8; // int32
-                pub const m_bTargetIsPosition: usize = 0xCC; // bool
-                pub const m_bUseBiasAndClamp: usize = 0xCD; // bool
-                pub const m_flBiasAndClampYawOffset: usize = 0xD0; // float32
-                pub const m_flBiasAndClampPitchOffset: usize = 0xD4; // float32
-                pub const m_biasAndClampBlendCurve: usize = 0xD8; // CBlendCurve
-            }
-            // Parent: CAnimComponentUpdater
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeChunkIndex_t {
+                pub const m_Value: usize = 0x0; // int32
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CTaskHandshakeAnimTag {
+            }
+            // Parent: None
+            // Fields count: 13
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CFollowPathUpdateNode {
+                pub const m_flBlendOutTime: usize = 0x74; // float32
+                pub const m_bBlockNonPathMovement: usize = 0x78; // bool
+                pub const m_bStopFeetAtGoal: usize = 0x79; // bool
+                pub const m_bScaleSpeed: usize = 0x7A; // bool
+                pub const m_flScale: usize = 0x7C; // float32
+                pub const m_flMinAngle: usize = 0x80; // float32
+                pub const m_flMaxAngle: usize = 0x84; // float32
+                pub const m_flSpeedScaleBlending: usize = 0x88; // float32
+                pub const m_turnDamping: usize = 0x90; // CAnimInputDamping
+                pub const m_facingTarget: usize = 0xA8; // AnimValueSource
+                pub const m_hParam: usize = 0xAC; // CAnimParamHandle
+                pub const m_flTurnToFaceOffset: usize = 0xB0; // float32
+                pub const m_bTurnToFace: usize = 0xB4; // bool
+            }
+            // Parent: None
+            // Fields count: 13
+            //
+            // Metadata:
+            // ���x.
+            pub mod AimMatrixOpFixedSettings_t {
+                pub const m_attachment: usize = 0x0; // CAnimAttachment
+                pub const m_damping: usize = 0x80; // CAnimInputDamping
+                pub const m_poseCacheHandles: usize = 0x98; // CPoseHandle[10]
+                pub const m_eBlendMode: usize = 0xC0; // AimMatrixBlendMode
+                pub const m_flMaxYawAngle: usize = 0xC4; // float32
+                pub const m_flMaxPitchAngle: usize = 0xC8; // float32
+                pub const m_nSequenceMaxFrame: usize = 0xCC; // int32
+                pub const m_nBoneMaskIndex: usize = 0xD0; // int32
+                pub const m_bTargetIsPosition: usize = 0xD4; // bool
+                pub const m_bUseBiasAndClamp: usize = 0xD5; // bool
+                pub const m_flBiasAndClampYawOffset: usize = 0xD8; // float32
+                pub const m_flBiasAndClampPitchOffset: usize = 0xDC; // float32
+                pub const m_biasAndClampBlendCurve: usize = 0xE0; // CBlendCurve
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CAnimScriptComponentUpdater {
                 pub const m_hScript: usize = 0x30; // AnimScriptHandle
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CRagdollUpdateNode {
-                pub const m_nWeightListIndex: usize = 0x68; // int32
-                pub const m_poseControlMethod: usize = 0x6C; // RagdollPoseControl
+                pub const m_nWeightListIndex: usize = 0x70; // int32
+                pub const m_poseControlMethod: usize = 0x74; // RagdollPoseControl
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBoneConstraintBase {
             }
             // Parent: None
-            // Fields count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmStateEventConditionNode__Condition_t {
-                pub const m_eventID: usize = 0x0; // CGlobalSymbol
-                pub const m_eventTypeCondition: usize = 0x8; // NmStateEventTypeCondition_t
-            }
-            // Parent: CPathAnimMotorUpdaterBase
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CPathAnimMotorUpdater {
             }
-            // Parent: CAnimTagBase
+            // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CMaterialAttributeAnimTag {
                 pub const m_AttributeName: usize = 0x58; // CUtlString
                 pub const m_AttributeType: usize = 0x60; // MatterialAttributeTagType_t
                 pub const m_flValue: usize = 0x64; // float32
                 pub const m_Color: usize = 0x68; // Color
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFootEventConditionNode__CDefinition {
                 pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
                 pub const m_phaseCondition: usize = 0xC; // NmFootPhaseCondition_t
                 pub const m_eventConditionRules: usize = 0x10; // CNmBitFlags
             }
-            // Parent: CNmEvent
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmFootEvent {
-                pub const m_phase: usize = 0x18; // NmFootPhase_t
+                pub const m_phase: usize = 0x19; // NmFootPhase_t
             }
             // Parent: None
             // Fields count: 8
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CPhysSurfacePropertiesAudio {
                 pub const m_reflectivity: usize = 0x0; // float32
                 pub const m_hardnessFactor: usize = 0x4; // float32
@@ -6102,7 +32761,7 @@ pub mod cs2_dumper {
             // Fields count: 7
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSeqAutoLayer {
                 pub const m_nLocalReference: usize = 0x0; // int16
                 pub const m_nLocalPose: usize = 0x2; // int16
@@ -6112,19 +32771,27 @@ pub mod cs2_dumper {
                 pub const m_tail: usize = 0x14; // float32
                 pub const m_end: usize = 0x18; // float32
             }
-            // Parent: CNmFloatValueNode__CDefinition
-            // Fields count: 1
+            // Parent: None
+            // Fields count: 9
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CNmCurrentSyncEventPercentageThroughNode__CDefinition {
-                pub const m_nSourceStateNodeIdx: usize = 0xA; // int16
+            // ���x.
+            pub mod ModelEmbeddedMesh_t {
+                pub const m_Name: usize = 0x0; // CUtlString
+                pub const m_nMeshIndex: usize = 0x10; // int32
+                pub const m_nDataBlock: usize = 0x14; // int32
+                pub const m_nMorphBlock: usize = 0x18; // int32
+                pub const m_vertexBuffers: usize = 0x20; // CUtlVector<ModelMeshBufferData_t>
+                pub const m_indexBuffers: usize = 0x38; // CUtlVector<ModelMeshBufferData_t>
+                pub const m_toolsBuffers: usize = 0x50; // CUtlVector<ModelMeshBufferData_t>
+                pub const m_nVBIBBlock: usize = 0x68; // int32
+                pub const m_nToolsVBBlock: usize = 0x6C; // int32
             }
             // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod PhysSoftbodyDesc_t {
                 pub const m_ParticleBoneHash: usize = 0x0; // CUtlVector<uint32>
                 pub const m_Particles: usize = 0x18; // CUtlVector<RnSoftbodyParticle_t>
@@ -6134,46 +32801,475 @@ pub mod cs2_dumper {
                 pub const m_ParticleBoneName: usize = 0x78; // CUtlVector<CUtlString>
             }
             // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulseRuntimeMethodArg {
+                pub const m_Name: usize = 0x0; // CKV3MemberNameWithStorage
+                pub const m_Description: usize = 0x38; // CUtlString
+                pub const m_Type: usize = 0x40; // CPulseValueFullType
+            }
+            // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimSequenceParams {
                 pub const m_flFadeInTime: usize = 0x0; // float32
                 pub const m_flFadeOutTime: usize = 0x4; // float32
             }
-            // Parent: CUnaryUpdateNode
-            // Fields count: 2
+            // Parent: None
+            // Fields count: 14
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CTargetWarpUpdateNode {
-                pub const m_hPositionParameter: usize = 0x6C; // CAnimParamHandle
-                pub const m_hFacePositionParameter: usize = 0x6E; // CAnimParamHandle
+                pub const m_eAngleMode: usize = 0x74; // TargetWarpAngleMode_t
+                pub const m_hTargetPositionParameter: usize = 0x78; // CAnimParamHandle
+                pub const m_hTargetUpVectorParameter: usize = 0x7A; // CAnimParamHandle
+                pub const m_hTargetFacePositionParameter: usize = 0x7C; // CAnimParamHandle
+                pub const m_hMoveHeadingParameter: usize = 0x7E; // CAnimParamHandle
+                pub const m_hDesiredMoveHeadingParameter: usize = 0x80; // CAnimParamHandle
+                pub const m_eCorrectionMethod: usize = 0x84; // TargetWarpCorrectionMethod
+                pub const m_eTargetWarpTimingMethod: usize = 0x88; // TargetWarpTimingMethod
+                pub const m_bTargetFacePositionIsWorldSpace: usize = 0x8C; // bool
+                pub const m_bTargetPositionIsWorldSpace: usize = 0x8D; // bool
+                pub const m_bOnlyWarpWhenTagIsFound: usize = 0x8E; // bool
+                pub const m_bWarpOrientationDuringTranslation: usize = 0x8F; // bool
+                pub const m_bWarpAroundCenter: usize = 0x90; // bool
+                pub const m_flMaxAngle: usize = 0x94; // float32
             }
-            // Parent: CNmBoolValueNode__CDefinition
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVirtualParameterBoolNode__CDefinition {
                 pub const m_nChildNodeIdx: usize = 0xA; // int16
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CFollowTargetUpdateNode {
-                pub const m_opFixedData: usize = 0x68; // FollowTargetOpFixedSettings_t
-                pub const m_hParameterPosition: usize = 0x80; // CAnimParamHandle
-                pub const m_hParameterOrientation: usize = 0x82; // CAnimParamHandle
+                pub const m_opFixedData: usize = 0x70; // FollowTargetOpFixedSettings_t
+                pub const m_hParameterPosition: usize = 0x88; // CAnimParamHandle
+                pub const m_hParameterOrientation: usize = 0x8A; // CAnimParamHandle
             }
-            // Parent: CAnimComponentUpdater
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod PulseRuntimeStateOffset_t {
+                pub const m_Value: usize = 0x0; // uint16
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CCPPScriptComponentUpdater {
                 pub const m_scriptsToRun: usize = 0x30; // CUtlVector<CGlobalSymbol>
             }
@@ -6181,7 +33277,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimData {
                 pub const m_name: usize = 0x10; // CBufferString
                 pub const m_animArray: usize = 0x20; // CUtlVector<CAnimDesc>
@@ -6191,29 +33287,218 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod IKSolverSettings_t {
                 pub const m_SolverType: usize = 0x0; // IKSolverType
                 pub const m_nNumIterations: usize = 0x4; // int32
                 pub const m_EndEffectorRotationFixUpMode: usize = 0x8; // EIKEndEffectorRotationFixUpMode
             }
-            // Parent: CAnimUpdateNodeBase
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CBinaryUpdateNode {
-                pub const m_pChild1: usize = 0x58; // CAnimUpdateNodeRef
-                pub const m_pChild2: usize = 0x68; // CAnimUpdateNodeRef
-                pub const m_timingBehavior: usize = 0x78; // BinaryNodeTiming
-                pub const m_flTimingBlend: usize = 0x7C; // float32
-                pub const m_bResetChild1: usize = 0x80; // bool
-                pub const m_bResetChild2: usize = 0x81; // bool
+                pub const m_pChild1: usize = 0x60; // CAnimUpdateNodeRef
+                pub const m_pChild2: usize = 0x70; // CAnimUpdateNodeRef
+                pub const m_timingBehavior: usize = 0x80; // BinaryNodeTiming
+                pub const m_flTimingBlend: usize = 0x84; // float32
+                pub const m_bResetChild1: usize = 0x88; // bool
+                pub const m_bResetChild2: usize = 0x89; // bool
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmParameterizedBlendNode__BlendRange_t {
                 pub const m_nInputIdx0: usize = 0x0; // int16
                 pub const m_nInputIdx1: usize = 0x2; // int16
@@ -6223,7 +33508,7 @@ pub mod cs2_dumper {
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimKeyData {
                 pub const m_name: usize = 0x0; // CBufferString
                 pub const m_boneArray: usize = 0x10; // CUtlVector<CAnimBone>
@@ -6234,6 +33519,88 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod AttachmentHandle_t {
                 pub const m_Value: usize = 0x0; // uint8
             }
@@ -6241,7 +33608,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimMorphDifference {
                 pub const m_name: usize = 0x0; // CBufferString
             }
@@ -6249,7 +33616,7 @@ pub mod cs2_dumper {
             // Fields count: 11
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod FootFixedData_t {
                 pub const m_vToeOffset: usize = 0x0; // VectorAligned
                 pub const m_vHeelOffset: usize = 0x10; // VectorAligned
@@ -6267,7 +33634,7 @@ pub mod cs2_dumper {
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CMotionGraphGroup {
                 pub const m_searchDB: usize = 0x0; // CMotionSearchDB
                 pub const m_motionGraphs: usize = 0xB8; // CUtlVector<CSmartPtr<CMotionGraph>>
@@ -6275,11 +33642,101 @@ pub mod cs2_dumper {
                 pub const m_sampleToConfig: usize = 0xE8; // CUtlVector<int32>
                 pub const m_hIsActiveScript: usize = 0x100; // AnimScriptHandle
             }
-            // Parent: CNmVectorValueNode__CDefinition
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            pub mod CPulse_InstructionDebug {
+                pub const m_nFlowNodeID: usize = 0x0; // PulseDocNodeID_t
+                pub const m_nValueNodeID: usize = 0x4; // PulseDocNodeID_t
+                pub const m_SequencePointName: usize = 0x8; // CGlobalSymbol
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmVectorNegateNode__CDefinition {
                 pub const m_nInputValueNodeIdx: usize = 0xA; // int16
             }
@@ -6287,17 +33744,104 @@ pub mod cs2_dumper {
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmSyncTrack__Event_t {
                 pub const m_ID: usize = 0x0; // CGlobalSymbol
                 pub const m_startTime: usize = 0x8; // NmPercent_t
                 pub const m_duration: usize = 0xC; // NmPercent_t
             }
             // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleCollectionRendererVecInput {
+            }
+            // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CNmTarget {
                 pub const m_transform: usize = 0x0; // CTransform
                 pub const m_boneID: usize = 0x20; // CGlobalSymbol
@@ -6306,41 +33850,369 @@ pub mod cs2_dumper {
                 pub const m_bHasOffsets: usize = 0x2A; // bool
                 pub const m_bIsSet: usize = 0x2B; // bool
             }
-            // Parent: CNmIDValueNode__CDefinition
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CNmControlParameterIDNode__CDefinition {
             }
-            // Parent: CUnaryUpdateNode
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CNmBodyGroupEvent {
+                pub const m_groupName: usize = 0x20; // CUtlString
+                pub const m_nGroupValue: usize = 0x28; // int32
+            }
+            // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CWayPointHelperUpdateNode {
-                pub const m_flStartCycle: usize = 0x6C; // float32
-                pub const m_flEndCycle: usize = 0x70; // float32
-                pub const m_bOnlyGoals: usize = 0x74; // bool
-                pub const m_bPreventOvershoot: usize = 0x75; // bool
-                pub const m_bPreventUndershoot: usize = 0x76; // bool
+                pub const m_flStartCycle: usize = 0x74; // float32
+                pub const m_flEndCycle: usize = 0x78; // float32
+                pub const m_bOnlyGoals: usize = 0x7C; // bool
+                pub const m_bPreventOvershoot: usize = 0x7D; // bool
+                pub const m_bPreventUndershoot: usize = 0x7E; // bool
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
-            // MVDataOverlayType
+            // ���x.
             pub mod CMoodVData {
                 pub const m_sModelName: usize = 0x0; // CResourceNameTyped<CWeakHandle<InfoForResourceTypeCModel>>
                 pub const m_nMoodType: usize = 0xE0; // MoodType_t
                 pub const m_animationLayers: usize = 0xE8; // CUtlVector<MoodAnimationLayer_t>
             }
-            // Parent: CModelConfigElement
-            // Fields count: 14
+            // Parent: None
+            // Fields count: 13
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CModelConfigElement_AttachedModel {
                 pub const m_InstanceName: usize = 0x48; // CUtlString
                 pub const m_EntityClass: usize = 0x50; // CUtlString
@@ -6353,7 +34225,6 @@ pub mod cs2_dumper {
                 pub const m_bBoneMergeFlex: usize = 0x8C; // bool
                 pub const m_bUserSpecifiedColor: usize = 0x8D; // bool
                 pub const m_bUserSpecifiedMaterialGroup: usize = 0x8E; // bool
-                pub const m_bAcceptParentMaterialDrivenDecals: usize = 0x8F; // bool
                 pub const m_BodygroupOnOtherModels: usize = 0x90; // CUtlString
                 pub const m_MaterialGroupOnOtherModels: usize = 0x98; // CUtlString
             }
@@ -6361,9 +34232,95 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CAnimTagManagerUpdater {
                 pub const m_tags: usize = 0x38; // CUtlVector<CSmartPtr<CAnimTagBase>>
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            pub mod CParticleProperty {
             }
         }
     }

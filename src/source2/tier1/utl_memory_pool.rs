@@ -1,6 +1,7 @@
 use memflow::prelude::v1::*;
 
 #[repr(i32)]
+#[allow(dead_code)]
 pub enum MemoryPoolGrowType {
     None = 0,
     Fast,

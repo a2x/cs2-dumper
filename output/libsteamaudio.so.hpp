@@ -1,0 +1,200 @@
+// Generated using https://github.com/a2x/cs2-dumper
+// 2026-04-11 10:20:28.886370999 UTC
+
+#pragma once
+
+#include <cstddef>
+
+namespace cs2_dumper {
+    namespace schemas {
+        // Module: libsteamaudio.so
+        // Classes count: 16
+        // Enums count: 0
+        namespace libsteamaudio_so {
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            namespace SteamAudioReverbClusteringSettings_t {
+                constexpr std::ptrdiff_t m_bEnableClustering = 0x0; // bool
+                constexpr std::ptrdiff_t m_nCubeMapResolution = 0x4; // int32
+                constexpr std::ptrdiff_t m_flDepthThreshold = 0x8; // float32
+            }
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            namespace SteamAudioCustomDataDimensionsSettings_t {
+                constexpr std::ptrdiff_t m_nAmbisonicsOrderOutsideField = 0x0; // int32
+                constexpr std::ptrdiff_t m_nAmbisonicsOrderInsideSizeField = 0x4; // int32
+                constexpr std::ptrdiff_t m_flOutsideThreshold = 0x8; // float32
+                constexpr std::ptrdiff_t m_flSizeThreshold = 0xC; // float32
+                constexpr std::ptrdiff_t m_flInsideThreshold = 0x10; // float32
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            namespace SteamAudioPathSettings_t {
+                constexpr std::ptrdiff_t m_nNumVisSamples = 0x0; // int32
+                constexpr std::ptrdiff_t m_flProbeVisRadius = 0x4; // float32
+                constexpr std::ptrdiff_t m_flProbeVisThreshold = 0x8; // float32
+                constexpr std::ptrdiff_t m_flProbePathRange = 0xC; // float32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioAmbisonicsField {
+                constexpr std::ptrdiff_t m_field = 0x0; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioBakedPathingData {
+                constexpr std::ptrdiff_t m_nBands = 0x0; // int32
+                constexpr std::ptrdiff_t m_probes = 0x8; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_movables = 0x10; // CSteamAudioMovableBakedData<CSteamAudioBakedPathingData>
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            namespace SteamAudioReverbSettings_t {
+                constexpr std::ptrdiff_t m_nNumRays = 0x0; // int32
+                constexpr std::ptrdiff_t m_nNumBounces = 0x4; // int32
+                constexpr std::ptrdiff_t m_flIRDuration = 0x8; // float32
+                constexpr std::ptrdiff_t m_nAmbisonicsOrder = 0xC; // int32
+            }
+            // Parent: None
+            // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioProbeData {
+                constexpr std::ptrdiff_t m_pProbeBatch = 0x0; // IPLProbeBatch
+            }
+            // Parent: None
+            // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            namespace SteamAudioReverbCompressionSettings_t {
+                constexpr std::ptrdiff_t m_bEnableCompression = 0x0; // bool
+                constexpr std::ptrdiff_t m_flQuality = 0x4; // float32
+            }
+            // Parent: None
+            // Fields count: 3
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioBakedMaterialsData {
+                constexpr std::ptrdiff_t m_probes = 0x0; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_vecMaterialTokens = 0x8; // CUtlVector<uint32>
+                constexpr std::ptrdiff_t m_vecMaterialWeights = 0x20; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 5
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioBakedOcclusionData {
+                constexpr std::ptrdiff_t m_settings = 0x0; // SteamAudioCustomDataOcclusionSettings_t
+                constexpr std::ptrdiff_t m_probes = 0x10; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_vecPathingRatio = 0x18; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecPathingDeviation = 0x30; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecReflectionRatio = 0x48; // CUtlVector<float32>
+            }
+            // Parent: None
+            // Fields count: 11
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioBakedReverbData {
+                constexpr std::ptrdiff_t m_nBands = 0x0; // int32
+                constexpr std::ptrdiff_t m_probes = 0x8; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_grid = 0x10; // CSteamAudioProbeGrid
+                constexpr std::ptrdiff_t m_reverbSettings = 0x68; // SteamAudioReverbSettings_t
+                constexpr std::ptrdiff_t m_reverbClusteringSettings = 0x78; // SteamAudioReverbClusteringSettings_t
+                constexpr std::ptrdiff_t m_reverbCompressionSettings = 0x84; // SteamAudioReverbCompressionSettings_t
+                constexpr std::ptrdiff_t m_clusteredProbes = 0x90; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_vecClusterForProbe = 0x98; // CUtlVector<int16>
+                constexpr std::ptrdiff_t m_compressedData = 0xB0; // CSteamAudioCompressedReverb
+                constexpr std::ptrdiff_t m_compressedClusteredData = 0x110; // CSteamAudioCompressedReverb
+                constexpr std::ptrdiff_t m_movables = 0x170; // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioProbeLineSegment {
+                constexpr std::ptrdiff_t m_vStart = 0x0; // Vector
+                constexpr std::ptrdiff_t m_vEnd = 0xC; // Vector
+                constexpr std::ptrdiff_t m_vecIntervals = 0x18; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecProbeIndices = 0x30; // CUtlVector<int32>
+            }
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            namespace SteamAudioCustomDataOcclusionSettings_t {
+                constexpr std::ptrdiff_t m_bEnablePathing = 0x0; // bool
+                constexpr std::ptrdiff_t m_bEnableReflections = 0x1; // bool
+                constexpr std::ptrdiff_t m_nReflectionRays = 0x4; // int32
+                constexpr std::ptrdiff_t m_nReflectionBounces = 0x8; // int32
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioBakedDimensionsData {
+                constexpr std::ptrdiff_t m_settings = 0x0; // SteamAudioCustomDataDimensionsSettings_t
+                constexpr std::ptrdiff_t m_probes = 0x18; // CSteamAudioProbeData
+                constexpr std::ptrdiff_t m_vecInOut = 0x20; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecSize = 0x38; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecOutsideField = 0x50; // CUtlVector<CSteamAudioAmbisonicsField>
+                constexpr std::ptrdiff_t m_vecInsideSmallSizeField = 0x68; // CUtlVector<CSteamAudioAmbisonicsField>
+                constexpr std::ptrdiff_t m_movables = 0x80; // CSteamAudioMovableBakedData<CSteamAudioBakedDimensionsData>
+            }
+            // Parent: None
+            // Fields count: 7
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioProbeGrid {
+                constexpr std::ptrdiff_t m_aabb = 0x0; // AABB_t
+                constexpr std::ptrdiff_t m_flSpacing = 0x18; // float32
+                constexpr std::ptrdiff_t m_nx = 0x1C; // int32
+                constexpr std::ptrdiff_t m_ny = 0x20; // int32
+                constexpr std::ptrdiff_t m_nz = 0x24; // int32
+                constexpr std::ptrdiff_t m_vecLineSegments = 0x28; // CUtlVector<CSteamAudioProbeLineSegment>
+                constexpr std::ptrdiff_t m_vecProbes = 0x40; // CUtlVector<Vector>
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // ���x.
+            namespace CSteamAudioCompressedReverb {
+                constexpr std::ptrdiff_t m_nChannels = 0x0; // int32
+                constexpr std::ptrdiff_t m_nBands = 0x4; // int32
+                constexpr std::ptrdiff_t m_nBins = 0x8; // int32
+                constexpr std::ptrdiff_t m_nProbes = 0xC; // int32
+                constexpr std::ptrdiff_t m_vecNumSingularValues = 0x10; // CUtlVector<int32>
+                constexpr std::ptrdiff_t m_vecDictionary = 0x28; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_vecCompressedData = 0x40; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_pCompressedData = 0x58; // IPLCompressedEnergyFields
+            }
+        }
+    }
+}

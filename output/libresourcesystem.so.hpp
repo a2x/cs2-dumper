@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-04-11 10:20:28.886370999 UTC
 
 #pragma once
 
@@ -8,72 +8,523 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: libresourcesystem.so
-        // Classes count: 59
-        // Enums count: 2
+        // Classes count: 58
+        // Enums count: 0
         namespace libresourcesystem_so {
-            // Alignment: 1
-            // Members count: 9
-            enum class FuseVariableType_t : uint8_t {
-                INVALID = 0x0,
-                BOOL = 0x1,
-                INT8 = 0x2,
-                INT16 = 0x3,
-                INT32 = 0x4,
-                UINT8 = 0x5,
-                UINT16 = 0x6,
-                UINT32 = 0x7,
-                FLOAT32 = 0x8
-            };
-            // Alignment: 1
-            // Members count: 2
-            enum class FuseVariableAccess_t : uint8_t {
-                WRITABLE = 0x0,
-                READ_ONLY = 0x1
-            };
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCNmIKRig {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCResponseRulesList {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCDotaItemDefinitionResource {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCMorphSetData {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCChoreoSceneFileData {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVSoundStackScriptList {
             }
             // Parent: None
             // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace PackedAABB_t {
                 constexpr std::ptrdiff_t m_nPackedMin = 0x0; // uint32
                 constexpr std::ptrdiff_t m_nPackedMax = 0x4; // uint32
@@ -82,21 +533,179 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVPhysXSurfacePropertiesList {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeManifestTestResource_t {
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             namespace ConstantInfo_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_nameToken = 0x8; // CUtlStringToken
@@ -104,6 +713,88 @@ namespace cs2_dumper {
             }
             // Parent: None
             // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace FuseFunctionIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint16
             }
@@ -111,28 +802,265 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCGcExportableExternalData {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeIAnimGraphModelBinding {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCJavaScriptResource {
             }
             // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             namespace CFuseSymbolTable {
                 constexpr std::ptrdiff_t m_constants = 0x0; // CUtlVector<ConstantInfo_t>
                 constexpr std::ptrdiff_t m_variables = 0x18; // CUtlVector<VariableInfo_t>
@@ -145,54 +1073,602 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCRenderMesh {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVoxelVisibility {
-            }
-            // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace TestResource_t {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCPhysAggregateData {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCNmClip {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeWorld_t {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeProceduralTestResource_t {
             }
             // Parent: None
             // Fields count: 2
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace AABB_t {
                 constexpr std::ptrdiff_t m_vMinBounds = 0x0; // Vector
                 constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // Vector
@@ -201,14 +1677,93 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCPostProcessingResource {
             }
             // Parent: None
             // Fields count: 6
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             namespace VariableInfo_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_nameToken = 0x8; // CUtlStringToken
@@ -221,11 +1776,172 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeIParticleSnapshot {
             }
             // Parent: None
             // Fields count: 4
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace FourQuaternions {
                 constexpr std::ptrdiff_t x = 0x0; // fltx4
                 constexpr std::ptrdiff_t y = 0x10; // fltx4
@@ -236,98 +1952,1211 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCPanoramaLayout {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCTypeScriptResource {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            namespace InfoForResourceTypeCChoreoSceneResource {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCNmSkeleton {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeTestResource_t {
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            namespace InfoForResourceTypeCTestResourceData {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCAnimationGroup {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVSoundEventScriptList {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVoiceContainerBase {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCPanoramaStyle {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCWorldNode {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
-            namespace InfoForResourceTypeCNmGraphVariation {
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            namespace InfoForResourceTypeCSurfaceGraph {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCCSGOEconItem {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCNmGraphDefinition {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCSmartProp {
             }
             // Parent: None
             // Fields count: 4
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             namespace CFuseProgram {
                 constexpr std::ptrdiff_t m_programBuffer = 0x0; // CUtlVector<uint8>
                 constexpr std::ptrdiff_t m_variablesRead = 0x18; // CUtlVector<FuseVariableIndex_t>
@@ -338,56 +3167,609 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCCompositeMaterialKit {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVMixListResource {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCAnimData {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeIMaterial2 {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeIVectorGraphic {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCPanoramaDynamicImages {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeIPulseGraphDef {
             }
             // Parent: None
             // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             namespace FunctionInfo_t {
                 constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
                 constexpr std::ptrdiff_t m_nameToken = 0x10; // CUtlStringToken
@@ -399,32 +3781,430 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCVDataResource {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCModel {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCDOTANovelsList {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCTextureBase {
             }
             // Parent: None
             // Fields count: 1
+            //
+            // Metadata:
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace FuseVariableIndex_t {
                 constexpr std::ptrdiff_t m_Value = 0x0; // uint16
             }
@@ -432,21 +4212,179 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeIParticleSystemDefinition {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCSequenceGroupData {
             }
             // Parent: None
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             namespace ManifestTestResource_t {
                 constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
                 constexpr std::ptrdiff_t m_child = 0x8; // CStrongHandle<InfoForResourceTypeManifestTestResource_t>
@@ -455,14 +4393,172 @@ namespace cs2_dumper {
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCEntityLump {
             }
             // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MResourceTypeForInfoType
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             namespace InfoForResourceTypeCDOTAPatchNotesList {
             }
         }

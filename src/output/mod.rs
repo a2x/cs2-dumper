@@ -11,7 +11,7 @@ use serde_json::json;
 use formatter::Formatter;
 
 use crate::analysis::*;
-use crate::error::{Error, Result};
+use crate::error::Result;
 
 mod buttons;
 mod formatter;
@@ -122,6 +122,7 @@ impl<'a> Output<'a> {
 
         self.dump_schemas()?;
         self.dump_info(process)?;
+        self.dump_runtime(process)?;
 
         Ok(())
     }
@@ -142,12 +143,48 @@ impl<'a> Output<'a> {
                     .value;
 
                 process.read::<u32>(module.base + offset).ok()
-            })
-            .ok_or(Error::Other("unable to read build number"))?;
+            });
+
+        let game_version = crate::analysis::read_game_version(process).ok();
 
         let content = serde_json::to_string_pretty(&json!({
             "timestamp": self.timestamp.to_rfc3339(),
             "build_number": build_number,
+            "game_version": game_version,
+        }))?;
+
+        fs::write(&file_path, &content)?;
+
+        Ok(())
+    }
+
+    fn dump_runtime(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<()> {
+        let file_path = self.out_dir.join("runtime.json");
+
+        let map_name = crate::analysis::read_map_name(process).ok();
+        let game_rules = crate::analysis::read_game_rules(process)
+            .ok()
+            .map(|value| value.to_umem());
+
+        let content = serde_json::to_string_pretty(&json!({
+            "timestamp": self.timestamp.to_rfc3339(),
+            "root_policy": {
+                "dwGlobalVars": {
+                    "kind": "runtime_replacement",
+                    "source": "Source2EngineToClient001 + 0x148",
+                    "value": map_name,
+                },
+                "dwGameRules": {
+                    "kind": "runtime_replacement",
+                    "source": "dwGameEntitySystem -> cs_gamerules -> C_CSGameRulesProxy::m_pGameRules",
+                    "value": game_rules,
+                },
+                "dwBuildNumber": {
+                    "kind": "optional_metadata",
+                    "source": serde_json::Value::Null,
+                    "value": serde_json::Value::Null,
+                }
+            }
         }))?;
 
         fs::write(&file_path, &content)?;

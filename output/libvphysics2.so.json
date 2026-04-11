@@ -9,7 +9,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -55,7 +55,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -73,7 +73,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -88,7 +88,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -100,7 +100,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -113,7 +113,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -130,7 +130,37 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CollisionDetailLayerInfo_t": {
+        "fields": {
+          "m_bIsQueryOnly": 16,
+          "m_bNotPickable": 56,
+          "m_sDescription": 0,
+          "m_sFriendlyName": 8,
+          "m_sParentDetailLayer": 24,
+          "m_vecSubtreeDetailLayers": 32
+        },
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CollisionDetailLayerInfo_t__Name_t": {
+        "fields": {
+          "m_nNameToken": 0,
+          "m_sNameString": 8
+        },
+        "metadata": [
+          {
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -145,7 +175,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -157,7 +187,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -171,7 +201,20 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeAntiTunnelGroupBuild_t": {
+        "fields": {
+          "m_nCollisionMask": 4,
+          "m_nVertexMapHash": 0
+        },
+        "metadata": [
+          {
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -189,7 +232,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -208,7 +251,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -224,7 +267,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -238,7 +281,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -255,7 +298,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -263,55 +306,1351 @@
       },
       "FeBuildBoxRigid_t": {
         "fields": {
+          "m_nAntitunnelGroupBits": 60,
           "m_nPriority": 52,
           "m_nVertexMapHash": 56
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "FeBoxRigid_t"
+        "parent": null
       },
       "FeBuildSDFRigid_t": {
         "fields": {
+          "m_nAntitunnelGroupBits": 84,
           "m_nPriority": 76,
           "m_nVertexMapHash": 80
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "FeSDFRigid_t"
+        "parent": null
       },
       "FeBuildSphereRigid_t": {
         "fields": {
-          "m_nPriority": 32,
-          "m_nVertexMapHash": 36
+          "m_nAntitunnelGroupBits": 32,
+          "m_nPriority": 24,
+          "m_nVertexMapHash": 28
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "FeSphereRigid_t"
+        "parent": null
       },
       "FeBuildTaperedCapsuleRigid_t": {
         "fields": {
-          "m_nPriority": 48,
-          "m_nVertexMapHash": 52
+          "m_nAntitunnelGroupBits": 48,
+          "m_nPriority": 40,
+          "m_nVertexMapHash": 44
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "FeTaperedCapsuleRigid_t"
+        "parent": null
       },
       "FeCollisionPlane_t": {
         "fields": {
@@ -322,7 +1661,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -336,7 +1675,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -349,7 +1688,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -364,7 +1703,20 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeDynKinLink_t": {
+        "fields": {
+          "m_nChild": 2,
+          "m_nParent": 0
+        },
+        "metadata": [
+          {
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -378,7 +1730,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -393,7 +1745,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -407,7 +1759,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -423,7 +1775,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -437,7 +1789,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -451,7 +1803,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -466,7 +1818,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -483,7 +1835,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -498,7 +1850,23 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeModelSelfCollisionLayer_t": {
+        "fields": {
+          "m_Name": 0,
+          "m_Nodes": 8,
+          "m_flParentReaction": 32,
+          "m_nEndIdx": 40,
+          "m_nFlags": 36
+        },
+        "metadata": [
+          {
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -517,7 +1885,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -535,7 +1903,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -550,7 +1918,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -564,7 +1932,22 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeNodeStrayBox_t": {
+        "fields": {
+          "nFlags": 12,
+          "nNode": 28,
+          "vMax": 16,
+          "vMin": 0
+        },
+        "metadata": [
+          {
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -579,7 +1962,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -592,7 +1975,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -606,7 +1989,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -622,7 +2005,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -638,7 +2021,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -660,7 +2043,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -674,7 +2057,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -692,7 +2075,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -707,7 +2090,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -721,7 +2104,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -737,7 +2120,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -753,7 +2136,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -769,7 +2152,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -782,7 +2165,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -794,7 +2177,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -810,7 +2193,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -826,7 +2209,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -841,7 +2224,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -857,7 +2240,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -872,7 +2255,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -884,7 +2267,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -900,7 +2283,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -915,7 +2298,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -932,7 +2315,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -955,7 +2338,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -968,7 +2351,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -983,7 +2366,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -998,7 +2381,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1011,7 +2394,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1019,7 +2402,328 @@
       },
       "IPhysicsPlayerController": {
         "fields": {},
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "OldFeEdge_t": {
@@ -1039,7 +2743,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1047,101 +2751,105 @@
       },
       "PhysFeModelDesc_t": {
         "fields": {
-          "m_AnimStrayRadii": 1056,
-          "m_AntiTunnelProbes": 384,
-          "m_AntiTunnelTargetNodes": 408,
-          "m_AxialEdges": 432,
-          "m_BoxRigids": 1280,
-          "m_CollisionPlanes": 552,
+          "m_AnimStrayRadii": 1128,
+          "m_AntiTunnelBytecode": 384,
+          "m_AntiTunnelProbes": 432,
+          "m_AntiTunnelTargetNodes": 456,
+          "m_AxialEdges": 504,
+          "m_BoxRigids": 1352,
+          "m_CollisionPlanes": 624,
           "m_CtrlHash": 0,
           "m_CtrlName": 24,
-          "m_CtrlOffsets": 480,
-          "m_CtrlOsOffsets": 504,
-          "m_CtrlSoftOffsets": 1128,
-          "m_DynNodeFriction": 720,
-          "m_DynNodeVertexSet": 1304,
-          "m_DynNodeWindBases": 1568,
-          "m_Effects": 1472,
-          "m_FitMatrices": 984,
-          "m_FitWeights": 1008,
-          "m_FollowNodes": 528,
-          "m_FreeNodes": 960,
-          "m_GoalDampedSpringIntegrators": 1200,
+          "m_CtrlOffsets": 552,
+          "m_CtrlOsOffsets": 576,
+          "m_CtrlSoftOffsets": 1200,
+          "m_DynKinLinks": 408,
+          "m_DynNodeFriction": 792,
+          "m_DynNodeVertexSet": 1376,
+          "m_DynNodeWindBases": 1640,
+          "m_Effects": 1544,
+          "m_FitMatrices": 1056,
+          "m_FitWeights": 1080,
+          "m_FollowNodes": 600,
+          "m_FreeNodes": 1032,
+          "m_GoalDampedSpringIntegrators": 1272,
           "m_HingeLimits": 360,
           "m_InitPose": 288,
-          "m_JiggleBones": 1152,
-          "m_KelagerBends": 1104,
-          "m_LegacyStretchForce": 672,
-          "m_LocalForce": 768,
-          "m_LocalRotation": 744,
-          "m_LockToGoal": 1520,
-          "m_LockToParent": 1496,
-          "m_MorphLayers": 1376,
-          "m_MorphSetData": 1400,
+          "m_JiggleBones": 1224,
+          "m_KelagerBends": 1176,
+          "m_LegacyStretchForce": 744,
+          "m_LocalForce": 840,
+          "m_LocalRotation": 816,
+          "m_LockToGoal": 1592,
+          "m_LockToParent": 1568,
+          "m_MorphLayers": 1448,
+          "m_MorphSetData": 1472,
           "m_NodeBases": 120,
-          "m_NodeCollisionRadii": 696,
-          "m_NodeIntegrator": 576,
-          "m_NodeInvMasses": 456,
+          "m_NodeCollisionRadii": 768,
+          "m_NodeIntegrator": 648,
+          "m_NodeInvMasses": 528,
+          "m_NodeStrayBoxes": 480,
           "m_Quads": 168,
-          "m_ReverseOffsets": 1032,
-          "m_RigidColliderPriorities": 1352,
+          "m_ReverseOffsets": 1104,
+          "m_RigidColliderPriorities": 1424,
           "m_Rods": 312,
           "m_Ropes": 96,
-          "m_SDFRigids": 1256,
-          "m_SimdAnimStrayRadii": 1080,
+          "m_SDFRigids": 1328,
+          "m_SelfCollisionLayers": 1664,
+          "m_SimdAnimStrayRadii": 1152,
           "m_SimdNodeBases": 144,
           "m_SimdQuads": 192,
           "m_SimdRods": 240,
           "m_SimdRodsAnim": 264,
-          "m_SimdSpringIntegrator": 624,
+          "m_SimdSpringIntegrator": 696,
           "m_SimdTris": 216,
-          "m_SkelParents": 1544,
-          "m_SourceElems": 1176,
-          "m_SphereRigids": 840,
-          "m_SpringIntegrator": 600,
-          "m_TaperedCapsuleRigids": 816,
-          "m_TaperedCapsuleStretches": 792,
-          "m_TreeChildren": 936,
-          "m_TreeCollisionMasks": 912,
-          "m_TreeParents": 888,
-          "m_Tris": 1224,
+          "m_SkelParents": 1616,
+          "m_SourceElems": 1248,
+          "m_SphereRigids": 912,
+          "m_SpringIntegrator": 672,
+          "m_TaperedCapsuleRigids": 888,
+          "m_TaperedCapsuleStretches": 864,
+          "m_TreeChildren": 1008,
+          "m_TreeCollisionMasks": 984,
+          "m_TreeParents": 960,
+          "m_Tris": 1296,
           "m_Twists": 336,
-          "m_VertexMapValues": 1448,
-          "m_VertexMaps": 1424,
-          "m_VertexSetNames": 1328,
-          "m_WorldCollisionNodes": 864,
-          "m_WorldCollisionParams": 648,
-          "m_flAddWorldCollisionRadius": 1644,
-          "m_flDefaultExpAirDrag": 1624,
-          "m_flDefaultExpQuadAirDrag": 1632,
-          "m_flDefaultGravityScale": 1616,
-          "m_flDefaultSurfaceStretch": 1608,
-          "m_flDefaultThreadStretch": 1612,
-          "m_flDefaultTimeDilation": 1596,
-          "m_flDefaultVelAirDrag": 1620,
-          "m_flDefaultVelQuadAirDrag": 1628,
-          "m_flDefaultVolumetricSolveAmount": 1648,
-          "m_flInternalPressure": 1592,
-          "m_flLocalDrag1": 1656,
+          "m_VertexMapValues": 1520,
+          "m_VertexMaps": 1496,
+          "m_VertexSetNames": 1400,
+          "m_WorldCollisionNodes": 936,
+          "m_WorldCollisionParams": 720,
+          "m_flAddWorldCollisionRadius": 1740,
+          "m_flDefaultExpAirDrag": 1720,
+          "m_flDefaultExpQuadAirDrag": 1728,
+          "m_flDefaultGravityScale": 1712,
+          "m_flDefaultSurfaceStretch": 1704,
+          "m_flDefaultThreadStretch": 1708,
+          "m_flDefaultTimeDilation": 1692,
+          "m_flDefaultVelAirDrag": 1716,
+          "m_flDefaultVelQuadAirDrag": 1724,
+          "m_flDefaultVolumetricSolveAmount": 1744,
+          "m_flInternalPressure": 1688,
+          "m_flLocalDrag1": 1752,
           "m_flLocalForce": 56,
           "m_flLocalRotation": 60,
-          "m_flMotionSmoothCDT": 1652,
-          "m_flQuadVelocitySmoothRate": 1640,
-          "m_flRodVelocitySmoothRate": 1636,
-          "m_flWindDrag": 1604,
-          "m_flWindage": 1600,
+          "m_flMotionSmoothCDT": 1748,
+          "m_flQuadVelocitySmoothRate": 1736,
+          "m_flRodVelocitySmoothRate": 1732,
+          "m_flWindDrag": 1700,
+          "m_flWindage": 1696,
           "m_nDynamicNodeFlags": 52,
-          "m_nExtraGoalIterations": 1254,
-          "m_nExtraIterations": 1255,
-          "m_nExtraPressureIterations": 1253,
+          "m_nExtraGoalIterations": 1326,
+          "m_nExtraIterations": 1327,
+          "m_nExtraPressureIterations": 1325,
           "m_nFirstPositionDrivenNode": 70,
           "m_nNodeBaseJiggleboneDependsCount": 86,
           "m_nNodeCount": 64,
           "m_nQuadCount1": 80,
           "m_nQuadCount2": 82,
-          "m_nQuadVelocitySmoothIterations": 1662,
-          "m_nReservedUint8": 1252,
-          "m_nRodVelocitySmoothIterations": 1660,
+          "m_nQuadVelocitySmoothIterations": 1758,
+          "m_nReservedUint8": 1324,
+          "m_nRodVelocitySmoothIterations": 1756,
           "m_nRopeCount": 88,
           "m_nRotLockStaticNodes": 68,
           "m_nSimdQuadCount1": 76,
@@ -1151,12 +2859,340 @@
           "m_nStaticNodeFlags": 48,
           "m_nStaticNodes": 66,
           "m_nTreeDepth": 84,
-          "m_nTriCount1": 1248,
-          "m_nTriCount2": 1250
+          "m_nTriCount1": 1320,
+          "m_nTriCount2": 1322
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "PhysicsParticleId_t": {
+        "fields": {
+          "m_Value": 0
+        },
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
@@ -1175,7 +3211,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1184,44 +3220,45 @@
       "RnBodyDesc_t": {
         "fields": {
           "m_LocalInertiaInv": 72,
-          "m_bBuoyancyDragEnabled": 199,
-          "m_bDragEnabled": 198,
-          "m_bEnabled": 195,
-          "m_bGravityDisabled": 200,
-          "m_bHasShadowController": 202,
-          "m_bIsContinuousEnabled": 197,
-          "m_bSleeping": 196,
-          "m_bSpeculativeEnabled": 201,
-          "m_flAngularBuoyancyDrag": 140,
-          "m_flAngularDamping": 124,
-          "m_flAngularDrag": 132,
-          "m_flBuoyancyFactor": 168,
+          "m_bDragEnabled": 202,
+          "m_bEnabled": 199,
+          "m_bHasShadowController": 217,
+          "m_bIsContinuousEnabled": 201,
+          "m_bSleeping": 200,
+          "m_bSpeculativeEnabled": 216,
+          "m_flAngularDamping": 128,
+          "m_flAngularDragScale": 136,
+          "m_flAngularFluidDragScale": 144,
+          "m_flBuoyancyScale": 172,
           "m_flGameMass": 112,
-          "m_flGravityScale": 172,
-          "m_flInertiaScaleInv": 116,
-          "m_flLinearBuoyancyDrag": 136,
-          "m_flLinearDamping": 120,
-          "m_flLinearDrag": 128,
+          "m_flGravityScale": 176,
+          "m_flInertiaScaleInv": 120,
+          "m_flLinearDamping": 124,
+          "m_flLinearDragScale": 132,
+          "m_flLinearFluidDragScale": 140,
           "m_flMassInv": 108,
-          "m_flTimeScale": 176,
-          "m_nBodyType": 180,
-          "m_nGameFlags": 188,
-          "m_nGameIndex": 184,
-          "m_nMassPriority": 194,
-          "m_nMinPositionIterations": 193,
-          "m_nMinVelocityIterations": 192,
+          "m_flMassScaleInv": 116,
+          "m_flTimeScale": 180,
+          "m_nBodyType": 184,
+          "m_nDynamicContinuousContactBehavior": 218,
+          "m_nGameFlags": 192,
+          "m_nGameIndex": 188,
+          "m_nMassPriority": 198,
+          "m_nMinPositionIterations": 197,
+          "m_nMinVelocityIterations": 196,
           "m_qOrientation": 20,
           "m_sDebugName": 0,
           "m_vAngularVelocity": 48,
-          "m_vLastAwakeForceAccum": 144,
-          "m_vLastAwakeTorqueAccum": 156,
+          "m_vGravity": 204,
+          "m_vLastAwakeForceAccum": 148,
+          "m_vLastAwakeTorqueAccum": 160,
           "m_vLinearVelocity": 36,
           "m_vLocalMassCenter": 60,
           "m_vPosition": 8
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1233,11 +3270,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "RnShapeDesc_t"
+        "parent": null
       },
       "RnCapsule_t": {
         "fields": {
@@ -1246,7 +3603,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1258,7 +3615,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1273,7 +3630,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1285,11 +3642,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "RnShapeDesc_t"
+        "parent": null
       },
       "RnHull_t": {
         "fields": {
@@ -1310,7 +3987,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1322,28 +3999,349 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "RnShapeDesc_t"
+        "parent": null
       },
       "RnMesh_t": {
         "fields": {
-          "m_Materials": 120,
+          "m_Materials": 144,
           "m_Nodes": 24,
+          "m_TriangleEdgeFlags": 120,
           "m_Triangles": 72,
           "m_Vertices": 48,
           "m_Wings": 96,
-          "m_nDebugFlags": 160,
-          "m_nFlags": 156,
+          "m_nDebugFlags": 184,
+          "m_nFlags": 180,
           "m_vMax": 12,
           "m_vMin": 0,
-          "m_vOrthographicAreas": 144
+          "m_vOrthographicAreas": 168
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1358,7 +4356,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1371,7 +4369,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1388,7 +4386,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1402,7 +4400,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1414,7 +4412,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1427,7 +4425,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1439,11 +4437,331 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "RnShapeDesc_t"
+        "parent": null
       },
       "RnTriangle_t": {
         "fields": {
@@ -1451,7 +4769,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1463,7 +4781,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1475,7 +4793,7 @@
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
             "type": "Unknown"
           }
         ],
@@ -1485,7 +4803,328 @@
         "fields": {
           "m_vPosition": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "VertexPositionNormal_t": {
@@ -1493,7 +5132,328 @@
           "m_vNormal": 12,
           "m_vPosition": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "constraint_axislimit_t": {
@@ -1503,7 +5463,328 @@
           "flMotorMaxTorque": 12,
           "flMotorTargetAngSpeed": 8
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "constraint_breakableparams_t": {
@@ -1514,7 +5795,328 @@
           "strength": 0,
           "torqueLimit": 8
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "constraint_hingeparams_t": {
@@ -1524,42 +6126,663 @@
           "worldAxisDirection": 12,
           "worldPosition": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "vphysics_save_cphysicsbody_t": {
         "fields": {
-          "m_nOldPointer": 208
+          "m_nOldPointer": 224
         },
         "metadata": [
           {
-            "name": "MGetKV3ClassDefaults",
+            "name": "���x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "Invalid",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "char",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint8",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint16",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint32",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "uint64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "float64",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "p4�x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "@��x.",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "P�k�+",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
+            "type": "Unknown"
+          },
+          {
+            "name": "",
             "type": "Unknown"
           }
         ],
-        "parent": "RnBodyDesc_t"
+        "parent": null
       }
     },
-    "enums": {
-      "JointAxis_t": {
-        "alignment": 4,
-        "members": {
-          "JOINT_AXIS_COUNT": 3,
-          "JOINT_AXIS_X": 0,
-          "JOINT_AXIS_Y": 1,
-          "JOINT_AXIS_Z": 2
-        },
-        "type": "uint32"
-      },
-      "JointMotion_t": {
-        "alignment": 4,
-        "members": {
-          "JOINT_MOTION_COUNT": 2,
-          "JOINT_MOTION_FREE": 0,
-          "JOINT_MOTION_LOCKED": 1
-        },
-        "type": "uint32"
-      }
-    }
+    "enums": {}
   }
 }

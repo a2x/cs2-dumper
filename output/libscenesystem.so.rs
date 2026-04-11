@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-04-11 10:20:28.886370999 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,22 +7,13 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: libscenesystem.so
         // Classes count: 9
-        // Enums count: 1
+        // Enums count: 0
         pub mod libscenesystem_so {
-            // Alignment: 1
-            // Members count: 4
-            #[repr(u8)]
-            pub enum DisableShadows_t {
-                kDisableShadows_None = 0x0,
-                kDisableShadows_All = 0x1,
-                kDisableShadows_Baked = 0x2,
-                kDisableShadows_Realtime = 0x3
-            }
             // Parent: None
             // Fields count: 10
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSSDSMsg_ViewTarget {
                 pub const m_Name: usize = 0x0; // CUtlString
                 pub const m_TextureId: usize = 0x8; // uint64
@@ -39,7 +30,7 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod SceneViewId_t {
                 pub const m_nViewId: usize = 0x0; // uint64
                 pub const m_nFrameCount: usize = 0x8; // uint64
@@ -48,43 +39,202 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSSDSEndFrameViewInfo {
                 pub const m_nViewId: usize = 0x0; // uint64
                 pub const m_ViewName: usize = 0x8; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSSDSMsg_PostLayer {
             }
             // Parent: None
-            // Fields count: 6
+            // Fields count: 5
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSSDSMsg_LayerBase {
                 pub const m_viewId: usize = 0x0; // SceneViewId_t
                 pub const m_ViewName: usize = 0x10; // CUtlString
-                pub const m_nLayerIndex: usize = 0x18; // int32
-                pub const m_nLayerId: usize = 0x20; // uint64
-                pub const m_LayerName: usize = 0x28; // CUtlString
-                pub const m_displayText: usize = 0x30; // CUtlString
+                pub const m_nLayerId: usize = 0x18; // uint64
+                pub const m_LayerName: usize = 0x20; // CUtlString
+                pub const m_displayText: usize = 0x28; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
+            // 
+            // Invalid
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // char
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint8
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint16
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint32
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // uint64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // float64
+            // 
+            // p4�x.
+            // @��x.
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // P�k�+
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
             pub mod CSSDSMsg_PreLayer {
             }
             // Parent: None
             // Fields count: 3
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSSDSMsg_ViewTargetList {
                 pub const m_viewId: usize = 0x0; // SceneViewId_t
                 pub const m_ViewName: usize = 0x10; // CUtlString
@@ -94,7 +244,7 @@ pub mod cs2_dumper {
             // Fields count: 2
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSSDSMsg_ViewRender {
                 pub const m_viewId: usize = 0x0; // SceneViewId_t
                 pub const m_ViewName: usize = 0x10; // CUtlString
@@ -103,7 +253,7 @@ pub mod cs2_dumper {
             // Fields count: 1
             //
             // Metadata:
-            // MGetKV3ClassDefaults
+            // ���x.
             pub mod CSSDSMsg_EndFrame {
                 pub const m_Views: usize = 0x0; // CUtlVector<CSSDSEndFrameViewInfo>
             }

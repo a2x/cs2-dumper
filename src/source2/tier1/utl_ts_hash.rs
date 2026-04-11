@@ -2,7 +2,7 @@ use memflow::prelude::v1::*;
 
 use super::UtlMemoryPoolBase;
 
-use crate::error::Result;
+use crate::error::{Error, Result};
 use crate::mem::PointerExt;
 
 #[repr(C)]
@@ -44,12 +44,15 @@ where
     D: Pod + PointerExt,
     K: Pod,
 {
+    const MAX_REASONABLE_COUNT: usize = 1 << 20;
+
     #[inline]
     pub fn blocks_alloc(&self) -> i32 {
         self.entry_mem.blocks_alloc
     }
 
     #[inline]
+    #[allow(dead_code)]
     pub fn block_size(&self) -> i32 {
         self.entry_mem.block_size
     }
@@ -60,8 +63,14 @@ where
     }
 
     pub fn elements(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<D>> {
-        let blocks_alloc = self.blocks_alloc() as usize;
-        let peak_alloc = self.peak_count() as usize;
+        let blocks_alloc = usize::try_from(self.blocks_alloc())
+            .map_err(|_| Error::Other("negative UtlTsHash::blocks_alloc"))?;
+        let peak_alloc = usize::try_from(self.peak_count())
+            .map_err(|_| Error::Other("negative UtlTsHash::peak_alloc"))?;
+
+        if blocks_alloc > Self::MAX_REASONABLE_COUNT || peak_alloc > Self::MAX_REASONABLE_COUNT {
+            return Err(Error::Other("unreasonable UtlTsHash allocation counters"));
+        }
 
         let mut allocated_list = Vec::with_capacity(peak_alloc);
         let mut unallocated_list = Vec::with_capacity(blocks_alloc);

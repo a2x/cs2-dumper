@@ -1,114 +1,28 @@
 {
   "libclient.so": [
     {
-      "name": "dwCSGOInput",
-      "value": 60467776
-    },
-    {
-      "name": "dwEntityList",
-      "value": 58638592
-    },
-    {
       "name": "dwGameEntitySystem",
-      "value": 61883000
-    },
-    {
-      "name": "dwGameEntitySystem_highestEntityIndex",
-      "value": 8464
-    },
-    {
-      "name": "dwGlowManager",
-      "value": 60400880
-    },
-    {
-      "name": "dwLocalPlayerController",
-      "value": 60294616
-    },
-    {
-      "name": "dwLocalPlayerPawn",
-      "value": 60425128
-    },
-    {
-      "name": "dwPlantedC4",
-      "value": 60450328
+      "value": 74659920
     },
     {
       "name": "dwPrediction",
-      "value": 60424800
-    },
-    {
-      "name": "dwSensitivity",
-      "value": 60418088
-    },
-    {
-      "name": "dwSensitivity_sensitivity",
-      "value": 64
-    },
-    {
-      "name": "dwViewAngles",
-      "value": 60489320
+      "value": 73062080
     },
     {
       "name": "dwViewRender",
-      "value": 60427792
+      "value": 73068432
     }
   ],
   "libengine2.so": [
     {
-      "name": "dwBuildNumber",
-      "value": 8055348
-    },
-    {
       "name": "dwNetworkGameClient",
-      "value": 8057832
-    },
-    {
-      "name": "dwNetworkGameClient_clientTickCount",
-      "value": 904
-    },
-    {
-      "name": "dwNetworkGameClient_isBackgroundMap",
-      "value": 2626679
-    },
-    {
-      "name": "dwNetworkGameClient_localPlayer",
-      "value": 264
-    },
-    {
-      "name": "dwNetworkGameClient_maxClients",
-      "value": 600
-    },
-    {
-      "name": "dwNetworkGameClient_serverTickCount",
-      "value": 908
-    },
-    {
-      "name": "dwNetworkGameClient_signOnState",
-      "value": 584
-    },
-    {
-      "name": "dwWindowHeight",
-      "value": 8096260
-    },
-    {
-      "name": "dwWindowWidth",
-      "value": 8096256
+      "value": 9923776
     }
   ],
   "libinputsystem.so": [
     {
       "name": "dwInputSystem",
-      "value": 262560
-    }
-  ],
-  "libmatchmaking.so": [
-    {
-      "name": "dwGameTypes",
-      "value": 3363008
-    },
-    {
-      "name": "dwGameTypes_mapName",
-      "value": 3363296
+      "value": 519264
     }
   ]
 }

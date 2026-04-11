@@ -14,6 +14,9 @@ pub enum Error {
     Memflow(#[from] memflow::error::Error),
 
     #[error(transparent)]
+    Procfs(#[from] procfs::ProcError),
+
+    #[error(transparent)]
     Serde(#[from] serde_json::Error),
 
     #[error("unable to parse signature")]

@@ -1,16 +1,26 @@
 pub use buttons::*;
+pub use camera::*;
+pub use entities::*;
 pub use interfaces::*;
 pub use offsets::*;
+pub use roots::*;
 pub use schemas::*;
+pub use state::*;
+pub use version::*;
 
 use memflow::prelude::v1::*;
 
 use crate::error::Result;
 
 mod buttons;
+mod camera;
+mod entities;
 mod interfaces;
 mod offsets;
+mod roots;
 mod schemas;
+mod state;
+mod version;
 
 pub struct AnalysisResult {
     pub buttons: Vec<Button>,

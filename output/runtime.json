@@ -1,0 +1,20 @@
+{
+  "root_policy": {
+    "dwBuildNumber": {
+      "kind": "optional_metadata",
+      "source": null,
+      "value": null
+    },
+    "dwGameRules": {
+      "kind": "runtime_replacement",
+      "source": "dwGameEntitySystem -> cs_gamerules -> C_CSGameRulesProxy::m_pGameRules",
+      "value": 139824822147840
+    },
+    "dwGlobalVars": {
+      "kind": "runtime_replacement",
+      "source": "Source2EngineToClient001 + 0x148",
+      "value": "de_dust2"
+    }
+  },
+  "timestamp": "2026-04-11T10:20:28.886370999+00:00"
+}

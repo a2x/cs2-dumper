@@ -1,4 +1,13 @@
 {
-  "build_number": 14064,
-  "timestamp": "2025-01-29T12:23:34.043004291+00:00"
+  "build_number": null,
+  "game_version": {
+    "client_version": "2000777",
+    "patch_version": "1.41.4.1",
+    "server_version": "2000777",
+    "source_revision": "10575829",
+    "steam_build_id": "22627914",
+    "version_date": "Apr 02 2026",
+    "version_time": "15:07:02"
+  },
+  "timestamp": "2026-04-11T10:20:28.886370999+00:00"
 }
