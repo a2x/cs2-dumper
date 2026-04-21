@@ -77,17 +77,18 @@
       },
       "CSteamAudioBakedReverbData": {
         "fields": {
-          "m_clusteredProbes": 144,
-          "m_compressedClusteredData": 272,
-          "m_compressedData": 176,
-          "m_grid": 16,
-          "m_movables": 368,
+          "m_clusteredProbes": 160,
+          "m_compressedClusteredData": 288,
+          "m_compressedData": 192,
+          "m_grid": 32,
+          "m_movables": 384,
           "m_nBands": 0,
-          "m_probes": 8,
-          "m_reverbClusteringSettings": 120,
-          "m_reverbCompressionSettings": 132,
-          "m_reverbSettings": 104,
-          "m_vecClusterForProbe": 152
+          "m_probes": 24,
+          "m_reverbClusteringSettings": 140,
+          "m_reverbCompressionSettings": 152,
+          "m_reverbSettings": 120,
+          "m_scene": 8,
+          "m_vecClusterForProbe": 168
         },
         "metadata": [
           {
@@ -152,6 +153,19 @@
           "m_vStart": 0,
           "m_vecIntervals": 24,
           "m_vecProbeIndices": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CSteamAudioSceneData": {
+        "fields": {
+          "m_pScene": 0,
+          "m_pStaticMesh": 8
         },
         "metadata": [
           {
@@ -236,6 +250,7 @@
       },
       "SteamAudioReverbSettings_t": {
         "fields": {
+          "m_bExportScene": 16,
           "m_flIRDuration": 8,
           "m_nAmbisonicsOrder": 12,
           "m_nNumBounces": 4,

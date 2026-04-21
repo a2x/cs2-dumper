@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,8 +7,20 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: scenesystem.dll
         // Class count: 9
-        // Enum count: 4
+        // Enum count: 5
         pub mod scenesystem_dll {
+            // Alignment: 4
+            // Member count: 7
+            #[repr(u32)]
+            pub enum ESceneViewDebugOverlaysListenerDataType_t {
+                k_ESceneViewDebugOverlaysListenerDataType_Unknown = 0x0,
+                k_ESceneViewDebugOverlaysListenerDataType_Sphere = 0x1,
+                k_ESceneViewDebugOverlaysListenerDataType_Capsule = 0x2,
+                k_ESceneViewDebugOverlaysListenerDataType_BoxAngles = 0x3,
+                k_ESceneViewDebugOverlaysListenerDataType_Line = 0x4,
+                k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles = 0x5,
+                k_ESceneViewDebugOverlaysListenerDataType_Text3D = 0x6
+            }
             // Alignment: 4
             // Member count: 4
             #[repr(u32)]
@@ -19,13 +31,14 @@ pub mod cs2_dumper {
                 SILHOUETTE_LPV = 0x4
             }
             // Alignment: 1
-            // Member count: 4
+            // Member count: 5
             #[repr(u8)]
             pub enum DisableShadows_t {
                 kDisableShadows_None = 0x0,
                 kDisableShadows_All = 0x1,
                 kDisableShadows_Baked = 0x2,
-                kDisableShadows_Realtime = 0x3
+                kDisableShadows_Realtime = 0x3,
+                kDisableShadows_ReallyNone = 0x4
             }
             // Alignment: 1
             // Member count: 6

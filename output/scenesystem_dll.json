@@ -143,6 +143,7 @@
           "kDisableShadows_All": 1,
           "kDisableShadows_Baked": 2,
           "kDisableShadows_None": 0,
+          "kDisableShadows_ReallyNone": 4,
           "kDisableShadows_Realtime": 3
         },
         "type": "uint8"
@@ -156,6 +157,19 @@
           "SCENEOBJECT_VIS_NONE": 0,
           "SCENEOBJECT_VIS_OBJECT": 1,
           "SCENEOBJECT_VIS_TEXTURE_SIZE": 3
+        },
+        "type": "uint32"
+      },
+      "ESceneViewDebugOverlaysListenerDataType_t": {
+        "alignment": 4,
+        "members": {
+          "k_ESceneViewDebugOverlaysListenerDataType_BoxAngles": 3,
+          "k_ESceneViewDebugOverlaysListenerDataType_Capsule": 2,
+          "k_ESceneViewDebugOverlaysListenerDataType_Line": 4,
+          "k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles": 5,
+          "k_ESceneViewDebugOverlaysListenerDataType_Sphere": 1,
+          "k_ESceneViewDebugOverlaysListenerDataType_Text3D": 6,
+          "k_ESceneViewDebugOverlaysListenerDataType_Unknown": 0
         },
         "type": "uint32"
       },

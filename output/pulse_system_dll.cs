@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: pulse_system.dll
-    // Class count: 97
+    // Class count: 99
     // Enum count: 5
     public static class PulseSystemDll {
         // Alignment: 4
@@ -88,8 +88,8 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 2
         public static class CTestDomainDerived_Cursor {
-            public const nint m_nCursorValueA = 0xD0; // int32
-            public const nint m_nCursorValueB = 0xD4; // int32
+            public const nint m_nCursorValueA = 0xD8; // int32
+            public const nint m_nCursorValueB = 0xDC; // int32
         }
         // Parent: None
         // Field count: 2
@@ -118,6 +118,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         // MPulseEditorHeaderIcon
         // MPropertyFriendlyName
+        // MPropertyDescription
         public static class CPulseCell_WaitForObservable {
             public const nint m_Condition = 0x48; // PulseObservableBoolExpression_t
             public const nint m_OnTrue = 0xC0; // CPulse_ResumePoint
@@ -281,10 +282,10 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 4
         public static class CPulseTurtleGraphicsCursor {
-            public const nint m_Color = 0xD0; // Color
-            public const nint m_vPos = 0xD4; // Vector2D
-            public const nint m_flHeadingDeg = 0xDC; // float32
-            public const nint m_bPenUp = 0xE0; // bool
+            public const nint m_Color = 0xD8; // Color
+            public const nint m_vPos = 0xDC; // Vector2D
+            public const nint m_flHeadingDeg = 0xE4; // float32
+            public const nint m_bPenUp = 0xE8; // bool
         }
         // Parent: None
         // Field count: 2
@@ -380,6 +381,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_AsyncChild2 = 0xD8; // SignatureOutflow_Continue
             public const nint m_YieldResume1 = 0x120; // SignatureOutflow_Resume
             public const nint m_YieldResume2 = 0x168; // SignatureOutflow_Resume
+        }
+        // Parent: None
+        // Field count: 0
+        public static class TestComponent_tAPI {
         }
         // Parent: None
         // Field count: 1
@@ -658,7 +663,7 @@ namespace CS2Dumper.Schemas {
         // MPulseEditorCanvasItemSpecKV3
         public static class CPulseCell_BooleanSwitchState {
             public const nint m_Condition = 0x48; // PulseObservableBoolExpression_t
-            public const nint m_SubGraph = 0xC0; // CPulse_OutflowConnection
+            public const nint m_Always = 0xC0; // CPulse_OutflowConnection
             public const nint m_WhenTrue = 0x108; // CPulse_OutflowConnection
             public const nint m_WhenFalse = 0x150; // CPulse_OutflowConnection
         }
@@ -814,10 +819,10 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CPulseCell_Step_CallExternalMethod {
             public const nint m_MethodName = 0x48; // PulseSymbol_t
-            public const nint m_GameBlackboard = 0x58; // PulseSymbol_t
-            public const nint m_ExpectedArgs = 0x68; // CUtlLeanVector<CPulseRuntimeMethodArg>
-            public const nint m_nAsyncCallMode = 0x78; // PulseMethodCallMode_t
-            public const nint m_OnFinished = 0x80; // CPulse_ResumePoint
+            public const nint m_nBlackboardIndex = 0x58; // PulseRuntimeBlackboardReferenceIndex_t
+            public const nint m_ExpectedArgs = 0x60; // CUtlLeanVector<CPulseRuntimeMethodArg>
+            public const nint m_nAsyncCallMode = 0x70; // PulseMethodCallMode_t
+            public const nint m_OnFinished = 0x78; // CPulse_ResumePoint
         }
         // Parent: None
         // Field count: 3
@@ -866,6 +871,11 @@ namespace CS2Dumper.Schemas {
         // Parent: None
         // Field count: 0
         public static class CPulseExecCursor {
+        }
+        // Parent: None
+        // Field count: 1
+        public static class TestComponent_t {
+            public const nint m_ComponentData = 0x8; // CUtlString
         }
     }
 }

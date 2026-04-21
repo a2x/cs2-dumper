@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: pulse_system.dll
-        // Class count: 97
+        // Class count: 99
         // Enum count: 5
         pub mod pulse_system_dll {
             // Alignment: 4
@@ -96,8 +96,8 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 2
             pub mod CTestDomainDerived_Cursor {
-                pub const m_nCursorValueA: usize = 0xD0; // int32
-                pub const m_nCursorValueB: usize = 0xD4; // int32
+                pub const m_nCursorValueA: usize = 0xD8; // int32
+                pub const m_nCursorValueB: usize = 0xDC; // int32
             }
             // Parent: None
             // Field count: 2
@@ -126,6 +126,7 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             // MPulseEditorHeaderIcon
             // MPropertyFriendlyName
+            // MPropertyDescription
             pub mod CPulseCell_WaitForObservable {
                 pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
                 pub const m_OnTrue: usize = 0xC0; // CPulse_ResumePoint
@@ -289,10 +290,10 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 4
             pub mod CPulseTurtleGraphicsCursor {
-                pub const m_Color: usize = 0xD0; // Color
-                pub const m_vPos: usize = 0xD4; // Vector2D
-                pub const m_flHeadingDeg: usize = 0xDC; // float32
-                pub const m_bPenUp: usize = 0xE0; // bool
+                pub const m_Color: usize = 0xD8; // Color
+                pub const m_vPos: usize = 0xDC; // Vector2D
+                pub const m_flHeadingDeg: usize = 0xE4; // float32
+                pub const m_bPenUp: usize = 0xE8; // bool
             }
             // Parent: None
             // Field count: 2
@@ -388,6 +389,10 @@ pub mod cs2_dumper {
                 pub const m_AsyncChild2: usize = 0xD8; // SignatureOutflow_Continue
                 pub const m_YieldResume1: usize = 0x120; // SignatureOutflow_Resume
                 pub const m_YieldResume2: usize = 0x168; // SignatureOutflow_Resume
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod TestComponent_tAPI {
             }
             // Parent: None
             // Field count: 1
@@ -666,7 +671,7 @@ pub mod cs2_dumper {
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_BooleanSwitchState {
                 pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
-                pub const m_SubGraph: usize = 0xC0; // CPulse_OutflowConnection
+                pub const m_Always: usize = 0xC0; // CPulse_OutflowConnection
                 pub const m_WhenTrue: usize = 0x108; // CPulse_OutflowConnection
                 pub const m_WhenFalse: usize = 0x150; // CPulse_OutflowConnection
             }
@@ -822,10 +827,10 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CPulseCell_Step_CallExternalMethod {
                 pub const m_MethodName: usize = 0x48; // PulseSymbol_t
-                pub const m_GameBlackboard: usize = 0x58; // PulseSymbol_t
-                pub const m_ExpectedArgs: usize = 0x68; // CUtlLeanVector<CPulseRuntimeMethodArg>
-                pub const m_nAsyncCallMode: usize = 0x78; // PulseMethodCallMode_t
-                pub const m_OnFinished: usize = 0x80; // CPulse_ResumePoint
+                pub const m_nBlackboardIndex: usize = 0x58; // PulseRuntimeBlackboardReferenceIndex_t
+                pub const m_ExpectedArgs: usize = 0x60; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_nAsyncCallMode: usize = 0x70; // PulseMethodCallMode_t
+                pub const m_OnFinished: usize = 0x78; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 3
@@ -874,6 +879,11 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 0
             pub mod CPulseExecCursor {
+            }
+            // Parent: None
+            // Field count: 1
+            pub mod TestComponent_t {
+                pub const m_ComponentData: usize = 0x8; // CUtlString
             }
         }
     }

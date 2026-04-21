@@ -106,6 +106,13 @@
         ],
         "parent": null
       },
+      "CGenericShapeProxy": {
+        "fields": {
+          "m_verts": 48
+        },
+        "metadata": [],
+        "parent": null
+      },
       "CRegionSVM": {
         "fields": {
           "m_Nodes": 24,
@@ -1112,7 +1119,45 @@
         ],
         "parent": null
       },
+      "IPhysAggregateInstance": {
+        "fields": {
+          "m_bIsAxisAligned": 16,
+          "m_pSkeleton": 8
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "IPhysicsBody": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "IPhysicsBodyList": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "IPhysicsJoint": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "IPhysicsMotionController": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "IPhysicsParticleRope": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "IPhysicsPlayerController": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "IPhysicsRagdollControl": {
         "fields": {},
         "metadata": [],
         "parent": null
@@ -1646,6 +1691,27 @@
           }
         ],
         "parent": null
+      },
+      "vphysics_save_ragdoll_control_t": {
+        "fields": {
+          "m_bIgnoreTeleport": 14,
+          "m_bRequiresDynamicBodies": 13,
+          "m_bSolidCollisionAtZeroWeight": 12,
+          "m_flMaxSpringFrequency": 4,
+          "m_flMaxStretch": 8,
+          "m_flMinSpringFrequency": 0,
+          "m_nBodyCount": 52,
+          "m_vAngularVelocityAccumulator": 28,
+          "m_vForceAccumulator": 40,
+          "m_vLinearVelocityAccumulator": 16
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
       }
     },
     "enums": {
@@ -1674,6 +1740,31 @@
           "JOINT_MOTION_COUNT": 2,
           "JOINT_MOTION_FREE": 0,
           "JOINT_MOTION_LOCKED": 1
+        },
+        "type": "uint32"
+      },
+      "PhysGenericShapeType_t": {
+        "alignment": 1,
+        "members": {
+          "GENERIC_SHAPE_AABB": 2,
+          "GENERIC_SHAPE_CAPSULE": 3,
+          "GENERIC_SHAPE_HULL": 4,
+          "GENERIC_SHAPE_POINT": 0,
+          "GENERIC_SHAPE_SPHERE": 1
+        },
+        "type": "uint8"
+      },
+      "PhysInterfaceId_t": {
+        "alignment": 4,
+        "members": {
+          "PIID_IPHYSAGGREGATE": 2,
+          "PIID_IPHYSICSBODY": 1,
+          "PIID_IPHYSICSJOINT": 3,
+          "PIID_IPHYSICSMOTIONCONTROLLER": 4,
+          "PIID_IPHYSICSPARTICLEROPE": 5,
+          "PIID_IPHYSICSRAGDOLLCONTROL": 6,
+          "PIID_NUM_TYPES": 7,
+          "PIID_UNKNOWN": 0
         },
         "type": "uint32"
       }

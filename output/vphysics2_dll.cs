@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: vphysics2.dll
-    // Class count: 101
-    // Enum count: 3
+    // Class count: 110
+    // Enum count: 5
     public static class Vphysics2Dll {
         // Alignment: 4
         // Member count: 3
@@ -27,6 +27,27 @@ namespace CS2Dumper.Schemas {
             DYNAMIC_CONTINUOUS_ALLOW_IF_REQUESTED_BY_OTHER_BODY = 0x0,
             DYNAMIC_CONTINUOUS_ALWAYS = 0x1,
             DYNAMIC_CONTINUOUS_NEVER = 0x2
+        }
+        // Alignment: 4
+        // Member count: 8
+        public enum PhysInterfaceId_t : uint {
+            PIID_UNKNOWN = 0x0,
+            PIID_IPHYSICSBODY = 0x1,
+            PIID_IPHYSAGGREGATE = 0x2,
+            PIID_IPHYSICSJOINT = 0x3,
+            PIID_IPHYSICSMOTIONCONTROLLER = 0x4,
+            PIID_IPHYSICSPARTICLEROPE = 0x5,
+            PIID_IPHYSICSRAGDOLLCONTROL = 0x6,
+            PIID_NUM_TYPES = 0x7
+        }
+        // Alignment: 1
+        // Member count: 5
+        public enum PhysGenericShapeType_t : byte {
+            GENERIC_SHAPE_POINT = 0x0,
+            GENERIC_SHAPE_SPHERE = 0x1,
+            GENERIC_SHAPE_AABB = 0x2,
+            GENERIC_SHAPE_CAPSULE = 0x3,
+            GENERIC_SHAPE_HULL = 0x4
         }
         // Parent: None
         // Field count: 1
@@ -233,6 +254,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_jiggleBone = 0x8; // CFeJiggleBone
         }
         // Parent: None
+        // Field count: 2
+        public static class IPhysAggregateInstance {
+            public const nint m_pSkeleton = 0x8; // void*
+            public const nint m_bIsAxisAligned = 0x10; // bool
+        }
+        // Parent: None
         // Field count: 3
         //
         // Metadata:
@@ -284,12 +311,20 @@ namespace CS2Dumper.Schemas {
             public const nint f4RelaxationFactor = 0x40; // fltx4
         }
         // Parent: None
+        // Field count: 0
+        public static class IPhysicsParticleRope {
+        }
+        // Parent: None
         // Field count: 4
         public static class constraint_hingeparams_t {
             public const nint worldPosition = 0x0; // Vector
             public const nint worldAxisDirection = 0xC; // Vector
             public const nint hingeAxis = 0x18; // constraint_axislimit_t
             public const nint constraint = 0x28; // constraint_breakableparams_t
+        }
+        // Parent: None
+        // Field count: 0
+        public static class IPhysicsBodyList {
         }
         // Parent: None
         // Field count: 3
@@ -470,6 +505,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_vNormal = 0xC; // Vector
         }
         // Parent: None
+        // Field count: 0
+        public static class IPhysicsRagdollControl {
+        }
+        // Parent: None
         // Field count: 3
         //
         // Metadata:
@@ -559,6 +598,10 @@ namespace CS2Dumper.Schemas {
             public const nint nNode = 0x0; // uint16[2]
             public const nint flMaxDist = 0x4; // float32
             public const nint flRelaxationFactor = 0x8; // float32
+        }
+        // Parent: None
+        // Field count: 0
+        public static class IPhysicsJoint {
         }
         // Parent: None
         // Field count: 3
@@ -679,6 +722,11 @@ namespace CS2Dumper.Schemas {
             public const nint flGroundFriction = 0x4; // float32
             public const nint nListBegin = 0x8; // uint16
             public const nint nListEnd = 0xA; // uint16
+        }
+        // Parent: None
+        // Field count: 1
+        public static class CGenericShapeProxy {
+            public const nint m_verts = 0x30; // CUtlLeanVectorFixedGrowable<Vector,8>
         }
         // Parent: None
         // Field count: 4
@@ -849,6 +897,23 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMaxFraction = 0x1C; // float32
             public const nint m_flScale = 0x20; // float32
             public const nint m_pHull = 0x28; // RnHull_t*
+        }
+        // Parent: None
+        // Field count: 10
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class vphysics_save_ragdoll_control_t {
+            public const nint m_flMinSpringFrequency = 0x0; // float32
+            public const nint m_flMaxSpringFrequency = 0x4; // float32
+            public const nint m_flMaxStretch = 0x8; // float32
+            public const nint m_bSolidCollisionAtZeroWeight = 0xC; // bool
+            public const nint m_bRequiresDynamicBodies = 0xD; // bool
+            public const nint m_bIgnoreTeleport = 0xE; // bool
+            public const nint m_vLinearVelocityAccumulator = 0x10; // Vector
+            public const nint m_vAngularVelocityAccumulator = 0x1C; // RotationVector
+            public const nint m_vForceAccumulator = 0x28; // Vector
+            public const nint m_nBodyCount = 0x34; // int32
         }
         // Parent: None
         // Field count: 5
@@ -1040,6 +1105,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_nEdge = 0x0; // uint8
         }
         // Parent: None
+        // Field count: 0
+        public static class IPhysicsMotionController {
+        }
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
@@ -1180,6 +1249,10 @@ namespace CS2Dumper.Schemas {
             public const nint m_nPriority = 0x30; // int32
             public const nint m_nVertexMapHash = 0x34; // uint32
             public const nint m_nAntitunnelGroupBits = 0x38; // uint32
+        }
+        // Parent: None
+        // Field count: 0
+        public static class IPhysicsBody {
         }
         // Parent: None
         // Field count: 2

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -17,7 +17,7 @@ pub mod cs2_dumper {
                 RTPROXY_INSTANCE_UNIQUE_MESH = 0x1
             }
             // Alignment: 4
-            // Member count: 15
+            // Member count: 16
             #[repr(u32)]
             pub enum ObjectTypeFlags_t {
                 OBJECT_TYPE_NONE = 0x0,
@@ -26,7 +26,6 @@ pub mod cs2_dumper {
                 OBJECT_TYPE_NO_SHADOWS = 0x20,
                 OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
                 OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
-                OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
                 OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
                 OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
                 OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
@@ -34,7 +33,9 @@ pub mod cs2_dumper {
                 OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
                 OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
                 OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
-                OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
+                OBJECT_TYPE_BAKED_GEOMETRY = 0x20000,
+                OBJECT_TYPE_NEEDS_DYNAMIC_SHADOWS = 0x40000,
+                OBJECT_TYPE_HAS_AGGREGATE_RTPROXY = 0x80000
             }
             // Alignment: 1
             // Member count: 4
@@ -47,14 +48,10 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Field count: 3
-            //
-            // Metadata:
-            // NetworkVarNames: m_pEntity (CEntityIdentity*)
-            // NetworkVarNames: m_CScriptComponent (CScriptComponent::Storage_t)
             pub mod CEntityInstance {
                 pub const m_iszPrivateVScripts: usize = 0x8; // CUtlSymbolLarge
                 pub const m_pEntity: usize = 0x10; // CEntityIdentity*
-                pub const m_CScriptComponent: usize = 0x30; // CScriptComponent*
+                pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
             }
             // Parent: None
             // Field count: 0
@@ -67,11 +64,8 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Field count: 12
-            //
-            // Metadata:
-            // NetworkVarNames: m_nameStringableIndex (int32)
             pub mod CEntityIdentity {
-                pub const m_nameStringableIndex: usize = 0x14; // int32
+                pub const m_nameStringTableIndex: usize = 0x14; // int32
                 pub const m_name: usize = 0x18; // CUtlSymbolLarge
                 pub const m_designerName: usize = 0x20; // CUtlSymbolLarge
                 pub const m_flags: usize = 0x30; // uint32

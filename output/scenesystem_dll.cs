@@ -1,11 +1,22 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
     // Class count: 9
-    // Enum count: 4
+    // Enum count: 5
     public static class ScenesystemDll {
+        // Alignment: 4
+        // Member count: 7
+        public enum ESceneViewDebugOverlaysListenerDataType_t : uint {
+            k_ESceneViewDebugOverlaysListenerDataType_Unknown = 0x0,
+            k_ESceneViewDebugOverlaysListenerDataType_Sphere = 0x1,
+            k_ESceneViewDebugOverlaysListenerDataType_Capsule = 0x2,
+            k_ESceneViewDebugOverlaysListenerDataType_BoxAngles = 0x3,
+            k_ESceneViewDebugOverlaysListenerDataType_Line = 0x4,
+            k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles = 0x5,
+            k_ESceneViewDebugOverlaysListenerDataType_Text3D = 0x6
+        }
         // Alignment: 4
         // Member count: 4
         public enum ESilhouetteType_t : uint {
@@ -15,12 +26,13 @@ namespace CS2Dumper.Schemas {
             SILHOUETTE_LPV = 0x4
         }
         // Alignment: 1
-        // Member count: 4
+        // Member count: 5
         public enum DisableShadows_t : byte {
             kDisableShadows_None = 0x0,
             kDisableShadows_All = 0x1,
             kDisableShadows_Baked = 0x2,
-            kDisableShadows_Realtime = 0x3
+            kDisableShadows_Realtime = 0x3,
+            kDisableShadows_ReallyNone = 0x4
         }
         // Alignment: 1
         // Member count: 6

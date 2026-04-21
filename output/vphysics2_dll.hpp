@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 #pragma once
 
@@ -9,8 +9,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: vphysics2.dll
-        // Class count: 101
-        // Enum count: 3
+        // Class count: 110
+        // Enum count: 5
         namespace vphysics2_dll {
             // Alignment: 4
             // Member count: 3
@@ -33,6 +33,27 @@ namespace cs2_dumper {
                 DYNAMIC_CONTINUOUS_ALLOW_IF_REQUESTED_BY_OTHER_BODY = 0x0,
                 DYNAMIC_CONTINUOUS_ALWAYS = 0x1,
                 DYNAMIC_CONTINUOUS_NEVER = 0x2
+            };
+            // Alignment: 4
+            // Member count: 8
+            enum class PhysInterfaceId_t : uint32_t {
+                PIID_UNKNOWN = 0x0,
+                PIID_IPHYSICSBODY = 0x1,
+                PIID_IPHYSAGGREGATE = 0x2,
+                PIID_IPHYSICSJOINT = 0x3,
+                PIID_IPHYSICSMOTIONCONTROLLER = 0x4,
+                PIID_IPHYSICSPARTICLEROPE = 0x5,
+                PIID_IPHYSICSRAGDOLLCONTROL = 0x6,
+                PIID_NUM_TYPES = 0x7
+            };
+            // Alignment: 1
+            // Member count: 5
+            enum class PhysGenericShapeType_t : uint8_t {
+                GENERIC_SHAPE_POINT = 0x0,
+                GENERIC_SHAPE_SPHERE = 0x1,
+                GENERIC_SHAPE_AABB = 0x2,
+                GENERIC_SHAPE_CAPSULE = 0x3,
+                GENERIC_SHAPE_HULL = 0x4
             };
             // Parent: None
             // Field count: 1
@@ -239,6 +260,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_jiggleBone = 0x8; // CFeJiggleBone
             }
             // Parent: None
+            // Field count: 2
+            namespace IPhysAggregateInstance {
+                constexpr std::ptrdiff_t m_pSkeleton = 0x8; // void*
+                constexpr std::ptrdiff_t m_bIsAxisAligned = 0x10; // bool
+            }
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -290,12 +317,20 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t f4RelaxationFactor = 0x40; // fltx4
             }
             // Parent: None
+            // Field count: 0
+            namespace IPhysicsParticleRope {
+            }
+            // Parent: None
             // Field count: 4
             namespace constraint_hingeparams_t {
                 constexpr std::ptrdiff_t worldPosition = 0x0; // Vector
                 constexpr std::ptrdiff_t worldAxisDirection = 0xC; // Vector
                 constexpr std::ptrdiff_t hingeAxis = 0x18; // constraint_axislimit_t
                 constexpr std::ptrdiff_t constraint = 0x28; // constraint_breakableparams_t
+            }
+            // Parent: None
+            // Field count: 0
+            namespace IPhysicsBodyList {
             }
             // Parent: None
             // Field count: 3
@@ -476,6 +511,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vNormal = 0xC; // Vector
             }
             // Parent: None
+            // Field count: 0
+            namespace IPhysicsRagdollControl {
+            }
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -565,6 +604,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t nNode = 0x0; // uint16[2]
                 constexpr std::ptrdiff_t flMaxDist = 0x4; // float32
                 constexpr std::ptrdiff_t flRelaxationFactor = 0x8; // float32
+            }
+            // Parent: None
+            // Field count: 0
+            namespace IPhysicsJoint {
             }
             // Parent: None
             // Field count: 3
@@ -685,6 +728,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t flGroundFriction = 0x4; // float32
                 constexpr std::ptrdiff_t nListBegin = 0x8; // uint16
                 constexpr std::ptrdiff_t nListEnd = 0xA; // uint16
+            }
+            // Parent: None
+            // Field count: 1
+            namespace CGenericShapeProxy {
+                constexpr std::ptrdiff_t m_verts = 0x30; // CUtlLeanVectorFixedGrowable<Vector,8>
             }
             // Parent: None
             // Field count: 4
@@ -855,6 +903,23 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMaxFraction = 0x1C; // float32
                 constexpr std::ptrdiff_t m_flScale = 0x20; // float32
                 constexpr std::ptrdiff_t m_pHull = 0x28; // RnHull_t*
+            }
+            // Parent: None
+            // Field count: 10
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace vphysics_save_ragdoll_control_t {
+                constexpr std::ptrdiff_t m_flMinSpringFrequency = 0x0; // float32
+                constexpr std::ptrdiff_t m_flMaxSpringFrequency = 0x4; // float32
+                constexpr std::ptrdiff_t m_flMaxStretch = 0x8; // float32
+                constexpr std::ptrdiff_t m_bSolidCollisionAtZeroWeight = 0xC; // bool
+                constexpr std::ptrdiff_t m_bRequiresDynamicBodies = 0xD; // bool
+                constexpr std::ptrdiff_t m_bIgnoreTeleport = 0xE; // bool
+                constexpr std::ptrdiff_t m_vLinearVelocityAccumulator = 0x10; // Vector
+                constexpr std::ptrdiff_t m_vAngularVelocityAccumulator = 0x1C; // RotationVector
+                constexpr std::ptrdiff_t m_vForceAccumulator = 0x28; // Vector
+                constexpr std::ptrdiff_t m_nBodyCount = 0x34; // int32
             }
             // Parent: None
             // Field count: 5
@@ -1046,6 +1111,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nEdge = 0x0; // uint8
             }
             // Parent: None
+            // Field count: 0
+            namespace IPhysicsMotionController {
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1186,6 +1255,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nPriority = 0x30; // int32
                 constexpr std::ptrdiff_t m_nVertexMapHash = 0x34; // uint32
                 constexpr std::ptrdiff_t m_nAntitunnelGroupBits = 0x38; // uint32
+            }
+            // Parent: None
+            // Field count: 0
+            namespace IPhysicsBody {
             }
             // Parent: None
             // Field count: 2

@@ -245,16 +245,6 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCNmIKRig": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "InfoForResourceTypeCNmSkeleton": {
         "fields": {},
         "metadata": [
@@ -386,6 +376,16 @@
         "parent": null
       },
       "InfoForResourceTypeCTypeScriptResource": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCVDataItemDefs": {
         "fields": {},
         "metadata": [
           {

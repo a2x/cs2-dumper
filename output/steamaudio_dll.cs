@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: steamaudio.dll
-    // Class count: 16
+    // Class count: 17
     // Enum count: 0
     public static class SteamaudioDll {
         // Parent: None
@@ -58,7 +58,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_movables = 0x10; // CSteamAudioMovableBakedData<CSteamAudioBakedPathingData>
         }
         // Parent: None
-        // Field count: 4
+        // Field count: 5
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -67,6 +67,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nNumBounces = 0x4; // int32
             public const nint m_flIRDuration = 0x8; // float32
             public const nint m_nAmbisonicsOrder = 0xC; // int32
+            public const nint m_bExportScene = 0x10; // bool
         }
         // Parent: None
         // Field count: 1
@@ -108,22 +109,23 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecReflectionRatio = 0x48; // CUtlVector<float32>
         }
         // Parent: None
-        // Field count: 11
+        // Field count: 12
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CSteamAudioBakedReverbData {
             public const nint m_nBands = 0x0; // int32
-            public const nint m_probes = 0x8; // CSteamAudioProbeData
-            public const nint m_grid = 0x10; // CSteamAudioProbeGrid
-            public const nint m_reverbSettings = 0x68; // SteamAudioReverbSettings_t
-            public const nint m_reverbClusteringSettings = 0x78; // SteamAudioReverbClusteringSettings_t
-            public const nint m_reverbCompressionSettings = 0x84; // SteamAudioReverbCompressionSettings_t
-            public const nint m_clusteredProbes = 0x90; // CSteamAudioProbeData
-            public const nint m_vecClusterForProbe = 0x98; // CUtlVector<int16>
-            public const nint m_compressedData = 0xB0; // CSteamAudioCompressedReverb
-            public const nint m_compressedClusteredData = 0x110; // CSteamAudioCompressedReverb
-            public const nint m_movables = 0x170; // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>
+            public const nint m_scene = 0x8; // CSteamAudioSceneData
+            public const nint m_probes = 0x18; // CSteamAudioProbeData
+            public const nint m_grid = 0x20; // CSteamAudioProbeGrid
+            public const nint m_reverbSettings = 0x78; // SteamAudioReverbSettings_t
+            public const nint m_reverbClusteringSettings = 0x8C; // SteamAudioReverbClusteringSettings_t
+            public const nint m_reverbCompressionSettings = 0x98; // SteamAudioReverbCompressionSettings_t
+            public const nint m_clusteredProbes = 0xA0; // CSteamAudioProbeData
+            public const nint m_vecClusterForProbe = 0xA8; // CUtlVector<int16>
+            public const nint m_compressedData = 0xC0; // CSteamAudioCompressedReverb
+            public const nint m_compressedClusteredData = 0x120; // CSteamAudioCompressedReverb
+            public const nint m_movables = 0x180; // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>
         }
         // Parent: None
         // Field count: 4
@@ -160,6 +162,15 @@ namespace CS2Dumper.Schemas {
             public const nint m_vecOutsideField = 0x50; // CUtlVector<CSteamAudioAmbisonicsField>
             public const nint m_vecInsideSmallSizeField = 0x68; // CUtlVector<CSteamAudioAmbisonicsField>
             public const nint m_movables = 0x80; // CSteamAudioMovableBakedData<CSteamAudioBakedDimensionsData>
+        }
+        // Parent: None
+        // Field count: 2
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSteamAudioSceneData {
+            public const nint m_pScene = 0x0; // IPLScene
+            public const nint m_pStaticMesh = 0x8; // IPLStaticMesh
         }
         // Parent: None
         // Field count: 7

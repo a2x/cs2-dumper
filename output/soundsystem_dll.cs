@@ -1,11 +1,18 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-03 12:31:25.327747800 UTC
+// 2026-04-21 16:19:03.827280400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: soundsystem.dll
-    // Class count: 127
-    // Enum count: 19
+    // Class count: 136
+    // Enum count: 26
     public static class SoundsystemDll {
+        // Alignment: 4
+        // Member count: 3
+        public enum SndSeqInstrumentType_t : uint {
+            eSndSeqInstNull = 0x0,
+            eSndSeqInstSndEvt = 0x1,
+            eSndSeqInstMidiSampler = 0x2
+        }
         // Alignment: 4
         // Member count: 2
         public enum EMode_t : uint {
@@ -95,6 +102,12 @@ namespace CS2Dumper.Schemas {
             SOS_STOPTYPE_OPVAR = 0x2
         }
         // Alignment: 4
+        // Member count: 2
+        public enum SndSeqTrackPlaybackType_t : uint {
+            eSndSeqTrackPlaybackTypeStep = 0x0,
+            eSndSeqTrackPlaybackTypeFwd = 0x1
+        }
+        // Alignment: 4
         // Member count: 6
         public enum SosEditItemType_t : uint {
             SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
@@ -103,6 +116,17 @@ namespace CS2Dumper.Schemas {
             SOS_EDIT_ITEM_TYPE_STACK = 0x3,
             SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
             SOS_EDIT_ITEM_TYPE_FIELD = 0x5
+        }
+        // Alignment: 4
+        // Member count: 7
+        public enum SndSeqQuantizeType_t : uint {
+            eSndSeqQuantizeInvalid = unchecked((uint)-1),
+            eSndSeqQuantizeNone = 0x0,
+            eSndSeqQuantizeBeat = 0x1,
+            eSndSeqQuantizeBar = 0x2,
+            eSndSeqQuantizeSequence = 0x3,
+            eSndSeqQuantizeSeek = 0x4,
+            eSndSeqQuantizeReset = 0x5
         }
         // Alignment: 4
         // Member count: 5
@@ -119,6 +143,13 @@ namespace CS2Dumper.Schemas {
             kIgnore = 0x0,
             kBranch = 0x1,
             kMatch = 0x2
+        }
+        // Alignment: 4
+        // Member count: 3
+        public enum SndSeqSyncType_t : uint {
+            eSndSeqSyncTypeNone = 0x0,
+            eSndSeqSyncTypeWait = 0x1,
+            eSndSeqSyncTypeSeek = 0x2
         }
         // Alignment: 4
         // Member count: 30
@@ -187,6 +218,13 @@ namespace CS2Dumper.Schemas {
             B = 0xB,
             Count = 0xC
         }
+        // Alignment: 4
+        // Member count: 3
+        public enum SndSeqRegionType_t : uint {
+            eSndSeqRegionTypeNull = 0x0,
+            eSndSeqRegionTypeSndEvt = 0x1,
+            eSndSeqRegionTypeMidiSeq = 0x2
+        }
         // Alignment: 1
         // Member count: 4
         public enum CVSoundFormat_t : byte {
@@ -207,6 +245,13 @@ namespace CS2Dumper.Schemas {
             FILTER_SLOPE_36dB = 0x6,
             FILTER_SLOPE_48dB = 0x7,
             FILTER_SLOPE_MAX = 0x7
+        }
+        // Alignment: 4
+        // Member count: 3
+        public enum SndSeqPlayerType_t : uint {
+            eSndSeqPlayerNull = 0x0,
+            eSndSeqPlayerSndEvt = 0x1,
+            eSndSeqPlayerMidiSeq = 0x2
         }
         // Alignment: 4
         // Member count: 2
@@ -233,6 +278,17 @@ namespace CS2Dumper.Schemas {
             SOS_SETPARAM_SORTTYPE_HIGHEST = 0x0,
             SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
         }
+        // Alignment: 4
+        // Member count: 7
+        public enum SndSeqMidiStatusType_t : uint {
+            SndSeqMidiStatusNoteOff = 0x8,
+            SndSeqMidiStatusNoteOn = 0x9,
+            SndSeqMidiStatusKeyPressure = 0xA,
+            SndSeqMidiStatusCtrlChange = 0xB,
+            SndSeqMidiStatusProgramChange = 0xC,
+            SndSeqMidiStatusChannelPressure = 0xD,
+            SndSeqMidiStatusPitchBend = 0xE
+        }
         // Parent: None
         // Field count: 1
         //
@@ -250,8 +306,8 @@ namespace CS2Dumper.Schemas {
         // MPropertyDescription
         public static class CVoiceContainerBlender {
             public const nint m_firstSound = 0xA8; // CSoundContainerReference
-            public const nint m_secondSound = 0xC0; // CSoundContainerReference
-            public const nint m_flBlendFactor = 0xD8; // float32
+            public const nint m_secondSound = 0xC8; // CSoundContainerReference
+            public const nint m_flBlendFactor = 0xE8; // float32
         }
         // Parent: None
         // Field count: 1
@@ -295,6 +351,20 @@ namespace CS2Dumper.Schemas {
             public const nint m_harmonics = 0x0; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CHarmonic>
             public const nint m_curve = 0x18; // CPiecewiseCurve
             public const nint m_bSyncInstances = 0x58; // bool
+        }
+        // Parent: None
+        // Field count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CSosGroupActionOcclusionSchema {
+            public const nint m_flCalculationInterval = 0x8; // float32
+            public const nint m_flRadius = 0xC; // float32
+            public const nint m_flOcclusionScale = 0x10; // float32
+            public const nint m_flOcclusionMin = 0x14; // float32
+            public const nint m_flOcclusionMax = 0x18; // float32
+            public const nint m_flTestDepth = 0x1C; // float32
         }
         // Parent: None
         // Field count: 6
@@ -390,16 +460,17 @@ namespace CS2Dumper.Schemas {
             public const nint m_nSortType = 0x20; // SosActionSetParamSortType_t
         }
         // Parent: None
-        // Field count: 3
+        // Field count: 4
         //
         // Metadata:
         // MGetKV3ClassDefaults
         // MPropertyFriendlyName
         // MPropertyDescription
         public static class CSoundContainerReference {
-            public const nint m_bUseReference = 0x0; // bool
-            public const nint m_sound = 0x8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-            public const nint m_pSound = 0x10; // CVoiceContainerBase*
+            public const nint m_namespace = 0x0; // CUtlString
+            public const nint m_bUseReference = 0x8; // bool
+            public const nint m_sound = 0x10; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+            public const nint m_pSound = 0x18; // CVoiceContainerBase*
         }
         // Parent: None
         // Field count: 0
@@ -475,6 +546,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_nProcessor = 0x14; // int32
             public const nint m_nInputValue0 = 0x18; // int32
             public const nint m_nInputValue1 = 0x1C; // int32
+        }
+        // Parent: None
+        // Field count: 1
+        public static class SamplerVoice_t {
+            public const nint nNoteNum = 0x0; // uint8
         }
         // Parent: None
         // Field count: 1
@@ -558,12 +634,24 @@ namespace CS2Dumper.Schemas {
             public const nint m_bApplyAntialiasing = 0x2C; // bool
         }
         // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CSndSeqInstSndEvtSchema {
+        }
+        // Parent: None
         // Field count: 1
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class CVMixNameInputMeter {
             public const nint m_nValueIndex = 0x10; // int32
+        }
+        // Parent: None
+        // Field count: 0
+        public static class CSndSeqInstruments {
         }
         // Parent: None
         // Field count: 1
@@ -626,6 +714,38 @@ namespace CS2Dumper.Schemas {
             public const nint m_Behavior_String = 0x48; // SosGroupFieldBehavior_t
             public const nint m_opvarString = 0x50; // CUtlString
             public const nint m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
+        }
+        // Parent: None
+        // Field count: 11
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        // MPropertyFriendlyName
+        public static class CSndSeqInstMidiSampler {
+            public const nint m_bIsSoundEvent = 0x20; // bool
+            public const nint m_bStopPrevious = 0x21; // bool
+            public const nint m_nMinNote = 0x22; // uint8
+            public const nint m_nMaxNote = 0x23; // uint8
+            public const nint m_flMinVelocityAtten = 0x24; // float32
+            public const nint m_flMaxVelocityAtten = 0x28; // float32
+            public const nint m_flAttack = 0x2C; // float32
+            public const nint m_flRelease = 0x30; // float32
+            public const nint m_bBeatEnvelopes = 0x34; // bool
+            public const nint m_nNextVoiceSlot = 0xD4; // uint8
+            public const nint m_hSoundEventHash = 0xD8; // uint32
+        }
+        // Parent: None
+        // Field count: 6
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class CSndSeqInstBaseSchema {
+            public const nint m_nType = 0x8; // SndSeqInstrumentType_t
+            public const nint m_nPlayerType = 0xC; // SndSeqPlayerType_t
+            public const nint m_bStopCurrentEvents = 0x12; // bool
+            public const nint m_flBPM = 0x14; // float32
+            public const nint m_flBPMFactor = 0x18; // float32
+            public const nint m_flBPMInvFactor = 0x1C; // float32
         }
         // Parent: None
         // Field count: 10
@@ -827,13 +947,13 @@ namespace CS2Dumper.Schemas {
         // MPropertyDescription
         public static class CVoiceContainerLoopXFade {
             public const nint m_sound = 0xA8; // CSoundContainerReference
-            public const nint m_flLoopEnd = 0xC0; // float32
-            public const nint m_flLoopStart = 0xC4; // float32
-            public const nint m_flFadeOut = 0xC8; // float32
-            public const nint m_flFadeIn = 0xCC; // float32
-            public const nint m_bPlayHead = 0xD0; // bool
-            public const nint m_bPlayTail = 0xD1; // bool
-            public const nint m_bEqualPow = 0xD2; // bool
+            public const nint m_flLoopEnd = 0xC8; // float32
+            public const nint m_flLoopStart = 0xCC; // float32
+            public const nint m_flFadeOut = 0xD0; // float32
+            public const nint m_flFadeIn = 0xD4; // float32
+            public const nint m_bPlayHead = 0xD8; // bool
+            public const nint m_bPlayTail = 0xD9; // bool
+            public const nint m_bEqualPow = 0xDA; // bool
         }
         // Parent: None
         // Field count: 1
@@ -1034,7 +1154,7 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CVoiceContainerSetElement {
             public const nint m_sound = 0x0; // CSoundContainerReference
-            public const nint m_flVolumeDB = 0x18; // float32
+            public const nint m_flVolumeDB = 0x20; // float32
         }
         // Parent: None
         // Field count: 0
@@ -1077,6 +1197,15 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CVMixEffectChainProcessorDesc {
             public const nint m_desc = 0x20; // VMixEffectChainDesc_t
+        }
+        // Parent: None
+        // Field count: 5
+        public static class KeyGroup_t {
+            public const nint nCenterNote = 0x0; // uint8
+            public const nint nMinNote = 0x1; // uint8
+            public const nint nMaxNote = 0x2; // uint8
+            public const nint nNumVelocityZones = 0x3; // uint8
+            public const nint pVelocityZones = 0x8; // VelocityZone_t*
         }
         // Parent: None
         // Field count: 1
@@ -1247,13 +1376,13 @@ namespace CS2Dumper.Schemas {
         // MPropertyDescription
         public static class CVoiceContainerParameterBlender {
             public const nint m_firstSound = 0xA8; // CSoundContainerReference
-            public const nint m_secondSound = 0xC0; // CSoundContainerReference
-            public const nint m_bEnableOcclusionBlend = 0xD8; // bool
-            public const nint m_curve1 = 0xE0; // CPiecewiseCurve
-            public const nint m_curve2 = 0x120; // CPiecewiseCurve
-            public const nint m_bEnableDistanceBlend = 0x160; // bool
-            public const nint m_curve3 = 0x168; // CPiecewiseCurve
-            public const nint m_curve4 = 0x1A8; // CPiecewiseCurve
+            public const nint m_secondSound = 0xC8; // CSoundContainerReference
+            public const nint m_bEnableOcclusionBlend = 0xE8; // bool
+            public const nint m_curve1 = 0xF0; // CPiecewiseCurve
+            public const nint m_curve2 = 0x130; // CPiecewiseCurve
+            public const nint m_bEnableDistanceBlend = 0x170; // bool
+            public const nint m_curve3 = 0x178; // CPiecewiseCurve
+            public const nint m_curve4 = 0x1B8; // CPiecewiseCurve
         }
         // Parent: None
         // Field count: 2
@@ -1387,6 +1516,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_nInstancesAtMaxVolume = 0xC; // int32
         }
         // Parent: None
+        // Field count: 4
+        public static class VelocityZone_t {
+            public const nint nMaxVel = 0x0; // uint8
+            public const nint nNextSelection = 0x1; // uint8
+            public const nint nNumSamples = 0x2; // uint8
+            public const nint pSamples = 0x4; // uint32[4]
+        }
+        // Parent: None
         // Field count: 3
         //
         // Metadata:
@@ -1510,10 +1647,10 @@ namespace CS2Dumper.Schemas {
         // MPropertyDescription
         public static class CVoiceContainerLoopTrigger {
             public const nint m_sound = 0xA8; // CSoundContainerReference
-            public const nint m_flRetriggerTimeMin = 0xC0; // float32
-            public const nint m_flRetriggerTimeMax = 0xC4; // float32
-            public const nint m_flFadeTime = 0xC8; // float32
-            public const nint m_bCrossFade = 0xCC; // bool
+            public const nint m_flRetriggerTimeMin = 0xC8; // float32
+            public const nint m_flRetriggerTimeMax = 0xCC; // float32
+            public const nint m_flFadeTime = 0xD0; // float32
+            public const nint m_bCrossFade = 0xD4; // bool
         }
         // Parent: None
         // Field count: 2
@@ -1572,6 +1709,10 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class CVMixAutoFilterProcessorDesc {
             public const nint m_desc = 0x20; // VMixAutoFilterDesc_t
+        }
+        // Parent: None
+        // Field count: 0
+        public static class ISndSeqInstruments {
         }
         // Parent: None
         // Field count: 9
