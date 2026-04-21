@@ -1,0 +1,20 @@
+{
+  "client.dll": {
+    "attack": 33851552,
+    "attack2": 33851696,
+    "back": 33852272,
+    "duck": 33852992,
+    "forward": 33852128,
+    "jump": 33852848,
+    "left": 33852416,
+    "lookatweapon": 36931072,
+    "reload": 33851408,
+    "right": 33852560,
+    "showscores": 36930784,
+    "sprint": 33851264,
+    "turnleft": 33851840,
+    "turnright": 33851984,
+    "use": 33852704,
+    "zoom": 36930928
+  }
+}
