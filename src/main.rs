@@ -39,7 +39,7 @@ struct Args {
         short,
         long,
         value_delimiter = ',',
-        default_values = ["cs", "hpp", "json", "rs"]
+        default_values = ["cs", "hpp", "json", "rs", "zig"]
     )]
     file_types: Vec<String>,
 
