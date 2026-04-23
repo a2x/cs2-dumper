@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-22 02:40:55.168485600 UTC
+// 2026-04-23 01:25:07.655854600 UTC
 
 pub const cs2_dumper = struct {
     pub const interfaces = struct {
@@ -11,11 +11,11 @@ pub const cs2_dumper = struct {
         // Module: client.dll
         pub const client_dll = struct {
             pub const ClientToolsInfo_001: usize = 0x204D250;
-            pub const EmptyWorldService001_Client: usize = 0x2010AB0;
+            pub const EmptyWorldService001_Client: usize = 0x2010A90;
             pub const GameClientExports001: usize = 0x2049EF0;
             pub const LegacyGameUI001: usize = 0x20655F0;
             pub const Source2Client002: usize = 0x2323F10;
-            pub const Source2ClientConfig001: usize = 0x2295DB0;
+            pub const Source2ClientConfig001: usize = 0x2295DA0;
             pub const Source2ClientPrediction001: usize = 0x20546B0;
             pub const Source2ClientUI001: usize = 0x2063BE0;
         };
@@ -159,7 +159,7 @@ pub const cs2_dumper = struct {
         };
         // Module: server.dll
         pub const server_dll = struct {
-            pub const EmptyWorldService001_Server: usize = 0x1BEECE0;
+            pub const EmptyWorldService001_Server: usize = 0x1BEECC0;
             pub const EntitySubclassUtilsV001: usize = 0x1B9A340;
             pub const NavGameTest001: usize = 0x1C9B2C0;
             pub const ServerToolsInfo_001: usize = 0x1C482B8;
@@ -167,7 +167,7 @@ pub const cs2_dumper = struct {
             pub const Source2GameDirector001: usize = 0x1DE07E0;
             pub const Source2GameEntities001: usize = 0x1C479C0;
             pub const Source2Server001: usize = 0x1C47810;
-            pub const Source2ServerConfig001: usize = 0x1EFE488;
+            pub const Source2ServerConfig001: usize = 0x1EFE478;
             pub const customnavsystem001: usize = 0x1B7B628;
         };
         // Module: soundsystem.dll
@@ -215,10 +215,6 @@ pub const cs2_dumper = struct {
         // Module: v8system.dll
         pub const v8system_dll = struct {
             pub const Source2V8System001: usize = 0x31730;
-        };
-        // Module: vconcomm.dll
-        pub const vconcomm_dll = struct {
-            pub const VConComm001: usize = 0x395C0;
         };
         // Module: vphysics2.dll
         pub const vphysics2_dll = struct {

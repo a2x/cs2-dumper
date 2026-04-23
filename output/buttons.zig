@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-22 02:40:55.168485600 UTC
+// 2026-04-23 01:25:07.655854600 UTC
 
 pub const cs2_dumper = struct {
     // Module: client.dll
