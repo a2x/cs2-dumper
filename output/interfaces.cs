@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-22 02:40:55.168485600 UTC
+// 2026-04-22 23:25:08.898383200 UTC
 
 namespace CS2Dumper.Interfaces {
     // Module: animationsystem.dll
@@ -10,11 +10,11 @@ namespace CS2Dumper.Interfaces {
     // Module: client.dll
     public static class ClientDll {
         public const nint ClientToolsInfo_001 = 0x204D250;
-        public const nint EmptyWorldService001_Client = 0x2010AB0;
+        public const nint EmptyWorldService001_Client = 0x2010A90;
         public const nint GameClientExports001 = 0x2049EF0;
         public const nint LegacyGameUI001 = 0x20655F0;
         public const nint Source2Client002 = 0x2323F10;
-        public const nint Source2ClientConfig001 = 0x2295DB0;
+        public const nint Source2ClientConfig001 = 0x2295DA0;
         public const nint Source2ClientPrediction001 = 0x20546B0;
         public const nint Source2ClientUI001 = 0x2063BE0;
     }
@@ -158,7 +158,7 @@ namespace CS2Dumper.Interfaces {
     }
     // Module: server.dll
     public static class ServerDll {
-        public const nint EmptyWorldService001_Server = 0x1BEECE0;
+        public const nint EmptyWorldService001_Server = 0x1BEECC0;
         public const nint EntitySubclassUtilsV001 = 0x1B9A340;
         public const nint NavGameTest001 = 0x1C9B2C0;
         public const nint ServerToolsInfo_001 = 0x1C482B8;
@@ -166,7 +166,7 @@ namespace CS2Dumper.Interfaces {
         public const nint Source2GameDirector001 = 0x1DE07E0;
         public const nint Source2GameEntities001 = 0x1C479C0;
         public const nint Source2Server001 = 0x1C47810;
-        public const nint Source2ServerConfig001 = 0x1EFE488;
+        public const nint Source2ServerConfig001 = 0x1EFE478;
         public const nint customnavsystem001 = 0x1B7B628;
     }
     // Module: soundsystem.dll
@@ -214,10 +214,6 @@ namespace CS2Dumper.Interfaces {
     // Module: v8system.dll
     public static class V8systemDll {
         public const nint Source2V8System001 = 0x31730;
-    }
-    // Module: vconcomm.dll
-    public static class VconcommDll {
-        public const nint VConComm001 = 0x395C0;
     }
     // Module: vphysics2.dll
     public static class Vphysics2Dll {

@@ -7,7 +7,7 @@
     "dwGameRules": 36867896,
     "dwGlobalVars": 33855136,
     "dwGlowManager": 36855088,
-    "dwLocalPlayerController": 36734272,
+    "dwLocalPlayerController": 36734240,
     "dwLocalPlayerPawn": 33900448,
     "dwPlantedC4": 36923976,
     "dwPrediction": 33900208,
@@ -16,7 +16,7 @@
     "dwViewAngles": 36955144,
     "dwViewMatrix": 36891328,
     "dwViewRender": 36887736,
-    "dwWeaponC4": 36334824
+    "dwWeaponC4": 36334776
   },
   "engine2.dll": {
     "dwBuildNumber": 6343796,
