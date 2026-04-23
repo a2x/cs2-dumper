@@ -3,7 +3,7 @@ use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{CodeWriter, Formatter, InterfaceMap, slugify, zig_ident};
+use super::{CodeWriter, Formatter, InterfaceMap, slugify};
 
 impl CodeWriter for InterfaceMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -104,34 +104,4 @@ impl CodeWriter for InterfaceMap {
         })
     }
 
-    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
-            fmt.block("pub const interfaces = struct", true, |fmt| {
-                for (module_name, ifaces) in self {
-                    writeln!(fmt, "// Module: {}", module_name)?;
-
-                    let module_name = zig_ident(&AsSnakeCase(slugify(module_name)).to_string());
-
-                    fmt.block(
-                        &format!("pub const {} = struct", module_name),
-                        true,
-                        |fmt| {
-                            for (name, value) in ifaces {
-                                writeln!(
-                                    fmt,
-                                    "pub const {}: usize = {:#X};",
-                                    zig_ident(name),
-                                    value
-                                )?;
-                            }
-
-                            Ok(())
-                        },
-                    )?;
-                }
-
-                Ok(())
-            })
-        })
-    }
 }
