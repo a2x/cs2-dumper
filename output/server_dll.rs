@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-29 00:03:50.996661600 UTC
+// 2026-04-30 22:56:03.950244800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -6108,60 +6108,61 @@ pub mod cs2_dumper {
                 pub const m_shakeCallback: usize = 0x4E0; // CPhysicsShake
             }
             // Parent: CPlayer_MovementServices_Humanoid
-            // Field count: 52
+            // Field count: 53
             pub mod CCSPlayer_MovementServices {
-                pub const m_AnimationState: usize = 0x2E0; // CCSPlayerAnimationState
-                pub const m_vecLadderNormal: usize = 0x3C0; // Vector
-                pub const m_nLadderSurfacePropIndex: usize = 0x3CC; // int32
-                pub const m_bDucked: usize = 0x3D0; // bool
-                pub const m_flDuckAmount: usize = 0x3D4; // float32
-                pub const m_flDuckSpeed: usize = 0x3D8; // float32
-                pub const m_bDuckOverride: usize = 0x3DC; // bool
-                pub const m_bDesiresDuck: usize = 0x3DD; // bool
-                pub const m_bDucking: usize = 0x3DE; // bool
-                pub const m_flDuckRootOffset: usize = 0x3E0; // float32
-                pub const m_flDuckViewOffset: usize = 0x3E4; // float32
-                pub const m_flLastDuckTime: usize = 0x3E8; // float32
-                pub const m_flBombPlantViewOffset: usize = 0x3EC; // float32
-                pub const m_vecLastPositionAtFullCrouchSpeed: usize = 0x3F8; // Vector2D
-                pub const m_duckUntilOnGround: usize = 0x400; // bool
-                pub const m_bHasWalkMovedSinceLastJump: usize = 0x401; // bool
-                pub const m_bInStuckTest: usize = 0x402; // bool
-                pub const m_nTraceCount: usize = 0x610; // int32
-                pub const m_StuckLast: usize = 0x614; // int32
-                pub const m_bSpeedCropped: usize = 0x618; // bool
-                pub const m_nOldWaterLevel: usize = 0x61C; // int32
-                pub const m_flWaterEntryTime: usize = 0x620; // float32
-                pub const m_vecForward: usize = 0x624; // Vector
-                pub const m_vecLeft: usize = 0x630; // Vector
-                pub const m_vecUp: usize = 0x63C; // Vector
-                pub const m_nGameCodeHasMovedPlayerAfterCommand: usize = 0x648; // int32
-                pub const m_bMadeFootstepNoise: usize = 0x64C; // bool
-                pub const m_iFootsteps: usize = 0x650; // int32
-                pub const m_fStashGrenadeParameterWhen: usize = 0x654; // GameTime_t
-                pub const m_nButtonDownMaskPrev: usize = 0x658; // uint64
-                pub const m_bUseFrictionStashedSpeed: usize = 0x660; // bool
-                pub const m_flUseFrictionStashedSpeedUntilFrac: usize = 0x664; // float32
-                pub const m_flFrictionStashedSpeed: usize = 0x668; // float32
-                pub const m_flStamina: usize = 0x66C; // float32
-                pub const m_flHeightAtJumpStart: usize = 0x670; // float32
-                pub const m_flMaxJumpHeightThisJump: usize = 0x674; // float32
-                pub const m_flMaxJumpHeightLastJump: usize = 0x678; // float32
-                pub const m_flStaminaAtJumpStart: usize = 0x67C; // float32
-                pub const m_flVelMulAtJumpStart: usize = 0x680; // float32
-                pub const m_flAccumulatedJumpError: usize = 0x684; // float32
-                pub const m_LegacyJump: usize = 0x688; // CCSPlayerLegacyJump
-                pub const m_ModernJump: usize = 0x6A0; // CCSPlayerModernJump
-                pub const m_nLastJumpTick: usize = 0x6D8; // GameTick_t
-                pub const m_flLastJumpFrac: usize = 0x6DC; // float32
-                pub const m_flLastJumpVelocityZ: usize = 0x6E0; // float32
-                pub const m_bJumpApexPending: usize = 0x6E4; // bool
-                pub const m_flTicksSinceLastSurfingDetected: usize = 0x6E8; // float32
-                pub const m_bWasSurfing: usize = 0x6EC; // bool
-                pub const m_vecWalkWishVel: usize = 0x77C; // Vector2D
-                pub const m_gtLastTimeOnStaticWorldGround: usize = 0xFA8; // GameTime_t
-                pub const m_gtLastTimeInAir: usize = 0xFAC; // GameTime_t
-                pub const m_bHasEverProcessedCommand: usize = 0xFB0; // bool
+                pub const m_AnimationState: usize = 0x310; // CCSPlayerAnimationState
+                pub const m_bUsingGroundTopologyOffset: usize = 0x3F0; // bool
+                pub const m_flAltitudeAtLastUsingGroundTopologyOffsetTransition: usize = 0x3F4; // float32
+                pub const m_flUsingGroundTopologyOffsetTransitionSmoothing: usize = 0x3F8; // float32
+                pub const m_vecLadderNormal: usize = 0x3FC; // Vector
+                pub const m_nLadderSurfacePropIndex: usize = 0x408; // int32
+                pub const m_bDucked: usize = 0x40C; // bool
+                pub const m_flDuckAmount: usize = 0x410; // float32
+                pub const m_flDuckSpeed: usize = 0x414; // float32
+                pub const m_bDuckOverride: usize = 0x418; // bool
+                pub const m_bDesiresDuck: usize = 0x419; // bool
+                pub const m_bDucking: usize = 0x41A; // bool
+                pub const m_flDuckRootOffset: usize = 0x41C; // float32
+                pub const m_flDuckViewOffset: usize = 0x420; // float32
+                pub const m_flLastDuckTime: usize = 0x424; // float32
+                pub const m_flBombPlantViewOffset: usize = 0x428; // float32
+                pub const m_vecLastPositionAtFullCrouchSpeed: usize = 0x438; // Vector2D
+                pub const m_duckUntilOnGround: usize = 0x440; // bool
+                pub const m_bHasWalkMovedSinceLastJump: usize = 0x441; // bool
+                pub const m_bInStuckTest: usize = 0x442; // bool
+                pub const m_nTraceCount: usize = 0x650; // int32
+                pub const m_StuckLast: usize = 0x654; // int32
+                pub const m_bSpeedCropped: usize = 0x658; // bool
+                pub const m_nOldWaterLevel: usize = 0x65C; // int32
+                pub const m_flWaterEntryTime: usize = 0x660; // float32
+                pub const m_vecForward: usize = 0x664; // Vector
+                pub const m_vecLeft: usize = 0x670; // Vector
+                pub const m_vecUp: usize = 0x67C; // Vector
+                pub const m_nGameCodeHasMovedPlayerAfterCommand: usize = 0x688; // int32
+                pub const m_bMadeFootstepNoise: usize = 0x68C; // bool
+                pub const m_iFootsteps: usize = 0x690; // int32
+                pub const m_fStashGrenadeParameterWhen: usize = 0x694; // GameTime_t
+                pub const m_nButtonDownMaskPrev: usize = 0x698; // uint64
+                pub const m_bUseFrictionStashedSpeed: usize = 0x6A0; // bool
+                pub const m_flUseFrictionStashedSpeedUntilFrac: usize = 0x6A4; // float32
+                pub const m_flFrictionStashedSpeed: usize = 0x6A8; // float32
+                pub const m_flStamina: usize = 0x6AC; // float32
+                pub const m_flHeightAtJumpStart: usize = 0x6B0; // float32
+                pub const m_flMaxJumpHeightThisJump: usize = 0x6B4; // float32
+                pub const m_flMaxJumpHeightLastJump: usize = 0x6B8; // float32
+                pub const m_flStaminaAtJumpStart: usize = 0x6BC; // float32
+                pub const m_flVelMulAtJumpStart: usize = 0x6C0; // float32
+                pub const m_flAccumulatedJumpError: usize = 0x6C4; // float32
+                pub const m_LegacyJump: usize = 0x6C8; // CCSPlayerLegacyJump
+                pub const m_ModernJump: usize = 0x6E0; // CCSPlayerModernJump
+                pub const m_nLastJumpTick: usize = 0x718; // GameTick_t
+                pub const m_flLastJumpFrac: usize = 0x71C; // float32
+                pub const m_flLastJumpVelocityZ: usize = 0x720; // float32
+                pub const m_bJumpApexPending: usize = 0x724; // bool
+                pub const m_flTicksSinceLastSurfingDetected: usize = 0x728; // float32
+                pub const m_bWasSurfing: usize = 0x72C; // bool
+                pub const m_vecWalkWishVel: usize = 0x7BC; // Vector2D
+                pub const m_bHasEverProcessedCommand: usize = 0xFE8; // bool
             }
             // Parent: None
             // Field count: 5

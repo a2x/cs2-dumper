@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-29 00:03:50.996661600 UTC
+// 2026-04-30 22:56:03.950244800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -5962,60 +5962,61 @@ namespace CS2Dumper.Schemas {
             public const nint m_shakeCallback = 0x4E0; // CPhysicsShake
         }
         // Parent: CPlayer_MovementServices_Humanoid
-        // Field count: 52
+        // Field count: 53
         public static class CCSPlayer_MovementServices {
-            public const nint m_AnimationState = 0x2E0; // CCSPlayerAnimationState
-            public const nint m_vecLadderNormal = 0x3C0; // Vector
-            public const nint m_nLadderSurfacePropIndex = 0x3CC; // int32
-            public const nint m_bDucked = 0x3D0; // bool
-            public const nint m_flDuckAmount = 0x3D4; // float32
-            public const nint m_flDuckSpeed = 0x3D8; // float32
-            public const nint m_bDuckOverride = 0x3DC; // bool
-            public const nint m_bDesiresDuck = 0x3DD; // bool
-            public const nint m_bDucking = 0x3DE; // bool
-            public const nint m_flDuckRootOffset = 0x3E0; // float32
-            public const nint m_flDuckViewOffset = 0x3E4; // float32
-            public const nint m_flLastDuckTime = 0x3E8; // float32
-            public const nint m_flBombPlantViewOffset = 0x3EC; // float32
-            public const nint m_vecLastPositionAtFullCrouchSpeed = 0x3F8; // Vector2D
-            public const nint m_duckUntilOnGround = 0x400; // bool
-            public const nint m_bHasWalkMovedSinceLastJump = 0x401; // bool
-            public const nint m_bInStuckTest = 0x402; // bool
-            public const nint m_nTraceCount = 0x610; // int32
-            public const nint m_StuckLast = 0x614; // int32
-            public const nint m_bSpeedCropped = 0x618; // bool
-            public const nint m_nOldWaterLevel = 0x61C; // int32
-            public const nint m_flWaterEntryTime = 0x620; // float32
-            public const nint m_vecForward = 0x624; // Vector
-            public const nint m_vecLeft = 0x630; // Vector
-            public const nint m_vecUp = 0x63C; // Vector
-            public const nint m_nGameCodeHasMovedPlayerAfterCommand = 0x648; // int32
-            public const nint m_bMadeFootstepNoise = 0x64C; // bool
-            public const nint m_iFootsteps = 0x650; // int32
-            public const nint m_fStashGrenadeParameterWhen = 0x654; // GameTime_t
-            public const nint m_nButtonDownMaskPrev = 0x658; // uint64
-            public const nint m_bUseFrictionStashedSpeed = 0x660; // bool
-            public const nint m_flUseFrictionStashedSpeedUntilFrac = 0x664; // float32
-            public const nint m_flFrictionStashedSpeed = 0x668; // float32
-            public const nint m_flStamina = 0x66C; // float32
-            public const nint m_flHeightAtJumpStart = 0x670; // float32
-            public const nint m_flMaxJumpHeightThisJump = 0x674; // float32
-            public const nint m_flMaxJumpHeightLastJump = 0x678; // float32
-            public const nint m_flStaminaAtJumpStart = 0x67C; // float32
-            public const nint m_flVelMulAtJumpStart = 0x680; // float32
-            public const nint m_flAccumulatedJumpError = 0x684; // float32
-            public const nint m_LegacyJump = 0x688; // CCSPlayerLegacyJump
-            public const nint m_ModernJump = 0x6A0; // CCSPlayerModernJump
-            public const nint m_nLastJumpTick = 0x6D8; // GameTick_t
-            public const nint m_flLastJumpFrac = 0x6DC; // float32
-            public const nint m_flLastJumpVelocityZ = 0x6E0; // float32
-            public const nint m_bJumpApexPending = 0x6E4; // bool
-            public const nint m_flTicksSinceLastSurfingDetected = 0x6E8; // float32
-            public const nint m_bWasSurfing = 0x6EC; // bool
-            public const nint m_vecWalkWishVel = 0x77C; // Vector2D
-            public const nint m_gtLastTimeOnStaticWorldGround = 0xFA8; // GameTime_t
-            public const nint m_gtLastTimeInAir = 0xFAC; // GameTime_t
-            public const nint m_bHasEverProcessedCommand = 0xFB0; // bool
+            public const nint m_AnimationState = 0x310; // CCSPlayerAnimationState
+            public const nint m_bUsingGroundTopologyOffset = 0x3F0; // bool
+            public const nint m_flAltitudeAtLastUsingGroundTopologyOffsetTransition = 0x3F4; // float32
+            public const nint m_flUsingGroundTopologyOffsetTransitionSmoothing = 0x3F8; // float32
+            public const nint m_vecLadderNormal = 0x3FC; // Vector
+            public const nint m_nLadderSurfacePropIndex = 0x408; // int32
+            public const nint m_bDucked = 0x40C; // bool
+            public const nint m_flDuckAmount = 0x410; // float32
+            public const nint m_flDuckSpeed = 0x414; // float32
+            public const nint m_bDuckOverride = 0x418; // bool
+            public const nint m_bDesiresDuck = 0x419; // bool
+            public const nint m_bDucking = 0x41A; // bool
+            public const nint m_flDuckRootOffset = 0x41C; // float32
+            public const nint m_flDuckViewOffset = 0x420; // float32
+            public const nint m_flLastDuckTime = 0x424; // float32
+            public const nint m_flBombPlantViewOffset = 0x428; // float32
+            public const nint m_vecLastPositionAtFullCrouchSpeed = 0x438; // Vector2D
+            public const nint m_duckUntilOnGround = 0x440; // bool
+            public const nint m_bHasWalkMovedSinceLastJump = 0x441; // bool
+            public const nint m_bInStuckTest = 0x442; // bool
+            public const nint m_nTraceCount = 0x650; // int32
+            public const nint m_StuckLast = 0x654; // int32
+            public const nint m_bSpeedCropped = 0x658; // bool
+            public const nint m_nOldWaterLevel = 0x65C; // int32
+            public const nint m_flWaterEntryTime = 0x660; // float32
+            public const nint m_vecForward = 0x664; // Vector
+            public const nint m_vecLeft = 0x670; // Vector
+            public const nint m_vecUp = 0x67C; // Vector
+            public const nint m_nGameCodeHasMovedPlayerAfterCommand = 0x688; // int32
+            public const nint m_bMadeFootstepNoise = 0x68C; // bool
+            public const nint m_iFootsteps = 0x690; // int32
+            public const nint m_fStashGrenadeParameterWhen = 0x694; // GameTime_t
+            public const nint m_nButtonDownMaskPrev = 0x698; // uint64
+            public const nint m_bUseFrictionStashedSpeed = 0x6A0; // bool
+            public const nint m_flUseFrictionStashedSpeedUntilFrac = 0x6A4; // float32
+            public const nint m_flFrictionStashedSpeed = 0x6A8; // float32
+            public const nint m_flStamina = 0x6AC; // float32
+            public const nint m_flHeightAtJumpStart = 0x6B0; // float32
+            public const nint m_flMaxJumpHeightThisJump = 0x6B4; // float32
+            public const nint m_flMaxJumpHeightLastJump = 0x6B8; // float32
+            public const nint m_flStaminaAtJumpStart = 0x6BC; // float32
+            public const nint m_flVelMulAtJumpStart = 0x6C0; // float32
+            public const nint m_flAccumulatedJumpError = 0x6C4; // float32
+            public const nint m_LegacyJump = 0x6C8; // CCSPlayerLegacyJump
+            public const nint m_ModernJump = 0x6E0; // CCSPlayerModernJump
+            public const nint m_nLastJumpTick = 0x718; // GameTick_t
+            public const nint m_flLastJumpFrac = 0x71C; // float32
+            public const nint m_flLastJumpVelocityZ = 0x720; // float32
+            public const nint m_bJumpApexPending = 0x724; // bool
+            public const nint m_flTicksSinceLastSurfingDetected = 0x728; // float32
+            public const nint m_bWasSurfing = 0x72C; // bool
+            public const nint m_vecWalkWishVel = 0x7BC; // Vector2D
+            public const nint m_bHasEverProcessedCommand = 0xFE8; // bool
         }
         // Parent: None
         // Field count: 5

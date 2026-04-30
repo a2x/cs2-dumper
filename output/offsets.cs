@@ -1,26 +1,26 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-04-29 00:03:50.996661600 UTC
+// 2026-04-30 22:56:03.950244800 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
     public static class ClientDll {
-        public const nint dwCSGOInput = 0x233DC80;
-        public const nint dwEntityList = 0x24CEC60;
-        public const nint dwGameEntitySystem = 0x24CEC60;
+        public const nint dwCSGOInput = 0x2340E00;
+        public const nint dwEntityList = 0x24D1DF0;
+        public const nint dwGameEntitySystem = 0x24D1DF0;
         public const nint dwGameEntitySystem_highestEntityIndex = 0x2090;
-        public const nint dwGameRules = 0x2328E38;
-        public const nint dwGlobalVars = 0x20495A0;
-        public const nint dwGlowManager = 0x2325C30;
-        public const nint dwLocalPlayerController = 0x23084C0;
-        public const nint dwLocalPlayerPawn = 0x20546A0;
-        public const nint dwPlantedC4 = 0x2336948;
-        public const nint dwPrediction = 0x20545B0;
-        public const nint dwSensitivity = 0x2326748;
+        public const nint dwGameRules = 0x232BFB8;
+        public const nint dwGlobalVars = 0x204C5D8;
+        public const nint dwGlowManager = 0x2328DB0;
+        public const nint dwLocalPlayerController = 0x230B5D0;
+        public const nint dwLocalPlayerPawn = 0x2057720;
+        public const nint dwPlantedC4 = 0x2339AC8;
+        public const nint dwPrediction = 0x2057630;
+        public const nint dwSensitivity = 0x23298C8;
         public const nint dwSensitivity_sensitivity = 0x58;
-        public const nint dwViewAngles = 0x233E308;
-        public const nint dwViewMatrix = 0x232E9C0;
-        public const nint dwViewRender = 0x232DBB8;
-        public const nint dwWeaponC4 = 0x22A6C68;
+        public const nint dwViewAngles = 0x2341488;
+        public const nint dwViewMatrix = 0x2331B30;
+        public const nint dwViewRender = 0x2330D38;
+        public const nint dwWeaponC4 = 0x22A9D58;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
