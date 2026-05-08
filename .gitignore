@@ -4,3 +4,4 @@
 /target
 Cargo.lock
 cs2-dumper.exe
+output/ 
