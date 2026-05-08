@@ -6,3 +6,4 @@ Cargo.lock
 cs2-dumper.exe
 output/ 
 *.log 
+*.log 
