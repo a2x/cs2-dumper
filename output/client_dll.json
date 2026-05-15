@@ -444,7 +444,7 @@
       },
       "CCSObserver_ObserverServices": {
         "fields": {
-          "m_obsInterpState": 100
+          "m_obsInterpState": 104
         },
         "metadata": [],
         "parent": "CPlayer_ObserverServices"
