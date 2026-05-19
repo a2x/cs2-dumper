@@ -433,7 +433,9 @@
         "parent": null
       },
       "CCSObserver_CameraServices": {
-        "fields": {},
+        "fields": {
+          "m_hPrevPostProcessingVolume": 680
+        },
         "metadata": [],
         "parent": "CCSPlayerBase_CameraServices"
       },
@@ -3636,8 +3638,8 @@
       },
       "C_CSGO_PreviewPlayer": {
         "fields": {
-          "m_animgraphCharacterModeString": 13456,
-          "m_flInitialModelScale": 13464
+          "m_animgraphCharacterModeString": 13376,
+          "m_flInitialModelScale": 13384
         },
         "metadata": [],
         "parent": "C_CSPlayerPawn"
@@ -3852,14 +3854,13 @@
           "m_EconGloves": 5720,
           "m_GunGameImmunityColor": 7112,
           "m_RetakesMVPBoostExtraUtility": 5712,
-          "m_angEyeAngles": 13168,
-          "m_angEyeAnglesVelocity": 13376,
-          "m_angShootAngleHistory": 7420,
+          "m_angEyeAngles": 13088,
+          "m_angEyeAnglesVelocity": 13296,
           "m_angStashedShootAngles": 7384,
-          "m_arrOldEyeAngles": 13328,
-          "m_arrOldEyeAnglesTimes": 13312,
+          "m_arrOldEyeAngles": 13248,
+          "m_arrOldEyeAnglesTimes": 13232,
           "m_bGrenadeParametersStashed": 7380,
-          "m_bGunGameImmunity": 12936,
+          "m_bGunGameImmunity": 12856,
           "m_bHasDeathInfo": 7309,
           "m_bHasFemaleVoice": 5288,
           "m_bInBombZone": 5345,
@@ -3885,13 +3886,13 @@
           "m_bResumeZoom": 7249,
           "m_bRetakesHasDefuseKit": 5704,
           "m_bRetakesMVPLastRound": 5705,
-          "m_bShouldAutobuyDMWeapons": 12928,
+          "m_bShouldAutobuyDMWeapons": 12848,
           "m_bWaitForNoAttack": 7280,
-          "m_delayTargetIDTimer": 13392,
+          "m_delayTargetIDTimer": 13312,
           "m_entitySpottedState": 7224,
-          "m_fImmuneToGunGameDamageTime": 12932,
-          "m_fImmuneToGunGameDamageTimeLast": 12940,
-          "m_fMolotovDamageTime": 12944,
+          "m_fImmuneToGunGameDamageTime": 12852,
+          "m_fImmuneToGunGameDamageTimeLast": 12860,
+          "m_fMolotovDamageTime": 12864,
           "m_fSwitchedHandednessTime": 7020,
           "m_flDeathInfoTime": 7312,
           "m_flEmitSoundTime": 7256,
@@ -3910,20 +3911,20 @@
           "m_flViewmodelOffsetZ": 7032,
           "m_grenadeParameterStashTime": 7376,
           "m_hHudModelArms": 7000,
-          "m_holdTargetIDTimer": 13424,
+          "m_holdTargetIDTimer": 13344,
           "m_iBlockingUseActionInProgress": 7252,
-          "m_iIDEntIndex": 13388,
-          "m_iOldIDEntIndex": 13420,
+          "m_iIDEntIndex": 13308,
+          "m_iOldIDEntIndex": 13340,
           "m_iRetakesMVPBoostItem": 5708,
           "m_iRetakesOffering": 5696,
           "m_iRetakesOfferingCard": 5700,
           "m_iShotsFired": 7268,
-          "m_iTargetItemEntIdx": 13416,
+          "m_iTargetItemEntIdx": 13336,
           "m_ignoreLadderJumpTime": 7284,
           "m_lastLandTime": 6968,
           "m_nEconGlovesChanged": 6856,
           "m_nLastKillerIndex": 7304,
-          "m_nPlayerInfernoBodyFx": 13052,
+          "m_nPlayerInfernoBodyFx": 12972,
           "m_nPrevArmorVal": 5320,
           "m_nPrevGrenadeAmmoCount": 5324,
           "m_nRagdollDamageBone": 6860,
@@ -3950,9 +3951,7 @@
           "m_vecDeathInfoOrigin": 7316,
           "m_vecPlayerPatchEconIndices": 7040,
           "m_vecStashedGrenadeThrowPosition": 7396,
-          "m_vecStashedVelocity": 7408,
-          "m_vecThrowPositionHistory": 7444,
-          "m_vecVelocityHistory": 7468
+          "m_vecStashedVelocity": 7408
         },
         "metadata": [],
         "parent": "C_CSPlayerPawnBase"
