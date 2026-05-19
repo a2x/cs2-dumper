@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-14 23:58:57.293645200 UTC
+// 2026-05-19 09:08:26.848173800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1662,7 +1662,7 @@ pub mod cs2_dumper {
             pub mod C_WeaponSG556 {
             }
             // Parent: C_CSPlayerPawnBase
-            // Field count: 105
+            // Field count: 102
             pub mod C_CSPlayerPawn {
                 pub const m_pBulletServices: usize = 0x1468; // CCSPlayer_BulletServices*
                 pub const m_pHostageServices: usize = 0x1470; // CCSPlayer_HostageServices*
@@ -1751,24 +1751,21 @@ pub mod cs2_dumper {
                 pub const m_angStashedShootAngles: usize = 0x1CD8; // QAngle
                 pub const m_vecStashedGrenadeThrowPosition: usize = 0x1CE4; // Vector
                 pub const m_vecStashedVelocity: usize = 0x1CF0; // Vector
-                pub const m_angShootAngleHistory: usize = 0x1CFC; // QAngle[2]
-                pub const m_vecThrowPositionHistory: usize = 0x1D14; // Vector[2]
-                pub const m_vecVelocityHistory: usize = 0x1D2C; // Vector[2]
-                pub const m_bShouldAutobuyDMWeapons: usize = 0x3280; // bool
-                pub const m_fImmuneToGunGameDamageTime: usize = 0x3284; // GameTime_t
-                pub const m_bGunGameImmunity: usize = 0x3288; // bool
-                pub const m_fImmuneToGunGameDamageTimeLast: usize = 0x328C; // GameTime_t
-                pub const m_fMolotovDamageTime: usize = 0x3290; // float32
-                pub const m_nPlayerInfernoBodyFx: usize = 0x32FC; // ParticleIndex_t
-                pub const m_angEyeAngles: usize = 0x3370; // QAngle
-                pub const m_arrOldEyeAnglesTimes: usize = 0x3400; // GameTime_t[4]
-                pub const m_arrOldEyeAngles: usize = 0x3410; // QAngle[4]
-                pub const m_angEyeAnglesVelocity: usize = 0x3440; // QAngle
-                pub const m_iIDEntIndex: usize = 0x344C; // CEntityIndex
-                pub const m_delayTargetIDTimer: usize = 0x3450; // CountdownTimer
-                pub const m_iTargetItemEntIdx: usize = 0x3468; // CEntityIndex
-                pub const m_iOldIDEntIndex: usize = 0x346C; // CEntityIndex
-                pub const m_holdTargetIDTimer: usize = 0x3470; // CountdownTimer
+                pub const m_bShouldAutobuyDMWeapons: usize = 0x3230; // bool
+                pub const m_fImmuneToGunGameDamageTime: usize = 0x3234; // GameTime_t
+                pub const m_bGunGameImmunity: usize = 0x3238; // bool
+                pub const m_fImmuneToGunGameDamageTimeLast: usize = 0x323C; // GameTime_t
+                pub const m_fMolotovDamageTime: usize = 0x3240; // float32
+                pub const m_nPlayerInfernoBodyFx: usize = 0x32AC; // ParticleIndex_t
+                pub const m_angEyeAngles: usize = 0x3320; // QAngle
+                pub const m_arrOldEyeAnglesTimes: usize = 0x33B0; // GameTime_t[4]
+                pub const m_arrOldEyeAngles: usize = 0x33C0; // QAngle[4]
+                pub const m_angEyeAnglesVelocity: usize = 0x33F0; // QAngle
+                pub const m_iIDEntIndex: usize = 0x33FC; // CEntityIndex
+                pub const m_delayTargetIDTimer: usize = 0x3400; // CountdownTimer
+                pub const m_iTargetItemEntIdx: usize = 0x3418; // CEntityIndex
+                pub const m_iOldIDEntIndex: usize = 0x341C; // CEntityIndex
+                pub const m_holdTargetIDTimer: usize = 0x3420; // CountdownTimer
             }
             // Parent: C_CSGO_TeamIntroCharacterPosition
             // Field count: 0
@@ -2479,8 +2476,9 @@ pub mod cs2_dumper {
                 pub const m_bKnife: usize = 0x1160; // bool
             }
             // Parent: CCSPlayerBase_CameraServices
-            // Field count: 0
+            // Field count: 1
             pub mod CCSObserver_CameraServices {
+                pub const m_hPrevPostProcessingVolume: usize = 0x2A8; // CHandle<C_PostProcessingVolume>
             }
             // Parent: CEnvSoundscape
             // Field count: 1
@@ -4499,8 +4497,8 @@ pub mod cs2_dumper {
             // Parent: C_CSPlayerPawn
             // Field count: 2
             pub mod C_CSGO_PreviewPlayer {
-                pub const m_animgraphCharacterModeString: usize = 0x3490; // CGlobalSymbol
-                pub const m_flInitialModelScale: usize = 0x3498; // float32
+                pub const m_animgraphCharacterModeString: usize = 0x3440; // CGlobalSymbol
+                pub const m_flInitialModelScale: usize = 0x3448; // float32
             }
             // Parent: C_BarnLight
             // Field count: 1

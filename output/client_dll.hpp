@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-14 23:58:57.293645200 UTC
+// 2026-05-19 09:08:26.848173800 UTC
 
 #pragma once
 
@@ -1653,7 +1653,7 @@ namespace cs2_dumper {
             namespace C_WeaponSG556 {
             }
             // Parent: C_CSPlayerPawnBase
-            // Field count: 105
+            // Field count: 102
             namespace C_CSPlayerPawn {
                 constexpr std::ptrdiff_t m_pBulletServices = 0x1468; // CCSPlayer_BulletServices*
                 constexpr std::ptrdiff_t m_pHostageServices = 0x1470; // CCSPlayer_HostageServices*
@@ -1742,24 +1742,21 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_angStashedShootAngles = 0x1CD8; // QAngle
                 constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x1CE4; // Vector
                 constexpr std::ptrdiff_t m_vecStashedVelocity = 0x1CF0; // Vector
-                constexpr std::ptrdiff_t m_angShootAngleHistory = 0x1CFC; // QAngle[2]
-                constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x1D14; // Vector[2]
-                constexpr std::ptrdiff_t m_vecVelocityHistory = 0x1D2C; // Vector[2]
-                constexpr std::ptrdiff_t m_bShouldAutobuyDMWeapons = 0x3280; // bool
-                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x3284; // GameTime_t
-                constexpr std::ptrdiff_t m_bGunGameImmunity = 0x3288; // bool
-                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTimeLast = 0x328C; // GameTime_t
-                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x3290; // float32
-                constexpr std::ptrdiff_t m_nPlayerInfernoBodyFx = 0x32FC; // ParticleIndex_t
-                constexpr std::ptrdiff_t m_angEyeAngles = 0x3370; // QAngle
-                constexpr std::ptrdiff_t m_arrOldEyeAnglesTimes = 0x3400; // GameTime_t[4]
-                constexpr std::ptrdiff_t m_arrOldEyeAngles = 0x3410; // QAngle[4]
-                constexpr std::ptrdiff_t m_angEyeAnglesVelocity = 0x3440; // QAngle
-                constexpr std::ptrdiff_t m_iIDEntIndex = 0x344C; // CEntityIndex
-                constexpr std::ptrdiff_t m_delayTargetIDTimer = 0x3450; // CountdownTimer
-                constexpr std::ptrdiff_t m_iTargetItemEntIdx = 0x3468; // CEntityIndex
-                constexpr std::ptrdiff_t m_iOldIDEntIndex = 0x346C; // CEntityIndex
-                constexpr std::ptrdiff_t m_holdTargetIDTimer = 0x3470; // CountdownTimer
+                constexpr std::ptrdiff_t m_bShouldAutobuyDMWeapons = 0x3230; // bool
+                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x3234; // GameTime_t
+                constexpr std::ptrdiff_t m_bGunGameImmunity = 0x3238; // bool
+                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTimeLast = 0x323C; // GameTime_t
+                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x3240; // float32
+                constexpr std::ptrdiff_t m_nPlayerInfernoBodyFx = 0x32AC; // ParticleIndex_t
+                constexpr std::ptrdiff_t m_angEyeAngles = 0x3320; // QAngle
+                constexpr std::ptrdiff_t m_arrOldEyeAnglesTimes = 0x33B0; // GameTime_t[4]
+                constexpr std::ptrdiff_t m_arrOldEyeAngles = 0x33C0; // QAngle[4]
+                constexpr std::ptrdiff_t m_angEyeAnglesVelocity = 0x33F0; // QAngle
+                constexpr std::ptrdiff_t m_iIDEntIndex = 0x33FC; // CEntityIndex
+                constexpr std::ptrdiff_t m_delayTargetIDTimer = 0x3400; // CountdownTimer
+                constexpr std::ptrdiff_t m_iTargetItemEntIdx = 0x3418; // CEntityIndex
+                constexpr std::ptrdiff_t m_iOldIDEntIndex = 0x341C; // CEntityIndex
+                constexpr std::ptrdiff_t m_holdTargetIDTimer = 0x3420; // CountdownTimer
             }
             // Parent: C_CSGO_TeamIntroCharacterPosition
             // Field count: 0
@@ -2470,8 +2467,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bKnife = 0x1160; // bool
             }
             // Parent: CCSPlayerBase_CameraServices
-            // Field count: 0
+            // Field count: 1
             namespace CCSObserver_CameraServices {
+                constexpr std::ptrdiff_t m_hPrevPostProcessingVolume = 0x2A8; // CHandle<C_PostProcessingVolume>
             }
             // Parent: CEnvSoundscape
             // Field count: 1
@@ -4490,8 +4488,8 @@ namespace cs2_dumper {
             // Parent: C_CSPlayerPawn
             // Field count: 2
             namespace C_CSGO_PreviewPlayer {
-                constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x3490; // CGlobalSymbol
-                constexpr std::ptrdiff_t m_flInitialModelScale = 0x3498; // float32
+                constexpr std::ptrdiff_t m_animgraphCharacterModeString = 0x3440; // CGlobalSymbol
+                constexpr std::ptrdiff_t m_flInitialModelScale = 0x3448; // float32
             }
             // Parent: C_BarnLight
             // Field count: 1

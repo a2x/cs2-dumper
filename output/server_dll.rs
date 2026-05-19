@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-14 23:58:57.293645200 UTC
+// 2026-05-19 09:08:26.848173800 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -4423,7 +4423,7 @@ pub mod cs2_dumper {
                 pub const m_WaitComplete: usize = 0x50; // CPulse_ResumePoint
             }
             // Parent: CCSPlayerPawnBase
-            // Field count: 108
+            // Field count: 105
             pub mod CCSPlayerPawn {
                 pub const m_pBulletServices: usize = 0xD08; // CCSPlayer_BulletServices*
                 pub const m_pHostageServices: usize = 0xD10; // CCSPlayer_HostageServices*
@@ -4524,15 +4524,12 @@ pub mod cs2_dumper {
                 pub const m_angStashedShootAngles: usize = 0x1300; // QAngle
                 pub const m_vecStashedGrenadeThrowPosition: usize = 0x130C; // Vector
                 pub const m_vecStashedVelocity: usize = 0x1318; // Vector
-                pub const m_angShootAngleHistory: usize = 0x1324; // QAngle[2]
-                pub const m_vecThrowPositionHistory: usize = 0x133C; // Vector[2]
-                pub const m_vecVelocityHistory: usize = 0x1354; // Vector[2]
-                pub const m_bCommittingSuicideOnTeamChange: usize = 0x1378; // bool
-                pub const m_wasNotKilledNaturally: usize = 0x1379; // bool
-                pub const m_fImmuneToGunGameDamageTime: usize = 0x137C; // GameTime_t
-                pub const m_bGunGameImmunity: usize = 0x1380; // bool
-                pub const m_fMolotovDamageTime: usize = 0x1384; // float32
-                pub const m_angEyeAngles: usize = 0x1388; // QAngle
+                pub const m_bCommittingSuicideOnTeamChange: usize = 0x1330; // bool
+                pub const m_wasNotKilledNaturally: usize = 0x1331; // bool
+                pub const m_fImmuneToGunGameDamageTime: usize = 0x1334; // GameTime_t
+                pub const m_bGunGameImmunity: usize = 0x1338; // bool
+                pub const m_fMolotovDamageTime: usize = 0x133C; // float32
+                pub const m_angEyeAngles: usize = 0x1340; // QAngle
             }
             // Parent: CBaseEntity
             // Field count: 22

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-14 23:58:57.293645200 UTC
+// 2026-05-19 09:08:26.848173800 UTC
 
 #pragma once
 
@@ -4283,7 +4283,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_WaitComplete = 0x50; // CPulse_ResumePoint
             }
             // Parent: CCSPlayerPawnBase
-            // Field count: 108
+            // Field count: 105
             namespace CCSPlayerPawn {
                 constexpr std::ptrdiff_t m_pBulletServices = 0xD08; // CCSPlayer_BulletServices*
                 constexpr std::ptrdiff_t m_pHostageServices = 0xD10; // CCSPlayer_HostageServices*
@@ -4384,15 +4384,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_angStashedShootAngles = 0x1300; // QAngle
                 constexpr std::ptrdiff_t m_vecStashedGrenadeThrowPosition = 0x130C; // Vector
                 constexpr std::ptrdiff_t m_vecStashedVelocity = 0x1318; // Vector
-                constexpr std::ptrdiff_t m_angShootAngleHistory = 0x1324; // QAngle[2]
-                constexpr std::ptrdiff_t m_vecThrowPositionHistory = 0x133C; // Vector[2]
-                constexpr std::ptrdiff_t m_vecVelocityHistory = 0x1354; // Vector[2]
-                constexpr std::ptrdiff_t m_bCommittingSuicideOnTeamChange = 0x1378; // bool
-                constexpr std::ptrdiff_t m_wasNotKilledNaturally = 0x1379; // bool
-                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x137C; // GameTime_t
-                constexpr std::ptrdiff_t m_bGunGameImmunity = 0x1380; // bool
-                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x1384; // float32
-                constexpr std::ptrdiff_t m_angEyeAngles = 0x1388; // QAngle
+                constexpr std::ptrdiff_t m_bCommittingSuicideOnTeamChange = 0x1330; // bool
+                constexpr std::ptrdiff_t m_wasNotKilledNaturally = 0x1331; // bool
+                constexpr std::ptrdiff_t m_fImmuneToGunGameDamageTime = 0x1334; // GameTime_t
+                constexpr std::ptrdiff_t m_bGunGameImmunity = 0x1338; // bool
+                constexpr std::ptrdiff_t m_fMolotovDamageTime = 0x133C; // float32
+                constexpr std::ptrdiff_t m_angEyeAngles = 0x1340; // QAngle
             }
             // Parent: CBaseEntity
             // Field count: 22

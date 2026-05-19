@@ -1,26 +1,26 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-14 23:58:57.293645200 UTC
+// 2026-05-19 09:08:26.848173800 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
     public static class ClientDll {
-        public const nint dwCSGOInput = 0x2343E70;
-        public const nint dwEntityList = 0x24D4E80;
-        public const nint dwGameEntitySystem = 0x24D4E80;
+        public const nint dwCSGOInput = 0x237B5B0;
+        public const nint dwEntityList = 0x250C5B0;
+        public const nint dwGameEntitySystem = 0x250C5B0;
         public const nint dwGameEntitySystem_highestEntityIndex = 0x2090;
-        public const nint dwGameRules = 0x232EFF8;
-        public const nint dwGlobalVars = 0x204F600;
-        public const nint dwGlowManager = 0x232BDF0;
-        public const nint dwLocalPlayerController = 0x230E5C0;
-        public const nint dwLocalPlayerPawn = 0x205A700;
-        public const nint dwPlantedC4 = 0x233D168;
-        public const nint dwPrediction = 0x205A610;
-        public const nint dwSensitivity = 0x232C908;
+        public const nint dwGameRules = 0x2366788;
+        public const nint dwGlobalVars = 0x2085788;
+        public const nint dwGlowManager = 0x2363580;
+        public const nint dwLocalPlayerController = 0x2345D50;
+        public const nint dwLocalPlayerPawn = 0x2090880;
+        public const nint dwPlantedC4 = 0x2374278;
+        public const nint dwPrediction = 0x2090790;
+        public const nint dwSensitivity = 0x2364098;
         public const nint dwSensitivity_sensitivity = 0x58;
-        public const nint dwViewAngles = 0x23444F8;
-        public const nint dwViewMatrix = 0x2334850;
-        public const nint dwViewRender = 0x23348D8;
-        public const nint dwWeaponC4 = 0x22ACD38;
+        public const nint dwViewAngles = 0x237BC38;
+        public const nint dwViewMatrix = 0x236C2F0;
+        public const nint dwViewRender = 0x236B4F8;
+        public const nint dwWeaponC4 = 0x22E4518;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
@@ -42,7 +42,7 @@ namespace CS2Dumper.Offsets {
     }
     // Module: matchmaking.dll
     public static class MatchmakingDll {
-        public const nint dwGameTypes = 0x1B0F80;
+        public const nint dwGameTypes = 0x1DF0B0;
     }
     // Module: soundsystem.dll
     public static class SoundsystemDll {
