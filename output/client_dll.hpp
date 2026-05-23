@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-19 09:08:26.848173800 UTC
+// 2026-05-23 15:37:02.676534700 UTC
 
 #pragma once
 
@@ -1348,7 +1348,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_ullRegisteredAsItemID = 0x4C8; // uint64
             }
             // Parent: C_BasePlayerWeapon
-            // Field count: 53
+            // Field count: 54
             namespace C_CSWeaponBase {
                 constexpr std::ptrdiff_t m_iWeaponGameplayAnimState = 0x1758; // WeaponGameplayAnimState
                 constexpr std::ptrdiff_t m_flWeaponGameplayAnimStateTimestamp = 0x175C; // GameTime_t
@@ -1388,16 +1388,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bVisualsDataSet = 0x18B9; // bool
                 constexpr std::ptrdiff_t m_bUIWeapon = 0x18BA; // bool
                 constexpr std::ptrdiff_t m_nCustomEconReloadEventId = 0x18BC; // int32
-                constexpr std::ptrdiff_t m_nextPrevOwnerUseTime = 0x18C8; // GameTime_t
-                constexpr std::ptrdiff_t m_hPrevOwner = 0x18CC; // CHandle<C_CSPlayerPawn>
-                constexpr std::ptrdiff_t m_nDropTick = 0x18D0; // GameTick_t
-                constexpr std::ptrdiff_t m_bWasActiveWeaponWhenDropped = 0x18D4; // bool
-                constexpr std::ptrdiff_t m_donated = 0x18F4; // bool
-                constexpr std::ptrdiff_t m_fLastShotTime = 0x18F8; // GameTime_t
-                constexpr std::ptrdiff_t m_bWasOwnedByCT = 0x18FC; // bool
-                constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0x18FD; // bool
-                constexpr std::ptrdiff_t m_flNextClientFireBulletTime = 0x1900; // float32
-                constexpr std::ptrdiff_t m_flNextClientFireBulletTime_Repredict = 0x1904; // float32
+                constexpr std::ptrdiff_t m_bCanBePickedUp = 0x18C8; // bool
+                constexpr std::ptrdiff_t m_nextPrevOwnerUseTime = 0x18CC; // GameTime_t
+                constexpr std::ptrdiff_t m_hPrevOwner = 0x18D0; // CHandle<C_CSPlayerPawn>
+                constexpr std::ptrdiff_t m_nDropTick = 0x18D4; // GameTick_t
+                constexpr std::ptrdiff_t m_bWasActiveWeaponWhenDropped = 0x18D8; // bool
+                constexpr std::ptrdiff_t m_donated = 0x18FC; // bool
+                constexpr std::ptrdiff_t m_fLastShotTime = 0x1900; // GameTime_t
+                constexpr std::ptrdiff_t m_bWasOwnedByCT = 0x1904; // bool
+                constexpr std::ptrdiff_t m_bWasOwnedByTerrorist = 0x1905; // bool
+                constexpr std::ptrdiff_t m_flNextClientFireBulletTime = 0x1908; // float32
+                constexpr std::ptrdiff_t m_flNextClientFireBulletTime_Repredict = 0x190C; // float32
                 constexpr std::ptrdiff_t m_IronSightController = 0x1960; // C_IronSightController
                 constexpr std::ptrdiff_t m_iIronSightMode = 0x1A10; // int32
                 constexpr std::ptrdiff_t m_flLastLOSTraceFailureTime = 0x1A88; // GameTime_t

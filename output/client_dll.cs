@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-05-19 09:08:26.848173800 UTC
+// 2026-05-23 15:37:02.676534700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -1342,7 +1342,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_ullRegisteredAsItemID = 0x4C8; // uint64
         }
         // Parent: C_BasePlayerWeapon
-        // Field count: 53
+        // Field count: 54
         public static class C_CSWeaponBase {
             public const nint m_iWeaponGameplayAnimState = 0x1758; // WeaponGameplayAnimState
             public const nint m_flWeaponGameplayAnimStateTimestamp = 0x175C; // GameTime_t
@@ -1382,16 +1382,17 @@ namespace CS2Dumper.Schemas {
             public const nint m_bVisualsDataSet = 0x18B9; // bool
             public const nint m_bUIWeapon = 0x18BA; // bool
             public const nint m_nCustomEconReloadEventId = 0x18BC; // int32
-            public const nint m_nextPrevOwnerUseTime = 0x18C8; // GameTime_t
-            public const nint m_hPrevOwner = 0x18CC; // CHandle<C_CSPlayerPawn>
-            public const nint m_nDropTick = 0x18D0; // GameTick_t
-            public const nint m_bWasActiveWeaponWhenDropped = 0x18D4; // bool
-            public const nint m_donated = 0x18F4; // bool
-            public const nint m_fLastShotTime = 0x18F8; // GameTime_t
-            public const nint m_bWasOwnedByCT = 0x18FC; // bool
-            public const nint m_bWasOwnedByTerrorist = 0x18FD; // bool
-            public const nint m_flNextClientFireBulletTime = 0x1900; // float32
-            public const nint m_flNextClientFireBulletTime_Repredict = 0x1904; // float32
+            public const nint m_bCanBePickedUp = 0x18C8; // bool
+            public const nint m_nextPrevOwnerUseTime = 0x18CC; // GameTime_t
+            public const nint m_hPrevOwner = 0x18D0; // CHandle<C_CSPlayerPawn>
+            public const nint m_nDropTick = 0x18D4; // GameTick_t
+            public const nint m_bWasActiveWeaponWhenDropped = 0x18D8; // bool
+            public const nint m_donated = 0x18FC; // bool
+            public const nint m_fLastShotTime = 0x1900; // GameTime_t
+            public const nint m_bWasOwnedByCT = 0x1904; // bool
+            public const nint m_bWasOwnedByTerrorist = 0x1905; // bool
+            public const nint m_flNextClientFireBulletTime = 0x1908; // float32
+            public const nint m_flNextClientFireBulletTime_Repredict = 0x190C; // float32
             public const nint m_IronSightController = 0x1960; // C_IronSightController
             public const nint m_iIronSightMode = 0x1A10; // int32
             public const nint m_flLastLOSTraceFailureTime = 0x1A88; // GameTime_t
