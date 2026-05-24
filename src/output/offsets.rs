@@ -15,6 +15,7 @@ impl CodeWriter for OffsetMap {
                     false,
                     |fmt| {
                         for (name, value) in offsets {
+                            write_comment(fmt, name)?;
                             writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
                         }
 
@@ -42,6 +43,7 @@ impl CodeWriter for OffsetMap {
                         false,
                         |fmt| {
                             for (name, value) in offsets {
+                                write_comment(fmt, name)?;
                                 writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};", name, value)?;
                             }
 
@@ -72,6 +74,7 @@ impl CodeWriter for OffsetMap {
                         false,
                         |fmt| {
                             for (name, value) in offsets {
+                                write_comment(fmt, name)?;
                                 writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
                             }
 
@@ -98,6 +101,7 @@ impl CodeWriter for OffsetMap {
                         true,
                         |fmt| {
                             for (name, value) in offsets {
+                                write_comment(fmt, name)?;
                                 writeln!(
                                     fmt,
                                     "pub const {}: usize = {:#X};",
@@ -115,4 +119,12 @@ impl CodeWriter for OffsetMap {
             })
         })
     }
+}
+
+fn write_comment(fmt: &mut Formatter<'_>, name: &str) -> fmt::Result {
+    if name == "dwSvCheats" {
+        writeln!(fmt, "// sv_cheats ConVar")?;
+    }
+
+    Ok(())
 }

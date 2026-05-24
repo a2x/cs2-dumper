@@ -96,6 +96,7 @@ pattern_map! {
         }),
         "dwSensitivity" => pattern!("488d0d${[8]'} 660f6ecd") => None,
         "dwSensitivity_sensitivity" => pattern!("488d7eu1 480fbae0? 72? 85d2 490f4fff") => None,
+        "dwSvCheats" => pattern!("488b05${'} 0f28f0 4885c0 7442") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
         "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905${} 488bc6 488934ea 80be") => None,
