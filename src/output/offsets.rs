@@ -15,8 +15,7 @@ impl CodeWriter for OffsetMap {
                     false,
                     |fmt| {
                         for (name, value) in offsets {
-                            write_comment(fmt, name)?;
-                            writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
+                            writeln!(fmt, "public const nint {} = {:#X};{}", name, value, comment(name))?;
                         }
 
                         Ok(())
@@ -43,8 +42,7 @@ impl CodeWriter for OffsetMap {
                         false,
                         |fmt| {
                             for (name, value) in offsets {
-                                write_comment(fmt, name)?;
-                                writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};", name, value)?;
+                                writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};{}", name, value, comment(name))?;
                             }
 
                             Ok(())
@@ -74,8 +72,7 @@ impl CodeWriter for OffsetMap {
                         false,
                         |fmt| {
                             for (name, value) in offsets {
-                                write_comment(fmt, name)?;
-                                writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
+                                writeln!(fmt, "pub const {}: usize = {:#X};{}", name, value, comment(name))?;
                             }
 
                             Ok(())
@@ -101,12 +98,12 @@ impl CodeWriter for OffsetMap {
                         true,
                         |fmt| {
                             for (name, value) in offsets {
-                                write_comment(fmt, name)?;
                                 writeln!(
                                     fmt,
-                                    "pub const {}: usize = {:#X};",
+                                    "pub const {}: usize = {:#X};{}",
                                     zig_ident(name),
-                                    value
+                                    value,
+                                    comment(name)
                                 )?;
                             }
 
@@ -121,10 +118,10 @@ impl CodeWriter for OffsetMap {
     }
 }
 
-fn write_comment(fmt: &mut Formatter<'_>, name: &str) -> fmt::Result {
+fn comment(name: &str) -> &'static str {
     if name == "dwSvCheats" {
-        writeln!(fmt, "// sv_cheats ConVar")?;
+        " // sv_cheats ConVar"
+    } else {
+        ""
     }
-
-    Ok(())
 }
