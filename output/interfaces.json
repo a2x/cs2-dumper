@@ -4,14 +4,14 @@
     "AnimationSystem_001": 8429744
   },
   "client.dll": {
-    "ClientToolsInfo_001": 33956544,
-    "EmptyWorldService001_Client": 33708784,
-    "GameClientExports001": 33943392,
-    "LegacyGameUI001": 34055664,
-    "Source2Client002": 36934144,
-    "Source2ClientConfig001": 36352112,
-    "Source2ClientPrediction001": 33986320,
-    "Source2ClientUI001": 34048848
+    "ClientToolsInfo_001": 33960640,
+    "EmptyWorldService001_Client": 33712880,
+    "GameClientExports001": 33947488,
+    "LegacyGameUI001": 34059392,
+    "Source2Client002": 36937984,
+    "Source2ClientConfig001": 36355936,
+    "Source2ClientPrediction001": 36959648,
+    "Source2ClientUI001": 34052576
   },
   "engine2.dll": {
     "BenchmarkService001": 6367648,
@@ -133,7 +133,7 @@
   "server.dll": {
     "EmptyWorldService001_Server": 29326656,
     "EntitySubclassUtilsV001": 28980096,
-    "NavGameTest001": 30032448,
+    "NavGameTest001": 30032432,
     "ServerToolsInfo_001": 29692472,
     "Source2GameClients001": 29686928,
     "Source2GameDirector001": 31365344,
@@ -151,29 +151,6 @@
   "steamaudio.dll": {
     "SteamAudio001": 2483744
   },
-  "steamclient64.dll": {
-    "IVALIDATE001": 23847096,
-    "SteamClient006": 23835936,
-    "SteamClient007": 23835944,
-    "SteamClient008": 23835952,
-    "SteamClient009": 23835960,
-    "SteamClient010": 23835968,
-    "SteamClient011": 23835976,
-    "SteamClient012": 23835984,
-    "SteamClient013": 23835992,
-    "SteamClient014": 23836000,
-    "SteamClient015": 23836008,
-    "SteamClient016": 23836016,
-    "SteamClient017": 23836024,
-    "SteamClient018": 23836032,
-    "SteamClient019": 23836040,
-    "SteamClient020": 23836048,
-    "SteamClient021": 23836056,
-    "SteamClient022": 23836064,
-    "SteamClient023": 23836072,
-    "p2pvoice002": 21914239,
-    "p2pvoicesingleton002": 23683312
-  },
   "tier0.dll": {
     "TestScriptMgr001": 3794672,
     "VEngineCvar007": 3838896,
@@ -183,18 +160,11 @@
   "v8system.dll": {
     "Source2V8System001": 202544
   },
-  "vconcomm.dll": {
-    "VConComm001": 234944
-  },
   "vphysics2.dll": {
     "VPhysics2_Interface_001": 4251040
   },
   "vscript.dll": {
     "VScriptManager010": 1291280
-  },
-  "vstdlib_s64.dll": {
-    "IVALIDATE001": 457104,
-    "VEngineCvar002": 450672
   },
   "worldrenderer.dll": {
     "WorldRendererMgr001": 2251872
