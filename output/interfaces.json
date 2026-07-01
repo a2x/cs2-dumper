@@ -7,11 +7,11 @@
     "ClientToolsInfo_001": 33968832,
     "EmptyWorldService001_Client": 33721072,
     "GameClientExports001": 33955680,
-    "LegacyGameUI001": 34067584,
-    "Source2Client002": 36946176,
-    "Source2ClientConfig001": 36364160,
-    "Source2ClientPrediction001": 36967840,
-    "Source2ClientUI001": 34060768
+    "LegacyGameUI001": 34067600,
+    "Source2Client002": 36945808,
+    "Source2ClientConfig001": 36363728,
+    "Source2ClientPrediction001": 36967472,
+    "Source2ClientUI001": 34060784
   },
   "engine2.dll": {
     "BenchmarkService001": 6367648,
@@ -105,7 +105,7 @@
     "PanoramaUIClient001": 2712608
   },
   "particles.dll": {
-    "ParticleSystemMgr003": 5546864
+    "ParticleSystemMgr003": 5546928
   },
   "pulse_system.dll": {
     "IPulseSystem_001": 2045600
@@ -131,16 +131,16 @@
     "SchemaSystem_001": 485376
   },
   "server.dll": {
-    "EmptyWorldService001_Server": 29326656,
-    "EntitySubclassUtilsV001": 28980096,
-    "NavGameTest001": 30032432,
-    "ServerToolsInfo_001": 29692472,
-    "Source2GameClients001": 29686928,
-    "Source2GameDirector001": 31365344,
-    "Source2GameEntities001": 29690176,
-    "Source2Server001": 29689744,
-    "Source2ServerConfig001": 32533352,
-    "customnavsystem001": 28853864
+    "EmptyWorldService001_Server": 29330752,
+    "EntitySubclassUtilsV001": 28984192,
+    "NavGameTest001": 30036544,
+    "ServerToolsInfo_001": 29696568,
+    "Source2GameClients001": 29691024,
+    "Source2GameDirector001": 31369440,
+    "Source2GameEntities001": 29694272,
+    "Source2Server001": 29693840,
+    "Source2ServerConfig001": 32537464,
+    "customnavsystem001": 28857960
   },
   "soundsystem.dll": {
     "SoundOpSystem001": 5319088,
@@ -152,16 +152,13 @@
     "SteamAudio001": 2483744
   },
   "tier0.dll": {
-    "TestScriptMgr001": 3794672,
+    "TestScriptMgr001": 3794704,
     "VEngineCvar007": 3838896,
-    "VProcessUtils002": 3794576,
+    "VProcessUtils002": 3794608,
     "VStringTokenSystem001": 3997872
   },
   "v8system.dll": {
     "Source2V8System001": 202544
-  },
-  "vconcomm.dll": {
-    "VConComm001": 234944
   },
   "vphysics2.dll": {
     "VPhysics2_Interface_001": 4251040

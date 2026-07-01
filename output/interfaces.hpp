@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-06-11 01:17:17.911313600 UTC
+// 2026-07-01 03:08:20.812145800 UTC
 
 #pragma once
 
@@ -18,11 +18,11 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x20652C0;
             constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x2028AF0;
             constexpr std::ptrdiff_t GameClientExports001 = 0x2061F60;
-            constexpr std::ptrdiff_t LegacyGameUI001 = 0x207D480;
-            constexpr std::ptrdiff_t Source2Client002 = 0x233C100;
-            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x22ADF80;
-            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x23415A0;
-            constexpr std::ptrdiff_t Source2ClientUI001 = 0x207B9E0;
+            constexpr std::ptrdiff_t LegacyGameUI001 = 0x207D490;
+            constexpr std::ptrdiff_t Source2Client002 = 0x233BF90;
+            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x22ADDD0;
+            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x2341430;
+            constexpr std::ptrdiff_t Source2ClientUI001 = 0x207B9F0;
         }
         // Module: engine2.dll
         namespace engine2_dll {
@@ -131,7 +131,7 @@ namespace cs2_dumper {
         }
         // Module: particles.dll
         namespace particles_dll {
-            constexpr std::ptrdiff_t ParticleSystemMgr003 = 0x54A370;
+            constexpr std::ptrdiff_t ParticleSystemMgr003 = 0x54A3B0;
         }
         // Module: pulse_system.dll
         namespace pulse_system_dll {
@@ -164,16 +164,16 @@ namespace cs2_dumper {
         }
         // Module: server.dll
         namespace server_dll {
-            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1BF7D40;
-            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x1BA3380;
-            constexpr std::ptrdiff_t NavGameTest001 = 0x1CA4230;
-            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x1C51238;
-            constexpr std::ptrdiff_t Source2GameClients001 = 0x1C4FC90;
-            constexpr std::ptrdiff_t Source2GameDirector001 = 0x1DE98E0;
-            constexpr std::ptrdiff_t Source2GameEntities001 = 0x1C50940;
-            constexpr std::ptrdiff_t Source2Server001 = 0x1C50790;
-            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x1F06B68;
-            constexpr std::ptrdiff_t customnavsystem001 = 0x1B84668;
+            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1BF8D40;
+            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x1BA4380;
+            constexpr std::ptrdiff_t NavGameTest001 = 0x1CA5240;
+            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x1C52238;
+            constexpr std::ptrdiff_t Source2GameClients001 = 0x1C50C90;
+            constexpr std::ptrdiff_t Source2GameDirector001 = 0x1DEA8E0;
+            constexpr std::ptrdiff_t Source2GameEntities001 = 0x1C51940;
+            constexpr std::ptrdiff_t Source2Server001 = 0x1C51790;
+            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x1F07B78;
+            constexpr std::ptrdiff_t customnavsystem001 = 0x1B85668;
         }
         // Module: soundsystem.dll
         namespace soundsystem_dll {
@@ -188,18 +188,14 @@ namespace cs2_dumper {
         }
         // Module: tier0.dll
         namespace tier0_dll {
-            constexpr std::ptrdiff_t TestScriptMgr001 = 0x39E6F0;
+            constexpr std::ptrdiff_t TestScriptMgr001 = 0x39E710;
             constexpr std::ptrdiff_t VEngineCvar007 = 0x3A93B0;
-            constexpr std::ptrdiff_t VProcessUtils002 = 0x39E690;
+            constexpr std::ptrdiff_t VProcessUtils002 = 0x39E6B0;
             constexpr std::ptrdiff_t VStringTokenSystem001 = 0x3D00B0;
         }
         // Module: v8system.dll
         namespace v8system_dll {
             constexpr std::ptrdiff_t Source2V8System001 = 0x31730;
-        }
-        // Module: vconcomm.dll
-        namespace vconcomm_dll {
-            constexpr std::ptrdiff_t VConComm001 = 0x395C0;
         }
         // Module: vphysics2.dll
         namespace vphysics2_dll {

@@ -4651,9 +4651,7 @@
       "C_OP_MaxVelocity": {
         "fields": {
           "m_flMaxVelocity": 472,
-          "m_flMinVelocity": 476,
-          "m_nOverrideCP": 480,
-          "m_nOverrideCPField": 484
+          "m_flMinVelocity": 840
         },
         "metadata": [
           {

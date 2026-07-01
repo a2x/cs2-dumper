@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-06-11 01:17:17.911313600 UTC
+// 2026-07-01 03:08:20.812145800 UTC
 
 #pragma once
 
@@ -5438,15 +5438,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nColorBlendType = 0xEF0; // ParticleColorBlendType_t
             }
             // Parent: None
-            // Field count: 4
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace C_OP_MaxVelocity {
-                constexpr std::ptrdiff_t m_flMaxVelocity = 0x1D8; // float32
-                constexpr std::ptrdiff_t m_flMinVelocity = 0x1DC; // float32
-                constexpr std::ptrdiff_t m_nOverrideCP = 0x1E0; // int32
-                constexpr std::ptrdiff_t m_nOverrideCPField = 0x1E4; // int32
+                constexpr std::ptrdiff_t m_flMaxVelocity = 0x1D8; // CPerParticleFloatInput
+                constexpr std::ptrdiff_t m_flMinVelocity = 0x348; // CPerParticleFloatInput
             }
             // Parent: None
             // Field count: 3
