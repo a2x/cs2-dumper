@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-06-11 01:17:17.911313600 UTC
+// 2026-07-01 03:08:20.812145800 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: particles.dll
@@ -5432,15 +5432,13 @@ namespace CS2Dumper.Schemas {
             public const nint m_nColorBlendType = 0xEF0; // ParticleColorBlendType_t
         }
         // Parent: None
-        // Field count: 4
+        // Field count: 2
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class C_OP_MaxVelocity {
-            public const nint m_flMaxVelocity = 0x1D8; // float32
-            public const nint m_flMinVelocity = 0x1DC; // float32
-            public const nint m_nOverrideCP = 0x1E0; // int32
-            public const nint m_nOverrideCPField = 0x1E4; // int32
+            public const nint m_flMaxVelocity = 0x1D8; // CPerParticleFloatInput
+            public const nint m_flMinVelocity = 0x348; // CPerParticleFloatInput
         }
         // Parent: None
         // Field count: 3

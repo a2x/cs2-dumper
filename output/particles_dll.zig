@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-06-11 01:17:17.911313600 UTC
+// 2026-07-01 03:08:20.812145800 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
@@ -5433,15 +5433,13 @@ pub const cs2_dumper = struct {
                 pub const m_nColorBlendType: usize = 0xEF0; // ParticleColorBlendType_t
             };
             // Parent: None
-            // Field count: 4
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const C_OP_MaxVelocity = struct {
-                pub const m_flMaxVelocity: usize = 0x1D8; // float32
-                pub const m_flMinVelocity: usize = 0x1DC; // float32
-                pub const m_nOverrideCP: usize = 0x1E0; // int32
-                pub const m_nOverrideCPField: usize = 0x1E4; // int32
+                pub const m_flMaxVelocity: usize = 0x1D8; // CPerParticleFloatInput
+                pub const m_flMinVelocity: usize = 0x348; // CPerParticleFloatInput
             };
             // Parent: None
             // Field count: 3
