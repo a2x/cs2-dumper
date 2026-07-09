@@ -1,6 +1,6 @@
 // Generated using https://github.com/a2x/cs2-dumper
 // Updated with new offsets
-
+// 2026-07-09 03:35:56.124581200 UTC
 #![allow(non_upper_case_globals, unused)]
 
 pub mod cs2_dumper {
