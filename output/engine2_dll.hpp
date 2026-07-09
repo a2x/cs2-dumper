@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: engine2.dll
-        // Class count: 56
+        // Class count: 58
         // Enum count: 2
         namespace engine2_dll {
             // Alignment: 4
@@ -40,11 +40,17 @@ namespace cs2_dumper {
             }
             // Parent: CEntityComponent
             // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             namespace CScriptComponent {
                 constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
             }
             // Parent: None
             // Field count: 12
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             namespace CEntityIdentity {
                 constexpr std::ptrdiff_t m_nameStringTableIndex = 0x14; // int32
                 constexpr std::ptrdiff_t m_name = 0x18; // CUtlSymbolLarge
@@ -119,7 +125,7 @@ namespace cs2_dumper {
             namespace EventServerBeginSimulate_t {
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -130,8 +136,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pTargetInput = 0x18; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_hActivator = 0x20; // CEntityHandle
                 constexpr std::ptrdiff_t m_hCaller = 0x24; // CEntityHandle
-                constexpr std::ptrdiff_t m_nOutputID = 0x28; // int32
-                constexpr std::ptrdiff_t m_hEntTarget = 0x2C; // CEntityHandle
+                constexpr std::ptrdiff_t m_hEntTarget = 0x28; // CEntityHandle
                 constexpr std::ptrdiff_t m_variantValue = 0x30; // CVariantBase<CVariantDefaultAllocator>
             }
             // Parent: None
@@ -228,8 +233,8 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 2
             namespace CEntityAttributeTable {
-                constexpr std::ptrdiff_t m_Attributes = 0x0; // CUtlOrderedMap<CUtlStringToken,Attribute_t>
-                constexpr std::ptrdiff_t m_Names = 0x28; // CUtlOrderedMap<CUtlStringToken,CUtlString>
+                constexpr std::ptrdiff_t m_Attributes = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
+                constexpr std::ptrdiff_t m_Names = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
             }
             // Parent: None
             // Field count: 0
@@ -253,7 +258,16 @@ namespace cs2_dumper {
             }
             // Parent: None
             // Field count: 0
+            namespace EventBugBug_t {
+            }
+            // Parent: None
+            // Field count: 0
             namespace CVariantDefaultAllocator {
+            }
+            // Parent: None
+            // Field count: 1
+            namespace EventBugBugComplete_t {
+                constexpr std::ptrdiff_t m_pPayload = 0x0; // EventBugBug_t*
             }
             // Parent: None
             // Field count: 0

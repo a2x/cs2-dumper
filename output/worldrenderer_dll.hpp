@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: worldrenderer.dll
-        // Class count: 32
+        // Class count: 33
         // Enum count: 3
         namespace worldrenderer_dll {
             // Alignment: 1
@@ -59,11 +59,17 @@ namespace cs2_dumper {
             }
             // Parent: CEntityComponent
             // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             namespace CScriptComponent {
                 constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
             }
             // Parent: None
             // Field count: 12
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             namespace CEntityIdentity {
                 constexpr std::ptrdiff_t m_nameStringTableIndex = 0x14; // int32
                 constexpr std::ptrdiff_t m_name = 0x18; // CUtlSymbolLarge
@@ -79,17 +85,20 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pNextByClass = 0x68; // CEntityIdentity*
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
             namespace RTProxyInstanceInfo_t {
                 constexpr std::ptrdiff_t m_nFlags = 0x0; // RTProxyInstanceFlags_t
                 constexpr std::ptrdiff_t m_albedoFormat = 0x1; // VertexAlbedoFormat_t
-                constexpr std::ptrdiff_t m_nBLASCount = 0x2; // uint16
-                constexpr std::ptrdiff_t m_nBLASIndex = 0x4; // uint32
-                constexpr std::ptrdiff_t m_nVertexAlbedoByteOffset = 0x8; // uint32
-                constexpr std::ptrdiff_t m_mWorldFromLocal = 0xC; // matrix3x4_t
+                constexpr std::ptrdiff_t m_emissiveFormat = 0x2; // VertexAlbedoFormat_t
+                constexpr std::ptrdiff_t m_nBLASCount = 0x4; // uint16
+                constexpr std::ptrdiff_t m_nBLASIndex = 0x8; // uint32
+                constexpr std::ptrdiff_t m_nVertexAlbedoByteOffset = 0xC; // uint32
+                constexpr std::ptrdiff_t m_nVertexEmissiveByteOffset = 0x10; // uint32
+                constexpr std::ptrdiff_t m_fEmissiveFactor = 0x14; // float32
+                constexpr std::ptrdiff_t m_mWorldFromLocal = 0x18; // matrix3x4_t
             }
             // Parent: None
             // Field count: 1
@@ -152,7 +161,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_BoundsWs = 0x8; // AABB_t
             }
             // Parent: None
-            // Field count: 10
+            // Field count: 11
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -162,6 +171,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLayer = 0x8; // int16
                 constexpr std::ptrdiff_t m_instanceStream = 0xA; // int16
                 constexpr std::ptrdiff_t m_vertexAlbedoStream = 0xC; // int16
+                constexpr std::ptrdiff_t m_vertexEmissiveStream = 0xE; // int16
                 constexpr std::ptrdiff_t m_aggregateMeshes = 0x10; // CUtlVector<AggregateMeshInfo_t>
                 constexpr std::ptrdiff_t m_lodSetups = 0x28; // CUtlVector<AggregateLODSetup_t>
                 constexpr std::ptrdiff_t m_visClusterMembership = 0x40; // CUtlVector<uint16>
@@ -212,6 +222,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vVertexExtentLs = 0x38; // Vector
             }
             // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace AggregateVertexEmissiveStreamOnDiskData_t {
+                constexpr std::ptrdiff_t m_BufferData = 0x0; // CUtlBinaryBlock
+            }
+            // Parent: None
             // Field count: 11
             //
             // Metadata:
@@ -253,7 +271,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 15
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -268,11 +286,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_extraVertexStreams = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
                 constexpr std::ptrdiff_t m_aggregateInstanceStreams = 0xC0; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
                 constexpr std::ptrdiff_t m_vertexAlbedoStreams = 0xD8; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
-                constexpr std::ptrdiff_t m_layerNames = 0xF0; // CUtlVector<CUtlString>
-                constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0x108; // CUtlVector<uint8>
-                constexpr std::ptrdiff_t m_grassFileName = 0x120; // CUtlString
-                constexpr std::ptrdiff_t m_nodeLightingInfo = 0x128; // BakedLightingInfo_t
-                constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x170; // bool
+                constexpr std::ptrdiff_t m_vertexEmissiveStreams = 0xF0; // CUtlVector<AggregateVertexEmissiveStreamOnDiskData_t>
+                constexpr std::ptrdiff_t m_layerNames = 0x108; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_sceneObjectLayerIndices = 0x120; // CUtlVector<uint8>
+                constexpr std::ptrdiff_t m_grassFileName = 0x138; // CUtlString
+                constexpr std::ptrdiff_t m_nodeLightingInfo = 0x140; // BakedLightingInfo_t
+                constexpr std::ptrdiff_t m_bHasBakedGeometryFlag = 0x188; // bool
             }
             // Parent: None
             // Field count: 1
@@ -343,7 +362,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_pData = 0x20; // CUtlVector<uint8>
             }
             // Parent: None
-            // Field count: 12
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -359,7 +378,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nLightProbeVolumePrecomputedHandshake = 0x14; // int32
                 constexpr std::ptrdiff_t m_nInstanceStreamOffset = 0x18; // uint32
                 constexpr std::ptrdiff_t m_nVertexAlbedoStreamOffset = 0x1C; // uint32
-                constexpr std::ptrdiff_t m_instanceStreams = 0x20; // AggregateInstanceStream_t
+                constexpr std::ptrdiff_t m_nVertexEmissiveStreamOffset = 0x20; // uint32
+                constexpr std::ptrdiff_t m_instanceStreams = 0x24; // AggregateInstanceStream_t
+                constexpr std::ptrdiff_t m_fEmissiveFactor = 0x28; // float32
             }
             // Parent: None
             // Field count: 4
@@ -394,7 +415,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_vLinearTintColor = 0x18; // Vector
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -405,6 +426,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_VBData = 0x38; // CUtlBinaryBlock
                 constexpr std::ptrdiff_t m_IBData = 0x48; // CUtlBinaryBlock
                 constexpr std::ptrdiff_t m_InstanceAlbedoData = 0x58; // CUtlBinaryBlock
+                constexpr std::ptrdiff_t m_InstanceEmissiveData = 0x68; // CUtlBinaryBlock
             }
             // Parent: None
             // Field count: 2

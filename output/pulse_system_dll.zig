@@ -1,17 +1,25 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
         // Module: pulse_system.dll
-        // Class count: 99
-        // Enum count: 5
+        // Class count: 104
+        // Enum count: 8
         pub const pulse_system_dll = struct {
             // Alignment: 4
             // Member count: 2
             pub const PulseBestOutflowRules_t = enum(u32) {
                 SORT_BY_NUMBER_OF_VALID_CRITERIA = 0x0,
                 SORT_BY_OUTFLOW_INDEX = 0x1
+            };
+            // Alignment: 4
+            // Member count: 4
+            pub const PulseTestEnumFlags_t = enum(u32) {
+                NONE = 0x0,
+                FIRST = 0x1,
+                SECOND = 0x2,
+                THIRD = 0x4
             };
             // Alignment: 4
             // Member count: 3
@@ -30,6 +38,12 @@ pub const cs2_dumper = struct {
             };
             // Alignment: 4
             // Member count: 2
+            pub const PulseTestEnumFlagsAlt_t = enum(u32) {
+                NONE = 0x0,
+                FIRST = 0x1
+            };
+            // Alignment: 4
+            // Member count: 2
             pub const PulseMethodCallMode_t = enum(u32) {
                 SYNC_WAIT_FOR_COMPLETION = 0x0,
                 ASYNC_FIRE_AND_FORGET = 0x1
@@ -42,6 +56,12 @@ pub const cs2_dumper = struct {
                 RED = 0x2,
                 GREEN = 0x3,
                 BLUE = 0x4
+            };
+            // Alignment: 4
+            // Member count: 2
+            pub const PulseCursorWakePriority_t = enum(u32) {
+                WakeElegantly = 0x0,
+                WakeImmediate = 0x1
             };
             // Parent: None
             // Field count: 0
@@ -60,8 +80,8 @@ pub const cs2_dumper = struct {
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             pub const CPulseCell_WaitForCursorsWithTag = struct {
-                pub const m_bTagSelfWhenComplete: usize = 0x98; // bool
-                pub const m_nDesiredKillPriority: usize = 0x9C; // PulseCursorCancelPriority_t
+                pub const m_bTagSelfWhenComplete: usize = 0x128; // bool
+                pub const m_nDesiredKillPriority: usize = 0x12C; // PulseCursorCancelPriority_t
             };
             // Parent: None
             // Field count: 0
@@ -121,8 +141,8 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CPulseCell_WaitForObservable = struct {
-                pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
-                pub const m_OnTrue: usize = 0xC0; // CPulse_ResumePoint
+                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
+                pub const m_OnTrue: usize = 0x150; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 4
@@ -155,18 +175,32 @@ pub const cs2_dumper = struct {
             };
             // Parent: None
             // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CPulseCell_TestYieldForever = struct {
+            };
+            // Parent: None
+            // Field count: 0
             pub const CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView = struct {
             };
             // Parent: None
-            // Field count: 4
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CPulseCell_TestWaitWithCursorState__InstanceState_t = struct {
+                pub const m_nDummy: usize = 0x0; // int32
+            };
+            // Parent: None
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_FireCursors = struct {
-                pub const m_Outflows: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
-                pub const m_bWaitForChildOutflows: usize = 0x60; // bool
-                pub const m_OnFinished: usize = 0x68; // CPulse_ResumePoint
-                pub const m_OnCanceled: usize = 0xB0; // CPulse_ResumePoint
+                pub const m_Outflows: usize = 0xD8; // CUtlVector<CPulse_OutflowConnection>
+                pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
+                pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 2
@@ -232,6 +266,16 @@ pub const cs2_dumper = struct {
                 pub const m_Gradient: usize = 0x48; // CColorGradient
             };
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            pub const CPulseCell_TestWaitWithAutoTracepoints = struct {
+                pub const m_TracePrefix: usize = 0xD8; // CUtlString
+                pub const m_WakeResume: usize = 0xE0; // CPulse_ResumePoint
+            };
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -289,13 +333,16 @@ pub const cs2_dumper = struct {
                 pub const m_bPenUp: usize = 0xE8; // bool
             };
             // Parent: None
-            // Field count: 2
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_TestWaitWithCursorState__CursorState_t = struct {
                 pub const flWaitValue: usize = 0x0; // float32
-                pub const bFailOnCancel: usize = 0x4; // bool
+                pub const bFail: usize = 0x4; // bool
+                pub const m_hSelfCursor: usize = 0x8; // HYieldedCursor
+                pub const m_hSelfCellInstanceUntyped: usize = 0x14; // HPulseCellBase
+                pub const m_hSelfCellInstance: usize = 0x1C; // HPulseCell<CPulseCell_TestWaitWithCursorState>
             };
             // Parent: None
             // Field count: 2
@@ -320,8 +367,8 @@ pub const cs2_dumper = struct {
             // MGetKV3ClassDefaults
             // MPulseEditorCanvasItemSpecKV3
             pub const CPulseCell_WaitForCursorsWithTagBase = struct {
-                pub const m_nCursorsAllowedToWait: usize = 0x48; // int32
-                pub const m_WaitComplete: usize = 0x50; // CPulse_ResumePoint
+                pub const m_nCursorsAllowedToWait: usize = 0xD8; // int32
+                pub const m_WaitComplete: usize = 0xE0; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 5
@@ -343,9 +390,10 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
+            // MPulseEditorCanvasItemSpecKV3
             pub const CPulseCell_IntervalTimer = struct {
-                pub const m_Completed: usize = 0x48; // CPulse_ResumePoint
-                pub const m_OnInterval: usize = 0x90; // SignatureOutflow_Continue
+                pub const m_Completed: usize = 0xD8; // CPulse_ResumePoint
+                pub const m_OnInterval: usize = 0x120; // SignatureOutflow_Continue
             };
             // Parent: None
             // Field count: 0
@@ -360,7 +408,7 @@ pub const cs2_dumper = struct {
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_BaseLerp = struct {
-                pub const m_WakeResume: usize = 0x48; // CPulse_ResumePoint
+                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 0
@@ -377,11 +425,11 @@ pub const cs2_dumper = struct {
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_Test_MultiOutflow_WithParams_Yielding = struct {
-                pub const m_Out1: usize = 0x48; // SignatureOutflow_Continue
-                pub const m_AsyncChild1: usize = 0x90; // SignatureOutflow_Continue
-                pub const m_AsyncChild2: usize = 0xD8; // SignatureOutflow_Continue
-                pub const m_YieldResume1: usize = 0x120; // SignatureOutflow_Resume
-                pub const m_YieldResume2: usize = 0x168; // SignatureOutflow_Resume
+                pub const m_Out1: usize = 0xD8; // SignatureOutflow_Continue
+                pub const m_AsyncChild1: usize = 0x120; // SignatureOutflow_Continue
+                pub const m_AsyncChild2: usize = 0x168; // SignatureOutflow_Continue
+                pub const m_YieldResume1: usize = 0x1B0; // SignatureOutflow_Resume
+                pub const m_YieldResume2: usize = 0x1F8; // SignatureOutflow_Resume
             };
             // Parent: None
             // Field count: 0
@@ -440,12 +488,7 @@ pub const cs2_dumper = struct {
             // Parent: None
             // Field count: 1
             pub const CPulseGraphInstance_TestDomain_Derived = struct {
-                pub const m_nInstanceValueX: usize = 0x160; // int32
-            };
-            // Parent: None
-            // Field count: 1
-            pub const CPulseCell_WaitForCursorsWithTagBase__CursorState_t = struct {
-                pub const m_TagName: usize = 0x0; // PulseSymbol_t
+                pub const m_nInstanceValueX: usize = 0x158; // int32
             };
             // Parent: None
             // Field count: 0
@@ -457,30 +500,29 @@ pub const cs2_dumper = struct {
             // Parent: None
             // Field count: 9
             pub const CPulseGraphInstance_TestDomain = struct {
-                pub const m_bIsRunningUnitTests: usize = 0x130; // bool
-                pub const m_bExplicitTimeStepping: usize = 0x131; // bool
-                pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0x132; // bool
-                pub const m_bQuietTracepoints: usize = 0x133; // bool
-                pub const m_bExpectingCursorTerminatedDueToMaxInstructions: usize = 0x134; // bool
-                pub const m_nCursorsTerminatedDueToMaxInstructions: usize = 0x138; // int32
-                pub const m_nNextValidateIndex: usize = 0x13C; // int32
-                pub const m_Tracepoints: usize = 0x140; // CUtlVector<CUtlString>
-                pub const m_bTestYesOrNoPath: usize = 0x158; // bool
+                pub const m_bIsRunningUnitTests: usize = 0x128; // bool
+                pub const m_bExplicitTimeStepping: usize = 0x129; // bool
+                pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0x12A; // bool
+                pub const m_bQuietTracepoints: usize = 0x12B; // bool
+                pub const m_bExpectingCursorTerminatedDueToMaxInstructions: usize = 0x12C; // bool
+                pub const m_nCursorsTerminatedDueToMaxInstructions: usize = 0x130; // int32
+                pub const m_nNextValidateIndex: usize = 0x134; // int32
+                pub const m_Tracepoints: usize = 0x138; // CUtlVector<CUtlString>
+                pub const m_bTestYesOrNoPath: usize = 0x150; // bool
             };
             // Parent: None
             // Field count: 0
             pub const SignatureOutflow_Continue = struct {
             };
             // Parent: None
-            // Field count: 4
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_Timeline = struct {
-                pub const m_TimelineEvents: usize = 0x48; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
-                pub const m_bWaitForChildOutflows: usize = 0x60; // bool
-                pub const m_OnFinished: usize = 0x68; // CPulse_ResumePoint
-                pub const m_OnCanceled: usize = 0xB0; // CPulse_ResumePoint
+                pub const m_TimelineEvents: usize = 0xD8; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
+                pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
+                pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 3
@@ -549,11 +591,14 @@ pub const cs2_dumper = struct {
             pub const CPulseCell_Step_DebugLog = struct {
             };
             // Parent: None
-            // Field count: 0
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MCustomFGDMetadata
             pub const CPulseCell_BaseYieldingInflow = struct {
+                pub const m_BaseFlow_OnAfterCancel: usize = 0x48; // CPulse_ResumePoint
+                pub const m_BaseFlow_WhileActive: usize = 0x90; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 1
@@ -615,17 +660,16 @@ pub const cs2_dumper = struct {
             // MPulseEditorHeaderIcon
             // MPulseEditorCanvasItemSpecKV3
             pub const CPulseCell_Inflow_Wait = struct {
-                pub const m_WakeResume: usize = 0x48; // CPulse_ResumePoint
+                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
             };
             // Parent: None
-            // Field count: 3
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_TestWaitWithCursorState = struct {
-                pub const m_WakeResume: usize = 0x48; // CPulse_ResumePoint
-                pub const m_WakeCancel: usize = 0x90; // CPulse_ResumePoint
-                pub const m_WakeFail: usize = 0xD8; // CPulse_ResumePoint
+                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
+                pub const m_WakeFail: usize = 0x120; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 1
@@ -655,7 +699,7 @@ pub const cs2_dumper = struct {
             pub const CPulseCell_BaseValue = struct {
             };
             // Parent: None
-            // Field count: 4
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -663,10 +707,9 @@ pub const cs2_dumper = struct {
             // MPropertyDescription
             // MPulseEditorCanvasItemSpecKV3
             pub const CPulseCell_BooleanSwitchState = struct {
-                pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
-                pub const m_Always: usize = 0xC0; // CPulse_OutflowConnection
-                pub const m_WhenTrue: usize = 0x108; // CPulse_OutflowConnection
-                pub const m_WhenFalse: usize = 0x150; // CPulse_OutflowConnection
+                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
+                pub const m_WhenTrue: usize = 0x150; // CPulse_OutflowConnection
+                pub const m_WhenFalse: usize = 0x198; // CPulse_OutflowConnection
             };
             // Parent: None
             // Field count: 0
@@ -678,7 +721,7 @@ pub const cs2_dumper = struct {
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_Inflow_Yield = struct {
-                pub const m_UnyieldResume: usize = 0x48; // CPulse_ResumePoint
+                pub const m_UnyieldResume: usize = 0xD8; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 0
@@ -691,6 +734,13 @@ pub const cs2_dumper = struct {
             // Field count: 1
             pub const CPulseCell_Unknown = struct {
                 pub const m_UnknownKeys: usize = 0x48; // KeyValues3
+            };
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MPropertyDescription
+            pub const CPulseStringlib = struct {
             };
             // Parent: None
             // Field count: 1
@@ -738,6 +788,16 @@ pub const cs2_dumper = struct {
             pub const CPulseCell_Value_RandomInt = struct {
             };
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            pub const CPulseCell_TestEnums = struct {
+                pub const m_nReferenceColor: usize = 0x48; // PulseTestEnumColor_t
+                pub const m_nReferenceFlags: usize = 0x4C; // PulseTestEnumFlags_t
+            };
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -746,6 +806,13 @@ pub const cs2_dumper = struct {
             // MPulseEditorHeaderText
             pub const CPulseCell_Step_TestDomainEntFire = struct {
                 pub const m_Input: usize = 0x48; // CUtlString
+            };
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MPropertyDescription
+            pub const CPulseEnumlib = struct {
             };
             // Parent: None
             // Field count: 0
@@ -819,21 +886,11 @@ pub const cs2_dumper = struct {
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CPulseCell_Step_CallExternalMethod = struct {
-                pub const m_MethodName: usize = 0x48; // PulseSymbol_t
-                pub const m_nBlackboardIndex: usize = 0x58; // PulseRuntimeBlackboardReferenceIndex_t
-                pub const m_ExpectedArgs: usize = 0x60; // CUtlLeanVector<CPulseRuntimeMethodArg>
-                pub const m_nAsyncCallMode: usize = 0x70; // PulseMethodCallMode_t
-                pub const m_OnFinished: usize = 0x78; // CPulse_ResumePoint
-            };
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub const PulseObservableBoolExpression_t = struct {
-                pub const m_EvaluateConnection: usize = 0x0; // CPulse_OutflowConnection
-                pub const m_DependentObservableVars: usize = 0x48; // CUtlVector<PulseRuntimeVarIndex_t>
-                pub const m_DependentObservableBlackboardReferences: usize = 0x60; // CUtlVector<PulseRuntimeBlackboardReferenceIndex_t>
+                pub const m_MethodName: usize = 0xD8; // PulseSymbol_t
+                pub const m_nBlackboardIndex: usize = 0xE8; // PulseRuntimeBlackboardReferenceIndex_t
+                pub const m_ExpectedArgs: usize = 0xF0; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_nAsyncCallMode: usize = 0x100; // PulseMethodCallMode_t
+                pub const m_OnFinished: usize = 0x108; // CPulse_ResumePoint
             };
             // Parent: None
             // Field count: 1
@@ -849,6 +906,18 @@ pub const cs2_dumper = struct {
             pub const CPulseCell_Step_TestDomainCreateFakeEntity = struct {
             };
             // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CPulseCell_TestYieldWithObservables = struct {
+                pub const m_flWatchForFloatValue: usize = 0xD8; // float32
+                pub const m_LiveFloatValue: usize = 0xE0; // CPulseObservableExpression<float32>
+                pub const m_WatchForStringValue: usize = 0x158; // CUtlString
+                pub const m_LiveStringValue: usize = 0x160; // CPulseObservableExpression<CUtlString>
+                pub const m_WakeResume: usize = 0x1D8; // CPulse_ResumePoint
+            };
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -857,7 +926,7 @@ pub const cs2_dumper = struct {
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             pub const CPulseCell_CursorQueue = struct {
-                pub const m_nCursorsAllowedToRunParallel: usize = 0x98; // int32
+                pub const m_nCursorsAllowedToRunParallel: usize = 0x128; // int32
             };
             // Parent: None
             // Field count: 0

@@ -126,23 +126,6 @@
         ],
         "parent": null
       },
-      "CastSphereSATParams_t": {
-        "fields": {
-          "m_flMaxFraction": 28,
-          "m_flRadius": 24,
-          "m_flScale": 32,
-          "m_pHull": 40,
-          "m_vRayDelta": 12,
-          "m_vRayStart": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CollisionDetailLayerInfo_t": {
         "fields": {
           "m_bIsQueryOnly": 16,
@@ -289,6 +272,19 @@
           "flDistMax": 4,
           "flDistMin": 0,
           "nNode": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "FeBoneMergeLink_t": {
+        "fields": {
+          "m_nChildNode": 4,
+          "m_nParentHash": 0
         },
         "metadata": [
           {
@@ -1187,105 +1183,106 @@
       },
       "PhysFeModelDesc_t": {
         "fields": {
-          "m_AnimStrayRadii": 1128,
+          "m_AnimStrayRadii": 1152,
           "m_AntiTunnelBytecode": 384,
-          "m_AntiTunnelProbes": 432,
-          "m_AntiTunnelTargetNodes": 456,
-          "m_AxialEdges": 504,
-          "m_BoxRigids": 1352,
-          "m_CollisionPlanes": 624,
+          "m_AntiTunnelProbes": 456,
+          "m_AntiTunnelTargetNodes": 480,
+          "m_AxialEdges": 528,
+          "m_BoneMergeLinks": 432,
+          "m_BoxRigids": 1376,
+          "m_CollisionPlanes": 648,
           "m_CtrlHash": 0,
           "m_CtrlName": 24,
-          "m_CtrlOffsets": 552,
-          "m_CtrlOsOffsets": 576,
-          "m_CtrlSoftOffsets": 1200,
+          "m_CtrlOffsets": 576,
+          "m_CtrlOsOffsets": 600,
+          "m_CtrlSoftOffsets": 1224,
           "m_DynKinLinks": 408,
-          "m_DynNodeFriction": 792,
-          "m_DynNodeVertexSet": 1376,
-          "m_DynNodeWindBases": 1640,
-          "m_Effects": 1544,
-          "m_FitMatrices": 1056,
-          "m_FitWeights": 1080,
-          "m_FollowNodes": 600,
-          "m_FreeNodes": 1032,
-          "m_GoalDampedSpringIntegrators": 1272,
+          "m_DynNodeFriction": 816,
+          "m_DynNodeVertexSet": 1400,
+          "m_DynNodeWindBases": 1664,
+          "m_Effects": 1568,
+          "m_FitMatrices": 1080,
+          "m_FitWeights": 1104,
+          "m_FollowNodes": 624,
+          "m_FreeNodes": 1056,
+          "m_GoalDampedSpringIntegrators": 1296,
           "m_HingeLimits": 360,
           "m_InitPose": 288,
-          "m_JiggleBones": 1224,
-          "m_KelagerBends": 1176,
-          "m_LegacyStretchForce": 744,
-          "m_LocalForce": 840,
-          "m_LocalRotation": 816,
-          "m_LockToGoal": 1592,
-          "m_LockToParent": 1568,
-          "m_MorphLayers": 1448,
-          "m_MorphSetData": 1472,
+          "m_JiggleBones": 1248,
+          "m_KelagerBends": 1200,
+          "m_LegacyStretchForce": 768,
+          "m_LocalForce": 864,
+          "m_LocalRotation": 840,
+          "m_LockToGoal": 1616,
+          "m_LockToParent": 1592,
+          "m_MorphLayers": 1472,
+          "m_MorphSetData": 1496,
           "m_NodeBases": 120,
-          "m_NodeCollisionRadii": 768,
-          "m_NodeIntegrator": 648,
-          "m_NodeInvMasses": 528,
-          "m_NodeStrayBoxes": 480,
+          "m_NodeCollisionRadii": 792,
+          "m_NodeIntegrator": 672,
+          "m_NodeInvMasses": 552,
+          "m_NodeStrayBoxes": 504,
           "m_Quads": 168,
-          "m_ReverseOffsets": 1104,
-          "m_RigidColliderPriorities": 1424,
+          "m_ReverseOffsets": 1128,
+          "m_RigidColliderPriorities": 1448,
           "m_Rods": 312,
           "m_Ropes": 96,
-          "m_SDFRigids": 1328,
-          "m_SelfCollisionLayers": 1664,
-          "m_SimdAnimStrayRadii": 1152,
+          "m_SDFRigids": 1352,
+          "m_SelfCollisionLayers": 1688,
+          "m_SimdAnimStrayRadii": 1176,
           "m_SimdNodeBases": 144,
           "m_SimdQuads": 192,
           "m_SimdRods": 240,
           "m_SimdRodsAnim": 264,
-          "m_SimdSpringIntegrator": 696,
+          "m_SimdSpringIntegrator": 720,
           "m_SimdTris": 216,
-          "m_SkelParents": 1616,
-          "m_SourceElems": 1248,
-          "m_SphereRigids": 912,
-          "m_SpringIntegrator": 672,
-          "m_TaperedCapsuleRigids": 888,
-          "m_TaperedCapsuleStretches": 864,
-          "m_TreeChildren": 1008,
-          "m_TreeCollisionMasks": 984,
-          "m_TreeParents": 960,
-          "m_Tris": 1296,
+          "m_SkelParents": 1640,
+          "m_SourceElems": 1272,
+          "m_SphereRigids": 936,
+          "m_SpringIntegrator": 696,
+          "m_TaperedCapsuleRigids": 912,
+          "m_TaperedCapsuleStretches": 888,
+          "m_TreeChildren": 1032,
+          "m_TreeCollisionMasks": 1008,
+          "m_TreeParents": 984,
+          "m_Tris": 1320,
           "m_Twists": 336,
-          "m_VertexMapValues": 1520,
-          "m_VertexMaps": 1496,
-          "m_VertexSetNames": 1400,
-          "m_WorldCollisionNodes": 936,
-          "m_WorldCollisionParams": 720,
-          "m_flAddWorldCollisionRadius": 1740,
-          "m_flDefaultExpAirDrag": 1720,
-          "m_flDefaultExpQuadAirDrag": 1728,
-          "m_flDefaultGravityScale": 1712,
-          "m_flDefaultSurfaceStretch": 1704,
-          "m_flDefaultThreadStretch": 1708,
-          "m_flDefaultTimeDilation": 1692,
-          "m_flDefaultVelAirDrag": 1716,
-          "m_flDefaultVelQuadAirDrag": 1724,
-          "m_flDefaultVolumetricSolveAmount": 1744,
-          "m_flInternalPressure": 1688,
-          "m_flLocalDrag1": 1752,
+          "m_VertexMapValues": 1544,
+          "m_VertexMaps": 1520,
+          "m_VertexSetNames": 1424,
+          "m_WorldCollisionNodes": 960,
+          "m_WorldCollisionParams": 744,
+          "m_flAddWorldCollisionRadius": 1764,
+          "m_flDefaultExpAirDrag": 1744,
+          "m_flDefaultExpQuadAirDrag": 1752,
+          "m_flDefaultGravityScale": 1736,
+          "m_flDefaultSurfaceStretch": 1728,
+          "m_flDefaultThreadStretch": 1732,
+          "m_flDefaultTimeDilation": 1716,
+          "m_flDefaultVelAirDrag": 1740,
+          "m_flDefaultVelQuadAirDrag": 1748,
+          "m_flDefaultVolumetricSolveAmount": 1768,
+          "m_flInternalPressure": 1712,
+          "m_flLocalDrag1": 1776,
           "m_flLocalForce": 56,
           "m_flLocalRotation": 60,
-          "m_flMotionSmoothCDT": 1748,
-          "m_flQuadVelocitySmoothRate": 1736,
-          "m_flRodVelocitySmoothRate": 1732,
-          "m_flWindDrag": 1700,
-          "m_flWindage": 1696,
+          "m_flMotionSmoothCDT": 1772,
+          "m_flQuadVelocitySmoothRate": 1760,
+          "m_flRodVelocitySmoothRate": 1756,
+          "m_flWindDrag": 1724,
+          "m_flWindage": 1720,
           "m_nDynamicNodeFlags": 52,
-          "m_nExtraGoalIterations": 1326,
-          "m_nExtraIterations": 1327,
-          "m_nExtraPressureIterations": 1325,
+          "m_nExtraGoalIterations": 1350,
+          "m_nExtraIterations": 1351,
+          "m_nExtraPressureIterations": 1349,
           "m_nFirstPositionDrivenNode": 70,
           "m_nNodeBaseJiggleboneDependsCount": 86,
           "m_nNodeCount": 64,
           "m_nQuadCount1": 80,
           "m_nQuadCount2": 82,
-          "m_nQuadVelocitySmoothIterations": 1758,
-          "m_nReservedUint8": 1324,
-          "m_nRodVelocitySmoothIterations": 1756,
+          "m_nQuadVelocitySmoothIterations": 1782,
+          "m_nReservedUint8": 1348,
+          "m_nRodVelocitySmoothIterations": 1780,
           "m_nRopeCount": 88,
           "m_nRotLockStaticNodes": 68,
           "m_nSimdQuadCount1": 76,
@@ -1295,8 +1292,8 @@
           "m_nStaticNodeFlags": 48,
           "m_nStaticNodes": 66,
           "m_nTreeDepth": 84,
-          "m_nTriCount1": 1320,
-          "m_nTriCount2": 1322
+          "m_nTriCount1": 1344,
+          "m_nTriCount2": 1346
         },
         "metadata": [
           {
@@ -1404,6 +1401,37 @@
         ],
         "parent": null
       },
+      "RnCompoundDesc_t": {
+        "fields": {
+          "m_Compound": 24
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "RnCompound_t": {
+        "fields": {
+          "m_Bounds": 96,
+          "m_Capsules": 24,
+          "m_Hulls": 48,
+          "m_Meshes": 72,
+          "m_Spheres": 0,
+          "m_flSurfaceArea": 132,
+          "m_flVolume": 136,
+          "m_vOrthographicAreas": 120
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "RnFace_t": {
         "fields": {
           "m_nEdge": 0
@@ -1446,17 +1474,17 @@
       "RnHull_t": {
         "fields": {
           "m_Bounds": 16,
-          "m_Edges": 160,
-          "m_FacePlanes": 208,
-          "m_Faces": 184,
+          "m_Edges": 200,
+          "m_FacePlanes": 136,
+          "m_Faces": 224,
           "m_MassProperties": 52,
-          "m_VertexPositions": 136,
-          "m_Vertices": 112,
+          "m_VertexPositions": 112,
+          "m_Vertices": 176,
           "m_flMaxAngularRadius": 12,
           "m_flSurfaceArea": 104,
           "m_flVolume": 100,
-          "m_nFlags": 232,
-          "m_pRegionSVM": 240,
+          "m_nFlags": 160,
+          "m_pRegionSVM": 168,
           "m_vCentroid": 0,
           "m_vOrthographicAreas": 40
         },
@@ -1634,6 +1662,18 @@
         ],
         "parent": null
       },
+      "VPhysEntityId_t": {
+        "fields": {
+          "m_Id": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "VertexPositionColor_t": {
         "fields": {
           "m_vPosition": 0
@@ -1677,7 +1717,12 @@
           "worldAxisDirection": 12,
           "worldPosition": 0
         },
-        "metadata": [],
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "vphysics_save_cphysicsbody_t": {

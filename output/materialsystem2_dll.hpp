@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: materialsystem2.dll
-        // Class count: 14
+        // Class count: 15
         // Enum count: 5
         namespace materialsystem2_dll {
             // Alignment: 4
@@ -74,7 +74,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_value = 0x8; // CUtlString
             }
             // Parent: None
-            // Field count: 13
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -92,6 +92,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_bHasColorCorrection = 0x120; // bool
                 constexpr std::ptrdiff_t m_bHasFogScatteringParams = 0x121; // bool
                 constexpr std::ptrdiff_t m_fogScatteringParams = 0x124; // PostProcessingFogScatteringParameters_t
+                constexpr std::ptrdiff_t m_bHasLocalExposureParams = 0x144; // bool
+                constexpr std::ptrdiff_t m_localExposureParams = 0x148; // PostProcessingLocalExposureParameters_t
             }
             // Parent: None
             // Field count: 1
@@ -149,7 +151,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flMaxHighlightLum = 0x38; // float32
             }
             // Parent: None
-            // Field count: 5
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -159,6 +161,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_fCubemapScale = 0x8; // float32
                 constexpr std::ptrdiff_t m_fVolumetricScale = 0xC; // float32
                 constexpr std::ptrdiff_t m_fGradientScale = 0x10; // float32
+                constexpr std::ptrdiff_t m_fWaterScale = 0x14; // float32
+                constexpr std::ptrdiff_t m_fWaterDensity = 0x18; // float32
+                constexpr std::ptrdiff_t m_fWaterDepthBlurRadius = 0x1C; // float32
             }
             // Parent: None
             // Field count: 1
@@ -219,6 +224,17 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace MaterialParamFloat_t {
                 constexpr std::ptrdiff_t m_flValue = 0x8; // float32
+            }
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace PostProcessingLocalExposureParameters_t {
+                constexpr std::ptrdiff_t m_fShadowOffsetEV = 0x0; // float32
+                constexpr std::ptrdiff_t m_fHighlightOffsetEV = 0x4; // float32
+                constexpr std::ptrdiff_t m_fSigma = 0x8; // float32
+                constexpr std::ptrdiff_t m_fBoostLocalContrast = 0xC; // float32
             }
             // Parent: None
             // Field count: 1

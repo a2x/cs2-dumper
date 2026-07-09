@@ -40,7 +40,7 @@
       },
       "CPulseCell_BaseLerp": {
         "fields": {
-          "m_WakeResume": 72
+          "m_WakeResume": 216
         },
         "metadata": [
           {
@@ -98,10 +98,17 @@
         "parent": null
       },
       "CPulseCell_BaseYieldingInflow": {
-        "fields": {},
+        "fields": {
+          "m_BaseFlow_OnAfterCancel": 72,
+          "m_BaseFlow_WhileActive": 144
+        },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MCustomFGDMetadata",
             "type": "Unknown"
           }
         ],
@@ -109,10 +116,9 @@
       },
       "CPulseCell_BooleanSwitchState": {
         "fields": {
-          "m_Always": 192,
-          "m_Condition": 72,
-          "m_WhenFalse": 336,
-          "m_WhenTrue": 264
+          "m_Condition": 216,
+          "m_WhenFalse": 408,
+          "m_WhenTrue": 336
         },
         "metadata": [
           {
@@ -136,7 +142,7 @@
       },
       "CPulseCell_CursorQueue": {
         "fields": {
-          "m_nCursorsAllowedToRunParallel": 152
+          "m_nCursorsAllowedToRunParallel": 296
         },
         "metadata": [
           {
@@ -215,10 +221,9 @@
       },
       "CPulseCell_FireCursors": {
         "fields": {
-          "m_OnCanceled": 176,
-          "m_OnFinished": 104,
-          "m_Outflows": 72,
-          "m_bWaitForChildOutflows": 96
+          "m_OnFinished": 248,
+          "m_Outflows": 216,
+          "m_bWaitForChildOutflows": 240
         },
         "metadata": [
           {
@@ -310,7 +315,7 @@
       },
       "CPulseCell_Inflow_Wait": {
         "fields": {
-          "m_WakeResume": 72
+          "m_WakeResume": 216
         },
         "metadata": [
           {
@@ -338,7 +343,7 @@
       },
       "CPulseCell_Inflow_Yield": {
         "fields": {
-          "m_UnyieldResume": 72
+          "m_UnyieldResume": 216
         },
         "metadata": [
           {
@@ -365,8 +370,8 @@
       },
       "CPulseCell_IntervalTimer": {
         "fields": {
-          "m_Completed": 72,
-          "m_OnInterval": 144
+          "m_Completed": 216,
+          "m_OnInterval": 288
         },
         "metadata": [
           {
@@ -383,6 +388,10 @@
           },
           {
             "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorCanvasItemSpecKV3",
             "type": "Unknown"
           }
         ],
@@ -594,11 +603,11 @@
       },
       "CPulseCell_Step_CallExternalMethod": {
         "fields": {
-          "m_ExpectedArgs": 96,
-          "m_MethodName": 72,
-          "m_OnFinished": 120,
-          "m_nAsyncCallMode": 112,
-          "m_nBlackboardIndex": 88
+          "m_ExpectedArgs": 240,
+          "m_MethodName": 216,
+          "m_OnFinished": 264,
+          "m_nAsyncCallMode": 256,
+          "m_nBlackboardIndex": 232
         },
         "metadata": [
           {
@@ -692,11 +701,44 @@
         ],
         "parent": null
       },
+      "CPulseCell_TestEnums": {
+        "fields": {
+          "m_nReferenceColor": 72,
+          "m_nReferenceFlags": 76
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_TestWaitWithAutoTracepoints": {
+        "fields": {
+          "m_TracePrefix": 216,
+          "m_WakeResume": 224
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPropertyFriendlyName",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulseCell_TestWaitWithCursorState": {
         "fields": {
-          "m_WakeCancel": 144,
-          "m_WakeFail": 216,
-          "m_WakeResume": 72
+          "m_WakeFail": 288,
+          "m_WakeResume": 216
         },
         "metadata": [
           {
@@ -708,8 +750,49 @@
       },
       "CPulseCell_TestWaitWithCursorState__CursorState_t": {
         "fields": {
-          "bFailOnCancel": 4,
-          "flWaitValue": 0
+          "bFail": 4,
+          "flWaitValue": 0,
+          "m_hSelfCellInstance": 28,
+          "m_hSelfCellInstanceUntyped": 20,
+          "m_hSelfCursor": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_TestWaitWithCursorState__InstanceState_t": {
+        "fields": {
+          "m_nDummy": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_TestYieldForever": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_TestYieldWithObservables": {
+        "fields": {
+          "m_LiveFloatValue": 224,
+          "m_LiveStringValue": 352,
+          "m_WakeResume": 472,
+          "m_WatchForStringValue": 344,
+          "m_flWatchForFloatValue": 216
         },
         "metadata": [
           {
@@ -754,11 +837,11 @@
       },
       "CPulseCell_Test_MultiOutflow_WithParams_Yielding": {
         "fields": {
-          "m_AsyncChild1": 144,
-          "m_AsyncChild2": 216,
-          "m_Out1": 72,
-          "m_YieldResume1": 288,
-          "m_YieldResume2": 360
+          "m_AsyncChild1": 288,
+          "m_AsyncChild2": 360,
+          "m_Out1": 216,
+          "m_YieldResume1": 432,
+          "m_YieldResume2": 504
         },
         "metadata": [
           {
@@ -792,10 +875,9 @@
       },
       "CPulseCell_Timeline": {
         "fields": {
-          "m_OnCanceled": 176,
-          "m_OnFinished": 104,
-          "m_TimelineEvents": 72,
-          "m_bWaitForChildOutflows": 96
+          "m_OnFinished": 248,
+          "m_TimelineEvents": 216,
+          "m_bWaitForChildOutflows": 240
         },
         "metadata": [
           {
@@ -949,8 +1031,8 @@
       },
       "CPulseCell_WaitForCursorsWithTag": {
         "fields": {
-          "m_bTagSelfWhenComplete": 152,
-          "m_nDesiredKillPriority": 156
+          "m_bTagSelfWhenComplete": 296,
+          "m_nDesiredKillPriority": 300
         },
         "metadata": [
           {
@@ -974,8 +1056,8 @@
       },
       "CPulseCell_WaitForCursorsWithTagBase": {
         "fields": {
-          "m_WaitComplete": 80,
-          "m_nCursorsAllowedToWait": 72
+          "m_WaitComplete": 224,
+          "m_nCursorsAllowedToWait": 216
         },
         "metadata": [
           {
@@ -989,17 +1071,10 @@
         ],
         "parent": null
       },
-      "CPulseCell_WaitForCursorsWithTagBase__CursorState_t": {
-        "fields": {
-          "m_TagName": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
       "CPulseCell_WaitForObservable": {
         "fields": {
-          "m_Condition": 72,
-          "m_OnTrue": 192
+          "m_Condition": 216,
+          "m_OnTrue": 336
         },
         "metadata": [
           {
@@ -1022,6 +1097,16 @@
         "parent": null
       },
       "CPulseCursorFuncs": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseEnumlib": {
         "fields": {},
         "metadata": [
           {
@@ -1063,22 +1148,22 @@
       },
       "CPulseGraphInstance_TestDomain": {
         "fields": {
-          "m_Tracepoints": 320,
-          "m_bExpectingCursorTerminatedDueToMaxInstructions": 308,
-          "m_bExpectingToDestroyWithYieldedCursors": 306,
-          "m_bExplicitTimeStepping": 305,
-          "m_bIsRunningUnitTests": 304,
-          "m_bQuietTracepoints": 307,
-          "m_bTestYesOrNoPath": 344,
-          "m_nCursorsTerminatedDueToMaxInstructions": 312,
-          "m_nNextValidateIndex": 316
+          "m_Tracepoints": 312,
+          "m_bExpectingCursorTerminatedDueToMaxInstructions": 300,
+          "m_bExpectingToDestroyWithYieldedCursors": 298,
+          "m_bExplicitTimeStepping": 297,
+          "m_bIsRunningUnitTests": 296,
+          "m_bQuietTracepoints": 299,
+          "m_bTestYesOrNoPath": 336,
+          "m_nCursorsTerminatedDueToMaxInstructions": 304,
+          "m_nNextValidateIndex": 308
         },
         "metadata": [],
         "parent": null
       },
       "CPulseGraphInstance_TestDomain_Derived": {
         "fields": {
-          "m_nInstanceValueX": 352
+          "m_nInstanceValueX": 344
         },
         "metadata": [],
         "parent": null
@@ -1099,6 +1184,16 @@
         "parent": null
       },
       "CPulseMathlib": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseStringlib": {
         "fields": {},
         "metadata": [
           {
@@ -1264,20 +1359,6 @@
         ],
         "parent": null
       },
-      "PulseObservableBoolExpression_t": {
-        "fields": {
-          "m_DependentObservableBlackboardReferences": 96,
-          "m_DependentObservableVars": 72,
-          "m_EvaluateConnection": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "PulseSelectorOutflowList_t": {
         "fields": {
           "m_Outflows": 0
@@ -1332,6 +1413,14 @@
         },
         "type": "uint32"
       },
+      "PulseCursorWakePriority_t": {
+        "alignment": 4,
+        "members": {
+          "WakeElegantly": 0,
+          "WakeImmediate": 1
+        },
+        "type": "uint32"
+      },
       "PulseMethodCallMode_t": {
         "alignment": 4,
         "members": {
@@ -1348,6 +1437,24 @@
           "GREEN": 3,
           "RED": 2,
           "WHITE": 1
+        },
+        "type": "uint32"
+      },
+      "PulseTestEnumFlagsAlt_t": {
+        "alignment": 4,
+        "members": {
+          "FIRST": 1,
+          "NONE": 0
+        },
+        "type": "uint32"
+      },
+      "PulseTestEnumFlags_t": {
+        "alignment": 4,
+        "members": {
+          "FIRST": 1,
+          "NONE": 0,
+          "SECOND": 2,
+          "THIRD": 4
         },
         "type": "uint32"
       },

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: steamaudio.dll
@@ -106,7 +106,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_probes = 0x10; // CSteamAudioProbeData
             public const nint m_vecPathingRatio = 0x18; // CUtlVector<float32>
             public const nint m_vecPathingDeviation = 0x30; // CUtlVector<float32>
-            public const nint m_vecReflectionRatio = 0x48; // CUtlVector<float32>
+            public const nint m_vecReflectionEnergy = 0x48; // CUtlVector<float32>
         }
         // Parent: None
         // Field count: 12

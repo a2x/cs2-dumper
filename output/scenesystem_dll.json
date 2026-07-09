@@ -148,6 +148,15 @@
         },
         "type": "uint8"
       },
+      "ESceneObjectMeshletVisualization": {
+        "alignment": 4,
+        "members": {
+          "SCENEOBJECT_MESHLET_VIS_CULLED": 2,
+          "SCENEOBJECT_MESHLET_VIS_MESHLET": 1,
+          "SCENEOBJECT_MESHLET_VIS_NONE": 0
+        },
+        "type": "uint32"
+      },
       "ESceneObjectVisualization": {
         "alignment": 4,
         "members": {

@@ -51,7 +51,7 @@
           "m_settings": 0,
           "m_vecPathingDeviation": 48,
           "m_vecPathingRatio": 24,
-          "m_vecReflectionRatio": 72
+          "m_vecReflectionEnergy": 72
         },
         "metadata": [
           {

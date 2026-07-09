@@ -84,11 +84,12 @@
       },
       "CBaseTrailRenderer": {
         "fields": {
-          "m_bClampV": 12512,
+          "m_bClampV": 12880,
           "m_flEndFadeSize": 12144,
           "m_flMaxSize": 11772,
           "m_flMinSize": 11768,
           "m_flStartFadeSize": 11776,
+          "m_flSubPixelAAScale": 12512,
           "m_nOrientationControlPoint": 11764,
           "m_nOrientationType": 11760
         },
@@ -438,7 +439,7 @@
       },
       "CPulseCell_BaseLerp": {
         "fields": {
-          "m_WakeResume": 72
+          "m_WakeResume": 216
         },
         "metadata": [
           {
@@ -496,10 +497,17 @@
         "parent": null
       },
       "CPulseCell_BaseYieldingInflow": {
-        "fields": {},
+        "fields": {
+          "m_BaseFlow_OnAfterCancel": 72,
+          "m_BaseFlow_WhileActive": 144
+        },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          },
+          {
+            "name": "MCustomFGDMetadata",
             "type": "Unknown"
           }
         ],
@@ -507,10 +515,9 @@
       },
       "CPulseCell_BooleanSwitchState": {
         "fields": {
-          "m_Always": 192,
-          "m_Condition": 72,
-          "m_WhenFalse": 336,
-          "m_WhenTrue": 264
+          "m_Condition": 216,
+          "m_WhenFalse": 408,
+          "m_WhenTrue": 336
         },
         "metadata": [
           {
@@ -534,7 +541,7 @@
       },
       "CPulseCell_CursorQueue": {
         "fields": {
-          "m_nCursorsAllowedToRunParallel": 152
+          "m_nCursorsAllowedToRunParallel": 296
         },
         "metadata": [
           {
@@ -558,10 +565,9 @@
       },
       "CPulseCell_FireCursors": {
         "fields": {
-          "m_OnCanceled": 176,
-          "m_OnFinished": 104,
-          "m_Outflows": 72,
-          "m_bWaitForChildOutflows": 96
+          "m_OnFinished": 248,
+          "m_Outflows": 216,
+          "m_bWaitForChildOutflows": 240
         },
         "metadata": [
           {
@@ -653,7 +659,7 @@
       },
       "CPulseCell_Inflow_Wait": {
         "fields": {
-          "m_WakeResume": 72
+          "m_WakeResume": 216
         },
         "metadata": [
           {
@@ -681,7 +687,7 @@
       },
       "CPulseCell_Inflow_Yield": {
         "fields": {
-          "m_UnyieldResume": 72
+          "m_UnyieldResume": 216
         },
         "metadata": [
           {
@@ -708,8 +714,8 @@
       },
       "CPulseCell_IntervalTimer": {
         "fields": {
-          "m_Completed": 72,
-          "m_OnInterval": 144
+          "m_Completed": 216,
+          "m_OnInterval": 288
         },
         "metadata": [
           {
@@ -726,6 +732,10 @@
           },
           {
             "name": "MPulseEditorHeaderIcon",
+            "type": "Unknown"
+          },
+          {
+            "name": "MPulseEditorCanvasItemSpecKV3",
             "type": "Unknown"
           }
         ],
@@ -895,11 +905,11 @@
       },
       "CPulseCell_Step_CallExternalMethod": {
         "fields": {
-          "m_ExpectedArgs": 96,
-          "m_MethodName": 72,
-          "m_OnFinished": 120,
-          "m_nAsyncCallMode": 112,
-          "m_nBlackboardIndex": 88
+          "m_ExpectedArgs": 240,
+          "m_MethodName": 216,
+          "m_OnFinished": 264,
+          "m_nAsyncCallMode": 256,
+          "m_nBlackboardIndex": 232
         },
         "metadata": [
           {
@@ -933,10 +943,9 @@
       },
       "CPulseCell_Timeline": {
         "fields": {
-          "m_OnCanceled": 176,
-          "m_OnFinished": 104,
-          "m_TimelineEvents": 72,
-          "m_bWaitForChildOutflows": 96
+          "m_OnFinished": 248,
+          "m_TimelineEvents": 216,
+          "m_bWaitForChildOutflows": 240
         },
         "metadata": [
           {
@@ -1044,8 +1053,8 @@
       },
       "CPulseCell_WaitForCursorsWithTag": {
         "fields": {
-          "m_bTagSelfWhenComplete": 152,
-          "m_nDesiredKillPriority": 156
+          "m_bTagSelfWhenComplete": 296,
+          "m_nDesiredKillPriority": 300
         },
         "metadata": [
           {
@@ -1069,8 +1078,8 @@
       },
       "CPulseCell_WaitForCursorsWithTagBase": {
         "fields": {
-          "m_WaitComplete": 80,
-          "m_nCursorsAllowedToWait": 72
+          "m_WaitComplete": 224,
+          "m_nCursorsAllowedToWait": 216
         },
         "metadata": [
           {
@@ -1084,17 +1093,10 @@
         ],
         "parent": null
       },
-      "CPulseCell_WaitForCursorsWithTagBase__CursorState_t": {
-        "fields": {
-          "m_TagName": 0
-        },
-        "metadata": [],
-        "parent": null
-      },
       "CPulseCell_WaitForObservable": {
         "fields": {
-          "m_Condition": 72,
-          "m_OnTrue": 192
+          "m_Condition": 216,
+          "m_OnTrue": 336
         },
         "metadata": [
           {
@@ -1117,6 +1119,16 @@
         "parent": null
       },
       "CPulseCursorFuncs": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseEnumlib": {
         "fields": {},
         "metadata": [
           {
@@ -1157,6 +1169,16 @@
         "parent": null
       },
       "CPulseMathlib": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MPropertyDescription",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseStringlib": {
         "fields": {},
         "metadata": [
           {
@@ -3007,6 +3029,20 @@
         ],
         "parent": null
       },
+      "C_INIT_SkyVisCull": {
+        "fields": {
+          "m_bCullOnSky": 2204,
+          "m_nTraceSet": 2200,
+          "m_vecTestDir": 480
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "C_INIT_StatusEffect": {
         "fields": {
           "m_flAmbientScale": 508,
@@ -3146,11 +3182,12 @@
       },
       "C_OP_AttractToControlPoint": {
         "fields": {
-          "m_TransformInput": 880,
-          "m_bApplyMinForce": 1352,
-          "m_fFalloffPower": 872,
+          "m_TransformInput": 1248,
+          "m_bApplyMinForce": 1720,
+          "m_fFalloffPower": 1240,
           "m_fForceAmount": 504,
-          "m_fForceAmountMin": 984,
+          "m_fForceAmountMin": 1352,
+          "m_fMinimumDistance": 872,
           "m_vecComponentScale": 488
         },
         "metadata": [
@@ -3336,6 +3373,8 @@
           "m_nForcedSimId": 1320,
           "m_nForcedStatusEffects": 1328,
           "m_nMaxParticleCount": 1308,
+          "m_nNoCollisionAttribute": 1332,
+          "m_nZeroGravityAttribute": 1336,
           "m_strPhysicsType": 552
         },
         "metadata": [
@@ -4194,9 +4233,11 @@
       },
       "C_OP_GameLiquidSpill": {
         "fields": {
+          "m_bCheckExposedToSky": 1656,
           "m_flExpirationTime": 920,
           "m_flLiquidContentsField": 552,
-          "m_nAmountAttribute": 1288
+          "m_flRadius": 1288,
+          "m_nAmountAttribute": 1660
         },
         "metadata": [
           {
@@ -4471,18 +4512,23 @@
       },
       "C_OP_LightningSnapshotGenerator": {
         "fields": {
-          "m_flBranchTwist": 3072,
-          "m_flDedicatedPool": 4184,
+          "m_bScaleBranchDistance": 3440,
+          "m_bScaleBranchOffset": 3816,
+          "m_flBranchDistanceScale": 3448,
+          "m_flBranchOffsetScale": 3824,
+          "m_flBranchTwist": 4192,
+          "m_flDedicatedPool": 5304,
           "m_flOffset": 864,
           "m_flOffsetDecay": 1232,
-          "m_flRadiusEnd": 3816,
-          "m_flRadiusStart": 3448,
+          "m_flRadiusEnd": 4936,
+          "m_flRadiusStart": 4568,
           "m_flRecalcRate": 1600,
+          "m_flRecursionSplitScale": 3072,
           "m_flSegments": 496,
           "m_flSplitRate": 2704,
           "m_flUVOffset": 2336,
           "m_flUVScale": 1968,
-          "m_nBranchBehavior": 3440,
+          "m_nBranchBehavior": 4560,
           "m_nCPEndPnt": 488,
           "m_nCPSnapshot": 480,
           "m_nCPStartPnt": 484
@@ -4868,20 +4914,21 @@
       },
       "C_OP_MultiSegmentDisplaySnapshotGenerator": {
         "fields": {
-          "m_SpecialCharList": 872,
-          "m_bPrependEmpty": 5808,
-          "m_flDigitsAfterDecimal": 5816,
-          "m_flMaxCount": 5440,
-          "m_flMinCount": 5072,
-          "m_flRadius": 4336,
-          "m_flSpacing": 4704,
+          "m_SpecialCharList": 1240,
+          "m_bPrependEmpty": 6176,
+          "m_flDigitsAfterDecimal": 6184,
+          "m_flMaxCount": 5808,
+          "m_flMinCount": 5440,
+          "m_flRadius": 4704,
+          "m_flScollOffset": 872,
+          "m_flSpacing": 5072,
           "m_flValue": 504,
           "m_nCPSnapshot": 480,
           "m_nInputType": 488,
           "m_nSegCount": 484,
           "m_strDefaultString": 496,
-          "m_vecColorLit": 2616,
-          "m_vecColorUnlit": 896
+          "m_vecColorLit": 2984,
+          "m_vecColorUnlit": 1264
         },
         "metadata": [
           {
@@ -4976,9 +5023,10 @@
       },
       "C_OP_OrientTo2dDirection": {
         "fields": {
-          "m_flRotOffset": 472,
-          "m_flSpinStrength": 476,
-          "m_nFieldOutput": 480
+          "m_flRotOffset": 2192,
+          "m_flSpinStrength": 2196,
+          "m_nFieldOutput": 2200,
+          "m_vecInput": 472
         },
         "metadata": [
           {
@@ -5252,6 +5300,7 @@
       },
       "C_OP_PointVectorAtNextParticle": {
         "fields": {
+          "m_bPrevious": 848,
           "m_flInterpolation": 480,
           "m_nFieldOutput": 472
         },
@@ -6248,6 +6297,7 @@
           "m_MaterialFloatVars": 5376,
           "m_MaterialVecVars": 5408,
           "m_bDrawCableCaps": 5240,
+          "m_bOnlyRenderInEffectsBloomPass": 5269,
           "m_flAlphaScale": 920,
           "m_flCapOffsetAmount": 5248,
           "m_flCapRoundness": 5244,
@@ -6362,16 +6412,26 @@
       },
       "C_OP_RenderLightBeam": {
         "fields": {
-          "m_bCastShadows": 2656,
-          "m_bDynamicBounce": 2657,
-          "m_flBounceScale": 2664,
-          "m_flBrightnessLumensPerMeter": 2288,
-          "m_flRange": 3400,
-          "m_flSkirt": 3032,
-          "m_flThickness": 3768,
+          "m_bCastShadows": 3400,
+          "m_bDebugOrientation": 8080,
+          "m_bDynamicBounce": 3401,
+          "m_flBounceScale": 3408,
+          "m_flBrightnessLumensPerMeter": 2664,
+          "m_flFogContribution": 7344,
+          "m_flInnerConeAngle": 4880,
+          "m_flLightStyleTime": 2296,
+          "m_flNumberOfLightsToCreate": 3032,
+          "m_flOuterConeAngle": 5248,
+          "m_flRange": 4144,
+          "m_flRenderFilter": 7712,
+          "m_flSkirt": 3776,
+          "m_flThickness": 4512,
           "m_nColorBlendType": 2280,
+          "m_nFogLightingMode": 7336,
           "m_nMaxAllowed": 552,
-          "m_vColorBlend": 560
+          "m_strLightStyle": 2288,
+          "m_vColorBlend": 560,
+          "m_vecConeRotationOffset": 5616
         },
         "metadata": [
           {
@@ -6453,6 +6513,7 @@
           "m_bUseMixedResolutionRendering": 554,
           "m_flAlphaScale": 8896,
           "m_flAnimationRate": 5784,
+          "m_flLightStyleTime": 11376,
           "m_flManualModelSelection": 7528,
           "m_flRadiusScale": 8528,
           "m_flRenderFilter": 7160,
@@ -6471,6 +6532,7 @@
           "m_nSkin": 6768,
           "m_nSubModelField": 588,
           "m_nSubModelFieldType": 8256,
+          "m_strLightStyle": 11368,
           "m_szRenderAttribute": 8266,
           "m_vecColorScale": 9640,
           "m_vecComponentScale": 4048,
@@ -6487,24 +6549,26 @@
       },
       "C_OP_RenderOmni2Light": {
         "fields": {
-          "m_bCastShadows": 3024,
-          "m_bDynamicBounce": 3025,
-          "m_bFog": 3400,
-          "m_bSphericalCookie": 5624,
-          "m_flBounceScale": 3032,
-          "m_flBrightnessCandelas": 2656,
-          "m_flBrightnessLumens": 2288,
-          "m_flFogScale": 3408,
-          "m_flInnerConeAngle": 4880,
-          "m_flLuminaireRadius": 3776,
-          "m_flOuterConeAngle": 5248,
-          "m_flRange": 4512,
-          "m_flSkirt": 4144,
-          "m_hLightCookie": 5616,
-          "m_nBrightnessUnit": 2284,
+          "m_bCastShadows": 3408,
+          "m_bDynamicBounce": 3409,
+          "m_bFog": 3784,
+          "m_bSphericalCookie": 6008,
+          "m_flBounceScale": 3416,
+          "m_flBrightnessCandelas": 3040,
+          "m_flBrightnessLumens": 2672,
+          "m_flFogScale": 3792,
+          "m_flInnerConeAngle": 5264,
+          "m_flLightStyleTime": 2296,
+          "m_flLuminaireRadius": 4160,
+          "m_flOuterConeAngle": 5632,
+          "m_flRange": 4896,
+          "m_flSkirt": 4528,
+          "m_hLightCookie": 6000,
+          "m_nBrightnessUnit": 2664,
           "m_nColorBlendType": 2280,
           "m_nLightType": 552,
           "m_nMaxAllowed": 556,
+          "m_strLightStyle": 2288,
           "m_vColorBlend": 560
         },
         "metadata": [
@@ -6572,38 +6636,39 @@
       },
       "C_OP_RenderRopes": {
         "fields": {
-          "m_bClampV": 12916,
-          "m_bClosedLoop": 12953,
-          "m_bDrawAsOpaque": 12972,
+          "m_bClampV": 13284,
+          "m_bClosedLoop": 13321,
+          "m_bDrawAsOpaque": 13340,
           "m_bEnableFadingAndClamping": 11760,
-          "m_bGenerateNormals": 12973,
-          "m_bReverseOrder": 12952,
-          "m_bSortBySegmentID": 12960,
-          "m_bUseScalarForTextureCoordinate": 12941,
+          "m_bGenerateNormals": 13341,
+          "m_bReverseOrder": 13320,
+          "m_bSortBySegmentID": 13328,
+          "m_bUseScalarForTextureCoordinate": 13309,
           "m_flEndFadeDot": 11784,
           "m_flEndFadeSize": 11776,
           "m_flMaxSize": 11768,
           "m_flMinSize": 11764,
-          "m_flRadiusTaper": 11788,
-          "m_flScalarAttributeTextureCoordScale": 12948,
-          "m_flScaleVOffsetByControlPointDistance": 12936,
-          "m_flScaleVScrollByControlPointDistance": 12932,
-          "m_flScaleVSizeByControlPointDistance": 12928,
+          "m_flRadiusTaper": 12160,
+          "m_flScalarAttributeTextureCoordScale": 13316,
+          "m_flScaleVOffsetByControlPointDistance": 13304,
+          "m_flScaleVScrollByControlPointDistance": 13300,
+          "m_flScaleVSizeByControlPointDistance": 13296,
           "m_flStartFadeDot": 11780,
           "m_flStartFadeSize": 11772,
-          "m_flTessScale": 11800,
-          "m_flTextureVOffset": 12544,
-          "m_flTextureVScrollRate": 12176,
-          "m_flTextureVWorldSize": 11808,
-          "m_nMaxTesselation": 11796,
-          "m_nMinTesselation": 11792,
-          "m_nOrientationType": 12964,
-          "m_nScalarFieldForTextureCoordinate": 12944,
-          "m_nScaleCP1": 12920,
-          "m_nScaleCP2": 12924,
-          "m_nSplitField": 12956,
-          "m_nTextureVParamsCP": 12912,
-          "m_nVectorFieldForOrientation": 12968
+          "m_flSubPixelAAScale": 11792,
+          "m_flTessScale": 12172,
+          "m_flTextureVOffset": 12912,
+          "m_flTextureVScrollRate": 12544,
+          "m_flTextureVWorldSize": 12176,
+          "m_nMaxTesselation": 12168,
+          "m_nMinTesselation": 12164,
+          "m_nOrientationType": 13332,
+          "m_nScalarFieldForTextureCoordinate": 13312,
+          "m_nScaleCP1": 13288,
+          "m_nScaleCP2": 13292,
+          "m_nSplitField": 13324,
+          "m_nTextureVParamsCP": 13280,
+          "m_nVectorFieldForOrientation": 13336
         },
         "metadata": [
           {
@@ -6698,7 +6763,6 @@
           "m_bSequenceNumbersAreRawSequenceIndices": 12128,
           "m_bSoftEdges": 13993,
           "m_bUseYawWithNormalAligned": 12140,
-          "m_flAlphaAdjustWithSizeAdjust": 12880,
           "m_flEdgeSoftnessEnd": 14000,
           "m_flEdgeSoftnessStart": 13996,
           "m_flEndFadeDot": 13988,
@@ -6714,6 +6778,7 @@
           "m_flShadowDensity": 16500,
           "m_flStartFadeDot": 13984,
           "m_flStartFadeSize": 13248,
+          "m_flSubPixelAAScale": 12880,
           "m_nLightingMode": 14032,
           "m_nOrientationControlPoint": 12136,
           "m_nOrientationType": 12132,
@@ -6732,37 +6797,39 @@
       },
       "C_OP_RenderStandardLight": {
         "fields": {
-          "m_bCastShadows": 2656,
-          "m_bClosedLoop": 5649,
-          "m_bDynamicBounce": 2657,
-          "m_bIgnoreDT": 5664,
-          "m_bRenderDiffuse": 5248,
-          "m_bRenderSpecular": 5249,
-          "m_bReverseOrder": 5648,
-          "m_flBounceScale": 2664,
-          "m_flCapsuleLength": 5644,
-          "m_flConstrainRadiusToLengthRatio": 5668,
-          "m_flFalloffLinearity": 4144,
-          "m_flFiftyPercentFalloff": 4512,
-          "m_flFogContribution": 5272,
-          "m_flIntensity": 2288,
-          "m_flLengthFadeInTime": 5676,
-          "m_flLengthScale": 5672,
-          "m_flMaxLength": 5656,
-          "m_flMinLength": 5660,
-          "m_flPhi": 3400,
-          "m_flRadiusMultiplier": 3768,
-          "m_flTheta": 3032,
-          "m_flZeroPercentFalloff": 4880,
-          "m_lightCookie": 5256,
-          "m_nAttenuationStyle": 4136,
-          "m_nCapsuleLightBehavior": 5640,
+          "m_bCastShadows": 3032,
+          "m_bClosedLoop": 6025,
+          "m_bDynamicBounce": 3033,
+          "m_bIgnoreDT": 6040,
+          "m_bRenderDiffuse": 5624,
+          "m_bRenderSpecular": 5625,
+          "m_bReverseOrder": 6024,
+          "m_flBounceScale": 3040,
+          "m_flCapsuleLength": 6020,
+          "m_flConstrainRadiusToLengthRatio": 6044,
+          "m_flFalloffLinearity": 4520,
+          "m_flFiftyPercentFalloff": 4888,
+          "m_flFogContribution": 5648,
+          "m_flIntensity": 2664,
+          "m_flLengthFadeInTime": 6052,
+          "m_flLengthScale": 6048,
+          "m_flLightStyleTime": 2296,
+          "m_flMaxLength": 6032,
+          "m_flMinLength": 6036,
+          "m_flPhi": 3776,
+          "m_flRadiusMultiplier": 4144,
+          "m_flTheta": 3408,
+          "m_flZeroPercentFalloff": 5256,
+          "m_lightCookie": 5632,
+          "m_nAttenuationStyle": 4512,
+          "m_nCapsuleLightBehavior": 6016,
           "m_nColorBlendType": 2280,
-          "m_nFogLightingMode": 5268,
+          "m_nFogLightingMode": 5644,
           "m_nLightType": 552,
           "m_nMaxAllowed": 556,
-          "m_nPrevPntSource": 5652,
-          "m_nPriority": 5264,
+          "m_nPrevPntSource": 6028,
+          "m_nPriority": 5640,
+          "m_strLightStyle": 2288,
           "m_vecColorScale": 560
         },
         "metadata": [
@@ -6823,26 +6890,26 @@
       },
       "C_OP_RenderTrails": {
         "fields": {
-          "m_bEnableFadingAndClamping": 12520,
-          "m_bFlipUVBasedOnPitchYaw": 17484,
-          "m_bIgnoreDT": 12544,
-          "m_flConstrainRadiusToLengthRatio": 12548,
-          "m_flEndFadeDot": 12528,
-          "m_flForwardShift": 17480,
-          "m_flHeadAlphaScale": 14648,
-          "m_flLengthFadeInTime": 12556,
-          "m_flLengthScale": 12552,
-          "m_flMaxLength": 12536,
-          "m_flMinLength": 12540,
-          "m_flRadiusHeadTaper": 12560,
-          "m_flRadiusTaper": 15016,
-          "m_flStartFadeDot": 12524,
-          "m_flTailAlphaScale": 17104,
-          "m_nHorizCropField": 17472,
-          "m_nPrevPntSource": 12532,
-          "m_nVertCropField": 17476,
-          "m_vecHeadColorScale": 12928,
-          "m_vecTailColorScale": 15384
+          "m_bEnableFadingAndClamping": 12888,
+          "m_bFlipUVBasedOnPitchYaw": 17852,
+          "m_bIgnoreDT": 12912,
+          "m_flConstrainRadiusToLengthRatio": 12916,
+          "m_flEndFadeDot": 12896,
+          "m_flForwardShift": 17848,
+          "m_flHeadAlphaScale": 15016,
+          "m_flLengthFadeInTime": 12924,
+          "m_flLengthScale": 12920,
+          "m_flMaxLength": 12904,
+          "m_flMinLength": 12908,
+          "m_flRadiusHeadTaper": 12928,
+          "m_flRadiusTaper": 15384,
+          "m_flStartFadeDot": 12892,
+          "m_flTailAlphaScale": 17472,
+          "m_nHorizCropField": 17840,
+          "m_nPrevPntSource": 12900,
+          "m_nVertCropField": 17844,
+          "m_vecHeadColorScale": 13296,
+          "m_vecTailColorScale": 15752
         },
         "metadata": [
           {
@@ -6890,16 +6957,19 @@
       },
       "C_OP_RenderVolumetricEmitter": {
         "fields": {
-          "m_flDensity": 4384,
-          "m_flFalloff": 5856,
-          "m_flKillRadius": 5488,
-          "m_flMagnitude": 5120,
-          "m_flRadius": 4016,
-          "m_flTemperature": 4752,
+          "m_flDensity": 6472,
+          "m_flFalloff": 8312,
+          "m_flKillDensityScale": 7944,
+          "m_flKillRadius": 7576,
+          "m_flMagnitude": 7208,
+          "m_flRadius": 6104,
+          "m_flSpeed": 5736,
+          "m_flTemperature": 6840,
           "m_nCreationType": 564,
           "m_nEventType": 568,
           "m_nType": 560,
           "m_strChannelType": 552,
+          "m_vPrevPosition": 4016,
           "m_vecPos": 576,
           "m_vecVelocity": 2296
         },
@@ -7426,6 +7496,8 @@
           "m_bOrientToEyes": 496,
           "m_nCP1": 480,
           "m_nPosition": 500,
+          "m_nRadiusCP": 504,
+          "m_nRadiusCPField": 508,
           "m_vecCP1Pos": 484
         },
         "metadata": [
@@ -8296,7 +8368,8 @@
           "m_previewModel": 0,
           "m_sequenceName": 16,
           "m_vecBodyGroups": 48,
-          "m_vecPreviewGravity": 88
+          "m_vecPreviewGravity": 88,
+          "m_vecPreviewWind": 100
         },
         "metadata": [
           {
@@ -8348,20 +8421,6 @@
         "fields": {
           "m_Connection": 8,
           "m_OutflowID": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "PulseObservableBoolExpression_t": {
-        "fields": {
-          "m_DependentObservableBlackboardReferences": 96,
-          "m_DependentObservableVars": 72,
-          "m_EvaluateConnection": 0
         },
         "metadata": [
           {
@@ -8538,6 +8597,7 @@
           "PARTICLE_EVENT_TYPE_MASK_FIRST_COLLISION": 8,
           "PARTICLE_EVENT_TYPE_MASK_KILLED": 2,
           "PARTICLE_EVENT_TYPE_MASK_KILLED_ON_COLLISION": 32,
+          "PARTICLE_EVENT_TYPE_MASK_KILLED_ON_CULL": 1024,
           "PARTICLE_EVENT_TYPE_MASK_NONE": 0,
           "PARTICLE_EVENT_TYPE_MASK_SPAWNED": 1,
           "PARTICLE_EVENT_TYPE_MASK_USER_1": 64,
@@ -8619,12 +8679,16 @@
         "alignment": 4,
         "members": {
           "PARTICLE_ATTR_BOX_FLAGS_ASLEEP": 8,
+          "PARTICLE_ATTR_BOX_FLAGS_DISABLE_NONSTATIC_COLLISION": 64,
           "PARTICLE_ATTR_BOX_FLAGS_ELECTRIFIED": 4,
           "PARTICLE_ATTR_BOX_FLAGS_FROZEN": 16,
+          "PARTICLE_ATTR_BOX_FLAGS_MOTION_DISABLED": 256,
           "PARTICLE_ATTR_BOX_FLAGS_NONE": 0,
           "PARTICLE_ATTR_BOX_FLAGS_ON_FIRE": 2,
           "PARTICLE_ATTR_BOX_FLAGS_TIMED_DECAY": 32,
-          "PARTICLE_ATTR_BOX_FLAGS_WATER": 1
+          "PARTICLE_ATTR_BOX_FLAGS_WAKE_DECAY": 128,
+          "PARTICLE_ATTR_BOX_FLAGS_WATER": 1,
+          "PARTICLE_ATTR_BOX_FLAGS_ZERO_GRAVITY": 512
         },
         "type": "uint32"
       },
@@ -8713,6 +8777,7 @@
         "members": {
           "PARTICLE_ABS_ORIGIN": 0,
           "PARTICLE_EYES": 2,
+          "PARTICLE_FLASHLIGHT": 3,
           "PARTICLE_WORLDSPACE_CENTER": 1
         },
         "type": "uint32"
@@ -9082,7 +9147,8 @@
         "members": {
           "PARTICLE_VOLUMETRIC_SMOKE_TYPE_EMISSION": 0,
           "PARTICLE_VOLUMETRIC_SMOKE_TYPE_REPEL": 2,
-          "PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK": 1
+          "PARTICLE_VOLUMETRIC_SMOKE_TYPE_SINK": 1,
+          "PARTICLE_VOLUMETRIC_SMOKE_TYPE_TRACE": 3
         },
         "type": "uint32"
       },
@@ -9110,6 +9176,14 @@
           "HardCancel": 3,
           "None": 0,
           "SoftCancel": 2
+        },
+        "type": "uint32"
+      },
+      "PulseCursorWakePriority_t": {
+        "alignment": 4,
+        "members": {
+          "WakeElegantly": 0,
+          "WakeImmediate": 1
         },
         "type": "uint32"
       },

@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: resourcesystem.dll
-    // Class count: 58
+    // Class count: 59
     // Enum count: 2
     public static class ResourcesystemDll {
         // Alignment: 1
@@ -31,6 +31,12 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCResponseRulesList {
+        }
+        // Parent: None
+        // Field count: 2
+        public static class AABBWS_t {
+            public const nint m_vMinBounds = 0x0; // VectorWS
+            public const nint m_vMaxBounds = 0xC; // VectorWS
         }
         // Parent: None
         // Field count: 0

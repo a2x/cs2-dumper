@@ -1,6 +1,14 @@
 {
   "resourcesystem.dll": {
     "classes": {
+      "AABBWS_t": {
+        "fields": {
+          "m_vMaxBounds": 12,
+          "m_vMinBounds": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "AABB_t": {
         "fields": {
           "m_vMaxBounds": 12,

@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 03:28:19.182837500 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
         // Module: materialsystem2.dll
-        // Class count: 14
+        // Class count: 15
         // Enum count: 5
         pub const materialsystem2_dll = struct {
             // Alignment: 4
@@ -69,7 +69,7 @@ pub const cs2_dumper = struct {
                 pub const m_value: usize = 0x8; // CUtlString
             };
             // Parent: None
-            // Field count: 13
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -87,6 +87,8 @@ pub const cs2_dumper = struct {
                 pub const m_bHasColorCorrection: usize = 0x120; // bool
                 pub const m_bHasFogScatteringParams: usize = 0x121; // bool
                 pub const m_fogScatteringParams: usize = 0x124; // PostProcessingFogScatteringParameters_t
+                pub const m_bHasLocalExposureParams: usize = 0x144; // bool
+                pub const m_localExposureParams: usize = 0x148; // PostProcessingLocalExposureParameters_t
             };
             // Parent: None
             // Field count: 1
@@ -144,7 +146,7 @@ pub const cs2_dumper = struct {
                 pub const m_flMaxHighlightLum: usize = 0x38; // float32
             };
             // Parent: None
-            // Field count: 5
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -154,6 +156,9 @@ pub const cs2_dumper = struct {
                 pub const m_fCubemapScale: usize = 0x8; // float32
                 pub const m_fVolumetricScale: usize = 0xC; // float32
                 pub const m_fGradientScale: usize = 0x10; // float32
+                pub const m_fWaterScale: usize = 0x14; // float32
+                pub const m_fWaterDensity: usize = 0x18; // float32
+                pub const m_fWaterDepthBlurRadius: usize = 0x1C; // float32
             };
             // Parent: None
             // Field count: 1
@@ -214,6 +219,17 @@ pub const cs2_dumper = struct {
             // MGetKV3ClassDefaults
             pub const MaterialParamFloat_t = struct {
                 pub const m_flValue: usize = 0x8; // float32
+            };
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const PostProcessingLocalExposureParameters_t = struct {
+                pub const m_fShadowOffsetEV: usize = 0x0; // float32
+                pub const m_fHighlightOffsetEV: usize = 0x4; // float32
+                pub const m_fSigma: usize = 0x8; // float32
+                pub const m_fBoostLocalContrast: usize = 0xC; // float32
             };
             // Parent: None
             // Field count: 1
