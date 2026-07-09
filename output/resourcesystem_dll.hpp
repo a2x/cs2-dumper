@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 09:08:48.606860700 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: resourcesystem.dll
-        // Class count: 58
+        // Class count: 59
         // Enum count: 2
         namespace resourcesystem_dll {
             // Alignment: 1
@@ -37,6 +37,12 @@ namespace cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             namespace InfoForResourceTypeCResponseRulesList {
+            }
+            // Parent: None
+            // Field count: 2
+            namespace AABBWS_t {
+                constexpr std::ptrdiff_t m_vMinBounds = 0x0; // VectorWS
+                constexpr std::ptrdiff_t m_vMaxBounds = 0xC; // VectorWS
             }
             // Parent: None
             // Field count: 0

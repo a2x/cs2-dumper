@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 09:08:48.606860700 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: animationsystem.dll
-        // Class count: 695
-        // Enum count: 148
+        // Class count: 699
+        // Enum count: 150
         pub mod animationsystem_dll {
             // Alignment: 4
             // Member count: 2
@@ -31,6 +31,13 @@ pub mod cs2_dumper {
             pub enum PulseMethodCallMode_t {
                 SYNC_WAIT_FOR_COMPLETION = 0x0,
                 ASYNC_FIRE_AND_FORGET = 0x1
+            }
+            // Alignment: 4
+            // Member count: 2
+            #[repr(u32)]
+            pub enum PulseCursorWakePriority_t {
+                WakeElegantly = 0x0,
+                WakeImmediate = 0x1
             }
             // Alignment: 4
             // Member count: 6
@@ -174,7 +181,7 @@ pub mod cs2_dumper {
                 eProceduralOnly = 0x2
             }
             // Alignment: 4
-            // Member count: 6
+            // Member count: 7
             #[repr(u32)]
             pub enum PulseVariableKeysSource_t {
                 PRIVATE = 0x0,
@@ -182,7 +189,8 @@ pub mod cs2_dumper {
                 VMAP = 0x2,
                 VMDL = 0x3,
                 XML = 0x4,
-                COUNT = 0x5
+                VDATA = 0x5,
+                COUNT = 0x6
             }
             // Alignment: 4
             // Member count: 3
@@ -193,7 +201,7 @@ pub mod cs2_dumper {
                 IKTARGETCOORDINATESYSTEM_COUNT = 0x2
             }
             // Alignment: 4
-            // Member count: 32
+            // Member count: 33
             #[repr(u32)]
             pub enum ParticleFloatType_t {
                 PF_TYPE_INVALID = u32::MAX,
@@ -211,23 +219,24 @@ pub mod cs2_dumper {
                 PF_TYPE_CLOSEST_CAMERA_DISTANCE = 0xB,
                 PF_TYPE_SNAPSHOT_COUNT = 0xC,
                 PF_TYPE_SNAPSHOT_CHANGED = 0xD,
-                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0xE,
-                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0xF,
-                PF_TYPE_PARTICLE_NOISE = 0x10,
-                PF_TYPE_PARTICLE_AGE = 0x11,
-                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x12,
-                PF_TYPE_PARTICLE_FLOAT = 0x13,
-                PF_TYPE_PARTICLE_INITIAL_FLOAT = 0x14,
-                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x15,
-                PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT = 0x16,
-                PF_TYPE_PARTICLE_SPEED = 0x17,
-                PF_TYPE_PARTICLE_NUMBER = 0x18,
-                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x19,
-                PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x1A,
-                PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1B,
-                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1C,
-                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1D,
-                PF_TYPE_COUNT = 0x1E
+                PF_TYPE_CONTROL_POINT_IS_SET = 0xE,
+                PF_TYPE_RENDERER_CAMERA_DISTANCE = 0xF,
+                PF_TYPE_RENDERER_CAMERA_DOT_PRODUCT = 0x10,
+                PF_TYPE_PARTICLE_NOISE = 0x11,
+                PF_TYPE_PARTICLE_AGE = 0x12,
+                PF_TYPE_PARTICLE_AGE_NORMALIZED = 0x13,
+                PF_TYPE_PARTICLE_FLOAT = 0x14,
+                PF_TYPE_PARTICLE_INITIAL_FLOAT = 0x15,
+                PF_TYPE_PARTICLE_VECTOR_COMPONENT = 0x16,
+                PF_TYPE_PARTICLE_INITIAL_VECTOR_COMPONENT = 0x17,
+                PF_TYPE_PARTICLE_SPEED = 0x18,
+                PF_TYPE_PARTICLE_NUMBER = 0x19,
+                PF_TYPE_PARTICLE_NUMBER_NORMALIZED = 0x1A,
+                PF_TYPE_PARTICLE_ROPE_SEGMENT = 0x1B,
+                PF_TYPE_PARTICLE_ROPE_SEGMENT_NORMALIZED = 0x1C,
+                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DISTANCE = 0x1D,
+                PF_TYPE_PARTICLE_SCREENSPACE_CAMERA_DOT_PRODUCT = 0x1E,
+                PF_TYPE_COUNT = 0x1F
             }
             // Alignment: 1
             // Member count: 4
@@ -359,7 +368,7 @@ pub mod cs2_dumper {
                 Blocked = 0x3
             }
             // Alignment: 1
-            // Member count: 7
+            // Member count: 8
             #[repr(u8)]
             pub enum ModelMeshBufferUsage_t {
                 MESH_BUFFER_USAGE_NONE = 0x0,
@@ -368,7 +377,8 @@ pub mod cs2_dumper {
                 MESH_BUFFER_USAGE_ADJACENCY = 0x4,
                 MESH_BUFFER_USAGE_MESHLET_TRIS = 0x8,
                 MESH_BUFFER_USAGE_RT_PROXY = 0x10,
-                MESH_BUFFER_USAGE_VERTEX_ALBEDO = 0x20
+                MESH_BUFFER_USAGE_VERTEX_ALBEDO = 0x20,
+                MESH_BUFFER_USAGE_VERTEX_EMISSIVE = 0x40
             }
             // Alignment: 4
             // Member count: 2
@@ -401,6 +411,12 @@ pub mod cs2_dumper {
             pub enum EDemoBoneSelectionMode {
                 CaptureAllBones = 0x0,
                 CaptureSelectedBones = 0x1
+            }
+            // Alignment: 4
+            // Member count: 1
+            #[repr(u32)]
+            pub enum PulseDurationStringFormat_t {
+                MM_SS_LEADING_ZERO = 0x0
             }
             // Alignment: 4
             // Member count: 6
@@ -787,15 +803,6 @@ pub mod cs2_dumper {
                 Blend2DMode_General = 0x0,
                 Blend2DMode_Directional = 0x1
             }
-            // Alignment: 4
-            // Member count: 4
-            #[repr(u32)]
-            pub enum PulseCursorExecResult_t {
-                Succeeded = 0x0,
-                Canceled = 0x1,
-                Failed = 0x2,
-                OngoingNotify = 0x3
-            }
             // Alignment: 1
             // Member count: 3
             #[repr(u8)]
@@ -989,6 +996,14 @@ pub mod cs2_dumper {
                 AngleHorizontal = 0x4,
                 AngleVertical = 0x5
             }
+            // Alignment: 1
+            // Member count: 3
+            #[repr(u8)]
+            pub enum TagActionStatus {
+                Inactive = 0x0,
+                Active = 0x1,
+                Fired = 0x2
+            }
             // Alignment: 4
             // Member count: 4
             #[repr(u32)]
@@ -1022,7 +1037,7 @@ pub mod cs2_dumper {
                 PF_RANDOM_MODE_COUNT = 0x2
             }
             // Alignment: 4
-            // Member count: 33
+            // Member count: 35
             #[repr(u32)]
             pub enum PulseValueType_t {
                 PVAL_VOID = u32::MAX,
@@ -1057,7 +1072,9 @@ pub mod cs2_dumper {
                 PVAL_ARRAY = 0x1C,
                 PVAL_TYPESAFE_INT64 = 0x1D,
                 PVAL_PARTICLE_EHANDLE = 0x1E,
-                PVAL_COUNT = 0x1F
+                PVAL_ANIM_SEQUENCE = 0x1F,
+                PVAL_VDATA_CHOICE = 0x20,
+                PVAL_COUNT = 0x21
             }
             // Alignment: 4
             // Member count: 4
@@ -1297,7 +1314,7 @@ pub mod cs2_dumper {
                 eWorldPosition = 0x2
             }
             // Alignment: 2
-            // Member count: 125
+            // Member count: 126
             #[repr(u16)]
             pub enum PulseInstructionCode_t {
                 INVALID = 0x0,
@@ -1311,120 +1328,121 @@ pub mod cs2_dumper {
                 CHUNK_LEAP_COND = 0x8,
                 PULSE_CALL_SYNC = 0x9,
                 PULSE_CALL_ASYNC_FIRE = 0xA,
-                CELL_INVOKE = 0xB,
-                LIBRARY_INVOKE = 0xC,
-                SET_VAR = 0xD,
-                GET_VAR = 0xE,
-                GET_VAR_DETACH = 0xF,
-                DETACH_REGISTER = 0x10,
-                SET_VAR_ARRAY_ELEMENT_1D = 0x11,
-                SET_VAR_OBSERVABLE = 0x12,
-                GET_CONST = 0x13,
-                GET_ARRAY_ELEMENT = 0x14,
-                GET_DOMAIN_VALUE = 0x15,
-                COPY = 0x16,
-                NOT = 0x17,
-                NEGATE = 0x18,
-                ADD = 0x19,
-                SUB = 0x1A,
-                MUL = 0x1B,
-                DIV = 0x1C,
-                MOD = 0x1D,
-                LT = 0x1E,
-                LTE = 0x1F,
-                EQ = 0x20,
-                NE = 0x21,
-                AND = 0x22,
-                OR = 0x23,
-                SCALE = 0x24,
-                SCALE_INV = 0x25,
-                ELEMENT_ACCESS = 0x26,
-                CONVERT_VALUE = 0x27,
-                REINTERPRET_INSTANCE = 0x28,
-                GET_BLACKBOARD_REFERENCE = 0x29,
-                SET_BLACKBOARD_REFERENCE = 0x2A,
-                LAST_SERIALIZED_CODE = 0x2B,
-                NEGATE_INT = 0x2C,
-                NEGATE_FLOAT = 0x2D,
-                NEGATE_VEC2 = 0x2E,
-                NEGATE_VEC3 = 0x2F,
-                NEGATE_VEC4 = 0x30,
-                ADD_INT = 0x31,
-                ADD_FLOAT = 0x32,
-                ADD_STRING = 0x33,
-                ADD_VEC2 = 0x34,
-                ADD_VEC3 = 0x35,
-                ADD_VEC3WS_VEC3 = 0x36,
-                ADD_VEC3_VEC3WS = 0x37,
-                ADD_VEC4 = 0x38,
-                ADD_GAMETIME_FLOAT = 0x39,
-                ADD_FLOAT_GAMETIME = 0x3A,
-                SUB_INT = 0x3B,
-                SUB_FLOAT = 0x3C,
-                SUB_VEC2 = 0x3D,
-                SUB_VEC3 = 0x3E,
-                SUB_VEC3WS_VEC3 = 0x3F,
-                SUB_VEC3WS_VEC3WS = 0x40,
-                SUB_VEC4 = 0x41,
-                SUB_GAMETIME_FLOAT = 0x42,
-                SUB_GAMETIME = 0x43,
-                MUL_INT = 0x44,
-                MUL_FLOAT = 0x45,
-                DIV_FLOAT = 0x46,
-                MOD_INT = 0x47,
-                MOD_FLOAT = 0x48,
-                LT_INT = 0x49,
-                LT_FLOAT = 0x4A,
-                LT_GAMETIME = 0x4B,
-                LTE_INT = 0x4C,
-                LTE_FLOAT = 0x4D,
-                LTE_GAMETIME = 0x4E,
-                EQ_BOOL = 0x4F,
-                EQ_INT = 0x50,
-                EQ_FLOAT = 0x51,
-                EQ_VEC2 = 0x52,
-                EQ_VEC3 = 0x53,
-                EQ_VEC3WS = 0x54,
-                EQ_VEC4 = 0x55,
-                EQ_STRING = 0x56,
-                EQ_ENTITY_NAME = 0x57,
-                EQ_SCHEMA_ENUM = 0x58,
-                EQ_EHANDLE = 0x59,
-                EQ_PANEL_HANDLE = 0x5A,
-                EQ_OPAQUE_HANDLE = 0x5B,
-                EQ_TEST_HANDLE = 0x5C,
-                EQ_COLOR_RGB = 0x5D,
-                EQ_ARRAY = 0x5E,
-                EQ_GAMETIME = 0x5F,
-                NE_BOOL = 0x60,
-                NE_INT = 0x61,
-                NE_FLOAT = 0x62,
-                NE_VEC2 = 0x63,
-                NE_VEC3 = 0x64,
-                NE_VEC3WS = 0x65,
-                NE_VEC4 = 0x66,
-                NE_STRING = 0x67,
-                NE_ENTITY_NAME = 0x68,
-                NE_SCHEMA_ENUM = 0x69,
-                NE_EHANDLE = 0x6A,
-                NE_PANEL_HANDLE = 0x6B,
-                NE_OPAQUE_HANDLE = 0x6C,
-                NE_TEST_HANDLE = 0x6D,
-                NE_COLOR_RGB = 0x6E,
-                NE_ARRAY = 0x6F,
-                NE_GAMETIME = 0x70,
-                SCALE_VEC3 = 0x71,
-                SCALE_VEC2 = 0x72,
-                SCALE_VEC4 = 0x73,
-                SCALE_INV_VEC3 = 0x74,
-                SCALE_INV_VEC2 = 0x75,
-                SCALE_INV_VEC4 = 0x76,
-                ELEMENT_ACCESS_VEC2 = 0x77,
-                ELEMENT_ACCESS_VEC3 = 0x78,
-                ELEMENT_ACCESS_VEC3WS = 0x79,
-                ELEMENT_ACCESS_VEC4 = 0x7A,
-                ELEMENT_ACCESS_COLOR_RGB = 0x7B,
-                GET_CONST_INLINE_STORAGE = 0x7C
+                CREATE_CHILD_CURSOR_OUTFLOW = 0xB,
+                CELL_INVOKE = 0xC,
+                LIBRARY_INVOKE = 0xD,
+                SET_VAR = 0xE,
+                GET_VAR = 0xF,
+                GET_VAR_DETACH = 0x10,
+                DETACH_REGISTER = 0x11,
+                SET_VAR_ARRAY_ELEMENT_1D = 0x12,
+                SET_VAR_OBSERVABLE = 0x13,
+                GET_CONST = 0x14,
+                GET_ARRAY_ELEMENT = 0x15,
+                GET_DOMAIN_VALUE = 0x16,
+                COPY = 0x17,
+                NOT = 0x18,
+                NEGATE = 0x19,
+                ADD = 0x1A,
+                SUB = 0x1B,
+                MUL = 0x1C,
+                DIV = 0x1D,
+                MOD = 0x1E,
+                LT = 0x1F,
+                LTE = 0x20,
+                EQ = 0x21,
+                NE = 0x22,
+                AND = 0x23,
+                OR = 0x24,
+                SCALE = 0x25,
+                SCALE_INV = 0x26,
+                ELEMENT_ACCESS = 0x27,
+                CONVERT_VALUE = 0x28,
+                REINTERPRET_INSTANCE = 0x29,
+                GET_BLACKBOARD_REFERENCE = 0x2A,
+                SET_BLACKBOARD_REFERENCE = 0x2B,
+                LAST_SERIALIZED_CODE = 0x2C,
+                NEGATE_INT = 0x2D,
+                NEGATE_FLOAT = 0x2E,
+                NEGATE_VEC2 = 0x2F,
+                NEGATE_VEC3 = 0x30,
+                NEGATE_VEC4 = 0x31,
+                ADD_INT = 0x32,
+                ADD_FLOAT = 0x33,
+                ADD_STRING = 0x34,
+                ADD_VEC2 = 0x35,
+                ADD_VEC3 = 0x36,
+                ADD_VEC3WS_VEC3 = 0x37,
+                ADD_VEC3_VEC3WS = 0x38,
+                ADD_VEC4 = 0x39,
+                ADD_GAMETIME_FLOAT = 0x3A,
+                ADD_FLOAT_GAMETIME = 0x3B,
+                SUB_INT = 0x3C,
+                SUB_FLOAT = 0x3D,
+                SUB_VEC2 = 0x3E,
+                SUB_VEC3 = 0x3F,
+                SUB_VEC3WS_VEC3 = 0x40,
+                SUB_VEC3WS_VEC3WS = 0x41,
+                SUB_VEC4 = 0x42,
+                SUB_GAMETIME_FLOAT = 0x43,
+                SUB_GAMETIME = 0x44,
+                MUL_INT = 0x45,
+                MUL_FLOAT = 0x46,
+                DIV_FLOAT = 0x47,
+                MOD_INT = 0x48,
+                MOD_FLOAT = 0x49,
+                LT_INT = 0x4A,
+                LT_FLOAT = 0x4B,
+                LT_GAMETIME = 0x4C,
+                LTE_INT = 0x4D,
+                LTE_FLOAT = 0x4E,
+                LTE_GAMETIME = 0x4F,
+                EQ_BOOL = 0x50,
+                EQ_INT = 0x51,
+                EQ_FLOAT = 0x52,
+                EQ_VEC2 = 0x53,
+                EQ_VEC3 = 0x54,
+                EQ_VEC3WS = 0x55,
+                EQ_VEC4 = 0x56,
+                EQ_STRING = 0x57,
+                EQ_ENTITY_NAME = 0x58,
+                EQ_SCHEMA_ENUM = 0x59,
+                EQ_EHANDLE = 0x5A,
+                EQ_PANEL_HANDLE = 0x5B,
+                EQ_OPAQUE_HANDLE = 0x5C,
+                EQ_TEST_HANDLE = 0x5D,
+                EQ_COLOR_RGB = 0x5E,
+                EQ_ARRAY = 0x5F,
+                EQ_GAMETIME = 0x60,
+                NE_BOOL = 0x61,
+                NE_INT = 0x62,
+                NE_FLOAT = 0x63,
+                NE_VEC2 = 0x64,
+                NE_VEC3 = 0x65,
+                NE_VEC3WS = 0x66,
+                NE_VEC4 = 0x67,
+                NE_STRING = 0x68,
+                NE_ENTITY_NAME = 0x69,
+                NE_SCHEMA_ENUM = 0x6A,
+                NE_EHANDLE = 0x6B,
+                NE_PANEL_HANDLE = 0x6C,
+                NE_OPAQUE_HANDLE = 0x6D,
+                NE_TEST_HANDLE = 0x6E,
+                NE_COLOR_RGB = 0x6F,
+                NE_ARRAY = 0x70,
+                NE_GAMETIME = 0x71,
+                SCALE_VEC3 = 0x72,
+                SCALE_VEC2 = 0x73,
+                SCALE_VEC4 = 0x74,
+                SCALE_INV_VEC3 = 0x75,
+                SCALE_INV_VEC2 = 0x76,
+                SCALE_INV_VEC4 = 0x77,
+                ELEMENT_ACCESS_VEC2 = 0x78,
+                ELEMENT_ACCESS_VEC3 = 0x79,
+                ELEMENT_ACCESS_VEC3WS = 0x7A,
+                ELEMENT_ACCESS_VEC4 = 0x7B,
+                ELEMENT_ACCESS_COLOR_RGB = 0x7C,
+                GET_CONST_INLINE_STORAGE = 0x7D
             }
             // Alignment: 4
             // Member count: 5
@@ -1686,14 +1704,16 @@ pub mod cs2_dumper {
                 Child2 = 0x1
             }
             // Alignment: 4
-            // Member count: 5
+            // Member count: 7
             #[repr(u32)]
             pub enum NPCPhysicsHullType_t {
                 eInvalid = 0x0,
                 eGroundCapsule = 0x1,
                 eCenteredCapsule = 0x2,
                 eGenericCapsule = 0x3,
-                eGroundBox = 0x4
+                eGroundBox = 0x4,
+                eGroundCylinder = 0x5,
+                eCenteredCylinder = 0x6
             }
             // Alignment: 4
             // Member count: 4
@@ -1727,8 +1747,8 @@ pub mod cs2_dumper {
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             pub mod CPulseCell_WaitForCursorsWithTag {
-                pub const m_bTagSelfWhenComplete: usize = 0x98; // bool
-                pub const m_nDesiredKillPriority: usize = 0x9C; // PulseCursorCancelPriority_t
+                pub const m_bTagSelfWhenComplete: usize = 0x128; // bool
+                pub const m_nDesiredKillPriority: usize = 0x12C; // PulseCursorCancelPriority_t
             }
             // Parent: None
             // Field count: 1
@@ -1768,8 +1788,8 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub mod CPulseCell_WaitForObservable {
-                pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
-                pub const m_OnTrue: usize = 0xC0; // CPulse_ResumePoint
+                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
+                pub const m_OnTrue: usize = 0x150; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -1801,15 +1821,14 @@ pub mod cs2_dumper {
                 pub const m_OutputConnections: usize = 0x128; // CUtlVector<CPulse_OutputConnection*>
             }
             // Parent: None
-            // Field count: 4
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_FireCursors {
-                pub const m_Outflows: usize = 0x48; // CUtlVector<CPulse_OutflowConnection>
-                pub const m_bWaitForChildOutflows: usize = 0x60; // bool
-                pub const m_OnFinished: usize = 0x68; // CPulse_ResumePoint
-                pub const m_OnCanceled: usize = 0xB0; // CPulse_ResumePoint
+                pub const m_Outflows: usize = 0xD8; // CUtlVector<CPulse_OutflowConnection>
+                pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
+                pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 2
@@ -1922,8 +1941,8 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_WaitForCursorsWithTagBase {
-                pub const m_nCursorsAllowedToWait: usize = 0x48; // int32
-                pub const m_WaitComplete: usize = 0x50; // CPulse_ResumePoint
+                pub const m_nCursorsAllowedToWait: usize = 0xD8; // int32
+                pub const m_WaitComplete: usize = 0xE0; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 5
@@ -1945,9 +1964,10 @@ pub mod cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
+            // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_IntervalTimer {
-                pub const m_Completed: usize = 0x48; // CPulse_ResumePoint
-                pub const m_OnInterval: usize = 0x90; // SignatureOutflow_Continue
+                pub const m_Completed: usize = 0xD8; // CPulse_ResumePoint
+                pub const m_OnInterval: usize = 0x120; // SignatureOutflow_Continue
             }
             // Parent: None
             // Field count: 0
@@ -1962,7 +1982,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_BaseLerp {
-                pub const m_WakeResume: usize = 0x48; // CPulse_ResumePoint
+                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 1
@@ -2007,11 +2027,6 @@ pub mod cs2_dumper {
                 pub const m_EndTime: usize = 0x4; // GameTime_t
             }
             // Parent: None
-            // Field count: 1
-            pub mod CPulseCell_WaitForCursorsWithTagBase__CursorState_t {
-                pub const m_TagName: usize = 0x0; // PulseSymbol_t
-            }
-            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -2023,15 +2038,14 @@ pub mod cs2_dumper {
             pub mod SignatureOutflow_Continue {
             }
             // Parent: None
-            // Field count: 4
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_Timeline {
-                pub const m_TimelineEvents: usize = 0x48; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
-                pub const m_bWaitForChildOutflows: usize = 0x60; // bool
-                pub const m_OnFinished: usize = 0x68; // CPulse_ResumePoint
-                pub const m_OnCanceled: usize = 0xB0; // CPulse_ResumePoint
+                pub const m_TimelineEvents: usize = 0xD8; // CUtlVector<CPulseCell_Timeline::TimelineEvent_t>
+                pub const m_bWaitForChildOutflows: usize = 0xF0; // bool
+                pub const m_OnFinished: usize = 0xF8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 3
@@ -2071,11 +2085,14 @@ pub mod cs2_dumper {
             pub mod CPulseCell_Step_DebugLog {
             }
             // Parent: None
-            // Field count: 0
+            // Field count: 2
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MCustomFGDMetadata
             pub mod CPulseCell_BaseYieldingInflow {
+                pub const m_BaseFlow_OnAfterCancel: usize = 0x48; // CPulse_ResumePoint
+                pub const m_BaseFlow_WhileActive: usize = 0x90; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 1
@@ -2125,7 +2142,7 @@ pub mod cs2_dumper {
             // MPulseEditorHeaderIcon
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_Inflow_Wait {
-                pub const m_WakeResume: usize = 0x48; // CPulse_ResumePoint
+                pub const m_WakeResume: usize = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 1
@@ -2155,7 +2172,7 @@ pub mod cs2_dumper {
             pub mod CPulseCell_BaseValue {
             }
             // Parent: None
-            // Field count: 4
+            // Field count: 3
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -2163,10 +2180,9 @@ pub mod cs2_dumper {
             // MPropertyDescription
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_BooleanSwitchState {
-                pub const m_Condition: usize = 0x48; // PulseObservableBoolExpression_t
-                pub const m_Always: usize = 0xC0; // CPulse_OutflowConnection
-                pub const m_WhenTrue: usize = 0x108; // CPulse_OutflowConnection
-                pub const m_WhenFalse: usize = 0x150; // CPulse_OutflowConnection
+                pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
+                pub const m_WhenTrue: usize = 0x150; // CPulse_OutflowConnection
+                pub const m_WhenFalse: usize = 0x198; // CPulse_OutflowConnection
             }
             // Parent: None
             // Field count: 1
@@ -2174,7 +2190,7 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_Inflow_Yield {
-                pub const m_UnyieldResume: usize = 0x48; // CPulse_ResumePoint
+                pub const m_UnyieldResume: usize = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 0
@@ -2187,6 +2203,13 @@ pub mod cs2_dumper {
             // Field count: 1
             pub mod CPulseCell_Unknown {
                 pub const m_UnknownKeys: usize = 0x48; // KeyValues3
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MPropertyDescription
+            pub mod CPulseStringlib {
             }
             // Parent: None
             // Field count: 1
@@ -2244,6 +2267,13 @@ pub mod cs2_dumper {
                 pub const m_nPriority: usize = 0x48; // int32
             }
             // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MPropertyDescription
+            pub mod CPulseEnumlib {
+            }
+            // Parent: None
             // Field count: 6
             //
             // Metadata:
@@ -2283,21 +2313,11 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CPulseCell_Step_CallExternalMethod {
-                pub const m_MethodName: usize = 0x48; // PulseSymbol_t
-                pub const m_nBlackboardIndex: usize = 0x58; // PulseRuntimeBlackboardReferenceIndex_t
-                pub const m_ExpectedArgs: usize = 0x60; // CUtlLeanVector<CPulseRuntimeMethodArg>
-                pub const m_nAsyncCallMode: usize = 0x70; // PulseMethodCallMode_t
-                pub const m_OnFinished: usize = 0x78; // CPulse_ResumePoint
-            }
-            // Parent: None
-            // Field count: 3
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod PulseObservableBoolExpression_t {
-                pub const m_EvaluateConnection: usize = 0x0; // CPulse_OutflowConnection
-                pub const m_DependentObservableVars: usize = 0x48; // CUtlVector<PulseRuntimeVarIndex_t>
-                pub const m_DependentObservableBlackboardReferences: usize = 0x60; // CUtlVector<PulseRuntimeBlackboardReferenceIndex_t>
+                pub const m_MethodName: usize = 0xD8; // PulseSymbol_t
+                pub const m_nBlackboardIndex: usize = 0xE8; // PulseRuntimeBlackboardReferenceIndex_t
+                pub const m_ExpectedArgs: usize = 0xF0; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_nAsyncCallMode: usize = 0x100; // PulseMethodCallMode_t
+                pub const m_OnFinished: usize = 0x108; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 1
@@ -2313,7 +2333,7 @@ pub mod cs2_dumper {
             // MPropertyDescription
             // MPulseEditorHeaderIcon
             pub mod CPulseCell_CursorQueue {
-                pub const m_nCursorsAllowedToRunParallel: usize = 0x98; // int32
+                pub const m_nCursorsAllowedToRunParallel: usize = 0x128; // int32
             }
             // Parent: None
             // Field count: 0
@@ -2440,18 +2460,18 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 12
             pub mod CNmFootIKTask {
-                pub const m_nLeftEffectorBoneIdx: usize = 0x48; // int32
-                pub const m_nRightEffectorBoneIdx: usize = 0x4C; // int32
-                pub const m_leftTargetTransform: usize = 0x50; // CTransform
-                pub const m_rightTargetTransform: usize = 0x70; // CTransform
-                pub const m_nLeftTargetBoneIdx: usize = 0x90; // int32
-                pub const m_nRightTargetBoneIdx: usize = 0x94; // int32
-                pub const m_leftTarget: usize = 0xA0; // CNmTarget
-                pub const m_rightTarget: usize = 0xD0; // CNmTarget
-                pub const m_blendMode: usize = 0x100; // NmIKBlendMode_t
-                pub const m_flBlendWeight: usize = 0x104; // float32
-                pub const m_bIsTargetInWorldSpace: usize = 0x108; // bool
-                pub const m_bIsRunningFromDeserializedData: usize = 0x109; // bool
+                pub const m_nLeftEffectorBoneIdx: usize = 0x70; // int32
+                pub const m_nRightEffectorBoneIdx: usize = 0x74; // int32
+                pub const m_leftTargetTransform: usize = 0x80; // CTransform
+                pub const m_rightTargetTransform: usize = 0xA0; // CTransform
+                pub const m_nLeftTargetBoneIdx: usize = 0xC0; // int32
+                pub const m_nRightTargetBoneIdx: usize = 0xC4; // int32
+                pub const m_leftTarget: usize = 0xD0; // CNmTarget
+                pub const m_rightTarget: usize = 0x100; // CNmTarget
+                pub const m_blendMode: usize = 0x130; // NmIKBlendMode_t
+                pub const m_flBlendWeight: usize = 0x134; // float32
+                pub const m_bIsTargetInWorldSpace: usize = 0x138; // bool
+                pub const m_bIsRunningFromDeserializedData: usize = 0x139; // bool
             }
             // Parent: None
             // Field count: 3
@@ -2845,6 +2865,16 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CStanceScaleUpdateNode {
                 pub const m_hParam: usize = 0x70; // CAnimParamHandle
+            }
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPulseBreakpointLocation {
+                pub const m_NodeID: usize = 0x0; // PulseDocNodeID_t
+                pub const m_SequencePoint: usize = 0x8; // PulseSymbol_t
+                pub const m_PortName: usize = 0x18; // PulseSymbol_t
             }
             // Parent: None
             // Field count: 1
@@ -3308,18 +3338,20 @@ pub mod cs2_dumper {
                 pub const m_flCycle: usize = 0x78; // float32
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CNmChainLookatNode__CDefinition {
-                pub const m_chainEndBoneID: usize = 0x18; // CGlobalSymbol
-                pub const m_nLookatTargetNodeIdx: usize = 0x20; // int16
-                pub const m_nEnabledNodeIdx: usize = 0x22; // int16
-                pub const m_flBlendTimeSeconds: usize = 0x24; // float32
-                pub const m_nChainLength: usize = 0x28; // uint8
-                pub const m_bIsTargetInWorldSpace: usize = 0x29; // bool
-                pub const m_chainForwardDir: usize = 0x2C; // Vector
+                pub const m_endEffectorBoneID: usize = 0x18; // CGlobalSymbol
+                pub const m_endEffectorForwardAxis: usize = 0x20; // Vector
+                pub const m_endEffectorOffset: usize = 0x2C; // Vector
+                pub const m_nLookatTargetNodeIdx: usize = 0x38; // int16
+                pub const m_nEnabledNodeIdx: usize = 0x3A; // int16
+                pub const m_flBlendTimeSeconds: usize = 0x3C; // float32
+                pub const m_chainWeights: usize = 0x40; // CUtlVectorFixedGrowable<float32,5>
+                pub const m_nChainLength: usize = 0x70; // uint8
+                pub const m_bIsTargetInWorldSpace: usize = 0x71; // bool
             }
             // Parent: None
             // Field count: 4
@@ -3878,6 +3910,18 @@ pub mod cs2_dumper {
                 pub const m_MaterialGroupName: usize = 0x48; // CUtlString
             }
             // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmFloatChannelData {
+                pub const m_skeleton: usize = 0x0; // CStrongHandle<InfoForResourceTypeCNmSkeleton>
+                pub const m_setID: usize = 0x8; // CGlobalSymbol
+                pub const m_channelSettings: usize = 0x10; // CUtlVector<CNmFloatChannelData::ChannelSettings_t>
+                pub const m_compressedData: usize = 0x28; // CUtlVector<uint16>
+                pub const m_compressedOffsets: usize = 0x40; // CUtlVector<uint32>
+            }
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -4002,7 +4046,7 @@ pub mod cs2_dumper {
                 pub const m_foot: usize = 0x58; // FootFallTagFoot_t
             }
             // Parent: None
-            // Field count: 17
+            // Field count: 18
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -4016,17 +4060,18 @@ pub mod cs2_dumper {
                 pub const m_nDepthVertexBufferIndex: usize = 0x24; // uint8
                 pub const m_nMeshletPackedIVBIndex: usize = 0x25; // uint8
                 pub const m_rigidMeshParts: usize = 0x28; // CUtlLeanVector<CMaterialDrawDescriptor::RigidMeshPart_t>
-                pub const m_nPrimitiveType: usize = 0x38; // RenderPrimitiveType_t
-                pub const m_nBaseVertex: usize = 0x3C; // int32
-                pub const m_nVertexCount: usize = 0x40; // int32
-                pub const m_nStartIndex: usize = 0x44; // int32
-                pub const m_nIndexCount: usize = 0x48; // int32
-                pub const m_indexBuffer: usize = 0xB0; // CRenderBufferBinding
-                pub const m_meshletPackedIVB: usize = 0xD0; // CRenderBufferBinding
-                pub const m_material: usize = 0x100; // CStrongHandle<InfoForResourceTypeIMaterial2>
+                pub const m_rootBvhNodes: usize = 0x38; // CUtlLeanVector<uint16>
+                pub const m_nPrimitiveType: usize = 0x48; // RenderPrimitiveType_t
+                pub const m_nBaseVertex: usize = 0x4C; // int32
+                pub const m_nVertexCount: usize = 0x50; // int32
+                pub const m_nStartIndex: usize = 0x54; // int32
+                pub const m_nIndexCount: usize = 0x58; // int32
+                pub const m_indexBuffer: usize = 0xC0; // CRenderBufferBinding
+                pub const m_meshletPackedIVB: usize = 0xE0; // CRenderBufferBinding
+                pub const m_material: usize = 0x110; // CStrongHandle<InfoForResourceTypeIMaterial2>
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -4039,7 +4084,8 @@ pub mod cs2_dumper {
                 pub const m_numBonesToSampleAtLowLOD: usize = 0x60; // int32
                 pub const m_maskDefinitions: usize = 0x88; // CUtlLeanVector<NmBoneMaskSetDefinition_t>
                 pub const m_secondarySkeletons: usize = 0xA8; // CUtlLeanVector<CNmSkeleton::SecondarySkeleton_t>
-                pub const m_bIsPropSkeleton: usize = 0xB8; // bool
+                pub const m_floatChannelSets: usize = 0xB8; // CUtlLeanVector<CNmFloatChannelSet_t>
+                pub const m_bIsPropSkeleton: usize = 0xC8; // bool
             }
             // Parent: None
             // Field count: 2
@@ -4521,6 +4567,15 @@ pub mod cs2_dumper {
                 pub const m_y: usize = 0x70; // CPiecewiseCurve
                 pub const m_z: usize = 0xB0; // CPiecewiseCurve
                 pub const m_w: usize = 0xF0; // CPiecewiseCurve
+            }
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod TagStatus {
+                pub const m_TagStatus: usize = 0x0; // TagActionStatus
+                pub const m_flTagStartAnimTime: usize = 0x4; // float32
             }
             // Parent: None
             // Field count: 1
@@ -5151,27 +5206,6 @@ pub mod cs2_dumper {
                 pub const m_vAccelerationWS: usize = 0x18; // Vector
             }
             // Parent: None
-            // Field count: 17
-            pub mod CCompressorGroup {
-                pub const m_nTotalElementCount: usize = 0x0; // int32
-                pub const m_szChannelClass: usize = 0x8; // CUtlVector<char*>
-                pub const m_szVariableName: usize = 0x20; // CUtlVector<char*>
-                pub const m_nType: usize = 0x38; // CUtlVector<fieldtype_t>
-                pub const m_nFlags: usize = 0x50; // CUtlVector<int32>
-                pub const m_szGrouping: usize = 0x68; // CUtlVector<CUtlString>
-                pub const m_nCompressorIndex: usize = 0x80; // CUtlVector<int32>
-                pub const m_szElementNames: usize = 0x98; // CUtlVector<CUtlVector<char*>>
-                pub const m_nElementUniqueID: usize = 0xB0; // CUtlVector<CUtlVector<int32>>
-                pub const m_nElementMask: usize = 0xC8; // CUtlVector<uint32>
-                pub const m_vectorCompressor: usize = 0xF8; // CUtlVector<CCompressor<Vector>*>
-                pub const m_quaternionCompressor: usize = 0x110; // CUtlVector<CCompressor<QuaternionStorage>*>
-                pub const m_intCompressor: usize = 0x128; // CUtlVector<CCompressor<int32>*>
-                pub const m_boolCompressor: usize = 0x140; // CUtlVector<CCompressor<bool>*>
-                pub const m_colorCompressor: usize = 0x158; // CUtlVector<CCompressor<Color>*>
-                pub const m_vector2DCompressor: usize = 0x170; // CUtlVector<CCompressor<Vector2D>*>
-                pub const m_vector4DCompressor: usize = 0x188; // CUtlVector<CCompressor<Vector4D>*>
-            }
-            // Parent: None
             // Field count: 10
             //
             // Metadata:
@@ -5409,19 +5443,8 @@ pub mod cs2_dumper {
             pub mod CNmControlParameterBoolNode__CDefinition {
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 0
             pub mod CNmChainLookatTask {
-                pub const m_nChainEndBoneIdx: usize = 0x48; // int32
-                pub const m_nNumBonesInChain: usize = 0x4C; // int32
-                pub const m_chainForwardDir: usize = 0x50; // Vector
-                pub const m_flBlendWeight: usize = 0x5C; // float32
-                pub const m_flHorizontalAngleLimitDegrees: usize = 0x60; // float32
-                pub const m_flVerticalAngleLimitDegrees: usize = 0x64; // float32
-                pub const m_lookatTarget: usize = 0x68; // Vector
-                pub const m_bIsTargetInWorldSpace: usize = 0x74; // bool
-                pub const m_bIsRunningFromDeserializedData: usize = 0x75; // bool
-                pub const m_flHorizontalAngleDegrees: usize = 0x78; // float32
-                pub const m_flVerticalAngleDegrees: usize = 0x7C; // float32
             }
             // Parent: None
             // Field count: 18
@@ -6319,7 +6342,7 @@ pub mod cs2_dumper {
                 pub const m_bIsScaleStatic: usize = 0x42; // bool
             }
             // Parent: None
-            // Field count: 8
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -6332,6 +6355,7 @@ pub mod cs2_dumper {
                 pub const m_bIsPublicBlackboardVariable: usize = 0x48; // bool
                 pub const m_bIsObservable: usize = 0x49; // bool
                 pub const m_nEditorNodeID: usize = 0x4C; // PulseDocNodeID_t
+                pub const m_Metadata: usize = 0x50; // KeyValues3
             }
             // Parent: None
             // Field count: 1
@@ -6416,17 +6440,24 @@ pub mod cs2_dumper {
                 pub const m_trajectories: usize = 0x40; // CFootTrajectories
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSceneObjectData__RTProxyDrawDescriptor_t {
-                pub const m_drawDesc: usize = 0x0; // CMaterialDrawDescriptor
-                pub const m_mWorldFromLocal: usize = 0x108; // matrix3x4_t
-                pub const m_nVertexAlbedoFormat: usize = 0x138; // VertexAlbedoFormat_t
-                pub const m_nVertexAlbedoVB: usize = 0x139; // int8
-                pub const m_nVertexAlbedoOffset: usize = 0x13A; // uint16
-                pub const m_nVertexAlbedoStride: usize = 0x13C; // uint16
+                pub const m_materialGroupToken: usize = 0x0; // uint32
+                pub const m_nSrcDrawIndex: usize = 0x4; // int32
+                pub const m_drawDesc: usize = 0x8; // CMaterialDrawDescriptor
+                pub const m_mWorldFromLocal: usize = 0x120; // matrix3x4_t
+                pub const m_nVertexAlbedoFormat: usize = 0x150; // VertexAlbedoFormat_t
+                pub const m_nVertexAlbedoVB: usize = 0x151; // int8
+                pub const m_nVertexAlbedoOffset: usize = 0x152; // uint16
+                pub const m_nVertexAlbedoStride: usize = 0x154; // uint16
+                pub const m_nVertexEmissiveFormat: usize = 0x156; // VertexAlbedoFormat_t
+                pub const m_nVertexEmissiveVB: usize = 0x157; // int8
+                pub const m_nVertexEmissiveOffset: usize = 0x158; // uint16
+                pub const m_nVertexEmissiveStride: usize = 0x15A; // uint16
+                pub const m_fEmissiveFactor: usize = 0x15C; // float32
             }
             // Parent: None
             // Field count: 2
@@ -6826,6 +6857,15 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            pub mod CNmFloatChannelData__ChannelSettings_t {
+                pub const m_range: usize = 0x0; // NmCompressionSettings_t::QuantizationRange_t
+                pub const m_bIsStatic: usize = 0x8; // bool
+            }
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             pub mod CBlendCurve {
                 pub const m_flControlPoint1: usize = 0x0; // float32
                 pub const m_flControlPoint2: usize = 0x4; // float32
@@ -7003,7 +7043,7 @@ pub mod cs2_dumper {
                 pub const m_percentageThrough: usize = 0x4; // NmPercent_t
             }
             // Parent: None
-            // Field count: 16
+            // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -7014,16 +7054,13 @@ pub mod cs2_dumper {
                 pub const m_compressedPoseData: usize = 0x10; // CUtlBinaryBlock
                 pub const m_trackCompressionSettings: usize = 0x20; // CUtlVector<NmCompressionSettings_t>
                 pub const m_compressedPoseOffsets: usize = 0x38; // CUtlVector<uint32>
-                pub const m_floatCurveIDs: usize = 0x50; // CUtlVector<CGlobalSymbol>
-                pub const m_floatCurveDefs: usize = 0x68; // CUtlVector<NmFloatCurveCompressionSettings_t>
-                pub const m_compressedFloatCurveData: usize = 0x80; // CUtlVector<uint16>
-                pub const m_compressedFloatCurveOffsets: usize = 0x98; // CUtlVector<uint32>
-                pub const m_secondaryAnimations: usize = 0xD8; // CUtlVectorFixedGrowable<CNmClip*,1>
-                pub const m_syncTrack: usize = 0xF8; // CNmSyncTrack
-                pub const m_rootMotion: usize = 0x1B0; // CNmRootMotionData
-                pub const m_bIsAdditive: usize = 0x200; // bool
-                pub const m_modelSpaceSamplingChain: usize = 0x208; // CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
-                pub const m_modelSpaceBoneSamplingIndices: usize = 0x220; // CUtlVector<int32>
+                pub const m_secondaryAnimations: usize = 0x78; // CUtlVectorFixedGrowable<CNmClip*,1>
+                pub const m_floatChannelData: usize = 0x98; // CUtlVectorFixedGrowable<CNmFloatChannelData*,2>
+                pub const m_syncTrack: usize = 0xC0; // CNmSyncTrack
+                pub const m_rootMotion: usize = 0x170; // CNmRootMotionData
+                pub const m_bIsAdditive: usize = 0x1C0; // bool
+                pub const m_modelSpaceSamplingChain: usize = 0x1C8; // CUtlVector<CNmClip::ModelSpaceSamplingChainLink_t>
+                pub const m_modelSpaceBoneSamplingIndices: usize = 0x1E0; // CUtlVector<int32>
             }
             // Parent: None
             // Field count: 2
@@ -7226,12 +7263,12 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CRenderMesh {
                 pub const m_sceneObjects: usize = 0x10; // CUtlLeanVectorFixedGrowable<CSceneObjectData,1>
-                pub const m_constraints: usize = 0xB8; // CUtlLeanVector<CBaseConstraint*>
-                pub const m_skeleton: usize = 0xC8; // CRenderSkeleton
-                pub const m_bUseUV2ForCharting: usize = 0x1D4; // bool
-                pub const m_bEmbeddedMapMesh: usize = 0x1D5; // bool
-                pub const m_meshDeformParams: usize = 0x1F8; // DynamicMeshDeformParams_t
-                pub const m_pGroomData: usize = 0x208; // CRenderGroom*
+                pub const m_constraints: usize = 0xD0; // CUtlLeanVector<CBaseConstraint*>
+                pub const m_skeleton: usize = 0xE0; // CRenderSkeleton
+                pub const m_bUseUV2ForCharting: usize = 0x1EC; // bool
+                pub const m_bEmbeddedMapMesh: usize = 0x1ED; // bool
+                pub const m_meshDeformParams: usize = 0x210; // DynamicMeshDeformParams_t
+                pub const m_pGroomData: usize = 0x220; // CRenderGroom*
             }
             // Parent: None
             // Field count: 8
@@ -7673,16 +7710,16 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 10
             pub mod CNmTwoBoneIKTask {
-                pub const m_nEffectorBoneIdx: usize = 0x48; // int32
-                pub const m_nEffectorTargetBoneIdx: usize = 0x4C; // int32
-                pub const m_targetTransform: usize = 0x50; // CTransform
-                pub const m_effectorTarget: usize = 0x70; // CNmTarget
-                pub const m_blendMode: usize = 0xA0; // NmIKBlendMode_t
-                pub const m_flBlendWeight: usize = 0xA4; // float32
-                pub const m_bIsTargetInWorldSpace: usize = 0xA8; // bool
-                pub const m_bIsRunningFromDeserializedData: usize = 0xA9; // bool
-                pub const m_flChainRotationWeight: usize = 0xAC; // float32
-                pub const m_debugEffectorBoneID: usize = 0xB0; // CGlobalSymbol
+                pub const m_nEffectorBoneIdx: usize = 0x70; // int32
+                pub const m_nEffectorTargetBoneIdx: usize = 0x74; // int32
+                pub const m_targetTransform: usize = 0x80; // CTransform
+                pub const m_effectorTarget: usize = 0xA0; // CNmTarget
+                pub const m_blendMode: usize = 0xD0; // NmIKBlendMode_t
+                pub const m_flBlendWeight: usize = 0xD4; // float32
+                pub const m_bIsTargetInWorldSpace: usize = 0xD8; // bool
+                pub const m_bIsRunningFromDeserializedData: usize = 0xD9; // bool
+                pub const m_flChainRotationWeight: usize = 0xDC; // float32
+                pub const m_debugEffectorBoneID: usize = 0xE0; // CGlobalSymbol
             }
             // Parent: None
             // Field count: 2
@@ -7813,7 +7850,7 @@ pub mod cs2_dumper {
                 pub const m_sequenceParams: usize = 0x1C8; // CAnimSequenceParams
             }
             // Parent: None
-            // Field count: 7
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -7822,9 +7859,10 @@ pub mod cs2_dumper {
                 pub const m_desiredFacingDirectionNodeIdx: usize = 0x1A; // int16
                 pub const m_linearVelocityLimitNodeIdx: usize = 0x1C; // int16
                 pub const m_angularVelocityLimitNodeIdx: usize = 0x1E; // int16
-                pub const m_maxLinearVelocity: usize = 0x20; // float32
-                pub const m_maxAngularVelocityRadians: usize = 0x24; // float32
-                pub const m_overrideFlags: usize = 0x28; // CNmBitFlags
+                pub const m_enabledNodeIdx: usize = 0x20; // int16
+                pub const m_maxLinearVelocity: usize = 0x24; // float32
+                pub const m_maxAngularVelocityRadians: usize = 0x28; // float32
+                pub const m_overrideFlags: usize = 0x2C; // CNmBitFlags
             }
             // Parent: None
             // Field count: 11
@@ -8781,6 +8819,15 @@ pub mod cs2_dumper {
                 pub const m_eventConditionRules: usize = 0x14; // CNmBitFlags
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CNmFloatChannelSet_t {
+                pub const m_ID: usize = 0x0; // CGlobalSymbol
+                pub const m_channelIDs: usize = 0x8; // CUtlLeanVector<CGlobalSymbol>
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -9045,7 +9092,7 @@ pub mod cs2_dumper {
             pub mod CPulse_InstructionDebug {
                 pub const m_nFlowNodeID: usize = 0x0; // PulseDocNodeID_t
                 pub const m_nValueNodeID: usize = 0x4; // PulseDocNodeID_t
-                pub const m_SequencePointName: usize = 0x8; // CGlobalSymbol
+                pub const m_SequencePointName: usize = 0x8; // PulseSymbol_t
             }
             // Parent: None
             // Field count: 1
@@ -9156,6 +9203,9 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             pub mod CParticleProperty {
             }
         }

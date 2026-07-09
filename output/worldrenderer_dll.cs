@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 09:08:48.606860700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
-    // Class count: 32
+    // Class count: 33
     // Enum count: 3
     public static class WorldrendererDll {
         // Alignment: 1
@@ -53,11 +53,17 @@ namespace CS2Dumper.Schemas {
         }
         // Parent: CEntityComponent
         // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
         public static class CScriptComponent {
             public const nint m_scriptClassName = 0x30; // CUtlSymbolLarge
         }
         // Parent: None
         // Field count: 12
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
         public static class CEntityIdentity {
             public const nint m_nameStringTableIndex = 0x14; // int32
             public const nint m_name = 0x18; // CUtlSymbolLarge
@@ -73,17 +79,20 @@ namespace CS2Dumper.Schemas {
             public const nint m_pNextByClass = 0x68; // CEntityIdentity*
         }
         // Parent: None
-        // Field count: 6
+        // Field count: 9
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class RTProxyInstanceInfo_t {
             public const nint m_nFlags = 0x0; // RTProxyInstanceFlags_t
             public const nint m_albedoFormat = 0x1; // VertexAlbedoFormat_t
-            public const nint m_nBLASCount = 0x2; // uint16
-            public const nint m_nBLASIndex = 0x4; // uint32
-            public const nint m_nVertexAlbedoByteOffset = 0x8; // uint32
-            public const nint m_mWorldFromLocal = 0xC; // matrix3x4_t
+            public const nint m_emissiveFormat = 0x2; // VertexAlbedoFormat_t
+            public const nint m_nBLASCount = 0x4; // uint16
+            public const nint m_nBLASIndex = 0x8; // uint32
+            public const nint m_nVertexAlbedoByteOffset = 0xC; // uint32
+            public const nint m_nVertexEmissiveByteOffset = 0x10; // uint32
+            public const nint m_fEmissiveFactor = 0x14; // float32
+            public const nint m_mWorldFromLocal = 0x18; // matrix3x4_t
         }
         // Parent: None
         // Field count: 1
@@ -146,7 +155,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_BoundsWs = 0x8; // AABB_t
         }
         // Parent: None
-        // Field count: 10
+        // Field count: 11
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -156,6 +165,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nLayer = 0x8; // int16
             public const nint m_instanceStream = 0xA; // int16
             public const nint m_vertexAlbedoStream = 0xC; // int16
+            public const nint m_vertexEmissiveStream = 0xE; // int16
             public const nint m_aggregateMeshes = 0x10; // CUtlVector<AggregateMeshInfo_t>
             public const nint m_lodSetups = 0x28; // CUtlVector<AggregateLODSetup_t>
             public const nint m_visClusterMembership = 0x40; // CUtlVector<uint16>
@@ -206,6 +216,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_vVertexExtentLs = 0x38; // Vector
         }
         // Parent: None
+        // Field count: 1
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class AggregateVertexEmissiveStreamOnDiskData_t {
+            public const nint m_BufferData = 0x0; // CUtlBinaryBlock
+        }
+        // Parent: None
         // Field count: 11
         //
         // Metadata:
@@ -247,7 +265,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
         }
         // Parent: None
-        // Field count: 15
+        // Field count: 16
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -262,11 +280,12 @@ namespace CS2Dumper.Schemas {
             public const nint m_extraVertexStreams = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
             public const nint m_aggregateInstanceStreams = 0xC0; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
             public const nint m_vertexAlbedoStreams = 0xD8; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
-            public const nint m_layerNames = 0xF0; // CUtlVector<CUtlString>
-            public const nint m_sceneObjectLayerIndices = 0x108; // CUtlVector<uint8>
-            public const nint m_grassFileName = 0x120; // CUtlString
-            public const nint m_nodeLightingInfo = 0x128; // BakedLightingInfo_t
-            public const nint m_bHasBakedGeometryFlag = 0x170; // bool
+            public const nint m_vertexEmissiveStreams = 0xF0; // CUtlVector<AggregateVertexEmissiveStreamOnDiskData_t>
+            public const nint m_layerNames = 0x108; // CUtlVector<CUtlString>
+            public const nint m_sceneObjectLayerIndices = 0x120; // CUtlVector<uint8>
+            public const nint m_grassFileName = 0x138; // CUtlString
+            public const nint m_nodeLightingInfo = 0x140; // BakedLightingInfo_t
+            public const nint m_bHasBakedGeometryFlag = 0x188; // bool
         }
         // Parent: None
         // Field count: 1
@@ -337,7 +356,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_pData = 0x20; // CUtlVector<uint8>
         }
         // Parent: None
-        // Field count: 12
+        // Field count: 14
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -353,7 +372,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_nLightProbeVolumePrecomputedHandshake = 0x14; // int32
             public const nint m_nInstanceStreamOffset = 0x18; // uint32
             public const nint m_nVertexAlbedoStreamOffset = 0x1C; // uint32
-            public const nint m_instanceStreams = 0x20; // AggregateInstanceStream_t
+            public const nint m_nVertexEmissiveStreamOffset = 0x20; // uint32
+            public const nint m_instanceStreams = 0x24; // AggregateInstanceStream_t
+            public const nint m_fEmissiveFactor = 0x28; // float32
         }
         // Parent: None
         // Field count: 4
@@ -388,7 +409,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_vLinearTintColor = 0x18; // Vector
         }
         // Parent: None
-        // Field count: 6
+        // Field count: 7
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -399,6 +420,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_VBData = 0x38; // CUtlBinaryBlock
             public const nint m_IBData = 0x48; // CUtlBinaryBlock
             public const nint m_InstanceAlbedoData = 0x58; // CUtlBinaryBlock
+            public const nint m_InstanceEmissiveData = 0x68; // CUtlBinaryBlock
         }
         // Parent: None
         // Field count: 2

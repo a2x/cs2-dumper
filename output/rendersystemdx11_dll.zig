@@ -1,11 +1,11 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 09:08:48.606860700 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
         // Module: rendersystemdx11.dll
         // Class count: 8
-        // Enum count: 8
+        // Enum count: 9
         pub const rendersystemdx11_dll = struct {
             // Alignment: 4
             // Member count: 14
@@ -26,7 +26,7 @@ pub const cs2_dumper = struct {
                 RENDER_PRIM_TYPE_COUNT = 0xD
             };
             // Alignment: 4
-            // Member count: 13
+            // Member count: 14
             pub const RenderBufferFlags_t = enum(u32) {
                 RENDER_BUFFER_USAGE_NONE = 0x0,
                 RENDER_BUFFER_USAGE_VERTEX_BUFFER = 0x1,
@@ -40,7 +40,8 @@ pub const cs2_dumper = struct {
                 RENDER_BUFFER_SHADER_BINDING_TABLE = 0x400,
                 RENDER_BUFFER_POOL_ALLOCATED = 0x800,
                 RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING = 0x1000,
-                RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000
+                RENDER_BUFFER_IMMOVABLE_ALLOCATION = 0x2000,
+                RENDER_BUFFER_DYNAMIC_ZERO_COPY = 0x4000
             };
             // Alignment: 1
             // Member count: 3
@@ -50,7 +51,7 @@ pub const cs2_dumper = struct {
                 RS_CULL_FRONT = 0x2
             };
             // Alignment: 1
-            // Member count: 8
+            // Member count: 14
             pub const RsComparison_t = enum(u8) {
                 RS_CMP_NEVER = 0x0,
                 RS_CMP_LESS = 0x1,
@@ -59,7 +60,12 @@ pub const cs2_dumper = struct {
                 RS_CMP_GREATER = 0x4,
                 RS_CMP_NOT_EQUAL = 0x5,
                 RS_CMP_GREATER_EQUAL = 0x6,
-                RS_CMP_ALWAYS = 0x7
+                RS_CMP_ALWAYS = 0x7,
+                RS_CMP_CLOSER_FARTHER_FLAG = 0x8,
+                RS_CMP_CLOSER = 0x9,
+                RS_CMP_CLOSER_EQUAL = 0xB,
+                RS_CMP_FARTHER = 0xC,
+                RS_CMP_FARTHER_EQUAL = 0xE
             };
             // Alignment: 1
             // Member count: 2
@@ -87,6 +93,16 @@ pub const cs2_dumper = struct {
                 INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID = 0x2,
                 INPUT_LAYOUT_VARIATION_MAX = 0x3
             };
+            // Alignment: 4
+            // Member count: 6
+            pub const UpscalerType_t = enum(u32) {
+                UPSCALER_NONE = 0x0,
+                UPSCALER_AMD_FSR2 = 0x1,
+                UPSCALER_AMD_FSR3 = 0x2,
+                UPSCALER_NVIDIA_DLSS = 0x3,
+                UPSCALER_INTEL_XESS = 0x4,
+                UPSCALER_COUNT = 0x5
+            };
             // Alignment: 1
             // Member count: 3
             pub const RenderSlotType_t = enum(u8) {
@@ -99,7 +115,7 @@ pub const cs2_dumper = struct {
             pub const RsDepthStencilStateDesc_t = struct {
                 pub const m_bDepthTestEnable: usize = 0x0; // bitfield:1
                 pub const m_bDepthWriteEnable: usize = 0x0; // bitfield:1
-                pub const m_depthFunc: usize = 0x1; // RsComparison_t
+                pub const m_depthFunc: usize = 0x0; // bitfield:4
                 pub const m_stencilState: usize = 0x2; // RsStencilStateDesc_t
             };
             // Parent: None
@@ -144,15 +160,15 @@ pub const cs2_dumper = struct {
             // Parent: None
             // Field count: 11
             pub const RsStencilStateDesc_t = struct {
+                pub const m_frontStencilFunc: usize = 0x0; // bitfield:4
+                pub const m_backStencilFunc: usize = 0x0; // bitfield:4
                 pub const m_bStencilEnable: usize = 0x0; // bitfield:1
                 pub const m_frontStencilFailOp: usize = 0x0; // bitfield:3
                 pub const m_frontStencilDepthFailOp: usize = 0x0; // bitfield:3
                 pub const m_frontStencilPassOp: usize = 0x0; // bitfield:3
-                pub const m_frontStencilFunc: usize = 0x0; // bitfield:3
                 pub const m_backStencilFailOp: usize = 0x0; // bitfield:3
                 pub const m_backStencilDepthFailOp: usize = 0x0; // bitfield:3
                 pub const m_backStencilPassOp: usize = 0x0; // bitfield:3
-                pub const m_backStencilFunc: usize = 0x0; // bitfield:3
                 pub const m_nStencilReadMask: usize = 0x4; // uint8
                 pub const m_nStencilWriteMask: usize = 0x5; // uint8
             };

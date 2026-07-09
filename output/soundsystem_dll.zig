@@ -1,11 +1,11 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 09:08:48.606860700 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
         // Module: soundsystem.dll
-        // Class count: 136
-        // Enum count: 26
+        // Class count: 150
+        // Enum count: 27
         pub const soundsystem_dll = struct {
             // Alignment: 4
             // Member count: 3
@@ -21,7 +21,18 @@ pub const cs2_dumper = struct {
                 RMS = 0x1
             };
             // Alignment: 4
-            // Member count: 39
+            // Member count: 7
+            pub const SndBeatMidiStatusType_t = enum(u32) {
+                SndSeqMidiStatusNoteOff = 0x8,
+                SndSeqMidiStatusNoteOn = 0x9,
+                SndSeqMidiStatusKeyPressure = 0xA,
+                SndSeqMidiStatusCtrlChange = 0xB,
+                SndSeqMidiStatusProgramChange = 0xC,
+                SndSeqMidiStatusChannelPressure = 0xD,
+                SndSeqMidiStatusPitchBend = 0xE
+            };
+            // Alignment: 4
+            // Member count: 40
             pub const VMixGraphCommandID_t = enum(u32) {
                 CMD_INVALID = 0xFFFFFFFF,
                 CMD_CONTROL_INPUT_STORE = 0x1,
@@ -48,20 +59,21 @@ pub const cs2_dumper = struct {
                 CMD_SUBMIX_PROCESS = 0x16,
                 CMD_SUBMIX_GENERATE = 0x17,
                 CMD_SUBMIX_GENERATE_SIDECHAIN = 0x18,
-                CMD_SUBMIX_DEBUG = 0x19,
-                CMD_SUBMIX_MIX2x1 = 0x1A,
-                CMD_SUBMIX_OUTPUT = 0x1B,
-                CMD_SUBMIX_OUTPUTx2 = 0x1C,
-                CMD_SUBMIX_COPY = 0x1D,
-                CMD_SUBMIX_ACCUMULATE = 0x1E,
-                CMD_SUBMIX_METER = 0x1F,
-                CMD_SUBMIX_METER_SPECTRUM = 0x20,
-                CMD_IMPULSERESPONSE_INPUT_STORE = 0x21,
-                CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x22,
-                CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x23,
-                CMD_IMPULSERESPONSE_RESET = 0x24,
-                CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x25,
-                CMD_IMPULSERESPONSE_DELAY = 0x26
+                CMD_SUBMIX_EXTRACTCONTAINER = 0x19,
+                CMD_SUBMIX_DEBUG = 0x1A,
+                CMD_SUBMIX_MIX2x1 = 0x1B,
+                CMD_SUBMIX_OUTPUT = 0x1C,
+                CMD_SUBMIX_OUTPUTx2 = 0x1D,
+                CMD_SUBMIX_COPY = 0x1E,
+                CMD_SUBMIX_ACCUMULATE = 0x1F,
+                CMD_SUBMIX_METER = 0x20,
+                CMD_SUBMIX_METER_SPECTRUM = 0x21,
+                CMD_IMPULSERESPONSE_INPUT_STORE = 0x22,
+                CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x23,
+                CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x24,
+                CMD_IMPULSERESPONSE_RESET = 0x25,
+                CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x26,
+                CMD_IMPULSERESPONSE_DELAY = 0x27
             };
             // Alignment: 1
             // Member count: 5
@@ -96,6 +108,22 @@ pub const cs2_dumper = struct {
                 FILTER_PASSTHROUGH = 0x8
             };
             // Alignment: 4
+            // Member count: 2
+            pub const SndBeatTrackPlaybackType_t = enum(u32) {
+                eSndBeatTrackPlaybackTypeStep = 0x0,
+                eSndBeatTrackPlaybackTypeFwd = 0x1
+            };
+            // Alignment: 4
+            // Member count: 6
+            pub const SndBeatEventType_t = enum(u32) {
+                eSndBeatEventTypeInvalid = 0x0,
+                eSndBeatEventTypeBeat = 0x1,
+                eSndBeatEventTypeBar = 0x2,
+                eSndBeatEventTypePhrase = 0x3,
+                eSndBeatEventTypeLength = 0x4,
+                eSndBeatEventTypeKeys = 0x5
+            };
+            // Alignment: 4
             // Member count: 3
             pub const SosActionStopType_t = enum(u32) {
                 SOS_STOPTYPE_NONE = 0x0,
@@ -103,10 +131,21 @@ pub const cs2_dumper = struct {
                 SOS_STOPTYPE_OPVAR = 0x2
             };
             // Alignment: 4
-            // Member count: 2
-            pub const SndSeqTrackPlaybackType_t = enum(u32) {
-                eSndSeqTrackPlaybackTypeStep = 0x0,
-                eSndSeqTrackPlaybackTypeFwd = 0x1
+            // Member count: 4
+            pub const SndBeatLaunchSyncType_t = enum(u32) {
+                eSndBeatLaunchSyncTypeInvalid = 0x0,
+                eSndBeatLaunchSyncTypeQueue = 0x1,
+                eSndBeatLaunchSyncTypeSeek = 0x2,
+                eSndBeatLaunchSyncTypeReset = 0x3
+            };
+            // Alignment: 4
+            // Member count: 5
+            pub const SndBeatKeyType_t = enum(u32) {
+                eSndBeatPatternTypeNone = 0x0,
+                eSndBeatPatternTypeKeys = 0x1,
+                eSndBeatPatternTypeKeyedFloats = 0x2,
+                eSndBeatPatternTypeKeyedSndEvts = 0x3,
+                eSndBeatPatternTypeKeyedMidi = 0x4
             };
             // Alignment: 4
             // Member count: 6
@@ -119,17 +158,6 @@ pub const cs2_dumper = struct {
                 SOS_EDIT_ITEM_TYPE_FIELD = 0x5
             };
             // Alignment: 4
-            // Member count: 7
-            pub const SndSeqQuantizeType_t = enum(u32) {
-                eSndSeqQuantizeInvalid = 0xFFFFFFFF,
-                eSndSeqQuantizeNone = 0x0,
-                eSndSeqQuantizeBeat = 0x1,
-                eSndSeqQuantizeBar = 0x2,
-                eSndSeqQuantizeSequence = 0x3,
-                eSndSeqQuantizeSeek = 0x4,
-                eSndSeqQuantizeReset = 0x5
-            };
-            // Alignment: 4
             // Member count: 5
             pub const PlayBackMode_t = enum(u32) {
                 Random = 0x0,
@@ -139,18 +167,17 @@ pub const cs2_dumper = struct {
                 RandomWeights = 0x4
             };
             // Alignment: 4
+            // Member count: 2
+            pub const EVsndTriggerMode = enum(u32) {
+                Trigger = 0x0,
+                Gate = 0x1
+            };
+            // Alignment: 4
             // Member count: 3
             pub const SosGroupFieldBehavior_t = enum(u32) {
                 kIgnore = 0x0,
                 kBranch = 0x1,
                 kMatch = 0x2
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const SndSeqSyncType_t = enum(u32) {
-                eSndSeqSyncTypeNone = 0x0,
-                eSndSeqSyncTypeWait = 0x1,
-                eSndSeqSyncTypeSeek = 0x2
             };
             // Alignment: 4
             // Member count: 30
@@ -215,13 +242,6 @@ pub const cs2_dumper = struct {
                 B = 0xB,
                 Count = 0xC
             };
-            // Alignment: 4
-            // Member count: 3
-            pub const SndSeqRegionType_t = enum(u32) {
-                eSndSeqRegionTypeNull = 0x0,
-                eSndSeqRegionTypeSndEvt = 0x1,
-                eSndSeqRegionTypeMidiSeq = 0x2
-            };
             // Alignment: 1
             // Member count: 4
             pub const CVSoundFormat_t = enum(u8) {
@@ -241,13 +261,6 @@ pub const cs2_dumper = struct {
                 FILTER_SLOPE_24dB = 0x5,
                 FILTER_SLOPE_36dB = 0x6,
                 FILTER_SLOPE_48dB = 0x7
-            };
-            // Alignment: 4
-            // Member count: 3
-            pub const SndSeqPlayerType_t = enum(u32) {
-                eSndSeqPlayerNull = 0x0,
-                eSndSeqPlayerSndEvt = 0x1,
-                eSndSeqPlayerMidiSeq = 0x2
             };
             // Alignment: 4
             // Member count: 2
@@ -275,15 +288,10 @@ pub const cs2_dumper = struct {
                 SOS_SETPARAM_SORTTYPE_LOWEST = 0x1
             };
             // Alignment: 4
-            // Member count: 7
-            pub const SndSeqMidiStatusType_t = enum(u32) {
-                SndSeqMidiStatusNoteOff = 0x8,
-                SndSeqMidiStatusNoteOn = 0x9,
-                SndSeqMidiStatusKeyPressure = 0xA,
-                SndSeqMidiStatusCtrlChange = 0xB,
-                SndSeqMidiStatusProgramChange = 0xC,
-                SndSeqMidiStatusChannelPressure = 0xD,
-                SndSeqMidiStatusPitchBend = 0xE
+            // Member count: 2
+            pub const EVsndPlaybackMode = enum(u32) {
+                Trigger = 0x0,
+                Gate = 0x1
             };
             // Parent: None
             // Field count: 1
@@ -301,9 +309,9 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerBlender = struct {
-                pub const m_firstSound: usize = 0xA8; // CSoundContainerReference
-                pub const m_secondSound: usize = 0xC8; // CSoundContainerReference
-                pub const m_flBlendFactor: usize = 0xE8; // float32
+                pub const m_firstSound: usize = 0x70; // CSoundContainerReference
+                pub const m_secondSound: usize = 0x90; // CSoundContainerReference
+                pub const m_flBlendFactor: usize = 0xB0; // float32
             };
             // Parent: None
             // Field count: 1
@@ -339,6 +347,22 @@ pub const cs2_dumper = struct {
                 pub const m_volumeScaling: usize = 0x50; // CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance
             };
             // Parent: None
+            // Field count: 9
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CVsndTriggerSlot = struct {
+                pub const m_bEnableVsnd: usize = 0x0; // bool
+                pub const m_vsnd: usize = 0x8; // CSoundContainerReference
+                pub const m_bEnableEndcap: usize = 0x28; // bool
+                pub const m_endcapVsnd: usize = 0x30; // CSoundContainerReference
+                pub const m_bEnableLoopcap: usize = 0x50; // bool
+                pub const m_loopcapVsnd: usize = 0x58; // CSoundContainerReference
+                pub const m_volume: usize = 0x78; // float32
+                pub const m_fadeOut: usize = 0x7C; // float32
+                pub const m_mode: usize = 0x80; // EVsndTriggerMode
+            };
+            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -370,12 +394,12 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerRandomSampler = struct {
-                pub const m_flAmplitude: usize = 0xB8; // float32
-                pub const m_flAmplitudeJitter: usize = 0xBC; // float32
-                pub const m_flTimeJitter: usize = 0xC0; // float32
-                pub const m_flMaxLength: usize = 0xC4; // float32
-                pub const m_nNumDelayVariations: usize = 0xC8; // int32
-                pub const m_grainResources: usize = 0xD0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+                pub const m_flAmplitude: usize = 0x80; // float32
+                pub const m_flAmplitudeJitter: usize = 0x84; // float32
+                pub const m_flTimeJitter: usize = 0x88; // float32
+                pub const m_flMaxLength: usize = 0x8C; // float32
+                pub const m_nNumDelayVariations: usize = 0x90; // int32
+                pub const m_grainResources: usize = 0x98; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             };
             // Parent: None
             // Field count: 0
@@ -401,22 +425,20 @@ pub const cs2_dumper = struct {
             pub const CVoiceContainerDefault = struct {
             };
             // Parent: None
-            // Field count: 11
+            // Field count: 9
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CVSound = struct {
-                pub const m_nRate: usize = 0x0; // int32
-                pub const m_nFormat: usize = 0x4; // CVSoundFormat_t
-                pub const m_nChannels: usize = 0x8; // uint32
-                pub const m_nLoopStart: usize = 0xC; // int32
-                pub const m_nSampleCount: usize = 0x10; // uint32
-                pub const m_flDuration: usize = 0x14; // float32
-                pub const m_Sentences: usize = 0x18; // CUtlVector<CAudioSentence>
-                pub const m_nStreamingSize: usize = 0x30; // uint32
-                pub const m_nSeekTable: usize = 0x38; // CUtlVector<int32>
-                pub const m_nLoopEnd: usize = 0x50; // int32
-                pub const m_encodedHeader: usize = 0x58; // CUtlBinaryBlock
+                pub const m_Sentences: usize = 0x0; // CUtlLeanVector<CAudioSentence>
+                pub const m_nRate: usize = 0x10; // int32
+                pub const m_nFormat: usize = 0x14; // CVSoundFormat_t
+                pub const m_nChannels: usize = 0x18; // uint32
+                pub const m_nLoopStart: usize = 0x1C; // int32
+                pub const m_nSampleCount: usize = 0x20; // uint32
+                pub const m_flDuration: usize = 0x24; // float32
+                pub const m_nStreamingSize: usize = 0x28; // uint32
+                pub const m_nLoopEnd: usize = 0x2C; // int32
             };
             // Parent: None
             // Field count: 1
@@ -491,7 +513,7 @@ pub const cs2_dumper = struct {
                 pub const m_flInterpolationTime: usize = 0x30; // float32
             };
             // Parent: None
-            // Field count: 2
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -499,8 +521,7 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerAnalysisBase = struct {
-                pub const m_bRegenerateCurveOnCompile: usize = 0x8; // bool
-                pub const m_curve: usize = 0x10; // CPiecewiseCurve
+                pub const m_curve: usize = 0x8; // CPiecewiseCurve
             };
             // Parent: None
             // Field count: 10
@@ -601,9 +622,9 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerRealtimeFMSineWave = struct {
-                pub const m_flCarrierFrequency: usize = 0xA8; // float32
-                pub const m_flModulatorFrequency: usize = 0xAC; // float32
-                pub const m_flModulatorAmount: usize = 0xB0; // float32
+                pub const m_flCarrierFrequency: usize = 0x70; // float32
+                pub const m_flModulatorFrequency: usize = 0x74; // float32
+                pub const m_flModulatorAmount: usize = 0x78; // float32
             };
             // Parent: None
             // Field count: 1
@@ -731,17 +752,16 @@ pub const cs2_dumper = struct {
                 pub const m_hSoundEventHash: usize = 0xD8; // uint32
             };
             // Parent: None
-            // Field count: 6
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub const CSndSeqInstBaseSchema = struct {
                 pub const m_nType: usize = 0x8; // SndSeqInstrumentType_t
-                pub const m_nPlayerType: usize = 0xC; // SndSeqPlayerType_t
-                pub const m_bStopCurrentEvents: usize = 0x12; // bool
-                pub const m_flBPM: usize = 0x14; // float32
-                pub const m_flBPMFactor: usize = 0x18; // float32
-                pub const m_flBPMInvFactor: usize = 0x1C; // float32
+                pub const m_bStopCurrentEvents: usize = 0xE; // bool
+                pub const m_flBPM: usize = 0x10; // float32
+                pub const m_flBPMFactor: usize = 0x14; // float32
+                pub const m_flBPMInvFactor: usize = 0x18; // float32
             };
             // Parent: None
             // Field count: 10
@@ -795,6 +815,14 @@ pub const cs2_dumper = struct {
                 pub const m_flEaseOut: usize = 0x64; // float32
             };
             // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SndBeatEventKeyedFloats_t = struct {
+                pub const m_flFloat: usize = 0x10; // float32
+            };
+            // Parent: None
             // Field count: 5
             //
             // Metadata:
@@ -814,7 +842,7 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerStaticAdditiveSynth = struct {
-                pub const m_tones: usize = 0xB8; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+                pub const m_tones: usize = 0x80; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
             };
             // Parent: None
             // Field count: 9
@@ -824,15 +852,15 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerShapedNoise = struct {
-                pub const m_bUseCurveForFrequency: usize = 0xA8; // bool
-                pub const m_flFrequency: usize = 0xAC; // float32
-                pub const m_frequencySweep: usize = 0xB0; // CPiecewiseCurve
-                pub const m_bUseCurveForResonance: usize = 0xF0; // bool
-                pub const m_flResonance: usize = 0xF4; // float32
-                pub const m_resonanceSweep: usize = 0xF8; // CPiecewiseCurve
-                pub const m_bUseCurveForAmplitude: usize = 0x138; // bool
-                pub const m_flGainInDecibels: usize = 0x13C; // float32
-                pub const m_gainSweep: usize = 0x140; // CPiecewiseCurve
+                pub const m_bUseCurveForFrequency: usize = 0x70; // bool
+                pub const m_flFrequency: usize = 0x74; // float32
+                pub const m_frequencySweep: usize = 0x78; // CPiecewiseCurve
+                pub const m_bUseCurveForResonance: usize = 0xB8; // bool
+                pub const m_flResonance: usize = 0xBC; // float32
+                pub const m_resonanceSweep: usize = 0xC0; // CPiecewiseCurve
+                pub const m_bUseCurveForAmplitude: usize = 0x100; // bool
+                pub const m_flGainInDecibels: usize = 0x104; // float32
+                pub const m_gainSweep: usize = 0x108; // CPiecewiseCurve
             };
             // Parent: None
             // Field count: 2
@@ -854,7 +882,7 @@ pub const cs2_dumper = struct {
             // MPropertyDescription
             pub const CVoiceContainerBase = struct {
                 pub const m_vSound: usize = 0x28; // CVSound
-                pub const m_pEnvelopeAnalyzer: usize = 0xA0; // CVoiceContainerAnalysisBase*
+                pub const m_pEnvelopeAnalyzer: usize = 0x68; // CVoiceContainerAnalysisBase*
             };
             // Parent: None
             // Field count: 1
@@ -873,18 +901,32 @@ pub const cs2_dumper = struct {
                 pub const m_desc: usize = 0x20; // VMixUtilityDesc_t
             };
             // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub const CRandomPannerControls = struct {
+                pub const m_panningControlInputName: usize = 0x0; // CUtlString
+                pub const m_volumeControlInputName: usize = 0x8; // CUtlString
+                pub const m_flMinVolume: usize = 0x10; // float32
+                pub const m_flMaxVolume: usize = 0x14; // float32
+                pub const m_strVectorStackParam: usize = 0x18; // CUtlString
+            };
+            // Parent: None
             // Field count: 6
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             pub const CVoiceContainerGranulator = struct {
-                pub const m_flGrainLength: usize = 0xB8; // float32
-                pub const m_flGrainCrossfadeAmount: usize = 0xBC; // float32
-                pub const m_flStartJitter: usize = 0xC0; // float32
-                pub const m_flPlaybackJitter: usize = 0xC4; // float32
-                pub const m_bShouldWraparound: usize = 0xC8; // bool
-                pub const m_sourceAudio: usize = 0xD0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_flGrainLength: usize = 0x80; // float32
+                pub const m_flGrainCrossfadeAmount: usize = 0x84; // float32
+                pub const m_flStartJitter: usize = 0x88; // float32
+                pub const m_flPlaybackJitter: usize = 0x8C; // float32
+                pub const m_bShouldWraparound: usize = 0x90; // bool
+                pub const m_sourceAudio: usize = 0x98; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
             };
             // Parent: None
             // Field count: 1
@@ -942,14 +984,14 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerLoopXFade = struct {
-                pub const m_sound: usize = 0xA8; // CSoundContainerReference
-                pub const m_flLoopEnd: usize = 0xC8; // float32
-                pub const m_flLoopStart: usize = 0xCC; // float32
-                pub const m_flFadeOut: usize = 0xD0; // float32
-                pub const m_flFadeIn: usize = 0xD4; // float32
-                pub const m_bPlayHead: usize = 0xD8; // bool
-                pub const m_bPlayTail: usize = 0xD9; // bool
-                pub const m_bEqualPow: usize = 0xDA; // bool
+                pub const m_sound: usize = 0x70; // CSoundContainerReference
+                pub const m_flLoopEnd: usize = 0x90; // float32
+                pub const m_flLoopStart: usize = 0x94; // float32
+                pub const m_flFadeOut: usize = 0x98; // float32
+                pub const m_flFadeIn: usize = 0x9C; // float32
+                pub const m_bPlayHead: usize = 0xA0; // bool
+                pub const m_bPlayTail: usize = 0xA1; // bool
+                pub const m_bEqualPow: usize = 0xA2; // bool
             };
             // Parent: None
             // Field count: 1
@@ -978,6 +1020,23 @@ pub const cs2_dumper = struct {
                 pub const m_nArrayIndex: usize = 0x10; // int32
             };
             // Parent: None
+            // Field count: 10
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const CVsndRadioButtonSlot = struct {
+                pub const m_bEnableVsnd: usize = 0x0; // bool
+                pub const m_vsnd: usize = 0x8; // CSoundContainerReference
+                pub const m_bEnableEndcap: usize = 0x28; // bool
+                pub const m_endcapVsnd: usize = 0x30; // CSoundContainerReference
+                pub const m_bEnableLoopcap: usize = 0x50; // bool
+                pub const m_loopcapVsnd: usize = 0x58; // CSoundContainerReference
+                pub const m_group: usize = 0x78; // int32
+                pub const m_volume: usize = 0x7C; // float32
+                pub const m_fadeOut: usize = 0x80; // float32
+                pub const m_mode: usize = 0x84; // EVsndPlaybackMode
+            };
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -1003,9 +1062,9 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerEnvelopeAnalyzer = struct {
-                pub const m_mode: usize = 0x50; // EMode_t
-                pub const m_fAnalysisWindowMs: usize = 0x54; // float32
-                pub const m_flThreshold: usize = 0x58; // float32
+                pub const m_mode: usize = 0x48; // EMode_t
+                pub const m_fAnalysisWindowMs: usize = 0x4C; // float32
+                pub const m_flThreshold: usize = 0x50; // float32
             };
             // Parent: None
             // Field count: 3
@@ -1086,6 +1145,46 @@ pub const cs2_dumper = struct {
                 pub const m_bIsStackVar: usize = 0xD; // bool
             };
             // Parent: None
+            // Field count: 5
+            //
+            // Metadata:
+            // MPropertyArrayElementNameKey
+            // MVDataOutlinerNameExpr
+            // MGetKV3ClassDefaults
+            pub const CSndBeatTrack = struct {
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_playbackType: usize = 0x20; // SndBeatTrackPlaybackType_t
+                pub const m_nTranspose: usize = 0x24; // int32
+                pub const m_bSyncToVoice: usize = 0x28; // bool
+                pub const m_flBPM: usize = 0x2C; // float32
+            };
+            // Parent: None
+            // Field count: 17
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub const CVoiceContainerVsndRadioButton = struct {
+                pub const m_namespace: usize = 0x70; // CUtlString
+                pub const m_slot1: usize = 0x78; // CVsndRadioButtonSlot
+                pub const m_slot2: usize = 0x100; // CVsndRadioButtonSlot
+                pub const m_slot3: usize = 0x188; // CVsndRadioButtonSlot
+                pub const m_slot4: usize = 0x210; // CVsndRadioButtonSlot
+                pub const m_slot5: usize = 0x298; // CVsndRadioButtonSlot
+                pub const m_slot6: usize = 0x320; // CVsndRadioButtonSlot
+                pub const m_slot7: usize = 0x3A8; // CVsndRadioButtonSlot
+                pub const m_slot8: usize = 0x430; // CVsndRadioButtonSlot
+                pub const m_slot9: usize = 0x4B8; // CVsndRadioButtonSlot
+                pub const m_slot10: usize = 0x540; // CVsndRadioButtonSlot
+                pub const m_slot11: usize = 0x5C8; // CVsndRadioButtonSlot
+                pub const m_slot12: usize = 0x650; // CVsndRadioButtonSlot
+                pub const m_slot13: usize = 0x6D8; // CVsndRadioButtonSlot
+                pub const m_slot14: usize = 0x760; // CVsndRadioButtonSlot
+                pub const m_slot15: usize = 0x7E8; // CVsndRadioButtonSlot
+                pub const m_slot16: usize = 0x870; // CVsndRadioButtonSlot
+            };
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -1112,6 +1211,16 @@ pub const cs2_dumper = struct {
                 pub const m_nControlPointStart: usize = 0x4; // uint32
             };
             // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub const CVoiceContainerLoopTriggerWithRandomPanner = struct {
+                pub const m_randomPannerControls: usize = 0xA0; // CRandomPannerControls
+            };
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -1126,7 +1235,7 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerSet = struct {
-                pub const m_soundsToPlay: usize = 0xA8; // CUtlVector<CVoiceContainerSetElement>
+                pub const m_soundsToPlay: usize = 0x70; // CUtlVector<CVoiceContainerSetElement>
             };
             // Parent: None
             // Field count: 8
@@ -1144,6 +1253,32 @@ pub const cs2_dumper = struct {
                 pub const m_flHighCutoffFreq: usize = 0x1C; // float32
             };
             // Parent: None
+            // Field count: 17
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub const CVoiceContainerVsndTrigger = struct {
+                pub const m_namespace: usize = 0x70; // CUtlString
+                pub const m_slot1: usize = 0x78; // CVsndTriggerSlot
+                pub const m_slot2: usize = 0x100; // CVsndTriggerSlot
+                pub const m_slot3: usize = 0x188; // CVsndTriggerSlot
+                pub const m_slot4: usize = 0x210; // CVsndTriggerSlot
+                pub const m_slot5: usize = 0x298; // CVsndTriggerSlot
+                pub const m_slot6: usize = 0x320; // CVsndTriggerSlot
+                pub const m_slot7: usize = 0x3A8; // CVsndTriggerSlot
+                pub const m_slot8: usize = 0x430; // CVsndTriggerSlot
+                pub const m_slot9: usize = 0x4B8; // CVsndTriggerSlot
+                pub const m_slot10: usize = 0x540; // CVsndTriggerSlot
+                pub const m_slot11: usize = 0x5C8; // CVsndTriggerSlot
+                pub const m_slot12: usize = 0x650; // CVsndTriggerSlot
+                pub const m_slot13: usize = 0x6D8; // CVsndTriggerSlot
+                pub const m_slot14: usize = 0x760; // CVsndTriggerSlot
+                pub const m_slot15: usize = 0x7E8; // CVsndTriggerSlot
+                pub const m_slot16: usize = 0x870; // CVsndTriggerSlot
+            };
+            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -1151,6 +1286,16 @@ pub const cs2_dumper = struct {
             pub const CVoiceContainerSetElement = struct {
                 pub const m_sound: usize = 0x0; // CSoundContainerReference
                 pub const m_flVolumeDB: usize = 0x20; // float32
+            };
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MPropertyFriendlyName
+            // MGetKV3ClassDefaults
+            pub const CSndBeatPatternManager = struct {
+                pub const m_vecPatterns: usize = 0x38; // CUtlVector<CSndBeatPattern>
+                pub const m_vecActiveTracks: usize = 0x70; // CUtlVector<CSndBeatTrack>
             };
             // Parent: None
             // Field count: 0
@@ -1268,10 +1413,10 @@ pub const cs2_dumper = struct {
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             pub const CVoiceContainerTapePlayer = struct {
-                pub const m_bShouldWraparound: usize = 0xB8; // bool
-                pub const m_sourceAudio: usize = 0xC0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_flTapeSpeedAttackTime: usize = 0xC8; // float32
-                pub const m_flTapeSpeedReleaseTime: usize = 0xCC; // float32
+                pub const m_bShouldWraparound: usize = 0x80; // bool
+                pub const m_sourceAudio: usize = 0x88; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                pub const m_flTapeSpeedAttackTime: usize = 0x90; // float32
+                pub const m_flTapeSpeedReleaseTime: usize = 0x94; // float32
             };
             // Parent: None
             // Field count: 1
@@ -1328,6 +1473,15 @@ pub const cs2_dumper = struct {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
+            // MPropertyDescription
+            pub const CVoiceContainerVMixSnd = struct {
+            };
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             pub const CVMixStereoDelayProcessorDesc = struct {
             };
             // Parent: None
@@ -1371,14 +1525,14 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerParameterBlender = struct {
-                pub const m_firstSound: usize = 0xA8; // CSoundContainerReference
-                pub const m_secondSound: usize = 0xC8; // CSoundContainerReference
-                pub const m_bEnableOcclusionBlend: usize = 0xE8; // bool
-                pub const m_curve1: usize = 0xF0; // CPiecewiseCurve
-                pub const m_curve2: usize = 0x130; // CPiecewiseCurve
-                pub const m_bEnableDistanceBlend: usize = 0x170; // bool
-                pub const m_curve3: usize = 0x178; // CPiecewiseCurve
-                pub const m_curve4: usize = 0x1B8; // CPiecewiseCurve
+                pub const m_firstSound: usize = 0x70; // CSoundContainerReference
+                pub const m_secondSound: usize = 0x90; // CSoundContainerReference
+                pub const m_bEnableOcclusionBlend: usize = 0xB0; // bool
+                pub const m_curve1: usize = 0xB8; // CPiecewiseCurve
+                pub const m_curve2: usize = 0xF8; // CPiecewiseCurve
+                pub const m_bEnableDistanceBlend: usize = 0x138; // bool
+                pub const m_curve3: usize = 0x140; // CPiecewiseCurve
+                pub const m_curve4: usize = 0x180; // CPiecewiseCurve
             };
             // Parent: None
             // Field count: 2
@@ -1418,18 +1572,7 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerAmpedDecayingSineWave = struct {
-                pub const m_flGainAmount: usize = 0xB0; // float32
-            };
-            // Parent: None
-            // Field count: 2
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            // MPropertyFriendlyName
-            // MPropertyDescription
-            pub const CVoiceContainerEnvelope = struct {
-                pub const m_sound: usize = 0xA8; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                pub const m_analysisContainer: usize = 0xB0; // CVoiceContainerAnalysisBase*
+                pub const m_flGainAmount: usize = 0x78; // float32
             };
             // Parent: None
             // Field count: 8
@@ -1487,9 +1630,9 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerMultiBlender = struct {
-                pub const m_soundsToPlay: usize = 0xA8; // CSoundContainerReferenceArray
-                pub const m_flBlendFactor: usize = 0xE0; // float32
-                pub const m_flCrossover: usize = 0xE4; // float32
+                pub const m_soundsToPlay: usize = 0x70; // CSoundContainerReferenceArray
+                pub const m_flBlendFactor: usize = 0xA8; // float32
+                pub const m_flCrossover: usize = 0xAC; // float32
             };
             // Parent: None
             // Field count: 2
@@ -1512,6 +1655,15 @@ pub const cs2_dumper = struct {
                 pub const m_nInstancesAtMaxVolume: usize = 0xC; // int32
             };
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SndBeatTimeSignature_t = struct {
+                pub const nNumerator: usize = 0x0; // uint8
+                pub const nDenominator: usize = 0x1; // uint8
+            };
+            // Parent: None
             // Field count: 4
             pub const VelocityZone_t = struct {
                 pub const nMaxVel: usize = 0x0; // uint8
@@ -1527,9 +1679,17 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerSelector = struct {
-                pub const m_mode: usize = 0xA8; // PlayBackMode_t
-                pub const m_soundsToPlay: usize = 0xB0; // CSoundContainerReferenceArray
-                pub const m_fProbabilityWeights: usize = 0xE8; // CUtlVector<float32>
+                pub const m_mode: usize = 0x70; // PlayBackMode_t
+                pub const m_soundsToPlay: usize = 0x78; // CSoundContainerReferenceArray
+                pub const m_fProbabilityWeights: usize = 0xB0; // CUtlVector<float32>
+            };
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SndBeatEventKeyedSndEvts_t = struct {
+                pub const m_strSoundEventName: usize = 0x10; // CUtlString
             };
             // Parent: None
             // Field count: 2
@@ -1540,6 +1700,16 @@ pub const cs2_dumper = struct {
             pub const CSosGroupActionTimeBlockLimitSchema = struct {
                 pub const m_nMaxCount: usize = 0x8; // int32
                 pub const m_flMaxDuration: usize = 0xC; // float32
+            };
+            // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub const SndBeatEventKeyedMidiNotes_t = struct {
+                pub const m_nStatus: usize = 0x10; // uint8
+                pub const m_nNote: usize = 0x11; // uint8
+                pub const m_nVelocity: usize = 0x12; // uint8
             };
             // Parent: None
             // Field count: 8
@@ -1573,7 +1743,7 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerSwitch = struct {
-                pub const m_soundsToPlay: usize = 0xA8; // CUtlVector<CSoundContainerReference>
+                pub const m_soundsToPlay: usize = 0x70; // CUtlVector<CSoundContainerReference>
             };
             // Parent: None
             // Field count: 1
@@ -1591,9 +1761,9 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerEnum = struct {
-                pub const m_soundsToPlay: usize = 0xA8; // CSoundContainerReferenceArray
-                pub const m_iSelection: usize = 0xE0; // int32
-                pub const m_flCrossfadeTime: usize = 0xE4; // float32
+                pub const m_soundsToPlay: usize = 0x70; // CSoundContainerReferenceArray
+                pub const m_iSelection: usize = 0xA8; // int32
+                pub const m_flCrossfadeTime: usize = 0xAC; // float32
             };
             // Parent: None
             // Field count: 1
@@ -1642,11 +1812,20 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerLoopTrigger = struct {
-                pub const m_sound: usize = 0xA8; // CSoundContainerReference
-                pub const m_flRetriggerTimeMin: usize = 0xC8; // float32
-                pub const m_flRetriggerTimeMax: usize = 0xCC; // float32
-                pub const m_flFadeTime: usize = 0xD0; // float32
-                pub const m_bCrossFade: usize = 0xD4; // bool
+                pub const m_flRetriggerTimeMin: usize = 0x70; // float32
+                pub const m_flRetriggerTimeMax: usize = 0x74; // float32
+                pub const m_flFadeTime: usize = 0x78; // float32
+                pub const m_bCrossFade: usize = 0x7C; // bool
+                pub const m_sound: usize = 0x80; // CSoundContainerReference
+            };
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            // MVDataNodeType
+            pub const SndBeatEventKeys_t = struct {
+                pub const m_flKey: usize = 0x8; // float32
             };
             // Parent: None
             // Field count: 2
@@ -1656,8 +1835,8 @@ pub const cs2_dumper = struct {
             // MPropertyFriendlyName
             // MPropertyDescription
             pub const CVoiceContainerDecayingSineWave = struct {
-                pub const m_flFrequency: usize = 0xA8; // float32
-                pub const m_flDecayTime: usize = 0xAC; // float32
+                pub const m_flFrequency: usize = 0x70; // float32
+                pub const m_flDecayTime: usize = 0x74; // float32
             };
             // Parent: None
             // Field count: 1
@@ -1687,6 +1866,30 @@ pub const cs2_dumper = struct {
                 pub const m_fldbGain: usize = 0x4; // float32
                 pub const m_flCutoffFreq: usize = 0x8; // float32
                 pub const m_flQ: usize = 0xC; // float32
+            };
+            // Parent: None
+            // Field count: 15
+            //
+            // Metadata:
+            // MPropertyArrayElementNameKey
+            // MVDataOutlinerNameExpr
+            // MGetKV3ClassDefaults
+            pub const CSndBeatPattern = struct {
+                pub const m_name: usize = 0x0; // CUtlString
+                pub const m_launchSyncType: usize = 0xC; // SndBeatLaunchSyncType_t
+                pub const m_flSyncPriority: usize = 0x10; // float32
+                pub const m_timeSignature: usize = 0x14; // SndBeatTimeSignature_t
+                pub const m_flLength: usize = 0x1C; // float32
+                pub const m_bLooping: usize = 0x20; // bool
+                pub const m_launchSyncEventType: usize = 0x24; // SndBeatEventType_t
+                pub const m_flSyncBeatMult: usize = 0x28; // float32
+                pub const m_playEventType: usize = 0x2C; // SndBeatEventType_t
+                pub const m_flPlayBeatMult: usize = 0x30; // float32
+                pub const m_keyType: usize = 0x34; // SndBeatKeyType_t
+                pub const m_vecPatternKeys: usize = 0x38; // CUtlVector<SndBeatEventKeys_t>
+                pub const m_vecPatternFloats: usize = 0x50; // CUtlVector<SndBeatEventKeyedFloats_t>
+                pub const m_vecPatternSndEvts: usize = 0x68; // CUtlVector<SndBeatEventKeyedSndEvts_t>
+                pub const m_vecPatternMidi: usize = 0x80; // CUtlVector<SndBeatEventKeyedMidiNotes_t>
             };
             // Parent: None
             // Field count: 3

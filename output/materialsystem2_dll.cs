@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// 2026-07-09 09:08:48.606860700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: materialsystem2.dll
-    // Class count: 14
+    // Class count: 15
     // Enum count: 5
     public static class Materialsystem2Dll {
         // Alignment: 4
@@ -68,7 +68,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_value = 0x8; // CUtlString
         }
         // Parent: None
-        // Field count: 13
+        // Field count: 15
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -86,6 +86,8 @@ namespace CS2Dumper.Schemas {
             public const nint m_bHasColorCorrection = 0x120; // bool
             public const nint m_bHasFogScatteringParams = 0x121; // bool
             public const nint m_fogScatteringParams = 0x124; // PostProcessingFogScatteringParameters_t
+            public const nint m_bHasLocalExposureParams = 0x144; // bool
+            public const nint m_localExposureParams = 0x148; // PostProcessingLocalExposureParameters_t
         }
         // Parent: None
         // Field count: 1
@@ -143,7 +145,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMaxHighlightLum = 0x38; // float32
         }
         // Parent: None
-        // Field count: 5
+        // Field count: 8
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -153,6 +155,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_fCubemapScale = 0x8; // float32
             public const nint m_fVolumetricScale = 0xC; // float32
             public const nint m_fGradientScale = 0x10; // float32
+            public const nint m_fWaterScale = 0x14; // float32
+            public const nint m_fWaterDensity = 0x18; // float32
+            public const nint m_fWaterDepthBlurRadius = 0x1C; // float32
         }
         // Parent: None
         // Field count: 1
@@ -213,6 +218,17 @@ namespace CS2Dumper.Schemas {
         // MGetKV3ClassDefaults
         public static class MaterialParamFloat_t {
             public const nint m_flValue = 0x8; // float32
+        }
+        // Parent: None
+        // Field count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class PostProcessingLocalExposureParameters_t {
+            public const nint m_fShadowOffsetEV = 0x0; // float32
+            public const nint m_fHighlightOffsetEV = 0x4; // float32
+            public const nint m_fSigma = 0x8; // float32
+            public const nint m_fBoostLocalContrast = 0xC; // float32
         }
         // Parent: None
         // Field count: 1
