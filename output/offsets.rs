@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-01 03:08:20.812145800 UTC
+// Updated with new offsets
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,21 +7,21 @@ pub mod cs2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwCSGOInput: usize = 0x23560C0;
-            pub const dwEntityList: usize = 0x24E7680;
+            pub const dwCSGOInput: usize = 0x239E7F8;              // Updated
+            pub const dwEntityList: usize = 0x254DE50;             // Updated
             pub const dwGameEntitySystem: usize = 0x24E7680;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x2090;
             pub const dwGameRules: usize = 0x2340FE8;
-            pub const dwGlobalVars: usize = 0x20616D0;
+            pub const dwGlobalVars: usize = 0x208ED60;             // Updated
             pub const dwGlowManager: usize = 0x233DDE0;
-            pub const dwLocalPlayerController: usize = 0x2320570;
-            pub const dwLocalPlayerPawn: usize = 0x2341528;
-            pub const dwPlantedC4: usize = 0x234FE28;
+            pub const dwLocalPlayerController: usize = 0x202B350;  // Updated
+            pub const dwLocalPlayerPawn: usize = 0x21CFDF0;        // Updated
+            pub const dwPlantedC4: usize = 0x23BA4F8;              // Updated
             pub const dwPrediction: usize = 0x2341430;
-            pub const dwSensitivity: usize = 0x233E8F8;
-            pub const dwSensitivity_sensitivity: usize = 0x58;
-            pub const dwViewAngles: usize = 0x2356748;
-            pub const dwViewMatrix: usize = 0x23469C0;
+            pub const dwSensitivity: usize = 0x239E7F8;            // Updated
+            pub const dwSensitivity_sensitivity: usize = 0x81C;    // Updated
+            pub const dwViewAngles: usize = 0x25C7630;             // Updated
+            pub const dwViewMatrix: usize = 0x23A8340;             // Updated
             pub const dwViewRender: usize = 0x2346D70;
             pub const dwWeaponC4: usize = 0x22BED18;
         }
@@ -52,5 +52,5 @@ pub mod cs2_dumper {
             pub const dwSoundSystem: usize = 0x512360;
             pub const dwSoundSystem_engineViewData: usize = 0x7C;
         }
-    }
-}
+        // Class Fields (Structure-relative offsets)
+        pub mod class_fields
