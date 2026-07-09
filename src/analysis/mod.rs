@@ -42,6 +42,8 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
 
     let offsets = analyze(process, offsets);
 
+    let offsets = merge_interfaces_into_offsets(offsets, &interfaces);
+
     info!(
         "found {} offsets across {} modules",
         offsets
@@ -73,6 +75,19 @@ pub fn analyze_all<P: Process + MemoryView>(process: &mut P) -> Result<AnalysisR
         offsets,
         schemas,
     })
+}
+
+fn merge_interfaces_into_offsets(mut offsets: OffsetMap, interfaces: &InterfaceMap) -> OffsetMap {
+    if let Some(iface_map) = interfaces.get("soundsystem.dll") {
+        if let Some(&rva) = iface_map.get("SoundSystem001") {
+            offsets
+                .entry("soundsystem.dll".to_string())
+                .or_default()
+                .insert("dwSoundSystem".to_string(), rva as u32);
+        }
+    }
+
+    offsets
 }
 
 fn analyze<P, F, T>(process: &mut P, f: F) -> T
