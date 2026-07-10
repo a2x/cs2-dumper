@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 #pragma once
 
@@ -8,8 +8,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: libengine2.so
-        // Classes count: 48
-        // Enums count: 4
+        // Classes count: 58
+        // Enums count: 2
         namespace libengine2_so {
             // Alignment: 4
             // Members count: 3
@@ -26,23 +26,45 @@ namespace cs2_dumper {
                 ENTITY_IO_TARGET_EHANDLE = 0x6,
                 ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
             };
-            // Alignment: 4
-            // Members count: 3
-            enum class SpawnDebugOverrideState_t : uint32_t {
-                SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
-                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
-                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
-            };
-            // Alignment: 4
-            // Members count: 5
-            enum class SpawnDebugRestrictionOverrideState_t : uint32_t {
-                SPAWN_DEBUG_RESTRICT_NONE = 0x0,
-                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
-            };
-            // Parent: EventSimulate_t
+            // Parent: None
+            // Fields count: 3
+            namespace CEntityInstance {
+                constexpr std::ptrdiff_t m_iszPrivateVScripts = 0x8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_pEntity = 0x10; // CEntityIdentity*
+                constexpr std::ptrdiff_t m_CScriptComponent = 0x28; // CScriptComponent*
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace CEntityComponent {
+            }
+            // Parent: CEntityComponent
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CScriptComponent {
+                constexpr std::ptrdiff_t m_scriptClassName = 0x30; // CUtlSymbolLarge
+            }
+            // Parent: None
+            // Fields count: 12
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CEntityIdentity {
+                constexpr std::ptrdiff_t m_nameStringTableIndex = 0x14; // int32
+                constexpr std::ptrdiff_t m_name = 0x18; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_designerName = 0x20; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_flags = 0x30; // uint32
+                constexpr std::ptrdiff_t m_worldGroupId = 0x38; // WorldGroupId_t
+                constexpr std::ptrdiff_t m_fDataObjectTypes = 0x3C; // uint32
+                constexpr std::ptrdiff_t m_PathIndex = 0x40; // ChangeAccessorFieldPathIndex_t
+                constexpr std::ptrdiff_t m_pAttributes = 0x48; // CEntityAttributeTable*
+                constexpr std::ptrdiff_t m_pPrev = 0x50; // CEntityIdentity*
+                constexpr std::ptrdiff_t m_pNext = 0x58; // CEntityIdentity*
+                constexpr std::ptrdiff_t m_pPrevByClass = 0x60; // CEntityIdentity*
+                constexpr std::ptrdiff_t m_pNextByClass = 0x68; // CEntityIdentity*
+            }
+            // Parent: None
             // Fields count: 0
             namespace EventClientPostSimulate_t {
             }
@@ -53,7 +75,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRealTime = 0x28; // float32
                 constexpr std::ptrdiff_t m_flFrameTime = 0x2C; // float32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 4
             namespace EventPostAdvanceTick_t {
                 constexpr std::ptrdiff_t m_nCurrentTick = 0x2C; // int32
@@ -62,9 +84,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nTotalTicks = 0x38; // int32
             }
             // Parent: None
-            // Fields count: 1
+            // Fields count: 0
             namespace CEntityIOOutput {
-                constexpr std::ptrdiff_t m_Value = 0x18; // CVariantBase<CVariantDefaultAllocator>
             }
             // Parent: None
             // Fields count: 1
@@ -80,9 +101,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flRenderFrameTimeUnbounded = 0x30; // float32
                 constexpr std::ptrdiff_t m_bRenderOnly = 0x34; // bool
             }
-            // Parent: EventSimulate_t
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 1
             namespace EventServerPostSimulate_t {
+                constexpr std::ptrdiff_t m_bLastTickBeforeClientUpdate = 0x2A; // bool
             }
             // Parent: None
             // Fields count: 4
@@ -99,9 +121,28 @@ namespace cs2_dumper {
             }
             // Parent: None
             // Fields count: 0
+            namespace EventServerBeginSimulate_t {
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace EntityIOQueuePrioritizedEvent_t {
+                constexpr std::ptrdiff_t m_flFireTime = 0x4; // GameTime_t
+                constexpr std::ptrdiff_t m_targetType = 0x8; // EntityIOTargetType_t
+                constexpr std::ptrdiff_t m_pTarget = 0x10; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_pTargetInput = 0x18; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_hActivator = 0x20; // CEntityHandle
+                constexpr std::ptrdiff_t m_hCaller = 0x24; // CEntityHandle
+                constexpr std::ptrdiff_t m_hEntTarget = 0x28; // CEntityHandle
+                constexpr std::ptrdiff_t m_variantValue = 0x30; // CVariantBase<CVariantDefaultAllocator>
+            }
+            // Parent: None
+            // Fields count: 0
             namespace EventServerEndAsyncPostTickWork_t {
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Fields count: 0
             namespace EventClientAdvanceTick_t {
             }
@@ -114,7 +155,7 @@ namespace cs2_dumper {
             namespace CNetworkVarChainer {
                 constexpr std::ptrdiff_t m_PathIndex = 0x20; // ChangeAccessorFieldPathIndex_t
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             namespace EventClientSimulate_t {
             }
@@ -160,13 +201,10 @@ namespace cs2_dumper {
             namespace EventAppShutdown_t {
                 constexpr std::ptrdiff_t m_nDummy0 = 0x0; // int32
             }
-            // Parent: EventSimulate_t
-            // Fields count: 0
-            namespace EventServerSimulate_t {
-            }
-            // Parent: EventPostAdvanceTick_t
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 1
             namespace EventServerPostAdvanceTick_t {
+                constexpr std::ptrdiff_t m_bLastTickBeforeClientUpdate = 0x3C; // bool
             }
             // Parent: None
             // Fields count: 1
@@ -178,11 +216,11 @@ namespace cs2_dumper {
             namespace EventPostDataUpdate_t {
                 constexpr std::ptrdiff_t m_nCount = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             namespace EventClientPreSimulate_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             namespace EventClientPauseSimulate_t {
             }
@@ -191,7 +229,17 @@ namespace cs2_dumper {
             namespace EventClientProcessNetworking_t {
                 constexpr std::ptrdiff_t m_nTickCount = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
+            // Fields count: 2
+            namespace CEntityAttributeTable {
+                constexpr std::ptrdiff_t m_Attributes = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
+                constexpr std::ptrdiff_t m_Names = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
+            }
+            // Parent: None
+            // Fields count: 0
+            namespace EventClientPreOutputParallelWithServer_t {
+            }
+            // Parent: None
             // Fields count: 4
             namespace EventAdvanceTick_t {
                 constexpr std::ptrdiff_t m_nCurrentTick = 0x2C; // int32
@@ -203,13 +251,22 @@ namespace cs2_dumper {
             // Fields count: 0
             namespace EventSplitScreenStateChanged_t {
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Fields count: 0
             namespace EventClientPostAdvanceTick_t {
             }
             // Parent: None
             // Fields count: 0
+            namespace EventBugBug_t {
+            }
+            // Parent: None
+            // Fields count: 0
             namespace CVariantDefaultAllocator {
+            }
+            // Parent: None
+            // Fields count: 1
+            namespace EventBugBugComplete_t {
+                constexpr std::ptrdiff_t m_pPayload = 0x0; // EventBugBug_t*
             }
             // Parent: None
             // Fields count: 0
@@ -233,7 +290,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFrameTime = 0x2C; // float32
                 constexpr std::ptrdiff_t m_bScheduleSendTickPacket = 0x30; // bool
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Fields count: 0
             namespace EventServerAdvanceTick_t {
             }
@@ -250,10 +307,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTickRemainder = 0x58; // float64
             }
             // Parent: None
-            // Fields count: 0
-            namespace EntOutput_t {
-            }
-            // Parent: None
             // Fields count: 3
             namespace EventSimulate_t {
                 constexpr std::ptrdiff_t m_LoopState = 0x0; // EngineLoopState_t
@@ -262,9 +315,13 @@ namespace cs2_dumper {
             }
             // Parent: None
             // Fields count: 0
+            namespace CEntityKeyValues {
+            }
+            // Parent: None
+            // Fields count: 0
             namespace EventClientAdvanceNonRenderedFrame_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             namespace EventServerProcessNetworking_t {
             }
@@ -296,9 +353,10 @@ namespace cs2_dumper {
             namespace EventClientPollNetworking_t {
                 constexpr std::ptrdiff_t m_nTickCount = 0x0; // int32
             }
-            // Parent: EventPostAdvanceTick_t
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 1
             namespace EventServerBeginAsyncPostTickWork_t {
+                constexpr std::ptrdiff_t m_bIsOncePerFrameAsyncWorkPhase = 0x0; // bool
             }
             // Parent: None
             // Fields count: 4
@@ -308,7 +366,12 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTickInterval = 0x2C; // float32
                 constexpr std::ptrdiff_t m_flTickStartTime = 0x30; // float64
             }
-            // Parent: EventSimulate_t
+            // Parent: None
+            // Fields count: 1
+            namespace EventServerEndSimulate_t {
+                constexpr std::ptrdiff_t m_bLastTick = 0x0; // bool
+            }
+            // Parent: None
             // Fields count: 0
             namespace EventServerPollNetworking_t {
             }

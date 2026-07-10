@@ -22,6 +22,7 @@ pub enum Operation {
         offset: Option<usize>,
 
         /// The total length of the instruction.
+        #[serde(alias = "length")]
         len: Option<usize>,
     },
 

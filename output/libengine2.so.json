@@ -6,6 +6,19 @@
         "metadata": [],
         "parent": null
       },
+      "CEntityAttributeTable": {
+        "fields": {
+          "m_Attributes": 0,
+          "m_Names": 40
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CEntityComponent": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
       "CEntityComponentHelper": {
         "fields": {
           "m_flags": 8,
@@ -17,9 +30,44 @@
         "parent": null
       },
       "CEntityIOOutput": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CEntityIdentity": {
         "fields": {
-          "m_Value": 24
+          "m_PathIndex": 64,
+          "m_designerName": 32,
+          "m_fDataObjectTypes": 60,
+          "m_flags": 48,
+          "m_name": 24,
+          "m_nameStringTableIndex": 20,
+          "m_pAttributes": 72,
+          "m_pNext": 88,
+          "m_pNextByClass": 104,
+          "m_pPrev": 80,
+          "m_pPrevByClass": 96,
+          "m_worldGroupId": 56
         },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CEntityInstance": {
+        "fields": {
+          "m_CScriptComponent": 40,
+          "m_iszPrivateVScripts": 8,
+          "m_pEntity": 16
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CEntityKeyValues": {
+        "fields": {},
         "metadata": [],
         "parent": null
       },
@@ -29,6 +77,18 @@
         },
         "metadata": [],
         "parent": null
+      },
+      "CScriptComponent": {
+        "fields": {
+          "m_scriptClassName": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CEntityComponent"
       },
       "CVariantDefaultAllocator": {
         "fields": {},
@@ -63,9 +123,23 @@
         "metadata": [],
         "parent": null
       },
-      "EntOutput_t": {
-        "fields": {},
-        "metadata": [],
+      "EntityIOQueuePrioritizedEvent_t": {
+        "fields": {
+          "m_flFireTime": 4,
+          "m_hActivator": 32,
+          "m_hCaller": 36,
+          "m_hEntTarget": 40,
+          "m_pTarget": 16,
+          "m_pTargetInput": 24,
+          "m_targetType": 8,
+          "m_variantValue": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
         "parent": null
       },
       "EventAdvanceTick_t": {
@@ -76,12 +150,24 @@
           "m_nTotalTicksThisFrame": 52
         },
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventAppShutdown_t": {
         "fields": {
           "m_nDummy0": 0
         },
+        "metadata": [],
+        "parent": null
+      },
+      "EventBugBugComplete_t": {
+        "fields": {
+          "m_pPayload": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "EventBugBug_t": {
+        "fields": {},
         "metadata": [],
         "parent": null
       },
@@ -93,7 +179,7 @@
       "EventClientAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventAdvanceTick_t"
+        "parent": null
       },
       "EventClientFrameSimulate_t": {
         "fields": {
@@ -119,7 +205,7 @@
       "EventClientPauseSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventClientPollInput_t": {
         "fields": {
@@ -139,7 +225,7 @@
       "EventClientPostAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventPostAdvanceTick_t"
+        "parent": null
       },
       "EventClientPostOutput_t": {
         "fields": {
@@ -155,7 +241,12 @@
       "EventClientPostSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
+      },
+      "EventClientPreOutputParallelWithServer_t": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
       },
       "EventClientPreOutput_t": {
         "fields": {
@@ -172,7 +263,7 @@
       "EventClientPreSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventClientProcessGameInput_t": {
         "fields": {
@@ -210,7 +301,7 @@
       "EventClientSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventFrameBoundary_t": {
         "fields": {
@@ -232,7 +323,7 @@
           "m_nTotalTicksThisFrame": 52
         },
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventPostDataUpdate_t": {
         "fields": {
@@ -258,42 +349,55 @@
       "EventServerAdvanceTick_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventAdvanceTick_t"
+        "parent": null
       },
       "EventServerBeginAsyncPostTickWork_t": {
+        "fields": {
+          "m_bIsOncePerFrameAsyncWorkPhase": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "EventServerBeginSimulate_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventPostAdvanceTick_t"
+        "parent": null
       },
       "EventServerEndAsyncPostTickWork_t": {
         "fields": {},
         "metadata": [],
         "parent": null
       },
+      "EventServerEndSimulate_t": {
+        "fields": {
+          "m_bLastTick": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "EventServerPollNetworking_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventServerPostAdvanceTick_t": {
-        "fields": {},
+        "fields": {
+          "m_bLastTickBeforeClientUpdate": 60
+        },
         "metadata": [],
-        "parent": "EventPostAdvanceTick_t"
+        "parent": null
       },
       "EventServerPostSimulate_t": {
-        "fields": {},
+        "fields": {
+          "m_bLastTickBeforeClientUpdate": 42
+        },
         "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventServerProcessNetworking_t": {
         "fields": {},
         "metadata": [],
-        "parent": "EventSimulate_t"
-      },
-      "EventServerSimulate_t": {
-        "fields": {},
-        "metadata": [],
-        "parent": "EventSimulate_t"
+        "parent": null
       },
       "EventSetTime_t": {
         "fields": {
@@ -364,26 +468,6 @@
           "ENTITY_IO_TARGET_ENTITYNAME": 2,
           "ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME": 7,
           "ENTITY_IO_TARGET_INVALID": -1
-        },
-        "type": "uint32"
-      },
-      "SpawnDebugOverrideState_t": {
-        "alignment": 4,
-        "members": {
-          "SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED": 2,
-          "SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED": 1,
-          "SPAWN_DEBUG_OVERRIDE_NONE": 0
-        },
-        "type": "uint32"
-      },
-      "SpawnDebugRestrictionOverrideState_t": {
-        "alignment": 4,
-        "members": {
-          "SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS": 1,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS": 8,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS": 4,
-          "SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS": 2,
-          "SPAWN_DEBUG_RESTRICT_NONE": 0
         },
         "type": "uint32"
       }

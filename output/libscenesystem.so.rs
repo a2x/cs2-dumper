@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,16 +7,66 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: libscenesystem.so
         // Classes count: 9
-        // Enums count: 1
+        // Enums count: 6
         pub mod libscenesystem_so {
-            // Alignment: 1
+            // Alignment: 4
+            // Members count: 3
+            #[repr(u32)]
+            pub enum ESceneObjectMeshletVisualization {
+                SCENEOBJECT_MESHLET_VIS_NONE = 0x0,
+                SCENEOBJECT_MESHLET_VIS_MESHLET = 0x1,
+                SCENEOBJECT_MESHLET_VIS_CULLED = 0x2
+            }
+            // Alignment: 4
+            // Members count: 7
+            #[repr(u32)]
+            pub enum ESceneViewDebugOverlaysListenerDataType_t {
+                k_ESceneViewDebugOverlaysListenerDataType_Unknown = 0x0,
+                k_ESceneViewDebugOverlaysListenerDataType_Sphere = 0x1,
+                k_ESceneViewDebugOverlaysListenerDataType_Capsule = 0x2,
+                k_ESceneViewDebugOverlaysListenerDataType_BoxAngles = 0x3,
+                k_ESceneViewDebugOverlaysListenerDataType_Line = 0x4,
+                k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles = 0x5,
+                k_ESceneViewDebugOverlaysListenerDataType_Text3D = 0x6
+            }
+            // Alignment: 4
             // Members count: 4
+            #[repr(u32)]
+            pub enum ESilhouetteType_t {
+                SILHOUETTE_NONE = 0x0,
+                SILHOUETTE_LIGHT = 0x1,
+                SILHOUETTE_ENVMAP = 0x2,
+                SILHOUETTE_LPV = 0x4
+            }
+            // Alignment: 1
+            // Members count: 5
             #[repr(u8)]
             pub enum DisableShadows_t {
                 kDisableShadows_None = 0x0,
                 kDisableShadows_All = 0x1,
                 kDisableShadows_Baked = 0x2,
-                kDisableShadows_Realtime = 0x3
+                kDisableShadows_Realtime = 0x3,
+                kDisableShadows_ReallyNone = 0x4
+            }
+            // Alignment: 1
+            // Members count: 6
+            #[repr(u8)]
+            pub enum DecalRtEncoding_t {
+                kDecalInvalid = 0xFF,
+                kDecalMin = 0x0,
+                kDecalCloak = 0x1,
+                kDecalMax = 0x2
+            }
+            // Alignment: 4
+            // Members count: 6
+            #[repr(u32)]
+            pub enum ESceneObjectVisualization {
+                SCENEOBJECT_VIS_NONE = 0x0,
+                SCENEOBJECT_VIS_OBJECT = 0x1,
+                SCENEOBJECT_VIS_MATERIAL = 0x2,
+                SCENEOBJECT_VIS_TEXTURE_SIZE = 0x3,
+                SCENEOBJECT_VIS_LOD = 0x4,
+                SCENEOBJECT_VIS_INSTANCING = 0x5
             }
             // Parent: None
             // Fields count: 10
@@ -53,7 +103,7 @@ pub mod cs2_dumper {
                 pub const m_nViewId: usize = 0x0; // uint64
                 pub const m_ViewName: usize = 0x8; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:
@@ -61,19 +111,18 @@ pub mod cs2_dumper {
             pub mod CSSDSMsg_PostLayer {
             }
             // Parent: None
-            // Fields count: 6
+            // Fields count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSSDSMsg_LayerBase {
                 pub const m_viewId: usize = 0x0; // SceneViewId_t
                 pub const m_ViewName: usize = 0x10; // CUtlString
-                pub const m_nLayerIndex: usize = 0x18; // int32
-                pub const m_nLayerId: usize = 0x20; // uint64
-                pub const m_LayerName: usize = 0x28; // CUtlString
-                pub const m_displayText: usize = 0x30; // CUtlString
+                pub const m_nLayerId: usize = 0x18; // uint64
+                pub const m_LayerName: usize = 0x20; // CUtlString
+                pub const m_displayText: usize = 0x28; // CUtlString
             }
-            // Parent: CSSDSMsg_LayerBase
+            // Parent: None
             // Fields count: 0
             //
             // Metadata:

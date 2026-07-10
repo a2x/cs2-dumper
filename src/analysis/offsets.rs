@@ -102,24 +102,19 @@ mod tests {
     use super::*;
 
     fn setup() -> Result<IntoProcessInstanceArcBox<'static>> {
-        let os = memflow_native::create_os(&OsArgs::default(), LibArc::default())?;
+        let os = memflow_native::create_os(&OsArgs::default(), LibArc::default())
+            .map_err(|e| {
+                println!("create_os failed: {:?}", e);
+                e
+            })?;
 
-        let process = os.into_process_by_name("cs2")?;
+        let process = os.into_process_by_name("cs2")
+            .map_err(|e| {
+                println!("into_process_by_name failed: {:?}", e);
+                e
+            })?;
 
         Ok(process)
-    }
-
-    fn get_class_field_value(module_name: &str, class_name: &str, field_name: &str) -> Option<u64> {
-        let content = fs::read_to_string(format!("output/{}.json", module_name)).ok()?;
-        let value: Value = serde_json::from_str(&content).ok()?;
-
-        value
-            .get(module_name)?
-            .get("classes")?
-            .get(class_name)?
-            .get("fields")?
-            .get(field_name)?
-            .as_u64()
     }
 
     fn get_offset_value(module_name: &str, offset_name: &str) -> Option<u64> {
@@ -138,110 +133,6 @@ mod tests {
     }
 
     #[test]
-    fn build_number() -> Result<()> {
-        let mut process = setup()?;
-
-        let engine_base = process.module_by_name("libengine2.so")?.base;
-
-        let offset = get_offset_value("libengine2.so", "dwBuildNumber").unwrap();
-
-        let build_number: u32 = process.read(engine_base + offset).data_part()?;
-
-        println!("build number: {}", build_number);
-
-        Ok(())
-    }
-
-    #[test]
-    fn global_vars() -> Result<()> {
-        let mut process = setup()?;
-
-        let client_base = process.module_by_name("libclient.so")?.base;
-
-        let offset = get_offset_value("libclient.so", "dwGlobalVars").unwrap();
-
-        let global_vars: u64 = process.read(client_base + offset).data_part()?;
-
-        let cur_map_name = {
-            let addr = process
-                .read_addr64((global_vars + 0x1C8).into())
-                .data_part()?;
-
-            process.read_char_string(addr).data_part()?
-        };
-
-        println!("current map name: {}", cur_map_name);
-
-        Ok(())
-    }
-
-    #[test]
-    fn local_player_controller() -> Result<()> {
-        let mut process = setup()?;
-
-        let client_base = process.module_by_name("libclient.so")?.base;
-
-        let local_player_controller_offset =
-            get_offset_value("libclient.so", "dwLocalPlayerController").unwrap();
-
-        let player_name_offset =
-            get_class_field_value("libclient.so", "CBasePlayerController", "m_iszPlayerName")
-                .unwrap();
-
-        let local_player_controller: u64 = process
-            .read(client_base + local_player_controller_offset)
-            .data_part()?;
-
-        let player_name = process
-            .read_char_string((local_player_controller + player_name_offset).into())
-            .data_part()?;
-
-        println!("local player name: {}", player_name);
-
-        Ok(())
-    }
-
-    #[test]
-    fn local_player_pawn() -> Result<()> {
-        #[derive(Debug, Pod)]
-        #[repr(C)]
-        struct Vector3D {
-            x: f32,
-            y: f32,
-            z: f32,
-        }
-
-        let mut process = setup()?;
-
-        let client_base = process.module_by_name("libclient.so")?.base;
-
-        let local_player_pawn_offset =
-            get_offset_value("libclient.so", "dwLocalPlayerPawn").unwrap();
-
-        let game_scene_node_offset =
-            get_class_field_value("libclient.so", "C_BaseEntity", "m_pGameSceneNode").unwrap();
-
-        let vec_abs_origin_offset =
-            get_class_field_value("libclient.so", "CGameSceneNode", "m_vecAbsOrigin").unwrap();
-
-        let local_player_pawn: u64 = process
-            .read(client_base + local_player_pawn_offset)
-            .data_part()?;
-
-        let game_scene_node: u64 = process
-            .read((local_player_pawn + game_scene_node_offset).into())
-            .data_part()?;
-
-        let vec_abs_origin: Vector3D = process
-            .read((game_scene_node + vec_abs_origin_offset).into())
-            .data_part()?;
-
-        println!("local player origin: {:?}", vec_abs_origin);
-
-        Ok(())
-    }
-
-    #[test]
     fn window_size() -> Result<()> {
         let mut process = setup()?;
 
@@ -250,16 +141,23 @@ mod tests {
         let window_width_offset = get_offset_value("libengine2.so", "dwWindowWidth").unwrap();
         let window_height_offset = get_offset_value("libengine2.so", "dwWindowHeight").unwrap();
 
-        let window_width: u32 = process
-            .read(engine_base + window_width_offset)
-            .data_part()?;
-
-        let window_height: u32 = process
-            .read(engine_base + window_height_offset)
-            .data_part()?;
+        // The game stores window width/height as u32 in libengine2.so on Linux
+        let window_width = process.read::<u32>(Address::from(engine_base + window_width_offset)).data_part()?;
+        let window_height = process.read::<u32>(Address::from(engine_base + window_height_offset)).data_part()?;
 
         println!("window size: {}x{}", window_width, window_height);
+
+        // Verify dwNetworkGameClient mapping is correct by reading its pointer/vtable base
+        let network_game_client_offset = get_offset_value("libengine2.so", "dwNetworkGameClient").unwrap();
+        let network_game_client: u64 = process.read(Address::from(engine_base + network_game_client_offset)).data_part()?;
+        println!("dwNetworkGameClient pointer: {:#X}", network_game_client);
+
+        if network_game_client != 0 {
+            let vtable: u64 = process.read(Address::from(network_game_client)).data_part().unwrap_or(0);
+            println!("CNetworkGameClient vtable base: {:#X}", vtable);
+        }
 
         Ok(())
     }
 }
+

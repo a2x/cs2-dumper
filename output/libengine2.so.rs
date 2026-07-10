@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: libengine2.so
-        // Classes count: 48
-        // Enums count: 4
+        // Classes count: 58
+        // Enums count: 2
         pub mod libengine2_so {
             // Alignment: 4
             // Members count: 3
@@ -26,25 +26,45 @@ pub mod cs2_dumper {
                 ENTITY_IO_TARGET_EHANDLE = 0x6,
                 ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7
             }
-            // Alignment: 4
-            // Members count: 3
-            #[repr(u32)]
-            pub enum SpawnDebugOverrideState_t {
-                SPAWN_DEBUG_OVERRIDE_NONE = 0x0,
-                SPAWN_DEBUG_OVERRIDE_FORCE_ENABLED = 0x1,
-                SPAWN_DEBUG_OVERRIDE_FORCE_DISABLED = 0x2
+            // Parent: None
+            // Fields count: 3
+            pub mod CEntityInstance {
+                pub const m_iszPrivateVScripts: usize = 0x8; // CUtlSymbolLarge
+                pub const m_pEntity: usize = 0x10; // CEntityIdentity*
+                pub const m_CScriptComponent: usize = 0x28; // CScriptComponent*
             }
-            // Alignment: 4
-            // Members count: 5
-            #[repr(u32)]
-            pub enum SpawnDebugRestrictionOverrideState_t {
-                SPAWN_DEBUG_RESTRICT_NONE = 0x0,
-                SPAWN_DEBUG_RESTRICT_IGNORE_MANAGER_DISTANCE_REQS = 0x1,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_DISTANCE_LOS_REQS = 0x2,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TEMPLATE_COOLDOWN_LIMITS = 0x4,
-                SPAWN_DEBUG_RESTRICT_IGNORE_TARGET_COOLDOWN_LIMITS = 0x8
+            // Parent: None
+            // Fields count: 0
+            pub mod CEntityComponent {
             }
-            // Parent: EventSimulate_t
+            // Parent: CEntityComponent
+            // Fields count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CScriptComponent {
+                pub const m_scriptClassName: usize = 0x30; // CUtlSymbolLarge
+            }
+            // Parent: None
+            // Fields count: 12
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CEntityIdentity {
+                pub const m_nameStringTableIndex: usize = 0x14; // int32
+                pub const m_name: usize = 0x18; // CUtlSymbolLarge
+                pub const m_designerName: usize = 0x20; // CUtlSymbolLarge
+                pub const m_flags: usize = 0x30; // uint32
+                pub const m_worldGroupId: usize = 0x38; // WorldGroupId_t
+                pub const m_fDataObjectTypes: usize = 0x3C; // uint32
+                pub const m_PathIndex: usize = 0x40; // ChangeAccessorFieldPathIndex_t
+                pub const m_pAttributes: usize = 0x48; // CEntityAttributeTable*
+                pub const m_pPrev: usize = 0x50; // CEntityIdentity*
+                pub const m_pNext: usize = 0x58; // CEntityIdentity*
+                pub const m_pPrevByClass: usize = 0x60; // CEntityIdentity*
+                pub const m_pNextByClass: usize = 0x68; // CEntityIdentity*
+            }
+            // Parent: None
             // Fields count: 0
             pub mod EventClientPostSimulate_t {
             }
@@ -55,7 +75,7 @@ pub mod cs2_dumper {
                 pub const m_flRealTime: usize = 0x28; // float32
                 pub const m_flFrameTime: usize = 0x2C; // float32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 4
             pub mod EventPostAdvanceTick_t {
                 pub const m_nCurrentTick: usize = 0x2C; // int32
@@ -64,9 +84,8 @@ pub mod cs2_dumper {
                 pub const m_nTotalTicks: usize = 0x38; // int32
             }
             // Parent: None
-            // Fields count: 1
+            // Fields count: 0
             pub mod CEntityIOOutput {
-                pub const m_Value: usize = 0x18; // CVariantBase<CVariantDefaultAllocator>
             }
             // Parent: None
             // Fields count: 1
@@ -82,9 +101,10 @@ pub mod cs2_dumper {
                 pub const m_flRenderFrameTimeUnbounded: usize = 0x30; // float32
                 pub const m_bRenderOnly: usize = 0x34; // bool
             }
-            // Parent: EventSimulate_t
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 1
             pub mod EventServerPostSimulate_t {
+                pub const m_bLastTickBeforeClientUpdate: usize = 0x2A; // bool
             }
             // Parent: None
             // Fields count: 4
@@ -101,9 +121,28 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 0
+            pub mod EventServerBeginSimulate_t {
+            }
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod EntityIOQueuePrioritizedEvent_t {
+                pub const m_flFireTime: usize = 0x4; // GameTime_t
+                pub const m_targetType: usize = 0x8; // EntityIOTargetType_t
+                pub const m_pTarget: usize = 0x10; // CUtlSymbolLarge
+                pub const m_pTargetInput: usize = 0x18; // CUtlSymbolLarge
+                pub const m_hActivator: usize = 0x20; // CEntityHandle
+                pub const m_hCaller: usize = 0x24; // CEntityHandle
+                pub const m_hEntTarget: usize = 0x28; // CEntityHandle
+                pub const m_variantValue: usize = 0x30; // CVariantBase<CVariantDefaultAllocator>
+            }
+            // Parent: None
+            // Fields count: 0
             pub mod EventServerEndAsyncPostTickWork_t {
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Fields count: 0
             pub mod EventClientAdvanceTick_t {
             }
@@ -116,7 +155,7 @@ pub mod cs2_dumper {
             pub mod CNetworkVarChainer {
                 pub const m_PathIndex: usize = 0x20; // ChangeAccessorFieldPathIndex_t
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             pub mod EventClientSimulate_t {
             }
@@ -162,13 +201,10 @@ pub mod cs2_dumper {
             pub mod EventAppShutdown_t {
                 pub const m_nDummy0: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
-            // Fields count: 0
-            pub mod EventServerSimulate_t {
-            }
-            // Parent: EventPostAdvanceTick_t
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 1
             pub mod EventServerPostAdvanceTick_t {
+                pub const m_bLastTickBeforeClientUpdate: usize = 0x3C; // bool
             }
             // Parent: None
             // Fields count: 1
@@ -180,11 +216,11 @@ pub mod cs2_dumper {
             pub mod EventPostDataUpdate_t {
                 pub const m_nCount: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             pub mod EventClientPreSimulate_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             pub mod EventClientPauseSimulate_t {
             }
@@ -193,7 +229,17 @@ pub mod cs2_dumper {
             pub mod EventClientProcessNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
             }
-            // Parent: EventSimulate_t
+            // Parent: None
+            // Fields count: 2
+            pub mod CEntityAttributeTable {
+                pub const m_Attributes: usize = 0x0; // CUtlOrderedMap<CUtlStringTokenNoRegistration,Attribute_t>
+                pub const m_Names: usize = 0x28; // CUtlOrderedMap<CUtlStringTokenNoRegistration,CUtlString>
+            }
+            // Parent: None
+            // Fields count: 0
+            pub mod EventClientPreOutputParallelWithServer_t {
+            }
+            // Parent: None
             // Fields count: 4
             pub mod EventAdvanceTick_t {
                 pub const m_nCurrentTick: usize = 0x2C; // int32
@@ -205,13 +251,22 @@ pub mod cs2_dumper {
             // Fields count: 0
             pub mod EventSplitScreenStateChanged_t {
             }
-            // Parent: EventPostAdvanceTick_t
+            // Parent: None
             // Fields count: 0
             pub mod EventClientPostAdvanceTick_t {
             }
             // Parent: None
             // Fields count: 0
+            pub mod EventBugBug_t {
+            }
+            // Parent: None
+            // Fields count: 0
             pub mod CVariantDefaultAllocator {
+            }
+            // Parent: None
+            // Fields count: 1
+            pub mod EventBugBugComplete_t {
+                pub const m_pPayload: usize = 0x0; // EventBugBug_t*
             }
             // Parent: None
             // Fields count: 0
@@ -235,7 +290,7 @@ pub mod cs2_dumper {
                 pub const m_flFrameTime: usize = 0x2C; // float32
                 pub const m_bScheduleSendTickPacket: usize = 0x30; // bool
             }
-            // Parent: EventAdvanceTick_t
+            // Parent: None
             // Fields count: 0
             pub mod EventServerAdvanceTick_t {
             }
@@ -252,10 +307,6 @@ pub mod cs2_dumper {
                 pub const m_flTickRemainder: usize = 0x58; // float64
             }
             // Parent: None
-            // Fields count: 0
-            pub mod EntOutput_t {
-            }
-            // Parent: None
             // Fields count: 3
             pub mod EventSimulate_t {
                 pub const m_LoopState: usize = 0x0; // EngineLoopState_t
@@ -264,9 +315,13 @@ pub mod cs2_dumper {
             }
             // Parent: None
             // Fields count: 0
+            pub mod CEntityKeyValues {
+            }
+            // Parent: None
+            // Fields count: 0
             pub mod EventClientAdvanceNonRenderedFrame_t {
             }
-            // Parent: EventSimulate_t
+            // Parent: None
             // Fields count: 0
             pub mod EventServerProcessNetworking_t {
             }
@@ -298,9 +353,10 @@ pub mod cs2_dumper {
             pub mod EventClientPollNetworking_t {
                 pub const m_nTickCount: usize = 0x0; // int32
             }
-            // Parent: EventPostAdvanceTick_t
-            // Fields count: 0
+            // Parent: None
+            // Fields count: 1
             pub mod EventServerBeginAsyncPostTickWork_t {
+                pub const m_bIsOncePerFrameAsyncWorkPhase: usize = 0x0; // bool
             }
             // Parent: None
             // Fields count: 4
@@ -310,7 +366,12 @@ pub mod cs2_dumper {
                 pub const m_flTickInterval: usize = 0x2C; // float32
                 pub const m_flTickStartTime: usize = 0x30; // float64
             }
-            // Parent: EventSimulate_t
+            // Parent: None
+            // Fields count: 1
+            pub mod EventServerEndSimulate_t {
+                pub const m_bLastTick: usize = 0x0; // bool
+            }
+            // Parent: None
             // Fields count: 0
             pub mod EventServerPollNetworking_t {
             }

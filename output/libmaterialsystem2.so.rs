@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: libmaterialsystem2.so
-        // Classes count: 13
+        // Classes count: 15
         // Enums count: 5
         pub mod libmaterialsystem2_so {
             // Alignment: 4
@@ -59,7 +59,7 @@ pub mod cs2_dumper {
             pub mod MaterialParam_t {
                 pub const m_name: usize = 0x0; // CUtlString
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
@@ -67,7 +67,7 @@ pub mod cs2_dumper {
             pub mod MaterialParamVector_t {
                 pub const m_value: usize = 0x8; // Vector4D
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
@@ -76,7 +76,7 @@ pub mod cs2_dumper {
                 pub const m_value: usize = 0x8; // CUtlString
             }
             // Parent: None
-            // Fields count: 11
+            // Fields count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -85,15 +85,19 @@ pub mod cs2_dumper {
                 pub const m_toneMapParams: usize = 0x4; // PostProcessingTonemapParameters_t
                 pub const m_bHasBloomParams: usize = 0x40; // bool
                 pub const m_bloomParams: usize = 0x44; // PostProcessingBloomParameters_t
-                pub const m_bHasVignetteParams: usize = 0xB4; // bool
-                pub const m_vignetteParams: usize = 0xB8; // PostProcessingVignetteParameters_t
-                pub const m_bHasLocalContrastParams: usize = 0xDC; // bool
-                pub const m_localConstrastParams: usize = 0xE0; // PostProcessingLocalContrastParameters_t
-                pub const m_nColorCorrectionVolumeDim: usize = 0xF4; // int32
-                pub const m_colorCorrectionVolumeData: usize = 0xF8; // CUtlBinaryBlock
-                pub const m_bHasColorCorrection: usize = 0x110; // bool
+                pub const m_bHasVignetteParams: usize = 0xCC; // bool
+                pub const m_vignetteParams: usize = 0xD0; // PostProcessingVignetteParameters_t
+                pub const m_bHasLocalContrastParams: usize = 0xF4; // bool
+                pub const m_localConstrastParams: usize = 0xF8; // PostProcessingLocalContrastParameters_t
+                pub const m_nColorCorrectionVolumeDim: usize = 0x10C; // int32
+                pub const m_colorCorrectionVolumeData: usize = 0x110; // CUtlBinaryBlock
+                pub const m_bHasColorCorrection: usize = 0x120; // bool
+                pub const m_bHasFogScatteringParams: usize = 0x121; // bool
+                pub const m_fogScatteringParams: usize = 0x124; // PostProcessingFogScatteringParameters_t
+                pub const m_bHasLocalExposureParams: usize = 0x144; // bool
+                pub const m_localExposureParams: usize = 0x148; // PostProcessingLocalExposureParameters_t
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
@@ -148,7 +152,22 @@ pub mod cs2_dumper {
                 pub const m_flMinHighlightLum: usize = 0x34; // float32
                 pub const m_flMaxHighlightLum: usize = 0x38; // float32
             }
-            // Parent: MaterialParam_t
+            // Parent: None
+            // Fields count: 8
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod PostProcessingFogScatteringParameters_t {
+                pub const m_fRadius: usize = 0x0; // float32
+                pub const m_fScale: usize = 0x4; // float32
+                pub const m_fCubemapScale: usize = 0x8; // float32
+                pub const m_fVolumetricScale: usize = 0xC; // float32
+                pub const m_fGradientScale: usize = 0x10; // float32
+                pub const m_fWaterScale: usize = 0x14; // float32
+                pub const m_fWaterDensity: usize = 0x18; // float32
+                pub const m_fWaterDepthBlurRadius: usize = 0x1C; // float32
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
@@ -178,7 +197,7 @@ pub mod cs2_dumper {
                 pub const m_renderAttributesUsed: usize = 0x118; // CUtlVector<CUtlString>
             }
             // Parent: None
-            // Fields count: 10
+            // Fields count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -191,10 +210,16 @@ pub mod cs2_dumper {
                 pub const m_flBloomThresholdWidth: usize = 0x14; // float32
                 pub const m_flSkyboxBloomStrength: usize = 0x18; // float32
                 pub const m_flBloomStartValue: usize = 0x1C; // float32
-                pub const m_flBlurWeight: usize = 0x20; // float32[5]
-                pub const m_vBlurTint: usize = 0x34; // Vector[5]
+                pub const m_flComputeBloomStrength: usize = 0x20; // float32
+                pub const m_flComputeBloomThreshold: usize = 0x24; // float32
+                pub const m_flComputeBloomRadius: usize = 0x28; // float32
+                pub const m_flComputeBloomEffectsScale: usize = 0x2C; // float32
+                pub const m_flComputeBloomLensDirtStrength: usize = 0x30; // float32
+                pub const m_flComputeBloomLensDirtBlackLevel: usize = 0x34; // float32
+                pub const m_flBlurWeight: usize = 0x38; // float32[5]
+                pub const m_vBlurTint: usize = 0x4C; // Vector[5]
             }
-            // Parent: MaterialParam_t
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:
@@ -202,7 +227,18 @@ pub mod cs2_dumper {
             pub mod MaterialParamFloat_t {
                 pub const m_flValue: usize = 0x8; // float32
             }
-            // Parent: MaterialParam_t
+            // Parent: None
+            // Fields count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod PostProcessingLocalExposureParameters_t {
+                pub const m_fShadowOffsetEV: usize = 0x0; // float32
+                pub const m_fHighlightOffsetEV: usize = 0x4; // float32
+                pub const m_fSigma: usize = 0x8; // float32
+                pub const m_fBoostLocalContrast: usize = 0xC; // float32
+            }
+            // Parent: None
             // Fields count: 1
             //
             // Metadata:

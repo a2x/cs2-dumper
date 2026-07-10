@@ -1,6 +1,19 @@
 {
   "libworldrenderer.so": {
     "classes": {
+      "AggregateInstanceStreamOnDiskData_t": {
+        "fields": {
+          "m_BufferData": 8,
+          "m_DecodedSize": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "AggregateLODSetup_t": {
         "fields": {
           "m_fMaxObjectScale": 12,
@@ -18,14 +31,37 @@
       "AggregateMeshInfo_t": {
         "fields": {
           "m_bHasTransform": 5,
-          "m_nDrawCallIndex": 6,
-          "m_nLODGroupMask": 10,
-          "m_nLODSetupIndex": 8,
+          "m_fEmissiveFactor": 40,
+          "m_instanceStreams": 36,
+          "m_nDrawCallIndex": 8,
+          "m_nInstanceStreamOffset": 24,
+          "m_nLODGroupMask": 6,
+          "m_nLODSetupIndex": 10,
           "m_nLightProbeVolumePrecomputedHandshake": 20,
+          "m_nVertexAlbedoStreamOffset": 28,
+          "m_nVertexEmissiveStreamOffset": 32,
           "m_nVisClusterMemberCount": 4,
           "m_nVisClusterMemberOffset": 0,
           "m_objectFlags": 16,
-          "m_vTintColor": 11
+          "m_vTintColor": 12
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateRTProxySceneObject_t": {
+        "fields": {
+          "m_BLASes": 8,
+          "m_IBData": 72,
+          "m_InstanceAlbedoData": 88,
+          "m_InstanceEmissiveData": 104,
+          "m_Instances": 32,
+          "m_VBData": 56,
+          "m_nLayer": 0
         },
         "metadata": [
           {
@@ -41,10 +77,37 @@
           "m_allFlags": 0,
           "m_anyFlags": 4,
           "m_fragmentTransforms": 88,
+          "m_instanceStream": 10,
           "m_lodSetups": 40,
           "m_nLayer": 8,
           "m_renderableModel": 112,
+          "m_vertexAlbedoStream": 12,
+          "m_vertexEmissiveStream": 14,
           "m_visClusterMembership": 64
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateVertexAlbedoStreamOnDiskData_t": {
+        "fields": {
+          "m_BufferData": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "AggregateVertexEmissiveStreamOnDiskData_t": {
+        "fields": {
+          "m_BufferData": 0
         },
         "metadata": [
           {
@@ -59,12 +122,28 @@
           "m_bBakedShadowsGamma20": 17,
           "m_bCompressionEnabled": 18,
           "m_bHasLightmaps": 16,
+          "m_bSHLightmaps": 19,
+          "m_bakedShadows": 48,
           "m_lightMaps": 24,
-          "m_nChartPackIterations": 19,
+          "m_nChartPackIterations": 20,
           "m_nLightmapGameVersionNumber": 4,
           "m_nLightmapVersionNumber": 0,
-          "m_nVradQuality": 20,
+          "m_nVradQuality": 21,
           "m_vLightmapUvScale": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "BakedLightingInfo_t__BakedShadowAssignment_t": {
+        "fields": {
+          "m_nLightHash": 0,
+          "m_nMapHash": 4,
+          "m_nShadowChannel": 8
         },
         "metadata": [
           {
@@ -85,6 +164,55 @@
           }
         ],
         "parent": null
+      },
+      "CEntityComponent": {
+        "fields": {},
+        "metadata": [],
+        "parent": null
+      },
+      "CEntityIdentity": {
+        "fields": {
+          "m_PathIndex": 64,
+          "m_designerName": 32,
+          "m_fDataObjectTypes": 60,
+          "m_flags": 48,
+          "m_name": 24,
+          "m_nameStringTableIndex": 20,
+          "m_pAttributes": 72,
+          "m_pNext": 88,
+          "m_pNextByClass": 104,
+          "m_pPrev": 80,
+          "m_pPrevByClass": 96,
+          "m_worldGroupId": 56
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CEntityInstance": {
+        "fields": {
+          "m_CScriptComponent": 40,
+          "m_iszPrivateVScripts": 8,
+          "m_pEntity": 16
+        },
+        "metadata": [],
+        "parent": null
+      },
+      "CScriptComponent": {
+        "fields": {
+          "m_scriptClassName": 48
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": "CEntityComponent"
       },
       "CVoxelVisibility": {
         "fields": {
@@ -113,10 +241,13 @@
       "ClutterSceneObject_t": {
         "fields": {
           "m_Bounds": 0,
+          "m_flBeginCullSize": 164,
+          "m_flEndCullSize": 168,
           "m_flags": 24,
           "m_instancePositions": 32,
           "m_instanceScales": 80,
           "m_instanceTintSrgb": 104,
+          "m_materialGroup": 160,
           "m_nLayer": 28,
           "m_renderableModel": 152,
           "m_tiles": 128
@@ -150,6 +281,7 @@
           "m_nTimesToFire": 44,
           "m_outputName": 0,
           "m_overrideParam": 32,
+          "m_paramMap": 48,
           "m_targetName": 16,
           "m_targetType": 8
         },
@@ -187,7 +319,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "BaseSceneObjectOverride_t"
+        "parent": null
       },
       "InfoForResourceTypeVMapResourceData_t": {
         "fields": {},
@@ -199,18 +331,12 @@
         ],
         "parent": null
       },
-      "InfoOverlayData_t": {
+      "MaterialOverride_t": {
         "fields": {
-          "m_flDepth": 56,
-          "m_flHeight": 52,
-          "m_flWidth": 48,
-          "m_nRenderOrder": 88,
-          "m_nSequenceOverride": 108,
-          "m_pMaterial": 80,
-          "m_transform": 0,
-          "m_vTintColor": 92,
-          "m_vUVEnd": 68,
-          "m_vUVStart": 60
+          "m_nDrawCallIndex": 8,
+          "m_nSubSceneObject": 4,
+          "m_pMaterial": 16,
+          "m_vLinearTintColor": 24
         },
         "metadata": [
           {
@@ -219,20 +345,6 @@
           }
         ],
         "parent": null
-      },
-      "MaterialOverride_t": {
-        "fields": {
-          "m_nDrawCallIndex": 8,
-          "m_nSubSceneObject": 4,
-          "m_pMaterial": 16
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
-        "parent": "BaseSceneObjectOverride_t"
       },
       "NodeData_t": {
         "fields": {
@@ -257,6 +369,46 @@
           "m_childLumps": 16,
           "m_entityKeyValues": 40,
           "m_name": 8
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "RTProxyBLAS_t": {
+        "fields": {
+          "m_albedoFormat": 18,
+          "m_boundLs": 20,
+          "m_nBaseVertex": 12,
+          "m_nFirstIndex": 0,
+          "m_nIndexCount": 4,
+          "m_nVBByteOffset": 8,
+          "m_nVertexCount": 16,
+          "m_vVertexExtentLs": 56,
+          "m_vVertexOriginLs": 44
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "RTProxyInstanceInfo_t": {
+        "fields": {
+          "m_albedoFormat": 1,
+          "m_emissiveFormat": 2,
+          "m_fEmissiveFactor": 20,
+          "m_mWorldFromLocal": 24,
+          "m_nBLASCount": 4,
+          "m_nBLASIndex": 8,
+          "m_nFlags": 0,
+          "m_nVertexAlbedoByteOffset": 12,
+          "m_nVertexEmissiveByteOffset": 16
         },
         "metadata": [
           {
@@ -311,11 +463,12 @@
       },
       "WorldBuilderParams_t": {
         "fields": {
+          "m_bAggregateInstanceStreams": 5,
           "m_bBuildBakedLighting": 4,
           "m_bakedLightingInfo": 8,
           "m_flMinDrawVolumeSize": 0,
-          "m_nCompileFingerprint": 64,
-          "m_nCompileTimestamp": 56
+          "m_nCompileFingerprint": 88,
+          "m_nCompileTimestamp": 80
         },
         "metadata": [
           {
@@ -342,20 +495,22 @@
       },
       "WorldNode_t": {
         "fields": {
-          "m_aggregateSceneObjects": 72,
-          "m_bHasBakedGeometryFlag": 320,
-          "m_clutterSceneObjects": 96,
+          "m_aggregateInstanceStreams": 192,
+          "m_aggregateSceneObjects": 48,
+          "m_bHasBakedGeometryFlag": 392,
+          "m_clutterSceneObjects": 72,
           "m_extraVertexStreamOverrides": 120,
           "m_extraVertexStreams": 168,
-          "m_grassFileName": 264,
-          "m_infoOverlays": 24,
-          "m_layerNames": 192,
+          "m_grassFileName": 312,
+          "m_layerNames": 264,
           "m_materialOverrides": 144,
-          "m_nodeLightingInfo": 272,
-          "m_overlayLayerIndices": 240,
-          "m_sceneObjectLayerIndices": 216,
+          "m_nodeLightingInfo": 320,
+          "m_rtProxies": 96,
+          "m_sceneObjectLayerIndices": 288,
           "m_sceneObjects": 0,
-          "m_visClusterMembership": 48
+          "m_vertexAlbedoStreams": 216,
+          "m_vertexEmissiveStreams": 240,
+          "m_visClusterMembership": 24
         },
         "metadata": [
           {
@@ -368,9 +523,9 @@
       "World_t": {
         "fields": {
           "m_builderParams": 0,
-          "m_entityLumps": 144,
-          "m_worldLightingInfo": 96,
-          "m_worldNodes": 72
+          "m_entityLumps": 192,
+          "m_worldLightingInfo": 120,
+          "m_worldNodes": 96
         },
         "metadata": [
           {
@@ -382,6 +537,16 @@
       }
     },
     "enums": {
+      "AggregateInstanceStream_t": {
+        "alignment": 1,
+        "members": {
+          "AGGREGATE_INSTANCE_STREAM_LIGHTMAPUV_UNORM16": 1,
+          "AGGREGATE_INSTANCE_STREAM_NONE": 0,
+          "AGGREGATE_INSTANCE_STREAM_VERTEXBLEND_UNORM8": 4,
+          "AGGREGATE_INSTANCE_STREAM_VERTEXTINT_UNORM8": 2
+        },
+        "type": "uint8"
+      },
       "ObjectTypeFlags_t": {
         "alignment": 4,
         "members": {
@@ -389,11 +554,12 @@
           "OBJECT_TYPE_BLOCK_LIGHT": 16,
           "OBJECT_TYPE_DISABLED_IN_LOW_QUALITY": 128,
           "OBJECT_TYPE_DISABLE_VIS_CULLING": 65536,
+          "OBJECT_TYPE_HAS_AGGREGATE_RTPROXY": 524288,
           "OBJECT_TYPE_MODEL": 8,
           "OBJECT_TYPE_MODEL_HAS_LODS": 2048,
+          "OBJECT_TYPE_NEEDS_DYNAMIC_SHADOWS": 262144,
           "OBJECT_TYPE_NONE": 0,
           "OBJECT_TYPE_NO_SHADOWS": 32,
-          "OBJECT_TYPE_NO_SUN_SHADOWS": 256,
           "OBJECT_TYPE_OVERLAY": 8192,
           "OBJECT_TYPE_PRECOMPUTED_VISMEMBERS": 16384,
           "OBJECT_TYPE_RENDER_TO_CUBEMAPS": 1024,
@@ -402,6 +568,14 @@
           "OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND": 64
         },
         "type": "uint32"
+      },
+      "RTProxyInstanceFlags_t": {
+        "alignment": 1,
+        "members": {
+          "RTPROXY_INSTANCE_FLAG_NONE": 0,
+          "RTPROXY_INSTANCE_UNIQUE_MESH": 1
+        },
+        "type": "uint8"
       }
     }
   }

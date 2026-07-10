@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libresourcesystem.so
@@ -30,14 +30,13 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCNmIKRig {
+        public static class InfoForResourceTypeCResponseRulesList {
         }
         // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCResponseRulesList {
+        // Fields count: 2
+        public static class AABBWS_t {
+            public const nint m_vMinBounds = 0x0; // VectorWS
+            public const nint m_vMaxBounds = 0xC; // VectorWS
         }
         // Parent: None
         // Fields count: 0
@@ -52,13 +51,6 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCMorphSetData {
-        }
-        // Parent: None
-        // Fields count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCChoreoSceneFileData {
         }
         // Parent: None
         // Fields count: 0
@@ -151,14 +143,6 @@ namespace CS2Dumper.Schemas {
         public static class InfoForResourceTypeCVoxelVisibility {
         }
         // Parent: None
-        // Fields count: 1
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class TestResource_t {
-            public const nint m_name = 0x0; // CUtlString
-        }
-        // Parent: None
         // Fields count: 0
         //
         // Metadata:
@@ -246,6 +230,13 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCChoreoSceneResource {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
         public static class InfoForResourceTypeCNmSkeleton {
         }
         // Parent: None
@@ -253,7 +244,7 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
-        public static class InfoForResourceTypeTestResource_t {
+        public static class InfoForResourceTypeCTestResourceData {
         }
         // Parent: None
         // Fields count: 0
@@ -295,7 +286,7 @@ namespace CS2Dumper.Schemas {
         //
         // Metadata:
         // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCNmGraphVariation {
+        public static class InfoForResourceTypeCSurfaceGraph {
         }
         // Parent: None
         // Fields count: 0
@@ -377,6 +368,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeIPulseGraphDef {
+        }
+        // Parent: None
+        // Fields count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCVDataItemDefs {
         }
         // Parent: None
         // Fields count: 5

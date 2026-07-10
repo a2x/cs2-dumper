@@ -28,11 +28,10 @@
       },
       "CSSDSMsg_LayerBase": {
         "fields": {
-          "m_LayerName": 40,
+          "m_LayerName": 32,
           "m_ViewName": 16,
-          "m_displayText": 48,
-          "m_nLayerId": 32,
-          "m_nLayerIndex": 24,
+          "m_displayText": 40,
+          "m_nLayerId": 24,
           "m_viewId": 0
         },
         "metadata": [
@@ -51,7 +50,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "CSSDSMsg_LayerBase"
+        "parent": null
       },
       "CSSDSMsg_PreLayer": {
         "fields": {},
@@ -61,7 +60,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "CSSDSMsg_LayerBase"
+        "parent": null
       },
       "CSSDSMsg_ViewRender": {
         "fields": {
@@ -126,15 +125,72 @@
       }
     },
     "enums": {
+      "DecalRtEncoding_t": {
+        "alignment": 1,
+        "members": {
+          "kDecalBlood": 0,
+          "kDecalCloak": 1,
+          "kDecalDefault": 0,
+          "kDecalInvalid": 255,
+          "kDecalMax": 2,
+          "kDecalMin": 0
+        },
+        "type": "uint8"
+      },
       "DisableShadows_t": {
         "alignment": 1,
         "members": {
           "kDisableShadows_All": 1,
           "kDisableShadows_Baked": 2,
           "kDisableShadows_None": 0,
+          "kDisableShadows_ReallyNone": 4,
           "kDisableShadows_Realtime": 3
         },
         "type": "uint8"
+      },
+      "ESceneObjectMeshletVisualization": {
+        "alignment": 4,
+        "members": {
+          "SCENEOBJECT_MESHLET_VIS_CULLED": 2,
+          "SCENEOBJECT_MESHLET_VIS_MESHLET": 1,
+          "SCENEOBJECT_MESHLET_VIS_NONE": 0
+        },
+        "type": "uint32"
+      },
+      "ESceneObjectVisualization": {
+        "alignment": 4,
+        "members": {
+          "SCENEOBJECT_VIS_INSTANCING": 5,
+          "SCENEOBJECT_VIS_LOD": 4,
+          "SCENEOBJECT_VIS_MATERIAL": 2,
+          "SCENEOBJECT_VIS_NONE": 0,
+          "SCENEOBJECT_VIS_OBJECT": 1,
+          "SCENEOBJECT_VIS_TEXTURE_SIZE": 3
+        },
+        "type": "uint32"
+      },
+      "ESceneViewDebugOverlaysListenerDataType_t": {
+        "alignment": 4,
+        "members": {
+          "k_ESceneViewDebugOverlaysListenerDataType_BoxAngles": 3,
+          "k_ESceneViewDebugOverlaysListenerDataType_Capsule": 2,
+          "k_ESceneViewDebugOverlaysListenerDataType_Line": 4,
+          "k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles": 5,
+          "k_ESceneViewDebugOverlaysListenerDataType_Sphere": 1,
+          "k_ESceneViewDebugOverlaysListenerDataType_Text3D": 6,
+          "k_ESceneViewDebugOverlaysListenerDataType_Unknown": 0
+        },
+        "type": "uint32"
+      },
+      "ESilhouetteType_t": {
+        "alignment": 4,
+        "members": {
+          "SILHOUETTE_ENVMAP": 2,
+          "SILHOUETTE_LIGHT": 1,
+          "SILHOUETTE_LPV": 4,
+          "SILHOUETTE_NONE": 0
+        },
+        "type": "uint32"
       }
     }
   }

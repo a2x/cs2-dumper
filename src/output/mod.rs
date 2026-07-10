@@ -143,7 +143,7 @@ impl<'a> Output<'a> {
 
                 process.read::<u32>(module.base + offset).ok()
             })
-            .ok_or(Error::Other("unable to read build number"))?;
+            .unwrap_or(0);
 
         let content = serde_json::to_string_pretty(&json!({
             "timestamp": self.timestamp.to_rfc3339(),

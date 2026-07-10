@@ -9,6 +9,7 @@ use serde::{Deserialize, Serialize};
 use skidscan_macros::signature;
 
 use crate::error::Result;
+use crate::mem::{MemoryViewExt, PointerExt};
 use crate::source2::InterfaceReg;
 
 pub type InterfaceMap = BTreeMap<String, Vec<Interface>>;

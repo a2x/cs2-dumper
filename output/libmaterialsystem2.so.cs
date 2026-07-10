@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libmaterialsystem2.so
-    // Classes count: 13
+    // Classes count: 15
     // Enums count: 5
     public static class Libmaterialsystem2So {
         // Alignment: 4
@@ -51,7 +51,7 @@ namespace CS2Dumper.Schemas {
         public static class MaterialParam_t {
             public const nint m_name = 0x0; // CUtlString
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
@@ -59,7 +59,7 @@ namespace CS2Dumper.Schemas {
         public static class MaterialParamVector_t {
             public const nint m_value = 0x8; // Vector4D
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
@@ -68,7 +68,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_value = 0x8; // CUtlString
         }
         // Parent: None
-        // Fields count: 11
+        // Fields count: 15
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -77,15 +77,19 @@ namespace CS2Dumper.Schemas {
             public const nint m_toneMapParams = 0x4; // PostProcessingTonemapParameters_t
             public const nint m_bHasBloomParams = 0x40; // bool
             public const nint m_bloomParams = 0x44; // PostProcessingBloomParameters_t
-            public const nint m_bHasVignetteParams = 0xB4; // bool
-            public const nint m_vignetteParams = 0xB8; // PostProcessingVignetteParameters_t
-            public const nint m_bHasLocalContrastParams = 0xDC; // bool
-            public const nint m_localConstrastParams = 0xE0; // PostProcessingLocalContrastParameters_t
-            public const nint m_nColorCorrectionVolumeDim = 0xF4; // int32
-            public const nint m_colorCorrectionVolumeData = 0xF8; // CUtlBinaryBlock
-            public const nint m_bHasColorCorrection = 0x110; // bool
+            public const nint m_bHasVignetteParams = 0xCC; // bool
+            public const nint m_vignetteParams = 0xD0; // PostProcessingVignetteParameters_t
+            public const nint m_bHasLocalContrastParams = 0xF4; // bool
+            public const nint m_localConstrastParams = 0xF8; // PostProcessingLocalContrastParameters_t
+            public const nint m_nColorCorrectionVolumeDim = 0x10C; // int32
+            public const nint m_colorCorrectionVolumeData = 0x110; // CUtlBinaryBlock
+            public const nint m_bHasColorCorrection = 0x120; // bool
+            public const nint m_bHasFogScatteringParams = 0x121; // bool
+            public const nint m_fogScatteringParams = 0x124; // PostProcessingFogScatteringParameters_t
+            public const nint m_bHasLocalExposureParams = 0x144; // bool
+            public const nint m_localExposureParams = 0x148; // PostProcessingLocalExposureParameters_t
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
@@ -140,7 +144,22 @@ namespace CS2Dumper.Schemas {
             public const nint m_flMinHighlightLum = 0x34; // float32
             public const nint m_flMaxHighlightLum = 0x38; // float32
         }
-        // Parent: MaterialParam_t
+        // Parent: None
+        // Fields count: 8
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class PostProcessingFogScatteringParameters_t {
+            public const nint m_fRadius = 0x0; // float32
+            public const nint m_fScale = 0x4; // float32
+            public const nint m_fCubemapScale = 0x8; // float32
+            public const nint m_fVolumetricScale = 0xC; // float32
+            public const nint m_fGradientScale = 0x10; // float32
+            public const nint m_fWaterScale = 0x14; // float32
+            public const nint m_fWaterDensity = 0x18; // float32
+            public const nint m_fWaterDepthBlurRadius = 0x1C; // float32
+        }
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
@@ -170,7 +189,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_renderAttributesUsed = 0x118; // CUtlVector<CUtlString>
         }
         // Parent: None
-        // Fields count: 10
+        // Fields count: 16
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -183,10 +202,16 @@ namespace CS2Dumper.Schemas {
             public const nint m_flBloomThresholdWidth = 0x14; // float32
             public const nint m_flSkyboxBloomStrength = 0x18; // float32
             public const nint m_flBloomStartValue = 0x1C; // float32
-            public const nint m_flBlurWeight = 0x20; // float32[5]
-            public const nint m_vBlurTint = 0x34; // Vector[5]
+            public const nint m_flComputeBloomStrength = 0x20; // float32
+            public const nint m_flComputeBloomThreshold = 0x24; // float32
+            public const nint m_flComputeBloomRadius = 0x28; // float32
+            public const nint m_flComputeBloomEffectsScale = 0x2C; // float32
+            public const nint m_flComputeBloomLensDirtStrength = 0x30; // float32
+            public const nint m_flComputeBloomLensDirtBlackLevel = 0x34; // float32
+            public const nint m_flBlurWeight = 0x38; // float32[5]
+            public const nint m_vBlurTint = 0x4C; // Vector[5]
         }
-        // Parent: MaterialParam_t
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:
@@ -194,7 +219,18 @@ namespace CS2Dumper.Schemas {
         public static class MaterialParamFloat_t {
             public const nint m_flValue = 0x8; // float32
         }
-        // Parent: MaterialParam_t
+        // Parent: None
+        // Fields count: 4
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class PostProcessingLocalExposureParameters_t {
+            public const nint m_fShadowOffsetEV = 0x0; // float32
+            public const nint m_fHighlightOffsetEV = 0x4; // float32
+            public const nint m_fSigma = 0x8; // float32
+            public const nint m_fBoostLocalContrast = 0xC; // float32
+        }
+        // Parent: None
         // Fields count: 1
         //
         // Metadata:

@@ -9,9 +9,10 @@ use crate::source2::UtlTsHash;
 #[derive(Pod)]
 #[repr(C)]
 pub struct SchemaSystemTypeScope {
-    pad_0000: [u8; 0x8],                                          // 0x0000
-    pub name: [c_char; 256],                                      // 0x0008
-    pad_0108: [u8; 0x458],                                        // 0x0108
-    pub class_bindings: UtlTsHash<Pointer64<SchemaClassBinding>>, // 0x0560
-    pub enum_bindings: UtlTsHash<Pointer64<SchemaEnumBinding>>,   // 0x3600
+    pad_0: [u8; 0x8],                                        // 0x0000
+    pub name: [c_char; 256],                                 // 0x0008
+    pub global_scope: Pointer64<SchemaSystemTypeScope>,      // 0x0108
+    pad_1: [u8; 0x450],                                      // 0x0110
+    pub class_bindings: UtlTsHash<SchemaClassBinding, 768>,  // 0x0560
+    pub enum_bindings: UtlTsHash<SchemaEnumBinding, 768>,    // 0x4DD0
 }
