@@ -1,5 +1,5 @@
 pub use interface::InterfaceReg;
-pub use utl_memory_pool::UtlMemoryPoolBase;
+pub use utl_memory_pool::UtlMemoryPool;
 pub use utl_ts_hash::UtlTsHash;
 pub use utl_vector::UtlVector;
 

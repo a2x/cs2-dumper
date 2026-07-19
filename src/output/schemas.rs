@@ -53,10 +53,10 @@ impl CodeWriter for SchemaMap {
 
                         for class in classes {
                             let parent_name = class
-                                .parent
-                                .as_ref()
-                                .map(|parent| slugify(&parent.name))
-                                .unwrap_or_else(|| String::from("None"));
+                                .parent_name
+                                .as_deref()
+                                .map(slugify)
+                                .unwrap_or("None".to_string());
 
                             writeln!(fmt, "// Parent: {}", parent_name)?;
                             writeln!(fmt, "// Fields count: {}", class.fields.len())?;
@@ -136,10 +136,10 @@ impl CodeWriter for SchemaMap {
 
                             for class in classes {
                                 let parent_name = class
-                                    .parent
-                                    .as_ref()
-                                    .map(|parent| slugify(&parent.name))
-                                    .unwrap_or_else(|| String::from("None"));
+                                    .parent_name
+                                    .as_deref()
+                                    .map(slugify)
+                                    .unwrap_or("None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Fields count: {}", class.fields.len())?;
@@ -209,7 +209,7 @@ impl CodeWriter for SchemaMap {
                         (
                             slugify(&class.name),
                             json!({
-                                "parent": class.parent.as_ref().map(|parent| &parent.name),
+                                "parent": class.parent_name.as_deref(),
                                 "fields": fields,
                                 "metadata": metadata
                             }),
@@ -324,10 +324,10 @@ impl CodeWriter for SchemaMap {
 
                             for class in classes {
                                 let parent_name = class
-                                    .parent
-                                    .as_ref()
-                                    .map(|parent| slugify(&parent.name))
-                                    .unwrap_or_else(|| String::from("None"));
+                                    .parent_name
+                                    .as_deref()
+                                    .map(slugify)
+                                    .unwrap_or("None".to_string());
 
                                 writeln!(fmt, "// Parent: {}", parent_name)?;
                                 writeln!(fmt, "// Fields count: {}", class.fields.len())?;

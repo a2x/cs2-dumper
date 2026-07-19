@@ -10,6 +10,7 @@ use serde::{Deserialize, Serialize};
 use skidscan_macros::signature;
 
 use crate::error::{Error, Result};
+use crate::mem::{MemoryViewExt, PointerExt};
 use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
@@ -25,7 +26,7 @@ pub enum ClassMetadata {
 pub struct Class {
     pub name: String,
     pub module_name: String,
-    pub parent: Option<Box<Class>>,
+    pub parent_name: Option<String>,
     pub metadata: Vec<ClassMetadata>,
     pub fields: Vec<ClassField>,
 }
@@ -60,17 +61,20 @@ pub struct TypeScope {
 
 pub fn schemas(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaMap> {
     let schema_system = read_schema_system(process)?;
+    println!("SchemaSystem.registration_count = {}", schema_system.registration_count);
+    println!("SchemaSystem.type_scopes.size = {}", schema_system.type_scopes.size);
+
     let type_scopes = read_type_scopes(process, &schema_system)?;
 
-    let map = type_scopes
-        .into_iter()
-        .map(|type_scope| {
-            (
-                type_scope.module_name,
-                (type_scope.classes, type_scope.enums),
-            )
-        })
-        .collect();
+    let mut map = BTreeMap::new();
+
+    for type_scope in type_scopes {
+        println!("TypeScope: {}, classes: {}, enums: {}", type_scope.module_name, type_scope.classes.len(), type_scope.enums.len());
+        map.insert(
+            type_scope.module_name,
+            (type_scope.classes, type_scope.enums),
+        );
+    }
 
     Ok(map)
 }
@@ -92,25 +96,13 @@ fn read_class_binding(
         return Err(Error::Other("empty class name"));
     }
 
-    let parent = binding.base_classes.non_null().and_then(|ptr| {
+    let parent_name = binding.base_classes.non_null().and_then(|ptr| {
         let base_class = ptr.read(process).ok()?;
-        let parent_class = base_class.prev.read(process).ok()?;
+        let parent_class = base_class.class.read(process).ok()?;
 
-        let module_name = parent_class
-            .module_name
-            .read_string(process)
-            .ok()?
-            .to_string();
+        let parent_name = parent_class.name.read_string(process).ok()?.to_string();
 
-        let name = parent_class.name.read_string(process).ok()?.to_string();
-
-        Some(Box::new(Class {
-            name,
-            module_name,
-            parent: None,
-            metadata: Vec::new(),
-            fields: Vec::new(),
-        }))
+        (!parent_name.is_empty()).then_some(parent_name)
     });
 
     let fields = read_class_binding_fields(process, &binding)?;
@@ -121,7 +113,7 @@ fn read_class_binding(
         name,
         binding_ptr.to_umem(),
         module_name,
-        parent.as_ref().map(|parent| parent.name.clone()),
+        parent_name,
         metadata.len(),
         fields.len(),
     );
@@ -129,7 +121,7 @@ fn read_class_binding(
     Ok(Class {
         name,
         module_name,
-        parent,
+        parent_name,
         metadata,
         fields,
     })
@@ -143,15 +135,15 @@ fn read_class_binding_fields(
         return Ok(Vec::new());
     }
 
-    (0..binding.fields_count).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.field_count).try_fold(Vec::new(), |mut acc, i| {
         let field = binding.fields.at(i as _).read(process)?;
 
-        if field.schema_type.is_null() {
+        if field.r#type.is_null() {
             return Ok(acc);
         }
 
         let name = field.name.read_string(process)?.to_string();
-        let schema_type = field.schema_type.read(process)?;
+        let schema_type = field.r#type.read(process)?;
 
         // TODO: Parse this properly.
         let type_name = schema_type.name.read_string(process)?.replace(" ", "");
@@ -159,7 +151,7 @@ fn read_class_binding_fields(
         acc.push(ClassField {
             name,
             type_name,
-            offset: field.single_inheritance_offset,
+            offset: field.offset,
         });
 
         Ok(acc)
@@ -228,14 +220,14 @@ fn read_enum_binding(
         "found enum: {} at {:#X} (alignment: {}) (members count: {})",
         name,
         binding_ptr.to_umem(),
-        binding.align_of,
-        binding.size,
+        binding.alignment,
+        binding.enumerator_count,
     );
 
     Ok(Enum {
         name,
-        alignment: binding.align_of,
-        size: binding.enumerators_count,
+        alignment: binding.alignment,
+        size: binding.enumerator_count as i16,
         members,
     })
 }
@@ -248,7 +240,7 @@ fn read_enum_binding_members(
         return Ok(Vec::new());
     }
 
-    (0..binding.enumerators_count).try_fold(Vec::new(), |mut acc, i| {
+    (0..binding.enumerator_count).try_fold(Vec::new(), |mut acc, i| {
         let enumerator = binding.enumerators.at(i as _).read(process)?;
         let name = enumerator.name.read_string(process)?.to_string();
 
@@ -265,18 +257,40 @@ fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Sch
     let module = process.module_by_name("libschemasystem.so")?;
     let buf = process.read_raw(module.base, module.size as _)?;
 
-    let schema_system_addr = signature!("48 8D 05 ? ? ? ? 49 89 04 24")
+    let list_addr = signature!("48 8B 1D ? ? ? ? 48 85 DB 74 ? 49 89 FC")
         .scan(&buf)
         .and_then(|result| process.read_addr64_rip(module.base + result).ok())
-        .ok_or(Error::Other("unable to read schema system address"))?;
+        .ok_or(Error::Other("unable to find interface list address in libschemasystem.so"))?;
 
-    let schema_system: SchemaSystem = process.read(schema_system_addr)?;
-
-    if schema_system.num_registrations == 0 {
-        return Err(Error::Other("no schema system registrations found"));
+    let mut cur_reg = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
+    while !cur_reg.is_null() {
+        let reg = cur_reg.read(process)?;
+        let name = reg.name.read_string(process)?;
+        if name == "SchemaSystem_001" {
+            let code = process.read_raw(reg.create_fn.address(), 7)?;
+            if code.starts_with(&[0x48, 0x8B, 0x05]) || code.starts_with(&[0x48, 0x8D, 0x05]) {
+                let disp = i32::from_le_bytes(code[3..7].try_into().unwrap());
+                let instance_addr = Address::from(reg.create_fn.address().to_umem() + 7 + disp as i64 as u64);
+                if code.starts_with(&[0x48, 0x8D, 0x05]) {
+                    let schema_system: SchemaSystem = process.read(instance_addr)?;
+                    if schema_system.registration_count > 0 {
+                        return Ok(schema_system);
+                    }
+                } else {
+                    let ptr = process.read::<Pointer64<SchemaSystem>>(instance_addr)?;
+                    if !ptr.is_null() {
+                        let schema_system = ptr.read(process)?;
+                        if schema_system.registration_count > 0 {
+                            return Ok(schema_system);
+                        }
+                    }
+                }
+            }
+        }
+        cur_reg = reg.next;
     }
 
-    Ok(schema_system)
+    Err(Error::Other("unable to read schema system address via interfaces"))
 }
 
 fn read_type_scopes(
@@ -295,14 +309,14 @@ fn read_type_scopes(
 
         let classes: Vec<_> = type_scope
             .class_bindings
-            .elements(process)?
+            .elements(process)
             .iter()
             .filter_map(|ptr| read_class_binding(process, *ptr).ok())
             .collect();
 
         let enums: Vec<_> = type_scope
             .enum_bindings
-            .elements(process)?
+            .elements(process)
             .iter()
             .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
             .collect();

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 #pragma once
 
@@ -29,7 +29,7 @@ namespace cs2_dumper {
                 REFERENCE_PASSTHROUGH = 0xC
             };
             // Alignment: 4
-            // Members count: 16
+            // Members count: 17
             enum class EStyleNodeType : uint32_t {
                 ROOT = 0x0,
                 EXPRESSION = 0x1,
@@ -46,7 +46,8 @@ namespace cs2_dumper {
                 REFERENCE_CONTENT = 0xC,
                 REFERENCE_COMPILED = 0xD,
                 REFERENCE_PASSTHROUGH = 0xE,
-                COMPILER_CONDITIONAL = 0xF
+                REFERENCE_PANEL = 0xF,
+                COMPILER_CONDITIONAL = 0x10
             };
         }
     }

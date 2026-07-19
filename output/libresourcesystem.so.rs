@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-01-29 12:23:34.043004291 UTC
+// 2026-07-09 21:54:28.505310310 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -35,14 +35,13 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCNmIKRig {
+            pub mod InfoForResourceTypeCResponseRulesList {
             }
             // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCResponseRulesList {
+            // Fields count: 2
+            pub mod AABBWS_t {
+                pub const m_vMinBounds: usize = 0x0; // VectorWS
+                pub const m_vMaxBounds: usize = 0xC; // VectorWS
             }
             // Parent: None
             // Fields count: 0
@@ -57,13 +56,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCMorphSetData {
-            }
-            // Parent: None
-            // Fields count: 0
-            //
-            // Metadata:
-            // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCChoreoSceneFileData {
             }
             // Parent: None
             // Fields count: 0
@@ -156,14 +148,6 @@ pub mod cs2_dumper {
             pub mod InfoForResourceTypeCVoxelVisibility {
             }
             // Parent: None
-            // Fields count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod TestResource_t {
-                pub const m_name: usize = 0x0; // CUtlString
-            }
-            // Parent: None
             // Fields count: 0
             //
             // Metadata:
@@ -251,6 +235,13 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCChoreoSceneResource {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
             pub mod InfoForResourceTypeCNmSkeleton {
             }
             // Parent: None
@@ -258,7 +249,7 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeTestResource_t {
+            pub mod InfoForResourceTypeCTestResourceData {
             }
             // Parent: None
             // Fields count: 0
@@ -300,7 +291,7 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MResourceTypeForInfoType
-            pub mod InfoForResourceTypeCNmGraphVariation {
+            pub mod InfoForResourceTypeCSurfaceGraph {
             }
             // Parent: None
             // Fields count: 0
@@ -382,6 +373,13 @@ pub mod cs2_dumper {
             // Metadata:
             // MResourceTypeForInfoType
             pub mod InfoForResourceTypeIPulseGraphDef {
+            }
+            // Parent: None
+            // Fields count: 0
+            //
+            // Metadata:
+            // MResourceTypeForInfoType
+            pub mod InfoForResourceTypeCVDataItemDefs {
             }
             // Parent: None
             // Fields count: 5

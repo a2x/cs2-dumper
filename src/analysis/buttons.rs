@@ -7,6 +7,7 @@ use serde::{Deserialize, Serialize};
 use skidscan_macros::signature;
 
 use crate::error::{Error, Result};
+use crate::mem::{MemoryViewExt, PointerExt};
 use crate::source2::KeyButton;
 
 #[derive(Deserialize, Serialize)]

@@ -1,6 +1,14 @@
 {
   "libresourcesystem.so": {
     "classes": {
+      "AABBWS_t": {
+        "fields": {
+          "m_vMaxBounds": 12,
+          "m_vMinBounds": 0
+        },
+        "metadata": [],
+        "parent": null
+      },
       "AABB_t": {
         "fields": {
           "m_vMaxBounds": 12,
@@ -125,7 +133,7 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCChoreoSceneFileData": {
+      "InfoForResourceTypeCChoreoSceneResource": {
         "fields": {},
         "metadata": [
           {
@@ -245,26 +253,6 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCNmGraphVariation": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "InfoForResourceTypeCNmIKRig": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "InfoForResourceTypeCNmSkeleton": {
         "fields": {},
         "metadata": [
@@ -365,6 +353,26 @@
         ],
         "parent": null
       },
+      "InfoForResourceTypeCSurfaceGraph": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCTestResourceData": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "InfoForResourceTypeCTextureBase": {
         "fields": {},
         "metadata": [
@@ -376,6 +384,16 @@
         "parent": null
       },
       "InfoForResourceTypeCTypeScriptResource": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCVDataItemDefs": {
         "fields": {},
         "metadata": [
           {
@@ -545,16 +563,6 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeTestResource_t": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "InfoForResourceTypeWorld_t": {
         "fields": {},
         "metadata": [
@@ -584,18 +592,6 @@
           "m_nPackedMin": 0
         },
         "metadata": [],
-        "parent": null
-      },
-      "TestResource_t": {
-        "fields": {
-          "m_name": 0
-        },
-        "metadata": [
-          {
-            "name": "MGetKV3ClassDefaults",
-            "type": "Unknown"
-          }
-        ],
         "parent": null
       },
       "VariableInfo_t": {
