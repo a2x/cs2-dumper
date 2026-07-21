@@ -4,15 +4,15 @@
     "AnimationSystem_001": 8584688
   },
   "client.dll": {
-    "ClientBugBugServic001_Client": 34158480,
-    "ClientToolsInfo_001": 34158432,
-    "EmptyWorldService001_Client": 34010240,
-    "GameClientExports001": 34145280,
-    "LegacyGameUI001": 34225408,
-    "Source2Client002": 37349072,
-    "Source2ClientConfig001": 36747776,
-    "Source2ClientPrediction001": 37372224,
-    "Source2ClientUI001": 34218512
+    "ClientBugBugServic001_Client": 34162576,
+    "ClientToolsInfo_001": 34162528,
+    "EmptyWorldService001_Client": 34014336,
+    "GameClientExports001": 34149376,
+    "LegacyGameUI001": 34229456,
+    "Source2Client002": 37353168,
+    "Source2ClientConfig001": 36751872,
+    "Source2ClientPrediction001": 37376320,
+    "Source2ClientUI001": 34222576
   },
   "engine2.dll": {
     "BenchmarkService001": 6378272,
@@ -162,9 +162,6 @@
   },
   "v8system.dll": {
     "Source2V8System001": 202608
-  },
-  "vconcomm.dll": {
-    "VConComm001": 243504
   },
   "vphysics2.dll": {
     "VPhysics2_Interface_001": 4361872
