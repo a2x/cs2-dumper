@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-21 00:33:36.983799300 UTC
+// 2026-07-29 01:10:27.696078300 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -3042,7 +3042,7 @@ pub mod cs2_dumper {
                 VR_HAND_HAPTIC_PULSE_STRONG = 0x2
             }
             // Alignment: 4
-            // Member count: 147
+            // Member count: 133
             #[repr(u32)]
             pub enum EGCItemMsg {
                 k_EMsgGCBase = 0x3E8,
@@ -3130,20 +3130,6 @@ pub mod cs2_dumper {
                 k_EMsgGCCasketItemAdd = 0x444,
                 k_EMsgGCCasketItemExtract = 0x445,
                 k_EMsgGCCasketItemLoadContents = 0x446,
-                k_EMsgGCTradingBase = 0x5DC,
-                k_EMsgGCTrading_InitiateTradeRequest = 0x5DD,
-                k_EMsgGCTrading_InitiateTradeResponse = 0x5DE,
-                k_EMsgGCTrading_StartSession = 0x5DF,
-                k_EMsgGCTrading_SetItem = 0x5E0,
-                k_EMsgGCTrading_RemoveItem = 0x5E1,
-                k_EMsgGCTrading_UpdateTradeInfo = 0x5E2,
-                k_EMsgGCTrading_SetReadiness = 0x5E3,
-                k_EMsgGCTrading_ReadinessResponse = 0x5E4,
-                k_EMsgGCTrading_SessionClosed = 0x5E5,
-                k_EMsgGCTrading_CancelSession = 0x5E6,
-                k_EMsgGCTrading_TradeChatMsg = 0x5E7,
-                k_EMsgGCTrading_ConfirmOffer = 0x5E8,
-                k_EMsgGCTrading_TradeTypingChatMsg = 0x5E9,
                 k_EMsgGCServerBrowser_FavoriteServer = 0x641,
                 k_EMsgGCServerBrowser_BlacklistServer = 0x642,
                 k_EMsgGCServerRentalsBase = 0x6A4,
