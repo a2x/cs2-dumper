@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-29 01:10:27.696078300 UTC
+// 2026-08-04 01:46:09.286657900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -5660,7 +5660,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_WaitComplete = 0xE0; // CPulse_ResumePoint
         }
         // Parent: CCSPlayerPawnBase
-        // Field count: 104
+        // Field count: 105
         public static class CCSPlayerPawn {
             public const nint m_pBulletServices = 0xD38; // CCSPlayer_BulletServices*
             public const nint m_pHostageServices = 0xD40; // CCSPlayer_HostageServices*
@@ -5759,13 +5759,14 @@ namespace CS2Dumper.Schemas {
             public const nint m_bGrenadeParametersStashed = 0x1324; // bool
             public const nint m_angStashedShootAngles = 0x1328; // QAngle
             public const nint m_vecStashedGrenadeThrowPosition = 0x1334; // VectorWS
-            public const nint m_vecStashedVelocity = 0x1340; // Vector
-            public const nint m_bCommittingSuicideOnTeamChange = 0x1358; // bool
-            public const nint m_wasNotKilledNaturally = 0x1359; // bool
-            public const nint m_fImmuneToGunGameDamageTime = 0x135C; // GameTime_t
-            public const nint m_bGunGameImmunity = 0x1360; // bool
-            public const nint m_fMolotovDamageTime = 0x1364; // float32
-            public const nint m_angEyeAngles = 0x1368; // QAngle
+            public const nint m_vecStashedGrenadeThrowPawnCenter = 0x1340; // VectorWS
+            public const nint m_vecStashedVelocity = 0x134C; // Vector
+            public const nint m_bCommittingSuicideOnTeamChange = 0x1360; // bool
+            public const nint m_wasNotKilledNaturally = 0x1361; // bool
+            public const nint m_fImmuneToGunGameDamageTime = 0x1364; // GameTime_t
+            public const nint m_bGunGameImmunity = 0x1368; // bool
+            public const nint m_fMolotovDamageTime = 0x136C; // float32
+            public const nint m_angEyeAngles = 0x1370; // QAngle
         }
         // Parent: CBaseEntity
         // Field count: 22
