@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-04 01:46:09.286657900 UTC
+// 2026-08-11 02:15:46.596267700 UTC
 
 #pragma once
 
@@ -15,15 +15,15 @@ namespace cs2_dumper {
         }
         // Module: client.dll
         namespace client_dll {
-            constexpr std::ptrdiff_t ClientBugBugServic001_Client = 0x2094790;
-            constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x2094760;
-            constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x2070480;
-            constexpr std::ptrdiff_t GameClientExports001 = 0x2091400;
-            constexpr std::ptrdiff_t LegacyGameUI001 = 0x20A4CF0;
-            constexpr std::ptrdiff_t Source2Client002 = 0x239F6D0;
-            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x230CA00;
-            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x23A5140;
-            constexpr std::ptrdiff_t Source2ClientUI001 = 0x20A3210;
+            constexpr std::ptrdiff_t ClientBugBugServic001_Client = 0x2098810;
+            constexpr std::ptrdiff_t ClientToolsInfo_001 = 0x20987E0;
+            constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x20744E0;
+            constexpr std::ptrdiff_t GameClientExports001 = 0x2095480;
+            constexpr std::ptrdiff_t LegacyGameUI001 = 0x20A8D60;
+            constexpr std::ptrdiff_t Source2Client002 = 0x23A38D0;
+            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x2310C30;
+            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x23A9020;
+            constexpr std::ptrdiff_t Source2ClientUI001 = 0x20A7280;
         }
         // Module: engine2.dll
         namespace engine2_dll {
@@ -166,16 +166,16 @@ namespace cs2_dumper {
         }
         // Module: server.dll
         namespace server_dll {
-            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1C3CF10;
-            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x1BECB00;
-            constexpr std::ptrdiff_t NavGameTest001 = 0x1CAFFF0;
-            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x1C768A8;
-            constexpr std::ptrdiff_t Source2GameClients001 = 0x1C75A90;
-            constexpr std::ptrdiff_t Source2GameDirector001 = 0x1DF71C0;
-            constexpr std::ptrdiff_t Source2GameEntities001 = 0x1C76050;
-            constexpr std::ptrdiff_t Source2Server001 = 0x1C75EA0;
-            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x1F60528;
-            constexpr std::ptrdiff_t customnavsystem001 = 0x1BD0F58;
+            constexpr std::ptrdiff_t EmptyWorldService001_Server = 0x1C3DFA0;
+            constexpr std::ptrdiff_t EntitySubclassUtilsV001 = 0x1BEDB00;
+            constexpr std::ptrdiff_t NavGameTest001 = 0x1CB10E0;
+            constexpr std::ptrdiff_t ServerToolsInfo_001 = 0x1C779A8;
+            constexpr std::ptrdiff_t Source2GameClients001 = 0x1C76B90;
+            constexpr std::ptrdiff_t Source2GameDirector001 = 0x1DF8380;
+            constexpr std::ptrdiff_t Source2GameEntities001 = 0x1C77150;
+            constexpr std::ptrdiff_t Source2Server001 = 0x1C76FA0;
+            constexpr std::ptrdiff_t Source2ServerConfig001 = 0x1F61528;
+            constexpr std::ptrdiff_t customnavsystem001 = 0x1BD1F48;
         }
         // Module: soundsystem.dll
         namespace soundsystem_dll {
@@ -199,6 +199,10 @@ namespace cs2_dumper {
         // Module: v8system.dll
         namespace v8system_dll {
             constexpr std::ptrdiff_t Source2V8System001 = 0x31770;
+        }
+        // Module: vconcomm.dll
+        namespace vconcomm_dll {
+            constexpr std::ptrdiff_t VConComm001 = 0x3B730;
         }
         // Module: vphysics2.dll
         namespace vphysics2_dll {
