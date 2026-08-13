@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-11 02:15:46.596267700 UTC
+// 2026-08-13 10:16:20.233550200 UTC
 
 pub const cs2_dumper = struct {
     pub const offsets = struct {
@@ -12,21 +12,21 @@ pub const cs2_dumper = struct {
             pub const dwGameRules: usize = 0x23A8BD8;
             pub const dwGlobalVars: usize = 0x2094D38;
             pub const dwGlowManager: usize = 0x23A5908;
-            pub const dwLocalPlayerController: usize = 0x2383DA0;
+            pub const dwLocalPlayerController: usize = 0x2383DB0;
             pub const dwLocalPlayerPawn: usize = 0x23A9118;
-            pub const dwPlantedC4: usize = 0x2373888;
+            pub const dwPlantedC4: usize = 0x2373898;
             pub const dwPrediction: usize = 0x23A9020;
             pub const dwSensitivity: usize = 0x23A6428;
             pub const dwSensitivity_sensitivity: usize = 0x58;
             pub const dwViewAngles: usize = 0x23BF1A8;
             pub const dwViewMatrix: usize = 0x23AE550;
             pub const dwViewRender: usize = 0x23AE5A8;
-            pub const dwWeaponC4: usize = 0x2321D90;
+            pub const dwWeaponC4: usize = 0x2321DA0;
         };
         // Module: engine2.dll
         pub const engine2_dll = struct {
             pub const dwBuildNumber: usize = 0x60F594;
-            pub const dwNetworkGameClient: usize = 0x90D4B0;
+            pub const dwNetworkGameClient: usize = 0x90D490;
             pub const dwNetworkGameClient_clientTickCount: usize = 0x378;
             pub const dwNetworkGameClient_deltaTick: usize = 0x24C;
             pub const dwNetworkGameClient_isBackgroundMap: usize = 0x2C141F;
@@ -34,8 +34,8 @@ pub const cs2_dumper = struct {
             pub const dwNetworkGameClient_maxClients: usize = 0x240;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x24C;
             pub const dwNetworkGameClient_signOnState: usize = 0x230;
-            pub const dwWindowHeight: usize = 0x9118D4;
-            pub const dwWindowWidth: usize = 0x9118D0;
+            pub const dwWindowHeight: usize = 0x9118BC;
+            pub const dwWindowWidth: usize = 0x9118B8;
         };
         // Module: inputsystem.dll
         pub const inputsystem_dll = struct {
