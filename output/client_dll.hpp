@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-20 07:13:18.517249800 UTC
+// 2026-08-25 07:57:38.316092900 UTC
 
 #pragma once
 
@@ -9,8 +9,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: client.dll
-        // Class count: 563
-        // Enum count: 14
+        // Class count: 567
+        // Enum count: 15
         namespace client_dll {
             // Alignment: 4
             // Member count: 5
@@ -2301,6 +2301,16 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_Item_Healthshot {
             }
+            // Parent: C_BaseEntity
+            // Field count: 6
+            namespace CCSCustomHudLayout {
+                constexpr std::ptrdiff_t m_strLayout = 0x608; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_vecPlayerLayoutStates = 0x610; // C_UtlVectorEmbeddedNetworkVar<CCSCustomHudLayoutState>
+                constexpr std::ptrdiff_t m_globalLayoutState = 0x678; // CCSCustomHudLayoutState
+                constexpr std::ptrdiff_t m_vecPanelIds = 0x788; // C_NetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecClassNames = 0x7A0; // C_NetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecDialogVariableNames = 0x7B8; // C_NetworkUtlVectorBase<CUtlString>
+            }
             // Parent: None
             // Field count: 3
             namespace CEntityInstance {
@@ -2854,6 +2864,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flThrowVelocity = 0x860; // float32
                 constexpr std::ptrdiff_t m_vSmokeColor = 0x864; // Vector
                 constexpr std::ptrdiff_t m_szAnimClass = 0x870; // CGlobalSymbol
+            }
+            // Parent: None
+            // Field count: 0
+            namespace CCSCustomHudLayout_API {
             }
             // Parent: None
             // Field count: 6
@@ -4931,6 +4945,14 @@ namespace cs2_dumper {
             // Field count: 0
             namespace C_CSGO_MapPreviewCameraPath_API {
             }
+            // Parent: None
+            // Field count: 4
+            namespace CCSCustomHudLayoutState {
+                constexpr std::ptrdiff_t m_bInputCaptureEnabled = 0x30; // bool
+                constexpr std::ptrdiff_t m_vecHasClasses = 0x38; // C_NetworkUtlVectorBase<HUDPanelHasClass_t>
+                constexpr std::ptrdiff_t m_vecDialogVariableStrings = 0x50; // C_NetworkUtlVectorBase<HUDPanelDialogVariableString_t>
+                constexpr std::ptrdiff_t m_playerSlot = 0x108; // CPlayerSlot
+            }
             // Parent: C_CSGO_TeamIntroCharacterPosition
             // Field count: 0
             namespace CCSGO_WingmanIntroCharacterPosition {
@@ -5101,6 +5123,13 @@ namespace cs2_dumper {
             // Parent: C_BaseModelEntity
             // Field count: 0
             namespace C_TriggerVolume {
+            }
+            // Parent: None
+            // Field count: 3
+            namespace CCSPlayerCamera {
+                constexpr std::ptrdiff_t m_hPawn = 0x600; // CHandle<C_CSPlayerPawnBase>
+                constexpr std::ptrdiff_t m_bEnabled = 0x604; // bool
+                constexpr std::ptrdiff_t m_bIsControllingAngles = 0x605; // bool
             }
             // Parent: None
             // Field count: 1

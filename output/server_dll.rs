@@ -1,13 +1,13 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-20 07:13:18.517249800 UTC
+// 2026-08-25 07:57:38.316092900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: server.dll
-        // Class count: 990
-        // Enum count: 237
+        // Class count: 996
+        // Enum count: 238
         pub mod server_dll {
             // Alignment: 4
             // Member count: 4
@@ -2265,7 +2265,7 @@ pub mod cs2_dumper {
                 eAllButCannotClear = 0xFFFFFFFE
             }
             // Alignment: 4
-            // Member count: 78
+            // Member count: 79
             #[repr(u32)]
             pub enum ECstrike15UserMessages {
                 CS_UM_VGUIMenu = 0x12D,
@@ -2345,7 +2345,8 @@ pub mod cs2_dumper {
                 CS_UM_DamagePrediction = 0x182,
                 CS_UM_RecurringMissionSchema = 0x183,
                 CS_UM_SendPlayerLoadout = 0x184,
-                CS_UM_WeaponMagDrop = 0x185
+                CS_UM_WeaponMagDrop = 0x185,
+                CS_UM_CustomHudClicked = 0x186
             }
             // Alignment: 4
             // Member count: 6
@@ -2491,6 +2492,14 @@ pub mod cs2_dumper {
                 MOVE_MOUNT_LOW = 0x1,
                 MOVE_MOUNT_HIGH = 0x2,
                 MOVE_MOUNT_MAXCOUNT = 0x3
+            }
+            // Alignment: 4
+            // Member count: 3
+            #[repr(u32)]
+            pub enum EHudPanelClassStatus_t {
+                k_eHudPanelClassStatus_Undefined = u32::MAX,
+                k_eHudPanelClassStatus_DoesNotHaveClass = 0x0,
+                k_eHudPanelClassStatus_HasClass = 0x1
             }
             // Alignment: 4
             // Member count: 4
@@ -6572,6 +6581,16 @@ pub mod cs2_dumper {
                 pub const m_flNextSuckTime: usize = 0x9C4; // GameTime_t
                 pub const m_iMaxObjectsAttached: usize = 0x9C8; // int32
             }
+            // Parent: CBaseEntity
+            // Field count: 6
+            pub mod CCSCustomHudLayout {
+                pub const m_strLayout: usize = 0x4A8; // CUtlSymbolLarge
+                pub const m_vecPlayerLayoutStates: usize = 0x4B0; // CUtlVectorEmbeddedNetworkVar<CCSCustomHudLayoutState>
+                pub const m_globalLayoutState: usize = 0x518; // CCSCustomHudLayoutState
+                pub const m_vecPanelIds: usize = 0x6B8; // CNetworkUtlVectorBase<CUtlString>
+                pub const m_vecClassNames: usize = 0x6D0; // CNetworkUtlVectorBase<CUtlString>
+                pub const m_vecDialogVariableNames: usize = 0x6E8; // CNetworkUtlVectorBase<CUtlString>
+            }
             // Parent: None
             // Field count: 3
             pub mod CEntityInstance {
@@ -7206,6 +7225,10 @@ pub mod cs2_dumper {
                 pub const m_attachedObject: usize = 0x4C0; // CHandle<CBaseEntity>
                 pub const m_wasRestored: usize = 0x4C4; // bool
                 pub const m_integrator: usize = 0x4C8; // CConstantForceController
+            }
+            // Parent: None
+            // Field count: 0
+            pub mod CCSCustomHudLayout_API {
             }
             // Parent: None
             // Field count: 6
@@ -10826,6 +10849,14 @@ pub mod cs2_dumper {
             pub mod CScriptTriggerHurt {
                 pub const m_vExtent: usize = 0x970; // Vector
             }
+            // Parent: None
+            // Field count: 4
+            pub mod CCSCustomHudLayoutState {
+                pub const m_bInputCaptureEnabled: usize = 0x30; // bool
+                pub const m_vecHasClasses: usize = 0x38; // CNetworkUtlVectorBase<HUDPanelHasClass_t>
+                pub const m_vecDialogVariableStrings: usize = 0x98; // CNetworkUtlVectorBase<HUDPanelDialogVariableString_t>
+                pub const m_playerSlot: usize = 0x198; // CPlayerSlot
+            }
             // Parent: CCSGO_TeamIntroCharacterPosition
             // Field count: 0
             pub mod CCSGO_WingmanIntroCharacterPosition {
@@ -11199,6 +11230,13 @@ pub mod cs2_dumper {
                 pub const m_operatorNameChar: usize = 0xB31; // char[256]
                 pub const m_VecNormPos: usize = 0xC34; // Vector
                 pub const m_flNormCenterSize: usize = 0xC40; // float32
+            }
+            // Parent: None
+            // Field count: 3
+            pub mod CCSPlayerCamera {
+                pub const m_hPawn: usize = 0x4A8; // CHandle<CCSPlayerPawnBase>
+                pub const m_bEnabled: usize = 0x4AC; // bool
+                pub const m_bIsControllingAngles: usize = 0x4AD; // bool
             }
             // Parent: None
             // Field count: 1
@@ -12839,6 +12877,16 @@ pub mod cs2_dumper {
                 pub const m_flFarBlurryDistance: usize = 0xC; // float32
             }
             // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod HUDPanelHasClass_t {
+                pub const m_nPanelIdIndex: usize = 0x0; // uint16
+                pub const m_nClassNameIndex: usize = 0x2; // uint16
+                pub const m_eClassStatus: usize = 0x4; // EHudPanelClassStatus_t
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -12858,6 +12906,14 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 0
             pub mod CVectorMovingAverage {
+            }
+            // Parent: None
+            // Field count: 4
+            pub mod HUDPanelDialogVariableString_t {
+                pub const m_nPanelIdIndex: usize = 0x8; // uint16
+                pub const m_nDialogVariableIndex: usize = 0xA; // uint16
+                pub const m_sValue: usize = 0x10; // CUtlString
+                pub const m_bIsSet: usize = 0x18; // bool
             }
             // Parent: None
             // Field count: 4

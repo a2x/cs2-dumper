@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-20 07:13:18.517249800 UTC
+// 2026-08-25 07:57:38.316092900 UTC
 
 #pragma once
 
@@ -9,8 +9,8 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: server.dll
-        // Class count: 990
-        // Enum count: 237
+        // Class count: 996
+        // Enum count: 238
         namespace server_dll {
             // Alignment: 4
             // Member count: 4
@@ -2143,7 +2143,7 @@ namespace cs2_dumper {
                 eAllButCannotClear = 0xFFFFFFFF
             };
             // Alignment: 4
-            // Member count: 78
+            // Member count: 79
             enum class ECstrike15UserMessages : uint32_t {
                 CS_UM_VGUIMenu = 0x12D,
                 CS_UM_Geiger = 0x12E,
@@ -2222,7 +2222,8 @@ namespace cs2_dumper {
                 CS_UM_DamagePrediction = 0x182,
                 CS_UM_RecurringMissionSchema = 0x183,
                 CS_UM_SendPlayerLoadout = 0x184,
-                CS_UM_WeaponMagDrop = 0x185
+                CS_UM_WeaponMagDrop = 0x185,
+                CS_UM_CustomHudClicked = 0x186
             };
             // Alignment: 4
             // Member count: 6
@@ -2353,6 +2354,13 @@ namespace cs2_dumper {
                 MOVE_MOUNT_LOW = 0x1,
                 MOVE_MOUNT_HIGH = 0x2,
                 MOVE_MOUNT_MAXCOUNT = 0x3
+            };
+            // Alignment: 4
+            // Member count: 3
+            enum class EHudPanelClassStatus_t : uint32_t {
+                k_eHudPanelClassStatus_Undefined = 0xFFFFFFFF,
+                k_eHudPanelClassStatus_DoesNotHaveClass = 0x0,
+                k_eHudPanelClassStatus_HasClass = 0x1
             };
             // Alignment: 4
             // Member count: 4
@@ -6372,6 +6380,16 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flNextSuckTime = 0x9C4; // GameTime_t
                 constexpr std::ptrdiff_t m_iMaxObjectsAttached = 0x9C8; // int32
             }
+            // Parent: CBaseEntity
+            // Field count: 6
+            namespace CCSCustomHudLayout {
+                constexpr std::ptrdiff_t m_strLayout = 0x4A8; // CUtlSymbolLarge
+                constexpr std::ptrdiff_t m_vecPlayerLayoutStates = 0x4B0; // CUtlVectorEmbeddedNetworkVar<CCSCustomHudLayoutState>
+                constexpr std::ptrdiff_t m_globalLayoutState = 0x518; // CCSCustomHudLayoutState
+                constexpr std::ptrdiff_t m_vecPanelIds = 0x6B8; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecClassNames = 0x6D0; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecDialogVariableNames = 0x6E8; // CNetworkUtlVectorBase<CUtlString>
+            }
             // Parent: None
             // Field count: 3
             namespace CEntityInstance {
@@ -7006,6 +7024,10 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_attachedObject = 0x4C0; // CHandle<CBaseEntity>
                 constexpr std::ptrdiff_t m_wasRestored = 0x4C4; // bool
                 constexpr std::ptrdiff_t m_integrator = 0x4C8; // CConstantForceController
+            }
+            // Parent: None
+            // Field count: 0
+            namespace CCSCustomHudLayout_API {
             }
             // Parent: None
             // Field count: 6
@@ -10626,6 +10648,14 @@ namespace cs2_dumper {
             namespace CScriptTriggerHurt {
                 constexpr std::ptrdiff_t m_vExtent = 0x970; // Vector
             }
+            // Parent: None
+            // Field count: 4
+            namespace CCSCustomHudLayoutState {
+                constexpr std::ptrdiff_t m_bInputCaptureEnabled = 0x30; // bool
+                constexpr std::ptrdiff_t m_vecHasClasses = 0x38; // CNetworkUtlVectorBase<HUDPanelHasClass_t>
+                constexpr std::ptrdiff_t m_vecDialogVariableStrings = 0x98; // CNetworkUtlVectorBase<HUDPanelDialogVariableString_t>
+                constexpr std::ptrdiff_t m_playerSlot = 0x198; // CPlayerSlot
+            }
             // Parent: CCSGO_TeamIntroCharacterPosition
             // Field count: 0
             namespace CCSGO_WingmanIntroCharacterPosition {
@@ -10999,6 +11029,13 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_operatorNameChar = 0xB31; // char[256]
                 constexpr std::ptrdiff_t m_VecNormPos = 0xC34; // Vector
                 constexpr std::ptrdiff_t m_flNormCenterSize = 0xC40; // float32
+            }
+            // Parent: None
+            // Field count: 3
+            namespace CCSPlayerCamera {
+                constexpr std::ptrdiff_t m_hPawn = 0x4A8; // CHandle<CCSPlayerPawnBase>
+                constexpr std::ptrdiff_t m_bEnabled = 0x4AC; // bool
+                constexpr std::ptrdiff_t m_bIsControllingAngles = 0x4AD; // bool
             }
             // Parent: None
             // Field count: 1
@@ -12639,6 +12676,16 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flFarBlurryDistance = 0xC; // float32
             }
             // Parent: None
+            // Field count: 3
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace HUDPanelHasClass_t {
+                constexpr std::ptrdiff_t m_nPanelIdIndex = 0x0; // uint16
+                constexpr std::ptrdiff_t m_nClassNameIndex = 0x2; // uint16
+                constexpr std::ptrdiff_t m_eClassStatus = 0x4; // EHudPanelClassStatus_t
+            }
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -12658,6 +12705,14 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 0
             namespace CVectorMovingAverage {
+            }
+            // Parent: None
+            // Field count: 4
+            namespace HUDPanelDialogVariableString_t {
+                constexpr std::ptrdiff_t m_nPanelIdIndex = 0x8; // uint16
+                constexpr std::ptrdiff_t m_nDialogVariableIndex = 0xA; // uint16
+                constexpr std::ptrdiff_t m_sValue = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_bIsSet = 0x18; // bool
             }
             // Parent: None
             // Field count: 4
