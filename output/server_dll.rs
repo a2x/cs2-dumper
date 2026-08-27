@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-25 07:57:38.316092900 UTC
+// 2026-08-27 09:58:45.371227900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -6587,9 +6587,9 @@ pub mod cs2_dumper {
                 pub const m_strLayout: usize = 0x4A8; // CUtlSymbolLarge
                 pub const m_vecPlayerLayoutStates: usize = 0x4B0; // CUtlVectorEmbeddedNetworkVar<CCSCustomHudLayoutState>
                 pub const m_globalLayoutState: usize = 0x518; // CCSCustomHudLayoutState
-                pub const m_vecPanelIds: usize = 0x6B8; // CNetworkUtlVectorBase<CUtlString>
-                pub const m_vecClassNames: usize = 0x6D0; // CNetworkUtlVectorBase<CUtlString>
-                pub const m_vecDialogVariableNames: usize = 0x6E8; // CNetworkUtlVectorBase<CUtlString>
+                pub const m_vecPanelIds: usize = 0x6B0; // CNetworkUtlVectorBase<CUtlString>
+                pub const m_vecClassNames: usize = 0x6C8; // CNetworkUtlVectorBase<CUtlString>
+                pub const m_vecDialogVariableNames: usize = 0x6E0; // CNetworkUtlVectorBase<CUtlString>
             }
             // Parent: None
             // Field count: 3
@@ -10852,10 +10852,10 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 4
             pub mod CCSCustomHudLayoutState {
-                pub const m_bInputCaptureEnabled: usize = 0x30; // bool
+                pub const m_playerSlot: usize = 0x30; // CPlayerSlot
+                pub const m_bInputCaptureEnabled: usize = 0x34; // bool
                 pub const m_vecHasClasses: usize = 0x38; // CNetworkUtlVectorBase<HUDPanelHasClass_t>
                 pub const m_vecDialogVariableStrings: usize = 0x98; // CNetworkUtlVectorBase<HUDPanelDialogVariableString_t>
-                pub const m_playerSlot: usize = 0x198; // CPlayerSlot
             }
             // Parent: CCSGO_TeamIntroCharacterPosition
             // Field count: 0

@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-25 07:57:38.316092900 UTC
+// 2026-08-27 09:58:45.371227900 UTC
 
 #pragma once
 
@@ -6386,9 +6386,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_strLayout = 0x4A8; // CUtlSymbolLarge
                 constexpr std::ptrdiff_t m_vecPlayerLayoutStates = 0x4B0; // CUtlVectorEmbeddedNetworkVar<CCSCustomHudLayoutState>
                 constexpr std::ptrdiff_t m_globalLayoutState = 0x518; // CCSCustomHudLayoutState
-                constexpr std::ptrdiff_t m_vecPanelIds = 0x6B8; // CNetworkUtlVectorBase<CUtlString>
-                constexpr std::ptrdiff_t m_vecClassNames = 0x6D0; // CNetworkUtlVectorBase<CUtlString>
-                constexpr std::ptrdiff_t m_vecDialogVariableNames = 0x6E8; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecPanelIds = 0x6B0; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecClassNames = 0x6C8; // CNetworkUtlVectorBase<CUtlString>
+                constexpr std::ptrdiff_t m_vecDialogVariableNames = 0x6E0; // CNetworkUtlVectorBase<CUtlString>
             }
             // Parent: None
             // Field count: 3
@@ -10651,10 +10651,10 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 4
             namespace CCSCustomHudLayoutState {
-                constexpr std::ptrdiff_t m_bInputCaptureEnabled = 0x30; // bool
+                constexpr std::ptrdiff_t m_playerSlot = 0x30; // CPlayerSlot
+                constexpr std::ptrdiff_t m_bInputCaptureEnabled = 0x34; // bool
                 constexpr std::ptrdiff_t m_vecHasClasses = 0x38; // CNetworkUtlVectorBase<HUDPanelHasClass_t>
                 constexpr std::ptrdiff_t m_vecDialogVariableStrings = 0x98; // CNetworkUtlVectorBase<HUDPanelDialogVariableString_t>
-                constexpr std::ptrdiff_t m_playerSlot = 0x198; // CPlayerSlot
             }
             // Parent: CCSGO_TeamIntroCharacterPosition
             // Field count: 0

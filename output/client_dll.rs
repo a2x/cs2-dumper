@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-25 07:57:38.316092900 UTC
+// 2026-08-27 09:58:45.371227900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -7,7 +7,7 @@ pub mod cs2_dumper {
     pub mod schemas {
         // Module: client.dll
         // Class count: 567
-        // Enum count: 15
+        // Enum count: 14
         pub mod client_dll {
             // Alignment: 4
             // Member count: 5
@@ -2318,9 +2318,9 @@ pub mod cs2_dumper {
                 pub const m_strLayout: usize = 0x608; // CUtlSymbolLarge
                 pub const m_vecPlayerLayoutStates: usize = 0x610; // C_UtlVectorEmbeddedNetworkVar<CCSCustomHudLayoutState>
                 pub const m_globalLayoutState: usize = 0x678; // CCSCustomHudLayoutState
-                pub const m_vecPanelIds: usize = 0x788; // C_NetworkUtlVectorBase<CUtlString>
-                pub const m_vecClassNames: usize = 0x7A0; // C_NetworkUtlVectorBase<CUtlString>
-                pub const m_vecDialogVariableNames: usize = 0x7B8; // C_NetworkUtlVectorBase<CUtlString>
+                pub const m_vecPanelIds: usize = 0x780; // C_NetworkUtlVectorBase<CUtlString>
+                pub const m_vecClassNames: usize = 0x798; // C_NetworkUtlVectorBase<CUtlString>
+                pub const m_vecDialogVariableNames: usize = 0x7B0; // C_NetworkUtlVectorBase<CUtlString>
             }
             // Parent: None
             // Field count: 3
@@ -4959,10 +4959,10 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 4
             pub mod CCSCustomHudLayoutState {
-                pub const m_bInputCaptureEnabled: usize = 0x30; // bool
+                pub const m_playerSlot: usize = 0x30; // CPlayerSlot
+                pub const m_bInputCaptureEnabled: usize = 0x34; // bool
                 pub const m_vecHasClasses: usize = 0x38; // C_NetworkUtlVectorBase<HUDPanelHasClass_t>
                 pub const m_vecDialogVariableStrings: usize = 0x50; // C_NetworkUtlVectorBase<HUDPanelDialogVariableString_t>
-                pub const m_playerSlot: usize = 0x108; // CPlayerSlot
             }
             // Parent: C_CSGO_TeamIntroCharacterPosition
             // Field count: 0
