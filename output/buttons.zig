@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-27 09:58:45.371227900 UTC
+// 2026-08-29 09:27:12.680043800 UTC
 
 pub const cs2_dumper = struct {
     // Module: client.dll
@@ -11,14 +11,14 @@ pub const cs2_dumper = struct {
         pub const forward: usize = 0x20B3B30;
         pub const jump: usize = 0x20B3E00;
         pub const left: usize = 0x20B3C50;
-        pub const lookatweapon: usize = 0x23DBBA0;
+        pub const lookatweapon: usize = 0x23DBB90;
         pub const reload: usize = 0x20B3860;
         pub const right: usize = 0x20B3CE0;
-        pub const showscores: usize = 0x23DBA80;
+        pub const showscores: usize = 0x23DBA70;
         pub const sprint: usize = 0x20B37D0;
         pub const turnleft: usize = 0x20B3A10;
         pub const turnright: usize = 0x20B3AA0;
         pub const use: usize = 0x20B3D70;
-        pub const zoom: usize = 0x23DBB10;
+        pub const zoom: usize = 0x23DBB00;
     };
 };

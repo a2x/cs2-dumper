@@ -10,9 +10,9 @@
     "GameClientExports001": 34274672,
     "LegacyGameUI001": 34354800,
     "Source2Client002": 37489184,
-    "Source2ClientConfig001": 36902656,
+    "Source2ClientConfig001": 36902224,
     "Source2ClientPrediction001": 37511536,
-    "Source2ClientUI001": 34347920
+    "Source2ClientUI001": 34347904
   },
   "engine2.dll": {
     "BenchmarkService001": 6378272,
