@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-08-27 09:58:45.371227900 UTC
+// 2026-08-29 09:27:12.680043800 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -7,9 +7,9 @@ pub mod cs2_dumper {
     pub mod offsets {
         // Module: client.dll
         pub mod client_dll {
-            pub const dwCSGOInput: usize = 0x23DBC80;
-            pub const dwEntityList: usize = 0x2571230;
-            pub const dwGameEntitySystem: usize = 0x2571230;
+            pub const dwCSGOInput: usize = 0x23DBC70;
+            pub const dwEntityList: usize = 0x2571220;
+            pub const dwGameEntitySystem: usize = 0x2571220;
             pub const dwGameEntitySystem_highestEntityIndex: usize = 0x2090;
             pub const dwGameRules: usize = 0x23C5D28;
             pub const dwGlobalVars: usize = 0x20AF5F0;
@@ -20,7 +20,7 @@ pub mod cs2_dumper {
             pub const dwPrediction: usize = 0x23C6170;
             pub const dwSensitivity: usize = 0x23C3578;
             pub const dwSensitivity_sensitivity: usize = 0x58;
-            pub const dwViewAngles: usize = 0x23DC308;
+            pub const dwViewAngles: usize = 0x23DC2F8;
             pub const dwViewMatrix: usize = 0x23CB830;
             pub const dwViewRender: usize = 0x23CB898;
             pub const dwWeaponC4: usize = 0x233EF10;
@@ -36,8 +36,8 @@ pub mod cs2_dumper {
             pub const dwNetworkGameClient_maxClients: usize = 0x240;
             pub const dwNetworkGameClient_serverTickCount: usize = 0x24C;
             pub const dwNetworkGameClient_signOnState: usize = 0x230;
-            pub const dwWindowHeight: usize = 0x9118DC;
-            pub const dwWindowWidth: usize = 0x9118D8;
+            pub const dwWindowHeight: usize = 0x9118D4;
+            pub const dwWindowWidth: usize = 0x9118D0;
         }
         // Module: inputsystem.dll
         pub mod inputsystem_dll {
