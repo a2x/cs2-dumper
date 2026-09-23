@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-10 12:36:27.791150900 UTC
+// 2026-09-22 23:58:44.180709200 UTC
 
 #pragma once
 
@@ -9,7 +9,7 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: pulse_system.dll
-        // Class count: 104
+        // Class count: 95
         // Enum count: 8
         namespace pulse_system_dll {
             // Alignment: 4
@@ -89,6 +89,15 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nDesiredKillPriority = 0x12C; // PulseCursorCancelPriority_t
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            namespace CPulseCell_RaceCursors {
+                constexpr std::ptrdiff_t m_Outflows = 0xD8; // CUtlVector<CPulse_OutflowConnection>
+                constexpr std::ptrdiff_t m_OnFinished = 0xF0; // CPulse_ResumePoint
+            }
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -131,13 +140,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OutflowList = 0x50; // PulseSelectorOutflowList_t
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseTestFuncs_LibraryA {
-            }
-            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -147,7 +149,7 @@ namespace cs2_dumper {
             // MPropertyDescription
             namespace CPulseCell_WaitForObservable {
                 constexpr std::ptrdiff_t m_Condition = 0xD8; // CPulseObservableExpression<bool>
-                constexpr std::ptrdiff_t m_OnTrue = 0x150; // CPulse_ResumePoint
+                constexpr std::ptrdiff_t m_OnTrue = 0x168; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -158,7 +160,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OutflowRegisterMap = 0x18; // PulseRegisterMap_t
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -170,13 +172,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Chunks = 0x50; // CUtlVector<CPulse_Chunk*>
                 constexpr std::ptrdiff_t m_Cells = 0x68; // CUtlVector<CPulseCell_Base*>
                 constexpr std::ptrdiff_t m_Vars = 0x80; // CUtlVector<CPulse_Variable>
-                constexpr std::ptrdiff_t m_PublicOutputs = 0x98; // CUtlVector<CPulse_PublicOutput>
-                constexpr std::ptrdiff_t m_InvokeBindings = 0xB0; // CUtlVector<CPulse_InvokeBinding*>
-                constexpr std::ptrdiff_t m_CallInfos = 0xC8; // CUtlVector<CPulse_CallInfo*>
-                constexpr std::ptrdiff_t m_Constants = 0xE0; // CUtlVector<CPulse_Constant>
-                constexpr std::ptrdiff_t m_DomainValues = 0xF8; // CUtlVector<CPulse_DomainValue>
-                constexpr std::ptrdiff_t m_BlackboardReferences = 0x110; // CUtlVector<CPulse_BlackboardReference>
-                constexpr std::ptrdiff_t m_OutputConnections = 0x128; // CUtlVector<CPulse_OutputConnection*>
+                constexpr std::ptrdiff_t m_TempVarBanks = 0x98; // CUtlVector<CPulse_TempVarBankDefinition*>
+                constexpr std::ptrdiff_t m_PublicOutputs = 0xB0; // CUtlVector<CPulse_PublicOutput>
+                constexpr std::ptrdiff_t m_InvokeBindings = 0xC8; // CUtlVector<CPulse_InvokeBinding*>
+                constexpr std::ptrdiff_t m_CallInfos = 0xE0; // CUtlVector<CPulse_CallInfo*>
+                constexpr std::ptrdiff_t m_Constants = 0xF8; // CUtlVector<CPulse_Constant>
+                constexpr std::ptrdiff_t m_DomainValues = 0x110; // CUtlVector<CPulse_DomainValue>
+                constexpr std::ptrdiff_t m_BlackboardReferences = 0x128; // CUtlVector<CPulse_BlackboardReference>
+                constexpr std::ptrdiff_t m_OutputConnections = 0x140; // CUtlVector<CPulse_OutputConnection*>
             }
             // Parent: None
             // Field count: 0
@@ -279,13 +282,6 @@ namespace cs2_dumper {
             namespace CPulseCell_TestWaitWithAutoTracepoints {
                 constexpr std::ptrdiff_t m_TracePrefix = 0xD8; // CUtlString
                 constexpr std::ptrdiff_t m_WakeResume = 0xE0; // CPulse_ResumePoint
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseCursorFuncs {
             }
             // Parent: None
             // Field count: 2
@@ -401,13 +397,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OnInterval = 0x120; // SignatureOutflow_Continue
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseTestScriptLib {
-            }
-            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -435,10 +424,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_AsyncChild2 = 0x168; // SignatureOutflow_Continue
                 constexpr std::ptrdiff_t m_YieldResume1 = 0x1B0; // SignatureOutflow_Resume
                 constexpr std::ptrdiff_t m_YieldResume2 = 0x1F8; // SignatureOutflow_Resume
-            }
-            // Parent: None
-            // Field count: 0
-            namespace TestComponent_tAPI {
             }
             // Parent: None
             // Field count: 1
@@ -493,27 +478,20 @@ namespace cs2_dumper {
             // Parent: None
             // Field count: 1
             namespace CPulseGraphInstance_TestDomain_Derived {
-                constexpr std::ptrdiff_t m_nInstanceValueX = 0x158; // int32
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseArraylib {
+                constexpr std::ptrdiff_t m_nInstanceValueX = 0xD0; // int32
             }
             // Parent: None
             // Field count: 9
             namespace CPulseGraphInstance_TestDomain {
-                constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0x128; // bool
-                constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0x129; // bool
-                constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0x12A; // bool
-                constexpr std::ptrdiff_t m_bQuietTracepoints = 0x12B; // bool
-                constexpr std::ptrdiff_t m_bExpectingCursorTerminatedDueToMaxInstructions = 0x12C; // bool
-                constexpr std::ptrdiff_t m_nCursorsTerminatedDueToMaxInstructions = 0x130; // int32
-                constexpr std::ptrdiff_t m_nNextValidateIndex = 0x134; // int32
-                constexpr std::ptrdiff_t m_Tracepoints = 0x138; // CUtlVector<CUtlString>
-                constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0x150; // bool
+                constexpr std::ptrdiff_t m_bIsRunningUnitTests = 0xA0; // bool
+                constexpr std::ptrdiff_t m_bExplicitTimeStepping = 0xA1; // bool
+                constexpr std::ptrdiff_t m_bExpectingToDestroyWithYieldedCursors = 0xA2; // bool
+                constexpr std::ptrdiff_t m_bQuietTracepoints = 0xA3; // bool
+                constexpr std::ptrdiff_t m_bExpectingCursorTerminatedDueToMaxInstructions = 0xA4; // bool
+                constexpr std::ptrdiff_t m_nCursorsTerminatedDueToMaxInstructions = 0xA8; // int32
+                constexpr std::ptrdiff_t m_nNextValidateIndex = 0xAC; // int32
+                constexpr std::ptrdiff_t m_Tracepoints = 0xB0; // CUtlVector<CUtlString>
+                constexpr std::ptrdiff_t m_bTestYesOrNoPath = 0xC8; // bool
             }
             // Parent: None
             // Field count: 0
@@ -576,10 +554,6 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             namespace CPulseCell_LimitCount__InstanceState_t {
                 constexpr std::ptrdiff_t m_nCurrentCount = 0x0; // int32
-            }
-            // Parent: None
-            // Field count: 0
-            namespace FakeEntity_tAPI {
             }
             // Parent: None
             // Field count: 0
@@ -693,8 +667,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_MethodName = 0x80; // PulseSymbol_t
                 constexpr std::ptrdiff_t m_Description = 0x90; // CUtlString
                 constexpr std::ptrdiff_t m_bIsPublic = 0x98; // bool
-                constexpr std::ptrdiff_t m_ReturnType = 0xA0; // CPulseValueFullType
-                constexpr std::ptrdiff_t m_Args = 0xB8; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                constexpr std::ptrdiff_t m_Args = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                constexpr std::ptrdiff_t m_ReturnValues = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
             }
             // Parent: None
             // Field count: 0
@@ -713,12 +687,8 @@ namespace cs2_dumper {
             // MPulseEditorCanvasItemSpecKV3
             namespace CPulseCell_BooleanSwitchState {
                 constexpr std::ptrdiff_t m_Condition = 0xD8; // CPulseObservableExpression<bool>
-                constexpr std::ptrdiff_t m_WhenTrue = 0x150; // CPulse_OutflowConnection
-                constexpr std::ptrdiff_t m_WhenFalse = 0x198; // CPulse_OutflowConnection
-            }
-            // Parent: None
-            // Field count: 0
-            namespace FakeEntityDerivedB_tAPI {
+                constexpr std::ptrdiff_t m_WhenTrue = 0x168; // CPulse_OutflowConnection
+                constexpr std::ptrdiff_t m_WhenFalse = 0x1B0; // CPulse_OutflowConnection
             }
             // Parent: None
             // Field count: 1
@@ -729,23 +699,9 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_UnyieldResume = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseMathlib {
-            }
-            // Parent: None
             // Field count: 1
             namespace CPulseCell_Unknown {
                 constexpr std::ptrdiff_t m_UnknownKeys = 0x48; // KeyValues3
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseStringlib {
             }
             // Parent: None
             // Field count: 1
@@ -787,6 +743,13 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            namespace CPulseCell_ReturnValues {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -813,17 +776,6 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_Input = 0x48; // CUtlString
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            namespace CPulseEnumlib {
-            }
-            // Parent: None
-            // Field count: 0
-            namespace FakeEntityDerivedA_tAPI {
-            }
-            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -836,7 +788,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_OutflowList = 0x48; // PulseSelectorOutflowList_t
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -847,6 +799,8 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_CallMethodID = 0x48; // PulseDocNodeID_t
                 constexpr std::ptrdiff_t m_nSrcChunk = 0x4C; // PulseRuntimeChunkIndex_t
                 constexpr std::ptrdiff_t m_nSrcInstruction = 0x50; // int32
+                constexpr std::ptrdiff_t m_nBreakDestChunk = 0x54; // PulseRuntimeChunkIndex_t
+                constexpr std::ptrdiff_t m_nBreakDestInstruction = 0x58; // int32
             }
             // Parent: None
             // Field count: 4
@@ -918,9 +872,9 @@ namespace cs2_dumper {
             namespace CPulseCell_TestYieldWithObservables {
                 constexpr std::ptrdiff_t m_flWatchForFloatValue = 0xD8; // float32
                 constexpr std::ptrdiff_t m_LiveFloatValue = 0xE0; // CPulseObservableExpression<float32>
-                constexpr std::ptrdiff_t m_WatchForStringValue = 0x158; // CUtlString
-                constexpr std::ptrdiff_t m_LiveStringValue = 0x160; // CPulseObservableExpression<CUtlString>
-                constexpr std::ptrdiff_t m_WakeResume = 0x1D8; // CPulse_ResumePoint
+                constexpr std::ptrdiff_t m_WatchForStringValue = 0x170; // CUtlString
+                constexpr std::ptrdiff_t m_LiveStringValue = 0x178; // CPulseObservableExpression<CUtlString>
+                constexpr std::ptrdiff_t m_WakeResume = 0x208; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 1

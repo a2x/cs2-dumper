@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-10 12:36:27.791150900 UTC
+// 2026-09-22 23:58:44.180709200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: scenesystem.dll
     // Class count: 9
-    // Enum count: 6
+    // Enum count: 7
     public static class ScenesystemDll {
         // Alignment: 4
         // Member count: 3
@@ -12,6 +12,21 @@ namespace CS2Dumper.Schemas {
             SCENEOBJECT_MESHLET_VIS_NONE = 0x0,
             SCENEOBJECT_MESHLET_VIS_MESHLET = 0x1,
             SCENEOBJECT_MESHLET_VIS_CULLED = 0x2
+        }
+        // Alignment: 4
+        // Member count: 11
+        public enum SceneStatsSections_t : uint {
+            SCENE_STATS_NONE = 0x0,
+            SCENE_STATS_FRAME = 0x1,
+            SCENE_STATS_GEOMETRY = 0x2,
+            SCENE_STATS_CULLING = 0x4,
+            SCENE_STATS_MATERIALS = 0x8,
+            SCENE_STATS_LIGHTING = 0x10,
+            SCENE_STATS_RAYTRACING = 0x20,
+            SCENE_STATS_INTERNALS = 0x40,
+            SCENE_STATS_RENDERDEVICE = 0x80,
+            SCENE_STATS_ALL = 0xFF,
+            SCENE_STATS_DEFAULT = 0x7F
         }
         // Alignment: 4
         // Member count: 7

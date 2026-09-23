@@ -88,7 +88,7 @@
             "type": "Unknown"
           }
         ],
-        "parent": "CEntityComponent"
+        "parent": null
       },
       "CVariantDefaultAllocator": {
         "fields": {},
@@ -109,7 +109,7 @@
         "fields": {
           "m_nFlags": 36,
           "m_nRuntimeIndex": 32,
-          "m_pBaseClassComponentHelper": 96,
+          "m_pBaseClassComponentHelper": 88,
           "m_pCPPClassname": 8,
           "m_pName": 0,
           "m_pNetworkDataReferencedDescription": 16,
@@ -118,19 +118,16 @@
         "metadata": [],
         "parent": null
       },
-      "EntInput_t": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
       "EntityIOQueuePrioritizedEvent_t": {
         "fields": {
+          "m_PulseArguments": 64,
           "m_flFireTime": 4,
           "m_hActivator": 32,
           "m_hCaller": 36,
           "m_hEntTarget": 40,
           "m_pTarget": 16,
           "m_pTargetInput": 24,
+          "m_paramMap": 208,
           "m_targetType": 8,
           "m_variantValue": 48
         },

@@ -1,11 +1,38 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-10 12:36:27.791150900 UTC
+// 2026-09-22 23:58:44.180709200 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: resourcesystem.dll
-    // Class count: 59
-    // Enum count: 2
+    // Class count: 62
+    // Enum count: 5
     public static class ResourcesystemDll {
+        // Alignment: 4
+        // Member count: 4
+        public enum NoiseStreamModifier_t : uint {
+            NOISE_STREAM_MODIFIER_NONE = 0x0,
+            NOISE_STREAM_MODIFIER_LINES = 0x1,
+            NOISE_STREAM_MODIFIER_CLUMPS = 0x2,
+            NOISE_STREAM_MODIFIER_RINGS = 0x3
+        }
+        // Alignment: 4
+        // Member count: 6
+        public enum NoiseStreamTurbulence_t : uint {
+            NOISE_STREAM_TURB_NONE = 0x0,
+            NOISE_STREAM_TURB_HIGHLIGHT = 0x1,
+            NOISE_STREAM_TURB_FEEDBACK = 0x2,
+            NOISE_STREAM_TURB_LOOPY = 0x3,
+            NOISE_STREAM_TURB_CONTRAST = 0x4,
+            NOISE_STREAM_TURB_ALTERNATE = 0x5
+        }
+        // Alignment: 4
+        // Member count: 5
+        public enum NoiseStreamType_t : uint {
+            NOISE_STREAM_TYPE_PERLIN = 0x0,
+            NOISE_STREAM_TYPE_SIMPLEX = 0x1,
+            NOISE_STREAM_TYPE_WORLEY = 0x2,
+            NOISE_STREAM_TYPE_CURL = 0x3,
+            NOISE_STREAM_TYPE_NONE = 0x4
+        }
         // Alignment: 1
         // Member count: 9
         public enum FuseVariableType_t : byte {
@@ -141,6 +168,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCVoxelVisibility {
+        }
+        // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeISmartProp {
         }
         // Parent: None
         // Field count: 0
@@ -303,13 +337,6 @@ namespace CS2Dumper.Schemas {
         public static class InfoForResourceTypeCNmGraphDefinition {
         }
         // Parent: None
-        // Field count: 0
-        //
-        // Metadata:
-        // MResourceTypeForInfoType
-        public static class InfoForResourceTypeCSmartProp {
-        }
-        // Parent: None
         // Field count: 4
         //
         // Metadata:
@@ -347,6 +374,13 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeIMaterial2 {
+        }
+        // Parent: None
+        // Field count: 0
+        //
+        // Metadata:
+        // MResourceTypeForInfoType
+        public static class InfoForResourceTypeCVDSPResource {
         }
         // Parent: None
         // Field count: 0
@@ -396,6 +430,16 @@ namespace CS2Dumper.Schemas {
         public static class InfoForResourceTypeCVDataResource {
         }
         // Parent: None
+        // Field count: 3
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class NoiseOscillatorDef_t {
+            public const nint m_flPhase = 0x0; // float32
+            public const nint m_flFrequency = 0x4; // float32
+            public const nint m_flAmplitude = 0x8; // float32
+        }
+        // Parent: None
         // Field count: 0
         //
         // Metadata:
@@ -408,6 +452,25 @@ namespace CS2Dumper.Schemas {
         // Metadata:
         // MResourceTypeForInfoType
         public static class InfoForResourceTypeCDOTANovelsList {
+        }
+        // Parent: None
+        // Field count: 12
+        //
+        // Metadata:
+        // MGetKV3ClassDefaults
+        public static class NoiseStreamDef_t {
+            public const nint m_nType = 0x0; // NoiseStreamType_t
+            public const nint m_nModifier = 0x4; // NoiseStreamModifier_t
+            public const nint m_nTurbulence = 0x8; // NoiseStreamTurbulence_t
+            public const nint m_flOutputMin = 0xC; // float32
+            public const nint m_flOutputMax = 0x10; // float32
+            public const nint m_flScale = 0x14; // float32
+            public const nint m_vOffsetRate = 0x18; // Vector
+            public const nint m_flOffset = 0x24; // float32
+            public const nint m_nOctaves = 0x28; // int32
+            public const nint m_flTurbulenceScale = 0x2C; // float32
+            public const nint m_flTurbulenceMix = 0x30; // float32
+            public const nint m_Oscillators = 0x38; // CUtlVector<NoiseOscillatorDef_t>
         }
         // Parent: None
         // Field count: 0

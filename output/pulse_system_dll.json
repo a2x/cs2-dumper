@@ -6,16 +6,6 @@
         "metadata": [],
         "parent": null
       },
-      "CPulseArraylib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseCell_Base": {
         "fields": {
           "m_nEditorNodeID": 8
@@ -117,8 +107,8 @@
       "CPulseCell_BooleanSwitchState": {
         "fields": {
           "m_Condition": 216,
-          "m_WhenFalse": 408,
-          "m_WhenTrue": 336
+          "m_WhenFalse": 432,
+          "m_WhenTrue": 360
         },
         "metadata": [
           {
@@ -286,10 +276,10 @@
       },
       "CPulseCell_Inflow_Method": {
         "fields": {
-          "m_Args": 184,
+          "m_Args": 160,
           "m_Description": 144,
           "m_MethodName": 128,
-          "m_ReturnType": 160,
+          "m_ReturnValues": 176,
           "m_bIsPublic": 152
         },
         "metadata": [
@@ -601,6 +591,29 @@
         ],
         "parent": null
       },
+      "CPulseCell_RaceCursors": {
+        "fields": {
+          "m_OnFinished": 240,
+          "m_Outflows": 216
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "CPulseCell_ReturnValues": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "CPulseCell_Step_CallExternalMethod": {
         "fields": {
           "m_ExpectedArgs": 240,
@@ -789,9 +802,9 @@
       "CPulseCell_TestYieldWithObservables": {
         "fields": {
           "m_LiveFloatValue": 224,
-          "m_LiveStringValue": 352,
-          "m_WakeResume": 472,
-          "m_WatchForStringValue": 344,
+          "m_LiveStringValue": 376,
+          "m_WakeResume": 520,
+          "m_WatchForStringValue": 368,
           "m_flWatchForFloatValue": 216
         },
         "metadata": [
@@ -1074,7 +1087,7 @@
       "CPulseCell_WaitForObservable": {
         "fields": {
           "m_Condition": 216,
-          "m_OnTrue": 336
+          "m_OnTrue": 360
         },
         "metadata": [
           {
@@ -1096,26 +1109,6 @@
         ],
         "parent": null
       },
-      "CPulseCursorFuncs": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseEnumlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "CPulseExecCursor": {
         "fields": {},
         "metadata": [],
@@ -1123,19 +1116,20 @@
       },
       "CPulseGraphDef": {
         "fields": {
-          "m_BlackboardReferences": 272,
-          "m_CallInfos": 200,
+          "m_BlackboardReferences": 296,
+          "m_CallInfos": 224,
           "m_Cells": 104,
           "m_Chunks": 80,
-          "m_Constants": 224,
+          "m_Constants": 248,
           "m_DomainIdentifier": 8,
           "m_DomainSubType": 24,
-          "m_DomainValues": 248,
-          "m_InvokeBindings": 176,
-          "m_OutputConnections": 296,
+          "m_DomainValues": 272,
+          "m_InvokeBindings": 200,
+          "m_OutputConnections": 320,
           "m_ParentMapName": 48,
           "m_ParentXmlName": 64,
-          "m_PublicOutputs": 152,
+          "m_PublicOutputs": 176,
+          "m_TempVarBanks": 152,
           "m_Vars": 128
         },
         "metadata": [
@@ -1148,22 +1142,22 @@
       },
       "CPulseGraphInstance_TestDomain": {
         "fields": {
-          "m_Tracepoints": 312,
-          "m_bExpectingCursorTerminatedDueToMaxInstructions": 300,
-          "m_bExpectingToDestroyWithYieldedCursors": 298,
-          "m_bExplicitTimeStepping": 297,
-          "m_bIsRunningUnitTests": 296,
-          "m_bQuietTracepoints": 299,
-          "m_bTestYesOrNoPath": 336,
-          "m_nCursorsTerminatedDueToMaxInstructions": 304,
-          "m_nNextValidateIndex": 308
+          "m_Tracepoints": 176,
+          "m_bExpectingCursorTerminatedDueToMaxInstructions": 164,
+          "m_bExpectingToDestroyWithYieldedCursors": 162,
+          "m_bExplicitTimeStepping": 161,
+          "m_bIsRunningUnitTests": 160,
+          "m_bQuietTracepoints": 163,
+          "m_bTestYesOrNoPath": 200,
+          "m_nCursorsTerminatedDueToMaxInstructions": 168,
+          "m_nNextValidateIndex": 172
         },
         "metadata": [],
         "parent": null
       },
       "CPulseGraphInstance_TestDomain_Derived": {
         "fields": {
-          "m_nInstanceValueX": 344
+          "m_nInstanceValueX": 208
         },
         "metadata": [],
         "parent": null
@@ -1181,46 +1175,6 @@
       "CPulseGraphInstance_TurtleGraphics": {
         "fields": {},
         "metadata": [],
-        "parent": null
-      },
-      "CPulseMathlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseStringlib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseTestFuncs_LibraryA": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
-      "CPulseTestScriptLib": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MPropertyDescription",
-            "type": "Unknown"
-          }
-        ],
         "parent": null
       },
       "CPulseTurtleGraphicsCursor": {
@@ -1253,6 +1207,8 @@
           "m_CallMethodID": 72,
           "m_PortName": 0,
           "m_RegisterMap": 24,
+          "m_nBreakDestChunk": 84,
+          "m_nBreakDestInstruction": 88,
           "m_nEditorNodeID": 16,
           "m_nSrcChunk": 76,
           "m_nSrcInstruction": 80
@@ -1301,21 +1257,6 @@
           "m_nCursorValueA": 216,
           "m_nCursorValueB": 220
         },
-        "metadata": [],
-        "parent": null
-      },
-      "FakeEntityDerivedA_tAPI": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
-      "FakeEntityDerivedB_tAPI": {
-        "fields": {},
-        "metadata": [],
-        "parent": null
-      },
-      "FakeEntity_tAPI": {
-        "fields": {},
         "metadata": [],
         "parent": null
       },
@@ -1385,11 +1326,6 @@
         "fields": {
           "m_ComponentData": 8
         },
-        "metadata": [],
-        "parent": null
-      },
-      "TestComponent_tAPI": {
-        "fields": {},
         "metadata": [],
         "parent": null
       }

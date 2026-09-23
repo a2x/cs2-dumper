@@ -1,10 +1,10 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-10 12:36:27.791150900 UTC
+// 2026-09-22 23:58:44.180709200 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
         // Module: engine2.dll
-        // Class count: 58
+        // Class count: 57
         // Enum count: 2
         pub const engine2_dll = struct {
             // Alignment: 4
@@ -33,7 +33,7 @@ pub const cs2_dumper = struct {
             // Field count: 0
             pub const CEntityComponent = struct {
             };
-            // Parent: CEntityComponent
+            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -120,7 +120,7 @@ pub const cs2_dumper = struct {
             pub const EventServerBeginSimulate_t = struct {
             };
             // Parent: None
-            // Field count: 8
+            // Field count: 10
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -133,6 +133,8 @@ pub const cs2_dumper = struct {
                 pub const m_hCaller: usize = 0x24; // CEntityHandle
                 pub const m_hEntTarget: usize = 0x28; // CEntityHandle
                 pub const m_variantValue: usize = 0x30; // CVariantBase<CVariantDefaultAllocator>
+                pub const m_PulseArguments: usize = 0x40; // CPulseArgumentPack
+                pub const m_paramMap: usize = 0xD0; // CPulseInputParamMap
             };
             // Parent: None
             // Field count: 0
@@ -141,10 +143,6 @@ pub const cs2_dumper = struct {
             // Parent: None
             // Field count: 0
             pub const EventClientAdvanceTick_t = struct {
-            };
-            // Parent: None
-            // Field count: 0
-            pub const EntInput_t = struct {
             };
             // Parent: None
             // Field count: 1
@@ -334,7 +332,7 @@ pub const cs2_dumper = struct {
                 pub const m_pNetworkDataReferencedPtrPropDescription: usize = 0x18; // char*
                 pub const m_nRuntimeIndex: usize = 0x20; // int32
                 pub const m_nFlags: usize = 0x24; // uint32
-                pub const m_pBaseClassComponentHelper: usize = 0x60; // CEntityComponentHelper*
+                pub const m_pBaseClassComponentHelper: usize = 0x58; // CEntityComponentHelper*
             };
             // Parent: None
             // Field count: 4

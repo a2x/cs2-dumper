@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-10 12:36:27.791150900 UTC
+// 2026-09-22 23:58:44.180709200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: vphysics2.dll
-        // Class count: 113
+        // Class count: 117
         // Enum count: 5
         pub mod vphysics2_dll {
             // Alignment: 4
@@ -70,6 +70,14 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            pub mod RnCompoundDesc_t {
+                pub const m_Compound: usize = 0x18; // RnCompound_t
+            }
+            // Parent: None
+            // Field count: 1
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             pub mod RnSoftbodyParticle_t {
                 pub const m_flMassInv: usize = 0x0; // float32
             }
@@ -90,7 +98,7 @@ pub mod cs2_dumper {
                 pub const m_Capsule: usize = 0x18; // RnCapsule_t
             }
             // Parent: None
-            // Field count: 111
+            // Field count: 113
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -120,92 +128,94 @@ pub mod cs2_dumper {
                 pub const m_Quads: usize = 0xA8; // CUtlVector<FeQuad_t>
                 pub const m_SimdQuads: usize = 0xC0; // CUtlVector<FeSimdQuad_t>
                 pub const m_SimdTris: usize = 0xD8; // CUtlVector<FeSimdTri_t>
-                pub const m_SimdRods: usize = 0xF0; // CUtlVector<FeSimdRodConstraint_t>
-                pub const m_SimdRodsAnim: usize = 0x108; // CUtlVector<FeSimdRodConstraintAnim_t>
-                pub const m_InitPose: usize = 0x120; // CUtlVector<CTransform>
-                pub const m_Rods: usize = 0x138; // CUtlVector<FeRodConstraint_t>
-                pub const m_Twists: usize = 0x150; // CUtlVector<FeTwistConstraint_t>
-                pub const m_HingeLimits: usize = 0x168; // CUtlVector<FeHingeLimit_t>
-                pub const m_AntiTunnelBytecode: usize = 0x180; // CUtlVector<uint32>
-                pub const m_DynKinLinks: usize = 0x198; // CUtlVector<FeDynKinLink_t>
-                pub const m_BoneMergeLinks: usize = 0x1B0; // CUtlVector<FeBoneMergeLink_t>
-                pub const m_AntiTunnelProbes: usize = 0x1C8; // CUtlVector<FeAntiTunnelProbe_t>
-                pub const m_AntiTunnelTargetNodes: usize = 0x1E0; // CUtlVector<uint16>
-                pub const m_NodeStrayBoxes: usize = 0x1F8; // CUtlVector<FeNodeStrayBox_t>
-                pub const m_AxialEdges: usize = 0x210; // CUtlVector<FeAxialEdgeBend_t>
-                pub const m_NodeInvMasses: usize = 0x228; // CUtlVector<float32>
-                pub const m_CtrlOffsets: usize = 0x240; // CUtlVector<FeCtrlOffset_t>
-                pub const m_CtrlOsOffsets: usize = 0x258; // CUtlVector<FeCtrlOsOffset_t>
-                pub const m_FollowNodes: usize = 0x270; // CUtlVector<FeFollowNode_t>
-                pub const m_CollisionPlanes: usize = 0x288; // CUtlVector<FeCollisionPlane_t>
-                pub const m_NodeIntegrator: usize = 0x2A0; // CUtlVector<FeNodeIntegrator_t>
-                pub const m_SpringIntegrator: usize = 0x2B8; // CUtlVector<FeSpringIntegrator_t>
-                pub const m_SimdSpringIntegrator: usize = 0x2D0; // CUtlVector<FeSimdSpringIntegrator_t>
-                pub const m_WorldCollisionParams: usize = 0x2E8; // CUtlVector<FeWorldCollisionParams_t>
-                pub const m_LegacyStretchForce: usize = 0x300; // CUtlVector<float32>
-                pub const m_NodeCollisionRadii: usize = 0x318; // CUtlVector<float32>
-                pub const m_DynNodeFriction: usize = 0x330; // CUtlVector<float32>
-                pub const m_LocalRotation: usize = 0x348; // CUtlVector<float32>
-                pub const m_LocalForce: usize = 0x360; // CUtlVector<float32>
-                pub const m_TaperedCapsuleStretches: usize = 0x378; // CUtlVector<FeTaperedCapsuleStretch_t>
-                pub const m_TaperedCapsuleRigids: usize = 0x390; // CUtlVector<FeTaperedCapsuleRigid_t>
-                pub const m_SphereRigids: usize = 0x3A8; // CUtlVector<FeSphereRigid_t>
-                pub const m_WorldCollisionNodes: usize = 0x3C0; // CUtlVector<uint16>
-                pub const m_TreeParents: usize = 0x3D8; // CUtlVector<uint16>
-                pub const m_TreeCollisionMasks: usize = 0x3F0; // CUtlVector<uint16>
-                pub const m_TreeChildren: usize = 0x408; // CUtlVector<FeTreeChildren_t>
-                pub const m_FreeNodes: usize = 0x420; // CUtlVector<uint16>
-                pub const m_FitMatrices: usize = 0x438; // CUtlVector<FeFitMatrix_t>
-                pub const m_FitWeights: usize = 0x450; // CUtlVector<FeFitWeight_t>
-                pub const m_ReverseOffsets: usize = 0x468; // CUtlVector<FeNodeReverseOffset_t>
-                pub const m_AnimStrayRadii: usize = 0x480; // CUtlVector<FeAnimStrayRadius_t>
-                pub const m_SimdAnimStrayRadii: usize = 0x498; // CUtlVector<FeSimdAnimStrayRadius_t>
-                pub const m_KelagerBends: usize = 0x4B0; // CUtlVector<FeKelagerBend2_t>
-                pub const m_CtrlSoftOffsets: usize = 0x4C8; // CUtlVector<FeCtrlSoftOffset_t>
-                pub const m_JiggleBones: usize = 0x4E0; // CUtlVector<CFeIndexedJiggleBone>
-                pub const m_SourceElems: usize = 0x4F8; // CUtlVector<uint16>
-                pub const m_GoalDampedSpringIntegrators: usize = 0x510; // CUtlVector<uint32>
-                pub const m_Tris: usize = 0x528; // CUtlVector<FeTri_t>
-                pub const m_nTriCount1: usize = 0x540; // uint16
-                pub const m_nTriCount2: usize = 0x542; // uint16
-                pub const m_nReservedUint8: usize = 0x544; // uint8
-                pub const m_nExtraPressureIterations: usize = 0x545; // uint8
-                pub const m_nExtraGoalIterations: usize = 0x546; // uint8
-                pub const m_nExtraIterations: usize = 0x547; // uint8
-                pub const m_SDFRigids: usize = 0x548; // CUtlVector<FeSDFRigid_t>
-                pub const m_BoxRigids: usize = 0x560; // CUtlVector<FeBoxRigid_t>
-                pub const m_DynNodeVertexSet: usize = 0x578; // CUtlVector<uint8>
-                pub const m_VertexSetNames: usize = 0x590; // CUtlVector<uint32>
-                pub const m_RigidColliderPriorities: usize = 0x5A8; // CUtlVector<FeRigidColliderIndices_t>
-                pub const m_MorphLayers: usize = 0x5C0; // CUtlVector<FeMorphLayerDepr_t>
-                pub const m_MorphSetData: usize = 0x5D8; // CUtlVector<uint8>
-                pub const m_VertexMaps: usize = 0x5F0; // CUtlVector<FeVertexMapDesc_t>
-                pub const m_VertexMapValues: usize = 0x608; // CUtlVector<uint8>
-                pub const m_Effects: usize = 0x620; // CUtlVector<FeEffectDesc_t>
-                pub const m_LockToParent: usize = 0x638; // CUtlVector<FeCtrlOffset_t>
-                pub const m_LockToGoal: usize = 0x650; // CUtlVector<uint16>
-                pub const m_SkelParents: usize = 0x668; // CUtlVector<int16>
-                pub const m_DynNodeWindBases: usize = 0x680; // CUtlVector<FeNodeWindBase_t>
-                pub const m_SelfCollisionLayers: usize = 0x698; // CUtlVector<FeModelSelfCollisionLayer_t>
-                pub const m_flInternalPressure: usize = 0x6B0; // float32
-                pub const m_flDefaultTimeDilation: usize = 0x6B4; // float32
-                pub const m_flWindage: usize = 0x6B8; // float32
-                pub const m_flWindDrag: usize = 0x6BC; // float32
-                pub const m_flDefaultSurfaceStretch: usize = 0x6C0; // float32
-                pub const m_flDefaultThreadStretch: usize = 0x6C4; // float32
-                pub const m_flDefaultGravityScale: usize = 0x6C8; // float32
-                pub const m_flDefaultVelAirDrag: usize = 0x6CC; // float32
-                pub const m_flDefaultExpAirDrag: usize = 0x6D0; // float32
-                pub const m_flDefaultVelQuadAirDrag: usize = 0x6D4; // float32
-                pub const m_flDefaultExpQuadAirDrag: usize = 0x6D8; // float32
-                pub const m_flRodVelocitySmoothRate: usize = 0x6DC; // float32
-                pub const m_flQuadVelocitySmoothRate: usize = 0x6E0; // float32
-                pub const m_flAddWorldCollisionRadius: usize = 0x6E4; // float32
-                pub const m_flDefaultVolumetricSolveAmount: usize = 0x6E8; // float32
-                pub const m_flMotionSmoothCDT: usize = 0x6EC; // float32
-                pub const m_flLocalDrag1: usize = 0x6F0; // float32
-                pub const m_nRodVelocitySmoothIterations: usize = 0x6F4; // uint16
-                pub const m_nQuadVelocitySmoothIterations: usize = 0x6F6; // uint16
+                pub const m_Prisms: usize = 0xF0; // CUtlVector<FePrism_t>
+                pub const m_SimdPrisms: usize = 0x108; // CUtlVector<FeSimdPrism_t>
+                pub const m_SimdRods: usize = 0x120; // CUtlVector<FeSimdRodConstraint_t>
+                pub const m_SimdRodsAnim: usize = 0x138; // CUtlVector<FeSimdRodConstraintAnim_t>
+                pub const m_InitPose: usize = 0x150; // CUtlVector<CTransform>
+                pub const m_Rods: usize = 0x168; // CUtlVector<FeRodConstraint_t>
+                pub const m_Twists: usize = 0x180; // CUtlVector<FeTwistConstraint_t>
+                pub const m_HingeLimits: usize = 0x198; // CUtlVector<FeHingeLimit_t>
+                pub const m_AntiTunnelBytecode: usize = 0x1B0; // CUtlVector<uint32>
+                pub const m_DynKinLinks: usize = 0x1C8; // CUtlVector<FeDynKinLink_t>
+                pub const m_BoneMergeLinks: usize = 0x1E0; // CUtlVector<FeBoneMergeLink_t>
+                pub const m_AntiTunnelProbes: usize = 0x1F8; // CUtlVector<FeAntiTunnelProbe_t>
+                pub const m_AntiTunnelTargetNodes: usize = 0x210; // CUtlVector<uint16>
+                pub const m_NodeStrayBoxes: usize = 0x228; // CUtlVector<FeNodeStrayBox_t>
+                pub const m_AxialEdges: usize = 0x240; // CUtlVector<FeAxialEdgeBend_t>
+                pub const m_NodeInvMasses: usize = 0x258; // CUtlVector<float32>
+                pub const m_CtrlOffsets: usize = 0x270; // CUtlVector<FeCtrlOffset_t>
+                pub const m_CtrlOsOffsets: usize = 0x288; // CUtlVector<FeCtrlOsOffset_t>
+                pub const m_FollowNodes: usize = 0x2A0; // CUtlVector<FeFollowNode_t>
+                pub const m_CollisionPlanes: usize = 0x2B8; // CUtlVector<FeCollisionPlane_t>
+                pub const m_NodeIntegrator: usize = 0x2D0; // CUtlVector<FeNodeIntegrator_t>
+                pub const m_SpringIntegrator: usize = 0x2E8; // CUtlVector<FeSpringIntegrator_t>
+                pub const m_SimdSpringIntegrator: usize = 0x300; // CUtlVector<FeSimdSpringIntegrator_t>
+                pub const m_WorldCollisionParams: usize = 0x318; // CUtlVector<FeWorldCollisionParams_t>
+                pub const m_LegacyStretchForce: usize = 0x330; // CUtlVector<float32>
+                pub const m_NodeCollisionRadii: usize = 0x348; // CUtlVector<float32>
+                pub const m_DynNodeFriction: usize = 0x360; // CUtlVector<float32>
+                pub const m_LocalRotation: usize = 0x378; // CUtlVector<float32>
+                pub const m_LocalForce: usize = 0x390; // CUtlVector<float32>
+                pub const m_TaperedCapsuleStretches: usize = 0x3A8; // CUtlVector<FeTaperedCapsuleStretch_t>
+                pub const m_TaperedCapsuleRigids: usize = 0x3C0; // CUtlVector<FeTaperedCapsuleRigid_t>
+                pub const m_SphereRigids: usize = 0x3D8; // CUtlVector<FeSphereRigid_t>
+                pub const m_WorldCollisionNodes: usize = 0x3F0; // CUtlVector<uint16>
+                pub const m_TreeParents: usize = 0x408; // CUtlVector<uint16>
+                pub const m_TreeCollisionMasks: usize = 0x420; // CUtlVector<uint16>
+                pub const m_TreeChildren: usize = 0x438; // CUtlVector<FeTreeChildren_t>
+                pub const m_FreeNodes: usize = 0x450; // CUtlVector<uint16>
+                pub const m_FitMatrices: usize = 0x468; // CUtlVector<FeFitMatrix_t>
+                pub const m_FitWeights: usize = 0x480; // CUtlVector<FeFitWeight_t>
+                pub const m_ReverseOffsets: usize = 0x498; // CUtlVector<FeNodeReverseOffset_t>
+                pub const m_AnimStrayRadii: usize = 0x4B0; // CUtlVector<FeAnimStrayRadius_t>
+                pub const m_SimdAnimStrayRadii: usize = 0x4C8; // CUtlVector<FeSimdAnimStrayRadius_t>
+                pub const m_KelagerBends: usize = 0x4E0; // CUtlVector<FeKelagerBend2_t>
+                pub const m_CtrlSoftOffsets: usize = 0x4F8; // CUtlVector<FeCtrlSoftOffset_t>
+                pub const m_JiggleBones: usize = 0x510; // CUtlVector<CFeIndexedJiggleBone>
+                pub const m_SourceElems: usize = 0x528; // CUtlVector<uint16>
+                pub const m_GoalDampedSpringIntegrators: usize = 0x540; // CUtlVector<uint32>
+                pub const m_Tris: usize = 0x558; // CUtlVector<FeTri_t>
+                pub const m_nTriCount1: usize = 0x570; // uint16
+                pub const m_nTriCount2: usize = 0x572; // uint16
+                pub const m_nReservedUint8: usize = 0x574; // uint8
+                pub const m_nExtraPressureIterations: usize = 0x575; // uint8
+                pub const m_nExtraGoalIterations: usize = 0x576; // uint8
+                pub const m_nExtraIterations: usize = 0x577; // uint8
+                pub const m_SDFRigids: usize = 0x578; // CUtlVector<FeSDFRigid_t>
+                pub const m_BoxRigids: usize = 0x590; // CUtlVector<FeBoxRigid_t>
+                pub const m_DynNodeVertexSet: usize = 0x5A8; // CUtlVector<uint8>
+                pub const m_VertexSetNames: usize = 0x5C0; // CUtlVector<uint32>
+                pub const m_RigidColliderPriorities: usize = 0x5D8; // CUtlVector<FeRigidColliderIndices_t>
+                pub const m_MorphLayers: usize = 0x5F0; // CUtlVector<FeMorphLayerDepr_t>
+                pub const m_MorphSetData: usize = 0x608; // CUtlVector<uint8>
+                pub const m_VertexMaps: usize = 0x620; // CUtlVector<FeVertexMapDesc_t>
+                pub const m_VertexMapValues: usize = 0x638; // CUtlVector<uint8>
+                pub const m_Effects: usize = 0x650; // CUtlVector<FeEffectDesc_t>
+                pub const m_LockToParent: usize = 0x668; // CUtlVector<FeCtrlOffset_t>
+                pub const m_LockToGoal: usize = 0x680; // CUtlVector<uint16>
+                pub const m_SkelParents: usize = 0x698; // CUtlVector<int16>
+                pub const m_DynNodeWindBases: usize = 0x6B0; // CUtlVector<FeNodeWindBase_t>
+                pub const m_SelfCollisionLayers: usize = 0x6C8; // CUtlVector<FeModelSelfCollisionLayer_t>
+                pub const m_flInternalPressure: usize = 0x6E0; // float32
+                pub const m_flDefaultTimeDilation: usize = 0x6E4; // float32
+                pub const m_flWindage: usize = 0x6E8; // float32
+                pub const m_flWindDrag: usize = 0x6EC; // float32
+                pub const m_flDefaultSurfaceStretch: usize = 0x6F0; // float32
+                pub const m_flDefaultThreadStretch: usize = 0x6F4; // float32
+                pub const m_flDefaultGravityScale: usize = 0x6F8; // float32
+                pub const m_flDefaultVelAirDrag: usize = 0x6FC; // float32
+                pub const m_flDefaultExpAirDrag: usize = 0x700; // float32
+                pub const m_flDefaultVelQuadAirDrag: usize = 0x704; // float32
+                pub const m_flDefaultExpQuadAirDrag: usize = 0x708; // float32
+                pub const m_flRodVelocitySmoothRate: usize = 0x70C; // float32
+                pub const m_flQuadVelocitySmoothRate: usize = 0x710; // float32
+                pub const m_flAddWorldCollisionRadius: usize = 0x714; // float32
+                pub const m_flDefaultVolumetricSolveAmount: usize = 0x718; // float32
+                pub const m_flMotionSmoothCDT: usize = 0x71C; // float32
+                pub const m_flLocalDrag1: usize = 0x720; // float32
+                pub const m_nRodVelocitySmoothIterations: usize = 0x724; // uint16
+                pub const m_nQuadVelocitySmoothIterations: usize = 0x726; // uint16
             }
             // Parent: None
             // Field count: 1
@@ -253,14 +263,6 @@ pub mod cs2_dumper {
                 pub const m_nAntitunnelGroupBits: usize = 0x48; // uint32
             }
             // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod RnCompoundDesc_t {
-                pub const m_Compound: usize = 0x18; // RnCompound_t
-            }
-            // Parent: None
             // Field count: 3
             //
             // Metadata:
@@ -294,6 +296,15 @@ pub mod cs2_dumper {
                 pub const flDistMin: usize = 0x0; // float32
                 pub const flDistMax: usize = 0x4; // float32
                 pub const nNode: usize = 0x8; // uint16[6]
+            }
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnCompoundTree_t {
+                pub const m_Nodes: usize = 0x0; // CUtlLeanVector<RnCompoundTreeNode_t>
+                pub const m_nStartIterationIndex: usize = 0x10; // uint32
             }
             // Parent: None
             // Field count: 4
@@ -424,6 +435,15 @@ pub mod cs2_dumper {
                 pub const m_jiggleBone: usize = 0x34; // CFeJiggleBone
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FePrism_t {
+                pub const nNode: usize = 0x0; // uint16[6]
+                pub const flVolume: usize = 0xC; // float32
+            }
+            // Parent: None
             // Field count: 7
             //
             // Metadata:
@@ -510,7 +530,7 @@ pub mod cs2_dumper {
                 pub const flWeight: usize = 0x4; // float32
             }
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -526,6 +546,7 @@ pub mod cs2_dumper {
                 pub const m_vOrthographicAreas: usize = 0xA8; // Vector
                 pub const m_nFlags: usize = 0xB4; // uint32
                 pub const m_nDebugFlags: usize = 0xB8; // uint32
+                pub const m_flSurfaceArea: usize = 0xBC; // float32
             }
             // Parent: None
             // Field count: 2
@@ -536,6 +557,17 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 0
             pub mod IPhysicsRagdollControl {
+            }
+            // Parent: None
+            // Field count: 4
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod RnCompoundTreeNode_t {
+                pub const m_vMin: usize = 0x0; // Vector
+                pub const m_vMax: usize = 0xC; // Vector
+                pub const m_nType: usize = 0x0; // bitfield:3
+                pub const m_nSubtreeEndOrCompoundId: usize = 0x0; // bitfield:29
             }
             // Parent: None
             // Field count: 3
@@ -596,19 +628,24 @@ pub mod cs2_dumper {
                 pub const m_Id: usize = 0x0; // uint32
             }
             // Parent: None
-            // Field count: 8
+            // Field count: 13
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnCompound_t {
-                pub const m_Spheres: usize = 0x0; // CUtlVector<RnSphere_t>
-                pub const m_Capsules: usize = 0x18; // CUtlVector<RnCapsule_t>
-                pub const m_Hulls: usize = 0x30; // CUtlVector<RnHull_t>
-                pub const m_Meshes: usize = 0x48; // CUtlVector<RnMesh_t>
-                pub const m_Bounds: usize = 0x60; // AABB_t
-                pub const m_vOrthographicAreas: usize = 0x78; // Vector
-                pub const m_flSurfaceArea: usize = 0x84; // float32
-                pub const m_flVolume: usize = 0x88; // float32
+                pub const m_Tree: usize = 0x0; // RnCompoundTree_t
+                pub const m_nHullBaseIndex: usize = 0x18; // int32
+                pub const m_nMeshBaseIndex: usize = 0x1C; // int32
+                pub const m_nShapeCount: usize = 0x20; // int32
+                pub const m_Meshes: usize = 0x28; // CUtlLeanVectorFixedGrowable<RnMesh_t,1>
+                pub const m_Hulls: usize = 0xF0; // CUtlLeanVector<RnHull_t>
+                pub const m_Capsules: usize = 0x100; // CUtlLeanVector<RnCapsule_t>
+                pub const m_Spheres: usize = 0x110; // CUtlLeanVector<RnSphere_t>
+                pub const m_CompoundMaterialIndices: usize = 0x120; // CUtlLeanVector<uint8>
+                pub const m_Bounds: usize = 0x130; // AABB_t
+                pub const m_vOrthographicAreas: usize = 0x148; // Vector
+                pub const m_flSurfaceArea: usize = 0x154; // float32
+                pub const m_flVolume: usize = 0x158; // float32
             }
             // Parent: None
             // Field count: 12
@@ -1078,18 +1115,19 @@ pub mod cs2_dumper {
                 pub const v2: usize = 0x14; // Vector2D
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod RnHull_t {
                 pub const m_vCentroid: usize = 0x0; // Vector
                 pub const m_flMaxAngularRadius: usize = 0xC; // float32
-                pub const m_Bounds: usize = 0x10; // AABB_t
-                pub const m_vOrthographicAreas: usize = 0x28; // Vector
-                pub const m_MassProperties: usize = 0x34; // matrix3x4_t
-                pub const m_flVolume: usize = 0x64; // float32
-                pub const m_flSurfaceArea: usize = 0x68; // float32
+                pub const m_flMinCentroidRadius: usize = 0x10; // float32
+                pub const m_Bounds: usize = 0x14; // AABB_t
+                pub const m_vOrthographicAreas: usize = 0x2C; // Vector
+                pub const m_MassProperties: usize = 0x38; // matrix3x4_t
+                pub const m_flVolume: usize = 0x68; // float32
+                pub const m_flSurfaceArea: usize = 0x6C; // float32
                 pub const m_VertexPositions: usize = 0x70; // CUtlVector<Vector>
                 pub const m_FacePlanes: usize = 0x88; // CUtlVector<RnPlane_t>
                 pub const m_nFlags: usize = 0xA0; // uint32
@@ -1171,6 +1209,15 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod RnFace_t {
                 pub const m_nEdge: usize = 0x0; // uint8
+            }
+            // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod FeSimdPrism_t {
+                pub const nNode: usize = 0x0; // uint16[4][6]
+                pub const flVolume: usize = 0x30; // fltx4
             }
             // Parent: None
             // Field count: 2

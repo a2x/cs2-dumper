@@ -1,12 +1,12 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-10 12:36:27.791150900 UTC
+// 2026-09-22 23:58:44.180709200 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: pulse_system.dll
-        // Class count: 104
+        // Class count: 95
         // Enum count: 8
         pub mod pulse_system_dll {
             // Alignment: 4
@@ -94,6 +94,15 @@ pub mod cs2_dumper {
                 pub const m_nDesiredKillPriority: usize = 0x12C; // PulseCursorCancelPriority_t
             }
             // Parent: None
+            // Field count: 2
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
+            pub mod CPulseCell_RaceCursors {
+                pub const m_Outflows: usize = 0xD8; // CUtlVector<CPulse_OutflowConnection>
+                pub const m_OnFinished: usize = 0xF0; // CPulse_ResumePoint
+            }
+            // Parent: None
             // Field count: 0
             //
             // Metadata:
@@ -136,13 +145,6 @@ pub mod cs2_dumper {
                 pub const m_OutflowList: usize = 0x50; // PulseSelectorOutflowList_t
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseTestFuncs_LibraryA {
-            }
-            // Parent: None
             // Field count: 2
             //
             // Metadata:
@@ -152,7 +154,7 @@ pub mod cs2_dumper {
             // MPropertyDescription
             pub mod CPulseCell_WaitForObservable {
                 pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_OnTrue: usize = 0x150; // CPulse_ResumePoint
+                pub const m_OnTrue: usize = 0x168; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 4
@@ -163,7 +165,7 @@ pub mod cs2_dumper {
                 pub const m_OutflowRegisterMap: usize = 0x18; // PulseRegisterMap_t
             }
             // Parent: None
-            // Field count: 14
+            // Field count: 15
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -175,13 +177,14 @@ pub mod cs2_dumper {
                 pub const m_Chunks: usize = 0x50; // CUtlVector<CPulse_Chunk*>
                 pub const m_Cells: usize = 0x68; // CUtlVector<CPulseCell_Base*>
                 pub const m_Vars: usize = 0x80; // CUtlVector<CPulse_Variable>
-                pub const m_PublicOutputs: usize = 0x98; // CUtlVector<CPulse_PublicOutput>
-                pub const m_InvokeBindings: usize = 0xB0; // CUtlVector<CPulse_InvokeBinding*>
-                pub const m_CallInfos: usize = 0xC8; // CUtlVector<CPulse_CallInfo*>
-                pub const m_Constants: usize = 0xE0; // CUtlVector<CPulse_Constant>
-                pub const m_DomainValues: usize = 0xF8; // CUtlVector<CPulse_DomainValue>
-                pub const m_BlackboardReferences: usize = 0x110; // CUtlVector<CPulse_BlackboardReference>
-                pub const m_OutputConnections: usize = 0x128; // CUtlVector<CPulse_OutputConnection*>
+                pub const m_TempVarBanks: usize = 0x98; // CUtlVector<CPulse_TempVarBankDefinition*>
+                pub const m_PublicOutputs: usize = 0xB0; // CUtlVector<CPulse_PublicOutput>
+                pub const m_InvokeBindings: usize = 0xC8; // CUtlVector<CPulse_InvokeBinding*>
+                pub const m_CallInfos: usize = 0xE0; // CUtlVector<CPulse_CallInfo*>
+                pub const m_Constants: usize = 0xF8; // CUtlVector<CPulse_Constant>
+                pub const m_DomainValues: usize = 0x110; // CUtlVector<CPulse_DomainValue>
+                pub const m_BlackboardReferences: usize = 0x128; // CUtlVector<CPulse_BlackboardReference>
+                pub const m_OutputConnections: usize = 0x140; // CUtlVector<CPulse_OutputConnection*>
             }
             // Parent: None
             // Field count: 0
@@ -284,13 +287,6 @@ pub mod cs2_dumper {
             pub mod CPulseCell_TestWaitWithAutoTracepoints {
                 pub const m_TracePrefix: usize = 0xD8; // CUtlString
                 pub const m_WakeResume: usize = 0xE0; // CPulse_ResumePoint
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseCursorFuncs {
             }
             // Parent: None
             // Field count: 2
@@ -406,13 +402,6 @@ pub mod cs2_dumper {
                 pub const m_OnInterval: usize = 0x120; // SignatureOutflow_Continue
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseTestScriptLib {
-            }
-            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -440,10 +429,6 @@ pub mod cs2_dumper {
                 pub const m_AsyncChild2: usize = 0x168; // SignatureOutflow_Continue
                 pub const m_YieldResume1: usize = 0x1B0; // SignatureOutflow_Resume
                 pub const m_YieldResume2: usize = 0x1F8; // SignatureOutflow_Resume
-            }
-            // Parent: None
-            // Field count: 0
-            pub mod TestComponent_tAPI {
             }
             // Parent: None
             // Field count: 1
@@ -498,27 +483,20 @@ pub mod cs2_dumper {
             // Parent: None
             // Field count: 1
             pub mod CPulseGraphInstance_TestDomain_Derived {
-                pub const m_nInstanceValueX: usize = 0x158; // int32
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseArraylib {
+                pub const m_nInstanceValueX: usize = 0xD0; // int32
             }
             // Parent: None
             // Field count: 9
             pub mod CPulseGraphInstance_TestDomain {
-                pub const m_bIsRunningUnitTests: usize = 0x128; // bool
-                pub const m_bExplicitTimeStepping: usize = 0x129; // bool
-                pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0x12A; // bool
-                pub const m_bQuietTracepoints: usize = 0x12B; // bool
-                pub const m_bExpectingCursorTerminatedDueToMaxInstructions: usize = 0x12C; // bool
-                pub const m_nCursorsTerminatedDueToMaxInstructions: usize = 0x130; // int32
-                pub const m_nNextValidateIndex: usize = 0x134; // int32
-                pub const m_Tracepoints: usize = 0x138; // CUtlVector<CUtlString>
-                pub const m_bTestYesOrNoPath: usize = 0x150; // bool
+                pub const m_bIsRunningUnitTests: usize = 0xA0; // bool
+                pub const m_bExplicitTimeStepping: usize = 0xA1; // bool
+                pub const m_bExpectingToDestroyWithYieldedCursors: usize = 0xA2; // bool
+                pub const m_bQuietTracepoints: usize = 0xA3; // bool
+                pub const m_bExpectingCursorTerminatedDueToMaxInstructions: usize = 0xA4; // bool
+                pub const m_nCursorsTerminatedDueToMaxInstructions: usize = 0xA8; // int32
+                pub const m_nNextValidateIndex: usize = 0xAC; // int32
+                pub const m_Tracepoints: usize = 0xB0; // CUtlVector<CUtlString>
+                pub const m_bTestYesOrNoPath: usize = 0xC8; // bool
             }
             // Parent: None
             // Field count: 0
@@ -581,10 +559,6 @@ pub mod cs2_dumper {
             // MGetKV3ClassDefaults
             pub mod CPulseCell_LimitCount__InstanceState_t {
                 pub const m_nCurrentCount: usize = 0x0; // int32
-            }
-            // Parent: None
-            // Field count: 0
-            pub mod FakeEntity_tAPI {
             }
             // Parent: None
             // Field count: 0
@@ -698,8 +672,8 @@ pub mod cs2_dumper {
                 pub const m_MethodName: usize = 0x80; // PulseSymbol_t
                 pub const m_Description: usize = 0x90; // CUtlString
                 pub const m_bIsPublic: usize = 0x98; // bool
-                pub const m_ReturnType: usize = 0xA0; // CPulseValueFullType
-                pub const m_Args: usize = 0xB8; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_Args: usize = 0xA0; // CUtlLeanVector<CPulseRuntimeMethodArg>
+                pub const m_ReturnValues: usize = 0xB0; // CUtlLeanVector<CPulseRuntimeMethodArg>
             }
             // Parent: None
             // Field count: 0
@@ -718,12 +692,8 @@ pub mod cs2_dumper {
             // MPulseEditorCanvasItemSpecKV3
             pub mod CPulseCell_BooleanSwitchState {
                 pub const m_Condition: usize = 0xD8; // CPulseObservableExpression<bool>
-                pub const m_WhenTrue: usize = 0x150; // CPulse_OutflowConnection
-                pub const m_WhenFalse: usize = 0x198; // CPulse_OutflowConnection
-            }
-            // Parent: None
-            // Field count: 0
-            pub mod FakeEntityDerivedB_tAPI {
+                pub const m_WhenTrue: usize = 0x168; // CPulse_OutflowConnection
+                pub const m_WhenFalse: usize = 0x1B0; // CPulse_OutflowConnection
             }
             // Parent: None
             // Field count: 1
@@ -734,23 +704,9 @@ pub mod cs2_dumper {
                 pub const m_UnyieldResume: usize = 0xD8; // CPulse_ResumePoint
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseMathlib {
-            }
-            // Parent: None
             // Field count: 1
             pub mod CPulseCell_Unknown {
                 pub const m_UnknownKeys: usize = 0x48; // KeyValues3
-            }
-            // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseStringlib {
             }
             // Parent: None
             // Field count: 1
@@ -792,6 +748,13 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            pub mod CPulseCell_ReturnValues {
+            }
+            // Parent: None
+            // Field count: 0
+            //
+            // Metadata:
+            // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             // MPropertyDescription
             // MPulseEditorHeaderIcon
@@ -818,17 +781,6 @@ pub mod cs2_dumper {
                 pub const m_Input: usize = 0x48; // CUtlString
             }
             // Parent: None
-            // Field count: 0
-            //
-            // Metadata:
-            // MPropertyDescription
-            pub mod CPulseEnumlib {
-            }
-            // Parent: None
-            // Field count: 0
-            pub mod FakeEntityDerivedA_tAPI {
-            }
-            // Parent: None
             // Field count: 1
             //
             // Metadata:
@@ -841,7 +793,7 @@ pub mod cs2_dumper {
                 pub const m_OutflowList: usize = 0x48; // PulseSelectorOutflowList_t
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 8
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -852,6 +804,8 @@ pub mod cs2_dumper {
                 pub const m_CallMethodID: usize = 0x48; // PulseDocNodeID_t
                 pub const m_nSrcChunk: usize = 0x4C; // PulseRuntimeChunkIndex_t
                 pub const m_nSrcInstruction: usize = 0x50; // int32
+                pub const m_nBreakDestChunk: usize = 0x54; // PulseRuntimeChunkIndex_t
+                pub const m_nBreakDestInstruction: usize = 0x58; // int32
             }
             // Parent: None
             // Field count: 4
@@ -923,9 +877,9 @@ pub mod cs2_dumper {
             pub mod CPulseCell_TestYieldWithObservables {
                 pub const m_flWatchForFloatValue: usize = 0xD8; // float32
                 pub const m_LiveFloatValue: usize = 0xE0; // CPulseObservableExpression<float32>
-                pub const m_WatchForStringValue: usize = 0x158; // CUtlString
-                pub const m_LiveStringValue: usize = 0x160; // CPulseObservableExpression<CUtlString>
-                pub const m_WakeResume: usize = 0x1D8; // CPulse_ResumePoint
+                pub const m_WatchForStringValue: usize = 0x170; // CUtlString
+                pub const m_LiveStringValue: usize = 0x178; // CPulseObservableExpression<CUtlString>
+                pub const m_WakeResume: usize = 0x208; // CPulse_ResumePoint
             }
             // Parent: None
             // Field count: 1

@@ -343,16 +343,6 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCSmartProp": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "InfoForResourceTypeCSurfaceGraph": {
         "fields": {},
         "metadata": [
@@ -384,6 +374,16 @@
         "parent": null
       },
       "InfoForResourceTypeCTypeScriptResource": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "InfoForResourceTypeCVDSPResource": {
         "fields": {},
         "metadata": [
           {
@@ -533,6 +533,16 @@
         ],
         "parent": null
       },
+      "InfoForResourceTypeISmartProp": {
+        "fields": {},
+        "metadata": [
+          {
+            "name": "MResourceTypeForInfoType",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
       "InfoForResourceTypeIVectorGraphic": {
         "fields": {},
         "metadata": [
@@ -577,6 +587,43 @@
         "fields": {
           "m_child": 8,
           "m_name": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "NoiseOscillatorDef_t": {
+        "fields": {
+          "m_flAmplitude": 8,
+          "m_flFrequency": 4,
+          "m_flPhase": 0
+        },
+        "metadata": [
+          {
+            "name": "MGetKV3ClassDefaults",
+            "type": "Unknown"
+          }
+        ],
+        "parent": null
+      },
+      "NoiseStreamDef_t": {
+        "fields": {
+          "m_Oscillators": 56,
+          "m_flOffset": 36,
+          "m_flOutputMax": 16,
+          "m_flOutputMin": 12,
+          "m_flScale": 20,
+          "m_flTurbulenceMix": 48,
+          "m_flTurbulenceScale": 44,
+          "m_nModifier": 4,
+          "m_nOctaves": 40,
+          "m_nTurbulence": 8,
+          "m_nType": 0,
+          "m_vOffsetRate": 24
         },
         "metadata": [
           {
@@ -635,6 +682,39 @@
           "UINT8": 5
         },
         "type": "uint8"
+      },
+      "NoiseStreamModifier_t": {
+        "alignment": 4,
+        "members": {
+          "NOISE_STREAM_MODIFIER_CLUMPS": 2,
+          "NOISE_STREAM_MODIFIER_LINES": 1,
+          "NOISE_STREAM_MODIFIER_NONE": 0,
+          "NOISE_STREAM_MODIFIER_RINGS": 3
+        },
+        "type": "uint32"
+      },
+      "NoiseStreamTurbulence_t": {
+        "alignment": 4,
+        "members": {
+          "NOISE_STREAM_TURB_ALTERNATE": 5,
+          "NOISE_STREAM_TURB_CONTRAST": 4,
+          "NOISE_STREAM_TURB_FEEDBACK": 2,
+          "NOISE_STREAM_TURB_HIGHLIGHT": 1,
+          "NOISE_STREAM_TURB_LOOPY": 3,
+          "NOISE_STREAM_TURB_NONE": 0
+        },
+        "type": "uint32"
+      },
+      "NoiseStreamType_t": {
+        "alignment": 4,
+        "members": {
+          "NOISE_STREAM_TYPE_CURL": 3,
+          "NOISE_STREAM_TYPE_NONE": 4,
+          "NOISE_STREAM_TYPE_PERLIN": 0,
+          "NOISE_STREAM_TYPE_SIMPLEX": 1,
+          "NOISE_STREAM_TYPE_WORLEY": 2
+        },
+        "type": "uint32"
       }
     }
   }
