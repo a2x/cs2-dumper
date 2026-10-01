@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-09-29 08:54:33.699279 UTC
+// 2026-10-01 06:22:34.554410 UTC
 
 #pragma once
 
@@ -1423,7 +1423,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_ullRegisteredAsItemID = 0x608; // uint64
             }
             // Parent: C_BasePlayerWeapon
-            // Field count: 56
+            // Field count: 57
             namespace C_CSWeaponBase {
                 constexpr std::ptrdiff_t m_iWeaponGameplayAnimState = 0x19A8; // WeaponGameplayAnimState
                 constexpr std::ptrdiff_t m_flWeaponGameplayAnimStateTimestamp = 0x19AC; // GameTime_t
@@ -1448,19 +1448,20 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flPostponeFireReadyFrac = 0x1A38; // float32
                 constexpr std::ptrdiff_t m_bInReload = 0x1A3C; // bool
                 constexpr std::ptrdiff_t m_nDeployTick = 0x1A40; // GameTick_t
-                constexpr std::ptrdiff_t m_flDroppedAtTime = 0x1A44; // GameTime_t
-                constexpr std::ptrdiff_t m_bIsHauledBack = 0x1A4C; // bool
-                constexpr std::ptrdiff_t m_bSilencerOn = 0x1A4D; // bool
-                constexpr std::ptrdiff_t m_flTimeSilencerSwitchComplete = 0x1A50; // GameTime_t
-                constexpr std::ptrdiff_t m_bStealthy = 0x1A54; // bool
-                constexpr std::ptrdiff_t m_bInSilentReloadSection = 0x1A55; // bool
-                constexpr std::ptrdiff_t m_flStealthHoldStartTime = 0x1A58; // GameTime_t
-                constexpr std::ptrdiff_t m_bReloadHeldSinceStart = 0x1A5C; // bool
-                constexpr std::ptrdiff_t m_flWeaponActionPlaybackRate = 0x1A60; // float32
-                constexpr std::ptrdiff_t m_iOriginalTeamNumber = 0x1A64; // int32
-                constexpr std::ptrdiff_t m_iMostRecentTeamNumber = 0x1A68; // int32
-                constexpr std::ptrdiff_t m_bDroppedNearBuyZone = 0x1A6C; // bool
-                constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0x1A70; // float32
+                constexpr std::ptrdiff_t m_flAttackHoldStartTime = 0x1A44; // GameTime_t
+                constexpr std::ptrdiff_t m_flDroppedAtTime = 0x1A48; // GameTime_t
+                constexpr std::ptrdiff_t m_bIsHauledBack = 0x1A50; // bool
+                constexpr std::ptrdiff_t m_bSilencerOn = 0x1A51; // bool
+                constexpr std::ptrdiff_t m_flTimeSilencerSwitchComplete = 0x1A54; // GameTime_t
+                constexpr std::ptrdiff_t m_bStealthy = 0x1A58; // bool
+                constexpr std::ptrdiff_t m_bInSilentReloadSection = 0x1A59; // bool
+                constexpr std::ptrdiff_t m_flStealthHoldStartTime = 0x1A5C; // GameTime_t
+                constexpr std::ptrdiff_t m_bReloadHeldSinceStart = 0x1A60; // bool
+                constexpr std::ptrdiff_t m_flWeaponActionPlaybackRate = 0x1A64; // float32
+                constexpr std::ptrdiff_t m_iOriginalTeamNumber = 0x1A68; // int32
+                constexpr std::ptrdiff_t m_iMostRecentTeamNumber = 0x1A6C; // int32
+                constexpr std::ptrdiff_t m_bDroppedNearBuyZone = 0x1A70; // bool
+                constexpr std::ptrdiff_t m_flNextAttackRenderTimeOffset = 0x1A74; // float32
                 constexpr std::ptrdiff_t m_bClearWeaponIdentifyingUGC = 0x1B20; // bool
                 constexpr std::ptrdiff_t m_bVisualsDataSet = 0x1B21; // bool
                 constexpr std::ptrdiff_t m_bUIWeapon = 0x1B22; // bool
