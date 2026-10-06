@@ -4,15 +4,15 @@
     "AnimationSystem_001": 8615416
   },
   "client.dll": {
-    "ClientBugBugServic001_Client": 35846112,
-    "ClientToolsInfo_001": 35846064,
-    "EmptyWorldService001_Client": 35729968,
-    "GameClientExports001": 35832920,
-    "LegacyGameUI001": 35897568,
-    "Source2Client002": 39166880,
-    "Source2ClientConfig001": 38498880,
-    "Source2ClientPrediction001": 39191968,
-    "Source2ClientUI001": 35891552
+    "ClientBugBugServic001_Client": 35854304,
+    "ClientToolsInfo_001": 35854256,
+    "EmptyWorldService001_Client": 35738144,
+    "GameClientExports001": 35841112,
+    "LegacyGameUI001": 35905760,
+    "Source2Client002": 39175072,
+    "Source2ClientConfig001": 38507184,
+    "Source2ClientPrediction001": 39200528,
+    "Source2ClientUI001": 35899744
   },
   "engine2.dll": {
     "BenchmarkService001": 6433920,
@@ -93,18 +93,18 @@
   },
   "networksystem.dll": {
     "FlattenedSerializersVersion001": 2587216,
-    "NetworkMessagesVersion001": 2768656,
+    "NetworkMessagesVersion001": 2768688,
     "NetworkSystemVersion001": 2691488,
     "SerializedEntitiesVersion001": 2691728
   },
   "panorama.dll": {
-    "PanoramaUIEngine001": 5795680
+    "PanoramaUIEngine001": 5805552
   },
   "panorama_text_pango.dll": {
     "PanoramaTextServices001": 2861520
   },
   "panoramauiclient.dll": {
-    "PanoramaUIClient001": 2551952
+    "PanoramaUIClient001": 2557712
   },
   "particles.dll": {
     "ParticleSystemMgr003": 6663856
@@ -138,10 +138,10 @@
     "NavGameTest001": 31788488,
     "ServerToolsInfo_001": 31653048,
     "Source2GameClients001": 31650272,
-    "Source2GameDirector001": 33134400,
+    "Source2GameDirector001": 33134384,
     "Source2GameEntities001": 31650912,
     "Source2Server001": 31650464,
-    "Source2ServerConfig001": 34688168,
+    "Source2ServerConfig001": 34688152,
     "customnavsystem001": 31089904
   },
   "soundsystem.dll": {
