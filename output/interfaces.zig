@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-01 06:22:34.554410 UTC
+// 2026-10-06 06:58:22.576223100 UTC
 
 pub const cs2_dumper = struct {
     pub const interfaces = struct {
@@ -10,15 +10,15 @@ pub const cs2_dumper = struct {
         };
         // Module: client.dll
         pub const client_dll = struct {
-            pub const ClientBugBugServic001_Client: usize = 0x222F7E0;
-            pub const ClientToolsInfo_001: usize = 0x222F7B0;
-            pub const EmptyWorldService001_Client: usize = 0x2213230;
-            pub const GameClientExports001: usize = 0x222C458;
-            pub const LegacyGameUI001: usize = 0x223C0E0;
-            pub const Source2Client002: usize = 0x255A3A0;
-            pub const Source2ClientConfig001: usize = 0x24B7240;
-            pub const Source2ClientPrediction001: usize = 0x25605A0;
-            pub const Source2ClientUI001: usize = 0x223A960;
+            pub const ClientBugBugServic001_Client: usize = 0x22317E0;
+            pub const ClientToolsInfo_001: usize = 0x22317B0;
+            pub const EmptyWorldService001_Client: usize = 0x2215220;
+            pub const GameClientExports001: usize = 0x222E458;
+            pub const LegacyGameUI001: usize = 0x223E0E0;
+            pub const Source2Client002: usize = 0x255C3A0;
+            pub const Source2ClientConfig001: usize = 0x24B92B0;
+            pub const Source2ClientPrediction001: usize = 0x2562710;
+            pub const Source2ClientUI001: usize = 0x223C960;
         };
         // Module: engine2.dll
         pub const engine2_dll = struct {
@@ -110,13 +110,13 @@ pub const cs2_dumper = struct {
         // Module: networksystem.dll
         pub const networksystem_dll = struct {
             pub const FlattenedSerializersVersion001: usize = 0x277A50;
-            pub const NetworkMessagesVersion001: usize = 0x2A3F10;
+            pub const NetworkMessagesVersion001: usize = 0x2A3F30;
             pub const NetworkSystemVersion001: usize = 0x2911A0;
             pub const SerializedEntitiesVersion001: usize = 0x291290;
         };
         // Module: panorama.dll
         pub const panorama_dll = struct {
-            pub const PanoramaUIEngine001: usize = 0x586F60;
+            pub const PanoramaUIEngine001: usize = 0x5895F0;
         };
         // Module: panorama_text_pango.dll
         pub const panorama_text_pango_dll = struct {
@@ -124,7 +124,7 @@ pub const cs2_dumper = struct {
         };
         // Module: panoramauiclient.dll
         pub const panoramauiclient_dll = struct {
-            pub const PanoramaUIClient001: usize = 0x26F090;
+            pub const PanoramaUIClient001: usize = 0x270710;
         };
         // Module: particles.dll
         pub const particles_dll = struct {
@@ -166,10 +166,10 @@ pub const cs2_dumper = struct {
             pub const NavGameTest001: usize = 0x1E50DC8;
             pub const ServerToolsInfo_001: usize = 0x1E2FCB8;
             pub const Source2GameClients001: usize = 0x1E2F1E0;
-            pub const Source2GameDirector001: usize = 0x1F99740;
+            pub const Source2GameDirector001: usize = 0x1F99730;
             pub const Source2GameEntities001: usize = 0x1E2F460;
             pub const Source2Server001: usize = 0x1E2F2A0;
-            pub const Source2ServerConfig001: usize = 0x2114CA8;
+            pub const Source2ServerConfig001: usize = 0x2114C98;
             pub const customnavsystem001: usize = 0x1DA64F0;
         };
         // Module: soundsystem.dll
