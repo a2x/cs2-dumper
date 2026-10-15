@@ -156,12 +156,12 @@
         },
         {
           "name": "dwViewAngles",
-          "pattern": "F3 41 0F 7E 06 F3 0F 7E 4D B0 48 8D 05 ? ? ? ? 0F 58 C1",
+          "pattern": "F3 41 0F 7E 06 F3 0F 7E C9 48 8D 05 ? ? ? ? 0F 58 C1",
           "operations": [
             {
               "type": "rip",
-              "offset": 13,
-              "length": 17
+              "offset": 12,
+              "length": 16
             },
             {
               "type": "add",
