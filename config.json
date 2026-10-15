@@ -199,12 +199,12 @@
       "libengine2.so": [
         {
           "name": "dwBuildNumber",
-          "pattern": "89 15 ? ? ? ? 48 83",
+          "pattern": "55 48 89 E5 41 56 41 55 41 54 44 8B 25 ? ? ? ? 53 45 85 E4 0F 85 ? ? ? ?",
           "operations": [
             {
               "type": "rip",
-              "offset": 2,
-              "length": 6
+              "offset": 13,
+              "length": 17
             }
           ]
         },
