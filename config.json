@@ -38,10 +38,12 @@
         },
         {
           "name": "dwGameRules",
-          "pattern": "48 8B 05 ? ? ? ? 48 89 83 A0 07 00 00",
+          "pattern": "48 C7 43 30 00 00 00 00 48 8B 00 C6 43 38 00 48 89 1D ? ? ? ? 48 89 43 08 48 8D 1D ? ? ? ? 8B 3B E8 ? ? ? ? 84 C0",
           "operations": [
             {
-              "type": "rip"
+              "type": "rip",
+              "offset": 18,
+              "length": 22
             }
           ]
         },
