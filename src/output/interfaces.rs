@@ -3,7 +3,7 @@ use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{slugify, CodeWriter, Formatter, InterfaceMap};
+use super::{CodeWriter, Formatter, InterfaceMap, slugify, zig_ident};
 
 impl CodeWriter for InterfaceMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -15,12 +15,16 @@ impl CodeWriter for InterfaceMap {
                     &format!("public static class {}", AsPascalCase(slugify(module_name))),
                     false,
                     |fmt| {
-                        for iface in ifaces {
-                            writeln!(
-                                fmt,
-                                "public const nint {} = {:#X};",
-                                iface.name, iface.value
-                            )?;
+                        for (name, value) in ifaces {
+                            if *value > i32::MAX as u64 {
+                                writeln!(
+                                    fmt,
+                                    "public static readonly nint {} = unchecked((nint){:#X});",
+                                    name, value
+                                )?;
+                            } else {
+                                writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
+                            };
                         }
 
                         Ok(())
@@ -34,7 +38,8 @@ impl CodeWriter for InterfaceMap {
 
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#pragma once\n")?;
-        writeln!(fmt, "#include <cstddef>\n")?;
+        writeln!(fmt, "#include <cstddef>")?;
+        writeln!(fmt, "#include <cstdint>\n")?;
 
         fmt.block("namespace cs2_dumper", false, |fmt| {
             fmt.block("namespace interfaces", false, |fmt| {
@@ -45,12 +50,8 @@ impl CodeWriter for InterfaceMap {
                         &format!("namespace {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
-                            for iface in ifaces {
-                                writeln!(
-                                    fmt,
-                                    "constexpr std::ptrdiff_t {} = {:#X};",
-                                    iface.name, iface.value
-                                )?;
+                            for (name, value) in ifaces {
+                                writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};", name, value)?;
                             }
 
                             Ok(())
@@ -67,16 +68,14 @@ impl CodeWriter for InterfaceMap {
         let content: BTreeMap<_, _> = self
             .iter()
             .map(|(module_name, ifaces)| {
-                let ifaces: BTreeMap<_, _> = ifaces
-                    .iter()
-                    .map(|iface| (&iface.name, iface.value))
-                    .collect();
+                let ifaces: BTreeMap<_, _> =
+                    ifaces.iter().map(|(name, value)| (name, value)).collect();
 
                 (module_name, ifaces)
             })
             .collect();
 
-        fmt.write_str(&serde_json::to_string_pretty(&content).expect("failed to serialize"))
+        fmt.write_str(&serde_json::to_string_pretty(&content).unwrap())
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -91,11 +90,38 @@ impl CodeWriter for InterfaceMap {
                         &format!("pub mod {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
-                            for iface in ifaces {
+                            for (name, value) in ifaces {
+                                writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
+                            }
+
+                            Ok(())
+                        },
+                    )?;
+                }
+
+                Ok(())
+            })
+        })
+    }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+            fmt.block("pub const interfaces = struct", true, |fmt| {
+                for (module_name, ifaces) in self {
+                    writeln!(fmt, "// Module: {}", module_name)?;
+
+                    let module_name = zig_ident(&AsSnakeCase(slugify(module_name)).to_string());
+
+                    fmt.block(
+                        &format!("pub const {} = struct", module_name),
+                        true,
+                        |fmt| {
+                            for (name, value) in ifaces {
                                 writeln!(
                                     fmt,
                                     "pub const {}: usize = {:#X};",
-                                    iface.name, iface.value
+                                    zig_ident(name),
+                                    value
                                 )?;
                             }
 

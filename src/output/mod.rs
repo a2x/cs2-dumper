@@ -2,6 +2,8 @@ use std::fmt::{self, Write};
 use std::fs;
 use std::path::Path;
 
+use anyhow::{Result, anyhow};
+
 use chrono::{DateTime, Utc};
 
 use memflow::prelude::v1::*;
@@ -11,7 +13,6 @@ use serde_json::json;
 use formatter::Formatter;
 
 use crate::analysis::*;
-use crate::error::{Error, Result};
 
 mod buttons;
 mod formatter;
@@ -20,7 +21,7 @@ mod offsets;
 mod schemas;
 
 enum Item<'a> {
-    Buttons(&'a Vec<Button>),
+    Buttons(&'a ButtonMap),
     Interfaces(&'a InterfaceMap),
     Offsets(&'a OffsetMap),
     Schemas(&'a SchemaMap),
@@ -33,6 +34,7 @@ impl<'a> Item<'a> {
             "hpp" => self.write_hpp(fmt),
             "json" => self.write_json(fmt),
             "rs" => self.write_rs(fmt),
+            "zig" => self.write_zig(fmt),
             _ => unimplemented!(),
         }
     }
@@ -43,9 +45,10 @@ trait CodeWriter {
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result;
 }
 
-impl CodeWriter for Item<'_> {
+impl<'a> CodeWriter for Item<'a> {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Item::Buttons(buttons) => buttons.write_cs(fmt),
@@ -81,10 +84,19 @@ impl CodeWriter for Item<'_> {
             Item::Schemas(schemas) => schemas.write_rs(fmt),
         }
     }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        match self {
+            Item::Buttons(buttons) => buttons.write_zig(fmt),
+            Item::Interfaces(ifaces) => ifaces.write_zig(fmt),
+            Item::Offsets(offsets) => offsets.write_zig(fmt),
+            Item::Schemas(schemas) => schemas.write_zig(fmt),
+        }
+    }
 }
 
 pub struct Output<'a> {
-    file_types: &'a Vec<String>,
+    file_types: &'a [String],
     indent_size: usize,
     out_dir: &'a Path,
     result: &'a AnalysisResult,
@@ -93,12 +105,12 @@ pub struct Output<'a> {
 
 impl<'a> Output<'a> {
     pub fn new(
-        file_types: &'a Vec<String>,
+        file_types: &'a [String],
         indent_size: usize,
         out_dir: &'a Path,
         result: &'a AnalysisResult,
     ) -> Result<Self> {
-        fs::create_dir_all(out_dir)?;
+        fs::create_dir_all(&out_dir)?;
 
         Ok(Self {
             file_types,
@@ -109,7 +121,7 @@ impl<'a> Output<'a> {
         })
     }
 
-    pub fn dump_all(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<()> {
+    pub fn dump_all<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
         let items = [
             ("buttons", Item::Buttons(&self.result.buttons)),
             ("interfaces", Item::Interfaces(&self.result.interfaces)),
@@ -126,7 +138,7 @@ impl<'a> Output<'a> {
         Ok(())
     }
 
-    fn dump_info(&self, process: &mut IntoProcessInstanceArcBox<'_>) -> Result<()> {
+    fn dump_info<P: MemoryView + Process>(&self, process: &mut P) -> Result<()> {
         let file_path = self.out_dir.join("info.json");
 
         let build_number = self
@@ -135,15 +147,11 @@ impl<'a> Output<'a> {
             .iter()
             .find_map(|(module_name, offsets)| {
                 let module = process.module_by_name(module_name).ok()?;
+                let offset = offsets.iter().find(|(name, _)| *name == "dwBuildNumber")?.1;
 
-                let offset = offsets
-                    .iter()
-                    .find(|offset| offset.name == "dwBuildNumber")?
-                    .value;
-
-                process.read::<u32>(module.base + offset).ok()
+                process.read::<u32>(module.base + offset).data_part().ok()
             })
-            .unwrap_or(0);
+            .ok_or(anyhow!("failed to read build number"))?;
 
         let content = serde_json::to_string_pretty(&json!({
             "timestamp": self.timestamp.to_rfc3339(),
@@ -178,7 +186,7 @@ impl<'a> Output<'a> {
         for (module_name, (classes, enums)) in &self.result.schemas {
             let map = SchemaMap::from([(module_name.clone(), (classes.clone(), enums.clone()))]);
 
-            self.dump_item(module_name, &Item::Schemas(&map))?;
+            self.dump_item(&slugify(&module_name), &Item::Schemas(&map))?;
         }
 
         Ok(())
@@ -192,6 +200,89 @@ impl<'a> Output<'a> {
     }
 }
 
+#[inline]
 fn slugify(input: &str) -> String {
     input.replace(|c: char| !c.is_alphanumeric(), "_")
+}
+
+#[inline]
+fn zig_ident(input: &str) -> String {
+    if is_zig_identifier(input) && !is_zig_keyword(input) {
+        input.to_string()
+    } else {
+        let escaped = input.replace('\\', "\\\\").replace('"', "\\\"");
+
+        format!("@\"{}\"", escaped)
+    }
+}
+
+#[inline]
+fn is_zig_identifier(input: &str) -> bool {
+    let mut chars = input.chars();
+
+    match chars.next() {
+        Some(c) if c == '_' || c.is_ascii_alphabetic() => {}
+        _ => return false,
+    }
+
+    chars.all(|c| c == '_' || c.is_ascii_alphanumeric())
+}
+
+#[inline]
+fn is_zig_keyword(input: &str) -> bool {
+    matches!(
+        input,
+        "addrspace"
+            | "align"
+            | "allowzero"
+            | "and"
+            | "anyframe"
+            | "anytype"
+            | "asm"
+            | "async"
+            | "await"
+            | "break"
+            | "callconv"
+            | "catch"
+            | "comptime"
+            | "const"
+            | "continue"
+            | "defer"
+            | "else"
+            | "enum"
+            | "errdefer"
+            | "error"
+            | "export"
+            | "extern"
+            | "false"
+            | "fn"
+            | "for"
+            | "if"
+            | "inline"
+            | "linksection"
+            | "noalias"
+            | "noinline"
+            | "nosuspend"
+            | "null"
+            | "opaque"
+            | "or"
+            | "orelse"
+            | "packed"
+            | "pub"
+            | "resume"
+            | "return"
+            | "struct"
+            | "suspend"
+            | "switch"
+            | "test"
+            | "threadlocal"
+            | "true"
+            | "try"
+            | "union"
+            | "unreachable"
+            | "usingnamespace"
+            | "var"
+            | "volatile"
+            | "while"
+    )
 }

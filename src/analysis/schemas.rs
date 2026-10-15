@@ -1,28 +1,28 @@
 use std::collections::BTreeMap;
 use std::ffi::CStr;
 
+use anyhow::{Result, bail};
+
 use log::debug;
 
 use memflow::prelude::v1::*;
 
 use serde::{Deserialize, Serialize};
-
 use skidscan_macros::signature;
 
-use crate::error::{Error, Result};
 use crate::mem::{MemoryViewExt, PointerExt};
 use crate::source2::*;
 
 pub type SchemaMap = BTreeMap<String, (Vec<Class>, Vec<Enum>)>;
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub enum ClassMetadata {
     Unknown { name: String },
     NetworkChangeCallback { name: String },
     NetworkVarNames { name: String, type_name: String },
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Class {
     pub name: String,
     pub module_name: String,
@@ -31,92 +31,82 @@ pub struct Class {
     pub fields: Vec<ClassField>,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct ClassField {
     pub name: String,
     pub type_name: String,
     pub offset: i32,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Enum {
     pub name: String,
     pub alignment: u8,
-    pub size: i16,
+    pub size: u16,
     pub members: Vec<EnumMember>,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct EnumMember {
     pub name: String,
     pub value: i64,
 }
 
-#[derive(Clone, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct TypeScope {
     pub module_name: String,
     pub classes: Vec<Class>,
     pub enums: Vec<Enum>,
 }
 
-pub fn schemas(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaMap> {
+pub fn schemas<P: Process + MemoryView>(process: &mut P) -> Result<SchemaMap> {
     let schema_system = read_schema_system(process)?;
-    println!("SchemaSystem.registration_count = {}", schema_system.registration_count);
-    println!("SchemaSystem.type_scopes.size = {}", schema_system.type_scopes.size);
-
     let type_scopes = read_type_scopes(process, &schema_system)?;
 
-    let mut map = BTreeMap::new();
-
-    for type_scope in type_scopes {
-        println!("TypeScope: {}, classes: {}, enums: {}", type_scope.module_name, type_scope.classes.len(), type_scope.enums.len());
-        map.insert(
-            type_scope.module_name,
-            (type_scope.classes, type_scope.enums),
-        );
-    }
-
-    Ok(map)
+    Ok(type_scopes
+        .into_iter()
+        .map(|type_scope| {
+            (
+                type_scope.module_name,
+                (type_scope.classes, type_scope.enums),
+            )
+        })
+        .collect())
 }
 
 fn read_class_binding(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     binding_ptr: Pointer64<SchemaClassBinding>,
 ) -> Result<Class> {
-    let binding = binding_ptr.read(process)?;
+    let binding = mem.read_ptr(binding_ptr).data_part()?;
 
-    let module_name = binding
-        .module_name
-        .read_string(process)
-        .map(|s| format!("{}.so", s))?;
+    let module_name = mem
+        .read_utf8_lossy(binding.module_name.address(), 128)
+        .data_part()
+        .map(|m| format!("{}.so", m))?;
 
-    let name = binding.name.read_string(process)?.to_string();
+    let name = mem
+        .read_utf8_lossy(binding.name.address(), 128)
+        .data_part()?;
 
     if name.is_empty() {
-        return Err(Error::Other("empty class name"));
+        bail!("invalid class name");
     }
 
     let parent_name = binding.base_classes.non_null().and_then(|ptr| {
-        let base_class = ptr.read(process).ok()?;
-        let parent_class = base_class.class.read(process).ok()?;
+        let base_class = mem.read_ptr(ptr).data_part().ok()?;
+        let parent_class = mem.read_ptr(base_class.class).data_part().ok()?;
 
-        let parent_name = parent_class.name.read_string(process).ok()?.to_string();
+        let parent_name = mem
+            .read_utf8_lossy(parent_class.name.address(), 128)
+            .data_part()
+            .ok()?;
 
         (!parent_name.is_empty()).then_some(parent_name)
     });
 
-    let fields = read_class_binding_fields(process, &binding)?;
-    let metadata = read_class_binding_metadata(process, &binding)?;
-
-    debug!(
-        "found class: {} at {:#X} (module name: {}) (parent name: {:?}) (metadata count: {}) (fields count: {})",
-        name,
-        binding_ptr.to_umem(),
-        module_name,
-        parent_name,
-        metadata.len(),
-        fields.len(),
-    );
+    let fields = read_class_binding_fields(mem, &binding)?;
+    let metadata = read_class_binding_metadata(mem, &binding)?;
 
     Ok(Class {
         name,
@@ -128,7 +118,7 @@ fn read_class_binding(
 }
 
 fn read_class_binding_fields(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     binding: &SchemaClassBinding,
 ) -> Result<Vec<ClassField>> {
     if binding.fields.is_null() {
@@ -136,17 +126,19 @@ fn read_class_binding_fields(
     }
 
     (0..binding.field_count).try_fold(Vec::new(), |mut acc, i| {
-        let field = binding.fields.at(i as _).read(process)?;
+        let field = mem.read_ptr(binding.fields.at(i as _)).data_part()?;
 
         if field.r#type.is_null() {
             return Ok(acc);
         }
 
-        let name = field.name.read_string(process)?.to_string();
-        let schema_type = field.r#type.read(process)?;
+        let name = mem.read_utf8_lossy(field.name.address(), 128).data_part()?;
+        let r#type = mem.read_ptr(field.r#type).data_part()?;
 
-        // TODO: Parse this properly.
-        let type_name = schema_type.name.read_string(process)?.replace(" ", "");
+        let type_name = mem
+            .read_utf8_lossy(r#type.name.address(), 128)
+            .data_part()?
+            .replace(" ", "");
 
         acc.push(ClassField {
             name,
@@ -159,7 +151,7 @@ fn read_class_binding_fields(
 }
 
 fn read_class_binding_metadata(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     binding: &SchemaClassBinding,
 ) -> Result<Vec<ClassMetadata>> {
     if binding.static_metadata.is_null() {
@@ -167,30 +159,39 @@ fn read_class_binding_metadata(
     }
 
     (0..binding.static_metadata_count).try_fold(Vec::new(), |mut acc, i| {
-        let metadata = binding.static_metadata.at(i as _).read(process)?;
+        let metadata = mem
+            .read_ptr(binding.static_metadata.at(i as _))
+            .data_part()?;
 
         if metadata.network_value.is_null() {
             return Ok(acc);
         }
 
-        let name = metadata.name.read_string(process)?.to_string();
-        let network_value = metadata.network_value.read(process)?;
+        let name = mem
+            .read_utf8_lossy(metadata.name.address(), 128)
+            .data_part()?;
+
+        let network_value = mem.read_ptr(metadata.network_value).data_part()?;
 
         let metadata = match name.as_str() {
             "MNetworkChangeCallback" => unsafe {
-                let name = network_value
-                    .value
-                    .name_ptr
-                    .read_string(process)?
-                    .to_string();
+                let name = mem
+                    .read_utf8_lossy(network_value.value.name_ptr.address(), 128)
+                    .data_part()?;
 
                 ClassMetadata::NetworkChangeCallback { name }
             },
             "MNetworkVarNames" => unsafe {
                 let var_value = network_value.value.var_value;
 
-                let name = var_value.name.read_string(process)?.to_string();
-                let type_name = var_value.type_name.read_string(process)?.replace(" ", "");
+                let name = mem
+                    .read_utf8_lossy(var_value.name.address(), 128)
+                    .data_part()?;
+
+                let type_name = mem
+                    .read_utf8_lossy(var_value.type_name.address(), 128)
+                    .data_part()?
+                    .replace(" ", "");
 
                 ClassMetadata::NetworkVarNames { name, type_name }
             },
@@ -204,36 +205,31 @@ fn read_class_binding_metadata(
 }
 
 fn read_enum_binding(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     binding_ptr: Pointer64<SchemaEnumBinding>,
 ) -> Result<Enum> {
-    let binding = binding_ptr.read(process)?;
-    let name = binding.name.read_string(process)?.to_string();
+    let binding = mem.read_ptr(binding_ptr).data_part()?;
+
+    let name = mem
+        .read_utf8_lossy(binding.name.address(), 128)
+        .data_part()?;
 
     if name.is_empty() {
-        return Err(Error::Other("empty enum name"));
+        bail!("invalid enum name");
     }
 
-    let members = read_enum_binding_members(process, &binding)?;
-
-    debug!(
-        "found enum: {} at {:#X} (alignment: {}) (members count: {})",
-        name,
-        binding_ptr.to_umem(),
-        binding.alignment,
-        binding.enumerator_count,
-    );
+    let members = read_enum_binding_members(mem, &binding)?;
 
     Ok(Enum {
         name,
         alignment: binding.alignment,
-        size: binding.enumerator_count as i16,
+        size: binding.enumerator_count,
         members,
     })
 }
 
 fn read_enum_binding_members(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     binding: &SchemaEnumBinding,
 ) -> Result<Vec<EnumMember>> {
     if binding.enumerators.is_null() {
@@ -241,67 +237,80 @@ fn read_enum_binding_members(
     }
 
     (0..binding.enumerator_count).try_fold(Vec::new(), |mut acc, i| {
-        let enumerator = binding.enumerators.at(i as _).read(process)?;
-        let name = enumerator.name.read_string(process)?.to_string();
+        let r#enum = mem.read_ptr(binding.enumerators.at(i as _)).data_part()?;
+
+        let name = mem
+            .read_utf8_lossy(r#enum.name.address(), 128)
+            .data_part()?;
 
         acc.push(EnumMember {
             name,
-            value: unsafe { enumerator.value.ulong } as i64,
+            value: unsafe { r#enum.value.ulong } as i64,
         });
 
         Ok(acc)
     })
 }
 
-fn read_schema_system(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<SchemaSystem> {
+fn read_schema_system<P: Process + MemoryView>(process: &mut P) -> Result<SchemaSystem> {
     let module = process.module_by_name("libschemasystem.so")?;
-    let buf = process.read_raw(module.base, module.size as _)?;
+    let buf = process
+        .read_raw(module.base, module.size as _)
+        .data_part()?;
 
     let list_addr = signature!("48 8B 1D ? ? ? ? 48 85 DB 74 ? 49 89 FC")
         .scan(&buf)
         .and_then(|result| process.read_addr64_rip(module.base + result).ok())
-        .ok_or(Error::Other("unable to find interface list address in libschemasystem.so"))?;
+        .ok_or_else(|| anyhow::anyhow!("unable to locate SchemaSystem interface list"))?;
 
-    let mut cur_reg = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
-    while !cur_reg.is_null() {
-        let reg = cur_reg.read(process)?;
-        let name = reg.name.read_string(process)?;
-        if name == "SchemaSystem_001" {
-            let code = process.read_raw(reg.create_fn.address(), 7)?;
-            if code.starts_with(&[0x48, 0x8B, 0x05]) || code.starts_with(&[0x48, 0x8D, 0x05]) {
-                let disp = i32::from_le_bytes(code[3..7].try_into().unwrap());
-                let instance_addr = Address::from(reg.create_fn.address().to_umem() + 7 + disp as i64 as u64);
-                if code.starts_with(&[0x48, 0x8D, 0x05]) {
-                    let schema_system: SchemaSystem = process.read(instance_addr)?;
-                    if schema_system.registration_count > 0 {
-                        return Ok(schema_system);
+    let list_head = process.read_addr64(list_addr).data_part()?;
+    let mut reg_ptr = Pointer64::<InterfaceReg>::from(list_head);
+
+    while !reg_ptr.is_null() {
+        let reg = process.read_ptr(reg_ptr).data_part()?;
+
+        if reg.name.read_string(process)?.to_string() == "SchemaSystem_001" {
+            let code = process.read_raw(reg.create_fn.address(), 7).data_part()?;
+            let is_mov = code.starts_with(&[0x48, 0x8B, 0x05]);
+            let is_lea = code.starts_with(&[0x48, 0x8D, 0x05]);
+
+            if is_mov || is_lea {
+                let instance_addr = process.read_addr64_rip(reg.create_fn.address())?;
+                let schema_system = if is_mov {
+                    let ptr: Pointer64<SchemaSystem> = process.read(instance_addr).data_part()?;
+
+                    if ptr.is_null() {
+                        None
+                    } else {
+                        Some(process.read_ptr(ptr).data_part()?)
                     }
                 } else {
-                    let ptr = process.read::<Pointer64<SchemaSystem>>(instance_addr)?;
-                    if !ptr.is_null() {
-                        let schema_system = ptr.read(process)?;
-                        if schema_system.registration_count > 0 {
-                            return Ok(schema_system);
-                        }
-                    }
+                    Some(process.read(instance_addr).data_part()?)
+                };
+
+                if let Some(schema_system) =
+                    schema_system.filter(|schema_system| schema_system.registration_count != 0)
+                {
+                    return Ok(schema_system);
                 }
             }
         }
-        cur_reg = reg.next;
+
+        reg_ptr = reg.next;
     }
 
-    Err(Error::Other("unable to read schema system address via interfaces"))
+    bail!("unable to read SchemaSystem through SchemaSystem_001")
 }
 
 fn read_type_scopes(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     schema_system: &SchemaSystem,
 ) -> Result<Vec<TypeScope>> {
     let type_scopes = &schema_system.type_scopes;
 
-    (0..type_scopes.size).try_fold(Vec::new(), |mut acc, i| {
-        let type_scope_ptr = type_scopes.element(process, i as _)?;
-        let type_scope = type_scope_ptr.read(process)?;
+    (0..type_scopes.count).try_fold(Vec::new(), |mut acc, i| {
+        let type_scope_ptr = type_scopes.element(mem, i as _)?;
+        let type_scope = mem.read_ptr(type_scope_ptr).data_part()?;
 
         let module_name = unsafe { CStr::from_ptr(type_scope.name.as_ptr()) }
             .to_string_lossy()
@@ -309,16 +318,16 @@ fn read_type_scopes(
 
         let classes: Vec<_> = type_scope
             .class_bindings
-            .elements(process)
+            .elements(mem)
             .iter()
-            .filter_map(|ptr| read_class_binding(process, *ptr).ok())
+            .filter_map(|ptr| read_class_binding(mem, *ptr).ok())
             .collect();
 
         let enums: Vec<_> = type_scope
             .enum_bindings
-            .elements(process)
+            .elements(mem)
             .iter()
-            .filter_map(|ptr| read_enum_binding(process, *ptr).ok())
+            .filter_map(|ptr| read_enum_binding(mem, *ptr).ok())
             .collect();
 
         if classes.is_empty() && enums.is_empty() {
@@ -326,9 +335,8 @@ fn read_type_scopes(
         }
 
         debug!(
-            "found type scope: {} at {:#X} (classes count: {}) (enums count: {})",
+            "module \"{}\" contains {} class(es) and {} enum(s)",
             module_name,
-            type_scope_ptr.to_umem(),
             classes.len(),
             enums.len(),
         );
