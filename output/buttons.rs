@@ -1,11 +1,11 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-09 21:54:28.505310310 UTC
+// 2026-10-15 18:48:09.569746654 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
 pub mod cs2_dumper {
-    // Module: client.dll
+    // Module: libclient.so
     pub mod buttons {
-        pub const : usize = 0xDE284353;
+        pub const : usize = 0x6567F8075D484353;
     }
 }

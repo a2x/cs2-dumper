@@ -1,9 +1,9 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-07-09 21:54:28.505310310 UTC
+// 2026-10-15 18:48:09.569746654 UTC
 
 namespace CS2Dumper {
-    // Module: client.dll
+    // Module: libclient.so
     public static class Buttons {
-        public const nint  = 0xDE284353;
+        public const nint  = 0x6567F8075D484353;
     }
 }
