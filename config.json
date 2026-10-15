@@ -3,7 +3,6 @@
   "signatures": [
     {
       "libclient.so": [
-
         {
           "name": "dwEntityList",
           "pattern": "3B 72 10 75 0E 48 83 3A 00 0F 95 C0 C3",
@@ -209,12 +208,12 @@
         },
         {
           "name": "dwNetworkGameClient",
-          "pattern": "48 8D 15 ? ? ? ? 48 8D 35 ? ? ? ? 48 8D 3D ? ? ? ? E8 3E FA 0F 00",
+          "pattern": "4C 89 25 ? ? ? ? 48 8B 03 48 89 DF 48 8D 35 ? ? ? ? FF 90 50 02 00 00",
           "operations": [
             {
               "type": "rip",
-              "offset": 17,
-              "length": 21
+              "offset": 3,
+              "length": 7
             }
           ]
         },
