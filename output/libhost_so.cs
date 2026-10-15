@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-15 18:48:09.569746654 UTC
+// 2026-10-15 20:28:01.381534584 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: libhost.so
