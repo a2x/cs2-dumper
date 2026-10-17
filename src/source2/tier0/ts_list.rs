@@ -1,4 +1,4 @@
-use memflow::prelude::v1::Pointer64;
+use memflow::types::Pointer64;
 
 #[repr(C)]
 pub struct TsListNode;

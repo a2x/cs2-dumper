@@ -2,7 +2,7 @@ use std::fmt::{self, Write};
 
 use heck::{AsPascalCase, AsSnakeCase};
 
-use super::{slugify, CodeWriter, Formatter, OffsetMap};
+use super::{CodeWriter, Formatter, OffsetMap, slugify, zig_ident};
 
 impl CodeWriter for OffsetMap {
     fn write_cs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -14,12 +14,8 @@ impl CodeWriter for OffsetMap {
                     &format!("public static class {}", AsPascalCase(slugify(module_name))),
                     false,
                     |fmt| {
-                        for offset in offsets {
-                            writeln!(
-                                fmt,
-                                "public const nint {} = {:#X};",
-                                offset.name, offset.value
-                            )?;
+                        for (name, value) in offsets {
+                            writeln!(fmt, "public const nint {} = {:#X};", name, value)?;
                         }
 
                         Ok(())
@@ -33,7 +29,8 @@ impl CodeWriter for OffsetMap {
 
     fn write_hpp(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
         writeln!(fmt, "#pragma once\n")?;
-        writeln!(fmt, "#include <cstddef>\n")?;
+        writeln!(fmt, "#include <cstddef>")?;
+        writeln!(fmt, "#include <cstdint>\n")?;
 
         fmt.block("namespace cs2_dumper", false, |fmt| {
             fmt.block("namespace offsets", false, |fmt| {
@@ -44,12 +41,8 @@ impl CodeWriter for OffsetMap {
                         &format!("namespace {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
-                            for offset in offsets {
-                                writeln!(
-                                    fmt,
-                                    "constexpr std::ptrdiff_t {} = {:#X};",
-                                    offset.name, offset.value
-                                )?;
+                            for (name, value) in offsets {
+                                writeln!(fmt, "constexpr std::ptrdiff_t {} = {:#X};", name, value)?;
                             }
 
                             Ok(())
@@ -63,7 +56,7 @@ impl CodeWriter for OffsetMap {
     }
 
     fn write_json(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
-        fmt.write_str(&serde_json::to_string_pretty(self).expect("failed to serialize"))
+        fmt.write_str(&serde_json::to_string_pretty(self).unwrap())
     }
 
     fn write_rs(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
@@ -78,11 +71,38 @@ impl CodeWriter for OffsetMap {
                         &format!("pub mod {}", AsSnakeCase(slugify(module_name))),
                         false,
                         |fmt| {
-                            for offset in offsets {
+                            for (name, value) in offsets {
+                                writeln!(fmt, "pub const {}: usize = {:#X};", name, value)?;
+                            }
+
+                            Ok(())
+                        },
+                    )?;
+                }
+
+                Ok(())
+            })
+        })
+    }
+
+    fn write_zig(&self, fmt: &mut Formatter<'_>) -> fmt::Result {
+        fmt.block("pub const cs2_dumper = struct", true, |fmt| {
+            fmt.block("pub const offsets = struct", true, |fmt| {
+                for (module_name, offsets) in self {
+                    writeln!(fmt, "// Module: {}", module_name)?;
+
+                    let module_name = zig_ident(&AsSnakeCase(slugify(module_name)).to_string());
+
+                    fmt.block(
+                        &format!("pub const {} = struct", module_name),
+                        true,
+                        |fmt| {
+                            for (name, value) in offsets {
                                 writeln!(
                                     fmt,
                                     "pub const {}: usize = {:#X};",
-                                    offset.name, offset.value
+                                    zig_ident(name),
+                                    value
                                 )?;
                             }
 

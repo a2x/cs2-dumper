@@ -31,7 +31,7 @@ pub struct UtlTsHashBucket<D, K> {
 }
 
 #[repr(C)]
-pub struct UtlTsHash<D, const C: usize = 768, K = u64> {
+pub struct UtlTsHash<D, const C: usize = 256, K = u64> {
     pub entry_mem: UtlMemoryPool,            // 0x0000
     pub buckets: [UtlTsHashBucket<D, K>; C], // 0x0060
     pub needs_commit: bool,                  // 0x1860
@@ -67,7 +67,7 @@ impl<D: Pod, const C: usize, K: Pod> UtlTsHash<D, C, K> {
             let mut node_ptr = bucket.first_uncommitted;
 
             while !node_ptr.is_null() {
-                let node = match node_ptr.read(mem) {
+                let node = match mem.read_ptr(node_ptr).data_part() {
                     Ok(n) => n,
                     Err(_) => break,
                 };
@@ -97,7 +97,7 @@ impl<D: Pod, const C: usize, K: Pod> UtlTsHash<D, C, K> {
         );
 
         while !blob_ptr.is_null() {
-            let blob = match blob_ptr.read(mem) {
+            let blob = match mem.read_ptr(blob_ptr).data_part() {
                 Ok(b) => b,
                 Err(_) => break,
             };

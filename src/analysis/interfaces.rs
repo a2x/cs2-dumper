@@ -1,37 +1,27 @@
 use std::collections::BTreeMap;
 
+use anyhow::Result;
 use log::debug;
-
 use memflow::prelude::v1::*;
-
-use serde::{Deserialize, Serialize};
-
 use skidscan_macros::signature;
 
-use crate::error::Result;
 use crate::mem::{MemoryViewExt, PointerExt};
 use crate::source2::InterfaceReg;
 
-pub type InterfaceMap = BTreeMap<String, Vec<Interface>>;
+pub type InterfaceMap = BTreeMap<String, BTreeMap<String, umem>>;
 
-#[derive(Deserialize, Serialize)]
-pub struct Interface {
-    pub name: String,
-    pub value: u32,
-}
-
-pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<InterfaceMap> {
+pub fn interfaces<P: Process + MemoryView>(process: &mut P) -> Result<InterfaceMap> {
     process
         .module_list()?
         .iter()
         .filter_map(|module| {
             let buf = process.read_raw(module.base, module.size as _).ok()?;
-
             let list_addr = signature!("48 8B 1D ? ? ? ? 48 85 DB 74 ? 49 89 FC")
                 .scan(&buf)
                 .and_then(|result| process.read_addr64_rip(module.base + result).ok())?;
+            let list_head = process.read_addr64(list_addr).data_part().ok()?;
 
-            read_interfaces(process, module, list_addr)
+            read_interfaces(process, module, list_head)
                 .ok()
                 .filter(|ifaces| !ifaces.is_empty())
                 .map(|ifaces| Ok((module.name.to_string(), ifaces)))
@@ -40,34 +30,35 @@ pub fn interfaces(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Interfa
 }
 
 fn read_interfaces(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     module: &ModuleInfo,
-    list_addr: Address,
-) -> Result<Vec<Interface>> {
-    let mut ifaces = Vec::new();
+    list_head: Address,
+) -> Result<BTreeMap<String, umem>> {
+    let mut result = BTreeMap::new();
+    let mut reg_ptr = Pointer64::<InterfaceReg>::from(list_head);
 
-    let mut cur_reg = Pointer64::<InterfaceReg>::from(process.read_addr64(list_addr)?);
+    while !reg_ptr.is_null() {
+        let reg = mem.read_ptr(reg_ptr).data_part()?;
+        let name = reg.name.read_string(mem)?.to_string();
+        let value = reg
+            .create_fn
+            .address()
+            .to_umem()
+            .checked_sub(module.base.to_umem());
 
-    while !cur_reg.is_null() {
-        let reg = cur_reg.read(process)?;
-        let name = reg.name.read_string(process)?.to_string();
+        if let Some(value) = value {
+            debug!(
+                "found interface: {} at {:#X} ({} + {:#X})",
+                name,
+                value + module.base.to_umem(),
+                module.name,
+                value
+            );
+            result.insert(name, value);
+        }
 
-        let value = (reg.create_fn.address() - module.base) as u32;
-
-        debug!(
-            "found interface: {} at {:#X} ({} + {:#X})",
-            name,
-            value as u64 + module.base.to_umem(),
-            module.name,
-            value
-        );
-
-        ifaces.push(Interface { name, value });
-
-        cur_reg = reg.next;
+        reg_ptr = reg.next;
     }
 
-    ifaces.sort_unstable_by(|a, b| a.name.cmp(&b.name));
-
-    Ok(ifaces)
+    Ok(result)
 }

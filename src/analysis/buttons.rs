@@ -1,63 +1,62 @@
+use std::collections::BTreeMap;
+
+use anyhow::{Result, bail};
 use log::debug;
-
 use memflow::prelude::v1::*;
-
-use serde::{Deserialize, Serialize};
-
 use skidscan_macros::signature;
 
-use crate::error::{Error, Result};
 use crate::mem::{MemoryViewExt, PointerExt};
 use crate::source2::KeyButton;
 
-#[derive(Deserialize, Serialize)]
-pub struct Button {
-    pub name: String,
-    pub value: u32,
-}
+pub type ButtonMap = BTreeMap<String, umem>;
 
-pub fn buttons(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<Vec<Button>> {
+pub fn buttons<P: Process + MemoryView>(process: &mut P) -> Result<ButtonMap> {
     let module = process.module_by_name("libclient.so")?;
-    let buf = process.read_raw(module.base, module.size as _)?;
+    let buf = process
+        .read_raw(module.base, module.size as _)
+        .data_part()?;
 
     let list_addr = signature!("48 8D 15 ? ? ? ? 66 44 89 ? ? 48 8D 35")
         .scan(&buf)
         .and_then(|result| process.read_addr64_rip(module.base + result).ok())
-        .ok_or(Error::Other("unable to read button list address"))?;
+        .ok_or_else(|| anyhow::anyhow!("unable to read button list address"))?;
 
-    read_buttons(process, &module, list_addr)
+    let list_head = process.read_addr64(list_addr).data_part()?;
+
+    read_buttons(process, &module, list_head)
 }
 
 fn read_buttons(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+    mem: &mut impl MemoryView,
     module: &ModuleInfo,
-    list_addr: Address,
-) -> Result<Vec<Button>> {
-    let mut buttons = Vec::new();
+    list_head: Address,
+) -> Result<ButtonMap> {
+    let mut result = ButtonMap::new();
+    let mut button_ptr = Pointer64::<KeyButton>::from(list_head);
 
-    let mut cur_button = Pointer64::<KeyButton>::from(process.read_addr64(list_addr)?);
+    while !button_ptr.is_null() {
+        let button = mem.read_ptr(button_ptr).data_part()?;
+        let name = button.name.read_string(mem)?.to_string();
+        let state_addr = button_ptr.address() + offset_of!(KeyButton.state);
 
-    while !cur_button.is_null() {
-        let button = cur_button.read(process)?;
-        let name = button.name.read_string(process)?.to_string();
+        if let Some(state_rva) = state_addr.to_umem().checked_sub(module.base.to_umem()) {
+            debug!(
+                "found button: {} at {:#X} ({} + {:#X})",
+                name,
+                state_addr.to_umem(),
+                module.name,
+                state_rva
+            );
 
-        let value =
-            ((cur_button.address() - module.base) + offset_of!(KeyButton.state) as i64) as u32;
+            result.insert(name, state_rva);
+        }
 
-        debug!(
-            "found button: {} at {:#X} ({} + {:#X})",
-            name,
-            value as u64 + module.base.to_umem(),
-            module.name,
-            value
-        );
-
-        buttons.push(Button { name, value });
-
-        cur_button = button.next;
+        button_ptr = button.next;
     }
 
-    buttons.sort_unstable_by(|a, b| a.name.cmp(&b.name));
+    if result.is_empty() {
+        bail!("no buttons found in {}", module.name);
+    }
 
-    Ok(buttons)
+    Ok(result)
 }

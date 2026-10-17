@@ -1,5 +1,6 @@
 /.idea
 /.vscode
+/.vs
 /target
 Cargo.lock
-/scratch
+cs2-dumper.exe

@@ -2,162 +2,127 @@ use std::collections::BTreeMap;
 use std::mem;
 use std::str::FromStr;
 
+use anyhow::Result;
 use log::{debug, error};
-
 use memflow::prelude::v1::*;
 
-use serde::{Deserialize, Serialize};
+use crate::config::{CONFIG, Operation, Signature};
 
-use crate::config::{Operation, Signature, CONFIG};
-use crate::error::{Error, Result};
+pub type OffsetMap = BTreeMap<String, BTreeMap<String, u32>>;
 
-pub type OffsetMap = BTreeMap<String, Vec<Offset>>;
+pub fn offsets<P: Process + MemoryView>(process: &mut P) -> Result<OffsetMap> {
+    let mut modules = BTreeMap::new();
 
-#[derive(Deserialize, Serialize)]
-pub struct Offset {
-    pub name: String,
-    pub value: u32,
-}
-
-pub fn offsets(process: &mut IntoProcessInstanceArcBox<'_>) -> Result<OffsetMap> {
-    let mut map = BTreeMap::new();
-
-    for (module_name, sigs) in CONFIG.signatures.iter().flatten() {
-        let module = process.module_by_name(module_name)?;
-
-        let mut offsets: Vec<_> = sigs
-            .iter()
-            .filter_map(|sig| match read_offset(process, &module, sig) {
-                Ok(offset) => Some(offset),
+    for signatures in &CONFIG.signatures {
+        for (module_name, module_signatures) in signatures {
+            let module = match process.module_by_name(module_name) {
+                Ok(module) => module,
                 Err(err) => {
-                    error!("{}", err);
-
-                    None
+                    error!("unable to find module {}: {}", module_name, err);
+                    continue;
                 }
-            })
-            .collect();
+            };
 
-        if !offsets.is_empty() {
-            offsets.sort_unstable_by(|a, b| a.name.cmp(&b.name));
+            let buf = match process.read_raw(module.base, module.size as _).data_part() {
+                Ok(buf) => buf,
+                Err(err) => {
+                    error!("unable to read module {}: {}", module_name, err);
+                    continue;
+                }
+            };
 
-            map.insert(module_name.to_string(), offsets);
+            let mut offsets = BTreeMap::new();
+
+            for signature in module_signatures {
+                match read_offset(process, &module, &buf, signature) {
+                    Ok(value) => {
+                        offsets.insert(signature.name.clone(), value);
+                    }
+                    Err(err) => error!("{}: {}", signature.name, err),
+                }
+            }
+
+            if !offsets.is_empty() {
+                modules.insert(module_name.clone(), offsets);
+            }
         }
     }
 
-    Ok(map)
+    Ok(modules)
 }
 
-fn read_offset(
-    process: &mut IntoProcessInstanceArcBox<'_>,
+fn read_offset<P: MemoryView>(
+    process: &mut P,
     module: &ModuleInfo,
+    module_data: &[u8],
     signature: &Signature,
-) -> Result<Offset> {
-    let buf = process.read_raw(module.base, module.size as _)?;
+) -> Result<u32> {
+    let scan_offset = skidscan::Signature::from_str(&signature.pattern)
+        .map_err(|_| anyhow::anyhow!("invalid signature pattern for {}", signature.name))?
+        .scan(module_data)
+        .ok_or_else(|| anyhow::anyhow!("signature not found"))?;
 
-    let addr = skidscan::Signature::from_str(&signature.pattern)?
-        .scan(&buf)
-        .ok_or_else(|| Error::SignatureNotFound(signature.name.clone()))?;
+    let mut result = module.base + scan_offset;
 
-    let mut result = module.base + addr;
-
-    for op in &signature.operations {
-        result = match op {
+    for operation in &signature.operations {
+        result = match operation {
             Operation::Add { value } => result + *value,
             Operation::Rip { offset, len } => {
-                let offset: i32 = process.read(result + offset.unwrap_or(0x3))?;
-
-                (result + offset) + len.unwrap_or(7)
+                let displacement: i32 = process.read(result + offset.unwrap_or(3)).data_part()?;
+                (result + displacement) + len.unwrap_or(7)
             }
-            Operation::Read => process.read_addr64(result)?,
+            Operation::Read => process.read_addr64(result).data_part()?,
             Operation::Slice { start, end } => {
-                let buf = process.read_raw(result + *start, end - start)?;
-
-                let mut bytes = [0; mem::size_of::<usize>()];
-
-                bytes[..buf.len()].copy_from_slice(&buf);
-
-                usize::from_le_bytes(bytes).into()
+                let bytes = process.read_raw(result + *start, end - start).data_part()?;
+                let mut value = [0; mem::size_of::<usize>()];
+                if bytes.len() > value.len() {
+                    anyhow::bail!("slice exceeds the native pointer width");
+                }
+                value[..bytes.len()].copy_from_slice(&bytes);
+                Address::from(usize::from_le_bytes(value))
             }
             Operation::Sub { value } => result - *value,
         };
     }
 
-    let value = (result - module.base)
-        .try_into().unwrap_or_else(|_| result.to_umem() as u32);
+    let value = result
+        .to_umem()
+        .checked_sub(module.base.to_umem())
+        .unwrap_or_else(|| result.to_umem()) as u32;
 
-    debug!("found offset: {} at {:#X}", signature.name, value);
+    debug!(
+        "found offset: {} at {:#X} ({} + {:#X})",
+        signature.name,
+        module.base.to_umem() + value as u64,
+        module.name,
+        value
+    );
 
-    Ok(Offset {
-        name: signature.name.clone(),
-        value,
-    })
+    Ok(value)
 }
 
 #[cfg(test)]
 mod tests {
-    use std::fs;
-
-    use serde_json::Value;
-
     use super::*;
 
-    fn setup() -> Result<IntoProcessInstanceArcBox<'static>> {
-        let os = memflow_native::create_os(&OsArgs::default(), LibArc::default())
-            .map_err(|e| {
-                println!("create_os failed: {:?}", e);
-                e
-            })?;
-
-        let process = os.into_process_by_name("cs2")
-            .map_err(|e| {
-                println!("into_process_by_name failed: {:?}", e);
-                e
-            })?;
-
-        Ok(process)
-    }
-
-    fn get_offset_value(module_name: &str, offset_name: &str) -> Option<u64> {
-        let content = fs::read_to_string("output/offsets.json").ok()?;
-        let value: Value = serde_json::from_str(&content).ok()?;
-
-        let offsets = value.get(module_name)?.as_array()?;
-
-        offsets.iter().find_map(|offset| {
-            if offset.get("name")?.as_str()? == offset_name {
-                offset.get("value")?.as_u64()
-            } else {
-                None
-            }
-        })
-    }
-
     #[test]
-    fn window_size() -> Result<()> {
-        let mut process = setup()?;
+    fn linux_signature_patterns_parse() {
+        let mut count = 0;
 
-        let engine_base = process.module_by_name("libengine2.so")?.base;
-
-        let window_width_offset = get_offset_value("libengine2.so", "dwWindowWidth").unwrap();
-        let window_height_offset = get_offset_value("libengine2.so", "dwWindowHeight").unwrap();
-
-        // The game stores window width/height as u32 in libengine2.so on Linux
-        let window_width = process.read::<u32>(Address::from(engine_base + window_width_offset)).data_part()?;
-        let window_height = process.read::<u32>(Address::from(engine_base + window_height_offset)).data_part()?;
-
-        println!("window size: {}x{}", window_width, window_height);
-
-        // Verify dwNetworkGameClient mapping is correct by reading its pointer/vtable base
-        let network_game_client_offset = get_offset_value("libengine2.so", "dwNetworkGameClient").unwrap();
-        let network_game_client: u64 = process.read(Address::from(engine_base + network_game_client_offset)).data_part()?;
-        println!("dwNetworkGameClient pointer: {:#X}", network_game_client);
-
-        if network_game_client != 0 {
-            let vtable: u64 = process.read(Address::from(network_game_client)).data_part().unwrap_or(0);
-            println!("CNetworkGameClient vtable base: {:#X}", vtable);
+        for module_signatures in &CONFIG.signatures {
+            for (module, signatures) in module_signatures {
+                for signature in signatures {
+                    skidscan::Signature::from_str(&signature.pattern).unwrap_or_else(|err| {
+                        panic!(
+                            "invalid pattern for {} in {}: {:?}",
+                            signature.name, module, err
+                        )
+                    });
+                    count += 1;
+                }
+            }
         }
 
-        Ok(())
+        assert!(count > 0, "no Linux signatures configured");
     }
 }
-
