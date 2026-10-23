@@ -413,16 +413,6 @@
         ],
         "parent": null
       },
-      "InfoForResourceTypeCVMixListResource": {
-        "fields": {},
-        "metadata": [
-          {
-            "name": "MResourceTypeForInfoType",
-            "type": "Unknown"
-          }
-        ],
-        "parent": null
-      },
       "InfoForResourceTypeCVPhysXSurfacePropertiesList": {
         "fields": {},
         "metadata": [
