@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-15 13:10:38.711921300 UTC
+// 2026-10-23 17:14:58.380890300 UTC
 
 #pragma once
 
@@ -10,8 +10,14 @@ namespace cs2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
         // Class count: 158
-        // Enum count: 34
+        // Enum count: 35
         namespace soundsystem_dll {
+            // Alignment: 1
+            // Member count: 2
+            enum class VMixUpMixRule_t : uint8_t {
+                DIVIDE = 0x0,
+                BROADCAST = 0x1
+            };
             // Alignment: 4
             // Member count: 3
             enum class SndSeqInstrumentType_t : uint32_t {
@@ -395,9 +401,9 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerBlender {
-                constexpr std::ptrdiff_t m_firstSound = 0x70; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_secondSound = 0x90; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_flBlendFactor = 0xB0; // float32
+                constexpr std::ptrdiff_t m_firstSound = 0x78; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_secondSound = 0x98; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_flBlendFactor = 0xB8; // float32
             }
             // Parent: None
             // Field count: 2
@@ -481,12 +487,12 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerRandomSampler {
-                constexpr std::ptrdiff_t m_flAmplitude = 0x80; // float32
-                constexpr std::ptrdiff_t m_flAmplitudeJitter = 0x84; // float32
-                constexpr std::ptrdiff_t m_flTimeJitter = 0x88; // float32
-                constexpr std::ptrdiff_t m_flMaxLength = 0x8C; // float32
-                constexpr std::ptrdiff_t m_nNumDelayVariations = 0x90; // int32
-                constexpr std::ptrdiff_t m_grainResources = 0x98; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
+                constexpr std::ptrdiff_t m_flAmplitude = 0x88; // float32
+                constexpr std::ptrdiff_t m_flAmplitudeJitter = 0x8C; // float32
+                constexpr std::ptrdiff_t m_flTimeJitter = 0x90; // float32
+                constexpr std::ptrdiff_t m_flMaxLength = 0x94; // float32
+                constexpr std::ptrdiff_t m_nNumDelayVariations = 0x98; // int32
+                constexpr std::ptrdiff_t m_grainResources = 0xA0; // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>
             }
             // Parent: None
             // Field count: 25
@@ -748,9 +754,9 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerRealtimeFMSineWave {
-                constexpr std::ptrdiff_t m_flCarrierFrequency = 0x70; // float32
-                constexpr std::ptrdiff_t m_flModulatorFrequency = 0x74; // float32
-                constexpr std::ptrdiff_t m_flModulatorAmount = 0x78; // float32
+                constexpr std::ptrdiff_t m_flCarrierFrequency = 0x78; // float32
+                constexpr std::ptrdiff_t m_flModulatorFrequency = 0x7C; // float32
+                constexpr std::ptrdiff_t m_flModulatorAmount = 0x80; // float32
             }
             // Parent: None
             // Field count: 1
@@ -990,7 +996,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerStaticAdditiveSynth {
-                constexpr std::ptrdiff_t m_tones = 0x80; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
+                constexpr std::ptrdiff_t m_tones = 0x88; // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>
             }
             // Parent: None
             // Field count: 9
@@ -1000,15 +1006,15 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerShapedNoise {
-                constexpr std::ptrdiff_t m_bUseCurveForFrequency = 0x70; // bool
-                constexpr std::ptrdiff_t m_flFrequency = 0x74; // float32
-                constexpr std::ptrdiff_t m_frequencySweep = 0x78; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_bUseCurveForResonance = 0xB8; // bool
-                constexpr std::ptrdiff_t m_flResonance = 0xBC; // float32
-                constexpr std::ptrdiff_t m_resonanceSweep = 0xC0; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_bUseCurveForAmplitude = 0x100; // bool
-                constexpr std::ptrdiff_t m_flGainInDecibels = 0x104; // float32
-                constexpr std::ptrdiff_t m_gainSweep = 0x108; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bUseCurveForFrequency = 0x78; // bool
+                constexpr std::ptrdiff_t m_flFrequency = 0x7C; // float32
+                constexpr std::ptrdiff_t m_frequencySweep = 0x80; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bUseCurveForResonance = 0xC0; // bool
+                constexpr std::ptrdiff_t m_flResonance = 0xC4; // float32
+                constexpr std::ptrdiff_t m_resonanceSweep = 0xC8; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bUseCurveForAmplitude = 0x108; // bool
+                constexpr std::ptrdiff_t m_flGainInDecibels = 0x10C; // float32
+                constexpr std::ptrdiff_t m_gainSweep = 0x110; // CPiecewiseCurve
             }
             // Parent: None
             // Field count: 2
@@ -1020,7 +1026,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_modifiers = 0x8; // CUtlVector<CDSPMixgroupModifier>
             }
             // Parent: None
-            // Field count: 2
+            // Field count: 4
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1029,8 +1035,10 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerBase {
-                constexpr std::ptrdiff_t m_vSound = 0x28; // CVSound
-                constexpr std::ptrdiff_t m_pEnvelopeAnalyzer = 0x68; // CVoiceContainerAnalysisBase*
+                constexpr std::ptrdiff_t m_bRegisteredVMix = 0x10; // bool
+                constexpr std::ptrdiff_t m_nResourceName = 0x14; // CUtlStringToken
+                constexpr std::ptrdiff_t m_vSound = 0x30; // CVSound
+                constexpr std::ptrdiff_t m_pEnvelopeAnalyzer = 0x70; // CVoiceContainerAnalysisBase*
             }
             // Parent: None
             // Field count: 1
@@ -1069,14 +1077,14 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             namespace CVoiceContainerGranulator {
-                constexpr std::ptrdiff_t m_flGrainLength = 0x80; // float32
-                constexpr std::ptrdiff_t m_flGrainCrossfadeAmount = 0x84; // float32
-                constexpr std::ptrdiff_t m_flStartJitter = 0x88; // float32
-                constexpr std::ptrdiff_t m_flPlaybackJitter = 0x8C; // float32
-                constexpr std::ptrdiff_t m_bShouldWraparound = 0x90; // bool
-                constexpr std::ptrdiff_t m_sourceAudio = 0x98; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_bDoubleBufferSourceAudio = 0xA0; // bool
-                constexpr std::ptrdiff_t m_flMaxSourceLength = 0xA4; // float32
+                constexpr std::ptrdiff_t m_flGrainLength = 0x88; // float32
+                constexpr std::ptrdiff_t m_flGrainCrossfadeAmount = 0x8C; // float32
+                constexpr std::ptrdiff_t m_flStartJitter = 0x90; // float32
+                constexpr std::ptrdiff_t m_flPlaybackJitter = 0x94; // float32
+                constexpr std::ptrdiff_t m_bShouldWraparound = 0x98; // bool
+                constexpr std::ptrdiff_t m_sourceAudio = 0xA0; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_bDoubleBufferSourceAudio = 0xA8; // bool
+                constexpr std::ptrdiff_t m_flMaxSourceLength = 0xAC; // float32
             }
             // Parent: None
             // Field count: 2
@@ -1135,14 +1143,14 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopXFade {
-                constexpr std::ptrdiff_t m_sound = 0x70; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_flLoopEnd = 0x90; // float32
-                constexpr std::ptrdiff_t m_flLoopStart = 0x94; // float32
-                constexpr std::ptrdiff_t m_flFadeOut = 0x98; // float32
-                constexpr std::ptrdiff_t m_flFadeIn = 0x9C; // float32
-                constexpr std::ptrdiff_t m_bPlayHead = 0xA0; // bool
-                constexpr std::ptrdiff_t m_bPlayTail = 0xA1; // bool
-                constexpr std::ptrdiff_t m_bEqualPow = 0xA2; // bool
+                constexpr std::ptrdiff_t m_sound = 0x78; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_flLoopEnd = 0x98; // float32
+                constexpr std::ptrdiff_t m_flLoopStart = 0x9C; // float32
+                constexpr std::ptrdiff_t m_flFadeOut = 0xA0; // float32
+                constexpr std::ptrdiff_t m_flFadeIn = 0xA4; // float32
+                constexpr std::ptrdiff_t m_bPlayHead = 0xA8; // bool
+                constexpr std::ptrdiff_t m_bPlayTail = 0xA9; // bool
+                constexpr std::ptrdiff_t m_bEqualPow = 0xAA; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1336,23 +1344,23 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerVsndRadioButton {
-                constexpr std::ptrdiff_t m_namespace = 0x70; // CUtlString
-                constexpr std::ptrdiff_t m_slot1 = 0x78; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot2 = 0x100; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot3 = 0x188; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot4 = 0x210; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot5 = 0x298; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot6 = 0x320; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot7 = 0x3A8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot8 = 0x430; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot9 = 0x4B8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot10 = 0x540; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot11 = 0x5C8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot12 = 0x650; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot13 = 0x6D8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot14 = 0x760; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot15 = 0x7E8; // CVsndRadioButtonSlot
-                constexpr std::ptrdiff_t m_slot16 = 0x870; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_namespace = 0x78; // CUtlString
+                constexpr std::ptrdiff_t m_slot1 = 0x80; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot2 = 0x108; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot3 = 0x190; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot4 = 0x218; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot5 = 0x2A0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot6 = 0x328; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot7 = 0x3B0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot8 = 0x438; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot9 = 0x4C0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot10 = 0x548; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot11 = 0x5D0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot12 = 0x658; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot13 = 0x6E0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot14 = 0x768; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot15 = 0x7F0; // CVsndRadioButtonSlot
+                constexpr std::ptrdiff_t m_slot16 = 0x878; // CVsndRadioButtonSlot
             }
             // Parent: None
             // Field count: 2
@@ -1381,7 +1389,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopTriggerWithRandomPanner {
-                constexpr std::ptrdiff_t m_randomPannerControls = 0xA0; // CRandomPannerControls
+                constexpr std::ptrdiff_t m_randomPannerControls = 0xA8; // CRandomPannerControls
             }
             // Parent: None
             // Field count: 0
@@ -1398,7 +1406,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerSet {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CUtlVector<CVoiceContainerSetElement>
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CUtlVector<CVoiceContainerSetElement>
             }
             // Parent: None
             // Field count: 8
@@ -1423,23 +1431,23 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerVsndTrigger {
-                constexpr std::ptrdiff_t m_namespace = 0x70; // CUtlString
-                constexpr std::ptrdiff_t m_slot1 = 0x78; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot2 = 0x100; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot3 = 0x188; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot4 = 0x210; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot5 = 0x298; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot6 = 0x320; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot7 = 0x3A8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot8 = 0x430; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot9 = 0x4B8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot10 = 0x540; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot11 = 0x5C8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot12 = 0x650; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot13 = 0x6D8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot14 = 0x760; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot15 = 0x7E8; // CVsndTriggerSlot
-                constexpr std::ptrdiff_t m_slot16 = 0x870; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_namespace = 0x78; // CUtlString
+                constexpr std::ptrdiff_t m_slot1 = 0x80; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot2 = 0x108; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot3 = 0x190; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot4 = 0x218; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot5 = 0x2A0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot6 = 0x328; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot7 = 0x3B0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot8 = 0x438; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot9 = 0x4C0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot10 = 0x548; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot11 = 0x5D0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot12 = 0x658; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot13 = 0x6E0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot14 = 0x768; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot15 = 0x7F0; // CVsndTriggerSlot
+                constexpr std::ptrdiff_t m_slot16 = 0x878; // CVsndTriggerSlot
             }
             // Parent: None
             // Field count: 2
@@ -1498,7 +1506,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t itemPos = 0x28; // Vector2D
             }
             // Parent: None
-            // Field count: 6
+            // Field count: 7
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -1509,6 +1517,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nChannels = 0x30; // int32
                 constexpr std::ptrdiff_t m_nSendOperator = 0x34; // VMixSendOperator_t
                 constexpr std::ptrdiff_t m_nMixDownRule = 0x36; // VMixMixDownRule_t
+                constexpr std::ptrdiff_t m_nUpMixRule = 0x37; // VMixUpMixRule_t
             }
             // Parent: None
             // Field count: 4
@@ -1615,10 +1624,10 @@ namespace cs2_dumper {
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             namespace CVoiceContainerTapePlayer {
-                constexpr std::ptrdiff_t m_bShouldWraparound = 0x80; // bool
-                constexpr std::ptrdiff_t m_sourceAudio = 0x88; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
-                constexpr std::ptrdiff_t m_flTapeSpeedAttackTime = 0x90; // float32
-                constexpr std::ptrdiff_t m_flTapeSpeedReleaseTime = 0x94; // float32
+                constexpr std::ptrdiff_t m_bShouldWraparound = 0x88; // bool
+                constexpr std::ptrdiff_t m_sourceAudio = 0x90; // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>
+                constexpr std::ptrdiff_t m_flTapeSpeedAttackTime = 0x98; // float32
+                constexpr std::ptrdiff_t m_flTapeSpeedReleaseTime = 0x9C; // float32
             }
             // Parent: None
             // Field count: 3
@@ -1691,13 +1700,14 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_storage = 0x0; // CUtlLeanVector<uint32>
             }
             // Parent: None
-            // Field count: 0
+            // Field count: 1
             //
             // Metadata:
             // MGetKV3ClassDefaults
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerVMixSnd {
+                constexpr std::ptrdiff_t m_resourceName = 0x188; // CUtlString
             }
             // Parent: None
             // Field count: 2
@@ -1754,14 +1764,14 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerParameterBlender {
-                constexpr std::ptrdiff_t m_firstSound = 0x70; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_secondSound = 0x90; // CSoundContainerReference
-                constexpr std::ptrdiff_t m_bEnableOcclusionBlend = 0xB0; // bool
-                constexpr std::ptrdiff_t m_curve1 = 0xB8; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_curve2 = 0xF8; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_bEnableDistanceBlend = 0x138; // bool
-                constexpr std::ptrdiff_t m_curve3 = 0x140; // CPiecewiseCurve
-                constexpr std::ptrdiff_t m_curve4 = 0x180; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_firstSound = 0x78; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_secondSound = 0x98; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_bEnableOcclusionBlend = 0xB8; // bool
+                constexpr std::ptrdiff_t m_curve1 = 0xC0; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_curve2 = 0x100; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_bEnableDistanceBlend = 0x140; // bool
+                constexpr std::ptrdiff_t m_curve3 = 0x148; // CPiecewiseCurve
+                constexpr std::ptrdiff_t m_curve4 = 0x188; // CPiecewiseCurve
             }
             // Parent: None
             // Field count: 3
@@ -1803,7 +1813,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerAmpedDecayingSineWave {
-                constexpr std::ptrdiff_t m_flGainAmount = 0x78; // float32
+                constexpr std::ptrdiff_t m_flGainAmount = 0x80; // float32
             }
             // Parent: None
             // Field count: 8
@@ -1861,9 +1871,9 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerMultiBlender {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CSoundContainerReferenceArray
-                constexpr std::ptrdiff_t m_flBlendFactor = 0xA8; // float32
-                constexpr std::ptrdiff_t m_flCrossover = 0xAC; // float32
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
+                constexpr std::ptrdiff_t m_flBlendFactor = 0xB0; // float32
+                constexpr std::ptrdiff_t m_flCrossover = 0xB4; // float32
             }
             // Parent: None
             // Field count: 1
@@ -1917,9 +1927,9 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerSelector {
-                constexpr std::ptrdiff_t m_mode = 0x70; // PlayBackMode_t
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
-                constexpr std::ptrdiff_t m_fProbabilityWeights = 0xB0; // CUtlVector<float32>
+                constexpr std::ptrdiff_t m_mode = 0x78; // PlayBackMode_t
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x80; // CSoundContainerReferenceArray
+                constexpr std::ptrdiff_t m_fProbabilityWeights = 0xB8; // CUtlVector<float32>
             }
             // Parent: None
             // Field count: 1
@@ -1992,7 +2002,7 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerSwitch {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CUtlVector<CSoundContainerReference>
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CUtlVector<CSoundContainerReference>
             }
             // Parent: None
             // Field count: 1
@@ -2010,9 +2020,9 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerEnum {
-                constexpr std::ptrdiff_t m_soundsToPlay = 0x70; // CSoundContainerReferenceArray
-                constexpr std::ptrdiff_t m_iSelection = 0xA8; // int32
-                constexpr std::ptrdiff_t m_flCrossfadeTime = 0xAC; // float32
+                constexpr std::ptrdiff_t m_soundsToPlay = 0x78; // CSoundContainerReferenceArray
+                constexpr std::ptrdiff_t m_iSelection = 0xB0; // int32
+                constexpr std::ptrdiff_t m_flCrossfadeTime = 0xB4; // float32
             }
             // Parent: None
             // Field count: 1
@@ -2061,11 +2071,11 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerLoopTrigger {
-                constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0x70; // float32
-                constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0x74; // float32
-                constexpr std::ptrdiff_t m_flFadeTime = 0x78; // float32
-                constexpr std::ptrdiff_t m_bCrossFade = 0x7C; // bool
-                constexpr std::ptrdiff_t m_sound = 0x80; // CSoundContainerReference
+                constexpr std::ptrdiff_t m_flRetriggerTimeMin = 0x78; // float32
+                constexpr std::ptrdiff_t m_flRetriggerTimeMax = 0x7C; // float32
+                constexpr std::ptrdiff_t m_flFadeTime = 0x80; // float32
+                constexpr std::ptrdiff_t m_bCrossFade = 0x84; // bool
+                constexpr std::ptrdiff_t m_sound = 0x88; // CSoundContainerReference
             }
             // Parent: None
             // Field count: 1
@@ -2084,8 +2094,8 @@ namespace cs2_dumper {
             // MPropertyFriendlyName
             // MPropertyDescription
             namespace CVoiceContainerDecayingSineWave {
-                constexpr std::ptrdiff_t m_flFrequency = 0x70; // float32
-                constexpr std::ptrdiff_t m_flDecayTime = 0x74; // float32
+                constexpr std::ptrdiff_t m_flFrequency = 0x78; // float32
+                constexpr std::ptrdiff_t m_flDecayTime = 0x7C; // float32
             }
             // Parent: None
             // Field count: 3

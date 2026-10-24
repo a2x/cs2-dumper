@@ -1271,6 +1271,7 @@
           "m_nMixDownRule": 54,
           "m_nSendOperator": 52,
           "m_nSoloNameHash": 44,
+          "m_nUpMixRule": 55,
           "m_name": 0
         },
         "metadata": [
@@ -1340,7 +1341,7 @@
       },
       "CVoiceContainerAmpedDecayingSineWave": {
         "fields": {
-          "m_flGainAmount": 120
+          "m_flGainAmount": 128
         },
         "metadata": [
           {
@@ -1394,8 +1395,10 @@
       },
       "CVoiceContainerBase": {
         "fields": {
-          "m_pEnvelopeAnalyzer": 104,
-          "m_vSound": 40
+          "m_bRegisteredVMix": 16,
+          "m_nResourceName": 20,
+          "m_pEnvelopeAnalyzer": 112,
+          "m_vSound": 48
         },
         "metadata": [
           {
@@ -1423,9 +1426,9 @@
       },
       "CVoiceContainerBlender": {
         "fields": {
-          "m_firstSound": 112,
-          "m_flBlendFactor": 176,
-          "m_secondSound": 144
+          "m_firstSound": 120,
+          "m_flBlendFactor": 184,
+          "m_secondSound": 152
         },
         "metadata": [
           {
@@ -1445,8 +1448,8 @@
       },
       "CVoiceContainerDecayingSineWave": {
         "fields": {
-          "m_flDecayTime": 116,
-          "m_flFrequency": 112
+          "m_flDecayTime": 124,
+          "m_flFrequency": 120
         },
         "metadata": [
           {
@@ -1484,9 +1487,9 @@
       },
       "CVoiceContainerEnum": {
         "fields": {
-          "m_flCrossfadeTime": 172,
-          "m_iSelection": 168,
-          "m_soundsToPlay": 112
+          "m_flCrossfadeTime": 180,
+          "m_iSelection": 176,
+          "m_soundsToPlay": 120
         },
         "metadata": [
           {
@@ -1538,14 +1541,14 @@
       },
       "CVoiceContainerGranulator": {
         "fields": {
-          "m_bDoubleBufferSourceAudio": 160,
-          "m_bShouldWraparound": 144,
-          "m_flGrainCrossfadeAmount": 132,
-          "m_flGrainLength": 128,
-          "m_flMaxSourceLength": 164,
-          "m_flPlaybackJitter": 140,
-          "m_flStartJitter": 136,
-          "m_sourceAudio": 152
+          "m_bDoubleBufferSourceAudio": 168,
+          "m_bShouldWraparound": 152,
+          "m_flGrainCrossfadeAmount": 140,
+          "m_flGrainLength": 136,
+          "m_flMaxSourceLength": 172,
+          "m_flPlaybackJitter": 148,
+          "m_flStartJitter": 144,
+          "m_sourceAudio": 160
         },
         "metadata": [
           {
@@ -1561,11 +1564,11 @@
       },
       "CVoiceContainerLoopTrigger": {
         "fields": {
-          "m_bCrossFade": 124,
-          "m_flFadeTime": 120,
-          "m_flRetriggerTimeMax": 116,
-          "m_flRetriggerTimeMin": 112,
-          "m_sound": 128
+          "m_bCrossFade": 132,
+          "m_flFadeTime": 128,
+          "m_flRetriggerTimeMax": 124,
+          "m_flRetriggerTimeMin": 120,
+          "m_sound": 136
         },
         "metadata": [
           {
@@ -1585,7 +1588,7 @@
       },
       "CVoiceContainerLoopTriggerWithRandomPanner": {
         "fields": {
-          "m_randomPannerControls": 160
+          "m_randomPannerControls": 168
         },
         "metadata": [
           {
@@ -1605,14 +1608,14 @@
       },
       "CVoiceContainerLoopXFade": {
         "fields": {
-          "m_bEqualPow": 162,
-          "m_bPlayHead": 160,
-          "m_bPlayTail": 161,
-          "m_flFadeIn": 156,
-          "m_flFadeOut": 152,
-          "m_flLoopEnd": 144,
-          "m_flLoopStart": 148,
-          "m_sound": 112
+          "m_bEqualPow": 170,
+          "m_bPlayHead": 168,
+          "m_bPlayTail": 169,
+          "m_flFadeIn": 164,
+          "m_flFadeOut": 160,
+          "m_flLoopEnd": 152,
+          "m_flLoopStart": 156,
+          "m_sound": 120
         },
         "metadata": [
           {
@@ -1632,9 +1635,9 @@
       },
       "CVoiceContainerMultiBlender": {
         "fields": {
-          "m_flBlendFactor": 168,
-          "m_flCrossover": 172,
-          "m_soundsToPlay": 112
+          "m_flBlendFactor": 176,
+          "m_flCrossover": 180,
+          "m_soundsToPlay": 120
         },
         "metadata": [
           {
@@ -1672,14 +1675,14 @@
       },
       "CVoiceContainerParameterBlender": {
         "fields": {
-          "m_bEnableDistanceBlend": 312,
-          "m_bEnableOcclusionBlend": 176,
-          "m_curve1": 184,
-          "m_curve2": 248,
-          "m_curve3": 320,
-          "m_curve4": 384,
-          "m_firstSound": 112,
-          "m_secondSound": 144
+          "m_bEnableDistanceBlend": 320,
+          "m_bEnableOcclusionBlend": 184,
+          "m_curve1": 192,
+          "m_curve2": 256,
+          "m_curve3": 328,
+          "m_curve4": 392,
+          "m_firstSound": 120,
+          "m_secondSound": 152
         },
         "metadata": [
           {
@@ -1699,12 +1702,12 @@
       },
       "CVoiceContainerRandomSampler": {
         "fields": {
-          "m_flAmplitude": 128,
-          "m_flAmplitudeJitter": 132,
-          "m_flMaxLength": 140,
-          "m_flTimeJitter": 136,
-          "m_grainResources": 152,
-          "m_nNumDelayVariations": 144
+          "m_flAmplitude": 136,
+          "m_flAmplitudeJitter": 140,
+          "m_flMaxLength": 148,
+          "m_flTimeJitter": 144,
+          "m_grainResources": 160,
+          "m_nNumDelayVariations": 152
         },
         "metadata": [
           {
@@ -1724,9 +1727,9 @@
       },
       "CVoiceContainerRealtimeFMSineWave": {
         "fields": {
-          "m_flCarrierFrequency": 112,
-          "m_flModulatorAmount": 120,
-          "m_flModulatorFrequency": 116
+          "m_flCarrierFrequency": 120,
+          "m_flModulatorAmount": 128,
+          "m_flModulatorFrequency": 124
         },
         "metadata": [
           {
@@ -1746,9 +1749,9 @@
       },
       "CVoiceContainerSelector": {
         "fields": {
-          "m_fProbabilityWeights": 176,
-          "m_mode": 112,
-          "m_soundsToPlay": 120
+          "m_fProbabilityWeights": 184,
+          "m_mode": 120,
+          "m_soundsToPlay": 128
         },
         "metadata": [
           {
@@ -1768,7 +1771,7 @@
       },
       "CVoiceContainerSet": {
         "fields": {
-          "m_soundsToPlay": 112
+          "m_soundsToPlay": 120
         },
         "metadata": [
           {
@@ -1801,15 +1804,15 @@
       },
       "CVoiceContainerShapedNoise": {
         "fields": {
-          "m_bUseCurveForAmplitude": 256,
-          "m_bUseCurveForFrequency": 112,
-          "m_bUseCurveForResonance": 184,
-          "m_flFrequency": 116,
-          "m_flGainInDecibels": 260,
-          "m_flResonance": 188,
-          "m_frequencySweep": 120,
-          "m_gainSweep": 264,
-          "m_resonanceSweep": 192
+          "m_bUseCurveForAmplitude": 264,
+          "m_bUseCurveForFrequency": 120,
+          "m_bUseCurveForResonance": 192,
+          "m_flFrequency": 124,
+          "m_flGainInDecibels": 268,
+          "m_flResonance": 196,
+          "m_frequencySweep": 128,
+          "m_gainSweep": 272,
+          "m_resonanceSweep": 200
         },
         "metadata": [
           {
@@ -1829,7 +1832,7 @@
       },
       "CVoiceContainerStaticAdditiveSynth": {
         "fields": {
-          "m_tones": 128
+          "m_tones": 136
         },
         "metadata": [
           {
@@ -1896,7 +1899,7 @@
       },
       "CVoiceContainerSwitch": {
         "fields": {
-          "m_soundsToPlay": 112
+          "m_soundsToPlay": 120
         },
         "metadata": [
           {
@@ -1916,10 +1919,10 @@
       },
       "CVoiceContainerTapePlayer": {
         "fields": {
-          "m_bShouldWraparound": 128,
-          "m_flTapeSpeedAttackTime": 144,
-          "m_flTapeSpeedReleaseTime": 148,
-          "m_sourceAudio": 136
+          "m_bShouldWraparound": 136,
+          "m_flTapeSpeedAttackTime": 152,
+          "m_flTapeSpeedReleaseTime": 156,
+          "m_sourceAudio": 144
         },
         "metadata": [
           {
@@ -1934,7 +1937,9 @@
         "parent": null
       },
       "CVoiceContainerVMixSnd": {
-        "fields": {},
+        "fields": {
+          "m_resourceName": 392
+        },
         "metadata": [
           {
             "name": "MGetKV3ClassDefaults",
@@ -1953,23 +1958,23 @@
       },
       "CVoiceContainerVsndRadioButton": {
         "fields": {
-          "m_namespace": 112,
-          "m_slot1": 120,
-          "m_slot10": 1344,
-          "m_slot11": 1480,
-          "m_slot12": 1616,
-          "m_slot13": 1752,
-          "m_slot14": 1888,
-          "m_slot15": 2024,
-          "m_slot16": 2160,
-          "m_slot2": 256,
-          "m_slot3": 392,
-          "m_slot4": 528,
-          "m_slot5": 664,
-          "m_slot6": 800,
-          "m_slot7": 936,
-          "m_slot8": 1072,
-          "m_slot9": 1208
+          "m_namespace": 120,
+          "m_slot1": 128,
+          "m_slot10": 1352,
+          "m_slot11": 1488,
+          "m_slot12": 1624,
+          "m_slot13": 1760,
+          "m_slot14": 1896,
+          "m_slot15": 2032,
+          "m_slot16": 2168,
+          "m_slot2": 264,
+          "m_slot3": 400,
+          "m_slot4": 536,
+          "m_slot5": 672,
+          "m_slot6": 808,
+          "m_slot7": 944,
+          "m_slot8": 1080,
+          "m_slot9": 1216
         },
         "metadata": [
           {
@@ -1989,23 +1994,23 @@
       },
       "CVoiceContainerVsndTrigger": {
         "fields": {
-          "m_namespace": 112,
-          "m_slot1": 120,
-          "m_slot10": 1344,
-          "m_slot11": 1480,
-          "m_slot12": 1616,
-          "m_slot13": 1752,
-          "m_slot14": 1888,
-          "m_slot15": 2024,
-          "m_slot16": 2160,
-          "m_slot2": 256,
-          "m_slot3": 392,
-          "m_slot4": 528,
-          "m_slot5": 664,
-          "m_slot6": 800,
-          "m_slot7": 936,
-          "m_slot8": 1072,
-          "m_slot9": 1208
+          "m_namespace": 120,
+          "m_slot1": 128,
+          "m_slot10": 1352,
+          "m_slot11": 1488,
+          "m_slot12": 1624,
+          "m_slot13": 1760,
+          "m_slot14": 1896,
+          "m_slot15": 2032,
+          "m_slot16": 2168,
+          "m_slot2": 264,
+          "m_slot3": 400,
+          "m_slot4": 536,
+          "m_slot5": 672,
+          "m_slot6": 808,
+          "m_slot7": 944,
+          "m_slot8": 1080,
+          "m_slot9": 1216
         },
         "metadata": [
           {
@@ -3072,6 +3077,14 @@
           "SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT": 1
         },
         "type": "uint32"
+      },
+      "VMixUpMixRule_t": {
+        "alignment": 1,
+        "members": {
+          "BROADCAST": 1,
+          "DIVIDE": 0
+        },
+        "type": "uint8"
       },
       "soundlevel_t": {
         "alignment": 4,
