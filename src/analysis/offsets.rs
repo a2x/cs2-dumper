@@ -97,6 +97,7 @@ pattern_map! {
         "dwSensitivity" => pattern!("488d0d${[8]'} 0f57c90f28f0") => Some(|_view, map, _rva| {
             map.insert("dwSensitivity_sensitivity".to_string(), 0x58);
         }),
+        "dwServerConfirmedReservation" => pattern!("488905${'} e8${} 4885db") => None,
         "dwViewMatrix" => pattern!("488d0d${'} 48c1e006") => None,
         "dwViewRender" => pattern!("488905${'} 488bc8 4885c0") => None,
         "dwWeaponC4" => pattern!("488b15${'} 488b5c24? ffc0 8905${} 488bc6 488934ea 80be") => None,
