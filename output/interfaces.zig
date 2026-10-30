@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-23 17:14:58.380890300 UTC
+// 2026-10-30 09:23:07.316567900 UTC
 
 pub const cs2_dumper = struct {
     pub const interfaces = struct {
@@ -10,15 +10,15 @@ pub const cs2_dumper = struct {
         };
         // Module: client.dll
         pub const client_dll = struct {
-            pub const ClientBugBugServic001_Client: usize = 0x22356E0;
-            pub const ClientToolsInfo_001: usize = 0x22356B0;
-            pub const EmptyWorldService001_Client: usize = 0x2219130;
-            pub const GameClientExports001: usize = 0x2232358;
-            pub const LegacyGameUI001: usize = 0x2242100;
-            pub const Source2Client002: usize = 0x25613A0;
-            pub const Source2ClientConfig001: usize = 0x24BDFD0;
-            pub const Source2ClientPrediction001: usize = 0x25675E0;
-            pub const Source2ClientUI001: usize = 0x2240880;
+            pub const ClientBugBugServic001_Client: usize = 0x2237760;
+            pub const ClientToolsInfo_001: usize = 0x2237730;
+            pub const EmptyWorldService001_Client: usize = 0x221B160;
+            pub const GameClientExports001: usize = 0x22343D8;
+            pub const LegacyGameUI001: usize = 0x2244180;
+            pub const Source2Client002: usize = 0x25635A0;
+            pub const Source2ClientConfig001: usize = 0x24C0150;
+            pub const Source2ClientPrediction001: usize = 0x25697D0;
+            pub const Source2ClientUI001: usize = 0x2242900;
         };
         // Module: engine2.dll
         pub const engine2_dll = struct {
@@ -162,23 +162,23 @@ pub const cs2_dumper = struct {
         // Module: server.dll
         pub const server_dll = struct {
             pub const EmptyWorldService001_Server: usize = 0x1E110C0;
-            pub const EntitySubclassUtilsV001: usize = 0x1DC0C60;
-            pub const NavGameTest001: usize = 0x1E58D48;
-            pub const ServerToolsInfo_001: usize = 0x1E37C48;
-            pub const Source2GameClients001: usize = 0x1E37170;
-            pub const Source2GameDirector001: usize = 0x1FA1490;
-            pub const Source2GameEntities001: usize = 0x1E373F0;
-            pub const Source2Server001: usize = 0x1E37230;
-            pub const Source2ServerConfig001: usize = 0x211CD98;
+            pub const EntitySubclassUtilsV001: usize = 0x1DC0C40;
+            pub const NavGameTest001: usize = 0x1E58D38;
+            pub const ServerToolsInfo_001: usize = 0x1E37C38;
+            pub const Source2GameClients001: usize = 0x1E37160;
+            pub const Source2GameDirector001: usize = 0x1FA1510;
+            pub const Source2GameEntities001: usize = 0x1E373E0;
+            pub const Source2Server001: usize = 0x1E37220;
+            pub const Source2ServerConfig001: usize = 0x211CDE8;
             pub const customnavsystem001: usize = 0x1DAE558;
         };
         // Module: soundsystem.dll
         pub const soundsystem_dll = struct {
-            pub const SoundBugBugService001_Client: usize = 0x532C80;
-            pub const SoundOpSystem001: usize = 0x532B60;
-            pub const SoundOpSystemEdit001: usize = 0x532A70;
-            pub const SoundSystem001: usize = 0x532460;
-            pub const VMixEditTool001: usize = 0x5941BFF;
+            pub const SoundBugBugService001_Client: usize = 0x532C40;
+            pub const SoundOpSystem001: usize = 0x532B20;
+            pub const SoundOpSystemEdit001: usize = 0x532A30;
+            pub const SoundSystem001: usize = 0x532420;
+            pub const VMixEditTool001: usize = 0x5941C0F;
         };
         // Module: steamaudio.dll
         pub const steamaudio_dll = struct {
@@ -194,6 +194,10 @@ pub const cs2_dumper = struct {
         // Module: v8system.dll
         pub const v8system_dll = struct {
             pub const Source2V8System001: usize = 0x34790;
+        };
+        // Module: vconcomm.dll
+        pub const vconcomm_dll = struct {
+            pub const VConComm001: usize = 0x3C750;
         };
         // Module: vphysics2.dll
         pub const vphysics2_dll = struct {
