@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-23 17:14:58.380890300 UTC
+// 2026-10-30 09:23:07.316567900 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: client.dll
@@ -1447,9 +1447,9 @@ namespace CS2Dumper.Schemas {
             public const nint m_bIsHauledBack = 0x1A50; // bool
             public const nint m_bSilencerOn = 0x1A51; // bool
             public const nint m_flTimeSilencerSwitchComplete = 0x1A54; // GameTime_t
-            public const nint m_bStealthy = 0x1A58; // bool
+            public const nint m_bIsInStealthReload = 0x1A58; // bool
             public const nint m_bInSilentReloadSection = 0x1A59; // bool
-            public const nint m_flStealthHoldStartTime = 0x1A5C; // GameTime_t
+            public const nint m_flStealthReloadHoldStartTime = 0x1A5C; // GameTime_t
             public const nint m_bReloadHeldSinceStart = 0x1A60; // bool
             public const nint m_flWeaponActionPlaybackRate = 0x1A64; // float32
             public const nint m_iOriginalTeamNumber = 0x1A68; // int32
@@ -1824,7 +1824,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_fImmuneToGunGameDamageTime = 0x3504; // GameTime_t
             public const nint m_bGunGameImmunity = 0x3508; // bool
             public const nint m_fImmuneToGunGameDamageTimeLast = 0x350C; // GameTime_t
-            public const nint m_flModifier0 = 0x3510; // float32
+            public const nint m_flBigHeadScale = 0x3510; // float32
             public const nint m_fMolotovDamageTime = 0x3514; // float32
             public const nint m_nPlayerInfernoBodyFx = 0x3588; // ParticleIndex_t
             public const nint m_angEyeAngles = 0x3600; // QAngle
@@ -4423,7 +4423,7 @@ namespace CS2Dumper.Schemas {
         public static class C_CS2HudModelBase {
         }
         // Parent: None
-        // Field count: 98
+        // Field count: 99
         public static class C_CSGameRules {
             public const nint m_bFreezePeriod = 0x40; // bool
             public const nint m_bWarmupPeriod = 0x41; // bool
@@ -4487,42 +4487,43 @@ namespace CS2Dumper.Schemas {
             public const nint m_iMatchStats_PlayersAlive_CT = 0xA30; // int32[30]
             public const nint m_iMatchStats_PlayersAlive_T = 0xAA8; // int32[30]
             public const nint m_TeamRespawnWaveTimes = 0xB20; // float32[32]
-            public const nint m_flNextRespawnWave = 0xBA0; // GameTime_t[32]
-            public const nint m_vMinimapMins = 0xC20; // VectorWS
-            public const nint m_vMinimapMaxs = 0xC2C; // VectorWS
-            public const nint m_MinimapVerticalSectionHeights = 0xC38; // float32[8]
-            public const nint m_ullLocalMatchID = 0xC58; // uint64
-            public const nint m_nEndMatchMapGroupVoteTypes = 0xC60; // int32[10]
-            public const nint m_nEndMatchMapGroupVoteOptions = 0xC88; // int32[10]
-            public const nint m_nEndMatchMapVoteWinner = 0xCB0; // int32
-            public const nint m_iNumConsecutiveCTLoses = 0xCB4; // int32
-            public const nint m_iNumConsecutiveTerroristLoses = 0xCB8; // int32
-            public const nint m_nMatchAbortedEarlyReason = 0xD78; // int32
-            public const nint m_bHasTriggeredRoundStartMusic = 0xD7C; // bool
-            public const nint m_bSwitchingTeamsAtRoundReset = 0xD7D; // bool
-            public const nint m_pGameModeRules = 0xD98; // CCSGameModeRules*
-            public const nint m_RetakeRules = 0xDA0; // C_RetakeGameRules
-            public const nint m_nMatchEndCount = 0xEF8; // uint8
-            public const nint m_nTTeamIntroVariant = 0xEFC; // int32
-            public const nint m_nCTTeamIntroVariant = 0xF00; // int32
-            public const nint m_bTeamIntroPeriod = 0xF04; // bool
-            public const nint m_iRoundEndWinnerTeam = 0xF08; // int32
-            public const nint m_eRoundEndReason = 0xF0C; // int32
-            public const nint m_bRoundEndShowTimerDefend = 0xF10; // bool
-            public const nint m_iRoundEndTimerTime = 0xF14; // int32
-            public const nint m_sRoundEndFunFactToken = 0xF18; // CUtlString
-            public const nint m_iRoundEndFunFactPlayerSlot = 0xF20; // CPlayerSlot
-            public const nint m_iRoundEndFunFactData1 = 0xF24; // int32
-            public const nint m_iRoundEndFunFactData2 = 0xF28; // int32
-            public const nint m_iRoundEndFunFactData3 = 0xF2C; // int32
-            public const nint m_sRoundEndMessage = 0xF30; // CUtlString
-            public const nint m_iRoundEndPlayerCount = 0xF38; // int32
-            public const nint m_bRoundEndNoMusic = 0xF3C; // bool
-            public const nint m_iRoundEndLegacy = 0xF40; // int32
-            public const nint m_nRoundEndCount = 0xF44; // uint8
-            public const nint m_iRoundStartRoundNumber = 0xF48; // int32
-            public const nint m_nRoundStartCount = 0xF4C; // uint8
-            public const nint m_flLastPerfSampleTime = 0x4F58; // float64
+            public const nint m_nActiveMutators = 0xBA0; // int32
+            public const nint m_flNextRespawnWave = 0xBA4; // GameTime_t[32]
+            public const nint m_vMinimapMins = 0xC24; // VectorWS
+            public const nint m_vMinimapMaxs = 0xC30; // VectorWS
+            public const nint m_MinimapVerticalSectionHeights = 0xC3C; // float32[8]
+            public const nint m_ullLocalMatchID = 0xC60; // uint64
+            public const nint m_nEndMatchMapGroupVoteTypes = 0xC68; // int32[10]
+            public const nint m_nEndMatchMapGroupVoteOptions = 0xC90; // int32[10]
+            public const nint m_nEndMatchMapVoteWinner = 0xCB8; // int32
+            public const nint m_iNumConsecutiveCTLoses = 0xCBC; // int32
+            public const nint m_iNumConsecutiveTerroristLoses = 0xCC0; // int32
+            public const nint m_nMatchAbortedEarlyReason = 0xD80; // int32
+            public const nint m_bHasTriggeredRoundStartMusic = 0xD84; // bool
+            public const nint m_bSwitchingTeamsAtRoundReset = 0xD85; // bool
+            public const nint m_pGameModeRules = 0xDA0; // CCSGameModeRules*
+            public const nint m_RetakeRules = 0xDA8; // C_RetakeGameRules
+            public const nint m_nMatchEndCount = 0xF00; // uint8
+            public const nint m_nTTeamIntroVariant = 0xF04; // int32
+            public const nint m_nCTTeamIntroVariant = 0xF08; // int32
+            public const nint m_bTeamIntroPeriod = 0xF0C; // bool
+            public const nint m_iRoundEndWinnerTeam = 0xF10; // int32
+            public const nint m_eRoundEndReason = 0xF14; // int32
+            public const nint m_bRoundEndShowTimerDefend = 0xF18; // bool
+            public const nint m_iRoundEndTimerTime = 0xF1C; // int32
+            public const nint m_sRoundEndFunFactToken = 0xF20; // CUtlString
+            public const nint m_iRoundEndFunFactPlayerSlot = 0xF28; // CPlayerSlot
+            public const nint m_iRoundEndFunFactData1 = 0xF2C; // int32
+            public const nint m_iRoundEndFunFactData2 = 0xF30; // int32
+            public const nint m_iRoundEndFunFactData3 = 0xF34; // int32
+            public const nint m_sRoundEndMessage = 0xF38; // CUtlString
+            public const nint m_iRoundEndPlayerCount = 0xF40; // int32
+            public const nint m_bRoundEndNoMusic = 0xF44; // bool
+            public const nint m_iRoundEndLegacy = 0xF48; // int32
+            public const nint m_nRoundEndCount = 0xF4C; // uint8
+            public const nint m_iRoundStartRoundNumber = 0xF50; // int32
+            public const nint m_nRoundStartCount = 0xF54; // uint8
+            public const nint m_flLastPerfSampleTime = 0x4F60; // float64
         }
         // Parent: C_BaseModelEntity
         // Field count: 2
