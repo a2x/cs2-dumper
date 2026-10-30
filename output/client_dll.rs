@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-23 17:14:58.380890300 UTC
+// 2026-10-30 09:23:07.316567900 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
@@ -1464,9 +1464,9 @@ pub mod cs2_dumper {
                 pub const m_bIsHauledBack: usize = 0x1A50; // bool
                 pub const m_bSilencerOn: usize = 0x1A51; // bool
                 pub const m_flTimeSilencerSwitchComplete: usize = 0x1A54; // GameTime_t
-                pub const m_bStealthy: usize = 0x1A58; // bool
+                pub const m_bIsInStealthReload: usize = 0x1A58; // bool
                 pub const m_bInSilentReloadSection: usize = 0x1A59; // bool
-                pub const m_flStealthHoldStartTime: usize = 0x1A5C; // GameTime_t
+                pub const m_flStealthReloadHoldStartTime: usize = 0x1A5C; // GameTime_t
                 pub const m_bReloadHeldSinceStart: usize = 0x1A60; // bool
                 pub const m_flWeaponActionPlaybackRate: usize = 0x1A64; // float32
                 pub const m_iOriginalTeamNumber: usize = 0x1A68; // int32
@@ -1841,7 +1841,7 @@ pub mod cs2_dumper {
                 pub const m_fImmuneToGunGameDamageTime: usize = 0x3504; // GameTime_t
                 pub const m_bGunGameImmunity: usize = 0x3508; // bool
                 pub const m_fImmuneToGunGameDamageTimeLast: usize = 0x350C; // GameTime_t
-                pub const m_flModifier0: usize = 0x3510; // float32
+                pub const m_flBigHeadScale: usize = 0x3510; // float32
                 pub const m_fMolotovDamageTime: usize = 0x3514; // float32
                 pub const m_nPlayerInfernoBodyFx: usize = 0x3588; // ParticleIndex_t
                 pub const m_angEyeAngles: usize = 0x3600; // QAngle
@@ -4440,7 +4440,7 @@ pub mod cs2_dumper {
             pub mod C_CS2HudModelBase {
             }
             // Parent: None
-            // Field count: 98
+            // Field count: 99
             pub mod C_CSGameRules {
                 pub const m_bFreezePeriod: usize = 0x40; // bool
                 pub const m_bWarmupPeriod: usize = 0x41; // bool
@@ -4504,42 +4504,43 @@ pub mod cs2_dumper {
                 pub const m_iMatchStats_PlayersAlive_CT: usize = 0xA30; // int32[30]
                 pub const m_iMatchStats_PlayersAlive_T: usize = 0xAA8; // int32[30]
                 pub const m_TeamRespawnWaveTimes: usize = 0xB20; // float32[32]
-                pub const m_flNextRespawnWave: usize = 0xBA0; // GameTime_t[32]
-                pub const m_vMinimapMins: usize = 0xC20; // VectorWS
-                pub const m_vMinimapMaxs: usize = 0xC2C; // VectorWS
-                pub const m_MinimapVerticalSectionHeights: usize = 0xC38; // float32[8]
-                pub const m_ullLocalMatchID: usize = 0xC58; // uint64
-                pub const m_nEndMatchMapGroupVoteTypes: usize = 0xC60; // int32[10]
-                pub const m_nEndMatchMapGroupVoteOptions: usize = 0xC88; // int32[10]
-                pub const m_nEndMatchMapVoteWinner: usize = 0xCB0; // int32
-                pub const m_iNumConsecutiveCTLoses: usize = 0xCB4; // int32
-                pub const m_iNumConsecutiveTerroristLoses: usize = 0xCB8; // int32
-                pub const m_nMatchAbortedEarlyReason: usize = 0xD78; // int32
-                pub const m_bHasTriggeredRoundStartMusic: usize = 0xD7C; // bool
-                pub const m_bSwitchingTeamsAtRoundReset: usize = 0xD7D; // bool
-                pub const m_pGameModeRules: usize = 0xD98; // CCSGameModeRules*
-                pub const m_RetakeRules: usize = 0xDA0; // C_RetakeGameRules
-                pub const m_nMatchEndCount: usize = 0xEF8; // uint8
-                pub const m_nTTeamIntroVariant: usize = 0xEFC; // int32
-                pub const m_nCTTeamIntroVariant: usize = 0xF00; // int32
-                pub const m_bTeamIntroPeriod: usize = 0xF04; // bool
-                pub const m_iRoundEndWinnerTeam: usize = 0xF08; // int32
-                pub const m_eRoundEndReason: usize = 0xF0C; // int32
-                pub const m_bRoundEndShowTimerDefend: usize = 0xF10; // bool
-                pub const m_iRoundEndTimerTime: usize = 0xF14; // int32
-                pub const m_sRoundEndFunFactToken: usize = 0xF18; // CUtlString
-                pub const m_iRoundEndFunFactPlayerSlot: usize = 0xF20; // CPlayerSlot
-                pub const m_iRoundEndFunFactData1: usize = 0xF24; // int32
-                pub const m_iRoundEndFunFactData2: usize = 0xF28; // int32
-                pub const m_iRoundEndFunFactData3: usize = 0xF2C; // int32
-                pub const m_sRoundEndMessage: usize = 0xF30; // CUtlString
-                pub const m_iRoundEndPlayerCount: usize = 0xF38; // int32
-                pub const m_bRoundEndNoMusic: usize = 0xF3C; // bool
-                pub const m_iRoundEndLegacy: usize = 0xF40; // int32
-                pub const m_nRoundEndCount: usize = 0xF44; // uint8
-                pub const m_iRoundStartRoundNumber: usize = 0xF48; // int32
-                pub const m_nRoundStartCount: usize = 0xF4C; // uint8
-                pub const m_flLastPerfSampleTime: usize = 0x4F58; // float64
+                pub const m_nActiveMutators: usize = 0xBA0; // int32
+                pub const m_flNextRespawnWave: usize = 0xBA4; // GameTime_t[32]
+                pub const m_vMinimapMins: usize = 0xC24; // VectorWS
+                pub const m_vMinimapMaxs: usize = 0xC30; // VectorWS
+                pub const m_MinimapVerticalSectionHeights: usize = 0xC3C; // float32[8]
+                pub const m_ullLocalMatchID: usize = 0xC60; // uint64
+                pub const m_nEndMatchMapGroupVoteTypes: usize = 0xC68; // int32[10]
+                pub const m_nEndMatchMapGroupVoteOptions: usize = 0xC90; // int32[10]
+                pub const m_nEndMatchMapVoteWinner: usize = 0xCB8; // int32
+                pub const m_iNumConsecutiveCTLoses: usize = 0xCBC; // int32
+                pub const m_iNumConsecutiveTerroristLoses: usize = 0xCC0; // int32
+                pub const m_nMatchAbortedEarlyReason: usize = 0xD80; // int32
+                pub const m_bHasTriggeredRoundStartMusic: usize = 0xD84; // bool
+                pub const m_bSwitchingTeamsAtRoundReset: usize = 0xD85; // bool
+                pub const m_pGameModeRules: usize = 0xDA0; // CCSGameModeRules*
+                pub const m_RetakeRules: usize = 0xDA8; // C_RetakeGameRules
+                pub const m_nMatchEndCount: usize = 0xF00; // uint8
+                pub const m_nTTeamIntroVariant: usize = 0xF04; // int32
+                pub const m_nCTTeamIntroVariant: usize = 0xF08; // int32
+                pub const m_bTeamIntroPeriod: usize = 0xF0C; // bool
+                pub const m_iRoundEndWinnerTeam: usize = 0xF10; // int32
+                pub const m_eRoundEndReason: usize = 0xF14; // int32
+                pub const m_bRoundEndShowTimerDefend: usize = 0xF18; // bool
+                pub const m_iRoundEndTimerTime: usize = 0xF1C; // int32
+                pub const m_sRoundEndFunFactToken: usize = 0xF20; // CUtlString
+                pub const m_iRoundEndFunFactPlayerSlot: usize = 0xF28; // CPlayerSlot
+                pub const m_iRoundEndFunFactData1: usize = 0xF2C; // int32
+                pub const m_iRoundEndFunFactData2: usize = 0xF30; // int32
+                pub const m_iRoundEndFunFactData3: usize = 0xF34; // int32
+                pub const m_sRoundEndMessage: usize = 0xF38; // CUtlString
+                pub const m_iRoundEndPlayerCount: usize = 0xF40; // int32
+                pub const m_bRoundEndNoMusic: usize = 0xF44; // bool
+                pub const m_iRoundEndLegacy: usize = 0xF48; // int32
+                pub const m_nRoundEndCount: usize = 0xF4C; // uint8
+                pub const m_iRoundStartRoundNumber: usize = 0xF50; // int32
+                pub const m_nRoundStartCount: usize = 0xF54; // uint8
+                pub const m_flLastPerfSampleTime: usize = 0x4F60; // float64
             }
             // Parent: C_BaseModelEntity
             // Field count: 2

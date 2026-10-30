@@ -4,15 +4,15 @@
     "AnimationSystem_001": 8615416
   },
   "client.dll": {
-    "ClientBugBugServic001_Client": 35870432,
-    "ClientToolsInfo_001": 35870384,
-    "EmptyWorldService001_Client": 35754288,
-    "GameClientExports001": 35857240,
-    "LegacyGameUI001": 35922176,
-    "Source2Client002": 39195552,
-    "Source2ClientConfig001": 38526928,
-    "Source2ClientPrediction001": 39220704,
-    "Source2ClientUI001": 35915904
+    "ClientBugBugServic001_Client": 35878752,
+    "ClientToolsInfo_001": 35878704,
+    "EmptyWorldService001_Client": 35762528,
+    "GameClientExports001": 35865560,
+    "LegacyGameUI001": 35930496,
+    "Source2Client002": 39204256,
+    "Source2ClientConfig001": 38535504,
+    "Source2ClientPrediction001": 39229392,
+    "Source2ClientUI001": 35924224
   },
   "engine2.dll": {
     "BenchmarkService001": 7077056,
@@ -134,22 +134,22 @@
   },
   "server.dll": {
     "EmptyWorldService001_Server": 31527104,
-    "EntitySubclassUtilsV001": 31198304,
-    "NavGameTest001": 31821128,
-    "ServerToolsInfo_001": 31685704,
-    "Source2GameClients001": 31682928,
-    "Source2GameDirector001": 33166480,
-    "Source2GameEntities001": 31683568,
-    "Source2Server001": 31683120,
-    "Source2ServerConfig001": 34721176,
+    "EntitySubclassUtilsV001": 31198272,
+    "NavGameTest001": 31821112,
+    "ServerToolsInfo_001": 31685688,
+    "Source2GameClients001": 31682912,
+    "Source2GameDirector001": 33166608,
+    "Source2GameEntities001": 31683552,
+    "Source2Server001": 31683104,
+    "Source2ServerConfig001": 34721256,
     "customnavsystem001": 31122776
   },
   "soundsystem.dll": {
-    "SoundBugBugService001_Client": 5450880,
-    "SoundOpSystem001": 5450592,
-    "SoundOpSystemEdit001": 5450352,
-    "SoundSystem001": 5448800,
-    "VMixEditTool001": 93592575
+    "SoundBugBugService001_Client": 5450816,
+    "SoundOpSystem001": 5450528,
+    "SoundOpSystemEdit001": 5450288,
+    "SoundSystem001": 5448736,
+    "VMixEditTool001": 93592591
   },
   "steamaudio.dll": {
     "SteamAudio001": 3522976
@@ -162,6 +162,9 @@
   },
   "v8system.dll": {
     "Source2V8System001": 214928
+  },
+  "vconcomm.dll": {
+    "VConComm001": 247632
   },
   "vphysics2.dll": {
     "VPhysics2_Interface_001": 4591200
