@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-31 18:35:29.210120900 UTC
+// 2026-11-09 17:25:12.687006700 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
@@ -7303,7 +7303,7 @@ pub const cs2_dumper = struct {
                 pub const m_flActiveFollowStartTime: usize = 0x32A4; // GameTime_t
                 pub const m_followMinuteTimer: usize = 0x32A8; // CountdownTimer
                 pub const m_BlockDirectionTimer: usize = 0x32C8; // CountdownTimer
-                pub const m_bSpawnDyingParticles: usize = 0x32E2; // bool
+                pub const m_bSpawnDyingParticles: usize = 0x32E3; // bool
             };
             // Parent: CPhysicsProp
             // Field count: 5
@@ -8875,7 +8875,7 @@ pub const cs2_dumper = struct {
                 pub const m_nMagnitude: usize = 0x87C; // uint32
             };
             // Parent: None
-            // Field count: 190
+            // Field count: 191
             pub const CCSGameRules = struct {
                 pub const m_bFreezePeriod: usize = 0xD8; // bool
                 pub const m_bWarmupPeriod: usize = 0xD9; // bool
@@ -8978,10 +8978,11 @@ pub const cs2_dumper = struct {
                 pub const m_numSpectatorsCountMax: usize = 0xE04; // uint32
                 pub const m_numSpectatorsCountMaxTV: usize = 0xE08; // uint32
                 pub const m_numSpectatorsCountMaxLnk: usize = 0xE0C; // uint32
-                pub const m_nCTsAliveAtFreezetimeEnd: usize = 0xE18; // int32
-                pub const m_nTerroristsAliveAtFreezetimeEnd: usize = 0xE1C; // int32
-                pub const m_bForceTeamChangeSilent: usize = 0xE20; // bool
-                pub const m_bLoadingRoundBackupData: usize = 0xE21; // bool
+                pub const m_bQueuedMatchmakingReportedRoundStatsPendingSend: usize = 0xE18; // bool
+                pub const m_nCTsAliveAtFreezetimeEnd: usize = 0xE1C; // int32
+                pub const m_nTerroristsAliveAtFreezetimeEnd: usize = 0xE20; // int32
+                pub const m_bForceTeamChangeSilent: usize = 0xE24; // bool
+                pub const m_bLoadingRoundBackupData: usize = 0xE25; // bool
                 pub const m_nMatchInfoShowType: usize = 0xE58; // int32
                 pub const m_flMatchInfoDecidedTime: usize = 0xE5C; // float32
                 pub const mTeamDMLastWinningTeamNumber: usize = 0xE78; // int32

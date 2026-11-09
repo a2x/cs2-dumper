@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-31 18:35:29.210120900 UTC
+// 2026-11-09 17:25:12.687006700 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -7336,7 +7336,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flActiveFollowStartTime = 0x32A4; // GameTime_t
             public const nint m_followMinuteTimer = 0x32A8; // CountdownTimer
             public const nint m_BlockDirectionTimer = 0x32C8; // CountdownTimer
-            public const nint m_bSpawnDyingParticles = 0x32E2; // bool
+            public const nint m_bSpawnDyingParticles = 0x32E3; // bool
         }
         // Parent: CPhysicsProp
         // Field count: 5
@@ -8908,7 +8908,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_nMagnitude = 0x87C; // uint32
         }
         // Parent: None
-        // Field count: 190
+        // Field count: 191
         public static class CCSGameRules {
             public const nint m_bFreezePeriod = 0xD8; // bool
             public const nint m_bWarmupPeriod = 0xD9; // bool
@@ -9011,10 +9011,11 @@ namespace CS2Dumper.Schemas {
             public const nint m_numSpectatorsCountMax = 0xE04; // uint32
             public const nint m_numSpectatorsCountMaxTV = 0xE08; // uint32
             public const nint m_numSpectatorsCountMaxLnk = 0xE0C; // uint32
-            public const nint m_nCTsAliveAtFreezetimeEnd = 0xE18; // int32
-            public const nint m_nTerroristsAliveAtFreezetimeEnd = 0xE1C; // int32
-            public const nint m_bForceTeamChangeSilent = 0xE20; // bool
-            public const nint m_bLoadingRoundBackupData = 0xE21; // bool
+            public const nint m_bQueuedMatchmakingReportedRoundStatsPendingSend = 0xE18; // bool
+            public const nint m_nCTsAliveAtFreezetimeEnd = 0xE1C; // int32
+            public const nint m_nTerroristsAliveAtFreezetimeEnd = 0xE20; // int32
+            public const nint m_bForceTeamChangeSilent = 0xE24; // bool
+            public const nint m_bLoadingRoundBackupData = 0xE25; // bool
             public const nint m_nMatchInfoShowType = 0xE58; // int32
             public const nint m_flMatchInfoDecidedTime = 0xE5C; // float32
             public const nint mTeamDMLastWinningTeamNumber = 0xE78; // int32
