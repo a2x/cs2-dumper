@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-30 09:23:07.316567900 UTC
+// 2026-11-09 17:25:12.687006700 UTC
 
 #pragma once
 
@@ -7342,7 +7342,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flActiveFollowStartTime = 0x32A4; // GameTime_t
                 constexpr std::ptrdiff_t m_followMinuteTimer = 0x32A8; // CountdownTimer
                 constexpr std::ptrdiff_t m_BlockDirectionTimer = 0x32C8; // CountdownTimer
-                constexpr std::ptrdiff_t m_bSpawnDyingParticles = 0x32E2; // bool
+                constexpr std::ptrdiff_t m_bSpawnDyingParticles = 0x32E3; // bool
             }
             // Parent: CPhysicsProp
             // Field count: 5
@@ -8914,7 +8914,7 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_nMagnitude = 0x87C; // uint32
             }
             // Parent: None
-            // Field count: 190
+            // Field count: 191
             namespace CCSGameRules {
                 constexpr std::ptrdiff_t m_bFreezePeriod = 0xD8; // bool
                 constexpr std::ptrdiff_t m_bWarmupPeriod = 0xD9; // bool
@@ -9017,10 +9017,11 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_numSpectatorsCountMax = 0xE04; // uint32
                 constexpr std::ptrdiff_t m_numSpectatorsCountMaxTV = 0xE08; // uint32
                 constexpr std::ptrdiff_t m_numSpectatorsCountMaxLnk = 0xE0C; // uint32
-                constexpr std::ptrdiff_t m_nCTsAliveAtFreezetimeEnd = 0xE18; // int32
-                constexpr std::ptrdiff_t m_nTerroristsAliveAtFreezetimeEnd = 0xE1C; // int32
-                constexpr std::ptrdiff_t m_bForceTeamChangeSilent = 0xE20; // bool
-                constexpr std::ptrdiff_t m_bLoadingRoundBackupData = 0xE21; // bool
+                constexpr std::ptrdiff_t m_bQueuedMatchmakingReportedRoundStatsPendingSend = 0xE18; // bool
+                constexpr std::ptrdiff_t m_nCTsAliveAtFreezetimeEnd = 0xE1C; // int32
+                constexpr std::ptrdiff_t m_nTerroristsAliveAtFreezetimeEnd = 0xE20; // int32
+                constexpr std::ptrdiff_t m_bForceTeamChangeSilent = 0xE24; // bool
+                constexpr std::ptrdiff_t m_bLoadingRoundBackupData = 0xE25; // bool
                 constexpr std::ptrdiff_t m_nMatchInfoShowType = 0xE58; // int32
                 constexpr std::ptrdiff_t m_flMatchInfoDecidedTime = 0xE5C; // float32
                 constexpr std::ptrdiff_t mTeamDMLastWinningTeamNumber = 0xE78; // int32

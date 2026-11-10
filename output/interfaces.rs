@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-10-30 09:23:07.316567900 UTC
+// 2026-11-09 17:25:12.687006700 UTC
 
 #![allow(non_upper_case_globals, unused)]
 
@@ -12,15 +12,15 @@ pub mod cs2_dumper {
         }
         // Module: client.dll
         pub mod client_dll {
-            pub const ClientBugBugServic001_Client: usize = 0x2237760;
-            pub const ClientToolsInfo_001: usize = 0x2237730;
-            pub const EmptyWorldService001_Client: usize = 0x221B160;
-            pub const GameClientExports001: usize = 0x22343D8;
-            pub const LegacyGameUI001: usize = 0x2244180;
-            pub const Source2Client002: usize = 0x25635A0;
-            pub const Source2ClientConfig001: usize = 0x24C0150;
-            pub const Source2ClientPrediction001: usize = 0x25697D0;
-            pub const Source2ClientUI001: usize = 0x2242900;
+            pub const ClientBugBugServic001_Client: usize = 0x2238760;
+            pub const ClientToolsInfo_001: usize = 0x2238730;
+            pub const EmptyWorldService001_Client: usize = 0x221C160;
+            pub const GameClientExports001: usize = 0x22353D8;
+            pub const LegacyGameUI001: usize = 0x2245180;
+            pub const Source2Client002: usize = 0x2564620;
+            pub const Source2ClientConfig001: usize = 0x24C1160;
+            pub const Source2ClientPrediction001: usize = 0x256A850;
+            pub const Source2ClientUI001: usize = 0x2243900;
         }
         // Module: engine2.dll
         pub mod engine2_dll {
@@ -130,7 +130,7 @@ pub mod cs2_dumper {
         }
         // Module: particles.dll
         pub mod particles_dll {
-            pub const ParticleSystemMgr003: usize = 0x65ADD0;
+            pub const ParticleSystemMgr003: usize = 0x65ADE0;
         }
         // Module: pulse_system.dll
         pub mod pulse_system_dll {
@@ -163,16 +163,16 @@ pub mod cs2_dumper {
         }
         // Module: server.dll
         pub mod server_dll {
-            pub const EmptyWorldService001_Server: usize = 0x1E110C0;
-            pub const EntitySubclassUtilsV001: usize = 0x1DC0C40;
-            pub const NavGameTest001: usize = 0x1E58D38;
-            pub const ServerToolsInfo_001: usize = 0x1E37C38;
-            pub const Source2GameClients001: usize = 0x1E37160;
-            pub const Source2GameDirector001: usize = 0x1FA1510;
-            pub const Source2GameEntities001: usize = 0x1E373E0;
-            pub const Source2Server001: usize = 0x1E37220;
-            pub const Source2ServerConfig001: usize = 0x211CDE8;
-            pub const customnavsystem001: usize = 0x1DAE558;
+            pub const EmptyWorldService001_Server: usize = 0x1E0D0E0;
+            pub const EntitySubclassUtilsV001: usize = 0x1DBCC60;
+            pub const NavGameTest001: usize = 0x1E54D38;
+            pub const ServerToolsInfo_001: usize = 0x1E33C38;
+            pub const Source2GameClients001: usize = 0x1E33160;
+            pub const Source2GameDirector001: usize = 0x1F9D5D0;
+            pub const Source2GameEntities001: usize = 0x1E333E0;
+            pub const Source2Server001: usize = 0x1E33220;
+            pub const Source2ServerConfig001: usize = 0x2118EA8;
+            pub const customnavsystem001: usize = 0x1DAA558;
         }
         // Module: soundsystem.dll
         pub mod soundsystem_dll {
@@ -180,7 +180,7 @@ pub mod cs2_dumper {
             pub const SoundOpSystem001: usize = 0x532B20;
             pub const SoundOpSystemEdit001: usize = 0x532A30;
             pub const SoundSystem001: usize = 0x532420;
-            pub const VMixEditTool001: usize = 0x5941C0F;
+            pub const VMixEditTool001: usize = 0x5941C1F;
         }
         // Module: steamaudio.dll
         pub mod steamaudio_dll {
@@ -196,10 +196,6 @@ pub mod cs2_dumper {
         // Module: v8system.dll
         pub mod v8system_dll {
             pub const Source2V8System001: usize = 0x34790;
-        }
-        // Module: vconcomm.dll
-        pub mod vconcomm_dll {
-            pub const VConComm001: usize = 0x3C750;
         }
         // Module: vphysics2.dll
         pub mod vphysics2_dll {
