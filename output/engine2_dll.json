@@ -214,7 +214,8 @@
       },
       "EventClientPollNetworking_t": {
         "fields": {
-          "m_nTickCount": 0
+          "m_nTickCount": 0,
+          "m_nTotalTicks": 4
         },
         "metadata": [],
         "parent": null
