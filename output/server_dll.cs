@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-09 17:25:12.687006700 UTC
+// 2026-11-12 13:07:45.363725600 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: server.dll
@@ -7336,7 +7336,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flActiveFollowStartTime = 0x32A4; // GameTime_t
             public const nint m_followMinuteTimer = 0x32A8; // CountdownTimer
             public const nint m_BlockDirectionTimer = 0x32C8; // CountdownTimer
-            public const nint m_bSpawnDyingParticles = 0x32E3; // bool
+            public const nint m_bSpawnDyingParticles = 0x32E2; // bool
         }
         // Parent: CPhysicsProp
         // Field count: 5
@@ -11449,7 +11449,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_cursorIDToEventID = 0x8; // CUtlHashtable<PulseCursorID_t,int32>
         }
         // Parent: CPointEntity
-        // Field count: 15
+        // Field count: 16
         public static class CMapInfo {
             public const nint m_iBuyingStatus = 0x4A8; // int32
             public const nint m_flBombRadius = 0x4AC; // float32
@@ -11466,6 +11466,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flEnvPuddleRippleDirection = 0x4CC; // float32
             public const nint m_flEnvWetnessCoverage = 0x4D0; // float32
             public const nint m_flEnvWetnessDryingAmount = 0x4D4; // float32
+            public const nint m_bFrostEnabled = 0x4D8; // bool
         }
         // Parent: CBaseEntity
         // Field count: 16
@@ -13656,7 +13657,7 @@ namespace CS2Dumper.Schemas {
         public static class CVectorExponentialMovingAverage {
         }
         // Parent: None
-        // Field count: 11
+        // Field count: 12
         //
         // Metadata:
         // MGetKV3ClassDefaults
@@ -13672,6 +13673,7 @@ namespace CS2Dumper.Schemas {
             public const nint m_flHandIKBlendInTimeSeconds = 0x28; // float32
             public const nint m_flActionBlendTimeSeconds = 0x2C; // float32
             public const nint m_flPlantingBlendTimeSeconds = 0x30; // float32
+            public const nint m_flTransitionBlendTimeSeconds = 0x34; // float32
         }
         // Parent: None
         // Field count: 4

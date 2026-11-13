@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-09 17:25:12.687006700 UTC
+// 2026-11-12 13:07:45.363725600 UTC
 
 pub const cs2_dumper = struct {
     pub const schemas = struct {
@@ -7303,7 +7303,7 @@ pub const cs2_dumper = struct {
                 pub const m_flActiveFollowStartTime: usize = 0x32A4; // GameTime_t
                 pub const m_followMinuteTimer: usize = 0x32A8; // CountdownTimer
                 pub const m_BlockDirectionTimer: usize = 0x32C8; // CountdownTimer
-                pub const m_bSpawnDyingParticles: usize = 0x32E3; // bool
+                pub const m_bSpawnDyingParticles: usize = 0x32E2; // bool
             };
             // Parent: CPhysicsProp
             // Field count: 5
@@ -11416,7 +11416,7 @@ pub const cs2_dumper = struct {
                 pub const m_cursorIDToEventID: usize = 0x8; // CUtlHashtable<PulseCursorID_t,int32>
             };
             // Parent: CPointEntity
-            // Field count: 15
+            // Field count: 16
             pub const CMapInfo = struct {
                 pub const m_iBuyingStatus: usize = 0x4A8; // int32
                 pub const m_flBombRadius: usize = 0x4AC; // float32
@@ -11433,6 +11433,7 @@ pub const cs2_dumper = struct {
                 pub const m_flEnvPuddleRippleDirection: usize = 0x4CC; // float32
                 pub const m_flEnvWetnessCoverage: usize = 0x4D0; // float32
                 pub const m_flEnvWetnessDryingAmount: usize = 0x4D4; // float32
+                pub const m_bFrostEnabled: usize = 0x4D8; // bool
             };
             // Parent: CBaseEntity
             // Field count: 16
@@ -13623,7 +13624,7 @@ pub const cs2_dumper = struct {
             pub const CVectorExponentialMovingAverage = struct {
             };
             // Parent: None
-            // Field count: 11
+            // Field count: 12
             //
             // Metadata:
             // MGetKV3ClassDefaults
@@ -13639,6 +13640,7 @@ pub const cs2_dumper = struct {
                 pub const m_flHandIKBlendInTimeSeconds: usize = 0x28; // float32
                 pub const m_flActionBlendTimeSeconds: usize = 0x2C; // float32
                 pub const m_flPlantingBlendTimeSeconds: usize = 0x30; // float32
+                pub const m_flTransitionBlendTimeSeconds: usize = 0x34; // float32
             };
             // Parent: None
             // Field count: 4
