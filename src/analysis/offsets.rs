@@ -86,7 +86,7 @@ pattern_map! {
         "dwGlobalVars" => pattern!("488915${'} 488942") => None,
         "dwGlowManager" => pattern!("488b05${'} c3 cccccccccccccccc 8b41") => None,
         "dwLocalPlayerController" => pattern!("488b05${'} 4189be") => None,
-        "dwPlantedC4" => pattern!("488b1d${'} 4532f6") => None,
+        "dwPlantedC4" => pattern!("488b05${'} 4532c0 4885c0 74? 443880") => None,
         "dwPrediction" => pattern!("488d05${'} c3 cccccccccccccccc 405356 4154") => Some(|view, map, rva| {
             let mut save = [0; 2];
 
@@ -94,7 +94,7 @@ pattern_map! {
                 map.insert("dwLocalPlayerPawn".to_string(), rva + save[1]);
             }
         }),
-        "dwSensitivity" => pattern!("488d0d${[8]'} 0f57c90f28f0") => Some(|_view, map, _rva| {
+        "dwSensitivity" => pattern!("488b05${'} 8b7058 eb? 8bf5 33c9 e8") => Some(|_view, map, _rva| {
             map.insert("dwSensitivity_sensitivity".to_string(), 0x58);
         }),
         "dwServerConfirmedReservation" => pattern!("488905${'} e8${} 4885db") => None,
@@ -123,7 +123,7 @@ pattern_map! {
     },
     soundsystem => {
         "dwSoundSystem" => pattern!("488d0d${'} e8${} 488b0d${} [3] 4c8b82") => None,
-        "dwSoundSystem_engineViewData" => pattern!("0f1147u1 0f104f10 0f114f7c") => None,
+        "dwSoundSystem_engineViewData" => pattern!("0f1007 0f1147u1 0f104f10 0f114f? 0f104720 0f1187[4]") => None,
     },
 }
 
