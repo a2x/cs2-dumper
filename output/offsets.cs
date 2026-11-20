@@ -1,27 +1,27 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-19 17:25:11.274421400 UTC
+// 2026-11-20 17:06:22.731210300 UTC
 
 namespace CS2Dumper.Offsets {
     // Module: client.dll
     public static class ClientDll {
-        public const nint dwCSGOInput = 0x256CFE0;
-        public const nint dwEntityList = 0x270C680;
-        public const nint dwGameEntitySystem = 0x270C680;
+        public const nint dwCSGOInput = 0x256D560;
+        public const nint dwEntityList = 0x270D5B0;
+        public const nint dwGameEntitySystem = 0x270D5B0;
         public const nint dwGameEntitySystem_highestEntityIndex = 0x2120;
-        public const nint dwGameRules = 0x2556E78;
+        public const nint dwGameRules = 0x25573F8;
         public const nint dwGlobalVars = 0x2223AD0;
-        public const nint dwGlowManager = 0x2553B90;
-        public const nint dwLocalPlayerController = 0x252ED78;
-        public const nint dwLocalPlayerPawn = 0x2557538;
-        public const nint dwPlantedC4 = 0x24BD9E8;
-        public const nint dwPrediction = 0x2557440;
-        public const nint dwSensitivity = 0x2554648;
+        public const nint dwGlowManager = 0x2554110;
+        public const nint dwLocalPlayerController = 0x252F300;
+        public const nint dwLocalPlayerPawn = 0x2557AB8;
+        public const nint dwPlantedC4 = 0x24BDF68;
+        public const nint dwPrediction = 0x25579C0;
+        public const nint dwSensitivity = 0x2554C48;
         public const nint dwSensitivity_sensitivity = 0x58;
-        public const nint dwServerConfirmedReservation = 0x256E1C8;
-        public const nint dwViewAngles = 0x256D668;
-        public const nint dwViewMatrix = 0x255CE50;
-        public const nint dwViewRender = 0x255D818;
-        public const nint dwWeaponC4 = 0x24BB680;
+        public const nint dwServerConfirmedReservation = 0x256E748;
+        public const nint dwViewAngles = 0x256DBE8;
+        public const nint dwViewMatrix = 0x255D3D0;
+        public const nint dwViewRender = 0x255DD98;
+        public const nint dwWeaponC4 = 0x24BBC00;
     }
     // Module: engine2.dll
     public static class Engine2Dll {
