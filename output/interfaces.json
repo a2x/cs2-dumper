@@ -9,9 +9,9 @@
     "EmptyWorldService001_Client": 35696288,
     "GameClientExports001": 35798536,
     "LegacyGameUI001": 35869088,
-    "Source2Client002": 39129216,
-    "Source2ClientConfig001": 38460160,
-    "Source2ClientPrediction001": 39154752,
+    "Source2Client002": 39130624,
+    "Source2ClientConfig001": 38461568,
+    "Source2ClientPrediction001": 39156160,
     "Source2ClientUI001": 35857056
   },
   "engine2.dll": {
@@ -162,6 +162,9 @@
   },
   "v8system.dll": {
     "Source2V8System001": 214928
+  },
+  "vconcomm.dll": {
+    "VConComm001": 247632
   },
   "vphysics2.dll": {
     "VPhysics2_Interface_001": 4591200

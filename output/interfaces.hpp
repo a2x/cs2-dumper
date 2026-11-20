@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2026-11-19 17:25:11.274421400 UTC
+// 2026-11-20 17:06:22.731210300 UTC
 
 #pragma once
 
@@ -20,9 +20,9 @@ namespace cs2_dumper {
             constexpr std::ptrdiff_t EmptyWorldService001_Client = 0x220AEA0;
             constexpr std::ptrdiff_t GameClientExports001 = 0x2223E08;
             constexpr std::ptrdiff_t LegacyGameUI001 = 0x22351A0;
-            constexpr std::ptrdiff_t Source2Client002 = 0x2551080;
-            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x24ADB00;
-            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x2557440;
+            constexpr std::ptrdiff_t Source2Client002 = 0x2551600;
+            constexpr std::ptrdiff_t Source2ClientConfig001 = 0x24AE080;
+            constexpr std::ptrdiff_t Source2ClientPrediction001 = 0x25579C0;
             constexpr std::ptrdiff_t Source2ClientUI001 = 0x22322A0;
         }
         // Module: engine2.dll
@@ -199,6 +199,10 @@ namespace cs2_dumper {
         // Module: v8system.dll
         namespace v8system_dll {
             constexpr std::ptrdiff_t Source2V8System001 = 0x34790;
+        }
+        // Module: vconcomm.dll
+        namespace vconcomm_dll {
+            constexpr std::ptrdiff_t VConComm001 = 0x3C750;
         }
         // Module: vphysics2.dll
         namespace vphysics2_dll {
