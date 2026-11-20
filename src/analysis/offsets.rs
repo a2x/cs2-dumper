@@ -94,7 +94,7 @@ pattern_map! {
                 map.insert("dwLocalPlayerPawn".to_string(), rva + save[1]);
             }
         }),
-        "dwSensitivity" => pattern!("488b05${'} 8b7058 eb? 8bf5 33c9 e8") => Some(|_view, map, _rva| {
+        "dwSensitivity" => pattern!("488d0d${[8]'} 0f57c9 0f28f0 f30f2ad7 f30f2acd f30f5ed1") => Some(|_view, map, _rva| {
             map.insert("dwSensitivity_sensitivity".to_string(), 0x58);
         }),
         "dwServerConfirmedReservation" => pattern!("488905${'} e8${} 4885db") => None,
